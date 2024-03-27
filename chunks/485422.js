@@ -21,7 +21,7 @@ function(e, t, n) {
             animateOnHover: a = !1,
             isHovering: c = !1,
             lineClamp: f = 6
-        } = e, p = l.useMemo(() => (0, o.parseBioReact)(t), [t]);
+        } = e, m = l.useMemo(() => (0, o.parseBioReact)(t), [t]);
         return (0, i.jsx)("div", {
             className: s(n, d.markup),
             children: (0, i.jsx)(r.Text, {
@@ -32,7 +32,7 @@ function(e, t, n) {
                         disableAnimations: a && !c,
                         disableInteractions: !1
                     },
-                    children: p
+                    children: m
                 })
             })
         })

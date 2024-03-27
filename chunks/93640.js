@@ -5,7 +5,7 @@ function(e, t, n) {
             return f
         },
         default: function() {
-            return p
+            return m
         }
     }), n("222007");
     var i = n("717837"),
@@ -28,33 +28,33 @@ function(e, t, n) {
         return (null == n || e.metaKey === n) && (null == i || e.ctrlKey === i) && (null == l || e.altKey === l) && (null == a || e.shiftKey === a)
     }
 
-    function p(e) {
+    function m(e) {
         return e.onKeyDown = t => {
-            var n, i, a, p;
-            let m = e.isMac;
+            var n, i, a, m;
+            let p = e.isMac;
             switch (t.which) {
                 case c.KeyboardKeys.B:
                     if (!d.EditorUtils.isEditorEmpty(e) && f(t, {
-                            ctrl: !m,
-                            cmd: m
+                            ctrl: !p,
+                            cmd: p
                         })) return (0, o.toggleMarkdownStyle)(e, "bold"), !0;
                     break;
                 case c.KeyboardKeys.I:
                     if (!d.EditorUtils.isEditorEmpty(e) && f(t, {
-                            ctrl: !m,
-                            cmd: m
+                            ctrl: !p,
+                            cmd: p
                         })) return (0, o.toggleMarkdownStyle)(e, "italics"), !0;
                     break;
                 case c.KeyboardKeys.U:
                     if (!d.EditorUtils.isEditorEmpty(e) && f(t, {
-                            ctrl: !m,
-                            cmd: m
+                            ctrl: !p,
+                            cmd: p
                         })) return (0, o.toggleMarkdownStyle)(e, "underline"), !0;
                     break;
                 case c.KeyboardKeys.S:
                     if (!d.EditorUtils.isEditorEmpty(e) && f(t, {
-                            ctrl: !m,
-                            cmd: m,
+                            ctrl: !p,
+                            cmd: p,
                             shift: !0
                         })) return (0, o.toggleMarkdownStyle)(e, "strikethrough"), !0;
                     break;
@@ -125,17 +125,17 @@ function(e, t, n) {
                             shift: null
                         })) n = "character";
                     else if (f(t, {
-                            ctrl: !m,
-                            alt: m,
+                            ctrl: !p,
+                            alt: p,
                             shift: null
                         })) n = "word";
-                    else if (m && f(t, {
+                    else if (p && f(t, {
                             cmd: !0,
                             shift: null
                         })) return !1;
                     else return !1;
                     t.shiftKey && (s = "focus");
-                    let r = e.children[null !== (p = null === (a = e.selection) || void 0 === a ? void 0 : null === (i = a.focus) || void 0 === i ? void 0 : i.path[0]) && void 0 !== p ? p : 0],
+                    let r = e.children[null !== (m = null === (a = e.selection) || void 0 === a ? void 0 : null === (i = a.focus) || void 0 === i ? void 0 : i.path[0]) && void 0 !== m ? m : 0],
                         o = "rtl" === l(d.NodeUtils.string(r)),
                         h = t.which === c.KeyboardKeys.ARROW_LEFT == !o;
                     return u.SlateTransforms.keyboardMove(e, {
@@ -145,7 +145,7 @@ function(e, t, n) {
                     }), !0
                 }
                 case c.KeyboardKeys.A:
-                    if (m && f(t, {
+                    if (p && f(t, {
                             ctrl: !0
                         })) {
                         let t = d.EditorUtils.getCurrentBlock(e);
@@ -162,7 +162,7 @@ function(e, t, n) {
                     }
                     break;
                 case c.KeyboardKeys.E:
-                    if (m && f(t, {
+                    if (p && f(t, {
                             ctrl: !0
                         })) {
                         let t = d.EditorUtils.getCurrentBlock(e);
@@ -182,12 +182,12 @@ function(e, t, n) {
                 case c.KeyboardKeys.DELETE:
                 case c.KeyboardKeys.K:
                     let h = t.which === c.KeyboardKeys.BACKSPACE;
-                    if ((!m && t.which !== c.KeyboardKeys.K && f(t, {
+                    if ((!p && t.which !== c.KeyboardKeys.K && f(t, {
                             ctrl: !0,
                             shift: !0
-                        }) || m && t.which !== c.KeyboardKeys.K && f(t, {
+                        }) || p && t.which !== c.KeyboardKeys.K && f(t, {
                             cmd: !0
-                        }) || m && t.which === c.KeyboardKeys.K && f(t, {
+                        }) || p && t.which === c.KeyboardKeys.K && f(t, {
                             ctrl: !0
                         })) && null != e.selection) {
                         let [t, n] = d.RangeUtils.edges(e.selection), [i, l] = d.EditorUtils.node(e, [h ? t.path[0] : n.path[0]]);

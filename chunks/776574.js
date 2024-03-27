@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return T
+            return _
         }
     }), n("222007"), n("781738");
     var i = n("37983"),
@@ -15,8 +15,8 @@ function(e, t, n) {
         d = n("286235"),
         c = n("149022"),
         f = n("83800"),
-        p = n("903782"),
-        m = n("939563"),
+        m = n("903782"),
+        p = n("939563"),
         h = n("385887"),
         x = n("368555"),
         E = n("30550"),
@@ -24,7 +24,7 @@ function(e, t, n) {
         g = n("632550"),
         S = n("235541"),
         C = n("919163");
-    class _ extends l.PureComponent {
+    class T extends l.PureComponent {
         componentDidMount() {
             this.props.editor.events.addListener("onChange", this.handleOnChange)
         }
@@ -159,7 +159,7 @@ function(e, t, n) {
                 mode: "lowest"
             }) : null;
             if (null != a && (i.startedInsideInline = !0), h.EditorUtils.isEditorEmpty(n)) {
-                m.SlateTransforms.insertNodes(n, {
+                p.SlateTransforms.insertNodes(n, {
                     text: "\uFEFF"
                 }, {
                     select: !0
@@ -178,7 +178,7 @@ function(e, t, n) {
                     exactMatch: !1,
                     suppressThrow: !0
                 });
-                n.selection = null, null != e ? m.SlateTransforms.select(n, e) : m.SlateTransforms.select(n, null !== (t = n.selection) && void 0 !== t ? t : h.EditorUtils.end(n, []))
+                n.selection = null, null != e ? p.SlateTransforms.select(n, e) : p.SlateTransforms.select(n, null !== (t = n.selection) && void 0 !== t ? t : h.EditorUtils.end(n, []))
             }
             n.composition = i
         }
@@ -195,7 +195,7 @@ function(e, t, n) {
                     n = h.NodeUtils.leaf(t, e);
                 h.EditorUtils.withoutNormalizing(t, () => {
                     let e = n.text.replace(/^\uFEFF/, "");
-                    m.SlateTransforms.delete(t, {
+                    p.SlateTransforms.delete(t, {
                         unit: "offset",
                         distance: n.text.length,
                         reverse: !0
@@ -215,7 +215,7 @@ function(e, t, n) {
                 editor: t,
                 onBlur: n
             } = this.props, i = e.relatedTarget, l = r.ReactEditor.findDocumentOrShadowRoot(this.props.editor), a = l.getElementById("textarea-context"), s = l.getElementById("slate-toolbar");
-            if (null != i && !(0, p.hasDomParent)(i, a) && !(0, p.hasDomParent)(i, s)) {
+            if (null != i && !(0, m.hasDomParent)(i, a) && !(0, m.hasDomParent)(i, s)) {
                 let e = r.ReactEditor.findDocumentOrShadowRoot(t),
                     n = e.getSelection();
                 null != n && this.isSelectionEscaping(n) && n.removeAllRanges()
@@ -227,7 +227,7 @@ function(e, t, n) {
             if (null != e && null != t)
                 for (let n = e.rangeCount - 1; n >= 0; n--) {
                     let i = e.getRangeAt(n);
-                    if ((0, p.hasDomParent)(i.startContainer, t) || !i.collapsed && (0, p.hasDomParent)(i.endContainer, t)) return !0
+                    if ((0, m.hasDomParent)(i.startContainer, t) || !i.collapsed && (0, m.hasDomParent)(i.endContainer, t)) return !0
                 }
             return !1
         }
@@ -238,7 +238,7 @@ function(e, t, n) {
             if (null != e && null != t)
                 for (let l = e.rangeCount - 1; l >= 0; l--) {
                     let a = e.getRangeAt(l);
-                    if ((0, p.hasDomParent)(a.startContainer, t)) {
+                    if ((0, m.hasDomParent)(a.startContainer, t)) {
                         if (i) return !0;
                         n = !0
                     } else {
@@ -246,7 +246,7 @@ function(e, t, n) {
                         i = !0
                     }
                     if (!a.collapsed) {
-                        if ((0, p.hasDomParent)(a.startContainer, t)) {
+                        if ((0, m.hasDomParent)(a.startContainer, t)) {
                             if (i) return !0;
                             n = !0
                         } else {
@@ -295,8 +295,8 @@ function(e, t, n) {
                 guildId: d,
                 onChange: c,
                 onFocus: f,
-                onBlur: p,
-                onKeyDown: m,
+                onBlur: m,
+                onKeyDown: p,
                 onKeyUp: h,
                 decorateExtra: x,
                 renderExtraElement: E,
@@ -347,5 +347,5 @@ function(e, t, n) {
             }
         }
     }
-    var T = _
+    var _ = T
 }

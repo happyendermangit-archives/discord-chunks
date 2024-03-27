@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useMutualFriends: function() {
-            return p
+            return m
         }
     }), n("222007");
     var i, l, a = n("884691"),
@@ -14,13 +14,13 @@ function(e, t, n) {
         c = n("337487"),
         f = n("713135");
 
-    function p(e) {
+    function m(e) {
         let t = (0, r.useStateFromStores)([f.default], () => f.default.getMutualFriends(e.id)),
             n = a.useRef(null != t),
             [i, l] = a.useState(n.current ? 2 : 0),
-            p = a.useRef(new AbortController),
-            m = (0, r.useStateFromStores)([u.default], () => u.default.getId()),
-            h = e.id === m,
+            m = a.useRef(new AbortController),
+            p = (0, r.useStateFromStores)([u.default], () => u.default.getId()),
+            h = e.id === p,
             x = e.bot || h,
             {
                 enabled: E
@@ -31,7 +31,7 @@ function(e, t, n) {
                 if (!(t > 0)) {
                     l(1);
                     try {
-                        await (0, o.fetchMutualFriends)(e, p.current.signal)
+                        await (0, o.fetchMutualFriends)(e, m.current.signal)
                     } catch (e) {}
                     l(2)
                 }
@@ -40,7 +40,7 @@ function(e, t, n) {
             null == t && !x && E && y(e.id, i)
         }, [x, E, i, y, t, e.bot, e.id]), a.useEffect(() => () => {
             var e;
-            null === (e = p.current) || void 0 === e || e.abort()
+            null === (e = m.current) || void 0 === e || e.abort()
         }, []);
         let g = i > 1,
             S = (0, r.useStateFromStoresArray)([d.default], () => (0, s.sortBy)(t, e => {

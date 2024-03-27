@@ -16,8 +16,8 @@ function(e, t, n) {
         d = n("77078"),
         c = n("81594"),
         f = n("149279"),
-        p = n("659500"),
-        m = n("645406"),
+        m = n("659500"),
+        p = n("645406"),
         h = n("49111"),
         x = n("782340"),
         E = n("831594");
@@ -35,36 +35,36 @@ function(e, t, n) {
             handleEditModal: g,
             keyboardModeEnabled: S,
             onKeyDown: C,
-            draftType: _,
-            size: T = 1
+            draftType: T,
+            size: _ = 1
         } = e, {
             onFocus: I,
             ...v
         } = (0, u.useListItem)(n), {
-            handleFocus: N,
-            handleBlur: A
-        } = (0, m.useFocusInside)(I), R = 0 === T, O = null != r;
+            handleFocus: A,
+            handleBlur: N
+        } = (0, p.useFocusInside)(I), R = 0 === _, O = null != r;
         return (0, a.jsx)(d.FocusRing, {
             children: (0, a.jsx)("li", {
                 ...v,
-                onFocus: N,
-                onBlur: A,
+                onFocus: A,
+                onBlur: N,
                 onKeyDown: e => {
                     if (S) {
                         switch (e.which) {
                             case h.KeyboardKeys.D:
-                                e.preventDefault(), c.default.remove(i, n, _);
+                                e.preventDefault(), c.default.remove(i, n, T);
                                 return;
                             case h.KeyboardKeys.E:
                                 null != g && (e.preventDefault(), g(e));
                                 return;
                             case h.KeyboardKeys.BACKSPACE:
-                                e.ctrlKey ? (e.preventDefault(), c.default.clearAll(i, _)) : (e.preventDefault(), c.default.remove(i, n, _));
+                                e.ctrlKey ? (e.preventDefault(), c.default.clearAll(i, T)) : (e.preventDefault(), c.default.remove(i, n, T));
                                 return;
                             case h.KeyboardKeys.ARROW_UP:
                                 let t = e.shiftKey || e.altKey || e.ctrlKey || e.metaKey;
                                 if (t) return;
-                                e.preventDefault(), p.ComponentDispatch.dispatchToLastSubscribed(h.ComponentActions.FOCUS_MESSAGES, {
+                                e.preventDefault(), m.ComponentDispatch.dispatchToLastSubscribed(h.ComponentActions.FOCUS_MESSAGES, {
                                     atEnd: !0
                                 })
                         }
@@ -72,7 +72,7 @@ function(e, t, n) {
                     }
                 },
                 className: o(E.upload, l, {
-                    [E.sizeClip]: 2 === T
+                    [E.sizeClip]: 2 === _
                 }),
                 ref: t,
                 children: (0, a.jsxs)("div", {

@@ -15,8 +15,8 @@ function(e, t, n) {
         d = n("200294"),
         c = n("851745"),
         f = n("406291"),
-        p = n("724210"),
-        m = n("782340");
+        m = n("724210"),
+        p = n("782340");
     let h = {
         sentinel: f.CHANNEL_SENTINEL,
         matches: (e, t, n, i, l) => l.mentions.channel !== c.ChannelMentionMode.DENY && !e.isPrivate(),
@@ -47,15 +47,15 @@ function(e, t, n) {
                     query: r,
                     options: u,
                     onHover: c,
-                    onClick: p
+                    onClick: m
                 } = e,
                 h = r.charAt(0) === l.AutocompleterQuerySymbols.VOICE_CHANNEL;
-            return h ? (t = m.default.Messages.VOICE_CHANNELS_MATCHING, n = m.default.Messages.VOICE_CHANNELS, r = r.substring(1)) : u.forNonStringCommandOption ? (t = m.default.Messages.CHANNELS_MATCHING, n = m.default.Messages.CHANNELS) : (t = m.default.Messages.TEXT_CHANNELS_MATCHING, n = m.default.Messages.TEXT_CHANNELS), (0, d.renderAutocompleteGroup)({
+            return h ? (t = p.default.Messages.VOICE_CHANNELS_MATCHING, n = p.default.Messages.VOICE_CHANNELS, r = r.substring(1)) : u.forNonStringCommandOption ? (t = p.default.Messages.CHANNELS_MATCHING, n = p.default.Messages.CHANNELS) : (t = p.default.Messages.TEXT_CHANNELS_MATCHING, n = p.default.Messages.TEXT_CHANNELS), (0, d.renderAutocompleteGroup)({
                 query: r,
                 selectedIndex: a,
                 autocompletes: i,
                 onHover: c,
-                onClick: p,
+                onClick: m,
                 titleWithQuery: t,
                 titleWithoutQuery: n,
                 Component: o.default.Channel,
@@ -90,7 +90,7 @@ function(e, t, n) {
                         return "#".concat(null != t ? t.name : e.name)
                 }
             }(s), function(e) {
-                return p.StaticChannelIds.has(e.id) ? "<id:".concat(e.id, ">") : "<#".concat(e.id, ">")
+                return m.StaticChannelIds.has(e.id) ? "<id:".concat(e.id, ">") : "<#".concat(e.id, ">")
             }(s)), {
                 type: c.AutocompleteSelectionTypes.CHANNEL
             }

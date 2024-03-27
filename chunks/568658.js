@@ -15,8 +15,8 @@ function(e, t, n) {
         d = n("701909"),
         c = n("317041"),
         f = n("49111"),
-        p = n("782340"),
-        m = n("485700");
+        m = n("782340"),
+        p = n("485700");
 
     function h(e) {
         var t;
@@ -36,19 +36,19 @@ function(e, t, n) {
                 return t => (0, i.jsx)(e, {
                     ...t,
                     id: l,
-                    label: p.default.Messages.COPY_ID_COMMAND
+                    label: m.default.Messages.COPY_ID_COMMAND
                 })
             })
         }, [null == h ? void 0 : null === (t = h.rootCommand) || void 0 === t ? void 0 : t.id]);
         return null == h ? null : (0, i.jsxs)("div", {
-            className: s(a, m.bar),
+            className: s(a, p.bar),
             onContextMenu: x,
             children: [(0, i.jsx)(u.default, {}), (0, i.jsxs)(r.Text, {
                 variant: "text-sm/normal",
                 color: "text-muted",
-                children: [p.default.Messages.APPLICATION_COMMAND_USER_INSTALL_EDUCATION.format({
+                children: [m.default.Messages.APPLICATION_COMMAND_USER_INSTALL_EDUCATION.format({
                     betaUserLimit: c.APPLICATION_USER_INSTALL_BETA_USER_LIMIT
-                }), p.default.Messages.APPLICATION_COMMAND_USER_INSTALL_LEARN_MORE.format({
+                }), m.default.Messages.APPLICATION_COMMAND_USER_INSTALL_LEARN_MORE.format({
                     learnMoreUrl: d.default.getArticleURL(f.HelpdeskArticles.USING_APPS_FAQ)
                 })]
             })]

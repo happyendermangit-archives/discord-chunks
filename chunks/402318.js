@@ -43,19 +43,19 @@ function(e, t, n) {
             knownSize: f
         } = t;
         if (c < l) return null;
-        let p = a(n).filter(o.isNotNullish).take(s).map(e => (0, i.jsx)(d, {
+        let m = a(n).filter(o.isNotNullish).take(s).map(e => (0, i.jsx)(d, {
                 member: e,
                 guildId: r
             }, e.id)).value(),
-            m = c - f;
-        for (let e = 0; e < m && p.length < s; e++) p.push((0, i.jsx)(d, {
+            p = c - f;
+        for (let e = 0; e < p && m.length < s; e++) m.push((0, i.jsx)(d, {
             empty: !0,
             guildId: r
         }, "empty-member-".concat(e)));
-        let h = Math.max(Math.min(c - p.length, 99), 0);
+        let h = Math.max(Math.min(c - m.length, 99), 0);
         if (1 === h) {
             let e = n[s];
-            p.push((0, i.jsx)(d, {
+            m.push((0, i.jsx)(d, {
                 member: e,
                 guildId: r
             }, e.id))
@@ -64,7 +64,7 @@ function(e, t, n) {
             className: u.wrapper,
             children: (0, i.jsxs)("div", {
                 className: u.partyMembers,
-                children: [p, h > 1 ? (0, i.jsxs)("div", {
+                children: [m, h > 1 ? (0, i.jsxs)("div", {
                     className: u.partyMemberOverflow,
                     children: ["+", h]
                 }) : null]

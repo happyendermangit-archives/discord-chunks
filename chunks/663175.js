@@ -22,8 +22,8 @@ function(e, t, n) {
                 onVolumeChange: d,
                 onVolumeShow: c,
                 onVolumeHide: f,
-                autoMute: p,
-                onMute: m,
+                autoMute: m,
+                onMute: p,
                 mimeType: h,
                 onPlay: x
             } = this.props;
@@ -36,8 +36,8 @@ function(e, t, n) {
                 className: i,
                 playable: a,
                 volume: o,
-                onMute: m,
-                autoMute: p,
+                onMute: p,
+                autoMute: m,
                 onVolumeChange: d,
                 onVolumeShow: c,
                 onVolumeHide: f,

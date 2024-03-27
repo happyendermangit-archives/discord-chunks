@@ -15,8 +15,8 @@ function(e, t, n) {
         d = n("685665"),
         c = n("166960"),
         f = n("488705"),
-        p = n("551305"),
-        m = n("433328"),
+        m = n("551305"),
+        p = n("433328"),
         h = n("599110"),
         x = n("49111"),
         E = n("646718"),
@@ -29,43 +29,43 @@ function(e, t, n) {
                 channel: S,
                 isResending: C
             } = e, {
-                enabled: _
+                enabled: T
             } = c.default.useExperiment({
                 location: "ec41f5_1"
             }, {
                 autoTrackExposure: !0
-            }), T = _ ? y.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP.format() : C ? y.default.Messages.SHARE_NITRO_RESEND_TOOLTIP : y.default.Messages.SHARE_NITRO_TOOLTIP, I = _ ? y.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : null, [v, N] = l.useState(!1), [A, R] = l.useState(!1), O = (0, r.default)(null, () => R(!1)), {
+            }), _ = T ? y.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP.format() : C ? y.default.Messages.SHARE_NITRO_RESEND_TOOLTIP : y.default.Messages.SHARE_NITRO_TOOLTIP, I = T ? y.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : null, [v, A] = l.useState(!1), [N, R] = l.useState(!1), O = (0, r.default)(null, () => R(!1)), {
                 analyticsLocations: M
             } = (0, d.default)(u.default.REFERRAL_TRIALS_COMPOSER_BUTTON), k = S.isDM() && void 0 !== S.recipients ? S.recipients[0] : null, L = (0, o.default)();
             return t ? null : (0, i.jsxs)("div", {
                 ref: O,
                 className: g.buttonContainer,
                 children: [(0, i.jsx)(f.default, {
-                    shouldShowPopout: A,
+                    shouldShowPopout: N,
                     referralsRemaining: n,
                     channel: S,
                     onClose: () => R(!1),
                     isResending: C
                 }), (0, i.jsx)(a.Tooltip, {
-                    text: T,
-                    shouldShow: !A,
-                    "aria-label": null != I ? I : T,
+                    text: _,
+                    shouldShow: !N,
+                    "aria-label": null != I ? I : _,
                     children: e => (0, i.jsx)("div", {
                         onMouseEnter: () => {
-                            !A && !v && (N(!0), h.default.track(x.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
+                            !N && !v && (A(!0), h.default.track(x.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
                                 location_stack: M,
                                 step: E.ReferralTrialsAnalyticSteps.BADGE_TOOLTIP_VIEWED,
                                 other_user_id: Number(k)
                             }))
                         },
                         onMouseLeave: () => {
-                            N(!1)
+                            A(!1)
                         },
-                        children: (0, i.jsx)(p.default, {
+                        children: (0, i.jsx)(m.default, {
                             ...e,
                             innerClassName: g.button,
-                            isActive: A,
-                            "aria-label": null != I ? I : T,
+                            isActive: N,
+                            "aria-label": null != I ? I : _,
                             "aria-haspopup": "dialog",
                             onClick: () => {
                                 R(e => !e), h.default.track(x.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
@@ -74,11 +74,11 @@ function(e, t, n) {
                                     other_user_id: Number(k)
                                 })
                             },
-                            children: (0, i.jsx)(m.default, {
+                            children: (0, i.jsx)(p.default, {
                                 referralsRemaining: n,
                                 hovered: v,
                                 isResending: C,
-                                shouldShowBirthdayUX: _,
+                                shouldShowBirthdayUX: T,
                                 isLightTheme: (0, s.isThemeLight)(L)
                             })
                         })

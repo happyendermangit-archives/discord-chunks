@@ -21,8 +21,8 @@ function(e, t, n) {
         d = n("669491"),
         c = n("77078"),
         f = n("430568"),
-        p = n("206230"),
-        m = n("526887"),
+        m = n("206230"),
+        p = n("526887"),
         h = n("697218"),
         x = n("118849"),
         E = n("671434"),
@@ -30,12 +30,12 @@ function(e, t, n) {
         g = n("151185"),
         S = n("368121"),
         C = n("305122"),
-        _ = n("235004"),
-        T = n("389480"),
+        T = n("235004"),
+        _ = n("389480"),
         I = n("78581"),
         v = n("23106"),
-        N = n("796864"),
-        A = n("172858"),
+        A = n("796864"),
+        N = n("172858"),
         R = n("782340"),
         O = n("802501");
 
@@ -98,20 +98,20 @@ function(e, t, n) {
             onMouseEnter: G,
             onSelectItem: H,
             analyticsLocations: B,
-            buttonOverlay: V = T.SoundButtonOverlay.PLAY,
+            buttonOverlay: V = _.SoundButtonOverlay.PLAY,
             ...K
         } = e, {
             soundId: W,
             name: Y,
             emojiId: z,
-            emojiName: Z
-        } = L, J = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), Q = (0, N.useSoundButtonContextMenu)(L, null == P ? void 0 : P.guild_id), {
-            playSoundboardSound: q,
+            emojiName: Q
+        } = L, Z = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), q = (0, A.useSoundButtonContextMenu)(L, null == P ? void 0 : P.guild_id), {
+            playSoundboardSound: J,
             previewSound: X,
             isPlayingSound: $
         } = (0, v.default)(L, null !== (n = null == P ? void 0 : P.id) && void 0 !== n ? n : null), {
             createMultipleConfettiAt: ee
-        } = l.useContext(m.ConfettiCannonContext), et = l.useRef(null);
+        } = l.useContext(p.ConfettiCannonContext), et = l.useRef(null);
         let en = (a = L.soundId, S = et.current, l.useMemo(() => {
                 if (null == S || "1" !== a) return {
                     x: 0,
@@ -123,25 +123,25 @@ function(e, t, n) {
                     y: e.top + e.height / 2
                 }
             }, [S, a])),
-            ei = (0, o.useStateFromStores)([p.default], () => p.default.useReducedMotion),
+            ei = (0, o.useStateFromStores)([m.default], () => m.default.useReducedMotion),
             el = l.useRef(.01),
             ea = l.useRef(new u.Interval),
             es = "1" === L.soundId,
-            er = (0, o.useStateFromStores)([_.default], () => _.default.isFavoriteSound(W), [W]),
+            er = (0, o.useStateFromStores)([T.default], () => T.default.isFavoriteSound(W), [W]),
             eo = "sound-".concat(L.soundId),
             eu = (0, r.useListItem)(eo),
-            ed = null != z || null != Z,
-            ec = !(0, I.canUseSoundboardSound)(J, L, P),
+            ed = null != z || null != Q,
+            ec = !(0, I.canUseSoundboardSound)(Z, L, P),
             ef = U || w && !ec;
 
-        function ep(e) {
+        function em(e) {
             e.stopPropagation(), e.currentTarget.blur(), er ? (0, C.removeFavoriteSound)(W) : (0, C.addFavoriteSound)(W)
         }
 
-        function em() {
+        function ep() {
             return (0, i.jsx)(M, {
                 disabled: !D && !U,
-                onClick: ep,
+                onClick: em,
                 text: R.default.Messages.SOUNDBOARD_SOUND_FAVORITE_SOUND.format({
                     emojiName: L.emojiName,
                     soundName: L.name
@@ -169,7 +169,7 @@ function(e, t, n) {
                     className: O.buttonOverlayActions,
                     children: [ef && eh, !F && !ec && (0, i.jsx)(y.default, {
                         className: O.playIcon
-                    }), ef && em()]
+                    }), ef && ep()]
                 })]
             });
         return l.useEffect(() => {
@@ -203,21 +203,21 @@ function(e, t, n) {
                 }),
                 onClick: function() {
                     if (es && !ei && (el.current = Math.min(el.current + .01, .1), Math.random() < el.current && ee(en.x, en.y, void 0, void 0, {
-                            sprite: A.DUCK_CONFETTI_SPRITE
+                            sprite: N.DUCK_CONFETTI_SPRITE
                         })), null != H) {
                         H();
                         return
                     }
-                    F || q(B)
+                    F || J(B)
                 },
-                onContextMenu: w && !ec ? Q : void 0,
+                onContextMenu: w && !ec ? q : void 0,
                 children: [(0, i.jsxs)("div", {
                     className: O.soundInfo,
                     "aria-hidden": !0,
                     ref: et,
                     children: [ed && (0, i.jsx)(f.default, {
                         emojiId: z,
-                        emojiName: Z,
+                        emojiName: Q,
                         className: O.emoji
                     }), (0, i.jsx)(c.Text, {
                         variant: "text-xs/medium",
@@ -229,7 +229,7 @@ function(e, t, n) {
                     })]
                 }), function() {
                     switch (V) {
-                        case T.SoundButtonOverlay.ADD:
+                        case _.SoundButtonOverlay.ADD:
                             return (0, i.jsxs)("div", {
                                 className: O.addButtonOverlay,
                                 children: [(0, i.jsx)("div", {
@@ -245,10 +245,10 @@ function(e, t, n) {
                                             color: "header-primary",
                                             children: R.default.Messages.GIFT_SELECT_SOUNDBOARD_ADD
                                         })]
-                                    }), ef && em()]
+                                    }), ef && ep()]
                                 })]
                             });
-                        case T.SoundButtonOverlay.PLAY:
+                        case _.SoundButtonOverlay.PLAY:
                         default:
                             return ex()
                     }

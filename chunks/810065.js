@@ -106,7 +106,7 @@ function(e, t, n) {
                     success: !0
                 };
                 let u = Number(o.normalizeNumericString(a.default.locale, l));
-                return !isNaN(u) && Number.isInteger(u) && Number.isSafeInteger(u) ? m(u, t, c.default.Messages.COMMAND_VALIDATION_NUMBER_RANGE_ERROR, c.default.Messages.COMMAND_VALIDATION_NUMBER_MINIMUM_ERROR, c.default.Messages.COMMAND_VALIDATION_NUMBER_MAXIMUM_ERROR) : {
+                return !isNaN(u) && Number.isInteger(u) && Number.isSafeInteger(u) ? p(u, t, c.default.Messages.COMMAND_VALIDATION_NUMBER_RANGE_ERROR, c.default.Messages.COMMAND_VALIDATION_NUMBER_MINIMUM_ERROR, c.default.Messages.COMMAND_VALIDATION_NUMBER_MAXIMUM_ERROR) : {
                     success: !1
                 }
             },
@@ -130,7 +130,7 @@ function(e, t, n) {
                 let u = Number(o.normalizeNumericString(a.default.locale, l));
                 return isNaN(u) || u > Number.MAX_SAFE_INTEGER || u < Number.MIN_SAFE_INTEGER ? {
                     success: !1
-                } : m(u, t, c.default.Messages.COMMAND_VALIDATION_NUMBER_RANGE_ERROR, c.default.Messages.COMMAND_VALIDATION_NUMBER_MINIMUM_ERROR, c.default.Messages.COMMAND_VALIDATION_NUMBER_MAXIMUM_ERROR)
+                } : p(u, t, c.default.Messages.COMMAND_VALIDATION_NUMBER_RANGE_ERROR, c.default.Messages.COMMAND_VALIDATION_NUMBER_MINIMUM_ERROR, c.default.Messages.COMMAND_VALIDATION_NUMBER_MAXIMUM_ERROR)
             },
             [i.ApplicationCommandOptionType.USER]: (e, t, n, i) => {
                 if ("text" !== e.type) return {
@@ -164,7 +164,7 @@ function(e, t, n) {
             },
             [i.ApplicationCommandOptionType.ROLE]: (e, t, n, i) => {
                 if ("text" !== e.type) return {
-                    success: p(e)
+                    success: m(e)
                 };
                 {
                     if ((0, u.isSnowflake)(e.text)) return {
@@ -180,7 +180,7 @@ function(e, t, n) {
             },
             [i.ApplicationCommandOptionType.MENTIONABLE]: (e, t, n, i) => {
                 if ("text" !== e.type) return {
-                    success: "userMention" === e.type || p(e)
+                    success: "userMention" === e.type || m(e)
                 };
                 {
                     if ((0, u.isSnowflake)(e.text)) return {
@@ -188,7 +188,7 @@ function(e, t, n) {
                     };
                     let t = (0, l.resolveApplicationCommandOption)(e.text, i, n);
                     return {
-                        success: null != t && ("userMention" === t.type || p(t))
+                        success: null != t && ("userMention" === t.type || m(t))
                     }
                 }
             },
@@ -202,9 +202,9 @@ function(e, t, n) {
                 }
             }
         },
-        p = e => "roleMention" === e.type || "textMention" === e.type && "@everyone" === e.text;
+        m = e => "roleMention" === e.type || "textMention" === e.type && "@everyone" === e.text;
 
-    function m(e, t, n, i, l) {
+    function p(e, t, n, i, l) {
         if (null != t.minValue && e < t.minValue || null != t.maxValue && e > t.maxValue) {
             if (null != t.maxValue && null != t.minValue) return {
                 success: !1,

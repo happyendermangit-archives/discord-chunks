@@ -15,8 +15,8 @@ function(e, t, n) {
         d = n("966724"),
         c = n("474643"),
         f = n("585722"),
-        p = n("271972"),
-        m = n("761354"),
+        m = n("271972"),
+        p = n("761354"),
         h = n("49111"),
         x = n("825455"),
         E = n("602416");
@@ -26,7 +26,7 @@ function(e, t, n) {
             channelId: t,
             option: n,
             keyboardModeEnabled: a
-        } = e, y = l.useRef(null), [g, S] = l.useState(!1), C = f.default.getUpload(t, n.name, c.DraftType.SlashCommand), _ = l.useRef(null), T = l.useCallback(() => {
+        } = e, y = l.useRef(null), [g, S] = l.useState(!1), C = f.default.getUpload(t, n.name, c.DraftType.SlashCommand), T = l.useRef(null), _ = l.useCallback(() => {
             S(!0)
         }, []), I = l.useCallback(() => {
             S(!1)
@@ -46,11 +46,11 @@ function(e, t, n) {
             })
         }, [t, n]);
         return (l.useEffect(() => {
-            let e = _.current;
-            return null == C && (null == e || e.addEventListener("dragover", T, !1), null == e || e.addEventListener("dragleave", I, !1), null == e || e.addEventListener("drop", v, !1)), () => {
-                null == e || e.removeEventListener("dragover", T, !1), null == e || e.removeEventListener("dragleave", I, !1), null == e || e.removeEventListener("drop", v, !1)
+            let e = T.current;
+            return null == C && (null == e || e.addEventListener("dragover", _, !1), null == e || e.addEventListener("dragleave", I, !1), null == e || e.addEventListener("drop", v, !1)), () => {
+                null == e || e.removeEventListener("dragover", _, !1), null == e || e.removeEventListener("dragleave", I, !1), null == e || e.removeEventListener("drop", v, !1)
             }
-        }, [C, T, I, v]), null != C) ? (0, i.jsx)(m.default, {
+        }, [C, _, I, v]), null != C) ? (0, i.jsx)(p.default, {
             channelId: t,
             upload: C,
             keyboardModeEnabled: a,
@@ -68,7 +68,7 @@ function(e, t, n) {
                 })]
             }),
             canEdit: !1
-        }) : (0, i.jsxs)(p.default, {
+        }) : (0, i.jsxs)(m.default, {
             id: n.name,
             channelId: t,
             keyboardModeEnabled: a,
@@ -82,7 +82,7 @@ function(e, t, n) {
                 [x.emptyOptionActive]: g
             }),
             draftType: c.DraftType.SlashCommand,
-            ref: _,
+            ref: T,
             children: [(0, i.jsx)("span", {
                 className: s(x.optionName, {
                     [x.optionNameActive]: g

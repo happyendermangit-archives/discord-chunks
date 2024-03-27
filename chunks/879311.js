@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return R
+            return M
         }
     });
     var i = n("37983");
@@ -16,151 +16,173 @@ function(e, t, n) {
         d = n("76393"),
         c = n("223913"),
         f = n("42203"),
-        p = n("305961"),
-        m = n("957255"),
+        m = n("305961"),
+        p = n("957255"),
         h = n("800762"),
-        x = n("879364"),
-        E = n("588025"),
-        y = n("227231"),
-        g = n("385416"),
-        S = n("235627"),
-        C = n("49111"),
-        _ = n("782340"),
-        T = n("418630");
-    let I = "16px",
-        v = "12px",
-        N = "11px";
+        x = n("815496"),
+        E = n("879364"),
+        y = n("588025"),
+        g = n("227231"),
+        S = n("534801"),
+        C = n("385416"),
+        T = n("235627"),
+        _ = n("49111"),
+        I = n("782340"),
+        v = n("418630");
+    let A = "16px",
+        N = "12px",
+        R = "11px";
 
-    function A(e) {
+    function O(e) {
         return null != e
     }
-    var R = function(e) {
-        var t, A, R;
+    var M = function(e) {
+        var t, O, M;
         let {
-            quest: O,
-            applicationStream: M,
-            onMouseEnter: k,
-            onMouseLeave: L,
-            position: P
-        } = e, b = (0, g.useHandleClaimQuestsReward)({
-            quest: O,
-            location: E.QuestContent.MEMBERS_LIST
-        }), j = (0, x.useIsQuestExpired)(O), U = (null == O ? void 0 : null === (t = O.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, D = (null == O ? void 0 : null === (A = O.userStatus) || void 0 === A ? void 0 : A.enrolledAt) != null, w = (null == O ? void 0 : null === (R = O.userStatus) || void 0 === R ? void 0 : R.completedAt) != null;
-        if (null == O || j || U && !(null != M)) return null;
-        let F = () => {
-                (0, s.openModalLazy)(async () => {
+            quest: k,
+            applicationStream: L,
+            onMouseEnter: P,
+            onMouseLeave: b,
+            position: j
+        } = e, U = (0, C.useHandleClaimQuestsReward)({
+            quest: k,
+            location: y.QuestContent.MEMBERS_LIST
+        }), D = (0, E.useIsQuestExpired)(k), w = (null == k ? void 0 : null === (t = k.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, F = (null == k ? void 0 : null === (O = k.userStatus) || void 0 === O ? void 0 : O.enrolledAt) != null, G = (null == k ? void 0 : null === (M = k.userStatus) || void 0 === M ? void 0 : M.completedAt) != null;
+        if (null == k || D || w && !(null != L)) return null;
+        let H = () => {
+                (0, x.trackQuestContentClicked)({
+                    questId: k.id,
+                    questContent: y.QuestContent.MEMBERS_LIST,
+                    questContentCTA: x.QuestContentCTA.OPEN_DISCLOSURE,
+                    trackGuildAndChannelMetadata: !0
+                }), (0, s.openModalLazy)(async () => {
                     let {
                         default: e
                     } = await n.el("970143").then(n.bind(n, "970143"));
                     return t => (0, i.jsx)(e, {
                         ...t,
-                        questContent: E.QuestContent.MEMBERS_LIST,
-                        questConfig: O.config
+                        questContent: y.QuestContent.MEMBERS_LIST,
+                        questConfig: k.config
                     })
                 })
             },
-            G = () => {
-                u.default.open(C.UserSettingsSections.INVENTORY)
-            },
-            H = e => {
-                e.stopPropagation(), F()
-            },
             B = () => {
-                if (null != M) {
-                    let e = f.default.getChannel(M.channelId);
-                    if (null != e && (0, c.canWatchStream)(e, h.default, p.default, m.default, d.default)[0]) {
-                        r.default.selectVoiceChannel(e.id), (0, o.watchStreamAndTransitionToStream)(M);
-                        return
-                    }
+                (0, x.trackQuestContentClicked)({
+                    questId: k.id,
+                    questContent: y.QuestContent.MEMBERS_LIST,
+                    questContentCTA: x.QuestContentCTA.LEARN_MORE,
+                    trackGuildAndChannelMetadata: !0
+                }), u.default.open(_.UserSettingsSections.INVENTORY)
+            },
+            V = e => {
+                e.stopPropagation(), H()
+            },
+            K = () => {
+                if (null != L) {
+                    let e = f.default.getChannel(L.channelId);
+                    if (null != e && (0, c.canWatchStream)(e, h.default, m.default, p.default, d.default)[0]) return (0, x.trackQuestContentClicked)({
+                        questId: k.id,
+                        questContent: y.QuestContent.MEMBERS_LIST,
+                        questContentCTA: x.QuestContentCTA.WATCH_STREAM,
+                        trackGuildAndChannelMetadata: !0
+                    }), r.default.selectVoiceChannel(e.id), (0, o.watchStreamAndTransitionToStream)(L)
                 }
-                G()
+                B()
             },
-            V = (() => null != M ? {
-                headerText: _.default.Messages.QUESTS_MEMBERS_LIST_AVAILBLE,
-                ctaText: _.default.Messages.QUESTS_MEMBERS_LIST_STREAM_CTA,
-                tileAssetUrl: (0, y.getGameTileAssetUrl)(O.id),
+            W = (() => null != L ? {
+                headerText: I.default.Messages.QUESTS_MEMBERS_LIST_AVAILBLE,
+                ctaText: I.default.Messages.QUESTS_MEMBERS_LIST_STREAM_CTA,
+                tileAssetUrl: (0, g.getGameTileAssetUrl)(k.id),
+                handleClickCta: K
+            } : G && !w ? {
+                headerText: I.default.Messages.QUESTS_MEMBERS_LIST_CLAIM_REWARD,
+                ctaText: I.default.Messages.QUESTS_MEMBERS_LIST_CLAIM_REWARD_CTA,
+                tileAssetUrl: (0, g.getRewardAssetUrl)(k.id),
+                handleClickCta: U
+            } : F ? {
+                headerText: I.default.Messages.QUESTS_MEMBERS_LIST_FINISH,
+                ctaText: I.default.Messages.QUESTS_MEMBERS_LIST_FINISH_CTA,
+                tileAssetUrl: (0, g.getRewardAssetUrl)(k.id),
                 handleClickCta: B
-            } : w && !U ? {
-                headerText: _.default.Messages.QUESTS_MEMBERS_LIST_CLAIM_REWARD,
-                ctaText: _.default.Messages.QUESTS_MEMBERS_LIST_CLAIM_REWARD_CTA,
-                tileAssetUrl: (0, y.getRewardAssetUrl)(O.id),
-                handleClickCta: b
-            } : D ? {
-                headerText: _.default.Messages.QUESTS_MEMBERS_LIST_FINISH,
-                ctaText: _.default.Messages.QUESTS_MEMBERS_LIST_FINISH_CTA,
-                tileAssetUrl: (0, y.getRewardAssetUrl)(O.id),
-                handleClickCta: G
             } : {
-                headerText: _.default.Messages.QUESTS_MEMBERS_LIST_AVAILBLE,
-                ctaText: _.default.Messages.QUESTS_MEMBERS_LIST_START_CTA,
-                tileAssetUrl: (0, y.getGameTileAssetUrl)(O.id),
-                handleClickCta: G
+                headerText: I.default.Messages.QUESTS_MEMBERS_LIST_AVAILBLE,
+                ctaText: I.default.Messages.QUESTS_MEMBERS_LIST_START_CTA,
+                tileAssetUrl: (0, g.getGameTileAssetUrl)(k.id),
+                handleClickCta: B
             })();
-        return (0, i.jsx)("div", {
-            style: "bottom" === P ? {
-                paddingTop: "8px"
-            } : {
-                paddingBottom: "8px"
-            },
-            onMouseEnter: k,
-            onMouseLeave: L,
-            children: (0, i.jsxs)(s.Clickable, {
-                className: T.container,
-                onClick: () => {
-                    L(), V.handleClickCta()
+        return (0, i.jsx)(S.QuestContentImpressionTracker, {
+            questId: k.id,
+            questContent: y.QuestContent.MEMBERS_LIST,
+            trackGuildAndChannelMetadata: !0,
+            children: e => (0, i.jsx)("div", {
+                ref: t => {
+                    e.current = t
                 },
-                children: [(0, i.jsxs)("div", {
-                    className: T.left,
+                style: "bottom" === j ? {
+                    paddingTop: "8px"
+                } : {
+                    paddingBottom: "8px"
+                },
+                onMouseEnter: P,
+                onMouseLeave: b,
+                children: (0, i.jsxs)(s.Clickable, {
+                    className: v.container,
+                    onClick: () => {
+                        b(), W.handleClickCta()
+                    },
                     children: [(0, i.jsxs)("div", {
-                        className: T.top,
-                        children: [(0, i.jsx)(S.QuestsIconWithGradient, {
-                            height: I,
-                            width: I
-                        }), (0, i.jsx)(s.Heading, {
-                            variant: "heading-md/semibold",
-                            children: V.headerText
+                        className: v.left,
+                        children: [(0, i.jsxs)("div", {
+                            className: v.top,
+                            children: [(0, i.jsx)(T.QuestsIconWithGradient, {
+                                height: A,
+                                width: A
+                            }), (0, i.jsx)(s.Heading, {
+                                variant: "heading-md/semibold",
+                                children: W.headerText
+                            })]
+                        }), (0, i.jsxs)("div", {
+                            className: v.middle,
+                            children: [(0, i.jsx)(s.Text, {
+                                variant: "text-sm/normal",
+                                children: W.ctaText
+                            }), (0, i.jsx)(l.ArrowLargeRightIcon, {
+                                width: N,
+                                height: N
+                            })]
+                        }), (0, i.jsxs)(s.Clickable, {
+                            className: v.bottom,
+                            onClick: e => {
+                                b(), V(e)
+                            },
+                            children: [(0, i.jsx)(s.Text, {
+                                variant: "text-xs/medium",
+                                color: "text-muted",
+                                children: I.default.Messages.QUESTS_MEMBERS_LIST_PROMOTED_BY.format({
+                                    gamePublisher: k.config.messages.gamePublisher
+                                })
+                            }), (0, i.jsx)(a.CircleQuestionIcon, {
+                                width: R,
+                                height: R,
+                                color: s.tokens.colors.INTERACTIVE_MUTED
+                            })]
                         })]
-                    }), (0, i.jsxs)("div", {
-                        className: T.middle,
-                        children: [(0, i.jsx)(s.Text, {
-                            variant: "text-sm/normal",
-                            children: V.ctaText
-                        }), (0, i.jsx)(l.ArrowLargeRightIcon, {
-                            width: v,
-                            height: v
-                        })]
-                    }), (0, i.jsxs)(s.Clickable, {
-                        className: T.bottom,
-                        onClick: e => {
-                            L(), H(e)
-                        },
-                        children: [(0, i.jsx)(s.Text, {
-                            variant: "text-xs/medium",
-                            color: "text-muted",
-                            children: _.default.Messages.QUESTS_MEMBERS_LIST_PROMOTED_BY.format({
-                                gamePublisher: O.config.messages.gamePublisher
-                            })
-                        }), (0, i.jsx)(a.CircleQuestionIcon, {
-                            width: N,
-                            height: N,
-                            color: s.tokens.colors.INTERACTIVE_MUTED
-                        })]
+                    }), (0, i.jsx)("div", {
+                        className: v.right,
+                        children: (0, i.jsxs)("div", {
+                            className: v.imgWrapper,
+                            children: [(0, i.jsx)("div", {
+                                className: v.imgUnderlay
+                            }), (0, i.jsx)("img", {
+                                alt: I.default.Messages.QUESTS_MEMBERS_LIST_GAME_TILE_ALT.format({
+                                    gameTitle: k.config.messages.gameTitle,
+                                    gamePublisher: k.config.messages.gamePublisher
+                                }),
+                                src: W.tileAssetUrl
+                            })]
+                        })
                     })]
-                }), (0, i.jsx)("div", {
-                    className: T.right,
-                    children: (0, i.jsxs)("div", {
-                        className: T.imgWrapper,
-                        children: [(0, i.jsx)("div", {
-                            className: T.imgUnderlay
-                        }), (0, i.jsx)("img", {
-                            alt: _.default.Messages.QUESTS_MEMBERS_LIST_GAME_TILE_ALT.format({
-                                gameTitle: O.config.messages.gameTitle,
-                                gamePublisher: O.config.messages.gamePublisher
-                            }),
-                            src: V.tileAssetUrl
-                        })]
-                    })
-                })]
+                })
             })
         })
     }

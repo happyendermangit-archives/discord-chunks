@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return _
+            return T
         }
     });
     var i = n("37983"),
@@ -15,8 +15,8 @@ function(e, t, n) {
         d = n("574073"),
         c = n("529805"),
         f = n("393414"),
-        p = n("300322"),
-        m = n("967241"),
+        m = n("300322"),
+        p = n("967241"),
         h = n("377253"),
         x = n("116320"),
         E = n("381546"),
@@ -39,7 +39,7 @@ function(e, t, n) {
             })
         }, [t]), (0, i.jsxs)(o.Clickable, {
             onClick: function() {
-                (0, c.deletePendingReply)(t.id), (0, m.openThreadSidebarForCreating)(t, n, "Reply Chain Nudge")
+                (0, c.deletePendingReply)(t.id), (0, p.openThreadSidebarForCreating)(t, n, "Reply Chain Nudge")
             },
             className: S.threadSuggestionBar,
             focusProps: {
@@ -64,7 +64,7 @@ function(e, t, n) {
         })
     }
 
-    function _(e) {
+    function T(e) {
         let {
             reply: t,
             chatInputType: n
@@ -72,10 +72,10 @@ function(e, t, n) {
             channel: l,
             message: a,
             shouldMention: u,
-            showMentionToggle: m
+            showMentionToggle: p
         } = t, {
-            nick: _,
-            colorString: T,
+            nick: T,
+            colorString: _,
             colorRoleName: I
         } = (0, d.default)(a), v = function(e, t) {
             let n = e.id,
@@ -89,7 +89,7 @@ function(e, t, n) {
                 }
                 return 10
             }, [n, i])
-        }(l, a), N = (0, p.useCanStartPublicThread)(l, a), A = n.showThreadPromptOnReply && v >= 2 && N;
+        }(l, a), A = (0, m.useCanStartPublicThread)(l, a), N = n.showThreadPromptOnReply && v >= 2 && A;
 
         function R(e) {
             e.stopPropagation(), (0, c.setPendingReplyShouldMention)(l.id, !u)
@@ -117,15 +117,15 @@ function(e, t, n) {
                             children: g.default.Messages.REPLYING_TO.format({
                                 userHook: (e, t) => (0, i.jsx)(o.NameWithRole, {
                                     className: S.name,
-                                    name: _,
-                                    color: T,
+                                    name: T,
+                                    color: _,
                                     roleName: I
                                 }, t)
                             })
                         })
                     }), (0, i.jsxs)("div", {
                         className: S.actions,
-                        children: [m && (0, i.jsxs)(i.Fragment, {
+                        children: [p && (0, i.jsxs)(i.Fragment, {
                             children: [(0, i.jsx)(o.Tooltip, {
                                 text: u ? g.default.Messages.REPLY_MENTION_ON_TOOLTIP : g.default.Messages.REPLY_MENTION_OFF_TOOLTIP,
                                 children: e => {
@@ -168,7 +168,7 @@ function(e, t, n) {
                             })
                         })]
                     })]
-                }), A && (0, i.jsx)(C, {
+                }), N && (0, i.jsx)(C, {
                     channel: l,
                     message: a,
                     replyChainLength: v

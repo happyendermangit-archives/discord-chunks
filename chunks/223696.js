@@ -15,15 +15,15 @@ function(e, t, n) {
         d = n("120027"),
         c = n("402318"),
         f = n("697218"),
-        p = n("713135"),
-        m = n("782340"),
+        m = n("713135"),
+        p = n("782340"),
         h = n("633115"),
         x = l.memo(function(e) {
             var t, n;
             let {
                 user: a,
                 isLastSection: x
-            } = e, E = (0, r.useStateFromStores)([f.default], () => f.default.getCurrentUser()), y = (0, r.useStateFromStores)([p.default], () => p.default.getMutualFriends(a.id));
+            } = e, E = (0, r.useStateFromStores)([f.default], () => f.default.getCurrentUser()), y = (0, r.useStateFromStores)([m.default], () => m.default.getMutualFriends(a.id));
             l.useEffect(() => {
                 null == y && (0, u.fetchMutualFriends)(a.id)
             }, [y, a.id]);
@@ -36,9 +36,9 @@ function(e, t, n) {
                         return t
                     })) && void 0 !== e ? e : []
                 }, [y]),
-                S = (0, r.useStateFromStores)([p.default], () => p.default.getMutualGuilds(a.id)),
-                [C, _] = (0, r.useStateFromStoresArray)([p.default], () => [p.default.isFetchingFriends(a.id), p.default.isFetchingProfile(a.id)]);
-            return a.id === (null == E ? void 0 : E.id) || (null == y ? void 0 : y.length) === 0 && (null == S ? void 0 : S.length) === 0 ? null : C || _ ? (0, i.jsx)("div", {
+                S = (0, r.useStateFromStores)([m.default], () => m.default.getMutualGuilds(a.id)),
+                [C, T] = (0, r.useStateFromStoresArray)([m.default], () => [m.default.isFetchingFriends(a.id), m.default.isFetchingProfile(a.id)]);
+            return a.id === (null == E ? void 0 : E.id) || (null == y ? void 0 : y.length) === 0 && (null == S ? void 0 : S.length) === 0 ? null : C || T ? (0, i.jsx)("div", {
                 className: s(h.spinnerContainer),
                 children: (0, i.jsx)(o.Spinner, {
                     className: h.spinner
@@ -55,7 +55,7 @@ function(e, t, n) {
                 }), (0, i.jsx)(o.Text, {
                     className: (null == y ? void 0 : y.length) === 0 ? void 0 : h.mutualFriendsText,
                     variant: "text-xs/normal",
-                    children: m.default.Messages.MUTUAL_FRIENDS_COUNT.format({
+                    children: p.default.Messages.MUTUAL_FRIENDS_COUNT.format({
                         count: "".concat(null !== (t = null == y ? void 0 : y.length) && void 0 !== t ? t : 0)
                     })
                 }), (0, i.jsx)(d.default, {
@@ -65,7 +65,7 @@ function(e, t, n) {
                     className: h.dotSpacer
                 }), (0, i.jsx)(o.Text, {
                     variant: "text-xs/normal",
-                    children: m.default.Messages.MUTUAL_GUILDS_COUNT.format({
+                    children: p.default.Messages.MUTUAL_GUILDS_COUNT.format({
                         count: "".concat(null !== (n = null == S ? void 0 : S.length) && void 0 !== n ? n : 0)
                     })
                 })]

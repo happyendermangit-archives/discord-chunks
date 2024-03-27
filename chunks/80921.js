@@ -15,8 +15,8 @@ function(e, t, n) {
         d = n("538282"),
         c = n("551305"),
         f = n("13030"),
-        p = n("782340"),
-        m = n("350583"),
+        m = n("782340"),
+        p = n("350583"),
         h = l.memo(l.forwardRef(function(e, t) {
             let {
                 disabled: n,
@@ -40,29 +40,29 @@ function(e, t, n) {
                 }
             }, [E]);
             let {
-                Component: _,
-                events: T,
+                Component: T,
+                events: _,
                 play: I
             } = (0, o.useStickerLottie)();
             return n ? null : (0, i.jsx)("div", {
-                className: s(f.CHAT_INPUT_BUTTON_CLASSNAME, m.buttonContainer),
+                className: s(f.CHAT_INPUT_BUTTON_CLASSNAME, p.buttonContainer),
                 ref: t,
                 children: (0, i.jsx)(c.default, {
-                    innerClassName: s(m.button, m.stickerButton, {
-                        [m.stickerButtonTilted]: y && !S
+                    innerClassName: s(p.button, p.stickerButton, {
+                        [p.stickerButtonTilted]: y && !S
                     }),
-                    ...T,
+                    ..._,
                     onClick: () => {
                         C(), I()
                     },
                     isActive: S,
-                    "aria-label": p.default.Messages.STICKER_BUTTON_LABEL,
+                    "aria-label": m.default.Messages.STICKER_BUTTON_LABEL,
                     "aria-expanded": S,
                     "aria-haspopup": "dialog",
                     "aria-controls": x,
                     sparkle: !1,
                     notification: null,
-                    children: (0, i.jsx)(_, {
+                    children: (0, i.jsx)(T, {
                         color: "currentColor"
                     })
                 })

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return m
+            return p
         },
         CenterControlButton: function() {
             return x
@@ -19,9 +19,9 @@ function(e, t, n) {
         d = n("550410"),
         c = n("641568"),
         f = n("782340"),
-        p = n("4536");
+        m = n("4536");
 
-    function m(e) {
+    function p(e) {
         let {
             label: t,
             onClick: n,
@@ -31,7 +31,7 @@ function(e, t, n) {
             onContextMenu: u,
             className: c,
             wrapperClassName: f,
-            iconClassName: m,
+            iconClassName: p,
             iconComponent: h,
             themeable: x = !1,
             disabled: E = !1,
@@ -39,8 +39,8 @@ function(e, t, n) {
             tooltipPosition: g = "top",
             shouldShowTooltip: S = !0,
             forceTooltipOpen: C = !1,
-            buttonRef: _,
-            grow: T,
+            buttonRef: T,
+            grow: _,
             "aria-label": I
         } = e;
         return (0, i.jsx)(d.default, {
@@ -83,19 +83,19 @@ function(e, t, n) {
                             null == S || S(), null == o || o(e)
                         },
                         disabled: E,
-                        innerClassName: p.lineHeightReset,
+                        innerClassName: m.lineHeightReset,
                         className: a({
-                            [p.active]: y
+                            [m.active]: y
                         }, c),
                         wrapperClassName: f,
-                        buttonRef: _,
-                        grow: T,
+                        buttonRef: T,
+                        grow: _,
                         "aria-label": I,
                         ...C,
                         children: (0, i.jsx)(h, {
-                            className: a(p.controlIcon, m, {
-                                [p.themeable]: x,
-                                [p.active]: y
+                            className: a(m.controlIcon, p, {
+                                [m.themeable]: x,
+                                [m.active]: y
                             }),
                             color: "currentColor"
                         })
@@ -105,13 +105,13 @@ function(e, t, n) {
         })
     }
     let h = {
-        red: p.red,
-        white: p.white,
-        green: p.green,
-        yellow: p.yellow,
-        primaryDark: p.primaryDark,
-        primaryLight: p.primaryLight,
-        activeLight: p.activeLight
+        red: m.red,
+        white: m.white,
+        green: m.green,
+        yellow: m.yellow,
+        primaryDark: m.primaryDark,
+        primaryLight: m.primaryLight,
+        activeLight: m.activeLight
     };
 
     function x(e) {
@@ -123,31 +123,31 @@ function(e, t, n) {
             onPopoutClick: E,
             popoutOpen: y = !1,
             ...g
-        } = e, S = (0, c.default)(t, n), C = (0, r.default)("(max-width: 456px)"), _ = (0, i.jsx)(m, {
+        } = e, S = (0, c.default)(t, n), C = (0, r.default)("(max-width: 456px)"), T = (0, i.jsx)(p, {
             ...g,
             grow: !1,
             onContextMenu: E,
-            iconClassName: a(x, p.centerIcon),
-            className: a(C ? l : null, p.staticButton, p.centerButton, h[S])
+            iconClassName: a(x, m.centerIcon),
+            className: a(C ? l : null, m.staticButton, m.centerButton, h[S])
         });
-        return C ? _ : (0, i.jsxs)("div", {
-            className: a(l, p.contextMenuContainer),
+        return C ? T : (0, i.jsxs)("div", {
+            className: a(l, m.contextMenuContainer),
             children: [(0, i.jsx)(u.default, {
                 mask: null == E ? null : u.MaskIDs.CHANNEL_CALL_CONTROL_BUTTON,
                 width: 56,
                 height: 56,
-                children: _
+                children: T
             }), null != E ? (0, i.jsx)(d.default, {
                 children: (0, i.jsx)(s.Clickable, {
                     "aria-label": f.default.Messages.MORE_OPTIONS,
                     onClick: E,
                     onContextMenu: E,
-                    className: a(p.contextMenuNub, h[S], {
-                        [p.active]: y
+                    className: a(m.contextMenuNub, h[S], {
+                        [m.active]: y
                     }),
                     children: (0, i.jsx)(o.default, {
-                        className: a(p.contextMenuCaret, {
-                            [p.open]: y
+                        className: a(m.contextMenuCaret, {
+                            [m.open]: y
                         })
                     })
                 })

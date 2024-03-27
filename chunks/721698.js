@@ -33,14 +33,14 @@ function(e, t, n) {
         d = n("856894"),
         c = n("388647"),
         f = n("506061"),
-        p = n("49111");
-    let m = new Map;
+        m = n("49111");
+    let p = new Map;
     async function h(e) {
         var t;
         let n = Date.now(),
-            s = null !== (t = m.get(e)) && void 0 !== t ? t : 0;
+            s = null !== (t = p.get(e)) && void 0 !== t ? t : 0;
         if (r.default.getApplicationFetchState(e) === r.FetchState.FETCHING || r.default.isInvalidApplication(e) || n < s + 6e5) return;
-        m.set(e, n), a.default.dispatch({
+        p.set(e, n), a.default.dispatch({
             type: "APPLICATION_DIRECTORY_FETCH_APPLICATION",
             applicationId: e
         });
@@ -50,7 +50,7 @@ function(e, t, n) {
             }), !0);
         try {
             let t = await l.HTTP.get({
-                    url: p.Endpoints.APPLICATION_DIRECTORY_EMBED_APPLICATION(e),
+                    url: m.Endpoints.APPLICATION_DIRECTORY_EMBED_APPLICATION(e),
                     backoff: o,
                     retries: 10,
                     interceptResponse: u
@@ -84,7 +84,7 @@ function(e, t, n) {
                 });
                 try {
                     let t = await l.HTTP.get({
-                        url: p.Endpoints.APPLICATION_DIRECTORY_APPLICATION(e),
+                        url: m.Endpoints.APPLICATION_DIRECTORY_APPLICATION(e),
                         query: {
                             locale: s.default.locale
                         }
@@ -108,7 +108,7 @@ function(e, t, n) {
             t = o.default.getLastFetchTimeMs();
         if (null != t && t + 6e5 > e) return;
         let n = await l.HTTP.get({
-            url: p.Endpoints.APPLICATION_DIRECTORY_CATEGORIES,
+            url: m.Endpoints.APPLICATION_DIRECTORY_CATEGORIES,
             query: {
                 locale: s.default.locale
             }
@@ -145,7 +145,7 @@ function(e, t, n) {
                 });
                 try {
                     let e = await l.HTTP.get({
-                        url: p.Endpoints.APPLICATION_DIRECTORY_SIMILAR(n),
+                        url: m.Endpoints.APPLICATION_DIRECTORY_SIMILAR(n),
                         query: {
                             guild_id: i,
                             page: o,
@@ -182,7 +182,7 @@ function(e, t, n) {
         } = e, {
             page: u,
             categoryId: c
-        } = null != r ? r : {}, f = Date.now(), m = d.default.getFetchState({
+        } = null != r ? r : {}, f = Date.now(), p = d.default.getFetchState({
             query: n,
             guildId: i,
             page: u,
@@ -195,7 +195,7 @@ function(e, t, n) {
             page: u,
             categoryId: c
         })) && void 0 !== t ? t : {};
-        if (m !== d.FetchState.FETCHING) {
+        if (p !== d.FetchState.FETCHING) {
             if (null == h || !(h + 6e5 > f)) {
                 a.default.dispatch({
                     type: "APPLICATION_DIRECTORY_FETCH_SEARCH",
@@ -206,7 +206,7 @@ function(e, t, n) {
                 });
                 try {
                     let e = await l.HTTP.get({
-                        url: p.Endpoints.APPLICATION_DIRECTORY_SEARCH,
+                        url: m.Endpoints.APPLICATION_DIRECTORY_SEARCH,
                         query: {
                             query: n,
                             guild_id: i,
@@ -258,7 +258,7 @@ function(e, t, n) {
                 });
                 try {
                     let t = await l.HTTP.get({
-                        url: p.Endpoints.APPLICATION_DIRECTORY_COLLECTIONS,
+                        url: m.Endpoints.APPLICATION_DIRECTORY_COLLECTIONS,
                         query: {
                             includes_inactive: e,
                             locale: s.default.locale
@@ -290,7 +290,7 @@ function(e, t, n) {
                 });
                 try {
                     let e = await l.HTTP.get({
-                        url: p.Endpoints.INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS
+                        url: m.Endpoints.INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS
                     });
                     a.default.dispatch({
                         type: "FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS_SUCCESS",

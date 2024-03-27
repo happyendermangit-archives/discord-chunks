@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         ImageModal: function() {
-            return _
+            return T
         },
         VideoModal: function() {
-            return T
+            return _
         }
     }), n("222007");
     var i = n("37983"),
@@ -18,8 +18,8 @@ function(e, t, n) {
         d = n("605160"),
         c = n("659500"),
         f = n("103603"),
-        p = n("874276"),
-        m = n("952368"),
+        m = n("874276"),
+        p = n("952368"),
         h = n("888673"),
         x = n("505684"),
         E = n("49111"),
@@ -81,7 +81,7 @@ function(e, t, n) {
         })
     };
 
-    function _(e) {
+    function T(e) {
         let {
             src: t,
             original: n,
@@ -90,15 +90,15 @@ function(e, t, n) {
             height: o,
             animated: u,
             children: d,
-            responsive: p,
+            responsive: m,
             renderLinkComponent: h,
             maxWidth: x,
-            maxHeight: _,
-            shouldAnimate: T,
+            maxHeight: T,
+            shouldAnimate: _,
             onClose: I,
             shouldHideMediaOptions: v = !1,
-            obscure: N = !1,
-            ...A
+            obscure: A = !1,
+            ...N
         } = e, {
             width: R,
             height: O
@@ -110,15 +110,15 @@ function(e, t, n) {
         }, [I]);
         let k = v ? e => {
             e.stopPropagation(), e.preventDefault()
-        } : A.onContextMenu;
+        } : N.onContextMenu;
         return (0, i.jsxs)("div", {
             className: g.wrapper,
             children: [M ? (0, i.jsx)(S, {
                 onClose: I
             }) : null, (0, i.jsx)(C, {
-                isObscured: N,
+                isObscured: A,
                 src: t,
-                children: e => (0, i.jsx)(m.default, {
+                children: e => (0, i.jsx)(p.default, {
                     src: t,
                     placeholder: a,
                     shouldLink: !1,
@@ -129,9 +129,9 @@ function(e, t, n) {
                     children: d,
                     animated: !e && u,
                     autoPlay: !e,
-                    responsive: p,
+                    responsive: m,
                     onContextMenu: k,
-                    ...A
+                    ...N
                 }, t)
             }), null != n && !v && h({
                 href: n,
@@ -143,7 +143,7 @@ function(e, t, n) {
         })
     }
 
-    function T(e) {
+    function _(e) {
         let {
             src: t,
             width: n,
@@ -154,9 +154,9 @@ function(e, t, n) {
             obscure: d = !1,
             ...c
         } = e, {
-            width: m,
+            width: p,
             height: x
-        } = (0, f.zoomFit)(n, l), E = r.isMobile && null != a, _ = u ? e => {
+        } = (0, f.zoomFit)(n, l), E = r.isMobile && null != a, T = u ? e => {
             e.stopPropagation(), e.preventDefault()
         } : c.onContextMenu;
         return (0, i.jsxs)("div", {
@@ -171,15 +171,15 @@ function(e, t, n) {
                     src: t,
                     width: n,
                     height: l,
-                    maxWidth: m,
+                    maxWidth: p,
                     maxHeight: x,
                     renderLinkComponent: o,
-                    volume: p.getVolume,
-                    autoMute: p.getMuted,
-                    onVolumeChange: p.setVolume,
-                    onMute: p.setMuted,
+                    volume: m.getVolume,
+                    autoMute: m.getMuted,
+                    onVolumeChange: m.setVolume,
+                    onMute: m.setMuted,
                     autoPlay: !e,
-                    onContextMenu: _,
+                    onContextMenu: T,
                     ...c
                 }, t)
             }), !u && o({

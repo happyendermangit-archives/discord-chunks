@@ -34,8 +34,8 @@ function(e, t, n) {
             installParams: d,
             integrationTypesConfig: c,
             guildId: f,
-            channelId: p,
-            disableGuildSelect: m,
+            channelId: m,
+            disableGuildSelect: p,
             source: h
         } = e;
         if (null != n) {
@@ -62,8 +62,8 @@ function(e, t, n) {
             }), (0, s.openOAuth2Modal)({
                 clientId: t,
                 guildId: f,
-                channelId: p,
-                disableGuildSelect: m
+                channelId: m,
+                disableGuildSelect: p
             });
             return
         }
@@ -76,8 +76,8 @@ function(e, t, n) {
         }), (0, s.openOAuth2Modal)({
             clientId: t,
             guildId: f,
-            channelId: p,
-            disableGuildSelect: m,
+            channelId: m,
+            disableGuildSelect: p,
             scopes: d.scopes,
             permissions: null != d.permissions ? l.deserialize(d.permissions) : void 0
         }))

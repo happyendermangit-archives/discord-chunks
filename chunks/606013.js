@@ -15,8 +15,8 @@ function(e, t, n) {
         d = n("383018"),
         c = n("378765"),
         f = n("773336"),
-        p = n("573055"),
-        m = n("149022"),
+        m = n("573055"),
+        p = n("149022"),
         h = n("49111");
     let x = /(\t|\s)/;
     class E extends l.PureComponent {
@@ -100,7 +100,7 @@ function(e, t, n) {
                 {
                     onChange: s
                 } = this.props;
-            null == s || s(null, a, (0, m.toRichValue)(a));
+            null == s || s(null, a, (0, p.toRichValue)(a));
             let r = t.length + e.length;
             this.setState({
                 nextSelection: r
@@ -125,8 +125,8 @@ function(e, t, n) {
                 id: u,
                 submitting: d,
                 textAreaPaddingClassName: f,
-                spellcheckEnabled: p,
-                "aria-controls": m,
+                spellcheckEnabled: m,
+                "aria-controls": p,
                 "aria-expanded": x,
                 "aria-activedescendant": E
             } = this.props;
@@ -155,8 +155,8 @@ function(e, t, n) {
                     onContextMenu: this.handleContextMenu,
                     value: t ? "" : e,
                     tabIndex: 0,
-                    spellCheck: p,
-                    "aria-controls": m,
+                    spellCheck: m,
+                    "aria-controls": p,
                     "aria-expanded": x,
                     "aria-activedescendant": E,
                     "aria-haspopup": "listbox",
@@ -240,7 +240,7 @@ function(e, t, n) {
                     return t => (0, i.jsx)(e, {
                         ...t,
                         isChannelTextArea: !0,
-                        text: (0, p.getSelectionText)()
+                        text: (0, m.getSelectionText)()
                     })
                 }, {
                     align: "bottom",
@@ -251,7 +251,7 @@ function(e, t, n) {
                     onChange: t,
                     allowNewLines: n
                 } = this.props, i = e.currentTarget.value, l = n ? i : i.replace("\n", "");
-                null == t || t(e, l, (0, m.toRichValue)(l))
+                null == t || t(e, l, (0, p.toRichValue)(l))
             }
         }
     }

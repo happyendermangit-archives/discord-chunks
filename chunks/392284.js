@@ -20,7 +20,7 @@ function(e, t, n) {
             onPlay: t,
             className: n,
             inactive: a
-        } = e, f = l.useRef(null), p = (0, i.jsx)("div", {
+        } = e, f = l.useRef(null), m = (0, i.jsx)("div", {
             className: c.iconWrapper,
             ref: f,
             children: (0, i.jsx)(u.default, {
@@ -30,7 +30,7 @@ function(e, t, n) {
         return (0, i.jsx)(o.MessagesInteractionContext.Consumer, {
             children: e => a || null == t ? (0, i.jsx)("div", {
                 className: c.cover,
-                children: p
+                children: m
             }) : (0, i.jsx)(r.Clickable, {
                 className: s(n, c.cover, {
                     [c.active]: !e.disableInteractions
@@ -41,7 +41,7 @@ function(e, t, n) {
                 focusProps: {
                     ringTarget: f
                 },
-                children: p
+                children: m
             })
         })
     }

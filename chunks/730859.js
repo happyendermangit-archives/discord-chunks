@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return m
+            return p
         }
     }), n("222007");
     var i = n("37983"),
@@ -15,14 +15,14 @@ function(e, t, n) {
         d = n("272030"),
         c = n("427302"),
         f = n("158998"),
-        p = n("305130");
+        m = n("305130");
 
-    function m(e) {
+    function p(e) {
         let {
             className: t,
             maxUsers: a,
             users: r,
-            guildId: m,
+            guildId: p,
             onFocus: h,
             size: x = u.AvatarSizes.SIZE_24,
             hideOverflowCount: E = !1,
@@ -31,11 +31,11 @@ function(e, t, n) {
 
         function C() {
             return (0, i.jsx)(u.Dialog, {
-                className: p.popoutWrapper,
+                className: m.popoutWrapper,
                 children: (0, i.jsx)(u.Scroller, {
-                    className: p.scroller,
+                    className: m.scroller,
                     children: r.map(e => (0, i.jsx)(c.default, {
-                        guildId: m,
+                        guildId: p,
                         user: e,
                         nick: f.default.getName(e),
                         onContextMenu: t => (0, d.openContextMenuLazy)(t, async () => {
@@ -54,22 +54,22 @@ function(e, t, n) {
             })
         }
         return r.length <= 0 ? null : (0, i.jsx)("div", {
-            className: s(t, p.avatars),
+            className: s(t, m.avatars),
             children: function() {
                 let e = o(r).take(a).map(e => {
                         let t = f.default.getName(e);
                         return y ? (0, i.jsx)("div", {
-                            className: p.avatar,
+                            className: m.avatar,
                             children: (0, i.jsx)(u.Avatar, {
-                                src: e.getAvatarURL(m, 24),
+                                src: e.getAvatarURL(p, 24),
                                 "aria-label": t,
                                 size: x
                             })
                         }) : (0, i.jsx)(u.TooltipContainer, {
                             text: t,
-                            className: p.avatar,
+                            className: m.avatar,
                             children: (0, i.jsx)(u.Avatar, {
-                                src: e.getAvatarURL(m, 24),
+                                src: e.getAvatarURL(p, 24),
                                 "aria-label": t,
                                 size: x
                             })
@@ -82,7 +82,7 @@ function(e, t, n) {
                     position: "bottom",
                     onRequestClose: () => S(!1),
                     children: () => (0, i.jsxs)(u.Button, {
-                        className: s(p.avatar, p.overflow),
+                        className: s(m.avatar, m.overflow),
                         onFocus: h,
                         onClick: () => S(!0),
                         look: u.Button.Looks.BLANK,

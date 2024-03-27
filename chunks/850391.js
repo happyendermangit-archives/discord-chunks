@@ -222,7 +222,7 @@ function(e, t, n) {
             },
             showCharacterCount: !0
         },
-        p = {
+        m = {
             analyticsName: "thread_creation",
             attachments: !0,
             drafts: {
@@ -254,7 +254,7 @@ function(e, t, n) {
                 iconOnly: !0
             }
         },
-        m = {
+        p = {
             analyticsName: "create_forum_post",
             attachments: !0,
             drafts: {
@@ -389,11 +389,11 @@ function(e, t, n) {
             EDIT: d,
             FORM: c,
             VOICE_CHANNEL_STATUS: f,
-            THREAD_CREATION: p,
+            THREAD_CREATION: m,
             PROFILE_BIO_INPUT: x,
             CUSTOM_GIFT: E,
             RULES_INPUT: y,
-            CREATE_FORUM_POST: m,
+            CREATE_FORUM_POST: p,
             CREATE_POLL: h,
             FORUM_CHANNEL_GUIDELINES: g,
             ATOMIC_REACTOR_REPLY_INPUT: S

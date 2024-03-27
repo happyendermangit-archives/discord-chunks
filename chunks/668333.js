@@ -15,8 +15,8 @@ function(e, t, n) {
         d = n("997289"),
         c = n("812204"),
         f = n("685665"),
-        p = n("917764"),
-        m = n("986632"),
+        m = n("917764"),
+        p = n("986632"),
         h = n("538282"),
         x = n("246511"),
         E = n("45961"),
@@ -24,12 +24,12 @@ function(e, t, n) {
         g = n("845579"),
         S = n("305961"),
         C = n("697218"),
-        _ = n("124299"),
-        T = n("841811"),
+        T = n("124299"),
+        _ = n("841811"),
         I = n("290581"),
         v = n("599110"),
-        N = n("159885"),
-        A = n("570759"),
+        A = n("159885"),
+        N = n("570759"),
         R = n("866353"),
         O = n("364685"),
         M = n("161585"),
@@ -44,25 +44,25 @@ function(e, t, n) {
         F = n("782340"),
         G = n("502876"),
         H = n("327769");
-    let B = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
-        V = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_MEDIUM),
-        K = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_TOP),
-        W = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_TOP_SEARCH_RESULTS),
-        Y = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
-        z = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_BOTTOM),
-        Z = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
-        J = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKERS_LIST_DIVIDER_HEIGHT),
-        Q = (0, N.cssValueToNumber)(r.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_LIST_SECTION_HEADING_HEIGHT),
-        q = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
-        X = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
-        $ = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING),
-        ee = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
-        et = q + 2 * $,
+    let B = (0, A.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
+        V = (0, A.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_MEDIUM),
+        K = (0, A.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_TOP),
+        W = (0, A.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_TOP_SEARCH_RESULTS),
+        Y = (0, A.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
+        z = (0, A.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_BOTTOM),
+        Q = (0, A.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
+        Z = (0, A.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKERS_LIST_DIVIDER_HEIGHT),
+        q = (0, A.cssValueToNumber)(r.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_LIST_SECTION_HEADING_HEIGHT),
+        J = (0, A.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
+        X = (0, A.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
+        $ = (0, A.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING),
+        ee = (0, A.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
+        et = J + 2 * $,
         en = et + ee,
         ei = X + 2 * $ + ee,
-        el = [K, Y, z, Z],
-        ea = [W, Y, z, Z],
-        es = (0, N.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKERS_LIST_EMPTY_GUILD_UPSELL_HEIGHT),
+        el = [K, Y, z, Q],
+        ea = [W, Y, z, Q],
+        es = (0, A.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKERS_LIST_EMPTY_GUILD_UPSELL_HEIGHT),
         er = ["laugh", "wave", "yes", "dance", "sad", "no", "hi", "bye", "cry", "ok"],
         eo = e => {
             let {
@@ -94,7 +94,7 @@ function(e, t, n) {
                     columnIndex: n,
                     gridSectionIndex: i
                 } = e;
-                m.StickerPickerStore.setActiveCategoryIndex(i), m.StickerPickerStore.setInspectedExpressionPosition(n, t, x.InspectedExpressionChangeSource.MOUSE_EVENT), e.type === M.StickerGridItemTypes.STICKER && m.StickerPickerStore.setSearchPlaceholder(e.sticker.name)
+                p.StickerPickerStore.setActiveCategoryIndex(i), p.StickerPickerStore.setInspectedExpressionPosition(n, t, x.InspectedExpressionChangeSource.MOUSE_EVENT), e.type === M.StickerGridItemTypes.STICKER && p.StickerPickerStore.setSearchPlaceholder(e.sticker.name)
             }, []), u = l.useCallback(e => {
                 if (e.type !== M.StickerGridItemTypes.STICKER) return;
                 let {
@@ -118,7 +118,7 @@ function(e, t, n) {
                     }));
                     let t = (0, k.isGuildSticker)(o),
                         a = (0, R.getStickerSendability)(o, i, n);
-                    a === R.StickerSendability.SENDABLE_WITH_PREMIUM && (0, A.setShowPremiumUpsell)(!0), t && R.StickerSendability.SENDABLE_WITH_BOOSTED_GUILD;
+                    a === R.StickerSendability.SENDABLE_WITH_PREMIUM && (0, N.setShowPremiumUpsell)(!0), t && R.StickerSendability.SENDABLE_WITH_BOOSTED_GUILD;
                     return
                 }
                 u === M.StickerGridItemTypes.STICKER && null != o && t(e)
@@ -137,19 +137,19 @@ function(e, t, n) {
                 getStickerRowProps: u,
                 gutterWidth: c,
                 inspectedStickerPosition: f,
-                isScrolling: m,
+                isScrolling: p,
                 isUsingKeyboardNavigation: h,
                 stickersGrid: x,
                 stickersCategories: E,
-                filteredStickers: _,
-                ownedStickerPacks: N,
-                channel: A
+                filteredStickers: T,
+                ownedStickerPacks: A,
+                channel: N
             } = e, R = (0, d.useAnalyticsContext)(), b = (0, s.useStateFromStores)([C.default], () => C.default.getCurrentUser()), {
                 handleStickerInspect: U,
                 handleSelect: H
             } = eu({
                 onSelectSticker: a,
-                channel: A,
+                channel: N,
                 currentUser: b
             }), [K, W] = l.useState(!1), Y = l.useCallback(e => {
                 g.StickerPickerCollapsedSections.updateSetting(Array.from(e))
@@ -160,21 +160,21 @@ function(e, t, n) {
                     getStickerRowProps: u,
                     gutterWidth: c,
                     inspectedStickerPosition: f,
-                    isScrolling: m,
+                    isScrolling: p,
                     isUsingKeyboardNavigation: h,
                     onInspect: U,
                     onSelect: H,
                     rowIndex: e,
                     stickerClassName: G.sticker,
                     stickerDescriptors: t,
-                    stickerSize: n > B ? q : X,
+                    stickerSize: n > B ? J : X,
                     preferAnimation: n <= V,
-                    ownedStickerPacks: N,
+                    ownedStickerPacks: A,
                     isDisplayingIndividualStickers: !0,
-                    channel: A,
+                    channel: N,
                     currentUser: b
                 }, e) : null
-            }, [x, r, u, c, f, m, h, U, H, n, N, A, b]), Z = l.useCallback((e, t) => (0, i.jsx)("div", {
+            }, [x, r, u, c, f, p, h, U, H, n, A, N, b]), Q = l.useCallback((e, t) => (0, i.jsx)("div", {
                 children: t
             }, e), []), $ = l.useCallback(function(e) {
                 let {
@@ -188,11 +188,11 @@ function(e, t, n) {
                 }), Y(i)
             }, [R, t, Y]), ee = l.useCallback(e => {
                 let n = E[e];
-                if (null != _) {
+                if (null != T) {
                     let {
                         sendable: t,
                         sendableWithPremium: n
-                    } = _;
+                    } = T;
                     if (0 === e && t.length > 0) return null;
                     let l = t.length > 0 && n.length > 0;
                     return (0, i.jsxs)(i.Fragment, {
@@ -229,7 +229,7 @@ function(e, t, n) {
                             "aria-label": F.default.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
                                 categoryName: n.name
                             }),
-                            icon: (0, i.jsx)(T.default, {}),
+                            icon: (0, i.jsx)(_.default, {}),
                             isCollapsed: t.has(n.id),
                             onClick: () => $(n.id, {
                                 isStickerPack: !1
@@ -245,7 +245,7 @@ function(e, t, n) {
                             "aria-label": F.default.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
                                 categoryName: e.name
                             }),
-                            icon: (0, i.jsx)(p.default, {
+                            icon: (0, i.jsx)(m.default, {
                                 guild: e,
                                 height: 16,
                                 width: 16
@@ -274,35 +274,35 @@ function(e, t, n) {
                         }, "h".concat(e.id))
                     }
                 }
-            }, [t, E, $, _]), et = l.useCallback(e => {
-                if (null != _) {
+            }, [t, E, $, T]), et = l.useCallback(e => {
+                if (null != T) {
                     let {
                         sendable: t,
                         sendableWithPremium: n
-                    } = _;
+                    } = T;
                     if (0 === e && t.length > 0) return 0;
-                    let i = t.length > 0 && n.length > 0 ? J : 0;
-                    return Q + i
+                    let i = t.length > 0 && n.length > 0 ? Z : 0;
+                    return q + i
                 }
-                return Q
-            }, [_]), en = l.useCallback(e => {
+                return q
+            }, [T]), en = l.useCallback(e => {
                 let n = E[e],
                     l = t.has(n.id);
-                return n.type !== M.StickerCategoryTypes.EMPTY_GUILD_UPSELL || null != _ || l ? null : (0, i.jsx)(P.default, {
+                return n.type !== M.StickerCategoryTypes.EMPTY_GUILD_UPSELL || null != T || l ? null : (0, i.jsx)(P.default, {
                     className: G.emptyGuildUpsell,
                     guildId: n.id,
-                    channel: A,
+                    channel: N,
                     shouldTrackUpsellViewed: !K,
                     setTrackedUpsellViewed: W
                 }, "sticker-picker-empty-guild-inline-upsell-".concat(n.id))
-            }, [E, t, _, A, K]), ei = l.useCallback(e => {
+            }, [E, t, T, N, K]), ei = l.useCallback(e => {
                 let n = E[e],
                     i = t.has(n.id);
                 return n.type !== M.StickerCategoryTypes.EMPTY_GUILD_UPSELL || i ? 0 : es
             }, [E, t]);
             return {
                 renderRow: z,
-                renderSection: Z,
+                renderSection: Q,
                 renderSectionHeader: ee,
                 sectionHeaderHeight: et,
                 renderSectionFooter: en,
@@ -315,16 +315,16 @@ function(e, t, n) {
                 gridWidth: r,
                 filteredStickers: o,
                 getStickerItemProps: d,
-                getStickerRowProps: p,
+                getStickerRowProps: m,
                 gutterWidth: x,
                 isUsingKeyboardNavigation: y,
                 onSelectSticker: g,
                 rowCount: S,
                 rowCountBySection: C,
-                stickersCategories: T,
+                stickersCategories: _,
                 stickersGrid: I,
                 channel: v
-            } = e, N = l.useRef(!1), A = l.useRef(null), [R, M] = m.StickerPickerStore.useStore(e => [e.activeCategoryIndex, e.inspectedExpressionPosition], a.default), {
+            } = e, A = l.useRef(!1), N = l.useRef(null), [R, M] = p.StickerPickerStore.useStore(e => [e.activeCategoryIndex, e.inspectedExpressionPosition], a.default), {
                 analyticsLocations: k
             } = (0, f.default)(c.default.STICKER_PICKER), L = (0, h.useExpressionPickerStore)(e => e.searchQuery), P = (0, s.useStateFromStores)([O.default], () => O.default.getPremiumPacks()), j = l.useMemo(() => new Set(P.map(e => e.id)), [P]), {
                 renderRow: U,
@@ -336,13 +336,13 @@ function(e, t, n) {
             } = ed({
                 collapsedStickersCategories: n,
                 gridWidth: r,
-                stickersCategories: T,
+                stickersCategories: _,
                 stickersGrid: I,
-                isScrolling: N,
+                isScrolling: A,
                 isUsingKeyboardNavigation: y,
                 onSelectSticker: g,
                 getStickerItemProps: d,
-                getStickerRowProps: p,
+                getStickerRowProps: m,
                 gutterWidth: x,
                 inspectedStickerPosition: M,
                 filteredStickers: o,
@@ -350,48 +350,48 @@ function(e, t, n) {
                 channel: v
             }), Y = (0, E.useSynchronizedActiveCategoryIndexForScrollPosition)({
                 activeCategoryIndex: R,
-                isScrolling: N,
-                listRef: A,
-                onActiveCategoryIndexChange: m.StickerPickerStore.setActiveCategoryIndex,
+                isScrolling: A,
+                listRef: N,
+                onActiveCategoryIndexChange: p.StickerPickerStore.setActiveCategoryIndex,
                 scrollOffset: 20,
                 searchQuery: L
             });
             return (0, E.useSynchronizedScrollPositionForActiveCategoryIndex)({
                 searchQuery: L,
                 activeCategoryIndex: R,
-                listRef: A
+                listRef: N
             }), l.useImperativeHandle(t, () => ({
                 scrollTo: function() {
                     for (var e, t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
-                    return null === (e = A.current) || void 0 === e ? void 0 : e.scrollTo(...n)
+                    return null === (e = N.current) || void 0 === e ? void 0 : e.scrollTo(...n)
                 },
                 getRowDescriptors: () => {
                     var e, t;
-                    return null !== (t = null === (e = A.current) || void 0 === e ? void 0 : e.getRowDescriptors()) && void 0 !== t ? t : []
+                    return null !== (t = null === (e = N.current) || void 0 === e ? void 0 : e.getRowDescriptors()) && void 0 !== t ? t : []
                 },
                 getSectionDescriptors: () => {
                     var e, t;
-                    return null !== (t = null === (e = A.current) || void 0 === e ? void 0 : e.getSectionDescriptors()) && void 0 !== t ? t : []
+                    return null !== (t = null === (e = N.current) || void 0 === e ? void 0 : e.getSectionDescriptors()) && void 0 !== t ? t : []
                 },
                 scrollToSectionTop: function() {
                     for (var e, t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
-                    return null === (e = A.current) || void 0 === e ? void 0 : e.scrollToSectionTop(...n)
+                    return null === (e = N.current) || void 0 === e ? void 0 : e.scrollToSectionTop(...n)
                 },
                 scrollRowIntoView: function() {
                     for (var e, t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
-                    return null === (e = A.current) || void 0 === e ? void 0 : e.scrollRowIntoView(...n)
+                    return null === (e = N.current) || void 0 === e ? void 0 : e.scrollRowIntoView(...n)
                 },
                 getScrollerNode: function() {
                     for (var e, t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
-                    return null === (e = A.current) || void 0 === e ? void 0 : e.getScrollerNode(...n)
+                    return null === (e = N.current) || void 0 === e ? void 0 : e.getScrollerNode(...n)
                 },
                 scrollIntoViewNode: function() {
                     for (var e, t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
-                    return null === (e = A.current) || void 0 === e ? void 0 : e.scrollIntoViewNode(...n)
+                    return null === (e = N.current) || void 0 === e ? void 0 : e.scrollIntoViewNode(...n)
                 },
                 getListDimensions: function() {
                     for (var e, t, n = arguments.length, i = Array(n), l = 0; l < n; l++) i[l] = arguments[l];
-                    return null !== (t = null === (e = A.current) || void 0 === e ? void 0 : e.getListDimensions(...i)) && void 0 !== t ? t : {
+                    return null !== (t = null === (e = N.current) || void 0 === e ? void 0 : e.getListDimensions(...i)) && void 0 !== t ? t : {
                         height: -1,
                         totalHeight: -1
                     }
@@ -407,7 +407,7 @@ function(e, t, n) {
                         suggestions: (0, i.jsx)(eo, {
                             onSuggestionClick: e => (0, h.setSearchQuery)(e, !0)
                         })
-                    }) : (0, i.jsx)(_.default, {
+                    }) : (0, i.jsx)(T.default, {
                         role: "none presentation",
                         listPadding: null != o ? ea : el,
                         onScroll: Y,
@@ -421,7 +421,7 @@ function(e, t, n) {
                         sectionHeaderHeight: W,
                         sectionFooterHeight: V,
                         stickyHeaders: !0,
-                        ref: A
+                        ref: N
                     }), (0, i.jsx)(b.default, {
                         stickersGrid: I
                     })]

@@ -14,8 +14,8 @@ function(e, t, n) {
         d = n("87682"),
         c = n.n(d),
         f = n("746379"),
-        p = n.n(f),
-        m = n("394846"),
+        m = n.n(f),
+        p = n("394846"),
         h = n("295426"),
         x = n("81594"),
         E = n("798609"),
@@ -23,12 +23,12 @@ function(e, t, n) {
         g = n("383018"),
         S = n("605250"),
         C = n("585722"),
-        _ = n("378765"),
-        T = n("254490"),
+        T = n("378765"),
+        _ = n("254490"),
         I = n("850391"),
         v = n("149022"),
-        N = n("296141"),
-        A = n("606013"),
+        A = n("296141"),
+        N = n("606013"),
         R = n("32647"),
         O = n("970153"),
         M = n("49111"),
@@ -166,7 +166,7 @@ function(e, t, n) {
                 disabled: d,
                 onChange: c,
                 onKeyDown: f,
-                onResize: p,
+                onResize: m,
                 onSubmit: h,
                 channel: x,
                 type: E,
@@ -174,8 +174,8 @@ function(e, t, n) {
                 useSlate: g,
                 spellcheckEnabled: S,
                 useNewSlashCommands: C,
-                canOnlyUseTextCommands: T,
-                className: N,
+                canOnlyUseTextCommands: _,
+                className: A,
                 id: O,
                 required: k,
                 maxCharacterCount: P,
@@ -188,7 +188,7 @@ function(e, t, n) {
                 popup: G
             } = this.state, H = {
                 channel: x,
-                className: r(N, L.textArea, {
+                className: r(A, L.textArea, {
                     [L.textAreaSlate]: g,
                     [L.textAreaDisabled]: d || F
                 }),
@@ -209,7 +209,7 @@ function(e, t, n) {
                 hideAutocomplete: this.hideAutocomplete,
                 allowNewLines: j,
                 onChange: c,
-                onResize: p,
+                onResize: m,
                 onKeyDown: f,
                 onSubmit: h,
                 textAreaPaddingClassName: r(b[y], {
@@ -219,7 +219,7 @@ function(e, t, n) {
                 }),
                 spellcheckEnabled: S,
                 useNewSlashCommands: C,
-                disableAutoFocus: m.isMobile || null !== (n = E.disableAutoFocus) && void 0 !== n && n,
+                disableAutoFocus: p.isMobile || null !== (n = E.disableAutoFocus) && void 0 !== n && n,
                 disableEnterToSubmit: null !== (i = null === (e = E.submit) || void 0 === e ? void 0 : e.disableEnterToSubmit) && void 0 !== i && i,
                 "aria-controls": null !== (a = G.id) && void 0 !== a ? a : void 0,
                 "aria-haspopup": "listbox",
@@ -235,17 +235,17 @@ function(e, t, n) {
                 type: E,
                 value: d ? (0, v.toRichValue)("") : u,
                 canUseCommands: null === (t = E.commands) || void 0 === t ? void 0 : t.enabled,
-                canOnlyUseTextCommands: T
-            }) : (0, l.jsx)(A.default, {
+                canOnlyUseTextCommands: _
+            }) : (0, l.jsx)(N.default, {
                 ref: this.ref,
                 ...H,
                 value: d ? "" : o
             });
             return (0, l.jsxs)(l.Fragment, {
-                children: [(0, l.jsx)(_.ComponentAction, {
+                children: [(0, l.jsx)(T.ComponentAction, {
                     event: M.ComponentActions.INSERT_TEXT,
                     handler: this.handleInsertText
-                }), (0, l.jsx)(_.ComponentAction, {
+                }), (0, l.jsx)(T.ComponentAction, {
                     event: M.ComponentActions.CLEAR_TEXT,
                     handler: this.handleClearText
                 }), B]
@@ -360,14 +360,14 @@ function(e, t, n) {
                                         try {
                                             let {
                                                 pathname: t
-                                            } = p.parse(i.src);
+                                            } = m.parse(i.src);
                                             null != t && t.length > 0 && (e = c.basename(t).split(".")[0])
                                         } catch (e) {}
                                         if (null != e && e.length > 0) return "".concat(e, ".png")
                                     }
                                 }(n)) && void 0 !== s ? s : t.name;
                             return {
-                                files: [(0, T.makeFile)(t, l, t.type)]
+                                files: [(0, _.makeFile)(t, l, t.type)]
                             }
                         }
                         return {
@@ -381,7 +381,7 @@ function(e, t, n) {
                                 type: "text/plain"
                             });
                             return {
-                                files: [(0, T.makeFile)(e, "message.txt")],
+                                files: [(0, _.makeFile)(e, "message.txt")],
                                 convertedStringToFile: !0
                             }
                         }
@@ -427,7 +427,7 @@ function(e, t, n) {
                         }
                     })
                 })(r), this.focus(), !0)
-            }, this._unsubscribe = N.channelEditorPopupStore.subscribe(e => {
+            }, this._unsubscribe = A.channelEditorPopupStore.subscribe(e => {
                 requestAnimationFrame(() => {
                     this.setState({
                         popup: e
@@ -436,7 +436,7 @@ function(e, t, n) {
             }), this.state = {
                 focused: !1,
                 submitting: !1,
-                popup: N.channelEditorPopupStore.getState()
+                popup: A.channelEditorPopupStore.getState()
             }
         }
     }

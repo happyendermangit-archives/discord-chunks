@@ -21,8 +21,8 @@ function(e, t, n) {
             name: d,
             size: c = 20,
             enableTooltip: f = !0,
-            enableHeight: p = !0,
-            onClick: m
+            enableHeight: m = !0,
+            onClick: p
         } = e;
         if (null == l && null == u) return null;
         return (0, i.jsx)(s.TooltipContainer, {
@@ -36,27 +36,27 @@ function(e, t, n) {
                     name: d
                 }),
                 className: a(o.roleIcon, n, {
-                    [o.clickable]: null != m
+                    [o.clickable]: null != p
                 }),
-                height: p ? c : void 0,
+                height: m ? c : void 0,
                 src: l,
                 width: c
             }), (null != u && (t = (0, i.jsx)("img", {
                 alt: "",
                 "aria-label": u.allNamesString,
                 className: a(o.roleIcon, n, {
-                    [o.clickable]: null != m
+                    [o.clickable]: null != p
                 }),
-                height: p ? c : void 0,
+                height: m ? c : void 0,
                 src: u.url,
                 width: c
-            })), null == m) ? (0, i.jsx)(s.FocusRing, {
+            })), null == p) ? (0, i.jsx)(s.FocusRing, {
                 offset: {
                     left: 5
                 },
                 children: t
             }) : (0, i.jsx)(s.Clickable, {
-                onClick: m,
+                onClick: p,
                 tag: "span",
                 focusProps: {
                     offset: {

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getSeasonalGiftingBody: function() {
-            return p
+            return m
         },
         default: function() {
             return h
@@ -19,15 +19,15 @@ function(e, t, n) {
         c = n("782340"),
         f = n("554584");
 
-    function p(e) {
+    function m(e) {
         return e || !(a.isMobile || a.isTablet) ? c.default.Messages.SEASONAL_GIFTING_DM_POPUP_BODY : c.default.Messages.SEASONAL_GIFTING_MAKE_SOMEONES_DAY_TOOLTIP
     }
 
-    function m(e) {
+    function p(e) {
         let {
             onComplete: t,
             onDMCheckItOutClick: d,
-            isDM: m
+            isDM: p
         } = e;
         l.useEffect(() => {
             o.default.track(u.AnalyticEvents.PREMIUM_GIFT_UPSELL_VIEWED, {
@@ -35,7 +35,7 @@ function(e, t, n) {
             })
         }, []);
         let h = l.useMemo(() => [() => n.el("540902").then(n.t.bind(n, "540902", 19)), () => n.el("915604").then(n.t.bind(n, "915604", 19)), () => n.el("166505").then(n.t.bind(n, "166505", 19))], []),
-            x = m || !(a.isMobile || a.isTablet),
+            x = p || !(a.isMobile || a.isTablet),
             E = x ? c.default.Messages.SEASONAL_GIFTING_DM_POPUP_HEADER : c.default.Messages.SEASONAL_GIFTING_POPUP_HEADER,
             y = x ? c.default.Messages.SEASONAL_GIFTING_DM_POPUP_CTA : c.default.Messages.SEASONAL_GIFTING_SEND_GIFT_CTA;
         return (0, i.jsxs)("div", {
@@ -52,7 +52,7 @@ function(e, t, n) {
                 }), (0, i.jsx)(s.Text, {
                     className: f.text,
                     variant: "text-sm/normal",
-                    children: p(m)
+                    children: m(p)
                 })]
             }), (0, i.jsxs)("div", {
                 className: f.dmButtonContainer,
@@ -87,7 +87,7 @@ function(e, t, n) {
             shouldShow: !0,
             position: "top",
             align: "center",
-            renderPopout: e => (0, i.jsx)(m, {
+            renderPopout: e => (0, i.jsx)(p, {
                 ...e,
                 onComplete: () => {
                     t(), l(d.ContentDismissActionType.USER_DISMISS)

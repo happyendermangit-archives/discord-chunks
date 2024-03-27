@@ -16,8 +16,8 @@ function(e, t, n) {
         d = n("660074"),
         c = n("45029"),
         f = n("990745"),
-        p = n("620193"),
-        m = n("368121"),
+        m = n("620193"),
+        p = n("368121"),
         h = n("228427"),
         x = n("959097"),
         E = n("328413"),
@@ -30,7 +30,7 @@ function(e, t, n) {
             } = e, l = null;
             switch (t) {
                 case "voice":
-                    l = (0, i.jsx)(m.default, {
+                    l = (0, i.jsx)(p.default, {
                         className: g.icon,
                         "aria-label": y.default.Messages.VOICE_CHANNEL
                     });
@@ -79,7 +79,7 @@ function(e, t, n) {
                     break;
                 case "home":
                 case "guide":
-                    l = (0, i.jsx)(p.default, {
+                    l = (0, i.jsx)(m.default, {
                         className: g.icon,
                         "aria-label": y.default.Messages.SERVER_GUIDE
                     });

@@ -101,15 +101,15 @@ function(e, t, n) {
                         if ("blockQuote" === u.type || a.EditorUtils.areStylesDisabled(e)) continue;
                         let f = u.children[0];
                         if (!a.TextUtils.isText(f)) continue;
-                        let p = f.text.match(/^\s*>>> /),
-                            m = f.text.match(/^\s*> /);
-                        if ((null != m || null != p || t) && (l.SlateTransforms.setNodes(e, {
+                        let m = f.text.match(/^\s*>>> /),
+                            p = f.text.match(/^\s*> /);
+                        if ((null != p || null != m || t) && (l.SlateTransforms.setNodes(e, {
                                 type: "blockQuote"
                             }, {
                                 at: d
                             }), !t)) {
                             var n, i;
-                            let s = null !== (i = null !== (n = null == m ? void 0 : m[0].length) && void 0 !== n ? n : null == p ? void 0 : p[0].length) && void 0 !== i ? i : 0,
+                            let s = null !== (i = null !== (n = null == p ? void 0 : p[0].length) && void 0 !== n ? n : null == m ? void 0 : m[0].length) && void 0 !== i ? i : 0,
                                 r = a.PathUtils.child(d, 0);
                             l.SlateTransforms.delete(e, {
                                 at: {
@@ -122,7 +122,7 @@ function(e, t, n) {
                                         offset: s
                                     }
                                 }
-                            }), t = null != p
+                            }), t = null != m
                         }
                     }
                 })(e))

@@ -15,43 +15,43 @@ function(e, t, n) {
         d = n("26989"),
         c = n("957255"),
         f = n("102985"),
-        p = n("697218"),
-        m = n("234246"),
+        m = n("697218"),
+        p = n("234246"),
         h = n("689299"),
         x = n("49111"),
         E = n("680894"),
         y = n("958706");
 
     function g(e, t, n) {
-        var g, S, C, _, T, I, v;
+        var g, S, C, T, _, I, v;
         let {
-            channel: N,
-            type: A
-        } = e, [R, O] = i.useState(() => (0, m.createInitialState)()), M = (0, l.useForceUpdate)(), k = (0, a.useStateFromStores)([d.default], () => {
+            channel: A,
+            type: N
+        } = e, [R, O] = i.useState(() => (0, p.createInitialState)()), M = (0, l.useForceUpdate)(), k = (0, a.useStateFromStores)([d.default], () => {
             if (null != e.guild) {
                 var t;
                 return null != d.default.getMember(null === (t = e.guild) || void 0 === t ? void 0 : t.id, E.CLYDE_AI_USER_ID)
             }
             return !1
-        }), L = (0, u.useClydeEnabled)(e.guild, e.channel) && !k && !(0, u.canUseCustomClydeProfiles)(e.guild), P = (0, a.useStateFromStores)([d.default, p.default], () => {
+        }), L = (0, u.useClydeEnabled)(e.guild, e.channel) && !k && !(0, u.canUseCustomClydeProfiles)(e.guild), P = (0, a.useStateFromStores)([d.default, m.default], () => {
             var e, t;
-            let n = p.default.getCurrentUser();
-            return null !== (t = null != N.guild_id && null != n ? null === (e = d.default.getMember(N.guild_id, n.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t
+            let n = m.default.getCurrentUser();
+            return null !== (t = null != A.guild_id && null != n ? null === (e = d.default.getMember(A.guild_id, n.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t
         }), {
             canMentionEveryone: b,
             hidePersonalInformation: j
         } = (0, a.useStateFromStoresObject)([c.default, f.default], () => {
-            let e = N.isPrivate();
+            let e = A.isPrivate();
             return {
-                canMentionEveryone: e || P || A === o.ChatInputTypes.RULES_INPUT || c.default.can(x.Permissions.MENTION_EVERYONE, N),
+                canMentionEveryone: e || P || N === o.ChatInputTypes.RULES_INPUT || c.default.can(x.Permissions.MENTION_EVERYONE, A),
                 hidePersonalInformation: f.default.hidePersonalInformation
             }
-        }, [N, A, P]), {
+        }, [A, N, P]), {
             activeCommand: U,
             activeCommandOption: D
         } = (0, a.useStateFromStoresObject)([r.default], () => ({
-            activeCommand: r.default.getActiveCommand(N.id),
-            activeCommandOption: r.default.getActiveOption(N.id)
+            activeCommand: r.default.getActiveCommand(A.id),
+            activeCommandOption: r.default.getActiveOption(A.id)
         })), w = (0, h.default)({
             navId: "channel-autocomplete",
             scrollerRef: n,
@@ -62,18 +62,18 @@ function(e, t, n) {
             navigator: w,
             activeCommand: U,
             activeCommandOption: D,
-            canMentionUsers: null !== (T = null === (S = A.users) || void 0 === S ? void 0 : S.allowMentioning) && void 0 !== T && T,
+            canMentionUsers: null !== (_ = null === (S = N.users) || void 0 === S ? void 0 : S.allowMentioning) && void 0 !== _ && _,
             canMentionEveryone: b,
             canMentionClyde: L,
             hidePersonalInformation: j,
-            hideMentionDescription: A === o.ChatInputTypes.RULES_INPUT,
-            emojiIntention: A === o.ChatInputTypes.RULES_INPUT ? y.EmojiIntention.COMMUNITY_CONTENT : y.EmojiIntention.CHAT,
+            hideMentionDescription: N === o.ChatInputTypes.RULES_INPUT,
+            emojiIntention: N === o.ChatInputTypes.RULES_INPUT ? y.EmojiIntention.COMMUNITY_CONTENT : y.EmojiIntention.CHAT,
             currentWord: null !== (I = null == F ? void 0 : F.word) && void 0 !== I ? I : "",
             currentWordIsAtStart: (null == F ? void 0 : F.isAtStart) === !0,
             optionText: null != D ? (0, s.getString)({
                 [D.name]: null !== (v = null === (C = e.editorRef.current) || void 0 === C ? void 0 : C.getCurrentCommandOptionValue()) && void 0 !== v ? v : []
             }, D.name) : ""
-        }, [H] = i.useState(() => new m.default(G));
+        }, [H] = i.useState(() => new p.default(G));
         return i.useEffect(() => {
             H.updateProps(G)
         }), i.useImperativeHandle(t, () => H, [H]), i.useEffect(() => {
@@ -91,6 +91,6 @@ function(e, t, n) {
                     for (let n of t) n.removeChangeListener(e)
                 }
             }
-        }, [H, null === (_ = R.query) || void 0 === _ ? void 0 : _.typeInfo]), [R, H, w]
+        }, [H, null === (T = R.query) || void 0 === T ? void 0 : T.typeInfo]), [R, H, w]
     }
 }

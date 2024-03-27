@@ -22,8 +22,8 @@ function(e, t, n) {
             soloEmojiClassName: d,
             animate: c = !0,
             hideTooltip: f = !1,
-            hideEmoji: p = !1,
-            children: m
+            hideEmoji: m = !1,
+            children: p
         } = e;
         if (null == t) return null;
         let {
@@ -31,7 +31,7 @@ function(e, t, n) {
         } = t, x = null != t.state && "" !== t.state ? t.state : u;
         return (0, i.jsxs)("div", {
             className: a(r.container, n),
-            children: [p || null == h ? null : (0, i.jsx)(s.ActivityEmoji, {
+            children: [m || null == h ? null : (0, i.jsx)(s.ActivityEmoji, {
                 emoji: h,
                 className: a(r.emoji, l, null != d ? {
                     [d]: null == x || "" === x
@@ -41,7 +41,7 @@ function(e, t, n) {
             }), null != x && x.length > 0 ? (0, i.jsx)("span", {
                 className: o,
                 children: x
-            }) : null, m]
+            }) : null, p]
         })
     }
 }

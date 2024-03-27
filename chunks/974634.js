@@ -15,8 +15,8 @@ function(e, t, n) {
         d = n("986632"),
         c = n("538282"),
         f = n("115279"),
-        p = n("49111"),
-        m = n("782340"),
+        m = n("49111"),
+        p = n("782340"),
         h = n("296323");
     let x = l.forwardRef(function(e, t) {
         let {
@@ -28,43 +28,43 @@ function(e, t, n) {
             autoFocus: g,
             className: S,
             defaultSearchPlaceholder: C
-        } = e, _ = l.useRef(null), T = (0, c.useExpressionPickerStore)(e => e.searchQuery), [I, v] = d.EmojiPickerStore.useStore(e => [e.inspectedExpressionPosition, e.searchPlaceholder], r.default), N = l.useCallback(e => {
+        } = e, T = l.useRef(null), _ = (0, c.useExpressionPickerStore)(e => e.searchQuery), [I, v] = d.EmojiPickerStore.useStore(e => [e.inspectedExpressionPosition, e.searchPlaceholder], r.default), A = l.useCallback(e => {
             var t;
             d.EmojiPickerStore.setActiveCategoryIndex("" === e ? 0 : f.INACTIVE_CATEGORY_INDEX), d.EmojiPickerStore.setInspectedExpressionPosition(0, 0), d.EmojiPickerStore.setSearchPlaceholder(null), (0, c.setSearchQuery)(e), null === (t = n.current) || void 0 === t || t.scrollTo(0)
-        }, [n]), A = l.useCallback(() => {
+        }, [n]), N = l.useCallback(() => {
             (0, c.setSearchQuery)("")
         }, []);
         return l.useImperativeHandle(t, () => ({
             focus: () => {
                 var e;
-                return null === (e = _.current) || void 0 === e ? void 0 : e.focus()
+                return null === (e = T.current) || void 0 === e ? void 0 : e.focus()
             }
         })), (0, i.jsx)(u.default, {
             autoFocus: g,
-            query: T,
-            ref: _,
+            query: _,
+            ref: T,
             size: u.default.Sizes.MEDIUM,
             placeholder: null != v ? v : C,
-            onClear: A,
+            onClear: N,
             onKeyDown: e => {
                 switch (e.keyCode) {
-                    case p.KeyboardKeys.ARROW_LEFT:
-                    case p.KeyboardKeys.ARROW_RIGHT:
-                    case p.KeyboardKeys.ARROW_UP:
-                    case p.KeyboardKeys.ARROW_DOWN:
+                    case m.KeyboardKeys.ARROW_LEFT:
+                    case m.KeyboardKeys.ARROW_RIGHT:
+                    case m.KeyboardKeys.ARROW_UP:
+                    case m.KeyboardKeys.ARROW_DOWN:
                         document.activeElement !== e.target && e.preventDefault()
                 }
                 E(e)
             },
             onFocus: y,
-            onQueryChange: N,
+            onQueryChange: A,
             className: s(S, {
                 [h.searchBarFullRow]: x
             }),
             preventEscapePropagation: !1,
             useKeyboardNavigation: !1,
             inputProps: {
-                "aria-label": m.default.Messages.SEARCH_EMOJIS,
+                "aria-label": p.default.Messages.SEARCH_EMOJIS,
                 "aria-haspopup": "grid",
                 "aria-controls": a,
                 "aria-expanded": !0,

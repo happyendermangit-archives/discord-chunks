@@ -5,7 +5,7 @@ function(e, t, n) {
             return l
         },
         default: function() {
-            return m
+            return p
         }
     });
     var i, l, a = n("917351"),
@@ -23,7 +23,7 @@ function(e, t, n) {
         } = e;
         return "includes_inactive:".concat(t)
     }
-    class p extends r.default.Store {
+    class m extends r.default.Store {
         getLastFetchTimeMs(e) {
             let {
                 includesInactive: t
@@ -49,7 +49,7 @@ function(e, t, n) {
             })]
         }
     }
-    var m = new p(o.default, {
+    var p = new m(o.default, {
         APPLICATION_DIRECTORY_FETCH_COLLECTIONS: function(e) {
             let {
                 includesInactive: t

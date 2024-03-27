@@ -16,14 +16,14 @@ function(e, t, n) {
                 size: d = a.AvatarSizes.SIZE_32,
                 animate: c = !1,
                 "aria-hidden": f = !1,
-                ...p
-            } = e, m = l.useContext(s.default);
+                ...m
+            } = e, p = l.useContext(s.default);
             return (0, i.jsx)(a.Avatar, {
-                src: (t = u, n = (0, a.getAvatarSize)(d), r = c, o = m, t.getAvatarURL(o, n, r)),
+                src: (t = u, n = (0, a.getAvatarSize)(d), r = c, o = p, t.getAvatarURL(o, n, r)),
                 size: d,
                 "aria-label": f ? void 0 : u.username,
                 "aria-hidden": f,
-                ...p
+                ...m
             })
         })
 }

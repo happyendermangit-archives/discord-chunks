@@ -15,8 +15,8 @@ function(e, t, n) {
         d = n("850068"),
         c = n("79112"),
         f = n("521012"),
-        p = n("791106"),
-        m = n("945330"),
+        m = n("791106"),
+        p = n("945330"),
         h = n("216422"),
         x = n("719923"),
         E = n("788506"),
@@ -24,26 +24,26 @@ function(e, t, n) {
         g = n("646718"),
         S = n("782340"),
         C = n("669821");
-    let _ = "premiumRetentionEmojiPickerNotice",
-        T = o.Storage.get(_);
+    let T = "premiumRetentionEmojiPickerNotice",
+        _ = o.Storage.get(T);
     var I = e => {
         let {
             closePopout: t,
             channel: n
         } = e, [a, I] = l.useState(!1), {
             subscription: v,
-            hasFetchedSubscriptions: N
+            hasFetchedSubscriptions: A
         } = (0, r.useStateFromStoresObject)([f.default], () => ({
             subscription: f.default.getPremiumSubscription(),
             hasFetchedSubscriptions: f.default.hasFetchedSubscriptions()
         }));
         if (l.useEffect(() => {
-                !N && (0, d.fetchSubscriptions)()
-            }, [N]), null == v || !(0, x.isSubscriptionStatusFailedPayment)(v.status) || a) return null;
-        let A = v.status === y.SubscriptionStatusTypes.PAST_DUE ? (0, x.getBillingGracePeriodDaysAndExpiresDate)(v).expiresDate : s(v.currentPeriodStart).add(g.MAX_ACCOUNT_HOLD_DAYS),
-            R = "".concat(v.id, ":").concat(A.toISOString());
-        if (T === R) return null;
-        let O = x.default.getPremiumType(v.planId) === g.PremiumTypes.TIER_0 ? p.GradientCssUrls.PREMIUM_TIER_0 : x.default.getPremiumType(v.planId) === g.PremiumTypes.TIER_1 ? p.GradientCssUrls.PREMIUM_TIER_1 : p.GradientCssUrls.PREMIUM_TIER_2;
+                !A && (0, d.fetchSubscriptions)()
+            }, [A]), null == v || !(0, x.isSubscriptionStatusFailedPayment)(v.status) || a) return null;
+        let N = v.status === y.SubscriptionStatusTypes.PAST_DUE ? (0, x.getBillingGracePeriodDaysAndExpiresDate)(v).expiresDate : s(v.currentPeriodStart).add(g.MAX_ACCOUNT_HOLD_DAYS),
+            R = "".concat(v.id, ":").concat(N.toISOString());
+        if (_ === R) return null;
+        let O = x.default.getPremiumType(v.planId) === g.PremiumTypes.TIER_0 ? m.GradientCssUrls.PREMIUM_TIER_0 : x.default.getPremiumType(v.planId) === g.PremiumTypes.TIER_1 ? m.GradientCssUrls.PREMIUM_TIER_1 : m.GradientCssUrls.PREMIUM_TIER_2;
         return (0, i.jsxs)("div", {
             className: C.premiumRetentionNotice,
             children: [(0, i.jsx)(h.default, {
@@ -55,7 +55,7 @@ function(e, t, n) {
                     variant: "text-xs/normal",
                     children: S.default.Messages.PREMIUM_RETENTION_EMOJI_PICKER_DESCRIPTION.format({
                         planName: x.default.getDisplayPremiumType(v.planId),
-                        endsAt: A
+                        endsAt: N
                     })
                 }), (0, i.jsx)("div", {
                     children: (0, i.jsx)(u.Anchor, {
@@ -67,9 +67,9 @@ function(e, t, n) {
                 })]
             }), (0, i.jsx)(u.Clickable, {
                 onClick: () => {
-                    o.Storage.set(_, R), T = R, I(!0)
+                    o.Storage.set(T, R), _ = R, I(!0)
                 },
-                children: (0, i.jsx)(m.default, {
+                children: (0, i.jsx)(p.default, {
                     className: C.premiumRetentionNoticeClose
                 })
             })]

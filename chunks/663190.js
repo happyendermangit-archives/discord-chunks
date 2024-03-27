@@ -36,14 +36,14 @@ function(e, t, n) {
             let {
                 history: t
             } = e;
-            0 === t.stack.length && (t.stack = [s(e)], t.index = 0), null != e.selection && (i.HistoryUtils.currentEntry(e).selection = e.selection), m = null, c()
+            0 === t.stack.length && (t.stack = [s(e)], t.index = 0), null != e.selection && (i.HistoryUtils.currentEntry(e).selection = e.selection), p = null, c()
         }, e.undo = () => {
             e.history.index > 0 && f(e.history.index - 1)
         }, e.redo = () => {
             e.history.index < e.history.stack.length - 1 && f(e.history.index + 1)
         };
-        let p = null,
-            m = null,
+        let m = null,
+            p = null,
             h = null;
         return e.apply = t => {
             let {
@@ -63,7 +63,7 @@ function(e, t, n) {
                 r && function(e, t) {
                     return !((null == e ? void 0 : e.type) !== t || Date.now() - e.createdAt >= 4e3) && !0
                 }(s, l) ? i.HistoryUtils.insertOrMergeEntry(e, l, o) : i.HistoryUtils.insertEntry(e, l, o)
-            }(e, t, p), p = t), m = t, h = r)
+            }(e, t, m), m = t), p = t, h = r)
         }, e.deleteBackward = t => {
             i.HistoryUtils.withSingleEntry(e, () => a(t))
         }, e.deleteForward = t => {
@@ -71,9 +71,9 @@ function(e, t, n) {
         }, e.deleteFragment = t => {
             i.HistoryUtils.withSingleEntry(e, () => o(t))
         }, e.insertText = t => {
-            1 === t.length && (null == m ? void 0 : m.type) === "remove_text" ? i.HistoryUtils.withMergedEntry(e, () => d(t)) : null != e.selection && l.RangeUtils.isExpanded(e.selection) ? i.HistoryUtils.withSingleEntry(e, () => d(t)) : d(t)
+            1 === t.length && (null == p ? void 0 : p.type) === "remove_text" ? i.HistoryUtils.withMergedEntry(e, () => d(t)) : null != e.selection && l.RangeUtils.isExpanded(e.selection) ? i.HistoryUtils.withSingleEntry(e, () => d(t)) : d(t)
         }, e.insertData = t => {
-            (null == m ? void 0 : m.type) === "remove_text" ? i.HistoryUtils.withMergedEntry(e, () => u(t)): i.HistoryUtils.withSingleEntry(e, () => u(t))
+            (null == p ? void 0 : p.type) === "remove_text" ? i.HistoryUtils.withMergedEntry(e, () => u(t)): i.HistoryUtils.withSingleEntry(e, () => u(t))
         }, e
     }
 

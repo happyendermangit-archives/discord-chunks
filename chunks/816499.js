@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         generateRedditMetadataItems: function() {
-            return m
+            return p
         },
         generateTwitterMetadataItems: function() {
             return h
@@ -34,9 +34,9 @@ function(e, t, n) {
         d = n("535013"),
         c = n("214509"),
         f = n("782340"),
-        p = n("483263");
+        m = n("483263");
 
-    function m(e) {
+    function p(e) {
         var t;
         let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
             l = [],
@@ -84,14 +84,14 @@ function(e, t, n) {
             className: s,
             count: o,
             label: f.default.Messages.CONNECTIONS_PROFILE_STEAM_GAMES
-        }, c.MetadataFields.STEAM_GAME_COUNT)), u > -1 && r.push((0, i.jsx)(T, {
+        }, c.MetadataFields.STEAM_GAME_COUNT)), u > -1 && r.push((0, i.jsx)(_, {
             className: s,
             label: f.default.Messages.CONNECTIONS_STEAM_ITEMS.format({
                 count: u
             }),
             imageSrc: n("142226"),
             imageAlt: f.default.Messages.CONNECTIONS_STEAM_DOTA2
-        }, c.MetadataFields.STEAM_ITEM_COUNT_DOTA2)), d > -1 && r.push((0, i.jsx)(T, {
+        }, c.MetadataFields.STEAM_ITEM_COUNT_DOTA2)), d > -1 && r.push((0, i.jsx)(_, {
             className: s,
             label: f.default.Messages.CONNECTIONS_STEAM_ITEMS.format({
                 count: d
@@ -106,7 +106,7 @@ function(e, t, n) {
             n = [],
             l = "1" === e[c.MetadataFields.PAYPAL_VERIFIED];
         return l && n.push((0, i.jsx)(I, {
-            className: a(t, p.paypalVerifiedTag),
+            className: a(t, m.paypalVerifiedTag),
             label: f.default.Messages.CONNECTIONS_PAYPAL_VERIFIED
         }, c.MetadataFields.PAYPAL_VERIFIED)), n
     }
@@ -181,7 +181,7 @@ function(e, t, n) {
                     break;
                     case c.MetadataItemTypes.DATETIME_GREATER_THAN_EQUAL:
                     case c.MetadataItemTypes.DATETIME_LESS_THAN_EQUAL:
-                        l.push((0, i.jsx)(_, {
+                        l.push((0, i.jsx)(T, {
                             className: t,
                             date: r,
                             locale: n,
@@ -217,14 +217,14 @@ function(e, t, n) {
         }) : l.format({
             value: d
         }), (0, i.jsx)(o.Text, {
-            className: a(p.connectedAccountVanityMetadata, s),
+            className: a(m.connectedAccountVanityMetadata, s),
             variant: "text-xs/normal",
             color: "interactive-active",
             children: t
         })
     }
 
-    function _(e) {
+    function T(e) {
         let {
             date: t,
             locale: n,
@@ -232,7 +232,7 @@ function(e, t, n) {
             className: s
         } = e;
         return (0, i.jsx)(o.Text, {
-            className: a(p.connectedAccountVanityMetadata, s),
+            className: a(m.connectedAccountVanityMetadata, s),
             variant: "text-xs/normal",
             color: "interactive-active",
             children: f.default.Messages.CONNECTIONS_PROFILE_GENERIC_VANITY_METRIC.format({
@@ -242,7 +242,7 @@ function(e, t, n) {
         })
     }
 
-    function T(e) {
+    function _(e) {
         let {
             label: t,
             imageSrc: n,
@@ -250,14 +250,14 @@ function(e, t, n) {
             className: s
         } = e;
         return (0, i.jsxs)("div", {
-            className: a(p.connectedAccountVanityMetadata, p.connectedAccountVanityMetadataItem, s),
+            className: a(m.connectedAccountVanityMetadata, m.connectedAccountVanityMetadataItem, s),
             children: [(0, i.jsx)(o.Tooltip, {
                 text: l,
                 children: e => (0, i.jsx)("img", {
                     ...e,
                     src: n,
                     alt: l,
-                    className: p.connectedAccountVanityMetadataItemIcon
+                    className: m.connectedAccountVanityMetadataItemIcon
                 })
             }), (0, i.jsx)(o.Text, {
                 variant: "text-xs/normal",
@@ -275,7 +275,7 @@ function(e, t, n) {
         return (0, i.jsx)(o.Text, {
             variant: "text-xs/semibold",
             color: "interactive-active",
-            className: a(p.connectedAccountVanityMetadata, p.connectedAccountVanityMetadataTag, n),
+            className: a(m.connectedAccountVanityMetadata, m.connectedAccountVanityMetadataTag, n),
             children: t
         })
     }

@@ -38,11 +38,11 @@ function(e, t, n) {
             children: u,
             leaf: c,
             text: f
-        } = t, p = !1, [m] = s.EditorUtils.node(e, s.PathUtils.parent(s.EditorUtils.findPath(e, f))), h = s.EditorUtils.isEditor(m) ? "editor" : m.type;
+        } = t, m = !1, [p] = s.EditorUtils.node(e, s.PathUtils.parent(s.EditorUtils.findPath(e, f))), h = s.EditorUtils.isEditor(p) ? "editor" : p.type;
         switch (h) {
             case "line":
             case "blockQuote": {
-                p = void 0;
+                m = void 0;
                 let e = Object.entries(c).filter(e => {
                     let [t] = e;
                     return "text" !== t
@@ -50,7 +50,7 @@ function(e, t, n) {
                     let [t, n] = e;
                     if ("hljsTypes" === t) return n;
                     if (!0 === n) {
-                        if (("codeBlockLang" === t || "codeBlockSyntax" === t) && (p = !1), t.startsWith("before_") || t.startsWith("after_")) return [r[t]];
+                        if (("codeBlockLang" === t || "codeBlockSyntax" === t) && (m = !1), t.startsWith("before_") || t.startsWith("after_")) return [r[t]];
                         if (t in d) return [d[t]];
                         throw Error("Slate: Unknown decoration attribute: ".concat(t))
                     }
@@ -65,7 +65,7 @@ function(e, t, n) {
         }), (0, i.jsx)("span", {
             ...l,
             className: n,
-            spellCheck: p,
+            spellCheck: m,
             children: u
         })
     }

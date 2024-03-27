@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return m
+            return p
         }
     });
     var i = n("37983");
@@ -16,7 +16,7 @@ function(e, t, n) {
         d = n("115279"),
         c = n("782340"),
         f = n("935102");
-    let p = e => {
+    let m = e => {
         let {
             emojiSubCategory: t
         } = e;
@@ -33,14 +33,14 @@ function(e, t, n) {
             })]
         })
     };
-    var m = e => {
+    var p = e => {
         let {
             className: t,
             graphicPrimary: n,
             graphicSecondary: l,
             titlePrimary: r,
             titleSecondary: o,
-            isFavorite: m = !1,
+            isFavorite: p = !1,
             emojiSubCategory: h = d.EmojiSubCategory.NONE
         } = e;
         return (0, i.jsxs)("div", {
@@ -54,8 +54,8 @@ function(e, t, n) {
                 children: [(0, i.jsxs)(s.Text, {
                     className: f.titlePrimary,
                     variant: "text-md/semibold",
-                    children: [m ? (0, i.jsx)(u.default, {
-                        "aria-label": m ? c.default.Messages.EMOJI_IS_FAVORITE_ARIA_LABEL.format({
+                    children: [p ? (0, i.jsx)(u.default, {
+                        "aria-label": p ? c.default.Messages.EMOJI_IS_FAVORITE_ARIA_LABEL.format({
                             names: r
                         }) : void 0,
                         width: 15,
@@ -71,7 +71,7 @@ function(e, t, n) {
                 className: f.graphicSecondary,
                 "aria-hidden": !0,
                 children: l
-            }) : (0, i.jsx)(p, {
+            }) : (0, i.jsx)(m, {
                 emojiSubCategory: h
             })]
         })

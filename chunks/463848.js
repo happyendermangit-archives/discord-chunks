@@ -18,8 +18,8 @@ function(e, t, n) {
         d = n("152311"),
         c = n("632710"),
         f = n("299285"),
-        p = n("267196"),
-        m = n("945701"),
+        m = n("267196"),
+        p = n("945701"),
         h = n("964261"),
         x = n("235932"),
         E = n("78512"),
@@ -27,12 +27,12 @@ function(e, t, n) {
         g = n("699209"),
         S = n("769791"),
         C = n("373469"),
-        _ = n("42203"),
-        T = n("305961"),
+        T = n("42203"),
+        _ = n("305961"),
         I = n("957255"),
         v = n("800762"),
-        N = n("313873"),
-        A = n("599110"),
+        A = n("313873"),
+        N = n("599110"),
         R = n("474293"),
         O = n("49111"),
         M = n("782340"),
@@ -48,8 +48,8 @@ function(e, t, n) {
             guildId: r,
             channelId: u,
             onAction: f,
-            isEmbedded: p = (0, d.default)(l),
-            actionColor: m
+            isEmbedded: m = (0, d.default)(l),
+            actionColor: p
         } = e;
         return (0, i.jsx)(c.default, {
             className: (0, R.getClass)(k, "actions", t),
@@ -60,13 +60,13 @@ function(e, t, n) {
             user: s,
             guildId: r,
             look: o.Button.Looks.FILLED,
-            color: null != m ? m : o.Button.Colors.PRIMARY,
+            color: null != p ? p : o.Button.Colors.PRIMARY,
             channelId: u,
             onAction: f,
-            isEmbedded: p
+            isEmbedded: m
         })
     }
-    let P = N.default.Types;
+    let P = A.default.Types;
     var b = function(e) {
         let {
             activity: t,
@@ -76,9 +76,9 @@ function(e, t, n) {
             hideHeader: d = !1,
             analyticsParams: c,
             ...R
-        } = e, P = (0, r.useStateFromStores)([v.default, _.default], () => {
+        } = e, P = (0, r.useStateFromStores)([v.default, T.default], () => {
             var e;
-            return _.default.getChannel(null === (e = v.default.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId)
+            return T.default.getChannel(null === (e = v.default.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId)
         }), {
             enableHangStatus: b
         } = g.HangStatusExperiment.useExperiment({
@@ -86,20 +86,20 @@ function(e, t, n) {
             location: "UserActivityContainer"
         }, {
             autoTrackExposure: !1
-        }), j = (0, r.useStateFromStores)([C.default], () => a ? C.default.getAnyStreamForUser(n.id) : null), U = b && I.default.can(O.Permissions.CONNECT, P), D = (null == t ? void 0 : t.type) === O.ActivityTypes.HANG_STATUS && U ? P : null, w = (0, r.useStateFromStores)([T.default, v.default, _.default], () => {
+        }), j = (0, r.useStateFromStores)([C.default], () => a ? C.default.getAnyStreamForUser(n.id) : null), U = b && I.default.can(O.Permissions.CONNECT, P), D = (null == t ? void 0 : t.type) === O.ActivityTypes.HANG_STATUS && U ? P : null, w = (0, r.useStateFromStores)([_.default, v.default, T.default], () => {
             var e, i;
-            return (0, u.default)(t, O.ActivityFlags.EMBEDDED) ? T.default.getGuild(null === (e = _.default.getChannel(null === (i = v.default.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != D ? T.default.getGuild(D.getGuildId()) : null
-        }), F = (0, r.useStateFromStores)([T.default], () => null != j ? T.default.getGuild(j.guildId) : null), G = (0, r.useStateFromStores)([f.default], () => {
+            return (0, u.default)(t, O.ActivityFlags.EMBEDDED) ? _.default.getGuild(null === (e = T.default.getChannel(null === (i = v.default.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != D ? _.default.getGuild(D.getGuildId()) : null
+        }), F = (0, r.useStateFromStores)([_.default], () => null != j ? _.default.getGuild(j.guildId) : null), G = (0, r.useStateFromStores)([f.default], () => {
             if (null != t) return null != t.application_id ? f.default.getApplication(t.application_id) : f.default.getApplicationByName(t.name);
             return null
-        }), H = (0, p.default)(), B = (0, y.default)(n), V = H && null != t && B;
+        }), H = (0, m.default)(), B = (0, y.default)(n), V = H && null != t && B;
         return (l.useEffect(() => {
-            (null == t ? void 0 : t.type) === O.ActivityTypes.HANG_STATUS && U && A.default.track(O.AnalyticEvents.VIEW_HANG_STATUS, {
+            (null == t ? void 0 : t.type) === O.ActivityTypes.HANG_STATUS && U && N.default.track(O.AnalyticEvents.VIEW_HANG_STATUS, {
                 source: "UserProfilePopout",
                 guild_id: null == D ? void 0 : D.guild_id,
                 channel_id: null == D ? void 0 : D.id
             })
-        }, [null == t ? void 0 : t.type, U, D]), (null == t ? void 0 : t.type) !== O.ActivityTypes.HANG_STATUS || U) ? (0, i.jsx)(N.default, {
+        }, [null == t ? void 0 : t.type, U, D]), (null == t ? void 0 : t.type) !== O.ActivityTypes.HANG_STATUS || U) ? (0, i.jsx)(A.default, {
             ...R,
             activity: t,
             user: n,
@@ -114,7 +114,7 @@ function(e, t, n) {
                     applicationStream: j,
                     activity: t,
                     user: n
-                }), V && (0, i.jsx)(m.default, {
+                }), V && (0, i.jsx)(p.default, {
                     showReact: !0,
                     showReply: !0,
                     replyHeaderText: M.default.Messages.ACTIVITY_REACTION_REPLY_TITLE.format({
@@ -129,7 +129,7 @@ function(e, t, n) {
                             emoji: l,
                             reply: a
                         } = e;
-                        A.default.track(O.AnalyticEvents.ACTIVITY_REACTOR_INTERACTED, {
+                        N.default.track(O.AnalyticEvents.ACTIVITY_REACTOR_INTERACTED, {
                             application_id: t.application_id,
                             interaction_type: i,
                             ...c

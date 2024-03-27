@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return p
+            return m
         }
     }), n("222007");
     var i = n("37983"),
@@ -225,5 +225,5 @@ function(e, t, n) {
     f.Types = d, f.defaultProps = {
         currentWindow: window
     };
-    var p = f
+    var m = f
 }

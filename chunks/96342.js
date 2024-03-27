@@ -15,8 +15,8 @@ function(e, t, n) {
         d = n("647374"),
         c = n("888198"),
         f = n("290689"),
-        p = n("788554"),
-        m = n("718517"),
+        m = n("788554"),
+        p = n("718517"),
         h = n("23690"),
         x = n("10680");
     let E = {
@@ -179,7 +179,7 @@ function(e, t, n) {
             }
         }
     }
-    let _ = {
+    let T = {
             url: {
                 parse: e => null == (0, d.punycodeLink)(e[1]) ? {
                     type: "text",
@@ -220,17 +220,17 @@ function(e, t, n) {
                 }
             }
         },
-        T = (0, p.default)([g, _]),
-        I = (0, p.default)([S, _]),
-        v = o.astParserFor(T),
-        N = o.astParserFor(I),
-        A = {
+        _ = (0, m.default)([g, T]),
+        I = (0, m.default)([S, T]),
+        v = o.astParserFor(_),
+        A = o.astParserFor(I),
+        N = {
             max: 1 / 0,
-            maxAge: 1 * m.default.Millis.MINUTE,
+            maxAge: 1 * p.default.Millis.MINUTE,
             updateAgeOnGet: !0
         },
-        R = new s(A),
-        O = new s(A);
+        R = new s(N),
+        O = new s(N);
 
     function M(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -267,7 +267,7 @@ function(e, t, n) {
                                     0: ""
                                 },
                                 type: "paragraph",
-                                content: (n ? N : v)(s, !1, {
+                                content: (n ? A : v)(s, !1, {
                                     returnMentionIds: !0,
                                     disableAutoBlockNewlines: !0,
                                     guildId: t

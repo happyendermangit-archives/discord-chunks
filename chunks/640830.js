@@ -23,7 +23,7 @@ function(e, t, n) {
             return C
         },
         findTextOptions: function() {
-            return _
+            return T
         }
     }), n("424973"), n("222007");
     var i = n("798609"),
@@ -36,12 +36,12 @@ function(e, t, n) {
         d = n("149022"),
         c = n("970153"),
         f = n("385887"),
-        p = n("566819");
-    let m = /([\p{L}\p{N}\p{sc=Deva}\p{sc=Thai}_-]+):/gu;
+        m = n("566819");
+    let p = /([\p{L}\p{N}\p{sc=Deva}\p{sc=Thai}_-]+):/gu;
 
     function h(e) {
         let t = f.EditorUtils.richValue(e)[0];
-        return null == t || "applicationCommand" !== t.type ? null : [t, p.FIRST_BLOCK_PATH]
+        return null == t || "applicationCommand" !== t.type ? null : [t, m.FIRST_BLOCK_PATH]
     }
 
     function x(e) {
@@ -139,7 +139,7 @@ function(e, t, n) {
         let [u] = i, d = a.default.getActiveCommand(n), c = null == d ? void 0 : null === (o = d.options) || void 0 === o ? void 0 : o.find(e => e.name === u.optionName);
         if (null == c) return;
         let f = g(e, c, u),
-            p = s.validateOptionContent({
+            m = s.validateOptionContent({
                 option: c,
                 content: f,
                 guildId: t,
@@ -148,12 +148,12 @@ function(e, t, n) {
             });
         return l.updateOptionStates(n, {
             [u.optionName]: {
-                lastValidationResult: p
+                lastValidationResult: m
             }
-        }), p
+        }), m
     }
 
-    function _(e, t) {
+    function T(e, t) {
         if (null == t.options || 0 === t.options.length) return [];
         let n = f.EditorUtils.richValue(e),
             i = [],
@@ -167,9 +167,9 @@ function(e, t, n) {
             if ("line" === l.type || "applicationCommand" === l.type)
                 for (let u = 0; u < l.children.length; u++) {
                     let d;
-                    let p = l.children[u],
+                    let m = l.children[u],
                         h = [t, u];
-                    if (f.NodeUtils.isType(p, "applicationCommandOption")) {
+                    if (f.NodeUtils.isType(m, "applicationCommandOption")) {
                         if (null != r) {
                             var o;
                             r.valueRange.focus = null !== (o = f.EditorUtils.before(e, h)) && void 0 !== o ? o : f.EditorUtils.start(e, []), r.text = (0, c.toTextValue)(n, {
@@ -179,9 +179,9 @@ function(e, t, n) {
                         }
                         continue
                     }
-                    if (!!f.TextUtils.isText(p))
-                        for (m.lastIndex = 0; null != (d = m.exec(p.text));) {
-                            if (0 !== d.index && null == p.text.charAt(d.index - 1).match(/(\t|\s)/)) continue;
+                    if (!!f.TextUtils.isText(m))
+                        for (p.lastIndex = 0; null != (d = p.exec(m.text));) {
+                            if (0 !== d.index && null == m.text.charAt(d.index - 1).match(/(\t|\s)/)) continue;
                             let e = d[1];
                             if (!s.has(e)) continue;
                             s.delete(e);

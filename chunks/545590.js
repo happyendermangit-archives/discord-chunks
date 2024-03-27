@@ -16,8 +16,8 @@ function(e, t, n) {
         d = n("375010"),
         c = n("191814"),
         f = n("8161"),
-        p = n("613676"),
-        m = n("713135"),
+        m = n("613676"),
+        p = n("713135"),
         h = n("999203"),
         x = n("609734"),
         E = n("777003"),
@@ -29,10 +29,10 @@ function(e, t, n) {
         let {
             user: t,
             guildId: n
-        } = e, a = (0, l.useStateFromStores)([m.default], () => {
+        } = e, a = (0, l.useStateFromStores)([p.default], () => {
             var e;
-            return null === (e = m.default.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application
-        }), s = null != a && (0, p.canInstallApplication)({
+            return null === (e = p.default.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application
+        }), s = null != a && (0, m.canInstallApplication)({
             customInstallUrl: a.customInstallUrl,
             installParams: a.installParams,
             integrationTypesConfig: a.integrationTypesConfig
@@ -53,11 +53,11 @@ function(e, t, n) {
                 children: [(0, i.jsx)(x.default, {
                     application: a,
                     className: S.button
-                }), o && (d ? (0, i.jsx)(T, {
+                }), o && (d ? (0, i.jsx)(_, {
                     app: a,
                     listing: null != u ? u : void 0,
                     guildId: n
-                }) : (0, i.jsx)(_, {
+                }) : (0, i.jsx)(T, {
                     guildId: n,
                     listing: u
                 }))]
@@ -65,7 +65,7 @@ function(e, t, n) {
         }) : null
     }
 
-    function _(e) {
+    function T(e) {
         let {
             listing: t,
             guildId: n
@@ -94,7 +94,7 @@ function(e, t, n) {
         })
     }
 
-    function T(e) {
+    function _(e) {
         let {
             app: t,
             listing: l,

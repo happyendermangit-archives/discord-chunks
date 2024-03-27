@@ -15,16 +15,16 @@ function(e, t, n) {
         d = n("867805"),
         c = n("993244"),
         f = n("600785"),
-        p = n("315102"),
-        m = n("958706"),
+        m = n("315102"),
+        p = n("958706"),
         h = n("65063");
-    let x = o.memoize(e => "".concat(e * m.EmojiSprites.NonDiversityPerRow, "px ").concat(e * Math.ceil(d.default.numNonDiversitySprites / m.EmojiSprites.NonDiversityPerRow), "px")),
-        E = o.memoize(e => "".concat(e * m.EmojiSprites.DiversityPerRow, "px ").concat(e * Math.ceil(d.default.numDiversitySprites / m.EmojiSprites.DiversityPerRow), "px")),
+    let x = o.memoize(e => "".concat(e * p.EmojiSprites.NonDiversityPerRow, "px ").concat(e * Math.ceil(d.default.numNonDiversitySprites / p.EmojiSprites.NonDiversityPerRow), "px")),
+        E = o.memoize(e => "".concat(e * p.EmojiSprites.DiversityPerRow, "px ").concat(e * Math.ceil(d.default.numDiversitySprites / p.EmojiSprites.DiversityPerRow), "px")),
         y = (e, t, i) => {
             let l, a, s;
             if (!e.useSpriteSheet) return;
             let r = null != e.index ? e.index : 0;
-            e.hasDiversity ? (l = n("110126")("./images/spritesheet-".concat(t, "-").concat(i, ".png").replace("./images/", "./")), a = E(i), s = m.EmojiSprites.DiversityPerRow) : (l = n("996542")("./images/spritesheet-emoji-".concat(i, ".png").replace("./images/", "./")), a = x(i), s = m.EmojiSprites.NonDiversityPerRow);
+            e.hasDiversity ? (l = n("110126")("./images/spritesheet-".concat(t, "-").concat(i, ".png").replace("./images/", "./")), a = E(i), s = p.EmojiSprites.DiversityPerRow) : (l = n("996542")("./images/spritesheet-emoji-".concat(i, ".png").replace("./images/", "./")), a = x(i), s = p.EmojiSprites.NonDiversityPerRow);
             let o = -r % s * i,
                 u = -Math.floor(r / s) * i;
             return {
@@ -43,10 +43,10 @@ function(e, t, n) {
                 allowAnimatedEmoji: r,
                 "aria-label": o,
                 isLocked: d
-            } = e, m = (() => {
+            } = e, p = (() => {
                 if (!t.useSpriteSheet) {
                     var e;
-                    let l = null == t.id ? t.url : p.default.getEmojiURL({
+                    let l = null == t.id ? t.url : m.default.getEmojiURL({
                         id: t.id,
                         animated: r && t.animated,
                         size: 48
@@ -70,7 +70,7 @@ function(e, t, n) {
                 })
             })();
             return (0, i.jsxs)(l.Fragment, {
-                children: [m, d ? (0, i.jsx)("div", {
+                children: [p, d ? (0, i.jsx)("div", {
                     className: h.emojiLockIconContainer,
                     children: (0, i.jsx)(f.default, {
                         width: 16,

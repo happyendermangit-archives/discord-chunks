@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return p
+            return m
         }
     });
     var i = n("37983");
@@ -17,13 +17,13 @@ function(e, t, n) {
         c = n("782340"),
         f = n("918829");
 
-    function p(e) {
+    function m(e) {
         let {
             user: t,
             shouldCopyOnClick: n,
             nickname: l,
-            pronouns: p,
-            usernameIcon: m,
+            pronouns: m,
+            usernameIcon: p,
             identityCTA: h,
             className: x,
             isTryItOut: E = !1,
@@ -51,7 +51,7 @@ function(e, t, n) {
                             className: f.nickname,
                             children: l
                         }) : null, (0, i.jsx)(r.default, {
-                            usernameIcon: m,
+                            usernameIcon: p,
                             user: t,
                             forceUsername: !0,
                             forcePomelo: E,
@@ -61,13 +61,13 @@ function(e, t, n) {
                             botClass: null == l ? f.headerBotTag : f.headerBotTagWithNickname
                         }), h]
                     })
-                }), null != p && "" !== p && (0, i.jsx)(s.Tooltip, {
+                }), null != m && "" !== m && (0, i.jsx)(s.Tooltip, {
                     text: c.default.Messages.USER_PROFILE_PRONOUNS,
                     children: e => (0, i.jsx)(s.Text, {
                         ...e,
                         variant: "text-sm/normal",
                         className: f.pronouns,
-                        children: p
+                        children: m
                     })
                 })]
             })

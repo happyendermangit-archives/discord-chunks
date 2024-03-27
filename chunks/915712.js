@@ -21,9 +21,9 @@ function(e, t, n) {
             guild: d,
             channelId: c,
             onClose: f,
-            analyticsParams: p
+            analyticsParams: m
         } = e, {
-            trackUserProfileAction: m,
+            trackUserProfileAction: p,
             ...h
         } = (0, a.useUserProfileAnalyticsContext)();
         return (0, i.jsx)(r.default, {
@@ -37,7 +37,7 @@ function(e, t, n) {
                 source: o.AnalyticsLocations.PROFILE_POPOUT,
                 onOpenGameProfile: f,
                 onAction: () => {
-                    m({
+                    p({
                         action: "JOIN_ACTIVITY"
                     }), (0, s.trackUserProfileActivityJoined)({
                         activityType: null == t ? void 0 : t.type,
@@ -46,7 +46,7 @@ function(e, t, n) {
                     }), null == f || f()
                 },
                 actionColor: u.buttonColor,
-                analyticsParams: p
+                analyticsParams: m
             })
         })
     }

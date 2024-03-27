@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return p
+            return m
         }
     }), n("222007");
     var i = n("37983"),
@@ -76,29 +76,29 @@ function(e, t, n) {
             return a[s]
         };
 
-    function p(e) {
+    function m(e) {
         var t;
         let {
             width: n = 31,
             height: u = 22,
-            referralsRemaining: p,
-            isResending: m,
+            referralsRemaining: m,
+            isResending: p,
             hovered: h,
             shouldShowBirthdayUX: x,
             isLightTheme: E,
             ...y
         } = e, [g, S] = l.useState(r), C = null !== (t = o.get(g)) && void 0 !== t ? t : null;
         return l.useEffect(() => {
-            h ? S(e => f(h, x, E, m, e)) : m && S(r)
-        }, [h, x, E, m]), (0, i.jsxs)("svg", {
+            h ? S(e => f(h, x, E, p, e)) : p && S(r)
+        }, [h, x, E, p]), (0, i.jsxs)("svg", {
             width: n,
             height: u,
             ...(0, s.default)(y),
             xmlns: "http://www.w3.org/2000/svg",
-            children: [m ? (0, i.jsx)(c, {
+            children: [p ? (0, i.jsx)(c, {
                 fillColor: g
             }) : (0, i.jsx)(d, {
-                referralsRemaining: p,
+                referralsRemaining: m,
                 fillColor: h ? g : r,
                 secondaryFillColor: h ? C : null
             }), (0, i.jsxs)("defs", {

@@ -15,12 +15,12 @@ function(e, t, n) {
         d = n("286217"),
         c = n("355263"),
         f = n("406291"),
-        p = n("782340"),
-        m = n("595911");
+        m = n("782340"),
+        p = n("595911");
 
     function h(e, t, n) {
         return (0, i.jsx)(d.default, {
-            className: m.option,
+            className: p.option,
             name: e.displayName,
             state: t,
             onClick: n
@@ -54,35 +54,35 @@ function(e, t, n) {
                 unsetOptionalOptions: u
             }
         }, [t.options, n]), c = (0, i.jsx)("div", {
-            className: m.optionalNames,
+            className: p.optionalNames,
             children: d.map(e => (0, i.jsx)(r.Text, {
                 variant: "text-sm/normal",
                 children: e.displayName
             }, e.name))
         }), f = s.map(e => h(e, null == n ? void 0 : n[e.name], a)), x = o.length > 0 ? (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(r.Heading, {
-                className: m.optionalHeader,
+                className: p.optionalHeader,
                 variant: "heading-deprecated-12/semibold",
-                children: p.default.Messages.COMMANDS_OPTIONAL_HEADER
+                children: m.default.Messages.COMMANDS_OPTIONAL_HEADER
             }), o.map(e => h(e, null == n ? void 0 : n[e.name], a))]
         }) : null, E = d.length > 0 ? (0, i.jsx)(r.Tooltip, {
             text: c,
             "aria-label": !1,
             delay: 200,
             children: e => (0, i.jsx)(u.default, {
-                className: m.optionalCount,
+                className: p.optionalCount,
                 color: u.default.Colors.MUTED,
                 ...e,
-                children: 0 === o.length ? p.default.Messages.COMMANDS_OPTIONAL_COUNT.format({
+                children: 0 === o.length ? m.default.Messages.COMMANDS_OPTIONAL_COUNT.format({
                     count: d.length
-                }) : p.default.Messages.COMMANDS_OPTIONAL_COUNT_REMAINING.format({
+                }) : m.default.Messages.COMMANDS_OPTIONAL_COUNT_REMAINING.format({
                     count: d.length
                 })
             })
         }) : null;
         return (0, i.jsxs)(i.Fragment, {
             children: [f, null != x || null != E ? (0, i.jsxs)("div", {
-                className: m.optionals,
+                className: p.optionals,
                 children: [x, E]
             }) : null]
         })
@@ -93,7 +93,7 @@ function(e, t, n) {
         let r, {
                 command: u,
                 activeOptionName: d,
-                channel: p,
+                channel: m,
                 showOptions: h,
                 showImage: E,
                 optionStates: y,
@@ -101,27 +101,27 @@ function(e, t, n) {
                 section: S,
                 isSelectable: C = !0
             } = e,
-            _ = l.useMemo(() => {
+            T = l.useMemo(() => {
                 var e;
                 return null == u ? void 0 : null === (e = u.options) || void 0 === e ? void 0 : e.find(e => e.name === d)
             }, [d, u]),
-            T = null != d ? null == y ? void 0 : y[d] : null;
-        r = null != T && (null === (t = T.lastValidationResult) || void 0 === t ? void 0 : t.success) === !1 ? null !== (n = T.lastValidationResult.error) && void 0 !== n ? n : "" : null;
+            _ = null != d ? null == y ? void 0 : y[d] : null;
+        r = null != _ && (null === (t = _.lastValidationResult) || void 0 === t ? void 0 : t.success) === !1 ? null !== (n = _.lastValidationResult.error) && void 0 !== n ? n : "" : null;
         let I = E && null != S ? (0, c.getIconComponent)(S) : null;
         return (0, i.jsxs)("div", {
-            className: s(m.wrapper, C ? null : m.disabled),
+            className: s(p.wrapper, C ? null : p.disabled),
             children: [null != I ? (0, i.jsx)(I, {
-                className: m.image,
-                channel: p,
+                className: p.image,
+                channel: m,
                 section: S,
                 width: 32,
                 height: 32
             }) : null, (0, i.jsxs)("div", {
-                className: m.infoWrapper,
+                className: p.infoWrapper,
                 children: [(0, i.jsxs)("div", {
-                    className: m.usageWrapper,
+                    className: p.usageWrapper,
                     children: [(0, i.jsx)(o.AutocompleteRowHeading, {
-                        className: m.title,
+                        className: p.title,
                         children: f.COMMAND_SENTINEL + u.displayName
                     }), h ? (0, i.jsx)(x, {
                         command: u,
@@ -129,11 +129,11 @@ function(e, t, n) {
                         onOptionClick: g
                     }) : null]
                 }), (0, i.jsx)(o.AutocompleteRowSubheading, {
-                    className: s(m.description, null != r ? m.error : null),
-                    children: null !== (a = null != r ? r : null == _ ? void 0 : _.displayDescription) && void 0 !== a ? a : u.displayDescription
+                    className: s(p.description, null != r ? p.error : null),
+                    children: null !== (a = null != r ? r : null == T ? void 0 : T.displayDescription) && void 0 !== a ? a : u.displayDescription
                 })]
             }), (0, i.jsx)(o.AutocompleteRowContentSecondary, {
-                className: m.source,
+                className: p.source,
                 children: null == S ? void 0 : S.name
             })]
         })

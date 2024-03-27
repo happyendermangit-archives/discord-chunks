@@ -22,8 +22,8 @@ function(e, t, n) {
                 poster: a,
                 fileName: c,
                 naturalWidth: f,
-                naturalHeight: p,
-                playable: m,
+                naturalHeight: m,
+                playable: p,
                 downloadable: h = !0,
                 volume: x,
                 autoPlay: E,
@@ -31,12 +31,12 @@ function(e, t, n) {
                 responsive: g,
                 mediaLayoutType: S,
                 mimeType: C,
-                renderOverlayContent: _,
-                renderLinkComponent: T,
+                renderOverlayContent: T,
+                renderLinkComponent: _,
                 onClick: I,
                 onPlay: v,
-                onEnded: N,
-                onVolumeChange: A,
+                onEnded: A,
+                onVolumeChange: N,
                 onMute: R,
                 alt: O = d.default.Messages.VIDEO,
                 ...M
@@ -59,7 +59,7 @@ function(e, t, n) {
                             width: r,
                             height: d
                         }
-                    } = n, O = !(f <= u.MAX_VIDEO_WIDTH && p <= u.MAX_VIDEO_HEIGHT || f <= u.MAX_VIDEO_HEIGHT && p <= u.MAX_VIDEO_WIDTH);
+                    } = n, O = !(f <= u.MAX_VIDEO_WIDTH && m <= u.MAX_VIDEO_HEIGHT || f <= u.MAX_VIDEO_HEIGHT && m <= u.MAX_VIDEO_WIDTH);
                     return (0, l.jsx)(o.default, {
                         className: i,
                         forceExternal: O,
@@ -76,13 +76,13 @@ function(e, t, n) {
                         fileName: c,
                         fileSize: null == t ? void 0 : (0, s.sizeString)(t),
                         fileSizeBytes: null == t ? void 0 : t,
-                        playable: m,
-                        renderLinkComponent: T,
-                        renderOverlayContent: _,
+                        playable: p,
+                        renderLinkComponent: _,
+                        renderOverlayContent: T,
                         onClick: I,
                         onPlay: v,
-                        onEnded: N,
-                        onVolumeChange: A,
+                        onEnded: A,
+                        onVolumeChange: N,
                         onMute: R,
                         mimeType: C,
                         downloadable: h

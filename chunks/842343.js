@@ -15,8 +15,8 @@ function(e, t, n) {
         d = n("296141"),
         c = n("305961"),
         f = n("501536"),
-        p = n("476765"),
-        m = n("983782"),
+        m = n("476765"),
+        p = n("983782"),
         h = n("659186"),
         x = n("418062"),
         E = n("851745"),
@@ -24,19 +24,19 @@ function(e, t, n) {
         g = n("497858"),
         S = n("892149"),
         C = l.forwardRef(function(e, t) {
-            var n, a, C, _, T;
+            var n, a, C, T, _;
             let {
                 channel: I,
                 type: v,
-                editorHeight: N,
-                onVisibilityChange: A
-            } = e, R = (0, p.useUID)(), O = (0, o.useStateFromStores)([c.default], () => {
+                editorHeight: A,
+                onVisibilityChange: N
+            } = e, R = (0, m.useUID)(), O = (0, o.useStateFromStores)([c.default], () => {
                 var e;
                 return null !== (e = c.default.getGuild(I.guild_id)) && void 0 !== e ? e : null
             }, [I.guild_id]), M = l.useRef(), [k, L, P] = (0, g.default)({
                 ...e,
                 guild: O
-            }, t, M), b = (null === (n = v.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? h.default : m.default, j = (0, f.getAutocompleteRowId)(k.selectedIndex);
+            }, t, M), b = (null === (n = v.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? h.default : p.default, j = (0, f.getAutocompleteRowId)(k.selectedIndex);
             (0, d.useChannelEditorPopup)(R, k.isVisible, j), x.default.trackExposure({
                 location: "6e9811_1"
             });
@@ -47,14 +47,14 @@ function(e, t, n) {
             }, {
                 autoTrackExposure: !1
             }), D = (0, y.useChannelAutocompleteLayerPosition)({
-                editorHeight: N,
+                editorHeight: A,
                 type: v,
                 state: k,
                 isInPopoutExperiment: U
             }), w = l.useMemo(() => null == D ? "" : String(Date.now()), [null == D ? void 0 : D.top, null == D ? void 0 : D.left, null == D ? void 0 : D.bottom, null == D ? void 0 : D.right]);
             if (l.useEffect(() => {
-                    A(k.isVisible)
-                }, [A, k.isVisible]), !k.isVisible || null == k.query || void 0 === D) return null;
+                    N(k.isVisible)
+                }, [N, k.isVisible]), !k.isVisible || null == k.query || void 0 === D) return null;
             let F = null !== (a = k.query.typeInfo.renderResults({
                 results: k.query.results,
                 selectedIndex: k.selectedIndex,
@@ -72,7 +72,7 @@ function(e, t, n) {
                     [S.bottom]: null == D && "bottom" === e.position
                 },
                 H = 490;
-            null != D && (H = (null === (C = v.autocomplete) || void 0 === C ? void 0 : C.small) ? 200 : (null === (_ = k.query) || void 0 === _ ? void 0 : _.type) === E.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), H = Math.min(window.innerHeight - 175, H);
+            null != D && (H = (null === (C = v.autocomplete) || void 0 === C ? void 0 : C.small) ? 200 : (null === (T = k.query) || void 0 === T ? void 0 : T.type) === E.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), H = Math.min(window.innerHeight - 175, H);
             let B = (0, i.jsx)(f.default, {
                 id: R,
                 className: s(S.autocomplete, G),
@@ -109,7 +109,7 @@ function(e, t, n) {
                 children: (0, i.jsx)(u.ReferencePositionLayer, {
                     reference: () => D,
                     positionKey: w,
-                    position: null !== (T = e.position) && void 0 !== T ? T : "top",
+                    position: null !== (_ = e.position) && void 0 !== _ ? _ : "top",
                     align: "left",
                     spacing: 8,
                     autoInvert: !0,

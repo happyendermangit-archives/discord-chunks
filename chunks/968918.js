@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return m
+            return p
         }
     });
     var i = n("37983"),
@@ -16,31 +16,31 @@ function(e, t, n) {
         c = n("426969"),
         f = n("231383");
 
-    function p(e) {
+    function m(e) {
         var t;
         let {
             channel: n,
-            applicationSection: p
-        } = e, m = (0, o.getIconComponent)(p), h = l.useMemo(() => {
+            applicationSection: m
+        } = e, p = (0, o.getIconComponent)(m), h = l.useMemo(() => {
             var e, t;
-            return (0, u.parseBioReactWithoutScrolling)(null !== (t = null === (e = p.application) || void 0 === e ? void 0 : e.description) && void 0 !== t ? t : "")
-        }, [null === (t = p.application) || void 0 === t ? void 0 : t.description]), x = (0, a.useStateFromStores)([c.default], () => c.default.getCurrentAppDetail()), E = l.useCallback(e => {
-            e.stopPropagation(), (null == x ? void 0 : x.id) === p.id ? d.dismissAppDetail() : d.showAppDetail(p)
-        }, [p, x]);
+            return (0, u.parseBioReactWithoutScrolling)(null !== (t = null === (e = m.application) || void 0 === e ? void 0 : e.description) && void 0 !== t ? t : "")
+        }, [null === (t = m.application) || void 0 === t ? void 0 : t.description]), x = (0, a.useStateFromStores)([c.default], () => c.default.getCurrentAppDetail()), E = l.useCallback(e => {
+            e.stopPropagation(), (null == x ? void 0 : x.id) === m.id ? d.dismissAppDetail() : d.showAppDetail(m)
+        }, [m, x]);
         return (0, i.jsxs)("li", {
             className: f.application,
             onClick: E,
-            children: [(0, i.jsx)(m, {
+            children: [(0, i.jsx)(p, {
                 className: f.applicationIcon,
                 channel: n,
-                section: p,
+                section: m,
                 width: 32,
                 height: 32
             }), (0, i.jsxs)("div", {
                 className: f.applicationDetails,
                 children: [(0, i.jsx)(r.Heading, {
                     variant: "heading-md/medium",
-                    children: p.name
+                    children: m.name
                 }), (0, i.jsx)(s.Text, {
                     className: f.applicationDescription,
                     variant: "text-xs/medium",
@@ -52,11 +52,11 @@ function(e, t, n) {
         })
     }
 
-    function m(e) {
+    function p(e) {
         let {
             channel: t,
             applications: n
-        } = e, a = n.slice(0, 50), r = l.useMemo(() => a.map(e => (0, i.jsx)(p, {
+        } = e, a = n.slice(0, 50), r = l.useMemo(() => a.map(e => (0, i.jsx)(m, {
             channel: t,
             applicationSection: e
         }, e.id)), [t, a]);

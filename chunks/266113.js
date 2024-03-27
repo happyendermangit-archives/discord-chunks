@@ -22,12 +22,12 @@ function(e, t, n) {
             pronouns: l,
             usernameIcon: c,
             className: f,
-            isTryItOut: p = !1,
-            lastSection: m
+            isTryItOut: m = !1,
+            lastSection: p
         } = e;
         return (0, i.jsx)(o.default, {
             className: a(d.container, f),
-            lastSection: m,
+            lastSection: p,
             children: (0, i.jsxs)("div", {
                 className: d.userText,
                 children: [null != n ? (0, i.jsx)(s.Heading, {
@@ -40,7 +40,7 @@ function(e, t, n) {
                         usernameIcon: c,
                         user: t,
                         forceUsername: !0,
-                        forcePomelo: p,
+                        forcePomelo: m,
                         className: null == n ? d.userTagNoNickname : d.userTagWithNickname,
                         usernameClass: null == n ? d.userTagUsernameNoNickname : d.userTagUsernameBase,
                         discriminatorClass: null == n ? d.userTagDiscriminatorNoNickname : d.discrimBase,

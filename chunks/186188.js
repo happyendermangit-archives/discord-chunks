@@ -5,10 +5,10 @@ function(e, t, n) {
             return v
         },
         CustomEmoji: function() {
-            return N
+            return A
         },
         TextMention: function() {
-            return A
+            return N
         },
         UserMention: function() {
             return R
@@ -43,8 +43,8 @@ function(e, t, n) {
         d = n("361572"),
         c = n("82300"),
         f = n("235004"),
-        p = n("42203"),
-        m = n("305961"),
+        m = n("42203"),
+        p = n("305961"),
         h = n("102985"),
         x = n("697218"),
         E = n("666897"),
@@ -52,8 +52,8 @@ function(e, t, n) {
         g = n("387111"),
         S = n("158998"),
         C = n("680894"),
-        _ = n("782340"),
-        T = n("918841"),
+        T = n("782340"),
+        _ = n("918841"),
         I = n("919163");
 
     function v(e) {
@@ -73,7 +73,7 @@ function(e, t, n) {
         })
     }
 
-    function N(e) {
+    function A(e) {
         let {
             emoji: t
         } = e;
@@ -90,12 +90,12 @@ function(e, t, n) {
         })
     }
 
-    function A(e) {
+    function N(e) {
         let {
             text: t,
             channelId: n,
             guildId: l
-        } = e, a = m.default.getGuild(l), s = p.default.getChannel(n), r = (0, u.useClydeEnabled)(a, s), o = r && "@Clyde" === t ? C.CLYDE_AI_MENTION_COLOR : null;
+        } = e, a = p.default.getGuild(l), s = m.default.getChannel(n), r = (0, u.useClydeEnabled)(a, s), o = r && "@Clyde" === t ? C.CLYDE_AI_MENTION_COLOR : null;
         return (0, i.jsx)(E.default, {
             color: o,
             children: t
@@ -114,17 +114,17 @@ function(e, t, n) {
             let e = u || o.isPomelo() ? null : "#".concat(o.discriminator);
             return (0, i.jsx)(a.Tooltip, {
                 text: (0, i.jsxs)("div", {
-                    className: T.userTooltip,
+                    className: _.userTooltip,
                     children: [(0, i.jsx)(r.default, {
                         user: o,
                         animate: !0,
                         size: a.AvatarSizes.SIZE_16,
-                        className: T.avatar
+                        className: _.avatar
                     }), S.default.getUserTag(o, {
                         mode: "username",
                         identifiable: u ? "never" : "always"
                     }), (0, i.jsx)("span", {
-                        className: T.discriminator,
+                        className: _.discriminator,
                         children: e
                     })]
                 }),
@@ -147,7 +147,7 @@ function(e, t, n) {
         let {
             id: t,
             guildId: n
-        } = e, s = (0, l.useStateFromStores)([m.default], () => null != n ? m.default.getRole(n, t) : void 0), r = (0, l.useStateFromStores)([o.default], () => o.default.roleStyle);
+        } = e, s = (0, l.useStateFromStores)([p.default], () => null != n ? p.default.getRole(n, t) : void 0), r = (0, l.useStateFromStores)([o.default], () => o.default.roleStyle);
         if (null == s) return (0, i.jsx)("span", {
             children: "@deleted-role"
         });
@@ -165,10 +165,10 @@ function(e, t, n) {
     function M(e) {
         let {
             id: t
-        } = e, n = (0, l.useStateFromStores)([p.default], () => p.default.getChannel(t)), a = _.default.Messages.UNKNOWN_CHANNEL, s = "text", r = !0;
+        } = e, n = (0, l.useStateFromStores)([m.default], () => m.default.getChannel(t)), a = T.default.Messages.UNKNOWN_CHANNEL, s = "text", r = !0;
         if (null != n) {
             var o;
-            a = (0, d.canViewChannel)(n) ? n.name : _.default.Messages.NO_ACCESS, s = (0, d.canViewChannel)(n) ? null !== (o = (0, y.getMentionIconType)(n)) && void 0 !== o ? o : "text" : "locked", r = (0, c.isChannelTypeMentionable)(n.type)
+            a = (0, d.canViewChannel)(n) ? n.name : T.default.Messages.NO_ACCESS, s = (0, d.canViewChannel)(n) ? null !== (o = (0, y.getMentionIconType)(n)) && void 0 !== o ? o : "text" : "locked", r = (0, c.isChannelTypeMentionable)(n.type)
         }
         return r ? (0, i.jsx)(E.default, {
             iconType: s,
@@ -192,10 +192,10 @@ function(e, t, n) {
         let {
             id: t
         } = e, n = {
-            home: _.default.Messages.SERVER_GUIDE,
-            guide: _.default.Messages.SERVER_GUIDE,
-            browse: _.default.Messages.CHANNEL_BROWSER_TITLE,
-            customize: _.default.Messages.CHANNELS_AND_ROLES
+            home: T.default.Messages.SERVER_GUIDE,
+            guide: T.default.Messages.SERVER_GUIDE,
+            browse: T.default.Messages.CHANNEL_BROWSER_TITLE,
+            customize: T.default.Messages.CHANNELS_AND_ROLES
         };
         return (0, i.jsx)(E.default, {
             iconType: t,

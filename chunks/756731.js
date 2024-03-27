@@ -21,10 +21,10 @@ function(e, t, n) {
             look: d,
             guildId: c,
             channelId: f,
-            source: p
+            source: m
         } = e;
         if (null == t || !(0, a.default)(t, r.ActivityFlags.PLAY) || !(0, s.default)(t)) return null;
-        let m = {
+        let p = {
             key: "play",
             className: o.button,
             size: o.buttonSize,
@@ -37,8 +37,8 @@ function(e, t, n) {
         return (0, i.jsx)(l.default, {
             guildId: null != c ? c : void 0,
             channelId: f,
-            source: p,
-            ...m
+            source: m,
+            ...p
         })
     }
 }

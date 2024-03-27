@@ -29,10 +29,10 @@ function(e, t, n) {
                 channelId: d,
                 messageId: c,
                 roleId: f,
-                newAnalyticsLocations: p = r
-            } = e, m = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1], {
+                newAnalyticsLocations: m = r
+            } = e, p = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1], {
                 analyticsLocations: h
-            } = (0, a.default)(p), x = l.useMemo(() => ({
+            } = (0, a.default)(m), x = l.useMemo(() => ({
                 layout: t,
                 userId: null != n ? n : null,
                 guildId: null != u ? u : null,
@@ -41,7 +41,7 @@ function(e, t, n) {
                 roleId: null != f ? f : null
             }), [t, n, u, d, c, f]);
             l.useEffect(() => {
-                m && (0, s.trackUserProfileAction)({
+                p && (0, s.trackUserProfileAction)({
                     action: "VIEW",
                     analyticsLocations: h,
                     layout: t,
@@ -51,7 +51,7 @@ function(e, t, n) {
                     messageId: c,
                     roleId: f
                 })
-            }, [m]);
+            }, [p]);
             let E = l.useCallback(e => {
                     (0, s.trackUserProfileAction)({
                         layout: t,
@@ -92,8 +92,8 @@ function(e, t, n) {
                 messageId: c,
                 roleId: f
             } = l.useContext(o), {
-                analyticsLocations: p
-            } = (0, a.default)(t), m = l.useCallback(e => {
+                analyticsLocations: m
+            } = (0, a.default)(t), p = l.useCallback(e => {
                 null != i && null != r && (0, s.trackUserProfileAction)({
                     layout: i,
                     userId: r,
@@ -101,10 +101,10 @@ function(e, t, n) {
                     channelId: d,
                     messageId: c,
                     roleId: f,
-                    analyticsLocations: p,
+                    analyticsLocations: m,
                     ...e
                 })
-            }, [i, r, u, d, c, f, p]);
+            }, [i, r, u, d, c, f, m]);
             return {
                 layout: i,
                 userId: r,
@@ -112,8 +112,8 @@ function(e, t, n) {
                 channelId: d,
                 messageId: c,
                 roleId: f,
-                analyticsLocations: p,
-                trackUserProfileAction: m
+                analyticsLocations: m,
+                trackUserProfileAction: p
             }
         }
 }

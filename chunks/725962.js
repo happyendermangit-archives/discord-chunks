@@ -19,22 +19,22 @@ function(e, t, n) {
                 className: n,
                 iconClassName: c,
                 rel: f,
-                target: p,
-                mimeType: m,
+                target: m,
+                mimeType: p,
                 fileName: h,
                 focusProps: x,
                 onClick: E,
                 ...y
             } = e, g = l.useMemo(() => a.designConfig.getDefaultLinkInterceptor(t), [t]), S = l.useCallback(e => {
                 r.default.track(u.AnalyticEvents.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
-                    attachment_type: null == m ? void 0 : m[0],
-                    attachment_subtype: null == m ? void 0 : m[1]
+                    attachment_type: null == p ? void 0 : p[0],
+                    attachment_subtype: null == p ? void 0 : p[1]
                 }), null == E || E(), null == g || g(e)
-            }, [g, m, E]);
+            }, [g, p, E]);
             return null != h ? (0, i.jsx)(s.Anchor, {
                 href: t,
                 onClick: S,
-                target: p,
+                target: m,
                 rel: f,
                 className: n,
                 "aria-label": d.default.Messages.DOWNLOAD,
@@ -44,7 +44,7 @@ function(e, t, n) {
             }) : (0, i.jsx)(s.Anchor, {
                 href: t,
                 onClick: S,
-                target: p,
+                target: m,
                 rel: f,
                 className: n,
                 "aria-label": d.default.Messages.DOWNLOAD,

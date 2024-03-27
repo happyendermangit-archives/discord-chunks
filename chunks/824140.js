@@ -5,10 +5,10 @@ function(e, t, n) {
             return v
         },
         ConnectedApplicationUserRoleAccount: function() {
-            return N
+            return A
         },
         ConnectedUserAccounts: function() {
-            return A
+            return N
         }
     }), n("424973");
     var i = n("37983"),
@@ -21,8 +21,8 @@ function(e, t, n) {
         d = n("308289"),
         c = n("376556"),
         f = n("716241"),
-        p = n("572943"),
-        m = n("535013"),
+        m = n("572943"),
+        p = n("535013"),
         h = n("816499"),
         x = n("526190"),
         E = n("766274"),
@@ -30,8 +30,8 @@ function(e, t, n) {
         g = n("867544"),
         S = n("128259"),
         C = n("49111"),
-        _ = n("214509"),
-        T = n("782340"),
+        T = n("214509"),
+        _ = n("782340"),
         I = n("561372");
 
     function v(e) {
@@ -39,17 +39,17 @@ function(e, t, n) {
         let l, a, d, {
             connectedAccount: E,
             theme: v,
-            locale: N,
-            userId: A,
+            locale: A,
+            userId: N,
             className: R,
             showMetadata: O,
             showInvisibleIcon: M
         } = e;
         null == O && (O = !0);
         let k = null !== (n = E.metadata) && void 0 !== n ? n : {},
-            L = O ? (0, m.getCreatedAtDate)(k[_.MetadataFields.CREATED_AT], N) : null,
+            L = O ? (0, p.getCreatedAtDate)(k[T.MetadataFields.CREATED_AT], A) : null,
             P = (0, u.useToken)(r.default.unsafe_rawColors.TWITTER).hex(),
-            b = T.default.Messages.CONNECTION_VERIFIED;
+            b = _.default.Messages.CONNECTION_VERIFIED;
         if (O) switch (E.type) {
             case C.PlatformTypes.REDDIT:
                 l = (0, h.generateRedditMetadataItems)(k);
@@ -59,8 +59,8 @@ function(e, t, n) {
                 break;
             case C.PlatformTypes.TWITTER: {
                 l = (0, h.generateTwitterMetadataItems)(k);
-                let e = "1" === k[_.MetadataFields.TWITTER_VERIFIED];
-                e && (a = P, b = T.default.Messages.CONNECTION_VERIFIED_ON_TWITTER);
+                let e = "1" === k[T.MetadataFields.TWITTER_VERIFIED];
+                e && (a = P, b = _.default.Messages.CONNECTION_VERIFIED_ON_TWITTER);
                 break
             }
             case C.PlatformTypes.PAYPAL:
@@ -72,7 +72,7 @@ function(e, t, n) {
             case C.PlatformTypes.TIKTOK:
                 l = (0, h.generateTikTokMetadataItems)(k)
         }
-        let j = c.default.get((0, p.useLegacyPlatformType)(E.type)),
+        let j = c.default.get((0, m.useLegacyPlatformType)(E.type)),
             U = null == j ? void 0 : null === (t = j.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(j, E);
         null != M && M ? d = (0, i.jsx)(g.default, {
             className: s(I.connectedAccountOpenIconContainer, I.connectedAccountHideIcon),
@@ -81,7 +81,7 @@ function(e, t, n) {
             href: U,
             onClick: e => {
                 var t, n;
-                t = E.type, n = A, (0, f.trackWithMetadata)(C.AnalyticEvents.CONNECTED_ACCOUNT_VIEWED, {
+                t = E.type, n = N, (0, f.trackWithMetadata)(C.AnalyticEvents.CONNECTED_ACCOUNT_VIEWED, {
                     platform_type: t,
                     other_user_id: n
                 }), (0, S.handleClick)({
@@ -111,7 +111,7 @@ function(e, t, n) {
                     text: null == j ? void 0 : j.name,
                     children: e => (0, i.jsx)("img", {
                         ...e,
-                        alt: T.default.Messages.IMG_ALT_LOGO.format({
+                        alt: _.default.Messages.IMG_ALT_LOGO.format({
                             name: null == j ? void 0 : j.name
                         }),
                         className: I.connectedAccountIcon,
@@ -138,7 +138,7 @@ function(e, t, n) {
                     }), null != L ? (0, i.jsx)(u.Text, {
                         variant: "text-xs/normal",
                         color: "header-secondary",
-                        children: T.default.Messages.CONNECTIONS_PROFILE_MEMBER_SINCE.format({
+                        children: _.default.Messages.CONNECTIONS_PROFILE_MEMBER_SINCE.format({
                             date: L
                         })
                     }) : null]
@@ -150,7 +150,7 @@ function(e, t, n) {
         })
     }
 
-    function N(e) {
+    function A(e) {
         let {
             applicationRoleConnection: t,
             className: n,
@@ -188,7 +188,7 @@ function(e, t, n) {
                     children: (0, i.jsx)(u.Text, {
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: T.default.Messages.CONNECTIONS_PROFILE_POWERED_BY.format({
+                        children: _.default.Messages.CONNECTIONS_PROFILE_POWERED_BY.format({
                             applicationHook: () => (0, i.jsxs)("div", {
                                 className: I.connectedAccountPoweredByText,
                                 children: [null != t.application.bot ? (0, i.jsx)(d.default, {
@@ -206,7 +206,7 @@ function(e, t, n) {
             })]
         })
     }
-    let A = l.forwardRef(function(e, t) {
+    let N = l.forwardRef(function(e, t) {
         let {
             connectedAccounts: n,
             theme: l,

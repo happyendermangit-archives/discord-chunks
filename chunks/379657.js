@@ -15,8 +15,8 @@ function(e, t, n) {
         d = n("599110"),
         c = n("777003"),
         f = n("49111"),
-        p = n("782340"),
-        m = n("48827"),
+        m = n("782340"),
+        p = n("48827"),
         h = n("862939");
 
     function x(e) {
@@ -44,9 +44,9 @@ function(e, t, n) {
             children: [(0, i.jsx)(a.Heading, {
                 variant: "eyebrow",
                 className: h.title,
-                children: p.default.Messages.BOT_PROFILE_SLASH_COMMANDS
+                children: m.default.Messages.BOT_PROFILE_SLASH_COMMANDS
             }), (0, i.jsx)("ul", {
-                className: m.popularApplicationCommandsList,
+                className: p.popularApplicationCommandsList,
                 children: S.map(e => (0, i.jsx)("li", {
                     children: (0, i.jsx)(o.CommandClickable, {
                         commandId: e.id,

@@ -15,14 +15,14 @@ function(e, t, n) {
         d = n("659500"),
         c = n("82372"),
         f = n("49111"),
-        p = n("783759");
+        m = n("783759");
 
-    function m(e) {
+    function p(e) {
         let {
             channel: t,
             command: n,
             applicationSection: u
-        } = e, m = (0, o.getIconComponent)(u), h = l.useCallback(() => {
+        } = e, p = (0, o.getIconComponent)(u), h = l.useCallback(() => {
             c.dismissAppLauncherPopup(), s.setActiveCommand({
                 channelId: t.id,
                 command: n,
@@ -33,10 +33,10 @@ function(e, t, n) {
             })
         }, [t, n, u]);
         return (0, i.jsxs)("li", {
-            className: p.command,
+            className: m.command,
             onClick: h,
-            children: [(0, i.jsx)(m, {
-                className: p.applicationIcon,
+            children: [(0, i.jsx)(p, {
+                className: m.applicationIcon,
                 channel: t,
                 section: u,
                 width: 36,
@@ -61,7 +61,7 @@ function(e, t, n) {
             sectionDescriptors: s
         } = e, r = l.useMemo(() => n.map(e => {
             let n = s.find(t => t.id === e.applicationId);
-            return null == n ? null : (0, i.jsx)(m, {
+            return null == n ? null : (0, i.jsx)(p, {
                 channel: t,
                 command: e,
                 applicationSection: n
@@ -69,16 +69,16 @@ function(e, t, n) {
         }), [t, n, s]);
         return 0 === n.length ? null : (0, i.jsxs)("div", {
             children: [(0, i.jsxs)(a.Text, {
-                className: p.commandListHeading,
+                className: m.commandListHeading,
                 variant: "text-sm/bold",
                 color: "text-muted",
                 children: [(0, i.jsx)(u.default, {
-                    className: p.commandListHeadingIcon,
+                    className: m.commandListHeadingIcon,
                     height: 16,
                     width: 16
                 }), "Recent slash commands"]
             }), (0, i.jsx)("ul", {
-                className: p.commandList,
+                className: m.commandList,
                 children: r
             })]
         })

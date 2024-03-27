@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return p
+            return m
         }
     });
     var i = n("37983"),
@@ -43,7 +43,7 @@ function(e, t, n) {
             })]
         })
     }
-    var p = l.memo(function(e) {
+    var m = l.memo(function(e) {
         let {
             user: t
         } = e, {

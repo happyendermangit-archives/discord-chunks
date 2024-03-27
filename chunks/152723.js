@@ -48,7 +48,7 @@ function(e, t, n) {
                 var i;
                 let c = {
                         environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                        build_number: "278888"
+                        build_number: "278913"
                     },
                     _ = l.default.getCurrentUser();
                 null != _ && (c.user_id = _.id, c.user_name = _.tag, null != _.email && (c.email = _.email));

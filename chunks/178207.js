@@ -14,10 +14,10 @@ function(e, t, n) {
             return f
         },
         trackStickerSearchSelect: function() {
-            return p
+            return m
         },
         trackStickerSelect: function() {
-            return m
+            return p
         },
         trackStickerSearchEmpty: function() {
             return h
@@ -81,7 +81,7 @@ function(e, t, n) {
                 is_suggestion: n
             })
         },
-        p = (e, t, n) => {
+        m = (e, t, n) => {
             let l;
             let {
                 sticker: r
@@ -96,7 +96,7 @@ function(e, t, n) {
                 query: t
             })
         },
-        m = e => {
+        p = e => {
             let t;
             let {
                 sticker: n,

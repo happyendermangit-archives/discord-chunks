@@ -16,8 +16,8 @@ function(e, t, n) {
         d = n("599110"),
         c = n("267625"),
         f = n("719923"),
-        p = n("49111"),
-        m = n("782340");
+        m = n("49111"),
+        p = n("782340");
 
     function h(e) {
         let {
@@ -41,29 +41,29 @@ function(e, t, n) {
                 channel: g,
                 restrictMentions: S,
                 respectCooldown: C,
-                userCanUsePremiumMessageLength: _,
-                resolve: T
+                userCanUsePremiumMessageLength: T,
+                resolve: _
             } = e;
             if (0 === x.length && !(null === (t = h.submit) || void 0 === t ? void 0 : t.allowEmptyMessage) && (null == E || 0 === E.length) && (null == y || 0 === y.length)) {
-                T({
+                _({
                     valid: !1,
-                    failureReason: p.MessageRestrictionTypes.EMPTY_MESSAGE
+                    failureReason: m.MessageRestrictionTypes.EMPTY_MESSAGE
                 });
                 return
             }
-            let I = _ ? p.MAX_MESSAGE_LENGTH_PREMIUM : p.MAX_MESSAGE_LENGTH;
+            let I = T ? m.MAX_MESSAGE_LENGTH_PREMIUM : m.MAX_MESSAGE_LENGTH;
             if (x.length > I) {
-                if (_ || null == g) {
+                if (T || null == g) {
                     ;
                     n = x.length, u = I, (0, l.openModal)(e => (0, i.jsx)(s.default, {
-                        title: m.default.Messages.MESSAGE_TOO_LONG_HEADER,
-                        body: m.default.Messages.MESSAGE_TOO_LONG_BODY_TEXT.format({
+                        title: p.default.Messages.MESSAGE_TOO_LONG_HEADER,
+                        body: p.default.Messages.MESSAGE_TOO_LONG_BODY_TEXT.format({
                             currentLength: n,
                             maxLength: u
                         }),
-                        confirmText: m.default.Messages.OKAY,
+                        confirmText: p.default.Messages.OKAY,
                         ...e
-                    })), d.default.track(p.AnalyticEvents.OPEN_MODAL, {
+                    })), d.default.track(m.AnalyticEvents.OPEN_MODAL, {
                         type: "Message Too Long Alert",
                         message_content_length: n
                     })
@@ -72,17 +72,17 @@ function(e, t, n) {
                     channel: g,
                     content: x
                 });
-                T({
+                _({
                     valid: !1,
-                    failureReason: p.MessageRestrictionTypes.MESSAGE_TOO_LONG
+                    failureReason: m.MessageRestrictionTypes.MESSAGE_TOO_LONG
                 });
                 return
             }
             if (null != g) {
                 if (null != g.getGuildId() && C && o.default.getSlowmodeCooldownGuess(g.id) > 0) {
-                    T({
+                    _({
                         valid: !1,
-                        failureReason: p.MessageRestrictionTypes.SLOWMODE_COOLDOWN
+                        failureReason: m.MessageRestrictionTypes.SLOWMODE_COOLDOWN
                     });
                     return
                 }
@@ -98,11 +98,11 @@ function(e, t, n) {
                             f({
                                 analyticsType: t,
                                 channel: g,
-                                onCancel: () => T({
+                                onCancel: () => _({
                                     valid: !1,
-                                    failureReason: p.MessageRestrictionTypes.SHOUTING_CANCELLED
+                                    failureReason: m.MessageRestrictionTypes.SHOUTING_CANCELLED
                                 }),
-                                onConfirm: () => T({
+                                onConfirm: () => _({
                                     valid: !0
                                 }),
                                 popoutText: i,
@@ -114,19 +114,19 @@ function(e, t, n) {
             }
             if (r.default.isFull()) {
                 (0, l.openModal)(e => (0, i.jsx)(s.default, {
-                    title: m.default.Messages.MESSAGE_RATE_LIMITED_HEADER,
-                    body: m.default.Messages.MESSAGE_RATE_LIMITED_BODY,
-                    confirmText: m.default.Messages.MESSAGE_RATE_LIMITED_BUTTON,
+                    title: p.default.Messages.MESSAGE_RATE_LIMITED_HEADER,
+                    body: p.default.Messages.MESSAGE_RATE_LIMITED_BODY,
+                    confirmText: p.default.Messages.MESSAGE_RATE_LIMITED_BUTTON,
                     ...e
                 }), {
-                    onCloseRequest: p.NOOP
-                }), T({
+                    onCloseRequest: m.NOOP
+                }), _({
                     valid: !1,
-                    failureReason: p.MessageRestrictionTypes.RATE_LIMITED
+                    failureReason: m.MessageRestrictionTypes.RATE_LIMITED
                 });
                 return
             }
-            T({
+            _({
                 valid: !0
             })
         })({

@@ -16,8 +16,8 @@ function(e, t, n) {
         d = n("916565"),
         c = n("501536"),
         f = n("25292"),
-        p = n("200294"),
-        m = n("851745"),
+        m = n("200294"),
+        p = n("851745"),
         h = n("317041"),
         x = n("782340"),
         E = n("92810"),
@@ -40,13 +40,13 @@ function(e, t, n) {
             displayName: "",
             value: ""
         })),
-        _ = {
+        T = {
             results: {
                 choices: [],
                 isError: !0
             }
         },
-        T = a.debounce(d.default, h.AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, {
+        _ = a.debounce(d.default, h.AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, {
             leading: !0,
             trailing: !0
         }),
@@ -55,7 +55,7 @@ function(e, t, n) {
             showEmpty: !0,
             matches(e, t, n, i, l) {
                 let a = u.default.getActiveOption(e.id);
-                return l.commands !== m.CommandMode.DISABLED && null != a && (a.type === r.ApplicationCommandOptionType.BOOLEAN || !!(null == a ? void 0 : a.autocomplete) || (null == a ? void 0 : a.choices) != null && a.choices.length > 0)
+                return l.commands !== p.CommandMode.DISABLED && null != a && (a.type === r.ApplicationCommandOptionType.BOOLEAN || !!(null == a ? void 0 : a.autocomplete) || (null == a ? void 0 : a.choices) != null && a.choices.length > 0)
             },
             queryResults(e, t, n, i, l) {
                 var a;
@@ -65,7 +65,7 @@ function(e, t, n) {
                     if (l) {
                         let l = u.default.getActiveCommand(e.id),
                             a = i.getCommandOptionValues();
-                        T({
+                        _({
                             command: l,
                             optionValues: a,
                             context: {
@@ -79,7 +79,7 @@ function(e, t, n) {
                         })
                     }
                     let a = o.default.getLastErrored(e.id);
-                    if (a) return _;
+                    if (a) return T;
                     let r = o.default.getAutocompleteChoices(e.id, s.name, n);
                     return null == r ? S : {
                         results: {
@@ -111,7 +111,7 @@ function(e, t, n) {
                     message: x.default.Messages.APPLICATION_COMMAND_AUTOCOMPLETE_FAILED,
                     noResultsImageURL: y,
                     className: E.noAutocompleteResults
-                }) : 0 !== t.length || n ? (0, p.renderAutocompleteGroup)({
+                }) : 0 !== t.length || n ? (0, m.renderAutocompleteGroup)({
                     query: r,
                     selectedIndex: a,
                     autocompletes: n ? C : t,
@@ -143,7 +143,7 @@ function(e, t, n) {
                 return i.insertText(function(e) {
                     return e.displayName
                 }(l)), {
-                    type: m.AutocompleteSelectionTypes.CHOICE
+                    type: p.AutocompleteSelectionTypes.CHOICE
                 }
             }
         };

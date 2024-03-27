@@ -18,8 +18,8 @@ function(e, t, n) {
         d = n("430568"),
         c = n("309570"),
         f = n("29088"),
-        p = n("449918"),
-        m = n("867805"),
+        m = n("449918"),
+        p = n("867805"),
         h = n("699209"),
         x = n("32346"),
         E = n("342845"),
@@ -27,12 +27,12 @@ function(e, t, n) {
         g = n("271938"),
         S = n("42203"),
         C = n("957255"),
-        _ = n("824563"),
-        T = n("800762"),
+        T = n("824563"),
+        _ = n("800762"),
         I = n("137783"),
         v = n("49111"),
-        N = n("73276");
-    let A = "14px";
+        A = n("73276");
+    let N = "14px";
 
     function R(e) {
         let {
@@ -40,8 +40,8 @@ function(e, t, n) {
             className: n,
             animate: l = !0,
             hideTooltip: a
-        } = e, r = y.AnimateEmoji.useSetting(), o = null != t.id ? ":".concat(t.name, ":") : m.default.translateSurrogatesToInlineEmoji(t.name), c = {
-            className: s(N.emoji, n),
+        } = e, r = y.AnimateEmoji.useSetting(), o = null != t.id ? ":".concat(t.name, ":") : p.default.translateSurrogatesToInlineEmoji(t.name), c = {
+            className: s(A.emoji, n),
             emojiId: t.id,
             emojiName: t.name,
             autoplay: !0,
@@ -82,7 +82,7 @@ function(e, t, n) {
                     ref: a,
                     children: n
                 }), (0, i.jsx)("div", {
-                    className: s(N.textRuler, t),
+                    className: s(A.textRuler, t),
                     ref: r,
                     "aria-hidden": !0,
                     children: n
@@ -99,13 +99,13 @@ function(e, t, n) {
             textClassName: s,
             emojiClassName: u,
             animate: d = !0,
-            hideTooltip: m = !1,
+            hideTooltip: p = !1,
             hideEmoji: y = !1,
             user: M,
             hasQuest: k
-        } = e, L = null != n ? n.find(e => e.type === v.ActivityTypes.CUSTOM_STATUS) : null, P = (0, o.useStateFromStores)([g.default], () => g.default.getId() === (null == M ? void 0 : M.id)), b = (0, o.useStateFromStores)([x.default], () => P ? x.default.getHangStatusActivity() : null != n ? n.find(e => e.type === v.ActivityTypes.HANG_STATUS) : null), j = (0, o.useStateFromStores)([T.default, S.default], () => {
+        } = e, L = null != n ? n.find(e => e.type === v.ActivityTypes.CUSTOM_STATUS) : null, P = (0, o.useStateFromStores)([g.default], () => g.default.getId() === (null == M ? void 0 : M.id)), b = (0, o.useStateFromStores)([x.default], () => P ? x.default.getHangStatusActivity() : null != n ? n.find(e => e.type === v.ActivityTypes.HANG_STATUS) : null), j = (0, o.useStateFromStores)([_.default, S.default], () => {
             var e;
-            return null != b && null != M ? S.default.getChannel(null === (e = T.default.getVoiceStateForUser(M.id)) || void 0 === e ? void 0 : e.channelId) : null
+            return null != b && null != M ? S.default.getChannel(null === (e = _.default.getVoiceStateForUser(M.id)) || void 0 === e ? void 0 : e.channelId) : null
         }), {
             enableHangStatus: U
         } = h.HangStatusExperiment.useExperiment({
@@ -113,17 +113,17 @@ function(e, t, n) {
             location: "ActivityStatus"
         }, {
             autoTrackExposure: !1
-        }), D = (0, p.useColorValue)(v.Color.BRAND_345), w = null, F = U && null != b && C.default.can(v.Permissions.CONNECT, j);
+        }), D = (0, m.useColorValue)(v.Color.BRAND_345), w = null, F = U && null != b && C.default.can(v.Permissions.CONNECT, j);
         F ? w = (0, i.jsx)(E.default, {
             className: u,
             hangStatusActivity: b
         }) : null != L && null != L.emoji && !y && (w = (0, i.jsx)(R, {
             emoji: L.emoji,
             animate: d,
-            hideTooltip: m,
+            hideTooltip: p,
             className: u
         }));
-        let G = (0, o.useStateFromStores)([_.default], () => null != M ? _.default.getStatus(M.id) : null),
+        let G = (0, o.useStateFromStores)([T.default], () => null != M ? T.default.getStatus(M.id) : null),
             H = null !== G && [v.StatusTypes.OFFLINE, v.StatusTypes.INVISIBLE].includes(G),
             B = null === (t = (0, f.default)(n, l, void 0, F)) || void 0 === t ? void 0 : t.activityText,
             V = null != B && B.length > 0;
@@ -133,14 +133,14 @@ function(e, t, n) {
                 text: B,
                 className: s
             }), k && (0, i.jsx)(r.QuestsIcon, {
-                className: N.questsIcon,
-                height: A,
-                width: A,
+                className: A.questsIcon,
+                height: N,
+                width: N,
                 color: D.hex
             }), null != n && n.some(e => (0, c.default)(e, F)) ? (0, i.jsx)(I.default, {
                 width: 16,
                 height: 16,
-                className: N.icon
+                className: A.icon
             }) : null]
         })
     }

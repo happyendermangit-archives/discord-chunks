@@ -21,8 +21,8 @@ function(e, t, n) {
             commandOrigin: c = l.CommandOrigin.CHAT
         } = e, f = null != n ? (0, i.getString)({
             content: n
-        }, "content").trim() : "", p = t.required, m = null != n, h = "" === f;
-        if (!m) return p ? {
+        }, "content").trim() : "", m = t.required, p = null != n, h = "" === f;
+        if (!p) return m ? {
             success: !1,
             error: r.default.Messages.COMMAND_VALIDATION_REQUIRED_ERROR
         } : {
@@ -30,7 +30,7 @@ function(e, t, n) {
         };
         if (h) return d ? {
             success: !0
-        } : p ? {
+        } : m ? {
             success: !1,
             error: r.default.Messages.COMMAND_VALIDATION_REQUIRED_ERROR
         } : {

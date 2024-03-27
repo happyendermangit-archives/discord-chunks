@@ -14,7 +14,7 @@ function(e, t, n) {
             return f
         },
         useShouldShowInvitesDisabledNotif: function() {
-            return p
+            return m
         }
     }), n("222007");
     var i = n("446674"),
@@ -61,7 +61,7 @@ function(e, t, n) {
         })
     }
 
-    function p(e) {
+    function m(e) {
         var t;
         let n = d(e),
             l = (0, i.useStateFromStores)([a.default], () => null != e ? a.default.getGuildIncident(e.id) : null),

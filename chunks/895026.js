@@ -5,7 +5,7 @@ function(e, t, n) {
             return c
         },
         requestMembersForRole: function() {
-            return p
+            return m
         }
     });
     var i = n("693566"),
@@ -44,7 +44,7 @@ function(e, t, n) {
         maxAge: 1e4
     });
 
-    function p(e, t) {
+    function m(e, t) {
         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
             i = "".concat(e, "-").concat(t);
         if (!n || null == f.get(i)) {

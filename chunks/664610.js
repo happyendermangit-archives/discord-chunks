@@ -15,8 +15,8 @@ function(e, t, n) {
         d = n("149022"),
         c = n("169694"),
         f = n("646220"),
-        p = n("467123"),
-        m = n("506038"),
+        m = n("467123"),
+        p = n("506038"),
         h = n("663190"),
         x = n("93640"),
         E = n("100576"),
@@ -25,8 +25,8 @@ function(e, t, n) {
     var g = n("541926"),
         S = n("926970"),
         C = n("755107"),
-        _ = n("518542"),
-        T = n("269149"),
+        T = n("518542"),
+        _ = n("269149"),
         I = n("566819");
 
     function v(e) {
@@ -49,15 +49,15 @@ function(e, t, n) {
                             windowContext: d,
                             previewMarkdown: I,
                             forTests: v,
-                            onChangeStart: N,
-                            onChangeEnd: A,
+                            onChangeStart: A,
+                            onChangeEnd: N,
                             updateState: R
                         } = e, O = a, {
                             onChange: M
                         } = O;
                         O.chatInputType = s, O.windowContext = d, O.previewMarkdown = I, O.composition = null, O.events = new l.EventEmitter, O.isMac = "MacIntel" === navigator.platform, O.onChange = () => {
                             O.events.emit("onChange"), M()
-                        }, O = (0, S.withReact)(O, !0 === v), O = (0, g.default)(O), O = (0, y.default)(O), (null === (t = s.commands) || void 0 === t ? void 0 : t.enabled) && (O = (0, c.default)(O, r, !0 === o, !0 === u)), O = (0, E.default)(O, r.guild_id, r.id), !(null === (n = s.markdown) || void 0 === n ? void 0 : n.disableBlockQuotes) && (O = (0, f.default)(O)), !(null === (i = s.markdown) || void 0 === i ? void 0 : i.disableCodeBlocks) && (O = (0, p.default)(O)), v && (O = (0, _.default)(O)), O = (0, x.default)(O), O = (0, m.default)(O), O = (0, C.default)(O), O = (0, T.default)(O, N, A), O = (0, h.default)(O, e => {
+                        }, O = (0, S.withReact)(O, !0 === v), O = (0, g.default)(O), O = (0, y.default)(O), (null === (t = s.commands) || void 0 === t ? void 0 : t.enabled) && (O = (0, c.default)(O, r, !0 === o, !0 === u)), O = (0, E.default)(O, r.guild_id, r.id), !(null === (n = s.markdown) || void 0 === n ? void 0 : n.disableBlockQuotes) && (O = (0, f.default)(O)), !(null === (i = s.markdown) || void 0 === i ? void 0 : i.disableCodeBlocks) && (O = (0, m.default)(O)), v && (O = (0, T.default)(O)), O = (0, x.default)(O), O = (0, p.default)(O), O = (0, C.default)(O), O = (0, _.default)(O, A, N), O = (0, h.default)(O, e => {
                             let {
                                 newValue: t,
                                 newSelection: n

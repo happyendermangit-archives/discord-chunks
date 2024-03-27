@@ -762,13 +762,12 @@ function(e, t, n) {
                                 else if (t === E.CodedLinkType.EMBEDDED_ACTIVITY_INVITE);
                                 else if (t === E.CodedLinkType.GUILD_PRODUCT);
                                 else if (t === E.CodedLinkType.SERVER_SHOP);
-                                else if (t === E.CodedLinkType.QUESTS_EMBED) {
-                                    var u;
-                                    (0, w.trackQuestEvent)(l, eo.AnalyticEvents.QUEST_LINK_SHARED, {
-                                        guild_id: Q.default.getGuildId(),
-                                        channel_type: null === (u = Y.default.getChannel(X.default.getChannelId())) || void 0 === u ? void 0 : u.type
-                                    })
-                                } else throw Error("Unknown coded link type: ".concat(t))
+                                else if (t === E.CodedLinkType.QUESTS_EMBED)(0, w.trackQuestEvent)({
+                                    questId: l,
+                                    event: eo.AnalyticEvents.QUEST_LINK_SHARED,
+                                    trackGuildAndChannelMetadata: !0
+                                });
+                                else throw Error("Unknown coded link type: ".concat(t))
                             })
                         }({
                             content: l,

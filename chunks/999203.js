@@ -28,18 +28,18 @@ function(e, t, n) {
             guildId: u
         }), {
             activeSubscriptionListing: f,
-            activeEntitlement: p,
-            subscriptionGroupListing: m
+            activeEntitlement: m,
+            subscriptionGroupListing: p
         } = (0, l.useActiveSubscriptionListingForApplication)(null == d ? void 0 : d.id, u), {
             enabled: h
         } = a.otpSkusExperiment.useExperiment({
             location: "useBotApplicationSubscription"
-        }), x = null !== (t = null == m ? void 0 : m.sku_flags) && void 0 !== t ? t : 0, E = (0, s.isApplicationUserSubscription)(x) || null != u && u !== o.ME && (0, s.isApplicationGuildSubscription)(x) || h, y = null != p;
+        }), x = null !== (t = null == p ? void 0 : p.sku_flags) && void 0 !== t ? t : 0, E = (0, s.isApplicationUserSubscription)(x) || null != u && u !== o.ME && (0, s.isApplicationGuildSubscription)(x) || h, y = null != m;
         return c ? {
             botUpgraded: y,
             botUpgradeable: !y && c && E,
             activeSubscriptionListing: f,
-            subscriptionGroupListing: m
+            subscriptionGroupListing: p
         } : {
             botUpgraded: !1,
             botUpgradeable: !1,

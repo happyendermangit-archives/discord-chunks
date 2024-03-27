@@ -23,15 +23,15 @@ function(e, t, n) {
             onFocus: s,
             onClick: c,
             size: f = u.default.Sizes.SMALLER,
-            hideOverflowCount: p = !1,
-            disableGuildNameTooltip: m = !1
+            hideOverflowCount: m = !1,
+            disableGuildNameTooltip: p = !1
         } = e;
         return l.length <= 0 ? null : (0, i.jsx)("div", {
             className: a(t, d.avatars),
             children: function() {
                 let e = r(l).take(n).map(e => {
                         let t = e.name;
-                        return m ? (0, i.jsx)("div", {
+                        return p ? (0, i.jsx)("div", {
                             className: d.avatar,
                             children: (0, i.jsx)(u.default, {
                                 guild: e,
@@ -50,7 +50,7 @@ function(e, t, n) {
                         }, e.id)
                     }).value(),
                     t = l.length - n;
-                return t > 0 && !p && (e[e.length - 1] = (0, i.jsxs)(o.Button, {
+                return t > 0 && !m && (e[e.length - 1] = (0, i.jsxs)(o.Button, {
                     className: a(d.avatar, d.overflow),
                     onFocus: s,
                     onClick: e => null == c ? void 0 : c(e),

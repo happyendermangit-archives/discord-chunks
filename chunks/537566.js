@@ -15,8 +15,8 @@ function(e, t, n) {
         d = n("228226"),
         c = n("568658"),
         f = n("829290"),
-        p = n("503063"),
-        m = n("350583"),
+        m = n("503063"),
+        p = n("350583"),
         h = l.memo(e => {
             let {
                 channel: t,
@@ -38,19 +38,19 @@ function(e, t, n) {
                 activeCommand: l,
                 activeOption: null != h ? h : null,
                 optionStates: x
-            }))), null != a && g.push((0, i.jsx)(p.default, {
+            }))), null != a && g.push((0, i.jsx)(m.default, {
                 reply: a,
                 chatInputType: n
             })), E && g.push((0, i.jsx)(f.StaffPTOBar, {})), 0 === (g = g.map((e, t) => {
                 let n = t === g.length - 1;
                 return (0, i.jsx)("div", {
                     className: s({
-                        [m.stackedAttachedBar]: !n
+                        [p.stackedAttachedBar]: !n
                     }),
                     children: e
                 }, t)
             })).length) ? null : (0, i.jsx)("div", {
-                className: m.attachedBars,
+                className: p.attachedBars,
                 children: g
             })
         })

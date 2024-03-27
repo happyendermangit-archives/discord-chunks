@@ -2,16 +2,16 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getAmplitudinalSoundboardVolume: function() {
-            return T
+            return _
         },
         canUseSoundboardSound: function() {
             return v
         },
         playSound: function() {
-            return N
+            return A
         },
         maybePlayCustomJoinSound: function() {
-            return A
+            return N
         },
         useSoundBoardDismissContentTypes: function() {
             return R
@@ -36,8 +36,8 @@ function(e, t, n) {
         d = n("233069"),
         c = n("957255"),
         f = n("697218"),
-        p = n("599110"),
-        m = n("719923"),
+        m = n("599110"),
+        p = n("719923"),
         h = n("158998"),
         x = n("305122"),
         E = n("235004"),
@@ -45,31 +45,31 @@ function(e, t, n) {
         g = n("245463"),
         S = n("675961"),
         C = n("846325"),
-        _ = n("49111");
+        T = n("49111");
 
-    function T() {
+    function _() {
         var e;
         let t = s.SoundboardSettings.getSetting();
         return null !== (e = null == t ? void 0 : t.volume) && void 0 !== e ? e : 100
     }
 
     function I(e, t) {
-        return (null == t ? void 0 : t.guild_id) == null || c.default.can(_.Permissions.USE_EXTERNAL_SOUNDS, t) || e.guildId === C.DEFAULT_SOUND_GUILD_ID || e.guildId === (null == t ? void 0 : t.guild_id)
+        return (null == t ? void 0 : t.guild_id) == null || c.default.can(T.Permissions.USE_EXTERNAL_SOUNDS, t) || e.guildId === C.DEFAULT_SOUND_GUILD_ID || e.guildId === (null == t ? void 0 : t.guild_id)
     }
 
     function v(e, t, n) {
         let i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
-        return (m.default.canUseSoundboardEverywhere(e) || t.guildId === (null == n ? void 0 : n.guild_id) || t.guildId === C.DEFAULT_SOUND_GUILD_ID) && I(t, n) && (!i || t.available)
+        return (p.default.canUseSoundboardEverywhere(e) || t.guildId === (null == n ? void 0 : n.guild_id) || t.guildId === C.DEFAULT_SOUND_GUILD_ID) && I(t, n) && (!i || t.available)
     }
 
-    function N(e, t, n) {
+    function A(e, t, n) {
         (0, x.playSoundLocally)(t, e, y.LocalSoundTrigger.SOUNDBOARD), (0, u.sendVoiceChannelSoundboardEffect)(t, e, __OVERLAY__, n)
     }
-    async function A(e) {
+    async function N(e) {
         let t = f.default.getCurrentUser(),
             n = (0, a.default)(),
             i = (0, S.getCustomJoinSound)(e);
-        if (null == n || d.SILENT_JOIN_LEAVE_CHANNEL_TYPES.has(n.type) || null == i || !m.default.canUseCustomCallSounds(t) || !(0, g.canSelectedVoiceChannelUseSoundboard)()) return;
+        if (null == n || d.SILENT_JOIN_LEAVE_CHANNEL_TYPES.has(n.type) || null == i || !p.default.canUseCustomCallSounds(t) || !(0, g.canSelectedVoiceChannelUseSoundboard)()) return;
         await (0, x.maybeFetchSoundboardSounds)();
         let l = i.guildId === C.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID ? C.DEFAULT_SOUND_GUILD_ID : i.guildId,
             s = E.default.getSound(l, i.soundId);
@@ -91,7 +91,7 @@ function(e, t, n) {
             }()) {
             a.push(l.DismissibleContent.CUSTOM_CALL_SOUNDS_SPARKLES);
             let e = (0, h.ageEligibleForPremiumUpsell)(n);
-            (m.default.canUseCustomCallSounds(n) || e) && a.push(l.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL)
+            (p.default.canUseCustomCallSounds(n) || e) && a.push(l.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL)
         }
         return a
     }
@@ -133,7 +133,7 @@ function(e, t, n) {
             soundSource: l,
             location: a
         } = e;
-        p.default.track(_.AnalyticEvents.USER_CUSTOM_CALL_SOUND_SETTING_UPDATED, {
+        m.default.track(T.AnalyticEvents.USER_CUSTOM_CALL_SOUND_SETTING_UPDATED, {
             location_stack: a,
             guild_id: "" === t ? 0 : Number(t),
             change_type: n,
@@ -146,7 +146,7 @@ function(e, t, n) {
         let {
             location: t
         } = e;
-        p.default.track(_.AnalyticEvents.USER_CUSTOM_CALL_SOUND_SETTING_GUILD_REMOVED, {
+        m.default.track(T.AnalyticEvents.USER_CUSTOM_CALL_SOUND_SETTING_GUILD_REMOVED, {
             location_stack: t
         })
     }

@@ -20,27 +20,27 @@ function(e, t, n) {
                 color: a,
                 iconType: c,
                 onMouseEnter: f,
-                onMouseLeave: p,
-                ...m
+                onMouseLeave: m,
+                ...p
             } = e, [h, x] = l.useState(!1), E = l.useCallback(e => {
                 x(!0), null == f || f(e)
             }, [x, f]), y = l.useCallback(e => {
-                x(!1), null == p || p(e)
-            }, [x, p]), g = {};
+                x(!1), null == m || m(e)
+            }, [x, m]), g = {};
             return null != a && (g = {
                 color: (0, r.int2hex)(a),
                 backgroundColor: h ? (0, r.int2rgba)(a, .3) : (0, r.int2rgba)(a, .1)
             }), (0, i.jsx)(o.Clickable, {
-                ...m,
+                ...p,
                 tag: "span",
                 className: s(n, {
                     [d.wrapper]: !0,
-                    interactive: m.onClick
+                    interactive: p.onClick
                 }),
                 onMouseEnter: E,
                 onMouseLeave: y,
                 style: g,
-                tabIndex: null != m.onClick ? 0 : -1,
+                tabIndex: null != p.onClick ? 0 : -1,
                 children: null != c ? (0, i.jsx)(u.default, {
                     iconType: c,
                     children: t

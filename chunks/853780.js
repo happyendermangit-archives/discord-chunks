@@ -24,8 +24,8 @@ function(e, t, n) {
             fetched: f
         } = (0, s.usePrivateChannelIntegrationState)({
             channelId: n
-        }), p = f && void 0 !== c.find(e => e.application.id === t);
-        return p ? (0, i.jsxs)(r.default, {
+        }), m = f && void 0 !== c.find(e => e.application.id === t);
+        return m ? (0, i.jsxs)(r.default, {
             children: [(0, i.jsx)(l.Heading, {
                 variant: "eyebrow",
                 className: d.title,

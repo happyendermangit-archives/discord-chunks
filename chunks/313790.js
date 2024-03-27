@@ -15,11 +15,11 @@ function(e, t, n) {
         d = n("256860"),
         c = n("560241"),
         f = n("782340"),
-        p = n("750116");
-    let m = l.forwardRef(function(e, t) {
+        m = n("750116");
+    let p = l.forwardRef(function(e, t) {
         let {
             onKeyDown: n,
-            stickersListRef: m,
+            stickersListRef: p,
             channel: h
         } = e, x = (0, d.useHasSendableSticker)(h), E = l.useRef(null), {
             searchQuery: y,
@@ -27,10 +27,10 @@ function(e, t, n) {
         } = (0, u.useExpressionPickerStore)(e => ({
             searchQuery: e.searchQuery,
             isSearchSuggestion: e.isSearchSuggestion
-        }), a.default), S = o.StickerPickerStore.useStore(e => e.searchPlaceholder), C = o.StickerPickerStore.useStore(e => e.inspectedExpressionPosition, a.default), _ = l.useCallback(e => {
+        }), a.default), S = o.StickerPickerStore.useStore(e => e.searchPlaceholder), C = o.StickerPickerStore.useStore(e => e.inspectedExpressionPosition, a.default), T = l.useCallback(e => {
             var t;
-            o.StickerPickerStore.setActiveCategoryIndex("" === e ? 0 : c.INACTIVE_CATEGORY_INDEX), o.StickerPickerStore.setInspectedExpressionPosition(0, 0), o.StickerPickerStore.setSearchPlaceholder(null), (0, u.setSearchQuery)(e), null === (t = m.current) || void 0 === t || t.scrollTo(0)
-        }, [m]), T = l.useCallback(() => {
+            o.StickerPickerStore.setActiveCategoryIndex("" === e ? 0 : c.INACTIVE_CATEGORY_INDEX), o.StickerPickerStore.setInspectedExpressionPosition(0, 0), o.StickerPickerStore.setSearchPlaceholder(null), (0, u.setSearchQuery)(e), null === (t = p.current) || void 0 === t || t.scrollTo(0)
+        }, [p]), _ = l.useCallback(() => {
             (0, u.setSearchQuery)("")
         }, []);
         return l.useImperativeHandle(t, () => ({
@@ -44,7 +44,7 @@ function(e, t, n) {
                 null === (e = E.current) || void 0 === e || e.focus()
             }
         }, [g]), (0, i.jsx)("div", {
-            className: p.wrapper,
+            className: m.wrapper,
             children: (0, i.jsx)(r.default, {
                 autoFocus: x,
                 disabled: !x,
@@ -52,10 +52,10 @@ function(e, t, n) {
                 ref: E,
                 size: r.default.Sizes.MEDIUM,
                 placeholder: null != S ? S : x ? f.default.Messages.SEARCH_FOR_STICKERS : f.default.Messages.NO_STICKERS_TO_SEARCH_THROUGH,
-                onClear: T,
+                onClear: _,
                 onKeyDown: n,
-                onQueryChange: _,
-                className: p.searchBar,
+                onQueryChange: T,
+                className: m.searchBar,
                 preventEscapePropagation: !1,
                 useKeyboardNavigation: !1,
                 inputProps: {
@@ -67,5 +67,5 @@ function(e, t, n) {
             })
         })
     });
-    var h = m
+    var h = p
 }

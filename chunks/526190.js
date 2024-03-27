@@ -20,8 +20,8 @@ function(e, t, n) {
         let t, {
                 color: n,
                 size: f,
-                forcedIconColor: p,
-                className: m,
+                forcedIconColor: m,
+                className: p,
                 iconClassName: h,
                 tooltipText: x
             } = e,
@@ -29,11 +29,11 @@ function(e, t, n) {
             g = (0, r.useToken)(s.default.unsafe_rawColors.PRIMARY_300).hex(),
             S = (0, l.hex2int)(null != n ? n : g),
             C = (0, l.int2hsl)(S, !1, E ? y : null);
-        return t = null != p ? p : .3 > (0, l.getDarkness)(S) ? s.default.unsafe_rawColors.PRIMARY_630.css : s.default.unsafe_rawColors.WHITE_500.css, (0, i.jsx)(r.Tooltip, {
+        return t = null != m ? m : .3 > (0, l.getDarkness)(S) ? s.default.unsafe_rawColors.PRIMARY_630.css : s.default.unsafe_rawColors.WHITE_500.css, (0, i.jsx)(r.Tooltip, {
             text: null != x ? x : c.default.Messages.CONNECTIONS_ROLE_OFFICIAL_ICON_TOOLTIP,
             children: e => (0, i.jsx)(u.default, {
                 ...e,
-                className: m,
+                className: p,
                 color: C,
                 size: f,
                 children: (0, i.jsx)(d.default, {

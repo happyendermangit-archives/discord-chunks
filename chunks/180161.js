@@ -16,8 +16,8 @@ function(e, t, n) {
         d = n("233069"),
         c = n("42203"),
         f = n("305961"),
-        p = n("666897"),
-        m = n("848825"),
+        m = n("666897"),
+        p = n("848825"),
         h = n("794818"),
         x = n("844659"),
         E = n("49111");
@@ -67,12 +67,12 @@ function(e, t, n) {
                             }
                         })
                     };
-                return (0, i.jsxs)(p.default, {
+                return (0, i.jsxs)(m.default, {
                     role: "link",
                     onClick: u,
                     onContextMenu: d,
                     className: "channelMention",
-                    children: [null != t.inContent ? s(t.inContent, r) : null, null != t.inContent ? (0, i.jsx)(m.default, {}) : null, (0, x.smartOutput)(t, s, r)]
+                    children: [null != t.inContent ? s(t.inContent, r) : null, null != t.inContent ? (0, i.jsx)(p.default, {}) : null, (0, x.smartOutput)(t, s, r)]
                 }, r.key)
             }
         }

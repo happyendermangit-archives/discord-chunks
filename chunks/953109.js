@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return m
+            return p
         }
     });
     var i = n("37983");
@@ -22,17 +22,17 @@ function(e, t, n) {
             MEDIUM: c.medium,
             LARGE: c.large
         },
-        p = e => {
+        m = e => {
             let t, {
                 game: l,
-                guild: p,
-                skuId: m,
+                guild: m,
+                skuId: p,
                 pid: h,
                 className: x,
                 guildClassName: E,
                 size: y = f.MEDIUM
             } = e;
-            if (null != m && (t = function(e) {
+            if (null != p && (t = function(e) {
                     if (null == e) return null;
                     switch (e) {
                         case u.PremiumSubscriptionSKUs.GUILD:
@@ -47,7 +47,7 @@ function(e, t, n) {
                         default:
                             return null
                     }
-                }(m)), null != l && null == t && (t = l.getIconURL(function(e) {
+                }(p)), null != l && null == t && (t = l.getIconURL(function(e) {
                     switch (e) {
                         case f.XXSMALL:
                             return 16;
@@ -62,7 +62,7 @@ function(e, t, n) {
                         default:
                             return 80
                     }
-                }(y))), null == (t = (0, s.default)(h, t)) && null != p) {
+                }(y))), null == (t = (0, s.default)(h, t)) && null != m) {
                 let e = function(e) {
                     switch (e) {
                         case f.XSMALL:
@@ -78,7 +78,7 @@ function(e, t, n) {
                 }(y);
                 return (0, i.jsx)(r.default, {
                     className: a(c.gameIcon, E, x),
-                    guild: p,
+                    guild: m,
                     size: e
                 })
             }
@@ -95,6 +95,6 @@ function(e, t, n) {
                 className: a(c.gameIcon, y, x)
             })
         };
-    p.Sizes = f;
-    var m = p
+    m.Sizes = f;
+    var p = m
 }

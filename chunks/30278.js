@@ -15,8 +15,8 @@ function(e, t, n) {
         d = n("685665"),
         c = n("154889"),
         f = n("917247"),
-        p = n("956597"),
-        m = n("42203"),
+        m = n("956597"),
+        p = n("42203"),
         h = n("18494"),
         x = n("791106"),
         E = n("216422"),
@@ -24,9 +24,9 @@ function(e, t, n) {
         g = n("49111"),
         S = n("646718"),
         C = n("782340"),
-        _ = n("936369");
+        T = n("936369");
 
-    function T() {
+    function _() {
         (0, o.openModalLazy)(async () => {
             let {
                 default: e
@@ -44,12 +44,12 @@ function(e, t, n) {
             className: n,
             iconOnly: a,
             remaining: I
-        } = e, v = (0, r.useStateFromStores)([h.default, m.default], () => {
-            let e = m.default.getChannel(h.default.getChannelId());
+        } = e, v = (0, r.useStateFromStores)([h.default, p.default], () => {
+            let e = p.default.getChannel(h.default.getChannelId());
             return (null == e ? void 0 : e.isPrivate()) ? g.AnalyticsPages.DM_CHANNEL : g.AnalyticsPages.GUILD_CHANNEL
         }), {
-            analyticsLocations: N
-        } = (0, d.default)(u.default.PREMIUM_UPSELL), A = (0, c.usePremiumDiscountOffer)(), R = (0, f.usePremiumTrialOffer)(), O = (0, c.discountOfferHasTier)(A, S.PremiumSubscriptionSKUs.TIER_2), M = (null == R ? void 0 : null === (t = R.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === S.PremiumSubscriptionSKUs.TIER_2;
+            analyticsLocations: A
+        } = (0, d.default)(u.default.PREMIUM_UPSELL), N = (0, c.usePremiumDiscountOffer)(), R = (0, f.usePremiumTrialOffer)(), O = (0, c.discountOfferHasTier)(N, S.PremiumSubscriptionSKUs.TIER_2), M = (null == R ? void 0 : null === (t = R.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === S.PremiumSubscriptionSKUs.TIER_2;
         return (l.useEffect(() => {
             y.default.track(g.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                 type: "longer messages inline",
@@ -57,38 +57,38 @@ function(e, t, n) {
                     location_page: v,
                     location_section: g.AnalyticsSections.CHANNEL_TEXT_AREA
                 },
-                location_stack: N
+                location_stack: A
             })
-        }, [v, N]), (M || O) && I < 0) ? (0, i.jsx)(p.default, {
+        }, [v, A]), (M || O) && I < 0) ? (0, i.jsx)(m.default, {
             type: S.PremiumUpsellTypes.MESSAGE_LENGTH_IN_EDITOR_UPSELL,
             subscriptionTier: S.PremiumSubscriptionSKUs.TIER_2,
             context: I,
-            discountOffer: A,
+            discountOffer: N,
             trialOffer: R,
             children: C.default.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({
-                onLearnMore: T
+                onLearnMore: _
             })
         }) : a ? (0, i.jsx)(o.Clickable, {
-            className: _.iconOnly,
-            onClick: () => T(),
+            className: T.iconOnly,
+            onClick: () => _(),
             children: (0, i.jsx)(o.Tooltip, {
                 text: C.default.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP_WITHOUT_LINK,
                 position: "top",
                 children: e => (0, i.jsx)(E.default, {
-                    className: _.premium,
+                    className: T.premium,
                     ...e
                 })
             })
         }) : (0, i.jsxs)("div", {
-            className: s(_.root, n),
+            className: s(T.root, n),
             children: [(0, i.jsx)(E.default, {
-                className: _.premium,
+                className: T.premium,
                 color: x.GradientCssUrls.PREMIUM_TIER_2
             }), (0, i.jsx)(o.Text, {
-                className: _.text,
+                className: T.text,
                 variant: "text-sm/normal",
                 children: C.default.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({
-                    onLearnMore: T
+                    onLearnMore: _
                 })
             })]
         })

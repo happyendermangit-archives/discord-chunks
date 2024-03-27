@@ -27,8 +27,8 @@ function(e, t, n) {
         f = d(r.default.RULES, [(0, s.default)({
             enableBuildOverrides: !0
         })]),
-        p = l.omit(d(r.default.RULES, [(0, s.default)(c)]), "paragraph", "newline"),
-        m = d(r.default.CHANNEL_TOPIC_RULES, [(0, s.default)({
+        m = l.omit(d(r.default.RULES, [(0, s.default)(c)]), "paragraph", "newline"),
+        p = d(r.default.CHANNEL_TOPIC_RULES, [(0, s.default)({
             ...c,
             emojiTooltipPosition: "bottom"
         }), {
@@ -53,14 +53,14 @@ function(e, t, n) {
             }
         })]),
         C = d(r.default.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, s.default)(c)]),
-        _ = l.omit(d(r.default.RULES, [(0, s.default)({
+        T = l.omit(d(r.default.RULES, [(0, s.default)({
             ...c,
             emoji: {
                 height: 14,
                 width: 14
             }
         })]), "paragraph", "newline", "strong", "codeBlock", "inlineCode", "u", "link", "url", "autolink", "list", "heading"),
-        T = {
+        _ = {
             text: r.default.RULES.text
         };
     var I = {
@@ -69,23 +69,23 @@ function(e, t, n) {
         defaultReactRuleOptions: c,
         defaultRules: f,
         guildEventRules: g,
-        notifCenterV2MessagePreviewRules: _,
-        lockscreenWidgetMessageRules: T,
+        notifCenterV2MessagePreviewRules: T,
+        lockscreenWidgetMessageRules: _,
         astParserFor: a.astParserFor,
         reactParserFor: a.reactParserFor,
         parse: a.reactParserFor(f),
-        parseTopic: a.reactParserFor(m),
+        parseTopic: a.reactParserFor(p),
         parseVoiceChannelStatus: a.reactParserFor(h),
         parseEmbedTitle: a.reactParserFor(x),
         parseInlineReply: a.reactParserFor(E),
         parseGuildVerificationFormRule: a.reactParserFor(y),
         parseGuildEventDescription: a.reactParserFor(g),
         parseAutoModerationSystemMessage: a.reactParserFor(C),
-        parseForumPostGuidelines: a.reactParserFor(p),
+        parseForumPostGuidelines: a.reactParserFor(m),
         parseForumPostMostRecentMessage: a.reactParserFor(S),
-        parseNotifCenterMessagePreview: a.reactParserFor(_),
+        parseNotifCenterMessagePreview: a.reactParserFor(T),
         parseToAST: a.astParserFor(f),
-        parseTopicToAST: a.astParserFor(m),
+        parseTopicToAST: a.astParserFor(p),
         parseEmbedTitleToAST: a.astParserFor(x),
         parseInlineReplyToAST: a.astParserFor(E),
         parseAutoModerationSystemMessageToAST: a.astParserFor(C)

@@ -5,7 +5,7 @@ function(e, t, n) {
             return l
         },
         sendVoiceChannelCustomCallSoundEffect: function() {
-            return T
+            return _
         },
         sendVoiceChannelSoundboardEffect: function() {
             return I
@@ -22,8 +22,8 @@ function(e, t, n) {
         d = n("385976"),
         c = n("389480"),
         f = n("454614"),
-        p = n("18494"),
-        m = n("718517"),
+        m = n("18494"),
+        p = n("718517"),
         h = n("402671"),
         x = n("82230"),
         E = n("568088"),
@@ -32,10 +32,10 @@ function(e, t, n) {
         S = n("49111"),
         C = n("846325");
 
-    function _(e) {
+    function T(e) {
         let t = new AbortController,
             n = (0, a.throttle)(n => {
-                p.default.getVoiceChannelId() !== e && t.abort()
+                m.default.getVoiceChannelId() !== e && t.abort()
             }, 1e3);
         return {
             abortController: t,
@@ -43,12 +43,12 @@ function(e, t, n) {
         }
     }
 
-    function T(e, t, n) {
+    function _(e, t, n) {
         var i;
         let {
             abortController: l,
             onRequestProgress: a
-        } = _(e), r = null !== (i = x.default.getState().animationType) && void 0 !== i ? i : g.VoiceChannelEffectAnimationType.BASIC, u = {
+        } = T(e), r = null !== (i = x.default.getState().animationType) && void 0 !== i ? i : g.VoiceChannelEffectAnimationType.BASIC, u = {
             animation_type: r,
             animation_id: (0, y.sampleAnimationId)(r, y.CUSTOM_CALL_SOUND_ANIMATION_RANGE)
         };
@@ -68,15 +68,15 @@ function(e, t, n) {
             {
                 abortController: o,
                 onRequestProgress: u
-            } = _(e),
-            p = {
+            } = T(e),
+            m = {
                 sound_id: t.soundId,
                 emoji_id: t.emojiId,
                 emoji_name: null !== (a = t.emojiName) && void 0 !== a ? a : null == r ? void 0 : r.name
             };
-        t.guildId !== C.DEFAULT_SOUND_GUILD_ID && (p.source_guild_id = t.guildId), s.HTTP.post({
+        t.guildId !== C.DEFAULT_SOUND_GUILD_ID && (m.source_guild_id = t.guildId), s.HTTP.post({
             url: S.Endpoints.SEND_SOUNDBOARD_SOUND(e),
-            body: p,
+            body: m,
             signal: o.signal,
             onRequestProgress: u
         }).then(S.NOOP_NULL, () => {
@@ -109,22 +109,22 @@ function(e, t, n) {
             await s.HTTP.post({
                 url: S.Endpoints.VOICE_CHANNEL_EFFECTS(t.id),
                 body: e
-            }), A(t, n, i, u), r.default.dispatch({
+            }), N(t, n, i, u), r.default.dispatch({
                 type: "VOICE_CHANNEL_EFFECT_SENT_LOCAL"
             })
         } catch (e) {
             if (429 === e.status && null != e.body.retry_after) {
-                let t = e.body.retry_after * m.default.Millis.SECOND;
+                let t = e.body.retry_after * p.default.Millis.SECOND;
                 r.default.dispatch({
                     type: "VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP",
                     cooldownEndsAtMs: t
                 })
             }
         }
-    }, N = {
+    }, A = {
         [g.VoiceChannelEffectAnimationType.BASIC]: "Basic",
         [g.VoiceChannelEffectAnimationType.PREMIUM]: "Premium"
-    }, A = (e, t, n, i) => {
+    }, N = (e, t, n, i) => {
         let {
             unicode: l,
             custom: a,
@@ -132,7 +132,7 @@ function(e, t, n) {
             managed: r,
             managedExternal: o,
             animated: d
-        } = (0, h.countEmoji)([t], e.getGuildId()), c = N[i];
+        } = (0, h.countEmoji)([t], e.getGuildId()), c = A[i];
         u.default.trackWithMetadata(S.AnalyticEvents.VOICE_CHANNEL_EFFECT_SENT, {
             channel_id: e.id,
             guild_id: e.getGuildId(),

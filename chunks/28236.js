@@ -15,8 +15,8 @@ function(e, t, n) {
         d = n("277855"),
         c = n("305122"),
         f = n("462550"),
-        p = n("235004"),
-        m = n("520497"),
+        m = n("235004"),
+        p = n("520497"),
         h = n("812809"),
         x = n("948613"),
         E = n("368121"),
@@ -27,17 +27,17 @@ function(e, t, n) {
                 jumbo: n = !1
             } = e, {
                 currentPreviewRef: a
-            } = l.useContext(f.default), g = (0, r.useStateFromStores)([p.default], () => p.default.getSoundById(t)), S = (null == g ? void 0 : g.emojiId) != null || (null == g ? void 0 : g.emojiName) != null, [C, _] = l.useState(!1), T = (0, d.useSoundmojiExperiment)("soundmoji_chat_mention"), I = l.useCallback(() => {
+            } = l.useContext(f.default), g = (0, r.useStateFromStores)([m.default], () => m.default.getSoundById(t)), S = (null == g ? void 0 : g.emojiId) != null || (null == g ? void 0 : g.emojiName) != null, [C, T] = l.useState(!1), _ = (0, d.useSoundmojiExperiment)("soundmoji_chat_mention"), I = l.useCallback(() => {
                 var e;
                 null == g && (0, c.maybeFetchSoundboardSounds)();
-                let n = new Audio((0, m.default)(t));
-                null != a.current && a.current.pause(), a.current = n, n.currentTime = 0, n.volume = (0, h.default)(null !== (e = null == g ? void 0 : g.volume) && void 0 !== e ? e : .5), _(!0), n.play(), n.addEventListener("ended", () => {
-                    _(!1)
+                let n = new Audio((0, p.default)(t));
+                null != a.current && a.current.pause(), a.current = n, n.currentTime = 0, n.volume = (0, h.default)(null !== (e = null == g ? void 0 : g.volume) && void 0 !== e ? e : .5), T(!0), n.play(), n.addEventListener("ended", () => {
+                    T(!1)
                 }, {
                     once: !0
                 })
-            }, [t, g, a, _]);
-            return T ? null == g ? (0, i.jsxs)(o.Clickable, {
+            }, [t, g, a, T]);
+            return _ ? null == g ? (0, i.jsxs)(o.Clickable, {
                 title: "Risky Click",
                 tag: "span",
                 onClick: I,

@@ -17,8 +17,8 @@ function(e, t, n) {
         d = n("244201"),
         c = n("298878"),
         f = n("756507"),
-        p = n("4462"),
-        m = n("643121"),
+        m = n("4462"),
+        p = n("643121"),
         h = n("217513"),
         x = n("590456"),
         E = n("49111"),
@@ -34,14 +34,14 @@ function(e, t, n) {
             shrinkAtCount: l,
             shrinkToSize: s,
             isTryItOutFlow: C,
-            size: _ = 0
-        } = e, T = (0, h.default)(t.id, n), I = (0, m.default)(T).map(e => ({
+            size: T = 0
+        } = e, _ = (0, h.default)(t.id, n), I = (0, p.default)(_).map(e => ({
             ...e,
             src: (0, x.getBadgeAsset)(e.icon)
         })), {
             trackUserProfileAction: v,
-            ...N
-        } = (0, f.useUserProfileAnalyticsContext)(), A = (0, d.useWindowDispatch)();
+            ...A
+        } = (0, f.useUserProfileAnalyticsContext)(), N = (0, d.useWindowDispatch)();
         if (t.isClyde()) return (0, a.jsx)("div", {
             className: r(i, g.container, g.clydeBadgeList),
             "aria-label": y.default.Messages.PROFILE_USER_BADGES,
@@ -56,7 +56,7 @@ function(e, t, n) {
                 date: new Date
             })
         });
-        let R = null != l && null != s && I.length > l ? s : _;
+        let R = null != l && null != s && I.length > l ? s : T;
         return (0, a.jsx)("div", {
             className: r(i, I.length > 0 ? g.containerWithContent : g.container),
             "aria-label": y.default.Messages.PROFILE_USER_BADGES,
@@ -71,12 +71,12 @@ function(e, t, n) {
                         var i;
                         v({
                             action: "PRESS_BADGE"
-                        }), (0, p.trackUserProfileBadgePressed)({
+                        }), (0, m.trackUserProfileBadgePressed)({
                             badge: e.id,
-                            ...N
+                            ...A
                         }), null === (i = t.onClick) || void 0 === i || i.call(t);
                         let l = null != e.link ? (0, u.default)(e.link) : null;
-                        if (null != l) return A.dispatch(E.ComponentActions.POPOUT_CLOSE), l(n)
+                        if (null != l) return N.dispatch(E.ComponentActions.POPOUT_CLOSE), l(n)
                     },
                     href: e.link,
                     children: (0, a.jsx)("img", {

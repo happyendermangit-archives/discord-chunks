@@ -18,13 +18,13 @@ function(e, t, n) {
         d = n("254490"),
         c = n("945330"),
         f = n("782340"),
-        p = n("978337");
-    let m = e => {
+        m = n("978337");
+    let p = e => {
             let {
                 filename: t
             } = e, l = (0, d.classifyFileName)(t), a = n("777483")("../images/file_icons/icon-file-".concat(l, ".svg").replace("../images/file_icons/", "./"));
             return (0, i.jsx)("img", {
-                className: p.icon,
+                className: m.icon,
                 src: a,
                 alt: f.default.Messages.IMG_ALT_ATTACHMENT_FILE_TYPE.format({
                     fileType: l
@@ -43,33 +43,33 @@ function(e, t, n) {
                 onContextMenu: h
             } = e, x = 100 === a, E = !x && l > 0;
             return (0, i.jsxs)("div", {
-                className: s(p.attachment, t),
-                children: [(0, i.jsx)(m, {
+                className: s(m.attachment, t),
+                children: [(0, i.jsx)(p, {
                     filename: n
                 }), (0, i.jsxs)("div", {
-                    className: p.attachmentInner,
+                    className: m.attachmentInner,
                     children: [(0, i.jsxs)("div", {
-                        className: p.filenameWrapper,
+                        className: m.filenameWrapper,
                         children: [(0, i.jsx)(u.Clickable, {
-                            className: p.filename,
+                            className: m.filename,
                             onClick: d,
                             onContextMenu: h,
                             children: n
                         }), E ? (0, i.jsx)("div", {
-                            className: p.size,
+                            className: m.size,
                             children: "— ".concat(o.filesize(l))
                         }) : null]
                     }), (0, i.jsx)("div", {
-                        className: p.progressContainer,
+                        className: m.progressContainer,
                         children: x ? f.default.Messages.ATTACHMENT_PROCESSING : (0, i.jsx)(u.Progress, {
-                            className: p.progress,
+                            className: m.progress,
                             percent: a
                         })
                     })]
                 }), x ? null : (0, i.jsx)(u.Clickable, {
                     onClick: r,
                     children: (0, i.jsx)(c.default, {
-                        className: p.cancelButton,
+                        className: m.cancelButton,
                         width: 24,
                         height: 24
                     })
@@ -88,22 +88,22 @@ function(e, t, n) {
         } = e;
         return (0, i.jsxs)(l.Fragment, {
             children: [(0, i.jsxs)("div", {
-                className: s(p.attachment, p.newMosaicStyle, t),
-                children: [(0, i.jsx)(m, {
+                className: s(m.attachment, m.newMosaicStyle, t),
+                children: [(0, i.jsx)(p, {
                     filename: a
                 }), (0, i.jsxs)("div", {
-                    className: p.attachmentInner,
+                    className: m.attachmentInner,
                     children: [(0, i.jsx)("div", {
-                        className: p.filenameLinkWrapper,
+                        className: m.filenameLinkWrapper,
                         children: (0, i.jsx)(u.Anchor, {
-                            className: p.fileNameLink,
+                            className: m.fileNameLink,
                             href: n,
                             onClick: d,
                             onContextMenu: c,
                             children: a
                         })
                     }), (0, i.jsx)("div", {
-                        className: p.metadata,
+                        className: m.metadata,
                         children: o.filesize(r)
                     })]
                 })]

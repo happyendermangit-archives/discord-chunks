@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         GuildTooltipText: function() {
-            return q
+            return J
         },
         default: function() {
             return X
@@ -18,8 +18,8 @@ function(e, t, n) {
         d = n("769846"),
         c = n("77078"),
         f = n("191225"),
-        p = n("51565"),
-        m = n("567054"),
+        m = n("51565"),
+        p = n("567054"),
         h = n("5367"),
         x = n("100835"),
         E = n("38654"),
@@ -27,12 +27,12 @@ function(e, t, n) {
         g = n("488464"),
         S = n("998716"),
         C = n("170183"),
-        _ = n("689275"),
-        T = n("373469"),
+        T = n("689275"),
+        _ = n("373469"),
         I = n("546463"),
         v = n("923959"),
-        N = n("824563"),
-        A = n("282109"),
+        A = n("824563"),
+        N = n("282109"),
         R = n("697218"),
         O = n("316133"),
         M = n("580357"),
@@ -66,7 +66,7 @@ function(e, t, n) {
         })
     }
 
-    function Z(e) {
+    function Q(e) {
         let {
             muteConfig: t,
             className: n
@@ -82,11 +82,11 @@ function(e, t, n) {
         })
     }
 
-    function J(e) {
+    function Z(e) {
         var t, n, a;
         let {
             guild: r
-        } = e, d = r.id, p = (0, u.useStateFromStoresArray)([v.default, _.default], () => {
+        } = e, d = r.id, m = (0, u.useStateFromStoresArray)([v.default, T.default], () => {
             let e = v.default.getChannels(d)[v.GUILD_VOCAL_CHANNELS_KEY].filter(e => {
                     let {
                         channel: t
@@ -98,9 +98,9 @@ function(e, t, n) {
                     } = e;
                     return t.id
                 }),
-                t = Object.values(_.default.getThreadsForGuild(d)).flatMap(e => Object.keys(e));
+                t = Object.values(T.default.getThreadsForGuild(d)).flatMap(e => Object.keys(e));
             return [...e, ...t]
-        }, [d]), m = (0, C.default)(d), h = l.useMemo(() => m.map(e => e.id), [m]), x = (0, u.useStateFromStores)([O.default], () => O.default.getVoiceStates(d), [d]), E = o.flatMap(p, e => {
+        }, [d]), p = (0, C.default)(d), h = l.useMemo(() => p.map(e => e.id), [p]), x = (0, u.useStateFromStores)([O.default], () => O.default.getVoiceStates(d), [d]), E = o.flatMap(m, e => {
             var t;
             if (e === r.afkChannelId) return [];
             let n = null !== (t = x[e]) && void 0 !== t ? t : [];
@@ -123,7 +123,7 @@ function(e, t, n) {
             let e = 0;
             for (let t of h) e += g.default.getParticipantCount(t, S.StageChannelParticipantNamedIndex.AUDIENCE);
             return e
-        }), k = (0, u.useStateFromStoresArray)([T.default], () => T.default.getAllApplicationStreams().filter(e => e.guildId === d).map(e => e.ownerId), [d]), F = (0, G.useIsGamingVoiceActivityEnabled)("Guild Tooltip", !1), B = (0, u.useStateFromStoresArray)([N.default, I.default], () => E.filter(e => N.default.getActivities(e.id, d).some(e => (null == e ? void 0 : e.application_id) != null && null != I.default.getDetectableGame(null == e ? void 0 : e.application_id)))), K = z(L.default, B, d), W = F ? B.map(e => e.id) : [], Y = (0, u.useStateFromStoresArray)([f.default], () => f.default.getEmbeddedActivitiesForGuild(d).flatMap(e => Array.from(e.userIds)), [d]), J = (0, u.useStateFromStoresArray)([R.default], () => Y.map(e => R.default.getUser(e)), [Y]), Q = (0, u.useStateFromStoresArray)([R.default], () => k.map(e => R.default.getUser(e)), [k]), q = z(j.default, E.filter(e => !k.includes(e.id) && !Y.includes(e.id) && !W.includes(e.id)), d);
+        }), k = (0, u.useStateFromStoresArray)([_.default], () => _.default.getAllApplicationStreams().filter(e => e.guildId === d).map(e => e.ownerId), [d]), F = (0, G.useIsGamingVoiceActivityEnabled)("Guild Tooltip", !1), B = (0, u.useStateFromStoresArray)([A.default, I.default], () => E.filter(e => A.default.getActivities(e.id, d).some(e => (null == e ? void 0 : e.application_id) != null && null != I.default.getDetectableGame(null == e ? void 0 : e.application_id)))), K = z(L.default, B, d), W = F ? B.map(e => e.id) : [], Y = (0, u.useStateFromStoresArray)([f.default], () => f.default.getEmbeddedActivitiesForGuild(d).flatMap(e => Array.from(e.userIds)), [d]), Z = (0, u.useStateFromStoresArray)([R.default], () => Y.map(e => R.default.getUser(e)), [Y]), q = (0, u.useStateFromStoresArray)([R.default], () => k.map(e => R.default.getUser(e)), [k]), J = z(j.default, E.filter(e => !k.includes(e.id) && !Y.includes(e.id) && !W.includes(e.id)), d);
         let X = (t = d, n = y, a = M, 0 === n.length ? null : (0, i.jsxs)("div", {
                 className: V.row,
                 children: [(0, i.jsx)(U.default, {
@@ -145,28 +145,28 @@ function(e, t, n) {
                     })]
                 })]
             })),
-            $ = z(D.default, Q.filter(e => null != e && !Y.includes(e.id)), d),
-            ee = z(b.default, J, d),
+            $ = z(D.default, q.filter(e => null != e && !Y.includes(e.id)), d),
+            ee = z(b.default, Z, d),
             {
                 isMuted: et,
                 muteConfig: en
-            } = (0, u.useStateFromStoresObject)([A.default], () => ({
-                isMuted: A.default.isMuted(d),
-                muteConfig: A.default.getMuteConfig(d)
+            } = (0, u.useStateFromStoresObject)([N.default], () => ({
+                isMuted: N.default.isMuted(d),
+                muteConfig: N.default.getMuteConfig(d)
             }), [d]);
         return null != K && G.default.trackExposure({
             location: "Guild Tooltip"
         }), (0, i.jsxs)(i.Fragment, {
-            children: [X, q, $, F && K, ee, et ? (0, i.jsx)(Z, {
+            children: [X, J, $, F && K, ee, et ? (0, i.jsx)(Q, {
                 muteConfig: en,
                 className: s(V.muteText, {
-                    [V.muteTextWithActivity]: null != q || null != $
+                    [V.muteTextWithActivity]: null != J || null != $
                 })
             }) : null]
         })
     }
 
-    function Q(e) {
+    function q(e) {
         let {
             guildJoinRequestStatus: t
         } = e;
@@ -176,11 +176,11 @@ function(e, t, n) {
             variant: "text-xs/normal",
             children: function(e) {
                 switch (e) {
-                    case m.GuildJoinRequestApplicationStatuses.SUBMITTED:
+                    case p.GuildJoinRequestApplicationStatuses.SUBMITTED:
                         return B.default.Messages.GUILD_JOIN_REQUEST_STATUS_TOOLTIP_PENDING;
-                    case m.GuildJoinRequestApplicationStatuses.REJECTED:
+                    case p.GuildJoinRequestApplicationStatuses.REJECTED:
                         return B.default.Messages.GUILD_JOIN_REQUEST_STATUS_TOOLTIP_REJECTED;
-                    case m.GuildJoinRequestApplicationStatuses.APPROVED:
+                    case p.GuildJoinRequestApplicationStatuses.APPROVED:
                         return B.default.Messages.GUILD_JOIN_REQUEST_STATUS_TOOLTIP_APPROVED;
                     default:
                         return B.default.Messages.GUILD_JOIN_REQUEST_STATUS_TOOLTIP_STARTED
@@ -189,13 +189,13 @@ function(e, t, n) {
         })
     }
 
-    function q(e) {
+    function J(e) {
         let {
             guild: t,
             includeActivity: n = !0
-        } = e, l = (0, p.default)(t), a = (0, h.useCurrentUserGuildBadgeStatus)(t.id), r = null != a ? (0, i.jsx)(Q, {
+        } = e, l = (0, m.default)(t), a = (0, h.useCurrentUserGuildBadgeStatus)(t.id), r = null != a ? (0, i.jsx)(q, {
             guildJoinRequestStatus: a
-        }) : null, o = n ? (0, i.jsx)(J, {
+        }) : null, o = n ? (0, i.jsx)(Z, {
             guild: t
         }) : null, d = (0, u.useStateFromStores)([E.default], () => E.default.isViewingRoles(t.id)), f = (0, x.useShouldShowInvitesDisabledNotif)(t);
         return (0, i.jsxs)(i.Fragment, {
@@ -241,7 +241,7 @@ function(e, t, n) {
             hideOnClick: !0,
             spacing: 20,
             position: "right",
-            text: n ? null : (0, i.jsx)(q, {
+            text: n ? null : (0, i.jsx)(J, {
                 guild: t,
                 includeActivity: r
             }),

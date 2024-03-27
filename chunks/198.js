@@ -15,8 +15,8 @@ function(e, t, n) {
         d = n("551305"),
         c = n("158998"),
         f = n("49111"),
-        p = n("646718"),
-        m = n("782340"),
+        m = n("646718"),
+        p = n("782340"),
         h = n("350583"),
         x = l.memo(function(e) {
             let {
@@ -34,7 +34,7 @@ function(e, t, n) {
                 isGift: !0,
                 giftRecipient: null === x ? void 0 : x,
                 initialPlanId: null,
-                subscriptionTier: p.PremiumSubscriptionSKUs.TIER_2,
+                subscriptionTier: m.PremiumSubscriptionSKUs.TIER_2,
                 analyticsLocations: l,
                 analyticsObject: {
                     page: n.isPrivate() ? f.AnalyticsPages.DM_CHANNEL : f.AnalyticsPages.GUILD_CHANNEL,
@@ -44,12 +44,12 @@ function(e, t, n) {
                 }
             });
             return (0, i.jsx)(s.Tooltip, {
-                text: m.default.Messages.PREMIUM_GIFT_BUTTON_TOOLTIP,
+                text: p.default.Messages.PREMIUM_GIFT_BUTTON_TOOLTIP,
                 children: e => (0, i.jsx)(d.default, {
                     ...e,
                     innerClassName: h.button,
                     isActive: !1,
-                    "aria-label": m.default.Messages.PREMIUM_GIFT_BUTTON_LABEL,
+                    "aria-label": p.default.Messages.PREMIUM_GIFT_BUTTON_LABEL,
                     "aria-haspopup": "dialog",
                     onClick: () => {
                         S(), g()

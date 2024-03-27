@@ -15,11 +15,11 @@ function(e, t, n) {
         d = n("42203"),
         c = n("18494"),
         f = n("162771"),
-        p = n("599110"),
-        m = n("716241"),
+        m = n("599110"),
+        p = n("716241"),
         h = n("939011");
     let x = (0, o.trackMaker)({
-        analyticEventConfigs: p.AnalyticEventConfigs,
+        analyticEventConfigs: m.AnalyticEventConfigs,
         dispatcher: u.default,
         TRACK_ACTION_NAME: "TRACK"
     });
@@ -56,18 +56,18 @@ function(e, t, n) {
                 (0, h.setCurrentImpression)(e);
                 let r = null !== (t = null == s ? void 0 : s.guild_id) && void 0 !== t ? t : f.default.getGuildId(),
                     u = null !== (n = null == s ? void 0 : s.channel_id) && void 0 !== n ? n : c.default.getChannelId(r),
-                    E = (0, p.expandEventProperties)({
+                    E = (0, m.expandEventProperties)({
                         impression_type: a,
                         location: (0, h.getLocation)(),
-                        ...(0, m.collectGuildAnalyticsMetadata)(r),
-                        ...(0, m.collectChannelAnalyticsMetadata)(d.default.getChannel(u)),
+                        ...(0, p.collectGuildAnalyticsMetadata)(r),
+                        ...(0, p.collectChannelAnalyticsMetadata)(d.default.getChannel(u)),
                         ...s
                     });
                 if (i) {
                     (0, h.setDebugTrackedData)(null, null);
                     return
                 }
-                null != l && null != a && ((0, p.debugLogEvent)(l, E), x(l, E)), (0, h.setDebugTrackedData)(l, E)
+                null != l && null != a && ((0, m.debugLogEvent)(l, E), x(l, E)), (0, h.setDebugTrackedData)(l, E)
             }(E, t.disableTrack), () => {
                 null != E && (0, h.cleanupImpression)(E)
             }

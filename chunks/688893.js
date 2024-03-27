@@ -15,8 +15,8 @@ function(e, t, n) {
         d = n("385887"),
         c = n("467123"),
         f = n("100576"),
-        p = n("566819");
-    let m = (e, t, n) => ({
+        m = n("566819");
+    let p = (e, t, n) => ({
         getSlateEditor: () => e,
         submit(e) {
             e.preventDefault(), n()
@@ -52,7 +52,7 @@ function(e, t, n) {
                 }
                 if (!d.TextUtils.isText(l)) break;
                 let t = l.text[s];
-                if (p.WHITESPACE_RE.test(t)) break;
+                if (m.WHITESPACE_RE.test(t)) break;
                 r = t + r
             }
             return {
@@ -144,6 +144,6 @@ function(e, t, n) {
     }
 
     function E(e, t, n, l) {
-        i.useImperativeHandle(e, () => m(t, n, l), [t, n, l])
+        i.useImperativeHandle(e, () => p(t, n, l), [t, n, l])
     }
 }

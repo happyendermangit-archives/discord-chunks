@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return T
+            return _
         }
     }), n("222007");
     var i = n("37983"),
@@ -15,8 +15,8 @@ function(e, t, n) {
         d = n("856567"),
         c = n("77078"),
         f = n("206230"),
-        p = n("384997"),
-        m = n("697218"),
+        m = n("384997"),
+        p = n("697218"),
         h = n("181114"),
         x = n("216422"),
         E = n("719923"),
@@ -29,7 +29,7 @@ function(e, t, n) {
         friction: 70
     };
 
-    function _(e) {
+    function T(e) {
         let {
             tooltipText: t,
             headingText: n,
@@ -54,21 +54,21 @@ function(e, t, n) {
         })
     }
 
-    function T(e) {
+    function _(e) {
         let {
             checked: t,
             onClick: n,
             id: a = "burst-reaction-toggle-button"
-        } = e, x = (0, o.useStateFromStores)([f.default], () => f.default.useReducedMotion), T = m.default.getCurrentUser(), I = null != T && !(0, E.isPremium)(T), v = I ? [] : [u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP], [N, A] = (0, p.useSelectedDismissibleContent)(v), [R, O] = l.useState(!1), [M, k] = (0, r.useSpring)(() => ({})), L = (0, r.animated)(d.SuperReactionIcon);
+        } = e, x = (0, o.useStateFromStores)([f.default], () => f.default.useReducedMotion), _ = p.default.getCurrentUser(), I = null != _ && !(0, E.isPremium)(_), v = I ? [] : [u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP], [A, N] = (0, m.useSelectedDismissibleContent)(v), [R, O] = l.useState(!1), [M, k] = (0, r.useSpring)(() => ({})), L = (0, r.animated)(d.SuperReactionIcon);
         l.useEffect(() => {
-            let e = N === u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
-            e && (A(y.ContentDismissActionType.DISMISS), setTimeout(() => O(e), 200))
-        }, [N, A]);
+            let e = A === u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
+            e && (N(y.ContentDismissActionType.DISMISS), setTimeout(() => O(e), 200))
+        }, [A, N]);
         let P = R ? g.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2 : t ? g.default.Messages.SUPER_REACTION_TOGGLE_ENABLED : g.default.Messages.SUPER_REACTION_TOGGLE_DISABLED,
             b = R ? g.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE : void 0;
         return (0, i.jsxs)(c.TooltipContainer, {
             position: "top",
-            text: (0, i.jsx)(_, {
+            text: (0, i.jsx)(T, {
                 textColor: "always-white",
                 tooltipText: P,
                 headingText: b

@@ -15,8 +15,8 @@ function(e, t, n) {
         d = n("383018"),
         c = n("474643"),
         f = n("585722"),
-        p = n("640830"),
-        m = n("939563"),
+        m = n("640830"),
+        p = n("939563"),
         h = n("385887"),
         x = n("782340"),
         E = n("165555");
@@ -34,7 +34,7 @@ function(e, t, n) {
                     u = 0;
                 if (null != r && r.id === s.command.id) {
                     var c;
-                    let t = p.getOptionNames(e);
+                    let t = m.getOptionNames(e);
                     for (let e of null !== (c = r.options) && void 0 !== c ? c : []) t.includes(e.name) ? u++ : o++
                 }
                 let f = {};
@@ -67,15 +67,15 @@ function(e, t, n) {
         let t, {
                 channelId: n,
                 element: a,
-                attributes: p,
+                attributes: m,
                 children: y
             } = e,
             g = (0, r.useSelected)(),
             S = (0, r.useFocused)(),
             C = (0, r.useSlateStatic)(),
             {
-                optionType: _,
-                errored: T
+                optionType: T,
+                errored: _
             } = (0, o.useStateFromStoresObject)([d.default], () => {
                 var e, t, i;
                 return {
@@ -85,15 +85,15 @@ function(e, t, n) {
             }, [n, a.optionName]),
             I = (0, o.useStateFromStores)([f.default], () => f.default.getUpload(n, a.optionName, c.DraftType.SlashCommand), [n, a.optionName]),
             v = a.children[a.children.length - 1],
-            N = null != v && h.TextUtils.isText(v) && v.text.endsWith("\n"),
-            A = s(E.inlineElement, E.optionPill, {
+            A = null != v && h.TextUtils.isText(v) && v.text.endsWith("\n"),
+            N = s(E.inlineElement, E.optionPill, {
                 [E.selectedPill]: S && g,
-                [E.erroredPill]: (!S || !g) && T
+                [E.erroredPill]: (!S || !g) && _
             }),
             R = l.useCallback(() => {
-                !h.EditorUtils.isVoid(C, a) && m.SlateTransforms.selectCommandOption(C, a.optionName, !0)
+                !h.EditorUtils.isVoid(C, a) && p.SlateTransforms.selectCommandOption(C, a.optionName, !0)
             }, [C, a]);
-        return t = _ === u.ApplicationCommandOptionType.ATTACHMENT ? (null == I ? void 0 : I.filename) != null ? (0, i.jsxs)("span", {
+        return t = T === u.ApplicationCommandOptionType.ATTACHMENT ? (null == I ? void 0 : I.filename) != null ? (0, i.jsxs)("span", {
             className: s(E.optionPillValue, E.attachmentFilename),
             contentEditable: !1,
             children: [I.filename, y]
@@ -103,13 +103,13 @@ function(e, t, n) {
             children: [x.default.Messages.APPLICATION_COMMAND_FILE_ATTACHMENT, y]
         }) : (0, i.jsxs)("span", {
             className: E.optionPillValue,
-            children: [y, N ? (0, i.jsx)("span", {
+            children: [y, A ? (0, i.jsx)("span", {
                 className: E.newLine,
                 contentEditable: !1
             }) : null]
         }), (0, i.jsxs)("span", {
-            ...p,
-            className: A,
+            ...m,
+            className: N,
             children: [(0, i.jsxs)("span", {
                 className: E.optionPillKey,
                 contentEditable: !1,

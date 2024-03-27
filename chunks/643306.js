@@ -16,8 +16,8 @@ function(e, t, n) {
         d = n("77078"),
         c = n("272030"),
         f = n("888503"),
-        p = n("206230"),
-        m = n("812204"),
+        m = n("206230"),
+        p = n("812204"),
         h = n("685665"),
         x = n("862205"),
         E = n("895026"),
@@ -25,12 +25,12 @@ function(e, t, n) {
         g = n("340906"),
         S = n("42203"),
         C = n("26989"),
-        _ = n("305961"),
-        T = n("697218"),
+        T = n("305961"),
+        _ = n("697218"),
         I = n("145131"),
         v = n("666897"),
-        N = n("826684"),
-        A = n("782340"),
+        A = n("826684"),
+        N = n("782340"),
         R = n("665958"),
         O = n("919163");
     let M = (0, x.createExperiment)({
@@ -60,7 +60,7 @@ function(e, t, n) {
             inlinePreview: P = !1
         } = e, {
             analyticsLocations: b
-        } = (0, h.default)(m.default.ROLE_MENTION), j = (0, u.useStateFromStores)([p.default], () => p.default.roleStyle), U = null != t && 0 !== t && !P, D = U && "dot" === j, w = e => (0, i.jsxs)(v.default, {
+        } = (0, h.default)(p.default.ROLE_MENTION), j = (0, u.useStateFromStores)([m.default], () => m.default.roleStyle), U = null != t && 0 !== t && !P, D = U && "dot" === j, w = e => (0, i.jsxs)(v.default, {
             className: a(O.roleMention),
             color: "username" === j && U ? t : null,
             ...e,
@@ -88,21 +88,21 @@ function(e, t, n) {
                 },
                 renderPopout: e => {
                     let t = S.default.getChannel(s),
-                        a = _.default.getGuild(k),
+                        a = T.default.getGuild(k),
                         o = C.default.getMembers(a.id),
-                        u = _.default.getRole(k, null != l ? l : a.getEveryoneRoleId()),
-                        p = r(o).filter(e => {
+                        u = T.default.getRole(k, null != l ? l : a.getEveryoneRoleId()),
+                        m = r(o).filter(e => {
                             if ("@everyone" === x || e.roles.includes(l)) {
-                                let t = T.default.getUser(e.userId);
+                                let t = _.default.getUser(e.userId);
                                 return null != t
                             }
                             return !1
                         }).sortBy(e => {
                             var t;
-                            let n = T.default.getUser(e.userId);
+                            let n = _.default.getUser(e.userId);
                             return (null != n ? null !== (t = e.nick) && void 0 !== t ? t : n.username : "").toLocaleLowerCase()
                         }).map(e => {
-                            let l = T.default.getUser(e.userId);
+                            let l = _.default.getUser(e.userId);
                             return (0, i.jsx)(d.Popout, {
                                 preload: () => (0, y.default)(l.id, l.getAvatarURL(t.guild_id, 80), {
                                     guildId: t.guild_id,
@@ -155,17 +155,17 @@ function(e, t, n) {
                         ...e,
                         children: (0, i.jsxs)(d.Scroller, {
                             className: O.roleScroller,
-                            children: [(0, i.jsx)(N.default, {
+                            children: [(0, i.jsx)(A.default, {
                                 className: O.roleHeader,
-                                "aria-label": A.default.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
+                                "aria-label": N.default.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
                                     title: u.name,
-                                    count: p.length
+                                    count: m.length
                                 }),
                                 children: (0, i.jsxs)("span", {
                                     "aria-hidden": !0,
-                                    children: [u.name, " — ", p.length]
+                                    children: [u.name, " — ", m.length]
                                 })
-                            }), p]
+                            }), m]
                         })
                     })
                 },

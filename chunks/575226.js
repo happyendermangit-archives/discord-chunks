@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return p
+            return m
         }
     });
     var i = n("866227"),
@@ -56,7 +56,7 @@ function(e, t, n) {
             lastSeenNewlyAddedEmojiIds: n
         }
     }];
-    var p = new f(s.default, {
+    var m = new f(s.default, {
         LOGOUT: function() {
             u = o, d = {}
         },

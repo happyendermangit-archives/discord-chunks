@@ -18,15 +18,15 @@ function(e, t, n) {
         d = n("27618"),
         c = n("162771"),
         f = n("697218"),
-        p = n("158998"),
-        m = n("385887");
+        m = n("158998"),
+        p = n("385887");
 
     function h(e, t) {
         let {
             mode: n,
             ignoreTrailingEmptyNodes: i,
             preventEmojiSurrogates: l
-        } = null != t ? t : {}, [a, s] = (null == t ? void 0 : t.range) != null ? m.RangeUtils.edges(t.range) : [void 0, void 0];
+        } = null != t ? t : {}, [a, s] = (null == t ? void 0 : t.range) != null ? p.RangeUtils.edges(t.range) : [void 0, void 0];
         return x(e, {
             mode: n,
             start: a,
@@ -46,36 +46,36 @@ function(e, t, n) {
             ignoreEmptyNodes: o,
             ignoreTrailingEmptyNodes: u,
             preventEmojiSurrogates: d
-        } = null != t ? t : {}, c = e.length > 0 && !m.TextUtils.isText(e[0]);
+        } = null != t ? t : {}, c = e.length > 0 && !p.TextUtils.isText(e[0]);
         null == r && (r = c ? "\n" : "");
         let f = null !== (n = null == a ? void 0 : a.path[0]) && void 0 !== n ? n : 0,
-            p = null !== (i = null == s ? void 0 : s.path[0]) && void 0 !== i ? i : e.length - 1;
+            m = null !== (i = null == s ? void 0 : s.path[0]) && void 0 !== i ? i : e.length - 1;
         if (u)
-            for (let t = p; t >= f; t--) {
+            for (let t = m; t >= f; t--) {
                 let n = e[t];
-                if (m.TextUtils.isText(n)) {
+                if (p.TextUtils.isText(n)) {
                     if (n.text.length > 0) {
-                        p = t;
+                        m = t;
                         break
                     }
-                } else if (!m.ElementUtils.isEmpty(n)) {
-                    p = t;
+                } else if (!p.ElementUtils.isEmpty(n)) {
+                    m = t;
                     break
                 }
                 if (t === f) return ""
             }
-        let h = f > 0 && m.NodeUtils.isType(e[f - 1], "blockQuote"),
-            x = m.NodeUtils.isType(e[f], "blockQuote"),
-            y = m.NodeUtils.isType(e[p], "blockQuote"),
+        let h = f > 0 && p.NodeUtils.isType(e[f - 1], "blockQuote"),
+            x = p.NodeUtils.isType(e[f], "blockQuote"),
+            y = p.NodeUtils.isType(e[m], "blockQuote"),
             g = [];
-        for (let t = f; t <= p; t++) {
+        for (let t = f; t <= m; t++) {
             let n = e[t];
-            if (o && m.TextUtils.isText(n) && 0 === n.text.length) continue;
+            if (o && p.TextUtils.isText(n) && 0 === n.text.length) continue;
             let i = null != a && t === f ? {
                     path: a.path.slice(1),
                     offset: a.offset
                 } : void 0,
-                r = null != s && t === p ? {
+                r = null != s && t === m ? {
                     path: s.path.slice(1),
                     offset: s.offset
                 } : void 0,
@@ -99,7 +99,7 @@ function(e, t, n) {
             allowBlockQuotePrefix: h = !1,
             preventEmojiSurrogates: E = !1
         } = null != t ? t : {};
-        if (m.TextUtils.isText(e)) return function(e, t) {
+        if (p.TextUtils.isText(e)) return function(e, t) {
             var n, i;
             let {
                 start: a,
@@ -169,7 +169,7 @@ function(e, t, n) {
                 if ("raw" === n) return t;
                 let i = f.default.getUser(e.userId);
                 if (null == i) return t;
-                return "@".concat(p.default.getUserTag(i, {
+                return "@".concat(m.default.getUserTag(i, {
                     decoration: "never"
                 }))
             }

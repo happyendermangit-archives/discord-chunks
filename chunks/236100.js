@@ -31,10 +31,10 @@ function(e, t, n) {
         } = e, f = (0, a.default)({
             guild: r,
             analyticsLocation: d
-        }), p = (0, a.default)({
+        }), m = (0, a.default)({
             analyticsLocation: c
         }), {
-            trackUserProfileAction: m
+            trackUserProfileAction: p
         } = (0, s.useUserProfileAnalyticsContext)();
         return (0, i.jsxs)(l.Menu, {
             className: u.popoutMenu,
@@ -47,7 +47,7 @@ function(e, t, n) {
                 label: o.default.Messages.CHANGE_IDENTITY,
                 subtext: o.default.Messages.CHANGE_IDENTITY_SERVER_PROFILE_MENU_HELP,
                 action: () => {
-                    m({
+                    p({
                         action: "EDIT_GUILD_PROFILE"
                     }), f()
                 }
@@ -56,9 +56,9 @@ function(e, t, n) {
                 label: o.default.Messages.USER_SETTINGS_EDIT_USER_PROFILE,
                 subtext: o.default.Messages.USER_PROFILE_MENU_HELP,
                 action: () => {
-                    m({
+                    p({
                         action: "EDIT_PROFILE"
-                    }), p()
+                    }), m()
                 }
             })]
         })

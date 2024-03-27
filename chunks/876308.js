@@ -15,8 +15,8 @@ function(e, t, n) {
         d = n("806135"),
         c = n("170113"),
         f = n("316680"),
-        p = n("830837"),
-        m = n("132755"),
+        m = n("830837"),
+        p = n("132755"),
         h = n("659500"),
         x = n("718517"),
         E = n("829536"),
@@ -24,9 +24,9 @@ function(e, t, n) {
         g = n("49111"),
         S = n("782340"),
         C = n("722552");
-    let _ = l.lazy(() => n.el("403130").then(n.bind(n, "403130")));
+    let T = l.lazy(() => n.el("403130").then(n.bind(n, "403130")));
 
-    function T(e) {
+    function _(e) {
         let {
             played: t,
             duration: n,
@@ -41,8 +41,8 @@ function(e, t, n) {
     }
     var I = l.memo(function(e) {
         var t, n, a, c, I, v;
-        let N, {
-                src: A,
+        let A, {
+                src: N,
                 volume: R = 1,
                 onVolumeChange: O,
                 onMute: M,
@@ -59,9 +59,9 @@ function(e, t, n) {
             [H, B] = l.useState(L),
             [V, K] = l.useState(!1),
             [W, Y] = l.useState(!1),
-            [z, Z] = l.useState(!1),
-            [J, Q] = l.useState(!1),
-            [q, X] = l.useState("none"),
+            [z, Q] = l.useState(!1),
+            [Z, q] = l.useState(!1),
+            [J, X] = l.useState("none"),
             [$, ee] = l.useState(() => "function" == typeof R ? R() : R),
             et = l.useRef(void 0),
             en = l.useCallback(() => {
@@ -76,7 +76,7 @@ function(e, t, n) {
             }, []),
             ea = l.useCallback(() => {
                 Y(!1), null == et.current && (et.current = setTimeout(() => {
-                    Q(!1), et.current = void 0
+                    q(!1), et.current = void 0
                 }, 500))
             }, []),
             es = l.useCallback(() => {
@@ -96,30 +96,30 @@ function(e, t, n) {
                 K(!V), null == M || M(!V)
             }, [V, M]),
             ed = l.useCallback(() => {
-                Z(!0)
+                Q(!0)
             }, []),
             ec = l.useCallback(() => {
-                Z(!1), F === H && ea()
+                Q(!1), F === H && ea()
             }, [F, H, ea]),
             ef = l.useCallback(e => {
                 let t = w.current;
                 if (null == H || null == t) return;
                 let n = e * H;
-                G(n), t.currentTime = n, Q(!0), clearTimeout(et.current), et.current = void 0
+                G(n), t.currentTime = n, q(!0), clearTimeout(et.current), et.current = void 0
             }, [H]);
         l.useEffect(() => {
-            !J && W && Q(!0)
-        }, [W, J]);
-        let ep = l.useRef(null);
+            !Z && W && q(!0)
+        }, [W, Z]);
+        let em = l.useRef(null);
         l.useEffect(() => {
-            if (J || W) {
+            if (Z || W) {
                 if (W) {
                     var e, t;
-                    ep.current = performance.now(), null == j || j(!1, F, (null !== (t = null === (e = w.current) || void 0 === e ? void 0 : e.duration) && void 0 !== t ? t : 0) * x.default.Millis.SECOND)
+                    em.current = performance.now(), null == j || j(!1, F, (null !== (t = null === (e = w.current) || void 0 === e ? void 0 : e.duration) && void 0 !== t ? t : 0) * x.default.Millis.SECOND)
                 } else {
                     let e = performance.now(),
-                        t = ep.current;
-                    null == U || U(F, null != t ? (e - t) / 1e3 : 0), ep.current = null
+                        t = em.current;
+                    null == U || U(F, null != t ? (e - t) / 1e3 : 0), em.current = null
                 }
             }
         }, [W]), t = w, n = W, a = G, l.useEffect(() => {
@@ -130,7 +130,7 @@ function(e, t, n) {
             }(), () => {
                 null != e && cancelAnimationFrame(e)
             }
-        }, [t, n, a]), c = A, I = W, v = Y, l.useEffect(() => {
+        }, [t, n, a]), c = N, I = W, v = Y, l.useEffect(() => {
             if (I) return h.ComponentDispatch.dispatch(g.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, {
                 src: c
             }), h.ComponentDispatch.subscribe(g.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e), () => {
@@ -144,14 +144,14 @@ function(e, t, n) {
                 c !== t && v(!1)
             }
         }, [c, I, v]);
-        let em = W ? p.default : m.default,
+        let ep = W ? m.default : p.default,
             eh = W ? S.default.Messages.PAUSE : S.default.Messages.PLAY;
-        N = "Safari" === platform.name ? (0, i.jsx)(l.Suspense, {
-            children: (0, i.jsx)(_, {
+        A = "Safari" === platform.name ? (0, i.jsx)(l.Suspense, {
+            children: (0, i.jsx)(T, {
                 ref: w,
                 className: C.audioElement,
-                src: A,
-                preload: q,
+                src: N,
+                preload: J,
                 playing: W && !z,
                 onEnded: es,
                 onLoadedMetadata: el,
@@ -163,7 +163,7 @@ function(e, t, n) {
             ref: w,
             className: C.audioElement,
             controls: !1,
-            preload: q,
+            preload: J,
             onEnded: es,
             onLoadedMetadata: el,
             onError: er,
@@ -171,7 +171,7 @@ function(e, t, n) {
             volume: $,
             playing: W && !z,
             children: (0, i.jsx)("source", {
-                src: A
+                src: N
             })
         });
         let ex = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion),
@@ -194,7 +194,7 @@ function(e, t, n) {
                 className: C.playButtonContainer,
                 onClick: en,
                 "aria-label": eh,
-                children: (0, i.jsx)(em, {
+                children: (0, i.jsx)(ep, {
                     className: s(C.playIcon, {
                         [C.oldPlayIconSpacing]: !eE && !W
                     }),
@@ -207,12 +207,12 @@ function(e, t, n) {
                 currentTime: F,
                 duration: null != H ? H : 1,
                 playing: W,
-                played: J,
+                played: Z,
                 onDrag: ef,
                 onDragStart: ed,
                 onDragEnd: ec
-            }), (0, i.jsx)(T, {
-                played: J,
+            }), (0, i.jsx)(_, {
+                played: Z,
                 currentTime: F,
                 duration: H
             }), (0, i.jsx)(f.default, {
@@ -228,7 +228,7 @@ function(e, t, n) {
                 onToggleMute: eu,
                 onVolumeShow: P,
                 onVolumeHide: b
-            }), N]
+            }), A]
         })
     })
 }

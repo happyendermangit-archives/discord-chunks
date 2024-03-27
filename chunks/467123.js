@@ -5,10 +5,10 @@ function(e, t, n) {
             return y
         },
         isPointInCodeBlock: function() {
-            return _
+            return T
         },
         hasOpenPlainTextCodeBlock: function() {
-            return T
+            return _
         }
     }), n("222007"), n("70102"), n("424973"), n("781738");
     var i = n("436443"),
@@ -21,10 +21,10 @@ function(e, t, n) {
         d = n("939563"),
         c = n("385887"),
         f = n("566819");
-    let p = new Set(["line"]),
-        m = i.default.listLanguages(),
+    let m = new Set(["line"]),
+        p = i.default.listLanguages(),
         h = {};
-    for (let e of m) {
+    for (let e of p) {
         e = e.toLowerCase();
         let t = i.default.getLanguage(e);
         if (null == t) continue;
@@ -56,7 +56,7 @@ function(e, t, n) {
                                 let s = function(e) {
                                         let t;
                                         let [n, i] = e;
-                                        if (!p.has(n.type)) return [];
+                                        if (!m.has(n.type)) return [];
                                         let l = [],
                                             a = /\\|```/g;
                                         for (let e = 0; e < n.children.length; e++) {
@@ -84,7 +84,7 @@ function(e, t, n) {
                                 }
                                 let d = n && null != r,
                                     f = n && 0 === s.length,
-                                    m = i && 0 === s.length,
+                                    p = i && 0 === s.length,
                                     x = d ? s.slice(1) : s,
                                     y = x.length % 2 == 1,
                                     g = y && (null == u || "" === u || null != u.match(E)),
@@ -93,7 +93,7 @@ function(e, t, n) {
                                     blockEntry: t,
                                     wasInCodeBlock: n,
                                     isInCodeBlock: f,
-                                    isStyledCodeBlockLine: m,
+                                    isStyledCodeBlockLine: p,
                                     lang: y || d ? S : l,
                                     hljsTypes: null,
                                     closesCodeBlock: d,
@@ -187,7 +187,7 @@ function(e, t, n) {
         },
         C = new a(S);
 
-    function _(e, t) {
+    function T(e, t) {
         let n = 0;
         for (let l of c.EditorUtils.nodes(e, {
                 at: {
@@ -209,9 +209,9 @@ function(e, t, n) {
         return n % 2 != 0
     }
 
-    function T(e) {
+    function _(e) {
         if (null == e.selection) return !1;
         let t = c.RangeUtils.start(e.selection);
-        return _(e, t)
+        return T(e, t)
     }
 }

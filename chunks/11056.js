@@ -20,8 +20,8 @@ function(e, t, n) {
             children: d,
             subText: c,
             decorators: f,
-            onClick: p,
-            selected: m,
+            onClick: m,
+            selected: p,
             muted: h,
             to: x,
             avatarClassName: E,
@@ -29,18 +29,18 @@ function(e, t, n) {
             innerClassName: g,
             wrapContent: S,
             highlighted: C,
-            focusProps: _,
-            ...T
+            focusProps: T,
+            ..._
         } = e;
-        T.className = s(T.className, u.container, {
-            [u.selected]: m,
+        _.className = s(_.className, u.container, {
+            [u.selected]: p,
             [u.highlighted]: C,
-            [null != y ? y : ""]: m,
-            [u.clickable]: !m && (null != x || null != p)
-        }), T["aria-selected"] = null !== (n = T["aria-selected"]) && void 0 !== n ? n : m;
+            [null != y ? y : ""]: p,
+            [u.clickable]: !p && (null != x || null != m)
+        }), _["aria-selected"] = null !== (n = _["aria-selected"]) && void 0 !== n ? n : p;
         let I = (0, i.jsxs)("div", {
             className: s(g, u.layout, {
-                [u.muted]: !m && h,
+                [u.muted]: !p && h,
                 [u.wrappedLayout]: S
             }),
             children: [(0, i.jsx)("div", {
@@ -66,26 +66,26 @@ function(e, t, n) {
             }) : null]
         });
         return null != x ? (0, i.jsx)(o.FocusRing, {
-            ..._,
+            ...T,
             children: (0, i.jsx)(r.Link, {
                 to: x,
-                onClick: p,
-                ...T,
+                onClick: m,
+                ..._,
                 role: "listitem",
                 ref: t,
                 children: I
             })
-        }) : null != p ? (0, i.jsx)(o.Clickable, {
-            onClick: p,
-            focusProps: _,
-            ...T,
+        }) : null != m ? (0, i.jsx)(o.Clickable, {
+            onClick: m,
+            focusProps: T,
+            ..._,
             role: "listitem",
             innerRef: t,
             children: I
         }) : (0, i.jsx)(o.FocusRing, {
-            ..._,
+            ...T,
             children: (0, i.jsx)("div", {
-                ...T,
+                ..._,
                 role: "listitem",
                 ref: t,
                 children: I

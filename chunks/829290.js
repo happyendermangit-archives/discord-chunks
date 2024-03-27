@@ -19,17 +19,17 @@ function(e, t, n) {
         d = n("697218"),
         c = n("381546"),
         f = n("782340"),
-        p = n("376202");
-    let m = new Set;
+        m = n("376202");
+    let p = new Set;
     class h extends l.default.PersistedStore {
         initialize(e) {
-            null != e && (m = new Set(e))
+            null != e && (p = new Set(e))
         }
         hasId(e) {
-            return m.has(e)
+            return p.has(e)
         }
         getState() {
-            return [...m]
+            return [...p]
         }
     }
     h.displayName = "PTOStore", h.persistKey = "PTOStore";
@@ -40,20 +40,20 @@ function(e, t, n) {
             let n = d.default.getUser(e.getRecipientId());
             if (!(null == n ? void 0 : n.isStaff())) return !1;
             let i = o.default.getNicknames(n.id).some(e => e.endsWith("[PTO]") || e.endsWith("[OOO]"));
-            return i ? !x.hasId(n.id) && i : (m.delete(n.id) && x.emitChange(), !1)
+            return i ? !x.hasId(n.id) && i : (p.delete(n.id) && x.emitChange(), !1)
         }),
         y = () => (0, i.jsxs)("div", {
-            className: p.bar,
+            className: m.bar,
             children: [f.default.Messages.STAFF_PTO_NOTICE, (0, i.jsx)(a.Clickable, {
-                className: p.closeButton,
+                className: m.closeButton,
                 onClick: () => {
                     let e = u.default.getChannelId();
                     if (null == e) return;
                     let t = r.default.getChannel(e);
-                    null != t && t.isPrivate() && !m.has(t.getRecipientId()) && (m.add(t.getRecipientId()), x.emitChange())
+                    null != t && t.isPrivate() && !p.has(t.getRecipientId()) && (p.add(t.getRecipientId()), x.emitChange())
                 },
                 children: (0, i.jsx)(c.default, {
-                    className: p.closeIcon
+                    className: m.closeIcon
                 })
             })]
         })

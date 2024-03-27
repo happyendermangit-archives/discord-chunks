@@ -23,13 +23,13 @@ function(e, t, n) {
             ...c
         } = e, {
             label: f,
-            tooltip: p,
-            loading: m,
+            tooltip: m,
+            loading: p,
             disabled: h,
             onClick: x
         } = (0, u.useSpotifyPlayAction)(t, n, l);
         return (0, i.jsx)(s.Tooltip, {
-            text: p,
+            text: m,
             children: e => {
                 let {
                     onMouseEnter: t,
@@ -41,7 +41,7 @@ function(e, t, n) {
                     onMouseEnter: t,
                     onMouseLeave: n,
                     disabled: h,
-                    submitting: m,
+                    submitting: p,
                     children: (0, i.jsxs)(r.default, {
                         align: r.default.Align.CENTER,
                         children: [(0, i.jsx)(o.default, {

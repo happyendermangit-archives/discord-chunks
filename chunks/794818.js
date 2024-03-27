@@ -26,10 +26,10 @@ function(e, t, n) {
             return C
         },
         trackSearchStarted: function() {
-            return _
+            return T
         },
         trackTagSearchStarted: function() {
-            return T
+            return _
         },
         trackSearchResultsViewed: function() {
             return I
@@ -38,7 +38,7 @@ function(e, t, n) {
             return v
         },
         getDiscoverableGuild: function() {
-            return N
+            return A
         }
     }), n("222007");
     var i, l, a = n("522632"),
@@ -49,8 +49,8 @@ function(e, t, n) {
         d = n("239380"),
         c = n("525065"),
         f = n("305961"),
-        p = n("599110"),
-        m = n("49111");
+        m = n("599110"),
+        p = n("49111");
     (l = i || (i = {})).SEARCH = "Search", l.RECOMMENDED = "Recommended", l.POPULAR = "Popular", l.RECOMMENDED_E3 = "Recommended - E3", l.HEADER = "Header";
     let h = ">200";
     async function x(e, t) {
@@ -62,17 +62,17 @@ function(e, t, n) {
                 loadId: s,
                 setsHistorySnapshot: c = !0
             } = n,
-            p = (0, u.getHistory)();
+            m = (0, u.getHistory)();
         c && o.default.setHistorySnapshot({
-            ...p
+            ...m
         });
-        let m = f.default.getGuild(e),
+        let p = f.default.getGuild(e),
             h = {
                 state: {
                     analyticsSource: t
                 }
             };
-        null != m && null != m.joinedAt ? (0, d.transitionToGuild)(e, h) : (await r.default.joinGuild(e, {
+        null != p && null != p.joinedAt ? (0, d.transitionToGuild)(e, h) : (await r.default.joinGuild(e, {
             lurker: !0,
             source: a,
             loadId: s,
@@ -80,7 +80,7 @@ function(e, t, n) {
         }), await r.default.transitionToGuildSync(e, {
             ...h,
             welcomeModalChannelId: i,
-            search: p.location.search
+            search: m.location.search
         }, i)), null == l || l()
     }
     async function E(e) {
@@ -93,8 +93,8 @@ function(e, t, n) {
         } = e;
         "string" == typeof s && s in i && (t = s);
         let o = {
-            page: m.AnalyticsPages.GUILD_DISCOVERY,
-            object: m.AnalyticsObjects.CARD,
+            page: p.AnalyticsPages.GUILD_DISCOVERY,
+            object: p.AnalyticsObjects.CARD,
             section: t
         };
         await x(l, o, {
@@ -108,15 +108,15 @@ function(e, t, n) {
                     analyticsContext: l,
                     categoryId: a
                 } = e, s = {
-                    page: m.AnalyticsPages.GUILD_DISCOVERY,
+                    page: p.AnalyticsPages.GUILD_DISCOVERY,
                     section: l
                 };
-                "string" != typeof l && null != l.location && (s = l.location), p.default.track(m.AnalyticEvents.GUILD_DISCOVERY_GUILD_SELECTED, {
+                "string" != typeof l && null != l.location && (s = l.location), m.default.track(p.AnalyticEvents.GUILD_DISCOVERY_GUILD_SELECTED, {
                     location: s,
                     guild_id: n,
                     load_id: t,
                     card_index: i,
-                    location_object: m.AnalyticsObjects.CARD,
+                    location_object: p.AnalyticsObjects.CARD,
                     category_id: a
                 })
             }({
@@ -158,7 +158,7 @@ function(e, t, n) {
             categoryId: l,
             recommendationsSource: a = null
         } = e, s = n.length, r = i.length;
-        p.default.track(m.AnalyticEvents.GUILD_DISCOVERY_VIEWED, {
+        m.default.track(p.AnalyticEvents.GUILD_DISCOVERY_VIEWED, {
             load_id: t,
             num_guilds: s + r,
             num_guilds_recommended: s,
@@ -171,7 +171,7 @@ function(e, t, n) {
 
     function S(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        p.default.track(m.AnalyticEvents.GUILD_DISCOVERY_EXITED, {
+        m.default.track(p.AnalyticEvents.GUILD_DISCOVERY_EXITED, {
             load_id: e,
             guild_ids_viewed: t,
             recommendations_source: n
@@ -179,27 +179,27 @@ function(e, t, n) {
     }
 
     function C(e) {
-        p.default.track(m.AnalyticEvents.SEARCH_CLOSED, {
+        m.default.track(p.AnalyticEvents.SEARCH_CLOSED, {
             load_id: e
         })
     }
 
-    function _(e, t) {
+    function T(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        p.default.track(m.AnalyticEvents.SEARCH_STARTED, {
-            search_type: m.SearchTypes.GUILD_DISCOVERY,
+        m.default.track(p.AnalyticEvents.SEARCH_STARTED, {
+            search_type: p.SearchTypes.GUILD_DISCOVERY,
             load_id: e,
             location: n.location,
             category_id: t
         })
     }
 
-    function T(e, t, n, i) {
-        p.default.track(m.AnalyticEvents.SEARCH_STARTED, {
-            search_type: m.SearchTypes.GUILD_DISCOVERY_TAG,
+    function _(e, t, n, i) {
+        m.default.track(p.AnalyticEvents.SEARCH_STARTED, {
+            search_type: p.SearchTypes.GUILD_DISCOVERY_TAG,
             load_id: e,
             location: {
-                page: m.AnalyticsPages.GUILD_DISCOVERY,
+                page: p.AnalyticsPages.GUILD_DISCOVERY,
                 section: n
             },
             category_id: t,
@@ -217,8 +217,8 @@ function(e, t, n) {
             categoryId: s,
             isTagSearch: r
         } = e;
-        p.default.track(m.AnalyticEvents.SEARCH_RESULT_VIEWED, {
-            search_type: r ? m.SearchTypes.GUILD_DISCOVERY_TAG : m.SearchTypes.GUILD_DISCOVERY,
+        m.default.track(p.AnalyticEvents.SEARCH_RESULT_VIEWED, {
+            search_type: r ? p.SearchTypes.GUILD_DISCOVERY_TAG : p.SearchTypes.GUILD_DISCOVERY,
             load_id: t,
             search_id: n,
             total_results: void 0 !== l ? l.length : null,
@@ -231,17 +231,17 @@ function(e, t, n) {
 
     function v(e) {
         let t = o.default.getLoadId(e);
-        p.default.track(m.AnalyticEvents.GUILD_DISCOVERY_GUILD_JOIN_CLICKED, {
+        m.default.track(p.AnalyticEvents.GUILD_DISCOVERY_GUILD_JOIN_CLICKED, {
             guild_id: e,
             load_id: t,
             guild_size: c.default.getMemberCount(e)
         })
     }
-    async function N(e) {
+    async function A(e) {
         try {
             var t, n;
             let i = await s.HTTP.get({
-                    url: m.Endpoints.GUILD_DISCOVERY,
+                    url: p.Endpoints.GUILD_DISCOVERY,
                     query: a.stringify({
                         guild_ids: e
                     }),

@@ -15,8 +15,8 @@ function(e, t, n) {
         d = n("340066"),
         c = n("206230"),
         f = n("10641"),
-        p = n("874419"),
-        m = n("430312"),
+        m = n("874419"),
+        p = n("430312"),
         h = n("590456"),
         x = n("779614");
     let E = () => {
@@ -25,7 +25,7 @@ function(e, t, n) {
             n = (0, u.default)(),
             {
                 profileTheme: i
-            } = l.useContext(m.UserProfileContext),
+            } = l.useContext(p.UserProfileContext),
             o = (0, r.isThemeDark)(n) && (0, r.isThemeLight)(i);
         return !e && !t && o
     };
@@ -34,7 +34,7 @@ function(e, t, n) {
             onTooltipClose: t
         } = e, {
             profileType: n
-        } = l.useContext(m.UserProfileContext), a = n === h.UserProfileTypes.POPOUT, s = E(), [r, u] = l.useState(!a && s);
+        } = l.useContext(p.UserProfileContext), a = n === h.UserProfileTypes.POPOUT, s = E(), [r, u] = l.useState(!a && s);
         return (0, d.default)(() => u(s), a ? 300 : null), (0, i.jsx)(o.Popout, {
             shouldShow: r,
             position: "left",
@@ -48,7 +48,7 @@ function(e, t, n) {
                 let {
                     position: n
                 } = e;
-                return (0, i.jsx)(p.default, {
+                return (0, i.jsx)(m.default, {
                     position: null != n ? n : "left",
                     onClose: t
                 })

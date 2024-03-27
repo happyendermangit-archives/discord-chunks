@@ -14,10 +14,10 @@ function(e, t, n) {
             return f
         },
         questsRewardCodeFromServer: function() {
-            return p
+            return m
         },
         getRewardAssetUrl: function() {
-            return m
+            return p
         },
         getHeroStaticAssetUrl: function() {
             return h
@@ -41,10 +41,10 @@ function(e, t, n) {
             return C
         },
         getQuestForTargetedContent: function() {
-            return _
+            return T
         },
         getPlatformString: function() {
-            return T
+            return _
         },
         calculatePercentComplete: function() {
             return I
@@ -53,10 +53,10 @@ function(e, t, n) {
             return v
         },
         isDismissible: function() {
-            return N
+            return A
         },
         isDismissed: function() {
-            return A
+            return N
         },
         includesTarget: function() {
             return R
@@ -142,7 +142,7 @@ function(e, t, n) {
         }
     }
 
-    function p(e) {
+    function m(e) {
         return {
             userId: e.user_id,
             questId: e.quest_id,
@@ -151,7 +151,7 @@ function(e, t, n) {
             claimedAt: e.claimed_at
         }
     }
-    let m = e => "".concat(o).concat(e).concat("/reward.png"),
+    let p = e => "".concat(o).concat(e).concat("/reward.png"),
         h = e => "".concat(o).concat(e).concat("/hero.png"),
         x = e => "".concat(o).concat(e).concat("/hero.webm"),
         E = e => "".concat(o).concat(e).concat("/quests_bar_hero.png"),
@@ -160,12 +160,12 @@ function(e, t, n) {
         S = (e, t) => "".concat(o).concat(e, "/").concat(t).concat("/game_logotype.png"),
         C = e => "".concat(location.protocol, "//").concat(location.host, "/quests/").concat(e);
 
-    function _(e, t) {
+    function T(e, t) {
         for (let [n, i] of e)
             if (i.targetedContent.includes(t)) return i;
         return null
     }
-    let T = e => {
+    let _ = e => {
         switch (e) {
             case a.QuestRewardCodePlatforms.XBOX:
                 return r.default.Messages.QUESTS_REWARD_CODE_PLATFORM_XBOX;
@@ -205,12 +205,12 @@ function(e, t, n) {
         })
     }
 
-    function N(e) {
+    function A(e) {
         return Object.keys(s.DismissibleQuestContentFlags).includes(a.QuestContent[e])
     }
 
-    function A(e, t) {
-        if (!N(t)) return !1;
+    function N(e, t) {
+        if (!A(t)) return !1;
         let n = a.QuestContent[t];
         return (0, i.hasFlag)(e.dismissedQuestContent, s.DismissibleQuestContentFlags[n])
     }

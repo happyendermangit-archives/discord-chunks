@@ -18,8 +18,8 @@ function(e, t, n) {
         d = n("77078"),
         c = n("862205"),
         f = n("95032"),
-        p = n("985365"),
-        m = n("599110"),
+        m = n("985365"),
+        p = n("599110"),
         h = n("718517"),
         x = n("829536"),
         E = n("563680"),
@@ -27,12 +27,12 @@ function(e, t, n) {
         g = n("672724"),
         S = n("392284"),
         C = n("468482"),
-        _ = n("316680"),
-        T = n("830837"),
+        T = n("316680"),
+        _ = n("830837"),
         I = n("132755"),
         v = n("73034"),
-        N = n("58608"),
-        A = n("719347"),
+        A = n("58608"),
+        N = n("719347"),
         R = n("49111"),
         O = n("782340"),
         M = n("273818"),
@@ -133,7 +133,7 @@ function(e, t, n) {
                 onClick: l,
                 tabIndex: s ? -1 : 0,
                 "aria-label": O.default.Messages.PAUSE,
-                children: (0, i.jsx)(T.default, {
+                children: (0, i.jsx)(_.default, {
                     className: M.controlIcon
                 }, "pause")
             }) : null != t && t === n ? (0, i.jsx)(d.Clickable, {
@@ -167,8 +167,8 @@ function(e, t, n) {
                 onToggleMuted: d,
                 onVolumeShow: c,
                 onVolumeHide: f,
-                width: p,
-                volume: m,
+                width: m,
+                volume: p,
                 type: h
             } = this.props;
             return (0, i.jsxs)(u.default.div, {
@@ -176,7 +176,7 @@ function(e, t, n) {
                 onClick: e => e.stopPropagation(),
                 onDoubleClick: e => e.stopPropagation(),
                 style: this.getAnimatedStyle(),
-                children: [this.renderPlayIcon(), "string" == typeof p || p > 250 ? (0, i.jsx)(D, {
+                children: [this.renderPlayIcon(), "string" == typeof m || m > 250 ? (0, i.jsx)(D, {
                     current: n,
                     duration: l
                 }) : null, (0, i.jsx)(g.default, {
@@ -189,10 +189,10 @@ function(e, t, n) {
                     ref: this.setDurationRef
                 }), (0, i.jsx)("div", {
                     className: k.flex,
-                    children: (0, i.jsx)(_.default, {
+                    children: (0, i.jsx)(T.default, {
                         ref: this.setVolumeButtonRef,
                         muted: a,
-                        value: m,
+                        value: p,
                         minValue: 0,
                         maxValue: 1,
                         currentWindow: window,
@@ -279,7 +279,7 @@ function(e, t, n) {
         render() {
             let {
                 play: e
-            } = this.state, t = e ? I.default : T.default;
+            } = this.state, t = e ? I.default : _.default;
             return (0, i.jsx)(u.default.div, {
                 className: M.playPausePop,
                 style: this.getAnimatedStyle(),
@@ -338,7 +338,7 @@ function(e, t, n) {
             throw Error("uhoh")
         }
         sendEvent() {
-            this.analyticsEnabled && m.default.track(R.AnalyticEvents.MEDIA_PLAY_FINISHED, {
+            this.analyticsEnabled && p.default.track(R.AnalyticEvents.MEDIA_PLAY_FINISHED, {
                 play_time_sec: this.playTimeSec,
                 play_wall_time_ms: this.playWallTimeMs,
                 first_play_waiting_ms: this.firstPlayWaitingMs,
@@ -350,9 +350,9 @@ function(e, t, n) {
                 mime_type: this.metadata.mimeType,
                 file_size: this.metadata.fileSize,
                 file_duration_sec: this.metadata.fileDurationSec,
-                connection_type: p.default.getType(),
-                effective_connection_speed: p.default.getEffectiveConnectionSpeed(),
-                service_provider: p.default.getServiceProvider()
+                connection_type: m.default.getType(),
+                effective_connection_speed: m.default.getEffectiveConnectionSpeed(),
+                service_provider: m.default.getServiceProvider()
             }), this.playTimeSec = 0, this.playWallTimeMs = 0, this.firstPlayWaitingMs = 0, this.stallCount = 0, this.stallMs = 0, this.seekCount = 0, this.seekWaitingMs = 0, this.playbackStartTime = void 0, this.lastPlayingTime = void 0, this.moveToState("not_started")
         }
         updatePlayTime(e) {
@@ -602,7 +602,7 @@ function(e, t, n) {
                 playing: r,
                 fullscreen: o
             } = this.state, u = this.getWidth(), d = this.getHeight();
-            return n ? (0, i.jsx)(N.default, {
+            return n ? (0, i.jsx)(A.default, {
                 className: M.video,
                 controls: !1,
                 height: d,
@@ -612,14 +612,14 @@ function(e, t, n) {
                 mediaLayoutType: s,
                 playsInline: !0,
                 autoPlay: r
-            }) : (0, i.jsx)(N.default, {
+            }) : (0, i.jsx)(A.default, {
                 className: M.video,
                 controls: !1,
                 playsInline: !0,
                 autoPlay: r,
                 height: d,
                 responsive: a && !o,
-                mediaLayoutType: o ? A.MediaLayoutType.STATIC : s,
+                mediaLayoutType: o ? N.MediaLayoutType.STATIC : s,
                 onClick: this.handleVideoClick,
                 onEnded: this.handleEnded,
                 onError: l,
@@ -670,8 +670,8 @@ function(e, t, n) {
                     duration: u,
                     hasClickedPlay: d,
                     hideControls: c,
-                    muted: p,
-                    playing: m,
+                    muted: m,
+                    playing: p,
                     fullscreen: h,
                     volume: y,
                     dragging: g
@@ -683,7 +683,7 @@ function(e, t, n) {
                 duration: u,
                 volume: (0, x.amplitudeToPerceptual)(y, 1),
                 hide: t === b.VIDEO && c,
-                muted: p,
+                muted: m,
                 autoPlay: n,
                 onDrag: this.handleDrag,
                 onDragEnd: this.handleDragEnd,
@@ -693,7 +693,7 @@ function(e, t, n) {
                 onToggleMuted: this.toggleMuted,
                 onVolumeShow: a,
                 onVolumeHide: s,
-                playing: m,
+                playing: p,
                 dragging: g,
                 type: t,
                 ref: this.controlsRef,
@@ -764,13 +764,13 @@ function(e, t, n) {
             } = this.props, {
                 fullscreen: c,
                 hideControls: f,
-                playing: p
-            } = this.state, m = M.wrapperPaused;
-            if (t === b.AUDIO ? m = M.wrapperAudio : f ? m = M.wrapperControlsHidden : p && (m = M.wrapperPlaying), l && t === b.VIDEO) {
+                playing: m
+            } = this.state, p = M.wrapperPaused;
+            if (t === b.AUDIO ? p = M.wrapperAudio : f ? p = M.wrapperControlsHidden : m && (p = M.wrapperPlaying), l && t === b.VIDEO) {
                 let t = this.getWidth();
                 return (0, i.jsxs)("div", {
-                    className: s(m, {
-                        [M.wrapperMediaMosaic]: u === A.MediaLayoutType.MOSAIC
+                    className: s(p, {
+                        [M.wrapperMediaMosaic]: u === N.MediaLayoutType.MOSAIC
                     }),
                     style: o ? void 0 : {
                         width: t,
@@ -787,18 +787,18 @@ function(e, t, n) {
                 })
             }
             return (0, i.jsxs)("div", {
-                className: s(m, M.newMosaicStyle, a, {
-                    [M.wrapperMediaMosaic]: u === A.MediaLayoutType.MOSAIC
+                className: s(p, M.newMosaicStyle, a, {
+                    [M.wrapperMediaMosaic]: u === N.MediaLayoutType.MOSAIC
                 }),
                 "data-fullscreen": c,
                 onMouseEnter: this.handleMouseEnter,
                 onMouseLeave: this.handleMouseLeave,
-                onMouseMove: p ? this.handleMouseMove : void 0,
+                onMouseMove: m ? this.handleMouseMove : void 0,
                 onKeyDown: this.handleKeyDown,
                 style: this.getMediaStyle(),
                 children: [this.renderMetadata(), t === b.AUDIO ? this.renderAudio() : this.renderVideo(), this.renderControls(), t === b.VIDEO ? this.renderPlayPausePop() : null, null != d ? (0, i.jsx)("div", {
                     className: s({
-                        [M.overlayContentHidden]: p || c
+                        [M.overlayContentHidden]: m || c
                     }),
                     children: d()
                 }) : null]

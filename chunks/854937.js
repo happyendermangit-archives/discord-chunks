@@ -22,8 +22,8 @@ function(e, t, n) {
             channelId: l,
             guildId: c,
             source: f,
-            size: p,
-            className: m,
+            size: m,
+            className: p,
             ...h
         } = e, {
             tooltip: x,
@@ -40,8 +40,8 @@ function(e, t, n) {
                 } = e;
                 return (0, i.jsx)(s.Button, {
                     ...h,
-                    size: a(p, d.iconButtonSize),
-                    className: a(m, d.iconButton),
+                    size: a(m, d.iconButtonSize),
+                    className: a(p, d.iconButton),
                     onClick: g,
                     onMouseEnter: n,
                     onMouseLeave: l,

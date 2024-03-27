@@ -15,8 +15,8 @@ function(e, t, n) {
         d = n("103603"),
         c = n("866190"),
         f = n("782340"),
-        p = n("542624");
-    let m = "Zoomed Lazy Image Modal";
+        m = n("542624");
+    let p = "Zoomed Lazy Image Modal";
     class h extends l.PureComponent {
         render() {
             let {
@@ -41,7 +41,7 @@ function(e, t, n) {
                 } = this.props;
                 n((0, d.zoomFit)(i, l))
             }, this.modalContext = (0, s.modalContextFromAppContext)(this.props.appContext), this.onCloseImage = () => {
-                (0, s.closeModal)(m, this.modalContext)
+                (0, s.closeModal)(p, this.modalContext)
             }, this.onZoom = (e, t) => {
                 let {
                     zoomThumbnailPlaceholder: n,
@@ -75,19 +75,19 @@ function(e, t, n) {
                     trigger: l
                 };
                 (0, a.isElement)(e.currentTarget) && e.currentTarget.blur(), (0, s.openModal)(e => (0, i.jsx)(s.ModalRoot, {
-                    className: p.modal,
+                    className: m.modal,
                     ...e,
                     size: s.ModalSize.DYNAMIC,
                     "aria-label": f.default.Messages.IMAGE,
                     children: (0, i.jsx)(u.ImageModal, {
                         ...C,
-                        className: p.image,
+                        className: m.image,
                         shouldAnimate: g,
                         onClose: this.onCloseImage,
                         shouldHideMediaOptions: S
                     })
                 }), {
-                    modalKey: m
+                    modalKey: p
                 }, this.modalContext)
             }
         }

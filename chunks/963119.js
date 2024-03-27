@@ -22,13 +22,13 @@ function(e, t, n) {
                     explicitContentFriendDm: c,
                     explicitContentNonFriendDm: f
                 } = (0, u.useExplicitContentSettingOrDefault)(),
-                p = (0, i.useStateFromStores)([a.default], () => a.default.getFriendIDs().includes(t)),
-                m = (0, i.useStateFromStores)([s.default], () => s.default.getCurrentUser()),
+                m = (0, i.useStateFromStores)([a.default], () => a.default.getFriendIDs().includes(t)),
+                p = (0, i.useStateFromStores)([s.default], () => s.default.getCurrentUser()),
                 h = (0, i.useStateFromStores)([l.default], () => {
                     let t = l.default.getChannel(e);
                     return null != t && t.isPrivate()
                 });
-            return !!n && null != m && m.id !== t && (h && p ? (0, o.getShouldObscureForSetting)(c) : h ? (0, o.getShouldObscureForSetting)(f) : (0, o.getShouldObscureForSetting)(d))
+            return !!n && null != p && p.id !== t && (h && m ? (0, o.getShouldObscureForSetting)(c) : h ? (0, o.getShouldObscureForSetting)(f) : (0, o.getShouldObscureForSetting)(d))
         },
         c = () => {
             let e = (0, r.useIsEligibleForExplicitMediaRedaction)(),

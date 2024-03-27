@@ -30,19 +30,19 @@ function(e, t, n) {
             } = e, {
                 joinedEmojiSourceGuildRecord: r,
                 emoji: c
-            } = (0, l.useStateFromStoresObject)([s.default, a.default], () => d(s.default, a.default, t)), f = null != r, p = null != r && r.hasFeature(u.GuildFeatures.DISCOVERABLE), m = (!f || p) && null != t, [h, x] = i.useState(m), E = null != r ? o.default.createFromGuildRecord(r) : null, [y, g] = i.useState(E);
+            } = (0, l.useStateFromStoresObject)([s.default, a.default], () => d(s.default, a.default, t)), f = null != r, m = null != r && r.hasFeature(u.GuildFeatures.DISCOVERABLE), p = (!f || m) && null != t, [h, x] = i.useState(p), E = null != r ? o.default.createFromGuildRecord(r) : null, [y, g] = i.useState(E);
             return i.useEffect(() => {
                 null == n || n();
                 let e = async () => {
                     let e = null != t ? await o.default.getGuildFromEmojiId(t) : null;
                     g(e), x(!1), null == n || n()
                 };
-                if (m) {
+                if (p) {
                     e();
                     return
                 }
                 null == n || n()
-            }, [t, m]), {
+            }, [t, p]), {
                 expressionSourceGuild: y,
                 joinedEmojiSourceGuildRecord: r,
                 hasJoinedEmojiSourceGuild: f,

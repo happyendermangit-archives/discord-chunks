@@ -22,19 +22,19 @@ function(e, t, n) {
             guildId: c
         } = e, {
             botUpgraded: f,
-            activeSubscriptionListing: p
+            activeSubscriptionListing: m
         } = (0, s.default)({
             user: n,
             guildId: c
-        }), m = null == p ? void 0 : null === (t = p.sku_benefits) || void 0 === t ? void 0 : t.benefits;
-        return null != c && f && null != m && 0 !== m.length ? (0, i.jsxs)(r.default, {
+        }), p = null == m ? void 0 : null === (t = m.sku_benefits) || void 0 === t ? void 0 : t.benefits;
+        return null != c && f && null != p && 0 !== p.length ? (0, i.jsxs)(r.default, {
             children: [(0, i.jsx)(l.Heading, {
                 variant: "eyebrow",
                 className: d.title,
                 children: o.default.Messages.BOT_PROFILE_BENEFITS_HEADING
             }), (0, i.jsx)("div", {
                 className: u.benefitsContainer,
-                children: m.map((e, t) => (0, i.jsx)(a.default, {
+                children: p.map((e, t) => (0, i.jsx)(a.default, {
                     showsDescription: !1,
                     emojiContainerClassName: u.emojiContainer,
                     nameTextVariant: "text-sm/normal",

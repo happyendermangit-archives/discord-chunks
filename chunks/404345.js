@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return p
+            return m
         }
     });
     var i = n("37983"),
@@ -15,7 +15,7 @@ function(e, t, n) {
         d = n("646718"),
         c = n("782340"),
         f = n("728930"),
-        p = e => {
+        m = e => {
             let {
                 emojis: t
             } = e, {
@@ -27,7 +27,7 @@ function(e, t, n) {
                     location_stack: n
                 })
             }, [n]);
-            let p = (0, i.jsx)("div", {
+            let m = (0, i.jsx)("div", {
                 className: f.emojis,
                 children: t.slice(0, 3).map((e, t) => {
                     if ("" === e.url) return null;
@@ -55,7 +55,7 @@ function(e, t, n) {
                         })
                     })
                 }), (0, i.jsx)(s.AutocompleteRowContentSecondary, {
-                    children: p
+                    children: m
                 })]
             })
         }

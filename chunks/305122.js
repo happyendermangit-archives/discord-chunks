@@ -5,10 +5,10 @@ function(e, t, n) {
             return C
         },
         uploadSound: function() {
-            return _
+            return T
         },
         updateSound: function() {
-            return T
+            return _
         },
         deleteSound: function() {
             return I
@@ -17,10 +17,10 @@ function(e, t, n) {
             return v
         },
         removeFavoriteSound: function() {
-            return N
+            return A
         },
         playSoundLocally: function() {
-            return A
+            return N
         },
         reportSoundStartedPlaying: function() {
             return R
@@ -45,19 +45,19 @@ function(e, t, n) {
         d = n("235004"),
         c = n("389480"),
         f = n("24156"),
-        p = n("846325"),
-        m = n("49111"),
+        m = n("846325"),
+        p = n("49111"),
         h = n("397336"),
         x = n("782340");
     let E = async e => {
         try {
             let t = await a.HTTP.get({
-                    url: m.Endpoints.SOUNDBOARD_DEFAULT_SOUNDS,
+                    url: p.Endpoints.SOUNDBOARD_DEFAULT_SOUNDS,
                     query: {
                         guild_ids: e
                     }
                 }),
-                n = t.body.map(e => (0, c.soundboardSoundFromAPI)(e, p.DEFAULT_SOUND_GUILD_ID));
+                n = t.body.map(e => (0, c.soundboardSoundFromAPI)(e, m.DEFAULT_SOUND_GUILD_ID));
             s.default.dispatch({
                 type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS",
                 soundboardSounds: n
@@ -92,7 +92,7 @@ function(e, t, n) {
     }, C = () => __OVERLAY__ ? (s.default.dispatch({
         type: "OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST"
     }), Promise.all([])) : Promise.all([g(), S()]);
-    async function _(e) {
+    async function T(e) {
         let {
             guildId: t,
             name: n,
@@ -101,7 +101,7 @@ function(e, t, n) {
             emojiId: s,
             emojiName: r
         } = e, o = await a.HTTP.post({
-            url: m.Endpoints.GUILD_SOUNDBOARD_SOUNDS(t),
+            url: p.Endpoints.GUILD_SOUNDBOARD_SOUNDS(t),
             body: {
                 name: n,
                 sound: i,
@@ -112,7 +112,7 @@ function(e, t, n) {
         }), u = (0, c.soundboardSoundFromAPI)(o.body, t);
         return u
     }
-    async function T(e) {
+    async function _(e) {
         let {
             guildId: t,
             soundId: n,
@@ -121,7 +121,7 @@ function(e, t, n) {
             emojiId: s,
             emojiName: r
         } = e, o = await a.HTTP.patch({
-            url: m.Endpoints.GUILD_SOUNDBOARD_SOUND(t, n),
+            url: p.Endpoints.GUILD_SOUNDBOARD_SOUND(t, n),
             body: {
                 name: i,
                 volume: l,
@@ -133,7 +133,7 @@ function(e, t, n) {
     }
     async function I(e, t) {
         await a.HTTP.del({
-            url: m.Endpoints.GUILD_SOUNDBOARD_SOUND(e, t),
+            url: p.Endpoints.GUILD_SOUNDBOARD_SOUND(e, t),
             oldFormErrors: !0
         })
     }
@@ -147,13 +147,13 @@ function(e, t, n) {
         }), !1) : !t.soundIds.includes(e) && void t.soundIds.push(e), h.UserSettingsDelay.INFREQUENT_USER_ACTION)
     }
 
-    function N(e) {
+    function A(e) {
         u.FrecencyUserSettingsActionCreators.updateAsync("favoriteSoundboardSounds", t => {
             t.soundIds = t.soundIds.filter(t => t !== e)
         }, h.UserSettingsDelay.INFREQUENT_USER_ACTION)
     }
 
-    function A(e, t, n) {
+    function N(e, t, n) {
         s.default.dispatch({
             type: "GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY",
             sound: t,

@@ -16,8 +16,8 @@ function(e, t, n) {
         d = n("223913"),
         c = n("373469"),
         f = n("42203"),
-        p = n("30672"),
-        m = n("619911"),
+        m = n("30672"),
+        p = n("619911"),
         h = n("659500"),
         x = n("295999"),
         E = n("49111"),
@@ -31,8 +31,8 @@ function(e, t, n) {
             look: S,
             applicationStream: C
         } = e, {
-            activeStream: _,
-            watchingOtherStream: T
+            activeStream: T,
+            watchingOtherStream: _
         } = (0, l.useStateFromStoresObject)([c.default], () => ({
             activeStream: c.default.getActiveStreamForApplicationStream(C),
             watchingOtherStream: null != C && c.default.getAllActiveStreamsForChannel(C.channelId).filter(e => {
@@ -41,13 +41,13 @@ function(e, t, n) {
                 } = e;
                 return t !== C.ownerId
             }).length > 0
-        })), I = (0, l.useStateFromStores)([f.default], () => f.default.getChannel(null == C ? void 0 : C.channelId)), [v, N] = (0, d.useCanWatchStream)(I), A = (0, u.useWindowDispatch)(), R = null != _ && null != C && _.state !== E.ApplicationStreamStates.ENDED && _.ownerId === C.ownerId, O = e => {
+        })), I = (0, l.useStateFromStores)([f.default], () => f.default.getChannel(null == C ? void 0 : C.channelId)), [v, A] = (0, d.useCanWatchStream)(I), N = (0, u.useWindowDispatch)(), R = null != T && null != C && T.state !== E.ApplicationStreamStates.ENDED && T.ownerId === C.ownerId, O = e => {
             null != C && (r.default.selectVoiceChannel(C.channelId), !R && (0, o.watchStreamAndTransitionToStream)(C, {
                 forceMultiple: e
-            }), A.dispatch(E.ComponentActions.POPOUT_CLOSE), h.ComponentDispatch.dispatch(E.ComponentActions.MODAL_CLOSE), s.default.popAll())
+            }), N.dispatch(E.ComponentActions.POPOUT_CLOSE), h.ComponentDispatch.dispatch(E.ComponentActions.MODAL_CLOSE), s.default.popAll())
         };
         if (null == C) return null;
-        let M = (0, d.getStreamCTAString)(N);
+        let M = (0, d.getStreamCTAString)(A);
         t ? M = y.default.Messages.WATCH_STREAM_STREAMING : R && (M = y.default.Messages.WATCH_STREAM_WATCHING);
         let k = {
             color: n,
@@ -59,10 +59,10 @@ function(e, t, n) {
                 onClick: () => O(!1),
                 ...k,
                 fullWidth: !0,
-                children: [(0, i.jsx)(m.default, {
+                children: [(0, i.jsx)(p.default, {
                     className: g.streamIcon
                 }), M]
-            }, "play"), T && !R ? (0, i.jsx)(a.Tooltip, {
+            }, "play"), _ && !R ? (0, i.jsx)(a.Tooltip, {
                 text: y.default.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
                 children: e => (0, i.jsx)(x.default, {
                     ...e,
@@ -73,7 +73,7 @@ function(e, t, n) {
                     ...k,
                     className: g.iconButton,
                     size: g.iconButtonSize,
-                    children: (0, i.jsx)(p.default, {
+                    children: (0, i.jsx)(m.default, {
                         className: g.iconSize
                     })
                 })

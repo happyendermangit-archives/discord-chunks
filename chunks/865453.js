@@ -19,9 +19,9 @@ function(e, t, n) {
             currentGuildId: n,
             popoutData: c,
             nonce: f,
-            demoMode: p
+            demoMode: m
         } = e, {
-            current: m
+            current: p
         } = i.useRef({
             guild_id: n,
             emoji_id: t,
@@ -29,11 +29,11 @@ function(e, t, n) {
         });
         return i.useEffect(() => {
             var e;
-            (0, o.initiateEmojiInteraction)(u.EmojiInteractionPoint.TrackOpenPopoutUsed), !p && r.default.track(d.AnalyticEvents.OPEN_POPOUT, {
+            (0, o.initiateEmojiInteraction)(u.EmojiInteractionPoint.TrackOpenPopoutUsed), !m && r.default.track(d.AnalyticEvents.OPEN_POPOUT, {
                 type: null !== (e = null == c ? void 0 : c.analyticsType) && void 0 !== e ? e : "Standard Emoji Popout",
                 nonce: f,
-                ...m
+                ...p
             })
-        }, []), m
+        }, []), p
     }
 }

@@ -20,20 +20,20 @@ function(e, t, n) {
 
     function f(e, t, n) {
         let l = (0, o.default)(),
-            [f, p] = i.useState(!1),
-            m = i.useMemo(() => a.debounce(e => {
+            [f, m] = i.useState(!1),
+            p = i.useMemo(() => a.debounce(e => {
                 (function(e, t, n, i) {
                     let l = u.default.getProps(n, i).groups;
                     return !!c(l) || !(e.length < d.length) && !(e.length > t) && -1 !== e.indexOf(d) && ((0, s.subscribeChannel)(n, i, r.DEFAULT_RANGES), !0)
-                })(e, l, t, n) && p(!0)
+                })(e, l, t, n) && m(!0)
             }, 200, {
                 maxWait: 500
             }), [l, t, n]);
         i.useEffect(() => {
             let i = u.default.getProps(t, n).groups;
-            if (null != t && !c(i) && !f) return e.addListener("text-changed", m), () => {
-                e.removeListener("text-changed", m), m.cancel()
+            if (null != t && !c(i) && !f) return e.addListener("text-changed", p), () => {
+                e.removeListener("text-changed", p), p.cancel()
             }
-        }, [f, m, e, t, n])
+        }, [f, p, e, t, n])
     }
 }

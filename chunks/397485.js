@@ -30,8 +30,8 @@ function(e, t, n) {
         d = n("101559"),
         c = n("326209"),
         f = n("610237"),
-        p = n("733261"),
-        m = n("596926"),
+        m = n("733261"),
+        p = n("596926"),
         h = n("761999"),
         x = n("189580"),
         E = n("679126"),
@@ -39,12 +39,12 @@ function(e, t, n) {
         g = n("414668"),
         S = n("97656"),
         C = n("812007"),
-        _ = n("721336"),
-        T = n("954877"),
+        T = n("721336"),
+        _ = n("954877"),
         I = n("662151"),
         v = n("155232"),
-        N = n("843093"),
-        A = n("867805"),
+        A = n("843093"),
+        N = n("867805"),
         R = n("407063"),
         O = n("697218"),
         M = n("315102"),
@@ -57,7 +57,7 @@ function(e, t, n) {
         },
         j = {
             BASIC: [a],
-            PREMIUM: [s, r, o, u, d, c, f, p, m, h, x, E, y, g, S, C, _, T, I, v, N]
+            PREMIUM: [s, r, o, u, d, c, f, m, p, h, x, E, y, g, S, C, T, _, I, v, A]
         },
         U = {
             [L.VoiceChannelEffectAnimationType.BASIC]: j.BASIC,
@@ -94,8 +94,8 @@ function(e, t, n) {
                 size: t
             })
         }
-        let i = A.default.convertSurrogateToName(e.name, !1),
-            l = A.default.getByName(i);
+        let i = N.default.convertSurrogateToName(e.name, !1),
+            l = N.default.getByName(i);
         return null != l ? k.default.getURL(l.surrogates) : ""
     }
 

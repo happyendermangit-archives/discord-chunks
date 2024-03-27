@@ -25,9 +25,9 @@ function(e, t, n) {
                     d = t.name.toLocaleLowerCase(),
                     c = null != t.emojiId ? a.default.getCustomEmojiById(t.emojiId) : null,
                     f = null != t.emojiName ? s.default.convertSurrogateToName(t.emojiName, !1) : null,
-                    p = null != f ? s.default.getByName(f) : null,
-                    m = null != c ? [c.name] : null !== (r = null == p ? void 0 : p.names) && void 0 !== r ? r : [];
-                return e === d && (u += 8), m.includes(e) && (u += 7), d.startsWith(e) && (u += 6), m.some(t => t.startsWith(e)) && (u += 5), d.endsWith(e) && (u += 4), m.some(t => t.endsWith(e)) && (u += 3), l(e, t.name.toLocaleLowerCase()) && (u += 2), m.some(t => l(e, t)) && (u += 1), u > 0 && (0, o.canUseSoundboardSound)(n, t, i) && (u += 100), u
+                    m = null != f ? s.default.getByName(f) : null,
+                    p = null != c ? [c.name] : null !== (r = null == m ? void 0 : m.names) && void 0 !== r ? r : [];
+                return e === d && (u += 8), p.includes(e) && (u += 7), d.startsWith(e) && (u += 6), p.some(t => t.startsWith(e)) && (u += 5), d.endsWith(e) && (u += 4), p.some(t => t.endsWith(e)) && (u += 3), l(e, t.name.toLocaleLowerCase()) && (u += 2), p.some(t => l(e, t)) && (u += 1), u > 0 && (0, o.canUseSoundboardSound)(n, t, i) && (u += 100), u
             }(e.toLocaleLowerCase(), r, n, i), t), {}),
             f = d.filter(e => c[e.soundId] > 0).sort((e, t) => c[t.soundId] - c[e.soundId]);
         return f

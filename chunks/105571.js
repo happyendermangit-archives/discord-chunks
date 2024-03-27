@@ -15,8 +15,8 @@ function(e, t, n) {
         d = n("240249"),
         c = n("524768"),
         f = n("355263"),
-        p = n("462274"),
-        m = n("368639"),
+        m = n("462274"),
+        p = n("368639"),
         h = n("945330"),
         x = n("256170"),
         E = n("315102"),
@@ -24,13 +24,13 @@ function(e, t, n) {
         g = n("82372"),
         S = n("476606"),
         C = n("540843"),
-        _ = n("49111"),
-        T = n("317041"),
+        T = n("49111"),
+        _ = n("317041"),
         I = n("782340"),
         v = n("23429"),
-        N = n("919163");
+        A = n("919163");
 
-    function A(e) {
+    function N(e) {
         let {
             channel: t,
             command: n,
@@ -41,7 +41,7 @@ function(e, t, n) {
                 command: n,
                 section: a,
                 location: c.ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW
-            }), y.ComponentDispatch.dispatch(_.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
+            }), y.ComponentDispatch.dispatch(T.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
                 channelId: t.id
             })
         }, [t, n, a]);
@@ -71,10 +71,10 @@ function(e, t, n) {
             commandType: o.ApplicationCommandType.CHAT
         }, {
             placeholderCount: 0,
-            limit: T.DISCOVERY_COMMANDS_QUERY_LIMIT,
+            limit: _.DISCOVERY_COMMANDS_QUERY_LIMIT,
             includeFrecency: !0
         }), {
-            commands: _
+            commands: T
         } = (0, S.default)({
             sectionId: u.id,
             commandsByActiveSection: y
@@ -92,11 +92,11 @@ function(e, t, n) {
                 g.dismissAppDetail()
             }, []),
             M = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
-            k = (0, p.default)("number" == typeof R ? "" : null == R ? void 0 : R.uri, null != M ? M : ""),
+            k = (0, m.default)("number" == typeof R ? "" : null == R ? void 0 : R.uri, null != M ? M : ""),
             L = (0, f.getIconComponent)(u),
             P = l.useMemo(() => {
                 var e, t;
-                return (0, m.parseBioReact)(null !== (t = null === (e = u.application) || void 0 === e ? void 0 : e.description) && void 0 !== t ? t : "")
+                return (0, p.parseBioReact)(null !== (t = null === (e = u.application) || void 0 === e ? void 0 : e.description) && void 0 !== t ? t : "")
             }, [null === (n = u.application) || void 0 === n ? void 0 : n.description]);
         return (0, i.jsxs)(r.ScrollerNone, {
             className: v.container,
@@ -130,13 +130,13 @@ function(e, t, n) {
                         variant: "heading-lg/bold",
                         children: u.name
                     }), (0, i.jsx)(r.Text, {
-                        className: s(v.appDescription, N.markup),
+                        className: s(v.appDescription, A.markup),
                         variant: "text-sm/medium",
                         lineClamp: 3,
                         children: P
                     })]
                 }), (0, i.jsx)(C.default, {
-                    commands: _,
+                    commands: T,
                     channel: a
                 }), (0, i.jsxs)("div", {
                     className: v.commandListHeader,
@@ -149,7 +149,7 @@ function(e, t, n) {
                         children: ["Popular", (0, i.jsx)(x.default, {})]
                     })]
                 }), (0, i.jsx)("ul", {
-                    children: _.map(e => (0, i.jsx)(A, {
+                    children: T.map(e => (0, i.jsx)(N, {
                         channel: a,
                         command: e,
                         section: u

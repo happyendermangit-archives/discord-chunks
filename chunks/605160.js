@@ -17,7 +17,7 @@ function(e, t, n) {
             return C
         },
         getObscuredAlt: function() {
-            return _
+            return T
         }
     }), n("702976"), n("794252");
     var i, l, a = n("506838"),
@@ -28,8 +28,8 @@ function(e, t, n) {
         d = n("791234"),
         c = n("845579"),
         f = n("377253"),
-        p = n("957255"),
-        m = n("568734"),
+        m = n("957255"),
+        p = n("568734"),
         h = n("70845"),
         x = n("49111"),
         E = n("782340");
@@ -40,14 +40,14 @@ function(e, t, n) {
                 flags: i = 0,
                 content_scan_version: l
             } = e;
-            return t && (0, o.isPendingScan)(l) ? "potential_explicit_content" : t && ((0, m.hasFlag)(i, x.MessageAttachmentFlags.CONTAINS_EXPLICIT_MEDIA) || r.default.get("obscure_blur_effect_enabled")) ? "explicit_content" : n || (0, m.hasFlag)(i, x.MessageAttachmentFlags.IS_SPOILER) ? "spoiler" : null
+            return t && (0, o.isPendingScan)(l) ? "potential_explicit_content" : t && ((0, p.hasFlag)(i, x.MessageAttachmentFlags.CONTAINS_EXPLICIT_MEDIA) || r.default.get("obscure_blur_effect_enabled")) ? "explicit_content" : n || (0, p.hasFlag)(i, x.MessageAttachmentFlags.IS_SPOILER) ? "spoiler" : null
         },
         g = (e, t, n, i, l) => {
             let {
                 flags: a = 0,
                 contentScanVersion: s
             } = e, u = f.default.getMessage(t, n);
-            return null == u ? null : l && !u.author.bot && (0, o.isPendingScan)(s) ? "potential_explicit_content" : l && ((0, m.hasFlag)(a, x.MessageEmbedFlags.CONTAINS_EXPLICIT_MEDIA) || r.default.get("obscure_blur_effect_enabled")) ? "explicit_content" : i ? "spoiler" : null
+            return null == u ? null : l && !u.author.bot && (0, o.isPendingScan)(s) ? "potential_explicit_content" : l && ((0, p.hasFlag)(a, x.MessageEmbedFlags.CONTAINS_EXPLICIT_MEDIA) || r.default.get("obscure_blur_effect_enabled")) ? "explicit_content" : i ? "spoiler" : null
         };
 
     function S(e, t, n) {
@@ -73,8 +73,8 @@ function(e, t, n) {
         let {
             channel: t,
             media: n
-        } = e, i = (0, s.useStateFromStores)([p.default], () => null != t && p.default.can(x.Permissions.MANAGE_MESSAGES, t)), l = c.RenderSpoilers.useSetting(), a = (0, u.useShouldRedactExplicitContentForForum)();
+        } = e, i = (0, s.useStateFromStores)([m.default], () => null != t && m.default.can(x.Permissions.MANAGE_MESSAGES, t)), l = c.RenderSpoilers.useSetting(), a = (0, u.useShouldRedactExplicitContentForForum)();
         return S(n, !(0, h.default)(l, i), a)
     }
-    let _ = e => (0, a.match)(e).with("explicit_content", () => E.default.Messages.EXPLICIT_CONTENT_ALT).with("spoiler", () => E.default.Messages.SPOILER_HIDDEN_A11Y_LABEL).otherwise(() => void 0)
+    let T = e => (0, a.match)(e).with("explicit_content", () => E.default.Messages.EXPLICIT_CONTENT_ALT).with("spoiler", () => E.default.Messages.SPOILER_HIDDEN_A11Y_LABEL).otherwise(() => void 0)
 }

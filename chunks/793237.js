@@ -14,16 +14,16 @@ function(e, t, n) {
             return C
         },
         updateVisibleMessages: function() {
-            return _
-        },
-        setSummaryFeedback: function() {
             return T
         },
+        setSummaryFeedback: function() {
+            return _
+        },
         deleteSummary: function() {
-            return N
+            return A
         },
         default: function() {
-            return A
+            return N
         }
     });
     var i = n("884691"),
@@ -36,13 +36,13 @@ function(e, t, n) {
         d = n("734575"),
         c = n("619443"),
         f = n("42203"),
-        p = n("718517"),
-        m = n("347738"),
+        m = n("718517"),
+        p = n("347738"),
         h = n("49111");
-    let x = 30 * p.default.Millis.SECOND;
+    let x = 30 * m.default.Millis.SECOND;
     async function E(e, t) {
         let n, i;
-        if (!m.default.shouldFetch(e, t)) return;
+        if (!p.default.shouldFetch(e, t)) return;
         let l = Date.now();
         o.default.dispatch({
             type: "REQUEST_CHANNEL_SUMMARY",
@@ -68,7 +68,7 @@ function(e, t, n) {
     async function y(e) {
         var t, n;
         let i, l;
-        if (!m.default.shouldFetch(e)) return;
+        if (!p.default.shouldFetch(e)) return;
         let s = Date.now();
         o.default.dispatch({
             type: "REQUEST_CHANNEL_SUMMARIES",
@@ -113,7 +113,7 @@ function(e, t, n) {
         })
     }
 
-    function _(e, t) {
+    function T(e, t) {
         o.default.dispatch({
             type: "UPDATE_VISIBLE_MESSAGES",
             topVisibleMessage: null != e ? e : null,
@@ -121,7 +121,7 @@ function(e, t, n) {
         })
     }
 
-    function T(e, t) {
+    function _(e, t) {
         o.default.dispatch({
             type: "SET_SUMMARY_FEEDBACK",
             summary: e,
@@ -131,7 +131,7 @@ function(e, t, n) {
     async function I() {
         var e;
         let t, n;
-        if (!m.default.shouldFetchChannelAffinities()) return Promise.resolve(null);
+        if (!p.default.shouldFetchChannelAffinities()) return Promise.resolve(null);
         let i = Date.now();
         o.default.dispatch({
             type: "REQUEST_CHANNEL_AFFINITIES",
@@ -158,7 +158,7 @@ function(e, t, n) {
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         e = null != e ? e : [];
         let a = Date.now();
-        if (0 === (e = e.concat(m.default.defaultChannelIds({
+        if (0 === (e = e.concat(p.default.defaultChannelIds({
                 withQuickSwitcher: i,
                 withChannelAffinities: l
             })).filter(e => {
@@ -166,7 +166,7 @@ function(e, t, n) {
                 return (0, d.canSeeChannelSummaries)(t, !1, !0)
             }).filter(e => {
                 let t = Date.now(),
-                    n = m.default.status(e);
+                    n = p.default.status(e);
                 if (null == n ? void 0 : n.fetching) return !1;
                 let i = null == n ? void 0 : n.lastReceivedAt;
                 return null == i || t - i > x
@@ -198,7 +198,7 @@ function(e, t, n) {
             error: t
         })
     }
-    async function N(e) {
+    async function A(e) {
         try {
             await r.HTTP.del(h.Routes.CHANNEL_SUMMARY(e.channelId, e.id)), o.default.dispatch({
                 type: "DELETE_SUMMARY",
@@ -208,9 +208,9 @@ function(e, t, n) {
             throw new u.APIError(e)
         }
     }
-    var A = {
-        setSummaryFeedback: T,
-        updateVisibleMessages: _,
+    var N = {
+        setSummaryFeedback: _,
+        updateVisibleMessages: T,
         setSelectedSummary: C,
         setHighlightedSummary: g,
         fetchSummaries: y,
@@ -232,8 +232,8 @@ function(e, t, n) {
                         await v(n.split(","))
                     }
                 }, [n, t])
-            }(t), (0, s.useStateFromStoresArray)([m.default], () => m.default.topSummaries(), [])
+            }(t), (0, s.useStateFromStoresArray)([p.default], () => p.default.topSummaries(), [])
         },
-        deleteSummary: N
+        deleteSummary: A
     }
 }

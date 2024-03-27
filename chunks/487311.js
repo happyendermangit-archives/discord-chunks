@@ -16,8 +16,8 @@ function(e, t, n) {
         d = n("77078"),
         c = n("305961"),
         f = n("49111"),
-        p = n("782340"),
-        m = n("262092"),
+        m = n("782340"),
+        p = n("262092"),
         h = function(e) {
             let {
                 className: t,
@@ -31,20 +31,20 @@ function(e, t, n) {
                 className: t,
                 value: new Set,
                 onChange: h,
-                placeholder: p.default.Messages.ADD_ROLE_PLACEHOLDER,
-                "aria-label": p.default.Messages.ADD_ROLE_A11Y_LABEL,
+                placeholder: m.default.Messages.ADD_ROLE_PLACEHOLDER,
+                "aria-label": m.default.Messages.ADD_ROLE_A11Y_LABEL,
                 onClose: x,
                 children: e => y(e).map(e => {
                     var t, n;
                     return (0, i.jsxs)(d.ComboboxItem, {
                         value: e.id,
                         children: ["dot" === l ? (0, i.jsx)(d.RoleDot, {
-                            className: m.popoutRoleDot,
+                            className: p.popoutRoleDot,
                             color: null !== (t = e.colorString) && void 0 !== t ? t : (0, o.int2hex)(f.DEFAULT_ROLE_COLOR),
                             background: !1,
                             tooltip: !1
                         }) : (0, i.jsx)(d.RoleCircle, {
-                            className: m.popoutRoleCircle,
+                            className: p.popoutRoleCircle,
                             color: null !== (n = e.colorString) && void 0 !== n ? n : (0, o.int2hex)(f.DEFAULT_ROLE_COLOR)
                         }), (0, i.jsx)(d.ComboboxItem.Label, {
                             children: e.name

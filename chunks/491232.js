@@ -14,16 +14,16 @@ function(e, t, r) {
             return v
         },
         isFreeCollectiblesProduct: function() {
-            return C
-        },
-        getProductsFromCategories: function() {
             return E
         },
+        getProductsFromCategories: function() {
+            return C
+        },
         getAvatarDecorations: function() {
-            return I
+            return P
         },
         getCollectiblesAssetURL: function() {
-            return P
+            return g
         },
         getProfileEffectsFromPurchases: function() {
             return p
@@ -50,20 +50,22 @@ function(e, t, r) {
         s = r("49111");
     let c = e => (null == e ? void 0 : e.premiumType) != null,
         d = e => (null == e ? void 0 : e.purchaseType) === s.EntitlementTypes.PREMIUM_PURCHASE,
-        f = (e, t) => {
-            let r = v(e, t ? s.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2 : s.PriceSetAssignmentPurchaseTypes.DEFAULT);
-            return null == r ? "" : (0, i.formatPrice)(null == r ? void 0 : r.amount, null == r ? void 0 : r.currency)
+        f = (e, t, r) => {
+            let a;
+            a = r ? t ? s.PriceSetAssignmentPurchaseTypes.MOBILE_PREMIUM_TIER_2 : s.PriceSetAssignmentPurchaseTypes.MOBILE : t ? s.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2 : s.PriceSetAssignmentPurchaseTypes.DEFAULT;
+            let n = v(e, a);
+            return null == n ? "" : (0, i.formatPrice)(null == n ? void 0 : n.amount, null == n ? void 0 : n.currency)
         },
         v = (e, t) => {
             var r, a, n;
             let l = null !== (n = e.prices[t]) && void 0 !== n ? n : null;
             return null == l ? null : null === (a = l.countryPrices) || void 0 === a ? void 0 : null === (r = a.prices) || void 0 === r ? void 0 : r[0]
         },
-        C = e => {
+        E = e => {
             var t;
             return (null === (t = v(e, s.PriceSetAssignmentPurchaseTypes.DEFAULT)) || void 0 === t ? void 0 : t.amount) === 0
         },
-        E = e => {
+        C = e => {
             let t = (0, a.flatMap)([...e.values()], "products");
             return (0, a.uniqBy)(t, "storeListingId")
         },
@@ -78,7 +80,7 @@ function(e, t, r) {
             }
         },
         T = (e, t) => {
-            let r = E(e);
+            let r = C(e);
             if (t === n.CollectiblesItemType.AVATAR_DECORATION) {
                 let e = (0, a.flatMap)(r, "items").filter(u.isAvatarDecorationRecord);
                 return (0, a.uniqBy)(e, "id")
@@ -89,9 +91,9 @@ function(e, t, r) {
             }
         },
         m = e => A(e, n.CollectiblesItemType.AVATAR_DECORATION),
-        g = e => T(e, n.CollectiblesItemType.AVATAR_DECORATION),
-        I = (e, t) => (0, a.uniqBy)([...m(e), ...g(t)], "id"),
-        P = (e, t) => {
+        I = e => T(e, n.CollectiblesItemType.AVATAR_DECORATION),
+        P = (e, t) => (0, a.uniqBy)([...m(e), ...I(t)], "id"),
+        g = (e, t) => {
             var r;
             let {
                 CDN_HOST: a,

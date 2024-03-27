@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return p
+            return m
         }
     });
     var i = n("37983");
@@ -16,13 +16,13 @@ function(e, t, n) {
         d = n("115279"),
         c = n("958706"),
         f = n("296323"),
-        p = e => {
+        m = e => {
             let {
                 accessory: t,
                 pickerIntention: n,
                 headerClassName: l,
-                emojiListRef: p,
-                onKeyDown: m,
+                emojiListRef: m,
+                onKeyDown: p,
                 onFocus: h,
                 autoFocus: x,
                 searchBarRef: E,
@@ -30,12 +30,12 @@ function(e, t, n) {
                 diversitySurrogate: g,
                 isBurstReaction: S,
                 onBurstReactionToggle: C,
-                renderHeader: _
-            } = e, T = (0, i.jsxs)(i.Fragment, {
+                renderHeader: T
+            } = e, _ = (0, i.jsxs)(i.Fragment, {
                 children: [(0, i.jsx)(u.default, {
-                    emojiListRef: p,
+                    emojiListRef: m,
                     gridNavigatorId: d.GRID_NAVIGATOR_ID,
-                    onKeyDown: m,
+                    onKeyDown: p,
                     className: f.searchBar,
                     ref: E,
                     isFullRow: n === c.EmojiIntention.COMMUNITY_CONTENT_ONLY,
@@ -57,7 +57,7 @@ function(e, t, n) {
             });
             return (0, i.jsx)("div", {
                 className: a(f.header, l),
-                children: null != _ ? _(T) : T
+                children: null != T ? T(_) : _
             })
         }
 }

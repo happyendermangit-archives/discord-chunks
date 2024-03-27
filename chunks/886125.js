@@ -16,8 +16,8 @@ function(e, t, n) {
         d = n("765089"),
         c = n("787336"),
         f = n("666897"),
-        p = n("844659"),
-        m = n("49111"),
+        m = n("844659"),
+        p = n("49111"),
         h = n("912303"),
         x = n("263218");
 
@@ -27,7 +27,7 @@ function(e, t, n) {
                 let y = E.noStyleAndInteraction ? void 0 : async n => {
                     let i = await (0, c.maybeRefreshAttachmentUrl)(t.attachmentUrl);
                     e.shouldStopPropagation && (null == n || n.stopPropagation()), d.default.trackLinkClicked(i), e.shouldCloseDefaultModals && (0, r.closeAllModals)(), (0, u.default)(i)
-                }, g = E.noStyleAndInteraction ? m.NOOP : e => {
+                }, g = E.noStyleAndInteraction ? p.NOOP : e => {
                     (0, o.openContextMenuLazy)(e, async () => {
                         let {
                             default: e
@@ -50,7 +50,7 @@ function(e, t, n) {
                         color: r.tokens.colors.MENTION_FOREGROUND,
                         width: 16,
                         height: 16
-                    }), (0, p.smartOutput)(t, l, E)]
+                    }), (0, m.smartOutput)(t, l, E)]
                 }, E.key)
             }
         }

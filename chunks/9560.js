@@ -28,14 +28,14 @@ function(e, t, n) {
             children: e => {
                 let {
                     onMouseEnter: r,
-                    onMouseLeave: p,
-                    onClick: m
+                    onMouseLeave: m,
+                    onClick: p
                 } = e;
                 return (0, i.jsx)(o.Button, {
                     onMouseEnter: r,
-                    onMouseLeave: p,
+                    onMouseLeave: m,
                     onClick: e => {
-                        e.stopPropagation(), null == m || m(), t(e)
+                        e.stopPropagation(), null == p || p(), t(e)
                     },
                     dangerous: d,
                     "aria-label": null != f ? f : a,

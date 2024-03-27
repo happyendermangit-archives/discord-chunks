@@ -8,7 +8,7 @@ function(e, t, n) {
             return C
         },
         useSpotifyJoinAction: function() {
-            return _
+            return T
         }
     }), n("222007");
     var i = n("884691"),
@@ -21,8 +21,8 @@ function(e, t, n) {
         d = n("662285"),
         c = n("782911"),
         f = n("629414"),
-        p = n("53887"),
-        m = n("486150"),
+        m = n("53887"),
+        p = n("486150"),
         h = n("555759"),
         x = n("450484");
     let E = 30 * o.default.Millis.SECOND;
@@ -50,7 +50,7 @@ function(e, t, n) {
     }
 
     function g(e, t) {
-        return (0, l.useStateFromStoresObject)([d.default, r.default], () => (0, p.default)(d.default, r.default, t, e), [e, t])
+        return (0, l.useStateFromStoresObject)([d.default, r.default], () => (0, m.default)(d.default, r.default, t, e), [e, t])
     }
 
     function S(e, t, n) {
@@ -65,7 +65,7 @@ function(e, t, n) {
                 startLoading: u,
                 clearLoading: d
             } = y(l),
-            p = i.useCallback(() => {
+            m = i.useCallback(() => {
                 u(), (0, h.default)(l, x.SpotifyActionTypes.USER_ACTIVITY_PLAY, n).catch(d)
             }, [l, n, u, d]);
         return {
@@ -73,7 +73,7 @@ function(e, t, n) {
             tooltip: (0, f.default)(l, x.SpotifyActionTypes.USER_ACTIVITY_PLAY),
             disabled: !o && (s || a || r),
             loading: o,
-            onClick: p,
+            onClick: m,
             spotifyData: l
         }
     }
@@ -87,24 +87,24 @@ function(e, t, n) {
                 isCurrentUser: d
             } = s,
             {
-                loading: p,
+                loading: m,
                 startLoading: h,
                 clearLoading: E
             } = y(s),
             S = i.useCallback(() => {
-                h(), (0, m.default)(s, x.SpotifyActionTypes.USER_ACTIVITY_SYNC, n).catch(E)
+                h(), (0, p.default)(s, x.SpotifyActionTypes.USER_ACTIVITY_SYNC, n).catch(E)
             }, [s, n, h, E]);
         return {
             label: (0, c.default)(s, x.SpotifyActionTypes.USER_ACTIVITY_SYNC),
             tooltip: (0, f.default)(s, x.SpotifyActionTypes.USER_ACTIVITY_SYNC, a),
-            disabled: !p && (d || r || o),
-            loading: p,
+            disabled: !m && (d || r || o),
+            loading: m,
             onClick: S,
             spotifyData: s
         }
     }
 
-    function _(e, t, n) {
+    function T(e, t, n) {
         let l = g(e, t),
             {
                 notPlayable: a,
@@ -115,11 +115,11 @@ function(e, t, n) {
             {
                 loading: u,
                 startLoading: d,
-                clearLoading: p
+                clearLoading: m
             } = y(l),
             h = i.useCallback(() => {
-                d(), (0, m.default)(l, x.SpotifyActionTypes.EMBED_SYNC, n).catch(p)
-            }, [l, n, d, p]);
+                d(), (0, p.default)(l, x.SpotifyActionTypes.EMBED_SYNC, n).catch(m)
+            }, [l, n, d, m]);
         return {
             label: (0, c.default)(l, x.SpotifyActionTypes.EMBED_SYNC),
             tooltip: (0, f.default)(l, x.SpotifyActionTypes.EMBED_SYNC),

@@ -18,8 +18,8 @@ function(e, t, n) {
         d = n("526409"),
         c = n("407462"),
         f = n("78512"),
-        p = n("49111"),
-        m = n("782340");
+        m = n("49111"),
+        p = n("782340");
     let h = async e => {
         let {
             reaction: t,
@@ -54,8 +54,8 @@ function(e, t, n) {
             theme: s
         } = (0, f.getProfileInfo)(a, "black"), r = "dark" === s, d = (0, f.getActivityPlatform)(i), {
             assets: c,
-            application_id: m
-        } = i, h = (0, o.getAssetImage)(m, null == c ? void 0 : c.large_image, 64), x = null == l ? void 0 : l.getIconURL(64), E = null != d ? r ? d.icon.darkPNG : d.icon.lightPNG : i.type === p.ActivityTypes.PLAYING ? r ? n("944857") : n("248073") : null, y = i.type === p.ActivityTypes.HANG_STATUS && (null === (t = i.emoji) || void 0 === t ? void 0 : t.id) != null ? (0, u.getEmojiUrl)({
+            application_id: p
+        } = i, h = (0, o.getAssetImage)(p, null == c ? void 0 : c.large_image, 64), x = null == l ? void 0 : l.getIconURL(64), E = null != d ? r ? d.icon.darkPNG : d.icon.lightPNG : i.type === m.ActivityTypes.PLAYING ? r ? n("944857") : n("248073") : null, y = i.type === m.ActivityTypes.HANG_STATUS && (null === (t = i.emoji) || void 0 === t ? void 0 : t.id) != null ? (0, u.getEmojiUrl)({
             id: i.emoji.id,
             name: i.emoji.name,
             animated: !1
@@ -91,7 +91,7 @@ function(e, t, n) {
                 var r;
                 e.setFont({
                     truncate: s.TextTruncationMethod.Truncate
-                }), null != u ? I(e, n, t) : (0, a.default)(n) ? C(e, n, t) : (0, l.default)(n) && n.name === i.default.get(p.PlatformTypes.LEAGUE_OF_LEGENDS).name ? T(e, n, t) : n.type === p.ActivityTypes.HANG_STATUS ? _(e, n, t) : S(e, n, t), (null === (r = e.assetMap) || void 0 === r ? void 0 : r.has("Platform")) && e.drawImage("Platform", {
+                }), null != u ? I(e, n, t) : (0, a.default)(n) ? C(e, n, t) : (0, l.default)(n) && n.name === i.default.get(m.PlatformTypes.LEAGUE_OF_LEGENDS).name ? _(e, n, t) : n.type === m.ActivityTypes.HANG_STATUS ? T(e, n, t) : S(e, n, t), (null === (r = e.assetMap) || void 0 === r ? void 0 : r.has("Platform")) && e.drawImage("Platform", {
                     x: c.canvasWidth - c.padding - c.platformSize,
                     y: c.padding
                 }, {
@@ -203,7 +203,7 @@ function(e, t, n) {
             x: r,
             y: c.fontPadding + 2 * c.lineHeight
         }, !0)
-    }, _ = (e, t, i) => {
+    }, T = (e, t, i) => {
         var l, a;
         e.setSize({
             w: c.canvasWidth,
@@ -235,7 +235,7 @@ function(e, t, n) {
             size: 14,
             family: '"gg sans", sans-serif',
             weight: 700
-        }), e.drawText(m.default.Messages.STATUS_LEAD_IN_JUST, {
+        }), e.drawText(p.default.Messages.STATUS_LEAD_IN_JUST, {
             x: o,
             y: c.fontPadding + 1 * c.lineHeight,
             w: (null === (a = e.assetMap) || void 0 === a ? void 0 : a.has(c.AssetTypes.Platform)) ? c.titleMaxWidthPlatform : c.titleMaxWidthNoPlatform
@@ -252,7 +252,7 @@ function(e, t, n) {
             x: o,
             y: c.fontPadding + 2 * c.lineHeight
         }, !0)
-    }, T = (e, t, n) => {
+    }, _ = (e, t, n) => {
         var i;
         e.setSize({
             w: c.canvasWidth,

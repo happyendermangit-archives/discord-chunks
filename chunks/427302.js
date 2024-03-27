@@ -15,8 +15,8 @@ function(e, t, n) {
         d = n("506885"),
         c = n("340906"),
         f = n("145131"),
-        p = n("49111"),
-        m = n("260486");
+        m = n("49111"),
+        p = n("260486");
     class h extends l.Component {
         render() {
             let {
@@ -29,7 +29,7 @@ function(e, t, n) {
             } = this.props, s = {
                 location: {
                     ...n.location,
-                    object: p.AnalyticsObjects.LIST_ITEM
+                    object: m.AnalyticsObjects.LIST_ITEM
                 }
             };
             return (0, i.jsx)(r.Popout, {
@@ -75,30 +75,30 @@ function(e, t, n) {
                     status: u,
                     textClassName: d,
                     nick: c,
-                    guildId: p
+                    guildId: m
                 } = this.props;
                 return (0, i.jsxs)(f.default, {
                     align: f.default.Align.CENTER,
-                    className: s(m.memberListItem, t, {
-                        [m.popoutDisabled]: n
+                    className: s(p.memberListItem, t, {
+                        [p.popoutDisabled]: n
                     }),
                     onContextMenu: l,
                     onMouseDown: e.onMouseDown,
                     onKeyDown: e.onKeyDown,
                     onClick: this.handleClickUser,
                     children: [(0, i.jsx)(r.Avatar, {
-                        src: a.getAvatarURL(p, 24),
-                        className: m.avatar,
+                        src: a.getAvatarURL(m, 24),
+                        className: p.avatar,
                         "aria-label": a.username,
                         size: r.AvatarSizes.SIZE_24,
                         status: u
                     }), (0, i.jsx)(r.Text, {
-                        className: s(m.memberListItemTag, d),
+                        className: s(p.memberListItemTag, d),
                         variant: "text-sm/normal",
                         children: (0, i.jsx)(o.default, {
                             user: a,
                             nick: c,
-                            usernameClass: m.username,
+                            usernameClass: p.username,
                             hideDiscriminator: !0
                         })
                     })]

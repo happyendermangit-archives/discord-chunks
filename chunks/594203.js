@@ -25,9 +25,9 @@ function(e, t, n) {
             throttleDuration: d = 300,
             orientation: c,
             usePointerEvents: f = !1
-        } = e, [p, m] = r.useState(!1), h = r.useRef(0), x = r.useRef(null == t ? 0 : t);
+        } = e, [m, p] = r.useState(!1), h = r.useRef(0), x = r.useRef(null == t ? 0 : t);
         return r.useLayoutEffect(() => {
-            if (!p || null == n.current) return;
+            if (!m || null == n.current) return;
 
             function e(e) {
                 let t = 1 === u(c) ? e.screenX : e.screenY,
@@ -44,7 +44,7 @@ function(e, t, n) {
                     n.current.style[a] = "".concat(l, "px"), t(l)
                 },
                 E = t => {
-                    m(!1);
+                    p(!1);
                     let n = e(t);
                     a(n), null == s || s(n)
                 },
@@ -54,9 +54,9 @@ function(e, t, n) {
             return S.addEventListener(y, E), S.addEventListener(g, r), () => {
                 S.removeEventListener(y, E), S.removeEventListener(g, r), t.cancel()
             }
-        }, [p, a, l, i, c, n, d, s, f]), r.useCallback(e => {
+        }, [m, a, l, i, c, n, d, s, f]), r.useCallback(e => {
             let t = 1 === u(c);
-            null != n.current && (x.current = t ? n.current.offsetWidth : n.current.offsetHeight), h.current = t ? e.screenX : e.screenY, m(!0)
+            null != n.current && (x.current = t ? n.current.offsetWidth : n.current.offsetHeight), h.current = t ? e.screenX : e.screenY, p(!0)
         }, [c, n])
     }
 }

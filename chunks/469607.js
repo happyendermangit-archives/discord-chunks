@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return T
+            return _
         }
     }), n("424973"), n("222007");
     var i = n("917351"),
@@ -15,8 +15,8 @@ function(e, t, n) {
         d = n("374363"),
         c = n("697218"),
         f = n("880342"),
-        p = n("235004"),
-        m = n("389480"),
+        m = n("235004"),
+        p = n("389480"),
         h = n("846325"),
         x = n("397336");
     let E = [],
@@ -29,7 +29,7 @@ function(e, t, n) {
                 let t = 0;
                 return e <= 3 ? t = 100 : e <= 15 ? t = 70 : e <= 30 ? t = 50 : e <= 45 ? t = 30 : e <= 80 && (t = 10), t
             },
-            lookupKey: e => p.default.getSoundById(e),
+            lookupKey: e => m.default.getSoundById(e),
             afterCompute: () => {},
             numFrequentlyItems: h.NUM_FREQUENTLY_USED_SOUNDS
         });
@@ -50,9 +50,9 @@ function(e, t, n) {
             autoTrackExposure: !1
         }).canSeeFrequentlyPlayed
     }
-    class _ extends r.default.PersistedStore {
+    class T extends r.default.PersistedStore {
         initialize(e) {
-            this.waitFor(c.default, p.default), (null == e ? void 0 : e.recentlyHeardCache) != null && y.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (E = e.playedEventsPendingFlush), this.syncWith([d.default], S)
+            this.waitFor(c.default, m.default), (null == e ? void 0 : e.recentlyHeardCache) != null && y.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (E = e.playedEventsPendingFlush), this.syncWith([d.default], S)
         }
         getState() {
             return {
@@ -73,8 +73,8 @@ function(e, t, n) {
             return g.frequently
         }
     }
-    _.displayName = "SoundboardEventStore", _.persistKey = "SoundboardEventStore";
-    var T = new _(o.default, {
+    T.displayName = "SoundboardEventStore", T.persistKey = "SoundboardEventStore";
+    var _ = new T(o.default, {
         GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY: function(e) {
             let {
                 sound: t,
@@ -82,7 +82,7 @@ function(e, t, n) {
             } = e;
             if (!C()) return;
             let i = t.soundId.toString();
-            n === m.LocalSoundTrigger.SOUNDBOARD && function(e) {
+            n === p.LocalSoundTrigger.SOUNDBOARD && function(e) {
                 g.track(e), E.push({
                     key: e,
                     timestamp: Date.now()
@@ -104,7 +104,7 @@ function(e, t, n) {
             let l = n.toString(),
                 a = null === (t = c.default.getCurrentUser()) || void 0 === t ? void 0 : t.id;
             i !== a && function(e) {
-                let t = p.default.getSounds();
+                let t = m.default.getSounds();
                 for (let n of t.values()) {
                     let t = n.find(t => t.soundId.toString() === e);
                     if (null != t) return !0

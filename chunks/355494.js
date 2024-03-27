@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return _
+            return T
         }
     });
     var i = n("37983"),
@@ -15,8 +15,8 @@ function(e, t, n) {
         d = n("151185"),
         c = n("159885"),
         f = n("364685"),
-        p = n("161585"),
-        m = n("24373"),
+        m = n("161585"),
+        p = n("24373"),
         h = n("41170"),
         x = n("782340"),
         E = n("498563");
@@ -25,20 +25,20 @@ function(e, t, n) {
         S = e => {
             let t = null,
                 n = null;
-            if (!(0, m.isStandardSticker)(e) && !(0, m.isGuildSticker)(e) || (0, m.isGuildSticker)(e)) {
+            if (!(0, p.isStandardSticker)(e) && !(0, p.isGuildSticker)(e) || (0, p.isGuildSticker)(e)) {
                 let l = u.default.getGuild(e.guild_id);
                 null != l && (t = x.default.Messages.STICKER_FROM_SOURCE.format({
                     source: l.name
                 }), n = (0, i.jsx)(s.default, {
                     guild: l
                 }))
-            } else if ((0, m.isStandardSticker)(e)) {
+            } else if ((0, p.isStandardSticker)(e)) {
                 let l = f.default.getStickerPack(e.pack_id);
                 null != l && (t = x.default.Messages.STICKER_FROM_SOURCE.format({
                     source: l.name
                 }), n = (0, i.jsx)(h.default, {
                     size: g,
-                    sticker: (0, m.getStickerPackPreviewSticker)(l),
+                    sticker: (0, p.getStickerPackPreviewSticker)(l),
                     disableAnimation: !0
                 }))
             }
@@ -56,16 +56,16 @@ function(e, t, n) {
                     rowIndex: i,
                     columnIndex: l
                 } = n, a = null === (e = t[i]) || void 0 === e ? void 0 : e[l];
-                return (null == a ? void 0 : a.type) === p.StickerGridItemTypes.CREATE_STICKER ? {
+                return (null == a ? void 0 : a.type) === m.StickerGridItemTypes.CREATE_STICKER ? {
                     guild_id: a.guild_id,
                     name: a.name
-                } : (null == a ? void 0 : a.type) !== p.StickerGridItemTypes.STICKER ? null : a.sticker
+                } : (null == a ? void 0 : a.type) !== m.StickerGridItemTypes.STICKER ? null : a.sticker
             }, [t, n]);
             if (null == a) return null;
             let {
                 graphic: s,
                 title: u
-            } = S(a), c = (0, m.isStandardSticker)(a) || (0, m.isGuildSticker)(a) ? (0, i.jsx)(h.default, {
+            } = S(a), c = (0, p.isStandardSticker)(a) || (0, p.isGuildSticker)(a) ? (0, i.jsx)(h.default, {
                 isInteracting: !0,
                 size: y,
                 sticker: a,
@@ -80,8 +80,8 @@ function(e, t, n) {
                 graphicPrimary: c,
                 graphicSecondary: s,
                 titlePrimary: a.name,
-                titleSecondary: (0, m.isStandardSticker)(a) || (0, m.isGuildSticker)(a) ? u : null
+                titleSecondary: (0, p.isStandardSticker)(a) || (0, p.isGuildSticker)(a) ? u : null
             })
         });
-    var _ = C
+    var T = C
 }

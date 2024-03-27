@@ -21,8 +21,8 @@ function(e, t, n) {
         d = n("77078"),
         c = n("206230"),
         f = n("524768"),
-        p = n("596182"),
-        m = n("41884"),
+        m = n("596182"),
+        p = n("41884"),
         h = n("679653"),
         x = n("419830"),
         E = n("404345"),
@@ -30,12 +30,12 @@ function(e, t, n) {
         g = n("24373"),
         S = n("305961"),
         C = n("27618"),
-        _ = n("697218"),
-        T = n("158998"),
+        T = n("697218"),
+        _ = n("158998"),
         I = n("563911"),
         v = n("346955"),
-        N = n("548775"),
-        A = n("49111"),
+        A = n("548775"),
+        N = n("49111"),
         R = n("782340"),
         O = n("723199");
 
@@ -218,12 +218,12 @@ function(e, t, n) {
                     })
                 }), (0, i.jsx)(I.AutocompleteRowContentPrimary, {
                     children: (0, i.jsx)(I.AutocompleteRowHeading, {
-                        children: null != t ? t : T.default.getName(e)
+                        children: null != t ? t : _.default.getName(e)
                     })
                 }), (0, i.jsxs)(I.AutocompleteRowContentSecondary, {
                     children: [(0, i.jsx)("span", {
                         className: O.descriptionUsername,
-                        children: T.default.getUserTag(e, {
+                        children: _.default.getUserTag(e, {
                             mode: "username",
                             identifiable: l ? "never" : "always"
                         })
@@ -266,7 +266,7 @@ function(e, t, n) {
             let {
                 channel: e,
                 category: t
-            } = this.props, n = e.type === A.ChannelTypes.GUILD_CATEGORY ? v.default : (0, x.getChannelIconComponent)(e);
+            } = this.props, n = e.type === N.ChannelTypes.GUILD_CATEGORY ? v.default : (0, x.getChannelIconComponent)(e);
             return (0, i.jsxs)(I.AutocompleteRowContent, {
                 children: [null != n && (0, i.jsx)(I.AutocompleteRowIcon, {
                     children: (0, i.jsx)(n, {
@@ -274,7 +274,7 @@ function(e, t, n) {
                     })
                 }), (0, i.jsx)(I.AutocompleteRowContentPrimary, {
                     children: (0, i.jsx)(I.AutocompleteRowHeading, {
-                        children: (0, h.computeChannelName)(e, _.default, C.default)
+                        children: (0, h.computeChannelName)(e, T.default, C.default)
                     })
                 }), null != t ? (0, i.jsx)(I.AutocompleteRowContentSecondary, {
                     children: t.name
@@ -288,7 +288,7 @@ function(e, t, n) {
             } = this.props;
             return (0, i.jsxs)(I.AutocompleteRowContent, {
                 children: [(0, i.jsx)(I.AutocompleteRowIcon, {
-                    children: (0, i.jsx)(N.default, {
+                    children: (0, i.jsx)(A.default, {
                         className: O.icon,
                         foreground: O.iconForeground
                     })
@@ -315,7 +315,7 @@ function(e, t, n) {
             } = this.props, {
                 hovered: s
             } = this.state, r = this.isSelectable();
-            return e.inputType === f.ApplicationCommandInputType.PLACEHOLDER ? (0, i.jsx)(m.default, {}) : (0, i.jsx)(p.default, {
+            return e.inputType === f.ApplicationCommandInputType.PLACEHOLDER ? (0, i.jsx)(p.default, {}) : (0, i.jsx)(m.default, {
                 command: e,
                 channel: t,
                 showImage: n,

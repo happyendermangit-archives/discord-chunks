@@ -19,8 +19,8 @@ function(e, t, n) {
             state: c,
             onFocus: f
         } = e, {
-            renderWindow: p
-        } = i.useContext(s.default), m = (e, t) => {
+            renderWindow: m
+        } = i.useContext(s.default), p = (e, t) => {
             var n;
             if (null === (n = d.current) || void 0 === n || n.scrollToTop(), e && null != c.query) {
                 let e = c.query.typeInfo.focusMode,
@@ -39,7 +39,7 @@ function(e, t, n) {
             orientation: a.Orientations.VERTICAL,
             useVirtualFocus: !0,
             setFocus: (e, t) => {
-                let n = p.document.querySelector(e);
+                let n = m.document.querySelector(e);
                 if (null != n) {
                     var i;
                     null === (i = d.current) || void 0 === i || i.scrollIntoViewNode({
@@ -48,13 +48,13 @@ function(e, t, n) {
                 }
                 null == f || f(+t)
             },
-            onNavigateNextAtEnd: () => m(!0),
+            onNavigateNextAtEnd: () => p(!0),
             onNavigatePreviousAtStart: () => h(!0),
-            scrollToStart: () => (m(!1, !1), Promise.resolve()),
+            scrollToStart: () => (p(!1, !1), Promise.resolve()),
             scrollToEnd: () => (h(!1), Promise.resolve())
         });
         return i.useEffect(() => {
-            m(!0, !0)
+            p(!0, !0)
         }, [null === (t = c.query) || void 0 === t ? void 0 : t.type, null === (n = c.query) || void 0 === n ? void 0 : n.queryText, null === (o = c.query) || void 0 === o ? void 0 : o.isLoading, c.isVisible]), x
     }
 }

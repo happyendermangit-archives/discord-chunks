@@ -5,10 +5,10 @@ function(e, t, n) {
             return C
         },
         trackUserProfileActivityJoined: function() {
-            return _
+            return T
         },
         trackUserProfileBadgePressed: function() {
-            return T
+            return _
         }
     }), n("424973");
     var i = n("716241"),
@@ -21,8 +21,8 @@ function(e, t, n) {
         d = n("315102"),
         c = n("713135"),
         f = n("217513"),
-        p = n("590456"),
-        m = n("49111"),
+        m = n("590456"),
+        p = n("49111"),
         h = n("843455");
     let x = e => {
             let {
@@ -31,22 +31,22 @@ function(e, t, n) {
                 guildMember: i,
                 guildMemberProfile: l
             } = e, a = null != n ? n : l, s = [];
-            if ((null == i ? void 0 : i.nick) && s.push(p.TrackUserProfileProperties.NICKNAME), (null == a ? void 0 : a.pronouns) && s.push(p.TrackUserProfileProperties.PRONOUNS), null == t ? void 0 : t.avatar) {
+            if ((null == i ? void 0 : i.nick) && s.push(m.TrackUserProfileProperties.NICKNAME), (null == a ? void 0 : a.pronouns) && s.push(m.TrackUserProfileProperties.PRONOUNS), null == t ? void 0 : t.avatar) {
                 let e = (0, d.isAnimatedIconHash)(null == t ? void 0 : t.avatar);
-                s.push(e ? p.TrackUserProfileProperties.ANIMATED_AVATAR : p.TrackUserProfileProperties.AVATAR)
+                s.push(e ? m.TrackUserProfileProperties.ANIMATED_AVATAR : m.TrackUserProfileProperties.AVATAR)
             }
             if (null == a ? void 0 : a.banner) {
                 let e = (0, d.isAnimatedIconHash)(null == a ? void 0 : a.banner);
-                s.push(e ? p.TrackUserProfileProperties.ANIMATED_BANNER : p.TrackUserProfileProperties.BANNER)
+                s.push(e ? m.TrackUserProfileProperties.ANIMATED_BANNER : m.TrackUserProfileProperties.BANNER)
             }
-            return (null == a ? void 0 : a.bio) && s.push(p.TrackUserProfileProperties.BIO), (null == a ? void 0 : a.themeColors) != null && void 0 !== a.themeColors.find(e => null !== e) && s.push(p.TrackUserProfileProperties.THEME), (null == t ? void 0 : t.avatarDecoration) != null && s.push(p.TrackUserProfileProperties.AVATAR_DECORATION), (null == a ? void 0 : a.profileEffectId) != null && s.push(p.TrackUserProfileProperties.PROFILE_EFFECT), s
+            return (null == a ? void 0 : a.bio) && s.push(m.TrackUserProfileProperties.BIO), (null == a ? void 0 : a.themeColors) != null && void 0 !== a.themeColors.find(e => null !== e) && s.push(m.TrackUserProfileProperties.THEME), (null == t ? void 0 : t.avatarDecoration) != null && s.push(m.TrackUserProfileProperties.AVATAR_DECORATION), (null == a ? void 0 : a.profileEffectId) != null && s.push(m.TrackUserProfileProperties.PROFILE_EFFECT), s
         },
         E = e => {
             let t = a.default.getStatus(e),
                 n = a.default.isMobileOnline(e);
             return t === h.StatusTypes.ONLINE && n ? "".concat(t, "-mobile") : t === h.StatusTypes.ONLINE ? "".concat(t, "-desktop") : t
         },
-        y = e => "string" == typeof e || null == e ? e : Object.keys(m.ActivityTypes)[Object.values(m.ActivityTypes).indexOf(e)],
+        y = e => "string" == typeof e || null == e ? e : Object.keys(p.ActivityTypes)[Object.values(p.ActivityTypes).indexOf(e)],
         g = e => {
             var t, n;
             let {
@@ -107,7 +107,7 @@ function(e, t, n) {
                 action: d,
                 section: c
             } = e;
-            u.default.track(m.AnalyticEvents.USER_PROFILE_ACTION, {
+            u.default.track(p.AnalyticEvents.USER_PROFILE_ACTION, {
                 ...(0, i.collectGuildAnalyticsMetadata)(n),
                 ...(0, i.collectChannelAnalyticsMetadataFromId)(l),
                 ...g({
@@ -123,7 +123,7 @@ function(e, t, n) {
                 source_role_id: s
             })
         },
-        _ = e => {
+        T = e => {
             let {
                 userId: t,
                 guildId: n,
@@ -134,7 +134,7 @@ function(e, t, n) {
                 applicationId: o,
                 voiceChannelId: d
             } = e;
-            u.default.track(m.AnalyticEvents.USER_PROFILE_ACTIVITY_JOINED, {
+            u.default.track(p.AnalyticEvents.USER_PROFILE_ACTIVITY_JOINED, {
                 ...(0, i.collectGuildAnalyticsMetadata)(n),
                 ...(0, i.collectChannelAnalyticsMetadataFromId)(l),
                 ...g({
@@ -149,7 +149,7 @@ function(e, t, n) {
                 voice_channel_id: d
             })
         },
-        T = e => {
+        _ = e => {
             let {
                 userId: t,
                 guildId: n,
@@ -158,7 +158,7 @@ function(e, t, n) {
                 layout: s,
                 badge: r
             } = e;
-            u.default.track(m.AnalyticEvents.USER_PROFILE_BADGE_PRESSED, {
+            u.default.track(p.AnalyticEvents.USER_PROFILE_BADGE_PRESSED, {
                 ...(0, i.collectGuildAnalyticsMetadata)(n),
                 ...(0, i.collectChannelAnalyticsMetadataFromId)(l),
                 ...g({

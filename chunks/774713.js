@@ -21,15 +21,15 @@ function(e, t, n) {
                 channelId: n,
                 color: l,
                 look: f,
-                isProfile: p
-            } = e, m = (0, s.useStateFromStores)([o.default], () => o.default.isInChannel(n), [n]);
+                isProfile: m
+            } = e, p = (0, s.useStateFromStores)([o.default], () => o.default.isInChannel(n), [n]);
             return (0, i.jsx)(u.default, {
                 className: a(c.button, {
-                    [c.popout]: !p
+                    [c.popout]: !m
                 }),
                 color: l,
                 look: f,
-                disabled: m,
+                disabled: p,
                 onClick: () => r.connectOrLurkStage(t, n),
                 fullWidth: !0,
                 children: d.default.Messages.STAGE_CHANNEL_JOIN_BUTTON

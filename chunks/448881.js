@@ -11,10 +11,10 @@ function(e, t, n) {
             return f
         },
         claimQuestRewardCode: function() {
-            return p
+            return m
         },
         fetchQuestRewardCode: function() {
-            return m
+            return p
         },
         dismissQuestContent: function() {
             return h
@@ -98,7 +98,11 @@ function(e, t, n) {
         }
     }
     async function f(e, t) {
-        null != t.questContentCTA && (0, s.trackQuestContentClicked)(e, t.questContent, t.questContentCTA);
+        null != t.questContentCTA && (0, s.trackQuestContentClicked)({
+            questId: e,
+            questContent: t.questContent,
+            questContentCTA: t.questContentCTA
+        });
         let n = r.default.isEnrolling(e);
         if (!n) {
             l.default.dispatch({
@@ -124,7 +128,7 @@ function(e, t, n) {
             }
         }
     }
-    async function p(e, t, n) {
+    async function m(e, t, n) {
         let s = r.default.isClaimingRewardCode(e);
         if (!s) {
             l.default.dispatch({
@@ -153,7 +157,7 @@ function(e, t, n) {
             }
         }
     }
-    async function m(e) {
+    async function p(e) {
         let t = r.default.isFetchingRewardCode(e);
         if (!t) {
             l.default.dispatch({
