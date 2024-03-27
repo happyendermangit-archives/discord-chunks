@@ -31,7 +31,7 @@ function(e, t, n) {
         let a = c.default.getApplicationIconURL({
             id: n.id,
             icon: n.icon,
-            size: 48
+            size: 40
         });
         return (0, i.jsxs)("div", {
             className: f.recentGameContainer,
@@ -39,8 +39,8 @@ function(e, t, n) {
                 alt: "",
                 "aria-hidden": !0,
                 src: a,
-                width: 48,
-                height: 48
+                width: 40,
+                height: 40
             }), (0, i.jsxs)("div", {
                 className: f.recentGameTextContainer,
                 children: [(0, i.jsx)(l.Heading, {

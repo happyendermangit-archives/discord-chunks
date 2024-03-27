@@ -65,28 +65,30 @@ function(e, t, n) {
                 children: () => d
             })
         }),
-        O = e => {
+        O = r.forwardRef(function(e, t) {
             let {
-                placeholder: t,
-                onEnter: n,
-                setEditorRef: s,
-                showEmojiButton: a = !1
-            } = e, [o, l] = r.useState(""), [u, E] = r.useState((0, _.toRichValue)("")), I = d.ChatInputTypes.ATOMIC_REACTOR_REPLY_INPUT;
-            return a && (I.emojis = {
+                placeholder: n,
+                onEnter: s,
+                setEditorRef: a,
+                showEmojiButton: o = !1,
+                autoCompletePosition: l
+            } = e, [u, E] = r.useState(""), [I, T] = r.useState((0, _.toRichValue)("")), S = d.ChatInputTypes.ATOMIC_REACTOR_REPLY_INPUT;
+            return o && (S.emojis = {
                 button: !0
             }), (0, i.jsx)(c.default, {
-                placeholder: t,
+                ref: t,
+                placeholder: n,
                 className: A.replyInput,
                 showRemainingCharsAfterCount: -1,
                 allowNewLines: !1,
                 maxCharacterCount: f.MAX_CHAR_COUNT,
                 channel: m,
                 onChange: (e, t, n) => {
-                    l(t), E(n)
+                    E(t), T(n)
                 },
-                type: I,
-                textValue: o,
-                richValue: u,
+                type: S,
+                textValue: u,
+                richValue: I,
                 onSubmit: e => {
                     let {
                         value: t
@@ -94,18 +96,19 @@ function(e, t, n) {
                     return t.length > f.MAX_CHAR_COUNT ? Promise.resolve({
                         shouldClear: !1,
                         shouldRefocus: !0
-                    }) : (n(t), Promise.resolve({
+                    }) : (s(t), Promise.resolve({
                         shouldClear: !0,
                         shouldRefocus: !1
                     }))
                 },
-                setEditorRef: s,
+                setEditorRef: a,
                 focused: !0,
                 disableThemedBackground: !0,
                 emojiPickerCloseOnModalOuterClick: !0,
-                disabled: !1
+                disabled: !1,
+                autoCompletePosition: l
             })
-        },
+        }),
         p = (e, t) => {
             r.useEffect(() => {
                 let n = t => {

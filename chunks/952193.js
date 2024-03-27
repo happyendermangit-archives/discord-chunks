@@ -6,5 +6,5 @@ function(e, t, n) {
         }
     }), n("47120");
     var i = n("524437");
-    let r = new Set([i.DismissibleContent.AUTH_SESSIONS_NEW, i.DismissibleContent.CHANNEL_NOTICE_CLYDE_NUX, i.DismissibleContent.CHANNEL_NOTICE_QUICKSWITCHER, i.DismissibleContent.NAGBAR_NOTICE_MFA_SMS_BACKUP, i.DismissibleContent.NAGBAR_NOTICE_POMELO, i.DismissibleContent.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP])
+    let r = new Set([i.DismissibleContent.AUTH_SESSIONS_NEW, i.DismissibleContent.CHANNEL_NOTICE_CLYDE_NUX, i.DismissibleContent.CHANNEL_NOTICE_QUICKSWITCHER, i.DismissibleContent.NAGBAR_NOTICE_MFA_SMS_BACKUP, i.DismissibleContent.NAGBAR_NOTICE_POMELO, i.DismissibleContent.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP, i.DismissibleContent.SEEN_OLD_DESIGN, i.DismissibleContent.SEEN_LAUNCH_WELCOME])
 }
