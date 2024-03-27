@@ -195,6 +195,14 @@ function(e, t, n) {
                     null != e.application && T(u.default.createFromServer(e.application))
                 })
             })(e))
+        },
+        USER_RECENT_GAMES_FETCH_SUCCESS: function(e) {
+            let {
+                recentGames: t
+            } = e;
+            t.forEach(e => {
+                T(u.default.createFromServer(e.application))
+            })
         }
     })
 }

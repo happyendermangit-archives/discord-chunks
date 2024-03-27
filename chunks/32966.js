@@ -2,43 +2,50 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useUserRecentGames: function() {
-            return l
+            return d
         }
     });
     var i = n("470079"),
         r = n("442837"),
-        s = n("454175"),
-        a = n("385845"),
-        o = n("201819");
+        s = n("695346"),
+        a = n("314897"),
+        o = n("454175"),
+        l = n("385845"),
+        u = n("201819");
 
-    function l(e) {
-        let t = (0, o.useIsUserRecentGamesFetchEnabled)(e),
+    function d(e) {
+        let t = (0, u.useIsUserRecentGamesFetchEnabled)({
+                userId: e,
+                location: "28tk0bf_4"
+            }),
             n = i.useRef(new AbortController),
             {
-                recentGames: l,
-                isFetching: u,
-                hasError: d
-            } = (0, r.useStateFromStoresObject)([a.default], () => ({
-                recentGames: a.default.getRecentGames(e),
-                isFetching: a.default.isFetching(e),
-                hasError: a.default.hasError(e)
+                recentGames: d,
+                isFetching: _,
+                hasError: c
+            } = (0, r.useStateFromStoresObject)([l.default], () => ({
+                recentGames: l.default.getRecentGames(e),
+                isFetching: l.default.isFetching(e),
+                hasError: l.default.hasError(e)
             })),
-            _ = i.useCallback(async () => {
-                if (t && !u && !d) try {
-                    await s.default.fetchUserRecentGames(e, n.current.signal)
-                } catch (e) {}
-            }, [d, t, u, e]);
+            E = i.useCallback(async () => {
+                if (!!t && !_ && !c) {
+                    if (e !== a.default.getId() || s.RecentGamesEnabled.getSetting()) try {
+                        await o.default.fetchUserRecentGames(e, n.current.signal)
+                    } catch (e) {}
+                }
+            }, [c, t, _, e]);
         return i.useEffect(() => {
-            _()
-        }, [_]), i.useEffect(() => {
+            E()
+        }, [E]), i.useEffect(() => {
             let e = n.current;
             return () => {
                 null == e || e.abort()
             }
         }, []), {
-            hasError: d,
-            recentGames: l,
-            isFetching: u
+            hasError: c,
+            recentGames: d,
+            isFetching: _
         }
     }
 }

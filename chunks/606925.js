@@ -8,7 +8,7 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("442837"),
-        s = n("202120"),
+        s = n("231757"),
         a = n("553795"),
         o = n("915863"),
         l = n("689938"),
@@ -21,7 +21,10 @@ function(e, t, n) {
             platform: d
         } = e;
         return (0, r.useStateFromStores)([a.default], () => a.default.getAccounts().some(e => e.type === d.type)) ? null : (0, i.jsx)(o.default, {
-            onClick: () => (0, s.default)(d.type, "Activity Action"),
+            onClick: () => (0, s.default)({
+                platformType: d.type,
+                location: "Activity Action"
+            }),
             color: t,
             look: n,
             fullWidth: !0,

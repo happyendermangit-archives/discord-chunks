@@ -97,7 +97,10 @@ function(e, t, n) {
                 location: u.default.PROFILE_POPOUT,
                 disable: ef
             }),
-            eh = (0, d.useIsUserRecentGamesFetchEnabled)(j.id);
+            eh = (0, d.useIsUserRecentGamesFetchEnabled)({
+                userId: j.id,
+                location: "28tk0bf_3"
+            });
         if (j.isSystemUser()) return null;
         if (j.isNonUserBot()) return (0, i.jsx)(k.default, {
             user: j,
@@ -152,8 +155,8 @@ function(e, t, n) {
                         userId: j.id,
                         guild: K,
                         guildMember: z
-                    }), eh && (0, i.jsx)(O.default, {
-                        user: j
+                    }), eh && (0, i.jsx)(O.UserProfileRecentGamesSection, {
+                        userId: j.id
                     }), eo && ea && (0, i.jsx)(B.default, {
                         voiceChannel: er.voiceChannel,
                         voiceGuild: er.voiceGuild,

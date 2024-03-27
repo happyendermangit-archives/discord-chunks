@@ -2,20 +2,25 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useIsUserRecentGamesFetchEnabled: function() {
-            return a
+            return l
         }
     });
     var i = n("442837"),
-        r = n("594174"),
-        s = n("602992");
+        r = n("695346"),
+        s = n("314897"),
+        a = n("594174"),
+        o = n("602992");
 
-    function a(e) {
-        let t = (0, i.useStateFromStores)([r.default], () => {
-            let t = r.default.getUser(e);
-            return null != t && !t.bot
-        });
-        return (0, s.useUserIsRecentGamesExperimentApiEnabled)({
-            location: "28tk0bf_1"
-        }) && t
+    function l(e) {
+        let {
+            userId: t,
+            location: n
+        } = e, l = (0, i.useStateFromStores)([a.default], () => {
+            let e = a.default.getUser(t);
+            return null != e && !e.bot
+        }), u = r.RecentGamesEnabled.useSetting(), d = s.default.getId() === t ? l && u : l;
+        return (0, o.useUserIsRecentGamesExperimentApiEnabled)({
+            location: n
+        }) && d
     }
 }
