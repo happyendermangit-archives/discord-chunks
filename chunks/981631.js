@@ -1459,6 +1459,7 @@ function(_, E, e) {
             GUILD_PRODUCTS: _ => "/guilds/".concat(_, "/products"),
             GUILD_PRODUCT_LISTINGS: (_, E) => "/guilds/".concat(_, "/products/listings").concat(null != E ? "/".concat(E) : ""),
             GUILD_PRODUCT_ATTACHMENT_DOWNLOAD: (_, E, e) => "/guilds/".concat(_, "/products/listings/").concat(E, "/attachments/").concat(e, "/download"),
+            GUILD_CONVERT_TO_CLAN: _ => "/clan/".concat(_),
             TENOR_ASSET_PATH: "/tenor",
             EMAIL_SETTINGS: "/users/@me/email-settings",
             ACCOUNT_NOTIFICATION_SETTINGS: "/users/@me/notification-settings",
