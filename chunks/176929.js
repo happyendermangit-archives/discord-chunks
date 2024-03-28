@@ -7,6 +7,7 @@ function(e) {
         collectedInfoContainer: "collectedInfoContainer__6617a",
         collectedTextContainer: "collectedTextContainer_b6fcfd",
         confettiCanvas: "confettiCanvas_fbf264",
+        customConfetti: "customConfetti_c9b92e",
         darkText: "darkText_ecd62a",
         decorationBanner: "decorationBanner_f1b54c",
         default: "default_c7c7b0",
