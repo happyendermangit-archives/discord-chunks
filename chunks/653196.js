@@ -9,6 +9,7 @@ function(e) {
         footer: "footer_d63e9e",
         header: "header__05198",
         introContainer: "introContainer__4ffdc",
+        lastParagraph: "lastParagraph__7a09c",
         mainContent: "mainContent__23e7a",
         modalContent: "modalContent__2b13e",
         overviewSidebar: "overviewSidebar__995aa",
@@ -22,6 +23,8 @@ function(e) {
         scrollBgTop: "scrollBgTop_e0da83",
         scrollContainer: "scrollContainer__3789e",
         scroller: "scroller__24eef",
-        sequencer: "sequencer__0bd4c"
+        sequencer: "sequencer__0bd4c",
+        signatureBlock: "signatureBlock__543fd",
+        signatureText: "signatureText_cb71b7"
     }
 }
