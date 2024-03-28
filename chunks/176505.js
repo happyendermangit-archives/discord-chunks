@@ -62,7 +62,8 @@ function(e, t, n) {
             SUMMARIES_DISABLED: 2048,
             IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL: 8192,
             IS_BROADCASTING: 16384,
-            HIDE_MEDIA_DOWNLOAD_OPTIONS: 32768
+            HIDE_MEDIA_DOWNLOAD_OPTIONS: 32768,
+            IS_JOIN_REQUEST_INTERVIEW_CHANNEL: 65536
         }),
         c = 1024,
         E = 4096;

@@ -1003,6 +1003,7 @@ function(_, E, e) {
             GUILD_HOME_HEADER: (_, E) => "/guilds/".concat(_, "/home-headers/").concat(E, ".jpg"),
             GUILD_WELCOME_SCREEN: _ => "/guilds/".concat(_, "/welcome-screen"),
             GUILD_MEMBER_VERIFICATION: _ => "/guilds/".concat(_, "/member-verification"),
+            GUILD_JOIN_REQUEST_BY_ID: _ => "/join-requests/".concat(_),
             GUILD_JOIN_REQUESTS: _ => "/guilds/".concat(_, "/requests"),
             USER_JOIN_REQUEST_GUILDS: "/users/@me/join-request-guilds",
             GUILD_MEMBER_REQUEST_TO_JOIN: _ => "/guilds/".concat(_, "/requests/@me"),
