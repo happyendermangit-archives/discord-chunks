@@ -17001,6 +17001,7 @@ function(e) {
         STOREFRONT_ONE_TIME_PURCHASE: "One-Time Purchase",
         STOREFRONT_PREMIUM_ITEMS: "Premium Items",
         STOREFRONT_DURABLE_AVAILABILITY: "1 / 1 Available",
+        STOREFRONT_MUST_LOGIN: "Login to browse store",
         QUIET_MODE_DISABLED: "Focus Mode Disabled",
         QUIET_MODE_ENABLED: "Focus Mode Enabled",
         QUIET_MODE_DND: "Focus Mode (DND) Enabled",
