@@ -3,27 +3,24 @@ function(e, t, n) {
     let i, r;
     n.r(t), n("47120");
     var s, a, o, l, u = n("392711"),
-        d = n("873546"),
-        _ = n("180650"),
-        c = n("442837"),
-        E = n("570140"),
-        I = n("706454"),
-        T = n("884697");
-    let f = new Map,
-        S = new Map,
-        h = f,
-        A = S,
-        m = !1;
-    let N = new Set([_.CollectiblesCategorySkuId.SHY]),
-        O = () => {
-            h = f, A = S, r = void 0, m = !1, i = void 0
-        };
-    class p extends(s = c.default.Store) {
+        d = n("442837"),
+        _ = n("570140"),
+        c = n("706454"),
+        E = n("884697");
+    let I = new Map,
+        T = new Map,
+        f = I,
+        S = T,
+        h = !1;
+    let A = () => {
+        f = I, S = T, r = void 0, h = !1, i = void 0
+    };
+    class m extends(s = d.default.Store) {
         initialize() {
-            this.syncWith([I.default], O)
+            this.syncWith([c.default], A)
         }
         get isFetching() {
-            return m
+            return h
         }
         get error() {
             return i
@@ -32,52 +29,52 @@ function(e, t, n) {
             return r
         }
         get categories() {
-            return h
+            return f
         }
         get products() {
-            return A
+            return S
         }
         getCategory(e) {
-            return null != e ? h.get(e) : void 0
+            return null != e ? f.get(e) : void 0
         }
         getProduct(e) {
-            return null != e ? A.get(e) : void 0
+            return null != e ? S.get(e) : void 0
         }
         getCategoryForProduct(e) {
             let t = this.getProduct(e);
             return this.getCategory(null == t ? void 0 : t.categorySkuId)
         }
     }
-    l = "CollectiblesCategoryStore", (o = "displayName") in(a = p) ? Object.defineProperty(a, o, {
+    l = "CollectiblesCategoryStore", (o = "displayName") in(a = m) ? Object.defineProperty(a, o, {
         value: l,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : a[o] = l, t.default = new p(E.default, {
+    }) : a[o] = l, t.default = new m(_.default, {
         COLLECTIBLES_CATEGORIES_FETCH: e => {
-            m = !0, i = void 0
+            h = !0, i = void 0
         },
         COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: e => {
-            0 === e.categories.length ? (h = f, A = S) : !(0, u.isEqual)([...h.values()], e.categories) && (h = new Map(e.categories.filter(e => !(d.isMobile && N.has(e.skuId))).map(e => [e.skuId, e])), A = new Map((0, T.getProductsFromCategories)(h).map(e => [e.skuId, e]))), r = Date.now(), m = !1, i = void 0
+            0 === e.categories.length ? (f = I, S = T) : !(0, u.isEqual)([...f.values()], e.categories) && (f = new Map(e.categories.map(e => [e.skuId, e])), S = new Map((0, E.getProductsFromCategories)(f).map(e => [e.skuId, e]))), r = Date.now(), h = !1, i = void 0
         },
         COLLECTIBLES_CATEGORIES_FETCH_FAILURE: e => {
             let {
                 error: t
             } = e;
-            h = f, A = S, m = !1, i = t
+            f = I, S = T, h = !1, i = t
         },
         COLLECTIBLES_PRODUCT_FETCH: e => {
-            m = !0, i = void 0
+            h = !0, i = void 0
         },
         COLLECTIBLES_PRODUCT_FETCH_SUCCESS: e => {
-            A.set(e.product.skuId, e.product), m = !1, i = void 0
+            S.set(e.product.skuId, e.product), h = !1, i = void 0
         },
         COLLECTIBLES_PRODUCT_FETCH_FAILURE: e => {
             let {
                 error: t
             } = e;
-            m = !1, i = t
+            h = !1, i = t
         },
-        LOGOUT: O
+        LOGOUT: A
     })
 }
