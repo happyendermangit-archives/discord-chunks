@@ -10,7 +10,7 @@ function(e, t, n) {
 
     function s(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-            n = "" !== e.Messages.XSSDefenses ? e.Messages.XSSDefenses : e.Messages;
+            n = "XSSDefenses" in e.Messages ? e.Messages.XSSDefenses : e.Messages;
         null != n.SELF_XSS_HEADER && (console.log("%c".concat(n.SELF_XSS_HEADER), "color: #5865f2; -webkit-text-stroke: 2px black; font-size: 72px; font-weight: bold;"), console.log("%c".concat(n.SELF_XSS_LINE_1), "font-size: 16px;"), console.log("%c".concat(n.SELF_XSS_LINE_2), "font-size: 18px; font-weight: bold; color: red;"), t >= 4 ? (console.log("%c".concat(n.SELF_XSS_LINE_3), "font-size: 16px;"), console.log("%c".concat(n.SELF_XSS_LINE_4.format({
             url: "".concat(location.protocol).concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/jobs")
         })), "font-size: 16px;")) : setTimeout(() => s(e, t + 1), 1e3))
