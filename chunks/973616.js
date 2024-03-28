@@ -68,26 +68,29 @@ function(e, t, n) {
                 })) : null
             })
         }
-        getIconURL(e) {
+        getIconURL(e, t) {
             return null != this.icon ? s.default.getGameAssetURL({
                 id: this.id,
                 hash: this.icon,
-                size: e
+                size: e,
+                format: t
             }) : null
         }
-        getIconSource(e) {
+        getIconSource(e, t) {
             return null != this.icon ? s.default.getGameAssetSource({
                 id: this.id,
                 hash: this.icon,
-                size: e
+                size: e,
+                format: t
             }) : null
         }
-        getSplashURL(e) {
+        getSplashURL(e, t) {
             return null != this.splash ? s.default.getGameAssetURL({
                 id: this.id,
                 hash: this.splash,
                 size: e,
-                keepAspectRatio: !0
+                keepAspectRatio: !0,
+                format: t
             }) : null
         }
         getCoverImageURL(e) {
