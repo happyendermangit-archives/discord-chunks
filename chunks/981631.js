@@ -1522,6 +1522,7 @@ function(_, E, e) {
             BURST_CREDIT_BALANCE: "/users/@me/burst-credits",
             SAVED_MESSAGES: "/saved-messages",
             GET_REFERRALS_REMAINING: "/users/@me/referrals/eligibility",
+            GET_REFERRAL_ELIGIBLE_USERS: "/users/@me/referrals/eligible-users",
             CREATE_REFERRAL_PREVIEW: _ => "/users/@me/referrals/".concat(_, "/preview"),
             CREATE_REFERRAL: _ => "/users/@me/referrals/".concat(_),
             FAMILY_CENTER_TEEN_ACTIVITY: _ => "/family-center/".concat(_, "/activity"),
