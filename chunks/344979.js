@@ -10,8 +10,6 @@ function(e) {
         headerCTA: "headerCTA_c0a44b",
         headerContainer: "headerContainer__70a91",
         headerEasterEgg: "headerEasterEgg__723a4",
-        infoIcon: "infoIcon__4171a",
-        inline: "inline_bb3395",
         innerButton: "innerButton__745ab",
         inventoryContainer: "inventoryContainer__9ce4d",
         inventoryHeader: "inventoryHeader__5f811",
