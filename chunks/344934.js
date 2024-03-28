@@ -9,7 +9,6 @@ function(e) {
         familyCenterLinkButton: "familyCenterLinkButton_ab1e00",
         familyCenterPendingBadge: "familyCenterPendingBadge_cafb4f",
         hideGameUpdateProgressIndicator: "hideGameUpdateProgressIndicator_ef8a73",
-        localizeBadge: "localizeBadge_aa833b",
         privateChannels: "privateChannels__9b518",
         searchBar: "searchBar__621ec",
         searchBarComponent: "searchBarComponent__8f95f",

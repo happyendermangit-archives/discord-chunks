@@ -35,19 +35,30 @@ function(e, t, n) {
         });
         return (0, i.jsxs)("div", {
             className: f.recentGameContainer,
-            children: [null != a && (0, i.jsx)("img", {
-                alt: "",
-                "aria-hidden": !0,
-                src: a,
-                width: 40,
-                height: 40
+            children: [(0, i.jsx)("div", {
+                className: f.recentGameIcon,
+                children: null != a && (0, i.jsx)("img", {
+                    alt: "",
+                    "aria-hidden": !0,
+                    src: a,
+                    width: 40,
+                    height: 40
+                })
             }), (0, i.jsxs)("div", {
                 className: f.recentGameTextContainer,
-                children: [(0, i.jsx)(l.Heading, {
-                    variant: "heading-md/semibold",
-                    children: n.name
+                children: [(0, i.jsx)(l.Tooltip, {
+                    text: n.name,
+                    color: l.Tooltip.Colors.PRIMARY,
+                    children: e => (0, i.jsx)(l.Heading, {
+                        variant: "heading-md/semibold",
+                        color: "header-primary",
+                        className: f.recentGameName,
+                        ...e,
+                        children: n.name
+                    })
                 }), (0, i.jsx)(l.Heading, {
                     variant: "heading-sm/normal",
+                    color: "header-secondary",
                     children: s
                 })]
             })]
