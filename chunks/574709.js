@@ -53,7 +53,7 @@ function(e, t, n) {
             E = c()
         }
     }
-    u(I, "displayName", "CollectiblesPersistedStore"), u(I, "persistKey", "CollectiblesPersistedStoreV2"), t.default = new I(o.default, {
+    u(I, "displayName", "CollectiblesPersistedStore"), u(I, "persistKey", "CollectiblesPersistedStoreV2"), new I(o.default, {
         COLLECTIBLES_CATEGORY_ITEMS_VIEWED: e => {
             let {
                 categories: t,
