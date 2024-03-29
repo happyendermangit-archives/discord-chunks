@@ -75,14 +75,14 @@ function(e, t, n) {
                 if (null == r) return;
                 let s = [],
                     a = null;
-                r.recentGames.forEach(e => {
-                    e.applicationId === t.applicationId ? a = e : s.push(e)
-                });
-                let o = null != a ? (n = a, i = t, l()(n.applicationId === i.applicationId, "[UserRecentGamesStore] Games must have same application for merge."), {
+                if (r.recentGames.forEach(e => {
+                        e.applicationId === t.applicationId ? a = e : s.push(e)
+                    }), null == a) return;
+                let o = (n = a, i = t, l()(n.applicationId === i.applicationId, "[UserRecentGamesStore] Games must have same application for merge."), {
                     applicationId: n.applicationId,
                     duration: n.duration + i.duration,
                     lastSessionId: I.default.compare(n.lastSessionId, i.lastSessionId) > 0 ? n.lastSessionId : i.lastSessionId
-                }) : t;
+                });
                 T.set(e, {
                     lastFetchTimestampMs: Date.now(),
                     recentGames: [o, ...s]
