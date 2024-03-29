@@ -1,6 +1,6 @@
 function(e, t, n) {
     "use strict";
-    var r = n("81021")("%TypeError%"),
+    var r = n("690244")("%TypeError%"),
         i = n("828148"),
         a = n("632384");
     e.exports = function(e, t) {

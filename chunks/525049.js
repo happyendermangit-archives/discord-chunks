@@ -15,11 +15,15 @@ function(e, t, n) {
         },
         DIAGONAL_FACEPILE_STROKE_FACTOR: function() {
             return s
+        },
+        DIAGONAL_FACEPILE_TYPING_WIDTH_TO_HEIGHT_RATIO: function() {
+            return l
         }
     });
     let i = .5,
         r = 1.5,
         s = .125,
         a = .4,
-        o = 1 / 3.5
+        o = 1 / 3.5,
+        l = 2.5
 }

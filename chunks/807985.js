@@ -1,9 +1,9 @@
 function(e, t, n) {
     "use strict";
-    var r = n("81021"),
+    var r = n("690244"),
         i = r("%TypeError%"),
         a = r("%SyntaxError%"),
-        o = n("54341"),
+        o = n("706165"),
         s = n("73871"),
         u = {
             "Property Descriptor": function(e) {
