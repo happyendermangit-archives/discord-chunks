@@ -56,7 +56,7 @@ function(e, t, n) {
                 children: [(0, i.jsx)("iframe", {
                     className: O.video,
                     src: p,
-                    sandbox: "allow-same-origin allow-scripts"
+                    sandbox: "allow-same-origin allow-scripts allow-popups"
                 }), (0, i.jsxs)(c.Clickable, {
                     className: O.entrypoint,
                     onClick: () => {
