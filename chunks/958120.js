@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return _
+            return c
         }
     });
     var i = n("735250");
@@ -13,40 +13,41 @@ function(e, t, n) {
         o = n("790711"),
         l = n("901952"),
         u = n("287612"),
-        d = n("614664");
+        d = n("614664"),
+        _ = n("797849");
 
-    function _(e) {
+    function c(e) {
         let {
             user: t,
             displayProfile: n,
-            guild: _,
-            channelId: c
+            guild: c,
+            channelId: E
         } = e, {
-            moreUserDetailsEnabled: E
+            moreUserDetailsEnabled: I
         } = (0, s.useSimplifiedProfileExperiment)({
             location: "BiteSizeProfileBody"
-        }), I = r.default.getName(null == _ ? void 0 : _.id, c, t), T = (0, a.default)(t.id, null == _ ? void 0 : _.id);
-        return t.isSystemUser() ? null : t.isNonUserBot() ? (0, i.jsx)(d.default, {
-            user: t,
-            nickname: null,
-            pronouns: null,
-            lastSection: !0
-        }) : (0, i.jsxs)(i.Fragment, {
+        }), T = r.default.getName(null == c ? void 0 : c.id, E, t), f = (0, a.default)(t.id, null == c ? void 0 : c.id);
+        return t.isSystemUser() ? null : t.isNonUserBot() ? (0, i.jsxs)("div", {
+            className: _.paddingBottom,
             children: [(0, i.jsx)(d.default, {
                 user: t,
-                nickname: I,
+                nickname: null,
+                pronouns: null
+            }), ";"]
+        }) : (0, i.jsxs)("div", {
+            className: _.paddingBottom,
+            children: [(0, i.jsx)(d.default, {
+                user: t,
+                nickname: T,
                 pronouns: null == n ? void 0 : n.pronouns,
-                usernameIcon: t.hasAvatarForGuild(null == _ ? void 0 : _.id) && (0, i.jsx)(o.default, {
+                usernameIcon: t.hasAvatarForGuild(null == c ? void 0 : c.id) && (0, i.jsx)(o.default, {
                     user: t,
-                    nickname: I
-                }),
-                lastSection: !E && !T
-            }), E && (0, i.jsx)(u.default, {
-                user: t,
-                lastSection: !T
-            }), T && (0, i.jsx)(l.default, {
-                user: t,
-                lastSection: !0
+                    nickname: T
+                })
+            }), I && (0, i.jsx)(u.default, {
+                user: t
+            }), f && (0, i.jsx)(l.default, {
+                user: t
             })]
         })
     }

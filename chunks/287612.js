@@ -12,59 +12,56 @@ function(e, t, n) {
         _ = n("478758"),
         c = n("594174"),
         E = n("621853"),
-        I = n("659101"),
-        T = n("689938"),
-        f = n("735619");
+        I = n("689938"),
+        T = n("735619");
     t.default = r.memo(function(e) {
         var t, n;
         let {
-            user: s,
-            lastSection: S
-        } = e, h = (0, o.useStateFromStores)([c.default], () => c.default.getCurrentUser()), A = (0, o.useStateFromStores)([E.default], () => E.default.getMutualFriends(s.id));
+            user: s
+        } = e, f = (0, o.useStateFromStores)([c.default], () => c.default.getCurrentUser()), S = (0, o.useStateFromStores)([E.default], () => E.default.getMutualFriends(s.id));
         r.useEffect(() => {
-            null == A && (0, u.fetchMutualFriends)(s.id)
-        }, [A, s.id]);
-        let m = r.useMemo(() => {
+            null == S && (0, u.fetchMutualFriends)(s.id)
+        }, [S, s.id]);
+        let h = r.useMemo(() => {
                 var e;
-                return null !== (e = null == A ? void 0 : A.slice(0, 3).map(e => {
+                return null !== (e = null == S ? void 0 : S.slice(0, 3).map(e => {
                     let {
                         user: t
                     } = e;
                     return t
                 })) && void 0 !== e ? e : []
-            }, [A]),
-            N = (0, o.useStateFromStores)([E.default], () => E.default.getMutualGuilds(s.id)),
-            [O, p] = (0, o.useStateFromStoresArray)([E.default], () => [E.default.isFetchingFriends(s.id), E.default.isFetchingProfile(s.id)]);
-        return s.id === (null == h ? void 0 : h.id) || (null == A ? void 0 : A.length) === 0 && (null == N ? void 0 : N.length) === 0 ? null : O || p ? (0, i.jsx)("div", {
-            className: a()(f.spinnerContainer),
+            }, [S]),
+            A = (0, o.useStateFromStores)([E.default], () => E.default.getMutualGuilds(s.id)),
+            [m, N] = (0, o.useStateFromStoresArray)([E.default], () => [E.default.isFetchingFriends(s.id), E.default.isFetchingProfile(s.id)]);
+        return s.id === (null == f ? void 0 : f.id) || (null == S ? void 0 : S.length) === 0 && (null == A ? void 0 : A.length) === 0 ? null : m || N ? (0, i.jsx)("div", {
+            className: a()(T.spinnerContainer),
             children: (0, i.jsx)(l.Spinner, {
-                className: f.spinner
+                className: T.spinner
             })
-        }) : (0, i.jsxs)(I.default, {
-            className: f.container,
-            lastSection: S,
+        }) : (0, i.jsxs)("div", {
+            className: T.container,
             children: [(0, i.jsx)(_.default, {
                 partySize: {
-                    knownSize: m.length,
-                    totalSize: Math.min(m.length, 3)
+                    knownSize: h.length,
+                    totalSize: Math.min(h.length, 3)
                 },
                 maxAvatarsShown: 3,
-                members: m
+                members: h
             }), (0, i.jsx)(l.Text, {
-                className: (null == A ? void 0 : A.length) === 0 ? void 0 : f.mutualFriendsText,
+                className: (null == S ? void 0 : S.length) === 0 ? void 0 : T.mutualFriendsText,
                 variant: "text-xs/normal",
-                children: T.default.Messages.MUTUAL_FRIENDS_COUNT.format({
-                    count: "".concat(null !== (t = null == A ? void 0 : A.length) && void 0 !== t ? t : 0)
+                children: I.default.Messages.MUTUAL_FRIENDS_COUNT.format({
+                    count: "".concat(null !== (t = null == S ? void 0 : S.length) && void 0 !== t ? t : 0)
                 })
             }), (0, i.jsx)(d.default, {
                 height: 4,
                 width: 4,
                 "aria-hidden": "true",
-                className: f.dotSpacer
+                className: T.dotSpacer
             }), (0, i.jsx)(l.Text, {
                 variant: "text-xs/normal",
-                children: T.default.Messages.MUTUAL_GUILDS_COUNT.format({
-                    count: "".concat(null !== (n = null == N ? void 0 : N.length) && void 0 !== n ? n : 0)
+                children: I.default.Messages.MUTUAL_GUILDS_COUNT.format({
+                    count: "".concat(null !== (n = null == A ? void 0 : A.length) && void 0 !== n ? n : 0)
                 })
             })]
         })

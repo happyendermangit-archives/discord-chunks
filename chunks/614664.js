@@ -2,53 +2,48 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return u
+            return l
         }
     });
     var i = n("735250");
     n("470079");
     var r = n("481060"),
         s = n("129861"),
-        a = n("659101"),
-        o = n("689938"),
-        l = n("395274");
+        a = n("689938"),
+        o = n("395274");
 
-    function u(e) {
+    function l(e) {
         let {
             user: t,
             nickname: n,
-            pronouns: u,
-            usernameIcon: d,
-            isTryItOut: _ = !1,
-            lastSection: c
+            pronouns: l,
+            usernameIcon: u
         } = e;
-        return (0, i.jsx)(a.default, {
-            className: l.container,
-            lastSection: c,
+        return (0, i.jsx)("div", {
+            className: o.container,
             children: (0, i.jsxs)("div", {
-                className: l.userText,
+                className: o.userText,
                 children: [null != n ? (0, i.jsx)(r.Heading, {
                     variant: "heading-lg/semibold",
-                    className: l.nickname,
+                    className: o.nickname,
                     children: n
                 }) : null, (0, i.jsxs)("div", {
-                    className: l.flex,
+                    className: o.flex,
                     children: [(0, i.jsx)(s.default, {
-                        usernameIcon: d,
+                        usernameIcon: u,
                         user: t,
                         forceUsername: !0,
-                        forcePomelo: _,
-                        className: null == n ? l.userTagNoNickname : l.userTagWithNickname,
-                        usernameClass: null == n ? l.userTagUsernameNoNickname : l.userTagUsernameBase,
-                        discriminatorClass: null == n ? l.userTagDiscriminatorNoNickname : l.discrimBase,
-                        botClass: null == n ? l.headerBotTag : l.headerBotTagWithNickname
-                    }), null != u && "" !== u && (0, i.jsx)(r.Tooltip, {
-                        text: o.default.Messages.USER_PROFILE_PRONOUNS,
+                        className: null == n ? o.userTagNoNickname : o.userTagWithNickname,
+                        usernameClass: null == n ? o.userTagUsernameNoNickname : o.userTagUsernameBase,
+                        discriminatorClass: null == n ? o.userTagDiscriminatorNoNickname : o.discrimBase,
+                        botClass: null == n ? o.headerBotTag : o.headerBotTagWithNickname
+                    }), null != l && "" !== l && (0, i.jsx)(r.Tooltip, {
+                        text: a.default.Messages.USER_PROFILE_PRONOUNS,
                         children: e => (0, i.jsx)(r.Text, {
                             ...e,
                             variant: "text-sm/normal",
-                            className: l.biteSizePronouns,
-                            children: u
+                            className: o.biteSizePronouns,
+                            children: l
                         })
                     })]
                 })]
