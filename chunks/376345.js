@@ -44,6 +44,7 @@ function(_, E, e) {
         spacing: D,
         internal: {
             isSemanticColor: _ => "object" == typeof _ && null !== _ && S in _,
+            getSemanticColorName: _ => _[S],
             resolveSemanticColor(_, E, e) {
                 var I, a;
                 _ = function(_) {
