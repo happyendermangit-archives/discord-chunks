@@ -54,10 +54,10 @@ function(e, t, n) {
             children: p.default.Messages.CLEAR_BUILD_OVERRIDE
         })
     }
-    let L = a().throttle(() => {
+    let L = a().throttle(e => {
         f.default.increment({
             name: u.MetricEvents.APP_CRASHED,
-            tags: ["reason:".concat(o.AppCrashedReasons.UNHANDLED_JS_ERROR), "level:".concat(l.ErrorLevels.FATAL)]
+            tags: ["reason:".concat(o.AppCrashedReasons.UNHANDLED_JS_ERROR), "level:".concat(l.ErrorLevels.FATAL), "modded_client:".concat(e)]
         }, !0)
     }, 100, {
         trailing: !1
@@ -72,17 +72,18 @@ function(e, t, n) {
                 error: e,
                 info: t
             });
-            let i = m.default.captureCrash(e, {
-                extra: t
-            });
+            let i = (0, T.usesClientMods)(),
+                r = m.default.captureCrash(e, {
+                    extra: t
+                });
             A.default.track(O.AnalyticEvents.APP_CRASHED, {
                 path: n.pathname,
                 extra: t,
                 error_message: e.message,
                 error_stack: e.stack,
-                sentry_issue_id: i,
-                uses_client_mods: (0, T.usesClientMods)()
-            }), L(), N.default.cleanupDisplaySleep()
+                sentry_issue_id: r,
+                uses_client_mods: i
+            }), L(i), N.default.cleanupDisplaySleep()
         }
         _handleSubmitReport() {
             location.reload(!0)
