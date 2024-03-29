@@ -28,12 +28,13 @@ function(e, t, n) {
             analyticsLocation: i,
             maxGuilds: r = 2
         } = e, o = (0, m.useMutualGuilds)(t), {
-            analyticsLocations: u,
-            guildId: _,
-            channelId: c,
-            messageId: I,
-            roleId: f
-        } = (0, h.useUserProfileAnalyticsContext)(), S = a.useMemo(() => {
+            analyticsLocations: u
+        } = (0, _.default)(), {
+            guildId: c,
+            channelId: I,
+            messageId: f,
+            roleId: S
+        } = (0, h.useUserProfileAnalyticsContext)(), A = a.useMemo(() => {
             var e;
             return null !== (e = null == o ? void 0 : o.map(e => {
                 let {
@@ -41,31 +42,31 @@ function(e, t, n) {
                 } = e;
                 return t
             })) && void 0 !== e ? e : []
-        }, [o]), A = a.useMemo(() => p.default.Messages.USER_PROFILE_MUTUAL_GUILDS_COUNT.format({
-            count: S.length
-        }), [S]), C = a.useCallback(() => {
+        }, [o]), C = a.useMemo(() => p.default.Messages.USER_PROFILE_MUTUAL_GUILDS_COUNT.format({
+            count: A.length
+        }), [A]), g = a.useCallback(() => {
             (0, N.openUserProfileModal)({
                 userId: t.id,
-                guildId: null != _ ? _ : void 0,
-                channelId: null != c ? c : void 0,
-                messageId: null != I ? I : void 0,
-                roleId: null != f ? f : void 0,
+                guildId: null != c ? c : void 0,
+                channelId: null != I ? I : void 0,
+                messageId: null != f ? f : void 0,
+                roleId: null != S ? S : void 0,
                 section: O.UserProfileSections.MUTUAL_GUILDS,
                 sourceAnalyticsLocations: u,
                 analyticsLocation: i
             }), null == n || n()
-        }, [i, u, n, t.id, _, c, I, f]);
-        return null == S || 0 === S.length ? null : (0, s.jsx)(d.Tooltip, {
+        }, [i, u, n, t.id, c, I, f, S]);
+        return null == A || 0 === A.length ? null : (0, s.jsx)(d.Tooltip, {
             text: p.default.Messages.USER_PROFILE_MUTUAL_GUILDS_TOOLTIP,
             children: e => (0, s.jsxs)(d.Clickable, {
                 ...e,
-                onClick: C,
+                onClick: g,
                 className: l()(R.avatarAndTextContainer, R.serverContainer),
                 children: [(0, s.jsx)("div", {
                     className: R.__invalid_avatars,
                     children: (0, s.jsx)(E.default, {
                         maxGuilds: r,
-                        guilds: S,
+                        guilds: A,
                         size: T.default.Sizes.SMOL,
                         hideOverflowCount: !0,
                         disableGuildNameTooltip: !0
@@ -74,7 +75,7 @@ function(e, t, n) {
                     className: R.itemizedListText,
                     variant: "text-sm/normal",
                     color: "interactive-normal",
-                    children: A
+                    children: C
                 })]
             })
         })
@@ -89,12 +90,13 @@ function(e, t, n) {
                 analyticsLocation: o,
                 maxFriends: u = 2
             } = e, {
-                analyticsLocations: _,
-                guildId: E,
-                channelId: I,
-                messageId: T,
-                roleId: S
-            } = (0, h.useUserProfileAnalyticsContext)(), A = a.useMemo(() => {
+                analyticsLocations: E
+            } = (0, _.default)(), {
+                guildId: I,
+                channelId: T,
+                messageId: S,
+                roleId: A
+            } = (0, h.useUserProfileAnalyticsContext)(), m = a.useMemo(() => {
                 var e;
                 return null !== (e = null == i ? void 0 : i.map(e => {
                     let {
@@ -102,76 +104,76 @@ function(e, t, n) {
                     } = e;
                     return t
                 })) && void 0 !== e ? e : []
-            }, [i]), m = a.useRef(null), [C, g] = a.useState(!1), [L, D] = a.useState(0), v = a.useCallback(() => {
-                if (null != m.current) {
-                    let e = m.current.clientHeight > 19;
-                    D(t => {
+            }, [i]), C = a.useRef(null), [g, L] = a.useState(!1), [D, v] = a.useState(0), M = a.useCallback(() => {
+                if (null != C.current) {
+                    let e = C.current.clientHeight > 19;
+                    v(t => {
                         switch (t) {
                             case 0:
                                 return e ? 2 : 1;
                             case 1:
-                                return g(!e), e ? 2 : 1;
+                                return L(!e), e ? 2 : 1;
                             case 2:
-                                return g(!e), e ? 3 : 2;
+                                return L(!e), e ? 3 : 2;
                             case 3:
-                                return g(!0), 3
+                                return L(!0), 3
                         }
                     })
                 }
-            }, []), M = a.useCallback(() => {
+            }, []), y = a.useCallback(() => {
                 (0, N.openUserProfileModal)({
                     userId: t.id,
-                    guildId: null != E ? E : void 0,
-                    channelId: null != I ? I : void 0,
-                    messageId: null != T ? T : void 0,
-                    roleId: null != S ? S : void 0,
+                    guildId: null != I ? I : void 0,
+                    channelId: null != T ? T : void 0,
+                    messageId: null != S ? S : void 0,
+                    roleId: null != A ? A : void 0,
                     section: O.UserProfileSections.MUTUAL_FRIENDS,
-                    sourceAnalyticsLocations: _,
+                    sourceAnalyticsLocations: E,
                     analyticsLocation: o
                 }), null == r || r()
-            }, [o, _, r, t.id, E, I, T, S]), y = a.useMemo(() => {
-                if (0 === A.length) return null;
-                let [e, t, ...n] = A;
-                return 1 === A.length ? p.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_ONE.format({
+            }, [o, E, r, t.id, I, T, S, A]), P = a.useMemo(() => {
+                if (0 === m.length) return null;
+                let [e, t, ...n] = m;
+                return 1 === m.length ? p.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_ONE.format({
                     usernameOne: f.default.getName(null, null, e)
-                }) : 2 === A.length ? p.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_TWO.format({
+                }) : 2 === m.length ? p.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_TWO.format({
                     usernameOne: f.default.getName(null, null, e),
                     usernameTwo: f.default.getName(null, null, t)
-                }) : A.length > 2 ? p.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_MANY.format({
+                }) : m.length > 2 ? p.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_MANY.format({
                     usernameOne: f.default.getName(null, null, e),
                     usernameTwo: f.default.getName(null, null, t),
                     count: n.length
                 }) : void 0
-            }, [A]);
+            }, [m]);
             a.useEffect(() => {
-                v()
-            }, [v, y, L]);
-            let P = a.useMemo(() => {
-                if (A.length > 0 && L > 1) {
-                    let [e, ...t] = A;
-                    return A.length > 1 && 2 === L ? p.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_MANY_SHORT.format({
+                M()
+            }, [M, P, D]);
+            let U = a.useMemo(() => {
+                if (m.length > 0 && D > 1) {
+                    let [e, ...t] = m;
+                    return m.length > 1 && 2 === D ? p.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_MANY_SHORT.format({
                         usernameOne: f.default.getName(null, null, e),
                         count: t.length
                     }) : p.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_COUNT.format({
-                        count: A.length
+                        count: m.length
                     })
                 }
-                return y
-            }, [A, L, y]);
-            return n ? 0 === A.length ? null : (0, s.jsx)("div", {
-                className: l()(!C && R.hideElement),
-                ref: m,
+                return P
+            }, [m, D, P]);
+            return n ? 0 === m.length ? null : (0, s.jsx)("div", {
+                className: l()(!g && R.hideElement),
+                ref: C,
                 children: (0, s.jsx)(d.Tooltip, {
                     text: p.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP,
                     children: e => (0, s.jsxs)(d.Clickable, {
                         ...e,
-                        onClick: M,
+                        onClick: y,
                         className: l()(R.avatarAndTextContainer, R.__invalid_friendsContainer),
                         children: [(0, s.jsx)("div", {
                             className: R.__invalid_avatars,
                             children: (0, s.jsx)(c.default, {
                                 maxUsers: u,
-                                users: A,
+                                users: m,
                                 size: d.AvatarSizes.SIZE_16,
                                 hideOverflowCount: !0,
                                 disableUsernameTooltip: !0
@@ -180,7 +182,7 @@ function(e, t, n) {
                             className: R.itemizedListText,
                             variant: "text-sm/normal",
                             color: "interactive-normal",
-                            children: P
+                            children: U
                         })]
                     })
                 })
@@ -196,14 +198,15 @@ function(e, t, n) {
                 hasFetchedFriends: r,
                 onClose: o,
                 analyticsLocation: u,
-                maxIcons: _ = 3
+                maxIcons: I = 3
             } = e, {
-                analyticsLocations: I,
-                guildId: f,
-                channelId: S,
-                messageId: A,
-                roleId: m
-            } = (0, h.useUserProfileAnalyticsContext)(), C = a.useMemo(() => {
+                analyticsLocations: f
+            } = (0, _.default)(), {
+                guildId: S,
+                channelId: A,
+                messageId: m,
+                roleId: C
+            } = (0, h.useUserProfileAnalyticsContext)(), g = a.useMemo(() => {
                 var e;
                 return null !== (e = null == n ? void 0 : n.map(e => {
                     let {
@@ -211,7 +214,7 @@ function(e, t, n) {
                     } = e;
                     return t
                 })) && void 0 !== e ? e : []
-            }, [n]), g = a.useMemo(() => {
+            }, [n]), L = a.useMemo(() => {
                 var e;
                 return null !== (e = null == i ? void 0 : i.map(e => {
                     let {
@@ -219,46 +222,46 @@ function(e, t, n) {
                     } = e;
                     return t
                 })) && void 0 !== e ? e : []
-            }, [i]), L = a.useMemo(() => p.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_SHORT.format({
-                count: C.length
-            }), [C]), D = a.useMemo(() => p.default.Messages.USER_PROFILE_MUTUAL_GUILDS_SHORT.format({
+            }, [i]), D = a.useMemo(() => p.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_SHORT.format({
                 count: g.length
-            }), [g]), v = a.useRef(null), [M, y] = a.useState(!1), [P, U] = a.useState(!1), b = a.useCallback(() => {
-                if (null != v.current) {
+            }), [g]), v = a.useMemo(() => p.default.Messages.USER_PROFILE_MUTUAL_GUILDS_SHORT.format({
+                count: L.length
+            }), [L]), M = a.useRef(null), [y, P] = a.useState(!1), [U, b] = a.useState(!1), G = a.useCallback(() => {
+                if (null != M.current) {
                     var e;
-                    U((null === (e = v.current) || void 0 === e ? void 0 : e.clientHeight) > 19), y(!0)
+                    b((null === (e = M.current) || void 0 === e ? void 0 : e.clientHeight) > 19), P(!0)
                 }
-            }, []), G = a.useCallback(e => () => {
+            }, []), w = a.useCallback(e => () => {
                 (0, N.openUserProfileModal)({
                     userId: t.id,
-                    sourceAnalyticsLocations: I,
-                    guildId: null != f ? f : void 0,
-                    channelId: null != S ? S : void 0,
-                    messageId: null != A ? A : void 0,
-                    roleId: null != m ? m : void 0,
+                    sourceAnalyticsLocations: f,
+                    guildId: null != S ? S : void 0,
+                    channelId: null != A ? A : void 0,
+                    messageId: null != m ? m : void 0,
+                    roleId: null != C ? C : void 0,
                     section: e,
                     analyticsLocation: u
                 }), null == o || o()
-            }, [u, I, o, t.id, f, S, A, m]);
+            }, [u, f, o, t.id, S, A, m, C]);
             a.useEffect(() => {
-                b()
-            }, [b, L]);
-            let w = C.length > 0,
-                k = g.length > 0;
+                G()
+            }, [G, D]);
+            let k = g.length > 0,
+                B = L.length > 0;
             return r ? (0, s.jsxs)("div", {
-                className: l()(R.compactItemContainer, !M && R.hideElement),
-                ref: v,
-                children: [w && (0, s.jsx)(d.Tooltip, {
+                className: l()(R.compactItemContainer, !y && R.hideElement),
+                ref: M,
+                children: [k && (0, s.jsx)(d.Tooltip, {
                     text: p.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP,
                     children: e => (0, s.jsxs)(d.Clickable, {
                         ...e,
-                        onClick: G(O.UserProfileSections.MUTUAL_FRIENDS),
+                        onClick: w(O.UserProfileSections.MUTUAL_FRIENDS),
                         className: l()(R.avatarAndTextContainer, R.__invalid_friendsContainer),
                         children: [(0, s.jsx)("div", {
                             className: R.__invalid_avatars,
                             children: (0, s.jsx)(c.default, {
-                                maxUsers: _,
-                                users: C,
+                                maxUsers: I,
+                                users: g,
                                 size: d.AvatarSizes.SIZE_16,
                                 hideOverflowCount: !0,
                                 disableUsernameTooltip: !0
@@ -267,23 +270,23 @@ function(e, t, n) {
                             className: R.itemizedListText,
                             variant: "text-sm/normal",
                             color: "interactive-normal",
-                            children: L
+                            children: D
                         })]
                     })
-                }), w && k && (0, s.jsx)("div", {
+                }), k && B && (0, s.jsx)("div", {
                     "aria-hidden": "true",
                     className: R.dotSpacer
-                }), k && (0, s.jsx)(d.Tooltip, {
+                }), B && (0, s.jsx)(d.Tooltip, {
                     text: p.default.Messages.USER_PROFILE_MUTUAL_GUILDS_TOOLTIP,
                     children: e => (0, s.jsxs)(d.Clickable, {
                         ...e,
-                        onClick: G(O.UserProfileSections.MUTUAL_GUILDS),
+                        onClick: w(O.UserProfileSections.MUTUAL_GUILDS),
                         className: l()(R.avatarAndTextContainer, R.serverContainer),
-                        children: [!P && (0, s.jsx)("div", {
+                        children: [!U && (0, s.jsx)("div", {
                             className: R.__invalid_avatars,
                             children: (0, s.jsx)(E.default, {
-                                maxGuilds: _,
-                                guilds: g,
+                                maxGuilds: I,
+                                guilds: L,
                                 size: T.default.Sizes.SMOL,
                                 hideOverflowCount: !0,
                                 disableGuildNameTooltip: !0
@@ -292,7 +295,7 @@ function(e, t, n) {
                             className: R.itemizedListText,
                             variant: "text-sm/normal",
                             color: "interactive-normal",
-                            children: D
+                            children: v
                         })]
                     })
                 })]

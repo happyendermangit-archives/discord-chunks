@@ -427,6 +427,18 @@ function(e, t, n) {
                 return "https://".concat(t, "/")
             },
             enabled: !0
+        }, {
+            type: o.PlatformTypes.AMAZON,
+            name: "Amazon",
+            icon: {
+                lightPNG: n("746530"),
+                darkPNG: n("828553"),
+                whitePNG: n("783514"),
+                lightSVG: n("142452"),
+                darkSVG: n("591732"),
+                whiteSVG: n("676113")
+            },
+            enabled: !1
         }],
         u = r().keyBy(l, "type"),
         d = {};
