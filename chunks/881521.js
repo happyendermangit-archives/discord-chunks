@@ -5,7 +5,6 @@ function(e) {
         contentInteractable: "contentInteractable__7fcbe",
         cta: "cta_f68ce1",
         ctaClaimReward: "ctaClaimReward_c270ed",
-        ctaWrapper: "ctaWrapper__3c52c",
         description: "description__1e87a",
         details: "details__6dee9",
         heroAsset: "heroAsset__7f31f",
