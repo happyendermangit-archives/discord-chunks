@@ -1,68 +1,75 @@
 function(e, t, n) {
     "use strict";
-    let i;
+    let i, r;
     n.r(t);
-    var r, s, a, o, l = n("392711"),
-        u = n("442837"),
-        d = n("570140");
-    let _ = [],
-        c = !1;
-    let E = _,
-        I = {},
-        T = null,
-        f = e => {
-            E = (0, l.cloneDeep)(e);
+    var s, a, o, l, u = n("392711"),
+        d = n("442837"),
+        _ = n("570140");
+    let c = [],
+        E = !1;
+    let I = c,
+        T = {},
+        f = null;
+    let S = 0,
+        h = e => {
+            I = (0, u.cloneDeep)(e);
             let t = {};
-            E.forEach(e => {
+            I.forEach(e => {
                 t[e.id] = e
-            }), I = t
+            }), T = t
         };
-    class S extends(o = u.default.Store) {
+    class A extends(l = d.default.Store) {
         get isFetching() {
-            return c
+            return E
         }
         get fetchError() {
             return i
         }
         get profileEffects() {
-            return E
+            return I
         }
         get tryItOutId() {
-            return T
+            return f
+        }
+        canFetch() {
+            return null == r || Date.now() >= r
+        }
+        hasFetched() {
+            return null != r && null == i
         }
         getProfileEffectById(e) {
-            return null != e ? I[e] : void 0
+            return null != e ? T[e] : void 0
         }
     }
-    a = "ProfileEffectStore", (s = "displayName") in(r = S) ? Object.defineProperty(r, s, {
-        value: a,
+    o = "ProfileEffectStore", (a = "displayName") in(s = A) ? Object.defineProperty(s, a, {
+        value: o,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a, t.default = new S(d.default, {
+    }) : s[a] = o, t.default = new A(_.default, {
         USER_PROFILE_EFFECTS_FETCH: () => {
-            c = !0
+            E = !0
         },
         USER_PROFILE_EFFECTS_FETCH_SUCCESS: e => {
             let {
                 profileEffects: t
             } = e;
-            c = !1, f(0 === t.length ? _ : t)
+            E = !1, i = void 0, r = Date.now() + 3e5, S = 0, h(0 === t.length ? c : t)
         },
         USER_PROFILE_EFFECTS_FETCH_FAILURE: e => {
             let {
                 error: t
             } = e;
-            c = !1, i = t, f(_)
+            E = !1, i = t, r = Date.now() + Math.min(6e4 * 2 ** S, 36e5), ++S, h(c)
         },
         PROFILE_EFFECTS_SET_TRY_IT_OUT: e => {
             let {
                 id: t
             } = e;
-            T = t
+            f = t
         },
         LOGOUT: e => {
-            c = !1, f(_), T = null
+            E = !1, h(c), f = null
         }
     })
 }

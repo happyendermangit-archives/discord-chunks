@@ -17,20 +17,21 @@ function(e, t, n) {
         m = {},
         N = 0,
         O = null,
-        p = () => !0;
+        p = [],
+        R = () => !0;
 
-    function R(e) {
+    function C(e) {
         h.add(e)
     }
 
-    function C(e) {
+    function g(e) {
         let {
             messages: t
         } = e;
-        t.forEach(e => g(e))
+        t.forEach(e => L(e))
     }
 
-    function g(e) {
+    function L(e) {
         let t = e.type === o.MessageTypes.PREMIUM_REFERRAL ? e.content : null;
         if (null == t) return !1;
         if (!A.has(t) && !h.has(t)) {
@@ -38,9 +39,9 @@ function(e, t, n) {
             n = t, h.add(n), u.default.wait(() => (0, _.resolveReferralTrialOffer)(t).catch(c.NOOP_NULL))
         }
     }
-    class L extends(i = l.default.Store) {
+    class D extends(i = l.default.Store) {
         initialize() {
-            this.waitFor(d.default), this.syncWith([d.default], p)
+            this.waitFor(d.default), this.syncWith([d.default], R)
         }
         checkAndFetchReferralsRemaining() {
             null == E && !S && N < 5 && (null == O || O < Date.now()) && (0, _.fetchReferralsRemaining)()
@@ -66,13 +67,16 @@ function(e, t, n) {
         isResolving(e) {
             return h.has(e)
         }
+        getEligibleUsers() {
+            return p
+        }
     }
-    a = "ReferralTrialStore", (s = "displayName") in(r = L) ? Object.defineProperty(r, s, {
+    a = "ReferralTrialStore", (s = "displayName") in(r = D) ? Object.defineProperty(r, s, {
         value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a, t.default = new L(u.default, {
+    }) : r[s] = a, t.default = new D(u.default, {
         BILLING_REFERRAL_TRIAL_OFFER_UPDATE: function(e) {
             let {
                 userTrialOfferId: t,
@@ -135,16 +139,16 @@ function(e, t, n) {
             } = e;
             h.delete(t), A.add(t)
         },
-        LOAD_MESSAGES_SUCCESS: C,
+        LOAD_MESSAGES_SUCCESS: g,
         MESSAGE_CREATE: function(e) {
             let {
                 message: t
             } = e;
-            g(t)
+            L(t)
         },
-        LOAD_MESSAGES_AROUND_SUCCESS: C,
+        LOAD_MESSAGES_AROUND_SUCCESS: g,
         LOGOUT: function() {
-            E = null, I = {}, T = [], f = new Set, S = !1, h = new Set, A = new Set, m = {}, N = 0, O = null
+            E = null, I = {}, T = [], f = new Set, S = !1, h = new Set, A = new Set, m = {}, N = 0, O = null, p = []
         }
     })
 }

@@ -9,7 +9,7 @@ function(e, t, n) {
         r = n("232567"),
         s = n("220082"),
         a = n("275759"),
-        o = n("996678"),
+        o = n("365943"),
         l = n("592125"),
         u = n("271383"),
         d = n("621853"),
@@ -26,7 +26,7 @@ function(e, t, n) {
             channelId: N
         } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         if ("" === e) return;
-        (0, o.getOrFetchProfileEffects)(), null != t && (0, s.maybeFetchColors)(t), null != m && !T && (T = !0), null != m && (I = null !== (c = null === (n = (0, a.getVisibleConnectionsRole)({
+        (0, o.fetchUserProfileEffects)(), null != t && (0, s.maybeFetchColors)(t), null != m && !T && (T = !0), null != m && (I = null !== (c = null === (n = (0, a.getVisibleConnectionsRole)({
             guildMember: u.default.getMember(m, e),
             channel: l.default.getChannel(N)
         })) || void 0 === n ? void 0 : n.id) && void 0 !== c ? c : void 0);

@@ -25,26 +25,26 @@ function(e, t, n) {
             }
         },
         u = async function() {
-            let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-                t = a.default.isFetching,
-                n = 0 === a.default.profileEffects.length;
-            if (!t && (e || n)) {
-                r.default.dispatch({
-                    type: "USER_PROFILE_EFFECTS_FETCH"
-                });
-                try {
-                    let {
-                        body: e
-                    } = await i.HTTP.get(o.Endpoints.USER_PROFILE_EFFECTS), t = (null == e ? void 0 : e.profile_effect_configs).map(l);
+            let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+            if (!(!e && (a.default.hasFetched() || a.default.isFetching))) {
+                if (a.default.canFetch()) {
                     r.default.dispatch({
-                        type: "USER_PROFILE_EFFECTS_FETCH_SUCCESS",
-                        profileEffects: t
-                    })
-                } catch (e) {
-                    throw r.default.dispatch({
-                        type: "USER_PROFILE_EFFECTS_FETCH_FAILURE",
-                        error: e
-                    }), new s.APIError(e)
+                        type: "USER_PROFILE_EFFECTS_FETCH"
+                    });
+                    try {
+                        let {
+                            body: e
+                        } = await i.HTTP.get(o.Endpoints.USER_PROFILE_EFFECTS), t = (null == e ? void 0 : e.profile_effect_configs).map(l);
+                        r.default.dispatch({
+                            type: "USER_PROFILE_EFFECTS_FETCH_SUCCESS",
+                            profileEffects: t
+                        })
+                    } catch (e) {
+                        throw r.default.dispatch({
+                            type: "USER_PROFILE_EFFECTS_FETCH_FAILURE",
+                            error: e
+                        }), new s.APIError(e)
+                    }
                 }
             }
         }
