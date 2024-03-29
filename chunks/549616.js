@@ -21,21 +21,25 @@ function(e, t, n) {
             let {
                 products: t,
                 logo: n,
-                mobile_bg: r,
-                ...s
+                pdp_bg: r,
+                mobile_bg: s,
+                success_modal_bg: o,
+                ...l
             } = e;
             return new a({
-                ...super.fromServer(s),
+                ...super.fromServer(l),
                 products: t.reduce((e, t) => {
                     let n = i.default.fromServer(t);
                     return 0 === n.items.length ? e : (e.push(n), e)
                 }, []),
                 logo: n,
-                mobile_bg: r
+                pdpBg: r,
+                mobileBg: s,
+                successModalBg: o
             })
         }
         constructor(e) {
-            super(e), s(this, "products", void 0), s(this, "logo", void 0), s(this, "mobile_bg", void 0), this.products = e.products, this.logo = e.logo, this.mobile_bg = e.mobile_bg
+            super(e), s(this, "products", void 0), s(this, "logo", void 0), s(this, "pdpBg", void 0), s(this, "mobileBg", void 0), s(this, "successModalBg", void 0), this.products = e.products, this.logo = e.logo, this.pdpBg = e.pdpBg, this.mobileBg = e.mobileBg, this.successModalBg = e.successModalBg
         }
     }
 }
