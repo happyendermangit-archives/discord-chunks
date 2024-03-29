@@ -2,126 +2,153 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         UserProfileRecentGamesSection: function() {
-            return A
+            return O
         },
         UserProfileRecentGamesThemedSection: function() {
-            return m
+            return p
         }
-    });
+    }), n("47120");
     var i = n("735250"),
         r = n("470079"),
         s = n("803997"),
         a = n.n(s),
         o = n("442837"),
-        l = n("481060"),
-        u = n("812206"),
-        d = n("566454"),
-        _ = n("32966"),
-        c = n("768581"),
-        E = n("747074"),
-        I = n("659101"),
-        T = n("689938"),
-        f = n("458186");
+        l = n("692547"),
+        u = n("5297"),
+        d = n("481060"),
+        _ = n("812206"),
+        c = n("566454"),
+        E = n("32966"),
+        I = n("314897"),
+        T = n("768581"),
+        f = n("747074"),
+        S = n("659101"),
+        h = n("689938"),
+        A = n("458186");
 
-    function S(e) {
+    function m(e) {
         let {
-            game: t
-        } = e, n = (0, o.useStateFromStores)([u.default], () => u.default.getApplication(t.applicationId)), s = r.useMemo(() => null == t.duration || 0 === t.duration ? (0, d.getLastPlayedTimestamp)(t, !0) : "".concat((0, d.getLastPlayedTimestamp)(t, !0), " — ").concat((0, d.getTimePlayedLastWeek)(t)), [t]);
-        if (null == n) return null;
-        let a = c.default.getApplicationIconURL({
-            id: n.id,
-            icon: n.icon,
+            game: t,
+            isSharedGame: n
+        } = e, s = (0, o.useStateFromStores)([_.default], () => _.default.getApplication(t.applicationId)), a = r.useMemo(() => null == t.duration || 0 === t.duration ? (0, c.getLastPlayedTimestamp)(t, !0) : "".concat((0, c.getLastPlayedTimestamp)(t, !0), " — ").concat((0, c.getTimePlayedLastWeek)(t)), [t]), E = r.useRef(null), [I, f] = r.useState(!1);
+        if (r.useEffect(() => {
+                let e = E.current;
+                null != e && null != e.offsetWidth && null != e.scrollWidth && f(e.offsetWidth < e.scrollWidth)
+            }, []), null == s) return null;
+        let S = T.default.getApplicationIconURL({
+            id: s.id,
+            icon: s.icon,
             size: 40
         });
         return (0, i.jsxs)("div", {
-            className: f.recentGameContainer,
+            className: A.recentGameContainer,
             children: [(0, i.jsx)("div", {
-                className: f.recentGameIcon,
-                children: null != a && (0, i.jsx)("img", {
+                className: A.recentGameIcon,
+                children: null != S && (0, i.jsx)("img", {
                     alt: "",
                     "aria-hidden": !0,
-                    src: a,
+                    src: S,
                     width: 40,
                     height: 40
                 })
             }), (0, i.jsxs)("div", {
-                className: f.recentGameTextContainer,
-                children: [(0, i.jsx)(l.Tooltip, {
-                    text: n.name,
-                    color: l.Tooltip.Colors.PRIMARY,
-                    children: e => (0, i.jsx)(l.Heading, {
-                        variant: "heading-md/semibold",
-                        color: "header-primary",
-                        className: f.recentGameName,
-                        ...e,
-                        children: n.name
-                    })
-                }), (0, i.jsx)(l.Heading, {
-                    variant: "heading-sm/normal",
+                className: A.recentGameDetails,
+                children: [(0, i.jsxs)("div", {
+                    className: A.recentGameTitleContainer,
+                    children: [(0, i.jsx)(d.Tooltip, {
+                        text: s.name,
+                        color: d.Tooltip.Colors.PRIMARY,
+                        shouldShow: I,
+                        children: e => (0, i.jsx)("span", {
+                            ref: E,
+                            ...e,
+                            className: A.recentGameTitle,
+                            children: s.name
+                        })
+                    }), n && (0, i.jsx)(d.Tooltip, {
+                        text: h.default.Messages.USER_RECENT_GAMES_YOU_BOTH_PLAY,
+                        color: d.Tooltip.Colors.PRIMARY,
+                        children: e => (0, i.jsx)("div", {
+                            className: A.sharedGameIcon,
+                            ...e,
+                            children: (0, i.jsx)(u.SparklesIcon, {
+                                height: 16,
+                                width: 16,
+                                color: l.default.colors.INTERACTIVE_MUTED
+                            })
+                        })
+                    })]
+                }), (0, i.jsx)(d.Text, {
+                    variant: "text-sm/normal",
                     color: "header-secondary",
-                    children: s
+                    children: a
                 })]
             })]
         })
     }
-    let h = r.memo(function(e) {
+    let N = r.memo(function(e) {
         let {
             userId: t,
             containerClassName: n,
             wrapChildren: r
         } = e, {
             recentGames: s,
-            isFetching: o,
-            hasError: l
-        } = (0, _.useUserRecentGames)(t);
-        if (o || l || null == s || 0 === s.length) return null;
-        let u = (0, i.jsx)("div", {
-            className: a()(f.recentGames, n),
-            children: null == s ? void 0 : s.map(e => (0, i.jsx)(S, {
-                game: e
-            }, e.lastSessionId))
+            currentUserApplicationIds: o,
+            isFetching: l,
+            isError: u
+        } = (0, E.useUserRecentGames)(t);
+        if (l || u || null == s || 0 === s.length) return null;
+        let d = (0, i.jsx)("div", {
+            className: a()(A.recentGames, n),
+            children: null == s ? void 0 : s.map(e => {
+                var n, r, s;
+                return (0, i.jsx)(m, {
+                    game: e,
+                    isSharedGame: (n = t, r = o, s = e.applicationId, n !== I.default.getId() && r.has(s))
+                }, e.lastSessionId)
+            })
         });
         return null != r ? (0, i.jsx)(i.Fragment, {
-            children: r(u)
-        }) : u
+            children: r(d)
+        }) : d
     });
 
-    function A(e) {
+    function O(e) {
         let {
             userId: t,
             containerClassName: n
-        } = e, s = r.useCallback(e => (0, i.jsxs)(I.default, {
-            children: [(0, i.jsx)(l.Heading, {
+        } = e, s = r.useCallback(e => (0, i.jsxs)(S.default, {
+            children: [(0, i.jsx)(d.Heading, {
                 variant: "eyebrow",
-                className: f.recentGamesHeading,
-                children: T.default.Messages.RECENT_GAMES
+                className: A.recentGamesHeading,
+                children: h.default.Messages.RECENT_GAMES
             }), e]
         }), []);
-        return (0, i.jsx)(h, {
+        return (0, i.jsx)(N, {
             userId: t,
             containerClassName: n,
             wrapChildren: s
         })
     }
 
-    function m(e) {
+    function p(e) {
         let {
             userId: t,
             containerClassName: n
-        } = e, s = r.useCallback(e => (0, i.jsx)(E.default.Inner, {
-            children: (0, i.jsxs)(I.default, {
-                children: [(0, i.jsx)(l.Heading, {
+        } = e, s = r.useCallback(e => (0, i.jsx)(f.default.Inner, {
+            children: (0, i.jsxs)(S.default, {
+                children: [(0, i.jsx)(d.Heading, {
                     variant: "eyebrow",
-                    className: f.recentGamesHeading,
-                    children: T.default.Messages.RECENT_GAMES
+                    className: A.recentGamesHeading,
+                    children: h.default.Messages.RECENT_GAMES
                 }), e]
             })
         }), []);
-        return (0, i.jsx)(h, {
+        return (0, i.jsx)(N, {
             userId: t,
             containerClassName: n,
             wrapChildren: s
         })
     }
-    t.default = h
+    t.default = N
 }

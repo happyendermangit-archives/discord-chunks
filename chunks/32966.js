@@ -2,50 +2,49 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useUserRecentGames: function() {
-            return d
+            return l
         }
     });
     var i = n("470079"),
         r = n("442837"),
-        s = n("695346"),
-        a = n("314897"),
-        o = n("454175"),
-        l = n("385845"),
-        u = n("201819");
+        s = n("454175"),
+        a = n("385845"),
+        o = n("201819");
 
-    function d(e) {
-        let t = (0, u.useIsUserRecentGamesFetchEnabled)({
+    function l(e) {
+        let t = (0, o.useIsUserRecentGamesFetchEnabled)({
                 userId: e,
                 location: "28tk0bf_4"
             }),
             n = i.useRef(new AbortController),
             {
-                recentGames: d,
-                isFetching: _,
-                hasError: c
-            } = (0, r.useStateFromStoresObject)([l.default], () => ({
-                recentGames: l.default.getRecentGames(e),
-                isFetching: l.default.isFetching(e),
-                hasError: l.default.hasError(e)
+                currentUserApplicationIds: l,
+                recentGames: u,
+                isFetching: d,
+                isError: _
+            } = (0, r.useStateFromStoresObject)([a.default], () => ({
+                currentUserApplicationIds: a.default.getCurrentUserApplicationIds(),
+                recentGames: a.default.getRecentGames(e),
+                isFetching: a.default.isFetching(e),
+                isError: a.default.isError(e)
             })),
-            E = i.useCallback(async () => {
-                if (!!t && !_ && !c) {
-                    if (e !== a.default.getId() || s.RecentGamesEnabled.getSetting()) try {
-                        await o.default.fetchUserRecentGames(e, n.current.signal)
-                    } catch (e) {}
-                }
-            }, [c, t, _, e]);
+            c = i.useCallback(async () => {
+                if (t && !d && !_) try {
+                    await s.default.fetchUserRecentGames(e, n.current.signal, !0)
+                } catch (e) {}
+            }, [_, t, d, e]);
         return i.useEffect(() => {
-            E()
-        }, [E]), i.useEffect(() => {
+            c()
+        }, [c]), i.useEffect(() => {
             let e = n.current;
             return () => {
                 null == e || e.abort()
             }
         }, []), {
-            hasError: c,
-            recentGames: d,
-            isFetching: _
+            isFetching: d,
+            isError: _,
+            recentGames: u,
+            currentUserApplicationIds: l
         }
     }
 }
