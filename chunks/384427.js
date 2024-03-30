@@ -1,5 +1,5 @@
 function(e, t, n) {
-    var i = {
+    var r = {
         "./af": "238447",
         "./af.js": "238447",
         "./ar": "504184",
@@ -248,18 +248,18 @@ function(e, t, n) {
         "./zh-tw.js": "685767"
     };
 
-    function r(e) {
-        return n(s(e))
+    function o(e) {
+        return n(i(e))
     }
 
-    function s(e) {
-        if (!n.o(i, e)) {
+    function i(e) {
+        if (!n.o(r, e)) {
             var t = Error("Cannot find module '" + e + "'");
             throw t.code = "MODULE_NOT_FOUND", t
         }
-        return i[e]
+        return r[e]
     }
-    r.id = '"384427"', r.keys = function() {
-        return Object.keys(i)
-    }, r.resolve = s, e.exports = r
+    o.id = '"384427"', o.keys = function() {
+        return Object.keys(r)
+    }, o.resolve = i, e.exports = o
 }

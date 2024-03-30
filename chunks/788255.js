@@ -1,4 +1,4 @@
-function(t, e, r) {
-    var n = "object" == typeof r.g && r.g && r.g.Object === Object && r.g;
-    t.exports = n
+function(e, t, n) {
+    var r = "object" == typeof n.g && n.g && n.g.Object === Object && n.g;
+    e.exports = r
 }

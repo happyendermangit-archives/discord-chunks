@@ -8,7 +8,7 @@ function(t, e, n) {
             return u
         },
         dynamicSamplingContextToSentryBaggageHeader: function() {
-            return c
+            return l
         }
     });
     var r = n("46834"),
@@ -21,7 +21,7 @@ function(t, e, n) {
         if (!(0, r.isString)(t) && !Array.isArray(t)) return;
         let e = {};
         if (Array.isArray(t)) e = t.reduce((t, e) => {
-            let n = l(e);
+            let n = c(e);
             return {
                 ...t,
                 ...n
@@ -29,13 +29,13 @@ function(t, e, n) {
         }, {});
         else {
             if (!t) return;
-            e = l(t)
+            e = c(t)
         }
         let n = Object.entries(e).reduce((t, [e, n]) => (e.match(s) && (t[e.slice(o.length)] = n), t), {});
         return Object.keys(n).length > 0 ? n : void 0
     }
 
-    function c(t) {
+    function l(t) {
         if (!!t) return function(t) {
             if (0 !== Object.keys(t).length) return Object.entries(t).reduce((t, [e, n], r) => {
                 let a = `${encodeURIComponent(e)}=${encodeURIComponent(n)}`,
@@ -45,7 +45,7 @@ function(t, e, n) {
         }(Object.entries(t).reduce((t, [e, n]) => (n && (t[`${o}${e}`] = n), t), {}))
     }
 
-    function l(t) {
+    function c(t) {
         return t.split(",").map(t => t.split("=").map(t => decodeURIComponent(t.trim()))).reduce((t, [e, n]) => (t[e] = n, t), {})
     }
 }

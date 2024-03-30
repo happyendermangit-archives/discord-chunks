@@ -1,5 +1,5 @@
 function(e, t, n) {
-    var i = {
+    var r = {
         "./1f004.svg": "428103",
         "./1f0cf.svg": "409738",
         "./1f170.svg": "186540",
@@ -640,7 +640,7 @@ function(e, t, n) {
         "./1f3e4.svg": "112903",
         "./1f3e5.svg": "387510",
         "./1f3e6.svg": "337779",
-        "./1f3e7.svg": "453724",
+        "./1f3e7.svg": "904626",
         "./1f3e8.svg": "953730",
         "./1f3e9.svg": "28451",
         "./1f3ea.svg": "6062",
@@ -664,7 +664,7 @@ function(e, t, n) {
         "./1f3f9.svg": "506559",
         "./1f3fa.svg": "968827",
         "./1f3fb.svg": "841462",
-        "./1f3fc.svg": "269178",
+        "./1f3fc.svg": "812663",
         "./1f3fd.svg": "224274",
         "./1f3fe.svg": "117119",
         "./1f3ff.svg": "820717",
@@ -1189,7 +1189,7 @@ function(e, t, n) {
         "./1f469-1f3fc-200d-2764-fe0f-200d-1f468-1f3ff.svg": "170356",
         "./1f469-1f3fc-200d-2764-fe0f-200d-1f469-1f3fb.svg": "964400",
         "./1f469-1f3fc-200d-2764-fe0f-200d-1f469-1f3fc.svg": "81556",
-        "./1f469-1f3fc-200d-2764-fe0f-200d-1f469-1f3fd.svg": "176418",
+        "./1f469-1f3fc-200d-2764-fe0f-200d-1f469-1f3fd.svg": "102172",
         "./1f469-1f3fc-200d-2764-fe0f-200d-1f469-1f3fe.svg": "406890",
         "./1f469-1f3fc-200d-2764-fe0f-200d-1f469-1f3ff.svg": "117725",
         "./1f469-1f3fc-200d-2764-fe0f-200d-1f48b-200d-1f468-1f3fb.svg": "452542",
@@ -1324,7 +1324,7 @@ function(e, t, n) {
         "./1f469-1f3ff-200d-1f4bc.svg": "314386",
         "./1f469-1f3ff-200d-1f527.svg": "171000",
         "./1f469-1f3ff-200d-1f52c.svg": "570242",
-        "./1f469-1f3ff-200d-1f680.svg": "271172",
+        "./1f469-1f3ff-200d-1f680.svg": "596764",
         "./1f469-1f3ff-200d-1f692.svg": "834262",
         "./1f469-1f3ff-200d-1f91d-200d-1f468-1f3fb.svg": "208677",
         "./1f469-1f3ff-200d-1f91d-200d-1f468-1f3fc.svg": "775719",
@@ -1972,7 +1972,7 @@ function(e, t, n) {
         "./1f600.svg": "50034",
         "./1f601.svg": "421233",
         "./1f602.svg": "358211",
-        "./1f603.svg": "681751",
+        "./1f603.svg": "810716",
         "./1f604.svg": "906462",
         "./1f605.svg": "322248",
         "./1f606.svg": "201001",
@@ -2479,7 +2479,7 @@ function(e, t, n) {
         "./1f932-1f3fc.svg": "841964",
         "./1f932-1f3fd.svg": "741781",
         "./1f932-1f3fe.svg": "457392",
-        "./1f932-1f3ff.svg": "104098",
+        "./1f932-1f3ff.svg": "396124",
         "./1f932.svg": "129962",
         "./1f933-1f3fb.svg": "191600",
         "./1f933-1f3fc.svg": "344872",
@@ -3722,18 +3722,18 @@ function(e, t, n) {
         "./e50a.svg": "55612"
     };
 
-    function r(e) {
-        return n(s(e))
+    function o(e) {
+        return n(i(e))
     }
 
-    function s(e) {
-        if (!n.o(i, e)) {
+    function i(e) {
+        if (!n.o(r, e)) {
             var t = Error("Cannot find module '" + e + "'");
             throw t.code = "MODULE_NOT_FOUND", t
         }
-        return i[e]
+        return r[e]
     }
-    r.id = '"99378"', r.keys = function() {
-        return Object.keys(i)
-    }, r.resolve = s, e.exports = r
+    o.id = '"99378"', o.keys = function() {
+        return Object.keys(r)
+    }, o.resolve = i, e.exports = o
 }

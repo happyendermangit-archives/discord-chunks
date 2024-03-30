@@ -1,0 +1,25 @@
+function(e, t, n) {
+    "use strict";
+    n.r(t), n.d(t, {
+        TrackUserProfileProperties: function() {
+            return d
+        },
+        UserProfileSections: function() {
+            return l
+        },
+        UserProfileTypes: function() {
+            return c
+        },
+        getBadgeAsset: function() {
+            return m
+        }
+    });
+    var r, o, i, a, u, s, l, c, f, d, _, E, p = n("281767");
+
+    function m(e) {
+        var t = window.GLOBAL_ENV,
+            n = t.API_ENDPOINT,
+            r = t.CDN_HOST;
+        return null != r ? "".concat(location.protocol, "//").concat(r, "/badge-icons/").concat(e, ".png") : "".concat(location.protocol).concat(n).concat(p.Endpoints.BADGE_ICON(e))
+    }(r = l || (l = {})).USER_INFO = "USER_INFO", r.USER_INFO_CONNECTIONS = "USER_INFO_CONNECTIONS", r.ACTIVITY = "ACTIVITY", r.MUTUAL_GUILDS = "MUTUAL_GUILDS", r.MUTUAL_FRIENDS = "MUTUAL_FRIENDS", r.BOT_DATA_ACCESS = "BOT_DATA_ACCESS", r.RECENT_GAMES = "RECENT_GAMES", (o = c || (c = {})).POPOUT = "POPOUT", o.MODAL = "MODAL", o.SETTINGS = "SETTINGS", o.PANEL = "PANEL", o.CARD = "CARD", o.POMELO_POPOUT = "POMELO_POPOUT", o.CANCEL_MODAL = "CANCEL_MODAL", (i = f || (f = {})).POPOUT = "POPOUT", i.BITE_SIZE_POPOUT = "BITE_SIZE_POPOUT", i.MODAL = "MODAL", i.DM_PANEL = "DM_PANEL", i.ACCOUNT_POPOUT = "ACCOUNT_POPOUT", i.ACTION_SHEET = "ACTION_SHEET", (a = d || (d = {}))[a.NICKNAME = 0] = "NICKNAME", a[a.PRONOUNS = 1] = "PRONOUNS", a[a.AVATAR = 2] = "AVATAR", a[a.ANIMATED_AVATAR = 3] = "ANIMATED_AVATAR", a[a.BANNER = 4] = "BANNER", a[a.ANIMATED_BANNER = 5] = "ANIMATED_BANNER", a[a.BIO = 6] = "BIO", a[a.THEME = 7] = "THEME", a[a.AVATAR_DECORATION = 8] = "AVATAR_DECORATION", a[a.PROFILE_EFFECT = 9] = "PROFILE_EFFECT", (u = _ || (_ = {})).VIEW = "VIEW", u.SEND_MESSAGE = "SEND_MESSAGE", u.SEND_DIRECT_MESSAGE = "SEND_DIRECT_MESSAGE", u.SEND_FRIEND_REQUEST = "SEND_FRIEND_REQUEST", u.ACCEPT_FRIEND_REQUEST = "ACCEPT_FRIEND_REQUEST", u.IGNORE_FRIEND_REQUEST = "IGNORE_FRIEND_REQUEST", u.CANCEL_FRIEND_REQUEST = "CANCEL_FRIEND_REQUEST", u.REMOVE_FRIEND = "REMOVE_FRIEND", u.BLOCK = "BLOCK", u.UNBLOCK = "UNBLOCK", u.REPORT = "REPORT", u.COPY_USERNAME = "COPY_USERNAME", u.COPY_USER_ID = "COPY_USER_ID", u.PRESS_VIEW_PROFILE = "PRESS_VIEW_PROFILE", u.PRESS_OPTIONS = "PRESS_OPTIONS", u.PRESS_BADGE = "PRESS_BADGE", u.PRESS_SECTION = "PRESS_SECTION", u.PRESS_PRONOUNS = "PRESS_PRONOUNS", u.PRESS_PREMIUM_UPSELL = "PRESS_PREMIUM_UPSELL", u.PRESS_SET_STATUS = "PRESS_SET_STATUS", u.PRESS_SET_CUSTOM_STATUS = "PRESS_SET_CUSTOM_STATUS", u.PRESS_SWITCH_ACCOUNTS = "PRESS_SWITCH_ACCOUNTS", u.PRESS_SET_FRIEND_NICKNAME = "PRESS_SET_FRIEND_NICKNAME", u.JOIN_ACTIVITY = "JOIN_ACTIVITY", u.SET_NOTE = "SET_NOTE", u.SET_VOLUME = "SET_VOLUME", u.EDIT_PROFILE = "EDIT_PROFILE", u.EDIT_GUILD_PROFILE = "EDIT_GUILD_PROFILE", u.GIFT_PREMIUM = "GIFT_PREMIUM", u.VOICE_CALL = "VOICE_CALL", u.VIDEO_CALL = "VIDEO_CALL", u.MUTE = "MUTE", u.MUTE_SOUNDBOARD = "MUTE_SOUNDBOARD", u.DISABLE_VIDEO = "DISABLE_VIDEO", u.DEAFEN = "DEAFEN", u.DISCONNECT = "DISCONNECT", (s = E || (E = {})).VOICE = "VOICE", s.PLAYING = "PLAYING", s.STREAMING = "STREAMING", s.LISTENING = "LISTENING", s.WATCHING = "WATCHING", s.CUSTOM_STATUS = "CUSTOM_STATUS", s.COMPETING = "COMPETING", s.HANG_STATUS = "HANG_STATUS"
+}

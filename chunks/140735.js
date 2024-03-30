@@ -23,8 +23,8 @@ function(t, e, n) {
                     s = o.getClient(),
                     u = o.getIntegration(a);
                 if (!s || !u) return t;
-                let c = s.getOptions();
-                return (0, r.applyAggregateErrorsToEvent)(i.exceptionFromError, c.stackParser, c.maxValueLength, u._key, u._limit, t, n), t
+                let l = s.getOptions();
+                return (0, r.applyAggregateErrorsToEvent)(i.exceptionFromError, l.stackParser, l.maxValueLength, u._key, u._limit, t, n), t
             })
         }
     }

@@ -17,13 +17,13 @@ function(t, e, n) {
             return o
         },
         getOriginalFunction: function() {
-            return c
+            return l
         },
         markFunctionWrapped: function() {
             return u
         },
         urlEncode: function() {
-            return l
+            return c
         }
     });
     var r = n("829919"),
@@ -53,11 +53,11 @@ function(t, e, n) {
         t.prototype = e.prototype = n, s(t, "__sentry_original__", e)
     }
 
-    function c(t) {
+    function l(t) {
         return t.__sentry_original__
     }
 
-    function l(t) {
+    function c(t) {
         return Object.keys(t).map(e => `${encodeURIComponent(e)}=${encodeURIComponent(t[e])}`).join("&")
     }
 

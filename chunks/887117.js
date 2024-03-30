@@ -89,7 +89,7 @@ function(t, e, n) {
             return r.createTransport
         },
         createUserFeedbackEnvelope: function() {
-            return l.createUserFeedbackEnvelope
+            return c.createUserFeedbackEnvelope
         },
         defaultIntegrations: function() {
             return d.defaultIntegrations
@@ -104,10 +104,10 @@ function(t, e, n) {
             return u.defaultStackParser
         },
         eventFromException: function() {
-            return c.eventFromException
+            return l.eventFromException
         },
         eventFromMessage: function() {
-            return c.eventFromMessage
+            return l.eventFromMessage
         },
         extractTraceparentData: function() {
             return r.extractTraceparentData
@@ -212,8 +212,8 @@ function(t, e, n) {
         o = n("393746"),
         s = n("975927"),
         u = n("202406"),
-        c = n("590171"),
-        l = n("184612"),
+        l = n("590171"),
+        c = n("184612"),
         d = n("846297"),
         f = n("53383"),
         p = n("438142"),

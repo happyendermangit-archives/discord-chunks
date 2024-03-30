@@ -24,7 +24,7 @@ function(t, e, n) {
             traceFetch: e,
             traceXHR: n,
             tracePropagationTargets: s,
-            tracingOrigins: c,
+            tracingOrigins: l,
             shouldCreateSpanForRequest: d,
             enableHTTPTimings: f
         } = {
@@ -33,7 +33,7 @@ function(t, e, n) {
             ...t
         }, p = "function" == typeof d ? d : t => !0, h = t => (function(t, e) {
             return (0, i.stringMatchesSomePattern)(t, e || a)
-        })(t, s || c), _ = {};
+        })(t, s || l), _ = {};
         e && (0, i.addInstrumentationHandler)("fetch", t => {
             let e = function(t, e, n, a) {
                 if (!(0, r.hasTracingEnabled)() || !t.fetchData) return;
@@ -54,13 +54,13 @@ function(t, e, n) {
                 }
                 let s = (0, r.getCurrentHub)(),
                     u = s.getScope(),
-                    c = s.getClient(),
-                    l = u.getSpan(),
+                    l = s.getClient(),
+                    c = u.getSpan(),
                     {
                         method: d,
                         url: f
                     } = t.fetchData,
-                    p = o && l ? l.startChild({
+                    p = o && c ? c.startChild({
                         data: {
                             url: f,
                             type: "fetch",
@@ -69,7 +69,7 @@ function(t, e, n) {
                         description: `${d} ${f}`,
                         op: "http.client"
                     }) : void 0;
-                if (p && (t.fetchData.__span = p.spanId, a[p.spanId] = p), n(t.fetchData.url) && c) {
+                if (p && (t.fetchData.__span = p.spanId, a[p.spanId] = p), n(t.fetchData.url) && l) {
                     let e = t.args[0];
                     t.args[1] = t.args[1] || {};
                     let n = t.args[1];
@@ -78,11 +78,11 @@ function(t, e, n) {
                             s = o && o.transaction,
                             {
                                 traceId: u,
-                                sampled: c,
-                                dsc: l
+                                sampled: l,
+                                dsc: c
                             } = n.getPropagationContext(),
-                            d = o ? o.toTraceparent() : (0, i.generateSentryTraceHeader)(u, void 0, c),
-                            f = s ? s.getDynamicSamplingContext() : l || (0, r.getDynamicSamplingContextFromClient)(u, e, n),
+                            d = o ? o.toTraceparent() : (0, i.generateSentryTraceHeader)(u, void 0, l),
+                            f = s ? s.getDynamicSamplingContext() : c || (0, r.getDynamicSamplingContextFromClient)(u, e, n),
                             p = (0, i.dynamicSamplingContextToSentryBaggageHeader)(f),
                             h = "undefined" != typeof Request && (0, i.isInstanceOf)(t, Request) ? t.headers : a.headers;
                         if (!h) return {
@@ -105,7 +105,7 @@ function(t, e, n) {
                                 baggage: e.length > 0 ? e.join(",") : void 0
                             }
                         }
-                    }(e, c, u, n)
+                    }(e, l, u, n)
                 }
                 return p
             }(t, p, h, _);
@@ -123,8 +123,8 @@ function(t, e, n) {
                     e && (e.setHttpStatus(s.status_code), e.finish(), delete a[t]);
                     return
                 }
-                let c = (0, r.getCurrentHub)(),
-                    d = c.getScope(),
+                let l = (0, r.getCurrentHub)(),
+                    d = l.getScope(),
                     f = d.getSpan(),
                     p = u && f ? f.startChild({
                         data: {
@@ -141,9 +141,9 @@ function(t, e, n) {
                         let t = p && p.transaction,
                             e = t && t.getDynamicSamplingContext(),
                             n = (0, i.dynamicSamplingContextToSentryBaggageHeader)(e);
-                        l(o, p.toTraceparent(), n)
+                        c(o, p.toTraceparent(), n)
                     } else {
-                        let t = c.getClient(),
+                        let t = l.getClient(),
                             {
                                 traceId: e,
                                 sampled: n,
@@ -151,7 +151,7 @@ function(t, e, n) {
                             } = d.getPropagationContext(),
                             s = (0, i.generateSentryTraceHeader)(e, void 0, n),
                             u = a || (t ? (0, r.getDynamicSamplingContextFromClient)(e, t, d) : void 0);
-                        l(o, s, (0, i.dynamicSamplingContextToSentryBaggageHeader)(u))
+                        c(o, s, (0, i.dynamicSamplingContextToSentryBaggageHeader)(u))
                     }
                 }
                 return p
@@ -188,16 +188,16 @@ function(t, e, n) {
                                 version: n
                             }
                         }(t.nextHopProtocol), r = [];
-                        return (r.push(["network.protocol.version", n], ["network.protocol.name", e]), i.browserPerformanceTimeOrigin) ? [...r, ["http.request.redirect_start", c(t.redirectStart)],
-                            ["http.request.fetch_start", c(t.fetchStart)],
-                            ["http.request.domain_lookup_start", c(t.domainLookupStart)],
-                            ["http.request.domain_lookup_end", c(t.domainLookupEnd)],
-                            ["http.request.connect_start", c(t.connectStart)],
-                            ["http.request.secure_connection_start", c(t.secureConnectionStart)],
-                            ["http.request.connection_end", c(t.connectEnd)],
-                            ["http.request.request_start", c(t.requestStart)],
-                            ["http.request.response_start", c(t.responseStart)],
-                            ["http.request.response_end", c(t.responseEnd)]
+                        return (r.push(["network.protocol.version", n], ["network.protocol.name", e]), i.browserPerformanceTimeOrigin) ? [...r, ["http.request.redirect_start", l(t.redirectStart)],
+                            ["http.request.fetch_start", l(t.fetchStart)],
+                            ["http.request.domain_lookup_start", l(t.domainLookupStart)],
+                            ["http.request.domain_lookup_end", l(t.domainLookupEnd)],
+                            ["http.request.connect_start", l(t.connectStart)],
+                            ["http.request.secure_connection_start", l(t.secureConnectionStart)],
+                            ["http.request.connection_end", l(t.connectEnd)],
+                            ["http.request.request_start", l(t.requestStart)],
+                            ["http.request.response_start", l(t.responseStart)],
+                            ["http.request.response_end", l(t.responseEnd)]
                         ] : r
                     })(r).forEach(e => t.setData(...e)), n.disconnect())
                 })
@@ -207,11 +207,11 @@ function(t, e, n) {
         })
     }
 
-    function c(t) {
+    function l(t) {
         return ((i.browserPerformanceTimeOrigin || performance.timeOrigin) + t) / 1e3
     }
 
-    function l(t, e, n) {
+    function c(t, e, n) {
         try {
             t.setRequestHeader("sentry-trace", e), n && t.setRequestHeader(i.BAGGAGE_HEADER_NAME, n)
         } catch (t) {}

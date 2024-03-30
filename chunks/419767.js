@@ -34,11 +34,11 @@ function(t, e, n) {
         let s = (0, r.getSdkMetadataForEnvelopeHeader)(n),
             u = t.type && "replay_event" !== t.type ? t.type : "event";
         a = t, !(o = n && n.sdk) || (a.sdk = a.sdk || {}, a.sdk.name = a.sdk.name || o.name, a.sdk.version = a.sdk.version || o.version, a.sdk.integrations = [...a.sdk.integrations || [], ...o.integrations || []], a.sdk.packages = [...a.sdk.packages || [], ...o.packages || []]);
-        let c = (0, r.createEventEnvelopeHeaders)(t, s, i, e);
+        let l = (0, r.createEventEnvelopeHeaders)(t, s, i, e);
         delete t.sdkProcessingMetadata;
-        let l = [{
+        let c = [{
             type: u
         }, t];
-        return (0, r.createEnvelope)(c, [l])
+        return (0, r.createEnvelope)(l, [c])
     }
 }

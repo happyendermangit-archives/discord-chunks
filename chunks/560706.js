@@ -7,11 +7,11 @@ function(t, e, n) {
         u = n("828091");
     t.exports = function(t, e, n) {
         e = r(e, t);
-        for (var c = -1, l = e.length, d = !1; ++c < l;) {
-            var f = u(e[c]);
+        for (var l = -1, c = e.length, d = !1; ++l < c;) {
+            var f = u(e[l]);
             if (!(d = null != t && n(t, f))) break;
             t = t[f]
         }
-        return d || ++c != l ? d : !!(l = null == t ? 0 : t.length) && s(l) && o(f, l) && (a(t) || i(t))
+        return d || ++l != c ? d : !!(c = null == t ? 0 : t.length) && s(c) && o(f, c) && (a(t) || i(t))
     }
 }

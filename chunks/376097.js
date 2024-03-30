@@ -2,7 +2,7 @@ function(t, e, n) {
     "use strict";
     n.r(e), n.d(e, {
         IdleTransaction: function() {
-            return c
+            return l
         },
         TRACING_DEFAULTS: function() {
             return o
@@ -27,7 +27,7 @@ function(t, e, n) {
             }, void 0 === t.endTimestamp && this._pushActivity(t.spanId)), super.add(t)
         }
     }
-    class c extends a.Transaction {
+    class l extends a.Transaction {
         __init() {
             this.activities = {}
         }
@@ -47,7 +47,7 @@ function(t, e, n) {
             this._finishReason = "externalFinish"
         }
         constructor(t, e, n = o.idleTimeout, i = o.finalTimeout, a = o.heartbeatInterval, s = !1) {
-            super(t, e), this._idleHub = e, this._idleTimeout = n, this._finalTimeout = i, this._heartbeatInterval = a, this._onScope = s, c.prototype.__init.call(this), c.prototype.__init2.call(this), c.prototype.__init3.call(this), c.prototype.__init4.call(this), c.prototype.__init5.call(this), c.prototype.__init6.call(this), s && (("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && r.logger.log(`Setting idle transaction on scope. Span ID: ${this.spanId}`), e.configureScope(t => t.setSpan(this))), this._restartIdleTimeout(), setTimeout(() => {
+            super(t, e), this._idleHub = e, this._idleTimeout = n, this._finalTimeout = i, this._heartbeatInterval = a, this._onScope = s, l.prototype.__init.call(this), l.prototype.__init2.call(this), l.prototype.__init3.call(this), l.prototype.__init4.call(this), l.prototype.__init5.call(this), l.prototype.__init6.call(this), s && (("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && r.logger.log(`Setting idle transaction on scope. Span ID: ${this.spanId}`), e.configureScope(t => t.setSpan(this))), this._restartIdleTimeout(), setTimeout(() => {
                 !this._finished && (this.setStatus("deadline_exceeded"), this._finishReason = "finalTimeout", this.finish())
             }, this._finalTimeout)
         }

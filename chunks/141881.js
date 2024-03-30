@@ -1,5 +1,5 @@
 function(e, t, n) {
-    var i = {
+    var r = {
         "./icon-file-acrobat.svg": "621680",
         "./icon-file-ae.svg": "725345",
         "./icon-file-ai.svg": "673762",
@@ -16,18 +16,18 @@ function(e, t, n) {
         "./icon-file-webcode.svg": "343305"
     };
 
-    function r(e) {
-        return n(s(e))
+    function o(e) {
+        return n(i(e))
     }
 
-    function s(e) {
-        if (!n.o(i, e)) {
+    function i(e) {
+        if (!n.o(r, e)) {
             var t = Error("Cannot find module '" + e + "'");
             throw t.code = "MODULE_NOT_FOUND", t
         }
-        return i[e]
+        return r[e]
     }
-    r.id = '"141881"', r.keys = function() {
-        return Object.keys(i)
-    }, r.resolve = s, e.exports = r
+    o.id = '"141881"', o.keys = function() {
+        return Object.keys(r)
+    }, o.resolve = i, e.exports = o
 }

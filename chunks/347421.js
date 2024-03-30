@@ -20,7 +20,7 @@ function(t, e, n) {
                     } else s.push(e)
                 }), 0 === s.length) return (0, r.resolvedSyncPromise)();
             let u = (0, r.createEnvelope)(o[0], s),
-                c = e => {
+                l = e => {
                     (0, r.forEachEnvelopeItem)(u, (n, i) => {
                         let o = a(n, i);
                         t.recordDroppedEvent(e, (0, r.envelopeItemTypeToDataCategory)(i), o)
@@ -29,9 +29,9 @@ function(t, e, n) {
             return n.add(() => e({
                 body: (0, r.serializeEnvelope)(u, t.textEncoder)
             }).then(t => (void 0 !== t.statusCode && (t.statusCode < 200 || t.statusCode >= 300) && ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && r.logger.warn(`Sentry responded with status code ${t.statusCode} to sent event.`), i = (0, r.updateRateLimits)(i, t), t), t => {
-                throw c("network_error"), t
+                throw l("network_error"), t
             })).then(t => t, t => {
-                if (t instanceof r.SentryError) return ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && r.logger.error("Skipped sending event because buffer is full."), c("queue_overflow"), (0, r.resolvedSyncPromise)();
+                if (t instanceof r.SentryError) return ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && r.logger.error("Skipped sending event because buffer is full."), l("queue_overflow"), (0, r.resolvedSyncPromise)();
                 throw t
             })
         }

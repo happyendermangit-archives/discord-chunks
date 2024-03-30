@@ -1,0 +1,55 @@
+function(e, t, n) {
+    "use strict";
+    n.r(t), n.d(t, {
+        default: function() {
+            return u
+        }
+    });
+    var r = n("470079"),
+        o = n("37295"),
+        i = n("18486"),
+        a = n("251305");
+
+    function u() {
+        var e = r.useContext(i.ConfettiCannonContext).createMultipleConfettiAt,
+            t = (0, o.useStateFromStores)([a.default], function() {
+                return a.default.getState()
+            }),
+            n = r.useCallback(function(e) {
+                return {
+                    size: {
+                        type: "static-random",
+                        minValue: e.confettiSize - 7,
+                        maxValue: e.confettiSize + 7
+                    }
+                }
+            }, []);
+        return r.useMemo(function() {
+            return {
+                fire: function(r, o, i) {
+                    var a, u, s = (null == i ? void 0 : i.settings) != null ? function(e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            "function" == typeof Object.getOwnPropertySymbols && (r = r.concat(Object.getOwnPropertySymbols(n).filter(function(e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable
+                            }))), r.forEach(function(t) {
+                                var r, o, i;
+                                r = e, o = t, i = n[t], o in r ? Object.defineProperty(r, o, {
+                                    value: i,
+                                    enumerable: !0,
+                                    configurable: !0,
+                                    writable: !0
+                                }) : r[o] = i
+                            })
+                        }
+                        return e
+                    }({}, t, i.settings) : t;
+                    e(r, o, n(s), (null !== (a = null == i ? void 0 : i.count) && void 0 !== a ? a : s.confettiCount) * (null !== (u = null == i ? void 0 : i.countMultiplier) && void 0 !== u ? u : 1), {
+                        sprite: null == i ? void 0 : i.sprite
+                    })
+                }
+            }
+        }, [e, n, t])
+    }
+}

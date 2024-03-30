@@ -1,5 +1,5 @@
 function(e, t, n) {
-    var i = {
+    var r = {
         "./activities-rocket-time.mp3": "689096",
         "./activity_end.mp3": "90152",
         "./activity_launch.mp3": "12790",
@@ -71,18 +71,18 @@ function(e, t, n) {
         "./vibing_wumpus.mp3": "778184"
     };
 
-    function r(e) {
-        return n(s(e))
+    function o(e) {
+        return n(i(e))
     }
 
-    function s(e) {
-        if (!n.o(i, e)) {
+    function i(e) {
+        if (!n.o(r, e)) {
             var t = Error("Cannot find module '" + e + "'");
             throw t.code = "MODULE_NOT_FOUND", t
         }
-        return i[e]
+        return r[e]
     }
-    r.id = '"693180"', r.keys = function() {
-        return Object.keys(i)
-    }, r.resolve = s, e.exports = r
+    o.id = '"693180"', o.keys = function() {
+        return Object.keys(r)
+    }, o.resolve = i, e.exports = o
 }

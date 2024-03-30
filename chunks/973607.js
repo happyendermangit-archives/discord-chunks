@@ -1,5 +1,5 @@
 function(e, t, n) {
-    var i = {
+    var r = {
         "./spritesheet--32.png": "188244",
         "./spritesheet--40.png": "40853",
         "./spritesheet--48.png": "981835",
@@ -24,18 +24,18 @@ function(e, t, n) {
         "./spritesheet-picker-22.png": "899565"
     };
 
-    function r(e) {
-        return n(s(e))
+    function o(e) {
+        return n(i(e))
     }
 
-    function s(e) {
-        if (!n.o(i, e)) {
+    function i(e) {
+        if (!n.o(r, e)) {
             var t = Error("Cannot find module '" + e + "'");
             throw t.code = "MODULE_NOT_FOUND", t
         }
-        return i[e]
+        return r[e]
     }
-    r.id = '"973607"', r.keys = function() {
-        return Object.keys(i)
-    }, r.resolve = s, e.exports = r
+    o.id = '"973607"', o.keys = function() {
+        return Object.keys(r)
+    }, o.resolve = i, e.exports = o
 }

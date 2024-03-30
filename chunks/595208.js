@@ -5,7 +5,7 @@ function(t, e, n) {
             return s
         },
         setupIntegration: function() {
-            return c
+            return l
         },
         setupIntegrations: function() {
             return u
@@ -47,11 +47,11 @@ function(t, e, n) {
     function u(t) {
         let e = {};
         return t.forEach(t => {
-            t && c(t, e)
+            t && l(t, e)
         }), e
     }
 
-    function c(t, e) {
+    function l(t, e) {
         e[t.name] = t, -1 === o.indexOf(t.name) && (t.setupOnce(a.addGlobalEventProcessor, i.getCurrentHub), o.push(t.name), ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && r.logger.log(`Integration installed: ${t.name}`))
     }
 }

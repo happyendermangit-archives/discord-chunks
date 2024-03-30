@@ -32,17 +32,17 @@ function(t, e, n) {
             {
                 traceId: s,
                 parentSpanId: u,
-                parentSampled: c
+                parentSampled: l
             } = n || {},
-            l = {
+            c = {
                 traceId: s || (0, i.uuid4)(),
                 spanId: (0, i.uuid4)().substring(16),
-                sampled: void 0 !== c && c
+                sampled: void 0 !== l && l
             };
-        return u && (l.parentSpanId = u), a && (l.dsc = a), {
+        return u && (c.parentSpanId = u), a && (c.dsc = a), {
             traceparentData: n,
             dynamicSamplingContext: a,
-            propagationContext: l
+            propagationContext: c
         }
     }
 

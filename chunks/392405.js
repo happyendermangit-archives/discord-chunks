@@ -12,8 +12,8 @@ function(t, e, n) {
     function o(t, e, n, o) {
         let {
             normalizeDepth: u = 3,
-            normalizeMaxBreadth: c = 1e3
-        } = t, l = {
+            normalizeMaxBreadth: l = 1e3
+        } = t, c = {
             ...e,
             event_id: e.event_id || n.event_id || (0, r.uuid4)(),
             timestamp: e.timestamp || (0, r.dateTimestampInSeconds)()
@@ -28,12 +28,12 @@ function(t, e, n) {
             !("environment" in t) && (t.environment = "environment" in e ? n : i.DEFAULT_ENVIRONMENT), void 0 === t.release && void 0 !== a && (t.release = a), void 0 === t.dist && void 0 !== o && (t.dist = o), t.message && (t.message = (0, r.truncate)(t.message, s));
             let u = t.exception && t.exception.values && t.exception.values[0];
             u && u.value && (u.value = (0, r.truncate)(u.value, s));
-            let c = t.request;
-            c && c.url && (c.url = (0, r.truncate)(c.url, s))
-        })(l, t),
+            let l = t.request;
+            l && l.url && (l.url = (0, r.truncate)(l.url, s))
+        })(c, t),
         function(t, e) {
             e.length > 0 && (t.sdk = t.sdk || {}, t.sdk.integrations = [...t.sdk.integrations || [], ...e])
-        }(l, d), void 0 === e.type && function(t, e) {
+        }(c, d), void 0 === e.type && function(t, e) {
             let n;
             let i = r.GLOBAL_OBJ._sentryDebugIds;
             if (!i) return;
@@ -59,16 +59,16 @@ function(t, e, n) {
                     })
                 })
             } catch (t) {}
-        }(l, t.stackParser);
+        }(c, t.stackParser);
         let f = o;
         n.captureContext && (f = a.Scope.clone(f).update(n.captureContext));
-        let p = (0, r.resolvedSyncPromise)(l);
+        let p = (0, r.resolvedSyncPromise)(c);
         if (f) {
             if (f.getAttachments) {
                 let t = [...n.attachments || [], ...f.getAttachments()];
                 t.length && (n.attachments = t)
             }
-            p = f.applyToEvent(l, n)
+            p = f.applyToEvent(c, n)
         }
         return p.then(t => (t && function(t) {
             let e = {};
@@ -112,7 +112,7 @@ function(t, e, n) {
                 }
             };
             return t.contexts && t.contexts.trace && i.contexts && (i.contexts.trace = t.contexts.trace, t.contexts.trace.data && (i.contexts.trace.data = (0, r.normalize)(t.contexts.trace.data, e, n))), t.spans && (i.spans = t.spans.map(t => (t.data && (t.data = (0, r.normalize)(t.data, e, n)), t))), i
-        }(t, u, c) : t)
+        }(t, u, l) : t)
     }
     let s = new WeakMap
 }

@@ -1,77 +1,98 @@
 function(e, t, n) {
     "use strict";
-    n.r(t), n.d(t, {
-        useCalendarState: function() {
-            return r.useCalendarState
-        },
-        useCheckboxGroupState: function() {
-            return i.useCheckboxGroupState
-        },
-        useComboBoxState: function() {
-            return a.useComboBoxState
-        },
-        useDateFieldState: function() {
-            return o.useDateFieldState
-        },
-        useDatePickerState: function() {
-            return o.useDatePickerState
-        },
-        useDateRangePickerState: function() {
-            return o.useDateRangePickerState
-        },
-        useListState: function() {
-            return s.useListState
-        },
-        useNumberFieldState: function() {
-            return u.useNumberFieldState
-        },
-        useOverlayTriggerState: function() {
-            return c.useOverlayTriggerState
-        },
-        useRadioGroupState: function() {
-            return l.useRadioGroupState
-        },
-        useRangeCalendarState: function() {
-            return r.useRangeCalendarState
-        },
-        useSearchFieldState: function() {
-            return d.useSearchFieldState
-        },
-        useSelectState: function() {
-            return f.useSelectState
-        },
-        useSliderState: function() {
-            return p.useSliderState
-        },
-        useTabListState: function() {
-            return m.useTabListState
-        },
-        useTableState: function() {
-            return h.useTableState
-        },
-        useTimeFieldState: function() {
-            return o.useTimeFieldState
-        },
-        useToggleState: function() {
-            return g.useToggleState
-        },
-        useTreeState: function() {
-            return _.useTreeState
+    n.r(t);
+    var r, o, i, a, u = n("898511"),
+        s = n("629815"),
+        l = n("195770"),
+        c = n("851285"),
+        f = n("941504");
+
+    function d(e, t) {
+        for (var n = 0; n < t.length; n++) {
+            var r = t[n];
+            r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
         }
-    });
-    var r = n("33412"),
-        i = n("988501"),
-        a = n("850559"),
-        o = n("687379"),
-        s = n("437296"),
-        u = n("677263"),
-        c = n("984102"),
-        l = n("423902"),
-        d = n("28693"),
-        f = n("483729"),
-        p = n("235574"),
-        h = n("772566"),
-        m = n("343015"),
-        g = n("897145"),
-        _ = n("552145")
+    }
+
+    function _(e) {
+        return (_ = Object.setPrototypeOf ? Object.getPrototypeOf : function(e) {
+            return e.__proto__ || Object.getPrototypeOf(e)
+        })(e)
+    }
+
+    function E(e, t) {
+        return (E = Object.setPrototypeOf || function(e, t) {
+            return e.__proto__ = t, e
+        })(e, t)
+    }
+    var p = f.default.getDefaultLocale();
+
+    function m() {
+        var e, t, n = null === (t = c.default.settings.localization) || void 0 === t ? void 0 : null === (e = t.locale) || void 0 === e ? void 0 : e.value;
+        return null != n && "" !== n && n !== p && (p = n, l.setLocale(p), !0)
+    }
+    var y = function(e) {
+        ! function(e, t) {
+            if ("function" != typeof t && null !== t) throw TypeError("Super expression must either be null or a function");
+            e.prototype = Object.create(t && t.prototype, {
+                constructor: {
+                    value: e,
+                    writable: !0,
+                    configurable: !0
+                }
+            }), t && E(e, t)
+        }(u, e);
+        var t, n, r, o, i, a = (t = u, n = function() {
+            if ("undefined" == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
+            if ("function" == typeof Proxy) return !0;
+            try {
+                return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function() {})), !0
+            } catch (e) {
+                return !1
+            }
+        }(), function() {
+            var e, r, o, i = _(t);
+            if (n) {
+                var a = _(this).constructor;
+                o = Reflect.construct(i, arguments, a)
+            } else o = i.apply(this, arguments);
+            return e = this, (r = o) && ("object" === function(e) {
+                return e && "undefined" != typeof Symbol && e.constructor === Symbol ? "symbol" : typeof e
+            }(r) || "function" == typeof r) ? r : function(e) {
+                if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
+                return e
+            }(e)
+        });
+
+        function u() {
+            return ! function(e, t) {
+                if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
+            }(this, u), a.apply(this, arguments)
+        }
+        return r = u, o = [{
+            key: "initialize",
+            value: function() {
+                this.waitFor(c.default), m(), l.setLocale(p)
+            }
+        }, {
+            key: "locale",
+            get: function() {
+                return p
+            }
+        }], d(r.prototype, o), i && d(r, i), u
+    }(u.default.Store);
+    i = "LocaleStore", (o = "displayName") in(r = y) ? Object.defineProperty(r, o, {
+        value: i,
+        enumerable: !0,
+        configurable: !0,
+        writable: !0
+    }) : r[o] = i, t.default = new y(s.default, {
+        OVERLAY_INITIALIZE: m,
+        CACHE_LOADED: m,
+        CONNECTION_OPEN: m,
+        USER_SETTINGS_PROTO_UPDATE: m,
+        USER_SETTINGS_LOCALE_OVERRIDE: function(e) {
+            p = e.locale, l.setLocale(p)
+        }
+    })
 }

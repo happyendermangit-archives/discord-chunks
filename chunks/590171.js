@@ -2,10 +2,10 @@ function(t, e, n) {
     "use strict";
     n.r(e), n.d(e, {
         eventFromException: function() {
-            return c
+            return l
         },
         eventFromMessage: function() {
-            return l
+            return c
         },
         eventFromUnknownInput: function() {
             return d
@@ -55,35 +55,35 @@ function(t, e, n) {
     }
     let u = /Minified React error #\d+;/i;
 
-    function c(t, e, n, r) {
+    function l(t, e, n, r) {
         let a = d(t, e, n && n.syntheticException || void 0, r);
         return (0, i.addExceptionMechanism)(a), a.level = "error", n && n.event_id && (a.event_id = n.event_id), (0, i.resolvedSyncPromise)(a)
     }
 
-    function l(t, e, n = "info", r, a) {
+    function c(t, e, n = "info", r, a) {
         let o = f(t, e, r && r.syntheticException || void 0, a);
         return o.level = n, r && r.event_id && (o.event_id = r.event_id), (0, i.resolvedSyncPromise)(o)
     }
 
     function d(t, e, n, a, u) {
-        let c;
+        let l;
         if ((0, i.isErrorEvent)(e) && e.error) return o(t, e.error);
         if ((0, i.isDOMError)(e) || (0, i.isDOMException)(e)) {
-            if ("stack" in e) c = o(t, e);
+            if ("stack" in e) l = o(t, e);
             else {
                 let r = e.name || ((0, i.isDOMError)(e) ? "DOMError" : "DOMException"),
                     o = e.message ? `${r}: ${e.message}` : r;
-                c = f(t, o, n, a), (0, i.addExceptionTypeValue)(c, o)
+                l = f(t, o, n, a), (0, i.addExceptionTypeValue)(l, o)
             }
-            return "code" in e && (c.tags = {
-                ...c.tags,
+            return "code" in e && (l.tags = {
+                ...l.tags,
                 "DOMException.code": `${e.code}`
-            }), c
+            }), l
         }
-        return (0, i.isError)(e) ? o(t, e) : (0, i.isPlainObject)(e) || (0, i.isEvent)(e) ? (c = function(t, e, n, a) {
+        return (0, i.isError)(e) ? o(t, e) : (0, i.isPlainObject)(e) || (0, i.isEvent)(e) ? (l = function(t, e, n, a) {
             let o = (0, r.getCurrentHub)().getClient(),
                 u = o && o.getOptions().normalizeDepth,
-                c = {
+                l = {
                     exception: {
                         values: [{
                             type: (0, i.isEvent)(e) ? e.constructor.name : a ? "UnhandledRejection" : "Error",
@@ -114,16 +114,16 @@ function(t, e, n) {
                 };
             if (n) {
                 let e = s(t, n);
-                e.length && (c.exception.values[0].stacktrace = {
+                e.length && (l.exception.values[0].stacktrace = {
                     frames: e
                 })
             }
-            return c
-        }(t, e, n, u), (0, i.addExceptionMechanism)(c, {
+            return l
+        }(t, e, n, u), (0, i.addExceptionMechanism)(l, {
             synthetic: !0
-        }), c) : (c = f(t, e, n, a), (0, i.addExceptionTypeValue)(c, `${e}`, void 0), (0, i.addExceptionMechanism)(c, {
+        }), l) : (l = f(t, e, n, a), (0, i.addExceptionTypeValue)(l, `${e}`, void 0), (0, i.addExceptionMechanism)(l, {
             synthetic: !0
-        }), c)
+        }), l)
     }
 
     function f(t, e, n, r) {

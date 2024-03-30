@@ -1,0 +1,72 @@
+function(e, t, n) {
+    "use strict";
+    n.r(t), n.d(t, {
+        AttachmentIcon: function() {
+            return a
+        }
+    });
+    var r = n("470079"),
+        o = n("447515"),
+        i = n("722161"),
+        a = function(e) {
+            var t, n, a = e.width,
+                u = e.height,
+                s = e.color,
+                l = void 0 === s ? o.default.colors.INTERACTIVE_NORMAL : s,
+                c = e.colorClass,
+                f = function(e, t) {
+                    if (null == e) return {};
+                    var n, r, o = function(e, t) {
+                        if (null == e) return {};
+                        var n, r, o = {},
+                            i = Object.keys(e);
+                        for (r = 0; r < i.length; r++) n = i[r], !(t.indexOf(n) >= 0) && (o[n] = e[n]);
+                        return o
+                    }(e, t);
+                    if (Object.getOwnPropertySymbols) {
+                        var i = Object.getOwnPropertySymbols(e);
+                        for (r = 0; r < i.length; r++) {
+                            if (n = i[r], !(t.indexOf(n) >= 0)) Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n])
+                        }
+                    }
+                    return o
+                }(e, ["width", "height", "color", "colorClass"]);
+            return r.createElement("svg", (t = function(e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        r = Object.keys(n);
+                    "function" == typeof Object.getOwnPropertySymbols && (r = r.concat(Object.getOwnPropertySymbols(n).filter(function(e) {
+                        return Object.getOwnPropertyDescriptor(n, e).enumerable
+                    }))), r.forEach(function(t) {
+                        var r, o, i;
+                        r = e, o = t, i = n[t], o in r ? Object.defineProperty(r, o, {
+                            value: i,
+                            enumerable: !0,
+                            configurable: !0,
+                            writable: !0
+                        }) : r[o] = i
+                    })
+                }
+                return e
+            }({}, (0, i.default)(f)), n = (n = {
+                xmlns: "http://www.w3.org/2000/svg",
+                width: void 0 === a ? 24 : a,
+                height: void 0 === u ? 24 : u,
+                fill: "none",
+                viewBox: "0 0 24 24"
+            }, n), Object.getOwnPropertyDescriptors ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n)) : (function(e, t) {
+                var n = Object.keys(e);
+                if (Object.getOwnPropertySymbols) {
+                    var r = Object.getOwnPropertySymbols(e);
+                    n.push.apply(n, r)
+                }
+                return n
+            })(Object(n)).forEach(function(e) {
+                Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e))
+            }), t), r.createElement("path", {
+                fill: "string" == typeof l ? l : l.css,
+                d: "M10.57 4.01a6.97 6.97 0 0 1 9.86 0l.54.55a6.99 6.99 0 0 1 0 9.88l-7.26 7.27a1 1 0 0 1-1.42-1.42l7.27-7.26a4.99 4.99 0 0 0 0-7.06L19 5.43a4.97 4.97 0 0 0-7.02 0l-8.02 8.02a3.24 3.24 0 1 0 4.58 4.58l6.24-6.24a1.12 1.12 0 0 0-1.58-1.58l-3.5 3.5a1 1 0 0 1-1.42-1.42l3.5-3.5a3.12 3.12 0 1 1 4.42 4.42l-6.24 6.24a5.24 5.24 0 0 1-7.42-7.42l8.02-8.02Z",
+                className: void 0 === c ? "" : c
+            }))
+        }
+}

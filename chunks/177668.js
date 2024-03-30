@@ -33,15 +33,15 @@ function(t, e, n) {
             console.error(`Invalid Sentry Dsn: ${t}`);
             return
         }
-        let [n, r, a = "", o, u = "", c] = e.slice(1), l = "", d = c, f = d.split("/");
-        if (f.length > 1 && (l = f.slice(0, -1).join("/"), d = f.pop()), d) {
+        let [n, r, a = "", o, u = "", l] = e.slice(1), c = "", d = l, f = d.split("/");
+        if (f.length > 1 && (c = f.slice(0, -1).join("/"), d = f.pop()), d) {
             let t = d.match(/^\d+/);
             t && (d = t[0])
         }
         return s({
             host: o,
             pass: a,
-            path: l,
+            path: c,
             projectId: d,
             port: u,
             protocol: n,

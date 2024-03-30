@@ -1,35 +1,35 @@
-function(t, n, e) {
+function(t, e, n) {
     "use strict";
-    e.r(n), e.d(n, {
+    n.r(e), n.d(e, {
         SyncPromise: function() {
             return s
         }
     });
-    var r, i, o = e("11979");
+    var r, i, o = n("11979");
     (r = i || (i = {})).PENDING = "PENDING", r.RESOLVED = "RESOLVED", r.REJECTED = "REJECTED";
     var s = function() {
         function t(t) {
-            var n = this;
+            var e = this;
             this._state = i.PENDING, this._handlers = [], this._resolve = function(t) {
-                n._setResult(i.RESOLVED, t)
+                e._setResult(i.RESOLVED, t)
             }, this._reject = function(t) {
-                n._setResult(i.REJECTED, t)
-            }, this._setResult = function(t, e) {
-                if (n._state === i.PENDING) {
-                    if ((0, o.isThenable)(e)) {
-                        e.then(n._resolve, n._reject);
+                e._setResult(i.REJECTED, t)
+            }, this._setResult = function(t, n) {
+                if (e._state === i.PENDING) {
+                    if ((0, o.isThenable)(n)) {
+                        n.then(e._resolve, e._reject);
                         return
                     }
-                    n._state = t, n._value = e, n._executeHandlers()
+                    e._state = t, e._value = n, e._executeHandlers()
                 }
             }, this._attachHandler = function(t) {
-                n._handlers = n._handlers.concat(t), n._executeHandlers()
+                e._handlers = e._handlers.concat(t), e._executeHandlers()
             }, this._executeHandlers = function() {
-                n._state !== i.PENDING && (n._state === i.REJECTED ? n._handlers.forEach(function(t) {
-                    t.onrejected && t.onrejected(n._value)
-                }) : n._handlers.forEach(function(t) {
-                    t.onfulfilled && t.onfulfilled(n._value)
-                }), n._handlers = [])
+                e._state !== i.PENDING && (e._state === i.REJECTED ? e._handlers.forEach(function(t) {
+                    t.onrejected && t.onrejected(e._value)
+                }) : e._handlers.forEach(function(t) {
+                    t.onfulfilled && t.onfulfilled(e._value)
+                }), e._handlers = [])
             };
             try {
                 t(this._resolve, this._reject)
@@ -39,56 +39,56 @@ function(t, n, e) {
         }
         return t.prototype.toString = function() {
             return "[object SyncPromise]"
-        }, t.resolve = function(n) {
+        }, t.resolve = function(e) {
             return new t(function(t) {
-                t(n)
+                t(e)
             })
-        }, t.reject = function(n) {
-            return new t(function(t, e) {
-                e(n)
+        }, t.reject = function(e) {
+            return new t(function(t, n) {
+                n(e)
             })
-        }, t.all = function(n) {
-            return new t(function(e, r) {
-                if (!Array.isArray(n)) {
+        }, t.all = function(e) {
+            return new t(function(n, r) {
+                if (!Array.isArray(e)) {
                     r(TypeError("Promise.all requires an array as input."));
                     return
                 }
-                if (0 === n.length) {
-                    e([]);
+                if (0 === e.length) {
+                    n([]);
                     return
                 }
-                var i = n.length,
+                var i = e.length,
                     o = [];
-                n.forEach(function(n, s) {
-                    t.resolve(n).then(function(t) {
-                        o[s] = t, 0 == (i -= 1) && e(o)
+                e.forEach(function(e, s) {
+                    t.resolve(e).then(function(t) {
+                        o[s] = t, 0 == (i -= 1) && n(o)
                     }).then(null, r)
                 })
             })
-        }, t.prototype.then = function(n, e) {
+        }, t.prototype.then = function(e, n) {
             var r = this;
             return new t(function(t, i) {
                 r._attachHandler({
-                    onfulfilled: function(e) {
-                        if (!n) {
-                            t(e);
+                    onfulfilled: function(n) {
+                        if (!e) {
+                            t(n);
                             return
                         }
                         try {
-                            t(n(e));
+                            t(e(n));
                             return
                         } catch (t) {
                             i(t);
                             return
                         }
                     },
-                    onrejected: function(n) {
-                        if (!e) {
-                            i(n);
+                    onrejected: function(e) {
+                        if (!n) {
+                            i(e);
                             return
                         }
                         try {
-                            t(e(n));
+                            t(n(e));
                             return
                         } catch (t) {
                             i(t);
@@ -101,14 +101,14 @@ function(t, n, e) {
             return this.then(function(t) {
                 return t
             }, t)
-        }, t.prototype.finally = function(n) {
-            var e = this;
+        }, t.prototype.finally = function(e) {
+            var n = this;
             return new t(function(t, r) {
                 var i, o;
-                return e.then(function(t) {
-                    o = !1, i = t, n && n()
+                return n.then(function(t) {
+                    o = !1, i = t, e && e()
                 }, function(t) {
-                    o = !0, i = t, n && n()
+                    o = !0, i = t, e && e()
                 }).then(function() {
                     if (o) {
                         r(i);

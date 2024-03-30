@@ -5,7 +5,7 @@ function(t, e, n) {
             return u
         },
         wrapTransactionWithProfiling: function() {
-            return c
+            return l
         }
     });
     var r = n("91320"),
@@ -15,21 +15,21 @@ function(t, e, n) {
     let s = !1;
 
     function u(t) {
-        return t ? c(t) : (("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.logger.log("[Profiling] Transaction is undefined, skipping profiling"), t)
+        return t ? l(t) : (("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.logger.log("[Profiling] Transaction is undefined, skipping profiling"), t)
     }
 
-    function c(t) {
+    function l(t) {
         let e;
         let n = a.WINDOW.Profiler;
         if ("function" != typeof n) return ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.logger.log("[Profiling] Profiling is not supported by this browser, Profiler interface missing on window object."), t;
         if (s) return ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.logger.log("[Profiling] Profiling has been disabled for the duration of the current user session."), t;
         let u = (0, r.getCurrentHub)().getClient(),
-            c = u && u.getOptions();
-        if (!c) return ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.logger.log("[Profiling] Profiling disabled, no options found."), t;
-        let l = c.profilesSampleRate;
-        if (!(0, o.isValidSampleRate)(l)) return ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.logger.warn("[Profiling] Discarding profile because of invalid sample rate."), t;
-        if (!l) return ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.logger.log("[Profiling] Discarding profile because a negative sampling decision was inherited or profileSampleRate is set to 0"), t;
-        if (!(!0 === l || Math.random() < l)) return ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.logger.log(`[Profiling] Discarding profile because it's not included in the random sample (sampling rate = ${Number(l)})`), t;
+            l = u && u.getOptions();
+        if (!l) return ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.logger.log("[Profiling] Profiling disabled, no options found."), t;
+        let c = l.profilesSampleRate;
+        if (!(0, o.isValidSampleRate)(c)) return ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.logger.warn("[Profiling] Discarding profile because of invalid sample rate."), t;
+        if (!c) return ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.logger.log("[Profiling] Discarding profile because a negative sampling decision was inherited or profileSampleRate is set to 0"), t;
+        if (!(!0 === c || Math.random() < c)) return ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.logger.log(`[Profiling] Discarding profile because it's not included in the random sample (sampling rate = ${Number(c)})`), t;
         try {
             e = new n({
                 sampleInterval: 10,

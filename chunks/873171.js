@@ -1,6 +1,6 @@
-function(t, n, e) {
+function(t, e, n) {
     "use strict";
-    e.r(n), e.d(n, {
+    n.r(e), n.d(e, {
         consoleSandbox: function() {
             return u
         },
@@ -20,10 +20,10 @@ function(t, n, e) {
             return a
         }
     });
-    var r = e("444675");
+    var r = n("444675");
 
-    function i(t, n) {
-        return t.require(n)
+    function i(t, e) {
+        return t.require(e)
     }
 
     function o() {
@@ -32,38 +32,38 @@ function(t, n, e) {
     var s = {};
 
     function c() {
-        return o() ? e.g : "undefined" != typeof window ? window : "undefined" != typeof self ? self : s
+        return o() ? n.g : "undefined" != typeof window ? window : "undefined" != typeof self ? self : s
     }
 
     function a() {
         var t = c(),
-            n = t.crypto || t.msCrypto;
-        if (void 0 !== n && n.getRandomValues) {
-            var e = new Uint16Array(8);
-            n.getRandomValues(e), e[3] = 4095 & e[3] | 16384, e[4] = 16383 & e[4] | 32768;
+            e = t.crypto || t.msCrypto;
+        if (void 0 !== e && e.getRandomValues) {
+            var n = new Uint16Array(8);
+            e.getRandomValues(n), n[3] = 4095 & n[3] | 16384, n[4] = 16383 & n[4] | 32768;
             var r = function(t) {
-                for (var n = t.toString(16); n.length < 4;) n = "0" + n;
-                return n
+                for (var e = t.toString(16); e.length < 4;) e = "0" + e;
+                return e
             };
-            return r(e[0]) + r(e[1]) + r(e[2]) + r(e[3]) + r(e[4]) + r(e[5]) + r(e[6]) + r(e[7])
+            return r(n[0]) + r(n[1]) + r(n[2]) + r(n[3]) + r(n[4]) + r(n[5]) + r(n[6]) + r(n[7])
         }
         return "xxxxxxxxxxxx4xxxyxxxxxxxxxxxxxxx".replace(/[xy]/g, function(t) {
-            var n = 16 * Math.random() | 0;
-            return ("x" === t ? n : 3 & n | 8).toString(16)
+            var e = 16 * Math.random() | 0;
+            return ("x" === t ? e : 3 & e | 8).toString(16)
         })
     }
 
     function u(t) {
-        var n = c();
-        if (!("console" in n)) return t();
-        var e = n.console,
+        var e = c();
+        if (!("console" in e)) return t();
+        var n = e.console,
             r = {};
         ["debug", "info", "warn", "error", "log", "assert"].forEach(function(t) {
-            t in n.console && e[t].__sentry_original__ && (r[t] = e[t], e[t] = e[t].__sentry_original__)
+            t in e.console && n[t].__sentry_original__ && (r[t] = n[t], n[t] = n[t].__sentry_original__)
         });
         var i = t();
         return Object.keys(r).forEach(function(t) {
-            e[t] = r[t]
+            n[t] = r[t]
         }), i
     }
 

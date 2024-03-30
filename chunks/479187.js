@@ -1,5 +1,5 @@
 function(e, t, n) {
-    var i = {
+    var r = {
         "./bg": "853343",
         "./bg.json": "853343",
         "./cs": "820189",
@@ -12,8 +12,8 @@ function(e, t, n) {
         "./el.json": "709790",
         "./en-GB": "257037",
         "./en-GB.json": "257037",
-        "./en-US": "79209",
-        "./en-US.js": "79209",
+        "./en-US": "306670",
+        "./en-US.js": "306670",
         "./es-ES": "165243",
         "./es-ES.json": "165243",
         "./fi": "419485",
@@ -64,18 +64,18 @@ function(e, t, n) {
         "./zh-TW.json": "223797"
     };
 
-    function r(e) {
-        return n(s(e))
+    function o(e) {
+        return n(i(e))
     }
 
-    function s(e) {
-        if (!n.o(i, e)) {
+    function i(e) {
+        if (!n.o(r, e)) {
             var t = Error("Cannot find module '" + e + "'");
             throw t.code = "MODULE_NOT_FOUND", t
         }
-        return i[e]
+        return r[e]
     }
-    r.id = '"479187"', r.keys = function() {
-        return Object.keys(i)
-    }, r.resolve = s, e.exports = r
+    o.id = '"479187"', o.keys = function() {
+        return Object.keys(r)
+    }, o.resolve = i, e.exports = o
 }

@@ -7,7 +7,7 @@ function(e, t, n) {
     });
     var r = n("470079"),
         i = n("573654"),
-        a = n("329909");
+        a = n("605782");
 
     function o() {
         var e = (0, r.useContext)(a.DndContext).dragDropManager;

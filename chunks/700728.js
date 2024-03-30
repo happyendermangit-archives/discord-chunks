@@ -5,9 +5,9 @@ function(t, e, n) {
         o = n("844781"),
         s = n("92801"),
         u = n("849513"),
-        c = n("828091");
+        l = n("828091");
     t.exports = function(t, e) {
-        return o(t) && s(e) ? u(c(t), e) : function(n) {
+        return o(t) && s(e) ? u(l(t), e) : function(n) {
             var o = i(n, t);
             return void 0 === o && o === e ? a(n, t) : r(e, o, 3)
         }

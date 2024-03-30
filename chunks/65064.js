@@ -5,27 +5,27 @@ function(t, e, n) {
         o = n("400353"),
         s = n("653180"),
         u = n("657398"),
-        c = n("19235"),
-        l = "[object Map]",
+        l = n("19235"),
+        c = "[object Map]",
         d = "[object Promise]",
         f = "[object Set]",
         p = "[object WeakMap]",
         h = "[object DataView]",
-        _ = c(r),
-        g = c(i),
-        m = c(a),
-        y = c(o),
-        v = c(s),
+        _ = l(r),
+        g = l(i),
+        m = l(a),
+        y = l(o),
+        v = l(s),
         b = u;
-    (r && b(new r(new ArrayBuffer(1))) != h || i && b(new i) != l || a && b(a.resolve()) != d || o && b(new o) != f || s && b(new s) != p) && (b = function(t) {
+    (r && b(new r(new ArrayBuffer(1))) != h || i && b(new i) != c || a && b(a.resolve()) != d || o && b(new o) != f || s && b(new s) != p) && (b = function(t) {
         var e = u(t),
             n = "[object Object]" == e ? t.constructor : void 0,
-            r = n ? c(n) : "";
+            r = n ? l(n) : "";
         if (r) switch (r) {
             case _:
                 return h;
             case g:
-                return l;
+                return c;
             case m:
                 return d;
             case y:

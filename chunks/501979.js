@@ -3,20 +3,20 @@ function(t, e, n) {
         i = n("393531"),
         a = n("208529");
     t.exports = function(t, e, n, o, s, u) {
-        var c = 1 & n,
-            l = t.length,
+        var l = 1 & n,
+            c = t.length,
             d = e.length;
-        if (l != d && !(c && d > l)) return !1;
+        if (c != d && !(l && d > c)) return !1;
         var f = u.get(t),
             p = u.get(e);
         if (f && p) return f == e && p == t;
         var h = -1,
             _ = !0,
             g = 2 & n ? new r : void 0;
-        for (u.set(t, e), u.set(e, t); ++h < l;) {
+        for (u.set(t, e), u.set(e, t); ++h < c;) {
             var m = t[h],
                 y = e[h];
-            if (o) var v = c ? o(y, m, h, e, t, u) : o(m, y, h, t, e, u);
+            if (o) var v = l ? o(y, m, h, e, t, u) : o(m, y, h, t, e, u);
             if (void 0 !== v) {
                 if (v) continue;
                 _ = !1;

@@ -1,9 +1,9 @@
-function(t, n, e) {
+function(t, e, n) {
     "use strict";
-    e.r(n), e.d(n, {
+    n.r(e), n.d(e, {
         addBreadcrumb: function() {
             return r.addBreadcrumb
         }
     });
-    var r = e("934951")
+    var r = n("934951")
 }

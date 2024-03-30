@@ -1,7 +1,7 @@
-function(t, e, r) {
-    var n = r("903425"),
-        i = r("533206");
-    t.exports = function(t) {
-        return "symbol" == typeof t || i(t) && "[object Symbol]" == n(t)
+function(e, t, n) {
+    var r = n("903425"),
+        i = n("533206");
+    e.exports = function(e) {
+        return "symbol" == typeof e || i(e) && "[object Symbol]" == r(e)
     }
 }

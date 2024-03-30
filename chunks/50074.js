@@ -14,7 +14,7 @@ function(t, e, n) {
             return m
         },
         envelopeContainsItemType: function() {
-            return c
+            return l
         },
         envelopeItemTypeToDataCategory: function() {
             return _
@@ -53,11 +53,11 @@ function(t, e, n) {
         return !1
     }
 
-    function c(t, e) {
+    function l(t, e) {
         return u(t, (t, n) => e.includes(n))
     }
 
-    function l(t, e) {
+    function c(t, e) {
         return (e || new TextEncoder).encode(t)
     }
 
@@ -65,7 +65,7 @@ function(t, e, n) {
         let [n, r] = t, a = JSON.stringify(n);
 
         function o(t) {
-            "string" == typeof a ? a = "string" == typeof t ? a + t : [l(a, e), t] : a.push("string" == typeof t ? l(t, e) : t)
+            "string" == typeof a ? a = "string" == typeof t ? a + t : [c(a, e), t] : a.push("string" == typeof t ? c(t, e) : t)
         }
         for (let t of r) {
             let [e, n] = t;
@@ -114,7 +114,7 @@ ${JSON.stringify(e)}
     }
 
     function p(t, e) {
-        let n = "string" == typeof t.data ? l(t.data, e) : t.data;
+        let n = "string" == typeof t.data ? c(t.data, e) : t.data;
         return [(0, a.dropUndefinedKeys)({
             type: "attachment",
             length: n.length,

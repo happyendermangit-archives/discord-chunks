@@ -6,7 +6,7 @@ function(t, e, n) {
             return eQ
         }
     });
-    var u, c, l, d, f, p, h, _, g, m, y, v, b, E, S, w, T = n("91320"),
+    var u, l, c, d, f, p, h, _, g, m, y, v, b, E, S, w, T = n("91320"),
         k = n("648238"),
         x = n("444675");
     let R = k.GLOBAL_OBJ,
@@ -66,46 +66,46 @@ function(t, e, n) {
     function G(t) {
         try {
             let e = t.rules || t.cssRules;
-            return e ? Array.from(e).map(z).join("") : null
+            return e ? Array.from(e).map(F).join("") : null
         } catch (t) {
             return null
         }
     }
 
-    function z(t) {
+    function F(t) {
         let e = t.cssText;
         if (function(t) {
                 return "styleSheet" in t
             }(t)) try {
             e = G(t.styleSheet) || e
         } catch (t) {}
-        return F(e)
+        return Y(e)
     }
 
-    function F(t) {
+    function Y(t) {
         return t.indexOf(":") > -1 ? t.replace(/(\[(?:[\w-]+)[^\\])(:(?:[\w-]+)\])/gm, "$1\\$2") : t
     }
-    let Y = /url\((?:(')([^']*)'|(")(.*?)"|([^)]*))\)/gm,
+    let z = /url\((?:(')([^']*)'|(")(.*?)"|([^)]*))\)/gm,
         j = /^(?!www\.|(?:http|ftp)s?:\/\/|[A-Za-z]:\\|\/\/|#).*/,
         H = /^(data:)([^,]*),(.*)/i;
 
     function $(t, e) {
-        return (t || "").replace(Y, (t, n, r, i, a, o) => {
+        return (t || "").replace(z, (t, n, r, i, a, o) => {
             let s = r || a || o,
                 u = n || i || "";
             if (!s) return t;
             if (!j.test(s) || H.test(s)) return `url(${u}${s}${u})`;
             if ("/" === s[0]) {
-                var c;
+                var l;
                 let t;
-                return `url(${u}${t="",(t=(t=(c=e).indexOf("//")>-1?c.split("/").slice(0,3).join("/"):c.split("/")[0]).split("?")[0])+s}${u})`
+                return `url(${u}${t="",(t=(t=(l=e).indexOf("//")>-1?l.split("/").slice(0,3).join("/"):l.split("/")[0]).split("?")[0])+s}${u})`
             }
-            let l = e.split("/"),
+            let c = e.split("/"),
                 d = s.split("/");
-            for (let t of (l.pop(), d)) {
-                if ("." !== t) ".." === t ? l.pop() : l.push(t)
+            for (let t of (c.pop(), d)) {
+                if ("." !== t) ".." === t ? c.pop() : c.push(t)
             }
-            return `url(${u}${l.join("/")}${u})`
+            return `url(${u}${c.join("/")}${u})`
         })
     }
     let W = /^[^ \t\n\r\u000c]+/,
@@ -125,10 +125,10 @@ function(t, e, n) {
     function J(t, e, n, r, i, a, o, s) {
         if (!i) return i;
         let u = r.toLowerCase(),
-            c = n.toLowerCase();
+            l = n.toLowerCase();
         if ("src" === u || "href" === u) return Z(t, i);
         if ("xlink:href" === u && "#" !== i[0]) return Z(t, i);
-        if ("background" === u && ("table" === c || "td" === c || "th" === c)) return Z(t, i);
+        if ("background" === u && ("table" === l || "td" === l || "th" === l)) return Z(t, i);
         else if ("srcset" === u) return function(t, e) {
             if ("" === e.trim()) return e;
             let n = 0;
@@ -168,10 +168,10 @@ function(t, e, n) {
             return i.join(", ")
         }(t, i);
         else if ("style" === u) return $(i, V());
-        else if ("object" === c && "data" === u) return Z(t, i);
+        else if ("object" === l && "data" === u) return Z(t, i);
         else if (a && function(t, e, n, r) {
                 return !(r && t.matches(r)) && (["placeholder", "title", "aria-label"].indexOf(e) > -1 || "input" === n && "value" === e && t.hasAttribute("type") && ["submit", "button"].indexOf(t.getAttribute("type").toLowerCase()) > -1)
-            }(e, u, c, o)) return s ? s(i) : P(i);
+            }(e, u, l, o)) return s ? s(i) : P(i);
         return i
     }
 
@@ -201,8 +201,8 @@ function(t, e, n) {
             map: o,
             blockClass: s,
             blockSelector: u,
-            unblockSelector: c,
-            maskTextClass: l,
+            unblockSelector: l,
+            maskTextClass: c,
             maskTextSelector: d,
             unmaskTextSelector: f,
             skipChild: p = !1,
@@ -223,13 +223,13 @@ function(t, e, n) {
             keepIframeSrcFn: D = () => !1
         } = e, {
             preserveWhiteSpace: O = !0
-        } = e, z = function(t, e) {
+        } = e, F = function(t, e) {
             var n, a, o;
             let s;
             let {
                 doc: u,
-                blockClass: c,
-                blockSelector: l,
+                blockClass: l,
+                blockSelector: c,
                 unblockSelector: d,
                 maskTextClass: f,
                 maskTextSelector: p,
@@ -277,7 +277,7 @@ function(t, e, n) {
                                     if (e.test(r)) return !0
                                 }
                             return !!n && t.matches(n)
-                        }(t, c, l, d),
+                        }(t, l, c, d),
                         N = function(t) {
                             if (t instanceof HTMLFormElement) return "form";
                             let e = t.tagName.toLowerCase().trim();
@@ -371,20 +371,20 @@ function(t, e, n) {
                     let I = t.parentNode && t.parentNode.tagName,
                         O = t.textContent,
                         M = "STYLE" === I || void 0,
-                        z = "SCRIPT" === I || void 0;
+                        F = "SCRIPT" === I || void 0;
                     if (M && O) {
                         try {
                             if (t.nextSibling || t.previousSibling);
                             else if (null === (n = t.parentNode.sheet) || void 0 === n ? void 0 : n.cssRules) {
                                 ;
-                                O = (o = t.parentNode.sheet).cssRules ? Array.from(o.cssRules).map(t => t.cssText ? F(t.cssText) : "").join("") : ""
+                                O = (o = t.parentNode.sheet).cssRules ? Array.from(o.cssRules).map(t => t.cssText ? Y(t.cssText) : "").join("") : ""
                             }
                         } catch (e) {
                             console.warn(`Cannot get CSS styles from text's parentNode. Error: ${e}`, t)
                         }
                         O = $(O, V())
                     }
-                    return z && (O = "SCRIPT_PLACEHOLDER"), "TEXTAREA" === I && O ? O = "" : "OPTION" === I && O ? O = C({
+                    return F && (O = "SCRIPT_PLACEHOLDER"), "TEXTAREA" === I && O ? O = "" : "OPTION" === I && O ? O = C({
                         input: t.parentNode,
                         type: null,
                         tagName: I,
@@ -393,7 +393,7 @@ function(t, e, n) {
                         unmaskInputSelector: y,
                         maskInputOptions: b,
                         maskInputFn: S
-                    }) : !M && !z && K(t, f, p, h, v) && O && (O = E ? E(O) : P(O)), {
+                    }) : !M && !F && K(t, f, p, h, v) && O && (O = E ? E(O) : P(O)), {
                         type: g.Text,
                         textContent: O || "",
                         isStyle: M,
@@ -414,8 +414,8 @@ function(t, e, n) {
             doc: a,
             blockClass: s,
             blockSelector: u,
-            unblockSelector: c,
-            maskTextClass: l,
+            unblockSelector: l,
+            maskTextClass: c,
             maskTextSelector: d,
             unmaskTextSelector: f,
             inlineStylesheet: h,
@@ -430,7 +430,7 @@ function(t, e, n) {
             recordCanvas: k,
             keepIframeSrcFn: D
         });
-        if (!z) return console.warn(t, "not serialized"), null;
+        if (!F) return console.warn(t, "not serialized"), null;
         n = "__sn" in t ? t.__sn.id : ! function(t, e) {
             if (e.comment && t.type === g.Comment) return !0;
             if (t.type === g.Element) {
@@ -446,23 +446,23 @@ function(t, e, n) {
                 }
             }
             return !1
-        }(z, S) && (O || z.type !== g.Text || z.isStyle || z.textContent.replace(/^\s+|\s+$/gm, "").length) ? M++ : -2;
-        let Y = Object.assign(z, {
+        }(F, S) && (O || F.type !== g.Text || F.isStyle || F.textContent.replace(/^\s+|\s+$/gm, "").length) ? M++ : -2;
+        let z = Object.assign(F, {
             id: n
         });
-        if (t.__sn = Y, -2 === n) return null;
+        if (t.__sn = z, -2 === n) return null;
         o[n] = t, x && x(t);
         let j = !p;
-        if (Y.type === g.Element && (j = j && !Y.needBlock, delete Y.needBlock, t.shadowRoot && (Y.isShadowHost = !0)), (Y.type === g.Document || Y.type === g.Element) && j) {
+        if (z.type === g.Element && (j = j && !z.needBlock, delete z.needBlock, t.shadowRoot && (z.isShadowHost = !0)), (z.type === g.Document || z.type === g.Element) && j) {
             var H;
-            S.headWhitespace && z.type === g.Element && "head" === z.tagName && (O = !1);
+            S.headWhitespace && F.type === g.Element && "head" === F.tagName && (O = !1);
             let e = {
                 doc: a,
                 map: o,
                 blockClass: s,
                 blockSelector: u,
-                unblockSelector: c,
-                maskTextClass: l,
+                unblockSelector: l,
+                maskTextClass: c,
                 maskTextSelector: d,
                 unmaskTextSelector: f,
                 skipChild: p,
@@ -485,15 +485,15 @@ function(t, e, n) {
             };
             for (let n of Array.from(t.childNodes)) {
                 let t = Q(n, e);
-                t && Y.childNodes.push(t)
+                t && z.childNodes.push(t)
             }
             if ((H = t).nodeType === H.ELEMENT_NODE && t.shadowRoot)
                 for (let n of Array.from(t.shadowRoot.childNodes)) {
                     let t = Q(n, e);
-                    t && (t.isShadow = !0, Y.childNodes.push(t))
+                    t && (t.isShadow = !0, z.childNodes.push(t))
                 }
         }
-        return t.parentNode && I(t.parentNode) && (Y.isShadow = !0), Y.type === g.Element && "iframe" === Y.tagName && ! function(t, e, n) {
+        return t.parentNode && I(t.parentNode) && (z.isShadow = !0), z.type === g.Element && "iframe" === z.tagName && ! function(t, e, n) {
             let r;
             let i = t.contentWindow;
             if (!i) return;
@@ -526,8 +526,8 @@ function(t, e, n) {
                     map: o,
                     blockClass: s,
                     blockSelector: u,
-                    unblockSelector: c,
-                    maskTextClass: l,
+                    unblockSelector: l,
+                    maskTextClass: c,
                     maskTextSelector: d,
                     unmaskTextSelector: f,
                     skipChild: !1,
@@ -550,7 +550,7 @@ function(t, e, n) {
                 });
                 n && R(t, n)
             }
-        }, N), Y
+        }, N), z
     }
 
     function tt(t, e, n = document) {
@@ -559,7 +559,7 @@ function(t, e, n) {
             passive: !0
         };
         return n.addEventListener(t, e, r), () => n.removeEventListener(t, e, r)
-    }(c = m || (m = {}))[c.DomContentLoaded = 0] = "DomContentLoaded", c[c.Load = 1] = "Load", c[c.FullSnapshot = 2] = "FullSnapshot", c[c.IncrementalSnapshot = 3] = "IncrementalSnapshot", c[c.Meta = 4] = "Meta", c[c.Custom = 5] = "Custom", c[c.Plugin = 6] = "Plugin", (l = y || (y = {}))[l.Mutation = 0] = "Mutation", l[l.MouseMove = 1] = "MouseMove", l[l.MouseInteraction = 2] = "MouseInteraction", l[l.Scroll = 3] = "Scroll", l[l.ViewportResize = 4] = "ViewportResize", l[l.Input = 5] = "Input", l[l.TouchMove = 6] = "TouchMove", l[l.MediaInteraction = 7] = "MediaInteraction", l[l.StyleSheetRule = 8] = "StyleSheetRule", l[l.CanvasMutation = 9] = "CanvasMutation", l[l.Font = 10] = "Font", l[l.Log = 11] = "Log", l[l.Drag = 12] = "Drag", l[l.StyleDeclaration = 13] = "StyleDeclaration", (d = v || (v = {}))[d.MouseUp = 0] = "MouseUp", d[d.MouseDown = 1] = "MouseDown", d[d.Click = 2] = "Click", d[d.ContextMenu = 3] = "ContextMenu", d[d.DblClick = 4] = "DblClick", d[d.Focus = 5] = "Focus", d[d.Blur = 6] = "Blur", d[d.TouchStart = 7] = "TouchStart", d[d.TouchMove_Departed = 8] = "TouchMove_Departed", d[d.TouchEnd = 9] = "TouchEnd", d[d.TouchCancel = 10] = "TouchCancel", (f = b || (b = {}))[f["2D"] = 0] = "2D", f[f.WebGL = 1] = "WebGL", f[f.WebGL2 = 2] = "WebGL2", (p = E || (E = {}))[p.Play = 0] = "Play", p[p.Pause = 1] = "Pause", p[p.Seeked = 2] = "Seeked", p[p.VolumeChange = 3] = "VolumeChange", (h = S || (S = {})).Start = "start", h.Pause = "pause", h.Resume = "resume", h.Resize = "resize", h.Finish = "finish", h.FullsnapshotRebuilded = "fullsnapshot-rebuilded", h.LoadStylesheetStart = "load-stylesheet-start", h.LoadStylesheetEnd = "load-stylesheet-end", h.SkipStart = "skip-start", h.SkipEnd = "skip-end", h.MouseInteraction = "mouse-interaction", h.EventCast = "event-cast", h.CustomEvent = "custom-event", h.Flush = "flush", h.StateChange = "state-change", h.PlayBack = "play-back";
+    }(l = m || (m = {}))[l.DomContentLoaded = 0] = "DomContentLoaded", l[l.Load = 1] = "Load", l[l.FullSnapshot = 2] = "FullSnapshot", l[l.IncrementalSnapshot = 3] = "IncrementalSnapshot", l[l.Meta = 4] = "Meta", l[l.Custom = 5] = "Custom", l[l.Plugin = 6] = "Plugin", (c = y || (y = {}))[c.Mutation = 0] = "Mutation", c[c.MouseMove = 1] = "MouseMove", c[c.MouseInteraction = 2] = "MouseInteraction", c[c.Scroll = 3] = "Scroll", c[c.ViewportResize = 4] = "ViewportResize", c[c.Input = 5] = "Input", c[c.TouchMove = 6] = "TouchMove", c[c.MediaInteraction = 7] = "MediaInteraction", c[c.StyleSheetRule = 8] = "StyleSheetRule", c[c.CanvasMutation = 9] = "CanvasMutation", c[c.Font = 10] = "Font", c[c.Log = 11] = "Log", c[c.Drag = 12] = "Drag", c[c.StyleDeclaration = 13] = "StyleDeclaration", (d = v || (v = {}))[d.MouseUp = 0] = "MouseUp", d[d.MouseDown = 1] = "MouseDown", d[d.Click = 2] = "Click", d[d.ContextMenu = 3] = "ContextMenu", d[d.DblClick = 4] = "DblClick", d[d.Focus = 5] = "Focus", d[d.Blur = 6] = "Blur", d[d.TouchStart = 7] = "TouchStart", d[d.TouchMove_Departed = 8] = "TouchMove_Departed", d[d.TouchEnd = 9] = "TouchEnd", d[d.TouchCancel = 10] = "TouchCancel", (f = b || (b = {}))[f["2D"] = 0] = "2D", f[f.WebGL = 1] = "WebGL", f[f.WebGL2 = 2] = "WebGL2", (p = E || (E = {}))[p.Play = 0] = "Play", p[p.Pause = 1] = "Pause", p[p.Seeked = 2] = "Seeked", p[p.VolumeChange = 3] = "VolumeChange", (h = S || (S = {})).Start = "start", h.Pause = "pause", h.Resume = "resume", h.Resize = "resize", h.Finish = "finish", h.FullsnapshotRebuilded = "fullsnapshot-rebuilded", h.LoadStylesheetStart = "load-stylesheet-start", h.LoadStylesheetEnd = "load-stylesheet-end", h.SkipStart = "skip-start", h.SkipEnd = "skip-end", h.MouseInteraction = "mouse-interaction", h.EventCast = "event-cast", h.CustomEvent = "custom-event", h.Flush = "flush", h.StateChange = "state-change", h.PlayBack = "play-back";
     let te = "Please stop import mirror directly. Instead of that,\r\nnow you can use replayer.getMirror() to access the mirror instance of a replayer,\r\nor you can use record.mirror to access the mirror instance during recording.",
         tn = {
             map: {},
@@ -582,9 +582,9 @@ function(t, e, n) {
             !i && !1 === n.leading && (i = o);
             let s = e - (o - i),
                 u = this,
-                c = arguments;
-            s <= 0 || s > e ? (r && (clearTimeout(r), r = null), i = o, t.apply(u, c)) : !r && !1 !== n.trailing && (r = setTimeout(() => {
-                i = !1 === n.leading ? 0 : Date.now(), r = null, t.apply(u, c)
+                l = arguments;
+            s <= 0 || s > e ? (r && (clearTimeout(r), r = null), i = o, t.apply(u, l)) : !r && !1 !== n.trailing && (r = setTimeout(() => {
+                i = !1 === n.leading ? 0 : Date.now(), r = null, t.apply(u, l)
             }, s))
         }
     }
@@ -638,14 +638,14 @@ function(t, e, n) {
         return t.nodeType, t.TEXT_NODE, tu(t.parentNode, e, n, r)
     }
 
-    function tc(t) {
+    function tl(t) {
         return "__sn" in t && -2 === t.__sn.id
     }
     "undefined" != typeof window && window.Proxy && window.Reflect && (tn = new Proxy(tn, {
         get: (t, e, n) => ("map" === e && console.error(te), Reflect.get(t, e, n))
     }));
 
-    function tl(t) {
+    function tc(t) {
         return !!t.changedTouches
     }
 
@@ -711,12 +711,12 @@ function(t, e, n) {
                     },
                     r = r => {
                         var i, a, o, s, u;
-                        let c = r.getRootNode ? null === (i = r.getRootNode()) || void 0 === i ? void 0 : i.host : null,
-                            l = c;
-                        for (; null === (o = null === (a = null == l ? void 0 : l.getRootNode) || void 0 === a ? void 0 : a.call(l)) || void 0 === o ? void 0 : o.host;) l = (null === (u = null === (s = null == l ? void 0 : l.getRootNode) || void 0 === s ? void 0 : s.call(l)) || void 0 === u ? void 0 : u.host) || null;
-                        let d = !this.doc.contains(r) && (!l || !this.doc.contains(l));
+                        let l = r.getRootNode ? null === (i = r.getRootNode()) || void 0 === i ? void 0 : i.host : null,
+                            c = l;
+                        for (; null === (o = null === (a = null == c ? void 0 : c.getRootNode) || void 0 === a ? void 0 : a.call(c)) || void 0 === o ? void 0 : o.host;) c = (null === (u = null === (s = null == c ? void 0 : c.getRootNode) || void 0 === s ? void 0 : s.call(c)) || void 0 === u ? void 0 : u.host) || null;
+                        let d = !this.doc.contains(r) && (!c || !this.doc.contains(c));
                         if (!r.parentNode || d) return;
-                        let f = I(r.parentNode) ? this.mirror.getId(c) : this.mirror.getId(r.parentNode),
+                        let f = I(r.parentNode) ? this.mirror.getId(l) : this.mirror.getId(r.parentNode),
                             p = n(r);
                         if (-1 === f || -1 === p) return e.addNode(r);
                         let h = Q(r, {
@@ -794,7 +794,7 @@ function(t, e, n) {
                 };
                 (a.texts.length || a.attributes.length || a.removes.length || a.adds.length) && (this.texts = [], this.attributes = [], this.removes = [], this.addedSet = new Set, this.movedSet = new Set, this.droppedSet = new Set, this.movedMap = {}, this.mutationCb(a))
             }, this.processMutation = t => {
-                if (!tc(t.target)) switch (t.type) {
+                if (!tl(t.target)) switch (t.type) {
                     case "characterData": {
                         let e = t.target.textContent;
                         !tu(t.target, this.blockClass, this.blockSelector, this.unblockSelector) && e !== t.oldValue && this.texts.push({
@@ -844,7 +844,7 @@ function(t, e, n) {
                         t.addedNodes.forEach(e => this.genAdds(e, t.target)), t.removedNodes.forEach(e => {
                             let n = this.mirror.getId(e),
                                 r = I(t.target) ? this.mirror.getId(t.target.host) : this.mirror.getId(t.target);
-                            !(tu(t.target, this.blockClass, this.blockSelector, this.unblockSelector) || tc(e)) && (this.addedSet.has(e) ? (ty(this.addedSet, e), this.droppedSet.add(e)) : this.addedSet.has(t.target) && -1 === n || function t(e, n) {
+                            !(tu(t.target, this.blockClass, this.blockSelector, this.unblockSelector) || tl(e)) && (this.addedSet.has(e) ? (ty(this.addedSet, e), this.droppedSet.add(e)) : this.addedSet.has(t.target) && -1 === n || function t(e, n) {
                                 if (I(e)) return !1;
                                 let r = n.getId(e);
                                 return !n.has(r) || (!e.parentNode || e.parentNode.nodeType !== e.DOCUMENT_NODE) && (!e.parentNode || t(e.parentNode, n))
@@ -858,7 +858,7 @@ function(t, e, n) {
             }, this.genAdds = (t, e) => {
                 if (!(e && tu(e, this.blockClass, this.blockSelector, this.unblockSelector))) {
                     if ("__sn" in t) {
-                        if (tc(t)) return;
+                        if (tl(t)) return;
                         this.movedSet.add(t);
                         let n = null;
                         if (e && "__sn" in e) n = e.__sn.id;
@@ -1015,8 +1015,8 @@ function(t, e, n) {
                 viewportResizeCb: o,
                 inputCb: s,
                 mediaInteractionCb: u,
-                styleSheetRuleCb: c,
-                styleDeclarationCb: l,
+                styleSheetRuleCb: l,
+                styleDeclarationCb: c,
                 canvasMutationCb: d,
                 fontCb: f
             } = t;
@@ -1035,9 +1035,9 @@ function(t, e, n) {
             }, t.mediaInteractionCb = (...t) => {
                 e.mediaInteaction && e.mediaInteaction(...t), u(...t)
             }, t.styleSheetRuleCb = (...t) => {
-                e.styleSheetRule && e.styleSheetRule(...t), c(...t)
+                e.styleSheetRule && e.styleSheetRule(...t), l(...t)
             }, t.styleDeclarationCb = (...t) => {
-                e.styleDeclaration && e.styleDeclaration(...t), l(...t)
+                e.styleDeclaration && e.styleDeclaration(...t), c(...t)
             }, t.canvasMutationCb = (...t) => {
                 e.canvasMutation && e.canvasMutation(...t), d(...t)
             }, t.fontCb = (...t) => {
@@ -1060,12 +1060,12 @@ function(t, e, n) {
                         let n = Date.now() - i;
                         tE(t)(s.map(t => (t.timeOffset -= n, t)), e), s = [], i = null
                     }, o),
-                    c = tr(t => {
+                    l = tr(t => {
                         let e = tw(t),
                             {
                                 clientX: n,
                                 clientY: a
-                            } = tl(t) ? t.changedTouches[0] : t;
+                            } = tc(t) ? t.changedTouches[0] : t;
                         !i && (i = Date.now()), s.push({
                             x: n,
                             y: a,
@@ -1075,9 +1075,9 @@ function(t, e, n) {
                     }, a, {
                         trailing: !1
                     }),
-                    l = [tt("mousemove", tE(c), n), tt("touchmove", tE(c), n), tt("drag", tE(c), n)];
+                    c = [tt("mousemove", tE(l), n), tt("touchmove", tE(l), n), tt("drag", tE(l), n)];
                 return tE(() => {
-                    l.forEach(t => t())
+                    c.forEach(t => t())
                 })
             }(t),
             a = function({
@@ -1092,26 +1092,26 @@ function(t, e, n) {
                 if (!1 === o.mouseInteraction) return () => {};
                 let s = !0 === o.mouseInteraction || void 0 === o.mouseInteraction ? {} : o.mouseInteraction,
                     u = [],
-                    c = e => o => {
+                    l = e => o => {
                         let s = tw(o);
                         if (tu(s, r, i, a)) return;
-                        let u = tl(o) ? o.changedTouches[0] : o;
+                        let u = tc(o) ? o.changedTouches[0] : o;
                         if (!u) return;
-                        let c = n.getId(s),
+                        let l = n.getId(s),
                             {
-                                clientX: l,
+                                clientX: c,
                                 clientY: d
                             } = u;
                         tE(t)({
                             type: v[e],
-                            id: c,
-                            x: l,
+                            id: l,
+                            x: c,
                             y: d
                         })
                     };
                 return Object.keys(v).filter(t => Number.isNaN(Number(t)) && !t.endsWith("_Departed") && !1 !== s[t]).forEach(t => {
                     let n = t.toLowerCase(),
-                        r = tE(c(t));
+                        r = tE(l(t));
                     u.push(tt(n, r, e))
                 }), tE(() => {
                     u.forEach(t => t())
@@ -1143,8 +1143,8 @@ function(t, e, n) {
                 ignoreClass: o,
                 ignoreSelector: s,
                 maskInputSelector: u,
-                unmaskInputSelector: c,
-                maskInputOptions: l,
+                unmaskInputSelector: l,
+                maskInputOptions: c,
                 maskInputFn: d,
                 sampling: f,
                 userTriggeredOnInput: p
@@ -1172,15 +1172,15 @@ function(t, e, n) {
                             type: e
                         })
                     }({
-                        maskInputOptions: l,
+                        maskInputOptions: c,
                         maskInputSelector: u,
                         tagName: f,
                         type: m
                     }) && (y = C({
                         input: g,
-                        maskInputOptions: l,
+                        maskInputOptions: c,
                         maskInputSelector: u,
-                        unmaskInputSelector: c,
+                        unmaskInputSelector: l,
                         tagName: f,
                         type: m,
                         value: y,
@@ -1195,9 +1195,9 @@ function(t, e, n) {
                         if (t !== n) {
                             let e = C({
                                 input: t,
-                                maskInputOptions: l,
+                                maskInputOptions: c,
                                 maskInputSelector: u,
-                                unmaskInputSelector: c,
+                                unmaskInputSelector: l,
                                 tagName: f,
                                 type: m,
                                 value: U(t, f, m),
@@ -1242,7 +1242,7 @@ function(t, e, n) {
                     g.forEach(t => t())
                 })
             }(t),
-            c = function({
+            l = function({
                 mediaInteractionCb: t,
                 blockClass: e,
                 blockSelector: n,
@@ -1255,15 +1255,15 @@ function(t, e, n) {
                         if (!s || tu(s, e, n, r)) return;
                         let {
                             currentTime: u,
-                            volume: c,
-                            muted: l
+                            volume: l,
+                            muted: c
                         } = s;
                         t({
                             type: o,
                             id: i.getId(s),
                             currentTime: u,
-                            volume: c,
-                            muted: l
+                            volume: l,
+                            muted: c
                         })
                     }), a.media || 500),
                     s = [tt("play", o(0)), tt("pause", o(1)), tt("seeked", o(2)), tt("volumechange", o(3))];
@@ -1271,7 +1271,7 @@ function(t, e, n) {
                     s.forEach(t => t())
                 })
             }(t),
-            l = function({
+            c = function({
                 styleSheetRuleCb: t,
                 mirror: e
             }, {
@@ -1350,13 +1350,13 @@ function(t, e, n) {
                 n.CSSStyleDeclaration.prototype.setProperty = new Proxy(r, {
                     apply: tE((n, r, i) => {
                         var a, o;
-                        let [s, u, c] = i, l = e.getId(null === (o = null === (a = r.parentRule) || void 0 === a ? void 0 : a.parentStyleSheet) || void 0 === o ? void 0 : o.ownerNode);
-                        return -1 !== l && t({
-                            id: l,
+                        let [s, u, l] = i, c = e.getId(null === (o = null === (a = r.parentRule) || void 0 === a ? void 0 : a.parentStyleSheet) || void 0 === o ? void 0 : o.ownerNode);
+                        return -1 !== c && t({
+                            id: c,
                             set: {
                                 property: s,
                                 value: u,
-                                priority: c
+                                priority: l
                             },
                             index: tD(r.parentRule)
                         }), n.apply(r, i)
@@ -1416,9 +1416,9 @@ function(t, e, n) {
             p = [];
         for (let e of t.plugins) p.push(e.observer(e.callback, n, e.options));
         return tE(() => {
-            tS.forEach(t => t.reset()), r.disconnect(), i(), a(), o(), s(), u(), c();
+            tS.forEach(t => t.reset()), r.disconnect(), i(), a(), o(), s(), u(), l();
             try {
-                l(), d()
+                c(), d()
             } catch (t) {}
             f(), p.forEach(t => t())
         })
@@ -1503,16 +1503,16 @@ function(t, e, n) {
         return r % 3 == 2 ? i = i.substring(0, i.length - 1) + "=" : r % 3 == 1 && (i = i.substring(0, i.length - 2) + "=="), i
     };
     let tG = new Map,
-        tz = (t, e, n) => {
+        tF = (t, e, n) => {
             var r, i;
             let a;
-            if (!t || !(tY(t, e) || "object" == typeof t)) return;
+            if (!t || !(tz(t, e) || "object" == typeof t)) return;
             let o = t.constructor.name;
             let s = (r = n, i = o, !(a = tG.get(r)) && (a = new Map, tG.set(r, a)), !a.has(i) && a.set(i, []), a.get(i)),
                 u = s.indexOf(t);
             return -1 === u && (u = s.length, s.push(t)), u
         },
-        tF = (t, e, n) => [...t].map(t => (function t(e, n, r) {
+        tY = (t, e, n) => [...t].map(t => (function t(e, n, r) {
             if (e instanceof Array) return e.map(e => t(e, n, r));
             if (null === e);
             else if (e instanceof Float32Array || e instanceof Float64Array || e instanceof Int32Array || e instanceof Uint32Array || e instanceof Uint8Array || e instanceof Uint16Array || e instanceof Int16Array || e instanceof Int8Array || e instanceof Uint8ClampedArray) return {
@@ -1542,30 +1542,30 @@ function(t, e, n) {
                 rr_type: e.constructor.name,
                 args: [t(e.data, n, r), e.width, e.height]
             };
-            else if (tY(e, n) || "object" == typeof e) {
+            else if (tz(e, n) || "object" == typeof e) {
                 let t = e.constructor.name;
                 return {
                     rr_type: t,
-                    index: tz(e, n, r)
+                    index: tF(e, n, r)
                 }
             }
             return e
         })(t, e, n)),
-        tY = (t, e) => !!["WebGLActiveInfo", "WebGLBuffer", "WebGLFramebuffer", "WebGLProgram", "WebGLRenderbuffer", "WebGLShader", "WebGLShaderPrecisionFormat", "WebGLTexture", "WebGLUniformLocation", "WebGLVertexArrayObject", "WebGLVertexArrayObjectOES"].filter(t => "function" == typeof e[t]).find(n => t instanceof e[n]);
+        tz = (t, e) => !!["WebGLActiveInfo", "WebGLBuffer", "WebGLFramebuffer", "WebGLProgram", "WebGLRenderbuffer", "WebGLShader", "WebGLShaderPrecisionFormat", "WebGLTexture", "WebGLUniformLocation", "WebGLVertexArrayObject", "WebGLVertexArrayObjectOES"].filter(t => "function" == typeof e[t]).find(n => t instanceof e[n]);
 
     function tj(t, e, n, r, i, a, o, s) {
         let u = [];
-        for (let c of Object.getOwnPropertyNames(t)) try {
-            if ("function" != typeof t[c]) continue;
-            let l = ta(t, c, function(u) {
-                return function(...l) {
-                    let d = u.apply(this, l);
-                    if (tz(d, s, t), !tu(this.canvas, r, a, i)) {
+        for (let l of Object.getOwnPropertyNames(t)) try {
+            if ("function" != typeof t[l]) continue;
+            let c = ta(t, l, function(u) {
+                return function(...c) {
+                    let d = u.apply(this, c);
+                    if (tF(d, s, t), !tu(this.canvas, r, a, i)) {
                         o.getId(this.canvas);
-                        let r = tF([...l], s, t),
+                        let r = tY([...c], s, t),
                             i = {
                                 type: e,
-                                property: c,
+                                property: l,
                                 args: r
                             };
                         n(this.canvas, i)
@@ -1573,13 +1573,13 @@ function(t, e, n) {
                     return d
                 }
             });
-            u.push(l)
+            u.push(c)
         } catch (i) {
-            let r = ti(t, c, {
+            let r = ti(t, l, {
                 set(t) {
                     n(this.canvas, {
                         type: e,
-                        property: c,
+                        property: l,
                         args: [t],
                         setter: !0
                     })
@@ -1750,8 +1750,8 @@ function(t, e, n) {
             checkoutEveryNth: i,
             blockClass: s = "rr-block",
             blockSelector: u = null,
-            unblockSelector: c = null,
-            ignoreClass: l = "rr-ignore",
+            unblockSelector: l = null,
+            ignoreClass: c = "rr-ignore",
             ignoreSelector: d = null,
             maskTextClass: f = "rr-mask",
             maskTextSelector: p = null,
@@ -1819,13 +1819,13 @@ function(t, e, n) {
             })
         }();
         let G = 0,
-            z = t => {
+            F = t => {
                 for (let e of B || []) e.eventProcessor && (t = e.eventProcessor(t));
                 return R && (t = R(t)), t
             };
         a = (t, a) => {
             var s;
-            if ((null === (s = tS[0]) || void 0 === s ? void 0 : s.isFrozen()) && t.type !== m.FullSnapshot && !(t.type === m.IncrementalSnapshot && t.data.source === y.Mutation) && tS.forEach(t => t.unfreeze()), n(z(t), a), t.type === m.FullSnapshot) e = t, G = 0;
+            if ((null === (s = tS[0]) || void 0 === s ? void 0 : s.isFrozen()) && t.type !== m.FullSnapshot && !(t.type === m.IncrementalSnapshot && t.data.source === y.Mutation) && tS.forEach(t => t.unfreeze()), n(F(t), a), t.type === m.FullSnapshot) e = t, G = 0;
             else if (t.type === m.IncrementalSnapshot) {
                 if (t.data.source === y.Mutation && t.data.isAttachIframe) return;
                 G++;
@@ -1834,7 +1834,7 @@ function(t, e, n) {
                 (n || a) && o(!0)
             }
         };
-        let F = t => {
+        let Y = t => {
                 a(t$({
                     type: m.IncrementalSnapshot,
                     data: Object.assign({
@@ -1842,7 +1842,7 @@ function(t, e, n) {
                     }, t)
                 }))
             },
-            Y = t => a(t$({
+            z = t => a(t$({
                 type: m.IncrementalSnapshot,
                 data: Object.assign({
                     source: y.Scroll
@@ -1855,7 +1855,7 @@ function(t, e, n) {
                 }, t)
             })),
             H = new tA({
-                mutationCb: F
+                mutationCb: Y
             }),
             $ = new tH({
                 recordCanvas: I,
@@ -1863,17 +1863,17 @@ function(t, e, n) {
                 win: window,
                 blockClass: s,
                 blockSelector: u,
-                unblockSelector: c,
+                unblockSelector: l,
                 mirror: tW
             }),
             W = new tB({
-                mutationCb: F,
-                scrollCb: Y,
+                mutationCb: Y,
+                scrollCb: z,
                 bypassOptions: {
                     onMutation: M,
                     blockClass: s,
                     blockSelector: u,
-                    unblockSelector: c,
+                    unblockSelector: l,
                     maskTextClass: f,
                     maskTextSelector: p,
                     unmaskTextSelector: _,
@@ -1903,7 +1903,7 @@ function(t, e, n) {
                     height: to()
                 }
             }), t), tS.forEach(t => t.lock());
-            let [o, l] = function(t, e) {
+            let [o, c] = function(t, e) {
                 let {
                     blockClass: n = "rr-block",
                     blockSelector: r = null,
@@ -1912,8 +1912,8 @@ function(t, e, n) {
                     maskTextSelector: o = null,
                     unmaskTextSelector: s = null,
                     inlineStylesheet: u = !0,
-                    inlineImages: c = !1,
-                    recordCanvas: l = !1,
+                    inlineImages: l = !1,
+                    recordCanvas: c = !1,
                     maskInputSelector: d = null,
                     unmaskInputSelector: f = null,
                     maskAllText: p = !1,
@@ -1974,8 +1974,8 @@ function(t, e, n) {
                         headMetaVerification: !0
                     } : !1 === m ? {} : m,
                     dataURLOptions: y,
-                    inlineImages: c,
-                    recordCanvas: l,
+                    inlineImages: l,
+                    recordCanvas: c,
                     preserveWhiteSpace: v,
                     onSerialize: b,
                     onIframeLoad: E,
@@ -1985,7 +1985,7 @@ function(t, e, n) {
             }(document, {
                 blockClass: s,
                 blockSelector: u,
-                unblockSelector: c,
+                unblockSelector: l,
                 maskTextClass: f,
                 maskTextSelector: p,
                 unmaskTextSelector: _,
@@ -2007,7 +2007,7 @@ function(t, e, n) {
                 keepIframeSrcFn: U
             });
             if (!o) return console.warn("Failed to snapshot the document");
-            tW.map = l, a(t$({
+            tW.map = c, a(t$({
                 type: m.FullSnapshot,
                 data: {
                     node: o,
@@ -2030,7 +2030,7 @@ function(t, e, n) {
                 var e;
                 return tE(tI)({
                     onMutation: M,
-                    mutationCb: F,
+                    mutationCb: Y,
                     mousemoveCb: (t, e) => a(t$({
                         type: m.IncrementalSnapshot,
                         data: {
@@ -2044,7 +2044,7 @@ function(t, e, n) {
                             source: y.MouseInteraction
                         }, t)
                     })),
-                    scrollCb: Y,
+                    scrollCb: z,
                     viewportResizeCb: t => a(t$({
                         type: m.IncrementalSnapshot,
                         data: Object.assign({
@@ -2083,7 +2083,7 @@ function(t, e, n) {
                         }, t)
                     })),
                     blockClass: s,
-                    ignoreClass: l,
+                    ignoreClass: c,
                     ignoreSelector: d,
                     maskTextClass: f,
                     maskTextSelector: p,
@@ -2102,7 +2102,7 @@ function(t, e, n) {
                     maskInputFn: T,
                     maskTextFn: k,
                     blockSelector: u,
-                    unblockSelector: c,
+                    unblockSelector: l,
                     slimDOMOptions: P,
                     mirror: tW,
                     iframeManager: H,
@@ -2630,7 +2630,7 @@ function t(t){let e=t.length;for(;--e>=0;)t[e]=0}const e=new Uint8Array([0,0,0,0
         }
     }
 
-    function ec({
+    function el({
         timeouts: t,
         currentSession: e,
         stickySession: n,
@@ -2680,7 +2680,7 @@ function t(t){let e=t.length;for(;--e>=0;)t[e]=0}const e=new Uint8Array([0,0,0,0
             })
         }
     }
-    async function el(t, e, n) {
+    async function ec(t, e, n) {
         if (!t.eventBuffer || t.isPaused() || tZ(e.timestamp) + t.timeouts.sessionIdlePause < Date.now()) return null;
         try {
             n && t.eventBuffer.clear();
@@ -3066,8 +3066,8 @@ function t(t){let e=t.length;for(;--e>=0;)t[e]=0}const e=new Uint8Array([0,0,0,0
             method: o,
             status_code: s = 0,
             request_body_size: u,
-            response_body_size: c
-        } = t.data, l = ex(a, n.networkDetailAllowUrls) && !ex(a, n.networkDetailDenyUrls), d = l ? function({
+            response_body_size: l
+        } = t.data, c = ex(a, n.networkDetailAllowUrls) && !ex(a, n.networkDetailDenyUrls), d = c ? function({
             networkCaptureBodies: t,
             networkRequestHeaders: e
         }, n, r) {
@@ -3083,7 +3083,7 @@ function t(t){let e=t.length;for(;--e>=0;)t[e]=0}const e=new Uint8Array([0,0,0,0
             method: o,
             statusCode: s,
             request: d,
-            response: await eD(l, n, e.response, c)
+            response: await eD(c, n, e.response, l)
         }
     }
     async function eD(t, {
@@ -3140,19 +3140,19 @@ function t(t){let e=t.length;for(;--e>=0;)t[e]=0}const e=new Uint8Array([0,0,0,0
                     } = e, {
                         url: s,
                         method: u,
-                        status_code: c = 0,
-                        request_body_size: l,
+                        status_code: l = 0,
+                        request_body_size: c,
                         response_body_size: d
                     } = t.data;
                     if (!s) return null;
                     if (!ex(s, n.networkDetailAllowUrls) || ex(s, n.networkDetailDenyUrls)) {
-                        let t = eS(l);
+                        let t = eS(c);
                         return {
                             startTimestamp: r,
                             endTimestamp: i,
                             url: s,
                             method: u,
-                            statusCode: c,
+                            statusCode: l,
                             request: t,
                             response: eS(d)
                         }
@@ -3166,13 +3166,13 @@ function t(t){let e=t.length;for(;--e>=0;)t[e]=0}const e=new Uint8Array([0,0,0,0
                                 return t[n.toLowerCase()] = r, t
                             }, {}) : {}
                         }(o), n.networkResponseHeaders),
-                        _ = ew(p, l, n.networkCaptureBodies ? eb(a) : void 0);
+                        _ = ew(p, c, n.networkCaptureBodies ? eb(a) : void 0);
                     return {
                         startTimestamp: r,
                         endTimestamp: i,
                         url: s,
                         method: u,
-                        statusCode: c,
+                        statusCode: l,
                         request: _,
                         response: ew(h, d, n.networkCaptureBodies ? e.xhr.responseText : void 0)
                     }
@@ -3265,15 +3265,15 @@ function t(t){let e=t.length;for(;--e>=0;)t[e]=0}const e=new Uint8Array([0,0,0,0
                 decodedBodySize: o,
                 encodedBodySize: s,
                 responseStatus: u,
-                transferSize: c
+                transferSize: l
             } = t;
             return ["fetch", "xmlhttprequest"].includes(n) ? null : {
                 type: `${e}.${n}`,
-                start: eF(a),
-                end: eF(i),
+                start: eY(a),
+                end: eY(i),
                 name: r,
                 data: {
-                    size: c,
+                    size: l,
                     statusCode: u,
                     decodedBodySize: o,
                     encodedBodySize: s
@@ -3286,7 +3286,7 @@ function t(t){let e=t.length;for(;--e>=0;)t[e]=0}const e=new Uint8Array([0,0,0,0
                 entryType: n,
                 name: r,
                 startTime: i
-            } = t, a = eF(i);
+            } = t, a = eY(i);
             return {
                 type: n,
                 name: r,
@@ -3305,8 +3305,8 @@ function t(t){let e=t.length;for(;--e>=0;)t[e]=0}const e=new Uint8Array([0,0,0,0
                 encodedBodySize: o,
                 domContentLoadedEventStart: s,
                 domContentLoadedEventEnd: u,
-                domInteractive: c,
-                loadEventStart: l,
+                domInteractive: l,
+                loadEventStart: c,
                 loadEventEnd: d,
                 redirectCount: f,
                 startTime: p,
@@ -3315,18 +3315,18 @@ function t(t){let e=t.length;for(;--e>=0;)t[e]=0}const e=new Uint8Array([0,0,0,0
             } = t;
             return 0 === i ? null : {
                 type: `${e}.${_}`,
-                start: eF(p),
-                end: eF(a),
+                start: eY(p),
+                end: eY(a),
                 name: n,
                 data: {
                     size: h,
                     decodedBodySize: r,
                     encodedBodySize: o,
                     duration: i,
-                    domInteractive: c,
+                    domInteractive: l,
                     domContentLoadedEventStart: s,
                     domContentLoadedEventEnd: u,
-                    loadEventStart: l,
+                    loadEventStart: c,
                     loadEventEnd: d,
                     domComplete: a,
                     redirectCount: f
@@ -3344,7 +3344,7 @@ function t(t){let e=t.length;for(;--e>=0;)t[e]=0}const e=new Uint8Array([0,0,0,0
                 i = t && t.activationStart || 0
             }
             let a = Math.max(n - i, 0),
-                o = eF(i) + a / 1e3;
+                o = eY(i) + a / 1e3;
             return {
                 type: e,
                 name: e,
@@ -3359,14 +3359,14 @@ function t(t){let e=t.length;for(;--e>=0;)t[e]=0}const e=new Uint8Array([0,0,0,0
         }
     };
 
-    function ez(t) {
+    function eF(t) {
         return void 0 === eG[t.entryType] ? null : eG[t.entryType](t)
     }
 
-    function eF(t) {
+    function eY(t) {
         return ((k.browserPerformanceTimeOrigin || R.performance.timeOrigin) + t) / 1e3
     }
-    async function eY({
+    async function ez({
         client: t,
         scope: e,
         replayId: n,
@@ -3398,8 +3398,8 @@ function t(t){let e=t.length;for(;--e>=0;)t[e]=0}const e=new Uint8Array([0,0,0,0
         timestamp: i,
         session: a
     }) {
-        var o, s, u, c;
-        let l;
+        var o, s, u, l;
+        let c;
         let d = function({
                 recordingData: t,
                 headers: e
@@ -3442,7 +3442,7 @@ function t(t){let e=t.length;for(;--e>=0;)t[e]=0}const e=new Uint8Array([0,0,0,0
                 segment_id: n,
                 replay_type: a.sampled
             },
-            S = await eY({
+            S = await ez({
                 scope: y,
                 client: m,
                 replayId: e,
@@ -3453,7 +3453,7 @@ function t(t){let e=t.length;for(;--e>=0;)t[e]=0}const e=new Uint8Array([0,0,0,0
             return
         }
         delete S.sdkProcessingMetadata;
-        let w = (o = S, s = d, u = b, c = m.getOptions().tunnel, (0, k.createEnvelope)((0, k.createEventEnvelopeHeaders)(o, (0, k.getSdkMetadataForEnvelopeHeader)(o), c, u), [
+        let w = (o = S, s = d, u = b, l = m.getOptions().tunnel, (0, k.createEnvelope)((0, k.createEventEnvelopeHeaders)(o, (0, k.getSdkMetadataForEnvelopeHeader)(o), l, u), [
             [{
                 type: "replay_event"
             }, o],
@@ -3463,7 +3463,7 @@ function t(t){let e=t.length;for(;--e>=0;)t[e]=0}const e=new Uint8Array([0,0,0,0
             }, s]
         ]));
         try {
-            l = await v.send(w)
+            c = await v.send(w)
         } catch (e) {
             let t = Error(D);
             try {
@@ -3471,9 +3471,9 @@ function t(t){let e=t.length;for(;--e>=0;)t[e]=0}const e=new Uint8Array([0,0,0,0
             } catch (t) {}
             throw t
         }
-        if (!l) return l;
-        if ("number" == typeof l.statusCode && (l.statusCode < 200 || l.statusCode >= 300)) throw new eH(l.statusCode);
-        return l
+        if (!c) return c;
+        if ("number" == typeof c.statusCode && (c.statusCode < 200 || c.statusCode >= 300)) throw new eH(c.statusCode);
+        return c
     }
     class eH extends Error {
         constructor(t) {
@@ -3576,12 +3576,12 @@ function t(t){let e=t.length;for(;--e>=0;)t[e]=0}const e=new Uint8Array([0,0,0,0
                     void 0 !== i && clearTimeout(i), void 0 !== a && clearTimeout(a), i = a = void 0
                 }
 
-                function c() {
+                function l() {
                     return i && clearTimeout(i), i = setTimeout(s, e), o && void 0 === a && (a = setTimeout(s, o)), r
                 }
-                return c.cancel = u, c.flush = function() {
+                return l.cancel = u, l.flush = function() {
                     return void 0 !== i || void 0 !== a ? s() : r
-                }, c
+                }, l
             }(() => this._flush(), this._options.flushMinDelay, {
                 maxWait: this._options.flushMaxDelay
             }), this._throttledAddEvent = function(t, e, n) {
@@ -3604,7 +3604,7 @@ function t(t){let e=t.length;for(;--e>=0;)t[e]=0}const e=new Uint8Array([0,0,0,0
                     let s = r.get(n) || 0;
                     return r.set(n, s + 1), t(...e)
                 }
-            }((t, e) => el(this, t, e), 300, 5);
+            }((t, e) => ec(this, t, e), 300, 5);
             let {
                 slowClickTimeout: n,
                 slowClickIgnoreSelectors: r
@@ -3649,7 +3649,7 @@ function t(t){let e=t.length;for(;--e>=0;)t[e]=0}const e=new Uint8Array([0,0,0,0
             let t = this.session && this.session.id,
                 {
                     session: e
-                } = ec({
+                } = el({
                     timeouts: this.timeouts,
                     stickySession: !!this._options.stickySession,
                     currentSession: this.session,
@@ -3663,7 +3663,7 @@ function t(t){let e=t.length;for(;--e>=0;)t[e]=0}const e=new Uint8Array([0,0,0,0
             let t = this.session && this.session.id,
                 {
                     session: e
-                } = ec({
+                } = el({
                     timeouts: this.timeouts,
                     stickySession: !!this._options.stickySession,
                     currentSession: this.session,
@@ -3688,9 +3688,9 @@ function t(t){let e=t.length;for(;--e>=0;)t[e]=0}const e=new Uint8Array([0,0,0,0
                         }
                         let i = r || !e;
                         e = !0, t.addUpdate(() => {
-                            if ("buffer" === t.recordingMode && i && t.setInitialState(), el(t, n, i), !i) return !1;
+                            if ("buffer" === t.recordingMode && i && t.setInitialState(), ec(t, n, i), !i) return !1;
                             if (function(t, e) {
-                                    e && t.session && 0 === t.session.segmentId ? el(t, function(t) {
+                                    e && t.session && 0 === t.session.segmentId ? ec(t, function(t) {
                                         let e = t.getOptions();
                                         return {
                                             type: m.Custom,
@@ -3822,7 +3822,7 @@ function t(t){let e=t.length;for(;--e>=0;)t[e]=0}const e=new Uint8Array([0,0,0,0
                     category: "replay.throttled"
                 });
                 this.addUpdate(() => {
-                    el(this, {
+                    ec(this, {
                         type: m.Custom,
                         timestamp: t.timestamp || 0,
                         data: {
@@ -3866,7 +3866,7 @@ function t(t){let e=t.length;for(;--e>=0;)t[e]=0}const e=new Uint8Array([0,0,0,0
             let {
                 type: t,
                 session: e
-            } = ec({
+            } = el({
                 timeouts: this.timeouts,
                 stickySession: !!this._options.stickySession,
                 currentSession: this.session,
@@ -3910,16 +3910,16 @@ function t(t){let e=t.length;for(;--e>=0;)t[e]=0}const e=new Uint8Array([0,0,0,0
                                         networkDetailDenyUrls: o,
                                         networkCaptureBodies: s,
                                         networkRequestHeaders: u,
-                                        networkResponseHeaders: c
+                                        networkResponseHeaders: l
                                     } = t.getOptions(),
-                                    l = {
+                                    c = {
                                         replay: t,
                                         textEncoder: i,
                                         networkDetailAllowUrls: a,
                                         networkDetailDenyUrls: o,
                                         networkCaptureBodies: s,
                                         networkRequestHeaders: u,
-                                        networkResponseHeaders: c
+                                        networkResponseHeaders: l
                                     };
                                 if (e && e.on) e.on("beforeAddBreadcrumb", (t, e) => (function(t, e, n) {
                                     if (e.data) try {
@@ -3948,7 +3948,7 @@ function t(t){let e=t.length;for(;--e>=0;)t[e]=0}const e=new Uint8Array([0,0,0,0
                                     } catch (t) {
                                         ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && k.logger.warn("Error when enriching network breadcrumb")
                                     }
-                                })(l, t, e));
+                                })(c, t, e));
                                 else {
                                     var n, r;
                                     (0, k.addInstrumentationHandler)("fetch", (n = t, t => {
@@ -4113,15 +4113,15 @@ function t(t){let e=t.length;for(;--e>=0;)t[e]=0}const e=new Uint8Array([0,0,0,0
                         let s = e || r || i,
                             u = 1 === a.length;
                         if (!s && u) return null;
-                        let c = (0, k.htmlTreeAsString)(o, {
+                        let l = (0, k.htmlTreeAsString)(o, {
                                 maxStringLength: 200
                             }) || "<unknown>",
-                            l = t3(o, c);
+                            c = t3(o, l);
                         return t1({
                             category: "ui.keyDown",
-                            message: c,
+                            message: l,
                             data: {
-                                ...l.data,
+                                ...c.data,
                                 metaKey: e,
                                 shiftKey: n,
                                 ctrlKey: r,
@@ -4175,7 +4175,7 @@ function t(t){let e=t.length;for(;--e>=0;)t[e]=0}const e=new Uint8Array([0,0,0,0
         }
         _addPerformanceEntries() {
             let t = [...this.performanceEvents];
-            return this.performanceEvents = [], Promise.all(eh(this, t.map(ez).filter(Boolean)))
+            return this.performanceEvents = [], Promise.all(eh(this, t.map(eF).filter(Boolean)))
         }
         _clearContext() {
             this._context.errorIds.clear(), this._context.traceIds.clear(), this._context.urls = []
@@ -4314,8 +4314,8 @@ function t(t){let e=t.length;for(;--e>=0;)t[e]=0}const e=new Uint8Array([0,0,0,0
             sessionSampleRate: o,
             errorSampleRate: s,
             maskAllText: u = !0,
-            maskAllInputs: c = !0,
-            blockAllMedia: l = !0,
+            maskAllInputs: l = !0,
+            blockAllMedia: c = !0,
             mutationBreadcrumbLimit: d = 750,
             mutationLimit: f = 1e4,
             slowClickTimeout: p = 7e3,
@@ -4340,7 +4340,7 @@ function t(t){let e=t.length;for(;--e>=0;)t[e]=0}const e=new Uint8Array([0,0,0,0
             ignoreClass: C
         } = {}) {
             if (eQ.prototype.__init.call(this), this._recordingOptions = {
-                    maskAllInputs: c,
+                    maskAllInputs: l,
                     maskAllText: u,
                     maskInputOptions: {
                         ...D || {},
@@ -4358,18 +4358,18 @@ function t(t){let e=t.length;for(;--e>=0;)t[e]=0}const e=new Uint8Array([0,0,0,0
                         blockSelector: o,
                         maskTextClass: s,
                         maskTextSelector: u,
-                        ignoreClass: c
+                        ignoreClass: l
                     }) {
-                        let l = eZ(t, [".sentry-mask", "[data-sentry-mask]"], s, u),
+                        let c = eZ(t, [".sentry-mask", "[data-sentry-mask]"], s, u),
                             d = eZ(e, [".sentry-unmask", "[data-sentry-unmask]"]),
                             f = {
-                                maskTextSelector: l,
+                                maskTextSelector: c,
                                 unmaskTextSelector: d,
-                                maskInputSelector: l,
+                                maskInputSelector: c,
                                 unmaskInputSelector: d,
                                 blockSelector: eZ(n, [".sentry-block", "[data-sentry-block]", 'base[href="/"]'], a, o),
                                 unblockSelector: eZ(r, [".sentry-unblock", "[data-sentry-unblock]"]),
-                                ignoreSelector: eZ(i, [".sentry-ignore", "[data-sentry-ignore]", 'input[type="file"]'], c)
+                                ignoreSelector: eZ(i, [".sentry-ignore", "[data-sentry-ignore]", 'input[type="file"]'], l)
                             };
                         return a instanceof RegExp && (f.blockClass = a), s instanceof RegExp && (f.maskTextClass = s), f
                     }({
@@ -4396,8 +4396,8 @@ function t(t){let e=t.length;for(;--e>=0;)t[e]=0}const e=new Uint8Array([0,0,0,0
                     sessionSampleRate: o,
                     errorSampleRate: s,
                     useCompression: i,
-                    blockAllMedia: l,
-                    maskAllInputs: c,
+                    blockAllMedia: c,
+                    maskAllInputs: l,
                     maskAllText: u,
                     mutationBreadcrumbLimit: d,
                     mutationLimit: f,

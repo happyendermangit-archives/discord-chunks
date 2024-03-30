@@ -1,19 +1,36 @@
-function(e, t, n) {
+function(e) {
     "use strict";
-    n.r(t), n.d(t, {
-        getHighestHoistedRole: function() {
-            return a
-        }
-    }), n("47120"), n("442837");
-    var i = n("271383"),
-        r = n("430824"),
-        s = n("700785");
-    let a = function(e, t) {
-        let [n, a] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [r.default, i.default];
-        if (null == e || null == t) return null;
-        let o = n.getGuild(e);
-        if (null == o) return null;
-        let l = a.getMember(o.id, t);
-        return null == l ? null : s.getHighestHoistedRole(o, l)
+    e.exports = {
+        actionAnchor: "actionAnchor__83652",
+        alertActionIcon: "alertActionIcon__40b67",
+        alertActionSetCompletedIcon: "alertActionSetCompletedIcon_cdece4",
+        alertActionsIconContainer: "alertActionsIconContainer__74d4b",
+        annotationRow: "annotationRow_edcf36",
+        avatarContainer: "avatarContainer_b12338",
+        buttonContainer: "buttonContainer__4a9c0",
+        buttonStyle: "buttonStyle__1d189",
+        centeredRowContainer: "centeredRowContainer__4b7db",
+        channelIcon: "channelIcon_a9bd2b",
+        channelName: "channelName_cf4844",
+        channelNameContainer: "channelNameContainer__0a603",
+        compact: "compact__52a0e",
+        content: "content__35b0f",
+        cozy: "cozy_ae50f5",
+        dot: "dot_e3691c",
+        dotMargin: "dotMargin__7625a",
+        embedCard: "embedCard__8f52c",
+        footerAction: "footerAction_f322dc",
+        footerContainer: "footerContainer_b2e9f6",
+        footerIcon: "footerIcon__98652",
+        iconContainer: "iconContainer__6910b",
+        isClickable: "isClickable__6dd8b",
+        mainContainer: "mainContainer_e63856",
+        messageContent: "messageContent__9c77b",
+        selected: "selected__197e7",
+        spanCorrection: "spanCorrection__313ad",
+        systemTag: "systemTag__0146b",
+        titleCase: "titleCase_e2b88a",
+        username: "username_f2060a",
+        usernameContainer: "usernameContainer__69123"
     }
 }

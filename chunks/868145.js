@@ -6,7 +6,7 @@ function(t, e, n) {
             return f
         },
         dateTimestampInSeconds: function() {
-            return l
+            return c
         },
         timestampInSeconds: function() {
             return d
@@ -34,11 +34,11 @@ function(t, e, n) {
                 timeOrigin: Date.now() - t.now()
             }
         }(),
-        c = void 0 === u ? s : {
+        l = void 0 === u ? s : {
             nowSeconds: () => (u.timeOrigin + u.now()) / 1e3
         },
-        l = s.nowSeconds.bind(s),
-        d = c.nowSeconds.bind(c),
+        c = s.nowSeconds.bind(s),
+        d = l.nowSeconds.bind(l),
         f = (() => {
             let {
                 performance: t

@@ -15,14 +15,14 @@ function(t, e, n) {
         s = n("376097"),
         u = n("912033");
 
-    function c() {
+    function l() {
         let t = this.getScope().getSpan();
         return t ? {
             "sentry-trace": t.toTraceparent()
         } : {}
     }
 
-    function l(t, e, n) {
+    function c(t, e, n) {
         let i;
         return (0, a.hasTracingEnabled)(e) ? void 0 !== t.sampled ? (t.setMetadata({
             sampleRate: Number(t.sampled)
@@ -45,7 +45,7 @@ function(t, e, n) {
         a !== o && (("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && r.logger.error(`A transaction was started with instrumenter=\`${o}\`, but the SDK is configured with the \`${a}\` instrumenter.
 The transaction will not be sampled. Please use the ${a} instrumentation to start transactions.`), t.sampled = !1);
         let s = new u.Transaction(t, this);
-        return (s = l(s, i, {
+        return (s = c(s, i, {
             parentSampled: t.parentSampled,
             transactionContext: t,
             ...e
@@ -54,17 +54,17 @@ The transaction will not be sampled. Please use the ${a} instrumentation to star
 
     function f(t, e, n, r, i, a, o) {
         let u = t.getClient(),
-            c = u && u.getOptions() || {},
+            l = u && u.getOptions() || {},
             d = new s.IdleTransaction(e, t, n, r, o, i);
-        return (d = l(d, c, {
+        return (d = c(d, l, {
             parentSampled: e.parentSampled,
             transactionContext: e,
             ...a
-        })).sampled && d.initSpanRecorder(c._experiments && c._experiments.maxSpans), u && u.emit && u.emit("startTransaction", d), d
+        })).sampled && d.initSpanRecorder(l._experiments && l._experiments.maxSpans), u && u.emit && u.emit("startTransaction", d), d
     }
 
     function p() {
         let t = (0, i.getMainCarrier)();
-        t.__SENTRY__ && (t.__SENTRY__.extensions = t.__SENTRY__.extensions || {}, !t.__SENTRY__.extensions.startTransaction && (t.__SENTRY__.extensions.startTransaction = d), !t.__SENTRY__.extensions.traceHeaders && (t.__SENTRY__.extensions.traceHeaders = c), (0, o.registerErrorInstrumentation)())
+        t.__SENTRY__ && (t.__SENTRY__.extensions = t.__SENTRY__.extensions || {}, !t.__SENTRY__.extensions.startTransaction && (t.__SENTRY__.extensions.startTransaction = d), !t.__SENTRY__.extensions.traceHeaders && (t.__SENTRY__.extensions.traceHeaders = l), (0, o.registerErrorInstrumentation)())
     }
 }

@@ -11,8 +11,8 @@ function(t, e, n) {
         o = n("595208"),
         s = n("741900"),
         u = n("154405"),
-        c = n("392405");
-    let l = "Not capturing exception because it's already been captured.";
+        l = n("392405");
+    let c = "Not capturing exception because it's already been captured.";
     class d {
         __init() {
             this._integrations = {}
@@ -41,7 +41,7 @@ function(t, e, n) {
         }
         captureException(t, e, n) {
             if ((0, r.checkOrSetAlreadyCaught)(t)) {
-                ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && r.logger.log(l);
+                ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && r.logger.log(c);
                 return
             }
             let i = e && e.event_id;
@@ -58,7 +58,7 @@ function(t, e, n) {
         }
         captureEvent(t, e, n) {
             if (e && e.originalException && (0, r.checkOrSetAlreadyCaught)(e.originalException)) {
-                ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && r.logger.log(l);
+                ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && r.logger.log(c);
                 return
             }
             let i = e && e.event_id;
@@ -170,7 +170,7 @@ function(t, e, n) {
         _prepareEvent(t, e, n) {
             let r = this.getOptions(),
                 i = Object.keys(this._integrations);
-            return !e.integrations && i.length > 0 && (e.integrations = i), (0, c.prepareEvent)(r, t, e, n).then(t => {
+            return !e.integrations && i.length > 0 && (e.integrations = i), (0, l.prepareEvent)(r, t, e, n).then(t => {
                 if (null === t) return t;
                 let {
                     propagationContext: e
@@ -213,11 +213,11 @@ function(t, e, n) {
             let o = p(t),
                 s = f(t),
                 u = t.type || "error",
-                c = `before send for type \`${u}\``;
+                l = `before send for type \`${u}\``;
             if (s && "number" == typeof a && Math.random() > a) return this.recordDroppedEvent("sample_rate", "error", t), (0, r.rejectedSyncPromise)(new r.SentryError(`Discarding event because it's not included in the random sample (sampling rate = ${a})`, "log"));
-            let l = "replay_event" === u ? "replay" : u;
+            let c = "replay_event" === u ? "replay" : u;
             return this._prepareEvent(t, e, n).then(n => {
-                if (null === n) throw this.recordDroppedEvent("event_processor", l, t), new r.SentryError("An event processor returned `null`, will not send event.", "log");
+                if (null === n) throw this.recordDroppedEvent("event_processor", c, t), new r.SentryError("An event processor returned `null`, will not send event.", "log");
                 return e.data && !0 === e.data.__sentry__ ? n : function(t, e) {
                     let n = `${e} must return \`null\` or a valid event.`;
                     if ((0, r.isThenable)(t)) return t.then(t => {
@@ -234,9 +234,9 @@ function(t, e, n) {
                         beforeSendTransaction: i
                     } = t;
                     return f(e) && r ? r(e, n) : p(e) && i ? i(e, n) : e
-                }(i, n, e), c)
+                }(i, n, e), l)
             }).then(i => {
-                if (null === i) throw this.recordDroppedEvent("before_send", l, t), new r.SentryError(`${c} returned \`null\`, will not send event.`, "log");
+                if (null === i) throw this.recordDroppedEvent("before_send", c, t), new r.SentryError(`${l} returned \`null\`, will not send event.`, "log");
                 let a = n && n.getSession();
                 !o && a && this._updateSessionFromEvent(a, i);
                 let s = i.transaction_info;

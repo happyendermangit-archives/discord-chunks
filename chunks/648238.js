@@ -44,7 +44,7 @@ function(t, e, n) {
             return d.checkOrSetAlreadyCaught
         },
         consoleSandbox: function() {
-            return l.consoleSandbox
+            return c.consoleSandbox
         },
         createAttachmentEnvelopeItem: function() {
             return T.createAttachmentEnvelopeItem
@@ -125,25 +125,25 @@ function(t, e, n) {
             return i.htmlTreeAsString
         },
         isDOMError: function() {
-            return c.isDOMError
+            return l.isDOMError
         },
         isDOMException: function() {
-            return c.isDOMException
+            return l.isDOMException
         },
         isError: function() {
-            return c.isError
+            return l.isError
         },
         isErrorEvent: function() {
-            return c.isErrorEvent
+            return l.isErrorEvent
         },
         isEvent: function() {
-            return c.isEvent
+            return l.isEvent
         },
         isInstanceOf: function() {
-            return c.isInstanceOf
+            return l.isInstanceOf
         },
         isNaN: function() {
-            return c.isNaN
+            return l.isNaN
         },
         isNativeFetch: function() {
             return v.isNativeFetch
@@ -152,22 +152,22 @@ function(t, e, n) {
             return f.isNodeEnv
         },
         isPlainObject: function() {
-            return c.isPlainObject
+            return l.isPlainObject
         },
         isPrimitive: function() {
-            return c.isPrimitive
+            return l.isPrimitive
         },
         isRateLimited: function() {
             return x.isRateLimited
         },
         isString: function() {
-            return c.isString
+            return l.isString
         },
         isThenable: function() {
-            return c.isThenable
+            return l.isThenable
         },
         logger: function() {
-            return l.logger
+            return c.logger
         },
         makeDsn: function() {
             return a.makeDsn
@@ -242,8 +242,8 @@ function(t, e, n) {
         o = n("303155"),
         s = n("24716"),
         u = n("793884"),
-        c = n("46834"),
-        l = n("529866"),
+        l = n("46834"),
+        c = n("529866"),
         d = n("862315"),
         f = n("635602"),
         p = n("10674"),
@@ -253,7 +253,7 @@ function(t, e, n) {
         m = n("432038"),
         y = n("336344"),
         v = n("698892"),
-        b = n("880803"),
+        b = n("363517"),
         E = n("868145"),
         S = n("874230"),
         w = n("776914"),

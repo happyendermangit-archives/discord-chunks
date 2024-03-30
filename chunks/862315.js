@@ -2,7 +2,7 @@ function(t, e, n) {
     "use strict";
     n.r(e), n.d(e, {
         addExceptionMechanism: function() {
-            return c
+            return l
         },
         addExceptionTypeValue: function() {
             return u
@@ -11,7 +11,7 @@ function(t, e, n) {
             return d
         },
         checkOrSetAlreadyCaught: function() {
-            return l
+            return c
         },
         getEventDescription: function() {
             return s
@@ -53,7 +53,7 @@ function(t, e, n) {
         !a.value && (a.value = e || ""), !a.type && (a.type = n || "Error")
     }
 
-    function c(t, e) {
+    function l(t, e) {
         let n = o(t);
         if (!n) return;
         let r = n.mechanism;
@@ -71,7 +71,7 @@ function(t, e, n) {
         }
     }
 
-    function l(t) {
+    function c(t) {
         if (t && t.__sentry_captured__) return !0;
         try {
             (0, r.addNonEnumerableProperty)(t, "__sentry_captured__", !0)

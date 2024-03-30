@@ -26,9 +26,9 @@ function(t, e, n) {
             }
         }
         setupOnce() {
-            this._options.setTimeout && (0, r.fill)(i.WINDOW, "setTimeout", s), this._options.setInterval && (0, r.fill)(i.WINDOW, "setInterval", s), this._options.requestAnimationFrame && (0, r.fill)(i.WINDOW, "requestAnimationFrame", u), this._options.XMLHttpRequest && "XMLHttpRequest" in i.WINDOW && (0, r.fill)(XMLHttpRequest.prototype, "send", c);
+            this._options.setTimeout && (0, r.fill)(i.WINDOW, "setTimeout", s), this._options.setInterval && (0, r.fill)(i.WINDOW, "setInterval", s), this._options.requestAnimationFrame && (0, r.fill)(i.WINDOW, "requestAnimationFrame", u), this._options.XMLHttpRequest && "XMLHttpRequest" in i.WINDOW && (0, r.fill)(XMLHttpRequest.prototype, "send", l);
             let t = this._options.eventTarget;
-            t && (Array.isArray(t) ? t : a).forEach(l)
+            t && (Array.isArray(t) ? t : a).forEach(c)
         }
     }
 
@@ -62,7 +62,7 @@ function(t, e, n) {
         }
     }
 
-    function c(t) {
+    function l(t) {
         return function(...e) {
             let n = this;
             return ["onload", "onerror", "onprogress", "onreadystatechange"].forEach(t => {
@@ -84,7 +84,7 @@ function(t, e, n) {
         }
     }
 
-    function l(t) {
+    function c(t) {
         let e = i.WINDOW,
             n = e[t] && e[t].prototype;
         n && n.hasOwnProperty && n.hasOwnProperty("addEventListener") && ((0, r.fill)(n, "addEventListener", function(e) {
