@@ -25,14 +25,14 @@ function(t, e, n) {
         o = n("643487");
     let s = String(0),
         u = "",
-        l = "",
         c = "",
+        l = "",
         d = o.WINDOW.navigator && o.WINDOW.navigator.userAgent || "",
         f = "",
         p = o.WINDOW.navigator && o.WINDOW.navigator.language || o.WINDOW.navigator && o.WINDOW.navigator.languages && o.WINDOW.navigator.languages["0"] || "",
         h = o.WINDOW.navigator && o.WINDOW.navigator.userAgentData;
     if ("object" == typeof(r = h) && null !== r && "getHighEntropyValues" in r) h.getHighEntropyValues(["architecture", "model", "platform", "platformVersion", "fullVersionList"]).then(t => {
-        if (u = t.platform || "", c = t.architecture || "", f = t.model || "", l = t.platformVersion || "", t.fullVersionList && t.fullVersionList.length > 0) {
+        if (u = t.platform || "", l = t.architecture || "", f = t.model || "", c = t.platformVersion || "", t.fullVersionList && t.fullVersionList.length > 0) {
             let e = t.fullVersionList[t.fullVersionList.length - 1];
             d = `${e.brand} ${e.version}`
         }
@@ -99,24 +99,24 @@ function(t, e, n) {
                                 };
                                 continue
                             }
-                            let l = t.stacks[o.stackId],
-                                c = [];
-                            for (; l;) {
-                                c.push(l.frameId);
-                                let e = t.frames[l.frameId];
-                                void 0 === r.frames[l.frameId] && (r.frames[l.frameId] = {
+                            let c = t.stacks[o.stackId],
+                                l = [];
+                            for (; c;) {
+                                l.push(c.frameId);
+                                let e = t.frames[c.frameId];
+                                void 0 === r.frames[c.frameId] && (r.frames[c.frameId] = {
                                     function: e.name,
                                     abs_path: "number" == typeof e.resourceId ? t.resources[e.resourceId] : void 0,
                                     lineno: e.line,
                                     colno: e.column
-                                }), l = void 0 === l.parentId ? void 0 : t.stacks[l.parentId]
+                                }), c = void 0 === c.parentId ? void 0 : t.stacks[c.parentId]
                             }
                             let d = {
                                 elapsed_since_start_ns: ((o.timestamp + u - i) * 1e6).toFixed(0),
                                 stack_id: n,
                                 thread_id: s
                             };
-                            r.stacks[n] = c, r.samples[a] = d, n++
+                            r.stacks[n] = l, r.samples[a] = d, n++
                         }
                         return r
                     }(t)
@@ -136,14 +136,14 @@ function(t, e, n) {
                 },
                 os: {
                     name: u,
-                    version: l,
+                    version: c,
                     build_number: d
                 },
                 device: {
                     locale: p,
                     model: f,
                     manufacturer: d,
-                    architecture: c,
+                    architecture: l,
                     is_emulator: !1
                 },
                 debug_meta: {
@@ -159,9 +159,9 @@ function(t, e, n) {
                         if (!s) return [];
                         let u = s.stackParser;
                         if (!u) return [];
-                        let l = m.get(u);
-                        l ? e = l : (e = new Map, m.set(u, e));
-                        let c = Object.keys(n).reduce((t, r) => {
+                        let c = m.get(u);
+                        c ? e = c : (e = new Map, m.set(u, e));
+                        let l = Object.keys(n).reduce((t, r) => {
                                 let i;
                                 let a = e.get(r);
                                 a ? i = a : (i = u(r), e.set(r, i));
@@ -176,10 +176,10 @@ function(t, e, n) {
                                 return t
                             }, {}),
                             d = [];
-                        for (let e of t) e && c[e] && d.push({
+                        for (let e of t) e && l[e] && d.push({
                             type: "sourcemap",
                             code_file: e,
-                            debug_id: c[e]
+                            debug_id: l[e]
                         });
                         return d
                     }(e.resources)

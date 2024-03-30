@@ -5,9 +5,9 @@ function(t, e, n) {
         o = n("19235"),
         s = /^\[object .+?Constructor\]$/,
         u = Object.prototype,
-        l = Function.prototype.toString,
-        c = u.hasOwnProperty,
-        d = RegExp("^" + l.call(c).replace(/[\\^$.*+?()[\]{}|]/g, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$");
+        c = Function.prototype.toString,
+        l = u.hasOwnProperty,
+        d = RegExp("^" + c.call(l).replace(/[\\^$.*+?()[\]{}|]/g, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$");
     t.exports = function(t) {
         return !(!a(t) || i(t)) && (r(t) ? d : s).test(o(t))
     }

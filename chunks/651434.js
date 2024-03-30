@@ -1,5 +1,5 @@
 function(e, t, n) {
-    var r = {
+    var i = {
             "./ggsans-400-normal.woff2": function() {
                 return Promise.resolve()
             },
@@ -31,7 +31,7 @@ function(e, t, n) {
                 return Promise.resolve()
             }
         },
-        o = {
+        r = {
             "./ggsans-400-normal.woff2": "776764",
             "./ggsans-400-normalitalic.woff2": "963686",
             "./ggsans-500-medium.woff2": "5983",
@@ -44,18 +44,18 @@ function(e, t, n) {
             "./ggsans-800-extrabolditalic.woff2": "69891"
         };
 
-    function i(e) {
-        if (!n.o(o, e)) return Promise.resolve().then(function() {
+    function s(e) {
+        if (!n.o(r, e)) return Promise.resolve().then(function() {
             var t = Error("Cannot find module '" + e + "'");
             throw t.code = "MODULE_NOT_FOUND", t
         });
-        var t = r[e],
-            i = o[e];
+        var t = i[e],
+            s = r[e];
         return t().then(function() {
-            return n.t(i, 17)
+            return n.t(s, 17)
         })
     }
-    i.keys = function() {
-        return Object.keys(o)
-    }, i.id = "651434", e.exports = i
+    s.keys = function() {
+        return Object.keys(r)
+    }, s.id = "651434", e.exports = s
 }

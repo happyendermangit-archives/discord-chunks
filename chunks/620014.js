@@ -6,9 +6,9 @@ function(t, e, n) {
         s = n("702603"),
         u = n("457853");
 
-    function l(t) {
+    function c(t) {
         var e = this.__data__ = new r(t);
         this.size = e.size
     }
-    l.prototype.clear = i, l.prototype.delete = a, l.prototype.get = o, l.prototype.has = s, l.prototype.set = u, t.exports = l
+    c.prototype.clear = i, c.prototype.delete = a, c.prototype.get = o, c.prototype.has = s, c.prototype.set = u, t.exports = c
 }

@@ -5,9 +5,9 @@ function(t, e, n) {
         o = n("501979"),
         s = n("98368"),
         u = n("433005"),
-        l = r ? r.prototype : void 0,
-        c = l ? l.valueOf : void 0;
-    t.exports = function(t, e, n, r, l, d, f) {
+        c = r ? r.prototype : void 0,
+        l = c ? c.valueOf : void 0;
+    t.exports = function(t, e, n, r, c, d, f) {
         switch (n) {
             case "[object DataView]":
                 if (t.byteLength != e.byteLength || t.byteOffset != e.byteOffset) break;
@@ -32,10 +32,10 @@ function(t, e, n) {
                 var _ = f.get(t);
                 if (_) return _ == e;
                 r |= 2, f.set(t, e);
-                var g = o(p(t), p(e), r, l, d, f);
+                var g = o(p(t), p(e), r, c, d, f);
                 return f.delete(t), g;
             case "[object Symbol]":
-                if (c) return c.call(t) == c.call(e)
+                if (l) return l.call(t) == l.call(e)
         }
         return !1
     }

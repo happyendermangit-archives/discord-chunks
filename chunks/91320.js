@@ -11,7 +11,7 @@ function(t, e, n) {
             return k.FunctionToString
         },
         Hub: function() {
-            return c.Hub
+            return l.Hub
         },
         InboundFilters: function() {
             return x.InboundFilters
@@ -32,7 +32,7 @@ function(t, e, n) {
             return i.TRACING_DEFAULTS
         },
         addBreadcrumb: function() {
-            return l.addBreadcrumb
+            return c.addBreadcrumb
         },
         addGlobalEventProcessor: function() {
             return d.addGlobalEventProcessor
@@ -41,16 +41,16 @@ function(t, e, n) {
             return r.addTracingExtensions
         },
         captureEvent: function() {
-            return l.captureEvent
+            return c.captureEvent
         },
         captureException: function() {
-            return l.captureException
+            return c.captureException
         },
         captureMessage: function() {
-            return l.captureMessage
+            return c.captureMessage
         },
         configureScope: function() {
-            return l.configureScope
+            return c.configureScope
         },
         createTransport: function() {
             return _.createTransport
@@ -62,13 +62,13 @@ function(t, e, n) {
             return o.getActiveTransaction
         },
         getCurrentHub: function() {
-            return c.getCurrentHub
+            return l.getCurrentHub
         },
         getDynamicSamplingContextFromClient: function() {
             return u.getDynamicSamplingContextFromClient
         },
         getHubFromCarrier: function() {
-            return c.getHubFromCarrier
+            return l.getHubFromCarrier
         },
         getIntegrationsToSetup: function() {
             return v.getIntegrationsToSetup
@@ -83,7 +83,7 @@ function(t, e, n) {
             return h.initAndBind
         },
         makeMain: function() {
-            return c.makeMain
+            return l.makeMain
         },
         makeMultiplexedTransport: function() {
             return m.makeMultiplexedTransport
@@ -95,22 +95,22 @@ function(t, e, n) {
             return E.prepareEvent
         },
         setContext: function() {
-            return l.setContext
+            return c.setContext
         },
         setExtra: function() {
-            return l.setExtra
+            return c.setExtra
         },
         setExtras: function() {
-            return l.setExtras
+            return c.setExtras
         },
         setTag: function() {
-            return l.setTag
+            return c.setTag
         },
         setTags: function() {
-            return l.setTags
+            return c.setTags
         },
         setUser: function() {
-            return l.setUser
+            return c.setUser
         },
         spanStatusfromHttpCode: function() {
             return a.spanStatusfromHttpCode
@@ -119,13 +119,13 @@ function(t, e, n) {
             return r.startIdleTransaction
         },
         startTransaction: function() {
-            return l.startTransaction
+            return c.startTransaction
         },
         trace: function() {
             return s.trace
         },
         withScope: function() {
-            return l.withScope
+            return c.withScope
         }
     });
     var r = n("90668"),
@@ -134,8 +134,8 @@ function(t, e, n) {
         o = n("147816"),
         s = n("468174"),
         u = n("154405"),
-        l = n("138122"),
-        c = n("876122"),
+        c = n("138122"),
+        l = n("876122"),
         d = n("703498"),
         f = n("507506"),
         p = n("861579"),

@@ -14,7 +14,7 @@ function(t, e, n) {
         let n = (0, i.initMetric)("CLS", 0),
             s = 0,
             u = [],
-            l = t => {
+            c = t => {
                 t.forEach(t => {
                     if (!t.hadRecentInput) {
                         let r = u[0],
@@ -23,11 +23,11 @@ function(t, e, n) {
                     }
                 })
             },
-            c = (0, a.observe)("layout-shift", l);
-        if (c) {
+            l = (0, a.observe)("layout-shift", c);
+        if (l) {
             e = (0, r.bindReporter)(t, n);
             let i = () => {
-                l(c.takeRecords()), e(!0)
+                c(l.takeRecords()), e(!0)
             };
             return (0, o.onHidden)(i), i
         }

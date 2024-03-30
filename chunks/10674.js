@@ -20,8 +20,8 @@ function(t, e, n) {
 
     function s(t, e = 100, s = 1 / 0) {
         try {
-            return function t(e, s, u = 1 / 0, l = 1 / 0, c = (0, i.memoBuilder)()) {
-                let [d, f] = c;
+            return function t(e, s, u = 1 / 0, c = 1 / 0, l = (0, i.memoBuilder)()) {
+                let [d, f] = l;
                 if (null == s || ["number", "boolean", "string"].includes(typeof s) && !(0, r.isNaN)(s)) return s;
                 let p = function(t, e) {
                     try {
@@ -52,19 +52,19 @@ function(t, e, n) {
                 if (d(s)) return "[Circular ~]";
                 if (s && "function" == typeof s.toJSON) try {
                     let e = s.toJSON();
-                    return t("", e, h - 1, l, c)
+                    return t("", e, h - 1, c, l)
                 } catch (t) {}
                 let _ = Array.isArray(s) ? [] : {},
                     g = 0,
                     m = (0, a.convertToPlainObject)(s);
                 for (let e in m) {
                     if (!Object.prototype.hasOwnProperty.call(m, e)) continue;
-                    if (g >= l) {
+                    if (g >= c) {
                         _[e] = "[MaxProperties ~]";
                         break
                     }
                     let n = m[e];
-                    _[e] = t(e, n, h - 1, l, c), g++
+                    _[e] = t(e, n, h - 1, c, l), g++
                 }
                 return f(s), _
             }("", t, e, s)

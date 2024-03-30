@@ -17,13 +17,13 @@ function(t, e, n) {
             return s
         },
         setContext: function() {
-            return l
+            return c
         },
         setExtra: function() {
             return d
         },
         setExtras: function() {
-            return c
+            return l
         },
         setTag: function() {
             return p
@@ -69,11 +69,11 @@ function(t, e, n) {
         (0, r.getCurrentHub)().addBreadcrumb(t)
     }
 
-    function l(t, e) {
+    function c(t, e) {
         (0, r.getCurrentHub)().setContext(t, e)
     }
 
-    function c(t) {
+    function l(t) {
         (0, r.getCurrentHub)().setExtras(t)
     }
 

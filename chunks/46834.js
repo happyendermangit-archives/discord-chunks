@@ -29,13 +29,13 @@ function(t, e, n) {
             return d
         },
         isPrimitive: function() {
-            return c
+            return l
         },
         isRegExp: function() {
             return h
         },
         isString: function() {
-            return l
+            return c
         },
         isSyntheticEvent: function() {
             return g
@@ -73,11 +73,11 @@ function(t, e, n) {
         return a(t, "DOMException")
     }
 
-    function l(t) {
+    function c(t) {
         return a(t, "String")
     }
 
-    function c(t) {
+    function l(t) {
         return null === t || "object" != typeof t && "function" != typeof t
     }
 

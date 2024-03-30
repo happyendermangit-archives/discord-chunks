@@ -16,16 +16,16 @@ function(t, e, n) {
         };
         void 0 !== s.name && void 0 === s.description && (s.description = s.name);
         let u = (0, i.getCurrentHub)(),
-            l = u.getScope(),
-            c = l.getSpan(),
+            c = u.getScope(),
+            l = c.getSpan(),
             d = function() {
-                if ((0, a.hasTracingEnabled)()) return c ? c.startChild(s) : u.startTransaction(s)
+                if ((0, a.hasTracingEnabled)()) return l ? l.startChild(s) : u.startTransaction(s)
             }();
 
         function f() {
-            d && d.finish(), u.getScope().setSpan(c)
+            d && d.finish(), u.getScope().setSpan(l)
         }
-        l.setSpan(d);
+        c.setSpan(d);
         try {
             o = e(d)
         } catch (t) {

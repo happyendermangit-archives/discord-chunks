@@ -1,21 +1,56 @@
-function(e) {
+function(e, t, n) {
     "use strict";
-    e.exports = {
-        back: "back_f08183",
-        backHeader: "backHeader_cff6da",
-        backIcon: "backIcon_d1658d",
-        clickable: "clickable_c2a872",
-        closeContent: "closeContent__42d26",
-        closeIcon: "closeIcon__235bd",
-        closeWrapper: "closeWrapper__06665",
-        content: "content__4353f",
-        developerResources: "developerResources__8ef1d",
-        directoryContainer: "directoryContainer__36395",
-        directoryContainerMobile: "directoryContainerMobile__15bd1",
-        directoryContainerTablet: "directoryContainerTablet_a772d7",
-        header: "header__655e5",
-        logo: "logo__16127",
-        title: "title__63238",
-        titleContainer: "titleContainer_a222f7"
-    }
+    n.r(t), n("411104");
+    var i, r, s = n("735250");
+    n("470079");
+    var a = n("803997"),
+        o = n.n(a),
+        l = n("325767"),
+        u = n("33940");
+    (r = i || (i = {})).LEFT = "LEFT", r.RIGHT = "RIGHT", r.UP = "UP", r.DOWN = "DOWN", r.UP_LEFT = "UP_LEFT", r.DOWN_RIGHT = "DOWN_RIGHT";
+    let d = e => {
+        let {
+            width: t = 24,
+            height: n = 24,
+            color: i = "currentColor",
+            direction: r,
+            foreground: a,
+            className: d,
+            title: _,
+            ...c
+        } = e;
+        return (0, s.jsxs)("svg", {
+            ...(0, l.default)(c),
+            width: t,
+            height: n,
+            className: o()(d, function(e) {
+                switch (e) {
+                    case "LEFT":
+                        return u.left;
+                    case "RIGHT":
+                        return u.right;
+                    case "UP":
+                        return null;
+                    case "DOWN":
+                        return u.down;
+                    case "UP_LEFT":
+                        return u.upLeft;
+                    case "DOWN_RIGHT":
+                        return u.downRight;
+                    default:
+                        throw Error("Invalid Direction ".concat(e))
+                }
+            }(r)),
+            viewBox: "0 0 24 24",
+            children: [null != _ ? (0, s.jsx)("title", {
+                children: _
+            }) : null, (0, s.jsx)("polygon", {
+                className: a,
+                fill: i,
+                fillRule: "nonzero",
+                points: "13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8"
+            })]
+        })
+    };
+    d.Directions = i, t.default = d
 }

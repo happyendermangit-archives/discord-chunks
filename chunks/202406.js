@@ -11,7 +11,7 @@ function(t, e, n) {
             return y
         },
         geckoStackLineParser: function() {
-            return c
+            return l
         },
         opera10StackLineParser: function() {
             return h
@@ -47,12 +47,12 @@ function(t, e, n) {
             }
         }],
         u = /^\s*(.*?)(?:\((.*?)\))?(?:^|@)?((?:[-a-z]+)?:\/.*?|\[native code\]|[^@]*(?:bundle|\d+\.js)|\/[\w\-. /=]+)(?::(\d+))?(?::(\d+))?\s*$/i,
-        l = /(\S+) line (\d+)(?: > eval line \d+)* > eval/i,
-        c = [50, t => {
+        c = /(\S+) line (\d+)(?: > eval line \d+)* > eval/i,
+        l = [50, t => {
             let e = u.exec(t);
             if (e) {
                 if (e[3] && e[3].indexOf(" > eval") > -1) {
-                    let t = l.exec(e[3]);
+                    let t = c.exec(e[3]);
                     t && (e[1] = e[1] || "eval", e[3] = t[1], e[4] = t[2], e[5] = "")
                 }
                 let t = e[3],
@@ -75,7 +75,7 @@ function(t, e, n) {
             let e = _.exec(t);
             return e ? i(e[5], e[3] || e[4] || "?", +e[1], +e[2]) : void 0
         }],
-        m = [s, c, f],
+        m = [s, l, f],
         y = (0, r.createStackParser)(...m),
         v = (t, e) => {
             let n = -1 !== t.indexOf("safari-extension"),

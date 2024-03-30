@@ -1,22 +1,22 @@
 function(e, t, n) {
-    var r = {
+    var i = {
         "./spritesheet-emoji-32.png": "63215",
         "./spritesheet-emoji-40.png": "926720",
         "./spritesheet-emoji-48.png": "332936"
     };
 
-    function o(e) {
-        return n(i(e))
+    function r(e) {
+        return n(s(e))
     }
 
-    function i(e) {
-        if (!n.o(r, e)) {
+    function s(e) {
+        if (!n.o(i, e)) {
             var t = Error("Cannot find module '" + e + "'");
             throw t.code = "MODULE_NOT_FOUND", t
         }
-        return r[e]
+        return i[e]
     }
-    o.id = '"273735"', o.keys = function() {
-        return Object.keys(r)
-    }, o.resolve = i, e.exports = o
+    r.id = '"273735"', r.keys = function() {
+        return Object.keys(i)
+    }, r.resolve = s, e.exports = r
 }

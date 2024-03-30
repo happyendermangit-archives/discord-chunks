@@ -1,11 +1,11 @@
-function(t, e, n) {
+function(t, n, e) {
     "use strict";
-    n.r(e), n.d(e, {
+    e.r(n), e.d(n, {
         logger: function() {
             return c
         }
     });
-    var r = n("873171"),
+    var r = e("873171"),
         i = (0, r.getGlobalObject)(),
         o = "Sentry Logger ",
         s = function() {
@@ -17,17 +17,17 @@ function(t, e, n) {
             }, t.prototype.enable = function() {
                 this._enabled = !0
             }, t.prototype.log = function() {
-                for (var t = [], e = 0; e < arguments.length; e++) t[e] = arguments[e];
+                for (var t = [], n = 0; n < arguments.length; n++) t[n] = arguments[n];
                 this._enabled && (0, r.consoleSandbox)(function() {
                     i.console.log(o + "[Log]: " + t.join(" "))
                 })
             }, t.prototype.warn = function() {
-                for (var t = [], e = 0; e < arguments.length; e++) t[e] = arguments[e];
+                for (var t = [], n = 0; n < arguments.length; n++) t[n] = arguments[n];
                 this._enabled && (0, r.consoleSandbox)(function() {
                     i.console.warn(o + "[Warn]: " + t.join(" "))
                 })
             }, t.prototype.error = function() {
-                for (var t = [], e = 0; e < arguments.length; e++) t[e] = arguments[e];
+                for (var t = [], n = 0; n < arguments.length; n++) t[n] = arguments[n];
                 this._enabled && (0, r.consoleSandbox)(function() {
                     i.console.error(o + "[Error]: " + t.join(" "))
                 })

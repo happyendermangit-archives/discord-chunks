@@ -1,6 +1,6 @@
-function(e) {
-    var t = Object.prototype.toString;
-    e.exports = function(e) {
-        return t.call(e)
+function(t) {
+    var e = Object.prototype.toString;
+    t.exports = function(t) {
+        return e.call(t)
     }
 }

@@ -33,8 +33,8 @@ function(t, e, n) {
             insert: async e => {
                 try {
                     var r, s, u;
-                    let l = await (0, i.serializeEnvelope)(e, t.textEncoder);
-                    await (r = n(), s = l, u = t.maxQueueSize || 30, r(t => o(t).then(e => {
+                    let c = await (0, i.serializeEnvelope)(e, t.textEncoder);
+                    await (r = n(), s = c, u = t.maxQueueSize || 30, r(t => o(t).then(e => {
                         if (!(e.length >= u)) return t.put(s, Math.max(...e, 0) + 1), a(t.transaction)
                     })))
                 } catch (t) {}

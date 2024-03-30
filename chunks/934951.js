@@ -1,18 +1,18 @@
-function(t, e, n) {
+function(t, n, e) {
     "use strict";
-    n.r(e), n.d(e, {
+    e.r(n), e.d(n, {
         addBreadcrumb: function() {
             return o
         }
     });
-    var r = n("109393"),
-        i = n("926918");
+    var r = e("109393"),
+        i = e("926918");
 
     function o(t) {
         ! function(t) {
-            for (var e = [], n = 1; n < arguments.length; n++) e[n - 1] = arguments[n];
+            for (var n = [], e = 1; e < arguments.length; e++) n[e - 1] = arguments[e];
             var o = (0, i.getCurrentHub)();
-            if (o && o[t]) return o[t].apply(o, r.__spread(e));
+            if (o && o[t]) return o[t].apply(o, r.__spread(n));
             throw Error("No hub defined or " + t + " was not found on the hub, please open a bug report.")
         }("addBreadcrumb", t)
     }

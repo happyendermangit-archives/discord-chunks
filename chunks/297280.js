@@ -19,7 +19,7 @@ function(t, e, n) {
         __init2() {
             this._installFunc = {
                 onerror: u,
-                onunhandledrejection: l
+                onunhandledrejection: c
             }
         }
         constructor(t) {
@@ -47,7 +47,7 @@ function(t, e, n) {
             if (!e.getIntegration(s)) return;
             let {
                 msg: u,
-                url: l,
+                url: c,
                 line: p,
                 column: h,
                 error: _
@@ -57,7 +57,7 @@ function(t, e, n) {
                 let a = (0, i.isErrorEvent)(t) ? t.message : t,
                     o = "Error",
                     s = a.match(/^(?:[Uu]ncaught (?:exception: )?)?(?:((?:Eval|Internal|Range|Reference|Syntax|Type|URI|)Error): )?(.*)$/i);
-                return s && (o = s[1], a = s[2]), c({
+                return s && (o = s[1], a = s[2]), l({
                     exception: {
                         values: [{
                             type: o,
@@ -65,12 +65,12 @@ function(t, e, n) {
                         }]
                     }
                 }, e, n, r)
-            }(u, l, p, h) : c((0, a.eventFromUnknownInput)(n, _ || u, void 0, r, !1), l, p, h);
+            }(u, c, p, h) : l((0, a.eventFromUnknownInput)(n, _ || u, void 0, r, !1), c, p, h);
             g.level = "error", d(e, _, g, "onerror")
         })
     }
 
-    function l() {
+    function c() {
         (0, i.addInstrumentationHandler)("unhandledrejection", t => {
             let [e, n, r] = f();
             if (!e.getIntegration(s)) return;
@@ -79,7 +79,7 @@ function(t, e, n) {
                 "reason" in t ? u = t.reason : "detail" in t && "reason" in t.detail && (u = t.detail.reason)
             } catch (t) {}
             if ((0, o.shouldIgnoreOnError)() || u && u.__sentry_own_request__) return !0;
-            let l = (0, i.isPrimitive)(u) ? function(t) {
+            let c = (0, i.isPrimitive)(u) ? function(t) {
                 return {
                     exception: {
                         values: [{
@@ -89,22 +89,22 @@ function(t, e, n) {
                     }
                 }
             }(u) : (0, a.eventFromUnknownInput)(n, u, void 0, r, !0);
-            l.level = "error", d(e, u, l, "onunhandledrejection")
+            c.level = "error", d(e, u, c, "onunhandledrejection")
         })
     }
     s.__initStatic();
 
-    function c(t, e, n, r) {
+    function l(t, e, n, r) {
         let a = t.exception = t.exception || {},
             o = a.values = a.values || [],
             s = o[0] = o[0] || {},
             u = s.stacktrace = s.stacktrace || {},
-            l = u.frames = u.frames || [],
-            c = isNaN(parseInt(r, 10)) ? void 0 : r,
+            c = u.frames = u.frames || [],
+            l = isNaN(parseInt(r, 10)) ? void 0 : r,
             d = isNaN(parseInt(n, 10)) ? void 0 : n,
             f = (0, i.isString)(e) && e.length > 0 ? e : (0, i.getLocationHref)();
-        return 0 === l.length && l.push({
-            colno: c,
+        return 0 === c.length && c.push({
+            colno: l,
             filename: f,
             function: "?",
             in_app: !0,

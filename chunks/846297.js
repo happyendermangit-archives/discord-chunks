@@ -38,14 +38,14 @@ function(t, e, n) {
         o = n("643487"),
         s = n("297280"),
         u = n("382078"),
-        l = n("124969"),
-        c = n("140735"),
+        c = n("124969"),
+        l = n("140735"),
         d = n("612568"),
         f = n("683900"),
         p = n("202406"),
         h = n("393746"),
         _ = n("975927");
-    let g = [new r.Integrations.InboundFilters, new r.Integrations.FunctionToString, new u.TryCatch, new l.Breadcrumbs, new s.GlobalHandlers, new c.LinkedErrors, new f.Dedupe, new d.HttpContext];
+    let g = [new r.Integrations.InboundFilters, new r.Integrations.FunctionToString, new u.TryCatch, new c.Breadcrumbs, new s.GlobalHandlers, new l.LinkedErrors, new f.Dedupe, new d.HttpContext];
 
     function m(t = {}) {
         void 0 === t.defaultIntegrations && (t.defaultIntegrations = g), void 0 === t.release && ("string" == typeof __SENTRY_RELEASE__ && (t.release = __SENTRY_RELEASE__), o.WINDOW.SENTRY_RELEASE && o.WINDOW.SENTRY_RELEASE.id && (t.release = o.WINDOW.SENTRY_RELEASE.id)), void 0 === t.autoSessionTracking && (t.autoSessionTracking = !0), void 0 === t.sendClientReports && (t.sendClientReports = !0);
@@ -89,8 +89,8 @@ function(t, e, n) {
         }), !t.eventId && (t.eventId = e.lastEventId());
         let u = o.WINDOW.document.createElement("script");
         u.async = !0, u.crossOrigin = "anonymous", u.src = (0, r.getReportDialogEndpoint)(s, t), t.onLoad && (u.onload = t.onLoad);
-        let l = o.WINDOW.document.head || o.WINDOW.document.body;
-        l ? l.appendChild(u) : ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.logger.error("Not injecting report dialog. No injection point found in HTML")
+        let c = o.WINDOW.document.head || o.WINDOW.document.body;
+        c ? c.appendChild(u) : ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.logger.error("Not injecting report dialog. No injection point found in HTML")
     }
 
     function v() {

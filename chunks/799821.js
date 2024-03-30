@@ -19,8 +19,8 @@ function(t, e, n) {
         o = n("648238"),
         s = n("607190"),
         u = n("540161"),
-        l = n("282572"),
-        c = n("301072"),
+        c = n("282572"),
+        l = n("301072"),
         d = n("233863"),
         f = n("544457"),
         p = n("72609");
@@ -40,7 +40,7 @@ function(t, e, n) {
         if (t && o.browserPerformanceTimeOrigin) {
             t.mark && s.WINDOW.performance.mark("sentry-tracing-init"),
                 function() {
-                    (0, l.onFID)(t => {
+                    (0, c.onFID)(t => {
                         let e = t.entries.pop();
                         if (!e) return;
                         let n = h(o.browserPerformanceTimeOrigin),
@@ -64,7 +64,7 @@ function(t, e, n) {
                     })
                 }(),
                 n = function() {
-                    return (0, c.onLCP)(t => {
+                    return (0, l.onLCP)(t => {
                         let e = t.entries.pop();
                         e && (("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && o.logger.log("[Measurements] Adding LCP"), m.lcp = {
                             value: t.value,
@@ -123,8 +123,8 @@ function(t, e, n) {
         if (!a || !s.WINDOW.performance.getEntries || !o.browserPerformanceTimeOrigin) return;
         ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && o.logger.log("[Tracing] Adding & adjusting spans using Performance API");
         let u = h(o.browserPerformanceTimeOrigin),
-            l = a.getEntries();
-        if (l.slice(g).forEach(r => {
+            c = a.getEntries();
+        if (c.slice(g).forEach(r => {
                 let i = h(r.startTime),
                     a = h(r.duration);
                 if ("navigation" !== t.op || !(u + i < t.startTimestamp)) switch (r.entryType) {
@@ -188,7 +188,7 @@ function(t, e, n) {
                         })(t, r, e, i, a, u)
                     }
                 }
-            }), g = Math.max(l.length - 1, 0), function(t) {
+            }), g = Math.max(c.length - 1, 0), function(t) {
                 let e = s.WINDOW.navigator;
                 if (!e) return;
                 let n = e.connection;

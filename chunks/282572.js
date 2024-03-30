@@ -14,15 +14,15 @@ function(t, e, n) {
         let e;
         let n = (0, i.getVisibilityWatcher)(),
             u = (0, a.initMetric)("FID"),
-            l = t => {
+            c = t => {
                 t.startTime < n.firstHiddenTime && (u.value = t.processingStart - t.startTime, u.entries.push(t), e(!0))
             },
-            c = t => {
-                t.forEach(l)
+            l = t => {
+                t.forEach(c)
             },
-            d = (0, o.observe)("first-input", c);
+            d = (0, o.observe)("first-input", l);
         e = (0, r.bindReporter)(t, u), d && (0, s.onHidden)(() => {
-            c(d.takeRecords()), d.disconnect()
+            l(d.takeRecords()), d.disconnect()
         }, !0)
     }
 }

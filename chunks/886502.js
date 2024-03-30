@@ -5,8 +5,8 @@ function(t, e, n) {
         o = n("907287"),
         s = n("65064"),
         u = n("402428"),
-        l = n("207757"),
-        c = n("556868"),
+        c = n("207757"),
+        l = n("556868"),
         d = "[object Arguments]",
         f = "[object Array]",
         p = "[object Object]",
@@ -20,11 +20,11 @@ function(t, e, n) {
         var S = b == p,
             w = E == p,
             T = b == E;
-        if (T && l(t)) {
-            if (!l(e)) return !1;
+        if (T && c(t)) {
+            if (!c(e)) return !1;
             y = !0, S = !1
         }
-        if (T && !S) return m || (m = new r), y || c(t) ? i(t, e, n, _, g, m) : a(t, e, b, n, _, g, m);
+        if (T && !S) return m || (m = new r), y || l(t) ? i(t, e, n, _, g, m) : a(t, e, b, n, _, g, m);
         if (!(1 & n)) {
             var k = S && h.call(t, "__wrapped__"),
                 x = w && h.call(e, "__wrapped__");

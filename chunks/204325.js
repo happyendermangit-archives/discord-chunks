@@ -11,8 +11,8 @@ function(t, e, n) {
         o = n("799821"),
         s = n("722994"),
         u = n("263951"),
-        l = n("607190");
-    let c = {
+        c = n("607190");
+    let l = {
         ...r.TRACING_DEFAULTS,
         markBackgroundTransactions: !0,
         routingInstrumentation: u.instrumentRoutingWithDefaults,
@@ -31,7 +31,7 @@ function(t, e, n) {
         }
         constructor(t) {
             d.prototype.__init.call(this), d.prototype.__init2.call(this), (0, r.addTracingExtensions)(), ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && (this._hasSetTracePropagationTargets = !!(t && (t.tracePropagationTargets || t.tracingOrigins))), this.options = {
-                ...c,
+                ...l,
                 ...t
             }, void 0 !== this.options._experiments.enableLongTask && (this.options.enableLongTask = this.options._experiments.enableLongTask), t && !t.tracePropagationTargets && t.tracingOrigins && (this.options.tracePropagationTargets = t.tracingOrigins), this._collectWebVitals = (0, o.startTrackingWebVitals)(), this.options.enableLongTask && (0, o.startTrackingLongTasks)(), this.options._experiments.enableInteractions && (0, o.startTrackingInteractions)()
         }
@@ -42,8 +42,8 @@ function(t, e, n) {
                 {
                     routingInstrumentation: o,
                     startTransactionOnLocationChange: u,
-                    startTransactionOnPageLoad: l,
-                    markBackgroundTransactions: c,
+                    startTransactionOnPageLoad: c,
+                    markBackgroundTransactions: l,
                     traceFetch: d,
                     traceXHR: f,
                     shouldCreateSpanForRequest: p,
@@ -55,7 +55,7 @@ function(t, e, n) {
             ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && this._hasSetTracePropagationTargets && g && i.logger.warn("[Tracing] The `tracePropagationTargets` option was set in the BrowserTracing integration and top level `Sentry.init`. The top level `Sentry.init` value is being used."), o(t => {
                 let n = this._createRouteTransaction(t);
                 return this.options._experiments.onStartRouteTransaction && this.options._experiments.onStartRouteTransaction(n, t, e), n
-            }, l, u), c && (0, a.registerBackgroundTabDetection)(), _.enableInteractions && this._registerInteractionListener(), (0, s.instrumentOutgoingRequests)({
+            }, c, u), l && (0, a.registerBackgroundTabDetection)(), _.enableInteractions && this._registerInteractionListener(), (0, s.instrumentOutgoingRequests)({
                 traceFetch: d,
                 traceXHR: f,
                 tracePropagationTargets: m,
@@ -75,9 +75,9 @@ function(t, e, n) {
                     finalTimeout: s,
                     heartbeatInterval: u
                 } = this.options,
-                c = "pageload" === t.op,
-                d = c ? f("sentry-trace") : "",
-                p = c ? f("baggage") : "",
+                l = "pageload" === t.op,
+                d = l ? f("sentry-trace") : "",
+                p = l ? f("baggage") : "",
                 {
                     traceparentData: h,
                     dynamicSamplingContext: _,
@@ -103,10 +103,10 @@ function(t, e, n) {
             } : v.metadata, this._latestRouteName = v.name, this._latestRouteSource = v.metadata && v.metadata.source, !1 === v.sampled && ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.logger.log(`[Tracing] Will not send ${v.op} transaction because of beforeNavigate.`), ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.logger.log(`[Tracing] Starting ${v.op} transaction on scope`);
             let {
                 location: b
-            } = l.WINDOW, E = (0, r.startIdleTransaction)(e, v, a, s, !0, {
+            } = c.WINDOW, E = (0, r.startIdleTransaction)(e, v, a, s, !0, {
                 location: b
             }, u), S = e.getScope();
-            return c && h ? S.setPropagationContext(g) : S.setPropagationContext({
+            return l && h ? S.setPropagationContext(g) : S.setPropagationContext({
                 traceId: E.traceId,
                 spanId: E.spanId,
                 parentSpanId: E.parentSpanId,
@@ -137,8 +137,8 @@ function(t, e, n) {
                 }
                 let u = this._getCurrentHub(),
                     {
-                        location: c
-                    } = l.WINDOW,
+                        location: l
+                    } = c.WINDOW,
                     d = {
                         name: this._latestRouteName,
                         op: o,
@@ -148,7 +148,7 @@ function(t, e, n) {
                         }
                     };
                 t = (0, r.startIdleTransaction)(u, d, e, n, !0, {
-                    location: c
+                    location: l
                 }, a)
             };
             ["click"].forEach(t => {

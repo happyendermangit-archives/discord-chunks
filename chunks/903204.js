@@ -2,7 +2,7 @@ function(t, e, n) {
     "use strict";
     n.r(e), n.d(e, {
         BrowserClient: function() {
-            return l
+            return c
         }
     });
     var r = n("91320"),
@@ -11,7 +11,7 @@ function(t, e, n) {
         o = n("643487"),
         s = n("124969"),
         u = n("184612");
-    class l extends r.BaseClient {
+    class c extends r.BaseClient {
         constructor(t) {
             let e = o.WINDOW.SENTRY_SDK_SOURCE || (0, i.getSDKSource)();
             t._metadata = t._metadata || {}, t._metadata.sdk = t._metadata.sdk || {

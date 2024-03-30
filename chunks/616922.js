@@ -1,77 +1,91 @@
-function(e) {
-    e.exports = function(e) {
-        let t = e.regex,
-            n = ["absolute_url", "asset|0", "asset_version", "attribute", "block", "constant", "controller|0", "country_timezones", "csrf_token", "cycle", "date", "dump", "expression", "form|0", "form_end", "form_errors", "form_help", "form_label", "form_rest", "form_row", "form_start", "form_widget", "html_classes", "include", "is_granted", "logout_path", "logout_url", "max", "min", "parent", "path|0", "random", "range", "relative_path", "render", "render_esi", "source", "template_from_string", "url|0"],
-            r = ["apply", "autoescape", "block", "cache", "deprecated", "do", "embed", "extends", "filter", "flush", "for", "form_theme", "from", "if", "import", "include", "macro", "sandbox", "set", "stopwatch", "trans", "trans_default_domain", "transchoice", "use", "verbatim", "with"];
-        r = r.concat(r.map(e => `end${e}`));
-        let i = {
-                scope: "string",
-                variants: [{
-                    begin: /'/,
-                    end: /'/
-                }, {
-                    begin: /"/,
-                    end: /"/
-                }]
+function(e, t, n) {
+    "use strict";
+    n.r(t), n.d(t, {
+        SPOTIFY_APP_PROTOCOL: function() {
+            return d
+        },
+        SPOTIFY_HOSTNAMES: function() {
+            return I
+        },
+        SPOTIFY_PARTY_PREFIX: function() {
+            return _
+        },
+        SPOTIFY_PLATFORM_NAME: function() {
+            return c
+        },
+        SpotifyActionTypes: function() {
+            return a
+        },
+        SpotifyEndpoints: function() {
+            return S
+        },
+        SpotifyResourceTypes: function() {
+            return s
+        },
+        getSpotifyResourceType: function() {
+            return h
+        },
+        isSpotifyParty: function() {
+            return E
+        }
+    });
+    var i, r, s, a, o = n("726542"),
+        l = n("358085"),
+        u = n("981631");
+    let d = "spotify",
+        _ = "spotify:",
+        c = o.default.get(u.PlatformTypes.SPOTIFY).name;
+
+    function E(e) {
+        return null != e && e.startsWith(_)
+    }(i = s || (s = {})).TRACK = "track", i.ARTIST = "artist", i.ALBUM = "album", i.PLAYLIST = "playlist", i.EPISODE = "episode", i.SHOW = "show", (r = a || (a = {})).USER_ACTIVITY_PLAY = "user_activity_play", r.USER_ACTIVITY_SYNC = "user_activity_sync", r.EMBED_SYNC = "embed_sync";
+    let I = ["open.spotify.com", "www.spotify.com"],
+        T = "https://api.spotify.com/v1",
+        f = e => "?utm_source=discord&utm_medium=".concat(e),
+        S = Object.freeze({
+            PROFILE: "".concat(T, "/me"),
+            NOTIFICATIONS_PLAYER: "".concat(T, "/me/notifications/player"),
+            PLAYER: "".concat(T, "/me/player"),
+            PLAYER_DEVICES: "".concat(T, "/me/player/devices"),
+            PLAYER_PLAY: "".concat(T, "/me/player/play"),
+            PLAYER_PAUSE: "".concat(T, "/me/player/pause"),
+            PLAYER_REPEAT: "".concat(T, "/me/player/repeat"),
+            WEB_OPEN: function(e, t) {
+                let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "desktop";
+                return "https://open.spotify.com/".concat(encodeURIComponent(e), "/").concat(encodeURIComponent(t)).concat(f(n))
             },
-            a = {
-                scope: "number",
-                match: /\d+/
+            EMBED: function(e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "desktop";
+                return "https://open.spotify.com/embed".concat(e).concat(f(t))
             },
-            o = {
-                beginKeywords: n.join(" "),
-                keywords: {
-                    name: n
-                },
-                relevance: 0,
-                contains: [{
-                    begin: /\(/,
-                    end: /\)/,
-                    excludeBegin: !0,
-                    excludeEnd: !0,
-                    contains: [i, a]
-                }]
+            PLAYER_OPEN: function(e, t) {
+                let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+                    i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "desktop";
+                return "".concat(d, ":").concat(encodeURIComponent(e), ":").concat(encodeURIComponent(t)).concat(n ? f(i) : "")
             },
-            s = {
-                match: /\|(?=[A-Za-z_]+:?)/,
-                beginScope: "punctuation",
-                relevance: 0,
-                contains: [{
-                    match: /[A-Za-z_]+:?/,
-                    keywords: ["abs", "abbr_class", "abbr_method", "batch", "capitalize", "column", "convert_encoding", "country_name", "currency_name", "currency_symbol", "data_uri", "date", "date_modify", "default", "escape", "file_excerpt", "file_link", "file_relative", "filter", "first", "format", "format_args", "format_args_as_text", "format_currency", "format_date", "format_datetime", "format_file", "format_file_from_text", "format_number", "format_time", "html_to_markdown", "humanize", "inky_to_html", "inline_css", "join", "json_encode", "keys", "language_name", "last", "length", "locale_name", "lower", "map", "markdown", "markdown_to_html", "merge", "nl2br", "number_format", "raw", "reduce", "replace", "reverse", "round", "slice", "slug", "sort", "spaceless", "split", "striptags", "timezone_name", "title", "trans", "transchoice", "trim", "u|0", "upper", "url_encode", "yaml_dump", "yaml_encode"]
-                }]
-            },
-            u = (e, {
-                relevance: n
-            }) => ({
-                beginScope: {
-                    1: "template-tag",
-                    3: "name"
-                },
-                relevance: n || 2,
-                endScope: "template-tag",
-                begin: [/\{%/, /\s*/, t.either(...e)],
-                end: /%\}/,
-                keywords: "in",
-                contains: [s, o, i, a]
-            }),
-            c = u(r, {
-                relevance: 2
-            }),
-            l = u([/[a-z_]+/], {
-                relevance: 1
-            });
-        return {
-            name: "Twig",
-            aliases: ["craftcms"],
-            case_insensitive: !0,
-            subLanguage: "xml",
-            contains: [e.COMMENT(/\{#/, /#\}/), c, l, {
-                className: "template-variable",
-                begin: /\{\{/,
-                end: /\}\}/,
-                contains: ["self", s, o, i, a]
-            }]
+            PREMIUM_SITE: "https://www.spotify.com/premium/".concat(f("desktop")),
+            INSTALL_ATTRIBUTION: e => "https://app.adjust.com/bdyga9?campaign=".concat(e),
+            APP_STORE: (0, l.isAndroid)() ? "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US" : "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8",
+            IOS_APP_STORE: "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8"
+        });
+
+    function h(e) {
+        if ("string" != typeof e) return null;
+        switch (e) {
+            case "track":
+                return "track";
+            case "artist":
+                return "artist";
+            case "album":
+                return "album";
+            case "playlist":
+                return "playlist";
+            case "episode":
+                return "episode";
+            case "show":
+                return "show";
+            default:
+                return null
         }
     }
 }

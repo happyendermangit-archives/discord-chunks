@@ -60,7 +60,7 @@ function(t, e, n) {
                         global: e.global
                     })
                 }
-            }(this.options.dom)), this.options.xhr && (0, i.addInstrumentationHandler)("xhr", l), this.options.fetch && (0, i.addInstrumentationHandler)("fetch", c), this.options.history && (0, i.addInstrumentationHandler)("history", d)
+            }(this.options.dom)), this.options.xhr && (0, i.addInstrumentationHandler)("xhr", c), this.options.fetch && (0, i.addInstrumentationHandler)("fetch", l), this.options.history && (0, i.addInstrumentationHandler)("history", d)
         }
         addSentryBreadcrumb(t) {
             this.options.sentry && (0, r.getCurrentHub)().addBreadcrumb({
@@ -98,7 +98,7 @@ function(t, e, n) {
         })
     }
 
-    function l(t) {
+    function c(t) {
         let {
             startTimestamp: e,
             endTimestamp: n
@@ -108,10 +108,10 @@ function(t, e, n) {
             method: o,
             url: s,
             status_code: u,
-            body: l
-        } = a, c = {
+            body: c
+        } = a, l = {
             xhr: t.xhr,
-            input: l,
+            input: c,
             startTimestamp: e,
             endTimestamp: n
         };
@@ -123,10 +123,10 @@ function(t, e, n) {
                 status_code: u
             },
             type: "http"
-        }, c)
+        }, l)
     }
 
-    function c(t) {
+    function l(t) {
         let {
             startTimestamp: e,
             endTimestamp: n

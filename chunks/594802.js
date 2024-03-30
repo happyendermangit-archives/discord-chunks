@@ -1,5 +1,5 @@
 function(e, t, n) {
-    var r = {
+    var i = {
             "./bg.jsona": function() {
                 return n.e("20575")
             },
@@ -94,7 +94,7 @@ function(e, t, n) {
                 return n.e("30684")
             }
         },
-        o = {
+        r = {
             "./bg.jsona": "251927",
             "./cs.jsona": "753771",
             "./da.jsona": "44867",
@@ -128,18 +128,18 @@ function(e, t, n) {
             "./zh-TW.jsona": "592369"
         };
 
-    function i(e) {
-        if (!n.o(o, e)) return Promise.resolve().then(function() {
+    function s(e) {
+        if (!n.o(r, e)) return Promise.resolve().then(function() {
             var t = Error("Cannot find module '" + e + "'");
             throw t.code = "MODULE_NOT_FOUND", t
         });
-        var t = r[e],
-            i = o[e];
+        var t = i[e],
+            s = r[e];
         return t().then(function() {
-            return n.t(i, 19)
+            return n.t(s, 19)
         })
     }
-    i.keys = function() {
-        return Object.keys(o)
-    }, i.id = "594802", e.exports = i
+    s.keys = function() {
+        return Object.keys(r)
+    }, s.id = "594802", e.exports = s
 }

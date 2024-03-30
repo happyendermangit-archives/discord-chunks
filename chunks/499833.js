@@ -22,16 +22,16 @@ function(t, e, n) {
                 o && (n && clearTimeout(n), "number" != typeof(n = setTimeout(async () => {
                     n = void 0;
                     let t = await o.pop();
-                    t && (i("Attempting to send previously queued event"), c(t).catch(t => {
+                    t && (i("Attempting to send previously queued event"), l(t).catch(t => {
                         i("Failed to retry sending", t)
                     }))
                 }, t)) && n.unref && n.unref())
             }
 
-            function l() {
+            function c() {
                 !n && (u(s), s = Math.min(2 * s, 36e5))
             }
-            async function c(t) {
+            async function l(t) {
                 try {
                     let e = await a.send(t),
                         n = 100;
@@ -41,13 +41,13 @@ function(t, e, n) {
                     }
                     return u(n), s = 5e3, e
                 } catch (a) {
-                    var n, c, d;
-                    if (o && await (n = t, c = a, d = s, !(0, r.envelopeContainsItemType)(n, ["replay_event", "replay_recording", "client_report"]) && (!e.shouldStore || e.shouldStore(n, c, d)))) return await o.insert(t), l(), i("Error sending. Event queued", a), {};
+                    var n, l, d;
+                    if (o && await (n = t, l = a, d = s, !(0, r.envelopeContainsItemType)(n, ["replay_event", "replay_recording", "client_report"]) && (!e.shouldStore || e.shouldStore(n, l, d)))) return await o.insert(t), c(), i("Error sending. Event queued", a), {};
                     throw a
                 }
             }
-            return e.flushAtStartup && l(), {
-                send: c,
+            return e.flushAtStartup && c(), {
+                send: l,
                 flush: t => a.flush(t)
             }
         }

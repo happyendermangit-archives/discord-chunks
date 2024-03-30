@@ -5,7 +5,7 @@ function(t, e, n) {
             return s
         },
         getCurrentHub: function() {
-            return c
+            return l
         },
         getHubFromCarrier: function() {
             return d
@@ -14,7 +14,7 @@ function(t, e, n) {
             return u
         },
         makeMain: function() {
-            return l
+            return c
         }
     });
     var r = n("648238"),
@@ -143,11 +143,11 @@ function(t, e, n) {
             n && t(e)
         }
         run(t) {
-            let e = l(this);
+            let e = c(this);
             try {
                 t(this)
             } finally {
-                l(e)
+                c(e)
             }
         }
         getIntegration(t) {
@@ -187,7 +187,7 @@ Sentry.init({...});
                 environment: s = i.DEFAULT_ENVIRONMENT
             } = n && n.getOptions() || {}, {
                 userAgent: u
-            } = r.GLOBAL_OBJ.navigator || {}, l = (0, o.makeSession)({
+            } = r.GLOBAL_OBJ.navigator || {}, c = (0, o.makeSession)({
                 release: a,
                 environment: s,
                 user: e.getUser(),
@@ -195,10 +195,10 @@ Sentry.init({...});
                     userAgent: u
                 },
                 ...t
-            }), c = e.getSession && e.getSession();
-            return c && "ok" === c.status && (0, o.updateSession)(c, {
+            }), l = e.getSession && e.getSession();
+            return l && "ok" === l.status && (0, o.updateSession)(l, {
                 status: "exited"
-            }), this.endSession(), e.setSession(l), l
+            }), this.endSession(), e.setSession(c), c
         }
         shouldSendDefaultPii() {
             let t = this.getClient(),
@@ -233,13 +233,13 @@ Sentry.init({...});
         }, r.GLOBAL_OBJ
     }
 
-    function l(t) {
+    function c(t) {
         let e = u(),
             n = d(e);
         return f(e, t), n
     }
 
-    function c() {
+    function l() {
         let t = u();
         if (t.__SENTRY__ && t.__SENTRY__.acs) {
             let e = t.__SENTRY__.acs.getCurrentHub();

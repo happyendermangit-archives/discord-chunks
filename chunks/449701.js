@@ -21,16 +21,16 @@ function(t, e, n) {
             function u(e, o) {
                 let u = o ? `${e}:${o}` : e;
                 if (!s[u]) {
-                    var l, c;
+                    var c, l;
                     let d = (0, r.dsnFromString)(e);
                     if (!d) return;
                     let f = (0, i.getEnvelopeEndpointWithUrlEncodedAuth)(d);
-                    s[u] = o ? (l = t, c = o, t => {
-                        let e = l(t);
+                    s[u] = o ? (c = t, l = o, t => {
+                        let e = c(t);
                         return {
                             send: async t => {
                                 let n = a(t, ["event", "transaction", "profile", "replay_event"]);
-                                return n && (n.release = c), e.send(t)
+                                return n && (n.release = l), e.send(t)
                             },
                             flush: t => e.flush(t)
                         }

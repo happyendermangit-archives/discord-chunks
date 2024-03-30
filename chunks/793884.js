@@ -12,8 +12,8 @@ function(t, e, n) {
     var o = n("46834"),
         s = n("529866"),
         u = n("442853"),
-        l = n("432038"),
-        c = n("698892"),
+        c = n("432038"),
+        l = n("698892"),
         d = n("24716"),
         f = n("30865");
     let p = (0, d.getGlobalObject)(),
@@ -125,7 +125,7 @@ function(t, e, n) {
                     break;
                 case "fetch":
                     (function() {
-                        (0, c.supportsNativeFetch)() && (0, u.fill)(p, "fetch", function(t) {
+                        (0, l.supportsNativeFetch)() && (0, u.fill)(p, "fetch", function(t) {
                             return function(...e) {
                                 let {
                                     method: n,
@@ -237,7 +237,7 @@ function(t, e, n) {
             } catch (e) {
                 ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && s.logger.error(`Error while triggering instrumentation handler.
 Type: ${t}
-Name: ${(0,l.getFunctionName)(n)}
+Name: ${(0,c.getFunctionName)(n)}
 Error:`, e)
             }
     }
