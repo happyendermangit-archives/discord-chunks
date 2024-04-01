@@ -107,12 +107,13 @@ function(e, t, n) {
                             className: o()({
                                 [p.profileBadge24]: 0 === w,
                                 [p.profileBadge22]: 1 === w,
-                                [p.profileBadge18]: 2 === w
+                                [p.profileBadge20]: 2 === w,
+                                [p.profileBadge18]: 3 === w
                             })
                         })
                     })
                 }, e.id))
             })
         })
-    }(r = i || (i = {}))[r.SIZE_24 = 0] = "SIZE_24", r[r.SIZE_22 = 1] = "SIZE_22", r[r.SIZE_18 = 2] = "SIZE_18"
+    }(r = i || (i = {}))[r.SIZE_24 = 0] = "SIZE_24", r[r.SIZE_22 = 1] = "SIZE_22", r[r.SIZE_20 = 2] = "SIZE_20", r[r.SIZE_18 = 3] = "SIZE_18"
 }

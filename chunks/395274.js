@@ -1,13 +1,14 @@
 function(e) {
     "use strict";
     e.exports = {
+        badges: "badges_d1124c",
         biteSizePronouns: "biteSizePronouns_d38134",
         container: "container_b222f4",
         copiableField: "copiableField_ae045a",
         copiableNameTag: "copiableNameTag_d5f2b8",
         copyIcon: "copyIcon__3cf4a",
         discrimBase: "discrimBase__7b3a2",
-        flex: "flex_b548f2",
+        flexRow: "flexRow__6c25f",
         headerBotTag: "headerBotTag__7d3b1",
         headerBotTagWithNickname: "headerBotTagWithNickname__5b7be",
         nickname: "nickname__0fbe2",

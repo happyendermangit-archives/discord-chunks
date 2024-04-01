@@ -30,6 +30,7 @@ function(e, t, n) {
         return t.isSystemUser() ? null : t.isNonUserBot() ? (0, i.jsxs)("div", {
             className: _.paddingBottom,
             children: [(0, i.jsx)(d.default, {
+                guildId: null == c ? void 0 : c.id,
                 user: t,
                 nickname: null,
                 pronouns: null
@@ -37,6 +38,7 @@ function(e, t, n) {
         }) : (0, i.jsxs)("div", {
             className: _.paddingBottom,
             children: [(0, i.jsx)(d.default, {
+                guildId: null == c ? void 0 : c.id,
                 user: t,
                 nickname: T,
                 pronouns: null == n ? void 0 : n.pronouns,
