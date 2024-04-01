@@ -14836,6 +14836,7 @@ function(e) {
         TRIAL_EXPIRES: "Trial expires {date}",
         DISMISS_BUTTON_TEXT: "I'm not interested in this",
         SHARE_NITRO_VIEW_ON_DESKTOP: "Open this DM on desktop to start your free trial.",
+        USER_TRIAL_OFFER_ATTRIBUTION_BANNER: "{username} has shared a free Nitro trial with you.",
         EMOJI_CATEGORY_TOP_GUILD_EMOJI: "Top Emoji in !!{guildName}!!",
         TOP_GUILD_EMOJI_BADGE: "Popular",
         NEWLY_ADDED_GUILD_EMOJI_BADGE: "Newly Added",
