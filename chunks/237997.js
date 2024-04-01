@@ -15,8 +15,8 @@ function(e, t, n) {
         T = n("914010"),
         f = n("358085"),
         S = n("998502"),
-        A = n("145597"),
-        h = n("451478"),
+        h = n("145597"),
+        A = n("451478"),
         m = n("981631"),
         N = n("987650");
 
@@ -66,18 +66,18 @@ function(e, t, n) {
 
     function k() {
         if (!__OVERLAY__) return !1;
-        let e = R === (0, A.getPID)(),
-            t = L.has((0, A.getPID)()) || P.size > 0;
+        let e = R === (0, h.getPID)(),
+            t = L.has((0, h.getPID)()) || P.size > 0;
         e && t ? (0, o.focus)(window, !0) : (0, o.focus)(window, !1)
     }
 
     function V() {
-        if (R !== (0, A.getPID)()) return !1;
+        if (R !== (0, h.getPID)()) return !1;
         P.clear()
     }
 
     function F(e) {
-        let t = (0, A.getPID)();
+        let t = (0, h.getPID)();
         if (null == e.pid || e.pid === t) switch (e.type) {
             case m.OverlayEventTypes.STORAGE_SYNC:
                 r.default.PersistedStore.initializeAll(e.states);
@@ -85,7 +85,7 @@ function(e, t, n) {
             case m.OverlayEventTypes.DISPATCH:
                 null != e.payloads && (M = !0, e.payloads.forEach(e => (function(e) {
                     var t, n, i, r, s, o;
-                    if ("OVERLAY_INITIALIZE" === e.type && (null == (o = e).version && 1 === A.OVERLAY_VERSION || o.version === A.OVERLAY_VERSION || (a.default.dispatch({
+                    if ("OVERLAY_INITIALIZE" === e.type && (null == (o = e).version && 1 === h.OVERLAY_VERSION || o.version === h.OVERLAY_VERSION || (a.default.dispatch({
                             type: "OVERLAY_INCOMPATIBLE_APP"
                         }), (0, l.disconnect)(), 0))) y = !0;
                     if (y) switch (e.type) {
@@ -146,7 +146,7 @@ function(e, t, n) {
                     G = null != e ? b(e) : {
                         ...p
                     }
-                }), __OVERLAY__ && (f.isPlatformEmbedded && S.default.requireModule("discord_overlay2"), L.delete((0, A.getPID)())), null != e) {
+                }), __OVERLAY__ && (f.isPlatformEmbedded && S.default.requireModule("discord_overlay2"), L.delete((0, h.getPID)())), null != e) {
                 C = e;
                 let t = _.default.getId();
                 null != t && (null == (G = b(t)).textChatNotifications && (G.textChatNotifications = p.textChatNotifications), null == G.textWidgetOpacity && (G.textWidgetOpacity = p.textWidgetOpacity))
@@ -160,17 +160,17 @@ function(e, t, n) {
         }
         isInstanceUILocked() {
             if (!__OVERLAY__) throw Error("OverlayStore: App instance should never call .isInstanceUILocked()");
-            return !L.has((0, A.getPID)())
+            return !L.has((0, h.getPID)())
         }
         isInstanceFocused() {
             if (!__OVERLAY__) throw Error("OverlayStore: App instance should never call .isInstanceFocused()");
-            return R === (0, A.getPID)()
+            return R === (0, h.getPID)()
         }
         isFocused(e) {
             return R === e
         }
         isPinned(e) {
-            let t = I.default.getLayout(A.OVERLAY_LAYOUT_ID);
+            let t = I.default.getLayout(h.OVERLAY_LAYOUT_ID);
             return null != t && null != t.widgets.find(t => {
                 let n = I.default.getWidget(t);
                 return null != n && n.type === e && !!n.pinned || !1
@@ -266,8 +266,8 @@ function(e, t, n) {
                     } = e;
                     return null != n && ((0, l.send)({
                         type: m.OverlayEventTypes.DISPATCH,
-                        pid: (0, A.getPID)(),
-                        token: (0, A.getRPCAuthToken)(),
+                        pid: (0, h.getPID)(),
+                        token: (0, h.getRPCAuthToken)(),
                         payloads: [{
                             type: "CHANNEL_PRELOAD",
                             guildId: t === m.ME ? null : t,
@@ -282,14 +282,14 @@ function(e, t, n) {
                 }
                 return (0, l.send)({
                     type: m.OverlayEventTypes.DISPATCH,
-                    pid: (0, A.getPID)(),
-                    token: (0, A.getRPCAuthToken)(),
+                    pid: (0, h.getPID)(),
+                    token: (0, h.getRPCAuthToken)(),
                     payloads: [e]
                 }), !w.has(e.type)
-            }), (0, l.setReceiveEventHandler)(F, (0, A.getRPCAuthToken)()), (0, l.connect)(), (0, l.send)({
+            }), (0, l.setReceiveEventHandler)(F, (0, h.getRPCAuthToken)()), (0, l.connect)(), (0, l.send)({
                 type: m.OverlayEventTypes.CONNECT,
-                pid: (0, A.getPID)(),
-                token: (0, A.getRPCAuthToken)()
+                pid: (0, h.getPID)(),
+                token: (0, h.getRPCAuthToken)()
             })
         },
         OVERLAY_INITIALIZE: function(e) {
@@ -389,7 +389,7 @@ function(e, t, n) {
             let {
                 region: t
             } = e;
-            if (R !== (0, A.getPID)() || P.has(t)) return !1;
+            if (R !== (0, h.getPID)() || P.has(t)) return !1;
             P.add(t)
         },
         OVERLAY_DEACTIVATE_ALL_REGIONS: V,
@@ -398,8 +398,8 @@ function(e, t, n) {
         },
         WINDOW_RESIZED: function() {
             if (__OVERLAY__) {
-                let e = h.default.windowSize();
-                !(0, A.validResolution)(e) && (U = !1)
+                let e = A.default.windowSize();
+                !(0, h.validResolution)(e) && (U = !1)
             }
         },
         OVERLAY_SET_ASSOCIATED_GAME: function(e) {

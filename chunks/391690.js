@@ -60,7 +60,7 @@ function(e, t, n) {
         let t = new Set(i.installationPaths);
         t.add(e.path), i.installationPaths = t
     }
-    class A extends(r = s.default.PersistedStore) {
+    class h extends(r = s.default.PersistedStore) {
         initialize(e) {
             let t = {
                 ...e
@@ -102,7 +102,7 @@ function(e, t, n) {
             return e === E ? d.default.Messages.INSTALL_LOCATION_MAIN : null !== (n = null !== (t = o.default.fileManager.basename(e)) && void 0 !== t ? t : e.replace(/[/\\]+$/, "").split(/[/\\]+/g).slice(-1)[0]) && void 0 !== n ? n : "?"
         }
     }
-    _(A, "displayName", "InstallationManagerStore"), _(A, "persistKey", "InstallationManagerStore"), t.default = new A(a.default, {
+    _(h, "displayName", "InstallationManagerStore"), _(h, "persistKey", "InstallationManagerStore"), t.default = new h(a.default, {
         DISPATCH_APPLICATION_INSTALL: T,
         DISPATCH_APPLICATION_UNINSTALL: f,
         DISPATCH_APPLICATION_CANCEL: function(e) {

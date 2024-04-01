@@ -25,8 +25,8 @@ function(e, t, n) {
         T = n("593472"),
         f = n("726542"),
         S = n("710845"),
-        A = n("630699"),
-        h = n("855403"),
+        h = n("630699"),
+        A = n("855403"),
         m = n("454991"),
         N = n("77498"),
         O = n("283595"),
@@ -195,7 +195,7 @@ function(e, t, n) {
                 overlayMethod: U.OverlayMethod.Disabled
             }
         }
-        let n = A.isOOPExperimentEnabled() && (0, M.supportsOutOfProcess)() && !m.OverlayStoredSettings.legacyEnabled,
+        let n = h.isOOPExperimentEnabled() && (0, M.supportsOutOfProcess)() && !m.OverlayStoredSettings.legacyEnabled,
             i = n ? U.OverlayMethod.OutOfProcess : U.OverlayMethod.Hook,
             r = K.enableOverlay[ei(e)];
         if (null != r) return {
@@ -460,7 +460,7 @@ function(e, t, n) {
         }
         getObservedAppNameForWindow(e) {
             var t, n;
-            return null !== (n = null === (t = Y.find(t => (0, h.default)(e, t.windowHandle))) || void 0 === t ? void 0 : t.name) && void 0 !== n ? n : null
+            return null !== (n = null === (t = Y.find(t => (0, A.default)(e, t.windowHandle))) || void 0 === t ? void 0 : t.name) && void 0 !== n ? n : null
         }
         get canShowAdminWarning() {
             return B

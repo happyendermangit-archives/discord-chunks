@@ -23,8 +23,8 @@ function(e, t, n) {
         T = n("594174"),
         f = n("91313"),
         S = n("53529"),
-        A = n("925994"),
-        h = n("436660"),
+        h = n("925994"),
+        A = n("436660"),
         m = n("887490"),
         N = n("42530"),
         O = n("981631"),
@@ -121,7 +121,7 @@ function(e, t, n) {
                                             } = n;
                                             if (null == d) return null;
                                             let _ = (null !== (s = null === (i = d.options) || void 0 === i ? void 0 : i.length) && void 0 !== s ? s : 0) > 0 ? f.findTextOptions(e, d) : null,
-                                                E = (0, A.toTextValue)(m.EditorUtils.richValue(e), {
+                                                E = (0, h.toTextValue)(m.EditorUtils.richValue(e), {
                                                     mode: "raw",
                                                     range: {
                                                         anchor: m.EditorUtils.start(e, []),
@@ -184,15 +184,15 @@ function(e, t, n) {
                                                 }
                                             };
                                             m.EditorUtils.withoutNormalizing(e, () => {
-                                                for (let [, t] of(h.SlateTransforms.insertNodes(e, [M], {
+                                                for (let [, t] of(A.SlateTransforms.insertNodes(e, [M], {
                                                         at: N.FIRST_BLOCK_PATH
-                                                    }), m.EditorUtils.blocks(e).reverse())) m.PathUtils.isAfter(t, N.FIRST_BLOCK_PATH) && h.SlateTransforms.removeNodes(e, {
+                                                    }), m.EditorUtils.blocks(e).reverse())) m.PathUtils.isAfter(t, N.FIRST_BLOCK_PATH) && A.SlateTransforms.removeNodes(e, {
                                                     at: t,
                                                     voids: !0
                                                 })
                                             });
                                             let y = null;
-                                            return null != L ? (h.SlateTransforms.selectCommandOption(e, L.optionName), y = L.optionName) : null != D ? (h.SlateTransforms.selectCommandOption(e, D.optionName, !1), y = D.optionName) : h.SlateTransforms.resetSelectionToEnd(e), null == D && v(e, d), y
+                                            return null != L ? (A.SlateTransforms.selectCommandOption(e, L.optionName), y = L.optionName) : null != D ? (A.SlateTransforms.selectCommandOption(e, D.optionName, !1), y = D.optionName) : A.SlateTransforms.resetSelectionToEnd(e), null == D && v(e, d), y
                                         }(t, s, n),
                                         i = f.getOptionValues(t, S);
                                     return M({
@@ -257,7 +257,7 @@ function(e, t, n) {
                                     return 0 !== n.length && (m.EditorUtils.withoutNormalizing(e, () => {
                                         for (let t = n.length - 1; t >= 0; t--) {
                                             let i = n[t];
-                                            h.SlateTransforms.textToInline(e, {
+                                            A.SlateTransforms.textToInline(e, {
                                                 type: "applicationCommandOption",
                                                 optionName: i.name,
                                                 optionDisplayName: i.displayName,
@@ -273,7 +273,7 @@ function(e, t, n) {
                                         let t = m.EditorUtils.getFirstText(e);
                                         if (null == t) return !1;
                                         let i = t.text.trim();
-                                        t.text !== i && h.SlateTransforms.textToText(e, i, {
+                                        t.text !== i && A.SlateTransforms.textToText(e, i, {
                                             anchor: {
                                                 path: N.FIRST_TEXT_PATH,
                                                 offset: 0
@@ -328,7 +328,7 @@ function(e, t, n) {
     }
 
     function D(e, t, n, i) {
-        let [s] = m.EditorUtils.blocks(e)[0], a = (i ? (0, A.serializeDescendant)(s, {
+        let [s] = m.EditorUtils.blocks(e)[0], a = (i ? (0, h.serializeDescendant)(s, {
             mode: "plain"
         }).trimEnd() : "").split("\n").map(e => ({
             type: "line",
@@ -336,9 +336,9 @@ function(e, t, n) {
                 text: e
             }]
         })), o = [a.length - 1];
-        for (let [, t] of(h.SlateTransforms.insertNodes(e, a, {
+        for (let [, t] of(A.SlateTransforms.insertNodes(e, a, {
                 at: N.FIRST_BLOCK_PATH
-            }), m.EditorUtils.blocks(e).reverse())) m.PathUtils.isAfter(t, o) && h.SlateTransforms.removeNodes(e, {
+            }), m.EditorUtils.blocks(e).reverse())) m.PathUtils.isAfter(t, o) && A.SlateTransforms.removeNodes(e, {
             at: t,
             voids: !0
         });
@@ -362,7 +362,7 @@ function(e, t, n) {
                 path: N.FIRST_TEXT_PATH,
                 offset: n.text.length
             };
-        return !(!n.text.startsWith("".concat(p.COMMAND_SENTINEL).concat(t.displayName, " ").toLocaleLowerCase()) || m.PointUtils.equals(r, s)) && (h.SlateTransforms.textToInline(e, {
+        return !(!n.text.startsWith("".concat(p.COMMAND_SENTINEL).concat(t.displayName, " ").toLocaleLowerCase()) || m.PointUtils.equals(r, s)) && (A.SlateTransforms.textToInline(e, {
             type: "applicationCommandOption",
             optionName: i.name,
             optionDisplayName: i.displayName,
@@ -393,7 +393,7 @@ function(e, t, n) {
             I = o.default.getOptionStates(n),
             T = !1;
         for (let e of i.options) {
-            var f, S, A;
+            var f, S, h;
             let i = I[e.name],
                 r = u || e.name === c && c !== s || (null == i ? void 0 : null === (f = i.lastValidationResult) || void 0 === f ? void 0 : f.success) === !1 && (null == a ? void 0 : a[e.name]) !== (null == l ? void 0 : l[e.name]),
                 o = {
@@ -401,7 +401,7 @@ function(e, t, n) {
                     isActive: e.name === s,
                     lastValidationResult: r ? (0, d.validateOptionContent)({
                         option: e,
-                        content: null !== (A = null == a ? void 0 : a[e.name]) && void 0 !== A ? A : null,
+                        content: null !== (h = null == a ? void 0 : a[e.name]) && void 0 !== h ? h : null,
                         guildId: t,
                         channelId: n,
                         allowEmptyValues: _
@@ -440,7 +440,7 @@ function(e, t, n) {
         !(null == r || null == s || s.endsWith(" ")) && m.PointUtils.equals(i, {
             path: N.FIRST_TEXT_PATH,
             offset: r.displayName.length + 1
-        }) && h.SlateTransforms.insertText(e, " ")
+        }) && A.SlateTransforms.insertText(e, " ")
     }
 
     function U(e, t, n) {

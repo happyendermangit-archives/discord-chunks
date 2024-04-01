@@ -42,12 +42,12 @@ function(e, t, n) {
             }
         }(e), {
             step: S,
-            stepConfigs: A,
-            setBodyNode: h,
+            stepConfigs: h,
+            setBodyNode: A,
             setFooterNode: m,
             setModalOverlayNode: N,
             setReadySlideId: O
-        } = (0, c.usePaymentContext)(), p = A.find(e => e.key === S);
+        } = (0, c.usePaymentContext)(), p = h.find(e => e.key === S);
         r.useEffect(() => {
             N(null)
         }, [S, N]), l()(null != p, "Unknown step for current payment flow.");
@@ -62,11 +62,11 @@ function(e, t, n) {
                         activeSlide: S,
                         centered: !1,
                         onSlideReady: e => O(e),
-                        children: A.filter(e => null != e.key).map(e => (0, i.jsx)(_.Slide, {
+                        children: h.filter(e => null != e.key).map(e => (0, i.jsx)(_.Slide, {
                             id: e.key,
                             children: (0, i.jsx)("form", {
                                 className: a()(E.sliderBody, g),
-                                ref: e => h(e),
+                                ref: e => A(e),
                                 onSubmit: e => e.preventDefault()
                             })
                         }, e.key))

@@ -12,15 +12,15 @@ function(e, t, n) {
         T = !0,
         f = [],
         S = [],
-        A = {},
         h = {},
+        A = {},
         m = {},
         N = e => {
             f = e.filter(e => !I.has(e.type) && d.default.isSupported(e.type)), S = e.filter(e => I.has(e.type)), T = !1
         };
     class O extends(i = o.default.Store) {
         isJoining(e) {
-            return A[e] || !1
+            return h[e] || !1
         }
         joinErrorMessage(e) {
             return m[e]
@@ -41,7 +41,7 @@ function(e, t, n) {
             return S.find(t => t.type === e)
         }
         isSuggestedAccountType(e) {
-            return h[e] || !1
+            return A[e] || !1
         }
     }
     a = "ConnectedAccountsStore", (s = "displayName") in(r = O) ? Object.defineProperty(r, s, {
@@ -63,7 +63,7 @@ function(e, t, n) {
             }))) : u.default.fetch()
         },
         USER_CONNECTIONS_INTEGRATION_JOINING: function(e) {
-            A[e.integrationId] = e.joining
+            h[e.integrationId] = e.joining
         },
         USER_CONNECTION_UPDATE: function(e) {
             let {

@@ -56,8 +56,8 @@ function(e, t, n) {
         T = n("700785"),
         f = n("709054"),
         S = n("981631"),
-        A = n("474936"),
-        h = n("689938");
+        h = n("474936"),
+        A = n("689938");
     let {
         GUILD_VOICE: m,
         GUILD_CATEGORY: N,
@@ -129,7 +129,7 @@ function(e, t, n) {
     }
 
     function M(e, t) {
-        return t.isGuildStageVoice() ? S.BITRATE_DEFAULT : null == e ? S.BITRATE_MAX : Math.max(e.hasFeature(S.GuildFeatures.VIP_REGIONS) ? A.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_3].limits.bitrate : S.BITRATE_MAX, A.BoostedGuildFeatures[e.premiumTier].limits.bitrate)
+        return t.isGuildStageVoice() ? S.BITRATE_DEFAULT : null == e ? S.BITRATE_MAX : Math.max(e.hasFeature(S.GuildFeatures.VIP_REGIONS) ? h.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_3].limits.bitrate : S.BITRATE_MAX, h.BoostedGuildFeatures[e.premiumTier].limits.bitrate)
     }
 
     function y(e) {
@@ -167,25 +167,25 @@ function(e, t, n) {
         } = e;
         switch (t) {
             case S.ChannelTypes.DM:
-                return h.default.Messages.DM;
+                return A.default.Messages.DM;
             case S.ChannelTypes.GROUP_DM:
-                return h.default.Messages.GROUP_DM;
+                return A.default.Messages.GROUP_DM;
             case S.ChannelTypes.GUILD_TEXT:
-                return h.default.Messages.TEXT_CHANNEL;
+                return A.default.Messages.TEXT_CHANNEL;
             case S.ChannelTypes.GUILD_FORUM:
-                return h.default.Messages.FORUM_CHANNEL;
+                return A.default.Messages.FORUM_CHANNEL;
             case S.ChannelTypes.GUILD_MEDIA:
-                return h.default.Messages.MEDIA_CHANNEL;
+                return A.default.Messages.MEDIA_CHANNEL;
             case S.ChannelTypes.GUILD_VOICE:
-                return h.default.Messages.VOICE_CHANNEL;
+                return A.default.Messages.VOICE_CHANNEL;
             case S.ChannelTypes.GUILD_STAGE_VOICE:
-                return h.default.Messages.STAGE_CHANNEL;
+                return A.default.Messages.STAGE_CHANNEL;
             case S.ChannelTypes.GUILD_ANNOUNCEMENT:
-                return h.default.Messages.NEWS_CHANNEL;
+                return A.default.Messages.NEWS_CHANNEL;
             case S.ChannelTypes.GUILD_STORE:
-                return h.default.Messages.STORE_CHANNEL;
+                return A.default.Messages.STORE_CHANNEL;
             case S.ChannelTypes.GUILD_CATEGORY:
-                return h.default.Messages.CATEGORY;
+                return A.default.Messages.CATEGORY;
             default:
                 return null
         }

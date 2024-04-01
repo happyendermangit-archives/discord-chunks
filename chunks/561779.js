@@ -26,7 +26,7 @@ function(e, t, n) {
         }) : e[t] = n, e
     }
 
-    function A(e, t) {
+    function h(e, t) {
         let n = 0;
         for (let i = 0; i < t.length; i++) {
             let r = t[i];
@@ -40,7 +40,7 @@ function(e, t, n) {
         return null
     }(s = i || (i = {}))[s.ABOVE = 0] = "ABOVE", s[s.BELOW = 1] = "BELOW";
 
-    function h(e) {
+    function A(e) {
         return {
             value: Math.min(Math.max(e.initialValue, e.minValue), e.maxValue),
             initialValueProp: e.initialValue,
@@ -60,7 +60,7 @@ function(e, t, n) {
                     sortedMarkers: a,
                     markerPositions: o
                 };
-                let l = A(n, a = t.sort((e, t) => e - t)),
+                let l = h(n, a = t.sort((e, t) => e - t)),
                     u = a[0],
                     d = a[a.length - 1],
                     _ = d - u;
@@ -85,7 +85,7 @@ function(e, t, n) {
     class m extends(r = o.PureComponent) {
         static getDerivedStateFromProps(e, t) {
             return e.initialValue !== t.initialValueProp ? {
-                ...h(e),
+                ...A(e),
                 active: t.active
             } : null
         }
@@ -113,8 +113,8 @@ function(e, t, n) {
             } = this.state, {
                 disabled: c,
                 stickToMarkers: S,
-                className: A,
-                children: h,
+                className: h,
+                children: A,
                 barStyles: m,
                 fillStyles: N,
                 mini: O,
@@ -164,7 +164,7 @@ function(e, t, n) {
                 focusTarget: this.containerRef,
                 ringTarget: this.grabberRef,
                 children: (0, a.jsxs)("div", {
-                    className: u()(f.slider, A, {
+                    className: u()(f.slider, h, {
                         [f.disabled]: c,
                         [f.mini]: O
                     }),
@@ -198,7 +198,7 @@ function(e, t, n) {
                                 width: k
                             }
                         })
-                    }), h, (0, a.jsx)("div", {
+                    }), A, (0, a.jsx)("div", {
                         className: f.track,
                         children: (0, a.jsx)(I.Tooltip, {
                             color: I.Tooltip.Colors.GREY,
@@ -257,7 +257,7 @@ function(e, t, n) {
             if (e.clientX <= l || e.clientX >= u) return;
             let d = e.clientX - i,
                 _ = s[r] + d / (u - l) * 100;
-            null != (t = this.props.equidistant ? A(_, s) : A(this.unscaleValue(_), a)) && (null == o || o(a[t])), this.setState({
+            null != (t = this.props.equidistant ? h(_, s) : h(this.unscaleValue(_), a)) && (null == o || o(a[t])), this.setState({
                 newClosestIndex: t
             })
         }
@@ -404,7 +404,7 @@ function(e, t, n) {
             }), this.state = {
                 active: !1,
                 focused: !1,
-                ...h(e)
+                ...A(e)
             }
         }
     }

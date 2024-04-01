@@ -8,7 +8,7 @@ function(e, t, n) {
             return C
         },
         useMultiSelect: function() {
-            return h
+            return A
         },
         useSingleSelect: function() {
             return m
@@ -29,12 +29,12 @@ function(e, t, n) {
         T = n("689938"),
         f = n("309399");
     let S = "data-listbox-item-id",
-        A = Object.freeze({
+        h = Object.freeze({
             STANDARD: f.selected,
             BRAND: f.selectedBrand
         });
 
-    function h(e) {
+    function A(e) {
         let [t, n] = r.useState(() => new Set(e));
         return [t, r.useCallback(e => {
             n(t => {
@@ -69,8 +69,8 @@ function(e, t, n) {
             onChange: l,
             className: u,
             listClassName: I,
-            "aria-label": A,
-            multiSelect: h = !1,
+            "aria-label": h,
+            multiSelect: A = !1,
             autoFocus: m = !1,
             maxVisibleItems: p = 5,
             itemToString: R = N,
@@ -130,7 +130,7 @@ function(e, t, n) {
                     return (0, i.jsxs)("div", {
                         ref: n,
                         role: "combobox",
-                        "aria-label": A,
+                        "aria-label": h,
                         "aria-expanded": D,
                         "aria-controls": D ? y : void 0,
                         "aria-owns": y,
@@ -175,7 +175,7 @@ function(e, t, n) {
                                     style: {
                                         maxHeight: 46 * p
                                     },
-                                    "aria-multiselectable": h,
+                                    "aria-multiselectable": A,
                                     id: y,
                                     ref: P,
                                     className: a()(f.list, I, {
@@ -207,17 +207,17 @@ function(e, t, n) {
             value: n,
             children: s,
             disabled: l = !1,
-            selectedColor: d = A.STANDARD,
+            selectedColor: d = h.STANDARD,
             ..._
         } = e, {
             activeDescendant: c,
             selected: E,
             setSelected: I,
             itemToString: T
-        } = r.useContext(O), h = T(n), m = c === h, N = null !== (t = null == _ ? void 0 : _.selected) && void 0 !== t ? t : E.has(n), p = (0, o.useListItem)(h);
+        } = r.useContext(O), A = T(n), m = c === A, N = null !== (t = null == _ ? void 0 : _.selected) && void 0 !== t ? t : E.has(n), p = (0, o.useListItem)(A);
         return (0, i.jsx)(u.Clickable, {
             tag: "li",
-            id: h,
+            id: A,
             onClick: () => l ? null : I(n),
             [S]: n,
             className: a()(f.item, {
@@ -235,7 +235,7 @@ function(e, t, n) {
             })
         })
     }
-    C.Colors = A, C.Label = function(e) {
+    C.Colors = h, C.Label = function(e) {
         let {
             children: t
         } = e;

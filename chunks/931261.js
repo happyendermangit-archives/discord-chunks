@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         canSeeOnboardingHome: function() {
-            return A
+            return h
         },
         useCanSeeOnboardingHome: function() {
             return S
@@ -51,15 +51,15 @@ function(e, t, n) {
             }),
             d = (0, s.useStateFromStores)([o.default], () => o.default.isFullServerPreview(e)),
             S = (0, E.default)(e),
-            A = (0, s.useStateFromStores)([l.default], () => l.default.getMutableGuildChannelsForGuild(e));
+            h = (0, s.useStateFromStores)([l.default], () => l.default.getMutableGuildChannelsForGuild(e));
         if (null == t || __OVERLAY__ || e === I.ME || e === I.FAVORITES) return !1;
         if (d) return f(t);
-        let h = i && (0, a.isGuildOnboardingSettingsAvailable)(e) && t.hasFeature(I.GuildFeatures.GUILD_ONBOARDING) && t.hasFeature(I.GuildFeatures.GUILD_SERVER_GUIDE),
-            m = r().some(r().values(A), e => e.hasFlag(T.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL));
-        return !(!S && !m) && (n && t.hasFeature(I.GuildFeatures.GUILD_ONBOARDING) && t.hasFeature(I.GuildFeatures.GUILD_SERVER_GUIDE) || h) && t.hasFeature(I.GuildFeatures.COMMUNITY)
+        let A = i && (0, a.isGuildOnboardingSettingsAvailable)(e) && t.hasFeature(I.GuildFeatures.GUILD_ONBOARDING) && t.hasFeature(I.GuildFeatures.GUILD_SERVER_GUIDE),
+            m = r().some(r().values(h), e => e.hasFlag(T.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL));
+        return !(!S && !m) && (n && t.hasFeature(I.GuildFeatures.GUILD_ONBOARDING) && t.hasFeature(I.GuildFeatures.GUILD_SERVER_GUIDE) || A) && t.hasFeature(I.GuildFeatures.COMMUNITY)
     }
 
-    function A(e) {
+    function h(e) {
         let t = u.default.getGuild(e),
             {
                 homeSettingsEnabled: n

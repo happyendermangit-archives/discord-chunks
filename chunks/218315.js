@@ -17,9 +17,9 @@ function(e, t, n) {
         T = n("846121"),
         f = n("931261"),
         S = n("460347"),
-        A = n("372897");
+        h = n("372897");
 
-    function h(e, t, n) {
+    function A(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -29,24 +29,24 @@ function(e, t, n) {
     }
     class m extends s.default {
         constructor(...e) {
-            super(...e), h(this, "onboardingCompleteGuilds", new Set), h(this, "actions", {
+            super(...e), A(this, "onboardingCompleteGuilds", new Set), A(this, "actions", {
                 POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen(),
                 GUILD_MEMBER_UPDATE: e => this.handleGuildMemberUpdate(e),
                 GUILD_DELETE: e => this.handleGuildDelete(e),
                 CHANNEL_SELECT: e => this.handleChannelSelect(e),
                 MESSAGE_CREATE: e => this.handleMessageSend(e),
                 THREAD_CREATE: e => this.handleThreadCreate(e)
-            }), h(this, "handlePostConnectionOpen", () => {
+            }), A(this, "handlePostConnectionOpen", () => {
                 let e = d.default.getGuildId();
                 null != e && this._getOrLoadOnboardingMemberActions(e)
-            }), h(this, "handleGuildMemberUpdate", e => {
+            }), A(this, "handleGuildMemberUpdate", e => {
                 let {
                     flags: t,
                     user: s,
                     guildId: a
                 } = e;
                 if (s.id === o.default.getId()) {
-                    if (!this.onboardingCompleteGuilds.has(a) && (0, _.hasFlag)(null != t ? t : 0, A.GuildMemberFlags.COMPLETED_HOME_ACTIONS)) {
+                    if (!this.onboardingCompleteGuilds.has(a) && (0, _.hasFlag)(null != t ? t : 0, h.GuildMemberFlags.COMPLETED_HOME_ACTIONS)) {
                         var l, u;
                         this.onboardingCompleteGuilds.add(a);
                         let e = null !== (u = null === (l = E.default.getNewMemberActions(a)) || void 0 === l ? void 0 : l.length) && void 0 !== u ? u : 0;
@@ -63,12 +63,12 @@ function(e, t, n) {
                         })
                     }
                 }
-            }), h(this, "handleGuildDelete", e => {
+            }), A(this, "handleGuildDelete", e => {
                 let {
                     guild: t
                 } = e;
                 this.onboardingCompleteGuilds.delete(t.id)
-            }), h(this, "handleChannelSelect", async e => {
+            }), A(this, "handleChannelSelect", async e => {
                 let {
                     guildId: t,
                     channelId: n
@@ -79,7 +79,7 @@ function(e, t, n) {
                     completedActions: r
                 } = await this._getOrLoadOnboardingMemberActions(t), s = null == i ? void 0 : i.find(e => e.channelId === n);
                 (null == r ? void 0 : r[n]) !== !0 && null != s && s.actionType === I.NewMemberActionTypes.VIEW && (0, c.completeNewMemberAction)(t, n)
-            }), h(this, "handleMessageSend", e => {
+            }), A(this, "handleMessageSend", e => {
                 var t;
                 let {
                     guildId: n,
@@ -89,20 +89,20 @@ function(e, t, n) {
                 if (null == n || null == i || (null === (t = r.author) || void 0 === t ? void 0 : t.id) !== o.default.getId()) return;
                 let s = l.default.getChannel(i);
                 (null == s ? void 0 : s.isForumPost()) && (null == s ? void 0 : s.parent_id) != null && this._completeChatAction(n, s.parent_id), this._completeChatAction(n, i)
-            }), h(this, "handleThreadCreate", e => {
+            }), A(this, "handleThreadCreate", e => {
                 var t;
                 let {
                     channel: n,
                     isNewlyCreated: i
                 } = e;
                 if (!!i && null != n.parent_id && !!(null === (t = l.default.getChannel(n.parent_id)) || void 0 === t ? void 0 : t.isForumLikeChannel())) n.ownerId === o.default.getId() && this._completeChatAction(n.guild_id, n.parent_id)
-            }), h(this, "_completeChatAction", async (e, t) => {
+            }), A(this, "_completeChatAction", async (e, t) => {
                 let {
                     memberActions: n,
                     completedActions: i
                 } = await this._getOrLoadOnboardingMemberActions(e), r = null == n ? void 0 : n.find(e => e.channelId === t);
                 (null == i ? void 0 : i[t]) !== !0 && null != r && r.actionType === I.NewMemberActionTypes.CHAT && (0, c.completeNewMemberAction)(e, t)
-            }), h(this, "_getOrLoadOnboardingMemberActions", async e => {
+            }), A(this, "_getOrLoadOnboardingMemberActions", async e => {
                 let t = (0, f.canSeeOnboardingHome)(e),
                     n = a.default.isFullServerPreview(e);
                 if (!t && !n) return {};
@@ -113,7 +113,7 @@ function(e, t, n) {
                     memberActions: r,
                     completedActions: s
                 }
-            }), h(this, "_getOrLoadOnboardingHomeSettings", async (e, t) => {
+            }), A(this, "_getOrLoadOnboardingHomeSettings", async (e, t) => {
                 let n = E.default.getNewMemberActions(e),
                     i = E.default.getIsLoading(e);
                 if (!(null == n && !i && (0, S.getIsNewMember)(t))) return n;
@@ -121,13 +121,13 @@ function(e, t, n) {
                     let t = await (0, c.fetchGuildHomeSettings)(e);
                     return null == t ? void 0 : t.newMemberActions
                 }
-            }), h(this, "_getOrLoadMemberActions", async (e, t) => {
+            }), A(this, "_getOrLoadMemberActions", async (e, t) => {
                 var n;
                 let {
                     completedActions: i,
                     loading: r
                 } = T.default.getState(e);
-                return null == i && !r && (0, _.hasFlag)(null !== (n = t.flags) && void 0 !== n ? n : 0, A.GuildMemberFlags.STARTED_HOME_ACTIONS) ? await (0, c.fetchNewMemberActions)(e) : i
+                return null == i && !r && (0, _.hasFlag)(null !== (n = t.flags) && void 0 !== n ? n : 0, h.GuildMemberFlags.STARTED_HOME_ACTIONS) ? await (0, c.fetchNewMemberActions)(e) : i
             })
         }
     }

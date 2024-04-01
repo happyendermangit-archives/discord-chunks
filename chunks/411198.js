@@ -34,21 +34,21 @@ function(e, t, n) {
         l = n("981631");
 
     function u(e, t) {
-        var n, i, o, u, d, _, c, E, I, T, f, S, A;
-        let h = null != e.joined_at ? new Date(e.joined_at) : null == t ? void 0 : t.joinedAt,
+        var n, i, o, u, d, _, c, E, I, T, f, S, h;
+        let A = null != e.joined_at ? new Date(e.joined_at) : null == t ? void 0 : t.joinedAt,
             m = null !== (n = e.premium_subscription_count) && void 0 !== n ? n : 0;
         if (null == e.properties) {
             r()(null != t, "If guild.properties is null, existingGuild must be passed in");
             let e = t.joinedAt instanceof Date ? t.joinedAt.getTime() : t.joinedAt,
-                n = h instanceof Date ? h.getTime() : h;
+                n = A instanceof Date ? A.getTime() : A;
             return m === t.premiumSubscriberCount && e === n ? t : t.merge({
-                joinedAt: h,
+                joinedAt: A,
                 premiumSubscriberCount: m
             })
         }
         let N = {
             id: e.id,
-            joinedAt: h,
+            joinedAt: A,
             premiumSubscriberCount: m,
             name: null !== (i = e.properties.name) && void 0 !== i ? i : "",
             description: e.properties.description,
@@ -78,7 +78,7 @@ function(e, t, n) {
             maxStageVideoChannelUsers: null !== (T = e.properties.max_stage_video_channel_users) && void 0 !== T ? T : -1,
             maxVideoChannelUsers: null !== (f = e.properties.max_video_channel_users) && void 0 !== f ? f : -1,
             maxMembers: null !== (S = e.properties.max_members) && void 0 !== S ? S : -1,
-            nsfwLevel: null !== (A = e.properties.nsfw_level) && void 0 !== A ? A : l.GuildNSFWContentLevel.DEFAULT,
+            nsfwLevel: null !== (h = e.properties.nsfw_level) && void 0 !== h ? h : l.GuildNSFWContentLevel.DEFAULT,
             hubType: e.properties.hub_type,
             latestOnboardingQuestionId: e.properties.latest_onboarding_question_id
         };
@@ -95,7 +95,7 @@ function(e, t, n) {
     function _(e, t) {
         var n, i, r, s, a, o, u, d, _, c, E, T, f;
         let S = null !== (n = e.properties) && void 0 !== n ? n : I(t),
-            A = {
+            h = {
                 id: e.id,
                 name: null !== (i = S.name) && void 0 !== i ? i : "",
                 description: S.description,
@@ -129,7 +129,7 @@ function(e, t, n) {
                 hubType: S.hub_type,
                 latestOnboardingQuestionId: S.latest_onboarding_question_id
             };
-        return t.merge(A)
+        return t.merge(h)
     }
 
     function c(e, t) {

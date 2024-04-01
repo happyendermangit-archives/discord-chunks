@@ -24,7 +24,7 @@ function(e, t, n) {
             ...E
         } = e, I = t ? l.CenterControlButton : l.default, T = n.isBroadcastChannel(), f = (0, o.useIsBroadcastingInChannel)(n.id), {
             Component: S,
-            events: A
+            events: h
         } = (0, r.useEndCallLottie)();
         return (0, i.jsx)(I, {
             ...E,
@@ -33,10 +33,10 @@ function(e, t, n) {
             },
             iconComponent: S,
             onMouseEnter: e => {
-                null == _ || _(e), A.onMouseEnter()
+                null == _ || _(e), h.onMouseEnter()
             },
             onMouseLeave: e => {
-                null == c || c(e), A.onMouseLeave()
+                null == c || c(e), h.onMouseLeave()
             },
             label: f ? u.default.Messages.STOP_BROADCASTING : T ? u.default.Messages.LEAVE_BROADCAST : u.default.Messages.DISCONNECT_SELF
         })

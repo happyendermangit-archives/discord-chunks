@@ -23,8 +23,8 @@ function(e, t, n) {
         T = n("524444"),
         f = n("981631"),
         S = n("185923"),
-        A = n("474936"),
-        h = n("924575");
+        h = n("474936"),
+        A = n("924575");
     let m = e => {
             var t;
             let {
@@ -57,8 +57,8 @@ function(e, t, n) {
                         var n;
                         E(!0), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t)
                     },
-                    className: a()(h.emojiContainer, {
-                        [h.emojiContainerClickable]: o
+                    className: a()(A.emojiContainer, {
+                        [A.emojiContainerClickable]: o
                     }),
                     children: f(t)
                 })
@@ -85,7 +85,7 @@ function(e, t, n) {
                 isInteracting: n,
                 tooltipPosition: s = T.EXPRESSION_TOOLTIP_PROPS.position,
                 enableClick: d = !0
-            } = e, [A, m] = r.useState(String(Date.now())), [N, p] = r.useState(!1), [R, C] = r.useState(!1), {
+            } = e, [h, m] = r.useState(String(Date.now())), [N, p] = r.useState(!1), [R, C] = r.useState(!1), {
                 enabled: g
             } = c.NitroBadgeOnEmojiHoverExperiment.useExperiment({
                 location: "MessageCustomEmoji"
@@ -128,8 +128,8 @@ function(e, t, n) {
                         }), p(!1))
                     },
                     tag: "span",
-                    className: a()(h.emojiContainer, {
-                        [h.emojiContainerClickable]: d
+                    className: a()(A.emojiContainer, {
+                        [A.emojiContainerClickable]: d
                     }),
                     children: L(t)
                 })
@@ -151,7 +151,7 @@ function(e, t, n) {
                     refreshPositionKey: () => m(String(Date.now())),
                     nonce: D
                 }),
-                positionKey: A,
+                positionKey: h,
                 children: v
             }) : v()
         },
@@ -162,7 +162,7 @@ function(e, t, n) {
                 nonce: i
             } = e;
             d.default.trackWithMetadata(f.AnalyticEvents.EXPRESSION_TOOLTIP_VIEWED, {
-                type: A.PremiumUpsellTypes.EMOJI_IN_MESSAGE_HOVER,
+                type: h.PremiumUpsellTypes.EMOJI_IN_MESSAGE_HOVER,
                 expression_id: t.emojiId,
                 expression_name: t.name,
                 is_animated: t.animated,

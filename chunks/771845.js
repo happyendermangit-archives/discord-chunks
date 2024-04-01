@@ -16,9 +16,9 @@ function(e, t, n) {
         T = n("430824"),
         f = n("412788"),
         S = n("9156"),
-        A = n("594174");
+        h = n("594174");
 
-    function h(e, t, n) {
+    function A(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -145,7 +145,7 @@ function(e, t, n) {
             guildId: t,
             joinedAt: n,
             user: i
-        } = e, r = A.default.getCurrentUser(), s = T.default.getGuild(t);
+        } = e, r = h.default.getCurrentUser(), s = T.default.getGuild(t);
         if ((null == r ? void 0 : r.id) !== i.id || null == s) return !1;
         let a = "string" == typeof n ? new Date(n) : n;
         return a !== s.joinedAt && null != a && p()
@@ -192,12 +192,12 @@ function(e, t, n) {
                 GUILD_FOLDER_CREATE_LOCAL: g,
                 GUILD_FOLDER_EDIT_LOCAL: L,
                 GUILD_FOLDER_DELETE_LOCAL: D
-            }), h(this, "loadCache", () => {
+            }), A(this, "loadCache", () => {
                 let e = this.readSnapshot(P.LATEST_SNAPSHOT_VERSION),
                     t = null == e ? void 0 : e.tree;
                 null != t && (m = new l.GuildsTree).loadSnapshot(t)
             })
         }
     }
-    h(P, "displayName", "SortedGuildStore"), h(P, "LATEST_SNAPSHOT_VERSION", 1), t.default = new P
+    A(P, "displayName", "SortedGuildStore"), A(P, "LATEST_SNAPSHOT_VERSION", 1), t.default = new P
 }

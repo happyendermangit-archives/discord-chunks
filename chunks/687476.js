@@ -12,8 +12,8 @@ function(e, t, n) {
     let T = new Set,
         f = new Map,
         S = new Map,
-        A = new Map,
         h = new Map,
+        A = new Map,
         m = null;
 
     function N(e) {
@@ -23,7 +23,7 @@ function(e, t, n) {
         let i = new Set,
             r = new Set,
             s = new Set;
-        if (h.set(e, n.isOwner(t)), n.hasFeature(I.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED)) {
+        if (A.set(e, n.isOwner(t)), n.hasFeature(I.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED)) {
             var a, l;
             let u = d.default.getMember(e, t.id),
                 c = new Set(null !== (a = null == u ? void 0 : u.roles) && void 0 !== a ? a : []),
@@ -31,14 +31,14 @@ function(e, t, n) {
             for (let t in T) {
                 ;
                 let n = T[t];
-                if ((0, E.isSubscriptionRole)(n) && (i.add(t), (0, E.isSubscriptionRoleAvailableForPurchase)(n) && (r.add(t), c.has(t) && s.add(t))), c.has(t) && (l = n, o.has(l.permissions, I.Permissions.ADMINISTRATOR))) h.set(e, !0)
+                if ((0, E.isSubscriptionRole)(n) && (i.add(t), (0, E.isSubscriptionRoleAvailableForPurchase)(n) && (r.add(t), c.has(t) && s.add(t))), c.has(t) && (l = n, o.has(l.permissions, I.Permissions.ADMINISTRATOR))) A.set(e, !0)
             }
         }
-        return f.set(e, i), A.set(e, s), S.set(e, r), !0
+        return f.set(e, i), h.set(e, s), S.set(e, r), !0
     }
 
     function O() {
-        f.clear(), A.clear(), S.clear(), h.clear(), m = null
+        f.clear(), h.clear(), S.clear(), A.clear(), m = null
     }
 
     function p(e) {
@@ -93,11 +93,11 @@ function(e, t, n) {
         }
         getUserSubscriptionRoles(e) {
             var t;
-            return this.buildRoles(e), null !== (t = A.get(e)) && void 0 !== t ? t : T
+            return this.buildRoles(e), null !== (t = h.get(e)) && void 0 !== t ? t : T
         }
         getUserIsAdmin(e) {
             var t;
-            return this.buildRoles(e), null !== (t = h.get(e)) && void 0 !== t && t
+            return this.buildRoles(e), null !== (t = A.get(e)) && void 0 !== t && t
         }
     }
     a = "SubscriptionRoleStore", (s = "displayName") in(r = C) ? Object.defineProperty(r, s, {

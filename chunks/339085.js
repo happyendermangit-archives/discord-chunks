@@ -15,8 +15,8 @@ function(e, t, n) {
         T = n("188742"),
         f = n("973542"),
         S = n("889564"),
-        A = n("687476"),
-        h = n("978519"),
+        h = n("687476"),
+        A = n("978519"),
         m = n("706454"),
         N = n("581883"),
         O = n("271383"),
@@ -305,7 +305,7 @@ function(e, t, n) {
         if (es(e), en.clear(e), null == t) return;
         let n = g.default.getCurrentUser();
         if (null == n) return;
-        let i = (0, h.canUseRoleSubscriptionIAP)(e);
+        let i = (0, A.canUseRoleSubscriptionIAP)(e);
         Q[e] = new j(e, n.id, t, i)
     }
 
@@ -347,7 +347,7 @@ function(e, t, n) {
     }
     class e_ extends(i = u.default.PersistedStore) {
         initialize(e) {
-            this.waitFor(c.default, p.default, O.default, R.default, m.default, A.default, w.default, g.default), null != e && (Y = e), this.syncWith([N.default], el)
+            this.waitFor(c.default, p.default, O.default, R.default, m.default, h.default, w.default, g.default), null != e && (Y = e), this.syncWith([N.default], el)
         }
         getState() {
             return Y

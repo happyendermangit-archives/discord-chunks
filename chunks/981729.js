@@ -26,8 +26,8 @@ function(e, t, n) {
         T = n("846519"),
         f = n("186325"),
         S = n("425654"),
-        A = n("607070"),
-        h = n("153850"),
+        h = n("607070"),
+        A = n("153850"),
         m = n("904478");
 
     function N(e, t, n) {
@@ -71,7 +71,7 @@ function(e, t, n) {
                 disableTooltipPointerEvents: I = !1,
                 allowOverflow: T = !1
             } = e, f = "".concat("string" == typeof s ? s : "", ":").concat(i);
-            return (0, a.jsx)(h.AppReferencePositionLayer, {
+            return (0, a.jsx)(A.AppReferencePositionLayer, {
                 disablePointerEvents: I,
                 reference: t,
                 position: i,
@@ -253,7 +253,7 @@ function(e, t, n) {
             }), N(this, "handleMouseLeave", () => {
                 !((E.isMobile || E.isTablet) && !0 === this.props.clickableOnMobile) && this.hide()
             }), N(this, "handleFocus", () => {
-                A.default.keyboardModeEnabled && this.show()
+                h.default.keyboardModeEnabled && this.show()
             }), N(this, "handleBlur", () => {
                 this.hide()
             }), N(this, "handleClick", () => {

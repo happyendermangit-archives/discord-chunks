@@ -30,7 +30,7 @@ function(e, t, n) {
             return m
         },
         GIF_PICKER_TAB_PANEL_ID: function() {
-            return h
+            return A
         },
         GRID_NAVIGATOR_ID: function() {
             return E
@@ -39,7 +39,7 @@ function(e, t, n) {
             return I
         },
         SOUNDBOARD_PICKER_TAB_ID: function() {
-            return A
+            return h
         },
         SOUNDBOARD_PICKER_TAB_PANEL_ID: function() {
             return S
@@ -52,8 +52,8 @@ function(e, t, n) {
     let T = "emoji-picker-tab-panel",
         f = "emoji-picker-tab",
         S = "soundboard-picker-tab-panel",
-        A = "soundboard-picker-tab",
-        h = "gif-picker-tab-panel",
+        h = "soundboard-picker-tab",
+        A = "gif-picker-tab-panel",
         m = "gif-picker-tab",
         N = {
             reaction: 32,

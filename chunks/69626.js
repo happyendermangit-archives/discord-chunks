@@ -23,8 +23,8 @@ function(e, t, n) {
         T = n("944486"),
         f = n("797053"),
         S = n("585483"),
-        A = n("981631"),
-        h = n("689079"),
+        h = n("981631"),
+        A = n("689079"),
         m = n("665692"),
         N = n("689938"),
         O = n("98834");
@@ -40,7 +40,7 @@ function(e, t, n) {
             } = l.getCachedCommand(i, n);
             if (null != s && s.name === t) {
                 var d, _;
-                S.ComponentDispatch.dispatch(A.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
+                S.ComponentDispatch.dispatch(h.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
                     channelId: e
                 });
                 let t = null != a ? {
@@ -69,7 +69,7 @@ function(e, t, n) {
             onConfirm: () => s(),
             confirmButtonColor: a.Button.Colors.BRAND,
             onCloseCallback: () => {
-                S.ComponentDispatch.dispatch(A.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
+                S.ComponentDispatch.dispatch(h.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
                     channelId: e
                 })
             },
@@ -94,10 +94,10 @@ function(e, t, n) {
             hasSendMessagePerm: N,
             hasUseAppCommandsPerm: O
         } = (0, s.useStateFromStoresObject)([I.default], () => {
-            let e = I.default.can(A.Permissions.SEND_MESSAGES, S);
+            let e = I.default.can(h.Permissions.SEND_MESSAGES, S);
             return {
                 hasSendMessagePerm: e,
-                hasUseAppCommandsPerm: I.default.can(A.Permissions.USE_APPLICATION_COMMANDS, S)
+                hasUseAppCommandsPerm: I.default.can(h.Permissions.USE_APPLICATION_COMMANDS, S)
             }
         }), {
             command: R
@@ -105,7 +105,7 @@ function(e, t, n) {
             if (null == R || null == S || R.name !== n.commandName || C) return !1;
             let e = S.isPrivate();
             if ((0, d.computeIsReadOnlyThread)(S) || !e && !N) return !1;
-            let t = (null == R ? void 0 : R.applicationId) === h.BuiltInSectionId.BUILT_IN;
+            let t = (null == R ? void 0 : R.applicationId) === A.BuiltInSectionId.BUILT_IN;
             return !!e || !!t || !!O || !1
         }, [S, R, N, O, n.commandName, C]), L = r.useCallback(e => {
             null == e || e.stopPropagation(), null != S && null != n.commandName && null != n.commandKey && p(S.id, n.commandName, n.commandKey, u.ApplicationCommandTriggerLocations.MENTION)

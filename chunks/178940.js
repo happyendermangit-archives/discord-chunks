@@ -15,8 +15,8 @@ function(e, t, n) {
         T = n("692547"),
         f = n("84735"),
         S = n("263704"),
-        A = n("981631"),
-        h = n("532721");
+        h = n("981631"),
+        A = n("532721");
 
     function m(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
@@ -27,13 +27,13 @@ function(e, t, n) {
         }) : e[t] = n, e
     }(a = i || (i = {})).DEFAULT = "default", a.INVERTED = "inverted", a.GHOST = "ghost", a.ROW = "row", (o = r || (r = {})).TOP = "top", o.CENTER = "center";
     let N = {
-            BOX: h.box,
-            ROUND: h.round,
-            SMALL_BOX: h.smallBox
+            BOX: A.box,
+            ROUND: A.round,
+            SMALL_BOX: A.smallBox
         },
         O = {
-            top: h.alignTop,
-            center: h.alignCenter
+            top: A.alignTop,
+            center: A.alignCenter
         };
     class p extends(s = u.PureComponent) {
         getInputMode() {
@@ -100,23 +100,23 @@ function(e, t, n) {
                 type: I,
                 onClick: T
             } = this.props, m = null != o ? (0, l.jsx)("div", {
-                className: _()(h.label, e ? h.labelDisabled : h.labelClickable, d ? h.labelReversed : h.labelForward),
+                className: _()(A.label, e ? A.labelDisabled : A.labelClickable, d ? A.labelReversed : A.labelForward),
                 style: {
                     lineHeight: "".concat(u, "px")
                 },
                 children: o
-            }) : null, N = this.props.disabled ? h.inputDisabled : this.props.readOnly ? h.inputReadonly : h.inputDefault;
+            }) : null, N = this.props.disabled ? A.inputDisabled : this.props.readOnly ? A.inputReadonly : A.inputDefault;
             return (0, l.jsxs)(E ? "span" : "label", {
-                className: _()(e ? h.checkboxWrapperDisabled : h.checkboxWrapper, O[r], s, {
-                    [h.row]: "row" === I,
-                    [h.checked]: n
+                className: _()(e ? A.checkboxWrapperDisabled : A.checkboxWrapper, O[r], s, {
+                    [A.row]: "row" === I,
+                    [A.checked]: n
                 }),
                 children: [d ? m : null, !E && (0, l.jsx)(f.FocusRing, {
                     children: (0, l.jsx)("input", {
                         className: _()(a, N),
                         type: "checkbox",
                         onClick: T,
-                        onChange: e || t ? A.NOOP : this.handleChange,
+                        onChange: e || t ? h.NOOP : this.handleChange,
                         checked: n,
                         style: {
                             width: u,
@@ -124,8 +124,8 @@ function(e, t, n) {
                         }
                     })
                 }), (0, l.jsx)("div", {
-                    className: _()(h.checkbox, i, {
-                        [h.checked]: n
+                    className: _()(A.checkbox, i, {
+                        [A.checked]: n
                     }),
                     style: {
                         width: u,
@@ -161,7 +161,7 @@ function(e, t, n) {
         color: T.default.unsafe_rawColors.BRAND_500.css,
         shape: N.BOX,
         align: "center",
-        onChange: A.NOOP,
+        onChange: h.NOOP,
         reverse: !1
     })
 }

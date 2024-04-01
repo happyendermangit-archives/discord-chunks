@@ -43,8 +43,8 @@ function(e, t, n) {
         T = n("571178"),
         f = n("22514"),
         S = n("112686");
-    let A = n("787691"),
-        h = n("199834"),
+    let h = n("787691"),
+        A = n("199834"),
         m = n("746491"),
         N = n("399636"),
         O = n("280067"),
@@ -58,13 +58,13 @@ function(e, t, n) {
             name: l.default.Messages.PACKAGE_ITEM_1_NAME,
             receivedCopy: l.default.Messages.PACKAGES_OPEN_PACKAGE_ITEM_OPENED,
             image: u,
-            sound: A
+            sound: h
         },
         "1214340999644446721": {
             name: l.default.Messages.PACKAGE_ITEM_2_NAME,
             receivedCopy: l.default.Messages.PACKAGES_OPEN_PACKAGE_ITEM_OPENED,
             image: d,
-            sound: h
+            sound: A
         },
         "1214340999644446722": {
             name: l.default.Messages.PACKAGE_ITEM_3_NAME,

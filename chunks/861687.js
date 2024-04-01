@@ -19,8 +19,8 @@ function(e, t, n) {
         T = n("846027"),
         f = n("304680"),
         S = n("710845"),
-        A = n("811660"),
-        h = n("42352"),
+        h = n("811660"),
+        A = n("42352"),
         m = n("227196"),
         N = n("926951"),
         O = n("868616"),
@@ -300,7 +300,7 @@ function(e, t, n) {
                         ...e.getNetworkStats(),
                         ...e.getCodecUsageStats("sender", this.userId),
                         ...this._soundshareStats.getStats(),
-                        device_performance_class: (0, A.getMediaPerformanceClass)()
+                        device_performance_class: (0, h.getMediaPerformanceClass)()
                     })
                 }), e.getInboundParticipants().forEach(t => {
                     var n;
@@ -363,7 +363,7 @@ function(e, t, n) {
                     channel_count: this.channelIds.size,
                     input_device: this.getInputDeviceName(),
                     output_device: this.getOutputDeviceName(),
-                    device_performance_class: (0, A.getMediaPerformanceClass)(),
+                    device_performance_class: (0, h.getMediaPerformanceClass)(),
                     num_fast_udp_reconnects: null != this._connection ? null === (u = this._connection) || void 0 === u ? void 0 : u.getNumFastUdpReconnects() : null,
                     parent_media_session_id: this.parentMediaSessionId
                 });
@@ -738,7 +738,7 @@ function(e, t, n) {
         }
         async _handleMediaSessionId(e) {
             this._mediaSessionId = e, this.logger.info("Setting media-session-id: ".concat(e, " for rtc-connection-id: ").concat(this.getRTCConnectionId()));
-            let t = await (0, h.default)();
+            let t = await (0, A.default)();
             G.default.track(Q.AnalyticEvents.MEDIA_SESSION_JOINED, {
                 ...this._getAnalyticsProperties(),
                 media_session_id: this.getMediaSessionId(),

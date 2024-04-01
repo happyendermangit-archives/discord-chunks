@@ -46,8 +46,8 @@ function(e, t, n) {
                 n = s.default.isMobileOnline(e);
             return t === T.StatusTypes.ONLINE && n ? "".concat(t, "-mobile") : t === T.StatusTypes.ONLINE ? "".concat(t, "-desktop") : t
         },
-        A = e => "string" == typeof e || null == e ? e : Object.keys(I.ActivityTypes)[Object.values(I.ActivityTypes).indexOf(e)],
-        h = e => {
+        h = e => "string" == typeof e || null == e ? e : Object.keys(I.ActivityTypes)[Object.values(I.ActivityTypes).indexOf(e)],
+        A = e => {
             var t, n;
             let {
                 layout: i,
@@ -110,7 +110,7 @@ function(e, t, n) {
             u.default.track(I.AnalyticEvents.USER_PROFILE_ACTION, {
                 ...(0, i.collectGuildAnalyticsMetadata)(n),
                 ...(0, i.collectChannelAnalyticsMetadataFromId)(r),
-                ...h({
+                ...A({
                     layout: l,
                     userId: t,
                     guildId: n
@@ -137,14 +137,14 @@ function(e, t, n) {
             u.default.track(I.AnalyticEvents.USER_PROFILE_ACTIVITY_JOINED, {
                 ...(0, i.collectGuildAnalyticsMetadata)(n),
                 ...(0, i.collectChannelAnalyticsMetadataFromId)(r),
-                ...h({
+                ...A({
                     layout: a,
                     userId: t,
                     guildId: n
                 }),
                 ...m(t),
                 location_stack: s,
-                activity_type: A(o),
+                activity_type: h(o),
                 application_id: l,
                 voice_channel_id: d
             })
@@ -161,7 +161,7 @@ function(e, t, n) {
             u.default.track(I.AnalyticEvents.USER_PROFILE_BADGE_PRESSED, {
                 ...(0, i.collectGuildAnalyticsMetadata)(n),
                 ...(0, i.collectChannelAnalyticsMetadataFromId)(r),
-                ...h({
+                ...A({
                     layout: a,
                     userId: t,
                     guildId: n

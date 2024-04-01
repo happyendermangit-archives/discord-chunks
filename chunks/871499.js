@@ -35,8 +35,8 @@ function(e, t, n) {
             iconComponent: T,
             themeable: f = !1,
             disabled: S = !1,
-            isActive: A = !1,
-            tooltipPosition: h = "top",
+            isActive: h = !1,
+            tooltipPosition: A = "top",
             shouldShowTooltip: m = !0,
             forceTooltipOpen: N = !1,
             buttonRef: O,
@@ -45,7 +45,7 @@ function(e, t, n) {
         } = e;
         return (0, i.jsx)(d.default, {
             children: (0, i.jsx)(a.Tooltip, {
-                position: h,
+                position: A,
                 text: t,
                 "aria-label": R,
                 shouldShow: m,
@@ -54,7 +54,7 @@ function(e, t, n) {
                     let {
                         onClick: t,
                         onContextMenu: d,
-                        onMouseEnter: h,
+                        onMouseEnter: A,
                         onMouseLeave: m,
                         ...N
                     } = e;
@@ -68,7 +68,7 @@ function(e, t, n) {
                             null == t || t(), null == n || n(e)
                         },
                         onMouseEnter: e => {
-                            null == h || h(), null == o || o(e)
+                            null == A || A(), null == o || o(e)
                         },
                         onMouseLeave: e => {
                             null == m || m(), null == l || l(e)
@@ -77,7 +77,7 @@ function(e, t, n) {
                             null == d || d(), null == u || u(e)
                         },
                         onFocus: e => {
-                            null == h || h(), null == o || o(e)
+                            null == A || A(), null == o || o(e)
                         },
                         onBlur: e => {
                             null == m || m(), null == l || l(e)
@@ -85,7 +85,7 @@ function(e, t, n) {
                         disabled: S,
                         innerClassName: E.lineHeightReset,
                         className: s()({
-                            [E.active]: A
+                            [E.active]: h
                         }, _),
                         wrapperClassName: c,
                         buttonRef: O,
@@ -95,7 +95,7 @@ function(e, t, n) {
                         children: (0, i.jsx)(T, {
                             className: s()(E.controlIcon, I, {
                                 [E.themeable]: f,
-                                [E.active]: A
+                                [E.active]: h
                             }),
                             color: "currentColor"
                         })
@@ -121,10 +121,10 @@ function(e, t, n) {
             className: r,
             iconClassName: f,
             onPopoutClick: S,
-            popoutOpen: A = !1,
-            ...h
+            popoutOpen: h = !1,
+            ...A
         } = e, m = (0, _.default)(t, n), N = (0, o.default)("(max-width: 456px)"), O = (0, i.jsx)(I, {
-            ...h,
+            ...A,
             grow: !1,
             onContextMenu: S,
             iconClassName: s()(f, E.centerIcon),
@@ -143,11 +143,11 @@ function(e, t, n) {
                     onClick: S,
                     onContextMenu: S,
                     className: s()(E.contextMenuNub, T[m], {
-                        [E.active]: A
+                        [E.active]: h
                     }),
                     children: (0, i.jsx)(l.default, {
                         className: s()(E.contextMenuCaret, {
-                            [E.open]: A
+                            [E.open]: h
                         })
                     })
                 })

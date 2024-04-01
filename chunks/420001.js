@@ -34,7 +34,7 @@ function(e, t, n) {
         }
         return null
     }
-    let A = {
+    let h = {
         ...T.default,
         sentinel: void 0,
         focusMode: I.FocusMode.MANUAL,
@@ -142,5 +142,5 @@ function(e, t, n) {
             }
         }
     };
-    t.default = A
+    t.default = h
 }

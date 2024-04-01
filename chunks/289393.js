@@ -24,11 +24,11 @@ function(e, t, n) {
         return "application:".concat(e)
     }
 
-    function A(e) {
+    function h(e) {
         return "plan:".concat(e)
     }(s = i || (i = {}))[s.NOT_FETCHED = 0] = "NOT_FETCHED", s[s.FETCHING = 1] = "FETCHING", s[s.FETCHED = 2] = "FETCHED";
-    let h = new c.SecondaryIndexMap(e => [T(e.guild_id), ...e.subscription_listings_ids.map(f)], e => e.id),
-        m = new c.SecondaryIndexMap(e => [S(e.application_id), A(e.subscription_plans[0].id)], e => e.id),
+    let A = new c.SecondaryIndexMap(e => [T(e.guild_id), ...e.subscription_listings_ids.map(f)], e => e.id),
+        m = new c.SecondaryIndexMap(e => [S(e.application_id), h(e.subscription_plans[0].id)], e => e.id),
         N = {},
         O = new Set,
         p = {},
@@ -38,12 +38,12 @@ function(e, t, n) {
         L = new Map;
 
     function D(e) {
-        return h.values(T(e))
+        return A.values(T(e))
     }
 
     function v(e) {
         var t;
-        for (let n of (h.set(e.id, e), L.set(e.guild_id, e.application_id), null !== (t = e.subscription_listings) && void 0 !== t ? t : [])) M(n)
+        for (let n of (A.set(e.id, e), L.set(e.guild_id, e.application_id), null !== (t = e.subscription_listings) && void 0 !== t ? t : [])) M(n)
     }
 
     function M(e) {
@@ -59,13 +59,13 @@ function(e, t, n) {
             return O.has(e)
         }
         getSubscriptionGroupListing(e) {
-            return h.get(e)
+            return A.get(e)
         }
         getSubscriptionGroupListingsForGuild(e) {
             return D(e)
         }
         getSubscriptionGroupListingForSubscriptionListing(e) {
-            let t = h.values(f(e));
+            let t = A.values(f(e));
             return d()(t.length <= 1, "Found multiple group listings for listing"), t[0]
         }
         getSubscriptionListing(e) {
@@ -77,7 +77,7 @@ function(e, t, n) {
             return null != n ? m.values(S(n)) : y
         }
         getSubscriptionListingForPlan(e) {
-            let t = m.values(A(e));
+            let t = m.values(h(e));
             return d()(t.length <= 1, "Found multiple listings for plan"), t[0]
         }
         getSubscriptionSettings(e) {
@@ -104,7 +104,7 @@ function(e, t, n) {
         writable: !0
     }) : a[o] = l, t.default = new P(E.default, {
         CONNECTION_OPEN: function() {
-            h.clear(), m.clear(), N = {}, O.clear(), p = {}, R = {}, C = {}, g = {}, L.clear()
+            A.clear(), m.clear(), N = {}, O.clear(), p = {}, R = {}, C = {}, g = {}, L.clear()
         },
         GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTIONS_SETTINGS: function(e) {
             let {
@@ -117,7 +117,7 @@ function(e, t, n) {
                 guildId: t
             } = e;
             for (let e of (N[t] = 1, D(t)))
-                for (let t of (h.delete(e.id), e.subscription_listings_ids)) m.delete(t)
+                for (let t of (A.delete(e.id), e.subscription_listings_ids)) m.delete(t)
         },
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS: function(e) {
             let {
@@ -145,7 +145,7 @@ function(e, t, n) {
             let {
                 groupListingId: t
             } = e;
-            h.delete(t)
+            A.delete(t)
         },
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN: function(e) {
             let {

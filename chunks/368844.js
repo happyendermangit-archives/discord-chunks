@@ -47,7 +47,7 @@ function(e, t, n) {
         return null != n && "#ffffff" === n.toLowerCase() || t ? void 0 : n
     }
 
-    function A(e) {
+    function h(e) {
         if (null == e) return !1;
         let {
             filename: t,
@@ -57,12 +57,12 @@ function(e, t, n) {
         return (0, a.isImageFile)(t) && null != n && n > 0 && null != i && i > 0
     }
 
-    function h(e) {
+    function A(e) {
         return null != e && null != e && (0, a.isVideoFile)(e.filename) && null != e.proxy_url
     }
 
     function m(e) {
-        return A(e) || h(e)
+        return h(e) || A(e)
     }(r = i || (i = {})).EMBED = "embed", r.ATTACHMENT = "attachment";
 
     function N(e) {
@@ -172,7 +172,7 @@ function(e, t, n) {
         let i = u.default.getChannel(t);
         if (null == i) return !1;
         let r = d.default.getMessage(i.id, I.default.castChannelIdAsMessageId(i.id));
-        return null != r && e.length > 0 && null != e.find(e => e.isImage || e.isVideo) && i.isForumPost() && i.ownerId === (null === (n = _.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && 0 === o.default.getCount(i.id) && (0 === r.attachments.length || null == r.attachments.find(e => A(e) || h(e)))
+        return null != r && e.length > 0 && null != e.find(e => e.isImage || e.isVideo) && i.isForumPost() && i.ownerId === (null === (n = _.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && 0 === o.default.getCount(i.id) && (0 === r.attachments.length || null == r.attachments.find(e => h(e) || A(e)))
     }
 
     function D(e) {

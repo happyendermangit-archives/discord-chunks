@@ -33,11 +33,11 @@ function(e, t, n) {
         return e + t
     }
 
-    function A(e, t) {
+    function h(e, t) {
         return t.map(t => e + t)
     }
 
-    function h(e) {
+    function A(e) {
         return e.split("-")[1]
     }(a = i || (i = {}))[a.FAILED = 0] = "FAILED", a[a.UNFETCHED = 1] = "UNFETCHED", a[a.PENDING = 2] = "PENDING", a[a.SUCCEEDED = 3] = "SUCCEEDED", a[a.FAILED_NO_RETRY = 4] = "FAILED_NO_RETRY";
 
@@ -102,8 +102,8 @@ function(e, t, n) {
         }
     }
     async function g(e, t) {
-        let n = A(e, t),
-            i = n.filter(e => f[e] <= 1).map(h);
+        let n = h(e, t),
+            i = n.filter(e => f[e] <= 1).map(A);
         if (0 === i.length) return [];
         m(n, 2);
         try {
@@ -122,9 +122,9 @@ function(e, t, n) {
                 } = e;
                 return s.push(t)
             });
-            let a = A(e, s),
+            let a = h(e, s),
                 o = i.filter(e => !s.includes(e)),
-                l = A(e, o);
+                l = h(e, o);
             return m(a, 3), m(l, 0), r
         } catch (e) {
             m(n, 0)

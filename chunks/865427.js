@@ -49,8 +49,8 @@ function(e, t, n) {
     }
 
     function E(e) {
-        if (h(e)) return Promise.resolve(function(e) {
-            let t = e.match(A);
+        if (A(e)) return Promise.resolve(function(e) {
+            let t = e.match(h);
             if (null == t || 2 !== t.length) return null;
             let n = (0, a.getNativePlatform)(),
                 i = t[1];
@@ -92,16 +92,16 @@ function(e, t, n) {
     function S(e) {
         return null != e && f.test(e)
     }
-    let A = RegExp("^dev://branch/([\\w-./]+)$", "i");
+    let h = RegExp("^dev://branch/([\\w-./]+)$", "i");
 
-    function h(e) {
-        return null != e && A.test(e)
+    function A(e) {
+        return null != e && h.test(e)
     }
     let m = new Set(["canary.discord.com", "ptb.discord.com", "discord.com", "canary.discordapp.com", "ptb.discordapp.com", "discordapp.com"]),
         N = new Set(["/__development/link", "/__development/link/"]);
 
     function O(e) {
-        if (h(e)) return {
+        if (A(e)) return {
             payload: null,
             url: e
         };

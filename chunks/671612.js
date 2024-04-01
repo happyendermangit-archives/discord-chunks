@@ -16,72 +16,72 @@ function(e, t, n) {
         T = n("747071"),
         f = n("964297"),
         S = n("632184"),
-        A = n("50593");
+        h = n("50593");
     t.default = function(e) {
         let {
             soundId: t,
             jumbo: n = !1
         } = e, {
             currentPreviewRef: s
-        } = r.useContext(c.default), h = (0, o.useStateFromStores)([E.default], () => E.default.getSoundById(t)), m = (null == h ? void 0 : h.emojiId) != null || (null == h ? void 0 : h.emojiName) != null, [N, O] = r.useState(!1), p = (0, d.useSoundmojiExperiment)("soundmoji_chat_mention"), R = r.useCallback(() => {
+        } = r.useContext(c.default), A = (0, o.useStateFromStores)([E.default], () => E.default.getSoundById(t)), m = (null == A ? void 0 : A.emojiId) != null || (null == A ? void 0 : A.emojiName) != null, [N, O] = r.useState(!1), p = (0, d.useSoundmojiExperiment)("soundmoji_chat_mention"), R = r.useCallback(() => {
             var e;
-            null == h && (0, _.maybeFetchSoundboardSounds)();
+            null == A && (0, _.maybeFetchSoundboardSounds)();
             let n = new Audio((0, I.default)(t));
-            null != s.current && s.current.pause(), s.current = n, n.currentTime = 0, n.volume = (0, T.default)(null !== (e = null == h ? void 0 : h.volume) && void 0 !== e ? e : .5), O(!0), n.play(), n.addEventListener("ended", () => {
+            null != s.current && s.current.pause(), s.current = n, n.currentTime = 0, n.volume = (0, T.default)(null !== (e = null == A ? void 0 : A.volume) && void 0 !== e ? e : .5), O(!0), n.play(), n.addEventListener("ended", () => {
                 O(!1)
             }, {
                 once: !0
             })
-        }, [t, h, s, O]);
-        return p ? null == h ? (0, i.jsxs)(l.Clickable, {
+        }, [t, A, s, O]);
+        return p ? null == A ? (0, i.jsxs)(l.Clickable, {
             title: "Risky Click",
             tag: "span",
             onClick: R,
-            className: A.container,
+            className: h.container,
             children: [(0, i.jsx)(S.default, {
-                className: A.unknownSound
+                className: h.unknownSound
             }), (0, i.jsx)(l.Text, {
                 tag: "span",
                 variant: "text-md/normal",
                 color: "none",
-                className: A.text,
+                className: h.text,
                 children: "Unknown"
             })]
         }) : n ? (0, i.jsxs)(l.Clickable, {
             onClick: R,
-            className: A.jumboContainer,
+            className: h.jumboContainer,
             children: [(0, i.jsx)("div", {
-                className: a()(A.jumboOverlay, {
-                    [A.playing]: N
+                className: a()(h.jumboOverlay, {
+                    [h.playing]: N
                 }),
                 children: (0, i.jsx)(f.default, {
-                    className: A.__invalid_jumboPlayIcon
+                    className: h.__invalid_jumboPlayIcon
                 })
             }), m && (0, i.jsx)(u.default, {
-                emojiId: null == h ? void 0 : h.emojiId,
-                emojiName: null == h ? void 0 : h.emojiName,
-                className: A.jumboEmoji
+                emojiId: null == A ? void 0 : A.emojiId,
+                emojiName: null == A ? void 0 : A.emojiName,
+                className: h.jumboEmoji
             }), (0, i.jsx)(l.Text, {
                 tag: "span",
                 variant: "text-lg/normal",
                 color: "none",
-                className: A.text,
-                children: h.name
+                className: h.text,
+                children: A.name
             })]
         }) : (0, i.jsxs)(l.Clickable, {
             tag: "span",
             onClick: R,
-            className: A.container,
+            className: h.container,
             children: [m && (0, i.jsx)(u.default, {
-                emojiId: null == h ? void 0 : h.emojiId,
-                emojiName: null == h ? void 0 : h.emojiName,
-                className: A.emoji
+                emojiId: null == A ? void 0 : A.emojiId,
+                emojiName: null == A ? void 0 : A.emojiName,
+                className: h.emoji
             }), (0, i.jsx)(l.Text, {
                 tag: "span",
                 variant: "text-md/normal",
                 color: "none",
-                className: A.text,
-                children: h.name
+                className: h.text,
+                children: A.name
             })]
         }) : null
     }

@@ -60,7 +60,7 @@ function(e, t, n) {
         PROJECT_ENV: T,
         ASSET_ENDPOINT: f,
         CDN_HOST: S
-    } = window.GLOBAL_ENV, A = Object.values(d.StickerExtensions), h = decodeURIComponent(c.Endpoints.STICKER_ASSET("[\\d]+", "(".concat(A.join("|"), ")"))), m = RegExp("(".concat(location.protocol).concat(f, "|").concat(location.protocol).concat(I, ")(").concat(h, ")"), "ig"), N = RegExp("".concat(location.protocol).concat(E, "(").concat(h, ")"), "ig"), O = e => {
+    } = window.GLOBAL_ENV, h = Object.values(d.StickerExtensions), A = decodeURIComponent(c.Endpoints.STICKER_ASSET("[\\d]+", "(".concat(h.join("|"), ")"))), m = RegExp("(".concat(location.protocol).concat(f, "|").concat(location.protocol).concat(I, ")(").concat(A, ")"), "ig"), N = RegExp("".concat(location.protocol).concat(E, "(").concat(A, ")"), "ig"), O = e => {
         if (null != e.cover_sticker_id) {
             let t = e.stickers.find(t => t.id === e.cover_sticker_id);
             if (null != t) return t

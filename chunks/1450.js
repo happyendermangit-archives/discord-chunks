@@ -16,8 +16,8 @@ function(e, t, n) {
         T = n("889161"),
         f = n("430824"),
         S = n("973675"),
-        A = n("68736"),
-        h = n("267642"),
+        h = n("68736"),
+        A = n("267642"),
         m = n("981631"),
         N = n("30513"),
         O = n("689938"),
@@ -35,7 +35,7 @@ function(e, t, n) {
             analyticsLocations: L
         } = (0, _.default)(), D = (0, o.useStateFromStores)([f.default], () => f.default.getGuild(n)), {
             canManageAllExpressions: v
-        } = (0, T.useManageResourcePermissions)(D), M = null != D && 0 === (0, h.getTotalStickerCountForTier)(D.premiumTier) && !D.hasFeature(m.GuildFeatures.MORE_STICKERS);
+        } = (0, T.useManageResourcePermissions)(D), M = null != D && 0 === (0, A.getTotalStickerCountForTier)(D.premiumTier) && !D.hasFeature(m.GuildFeatures.MORE_STICKERS);
         return (r.useEffect(() => {
             v && M && R && ((0, d.trackWithMetadata)(m.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
                 location: g,
@@ -55,7 +55,7 @@ function(e, t, n) {
                 className: p.body,
                 variant: "text-sm/normal",
                 children: O.default.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_PREMIUM_SUBSCRIPTIONS_DESCRIPTION.format({
-                    count: (0, h.getTotalStickerCountForTier)(m.BoostedGuildTiers.TIER_1)
+                    count: (0, A.getTotalStickerCountForTier)(m.BoostedGuildTiers.TIER_1)
                 })
             }), (0, i.jsx)(l.Button, {
                 look: l.Button.Looks.LINK,
@@ -72,7 +72,7 @@ function(e, t, n) {
             })]
         }) : (0, i.jsxs)("div", {
             className: a()(p.upsell, t),
-            children: [(0, i.jsx)(A.default, {
+            children: [(0, i.jsx)(h.default, {
                 className: p.icon,
                 width: 20,
                 height: 20

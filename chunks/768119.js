@@ -12,11 +12,11 @@ function(e, t, n) {
         T = n("592125"),
         f = n("430824"),
         S = n("981631");
-    let A = {},
-        h = !1;
+    let h = {},
+        A = !1;
 
     function m(e) {
-        return null == A[e] && (A[e] = {
+        return null == h[e] && (h[e] = {
             searchId: e,
             searchType: N(e),
             isIndexing: !1,
@@ -34,7 +34,7 @@ function(e, t, n) {
             resultsBlocked: 0,
             showBlockedResults: !1,
             showNoResultsAlt: !1
-        }), A[e]
+        }), h[e]
     }
 
     function N(e) {
@@ -44,7 +44,7 @@ function(e, t, n) {
     function O(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
         if (null == e) return n;
-        let i = A[e];
+        let i = h[e];
         return null == i ? n : t(i)
     }
     let p = "SearchStore",
@@ -68,14 +68,14 @@ function(e, t, n) {
     function D(e) {
         let {
             searchId: t
-        } = e, n = A[t];
+        } = e, n = h[t];
         if (null == n) return !1;
-        null != n.searchFetcher && n.searchFetcher.cancel(), delete A[t]
+        null != n.searchFetcher && n.searchFetcher.cancel(), delete h[t]
     }
 
     function v(e) {
         if (e === g) return !1;
-        null != e && null == A[e] && m(e), g = e
+        null != e && null == h[e] && m(e), g = e
     }
     class M extends(r = d.default.Store) {
         initialize() {
@@ -90,7 +90,7 @@ function(e, t, n) {
             R = !!_.Storage.get("tokenized")
         }
         isOpen() {
-            return h
+            return A
         }
         getCurrentSearchModalType() {
             return i
@@ -309,8 +309,8 @@ function(e, t, n) {
             _.Storage.remove(p), C = {}
         },
         CONNECTION_OPEN: function() {
-            Object.keys(A).forEach(e => {
-                null != A[e] && (A[e].searchType = N(e))
+            Object.keys(h).forEach(e => {
+                null != h[e] && (h[e].searchType = N(e))
             })
         },
         SEARCH_MODAL_OPEN: function(e) {
@@ -318,10 +318,10 @@ function(e, t, n) {
                 searchId: t,
                 searchType: n
             } = e;
-            null != t && (g = t), h = !0, i = n
+            null != t && (g = t), A = !0, i = n
         },
         SEARCH_MODAL_CLOSE: function() {
-            h = !1, i = void 0
+            A = !1, i = void 0
         }
     })
 }

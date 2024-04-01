@@ -24,7 +24,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    let A = l().memoize(e => {
+    let h = l().memoize(e => {
         let t = !1;
         if (null != e && (0, u.isValidHex)(e)) {
             let n = (0, u.hex2int)(e);
@@ -32,7 +32,7 @@ function(e, t, n) {
         }
         return t ? d.default.unsafe_rawColors.BLACK_500.css : d.default.unsafe_rawColors.WHITE_500.css
     });
-    class h extends r.PureComponent {
+    class A extends r.PureComponent {
         render() {
             let e;
             let {
@@ -40,7 +40,7 @@ function(e, t, n) {
                 color: n,
                 className: r,
                 children: s
-            } = this.props, o = A(n);
+            } = this.props, o = h(n);
             return t ? e = {
                 color: o,
                 background: null != n ? n : d.default.unsafe_rawColors.BRAND_500.css
@@ -82,7 +82,7 @@ function(e, t, n) {
         }
         constructor(...e) {
             super(...e), S(this, "state", {
-                color: A(this.props.color)
+                color: h(this.props.color)
             }), S(this, "handleKeyUp", e => {
                 if (e.which === I.KeyboardKeys.ENTER || e.which === I.KeyboardKeys.SPACE) {
                     let {
@@ -100,5 +100,5 @@ function(e, t, n) {
             })
         }
     }
-    t.default = h
+    t.default = A
 }

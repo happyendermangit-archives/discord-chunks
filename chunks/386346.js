@@ -15,8 +15,8 @@ function(e, t, n) {
         T = 0,
         f = {},
         S = !1,
-        A = 0,
         h = 0,
+        A = 0,
         m = 0,
         N = 0;
     class O extends(l = u.default.Store) {
@@ -30,10 +30,10 @@ function(e, t, n) {
             return S
         }
         get globalOpenedCount() {
-            return h
+            return A
         }
         get lastGlobalOpenedCount() {
-            return A
+            return h
         }
         get globalOpenedCountFetchTime() {
             return m
@@ -74,14 +74,14 @@ function(e, t, n) {
             } = e;
             f = {
                 ...t.openedItems
-            }, S = t.redeemedPrize, h++, A++
+            }, S = t.redeemedPrize, A++, h++
         },
         LOOTBOX_COUNT_STAT_FETCHED: function(e) {
             let {
                 currentCount: t,
                 previousCount: n
             } = e;
-            h = t, A = n, N = (m = Date.now()) + (0, _.randomBetween)(c.LOOTBOX_COUNT_STAT_FETCH_DELAY_MIN, c.LOOTBOX_COUNT_STAT_FETCH_DELAY_MAX), T = 2
+            A = t, h = n, N = (m = Date.now()) + (0, _.randomBetween)(c.LOOTBOX_COUNT_STAT_FETCH_DELAY_MIN, c.LOOTBOX_COUNT_STAT_FETCH_DELAY_MAX), T = 2
         },
         LOGOUT: function() {
             E = !1, f = {}, S = !1, I = 0

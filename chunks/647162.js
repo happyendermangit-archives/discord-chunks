@@ -8,7 +8,7 @@ function(e, t, n) {
             return f
         },
         getSpotifyMetadataFromActivity: function() {
-            return A
+            return h
         },
         isSpotifyPlayable: function() {
             return E
@@ -91,7 +91,7 @@ function(e, t, n) {
         if ("string" == typeof e) return e;
         throw Error("value is not a string")
     }
-    async function A(e, t) {
+    async function h(e, t) {
         var n;
         let r = await (0, i.getMetadata)(e, t),
             s = (0, d.getSpotifyResourceType)(S(null !== (n = r.type) && void 0 !== n ? n : d.SpotifyResourceTypes.TRACK));

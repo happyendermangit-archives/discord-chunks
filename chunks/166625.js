@@ -17,8 +17,8 @@ function(e, t, n) {
             guildId: c
         } = e, E = (0, r.useStateFromStores)([d.default], () => d.default.getCurrentUser()), I = (0, r.useStateFromStores)([l.default], () => null != c && null != E ? l.default.getMember(c, E.id) : null), T = null != I ? I.avatarDecoration : null == E ? void 0 : E.avatarDecoration, f = (0, s.default)(n), {
             pendingAvatar: S,
-            pendingAvatarDecoration: A,
-            pendingErrors: h
+            pendingAvatarDecoration: h,
+            pendingErrors: A
         } = (0, r.useStateFromStoresObject)([u.default, a.default], () => ({
             pendingAvatar: t ? u.default.getTryItOutAvatar() : null != c ? a.default.getPendingAvatar() : u.default.getPendingAvatar(),
             pendingAvatarDecoration: t ? u.default.getTryItOutAvatarDecoration() : null != c ? a.default.getPendingAvatarDecoration() : u.default.getPendingAvatarDecoration(),
@@ -28,11 +28,11 @@ function(e, t, n) {
         }, [f, c]);
         return {
             pendingAvatar: S,
-            pendingAvatarDecoration: A,
+            pendingAvatarDecoration: h,
             setPendingAvatar: t ? _.setTryItOutAvatar : m,
             setPendingAvatarDecoration: t ? _.setTryItOutAvatarDecoration : N,
             savedAvatarDecoration: T,
-            pendingErrors: h
+            pendingErrors: A
         }
     }
 }

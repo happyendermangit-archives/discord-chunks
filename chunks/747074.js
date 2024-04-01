@@ -28,8 +28,8 @@ function(e, t, n) {
             profileType: T,
             className: f,
             pendingThemeColors: S,
-            pendingProfileEffectId: A,
-            useDefaultClientTheme: h,
+            pendingProfileEffectId: h,
+            useDefaultClientTheme: A,
             children: m,
             forceShowPremium: N = !1,
             showOutOfBoundaryComponents: O = !1
@@ -39,7 +39,7 @@ function(e, t, n) {
             themeElementRef: p,
             pendingThemeColors: S,
             isPreview: N,
-            useDefaultClientTheme: h
+            useDefaultClientTheme: A
         }), g = (null == R ? void 0 : R.canEditThemes) || N, L = r.useMemo(() => ({
             profileType: T,
             profileTheme: C
@@ -64,7 +64,7 @@ function(e, t, n) {
                     }, () => c.userProfileInnerThemedWithBanner).with({
                         canUsePremiumProfileCustomization: !0
                     }, () => c.userProfileInnerThemedPremiumWithoutBanner).otherwise(() => c.userProfileInnerThemedNonPremium)
-                }((null == R ? void 0 : R.canUsePremiumProfileCustomization) || N, null !== A && ((null == R ? void 0 : R.banner) != null || void 0 !== A), T)),
+                }((null == R ? void 0 : R.canUsePremiumProfileCustomization) || N, null !== h && ((null == R ? void 0 : R.banner) != null || void 0 !== h), T)),
                 children: (0, i.jsx)(E.Provider, {
                     value: L,
                     children: m

@@ -27,7 +27,7 @@ function(e, t, n) {
             onClickOutside: I
         } = e, T = r.useCallback((e, t) => {
             null == o || o(a()(e), t)
-        }, [o]), f = r.useMemo(() => t.toDate(), [t]), S = r.useMemo(() => null == s ? void 0 : s.toDate(), [s]), A = r.useMemo(() => null == n ? void 0 : n.toDate(), [n]), h = (0, u.useStateFromStores)([d.default], () => d.default.locale), m = r.useRef(null), N = r.useCallback(e => {
+        }, [o]), f = r.useMemo(() => t.toDate(), [t]), S = r.useMemo(() => null == s ? void 0 : s.toDate(), [s]), h = r.useMemo(() => null == n ? void 0 : n.toDate(), [n]), A = (0, u.useStateFromStores)([d.default], () => d.default.locale), m = r.useRef(null), N = r.useCallback(e => {
             let t = e.currentTarget;
             t.classList.contains("react-datepicker__day") && setTimeout(() => {
                 var e, n;
@@ -46,9 +46,9 @@ function(e, t, n) {
                 autoFocus: E,
                 fixedHeight: !0,
                 inline: !0,
-                locale: h,
+                locale: A,
                 maxDate: S,
-                minDate: A,
+                minDate: h,
                 onKeyDown: N,
                 onClickOutside: I
             })

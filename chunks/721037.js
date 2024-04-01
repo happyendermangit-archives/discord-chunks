@@ -16,11 +16,11 @@ function(e, t, n) {
         T = n("451478"),
         f = n("518774"),
         S = n("823379"),
-        A = n("981631"),
-        h = n("918559");
+        h = n("981631"),
+        A = n("918559");
     let m = {
-        [A.PictureInPictureComponents.VIDEO]: c.default,
-        [A.PictureInPictureComponents.EMBED_IFRAME]: u.default
+        [h.PictureInPictureComponents.VIDEO]: c.default,
+        [h.PictureInPictureComponents.EMBED_IFRAME]: u.default
     };
     class N extends r.PureComponent {
         render() {
@@ -66,24 +66,24 @@ function(e, t, n) {
                 showInPopoutWindow: a = !1,
                 disallowTextActivity: u = !1
             } = e,
-            c = d.default.getWindowOpen(A.PopoutWindowKeys.CHANNEL_CALL_POPOUT),
+            c = d.default.getWindowOpen(h.PopoutWindowKeys.CHANNEL_CALL_POPOUT),
             f = o.default.getCurrentEmbeddedActivity(),
             m = null != f && !(0, l.default)(f.channelId, E.default),
             N = o.default.getActivityPanelMode(),
-            O = null != f && m && N === h.ActivityPanelModes.PANEL,
+            O = null != f && m && N === A.ActivityPanelModes.PANEL,
             p = T.default.windowSize();
         if (c && (u && O || !O)) {
-            let e = d.default.getWindow(A.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
+            let e = d.default.getWindow(h.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
             p = null == e ? p : {
                 width: e.innerWidth,
                 height: e.innerHeight
             }
-        }!u && O ? r = A.AppContext.APP : a && (r = A.AppContext.POPOUT), s = u && m ? null : m || !c || a ? null != f && N === h.ActivityPanelModes.PANEL && m ? null !== (t = I.default.pipActivityWindow) && void 0 !== t ? t : I.default.pipVideoWindow : null !== (n = I.default.pipVideoWindow) && void 0 !== n ? n : I.default.pipActivityWindow : null;
+        }!u && O ? r = h.AppContext.APP : a && (r = h.AppContext.POPOUT), s = u && m ? null : m || !c || a ? null != f && N === A.ActivityPanelModes.PANEL && m ? null !== (t = I.default.pipActivityWindow) && void 0 !== t ? t : I.default.pipVideoWindow : null !== (n = I.default.pipVideoWindow) && void 0 !== n ? n : I.default.pipActivityWindow : null;
         let R = Array.from(I.default.pipWindows.values()),
-            C = R.find(e => e.component === A.PictureInPictureComponents.VIDEO);
+            C = R.find(e => e.component === h.PictureInPictureComponents.VIDEO);
         return {
             selectedPIPWindow: s,
-            pipWindows: [C, R.find(e => e.component === A.PictureInPictureComponents.EMBED_IFRAME)].filter(S.isNotNullish),
+            pipWindows: [C, R.find(e => e.component === h.PictureInPictureComponents.EMBED_IFRAME)].filter(S.isNotNullish),
             maxX: p.width,
             maxY: p.height,
             theme: _.default.theme,

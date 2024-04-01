@@ -22,19 +22,19 @@ function(e, t, n) {
             onScroll: c,
             listClassName: E
         } = e, I = r.useRef(null), T = r.useRef(null), f = r.useRef(null), S = r.useRef(null), {
-            isUsingKeyboardNavigation: A,
-            focusIndex: h,
+            isUsingKeyboardNavigation: h,
+            focusIndex: A,
             ...m
         } = u;
         r.useLayoutEffect(() => {
             var e;
             n && ((0, a.ensureItemVisible)(I), null === (e = f.current) || void 0 === e || e.focus())
         }, [n]), r.useEffect(() => {
-            if (n && h >= 0 && A) {
+            if (n && A >= 0 && h) {
                 var e;
-                null === (e = S.current) || void 0 === e || e.scrollRowIntoView(h)
+                null === (e = S.current) || void 0 === e || e.scrollRowIntoView(A)
             }
-        }, [n, A, h]);
+        }, [n, h, A]);
         let N = r.useCallback(e => d[e], [d]);
         return (0, i.jsxs)("div", {
             ref: I,

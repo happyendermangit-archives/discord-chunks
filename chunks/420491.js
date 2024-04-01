@@ -27,13 +27,13 @@ function(e, t, n) {
         f = !1,
         S = 0;
 
-    function A(e) {
+    function h(e) {
         if (e && !(0, c.supportsZstd)()) {
             I.warn("Attempting to enable zstd but it is not supported");
             return
         }(0, c.setFastConnectZstd)(e), e !== T && I.info("Setting Zstd to ".concat(e)), T = e
     }
-    class h extends(a = l.default.Store) {
+    class A extends(a = l.default.Store) {
         initialize() {
             this.waitFor(_.default), T = (0, c.supportsZstd)() && (0, c.getFastConnectZstd)()
         }
@@ -41,25 +41,25 @@ function(e, t, n) {
             return T
         }
     }
-    s = "GatewayZstdStore", (r = "displayName") in(i = h) ? Object.defineProperty(i, r, {
+    s = "GatewayZstdStore", (r = "displayName") in(i = A) ? Object.defineProperty(i, r, {
         value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : i[r] = s, t.default = new h(u.default, {
+    }) : i[r] = s, t.default = new A(u.default, {
         CONNECTION_OPEN: function() {
             if (f) {
                 I.info("Ignoring zstd experiment config because we fell back to zlib");
                 return
             }
-            A(E.getCurrentConfig({
+            h(E.getCurrentConfig({
                 location: "GatewayZstdStore"
             }, {
                 autoTrackExposure: (0, c.supportsZstd)()
             }).useZstd), S = 0
         },
         CONNECTION_INTERRUPTED: function() {
-            T && (S += 1) > 3 && (I.error("Disabling zstd due to consecutive errors"), A(!1), f = !0)
+            T && (S += 1) > 3 && (I.error("Disabling zstd due to consecutive errors"), h(!1), f = !0)
         }
     })
 }

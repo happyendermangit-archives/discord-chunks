@@ -20,8 +20,8 @@ function(e, t, n) {
         T = n("594174"),
         f = n("321148"),
         S = n("794358"),
-        A = n("823379"),
-        h = n("5192"),
+        h = n("823379"),
+        A = n("5192"),
         m = n("354459"),
         N = n("981631"),
         O = n("689938"),
@@ -69,7 +69,7 @@ function(e, t, n) {
                         textClassName: p.memberListItemText,
                         user: e,
                         disablePopout: n,
-                        nick: h.default.getNickname(r, o, e),
+                        nick: A.default.getNickname(r, o, e),
                         onContextMenu: t => n ? null : l(t, e)
                     }, e.id))
                 })]
@@ -87,7 +87,7 @@ function(e, t, n) {
             participantType: l
         } = e, u = R(l, t.length), d = t.length < s ? t.map(e => (0, i.jsx)("div", {
             className: p.viewersTooltipItem,
-            children: h.default.getName(n, r, e)
+            children: A.default.getName(n, r, e)
         }, e.id)) : u;
         return (0, i.jsx)(_.TooltipContainer, {
             text: d,
@@ -112,14 +112,14 @@ function(e, t, n) {
             participant: o,
             className: f,
             compact: S = !1,
-            disableInteraction: h = !1,
+            disableInteraction: A = !1,
             maxVisibleUsers: O = 3
         } = e, [R, D] = r.useState(!1), v = r.useRef(new d.DelayedCall(150, () => D(!1))), M = (0, u.useStateFromStoresArray)([I.default, T.default], () => {
             if (o.type === m.ParticipantTypes.STREAM) {
                 let e = I.default.getViewerIds(o.id);
-                return e.length > 0 ? e.map(e => T.default.getUser(e)).filter(A.isNotNullish) : L
+                return e.length > 0 ? e.map(e => T.default.getUser(e)).filter(h.isNotNullish) : L
             }
-            return o.type === m.ParticipantTypes.ACTIVITY ? o.participants.size > 0 ? Array.from(o.participants).map(e => T.default.getUser(e)).filter(A.isNotNullish) : L : L
+            return o.type === m.ParticipantTypes.ACTIVITY ? o.participants.size > 0 ? Array.from(o.participants).map(e => T.default.getUser(e)).filter(h.isNotNullish) : L : L
         }, [o]), y = r.useCallback(() => {
             v.current.cancel(), D(!0)
         }, []), P = r.useCallback(() => {
@@ -167,7 +167,7 @@ function(e, t, n) {
                         guildId: s,
                         channelId: t,
                         users: M,
-                        disableInteraction: h
+                        disableInteraction: A
                     }),
                     shouldShow: R,
                     position: "top",

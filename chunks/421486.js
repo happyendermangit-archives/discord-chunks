@@ -15,8 +15,8 @@ function(e, t, n) {
     n("5192");
     var f = n("342656"),
         S = n("785717"),
-        A = n("706327"),
-        h = n("285470"),
+        h = n("706327"),
+        A = n("285470"),
         m = n("171368"),
         N = n("228168"),
         O = n("689938"),
@@ -34,8 +34,8 @@ function(e, t, n) {
             analyticsLocations: I
         } = (0, _.default)(), {
             guildId: f,
-            channelId: A,
-            messageId: h,
+            channelId: h,
+            messageId: A,
             roleId: R
         } = (0, S.useUserProfileAnalyticsContext)(), C = a.useMemo(() => {
             var e;
@@ -67,13 +67,13 @@ function(e, t, n) {
                 userId: t.id,
                 sourceAnalyticsLocations: I,
                 guildId: null != f ? f : void 0,
-                channelId: null != A ? A : void 0,
-                messageId: null != h ? h : void 0,
+                channelId: null != h ? h : void 0,
+                messageId: null != A ? A : void 0,
                 roleId: null != R ? R : void 0,
                 section: e,
                 analyticsLocation: o
             }), null == r || r()
-        }, [o, I, r, t.id, f, A, h, R]);
+        }, [o, I, r, t.id, f, h, A, R]);
         a.useEffect(() => {
             b()
         }, [b, L]);
@@ -147,7 +147,7 @@ function(e, t, n) {
             autoTrackExposure: !1,
             location: E,
             disable: m
-        }), C = (0, h.useMutualGuilds)(i), g = (0, A.useMutualFriends)(i);
+        }), C = (0, A.useMutualGuilds)(i), g = (0, h.useMutualFriends)(i);
         return !N || m || (null == g || 0 === g.length) && 0 === C.length ? null : (0, s.jsxs)("div", {
             className: l()(p.mainContainer, a),
             children: [(0, s.jsx)(d.Heading, {

@@ -24,8 +24,8 @@ function(e, t, n) {
             guildId: T,
             closeLayer: f,
             onCloseModal: S,
-            totalNumberOfSlotsToAssign: A = 1,
-            disablePremiumUpsell: h,
+            totalNumberOfSlotsToAssign: h = 1,
+            disablePremiumUpsell: A,
             onSubscriptionConfirmation: m,
             inPopout: N,
             applicationId: O
@@ -61,9 +61,9 @@ function(e, t, n) {
                     analyticsLocation: E,
                     analyticsSourceLocation: null != I ? I : E,
                     guildId: T,
-                    totalNumberOfSlotsToAssign: A,
+                    totalNumberOfSlotsToAssign: h,
                     closeGuildPerksModal: f,
-                    disablePremiumUpsell: h,
+                    disablePremiumUpsell: A,
                     onSubscriptionConfirmation: m,
                     applicationId: O
                 })

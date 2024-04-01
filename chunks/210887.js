@@ -16,8 +16,8 @@ function(e, t, n) {
         T = n("358085"),
         f = n("238514"),
         S = n("740492"),
-        A = n("581883"),
-        h = n("874893"),
+        h = n("581883"),
+        A = n("874893"),
         m = n("981631"),
         N = n("469115");
 
@@ -37,10 +37,10 @@ function(e, t, n) {
         return function() {
             var e, t;
             if (__OVERLAY__) return m.ThemeTypes.DARK;
-            if (_.default.syncForcedColors && "active" === _.default.systemForcedColors && null != i || S.default.useSystemTheme === h.SystemThemeState.ON && null != i) return i;
+            if (_.default.syncForcedColors && "active" === _.default.systemForcedColors && null != i || S.default.useSystemTheme === A.SystemThemeState.ON && null != i) return i;
             let n = null === (e = f.default.getAppearanceSettings()) || void 0 === e ? void 0 : e.theme;
             if (null != n) return n;
-            let r = null === (t = A.default.settings.appearance) || void 0 === t ? void 0 : t.theme;
+            let r = null === (t = h.default.settings.appearance) || void 0 === t ? void 0 : t.theme;
             return null == r ? p : r === o.Theme.LIGHT ? m.ThemeTypes.LIGHT : m.ThemeTypes.DARK
         }()
     }
@@ -59,7 +59,7 @@ function(e, t, n) {
     }
     class M extends(s = a.default.PersistedStore) {
         initialize(e) {
-            (null == e ? void 0 : e.theme) != null && (p = e.theme), this.waitFor(S.default, f.default, A.default, _.default)
+            (null == e ? void 0 : e.theme) != null && (p = e.theme), this.waitFor(S.default, f.default, h.default, _.default)
         }
         getState() {
             return {

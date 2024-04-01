@@ -16,8 +16,8 @@ function(e, t, n) {
         T = n("28546"),
         f = n("98528"),
         S = n("98278"),
-        A = n("857185"),
-        h = n("911200"),
+        h = n("857185"),
+        A = n("911200"),
         m = n("639119"),
         N = n("695346"),
         O = n("594174"),
@@ -63,7 +63,7 @@ function(e, t, n) {
             } = (0, _.useAnalyticsContext)(), {
                 analyticsLocations: X
             } = (0, E.default)(c.default.STICKER_PICKER);
-            (0, A.useMaybeFetchPremiumLikelihood)(h.default);
+            (0, h.useMaybeFetchPremiumLikelihood)(A.default);
             let $ = (null === (s = (0, m.usePremiumTrialOffer)()) || void 0 === s ? void 0 : s.subscription_trial) != null,
                 ee = r.useRef(null),
                 et = r.useRef(null),
@@ -92,12 +92,12 @@ function(e, t, n) {
                 ef = (0, l.useStateFromStoresObject)([v.default], () => v.default.getAllGuildStickers()),
                 {
                     sendable: eS = [],
-                    sendableWithPremium: eA = []
+                    sendableWithPremium: eh = []
                 } = null != eE ? eE : {},
-                eh = eS.length + eA.length,
+                eA = eS.length + eh.length,
                 em = r.useCallback(e => {
-                    "" === er ? (0, L.trackStickerSelect)(e) : (0, L.trackStickerSearchSelect)(e, er, eh), R(e.sticker, M.StickerSelectLocation.STICKER_PICKER)
-                }, [R, er, eh]),
+                    "" === er ? (0, L.trackStickerSelect)(e) : (0, L.trackStickerSearchSelect)(e, er, eA), R(e.sticker, M.StickerSelectLocation.STICKER_PICKER)
+                }, [R, er, eA]),
                 eN = null != eu && eu > x,
                 {
                     rowCount: eO,
@@ -174,8 +174,8 @@ function(e, t, n) {
             r.useEffect(() => {
                 "" === ea.current && "" !== er && (0, L.trackStickerSearchStart)(), ea.current = er
             }, [er]), r.useEffect(() => {
-                0 === eh ? J(er) : Z(er, eh, es)
-            }, [er, eh, es]), r.useLayoutEffect(() => {
+                0 === eA ? J(er) : Z(er, eA, es)
+            }, [er, eA, es]), r.useLayoutEffect(() => {
                 var e;
                 null === (e = en.current) || void 0 === e || e.focus()
             }, []);

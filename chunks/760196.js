@@ -25,20 +25,20 @@ function(e, t, n) {
         } = (0, o.useStateFromStoresObject)([l.default], () => ({
             activeCommandOption: l.default.getActiveOption(t.id),
             activeCommandOptionStates: l.default.getOptionStates(t.id)
-        })), S = (0, c.useShouldShowPTONotice)(t), A = (0, u.useShouldShowUserAppBetaBar)(r, t, {
+        })), S = (0, c.useShouldShowPTONotice)(t), h = (0, u.useShouldShowUserAppBetaBar)(r, t, {
             location: "ChannelTextAreaBars"
-        }), h = [];
-        return (null != r && (A && h.push((0, i.jsx)(_.default, {
+        }), A = [];
+        return (null != r && (h && A.push((0, i.jsx)(_.default, {
             activeCommand: r
-        })), h.push((0, i.jsx)(d.default, {
+        })), A.push((0, i.jsx)(d.default, {
             activeCommand: r,
             activeOption: null != T ? T : null,
             optionStates: f
-        }))), null != s && h.push((0, i.jsx)(E.default, {
+        }))), null != s && A.push((0, i.jsx)(E.default, {
             reply: s,
             chatInputType: n
-        })), S && h.push((0, i.jsx)(c.StaffPTOBar, {})), 0 === (h = h.map((e, t) => {
-            let n = t === h.length - 1;
+        })), S && A.push((0, i.jsx)(c.StaffPTOBar, {})), 0 === (A = A.map((e, t) => {
+            let n = t === A.length - 1;
             return (0, i.jsx)("div", {
                 className: a()({
                     [I.stackedAttachedBar]: !n
@@ -47,7 +47,7 @@ function(e, t, n) {
             }, t)
         })).length) ? null : (0, i.jsx)("div", {
             className: I.attachedBars,
-            children: h
+            children: A
         })
     })
 }

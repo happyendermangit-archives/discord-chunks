@@ -42,8 +42,8 @@ function(e, t, n) {
                 }
             }
         })(),
-        A = "DeveloperOptionsStore",
-        h = {
+        h = "DeveloperOptionsStore",
+        A = {
             trace: !1,
             canary: !1,
             logGatewayEvents: !1,
@@ -57,21 +57,21 @@ function(e, t, n) {
             appDirectoryIncludesInactiveCollections: !1
         },
         m = {
-            ...h
+            ...A
         };
 
     function N(e) {
         m = {
-            ...h,
+            ...A,
             ...m,
             ...e
-        }, S.set(m.sourceMapsEnabled), _.Storage.set(A, m)
+        }, S.set(m.sourceMapsEnabled), _.Storage.set(h, m)
     }
     class O extends(i = u.default.Store) {
         initialize() {
-            let e = _.Storage.get(A);
+            let e = _.Storage.get(h);
             null != e && (m = {
-                ...h,
+                ...A,
                 ...e
             })
         }
@@ -119,7 +119,7 @@ function(e, t, n) {
         writable: !0
     }) : r[s] = a, t.default = new O(c.default, {
         LOGOUT: function(e) {
-            N(h)
+            N(A)
         },
         CONNECTION_OPEN: function(e) {
             var t;

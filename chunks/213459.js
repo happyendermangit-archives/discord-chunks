@@ -27,8 +27,8 @@ function(e, t, n) {
         T = n("706454"),
         f = n("675478"),
         S = n("592125"),
-        A = n("430824"),
-        h = n("594174"),
+        h = n("430824"),
+        A = n("594174"),
         m = n("626135"),
         N = n("254711"),
         O = n("700089"),
@@ -152,7 +152,7 @@ function(e, t, n) {
             }) ? null !== (e = this.indices[b]) && void 0 !== e ? e : V : k
         }
         query(e, t, n) {
-            if (null == h.default.getCurrentUser()) return B;
+            if (null == A.default.getCurrentUser()) return B;
             let i = this.getContextState(e),
                 r = this.getUserState(),
                 s = (0, D.buildPermissionContext)(e, t.commandType),
@@ -215,7 +215,7 @@ function(e, t, n) {
             let {
                 target: i,
                 index: r
-            } = e, s = null === (t = h.default.getCurrentUser()) || void 0 === t ? void 0 : t.id;
+            } = e, s = null === (t = A.default.getCurrentUser()) || void 0 === t ? void 0 : t.id;
             if (null == s) return !1;
             let a = {},
                 o = {},
@@ -223,7 +223,7 @@ function(e, t, n) {
             for (let e of r.applications) {
                 if (null == e.bot && null != e.bot_id) {
                     o[e.bot_id] = e.id;
-                    let t = h.default.getUser(e.bot_id);
+                    let t = A.default.getUser(e.bot_id);
                     null != t ? e.bot = t : l.add(e.bot_id)
                 } else null != e.bot && (o[e.bot.id] = e.id);
                 let t = {
@@ -505,7 +505,7 @@ function(e, t, n) {
             sortOptions: d = Z
         } = e, {
             commandType: _
-        } = t, c = null == r ? void 0 : r.toLowerCase(), I = null == c ? void 0 : c.split(" "), T = s === C.BuiltInCommandFilter.ONLY_TEXT, S = s !== C.BuiltInCommandFilter.DENY ? (0, N.getBuiltInCommands)(_, !0, T) : [], h = [], m = {
+        } = t, c = null == r ? void 0 : r.toLowerCase(), I = null == c ? void 0 : c.split(" "), T = s === C.BuiltInCommandFilter.ONLY_TEXT, S = s !== C.BuiltInCommandFilter.DENY ? (0, N.getBuiltInCommands)(_, !0, T) : [], A = [], m = {
             permissionContext: t,
             query: c,
             splitQuery: I,
@@ -533,9 +533,9 @@ function(e, t, n) {
                 } else null != s ? (i = s.descriptor, r = Object.values(s.commands)) : null != a && (i = a.descriptor, r = Object.values(a.commands));
                 l()(null != i, "Failed to select application descriptor"), l()(null != r, "Failed to select list of application commands");
                 let o = ee(i, r, m);
-                null != o && h.push(o)
+                null != o && A.push(o)
             }
-            d.applications.useFrecency && f.FrecencyUserSettingsActionCreators.loadIfNecessary(), h.sort((e, t) => {
+            d.applications.useFrecency && f.FrecencyUserSettingsActionCreators.loadIfNecessary(), A.sort((e, t) => {
                 if (d.applications.useScore && u === C.ScoreMethod.APPLICATION_ONLY) {
                     var n, i, r, s;
                     let a = null !== (r = null === (n = e.data[0]) || void 0 === n ? void 0 : n.score) && void 0 !== r ? r : Number.MAX_VALUE,
@@ -552,15 +552,15 @@ function(e, t, n) {
         }
         if (S.length > 0 || !0 === o) {
             let e = ee(N.BUILT_IN_SECTIONS[M.BuiltInSectionId.BUILT_IN], S, m);
-            null != e && h.push(e)
+            null != e && A.push(e)
         }
-        let D = h.flatMap(e => e.data.map(t => ({
+        let D = A.flatMap(e => e.data.map(t => ({
             ...t,
             section: e.section
         })));
         if (u === C.ScoreMethod.COMMAND_ONLY || u === C.ScoreMethod.COMMAND_OR_APPLICATION) {
             let e = t.context,
-                n = A.default.getGuild(t.context.guild_id);
+                n = h.default.getGuild(t.context.guild_id);
             d.commands.useFrecency && f.FrecencyUserSettingsActionCreators.loadIfNecessary(), D.sort((t, i) => {
                 if (d.commands.useScore) {
                     var r, s;
@@ -584,8 +584,8 @@ function(e, t, n) {
         }
         return {
             commands: D,
-            descriptors: h.map(e => e.section),
-            sectionedCommands: h,
+            descriptors: A.map(e => e.section),
+            sectionedCommands: A,
             loading: (null == n ? void 0 : n.fetchState.fetching) === !0 || (null == i ? void 0 : i.fetchState.fetching) === !0
         }
     }
@@ -654,7 +654,7 @@ function(e, t, n) {
 
     function et(e) {
         var t;
-        return null != e.guild_id || e.type === y.ChannelTypes.DM && (null === (t = h.default.getUser(e.getRecipientId())) || void 0 === t ? void 0 : t.bot) === !0
+        return null != e.guild_id || e.type === y.ChannelTypes.DM && (null === (t = A.default.getUser(e.getRecipientId())) || void 0 === t ? void 0 : t.bot) === !0
     }
 
     function en(e) {

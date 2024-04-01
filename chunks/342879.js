@@ -13,7 +13,7 @@ function(e, t, n) {
         c = 0;
 
     function E() {
-        A()
+        h()
     }
 
     function I() {
@@ -21,7 +21,7 @@ function(e, t, n) {
     }
 
     function T(e) {
-        e.idle ? S() : A()
+        e.idle ? S() : h()
     }
 
     function f() {
@@ -32,13 +32,13 @@ function(e, t, n) {
         clearTimeout(d), d = null
     }
 
-    function A() {
+    function h() {
         if (S(), !f()) return;
         let e = o.default.getFeed(u),
             t = null == e ? void 0 : e.expired_at;
-        d = setTimeout(() => h(), null == t ? 0 : new Date(t).getTime() - Date.now())
+        d = setTimeout(() => A(), null == t ? 0 : new Date(t).getTime() - Date.now())
     }
-    async function h() {
+    async function A() {
         if (f()) try {
             _ = !0;
             let e = await (0, a.getMyContentInventory)();
@@ -46,14 +46,14 @@ function(e, t, n) {
                 type: "CONTENT_INVENTORY_SET_FEED",
                 feedId: u,
                 feed: e
-            }), c = 0, _ = !1, A()
+            }), c = 0, _ = !1, h()
         } catch (e) {
-            c < 3 && (d = setTimeout(() => h(), 1e3 * Math.pow(5, c)), c += 1), _ = !1
+            c < 3 && (d = setTimeout(() => A(), 1e3 * Math.pow(5, c)), c += 1), _ = !1
         }
     }
 
     function m() {
-        A()
+        h()
     }
     class N extends r.default {
         constructor(...e) {

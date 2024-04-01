@@ -20,8 +20,8 @@ function(e, t, n) {
         T = n("976644"),
         f = n("466111"),
         S = n("74538"),
-        A = n("921944"),
-        h = n("689938"),
+        h = n("921944"),
+        A = n("689938"),
         m = n("105948");
     let N = {
         tension: 750,
@@ -62,10 +62,10 @@ function(e, t, n) {
         } = e, f = (0, l.useStateFromStores)([c.default], () => c.default.useReducedMotion), p = I.default.getCurrentUser(), R = null == p || (0, S.isPremium)(p) ? [u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [], [C, g] = (0, E.useSelectedDismissibleContent)(R), [L, D] = r.useState(!1), [v, M] = (0, o.useSpring)(() => ({})), y = (0, o.animated)(d.SuperReactionIcon);
         r.useEffect(() => {
             let e = C === u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
-            e && (g(A.ContentDismissActionType.DISMISS), setTimeout(() => D(e), 200))
+            e && (g(h.ContentDismissActionType.DISMISS), setTimeout(() => D(e), 200))
         }, [C, g]);
-        let P = L ? h.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2 : t ? h.default.Messages.SUPER_REACTION_TOGGLE_ENABLED : h.default.Messages.SUPER_REACTION_TOGGLE_DISABLED,
-            U = L ? h.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE : void 0;
+        let P = L ? A.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2 : t ? A.default.Messages.SUPER_REACTION_TOGGLE_ENABLED : A.default.Messages.SUPER_REACTION_TOGGLE_DISABLED,
+            U = L ? A.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE : void 0;
         return (0, i.jsxs)(_.TooltipContainer, {
             position: "top",
             text: (0, i.jsx)(O, {
@@ -111,7 +111,7 @@ function(e, t, n) {
                     children: (0, i.jsx)(_.Text, {
                         className: m.visuallyHidden,
                         variant: "text-sm/semibold",
-                        children: h.default.Messages.SUPER_REACTION_TOGGLE_DISABLED
+                        children: A.default.Messages.SUPER_REACTION_TOGGLE_DISABLED
                     })
                 })]
             })]

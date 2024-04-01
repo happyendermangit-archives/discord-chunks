@@ -20,8 +20,8 @@ function(e, t, n) {
         T = n("625128"),
         f = n("972830"),
         S = n("859802"),
-        A = n("305325"),
-        h = n("281956"),
+        h = n("305325"),
+        A = n("281956"),
         m = n("931261"),
         N = n("15274"),
         O = n("924301"),
@@ -107,7 +107,7 @@ function(e, t, n) {
                         channelId: o
                     }), u === Q.InviteTargetTypes.EMBEDDED_APPLICATION && null != d && ((0, D.transitionTo)(K.Routes.CHANNEL(null != t ? t : K.ME, o)), (0, I.default)(o, d, s, null == r ? void 0 : r.intent))
                 };
-                (0, h.shouldShowMembershipVerificationGate)(t, [G.default, w.default, V.default, b.default]) ? (0, A.openMemberVerificationModal)(t, a) : a()
+                (0, A.shouldShowMembershipVerificationGate)(t, [G.default, w.default, V.default, b.default]) ? (0, h.openMemberVerificationModal)(t, a) : a()
             })
         }) : (0, E.isActivityInTextSupportedForChannelType)(a) && u === Q.InviteTargetTypes.EMBEDDED_APPLICATION && null != d && ((0, D.transitionTo)(K.Routes.CHANNEL(null != t ? t : K.ME, o)), (0, I.default)(o, d, s, null == r ? void 0 : r.intent)), (function(e, t) {
             let {
