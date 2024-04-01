@@ -2,19 +2,16 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         checkRecipientEligibility: function() {
-            return d
-        },
-        createReferralTrial: function() {
-            return _
-        },
-        fetchReferralEligibleUsers: function() {
-            return l
-        },
-        fetchReferralsRemaining: function() {
             return u
         },
+        createReferralTrial: function() {
+            return d
+        },
+        fetchReferralsRemaining: function() {
+            return l
+        },
         resolveReferralTrialOffer: function() {
-            return c
+            return _
         }
     });
     var i = n("544891"),
@@ -22,13 +19,7 @@ function(e, t, n) {
         s = n("904245"),
         a = n("944486"),
         o = n("981631");
-    async function l() {
-        await i.HTTP.get({
-            url: o.Endpoints.GET_REFERRAL_ELIGIBLE_USERS,
-            oldFormErrors: !0
-        })
-    }
-    let u = () => (r.default.dispatch({
+    let l = () => (r.default.dispatch({
             type: "BILLING_REFERRALS_REMAINING_FETCH_START"
         }), i.HTTP.get({
             url: o.Endpoints.GET_REFERRALS_REMAINING,
@@ -44,7 +35,7 @@ function(e, t, n) {
                 type: "BILLING_REFERRALS_REMAINING_FETCH_FAIL"
             })
         })),
-        d = e => (r.default.dispatch({
+        u = e => (r.default.dispatch({
             type: "BILLING_CREATE_REFERRAL_PREVIEW_START",
             recipientId: e
         }), i.HTTP.post({
@@ -62,7 +53,7 @@ function(e, t, n) {
                 recipientId: e
             })
         }));
-    async function _(e) {
+    async function d(e) {
         try {
             var t;
             let n = await i.HTTP.post({
@@ -85,7 +76,7 @@ function(e, t, n) {
             }
         }
     }
-    async function c(e) {
+    async function _(e) {
         try {
             var t;
             let n = await i.HTTP.get({
