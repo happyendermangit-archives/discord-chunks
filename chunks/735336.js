@@ -37,8 +37,8 @@ function(e, t, n) {
         b = n("768581"),
         G = n("74538"),
         w = n("785717"),
-        k = n("621853"),
-        B = n("943217"),
+        B = n("621853"),
+        k = n("943217"),
         V = n("793397"),
         F = n("841040"),
         x = n("228168"),
@@ -176,7 +176,7 @@ function(e, t, n) {
         } = (0, w.useUserProfileAnalyticsContext)(), [ee, et] = a.useState(!1), en = (0, d.useStateFromStores)([g.default], () => g.default.isFocused()), ei = m.GifAutoPlay.getSetting(), er = (0, c.useToken)(_.default.unsafe_rawColors.PRIMARY_800).hex(), es = (0, c.getAvatarSize)(c.AvatarSizes.SIZE_80), ea = (0, u.hex2int)((0, f.default)(r.getAvatarURL(T, es), er, !1)), eo = (0, S.default)(null !== (t = null == o ? void 0 : o.primaryColor) && void 0 !== t ? t : ea).hsl, el = (0, V.getUserBannerSize)(C), eu = null != E ? E : null == o ? void 0 : o.getBannerURL({
             size: el,
             canAnimate: M || !ei ? ee : en
-        }), ed = null != eu, e_ = (0, d.useStateFromStores)([k.default], () => k.default.getUserProfile(r.id)), ec = O.default.getChannel(R.default.getChannelId()), {
+        }), ed = null != eu, e_ = (0, d.useStateFromStores)([B.default], () => B.default.getUserProfile(r.id)), ec = O.default.getChannel(R.default.getChannelId()), {
             appsInGDMEnabled: eE,
             availableApplications: eI
         } = (0, h.usePrivateChannelIntegrationState)({
@@ -202,7 +202,7 @@ function(e, t, n) {
                 section: H.AnalyticsSections.PROFILE_POPOUT
             }
         });
-        return (0, s.jsx)(B.default, {
+        return (0, s.jsx)(k.default, {
             isPremium: Z,
             hasThemeColors: null !== (i = null == o ? void 0 : o.canEditThemes) && void 0 !== i && i,
             profileType: C,

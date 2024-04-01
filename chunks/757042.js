@@ -17,8 +17,8 @@ function(e, t, n) {
         c = n("481060"),
         E = n("230711"),
         I = n("605236"),
-        T = n("246208"),
-        f = n("266983"),
+        T = n("903958"),
+        f = n("641826"),
         S = n("635869"),
         h = n("232700"),
         A = n("981631"),
@@ -28,11 +28,7 @@ function(e, t, n) {
     let p = "https://www.youtube.com/embed/".concat(h.LOOTBOX_VIDEO_ID, "?autoplay=1&mute=1&controls=0&loop=1&playlist=").concat(h.LOOTBOX_VIDEO_ID, "&origin=https://").concat(A.PRIMARY_DOMAIN);
 
     function R() {
-        let [e, t] = r.useState(!1), {
-            showMainEntrypoints: n
-        } = T.default.useExperiment({
-            location: "lootbox_entrypoint"
-        }), s = !(0, I.useIsDismissibleContentDismissed)(d.DismissibleContent.LOOTBOXES_ENTRYPOINT), h = e => {
+        let [e, t] = r.useState(!1), n = (0, f.useShouldShowMainLootboxEntrypoint)("lootbox_entrypoint"), s = !(0, I.useIsDismissibleContentDismissed)(d.DismissibleContent.LOOTBOXES_ENTRYPOINT), R = e => {
             (0, I.markDismissibleContentAsDismissed)(d.DismissibleContent.LOOTBOXES_ENTRYPOINT, {
                 dismissAction: e
             })
@@ -42,7 +38,7 @@ function(e, t, n) {
             onMouseLeave: () => t(!1),
             children: [(0, i.jsxs)(c.Clickable, {
                 className: O.closeButton,
-                onClick: () => h(m.ContentDismissActionType.DISMISS),
+                onClick: () => R(m.ContentDismissActionType.DISMISS),
                 children: [(0, i.jsx)(l.CloseSmallIcon, {
                     className: O.closeIcon,
                     color: _.default.colors.WHITE
@@ -52,15 +48,18 @@ function(e, t, n) {
                     children: N.default.Messages.PACKAGES_ENTRYPOINT_CLOSE
                 })]
             }), (0, i.jsxs)("div", {
-                className: O.videoWrapper,
-                children: [(0, i.jsx)("iframe", {
-                    className: O.video,
-                    src: p,
-                    sandbox: "allow-same-origin allow-scripts allow-popups"
+                className: O.contentWrapper,
+                children: [(0, i.jsx)("div", {
+                    className: O.videoWrapper,
+                    children: (0, i.jsx)("iframe", {
+                        className: O.video,
+                        src: p,
+                        sandbox: "allow-same-origin allow-scripts allow-popups"
+                    })
                 }), (0, i.jsxs)(c.Clickable, {
                     className: O.entrypoint,
                     onClick: () => {
-                        h(m.ContentDismissActionType.PRIMARY), E.default.open(A.UserSettingsSections.LOOTBOXES)
+                        R(m.ContentDismissActionType.PRIMARY), E.default.open(A.UserSettingsSections.LOOTBOXES)
                     },
                     onMouseEnter: () => t(!0),
                     children: [(0, i.jsx)("div", {
@@ -69,11 +68,11 @@ function(e, t, n) {
                             className: O.backgroundImage,
                             pageMultiplier: 5
                         })
-                    }), (0, i.jsx)(f.default, {
-                        className: O.image,
-                        color: _.default.colors.POLLS_NORMAL_FILL_HOVER,
-                        width: 70,
-                        height: 70
+                    }), (0, i.jsx)(T.default, {
+                        className: O.animation,
+                        importData: f.importLootboxAnimationData,
+                        nextScene: h.BoxAnimationScenes.IDLE,
+                        sceneSegments: h.BoxAnimationSceneSegments
                     }), (0, i.jsxs)("div", {
                         className: O.body,
                         children: [(0, i.jsx)(u.Text, {

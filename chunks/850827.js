@@ -42,8 +42,8 @@ function(e, t, n) {
                 guildId: b,
                 channelId: G,
                 source: w,
-                color: k = d.Button.Colors.WHITE,
-                look: B = d.Button.Looks.OUTLINED,
+                color: B = d.Button.Colors.WHITE,
+                look: k = d.Button.Looks.OUTLINED,
                 type: V,
                 onAction: F,
                 isEmbedded: x = !1
@@ -65,21 +65,21 @@ function(e, t, n) {
                 return q ? I.default.getChannel(null === (e = f.default.getVoiceStateForUser(r.id)) || void 0 === e ? void 0 : e.channelId) : null
             });
         if ((0, m.default)(n)) t = [(0, i.jsx)(O.default, {
-            look: B,
-            color: k,
+            look: k,
+            color: B,
             platform: c.default.get(P.PlatformTypes.XBOX)
         }, "ConnectPlatformActivityButton")];
         else if ((null == n ? void 0 : n.platform) != null && [P.ActivityGamePlatforms.PS4, P.ActivityGamePlatforms.PS5].includes(n.platform)) t = [(0, i.jsx)(O.default, {
-            look: B,
-            color: k,
+            look: k,
+            color: B,
             platform: c.default.get(P.PlatformTypes.PLAYSTATION)
         }, "ConnectPlatformActivityButton")];
         else if (K) {
             let e = (0, i.jsx)(v.default, {
                 activity: n,
                 user: r,
-                color: k,
-                look: B,
+                color: B,
+                look: k,
                 guildId: b,
                 channelId: G,
                 source: w
@@ -87,8 +87,8 @@ function(e, t, n) {
             t = [(0, i.jsx)(D.default, {
                 activity: n,
                 user: r,
-                color: k,
-                look: B,
+                color: B,
+                look: k,
                 guildId: b,
                 channelId: G,
                 source: w
@@ -98,46 +98,46 @@ function(e, t, n) {
             null != e && (t = [(0, i.jsx)(g.default, {
                 guildId: e.guildId,
                 channelId: e.channelId,
-                color: k,
-                look: B,
+                color: B,
+                look: k,
                 isProfile: j
             }, e.channelId)])
         } else if (W) t = [(0, i.jsx)(y.default, {
             isCurrentUser: Y.id === r.id,
-            color: k,
-            look: B,
+            color: B,
+            look: k,
             applicationStream: a
         }, "watch-button")];
         else if (q && null != J) t = [(0, i.jsx)(C.default, {
-            color: k,
-            look: B,
+            color: B,
+            look: k,
             hangStatusChannel: J
         }, "hang-status-button")];
         else {
             let e = (0, i.jsx)(M.default, {
                     activity: n,
-                    color: k,
-                    look: B
+                    color: B,
+                    look: k
                 }, "watch-button"),
                 s = (0, i.jsx)(R.default, {
                     activity: n,
                     currentEmbeddedApplication: H,
                     user: r,
                     isCurrentUser: Y.id === r.id,
-                    color: k,
-                    look: B,
+                    color: B,
+                    look: k,
                     isEmbedded: x
                 }, "join-activity-button"),
                 a = (0, i.jsx)(L.default, {
                     activity: n,
                     user: r,
-                    color: k,
-                    look: B
+                    color: B,
+                    look: k
                 }, "notify-button"),
                 o = (0, i.jsx)(p.default, {
                     user: r,
-                    color: k,
-                    look: B,
+                    color: B,
+                    look: k,
                     activity: n
                 }, "custom-activity-button");
             if (null == s && null == a && null == e && null == o) return null;

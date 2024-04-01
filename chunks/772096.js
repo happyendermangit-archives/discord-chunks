@@ -128,15 +128,15 @@ function(e, t, n) {
                     return n
                 })(b).trim().length) return c();
             let w = r().pick(t.rules, y),
-                k = l().parserFor(w)(T.whitespaceSanitized, M),
-                B = p.whitespaceSanitized,
+                B = l().parserFor(w)(T.whitespaceSanitized, M),
+                k = p.whitespaceSanitized,
                 {
                     target: V
                 } = D;
             return {
-                content: k,
+                content: B,
                 target: V,
-                title: B
+                title: k
             }
         }
     }

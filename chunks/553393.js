@@ -43,8 +43,8 @@ function(e, t, n) {
         } = e, w = (0, N.useHandleClaimQuestsReward)({
             quest: y,
             location: h.QuestContent.MEMBERS_LIST
-        }), k = (0, S.useIsQuestExpired)(y), B = (null == y ? void 0 : null === (t = y.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, V = (null == y ? void 0 : null === (v = y.userStatus) || void 0 === v ? void 0 : v.enrolledAt) != null, F = (null == y ? void 0 : null === (M = y.userStatus) || void 0 === M ? void 0 : M.completedAt) != null;
-        if (null == y || k || B && !(null != P)) return null;
+        }), B = (0, S.useIsQuestExpired)(y), k = (null == y ? void 0 : null === (t = y.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, V = (null == y ? void 0 : null === (v = y.userStatus) || void 0 === v ? void 0 : v.enrolledAt) != null, F = (null == y ? void 0 : null === (M = y.userStatus) || void 0 === M ? void 0 : M.completedAt) != null;
+        if (null == y || B || k && !(null != P)) return null;
         let x = () => {
                 (0, f.trackQuestContentClicked)({
                     questId: y.id,
@@ -90,7 +90,7 @@ function(e, t, n) {
                 ctaText: R.default.Messages.QUESTS_MEMBERS_LIST_STREAM_CTA,
                 tileAssetUrl: (0, A.getGameTileAssetUrl)(y),
                 handleClickCta: j
-            } : F && !B ? {
+            } : F && !k ? {
                 headerText: R.default.Messages.QUESTS_MEMBERS_LIST_CLAIM_REWARD,
                 ctaText: R.default.Messages.QUESTS_MEMBERS_LIST_CLAIM_REWARD_CTA,
                 tileAssetUrl: (0, A.getRewardAssetUrl)(y),

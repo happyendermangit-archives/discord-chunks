@@ -110,8 +110,8 @@ function(e, t, n) {
             messageId: b,
             isBurstReaction: G,
             rowPosition: w,
-            inNitroLockedSection: k
-        } = e, [B, V] = r.useState(""), F = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), x = (0, o.useStateFromStores)([_.default], () => _.default.getDisambiguatedEmojiContext(I), [I]), H = r.useRef(null), {
+            inNitroLockedSection: B
+        } = e, [k, V] = r.useState(""), F = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), x = (0, o.useStateFromStores)([_.default], () => _.default.getDisambiguatedEmojiContext(I), [I]), H = r.useRef(null), {
             emoji: Y,
             size: j,
             isDisabled: W,
@@ -149,7 +149,7 @@ function(e, t, n) {
                 ...d,
                 key: s,
                 ref: H
-            }, B !== p(K, c) && (0, i.jsx)(R, {
+            }, k !== p(K, c) && (0, i.jsx)(R, {
                 ref: o,
                 emoji: Y,
                 isFavorite: x.isFavoriteEmojiWithoutFetchingLatest(Y),
@@ -178,7 +178,7 @@ function(e, t, n) {
                 size: j,
                 surrogateCodePoint: g,
                 selectedItemClassName: L,
-                inNitroLockedSection: k
+                inNitroLockedSection: B
             }))
         };
         return C ? (0, i.jsx)(l.Tooltip, {

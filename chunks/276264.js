@@ -47,8 +47,8 @@ function(e, t, n) {
             currentUser: b,
             activities: G,
             applicationStream: w,
-            status: k,
-            shouldAnimateStatus: B = !1,
+            status: B,
+            shouldAnimateStatus: k = !1,
             isMobile: V,
             premiumSince: F,
             channel: x,
@@ -125,8 +125,8 @@ function(e, t, n) {
         }, ep = () => (0, i.jsxs)(i.Fragment, {
             children: [eO(), em(), eN()]
         }), eR = (e, t) => {
-            let n = B ? l.AnimatedAvatar : l.Avatar,
-                r = (0, u.default)(G) ? R.StatusTypes.STREAMING : k;
+            let n = k ? l.AnimatedAvatar : l.Avatar,
+                r = (0, u.default)(G) ? R.StatusTypes.STREAMING : B;
             return r = t ? void 0 : r, (0, i.jsxs)(i.Fragment, {
                 children: [(0, i.jsx)(n, {
                     ...eE,
@@ -149,7 +149,7 @@ function(e, t, n) {
             roleName: o,
             color: null != s ? s : void 0,
             name: null != P ? P : ei
-        }), eg = k === R.StatusTypes.OFFLINE;
+        }), eg = B === R.StatusTypes.OFFLINE;
         return null == U ? (0, i.jsx)(S.default, {
             avatarSize: l.AvatarSizes.SIZE_32,
             className: D.placeholder

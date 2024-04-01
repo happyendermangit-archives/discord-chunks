@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return k
+            return B
         }
     }), n("47120"), n("627341");
     var i = n("735250"),
@@ -134,7 +134,7 @@ function(e, t, n) {
             })
         };
 
-    function k(e) {
+    function B(e) {
         let {
             markAsDismissed: t
         } = e, {

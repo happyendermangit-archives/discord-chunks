@@ -59,10 +59,10 @@ function(e, t, n) {
             return G
         },
         recurrenceOptionToRecurrenceRule: function() {
-            return k
+            return B
         },
         recurrenceRuleToOption: function() {
-            return B
+            return k
         }
     }), n("47120"), n("653041");
     var i = n("392711"),
@@ -250,7 +250,7 @@ function(e, t, n) {
         return n.weekday - t.weekday > 0 ? S : n.weekday - t.weekday < 0 ? f : T
     }
 
-    function k(e, t) {
+    function B(e, t) {
         let n = function(e, t) {
             let n = w(t),
                 i = C(t.toDate().getUTCDay()),
@@ -319,7 +319,7 @@ function(e, t, n) {
         }
     }
 
-    function B(e, t) {
+    function k(e, t) {
         if (null == t) return u.RecurrenceOptions.NONE;
         let n = P(t);
         switch (n.options.freq) {

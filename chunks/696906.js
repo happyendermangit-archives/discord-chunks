@@ -45,15 +45,15 @@ function(e, t, n) {
             } = (0, d.default)(),
             {
                 activeSubscription: w,
-                activeEntitlement: k
+                activeEntitlement: B
             } = (0, T.useActiveSubscriptionListingForApplication)(D, N),
-            B = (0, T.useEligibleApplicationSubscriptionGuilds)(D, N),
+            k = (0, T.useEligibleApplicationSubscriptionGuilds)(D, N),
             V = (0, _.default)(),
             F = null != s && (0, f.isApplicationUserSubscription)(s.sku_flags),
-            x = null != k && k.userId === (null === (t = E.default.getCurrentUser()) || void 0 === t ? void 0 : t.id),
-            H = null == k || x,
-            Y = null == k || b.length > 1,
-            j = null != N || B.length > 0,
+            x = null != B && B.userId === (null === (t = E.default.getCurrentUser()) || void 0 === t ? void 0 : t.id),
+            H = null == B || x,
+            Y = null == B || b.length > 1,
+            j = null != N || k.length > 0,
             W = F && x,
             K = null != P && null != U && H && Y && (j || F) && !W;
         return H ? j ? W && null != P && (n = m.default.Messages.APPLICATION_USER_SUBSCRIPTION_ALREADY_SUBSCRIBED.format({
@@ -78,7 +78,7 @@ function(e, t, n) {
                         initialPlanId: L.id,
                         skuId: L.sku_id,
                         guildId: N,
-                        eligibleApplicationSubscriptionGuilds: B,
+                        eligibleApplicationSubscriptionGuilds: k,
                         planGroup: b,
                         applicationId: U.id,
                         showBenefitsFirst: R,
@@ -91,7 +91,7 @@ function(e, t, n) {
                     onConfirm: e,
                     onCancel: () => {}
                 }) : e()
-            }, [M, L, b, U, N, j, F, G, p, w, R, B, C, g]),
+            }, [M, L, b, U, N, j, F, G, p, w, R, k, C, g]),
             canOpenModal: K,
             cannotOpenReason: n
         }

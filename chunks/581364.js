@@ -38,7 +38,7 @@ function(e, t, n) {
             return v
         },
         isGuildInUserAppExperiment: function() {
-            return B
+            return k
         },
         isSnowflake: function() {
             return p
@@ -50,7 +50,7 @@ function(e, t, n) {
             return V
         },
         useIsGuildInUserAppExperiment: function() {
-            return k
+            return B
         },
         useIsUserInUserAppExperiment: function() {
             return G
@@ -343,7 +343,7 @@ function(e, t, n) {
         return f.default.getCurrentConfig(e, t).userAppsTreatment === f.UserAppsTreatment.ALLOWED
     }
 
-    function k(e, t, n) {
+    function B(e, t, n) {
         let i = S.default.useExperiment({
             guildId: null != e ? e : A.EMPTY_STRING_SNOWFLAKE_ID,
             ...t
@@ -351,7 +351,7 @@ function(e, t, n) {
         return null == e || i.userAppsTreatment === f.UserAppsTreatment.ALLOWED
     }
 
-    function B(e, t, n) {
+    function k(e, t, n) {
         return null == e || S.default.getCurrentConfig({
             guildId: e,
             ...t

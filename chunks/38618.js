@@ -32,8 +32,8 @@ function(e, t, n) {
         b = 0,
         G = null,
         w = !0,
-        k = null;
-    async function B(e) {
+        B = null;
+    async function k(e) {
         b = Date.now(), G = e.sessionId, L.localPresenceState.handleConnectionOpen();
         let t = {},
             n = O.default.getVoiceChannelId();
@@ -110,7 +110,7 @@ function(e, t, n) {
             return e.resetSocket && (L.socket.close(), L.socket.dispatcher.clear(), L.socket.connect()), !1
         },
         CONNECTION_OPEN: e => {
-            B(e)
+            k(e)
         },
         CONNECTION_CLOSED: function() {
             U.verbose("connection closed dispatched"), b = Date.now()
@@ -123,7 +123,7 @@ function(e, t, n) {
             return L.localVoiceState.update({
                 guildId: e.guildId,
                 channelId: e.channelId
-            }), (0, C.isIOS)() && null == e.channelId && k === M.AppStates.BACKGROUND && L.socket.close(!0), !1
+            }), (0, C.isIOS)() && null == e.channelId && B === M.AppStates.BACKGROUND && L.socket.close(!0), !1
         },
         VOICE_STATE_UPDATES: function(e) {
             let {
@@ -170,7 +170,7 @@ function(e, t, n) {
             })
         },
         APP_STATE_UPDATE: function(e) {
-            return (0, C.isIOS)() ? (T.default.isAuthenticated() && (k === M.AppStates.INACTIVE && e.state === M.AppStates.BACKGROUND && null == L.localVoiceState.channelId ? L.socket.close(!0) : k === M.AppStates.BACKGROUND && e.state === M.AppStates.ACTIVE && (D.setIsPaused(!1), L.socket.connect())), k = e.state) : e.state === M.AppStates.ACTIVE && (D.setIsPaused(!1), T.default.isAuthenticated() && L.socket.resetBackoff("App state is active")), !1
+            return (0, C.isIOS)() ? (T.default.isAuthenticated() && (B === M.AppStates.INACTIVE && e.state === M.AppStates.BACKGROUND && null == L.localVoiceState.channelId ? L.socket.close(!0) : B === M.AppStates.BACKGROUND && e.state === M.AppStates.ACTIVE && (D.setIsPaused(!1), L.socket.connect())), B = e.state) : e.state === M.AppStates.ACTIVE && (D.setIsPaused(!1), T.default.isAuthenticated() && L.socket.resetBackoff("App state is active")), !1
         },
         GUILD_MEMBERS_REQUEST: function(e) {
             return L.socket.isSessionEstablished() && ("userIds" in e ? l()(e.userIds).chunk(100).forEach(t => {

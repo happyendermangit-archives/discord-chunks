@@ -61,7 +61,7 @@ function(e, t, n) {
                 ...w
             } = this.props;
             if (1 === E && 1 === A) return null;
-            let k = (0, c.fit)({
+            let B = (0, c.fit)({
                     width: E,
                     height: A,
                     maxWidth: m,
@@ -69,23 +69,23 @@ function(e, t, n) {
                     minWidth: O,
                     minHeight: C
                 }),
-                B = 0 !== k.width ? k.width / k.height : 1;
+                k = 0 !== B.width ? B.width / B.height : 1;
             "" !== s && i !== f.ImageReadyStates.ERROR ? e = y({
                 src: s,
-                size: k,
+                size: B,
                 alt: d,
                 className: n,
                 mediaLayoutType: g
             }) : i !== f.ImageReadyStates.LOADING && (e = (0, r.jsx)(p, {
-                size: k,
+                size: B,
                 mediaLayoutType: g,
                 alt: d
             })), e = (0, r.jsx)(I.ImageLoadingOverlay, {
                 readyState: i,
-                aspectRatio: B,
+                aspectRatio: k,
                 placeholder: a,
                 placeholderVersion: l,
-                placeholderStyle: R(k, g),
+                placeholderStyle: R(B, g),
                 children: e
             });
             let V = null != P ? P() : null;
@@ -110,7 +110,7 @@ function(e, t, n) {
                             width: "100%",
                             aspectRatio: "".concat(e.width, " / ").concat(e.height)
                         } : e
-                    }(k, L, G, g),
+                    }(B, L, G, g),
                     ...w,
                     children: [null != M && (0, r.jsx)("a", {
                         tabIndex: -1,

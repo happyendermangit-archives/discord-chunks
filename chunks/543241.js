@@ -8,7 +8,7 @@ function(e, t, n) {
             return z
         },
         getAriaIdForEmojiCategory: function() {
-            return k
+            return B
         },
         getEmojiSubCategory: function() {
             return K
@@ -17,7 +17,7 @@ function(e, t, n) {
             return X
         },
         getStringForEmojiCategory: function() {
-            return B
+            return k
         },
         trackEmojiFavorited: function() {
             return w
@@ -341,11 +341,11 @@ function(e, t, n) {
         leading: !1,
         trailing: !0
     });
-    let k = (e, t) => {
+    let B = (e, t) => {
             if (e.type === N.EmojiCategoryTypes.GUILD) return null != t ? t.toString() : "";
             return e.id
         },
-        B = (e, t) => {
+        k = (e, t) => {
             switch (e) {
                 case N.EmojiCategories.TOP_GUILD_EMOJI:
                     return g.default.Messages.EMOJI_CATEGORY_TOP_GUILD_EMOJI.format({

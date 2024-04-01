@@ -31,8 +31,8 @@ function(e, t, n) {
         b = n("7956"),
         G = n("981631");
     let w = c()().subtract(1, "week"),
-        k = [],
-        B = "",
+        B = [],
+        k = "",
         V = !1;
 
     function F(e, t) {
@@ -131,32 +131,32 @@ function(e, t, n) {
                     defaultAction: null
                 }
             })(i, n, t, e)).filter(v.isNotNullish), ...r].sort((e, t) => e.lastPlayed === t.lastPlayed ? 0 : e.lastPlayed > t.lastPlayed ? -1 : 1);
-        return V = null != m.default.lastFetched && N.default.fetched, !d().isEqual(s, k) && (k = s, y.isPlatformEmbedded && P.default.setSystemTrayApplications(Y(k).map(e => e.application).slice(0, 5)), !0)
+        return V = null != m.default.lastFetched && N.default.fetched, !d().isEqual(s, B) && (B = s, y.isPlatformEmbedded && P.default.setSystemTrayApplications(Y(B).map(e => e.application).slice(0, 5)), !0)
     }
     class Q extends(i = E.default.Store) {
         initialize() {
             this.syncWith([T.default, m.default, S.default, f.default, C.default, g.default, N.default, p.default, O.default, A.default], X, 200), this.syncWith([R.default, h.default], () => !0)
         }
         get applicationFilterQuery() {
-            return B
-        }
-        get applicationViewItems() {
             return k
         }
+        get applicationViewItems() {
+            return B
+        }
         get launchableApplicationViewItems() {
-            return Y(k)
+            return Y(B)
         }
         get libraryApplicationViewItems() {
-            return H(k)
+            return H(B)
         }
         get filteredLibraryApplicationViewItems() {
-            return j(this.libraryApplicationViewItems, B)
+            return j(this.libraryApplicationViewItems, k)
         }
         get sortedFilteredLibraryApplicationViewItems() {
             return W(this.filteredLibraryApplicationViewItems, R.default.sortKey, R.default.sortDirection, h.default.locale)
         }
         get hiddenLibraryApplicationViewItems() {
-            return K(k)
+            return K(B)
         }
         get hasFetchedApplications() {
             return V
@@ -172,7 +172,7 @@ function(e, t, n) {
             let {
                 query: t
             } = e;
-            B = t
+            k = t
         }
     })
 }

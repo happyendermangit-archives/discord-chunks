@@ -48,9 +48,9 @@ function(e, t, n) {
         b = n("981631"),
         G = n("474936"),
         w = n("689938"),
-        k = n("181390");
-    let B = d.AvatarSizes.SIZE_80,
-        V = (0, E.getDecorationSizeForAvatarSize)(B);
+        B = n("181390");
+    let k = d.AvatarSizes.SIZE_80,
+        V = (0, E.getDecorationSizeForAvatarSize)(k);
 
     function F(e) {
         let {
@@ -65,11 +65,11 @@ function(e, t, n) {
                 spacing: 16,
                 children: e => (0, i.jsx)(m.default, {
                     ...e,
-                    className: k.warningCircleIcon,
+                    className: B.warningCircleIcon,
                     color: u.default.unsafe_rawColors.YELLOW_300.css
                 })
             }), (0, i.jsx)(M.default, {
-                className: s ? k.profileBadgesCompactNoTouch : k.profileBadges,
+                className: s ? B.profileBadgesCompactNoTouch : B.profileBadges,
                 user: t,
                 guildId: n,
                 isTryItOutFlow: r,
@@ -109,15 +109,15 @@ function(e, t, n) {
         } = (0, L.default)({
             user: t,
             guildId: E,
-            size: B,
+            size: k,
             animateOnHover: A
         }), q = (0, i.jsx)("div", {
-            className: k.avatarHoverTarget,
+            className: B.avatarHoverTarget,
             ...Q,
             children: (0, i.jsx)(x, {
                 src: null != s ? s : X,
                 avatarDecoration: z,
-                size: B,
+                size: k,
                 "aria-label": t.username,
                 status: F ? b.StatusTypes.UNKNOWN : u,
                 statusBackdropColor: null != R && M && !F ? (0, d.getStatusBackdropColor)(R) : void 0,
@@ -125,20 +125,20 @@ function(e, t, n) {
                 statusTooltip: !0
             })
         }), J = (0, o.match)(h).with(U.UserProfileTypes.POPOUT, () => (0, v.buildGetPremiumUserBannerStyles)({
-            premiumUserWithBanner: k.avatarPositionPremiumBanner,
-            premiumUserWithoutBanner: k.avatarPositionPremiumNoBanner,
-            default: k.avatarPositionNormal
+            premiumUserWithBanner: B.avatarPositionPremiumBanner,
+            premiumUserWithoutBanner: B.avatarPositionPremiumNoBanner,
+            default: B.avatarPositionNormal
         })({
             isPremium: M,
             hasBanner: l,
             hasProfileEffect: m
-        })).with(U.UserProfileTypes.POMELO_POPOUT, () => k.avatarPositionPomelo).with(U.UserProfileTypes.PANEL, () => k.avatarPositionPanel).exhaustive();
+        })).with(U.UserProfileTypes.POMELO_POPOUT, () => B.avatarPositionPomelo).with(U.UserProfileTypes.PANEL, () => B.avatarPositionPanel).exhaustive();
         return (0, i.jsx)(i.Fragment, {
             children: (0, i.jsxs)(d.Clickable, {
                 className: a()({
-                    [k.clickable]: !K,
-                    [k.avatarWrapperNonUserBot]: D,
-                    [k.avatarWrapperNormal]: !D
+                    [B.clickable]: !K,
+                    [B.avatarWrapperNonUserBot]: D,
+                    [B.avatarWrapperNormal]: !D
                 }, J),
                 onClick: D || K ? void 0 : function() {
                     Y({
@@ -155,17 +155,17 @@ function(e, t, n) {
                 },
                 children: [q, !K && function() {
                     let e = null != z,
-                        t = e ? V : (0, d.getAvatarSize)(B);
+                        t = e ? V : (0, d.getAvatarSize)(k);
                     return (0, i.jsx)(N.default, {
                         mask: null == u || u === b.StatusTypes.UNKNOWN || F ? N.default.Masks.AVATAR_DEFAULT : (0, o.match)([e, _]).with([!0, !0], () => N.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_MOBILE_SQUARE_80).with([!0, !1], () => N.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_SQUARE_80).with([!1, !0], () => N.default.Masks.AVATAR_STATUS_MOBILE_80).with([!1, !1], () => N.default.Masks.AVATAR_STATUS_ROUND_80).exhaustive(),
-                        className: e ? k.avatarDecorationHint : k.avatarHint,
+                        className: e ? B.avatarDecorationHint : B.avatarHint,
                         style: e ? {
                             borderRadius: .4 * t
                         } : void 0,
                         width: t,
                         height: t,
                         children: (0, i.jsx)("div", {
-                            className: k.avatarHintInner,
+                            className: B.avatarHintInner,
                             children: w.default.Messages.VIEW_PROFILE
                         })
                     })
@@ -249,7 +249,7 @@ function(e, t, n) {
             }
         });
         return (0, i.jsxs)("div", {
-            className: k.biteSizeHeaderContainer,
+            className: B.biteSizeHeaderContainer,
             children: [(0, i.jsx)(D.default, {
                 user: t,
                 displayProfile: n,

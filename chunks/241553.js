@@ -81,8 +81,8 @@ function(e, t, n) {
         }],
         G = 1 / 300,
         w = R.default.Millis.DAYS_30,
-        k = (0, s.animated)(O.default),
-        B = (0, s.animated)(p.default),
+        B = (0, s.animated)(O.default),
+        k = (0, s.animated)(p.default),
         V = (0, s.animated)(N.default);
 
     function F(e) {
@@ -119,10 +119,10 @@ function(e, t, n) {
                 friction: 24
             }
         }), I = a ? c : 0, T = (0, l.isThemeDark)(null != t ? t : u) ? o.dark[I] : o.light[I];
-        return !n && a ? (0, i.jsx)(V, {}) : a && d ? (0, i.jsx)(B, {
+        return !n && a ? (0, i.jsx)(V, {}) : a && d ? (0, i.jsx)(k, {
             isDark: (0, l.isThemeDark)(u),
             style: E
-        }) : (0, i.jsx)(k, {
+        }) : (0, i.jsx)(B, {
             boxColor: T.box,
             ribbonColor: T.ribbon,
             style: E
@@ -142,7 +142,7 @@ function(e, t, n) {
             autoTrackExposure: R
         }), b = [];
         U && R && b.push(o.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023);
-        let [G, k] = (0, T.useSelectedDismissibleContent)(b), B = null != G, V = (0, g.useDirectMessageRecipient)(n), x = null != V;
+        let [G, B] = (0, T.useSelectedDismissibleContent)(b), k = null != G, V = (0, g.useDirectMessageRecipient)(n), x = null != V;
         if (t) return null;
         let H = () => {
                 (0, f.default)({
@@ -167,10 +167,10 @@ function(e, t, n) {
                 onMouseLeave: () => {
                     _(!1)
                 },
-                children: [B && (0, i.jsx)(d.default, {
+                children: [k && (0, i.jsx)(d.default, {
                     onComplete: () => _(!1),
                     onDMCheckItOutClick: H,
-                    markAsDismissed: k,
+                    markAsDismissed: B,
                     isDM: x
                 }), (0, i.jsx)(m.default, {
                     innerClassName: P.button,
@@ -185,12 +185,12 @@ function(e, t, n) {
                         className: y.noPointerEvents,
                         children: (0, i.jsx)(F, {
                             hovered: l,
-                            isContentDismissed: !B
+                            isContentDismissed: !k
                         })
                     })
                 })]
             });
-        return B ? Y : (0, i.jsx)(u.TooltipContainer, {
+        return k ? Y : (0, i.jsx)(u.TooltipContainer, {
             className: y.container,
             text: (0, d.getSeasonalGiftingBody)(x),
             children: Y

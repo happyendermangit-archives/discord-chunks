@@ -241,12 +241,12 @@ function(e, t, n) {
         f[t.id].lastFetched = 0
     }
 
-    function k() {
+    function B() {
         I.clear(), f = {}, S = {}
     }
-    class B extends _.default {
+    class k extends _.default {
         initialize() {
-            this.waitFor(c.default), this.syncWith([a.default], k)
+            this.waitFor(c.default), this.syncWith([a.default], B)
         }
         isFetchingProfile(e) {
             return I.has(e)
@@ -279,7 +279,7 @@ function(e, t, n) {
         takeSnapshot() {
             let e = l.default.getId();
             return {
-                version: B.LATEST_SNAPSHOT_VERSION,
+                version: k.LATEST_SNAPSHOT_VERSION,
                 data: [{
                     userId: e,
                     profile: f[e]
@@ -307,7 +307,7 @@ function(e, t, n) {
                 USER_UPDATE: w,
                 LOGOUT: p
             }), E(this, "loadCache", () => {
-                let e = this.readSnapshot(B.LATEST_SNAPSHOT_VERSION);
+                let e = this.readSnapshot(k.LATEST_SNAPSHOT_VERSION);
                 null != e && e.forEach(e => {
                     let {
                         userId: t,
@@ -318,5 +318,5 @@ function(e, t, n) {
             })
         }
     }
-    E(B, "displayName", "UserProfileStore"), E(B, "LATEST_SNAPSHOT_VERSION", 1), t.default = new B
+    E(k, "displayName", "UserProfileStore"), E(k, "LATEST_SNAPSHOT_VERSION", 1), t.default = new k
 }

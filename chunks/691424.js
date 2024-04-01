@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return B
+            return k
         }
     }), n("47120");
     var i = n("735250"),
@@ -61,7 +61,7 @@ function(e, t, n) {
             })
         })
     }
-    let k = {
+    let B = {
         blockQuote: {
             react: (e, t, n) => (0, i.jsxs)("div", {
                 className: G.blockquoteContainer,
@@ -265,9 +265,9 @@ function(e, t, n) {
         }
     };
 
-    function B(e) {
+    function k(e) {
         return {
-            ...k,
+            ...B,
             link: (0, M.default)(e),
             emoji: function(e) {
                 let {

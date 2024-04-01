@@ -48,8 +48,8 @@ function(e, t, n) {
                 poll: null == P ? void 0 : P.poll
             };
         null != y && (w.content = null == y ? void 0 : y.content), null != N.default.getPendingReply(c) && (w.type = L.MessageTypes.REPLY, w.message_reference = P.messageReference, w.allowed_mentions = P.allowedMentions, (0, m.deletePendingReply)(c));
-        let [k, B] = (0, O.default)(w.content);
-        k && (w.content = B, w.flags = (0, C.addFlag)(null !== (t = w.flags) && void 0 !== t ? t : 0, L.MessageFlags.SUPPRESS_NOTIFICATIONS));
+        let [B, k] = (0, O.default)(w.content);
+        B && (w.content = k, w.flags = (0, C.addFlag)(null !== (t = w.flags) && void 0 !== t ? t : 0, L.MessageFlags.SUPPRESS_NOTIFICATIONS));
         let V = null !== (n = P.nonce) && void 0 !== n ? n : (0, S.createNonce)(),
             F = (0, S.default)({
                 channelId: c,

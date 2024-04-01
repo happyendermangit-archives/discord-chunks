@@ -61,7 +61,7 @@ function(e, t, n) {
         return null != e && e.isGuildStageVoice() && R.default.countVoiceStatesForChannel(e.id) > 0
     }
 
-    function k(e) {
+    function B(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : P();
         return t.reduce((t, n) => {
             let i = G(n);
@@ -72,9 +72,9 @@ function(e, t, n) {
         }, !1)
     }
 
-    function B(e) {
+    function k(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : P();
-        return k(t => t.updateParticipant(e), t)
+        return B(t => t.updateParticipant(e), t)
     }
 
     function V(e) {
@@ -95,14 +95,14 @@ function(e, t, n) {
         let {
             user: t
         } = e;
-        return B(t.id)
+        return k(t.id)
     }
 
     function Y(e) {
         let {
             relationship: t
         } = e;
-        return B(t.id)
+        return k(t.id)
     }
 
     function j(e) {
@@ -123,7 +123,7 @@ function(e, t, n) {
             guildId: i,
             ownerId: r
         } = (0, I.decodeStreamKey)(t);
-        return !!(null != i && M.has(i)) && B(r, [n])
+        return !!(null != i && M.has(i)) && k(r, [n])
     }
     let K = [];
     class z extends(i = _.default.Store) {
@@ -176,7 +176,7 @@ function(e, t, n) {
             return t.reduce((e, t) => {
                 if (null == t.guildId || !M.has(t.guildId)) return e;
                 let i = new Set;
-                return (x(n, i, t.oldChannelId), x(n, i, t.channelId), 0 === i.size) ? e : B(t.userId, Array.from(i)) || e
+                return (x(n, i, t.oldChannelId), x(n, i, t.channelId), 0 === i.size) ? e : k(t.userId, Array.from(i)) || e
             }, !1)
         },
         CHANNEL_DELETE: function(e) {
@@ -191,7 +191,7 @@ function(e, t, n) {
             let {
                 members: t
             } = e, n = !1;
-            for (let e of t) n = B(e.user.id) || n;
+            for (let e of t) n = k(e.user.id) || n;
             return n
         },
         USER_UPDATE: H,
@@ -205,13 +205,13 @@ function(e, t, n) {
                 let n = v.get(t.id);
                 return null == n || l()(t.permissionOverwrites, n.permissionOverwrites) ? e : (e.push(t.id), v.set(t.id, t), e)
             }, []);
-            return k(e => e.rebuild(), n), n.length > 0
+            return B(e => e.rebuild(), n), n.length > 0
         },
         GUILD_ROLE_UPDATE: function(e) {
             let {
                 guildId: t
             } = e;
-            if (M.has(t)) return k(e => e.rebuild(), P(t))
+            if (M.has(t)) return B(e => e.rebuild(), P(t))
         },
         RTC_CONNECTION_VIDEO: function(e) {
             let {
@@ -219,7 +219,7 @@ function(e, t, n) {
                 guildId: n,
                 userId: i
             } = e;
-            return !!(null != n && M.has(n)) && B(i, [t])
+            return !!(null != n && M.has(n)) && k(i, [t])
         },
         STREAM_CLOSE: W,
         STREAM_DELETE: W,

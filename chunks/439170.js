@@ -219,7 +219,7 @@ function(e, t, n) {
         let e = T.default.getId();
         P.forEach(null, t => t.rebuildMember(e))
     }
-    class k extends(r = _.default.Store) {
+    class B extends(r = _.default.Store) {
         initialize() {
             this.waitFor(O.default, A.default, f.default, h.default, m.default, N.default, T.default, S.default, I.default), this.syncWith([N.default], w), this.syncWith([I.default], G)
         }
@@ -236,7 +236,7 @@ function(e, t, n) {
             return P.get(e, M(t)).rows
         }
     }
-    C(k, "displayName", "ChannelMemberStore"), t.default = new k(c.default, {
+    C(B, "displayName", "ChannelMemberStore"), t.default = new B(c.default, {
         CONNECTION_OPEN: U,
         OVERLAY_INITIALIZE: U,
         GUILD_MEMBER_LIST_UPDATE: function(e) {
