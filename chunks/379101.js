@@ -19,6 +19,7 @@ function(e) {
         perksDiscoverability: "perksDiscoverability__052be",
         seeAllPerksButton: "seeAllPerksButton_bfef1d",
         seeAllPerksButtonContent: "seeAllPerksButtonContent__33cad",
-        whatsNew: "whatsNew__36d59"
+        whatsNew: "whatsNew__36d59",
+        whatsNewWithOriginalHeroHeading: "whatsNewWithOriginalHeroHeading__3c219"
     }
 }
