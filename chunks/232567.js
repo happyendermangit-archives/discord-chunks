@@ -94,36 +94,38 @@ function(e, t, n) {
             friendToken: t,
             withMutualGuilds: n,
             withMutualFriendsCount: i,
-            guildId: r,
-            connectionsRoleId: s
-        } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, a = arguments.length > 2 ? arguments[2] : void 0;
+            withMutualFriends: r,
+            guildId: s,
+            connectionsRoleId: a
+        } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, u = arguments.length > 2 ? arguments[2] : void 0;
         l.default.dispatch({
             type: "USER_PROFILE_FETCH_START",
             userId: e
         });
         try {
-            let u = await o.HTTP.get({
+            let d = await o.HTTP.get({
                 url: c.Endpoints.USER_PROFILE(e),
                 query: {
                     friend_token: t,
                     with_mutual_guilds: n,
-                    with_mutual_friends_count: i,
-                    guild_id: r,
-                    connections_role_id: s
+                    with_mutual_friends: r,
+                    with_mutual_friends_count: i && (null == r || !r),
+                    guild_id: s,
+                    connections_role_id: a
                 },
                 oldFormErrors: !0
             });
-            return null == a || a(u.body, r), l.default.dispatch({
+            return null == u || u(d.body, s), l.default.dispatch({
                 type: "USER_UPDATE",
-                user: u.body.user
+                user: d.body.user
             }), l.default.dispatch({
                 type: "USER_PROFILE_FETCH_SUCCESS",
-                ...u.body
-            }), null != r && null != u.body.guild_member && l.default.dispatch({
+                ...d.body
+            }), null != s && null != d.body.guild_member && l.default.dispatch({
                 type: "GUILD_MEMBER_PROFILE_UPDATE",
-                guildId: r,
-                guildMember: u.body.guild_member
-            }), u.body
+                guildId: s,
+                guildMember: d.body.guild_member
+            }), d.body
         } catch (t) {
             throw null != t && (null == t ? void 0 : t.body) != null && E.warn("fetchProfile error: ".concat(t.body.code, " - ").concat(t.body.message)), l.default.dispatch({
                 type: "USER_PROFILE_FETCH_FAILURE",

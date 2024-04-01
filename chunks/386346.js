@@ -38,7 +38,7 @@ function(e, t, n) {
         get globalOpenedCountFetchTime() {
             return m
         }
-        get nextGlobalOpenedCountFetchDelay() {
+        get nextGlobalOpenedCountFetchTime() {
             return N
         }
         get userDataFetchState() {
@@ -81,7 +81,7 @@ function(e, t, n) {
                 currentCount: t,
                 previousCount: n
             } = e;
-            h = t, A = n, m = Date.now(), N = (0, _.randomBetween)(c.LOOTBOX_COUNT_STAT_FETCH_DELAY_MIN, c.LOOTBOX_COUNT_STAT_FETCH_DELAY_MAX), T = 2
+            h = t, A = n, N = (m = Date.now()) + (0, _.randomBetween)(c.LOOTBOX_COUNT_STAT_FETCH_DELAY_MIN, c.LOOTBOX_COUNT_STAT_FETCH_DELAY_MAX), T = 2
         },
         LOGOUT: function() {
             E = !1, f = {}, S = !1, I = 0
