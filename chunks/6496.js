@@ -38,8 +38,8 @@ function(e, t, n) {
         T = n("474387"),
         f = n("702225"),
         S = n("981631"),
-        h = n("176505"),
-        A = n("124368");
+        A = n("176505"),
+        h = n("124368");
 
     function m(e) {
         return f.default.getForumChannelSessionId(e)
@@ -48,9 +48,9 @@ function(e, t, n) {
     function N(e) {
         switch (e) {
             case i.ThreadSortOrder.CREATION_DATE:
-                return A.ThreadSortOrderReadableForAnalytics.CREATION_DATE;
+                return h.ThreadSortOrderReadableForAnalytics.CREATION_DATE;
             case i.ThreadSortOrder.LATEST_ACTIVITY:
-                return A.ThreadSortOrderReadableForAnalytics.LATEST_ACTIVITY;
+                return h.ThreadSortOrderReadableForAnalytics.LATEST_ACTIVITY;
             default:
                 throw Error("Unexpected sort order ".concat(e))
         }
@@ -95,7 +95,7 @@ function(e, t, n) {
             forum_channel_default_emoji_reaction_id: null === (t = o.defaultReactionEmoji) || void 0 === t ? void 0 : t.emojiId,
             forum_channel_default_emoji_reaction_name: null === (n = o.defaultReactionEmoji) || void 0 === n ? void 0 : n.emojiName,
             forum_channel_available_tag_ids: null !== (r = null === (i = o.availableTags) || void 0 === i ? void 0 : i.map(e => e.id)) && void 0 !== r ? r : [],
-            forum_channel_tag_required: o.hasFlag(h.ChannelFlags.REQUIRE_TAG),
+            forum_channel_tag_required: o.hasFlag(A.ChannelFlags.REQUIRE_TAG),
             forum_channel_can_create_post: d.default.can(S.Permissions.SEND_MESSAGES, o),
             forum_channel_filter_tag_ids: I.default.getFilterTagIdsAnalytics(),
             forum_channel_sort_order: I.default.getSortOrderAnalytics(o.id),
@@ -145,7 +145,7 @@ function(e, t, n) {
                 let a = new Set(s.map(e => e.id));
                 return null !== (n = null === (t = i.appliedTags) || void 0 === t ? void 0 : t.filter(e => a.has(e))) && void 0 !== n ? n : []
             }(f.id),
-            forum_post_is_pinned: f.hasFlag(h.ChannelFlags.PINNED),
+            forum_post_is_pinned: f.hasFlag(A.ChannelFlags.PINNED),
             forum_post_is_new: null === (r = T.default.getReadStateSnapshotAnalytics(f.id)) || void 0 === r ? void 0 : r.isNew,
             forum_post_is_unread: null === (u = T.default.getReadStateSnapshotAnalytics(f.id)) || void 0 === u ? void 0 : u.hasUnreads,
             forum_post_is_following: s.default.hasJoined(f.id),

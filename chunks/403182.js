@@ -8,7 +8,7 @@ function(e, t, n) {
             return S
         },
         classifyFileName: function() {
-            return h
+            return A
         },
         getMaxRequestSize: function() {
             return p
@@ -20,7 +20,7 @@ function(e, t, n) {
             return m
         },
         sizeString: function() {
-            return A
+            return h
         },
         transformNativeFile: function() {
             return I
@@ -100,17 +100,17 @@ function(e, t, n) {
     }];
 
     function S(e) {
-        return h(e.name, e.type)
+        return A(e.name, e.type)
     }
 
-    function h(e, t) {
+    function A(e, t) {
         var n;
         e = null !== (n = null == e ? void 0 : e.toLowerCase()) && void 0 !== n ? n : "";
         let i = a().find(f, n => null != n.reType && null != t ? n.reType.test(t) : null != n.reName && "" !== e && n.reName.test(e));
         return null != i ? i.klass : "unknown"
     }
 
-    function A(e) {
+    function h(e) {
         return r().filesize(e)
     }
 

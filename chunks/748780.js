@@ -54,9 +54,9 @@ function(e, t, n) {
                 shouldLoop: T,
                 durationMin: f,
                 durationMax: S,
-                ...h
-            } = n, A = t._value, m = E(n.duration, f, S), N = E(n.toValue, s, a), O = i[I](t, {
-                ...h,
+                ...A
+            } = n, h = t._value, m = E(n.duration, f, S), N = E(n.toValue, s, a), O = i[I](t, {
+                ...A,
                 toValue: N,
                 tension: o,
                 friction: l,
@@ -65,8 +65,8 @@ function(e, t, n) {
             if (d || _) {
                 let e = E(n.duration, f, S);
                 r = i[I](t, {
-                    ...h,
-                    toValue: d ? A : -N,
+                    ...A,
+                    toValue: d ? h : -N,
                     tension: o,
                     friction: l,
                     duration: e

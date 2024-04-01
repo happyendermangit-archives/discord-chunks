@@ -18,7 +18,7 @@ function(e, t, n) {
         f = n("531578"),
         S = n("981631");
 
-    function h(e, t, n) {
+    function A(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -26,18 +26,18 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    class A extends T.default {
+    class h extends T.default {
         _initialize() {
             l.default.init()
         }
         constructor(...e) {
-            super(...e), h(this, "actions", {
+            super(...e), A(this, "actions", {
                 VOICE_CHANNEL_SHOW_FEEDBACK: e => this.handleVoiceChannelFeedback(e),
                 STREAM_CLOSE: e => this.handleStreamClose(e),
                 VIDEO_BACKGROUND_SHOW_FEEDBACK: e => this.handleVideoBackgroundShowFeedback(e),
                 EMBEDDED_ACTIVITY_CLOSE: e => this.handleActivityClose(e),
                 IN_APP_REPORTS_SHOW_FEEDBACK: e => this.handleInAppReportsFeedback(e)
-            }), h(this, "handleVoiceChannelFeedback", e => {
+            }), A(this, "handleVoiceChannelFeedback", e => {
                 let {
                     analyticsData: t
                 } = e;
@@ -52,7 +52,7 @@ function(e, t, n) {
                         })
                     })
                 })
-            }), h(this, "handleStreamClose", e => {
+            }), A(this, "handleStreamClose", e => {
                 var t;
                 let {
                     streamKey: s,
@@ -78,7 +78,7 @@ function(e, t, n) {
                         })
                     })
                 })
-            }), h(this, "handleVideoBackgroundShowFeedback", e => {
+            }), A(this, "handleVideoBackgroundShowFeedback", e => {
                 let {
                     analyticsData: t
                 } = e;
@@ -93,7 +93,7 @@ function(e, t, n) {
                         })
                     })
                 })
-            }), h(this, "handleActivityClose", e => {
+            }), A(this, "handleActivityClose", e => {
                 let {
                     applicationId: t,
                     channelId: a,
@@ -117,7 +117,7 @@ function(e, t, n) {
                         contextKey: I
                     })
                 })
-            }), h(this, "handleInAppReportsFeedback", e => {
+            }), A(this, "handleInAppReportsFeedback", e => {
                 let {
                     reportId: t,
                     reportType: s
@@ -137,5 +137,5 @@ function(e, t, n) {
             })
         }
     }
-    t.default = new A
+    t.default = new h
 }

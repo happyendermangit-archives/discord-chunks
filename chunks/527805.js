@@ -42,18 +42,18 @@ function(e, t, n) {
         if (!(0, E.default)(null == a ? void 0 : null === (n = a.embeddedActivityConfig) || void 0 === n ? void 0 : n.supported_platforms)) return 6;
         let S = null != o ? o : null === (i = c.getVoiceStateForSession(r, null == s ? void 0 : s.session_id)) || void 0 === i ? void 0 : i.channelId;
         if (null == S) return 4;
-        let h = d.getChannel(o);
-        if (null == h) return 4;
-        let A = h.getGuildId();
-        if (!h.isPrivate()) {
-            if (null == A) return 10;
-            let e = f.getGuild(A);
-            if ((null == e ? void 0 : e.afkChannelId) === h.id) return 9;
-            let t = c.getCurrentClientVoiceChannelId(h.getGuildId()) === S,
-                n = (0, _.isChannelFull)(h, c, f),
-                i = T.can(I.Permissions.CONNECT, h);
-            if (!T.can(I.Permissions.USE_EMBEDDED_ACTIVITIES, h)) return 1;
-            if (h.isVocal() && !t) {
+        let A = d.getChannel(o);
+        if (null == A) return 4;
+        let h = A.getGuildId();
+        if (!A.isPrivate()) {
+            if (null == h) return 10;
+            let e = f.getGuild(h);
+            if ((null == e ? void 0 : e.afkChannelId) === A.id) return 9;
+            let t = c.getCurrentClientVoiceChannelId(A.getGuildId()) === S,
+                n = (0, _.isChannelFull)(A, c, f),
+                i = T.can(I.Permissions.CONNECT, A);
+            if (!T.can(I.Permissions.USE_EMBEDDED_ACTIVITIES, A)) return 1;
+            if (A.isVocal() && !t) {
                 if (n) return 3;
                 if (!i) return 2
             }

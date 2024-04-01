@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return h
+            return A
         },
         hasOpenPlainTextCodeBlock: function() {
             return p
@@ -37,7 +37,7 @@ function(e, t, n) {
     for (let e in T)
         if (null == e.match(f)) throw Error("Language name does not match regex: ".concat(e));
 
-    function h(e) {
+    function A(e) {
         let {
             onChange: t
         } = e, n = null;
@@ -85,18 +85,18 @@ function(e, t, n) {
                                     c = n && 0 === a.length,
                                     I = i && 0 === a.length,
                                     f = (d ? a.slice(1) : a).length % 2 == 1,
-                                    h = f && (null == u || "" === u || null != u.match(S)),
-                                    A = h && null != u && null !== (s = T[u.toLowerCase()]) && void 0 !== s ? s : null;
+                                    A = f && (null == u || "" === u || null != u.match(S)),
+                                    h = A && null != u && null !== (s = T[u.toLowerCase()]) && void 0 !== s ? s : null;
                                 return {
                                     blockEntry: t,
                                     wasInCodeBlock: n,
                                     isInCodeBlock: c,
                                     isStyledCodeBlockLine: I,
-                                    lang: f || d ? A : r,
+                                    lang: f || d ? h : r,
                                     hljsTypes: null,
                                     closesCodeBlock: d,
                                     opensCodeBlock: f,
-                                    opensCodeBlockOnOwnLine: h
+                                    opensCodeBlockOnOwnLine: A
                                 }
                             }(e, i, r, s, null != n && (n.opensCodeBlock || !n.closesCodeBlock) ? n.lang : null), t.push(n)
                         }
@@ -126,7 +126,7 @@ function(e, t, n) {
                                                     a = [],
                                                     o = 0,
                                                     l = 0;
-                                                for (; null != (r = A.exec(s));) {
+                                                for (; null != (r = h.exec(s));) {
                                                     let t = r.index + r[0].length,
                                                         n = r.index - l;
                                                     r.index > l && (e.length > 0 && a.push({
@@ -176,7 +176,7 @@ function(e, t, n) {
             }), n = _.EditorUtils.richValue(e)), t()
         }, e
     }
-    let A = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
+    let h = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
         m = {
             max: 1 / 0,
             maxAge: 1 * a.default.Millis.MINUTE,

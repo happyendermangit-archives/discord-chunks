@@ -20,8 +20,8 @@ function(e, t, n) {
         T = n("5192"),
         f = n("51144"),
         S = n("342656"),
-        h = n("621853"),
-        A = n("895618"),
+        A = n("621853"),
+        h = n("895618"),
         m = n("358794"),
         N = n("421486"),
         O = n("347949"),
@@ -61,12 +61,12 @@ function(e, t, n) {
             hideNote: Z = !1,
             showCopiableUsername: $ = !1,
             analyticsParams: ee
-        } = e, et = (0, o.useStateFromStores)([I.default], () => I.default.hidePersonalInformation), en = (0, o.useStateFromStores)([h.default], () => {
+        } = e, et = (0, o.useStateFromStores)([I.default], () => I.default.hidePersonalInformation), en = (0, o.useStateFromStores)([A.default], () => {
             var e;
-            return null === (e = h.default.getUserProfile(j.id)) || void 0 === e ? void 0 : e.application
+            return null === (e = A.default.getUserProfile(j.id)) || void 0 === e ? void 0 : e.application
         }), ei = (0, o.useStateFromStores)([_.default], () => null != _.default.getAnyStreamForUser(j.id)), er = (0, k.useGetVoiceChannelInfoForVoiceActivitySection)(j.id, null == K ? void 0 : K.id), es = (null == H ? void 0 : H.type) === V.ActivityTypes.HANG_STATUS, ea = !ei && null != er && !es, {
             showVoiceActivityInProfile: eo
-        } = A.VoiceActivityProfileExperiment.useExperiment({
+        } = h.VoiceActivityProfileExperiment.useExperiment({
             location: "user popout"
         }, {
             autoTrackExposure: ea
@@ -97,7 +97,7 @@ function(e, t, n) {
                 location: u.default.PROFILE_POPOUT,
                 disable: ef
             }),
-            eh = (0, d.useIsUserRecentGamesFetchEnabled)({
+            eA = (0, d.useIsUserRecentGamesFetchEnabled)({
                 userId: j.id,
                 location: "28tk0bf_3"
             });
@@ -109,7 +109,7 @@ function(e, t, n) {
             className: F.usernameSection,
             lastSection: !0
         });
-        let eA = null !== (t = T.default.getNickname(null == K ? void 0 : K.id, X, j)) && void 0 !== t ? t : f.default.getName(j),
+        let eh = null !== (t = T.default.getNickname(null == K ? void 0 : K.id, X, j)) && void 0 !== t ? t : f.default.getName(j),
             em = {
                 location: {
                     page: V.AnalyticsPages.USER_POPOUT,
@@ -120,11 +120,11 @@ function(e, t, n) {
             children: [(0, i.jsx)(B.default, {
                 className: F.usernameSection,
                 user: j,
-                nickname: eA,
+                nickname: eh,
                 pronouns: null == W ? void 0 : W.pronouns,
                 usernameIcon: j.hasAvatarForGuild(null == K ? void 0 : K.id) && (0, i.jsx)(R.default, {
                     user: j,
-                    nickname: eA
+                    nickname: eh
                 }),
                 shouldCopyOnClick: $
             }), (0, i.jsxs)(l.HeadingLevel, {
@@ -155,7 +155,7 @@ function(e, t, n) {
                         userId: j.id,
                         guild: K,
                         guildMember: z
-                    }), eh && (0, i.jsx)(O.UserProfileRecentGamesSection, {
+                    }), eA && (0, i.jsx)(O.UserProfileRecentGamesSection, {
                         userId: j.id
                     }), eo && ea && (0, i.jsx)(k.default, {
                         voiceChannel: er.voiceChannel,

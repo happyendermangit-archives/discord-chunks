@@ -20,8 +20,8 @@ function(e, t, n) {
         T = n("785717"),
         f = n("621853"),
         S = n("335191"),
-        h = n("171368"),
-        A = n("659101"),
+        A = n("171368"),
+        h = n("659101"),
         m = n("228168"),
         N = n("981631"),
         O = n("689938"),
@@ -81,7 +81,7 @@ function(e, t, n) {
                 className: a()(p.connectionsContainer, y),
                 children: [Y, (0, i.jsxs)(l.Clickable, {
                     onClick: function() {
-                        (0, h.openUserProfileModal)({
+                        (0, A.openUserProfileModal)({
                             userId: g,
                             channelId: L,
                             guildId: null == D ? void 0 : D.id,
@@ -118,7 +118,7 @@ function(e, t, n) {
                     locale: H
                 }, e.application.id))
             })]
-        })), null == s && null == C) ? null : (0, i.jsxs)(A.default, {
+        })), null == s && null == C) ? null : (0, i.jsxs)(h.default, {
             children: [C, s]
         })
     }

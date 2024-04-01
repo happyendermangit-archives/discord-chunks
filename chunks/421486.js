@@ -14,8 +14,8 @@ function(e, t, n) {
         T = n("346656"),
         f = n("5192"),
         S = n("342656"),
-        h = n("785717"),
-        A = n("706327"),
+        A = n("785717"),
+        h = n("706327"),
         m = n("285470"),
         N = n("171368"),
         O = n("228168"),
@@ -34,7 +34,7 @@ function(e, t, n) {
             channelId: I,
             messageId: f,
             roleId: S
-        } = (0, h.useUserProfileAnalyticsContext)(), A = a.useMemo(() => {
+        } = (0, A.useUserProfileAnalyticsContext)(), h = a.useMemo(() => {
             var e;
             return null !== (e = null == o ? void 0 : o.map(e => {
                 let {
@@ -43,8 +43,8 @@ function(e, t, n) {
                 return t
             })) && void 0 !== e ? e : []
         }, [o]), C = a.useMemo(() => p.default.Messages.USER_PROFILE_MUTUAL_GUILDS_COUNT.format({
-            count: A.length
-        }), [A]), g = a.useCallback(() => {
+            count: h.length
+        }), [h]), g = a.useCallback(() => {
             (0, N.openUserProfileModal)({
                 userId: t.id,
                 guildId: null != c ? c : void 0,
@@ -56,7 +56,7 @@ function(e, t, n) {
                 analyticsLocation: i
             }), null == n || n()
         }, [i, u, n, t.id, c, I, f, S]);
-        return null == A || 0 === A.length ? null : (0, s.jsx)(d.Tooltip, {
+        return null == h || 0 === h.length ? null : (0, s.jsx)(d.Tooltip, {
             text: p.default.Messages.USER_PROFILE_MUTUAL_GUILDS_TOOLTIP,
             children: e => (0, s.jsxs)(d.Clickable, {
                 ...e,
@@ -66,7 +66,7 @@ function(e, t, n) {
                     className: R.__invalid_avatars,
                     children: (0, s.jsx)(E.default, {
                         maxGuilds: r,
-                        guilds: A,
+                        guilds: h,
                         size: T.default.Sizes.SMOL,
                         hideOverflowCount: !0,
                         disableGuildNameTooltip: !0
@@ -95,8 +95,8 @@ function(e, t, n) {
                 guildId: I,
                 channelId: T,
                 messageId: S,
-                roleId: A
-            } = (0, h.useUserProfileAnalyticsContext)(), m = a.useMemo(() => {
+                roleId: h
+            } = (0, A.useUserProfileAnalyticsContext)(), m = a.useMemo(() => {
                 var e;
                 return null !== (e = null == i ? void 0 : i.map(e => {
                     let {
@@ -126,12 +126,12 @@ function(e, t, n) {
                     guildId: null != I ? I : void 0,
                     channelId: null != T ? T : void 0,
                     messageId: null != S ? S : void 0,
-                    roleId: null != A ? A : void 0,
+                    roleId: null != h ? h : void 0,
                     section: O.UserProfileSections.MUTUAL_FRIENDS,
                     sourceAnalyticsLocations: E,
                     analyticsLocation: o
                 }), null == r || r()
-            }, [o, E, r, t.id, I, T, S, A]), P = a.useMemo(() => {
+            }, [o, E, r, t.id, I, T, S, h]), P = a.useMemo(() => {
                 if (0 === m.length) return null;
                 let [e, t, ...n] = m;
                 return 1 === m.length ? p.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_ONE.format({
@@ -203,10 +203,10 @@ function(e, t, n) {
                 analyticsLocations: f
             } = (0, _.default)(), {
                 guildId: S,
-                channelId: A,
+                channelId: h,
                 messageId: m,
                 roleId: C
-            } = (0, h.useUserProfileAnalyticsContext)(), g = a.useMemo(() => {
+            } = (0, A.useUserProfileAnalyticsContext)(), g = a.useMemo(() => {
                 var e;
                 return null !== (e = null == n ? void 0 : n.map(e => {
                     let {
@@ -236,13 +236,13 @@ function(e, t, n) {
                     userId: t.id,
                     sourceAnalyticsLocations: f,
                     guildId: null != S ? S : void 0,
-                    channelId: null != A ? A : void 0,
+                    channelId: null != h ? h : void 0,
                     messageId: null != m ? m : void 0,
                     roleId: null != C ? C : void 0,
                     section: e,
                     analyticsLocation: u
                 }), null == o || o()
-            }, [u, f, o, t.id, S, A, m, C]);
+            }, [u, f, o, t.id, S, h, m, C]);
             a.useEffect(() => {
                 G()
             }, [G, D]);
@@ -312,15 +312,15 @@ function(e, t, n) {
             sourceAnaylticsLocations: o
         } = e, {
             analyticsLocations: c
-        } = (0, _.default)(), E = null !== (n = null !== (t = null == o ? void 0 : o[0]) && void 0 !== t ? t : null == c ? void 0 : c[0]) && void 0 !== n ? n : null, T = (0, u.useStateFromStores)([I.default], () => I.default.getId()), f = i.id === T, h = i.bot || f, {
+        } = (0, _.default)(), E = null !== (n = null !== (t = null == o ? void 0 : o[0]) && void 0 !== t ? t : null == c ? void 0 : c[0]) && void 0 !== n ? n : null, T = (0, u.useStateFromStores)([I.default], () => I.default.getId()), f = i.id === T, A = i.bot || f, {
             compact: N,
             enabled: O
         } = (0, S.useProfileMutualsExperiment)({
             autoTrackExposure: !1,
             location: E,
-            disable: h
-        }), D = (0, m.useMutualGuilds)(i), [v, M] = (0, A.useMutualFriends)(i);
-        if (!O || h) return null;
+            disable: A
+        }), D = (0, m.useMutualGuilds)(i), [v, M] = (0, h.useMutualFriends)(i);
+        if (!O || A) return null;
         let y = (null == M || 0 === M.length) && 0 === D.length;
         return v && y ? null : (0, s.jsxs)("div", {
             className: l()(R.mainContainer, a),

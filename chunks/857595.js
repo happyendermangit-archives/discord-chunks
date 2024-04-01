@@ -26,7 +26,7 @@ function(e, t, n) {
             return C
         },
         setSaturation: function() {
-            return A
+            return h
         },
         setSyncForcedColors: function() {
             return N
@@ -41,7 +41,7 @@ function(e, t, n) {
             return p
         },
         systemPrefersReducedMotionChanged: function() {
-            return h
+            return A
         },
         toggleDarkSidebar: function() {
             return f
@@ -120,14 +120,14 @@ function(e, t, n) {
         })
     }
 
-    function h(e) {
+    function A(e) {
         i.default.dispatch({
             type: "ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED",
             systemPrefersReducedMotion: e
         })
     }
 
-    function A(e) {
+    function h(e) {
         i.default.dispatch({
             type: "ACCESSIBILITY_SET_SATURATION",
             saturation: e

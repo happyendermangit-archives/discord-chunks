@@ -5,7 +5,7 @@ function(e, t, n) {
             return S
         },
         sendReply: function() {
-            return h
+            return A
         }
     }), n("411104");
     var i = n("570140"),
@@ -79,7 +79,7 @@ function(e, t, n) {
                 let e = (0, d.toReactionEmoji)(n);
                 await (0, u.addReaction)(o, l.id, e)
             }
-        }, h = async e => {
+        }, A = async e => {
             let {
                 file: t,
                 reply: n,

@@ -27,7 +27,7 @@ function(e, t, n) {
             width: n,
             noArt: r = !1,
             selected: S = !1
-        } = e, h = n < 195, A = (0, a.useStateFromStores)([u.default, d.default], () => u.default.getAllActiveStreams().some(e => {
+        } = e, A = n < 195, h = (0, a.useStateFromStores)([u.default, d.default], () => u.default.getAllActiveStreams().some(e => {
             let {
                 ownerId: t
             } = e;
@@ -35,7 +35,7 @@ function(e, t, n) {
         }));
         return (0, i.jsx)("div", {
             className: s()(T.content, T.streamHidden, {
-                [T.__invalid_small]: h
+                [T.__invalid_small]: A
             }),
             children: (0, i.jsx)(E.default, {
                 className: T.streamHiddenEmptyState,
@@ -43,19 +43,19 @@ function(e, t, n) {
                 noArt: r,
                 selected: S,
                 size: (0, E.getSizeForWidth)(n),
-                header: h ? null : I.default.Messages.STREAM_HIDDEN,
+                header: A ? null : I.default.Messages.STREAM_HIDDEN,
                 description: S ? null : (0, i.jsxs)("div", {
                     className: s()(T.streamHiddenCTA, {
-                        [T.largePaddingTop]: !h
+                        [T.largePaddingTop]: !A
                     }),
                     children: [(0, i.jsx)(c.CallTileCTA, {
-                        isSmall: h,
+                        isSmall: A,
                         children: (0, i.jsx)(o.Text, {
-                            variant: h ? "text-sm/semibold" : "text-md/semibold",
+                            variant: A ? "text-sm/semibold" : "text-md/semibold",
                             color: "none",
                             children: n < 175 ? I.default.Messages.WATCH : I.default.Messages.WATCH_STREAM
                         })
-                    }), A ? (0, i.jsx)(c.CallTileCTA, {
+                    }), h ? (0, i.jsx)(c.CallTileCTA, {
                         className: T.addCTA,
                         tooltip: I.default.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
                         onClick: e => {
@@ -63,7 +63,7 @@ function(e, t, n) {
                                 forceMultiple: !0
                             })
                         },
-                        isSmall: h,
+                        isSmall: A,
                         children: (0, i.jsx)(_.default, {
                             className: T.addStreamIcon
                         })

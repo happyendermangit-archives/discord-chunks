@@ -8,7 +8,7 @@ function(e, t, n) {
             return I
         },
         errorApplyingMediaFilterSettings: function() {
-            return h
+            return A
         },
         fetchVideoFilterAssets: function() {
             return c
@@ -93,7 +93,7 @@ function(e, t, n) {
         })
     }
 
-    function h() {
+    function A() {
         r.default.dispatch({
             type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_ERROR"
         })

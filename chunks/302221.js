@@ -14,7 +14,7 @@ function(e, t, n) {
             return d
         },
         getSaturatedColorHex: function() {
-            return A
+            return h
         },
         hexOpacityToRgba: function() {
             return l
@@ -242,16 +242,16 @@ function(e, t, n) {
                     v: 0
                 }
             }
-        }).sort(h)[0].hex
+        }).sort(A)[0].hex
     }
 
-    function h(e, t) {
+    function A(e, t) {
         let n = e.hsv,
             i = t.hsv;
         return i.s + i.v - (n.s + n.v)
     }
 
-    function A(e) {
+    function h(e) {
         var t;
         let {
             colorRGB: n,

@@ -15,7 +15,7 @@ function(e, t, n) {
         T = [],
         f = 0,
         S = [];
-    class h extends(r = u.default.Store) {
+    class A extends(r = u.default.Store) {
         getIntegrations(e) {
             var t;
             return null !== (t = E.get(e)) && void 0 !== t ? t : S
@@ -39,16 +39,16 @@ function(e, t, n) {
         }
     }
 
-    function A(e) {
+    function h(e) {
         return e.sort((e, t) => e.application.name.localeCompare(t.application.name))
     }
-    l = "PrivateChannelIntegrationStore", (o = "displayName") in(a = h) ? Object.defineProperty(a, o, {
+    l = "PrivateChannelIntegrationStore", (o = "displayName") in(a = A) ? Object.defineProperty(a, o, {
         value: l,
         enumerable: !0,
         configurable: !0,
         writable: !0
     }) : a[o] = l;
-    let m = new h(d.default, {
+    let m = new A(d.default, {
         LOGOUT() {
             E.clear()
         },
@@ -85,7 +85,7 @@ function(e, t, n) {
                 channelId: t,
                 integrations: n
             } = e;
-            E.set(t, A(n.map(c.createPrivateChannelIntegration))), I.set(t, 2)
+            E.set(t, h(n.map(c.createPrivateChannelIntegration))), I.set(t, 2)
         },
         FETCH_PRIVATE_CHANNEL_INTEGRATIONS_FAIL(e) {
             let {
@@ -98,7 +98,7 @@ function(e, t, n) {
                 integration: t
             } = e, n = E.get(t.channel_id);
             if (null == n) return !1;
-            E.set(t.channel_id, A([...n, (0, c.createPrivateChannelIntegration)(t)]))
+            E.set(t.channel_id, h([...n, (0, c.createPrivateChannelIntegration)(t)]))
         },
         PRIVATE_CHANNEL_INTEGRATION_UPDATE(e) {
             let {
@@ -107,7 +107,7 @@ function(e, t, n) {
             if (null == n) return !1;
             let i = (0, c.createPrivateChannelIntegration)(t),
                 r = n.findIndex(e => e.application.id === i.application.id),
-                s = [...n]; - 1 === r ? s.push(i) : s[r] = i, E.set(i.channel_id, A(s))
+                s = [...n]; - 1 === r ? s.push(i) : s[r] = i, E.set(i.channel_id, h(s))
         },
         PRIVATE_CHANNEL_INTEGRATION_DELETE(e) {
             let {

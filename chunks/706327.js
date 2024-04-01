@@ -27,7 +27,7 @@ function(e, t, n) {
             } = (0, _.useProfileMutualsExperiment)({
                 disable: f
             }),
-            h = s.useCallback(async (e, t) => {
+            A = s.useCallback(async (e, t) => {
                 if (!(t > 0)) {
                     r(1);
                     try {
@@ -37,8 +37,8 @@ function(e, t, n) {
                 }
             }, []);
         return s.useEffect(() => {
-            null == t && !f && S && h(e.id, i)
-        }, [f, S, i, h, t, e.bot, e.id]), s.useEffect(() => () => {
+            null == t && !f && S && A(e.id, i)
+        }, [f, S, i, A, t, e.bot, e.id]), s.useEffect(() => () => {
             var e;
             null === (e = E.current) || void 0 === e || e.abort()
         }, []), [i > 1, (0, o.useStateFromStoresArray)([d.default], () => (0, a.sortBy)(t, e => {

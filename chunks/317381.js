@@ -19,8 +19,8 @@ function(e, t, n) {
         T = n("139143"),
         f = n("155268"),
         S = n("761122"),
-        h = n("917107"),
-        A = n("918559"),
+        A = n("917107"),
+        h = n("918559"),
         m = n("981631");
 
     function N(e, t, n) {
@@ -52,8 +52,8 @@ function(e, t, n) {
         U = new Map,
         b = new Map,
         G = new Map;
-    let w = A.ActivityPanelModes.DISCONNECTED,
-        B = A.FocusedActivityLayouts.RESIZABLE;
+    let w = h.ActivityPanelModes.DISCONNECTED,
+        B = h.FocusedActivityLayouts.RESIZABLE;
 
     function k(e) {
         return null != e ? e : "0"
@@ -71,12 +71,12 @@ function(e, t, n) {
         } = e, I = (0, f.default)(s);
         if (null == I) return;
         let S = u.default.getBasicChannel(r),
-            h = null != S && d.default.canBasicChannel(m.BasicPermissions.CONNECT, S) || (null == S ? void 0 : S.type) === m.ChannelTypes.DM || (null == S ? void 0 : S.type) === m.ChannelTypes.GROUP_DM;
+            A = null != S && d.default.canBasicChannel(m.BasicPermissions.CONNECT, S) || (null == S ? void 0 : S.type) === m.ChannelTypes.DM || (null == S ? void 0 : S.type) === m.ChannelTypes.GROUP_DM;
         if (function(e, t) {
                 var n;
                 O.usersHavePlayedByApp.set(e, new Set([...null !== (n = O.usersHavePlayedByApp.get(e)) && void 0 !== n ? n : [], ...t]))
-            }(s, _), !h) return;
-        let A = {
+            }(s, _), !A) return;
+        let h = {
                 activitySessionId: null != c ? c : o,
                 applicationId: s,
                 channelId: r,
@@ -86,10 +86,10 @@ function(e, t, n) {
                 userIds: new Set(_)
             },
             N = l.default.getId(),
-            p = R.get(A.applicationId);
+            p = R.get(h.applicationId);
         _.some(e => e === N) && null != p && (R.set(p.applicationId, {
             ...p,
-            ...A
+            ...h
         }), a.default.dispatch({
             type: "EMBEDDED_ACTIVITY_INSTANCE_CHANGE",
             channelId: r,
@@ -104,7 +104,7 @@ function(e, t, n) {
         let D = (null !== (t = g.get(r)) && void 0 !== t ? t : []).filter(e => e.applicationId !== s),
             v = k(i),
             M = (null !== (n = C.get(v)) && void 0 !== n ? n : []).filter(e => !(e.applicationId === s && e.channelId === r));
-        0 !== _.length && (D.push(A), M.push(A)), g.set(r, D), C.set(v, M)
+        0 !== _.length && (D.push(h), M.push(h)), g.set(r, D), C.set(v, M)
     }
 
     function F(e) {
@@ -144,7 +144,7 @@ function(e, t, n) {
             userIds: new Set([T.id]),
             connectedSince: Date.now(),
             instanceId: a
-        }), w = i !== _.default.getChannelId() || (0, h.default)(r) ? A.ActivityPanelModes.PIP : A.ActivityPanelModes.PANEL, G.set(Y(r, s), Date.now())
+        }), w = i !== _.default.getChannelId() || (0, A.default)(r) ? h.ActivityPanelModes.PIP : h.ActivityPanelModes.PANEL, G.set(Y(r, s), Date.now())
     }
 
     function H() {
@@ -524,7 +524,7 @@ function(e, t, n) {
             let {
                 channelId: t
             } = e;
-            i !== t && w === A.ActivityPanelModes.PANEL && (w = A.ActivityPanelModes.PIP)
+            i !== t && w === h.ActivityPanelModes.PANEL && (w = h.ActivityPanelModes.PIP)
         },
         EMBEDDED_ACTIVITY_DISCONNECT: function(e) {
             let {
@@ -535,7 +535,7 @@ function(e, t, n) {
             i && L.set(t, n)
         },
         CONNECTION_INTERRUPTED: function(e) {
-            e.code === m.RPCCloseCodes.CLOSE_ABNORMAL && (i = void 0, R.clear(), D = !1, w = A.ActivityPanelModes.DISCONNECTED)
+            e.code === m.RPCCloseCodes.CLOSE_ABNORMAL && (i = void 0, R.clear(), D = !1, w = h.ActivityPanelModes.DISCONNECTED)
         },
         CHANNEL_CALL_POPOUT_WINDOW_OPEN: function(e) {
             let {

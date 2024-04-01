@@ -33,8 +33,8 @@ function(e, t, n) {
                 onScroll: T,
                 dir: f = "ltr",
                 fade: S = !1,
-                customTheme: h = !1,
-                style: A,
+                customTheme: A = !1,
+                style: h,
                 ...m
             } = t, N = r.useRef(null), O = r.useRef(null), [p, R] = r.useState(!1), {
                 scrollerRef: C,
@@ -67,12 +67,12 @@ function(e, t, n) {
                 ref: C,
                 className: a()(c, {
                     [u.fade]: S,
-                    [u.customTheme]: h,
+                    [u.customTheme]: A,
                     [e]: !0,
                     [u.managedReactiveScroller]: !0,
                     [u.scrolling]: p && S
                 }),
-                style: A,
+                style: h,
                 dir: f,
                 onScroll: D,
                 ...m,

@@ -43,8 +43,8 @@ function(e, t, n) {
         T = n("571178"),
         f = n("22514"),
         S = n("112686");
-    let h = n("787691"),
-        A = n("199834"),
+    let A = n("787691"),
+        h = n("199834"),
         m = n("746491"),
         N = n("399636"),
         O = n("280067"),
@@ -58,13 +58,13 @@ function(e, t, n) {
             name: l.default.Messages.PACKAGE_ITEM_1_NAME,
             receivedCopy: l.default.Messages.PACKAGES_OPEN_PACKAGE_ITEM_OPENED,
             image: u,
-            sound: h
+            sound: A
         },
         "1214340999644446721": {
             name: l.default.Messages.PACKAGE_ITEM_2_NAME,
             receivedCopy: l.default.Messages.PACKAGES_OPEN_PACKAGE_ITEM_OPENED,
             image: d,
-            sound: A
+            sound: h
         },
         "1214340999644446722": {
             name: l.default.Messages.PACKAGE_ITEM_3_NAME,
@@ -136,5 +136,5 @@ function(e, t, n) {
         P = o.default.Millis.MINUTE + 10 * o.default.Millis.SECOND,
         U = "cc2-4ci4G84",
         b = "https://www.youtube.com/watch?v=".concat(U),
-        G = new Date("2024-04-02T02:00:00.000+07:00")
+        G = new Date("2024-04-02T02:00:00.000-07:00")
 }

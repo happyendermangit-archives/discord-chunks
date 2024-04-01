@@ -8,10 +8,10 @@ function(e, t, n) {
             return m
         },
         trackThreadBrowserOpened: function() {
-            return A
+            return h
         },
         trackThreadBrowserTab: function() {
-            return h
+            return A
         },
         trackThreadNotificationSettingsUpdated: function() {
             return N
@@ -36,11 +36,11 @@ function(e, t, n) {
         f = n("124368"),
         S = n("981631");
 
-    function h() {
+    function A() {
         (0, a.trackWithMetadata)(S.AnalyticEvents.THREAD_BROWSER_TAB_CHANGED)
     }
 
-    function A() {
+    function h() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "Modal";
         (0, a.trackWithMetadata)(S.AnalyticEvents.OPEN_MODAL, {
             type: "Thread Browser",
@@ -68,8 +68,8 @@ function(e, t, n) {
                 return c.MessageNotificationSettings[S.UserNotificationSettings.NULL]
             },
             T = null !== (n = I.default.flags(e.id)) && void 0 !== n ? n : 0,
-            h = E(T),
-            A = I.default.isMuted(e.id),
+            A = E(T),
+            h = I.default.isMuted(e.id),
             m = (0, c.muteConfigToTimestamp)(I.default.getMuteConfig(e.id)),
             {
                 can_send_message: N,
@@ -83,11 +83,11 @@ function(e, t, n) {
                 channel_type: e.type,
                 has_interacted_with_thread: (T & f.ThreadMemberFlags.HAS_INTERACTED) != 0,
                 parent_is_muted: u.default.isGuildOrCategoryOrChannelMuted(s, a),
-                old_thread_notification_setting: h,
-                new_thread_notification_setting: null != t.flags ? E(t.flags) : h,
+                old_thread_notification_setting: A,
+                new_thread_notification_setting: null != t.flags ? E(t.flags) : A,
                 parent_notification_setting: l.channel_message_notification_settings,
-                old_thread_is_muted: A,
-                new_thread_is_muted: null !== (i = t.muted) && void 0 !== i ? i : A,
+                old_thread_is_muted: h,
+                new_thread_is_muted: null !== (i = t.muted) && void 0 !== i ? i : h,
                 old_thread_muted_until: m,
                 new_thread_muted_until: null != t.mute_config ? (0, c.muteConfigToTimestamp)(t.mute_config) : m
             };

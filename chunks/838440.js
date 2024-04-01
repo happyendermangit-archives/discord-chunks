@@ -26,8 +26,8 @@ function(e, t, n) {
             content: T,
             stickers: f,
             uploads: S,
-            channel: h,
-            restrictMentions: A = !0,
+            channel: A,
+            restrictMentions: h = !0,
             respectCooldown: m = !0
         } = e, N = c.default.canUseIncreasedMessageLength(u.default.getCurrentUser());
         return new Promise(e => (function(e) {
@@ -37,14 +37,14 @@ function(e, t, n) {
                 type: T,
                 content: f,
                 stickers: S,
-                uploads: h,
-                channel: A,
+                uploads: A,
+                channel: h,
                 restrictMentions: m,
                 respectCooldown: N,
                 userCanUsePremiumMessageLength: O,
                 resolve: p
             } = e;
-            if (0 === f.length && !(null === (t = T.submit) || void 0 === t ? void 0 : t.allowEmptyMessage) && (null == S || 0 === S.length) && (null == h || 0 === h.length)) {
+            if (0 === f.length && !(null === (t = T.submit) || void 0 === t ? void 0 : t.allowEmptyMessage) && (null == S || 0 === S.length) && (null == A || 0 === A.length)) {
                 p({
                     valid: !1,
                     failureReason: E.MessageRestrictionTypes.EMPTY_MESSAGE
@@ -53,7 +53,7 @@ function(e, t, n) {
             }
             let R = O ? E.MAX_MESSAGE_LENGTH_PREMIUM : E.MAX_MESSAGE_LENGTH;
             if (f.length > R) {
-                if (O || null == A) {
+                if (O || null == h) {
                     ;
                     n = f.length, u = R, (0, r.openModal)(e => (0, i.jsx)(a.default, {
                         title: I.default.Messages.MESSAGE_TOO_LONG_HEADER,
@@ -69,7 +69,7 @@ function(e, t, n) {
                     })
                 } else s.default.dispatch({
                     type: "MESSAGE_LENGTH_UPSELL",
-                    channel: A,
+                    channel: h,
                     content: f
                 });
                 p({
@@ -78,8 +78,8 @@ function(e, t, n) {
                 });
                 return
             }
-            if (null != A) {
-                if (null != A.getGuildId() && N && l.default.getSlowmodeCooldownGuess(A.id) > 0) {
+            if (null != h) {
+                if (null != h.getGuildId() && N && l.default.getSlowmodeCooldownGuess(h.id) > 0) {
                     p({
                         valid: !1,
                         failureReason: E.MessageRestrictionTypes.SLOWMODE_COOLDOWN
@@ -93,11 +93,11 @@ function(e, t, n) {
                             animation: n
                         }
                         of _.RESTRICTIONS) {
-                        let i = e(f, A, m);
+                        let i = e(f, h, m);
                         if (!1 !== i) {
                             c({
                                 analyticsType: t,
-                                channel: A,
+                                channel: h,
                                 onCancel: () => p({
                                     valid: !1,
                                     failureReason: E.MessageRestrictionTypes.SHOUTING_CANCELLED
@@ -135,8 +135,8 @@ function(e, t, n) {
             content: T,
             stickers: f,
             uploads: S,
-            channel: h,
-            restrictMentions: A,
+            channel: A,
+            restrictMentions: h,
             respectCooldown: m,
             userCanUsePremiumMessageLength: N,
             resolve: e

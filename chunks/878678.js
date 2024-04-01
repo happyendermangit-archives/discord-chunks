@@ -27,8 +27,8 @@ function(e, t, n) {
                 onConfirm: T,
                 onCancel: f,
                 onClose: S,
-                onCloseCallback: h,
-                bodyClassName: A,
+                onCloseCallback: A,
+                bodyClassName: h,
                 transitionState: m,
                 loading: N = !1,
                 confirmButtonColor: O = o.Button.Colors.RED,
@@ -40,7 +40,7 @@ function(e, t, n) {
                 var e;
                 return null === (e = R.current) || void 0 === e ? void 0 : e.focus()
             }, 0)
-        }, [p]), r.useLayoutEffect(() => () => null == h ? void 0 : h()), null != E && (t = (0, i.jsx)(o.Button, {
+        }, [p]), r.useLayoutEffect(() => () => null == A ? void 0 : A()), null != E && (t = (0, i.jsx)(o.Button, {
             type: "button",
             look: o.Button.Looks.LINK,
             color: o.Button.Colors.PRIMARY,
@@ -74,7 +74,7 @@ function(e, t, n) {
                     children: s
                 })
             }) : null, (0, i.jsx)(u.ModalContent, {
-                className: a()(d.content, A),
+                className: a()(d.content, h),
                 children: _
             }), (0, i.jsxs)(u.ModalFooter, {
                 children: [n, t]

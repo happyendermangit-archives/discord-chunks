@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         navigateToStage: function() {
-            return A
+            return h
         },
         openEndGuildEventConfirmationModal: function() {
             return I
@@ -20,7 +20,7 @@ function(e, t, n) {
             return E
         },
         shouldShowBlockedUsers: function() {
-            return h
+            return A
         },
         showChannelChangeConfirmationAlert: function() {
             return m
@@ -95,13 +95,13 @@ function(e, t, n) {
         })
     }
 
-    function h(e) {
+    function A(e) {
         let t = a.default.getId(),
             n = (0, d.getStageBlockedUsersCount)(e);
         return !o.default.isModerator(t, e) && n > 0
     }
 
-    function A(e, t) {
+    function h(e, t) {
         var d;
         let _ = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
         t !== e.id && (0, u.setIsOnStartStageScreen)(!0), d = e, (0, s.transitionToChannel)(d.id), t !== e.id && _ && ! function(e) {

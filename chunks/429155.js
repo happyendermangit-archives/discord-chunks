@@ -19,8 +19,8 @@ function(e, t, n) {
             renderInspector: T,
             renderEmptySearchState: f,
             rowCount: S,
-            rowCountBySection: h,
-            rowHeight: A,
+            rowCountBySection: A,
+            rowHeight: h,
             sectionHeaderHeight: m,
             sectionFooterHeight: N
         } = e, O = r.useRef(!1), p = r.useRef(null), R = (0, a.useExpressionPickerStore)(e => e.searchQuery), C = n.useStore(e => e.activeCategoryIndex), g = (0, o.useSynchronizedActiveCategoryIndexForScrollPosition)({
@@ -82,8 +82,8 @@ function(e, t, n) {
                 renderSectionHeader: E,
                 renderSectionFooter: I,
                 rowCount: S,
-                rowCountBySection: h,
-                rowHeight: A,
+                rowCountBySection: A,
+                rowHeight: h,
                 sectionHeaderHeight: m,
                 sectionFooterHeight: N,
                 stickyHeaders: !0,

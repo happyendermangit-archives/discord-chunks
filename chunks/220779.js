@@ -23,8 +23,8 @@ function(e, t, n) {
         T = n("401227"),
         f = n("142550"),
         S = n("981631"),
-        h = n("689938"),
-        A = n("549671");
+        A = n("689938"),
+        h = n("549671");
     let m = (0, I.createChannelRecord)({
             id: "1",
             type: S.ChannelTypes.DM
@@ -44,20 +44,20 @@ function(e, t, n) {
                 shouldShow: o,
                 disablePointerEvents: !1,
                 renderPopout: () => (0, i.jsx)("div", {
-                    className: a()([A.reply, "theme-".concat(c)]),
+                    className: a()([h.reply, "theme-".concat(c)]),
                     ref: t,
                     children: (0, i.jsx)(l.FocusLock, {
                         containerRef: t,
                         children: (0, i.jsxs)("div", {
                             children: [(0, i.jsx)(l.Text, {
                                 variant: "text-xs/bold",
-                                className: A.replyHeader,
-                                children: null != r ? r : h.default.Messages.CHAT
+                                className: h.replyHeader,
+                                children: null != r ? r : A.default.Messages.CHAT
                             }), (0, i.jsx)(O, {
                                 onEnter: e => {
                                     s(e), _()
                                 },
-                                placeholder: null != n ? n : h.default.Messages.CHAT
+                                placeholder: null != n ? n : A.default.Messages.CHAT
                             })]
                         })
                     })
@@ -78,7 +78,7 @@ function(e, t, n) {
             }), (0, i.jsx)(c.default, {
                 ref: t,
                 placeholder: n,
-                className: A.replyInput,
+                className: h.replyInput,
                 showRemainingCharsAfterCount: -1,
                 allowNewLines: !1,
                 maxCharacterCount: f.MAX_CHAR_COUNT,
@@ -148,10 +148,10 @@ function(e, t, n) {
                     })
                 }),
                 children: () => (0, i.jsx)(l.Tooltip, {
-                    text: h.default.Messages.ADD_REACTION,
+                    text: A.default.Messages.ADD_REACTION,
                     children: e => (0, i.jsx)("div", {
                         ...e,
-                        className: A.reaction,
+                        className: h.reaction,
                         children: (0, i.jsx)(T.default, {
                             active: !1,
                             tabIndex: 0,
@@ -173,7 +173,7 @@ function(e, t, n) {
         } = e, [_, c] = r.useState(!1), E = r.useRef(null);
         return p(() => c(!1), E), (0, i.jsx)(i.Fragment, {
             children: (0, i.jsxs)("div", {
-                className: A.reactions,
+                className: h.reactions,
                 children: [u && (0, i.jsx)(R, {
                     onSelectEmoji: e => {
                         null != e && t({
@@ -203,10 +203,10 @@ function(e, t, n) {
                         })
                     },
                     children: (0, i.jsx)(l.Tooltip, {
-                        text: h.default.Messages.MESSAGE_ACTION_REPLY,
+                        text: A.default.Messages.MESSAGE_ACTION_REPLY,
                         children: e => (0, i.jsx)("button", {
                             ...e,
-                            className: a()(A.reaction, A.emojiButton),
+                            className: a()(h.reaction, h.emojiButton),
                             onClick: () => {
                                 t({
                                     interactionType: f.AtomicReactorInteractionTypes.ReplyBegin,

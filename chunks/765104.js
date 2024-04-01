@@ -7,8 +7,8 @@ function(e, t, n) {
         T = n("442837"),
         f = n("570140"),
         S = n("902840"),
-        h = n("212819"),
-        A = n("353926"),
+        A = n("212819"),
+        h = n("353926"),
         m = n("823385"),
         N = n("592125"),
         O = n("430824"),
@@ -35,7 +35,7 @@ function(e, t, n) {
         k = [];
 
     function V() {
-        B = m.default.getProps().results.filter(e => e.type === h.AutocompleterResultTypes.TEXT_CHANNEL && 0 === e.record.type).map(e => e.record.id)
+        B = m.default.getProps().results.filter(e => e.type === A.AutocompleterResultTypes.TEXT_CHANNEL && 0 === e.record.type).map(e => e.record.id)
     }
     class F extends(l = T.default.PersistedStore) {
         getState() {
@@ -45,7 +45,7 @@ function(e, t, n) {
         }
         initialize(e) {
             var t;
-            i = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t, this.waitFor(N.default, g.default, R.default, O.default, A.default), this.syncWith([m.default], V)
+            i = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t, this.waitFor(N.default, g.default, R.default, O.default, h.default), this.syncWith([m.default], V)
         }
         allSummaries() {
             return y

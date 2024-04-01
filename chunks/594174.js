@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         ASSISTANT_WUMPUS_VOICE_USER: function() {
-            return A
+            return h
         },
         mergeUser: function() {
             return p
@@ -37,14 +37,14 @@ function(e, t, n) {
         }) : e[t] = n, e
     }
     let S = {},
-        h = 0,
-        A = "47835198259242069";
+        A = 0,
+        h = "47835198259242069";
 
     function m(e, t, n) {
         let i = e;
         i = null == n ? e.removeGuildAvatarHash(t) : e.addGuildAvatarHash(t, n), S[e.id] = i;
         let r = e !== i;
-        return r && h++, r
+        return r && A++, r
     }
 
     function N(e) {
@@ -86,7 +86,7 @@ function(e, t, n) {
             }(n)), i = i.merge(n)
         }(0, l.validatePremiumType)((0, l.isStaffEnv)(i), t, i.premiumType);
         let a = S[e.id] !== i;
-        return S[e.id] = i, a && h++, a
+        return S[e.id] = i, a && A++, a
     }
 
     function R(e, t) {
@@ -129,8 +129,8 @@ function(e, t, n) {
                 let n = S[t.user.id];
                 null != n && m(n, e.id, t.avatar)
             })
-        }), null != S[c.default.getId()] && (S[A] = new u.default({
-            id: A,
+        }), null != S[c.default.getId()] && (S[h] = new u.default({
+            id: h,
             username: "Wumpus",
             discriminator: "0",
             globalName: "Wumpus",
@@ -527,14 +527,14 @@ function(e, t, n) {
         g((0, o.createPrivateChannelIntegration)(t))
     }
 
-    function eh(e) {
+    function eA(e) {
         let {
             integration: t
         } = e;
         g((0, o.createPrivateChannelIntegration)(t))
     }
 
-    function eA(e) {
+    function eh(e) {
         let {
             users: t,
             familyCenterTeenActivity: n
@@ -617,7 +617,7 @@ function(e, t, n) {
                 }
         }
         getUserStoreVersion() {
-            return h
+            return A
         }
         getUser(e) {
             if (null != e) return S[e]
@@ -706,8 +706,8 @@ function(e, t, n) {
                 LOCAL_MESSAGES_LOADED: en,
                 FETCH_PRIVATE_CHANNEL_INTEGRATIONS_SUCCESS: ef,
                 PRIVATE_CHANNEL_INTEGRATION_CREATE: eS,
-                PRIVATE_CHANNEL_INTEGRATION_UPDATE: eh,
-                FAMILY_CENTER_INITIAL_LOAD: eA,
+                PRIVATE_CHANNEL_INTEGRATION_UPDATE: eA,
+                FAMILY_CENTER_INITIAL_LOAD: eh,
                 FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: em,
                 FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: ep,
                 FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: eR,

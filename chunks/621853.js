@@ -24,14 +24,14 @@ function(e, t, n) {
         T = new Set,
         f = {},
         S = {},
-        h = {},
         A = {},
+        h = {},
         m = {},
         N = !1,
         O = !1;
 
     function p() {
-        I.clear(), T.clear(), f = {}, S = {}, h = {}, A = {}, m = {}, N = !1
+        I.clear(), T.clear(), f = {}, S = {}, A = {}, h = {}, m = {}, N = !1
     }
 
     function R(e) {
@@ -49,7 +49,7 @@ function(e, t, n) {
     }
 
     function g(e) {
-        T.delete(e.userId), h[e.userId] = r()(e.mutualFriends).map(e => ({
+        T.delete(e.userId), A[e.userId] = r()(e.mutualFriends).map(e => ({
             key: e.id,
             user: new o.default(e),
             status: d.default.getStatus(e.id)
@@ -58,7 +58,7 @@ function(e, t, n) {
                 user: t
             } = e;
             return t.username.toLowerCase()
-        }).value(), A[e.userId] = e.mutualFriends.length
+        }).value(), h[e.userId] = e.mutualFriends.length
     }
 
     function L() {
@@ -72,7 +72,7 @@ function(e, t, n) {
     }
 
     function v(e) {
-        var t, n, i, r, a, o, l, d, _, E, T, h, N, O, p, R, C;
+        var t, n, i, r, a, o, l, d, _, E, T, A, N, O, p, R, C;
         if (I.delete(e.user.id), null != e.mutual_guilds) {
             let t = {};
             e.mutual_guilds.forEach(e => {
@@ -91,7 +91,7 @@ function(e, t, n) {
         }
         if (null != e.mutual_friends_count) {
             let t = e.mutual_friends_count;
-            A[e.user.id] = t
+            h[e.user.id] = t
         }
         let g = null !== (_ = e.premium_since) && void 0 !== _ ? _ : null,
             L = e.application;
@@ -104,7 +104,7 @@ function(e, t, n) {
                 bio: null !== (E = null === (a = e.user_profile) || void 0 === a ? void 0 : a.bio) && void 0 !== E ? E : "",
                 profileEffectId: null === (l = e.user_profile) || void 0 === l ? void 0 : null === (o = l.profile_effect) || void 0 === o ? void 0 : o.id,
                 pronouns: null !== (T = null === (d = e.user_profile) || void 0 === d ? void 0 : d.pronouns) && void 0 !== T ? T : "",
-                connectedAccounts: null !== (h = e.connected_accounts.filter(e => s.default.isSupported(e.type))) && void 0 !== h ? h : [],
+                connectedAccounts: null !== (A = e.connected_accounts.filter(e => s.default.isSupported(e.type))) && void 0 !== A ? A : [],
                 applicationRoleConnections: null !== (N = e.application_role_connections) && void 0 !== N ? N : [],
                 premiumSince: null != g ? new Date(g) : null,
                 premiumType: e.premium_type,
@@ -265,10 +265,10 @@ function(e, t, n) {
             return null == t ? null : null === (n = S[e]) || void 0 === n ? void 0 : n[t]
         }
         getMutualFriends(e) {
-            return h[e]
+            return A[e]
         }
         getMutualFriendsCount(e) {
-            return A[e]
+            return h[e]
         }
         getMutualGuilds(e) {
             return m[e]

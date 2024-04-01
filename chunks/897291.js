@@ -22,8 +22,8 @@ function(e, t, n) {
             analyticsLocations: r
         } = (0, l.default)(o.default.GIFT_BUTTON), f = (0, _.useDirectMessageRecipient)(n), {
             Component: S,
-            events: h,
-            play: A
+            events: A,
+            play: h
         } = (0, s.useGiftLottie)();
         if (t) return null;
         let m = () => (0, u.default)({
@@ -48,9 +48,9 @@ function(e, t, n) {
                 "aria-label": I.default.Messages.PREMIUM_GIFT_BUTTON_LABEL,
                 "aria-haspopup": "dialog",
                 onClick: () => {
-                    m(), A()
+                    m(), h()
                 },
-                ...h,
+                ...A,
                 children: (0, i.jsx)(S, {
                     color: "currentColor"
                 })

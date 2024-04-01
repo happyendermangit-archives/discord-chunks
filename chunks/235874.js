@@ -47,8 +47,8 @@ function(e, t, n) {
                 disablePointerEvents: T,
                 ignoreModalClicks: f,
                 closeOnScroll: S,
-                useMouseEnter: h,
-                renderPopout: A,
+                useMouseEnter: A,
+                renderPopout: h,
                 layerContext: m
             } = this.props;
             return (0, a.jsx)(u.BasePopout, {
@@ -74,7 +74,7 @@ function(e, t, n) {
                 nudgeAlignIntoViewport: d,
                 renderPopout: this.renderPopout,
                 spacing: _,
-                shouldShow: null != A && t,
+                shouldShow: null != h && t,
                 onRequestOpen: i,
                 onRequestClose: r,
                 onShiftClick: c,
@@ -82,7 +82,7 @@ function(e, t, n) {
                 disablePointerEvents: T,
                 ignoreModalClicks: f,
                 closeOnScroll: S,
-                useMouseEnter: h,
+                useMouseEnter: A,
                 layerContext: m,
                 children: e
             })

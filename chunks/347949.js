@@ -23,8 +23,8 @@ function(e, t, n) {
         T = n("768581"),
         f = n("747074"),
         S = n("659101"),
-        h = n("689938"),
-        A = n("458186");
+        A = n("689938"),
+        h = n("458186");
 
     function m(e) {
         let {
@@ -41,9 +41,9 @@ function(e, t, n) {
             size: 40
         });
         return (0, i.jsxs)("div", {
-            className: A.recentGameContainer,
+            className: h.recentGameContainer,
             children: [(0, i.jsx)("div", {
-                className: A.recentGameIcon,
+                className: h.recentGameIcon,
                 children: null != S && (0, i.jsx)("img", {
                     alt: "",
                     "aria-hidden": !0,
@@ -52,9 +52,9 @@ function(e, t, n) {
                     height: 40
                 })
             }), (0, i.jsxs)("div", {
-                className: A.recentGameDetails,
+                className: h.recentGameDetails,
                 children: [(0, i.jsxs)("div", {
-                    className: A.recentGameTitleContainer,
+                    className: h.recentGameTitleContainer,
                     children: [(0, i.jsx)(d.Tooltip, {
                         text: s.name,
                         color: d.Tooltip.Colors.PRIMARY,
@@ -62,14 +62,14 @@ function(e, t, n) {
                         children: e => (0, i.jsx)("span", {
                             ref: E,
                             ...e,
-                            className: A.recentGameTitle,
+                            className: h.recentGameTitle,
                             children: s.name
                         })
                     }), n && (0, i.jsx)(d.Tooltip, {
-                        text: h.default.Messages.USER_RECENT_GAMES_YOU_BOTH_PLAY,
+                        text: A.default.Messages.USER_RECENT_GAMES_YOU_BOTH_PLAY,
                         color: d.Tooltip.Colors.PRIMARY,
                         children: e => (0, i.jsx)("div", {
-                            className: A.sharedGameIcon,
+                            className: h.sharedGameIcon,
                             ...e,
                             children: (0, i.jsx)(u.SparklesIcon, {
                                 height: 16,
@@ -99,7 +99,7 @@ function(e, t, n) {
         } = (0, E.useUserRecentGames)(t);
         if (l || u || null == s || 0 === s.length) return null;
         let d = (0, i.jsx)("div", {
-            className: a()(A.recentGames, n),
+            className: a()(h.recentGames, n),
             children: null == s ? void 0 : s.map(e => {
                 var n, r, s;
                 return (0, i.jsx)(m, {
@@ -120,8 +120,8 @@ function(e, t, n) {
         } = e, s = r.useCallback(e => (0, i.jsxs)(S.default, {
             children: [(0, i.jsx)(d.Heading, {
                 variant: "eyebrow",
-                className: A.recentGamesHeading,
-                children: h.default.Messages.RECENT_GAMES
+                className: h.recentGamesHeading,
+                children: A.default.Messages.RECENT_GAMES
             }), e]
         }), []);
         return (0, i.jsx)(N, {
@@ -139,8 +139,8 @@ function(e, t, n) {
             children: (0, i.jsxs)(S.default, {
                 children: [(0, i.jsx)(d.Heading, {
                     variant: "eyebrow",
-                    className: A.recentGamesHeading,
-                    children: h.default.Messages.RECENT_GAMES
+                    className: h.recentGamesHeading,
+                    children: A.default.Messages.RECENT_GAMES
                 }), e]
             })
         }), []);

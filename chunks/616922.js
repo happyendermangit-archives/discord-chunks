@@ -23,7 +23,7 @@ function(e, t, n) {
             return s
         },
         getSpotifyResourceType: function() {
-            return h
+            return A
         },
         isSpotifyParty: function() {
             return E
@@ -69,7 +69,7 @@ function(e, t, n) {
             IOS_APP_STORE: "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8"
         });
 
-    function h(e) {
+    function A(e) {
         if ("string" != typeof e) return null;
         switch (e) {
             case "track":

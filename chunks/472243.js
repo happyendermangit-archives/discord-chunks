@@ -21,8 +21,8 @@ function(e, t, n) {
         T = n("694320"),
         f = n("981631"),
         S = n("474936"),
-        h = n("689938"),
-        A = n("314749");
+        A = n("689938"),
+        h = n("314749");
 
     function m(e) {
         var t, n, r, m;
@@ -32,26 +32,26 @@ function(e, t, n) {
             maxCharacterCount: p,
             showRemainingCharsAfterCount: R,
             className: C
-        } = e, g = (0, a.useStateFromStores)([c.default], () => I.default.canUseIncreasedMessageLength(c.default.getCurrentUser())), L = (0, d.default)(), D = null != p ? p : L, v = null !== (m = null != R ? R : p) && void 0 !== m ? m : L / 10, M = O.length, y = null != N.upsellLongMessages && (null != M ? M : 0) > f.MAX_MESSAGE_LENGTH && g, P = null != N.upsellLongMessages && !g, U = (null === (n = (0, _.usePremiumTrialOffer)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === S.PremiumSubscriptionSKUs.TIER_2, b = D - M, G = b > v, w = b < 0 && U, B = 0 === b ? h.default.Messages.CHARACTER_COUNT_AT_LIMIT : b > 0 ? h.default.Messages.CHARACTER_COUNT_CLOSE_TO_LIMIT.format({
+        } = e, g = (0, a.useStateFromStores)([c.default], () => I.default.canUseIncreasedMessageLength(c.default.getCurrentUser())), L = (0, d.default)(), D = null != p ? p : L, v = null !== (m = null != R ? R : p) && void 0 !== m ? m : L / 10, M = O.length, y = null != N.upsellLongMessages && (null != M ? M : 0) > f.MAX_MESSAGE_LENGTH && g, P = null != N.upsellLongMessages && !g, U = (null === (n = (0, _.usePremiumTrialOffer)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === S.PremiumSubscriptionSKUs.TIER_2, b = D - M, G = b > v, w = b < 0 && U, B = 0 === b ? A.default.Messages.CHARACTER_COUNT_AT_LIMIT : b > 0 ? A.default.Messages.CHARACTER_COUNT_CLOSE_TO_LIMIT.format({
             count: b
-        }) : h.default.Messages.CHARACTER_COUNT_OVER_LIMIT, {
+        }) : A.default.Messages.CHARACTER_COUNT_OVER_LIMIT, {
             analyticsLocations: k
         } = (0, u.default)(l.default.CHARACTER_COUNT);
         return y && b >= 0 || !G || P && !G ? (0, i.jsx)(u.AnalyticsLocationProvider, {
             value: k,
             children: (0, i.jsxs)("div", {
-                className: s()(C, A.characterCount, {
-                    [A.error]: b < 0
+                className: s()(C, h.characterCount, {
+                    [h.error]: b < 0
                 }),
                 children: [(0, i.jsxs)("div", {
-                    className: A.flairContainer,
+                    className: h.flairContainer,
                     children: [y && b >= 0 ? (0, i.jsx)(o.Tooltip, {
-                        text: h.default.Messages.PREMIUM_MESSAGE_LENGTH_CHATBOX_FLAIR.format({
+                        text: A.default.Messages.PREMIUM_MESSAGE_LENGTH_CHATBOX_FLAIR.format({
                             maxLength: D
                         }),
                         position: "top",
                         children: e => (0, i.jsx)(E.default, {
-                            className: A.premiumFlair,
+                            className: h.premiumFlair,
                             ...e
                         })
                     }) : null, G || w ? null : (0, i.jsx)(o.Tooltip, {
@@ -64,11 +64,11 @@ function(e, t, n) {
                         })
                     })]
                 }), (0, i.jsx)(o.HiddenVisually, {
-                    children: h.default.Messages.CHARACTER_COUNT_CLOSE_TO_LIMIT.format({
+                    children: A.default.Messages.CHARACTER_COUNT_CLOSE_TO_LIMIT.format({
                         count: b
                     })
                 }), P && !G ? (0, i.jsx)(T.default, {
-                    className: A.upsell,
+                    className: h.upsell,
                     iconOnly: (null === (r = N.upsellLongMessages) || void 0 === r ? void 0 : r.iconOnly) || !1,
                     remaining: b
                 }) : null]

@@ -25,8 +25,8 @@ function(e, t, n) {
             followupSKUInfo: T,
             onClose: f,
             onComplete: S,
-            onSubscriptionConfirmation: h,
-            analyticsLocations: A,
+            onSubscriptionConfirmation: A,
+            analyticsLocations: h,
             analyticsObject: m,
             analyticsLocation: N,
             analyticsSourceLocation: O,
@@ -46,7 +46,7 @@ function(e, t, n) {
         (0, s.openModalLazy)(async () => {
             let {
                 default: e
-            } = await Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("40326"), n.e("23357"), n.e("15972"), n.e("58625"), n.e("6416"), n.e("14720"), n.e("63438"), n.e("62511"), n.e("61247"), n.e("58600"), n.e("57878"), n.e("32776"), n.e("95900"), n.e("8016"), n.e("17938"), n.e("84992"), n.e("35240"), n.e("59526")]).then(n.bind(n, "7305"));
+            } = await Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("40326"), n.e("23357"), n.e("15972"), n.e("58625"), n.e("6416"), n.e("14720"), n.e("63438"), n.e("62511"), n.e("61247"), n.e("58600"), n.e("57878"), n.e("32776"), n.e("95900"), n.e("8016"), n.e("17938"), n.e("84992"), n.e("35240"), n.e("34853")]).then(n.bind(n, "7305"));
             return n => {
                 let {
                     onClose: r,
@@ -63,13 +63,13 @@ function(e, t, n) {
                     initialPlanId: t,
                     followupSKUInfo: T,
                     onClose: (e, t) => {
-                        r(), null == f || f(e), e && (null == h || h(), !p && null != t && t === I.PremiumSubscriptionSKUs.TIER_2 && !k && _.ComponentDispatch.dispatch(E.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED))
+                        r(), null == f || f(e), e && (null == A || A(), !p && null != t && t === I.PremiumSubscriptionSKUs.TIER_2 && !k && _.ComponentDispatch.dispatch(E.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED))
                     },
                     onComplete: () => {
                         G = !0, null == S || S(), !p && (0, l.setCanPlayWowMoment)(!0)
                     },
-                    onSubscriptionConfirmation: h,
-                    analyticsLocations: A,
+                    onSubscriptionConfirmation: A,
+                    analyticsLocations: h,
                     analyticsObject: m,
                     analyticsLocation: N,
                     analyticsSourceLocation: O,
@@ -96,8 +96,8 @@ function(e, t, n) {
                     is_gift: p,
                     eligible_for_trial: null != g,
                     application_id: v,
-                    location_stack: A
-                }), (0, a.clearError)(), (0, o.clearPurchaseTokenAuthState)(), null == f || f(G), G && (null == h || h())
+                    location_stack: h
+                }), (0, a.clearError)(), (0, o.clearPurchaseTokenAuthState)(), null == f || f(G), G && (null == A || A())
             }
         })
     }

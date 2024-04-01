@@ -16,8 +16,8 @@ function(e, t, n) {
         T = n("785717"),
         f = n("318661"),
         S = n("747074"),
-        h = n("131640"),
-        A = n("958120"),
+        A = n("131640"),
+        h = n("958120"),
         m = n("228168");
 
     function N(e) {
@@ -57,7 +57,7 @@ function(e, t, n) {
                         user: t,
                         guildId: n,
                         profileType: m.UserProfileTypes.POPOUT,
-                        children: [(0, i.jsx)(h.BiteSizeProfileHeader, {
+                        children: [(0, i.jsx)(A.BiteSizeProfileHeader, {
                             user: t,
                             displayProfile: L,
                             guildId: n,
@@ -66,7 +66,7 @@ function(e, t, n) {
                             disableUserProfileLink: p,
                             isHovering: D
                         }), (0, i.jsx)(S.default.Inner, {
-                            children: (0, i.jsx)(A.default, {
+                            children: (0, i.jsx)(h.default, {
                                 user: t,
                                 displayProfile: L,
                                 guild: v,

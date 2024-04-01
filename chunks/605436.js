@@ -32,7 +32,7 @@ function(e, t, n) {
             return B
         },
         getRoleRowData: function() {
-            return A
+            return h
         },
         getRolesRows: function() {
             return g
@@ -50,7 +50,7 @@ function(e, t, n) {
             return H
         },
         isAdmin: function() {
-            return h
+            return A
         },
         isEveryoneRoleId: function() {
             return p
@@ -84,11 +84,11 @@ function(e, t, n) {
         f = n("981631"),
         S = n("689938");
 
-    function h(e) {
+    function A(e) {
         return i.has(e.permissions, f.Permissions.ADMINISTRATOR)
     }
 
-    function A(e) {
+    function h(e) {
         var t, n;
         let s = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         let a = (n = e, i.has(n.permissions, f.Permissions.ADMINISTRATOR) ? T.RowType.ADMINISTRATOR : T.RowType.ROLE);
@@ -97,15 +97,15 @@ function(e, t, n) {
             colorString: null !== (t = e.colorString) && void 0 !== t ? t : (0, r.int2hex)(f.DEFAULT_ROLE_COLOR),
             name: e.name,
             id: e.id,
-            disabled: h(e) || s,
+            disabled: A(e) || s,
             key: "".concat(a, ":").concat(e.id),
             tags: e.tags
         }
     }
 
     function m(e, t) {
-        let n = h(e) ? 0 : 1,
-            i = h(t) ? 0 : 1;
+        let n = A(e) ? 0 : 1,
+            i = A(t) ? 0 : 1;
         return n !== i ? n - i : t.position - e.position
     }
 
@@ -142,18 +142,18 @@ function(e, t, n) {
 
     function g(e, t, n, i) {
         let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
-        return Object.values(t).filter(t => !h(t) && O(n, t.id, i) && C(e, t) && r(t.name)).sort(m).map(e => A(e))
+        return Object.values(t).filter(t => !A(t) && O(n, t.id, i) && C(e, t) && r(t.name)).sort(m).map(e => h(e))
     }
 
     function L(e, t, n, r) {
         let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
-        return Object.values(t).filter(t => !h(t) && O(n, t.id, r) && C(e, t) && s(t.name)).sort(m).map(e => A(e, i.has(e.permissions, r)))
+        return Object.values(t).filter(t => !A(t) && O(n, t.id, r) && C(e, t) && s(t.name)).sort(m).map(e => h(e, i.has(e.permissions, r)))
     }
 
     function D(e, t, n, i, r) {
         var s, a, o, l, u;
         let d = [];
-        return 0 === (d = (s = e, a = t, o = n, l = i, u = r, Object.values(a).filter(e => h(e) || !O(o, e.id, l, u) && C(s, e))).sort(m).map(e => A(e))).length ? N(S.default.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : d
+        return 0 === (d = (s = e, a = t, o = n, l = i, u = r, Object.values(a).filter(e => A(e) || !O(o, e.id, l, u) && C(s, e))).sort(m).map(e => h(e))).length ? N(S.default.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : d
     }
 
     function v(e, t, n, r, s) {
@@ -161,8 +161,8 @@ function(e, t, n) {
         let _ = [];
         return 0 === (_ = (a = e, o = t, l = n, u = r, d = s, Object.values(o).filter(e => {
             var t;
-            return h(e) || !O(l, e.id, u, d) && C(a, e) || i.has(i.combine(e.permissions, null === (t = l.permissionOverwrites[e.id]) || void 0 === t ? void 0 : t.allow), u)
-        })).sort(m).map(e => A(e, i.has(e.permissions, r)))).length ? N(S.default.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : _
+            return A(e) || !O(l, e.id, u, d) && C(a, e) || i.has(i.combine(e.permissions, null === (t = l.permissionOverwrites[e.id]) || void 0 === t ? void 0 : t.allow), u)
+        })).sort(m).map(e => h(e, i.has(e.permissions, r)))).length ? N(S.default.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : _
     }
 
     function M(e, t) {

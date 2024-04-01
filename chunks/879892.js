@@ -24,8 +24,8 @@ function(e, t, n) {
             analyticsLocation: T,
             analyticsSourceLocation: f,
             numberOfBoostsToAdd: S,
-            onClose: h,
-            closeLayer: A,
+            onClose: A,
+            closeLayer: h,
             onSubscriptionConfirmation: m,
             guild: N,
             handleSubscribeModalClose: O,
@@ -59,7 +59,7 @@ function(e, t, n) {
         let v = (0, c.getAvailableGuildBoostSlots)(u.default.boostSlots),
             M = v.length,
             y = e => {
-                null == h || h(), null == O || O(e)
+                null == A || A(), null == O || O(e)
             };
         if (M > 0 && (null == S || M >= S)) {
             let e;
@@ -67,7 +67,7 @@ function(e, t, n) {
             let t = await (0, r.openModalLazy)(async () => {
                 let {
                     default: t
-                } = await Promise.all([n.e("49237"), n.e("99387"), n.e("15972"), n.e("58625"), n.e("63438"), n.e("62511"), n.e("8016"), n.e("22646"), n.e("68451"), n.e("98747")]).then(n.bind(n, "760558"));
+                } = await Promise.all([n.e("49237"), n.e("99387"), n.e("15972"), n.e("58625"), n.e("63438"), n.e("62511"), n.e("8016"), n.e("22646"), n.e("68451"), n.e("72966")]).then(n.bind(n, "760558"));
                 return n => {
                     let {
                         onClose: r,
@@ -95,7 +95,7 @@ function(e, t, n) {
             analyticsSourceLocation: f,
             guildId: N.id,
             closeLayer: () => {
-                null == h || h(), null == A || A(), _.default.track(I.AnalyticEvents.MODAL_DISMISSED, {
+                null == A || A(), null == h || h(), _.default.track(I.AnalyticEvents.MODAL_DISMISSED, {
                     type: I.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
                     location_section: T.section
                 })

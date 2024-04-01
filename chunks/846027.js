@@ -36,7 +36,7 @@ function(e, t, n) {
         {
             enable: f,
             isNotSupported: S,
-            trackToggleSelfMute: h
+            trackToggleSelfMute: A
         } = T = n("929782");
     t.default = {
         enable: f,
@@ -47,7 +47,7 @@ function(e, t, n) {
                 usedKeybind: n = !1,
                 playSoundEffect: r = !0
             } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            return S() ? Promise.resolve() : (h({
+            return S() ? Promise.resolve() : (A({
                 usedKeybind: n
             }), o.default.isEnabled()) ? i.default.dispatch({
                 type: "AUDIO_TOGGLE_SELF_MUTE",

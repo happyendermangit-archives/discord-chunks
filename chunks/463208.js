@@ -5,7 +5,7 @@ function(e, t, n) {
             return S
         },
         TextInput: function() {
-            return h
+            return A
         }
     });
     var i, r = n("735250"),
@@ -87,7 +87,7 @@ function(e, t, n) {
             })
         })
     }
-    class h extends(i = s.Component) {
+    class A extends(i = s.Component) {
         render() {
             var e, t;
             let {
@@ -172,7 +172,7 @@ function(e, t, n) {
             }
         }
     }
-    T(h, "Sizes", f), T(h, "contextType", d.FormContext), T(h, "defaultProps", {
+    T(A, "Sizes", f), T(A, "contextType", d.FormContext), T(A, "defaultProps", {
         name: "",
         size: f.DEFAULT,
         disabled: !1,

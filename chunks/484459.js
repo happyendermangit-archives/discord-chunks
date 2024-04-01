@@ -20,8 +20,8 @@ function(e, t, n) {
             withMutualGuilds: T = !1,
             withMutualFriendsCount: f = !1,
             friendToken: S,
-            preloadUserBanner: h = !0,
-            dispatchWait: A = !1,
+            preloadUserBanner: A = !0,
+            dispatchWait: h = !1,
             guildId: m,
             channelId: N
         } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
@@ -35,9 +35,9 @@ function(e, t, n) {
             R = d.default.getMutualFriendsCount(e),
             C = d.default.isFetchingProfile(e),
             g = (null == O ? void 0 : O.profileFetchFailed) || !C && (!Array.isArray(p) && T || null == R && f),
-            L = h ? _.default : void 0,
+            L = A ? _.default : void 0,
             D = !1;
-        null != m && (D = null == d.default.getGuildMemberProfile(e, m)), !(!g && !D && (C || Date.now() - (null !== (E = null == O ? void 0 : O.lastFetched) && void 0 !== E ? E : 0) < 6e4)) && (A ? await i.default.wait(() => (0, r.fetchProfile)(e, {
+        null != m && (D = null == d.default.getGuildMemberProfile(e, m)), !(!g && !D && (C || Date.now() - (null !== (E = null == O ? void 0 : O.lastFetched) && void 0 !== E ? E : 0) < 6e4)) && (h ? await i.default.wait(() => (0, r.fetchProfile)(e, {
             withMutualGuilds: T,
             withMutualFriendsCount: f,
             friendToken: S,

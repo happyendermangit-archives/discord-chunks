@@ -41,7 +41,7 @@ function(e, t, n) {
             return S
         },
         calculateLocaleOptions: function() {
-            return A
+            return h
         }
     });
     var i, r, s, a, o, l, u = n("689938");
@@ -89,9 +89,9 @@ function(e, t, n) {
             43: [() => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_EMOJI, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_EMOTES, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_NITRO, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ANIME, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_CUTE, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GIVEAWAYS, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_AESTHETIC, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ART, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MEMES],
             49: [() => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_APPS, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_BOTS, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_DISCORD_BOT, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GIVEAWAYS, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SUPPORT, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FUN, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MEMES]
         },
-        h = ["en-GB"];
+        A = ["en-GB"];
 
-    function A() {
+    function h() {
         return u.default.getAvailableLocales().map(e => {
             let t;
             let {
@@ -112,10 +112,10 @@ function(e, t, n) {
                 label: r,
                 image: t
             }
-        }).filter(e => !h.includes(e.value))
+        }).filter(e => !A.includes(e.value))
     }
-    A();
-    let m = u.default.getLanguages().filter(e => !h.includes(e.code)).map(e => "en-US" === e.code ? {
+    h();
+    let m = u.default.getLanguages().filter(e => !A.includes(e.code)).map(e => "en-US" === e.code ? {
             ...e,
             name: u.default.Messages.en
         } : e),

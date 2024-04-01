@@ -16,7 +16,7 @@ function(e, t, n) {
             return (0, d.getAPIBaseURL)() + E.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(E.PaymentGateways.BRAINTREE, i)
         },
         open: e => {
-            r = e, window.open(e), h.emitChange()
+            r = e, window.open(e), A.emitChange()
         }
     });
     class S extends(s = u.default.Store) {
@@ -39,7 +39,7 @@ function(e, t, n) {
         configurable: !0,
         writable: !0
     }) : a[o] = l;
-    let h = new S(_.default, {
+    let A = new S(_.default, {
         BRAINTREE_CREATE_CLIENT_SUCCESS: function(e) {
             let {
                 client: t
@@ -86,5 +86,5 @@ function(e, t, n) {
             f = null
         }
     });
-    t.default = h
+    t.default = A
 }

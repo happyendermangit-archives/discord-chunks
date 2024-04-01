@@ -30,12 +30,12 @@ function(e, t, n) {
         return I[e]
     }
 
-    function h(e) {
+    function A(e) {
         var t;
         return null === (t = I[e]) || void 0 === t ? void 0 : t.message
     }
 
-    function A(e) {
+    function h(e) {
         let {
             threads: t,
             mostRecentMessages: n
@@ -74,7 +74,7 @@ function(e, t, n) {
                 let n = function(e) {
                         return I[e]
                     }(e),
-                    i = h(e);
+                    i = A(e);
                 null != n && null != i && (I[e] = {
                     ...n,
                     message: (0, u.updateMessageRecord)(i, t)
@@ -83,7 +83,7 @@ function(e, t, n) {
         },
         MESSAGE_DELETE: function(e) {
             return function(e, t) {
-                let n = h(e);
+                let n = A(e);
                 return (null == n ? void 0 : n.id) === t && (delete I[e], !0)
             }(e.channelId, e.id)
         },
@@ -93,7 +93,7 @@ function(e, t, n) {
             } = e;
             for (let e in t) f(e, t[e].most_recent_message)
         },
-        LOAD_ARCHIVED_THREADS_SUCCESS: A,
-        LOAD_THREADS_SUCCESS: A
+        LOAD_ARCHIVED_THREADS_SUCCESS: h,
+        LOAD_THREADS_SUCCESS: h
     })
 }

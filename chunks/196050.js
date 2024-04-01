@@ -20,13 +20,13 @@ function(e, t, n) {
             fileName: T,
             focusProps: f,
             onClick: S,
-            ...h
-        } = e, A = r.useMemo(() => s.designConfig.getDefaultLinkInterceptor(t), [t]), m = r.useCallback(e => {
+            ...A
+        } = e, h = r.useMemo(() => s.designConfig.getDefaultLinkInterceptor(t), [t]), m = r.useCallback(e => {
             o.default.track(u.AnalyticEvents.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
                 attachment_type: null == I ? void 0 : I[0],
                 attachment_subtype: null == I ? void 0 : I[1]
-            }), null == S || S(), null == A || A(e)
-        }, [A, I, S]);
+            }), null == S || S(), null == h || h(e)
+        }, [h, I, S]);
         return null != T ? (0, i.jsx)(a.Anchor, {
             href: t,
             onClick: m,
@@ -35,7 +35,7 @@ function(e, t, n) {
             className: n,
             "aria-label": d.default.Messages.DOWNLOAD,
             focusProps: f,
-            ...h,
+            ...A,
             children: T
         }) : (0, i.jsx)(a.Anchor, {
             href: t,
@@ -45,7 +45,7 @@ function(e, t, n) {
             className: n,
             "aria-label": d.default.Messages.DOWNLOAD,
             focusProps: f,
-            ...h,
+            ...A,
             children: (0, i.jsx)(l.default, {
                 className: _
             })

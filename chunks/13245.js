@@ -202,7 +202,7 @@ function(e, t, n) {
                     right: 0,
                     bottom: 0
                 },
-                h = {
+                A = {
                     width: 0,
                     height: 0
                 };
@@ -221,16 +221,16 @@ function(e, t, n) {
                             T = (0, u.getFullCoordsFromLayoutSize)(i, r, E), f = (0, u.getSizeFromLayoutSize)(r, E), (0, _.deleteWidget)(n);
                             break;
                         case c.OverlayWidgets.GUILDS_TEXT:
-                            S = (0, u.getFullCoordsFromLayoutSize)(i, r, E), h = (0, u.getSizeFromLayoutSize)(r, E), (0, _.deleteWidget)(n)
+                            S = (0, u.getFullCoordsFromLayoutSize)(i, r, E), A = (0, u.getSizeFromLayoutSize)(r, E), (0, _.deleteWidget)(n)
                     }
                 }), e) {
-                let e = "auto" === h.width ? o.minSize.width : h.width;
+                let e = "auto" === A.width ? o.minSize.width : A.width;
                 e -= r.minSize.width;
                 let [n, s] = (0, u.getLeftWidgetSpecs)(S, {
-                    ...h,
+                    ...A,
                     width: r.minSize.width
                 }, E), [l, d] = (0, u.getRightWidgetSpecs)(S, {
-                    ...h,
+                    ...A,
                     width: e
                 }, E, {
                     x: 10,

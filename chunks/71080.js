@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         ADVANCED_MODE_ON_KEY: function() {
-            return h
+            return A
         },
         AudienceSelectorSections: function() {
             return l
@@ -14,7 +14,7 @@ function(e, t, n) {
             return o
         },
         getChannelPermissionSpecMap: function() {
-            return A
+            return h
         }
     });
     var i, r, s, a, o, l, u, d, _ = n("230711"),
@@ -25,9 +25,9 @@ function(e, t, n) {
         f = n("689938");
     (i = o || (o = {}))[i.EMPTY_STATE = 0] = "EMPTY_STATE", i[i.ADMINISTRATOR = 1] = "ADMINISTRATOR", i[i.ROLE = 2] = "ROLE", i[i.OWNER = 3] = "OWNER", i[i.MEMBER = 4] = "MEMBER", i[i.USER = 5] = "USER", i[i.GUILD = 6] = "GUILD", (r = l || (l = {}))[r.ROLES = 0] = "ROLES", r[r.MEMBERS = 1] = "MEMBERS", r[r.USERS = 2] = "USERS", r[r.GUILDS = 3] = "GUILDS";
     let S = 20,
-        h = "channelPermissionSettingsAdvancedModeOn";
+        A = "channelPermissionSettingsAdvancedModeOn";
 
-    function A(e, t, n, i) {
+    function h(e, t, n, i) {
         let r = e.type;
         return {
             [T.Permissions.VIEW_CHANNEL.toString()]: {

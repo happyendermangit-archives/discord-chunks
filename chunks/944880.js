@@ -16,12 +16,12 @@ function(e, t, n) {
         T = n("474936"),
         f = n("735825");
     let S = null,
-        h = !1,
-        A = 0;
+        A = !1,
+        h = 0;
 
     function m(e) {
         let t = o.default.createFromServer(e.entitlement);
-        (0, I.isPremiumTier2Entitlement)(t) ? (A = 0, N({
+        (0, I.isPremiumTier2Entitlement)(t) ? (h = 0, N({
             forceRefresh: !0,
             retryOnFail: !0
         })) : (0, I.isValidTenureRewardEntitlement)(t) && null != E.default.getTenureRewardStatusForRewardId(t.skuId) && s.default.dispatch({
@@ -69,12 +69,12 @@ function(e, t, n) {
         let {
             retryOnFail: e = !1
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        !h && (h = !0, await _.syncUserTenureRewardStatus(), h = !1, s.default.wait(() => (function() {
+        !A && (A = !0, await _.syncUserTenureRewardStatus(), A = !1, s.default.wait(() => (function() {
             var e;
             let {
                 retryOnFail: t = !1
             } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            if (p(), E.default.getFetchState() !== E.FetchState.FETCHED || h) return;
+            if (p(), E.default.getFetchState() !== E.FetchState.FETCHED || A) return;
             let n = null !== (e = E.default.getTenureRewardStatusForRewardId(f.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== e ? e : E.default.getTenureRewardStatusForRewardId(f.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS);
             if ((null == n ? void 0 : n.redeemable_at) == null && !1 === t) return;
             let i = (null == n ? void 0 : n.redeemable_at) != null ? new Date(n.redeemable_at).getTime() - Date.now() : null;
@@ -83,10 +83,10 @@ function(e, t, n) {
                 let {
                     retryOnFail: n
                 } = e;
-                return null == (null !== (t = E.default.getTenureRewardStatusForRewardId(f.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== t ? t : E.default.getTenureRewardStatusForRewardId(f.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS)) && !0 === n && A < 1
+                return null == (null !== (t = E.default.getTenureRewardStatusForRewardId(f.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== t ? t : E.default.getTenureRewardStatusForRewardId(f.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS)) && !0 === n && h < 1
             }({
                 retryOnFail: t
-            }) && (A += 1, S = setTimeout(() => N({
+            }) && (h += 1, S = setTimeout(() => N({
                 forceRefresh: !0
             }), 5e3))
         })({

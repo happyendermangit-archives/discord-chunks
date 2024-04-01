@@ -389,7 +389,7 @@ function(e, t, n) {
         }
     }
     let S = new f;
-    class h extends i.MessageType {
+    class A extends i.MessageType {
         internalJsonWrite(e, t) {
             return this.refJsonWriter.scalar(12, e.value, "value", !1, !0)
         }
@@ -434,5 +434,5 @@ function(e, t, n) {
             }])
         }
     }
-    new h
+    new A
 }

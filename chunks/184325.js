@@ -22,8 +22,8 @@ function(e, t, n) {
         T = n("785717"),
         f = n("221292"),
         S = n("290421"),
-        h = n("318661"),
-        A = n("228168"),
+        A = n("318661"),
+        h = n("228168"),
         m = n("981631"),
         N = n("232700"),
         O = n("689938"),
@@ -41,7 +41,7 @@ function(e, t, n) {
             shrinkToSize: g,
             isTryItOutFlow: L,
             size: D = 0
-        } = e, v = (0, h.default)(n.id, i), {
+        } = e, v = (0, A.default)(n.id, i), {
             analyticsLocations: M
         } = (0, c.default)(_.default.BADGE), {
             trackUserProfileAction: y,
@@ -52,7 +52,7 @@ function(e, t, n) {
             location: "user_profile"
         }), b = (0, S.default)(v).map(e => ({
             ...e,
-            src: (0, A.getBadgeAsset)(e.icon)
+            src: (0, h.getBadgeAsset)(e.icon)
         })), G = (0, d.useWindowDispatch)();
         if (n.isClyde()) return (0, s.jsx)("div", {
             className: o()(r, p.container, p.clydeBadgeList),

@@ -21,8 +21,8 @@ function(e, t, n) {
         T = n("709054"),
         f = n("941532"),
         S = n("713938"),
-        h = n("981631"),
-        A = n("231338"),
+        A = n("981631"),
+        h = n("231338"),
         m = n("689938"),
         N = n("645392");
 
@@ -38,7 +38,7 @@ function(e, t, n) {
             } = e,
             g = new Date(T.default.extractTimestamp(r.id)),
             L = (0, S.getSecurityMessage)(s),
-            D = (0, I.hasFlag)(null !== (t = r.flags) && void 0 !== t ? t : 0, h.ApplicationFlags.EMBEDDED);
+            D = (0, I.hasFlag)(null !== (t = r.flags) && void 0 !== t ? t : 0, A.ApplicationFlags.EMBEDDED);
         if (null != o && !D && !R) {
             let e = new URL(o);
             n = null != e.host && e.host.length > 0 ? e.origin : e.href
@@ -59,7 +59,7 @@ function(e, t, n) {
                 text: m.default.Messages.OAUTH2_DETAILS_CREATION_DATE.format({
                     date: g
                 })
-            }), s.includes(A.OAuth2Scopes.BOT) && null != O ? (0, i.jsx)(p, {
+            }), s.includes(h.OAuth2Scopes.BOT) && null != O ? (0, i.jsx)(p, {
                 icon: c.default,
                 text: m.default.Messages.OAUTH2_DETAILS_GUILDS.format({
                     guildCount: O

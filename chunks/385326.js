@@ -16,8 +16,8 @@ function(e, t, n) {
         T = n("703656"),
         f = n("607187"),
         S = n("937995"),
-        h = n("366050"),
-        A = n("944486"),
+        A = n("366050"),
+        h = n("944486"),
         m = n("594174"),
         N = n("566620"),
         O = n("317381"),
@@ -37,14 +37,14 @@ function(e, t, n) {
         let {
             channel: t,
             isLoading: n
-        } = e, [s, g] = r.useState(!1), b = (0, o.useStateFromStores)([O.default], () => O.default.getSelfEmbeddedActivityForChannel(t.id)), G = (0, o.useStateFromStores)([O.default], () => O.default.getActivityPanelMode()), w = null == b ? void 0 : b.instanceId, B = (0, o.useStateFromStores)([A.default], () => A.default.getChannelId() === t.id), {
+        } = e, [s, g] = r.useState(!1), b = (0, o.useStateFromStores)([O.default], () => O.default.getSelfEmbeddedActivityForChannel(t.id)), G = (0, o.useStateFromStores)([O.default], () => O.default.getActivityPanelMode()), w = null == b ? void 0 : b.instanceId, B = (0, o.useStateFromStores)([h.default], () => h.default.getChannelId() === t.id), {
             dockedRect: k,
             isHidden: V
-        } = (0, o.useStateFromStoresObject)([h.default], () => {
-            let e = h.default.pipWindow;
+        } = (0, o.useStateFromStoresObject)([A.default], () => {
+            let e = A.default.pipWindow;
             return {
-                dockedRect: null != e ? h.default.getDockedRect(e.id) : null,
-                isHidden: h.default.isEmbeddedActivityHidden()
+                dockedRect: null != e ? A.default.getDockedRect(e.id) : null,
+                isHidden: A.default.isEmbeddedActivityHidden()
             }
         }), F = (0, o.useStateFromStores)([I.default], () => I.default.getWindow(v.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), {
             activityParticipant: x,
@@ -54,7 +54,7 @@ function(e, t, n) {
             activityParticipant: null != b ? E.default.getParticipant(t.id, b.applicationId) : null,
             selectedParticipant: E.default.getSelectedParticipant(t.id),
             participantsOpen: E.default.getParticipantsOpen(t.id)
-        })), j = B || null != F, W = (0, p.default)(t.id), K = W && (null == H ? void 0 : H.type) !== M.ParticipantTypes.ACTIVITY, z = !W && G === D.ActivityPanelModes.PIP, X = (!j || j && (K || z) && null == k) && !V, Q = X && null != h.default.pipVideoWindow && null != h.default.pipActivityWindow;
+        })), j = B || null != F, W = (0, p.default)(t.id), K = W && (null == H ? void 0 : H.type) !== M.ParticipantTypes.ACTIVITY, z = !W && G === D.ActivityPanelModes.PIP, X = (!j || j && (K || z) && null == k) && !V, Q = X && null != A.default.pipVideoWindow && null != A.default.pipActivityWindow;
 
         function q() {
             var e;
@@ -90,7 +90,7 @@ function(e, t, n) {
                 let {
                     idle: T,
                     onActive: S,
-                    onForceIdle: h
+                    onForceIdle: A
                 } = e;
                 return (0, i.jsxs)(f.default, {
                     className: a()(y.root, {
@@ -103,7 +103,7 @@ function(e, t, n) {
                         [y.multiPIPMode]: Q
                     }),
                     noBorder: !X,
-                    children: [(u = S, d = h, _ = T, c = z, E = Z, X && null != b && ((null == x ? void 0 : x.type) === M.ParticipantTypes.ACTIVITY || c) ? (null === (I = b.config) || void 0 === I ? void 0 : I.useInteractivePIP) ? (0, i.jsx)(C.InteractivePIPHeader, {
+                    children: [(u = S, d = A, _ = T, c = z, E = Z, X && null != b && ((null == x ? void 0 : x.type) === M.ParticipantTypes.ACTIVITY || c) ? (null === (I = b.config) || void 0 === I ? void 0 : I.useInteractivePIP) ? (0, i.jsx)(C.InteractivePIPHeader, {
                         onJumpToChannel: q,
                         applicationId: b.applicationId,
                         channel: t,

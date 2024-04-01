@@ -25,7 +25,7 @@ function(e, t, n) {
             reaction: t,
             altText: n,
             ...i
-        } = e, r = await h(i);
+        } = e, r = await A(i);
         (0, d.sendReaction)({
             file: r,
             altText: n,
@@ -37,7 +37,7 @@ function(e, t, n) {
             reply: t,
             altText: n,
             ...i
-        } = e, r = await h(i);
+        } = e, r = await A(i);
         (0, d.sendReply)({
             file: r,
             altText: n,
@@ -55,7 +55,7 @@ function(e, t, n) {
         } = (0, c.getProfileInfo)(s, "black"), o = "dark" === a, d = (0, c.getActivityPlatform)(i), {
             assets: _,
             application_id: I
-        } = i, T = (0, l.getAssetImage)(I, null == _ ? void 0 : _.large_image, 64), f = null == r ? void 0 : r.getIconURL(64), S = null != d ? o ? d.icon.darkPNG : d.icon.lightPNG : i.type === E.ActivityTypes.PLAYING ? o ? n("414575") : n("807612") : null, h = i.type === E.ActivityTypes.HANG_STATUS && (null === (t = i.emoji) || void 0 === t ? void 0 : t.id) != null ? (0, u.getEmojiUrl)({
+        } = i, T = (0, l.getAssetImage)(I, null == _ ? void 0 : _.large_image, 64), f = null == r ? void 0 : r.getIconURL(64), S = null != d ? o ? d.icon.darkPNG : d.icon.lightPNG : i.type === E.ActivityTypes.PLAYING ? o ? n("414575") : n("807612") : null, A = i.type === E.ActivityTypes.HANG_STATUS && (null === (t = i.emoji) || void 0 === t ? void 0 : t.id) != null ? (0, u.getEmojiUrl)({
             id: i.emoji.id,
             name: i.emoji.name,
             animated: !1
@@ -70,11 +70,11 @@ function(e, t, n) {
             ...null != f && {
                 ApplicationImage: f
             },
-            ...null != h && {
-                HangStatus: h
+            ...null != A && {
+                HangStatus: A
             }
         }
-    }, h = async e => {
+    }, A = async e => {
         let {
             user: t,
             activity: n,
@@ -106,7 +106,7 @@ function(e, t, n) {
                 fileType: "png"
             }
         })
-    }, A = (e, t) => {
+    }, h = (e, t) => {
         e.setColor("dark" === t ? "white" : "black"), e.drawPath(_.ACTIVITY_IMAGE_FALLBACK_PATH, {
             x: _.padding,
             y: _.padding
@@ -143,7 +143,7 @@ function(e, t, n) {
         }, {
             w: _.activitySize,
             h: _.activitySize
-        }, 8) : A(e, o);
+        }, 8) : h(e, o);
         let l = _.activitySize + _.padding + _.imagePadding;
         e.setColor("dark" === o ? "white" : "rgb(6, 6, 7)"), e.setFont({
             size: 16,
@@ -229,7 +229,7 @@ function(e, t, n) {
         }, {
             w: _.activitySize,
             h: _.activitySize
-        }, 8) : A(e, o);
+        }, 8) : h(e, o);
         let l = _.activitySize + _.padding + _.imagePadding;
         e.setColor("dark" === o ? "white" : "rgb(6, 6, 7)"), e.setFont({
             size: 14,
@@ -326,7 +326,7 @@ function(e, t, n) {
         }, {
             w: _.activitySize,
             h: _.activitySize
-        }, 8) : A(e, o);
+        }, 8) : h(e, o);
         let l = _.activitySize + _.padding + _.imagePadding;
         e.setColor("dark" === o ? "white" : "rgb(6, 6, 7)"), e.setFont({
             size: 16,

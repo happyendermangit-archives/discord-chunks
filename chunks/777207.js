@@ -28,8 +28,8 @@ function(e, t, n) {
                     ...f
                 } = e,
                 S = "",
-                h = {};
-            if (null != c && (1 === c ? S = u.lineClamp1 : (S = u.lineClamp2Plus, h = {
+                A = {};
+            if (null != c && (1 === c ? S = u.lineClamp1 : (S = u.lineClamp2Plus, A = {
                     lineClamp: c,
                     WebkitLineClamp: c
                 })), void 0 !== E) switch (E) {
@@ -40,12 +40,12 @@ function(e, t, n) {
                     t = "white";
                     break;
                 default:
-                    var A;
-                    t = null === (A = l.default.colors[_[E]]) || void 0 === A ? void 0 : A.css
+                    var h;
+                    t = null === (h = l.default.colors[_[E]]) || void 0 === h ? void 0 : h.css
             }
             let m = {
                 color: t,
-                ...h,
+                ...A,
                 ...f.style
             };
             return (0, i.jsx)(r, {

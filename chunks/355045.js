@@ -16,8 +16,8 @@ function(e, t, n) {
         T = n("559629"),
         f = n("709586"),
         S = n("74538"),
-        h = n("678558"),
-        A = n("981631"),
+        A = n("678558"),
+        h = n("981631"),
         m = n("474936"),
         N = n("689938"),
         O = n("999150");
@@ -72,16 +72,16 @@ function(e, t, n) {
                     threshold: .9,
                     children: (0, i.jsx)("div", {
                         className: a()(O.guildBoostCta, O.guildBoostCtaBoostWrapper),
-                        children: (0, i.jsx)(h.default, {
+                        children: (0, i.jsx)(A.default, {
                             className: O.guildBoostCtaBoost,
                             innerClassName: a()(O.__invalid_guildBoostCtaContent, O.guildBoostCtaBoostContent),
                             buttonShineClassName: O.guildBoostCtaBoostShine,
                             guild: n,
                             analyticsLocation: {
-                                page: A.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
-                                section: A.AnalyticsSections.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-                                object: A.AnalyticsObjects.BUTTON_CTA,
-                                objectType: A.AnalyticsObjectTypes.BUY
+                                page: h.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
+                                section: h.AnalyticsSections.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+                                object: h.AnalyticsObjects.BUTTON_CTA,
+                                objectType: h.AnalyticsObjectTypes.BUY
                             },
                             closeLayer: t,
                             color: u.Button.Colors.WHITE,
@@ -101,10 +101,10 @@ function(e, t, n) {
                             isGift: !0,
                             analyticsLocations: C,
                             analyticsObject: {
-                                page: A.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
-                                section: A.AnalyticsSections.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-                                object: A.AnalyticsObjects.BUTTON_ICON,
-                                objectType: A.AnalyticsObjectTypes.GIFT
+                                page: h.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
+                                section: h.AnalyticsSections.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+                                object: h.AnalyticsObjects.BUTTON_ICON,
+                                objectType: h.AnalyticsObjectTypes.GIFT
                             },
                             onClose: e => e && t()
                         })
@@ -124,10 +124,10 @@ function(e, t, n) {
                             subscriptionTier: m.PremiumSubscriptionSKUs.TIER_2,
                             analyticsLocations: C,
                             analyticsObject: {
-                                page: A.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
-                                section: A.AnalyticsSections.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-                                object: A.AnalyticsObjects.BUTTON_ICON,
-                                objectType: A.AnalyticsObjectTypes.BUY
+                                page: h.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
+                                section: h.AnalyticsSections.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+                                object: h.AnalyticsObjects.BUTTON_ICON,
+                                objectType: h.AnalyticsObjectTypes.BUY
                             },
                             onClose: e => e && t()
                         })

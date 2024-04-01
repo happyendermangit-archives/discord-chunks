@@ -20,8 +20,8 @@ function(e, t, n) {
         T = n("574176"),
         f = n("106301"),
         S = n("223135"),
-        h = n("695346"),
-        A = n("314897"),
+        A = n("695346"),
+        h = n("314897"),
         m = n("592125"),
         N = n("496675"),
         O = n("158776"),
@@ -37,7 +37,7 @@ function(e, t, n) {
             className: n,
             animate: r = !0,
             hideTooltip: s
-        } = e, o = h.AnimateEmoji.useSetting(), l = null != t.id ? ":".concat(t.name, ":") : I.default.translateSurrogatesToInlineEmoji(t.name), _ = {
+        } = e, o = A.AnimateEmoji.useSetting(), l = null != t.id ? ":".concat(t.name, ":") : I.default.translateSurrogatesToInlineEmoji(t.name), _ = {
             className: a()(g.emoji, n),
             emojiId: t.id,
             emojiName: t.name,
@@ -95,10 +95,10 @@ function(e, t, n) {
             emojiClassName: u,
             animate: d = !0,
             hideTooltip: I = !1,
-            hideEmoji: h = !1,
+            hideEmoji: A = !1,
             user: M,
             hasQuest: y
-        } = e, P = null != n ? n.find(e => e.type === C.ActivityTypes.CUSTOM_STATUS) : null, U = (0, l.useStateFromStores)([A.default], () => A.default.getId() === (null == M ? void 0 : M.id)), b = (0, l.useStateFromStores)([f.default], () => U ? f.default.getHangStatusActivity() : null != n ? n.find(e => e.type === C.ActivityTypes.HANG_STATUS) : null), G = (0, l.useStateFromStores)([p.default, m.default], () => {
+        } = e, P = null != n ? n.find(e => e.type === C.ActivityTypes.CUSTOM_STATUS) : null, U = (0, l.useStateFromStores)([h.default], () => h.default.getId() === (null == M ? void 0 : M.id)), b = (0, l.useStateFromStores)([f.default], () => U ? f.default.getHangStatusActivity() : null != n ? n.find(e => e.type === C.ActivityTypes.HANG_STATUS) : null), G = (0, l.useStateFromStores)([p.default, m.default], () => {
             var e;
             return null != b && null != M ? m.default.getChannel(null === (e = p.default.getVoiceStateForUser(M.id)) || void 0 === e ? void 0 : e.channelId) : null
         }), {
@@ -112,7 +112,7 @@ function(e, t, n) {
         V ? k = (0, i.jsx)(S.default, {
             className: u,
             hangStatusActivity: b
-        }) : null != P && null != P.emoji && !h && (k = (0, i.jsx)(D, {
+        }) : null != P && null != P.emoji && !A && (k = (0, i.jsx)(D, {
             emoji: P.emoji,
             animate: d,
             hideTooltip: I,
