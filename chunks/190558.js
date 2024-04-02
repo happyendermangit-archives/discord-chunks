@@ -6170,6 +6170,25 @@ function(_, E, e) {
                 opacity: .96
             }
         },
+        THREAD_CHANNEL_SPINE: {
+            category: "generic",
+            [I.DARK]: {
+                raw: "PRIMARY_500",
+                opacity: 1
+            },
+            [I.LIGHT]: {
+                raw: "PRIMARY_300",
+                opacity: 1
+            },
+            [I.MIDNIGHT]: {
+                raw: "PLUM_13",
+                opacity: 1
+            },
+            [I.DARKER]: {
+                raw: "PLUM_13",
+                opacity: 1
+            }
+        },
         TOAST_BG: {
             category: "background",
             [I.DARK]: {

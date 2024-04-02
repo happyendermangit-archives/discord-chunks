@@ -40,8 +40,9 @@ function(e, t, n) {
 
     function c(e) {
         arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        let t = (0, i.useStateFromStores)([l.default, r.default], () => null != e && _(e.id, l.default, r.default));
-        return !__OVERLAY__ && !!t && null != e && e.hasFeature(d.GuildFeatures.GUILD_HOME_DEPRECATION_OVERRIDE)
+        let t = null == e ? void 0 : e.hasFeature(d.GuildFeatures.GUILD_HOME_DEPRECATION_OVERRIDE),
+            n = (0, i.useStateFromStores)([l.default, r.default], () => null != e && t && _(e.id, l.default, r.default));
+        return !__OVERLAY__ && !!n && null != e && !0 === t
     }
 
     function E(e) {
