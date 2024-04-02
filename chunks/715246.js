@@ -87,14 +87,12 @@ function(e, t, n) {
             this.state.translateY.setValue(this.props.autoPlay ? 1 : 0)
         }
         componentDidUpdate(e) {
+            var t, n, i, r, s;
             let {
-                hide: t,
-                playing: n
+                hide: a,
+                playing: o
             } = this.props;
-            if (t && !e.hide) {
-                var i;
-                this.animateControls(1, n), null === (i = this.volumeButton) || void 0 === i || i.blur()
-            } else !t && e.hide && this.animateControls(0, n)
+            a && !e.hide ? (this.animateControls(1, o), null === (t = this.volumeButton) || void 0 === t || t.blur(), null === (n = (i = this.props).onControlsHide) || void 0 === n || n.call(i)) : !a && e.hide && (this.animateControls(0, o), null === (r = (s = this.props).onControlsShow) || void 0 === r || r.call(s))
         }
         updateProgress(e) {
             let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
@@ -668,28 +666,30 @@ function(e, t, n) {
                     autoPlay: n,
                     playable: i = !0,
                     onVolumeShow: r,
-                    onVolumeHide: a
+                    onVolumeHide: a,
+                    onControlsHide: o,
+                    onControlsShow: l
                 },
                 state: {
-                    buffers: o,
-                    currentTime: l,
-                    duration: u,
-                    hasClickedPlay: d,
-                    hideControls: _,
-                    muted: c,
-                    playing: E,
-                    fullscreen: T,
-                    volume: f,
-                    dragging: S
+                    buffers: u,
+                    currentTime: d,
+                    duration: _,
+                    hasClickedPlay: c,
+                    hideControls: E,
+                    muted: T,
+                    playing: f,
+                    fullscreen: S,
+                    volume: m,
+                    dragging: N
                 }
-            } = this, m = this.getWidth();
-            return d || n || t === B.AUDIO ? (0, s.jsx)(x, {
-                buffers: o,
-                currentTime: l,
-                duration: u,
-                volume: (0, h.amplitudeToPerceptual)(f, 1),
-                hide: t === B.VIDEO && _,
-                muted: c,
+            } = this, p = this.getWidth();
+            return c || n || t === B.AUDIO ? (0, s.jsx)(x, {
+                buffers: u,
+                currentTime: d,
+                duration: _,
+                volume: (0, h.amplitudeToPerceptual)(m, 1),
+                hide: t === B.VIDEO && E,
+                muted: T,
                 autoPlay: n,
                 onDrag: this.handleDrag,
                 onDragEnd: this.handleDragEnd,
@@ -699,11 +699,13 @@ function(e, t, n) {
                 onToggleMuted: this.toggleMuted,
                 onVolumeShow: r,
                 onVolumeHide: a,
-                playing: E,
-                dragging: S,
+                onControlsShow: l,
+                onControlsHide: o,
+                playing: f,
+                dragging: N,
                 type: t,
                 ref: this.controlsRef,
-                width: T ? window.screen.width : m,
+                width: S ? window.screen.width : p,
                 disabled: !i,
                 children: t === B.VIDEO ? (0, s.jsx)(I.default, {
                     "aria-label": y.default.Messages.TITLE_BAR_FULLSCREEN_WINDOW,

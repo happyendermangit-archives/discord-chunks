@@ -48,7 +48,10 @@ function(e, t, n) {
                 feed: e
             }), c = 0, _ = !1, h()
         } catch (e) {
-            c < 3 && (d = setTimeout(() => A(), 1e3 * Math.pow(5, c)), c += 1), _ = !1
+            c < 3 ? (d = setTimeout(() => A(), 1e3 * Math.pow(5, c)), c += 1) : i.default.dispatch({
+                type: "CONTENT_INVENTORY_CLEAR_FEED",
+                feedId: u
+            }), _ = !1
         }
     }
 

@@ -14,8 +14,8 @@ function(e, t, n) {
         a = n.n(s),
         o = n("442837"),
         l = n("692547"),
-        u = n("420166"),
-        d = n("5297"),
+        u = n("882485"),
+        d = n("420166"),
         _ = n("481060"),
         c = n("812206"),
         E = n("566454"),
@@ -72,9 +72,9 @@ function(e, t, n) {
                         children: e => (0, i.jsx)("div", {
                             className: m.sharedGameIcon,
                             ...e,
-                            children: (0, i.jsx)(d.SparklesIcon, {
-                                height: 16,
-                                width: 16,
+                            children: (0, i.jsx)(u.CircleInformationIcon, {
+                                height: 12,
+                                width: 12,
                                 color: l.default.colors.INTERACTIVE_MUTED
                             })
                         })
@@ -85,7 +85,7 @@ function(e, t, n) {
                     children: a
                 }), t.isNew && (0, i.jsxs)("div", {
                     className: m.newIcon,
-                    children: [(0, i.jsx)(u.NewUserIcon, {
+                    children: [(0, i.jsx)(d.NewUserIcon, {
                         height: 12,
                         width: 12,
                         color: l.default.colors.STATUS_POSITIVE

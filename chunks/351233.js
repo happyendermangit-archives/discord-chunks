@@ -50,6 +50,7 @@ function(e) {
         inlineMediaEmbed: "inlineMediaEmbed_b25e49 embed_cc6dae",
         isHidden: "isHidden__89db7",
         justifyAuto: "justifyAuto__5cef0",
+        obscureVideoSpacing: "obscureVideoSpacing__98a58",
         spoilerAttachment: "spoilerAttachment_d492d5 hiddenAttachment_c6b833",
         spoilerEmbed: "spoilerEmbed_b9bdb5 hiddenEmbed__56989"
     }
