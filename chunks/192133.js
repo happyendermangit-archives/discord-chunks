@@ -155,8 +155,6 @@ function(e, t, n) {
                         userId: j.id,
                         guild: K,
                         guildMember: z
-                    }), eh && (0, i.jsx)(O.UserProfileRecentGamesSection, {
-                        userId: j.id
                     }), eo && ea && (0, i.jsx)(k.default, {
                         voiceChannel: er.voiceChannel,
                         voiceGuild: er.voiceGuild,
@@ -168,6 +166,8 @@ function(e, t, n) {
                         channelId: X,
                         onClose: Q,
                         analyticsParams: (null == ee ? void 0 : ee.location) != null ? ee : em
+                    }), eh && (0, i.jsx)(O.UserProfileRecentGamesSection, {
+                        userId: j.id
                     }), (null == en ? void 0 : en.popularApplicationCommandIds) != null && null != el ? (0, i.jsx)(b.default, {
                         applicationId: en.id,
                         commandIds: en.popularApplicationCommandIds,

@@ -105,7 +105,7 @@ function(e, t, n) {
     }
 
     function c(e) {
-        var t, n, i, r;
+        var t, n, i, r, a;
         return {
             id: e.id,
             preview: e.preview,
@@ -135,14 +135,21 @@ function(e, t, n) {
                     primary: (i = t.colors).primary,
                     secondary: i.secondary
                 },
+                rewardsConfig: {
+                    assignmentMethod: (r = t.rewards_config).assignment_method,
+                    rewards: r.rewards.map(e => ({
+                        tag: e.tag,
+                        skuId: e.sku_id
+                    }))
+                },
                 rewardCodeExpiresAt: t.reward_code_expires_at,
                 rewardCodePlatforms: t.reward_code_platforms.filter(e => s.QUEST_REWARD_CODE_PLATFORMS_SET.has(e)),
                 assets: {
-                    rewardTile: (r = t.assets).reward_tile,
-                    hero: r.hero,
-                    questBarHero: r.quest_bar_hero,
-                    gameTile: r.game_tile,
-                    logotype: r.logotype
+                    rewardTile: (a = t.assets).reward_tile,
+                    hero: a.hero,
+                    questBarHero: a.quest_bar_hero,
+                    gameTile: a.game_tile,
+                    logotype: a.logotype
                 }
             },
             userStatus: null == e.user_status ? null : _(e.user_status),
