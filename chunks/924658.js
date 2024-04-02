@@ -363,8 +363,6 @@ function(e) {
         SIGNUP_CLAN_OPTION_HARDCORE_TITLE: "Hardcore",
         SIGNUP_CLAN_OPTION_HARDCORE_DESCRIPTION: "We play together to win, rank up, or beat challenges.",
         SIGNUP_CLAN_OPTION_VERY_HARDCORE_TITLE: "Very Hardcore",
-        SIGNUP_CLAN_OPTION_VERY_HARDCORE_DESCRIPTION: "We won't sleep until we win or beat the boss.",
-        RECENT_GAMES_SETTING_SUBLABEL: "Enable showing your Recently Played Games on your profile. [Check our Help Center for     more information.](onClick)",
-        RECENT_GAMES_SETTING_ACTIVITY_STATUS_DISABLED_SUBLABEL: "To enable Recent Games on your profile, you must first [enable sharing your Activity Status](onSettingClick).     We won’t use this data for anything except showing your recent activity. [Check our Help Center for more       information.](onHelpArticleClick)"
+        SIGNUP_CLAN_OPTION_VERY_HARDCORE_DESCRIPTION: "We won't sleep until we win or beat the boss."
     })
 }

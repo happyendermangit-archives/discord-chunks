@@ -2,13 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         calculatePercentComplete: function() {
-            return O
+            return p
         },
         captureQuestsException: function() {
-            return L
+            return D
         },
         getContextualEntrypointHeading: function() {
-            return p
+            return R
         },
         getGameLogotypeAssetUrl: function() {
             return h
@@ -20,7 +20,7 @@ function(e, t, n) {
             return T
         },
         getPlatformString: function() {
-            return N
+            return O
         },
         getQuestBarHeroAssetUrl: function() {
             return f
@@ -35,28 +35,31 @@ function(e, t, n) {
             return A
         },
         getQuestsFromActivities: function() {
-            return D
+            return v
         },
         getRewardAssetUrl: function() {
             return I
         },
         getVideoAssetMimeType: function() {
-            return y
+            return P
         },
         includesTarget: function() {
-            return g
+            return L
         },
         isAssetAnimated: function() {
-            return v
+            return M
         },
         isDismissed: function() {
-            return C
+            return g
         },
         isDismissible: function() {
-            return R
+            return C
         },
         isQuestExpired: function() {
             return d
+        },
+        isTargetedForContent: function() {
+            return N
         },
         questUserStatusFromServer: function() {
             return _
@@ -168,7 +171,11 @@ function(e, t, n) {
             if (i.targetedContent.includes(t)) return i;
         return null
     }
-    let N = e => {
+
+    function N(e, t) {
+        return e.targetedContent.includes(t)
+    }
+    let O = e => {
         switch (e) {
             case s.QuestRewardCodePlatforms.XBOX:
                 return o.default.Messages.QUESTS_REWARD_CODE_PLATFORM_XBOX;
@@ -183,7 +190,7 @@ function(e, t, n) {
         }
     };
 
-    function O(e) {
+    function p(e) {
         if (null == e.userStatus) return 0;
         let {
             streamProgressSeconds: t,
@@ -196,11 +203,11 @@ function(e, t, n) {
         return Math.min(t / 60 / i, 1)
     }
 
-    function p(e) {
+    function R(e) {
         var t, n;
         if ((null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null) return o.default.Messages.QUESTS_COMPLETION_PROGRESS_COMPLETE;
         if ((null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null) {
-            let t = O(e);
+            let t = p(e);
             return t >= .75 ? o.default.Messages.QUESTS_COMPLETION_PROGRESS_ALMOST_COMPLETE : t >= .45 && t <= .55 ? o.default.Messages.QUESTS_COMPLETION_PROGRESS_HALFWAY : t > 0 ? o.default.Messages.QUESTS_COMPLETION_PROGRESS_STARTED : o.default.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED
         }
         return o.default.Messages.QUESTS_TITLE.format({
@@ -208,21 +215,21 @@ function(e, t, n) {
         })
     }
 
-    function R(e) {
+    function C(e) {
         return Object.keys(a.DismissibleQuestContentFlags).includes(s.QuestContent[e])
     }
 
-    function C(e, t) {
-        if (!R(t)) return !1;
+    function g(e, t) {
+        if (!C(t)) return !1;
         let n = s.QuestContent[t];
         return (0, i.hasFlag)(e.dismissedQuestContent, a.DismissibleQuestContentFlags[n])
     }
 
-    function g(e, t) {
+    function L(e, t) {
         return e.targetedContent.includes(t)
     }
 
-    function L(e, t) {
+    function D(e, t) {
         r.default.captureException(e, {
             ...t,
             tags: {
@@ -232,7 +239,7 @@ function(e, t, n) {
         })
     }
 
-    function D(e, t) {
+    function v(e, t) {
         if (null == t || null == e) return null;
         for (let n of t) {
             if (null == n.application_id) continue;
@@ -242,14 +249,14 @@ function(e, t, n) {
         return null
     }
 
-    function v(e) {
+    function M(e) {
         return e.endsWith(".webm") || e.endsWith(".mp4")
     }
-    let M = /\.([a-zA-Z]+)$/;
+    let y = /\.([a-zA-Z]+)$/;
 
-    function y(e) {
+    function P(e) {
         var t, n;
-        switch (null === (n = M.exec(e)) || void 0 === n ? void 0 : null === (t = n[1]) || void 0 === t ? void 0 : t.toLowerCase()) {
+        switch (null === (n = y.exec(e)) || void 0 === n ? void 0 : null === (t = n[1]) || void 0 === t ? void 0 : t.toLowerCase()) {
             case "webm":
                 return "video/webm";
             case "mp4":
