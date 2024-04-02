@@ -19,6 +19,9 @@ function(e, t, n) {
         isBuildOverrideLink: function() {
             return S
         },
+        isManualBuildOverrideLink: function() {
+            return A
+        },
         probablyHasBuildOverride: function() {
             return I
         },

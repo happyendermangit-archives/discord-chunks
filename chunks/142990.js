@@ -1,0 +1,37 @@
+function(e, t, n) {
+    "use strict";
+    n.r(t), n.d(t, {
+        default: function() {
+            return u
+        }
+    }), n("789020");
+    var i = n("735250"),
+        r = n("470079"),
+        s = n("865427"),
+        a = n("853425"),
+        o = n("830121");
+    let l = RegExp("^" + o.DEVLINK_REGEX.source, o.DEVLINK_REGEX.flags);
+
+    function u(e) {
+        return {
+            match: (e, t) => t.allowLinks && t.allowDevLinks ? l.exec(e) : null,
+            parse: (e, t) => ({
+                target: e,
+                type: "devLink"
+            }),
+            react: (e, t, n) => {
+                let o = e.target[0];
+                if ((0, s.isManualBuildOverrideLink)(o)) return (0, i.jsxs)(i.Fragment, {
+                    children: [(0, i.jsx)("span", {
+                        children: o
+                    }), (0, i.jsx)(r.Fragment, {
+                        children: (0, i.jsx)(a.default, {
+                            url: o
+                        }, o)
+                    }, n.key)]
+                })
+            },
+            order: 6
+        }
+    }
+}

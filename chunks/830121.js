@@ -1,6 +1,9 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
+        DEVLINK_REGEX: function() {
+            return g
+        },
         default: function() {
             return F
         },

@@ -158,7 +158,7 @@ function(e, t, n) {
                     className: u()(x.icon)
                 }) : null, (0, a.jsx)(E.Heading, {
                     className: (0, M.getClass)(x, "headerText", e ? "EmptyBody" : "Normal"),
-                    variant: "heading-deprecated-12/semibold",
+                    variant: "eyebrow",
                     color: "ProfileV2" === o ? "header-primary" : void 0,
                     children: (0, a.jsx)(b.default, {
                         children: t
