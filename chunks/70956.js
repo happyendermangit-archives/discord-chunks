@@ -15,6 +15,7 @@ function(_, E, e) {
             MINUTE: 60,
             HOUR: 3600,
             DAY: 86400,
+            WEEK: 604800,
             DAYS_30: 2592e3
         });
     E.default = {
