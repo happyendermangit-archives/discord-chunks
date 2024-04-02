@@ -16,6 +16,9 @@ function(e, t, n) {
         isEnabled() {
             return !1
         }
+        isSupported() {
+            return !1
+        }
     };
     t.default = i
 }
