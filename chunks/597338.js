@@ -2,6 +2,7 @@ function(e) {
     "use strict";
     e.exports = {
         addText: "addText__8f18c",
+        checkmark: "checkmark_c7b206",
         clickable: "clickable_a588cd",
         contentLabel: "contentLabel_aa05d5",
         contentWithMinHeight: "contentWithMinHeight__78ad4",
@@ -15,6 +16,8 @@ function(e) {
         playstyleSelect: "playstyleSelect_b7d88b",
         playstyleTitle: "playstyleTitle__00d17",
         plusIcon: "plusIcon__22efe",
+        selectedGame: "selectedGame__0084c",
+        selectedGameCheck: "selectedGameCheck__389d8",
         selectedInterest: "selectedInterest_aa523d",
         selectedPlaystyle: "selectedPlaystyle_e4490f",
         selectedSection: "selectedSection__5c175",
