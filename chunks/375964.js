@@ -17116,6 +17116,7 @@ function(e) {
         USER_RECENT_GAMES: "Recently Played",
         USER_RECENT_GAMES_ON_PROFILE: "Show recent games on profile",
         USER_RECENT_GAMES_YOU_BOTH_PLAY: "You both play this game",
+        NEW_TO_THIS_GAME: "New to this game",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES: "{count} {count, plural, =1 {min} other {mins}} ago",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS: "{count} {count, plural, =1 {hr} other {hrs}} this week",
         USER_RECENT_GAMES_PLAYED_LAST_WEEK_HOURS: "{count} {count, plural, =1 {hr} other {hrs}} this week",

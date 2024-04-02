@@ -1,6 +1,7 @@
 function(e) {
     "use strict";
     e.exports = {
+        newIcon: "newIcon__6568d",
         recentGameContainer: "recentGameContainer__8231a",
         recentGameDetails: "recentGameDetails_fa472d",
         recentGameIcon: "recentGameIcon__65d60",

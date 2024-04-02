@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         UserProfileRecentGamesSection: function() {
-            return O
+            return p
         },
         UserProfileRecentGamesThemedSection: function() {
-            return p
+            return R
         }
     }), n("47120");
     var i = n("735250"),
@@ -14,79 +14,91 @@ function(e, t, n) {
         a = n.n(s),
         o = n("442837"),
         l = n("692547"),
-        u = n("5297"),
-        d = n("481060"),
-        _ = n("812206"),
-        c = n("566454"),
-        E = n("32966"),
-        I = n("314897"),
-        T = n("768581"),
-        f = n("747074"),
-        S = n("659101"),
-        h = n("689938"),
-        A = n("458186");
+        u = n("420166"),
+        d = n("5297"),
+        _ = n("481060"),
+        c = n("812206"),
+        E = n("566454"),
+        I = n("32966"),
+        T = n("314897"),
+        f = n("768581"),
+        S = n("747074"),
+        h = n("659101"),
+        A = n("689938"),
+        m = n("458186");
 
-    function m(e) {
+    function N(e) {
         let {
             game: t,
             isSharedGame: n
-        } = e, s = (0, o.useStateFromStores)([_.default], () => _.default.getApplication(t.applicationId)), a = r.useMemo(() => null == t.duration || 0 === t.duration ? (0, c.getLastPlayedTimestamp)(t, !1) : "".concat((0, c.getLastPlayedTimestamp)(t, !0), " — ").concat((0, c.getTimePlayedLastWeek)(t)), [t]), E = r.useRef(null), [I, f] = r.useState(!1);
+        } = e, s = (0, o.useStateFromStores)([c.default], () => c.default.getApplication(t.applicationId)), a = r.useMemo(() => null == t.duration || 0 === t.duration ? (0, E.getLastPlayedTimestamp)(t, !1) : "".concat((0, E.getLastPlayedTimestamp)(t, !0), " — ").concat((0, E.getTimePlayedLastWeek)(t)), [t]), I = r.useRef(null), [T, S] = r.useState(!1);
         if (r.useEffect(() => {
-                let e = E.current;
-                null != e && null != e.offsetWidth && null != e.scrollWidth && f(e.offsetWidth < e.scrollWidth)
+                let e = I.current;
+                null != e && null != e.offsetWidth && null != e.scrollWidth && S(e.offsetWidth < e.scrollWidth)
             }, []), null == s) return null;
-        let S = T.default.getApplicationIconURL({
+        let h = f.default.getApplicationIconURL({
             id: s.id,
             icon: s.icon,
             size: 40
         });
         return (0, i.jsxs)("div", {
-            className: A.recentGameContainer,
+            className: m.recentGameContainer,
             children: [(0, i.jsx)("div", {
-                className: A.recentGameIcon,
-                children: null != S && (0, i.jsx)("img", {
+                className: m.recentGameIcon,
+                children: null != h && (0, i.jsx)("img", {
                     alt: "",
                     "aria-hidden": !0,
-                    src: S,
+                    src: h,
                     width: 40,
                     height: 40
                 })
             }), (0, i.jsxs)("div", {
-                className: A.recentGameDetails,
+                className: m.recentGameDetails,
                 children: [(0, i.jsxs)("div", {
-                    className: A.recentGameTitleContainer,
-                    children: [(0, i.jsx)(d.Tooltip, {
+                    className: m.recentGameTitleContainer,
+                    children: [(0, i.jsx)(_.Tooltip, {
                         text: s.name,
-                        color: d.Tooltip.Colors.PRIMARY,
-                        shouldShow: I,
+                        color: _.Tooltip.Colors.PRIMARY,
+                        shouldShow: T,
                         children: e => (0, i.jsx)("span", {
-                            ref: E,
+                            ref: I,
                             ...e,
-                            className: A.recentGameTitle,
+                            className: m.recentGameTitle,
                             children: s.name
                         })
-                    }), n && (0, i.jsx)(d.Tooltip, {
-                        text: h.default.Messages.USER_RECENT_GAMES_YOU_BOTH_PLAY,
-                        color: d.Tooltip.Colors.PRIMARY,
+                    }), n && (0, i.jsx)(_.Tooltip, {
+                        text: A.default.Messages.USER_RECENT_GAMES_YOU_BOTH_PLAY,
+                        color: _.Tooltip.Colors.PRIMARY,
                         children: e => (0, i.jsx)("div", {
-                            className: A.sharedGameIcon,
+                            className: m.sharedGameIcon,
                             ...e,
-                            children: (0, i.jsx)(u.SparklesIcon, {
+                            children: (0, i.jsx)(d.SparklesIcon, {
                                 height: 16,
                                 width: 16,
                                 color: l.default.colors.INTERACTIVE_MUTED
                             })
                         })
                     })]
-                }), (0, i.jsx)(d.Text, {
+                }), (0, i.jsx)(_.Text, {
                     variant: "text-sm/normal",
                     color: "header-secondary",
                     children: a
+                }), t.isNew && (0, i.jsxs)("div", {
+                    className: m.newIcon,
+                    children: [(0, i.jsx)(u.NewUserIcon, {
+                        height: 12,
+                        width: 12,
+                        color: l.default.colors.STATUS_POSITIVE
+                    }), (0, i.jsx)(_.Text, {
+                        variant: "text-sm/normal",
+                        color: "status-positive",
+                        children: A.default.Messages.NEW_TO_THIS_GAME
+                    })]
                 })]
             })]
         })
     }
-    let N = r.memo(function(e) {
+    let O = r.memo(function(e) {
         let {
             userId: t,
             containerClassName: n,
@@ -96,15 +108,15 @@ function(e, t, n) {
             currentUserApplicationIds: o,
             isFetching: l,
             isError: u
-        } = (0, E.useUserRecentGames)(t);
+        } = (0, I.useUserRecentGames)(t);
         if (l || u || null == s || 0 === s.length) return null;
         let d = (0, i.jsx)("div", {
-            className: a()(A.recentGames, n),
+            className: a()(m.recentGames, n),
             children: null == s ? void 0 : s.map(e => {
                 var n, r, s;
-                return (0, i.jsx)(m, {
+                return (0, i.jsx)(N, {
                     game: e,
-                    isSharedGame: (n = t, r = o, s = e.applicationId, n !== I.default.getId() && r.has(s))
+                    isSharedGame: (n = t, r = o, s = e.applicationId, n !== T.default.getId() && r.has(s))
                 }, e.lastSessionId)
             })
         });
@@ -113,42 +125,42 @@ function(e, t, n) {
         }) : d
     });
 
-    function O(e) {
+    function p(e) {
         let {
             userId: t,
             containerClassName: n
-        } = e, s = r.useCallback(e => (0, i.jsxs)(S.default, {
-            children: [(0, i.jsx)(d.Heading, {
+        } = e, s = r.useCallback(e => (0, i.jsxs)(h.default, {
+            children: [(0, i.jsx)(_.Heading, {
                 variant: "eyebrow",
-                className: A.recentGamesHeading,
-                children: h.default.Messages.RECENT_GAMES
+                className: m.recentGamesHeading,
+                children: A.default.Messages.RECENT_GAMES
             }), e]
         }), []);
-        return (0, i.jsx)(N, {
+        return (0, i.jsx)(O, {
             userId: t,
             containerClassName: n,
             wrapChildren: s
         })
     }
 
-    function p(e) {
+    function R(e) {
         let {
             userId: t,
             containerClassName: n
-        } = e, s = r.useCallback(e => (0, i.jsx)(f.default.Inner, {
-            children: (0, i.jsxs)(S.default, {
-                children: [(0, i.jsx)(d.Heading, {
+        } = e, s = r.useCallback(e => (0, i.jsx)(S.default.Inner, {
+            children: (0, i.jsxs)(h.default, {
+                children: [(0, i.jsx)(_.Heading, {
                     variant: "eyebrow",
-                    className: A.recentGamesHeading,
-                    children: h.default.Messages.RECENT_GAMES
+                    className: m.recentGamesHeading,
+                    children: A.default.Messages.RECENT_GAMES
                 }), e]
             })
         }), []);
-        return (0, i.jsx)(N, {
+        return (0, i.jsx)(O, {
             userId: t,
             containerClassName: n,
             wrapChildren: s
         })
     }
-    t.default = N
+    t.default = O
 }
