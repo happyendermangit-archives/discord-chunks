@@ -39,24 +39,23 @@ function(e, t, n) {
     }
 
     function S(e) {
-        let t = (0, s.useStateFromStores)([u.default], () => u.default.getGuild(e)),
-            n = (0, c.default)(t),
-            {
-                homeSettingsEnabled: i
-            } = _.default.useExperiment({
-                guildId: e,
-                location: "61eef9_2"
-            }, {
-                autoTrackExposure: !1
-            }),
-            d = (0, s.useStateFromStores)([o.default], () => o.default.isFullServerPreview(e)),
-            S = (0, E.default)(e),
-            h = (0, s.useStateFromStores)([l.default], () => l.default.getMutableGuildChannelsForGuild(e));
-        if (null == t || __OVERLAY__ || e === I.ME || e === I.FAVORITES) return !1;
-        if (d) return f(t);
-        let A = i && (0, a.isGuildOnboardingSettingsAvailable)(e) && t.hasFeature(I.GuildFeatures.GUILD_ONBOARDING) && t.hasFeature(I.GuildFeatures.GUILD_SERVER_GUIDE),
-            m = r().some(r().values(h), e => e.hasFlag(T.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL));
-        return !(!S && !m) && (n && t.hasFeature(I.GuildFeatures.GUILD_ONBOARDING) && t.hasFeature(I.GuildFeatures.GUILD_SERVER_GUIDE) || A) && t.hasFeature(I.GuildFeatures.COMMUNITY)
+        let {
+            homeSettingsEnabled: t
+        } = _.default.useExperiment({
+            guildId: e,
+            location: "61eef9_2"
+        }, {
+            autoTrackExposure: !1
+        }), n = (0, E.default)(e), i = l.default.getMutableGuildChannelsForGuild(e);
+        return (0, s.useStateFromStores)([u.default, o.default], () => {
+            let s = u.default.getGuild(e);
+            if (__OVERLAY__ || e === I.ME || e === I.FAVORITES || null == s) return !1;
+            if (o.default.isFullServerPreview(e)) return f(s);
+            let l = (0, c.default)(s),
+                d = t && (0, a.isGuildOnboardingSettingsAvailable)(e) && s.hasFeature(I.GuildFeatures.GUILD_ONBOARDING) && s.hasFeature(I.GuildFeatures.GUILD_SERVER_GUIDE),
+                _ = r().some(r().values(i), e => e.hasFlag(T.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL));
+            return !(!n && !_) && (l && s.hasFeature(I.GuildFeatures.GUILD_ONBOARDING) && s.hasFeature(I.GuildFeatures.GUILD_SERVER_GUIDE) || d) && s.hasFeature(I.GuildFeatures.COMMUNITY)
+        }, [e, t, n, i])
     }
 
     function h(e) {

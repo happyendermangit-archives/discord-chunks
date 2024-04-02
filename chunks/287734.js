@@ -54,14 +54,15 @@ function(e, t, n) {
         },
         disconnect() {
             let e = s.default.getRemoteSessionId();
-            if (null != e && r.remoteDisconnect(e), (0, l.isOldVoiceUIEnabled)()) {
+            if (null != e && r.remoteDisconnect(e), (0, l.isVoicePanelEnabled)()) this.selectVoiceChannel(null);
+            else {
                 let e = u.default.getChannel(c.default.getChannelId()),
                     t = c.default.getChannelId() === c.default.getVoiceChannelId() && (null == e ? void 0 : e.isThread()) === !0;
                 if (this.selectVoiceChannel(null), a.close(S.PopoutWindowKeys.CHANNEL_CALL_POPOUT), t) {
                     let e = E.default.getGuildId();
                     null != e && (0, o.transitionTo)((0, T.previousTextChannelRouteForGuild)(e))
                 }
-            } else this.selectVoiceChannel(null)
+            }
         }
     }
 }

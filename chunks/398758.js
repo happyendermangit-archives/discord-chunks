@@ -19,10 +19,13 @@ function(e, t, n) {
         l = n("981631");
 
     function u(e) {
-        let t = (0, i.useStateFromStores)([a.default], () => a.default.isOptInEnabled(e)),
-            n = (0, i.useStateFromStores)([r.default], () => r.default.getGuild(e)),
-            s = (0, i.useStateFromStores)([o.default], () => o.default.getCurrentUser());
-        return null != e && null != n && null != s && (n.hasFeature(l.GuildFeatures.COMMUNITY) || s.isStaff()) && t
+        return (0, i.useStateFromStores)([a.default, r.default, o.default], () => {
+            var t, n, i, s;
+            let u = a.default.isOptInEnabled(e),
+                d = null !== (i = null === (t = r.default.getGuild(e)) || void 0 === t ? void 0 : t.hasFeature(l.GuildFeatures.COMMUNITY)) && void 0 !== i && i,
+                _ = null !== (s = null === (n = o.default.getCurrentUser()) || void 0 === n ? void 0 : n.isStaff()) && void 0 !== s && s;
+            return u && (d || _)
+        })
     }
 
     function d(e) {
@@ -32,16 +35,13 @@ function(e, t, n) {
     }
 
     function _(e) {
-        let t = (0, i.useStateFromStores)([r.default], () => r.default.getGuild(e)),
-            {
-                canManageGuild: n,
-                canManageRoles: a
-            } = (0, i.useStateFromStoresObject)([s.default], () => ({
-                canManageGuild: s.default.can(l.Permissions.MANAGE_GUILD, t),
-                canManageRoles: s.default.can(l.Permissions.MANAGE_ROLES, t)
-            }));
-        if (null == t) return !1;
-        let o = t.hasFeature(l.GuildFeatures.GUILD_ONBOARDING_EVER_ENABLED);
-        return n && a && !o
+        return (0, i.useStateFromStores)([r.default, s.default], () => {
+            var t;
+            let n = r.default.getGuild(e),
+                i = s.default.can(l.Permissions.MANAGE_GUILD, n),
+                a = s.default.can(l.Permissions.MANAGE_ROLES, n),
+                o = null !== (t = null == n ? void 0 : n.hasFeature(l.GuildFeatures.GUILD_ONBOARDING_EVER_ENABLED)) && void 0 !== t && t;
+            return null != n && i && a && !o
+        })
     }
 }

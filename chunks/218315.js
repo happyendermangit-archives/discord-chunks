@@ -103,20 +103,22 @@ function(e, t, n) {
                 } = await this._getOrLoadOnboardingMemberActions(e), r = null == n ? void 0 : n.find(e => e.channelId === t);
                 (null == i ? void 0 : i[t]) !== !0 && null != r && r.actionType === I.NewMemberActionTypes.CHAT && (0, c.completeNewMemberAction)(e, t)
             }), A(this, "_getOrLoadOnboardingMemberActions", async e => {
-                let t = (0, f.canSeeOnboardingHome)(e),
-                    n = a.default.isFullServerPreview(e);
-                if (!t && !n) return {};
-                let i = u.default.getSelfMember(e);
-                if (null == i || !(0, S.getIsNewMember)(i)) return {};
-                let [r, s] = await Promise.all([this._getOrLoadOnboardingHomeSettings(e, i), this._getOrLoadMemberActions(e, i)]);
+                var t, n;
+                let i = (0, f.canSeeOnboardingHome)(e),
+                    r = a.default.isFullServerPreview(e);
+                if (!i && !r) return {};
+                let s = u.default.getSelfMember(e);
+                if (null == s || !(0, S.getIsNewMember)(null !== (t = s.joinedAt) && void 0 !== t ? t : void 0, null !== (n = s.flags) && void 0 !== n ? n : void 0)) return {};
+                let [o, l] = await Promise.all([this._getOrLoadOnboardingHomeSettings(e, s), this._getOrLoadMemberActions(e, s)]);
                 return {
-                    memberActions: r,
-                    completedActions: s
+                    memberActions: o,
+                    completedActions: l
                 }
             }), A(this, "_getOrLoadOnboardingHomeSettings", async (e, t) => {
-                let n = E.default.getNewMemberActions(e),
-                    i = E.default.getIsLoading(e);
-                if (!(null == n && !i && (0, S.getIsNewMember)(t))) return n;
+                var n, i;
+                let r = E.default.getNewMemberActions(e),
+                    s = E.default.getIsLoading(e);
+                if (!(null == r && !s && (0, S.getIsNewMember)(null !== (n = t.joinedAt) && void 0 !== n ? n : void 0, null !== (i = t.flags) && void 0 !== i ? i : void 0))) return r;
                 {
                     let t = await (0, c.fetchGuildHomeSettings)(e);
                     return null == t ? void 0 : t.newMemberActions

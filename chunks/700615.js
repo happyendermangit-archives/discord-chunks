@@ -5,7 +5,7 @@ function(e, t, n) {
         return !1
     }
     n.r(t), n.d(t, {
-        isOldVoiceUIEnabled: function() {
+        isVoicePanelEnabled: function() {
             return i
         }
     })
