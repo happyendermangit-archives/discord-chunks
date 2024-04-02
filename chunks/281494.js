@@ -2,28 +2,51 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         checkRecipientEligibility: function() {
-            return u
+            return _
         },
         createReferralTrial: function() {
-            return d
+            return c
+        },
+        fetchReferralEligibleUsers: function() {
+            return u
         },
         fetchReferralsRemaining: function() {
-            return l
+            return d
         },
         resolveReferralTrialOffer: function() {
-            return _
+            return E
         }
     });
     var i = n("544891"),
         r = n("570140"),
-        s = n("904245");
-    n("598077");
-    var a = n("944486"),
-        o = n("981631");
-    let l = () => (r.default.dispatch({
+        s = n("904245"),
+        a = n("598077"),
+        o = n("944486"),
+        l = n("981631");
+    async function u() {
+        r.default.dispatch({
+            type: "REFERRALS_FETCH_ELIGIBLE_USER_START"
+        });
+        try {
+            var e;
+            let t = await i.HTTP.get({
+                url: l.Endpoints.GET_REFERRAL_ELIGIBLE_USERS,
+                oldFormErrors: !0
+            });
+            r.default.dispatch({
+                type: "REFERRALS_FETCH_ELIGIBLE_USER_SUCCESS",
+                users: (null === (e = t.body) || void 0 === e ? void 0 : e.users) != null ? t.body.users.map(e => new a.default(e)) : []
+            })
+        } catch (e) {
+            r.default.dispatch({
+                type: "REFERRALS_FETCH_ELIGIBLE_USER_FAIL"
+            })
+        }
+    }
+    let d = () => (r.default.dispatch({
             type: "BILLING_REFERRALS_REMAINING_FETCH_START"
         }), i.HTTP.get({
-            url: o.Endpoints.GET_REFERRALS_REMAINING,
+            url: l.Endpoints.GET_REFERRALS_REMAINING,
             oldFormErrors: !0
         }).then(e => {
             r.default.dispatch({
@@ -36,11 +59,11 @@ function(e, t, n) {
                 type: "BILLING_REFERRALS_REMAINING_FETCH_FAIL"
             })
         })),
-        u = e => (r.default.dispatch({
+        _ = e => (r.default.dispatch({
             type: "BILLING_CREATE_REFERRAL_PREVIEW_START",
             recipientId: e
         }), i.HTTP.post({
-            url: o.Endpoints.CREATE_REFERRAL_PREVIEW(e),
+            url: l.Endpoints.CREATE_REFERRAL_PREVIEW(e),
             oldFormErrors: !0
         }).then(t => {
             r.default.dispatch({
@@ -54,11 +77,11 @@ function(e, t, n) {
                 recipientId: e
             })
         }));
-    async function d(e) {
+    async function c(e) {
         try {
             var t;
             let n = await i.HTTP.post({
-                    url: o.Endpoints.CREATE_REFERRAL(e),
+                    url: l.Endpoints.CREATE_REFERRAL(e),
                     oldFormErrors: !0
                 }),
                 s = null !== (t = n.body) && void 0 !== t ? t : null;
@@ -71,17 +94,17 @@ function(e, t, n) {
         } catch (e) {
             if (r.default.dispatch({
                     type: "BILLING_CREATE_REFERRAL_FAIL"
-                }), e.body.code === o.AbortCodes.INVALID_MESSAGE_SEND_USER) {
-                let t = a.default.getCurrentlySelectedChannelId();
+                }), e.body.code === l.AbortCodes.INVALID_MESSAGE_SEND_USER) {
+                let t = o.default.getCurrentlySelectedChannelId();
                 null != t && s.default.sendClydeError(t, e.body.code)
             }
         }
     }
-    async function _(e) {
+    async function E(e) {
         try {
             var t;
             let n = await i.HTTP.get({
-                    url: o.Endpoints.REFERRAL_OFFER_ID_RESOLVE(e),
+                    url: l.Endpoints.REFERRAL_OFFER_ID_RESOLVE(e),
                     oldFormErrors: !0
                 }),
                 s = null !== (t = n.body) && void 0 !== t ? t : null;

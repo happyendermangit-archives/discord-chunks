@@ -17089,6 +17089,8 @@ function(e) {
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "First time",
         MEMBER_LIST_CONTENT_FEED_WATCHED_MEDIA: "Watched **{mediaTitle}**",
         MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA: "{userName} watched **{mediaTitle}** ({episodeDescription})",
+        MEMBER_LIST_CONTENT_FEED_TOP_GAME: "Top game",
+        MEMBER_LIST_CONTENT_FEED_TOP_GAME_WEEK_POPOUT: "{userName}'s top game this week: **{gameName}**",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Activity",
         CONTENT_INVENTORY_MEMBERLIST_SETTINGS_HIDE: "Hide Activity Cards",
         CONTENT_INVENTORY_MEMBERLIST_SETTINGS_ABOUT: "About Recent Activity",
