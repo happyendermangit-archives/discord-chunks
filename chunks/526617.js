@@ -56,64 +56,71 @@ function(e, t, n) {
             toggleCollapsed: r,
             index: s
         } = e;
-        return (0, i.jsxs)(u.Clickable, {
-            className: a()(F.sectionHeader, {
-                [F.notFirstSectionHeader]: 0 !== s
-            }),
-            onClick: r,
-            children: [function() {
-                switch (t.type) {
-                    case D.SoundboardSoundGridSectionType.FAVORITES:
-                        return (0, i.jsx)(R.default, {
-                            className: F.headerIcon
-                        });
-                    case D.SoundboardSoundGridSectionType.RECENTLY_HEARD:
-                        return (0, i.jsx)(O.default, {
-                            className: F.headerIcon
-                        });
-                    case D.SoundboardSoundGridSectionType.FREQUENTLY_USED:
-                        return (0, i.jsx)(l.AnalyticsIcon, {
-                            className: F.headerIcon
-                        });
-                    case D.SoundboardSoundGridSectionType.GUILD:
-                        return (0, i.jsx)(E.default, {
-                            guild: t.guild,
-                            height: 16,
-                            width: 16
-                        });
-                    case D.SoundboardSoundGridSectionType.DEFAULTS:
-                        return (0, i.jsx)(p.default, {
-                            className: F.headerIcon
-                        });
-                    case D.SoundboardSoundGridSectionType.SEARCH:
-                        return (0, i.jsx)(C.default, {
-                            className: F.headerIcon
-                        })
-                }
-            }(), (0, i.jsx)(u.Heading, {
-                variant: "eyebrow",
-                color: "none",
-                className: F.sectionTitle,
-                children: function() {
-                    switch (t.type) {
-                        case D.SoundboardSoundGridSectionType.FAVORITES:
-                            return V.default.Messages.FAVORITES;
-                        case D.SoundboardSoundGridSectionType.RECENTLY_HEARD:
-                            return V.default.Messages.RECENTLY_HEARD;
-                        case D.SoundboardSoundGridSectionType.FREQUENTLY_USED:
-                            return V.default.Messages.FREQUENTLY_USED;
-                        case D.SoundboardSoundGridSectionType.GUILD:
-                            return t.guild.name;
-                        case D.SoundboardSoundGridSectionType.DEFAULTS:
-                            return V.default.Messages.SOUNDBOARD_SOUND_SECTION_DEFAULTS;
-                        case D.SoundboardSoundGridSectionType.SEARCH:
-                            return V.default.Messages.SEARCH_RESULTS_SECTION_LABEL
-                    }
-                }()
-            }), (0, i.jsx)(N.default, {
-                className: F.headerIcon,
-                direction: n ? N.default.Directions.RIGHT : N.default.Directions.DOWN
-            })]
+        return (0, i.jsx)("div", {
+            className: F.sectionContainer,
+            children: (0, i.jsx)(u.Clickable, {
+                className: a()(F.sectionHeader, {
+                    [F.notFirstSectionHeader]: 0 !== s
+                }),
+                onClick: r,
+                "aria-expanded": !n,
+                children: (0, i.jsxs)("div", {
+                    className: F.sectionHeaderContent,
+                    children: [function() {
+                        switch (t.type) {
+                            case D.SoundboardSoundGridSectionType.FAVORITES:
+                                return (0, i.jsx)(R.default, {
+                                    className: F.headerIcon
+                                });
+                            case D.SoundboardSoundGridSectionType.RECENTLY_HEARD:
+                                return (0, i.jsx)(O.default, {
+                                    className: F.headerIcon
+                                });
+                            case D.SoundboardSoundGridSectionType.FREQUENTLY_USED:
+                                return (0, i.jsx)(l.AnalyticsIcon, {
+                                    className: F.headerIcon
+                                });
+                            case D.SoundboardSoundGridSectionType.GUILD:
+                                return (0, i.jsx)(E.default, {
+                                    guild: t.guild,
+                                    height: 16,
+                                    width: 16
+                                });
+                            case D.SoundboardSoundGridSectionType.DEFAULTS:
+                                return (0, i.jsx)(p.default, {
+                                    className: F.headerIcon
+                                });
+                            case D.SoundboardSoundGridSectionType.SEARCH:
+                                return (0, i.jsx)(C.default, {
+                                    className: F.headerIcon
+                                })
+                        }
+                    }(), (0, i.jsx)(u.Heading, {
+                        variant: "eyebrow",
+                        color: "none",
+                        className: F.sectionTitle,
+                        children: function() {
+                            switch (t.type) {
+                                case D.SoundboardSoundGridSectionType.FAVORITES:
+                                    return V.default.Messages.FAVORITES;
+                                case D.SoundboardSoundGridSectionType.RECENTLY_HEARD:
+                                    return V.default.Messages.RECENTLY_HEARD;
+                                case D.SoundboardSoundGridSectionType.FREQUENTLY_USED:
+                                    return V.default.Messages.FREQUENTLY_USED;
+                                case D.SoundboardSoundGridSectionType.GUILD:
+                                    return t.guild.name;
+                                case D.SoundboardSoundGridSectionType.DEFAULTS:
+                                    return V.default.Messages.SOUNDBOARD_SOUND_SECTION_DEFAULTS;
+                                case D.SoundboardSoundGridSectionType.SEARCH:
+                                    return V.default.Messages.SEARCH_RESULTS_SECTION_LABEL
+                            }
+                        }()
+                    }), (0, i.jsx)(N.default, {
+                        className: F.headerIcon,
+                        direction: n ? N.default.Directions.RIGHT : N.default.Directions.DOWN
+                    })]
+                })
+            })
         })
     }
 

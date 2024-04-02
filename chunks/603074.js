@@ -54,7 +54,7 @@ function(e, t, n) {
             f.maybeFetchSoundboardSounds(), I.FrecencyUserSettingsActionCreators.loadIfNecessary(), (0, E.setSearchQuery)("")
         }, []), (0, i.jsx)(_.AnalyticsLocationProvider, {
             value: U,
-            children: (0, i.jsx)("div", {
+            children: (0, i.jsx)(u.Dialog, {
                 className: a()(A.picker, {
                     [A.fetching]: y,
                     [A.autoWidth]: g
