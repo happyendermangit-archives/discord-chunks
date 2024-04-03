@@ -16930,6 +16930,7 @@ function(e) {
         QUESTS_REWARD_VERIFICATION_ERROR: "Uh oh! We failed to send you a verification email.",
         QUEST_REWARD: "Win {reward}",
         QUEST_REWARD_COMPLETED: "You unlocked {reward} on {date}",
+        QUEST_REWARD_CODE_HIDDEN: "Reward code hidden. Use copy button.",
         QUESTS_REWARD_CODE_HEADER: "Your Reward Code",
         QUESTS_REWARD_CODE_CONGRATS: "Congrats!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER: "What is your preferred platform?",
