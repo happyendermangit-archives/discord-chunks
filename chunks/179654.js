@@ -26,13 +26,15 @@ function(e, t, n) {
                 client_performance_cpu_percentile75: e.percentiles[75],
                 client_performance_cpu_percentile90: e.percentiles[90],
                 client_performance_cpu_percentile95: e.percentiles[95],
+                client_performance_cpu_mean: e.mean,
                 client_performance_memory_percentile25: t.percentiles[25],
                 client_performance_memory_percentile50: t.percentiles[50],
                 client_performance_memory_percentile75: t.percentiles[75],
                 client_performance_memory_percentile90: t.percentiles[90],
                 client_performance_memory_percentile95: t.percentiles[95],
                 client_performance_memory_min: t.min,
-                client_performance_memory_max: t.max
+                client_performance_memory_max: t.max,
+                client_performance_memory_mean: t.mean
             }
         }
         takeSample() {
