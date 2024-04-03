@@ -4,7 +4,7 @@ function(e, t, n) {
         isActivitiesInTextEnabled: function() {
             return d
         },
-        isActivityInTextSupportedForChannelType: function() {
+        isActivityInTextSupportedForChannel: function() {
             return u
         },
         useActivitiesInTextExperimentConfig: function() {
@@ -54,12 +54,14 @@ function(e, t, n) {
     });
 
     function u(e) {
-        return [i.ChannelTypes.GUILD_TEXT, i.ChannelTypes.GROUP_DM, i.ChannelTypes.DM].includes(e)
+        var t;
+        if (null == e || void 0 === e || null != e.parent_id && void 0 !== e.parent_id) return !1;
+        return t = e.type, [i.ChannelTypes.GUILD_TEXT, i.ChannelTypes.GROUP_DM, i.ChannelTypes.DM].includes(t)
     }
 
     function d(e, t) {
         if (null == e) return !1;
-        let n = u(e.type);
+        let n = u(e);
         return (null == e ? void 0 : e.guild_id) != null ? s.default.getCurrentConfig({
             guildId: e.guild_id,
             location: t
@@ -77,11 +79,10 @@ function(e, t, n) {
             isActivitiesInTextEnabledForChannelType: n,
             channelGuildId: i
         } = (0, r.useStateFromStoresObject)([o.default], () => {
-            var t;
-            let n = o.default.getChannel(e);
+            let t = o.default.getChannel(e);
             return {
-                isActivitiesInTextEnabledForChannelType: null != (t = n) && u(t.type),
-                channelGuildId: null == n ? void 0 : n.guild_id
+                isActivitiesInTextEnabledForChannelType: u(t),
+                channelGuildId: null == t ? void 0 : t.guild_id
             }
         }), a = null != i, d = s.default.useExperiment({
             guildId: i,
@@ -99,24 +100,23 @@ function(e, t, n) {
     }
 
     function c(e, t) {
-        let n = (0, r.useStateFromStores)([o.default], () => {
-                var t;
-                return null === (t = o.default.getChannel(e)) || void 0 === t ? void 0 : t.guild_id
-            }),
-            i = null != n,
-            a = s.default.useExperiment({
-                guildId: n,
+        let n = (0, r.useStateFromStores)([o.default], () => o.default.getChannel(e)),
+            i = u(n),
+            a = null == n ? void 0 : n.guild_id,
+            d = null != a,
+            _ = s.default.useExperiment({
+                guildId: a,
                 location: t
             }, {
-                autoTrackExposure: i,
-                disable: !i
+                autoTrackExposure: d,
+                disable: !d
             }),
-            u = l.useExperiment({
+            c = l.useExperiment({
                 location: t
             }, {
-                autoTrackExposure: !i,
-                disable: i
+                autoTrackExposure: !d,
+                disable: d
             });
-        return i ? a : u
+        return i ? d ? _ : c : null
     }
 }

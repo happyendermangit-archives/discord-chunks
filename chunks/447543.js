@@ -80,36 +80,36 @@ function(e, t, n) {
             analyticsLocations: s = []
         } = e, {
             type: a
-        } = i, o = function(e, t, n) {
+        } = i, o = P.default.getChannel(i.id), l = function(e, t, n) {
             var i, r;
             if ((null == n ? void 0 : n.targetType) === Q.InviteTargetTypes.ROLE_SUBSCRIPTIONS_PURCHASE) return z.StaticChannelRoute.ROLE_SUBSCRIPTIONS;
             if ((null == n ? void 0 : n.targetType) == null && !M.GUILD_VOCAL_CHANNEL_TYPES.has(t.type) && ((0, S.canSeeGuildHome)(e) || (0, m.canSeeOnboardingHome)(e))) return z.StaticChannelRoute.GUILD_HOME;
             let s = P.default.getChannel(t.id);
             return k.default.can(K.Permissions.VIEW_CHANNEL, s) ? t.id : null !== (r = null === (i = U.default.getDefaultChannel(e, !0, K.Permissions.CREATE_INSTANT_INVITE)) || void 0 === i ? void 0 : i.id) && void 0 !== r ? r : t.id
         }(t, i, r), {
-            targetUserId: l,
-            targetType: u,
-            targetApplicationId: d
-        } = null != r ? r : {}, _ = a === K.ChannelTypes.GUILD_STAGE_VOICE, c = K.Routes.CHANNEL(t, o);
+            targetUserId: u,
+            targetType: d,
+            targetApplicationId: _
+        } = null != r ? r : {}, c = a === K.ChannelTypes.GUILD_STAGE_VOICE, T = K.Routes.CHANNEL(t, l);
         M.GUILD_VOCAL_CHANNEL_TYPES.has(a) ? (0, f.addPostConnectionCallback)(() => {
             Promise.resolve().then(n.bind(n, "287734")).then(e => {
                 let {
                     default: n
                 } = e, a = () => {
-                    if (_) {
-                        (0, v.connectAndOpen)(i instanceof M.ChannelRecordBase ? i : (0, M.createChannelRecord)(i)), (0, D.transitionTo)(c);
+                    if (c) {
+                        (0, v.connectAndOpen)(i instanceof M.ChannelRecordBase ? i : (0, M.createChannelRecord)(i)), (0, D.transitionTo)(T);
                         return
                     }
-                    n.selectVoiceChannel(o), u === Q.InviteTargetTypes.STREAM && null != l && W.watchStreamAndTransitionToStream({
+                    n.selectVoiceChannel(l), d === Q.InviteTargetTypes.STREAM && null != u && W.watchStreamAndTransitionToStream({
                         streamType: X.StreamTypes.GUILD,
-                        ownerId: l,
+                        ownerId: u,
                         guildId: t,
-                        channelId: o
-                    }), u === Q.InviteTargetTypes.EMBEDDED_APPLICATION && null != d && ((0, D.transitionTo)(K.Routes.CHANNEL(null != t ? t : K.ME, o)), (0, I.default)(o, d, s, null == r ? void 0 : r.intent))
+                        channelId: l
+                    }), d === Q.InviteTargetTypes.EMBEDDED_APPLICATION && null != _ && ((0, D.transitionTo)(K.Routes.CHANNEL(null != t ? t : K.ME, l)), (0, I.default)(l, _, s, null == r ? void 0 : r.intent))
                 };
                 (0, A.shouldShowMembershipVerificationGate)(t, [G.default, w.default, V.default, b.default]) ? (0, h.openMemberVerificationModal)(t, a) : a()
             })
-        }) : (0, E.isActivityInTextSupportedForChannelType)(a) && u === Q.InviteTargetTypes.EMBEDDED_APPLICATION && null != d && ((0, D.transitionTo)(K.Routes.CHANNEL(null != t ? t : K.ME, o)), (0, I.default)(o, d, s, null == r ? void 0 : r.intent)), (function(e, t) {
+        }) : (0, E.isActivityInTextSupportedForChannel)(o) && d === Q.InviteTargetTypes.EMBEDDED_APPLICATION && null != _ && ((0, D.transitionTo)(K.Routes.CHANNEL(null != t ? t : K.ME, l)), (0, I.default)(l, _, s, null == r ? void 0 : r.intent)), (function(e, t) {
             let {
                 type: n
             } = e, {
@@ -120,7 +120,7 @@ function(e, t, n) {
                 navigationReplace: !0
             };
             return null != r && (o.welcomeModalChannelId = r), a && (o.state = q.STAGE_INVITE_STATE_KEY), null != s && (o.guildScheduledEventId = s.id), e => null != i ? i(e, o, L.default.INVITE_ACCEPT) : (0, D.transitionTo)(e, o, L.default.INVITE_ACCEPT)
-        })(i, r)(c)
+        })(i, r)(T)
     }
     let et = function(e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
