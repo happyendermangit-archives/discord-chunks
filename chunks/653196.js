@@ -19,6 +19,7 @@ function(e) {
         modalContents: "modalContents_e19dbf",
         overviewSidebar: "overviewSidebar__995aa",
         overviewSidebarContent: "overviewSidebarContent_b8b257",
+        overviewSidebarWrapper: "overviewSidebarWrapper__8ca7a",
         overviewText: "overviewText__01ee0",
         previousButton: "previousButton_b43130",
         progressContainer: "progressContainer__378bd",
