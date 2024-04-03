@@ -15,7 +15,7 @@ function(e, t, n) {
         o = n("442837"),
         l = n("692547"),
         u = n("622535"),
-        d = n("952216"),
+        d = n("298433"),
         _ = n("420166"),
         c = n("481060"),
         E = n("812206"),
@@ -75,7 +75,7 @@ function(e, t, n) {
                         children: e => (0, i.jsx)("div", {
                             className: p.sharedGameIcon,
                             ...e,
-                            children: (0, i.jsx)(d.DoubleCheckmarkLargeIcon, {
+                            children: (0, i.jsx)(d.GroupIcon, {
                                 height: 14,
                                 width: 14,
                                 color: l.default.colors.INTERACTIVE_MUTED
@@ -105,53 +105,54 @@ function(e, t, n) {
         let {
             userId: t,
             containerClassName: n,
-            wrapChildren: s
+            maxItems: s = 3,
+            wrapChildren: o
         } = e, {
-            recentGames: o,
-            currentUserApplicationIds: l,
-            isFetching: d,
-            isError: _
-        } = (0, T.useUserRecentGames)(t), {
-            trackUserProfileAction: c,
-            ...E
-        } = (0, h.useUserProfileAnalyticsContext)(), I = d || _ || null == o || 0 === o.length, [S, m] = r.useState(!1), [N, O] = r.useState(!1);
+            recentGames: l,
+            currentUserApplicationIds: d,
+            isFetching: _,
+            isError: c
+        } = (0, T.useUserRecentGames)(t), E = r.useMemo(() => null == l ? void 0 : l.slice(0, s), [l, s]), {
+            trackUserProfileAction: I,
+            ...S
+        } = (0, h.useUserProfileAnalyticsContext)(), m = _ || c || null == E || 0 === E.length, [N, O] = r.useState(!1), [C, g] = r.useState(!1);
         if (r.useEffect(() => {
-                if (I || S || null == l || !N) return;
-                m(!0);
+                if (m || N || null == d || !C) return;
+                O(!0);
                 let e = [],
                     t = [],
                     n = [];
-                o.forEach(i => {
+                E.forEach(i => {
                     let {
                         applicationId: r,
                         isNew: s
                     } = i;
-                    e.push(r), s && t.push(r), l.has(r) && n.push(r)
+                    e.push(r), s && t.push(r), d.has(r) && n.push(r)
                 }), (0, A.trackUserProfileRecentGamesViewed)({
-                    ...E,
+                    ...S,
                     applicationIds: e,
                     newApplicationIds: t,
                     sharedApplicationIds: n
                 })
-            }, [l, I, o, m, S, E, N]), I) return null;
-        let C = (0, i.jsx)(u.VisibilitySensor, {
-            onChange: O,
+            }, [d, m, E, O, N, S, C]), m) return null;
+        let L = (0, i.jsx)(u.VisibilitySensor, {
+            onChange: g,
             threshold: .25,
-            active: !S,
+            active: !N,
             children: (0, i.jsx)("div", {
                 className: a()(p.recentGames, n),
-                children: null == o ? void 0 : o.map(e => {
+                children: null == E ? void 0 : E.map(e => {
                     var n, r, s;
                     return (0, i.jsx)(R, {
                         game: e,
-                        isSharedGame: (n = t, r = l, s = e.applicationId, n !== f.default.getId() && null != r && r.has(s))
+                        isSharedGame: (n = t, r = d, s = e.applicationId, n !== f.default.getId() && null != r && r.has(s))
                     }, e.lastSessionId)
                 })
             })
         });
-        return null != s ? (0, i.jsx)(i.Fragment, {
-            children: s(C)
-        }) : C
+        return null != o ? (0, i.jsx)(i.Fragment, {
+            children: o(L)
+        }) : L
     });
 
     function g(e) {

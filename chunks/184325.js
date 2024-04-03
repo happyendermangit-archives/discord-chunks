@@ -99,6 +99,14 @@ function(e, t, n) {
                             }) : null;
                             if (null != r) return G.dispatch(m.ComponentActions.POPOUT_CLOSE), r(n)
                         },
+                        onMouseEnter: () => {
+                            var n;
+                            e.id === S.QUEST_COMPLETED_BADGE && (0, f.trackUserProfileBadgeHovered)({
+                                badge: e.id,
+                                analyticsLocations: M,
+                                ...P
+                            }), null === (n = t.onMouseEnter) || void 0 === n || n.call(t)
+                        },
                         href: e.link,
                         children: (0, s.jsx)("img", {
                             alt: " ",

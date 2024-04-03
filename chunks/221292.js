@@ -7,6 +7,9 @@ function(e, t, n) {
         trackUserProfileActivityJoined: function() {
             return O
         },
+        trackUserProfileBadgeHovered: function() {
+            return C
+        },
         trackUserProfileBadgePressed: function() {
             return p
         },
@@ -198,6 +201,28 @@ function(e, t, n) {
                 profile_application_ids: o,
                 profile_new_applications_ids: l,
                 profile_shared_applications_ids: d
+            })
+        },
+        C = e => {
+            let {
+                userId: t,
+                guildId: n,
+                channelId: r,
+                analyticsLocations: s,
+                layout: a,
+                badge: o
+            } = e;
+            u.default.track(I.AnalyticEvents.USER_PROFILE_BADGE_HOVERED, {
+                ...(0, i.collectGuildAnalyticsMetadata)(n),
+                ...(0, i.collectChannelAnalyticsMetadataFromId)(r),
+                ...A({
+                    layout: a,
+                    userId: t,
+                    guildId: n
+                }),
+                ...m(t),
+                location_stack: s,
+                badge: o
             })
         }
 }
