@@ -157,21 +157,21 @@ function(e, t, n) {
             })
         },
         loginMFAv2(e) {
-            let t, {
-                code: n,
-                ticket: i,
-                source: r,
-                giftCodeSKUId: s,
-                isMultiAccount: o,
-                mfaType: l
+            let {
+                code: t,
+                ticket: n,
+                source: i,
+                giftCodeSKUId: r,
+                isMultiAccount: s,
+                mfaType: o
             } = e;
-            return t = "webauthn" === l ? m.Endpoints.LOGIN_WEBAUTHN : "sms" === l ? m.Endpoints.LOGIN_SMS : m.Endpoints.LOGIN_MFA, h.default.post({
-                url: t,
+            return h.default.post({
+                url: m.Endpoints.LOGIN_MFA(o),
                 body: {
-                    code: n,
-                    ticket: i,
-                    login_source: r,
-                    gift_code_sku_id: s
+                    code: t,
+                    ticket: n,
+                    login_source: i,
+                    gift_code_sku_id: r
                 },
                 retries: 2,
                 oldFormErrors: !0,
@@ -179,7 +179,7 @@ function(e, t, n) {
                     event: a.NetworkActionNames.USER_LOGIN_MFA
                 }
             }).then(e => {
-                o ? this.switchAccountToken(e.body.token) : d.default.dispatch({
+                s ? this.switchAccountToken(e.body.token) : d.default.dispatch({
                     type: "LOGIN_SUCCESS",
                     token: e.body.token
                 })
