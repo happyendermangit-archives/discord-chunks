@@ -2,49 +2,52 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         UserProfileRecentGamesSection: function() {
-            return p
+            return g
         },
         UserProfileRecentGamesThemedSection: function() {
-            return R
+            return L
         }
-    }), n("47120");
+    }), n("47120"), n("653041");
     var i = n("735250"),
         r = n("470079"),
         s = n("803997"),
         a = n.n(s),
         o = n("442837"),
         l = n("692547"),
-        u = n("952216"),
-        d = n("420166"),
-        _ = n("481060"),
-        c = n("812206"),
-        E = n("566454"),
-        I = n("32966"),
-        T = n("314897"),
-        f = n("768581"),
-        S = n("747074"),
-        h = n("659101"),
-        A = n("689938"),
-        m = n("458186");
+        u = n("622535"),
+        d = n("952216"),
+        _ = n("420166"),
+        c = n("481060"),
+        E = n("812206"),
+        I = n("566454"),
+        T = n("32966"),
+        f = n("314897"),
+        S = n("768581"),
+        h = n("785717"),
+        A = n("221292"),
+        m = n("747074"),
+        N = n("659101"),
+        O = n("689938"),
+        p = n("458186");
 
-    function N(e) {
+    function R(e) {
         let {
             game: t,
             isSharedGame: n
-        } = e, s = (0, o.useStateFromStores)([c.default], () => c.default.getApplication(t.applicationId)), a = r.useMemo(() => null == t.duration || 0 === t.duration ? (0, E.getLastPlayedTimestamp)(t, !1) : "".concat((0, E.getLastPlayedTimestamp)(t, !0), " — ").concat((0, E.getTimePlayedLastWeek)(t)), [t]), I = r.useRef(null), [T, S] = r.useState(!1);
+        } = e, s = (0, o.useStateFromStores)([E.default], () => E.default.getApplication(t.applicationId)), a = r.useMemo(() => null == t.duration || 0 === t.duration ? (0, I.getLastPlayedTimestamp)(t, !1) : "".concat((0, I.getLastPlayedTimestamp)(t, !0), " — ").concat((0, I.getTimePlayedLastWeek)(t)), [t]), u = r.useRef(null), [T, f] = r.useState(!1);
         if (r.useEffect(() => {
-                let e = I.current;
-                null != e && null != e.offsetWidth && null != e.scrollWidth && S(e.offsetWidth < e.scrollWidth)
+                let e = u.current;
+                null != e && null != e.offsetWidth && null != e.scrollWidth && f(e.offsetWidth < e.scrollWidth)
             }, []), null == s) return null;
-        let h = f.default.getApplicationIconURL({
+        let h = S.default.getApplicationIconURL({
             id: s.id,
             icon: s.icon,
             size: 40
         });
         return (0, i.jsxs)("div", {
-            className: m.recentGameContainer,
+            className: p.recentGameContainer,
             children: [(0, i.jsx)("div", {
-                className: m.recentGameIcon,
+                className: p.recentGameIcon,
                 children: null != h && (0, i.jsx)("img", {
                     alt: "",
                     "aria-hidden": !0,
@@ -53,114 +56,140 @@ function(e, t, n) {
                     height: 40
                 })
             }), (0, i.jsxs)("div", {
-                className: m.recentGameDetails,
+                className: p.recentGameDetails,
                 children: [(0, i.jsxs)("div", {
-                    className: m.recentGameTitleContainer,
-                    children: [(0, i.jsx)(_.Tooltip, {
+                    className: p.recentGameTitleContainer,
+                    children: [(0, i.jsx)(c.Tooltip, {
                         text: s.name,
-                        color: _.Tooltip.Colors.PRIMARY,
+                        color: c.Tooltip.Colors.PRIMARY,
                         shouldShow: T,
                         children: e => (0, i.jsx)("span", {
-                            ref: I,
+                            ref: u,
                             ...e,
-                            className: m.recentGameTitle,
+                            className: p.recentGameTitle,
                             children: s.name
                         })
-                    }), n && (0, i.jsx)(_.Tooltip, {
-                        text: A.default.Messages.USER_RECENT_GAMES_YOU_BOTH_PLAY,
-                        color: _.Tooltip.Colors.PRIMARY,
+                    }), n && (0, i.jsx)(c.Tooltip, {
+                        text: O.default.Messages.USER_RECENT_GAMES_YOU_BOTH_PLAY,
+                        color: c.Tooltip.Colors.PRIMARY,
                         children: e => (0, i.jsx)("div", {
-                            className: m.sharedGameIcon,
+                            className: p.sharedGameIcon,
                             ...e,
-                            children: (0, i.jsx)(u.DoubleCheckmarkLargeIcon, {
+                            children: (0, i.jsx)(d.DoubleCheckmarkLargeIcon, {
                                 height: 14,
                                 width: 14,
                                 color: l.default.colors.INTERACTIVE_MUTED
                             })
                         })
                     })]
-                }), (0, i.jsx)(_.Text, {
+                }), (0, i.jsx)(c.Text, {
                     variant: "text-sm/normal",
                     color: "header-secondary",
                     children: a
                 }), t.isNew && (0, i.jsxs)("div", {
-                    className: m.newIcon,
-                    children: [(0, i.jsx)(d.NewUserIcon, {
+                    className: p.newIcon,
+                    children: [(0, i.jsx)(_.NewUserIcon, {
                         height: 12,
                         width: 12,
                         color: l.default.colors.STATUS_POSITIVE
-                    }), (0, i.jsx)(_.Text, {
+                    }), (0, i.jsx)(c.Text, {
                         variant: "text-xs/normal",
                         color: "status-positive",
-                        children: A.default.Messages.NEW_TO_THIS_GAME
+                        children: O.default.Messages.NEW_TO_THIS_GAME
                     })]
                 })]
             })]
         })
     }
-    let O = r.memo(function(e) {
+    let C = r.memo(function(e) {
         let {
             userId: t,
             containerClassName: n,
-            wrapChildren: r
+            wrapChildren: s
         } = e, {
-            recentGames: s,
-            currentUserApplicationIds: o,
-            isFetching: l,
-            isError: u
-        } = (0, I.useUserRecentGames)(t);
-        if (l || u || null == s || 0 === s.length) return null;
-        let d = (0, i.jsx)("div", {
-            className: a()(m.recentGames, n),
-            children: null == s ? void 0 : s.map(e => {
-                var n, r, s;
-                return (0, i.jsx)(N, {
-                    game: e,
-                    isSharedGame: (n = t, r = o, s = e.applicationId, n !== T.default.getId() && r.has(s))
-                }, e.lastSessionId)
+            recentGames: o,
+            currentUserApplicationIds: l,
+            isFetching: d,
+            isError: _
+        } = (0, T.useUserRecentGames)(t), {
+            trackUserProfileAction: c,
+            ...E
+        } = (0, h.useUserProfileAnalyticsContext)(), I = d || _ || null == o || 0 === o.length, [S, m] = r.useState(!1), [N, O] = r.useState(!1);
+        if (r.useEffect(() => {
+                if (I || S || null == l || !N) return;
+                m(!0);
+                let e = [],
+                    t = [],
+                    n = [];
+                o.forEach(i => {
+                    let {
+                        applicationId: r,
+                        isNew: s
+                    } = i;
+                    e.push(r), s && t.push(r), l.has(r) && n.push(r)
+                }), (0, A.trackUserProfileRecentGamesViewed)({
+                    ...E,
+                    applicationIds: e,
+                    newApplicationIds: t,
+                    sharedApplicationIds: n
+                })
+            }, [l, I, o, m, S, E, N]), I) return null;
+        let C = (0, i.jsx)(u.VisibilitySensor, {
+            onChange: O,
+            threshold: .25,
+            active: !S,
+            children: (0, i.jsx)("div", {
+                className: a()(p.recentGames, n),
+                children: null == o ? void 0 : o.map(e => {
+                    var n, r, s;
+                    return (0, i.jsx)(R, {
+                        game: e,
+                        isSharedGame: (n = t, r = l, s = e.applicationId, n !== f.default.getId() && null != r && r.has(s))
+                    }, e.lastSessionId)
+                })
             })
         });
-        return null != r ? (0, i.jsx)(i.Fragment, {
-            children: r(d)
-        }) : d
+        return null != s ? (0, i.jsx)(i.Fragment, {
+            children: s(C)
+        }) : C
     });
 
-    function p(e) {
+    function g(e) {
         let {
             userId: t,
             containerClassName: n
-        } = e, s = r.useCallback(e => (0, i.jsxs)(h.default, {
-            children: [(0, i.jsx)(_.Heading, {
+        } = e, s = r.useCallback(e => (0, i.jsxs)(N.default, {
+            children: [(0, i.jsx)(c.Heading, {
                 variant: "eyebrow",
-                className: m.recentGamesHeading,
-                children: A.default.Messages.RECENT_GAMES
+                className: p.recentGamesHeading,
+                children: O.default.Messages.RECENT_GAMES
             }), e]
         }), []);
-        return (0, i.jsx)(O, {
+        return (0, i.jsx)(C, {
             userId: t,
             containerClassName: n,
             wrapChildren: s
         })
     }
 
-    function R(e) {
+    function L(e) {
         let {
             userId: t,
             containerClassName: n
-        } = e, s = r.useCallback(e => (0, i.jsx)(S.default.Inner, {
-            children: (0, i.jsxs)(h.default, {
-                children: [(0, i.jsx)(_.Heading, {
+        } = e, s = r.useCallback(e => (0, i.jsx)(m.default.Inner, {
+            children: (0, i.jsxs)(N.default, {
+                children: [(0, i.jsx)(c.Heading, {
                     variant: "eyebrow",
-                    className: m.recentGamesHeading,
-                    children: A.default.Messages.RECENT_GAMES
+                    className: p.recentGamesHeading,
+                    children: O.default.Messages.RECENT_GAMES
                 }), e]
             })
         }), []);
-        return (0, i.jsx)(O, {
+        return (0, i.jsx)(C, {
             userId: t,
             containerClassName: n,
             wrapChildren: s
         })
     }
-    t.default = O
+    t.default = C
 }

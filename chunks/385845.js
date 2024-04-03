@@ -9,29 +9,28 @@ function(e, t, n) {
         c = n("314897"),
         E = n("77498"),
         I = n("709054");
-    let T = new Set,
-        f = new Map,
-        S = new Set,
-        h = new Set;
-    class A extends(i = d.default.Store) {
+    let T = new Map,
+        f = new Set,
+        S = new Set;
+    class h extends(i = d.default.Store) {
         getRecentGames(e) {
             var t;
-            return null === (t = f.get(e)) || void 0 === t ? void 0 : t.recentGames
+            return null === (t = T.get(e)) || void 0 === t ? void 0 : t.recentGames
         }
         getLastFetchTimestamp(e) {
             var t;
-            return null === (t = f.get(e)) || void 0 === t ? void 0 : t.lastFetchTimestampMs
+            return null === (t = T.get(e)) || void 0 === t ? void 0 : t.lastFetchTimestampMs
         }
         isFetching(e) {
-            return S.has(e)
+            return f.has(e)
         }
         isError(e) {
-            return h.has(e)
+            return S.has(e)
         }
         getCurrentUserApplicationIds() {
             let e = c.default.getId(),
-                t = f.get(e);
-            return null == t ? T : new Set(t.recentGames.map(e => {
+                t = T.get(e);
+            return null == t ? null : new Set(t.recentGames.map(e => {
                 let {
                     applicationId: t
                 } = e;
@@ -39,27 +38,27 @@ function(e, t, n) {
             }))
         }
     }
-    a = "UserRecentGamesStore", (s = "displayName") in(r = A) ? Object.defineProperty(r, s, {
+    a = "UserRecentGamesStore", (s = "displayName") in(r = h) ? Object.defineProperty(r, s, {
         value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a, t.default = new A(_.default, {
+    }) : r[s] = a, t.default = new h(_.default, {
         CONNECTION_OPEN: function() {
-            f = new Map, S = new Set, h = new Set
+            T = new Map, f = new Set, S = new Set
         },
         USER_RECENT_GAMES_FETCH_START: function(e) {
             let {
                 userId: t
             } = e;
-            h.delete(t), S.add(t)
+            S.delete(t), f.add(t)
         },
         USER_RECENT_GAMES_FETCH_SUCCESS: function(e) {
             let {
                 userId: t,
                 recentGames: n
             } = e;
-            S.delete(t), f.set(t, {
+            f.delete(t), T.set(t, {
                 recentGames: n.map(e => ({
                     applicationId: e.application.id,
                     duration: e.duration,
@@ -73,7 +72,7 @@ function(e, t, n) {
             let {
                 userId: t
             } = e;
-            S.delete(t), h.add(t)
+            f.delete(t), S.add(t)
         },
         USER_RECENT_GAMES_UPDATE_LOCAL: function(e) {
             let {
@@ -83,7 +82,7 @@ function(e, t, n) {
             if (null == E.default.getDetectableGame(t) || n < u.UserGameApplicationSessionDuration.MIN_DURATION_SECS) return !1;
             ! function(e, t) {
                 var n, i;
-                let r = f.get(e);
+                let r = T.get(e);
                 if (null == r) return;
                 let s = [],
                     a = null;
@@ -96,7 +95,7 @@ function(e, t, n) {
                     lastSessionId: I.default.compare(n.lastSessionId, i.lastSessionId) > 0 ? n.lastSessionId : i.lastSessionId,
                     isNew: n.isNew || i.isNew
                 });
-                f.set(e, {
+                T.set(e, {
                     lastFetchTimestampMs: Date.now(),
                     recentGames: [o, ...s]
                 })

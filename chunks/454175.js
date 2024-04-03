@@ -32,13 +32,13 @@ function(e, t, n) {
     }
     async function _(e, t, n) {
         let i = o.default.getLastFetchTimestamp(e);
-        if (!(null != i && Date.now() - i < u) && (r.default.dispatch({
-                type: "USER_RECENT_GAMES_FETCH_START",
-                userId: e
-            }), await d(e, t), n)) {
-            let n = s.default.getId(),
-                i = o.default.getLastFetchTimestamp(n);
-            n !== e && null == i && await d(n, t)
+        if (!(null != i && Date.now() - i < u)) {
+            if (n) {
+                let n = s.default.getId(),
+                    i = o.default.getLastFetchTimestamp(n);
+                n !== e && null == i && await d(n, t)
+            }
+            await d(e, t)
         }
     }
     t.default = {

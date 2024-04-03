@@ -5,7 +5,7 @@ function(_, E, e) {
             return P
         },
         asUintN: function() {
-            return G
+            return U
         },
         combine: function() {
             return C
@@ -20,7 +20,7 @@ function(_, E, e) {
             return O
         },
         getFlag: function() {
-            return U
+            return G
         },
         has: function() {
             return l
@@ -220,12 +220,12 @@ function(_, E, e) {
     function M(_, E) {
         return E === c ? _ : L(_, O(_, E))
     }
-    let U = T ? function(_) {
+    let G = T ? function(_) {
             return BigInt(1) << BigInt(_)
         } : function(_) {
             return A.fromBit(_)
         },
-        G = T ? function(_, E) {
+        U = T ? function(_, E) {
             return Number(BigInt.asUintN(_, E))
         } : function(_, E) {
             return A.asUintN(_, E)

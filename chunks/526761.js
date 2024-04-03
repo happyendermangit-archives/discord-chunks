@@ -42,13 +42,13 @@ function(_, E, e) {
             return P
         },
         SOUNDBOARD_SUBSECTION: function() {
-            return U
+            return G
         },
         UserSettingsDelay: function() {
             return r
         },
         UserSettingsScrollPositions: function() {
-            return G
+            return U
         },
         UserSettingsTypes: function() {
             return T
@@ -61,9 +61,9 @@ function(_, E, e) {
         s = 762880,
         P = "ROLE_SUBSCRIPTIONS",
         M = "APPLICATION_SUBSCRIPTION_SUBSECTION",
-        U = "SOUNDBOARD_SUBSECTION";
+        G = "SOUNDBOARD_SUBSECTION";
     (c = I || (I = {})).USER_PROFILE = "user_profile", c.GUILD = "guild", c.TRY_IT_OUT = "try_it_out", (o || (o = {})).CUSTOM_APP_ICONS = "custom_app_icon", (a || (a = {})).TRY_IT_OUT = "try_it_out", (O = R || (R = {})).REDUCED_MOTION = "reduced_motion", O.SYNC_PROFILE_THEME_WITH_USER_THEME = "sync_profile_theme_with_user_theme", O.LEGACY_CHAT_INPUT = "legacy_chat_input", (t || (t = {})).HARDWARE_ACCELERATION = "hardware_acceleration", (n = A || (A = {})).DM_SAFETY_ALERTS = "dm_safety_alerts", n.MESSAGE_REQUESTS = "message_requests", n.EXPLICIT_MEDIA_REDACTION = "explicit_media_redaction";
-    let G = {
+    let U = {
         ProfileCustomizationScrollPositions: a,
         AccessibilityScrollPositions: R,
         VoiceAndVideoScrollPositions: t,
