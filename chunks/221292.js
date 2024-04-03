@@ -70,7 +70,7 @@ function(e, t, n) {
                     guildMember: _,
                     guildMemberProfile: null == d ? void 0 : d._guildMemberProfile
                 }),
-                profile_activity_types: s.default.getActivities(u.id, o).map(e => {
+                profile_activity_types: s.default.getActivities(u.id).map(e => {
                     let {
                         type: t
                     } = e;
