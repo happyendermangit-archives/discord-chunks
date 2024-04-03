@@ -127,12 +127,10 @@ function(e, t, n) {
     }
 
     function A() {
-        let {
-            quests: e
-        } = I(), t = h().length > 0;
+        let e = h();
         i.useEffect(() => {
-            for (let n of e) t && (0, o.dismissQuestContent)(n.id, _.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE)
-        }, [e, t])
+            for (let t of e)(0, o.dismissQuestContent)(t, _.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE)
+        }, [e])
     }
 
     function m(e) {

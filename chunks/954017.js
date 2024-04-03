@@ -2,49 +2,50 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         sendReactionToActivity: function() {
-            return T
+            return f
         },
         sendReplyToActivity: function() {
-            return f
+            return S
         }
     });
-    var i = n("726542"),
-        r = n("122810"),
-        s = n("503438"),
-        a = n("693824"),
-        o = n("690725"),
-        l = n("81063"),
-        u = n("176354"),
-        d = n("201133"),
-        _ = n("55000"),
-        c = n("314091"),
-        E = n("981631"),
-        I = n("689938");
-    let T = async e => {
+    var i = n("493683"),
+        r = n("726542"),
+        s = n("122810"),
+        a = n("503438"),
+        o = n("693824"),
+        l = n("690725"),
+        u = n("81063"),
+        d = n("176354"),
+        _ = n("201133"),
+        c = n("55000"),
+        E = n("314091"),
+        I = n("981631"),
+        T = n("689938");
+    let f = async e => {
         let {
             reaction: t,
             altText: n,
             ...i
-        } = e, r = await h(i);
-        (0, d.sendReaction)({
+        } = e, r = await A(i);
+        (0, _.sendReaction)({
             file: r,
             altText: n,
             user: i.user,
             reaction: t
         })
-    }, f = async e => {
+    }, S = async e => {
         let {
             reply: t,
             altText: n,
             ...i
-        } = e, r = await h(i);
-        (0, d.sendReply)({
+        } = e, r = await A(i);
+        (0, _.sendReply)({
             file: r,
             altText: n,
             user: i.user,
             reply: t
         })
-    }, S = e => {
+    }, h = e => {
         var t;
         let {
             activity: i,
@@ -52,10 +53,10 @@ function(e, t, n) {
             user: s
         } = e, {
             theme: a
-        } = (0, c.getProfileInfo)(s, "black"), o = "dark" === a, d = (0, c.getActivityPlatform)(i), {
+        } = (0, E.getProfileInfo)(s, "black"), o = "dark" === a, l = (0, E.getActivityPlatform)(i), {
             assets: _,
-            application_id: I
-        } = i, T = (0, l.getAssetImage)(I, null == _ ? void 0 : _.large_image, 64), f = null == r ? void 0 : r.getIconURL(64), S = null != d ? o ? d.icon.darkPNG : d.icon.lightPNG : i.type === E.ActivityTypes.PLAYING ? o ? n("414575") : n("807612") : null, h = i.type === E.ActivityTypes.HANG_STATUS && (null === (t = i.emoji) || void 0 === t ? void 0 : t.id) != null ? (0, u.getEmojiUrl)({
+            application_id: c
+        } = i, T = (0, u.getAssetImage)(c, null == _ ? void 0 : _.large_image, 64), f = null == r ? void 0 : r.getIconURL(64), S = null != l ? o ? l.icon.darkPNG : l.icon.lightPNG : i.type === I.ActivityTypes.PLAYING ? o ? n("414575") : n("807612") : null, h = i.type === I.ActivityTypes.HANG_STATUS && (null === (t = i.emoji) || void 0 === t ? void 0 : t.id) != null ? (0, d.getEmojiUrl)({
             id: i.emoji.id,
             name: i.emoji.name,
             animated: !1
@@ -74,171 +75,172 @@ function(e, t, n) {
                 HangStatus: h
             }
         }
-    }, h = async e => {
+    }, A = async e => {
         let {
             user: t,
             activity: n,
-            application: l,
-            stream: u
-        } = e, d = S({
+            application: u,
+            stream: d
+        } = e, _ = await i.default.openPrivateChannel(t.id, !1, !1), E = h({
             activity: n,
-            application: l,
+            application: u,
             user: t
         });
-        return await (0, o.generateImageFromCanvas)({
-            assetsToLoad: d,
+        return await (0, l.generateImageFromCanvas)({
+            assetsToLoad: E,
             drawImage: e => {
-                var o;
+                var i;
                 e.setFont({
-                    truncate: a.TextTruncationMethod.Truncate
-                }), null != u ? R(e, n, t) : (0, s.default)(n) ? N(e, n, t) : (0, r.default)(n) && n.name === i.default.get(E.PlatformTypes.LEAGUE_OF_LEGENDS).name ? p(e, n, t) : n.type === E.ActivityTypes.HANG_STATUS ? O(e, n, t) : m(e, n, t), (null === (o = e.assetMap) || void 0 === o ? void 0 : o.has("Platform")) && e.drawImage("Platform", {
-                    x: _.canvasWidth - _.padding - _.platformSize,
-                    y: _.padding
+                    truncate: o.TextTruncationMethod.Truncate
+                }), null != d ? C(e, n, t) : (0, a.default)(n) ? O(e, n, t) : (0, s.default)(n) && n.name === r.default.get(I.PlatformTypes.LEAGUE_OF_LEGENDS).name ? R(e, n, t) : n.type === I.ActivityTypes.HANG_STATUS ? p(e, n, t) : N(e, n, t), (null === (i = e.assetMap) || void 0 === i ? void 0 : i.has("Platform")) && e.drawImage("Platform", {
+                    x: c.canvasWidth - c.padding - c.platformSize,
+                    y: c.padding
                 }, {
-                    w: _.platformSize,
-                    h: _.platformSize
+                    w: c.platformSize,
+                    h: c.platformSize
                 })
             },
             exportConfigs: {
-                format: a.DiscordCanvasExporterOutputFormats.File,
+                format: o.DiscordCanvasExporterOutputFormats.CloudUpload,
                 quality: 1,
                 fileName: "user-reacting-to-".concat(n.name, ".png").toLowerCase(),
-                fileType: "png"
+                fileType: "png",
+                channelId: _
             }
         })
-    }, A = (e, t) => {
-        e.setColor("dark" === t ? "white" : "black"), e.drawPath(_.ACTIVITY_IMAGE_FALLBACK_PATH, {
-            x: _.padding,
-            y: _.padding
+    }, m = (e, t) => {
+        e.setColor("dark" === t ? "white" : "black"), e.drawPath(c.ACTIVITY_IMAGE_FALLBACK_PATH, {
+            x: c.padding,
+            y: c.padding
         }, !0, 2 + 2 / 3)
-    }, m = (e, t, n) => {
+    }, N = (e, t, n) => {
         var i, r, s;
         e.setSize({
-            w: _.canvasWidth,
-            h: _.canvasHeight
+            w: c.canvasWidth,
+            h: c.canvasHeight
         });
         let {
             color: a,
             theme: o
-        } = (0, c.getProfileInfo)(n, "black");
+        } = (0, E.getProfileInfo)(n, "black");
         e.setColor(a), e.drawRoundedRect({
             x: 0,
             y: 0,
-            h: _.canvasHeight,
-            w: _.canvasWidth
+            h: c.canvasHeight,
+            w: c.canvasWidth
         }, 8, !0), e.setColor("dark" === o ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.7)"), e.drawRoundedRect({
             x: 0,
             y: 0,
-            h: _.canvasHeight,
-            w: _.canvasWidth
+            h: c.canvasHeight,
+            w: c.canvasWidth
         }, 8, !0), (null === (i = e.assetMap) || void 0 === i ? void 0 : i.has("AssetImage")) ? e.drawRoundedImage("AssetImage", {
-            x: _.padding,
-            y: _.padding
+            x: c.padding,
+            y: c.padding
         }, {
-            w: _.activitySize,
-            h: _.activitySize
+            w: c.activitySize,
+            h: c.activitySize
         }, 8) : (null === (r = e.assetMap) || void 0 === r ? void 0 : r.has("ApplicationImage")) ? e.drawRoundedImage("ApplicationImage", {
-            x: _.padding,
-            y: _.padding
+            x: c.padding,
+            y: c.padding
         }, {
-            w: _.activitySize,
-            h: _.activitySize
-        }, 8) : A(e, o);
-        let l = _.activitySize + _.padding + _.imagePadding;
+            w: c.activitySize,
+            h: c.activitySize
+        }, 8) : m(e, o);
+        let l = c.activitySize + c.padding + c.imagePadding;
         e.setColor("dark" === o ? "white" : "rgb(6, 6, 7)"), e.setFont({
             size: 16,
             family: ["gg sans", "sans-serif"],
             weight: 700
         }), e.drawText("".concat(t.name), {
             x: l,
-            y: _.fontPadding + 1 * _.lineHeight,
-            w: (null === (s = e.assetMap) || void 0 === s ? void 0 : s.has(_.AssetTypes.Platform)) ? _.titleMaxWidthPlatform : _.titleMaxWidthNoPlatform
+            y: c.fontPadding + 1 * c.lineHeight,
+            w: (null === (s = e.assetMap) || void 0 === s ? void 0 : s.has(c.AssetTypes.Platform)) ? c.titleMaxWidthPlatform : c.titleMaxWidthNoPlatform
         }, !0), null != t.timestamps && (e.setFont({
             size: 14,
             weight: 400
-        }), e.drawText("for ".concat((0, c.howLong)(t.timestamps)), {
+        }), e.drawText("for ".concat((0, E.howLong)(t.timestamps)), {
             x: l,
-            y: _.fontPadding + 2 * _.lineHeight
+            y: c.fontPadding + 2 * c.lineHeight
         }, !0))
-    }, N = (e, t, n) => {
+    }, O = (e, t, n) => {
         var i, r;
         e.setSize({
-            w: _.canvasWidth,
-            h: _.canvasHeight
+            w: c.canvasWidth,
+            h: c.canvasHeight
         });
         let {
             color: s,
             theme: a
-        } = (0, c.getProfileInfo)(n, "black");
+        } = (0, E.getProfileInfo)(n, "black");
         e.setColor(s), e.drawRoundedRect({
             x: 0,
             y: 0,
-            h: _.canvasHeight,
-            w: _.canvasWidth
+            h: c.canvasHeight,
+            w: c.canvasWidth
         }, 8, !0), e.setColor("dark" === a ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.7)"), e.drawRoundedRect({
             x: 0,
             y: 0,
-            h: _.canvasHeight,
-            w: _.canvasWidth
+            h: c.canvasHeight,
+            w: c.canvasWidth
         }, 8, !0), (null === (i = e.assetMap) || void 0 === i ? void 0 : i.has("AssetImage")) && e.drawRoundedImage("AssetImage", {
-            x: _.padding,
-            y: _.padding
+            x: c.padding,
+            y: c.padding
         }, {
-            w: _.activitySize,
-            h: _.activitySize
+            w: c.activitySize,
+            h: c.activitySize
         }, 8);
-        let o = _.activitySize + _.padding + _.imagePadding;
+        let o = c.activitySize + c.padding + c.imagePadding;
         e.setColor("dark" === a ? "white" : "rgb(6, 6, 7)"), e.setFont({
             size: 14,
             family: ["gg sans", "sans-serif"],
             weight: 700
         }), e.drawText("".concat(t.details), {
             x: o,
-            y: _.fontPadding + 1 * _.lineHeight,
-            w: (null === (r = e.assetMap) || void 0 === r ? void 0 : r.has(_.AssetTypes.Platform)) ? _.titleMaxWidthPlatform : _.titleMaxWidthNoPlatform
+            y: c.fontPadding + 1 * c.lineHeight,
+            w: (null === (r = e.assetMap) || void 0 === r ? void 0 : r.has(c.AssetTypes.Platform)) ? c.titleMaxWidthPlatform : c.titleMaxWidthNoPlatform
         }, !0), e.setFont({
             size: 14,
             weight: 400
         }), e.drawText("by ".concat(t.state), {
             x: o,
-            y: _.fontPadding + 2 * _.lineHeight
+            y: c.fontPadding + 2 * c.lineHeight
         }, !0)
-    }, O = (e, t, i) => {
+    }, p = (e, t, i) => {
         var r, s;
         e.setSize({
-            w: _.canvasWidth,
-            h: _.canvasHeight
+            w: c.canvasWidth,
+            h: c.canvasHeight
         });
         let {
             color: a,
             theme: o
-        } = (0, c.getProfileInfo)(i, "black");
+        } = (0, E.getProfileInfo)(i, "black");
         e.setColor(a), e.drawRoundedRect({
             x: 0,
             y: 0,
-            h: _.canvasHeight,
-            w: _.canvasWidth
+            h: c.canvasHeight,
+            w: c.canvasWidth
         }, 8, !0), e.setColor("dark" === o ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.7)"), e.drawRoundedRect({
             x: 0,
             y: 0,
-            h: _.canvasHeight,
-            w: _.canvasWidth
+            h: c.canvasHeight,
+            w: c.canvasWidth
         }, 8, !0), (null === (r = e.assetMap) || void 0 === r ? void 0 : r.has("HangStatus")) ? e.drawRoundedImage("HangStatus", {
-            x: _.padding,
-            y: _.padding
+            x: c.padding,
+            y: c.padding
         }, {
-            w: _.activitySize,
-            h: _.activitySize
-        }, 8) : A(e, o);
-        let l = _.activitySize + _.padding + _.imagePadding;
+            w: c.activitySize,
+            h: c.activitySize
+        }, 8) : m(e, o);
+        let l = c.activitySize + c.padding + c.imagePadding;
         e.setColor("dark" === o ? "white" : "rgb(6, 6, 7)"), e.setFont({
             size: 14,
             family: ["gg sans", "sans-serif"],
             weight: 700
-        }), e.drawText(I.default.Messages.STATUS_LEAD_IN_JUST, {
+        }), e.drawText(T.default.Messages.STATUS_LEAD_IN_JUST, {
             x: l,
-            y: _.fontPadding + 1 * _.lineHeight,
-            w: (null === (s = e.assetMap) || void 0 === s ? void 0 : s.has(_.AssetTypes.Platform)) ? _.titleMaxWidthPlatform : _.titleMaxWidthNoPlatform
+            y: c.fontPadding + 1 * c.lineHeight,
+            w: (null === (s = e.assetMap) || void 0 === s ? void 0 : s.has(c.AssetTypes.Platform)) ? c.titleMaxWidthPlatform : c.titleMaxWidthNoPlatform
         }, !0), e.setFont({
             size: 14,
             weight: 400
@@ -246,102 +248,102 @@ function(e, t, n) {
         let u = "";
         u = (0, n("833858").getHangStatusText)(t), e.drawText(u, {
             x: l,
-            y: _.fontPadding + 2 * _.lineHeight
+            y: c.fontPadding + 2 * c.lineHeight
         }, !0)
-    }, p = (e, t, n) => {
+    }, R = (e, t, n) => {
         var i;
         e.setSize({
-            w: _.canvasWidth,
-            h: _.canvasHeight
+            w: c.canvasWidth,
+            h: c.canvasHeight
         });
         let {
             color: r,
             theme: s
-        } = (0, c.getProfileInfo)(n, "black");
+        } = (0, E.getProfileInfo)(n, "black");
         e.setColor(r), e.drawRoundedRect({
             x: 0,
             y: 0,
-            h: _.canvasHeight,
-            w: _.canvasWidth
+            h: c.canvasHeight,
+            w: c.canvasWidth
         }, 8, !0), e.setColor("dark" === s ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.7)"), e.drawRoundedRect({
             x: 0,
             y: 0,
-            h: _.canvasHeight,
-            w: _.canvasWidth
+            h: c.canvasHeight,
+            w: c.canvasWidth
         }, 8, !0), e.setColor("dark" === s ? "white" : "black"), e.drawRoundedImage("AssetImage", {
-            x: _.padding,
-            y: _.padding
+            x: c.padding,
+            y: c.padding
         }, {
-            w: _.activitySize,
-            h: _.activitySize
-        }, 8) === a.DrawResultStatus.Failure && e.drawPath(_.ACTIVITY_IMAGE_FALLBACK_PATH, {
-            x: _.padding,
-            y: _.padding
+            w: c.activitySize,
+            h: c.activitySize
+        }, 8) === o.DrawResultStatus.Failure && e.drawPath(c.ACTIVITY_IMAGE_FALLBACK_PATH, {
+            x: c.padding,
+            y: c.padding
         }, !0, 2 + 2 / 3);
-        let o = _.activitySize + _.padding + _.imagePadding;
+        let a = c.activitySize + c.padding + c.imagePadding;
         e.setColor("dark" === s ? "white" : "rgb(6, 6, 7)"), e.setFont({
             size: 14,
             family: ["gg sans", "sans-serif"],
             weight: 700
         }), e.drawText("".concat(t.details), {
-            x: o,
-            y: _.fontPadding + 1 * _.lineHeight,
-            w: (null === (i = e.assetMap) || void 0 === i ? void 0 : i.has("Platform")) ? _.titleMaxWidthPlatform : _.titleMaxWidthNoPlatform
+            x: a,
+            y: c.fontPadding + 1 * c.lineHeight,
+            w: (null === (i = e.assetMap) || void 0 === i ? void 0 : i.has("Platform")) ? c.titleMaxWidthPlatform : c.titleMaxWidthNoPlatform
         }, !0), e.setFont({
             size: 14,
             weight: 400
         }), e.drawText("".concat(t.state), {
-            x: o,
-            y: _.fontPadding + 2 * _.lineHeight
+            x: a,
+            y: c.fontPadding + 2 * c.lineHeight
         }, !0)
-    }, R = (e, t, n) => {
+    }, C = (e, t, n) => {
         var i, r, s;
         e.setSize({
-            w: _.canvasWidth,
-            h: _.canvasHeight
+            w: c.canvasWidth,
+            h: c.canvasHeight
         });
         let {
             color: a,
             theme: o
-        } = (0, c.getProfileInfo)(n, "black");
+        } = (0, E.getProfileInfo)(n, "black");
         e.setColor(a), e.drawRoundedRect({
             x: 0,
             y: 0,
-            h: _.canvasHeight,
-            w: _.canvasWidth
+            h: c.canvasHeight,
+            w: c.canvasWidth
         }, 8, !0), e.setColor("dark" === o ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.7)"), e.drawRoundedRect({
             x: 0,
             y: 0,
-            h: _.canvasHeight,
-            w: _.canvasWidth
+            h: c.canvasHeight,
+            w: c.canvasWidth
         }, 8, !0), (null === (i = e.assetMap) || void 0 === i ? void 0 : i.has("AssetImage")) ? e.drawRoundedImage("AssetImage", {
-            x: _.padding,
-            y: _.padding
+            x: c.padding,
+            y: c.padding
         }, {
-            w: _.activitySize,
-            h: _.activitySize
+            w: c.activitySize,
+            h: c.activitySize
         }, 8) : (null === (r = e.assetMap) || void 0 === r ? void 0 : r.has("ApplicationImage")) ? e.drawRoundedImage("ApplicationImage", {
-            x: _.padding,
-            y: _.padding
+            x: c.padding,
+            y: c.padding
         }, {
-            w: _.activitySize,
-            h: _.activitySize
-        }, 8) : A(e, o);
-        let l = _.activitySize + _.padding + _.imagePadding;
+            w: c.activitySize,
+            h: c.activitySize
+        }, 8) : m(e, o);
+        let l = c.activitySize + c.padding + c.imagePadding;
         e.setColor("dark" === o ? "white" : "rgb(6, 6, 7)"), e.setFont({
             size: 16,
             family: ["gg sans", "sans-serif"],
             weight: 700
         }), e.drawText("Streaming ".concat(t.name), {
             x: l,
-            y: _.fontPadding + _.lineHeight * (null != t.timestamps ? 1 : 1.5),
-            w: (null === (s = e.assetMap) || void 0 === s ? void 0 : s.has(_.AssetTypes.Platform)) ? _.titleMaxWidthPlatform : _.titleMaxWidthNoPlatform
+            y: c.fontPadding + c.lineHeight * (null != t.timestamps ? 1 : 1.5),
+            w: (null === (s = e.assetMap) || void 0 === s ? void 0 : s.has(c.AssetTypes.Platform)) ? c.titleMaxWidthPlatform : c.titleMaxWidthNoPlatform
         }, !0), null != t.timestamps && (e.setFont({
             size: 14,
             weight: 500
-        }), e.drawText("for ".concat((0, c.howLong)(t.timestamps)), {
+        }), e.drawText("for ".concat((0, E.howLong)(t.timestamps)), {
             x: l,
-            y: _.fontPadding + 2 * _.lineHeight
+            y: c.fontPadding + 2 * c.lineHeight
         }, !0))
     }
 }
