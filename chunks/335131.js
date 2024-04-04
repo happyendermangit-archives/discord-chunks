@@ -73,7 +73,7 @@ function(e, t, n) {
                 type: "COLLECTIBLES_CATEGORIES_FETCH"
             });
             let t = {};
-            null != e && (!0 === e.noCache && (t.no_cache = !0), !0 === e.includeUnpublished && (t.include_unpublished = !0), null != e.countryCode && (t.country_code = e.countryCode));
+            null != e && (!0 === e.noCache && (t.no_cache = !0), !0 === e.includeUnpublished && (t.include_unpublished = !0), null != e.countryCode && (t.country_code = e.countryCode), null !== e.paymentGateway && (t.payment_gateway = e.paymentGateway));
             try {
                 let n = await i.HTTP.get({
                     url: d.Endpoints.COLLECTIBLES_CATEGORIES,
@@ -111,15 +111,15 @@ function(e, t, n) {
                 type: "COLLECTIBLES_PRODUCT_FETCH"
             });
             try {
-                let n = await i.HTTP.get({
+                let n = {};
+                (null == t ? void 0 : t.countryCode) !== null && (n.country_code = null == t ? void 0 : t.countryCode), (null == t ? void 0 : t.paymentGateway) !== null && (n.payment_gateway = null == t ? void 0 : t.paymentGateway);
+                let s = await i.HTTP.get({
                     url: d.Endpoints.COLLECTIBLES_PRODUCTS(e),
-                    query: null != t ? {
-                        country_code: t
-                    } : {}
+                    query: n
                 });
                 r.default.dispatch({
                     type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS",
-                    product: l.default.fromServer(n.body)
+                    product: l.default.fromServer(s.body)
                 })
             } catch (e) {
                 throw r.default.dispatch({
