@@ -27,7 +27,7 @@ function(e, t, n) {
             autoFocusNote: I,
             analyticsLocation: T,
             sourceAnalyticsLocations: f
-        } = e, S = s.default.getUser(t), h = u !== l.ME ? u : void 0, A = (0, a.isInProfileMutualsExperiment)().enabled;
+        } = e, S = s.default.getUser(t), h = null != u && u !== l.ME ? u : void 0, A = (0, a.isInProfileMutualsExperiment)().enabled;
         if (null == S) return (0, r.fetchProfile)(t, {
             friendToken: E,
             guildId: h,
@@ -38,10 +38,10 @@ function(e, t, n) {
                 type: "USER_PROFILE_MODAL_OPEN",
                 userId: t,
                 section: n,
-                guildId: u,
-                channelId: d,
-                messageId: _,
-                roleId: c,
+                guildId: null != u ? u : void 0,
+                channelId: null != d ? d : void 0,
+                messageId: null != _ ? _ : void 0,
+                roleId: null != c ? c : void 0,
                 friendToken: E,
                 autoFocusNote: I,
                 analyticsLocation: T,
@@ -56,10 +56,10 @@ function(e, t, n) {
             type: "USER_PROFILE_MODAL_OPEN",
             userId: t,
             section: n,
-            guildId: u,
-            channelId: d,
-            messageId: _,
-            roleId: c,
+            guildId: null != u ? u : void 0,
+            channelId: null != d ? d : void 0,
+            messageId: null != _ ? _ : void 0,
+            roleId: null != c ? c : void 0,
             friendToken: E,
             autoFocusNote: I,
             analyticsLocation: T,

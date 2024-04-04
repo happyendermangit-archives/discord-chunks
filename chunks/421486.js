@@ -66,10 +66,10 @@ function(e, t, n) {
             (0, m.openUserProfileModal)({
                 userId: t.id,
                 sourceAnalyticsLocations: I,
-                guildId: null != f ? f : void 0,
-                channelId: null != h ? h : void 0,
-                messageId: null != A ? A : void 0,
-                roleId: null != R ? R : void 0,
+                guildId: f,
+                channelId: h,
+                messageId: A,
+                roleId: R,
                 section: e,
                 analyticsLocation: o
             }), null == r || r()

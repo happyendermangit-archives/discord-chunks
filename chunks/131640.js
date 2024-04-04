@@ -145,10 +145,10 @@ function(e, t, n) {
                         action: "PRESS_VIEW_PROFILE"
                     }), (0, P.openUserProfileModal)({
                         userId: t.id,
-                        guildId: null != E ? E : void 0,
-                        channelId: null != I ? I : void 0,
-                        messageId: null != j ? j : void 0,
-                        roleId: null != W ? W : void 0,
+                        guildId: E,
+                        channelId: I,
+                        messageId: j,
+                        roleId: W,
                         sourceAnalyticsLocations: H,
                         analyticsLocation: g.location
                     }), null == f || f()
