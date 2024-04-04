@@ -515,7 +515,7 @@ function(e, t, n) {
             } = e;
             z = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
             let n = new URLSearchParams;
-            n.append("build_id", "93969213af54fe19e4d02d6feddb24ae3f47ef48"), n.append("rpc", String(t)), n.append("rpc_auth_token", z), i = "".concat(location.protocol, "//").concat(location.host, "/overlay?").concat(n.toString())
+            n.append("build_id", "ebc253d4c9a400c858350037f221778e19d09ebf"), n.append("rpc", String(t)), n.append("rpc_auth_token", z), i = "".concat(location.protocol, "//").concat(location.host, "/overlay?").concat(n.toString())
         },
         OVERLAY_CALL_PRIVATE_CHANNEL: function(e) {
             let {
