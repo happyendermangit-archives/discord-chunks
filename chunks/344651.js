@@ -1365,7 +1365,7 @@ function(e, t, n) {
         })
     }), w(["EMBEDDED_ACTIVITY_UPDATE"], e => h.ChannelLoader.loadGuildIds([e.guild_id]), e => {
         k({
-            type: "EMBEDDED_ACTIVITY_INBOUND_UPDATE",
+            type: "EMBEDDED_ACTIVITY_UPDATE",
             guildId: e.guild_id,
             channelId: e.channel_id,
             embeddedActivity: e.embedded_activity,
@@ -1374,7 +1374,7 @@ function(e, t, n) {
         })
     }), w(["EMBEDDED_ACTIVITY_UPDATE_V2"], e => h.ChannelLoader.loadGuildIds([e.guild_id]), e => {
         k({
-            type: "EMBEDDED_ACTIVITY_INBOUND_UPDATE_V2",
+            type: "EMBEDDED_ACTIVITY_UPDATE_V2",
             activitySessionId: e.activity_session_id,
             applicationId: e.application_id,
             channelId: e.channel_id,

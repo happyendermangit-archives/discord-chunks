@@ -379,6 +379,10 @@ function(e) {
         SIGNUP_CLAN_OPTION_HARDCORE_TITLE: "Hardcore",
         SIGNUP_CLAN_OPTION_HARDCORE_DESCRIPTION: "We play together to win, rank up, or beat challenges.",
         SIGNUP_CLAN_OPTION_VERY_HARDCORE_TITLE: "Very Hardcore",
-        SIGNUP_CLAN_OPTION_VERY_HARDCORE_DESCRIPTION: "We won't sleep until we win or beat the boss."
+        SIGNUP_CLAN_OPTION_VERY_HARDCORE_DESCRIPTION: "We won't sleep until we win or beat the boss.",
+        CLAN_DISCOVERY_TOP_PICKS_TITLE: "Top Picks",
+        CLAN_DISCOVERY_TOP_PICKS_SUBTITLE: "Best {playstyle} Gaming Guilds to join based on your preferences",
+        CLAN_DISCOVERY_GAME_FILTER: "{count, number} Games",
+        CLAN_DISCOVERY_PRIMETIME_FILTER_EMPTY: "Active Hour"
     })
 }

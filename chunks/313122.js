@@ -341,8 +341,8 @@ function(e, t, n) {
                 STREAM_CLOSE: this.handleStreamClose,
                 PASSIVE_UPDATE_V1: this.handleVoiceStateChange,
                 VOICE_STATE_UPDATES: this.handleVoiceStateChange,
-                EMBEDDED_ACTIVITY_INBOUND_UPDATE: this.handleEmbeddedActivityUpdate,
-                EMBEDDED_ACTIVITY_INBOUND_UPDATE_V2: this.handleEmbeddedActivityUpdate
+                EMBEDDED_ACTIVITY_UPDATE: this.handleEmbeddedActivityUpdate,
+                EMBEDDED_ACTIVITY_UPDATE_V2: this.handleEmbeddedActivityUpdate
             })
         }
     }

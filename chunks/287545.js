@@ -208,10 +208,10 @@ function(e, t, n) {
     }
     class j extends l.default {
         _initialize() {
-            S.default.addChangeListener(this.handleSelectedChannelUpdate), a.default.subscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail), a.default.subscribe("EMBEDDED_ACTIVITY_OPEN", V), a.default.subscribe("EMBEDDED_ACTIVITY_CLOSE", F), a.default.subscribe("EMBEDDED_ACTIVITY_INBOUND_UPDATE", x), a.default.subscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen), a.default.subscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect), a.default.subscribe("MEDIA_SESSION_JOINED", H)
+            S.default.addChangeListener(this.handleSelectedChannelUpdate), a.default.subscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail), a.default.subscribe("EMBEDDED_ACTIVITY_OPEN", V), a.default.subscribe("EMBEDDED_ACTIVITY_CLOSE", F), a.default.subscribe("EMBEDDED_ACTIVITY_UPDATE", x), a.default.subscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen), a.default.subscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect), a.default.subscribe("MEDIA_SESSION_JOINED", H)
         }
         _terminate() {
-            S.default.removeChangeListener(this.handleSelectedChannelUpdate), a.default.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail), a.default.unsubscribe("EMBEDDED_ACTIVITY_OPEN", V), a.default.unsubscribe("EMBEDDED_ACTIVITY_CLOSE", F), a.default.unsubscribe("EMBEDDED_ACTIVITY_INBOUND_UPDATE", x), a.default.unsubscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen), a.default.unsubscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect), a.default.unsubscribe("MEDIA_SESSION_JOINED", H)
+            S.default.removeChangeListener(this.handleSelectedChannelUpdate), a.default.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail), a.default.unsubscribe("EMBEDDED_ACTIVITY_OPEN", V), a.default.unsubscribe("EMBEDDED_ACTIVITY_CLOSE", F), a.default.unsubscribe("EMBEDDED_ACTIVITY_UPDATE", x), a.default.unsubscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen), a.default.unsubscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect), a.default.unsubscribe("MEDIA_SESSION_JOINED", H)
         }
         constructor(...e) {
             super(...e), G(this, "handleSelectedChannelUpdate", () => {

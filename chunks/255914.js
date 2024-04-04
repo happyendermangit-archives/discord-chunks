@@ -196,6 +196,9 @@ function(e, t, n) {
         addSystemResources() {
             this.systemResources.takeSample()
         }
+        appendTransportStats(e) {
+            null != e.inboundBitrateEstimate && this.inboundBitrateEstimateHistogram.addSample(e.inboundBitrateEstimate)
+        }
         getCodecsUsed() {
             let e = new Set;
             for (let [t, n] of Object.entries(this.codecBuckets)) n > 0 && e.add(t);
@@ -219,7 +222,7 @@ function(e, t, n) {
                 VP9: 0,
                 AV1: 0,
                 UNKNOWN: 0
-            }), I(this, "statsWindow", []), I(this, "fpsHistogram", new c.Histogram), I(this, "bitrateHistogram", new c.Histogram), I(this, "resolutionHistogram", new c.Histogram), I(this, "systemResources", new E.default), I(this, "decoderCodec", "UNKNOWN"), I(this, "startTime", void 0), I(this, "timeToFirstFrame", void 0), I(this, "aggregatedProperties", {
+            }), I(this, "statsWindow", []), I(this, "fpsHistogram", new c.Histogram), I(this, "bitrateHistogram", new c.Histogram), I(this, "inboundBitrateEstimateHistogram", new c.Histogram), I(this, "resolutionHistogram", new c.Histogram), I(this, "systemResources", new E.default), I(this, "decoderCodec", "UNKNOWN"), I(this, "startTime", void 0), I(this, "timeToFirstFrame", void 0), I(this, "aggregatedProperties", {
                 framesCodec: 0,
                 framesNetwork: 0,
                 packets: 0,
