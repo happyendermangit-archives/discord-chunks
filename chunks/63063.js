@@ -2,52 +2,38 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         SUPPORT_LOCATION: function() {
-            return u
+            return o
         }
     });
-    var i = n("544891"),
-        r = n("299379"),
-        s = n("706454"),
-        a = n("314897"),
-        o = n("358085"),
-        l = n("981631");
-    let u = "https://".concat(l.SUPPORT_DOMAIN),
-        d = "https://".concat(l.SUPPORT_DEV_DOMAIN);
+    var i = n("299379"),
+        r = n("706454"),
+        s = n("358085"),
+        a = n("981631");
+    let o = "https://".concat(a.SUPPORT_DOMAIN),
+        l = "https://".concat(a.SUPPORT_DEV_DOMAIN);
 
-    function _(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u;
+    function u(e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o;
         return t + e
     }
 
-    function c() {
-        return s.default.locale.toLowerCase()
+    function d() {
+        return r.default.locale.toLowerCase()
     }
     t.default = {
-        getArticleURL: e => _("/hc/".concat(c(), "/articles/").concat(e)),
-        getDevArticleURL: e => _("/hc/".concat(c(), "/articles/").concat(e), d),
-        getCreatorSupportArticleURL: e => _("/hc/".concat(c(), "/articles/").concat(e), "https://creator-support.discord.com"),
-        getTwitterURL: () => (0, r.default)(l.LocalizedLinks.TWITTER),
-        getCommunityURL: () => _("/hc/".concat(c())),
+        getArticleURL: e => u("/hc/".concat(d(), "/articles/").concat(e)),
+        getDevArticleURL: e => u("/hc/".concat(d(), "/articles/").concat(e), l),
+        getCreatorSupportArticleURL: e => u("/hc/".concat(d(), "/articles/").concat(e), "https://creator-support.discord.com"),
+        getTwitterURL: () => (0, i.default)(a.LocalizedLinks.TWITTER),
+        getCommunityURL: () => u("/hc/".concat(d())),
         getSubmitRequestURL(e) {
-            let t = _("/hc/".concat(c(), "/requests/new?platform=").concat(encodeURIComponent((0, o.getPlatformName)())));
+            let t = u("/hc/".concat(d(), "/requests/new?platform=").concat(encodeURIComponent((0, s.getPlatformName)())));
             return null != e && (t += "&device_info=".concat(encodeURIComponent(e))), t
-        },
-        async getSubmitRequestURLAuthenticated(e) {
-            let t = a.default.getToken();
-            if (null == t) return this.getSubmitRequestURL(e);
-            let n = await i.HTTP.get({
-                    url: l.Endpoints.SSO_TOKEN,
-                    headers: {
-                        authorization: t
-                    }
-                }),
-                r = this.getSubmitRequestURL(e);
-            return "".concat((0, i.getAPIBaseURL)()).concat(l.Endpoints.SSO, "?service=zendesk&return_to=").concat(r, "&token=").concat(n.body.token)
         },
         getSearchURL(e) {
             let t = encodeURIComponent(e);
-            return _("/hc/".concat(c(), "/search?utf8=%E2%9C%93&query=").concat(t, "&commit=Search"))
+            return u("/hc/".concat(d(), "/search?utf8=%E2%9C%93&query=").concat(t, "&commit=Search"))
         },
-        getFeaturedArticlesJsonURL: () => _("/api/v2/help_center/en-us/articles.json?label_names=featured")
+        getFeaturedArticlesJsonURL: () => u("/api/v2/help_center/en-us/articles.json?label_names=featured")
     }
 }
