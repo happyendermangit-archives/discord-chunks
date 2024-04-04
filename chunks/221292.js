@@ -52,7 +52,7 @@ function(e, t, n) {
                 n = s.default.isMobileOnline(e);
             return t === T.StatusTypes.ONLINE && n ? "".concat(t, "-mobile") : t === T.StatusTypes.ONLINE ? "".concat(t, "-desktop") : t
         },
-        h = e => "string" == typeof e || null == e ? e : Object.keys(I.ActivityTypes)[Object.values(I.ActivityTypes).indexOf(e)],
+        h = e => null == e ? e : Object.keys(I.ActivityTypes)[Object.values(I.ActivityTypes).indexOf(e)],
         A = e => {
             var t, n;
             let {
@@ -136,9 +136,8 @@ function(e, t, n) {
                 channelId: r,
                 analyticsLocations: s,
                 layout: a,
-                activityType: o,
-                applicationId: l,
-                voiceChannelId: d
+                activity: o,
+                voiceChannelId: l
             } = e;
             u.default.track(I.AnalyticEvents.USER_PROFILE_ACTIVITY_JOINED, {
                 ...(0, i.collectGuildAnalyticsMetadata)(n),
@@ -150,9 +149,12 @@ function(e, t, n) {
                 }),
                 ...m(t),
                 location_stack: s,
-                activity_type: h(o),
-                application_id: l,
-                voice_channel_id: d
+                activity_type: null != l ? "VOICE" : h(null == o ? void 0 : o.type),
+                activity_name: null == o ? void 0 : o.name,
+                activity_platform: null == o ? void 0 : o.platform,
+                activity_session_id: null == o ? void 0 : o.session_id,
+                application_id: null == o ? void 0 : o.application_id,
+                voice_channel_id: l
             })
         },
         p = e => {
