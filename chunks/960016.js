@@ -5,6 +5,7 @@ function(e) {
         closeBtn: "closeBtn__97612",
         container: "container__37170",
         containerScrollGradient: "containerScrollGradient__8c8dd",
+        description: "description__1ee46",
         details: "details_bd2b5f",
         header: "header_d9d642",
         headerBackground: "headerBackground_e490a7",
