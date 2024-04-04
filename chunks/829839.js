@@ -39,21 +39,21 @@ function(e, t, n) {
         }), i
     }
 
-    function a(e, t) {
-        let n = [];
-        return e.has(i.ExperimentFlags.SIGNAL_H265_SUPPORT) ? t === i.MediaEngineContextTypes.STREAM && n.unshift({
+    function a(e) {
+        let t = [];
+        return e.has(i.ExperimentFlags.SIGNAL_H265_SUPPORT) ? t.unshift({
             name: "H265",
             encode: !0,
             decode: !0
-        }) : e.has(i.ExperimentFlags.SIGNAL_H265_DECODE_SUPPORT) && t === i.MediaEngineContextTypes.STREAM && n.unshift({
+        }) : e.has(i.ExperimentFlags.SIGNAL_H265_DECODE_SUPPORT) && t.unshift({
             name: "H265",
             encode: !1,
             decode: !0
-        }), e.has(i.ExperimentFlags.SIGNAL_AV1_SUPPORT) && n.unshift({
+        }), e.has(i.ExperimentFlags.SIGNAL_AV1_SUPPORT) && t.unshift({
             name: "AV1",
             encode: !0,
             decode: !0
-        }), n
+        }), t
     }
 
     function o(e, t) {

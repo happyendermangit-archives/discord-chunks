@@ -63,7 +63,7 @@ function(e, t, n) {
             let r = i.createReplayConnection("default", (t, r) => {
                 let s = null != i.getCodecCapabilities ? i.getCodecCapabilities : i.getSupportedVideoCodecs;
                 n.on(f.BaseConnectionEvent.Stats, n.handleStats), n.conn.setOnVideoCallback(n.handleVideo), s(t => {
-                    let i = (0, S.getExperimentCodecs)(n.experimentFlags, p.MediaEngineContextTypes.DEFAULT);
+                    let i = (0, S.getExperimentCodecs)(n.experimentFlags);
                     n.codecs = [{
                         type: "audio",
                         name: p.Codecs.OPUS,
@@ -114,7 +114,7 @@ function(e, t, n) {
                     port: l
                 } = s;
                 this.logger.info("Connected with local address ".concat(o, ":").concat(l, " and protocol: ").concat(a)), i(i => {
-                    let r = (0, S.getExperimentCodecs)(this.experimentFlags, this.context);
+                    let r = (0, S.getExperimentCodecs)(this.experimentFlags);
                     this.codecs = [{
                         type: "audio",
                         name: p.Codecs.OPUS,

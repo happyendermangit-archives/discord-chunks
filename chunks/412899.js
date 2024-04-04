@@ -7,9 +7,6 @@ function(e, t, n) {
         OverflowAddRolesButton: function() {
             return H
         },
-        OverflowMoreRolesButton: function() {
-            return x
-        },
         default: function() {
             return W
         }
