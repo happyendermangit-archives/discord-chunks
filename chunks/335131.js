@@ -73,15 +73,16 @@ function(e, t, n) {
                 type: "COLLECTIBLES_CATEGORIES_FETCH"
             });
             let t = {};
-            null != e && (!0 === e.noCache && (t.no_cache = !0), !0 === e.includeUnpublished && (t.include_unpublished = !0), null != e.countryCode && (t.countryCode = e.countryCode));
+            null != e && (!0 === e.noCache && (t.no_cache = !0), !0 === e.includeUnpublished && (t.include_unpublished = !0), null != e.countryCode && (t.country_code = e.countryCode));
             try {
-                let e = await i.HTTP.get({
+                let n = await i.HTTP.get({
                     url: d.Endpoints.COLLECTIBLES_CATEGORIES,
                     query: t
                 });
                 r.default.dispatch({
                     type: "COLLECTIBLES_CATEGORIES_FETCH_SUCCESS",
-                    categories: e.body.map(o.default.fromServer)
+                    categories: n.body.map(o.default.fromServer),
+                    fetchedCountryCode: null == e ? void 0 : e.countryCode
                 })
             } catch (e) {
                 throw r.default.dispatch({

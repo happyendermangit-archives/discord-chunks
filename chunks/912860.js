@@ -34,13 +34,7 @@ function(e, t, n) {
                     }
                 }() > 160,
                 n = e ? "vertical" : "horizontal";
-            if (!(t && e) && (function() {
-                    try {
-                        return window.Firebug.chrome.isInitialized
-                    } catch (e) {
-                        return !1
-                    }
-                }() || e || t)) {
+            if (!(t && e) && (e || t)) {
                 let e = a.open;
                 a = {
                     open: !0,

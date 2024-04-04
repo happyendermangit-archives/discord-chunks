@@ -21,7 +21,7 @@ function(e, t, n) {
             }),
             react: (e, t, n) => {
                 let o = e.target[0];
-                if ((0, s.isManualBuildOverrideLink)(o)) return (0, i.jsxs)(i.Fragment, {
+                return (0, s.isManualBuildOverrideLink)(o) ? (0, i.jsxs)(i.Fragment, {
                     children: [(0, i.jsx)("span", {
                         children: o
                     }), (0, i.jsx)(r.Fragment, {
@@ -29,6 +29,8 @@ function(e, t, n) {
                             url: o
                         }, o)
                     }, n.key)]
+                }) : (0, i.jsx)("span", {
+                    children: o
                 })
             },
             order: 6

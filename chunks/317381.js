@@ -36,8 +36,7 @@ function(e, t, n) {
             everLaunchedActivities: new Set,
             seenNewActivities: {},
             seenUpdatedActivities: {},
-            shouldShowNewActivityIndicator: !1,
-            usersHavePlayedByApp: new Map
+            shouldShowNewActivityIndicator: !1
         },
         p = [],
         R = new Map,
@@ -70,13 +69,9 @@ function(e, t, n) {
             activitySessionId: c
         } = e, I = (0, f.default)(s);
         if (null == I) return;
-        let S = u.default.getBasicChannel(r),
-            h = null != S && d.default.canBasicChannel(m.BasicPermissions.CONNECT, S) || (null == S ? void 0 : S.type) === m.ChannelTypes.DM || (null == S ? void 0 : S.type) === m.ChannelTypes.GROUP_DM;
-        if (function(e, t) {
-                var n;
-                O.usersHavePlayedByApp.set(e, new Set([...null !== (n = O.usersHavePlayedByApp.get(e)) && void 0 !== n ? n : [], ...t]))
-            }(s, _), !h) return;
-        let A = {
+        let S = u.default.getBasicChannel(r);
+        if (!(null != S && d.default.canBasicChannel(m.BasicPermissions.CONNECT, S) || (null == S ? void 0 : S.type) === m.ChannelTypes.DM || (null == S ? void 0 : S.type) === m.ChannelTypes.GROUP_DM)) return;
+        let h = {
                 activitySessionId: null != c ? c : o,
                 applicationId: s,
                 channelId: r,
@@ -85,26 +80,26 @@ function(e, t, n) {
                 url: I,
                 userIds: new Set(_)
             },
-            N = l.default.getId(),
-            p = R.get(A.applicationId);
-        _.some(e => e === N) && null != p && (R.set(p.applicationId, {
-            ...p,
-            ...A
+            A = l.default.getId(),
+            N = R.get(h.applicationId);
+        _.some(e => e === A) && null != N && (R.set(N.applicationId, {
+            ...N,
+            ...h
         }), a.default.dispatch({
             type: "EMBEDDED_ACTIVITY_INSTANCE_CHANGE",
             channelId: r,
             instanceId: o
-        })), null != p && r === p.channelId && !_.some(e => e === N) && Array.from(p.userIds).some(e => e === N) ? L.get(r) === s ? L.delete(r) : R.delete(s) : _.some(e => e === N) && (null == p || p.applicationId !== s || p.channelId !== r) && (null != c && c === l.default.getSessionId() || (0, T.shouldMountActivityIFrameFromGatewayUpdateWithoutSessionIdCheck)("EmbeddedActivitiesStore")) && (x({
+        })), null != N && r === N.channelId && !_.some(e => e === A) && Array.from(N.userIds).some(e => e === A) ? L.get(r) === s ? L.delete(r) : R.delete(s) : _.some(e => e === A) && (null == N || N.applicationId !== s || N.channelId !== r) && (null != c && c === l.default.getSessionId() || (0, T.shouldMountActivityIFrameFromGatewayUpdateWithoutSessionIdCheck)("EmbeddedActivitiesStore")) && (x({
             channelId: r,
             applicationId: s,
             instanceId: o
         }), E.ComponentDispatch.dispatch(m.ComponentActions.OPEN_EMBEDDED_ACTIVITY, {
             channelId: r
         }));
-        let D = (null !== (t = g.get(r)) && void 0 !== t ? t : []).filter(e => e.applicationId !== s),
-            v = k(i),
-            M = (null !== (n = C.get(v)) && void 0 !== n ? n : []).filter(e => !(e.applicationId === s && e.channelId === r));
-        0 !== _.length && (D.push(A), M.push(A)), g.set(r, D), C.set(v, M)
+        let O = (null !== (t = g.get(r)) && void 0 !== t ? t : []).filter(e => e.applicationId !== s),
+            p = k(i),
+            D = (null !== (n = C.get(p)) && void 0 !== n ? n : []).filter(e => !(e.applicationId === s && e.channelId === r));
+        0 !== _.length && (O.push(h), D.push(h)), g.set(r, O), C.set(p, D)
     }
 
     function F(e) {
@@ -157,20 +152,12 @@ function(e, t, n) {
     class j extends(r = s.default.PersistedStore) {
         initialize(e) {
             var t, n;
-            let i = new Map;
-            Array.isArray(null == e ? void 0 : e.usersHavePlayedByApp) && (null == e || e.usersHavePlayedByApp.forEach(e => {
-                if (Array.isArray(e)) {
-                    let [t, n] = e;
-                    "string" == typeof t && Array.isArray(n) && i.set(t, new Set(n))
-                }
-            }));
-            let r = new Set(null !== (t = null == e ? void 0 : e.seenActivities) && void 0 !== t ? t : []),
-                s = new Set(null !== (n = null == e ? void 0 : e.everLaunchedActivities) && void 0 !== n ? n : []);
+            let i = new Set(null !== (t = null == e ? void 0 : e.seenActivities) && void 0 !== t ? t : []),
+                r = new Set(null !== (n = null == e ? void 0 : e.everLaunchedActivities) && void 0 !== n ? n : []);
             null != e && (O = {
                 ...e,
-                seenActivities: r,
-                everLaunchedActivities: s,
-                usersHavePlayedByApp: i
+                seenActivities: i,
+                everLaunchedActivities: r
             })
         }
         getState() {
@@ -239,10 +226,6 @@ function(e, t, n) {
         getLayoutModeForApp(e) {
             return b.get(e)
         }
-        getUsersHavePlayedByApp(e) {
-            var t;
-            return [...null !== (t = O.usersHavePlayedByApp.get(e)) && void 0 !== t ? t : []]
-        }
         getConnectedActivityChannelId() {
             return i
         }
@@ -299,7 +282,9 @@ function(e, t, n) {
             ...e,
             everLaunchedActivities: n
         }
-    }]);
+    }, e => (delete e.usersHavePlayedByApp, {
+        ...e
+    })]);
     let W = new j(a.default, {
         ACTIVITY_LAYOUT_MODE_UPDATE: function(e) {
             let {
