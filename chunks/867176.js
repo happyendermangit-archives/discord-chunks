@@ -55,7 +55,9 @@ function(e, t, n) {
 
     function u(e) {
         var t;
-        if (null == e || void 0 === e || null != e.parent_id && void 0 !== e.parent_id) return !1;
+        if (null == e || void 0 === e) return !1;
+        let n = o.default.getChannel(e.parent_id);
+        if (null != n && (null == n ? void 0 : n.type) !== i.ChannelTypes.GUILD_CATEGORY) return !1;
         return t = e.type, [i.ChannelTypes.GUILD_TEXT, i.ChannelTypes.GROUP_DM, i.ChannelTypes.DM].includes(t)
     }
 
