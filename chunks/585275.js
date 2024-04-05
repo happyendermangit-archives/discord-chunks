@@ -8,8 +8,8 @@ function(e, t, a) {
         o = a.n(i),
         r = a("544891"),
         f = a("992774"),
-        l = a("649754"),
-        s = a("376398"),
+        s = a("649754"),
+        l = a("376398"),
         u = a("846519"),
         b = a("570140"),
         h = a("710845"),
@@ -21,14 +21,14 @@ function(e, t, a) {
         I = a("981631"),
         O = a("65154");
     let T = {},
-        R = new u.Timeout,
-        w = !1,
-        v = window.document.createElement("canvas");
-    v.width = 512, v.height = 288;
-    let S = v.getContext("2d");
+        w = new u.Timeout,
+        v = !1,
+        R = window.document.createElement("canvas");
+    R.width = 512, R.height = 288;
+    let S = R.getContext("2d");
 
     function A() {
-        R.stop(), null != d && (l.default.removeSink(d, T), d = null)
+        w.stop(), null != d && (s.default.removeSink(d, T), d = null)
     }
     let N = o().debounce((e, t, a, d) => {
         C(e, (0, E.encodeStreamKey)({
@@ -41,7 +41,7 @@ function(e, t, a) {
     async function C(e, t) {
         if (d !== e) return;
         let a = () => C(e, t);
-        if (!w) try {
+        if (!v) try {
             let a = await
             function(e, t) {
                 let a = 0;
@@ -58,12 +58,12 @@ function(e, t, a) {
                         };
                         n ? a.getNextVideoOutputFrame(e).then(o, t => {
                             if (d === e) throw t
-                        }) : l.default.addSink(e, T, o)
+                        }) : s.default.addSink(e, T, o)
                     }).finally(() => {
-                        !n && l.default.removeSink(e, T)
+                        !n && s.default.removeSink(e, T)
                     })
                 } : function(e, t) {
-                    let a = (0, s.getVideoStream)(e);
+                    let a = (0, l.getVideoStream)(e);
                     if (null == a) return Promise.resolve(new ImageData(0, 0));
                     let {
                         width: d,
@@ -96,7 +96,7 @@ function(e, t, a) {
                     a = Math.min(t, 288 / e.height),
                     d = e.width * a,
                     n = e.height * a;
-                v.width = d, v.height = n;
+                R.width = d, R.height = n;
                 let c = window.document.createElement("canvas"),
                     i = c.getContext("2d");
                 c.width = e.width, c.height = e.height;
@@ -105,7 +105,7 @@ function(e, t, a) {
                     null == S || S.drawImage(c, 0, 0, e.width, e.height, 0, 0, d, n), t()
                 })
             }(a);
-            let n = v.toDataURL("image/jpeg");
+            let n = R.toDataURL("image/jpeg");
             if (b.default.dispatch({
                     type: "STREAM_PREVIEW_FETCH_SUCCESS",
                     streamKey: t,
@@ -126,10 +126,10 @@ function(e, t, a) {
                 oldFormErrors: !0
             })
         } catch (t) {
-            new h.default("ApplicationStreamPreviewUploadManager").error("Failed to post stream preview", t), d === e && R.start(6e4, a);
+            new h.default("ApplicationStreamPreviewUploadManager").error("Failed to post stream preview", t), d === e && w.start(6e4, a);
             return
         }
-        d === e && (w ? R.start(6e4, a) : R.start(3e5, a))
+        d === e && (v ? w.start(6e4, a) : w.start(3e5, a))
     }
     t.default = {
         init() {
@@ -146,7 +146,7 @@ function(e, t, a) {
                 let {
                     videoState: t
                 } = e;
-                w = t === I.MediaEngineVideoStates.PAUSED || !1
+                v = t === I.MediaEngineVideoStates.PAUSED || !1
             })
         }
     }

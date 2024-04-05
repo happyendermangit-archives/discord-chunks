@@ -8,7 +8,7 @@ function(e, t, a) {
             return b
         },
         getPlatformReadableName: function() {
-            return s
+            return l
         },
         makeDesktopDownloadURL: function() {
             return f
@@ -27,22 +27,22 @@ function(e, t, a) {
         return "".concat(o.DownloadLinks.DESKTOP).concat(t ? "/ptb" : "", "?platform=").concat(e).concat(null != a ? "&format=".concat(a) : "")
     }
 
-    function l() {
+    function s() {
         var e;
         let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null === (e = n().os) || void 0 === e ? void 0 : e.family;
         return null == t ? "win" : -1 !== t.indexOf("Ubuntu") || -1 !== t.indexOf("Debian") || -1 !== t.indexOf("Fedora") || -1 !== t.indexOf("Red Hat") || -1 !== t.indexOf("SuSE") || -1 !== t.indexOf("Linux") ? r : -1 !== t.indexOf("OS X") ? "osx" : "win"
     }
 
-    function s(e) {
+    function l(e) {
         return ({
             win: "Windows",
             osx: "Mac",
             [r]: "Linux"
-        })[l(e)]
+        })[s(e)]
     }
 
     function u() {
-        let e = l();
+        let e = s();
         return f(e, !1, e === r ? "tar.gz" : null)
     }
 

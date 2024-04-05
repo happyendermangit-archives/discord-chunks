@@ -8,7 +8,7 @@ function(e, t, a) {
         o = a("715702"),
         r = a("750950"),
         f = a("605094");
-    class l extends n.Component {
+    class s extends n.Component {
         render() {
             return (0, d.jsx)("div", {
                 className: i()(r.app, f.vertical),
@@ -16,5 +16,5 @@ function(e, t, a) {
             })
         }
     }
-    t.default = l
+    t.default = s
 }

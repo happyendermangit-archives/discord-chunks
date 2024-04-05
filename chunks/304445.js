@@ -4,12 +4,12 @@ function(e, t, a) {
     var d = a("540571"),
         n = a("266067"),
         c = a("38618"),
-        i = a("57132"),
+        i = a("278147"),
         o = a("528097"),
         r = a("777639"),
         f = a("311163"),
-        l = a("272423"),
-        s = a("869735"),
+        s = a("272423"),
+        l = a("869735"),
         u = a("700615"),
         b = a("905423"),
         h = a("703656"),
@@ -43,15 +43,15 @@ function(e, t, a) {
             if (null == h || !h.isReady()) return;
             let E = e.navigationReplace,
                 g = null !== (a = e.useScreen) && void 0 !== a && a;
-            if (m && (0, s.isSplitMessagesTab)() && b === p.Routes.ME) {
-                (0, l.navigateToRootTab)({
+            if (m && (0, l.isSplitMessagesTab)() && b === p.Routes.ME) {
+                (0, s.navigateToRootTab)({
                     screen: "messages",
                     resetRoot: E
                 });
                 return
             }
             if (m && b === p.Routes.NOTIFICATIONS) {
-                (0, l.navigateToRootTab)({
+                (0, s.navigateToRootTab)({
                     screen: "notifications",
                     resetRoot: E
                 });
@@ -66,7 +66,7 @@ function(e, t, a) {
                     });
                 if (!m) {
                     let e = h.getRootState();
-                    (null == e ? void 0 : null === (c = e.routes) || void 0 === c ? void 0 : null === (d = c[0]) || void 0 === d ? void 0 : d.name) !== "panels" && (0, l.resetToPanelsUI)();
+                    (null == e ? void 0 : null === (c = e.routes) || void 0 === c ? void 0 : null === (d = c[0]) || void 0 === d ? void 0 : d.name) !== "panels" && (0, s.resetToPanelsUI)();
                     return
                 }
                 if (null != t) {
@@ -75,7 +75,7 @@ function(e, t, a) {
                         voiceChannelId: a,
                         voiceMessageId: d
                     } = t.params;
-                    !(0, u.isVoicePanelEnabled)() && (0, l.navigateToChannel)({
+                    !(0, u.isVoicePanelEnabled)() && (0, s.navigateToChannel)({
                         channelId: a,
                         guildId: e,
                         messageId: d,
@@ -90,27 +90,27 @@ function(e, t, a) {
                         guildId: a,
                         messageId: d
                     } = e.params;
-                    if (!(0, s.isSplitMessagesTab)() && !_) {
-                        (0, l.navigateToRootTab)({
+                    if (!(0, l.isSplitMessagesTab)() && !_) {
+                        (0, s.navigateToRootTab)({
                             screen: "guilds",
                             guildId: a,
                             resetRoot: E
                         });
                         return
                     }
-                    if ((0, s.isOnNewPanels)()) {
+                    if ((0, l.isOnNewPanels)()) {
                         let [e, d] = (0, f.default)(h.getCurrentRoute());
                         if (e === a && d === t) return
                     }
-                    null == t || (0, s.shouldHandleNewPanelsRoute)(a) && !1 !== E ? a !== p.ME || _ ? (0, l.navigateToRootTab)({
+                    null == t || (0, l.shouldHandleNewPanelsRoute)(a) && !1 !== E ? a !== p.ME || _ ? (0, s.navigateToRootTab)({
                         screen: "guilds",
                         guildId: a,
-                        channelId: (0, s.isOnNewPanels)() ? t : void 0,
+                        channelId: (0, l.isOnNewPanels)() ? t : void 0,
                         resetRoot: E
-                    }) : (0, l.navigateToRootTab)({
+                    }) : (0, s.navigateToRootTab)({
                         screen: "messages",
                         resetRoot: E
-                    }) : null != a && (0, l.navigateToChannel)({
+                    }) : null != a && (0, s.navigateToChannel)({
                         channelId: t,
                         guildId: a,
                         messageId: d,
@@ -124,11 +124,11 @@ function(e, t, a) {
                 let e = (0, n.matchPath)(b, {
                     path: p.Routes.GUILD_MEMBER_VERIFICATION(":guildId", ":inviteCode?")
                 });
-                null != e && (0, l.navigateToMemberVerification)(e.params.guildId, e.params.inviteCode);
+                null != e && (0, s.navigateToMemberVerification)(e.params.guildId, e.params.inviteCode);
                 return
             }
             if (b.startsWith("/login") || b.startsWith("/register")) {
-                (0, l.resetToAuthRoute)();
+                (0, s.resetToAuthRoute)();
                 return
             }
             if (b.startsWith("/account-standing")) {
@@ -138,7 +138,7 @@ function(e, t, a) {
                 });
                 return
             }
-            m && (0, l.navigateToRootTab)({
+            m && (0, s.navigateToRootTab)({
                 screen: "messages",
                 resetRoot: E
             })

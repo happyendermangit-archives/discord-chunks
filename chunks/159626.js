@@ -1,21 +1,21 @@
-function(e, t, n) {
+function(e, t, a) {
     "use strict";
-    n.r(t), n.d(t, {
+    a.r(t), a.d(t, {
         default: function() {
-            return r
+            return n
         }
     });
-    var i = n("987170");
+    var d = a("987170");
 
-    function r(e) {
-        let t = (0, i.default)({
+    function n(e) {
+        let t = (0, d.default)({
             ...e,
             id: "".concat(e.id, "_existing_users"),
             label: "".concat(e.label, " - Existing Users")
         });
         return {
             existingUsers: t,
-            newUsers: (0, i.default)({
+            newUsers: (0, d.default)({
                 ...e,
                 id: "".concat(e.id, "_new_users"),
                 label: "".concat(e.label, " - New Users")

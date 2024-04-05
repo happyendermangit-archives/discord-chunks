@@ -8,8 +8,8 @@ function(e, t, a) {
         o = a("252759"),
         r = a("361291"),
         f = a("199902"),
-        l = a("314897"),
-        s = a("569545"),
+        s = a("314897"),
+        l = a("569545"),
         u = a("803647"),
         b = a("981631"),
         h = a("65154");
@@ -145,7 +145,7 @@ function(e, t, a) {
                     sourceId: c,
                     audioSourceId: o,
                     sound: r
-                } = e, f = l.default.getId(), u = (0, s.encodeStreamKey)({
+                } = e, f = s.default.getId(), u = (0, l.encodeStreamKey)({
                     streamType: t,
                     guildId: a,
                     channelId: d,
