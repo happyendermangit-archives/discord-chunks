@@ -40,18 +40,20 @@ function(e, t, n) {
                     autoplay: i,
                     delay: r,
                     renderer: s,
-                    shouldAnimate: a
+                    rendererSettings: a,
+                    shouldAnimate: o
                 } = this.props;
                 null != this.animation && this.animation.destroy();
-                let [o, {
-                    default: l
+                let [l, {
+                    default: u
                 }] = await Promise.all([e(), n.e("23755").then(n.t.bind(n, "500923", 23))]);
-                null != this.animationRef.current && (this.animation = l.loadAnimation({
+                null != this.animationRef.current && (this.animation = u.loadAnimation({
                     container: this.animationRef.current,
                     renderer: s,
                     loop: t,
-                    autoplay: i && null == r && a,
-                    animationData: o
+                    autoplay: i && null == r && o,
+                    animationData: l,
+                    rendererSettings: a
                 }), null != r ? this.delayTimeout.start(r, () => {
                     var e;
                     null === (e = this.animation) || void 0 === e || e.play()

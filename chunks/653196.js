@@ -10,6 +10,7 @@ function(e) {
         fadeIn: "fadeIn__0663f",
         fadeOut: "fadeOut_de0df3",
         finishButton: "finishButton__8590c",
+        flex: "flex__0016b",
         footer: "footer_d63e9e",
         header: "header__05198",
         introContainer: "introContainer__4ffdc",

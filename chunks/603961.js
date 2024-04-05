@@ -5,6 +5,8 @@ function(e) {
         brandingWrapper: "brandingWrapper__84c6a",
         contentCollapsed: "contentCollapsed__926bb",
         contentCollapsedAccepted: "contentCollapsedAccepted__9d6ab",
+        contentCollapsedExpanded: "contentCollapsedExpanded__3258d",
+        contentCollapsedWrapper: "contentCollapsedWrapper__1d462",
         partnerBranding: "partnerBranding__4477f",
         questName: "questName__67a0d",
         questProgressBar: "questProgressBar_ed436f",

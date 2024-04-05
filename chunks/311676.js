@@ -9,8 +9,6 @@ function(e) {
         lottieAnimation: "lottieAnimation_ae4eab",
         lottieAnimationBackground: "lottieAnimationBackground__5f8f8",
         lottieAnimationBackgroundWrapper: "lottieAnimationBackgroundWrapper_cede2c",
-        lottieAnimationForeground: "lottieAnimationForeground_d34553",
-        lottieAnimationForegroundHidden: "lottieAnimationForegroundHidden__959e2",
         wrapper: "wrapper_b1e1fe",
         wrapperInvisible: "wrapperInvisible__4095f",
         wrapperVisible: "wrapperVisible_f00ae4"
