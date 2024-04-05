@@ -137,11 +137,11 @@ function(e, t, n) {
             return null != e && this.emit(a.BaseConnectionEvent.Stats, e), e
         }
         constructor(e, t) {
-            super(), u(this, "mediaEngineConnectionId", "WebRTC-".concat(d++)), u(this, "context", void 0), u(this, "ids", void 0), u(this, "streamUserId", void 0), u(this, "destroyed", !1), u(this, "audioSSRC", 0), u(this, "selfDeaf", !1), u(this, "localMutes", {}), u(this, "disabledLocalVideos", {}), u(this, "localVolumes", {}), u(this, "isActiveOutputSinksEnabled", !1), u(this, "activeOutputSinks", {}), u(this, "videoSupported", !1), u(this, "useElectronVideo", !1), u(this, "voiceBitrate", l.DEFAULT_VOICE_BITRATE), u(this, "remoteSinkWantsMaxFramerate", l.VIDEO_QUALITY_FRAMERATE), u(this, "videoQualityManager", void 0), u(this, "wantsPriority", new Set), u(this, "localSpeakingFlags", {}), u(this, "videoReady", !1), u(this, "videoStreamParameters", []), u(this, "remoteVideoSinkWants", {
+            super(), u(this, "mediaEngineConnectionId", "WebRTC-".concat(d++)), u(this, "context", void 0), u(this, "userId", void 0), u(this, "streamUserId", void 0), u(this, "destroyed", !1), u(this, "audioSSRC", 0), u(this, "selfDeaf", !1), u(this, "localMutes", {}), u(this, "disabledLocalVideos", {}), u(this, "localVolumes", {}), u(this, "isActiveOutputSinksEnabled", !1), u(this, "activeOutputSinks", {}), u(this, "videoSupported", !1), u(this, "useElectronVideo", !1), u(this, "voiceBitrate", l.DEFAULT_VOICE_BITRATE), u(this, "remoteSinkWantsMaxFramerate", l.VIDEO_QUALITY_FRAMERATE), u(this, "videoQualityManager", void 0), u(this, "wantsPriority", new Set), u(this, "localSpeakingFlags", {}), u(this, "videoReady", !1), u(this, "videoStreamParameters", []), u(this, "remoteVideoSinkWants", {
                 any: 100
             }), u(this, "localVideoSinkWants", {
                 any: 100
-            }), u(this, "connectionState", l.ConnectionStates.CONNECTING), u(this, "stats", void 0), u(this, "experimentFlags", new Set), u(this, "framerateReducer", void 0), this.context = e, this.ids = t, this.videoQualityManager = new o.VideoQualityManager(e, this);
+            }), u(this, "connectionState", l.ConnectionStates.CONNECTING), u(this, "stats", void 0), u(this, "experimentFlags", new Set), u(this, "framerateReducer", void 0), this.context = e, this.userId = t, this.videoQualityManager = new o.VideoQualityManager(e, this);
             let i = n("988746").default;
             this.framerateReducer = new i(this, this.videoQualityManager)
         }

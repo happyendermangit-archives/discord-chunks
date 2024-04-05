@@ -87,7 +87,7 @@ function(e, t, n) {
                 } = (0, _.extractSDP)(t);
                 this.codecs = i;
                 let u = (0, _.getExtensions)(t);
-                r.outboundStreams = n, this.audioSSRC = s, r.extensions = u, (this.videoStreamParameters[0].ssrc !== o || this.videoStreamParameters[0].rtxSsrc !== l || !this.videoReady) && (this.videoStreamParameters[0].ssrc = o, this.videoStreamParameters[0].rtxSsrc = l, this.emit(a.BaseConnectionEvent.Video, this.ids.userId, this.input.getVideoStreamId(), this.audioSSRC, this.videoStreamParameters[0].ssrc, this.videoStreamParameters[0].rtxSsrc, this.videoStreamParameters), this.videoReady = !0)
+                r.outboundStreams = n, this.audioSSRC = s, r.extensions = u, (this.videoStreamParameters[0].ssrc !== o || this.videoStreamParameters[0].rtxSsrc !== l || !this.videoReady) && (this.videoStreamParameters[0].ssrc = o, this.videoStreamParameters[0].rtxSsrc = l, this.emit(a.BaseConnectionEvent.Video, this.userId, this.input.getVideoStreamId(), this.audioSSRC, this.videoStreamParameters[0].ssrc, this.videoStreamParameters[0].rtxSsrc, this.videoStreamParameters), this.videoReady = !0)
             }), o.once("offer", e => {
                 let {
                     sdp: t

@@ -30,7 +30,7 @@ function(e, t, n) {
             let t;
             this.audioSSRC = e.ssrc, this.streamUserId = e.streamUserId, this.pingInterval = o.PING_INTERVAL, this.initializeStreamParameters(e.streamParameters), e.streamParameters = this.videoStreamParameters;
             let n = (0, a.getVoiceEngine)();
-            t = this.conn = n.createSpeedTestConnectionWithOptions(this.ids.userId, e, (n, i) => {
+            t = this.conn = n.createSpeedTestConnectionWithOptions(this.userId, e, (n, i) => {
                 if (this.destroyed) return;
                 if (null != n && "" !== n) {
                     this.setConnectionState(o.ConnectionStates.NO_ROUTE), this.emit(s.BaseSpeedTesterEvent.Error, n);
@@ -122,8 +122,7 @@ function(e, t, n) {
         getConnectionTransportOptions() {
             return {
                 qos: this.qos,
-                reconnectInterval: this.reconnectInterval,
-                userChannelIds: this.ids
+                reconnectInterval: this.reconnectInterval
             }
         }
         getCodecOptions(e, t) {
@@ -159,8 +158,8 @@ function(e, t, n) {
             }
         }
         getUserIdBySsrc(e) {}
-        constructor(e) {
-            super(e), l(this, "mediaEngineConnectionId", "Native-".concat(d++)), l(this, "codecs", []), l(this, "qos", !0), l(this, "conn", void 0), l(this, "reconnectInterval", 6e4), l(this, "pingInterval", o.PING_INTERVAL), l(this, "handlePing", (e, t, n) => {
+        constructor(...e) {
+            super(...e), l(this, "mediaEngineConnectionId", "Native-".concat(d++)), l(this, "codecs", []), l(this, "qos", !0), l(this, "conn", void 0), l(this, "reconnectInterval", 6e4), l(this, "pingInterval", o.PING_INTERVAL), l(this, "handlePing", (e, t, n) => {
                 this.emit(s.BaseSpeedTesterEvent.Ping, e)
             }), l(this, "handlePingTimeout", (e, t, n, i) => {
                 this.emit(s.BaseSpeedTesterEvent.PingTimeout, n, i > 0 ? i : 4e3)

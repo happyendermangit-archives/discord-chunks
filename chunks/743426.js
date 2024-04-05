@@ -211,7 +211,7 @@ function(e, t, n) {
                 return
             }
             this.eachConnection(n => {
-                (t !== T.MediaEngineContextTypes.STREAM || n.streamUserId === n.ids.userId) && (n.setGoLiveSource(e), n.setVideoBroadcast(this.shouldConnectionBroadcastVideo(n)))
+                (t !== T.MediaEngineContextTypes.STREAM || n.streamUserId === n.userId) && (n.setGoLiveSource(e), n.setVideoBroadcast(this.shouldConnectionBroadcastVideo(n)))
             }, t)
         }
         setClipsSource(e) {
@@ -261,7 +261,7 @@ function(e, t, n) {
         }
         setSoundshareSource(e, t, n) {
             this.eachConnection(i => {
-                (n !== T.MediaEngineContextTypes.STREAM || i.streamUserId === i.ids.userId) && i.setSoundshareSource(e, t)
+                (n !== T.MediaEngineContextTypes.STREAM || i.streamUserId === i.userId) && i.setSoundshareSource(e, t)
             }, n)
         }
         getDesktopSource() {

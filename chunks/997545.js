@@ -46,11 +46,7 @@ function(e, t, n) {
             return i.initialize(n), i
         }
         static createReplay(e, t) {
-            let n = new L(e, {
-                    userId: "0",
-                    channelId: "0",
-                    guildId: "0"
-                }, !0),
+            let n = new L(e, "0", !0),
                 i = (0, h.getVoiceEngine)();
             n.initializeStreamParameters([{
                 type: O.MediaTypes.VIDEO,
@@ -96,12 +92,12 @@ function(e, t, n) {
             }, ...this.videoStreamParameters];
             let n = (0, h.getVoiceEngine)(),
                 i = null != n.getCodecCapabilities ? n.getCodecCapabilities : n.getSupportedVideoCodecs;
-            if (null != n.createOwnStreamConnectionWithOptions) s = this.context === p.MediaEngineContextTypes.STREAM && this.streamUserId === this.ids.userId ? n.createOwnStreamConnectionWithOptions : n.createVoiceConnectionWithOptions;
+            if (null != n.createOwnStreamConnectionWithOptions) s = this.context === p.MediaEngineContextTypes.STREAM && this.streamUserId === this.userId ? n.createOwnStreamConnectionWithOptions : n.createVoiceConnectionWithOptions;
             else if (null != n.createOwnStreamConnection) {
-                var r, s, a = this.context === p.MediaEngineContextTypes.STREAM && this.streamUserId === this.ids.userId ? n.createOwnStreamConnection : n.createVoiceConnection;
-                s = (e, t, n) => a(t.ssrc, this.ids.userId, t.address, t.port, n, t.experiments, t.streamParameters)
+                var r, s, a = this.context === p.MediaEngineContextTypes.STREAM && this.streamUserId === this.userId ? n.createOwnStreamConnection : n.createVoiceConnection;
+                s = (e, t, n) => a(t.ssrc, this.userId, t.address, t.port, n, t.experiments, t.streamParameters)
             } else s = (e, t, i) => new n.VoiceConnection(t.ssrc, e, t.address, t.port, i, t.experiments, t.streamParameters);
-            null === (r = (t = this.conn = s(this.ids.userId, e, (r, s) => {
+            null === (r = (t = this.conn = s(this.userId, e, (r, s) => {
                 if (this.destroyed) return;
                 if (null != r && "" !== r) {
                     this.setConnectionState(p.ConnectionStates.NO_ROUTE), this.emit(f.BaseConnectionEvent.Error, r);
@@ -149,7 +145,7 @@ function(e, t, n) {
                         for (let e of (A.forEach(e => {
                                 var t, n;
                                 return this.logger.info("Creating user: ".concat(e.id, " with audio SSRC: ").concat(e.ssrc, " and video SSRCs: ").concat(null !== (n = null === (t = e.videoSsrcs) || void 0 === t ? void 0 : t.join(",")) && void 0 !== n ? n : 0))
-                            }), t.mergeUsers(A), this.emit(f.BaseConnectionEvent.RemoteStreamsReady, A.length), Object.keys(this.localSpeakingFlags))) e !== this.ids.userId && this.setSpeakingFlags(e, this.localSpeakingFlags[e])
+                            }), t.mergeUsers(A), this.emit(f.BaseConnectionEvent.RemoteStreamsReady, A.length), Object.keys(this.localSpeakingFlags))) e !== this.userId && this.setSpeakingFlags(e, this.localSpeakingFlags[e])
                     })
                 })
             })).setDesktopSourceStatusCallback) || void 0 === r || r.call(t, e => {
@@ -163,7 +159,7 @@ function(e, t, n) {
             }), this.on("newListener", this.handleNewListenerNative)
         }
         destroy() {
-            this.conn.destroy(), Object.keys(this.localSpeakingFlags).filter(e => e !== this.ids.userId).forEach(e => this.emit(f.BaseConnectionEvent.Speaking, e, p.SpeakingFlags.NONE, this.remoteAudioSSRCs[e])), this.setConnectionState(p.ConnectionStates.DISCONNECTED), super.destroy()
+            this.conn.destroy(), Object.keys(this.localSpeakingFlags).filter(e => e !== this.userId).forEach(e => this.emit(f.BaseConnectionEvent.Speaking, e, p.SpeakingFlags.NONE, this.remoteAudioSSRCs[e])), this.setConnectionState(p.ConnectionStates.DISCONNECTED), super.destroy()
         }
         setCodecs(e, t, n) {
             this.conn.setTransportOptions(this.getCodecOptions(e, t, n)), this.videoEncoderFallbackPending && (this.videoEncoderFallbackPending = !1)
@@ -185,7 +181,7 @@ function(e, t, n) {
             r = void 0 !== r ? [...r].sort() : [], n = void 0 === n ? null != r ? r : [] : [...n].sort();
             let s = i !== t,
                 a = !l()(r, n);
-            if (this.remoteAudioSSRCs[e] = t, this.remoteVideoSSRCs[e] = null != n ? n : [], this.ids.userId !== e && (s || a)) {
+            if (this.remoteAudioSSRCs[e] = t, this.remoteVideoSSRCs[e] = null != n ? n : [], this.userId !== e && (s || a)) {
                 let i = void 0 !== n && n.length > 0 ? n[0] : 0,
                     r = {
                         id: e,
@@ -490,7 +486,7 @@ function(e, t, n) {
                 type: 0 === e && 0 === t ? p.ResolutionTypes.SOURCE : p.ResolutionTypes.FIXED,
                 width: e,
                 height: t
-            }, this.videoStreamParameters[0].maxFrameRate = n, this.videoStreamParameters[0].maxBitrate = i), this.emit(f.BaseConnectionEvent.Video, this.ids.userId, null, this.audioSSRC, this.videoStreamParameters[0].ssrc, g(this.videoStreamParameters[0].ssrc), this.videoStreamParameters), this.conn.setTransportOptions(this.applyQualityConstraints().constraints))
+            }, this.videoStreamParameters[0].maxFrameRate = n, this.videoStreamParameters[0].maxBitrate = i), this.emit(f.BaseConnectionEvent.Video, this.userId, null, this.audioSSRC, this.videoStreamParameters[0].ssrc, g(this.videoStreamParameters[0].ssrc), this.videoStreamParameters), this.conn.setTransportOptions(this.applyQualityConstraints().constraints))
         }
         setSDP(e) {}
         setRemoteVideoSinkWants(e) {
@@ -712,8 +708,7 @@ function(e, t, n) {
                 encodingVideoDegradationPreference: this.videoDegradationPreference,
                 experimentalEncoders: this.experimentalEncoders,
                 hardwareH264: this.hardwareH264,
-                reconnectInterval: this.reconnectInterval,
-                userChannelIds: this.ids
+                reconnectInterval: this.reconnectInterval
             };
             return (0, h.supportsFeature)(p.NativeFeatures.VIDEO_EFFECTS) && this.context === p.MediaEngineContextTypes.STREAM && (e.enableVideoEffects = !0), this.experimentFlags.has(O.ExperimentFlags.MUTE_BEFORE_PROCESSING) && (e.muteBeforeProcessing = !0), this.experimentFlags.has(O.ExperimentFlags.PTT_BEFORE_PROCESSING) && (e.pttBeforeProcessing = !0), this.experimentFlags.has(O.ExperimentFlags.SKIP_ENCODE) && (e.skipEncode = !0), e
         }
@@ -721,15 +716,6 @@ function(e, t, n) {
             throw Error("Method not implemented.")
         }
         getUserIdBySsrc(e) {}
-        setRtcLogEphemeralKey(e) {
-            this.conn.setTransportOptions({
-                userChannelIds: this.ids,
-                rtcLogEphemeralKey: e
-            })
-        }
-        setRtcLogMarker(e) {
-            null != this.conn.setRtcLogMarker && this.conn.setRtcLogMarker(e)
-        }
         prepareSecureFramesTransition(e, t, n) {
             var i, r;
             null === (i = (r = this.conn).prepareSecureFramesTransition) || void 0 === i || i.call(r, e, t, n)
@@ -770,7 +756,7 @@ function(e, t, n) {
                 this.emit(f.BaseConnectionEvent.ToggleMuteFromNative)
             }), R(this, "handleSpeakingFlags", (e, t) => {
                 this.localSpeakingFlags[e] = t;
-                let n = e === this.ids.userId ? this.audioSSRC : this.remoteAudioSSRCs[e];
+                let n = e === this.userId ? this.audioSSRC : this.remoteAudioSSRCs[e];
                 this.emit(f.BaseConnectionEvent.Speaking, e, t, n), (t & p.SpeakingFlags.SOUNDSHARE) != 0 && !1 === this.soundshareSentSpeakingEvent && (this.emit(f.BaseConnectionEvent.SoundshareSpeaking), this.soundshareSentSpeakingEvent = !0)
             }), R(this, "handleSpeakingWhileMuted", () => {
                 this.emit(f.BaseConnectionEvent.SpeakingWhileMuted)
@@ -782,7 +768,7 @@ function(e, t, n) {
                 !this.videoEncoderFallbackPending && (this.logger.info("Falling back from current video encoder:" + e), this.codecs = this.codecs.map(t => ((e === t.name || "AV1" === t.name && "AV1X" === e) && (t.encode = !1), t)).filter(e => !("video" === e.type && !1 === e.encode && !1 === e.decode)), this.emit(f.BaseConnectionEvent.VideoEncoderFallback, this.codecs), this.videoEncoderFallbackPending = !0)
             }), R(this, "handleVideo", (e, t, n, i) => {
                 let r = a()(this.videoStreamParameters);
-                e === this.ids.userId ? null != i && Array.isArray(i) && i.length > 0 ? i.forEach(e => {
+                e === this.userId ? null != i && Array.isArray(i) && i.length > 0 ? i.forEach(e => {
                     r.forEach((t, n) => {
                         t.rid === e.rid && (r[n] = {
                             ...t,
@@ -791,7 +777,7 @@ function(e, t, n) {
                             active: e.active
                         })
                     })
-                }) : t > 0 ? (r[0].active = !0, r[0].ssrc = t, r[0].rtxSsrc = g(t)) : r[0].active = !1 : t > 0 && (void 0 !== this.remoteVideoSSRCs[e] ? !this.remoteVideoSSRCs[e].includes(t) && (this.remoteVideoSSRCs[e] = [...this.remoteVideoSSRCs[e], t]) : this.remoteVideoSSRCs[e] = [t]), this.videoStreamParameters = r, this.emit(f.BaseConnectionEvent.Video, e, null != n && "" !== n ? n : null, e === this.ids.userId ? this.audioSSRC : this.remoteAudioSSRCs[e], t, g(t), this.videoStreamParameters)
+                }) : t > 0 ? (r[0].active = !0, r[0].ssrc = t, r[0].rtxSsrc = g(t)) : r[0].active = !1 : t > 0 && (void 0 !== this.remoteVideoSSRCs[e] ? !this.remoteVideoSSRCs[e].includes(t) && (this.remoteVideoSSRCs[e] = [...this.remoteVideoSSRCs[e], t]) : this.remoteVideoSSRCs[e] = [t]), this.videoStreamParameters = r, this.emit(f.BaseConnectionEvent.Video, e, null != n && "" !== n ? n : null, e === this.userId ? this.audioSSRC : this.remoteAudioSSRCs[e], t, g(t), this.videoStreamParameters)
             }), R(this, "handleFirstFrame", (e, t, n) => {
                 this.emit(f.BaseConnectionEvent.FirstFrame, e, t, n)
             }), R(this, "handleNoInput", e => {

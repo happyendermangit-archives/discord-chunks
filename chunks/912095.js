@@ -199,8 +199,6 @@ function(e, t, n) {
         startSamplesLocalPlayback(e, t, n, i) {}
         stopSamplesLocalPlayback(e) {}
         stopAllSamplesLocalPlayback() {}
-        setRtcLogEphemeralKey(e) {}
-        setRtcLogMarker(e) {}
         setVideoQualityMeasurement(e) {}
         setVideoEncoderExperiments(e) {}
         setBandwidthEstimationExperiments(e) {}
@@ -222,7 +220,7 @@ function(e, t, n) {
                 this.updateVideoQuality()
             }), S(this, "handleAudioPermission", e => this.emit(d.BaseConnectionEvent.AudioPermission, e)), S(this, "handleVideoPermission", e => this.emit(d.BaseConnectionEvent.VideoPermission, e)), S(this, "handleVideo", e => {
                 var t;
-                return this.emit(d.BaseConnectionEvent.Video, this.ids.userId, e, this.audioSSRC, this.videoStreamParameters[0].ssrc, null !== (t = this.videoStreamParameters[0].rtxSsrc) && void 0 !== t ? t : 0, this.videoStreamParameters)
+                return this.emit(d.BaseConnectionEvent.Video, this.userId, e, this.audioSSRC, this.videoStreamParameters[0].ssrc, null !== (t = this.videoStreamParameters[0].rtxSsrc) && void 0 !== t ? t : 0, this.videoStreamParameters)
             }), S(this, "handleDesktopSourceEnd", () => this.emit(d.BaseConnectionEvent.DesktopSourceEnd)), S(this, "handleStream", e => this.setStream(e)), S(this, "handleVoiceActivity", e => {
                 let t = e <= this.silenceThreshold;
                 this.silenced !== t && !this.input.mute() && (this.silenced = t, this.emit(d.BaseConnectionEvent.Silence, t))
@@ -238,7 +236,7 @@ function(e, t, n) {
                         !this.interacted && "suspended" === this.input.getAudioState() && setImmediate(() => this.emit(e, !0))
                 }
             }), S(this, "handleInputSpeaking", e => {
-                this.emit(d.BaseConnectionEvent.Speaking, this.ids.userId, e ? T.SpeakingFlags.VOICE : T.SpeakingFlags.NONE, this.audioSSRC)
+                this.emit(d.BaseConnectionEvent.Speaking, this.userId, e ? T.SpeakingFlags.VOICE : T.SpeakingFlags.NONE, this.audioSSRC)
             }), S(this, "handleAudioContextStateChange", () => {
                 !this.interacted && "running" === this.input.getAudioState() && (this.interact(), this.emit(d.BaseConnectionEvent.InteractionRequired, !1))
             }), S(this, "handleStats", e => {

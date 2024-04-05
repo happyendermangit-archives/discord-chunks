@@ -40,7 +40,7 @@ function(e, t, n) {
             })
         }
         constructor(e) {
-            super(), a(this, "mediaEngineConnectionId", "WebRTC-".concat(o++)), a(this, "ids", void 0), a(this, "streamUserId", void 0), a(this, "destroyed", !1), a(this, "audioSSRC", 0), a(this, "videoStreamParameters", []), a(this, "connectionState", s.ConnectionStates.CONNECTING), this.ids = e
+            super(), a(this, "mediaEngineConnectionId", "WebRTC-".concat(o++)), a(this, "userId", void 0), a(this, "streamUserId", void 0), a(this, "destroyed", !1), a(this, "audioSSRC", 0), a(this, "videoStreamParameters", []), a(this, "connectionState", s.ConnectionStates.CONNECTING), this.userId = e
         }
     }
 }

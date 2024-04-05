@@ -44,7 +44,7 @@ function(e, t, n) {
         }
         constructor(e, t) {
             a(this, "connection", void 0), a(this, "sinkWants", void 0), a(this, "framerateReductionTimeout", void 0), a(this, "handleSpeaking", void 0), a(this, "handleSelfMute", void 0), this.connection = e, this.sinkWants = t, this.handleSpeaking = (e, t) => {
-                e === this.connection.ids.userId && this.userSpeakingChange(t === s.SpeakingFlags.NONE)
+                e === this.connection.userId && this.userSpeakingChange(t === s.SpeakingFlags.NONE)
             }, this.handleSelfMute = e => {
                 !this.connection.hasDesktopSource() && (this.destroyFramerateScaleFactorTimers(), this.sinkWants.isMuted = e, this.updateRemoteWantsFramerate())
             }, e.on(r.BaseConnectionEvent.Speaking, this.handleSpeaking), e.on(r.BaseConnectionEvent.Mute, this.handleSelfMute), this.initialize()

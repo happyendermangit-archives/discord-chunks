@@ -84,7 +84,7 @@ function(e, t, n) {
                 height: e.max_resolution.height
             } : void 0
         }))) && void 0 !== t ? t : []
-    }(d = a || (a = {})).Connecting = "connecting", d.Connect = "connect", d.Disconnect = "disconnect", d.Resuming = "resuming", d.Ready = "ready", d.Speaking = "speaking", d.Video = "video", d.Ping = "ping", d.ClientDisconnect = "client-disconnect", d.Codecs = "codecs", d.MediaSessionId = "media-session-id", d.MediaSinkWants = "media-sink-wants", d.VoiceBackendVersion = "voice-backend-version", d.KeyframeInterval = "keyframe-interval", d.ChannelOptionsUpdateRtcLog = "channel-options-update-rtc-log", d.ChannelOptionsUpdateSecureFramesProtocol = "update-secure-frames-protocol", d.Flags = "flags", d.Platform = "platform", d.SDP = "sdp", d.Encryption = "encryption", d.SpeedTest = "speed-test", d.BandwidthEstimationExperiment = "bandwidth-estimation-experiment", d.SecureFramesInit = "secure-frames-init", d.SecureFramesPrepareTransition = "secure-frames-prepare-transition", d.SecureFramesExecuteTransition = "secure-frames-execute-transition", d.SecureFramesPrepareEpoch = "secure-frames-prepare-epoch", d.MLSExternalSenderPackage = "mls-external-sender-package", d.MLSProposals = "mls-proposals", d.MLSPrepareCommitTransition = "mls-prepare-commit-transition", d.MLSWelcome = "mls-welcome";
+    }(d = a || (a = {})).Connecting = "connecting", d.Connect = "connect", d.Disconnect = "disconnect", d.Resuming = "resuming", d.Ready = "ready", d.Speaking = "speaking", d.Video = "video", d.Ping = "ping", d.ClientDisconnect = "client-disconnect", d.Codecs = "codecs", d.MediaSessionId = "media-session-id", d.MediaSinkWants = "media-sink-wants", d.VoiceBackendVersion = "voice-backend-version", d.KeyframeInterval = "keyframe-interval", d.ChannelOptionsUpdateSecureFramesProtocol = "update-secure-frames-protocol", d.Flags = "flags", d.Platform = "platform", d.SDP = "sdp", d.Encryption = "encryption", d.SpeedTest = "speed-test", d.BandwidthEstimationExperiment = "bandwidth-estimation-experiment", d.SecureFramesInit = "secure-frames-init", d.SecureFramesPrepareTransition = "secure-frames-prepare-transition", d.SecureFramesExecuteTransition = "secure-frames-execute-transition", d.SecureFramesPrepareEpoch = "secure-frames-prepare-epoch", d.MLSExternalSenderPackage = "mls-external-sender-package", d.MLSProposals = "mls-proposals", d.MLSPrepareCommitTransition = "mls-prepare-commit-transition", d.MLSWelcome = "mls-welcome";
     class D extends I.default {
         createWebSocket() {
             this.logger.info("[CONNECT] ".concat(this.url)), null !== this.webSocket && (this.logger.error("Connect called with already existing websocket"), this.cleanupWebSocket(e => e.close(4e3))), this.connectionStartTime = Date.now(), this.helloTimeout = setTimeout(() => {
@@ -144,9 +144,6 @@ function(e, t, n) {
                         break;
                     case 16:
                         null != n.voice && null != n.rtc_worker && this.emit("voice-backend-version", n.voice, n.rtc_worker);
-                        break;
-                    case 17:
-                        n.rtc_log_ephemeral_key && this.emit("channel-options-update-rtc-log", n.rtc_log_ephemeral_key);
                         break;
                     case 19:
                         this.emit("speed-test", n.op, n);
