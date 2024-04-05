@@ -17,18 +17,13 @@ function(e, t, n) {
         f = n("689938");
 
     function S(e) {
-        let t = c.PREFIX_COMMAND_REGEX.exec(e);
-        if (null != t) return {
-            type: "prefix",
-            cleanedQuery: e.substring(t[0].length).trim()
-        };
-        let n = c.BOT_MENTION_COMMAND_REGEX.exec(e);
-        if (null != n) {
-            let t = n[1],
-                i = u.default.getUser(t);
+        let t = c.BOT_MENTION_COMMAND_REGEX.exec(e);
+        if (null != t) {
+            let n = t[1],
+                i = u.default.getUser(n);
             return null == i || !i.bot || i.isClyde() ? null : {
                 type: "mention",
-                cleanedQuery: e.substring(n[0].length).trim(),
+                cleanedQuery: e.substring(t[0].length).trim(),
                 user: i
             }
         }

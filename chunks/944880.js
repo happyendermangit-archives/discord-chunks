@@ -16,30 +16,28 @@ function(e, t, n) {
         T = n("474936"),
         f = n("735825");
     let S = null,
-        A = !1,
-        h = 0;
+        A = !1;
 
-    function m(e) {
+    function h(e) {
         let t = o.default.createFromServer(e.entitlement);
-        (0, I.isPremiumTier2Entitlement)(t) ? (h = 0, N({
-            forceRefresh: !0,
-            retryOnFail: !0
-        })) : (0, I.isValidTenureRewardEntitlement)(t) && null != E.default.getTenureRewardStatusForRewardId(t.skuId) && s.default.dispatch({
+        (0, I.isPremiumTier2Entitlement)(t) ? m({
+            forceRefresh: !0
+        }): (0, I.isValidTenureRewardEntitlement)(t) && null != E.default.getTenureRewardStatusForRewardId(t.skuId) && s.default.dispatch({
             type: "USER_TENURE_REWARD_STATUS_DELETE",
             tenureRewardIds: [t.skuId]
         })
     }
 
-    function N() {
+    function m() {
         let {
-            forceRefresh: e = !1,
-            retryOnFail: t = !1
+            forceRefresh: e = !1
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        p();
-        let n = u.default.getForApplication(T.PREMIUM_SUBSCRIPTION_APPLICATION),
-            i = (0, I.getPremiumTier2Entitlement)(n),
+        O();
+        let t = u.default.getForApplication(T.PREMIUM_SUBSCRIPTION_APPLICATION),
+            n = (0, I.getPremiumTier2Entitlement)(t),
+            i = (0, I.getTenureRewardEntitlement)([f.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH, f.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS], t),
             a = l.default.getCurrentUser();
-        if (!(0, d.isPremiumExactly)(a, T.PremiumTypes.TIER_2) && null == i) {
+        if (!(0, d.isPremiumExactly)(a, T.PremiumTypes.TIER_2) && null == n) {
             s.default.dispatch({
                 type: "USER_TENURE_REWARD_STATUS_RESET"
             });
@@ -48,13 +46,14 @@ function(e, t, n) {
         if (!!(0, c.isUserEligibleForNitroTenureRewardCard)({
                 location: "tenure_reward_manager"
             }))
-            if (E.default.getFetchState() !== E.FetchState.FETCHED || !0 === e || function() {
+            if ((E.default.getFetchState() !== E.FetchState.FETCHED || !0 === e || function() {
                     var e;
                     let t = null !== (e = E.default.getTenureRewardStatusForRewardId(f.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== e ? e : E.default.getTenureRewardStatusForRewardId(f.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS);
                     return null != t && null != t.redeemable_at && 0 >= r()(t.redeemable_at).diff(r().utc(), "seconds")
-                }()) O({
-                retryOnFail: t
-            });
+                }() || function() {
+                    let e = E.default.getState();
+                    return null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > 12096e5
+                }()) && null == i) N();
             else {
                 let e = u.default.getForApplication(T.PREMIUM_SUBSCRIPTION_APPLICATION);
                 if (null == e) return;
@@ -65,57 +64,39 @@ function(e, t, n) {
                 })
             }
     }
-    async function O() {
-        let {
-            retryOnFail: e = !1
-        } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+    async function N() {
         !A && (A = !0, await _.syncUserTenureRewardStatus(), A = !1, s.default.wait(() => (function() {
             var e;
-            let {
-                retryOnFail: t = !1
-            } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            if (p(), E.default.getFetchState() !== E.FetchState.FETCHED || A) return;
-            let n = null !== (e = E.default.getTenureRewardStatusForRewardId(f.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== e ? e : E.default.getTenureRewardStatusForRewardId(f.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS);
-            if ((null == n ? void 0 : n.redeemable_at) == null && !1 === t) return;
-            let i = (null == n ? void 0 : n.redeemable_at) != null ? new Date(n.redeemable_at).getTime() - Date.now() : null;
-            null != i && i > 0 ? S = setTimeout(N, i) : function(e) {
-                var t;
-                let {
-                    retryOnFail: n
-                } = e;
-                return null == (null !== (t = E.default.getTenureRewardStatusForRewardId(f.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== t ? t : E.default.getTenureRewardStatusForRewardId(f.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS)) && !0 === n && h < 1
-            }({
-                retryOnFail: t
-            }) && (h += 1, S = setTimeout(() => N({
-                forceRefresh: !0
-            }), 5e3))
-        })({
-            retryOnFail: e
-        })))
+            if (O(), E.default.getFetchState() !== E.FetchState.FETCHED || A) return;
+            let t = null !== (e = E.default.getTenureRewardStatusForRewardId(f.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== e ? e : E.default.getTenureRewardStatusForRewardId(f.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS);
+            if ((null == t ? void 0 : t.redeemable_at) == null) return;
+            let n = (null == t ? void 0 : t.redeemable_at) != null ? new Date(t.redeemable_at).getTime() - Date.now() : null;
+            null != n && n > 0 && (S = setTimeout(m, n))
+        })()))
     }
 
-    function p() {
+    function O() {
         clearTimeout(S), S = null
     }
 
-    function R() {
-        p()
+    function p() {
+        O()
     }
 
-    function C() {
-        N()
+    function R() {
+        m()
     }
-    class g extends a.default {
+    class C extends a.default {
         constructor(...e) {
             var t, n, i;
             super(...e), t = this, n = "actions", i = {
-                POST_CONNECTION_OPEN: C,
-                CONNECTION_CLOSED: R,
-                ENTITLEMENT_FETCH_APPLICATION_SUCCESS: () => N(),
-                ENTITLEMENT_CREATE: m,
-                ENTITLEMENT_UPDATE: () => N(),
-                ENTITLEMENT_DELETE: () => N(),
-                LOGOUT: p
+                POST_CONNECTION_OPEN: R,
+                CONNECTION_CLOSED: p,
+                ENTITLEMENT_FETCH_APPLICATION_SUCCESS: () => m(),
+                ENTITLEMENT_CREATE: h,
+                ENTITLEMENT_UPDATE: () => m(),
+                ENTITLEMENT_DELETE: () => m(),
+                LOGOUT: O
             }, n in t ? Object.defineProperty(t, n, {
                 value: i,
                 enumerable: !0,
@@ -124,5 +105,5 @@ function(e, t, n) {
             }) : t[n] = i
         }
     }
-    t.default = new g
+    t.default = new C
 }
