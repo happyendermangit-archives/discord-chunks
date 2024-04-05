@@ -385,6 +385,8 @@ function(e) {
         CLAN_DISCOVERY_TOP_PICKS_SUBTITLE: "Best {playstyle} Gaming Guilds to join based on your preferences",
         CLAN_DISCOVERY_GAME_FILTER: "{count, number} Games",
         CLAN_DISCOVERY_PRIMETIME_FILTER_EMPTY: "Active Hour",
-        CLAN_DISCOVERY_MEMBER_COUNT: "{count, number} Members"
+        CLAN_DISCOVERY_MEMBER_COUNT: "{count, number} Members",
+        CLAN_DISCOVERY_PROFILE_TITLE: "Answer a few questions to join!",
+        CLAN_DISCOVERY_PROFILE_SUBTITLE: "The Gaming Guild leader will get back to you shortly after you submit."
     })
 }

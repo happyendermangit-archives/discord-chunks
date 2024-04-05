@@ -4,8 +4,8 @@ function(e, t, a) {
     var d = a("735250");
     a("470079");
     var n = a("525654"),
-        i = a.n(n),
-        c = a("481060"),
+        c = a.n(n),
+        i = a("481060"),
         o = a("570140"),
         r = a("468026"),
         f = a("317770"),
@@ -25,10 +25,10 @@ function(e, t, a) {
                 let {
                     kind: t,
                     granted: a
-                } = e, n = "Firefox" === i().name ? l.HelpdeskArticles.ENABLE_MIC_FIREFOX : l.HelpdeskArticles.ENABLE_MIC_CHROME;
+                } = e, n = "Firefox" === c().name ? l.HelpdeskArticles.ENABLE_MIC_FIREFOX : l.HelpdeskArticles.ENABLE_MIC_CHROME;
                 if (!a) {
                     let e = "audio" !== t;
-                    (0, c.openModal)(t => (0, d.jsx)(r.default, {
+                    (0, i.openModal)(t => (0, d.jsx)(r.default, {
                         title: e ? u.default.Messages.NO_CAMERA_TITLE : u.default.Messages.NO_MIC_TITLE,
                         body: e ? u.default.Messages.NO_CAMERA_BODY : u.default.Messages.NO_MIC_BODY,
                         onConfirm: () => window.open(s.default.getArticleURL(n), "_blank"),
