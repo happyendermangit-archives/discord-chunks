@@ -62,11 +62,11 @@ function(e, t, n) {
             applicationId: r
         } = e, {
             channelId: o
-        } = (0, s.decodeStreamKey)(i), l = g(o), u = null != a.default.getRTCStream(i) && (null === (t = C()) || void 0 === t ? void 0 : t.config.applicationId) === r && l, {
-            quest: d,
-            activity: _
-        } = D(), c = (null == d ? void 0 : d.id) === n && (null == d ? void 0 : d.config.applicationId) === r && l && (null == _ ? void 0 : _.channelId) === o;
-        return u || c
+        } = (0, s.decodeStreamKey)(i), l = g(o), u = I.default.quests.get(n), d = null != a.default.getRTCStream(i) && (null === (t = C()) || void 0 === t ? void 0 : t.config.applicationId) === r && l && null != u && !(0, T.isQuestExpired)(u), {
+            quest: _,
+            activity: c
+        } = D(), E = (null == _ ? void 0 : _.id) === n && (null == _ ? void 0 : _.config.applicationId) === r && l && (null == c ? void 0 : c.channelId) === o && !(0, T.isQuestExpired)(_);
+        return d || E
     }
 
     function D(e) {
