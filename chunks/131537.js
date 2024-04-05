@@ -13,6 +13,7 @@ function(e) {
         discountPill: "discountPill__77759",
         externalButton: "externalButton_f98592",
         failedPayment: "failedPayment__59356",
+        headerColumnB: "headerColumnB__89555",
         headerLabel: "headerLabel_bd02dc",
         image: "image__51129",
         linkButton: "linkButton__71159",

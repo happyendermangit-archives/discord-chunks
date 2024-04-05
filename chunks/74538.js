@@ -569,14 +569,12 @@ function(e, t, n) {
                         }) : y.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD_NO_PRICE.format();
                     case L.SubscriptionStatusTypes.UNPAID:
                         return y.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAYMENT.format();
-                    case L.SubscriptionStatusTypes.CANCELED:
-                        return N ? R ? y.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE.format({
-                            price: E,
-                            pauseDate: _.currentPeriodEnd
-                        }) : y.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE_TAX_EXCLUSIVE.format({
-                            price: E,
-                            pauseDate: _.currentPeriodEnd
-                        }) : y.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE_NO_PRICE.format({
+                    case L.SubscriptionStatusTypes.PAUSE_PENDING:
+                        let M = null != _.pauseEndsAt ? d()(_.pauseEndsAt).diff(_.currentPeriodEnd, "days") : null;
+                        return null != M ? y.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSE_PENDING.format({
+                            pauseDate: _.currentPeriodEnd,
+                            pauseDuration: M
+                        }) : y.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSE_PENDING_NO_DURATION.format({
                             pauseDate: _.currentPeriodEnd
                         });
                     case L.SubscriptionStatusTypes.PAUSED:
@@ -620,10 +618,10 @@ function(e, t, n) {
                             num: g
                         });
                     case L.SubscriptionStatusTypes.PAUSE_PENDING:
-                        let M = null != _.pauseEndsAt ? d()(_.pauseEndsAt).diff(_.currentPeriodEnd, "days") : null;
-                        return null != M ? y.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSE_PENDING.format({
+                        let P = null != _.pauseEndsAt ? d()(_.pauseEndsAt).diff(_.currentPeriodEnd, "days") : null;
+                        return null != P ? y.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSE_PENDING.format({
                             pauseDate: _.currentPeriodEnd,
-                            pauseDuration: M
+                            pauseDuration: P
                         }) : y.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSE_PENDING_NO_DURATION.format({
                             pauseDate: _.currentPeriodEnd
                         });

@@ -23,6 +23,7 @@ function(e) {
         guildBoostingSubscriptionRowBody: "guildBoostingSubscriptionRowBody__27820",
         guildBoostingSubscriptionRowCanceled: "guildBoostingSubscriptionRowCanceled__82ddd guildBoostingSubscriptionRow_a37647",
         guildBoostingSubscriptionRowFailedPayment: "guildBoostingSubscriptionRowFailedPayment__620ce guildBoostingSubscriptionRow_a37647",
+        guildBoostingSubscriptionRowPaused: "guildBoostingSubscriptionRowPaused__222e6 guildBoostingSubscriptionRow_a37647",
         guildBoostingWordmark: "guildBoostingWordmark__86f09",
         guildSubscriptionRow: "guildSubscriptionRow_fdb396",
         newSparkles: "newSparkles_fb6b55",
