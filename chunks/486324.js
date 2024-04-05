@@ -8,7 +8,7 @@ function(e, t, n) {
             return l
         },
         GUILD_BANNER_ASPECT_RATIO: function() {
-            return h
+            return A
         },
         GUILD_BANNER_MAX_HEIGHT: function() {
             return c
@@ -44,7 +44,7 @@ function(e, t, n) {
             return a
         },
         SCHEDULED_EVENT_IMAGE_ASPECT_RATIO: function() {
-            return A
+            return h
         },
         SCHEDULED_EVENT_IMAGE_MAX_HEIGHT: function() {
             return I
@@ -77,8 +77,8 @@ function(e, t, n) {
         T = 2400,
         f = 600,
         S = 17 / 6,
-        h = 16 / 9,
-        A = 2.5,
+        A = 16 / 9,
+        h = 2.5,
         m = 4,
         N = 568 / (17 / 6),
         O = 568 / (16 / 9),

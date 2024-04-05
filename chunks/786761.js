@@ -32,9 +32,9 @@ function(e, t, n) {
     var f = n("572804");
     n("739566");
     var S = n("959517"),
-        h = n("981631");
+        A = n("981631");
     n("689938");
-    let A = new d.default({
+    let h = new d.default({
         id: "???",
         username: "???"
     });
@@ -44,14 +44,14 @@ function(e, t, n) {
         let {
             reactions: O,
             interactionData: L
-        } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, D = null !== (r = null === (t = e.mentions) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== r ? r : [], v = null !== (o = e.mention_roles) && void 0 !== o ? o : [], M = null !== (I = e.mention_channels) && void 0 !== I ? I : [], y = e.message_reference, P = new Date(e.timestamp), U = e.type === h.MessageTypes.THREAD_CREATED ? [] : (0, s.default)(e.content);
-        let b = null == (m = e).author ? A : null != m.webhook_id ? new d.default(m.author) : null !== (N = E.default.getUser(m.author.id)) && void 0 !== N ? N : new d.default(m.author),
+        } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, D = null !== (r = null === (t = e.mentions) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== r ? r : [], v = null !== (o = e.mention_roles) && void 0 !== o ? o : [], M = null !== (I = e.mention_channels) && void 0 !== I ? I : [], y = e.message_reference, P = new Date(e.timestamp), U = e.type === A.MessageTypes.THREAD_CREATED ? [] : (0, s.default)(e.content);
+        let b = null == (m = e).author ? h : null != m.webhook_id ? new d.default(m.author) : null !== (N = E.default.getUser(m.author.id)) && void 0 !== N ? N : new d.default(m.author),
             G = null == e ? void 0 : e.gift_info,
             w = null != e.interaction ? l.default.createFromServer(e.interaction) : null,
-            B = e.type === h.MessageTypes.THREAD_STARTER_MESSAGE ? null === (i = e.referenced_message) || void 0 === i ? void 0 : null === (n = i.author) || void 0 === n ? void 0 : n.id : void 0,
-            k = e.type === h.MessageTypes.PREMIUM_REFERRAL ? e.content : void 0,
+            B = e.type === A.MessageTypes.THREAD_STARTER_MESSAGE ? null === (i = e.referenced_message) || void 0 === i ? void 0 : null === (n = i.author) || void 0 === n ? void 0 : n.id : void 0,
+            k = e.type === A.MessageTypes.PREMIUM_REFERRAL ? e.content : void 0,
             V = e.content;
-        return e.type === h.MessageTypes.PREMIUM_REFERRAL && (V = ""), new u.default({
+        return e.type === A.MessageTypes.PREMIUM_REFERRAL && (V = ""), new u.default({
             ...e,
             author: b,
             webhookId: e.webhook_id,

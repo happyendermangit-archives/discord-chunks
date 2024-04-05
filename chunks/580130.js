@@ -12,15 +12,15 @@ function(e, t, n) {
     let T = {},
         f = {},
         S = {},
-        h = {},
-        A = !1,
+        A = {},
+        h = !1,
         m = !1,
         N = new Set,
         O = new Set,
         p = {};
 
     function R(e) {
-        T[e.id] = _.default.createFromServer(e), null == S[e.sku_id] && (S[e.sku_id] = new Set), null == h[e.application_id] && (h[e.application_id] = new Set), null != e.subscription_id && (null == p[e.subscription_id] && (p[e.subscription_id] = new Set), p[e.subscription_id].add(e.id)), h[e.application_id].add(e.id), S[e.sku_id].add(e.id)
+        T[e.id] = _.default.createFromServer(e), null == S[e.sku_id] && (S[e.sku_id] = new Set), null == A[e.application_id] && (A[e.application_id] = new Set), null != e.subscription_id && (null == p[e.subscription_id] && (p[e.subscription_id] = new Set), p[e.subscription_id].add(e.id)), A[e.application_id].add(e.id), S[e.sku_id].add(e.id)
     }
 
     function C(e) {
@@ -41,7 +41,7 @@ function(e, t, n) {
             return l().values(f)
         }
         getForApplication(e) {
-            let t = h[e];
+            let t = A[e];
             if (null == t) return null;
             let n = new Set;
             for (let e of t) n.add(T[e]);
@@ -55,7 +55,7 @@ function(e, t, n) {
             return n
         }
         get fetchingAllEntitlements() {
-            return A
+            return h
         }
         get fetchedAllEntitlements() {
             return m
@@ -140,7 +140,7 @@ function(e, t, n) {
         ENTITLEMENT_DELETE: function(e) {
             return function(e) {
                 delete T[e.id];
-                let t = h[e.application_id];
+                let t = A[e.application_id];
                 null != t && t.delete(e.id);
                 let n = S[e.sku_id];
                 if (null != n && n.delete(e.id), null != e.subscription_id) {
@@ -150,19 +150,19 @@ function(e, t, n) {
             }(e.entitlement)
         },
         LOGOUT: function() {
-            T = {}, S = {}, h = {}, A = !1, m = !1, N = new Set, O = new Set
+            T = {}, S = {}, A = {}, h = !1, m = !1, N = new Set, O = new Set
         },
         ENTITLEMENTS_FETCH_FOR_USER_START: function() {
-            A = !0
+            h = !0
         },
         ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: function(e) {
             let {
                 entitlements: t
             } = e;
-            for (let e of (m = !0, A = !1, t)) R(e)
+            for (let e of (m = !0, h = !1, t)) R(e)
         },
         ENTITLEMENTS_FETCH_FOR_USER_FAIL: function() {
-            m = !1, A = !1
+            m = !1, h = !1
         }
     })
 }

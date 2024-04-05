@@ -17,12 +17,12 @@ function(e, t, n) {
             height: _ = 32,
             shouldAnimate: c = !0,
             isLocked: E = !1
-        } = e, [I, T] = r.useState(!1), f = n.getIconURL(32, c && s), S = () => T(!0), h = () => T(!1);
+        } = e, [I, T] = r.useState(!1), f = n.getIconURL(32, c && s), S = () => T(!0), A = () => T(!1);
         return (0, i.jsxs)("div", {
             onFocus: S,
-            onBlur: h,
+            onBlur: A,
             onMouseOver: S,
-            onMouseLeave: h,
+            onMouseLeave: A,
             children: [(0, i.jsx)(l.default, {
                 className: a()(u.mask, t),
                 mask: s || I ? l.MaskIDs.SQUIRCLE : l.MaskIDs.AVATAR_DEFAULT,

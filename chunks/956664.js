@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         dataUriFileSize: function() {
-            return A
+            return h
         },
         dataUrlToBlob: function() {
             return N
@@ -32,7 +32,7 @@ function(e, t, n) {
             return E
         },
         readFileAsBase64: function() {
-            return h
+            return A
         },
         zoomFit: function() {
             return d
@@ -130,7 +130,7 @@ function(e, t, n) {
             }, i.src = e
         }));
 
-    function h(e) {
+    function A(e) {
         return new Promise((t, n) => {
             let i = new FileReader;
             i.readAsDataURL(e), i.onload = () => {
@@ -139,7 +139,7 @@ function(e, t, n) {
         })
     }
 
-    function A(e) {
+    function h(e) {
         let t = e.split(";base64,");
         return r()(2 === t.length, "Input data is not a valid image."), atob(t[1]).length
     }

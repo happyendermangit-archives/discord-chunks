@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useDismissNewQuestBadge: function() {
-            return A
+            return h
         },
         useIsQuestExpired: function() {
             return f
@@ -17,7 +17,7 @@ function(e, t, n) {
             return I
         },
         useShouldShowSettingBadgeForQuests: function() {
-            return h
+            return A
         }
     }), n("47120"), n("653041");
     var i = n("470079"),
@@ -98,7 +98,7 @@ function(e, t, n) {
         return i.useMemo(() => null == e ? "" : new Date(e).toLocaleDateString(n, t), [e, t, n])
     }
 
-    function h() {
+    function A() {
         let {
             quests: e,
             isFetchingCurrentQuests: t
@@ -126,8 +126,8 @@ function(e, t, n) {
         }, [e, n, t])
     }
 
-    function A() {
-        let e = h();
+    function h() {
+        let e = A();
         i.useEffect(() => {
             for (let t of e)(0, o.dismissQuestContent)(t, _.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE)
         }, [e])

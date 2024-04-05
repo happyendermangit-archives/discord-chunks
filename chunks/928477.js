@@ -36,8 +36,8 @@ function(e, t, n) {
         T = n("467798"),
         f = n("592125"),
         S = n("703558"),
-        h = n("375954"),
-        A = n("300429"),
+        A = n("375954"),
+        h = n("300429"),
         m = n("70956"),
         N = n("630388"),
         O = n("709054"),
@@ -61,7 +61,7 @@ function(e, t, n) {
 
     function y(e, t) {
         var n, i, r, s;
-        let a = null == t ? null : h.default.getMessage(e.id, t),
+        let a = null == t ? null : A.default.getMessage(e.id, t),
             o = null !== (r = null == a ? void 0 : null === (i = a.embeds) || void 0 === i ? void 0 : null === (n = i[0]) || void 0 === n ? void 0 : n.rawTitle) && void 0 !== r ? r : "";
         if ("" !== o) return o.length > 40 ? o.substring(0, 40) + "..." : o;
         {
@@ -99,10 +99,10 @@ function(e, t, n) {
             uploadHandler: E
         } = e;
         return s.useCallback(async (e, s, T) => {
-            var h;
-            let A = null == n,
+            var A;
+            let h = null == n,
                 m = M(i, r),
-                N = null !== (h = i.name) && void 0 !== h ? h : "";
+                N = null !== (A = i.name) && void 0 !== A ? A : "";
             if ("" === N && c) {
                 let e = y(t, n);
                 N = "" !== e ? e : D.default.Messages.THREAD
@@ -121,7 +121,7 @@ function(e, t, n) {
                         }
                     })
                 });
-            g !== C && (u.default.clearDraft(t.id, S.DraftType.ThreadSettings), u.default.clearDraft(t.id, S.DraftType.FirstThreadMessage), null == l || l(g), (A || e.length > 0 || null != s && s.length > 0 || null != T && T.length > 0) && function(e, t, n, i, r) {
+            g !== C && (u.default.clearDraft(t.id, S.DraftType.ThreadSettings), u.default.clearDraft(t.id, S.DraftType.FirstThreadMessage), null == l || l(g), (h || e.length > 0 || null != s && s.length > 0 || null != T && T.length > 0) && function(e, t, n, i, r) {
                 if (null != r && null != i && i.length > 0) r(e, i, t, n);
                 else if (null != n && n.length > 0) d.default.sendStickers(e.id, n, t);
                 else d.default.sendMessage(e.id, I.default.parse(e, t))
@@ -154,8 +154,8 @@ function(e, t, n) {
                 [c, I] = (0, T.default)(e);
             c && (e = I, d = (0, N.addFlag)(d, L.MessageFlags.SUPPRESS_NOTIFICATIONS));
             let f = (0, p.getAutoArchiveDuration)(t, null),
-                h = L.Endpoints.CHANNEL_THREADS(t.id) + "?use_nested_fields=true",
-                A = {
+                A = L.Endpoints.CHANNEL_THREADS(t.id) + "?use_nested_fields=true",
+                h = {
                     name: n,
                     auto_archive_duration: f,
                     applied_tags: i,
@@ -165,9 +165,9 @@ function(e, t, n) {
                         flags: 0 !== d ? d : void 0
                     }
                 },
-                m = await G(t, () => null != l && l.length > 0 ? o(h, A, l) : a.HTTP.post({
-                    url: h,
-                    body: A
+                m = await G(t, () => null != l && l.length > 0 ? o(A, h, l) : a.HTTP.post({
+                    url: A,
+                    body: h
                 }));
             return u.default.clearDraft(t.id, S.DraftType.ThreadSettings), u.default.clearDraft(t.id, S.DraftType.FirstThreadMessage), _.default.clearAll(t.id, S.DraftType.FirstThreadMessage), (0, E.trackForumPostCreated)({
                 guildId: t.guild_id,
@@ -185,7 +185,7 @@ function(e, t, n) {
                 body: D.default.Messages.ERROR_OCCURRED_TRY_AGAIN
             }) : (o.default.dispatch({
                 type: "SLOWMODE_RESET_COOLDOWN",
-                slowmodeType: A.SlowmodeType.CreateThread,
+                slowmodeType: h.SlowmodeType.CreateThread,
                 channelId: e.id
             }), o.default.dispatch({
                 type: "THREAD_CREATE_LOCAL",
@@ -206,7 +206,7 @@ function(e, t, n) {
                 n > 0 && o.default.dispatch({
                     type: "SLOWMODE_SET_COOLDOWN",
                     channelId: e.id,
-                    slowmodeType: A.SlowmodeType.CreateThread,
+                    slowmodeType: h.SlowmodeType.CreateThread,
                     cooldownMs: n * m.default.Millis.SECOND
                 })
             } else if (429 === t.status) l.default.show({

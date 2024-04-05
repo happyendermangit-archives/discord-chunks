@@ -24,8 +24,8 @@ function(e, t, n) {
             analyticsLocation: T,
             analyticsSourceLocation: f,
             numberOfBoostsToAdd: S,
-            onClose: h,
-            closeLayer: A,
+            onClose: A,
+            closeLayer: h,
             onSubscriptionConfirmation: m,
             guild: N,
             handleSubscribeModalClose: O,
@@ -59,7 +59,7 @@ function(e, t, n) {
         let v = (0, c.getAvailableGuildBoostSlots)(u.default.boostSlots),
             M = v.length,
             y = e => {
-                null == h || h(), null == O || O(e)
+                null == A || A(), null == O || O(e)
             };
         if (M > 0 && (null == S || M >= S)) {
             let e;
@@ -95,7 +95,7 @@ function(e, t, n) {
             analyticsSourceLocation: f,
             guildId: N.id,
             closeLayer: () => {
-                null == h || h(), null == A || A(), _.default.track(I.AnalyticEvents.MODAL_DISMISSED, {
+                null == A || A(), null == h || h(), _.default.track(I.AnalyticEvents.MODAL_DISMISSED, {
                     type: I.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
                     location_section: T.section
                 })

@@ -23,9 +23,9 @@ function(e, t, n) {
         T = n("952265"),
         f = n("602091"),
         S = n("981631"),
-        h = n("493772");
+        A = n("493772");
 
-    function A(e, t, n) {
+    function h(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -46,7 +46,7 @@ function(e, t, n) {
             } = this.state;
             return (s === f.ModalTransitionState.ENTERING || s === f.ModalTransitionState.ENTERED) && !n && (s = f.ModalTransitionState.HIDDEN), r && (s = f.ModalTransitionState.ENTERED), (0, i.jsx)(t, {
                 children: (0, i.jsx)("div", {
-                    className: a()(h.layer, !n && h.hidden),
+                    className: a()(A.layer, !n && A.hidden),
                     children: e({
                         transitionState: s,
                         onClose: this.close
@@ -55,11 +55,11 @@ function(e, t, n) {
             })
         }
         constructor(...e) {
-            super(...e), A(this, "state", {
+            super(...e), h(this, "state", {
                 transitionState: null
-            }), A(this, "componentWillAppear", e => {
+            }), h(this, "componentWillAppear", e => {
                 this.componentWillEnter(e)
-            }), A(this, "componentWillEnter", e => {
+            }), h(this, "componentWillEnter", e => {
                 let {
                     instant: t
                 } = this.props;
@@ -70,7 +70,7 @@ function(e, t, n) {
                         transitionState: f.ModalTransitionState.ENTERED
                     }), e()
                 }, t ? 0 : f.TRANSITION_DURATION)
-            }), A(this, "componentWillLeave", e => {
+            }), h(this, "componentWillLeave", e => {
                 let {
                     instant: t
                 } = this.props;
@@ -81,7 +81,7 @@ function(e, t, n) {
                         transitionState: f.ModalTransitionState.EXITED
                     }), e()
                 }, t ? 0 : f.TRANSITION_DURATION)
-            }), A(this, "close", () => new Promise(e => {
+            }), h(this, "close", () => new Promise(e => {
                 this.props.closeModal(this.props.modalKey), setTimeout(() => e(), f.TRANSITION_DURATION)
             }))
         }

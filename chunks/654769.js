@@ -23,13 +23,13 @@ function(e, t, n) {
         }) : e[t] = n, e
     }
     let S = c.isPlatformEmbedded && (0, c.isWindows)(),
-        h = S && 10 > parseFloat(l.default.os.release),
-        A = !0;
-    if (S && !h) {
+        A = S && 10 > parseFloat(l.default.os.release),
+        h = !0;
+    if (S && !A) {
         let [e, , t] = l.default.os.release.split(".");
-        A = parseInt(e) > 10 || parseInt(t) >= 15063
+        h = parseInt(e) > 10 || parseInt(t) >= 15063
     }
-    let m = S && A || "Chrome" === o().name && 47 > parseFloat(o().version) || "Firefox" === o().name && 52 > parseFloat(o().version),
+    let m = S && h || "Chrome" === o().name && 47 > parseFloat(o().version) || "Firefox" === o().name && 52 > parseFloat(o().version),
         N = s().throttle(E.playSound, 1e3, {
             leading: !0
         });
@@ -39,7 +39,7 @@ function(e, t, n) {
     }
     S && (window.addEventListener("focus", O), I.default.on("MAIN_WINDOW_FOCUS", O));
     let p = window.Notification;
-    if (h) {
+    if (A) {
         let e = {};
         I.default.on("NOTIFICATION_CLICK", (t, n) => {
             let i = e[n];
@@ -94,7 +94,7 @@ function(e, t, n) {
             null != r.sound && C(r.sound, null !== (l = r.volume) && void 0 !== l ? l : 1);
             let f = null !== (d = null == r ? void 0 : r.tag) && void 0 !== d ? d : null;
             (0, c.isLinux)() && (n = s().escape(n));
-            let h = {
+            let A = {
                 icon: e,
                 body: n,
                 tag: f,
@@ -102,14 +102,14 @@ function(e, t, n) {
             };
             S && u.default.taskbarFlash && I.default.flashFrame(!0);
             try {
-                E = new p(t, h)
+                E = new p(t, A)
             } catch (e) {
                 return null
             }
             return (null === (a = r.onShown) || void 0 === a || a.call(r), !r.omitViewTracking && _.default.track(T.AnalyticEvents.NOTIFICATION_VIEWED, i), E.onclick = () => {
                 var e;
                 c.isPlatformEmbedded ? I.default.focus() : (window.focus(), E.close()), !r.omitClickTracking && _.default.track(T.AnalyticEvents.NOTIFICATION_CLICKED, i), null === (e = r.onClick) || void 0 === e || e.call(r)
-            }, m && setTimeout(() => E.close(), 5e3), A) ? E : {
+            }, m && setTimeout(() => E.close(), 5e3), h) ? E : {
                 close() {
                     var e;
                     null == E || null === (e = E.onclose) || void 0 === e || e.call(E)

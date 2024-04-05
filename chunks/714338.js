@@ -16,8 +16,8 @@ function(e, t, n) {
         T = a()(new(r())(window)),
         f = (0, d.isMac)() ? "cmd" : "ctrl",
         S = (0, d.isMac)() ? "opt" : "alt",
-        h = (0, d.isMac)() ? "return" : "enter",
-        A = [...o.JUMP_TO_GUILD.binds, "mod+shift+[", "mod+shift+]", "mod+[", "mod+]", "alt+[", "alt+]", "ctrl+shift+tab", "ctrl+tab", "mod+n", "mod+t", "mod+shift+t", "mod+plus", "mod+minus", "mod+0"].map(e => e.replace("mod", f)),
+        A = (0, d.isMac)() ? "return" : "enter",
+        h = [...o.JUMP_TO_GUILD.binds, "mod+shift+[", "mod+shift+]", "mod+[", "mod+]", "alt+[", "alt+]", "ctrl+shift+tab", "ctrl+tab", "mod+n", "mod+t", "mod+shift+t", "mod+plus", "mod+minus", "mod+0"].map(e => e.replace("mod", f)),
         m = () => [],
         N = [];
 
@@ -37,7 +37,7 @@ function(e, t, n) {
         for (let [t, n] of Object.entries(e)) {
             if (null == n) continue;
             let e = m();
-            !d.isPlatformEmbedded && (e = e.concat(A));
+            !d.isPlatformEmbedded && (e = e.concat(h));
             let i = n.binds.filter(t => (t = t.replace("mod", f), 0 > e.indexOf(t)));
             if (0 === i.length) continue;
             let r = n.comboKeysBindGlobal ? T.bindGlobal : T.bind;
@@ -53,7 +53,7 @@ function(e, t, n) {
         combokeys: T,
         modKey: f,
         altKey: S,
-        returnKey: h,
+        returnKey: A,
         setGetKeybindList(e) {
             m = e
         },

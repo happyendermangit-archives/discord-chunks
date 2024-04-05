@@ -20,8 +20,8 @@ function(e, t, n) {
         T = n("754688"),
         f = n("336197"),
         S = n("776980"),
-        h = n("386346"),
-        A = n("540709"),
+        A = n("386346"),
+        h = n("540709"),
         m = n("881706"),
         N = n("701190"),
         O = n("944486"),
@@ -169,12 +169,12 @@ function(e, t, n) {
             let {
                 default: e
             } = n("357269"), t = e(N);
-            if (null != t) return e => (null == e || e.preventDefault(), N === L.Routes.SETTINGS(L.UserSettingsSections.LOOTBOXES) && !h.default.tempShowLootboxSettings && (0, S.showLootboxSettings)(), o.default.open(t.section, t.subsection, {
+            if (null != t) return e => (null == e || e.preventDefault(), N === L.Routes.SETTINGS(L.UserSettingsSections.LOOTBOXES) && !A.default.tempShowLootboxSettings && (0, S.showLootboxSettings)(), o.default.open(t.section, t.subsection, {
                 openWithoutBackstack: !1,
                 impressionSource: t.source,
                 analyticsLocations: s
             }), !0)
         }
-        if (!t && null != (0, m.isSuspiciousDownload)(e)) return t => (null == t || t.preventDefault(), A.default.show(e), !0)
+        if (!t && null != (0, m.isSuspiciousDownload)(e)) return t => (null == t || t.preventDefault(), h.default.show(e), !0)
     }
 }

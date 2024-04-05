@@ -26,8 +26,8 @@ function(e, t, n) {
             application: T,
             bot: f,
             accountScopes: S,
-            showLogout: h,
-            location: A,
+            showLogout: A,
+            location: h,
             isTrustedName: m
         } = e, N = l.default.getApplicationIconURL({
             id: T.id,
@@ -78,7 +78,7 @@ function(e, t, n) {
                 color: "header-secondary",
                 className: I.label,
                 children: E.default.Messages.OAUTH2_CONNECT_TO_DISCORD
-            }), h ? (0, i.jsx)("div", {
+            }), A ? (0, i.jsx)("div", {
                 className: I.currentUser,
                 children: (0, i.jsxs)(a.Text, {
                     variant: "text-sm/normal",
@@ -96,7 +96,7 @@ function(e, t, n) {
                     }), (0, i.jsx)(s.Clickable, {
                         tag: "a",
                         className: I.logoutLink,
-                        onClick: () => (0, d.logoutWithRedirect)(A),
+                        onClick: () => (0, d.logoutWithRedirect)(h),
                         children: E.default.Messages.OAUTH2_LOGOUT
                     })]
                 })

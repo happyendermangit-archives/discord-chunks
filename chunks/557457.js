@@ -17,7 +17,7 @@ function(e, t, n) {
             return c
         },
         trackStreamSettingsUpdate: function() {
-            return h
+            return A
         }
     });
     var i = n("430824"),
@@ -66,7 +66,7 @@ function(e, t, n) {
         }
     }
 
-    function h(e, t, n) {
+    function A(e, t, n) {
         var d, _, c;
         let E = (d = e, _ = t, c = n, l.ApplicationStreamSettingRequirements.find(e => (null == e.preset || e.preset === d) && e.resolution === _ && e.fps === c)),
             I = s.default.getCurrentUser(),

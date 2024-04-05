@@ -11,7 +11,7 @@ function(e, t, n) {
             return a
         },
         MAX_NUMBER_OF_ONBOARDING_PROMPTS_IN_ONBOARDING: function() {
-            return h
+            return A
         },
         MAX_NUM_PROMPTS: function() {
             return T
@@ -26,7 +26,7 @@ function(e, t, n) {
             return c
         },
         MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING: function() {
-            return A
+            return h
         },
         MULTIPLE_CHOICE_MAX_NUM_OPTIONS: function() {
             return f
@@ -68,8 +68,8 @@ function(e, t, n) {
         T = 15,
         f = 12,
         S = 50,
-        h = 4,
-        A = 7,
+        A = 4,
+        h = 7,
         m = 5,
         N = 13;
 

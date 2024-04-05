@@ -68,7 +68,7 @@ function(e, t, n) {
             })
         };
     S.Sizes = f;
-    class h extends(i = s.PureComponent) {
+    class A extends(i = s.PureComponent) {
         focus() {
             let {
                 current: e
@@ -95,8 +95,8 @@ function(e, t, n) {
                 isLoading: c,
                 size: T,
                 disabled: f,
-                onChange: h,
-                onBlur: A,
+                onChange: A,
+                onBlur: h,
                 onFocus: m,
                 autoComplete: N,
                 inputProps: O,
@@ -118,7 +118,7 @@ function(e, t, n) {
                         children: [(0, r.jsx)("input", {
                             ...O,
                             onFocus: m,
-                            onBlur: A,
+                            onBlur: h,
                             className: I.input,
                             value: e,
                             onChange: this.handleOnChange,
@@ -151,9 +151,9 @@ function(e, t, n) {
             })
         }
     }
-    T(h, "Sizes", f), T(h, "defaultProps", {
+    T(A, "Sizes", f), T(A, "defaultProps", {
         size: f.SMALL,
         isLoading: !1,
         disabled: !1
-    }), t.default = h
+    }), t.default = A
 }

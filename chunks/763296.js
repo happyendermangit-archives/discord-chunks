@@ -10,8 +10,8 @@ function(e, t, n) {
         T = n("594174"),
         f = n("626135"),
         S = n("36703"),
-        h = n("709054"),
-        A = n("710111"),
+        A = n("709054"),
+        h = n("710111"),
         m = n("981631"),
         N = n("526761");
     (s = i || (i = {}))[s.NOT_FETCHED = 0] = "NOT_FETCHED", s[s.FETCHING = 1] = "FETCHING", s[s.FETCHED = 2] = "FETCHED";
@@ -171,7 +171,7 @@ function(e, t, n) {
             let {
                 soundboardSounds: t
             } = e;
-            O.set(A.DEFAULT_SOUND_GUILD_ID, t), C = 2
+            O.set(h.DEFAULT_SOUND_GUILD_ID, t), C = 2
         },
         SOUNDBOARD_SOUNDS_RECEIVED: function(e) {
             let {
@@ -201,7 +201,7 @@ function(e, t, n) {
             let {
                 soundboardStoreState: t
             } = e;
-            O = new Map(h.default.entries(t.soundboardSounds)), L = new Set(t.favoritedSoundIds), R = new Set(t.localSoundboardMutes)
+            O = new Map(A.default.entries(t.soundboardSounds)), L = new Set(t.favoritedSoundIds), R = new Set(t.localSoundboardMutes)
         },
         GUILD_SOUNDBOARD_SOUNDS_UPDATE: function(e) {
             let {

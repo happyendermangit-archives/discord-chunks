@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         localLobbyVoiceStates: function() {
-            return h
+            return A
         },
         localPresenceState: function() {
             return f
@@ -29,7 +29,7 @@ function(e, t, n) {
         T = new d.default,
         f = new c.default(T),
         S = new E.default(T),
-        h = new _.default(T);
+        A = new _.default(T);
     T.handleIdentify = () => {
         let e = a.default.getToken();
         return (I.verbose("handleIdentify called", {

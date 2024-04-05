@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         performAutocomplete: function() {
-            return h
+            return A
         },
         setActiveCommand: function() {
             return E
@@ -87,7 +87,7 @@ function(e, t, n) {
         })
     }
 
-    function h(e, t, n) {
+    function A(e, t, n) {
         var i;
         r()(null != t.autocomplete, "Missing autocomplete context");
         let {

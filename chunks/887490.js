@@ -301,14 +301,14 @@ function(e, t, n) {
                 return E.isText(r) && E.isText(s) && n.offset <= r.text.length && i.offset <= s.text.length
             }
         },
-        h = (e, t) => {
+        A = (e, t) => {
             let n = (t.top + t.bottom) / 2;
             return e.top <= n && e.bottom >= n
         },
-        A = (e, t, n) => {
+        h = (e, t, n) => {
             let i = d.toDOMRange(e, t).getBoundingClientRect(),
                 r = d.toDOMRange(e, n).getBoundingClientRect();
-            return h(i, r) && h(r, i)
+            return A(i, r) && A(r, i)
         },
         m = (e, t, n, i) => {
             let r = {
@@ -319,12 +319,12 @@ function(e, t, n) {
                 a = n.length,
                 o = Math.floor((s + a) / 2);
             for (; o !== s;)
-                if (A(e, {
+                if (h(e, {
                         anchor: n[o],
                         focus: n[o]
                     }, r) ? i ? a = o : s = o : i ? s = o : a = o, o = Math.floor((s + a) / 2), !i && o === n.length - 2 && a === n.length - 1) {
                     let t = n[n.length - 1];
-                    A(e, {
+                    h(e, {
                         anchor: t,
                         focus: t
                     }, r) && (o = a)

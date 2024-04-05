@@ -43,14 +43,14 @@ function(e, t, n) {
             return e.isGuildStageVoice() ? t = u.CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS : e.isGuildVoice() && (t = u.CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS), [r.combine(t, d.Permissions.CREATE_EVENTS), r.combine(t, d.Permissions.MANAGE_EVENTS)]
         },
         I = e => {
-            let [t, n] = e instanceof a.default ? [d.Permissions.CREATE_EVENTS, d.Permissions.MANAGE_EVENTS] : E(e), [r, u, I, T] = (0, s.useStateFromStoresArray)([o.default], () => [o.default.can(d.Permissions.CREATE_GUILD_EXPRESSIONS, e), o.default.can(d.Permissions.MANAGE_GUILD_EXPRESSIONS, e), o.default.can(t, e), o.default.can(n, e)]), f = (0, s.useStateFromStores)([l.default], () => l.default.getCurrentUser()), S = i.useCallback(e => c(e, f, u, r), [r, u, f]), h = i.useCallback(e => c(e, f, T, I), [T, I, f]);
+            let [t, n] = e instanceof a.default ? [d.Permissions.CREATE_EVENTS, d.Permissions.MANAGE_EVENTS] : E(e), [r, u, I, T] = (0, s.useStateFromStoresArray)([o.default], () => [o.default.can(d.Permissions.CREATE_GUILD_EXPRESSIONS, e), o.default.can(d.Permissions.MANAGE_GUILD_EXPRESSIONS, e), o.default.can(t, e), o.default.can(n, e)]), f = (0, s.useStateFromStores)([l.default], () => l.default.getCurrentUser()), S = i.useCallback(e => c(e, f, u, r), [r, u, f]), A = i.useCallback(e => c(e, f, T, I), [T, I, f]);
             return null == e ? _ : {
                 canCreateExpressions: r,
                 canCreateGuildEvent: I,
                 canManageAllExpressions: u,
                 canManageAllEvents: T,
                 canManageGuildExpression: S,
-                canManageGuildEvent: h
+                canManageGuildEvent: A
             }
         },
         T = function(e) {

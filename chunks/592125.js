@@ -16,8 +16,8 @@ function(e, t, n) {
         T = n("458772"),
         f = n("38217"),
         S = n("710845"),
-        h = n("853856"),
-        A = n("900489"),
+        A = n("853856"),
+        h = n("900489"),
         m = n("131704"),
         N = n("823379"),
         O = n("709054"),
@@ -245,14 +245,14 @@ function(e, t, n) {
     }
 
     function el() {
-        for (let e in B = {}, h.default.getFavoriteChannels()) {
-            let t = h.default.getCategoryRecord(e);
+        for (let e in B = {}, A.default.getFavoriteChannels()) {
+            let t = A.default.getCategoryRecord(e);
             null != t && (B[e] = t)
         }
     }
     class eu extends(i = d.default.Store) {
         initialize() {
-            this.waitFor(T.default, C.default, R.default, h.default), this.syncWith([h.default], el)
+            this.waitFor(T.default, C.default, R.default, A.default), this.syncWith([A.default], el)
         }
         hasChannel(e) {
             return null != X(e)
@@ -404,7 +404,7 @@ function(e, t, n) {
             let {
                 data: t
             } = e, n = !1;
-            for (let e of (0, A.getThreadsFromGuildFeedFetch)(t)) !(e.id in U) && m.ALL_CHANNEL_TYPES.has(e.type) && (Z((0, m.createChannelRecordFromServer)(e)), n = !0);
+            for (let e of (0, h.getThreadsFromGuildFeedFetch)(t)) !(e.id in U) && m.ALL_CHANNEL_TYPES.has(e.type) && (Z((0, m.createChannelRecordFromServer)(e)), n = !0);
             return n
         },
         LOAD_ARCHIVED_THREADS_SUCCESS: en,

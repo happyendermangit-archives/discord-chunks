@@ -19,8 +19,8 @@ function(e, t, n) {
         T = n("139143"),
         f = n("155268"),
         S = n("761122"),
-        h = n("917107"),
-        A = n("918559"),
+        A = n("917107"),
+        h = n("918559"),
         m = n("981631");
 
     function N(e, t, n) {
@@ -51,8 +51,8 @@ function(e, t, n) {
         U = new Map,
         b = new Map,
         G = new Map;
-    let w = A.ActivityPanelModes.DISCONNECTED,
-        B = A.FocusedActivityLayouts.RESIZABLE;
+    let w = h.ActivityPanelModes.DISCONNECTED,
+        B = h.FocusedActivityLayouts.RESIZABLE;
 
     function k(e) {
         return null != e ? e : "0"
@@ -71,7 +71,7 @@ function(e, t, n) {
         if (null == I) return;
         let S = u.default.getBasicChannel(r);
         if (!(null != S && d.default.canBasicChannel(m.BasicPermissions.CONNECT, S) || (null == S ? void 0 : S.type) === m.ChannelTypes.DM || (null == S ? void 0 : S.type) === m.ChannelTypes.GROUP_DM)) return;
-        let h = {
+        let A = {
                 activitySessionId: null != c ? c : o,
                 applicationId: s,
                 channelId: r,
@@ -80,16 +80,16 @@ function(e, t, n) {
                 url: I,
                 userIds: new Set(_)
             },
-            A = l.default.getId(),
-            N = R.get(h.applicationId);
-        _.some(e => e === A) && null != N && (R.set(N.applicationId, {
+            h = l.default.getId(),
+            N = R.get(A.applicationId);
+        _.some(e => e === h) && null != N && (R.set(N.applicationId, {
             ...N,
-            ...h
+            ...A
         }), a.default.dispatch({
             type: "EMBEDDED_ACTIVITY_INSTANCE_CHANGE",
             channelId: r,
             instanceId: o
-        })), null != N && r === N.channelId && !_.some(e => e === A) && Array.from(N.userIds).some(e => e === A) ? L.get(r) === s ? L.delete(r) : R.delete(s) : _.some(e => e === A) && (null == N || N.applicationId !== s || N.channelId !== r) && (null != c && c === l.default.getSessionId() || (0, T.shouldMountActivityIFrameFromGatewayUpdateWithoutSessionIdCheck)("EmbeddedActivitiesStore")) && (x({
+        })), null != N && r === N.channelId && !_.some(e => e === h) && Array.from(N.userIds).some(e => e === h) ? L.get(r) === s ? L.delete(r) : R.delete(s) : _.some(e => e === h) && (null == N || N.applicationId !== s || N.channelId !== r) && (null != c && c === l.default.getSessionId() || (0, T.shouldMountActivityIFrameFromGatewayUpdateWithoutSessionIdCheck)("EmbeddedActivitiesStore")) && (x({
             channelId: r,
             applicationId: s,
             instanceId: o
@@ -99,7 +99,7 @@ function(e, t, n) {
         let O = (null !== (t = g.get(r)) && void 0 !== t ? t : []).filter(e => e.applicationId !== s),
             p = k(i),
             D = (null !== (n = C.get(p)) && void 0 !== n ? n : []).filter(e => !(e.applicationId === s && e.channelId === r));
-        0 !== _.length && (O.push(h), D.push(h)), g.set(r, O), C.set(p, D)
+        0 !== _.length && (O.push(A), D.push(A)), g.set(r, O), C.set(p, D)
     }
 
     function F(e) {
@@ -139,7 +139,7 @@ function(e, t, n) {
             userIds: new Set([T.id]),
             connectedSince: Date.now(),
             instanceId: a
-        }), w = i !== _.default.getChannelId() || (0, h.default)(r) ? A.ActivityPanelModes.PIP : A.ActivityPanelModes.PANEL, G.set(Y(r, s), Date.now())
+        }), w = i !== _.default.getChannelId() || (0, A.default)(r) ? h.ActivityPanelModes.PIP : h.ActivityPanelModes.PANEL, G.set(Y(r, s), Date.now())
     }
 
     function H() {
@@ -509,7 +509,7 @@ function(e, t, n) {
             let {
                 channelId: t
             } = e;
-            i !== t && w === A.ActivityPanelModes.PANEL && (w = A.ActivityPanelModes.PIP)
+            i !== t && w === h.ActivityPanelModes.PANEL && (w = h.ActivityPanelModes.PIP)
         },
         EMBEDDED_ACTIVITY_DISCONNECT: function(e) {
             let {
@@ -520,7 +520,7 @@ function(e, t, n) {
             i && L.set(t, n)
         },
         CONNECTION_INTERRUPTED: function(e) {
-            e.code === m.RPCCloseCodes.CLOSE_ABNORMAL && (i = void 0, R.clear(), D = !1, w = A.ActivityPanelModes.DISCONNECTED)
+            e.code === m.RPCCloseCodes.CLOSE_ABNORMAL && (i = void 0, R.clear(), D = !1, w = h.ActivityPanelModes.DISCONNECTED)
         },
         CHANNEL_CALL_POPOUT_WINDOW_OPEN: function(e) {
             let {

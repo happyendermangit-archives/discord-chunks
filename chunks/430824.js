@@ -12,36 +12,36 @@ function(e, t, n) {
         T = n("314897"),
         f = n("981631"),
         S = n("647086");
-    let h = {},
-        A = {},
+    let A = {},
+        h = {},
         m = !1,
         N = [];
 
     function O(e) {
-        for (let t of (A = {}, h = {}, i = 0, e)) i++, A[t.id] = c.fromSerializedGuildRecord(t), h[t.id] = t.roles
+        for (let t of (h = {}, A = {}, i = 0, e)) i++, h[t.id] = c.fromSerializedGuildRecord(t), A[t.id] = t.roles
     }
 
     function p(e) {
         let {
             guildId: t,
             role: n
-        } = e, i = h[t], r = E.fromServerRole(n), s = null == i ? void 0 : i[r.id];
+        } = e, i = A[t], r = E.fromServerRole(n), s = null == i ? void 0 : i[r.id];
         if (null != s && (0, u.default)(r, s)) return !1;
         i = {
             ...i,
             [n.id]: E.fromServerRole(n)
-        }, h[t] = i
+        }, A[t] = i
     }
     let R = Object.freeze({});
     class C extends(r = l.default.Store) {
         getGuild(e) {
-            if (null != e) return e === f.FAVORITES ? S.FAVORITES_GUILD_RECORD : A[e]
+            if (null != e) return e === f.FAVORITES ? S.FAVORITES_GUILD_RECORD : h[e]
         }
         getGuilds() {
-            return A
+            return h
         }
         getGuildIds() {
-            return I.default.keys(A)
+            return I.default.keys(h)
         }
         getGuildCount() {
             return i
@@ -53,15 +53,15 @@ function(e, t, n) {
             return N
         }
         getAllGuildsRoles() {
-            return h
+            return A
         }
         getRoles(e) {
             var t;
-            return null !== (t = h[e]) && void 0 !== t ? t : R
+            return null !== (t = A[e]) && void 0 !== t ? t : R
         }
         getRole(e, t) {
             var n;
-            return null === (n = h[e]) || void 0 === n ? void 0 : n[t]
+            return null === (n = A[e]) || void 0 === n ? void 0 : n[t]
         }
     }
     o = "GuildStore", (a = "displayName") in(s = C) ? Object.defineProperty(s, a, {
@@ -73,17 +73,17 @@ function(e, t, n) {
         BACKGROUND_SYNC: function(e) {
             for (let n of e.guilds) {
                 var t;
-                let e = A[n.id];
+                let e = h[n.id];
                 if (null == e || "unavailable" === n.data_mode) return;
-                A[n.id] = c.fromBackgroundSync(n, e), h[n.id] = "partial" === n.data_mode ? c.filterRoleDeletes(n.id, null !== (t = h[n.id]) && void 0 !== t ? t : R, n.partial_updates.roles, n.partial_updates.deleted_role_ids) : E.sortServerRoles(n.id, n.roles)
+                h[n.id] = c.fromBackgroundSync(n, e), A[n.id] = "partial" === n.data_mode ? c.filterRoleDeletes(n.id, null !== (t = A[n.id]) && void 0 !== t ? t : R, n.partial_updates.roles, n.partial_updates.deleted_role_ids) : E.sortServerRoles(n.id, n.roles)
             }
-            i = Object.keys(A).length
+            i = Object.keys(h).length
         },
         CONNECTION_OPEN: function(e) {
             m = !0;
-            let t = A;
-            A = {}, h = {}, i = 0, e.guilds.forEach(e => {
-                i++, A[e.id] = c.fromServer(e, t[e.id]), h[e.id] = e.roles instanceof Array ? E.sortServerRoles(e.id, e.roles) : e.roles
+            let t = h;
+            h = {}, A = {}, i = 0, e.guilds.forEach(e => {
+                i++, h[e.id] = c.fromServer(e, t[e.id]), A[e.id] = e.roles instanceof Array ? E.sortServerRoles(e.id, e.roles) : e.roles
             });
             let n = !1;
             if (N.length !== e.geoRestrictedGuilds.length) n = !0;
@@ -96,9 +96,9 @@ function(e, t, n) {
         },
         OVERLAY_INITIALIZE: function(e) {
             var t;
-            A = {}, h = {}, i = 0, null === (t = e.guilds) || void 0 === t || t.forEach(e => {
-                i++, A[e.id] = new _.default(e)
-            }), h = e.allGuildsRoles
+            h = {}, A = {}, i = 0, null === (t = e.guilds) || void 0 === t || t.forEach(e => {
+                i++, h[e.id] = new _.default(e)
+            }), A = e.allGuildsRoles
         },
         CACHE_LOADED: function(e) {
             O(e.guilds)
@@ -108,18 +108,18 @@ function(e, t, n) {
             O(e.guilds)
         },
         GUILD_CREATE: function(e) {
-            let t = c.fromServer(e.guild, A[e.guild.id]);
-            null == A[t.id] && i++, A = {
-                ...A,
+            let t = c.fromServer(e.guild, h[e.guild.id]);
+            null == h[t.id] && i++, h = {
+                ...h,
                 [t.id]: t
-            }, h[t.id] = e.guild.roles instanceof Array ? E.sortServerRoles(t.id, e.guild.roles) : e.guild.roles
+            }, A[t.id] = e.guild.roles instanceof Array ? E.sortServerRoles(t.id, e.guild.roles) : e.guild.roles
         },
         GUILD_UPDATE: function(e) {
-            let t = c.fromServerUpdate(e.guild, A[e.guild.id]);
-            null == A[t.id] && i++, A = {
-                ...A,
+            let t = c.fromServerUpdate(e.guild, h[e.guild.id]);
+            null == h[t.id] && i++, h = {
+                ...h,
                 [t.id]: t
-            }, h[t.id] = E.sortServerRoles(t.id, e.guild.roles)
+            }, A[t.id] = E.sortServerRoles(t.id, e.guild.roles)
         },
         GUILD_DELETE: function(e) {
             let {
@@ -129,10 +129,10 @@ function(e, t, n) {
                 N.splice(n, 1), N = [...N];
                 return
             }
-            if (null == A[t.id] || t.unavailable) return !1;
-            A = {
-                ...A
-            }, delete A[t.id], h[t.id] = void 0, i--
+            if (null == h[t.id] || t.unavailable) return !1;
+            h = {
+                ...h
+            }, delete h[t.id], A[t.id] = void 0, i--
         },
         GUILD_ROLE_CREATE: p,
         GUILD_ROLE_UPDATE: p,
@@ -140,23 +140,23 @@ function(e, t, n) {
             let {
                 guildId: t,
                 roleId: n
-            } = e, i = h[t];
+            } = e, i = A[t];
             if (null == i) return !1;
             i = {
                 ...i
-            }, delete i[n], h[t] = i
+            }, delete i[n], A[t] = i
         },
         GUILD_MEMBER_ADD: function(e) {
             let {
                 guildId: t,
                 joinedAt: n,
                 user: i
-            } = e, r = T.default.getId(), s = A[t];
+            } = e, r = T.default.getId(), s = h[t];
             if (r !== i.id || null == s) return !1;
             let a = "string" == typeof n ? new Date(n) : n;
             if (a === s.joinedAt || null == a) return !1;
-            A = {
-                ...A,
+            h = {
+                ...h,
                 [t]: s.updateJoinedAt(a)
             }
         },

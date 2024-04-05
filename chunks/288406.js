@@ -16,7 +16,7 @@ function(e, t, n) {
         T = n("731153");
     let f = l().memoize(e => "".concat(e * I.EmojiSprites.NonDiversityPerRow, "px ").concat(e * Math.ceil(d.default.numNonDiversitySprites / I.EmojiSprites.NonDiversityPerRow), "px")),
         S = l().memoize(e => "".concat(e * I.EmojiSprites.DiversityPerRow, "px ").concat(e * Math.ceil(d.default.numDiversitySprites / I.EmojiSprites.DiversityPerRow), "px")),
-        h = (e, t, i) => {
+        A = (e, t, i) => {
             let r, s, a;
             if (!e.useSpriteSheet) return;
             let o = null != e.index ? e.index : 0;
@@ -31,7 +31,7 @@ function(e, t, n) {
                 width: i
             }
         },
-        A = r.memo(function(e) {
+        h = r.memo(function(e) {
             let {
                 emoji: t,
                 size: n,
@@ -59,7 +59,7 @@ function(e, t, n) {
                     className: a()(T.emojiSpriteImage, {
                         [T.lockedEmoji]: d
                     }),
-                    style: h(t, s, n),
+                    style: A(t, s, n),
                     children: (0, i.jsx)(u.HiddenVisually, {
                         children: l
                     })
@@ -76,5 +76,5 @@ function(e, t, n) {
                 }) : null]
             })
         });
-    t.default = A
+    t.default = h
 }

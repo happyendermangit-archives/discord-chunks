@@ -19,8 +19,8 @@ function(e, t, n) {
         T = n("952265"),
         f = n("632120"),
         S = n("40851"),
-        h = n("153850"),
-        A = n("920676"),
+        A = n("153850"),
+        h = n("920676"),
         m = n("981631");
 
     function N(e, t, n) {
@@ -108,7 +108,7 @@ function(e, t, n) {
                 shouldShowLoadingState: c
             } = this.state;
             return _ && !c ? null : (0, r.jsx)(E.Layer, {
-                layerContext: null != u ? u : h.appLayerContext,
+                layerContext: null != u ? u : A.appLayerContext,
                 children: (0, r.jsx)(I.ReferencePositionLayer, {
                     ref: this.layerRef,
                     onMount: this.handlePopoutShow,
@@ -238,6 +238,6 @@ function(e, t, n) {
         autoInvert: !1,
         nudgeAlignIntoViewport: !1,
         spacing: 0,
-        loadingComponent: (0, r.jsx)(A.LoadingPopout, {})
+        loadingComponent: (0, r.jsx)(h.LoadingPopout, {})
     }), N(p, "contextType", S.default)
 }

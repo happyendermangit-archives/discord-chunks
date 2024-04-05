@@ -81,7 +81,7 @@ function(e, t, n) {
             grow: T,
             basis: f,
             style: S,
-            ...h
+            ...A
         } = e;
         return (0, i.jsx)("div", {
             style: {
@@ -91,7 +91,7 @@ function(e, t, n) {
                 ...S
             },
             className: a()(o.flex, r, s, l, E, n),
-            ...h,
+            ...A,
             children: t
         })
     };

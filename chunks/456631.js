@@ -3,7 +3,7 @@ function(e, t, n) {
     let i;
     n.r(t), n.d(t, {
         clearVoiceChannelEffectForUser: function() {
-            return h
+            return A
         }
     }), n("47120"), n("733860");
     var r, s, a, o, l = n("392711"),
@@ -16,13 +16,13 @@ function(e, t, n) {
     let T = [],
         f = {},
         S = [],
-        h = e => {
+        A = e => {
             null != e && _.default.dispatch({
                 type: "VOICE_CHANNEL_EFFECT_CLEAR",
                 userId: e
             })
         },
-        A = [],
+        h = [],
         m = 10 * c.default.Millis.SECOND,
         N = (0, l.debounce)(() => {
             let e = (0, E.getEffectAnnouncement)(S);
@@ -77,8 +77,8 @@ function(e, t, n) {
         },
         VOICE_CHANNEL_EFFECT_SENT_LOCAL: () => {
             let e = new Date;
-            if ((A = [e, ...A].slice(0, 20)).length >= 20) {
-                let t = A[A.length - 1],
+            if ((h = [e, ...h].slice(0, 20)).length >= 20) {
+                let t = h[h.length - 1],
                     n = e.getTime() - t.getTime();
                 n < m && (i = new Date(e.getTime() + m - n))
             }

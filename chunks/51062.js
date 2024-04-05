@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return A
+            return h
         }
     }), n("47120");
     var i = n("470079"),
@@ -20,10 +20,10 @@ function(e, t, n) {
         T = n("691841"),
         f = n("981631"),
         S = n("377668"),
-        h = n("185923");
+        A = n("185923");
 
-    function A(e, t, n) {
-        var A, m, N, O, p, R, C;
+    function h(e, t, n) {
+        var h, m, N, O, p, R, C;
         let {
             channel: g,
             type: L
@@ -54,7 +54,7 @@ function(e, t, n) {
             scrollerRef: n,
             state: D,
             onFocus: e => x.setSelectedIndex(e)
-        }), V = null === (A = e.editorRef.current) || void 0 === A ? void 0 : A.getCurrentWord(), F = {
+        }), V = null === (h = e.editorRef.current) || void 0 === h ? void 0 : h.getCurrentWord(), F = {
             ...e,
             navigator: k,
             activeCommand: w,
@@ -64,7 +64,7 @@ function(e, t, n) {
             canMentionClyde: P,
             hidePersonalInformation: G,
             hideMentionDescription: L === l.ChatInputTypes.RULES_INPUT,
-            emojiIntention: L === l.ChatInputTypes.RULES_INPUT ? h.EmojiIntention.COMMUNITY_CONTENT : h.EmojiIntention.CHAT,
+            emojiIntention: L === l.ChatInputTypes.RULES_INPUT ? A.EmojiIntention.COMMUNITY_CONTENT : A.EmojiIntention.CHAT,
             currentWord: null !== (R = null == V ? void 0 : V.word) && void 0 !== R ? R : "",
             currentWordIsAtStart: (null == V ? void 0 : V.isAtStart) === !0,
             optionText: null != B ? (0, a.getString)({

@@ -21,10 +21,10 @@ function(e, t, n) {
         return !1
     }
 
-    function h(e) {
+    function A(e) {
         return !(e === c.ME || E.includes(e)) && (E = [...E, e], !0)
     }
-    class A extends(i = o.default.Store) {
+    class h extends(i = o.default.Store) {
         initialize() {
             this.waitFor(d.default, _.default)
         }
@@ -53,12 +53,12 @@ function(e, t, n) {
             return null != e ? I[e] : null
         }
     }
-    a = "LurkingStore", (s = "displayName") in(r = A) ? Object.defineProperty(r, s, {
+    a = "LurkingStore", (s = "displayName") in(r = h) ? Object.defineProperty(r, s, {
         value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a, t.default = new A(l.default, {
+    }) : r[s] = a, t.default = new h(l.default, {
         CONNECTION_OPEN: function() {
             E = Object.values(d.default.getGuilds()).reduce((e, t) => t.isLurker() ? [...e, t.id] : e, [])
         },
@@ -72,7 +72,7 @@ function(e, t, n) {
             } = e;
             if (n) {
                 var a, o;
-                switch (h(t), a = t, null != (o = s) && (I[a] = o), i) {
+                switch (A(t), a = t, null != (o = s) && (I[a] = o), i) {
                     case c.JoinGuildSources.MOBILE_GUILD_DISCOVERY:
                         f = {
                             type: c.JoinGuildSources.MOBILE_GUILD_DISCOVERY
@@ -105,7 +105,7 @@ function(e, t, n) {
                 lurkingGuildId: t,
                 lurkingSource: n
             } = e;
-            return h(t), f = n, !0
+            return A(t), f = n, !0
         },
         GUILD_CREATE: function(e) {
             let {

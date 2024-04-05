@@ -11,7 +11,7 @@ function(e, t, n) {
             return T
         },
         supportsHEVCAlpha: function() {
-            return h
+            return A
         }
     });
     var i, r, s, a, o, l = n("525654"),
@@ -34,7 +34,7 @@ function(e, t, n) {
         return -1 !== _ || -1 !== E || -1 !== I || -1 !== f
     }
 
-    function h() {
+    function A() {
         var e;
         let t = window.navigator,
             n = t.userAgent.toLowerCase(),

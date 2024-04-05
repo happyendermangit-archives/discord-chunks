@@ -12,8 +12,8 @@ function(e, t, n) {
         T = null,
         f = {},
         S = {},
-        h = {},
-        A = null,
+        A = {},
+        h = null,
         m = null,
         N = !1,
         O = !1,
@@ -28,8 +28,8 @@ function(e, t, n) {
         var t, n, i, r, s, a;
         let o = _.default.getCurrentUser();
         if (null == o) return M();
-        T = null !== (t = e.section) && void 0 !== t ? t : T, L = null !== (n = e.section) && void 0 !== n ? n : T, null != e.subsection && null != T && (f[T] = e.subsection), null != e.scrollPosition && null != T && (S[T] = e.scrollPosition), O = !!e.openWithoutBackstack, E = c.FormStates.OPEN, h = {}, m = {
-            ...A = {
+        T = null !== (t = e.section) && void 0 !== t ? t : T, L = null !== (n = e.section) && void 0 !== n ? n : T, null != e.subsection && null != T && (f[T] = e.subsection), null != e.scrollPosition && null != T && (S[T] = e.scrollPosition), O = !!e.openWithoutBackstack, E = c.FormStates.OPEN, A = {}, m = {
+            ...h = {
                 [c.UserSettingsSections.ACCOUNT]: {
                     userId: o.id,
                     username: o.username,
@@ -45,18 +45,18 @@ function(e, t, n) {
     }
 
     function M() {
-        E = c.FormStates.CLOSED, N = !1, A = null, L = null, m = null, I = null, T = null, f = {}, S = {}, R = null, C = null, g = [], D = null
+        E = c.FormStates.CLOSED, N = !1, h = null, L = null, m = null, I = null, T = null, f = {}, S = {}, R = null, C = null, g = [], D = null
     }
 
     function y() {
-        E = c.FormStates.OPEN, h = {}
+        E = c.FormStates.OPEN, A = {}
     }
     class P extends(a = u.default.Store) {
         initialize() {
             this.waitFor(_.default)
         }
         hasChanges() {
-            return null != m && null != A && (!!this.isOpen() || p === c.DrawerTabTypes.USER_SETTINGS) && !l().isEqual(m, A)
+            return null != m && null != h && (!!this.isOpen() || p === c.DrawerTabTypes.USER_SETTINGS) && !l().isEqual(m, h)
         }
         isOpen() {
             return N
@@ -83,7 +83,7 @@ function(e, t, n) {
                 subsection: null != T ? f[T] : null,
                 scrollPosition: null != T ? S[T] : null,
                 settings: m,
-                errors: h,
+                errors: A,
                 hasChanges: this.hasChanges(),
                 openWithoutBackstack: O,
                 analyticsLocation: C,
@@ -114,7 +114,7 @@ function(e, t, n) {
         USER_SETTINGS_MODAL_SUBMIT_FAILURE: function(e) {
             var t;
             if (E !== c.FormStates.SUBMITTING) return !1;
-            E = c.FormStates.OPEN, T = c.UserSettingsSections.ACCOUNT, h = null !== (t = e.errors) && void 0 !== t ? t : {}
+            E = c.FormStates.OPEN, T = c.UserSettingsSections.ACCOUNT, A = null !== (t = e.errors) && void 0 !== t ? t : {}
         },
         USER_SETTINGS_MODAL_SET_SECTION: function(e) {
             var t;
@@ -147,7 +147,7 @@ function(e, t, n) {
         USER_SETTINGS_MODAL_RESET: function() {
             let e = _.default.getCurrentUser();
             y(), null != e && (m = {
-                ...A = {
+                ...h = {
                     [c.UserSettingsSections.ACCOUNT]: {
                         userId: e.id,
                         username: e.username,

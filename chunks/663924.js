@@ -16,8 +16,8 @@ function(e, t, n) {
         T = n("5967"),
         f = n("499254"),
         S = n("541099"),
-        h = n("481370"),
-        A = n("361917"),
+        A = n("481370"),
+        h = n("361917"),
         m = n("981631"),
         N = n("957825"),
         O = n("470774");
@@ -81,10 +81,10 @@ function(e, t, n) {
                                 className: O.resizeHandle
                             }), (0, i.jsxs)("div", {
                                 className: O.contentWrapper,
-                                children: [(0, i.jsx)(A.default, {
+                                children: [(0, i.jsx)(h.default, {
                                     channel: n,
                                     isAppDetailPresent: null != U
-                                }), null != U ? (0, i.jsx)(h.default, {
+                                }), null != U ? (0, i.jsx)(A.default, {
                                     channel: n,
                                     appDetail: U
                                 }, U.id) : null]

@@ -19,8 +19,8 @@ function(e, t, n) {
         T = n("714338"),
         f = n("710845"),
         S = n("658785"),
-        h = n("131951"),
-        A = n("626135"),
+        A = n("131951"),
+        h = n("626135"),
         m = n("358085"),
         N = n("998502"),
         O = n("13140"),
@@ -147,13 +147,13 @@ function(e, t, n) {
         P = {
             ...P,
             [t.id]: t
-        }, !__OVERLAY__ && (A.default.track(R.AnalyticEvents.USER_SETTINGS_KEYBIND_UPDATED, {
+        }, !__OVERLAY__ && (h.default.track(R.AnalyticEvents.USER_SETTINGS_KEYBIND_UPDATED, {
             keybind_action: t.action,
             keybind_is_bound: !0,
             keybind_has_shortcut: t.shortcut.length > 0
-        }), t.action === R.GlobalKeybindActions.TOGGLE_OVERLAY_INPUT_LOCK ? A.default.track(R.AnalyticEvents.OVERLAY_SETTINGS_UPDATED, {
+        }), t.action === R.GlobalKeybindActions.TOGGLE_OVERLAY_INPUT_LOCK ? h.default.track(R.AnalyticEvents.OVERLAY_SETTINGS_UPDATED, {
             hotkey: t.action === R.GlobalKeybindActions.TOGGLE_OVERLAY_INPUT_LOCK ? (0, O.toString)(t.shortcut) : null
-        }) : t.action === R.GlobalKeybindActions.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET && A.default.track(R.AnalyticEvents.OVERLAY_SETTINGS_UPDATED, {
+        }) : t.action === R.GlobalKeybindActions.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET && h.default.track(R.AnalyticEvents.OVERLAY_SETTINGS_UPDATED, {
             text_activation_hotkey: t.action === R.GlobalKeybindActions.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET ? (0, O.toString)(t.shortcut) : null
         })), H(t)
     }
@@ -169,10 +169,10 @@ function(e, t, n) {
         })), !0)
     }
     let z = [function() {
-        let e = h.default.getShortcuts();
+        let e = A.default.getShortcuts();
         return c().each(P, t => {
             t.action === R.GlobalKeybindActions.PUSH_TO_TALK && !0 === t.managed && (null == t.context || null == e[t.context]) && j(t)
-        }), c().reduce(h.default.getShortcuts(), (e, t, n) => {
+        }), c().reduce(A.default.getShortcuts(), (e, t, n) => {
             let i = c().find(P, e => e.action === R.GlobalKeybindActions.PUSH_TO_TALK && !0 === e.managed && e.context === n);
             if (null == i) H(Y({
                 action: R.GlobalKeybindActions.PUSH_TO_TALK,
@@ -219,7 +219,7 @@ function(e, t, n) {
     });
     class Q extends(r = E.default.DeviceSettingsStore) {
         initialize(e) {
-            !__OVERLAY__ && this.waitFor(h.default, p.default), P = null != e ? e : {}
+            !__OVERLAY__ && this.waitFor(A.default, p.default), P = null != e ? e : {}
         }
         getUserAgnosticState() {
             return P
@@ -313,7 +313,7 @@ function(e, t, n) {
             let {
                 id: t
             } = e, n = P[t];
-            !__OVERLAY__ && A.default.track(R.AnalyticEvents.USER_SETTINGS_KEYBIND_UPDATED, {
+            !__OVERLAY__ && h.default.track(R.AnalyticEvents.USER_SETTINGS_KEYBIND_UPDATED, {
                 keybind_action: n.action,
                 keybind_is_bound: !1,
                 keybind_has_shortcut: !1

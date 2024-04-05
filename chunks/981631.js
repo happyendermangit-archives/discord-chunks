@@ -1476,6 +1476,7 @@ function(_, E, e) {
             APPLICATION_COMMAND_INDEX_CHANNEL: _ => "/channels/".concat(_, "/application-command-index"),
             APPLICATION_COMMAND_INDEX_GUILD: _ => "/guilds/".concat(_, "/application-command-index"),
             APPLICATION_COMMAND_INDEX_USER: "/users/@me/application-command-index",
+            APPLICATION_COMMAND_INDEX_APPLICATION: _ => "/applications/".concat(_, "/application-command-index"),
             GUILD_COMMANDS_FOR_APPLICATION: (_, E) => "/guilds/".concat(_, "/application-commands/").concat(E),
             APPLICATION_DIRECTORY_APPLICATION: _ => "/application-directory-static/applications/".concat(_),
             APPLICATION_DIRECTORY_EMBED_APPLICATION: _ => "/application-directory/applications/".concat(_, "/embed"),

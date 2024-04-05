@@ -21,8 +21,8 @@ function(e, t, n) {
         T = n("606304"),
         f = n("594174"),
         S = n("33039"),
-        h = n("979651"),
-        A = n("5192"),
+        A = n("979651"),
+        h = n("5192"),
         m = n("933546"),
         N = n("354459"),
         O = n("981631"),
@@ -65,7 +65,7 @@ function(e, t, n) {
             let e = E.default.getChannel(this.channelId);
             if (null == e || e.type === O.ChannelTypes.GUILD_TEXT) return !1;
             if (this.call = c.default.getCall(this.channelId), e.isPrivate() && (null == this.call || this.call.unavailable)) return !1;
-            let t = new Set(e.isGuildVocalOrThread() ? Object.keys(h.default.getVoiceStatesForChannel(e.id)) : e.recipients);
+            let t = new Set(e.isGuildVocalOrThread() ? Object.keys(A.default.getVoiceStatesForChannel(e.id)) : e.recipients);
             return t.add(_.default.getId()), d.default.getAllActiveStreamsForChannel(this.channelId).forEach(e => {
                 let {
                     ownerId: n
@@ -144,8 +144,8 @@ function(e, t, n) {
             let m = [],
                 O = f.default.getUser(e);
             if (null == O) return m;
-            let R = h.default.getVoiceStateForChannel(this.channelId, e),
-                C = h.default.getVoicePlatformForChannel(this.channelId, e),
+            let R = A.default.getVoiceStateForChannel(this.channelId, e),
+                C = A.default.getVoicePlatformForChannel(this.channelId, e),
                 g = E.default.getChannel(this.channelId),
                 L = null !== (i = null === (n = this.call) || void 0 === n ? void 0 : null === (t = n.ringing) || void 0 === t ? void 0 : t.includes(e)) && void 0 !== i && i;
             (null != R || L) && (l = {
@@ -162,7 +162,7 @@ function(e, t, n) {
                 lastSpoke: null !== (r = this.lastSpoke[e]) && void 0 !== r ? r : 0,
                 soundsharing: T.default.isSoundSharing(e),
                 ringing: L,
-                userNick: A.default.getName(null == g ? void 0 : g.getGuildId(), this.channelId, O),
+                userNick: h.default.getName(null == g ? void 0 : g.getGuildId(), this.channelId, O),
                 localVideoDisabled: I.default.isLocalVideoDisabled(O.id)
             }, m.push(l));
             let D = null !== (s = d.default.getStreamForUser(e, null == g ? void 0 : g.getGuildId())) && void 0 !== s ? s : d.default.getActiveStreamForUser(e, null == g ? void 0 : g.getGuildId());
@@ -183,7 +183,7 @@ function(e, t, n) {
                     id: t,
                     userVideo: null !== (a = null == R ? void 0 : R.selfVideo) && void 0 !== a && a,
                     user: O,
-                    userNick: A.default.getName(null == g ? void 0 : g.getGuildId(), this.channelId, O),
+                    userNick: h.default.getName(null == g ? void 0 : g.getGuildId(), this.channelId, O),
                     stream: D
                 }, m.push(c)
             }

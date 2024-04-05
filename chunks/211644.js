@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         addCandidateContent: function() {
-            return h
+            return A
         },
         default: function() {
             return C
@@ -14,7 +14,7 @@ function(e, t, n) {
             return m
         },
         removeCandidateContent: function() {
-            return A
+            return h
         },
         reset: function() {
             return R
@@ -81,14 +81,14 @@ function(e, t, n) {
                 })
             }, 250), e)
         },
-        h = e => {
+        A = e => {
             let t = r.CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(e.content);
             o.setState(n => {
                 let i = l(n);
                 return t ? d(i, e) : S(_(i, e))
             })
         },
-        A = (e, t) => {
+        h = (e, t) => {
             o.setState(n => {
                 let i = l(n);
                 return t ? S(u(c(i, e), e)) : u(c(i, e), e)

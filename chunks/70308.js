@@ -88,7 +88,7 @@ function(e, t, n) {
                 var e, t;
                 return E[null !== (t = null == c ? void 0 : null === (e = c.options) || void 0 === e ? void 0 : e.position) && void 0 !== t ? t : I.current]
             }, [c]),
-            h = (0, s.useTransition)(c, {
+            A = (0, s.useTransition)(c, {
                 keys: e => {
                     var t;
                     return null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : ""
@@ -102,7 +102,7 @@ function(e, t, n) {
             }, T.current)
         }, [c]), (0, i.jsx)("div", {
             className: S.styles,
-            children: h((e, t) => null === t ? null : (0, i.jsx)(s.animated.div, {
+            children: A((e, t) => null === t ? null : (0, i.jsx)(s.animated.div, {
                 style: e,
                 children: (0, i.jsx)(l.Toast, {
                     ...t

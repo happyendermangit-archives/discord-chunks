@@ -23,7 +23,10 @@ function(e, t, n) {
                 l = o.Endpoints.APPLICATION_COMMAND_INDEX_GUILD(e.guildId);
                 break;
             case "user":
-                l = o.Endpoints.APPLICATION_COMMAND_INDEX_USER
+                l = o.Endpoints.APPLICATION_COMMAND_INDEX_USER;
+                break;
+            case "application":
+                l = o.Endpoints.APPLICATION_COMMAND_INDEX_APPLICATION(e.applicationId)
         }
         let d = async t => u >= 3 ? (c(!0), r.default.dispatch({
             type: "APPLICATION_COMMAND_INDEX_FETCH_FAILURE",

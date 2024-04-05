@@ -5,7 +5,7 @@ function(e, t, n) {
             return S
         },
         PurchaseConfirmation: function() {
-            return h
+            return A
         },
         PurchaseHeader: function() {
             return f
@@ -80,7 +80,7 @@ function(e, t, n) {
             })
         };
 
-    function h(e) {
+    function A(e) {
         let {
             tierName: t,
             onConfirm: n,

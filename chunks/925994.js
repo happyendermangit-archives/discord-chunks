@@ -66,8 +66,8 @@ function(e, t, n) {
             }
         let T = c > 0 && I.NodeUtils.isType(e[c - 1], "blockQuote"),
             f = I.NodeUtils.isType(e[c], "blockQuote"),
-            h = I.NodeUtils.isType(e[E], "blockQuote"),
-            A = [];
+            A = I.NodeUtils.isType(e[E], "blockQuote"),
+            h = [];
         for (let t = c; t <= E; t++) {
             let n = e[t];
             if (l && I.TextUtils.isText(n) && 0 === n.text.length) continue;
@@ -83,12 +83,12 @@ function(e, t, n) {
                     mode: r,
                     start: i,
                     end: o,
-                    allowBlockQuotePrefix: null == s || null == a || !T && (!f || h),
+                    allowBlockQuotePrefix: null == s || null == a || !T && (!f || A),
                     preventEmojiSurrogates: d
                 });
-            (!l || u.length > 0) && A.push(u)
+            (!l || u.length > 0) && h.push(u)
         }
-        return A.join(o)
+        return h.join(o)
     }
 
     function S(e, t) {

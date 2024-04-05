@@ -20,8 +20,8 @@ function(e, t, n) {
         T = n("626135"),
         f = n("74538"),
         S = n("706667"),
-        h = n("409673"),
-        A = n("981631"),
+        A = n("409673"),
+        h = n("981631"),
         m = n("474936"),
         N = n("689938"),
         O = n("892085"),
@@ -38,31 +38,31 @@ function(e, t, n) {
             location: M
         } = (0, u.useAnalyticsContext)(), y = r.useMemo(() => ({
             ...M,
-            section: A.AnalyticsSections.SOUNDBOARD_SOUND_PICKER
+            section: h.AnalyticsSections.SOUNDBOARD_SOUND_PICKER
         }), [M]), {
             analyticsLocations: P
         } = (0, c.default)(_.default.PREMIUM_UPSELL), {
             previewSound: U
-        } = (0, S.default)(C, null !== (t = null == g ? void 0 : g.id) && void 0 !== t ? t : null), b = (0, h.PreviewButton)({
+        } = (0, S.default)(C, null !== (t = null == g ? void 0 : g.id) && void 0 !== t ? t : null), b = (0, A.PreviewButton)({
             sound: C,
             previewSound: U,
             tooltipPosition: "left"
         }), G = (0, o.isThemeLight)(L) ? n("537381") : n("341048");
         r.useEffect(() => {
-            T.default.track(A.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+            T.default.track(h.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                 type: m.PremiumUpsellTypes.SOUND_PICKER_SOUND_CLICKED,
                 is_external: !0,
                 location: {
                     ...y,
-                    object: A.AnalyticsObjects.SOUNDBOARD_SOUND
+                    object: h.AnalyticsObjects.SOUNDBOARD_SOUND
                 },
                 location_stack: P,
                 sku_id: f.default.getSkuIdForPremiumType(m.PremiumTypes.TIER_2)
             })
         }, [P, y]);
         let w = r.useCallback(() => {
-            T.default.track(A.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
-                location_section: A.AnalyticsSections.SOUNDBOARD_SOUND_PICKER_UPSELL
+            T.default.track(h.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
+                location_section: h.AnalyticsSections.SOUNDBOARD_SOUND_PICKER_UPSELL
             }), (0, E.navigateToPremiumMarketingPage)(), R()
         }, [R]);
         return (0, i.jsxs)("div", {
@@ -97,8 +97,8 @@ function(e, t, n) {
                     subscriptionTier: m.PremiumSubscriptionSKUs.TIER_2,
                     submitting: D,
                     premiumModalAnalyticsLocation: {
-                        section: A.AnalyticsSections.SOUNDBOARD_SOUND_PICKER,
-                        object: A.AnalyticsObjects.BUTTON_CTA
+                        section: h.AnalyticsSections.SOUNDBOARD_SOUND_PICKER,
+                        object: h.AnalyticsObjects.BUTTON_CTA
                     },
                     size: l.Button.Sizes.SMALL,
                     color: l.Button.Colors.GREEN,

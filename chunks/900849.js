@@ -11,7 +11,7 @@ function(e, t, n) {
             return g
         },
         makeDiscoverableGuild: function() {
-            return h
+            return A
         },
         startLurking: function() {
             return f
@@ -20,7 +20,7 @@ function(e, t, n) {
             return m
         },
         trackDiscoveryViewed: function() {
-            return A
+            return h
         },
         trackGuildJoinClicked: function() {
             return C
@@ -128,7 +128,7 @@ function(e, t, n) {
             })
     }
 
-    function h(e) {
+    function A(e) {
         return {
             id: e.id,
             name: e.name,
@@ -150,7 +150,7 @@ function(e, t, n) {
         }
     }
 
-    function A(e) {
+    function h(e) {
         let {
             loadId: t,
             gamesYouPlayGuilds: n,
@@ -249,7 +249,7 @@ function(e, t, n) {
                 }),
                 r = null === (n = i.body) || void 0 === n ? void 0 : null === (t = n.guilds) || void 0 === t ? void 0 : t[0];
             if (null == r) return r;
-            return h(r)
+            return A(r)
         } catch (e) {
             return null
         }

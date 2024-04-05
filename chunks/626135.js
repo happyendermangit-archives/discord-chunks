@@ -46,11 +46,11 @@ function(e, t, n) {
             location: {}
         }),
         S = {},
-        h = performance.now(),
-        A = [];
+        A = performance.now(),
+        h = [];
 
     function m(e) {
-        A.push(e)
+        h.push(e)
     }
     let N = {
         [E.AnalyticEvents.APP_OPENED]: {
@@ -286,7 +286,7 @@ function(e, t, n) {
                 }
             }
         }
-        a.client_performance_cpu = _.default.getCurrentCPUUsagePercent(), a.client_performance_memory = _.default.getCurrentMemoryUsageKB(), a.cpu_core_count = _.default.getCPUCoreCount(), a.accessibility_features = p(), a.rendered_locale = T.default.getLocale(), a.uptime_app = Math.floor((performance.now() - h) / 1e3);
+        a.client_performance_cpu = _.default.getCurrentCPUUsagePercent(), a.client_performance_memory = _.default.getCurrentMemoryUsageKB(), a.cpu_core_count = _.default.getCPUCoreCount(), a.accessibility_features = p(), a.rendered_locale = T.default.getLocale(), a.uptime_app = Math.floor((performance.now() - A) / 1e3);
         let o = _.default.getProcessUptime();
         null != o && (a.uptime_process_renderer = Math.floor(o));
         let {
@@ -295,7 +295,7 @@ function(e, t, n) {
             utmCampaign: d,
             utmContent: c
         } = S;
-        return a.utm_source = null !== (t = a.utm_source) && void 0 !== t ? t : l, a.utm_medium = null !== (n = a.utm_medium) && void 0 !== n ? n : u, a.utm_campaign = null !== (i = a.utm_campaign) && void 0 !== i ? i : d, a.utm_content = null !== (r = a.utm_content) && void 0 !== r ? r : c, A.forEach(e => e(a)), a
+        return a.utm_source = null !== (t = a.utm_source) && void 0 !== t ? t : l, a.utm_medium = null !== (n = a.utm_medium) && void 0 !== n ? n : u, a.utm_campaign = null !== (i = a.utm_campaign) && void 0 !== i ? i : d, a.utm_content = null !== (r = a.utm_content) && void 0 !== r ? r : c, h.forEach(e => e(a)), a
     }
 
     function L(e, t) {

@@ -23,8 +23,8 @@ function(e, t, n) {
         T = n("788911"),
         f = n("40851"),
         S = n("29909"),
-        h = n("887208"),
-        A = n("132748"),
+        A = n("887208"),
+        h = n("132748"),
         m = n("981631"),
         N = n("689938"),
         O = n("533348");
@@ -218,7 +218,7 @@ function(e, t, n) {
                 className: O.emptyHint,
                 children: null != e ? (0, i.jsxs)("div", {
                     className: O.emptyHintCard,
-                    children: [t ? (0, i.jsx)(h.default, {
+                    children: [t ? (0, i.jsx)(A.default, {
                         className: O.emptyHintFavorite
                     }) : null, (0, i.jsx)("div", {
                         className: O.emptyHintText,
@@ -262,7 +262,7 @@ function(e, t, n) {
                 getCoordsMap: this.getCoordsMap,
                 onFocus: this.handleFocus,
                 onSelect: this.handleSelect,
-                children: (0, i.jsx)(A.default, {
+                children: (0, i.jsx)(h.default, {
                     desiredItemWidth: 200,
                     maxColumns: 8,
                     children: this.renderContent

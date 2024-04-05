@@ -21,20 +21,20 @@ function(e, t, n) {
     let f = function(e, t) {
         let f = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             S = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-            h = d.default.getChannel(e),
-            A = I.default.getCurrentClientVoiceChannelId(null != t ? t : null) === e,
-            m = null != h ? c.default.getCheck(h.guild_id) : null;
+            A = d.default.getChannel(e),
+            h = I.default.getCurrentClientVoiceChannelId(null != t ? t : null) === e,
+            m = null != A ? c.default.getCheck(A.guild_id) : null;
         if (!(null != t && (0, s.shouldShowMembershipVerificationGate)(t))) {
-            if (null == m || m.canChat || (0, a.canLurkerListen)(h)) {
-                if (null != h && !A) {
-                    let e = (0, T.isChannelFull)(h, I.default, _.default);
-                    if (e && h.isGuildStageVoice() && (0, o.getStageHasMedia)(h.id)) {
+            if (null == m || m.canChat || (0, a.canLurkerListen)(A)) {
+                if (null != A && !h) {
+                    let e = (0, T.isChannelFull)(A, I.default, _.default);
+                    if (e && A.isGuildStageVoice() && (0, o.getStageHasMedia)(A.id)) {
                         (0, i.openModalLazy)(async () => {
                             let {
                                 default: e
                             } = await Promise.all([n.e("99387"), n.e("43133")]).then(n.bind(n, "523794"));
                             return t => e({
-                                channel: h,
+                                channel: A,
                                 ...t
                             })
                         });

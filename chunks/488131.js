@@ -29,8 +29,8 @@ function(e, t, n) {
         T = n("703558"),
         f = n("944486"),
         S = n("979651"),
-        h = n("585483"),
-        A = n("124368"),
+        A = n("585483"),
+        h = n("124368"),
         m = n("981631"),
         N = n("176505");
 
@@ -46,8 +46,8 @@ function(e, t, n) {
         }
         r()(null != e.parent_id, "all threads must have parents");
         let s = f.default.getChannelId();
-        e.parent_id !== s && !(0, N.isGuildHomeChannel)(s) && (0, E.transitionToChannel)(e.parent_id), (0, c.transitionTo)(m.Routes.CHANNEL_THREAD_VIEW((0, _.getGuildIdForGenericRedirect)(e), (0, N.isGuildHomeChannel)(s) ? N.StaticChannelRoute.GUILD_HOME : e.parent_id, e.id), void 0, e.isForumPost() ? A.OpenThreadAnalyticsLocations.FORUM : void 0), setTimeout(() => {
-            h.ComponentDispatch.dispatch(m.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
+        e.parent_id !== s && !(0, N.isGuildHomeChannel)(s) && (0, E.transitionToChannel)(e.parent_id), (0, c.transitionTo)(m.Routes.CHANNEL_THREAD_VIEW((0, _.getGuildIdForGenericRedirect)(e), (0, N.isGuildHomeChannel)(s) ? N.StaticChannelRoute.GUILD_HOME : e.parent_id, e.id), void 0, e.isForumPost() ? h.OpenThreadAnalyticsLocations.FORUM : void 0), setTimeout(() => {
+            A.ComponentDispatch.dispatch(m.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
                 channelId: e.id
             })
         }, 0)

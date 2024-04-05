@@ -16,15 +16,15 @@ function(e, t, n) {
         T = n("672108"),
         f = n("689938"),
         S = n("698377"),
-        h = n("633353");
+        A = n("633353");
 
-    function A(e) {
+    function h(e) {
         let {
             text: t,
             language: r
         } = e, s = () => (0, i.jsx)("pre", {
             children: (0, i.jsx)("code", {
-                className: a()(h.scrollbarGhostHairline, S.codeView, "hljs"),
+                className: a()(A.scrollbarGhostHairline, S.codeView, "hljs"),
                 children: t
             })
         });
@@ -36,7 +36,7 @@ function(e, t, n) {
                 let n = e.highlight(r, t, !0);
                 return null == n ? s() : (0, i.jsx)("pre", {
                     children: (0, i.jsx)("code", {
-                        className: a()(h.scrollbarGhostHairline, S.codeView, "hljs", n.language),
+                        className: a()(A.scrollbarGhostHairline, S.codeView, "hljs", n.language),
                         dangerouslySetInnerHTML: {
                             __html: n.value
                         }
@@ -180,14 +180,14 @@ function(e, t, n) {
             setLanguage: _,
             bytesLeft: c,
             className: E
-        } = e, I = null == r ? void 0 : r.split("\n"), T = null !== (t = null == I ? void 0 : I.length) && void 0 !== t ? t : 0, h = s ? 100 : 6, R = 0 === c, C = "";
-        R && s && T > h ? C = "\n..." : !R && (C = "..."), "" !== C && (R ? C += " " + f.default.Messages.PREVIEW_LINES_LEFT.format({
-            lines: T - h
+        } = e, I = null == r ? void 0 : r.split("\n"), T = null !== (t = null == I ? void 0 : I.length) && void 0 !== t ? t : 0, A = s ? 100 : 6, R = 0 === c, C = "";
+        R && s && T > A ? C = "\n..." : !R && (C = "..."), "" !== C && (R ? C += " " + f.default.Messages.PREVIEW_LINES_LEFT.format({
+            lines: T - A
         }) : C += " " + f.default.Messages.PREVIEW_BYTES_LEFT.format({
             formattedBytes: (0, d.formatKbSize)(c)
         }));
-        let g = (null == I ? void 0 : I.slice(0, h).join("\n")) + C,
-            L = s || h < T;
+        let g = (null == I ? void 0 : I.slice(0, A).join("\n")) + C,
+            L = s || A < T;
         return (0, i.jsxs)("div", {
             className: a()(E, S.container),
             children: [(0, i.jsx)("div", {
@@ -196,7 +196,7 @@ function(e, t, n) {
                 }),
                 children: null == r ? (0, i.jsx)(l.Spinner, {
                     className: S.spinner
-                }) : (0, i.jsx)(A, {
+                }) : (0, i.jsx)(h, {
                     text: g,
                     language: u
                 })
@@ -249,7 +249,7 @@ function(e, t, n) {
                     className: S.modalTextContainer,
                     children: null == s ? (0, i.jsx)(l.Spinner, {
                         className: S.spinner
-                    }) : (0, i.jsx)(A, {
+                    }) : (0, i.jsx)(h, {
                         text: c,
                         language: u
                     })

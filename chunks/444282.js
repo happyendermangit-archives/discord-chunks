@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return h
+            return A
         }
     }), n("47120");
     var i = n("735250"),
@@ -21,12 +21,12 @@ function(e, t, n) {
         f = n("117168"),
         S = n("451328");
 
-    function h(e) {
+    function A(e) {
         let {
             channelId: t,
             option: n,
             keyboardModeEnabled: s
-        } = e, h = r.useRef(null), [A, m] = r.useState(!1), N = c.default.getUpload(t, n.name, _.DraftType.SlashCommand), O = r.useRef(null), p = r.useCallback(() => {
+        } = e, A = r.useRef(null), [h, m] = r.useState(!1), N = c.default.getUpload(t, n.name, _.DraftType.SlashCommand), O = r.useRef(null), p = r.useCallback(() => {
             m(!0)
         }, []), R = r.useCallback(() => {
             m(!1)
@@ -75,24 +75,24 @@ function(e, t, n) {
             onKeyDown: e => {
                 if (e.which === T.KeyboardKeys.ENTER) {
                     var t;
-                    e.preventDefault(), null === (t = h.current) || void 0 === t || t.activateUploadDialogue()
+                    e.preventDefault(), null === (t = A.current) || void 0 === t || t.activateUploadDialogue()
                 }
             },
             className: a()(f.emptyOption, {
-                [f.emptyOptionActive]: A
+                [f.emptyOptionActive]: h
             }),
             draftType: _.DraftType.SlashCommand,
             ref: O,
             children: [(0, i.jsx)("span", {
                 className: a()(f.optionName, {
-                    [f.optionNameActive]: A
+                    [f.optionNameActive]: h
                 }),
                 children: n.name
             }), (0, i.jsx)(o.Clickable, {
                 className: f.clickContainer,
                 onClick: () => {
                     var e;
-                    return null === (e = h.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
+                    return null === (e = A.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
                 },
                 children: (0, i.jsxs)("div", {
                     className: f.commandOptionContainer,
@@ -105,7 +105,7 @@ function(e, t, n) {
                         variant: "text-sm/normal",
                         children: "Drag and drop or click to upload file"
                     }), (0, i.jsx)(u.default, {
-                        ref: h,
+                        ref: A,
                         onChange: e => {
                             var i, r;
                             if (null != t && (null === (r = e.currentTarget) || void 0 === r ? void 0 : null === (i = r.files) || void 0 === i ? void 0 : i[0]) != null) {

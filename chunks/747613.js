@@ -16,13 +16,13 @@ function(e, t, n) {
         T = n("351773"),
         f = n("209613"),
         S = n("633302"),
-        h = n("153124"),
-        A = n("176354"),
+        A = n("153124"),
+        h = n("176354"),
         m = n("624138"),
         N = n("981631"),
         O = n("689938"),
         p = n("64421");
-    let R = (0, h.uid)(),
+    let R = (0, A.uid)(),
         C = _.default.convert.fromCodePoint("1f44f"),
         g = (0, m.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
         L = (0, m.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE),
@@ -33,7 +33,7 @@ function(e, t, n) {
                 onClick: r,
                 delay: s,
                 index: a
-            } = e, o = (0, d.useListItem)("item-".concat(a)), l = A.default.getURL(C + n), c = (0, u.useSpring)({
+            } = e, o = (0, d.useListItem)("item-".concat(a)), l = h.default.getURL(C + n), c = (0, u.useSpring)({
                 opacity: 1,
                 from: {
                     opacity: t ? 0 : 1
@@ -125,7 +125,7 @@ function(e, t, n) {
             selectedSurrogate: n,
             className: s,
             hasTabWrapper: a
-        } = e, o = A.default.getURL(C + n), [l, u] = r.useState(!1), d = (0, T.default)(null, () => u(!1)), _ = r.useRef(null);
+        } = e, o = h.default.getURL(C + n), [l, u] = r.useState(!1), d = (0, T.default)(null, () => u(!1)), _ = r.useRef(null);
         return (0, i.jsxs)("div", {
             ref: d,
             className: s,

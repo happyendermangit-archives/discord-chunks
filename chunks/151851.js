@@ -21,8 +21,8 @@ function(e, t, n) {
         T = n("679219"),
         f = n("835225"),
         S = n("939039"),
-        h = n("117795"),
-        A = n("358085"),
+        A = n("117795"),
+        h = n("358085"),
         m = n("792125"),
         N = n("998502"),
         O = n("689938"),
@@ -30,7 +30,7 @@ function(e, t, n) {
     let R = e => N.default.close(e),
         C = e => N.default.minimize(e),
         g = (e, t) => {
-            (0, A.isMac)() && !t.altKey ? N.default.fullscreen(e) : N.default.maximize(e)
+            (0, h.isMac)() && !t.altKey ? N.default.fullscreen(e) : N.default.maximize(e)
         },
         L = e => {
             let {
@@ -97,7 +97,7 @@ function(e, t, n) {
                         onClick: () => C(n),
                         "aria-label": O.default.Messages.TITLE_BAR_MINIMIZE_WINDOW,
                         tabIndex: -1,
-                        children: (0, i.jsx)(h.default, {
+                        children: (0, i.jsx)(A.default, {
                             color: "#975500"
                         })
                     }), (0, i.jsx)(o.Clickable, {
@@ -128,13 +128,13 @@ function(e, t, n) {
         } = e, u = (0, d.useAppContext)(), c = (0, a.useStateFromStores)([_.default], () => _.default.isFullscreenInContext(u)), E = (0, l.default)();
         if (c) return null;
         switch (n) {
-            case A.PlatformTypes.WINDOWS:
+            case h.PlatformTypes.WINDOWS:
                 return (0, i.jsx)(L, {
                     windowKey: r,
                     themeOverride: o,
                     hasOpenLayer: E
                 });
-            case A.PlatformTypes.OSX:
+            case h.PlatformTypes.OSX:
                 return (0, i.jsx)(D, {
                     focused: t,
                     windowKey: r,
