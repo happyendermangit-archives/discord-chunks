@@ -75,14 +75,13 @@ function(e, t, n) {
             let t = {};
             null != e && (!0 === e.noCache && (t.no_cache = !0), !0 === e.includeUnpublished && (t.include_unpublished = !0), null != e.countryCode && (t.country_code = e.countryCode), null !== e.paymentGateway && (t.payment_gateway = e.paymentGateway));
             try {
-                let n = await i.HTTP.get({
+                let e = await i.HTTP.get({
                     url: d.Endpoints.COLLECTIBLES_CATEGORIES,
                     query: t
                 });
                 r.default.dispatch({
                     type: "COLLECTIBLES_CATEGORIES_FETCH_SUCCESS",
-                    categories: n.body.map(o.default.fromServer),
-                    fetchedCountryCode: null == e ? void 0 : e.countryCode
+                    categories: e.body.map(o.default.fromServer)
                 })
             } catch (e) {
                 throw r.default.dispatch({
