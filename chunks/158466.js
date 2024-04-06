@@ -40,50 +40,55 @@ function(e, t, n) {
     }
 
     function l(e, t) {
-        var n, r, o, l, u, d, _, c, E, I, T, f, S, A;
-        let h = e.substreams.find(e => !e.isRTX && !e.isFlexFEC);
-        if (null == h) return;
-        let m = e.substreams.reduce((e, t) => e + s(t.rtpStats), 0),
-            N = e.substreams.reduce((e, t) => e + a(t.rtpStats), 0);
+        var n, r, o, l, u, d, _, c, E, I, T, f, S, A, h, m, N, O, p, R, C, g, L, D;
+        let v = e.substreams.find(e => !e.isRTX && !e.isFlexFEC);
+        if (null == v) return;
+        let M = e.substreams.reduce((e, t) => e + s(t.rtpStats), 0),
+            y = e.substreams.reduce((e, t) => e + a(t.rtpStats), 0);
         return {
             type: "video",
-            ssrc: h.ssrc,
-            sinkWant: (0, i.formatSinkWantStat)(t, h.ssrc, !0),
-            sinkWantAsInt: (0, i.formatSinkWantAsInt)(t, h.ssrc),
+            ssrc: v.ssrc,
+            sinkWant: (0, i.formatSinkWantStat)(t, v.ssrc, !0),
+            sinkWantAsInt: (0, i.formatSinkWantAsInt)(t, v.ssrc),
             codec: {
                 id: e.codecPayloadType,
                 name: e.codecName
             },
             keyFrameInterval: e.keyFrameInterval,
-            bytesSent: m,
-            packetsSent: N,
-            packetsLost: null !== (c = null === (n = h.rtcpStats) || void 0 === n ? void 0 : n.packetsLost) && void 0 !== c ? c : 0,
-            fractionLost: null !== (E = null === (r = h.rtcpStats) || void 0 === r ? void 0 : r.fractionLost) && void 0 !== E ? E : 0,
+            bytesSent: M,
+            packetsSent: y,
+            packetsLost: null !== (S = null === (n = v.rtcpStats) || void 0 === n ? void 0 : n.packetsLost) && void 0 !== S ? S : 0,
+            fractionLost: null !== (A = null === (r = v.rtcpStats) || void 0 === r ? void 0 : r.fractionLost) && void 0 !== A ? A : 0,
             bitrate: e.mediaBitrate,
             bitrateTarget: e.targetMediaBitrate,
             encoderImplementationName: e.encoderImplementationName,
             encodeUsage: e.encodeUsage,
             averageEncodeTime: e.avgEncodeTime,
             resolution: {
-                height: h.height,
-                width: h.width
+                height: v.height,
+                width: v.width
             },
-            framesSent: h.frameCounts.keyFrames + h.frameCounts.deltaFrames,
-            keyFramesEncoded: h.frameCounts.keyFrames,
+            framesSent: v.frameCounts.keyFrames + v.frameCounts.deltaFrames,
+            keyFramesEncoded: v.frameCounts.keyFrames,
             framesEncoded: e.framesEncoded,
             frameRateInput: e.inputFrameRate,
             frameRateEncode: e.encodeFrameRate,
-            firCount: null !== (I = null === (o = h.rtcpStats) || void 0 === o ? void 0 : o.firPackets) && void 0 !== I ? I : 0,
-            nackCount: null !== (T = null === (l = h.rtcpStats) || void 0 === l ? void 0 : l.nackPackets) && void 0 !== T ? T : 0,
-            pliCount: null !== (f = null === (u = h.rtcpStats) || void 0 === u ? void 0 : u.pliPackets) && void 0 !== f ? f : 0,
+            firCount: null !== (h = null === (o = v.rtcpStats) || void 0 === o ? void 0 : o.firPackets) && void 0 !== h ? h : 0,
+            nackCount: null !== (m = null === (l = v.rtcpStats) || void 0 === l ? void 0 : l.nackPackets) && void 0 !== m ? m : 0,
+            pliCount: null !== (N = null === (u = v.rtcpStats) || void 0 === u ? void 0 : u.pliPackets) && void 0 !== N ? N : 0,
             qpSum: e.qpSum,
             bandwidthLimitedResolution: e.bwLimitedResolution,
             framesDroppedRateLimiter: e.framesDroppedRateLimiter,
             framesDroppedEncoderQueue: e.framesDroppedEncoderQueue,
             framesDroppedCongestionWindow: e.framesDroppedCongestionWindow,
             cpuLimitedResolution: e.cpuLimitedResolution,
-            encoderQualityVmaf: null !== (S = null === (d = h.encoderQualityStats) || void 0 === d ? void 0 : d.imageQualityVmaf_v061) && void 0 !== S ? S : void 0,
-            encoderQualityPsnr: null !== (A = null === (_ = h.encoderQualityStats) || void 0 === _ ? void 0 : _.imageQualityWebrtcPsnrDb) && void 0 !== A ? A : void 0,
+            encoderQualityVmaf: null !== (O = null === (d = v.encoderQualityStats) || void 0 === d ? void 0 : d.imageQualityVmaf_v061) && void 0 !== O ? O : void 0,
+            encoderQualityPsnr: null !== (p = null === (_ = v.encoderQualityStats) || void 0 === _ ? void 0 : _.imageQualityWebrtcPsnrDb) && void 0 !== p ? p : void 0,
+            qualityDecodeErrors: null !== (R = null === (c = v.encoderQualityStats) || void 0 === c ? void 0 : c.decodeErrors) && void 0 !== R ? R : void 0,
+            qualityDecoderReboots: null !== (C = null === (E = v.encoderQualityStats) || void 0 === E ? void 0 : E.decoderReboots) && void 0 !== C ? C : void 0,
+            qualityScoreErrors: null !== (g = null === (I = v.encoderQualityStats) || void 0 === I ? void 0 : I.scoreErrors) && void 0 !== g ? g : void 0,
+            qualityFrameDrops: null !== (L = null === (T = v.encoderQualityStats) || void 0 === T ? void 0 : T.frameDrops) && void 0 !== L ? L : void 0,
+            qualitySizeMismatches: null !== (D = null === (f = v.encoderQualityStats) || void 0 === f ? void 0 : f.sizeMismatches) && void 0 !== D ? D : void 0,
             filter: e.filter,
             passthroughCount: e.passthroughCount,
             encryptSuccessCount: e.encryptSuccessCount,
