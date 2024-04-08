@@ -38,10 +38,10 @@ function(e, t, n) {
             return k
         },
         DESKTOP_BITRATE: function() {
-            return $
+            return ee
         },
         DESKTOP_BITRATE_ENHANCED: function() {
-            return ee
+            return et
         },
         DISABLED_DEVICE_ID: function() {
             return Y
@@ -62,7 +62,7 @@ function(e, t, n) {
             return O
         },
         MEDIA_SINK_WANTS_PROPERTIES: function() {
-            return et
+            return en
         },
         MediaEngineContextTypes: function() {
             return m
@@ -88,6 +88,9 @@ function(e, t, n) {
         StatsFilter: function() {
             return R
         },
+        VIDEO_CAPTURE_FRAMERATE: function() {
+            return $
+        },
         VIDEO_QUALITY_FRAMERATE: function() {
             return q
         },
@@ -101,7 +104,7 @@ function(e, t, n) {
             return Q
         },
         VIEWERSIDE_CLIP_KFI_MS: function() {
-            return ei
+            return er
         },
         VideoQualityMode: function() {
             return G
@@ -110,7 +113,7 @@ function(e, t, n) {
             return C
         },
         defaultVideoQualityOptions: function() {
-            return en
+            return ei
         }
     });
     var i, r, s, a, o, l, u, d, _, c, E, I, T, f, S, A, h, m, N, O, p, R, C, g, L, D, v, M, y, P, U, b, G, w, B = n("268146");
@@ -130,19 +133,20 @@ function(e, t, n) {
         q = 30,
         J = 20,
         Z = 12,
-        $ = 4e6,
-        ee = 8e6,
-        et = ["remoteSinkWantsPixelCount", "remoteSinkWantsMaxFramerate", "encodingVideoMinBitRate", "encodingVideoMaxBitRate", "encodingVideoBitRate", "streamParameters"],
-        en = {
+        $ = 60,
+        ee = 4e6,
+        et = 8e6,
+        en = ["remoteSinkWantsPixelCount", "remoteSinkWantsMaxFramerate", "encodingVideoMinBitRate", "encodingVideoMaxBitRate", "encodingVideoBitRate", "streamParameters"],
+        ei = {
             videoBudget: {
                 width: 1280,
                 height: 720,
-                framerate: q
+                framerate: 30
             },
             videoCapture: {
                 width: 1280,
                 height: 720,
-                framerate: 30
+                framerate: 60
             },
             videoBitrate: {
                 min: 15e4,
@@ -155,6 +159,6 @@ function(e, t, n) {
             },
             videoBitrateFloor: 15e4
         },
-        ei = 6e4;
+        er = 6e4;
     (u = g || (g = {})).AUTO_ENABLE = "AUTO_ENABLE", u.ATTENUATION = "ATTENUATION", u.AUDIO_INPUT_DEVICE = "AUDIO_INPUT_DEVICE", u.AUDIO_OUTPUT_DEVICE = "AUDIO_OUTPUT_DEVICE", u.VOICE_PROCESSING = "VOICE_PROCESSING", u.QOS = "QOS", u.NATIVE_PING = "NATIVE_PING", u.LEGACY_AUDIO_SUBSYSTEM = "LEGACY_AUDIO_SUBSYSTEM", u.EXPERIMENTAL_AUDIO_SUBSYSTEM = "EXPERIMENTAL_AUDIO_SUBSYSTEM", u.DEBUG_LOGGING = "DEBUG_LOGGING", u.AUTOMATIC_VAD = "AUTOMATIC_VAD", u.VOICE_PANNING = "VOICE_PANNING", u.DIAGNOSTICS = "DIAGNOSTICS", u.VIDEO = "VIDEO", u.DESKTOP_CAPTURE = "DESKTOP_CAPTURE", u.DESKTOP_CAPTURE_FORMAT = "DESKTOP_CAPTURE_FORMAT", u.DESKTOP_CAPTURE_APPLICATIONS = "DESKTOP_CAPTURE_APPLICATIONS", u.SOUNDSHARE = "SOUNDSHARE", u.LOOPBACK = "LOOPBACK", u.VIDEO_HOOK = "VIDEO_HOOK", u.EXPERIMENTAL_SOUNDSHARE = "EXPERIMENTAL_SOUNDSHARE", u.WUMPUS_VIDEO = "WUMPUS_VIDEO", u.ELEVATED_HOOK = "ELEVATED_HOOK", u.HYBRID_VIDEO = "HYBRID_VIDEO", u.OPEN_H264 = "OPEN_H264", u.EXPERIMENTAL_ENCODERS = "EXPERIMENTAL_ENCODERS", u.REMOTE_LOCUS_NETWORK_CONTROL = "REMOTE_LOCUS_NETWORK_CONTROL", u.SCREEN_PREVIEWS = "SCREEN_PREVIEWS", u.WINDOW_PREVIEWS = "WINDOW_PREVIEWS", u.AUDIO_DEBUG_STATE = "AUDIO_DEBUG_STATE", u.AEC_DUMP = "AEC_DUMP", u.DISABLE_VIDEO = "DISABLE_VIDEO", u.CONNECTION_REPLAY = "CONNECTION_REPLAY", u.SIMULCAST = "SIMULCAST", u.RTC_REGION_RANKING = "RTC_REGION_RANKING", u.DIRECT_VIDEO = "DIRECT_VIDEO", u.ELECTRON_VIDEO = "ELECTRON_VIDEO", u.MEDIAPIPE = "MEDIAPIPE", u.FIXED_KEYFRAME_INTERVAL = "FIXED_KEYFRAME_INTERVAL", u.SAMPLE_PLAYBACK = "SAMPLE_PLAYBACK", u.FIRST_FRAME_CALLBACK = "FIRST_FRAME_CALLBACK", u.REMOTE_USER_MULTI_STREAM = "REMOTE_USER_MULTI_STREAM", u.NOISE_SUPPRESSION = "NOISE_SUPPRESSION", u.NOISE_CANCELLATION = "NOISE_CANCELLATION", u.AUTOMATIC_GAIN_CONTROL = "AUTOMATIC_GAIN_CONTROL", u.CLIPS = "CLIPS", u.SPEED_TEST = "SPEED_TEST", u.IMAGE_QUALITY_MEASUREMENT = "IMAGE_QUALITY_MEASUREMENT", u.AMD_EXPERIMENTAL_RATE_CONTROL = "AMD_EXPERIMENTAL_RATE_CONTROL", u.GO_LIVE_HARDWARE = "GO_LIVE_HARDWARE", u.SCREEN_CAPTURE_KIT = "SCREEN_CAPTURE_KIT", u.CAPTURE_TIMEOUT_EXPERIMENTS = "CAPTURE_TIMEOUT_EXPERIMENTS", u.SCREEN_SOUNDSHARE = "SCREEN_SOUNDSHARE", (d = L || (L = {})).NATIVE = "NATIVE", d.WEBRTC = "WEBRTC", d.DUMMY = "DUMMY", (_ = D || (D = {})).LEGACY = "legacy", _.STANDARD = "standard", _.EXPERIMENTAL = "experimental", (c = v || (v = {})).OPUS = "opus", c.VP8 = "VP8", c.VP9 = "VP9", c.H264 = "H264", c.RTX = "rtx", c.TEST = "TEST", (E = M || (M = {}))[E.NONE = 0] = "NONE", E[E.VOICE = 1] = "VOICE", E[E.SOUNDSHARE = 2] = "SOUNDSHARE", E[E.PRIORITY = 4] = "PRIORITY", (I = y || (y = {})).AUDIO = "audio", I.VIDEO = "video", I.SCREEN = "screen", I.TEST = "test", (T = P || (P = {})).PLAYING = "playing", T.PAUSED = "paused", (f = U || (U = {})).FIXED = "fixed", f.SOURCE = "source", (S = b || (b = {})).VIDEOTOOLBOX_RATE_CONTROL = "videotoolbox_rate_control", S.SIGNAL_H265_SUPPORT = "signal_h265_support", S.SIGNAL_H265_DECODE_SUPPORT = "signal_h265_decode_support", S.SIGNAL_AV1_SUPPORT = "signal_av1_support", S.STREAMER_CLIP = "streamer_clip", S.VIEWER_CLIP = "viewer_clip", S.MUTE_BEFORE_PROCESSING = "mute_before_processing", S.PTT_BEFORE_PROCESSING = "ptt_before_processing", S.SKIP_ENCODE = "skip_encode", (A = G || (G = {}))[A.AUTO = 1] = "AUTO", A[A.FULL = 2] = "FULL", (h = w || (w = {}))[h.CPU_OVERUSE = 1] = "CPU_OVERUSE", h[h.FAILED = 2] = "FAILED", h[h.VAD_CPU_OVERUSE = 3] = "VAD_CPU_OVERUSE", h[h.INITIALIZED = 4] = "INITIALIZED"
 }
