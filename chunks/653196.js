@@ -22,7 +22,7 @@ function(e) {
         previousButton: "previousButton_b43130",
         progressContainer: "progressContainer__378bd",
         progressStep: "progressStep_dec95e",
-        progressStepFilled: "progressStepFilled_c8bf61",
+        progressStepFill: "progressStepFill__47c59",
         scrollBg: "scrollBg_b81d25",
         scrollBgBottom: "scrollBgBottom__10a36",
         scrollBgTop: "scrollBgTop_e0da83",
