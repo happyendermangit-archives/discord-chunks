@@ -1,4 +1,4 @@
 function(e, t, n) {
     "use strict";
-    e.exports = n.p + "a21884fee99fbf75878c.woff2"
+    e.exports = n.p + "5b973e10f95c0c47779a.woff2"
 }
