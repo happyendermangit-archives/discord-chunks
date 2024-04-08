@@ -26,7 +26,7 @@ function(e, t, n) {
                 i.default.subscribe("UPLOAD_COMPLETE", r), i.default.subscribe("UPLOAD_FAIL", r)
             })
         },
-        E = function(e, t) {
+        E = async function(e, t) {
             var i;
             let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                 a = arguments.length > 3 ? arguments[3] : void 0,
@@ -37,7 +37,7 @@ function(e, t, n) {
                 if (null == u.default.getChannel(t)) throw Error("AtomicReactor sendUtils: Couldn't resolve channel with id ".concat(t));
                 {
                     let i = n("966390").default;
-                    e.description = a, i.uploadFiles({
+                    e.description = a, await i.uploadFiles({
                         channelId: t,
                         uploads: [e],
                         draftType: d.DraftType.ChannelMessage,
@@ -45,8 +45,7 @@ function(e, t, n) {
                     })
                 }
             }
-        },
-        I = async e => {
+        }, I = async e => {
             let {
                 file: t,
                 reaction: n,
@@ -60,14 +59,14 @@ function(e, t, n) {
                 let e = (0, o.toReactionEmoji)(n);
                 await (0, a.addReaction)(u, d.id, e)
             }
-        }, T = async e => {
+        }, T = e => {
             let {
                 file: t,
                 reply: n,
-                user: i,
-                altText: a,
-                requireConfirmation: o = !1
-            } = e, l = await r.default.openPrivateChannel(i.id, !1, !1), d = u.default.getChannel(l);
-            E(t, l, o, a, s.default.parse(d, n))
+                channel: i,
+                altText: r,
+                requireConfirmation: a = !1
+            } = e, o = s.default.parse(i, n);
+            return E(t, i.id, a, r, o)
         }
 }
