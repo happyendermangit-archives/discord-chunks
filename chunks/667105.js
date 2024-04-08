@@ -2,34 +2,36 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useHandleClaimQuestsReward: function() {
-            return o
+            return u
         }
     });
     var i = n("735250"),
         r = n("470079"),
         s = n("481060"),
-        a = n("617136");
+        a = n("617136"),
+        o = n("918701"),
+        l = n("920916");
 
-    function o(e) {
+    function u(e) {
         let {
             quest: t,
-            location: o
-        } = e;
+            location: u
+        } = e, d = (0, l.useCollectibleRewardModal)(t, u);
         return r.useCallback(() => {
             null != t && ((0, a.trackQuestContentClicked)({
                 questId: t.id,
-                questContent: o,
+                questContent: u,
                 questContentCTA: a.QuestContentCTA.CLAIM_REWARD
-            }), (0, s.openModalLazy)(async () => {
+            }), (0, o.hasQuestCollectibleRewards)(t.config) ? d() : (0, s.openModalLazy)(async () => {
                 let {
                     default: e
                 } = await Promise.all([n.e("49237"), n.e("99387"), n.e("61624")]).then(n.bind(n, "985866"));
                 return n => (0, i.jsx)(e, {
                     ...n,
                     quest: t,
-                    location: o
+                    location: u
                 })
             }))
-        }, [t, o])
+        }, [t, u, d])
     }
 }
