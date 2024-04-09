@@ -5,7 +5,7 @@ function(e, t, n) {
             return i
         },
         default: function() {
-            return v
+            return g
         }
     }), n("653041");
     var i, r, s = n("735250");
@@ -18,71 +18,58 @@ function(e, t, n) {
         _ = n("100527"),
         c = n("906732"),
         E = n("688465"),
-        I = n("246208"),
-        T = n("617136"),
-        f = n("497505"),
-        S = n("626135"),
-        A = n("785717"),
+        I = n("617136"),
+        T = n("497505"),
+        f = n("626135"),
+        S = n("785717"),
         h = n("221292"),
-        m = n("290421"),
-        N = n("318661"),
-        O = n("228168"),
-        p = n("981631"),
-        R = n("232700"),
-        C = n("689938"),
-        g = n("649570"),
-        L = n("839973"),
-        D = n("124901");
+        A = n("290421"),
+        m = n("318661"),
+        N = n("228168"),
+        O = n("981631"),
+        p = n("689938"),
+        R = n("649570"),
+        C = n("839973");
 
-    function v(e) {
-        var t;
+    function g(e) {
         let {
-            user: n,
-            guildId: i,
-            className: r,
-            shrinkAtCount: a,
-            shrinkToSize: v,
-            isTryItOutFlow: M,
-            size: y = 0
-        } = e, P = (0, N.default)(n.id, i), {
-            analyticsLocations: U
+            user: t,
+            guildId: n,
+            className: i,
+            shrinkAtCount: r,
+            shrinkToSize: a,
+            isTryItOutFlow: g,
+            size: L = 0
+        } = e, D = (0, m.default)(t.id, n), {
+            analyticsLocations: v
         } = (0, c.default)(_.default.BADGE), {
-            trackUserProfileAction: b,
-            ...G
-        } = (0, A.useUserProfileAnalyticsContext)(), {
-            allowOpeningLootboxes: w
-        } = I.default.useExperiment({
-            location: "user_profile"
-        }), B = (0, m.default)(P).map(e => ({
+            trackUserProfileAction: M,
+            ...y
+        } = (0, S.useUserProfileAnalyticsContext)(), P = (0, A.default)(D).map(e => ({
             ...e,
-            src: (0, O.getBadgeAsset)(e.icon)
-        })), k = (0, d.useWindowDispatch)();
-        if (n.isClyde()) return (0, s.jsx)("div", {
-            className: o()(r, g.container, g.clydeBadgeList),
-            "aria-label": C.default.Messages.PROFILE_USER_BADGES,
+            src: (0, N.getBadgeAsset)(e.icon)
+        })), U = (0, d.useWindowDispatch)();
+        if (t.isClyde()) return (0, s.jsx)("div", {
+            className: o()(i, R.container, R.clydeBadgeList),
+            "aria-label": p.default.Messages.PROFILE_USER_BADGES,
             role: "group",
             children: (0, s.jsx)(E.default, {})
         });
-        M && null == B.find(e => "premium" === e.id) && B.push({
+        g && null == P.find(e => "premium" === e.id) && P.push({
             id: "premium",
-            src: L,
-            description: C.default.Messages.PREMIUM_BADGE_TOOLTIP.format({
+            src: C,
+            description: p.default.Messages.PREMIUM_BADGE_TOOLTIP.format({
                 date: new Date
             })
-        }), w && (null === (t = n.avatarDecoration) || void 0 === t ? void 0 : t.skuId) === R.LOOTBOX_PRIZE_SKU_ID && B.push({
-            id: "lootboxes",
-            src: D,
-            description: C.default.Messages.PACKAGES_BADGE,
-            link: "https://discord.com" + p.Routes.SETTINGS(p.UserSettingsSections.LOOTBOXES)
         });
-        let V = null != a && null != v && B.length > a ? v : y;
+        let b = null != r && null != a && P.length > r ? a : L;
         return (0, s.jsx)(c.AnalyticsLocationProvider, {
-            value: U,
+            value: v,
             children: (0, s.jsx)("div", {
-                className: o()(r, B.length > 0 ? g.containerWithContent : g.container),
-                "aria-label": C.default.Messages.PROFILE_USER_BADGES,
+                className: o()(i, P.length > 0 ? R.containerWithContent : R.container),
+                "aria-label": p.default.Messages.PROFILE_USER_BADGES,
                 role: "group",
-                children: B.map(e => (0, s.jsx)(l.Tooltip, {
+                children: P.map(e => (0, s.jsx)(l.Tooltip, {
                     position: "top",
                     text: e.description,
                     spacing: 12,
@@ -90,26 +77,26 @@ function(e, t, n) {
                         ...t,
                         onClick: n => {
                             var i;
-                            b({
+                            M({
                                 action: "PRESS_BADGE"
                             }), (0, h.trackUserProfileBadgePressed)({
                                 badge: e.id,
-                                analyticsLocations: U,
-                                ...G
+                                analyticsLocations: v,
+                                ...y
                             }), null === (i = t.onClick) || void 0 === i || i.call(t);
                             let r = null != e.link ? (0, u.default)(e.link, {
-                                analyticsLocations: U
+                                analyticsLocations: v
                             }) : null;
-                            if (null != r) return k.dispatch(p.ComponentActions.POPOUT_CLOSE), r(n)
+                            if (null != r) return U.dispatch(O.ComponentActions.POPOUT_CLOSE), r(n)
                         },
                         onMouseEnter: () => {
                             var n;
-                            e.id === m.QUEST_COMPLETED_BADGE && (S.default.track(p.AnalyticEvents.QUEST_CONTENT_VIEWED, {
-                                ...(0, T.getContentProperties)(f.QuestContent.QUEST_BADGE)
+                            e.id === A.QUEST_COMPLETED_BADGE && (f.default.track(O.AnalyticEvents.QUEST_CONTENT_VIEWED, {
+                                ...(0, I.getContentProperties)(T.QuestContent.QUEST_BADGE)
                             }), (0, h.trackUserProfileBadgeHovered)({
                                 badge: e.id,
-                                analyticsLocations: U,
-                                ...G
+                                analyticsLocations: v,
+                                ...y
                             })), null === (n = t.onMouseEnter) || void 0 === n || n.call(t)
                         },
                         href: e.link,
@@ -118,10 +105,10 @@ function(e, t, n) {
                             "aria-hidden": !0,
                             src: e.src,
                             className: o()({
-                                [g.profileBadge24]: 0 === V,
-                                [g.profileBadge22]: 1 === V,
-                                [g.profileBadge20]: 2 === V,
-                                [g.profileBadge18]: 3 === V
+                                [R.profileBadge24]: 0 === b,
+                                [R.profileBadge22]: 1 === b,
+                                [R.profileBadge20]: 2 === b,
+                                [R.profileBadge18]: 3 === b
                             })
                         })
                     })

@@ -20,8 +20,8 @@ function(e, t, n) {
         T = n("998502"),
         f = n("981631"),
         S = n("689938"),
-        A = n("294575"),
-        h = n("794711");
+        h = n("294575"),
+        A = n("794711");
 
     function m(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
@@ -63,8 +63,8 @@ function(e, t, n) {
         return (0, i.jsx)("img", {
             ref: T,
             src: u,
-            className: a()(A.icon, {
-                [A.image]: !_
+            className: a()(h.icon, {
+                [h.image]: !_
             }),
             "aria-hidden": !0,
             alt: "",
@@ -85,8 +85,8 @@ function(e, t, n) {
                 file: this.props.upload.item.file
             });
             return (0, i.jsx)("div", {
-                className: a()(A.icon, {
-                    [A[null !== (e = this.props.upload.classification) && void 0 !== e ? e : ""]]: !0
+                className: a()(h.icon, {
+                    [h[null !== (e = this.props.upload.classification) && void 0 !== e ? e : ""]]: !0
                 })
             })
         }
@@ -121,37 +121,37 @@ function(e, t, n) {
                 "aria-label": S.default.Messages.ATTACH_FILES,
                 size: o.ModalSize.DYNAMIC,
                 transitionState: t,
-                className: a()(A.uploadModal),
+                className: a()(h.uploadModal),
                 children: [(0, i.jsxs)("div", {
-                    className: A.inner,
+                    className: h.inner,
                     children: [(0, i.jsxs)("div", {
-                        className: a()(A.file, {
-                            [A.expandable]: e.isImage
+                        className: a()(h.file, {
+                            [h.expandable]: e.isImage
                         }),
                         children: [(0, i.jsx)(O, {
                             upload: e
                         }), (0, i.jsxs)("div", {
-                            className: A.description,
+                            className: h.description,
                             children: [(0, i.jsx)("div", {
-                                className: A.filename,
+                                className: h.filename,
                                 children: e.showLargeMessageDialog ? S.default.Messages.LARGE_MESSAGE_UPLOAD_TITLE_MAX_LENGTH.format({
                                     maxLength: n
                                 }) : e.filename
                             }), e.showLargeMessageDialog ? (0, i.jsx)("div", {
-                                className: A.subtitle,
+                                className: h.subtitle,
                                 children: S.default.Messages.LARGE_MESSAGE_UPLOAD_SUBTITLE
                             }) : null]
                         })]
                     }), (0, i.jsx)("div", {
-                        className: A.comment,
+                        className: h.comment,
                         children: (0, i.jsxs)(r.Fragment, {
                             children: [(0, i.jsx)("div", {
-                                className: A.label,
+                                className: h.label,
                                 children: (0, i.jsx)("span", {
                                     children: S.default.Messages.UPLOAD_AREA_FILENAME
                                 })
                             }), (0, i.jsx)(o.TextInput, {
-                                className: a()(A.channelTextAreaUpload, h.marginTop8),
+                                className: a()(h.channelTextAreaUpload, A.marginTop8),
                                 value: this.state.filename,
                                 onChange: e => this.setState({
                                     filename: e
@@ -161,12 +161,12 @@ function(e, t, n) {
                                 }
                             }), e.isImage ? (0, i.jsxs)(r.Fragment, {
                                 children: [(0, i.jsx)("div", {
-                                    className: A.label,
+                                    className: h.label,
                                     children: (0, i.jsx)("span", {
                                         children: S.default.Messages.ATTACHMENT_MODAL_IMAGE_DESCRIPTION_LABEL
                                     })
                                 }), (0, i.jsx)(o.TextInput, {
-                                    className: a()(A.channelTextAreaUpload, h.marginTop8),
+                                    className: a()(h.channelTextAreaUpload, A.marginTop8),
                                     placeholder: S.default.Messages.ATTACHMENT_MODAL_IMAGE_DESCRIPTION_PLACEHOLDER,
                                     value: this.state.description,
                                     onChange: e => this.setState({
@@ -177,7 +177,7 @@ function(e, t, n) {
                                     }
                                 })]
                             }) : null, !0 !== s && (0, i.jsx)(o.Checkbox, {
-                                className: h.marginBottom20,
+                                className: A.marginBottom20,
                                 value: l,
                                 onChange: (e, t) => this.setState({
                                     hasSpoiler: t
@@ -190,9 +190,9 @@ function(e, t, n) {
                         })
                     })]
                 }), (0, i.jsx)("div", {
-                    className: A.footer,
+                    className: h.footer,
                     children: (0, i.jsxs)("div", {
-                        className: a()(A.hasSpoilers, A.footerRightAlign),
+                        className: a()(h.hasSpoilers, h.footerRightAlign),
                         children: [(0, i.jsx)(o.Button, {
                             type: "button",
                             look: o.Button.Looks.LINK,

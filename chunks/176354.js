@@ -27,13 +27,13 @@ function(e, t, n) {
         f = new Set([I.EmojiDisabledReasons.PREMIUM_LOCKED, I.EmojiDisabledReasons.GUILD_SUBSCRIPTION_UNAVAILABLE, I.EmojiDisabledReasons.ROLE_SUBSCRIPTION_LOCKED, I.EmojiDisabledReasons.ROLE_SUBSCRIPTION_UNAVAILABLE]),
         S = new Set([I.EmojiDisabledReasons.DISALLOW_EXTERNAL, I.EmojiDisabledReasons.GUILD_SUBSCRIPTION_UNAVAILABLE, I.EmojiDisabledReasons.ONLY_GUILD_EMOJIS_ALLOWED]);
 
-    function A(e) {
+    function h(e) {
         if (e.type === r.EmojiTypes.GUILD) return !0;
         return null != e.guildId
     }
 
-    function h(e, t) {
-        return null != e && null != t && (!A(e) || t === e.guildId)
+    function A(e, t) {
+        return null != e && null != t && (!h(e) || t === e.guildId)
     }
 
     function m(e) {
@@ -45,14 +45,14 @@ function(e, t, n) {
             forceIncludeExternalGuilds: d
         } = e;
         if (u === I.EmojiIntention.COMMUNITY_CONTENT_ONLY && null == n.guildId) return I.EmojiDisabledReasons.ONLY_GUILD_EMOJIS_ALLOWED;
-        if (!A(n)) return null;
+        if (!h(n)) return null;
         let _ = null !== (t = e.guildId) && void 0 !== t ? t : null == r ? void 0 : r.getGuildId(),
             T = null != r && (0, a.isGuildTextChannelType)(r.type),
             f = null != r && (0, a.isGuildVocalChannelType)(r.type),
-            S = h(n, _),
+            S = A(n, _),
             m = o.default.can(E.Permissions.USE_EXTERNAL_EMOJIS, r);
         if (u === I.EmojiIntention.COMMUNITY_CONTENT || u === I.EmojiIntention.COMMUNITY_CONTENT_ONLY) return S && n.available ? null : I.EmojiDisabledReasons.DISALLOW_EXTERNAL;
-        if (!(0, I.isExternalEmojiAllowedForIntention)(u) && !h(n, _) && !d || (T || f) && !S && !m) return I.EmojiDisabledReasons.DISALLOW_EXTERNAL;
+        if (!(0, I.isExternalEmojiAllowedForIntention)(u) && !A(n, _) && !d || (T || f) && !S && !m) return I.EmojiDisabledReasons.DISALLOW_EXTERNAL;
         if (!n.available) return I.EmojiDisabledReasons.GUILD_SUBSCRIPTION_UNAVAILABLE;
         let N = l.default.getCurrentUser();
         if (!c.default.canUseEmojisEverywhere(N) && !S) {
@@ -105,9 +105,9 @@ function(e, t, n) {
         },
         filterUnsupportedEmojis: d.default.filterUnsupportedEmojis,
         getURL: d.default.getURL,
-        isInternalEmojiForGuildId: h,
+        isInternalEmojiForGuildId: A,
         getEmojiUnavailableReason: m,
-        isCustomEmoji: A,
+        isCustomEmoji: h,
         isEmojiFiltered(e) {
             let {
                 emoji: t,

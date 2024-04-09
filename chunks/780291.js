@@ -28,12 +28,12 @@ function(e, t, n) {
         }), f = (0, _.default)(), S = (0, s.useStateFromStores)([u.default, o.default, l.default], () => {
             var e;
             return u.default.isComboing(o.default.getId(), null !== (e = l.default.getChannelId()) && void 0 !== e ? e : E.EMPTY_STRING_SNOWFLAKE_ID)
-        }), A = null !== (t = null == T ? void 0 : T.left) && void 0 !== t ? t : 0, h = (null !== (n = null == T ? void 0 : T.top) && void 0 !== n ? n : 0) - 16, m = r.useMemo(() => .05 > Math.random(), [0 === d.length]);
+        }), h = null !== (t = null == T ? void 0 : T.left) && void 0 !== t ? t : 0, A = (null !== (n = null == T ? void 0 : T.top) && void 0 !== n ? n : 0) - 16, m = r.useMemo(() => .05 > Math.random(), [0 === d.length]);
         return r.useEffect(() => {
-            0 !== d.length && d !== c.current && S && (f.fire(A, h, m ? {
+            0 !== d.length && d !== c.current && S && (f.fire(h, A, m ? {
                 sprite: I.DUCK_CONFETTI_SPRITE
             } : null), c.current = d)
-        }, [d, S, A, h, m, f]), null
+        }, [d, S, h, A, m, f]), null
     }
 
     function f(e) {

@@ -49,8 +49,8 @@ function(e, t, n) {
             icon: o,
             children: f,
             onClick: S,
-            isActive: A,
-            onMouseEnter: h,
+            isActive: h,
+            onMouseEnter: A,
             onMouseLeave: m,
             onFocus: N,
             onBlur: O,
@@ -90,13 +90,13 @@ function(e, t, n) {
             "aria-controls": v,
             disabled: n,
             className: l()(t, {
-                [I.active]: A
+                [I.active]: h
             }),
             innerClassName: l()(I.button, i, {
                 [I.pulseButton]: p
             }),
             onClick: S,
-            onMouseEnter: h,
+            onMouseEnter: A,
             onMouseLeave: m,
             onFocus: N,
             onBlur: O,

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     let i, r, s, a, o, l, u, d, _, c, E, I, T, f;
     n.r(t);
-    var S, A, h, m, N = n("979554"),
+    var S, h, A, m, N = n("979554"),
         O = n("442837"),
         p = n("570140"),
         R = n("981631");
@@ -111,12 +111,12 @@ function(e, t, n) {
             return L
         }
     }
-    h = "UserSettingsAccountStore", (A = "displayName") in(S = b) ? Object.defineProperty(S, A, {
-        value: h,
+    A = "UserSettingsAccountStore", (h = "displayName") in(S = b) ? Object.defineProperty(S, h, {
+        value: A,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : S[A] = h, t.default = new b(p.default, {
+    }) : S[h] = A, t.default = new b(p.default, {
         USER_SETTINGS_ACCOUNT_INIT: D,
         USER_SETTINGS_MODAL_INIT: D,
         USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: D,

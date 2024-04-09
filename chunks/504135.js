@@ -26,8 +26,8 @@ function(e, t, n) {
             showIconFirst: T = !1,
             imageUrl: f,
             hint: S,
-            subtext: A,
-            hasSubmenu: h,
+            subtext: h,
+            hasSubmenu: A,
             disabled: m,
             isFocused: N,
             menuItemProps: O,
@@ -67,9 +67,9 @@ function(e, t, n) {
                 })
             }), (0, i.jsxs)("div", {
                 className: I.label,
-                children: [(0, l.renderSubnode)(n, e), null != A && (0, i.jsx)("div", {
+                children: [(0, l.renderSubnode)(n, e), null != h && (0, i.jsx)("div", {
                     className: I.subtext,
-                    children: A
+                    children: h
                 })]
             }), null != S && (0, i.jsx)("div", {
                 className: I.hintContainer,
@@ -88,7 +88,7 @@ function(e, t, n) {
                     src: (0, l.renderSubnode)(f, e),
                     alt: ""
                 })
-            }), h && (0, i.jsxs)("div", {
+            }), A && (0, i.jsxs)("div", {
                 className: I.iconContainer,
                 children: [(0, i.jsx)(c.default, {
                     className: a()(I.caret, D)

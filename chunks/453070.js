@@ -47,8 +47,8 @@ function(e, t, n) {
         T = n("268350"),
         f = n("822179"),
         S = n("926491"),
-        A = n("373228"),
-        h = n("378233"),
+        h = n("373228"),
+        A = n("378233"),
         m = n("981631"),
         N = n("689938");
     let O = e => {
@@ -60,7 +60,7 @@ function(e, t, n) {
         },
         p = e => {
             let t = a.AnimateStickers.useSetting();
-            return (0, h.shouldAnimateSticker)(t, e)
+            return (0, A.shouldAnimateSticker)(t, e)
         },
         R = e => {
             let {
@@ -84,13 +84,13 @@ function(e, t, n) {
                 if (0 !== a) {
                     let i = function(t, n) {
                         let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                            r = (0, h.isGuildSticker)(t[0]) ? l.default.getGuild(t[0].guild_id) : void 0,
+                            r = (0, A.isGuildSticker)(t[0]) ? l.default.getGuild(t[0].guild_id) : void 0,
                             {
                                 canCreateExpressions: a
                             } = (0, s.getManageResourcePermissions)(r),
                             o = u.default.getGuildId(),
-                            d = _.findIndex(e => e.type === A.StickerCategoryTypes.FAVORITE),
-                            O = _.findIndex(e => e.type === A.StickerCategoryTypes.RECENT),
+                            d = _.findIndex(e => e.type === h.StickerCategoryTypes.FAVORITE),
+                            O = _.findIndex(e => e.type === h.StickerCategoryTypes.RECENT),
                             p = t.length;
                         null != r && o === r.id && a && t.length < (0, c.getTotalStickerCountForTier)(r.premiumTier) && p++;
                         let R = Math.ceil(p / e);
@@ -99,9 +99,9 @@ function(e, t, n) {
                             let a = s * e,
                                 o = a + e,
                                 l = t.slice(a, o).map((e, t) => ({
-                                    type: A.StickerGridItemTypes.STICKER,
+                                    type: h.StickerGridItemTypes.STICKER,
                                     sticker: e,
-                                    packId: (0, h.isStandardSticker)(e) ? e.pack_id : "TODO - fix",
+                                    packId: (0, A.isStandardSticker)(e) ? e.pack_id : "TODO - fix",
                                     gridSectionIndex: S,
                                     rowIndex: f,
                                     columnIndex: t,
@@ -109,7 +109,7 @@ function(e, t, n) {
                                     category: n
                                 }));
                             S > O && S > d && null != r && p > t.length && l.push({
-                                type: A.StickerGridItemTypes.CREATE_STICKER,
+                                type: h.StickerGridItemTypes.CREATE_STICKER,
                                 guild_id: r.id,
                                 name: N.default.Messages.STICKER_PICKER_CREATE_STICKER_TITLE,
                                 gridSectionIndex: S,
@@ -121,8 +121,8 @@ function(e, t, n) {
                         S++
                     };
                     if (null == n)
-                        for (let e of _) e.stickers.length > 0 ? (f++, i(e.stickers, e.type, (null == t ? void 0 : t.has(e.id)) === !0)) : e.type === A.StickerCategoryTypes.EMPTY_GUILD_UPSELL && (I[S] = 0, S++);
-                    else n.sendable.length > 0 && i(n.sendable, A.StickerCategoryTypes.SEARCH_RESULTS), n.sendableWithPremium.length > 0 && i(n.sendableWithPremium, A.StickerCategoryTypes.SEARCH_RESULTS)
+                        for (let e of _) e.stickers.length > 0 ? (f++, i(e.stickers, e.type, (null == t ? void 0 : t.has(e.id)) === !0)) : e.type === h.StickerCategoryTypes.EMPTY_GUILD_UPSELL && (I[S] = 0, S++);
+                    else n.sendable.length > 0 && i(n.sendable, h.StickerCategoryTypes.SEARCH_RESULTS), n.sendableWithPremium.length > 0 && i(n.sendableWithPremium, h.StickerCategoryTypes.SEARCH_RESULTS)
                 }
                 return {
                     rowCount: f,
@@ -166,7 +166,7 @@ function(e, t, n) {
                     of n) {
                     let n = t.get(r);
                     null != n && 0 !== n.length && i.push({
-                        type: A.StickerCategoryTypes.GUILD,
+                        type: h.StickerCategoryTypes.GUILD,
                         id: r,
                         name: e,
                         stickers: n
@@ -179,7 +179,7 @@ function(e, t, n) {
                         } = (0, s.getManageResourcePermissions)(t),
                         r = i.findIndex(t => t.id === e.getGuildId());
                     r >= 1 ? i.unshift(i.splice(r, 1)[0]) : -1 === r && null != t && n && i.unshift({
-                        type: A.StickerCategoryTypes.EMPTY_GUILD_UPSELL,
+                        type: h.StickerCategoryTypes.EMPTY_GUILD_UPSELL,
                         id: t.id,
                         name: t.name,
                         stickers: []
@@ -226,23 +226,23 @@ function(e, t, n) {
                 o = L(e);
             return i.useMemo(() => {
                 var i;
-                let r = n.map(h.createStickerPackCategory),
+                let r = n.map(A.createStickerPackCategory),
                     l = {
-                        type: A.StickerCategoryTypes.FAVORITE,
-                        id: A.StickerCategoryTypes.FAVORITE,
+                        type: h.StickerCategoryTypes.FAVORITE,
+                        id: h.StickerCategoryTypes.FAVORITE,
                         name: N.default.Messages.CATEGORY_FAVORITE,
                         stickers: t
                     };
                 return [l, {
-                    type: A.StickerCategoryTypes.RECENT,
-                    id: A.StickerCategoryTypes.RECENT,
+                    type: h.StickerCategoryTypes.RECENT,
+                    id: h.StickerCategoryTypes.RECENT,
                     name: N.default.Messages.STICKER_CATEGORY_RECENT,
                     stickers: null !== (i = null == s ? void 0 : s.filter(t => {
-                        if ((0, h.isGuildSticker)(t)) {
+                        if ((0, A.isGuildSticker)(t)) {
                             var i, r;
                             return null !== (r = null === (i = S.default.getStickersByGuildId(t.guild_id)) || void 0 === i ? void 0 : i.some(e => e.id === t.id)) && void 0 !== r && r && (0, I.getStickerSendability)(t, a, e) !== I.StickerSendability.NONSENDABLE
                         }
-                        if ((0, h.isStandardSticker)(t)) return n.some(e => e.id === t.pack_id)
+                        if ((0, A.isStandardSticker)(t)) return n.some(e => e.id === t.pack_id)
                     })) && void 0 !== i ? i : []
                 }, ...o, ...r]
             }, [n, t, s, o, a, e])
@@ -252,7 +252,7 @@ function(e, t, n) {
                 n = (0, r.useStateFromStores)([S.default], () => S.default.getStickerById(e.id)),
                 [s, a] = i.useState(!0),
                 [o, l] = i.useState(!1),
-                u = (0, h.isGuildSticker)(e) || (0, h.isStandardSticker)(e);
+                u = (0, A.isGuildSticker)(e) || (0, A.isStandardSticker)(e);
             return (i.useEffect(() => {
                 (async () => {
                     if (t && !u && null == n && s && !o) {
@@ -267,6 +267,6 @@ function(e, t, n) {
         },
         b = e => {
             let t = P(e);
-            return i.useMemo(() => t.filter(e => e.type === A.StickerCategoryTypes.EMPTY_GUILD_UPSELL || e.stickers.length > 0, []), [t])
+            return i.useMemo(() => t.filter(e => e.type === h.StickerCategoryTypes.EMPTY_GUILD_UPSELL || e.stickers.length > 0, []), [t])
         }
 }

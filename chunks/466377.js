@@ -36,8 +36,8 @@ function(e, t, n) {
         T = n("84735"),
         f = n("337033"),
         S = n("742746"),
-        A = n("147479"),
-        h = n("285952"),
+        h = n("147479"),
+        A = n("285952"),
         m = n("465670"),
         N = n("602091"),
         O = n("231338"),
@@ -61,8 +61,8 @@ function(e, t, n) {
             className: E,
             fullscreenOnMobile: f = !0,
             hideShadow: S = !1,
-            onAnimationEnd: A = O.NOOP,
-            returnRef: h,
+            onAnimationEnd: h = O.NOOP,
+            returnRef: A,
             ...m
         } = e, p = n === N.ModalTransitionState.ENTERING || n === N.ModalTransitionState.ENTERED, {
             reducedMotion: g
@@ -74,7 +74,7 @@ function(e, t, n) {
                 easing: p ? _.default.Easing.inOut(_.default.Easing.back()) : _.default.Easing.quad,
                 clamp: !0
             },
-            onRest: A
+            onRest: h
         }), D = a.useRef(null), v = null != m["aria-label"], M = null != m["aria-labelledby"], y = a.useId(), P = null !== (t = m["aria-labelledby"]) && void 0 !== t ? t : y, U = a.useMemo(() => ({
             headerId: P,
             headerIdIsManaged: M
@@ -84,7 +84,7 @@ function(e, t, n) {
             children: (0, s.jsx)(I.Dialog, {
                 className: R.focusLock,
                 role: o,
-                returnRef: h,
+                returnRef: A,
                 impressionType: d.ImpressionTypes.MODAL,
                 "aria-labelledby": v ? void 0 : U.headerId,
                 ...m,
@@ -110,13 +110,13 @@ function(e, t, n) {
             headerId: u,
             headerIdIsManaged: d
         } = a.useContext(N.ModalContentContext);
-        return (0, s.jsx)(h.default, {
+        return (0, s.jsx)(A.default, {
             grow: 0,
             shrink: 0,
-            direction: null !== (t = e.direction) && void 0 !== t ? t : h.default.Direction.HORIZONTAL,
-            justify: null !== (n = e.justify) && void 0 !== n ? n : h.default.Justify.START,
-            align: null !== (i = e.align) && void 0 !== i ? i : h.default.Align.CENTER,
-            wrap: null !== (r = e.wrap) && void 0 !== r ? r : h.default.Wrap.NO_WRAP,
+            direction: null !== (t = e.direction) && void 0 !== t ? t : A.default.Direction.HORIZONTAL,
+            justify: null !== (n = e.justify) && void 0 !== n ? n : A.default.Justify.START,
+            align: null !== (i = e.align) && void 0 !== i ? i : A.default.Align.CENTER,
+            wrap: null !== (r = e.wrap) && void 0 !== r ? r : A.default.Wrap.NO_WRAP,
             className: l()(R.header, e.className, {
                 [R.separator]: null === (o = e.separator) || void 0 === o || o
             }),
@@ -135,11 +135,11 @@ function(e, t, n) {
         } = e, o = function(e) {
             switch (null != e ? e : "thin") {
                 case "auto":
-                    return A.AdvancedScrollerAuto;
+                    return h.AdvancedScrollerAuto;
                 case "none":
-                    return A.AdvancedScrollerNone;
+                    return h.AdvancedScrollerNone;
                 default:
-                    return A.AdvancedScrollerThin
+                    return h.AdvancedScrollerThin
             }
         }(r);
         return (0, s.jsx)(o, {
@@ -154,13 +154,13 @@ function(e, t, n) {
 
     function v(e) {
         var t, n, i, r, a;
-        return (0, s.jsx)(h.default, {
+        return (0, s.jsx)(A.default, {
             grow: 0,
             shrink: 0,
-            direction: null !== (t = e.direction) && void 0 !== t ? t : h.default.Direction.HORIZONTAL_REVERSE,
-            justify: null !== (n = e.justify) && void 0 !== n ? n : h.default.Justify.START,
-            align: null !== (i = e.align) && void 0 !== i ? i : h.default.Align.STRETCH,
-            wrap: null !== (r = e.wrap) && void 0 !== r ? r : h.default.Wrap.NO_WRAP,
+            direction: null !== (t = e.direction) && void 0 !== t ? t : A.default.Direction.HORIZONTAL_REVERSE,
+            justify: null !== (n = e.justify) && void 0 !== n ? n : A.default.Justify.START,
+            align: null !== (i = e.align) && void 0 !== i ? i : A.default.Align.STRETCH,
+            wrap: null !== (r = e.wrap) && void 0 !== r ? r : A.default.Wrap.NO_WRAP,
             className: l()(R.footer, e.className, {
                 [R.footerSeparator]: null === (a = e.separator) || void 0 === a || a
             }),

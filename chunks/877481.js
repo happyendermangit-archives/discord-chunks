@@ -16,13 +16,13 @@ function(e, t, n) {
         T = n("981631");
     let f = new r.default("Games"),
         S = {},
-        A = 0,
-        h = null;
+        h = 0,
+        A = null;
 
     function m() {
-        return null != h ? Promise.resolve(h) : (0, c.isDesktop)() ? I.default.ensureModule("discord_game_utils").then(() => {
+        return null != A ? Promise.resolve(A) : (0, c.isDesktop)() ? I.default.ensureModule("discord_game_utils").then(() => {
             let e = I.default.getGameUtils();
-            return null != e && null != e.findLaunchable ? (h = e, e) : Promise.reject(Error("game utils not found"))
+            return null != e && null != e.findLaunchable ? (A = e, e) : Promise.reject(Error("game utils not found"))
         }) : Promise.reject(Error("not desktop client"))
     }
 
@@ -53,7 +53,7 @@ function(e, t, n) {
                 return t === T.Distributors.BATTLENET
             }))), 0 === e.length) throw Error("No remaining launchable queries");
         let t = Date.now();
-        t > A && (A = t + 36e5, S = {});
+        t > h && (h = t + 36e5, S = {});
         let n = await m();
         for (let t of e) {
             let e = S[t.id];
@@ -99,8 +99,8 @@ function(e, t, n) {
             } = e;
             if (null == l || null == u || null == c) throw Error("Couldn't construct launchable for ".concat(e.applicationId));
             null == a && (a = u);
-            let A = l[a];
-            if (null == A) throw Error("Couldn't construct launchable for ".concat(e.applicationId, ". No launch option."));
+            let h = l[a];
+            if (null == h) throw Error("Couldn't construct launchable for ".concat(e.applicationId, ". No launch option."));
             return (0, i.fetchBranches)([I]).then(e => {
                 let t = e[0];
                 if (null == t) return Promise.reject(Error("branch is null"));
@@ -117,7 +117,7 @@ function(e, t, n) {
                         DISCORD_CURRENT_BRANCH: r,
                         DISCORD_STORAGE_PATH: T.DefaultCloudSyncConfiguration.ROOT_STORAGE_PATH(e, o.default.getId())
                     };
-                return _.default.launch(E, I, A.name, i)
+                return _.default.launch(E, I, h.name, i)
             })
         },
         removeShortcuts: e => (0, c.isWindows)() ? m().then(t => {

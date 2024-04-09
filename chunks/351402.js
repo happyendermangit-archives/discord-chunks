@@ -9,8 +9,8 @@ function(e, t, n) {
     let T = !1,
         f = !1,
         S = !1,
-        A = !1,
         h = !1,
+        A = !1,
         m = null,
         N = null,
         O = !1,
@@ -25,19 +25,19 @@ function(e, t, n) {
     }
 
     function g() {
-        A = !1
+        h = !1
     }
 
     function L() {
-        h = !0
+        A = !0
     }
 
     function D() {
-        h = !1
+        A = !1
     }
     class v extends(d = _.default.Store) {
         get isBusy() {
-            return T || f || h || S
+            return T || f || A || S
         }
         get isUpdatingPaymentSource() {
             return f
@@ -49,7 +49,7 @@ function(e, t, n) {
             return this.isPaymentSourceFetching || this.isSubscriptionFetching
         }
         get isSubscriptionFetching() {
-            return A
+            return h
         }
         get isPaymentSourceFetching() {
             return null != i
@@ -139,7 +139,7 @@ function(e, t, n) {
         BILLING_PAYMENT_SOURCES_FETCH_SUCCESS: C,
         BILLING_PAYMENT_SOURCES_FETCH_FAIL: C,
         BILLING_SUBSCRIPTION_FETCH_START: function() {
-            A = !0
+            h = !0
         },
         BILLING_SUBSCRIPTION_FETCH_SUCCESS: g,
         BILLING_SUBSCRIPTION_FETCH_FAIL: g,

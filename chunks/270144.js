@@ -48,8 +48,8 @@ function(e, t, n) {
         T = n("55563"),
         f = n("801249"),
         S = n("106976"),
-        A = n("307643"),
-        h = n("488915"),
+        h = n("307643"),
+        A = n("488915"),
         m = n("11176"),
         N = n("171246"),
         O = n("981631");
@@ -57,13 +57,13 @@ function(e, t, n) {
     let p = function(e, t) {
             let {
                 refetchOnMount: n = !1
-            } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, i = (0, a.useStateFromStores)([h.default], () => null != e ? h.default.getSubscriptionGroupListingsForApplicationFetchState(e) : h.FetchState.FETCHED, [e]);
+            } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, i = (0, a.useStateFromStores)([A.default], () => null != e ? A.default.getSubscriptionGroupListingsForApplicationFetchState(e) : A.FetchState.FETCHED, [e]);
             return s.useEffect(() => {
                 if (null == e || null == t) return;
-                let i = h.default.getSubscriptionGroupListingsForApplicationFetchState(e);
-                (n || i === h.FetchState.NOT_FETCHED) && (0, S.fetchAllSubscriptionListingsDataForApplication)(e, t)
+                let i = A.default.getSubscriptionGroupListingsForApplicationFetchState(e);
+                (n || i === A.FetchState.NOT_FETCHED) && (0, S.fetchAllSubscriptionListingsDataForApplication)(e, t)
             }, [e, t, n]), {
-                listingsLoaded: i === h.FetchState.FETCHED
+                listingsLoaded: i === A.FetchState.FETCHED
             }
         },
         R = e => {
@@ -71,13 +71,13 @@ function(e, t, n) {
                 guildId: t,
                 canFetch: n = !0,
                 forceRefetch: i = !1
-            } = e, r = (0, a.useStateFromStores)([h.default], () => null != t ? h.default.getEntitlementsForGuildFetchState(t) : null, [t]);
+            } = e, r = (0, a.useStateFromStores)([A.default], () => null != t ? A.default.getEntitlementsForGuildFetchState(t) : null, [t]);
             return s.useEffect(() => {
                 if (null == t || t === O.ME) return;
-                let e = h.default.getEntitlementsForGuildFetchState(t);
-                n && (e === h.FetchState.NOT_FETCHED || i) && (0, S.fetchEntitlementsForGuild)(t)
+                let e = A.default.getEntitlementsForGuildFetchState(t);
+                n && (e === A.FetchState.NOT_FETCHED || i) && (0, S.fetchEntitlementsForGuild)(t)
             }, [t, n, i]), {
-                entitlementsLoaded: r === h.FetchState.FETCHED
+                entitlementsLoaded: r === A.FetchState.FETCHED
             }
         },
         C = e => {
@@ -102,13 +102,13 @@ function(e, t, n) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
                 includeSoftDeleted: !1
             };
-            return (0, a.useStateFromStoresArray)([h.default], () => {
+            return (0, a.useStateFromStoresArray)([A.default], () => {
                 if (null == e) return [];
-                let n = h.default.getSubscriptionGroupListing(e);
+                let n = A.default.getSubscriptionGroupListing(e);
                 if (null == n) return [];
                 let i = [];
                 for (let e of n.subscription_listings_ids) {
-                    let n = h.default.getSubscriptionListing(e);
+                    let n = A.default.getSubscriptionListing(e);
                     if (null != n)(!n.soft_deleted || t.includeSoftDeleted) && i.push(n)
                 }
                 return i
@@ -123,11 +123,11 @@ function(e, t, n) {
                 subscriptionGroupListing: i,
                 guildEntitlements: r,
                 userEntitlements: o
-            } = (0, a.useStateFromStoresObject)([h.default, I.default], () => {
+            } = (0, a.useStateFromStoresObject)([A.default, I.default], () => {
                 var n, i;
                 return {
-                    subscriptionGroupListing: null != e ? h.default.getSubscriptionGroupListingForApplication(e) : null,
-                    guildEntitlements: null != e && null != t ? h.default.getApplicationEntitlementsForGuild(e, t) : L,
+                    subscriptionGroupListing: null != e ? A.default.getSubscriptionGroupListingForApplication(e) : null,
+                    guildEntitlements: null != e && null != t ? A.default.getApplicationEntitlementsForGuild(e, t) : L,
                     userEntitlements: null != e && null !== (i = null === (n = I.default.getForApplication(e)) || void 0 === n ? void 0 : n.values()) && void 0 !== i ? i : D
                 }
             }, [e, t]),
@@ -174,9 +174,9 @@ function(e, t, n) {
                 canFetch: (0, a.useStateFromStores)([_.default], () => _.default.can(O.Permissions.ADMINISTRATOR, e))
             }),
             r = (0, a.useStateFromStores)([f.default], () => f.default.getLastGuildDismissedTime(n)),
-            o = (0, a.useStateFromStoresArray)([h.default], () => {
-                let e = h.default.getEntitlementsForGuild(n),
-                    t = h.default.getEntitlementsForGuild(n, !1),
+            o = (0, a.useStateFromStoresArray)([A.default], () => {
+                let e = A.default.getEntitlementsForGuild(n),
+                    t = A.default.getEntitlementsForGuild(n, !1),
                     i = e.map(e => e.applicationId);
                 return t.filter(e => !i.includes(e.applicationId))
             }),
@@ -218,7 +218,7 @@ function(e, t, n) {
                 n = (0, a.useStateFromStores)([u.default], () => null != e ? u.default.getApplication(e) : null, [e]),
                 i = null != n;
             return s.useEffect(() => {
-                !i && null != e && t && (0, A.fetchApplication)(e)
+                !i && null != e && t && (0, h.fetchApplication)(e)
             }, [i, e, t]), n
         };
 
@@ -254,7 +254,7 @@ function(e, t, n) {
         let n = (0, a.useStateFromStores)([d.default], () => d.default.isLoaded()),
             [i, r] = s.useState([]);
         return s.useEffect(() => {
-            null == t && null != e && n && (0, A.fetchEligibleApplicationSubscriptionGuilds)(e).then(e => {
+            null == t && null != e && n && (0, h.fetchEligibleApplicationSubscriptionGuilds)(e).then(e => {
                 r(e.map(e => d.default.getGuild(e)).filter(e => null != e))
             })
         }, [e, t, n]), i

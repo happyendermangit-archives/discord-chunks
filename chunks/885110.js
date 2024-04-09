@@ -11,8 +11,8 @@ function(e, t, n) {
         T = n("503438"),
         f = n("860852"),
         S = n("768419"),
-        A = n("695346"),
-        h = n("581883"),
+        h = n("695346"),
+        A = n("581883"),
         m = n("131704"),
         N = n("780570"),
         O = n("314897"),
@@ -46,7 +46,7 @@ function(e, t, n) {
             case v.ActivityTypes.PLAYING:
                 return null != e.application_id ? V(e.application_id) : function(e) {
                     let t = p.default.getGameByName(e);
-                    return null != t ? V(t.id) : A.ShowCurrentGame.getSetting()
+                    return null != t ? V(t.id) : h.ShowCurrentGame.getSetting()
                 }(e.name);
             case v.ActivityTypes.STREAMING:
             case v.ActivityTypes.WATCHING:
@@ -60,7 +60,7 @@ function(e, t, n) {
         if (U = null !== (e = R.default.getIdleSince()) && void 0 !== e ? e : 0, G = R.default.isAFK(), w) y = P, H();
         else if (M) y = v.StatusTypes.INVISIBLE;
         else {
-            let e = A.StatusSetting.getSetting();
+            let e = h.StatusSetting.getSetting();
             y = e !== v.StatusTypes.UNKNOWN ? e : v.StatusTypes.ONLINE
         }
         y === v.StatusTypes.ONLINE && U > 0 && (y = v.StatusTypes.IDLE);
@@ -83,7 +83,7 @@ function(e, t, n) {
     }
     class j extends(s = E.default.Store) {
         initialize() {
-            this.waitFor(R.default, h.default, g.default, D.default, C.default, p.default), this.syncWith([g.default], x)
+            this.waitFor(R.default, A.default, g.default, D.default, C.default, p.default), this.syncWith([g.default], x)
         }
         getLocalPresence() {
             return {

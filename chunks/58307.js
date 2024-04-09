@@ -24,8 +24,8 @@ function(e, t, n) {
         T = n("785717"),
         f = n("221292"),
         S = n("659101"),
-        A = n("981631"),
-        h = n("689938"),
+        h = n("981631"),
+        A = n("689938"),
         m = n("989171"),
         N = n("858903");
 
@@ -36,8 +36,8 @@ function(e, t, n) {
             }, [t, e]),
             i = (0, r.useStateFromStores)([l.default], () => null != n && null != n.channelId ? l.default.getChannel(n.channelId) : null, [n]),
             s = (0, r.useStateFromStores)([u.default], () => null != i ? u.default.getGuild(i.guild_id) : null, [i]),
-            a = (0, r.useStateFromStores)([d.default], () => null != i && d.default.can(A.Permissions.VIEW_CHANNEL, i), [i]),
-            o = (0, r.useStateFromStores)([d.default], () => null != i && d.default.can(A.Permissions.CONNECT, i), [i]);
+            a = (0, r.useStateFromStores)([d.default], () => null != i && d.default.can(h.Permissions.VIEW_CHANNEL, i), [i]),
+            o = (0, r.useStateFromStores)([d.default], () => null != i && d.default.can(h.Permissions.CONNECT, i), [i]);
         return a && o && null != i && null != s ? {
             voiceGuild: s,
             voiceChannel: i
@@ -54,12 +54,12 @@ function(e, t, n) {
         } = (0, a.default)(), {
             trackUserProfileAction: d,
             ...c
-        } = (0, T.useUserProfileAnalyticsContext)(), A = (0, r.useStateFromStores)([_.default], () => _.default.getChannelId() === n.id), O = A ? h.default.Messages.PROFILE_OPEN_VOICE_CHANNEL : n.isGuildStageVoice() ? h.default.Messages.STAGE_CHANNEL_JOIN_BUTTON : h.default.Messages.PROFILE_JOIN_VOICE_CHANNEL;
+        } = (0, T.useUserProfileAnalyticsContext)(), h = (0, r.useStateFromStores)([_.default], () => _.default.getChannelId() === n.id), O = h ? A.default.Messages.PROFILE_OPEN_VOICE_CHANNEL : n.isGuildStageVoice() ? A.default.Messages.STAGE_CHANNEL_JOIN_BUTTON : A.default.Messages.PROFILE_JOIN_VOICE_CHANNEL;
         return (0, i.jsxs)(S.default, {
             children: [(0, i.jsx)(s.Heading, {
                 variant: "eyebrow",
                 className: m.title,
-                children: h.default.Messages.PROFILE_IN_VOICE_CALL
+                children: A.default.Messages.PROFILE_IN_VOICE_CALL
             }), (0, i.jsxs)("div", {
                 className: N.voiceDisplayContainer,
                 children: [(0, i.jsxs)("div", {
@@ -96,7 +96,7 @@ function(e, t, n) {
                     }), o.default.handleVoiceConnect({
                         channel: n,
                         needSubscriptionToAccess: !1,
-                        connected: A
+                        connected: h
                     })
                 },
                 color: null != l ? l : s.Button.Colors.PRIMARY,

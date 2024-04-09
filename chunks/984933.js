@@ -19,8 +19,8 @@ function(e, t, n) {
         T = n("846787"),
         f = n("131704"),
         S = n("700785"),
-        A = n("314897"),
-        h = n("592125"),
+        h = n("314897"),
+        A = n("592125"),
         m = n("271383"),
         N = n("430824"),
         O = n("496675"),
@@ -82,7 +82,7 @@ function(e, t, n) {
                         let e = {},
                             t = I.default.getFavoriteChannels();
                         for (let n in t) {
-                            let i = h.default.getChannel(n);
+                            let i = A.default.getChannel(n);
                             if (null == i) continue;
                             let r = t[n],
                                 s = (0, T.createFavoritesChannelRecord)(t, r, i);
@@ -94,7 +94,7 @@ function(e, t, n) {
                         return e
                     }();
                     let t = {},
-                        n = h.default.getMutableGuildChannelsForGuild(e);
+                        n = A.default.getMutableGuildChannelsForGuild(e);
                     for (let e in n) t[e] = {
                         channel: n[e],
                         comparator: n[e].position
@@ -194,7 +194,7 @@ function(e, t, n) {
     }
     class Q extends(i = d.default.Store) {
         initialize() {
-            this.waitFor(N.default, m.default, h.default, O.default, A.default, c.default, I.default), this.syncWith([I.default], X)
+            this.waitFor(N.default, m.default, A.default, O.default, h.default, c.default, I.default), this.syncWith([I.default], X)
         }
         getAllGuilds() {
             return M
@@ -300,7 +300,7 @@ function(e, t, n) {
                 guildId: t,
                 user: n
             } = e;
-            if (A.default.getId() !== n.id) return !1;
+            if (h.default.getId() !== n.id) return !1;
             M[t] = void 0, t === v && H(t)
         },
         CHANNEL_CREATE: j,
@@ -326,10 +326,10 @@ function(e, t, n) {
             let {
                 channelId: t
             } = e;
-            return null == t && null != U ? z(h.default.getChannel(U), null) : z(h.default.getChannel(t), t)
+            return null == t && null != U ? z(A.default.getChannel(U), null) : z(A.default.getChannel(t), t)
         },
         VOICE_CHANNEL_STATUS_UPDATE: function(e) {
-            let t = h.default.getBasicChannel(e.id);
+            let t = A.default.getBasicChannel(e.id);
             null != t && null != t.guild_id && H(t.guild_id)
         },
         VOICE_STATE_UPDATES: function(e) {
@@ -341,7 +341,7 @@ function(e, t, n) {
                     channelId: n,
                     sessionId: i
                 } = t;
-                return A.default.getSessionId() !== i ? e : z(h.default.getChannel(n), n) || e
+                return h.default.getSessionId() !== i ? e : z(A.default.getChannel(n), n) || e
             }, !1)
         }
     })

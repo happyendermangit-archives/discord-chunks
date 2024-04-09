@@ -25,8 +25,8 @@ function(e, t, n) {
             onMouseOver: T,
             onMouseDown: f,
             onMouseLeave: S,
-            buttonProps: A,
-            "aria-label": h
+            buttonProps: h,
+            "aria-label": A
         } = e, m = r.useRef(null);
         return (0, i.jsxs)(t, {
             ref: m,
@@ -37,13 +37,13 @@ function(e, t, n) {
             onDoubleClick: d,
             onContextMenu: _,
             children: [(0, i.jsx)(s.Clickable, {
-                ...A,
+                ...h,
                 focusProps: {
                     ringTarget: m,
                     ...l
                 },
                 className: a.focusTarget,
-                "aria-label": h,
+                "aria-label": A,
                 onClick: e => {
                     e.stopPropagation(), null == u || u(e)
                 },

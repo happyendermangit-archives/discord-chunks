@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         PictureInPictureHeader: function() {
-            return h
+            return A
         },
         default: function() {
             return m
@@ -24,9 +24,9 @@ function(e, t, n) {
         T = n("540028"),
         f = n("507675"),
         S = n("689938"),
-        A = n("438249");
+        h = n("438249");
 
-    function h(e) {
+    function A(e) {
         let {
             title: t,
             onJumpToChannel: n,
@@ -37,17 +37,17 @@ function(e, t, n) {
             idle: r
         }) : null;
         return (0, i.jsxs)(s, {
-            className: A.headerIdleContainer,
+            className: h.headerIdleContainer,
             children: [(0, i.jsxs)(u.Clickable, {
-                className: A.headerTitle,
+                className: h.headerTitle,
                 onClick: n,
                 children: [(0, i.jsx)(E.default, {
                     "aria-label": S.default.Messages.OPEN_IN_THEATER,
-                    className: A.backButton,
+                    className: h.backButton,
                     width: 20,
                     height: 20
                 }), (0, i.jsx)(I.default, {
-                    className: A.headerText,
+                    className: h.headerText,
                     size: I.default.Sizes.SIZE_16,
                     color: o.default.unsafe_rawColors.WHITE_500.css,
                     children: t
@@ -76,8 +76,8 @@ function(e, t, n) {
             onMouseMove: o,
             onMouseDown: o,
             onMouseLeave: u,
-            className: s()(A.pictureInPictureVideo, {
-                [A.idle]: n
+            className: s()(h.pictureInPictureVideo, {
+                [h.idle]: n
             }, S),
             onDoubleClick: r,
             children: [(0, i.jsx)(l.TransitionGroup, {
@@ -89,22 +89,22 @@ function(e, t, n) {
                 size: "small",
                 ...I
             }) : null, !T && (0, i.jsxs)("div", {
-                className: A.videoControls,
+                className: h.videoControls,
                 children: [(0, i.jsx)("div", {
-                    className: A.topControls,
-                    children: (0, i.jsx)(h, {
+                    className: h.topControls,
+                    children: (0, i.jsx)(A, {
                         idle: n,
                         onJumpToChannel: r,
                         ...N
                     })
                 }), (0, i.jsxs)("div", {
-                    className: A.bottomControls,
+                    className: h.bottomControls,
                     children: [(0, i.jsx)(_.default, {
                         grow: 0,
                         shrink: 1,
                         basis: "50%",
                         align: _.default.Align.CENTER,
-                        className: A.bottomLeftControls,
+                        className: h.bottomLeftControls,
                         children: null == d ? void 0 : d()
                     }), (0, i.jsx)(_.default, {
                         grow: 0,

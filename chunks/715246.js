@@ -18,8 +18,8 @@ function(e, t, n) {
         T = n("866960"),
         f = n("626135"),
         S = n("70956"),
-        A = n("36703"),
-        h = n("228488"),
+        h = n("36703"),
+        A = n("228488"),
         m = n("196050"),
         N = n("189595"),
         O = n("27268"),
@@ -523,8 +523,8 @@ function(e, t, n) {
             } = this.playPausePopRef;
             if (null == d) return;
             s && !t.playing ? (this.play(), this.handleMouseMove(), this.handleUIUpdate(), t.hasClickedPlay && (null == _ || _.pop(s))) : !s && t.playing && (d.pause(), null == _ || _.pop(s), null == n || n());
-            let c = (0, h.getFullScreenNode)(d.parentNode, d);
-            a && !t.fullscreen && null != c ? ((0, h.requestFullScreen)(c), c.addEventListener(h.FULLSCREEN_CHANGE_EVENT, this.handleFullScreenExit)) : !a && t.fullscreen && null != c && (c.removeEventListener(h.FULLSCREEN_CHANGE_EVENT, this.handleFullScreenExit), (0, h.exitFullScreen)(c)), l === N.default.Types.DURATION && t.dragging !== N.default.Types.DURATION && s ? d.pause() : l !== N.default.Types.DURATION && t.dragging === N.default.Types.DURATION && s && d.play(), o !== t.muted && (d.muted = o, null == r || r(o)), u !== t.volume && (d.volume = u, null == i || i(u))
+            let c = (0, A.getFullScreenNode)(d.parentNode, d);
+            a && !t.fullscreen && null != c ? ((0, A.requestFullScreen)(c), c.addEventListener(A.FULLSCREEN_CHANGE_EVENT, this.handleFullScreenExit)) : !a && t.fullscreen && null != c && (c.removeEventListener(A.FULLSCREEN_CHANGE_EVENT, this.handleFullScreenExit), (0, A.exitFullScreen)(c)), l === N.default.Types.DURATION && t.dragging !== N.default.Types.DURATION && s ? d.pause() : l !== N.default.Types.DURATION && t.dragging === N.default.Types.DURATION && s && d.play(), o !== t.muted && (d.muted = o, null == r || r(o)), u !== t.volume && (d.volume = u, null == i || i(u))
         }
         componentWillUnmount() {
             this._unmounted = !0;
@@ -532,8 +532,8 @@ function(e, t, n) {
                 current: e
             } = this.mediaRef;
             if (null == e) return;
-            let t = (0, h.getFullScreenNode)(e.parentNode, e);
-            null != t && (t.removeEventListener(h.FULLSCREEN_CHANGE_EVENT, this.handleFullScreenExit), (0, h.exitFullScreen)(t))
+            let t = (0, A.getFullScreenNode)(e.parentNode, e);
+            null != t && (t.removeEventListener(A.FULLSCREEN_CHANGE_EVENT, this.handleFullScreenExit), (0, A.exitFullScreen)(t))
         }
         play() {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
@@ -687,7 +687,7 @@ function(e, t, n) {
                 buffers: u,
                 currentTime: d,
                 duration: _,
-                volume: (0, A.amplitudeToPerceptual)(m, 1),
+                volume: (0, h.amplitudeToPerceptual)(m, 1),
                 hide: t === B.VIDEO && E,
                 muted: T,
                 autoPlay: n,
@@ -712,7 +712,7 @@ function(e, t, n) {
                     className: P.videoButton,
                     guestWindow: window,
                     onClick: this.toggleFullscreen,
-                    node: (0, h.getFullScreenNode)(null == e ? void 0 : e.parentNode, e)
+                    node: (0, A.getFullScreenNode)(null == e ? void 0 : e.parentNode, e)
                 }) : null
             }) : (0, s.jsx)(O.default, {
                 onPlay: this.handleVideoClick,
@@ -819,8 +819,8 @@ function(e, t, n) {
                     current: e
                 } = this.mediaRef;
                 if (null == e) return;
-                let t = (0, h.getFullScreenNode)(e.parentNode, e);
-                (null == t || !(0, h.isFullScreen)(t)) && this.setState({
+                let t = (0, A.getFullScreenNode)(e.parentNode, e);
+                (null == t || !(0, A.isFullScreen)(t)) && this.setState({
                     fullscreen: !1
                 })
             }), b(this, "toggleFullscreen", () => {
@@ -852,7 +852,7 @@ function(e, t, n) {
                 } = this.mediaRef;
                 if (t === N.default.Types.DURATION) null != n && isFinite(n.duration) && this.setTime(n.duration * e, !1);
                 else if (t === N.default.Types.VOLUME) {
-                    let t = (0, A.perceptualToAmplitude)(e, 1);
+                    let t = (0, h.perceptualToAmplitude)(e, 1);
                     0 === t ? this.setState({
                         muted: !0,
                         volume: t

@@ -15,8 +15,8 @@ function(e, t, n) {
         T = n("710845"),
         f = n("857192"),
         S = n("70956"),
-        A = n("358085"),
-        h = n("65154");
+        h = n("358085"),
+        A = n("65154");
 
     function m(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
@@ -66,10 +66,10 @@ function(e, t, n) {
         var t;
         return null !== (t = null == e ? void 0 : e.map(e => ({
             type: function(e) {
-                if ("audio" === e) return h.MediaTypes.AUDIO;
-                if ("test" === e) return h.MediaTypes.TEST;
-                if ("screen" === e) return h.MediaTypes.SCREEN;
-                else return h.MediaTypes.VIDEO
+                if ("audio" === e) return A.MediaTypes.AUDIO;
+                if ("test" === e) return A.MediaTypes.TEST;
+                if ("screen" === e) return A.MediaTypes.SCREEN;
+                else return A.MediaTypes.VIDEO
             }(e.type),
             rid: e.rid,
             ssrc: e.ssrc,
@@ -122,7 +122,7 @@ function(e, t, n) {
                         break;
                     case 5:
                         let i = n.speaking;
-                        "boolean" == typeof i && (i = i ? h.SpeakingFlags.VOICE : h.SpeakingFlags.NONE), this.emit("speaking", n.user_id, n.ssrc, i);
+                        "boolean" == typeof i && (i = i ? A.SpeakingFlags.VOICE : A.SpeakingFlags.NONE), this.emit("speaking", n.user_id, n.ssrc, i);
                         break;
                     case 3:
                         this.sendHeartbeat();
@@ -233,9 +233,9 @@ function(e, t, n) {
         handleHello(e) {
             var t, n, i;
             if (this.serverVersion = null !== (t = e.v) && void 0 !== t ? t : 3, this.serverVersion <= 3) {
-                let t = A.isPlatformEmbedded ? .25 : .1;
+                let t = h.isPlatformEmbedded ? .25 : .1;
                 this.heartbeatInterval = e.heartbeat_interval * t
-            } else this.heartbeatInterval = e.heartbeat_interval * this.heartbeatIntervalModifier, !A.isPlatformEmbedded && (this.heartbeatInterval = Math.min(R, null !== (n = this.heartbeatInterval) && void 0 !== n ? n : NaN));
+            } else this.heartbeatInterval = e.heartbeat_interval * this.heartbeatIntervalModifier, !h.isPlatformEmbedded && (this.heartbeatInterval = Math.min(R, null !== (n = this.heartbeatInterval) && void 0 !== n ? n : NaN));
             let r = Date.now() - this.connectionStartTime;
             this.logger.info("[HELLO] heartbeat interval: ".concat(null !== (i = this.heartbeatInterval) && void 0 !== i ? i : "??", ", version: ").concat(this.serverVersion, ", took ").concat(r, " ms")), this.startHeartbeater()
         }

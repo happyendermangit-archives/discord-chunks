@@ -34,12 +34,12 @@ function(e, t, n) {
             let I = (0, a.default)(E.default),
                 S = (0, r.areClipsEnabled)() && s.default.getSettings().clipsEnabled && ((null === (e = _.default.getCurrentUserActiveStream()) || void 0 === e ? void 0 : e.state) === f.ApplicationStreamStates.ACTIVE || (null === (t = _.default.getCurrentUserActiveStream()) || void 0 === t ? void 0 : t.state) === f.ApplicationStreamStates.PAUSED),
                 {
-                    enableDecoupledGameClipping: A
+                    enableDecoupledGameClipping: h
                 } = l.default.getCurrentConfig({
                     location: "computeVoiceFlags"
                 }),
-                h = I && s.default.getSettings().decoupledClipsEnabled && (null === (n = o.default.getVisibleGame()) || void 0 === n ? void 0 : n.windowHandle) != null && A;
-            i = (0, T.setFlag)(i, f.VoiceFlags.CLIPS_ENABLED, S || h);
+                A = I && s.default.getSettings().decoupledClipsEnabled && (null === (n = o.default.getVisibleGame()) || void 0 === n ? void 0 : n.windowHandle) != null && h;
+            i = (0, T.setFlag)(i, f.VoiceFlags.CLIPS_ENABLED, S || A);
             let {
                 enableViewerClipping: m
             } = u.default.getCurrentConfig({

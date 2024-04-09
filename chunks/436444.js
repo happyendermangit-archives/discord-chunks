@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         TierMarkerPositions: function() {
-            return h
+            return A
         }
     }), n("411104");
     var i = n("735250");
@@ -21,8 +21,8 @@ function(e, t, n) {
         T = n("198466"),
         f = n("981631"),
         S = n("689938"),
-        A = n("90952");
-    let h = {
+        h = n("90952");
+    let A = {
         [f.BoostedGuildTiers.NONE]: 0,
         [f.BoostedGuildTiers.TIER_1]: 1 / 3,
         [f.BoostedGuildTiers.TIER_2]: 2 / 3,
@@ -56,13 +56,13 @@ function(e, t, n) {
             immediate: C
         }), U = (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(a.animated.div, {
-                className: A.progressBarMarkerIndicator,
+                className: h.progressBarMarkerIndicator,
                 style: {
                     transform: P.to(e => "translate(-50%, -50%) scale(".concat(e, ")"))
                 }
             }), p !== f.BoostedGuildTiers.NONE && (0, i.jsx)(_.default, {
                 tier: p,
-                className: A.boostedTierIcon
+                className: h.boostedTierIcon
             })]
         }), b = v ? "div" : l.Clickable, G = v ? {} : {
             onClick: function() {
@@ -103,29 +103,29 @@ function(e, t, n) {
             }),
             shouldShow: p !== f.BoostedGuildTiers.NONE,
             children: e => (0, i.jsxs)(b, {
-                className: s()(A.progressBarMarker, {
-                    [A.progressBarMarkerUnlocked]: v,
-                    [A.progressBarMarkerLocked]: !v,
-                    [A.progressBarMarkerLower]: M,
-                    [A.progressBarMarkerCurrent]: y
+                className: s()(h.progressBarMarker, {
+                    [h.progressBarMarkerUnlocked]: v,
+                    [h.progressBarMarkerLocked]: !v,
+                    [h.progressBarMarkerLower]: M,
+                    [h.progressBarMarkerCurrent]: y
                 }),
                 style: {
-                    left: "".concat(100 * h[p], "%")
+                    left: "".concat(100 * A[p], "%")
                 },
                 ...e,
                 ...G,
                 children: [!v && (0, i.jsx)("div", {
-                    className: A.boostedTierIconBackground
+                    className: h.boostedTierIconBackground
                 }), v && p === f.BoostedGuildTiers.TIER_3 ? (0, i.jsx)(T.ProgressBarConfettiTrigger, {
                     confettiTriggerRef: n,
                     setConfettiCount: N,
                     setShouldFireConfetti: O,
                     children: U
                 }) : U, (0, i.jsxs)(l.Text, {
-                    className: A.progressBarMarkerLabel,
+                    className: h.progressBarMarkerLabel,
                     variant: "text-md/normal",
                     children: [v && p !== f.BoostedGuildTiers.NONE && (0, i.jsx)(c.default, {
-                        className: A.progressBarMarkerUnlockedIcon
+                        className: h.progressBarMarkerUnlockedIcon
                     }), t]
                 })]
             })

@@ -40,7 +40,7 @@ function(e, t, n) {
         var e, t, n;
         T = null !== (n = null === (t = a.default.settings.userContent) || void 0 === t ? void 0 : null === (e = t.lastDismissedOutboundPromotionStartDate) || void 0 === e ? void 0 : e.value) && void 0 !== n ? n : null
     }
-    class A extends(i = r.default.PersistedStore) {
+    class h extends(i = r.default.PersistedStore) {
         initialize(e) {
             null != e && (u = e), this.waitFor(a.default), this.syncWith([a.default], S)
         }
@@ -78,7 +78,7 @@ function(e, t, n) {
             return u
         }
     }
-    o(A, "displayName", "PromotionsStore"), o(A, "persistKey", "PromotionsPersistedStore"), t.default = new A(s.default, {
+    o(h, "displayName", "PromotionsStore"), o(h, "persistKey", "PromotionsPersistedStore"), t.default = new h(s.default, {
         ACTIVE_OUTBOUND_PROMOTIONS_FETCH_SUCCESS: function(e) {
             let {
                 activeOutboundPromotions: t,

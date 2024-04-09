@@ -21,34 +21,34 @@ function(e, t, n) {
         T = n("810090"),
         f = n("981631"),
         S = n("474936"),
-        A = n("689938"),
-        h = n("266861");
+        h = n("689938"),
+        A = n("266861");
 
     function m(e) {
         var t, n;
         let {
             onDismiss: r
-        } = e, m = (0, a.useStateFromStores)([l.default], () => l.default.useReducedMotion), N = A.default.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2, O = (0, d.usePremiumTrialOffer)(), p = (0, u.usePremiumDiscountOffer)(), R = (null == O ? void 0 : O.subscription_trial) != null || null != p, C = {
+        } = e, m = (0, a.useStateFromStores)([l.default], () => l.default.useReducedMotion), N = h.default.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2, O = (0, d.usePremiumTrialOffer)(), p = (0, u.usePremiumDiscountOffer)(), R = (null == O ? void 0 : O.subscription_trial) != null || null != p, C = {
             object: f.AnalyticsObjects.BUTTON_CTA,
             section: f.AnalyticsSections.SUPER_REACTION_PICKER
         };
         return (0, i.jsxs)("div", {
-            className: h.wrapper,
+            className: A.wrapper,
             children: [(0, i.jsx)(o.Clickable, {
                 onClick: r,
-                className: h.closeButton,
-                "aria-label": A.default.Messages.DISMISS,
+                className: A.closeButton,
+                "aria-label": h.default.Messages.DISMISS,
                 children: (0, i.jsx)(E.default, {
                     width: 24,
                     height: 24
                 })
             }), (0, i.jsxs)("div", {
-                className: h.content,
+                className: A.content,
                 children: [(0, i.jsx)("div", {
-                    className: h.contentFill,
+                    className: A.contentFill,
                     children: (0, i.jsx)(T.default, {
-                        className: s()(h.banner, {
-                            [h.hasTrialOffer]: R
+                        className: s()(A.banner, {
+                            [A.hasTrialOffer]: R
                         }),
                         src: "https://cdn.discordapp.com/attachments/955557117622886410/1085270553759322153/super-reactions-launch.mp4",
                         loop: !0,
@@ -59,32 +59,32 @@ function(e, t, n) {
                 }), R ? (0, i.jsx)(_.default, {
                     type: S.PremiumUpsellTypes.BURST_REACTION_QUICK_ACTION_UPSELL,
                     subscriptionTier: null !== (n = null == O ? void 0 : null === (t = O.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : S.PremiumSubscriptionSKUs.TIER_2,
-                    headingText: A.default.Messages.SUPER_REACTIONS_UPSELL_TITLE_MOBILE,
+                    headingText: h.default.Messages.SUPER_REACTIONS_UPSELL_TITLE_MOBILE,
                     analyticsLocationObject: C,
                     discountOffer: p,
                     trialOffer: O,
                     children: N
                 }) : (0, i.jsxs)(i.Fragment, {
                     children: [(0, i.jsxs)("div", {
-                        className: h.header,
+                        className: A.header,
                         children: [(0, i.jsx)(I.default, {
-                            className: h.nitroWheel,
+                            className: A.nitroWheel,
                             width: 32,
                             height: 32
                         }), (0, i.jsx)(o.Heading, {
-                            className: h.headerText,
+                            className: A.headerText,
                             variant: "heading-xl/bold",
-                            children: A.default.Messages.SUPER_REACTIONS_UPSELL_TITLE_MOBILE
+                            children: h.default.Messages.SUPER_REACTIONS_UPSELL_TITLE_MOBILE
                         })]
                     }), (0, i.jsx)(o.Text, {
-                        className: h.subheaderText,
+                        className: A.subheaderText,
                         variant: "text-md/normal",
                         children: N
                     }), (0, i.jsx)("div", {
-                        className: h.ctaActionWrapper,
+                        className: A.ctaActionWrapper,
                         children: (0, i.jsx)(c.default, {
                             subscriptionTier: S.PremiumSubscriptionSKUs.TIER_2,
-                            buttonText: A.default.Messages.UNLOCK_WITH_NITRO
+                            buttonText: h.default.Messages.UNLOCK_WITH_NITRO
                         })
                     })]
                 })]

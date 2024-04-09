@@ -20,12 +20,12 @@ function(e, t, n) {
     } = u._private, {
         Shadows: S
     } = c._private, {
-        Spacing: A
+        Spacing: h
     } = E._private, {
-        Modules: h
+        Modules: A
     } = d._private, m = l()(f, e => r()(e)), N = {
         themes: I,
-        modules: h,
+        modules: A,
         colors: l()(T, (e, t) => ({
             css: C(t),
             resolve(t) {
@@ -55,7 +55,7 @@ function(e, t, n) {
             })
         })),
         radii: _.Radius,
-        spacing: l()(A, e => "".concat(e, "px"))
+        spacing: l()(h, e => "".concat(e, "px"))
     };
 
     function O(e, t) {

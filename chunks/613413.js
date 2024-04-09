@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return A
+            return h
         }
     }), n("47120");
     var i = n("735250"),
@@ -21,32 +21,32 @@ function(e, t, n) {
         f = n("565384"),
         S = n("129852");
 
-    function A() {
+    function h() {
         let {
             debugTrackedData: e,
             impressions: t
         } = (0, f.useImpressionStore)(e => ({
             debugTrackedData: e.debugTrackedData,
             impressions: e.impressions
-        })), n = (0, o.useStateFromStores)([d.default], () => d.default.isAnalyticsDebuggerEnabled), s = (0, o.useStateFromStores)([u.default], () => u.default.isDeveloper), [A, h] = r.useState(!1), {
+        })), n = (0, o.useStateFromStores)([d.default], () => d.default.isAnalyticsDebuggerEnabled), s = (0, o.useStateFromStores)([u.default], () => u.default.isDeveloper), [h, A] = r.useState(!1), {
             name: m,
             ...N
         } = null != e ? e : {}, O = null != m;
         return s && n ? (0, i.jsx)(T.default, {
             children: (0, i.jsxs)("div", {
                 className: a()(S.container, {
-                    [S.containerMinimized]: A,
+                    [S.containerMinimized]: h,
                     [S.notTracked]: !O
                 }),
                 children: [(0, i.jsx)(l.Clickable, {
                     className: S.minimizeButton,
                     onClick: () => {
-                        h(!A)
+                        A(!h)
                     },
-                    children: A ? (0, i.jsx)(E.default, {}) : (0, i.jsx)(I.default, {})
+                    children: h ? (0, i.jsx)(E.default, {}) : (0, i.jsx)(I.default, {})
                 }), (0, i.jsxs)("div", {
                     className: a()(S.content, {
-                        [S.contentMinimized]: A
+                        [S.contentMinimized]: h
                     }),
                     children: [(0, i.jsxs)(l.Text, {
                         className: a()(S.label, {

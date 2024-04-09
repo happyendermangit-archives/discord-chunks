@@ -16,8 +16,8 @@ function(e, t, n) {
         T = n("551058"),
         f = n("156361"),
         S = n("695464"),
-        A = n("153124"),
-        h = n("555573"),
+        h = n("153124"),
+        A = n("555573"),
         m = n("10718"),
         N = n("367790"),
         O = n("895924"),
@@ -101,7 +101,7 @@ function(e, t, n) {
                 } else X(e.id)
             }, [X, K]),
             ee = r.useCallback((e, t, i) => {
-                h.setActiveCommand({
+                A.setActiveCommand({
                     channelId: n.id,
                     command: e,
                     section: t,
@@ -190,7 +190,7 @@ function(e, t, n) {
                     }
                 }, o)
             }, [n, Y, ee, x, G]),
-            er = (0, A.useUID)();
+            er = (0, h.useUID)();
         return (0, c.useChannelEditorPopup)(er, !0, (0, f.getAutocompleteRowId)(G)), r.useEffect(() => () => {
             (0, c.dismissChannelEditorPopup)()
         }, []), (0, i.jsxs)(f.default, {

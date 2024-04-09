@@ -16,7 +16,7 @@ function(e, t, n) {
         let t = f[e];
         null != t && delete T[t], delete f[e]
     }
-    class A extends(s = u.default.Store) {
+    class h extends(s = u.default.Store) {
         getInteraction(e) {
             let t = T[e.id];
             return null != t ? I[t] : null
@@ -40,12 +40,12 @@ function(e, t, n) {
             return i
         }
     }
-    l = "InteractionStore", (o = "displayName") in(a = A) ? Object.defineProperty(a, o, {
+    l = "InteractionStore", (o = "displayName") in(a = h) ? Object.defineProperty(a, o, {
         value: l,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : a[o] = l, t.default = new A(d.default, {
+    }) : a[o] = l, t.default = new h(d.default, {
         LOGOUT: function() {
             I = {}, T = {}, f = {}
         },

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         isDismissibleContentDismissed: function() {
-            return A
+            return h
         },
         markDismissibleContentAsDismissed: function() {
             return N
@@ -11,7 +11,7 @@ function(e, t, n) {
             return m
         },
         useIsDismissibleContentDismissed: function() {
-            return h
+            return A
         }
     }), n("47120");
     var i = n("442837"),
@@ -30,15 +30,15 @@ function(e, t, n) {
         f = n("921944"),
         S = n("981631");
 
-    function A(e) {
+    function h(e) {
         var t;
         if ((0, T.disableNewUserDismissibleContent)(e)) return !0;
         let n = null === (t = o.default.settings.userContent) || void 0 === t ? void 0 : t.dismissedContents;
         return null != n && (0, u.hasBit)(n, e)
     }
 
-    function h(e) {
-        return (0, i.useStateFromStores)([o.default], () => A(e))
+    function A(e) {
+        return (0, i.useStateFromStores)([o.default], () => h(e))
     }
 
     function m(e, t, n) {

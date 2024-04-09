@@ -20,8 +20,8 @@ function(e, t, n) {
             rowCount: T,
             rowCountBySection: f,
             rowHeight: S,
-            sectionMarginBottom: A,
-            sectionHeaderHeight: h,
+            sectionMarginBottom: h,
+            sectionHeaderHeight: A,
             sectionFooterHeight: m,
             listHeaderHeight: N,
             stickyHeaders: O = !1,
@@ -45,17 +45,17 @@ function(e, t, n) {
                 sectionRowIndex: t
             }) : S, [S]),
             B = r.useCallback(e => {
-                let t = "function" == typeof h ? h(e) : h;
+                let t = "function" == typeof A ? A(e) : A;
                 return null == t ? 0 : t
-            }, [h]),
+            }, [A]),
             k = r.useCallback(e => {
                 let t = "function" == typeof m ? m(e) : m;
                 return null == t ? 0 : t
             }, [m]),
             V = r.useCallback(e => {
-                let t = "function" == typeof A ? A(e) : A;
+                let t = "function" == typeof h ? h(e) : h;
                 return null == t ? 0 : t
-            }, [A]),
+            }, [h]),
             F = r.useRef([]),
             x = r.useRef([]),
             {
@@ -242,8 +242,8 @@ function(e, t, n) {
                     let o = [],
                         f = 0,
                         S = 0,
-                        A = a + u >= D && a <= e;
-                    for (null != c && (O || A) && o.push(c(r)), !A && !O && (n += u); f + u + I < l - T;) {
+                        h = a + u >= D && a <= e;
+                    for (null != c && (O || h) && o.push(c(r)), !h && !O && (n += u); f + u + I < l - T;) {
                         let i = w(r, S, t),
                             s = a + f + u,
                             l = s + i;
@@ -255,8 +255,8 @@ function(e, t, n) {
                         else break;
                         f += i, S++, t++
                     }
-                    let h = a + u + f,
-                        m = h + I >= D && h <= e;
+                    let A = a + u + f,
+                        m = A + I >= D && A <= e;
                     null != E && m && o.push(E(r)), null != _ ? i.push(_(r, o)) : i = [...i, ...o]
                 } else break
             }

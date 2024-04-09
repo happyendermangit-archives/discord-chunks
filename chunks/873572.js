@@ -34,10 +34,10 @@ function(e, t, n) {
             enabled: T
         } = s.otpSkusExperiment.useExperiment({
             location: "useBotApplicationSubscription"
-        }), f = null !== (t = null == I ? void 0 : I.sku_flags) && void 0 !== t ? t : 0, S = (0, a.isApplicationUserSubscription)(f) || null != u && u !== l.ME && (0, a.isApplicationGuildSubscription)(f) || T, A = null != E;
+        }), f = null !== (t = null == I ? void 0 : I.sku_flags) && void 0 !== t ? t : 0, S = (0, a.isApplicationUserSubscription)(f) || null != u && u !== l.ME && (0, a.isApplicationGuildSubscription)(f) || T, h = null != E;
         return _ ? {
-            botUpgraded: A,
-            botUpgradeable: !A && _ && S,
+            botUpgraded: h,
+            botUpgradeable: !h && _ && S,
             activeSubscriptionListing: c,
             subscriptionGroupListing: I
         } : {

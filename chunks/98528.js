@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useExpressionGrid: function() {
-            return A
+            return h
         },
         useExpressionPickerGridKeyboardNavigation: function() {
             return S
@@ -11,7 +11,7 @@ function(e, t, n) {
             return E
         },
         useKeyboardNavigation: function() {
-            return h
+            return A
         },
         useShowUpsellForScrollPosition: function() {
             return T
@@ -202,8 +202,8 @@ function(e, t, n) {
                 autoFocusElement: !1,
                 useVirtualFocus: !0
             }), {
-                gridContainerProps: A,
-                handleGridContainerKeyDown: h
+                gridContainerProps: h,
+                handleGridContainerKeyDown: A
             } = i.useMemo(() => {
                 let e = S();
                 return {
@@ -220,13 +220,13 @@ function(e, t, n) {
                 gridDispatch: I,
                 getItemProps: T,
                 getRowProps: f,
-                gridContainerProps: A,
-                handleGridContainerKeyDown: h,
+                gridContainerProps: h,
+                handleGridContainerKeyDown: A,
                 isUsingKeyboardNavigation: u
             }
         };
 
-    function A(e) {
+    function h(e) {
         let {
             categories: t,
             collapsedCategories: n,
@@ -280,7 +280,7 @@ function(e, t, n) {
         }, [t, n, r, o, a, s])
     }
 
-    function h(e) {
+    function A(e) {
         let {
             columnCounts: t,
             expressionsGrid: n,

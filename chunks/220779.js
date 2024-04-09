@@ -23,8 +23,8 @@ function(e, t, n) {
         T = n("401227"),
         f = n("142550"),
         S = n("981631"),
-        A = n("689938"),
-        h = n("549671");
+        h = n("689938"),
+        A = n("549671");
     let m = (0, I.createChannelRecord)({
             id: "1",
             type: S.ChannelTypes.DM
@@ -44,20 +44,20 @@ function(e, t, n) {
                 shouldShow: o,
                 disablePointerEvents: !1,
                 renderPopout: () => (0, i.jsx)("div", {
-                    className: a()([h.reply, "theme-".concat(c)]),
+                    className: a()([A.reply, "theme-".concat(c)]),
                     ref: t,
                     children: (0, i.jsx)(l.FocusLock, {
                         containerRef: t,
                         children: (0, i.jsxs)("div", {
                             children: [(0, i.jsx)(l.Text, {
                                 variant: "text-xs/bold",
-                                className: h.replyHeader,
-                                children: null != r ? r : A.default.Messages.CHAT
+                                className: A.replyHeader,
+                                children: null != r ? r : h.default.Messages.CHAT
                             }), (0, i.jsx)(O, {
                                 onEnter: e => {
                                     s(e), _()
                                 },
-                                placeholder: null != n ? n : A.default.Messages.CHAT
+                                placeholder: null != n ? n : h.default.Messages.CHAT
                             })]
                         })
                     })
@@ -75,7 +75,7 @@ function(e, t, n) {
                 renderAttachButton: u,
                 onFocus: E,
                 channel: I
-            } = e, [T, S] = r.useState(""), [A, N] = r.useState((0, _.toRichValue)("")), O = () => {
+            } = e, [T, S] = r.useState(""), [h, N] = r.useState((0, _.toRichValue)("")), O = () => {
                 S(""), N((0, _.toRichValue)(""))
             }, [p, R] = r.useState(!1), C = d.ChatInputTypes.ATOMIC_REACTOR_REPLY_INPUT;
             return o && (C.emojis = {
@@ -83,7 +83,7 @@ function(e, t, n) {
             }), (0, i.jsx)(c.default, {
                 ref: t,
                 placeholder: n,
-                className: h.replyInput,
+                className: A.replyInput,
                 showRemainingCharsAfterCount: -1,
                 allowNewLines: !1,
                 maxCharacterCount: f.MAX_CHAR_COUNT,
@@ -93,7 +93,7 @@ function(e, t, n) {
                 },
                 type: C,
                 textValue: T,
-                richValue: A,
+                richValue: h,
                 onSubmit: e => {
                     let {
                         value: t
@@ -160,10 +160,10 @@ function(e, t, n) {
                     })
                 }),
                 children: () => (0, i.jsx)(l.Tooltip, {
-                    text: A.default.Messages.ADD_REACTION,
+                    text: h.default.Messages.ADD_REACTION,
                     children: e => (0, i.jsx)("div", {
                         ...e,
-                        className: h.reaction,
+                        className: A.reaction,
                         children: (0, i.jsx)(T.default, {
                             active: !1,
                             tabIndex: 0,
@@ -185,7 +185,7 @@ function(e, t, n) {
         } = e, [_, c] = r.useState(!1), E = r.useRef(null);
         return p(() => c(!1), E), (0, i.jsx)(i.Fragment, {
             children: (0, i.jsxs)("div", {
-                className: h.reactions,
+                className: A.reactions,
                 children: [u && (0, i.jsx)(R, {
                     onSelectEmoji: e => {
                         null != e && t({
@@ -215,10 +215,10 @@ function(e, t, n) {
                         })
                     },
                     children: (0, i.jsx)(l.Tooltip, {
-                        text: A.default.Messages.MESSAGE_ACTION_REPLY,
+                        text: h.default.Messages.MESSAGE_ACTION_REPLY,
                         children: e => (0, i.jsx)("button", {
                             ...e,
-                            className: a()(h.reaction, h.emojiButton),
+                            className: a()(A.reaction, A.emojiButton),
                             onClick: () => {
                                 t({
                                     interactionType: f.AtomicReactorInteractionTypes.ReplyBegin,

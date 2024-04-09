@@ -12,8 +12,8 @@ function(e, t, n) {
         T = n("598077"),
         f = n("592125"),
         S = n("375954"),
-        A = n("709054"),
-        h = n("124368"),
+        h = n("709054"),
+        A = n("124368"),
         m = n("981631");
     let N = new Set,
         O = {},
@@ -186,10 +186,10 @@ function(e, t, n) {
             if (n || i || null != r) return !1;
             let s = f.default.getChannel(t.channel_id);
             if (null == s || !E.THREAD_CHANNEL_TYPES.has(s.type) || ! function(e, t) {
-                    return !(t.type === m.MessageTypes.THREAD_STARTER_MESSAGE || e.isForumPost() && t.id === A.default.castChannelIdAsMessageId(e.id)) && !0
+                    return !(t.type === m.MessageTypes.THREAD_STARTER_MESSAGE || e.isForumPost() && t.id === h.default.castChannelIdAsMessageId(e.id)) && !0
                 }(s, t)) return !1;
             R(s, e => {
-                e.count = Math.min(e.count + 1, h.MAX_THREAD_MESSAGE_COUNT), e.mostRecentRawMessage = t, e.mostRecentMessage = null
+                e.count = Math.min(e.count + 1, A.MAX_THREAD_MESSAGE_COUNT), e.mostRecentRawMessage = t, e.mostRecentMessage = null
             })
         },
         MESSAGE_UPDATE: function(e) {
@@ -208,7 +208,7 @@ function(e, t, n) {
                 channelId: n
             } = e, i = O[n];
             if (null == i) return !1;
-            let r = A.default.castChannelIdAsMessageId(n) !== t,
+            let r = h.default.castChannelIdAsMessageId(n) !== t,
                 s = !N.has(t);
             C(i, e => {
                 var n;
@@ -223,7 +223,7 @@ function(e, t, n) {
             } = e, i = O[n];
             if (null == i) return !1;
             let r = t.filter(e => {
-                let t = A.default.castChannelIdAsMessageId(n) !== e,
+                let t = h.default.castChannelIdAsMessageId(n) !== e,
                     i = !N.has(e);
                 return t && i
             }).length;
@@ -244,7 +244,7 @@ function(e, t, n) {
                 else {
                     var n;
                     let i = null !== (n = e.messages[0]) && void 0 !== n ? n : null;
-                    t.count = e.messages.length >= h.MAX_THREAD_MESSAGE_COUNT ? h.MAX_THREAD_MESSAGE_COUNT : t.count, (null == i ? void 0 : i.type) !== m.MessageTypes.THREAD_STARTER_MESSAGE && (t.mostRecentRawMessage = i, t.mostRecentMessage = null)
+                    t.count = e.messages.length >= A.MAX_THREAD_MESSAGE_COUNT ? A.MAX_THREAD_MESSAGE_COUNT : t.count, (null == i ? void 0 : i.type) !== m.MessageTypes.THREAD_STARTER_MESSAGE && (t.mostRecentRawMessage = i, t.mostRecentMessage = null)
                 }
             })
         },

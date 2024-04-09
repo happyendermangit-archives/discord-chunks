@@ -20,12 +20,12 @@ function(e, t, n) {
         T = n("689938"),
         f = n("354585");
     let S = () => [T.default.Messages.APP_ICON_PIRATE, T.default.Messages.APP_ICON_PIRATE_1, T.default.Messages.APP_ICON_PIRATE_2, T.default.Messages.APP_ICON_PIRATE_3, T.default.Messages.APP_ICON_PIRATE_4],
-        A = () => {
+        h = () => {
             var e;
             return null !== (e = l().sample(S())) && void 0 !== e ? e : T.default.Messages.APP_ICON_PIRATE
         };
 
-    function h(e) {
+    function A(e) {
         let {
             id: t,
             className: n,
@@ -33,13 +33,13 @@ function(e, t, n) {
             isSelected: o = !1,
             tabIndex: l,
             children: c
-        } = e, [T, S] = r.useState(E.ICONS_BY_ID[t].name), h = t === _.PremiumAppIconIds.PIRATE, m = (0, u.useRadioItem)({
+        } = e, [T, S] = r.useState(E.ICONS_BY_ID[t].name), A = t === _.PremiumAppIconIds.PIRATE, m = (0, u.useRadioItem)({
             label: T,
             isSelected: o
         });
         return (0, i.jsx)(u.Tooltip, {
             text: T,
-            onTooltipShow: () => h && S(A()),
+            onTooltipShow: () => A && S(h()),
             children: e => (0, i.jsxs)("div", {
                 className: f.appIconSelectionContainer,
                 children: [(0, i.jsx)(u.Clickable, {
@@ -64,7 +64,7 @@ function(e, t, n) {
             tabIndex: s,
             onSelect: a
         } = e;
-        return (0, i.jsx)(h, {
+        return (0, i.jsx)(A, {
             onSelect: r ? void 0 : a,
             isSelected: n,
             id: t.id,

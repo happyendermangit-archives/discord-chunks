@@ -23,8 +23,8 @@ function(e, t, n) {
         T = n("314897"),
         f = n("592125"),
         S = n("131951"),
-        A = n("866960"),
-        h = n("19780"),
+        h = n("866960"),
+        A = n("19780"),
         m = n("936349"),
         N = n("704806"),
         O = n("626135"),
@@ -118,18 +118,18 @@ function(e, t, n) {
                     null === (i = this._connection) || void 0 === i || i.on(s.BaseConnectionEvent.ScreenshareFinish, (e, t, n, i, r, s, a, o, l, u, d, _, I, T) => {
                         let f = this.getMediaSessionId(),
                             S = this.getRTCConnectionId(),
-                            A = this.getGoLiveSource();
-                        (0, N.getSystemAnalyticsInfo)().then(h => {
+                            h = this.getGoLiveSource();
+                        (0, N.getSystemAnalyticsInfo)().then(A => {
                             var m, N, p;
                             let R = null;
-                            if (null != h) {
+                            if (null != A) {
                                 let {
                                     cpu_brand: e,
                                     cpu_vendor: t,
                                     cpu_memory: n,
                                     gpu_brand: i,
                                     gpu_memory: r
-                                } = h;
+                                } = A;
                                 R = {
                                     cpu_brand: e,
                                     cpu_vendor: t,
@@ -139,7 +139,7 @@ function(e, t, n) {
                                 }
                             }
                             let C = (null != e ? e : 0) + (null != t ? t : 0) + (null != n ? n : 0) + (null != i ? i : 0) + (null != r ? r : 0) + (null != s ? s : 0) + (null != o ? o : 0) + (null != T ? T : 0) + (null != I ? I : 0),
-                                D = (null == A ? void 0 : null === (m = A.desktopSource) || void 0 === m ? void 0 : m.sourcePid) != null ? E.default.getGameForPID(A.desktopSource.sourcePid) : null,
+                                D = (null == h ? void 0 : null === (m = h.desktopSource) || void 0 === m ? void 0 : m.sourcePid) != null ? E.default.getGameForPID(h.desktopSource.sourcePid) : null,
                                 {
                                     gameName: v,
                                     gameId: M,
@@ -165,7 +165,7 @@ function(e, t, n) {
                                 screens: u,
                                 windows: d,
                                 activity: _,
-                                soundshare_session: null !== (p = null == A ? void 0 : null === (N = A.desktopSource) || void 0 === N ? void 0 : N.soundshareSession) && void 0 !== p ? p : void 0,
+                                soundshare_session: null !== (p = null == h ? void 0 : null === (N = h.desktopSource) || void 0 === N ? void 0 : N.soundshareSession) && void 0 !== p ? p : void 0,
                                 share_game_name: v,
                                 share_game_id: M,
                                 share_game_exe: y,
@@ -200,7 +200,7 @@ function(e, t, n) {
             } = this.analyticsContext, {
                 ownerId: s,
                 guildId: a
-            } = this._streamContext, o = m.default.getRegion(h.default.getHostname()), l = I.BroadcastAutoBroadcast.getSetting(), {
+            } = this._streamContext, o = m.default.getRegion(A.default.getHostname()), l = I.BroadcastAutoBroadcast.getSetting(), {
                 gameName: u,
                 gameId: d,
                 exe: _,
@@ -233,9 +233,9 @@ function(e, t, n) {
             O.default.track(g.AnalyticEvents.VIDEO_STREAM_STARTED, {
                 ...this._getStreamAnalyticsProperties(),
                 ...e,
-                connection_type: A.default.getType(),
-                effective_connection_speed: A.default.getEffectiveConnectionSpeed(),
-                service_provider: A.default.getServiceProvider()
+                connection_type: h.default.getType(),
+                effective_connection_speed: h.default.getEffectiveConnectionSpeed(),
+                service_provider: h.default.getServiceProvider()
             })
         }
         _trackVideoEndStats(e) {

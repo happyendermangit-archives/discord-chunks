@@ -29,7 +29,7 @@ function(e, t, n) {
             return p
         },
         DISCOVERY_SIDEBAR_CATEGORIES: function() {
-            return A
+            return h
         },
         LANGUAGE_OPTIONS: function() {
             return O
@@ -41,7 +41,7 @@ function(e, t, n) {
             return E
         },
         SUGGESTED_TAGS_FOR_CATEGORIES: function() {
-            return h
+            return A
         },
         calculateLocaleOptions: function() {
             return N
@@ -55,9 +55,9 @@ function(e, t, n) {
         f = -2;
     (i = o || (o = {}))[i.Clans = -3] = "Clans", i[i.Hub = f] = "Hub", i[i.Communities = T] = "Communities", i[i.Activity = 1] = "Activity", i[i.Music = 2] = "Music", i[i.Television = 3] = "Television", i[i.Science = 5] = "Science", i[i.Education = 6] = "Education";
     let S = 1e3,
-        A = [1, 2, 3, 5, 6];
+        h = [1, 2, 3, 5, 6];
     (r = l || (l = {}))[r.GENERAL_CHATTING = 14] = "GENERAL_CHATTING", r[r.GAMING = 1] = "GAMING", r[r.MUSIC = 2] = "MUSIC", r[r.ENTERTAINMENT = 3] = "ENTERTAINMENT", r[r.CREATIVE_ARTS = 4] = "CREATIVE_ARTS", r[r.SCIENCE_AND_TECH = 5] = "SCIENCE_AND_TECH", r[r.EDUCATION = 6] = "EDUCATION", r[r.SPORTS = 7] = "SPORTS", r[r.FASHION_AND_BEAUTY = 8] = "FASHION_AND_BEAUTY", r[r.RELATIONSHIPS_AND_IDENTITY = 9] = "RELATIONSHIPS_AND_IDENTITY", r[r.TRAVEL_AND_FOOD = 10] = "TRAVEL_AND_FOOD", r[r.FITNESS_AND_HEALTH = 11] = "FITNESS_AND_HEALTH", r[r.FINANCE = 12] = "FINANCE", r[r.OTHER = 13] = "OTHER", r[r.EMOJI = 43] = "EMOJI", r[r.BOTS = 49] = "BOTS";
-    let h = {
+    let A = {
             14: [() => _.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GAMING, () => _.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ROBLOX, () => _.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE, () => _.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_TWITCH, () => _.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MINECRAFT, () => _.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_COMMUNITY, () => _.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_STREAMER, () => _.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FORTNITE, () => _.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ANIME, () => _.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ROLEPLAY],
             1: [() => _.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MINECRAFT, () => _.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ROBLOX, () => _.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_TWITCH, () => _.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE, () => _.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FORTNITE, () => _.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ESPORTS, () => _.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ROLEPLAY, () => _.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_VALORANT, () => _.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_LEAGUEOFLEGENDS, () => _.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FIVEM],
             2: [() => _.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_EDM, () => _.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_RAP, () => _.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_KPOP, () => _.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE, () => _.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MUSIC_PRODUCTION, () => _.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_HIPHOP, () => _.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SINGING, () => _.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GAMING, () => _.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_BTS, () => _.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_METAL],

@@ -41,8 +41,8 @@ function(e, t, n) {
         T = n("131951"),
         f = n("496675"),
         S = n("158776"),
-        A = n("19780"),
-        h = n("306680"),
+        h = n("19780"),
+        A = n("306680"),
         m = n("944486"),
         N = n("914010"),
         O = n("9156"),
@@ -120,7 +120,7 @@ function(e, t, n) {
         let t = d.default.getChannel(e);
         if (null == t) return null;
         let n = T.default.isVideoEnabled(),
-            i = A.default.getMediaSessionId();
+            i = h.default.getMediaSessionId();
         return {
             channel_id: t.id,
             channel_type: t.type,
@@ -163,7 +163,7 @@ function(e, t, n) {
         if (null == n) return {
             channel_id: e
         };
-        let i = h.default.getSnapshot(e, 10 * C.default.Millis.SECOND);
+        let i = A.default.getSnapshot(e, 10 * C.default.Millis.SECOND);
         return {
             channel_id: e,
             channel_was_unread: i.unread,

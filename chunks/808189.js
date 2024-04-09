@@ -17,8 +17,8 @@ function(e, t, n) {
         T = n("31698"),
         f = n("528771"),
         S = n("632184"),
-        A = n("170039"),
-        h = n("617506"),
+        h = n("170039"),
+        A = n("617506"),
         m = n("267642"),
         N = n("981631"),
         O = n("474936"),
@@ -50,7 +50,7 @@ function(e, t, n) {
             icon: E.default,
             getCopy: () => p.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_STREAM_QUALITY
         }, {
-            icon: h.default,
+            icon: A.default,
             getCopy: () => p.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_LARGER_FILE_UPLOADS.format({
                 uploadSizeLimit: p.default.Messages.FILE_UPLOAD_LIMIT_BOOSTED_GUILD_TIER_2
             })
@@ -67,7 +67,7 @@ function(e, t, n) {
             icon: c.default,
             getCopy: () => p.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_VANITY_URL
         }, {
-            icon: h.default,
+            icon: A.default,
             getCopy: () => p.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_LARGER_FILE_UPLOADS.format({
                 uploadSizeLimit: p.default.Messages.FILE_UPLOAD_LIMIT_BOOSTED_GUILD_TIER_3
             })
@@ -78,7 +78,7 @@ function(e, t, n) {
             icon: _.default,
             getCopy: () => p.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_ANIMATED_GUILD_BANNER
         }, {
-            icon: A.default,
+            icon: h.default,
             getCopy: () => p.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_STAGE_SEATS_AND_MORE.format({
                 numStageSeats: N.MAX_STAGE_VIDEO_USER_LIMIT_TIER3
             })

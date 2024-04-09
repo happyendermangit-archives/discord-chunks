@@ -13,7 +13,7 @@ function(e, t, n) {
         f = n("434529"),
         S = n("981631");
 
-    function A(e, t, n) {
+    function h(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -21,7 +21,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }(o = s || (s = {})).REQUIRED = "REQUIRED", o.OPTIONAL = "OPTIONAL", o.OPTIONAL_DEFAULT = "OPTIONAL_DEFAULT";
-    let h = "migrated",
+    let A = "migrated",
         m = {
             [S.OverlayWidgets.GUILDS]: {
                 minSize: {
@@ -257,7 +257,7 @@ function(e, t, n) {
             }), t
         }
     }
-    A(p, "displayName", "LayoutStore"), A(p, "persistKey", "LayoutStore"), A(p, "migrations", [() => {
+    h(p, "displayName", "LayoutStore"), h(p, "persistKey", "LayoutStore"), h(p, "migrations", [() => {
         let {
             pinnedWidgets: e,
             positions: t,
@@ -273,7 +273,7 @@ function(e, t, n) {
                         s = null != n ? n[e] : null,
                         a = {
                             id: e,
-                            layoutId: h,
+                            layoutId: A,
                             type: e,
                             anchor: r || {
                                 top: -1,
@@ -292,8 +292,8 @@ function(e, t, n) {
                 });
             return {
                 layouts: [
-                    [h, {
-                        id: h,
+                    [A, {
+                        id: A,
                         widgets: r
                     }]
                 ],
@@ -313,7 +313,7 @@ function(e, t, n) {
             return !i.has(t)
         }), s = Array.from(t).filter(e => {
             let [t] = e;
-            return t !== h
+            return t !== A
         });
         return s.forEach(e => {
             let [t, n] = e, i = null, s = null;
@@ -362,7 +362,7 @@ function(e, t, n) {
             let a = [];
             n.forEach((e, t) => {
                 let n = function(e) {
-                        let t = i[h];
+                        let t = i[A];
                         if (null != t)
                             for (let n of t.widgets) {
                                 let t = r[n];
@@ -447,7 +447,7 @@ function(e, t, n) {
             r = {
                 ...r
             }, delete r[t], u().forEach(i, (e, n) => {
-                if (n === h) return;
+                if (n === A) return;
                 let r = e.widgets.indexOf(t);
                 if (r >= 0) {
                     let t = [...e.widgets];

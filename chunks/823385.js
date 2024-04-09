@@ -15,8 +15,8 @@ function(e, t, n) {
         T = n("210887"),
         f = n("314897"),
         S = n("592125"),
-        A = n("703558"),
-        h = n("984933"),
+        h = n("703558"),
+        A = n("984933"),
         m = n("271383"),
         N = n("430824"),
         O = n("496675"),
@@ -119,7 +119,7 @@ function(e, t, n) {
                         limit: 100,
                         fuzzy: !0,
                         filter: () => !0,
-                        type: h.GUILD_VOCAL_CHANNELS_KEY
+                        type: A.GUILD_VOCAL_CHANNELS_KEY
                     })
             }
             let r = [],
@@ -131,7 +131,7 @@ function(e, t, n) {
             s.length > 0 && r.push((0, d.createHeaderResult)(M.default.Messages.QUICKSWITCHER_LAST_CHANNEL), ...s);
             let o = function(e) {
                 let t = [];
-                return A.default.getRecentlyEditedDrafts(A.DraftType.ChannelMessage).forEach(n => {
+                return h.default.getRecentlyEditedDrafts(h.DraftType.ChannelMessage).forEach(n => {
                     let {
                         channelId: i
                     } = n;
@@ -143,7 +143,7 @@ function(e, t, n) {
             o.length > 0 && r.push((0, d.createHeaderResult)(M.default.Messages.QUICKSWITCHER_DRAFTS), ...o);
             let l = p.default.getMentionChannelIds().filter(e => e !== i && !H.includes(e)).map(e => j(e)).filter(D.isNotNullish).reverse();
             if (l.length > 0 && (r.push((0, d.createHeaderResult)(M.default.Messages.QUICKSWITCHER_MENTIONS)), r = r.concat(l)), null != n) {
-                let e = h.default.getSelectableChannelIds(n).filter(e => {
+                let e = A.default.getSelectableChannelIds(n).filter(e => {
                     let t = S.default.getChannel(e);
                     return !(null == t || e === i || H.includes(e) || g.default.isChannelMuted(t.guild_id, e) || null != t.parent_id && g.default.isChannelMuted(t.guild_id, t.parent_id)) && (0, E.getHasImportantUnread)(t)
                 }).map(e => j(e)).filter(e => e);

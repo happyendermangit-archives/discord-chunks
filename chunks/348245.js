@@ -16,8 +16,8 @@ function(e, t, n) {
         T = n("131704"),
         f = n("433355"),
         S = n("592125"),
-        A = n("430824"),
-        h = n("306680"),
+        h = n("430824"),
+        A = n("306680"),
         m = n("944486"),
         N = n("914010"),
         O = n("70956"),
@@ -72,7 +72,7 @@ function(e, t, n) {
             focusTargetId: null
         }), c.default.commit(f));
         let m = s;
-        if (!o || E.default.isConnected() || f.loadingMore ? f.loadingMore || f.ready && !f.cached ? null != r ? m = !0 : I && v.log("Skipping fetch because no other conditions matched") : null == t || null != A.default.getGuild(t) ? m = !0 : I && v.log("Skipping fetch we are connected and have loaded messages") : m = !0, m) {
+        if (!o || E.default.isConnected() || f.loadingMore ? f.loadingMore || f.ready && !f.cached ? null != r ? m = !0 : I && v.log("Skipping fetch because no other conditions matched") : null == t || null != h.default.getGuild(t) ? m = !0 : I && v.log("Skipping fetch we are connected and have loaded messages") : m = !0, m) {
             if (c.default.commit(f.mutate({
                     loadingMore: !0
                 })), null != r) u.default.jumpToMessage({
@@ -84,7 +84,7 @@ function(e, t, n) {
                 jumpType: l
             });
             else if ((null == T ? void 0 : T.isThread()) && function(e) {
-                    if (h.default.hasOpenedThread(e)) return !1;
+                    if (A.default.hasOpenedThread(e)) return !1;
                     if (null == i) {
                         var t;
                         i = null !== (t = a.Storage.get(P, {})) && void 0 !== t ? t : {}
@@ -104,8 +104,8 @@ function(e, t, n) {
                 isPreload: o,
                 skipLocalFetch: _
             });
-            else if ((null == T ? void 0 : T.isThread()) && h.default.hasTrackedUnread(T.id) && !f.ready) {
-                let e = h.default.getTrackedAckMessageId(T.id);
+            else if ((null == T ? void 0 : T.isThread()) && A.default.hasTrackedUnread(T.id) && !f.ready) {
+                let e = A.default.getTrackedAckMessageId(T.id);
                 v.log("Jumping to most recent message in thread ".concat(T.id, " - ").concat(e)), u.default.fetchMessages({
                     channelId: n,
                     limit: C.MAX_MESSAGES_PER_CHANNEL,

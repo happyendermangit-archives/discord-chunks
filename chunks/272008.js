@@ -8,7 +8,7 @@ function(e, t, n) {
             return E
         },
         completeQuestPreview: function() {
-            return A
+            return h
         },
         dismissProgressTrackingFailureNotice: function() {
             return S
@@ -32,7 +32,7 @@ function(e, t, n) {
             return m
         },
         resetQuestPreviewStatus: function() {
-            return h
+            return A
         },
         sendHeartbeat: function() {
             return _
@@ -246,7 +246,7 @@ function(e, t, n) {
             streamKey: e
         })
     }
-    async function A(e) {
+    async function h(e) {
         try {
             let t = await i.HTTP.post({
                 url: u.Endpoints.QUESTS_PREVIEW_COMPLETE(e),
@@ -264,7 +264,7 @@ function(e, t, n) {
             })
         }
     }
-    async function h(e) {
+    async function A(e) {
         try {
             let t = await i.HTTP.del({
                 url: u.Endpoints.QUESTS_PREVIEW_STATUS(e),

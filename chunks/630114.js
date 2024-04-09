@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return A
+            return h
         }
     }), n("653041"), n("47120"), n("789020"), n("724458");
     var i = n("392711"),
@@ -21,15 +21,15 @@ function(e, t, n) {
         f = n("981631"),
         S = n("526761");
 
-    function A(e, t, n, i, E) {
+    function h(e, t, n, i, E) {
         if (t !== T.Mode.UseGreyDot) return [{
             label: "Setting the guild to a white dot unread",
             apply: (e, t) => {
-                h(e, t, !0)
+                A(e, t, !0)
             }
         }];
         let S = [],
-            A = Object.values(o.default.getMutableGuildChannelsForGuild(e.id)).filter(e => d.default.can(f.Permissions.VIEW_CHANNEL, e));
+            h = Object.values(o.default.getMutableGuildChannelsForGuild(e.id)).filter(e => d.default.can(f.Permissions.VIEW_CHANNEL, e));
         return S.push(... function(e, t) {
             if (!(_.default.isMuted(e.id) && !_.default.isTemporarilyMuted(e.id))) return [];
             let n = [{
@@ -49,7 +49,7 @@ function(e, t, n) {
                     })
                 }
             }), n
-        }(e, A)), S.push(function(e) {
+        }(e, h)), S.push(function(e) {
             if (_.default.getMessageNotifications(e.id) === f.UserNotificationSettings.ALL_MESSAGES) return {
                 label: "Setting the guild to only mentions since it is in care-a-little but was previously all-messages",
                 apply: e => {
@@ -60,7 +60,7 @@ function(e, t, n) {
             return {
                 label: "Setting the guild to a grey dot unread",
                 apply: (e, t) => {
-                    h(e, t, !1)
+                    A(e, t, !1)
                 }
             }
         }()), S.push(... function(e) {
@@ -76,7 +76,7 @@ function(e, t, n) {
                     for (let n of i) N(e, t, n.id, !0)
                 }
             }), t
-        }(A)), S.push(... function(e) {
+        }(h)), S.push(... function(e) {
             let t = [],
                 n = [];
             for (let t of e) _.default.isChannelMuted(t.guild_id, t.id) && t.isCategory() && !a.default.isCollapsed(t.id) && n.push(t);
@@ -89,7 +89,7 @@ function(e, t, n) {
                     })
                 }
             }), t
-        }(A)), S.push(... function(e) {
+        }(h)), S.push(... function(e) {
             let t = [],
                 n = [],
                 i = [];
@@ -110,7 +110,7 @@ function(e, t, n) {
                     for (let n of i) N(e, t, n.id, !1)
                 }
             }), t
-        }(A)), l.default.hasConsented(f.Consents.PERSONALIZATION) ? S.push(... function(e, t, n, i, s) {
+        }(h)), l.default.hasConsented(f.Consents.PERSONALIZATION) ? S.push(... function(e, t, n, i, s) {
             if (_.default.isMuted(e.id) && !_.default.isTemporarilyMuted(e.id)) return [];
             let a = new Set(t.map(e => e.id)),
                 o = i.filter(e => a.has(e.channel_id)),
@@ -141,7 +141,7 @@ function(e, t, n) {
                 label: "NOT setting ".concat(E.length, " channels to white-dot because they were only viewed a little."),
                 debug: E.map(e => "\n    - #".concat(e.name, " (").concat(JSON.stringify(l[e.id]), ")")).join("")
             }), I
-        }(e, A, n, i, E)) : S.push(... function(e, t) {
+        }(e, h, n, i, E)) : S.push(... function(e, t) {
             if (_.default.isMuted(e.id) && !_.default.isTemporarilyMuted(e.id)) return [];
             let n = [],
                 i = new Set(t.map(e => e.id)),
@@ -158,10 +158,10 @@ function(e, t, n) {
                     for (let n of a) N(e, t, n.id, !0)
                 }
             }), n
-        }(e, A)), S.filter(I.isNotNullish)
+        }(e, h)), S.filter(I.isNotNullish)
     }
 
-    function h(e, t, n) {
+    function A(e, t, n) {
         var i, r;
         e.flags = (0, E.setFlag)(null !== (r = null !== (i = e.flags) && void 0 !== i ? i : t.flags) && void 0 !== r ? r : 0, S.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES, n), e.flags = (0, E.setFlag)(e.flags, S.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS, !n)
     }

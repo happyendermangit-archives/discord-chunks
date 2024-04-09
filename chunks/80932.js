@@ -8,10 +8,10 @@ function(e, t, n) {
             return R
         },
         fetchEmoji: function() {
-            return h
+            return A
         },
         setDiversityColor: function() {
-            return A
+            return h
         },
         unfavoriteEmoji: function() {
             return C
@@ -39,13 +39,13 @@ function(e, t, n) {
         f = n("526761"),
         S = n("689938");
 
-    function A(e) {
+    function h(e) {
         c.PreloadedUserSettingsActionCreators.updateAsync("textAndImages", t => {
             t.diversitySurrogate = a.StringValue.create(), t.diversitySurrogate.value = e
         }, f.UserSettingsDelay.FREQUENT_USER_ACTION)
     }
 
-    function h(e) {
+    function A(e) {
         o.default.dispatch({
             type: "EMOJI_FETCH",
             guildId: e

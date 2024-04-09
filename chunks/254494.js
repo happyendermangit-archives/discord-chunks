@@ -42,8 +42,8 @@ function(e, t, n) {
             rowCount: T,
             getScrollOffsetForIndex: f,
             categoryHeight: S,
-            onScroll: A,
-            renderCategoryListItem: h,
+            onScroll: h,
+            renderCategoryListItem: A,
             rowCountBySection: m,
             renderSection: N
         } = e, O = u.useStore(e => e.activeCategoryIndex);
@@ -62,13 +62,13 @@ function(e, t, n) {
                     null === (i = n.current) || void 0 === i || i.scrollToSectionTop(e)
                 }
             }, [n, u]),
-            R = r.useCallback(e => h(s[e], e, () => p(e), O === e), [O, s, p, h]),
+            R = r.useCallback(e => A(s[e], e, () => p(e), O === e), [O, s, p, A]),
             C = r.useMemo(() => "function" == typeof S ? e => S(s[e], e) : S, [s, S]);
         return (0, i.jsxs)("div", {
             className: a()(d.wrapper, E),
             children: [(0, i.jsx)(o.default, {
                 listPadding: I,
-                onScroll: A,
+                onScroll: h,
                 ref: t,
                 renderRow: R,
                 rowCount: T,

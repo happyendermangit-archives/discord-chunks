@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         applyBackgroundOptionLive: function() {
-            return h
+            return A
         },
         applyBackgroundOptionPreview: function() {
             return m
@@ -40,7 +40,7 @@ function(e, t, n) {
             }
         })
     }
-    async function A(e, t, n) {
+    async function h(e, t, n) {
         var i, a;
         let l, d = !1;
         if (null == n) return S(e, t, s.FilterSettingsGraph.NONE);
@@ -88,12 +88,12 @@ function(e, t, n) {
             (0, u.errorApplyingMediaFilterSettings)()
         }
     }
-    async function h(e, t) {
+    async function A(e, t) {
         let {
             track: n = !0,
             location: i
         } = t;
-        await A(s.FilterSettingsKey.CAMERA_BACKGROUND_LIVE, {
+        await h(s.FilterSettingsKey.CAMERA_BACKGROUND_LIVE, {
             type: s.FilterTargetType.INPUT_DEVICE
         }, e), n && (0, _.trackBackgroundOptionUpdated)(e, i, "Enabled")
     }
@@ -102,7 +102,7 @@ function(e, t, n) {
             track: i = !0,
             location: r
         } = n;
-        (0, u.startApplyMediaFilterSettings)(), await A(s.FilterSettingsKey.CAMERA_BACKGROUND_PREVIEW, {
+        (0, u.startApplyMediaFilterSettings)(), await h(s.FilterSettingsKey.CAMERA_BACKGROUND_PREVIEW, {
             type: s.FilterTargetType.STREAM,
             streamId: t
         }, e), i && (0, _.trackBackgroundOptionUpdated)(e, r, "Preview")
@@ -112,7 +112,7 @@ function(e, t, n) {
         let e = a.default.getCurrentUser();
         if (null == e) return;
         let t = (0, l.getLastUsedVideoBackgroundOption)(e);
-        (0, E.default)() && !d.default.hasBeenApplied && null != t && h(t, {
+        (0, E.default)() && !d.default.hasBeenApplied && null != t && A(t, {
             track: !1
         }).catch(T.NOOP)
     }

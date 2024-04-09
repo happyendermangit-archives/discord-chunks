@@ -25,7 +25,7 @@ function(e, t, n) {
             submit: T,
             hideAutocomplete: f,
             moveSelection: S
-        } = e, A = i.useCallback(e => {
+        } = e, h = i.useCallback(e => {
             var i;
             switch (e.which) {
                 case l.KeyboardKeys.ARROW_UP:
@@ -82,7 +82,7 @@ function(e, t, n) {
             e.which === l.KeyboardKeys.ENTER && (!e.altKey && !e.shiftKey && (!u || e.ctrlKey) && !(0, a.hasOpenPlainTextCodeBlock)(t) || !I) && (e.preventDefault(), e.stopPropagation(), T()), null == d || d(e)
         }, [I, n.id, u, t, f, S, E, d, c, T]);
         return {
-            handleKeyDown: A,
+            handleKeyDown: h,
             handleKeyUp: i.useCallback(e => {
                 null == _ || _(e)
             }, [_])

@@ -17,7 +17,7 @@ function(e, t, n) {
             return N
         },
         getHeroAssetUrl: function() {
-            return h
+            return A
         },
         getPlatformString: function() {
             return g
@@ -38,7 +38,7 @@ function(e, t, n) {
             return G
         },
         getRewardAssetUrl: function() {
-            return A
+            return h
         },
         getVideoAssetMimeType: function() {
             return k
@@ -190,8 +190,8 @@ function(e, t, n) {
             errors: e.errors
         }
     }
-    let A = e => "".concat(d).concat(e.id, "/").concat(e.config.assets.rewardTile),
-        h = e => "".concat(d).concat(e.id, "/").concat(e.config.assets.hero),
+    let h = e => "".concat(d).concat(e.id, "/").concat(e.config.assets.rewardTile),
+        A = e => "".concat(d).concat(e.id, "/").concat(e.config.assets.hero),
         m = e => "".concat(d).concat(e.id, "/").concat(e.config.assets.questBarHero),
         N = e => "".concat(d).concat(e.id, "/").concat(e.config.assets.gameTile),
         O = (e, t) => "".concat(d).concat(e.id, "/").concat(t, "/").concat(e.config.assets.logotype),

@@ -98,7 +98,7 @@ function(e, t, n) {
             return S.ComboboxItem
         },
         ComboboxPopout: function() {
-            return A.ComboboxPopout
+            return h.ComboboxPopout
         },
         ConfirmModal: function() {
             return er.ConfirmModal
@@ -107,7 +107,7 @@ function(e, t, n) {
             return el.DEFAULT_MODAL_CONTEXT
         },
         DateInput: function() {
-            return h.DateInput
+            return A.DateInput
         },
         DeclarativeConfirmModal: function() {
             return er.DeclarativeConfirmModal
@@ -362,7 +362,7 @@ function(e, t, n) {
             return eS.PopoutCSSAnimator
         },
         PopoutList: function() {
-            return eA.PopoutList
+            return eh.PopoutList
         },
         Progress: function() {
             return e_.Progress
@@ -371,7 +371,7 @@ function(e, t, n) {
             return ec.ProgressCircle
         },
         RadioGroup: function() {
-            return eh.RadioGroup
+            return eA.RadioGroup
         },
         RedesignIconContextProvider: function() {
             return e3.RedesignIconContextProvider
@@ -677,10 +677,10 @@ function(e, t, n) {
             return H.usePrivateHeadingLevel
         },
         useRadioGroup: function() {
-            return eh.useRadioGroup
+            return eA.useRadioGroup
         },
         useRadioItem: function() {
-            return eh.useRadioItem
+            return eA.useRadioItem
         },
         useRedesignIconContext: function() {
             return e3.useRedesignIconContext
@@ -725,8 +725,8 @@ function(e, t, n) {
         T = n("1561"),
         f = n("605578"),
         S = n("838331"),
-        A = n("6745"),
-        h = n("67979"),
+        h = n("6745"),
+        A = n("67979"),
         m = n("507274"),
         N = n("438784"),
         O = n("799151"),
@@ -779,8 +779,8 @@ function(e, t, n) {
         eT = n("920676"),
         ef = n("235874"),
         eS = n("126306"),
-        eA = n("119638"),
-        eh = n("538534"),
+        eh = n("119638"),
+        eA = n("538534"),
         em = n("346314"),
         eN = n("109161"),
         eO = n("562701"),

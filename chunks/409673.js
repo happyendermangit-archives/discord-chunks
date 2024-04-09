@@ -23,8 +23,8 @@ function(e, t, n) {
         T = n("594174"),
         f = n("225196"),
         S = n("887208"),
-        A = n("897353"),
-        h = n("729285"),
+        h = n("897353"),
+        A = n("729285"),
         m = n("632184"),
         N = n("208049"),
         O = n("763296"),
@@ -164,7 +164,7 @@ function(e, t, n) {
                     })
                 }), (0, i.jsxs)("div", {
                     className: v.buttonOverlayActions,
-                    children: [ec && eT, !V && !e_ && (0, i.jsx)(A.default, {
+                    children: [ec && eT, !V && !e_ && (0, i.jsx)(h.default, {
                         className: v.playIcon
                     }), ec && eI()]
                 })]
@@ -235,7 +235,7 @@ function(e, t, n) {
                                     className: v.buttonOverlayActions,
                                     children: [eT, (0, i.jsxs)("div", {
                                         className: v.addButton,
-                                        children: [(0, i.jsx)(h.default, {
+                                        children: [(0, i.jsx)(A.default, {
                                             className: v.plusSign
                                         }), (0, i.jsx)(_.Text, {
                                             variant: "text-xs/medium",

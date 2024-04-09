@@ -22,9 +22,9 @@ function(e, t, n) {
                 children: f = []
             } = e,
             S = null,
-            A = d.default.Messages.VERIFIED_BOT_TOOLTIP,
+            h = d.default.Messages.VERIFIED_BOT_TOOLTIP,
             {
-                enabled: h
+                enabled: A
             } = o.AppLauncherOnboardingExperiment.useExperiment({
                 location: "Bot Tag"
             }, {
@@ -33,7 +33,7 @@ function(e, t, n) {
         switch (r) {
             case u.BotTagTypes.SYSTEM_DM:
             case u.BotTagTypes.OFFICIAL:
-                E = !0, A = d.default.Messages.DISCORD_SYSTEM_MESSAGE_BOT_TAG_TOOLTIP, S = d.default.Messages.SYSTEM_DM_TAG_SYSTEM;
+                E = !0, h = d.default.Messages.DISCORD_SYSTEM_MESSAGE_BOT_TAG_TOOLTIP, S = d.default.Messages.SYSTEM_DM_TAG_SYSTEM;
                 break;
             case u.BotTagTypes.SERVER:
                 S = d.default.Messages.BOT_TAG_SERVER;
@@ -45,20 +45,20 @@ function(e, t, n) {
                 S = d.default.Messages.STAFF_BADGE_TOOLTIP;
                 break;
             case u.BotTagTypes.AI:
-                E = !0, A = d.default.Messages.AI_GENERATED_TOOLTIP, S = d.default.Messages.AI_TAG;
+                E = !0, h = d.default.Messages.AI_GENERATED_TOOLTIP, S = d.default.Messages.AI_TAG;
                 break;
             case u.BotTagTypes.REMIX:
                 E = !1, S = d.default.Messages.REMIXING_TAG;
                 break;
             case u.BotTagTypes.BOT:
             default:
-                S = h ? d.default.Messages.APP_TAG : d.default.Messages.BOT_TAG_BOT
+                S = A ? d.default.Messages.APP_TAG : d.default.Messages.BOT_TAG_BOT
         }
         let m = r === u.BotTagTypes.ORIGINAL_POSTER,
             N = r === u.BotTagTypes.REMIX,
             O = null;
         E && (O = (0, i.jsx)(a.Tooltip, {
-            text: A,
+            text: h,
             align: "center",
             position: "top",
             children: e => (0, i.jsx)(l.default, {

@@ -29,7 +29,7 @@ function(e, t, n) {
             children: T
         } = e, {
             selectedSkuId: f
-        } = (0, u.usePaymentContext)(), [S, A] = r.useState(n), [h, m] = r.useState(), [N, O] = r.useState(!1), p = (0, l.shouldShowCustomGiftExperience)(S), R = (0, a.useIsSeasonalGiftingActive)(), {
+        } = (0, u.usePaymentContext)(), [S, h] = r.useState(n), [A, m] = r.useState(), [N, O] = r.useState(!1), p = (0, l.shouldShowCustomGiftExperience)(S), R = (0, a.useIsSeasonalGiftingActive)(), {
             enabled: C
         } = a.default.useExperiment({
             location: "PaymentContextProvider"
@@ -51,8 +51,8 @@ function(e, t, n) {
                 giftCode: b,
                 giftMessage: o,
                 giftRecipient: S,
-                setGiftRecipient: A,
-                giftRecipientError: h,
+                setGiftRecipient: h,
+                giftRecipientError: A,
                 setGiftRecipientError: m,
                 validatingGiftRecipient: N,
                 setValidatingGiftRecipient: O,

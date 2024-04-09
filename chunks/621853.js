@@ -24,14 +24,14 @@ function(e, t, n) {
         T = new Set,
         f = {},
         S = {},
-        A = {},
         h = {},
+        A = {},
         m = {},
         N = !1,
         O = !1;
 
     function p() {
-        I.clear(), T.clear(), f = {}, S = {}, A = {}, h = {}, m = {}, N = !1
+        I.clear(), T.clear(), f = {}, S = {}, h = {}, A = {}, m = {}, N = !1
     }
 
     function R(e) {
@@ -62,7 +62,7 @@ function(e, t, n) {
     }
 
     function L(e) {
-        T.delete(e.userId), A[e.userId] = g(e.mutualFriends), h[e.userId] = e.mutualFriends.length
+        T.delete(e.userId), h[e.userId] = g(e.mutualFriends), A[e.userId] = e.mutualFriends.length
     }
 
     function D() {
@@ -95,9 +95,9 @@ function(e, t, n) {
         }
         if (null != e.mutual_friends_count) {
             let t = e.mutual_friends_count;
-            h[e.user.id] = t
+            A[e.user.id] = t
         }
-        null != e.mutual_friends && (A[e.user.id] = g(e.mutual_friends), h[e.user.id] = e.mutual_friends.length);
+        null != e.mutual_friends && (h[e.user.id] = g(e.mutual_friends), A[e.user.id] = e.mutual_friends.length);
         let D = null !== (_ = e.premium_since) && void 0 !== _ ? _ : null,
             v = e.application;
         if (f[e.user.id] = {
@@ -270,10 +270,10 @@ function(e, t, n) {
             return null == t ? null : null === (n = S[e]) || void 0 === n ? void 0 : n[t]
         }
         getMutualFriends(e) {
-            return A[e]
+            return h[e]
         }
         getMutualFriendsCount(e) {
-            return h[e]
+            return A[e]
         }
         getMutualGuilds(e) {
             return m[e]

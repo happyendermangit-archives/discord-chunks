@@ -80,8 +80,8 @@ function(e, t, n) {
         T = 4,
         f = [a.RRule.MO.weekday, a.RRule.TU.weekday, a.RRule.WE.weekday, a.RRule.TH.weekday, a.RRule.FR.weekday],
         S = [a.RRule.SU.weekday, a.RRule.MO.weekday, a.RRule.TU.weekday, a.RRule.WE.weekday, a.RRule.TH.weekday],
-        A = [a.RRule.TU.weekday, a.RRule.WE.weekday, a.RRule.TH.weekday, a.RRule.FR.weekday, a.RRule.SA.weekday],
-        h = [a.RRule.SA.weekday, a.RRule.SU.weekday],
+        h = [a.RRule.TU.weekday, a.RRule.WE.weekday, a.RRule.TH.weekday, a.RRule.FR.weekday, a.RRule.SA.weekday],
+        A = [a.RRule.SA.weekday, a.RRule.SU.weekday],
         m = [a.RRule.FR.weekday, a.RRule.SA.weekday],
         N = [a.RRule.SU.weekday, a.RRule.MO.weekday],
         O = [a.RRule.SU.weekday, a.RRule.MO.weekday, a.RRule.TU.weekday, a.RRule.WE.weekday, a.RRule.TH.weekday, a.RRule.FR.weekday, a.RRule.SA.weekday],
@@ -255,13 +255,13 @@ function(e, t, n) {
     function F(e) {
         let t = v(e.toDate().getDay()),
             n = v(e.toDate().getUTCDay());
-        return n.weekday - t.weekday > 0 ? A : n.weekday - t.weekday < 0 ? S : f
+        return n.weekday - t.weekday > 0 ? h : n.weekday - t.weekday < 0 ? S : f
     }
 
     function x(e) {
         let t = v(e.toDate().getDay()),
             n = v(e.toDate().getUTCDay());
-        return n.weekday - t.weekday > 0 ? N : n.weekday - t.weekday < 0 ? m : h
+        return n.weekday - t.weekday > 0 ? N : n.weekday - t.weekday < 0 ? m : A
     }
 
     function H(e, t) {
