@@ -191,24 +191,24 @@ function(e, t, n) {
             let n = Math.max(0, t - e.length);
             if (1 === e.length) return n > 0 ? h.default.Messages.POLL_VOTES_TOOLTIP_1_N.format({
                 a: e[0],
-                n: n
+                n: n.toLocaleString()
             }) : e[0];
             if (2 === e.length) return n > 0 ? h.default.Messages.POLL_VOTES_TOOLTIP_2_N.format({
                 a: e[0],
                 b: e[1],
-                n: n
+                n: n.toLocaleString()
             }) : h.default.Messages.POLL_VOTES_TOOLTIP_2.format({
                 a: e[0],
                 b: e[1]
             });
             if (3 !== e.length) return h.default.Messages.POLL_VOTES_TOOLTIP_N.format({
-                n: n
+                n: n.toLocaleString()
             });
             else return n > 0 ? h.default.Messages.POLL_VOTES_TOOLTIP_3_N.format({
                 a: e[0],
                 b: e[1],
                 c: e[2],
-                n: n
+                n: n.toLocaleString()
             }) : h.default.Messages.POLL_VOTES_TOOLTIP_3.format({
                 a: e[0],
                 b: e[1],
