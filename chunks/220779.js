@@ -73,11 +73,12 @@ function(e, t, n) {
                 showEmojiButton: o = !1,
                 autoCompletePosition: l,
                 renderAttachButton: u,
-                onFocus: E
-            } = e, [I, T] = r.useState(""), [S, A] = r.useState((0, _.toRichValue)("")), N = () => {
-                T(""), A((0, _.toRichValue)(""))
-            }, O = d.ChatInputTypes.ATOMIC_REACTOR_REPLY_INPUT;
-            return o && (O.emojis = {
+                onFocus: E,
+                channel: I
+            } = e, [T, S] = r.useState(""), [A, N] = r.useState((0, _.toRichValue)("")), O = () => {
+                S(""), N((0, _.toRichValue)(""))
+            }, [p, R] = r.useState(!1), C = d.ChatInputTypes.ATOMIC_REACTOR_REPLY_INPUT;
+            return o && (C.emojis = {
                 button: !0
             }), (0, i.jsx)(c.default, {
                 ref: t,
@@ -86,13 +87,13 @@ function(e, t, n) {
                 showRemainingCharsAfterCount: -1,
                 allowNewLines: !1,
                 maxCharacterCount: f.MAX_CHAR_COUNT,
-                channel: m,
+                channel: null != I ? I : m,
                 onChange: (e, t, n) => {
-                    T(t), A(n)
+                    S(t), N(n)
                 },
-                type: O,
-                textValue: I,
-                richValue: S,
+                type: C,
+                textValue: T,
+                richValue: A,
                 onSubmit: e => {
                     let {
                         value: t
@@ -100,14 +101,19 @@ function(e, t, n) {
                     return t.length > f.MAX_CHAR_COUNT ? Promise.resolve({
                         shouldClear: !1,
                         shouldRefocus: !0
-                    }) : (s(t), N(), Promise.resolve({
+                    }) : (s(t), O(), Promise.resolve({
                         shouldClear: !0,
                         shouldRefocus: !1
                     }))
                 },
                 setEditorRef: a,
-                focused: !1,
-                onFocus: E,
+                focused: p,
+                onFocus: () => {
+                    null == E || E(), R(!0)
+                },
+                onBlur: () => {
+                    R(!1)
+                },
                 disableThemedBackground: !0,
                 emojiPickerCloseOnModalOuterClick: !0,
                 disabled: !1,
