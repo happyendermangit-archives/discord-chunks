@@ -1332,6 +1332,8 @@ function(_, E, e) {
             USER_OFFER_ACKNOWLEDGED: "/users/@me/billing/user-offer/ack",
             CHURN_USER_OFFER: "/users/@me/billing/churn-user-offer",
             USER_OFFER_REDEEM: "/users/@me/billing/user-offer/redeem",
+            USER_PERKS_DEMOS: "/users/@me/perks-demos",
+            USER_PERKS_DEMOS_ACTIVATE: _ => "/users/@me/activate-perk-demo/".concat(_),
             GUILD_DISCOVERY: "/discoverable-guilds",
             GUILD_DISCOVERY_CATEGORIES: "/discovery/categories",
             GUILD_DISCOVERY_VALID_TERM: "/discovery/valid-term",

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return T
+            return S
         }
     });
     var i = n("735250");
@@ -12,35 +12,37 @@ function(e, t, n) {
         a = n("451467"),
         o = n("174609"),
         l = n("928518"),
-        u = n("430824"),
-        d = n("131951"),
-        _ = n("594174"),
-        c = n("358085"),
-        E = n("981631"),
-        I = n("37113");
+        u = n("120522"),
+        d = n("933843"),
+        _ = n("430824"),
+        c = n("131951"),
+        E = n("594174"),
+        I = n("358085"),
+        T = n("981631"),
+        f = n("37113");
 
-    function T(e, t, T) {
-        let f = l.default.getWindowOpen(E.PopoutWindowKeys.CHANNEL_CALL_POPOUT) ? E.PopoutWindowKeys.CHANNEL_CALL_POPOUT : null;
-        if ((0, o.default)(f), c.isPlatformEmbedded)(0, r.openModalLazy)(async () => {
+    function S(e, t, S) {
+        let h = l.default.getWindowOpen(T.PopoutWindowKeys.CHANNEL_CALL_POPOUT) ? T.PopoutWindowKeys.CHANNEL_CALL_POPOUT : null;
+        if ((0, o.default)(h), I.isPlatformEmbedded)(0, r.openModalLazy)(async () => {
             let {
                 default: t
             } = await Promise.all([n.e("49237"), n.e("99387"), n.e("79477"), n.e("88099")]).then(n.bind(n, "60594"));
             return n => (0, i.jsx)(t, {
                 ...n,
                 guildId: e,
-                analyticsLocation: T
+                analyticsLocation: S
             })
-        });
+        }), (0, d.shouldFetchPerksDemos)() && (0, u.fetchPerksDemos)();
         else {
-            var S;
-            let n = (0, a.default)(I.ApplicationStreamPresets.PRESET_CUSTOM, I.ApplicationStreamResolutions.RESOLUTION_1080, I.ApplicationStreamFPS.FPS_30, _.default.getCurrentUser(), null === (S = u.default.getGuild(e)) || void 0 === S ? void 0 : S.premiumTier) ? {
+            var A;
+            let n = (0, a.default)(f.ApplicationStreamPresets.PRESET_CUSTOM, f.ApplicationStreamResolutions.RESOLUTION_1080, f.ApplicationStreamFPS.FPS_30, E.default.getCurrentUser(), null === (A = _.default.getGuild(e)) || void 0 === A ? void 0 : A.premiumTier) ? {
                 width: 1920,
                 height: 1080
             } : {
                 width: 1280,
                 height: 720
             };
-            d.default.getMediaEngine().getDesktopSource(n, !0).then(n => {
+            c.default.getMediaEngine().getDesktopSource(n, !0).then(n => {
                 (0, s.startStream)(e, t, {
                     pid: null,
                     sourceId: n,
