@@ -1,6 +1,9 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
+        VoiceEnrichmentsExperiment: function() {
+            return u
+        },
         isEligibleForContentInventoryV1: function() {
             return a
         }
@@ -88,6 +91,23 @@ function(e, t, n) {
                 id: 1,
                 label: "Treament",
                 config: {}
+            }]
+        }),
+        u = (0, i.createExperiment)({
+            kind: "user",
+            id: "2024-04_content_inventory_voice_enrichments",
+            label: "Experimental enrichments",
+            defaultConfig: {
+                showBadge: !1,
+                showJoinButton: !1
+            },
+            treatments: [{
+                id: 1,
+                label: "Treament",
+                config: {
+                    showBadge: !0,
+                    showJoinButton: !0
+                }
             }]
         })
 }

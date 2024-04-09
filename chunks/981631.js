@@ -1363,7 +1363,7 @@ function(_, E, e) {
             ACTIVITY_SHELF: "/activities/shelf",
             ACTIVITY_CHANNEL_LAUNCH: (_, E) => "/activities/".concat(_, "/").concat(E),
             ACTIVITY_TEST_MODE: _ => "/activities/".concat(_, "/test-mode"),
-            ACTIVITY_UPLOAD_ATTACHMENT: _ => "/activities/".concat(_, "/attachment"),
+            APPLICATION_UPLOAD_ATTACHMENT: _ => "/applications/".concat(_, "/attachment"),
             CHANNEL_THREADS: _ => "/channels/".concat(_, "/threads"),
             CHANNEL_MESSAGE_THREADS: (_, E) => "/channels/".concat(_, "/messages/").concat(E, "/threads"),
             APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS: (_, E, e) => "/applications/".concat(_, "/guilds/").concat(E, "/commands/").concat(e, "/permissions"),

@@ -193,7 +193,7 @@ function(e, t, n) {
                 type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_START"
             });
             let i = await r.HTTP.post({
-                url: C.Endpoints.ACTIVITY_UPLOAD_ATTACHMENT(e),
+                url: C.Endpoints.APPLICATION_UPLOAD_ATTACHMENT(e),
                 query: {
                     channel_id: t
                 },
