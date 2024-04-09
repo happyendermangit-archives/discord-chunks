@@ -12,7 +12,7 @@ function(e, t, n) {
         if (l.has(e)) return "";
         try {
             let t = 0 > e.indexOf("‍") ? e.replace("️", "") : e;
-            return n("99378")("@discordapp/twemoji/dist/svg/".concat(i.default.convert.toCodePoint(t), ".svg").replace("@discordapp/twemoji/dist/svg/", "./"))
+            return n("778832")("@discordapp/twemoji/dist/svg/".concat(i.default.convert.toCodePoint(t), ".svg").replace("@discordapp/twemoji/dist/svg/", "./"))
         } catch (t) {
             return console.warn(t, "no emoji for", e), ""
         }

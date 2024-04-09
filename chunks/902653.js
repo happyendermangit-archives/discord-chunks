@@ -32,7 +32,7 @@ function(e, t, n) {
     (r = i || (i = {})).Stopped = "stopped", r.Playing = "playing", r.Looping = "looping", r.Paused = "paused";
     let T = new Map;
     async function f(e) {
-        let t = await fetch(n("693180")("../../sounds/".concat(e, ".mp3").replace("../../sounds/", "./"))).then(e => e.arrayBuffer());
+        let t = await fetch(n("236816")("../../sounds/".concat(e, ".mp3").replace("../../sounds/", "./"))).then(e => e.arrayBuffer());
         return (0, o.getOrCreateAudioContext)().decodeAudioData(t)
     }
     async function S(e) {
@@ -99,7 +99,7 @@ function(e, t, n) {
             var e;
             return this._audio = null !== (e = this._audio) && void 0 !== e ? e : new Promise((e, t) => {
                 let i = new Audio;
-                i.src = n("693180")("../../sounds/".concat(this.name, ".mp3").replace("../../sounds/", "./")), i.onloadeddata = () => {
+                i.src = n("236816")("../../sounds/".concat(this.name, ".mp3").replace("../../sounds/", "./")), i.onloadeddata = () => {
                     i.volume = Math.min(d.default.getOutputVolume() / 100 * this._volume, 1), _.isPlatformEmbedded && i.setSinkId(I), e(i)
                 }, i.onerror = () => t(Error("could not play audio")), i.onended = () => this._destroyAudio(), i.load()
             }), this._audio

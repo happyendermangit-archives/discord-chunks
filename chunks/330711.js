@@ -6,7 +6,7 @@ function(e, t, n) {
     n("211604");
     let s = new r.default({
         initialLocale: i.parse(document.cookie).locale,
-        getMessages: e => n("479187")("./messages/".concat(e).replace("./messages/", "./")),
+        getMessages: e => n("677762")("./messages/".concat(e).replace("./messages/", "./")),
         getLanguages: () => n("34859")
     });
     s.addListener("locale", e => {

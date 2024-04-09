@@ -120,7 +120,27 @@ function(e, t, n) {
     t.default = {
         fetchVerificationForm: c,
         updateVerificationForm: E,
+        updateVerificationFormFieldsLocal: (e, t) => {
+            r.default.dispatch({
+                type: "MEMBER_VERIFICATION_FORM_UPDATE",
+                guildId: e,
+                form: {
+                    formFields: t
+                },
+                isLocalUpdate: !0
+            })
+        },
         updateVerificationFormDescription: I,
+        updateVerificationFormDescriptionLocal: (e, t) => {
+            r.default.dispatch({
+                type: "MEMBER_VERIFICATION_FORM_UPDATE",
+                guildId: e,
+                form: {
+                    description: t
+                },
+                isLocalUpdate: !0
+            })
+        },
         enableVerificationForm: T,
         submitVerificationForm: f
     }

@@ -85,7 +85,7 @@ function(e, t, n) {
                 name: r
             } = e;
             try {
-                t = n("687332")("@discordapp/common/images/flags/".concat(e.value, ".png").replace("@discordapp/common/images/flags/", "./"))
+                t = n("333369")("@discordapp/common/images/flags/".concat(e.value, ".png").replace("@discordapp/common/images/flags/", "./"))
             } catch (e) {
                 t = n("1474")
             }

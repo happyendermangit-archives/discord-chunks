@@ -20,7 +20,7 @@ function(e, t, n) {
             let r, s, a;
             if (!e.useSpriteSheet) return;
             let o = null != e.index ? e.index : 0;
-            e.hasDiversity ? (r = n("973607")("./images/spritesheet-".concat(t, "-").concat(i, ".png").replace("./images/", "./")), s = S(i), a = I.EmojiSprites.DiversityPerRow) : (r = n("273735")("./images/spritesheet-emoji-".concat(i, ".png").replace("./images/", "./")), s = f(i), a = I.EmojiSprites.NonDiversityPerRow);
+            e.hasDiversity ? (r = n("36837")("./images/spritesheet-".concat(t, "-").concat(i, ".png").replace("./images/", "./")), s = S(i), a = I.EmojiSprites.DiversityPerRow) : (r = n("12302")("./images/spritesheet-emoji-".concat(i, ".png").replace("./images/", "./")), s = f(i), a = I.EmojiSprites.NonDiversityPerRow);
             let l = -o % a * i,
                 u = -Math.floor(o / a) * i;
             return {

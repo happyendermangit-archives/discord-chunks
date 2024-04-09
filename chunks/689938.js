@@ -16,7 +16,7 @@ function(e, t, n) {
             ...e
         }),
         E = new s.default({
-            getMessages: e => "en-US" === e ? c(o()) : n("594802")("./messages/".concat(e, ".jsona").replace("./messages/", "./")).then(e => {
+            getMessages: e => "en-US" === e ? c(o()) : n("290034")("./messages/".concat(e, ".jsona").replace("./messages/", "./")).then(e => {
                 let {
                     default: t
                 } = e;

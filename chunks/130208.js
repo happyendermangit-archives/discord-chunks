@@ -19,7 +19,7 @@ function(e, t, n) {
     let I = e => {
             let {
                 filename: t
-            } = e, r = (0, d.classifyFileName)(t), s = n("141881")("../images/file_icons/icon-file-".concat(r, ".svg").replace("../images/file_icons/", "./"));
+            } = e, r = (0, d.classifyFileName)(t), s = n("435362")("../images/file_icons/icon-file-".concat(r, ".svg").replace("../images/file_icons/", "./"));
             return (0, i.jsx)("img", {
                 className: E.icon,
                 src: s,

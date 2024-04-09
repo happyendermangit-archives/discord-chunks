@@ -104,7 +104,7 @@ function(e, t, n) {
             }(R), function() {
                 let [e, t] = r.useState([]);
                 return r.useEffect(() => {
-                    Promise.all(_.fontsToPreload.map(e => n("651434")("@discordapp/tokens/typography/generated/gg-sans/".concat(e, ".woff2").replace("@discordapp/tokens/typography/generated/gg-sans/", "./")).then(e => {
+                    Promise.all(_.fontsToPreload.map(e => n("867444")("@discordapp/tokens/typography/generated/gg-sans/".concat(e, ".woff2").replace("@discordapp/tokens/typography/generated/gg-sans/", "./")).then(e => {
                         let {
                             default: t
                         } = e;
