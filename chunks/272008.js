@@ -53,7 +53,7 @@ function(e, t, n) {
             try {
                 let e = (await i.HTTP.get({
                     url: u.Endpoints.QUESTS_CURRENT_QUESTS
-                })).body.quests.map(e => (0, l.questWithUserStatusFromServer)(e)).filter(e => {
+                })).body.quests.filter(e => (0, l.isQuestWithKnownConfigVersion)(e)).map(e => (0, l.questWithUserStatusFromServer)(e)).filter(e => {
                     var t;
                     return (null === (t = e.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null || e.config.rewardCodePlatforms.length > 0
                 });
