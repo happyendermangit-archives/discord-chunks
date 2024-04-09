@@ -14882,7 +14882,7 @@ function(e) {
         REFERRAL_PROGRAM_REMIND_FRIENDS: "Remind Friends",
         REFERRAL_PROGRAM_PROGRESS_BAR_HEADER_COOL_DOWN: "More Trials Incoming",
         REFERRAL_PROGRAM_PROGRESS_BAR_SUBHEADER_ALL_SHARED: "More trials are on the way dear! You get {numReferrals} trials to share every {numMonths} months. [Learn more]({helpdeskArticle}).",
-        REFERRAL_PROGRAM_FRIEND_SELECT_HEADER: "Select up to {numReferrals} friends to share a Nitro trial with. The trial will be sent in a direct message.",
+        REFERRAL_PROGRAM_FRIEND_SELECT_HEADER: "Select {numReferrals, plural, one {a friend} other {up to {numReferrals} friends}} to share a Nitro trial with. The trial will be sent in a direct message.",
         REFERRAL_PROGRAM_SHARE_TRIAL: "Share Trial",
         REFERRAL_PROGRAM_FRIEND_SELECT_COMPLETE_HEADER: "Lift Off! You Shared {numReferrals} {numReferrals, plural, one {Trial} other {Trials}}",
         REFERRAL_PROGRAM_FRIEND_SELECT_COMPLETE_TOOL_TOP: "See trial in DMs",
