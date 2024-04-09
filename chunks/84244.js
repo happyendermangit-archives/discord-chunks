@@ -14,11 +14,12 @@ function(e, t, n) {
         var n, o;
         let {
             pendingThemeColors: l,
-            isPreview: u
-        } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, d = null == e ? void 0 : e.getAvatarURL(null == t ? void 0 : t.guildId, 80), _ = (0, s.useColorValue)(a.Color.PRIMARY_530).hex, [c, E] = (0, r.useAvatarColors)(d, _, !1);
-        if (!(null == t ? void 0 : t.canEditThemes) && !u) return [null, null];
-        let I = null == t ? void 0 : t.getPreviewThemeColors(l),
-            T = null !== (n = null == I ? void 0 : I[0]) && void 0 !== n ? n : (0, i.hex2int)(c);
-        return [T, null !== (o = null == I ? void 0 : I[1]) && void 0 !== o ? o : (0, i.hex2int)(E)]
+            pendingAvatar: u,
+            isPreview: d
+        } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, _ = null != u ? u : null == e ? void 0 : e.getAvatarURL(null == t ? void 0 : t.guildId, 80), c = (0, s.useColorValue)(a.Color.PRIMARY_530).hex, [E, I] = (0, r.useAvatarColors)(_, c, !1);
+        if (!(null == t ? void 0 : t.canEditThemes) && !d) return [null, null];
+        let T = null == t ? void 0 : t.getPreviewThemeColors(l),
+            f = null !== (n = null == T ? void 0 : T[0]) && void 0 !== n ? n : (0, i.hex2int)(E);
+        return [f, null !== (o = null == T ? void 0 : T[1]) && void 0 !== o ? o : (0, i.hex2int)(I)]
     }
 }
