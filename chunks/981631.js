@@ -1779,7 +1779,7 @@ function(_, E, e) {
             PARTNERS: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/partners"),
             HYPESQUAD: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/hypesquad"),
             TERMS: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/terms"),
-            PAID_TERMS: "https://support.discord.com/hc/articles/4410339366295",
+            PAID_TERMS: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/terms/paid-services-terms"),
             PRIVACY: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/privacy"),
             GUIDELINES: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/guidelines"),
             ACKNOWLEDGEMENTS: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/acknowledgements"),
