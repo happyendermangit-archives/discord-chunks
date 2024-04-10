@@ -1382,6 +1382,7 @@ function(_, E, e) {
             SUBMIT_UNAUTHENTICATED_REPORT_MENU: _ => "/reporting/unauthenticated/".concat(_),
             SEND_UNAUTHENTICATED_REPORT_PINCODE: _ => "/reporting/unauthenticated/".concat(_, "/code"),
             VERIFY_UNAUTHENTICATED_REPORT: _ => "/reporting/unauthenticated/".concat(_, "/verify"),
+            DSA_EXPERIMENT_UNAUTHENTICATED: "/reporting/unauthenticated/experiment",
             SUBMIT_REPORT_SECOND_LOOK: "/reporting/review",
             STAGE_INSTANCES: "/stage-instances",
             STAGE_INSTANCES_EXTRA: "/stage-instances/extra",
