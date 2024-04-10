@@ -63,47 +63,43 @@ function(e, t, n) {
         let {
             guildId: r,
             channelId: s,
-            applicationId: o,
-            instanceId: _,
-            participants: c,
-            analyticsActivitySessionId: I
-        } = e, S = (0, f.default)(o);
-        if (null == S) return;
-        let h = u.default.getBasicChannel(s);
-        if (!(null != h && d.default.canBasicChannel(m.BasicPermissions.CONNECT, h) || (null == h ? void 0 : h.type) === m.ChannelTypes.DM || (null == h ? void 0 : h.type) === m.ChannelTypes.GROUP_DM)) return;
-        let A = c.map(e => e.userId),
-            N = l.default.getId(),
-            O = l.default.getSessionId(),
-            p = null === (t = c.find(e => e.userId === N)) || void 0 === t ? void 0 : t.sessionId,
-            D = null == p,
-            v = R.get(o),
-            M = {
-                analyticsActivitySessionId: null != I ? I : "",
-                applicationId: o,
+            applicationId: a,
+            instanceId: o,
+            participants: _,
+            analyticsActivitySessionId: c
+        } = e, I = (0, f.default)(a);
+        if (null == I) return;
+        let S = u.default.getBasicChannel(s);
+        if (!(null != S && d.default.canBasicChannel(m.BasicPermissions.CONNECT, S) || (null == S ? void 0 : S.type) === m.ChannelTypes.DM || (null == S ? void 0 : S.type) === m.ChannelTypes.GROUP_DM)) return;
+        let h = _.map(e => e.userId),
+            A = l.default.getId(),
+            N = l.default.getSessionId(),
+            O = null === (t = _.find(e => e.userId === A)) || void 0 === t ? void 0 : t.sessionId,
+            p = null == O,
+            D = R.get(a),
+            v = {
+                analyticsActivitySessionId: null != c ? c : "",
+                applicationId: a,
                 channelId: s,
                 guildId: r,
-                instanceId: _,
-                url: S,
-                userIds: new Set(A)
+                instanceId: o,
+                url: I,
+                userIds: new Set(h)
             };
-        A.some(e => e === N) && null != v && (D || O === p) && (R.set(v.applicationId, {
-            ...v,
-            ...M
-        }), a.default.dispatch({
-            type: "EMBEDDED_ACTIVITY_INSTANCE_CHANGE",
+        h.some(e => e === A) && null != D && (p || N === O) && R.set(D.applicationId, {
+            ...D,
+            ...v
+        }), null != D && s === D.channelId && !h.some(e => e === A) && Array.from(D.userIds).some(e => e === A) ? L.get(s) === a ? L.delete(s) : R.delete(a) : h.some(e => e === A) && (null == D || D.applicationId !== a || D.channelId !== s) && (O === l.default.getSessionId() && !p || (0, T.shouldMountActivityIFrameFromGatewayUpdateWithoutSessionIdCheck)("EmbeddedActivitiesStore")) && (x({
             channelId: s,
-            instanceId: _
-        })), null != v && s === v.channelId && !A.some(e => e === N) && Array.from(v.userIds).some(e => e === N) ? L.get(s) === o ? L.delete(s) : R.delete(o) : A.some(e => e === N) && (null == v || v.applicationId !== o || v.channelId !== s) && (p === l.default.getSessionId() && !D || (0, T.shouldMountActivityIFrameFromGatewayUpdateWithoutSessionIdCheck)("EmbeddedActivitiesStore")) && (x({
-            channelId: s,
-            applicationId: o,
-            instanceId: _
+            applicationId: a,
+            instanceId: o
         }), E.ComponentDispatch.dispatch(m.ComponentActions.OPEN_EMBEDDED_ACTIVITY, {
             channelId: s
         }));
-        let y = (null !== (n = g.get(s)) && void 0 !== n ? n : []).filter(e => e.applicationId !== o),
-            P = k(r),
-            U = (null !== (i = C.get(P)) && void 0 !== i ? i : []).filter(e => !(e.applicationId === o && e.channelId === s));
-        A.length > 0 && (y.push(M), U.push(M)), g.set(s, y), C.set(P, U)
+        let M = (null !== (n = g.get(s)) && void 0 !== n ? n : []).filter(e => e.applicationId !== a),
+            y = k(r),
+            P = (null !== (i = C.get(y)) && void 0 !== i ? i : []).filter(e => !(e.applicationId === a && e.channelId === s));
+        h.length > 0 && (M.push(v), P.push(v)), g.set(s, M), C.set(y, P)
     }
 
     function F(e) {
