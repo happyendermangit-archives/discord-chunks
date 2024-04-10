@@ -73,31 +73,29 @@ function(e, t, n) {
 
     function N(e) {
         let {
-            url: t,
-            fileName: n,
-            fileSize: r
-        } = e, s = "".concat(n, " (").concat((0, d.formatKbSize)(r), ")");
+            attachment: t
+        } = e, n = "".concat(t.filename, " (").concat((0, d.formatKbSize)(t.size), ")");
         return (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(l.Tooltip, {
-                text: s,
+                text: n,
                 children: e => (0, i.jsx)("span", {
                     ...e,
                     className: a()(S.downloadSection, S.attachmentName),
-                    children: n
+                    children: t.filename
                 })
             }), (0, i.jsx)(l.Tooltip, {
-                text: s,
+                text: n,
                 children: e => (0, i.jsx)("span", {
                     ...e,
                     className: a()(S.downloadSection, S.formattedSize),
-                    children: (0, d.formatKbSize)(r)
+                    children: (0, d.formatKbSize)(t.size)
                 })
             }), (0, i.jsx)(l.Tooltip, {
-                text: "".concat(f.default.Messages.DOWNLOAD, " ").concat(s),
+                text: "".concat(f.default.Messages.DOWNLOAD, " ").concat(n),
                 children: e => (0, i.jsx)(l.Anchor, {
                     ...e,
                     className: S.downloadSection,
-                    href: t,
+                    href: t.url,
                     target: "_blank",
                     rel: "noreferrer noopener",
                     children: (0, i.jsx)(E.default, {
@@ -174,63 +172,57 @@ function(e, t, n) {
     function R(e) {
         var t;
         let {
-            url: n,
-            fileName: r,
-            fileSize: s,
-            fileContents: o,
-            expanded: u,
-            setExpanded: _,
-            language: c,
-            setLanguage: E,
-            bytesLeft: I,
-            className: T
-        } = e, A = null == o ? void 0 : o.split("\n"), R = null !== (t = null == A ? void 0 : A.length) && void 0 !== t ? t : 0, C = u ? 100 : 6, g = 0 === I, L = "";
-        g && u && R > C ? L = "\n..." : !g && (L = "..."), "" !== L && (g ? L += " " + f.default.Messages.PREVIEW_LINES_LEFT.format({
-            lines: R - C
-        }) : L += " " + f.default.Messages.PREVIEW_BYTES_LEFT.format({
-            formattedBytes: (0, d.formatKbSize)(I)
+            attachment: n,
+            fileContents: r,
+            expanded: s,
+            setExpanded: o,
+            language: u,
+            setLanguage: _,
+            bytesLeft: c,
+            className: E
+        } = e, I = null == r ? void 0 : r.split("\n"), T = null !== (t = null == I ? void 0 : I.length) && void 0 !== t ? t : 0, A = s ? 100 : 6, R = 0 === c, C = "";
+        R && s && T > A ? C = "\n..." : !R && (C = "..."), "" !== C && (R ? C += " " + f.default.Messages.PREVIEW_LINES_LEFT.format({
+            lines: T - A
+        }) : C += " " + f.default.Messages.PREVIEW_BYTES_LEFT.format({
+            formattedBytes: (0, d.formatKbSize)(c)
         }));
-        let D = (null == A ? void 0 : A.slice(0, C).join("\n")) + L,
-            v = u || C < R;
+        let g = (null == I ? void 0 : I.slice(0, A).join("\n")) + C,
+            L = s || A < T;
         return (0, i.jsxs)("div", {
-            className: a()(T, S.container),
+            className: a()(E, S.container),
             children: [(0, i.jsx)("div", {
                 className: a()(S.textContainer, {
-                    [S.expanded]: u
+                    [S.expanded]: s
                 }),
-                children: null == o ? (0, i.jsx)(l.Spinner, {
+                children: null == r ? (0, i.jsx)(l.Spinner, {
                     className: S.spinner
                 }) : (0, i.jsx)(h, {
-                    text: D,
-                    language: c
+                    text: g,
+                    language: u
                 })
             }), (0, i.jsxs)(l.Text, {
                 color: "header-secondary",
                 className: S.footer,
                 variant: "text-sm/normal",
-                children: [v ? (0, i.jsxs)(i.Fragment, {
+                children: [L ? (0, i.jsxs)(i.Fragment, {
                     children: [(0, i.jsx)(m, {
-                        expanded: u,
-                        setExpanded: _,
-                        isWholeFile: g,
-                        numLines: R
+                        expanded: s,
+                        setExpanded: o,
+                        isWholeFile: R,
+                        numLines: T
                     }), (0, i.jsx)(p, {
-                        url: n,
-                        fileName: r,
-                        fileSize: s,
-                        language: c,
-                        fileContents: o,
-                        bytesLeft: I
+                        language: u,
+                        fileContents: r,
+                        bytesLeft: c,
+                        attachment: n
                     })]
                 }) : null, (0, i.jsx)("div", {
                     className: S.footerGap
                 }), (0, i.jsx)(N, {
-                    url: n,
-                    fileName: r,
-                    fileSize: s
+                    attachment: n
                 }), (0, i.jsx)(O, {
-                    language: c,
-                    setLanguage: E
+                    language: u,
+                    setLanguage: _
                 })]
             })]
         })
@@ -238,18 +230,16 @@ function(e, t, n) {
 
     function C(e) {
         let {
-            url: t,
-            fileName: n,
-            fileSize: s,
-            transitionState: a,
-            language: o,
-            fileContents: u,
-            bytesLeft: _
-        } = e, [c, E] = r.useState(o), I = null != u ? u : "";
-        return 0 !== _ && (I += "... ".concat(f.default.Messages.PREVIEW_BYTES_LEFT.format({
-            formattedBytes: (0, d.formatKbSize)(_)
+            transitionState: t,
+            language: n,
+            fileContents: s,
+            bytesLeft: a,
+            attachment: o
+        } = e, [u, _] = r.useState(n), c = null != s ? s : "";
+        return 0 !== a && (c += "... ".concat(f.default.Messages.PREVIEW_BYTES_LEFT.format({
+            formattedBytes: (0, d.formatKbSize)(a)
         }))), (0, i.jsx)(l.ModalRoot, {
-            transitionState: a,
+            transitionState: t,
             "aria-label": f.default.Messages.PREVIEW_MODAL_LABEL,
             size: l.ModalSize.LARGE,
             className: S.modalRoot,
@@ -257,11 +247,11 @@ function(e, t, n) {
                 className: S.modalContent,
                 children: [(0, i.jsx)(l.ScrollerThin, {
                     className: S.modalTextContainer,
-                    children: null == u ? (0, i.jsx)(l.Spinner, {
+                    children: null == s ? (0, i.jsx)(l.Spinner, {
                         className: S.spinner
                     }) : (0, i.jsx)(h, {
-                        text: I,
-                        language: c
+                        text: c,
+                        language: u
                     })
                 }), (0, i.jsxs)(l.Text, {
                     color: "header-secondary",
@@ -270,12 +260,10 @@ function(e, t, n) {
                     children: [(0, i.jsx)("div", {
                         className: S.footerGap
                     }), (0, i.jsx)(N, {
-                        url: t,
-                        fileName: n,
-                        fileSize: s
+                        attachment: o
                     }), (0, i.jsx)(O, {
-                        language: c,
-                        setLanguage: E
+                        language: u,
+                        setLanguage: _
                     })]
                 })]
             })
@@ -283,17 +271,14 @@ function(e, t, n) {
     }
     t.default = r.memo(function(e) {
         let {
-            url: t,
-            fileName: n,
-            fileSize: s,
-            contentType: o,
-            className: l,
-            onClick: u,
-            onContextMenu: d
-        } = e, [c, E] = r.useState(!1), [I, T] = r.useState(n.split(".").slice(-1)[0]), {
-            fileContents: f,
-            bytesLeft: A,
-            hadError: h
+            attachment: t,
+            className: n,
+            onClick: s,
+            onContextMenu: o
+        } = e, [l, u] = r.useState(!1), [d, c] = r.useState(t.filename.split(".").slice(-1)[0]), {
+            fileContents: E,
+            bytesLeft: I,
+            hadError: T
         } = function(e, t) {
             let [n, i] = r.useState(!1), [s, a] = r.useState(null), [o, l] = r.useState(1);
             return r.useEffect(() => {
@@ -330,25 +315,23 @@ function(e, t, n) {
                 bytesLeft: o,
                 hadError: n
             }
-        }(t, o);
-        return h ? (0, i.jsx)(_.default, {
-            url: t,
-            fileName: n,
-            fileSize: s,
-            onClick: u,
-            onContextMenu: d,
-            className: l
+        }(t.url, t.content_type);
+        return T ? (0, i.jsx)(_.default, {
+            url: t.url,
+            filename: t.filename,
+            size: t.size,
+            onClick: s,
+            onContextMenu: o,
+            className: n
         }) : (0, i.jsx)(R, {
-            url: t,
-            fileName: n,
-            fileSize: s,
-            fileContents: f,
-            bytesLeft: A,
-            expanded: c,
-            setExpanded: E,
-            language: I,
-            setLanguage: T,
-            className: a()(S.newMosaicStyle, l)
+            attachment: t,
+            fileContents: E,
+            bytesLeft: I,
+            expanded: l,
+            setExpanded: u,
+            language: d,
+            setLanguage: c,
+            className: a()(S.newMosaicStyle, n)
         })
-    }, (e, t) => e.url === t.url && e.className === t.className)
+    }, (e, t) => e.attachment.id === t.attachment.id && e.className === t.className)
 }

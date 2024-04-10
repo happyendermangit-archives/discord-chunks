@@ -2,22 +2,25 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         applyToGuild: function() {
-            return c
+            return E
         },
         cancelGuildBoostSlot: function() {
-            return I
+            return T
         },
         fetchAppliedGuildBoostsForGuild: function() {
             return d
         },
-        fetchGuildBoostSlots: function() {
+        fetchAppliedGuildBoostsForUser: function() {
             return _
         },
+        fetchGuildBoostSlots: function() {
+            return c
+        },
         unapplyFromGuild: function() {
-            return E
+            return I
         },
         uncancelGuildBoostSlot: function() {
-            return T
+            return f
         }
     });
     var i = n("544891"),
@@ -39,6 +42,20 @@ function(e, t, n) {
         }), t
     }
     async function _() {
+        let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+            t = (await i.HTTP.get({
+                url: u.Endpoints.USER_APPLIED_GUILD_BOOSTS,
+                oldFormErrors: !0,
+                query: {
+                    paused: e
+                }
+            })).body.map(e => a.default.createFromServer(e));
+        return r.default.dispatch({
+            type: "USER_APPLIED_BOOSTS_FETCH_SUCCESS",
+            appliedGuildBoosts: t
+        }), t
+    }
+    async function c() {
         let e = (await i.HTTP.get({
             url: u.Endpoints.USER_GUILD_BOOST_SLOTS,
             oldFormErrors: !0
@@ -48,7 +65,7 @@ function(e, t, n) {
             guildBoostSlots: e
         }), e
     }
-    async function c(e, t) {
+    async function E(e, t) {
         r.default.dispatch({
             type: "GUILD_APPLY_BOOST_START"
         });
@@ -64,7 +81,7 @@ function(e, t, n) {
             return r.default.dispatch({
                 type: "GUILD_APPLY_BOOST_SUCCESS",
                 appliedGuildBoost: s
-            }), _(), s
+            }), c(), s
         } catch (t) {
             let e = new s.AppliedGuildBoostError(t);
             throw r.default.dispatch({
@@ -73,7 +90,7 @@ function(e, t, n) {
             }), e
         }
     }
-    async function E(e, t) {
+    async function I(e, t) {
         r.default.dispatch({
             type: "GUILD_UNAPPLY_BOOST_START"
         });
@@ -81,7 +98,7 @@ function(e, t, n) {
             await i.HTTP.del({
                 url: u.Endpoints.APPLIED_GUILD_BOOST(e, t),
                 oldFormErrors: !0
-            }), _()
+            }), c()
         } catch (t) {
             let e = new s.AppliedGuildBoostError(t);
             throw r.default.dispatch({
@@ -94,7 +111,7 @@ function(e, t, n) {
             boostId: t
         })
     }
-    async function I(e) {
+    async function T(e) {
         let t = await i.HTTP.post({
                 url: u.Endpoints.USER_GUILD_BOOST_SLOT_CANCEL(e),
                 oldFormErrors: !0
@@ -105,7 +122,7 @@ function(e, t, n) {
             guildBoostSlot: n
         }), n
     }
-    async function T(e) {
+    async function f(e) {
         let t = await i.HTTP.post({
                 url: u.Endpoints.USER_GUILD_BOOST_SLOT_UNCANCEL(e),
                 oldFormErrors: !0

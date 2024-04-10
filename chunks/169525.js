@@ -7,7 +7,7 @@ function(e, t, n) {
         getForumPostShouldObscure: function() {
             return m
         },
-        getObscureReasonForAttachment: function() {
+        getObscureReason: function() {
             return A
         },
         getObscureReasonForEmbed: function() {
@@ -25,9 +25,8 @@ function(e, t, n) {
         o = n("432877"),
         l = n("163268"),
         u = n("25610"),
-        d = n("368844");
-    n("768494");
-    var _ = n("695346"),
+        d = n("368844"),
+        _ = n("695346"),
         c = n("375954"),
         E = n("496675"),
         I = n("630388"),
@@ -41,28 +40,19 @@ function(e, t, n) {
                 flags: i = 0,
                 content_scan_version: r
             } = e;
-            if (t) {
-                if ((0, l.isPendingScanVersion)(r)) return "potential_explicit_content";
-                if ((0, I.hasFlag)(i, f.MessageAttachmentFlags.CONTAINS_EXPLICIT_MEDIA) || o.default.get("obscure_blur_effect_enabled")) return "explicit_content"
-            }
-            return n || (0, I.hasFlag)(i, f.MessageAttachmentFlags.IS_SPOILER) ? "spoiler" : null
+            return t && (0, l.isPendingScan)(r) ? "potential_explicit_content" : t && ((0, I.hasFlag)(i, f.MessageAttachmentFlags.CONTAINS_EXPLICIT_MEDIA) || o.default.get("obscure_blur_effect_enabled")) ? "explicit_content" : n || (0, I.hasFlag)(i, f.MessageAttachmentFlags.IS_SPOILER) ? "spoiler" : null
         },
         h = (e, t, n, i, r) => {
             let {
                 flags: s = 0,
                 contentScanVersion: a
             } = e, u = c.default.getMessage(t, n);
-            if (null == u) return null;
-            if (r) {
-                if (!u.author.bot && (0, l.isPendingScanVersion)(a)) return "potential_explicit_content";
-                if ((0, I.hasFlag)(s, f.MessageEmbedFlags.CONTAINS_EXPLICIT_MEDIA) || o.default.get("obscure_blur_effect_enabled")) return "explicit_content"
-            }
-            return i ? "spoiler" : null
+            return null == u ? null : r && !u.author.bot && (0, l.isPendingScan)(a) ? "potential_explicit_content" : r && ((0, I.hasFlag)(s, f.MessageEmbedFlags.CONTAINS_EXPLICIT_MEDIA) || o.default.get("obscure_blur_effect_enabled")) ? "explicit_content" : i ? "spoiler" : null
         };
 
     function m(e, t, n) {
         if (null == e) return [!1, void 0];
-        if (n && (0, l.isPendingScanVersion)(e.contentScanVersion)) return [!0, "potential_explicit_content"];
+        if (n && (0, l.isPendingScan)(e.contentScanVersion)) return [!0, "potential_explicit_content"];
         let i = function(e) {
             switch (e) {
                 case d.ForumPostMediaTypes.EMBED:
