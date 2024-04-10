@@ -3,8 +3,8 @@ function(e, t, n) {
 
     function i(e) {
         if (null != e) {
-            if ("activitySessionId" in e) return e.activitySessionId;
-            if ("instanceId" in e) return e.instanceId;
+            if ("analyticsActivitySessionId" in e && null != e.analyticsActivitySessionId && "" !== e.analyticsActivitySessionId) return e.analyticsActivitySessionId;
+            if ("instanceId" in e && null != e.instanceId) return e.instanceId;
             if ("activity_id" in e) return e.activity_id
         }
     }

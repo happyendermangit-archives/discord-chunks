@@ -1375,12 +1375,10 @@ function(e, t, n) {
     }), w(["EMBEDDED_ACTIVITY_UPDATE_V2"], e => h.ChannelLoader.loadGuildIds([e.guild_id]), e => {
         k({
             type: "EMBEDDED_ACTIVITY_UPDATE_V2",
-            activitySessionId: e.activity_session_id,
             applicationId: e.application_id,
-            channelId: e.channel_id,
-            guildId: e.guild_id,
             instanceId: e.instance_id,
-            userIds: e.user_ids
+            location: e.location,
+            participants: e.participants
         })
     }), G(["AUTH_SESSION_CHANGE"], e => {
         k({

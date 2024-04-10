@@ -269,18 +269,16 @@ function(e, t, n) {
                 })
             }), h(this, "handleEmbeddedActivityUpdate", e => {
                 let {
-                    channelId: t
-                } = e, {
-                    quest: n,
-                    activity: i
-                } = D(t), r = R(t), s = (null == i || null == n) && this.streamKeyToHeartbeatState.has(r), a = null != i && null != n && g(t) && !this.streamKeyToHeartbeatState.has(r);
-                s ? this.terminateHeartbeat({
-                    streamKey: r,
+                    quest: t,
+                    activity: n
+                } = D(e), i = R(e), r = (null == n || null == t) && this.streamKeyToHeartbeatState.has(i), s = null != n && null != t && g(e) && !this.streamKeyToHeartbeatState.has(i);
+                r ? this.terminateHeartbeat({
+                    streamKey: i,
                     sendTerminalHeartbeat: !0
-                }) : a && this.initiateHeartbeat({
-                    streamKey: r,
-                    applicationId: n.config.applicationId,
-                    questId: n.id
+                }) : s && this.initiateHeartbeat({
+                    streamKey: i,
+                    applicationId: t.config.applicationId,
+                    questId: t.id
                 })
             }), h(this, "handleStreamCreate", e => {
                 let {
@@ -341,8 +339,18 @@ function(e, t, n) {
                 STREAM_CLOSE: this.handleStreamClose,
                 PASSIVE_UPDATE_V1: this.handleVoiceStateChange,
                 VOICE_STATE_UPDATES: this.handleVoiceStateChange,
-                EMBEDDED_ACTIVITY_UPDATE: this.handleEmbeddedActivityUpdate,
-                EMBEDDED_ACTIVITY_UPDATE_V2: this.handleEmbeddedActivityUpdate
+                EMBEDDED_ACTIVITY_UPDATE: e => {
+                    let {
+                        channelId: t
+                    } = e;
+                    return this.handleEmbeddedActivityUpdate(t)
+                },
+                EMBEDDED_ACTIVITY_UPDATE_V2: e => {
+                    let {
+                        location: t
+                    } = e;
+                    return this.handleEmbeddedActivityUpdate(t.channel_id)
+                }
             })
         }
     }

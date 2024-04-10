@@ -5,33 +5,42 @@ function(e, t, n) {
     var s, a, o, l, u = n("442837"),
         d = n("570140"),
         _ = n("911969"),
-        c = n("592125"),
-        E = n("622449");
-    let I = {},
-        T = {},
-        f = {};
+        c = n("314897"),
+        E = n("592125"),
+        I = n("622449");
+    let T = {},
+        f = {},
+        S = {};
 
-    function S(e) {
-        delete I[e];
-        let t = f[e];
-        null != t && delete T[t], delete f[e]
+    function h(e) {
+        var t;
+        if (null == e) return !1;
+        let n = T[e];
+        if (null == n) return !1;
+        null === (t = n.onSuccess) || void 0 === t || t.call(n), A(e)
     }
-    class h extends(s = u.default.Store) {
+
+    function A(e) {
+        delete T[e];
+        let t = S[e];
+        null != t && delete f[t], delete S[e]
+    }
+    class m extends(s = u.default.Store) {
         getInteraction(e) {
-            let t = T[e.id];
-            return null != t ? I[t] : null
+            let t = f[e.id];
+            return null != t ? T[t] : null
         }
         getMessageInteractionStates() {
             let e = {};
-            for (let [t, n] of Object.entries(I)) {
-                let i = f[t];
+            for (let [t, n] of Object.entries(T)) {
+                let i = S[t];
                 null != i && (e[i] = n.state)
             }
             return e
         }
         canQueueInteraction(e, t) {
-            let n = T[e];
-            return (null == n || null == I[n] || I[n].state === E.InteractionState.FAILED) && (null == I[t] || I[t].state === E.InteractionState.FAILED) && !0
+            let n = f[e];
+            return (null == n || null == T[n] || T[n].state === I.InteractionState.FAILED) && (null == T[t] || T[t].state === I.InteractionState.FAILED) && !0
         }
         getIFrameModalApplicationId() {
             return r
@@ -40,14 +49,14 @@ function(e, t, n) {
             return i
         }
     }
-    l = "InteractionStore", (o = "displayName") in(a = h) ? Object.defineProperty(a, o, {
+    l = "InteractionStore", (o = "displayName") in(a = m) ? Object.defineProperty(a, o, {
         value: l,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : a[o] = l, t.default = new h(d.default, {
+    }) : a[o] = l, t.default = new m(d.default, {
         LOGOUT: function() {
-            I = {}, T = {}, f = {}
+            T = {}, f = {}, S = {}
         },
         INTERACTION_QUEUE: function(e) {
             let {
@@ -59,8 +68,8 @@ function(e, t, n) {
                 onSuccess: a,
                 onFailure: o
             } = e;
-            null != n && (T[n] = t, f[t] = n), I[t] = {
-                state: E.InteractionState.QUEUED,
+            null != n && (f[n] = t, S[t] = n), T[t] = {
+                state: I.InteractionState.QUEUED,
                 data: i,
                 onCreate: r,
                 onCancel: s,
@@ -75,19 +84,15 @@ function(e, t, n) {
                 interactionId: i
             } = e;
             if (null == n) return !1;
-            let r = I[n];
-            if (null == r || r.state !== E.InteractionState.QUEUED) return !1;
-            r.state = E.InteractionState.CREATED, null === (t = r.onCreate) || void 0 === t || t.call(r, i)
+            let r = T[n];
+            if (null == r || r.state !== I.InteractionState.QUEUED) return !1;
+            r.state = I.InteractionState.CREATED, null === (t = r.onCreate) || void 0 === t || t.call(r, i)
         },
         INTERACTION_SUCCESS: function(e) {
-            var t;
             let {
-                nonce: n
+                nonce: t
             } = e;
-            if (null == n) return !1;
-            let i = I[n];
-            if (null == i) return !1;
-            null === (t = i.onSuccess) || void 0 === t || t.call(i), S(n)
+            h(t)
         },
         INTERACTION_FAILURE: function(e) {
             var t;
@@ -97,11 +102,11 @@ function(e, t, n) {
                 errorMessage: r
             } = e;
             if (null == n) return !1;
-            let s = I[n];
+            let s = T[n];
             if (null == s) return !1;
-            null === (t = s.onFailure) || void 0 === t || t.call(s, i, r), s.data.interactionType === _.InteractionTypes.APPLICATION_COMMAND ? S(n) : I[n] = {
+            null === (t = s.onFailure) || void 0 === t || t.call(s, i, r), s.data.interactionType === _.InteractionTypes.APPLICATION_COMMAND ? A(n) : T[n] = {
                 ...s,
-                state: E.InteractionState.FAILED,
+                state: I.InteractionState.FAILED,
                 errorCode: i,
                 errorMessage: r
             }
@@ -113,17 +118,17 @@ function(e, t, n) {
             if (null == t.nonce) return !1;
             {
                 var n;
-                let e = I[t.nonce];
+                let e = T[t.nonce];
                 if (null == e) return !1;
-                null === (n = e.onSuccess) || void 0 === n || n.call(e), S(t.nonce)
+                null === (n = e.onSuccess) || void 0 === n || n.call(e), A(t.nonce)
             }
         },
         CHANNEL_SELECT: function(e) {
             let {
                 channelId: t
             } = e;
-            if (null == c.default.getChannel(t)) return !1;
-            for (let [e, t] of Object.entries(I)) t.state === E.InteractionState.FAILED && S(e)
+            if (null == E.default.getChannel(t)) return !1;
+            for (let [e, t] of Object.entries(T)) t.state === I.InteractionState.FAILED && A(e)
         },
         INTERACTION_IFRAME_MODAL_CREATE: function(e) {
             let {
@@ -139,6 +144,12 @@ function(e, t, n) {
                 modalKey: t
             } = e;
             i = t
+        },
+        EMBEDDED_ACTIVITY_UPDATE_V2: function(e) {
+            let {
+                participants: t
+            } = e, n = c.default.getSessionId(), i = c.default.getId(), r = t.find(e => e.user_id === i && e.session_id === n);
+            null != r && null != r.nonce && h(r.nonce)
         }
     })
 }

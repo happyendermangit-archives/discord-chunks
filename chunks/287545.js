@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return j
+            return K
         },
         getActiveAnalyticsSessionIDs: function() {
-            return Y
+            return W
         }
     }), n("653041"), n("47120");
     var i = n("512722"),
@@ -156,29 +156,42 @@ function(e, t, n) {
     }
 
     function x(e) {
-        var t, n;
         let {
-            channelId: i,
-            embeddedActivity: r,
-            connections: a,
-            updateCode: l
-        } = e, u = I.default.getId(), d = p.default.getEmbeddedActivitiesForChannel(i), _ = T.default.getChannel(i);
-        if (l === P.EmbeddedActivityUpdateCodes.ACTIVITY_STARTED && null !== (n = null == _ ? void 0 : _.isPrivate()) && void 0 !== n && n && d.length <= 1 && void 0 === a.find(e => e.user_id === u) && o.default.selectParticipant(i, null), !a.some(e => e.user_id === u)) return;
-        let c = f.default.getMediaSessionId(),
-            {
-                application_id: E
-            } = r,
-            S = (0, D.default)(r),
-            h = null == c && (null == _ ? void 0 : _.isVocal()) === !0;
-        null != S && !h && (null === (t = B[E]) || void 0 === t || t.call(B, {
-            activitySessionId: S,
-            activityUserSessionId: (0, s.v4)(),
-            instanceId: r.activity_id,
-            mediaSessionIds: null != c ? [c] : []
-        }), delete B[E])
+            channelId: t,
+            embeddedActivity: n,
+            connections: i,
+            updateCode: r
+        } = e, s = I.default.getId(), a = i.find(e => e.user_id === s);
+        Y(t, n, n.application_id, n.activity_id, null == a ? void 0 : a.user_id, r === P.EmbeddedActivityUpdateCodes.ACTIVITY_STARTED)
     }
 
     function H(e) {
+        let {
+            location: t,
+            applicationId: n,
+            instanceId: i,
+            participants: r
+        } = e, s = I.default.getId(), a = p.default.getEmbeddedActivitiesForChannel(t.channel_id).find(e => e.instanceId === i), o = r.find(e => e.user_id === s);
+        null != a && Y(t.channel_id, a, n, i, null == o ? void 0 : o.user_id, !1)
+    }
+
+    function Y(e, t, n, i, r, a) {
+        var l, u;
+        let d = p.default.getEmbeddedActivitiesForChannel(e),
+            _ = T.default.getChannel(e);
+        if (a && null !== (u = null == _ ? void 0 : _.isPrivate()) && void 0 !== u && u && d.length <= 1 && null == r && o.default.selectParticipant(e, null), null == r) return;
+        let c = f.default.getMediaSessionId(),
+            E = (0, D.default)(t),
+            I = null == c && (null == _ ? void 0 : _.isVocal()) === !0 && (null == _ ? void 0 : _.isPrivate()) === !1;
+        null != E && !I && (null === (l = B[n]) || void 0 === l || l.call(B, {
+            activitySessionId: E,
+            activityUserSessionId: (0, s.v4)(),
+            instanceId: i,
+            mediaSessionIds: null != c ? [c] : []
+        }), delete B[n])
+    }
+
+    function j(e) {
         let {
             mediaSessionId: t
         } = e;
@@ -203,15 +216,15 @@ function(e, t, n) {
         }
     }
 
-    function Y(e) {
+    function W(e) {
         return w[e]
     }
-    class j extends l.default {
+    class K extends l.default {
         _initialize() {
-            S.default.addChangeListener(this.handleSelectedChannelUpdate), a.default.subscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail), a.default.subscribe("EMBEDDED_ACTIVITY_OPEN", V), a.default.subscribe("EMBEDDED_ACTIVITY_CLOSE", F), a.default.subscribe("EMBEDDED_ACTIVITY_UPDATE", x), a.default.subscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen), a.default.subscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect), a.default.subscribe("MEDIA_SESSION_JOINED", H)
+            S.default.addChangeListener(this.handleSelectedChannelUpdate), a.default.subscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail), a.default.subscribe("EMBEDDED_ACTIVITY_OPEN", V), a.default.subscribe("EMBEDDED_ACTIVITY_CLOSE", F), a.default.subscribe("EMBEDDED_ACTIVITY_UPDATE", x), a.default.subscribe("EMBEDDED_ACTIVITY_UPDATE_V2", H), a.default.subscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen), a.default.subscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect), a.default.subscribe("MEDIA_SESSION_JOINED", j)
         }
         _terminate() {
-            S.default.removeChangeListener(this.handleSelectedChannelUpdate), a.default.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail), a.default.unsubscribe("EMBEDDED_ACTIVITY_OPEN", V), a.default.unsubscribe("EMBEDDED_ACTIVITY_CLOSE", F), a.default.unsubscribe("EMBEDDED_ACTIVITY_UPDATE", x), a.default.unsubscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen), a.default.unsubscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect), a.default.unsubscribe("MEDIA_SESSION_JOINED", H)
+            S.default.removeChangeListener(this.handleSelectedChannelUpdate), a.default.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail), a.default.unsubscribe("EMBEDDED_ACTIVITY_OPEN", V), a.default.unsubscribe("EMBEDDED_ACTIVITY_CLOSE", F), a.default.unsubscribe("EMBEDDED_ACTIVITY_UPDATE", x), a.default.unsubscribe("EMBEDDED_ACTIVITY_UPDATE_V2", H), a.default.unsubscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen), a.default.unsubscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect), a.default.unsubscribe("MEDIA_SESSION_JOINED", j)
         }
         constructor(...e) {
             super(...e), G(this, "handleSelectedChannelUpdate", () => {
