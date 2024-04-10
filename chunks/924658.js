@@ -398,6 +398,8 @@ function(e) {
         CLAN_DISCOVERY_PRIMETIME_FILTER_EMPTY: "Active Hour",
         CLAN_DISCOVERY_MEMBER_COUNT: "{count, number} Members",
         CLAN_DISCOVERY_PROFILE_TITLE: "Answer a few questions to join!",
-        CLAN_DISCOVERY_PROFILE_SUBTITLE: "The Gaming Guild leader will get back to you shortly after you submit."
+        CLAN_DISCOVERY_PROFILE_SUBTITLE: "The Gaming Guild leader will get back to you shortly after you submit.",
+        CLAN_DISCOVERY_PLAYSTYLE_TITLE: "What's your playstyle?",
+        CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE: "We'll recommend you Gaming Guilds that fit your playstyle."
     })
 }
