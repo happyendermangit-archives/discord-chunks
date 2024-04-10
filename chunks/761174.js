@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
-        useIsSelfRecentGamesEnabled: function() {
+        useIsCurrentUserRecentGamesEnabled: function() {
             return u
         },
         useIsUserRecentGamesEnabled: function() {
@@ -18,8 +18,9 @@ function(e, t, n) {
     function u(e) {
         let {
             location: t
-        } = e, n = (0, l.isUserRecentGamesExperimentEnabled)({
-            location: t
+        } = e, n = (0, l.useUserIsRecentGamesExperimentEnabled)({
+            location: t,
+            autoTrackExposure: !0
         }), i = r.RecentGamesEnabled.useSetting(), s = r.ShowCurrentGame.useSetting();
         return n && s && i
     }
@@ -36,6 +37,6 @@ function(e, t, n) {
         });
         return (0, o.useUserIsRecentGamesExperimentApiEnabled)({
             location: n
-        }) && (l ? r && d : r)
+        }) && (l ? d && r : r)
     }
 }
