@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return f
+            return S
         }
     });
     var i = n("735250");
@@ -12,56 +12,60 @@ function(e, t, n) {
         a = n("5192"),
         o = n("447452"),
         l = n("505737"),
-        u = n("790711"),
-        d = n("67152"),
-        _ = n("901952"),
-        c = n("287612"),
-        E = n("165818"),
-        I = n("614664"),
-        T = n("797849");
+        u = n("530"),
+        d = n("894374"),
+        _ = n("790711"),
+        c = n("67152"),
+        E = n("901952"),
+        I = n("287612"),
+        T = n("165818"),
+        f = n("797849");
 
-    function f(e) {
+    function S(e) {
         let {
             user: t,
             displayProfile: n,
-            onClose: f,
-            guild: S,
-            channelId: A
+            onClose: S,
+            guild: A,
+            channelId: h
         } = e, {
-            moreUserDetailsEnabled: h
+            moreUserDetailsEnabled: m
         } = (0, o.useSimplifiedProfileExperiment)({
             location: "BiteSizeProfileBody"
-        }), m = a.default.getName(null == S ? void 0 : S.id, A, t), N = (0, l.default)(t.id, null == S ? void 0 : S.id), O = (0, r.useStateFromStores)([s.default], () => s.default.hidePersonalInformation);
-        return t.isSystemUser() ? null : t.isNonUserBot() ? (0, i.jsxs)("div", {
-            className: T.paddingBottom,
-            children: [(0, i.jsx)(I.default, {
-                guildId: null == S ? void 0 : S.id,
-                user: t,
-                nickname: null,
-                pronouns: null
-            }), ";"]
+        }), N = a.default.getName(null == A ? void 0 : A.id, h, t), O = (0, l.default)(t.id, null == A ? void 0 : A.id), p = (0, r.useStateFromStores)([s.default], () => s.default.hidePersonalInformation);
+        return t.isSystemUser() ? null : t.isNonUserBot() ? (0, i.jsx)(u.default, {
+            className: f.paddingBottom,
+            user: t,
+            guildId: null == A ? void 0 : A.id
         }) : (0, i.jsxs)("div", {
-            className: T.paddingBottom,
-            children: [(0, i.jsx)(I.default, {
-                guildId: null == S ? void 0 : S.id,
+            className: f.paddingBottom,
+            children: [(0, i.jsx)(u.default, {
+                className: f.username,
                 user: t,
-                nickname: m,
-                pronouns: null == n ? void 0 : n.pronouns,
-                usernameIcon: t.hasAvatarForGuild(null == S ? void 0 : S.id) && (0, i.jsx)(u.default, {
+                guildId: null == A ? void 0 : A.id,
+                icon: t.hasAvatarForGuild(null == A ? void 0 : A.id) && (0, i.jsx)(_.default, {
                     user: t,
-                    nickname: m
+                    nickname: N
+                }),
+                tags: (0, i.jsxs)(i.Fragment, {
+                    children: [(0, i.jsx)(d.UserProfilePronounsTag, {
+                        pronouns: null == n ? void 0 : n.pronouns
+                    }), (0, i.jsx)(d.UserProfileBadgesTag, {
+                        user: t,
+                        guildId: null == A ? void 0 : A.id
+                    })]
                 })
-            }), h && (0, i.jsx)(c.default, {
+            }), m && (0, i.jsx)(I.default, {
                 user: t
-            }), h && (0, i.jsx)(d.default, {
+            }), m && (0, i.jsx)(c.default, {
                 user: t,
                 bio: null == n ? void 0 : n.bio,
-                hidePersonalInformation: O,
-                onClose: f
-            }), (0, i.jsx)(E.default, {
+                hidePersonalInformation: p,
+                onClose: S
+            }), (0, i.jsx)(T.default, {
                 user: t,
-                guild: S
-            }), N && (0, i.jsx)(_.default, {
+                guild: A
+            }), O && (0, i.jsx)(E.default, {
                 user: t
             })]
         })
