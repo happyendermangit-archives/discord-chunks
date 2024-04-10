@@ -11,28 +11,30 @@ function(e, t, n) {
     t.default = e => {
         let {
             user: t,
-            avatarDecorationOverride: n,
-            status: a,
-            avatarSize: u = r.AvatarSizes.SIZE_120,
-            "aria-hidden": d = !1
+            guildId: n,
+            avatarDecorationOverride: a,
+            status: u,
+            avatarSize: d = r.AvatarSizes.SIZE_120,
+            "aria-hidden": _ = !1
         } = e, {
-            avatarDecorationSrc: _,
-            avatarSrc: c,
-            eventHandlers: E
+            avatarDecorationSrc: c,
+            avatarSrc: E,
+            eventHandlers: I
         } = (0, s.default)({
             user: t,
-            size: u,
+            guildId: n,
+            size: d,
             showPending: !0,
-            avatarDecorationOverride: n
+            avatarDecorationOverride: a
         });
         return (0, i.jsx)(l, {
-            avatarDecoration: _,
-            src: c,
-            size: u,
-            status: a,
-            "aria-label": d ? void 0 : o.default.Messages.USER_SETTINGS_AVATAR,
-            "aria-hidden": d,
-            ...E
+            avatarDecoration: c,
+            src: E,
+            size: d,
+            status: u,
+            "aria-label": _ ? void 0 : o.default.Messages.USER_SETTINGS_AVATAR,
+            "aria-hidden": _,
+            ...I
         })
     }
 }

@@ -2,36 +2,29 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useHandleClaimQuestsReward: function() {
-            return u
+            return l
         }
     });
-    var i = n("735250"),
-        r = n("470079"),
-        s = n("481060"),
-        a = n("617136"),
-        o = n("918701"),
-        l = n("920916");
+    var i = n("470079"),
+        r = n("617136"),
+        s = n("918701"),
+        a = n("920916"),
+        o = n("341907");
 
-    function u(e) {
+    function l(e) {
         let {
             quest: t,
-            location: u
-        } = e, d = (0, l.useCollectibleRewardModal)(t, u);
-        return r.useCallback(() => {
-            null != t && ((0, a.trackQuestContentClicked)({
+            location: n
+        } = e, l = (0, a.useCollectibleRewardModal)(t, n);
+        return i.useCallback(() => {
+            null != t && ((0, r.trackQuestContentClicked)({
                 questId: t.id,
-                questContent: u,
-                questContentCTA: a.QuestContentCTA.CLAIM_REWARD
-            }), (0, o.hasQuestCollectibleRewards)(t.config) ? d() : (0, s.openModalLazy)(async () => {
-                let {
-                    default: e
-                } = await Promise.all([n.e("49237"), n.e("99387"), n.e("61624")]).then(n.bind(n, "985866"));
-                return n => (0, i.jsx)(e, {
-                    ...n,
-                    quest: t,
-                    location: u
-                })
+                questContent: n,
+                questContentCTA: r.QuestContentCTA.CLAIM_REWARD
+            }), (0, s.hasQuestCollectibleRewards)(t.config) ? l() : (0, o.openQuestsRewardCodeModal)({
+                questId: t.id,
+                location: n
             }))
-        }, [t, u, d])
+        }, [t, n, l])
     }
 }

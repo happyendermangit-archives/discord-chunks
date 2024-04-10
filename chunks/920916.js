@@ -115,6 +115,7 @@ function(e, t, n) {
                         className: g.previewContainer,
                         children: (0, i.jsx)(c.default, {
                             user: t,
+                            guildId: null,
                             avatarDecorationOverride: n
                         })
                     }), (0, i.jsx)(l.ModalCloseButton, {
