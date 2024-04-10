@@ -11,157 +11,159 @@ function(e, t, n) {
         d = n("475179"),
         _ = n("925549"),
         c = n("37234"),
-        E = n("358221"),
-        I = n("928518"),
-        T = n("703656"),
-        f = n("607187"),
-        S = n("937995"),
-        A = n("366050"),
-        h = n("944486"),
-        m = n("594174"),
-        N = n("566620"),
-        O = n("317381"),
-        p = n("917107"),
-        R = n("208156"),
-        C = n("748492"),
-        g = n("350064"),
-        L = n("701488"),
-        D = n("918559"),
-        v = n("981631"),
-        M = n("354459"),
-        y = n("622167"),
-        P = n("438249"),
-        U = n("344534");
+        E = n("835473"),
+        I = n("358221"),
+        T = n("928518"),
+        f = n("703656"),
+        S = n("607187"),
+        A = n("937995"),
+        h = n("366050"),
+        m = n("944486"),
+        N = n("594174"),
+        O = n("566620"),
+        p = n("317381"),
+        R = n("963614"),
+        C = n("917107"),
+        g = n("208156"),
+        L = n("748492"),
+        D = n("350064"),
+        v = n("701488"),
+        M = n("918559"),
+        y = n("981631"),
+        P = n("354459"),
+        U = n("622167"),
+        b = n("438249"),
+        G = n("344534");
 
-    function b(e) {
+    function w(e) {
         let {
             channel: t,
             isLoading: n
-        } = e, [s, g] = r.useState(!1), b = (0, o.useStateFromStores)([O.default], () => O.default.getSelfEmbeddedActivityForChannel(t.id)), G = (0, o.useStateFromStores)([O.default], () => O.default.getActivityPanelMode()), w = null == b ? void 0 : b.instanceId, k = (0, o.useStateFromStores)([h.default], () => h.default.getChannelId() === t.id), {
-            dockedRect: B,
-            isHidden: V
-        } = (0, o.useStateFromStoresObject)([A.default], () => {
-            let e = A.default.pipWindow;
+        } = e, [s, D] = r.useState(!1), w = (0, o.useStateFromStores)([p.default], () => p.default.getSelfEmbeddedActivityForChannel(t.id)), k = (0, o.useStateFromStores)([p.default], () => p.default.getActivityPanelMode()), B = (0, E.useGetOrFetchApplication)(null == w ? void 0 : w.applicationId), V = null == w ? void 0 : w.instanceId, F = (0, o.useStateFromStores)([m.default], () => m.default.getChannelId() === t.id), {
+            dockedRect: x,
+            isHidden: H
+        } = (0, o.useStateFromStoresObject)([h.default], () => {
+            let e = h.default.pipWindow;
             return {
-                dockedRect: null != e ? A.default.getDockedRect(e.id) : null,
-                isHidden: A.default.isEmbeddedActivityHidden()
+                dockedRect: null != e ? h.default.getDockedRect(e.id) : null,
+                isHidden: h.default.isEmbeddedActivityHidden()
             }
-        }), F = (0, o.useStateFromStores)([I.default], () => I.default.getWindow(v.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), {
-            activityParticipant: x,
-            selectedParticipant: H,
-            participantsOpen: Y
-        } = (0, o.useStateFromStoresObject)([E.default], () => ({
-            activityParticipant: null != b ? E.default.getParticipant(t.id, b.applicationId) : null,
-            selectedParticipant: E.default.getSelectedParticipant(t.id),
-            participantsOpen: E.default.getParticipantsOpen(t.id)
-        })), j = k || null != F, W = (0, p.default)(t.id), K = W && (null == H ? void 0 : H.type) !== M.ParticipantTypes.ACTIVITY, z = !W && G === D.ActivityPanelModes.PIP, X = (!j || j && (K || z) && null == B) && !V, Q = X && null != A.default.pipVideoWindow && null != A.default.pipActivityWindow;
+        }), Y = (0, o.useStateFromStores)([T.default], () => T.default.getWindow(y.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), {
+            activityParticipant: j,
+            selectedParticipant: W,
+            participantsOpen: K
+        } = (0, o.useStateFromStoresObject)([I.default], () => ({
+            activityParticipant: null != w ? I.default.getParticipant(t.id, w.applicationId) : null,
+            selectedParticipant: I.default.getSelectedParticipant(t.id),
+            participantsOpen: I.default.getParticipantsOpen(t.id)
+        })), z = F || null != Y, X = (0, C.default)(t.id), Q = X && (null == W ? void 0 : W.type) !== P.ParticipantTypes.ACTIVITY, q = !X && k === M.ActivityPanelModes.PIP, J = (!z || z && (Q || q) && null == x) && !H, Z = J && null != h.default.pipVideoWindow && null != h.default.pipActivityWindow;
 
-        function q() {
+        function $() {
             var e;
-            if (null != b && d.default.selectParticipant(t.id, b.applicationId), null != F) return;
+            if (null != w && d.default.selectParticipant(t.id, w.applicationId), null != Y) return;
             (0, c.popAllLayers)();
-            let n = null !== (e = t.getGuildId()) && void 0 !== e ? e : v.ME;
-            _.default.channelListScrollTo(n, t.id), (0, T.transitionToGuild)(n, t.id)
+            let n = null !== (e = t.getGuildId()) && void 0 !== e ? e : y.ME;
+            _.default.channelListScrollTo(n, t.id), (0, f.transitionToGuild)(n, t.id)
         }
 
-        function J() {
-            g(!s)
+        function ee() {
+            D(!s)
         }
         r.useEffect(() => {
-            if ((null == b ? void 0 : b.applicationId) != null) {
-                let e = X ? L.ActivityLayoutMode.PIP : L.ActivityLayoutMode.FOCUSED;
+            if ((null == w ? void 0 : w.applicationId) != null) {
+                let e = J ? v.ActivityLayoutMode.PIP : v.ActivityLayoutMode.FOCUSED;
                 u.default.dispatch({
                     type: "ACTIVITY_LAYOUT_MODE_UPDATE",
                     layoutMode: e,
-                    applicationId: b.applicationId
+                    applicationId: w.applicationId
                 })
             }
-        }, [null == b ? void 0 : b.applicationId, X]);
-        if (null == b || null == w || null == x && (0, p.default)(t.id)) return null;
-        let Z = Array.from(b.userIds).map(e => m.default.getUser(e)).filter(e => null != e),
-            $ = {
-                instance_id: w,
+        }, [null == w ? void 0 : w.applicationId, J]);
+        if (null == w || null == V || null == j && (0, C.default)(t.id) || null == B) return null;
+        let et = Array.from(w.userIds).map(e => N.default.getUser(e)).filter(e => null != e),
+            en = {
+                instance_id: V,
                 channel_id: t.id
             };
-        return null != t.guild_id && "" !== t.guild_id && ($.guild_id = t.guild_id), (0, i.jsx)(S.default, {
+        return null != t.guild_id && "" !== t.guild_id && (en.guild_id = t.guild_id), (0, i.jsx)(A.default, {
             timeout: 2e3,
             children: e => {
                 var r, o, u, d, _, c, E, I;
                 let {
                     idle: T,
-                    onActive: S,
+                    onActive: f,
                     onForceIdle: A
                 } = e;
-                return (0, i.jsxs)(f.default, {
-                    className: a()(y.root, {
-                        [y.pipMode]: X,
-                        [U.elevationHigh]: X,
-                        [P.idle]: T && !(null === (r = b.config) || void 0 === r ? void 0 : r.useInteractivePIP),
-                        [y.pipModeShort]: X && !s,
-                        [y.pipModeTall]: X && s,
-                        [y.hidden]: V,
-                        [y.multiPIPMode]: Q
+                return (0, i.jsxs)(S.default, {
+                    className: a()(U.root, {
+                        [U.pipMode]: J,
+                        [G.elevationHigh]: J,
+                        [b.idle]: T && !(null === (r = w.config) || void 0 === r ? void 0 : r.useInteractivePIP),
+                        [U.pipModeShort]: J && !s,
+                        [U.pipModeTall]: J && s,
+                        [U.hidden]: H,
+                        [U.multiPIPMode]: Z
                     }),
-                    noBorder: !X,
-                    children: [(u = S, d = A, _ = T, c = z, E = Z, X && null != b && ((null == x ? void 0 : x.type) === M.ParticipantTypes.ACTIVITY || c) ? (null === (I = b.config) || void 0 === I ? void 0 : I.useInteractivePIP) ? (0, i.jsx)(C.InteractivePIPHeader, {
-                        onJumpToChannel: q,
-                        applicationId: b.applicationId,
+                    noBorder: !J,
+                    children: [(u = f, d = A, _ = T, c = q, E = et, J && null != w && ((null == j ? void 0 : j.type) === P.ParticipantTypes.ACTIVITY || c) ? (null === (I = w.config) || void 0 === I ? void 0 : I.useInteractivePIP) ? (0, i.jsx)(L.InteractivePIPHeader, {
+                        onJumpToChannel: $,
+                        applicationId: w.applicationId,
                         channel: t,
                         showControls: !_,
                         onMouseDown: u,
                         onMouseMove: u,
                         onMouseLeave: d,
-                        onToggleHeight: J,
+                        onToggleHeight: ee,
                         isExpanded: s,
                         hideExpandedButton: c
                     }) : c ? (0, i.jsx)(i.Fragment, {
-                        children: (0, i.jsx)(C.TextActivityPIPOverlay, {
+                        children: (0, i.jsx)(L.TextActivityPIPOverlay, {
                             idle: _,
                             onMouseMove: u,
                             onMouseDown: u,
                             onMouseLeave: d,
                             onJumpToChannel: () => {
-                                q(), (0, N.updateActivityPanelMode)(D.ActivityPanelModes.PANEL)
+                                $(), (0, O.updateActivityPanelMode)(M.ActivityPanelModes.PANEL)
                             },
                             channel: t,
-                            applicationId: b.applicationId,
+                            applicationId: w.applicationId,
                             users: E
                         })
-                    }) : null == x ? null : (0, i.jsxs)(i.Fragment, {
+                    }) : null == j ? null : (0, i.jsxs)(i.Fragment, {
                         children: [(0, i.jsx)("div", {
                             onMouseMove: u,
                             onMouseDown: u,
                             onMouseLeave: d,
-                            className: y.clickShield,
-                            onDoubleClick: q
-                        }), (0, i.jsx)(C.PIPOverlay, {
+                            className: U.clickShield,
+                            onDoubleClick: $
+                        }), (0, i.jsx)(L.PIPOverlay, {
                             idle: _,
                             onMouseMove: u,
                             onMouseDown: u,
                             onMouseLeave: d,
-                            onJumpToChannel: q,
+                            onJumpToChannel: $,
                             channel: t,
-                            applicationId: b.applicationId,
-                            selectedParticipant: x
+                            applicationId: w.applicationId,
+                            selectedParticipant: j
                         })]
                     }) : null), n ? (0, i.jsx)(l.Spinner, {
-                        className: a()(y.iframe, {
-                            [y.pipModeShort]: X && !s,
-                            [y.pipModeTall]: X && s
+                        className: a()(U.iframe, {
+                            [U.pipModeShort]: J && !s,
+                            [U.pipModeTall]: J && s
                         })
-                    }) : (0, i.jsx)(R.EmbedIFrameWithLoadingBackground, {
-                        allowPopups: L.APPLICATIONS_WITH_ALLOWED_POPUPS.has(b.applicationId),
-                        referrerPolicy: L.APPLICATIONS_WITH_NO_REFFERER.has(b.applicationId) ? "no-referrer" : "origin",
-                        url: b.url,
-                        queryParams: $,
-                        className: a()(y.iframe, {
-                            [y.pipModeShort]: X && !s,
-                            [y.pipModeTall]: X && s,
-                            [y.pipNonInteractive]: X && !(null === (o = b.config) || void 0 === o ? void 0 : o.useInteractivePIP)
+                    }) : (0, i.jsx)(g.EmbedIFrameWithLoadingBackground, {
+                        allowPopups: (0, R.allowPopups)(B),
+                        referrerPolicy: v.APPLICATIONS_WITH_NO_REFFERER.has(w.applicationId) ? "no-referrer" : "origin",
+                        url: w.url,
+                        queryParams: en,
+                        className: a()(U.iframe, {
+                            [U.pipModeShort]: J && !s,
+                            [U.pipModeTall]: J && s,
+                            [U.pipNonInteractive]: J && !(null === (o = w.config) || void 0 === o ? void 0 : o.useInteractivePIP)
                         }),
-                        shouldRefocus: !X && k
-                    }), !X && (0, i.jsx)(C.TileOverlay, {
-                        participantsOpen: Y,
+                        shouldRefocus: !J && F
+                    }), !J && (0, i.jsx)(L.TileOverlay, {
+                        participantsOpen: K,
                         showToggleParticipants: !1,
                         channelId: t.id
                     })]
@@ -175,8 +177,8 @@ function(e, t, n) {
             ...n
         } = e, {
             isLoading: r
-        } = (0, g.useEmbeddedActivityLifecycle)(t);
-        return (0, i.jsx)(b, {
+        } = (0, D.useEmbeddedActivityLifecycle)(t);
+        return (0, i.jsx)(w, {
             channel: t,
             isLoading: r,
             ...n

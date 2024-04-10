@@ -42,13 +42,14 @@ function(e, t, n) {
             if (t) this.dirty = !r()(n, this.getInitialState());
             else
                 for (let e of Object.keys(n)) this.dirty = this.dirty || !r()(this.state[e], n[e]);
-            return this.state = n, !!(this.dirty && this.shouldCommit()) && (this.dirty = !1, this.didCommit(this.state), !0)
+            let i = this.dirty && this.shouldCommit();
+            return (i || this.alwaysUpdateState) && (this.state = n), !!i && (this.dirty = !1, this.didCommit(this.state), !0)
         }
         forceUpdate() {
             this.dirty = !1, this.didCommit(this.state)
         }
-        constructor() {
-            s(this, "dirty", !1), s(this, "state", this.getInitialState())
+        constructor(e = !0) {
+            s(this, "alwaysUpdateState", void 0), s(this, "dirty", void 0), s(this, "state", void 0), this.alwaysUpdateState = e, this.dirty = !1, this.state = this.getInitialState()
         }
     }
 }

@@ -32,7 +32,7 @@ function(e, t, n) {
         }), null == e) ? null : {
             token: e,
             properties: o.default.getSuperProperties(),
-            presence: T.getState()
+            presence: T.getInitialState()
         }
     }, (0, u.isDesktop)() && r.default.remotePowerMonitor.on("resume", () => {
         I.expeditedHeartbeat(5e3, "power monitor resumed")
