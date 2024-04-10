@@ -51,7 +51,7 @@ function(e, t, n) {
                     guildRoles: t
                 }
             }, [r]),
-            h = (0, s.useStateFromStores)([u.default], () => null != i && (null == n ? void 0 : n.isPrivate()) ? u.default.getNickname(i) : null);
+            A = (0, s.useStateFromStores)([u.default], () => null != i && (null == n ? void 0 : n.isPrivate()) ? u.default.getNickname(i) : null);
         return null == e ? null : S({
             user: e.author,
             channel: n,
@@ -59,7 +59,7 @@ function(e, t, n) {
             guildRoles: f,
             userName: I,
             member: c,
-            friendNickname: h
+            friendNickname: A
         })
     }
 

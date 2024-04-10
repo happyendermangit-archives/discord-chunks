@@ -22,7 +22,7 @@ function(e, t, n) {
         r.useEffect(() => {
             null == S && (0, u.fetchMutualFriends)(s.id)
         }, [S, s.id]);
-        let h = r.useMemo(() => {
+        let A = r.useMemo(() => {
                 var e;
                 return null !== (e = null == S ? void 0 : S.slice(0, 3).map(e => {
                     let {
@@ -31,9 +31,9 @@ function(e, t, n) {
                     return t
                 })) && void 0 !== e ? e : []
             }, [S]),
-            A = (0, o.useStateFromStores)([E.default], () => E.default.getMutualGuilds(s.id)),
+            h = (0, o.useStateFromStores)([E.default], () => E.default.getMutualGuilds(s.id)),
             [m, N] = (0, o.useStateFromStoresArray)([E.default], () => [E.default.isFetchingFriends(s.id), E.default.isFetchingProfile(s.id)]);
-        return s.id === (null == f ? void 0 : f.id) || (null == S ? void 0 : S.length) === 0 && (null == A ? void 0 : A.length) === 0 ? null : m || N ? (0, i.jsx)("div", {
+        return s.id === (null == f ? void 0 : f.id) || (null == S ? void 0 : S.length) === 0 && (null == h ? void 0 : h.length) === 0 ? null : m || N ? (0, i.jsx)("div", {
             className: a()(T.spinnerContainer),
             children: (0, i.jsx)(l.Spinner, {
                 className: T.spinner
@@ -42,11 +42,11 @@ function(e, t, n) {
             className: T.container,
             children: [(0, i.jsx)(_.default, {
                 partySize: {
-                    knownSize: h.length,
-                    totalSize: Math.min(h.length, 3)
+                    knownSize: A.length,
+                    totalSize: Math.min(A.length, 3)
                 },
                 maxAvatarsShown: 3,
-                members: h
+                members: A
             }), (0, i.jsx)(l.Text, {
                 className: (null == S ? void 0 : S.length) === 0 ? void 0 : T.mutualFriendsText,
                 variant: "text-xs/normal",
@@ -61,7 +61,7 @@ function(e, t, n) {
             }), (0, i.jsx)(l.Text, {
                 variant: "text-xs/normal",
                 children: I.default.Messages.MUTUAL_GUILDS_COUNT.format({
-                    count: "".concat(null !== (n = null == A ? void 0 : A.length) && void 0 !== n ? n : 0)
+                    count: "".concat(null !== (n = null == h ? void 0 : h.length) && void 0 !== n ? n : 0)
                 })
             })]
         })

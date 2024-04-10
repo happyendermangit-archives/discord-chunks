@@ -19,8 +19,8 @@ function(e, t, n) {
         T = n("846027"),
         f = n("304680"),
         S = n("710845"),
-        h = n("811660"),
-        A = n("42352"),
+        A = n("811660"),
+        h = n("42352"),
         m = n("227196"),
         N = n("926951"),
         O = n("868616"),
@@ -39,8 +39,8 @@ function(e, t, n) {
         b = n("936349"),
         G = n("626135"),
         w = n("931619"),
-        B = n("358085"),
-        k = n("579806"),
+        k = n("358085"),
+        B = n("579806"),
         V = n("859401"),
         F = n("437263"),
         x = n("423343"),
@@ -108,7 +108,7 @@ function(e, t, n) {
         }
         destroy() {
             var e, t, n, i, r;
-            if (this.logger.info("Destroy RTCConnection"), w.default.removeOnlineCallback(this._handleNetworkOnline), w.default.removeOfflineCallback(this._handleNetworkOffline), (0, B.isDesktop)() && (null === (r = this.powerMonitorListener) || void 0 === r || r.call(this)), this._backoff.cancel(), this._cleanupSocket(), null === (e = this._voiceQuality) || void 0 === e || e.stop(), this._voiceQuality = null, clearInterval(this._voiceQualityPeriodicStatsInterval), this._voiceQualityPeriodicStatsInterval = null, this._voiceQualityPeriodicStatsSequenceId = 0, this._noiseCancellationError = 0, null === (t = this._voiceDuration) || void 0 === t || t.stop(), this._voiceDuration = null, null === (n = this._videoQuality) || void 0 === n || n.stop(), this._videoQuality = null, this._videoHealthManager = null, null === (i = this._localMediaSinkWantsManager) || void 0 === i || i.reset(), null != this._connection) {
+            if (this.logger.info("Destroy RTCConnection"), w.default.removeOnlineCallback(this._handleNetworkOnline), w.default.removeOfflineCallback(this._handleNetworkOffline), (0, k.isDesktop)() && (null === (r = this.powerMonitorListener) || void 0 === r || r.call(this)), this._backoff.cancel(), this._cleanupSocket(), null === (e = this._voiceQuality) || void 0 === e || e.stop(), this._voiceQuality = null, clearInterval(this._voiceQualityPeriodicStatsInterval), this._voiceQualityPeriodicStatsInterval = null, this._voiceQualityPeriodicStatsSequenceId = 0, this._noiseCancellationError = 0, null === (t = this._voiceDuration) || void 0 === t || t.stop(), this._voiceDuration = null, null === (n = this._videoQuality) || void 0 === n || n.stop(), this._videoQuality = null, this._videoHealthManager = null, null === (i = this._localMediaSinkWantsManager) || void 0 === i || i.reset(), null != this._connection) {
                 let e = this._connection;
                 this._connection = null, e.destroy()
             }
@@ -295,7 +295,7 @@ function(e, t, n) {
                         ...e.getNetworkStats(),
                         ...e.getCodecUsageStats("sender", this.userId),
                         ...this._soundshareStats.getStats(),
-                        device_performance_class: (0, h.getMediaPerformanceClass)()
+                        device_performance_class: (0, A.getMediaPerformanceClass)()
                     })
                 }), e.getInboundParticipants().forEach(t => {
                     var n;
@@ -358,7 +358,7 @@ function(e, t, n) {
                     channel_count: this.channelIds.size,
                     input_device: this.getInputDeviceName(),
                     output_device: this.getOutputDeviceName(),
-                    device_performance_class: (0, h.getMediaPerformanceClass)(),
+                    device_performance_class: (0, A.getMediaPerformanceClass)(),
                     num_fast_udp_reconnects: null != this._connection ? null === (u = this._connection) || void 0 === u ? void 0 : u.getNumFastUdpReconnects() : null,
                     parent_media_session_id: this.parentMediaSessionId
                 });
@@ -728,7 +728,7 @@ function(e, t, n) {
         }
         async _handleMediaSessionId(e) {
             this._mediaSessionId = e, this.logger.info("Setting media-session-id: ".concat(e, " for rtc-connection-id: ").concat(this.getRTCConnectionId()));
-            let t = await (0, A.default)();
+            let t = await (0, h.default)();
             G.default.track(Q.AnalyticEvents.MEDIA_SESSION_JOINED, {
                 ...this._getAnalyticsProperties(),
                 media_session_id: this.getMediaSessionId(),
@@ -931,7 +931,7 @@ function(e, t, n) {
                     null === (i = this._connection) || void 0 === i || i.createUser(e, t, n)
                 })
             }
-            this._remoteVideoSinkWants = Y.DEFAULT_WANTS_FULL, U.default.shouldRecordNextConnection() ? (this._recordingEnabled = !0, f.setShouldRecordNextConnection(!1)) : this._recordingEnabled = !1, this._soundshareStats = new j.default, w.default.addOnlineCallback(this._handleNetworkOnline), w.default.addOfflineCallback(this._handleNetworkOffline), (0, B.isDesktop)() && (this.powerMonitorListener = k.default.remotePowerMonitor.on("resume", this._handlePowerResume)), this._supportedBandwidthEstimationExperiments = [], this._bandwidthEstimationExperiment = null, y.default.getMediaEngine().getSupportedBandwidthEstimationExperiments(e => {
+            this._remoteVideoSinkWants = Y.DEFAULT_WANTS_FULL, U.default.shouldRecordNextConnection() ? (this._recordingEnabled = !0, f.setShouldRecordNextConnection(!1)) : this._recordingEnabled = !1, this._soundshareStats = new j.default, w.default.addOnlineCallback(this._handleNetworkOnline), w.default.addOfflineCallback(this._handleNetworkOffline), (0, k.isDesktop)() && (this.powerMonitorListener = B.default.remotePowerMonitor.on("resume", this._handlePowerResume)), this._supportedBandwidthEstimationExperiments = [], this._bandwidthEstimationExperiment = null, y.default.getMediaEngine().getSupportedBandwidthEstimationExperiments(e => {
                 this._supportedBandwidthEstimationExperiments = e
             })
         }

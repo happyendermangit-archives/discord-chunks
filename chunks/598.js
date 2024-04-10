@@ -5,7 +5,7 @@ function(e, t, n) {
             return b
         },
         PaymentContextProvider: function() {
-            return B
+            return k
         },
         useForwardedPaymentContext: function() {
             return w
@@ -29,8 +29,8 @@ function(e, t, n) {
         T = n("551428"),
         f = n("975104"),
         S = n("630388"),
-        h = n("74538"),
-        A = n("960048"),
+        A = n("74538"),
+        h = n("960048"),
         m = n("735521"),
         N = n("583046"),
         O = n("897829"),
@@ -47,14 +47,14 @@ function(e, t, n) {
         U = n("474936");
     let [b, G, w] = (0, f.default)();
 
-    function B(e) {
+    function k(e) {
         var t, n;
         let {
             loadId: f,
             activeSubscription: G,
             stepConfigs: w,
-            breadcrumbs: B = [],
-            skuIDs: k,
+            breadcrumbs: k = [],
+            skuIDs: B,
             isGift: V = !1,
             children: F,
             defaultPlanId: x,
@@ -78,7 +78,7 @@ function(e, t, n) {
             currencies: er
         } = (0, N.default)({
             activeSubscription: G,
-            skuIDs: k,
+            skuIDs: B,
             paymentSourceId: q,
             isGift: V
         }), es = (0, L.default)(), [ea, eo] = r.useState(!1), {
@@ -88,17 +88,17 @@ function(e, t, n) {
             breadcrumbsData: e_
         } = (0, v.default)({
             stepConfigs: w,
-            breadcrumbs: B
+            breadcrumbs: k
         }), [ec, eE] = (0, g.default)(el), {
             paymentError: eI,
             paymentAuthenticationState: eT
         } = (0, R.default)(), {
             purchaseError: ef,
             purchaseErrorBlockRef: eS,
-            setPurchaseError: eh
-        } = (0, C.default)(), eA = (0, a.useLazyValue)(() => {
+            setPurchaseError: eA
+        } = (0, C.default)(), eh = (0, a.useLazyValue)(() => {
             let e = null != f ? f : (0, o.v4)();
-            return A.default.addBreadcrumb({
+            return h.default.addBreadcrumb({
                 message: "Checkout session ID: ".concat(e)
             }), {
                 loadId: e,
@@ -109,7 +109,7 @@ function(e, t, n) {
             selectedPlan: eN,
             setSelectedSkuId: eO,
             setSelectedPlanId: ep
-        } = (0, m.default)(), [eR, eC] = (0, l.useStateFromStoresArray)([E.default], () => [E.default.purchaseTokenAuthState, E.default.purchaseTokenHash]), [eg, eL] = (0, l.useStateFromStoresArray)([y.default], () => [y.default.browserCheckoutState, y.default.loadId]), [eD, ev] = r.useState(null), [eM, ey] = r.useState(null), [eP, eU] = r.useState(null), [eb, eG] = r.useState(null), [ew, eB] = r.useState(null), [ek, eV] = r.useState(void 0), [eF, ex] = r.useState([]), eH = r.useMemo(() => null == eN || (0, h.isPremiumSubscriptionPlan)(eN.id), [eN]), eY = r.useRef(null != G ? G.planId : null);
+        } = (0, m.default)(), [eR, eC] = (0, l.useStateFromStoresArray)([E.default], () => [E.default.purchaseTokenAuthState, E.default.purchaseTokenHash]), [eg, eL] = (0, l.useStateFromStoresArray)([y.default], () => [y.default.browserCheckoutState, y.default.loadId]), [eD, ev] = r.useState(null), [eM, ey] = r.useState(null), [eP, eU] = r.useState(null), [eb, eG] = r.useState(null), [ew, ek] = r.useState(null), [eB, eV] = r.useState(void 0), [eF, ex] = r.useState([]), eH = r.useMemo(() => null == eN || (0, A.isPremiumSubscriptionPlan)(eN.id), [eN]), eY = r.useRef(null != G ? G.planId : null);
         r.useEffect(() => {
             null == eY.current && null != G && (eY.current = G.planId)
         }, [G]);
@@ -119,7 +119,7 @@ function(e, t, n) {
             skuPricePreviewsById: eK
         } = (0, D.default)({
             applicationId: null != Y ? Y : U.PREMIUM_SUBSCRIPTION_APPLICATION,
-            skuIDs: k,
+            skuIDs: B,
             currentPaymentSourceId: q,
             isGift: V
         }), ez = r.useMemo(() => {
@@ -135,7 +135,7 @@ function(e, t, n) {
         return (0, i.jsx)(b.Provider, {
             value: {
                 stripe: W,
-                contextMetadata: eA,
+                contextMetadata: eh,
                 blockedPayments: K,
                 activeSubscription: G,
                 hasFetchedSubscriptions: z,
@@ -143,7 +143,7 @@ function(e, t, n) {
                 updatedSubscription: eb,
                 setUpdatedSubscription: eG,
                 subscriptionMetadataRequest: ew,
-                setSubscriptionMetadataRequest: eB,
+                setSubscriptionMetadataRequest: ek,
                 hasFetchedPaymentSources: Z,
                 paymentSources: X,
                 hasPaymentSources: Q,
@@ -166,7 +166,7 @@ function(e, t, n) {
                 paymentAuthenticationState: eT,
                 paymentError: eI,
                 purchaseError: ef,
-                setPurchaseError: eh,
+                setPurchaseError: eA,
                 purchaseErrorBlockRef: eS,
                 purchaseTokenAuthState: eR,
                 purchaseTokenHash: eC,
@@ -184,7 +184,7 @@ function(e, t, n) {
                 selectedPlan: eN,
                 setSelectedSkuId: eO,
                 setSelectedPlanId: ep,
-                readySlideId: ek,
+                readySlideId: eB,
                 setReadySlideId: eV,
                 defaultPlanId: x,
                 isPremium: eH,

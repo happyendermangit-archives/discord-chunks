@@ -16,8 +16,8 @@ function(e, t, n) {
         T = n("270144"),
         f = n("171246"),
         S = n("689011"),
-        h = n("714441"),
-        A = n("981631"),
+        A = n("714441"),
+        h = n("981631"),
         m = n("689938");
     t.default = e => {
         var t;
@@ -45,15 +45,15 @@ function(e, t, n) {
             } = (0, d.default)(),
             {
                 activeSubscription: w,
-                activeEntitlement: B
+                activeEntitlement: k
             } = (0, T.useActiveSubscriptionListingForApplication)(D, N),
-            k = (0, T.useEligibleApplicationSubscriptionGuilds)(D, N),
+            B = (0, T.useEligibleApplicationSubscriptionGuilds)(D, N),
             V = (0, _.default)(),
             F = null != s && (0, f.isApplicationUserSubscription)(s.sku_flags),
-            x = null != B && B.userId === (null === (t = E.default.getCurrentUser()) || void 0 === t ? void 0 : t.id),
-            H = null == B || x,
-            Y = null == B || b.length > 1,
-            j = null != N || k.length > 0,
+            x = null != k && k.userId === (null === (t = E.default.getCurrentUser()) || void 0 === t ? void 0 : t.id),
+            H = null == k || x,
+            Y = null == k || b.length > 1,
+            j = null != N || B.length > 0,
             W = F && x,
             K = null != P && null != U && H && Y && (j || F) && !W;
         return H ? j ? W && null != P && (n = m.default.Messages.APPLICATION_USER_SUBSCRIPTION_ALREADY_SUBSCRIBED.format({
@@ -68,7 +68,7 @@ function(e, t, n) {
                 let e = () => {
                     (0, c.openApplicationPaymentModal)({
                         activeSubscription: w,
-                        analyticsSubscriptionType: A.SubscriptionTypes.APPLICATION,
+                        analyticsSubscriptionType: h.SubscriptionTypes.APPLICATION,
                         analyticsLocations: G,
                         analyticsLocation: p,
                         renderHeader: (e, t, n) => (0, i.jsx)(S.PurchaseHeader, {
@@ -78,7 +78,7 @@ function(e, t, n) {
                         initialPlanId: L.id,
                         skuId: L.sku_id,
                         guildId: N,
-                        eligibleApplicationSubscriptionGuilds: k,
+                        eligibleApplicationSubscriptionGuilds: B,
                         planGroup: b,
                         applicationId: U.id,
                         showBenefitsFirst: R,
@@ -86,12 +86,12 @@ function(e, t, n) {
                         forcesTransitionToGuild: g
                     })
                 };
-                !j && F ? (0, h.confirmNoSharedServerSubscribeWarningModal)({
+                !j && F ? (0, A.confirmNoSharedServerSubscribeWarningModal)({
                     applicationName: U.name,
                     onConfirm: e,
                     onCancel: () => {}
                 }) : e()
-            }, [M, L, b, U, N, j, F, G, p, w, R, k, C, g]),
+            }, [M, L, b, U, N, j, F, G, p, w, R, B, C, g]),
             canOpenModal: K,
             cannotOpenReason: n
         }

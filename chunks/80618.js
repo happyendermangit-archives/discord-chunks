@@ -47,8 +47,8 @@ function(e, t, n) {
                 minValue: T,
                 maxValue: f,
                 value: S,
-                onVolumeShow: h,
-                onVolumeHide: A
+                onVolumeShow: A,
+                onVolumeHide: h
             } = this.props, {
                 hovered: m,
                 focused: N,
@@ -59,13 +59,13 @@ function(e, t, n) {
                 onMouseEnter: () => {
                     clearTimeout(this._hoverTimeout), this.setState({
                         hovered: !0
-                    }), null == h || h()
+                    }), null == A || A()
                 },
                 onMouseLeave: () => {
                     clearTimeout(this._hoverTimeout), this._hoverTimeout = setTimeout(() => {
                         this.setState({
                             hovered: !1
-                        }), null == A || A()
+                        }), null == h || h()
                     }, 150)
                 },
                 onFocus: () => this.setState({

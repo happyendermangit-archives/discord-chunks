@@ -20,8 +20,8 @@ function(e, t, n) {
         T = n("5192"),
         f = n("51144"),
         S = n("342656"),
-        h = n("621853"),
-        A = n("895618"),
+        A = n("621853"),
+        h = n("895618"),
         m = n("358794"),
         N = n("421486"),
         O = n("347949"),
@@ -39,8 +39,8 @@ function(e, t, n) {
         b = n("579729"),
         G = n("302316"),
         w = n("186395"),
-        B = n("584045"),
-        k = n("58307"),
+        k = n("584045"),
+        B = n("58307"),
         V = n("981631"),
         F = n("700481"),
         x = n("27729");
@@ -61,12 +61,12 @@ function(e, t, n) {
             hideNote: Z = !1,
             showCopiableUsername: $ = !1,
             analyticsParams: ee
-        } = e, et = (0, o.useStateFromStores)([I.default], () => I.default.hidePersonalInformation), en = (0, o.useStateFromStores)([h.default], () => {
+        } = e, et = (0, o.useStateFromStores)([I.default], () => I.default.hidePersonalInformation), en = (0, o.useStateFromStores)([A.default], () => {
             var e;
-            return null === (e = h.default.getUserProfile(j.id)) || void 0 === e ? void 0 : e.application
-        }), ei = (0, o.useStateFromStores)([_.default], () => null != _.default.getAnyStreamForUser(j.id)), er = (0, k.useGetVoiceChannelInfoForVoiceActivitySection)(j.id, null == K ? void 0 : K.id), es = (null == H ? void 0 : H.type) === V.ActivityTypes.HANG_STATUS, ea = !ei && null != er && !es, {
+            return null === (e = A.default.getUserProfile(j.id)) || void 0 === e ? void 0 : e.application
+        }), ei = (0, o.useStateFromStores)([_.default], () => null != _.default.getAnyStreamForUser(j.id)), er = (0, B.useGetVoiceChannelInfoForVoiceActivitySection)(j.id, null == K ? void 0 : K.id), es = (null == H ? void 0 : H.type) === V.ActivityTypes.HANG_STATUS, ea = !ei && null != er && !es, {
             showVoiceActivityInProfile: eo
-        } = A.VoiceActivityProfileExperiment.useExperiment({
+        } = h.VoiceActivityProfileExperiment.useExperiment({
             location: "user popout"
         }, {
             autoTrackExposure: ea
@@ -97,19 +97,19 @@ function(e, t, n) {
                 location: u.default.PROFILE_POPOUT,
                 disable: ef
             }),
-            eh = (0, d.useIsUserRecentGamesEnabled)({
+            eA = (0, d.useIsUserRecentGamesEnabled)({
                 userId: j.id,
                 location: "28tk0bf_1"
             });
         if (j.isSystemUser()) return null;
-        if (j.isNonUserBot()) return (0, i.jsx)(B.default, {
+        if (j.isNonUserBot()) return (0, i.jsx)(k.default, {
             user: j,
             nickname: null,
             pronouns: null,
             className: F.usernameSection,
             lastSection: !0
         });
-        let eA = null !== (t = T.default.getNickname(null == K ? void 0 : K.id, X, j)) && void 0 !== t ? t : f.default.getName(j),
+        let eh = null !== (t = T.default.getNickname(null == K ? void 0 : K.id, X, j)) && void 0 !== t ? t : f.default.getName(j),
             em = {
                 location: {
                     page: V.AnalyticsPages.USER_POPOUT,
@@ -117,14 +117,14 @@ function(e, t, n) {
                 }
             };
         return (0, i.jsxs)(i.Fragment, {
-            children: [(0, i.jsx)(B.default, {
+            children: [(0, i.jsx)(k.default, {
                 className: F.usernameSection,
                 user: j,
-                nickname: eA,
+                nickname: eh,
                 pronouns: null == W ? void 0 : W.pronouns,
                 usernameIcon: j.hasAvatarForGuild(null == K ? void 0 : K.id) && (0, i.jsx)(R.default, {
                     user: j,
-                    nickname: eA
+                    nickname: eh
                 }),
                 shouldCopyOnClick: $
             }), (0, i.jsxs)(l.HeadingLevel, {
@@ -155,7 +155,7 @@ function(e, t, n) {
                         userId: j.id,
                         guild: K,
                         guildMember: z
-                    }), eo && ea && (0, i.jsx)(k.default, {
+                    }), eo && ea && (0, i.jsx)(B.default, {
                         voiceChannel: er.voiceChannel,
                         voiceGuild: er.voiceGuild,
                         color: x.buttonColor
@@ -166,7 +166,7 @@ function(e, t, n) {
                         channelId: X,
                         onClose: Q,
                         analyticsParams: (null == ee ? void 0 : ee.location) != null ? ee : em
-                    }), eh && (0, i.jsx)(O.UserProfileRecentGamesSection, {
+                    }), eA && (0, i.jsx)(O.UserProfileRecentGamesSection, {
                         userId: j.id
                     }), (null == en ? void 0 : en.popularApplicationCommandIds) != null && null != el ? (0, i.jsx)(b.default, {
                         applicationId: en.id,

@@ -20,8 +20,8 @@ function(e, t, n) {
         T = n("250407"),
         f = n("710845"),
         S = n("797614"),
-        h = n("218543"),
-        A = n("857192"),
+        A = n("218543"),
+        h = n("857192"),
         m = n("626135"),
         N = n("12647"),
         O = n("70956"),
@@ -48,9 +48,9 @@ function(e, t, n) {
     }
     n("420491");
     let w = new f.default("GatewaySocket"),
-        B = new D.default;
+        k = new D.default;
 
-    function k() {}
+    function B() {}
     let V = 30 * O.default.Millis.SECOND,
         F = 3 * O.default.Millis.MINUTE,
         x = 1 * O.default.Millis.MINUTE;
@@ -88,7 +88,7 @@ function(e, t, n) {
             }
             this.connectionState = C.default.CONNECTING, this.nextReconnectIsImmediate = !1, this.compressionHandler.recomputeAlgorithm();
             let i = this.compressionHandler.getAlgorithm(),
-                r = B.getName(),
+                r = k.getName(),
                 s = this._getGatewayUrl(),
                 a = window.GLOBAL_ENV.API_VERSION;
             o.default.mark("\uD83C\uDF10", "Socket._connect"), w.info("[CONNECT] ".concat(s, ", ") + "encoding: ".concat(r, ", ") + "version: ".concat(a, ", ") + "compression: ".concat(null != i ? i : "none")), null !== this.webSocket && (w.error("_connect called with already existing websocket"), this._cleanup(e => e.close(4e3))), this.connectionStartTime = Date.now(), this.helloTimeout = setTimeout(() => {
@@ -145,10 +145,10 @@ function(e, t, n) {
                             s: r,
                             t: s,
                             d: a
-                        } = B.unpack(e);
+                        } = k.unpack(e);
                     i !== y.Opcode.DISPATCH && o.default.mark("\uD83C\uDF10", "GatewaySocket.onMessage ".concat(i, " ").concat(y.Opcode[i]));
                     let l = Date.now() - n;
-                    switch ("READY" === s ? h.default.parseReady.set(n, l) : "READY_SUPPLEMENTAL" === s ? h.default.parseReadySupplemental.set(n, l) : l > 10 && o.default.mark("\uD83C\uDF10", "Parse " + s, l), null != r && (this.seq = r), i) {
+                    switch ("READY" === s ? A.default.parseReady.set(n, l) : "READY_SUPPLEMENTAL" === s ? A.default.parseReadySupplemental.set(n, l) : l > 10 && o.default.mark("\uD83C\uDF10", "Parse " + s, l), null != r && (this.seq = r), i) {
                         case y.Opcode.HELLO:
                             this._clearHelloTimeout(), this._handleHello(a);
                             break;
@@ -169,7 +169,7 @@ function(e, t, n) {
                                 compressed_byte_size: t,
                                 uncompressed_byte_size: H(e),
                                 compression_algorithm: this.compressionHandler.getAlgorithm(),
-                                packing_algorithm: B.getName(),
+                                packing_algorithm: k.getName(),
                                 unpack_duration_ms: l
                             } : null);
                             break;
@@ -299,7 +299,7 @@ function(e, t, n) {
         _cleanup(e) {
             u.default.Emitter.resume(), this._stopHeartbeater(), this._clearHelloTimeout();
             let t = this.webSocket;
-            this.webSocket = null, null != t && (t.onopen = k, t.onmessage = k, t.onerror = k, t.onclose = k, null == e || e(t)), this.gatewayBackoff.cancel(), this.compressionHandler.close(), this.compressionHandler = new L.default(B)
+            this.webSocket = null, null != t && (t.onopen = B, t.onmessage = B, t.onerror = B, t.onclose = B, null == e || e(t)), this.gatewayBackoff.cancel(), this.compressionHandler.close(), this.compressionHandler = new L.default(k)
         }
         _doResume() {
             var e;
@@ -460,15 +460,15 @@ function(e, t, n) {
         }
         constructor() {
             super(), G(this, "gatewayBackoff", void 0), G(this, "handleIdentify", void 0), G(this, "dispatchExceptionBackoff", new a.default(1e3, x)), G(this, "dispatchSuccessTimer", 0), G(this, "connectionState_", void 0), G(this, "webSocket", void 0), G(this, "seq", void 0), G(this, "sessionId", void 0), G(this, "token", void 0), G(this, "initialHeartbeatTimeout", void 0), G(this, "expeditedHeartbeatTimeout", void 0), G(this, "heartbeatInterval", void 0), G(this, "helloTimeout", void 0), G(this, "heartbeater", void 0), G(this, "lastHeartbeatAckTime", void 0), G(this, "heartbeatAck", void 0), G(this, "connectionStartTime", void 0), G(this, "identifyStartTime", void 0), G(this, "nextReconnectIsImmediate", void 0), G(this, "compressionHandler", void 0), G(this, "hasConnectedOnce", void 0), G(this, "isFastConnect", void 0), G(this, "didForceClearGuildHashes", !1), G(this, "identifyUncompressedByteSize", 0), G(this, "identifyCompressedByteSize", 0), G(this, "analytics", {}), G(this, "identifyCount", 0), G(this, "resumeUrl", null), G(this, "iosGoingAwayEventCount", 0), G(this, "dispatcher", void 0), G(this, "send", (e, t, n) => {
-                A.default.isLoggingGatewayEvents && w.verboseDangerously("~>", e, t);
-                let i = B.pack({
+                h.default.isLoggingGatewayEvents && w.verboseDangerously("~>", e, t);
+                let i = k.pack({
                     op: e,
                     d: t
                 });
                 if (!n || this.isSessionEstablished()) try {
                     null != this.webSocket ? this.webSocket.send(i) : w.warn("Attempted to send without a websocket that exists. Opcode: ".concat(e))
                 } catch (e) {} else w.warn("Attempted to send while not being in a connected state opcode: ".concat(e))
-            }), this.dispatcher = new M.default(this), this.gatewayBackoff = new a.default(1e3, 6e4), this.connectionState_ = C.default.CLOSED, this.webSocket = null, this.seq = 0, this.sessionId = null, this.token = null, this.initialHeartbeatTimeout = null, this.expeditedHeartbeatTimeout = null, this.lastHeartbeatAckTime = null, this.helloTimeout = null, this.heartbeatInterval = null, this.heartbeater = null, this.heartbeatAck = !0, this.connectionStartTime = 0, this.identifyStartTime = 0, this.nextReconnectIsImmediate = !1, this.compressionHandler = new L.default(B), this.hasConnectedOnce = !1, this.isFastConnect = !1, this.identifyCount = 0, this.iosGoingAwayEventCount = 0
+            }), this.dispatcher = new M.default(this), this.gatewayBackoff = new a.default(1e3, 6e4), this.connectionState_ = C.default.CLOSED, this.webSocket = null, this.seq = 0, this.sessionId = null, this.token = null, this.initialHeartbeatTimeout = null, this.expeditedHeartbeatTimeout = null, this.lastHeartbeatAckTime = null, this.helloTimeout = null, this.heartbeatInterval = null, this.heartbeater = null, this.heartbeatAck = !0, this.connectionStartTime = 0, this.identifyStartTime = 0, this.nextReconnectIsImmediate = !1, this.compressionHandler = new L.default(k), this.hasConnectedOnce = !1, this.isFastConnect = !1, this.identifyCount = 0, this.iosGoingAwayEventCount = 0
         }
     }
 }

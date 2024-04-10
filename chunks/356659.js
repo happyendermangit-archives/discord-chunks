@@ -8,13 +8,13 @@ function(e, t, n) {
             return w
         },
         CLIPS_EDUCATION_GAME_LAUNCH_THRESHOLD: function() {
-            return B
+            return k
         },
         CLIPS_EDUCATION_MAX_DISMISSALS_DISABLED: function() {
             return V
         },
         CLIPS_EDUCATION_MAX_DISMISSALS_ENABLED: function() {
-            return k
+            return B
         },
         CLIPS_EXPORT_FILENAME: function() {
             return f
@@ -23,7 +23,7 @@ function(e, t, n) {
             return L
         },
         CLIPS_HARDWARE_CLASSIFICATION_VERSION: function() {
-            return h
+            return A
         },
         CLIPS_MAX_PARTICIPANTS: function() {
             return M
@@ -92,7 +92,7 @@ function(e, t, n) {
             return m
         },
         WINDOWS_HARDWARE_MINIMUM_GPU_REGEX: function() {
-            return A
+            return h
         }
     });
     var i, r, s, a, o, l, u, d, _ = n("710845"),
@@ -103,8 +103,8 @@ function(e, t, n) {
         T = new _.default("Clips"),
         f = e => "Discord_Clip_".concat(e, ".mp4"),
         S = 3,
-        h = 1,
-        A = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
+        A = 1,
+        h = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
         m = /(NVIDIA GeForce (RTX (20|30|40).*))|(.*Radeon RX (57|58|59|6|7).*)/,
         N = /(Apple M[12].*)/,
         O = .1,
@@ -122,7 +122,7 @@ function(e, t, n) {
         b = 30,
         G = 10,
         w = 14 * c.default.Millis.DAY,
-        B = 5,
         k = 5,
+        B = 5,
         V = 1
 }

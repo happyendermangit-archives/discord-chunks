@@ -16,8 +16,8 @@ function(e, t, n) {
     let T = new i.Timeout,
         f = new i.Timeout,
         S = 5 * c.default.Millis.SECOND,
-        h = 12 * c.default.Millis.SECOND,
-        A = null;
+        A = 12 * c.default.Millis.SECOND,
+        h = null;
 
     function m(e, t) {
         if (d.default.getVoiceChannelId() !== e) return !1;
@@ -26,7 +26,7 @@ function(e, t, n) {
         let i = a.default.getStreamForUser(t, n.getGuildId());
         if (null == i) return !1;
         let r = (0, E.encodeStreamKey)(i);
-        return r !== A && (A = r, (0, s.watchStream)(i, {
+        return r !== h && (h = r, (0, s.watchStream)(i, {
             noFocus: !0
         }), !0)
     }
@@ -38,7 +38,7 @@ function(e, t, n) {
     t.default = {
         init() {
             let e = (e, t) => {
-                !_.default.getAllActiveStreamKeys().includes(e) && f.start(t ? h : S, () => {
+                !_.default.getAllActiveStreamKeys().includes(e) && f.start(t ? A : S, () => {
                     r.default.dispatch({
                         type: "STREAM_TIMED_OUT",
                         streamKey: e
@@ -77,7 +77,7 @@ function(e, t, n) {
                     channelId: t
                 } = e;
                 if (null == t) return;
-                A = null;
+                h = null;
                 let n = a.default.getAllApplicationStreamsForChannel(t).filter(e => {
                     let {
                         ownerId: t

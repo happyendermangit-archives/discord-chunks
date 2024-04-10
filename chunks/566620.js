@@ -5,7 +5,7 @@ function(e, t, n) {
             return M
         },
         dismissNewActivityIndicator: function() {
-            return B
+            return k
         },
         fetchDeveloperApplications: function() {
             return y
@@ -38,7 +38,7 @@ function(e, t, n) {
             return P
         },
         validateTestMode: function() {
-            return k
+            return B
         }
     }), n("47120");
     var i = n("990547"),
@@ -56,8 +56,8 @@ function(e, t, n) {
         T = n("314897"),
         f = n("592125"),
         S = n("944486"),
-        h = n("594174"),
-        A = n("823379"),
+        A = n("594174"),
+        h = n("823379"),
         m = n("573261"),
         N = n("867176"),
         O = n("317381"),
@@ -152,7 +152,7 @@ function(e, t, n) {
             showFeedback: r
         });
         let a = c.default.getSelectedParticipantId(n),
-            l = null === (t = h.default.getCurrentUser()) || void 0 === t ? void 0 : t.id;
+            l = null === (t = A.default.getCurrentUser()) || void 0 === t ? void 0 : t.id;
         null != O.default.getEmbeddedActivitiesForChannel(n).find(e => e.applicationId === i) && null != l && "" !== l && a === i && o.default.selectParticipant(n, null)
     }
 
@@ -223,7 +223,7 @@ function(e, t, n) {
         let {
             guildId: o,
             force: l = !1
-        } = e, u = O.default.getShelfActivities(o), d = u.map(e => _.default.getApplication(e.application_id)).filter(A.isNotNullish);
+        } = e, u = O.default.getShelfActivities(o), d = u.map(e => _.default.getApplication(e.application_id)).filter(h.isNotNullish);
         if (!l && !O.default.shouldFetchShelf(o)) {
             if (null === (t = O.default.getShelfFetchStatus(o)) || void 0 === t ? void 0 : t.isFetching) {
                 let e, t;
@@ -313,12 +313,12 @@ function(e, t, n) {
         })
     }
 
-    function B() {
+    function k() {
         s.default.dispatch({
             type: "EMBEDDED_ACTIVITY_DISMISS_NEW_INDICATOR"
         })
     }
-    async function k(e) {
+    async function B(e) {
         let t = C.Endpoints.ACTIVITY_TEST_MODE(e);
         try {
             return await r.HTTP.get({

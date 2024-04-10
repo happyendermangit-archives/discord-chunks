@@ -15,8 +15,8 @@ function(e, t, n) {
         T = null,
         f = null,
         S = null,
-        h = {},
-        A = null,
+        A = {},
+        h = null,
         m = !1,
         N = null,
         O = !1,
@@ -27,11 +27,11 @@ function(e, t, n) {
         L = new Set;
 
     function D(e) {
-        null != i && null != A ? i(A) : null != r && r(e), i = null, r = null
+        null != i && null != h ? i(h) : null != r && r(e), i = null, r = null
     }
     class v extends(s = u.default.Store) {
         getPricesForSku(e) {
-            return h[e]
+            return A[e]
         }
         isOpen() {
             let e = __OVERLAY__ ? _.AppContext.OVERLAY : _.AppContext.APP;
@@ -78,7 +78,7 @@ function(e, t, n) {
         writable: !0
     }) : a[o] = l, t.default = new v(d.default, {
         SKU_PURCHASE_MODAL_OPEN: function(e) {
-            D(), E = e.skuId, T = e.applicationId, p = e.isIAP, f = e.analyticsLocation, g = e.context, C = e.isGift, R = !0, O = !1, i = e.resolve, r = e.reject, N = null, A = null, S = e.promotionId
+            D(), E = e.skuId, T = e.applicationId, p = e.isIAP, f = e.analyticsLocation, g = e.context, C = e.isGift, R = !0, O = !1, i = e.resolve, r = e.reject, N = null, h = null, S = e.promotionId
         },
         SKU_PURCHASE_MODAL_CLOSE: function(e) {
             let {
@@ -98,10 +98,10 @@ function(e, t, n) {
                 paymentSourceId: n,
                 price: i
             } = e;
-            h = {
-                ...h,
+            A = {
+                ...A,
                 [t]: {
-                    ...h[t],
+                    ...A[t],
                     [null != n ? n : c]: i
                 }
             }, L.delete(t)
@@ -120,7 +120,7 @@ function(e, t, n) {
                 entitlements: t,
                 giftCode: n
             } = e;
-            m = !1, A = t, I = n
+            m = !1, h = t, I = n
         },
         SKU_PURCHASE_FAIL: function(e) {
             let {

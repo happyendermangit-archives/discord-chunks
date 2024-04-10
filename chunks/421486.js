@@ -15,8 +15,8 @@ function(e, t, n) {
     n("5192");
     var f = n("342656"),
         S = n("785717"),
-        h = n("706327"),
-        A = n("285470"),
+        A = n("706327"),
+        h = n("285470"),
         m = n("171368"),
         N = n("228168"),
         O = n("689938"),
@@ -34,8 +34,8 @@ function(e, t, n) {
             analyticsLocations: I
         } = (0, _.default)(), {
             guildId: f,
-            channelId: h,
-            messageId: A,
+            channelId: A,
+            messageId: h,
             roleId: R
         } = (0, S.useUserProfileAnalyticsContext)(), C = a.useMemo(() => {
             var e;
@@ -67,18 +67,18 @@ function(e, t, n) {
                 userId: t.id,
                 sourceAnalyticsLocations: I,
                 guildId: f,
-                channelId: h,
-                messageId: A,
+                channelId: A,
+                messageId: h,
                 roleId: R,
                 section: e,
                 analyticsLocation: o
             }), null == r || r()
-        }, [o, I, r, t.id, f, h, A, R]);
+        }, [o, I, r, t.id, f, A, h, R]);
         a.useEffect(() => {
             b()
         }, [b, L]);
         let w = C.length > 0,
-            B = g.length > 0;
+            k = g.length > 0;
         return (0, s.jsxs)("div", {
             className: l()(p.compactItemContainer, !M && p.hideElement),
             ref: v,
@@ -104,10 +104,10 @@ function(e, t, n) {
                         children: L
                     })]
                 })
-            }), w && B && (0, s.jsx)("div", {
+            }), w && k && (0, s.jsx)("div", {
                 "aria-hidden": "true",
                 className: p.dotSpacer
-            }), B && (0, s.jsx)(d.Tooltip, {
+            }), k && (0, s.jsx)(d.Tooltip, {
                 text: O.default.Messages.USER_PROFILE_MUTUAL_GUILDS_TOOLTIP,
                 children: e => (0, s.jsxs)(d.Clickable, {
                     ...e,
@@ -147,7 +147,7 @@ function(e, t, n) {
             autoTrackExposure: !1,
             location: E,
             disable: m
-        }), C = (0, A.useMutualGuilds)(i), g = (0, h.useMutualFriends)(i);
+        }), C = (0, h.useMutualGuilds)(i), g = (0, A.useMutualFriends)(i);
         return !N || m || (null == g || 0 === g.length) && 0 === C.length ? null : (0, s.jsxs)("div", {
             className: l()(p.mainContainer, a),
             children: [(0, s.jsx)(d.Heading, {

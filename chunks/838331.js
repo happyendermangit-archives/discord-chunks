@@ -8,7 +8,7 @@ function(e, t, n) {
             return C
         },
         useMultiSelect: function() {
-            return A
+            return h
         },
         useSingleSelect: function() {
             return m
@@ -29,12 +29,12 @@ function(e, t, n) {
         T = n("689938"),
         f = n("309399");
     let S = "data-listbox-item-id",
-        h = Object.freeze({
+        A = Object.freeze({
             STANDARD: f.selected,
             BRAND: f.selectedBrand
         });
 
-    function A(e) {
+    function h(e) {
         let [t, n] = r.useState(() => new Set(e));
         return [t, r.useCallback(e => {
             n(t => {
@@ -69,8 +69,8 @@ function(e, t, n) {
             onChange: l,
             className: u,
             listClassName: I,
-            "aria-label": h,
-            multiSelect: A = !1,
+            "aria-label": A,
+            multiSelect: h = !1,
             autoFocus: m = !1,
             maxVisibleItems: p = 5,
             itemToString: R = N,
@@ -94,14 +94,14 @@ function(e, t, n) {
                     callback: () => requestAnimationFrame(() => e())
                 })
             }), []),
-            B = r.useCallback(() => new Promise(e => {
+            k = r.useCallback(() => new Promise(e => {
                 let t = P.current;
                 if (null == t) return e();
                 t.scrollToTop({
                     callback: () => requestAnimationFrame(() => e())
                 })
             }), []),
-            k = r.useCallback((e, t) => {
+            B = r.useCallback((e, t) => {
                 M(t);
                 let n = document.querySelector(e),
                     i = P.current;
@@ -114,8 +114,8 @@ function(e, t, n) {
                 isEnabled: !0,
                 useVirtualFocus: !0,
                 scrollToStart: w,
-                scrollToEnd: B,
-                setFocus: k
+                scrollToEnd: k,
+                setFocus: B
             }),
             F = C ? _.ListThin : _.ListNone;
         return (0, i.jsx)(o.ListNavigatorProvider, {
@@ -130,7 +130,7 @@ function(e, t, n) {
                     return (0, i.jsxs)("div", {
                         ref: n,
                         role: "combobox",
-                        "aria-label": h,
+                        "aria-label": A,
                         "aria-expanded": D,
                         "aria-controls": D ? y : void 0,
                         "aria-owns": y,
@@ -175,7 +175,7 @@ function(e, t, n) {
                                     style: {
                                         maxHeight: 46 * p
                                     },
-                                    "aria-multiselectable": A,
+                                    "aria-multiselectable": h,
                                     id: y,
                                     ref: P,
                                     className: a()(f.list, I, {
@@ -207,17 +207,17 @@ function(e, t, n) {
             value: n,
             children: s,
             disabled: l = !1,
-            selectedColor: d = h.STANDARD,
+            selectedColor: d = A.STANDARD,
             ..._
         } = e, {
             activeDescendant: c,
             selected: E,
             setSelected: I,
             itemToString: T
-        } = r.useContext(O), A = T(n), m = c === A, N = null !== (t = null == _ ? void 0 : _.selected) && void 0 !== t ? t : E.has(n), p = (0, o.useListItem)(A);
+        } = r.useContext(O), h = T(n), m = c === h, N = null !== (t = null == _ ? void 0 : _.selected) && void 0 !== t ? t : E.has(n), p = (0, o.useListItem)(h);
         return (0, i.jsx)(u.Clickable, {
             tag: "li",
-            id: A,
+            id: h,
             onClick: () => l ? null : I(n),
             [S]: n,
             className: a()(f.item, {
@@ -235,7 +235,7 @@ function(e, t, n) {
             })
         })
     }
-    C.Colors = h, C.Label = function(e) {
+    C.Colors = A, C.Label = function(e) {
         let {
             children: t
         } = e;

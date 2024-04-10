@@ -23,7 +23,7 @@ function(e, t, n) {
         return T.log("Native Dispatch error", t), new a.default(t)
     }
 
-    function h(e, t) {
+    function A(e, t) {
         "" !== e && S(e)
     }
     t.default = {
@@ -44,7 +44,7 @@ function(e, t, n) {
                 var i;
                 let _ = {
                         environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                        build_number: "283379"
+                        build_number: "283401"
                     },
                     c = l.default.getCurrentUser();
                 null != c && (_.user_id = c.id, _.user_name = c.tag, null != c.email && (_.email = c.email));
@@ -120,7 +120,7 @@ function(e, t, n) {
                 build_id: s,
                 manifest_ids: a,
                 install_path: o
-            }), h)
+            }), A)
         },
         setCurrentTask(e, t, n, i, r) {
             let s = f();
@@ -131,7 +131,7 @@ function(e, t, n) {
                 action: n,
                 user_id: i,
                 user_token: r
-            }), h), !0)
+            }), A), !0)
         },
         setCredentials(e, t) {
             let n = f();
@@ -139,7 +139,7 @@ function(e, t, n) {
                 command: "SetCredentials",
                 user_id: e,
                 user_token: t
-            }), h)
+            }), A)
         },
         cancel(e, t) {
             let n = f();
@@ -147,7 +147,7 @@ function(e, t, n) {
                 command: "Cancel",
                 application_id: e,
                 branch_id: t
-            }), h)
+            }), A)
         },
         uninstall(e, t) {
             let n = f();
@@ -155,19 +155,19 @@ function(e, t, n) {
                 command: "Uninstall",
                 application_id: e,
                 branch_id: t
-            }), h)
+            }), A)
         },
         pause() {
             let e = f();
             null != e && e.command(JSON.stringify({
                 command: "Pause"
-            }), h)
+            }), A)
         },
         resume() {
             let e = f();
             null != e && e.command(JSON.stringify({
                 command: "Resume"
-            }), h)
+            }), A)
         },
         queryDirectory(e, t) {
             let n = f();

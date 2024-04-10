@@ -20,8 +20,8 @@ function(e, t, n) {
         T = n("61753"),
         f = n("153850"),
         S = n("5967"),
-        h = n("53529"),
-        A = n("50659"),
+        A = n("53529"),
+        h = n("50659"),
         m = n("436660"),
         N = n("887490"),
         O = n("447525"),
@@ -87,7 +87,7 @@ function(e, t, n) {
         } = e, s = !1;
         if ((null == t ? void 0 : t.selection) != null) {
             let [e, i] = N.RangeUtils.edges(t.selection);
-            s = null != (0, A.parseSelectedSyntax)(t, e, i).before[n]
+            s = null != (0, h.parseSelectedSyntax)(t, e, i).before[n]
         }
         return (0, i.jsx)(l.Button, {
             className: p.button,
@@ -97,7 +97,7 @@ function(e, t, n) {
             look: l.Button.Looks.FILLED,
             size: l.Button.Sizes.NONE,
             onClick: () => {
-                null != t && h.HistoryUtils.withSingleEntry(t, () => (0, A.toggleMarkdownStyle)(t, n))
+                null != t && A.HistoryUtils.withSingleEntry(t, () => (0, h.toggleMarkdownStyle)(t, n))
             },
             children: r
         })
@@ -117,7 +117,7 @@ function(e, t, n) {
             look: l.Button.Looks.FILLED,
             size: l.Button.Sizes.NONE,
             onClick: () => {
-                null != n && h.HistoryUtils.withSingleEntry(n, () => (0, A.toggleBlockStyle)(n, t))
+                null != n && A.HistoryUtils.withSingleEntry(n, () => (0, h.toggleBlockStyle)(n, t))
             },
             children: r
         })
@@ -130,7 +130,7 @@ function(e, t, n) {
         } = e, [i, s] = null !== (t = N.EditorUtils.getSelectedVoid(n)) && void 0 !== t ? t : [null, null], a = r.useCallback(e => {
             if ((null == n ? void 0 : n.selection) == null || null == s) return;
             let t = n.selection;
-            h.HistoryUtils.withSingleEntry(n, () => {
+            A.HistoryUtils.withSingleEntry(n, () => {
                 m.SlateTransforms.voidToText(n, e, s), m.SlateTransforms.select(n, t)
             })
         }, [n, s]);
@@ -146,11 +146,11 @@ function(e, t, n) {
             options: l
         } = e, d = r.useRef(null), [_, c] = r.useState(!1), E = r.useRef(), I = r.useContext(u.default), T = r.useCallback(() => {
             c(!1), clearTimeout(E.current)
-        }, []), h = r.useCallback(e => {
+        }, []), A = r.useCallback(e => {
             var t;
             let n = I.renderWindow;
             !(e.target instanceof n.Node && (null === (t = d.current) || void 0 === t ? void 0 : t.contains(e.target))) && T()
-        }, [I, T]), A = r.useCallback(e => {
+        }, [I, T]), h = r.useCallback(e => {
             let t = I.renderWindow;
             if (e.target instanceof t.Element) {
                 if (0 !== e.button) T();
@@ -170,10 +170,10 @@ function(e, t, n) {
             hide: T
         }), [T]), r.useEffect(() => {
             let e = I.renderWindow;
-            return e.document.addEventListener("keydown", T), e.document.addEventListener("mousedown", h), e.document.addEventListener("mouseup", A), e.addEventListener("focus", T), e.addEventListener("blur", T), () => {
-                e.document.removeEventListener("keydown", T), e.document.removeEventListener("mousedown", h), e.document.removeEventListener("mouseup", A), e.removeEventListener("focus", T), e.removeEventListener("blur", T), clearTimeout(E.current)
+            return e.document.addEventListener("keydown", T), e.document.addEventListener("mousedown", A), e.document.addEventListener("mouseup", h), e.addEventListener("focus", T), e.addEventListener("blur", T), () => {
+                e.document.removeEventListener("keydown", T), e.document.removeEventListener("mousedown", A), e.document.removeEventListener("mouseup", h), e.removeEventListener("focus", T), e.removeEventListener("blur", T), clearTimeout(E.current)
             }
-        }, [I, T, h, A]);
+        }, [I, T, A, h]);
         let {
             x: m,
             y: O
@@ -200,11 +200,11 @@ function(e, t, n) {
             T.setStart(u.anchorNode, u.anchorOffset), T.setEnd(u.focusNode, u.focusOffset);
             let f = T.getBoundingClientRect(),
                 S = c.x === I.x,
-                h = S ? f.x : Math.min(c.x, I.x),
-                A = S ? f.x + f.width : Math.max(c.x, I.x),
+                A = S ? f.x : Math.min(c.x, I.x),
+                h = S ? f.x + f.width : Math.max(c.x, I.x),
                 m = null !== (i = null === (n = a.current) || void 0 === n ? void 0 : null === (t = n.getBoundingClientRect()) || void 0 === t ? void 0 : t.y) && void 0 !== i ? i : 0;
             return {
-                x: h + (A - h) / 2,
+                x: A + (h - A) / 2,
                 y: Math.max(m, Math.min(I.y, c.y))
             }
         }, [a, _, s]), [C, g] = r.useState(0), [D, v] = r.useState(0);

@@ -35,7 +35,7 @@ function(e, t, n) {
             return P
         },
         updateClipsLength: function() {
-            return B
+            return k
         },
         updateClipsQuality: function() {
             return w
@@ -50,7 +50,7 @@ function(e, t, n) {
             return b
         },
         updateViewerClipsEnabled: function() {
-            return k
+            return B
         }
     }), n("47120"), n("653041");
     var i = n("46973"),
@@ -68,8 +68,8 @@ function(e, t, n) {
         T = n("199902"),
         f = n("314897"),
         S = n("131951"),
-        h = n("959457"),
-        A = n("33039"),
+        A = n("959457"),
+        h = n("33039"),
         m = n("626135"),
         N = n("358085"),
         O = n("557177"),
@@ -165,7 +165,7 @@ function(e, t, n) {
         })
     }
 
-    function B(e) {
+    function k(e) {
         a.default.dispatch({
             type: "CLIPS_SETTINGS_UPDATE",
             settings: {
@@ -174,7 +174,7 @@ function(e, t, n) {
         })
     }
 
-    function k(e) {
+    function B(e) {
         let {
             enabled: t,
             trackAnalytics: n = !1
@@ -239,13 +239,13 @@ function(e, t, n) {
                 var t;
                 let n, i, r;
                 if (null != e) {
-                    n = null != e ? h.default.getRTCConnection(e) : null;
+                    n = null != e ? A.default.getRTCConnection(e) : null;
                     let t = (0, d.decodeStreamKey)(e);
                     i = t.guildId, r = t.channelId
                 } else {
                     let e = f.default.getId(),
                         t = T.default.getActiveStreamForUser(e, null);
-                    n = null != t ? h.default.getRTCConnection((0, d.encodeStreamKey)(t)) : null, i = null == t ? void 0 : t.guildId, r = null == t ? void 0 : t.channelId
+                    n = null != t ? A.default.getRTCConnection((0, d.encodeStreamKey)(t)) : null, i = null == t ? void 0 : t.guildId, r = null == t ? void 0 : t.channelId
                 }
                 let s = null == n ? void 0 : null === (t = n.analyticsContext) || void 0 === t ? void 0 : t.streamApplication;
                 return {
@@ -307,8 +307,8 @@ function(e, t, n) {
             E = null != e && null != T.default.getActiveStreamForStreamKey(e) && s;
         if (!o && !l && !E) return;
         let I = T.default.getCurrentUserActiveStream(),
-            h = null != I ? (0, d.encodeStreamKey)(I) : void 0,
-            m = null != e ? e : h,
+            A = null != I ? (0, d.encodeStreamKey)(I) : void 0,
+            m = null != e ? e : A,
             N = (() => {
                 let e = null != m ? (0, d.decodeStreamKey)(m).ownerId : void 0;
                 return e === f.default.getId() ? v.ClipSaveTypes.STREAMER : null != e ? v.ClipSaveTypes.VIEWER : v.ClipSaveTypes.DECOUPLED
@@ -318,7 +318,7 @@ function(e, t, n) {
                 let {
                     ownerId: e,
                     guildId: t
-                } = (0, d.decodeStreamKey)(m), n = A.default.getStreamId(e, t, i.MediaEngineContextTypes.STREAM);
+                } = (0, d.decodeStreamKey)(m), n = h.default.getStreamId(e, t, i.MediaEngineContextTypes.STREAM);
                 if (null != n) try {
                     let e = (0, r.getVoiceEngine)(),
                         t = await e.getNextVideoOutputFrame(n);

@@ -16,8 +16,8 @@ function(e, t, n) {
         T = n("314897"),
         f = n("592125"),
         S = n("306680"),
-        h = n("944486"),
-        A = n("823379"),
+        A = n("944486"),
+        h = n("823379"),
         m = n("709054"),
         N = n("882252");
     let O = [],
@@ -48,14 +48,14 @@ function(e, t, n) {
         }
     }
 
-    function B() {
+    function k() {
         D = [], i = null, R = null, C = new Set, g = d.ThreadSortOrder.LATEST_ACTIVITY, L = 0, M = [], y = u().chain(O), P = u().chain(O), b.clear(), U.clear()
     }
 
-    function k() {
+    function B() {
         var e;
-        let t = h.default.getChannelId();
-        if (null == t || !(null === (e = f.default.getChannel(t)) || void 0 === e ? void 0 : e.isForumLikeChannel())) return B(), !1;
+        let t = A.default.getChannelId();
+        if (null == t || !(null === (e = f.default.getChannel(t)) || void 0 === e ? void 0 : e.isForumLikeChannel())) return k(), !1;
         F({
             refreshThreadIds: !0
         })
@@ -94,7 +94,7 @@ function(e, t, n) {
     }
     class x extends(r = _.default.Store) {
         initialize() {
-            this.waitFor(f.default, E.default, h.default, S.default)
+            this.waitFor(f.default, E.default, A.default, S.default)
         }
         getNewThreadCount() {
             return L
@@ -104,7 +104,7 @@ function(e, t, n) {
         }
         getThreadIds(e, t, n) {
             let i = e !== R,
-                r = !(0, A.areSetsEqual)(n, C),
+                r = !(0, h.areSetsEqual)(n, C),
                 s = t !== g;
             return R = e, C = n, g = t, i ? F({
                 refreshThreadIds: !0
@@ -129,16 +129,16 @@ function(e, t, n) {
         configurable: !0,
         writable: !0
     }) : s[a] = o, t.default = new x(c.default, {
-        CONNECTION_OPEN: k,
-        OVERLAY_INITIALIZE: k,
-        GUILD_CREATE: k,
-        CHANNEL_SELECT: k,
+        CONNECTION_OPEN: B,
+        OVERLAY_INITIALIZE: B,
+        GUILD_CREATE: B,
+        CHANNEL_SELECT: B,
         CHANNEL_DELETE: function(e) {
             let {
                 channel: t
             } = e;
             if (null == t.parent_id || t.parent_id !== R) return !1;
-            B()
+            k()
         },
         THREAD_LIST_SYNC: function(e) {
             var t;

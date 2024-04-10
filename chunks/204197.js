@@ -34,8 +34,8 @@ function(e, t, n) {
             avatarOverride: E
         }), {
             avatarPlaceholderSrc: S,
-            avatarDecorationSrc: h,
-            eventHandlers: A
+            avatarDecorationSrc: A,
+            eventHandlers: h
         } = (0, a.default)({
             user: t,
             guildId: null != n ? n : void 0,
@@ -45,18 +45,18 @@ function(e, t, n) {
             avatarDecorationOverride: c,
             showTryItOut: d
         }), m = i.useCallback(() => {
-            f.onMouseEnter(), A.onMouseEnter()
-        }, [f, A]);
+            f.onMouseEnter(), h.onMouseEnter()
+        }, [f, h]);
         return {
             avatarPlaceholderSrc: S,
-            avatarDecorationSrc: h,
+            avatarDecorationSrc: A,
             avatarSrc: I,
             isAnimating: T,
             eventHandlers: {
                 onMouseEnter: m,
                 onMouseLeave: i.useCallback(() => {
-                    f.onMouseLeave(), A.onMouseLeave()
-                }, [f, A])
+                    f.onMouseLeave(), h.onMouseLeave()
+                }, [f, h])
             }
         }
     }

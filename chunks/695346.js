@@ -53,10 +53,10 @@ function(e, t, n) {
             return eD
         },
         DefaultGuildsRestricted: function() {
-            return k
+            return B
         },
         DeveloperMode: function() {
-            return eA
+            return eh
         },
         DisableGamesTab: function() {
             return q
@@ -89,10 +89,10 @@ function(e, t, n) {
             return eM
         },
         FocusMode: function() {
-            return h
+            return A
         },
         FocusModeExpiresAtSetting: function() {
-            return A
+            return h
         },
         FriendSourceFlagsSetting: function() {
             return F
@@ -134,7 +134,7 @@ function(e, t, n) {
             return K
         },
         NonSpamRetrainingOptIn: function() {
-            return B
+            return k
         },
         NotificationCenterAckedBeforeId: function() {
             return v
@@ -254,13 +254,13 @@ function(e, t, n) {
     }, e => s.BoolValue.create({
         value: e
     }));
-    let h = (0, o.defineProtoSetting)("notifications", "quietMode", e => {
+    let A = (0, o.defineProtoSetting)("notifications", "quietMode", e => {
             var t;
             return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t
         }, e => s.BoolValue.create({
             value: !!e
         })),
-        A = (0, o.defineProtoSetting)("notifications", "focusModeExpiresAtMs", e => null != e ? e : "0", e => e),
+        h = (0, o.defineProtoSetting)("notifications", "focusModeExpiresAtMs", e => null != e ? e : "0", e => e),
         m = [],
         N = (0, o.defineProtoSetting)("textAndImages", "emojiPickerCollapsedSections", e => null != e ? e : m, e => e),
         O = (0, o.defineProtoSetting)("textAndImages", "stickerPickerCollapsedSections", e => null != e ? e : m, e => e),
@@ -326,7 +326,7 @@ function(e, t, n) {
         }, e => s.BoolValue.create({
             value: e
         })),
-        B = (0, o.defineProtoSetting)("privacy", "nonSpamRetrainingOptIn", e => null == e ? void 0 : e.value, e => null == e ? void 0 : s.BoolValue.create({
+        k = (0, o.defineProtoSetting)("privacy", "nonSpamRetrainingOptIn", e => null == e ? void 0 : e.value, e => null == e ? void 0 : s.BoolValue.create({
             value: e
         }));
     (0, o.defineProtoSetting)("privacy", "contactSyncEnabled", e => {
@@ -335,7 +335,7 @@ function(e, t, n) {
     }, e => s.BoolValue.create({
         value: e
     }));
-    let k = (0, o.defineProtoSetting)("privacy", "defaultGuildsRestricted", e => null != e && e, e => e),
+    let B = (0, o.defineProtoSetting)("privacy", "defaultGuildsRestricted", e => null != e && e, e => e),
         V = (0, o.defineProtoSetting)("privacy", "restrictedGuildIds", e => null != e ? e : [], e => e);
     (0, o.defineProtoSetting)("privacy", "friendDiscoveryFlags", e => {
         var t;
@@ -506,11 +506,11 @@ function(e, t, n) {
     (0, o.defineProtoSetting)("appearance", "channelListLayout", e => null != e && eS.has(e.value) ? e.value : a.ChannelListLayoutTypes.COZY, e => s.StringValue.create({
         value: e
     }));
-    let eh = new Set([a.MessagePreviewTypes.ALL, a.MessagePreviewTypes.UNREADS, a.MessagePreviewTypes.NONE]);
-    (0, o.defineProtoSetting)("appearance", "messagePreviews", e => null != e && eh.has(e.value) ? e.value : a.MessagePreviewTypes.ALL, e => s.StringValue.create({
+    let eA = new Set([a.MessagePreviewTypes.ALL, a.MessagePreviewTypes.UNREADS, a.MessagePreviewTypes.NONE]);
+    (0, o.defineProtoSetting)("appearance", "messagePreviews", e => null != e && eA.has(e.value) ? e.value : a.MessagePreviewTypes.ALL, e => s.StringValue.create({
         value: e
     }));
-    let eA = (0, o.wrapSettingWithSelectiveSyncing)((0, o.defineProtoSetting)("appearance", "developerMode", e => null != e && e, e => e), "appearance", "developerMode"),
+    let eh = (0, o.wrapSettingWithSelectiveSyncing)((0, o.defineProtoSetting)("appearance", "developerMode", e => null != e && e, e => e), "appearance", "developerMode"),
         em = (0, o.defineProtoSetting)("appearance", "clientThemeSettings", e => {
             var t;
             return {

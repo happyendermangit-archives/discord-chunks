@@ -16,8 +16,8 @@ function(e, t, n) {
         T = n("28546"),
         f = n("98528"),
         S = n("98278"),
-        h = n("857185"),
-        A = n("911200"),
+        A = n("857185"),
+        h = n("911200"),
         m = n("639119"),
         N = n("695346"),
         O = n("594174"),
@@ -35,8 +35,8 @@ function(e, t, n) {
         b = n("489762"),
         G = n("31543"),
         w = n("814042"),
-        B = n("15350"),
-        k = n("611480"),
+        k = n("15350"),
+        B = n("611480"),
         V = n("981631"),
         F = n("80678");
     let x = (0, R.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
@@ -63,7 +63,7 @@ function(e, t, n) {
             } = (0, _.useAnalyticsContext)(), {
                 analyticsLocations: X
             } = (0, E.default)(c.default.STICKER_PICKER);
-            (0, h.useMaybeFetchPremiumLikelihood)(A.default);
+            (0, A.useMaybeFetchPremiumLikelihood)(h.default);
             let $ = (null === (s = (0, m.usePremiumTrialOffer)()) || void 0 === s ? void 0 : s.subscription_trial) != null,
                 ee = r.useRef(null),
                 et = r.useRef(null),
@@ -86,18 +86,18 @@ function(e, t, n) {
                 ed = N.StickerPickerCollapsedSections.useSetting(),
                 e_ = r.useMemo(() => new Set(ed), [ed]),
                 ec = (0, l.useStateFromStores)([O.default], () => O.default.getCurrentUser()),
-                eE = r.useMemo(() => (0, B.getFilteredStickers)(er, ec, u), [er, ec, u]),
+                eE = r.useMemo(() => (0, k.getFilteredStickers)(er, ec, u), [er, ec, u]),
                 eI = (0, D.useFavoriteStickers)(),
                 eT = (0, D.useLatestFrecentStickers)(),
                 ef = (0, l.useStateFromStoresObject)([v.default], () => v.default.getAllGuildStickers()),
                 {
                     sendable: eS = [],
-                    sendableWithPremium: eh = []
+                    sendableWithPremium: eA = []
                 } = null != eE ? eE : {},
-                eA = eS.length + eh.length,
+                eh = eS.length + eA.length,
                 em = r.useCallback(e => {
-                    "" === er ? (0, L.trackStickerSelect)(e) : (0, L.trackStickerSearchSelect)(e, er, eA), R(e.sticker, M.StickerSelectLocation.STICKER_PICKER)
-                }, [R, er, eA]),
+                    "" === er ? (0, L.trackStickerSelect)(e) : (0, L.trackStickerSearchSelect)(e, er, eh), R(e.sticker, M.StickerSelectLocation.STICKER_PICKER)
+                }, [R, er, eh]),
                 eN = null != eu && eu > x,
                 {
                     rowCount: eO,
@@ -150,7 +150,7 @@ function(e, t, n) {
                     onGridItemSelect: eL,
                     store: I.StickerPickerStore,
                     setInspectedStickerPosition: I.StickerPickerStore.setInspectedExpressionPosition,
-                    gridNavigatorId: k.GRID_NAVIGATOR_ID
+                    gridNavigatorId: B.GRID_NAVIGATOR_ID
                 });
             r.useEffect(() => I.StickerPickerStore.resetStoreState, []);
             let eU = () => {
@@ -174,8 +174,8 @@ function(e, t, n) {
             r.useEffect(() => {
                 "" === ea.current && "" !== er && (0, L.trackStickerSearchStart)(), ea.current = er
             }, [er]), r.useEffect(() => {
-                0 === eA ? J(er) : Z(er, eA, es)
-            }, [er, eA, es]), r.useLayoutEffect(() => {
+                0 === eh ? J(er) : Z(er, eh, es)
+            }, [er, eh, es]), r.useLayoutEffect(() => {
                 var e;
                 null === (e = en.current) || void 0 === e || e.focus()
             }, []);
@@ -201,7 +201,7 @@ function(e, t, n) {
                     children: [(0, i.jsx)("div", {
                         ref: ee,
                         className: F.listWrapper,
-                        id: k.GRID_NAVIGATOR_ID,
+                        id: B.GRID_NAVIGATOR_ID,
                         ...eM,
                         children: null != eu ? (0, i.jsx)(b.default, {
                             ref: et,
@@ -230,8 +230,8 @@ function(e, t, n) {
         });
     t.default = r.forwardRef((e, t) => ((0, D.useFetchStickerPacks)(), (0, i.jsx)("div", {
         className: F.wrapper,
-        id: k.STICKER_PICKER_TAB_PANEL_ID,
-        "aria-labelledby": k.STICKER_PICKER_TAB_ID,
+        id: B.STICKER_PICKER_TAB_PANEL_ID,
+        "aria-labelledby": B.STICKER_PICKER_TAB_ID,
         role: "tabpanel",
         children: e.isLoading ? (0, i.jsx)(d.Spinner, {
             className: F.loadingIndicator

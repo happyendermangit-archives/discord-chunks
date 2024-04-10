@@ -20,8 +20,8 @@ function(e, t, n) {
         T = n("797053"),
         f = n("68588"),
         S = n("263704"),
-        h = n("757206"),
-        A = n("332870"),
+        A = n("757206"),
+        h = n("332870"),
         m = n("750156"),
         N = n("979516"),
         O = n("671612"),
@@ -41,7 +41,7 @@ function(e, t, n) {
     n("519308");
     var w = n("931093");
 
-    function B(e) {
+    function k(e) {
         let {
             text: t
         } = e, [n, s] = r.useState(!1);
@@ -56,13 +56,13 @@ function(e, t, n) {
             children: n ? (0, i.jsx)(S.default, {
                 width: 16,
                 height: 16
-            }) : (0, i.jsx)(h.default, {
+            }) : (0, i.jsx)(A.default, {
                 width: 16,
                 height: 16
             })
         })
     }
-    let k = {
+    let B = {
         blockQuote: {
             react: (e, t, n) => (0, i.jsxs)("div", {
                 className: w.blockquoteContainer,
@@ -106,7 +106,7 @@ function(e, t, n) {
                         className: w.codeContainer,
                         children: [p.SUPPORTS_COPY ? (0, i.jsx)("div", {
                             className: w.codeActions,
-                            children: (0, i.jsx)(B, {
+                            children: (0, i.jsx)(k, {
                                 text: e.content
                             })
                         }) : null, (0, i.jsx)(d.LazyLibrary, {
@@ -256,7 +256,7 @@ function(e, t, n) {
             }
         },
         channel: {
-            react: (e, t, n) => (0, i.jsx)(A.default, {
+            react: (e, t, n) => (0, i.jsx)(h.default, {
                 iconType: e.iconType,
                 children: (0, C.smartOutput)(e, t, n)
             }, n.key)
@@ -268,7 +268,7 @@ function(e, t, n) {
 
     function V(e) {
         return {
-            ...k,
+            ...B,
             link: (0, y.default)(e),
             devLink: (0, M.default)(e),
             emoji: function(e) {

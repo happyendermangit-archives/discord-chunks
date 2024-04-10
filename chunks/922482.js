@@ -2,13 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         connectAndOpen: function() {
-            return A
+            return h
         },
         connectOrLurkStage: function() {
             return S
         },
         connectToStage: function() {
-            return h
+            return A
         },
         navigateToStage: function() {
             return m
@@ -33,21 +33,21 @@ function(e, t, n) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         return new Promise(async r => {
             let s = u.default.getChannel(t);
-            if (null != s) return h(s, n), r(s);
+            if (null != s) return A(s, n), r(s);
             await (0, o.stopLurkingAll)([e]), await i.default.joinGuild(e, {
                 lurker: !0
             }), d.default.addConditionalChangeListener(() => {
                 let e = u.default.getChannel(t);
-                return null == e || (h(e), f.default.initialize(), r(e), !1)
+                return null == e || (A(e), f.default.initialize(), r(e), !1)
             })
         })
     }
 
-    function h(e) {
+    function A(e) {
         var t, n;
         let i = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             a = c.default.getVoiceChannelId();
-        if (!i && (t = e, n = a, !_.default.can(T.JOIN_VOCAL_CHANNEL_PERMISSIONS, t) || E.shouldShowBlockedUsers(t.id) && n !== t.id && (E.openStageBlockedUsersSheet(t, () => A(t, !0)), 1))) return !1;
+        if (!i && (t = e, n = a, !_.default.can(T.JOIN_VOCAL_CHANNEL_PERMISSIONS, t) || E.shouldShowBlockedUsers(t.id) && n !== t.id && (E.openStageBlockedUsersSheet(t, () => h(t, !0)), 1))) return !1;
         if (I.default.initialize(), r.default.selectVoiceChannel(e.id), (a = c.default.getVoiceChannelId()) !== e.id) return !1;
         let o = l.default.getAllApplicationStreamsForChannel(e.id);
         return o.length > 0 && (0, s.watchStream)(o[0], {
@@ -55,12 +55,12 @@ function(e, t, n) {
         }), !0
     }
 
-    function A(e) {
+    function h(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
             r = c.default.getVoiceChannelId();
-        if (!(!i && r !== e.id && (0, a.shouldShowVoiceChannelChangeConfirmation)(e) && E.showChannelChangeConfirmationAlert(e, () => A(e, t, n, !0)))) h(e, t) && m(e, r, n)
+        if (!(!i && r !== e.id && (0, a.shouldShowVoiceChannelChangeConfirmation)(e) && E.showChannelChangeConfirmationAlert(e, () => h(e, t, n, !0)))) A(e, t) && m(e, r, n)
     }
 
     function m(e, t) {

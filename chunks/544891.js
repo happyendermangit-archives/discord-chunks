@@ -41,8 +41,8 @@ function(e, t, n) {
 
     function E(e, t, n, i, a) {
         var u, _, I, T, S;
-        let h = r()[e](t.url);
-        if (null != t.onRequestCreated && t.onRequestCreated(h), null != t.query) {
+        let A = r()[e](t.url);
+        if (null != t.onRequestCreated && t.onRequestCreated(A), null != t.query) {
             let e = t.query;
             if ("object" == typeof e) {
                 let t = {
@@ -52,12 +52,12 @@ function(e, t, n) {
                     null == t[e] && delete t[e]
                 }), e = t
             }
-            h.query(e)
+            A.query(e)
         }
-        if (t.body && h.send(t.body), null != t.headers && h.set(t.headers), null != t.reason && h.set("X-Audit-Log-Reason", encodeURIComponent(t.reason)), null === (u = t.attachments) || void 0 === u || u.forEach(e => {
-                h.attach(e.name, e.file, e.filename)
+        if (t.body && A.send(t.body), null != t.headers && A.set(t.headers), null != t.reason && A.set("X-Audit-Log-Reason", encodeURIComponent(t.reason)), null === (u = t.attachments) || void 0 === u || u.forEach(e => {
+                A.attach(e.name, e.file, e.filename)
             }), null === (_ = t.fields) || void 0 === _ || _.forEach(e => {
-                h.field(e.name, e.value)
+                A.field(e.name, e.value)
             }), null != t.context) {
             let e = function(e) {
                 try {
@@ -66,18 +66,18 @@ function(e, t, n) {
                     return null
                 }
             }(t.context);
-            null != e && h.set("X-Context-Properties", e)
+            null != e && A.set("X-Context-Properties", e)
         }
-        null != t.retried && 0 !== t.retried && h.set("X-Failed-Requests", "".concat(t.retried)), null != t.timeout && 0 !== t.timeout && h.timeout(t.timeout), t.binary && h.responseType("blob"), null != t.onRequestProgress && h.on("progress", e => {
+        null != t.retried && 0 !== t.retried && A.set("X-Failed-Requests", "".concat(t.retried)), null != t.timeout && 0 !== t.timeout && A.timeout(t.timeout), t.binary && A.responseType("blob"), null != t.onRequestProgress && A.on("progress", e => {
             var n;
             null === (n = t.onRequestProgress) || void 0 === n || n.call(t, e)
         });
-        let A = () => {
+        let h = () => {
             t.backoff = null != t.backoff ? t.backoff : new s.default, t.retried = (null != t.retried ? t.retried : 0) + 1, t.backoff.fail(() => L(t.url).then(() => E(e, t, n, i, a)))
         };
-        null == C || null === (I = C.prepareRequest) || void 0 === I || I.call(C, h), h.ok(e => null != e.status), h.then(r => {
+        null == C || null === (I = C.prepareRequest) || void 0 === I || I.call(C, A), A.ok(e => null != e.status), A.then(r => {
             var s, u, d;
-            if (null != t.retries && t.retries-- > 0 && c.has(r.status)) return A();
+            if (null != t.retries && t.retries-- > 0 && c.has(r.status)) return h();
             let _ = {
                 ok: r.ok,
                 headers: r.headers,
@@ -124,12 +124,12 @@ function(e, t, n) {
                 }
             }
         }, e => {
-            null != t.retries && t.retries-- > 0 && "ABORTED" !== e.code ? A() : (f(t), i(e), null != a && a({
+            null != t.retries && t.retries-- > 0 && "ABORTED" !== e.code ? h() : (f(t), i(e), null != a && a({
                 ok: !1,
                 hasErr: !0,
                 err: e
             }))
-        }), (null === (T = t.signal) || void 0 === T ? void 0 : T.aborted) ? h.abort() : null === (S = t.signal) || void 0 === S || S.addEventListener("abort", () => h.abort(), {
+        }), (null === (T = t.signal) || void 0 === T ? void 0 : T.aborted) ? A.abort() : null === (S = t.signal) || void 0 === S || S.addEventListener("abort", () => A.abort(), {
             once: !0
         })
     }
@@ -181,14 +181,14 @@ function(e, t, n) {
             null != s ? (_.verbose("makeRequest: queueing request for ", t.url), s.queue.push(E.bind(null, e, t, i, r, n))) : E(e, t, i, r, n)
         })
     }
-    let h = S.bind(null, "get"),
-        A = S.bind(null, "post"),
+    let A = S.bind(null, "get"),
+        h = S.bind(null, "post"),
         m = S.bind(null, "put"),
         N = S.bind(null, "patch"),
         O = S.bind(null, "del"),
         p = {
-            get: h,
-            post: A,
+            get: A,
+            post: h,
             put: m,
             patch: N,
             del: O
@@ -201,7 +201,7 @@ function(e, t, n) {
             body: null,
             text: ""
         });
-        h = e, A = e, m = e, N = e, O = e
+        A = e, h = e, m = e, N = e, O = e
     }
 
     function R() {

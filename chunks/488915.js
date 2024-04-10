@@ -21,11 +21,11 @@ function(e, t, n) {
         return "application:".concat(e)
     }
 
-    function h(e) {
+    function A(e) {
         return "plan:".concat(e)
     }
 
-    function A(e, t, n) {
+    function h(e, t, n) {
         return "entitlement:".concat(e, ":").concat(n, ":").concat(t)
     }
 
@@ -33,8 +33,8 @@ function(e, t, n) {
         return "entitlement:".concat(t, ":").concat(e)
     }(s = i || (i = {}))[s.NOT_FETCHED = 0] = "NOT_FETCHED", s[s.FETCHING = 1] = "FETCHING", s[s.FETCHED = 2] = "FETCHED";
     let N = new c.SecondaryIndexMap(e => [S(e.application_id), ...e.subscription_listings_ids.map(f)], e => e.id),
-        O = new c.SecondaryIndexMap(e => [S(e.application_id), h(e.subscription_plans[0].id)], e => e.id),
-        p = new c.SecondaryIndexMap(e => [A(e.applicationId, e.isValid(null, T.default), e.guildId), m(e.isValid(null, T.default), e.guildId)], e => e.id),
+        O = new c.SecondaryIndexMap(e => [S(e.application_id), A(e.subscription_plans[0].id)], e => e.id),
+        p = new c.SecondaryIndexMap(e => [h(e.applicationId, e.isValid(null, T.default), e.guildId), m(e.isValid(null, T.default), e.guildId)], e => e.id),
         R = {},
         C = {};
 
@@ -75,12 +75,12 @@ function(e, t, n) {
             return null !== (t = C[e]) && void 0 !== t ? t : 0
         }
         getSubscriptionListingForPlan(e) {
-            let t = O.values(h(e));
+            let t = O.values(A(e));
             return d()(t.length <= 1, "Found multiple listings for plan"), t[0]
         }
         getApplicationEntitlementsForGuild(e, t) {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-            return p.values(A(e, n, t))
+            return p.values(h(e, n, t))
         }
         getEntitlementsForGuild(e) {
             let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];

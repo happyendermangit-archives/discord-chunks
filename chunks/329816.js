@@ -16,8 +16,8 @@ function(e, t, n) {
         T = n("570140"),
         f = n("721037"),
         S = n("490173"),
-        h = n("114250"),
-        A = n("315263"),
+        A = n("114250"),
+        h = n("315263"),
         m = n("40851"),
         N = n("607070"),
         O = n("545006"),
@@ -35,8 +35,8 @@ function(e, t, n) {
         b = n("904085"),
         G = n("892254"),
         w = n("210887"),
-        B = n("819640"),
-        k = n("594174"),
+        k = n("819640"),
+        B = n("594174"),
         V = n("451478"),
         F = n("672752"),
         x = n("812663"),
@@ -57,7 +57,7 @@ function(e, t, n) {
     n("792295"), Promise.resolve().then(n.bind(n, "62883")).then(e => {
         K.isPlatformEmbedded ? window.addEventListener("contextmenu", e.contextMenuCallbackNative, !1) : window.addEventListener("contextmenu", e.contextMenuCallbackWeb, !1)
     }), (0, E.setDesignConfig)({
-        getDefaultLinkInterceptor: A.default
+        getDefaultLinkInterceptor: h.default
     }), (0, X.makeLazy)({
         createPromise: () => Promise.all([n.e("99387"), n.e("40326"), n.e("80451"), n.e("30634"), n.e("54343")]).then(n.bind(n, "849493")),
         webpackId: "849493"
@@ -82,13 +82,13 @@ function(e, t, n) {
             skipsSettingDefaultPageTitle: n
         } = e, {
             pathname: s
-        } = (0, u.useLocation)(), E = (0, K.getPlatform)(), A = d.isMobile || d.isTablet, V = (0, _.useStateFromStores)([w.default], () => w.default.darkSidebar ? $.ThemeTypes.DARK : void 0), X = (0, _.useStateFromStores)([N.default], () => N.default.useForcedColors ? "yes" : "no"), [Z, er] = (0, _.useStateFromStoresArray)([D.default], () => [D.default.isEditorOpen, D.default.isCoachmark]), es = (0, _.useStateFromStores)([C.default], () => C.default.isEditorOpen), {
+        } = (0, u.useLocation)(), E = (0, K.getPlatform)(), h = d.isMobile || d.isTablet, V = (0, _.useStateFromStores)([w.default], () => w.default.darkSidebar ? $.ThemeTypes.DARK : void 0), X = (0, _.useStateFromStores)([N.default], () => N.default.useForcedColors ? "yes" : "no"), [Z, er] = (0, _.useStateFromStoresArray)([D.default], () => [D.default.isEditorOpen, D.default.isCoachmark]), es = (0, _.useStateFromStores)([C.default], () => C.default.isEditorOpen), {
             enabled: ea
         } = b.default.useExperiment({
             location: "client_themes_coachmark_reintro"
         }, {
             autoTrackExposure: !0
-        }), eo = (0, _.useStateFromStores)([B.default], () => B.default.getLayers().includes($.Layers.USER_SETTINGS)), el = (0, _.useStateFromStores)([k.default], () => z.default.canUseClientThemes(k.default.getCurrentUser())), eu = Z && !eo, ed = [];
+        }), eo = (0, _.useStateFromStores)([k.default], () => k.default.getLayers().includes($.Layers.USER_SETTINGS)), el = (0, _.useStateFromStores)([B.default], () => z.default.canUseClientThemes(B.default.getCurrentUser())), eu = Z && !eo, ed = [];
         eu && er && ea && !el && ed.push(c.DismissibleContent.CLIENT_THEMES_COACHMARK);
         let [e_, ec] = (0, P.useSelectedDismissibleContent)(ed, ee.DismissibleContentGroupName.SIDEBAR, !0);
         ed.push(c.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
@@ -124,7 +124,7 @@ function(e, t, n) {
                                     renderWindow: window,
                                     children: (0, i.jsxs)(H.AppLayerProvider, {
                                         children: [(0, i.jsxs)("div", {
-                                            className: a()(et.appAsidePanelWrapper, A && et.mobileAppAsidePanelWrapper, {
+                                            className: a()(et.appAsidePanelWrapper, h && et.mobileAppAsidePanelWrapper, {
                                                 [et.allowsScrolling]: (() => {
                                                     let e = (0, l.matchPath)(s, {
                                                         path: $.Routes.APPLICATION_DIRECTORY,
@@ -142,9 +142,9 @@ function(e, t, n) {
                                                         children: (0, i.jsxs)(x.default.Provider, {
                                                             value: p.default,
                                                             children: [(0, i.jsx)("div", {
-                                                                className: a()(A ? et.mobileApp : et.app),
+                                                                className: a()(h ? et.mobileApp : et.app),
                                                                 children: t
-                                                            }), (0, i.jsx)(L.default, {}), (0, i.jsx)(S.default, {}), (0, i.jsx)(I.Modals, {}), (0, i.jsx)(h.default, {}), (0, i.jsx)(Y.FullScreenLayers, {}), (0, i.jsx)(H.AppLayerContainer, {}), (0, i.jsx)(j.VerificationLayerContainer, {}), (0, i.jsx)(I.ToastContainer, {}), (0, i.jsx)(R.default, {}), (0, i.jsx)(U.default, {}), (0, i.jsx)(en, {})]
+                                                            }), (0, i.jsx)(L.default, {}), (0, i.jsx)(S.default, {}), (0, i.jsx)(I.Modals, {}), (0, i.jsx)(A.default, {}), (0, i.jsx)(Y.FullScreenLayers, {}), (0, i.jsx)(H.AppLayerContainer, {}), (0, i.jsx)(j.VerificationLayerContainer, {}), (0, i.jsx)(I.ToastContainer, {}), (0, i.jsx)(R.default, {}), (0, i.jsx)(U.default, {}), (0, i.jsx)(en, {})]
                                                         })
                                                     })
                                                 })
@@ -154,7 +154,7 @@ function(e, t, n) {
                                                 isCoachmark: eE,
                                                 markAsDismissed: ec
                                             }), (0, i.jsx)(y.default, {
-                                                mobile: A
+                                                mobile: h
                                             })]
                                         }), !1]
                                     })

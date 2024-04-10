@@ -20,20 +20,20 @@ function(e, t, n) {
         T = n("953101"),
         f = n("701488"),
         S = n("981631"),
-        h = n("735809");
+        A = n("735809");
 
-    function A(e) {
+    function h(e) {
         let {
             url: t,
             className: n,
             style: s,
             onLoad: a,
-            shouldRefocus: h,
-            queryParams: A,
+            shouldRefocus: A,
+            queryParams: h,
             allowPopups: m = !1,
             referrerPolicy: N = "origin"
-        } = e, O = (0, u.useStateFromStores)([d.default], () => d.default.getWindow(S.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), p = (0, o.useMemoOne)(() => (0, l.v4)(), [t]), R = r.useRef(null), C = (0, I.default)(R, h, null == O ? window : O), g = {
-            ...A,
+        } = e, O = (0, u.useStateFromStores)([d.default], () => d.default.getWindow(S.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), p = (0, o.useMemoOne)(() => (0, l.v4)(), [t]), R = r.useRef(null), C = (0, I.default)(R, A, null == O ? window : O), g = {
+            ...h,
             frame_id: p,
             platform: f.ActivityPlatform.DESKTOP
         }, [L, D] = r.useState(!1), v = c.default.theme, M = {
@@ -73,12 +73,12 @@ function(e, t, n) {
             s(!0), null == t || t(e)
         }, [t]);
         return (0, i.jsxs)("div", {
-            className: h.fillParent,
+            className: A.fillParent,
             children: [!n && (0, i.jsx)("div", {
-                className: a()(h.fillParent, h.iframePlaceholder)
+                className: a()(A.fillParent, A.iframePlaceholder)
             }), (0, i.jsx)("div", {
-                className: a()(h.fillParent, n ? void 0 : h.hiddenIframeContainer),
-                children: (0, i.jsx)(A, {
+                className: a()(A.fillParent, n ? void 0 : A.hiddenIframeContainer),
+                children: (0, i.jsx)(h, {
                     ...e,
                     onLoad: o
                 })

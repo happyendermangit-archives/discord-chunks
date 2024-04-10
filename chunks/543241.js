@@ -8,7 +8,7 @@ function(e, t, n) {
             return z
         },
         getAriaIdForEmojiCategory: function() {
-            return B
+            return k
         },
         getEmojiSubCategory: function() {
             return K
@@ -17,7 +17,7 @@ function(e, t, n) {
             return X
         },
         getStringForEmojiCategory: function() {
-            return k
+            return B
         },
         trackEmojiFavorited: function() {
             return w
@@ -84,8 +84,8 @@ function(e, t, n) {
         f = n("176354"),
         S = n("111361");
     n("709054");
-    var h = n("253696"),
-        A = n("304852"),
+    var A = n("253696"),
+        h = n("304852"),
         m = n("199257"),
         N = n("149203"),
         O = n("981631"),
@@ -124,7 +124,7 @@ function(e, t, n) {
                 } = (0, m.default)(n, e),
                 {
                     allEmojis: I
-                } = (0, A.default)({
+                } = (0, h.default)({
                     topEmojis: d,
                     newlyAddedEmojis: E
                 }),
@@ -341,11 +341,11 @@ function(e, t, n) {
         leading: !1,
         trailing: !0
     });
-    let B = (e, t) => {
+    let k = (e, t) => {
             if (e.type === N.EmojiCategoryTypes.GUILD) return null != t ? t.toString() : "";
             return e.id
         },
-        k = (e, t) => {
+        B = (e, t) => {
             switch (e) {
                 case N.EmojiCategories.TOP_GUILD_EMOJI:
                     return g.default.Messages.EMOJI_CATEGORY_TOP_GUILD_EMOJI.format({
@@ -422,7 +422,7 @@ function(e, t, n) {
 
     function W(e) {
         let t = i.useCallback(() => {
-            (0, h.default)(e)
+            (0, A.default)(e)
         }, [e]);
         return i.useEffect(() => {
             e.intention === p.EmojiIntention.REACTION && t()

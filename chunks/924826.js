@@ -33,8 +33,8 @@ function(e, t, n) {
             setFocus: T,
             setFocusOnList: f,
             preserveFocusPosition: S = !0,
-            useVirtualFocus: h = !1,
-            wrap: A = !1,
+            useVirtualFocus: A = !1,
+            wrap: h = !1,
             orientation: m = o.Orientations.VERTICAL,
             disableClickOnSpace: N = !1
         } = e, O = i.useRef(n ? (0, l.createListItemId)(t, n) : null), p = i.useRef(!1), R = i.useRef(null), C = i.useRef(u);
@@ -117,9 +117,9 @@ function(e, t, n) {
             }
         }, [u, t, S, D, f, v, M]);
         let G = i.useMemo(() => ({
-                wrap: A,
+                wrap: h,
                 get from() {
-                    if (!h) return;
+                    if (!A) return;
                     let t = O.current;
                     if (null != t) {
                         var e;
@@ -127,19 +127,19 @@ function(e, t, n) {
                     }
                     return
                 }
-            }), [h, A]),
+            }), [A, h]),
             w = i.useCallback(async () => {
                 let e = await y.getNextFocusableElement(G),
                     t = null == e ? void 0 : e.getAttribute(l.LIST_ITEM_ID_ATTRIBUTE);
                 null != t ? M(t) : null == e && null != I && I()
             }, [y, G, I, M]),
-            B = i.useCallback(async () => {
+            k = i.useCallback(async () => {
                 let e = await y.getPreviousFocusableElement(G),
                     t = null == e ? void 0 : e.getAttribute(l.LIST_ITEM_ID_ATTRIBUTE);
                 null != t ? M(t) : null == e && null != E && E()
             }, [y, G, E, M]),
-            k = i.useCallback(e => {
-                if (!C.current || !h && !b.current) return;
+            B = i.useCallback(e => {
+                if (!C.current || !A && !b.current) return;
                 let n = m === o.Orientations.HORIZONTAL ? o.Keys.RIGHT : o.Keys.DOWN,
                     i = m === o.Orientations.HORIZONTAL ? o.Keys.LEFT : o.Keys.UP;
                 switch (e.key) {
@@ -147,7 +147,7 @@ function(e, t, n) {
                         e.stopPropagation(), e.preventDefault(), w();
                         return;
                     case i:
-                        e.stopPropagation(), e.preventDefault(), B();
+                        e.stopPropagation(), e.preventDefault(), k();
                         return;
                     case o.Keys.HOME:
                         e.stopPropagation(), e.preventDefault(), _().then(() => {
@@ -172,12 +172,12 @@ function(e, t, n) {
                             var r;
                             let n = g((0, l.createSelector)(t)),
                                 i = null !== (r = null == n ? void 0 : n.ownerDocument) && void 0 !== r ? r : document,
-                                s = h || n === i.activeElement;
+                                s = A || n === i.activeElement;
                             null != n && s && (e.preventDefault(), e.stopPropagation(), null == n || n.click())
                         }
                     }
                 }
-            }, [w, B, t, m, c, _, M, h]),
+            }, [w, k, t, m, c, _, M, A]),
             V = i.useCallback(e => {
                 let n = null != e ? (0, l.createListItemId)(t, e) : null;
                 O.current = n
@@ -185,7 +185,7 @@ function(e, t, n) {
         return i.useMemo(() => ({
             id: t,
             containerProps: {
-                onKeyDown: k,
+                onKeyDown: B,
                 ref: R,
                 tabIndex: P && S ? -1 : 0
             },
@@ -201,13 +201,13 @@ function(e, t, n) {
                 let n = await (0, a.findFirstVisibleItem)(null !== (e = R.current) && void 0 !== e ? e : document.body, d(t, R));
                 null !== n && M(n)
             },
-            focusPreviousItem: B,
+            focusPreviousItem: k,
             focusNextItem: w,
             focusedItemId() {
                 let e = O.current;
                 return e ? (0, l.getItemId)(e) : null
             }
-        }), [t, k, m, P, S, V, B, w, M])
+        }), [t, B, m, P, S, V, k, w, M])
     }
     n.es(u, t)
 }

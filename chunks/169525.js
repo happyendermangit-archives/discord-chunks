@@ -8,10 +8,10 @@ function(e, t, n) {
             return m
         },
         getObscureReasonForAttachment: function() {
-            return h
+            return A
         },
         getObscureReasonForEmbed: function() {
-            return A
+            return h
         },
         getObscuredAlt: function() {
             return O
@@ -35,7 +35,7 @@ function(e, t, n) {
         f = n("981631"),
         S = n("689938");
     (r = i || (i = {})).SPOILER = "spoiler", r.EXPLICIT_CONTENT = "explicit_content", r.POTENTIAL_EXPLICIT_CONTENT = "potential_explicit_content";
-    let h = (e, t) => {
+    let A = (e, t) => {
             let {
                 spoiler: n,
                 flags: i = 0,
@@ -47,7 +47,7 @@ function(e, t, n) {
             }
             return n || (0, I.hasFlag)(i, f.MessageAttachmentFlags.IS_SPOILER) ? "spoiler" : null
         },
-        A = (e, t, n, i, r) => {
+        h = (e, t, n, i, r) => {
             let {
                 flags: s = 0,
                 contentScanVersion: a

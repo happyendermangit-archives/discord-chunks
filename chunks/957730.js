@@ -16,8 +16,8 @@ function(e, t, n) {
         T = n("592125"),
         f = n("984933"),
         S = n("271383"),
-        h = n("430824"),
-        A = n("496675"),
+        A = n("430824"),
+        h = n("496675"),
         m = n("699516"),
         N = n("246946"),
         O = n("594174"),
@@ -81,8 +81,8 @@ function(e, t, n) {
         b = /^<@!?(\d+)>/,
         G = /^<@&(\d+)>/,
         w = /^<#(\d+)>/,
-        B = /^<a?:(\w+):(\d+)>/,
-        k = /(@everyone|@here|@Clyde)\b/,
+        k = /^<a?:(\w+):(\d+)>/,
+        B = /(@everyone|@here|@Clyde)\b/,
         V = {
             link: M(a().defaultRules.link),
             autolink: M(a().defaultRules.autolink),
@@ -92,7 +92,7 @@ function(e, t, n) {
             rawUserMention: y(b),
             rawRoleMention: y(G),
             rawChannelMention: y(w),
-            rawEmoji: y(B),
+            rawEmoji: y(k),
             mention: {
                 match(e, t, n) {
                     let i = n.split(" ").pop() + e;
@@ -103,7 +103,7 @@ function(e, t, n) {
                             ...e,
                             text: e.text.split("#")[0]
                         })), "mention"))) return null;
-                    let s = k.exec(e);
+                    let s = B.exec(e);
                     if (null != s && r[0].length <= s[0].length) return null;
                     if ("" === n && (0, c.canSuppressNotifications)()) {
                         let t = c.SILENT_RE.exec(e);
@@ -246,7 +246,7 @@ function(e, t, n) {
                         guild: i
                     } = n;
                     if (null != i) {
-                        let t = h.default.getRoles(i.id)[e[1]];
+                        let t = A.default.getRoles(i.id)[e[1]];
                         if (null != t) return {
                             content: "@".concat(t.name)
                         }
@@ -266,7 +266,7 @@ function(e, t, n) {
                 }
             },
             emoji: {
-                match: a().anyScopeRegex(B),
+                match: a().anyScopeRegex(k),
                 parse(e, t, n) {
                     let [i, r, s] = e, {
                         guild: a
@@ -348,8 +348,8 @@ function(e, t, n) {
     function j(e) {
         let t;
         let n = null == e ? void 0 : e.getGuildId(),
-            i = null != n ? h.default.getGuild(n) : null,
-            s = A.default.can(g.Permissions.MENTION_EVERYONE, e);
+            i = null != n ? A.default.getGuild(n) : null,
+            s = h.default.can(g.Permissions.MENTION_EVERYONE, e);
         t = (null == e ? void 0 : e.isPrivate()) ? e.recipients.map(e => ({
             userId: e,
             nick: null
@@ -372,7 +372,7 @@ function(e, t, n) {
                     text: i.tag
                 }), e)
             }, [])),
-            o = r()(null != i ? h.default.getRoles(i.id) : {}).values().filter(e => {
+            o = r()(null != i ? A.default.getRoles(i.id) : {}).values().filter(e => {
                 let {
                     mentionable: t
                 } = e;
@@ -449,7 +449,7 @@ function(e, t, n) {
         unparse(e, t, n) {
             let i = T.default.getChannel(t),
                 s = null != i ? i.getGuildId() : null,
-                o = null != s ? h.default.getGuild(s) : null,
+                o = null != s ? A.default.getGuild(s) : null,
                 l = n ? F : r().omit(F, ["spoiler", "timestamp"]),
                 d = n ? W : u.default.translateSurrogatesToInlineEmoji,
                 _ = a().parserFor(l),

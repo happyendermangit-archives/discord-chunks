@@ -23,8 +23,8 @@ function(e, t, n) {
     }
     let f = "default",
         S = [],
-        h = [],
         A = [],
+        h = [],
         m = 0,
         N = null,
         O = null,
@@ -69,10 +69,10 @@ function(e, t, n) {
             null != e && (D = e), v(), this.waitFor(o.default)
         }
         getClips() {
-            return h
+            return A
         }
         getPendingClips() {
-            return A
+            return h
         }
         getUserAgnosticState() {
             return D
@@ -244,24 +244,24 @@ function(e, t, n) {
             }, D = {
                 ...D,
                 newClipIds: [...null !== (n = D.newClipIds) && void 0 !== n ? n : [], i.id]
-            }, A = A.filter(e => {
+            }, h = h.filter(e => {
                 let {
                     id: t
                 } = e;
                 return t !== i.id
-            }), h = [i, ...h], D.hasClips = !0
+            }), A = [i, ...A], D.hasClips = !0
         },
         CLIPS_SAVE_CLIP_PLACEHOLDER: function(e) {
             let {
                 clip: t
             } = e;
-            A = [t, ...A]
+            h = [t, ...h]
         },
         CLIPS_SAVE_CLIP_PLACEHOLDER_ERROR: function(e) {
             let {
                 clipId: t
             } = e;
-            A = A.filter(e => {
+            h = h.filter(e => {
                 let {
                     id: n
                 } = e;
@@ -330,10 +330,10 @@ function(e, t, n) {
             D.newClipIds = []
         },
         CLIPS_LOAD_DIRECTORY_SUCCESS: function(e) {
-            D.hasClips = e.clips.length > 0, h = e.clips
+            D.hasClips = e.clips.length > 0, A = e.clips
         },
         CLIPS_DELETE_CLIP: function(e) {
-            0 === (h = h.filter(t => {
+            0 === (A = A.filter(t => {
                 let {
                     filepath: n
                 } = t;
@@ -344,9 +344,9 @@ function(e, t, n) {
             let {
                 clip: t
             } = e;
-            for (let [e, n] of h.entries())
+            for (let [e, n] of A.entries())
                 if (n.id === t.id) {
-                    h[e] = t, h = [...h];
+                    A[e] = t, A = [...A];
                     return
                 }
         },

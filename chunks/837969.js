@@ -35,12 +35,12 @@ function(e, t, n) {
             maintainFocusPosition: T = !0,
             includeSetSizes: f = !0,
             focusOnMount: S = !0,
-            enabled: h = !0,
-            onDispatch: A
+            enabled: A = !0,
+            onDispatch: h
         } = e, m = i.useCallback((e, t) => {
             let n = (0, r.default)(e, t);
-            return null != A && A(e, n, t), n
-        }, [A]), [N, O] = i.useReducer(m, {
+            return null != h && h(e, n, t), n
+        }, [h]), [N, O] = i.useReducer(m, {
             focusedIndex: _,
             itemCount: n
         }), {
@@ -64,16 +64,16 @@ function(e, t, n) {
                     dispatch: T,
                     maintainFocusPosition: f,
                     includeSetSizes: S,
-                    focusOnMount: h,
-                    enabled: A,
+                    focusOnMount: A,
+                    enabled: h,
                     makeId: m = a.makeId,
                     getIndexFromId: N
                 } = e, O = i.useRef(n), p = i.useRef(N);
                 p.current = N, O.current = n;
                 let R = i.useRef();
                 i.useEffect(() => {
-                    R.current = A
-                }, [A]);
+                    R.current = h
+                }, [h]);
                 let [C, g] = i.useState(!1), [L] = i.useState(() => new a.HandlerMemoizer(e => () => {
                     let t = null != p.current && "string" == typeof e ? p.current(e) : e;
                     "number" == typeof t && !(t < 0) && T({
@@ -87,7 +87,7 @@ function(e, t, n) {
                     }, [E]),
                     [v, M] = i.useState(!0);
                 i.useEffect(() => {
-                    if (v && !h) {
+                    if (v && !A) {
                         M(!1);
                         return
                     }
@@ -166,14 +166,14 @@ function(e, t, n) {
                         e.removeEventListener("focusin", U), e.removeEventListener("focus", b), e.removeEventListener("focusout", G)
                     }
                 }, [b, U, G]);
-                let B = i.useCallback(() => ({
+                let k = i.useCallback(() => ({
                         role: "list",
                         tabIndex: C && f ? -1 : 0,
                         id: t,
                         onKeyDown: P,
                         ref: w
                     }), [t, C, P, f]),
-                    k = i.useCallback(e => {
+                    B = i.useCallback(e => {
                         let {
                             index: n
                         } = e;
@@ -188,9 +188,9 @@ function(e, t, n) {
                     }, [m, t, _, f, L, S]);
                 return i.useMemo(() => ({
                     dispatch: T,
-                    getContainerProps: B,
-                    getItemProps: k
-                }), [T, B, k])
+                    getContainerProps: k,
+                    getItemProps: B
+                }), [T, k, B])
             }({
                 navId: t,
                 itemCount: p,
@@ -202,7 +202,7 @@ function(e, t, n) {
                 maintainFocusPosition: T,
                 includeSetSizes: f,
                 focusOnMount: S,
-                enabled: h
+                enabled: A
             })
     }
 }

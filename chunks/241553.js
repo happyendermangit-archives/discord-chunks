@@ -20,8 +20,8 @@ function(e, t, n) {
         T = n("243778"),
         f = n("963249"),
         S = n("646476"),
-        h = n("819640"),
-        A = n("594174"),
+        A = n("819640"),
+        h = n("594174"),
         m = n("147915"),
         N = n("559629"),
         O = n("965645"),
@@ -81,8 +81,8 @@ function(e, t, n) {
         }],
         G = 1 / 300,
         w = R.default.Millis.DAYS_30,
-        B = (0, s.animated)(O.default),
-        k = (0, s.animated)(p.default),
+        k = (0, s.animated)(O.default),
+        B = (0, s.animated)(p.default),
         V = (0, s.animated)(N.default);
 
     function F(e) {
@@ -119,10 +119,10 @@ function(e, t, n) {
                 friction: 24
             }
         }), I = a ? c : 0, T = (0, l.isThemeDark)(null != t ? t : u) ? o.dark[I] : o.light[I];
-        return !n && a ? (0, i.jsx)(V, {}) : a && d ? (0, i.jsx)(k, {
+        return !n && a ? (0, i.jsx)(V, {}) : a && d ? (0, i.jsx)(B, {
             isDark: (0, l.isThemeDark)(u),
             style: E
-        }) : (0, i.jsx)(B, {
+        }) : (0, i.jsx)(k, {
             boxColor: T.box,
             ribbonColor: T.ribbon,
             style: E
@@ -134,7 +134,7 @@ function(e, t, n) {
             channel: n
         } = e, {
             analyticsLocations: s
-        } = (0, E.default)(c.default.GIFT_BUTTON), [l, _] = r.useState(!1), N = (0, a.useStateFromStores)([h.default], () => !(null === h.default || void 0 === h.default ? void 0 : h.default.hasLayers())), O = (0, a.useStateFromStores)([A.default], () => A.default.getCurrentUser()), p = null != O ? C.default.age(O.id) : 0, R = !t && N && p >= w, {
+        } = (0, E.default)(c.default.GIFT_BUTTON), [l, _] = r.useState(!1), N = (0, a.useStateFromStores)([A.default], () => !(null === A.default || void 0 === A.default ? void 0 : A.default.hasLayers())), O = (0, a.useStateFromStores)([h.default], () => h.default.getCurrentUser()), p = null != O ? C.default.age(O.id) : 0, R = !t && N && p >= w, {
             enabled: U
         } = S.SeasonalGiftingMarketingExperiment.useExperiment({
             location: "ChannelPremiumGiftButton"
@@ -142,7 +142,7 @@ function(e, t, n) {
             autoTrackExposure: R
         }), b = [];
         U && R && b.push(o.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023);
-        let [G, B] = (0, T.useSelectedDismissibleContent)(b), k = null != G, V = (0, g.useDirectMessageRecipient)(n), x = null != V;
+        let [G, k] = (0, T.useSelectedDismissibleContent)(b), B = null != G, V = (0, g.useDirectMessageRecipient)(n), x = null != V;
         if (t) return null;
         let H = () => {
                 (0, f.default)({
@@ -167,10 +167,10 @@ function(e, t, n) {
                 onMouseLeave: () => {
                     _(!1)
                 },
-                children: [k && (0, i.jsx)(d.default, {
+                children: [B && (0, i.jsx)(d.default, {
                     onComplete: () => _(!1),
                     onDMCheckItOutClick: H,
-                    markAsDismissed: B,
+                    markAsDismissed: k,
                     isDM: x
                 }), (0, i.jsx)(m.default, {
                     innerClassName: P.button,
@@ -185,12 +185,12 @@ function(e, t, n) {
                         className: y.noPointerEvents,
                         children: (0, i.jsx)(F, {
                             hovered: l,
-                            isContentDismissed: !k
+                            isContentDismissed: !B
                         })
                     })
                 })]
             });
-        return k ? Y : (0, i.jsx)(u.TooltipContainer, {
+        return B ? Y : (0, i.jsx)(u.TooltipContainer, {
             className: y.container,
             text: (0, d.getSeasonalGiftingBody)(x),
             children: Y

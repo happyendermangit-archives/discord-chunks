@@ -11,8 +11,8 @@ function(e, t, n) {
         T = n("338336"),
         f = n("314897"),
         S = n("938475"),
-        h = n("981631"),
-        A = n("65154");
+        A = n("981631"),
+        h = n("65154");
     let m = null,
         N = null,
         O = null,
@@ -44,7 +44,7 @@ function(e, t, n) {
                 userId: n,
                 streamId: i,
                 rtcServerId: r,
-                context: A.MediaEngineContextTypes.DEFAULT
+                context: h.MediaEngineContextTypes.DEFAULT
             }))
         }), s.on(_.RTCConnectionEvent.Ping, (e, t) => {
             d.default.wait(() => d.default.dispatch({
@@ -110,13 +110,13 @@ function(e, t, n) {
             return i
         }
         getState() {
-            return null != i ? i.state : h.RTCConnectionStates.DISCONNECTED
+            return null != i ? i.state : A.RTCConnectionStates.DISCONNECTED
         }
         isConnected() {
-            return this.getState() === h.RTCConnectionStates.RTC_CONNECTED
+            return this.getState() === A.RTCConnectionStates.RTC_CONNECTED
         }
         isDisconnected() {
-            return this.getState() === h.RTCConnectionStates.DISCONNECTED
+            return this.getState() === A.RTCConnectionStates.DISCONNECTED
         }
         getRemoteDisconnectVoiceChannelId() {
             return m
@@ -137,7 +137,7 @@ function(e, t, n) {
             return null != i ? i.hostname : ""
         }
         getQuality() {
-            return null != i ? i.quality : h.RTCConnectionQuality.UNKNOWN
+            return null != i ? i.quality : A.RTCConnectionQuality.UNKNOWN
         }
         getPings() {
             return null != i ? i.getPings() : []
@@ -188,7 +188,7 @@ function(e, t, n) {
             r = null, m = null, N = null, L()
         },
         RTC_CONNECTION_STATE: function(e) {
-            return e.state === h.RTCConnectionStates.RTC_CONNECTED && (C = !0), !0
+            return e.state === A.RTCConnectionStates.RTC_CONNECTED && (C = !0), !0
         },
         RTC_CONNECTION_PING: M,
         RTC_CONNECTION_LOSS_RATE: M,
@@ -244,11 +244,11 @@ function(e, t, n) {
         },
         APP_STATE_UPDATE: function(e) {
             if (null != i) {
-                let t = e.state === h.AppStates.BACKGROUND,
+                let t = e.state === A.AppStates.BACKGROUND,
                     n = E.default.isEnabled();
                 i.setAppBackgrounded(t, n)
             }
-            return e.state === h.AppStates.ACTIVE && null != i && i.resetBackoff("App state is active"), !1
+            return e.state === A.AppStates.ACTIVE && null != i && i.resetBackoff("App state is active"), !1
         }
     });
     Promise.resolve().then(n.bind(n, "626135")).then(e => {

@@ -8,8 +8,8 @@ function(e, t, n) {
         T = n("570140"),
         f = n("51025"),
         S = n("594190"),
-        h = n("314897"),
-        A = n("173747"),
+        A = n("314897"),
+        h = n("173747"),
         m = n("780570"),
         N = n("830168"),
         O = n("358085"),
@@ -29,7 +29,7 @@ function(e, t, n) {
         G = !1,
         w = null;
 
-    function B() {
+    function k() {
         let e = {
             queue: D,
             paused: M,
@@ -38,7 +38,7 @@ function(e, t, n) {
         I.Storage.set(L, e)
     }
 
-    function k() {
+    function B() {
         let e = D[0];
         if (null != e) {
             var t, n;
@@ -50,8 +50,8 @@ function(e, t, n) {
                 branchId: a
             } = (0, m.convertComboId)(i);
             if (t = s, n = a, (null == y || y.applicationId !== t || y.branchId !== n) && (null == P || P.applicationId !== t || P.branchId !== n)) {
-                let e = h.default.getToken(),
-                    t = h.default.getId();
+                let e = A.default.getToken(),
+                    t = A.default.getId();
                 if (null == e) throw Error("missing user token");
                 G = !N.default.setCurrentTask(s, a, r, t, e)
             }
@@ -71,13 +71,13 @@ function(e, t, n) {
             },
             a = v.indexOf(r); - 1 !== a && v.splice(a, 1);
         let o = V(e, t);
-        0 !== o && (n ? -1 === o && (D.push(s), k()) : (o > 0 && D.splice(o, 1), D.unshift(s), k())), !n && M && N.default.resume(), B()
+        0 !== o && (n ? -1 === o && (D.push(s), B()) : (o > 0 && D.splice(o, 1), D.unshift(s), B())), !n && M && N.default.resume(), k()
     }
 
     function x(e, t) {
         let n = (0, m.getComboId)(e, t),
             i = v.indexOf(n); - 1 !== i && v.splice(i, 1);
-        let r = V(e, t); - 1 !== r && (D.splice(r, 1), B()), k()
+        let r = V(e, t); - 1 !== r && (D.splice(r, 1), k()), B()
     }
 
     function H(e) {
@@ -96,8 +96,8 @@ function(e, t, n) {
     }
 
     function j() {
-        let e = h.default.getToken(),
-            t = h.default.getId();
+        let e = A.default.getToken(),
+            t = A.default.getId();
         null != e && N.default.setCredentials(t, e)
     }
 
@@ -179,14 +179,14 @@ function(e, t, n) {
                 branchId: n
             } = e, i = V(t, n);
             if (i < 1) return !1;
-            D.splice(0, 0, D.splice(i, 1)[0]), k(), M && N.default.resume(), B()
+            D.splice(0, 0, D.splice(i, 1)[0]), B(), M && N.default.resume(), k()
         },
         DISPATCH_APPLICATION_REMOVE_FINISHED: Y,
         DISPATCH_APPLICATION_STATE_UPDATE: function(e) {
             let {
                 state: t
             } = e;
-            !U && (U = !0, k(), !M && N.default.resume());
+            !U && (U = !0, B(), !M && N.default.resume());
             let n = M;
             M = t.paused, y = t.currentTask, P = t.nextTask;
             let i = !1;
@@ -196,7 +196,7 @@ function(e, t, n) {
                 } = e, {
                     applicationId: n,
                     branchId: r
-                } = (0, m.convertComboId)(t), s = p.default.getState(n, r), a = A.default.getTargetBuildId(n, r), o = A.default.getTargetManifests(n, r);
+                } = (0, m.convertComboId)(t), s = p.default.getState(n, r), a = h.default.getTargetBuildId(n, r), o = h.default.getTargetManifests(n, r);
                 if (null != s && s.type === R.LocalDispatchApplicationStates.UP_TO_DATE && s.buildId === s.targetBuildId && s.buildId === a && c().isEqual(s.manifestIds, s.targetManifestIds) && c().isEqual(s.manifestIds, o)) {
                     if (v.push(t), b.has(t)) {
                         switch (b.get(t)) {
@@ -211,7 +211,7 @@ function(e, t, n) {
                     return i = !0, !1
                 }
                 return !0
-            }), k(), (i || n !== M) && B()
+            }), B(), (i || n !== M) && k()
         },
         DISPATCH_APPLICATION_ERROR: function(e) {
             let {

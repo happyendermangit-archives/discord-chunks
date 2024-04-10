@@ -5,7 +5,7 @@ function(e, t, n) {
             return S
         },
         useTextChangeHandler: function() {
-            return h
+            return A
         }
     }), n("47120"), n("653041");
     var i = n("470079"),
@@ -45,7 +45,7 @@ function(e, t, n) {
                 return a.length > 0 && (_ = a.slice(0, T.MAX_NUM_SUGGESTED_STICKERS), 0 !== l.length && (_.length === T.MAX_NUM_SUGGESTED_STICKERS && _.pop(), _.push(l[0]))), _
             }, [e, n, r, t, s])
         },
-        h = e => {
+        A = e => {
             let {
                 setTextInputValue: t,
                 setHasDismissed: n,

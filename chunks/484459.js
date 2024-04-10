@@ -42,8 +42,8 @@ function(e, t, n) {
             withMutualGuilds: T = !1,
             withMutualFriendsCount: f = !1,
             withMutualFriends: S = !1,
-            friendToken: h,
-            preloadUserBanner: A = !0,
+            friendToken: A,
+            preloadUserBanner: h = !0,
             dispatchWait: m = !1,
             guildId: N,
             channelId: O
@@ -60,20 +60,20 @@ function(e, t, n) {
             L = !Array.isArray(R) && T,
             D = null == C && f,
             v = (null == p ? void 0 : p.profileFetchFailed) || !g && (L || D),
-            M = A ? E.default : void 0,
+            M = h ? E.default : void 0,
             y = !1;
         null != N && (y = null == c.default.getGuildMemberProfile(e, N)), !(!v && !y && (g || Date.now() - (null !== (_ = null == p ? void 0 : p.lastFetched) && void 0 !== _ ? _ : 0) < 6e4)) && (m ? await i.default.wait(() => (0, r.fetchProfile)(e, {
             withMutualGuilds: T,
             withMutualFriends: S,
             withMutualFriendsCount: f,
-            friendToken: h,
+            friendToken: A,
             guildId: N,
             connectionsRoleId: I
         }, M)) : await (0, r.fetchProfile)(e, {
             withMutualGuilds: T,
             withMutualFriends: S,
             withMutualFriendsCount: f,
-            friendToken: h,
+            friendToken: A,
             guildId: N,
             connectionsRoleId: I
         }, M))

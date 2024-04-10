@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return B
+            return k
         }
     }), n("47120"), n("627341");
     var i = n("735250"),
@@ -20,8 +20,8 @@ function(e, t, n) {
         T = n("100527"),
         f = n("906732"),
         S = n("639119"),
-        h = n("197115"),
-        A = n("587446"),
+        A = n("197115"),
+        h = n("587446"),
         m = n("594174"),
         N = n("696202"),
         O = n("626135"),
@@ -39,7 +39,7 @@ function(e, t, n) {
             className: P.editorHeader,
             children: (0, i.jsxs)("div", {
                 className: P.bannerUpsell,
-                children: [(0, i.jsx)(A.default, {
+                children: [(0, i.jsx)(h.default, {
                     className: P.premiumIcon
                 }), (0, i.jsx)(d.Heading, {
                     variant: "heading-md/bold",
@@ -75,13 +75,13 @@ function(e, t, n) {
                 markAsDismissed: a
             } = e, {
                 analyticsLocations: o
-            } = (0, f.default)(T.default.CLIENT_THEMES_EDITOR), [c, E] = (0, l.useStateFromStoresArray)([m.default, C.default], () => [C.default.gradientPreset, p.default.isPremium(m.default.getCurrentUser())]), I = (0, S.usePremiumTrialOffer)(), A = (0, p.formatTrialCtaIntervalDuration)({
+            } = (0, f.default)(T.default.CLIENT_THEMES_EDITOR), [c, E] = (0, l.useStateFromStoresArray)([m.default, C.default], () => [C.default.gradientPreset, p.default.isPremium(m.default.getCurrentUser())]), I = (0, S.usePremiumTrialOffer)(), h = (0, p.formatTrialCtaIntervalDuration)({
                 intervalType: null == I ? void 0 : null === (t = I.subscription_trial) || void 0 === t ? void 0 : t.interval,
                 intervalCount: null == I ? void 0 : null === (n = I.subscription_trial) || void 0 === n ? void 0 : n.interval_count
             });
-            return (0, i.jsx)(h.default, {
+            return (0, i.jsx)(A.default, {
                 size: d.Button.Sizes.MEDIUM,
-                buttonText: E ? y.default.Messages.BILLING_SWITCH_PLAN_UPGRADE : (null == I ? void 0 : null === (r = I.subscription_trial) || void 0 === r ? void 0 : r.sku_id) === M.PremiumSubscriptionSKUs.TIER_2 ? A : y.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
+                buttonText: E ? y.default.Messages.BILLING_SWITCH_PLAN_UPGRADE : (null == I ? void 0 : null === (r = I.subscription_trial) || void 0 === r ? void 0 : r.sku_id) === M.PremiumSubscriptionSKUs.TIER_2 ? h : y.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
                 subscriptionTier: M.PremiumSubscriptionSKUs.TIER_2,
                 onSubscribeModalClose: e => {
                     if (!!e) null == s || s(), null != a && a(v.ContentDismissActionType.PRIMARY), null != c && ((0, L.trackClientThemeUpdated)({
@@ -134,7 +134,7 @@ function(e, t, n) {
             })
         };
 
-    function B(e) {
+    function k(e) {
         let {
             markAsDismissed: t
         } = e, {
@@ -157,13 +157,13 @@ function(e, t, n) {
             })
         }, [s, n]);
         let S = (0, g.useResetClientThemePreview)(),
-            h = (0, E.default)(null, s ? S : D.NOOP);
+            A = (0, E.default)(null, s ? S : D.NOOP);
         return r.useEffect(() => {
             if (s && !u) return S
         }, [s, u, S]), (0, i.jsx)(f.AnalyticsLocationProvider, {
             value: n,
             children: (0, i.jsx)("div", {
-                ref: h,
+                ref: A,
                 className: a()(P.themeEditor, _ ? P.editorAnimate : null),
                 children: (0, i.jsxs)(d.HeadingLevel, {
                     children: [o ? (0, i.jsx)(U, {}) : (0, i.jsx)(b, {

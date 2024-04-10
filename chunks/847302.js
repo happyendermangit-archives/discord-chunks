@@ -8,7 +8,7 @@ function(e, t, n) {
             return S
         },
         run: function() {
-            return h
+            return A
         }
     }), n("47120"), n("653041");
     var i = n("512722"),
@@ -38,28 +38,28 @@ function(e, t, n) {
         return e.onChange = () => {
             let i = c.EditorUtils.richValue(e);
             (i !== a || e.previewMarkdown !== o) && (l.HistoryUtils.withMergedEntry(e, () => {
-                c.EditorUtils.withoutNormalizing(e, () => h(e, t, n))
+                c.EditorUtils.withoutNormalizing(e, () => A(e, t, n))
             }), a = i, o = e.previewMarkdown), s()
         }, e
     }
 
-    function h(e, t, n) {
+    function A(e, t, n) {
         let i = c.EditorUtils.areStylesDisabled(e);
         for (let r of c.EditorUtils.blocks(e))
-            if (T.has(r[0].type)) i ? m(e, r, !0, null) : A(e, r, t, n);
+            if (T.has(r[0].type)) i ? m(e, r, !0, null) : h(e, r, t, n);
             else {
                 let [s, a] = r;
                 for (let r = s.children.length - 1; r >= 0; r--) {
                     let o = s.children[r];
                     if (f.has(o.type)) {
                         let s = [o, c.PathUtils.child(a, r)];
-                        i ? m(e, s, !0, null) : A(e, s, t, n)
+                        i ? m(e, s, !0, null) : h(e, s, t, n)
                     }
                 }
             }
     }
 
-    function A(e, t, n, i) {
+    function h(e, t, n, i) {
         var s;
         let a = "line" === t[0].type && (null === (s = t[0].codeBlockState) || void 0 === s ? void 0 : s.isInCodeBlock) === !0,
             l = c.ElementUtils.markdown(t[0], n);

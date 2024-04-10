@@ -11,8 +11,8 @@ function(e, t, n) {
         T = n("433517"),
         f = n("570140"),
         S = n("911969"),
-        h = n("670890"),
-        A = n("569611"),
+        A = n("670890"),
+        h = n("569611"),
         m = n("710845"),
         N = n("703656"),
         O = n("786213"),
@@ -30,8 +30,8 @@ function(e, t, n) {
         b = "user_id_cache",
         G = null,
         w = null,
-        B = null,
         k = null,
+        B = null,
         V = null,
         F = null,
         x = null,
@@ -131,11 +131,11 @@ function(e, t, n) {
         ea("handleLogout called."), e_(), eu(), !(null == e ? void 0 : e.isSwitchingAccount) && eo(), E.default.PersistedStore.clearAll({
             omit: ["InstallationManagerStore", "AgeGateStore", "NativePermissionsStore", "MultiAccountStore", "DraftStore", "OverlayStoreV2", "StreamerModeStore", "LoginRequiredActionStore"],
             type: (null == e ? void 0 : e.isSwitchingAccount) ? "user-data-only" : "all"
-        }), L.default.clearAll(), A.clear(), C.default.clearUser(), T.Storage.remove(b), G = null, H = (null == e ? void 0 : e.isSwitchingAccount) ? D.LoginStates.LOGGING_IN : D.LoginStates.NONE, Y = D.RegistrationStates.NONE, K = "", J = "", X = null, z = !1, Z = !1, $ = !1, ee = {}, et = {}
+        }), L.default.clearAll(), h.clear(), C.default.clearUser(), T.Storage.remove(b), G = null, H = (null == e ? void 0 : e.isSwitchingAccount) ? D.LoginStates.LOGGING_IN : D.LoginStates.NONE, Y = D.RegistrationStates.NONE, K = "", J = "", X = null, z = !1, Z = !1, $ = !1, ee = {}, et = {}
     }
     class eI extends(s = E.default.Store) {
         initialize() {
-            G = T.Storage.get(b), w = T.Storage.get(U), er = T.Storage.get("login_cache"), null == _.getToken() && eo(), this.addChangeListener(() => (0, h.setClientState)(G))
+            G = T.Storage.get(b), w = T.Storage.get(U), er = T.Storage.get("login_cache"), null == _.getToken() && eo(), this.addChangeListener(() => (0, A.setClientState)(G))
         }
         getEmail() {
             return w
@@ -162,10 +162,10 @@ function(e, t, n) {
             return G
         }
         getSessionId() {
-            return B
+            return k
         }
         getAuthSessionIdHash() {
-            return k
+            return B
         }
         getToken() {
             return (0, R.getToken)()
@@ -258,7 +258,7 @@ function(e, t, n) {
                 analyticsToken: s,
                 auth: a
             } = e;
-            ea("handleConnectionOpen called"), C.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, O.default)(n)), B = i, k = r, x = s, G = n.id, w = n.email, void 0 !== a && (W = a.authenticator_types), T.Storage.set(U, n.email), T.Storage.set(b, n.id)
+            ea("handleConnectionOpen called"), C.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, O.default)(n)), k = i, B = r, x = s, G = n.id, w = n.email, void 0 !== a && (W = a.authenticator_types), T.Storage.set(U, n.email), T.Storage.set(b, n.id)
         },
         OVERLAY_INITIALIZE: function(e) {
             var t;
@@ -268,7 +268,7 @@ function(e, t, n) {
                 analyticsToken: r,
                 token: s
             } = e;
-            C.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, O.default)(n)), B = i, x = r, ed(s), eu(), G = n.id, T.Storage.set(b, n.id)
+            C.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, O.default)(n)), k = i, x = r, ed(s), eu(), G = n.id, T.Storage.set(b, n.id)
         },
         CONNECTION_CLOSED: function(e) {
             let {
@@ -288,7 +288,7 @@ function(e, t, n) {
             let {
                 authSessionIdHash: t
             } = e;
-            null != t && (k = t)
+            null != t && (B = t)
         },
         LOGIN: function(e) {
             et = {}, H = D.LoginStates.LOGGING_IN, J = "", r = null, null != e.login && (er = e.login)

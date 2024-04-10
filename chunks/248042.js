@@ -29,8 +29,8 @@ function(e, t, n) {
         T = n("74538"),
         f = n("316941"),
         S = n("59561"),
-        h = n("388622"),
-        A = n("61196"),
+        A = n("388622"),
+        h = n("61196"),
         m = n("639119"),
         N = n("748770"),
         O = n("725727"),
@@ -74,7 +74,7 @@ function(e, t, n) {
             promotion: n
         } = (0, O.useBogoPromotion)(), {
             enabled: i
-        } = (0, A.default)(), {
+        } = (0, h.default)(), {
             mostRecentSubscription: r,
             premiumSubscription: a
         } = (0, s.useStateFromStoresObject)([E.default], () => ({
@@ -90,7 +90,7 @@ function(e, t, n) {
             c = Date.now(),
             {
                 enabled: I
-            } = h.default.useExperiment({
+            } = A.default.useExperiment({
                 location: "153d31_2"
             }, {
                 autoTrackExposure: _,
@@ -111,10 +111,10 @@ function(e, t, n) {
             }),
             {
                 enabled: r
-            } = (0, A.isBogoPromotionExperimentEnabled)(),
+            } = (0, h.isBogoPromotionExperimentEnabled)(),
             {
                 enabled: s
-            } = h.default.getCurrentConfig({
+            } = A.default.getCurrentConfig({
                 location: "153d31_4"
             }, {
                 autoTrackExposure: !1
@@ -148,7 +148,7 @@ function(e, t, n) {
             i = await v(),
             {
                 enabled: r
-            } = A.BogoPromotionExperiment.getCurrentConfig({
+            } = h.BogoPromotionExperiment.getCurrentConfig({
                 location: "153d31_6"
             }, {
                 autoTrackExposure: !1

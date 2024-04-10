@@ -16,8 +16,8 @@ function(e, t, n) {
         T = n("551058"),
         f = n("156361"),
         S = n("695464"),
-        h = n("153124"),
-        A = n("555573"),
+        A = n("153124"),
+        h = n("555573"),
         m = n("10718"),
         N = n("367790"),
         O = n("895924"),
@@ -42,7 +42,7 @@ function(e, t, n) {
         let {
             channel: n,
             canOnlyUseTextCommands: s
-        } = e, o = r.useRef(!1), l = r.useRef(0), [G, w] = r.useState(0), B = r.useRef(null), [k, V] = r.useState(!1), F = E.ApplicationCommandDiscoveryPickerStore.useStore(e => e.activeCategoryIndex);
+        } = e, o = r.useRef(!1), l = r.useRef(0), [G, w] = r.useState(0), k = r.useRef(null), [B, V] = r.useState(!1), F = E.ApplicationCommandDiscoveryPickerStore.useStore(e => e.activeCategoryIndex);
         r.useEffect(() => {
             (0, _.trackWithMetadata)(D.AnalyticEvents.APPLICATION_COMMAND_BROWSER_OPENED)
         }, []);
@@ -66,7 +66,7 @@ function(e, t, n) {
         }), Q = (0, I.useSynchronizedActiveCategoryIndexForScrollPosition)({
             activeCategoryIndex: F,
             isScrolling: o,
-            listRef: B,
+            listRef: k,
             onActiveCategoryIndexChange: e => {
                 let t = H[e];
                 if (null != t) {
@@ -87,21 +87,21 @@ function(e, t, n) {
         let J = r.useCallback(e => e !== H.length - 1 || j ? 16 : 0, [H.length, j]),
             Z = Y.map(e => e.data.length);
         r.useEffect(() => {
-            null != B.current && k && null != G && B.current.scrollRowIntoView(G)
-        }, [k, G]), r.useLayoutEffect(() => {
+            null != k.current && B && null != G && k.current.scrollRowIntoView(G)
+        }, [B, G]), r.useLayoutEffect(() => {
             if (null != K) {
                 var e;
-                null === (e = B.current) || void 0 === e || e.scrollToSectionTop(0)
+                null === (e = k.current) || void 0 === e || e.scrollToSectionTop(0)
             }
         }, [W, K]);
         let $ = r.useCallback(e => {
                 if (e.id === K || e.id === L.BuiltInSectionId.FRECENCY) {
                     var t;
-                    X(null), null === (t = B.current) || void 0 === t || t.scrollToSectionTop(0)
+                    X(null), null === (t = k.current) || void 0 === t || t.scrollToSectionTop(0)
                 } else X(e.id)
             }, [X, K]),
             ee = r.useCallback((e, t, i) => {
-                A.setActiveCommand({
+                h.setActiveCommand({
                     channelId: n.id,
                     command: e,
                     section: t,
@@ -190,7 +190,7 @@ function(e, t, n) {
                     }
                 }, o)
             }, [n, Y, ee, x, G]),
-            er = (0, h.useUID)();
+            er = (0, A.useUID)();
         return (0, c.useChannelEditorPopup)(er, !0, (0, f.getAutocompleteRowId)(G)), r.useEffect(() => () => {
             (0, c.dismissChannelEditorPopup)()
         }, []), (0, i.jsxs)(f.default, {
@@ -205,7 +205,7 @@ function(e, t, n) {
                 filteredSectionId: K,
                 activeCategoryIndex: F,
                 onSectionClick: $,
-                applicationCommandListRef: B
+                applicationCommandListRef: k
             }), (0, i.jsx)(S.default, {
                 role: "listbox",
                 className: M.list,
@@ -219,7 +219,7 @@ function(e, t, n) {
                 rowHeight: 56,
                 sectionHeaderHeight: 32,
                 sectionMarginBottom: J,
-                ref: B,
+                ref: k,
                 stickyHeaders: !0
             })]
         })

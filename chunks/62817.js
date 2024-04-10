@@ -17,12 +17,12 @@ function(e, t, n) {
         T = {}
     }
 
-    function h(e, t) {
+    function A(e, t) {
         let n = _[e];
         return null != n && (_[e] = n.filter(e => e.id !== t), delete c[t], delete E[t], n.length !== _[e].length)
     }
 
-    function A(e, t) {
+    function h(e, t) {
         let n = _[e];
         if (null == n) return !1;
         _[e] = n.map(e => e.id === t.id ? {
@@ -89,28 +89,28 @@ function(e, t, n) {
                 channelId: t,
                 file: n
             } = e;
-            A(t, n)
+            h(t, n)
         },
         UPLOAD_PROGRESS: function(e) {
             let {
                 channelId: t,
                 file: n
             } = e;
-            A(t, n)
+            h(t, n)
         },
         UPLOAD_COMPLETE: function(e) {
             let {
                 channelId: t,
                 file: n
             } = e;
-            return h(t, n.id)
+            return A(t, n.id)
         },
         UPLOAD_FAIL: function(e) {
             let {
                 channelId: t,
                 file: n
             } = e;
-            return h(t, n.id)
+            return A(t, n.id)
         },
         UPLOAD_CANCEL_REQUEST: function(e) {
             let {
@@ -135,7 +135,7 @@ function(e, t, n) {
                 channelId: t,
                 file: n
             } = e, i = E[n.id];
-            null != i && i.nonce, A(t, n)
+            null != i && i.nonce, h(t, n)
         },
         UPLOAD_RESTORE_FAILED_UPLOAD: function(e) {
             let {

@@ -18,8 +18,8 @@ function(e, t, n) {
             stickersListRef: I,
             channel: T
         } = e, f = (0, d.useHasSendableSticker)(T), S = r.useRef(null), {
-            searchQuery: h,
-            isSearchSuggestion: A
+            searchQuery: A,
+            isSearchSuggestion: h
         } = (0, u.useExpressionPickerStore)(e => ({
             searchQuery: e.searchQuery,
             isSearchSuggestion: e.isSearchSuggestion
@@ -35,16 +35,16 @@ function(e, t, n) {
                 return null === (e = S.current) || void 0 === e ? void 0 : e.focus()
             }
         })), r.useLayoutEffect(() => {
-            if (A) {
+            if (h) {
                 var e;
                 null === (e = S.current) || void 0 === e || e.focus()
             }
-        }, [A]), (0, i.jsx)("div", {
+        }, [h]), (0, i.jsx)("div", {
             className: E.wrapper,
             children: (0, i.jsx)(o.default, {
                 autoFocus: f,
                 disabled: !f,
-                query: h,
+                query: A,
                 ref: S,
                 size: o.default.Sizes.MEDIUM,
                 placeholder: null != m ? m : f ? c.default.Messages.SEARCH_FOR_STICKERS : c.default.Messages.NO_STICKERS_TO_SEARCH_THROUGH,

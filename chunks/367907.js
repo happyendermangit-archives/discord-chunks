@@ -17,10 +17,10 @@ function(e, t, n) {
             return w
         },
         getCustomStatusMetadata: function() {
-            return k
+            return B
         },
         getVoiceStateMetadata: function() {
-            return B
+            return k
         },
         trackWithMetadata: function() {
             return G
@@ -41,8 +41,8 @@ function(e, t, n) {
         T = n("131951"),
         f = n("496675"),
         S = n("158776"),
-        h = n("19780"),
-        A = n("306680"),
+        A = n("19780"),
+        h = n("306680"),
         m = n("944486"),
         N = n("914010"),
         O = n("9156"),
@@ -120,13 +120,13 @@ function(e, t, n) {
         let t = d.default.getChannel(e);
         if (null == t) return null;
         let n = T.default.isVideoEnabled(),
-            i = h.default.getMediaSessionId();
+            i = A.default.getMediaSessionId();
         return {
             channel_id: t.id,
             channel_type: t.type,
             guild_id: t.getGuildId(),
             media_session_id: i,
-            ...B(t.getGuildId(), t.id, n),
+            ...k(t.getGuildId(), t.id, n),
             ...(0, L.getVoiceAnalyticsMetadataAdditional)()
         }
     }
@@ -163,7 +163,7 @@ function(e, t, n) {
         if (null == n) return {
             channel_id: e
         };
-        let i = A.default.getSnapshot(e, 10 * C.default.Millis.SECOND);
+        let i = h.default.getSnapshot(e, 10 * C.default.Millis.SECOND);
         return {
             channel_id: e,
             channel_was_unread: i.unread,
@@ -185,7 +185,7 @@ function(e, t, n) {
         }
     }
 
-    function B(e, t, n) {
+    function k(e, t, n) {
         let i = {
             voice_state_count: 0,
             video_stream_count: 0,
@@ -196,7 +196,7 @@ function(e, t, n) {
         }), i
     }
 
-    function k(e, t) {
+    function B(e, t) {
         let n = {
             custom_status_count: 0
         };
@@ -206,6 +206,6 @@ function(e, t, n) {
     }
     t.default = {
         trackWithMetadata: G,
-        getVoiceStateMetadata: B
+        getVoiceStateMetadata: k
     }
 }

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return h
+            return A
         }
     }), n("47120");
     var i = n("735250"),
@@ -21,7 +21,7 @@ function(e, t, n) {
         f = n("689938"),
         S = n("500813");
 
-    function h(e, t, n) {
+    function A(e, t, n) {
         let {
             attributes: r,
             children: s,
@@ -53,7 +53,7 @@ function(e, t, n) {
                     children: s
                 });
             case "applicationCommandOption":
-                return (0, i.jsx)(A, {
+                return (0, i.jsx)(h, {
                     attributes: r,
                     channelId: n,
                     element: a,
@@ -63,14 +63,14 @@ function(e, t, n) {
                 return null
         }
     }
-    let A = e => {
+    let h = e => {
         let t, {
                 channelId: n,
                 element: s,
                 attributes: E,
-                children: h
+                children: A
             } = e,
-            A = (0, o.useSelected)(),
+            h = (0, o.useSelected)(),
             m = (0, o.useFocused)(),
             N = (0, o.useSlateStatic)(),
             {
@@ -87,8 +87,8 @@ function(e, t, n) {
             C = s.children[s.children.length - 1],
             g = null != C && T.TextUtils.isText(C) && C.text.endsWith("\n"),
             L = a()(S.inlineElement, S.optionPill, {
-                [S.selectedPill]: m && A,
-                [S.erroredPill]: (!m || !A) && p
+                [S.selectedPill]: m && h,
+                [S.erroredPill]: (!m || !h) && p
             }),
             D = r.useCallback(() => {
                 !T.EditorUtils.isVoid(N, s) && I.SlateTransforms.selectCommandOption(N, s.optionName, !0)
@@ -96,14 +96,14 @@ function(e, t, n) {
         return t = O === u.ApplicationCommandOptionType.ATTACHMENT ? (null == R ? void 0 : R.filename) != null ? (0, i.jsxs)("span", {
             className: a()(S.optionPillValue, S.attachmentFilename),
             contentEditable: !1,
-            children: [R.filename, h]
+            children: [R.filename, A]
         }) : (0, i.jsxs)("span", {
             className: a()(S.optionPillValue, S.readonlyPillValue),
             contentEditable: !1,
-            children: [f.default.Messages.APPLICATION_COMMAND_FILE_ATTACHMENT, h]
+            children: [f.default.Messages.APPLICATION_COMMAND_FILE_ATTACHMENT, A]
         }) : (0, i.jsxs)("span", {
             className: S.optionPillValue,
-            children: [h, g ? (0, i.jsx)("span", {
+            children: [A, g ? (0, i.jsx)("span", {
                 className: S.newLine,
                 contentEditable: !1
             }) : null]

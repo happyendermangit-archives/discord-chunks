@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         install: function() {
-            return A
+            return h
         }
     }), n("757143"), n("47120");
     var i = n("623279"),
@@ -98,15 +98,15 @@ function(e, t, n) {
             })
         }
     }
-    let h = s().debounce((e, t) => {
+    let A = s().debounce((e, t) => {
         let n = function(e) {
             return null == e ? null : (0, a.isElement)(e, HTMLInputElement) || (0, a.isElement)(e, HTMLTextAreaElement) ? e.value : (0, a.isElement)(e) && e.hasAttribute("contenteditable") ? e.textContent : void 0
         }(t);
         null != n && e.detectLanguage(n)
     }, 250);
-    async function A() {
+    async function h() {
         var e, t;
         let n = new S((null !== (e = await T.getAvailableDictionaries()) && void 0 !== e ? e : []).map(f).filter(d.isNotNullish));
-        return t = n, null != document.body && document.body.addEventListener("beforeinput", e => h(t, e.target), !0), n
+        return t = n, null != document.body && document.body.addEventListener("beforeinput", e => A(t, e.target), !0), n
     }
 }

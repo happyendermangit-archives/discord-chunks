@@ -26,20 +26,20 @@ function(e, t, n) {
             disabled: T,
             isFocused: f,
             menuItemProps: S,
-            action: h,
-            className: A,
+            action: A,
+            className: h,
             focusedClassName: m
         } = e, N = r.useRef(null);
         return r.useEffect(() => {
             f && (0, u.ensureItemVisible)(N)
         }, [f]), (0, i.jsxs)(o.Clickable, {
             innerRef: N,
-            className: a()(E.item, E.labelContainer, c.MENU_ITEM_COLORS[t], A, {
+            className: a()(E.item, E.labelContainer, c.MENU_ITEM_COLORS[t], h, {
                 [E.disabled]: T,
                 [E.focused]: f,
                 [null != m ? m : ""]: f
             }),
-            onClick: T ? void 0 : h,
+            onClick: T ? void 0 : A,
             ...S,
             "aria-checked": s,
             "aria-disabled": T,

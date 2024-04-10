@@ -66,8 +66,8 @@ function(e, t, n) {
         T = n("45114"),
         f = n("431279"),
         S = n("794295"),
-        h = n("593472"),
-        A = n("110924"),
+        A = n("593472"),
+        h = n("110924"),
         m = n("688465"),
         N = n("479313"),
         O = n("765104"),
@@ -85,8 +85,8 @@ function(e, t, n) {
         b = n("278297"),
         G = n("259580"),
         w = n("386103"),
-        B = n("465670"),
-        k = n("839523"),
+        k = n("465670"),
+        B = n("839523"),
         V = n("626135"),
         F = n("823379"),
         x = n("589530"),
@@ -411,7 +411,7 @@ function(e, t, n) {
         } = a.useContext(b.MessagesInteractionContext), [S, R] = a.useState(null), C = a.useRef(null), [g, v] = a.useState(null), M = a.useRef(null), y = (0, c.useStateFromStoresArray)([O.default], () => {
             var e;
             return null !== (e = O.default.summaries(r.id)) && void 0 !== e ? e : []
-        }, [r]), P = (0, A.default)(y);
+        }, [r]), P = (0, h.default)(y);
         a.useEffect(() => {
             !d().isEqual(P, y) && V.default.track(Y.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
                 num_summaries: y.length,
@@ -484,7 +484,7 @@ function(e, t, n) {
                     messageId: n.startId,
                     flash: !0,
                     offset: 0,
-                    jumpType: h.JumpTypes.ANIMATED,
+                    jumpType: A.JumpTypes.ANIMATED,
                     context: "Summary Jump"
                 })
             }, [y, r, q, u]),
@@ -562,7 +562,7 @@ function(e, t, n) {
                             [X.newTopicsBarTextUnselected]: !J,
                             [X.newTopicsBarTextSelected]: J
                         }),
-                        children: [(0, s.jsx)(k.default, {
+                        children: [(0, s.jsx)(B.default, {
                             className: X.newTopicsBarIcon,
                             width: 16,
                             height: 16
@@ -597,7 +597,7 @@ function(e, t, n) {
                     className: X.topicsDropdownHeading,
                     children: [(0, s.jsxs)("div", {
                         className: X.topicsDropdownHeadingText,
-                        children: [(0, s.jsx)(k.default, {
+                        children: [(0, s.jsx)(B.default, {
                             className: X.topicsPillHeadingIcon,
                             width: 18,
                             height: 20
@@ -613,7 +613,7 @@ function(e, t, n) {
                         "aria-label": z.default.Messages.CLOSE,
                         onClick: $,
                         className: X.topicsDropdownClose,
-                        children: (0, s.jsx)(B.default, {})
+                        children: (0, s.jsx)(k.default, {})
                     })]
                 }), (0, s.jsx)(E.Scroller, {
                     ref: M,
@@ -642,7 +642,7 @@ function(e, t, n) {
         } = a.useContext(b.MessagesInteractionContext), [T, f] = a.useState(null), S = a.useRef(null), [R, C] = a.useState(null), g = a.useRef(null), L = (0, c.useStateFromStoresArray)([O.default], () => {
             var e;
             return null !== (e = O.default.summaries(r.id)) && void 0 !== e ? e : []
-        }, [r]), v = (0, A.default)(L);
+        }, [r]), v = (0, h.default)(L);
         a.useEffect(() => {
             !d().isEqual(v, L) && V.default.track(Y.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
                 num_summaries: L.length,
@@ -717,7 +717,7 @@ function(e, t, n) {
                     messageId: n.startId,
                     flash: !0,
                     offset: 0,
-                    jumpType: h.JumpTypes.ANIMATED,
+                    jumpType: A.JumpTypes.ANIMATED,
                     context: "Summary Jump"
                 })
             }, [L, r, j, o]),
@@ -785,7 +785,7 @@ function(e, t, n) {
                             [X.topicsPillTextUnselected]: !K,
                             [X.topicsPillTextSelected]: K
                         }),
-                        children: [(0, s.jsx)(k.default, {
+                        children: [(0, s.jsx)(B.default, {
                             className: X.topicsPillSummaryIcon,
                             width: 16,
                             height: 16
@@ -832,7 +832,7 @@ function(e, t, n) {
                     className: X.topicsDropdownHeading,
                     children: [(0, s.jsxs)("div", {
                         className: X.topicsDropdownHeadingText,
-                        children: [(0, s.jsx)(k.default, {
+                        children: [(0, s.jsx)(B.default, {
                             className: X.topicsPillHeadingIcon,
                             width: 18,
                             height: 20
@@ -848,7 +848,7 @@ function(e, t, n) {
                         "aria-label": z.default.Messages.CLOSE,
                         onClick: q,
                         className: X.topicsDropdownClose,
-                        children: (0, s.jsx)(B.default, {})
+                        children: (0, s.jsx)(k.default, {})
                     })]
                 }), (0, s.jsx)(E.Scroller, {
                     ref: g,

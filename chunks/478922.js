@@ -32,8 +32,8 @@ function(e, t, n) {
                 dir: T = "ltr",
                 sections: f,
                 columns: S,
-                getItemKey: h,
-                getItemHeight: A,
+                getItemKey: A,
+                getItemHeight: h,
                 getSectionHeight: m,
                 chunkSize: N,
                 renderSection: O,
@@ -49,7 +49,7 @@ function(e, t, n) {
                 className: P,
                 style: U,
                 ...b
-            } = n, G = s().useRef(null), w = s().useRef(null), [B, k] = s().useState(!1), {
+            } = n, G = s().useRef(null), w = s().useRef(null), [k, B] = s().useState(!1), {
                 scrollerRef: V,
                 scrollerState: F,
                 getScrollerState: x
@@ -72,8 +72,8 @@ function(e, t, n) {
             } = (0, u.useVirtualizedMasonryState)({
                 sections: f,
                 columns: S,
-                getItemKey: h,
-                getItemHeight: A,
+                getItemKey: A,
+                getItemHeight: h,
                 getSectionHeight: m,
                 chunkSize: N,
                 itemGutter: C,
@@ -102,8 +102,8 @@ function(e, t, n) {
                 ...(0, u.getAnimatedScrollHelpers)(V, x, q)
             }), [V, x, J, q, Z]);
             let ee = (0, r.useCallback)(e => {
-                Q(1), null == G.current ? k(!0) : clearTimeout(G.current), G.current = setTimeout(() => {
-                    G.current = null, k(!1)
+                Q(1), null == G.current ? B(!0) : clearTimeout(G.current), G.current = setTimeout(() => {
+                    G.current = null, B(!1)
                 }, 200), null != I && I(e)
             }, [I, Q]);
             return (0, i.jsx)("div", {
@@ -112,7 +112,7 @@ function(e, t, n) {
                 className: o()(P, {
                     [e]: !0,
                     [t]: y,
-                    [d.scrolling]: B
+                    [d.scrolling]: k
                 }),
                 style: (0, u.getMergedOrientationStyles)(U),
                 ...b,

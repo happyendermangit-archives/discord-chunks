@@ -19,8 +19,8 @@ function(e, t, n) {
         T = n("768760"),
         f = n("981631"),
         S = n("689938"),
-        h = n("457731"),
-        A = n("167969"),
+        A = n("457731"),
+        h = n("167969"),
         m = n("557256");
 
     function N(e, t, n) {
@@ -43,9 +43,9 @@ function(e, t, n) {
                 placeholderVersion: l,
                 alt: d,
                 width: E,
-                height: A,
+                height: h,
                 maxWidth: m = E,
-                maxHeight: N = A,
+                maxHeight: N = h,
                 minWidth: O,
                 minHeight: C,
                 mediaLayoutType: g,
@@ -60,32 +60,32 @@ function(e, t, n) {
                 useFullWidth: G = !1,
                 ...w
             } = this.props;
-            if (1 === E && 1 === A) return null;
-            let B = (0, c.fit)({
+            if (1 === E && 1 === h) return null;
+            let k = (0, c.fit)({
                     width: E,
-                    height: A,
+                    height: h,
                     maxWidth: m,
                     maxHeight: N,
                     minWidth: O,
                     minHeight: C
                 }),
-                k = 0 !== B.width ? B.width / B.height : 1;
+                B = 0 !== k.width ? k.width / k.height : 1;
             "" !== s && i !== f.ImageReadyStates.ERROR ? e = y({
                 src: s,
-                size: B,
+                size: k,
                 alt: d,
                 className: n,
                 mediaLayoutType: g
             }) : i !== f.ImageReadyStates.LOADING && (e = (0, r.jsx)(p, {
-                size: B,
+                size: k,
                 mediaLayoutType: g,
                 alt: d
             })), e = (0, r.jsx)(I.ImageLoadingOverlay, {
                 readyState: i,
-                aspectRatio: k,
+                aspectRatio: B,
                 placeholder: a,
                 placeholderVersion: l,
-                placeholderStyle: R(B, g),
+                placeholderStyle: R(k, g),
                 children: e
             });
             let V = null != P ? P() : null;
@@ -93,10 +93,10 @@ function(e, t, n) {
                 ringTarget: this._containerRef,
                 focusTarget: this._clickableRef,
                 children: (0, r.jsxs)("div", {
-                    className: o()(h.imageWrapper, {
-                        [h.imageZoom]: v,
-                        [h.imageWrapperBackground]: i !== f.ImageReadyStates.READY,
-                        [h.clickable]: null != U
+                    className: o()(A.imageWrapper, {
+                        [A.imageZoom]: v,
+                        [A.imageWrapperBackground]: i !== f.ImageReadyStates.READY,
+                        [A.clickable]: null != U
                     }, t),
                     style: function(e, t, n, i) {
                         return i === T.MediaLayoutType.MOSAIC ? {
@@ -110,19 +110,19 @@ function(e, t, n) {
                             width: "100%",
                             aspectRatio: "".concat(e.width, " / ").concat(e.height)
                         } : e
-                    }(B, L, G, g),
+                    }(k, L, G, g),
                     ...w,
                     children: [null != M && (0, r.jsx)("a", {
                         tabIndex: -1,
                         onClick: U,
                         "aria-hidden": !0,
-                        className: h.originalLink,
+                        className: A.originalLink,
                         href: M,
                         ref: this._containerRef,
                         "data-role": "img",
                         "data-safe-src": s
                     }), null != U ? (0, r.jsx)(u.Clickable, {
-                        className: h.clickableWrapper,
+                        className: A.clickableWrapper,
                         tabIndex: null != b ? b : 0,
                         onClick: U,
                         "aria-label": null != d ? d : S.default.Messages.IMAGE,
@@ -133,7 +133,7 @@ function(e, t, n) {
                         },
                         children: e
                     }) : e, null != V ? (0, r.jsx)("div", {
-                        className: h.imageAccessory,
+                        className: A.imageAccessory,
                         children: V
                     }) : null]
                 })
@@ -151,7 +151,7 @@ function(e, t, n) {
             alt: i
         } = e, s = (0, d.default)();
         return (0, r.jsx)("div", {
-            className: h.imageErrorWrapper,
+            className: A.imageErrorWrapper,
             style: function(e, t) {
                 switch (t) {
                     case T.MediaLayoutType.MOSAIC:
@@ -167,8 +167,8 @@ function(e, t, n) {
                 }
             }(t, n),
             children: (0, r.jsx)("img", {
-                src: (0, l.isThemeLight)(s) ? m : A,
-                className: h.imageError,
+                src: (0, l.isThemeLight)(s) ? m : h,
+                className: A.imageError,
                 alt: null != i ? i : S.default.Messages.IMAGE
             })
         })

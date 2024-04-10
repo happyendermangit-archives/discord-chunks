@@ -17,18 +17,18 @@ function(e, t, n) {
         let {
             disabled: n,
             type: s
-        } = e, [T, f] = (0, d.useExpressionPickerStore)(e => [e.activeView, e.pickerId], o.default), S = r.useContext(u.default), [h, A] = r.useState(!1), m = T === c.ExpressionPickerViewType.STICKER, N = r.useCallback(() => {
+        } = e, [T, f] = (0, d.useExpressionPickerStore)(e => [e.activeView, e.pickerId], o.default), S = r.useContext(u.default), [A, h] = r.useState(!1), m = T === c.ExpressionPickerViewType.STICKER, N = r.useCallback(() => {
             (0, d.toggleExpressionPicker)(c.ExpressionPickerViewType.STICKER, s)
         }, [s]);
         r.useEffect(() => {
             let e = () => {
                     requestAnimationFrame(() => {
-                        A(!0)
+                        h(!0)
                     })
                 },
                 t = () => {
                     requestAnimationFrame(() => {
-                        A(!1)
+                        h(!1)
                     })
                 };
             return S.addListener("sticker-suggestions-shown", e), S.addListener("sticker-suggestions-hidden", t), () => {
@@ -45,7 +45,7 @@ function(e, t, n) {
             ref: t,
             children: (0, i.jsx)(_.default, {
                 innerClassName: a()(I.button, I.stickerButton, {
-                    [I.stickerButtonTilted]: h && !m
+                    [I.stickerButtonTilted]: A && !m
                 }),
                 ...p,
                 onClick: () => {

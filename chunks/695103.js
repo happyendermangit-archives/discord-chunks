@@ -25,12 +25,12 @@ function(e, t, n) {
         f = new Set,
         S = !1;
 
-    function h() {
+    function A() {
         s = null
     }
 
-    function A() {
-        i = null, r = null, f = new Set, T.applicationId = null, T.originURL = null, h()
+    function h() {
+        i = null, r = null, f = new Set, T.applicationId = null, T.originURL = null, A()
     }
     class m extends(a = o.default.PersistedStore) {
         initialize(e) {
@@ -103,8 +103,8 @@ function(e, t, n) {
             } = e;
             i = t
         },
-        DEVELOPER_TEST_MODE_RESET_ERROR: h,
-        LOGOUT: A,
-        DEVELOPER_TEST_MODE_RESET: A
+        DEVELOPER_TEST_MODE_RESET_ERROR: A,
+        LOGOUT: h,
+        DEVELOPER_TEST_MODE_RESET: h
     })
 }

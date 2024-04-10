@@ -12,118 +12,113 @@ function(e, t, n) {
         T = n("314897"),
         f = n("523746"),
         S = n("592125"),
-        h = n("157305"),
         A = n("131951"),
-        m = n("19780"),
-        N = n("936349"),
-        O = n("944486"),
-        p = n("885110"),
-        R = n("959457"),
-        C = n("358085"),
-        g = n("138859"),
-        L = n("955132"),
-        D = n("645436"),
-        v = n("344651"),
-        M = n("981631"),
-        y = n("526761");
-    let P = window.DiscordNative;
-    L.socket.dispatcher.getDispatchHandler = v.default;
-    let U = new c.default("ConnectionStore"),
-        b = 0,
-        G = null,
-        w = !0,
-        B = null;
+        h = n("19780"),
+        m = n("936349"),
+        N = n("944486"),
+        O = n("885110"),
+        p = n("959457"),
+        R = n("358085"),
+        C = n("138859"),
+        g = n("955132"),
+        L = n("645436"),
+        D = n("344651"),
+        v = n("981631"),
+        M = n("526761");
+    let y = window.DiscordNative;
+    g.socket.dispatcher.getDispatchHandler = D.default;
+    let P = new c.default("ConnectionStore"),
+        U = 0,
+        b = null,
+        G = !0,
+        w = null;
     async function k(e) {
-        b = Date.now(), G = e.sessionId, L.localPresenceState.handleConnectionOpen();
+        U = Date.now(), b = e.sessionId, g.localPresenceState.handleConnectionOpen();
         let t = {},
-            n = O.default.getVoiceChannelId();
+            n = N.default.getVoiceChannelId();
         if (null != n) {
             var i, r, s, a, o, l, u, d;
-            if ((null === (o = window) || void 0 === o ? void 0 : null === (a = o.performance) || void 0 === a ? void 0 : null === (s = a.getEntriesByType) || void 0 === s ? void 0 : null === (r = s.call(a, "navigation")) || void 0 === r ? void 0 : null === (i = r[0]) || void 0 === i ? void 0 : i.type) === "reload" || (null === (l = await (null == P ? void 0 : null === (d = P.processUtils) || void 0 === d ? void 0 : null === (u = d.getLastCrash) || void 0 === u ? void 0 : u.call(d))) || void 0 === l ? void 0 : l.rendererCrashReason) != null || !w) {
+            if ((null === (o = window) || void 0 === o ? void 0 : null === (a = o.performance) || void 0 === a ? void 0 : null === (s = a.getEntriesByType) || void 0 === s ? void 0 : null === (r = s.call(a, "navigation")) || void 0 === r ? void 0 : null === (i = r[0]) || void 0 === i ? void 0 : i.type) === "reload" || (null === (l = await (null == y ? void 0 : null === (d = y.processUtils) || void 0 === d ? void 0 : null === (u = d.getLastCrash) || void 0 === u ? void 0 : u.call(d))) || void 0 === l ? void 0 : l.rendererCrashReason) != null || !G) {
                 let e = S.default.getChannel(n);
                 null != e && (t = {
                     guildId: e.getGuildId(),
                     channelId: n
                 })
-            } else m.default.setLastSessionVoiceChannelId(null != n ? n : null), _.default.selectVoiceChannel(null)
+            } else h.default.setLastSessionVoiceChannelId(null != n ? n : null), _.default.selectVoiceChannel(null)
         }
-        L.localVoiceState.update(t, !0), L.localLobbyVoiceStates.update({}, !0), w = !1
+        g.localVoiceState.update(t, !0), G = !1
+    }
+
+    function B() {
+        g.localVoiceState.update()
     }
 
     function V() {
-        L.localVoiceState.update()
+        return g.localVoiceState.update(), !1
     }
 
     function F() {
-        return L.localVoiceState.update(), L.localLobbyVoiceStates.update(), !1
+        return g.localPresenceState.update(), !1
     }
 
-    function x() {
-        return L.localPresenceState.update(), !1
+    function x(e) {
+        g.socket.isSessionEstablished() && g.socket.streamDelete(e)
     }
-
-    function H() {
-        return L.localLobbyVoiceStates.update(), !1
-    }
-
-    function Y(e) {
-        L.socket.isSessionEstablished() && L.socket.streamDelete(e)
-    }
-    class j extends(i = u.default.Store) {
+    class H extends(i = u.default.Store) {
         initialize() {
-            this.waitFor(T.default, O.default, S.default, f.default, h.default, I.default), this.syncWith([A.default], F), this.syncWith([p.default], x)
+            this.waitFor(T.default, N.default, S.default, f.default, I.default), this.syncWith([A.default], V), this.syncWith([O.default], F)
         }
         getSocket() {
-            return L.socket
+            return g.socket
         }
         isTryingToConnect() {
-            return !L.socket.isClosed()
+            return !g.socket.isClosed()
         }
         isConnected() {
-            return L.socket.isSessionEstablished()
+            return g.socket.isSessionEstablished()
         }
         isConnectedOrOverlay() {
-            return L.socket.isSessionEstablished() || __OVERLAY__
+            return g.socket.isSessionEstablished() || __OVERLAY__
         }
         lastTimeConnectedChanged() {
-            return b
+            return U
         }
     }
-    a = "GatewayConnectionStore", (s = "displayName") in(r = j) ? Object.defineProperty(r, s, {
+    a = "GatewayConnectionStore", (s = "displayName") in(r = H) ? Object.defineProperty(r, s, {
         value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a, t.default = new j(d.default, {
+    }) : r[s] = a, t.default = new H(d.default, {
         START_SESSION: function() {
-            return L.socket.isClosed() ? (U.verbose("Socket is reconnecting because of starting new session"), L.socket.connect()) : (U.verbose("Socket is not reconnecting during a new session because it is not closed"), !1)
+            return g.socket.isClosed() ? (P.verbose("Socket is reconnecting because of starting new session"), g.socket.connect()) : (P.verbose("Socket is not reconnecting during a new session because it is not closed"), !1)
         },
         LOGIN_SUCCESS: function() {
-            return U.verbose("session refresh dispatched", {
-                isEstablished: L.socket.isSessionEstablished()
-            }), !!L.socket.isSessionEstablished() && (L.socket.close(), L.socket.connect())
+            return P.verbose("session refresh dispatched", {
+                isEstablished: g.socket.isSessionEstablished()
+            }), !!g.socket.isSessionEstablished() && (g.socket.close(), g.socket.connect())
         },
         LOGOUT: function(e) {
-            e.isSwitchingAccount && L.localPresenceState.handleAccountSwitch(), U.verbose("Closing socket because of logout"), L.socket.close()
+            e.isSwitchingAccount && g.localPresenceState.handleAccountSwitch(), P.verbose("Closing socket because of logout"), g.socket.close()
         },
         CLEAR_CACHES: function(e) {
-            return e.resetSocket && (L.socket.close(), L.socket.dispatcher.clear(), L.socket.connect()), !1
+            return e.resetSocket && (g.socket.close(), g.socket.dispatcher.clear(), g.socket.connect()), !1
         },
         CONNECTION_OPEN: e => {
             k(e)
         },
         CONNECTION_CLOSED: function() {
-            U.verbose("connection closed dispatched"), b = Date.now()
+            P.verbose("connection closed dispatched"), U = Date.now()
         },
         RTC_CONNECTION_STATE: function(e) {
-            if (e.state !== M.RTCConnectionStates.DISCONNECTED) return !1;
-            e.willReconnect && (null != e.streamKey ? L.socket.streamPing(e.streamKey) : L.socket.voiceServerPing())
+            if (e.state !== v.RTCConnectionStates.DISCONNECTED) return !1;
+            e.willReconnect && (null != e.streamKey ? g.socket.streamPing(e.streamKey) : g.socket.voiceServerPing())
         },
         VOICE_CHANNEL_SELECT: function(e) {
-            return L.localVoiceState.update({
+            return g.localVoiceState.update({
                 guildId: e.guildId,
                 channelId: e.channelId
-            }), (0, C.isIOS)() && null == e.channelId && B === M.AppStates.BACKGROUND && L.socket.close(!0), !1
+            }), (0, R.isIOS)() && null == e.channelId && w === v.AppStates.BACKGROUND && g.socket.close(!0), !1
         },
         VOICE_STATE_UPDATES: function(e) {
             let {
@@ -131,13 +126,13 @@ function(e, t, n) {
             } = e;
             return t.reduce((e, t) => {
                 if (T.default.getId() !== t.userId) return e;
-                if (t.sessionId === G) L.localVoiceState.setState({
+                if (t.sessionId === b) g.localVoiceState.setState({
                     guildId: t.guildId,
                     channelId: t.channelId
                 });
                 else {
-                    if (t.guildId !== L.localVoiceState.guildId) return e;
-                    L.localVoiceState.setState({
+                    if (t.guildId !== g.localVoiceState.guildId) return e;
+                    g.localVoiceState.setState({
                         guildId: null,
                         channelId: null
                     })
@@ -146,7 +141,7 @@ function(e, t, n) {
             }, !1)
         },
         GUILD_DELETE: function(e) {
-            e.guild.id === L.localVoiceState.guildId && L.localVoiceState.setState({
+            e.guild.id === g.localVoiceState.guildId && g.localVoiceState.setState({
                 guildId: null,
                 channelId: null
             })
@@ -155,7 +150,7 @@ function(e, t, n) {
             let {
                 channel: t
             } = e;
-            t.id === L.localVoiceState.channelId && L.localVoiceState.setState({
+            t.id === g.localVoiceState.channelId && g.localVoiceState.setState({
                 guildId: null,
                 channelId: null
             })
@@ -164,21 +159,21 @@ function(e, t, n) {
             let {
                 channelId: t
             } = e;
-            t === L.localVoiceState.channelId && L.localVoiceState.setState({
+            t === g.localVoiceState.channelId && g.localVoiceState.setState({
                 guildId: null,
                 channelId: null
             })
         },
         APP_STATE_UPDATE: function(e) {
-            return (0, C.isIOS)() ? (T.default.isAuthenticated() && (B === M.AppStates.INACTIVE && e.state === M.AppStates.BACKGROUND && null == L.localVoiceState.channelId ? L.socket.close(!0) : B === M.AppStates.BACKGROUND && e.state === M.AppStates.ACTIVE && (D.setIsPaused(!1), L.socket.connect())), B = e.state) : e.state === M.AppStates.ACTIVE && (D.setIsPaused(!1), T.default.isAuthenticated() && L.socket.resetBackoff("App state is active")), !1
+            return (0, R.isIOS)() ? (T.default.isAuthenticated() && (w === v.AppStates.INACTIVE && e.state === v.AppStates.BACKGROUND && null == g.localVoiceState.channelId ? g.socket.close(!0) : w === v.AppStates.BACKGROUND && e.state === v.AppStates.ACTIVE && (L.setIsPaused(!1), g.socket.connect())), w = e.state) : e.state === v.AppStates.ACTIVE && (L.setIsPaused(!1), T.default.isAuthenticated() && g.socket.resetBackoff("App state is active")), !1
         },
         GUILD_MEMBERS_REQUEST: function(e) {
-            return L.socket.isSessionEstablished() && ("userIds" in e ? l()(e.userIds).chunk(100).forEach(t => {
-                L.socket.requestGuildMembers(e.guildIds, {
+            return g.socket.isSessionEstablished() && ("userIds" in e ? l()(e.userIds).chunk(100).forEach(t => {
+                g.socket.requestGuildMembers(e.guildIds, {
                     userIds: t,
                     presences: !!e.presences
                 })
-            }) : L.socket.requestGuildMembers(e.guildIds, {
+            }) : g.socket.requestGuildMembers(e.guildIds, {
                 query: e.query,
                 limit: e.limit,
                 presences: !!e.presences
@@ -190,7 +185,7 @@ function(e, t, n) {
                 query: n,
                 continuationToken: i
             } = e;
-            L.socket.isSessionEstablished() && L.socket.searchRecentMembers(t, {
+            g.socket.isSessionEstablished() && g.socket.searchRecentMembers(t, {
                 query: n,
                 continuationToken: i
             })
@@ -199,49 +194,33 @@ function(e, t, n) {
             let {
                 subscriptions: t
             } = e;
-            return L.socket.isSessionEstablished() && L.socket.updateGuildSubscriptions(t), !1
+            return g.socket.isSessionEstablished() && g.socket.updateGuildSubscriptions(t), !1
         },
         CALL_CONNECT: function(e) {
             let {
                 channelId: t
             } = e;
-            return L.socket.isSessionEstablished() && L.socket.callConnect(t), !1
+            return g.socket.isSessionEstablished() && g.socket.callConnect(t), !1
         },
         CALL_CONNECT_MULTIPLE: function(e) {
             let {
                 channelIds: t
             } = e;
-            return L.socket.isSessionEstablished() && t.forEach(e => {
-                L.socket.callConnect(e)
+            return g.socket.isSessionEstablished() && t.forEach(e => {
+                g.socket.callConnect(e)
             }), !1
         },
-        LOBBY_CONNECT: function(e) {
-            let {
-                lobbyId: t,
-                lobbySecret: n
-            } = e;
-            return L.socket.isSessionEstablished() && L.socket.lobbyConnect(t, n), !1
-        },
-        LOBBY_DISCONNECT: function(e) {
-            let {
-                lobbyId: t
-            } = e;
-            return L.socket.isSessionEstablished() && L.socket.lobbyDisconnect(t), L.localLobbyVoiceStates.update(), !1
-        },
-        LOBBY_VOICE_CONNECT: H,
-        LOBBY_VOICE_DISCONNECT: H,
-        RPC_APP_DISCONNECTED: H,
-        STREAM_CREATE: V,
+        STREAM_CREATE: B,
         STREAM_START: function(e) {
             let {
                 streamType: t,
                 guildId: n,
                 channelId: i
             } = e;
-            if (L.socket.isSessionEstablished()) {
+            if (g.socket.isSessionEstablished()) {
                 var r, s;
                 let e = null != n ? null === (r = S.default.getChannel(i)) || void 0 === r ? void 0 : r.rtcRegion : null === (s = f.default.getCall(i)) || void 0 === s ? void 0 : s.region;
-                L.socket.streamCreate(t, n, i, null != e ? e : N.default.getPreferredRegion())
+                g.socket.streamCreate(t, n, i, null != e ? e : m.default.getPreferredRegion())
             }
             return !1
         },
@@ -250,28 +229,28 @@ function(e, t, n) {
                 streamKey: t,
                 allowMultiple: n
             } = e;
-            return L.socket.isSessionEstablished() && (n || ! function() {
+            return g.socket.isSessionEstablished() && (n || ! function() {
                 let e = function() {
-                    return R.default.getAllActiveStreamKeys().find(e => (0, E.decodeStreamKey)(e).ownerId === T.default.getId())
+                    return p.default.getAllActiveStreamKeys().find(e => (0, E.decodeStreamKey)(e).ownerId === T.default.getId())
                 }();
-                R.default.getAllActiveStreamKeys().filter(t => t !== e).forEach(e => Y(e))
-            }(), L.socket.streamWatch(t)), !1
+                p.default.getAllActiveStreamKeys().filter(t => t !== e).forEach(e => x(e))
+            }(), g.socket.streamWatch(t)), !1
         },
         STREAM_STOP: function(e) {
             let {
                 streamKey: t
             } = e;
-            return Y(t), V(), !1
+            return x(t), B(), !1
         },
         STREAM_SET_PAUSED: function(e) {
             let {
                 streamKey: t,
                 paused: n
             } = e;
-            L.socket.isSessionEstablished() && L.socket.streamSetPaused(t, n)
+            g.socket.isSessionEstablished() && g.socket.streamSetPaused(t, n)
         },
         PUSH_NOTIFICATION_CLICK: function() {
-            return L.socket.expeditedHeartbeat(5e3, "user clicked on notification", !0), !1
+            return g.socket.expeditedHeartbeat(5e3, "user clicked on notification", !0), !1
         },
         EMBEDDED_ACTIVITY_DISCONNECT: function(e) {
             var t, n;
@@ -279,7 +258,7 @@ function(e, t, n) {
                 channelId: i,
                 applicationId: r
             } = e, s = null !== (n = null === (t = S.default.getChannel(i)) || void 0 === t ? void 0 : t.getGuildId()) && void 0 !== n ? n : null;
-            L.socket.embeddedActivityClose(s, i, r)
+            g.socket.embeddedActivityClose(s, i, r)
         },
         REQUEST_FORUM_UNREADS: function(e) {
             let {
@@ -287,35 +266,35 @@ function(e, t, n) {
                 channelId: n,
                 threads: i
             } = e;
-            L.socket.requestForumUnreads(t, n, i)
+            g.socket.requestForumUnreads(t, n, i)
         },
         REQUEST_SOUNDBOARD_SOUNDS: function(e) {
             let {
                 guildIds: t
             } = e;
-            L.socket.requestSoundboardSounds(t)
+            g.socket.requestSoundboardSounds(t)
         },
         REMOTE_COMMAND: function(e) {
             let {
                 sessionId: t,
                 payload: n
             } = e;
-            return L.socket.isSessionEstablished() && L.socket.remoteCommand(t, n), !1
+            return g.socket.isSessionEstablished() && g.socket.remoteCommand(t, n), !1
         },
         RESET_SOCKET: function(e) {
-            L.socket.connectionState !== g.default.WILL_RECONNECT && L.socket.resetSocketOnError(e.args)
+            g.socket.connectionState !== C.default.WILL_RECONNECT && g.socket.resetSocketOnError(e.args)
         },
         RTC_SPEED_TEST_START_TEST: function() {
-            return L.socket.isSessionEstablished() && L.socket.speedTestCreate(N.default.getPreferredRegion()), !1
+            return g.socket.isSessionEstablished() && g.socket.speedTestCreate(m.default.getPreferredRegion()), !1
         },
         RTC_SPEED_TEST_STOP_TEST: function() {
-            return L.socket.isSessionEstablished() && L.socket.speedTestDelete(), !1
+            return g.socket.isSessionEstablished() && g.socket.speedTestDelete(), !1
         },
-        CLIPS_SETTINGS_UPDATE: V,
-        RUNNING_GAMES_CHANGE: V,
+        CLIPS_SETTINGS_UPDATE: B,
+        RUNNING_GAMES_CHANGE: B,
         USER_SETTINGS_PROTO_UPDATE: function(e) {
             var t;
-            e.settings.type === y.UserSettingsTypes.PRELOADED_USER_SETTINGS && (null === (t = e.settings.proto.clips) || void 0 === t ? void 0 : t.allowVoiceRecording) != null && V()
+            e.settings.type === M.UserSettingsTypes.PRELOADED_USER_SETTINGS && (null === (t = e.settings.proto.clips) || void 0 === t ? void 0 : t.allowVoiceRecording) != null && B()
         }
     })
 }

@@ -24,7 +24,7 @@ function(e, t, n) {
             rowSize: I,
             isBurstReaction: T,
             analyticsObject: f
-        } = e, S = s.default.getChannel(a.default.getChannelId()), h = null == S ? void 0 : S.getGuildId(), A = r.default.emojiFrecencyWithoutFetchingLatest.frequently.slice(), m = null != S ? r.default.getDisambiguatedEmojiContext(S.getGuildId()).favoriteEmojisWithoutFetchingLatest : [], N = A.slice(0, r.default.emojiFrecencyWithoutFetchingLatest.numFrequentlyItems), O = null != h ? r.default.getGuildEmoji(h) : [], p = Object.values(null !== (t = r.default.getDisambiguatedEmojiContext(null == S ? void 0 : S.getGuildId()).groupedCustomEmojis) && void 0 !== t ? t : {}).reduce((e, t) => e += t.length, 0), {
+        } = e, S = s.default.getChannel(a.default.getChannelId()), A = null == S ? void 0 : S.getGuildId(), h = r.default.emojiFrecencyWithoutFetchingLatest.frequently.slice(), m = null != S ? r.default.getDisambiguatedEmojiContext(S.getGuildId()).favoriteEmojisWithoutFetchingLatest : [], N = h.slice(0, r.default.emojiFrecencyWithoutFetchingLatest.numFrequentlyItems), O = null != A ? r.default.getGuildEmoji(A) : [], p = Object.values(null !== (t = r.default.getDisambiguatedEmojiContext(null == S ? void 0 : S.getGuildId()).groupedCustomEmojis) && void 0 !== t ? t : {}).reduce((e, t) => e += t.length, 0), {
             topEmojis: R,
             newlyAddedEmojis: C
         } = (0, u.getTopAndNewlyAddedEmojis)({

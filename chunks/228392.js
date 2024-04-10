@@ -23,7 +23,7 @@ function(e, t, n) {
             return x
         },
         trackForumEnableAutomodClicked: function() {
-            return B
+            return k
         },
         trackForumHelperCardClicked: function() {
             return G
@@ -53,16 +53,16 @@ function(e, t, n) {
             return V
         },
         trackForumPreviewPostClicked: function() {
-            return k
+            return B
         },
         trackForumScrolled: function() {
             return g
         },
         trackForumSearchCleared: function() {
-            return A
+            return h
         },
         trackForumSearched: function() {
-            return h
+            return A
         },
         trackForumSortOrderUpdated: function() {
             return v
@@ -112,7 +112,7 @@ function(e, t, n) {
         })
     }
 
-    function h(e) {
+    function A(e) {
         let {
             guildId: t,
             channelId: n,
@@ -128,7 +128,7 @@ function(e, t, n) {
         })
     }
 
-    function A(e) {
+    function h(e) {
         let {
             guildId: t,
             channelId: n
@@ -204,8 +204,8 @@ function(e, t, n) {
             E = l.default.getDraft(u, l.DraftType.FirstThreadMessage),
             I = null == E || 0 === E.length || (null == E ? void 0 : E.trim()) === c,
             S = (null == _ ? void 0 : _.appliedTags) == null || (null == _ ? void 0 : null === (n = _.appliedTags) || void 0 === n ? void 0 : n.size) === 0,
-            h = (null == _ ? void 0 : _.name) == null || (null == _ ? void 0 : null === (s = _.name) || void 0 === s ? void 0 : null === (i = s.trim()) || void 0 === i ? void 0 : i.length) === 0;
-        (!I || !S || !h) && r.default.trackWithMetadata(f.AnalyticEvents.FORUM_CHANNEL_NEW_POST_DRAFT_CREATED, {
+            A = (null == _ ? void 0 : _.name) == null || (null == _ ? void 0 : null === (s = _.name) || void 0 === s ? void 0 : null === (i = s.trim()) || void 0 === i ? void 0 : i.length) === 0;
+        (!I || !S || !A) && r.default.trackWithMetadata(f.AnalyticEvents.FORUM_CHANNEL_NEW_POST_DRAFT_CREATED, {
             ...(0, T.collectForumAnalyticsMetadata)({
                 channelId: u
             }),
@@ -396,11 +396,11 @@ function(e, t, n) {
         })
     }
 
-    function B() {
+    function k() {
         r.default.trackWithMetadata(f.AnalyticEvents.FORUM_CHANNEL_ENABLE_AUTOMOD_CLICKED)
     }
 
-    function k() {
+    function B() {
         r.default.trackWithMetadata(f.AnalyticEvents.FORUM_CHANNEL_ENABLE_PREVIEW_CLICKED)
     }
 

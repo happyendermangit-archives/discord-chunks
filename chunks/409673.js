@@ -23,8 +23,8 @@ function(e, t, n) {
         T = n("594174"),
         f = n("225196"),
         S = n("887208"),
-        h = n("897353"),
-        A = n("729285"),
+        A = n("897353"),
+        h = n("729285"),
         m = n("632184"),
         N = n("208049"),
         O = n("763296"),
@@ -89,8 +89,8 @@ function(e, t, n) {
             className: b,
             focused: G,
             forceSecondaryActions: w = !1,
-            interactive: B = !0,
-            enableSecondaryActions: k = !1,
+            interactive: k = !0,
+            enableSecondaryActions: B = !1,
             suppressPlaySound: V,
             onMouseEnter: F,
             onSelectItem: x,
@@ -129,7 +129,7 @@ function(e, t, n) {
             eu = (0, o.useListItem)(el),
             ed = null != z || null != X,
             e_ = !(0, R.canUseSoundboardSound)(Q, P, U),
-            ec = w || k && !e_;
+            ec = w || B && !e_;
 
         function eE(e) {
             e.stopPropagation(), e.currentTarget.blur(), eo ? (0, N.removeFavoriteSound)(W) : (0, N.addFavoriteSound)(W)
@@ -137,7 +137,7 @@ function(e, t, n) {
 
         function eI() {
             return (0, i.jsx)(M, {
-                disabled: !B && !w,
+                disabled: !k && !w,
                 onClick: eE,
                 text: D.default.Messages.SOUNDBOARD_SOUND_FAVORITE_SOUND.format({
                     emojiName: P.emojiName,
@@ -164,7 +164,7 @@ function(e, t, n) {
                     })
                 }), (0, i.jsxs)("div", {
                     className: v.buttonOverlayActions,
-                    children: [ec && eT, !V && !e_ && (0, i.jsx)(h.default, {
+                    children: [ec && eT, !V && !e_ && (0, i.jsx)(A.default, {
                         className: v.playIcon
                     }), ec && eI()]
                 })]
@@ -192,11 +192,11 @@ function(e, t, n) {
                 className: a()(b, v.soundButton, {
                     [v.playing]: $,
                     [v.hoverActiveBackground]: V,
-                    [v.soundButtonInteractive]: B,
-                    [v.buttonDisabled]: !B && !w,
+                    [v.soundButtonInteractive]: k,
+                    [v.buttonDisabled]: !k && !w,
                     [v.premiumDisabled]: e_ && !w,
-                    [v.buttonDisabledSecondaryActionsEnabled]: !B && w,
-                    [v.focused]: B && G
+                    [v.buttonDisabledSecondaryActionsEnabled]: !k && w,
+                    [v.focused]: k && G
                 }),
                 onClick: function() {
                     if (ea && !ei && (er.current = Math.min(er.current + .01, .1), Math.random() < er.current && ee(en.x, en.y, void 0, void 0, {
@@ -207,7 +207,7 @@ function(e, t, n) {
                     }
                     V || J(H)
                 },
-                onContextMenu: k && !e_ ? q : void 0,
+                onContextMenu: B && !e_ ? q : void 0,
                 children: [(0, i.jsxs)("div", {
                     className: v.soundInfo,
                     "aria-hidden": !0,
@@ -218,7 +218,7 @@ function(e, t, n) {
                         className: v.emoji
                     }), (0, i.jsx)(_.Text, {
                         variant: "text-xs/medium",
-                        color: B ? "header-primary" : "text-muted",
+                        color: k ? "header-primary" : "text-muted",
                         className: a()(v.soundName, {
                             [v.hasEmoji]: ed
                         }),
@@ -235,7 +235,7 @@ function(e, t, n) {
                                     className: v.buttonOverlayActions,
                                     children: [eT, (0, i.jsxs)("div", {
                                         className: v.addButton,
-                                        children: [(0, i.jsx)(A.default, {
+                                        children: [(0, i.jsx)(h.default, {
                                             className: v.plusSign
                                         }), (0, i.jsx)(_.Text, {
                                             variant: "text-xs/medium",

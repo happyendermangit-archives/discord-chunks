@@ -15,8 +15,8 @@ function(e, t, n) {
         T = n("188742"),
         f = n("973542"),
         S = n("889564"),
-        h = n("687476"),
-        A = n("978519"),
+        A = n("687476"),
+        h = n("978519"),
         m = n("706454"),
         N = n("581883"),
         O = n("271383"),
@@ -34,8 +34,8 @@ function(e, t, n) {
         b = n("633302"),
         G = n("174065"),
         w = n("396352"),
-        B = n("185923"),
-        k = n("981631"),
+        k = n("185923"),
+        B = n("981631"),
         V = n("149203"),
         F = n("526761");
 
@@ -255,7 +255,7 @@ function(e, t, n) {
                 };
             b.default.forEach(n);
             let r = e => {
-                let t = Q[null == e ? k.NULL_STRING_GUILD_ID : e];
+                let t = Q[null == e ? B.NULL_STRING_GUILD_ID : e];
                 null != t && (s().each(t.usableEmojis, n), s().each(t.emoticons, i))
             };
             for (let e in r(this.guildId), this.newlyAddedEmoji) null != this.newlyAddedEmoji[e] ? this.newlyAddedEmoji[e] = this.newlyAddedEmoji[e].sort((e, t) => P.default.compare(t.id, e.id)).slice(0, 3) : this.newlyAddedEmoji[e] = [];
@@ -305,7 +305,7 @@ function(e, t, n) {
         if (es(e), en.clear(e), null == t) return;
         let n = g.default.getCurrentUser();
         if (null == n) return;
-        let i = (0, A.canUseRoleSubscriptionIAP)(e);
+        let i = (0, h.canUseRoleSubscriptionIAP)(e);
         Q[e] = new j(e, n.id, t, i)
     }
 
@@ -347,7 +347,7 @@ function(e, t, n) {
     }
     class e_ extends(i = u.default.PersistedStore) {
         initialize(e) {
-            this.waitFor(c.default, p.default, O.default, R.default, m.default, h.default, w.default, g.default), null != e && (Y = e), this.syncWith([N.default], el)
+            this.waitFor(c.default, p.default, O.default, R.default, m.default, A.default, w.default, g.default), null != e && (Y = e), this.syncWith([N.default], el)
         }
         getState() {
             return Y
@@ -430,7 +430,7 @@ function(e, t, n) {
                         intention: s,
                         forceIncludeExternalGuilds: a
                     });
-                    return i === B.EmojiDisabledReasons.PREMIUM_LOCKED ? e.locked.push(t) : null == i && e.unlocked.push(t), e
+                    return i === k.EmojiDisabledReasons.PREMIUM_LOCKED ? e.locked.push(t) : null == i && e.unlocked.push(t), e
                 }, {
                     unlocked: [],
                     locked: []
@@ -469,7 +469,7 @@ function(e, t, n) {
                     channel: e,
                     count: 10,
                     query: J,
-                    intention: B.EmojiIntention.CHAT
+                    intention: k.EmojiIntention.CHAT
                 });
                 return [...n.slice(0, 5), ...t.slice(0, 5)].slice(0, 5)
             }

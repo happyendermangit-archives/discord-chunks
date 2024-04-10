@@ -24,7 +24,7 @@ function(e, t, n) {
             return I
         },
         isOutOfProcess: function() {
-            return h
+            return A
         },
         setOutOfProcessSupport: function() {
             return f
@@ -62,7 +62,7 @@ function(e, t, n) {
     }
 
     function E(e) {
-        h() && (i = e)
+        A() && (i = e)
     }
 
     function I() {
@@ -81,7 +81,7 @@ function(e, t, n) {
         return _
     }
 
-    function h() {
+    function A() {
         var e;
         return void 0 !== r ? r : r = (null !== (e = new URLSearchParams(window.location.search).get("oop")) && void 0 !== e ? e : "") === "true"
     }

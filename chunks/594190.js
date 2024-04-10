@@ -25,8 +25,8 @@ function(e, t, n) {
         T = n("593472"),
         f = n("726542"),
         S = n("710845"),
-        h = n("630699"),
-        A = n("855403"),
+        A = n("630699"),
+        h = n("855403"),
         m = n("454991"),
         N = n("77498"),
         O = n("283595"),
@@ -118,8 +118,8 @@ function(e, t, n) {
             }],
             name: f.default.get(P.PlatformTypes.SPOTIFY).name
         }],
-        B = !0,
-        k = new Set,
+        k = !0,
+        B = new Set,
         V = [],
         F = [],
         x = [],
@@ -195,7 +195,7 @@ function(e, t, n) {
                 overlayMethod: U.OverlayMethod.Disabled
             }
         }
-        let n = h.isOOPExperimentEnabled() && (0, M.supportsOutOfProcess)() && !m.OverlayStoredSettings.legacyEnabled,
+        let n = A.isOOPExperimentEnabled() && (0, M.supportsOutOfProcess)() && !m.OverlayStoredSettings.legacyEnabled,
             i = n ? U.OverlayMethod.OutOfProcess : U.OverlayMethod.Hook,
             r = K.enableOverlay[ei(e)];
         if (null != r) return {
@@ -251,7 +251,7 @@ function(e, t, n) {
             if (null == i) return t;
             for (let r of p.default.getLaunchOptions(n.id, n.branchId)) {
                 let s = "".concat(n.id, ":").concat(n.branchId);
-                !k.has(s) && (e = !0, k.add(s));
+                !B.has(s) && (e = !0, B.add(s));
                 let {
                     fullExecutablePath: a
                 } = r, o = a.replace(/\\/g, "/").toLowerCase();
@@ -460,10 +460,10 @@ function(e, t, n) {
         }
         getObservedAppNameForWindow(e) {
             var t, n;
-            return null !== (n = null === (t = Y.find(t => (0, A.default)(e, t.windowHandle))) || void 0 === t ? void 0 : t.name) && void 0 !== n ? n : null
+            return null !== (n = null === (t = Y.find(t => (0, h.default)(e, t.windowHandle))) || void 0 === t ? void 0 : t.name) && void 0 !== n ? n : null
         }
         get canShowAdminWarning() {
-            return B
+            return k
         }
     }
     o = "RunningGameStore", (a = "displayName") in(s = eE) ? Object.defineProperty(s, a, {
@@ -479,7 +479,7 @@ function(e, t, n) {
             F = e.games
         },
         PERMISSION_CLEAR_PTT_ADMIN_WARNING: function() {
-            B = !1
+            k = !1
         },
         PERMISSION_REQUEST_ELEVATED_PROCESS: function(e) {
             let {

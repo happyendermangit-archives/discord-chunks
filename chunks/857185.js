@@ -8,7 +8,7 @@ function(e, t, n) {
             return S
         },
         useMaybeFetchPremiumLikelihood: function() {
-            return h
+            return A
         }
     });
     var i = n("470079"),
@@ -62,10 +62,10 @@ function(e, t, n) {
         }, {
             autoTrackExposure: !1
         }), i = c.default.shouldFetchPremiumLikelihood();
-        A(l.default.getCurrentUser(), i, t, n)
+        h(l.default.getCurrentUser(), i, t, n)
     }
 
-    function h(e) {
+    function A(e) {
         let {
             enabled: t,
             useExpectedValue: n
@@ -75,11 +75,11 @@ function(e, t, n) {
             autoTrackExposure: !1
         }), s = (0, r.useStateFromStores)([c.default], () => c.default.shouldFetchPremiumLikelihood()), a = (0, r.useStateFromStores)([l.default], () => l.default.getCurrentUser());
         i.useEffect(() => {
-            A(a, s, t, n)
+            h(a, s, t, n)
         }, [a, s, t, n])
     }
 
-    function A(e, t, n, i) {
+    function h(e, t, n, i) {
         null != e && !(0, d.isPremium)(e) && n && (t && f(), i && (!u.default.isLoadedForSKU((0, _.castPremiumSubscriptionAsSkuId)(E.PremiumSubscriptionSKUs.TIER_0)) && !u.default.isFetchingForSKU((0, _.castPremiumSubscriptionAsSkuId)(E.PremiumSubscriptionSKUs.TIER_0)) && (0, o.fetchSubscriptionPlansForSKU)((0, _.castPremiumSubscriptionAsSkuId)(E.PremiumSubscriptionSKUs.TIER_0)), !u.default.isLoadedForSKU((0, _.castPremiumSubscriptionAsSkuId)(E.PremiumSubscriptionSKUs.TIER_2)) && !u.default.isFetchingForSKU((0, _.castPremiumSubscriptionAsSkuId)(E.PremiumSubscriptionSKUs.TIER_2)) && (0, o.fetchSubscriptionPlansForSKU)((0, _.castPremiumSubscriptionAsSkuId)(E.PremiumSubscriptionSKUs.TIER_2))))
     }
 }

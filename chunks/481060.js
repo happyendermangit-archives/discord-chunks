@@ -98,7 +98,7 @@ function(e, t, n) {
             return S.ComboboxItem
         },
         ComboboxPopout: function() {
-            return h.ComboboxPopout
+            return A.ComboboxPopout
         },
         ConfirmModal: function() {
             return er.ConfirmModal
@@ -107,7 +107,7 @@ function(e, t, n) {
             return el.DEFAULT_MODAL_CONTEXT
         },
         DateInput: function() {
-            return A.DateInput
+            return h.DateInput
         },
         DeclarativeConfirmModal: function() {
             return er.DeclarativeConfirmModal
@@ -179,13 +179,13 @@ function(e, t, n) {
             return w.FormSection
         },
         FormSwitch: function() {
-            return B.FormSwitch
+            return k.FormSwitch
         },
         FormText: function() {
-            return k.FormText
+            return B.FormText
         },
         FormTextTypes: function() {
-            return k.FormTextTypes
+            return B.FormTextTypes
         },
         FormTitle: function() {
             return V.FormTitle
@@ -362,7 +362,7 @@ function(e, t, n) {
             return eS.PopoutCSSAnimator
         },
         PopoutList: function() {
-            return eh.PopoutList
+            return eA.PopoutList
         },
         Progress: function() {
             return e_.Progress
@@ -371,7 +371,7 @@ function(e, t, n) {
             return ec.ProgressCircle
         },
         RadioGroup: function() {
-            return eA.RadioGroup
+            return eh.RadioGroup
         },
         RedesignIconContextProvider: function() {
             return e3.RedesignIconContextProvider
@@ -437,16 +437,16 @@ function(e, t, n) {
             return ew.Slide
         },
         Slider: function() {
-            return eB.Slider
+            return ek.Slider
         },
         Slides: function() {
             return ew.Slides
         },
         Spinner: function() {
-            return ek.Spinner
+            return eB.Spinner
         },
         SpinnerTypes: function() {
-            return ek.SpinnerTypes
+            return eB.SpinnerTypes
         },
         StackedProgress: function() {
             return eE.StackedProgress
@@ -677,10 +677,10 @@ function(e, t, n) {
             return H.usePrivateHeadingLevel
         },
         useRadioGroup: function() {
-            return eA.useRadioGroup
+            return eh.useRadioGroup
         },
         useRadioItem: function() {
-            return eA.useRadioItem
+            return eh.useRadioItem
         },
         useRedesignIconContext: function() {
             return e3.useRedesignIconContext
@@ -725,8 +725,8 @@ function(e, t, n) {
         T = n("1561"),
         f = n("605578"),
         S = n("838331"),
-        h = n("6745"),
-        A = n("67979"),
+        A = n("6745"),
+        h = n("67979"),
         m = n("507274"),
         N = n("438784"),
         O = n("799151"),
@@ -744,8 +744,8 @@ function(e, t, n) {
         b = n("722187"),
         G = n("383838"),
         w = n("789164"),
-        B = n("471141"),
-        k = n("534542"),
+        k = n("471141"),
+        B = n("534542"),
         V = n("512983"),
         F = n("652334"),
         x = n("260034"),
@@ -779,8 +779,8 @@ function(e, t, n) {
         eT = n("920676"),
         ef = n("235874"),
         eS = n("126306"),
-        eh = n("119638"),
-        eA = n("538534"),
+        eA = n("119638"),
+        eh = n("538534"),
         em = n("346314"),
         eN = n("109161"),
         eO = n("562701"),
@@ -798,8 +798,8 @@ function(e, t, n) {
         eb = n("503145"),
         eG = n("936621"),
         ew = n("718580"),
-        eB = n("561779"),
-        ek = n("922770"),
+        ek = n("561779"),
+        eB = n("922770"),
         eV = n("696826"),
         eF = n("437337"),
         ex = n("706898"),

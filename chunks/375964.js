@@ -9412,7 +9412,6 @@ function(e) {
         ACTIVITY_INVITE_MODAL_SENT: "Sent",
         ACTIVITY_INVITE_MODAL_INVITE: "Invite",
         ACTIVITY_INVITE_PRIVATE: "\nYou cannot send an invite because you are either invisible or are hiding your playing status. If you prefer to not change\nyour settings you can have someone invite you instead.\n",
-        LOBBY: "Lobby",
         GUILD_DISCOVERY_TOOLTIP: "Explore Discoverable Servers",
         GUILD_DISCOVERY_HOME_TITLE: "Find your community on Discord",
         GUILD_DISCOVERY_HOME_SUBTITLE: "From gaming, to music, to learning, there's a place for you.",

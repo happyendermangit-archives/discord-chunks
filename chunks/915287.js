@@ -32,8 +32,8 @@ function(e, t, n) {
                 className: T,
                 onScroll: f,
                 onResize: S = null,
-                onContentResize: h = null,
-                dir: A = "ltr",
+                onContentResize: A = null,
+                dir: h = "ltr",
                 sections: m,
                 sectionHeight: N,
                 rowHeight: O,
@@ -51,8 +51,8 @@ function(e, t, n) {
                 paddingBottom: b,
                 fade: G = !1,
                 customTheme: w = !1,
-                chunkSize: B,
-                style: k,
+                chunkSize: k,
+                style: B,
                 innerId: V,
                 innerRole: F,
                 innerAriaLabel: x,
@@ -71,7 +71,7 @@ function(e, t, n) {
                 className: T,
                 specs: o,
                 orientation: "vertical",
-                dir: A
+                dir: h
             });
             let {
                 spacerTop: ee,
@@ -90,12 +90,12 @@ function(e, t, n) {
                 listHeaderHeight: C,
                 paddingTop: U,
                 paddingBottom: b,
-                chunkSize: B,
+                chunkSize: k,
                 getScrollerState: $,
                 getAnchorId: P
-            }), eo = (0, d.useScrollSpring)(J), el = r.useRef(S), eu = r.useRef(h);
+            }), eo = (0, d.useScrollSpring)(J), el = r.useRef(S), eu = r.useRef(A);
             r.useLayoutEffect(() => {
-                el.current = S, eu.current = h
+                el.current = S, eu.current = A
             });
             let ed = r.useCallback(function() {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
@@ -170,7 +170,7 @@ function(e, t, n) {
                     [n]: w,
                     [_.scrolling]: Q
                 }),
-                style: (0, d.getMergedOrientationStyles)(k),
+                style: (0, d.getMergedOrientationStyles)(B),
                 ...K,
                 children: [r.useMemo(() => (0, i.jsx)(W, {
                     id: V,

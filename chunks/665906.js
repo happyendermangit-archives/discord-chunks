@@ -8,7 +8,7 @@ function(e, t, n) {
             return v
         },
         computeCanStartPublicThread: function() {
-            return A
+            return h
         },
         computeIsReadOnlyThread: function() {
             return P
@@ -26,7 +26,7 @@ function(e, t, n) {
             return m
         },
         useCanStartPublicThread: function() {
-            return h
+            return A
         },
         useCanStartThread: function() {
             return N
@@ -80,14 +80,14 @@ function(e, t, n) {
         }]
     });
 
-    function h(e, t) {
+    function A(e, t) {
         return O((0, a.useStateFromStores)([E.default], () => {
             let t = e.isForumLikeChannel() ? f.Permissions.SEND_MESSAGES : s.combine(f.Permissions.CREATE_PUBLIC_THREADS, f.Permissions.READ_MESSAGE_HISTORY);
             return E.default.can(t, e)
         }, [e]), e, t)
     }
 
-    function A(e, t) {
+    function h(e, t) {
         let n = e.isForumLikeChannel() ? f.Permissions.SEND_MESSAGES : s.combine(f.Permissions.CREATE_PUBLIC_THREADS, f.Permissions.READ_MESSAGE_HISTORY);
         return O(E.default.can(n, e), e, t)
     }
@@ -98,7 +98,7 @@ function(e, t, n) {
     }
 
     function N(e) {
-        let t = h(e),
+        let t = A(e),
             n = m(e);
         return t || n
     }

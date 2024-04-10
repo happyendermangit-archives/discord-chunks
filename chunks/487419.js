@@ -13,7 +13,7 @@ function(e, t, n) {
     let f = {},
         S = {};
 
-    function h() {
+    function A() {
         var e;
         let t = null !== (e = u.default.getGuildsProto()) && void 0 !== e ? e : {},
             n = d.default.getGuilds(),
@@ -25,7 +25,7 @@ function(e, t, n) {
         })
     }
 
-    function A(e) {
+    function h(e) {
         return null != e && Object.keys(e).length > 0 ? {
             raidDetectedAt: e.raid_detected_at,
             dmSpamDetectedAt: e.dm_spam_detected_at,
@@ -35,7 +35,7 @@ function(e, t, n) {
     }
     class m extends(i = o.default.Store) {
         initialize() {
-            this.waitFor(u.default, d.default, _.default, c.default), this.syncWith([u.default, d.default, _.default, c.default], h)
+            this.waitFor(u.default, d.default, _.default, c.default), this.syncWith([u.default, d.default, _.default, c.default], A)
         }
         getGuildIncident(e) {
             return f[e]
@@ -56,7 +56,7 @@ function(e, t, n) {
         CONNECTION_OPEN: function(e) {
             for (let n of (f = {}, e.guilds)) {
                 var t;
-                let e = A(null === (t = n.properties) || void 0 === t ? void 0 : t.incidents_data);
+                let e = h(null === (t = n.properties) || void 0 === t ? void 0 : t.incidents_data);
                 null != e && ((0, T.hasDetectedActivity)(e) || (0, T.isUnderLockdown)(e)) && (f[n.id] = e)
             }
         },
@@ -64,13 +64,13 @@ function(e, t, n) {
             var t;
             let {
                 guild: n
-            } = e, i = A(null === (t = n.properties) || void 0 === t ? void 0 : t.incidents_data);
+            } = e, i = h(null === (t = n.properties) || void 0 === t ? void 0 : t.incidents_data);
             null != i && ((0, T.hasDetectedActivity)(i) || (0, T.isUnderLockdown)(i)) && (f[n.id] = i)
         },
         GUILD_UPDATE: function(e) {
             let {
                 guild: t
-            } = e, n = A(t.incidents_data);
+            } = e, n = h(t.incidents_data);
             null != n && ((0, T.hasDetectedActivity)(n) || (0, T.isUnderLockdown)(n)) ? f[t.id] = n : delete f[t.id]
         },
         GUILD_DELETE: function(e) {

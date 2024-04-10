@@ -53,8 +53,8 @@ function(e, t, n) {
             } = (0, l.getEventSchedule)(E, n),
             f = (null == E ? void 0 : E.scheduled_start_time) != null ? (0, u.getRecurrenceStatus)(I, T, new Date(null == E ? void 0 : E.scheduled_start_time)) : null,
             S = null != f && d.GuildScheduledEventStatusDone.has(f) ? null : null != n ? n : (0, u.getNextRecurrenceIdInEvent)(E),
-            h = c(E.id),
-            A = c(E.id, S);
-        null == S ? (r(t, null, i, null != h ? d.GuildScheduledEventUserResponses.UNINTERESTED : d.GuildScheduledEventUserResponses.INTERESTED), null == _ || _()) : null != A ? (r(t, S, i, null != h ? d.GuildScheduledEventUserResponses.INTERESTED : d.GuildScheduledEventUserResponses.UNINTERESTED), null == _ || _()) : s(E, S)
+            A = c(E.id),
+            h = c(E.id, S);
+        null == S ? (r(t, null, i, null != A ? d.GuildScheduledEventUserResponses.UNINTERESTED : d.GuildScheduledEventUserResponses.INTERESTED), null == _ || _()) : null != h ? (r(t, S, i, null != A ? d.GuildScheduledEventUserResponses.INTERESTED : d.GuildScheduledEventUserResponses.UNINTERESTED), null == _ || _()) : s(E, S)
     }(i = r || (r = {}))[i.SERIES = 0] = "SERIES", i[i.RECURRENCE = 1] = "RECURRENCE"
 }

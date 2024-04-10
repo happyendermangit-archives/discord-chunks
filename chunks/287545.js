@@ -23,8 +23,8 @@ function(e, t, n) {
         T = n("592125"),
         f = n("19780"),
         S = n("944486"),
-        h = n("594174"),
-        A = n("626135"),
+        A = n("594174"),
+        h = n("626135"),
         m = n("358085"),
         N = n("24933"),
         O = n("566620"),
@@ -50,9 +50,9 @@ function(e, t, n) {
         }) : e[t] = n, e
     }
     let w = {},
-        B = {};
+        k = {};
 
-    function k(e) {
+    function B(e) {
         var t;
         return {
             releasePhase: null == e ? void 0 : null === (t = e.activity) || void 0 === t ? void 0 : t.client_platform_config[(0, v.default)((0, m.getOS)())].release_phase
@@ -63,7 +63,7 @@ function(e, t, n) {
             channelId: t,
             applicationId: n,
             analyticsLocations: i
-        } = e, r = T.default.getChannel(t), s = null == r ? void 0 : r.getGuildId(), a = h.default.getCurrentUser();
+        } = e, r = T.default.getChannel(t), s = null == r ? void 0 : r.getGuildId(), a = A.default.getCurrentUser();
         if (null == r || null == a) return;
         let o = p.default.getShelfActivities(s),
             l = N.default.getState().shelfOrder,
@@ -75,11 +75,11 @@ function(e, t, n) {
             E = 1 + l.findIndex(e => e === n),
             {
                 releasePhase: I
-            } = k(d),
+            } = B(d),
             f = await (0, c.default)();
-        B[n] = e => {
+        k[n] = e => {
             var t, s, o;
-            w[n] = e, A.default.track(U.AnalyticEvents.ACTIVITY_SESSION_JOINED, {
+            w[n] = e, h.default.track(U.AnalyticEvents.ACTIVITY_SESSION_JOINED, {
                 channel_id: r.id,
                 guild_id: r.getGuildId(),
                 media_session_id: e.mediaSessionIds[0],
@@ -96,7 +96,7 @@ function(e, t, n) {
                 shelf_sorted_rank: E > 0 ? E : null,
                 activity_user_session_id: e.activityUserSessionId,
                 channel_type: r.type
-            }), A.default.track(U.AnalyticEvents.ACTIVITY_IFRAME_MOUNT, {
+            }), h.default.track(U.AnalyticEvents.ACTIVITY_IFRAME_MOUNT, {
                 location_stack: i,
                 channel_id: r.id,
                 channel_type: r.type,
@@ -117,7 +117,7 @@ function(e, t, n) {
         let {
             channelId: i,
             applicationId: r
-        } = e, s = w[r], a = T.default.getChannel(i), o = p.default.getEmbeddedActivityDurationMs(i, r), l = h.default.getCurrentUser(), u = null == a ? void 0 : a.getGuildId();
+        } = e, s = w[r], a = T.default.getChannel(i), o = p.default.getEmbeddedActivityDurationMs(i, r), l = A.default.getCurrentUser(), u = null == a ? void 0 : a.getGuildId();
         if (null == s || null == a || null == l) return;
         let d = p.default.getShelfActivities(u),
             _ = (0, R.default)({
@@ -126,9 +126,9 @@ function(e, t, n) {
             }),
             {
                 releasePhase: E
-            } = k(_),
+            } = B(_),
             I = await (0, c.default)();
-        A.default.track(U.AnalyticEvents.ACTIVITY_SESSION_LEFT, {
+        h.default.track(U.AnalyticEvents.ACTIVITY_SESSION_LEFT, {
             channel_id: a.id,
             guild_id: a.getGuildId(),
             media_session_id: s.mediaSessionIds[0],
@@ -143,7 +143,7 @@ function(e, t, n) {
             activity_user_session_id: s.activityUserSessionId,
             channel_type: a.type,
             media_session_ids: s.mediaSessionIds
-        }), A.default.track(U.AnalyticEvents.ACTIVITY_IFRAME_UNMOUNT, {
+        }), h.default.track(U.AnalyticEvents.ACTIVITY_IFRAME_UNMOUNT, {
             channel_id: a.id,
             guild_id: a.getGuildId(),
             application_id: r,
@@ -152,7 +152,7 @@ function(e, t, n) {
             activity_user_session_id: s.activityUserSessionId,
             raw_thermal_state: I,
             duration_ms: o
-        }), delete B[r], delete w[r]
+        }), delete k[r], delete w[r]
     }
 
     function x(e) {
@@ -183,12 +183,12 @@ function(e, t, n) {
         let c = f.default.getMediaSessionId(),
             E = (0, D.default)(t),
             I = null == c && (null == _ ? void 0 : _.isVocal()) === !0 && (null == _ ? void 0 : _.isPrivate()) === !1;
-        null != E && !I && (null === (l = B[n]) || void 0 === l || l.call(B, {
+        null != E && !I && (null === (l = k[n]) || void 0 === l || l.call(k, {
             activitySessionId: E,
             activityUserSessionId: (0, s.v4)(),
             instanceId: i,
             mediaSessionIds: null != c ? [c] : []
-        }), delete B[n])
+        }), delete k[n])
     }
 
     function j(e) {
@@ -205,13 +205,13 @@ function(e, t, n) {
                 o = (0, D.default)(e);
             if (null != i && null != t && null != o && null != a) {
                 let e = w[i],
-                    n = B[i];
+                    n = k[i];
                 r()(null == e || null == n, "an active session and awaiting session both exist"), null == n || n({
                     activitySessionId: o,
                     activityUserSessionId: (0, s.v4)(),
                     instanceId: a,
                     mediaSessionIds: [t]
-                }), delete B[i]
+                }), delete k[i]
             }
         }
     }
@@ -314,15 +314,15 @@ function(e, t, n) {
                 null != I && (await u.default.fetchApplication(I), r = d.default.getApplication(I));
                 let f = null !== (n = null == l ? void 0 : l.getGuildId()) && void 0 !== n ? n : void 0,
                     {
-                        activityConfigs: h,
-                        applications: A
+                        activityConfigs: A,
+                        applications: h
                     } = await (0, O.fetchShelf)({
                         guildId: f
                     }),
                     m = (0, R.default)({
                         applicationId: a,
-                        activityConfigs: h,
-                        applications: A
+                        activityConfigs: A,
+                        applications: h
                     });
                 if (null == m) {
                     let e = await (0, O.fetchShelf)({

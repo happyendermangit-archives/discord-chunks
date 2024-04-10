@@ -23,8 +23,8 @@ function(e, t, n) {
         T = n("314897"),
         f = n("592125"),
         S = n("650774"),
-        h = n("271383"),
-        A = n("430824"),
+        A = n("271383"),
+        h = n("430824"),
         m = n("158776"),
         N = n("885110"),
         O = n("594174"),
@@ -60,8 +60,8 @@ function(e, t, n) {
                     }, count: n, index: i
                 };
             default:
-                let r = A.default.getGuild(e),
-                    s = null != r ? A.default.getRole(r.id, t) : null;
+                let r = h.default.getGuild(e),
+                    s = null != r ? h.default.getRole(r.id, t) : null;
                 return {
                     type: "GROUP", key: t, id: t, title: null != s ? s.name : "", count: n, index: i
                 }
@@ -77,7 +77,7 @@ function(e, t, n) {
             l = O.default.getUser(n);
         return null == l ? null : {
             type: "MEMBER",
-            ...h.default.getMember(e, n),
+            ...A.default.getMember(e, n),
             user: l,
             status: s,
             activities: a,
@@ -102,7 +102,7 @@ function(e, t, n) {
     }(s = i || (i = {})).GROUP = "GROUP", s.MEMBER = "MEMBER", s.CONTENT_INVENTORY = "CONTENT_INVENTORY", s.CONTENT_INVENTORY_GROUP = "CONTENT_INVENTORY_GROUP", s.HIDDEN_CONTENT_INVENTORY = "HIDDEN_CONTENT_INVENTORY";
     class y {
         updateOwnerId() {
-            let e = A.default.getGuild(this.guildId);
+            let e = h.default.getGuild(this.guildId);
             if (null == e) return !1;
             let t = E.getGuildVisualOwnerId(e);
             return this.ownerId !== t && (this.ownerId = t, !0)
@@ -219,9 +219,9 @@ function(e, t, n) {
         let e = T.default.getId();
         P.forEach(null, t => t.rebuildMember(e))
     }
-    class B extends(r = _.default.Store) {
+    class k extends(r = _.default.Store) {
         initialize() {
-            this.waitFor(O.default, A.default, f.default, h.default, m.default, N.default, T.default, S.default, I.default), this.syncWith([N.default], w), this.syncWith([I.default], G)
+            this.waitFor(O.default, h.default, f.default, A.default, m.default, N.default, T.default, S.default, I.default), this.syncWith([N.default], w), this.syncWith([I.default], G)
         }
         getProps(e, t) {
             let n = P.get(e, M(t));
@@ -236,7 +236,7 @@ function(e, t, n) {
             return P.get(e, M(t)).rows
         }
     }
-    C(B, "displayName", "ChannelMemberStore"), t.default = new B(c.default, {
+    C(k, "displayName", "ChannelMemberStore"), t.default = new k(c.default, {
         CONNECTION_OPEN: U,
         OVERLAY_INITIALIZE: U,
         GUILD_MEMBER_LIST_UPDATE: function(e) {

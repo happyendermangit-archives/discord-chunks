@@ -8,7 +8,7 @@ function(e, t, n) {
             return N
         },
         createGuildFeedItemFromServer: function() {
-            return h
+            return A
         },
         getChannelIdForItem: function() {
             return R
@@ -20,7 +20,7 @@ function(e, t, n) {
             return p
         },
         isChannelAvailableInGuildFeed: function() {
-            return A
+            return h
         },
         isGuildFeedFeaturedItem: function() {
             return S
@@ -66,7 +66,7 @@ function(e, t, n) {
         return null != e.featuredItem || !1
     }
 
-    function h(e, t) {
+    function A(e, t) {
         var n, i, a, u, d, c, E;
         switch (e.type) {
             case s.GuildFeedItemTypes.FORUM_POST: {
@@ -91,7 +91,7 @@ function(e, t, n) {
             case s.GuildFeedItemTypes.MESSAGE:
                 let I = (0, o.createMessageRecord)(e.message),
                     S = r().map(e.reference_messages, e => (0, o.createMessageRecord)(e)),
-                    h = {
+                    A = {
                         type: s.GuildFeedItemTypes.MESSAGE,
                         id: (0, _.default)(e),
                         sortIndex: t,
@@ -102,17 +102,17 @@ function(e, t, n) {
                         unreadMention: null !== (d = e.unread_mention) && void 0 !== d && d,
                         seen: e.seen
                     };
-                return f(e) && (h = {
-                    ...h,
+                return f(e) && (A = {
+                    ...A,
                     featuredItem: T(e.featured_item)
-                }), h;
+                }), A;
             case s.GuildFeedItemTypes.MESSAGE_BUNDLE:
-                let A = e.messages.map(e => ({
+                let h = e.messages.map(e => ({
                     message: (0, o.createMessageRecord)(e.message),
                     referenceMessages: e.reference_messages.map(e => (0, o.createMessageRecord)(e))
                 }));
                 return {
-                    type: s.GuildFeedItemTypes.MESSAGE_BUNDLE, id: e.id, sortIndex: t, messages: A, featured: !1, highlighted: !1, unreadMention: null !== (c = e.unread_mention) && void 0 !== c && c, seen: e.seen
+                    type: s.GuildFeedItemTypes.MESSAGE_BUNDLE, id: e.id, sortIndex: t, messages: h, featured: !1, highlighted: !1, unreadMention: null !== (c = e.unread_mention) && void 0 !== c && c, seen: e.seen
                 };
             case s.GuildFeedItemTypes.CONVERSATION:
                 let m = function e(t) {
@@ -132,7 +132,7 @@ function(e, t, n) {
         }
     }
 
-    function A(e) {
+    function h(e) {
         return !(e.hasFlag(c.ChannelFlags.GUILD_FEED_REMOVED) || e.isNSFW()) && !0
     }
 

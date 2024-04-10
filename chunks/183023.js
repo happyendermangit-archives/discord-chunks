@@ -32,8 +32,8 @@ function(e, t, n) {
         T = n("213609"),
         f = n("738774"),
         S = n("29598"),
-        h = n("400106"),
-        A = n("944386"),
+        A = n("400106"),
+        h = n("944386"),
         m = n("889564"),
         N = n("687476"),
         O = n("761966"),
@@ -51,8 +51,8 @@ function(e, t, n) {
         b = n("514342"),
         G = n("605403"),
         w = n("806519"),
-        B = n("626135"),
-        k = n("768581"),
+        k = n("626135"),
+        B = n("768581"),
         V = n("900849"),
         F = n("74538"),
         x = n("886132"),
@@ -70,7 +70,7 @@ function(e, t, n) {
             let {
                 node: t
             } = e;
-            return (0, A.useTrackOpenPopout)({
+            return (0, h.useTrackOpenPopout)({
                 emojiId: t.emojiId,
                 currentGuildId: v.default.getGuildId()
             }), (0, i.jsx)(u.Dialog, {
@@ -111,7 +111,7 @@ function(e, t, n) {
                 id: s,
                 icon: o,
                 name: l
-            } = t, u = k.default.getGuildIconURL({
+            } = t, u = B.default.getGuildIconURL({
                 id: s,
                 icon: o,
                 size: 32,
@@ -238,7 +238,7 @@ function(e, t, n) {
                 onToggleShowMoreEmojis: P,
                 guildEmoji: U,
                 demoMode: w = !1,
-                nonce: k
+                nonce: B
             } = e, V = (0, l.useStateFromStores)([M.default], () => M.default.getCurrentUser()), Q = (0, l.useStateFromStores)([v.default], () => v.default.getGuildId()), J = F.default.isPremium(V), Z = null != Q && (Q === (null == S ? void 0 : S.id) || Q === (null == g ? void 0 : g.id)), ee = null != g, et = null !== (t = null == S ? void 0 : S.isDiscoverable()) && void 0 !== t && t;
             w && (J = !0, et = !0, ee = !1, Z = !1);
             let {
@@ -284,7 +284,7 @@ function(e, t, n) {
                     isDiscoverable: et,
                     shouldHideRoleSubscriptionCTA: eo,
                     onOpenPremiumSettings: () => {
-                        D(), B.default.track(Y.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
+                        D(), k.default.track(Y.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
                             location_page: ei.page,
                             location_section: ei.section
                         }), (0, p.navigateToPremiumMarketingPage)()
@@ -292,18 +292,18 @@ function(e, t, n) {
                 }),
                 e_ = ee && es && !eo && (J && er || !J),
                 ec = ed.emojiDescription,
-                eE = (0, A.useTrackOpenPopout)({
+                eE = (0, h.useTrackOpenPopout)({
                     emojiId: u.emojiId,
                     currentGuildId: eu,
                     popoutData: ed,
                     emojiSourceGuildId: null == S ? void 0 : S.id,
-                    nonce: k,
+                    nonce: B,
                     demoMode: w
                 }),
                 eI = ed.type === x.EmojiPopoutType.JOIN_GUILD,
                 eT = ed.type === x.EmojiPopoutType.GET_PREMIUM,
                 [ef, eS] = r.useState(!1),
-                eh = et || ee && !Z || null != S;
+                eA = et || ee && !Z || null != S;
             return (0, i.jsxs)(H.MessagePopoutContent, {
                 className: z.popoutContent,
                 children: [(() => {
@@ -373,10 +373,10 @@ function(e, t, n) {
                             children: ea ? K.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_UPGRADE_UPSELL_BUTTON : K.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_PURCHASE_UPSELL_BUTTON
                         })]
                     })
-                })(), eh && (() => {
+                })(), eA && (() => {
                     let e = null != S && !ee && et,
                         t = () => {
-                            e && (null == P || P(), !ef && !w && B.default.track(Y.AnalyticEvents.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, eE), eS(!ef))
+                            e && (null == P || P(), !ef && !w && k.default.track(Y.AnalyticEvents.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, eE), eS(!ef))
                         };
                     return (0, i.jsxs)("div", {
                         className: z.guildSection,
@@ -384,7 +384,7 @@ function(e, t, n) {
                             className: z.guildTitle,
                             children: ee ? K.default.Messages.EMOJI_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION : K.default.Messages.EMOJI_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION
                         }), (0, i.jsx)(q, {
-                            expressionSourceGuild: null != S ? S : h.default.createFromGuildRecord(g),
+                            expressionSourceGuild: null != S ? S : A.default.createFromGuildRecord(g),
                             hasJoinedExpressionSourceGuild: ee,
                             isDisplayingJoinGuildButtonInPopout: eI
                         }), e && (0, i.jsxs)(i.Fragment, {

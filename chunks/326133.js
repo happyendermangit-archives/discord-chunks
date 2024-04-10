@@ -16,8 +16,8 @@ function(e, t, n) {
         T = n("482207"),
         f = n("436896"),
         S = n("590921"),
-        h = n("606992"),
-        A = n("51062"),
+        A = n("606992"),
+        h = n("51062"),
         m = n("881338");
     t.default = r.forwardRef(function(e, t) {
         var n, s, N, O, p;
@@ -29,7 +29,7 @@ function(e, t, n) {
         } = e, D = (0, E.useUID)(), v = (0, l.useStateFromStores)([_.default], () => {
             var e;
             return null !== (e = _.default.getGuild(R.guild_id)) && void 0 !== e ? e : null
-        }, [R.guild_id]), M = r.useRef(), [y, P, U] = (0, A.default)({
+        }, [R.guild_id]), M = r.useRef(), [y, P, U] = (0, h.default)({
             ...e,
             guild: v
         }, t, M), b = (null === (n = C.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? T.default : I.default, G = (0, c.getAutocompleteRowId)(y.selectedIndex);
@@ -42,15 +42,15 @@ function(e, t, n) {
             location: "6e9811_2"
         }, {
             autoTrackExposure: !1
-        }), B = (0, h.useChannelAutocompleteLayerPosition)({
+        }), k = (0, A.useChannelAutocompleteLayerPosition)({
             editorHeight: g,
             type: C,
             state: y,
             isInPopoutExperiment: w
-        }), k = r.useMemo(() => null == B ? "" : String(Date.now()), [null == B ? void 0 : B.top, null == B ? void 0 : B.left, null == B ? void 0 : B.bottom, null == B ? void 0 : B.right]);
+        }), B = r.useMemo(() => null == k ? "" : String(Date.now()), [null == k ? void 0 : k.top, null == k ? void 0 : k.left, null == k ? void 0 : k.bottom, null == k ? void 0 : k.right]);
         if (r.useEffect(() => {
                 L(y.isVisible)
-            }, [L, y.isVisible]), !y.isVisible || null == y.query || void 0 === B) return null;
+            }, [L, y.isVisible]), !y.isVisible || null == y.query || void 0 === k) return null;
         let V = null !== (s = y.query.typeInfo.renderResults({
             results: y.query.results,
             selectedIndex: y.selectedIndex,
@@ -63,12 +63,12 @@ function(e, t, n) {
         })) && void 0 !== s ? s : null;
         if (null == V) return null;
         let F = {
-                [m.autocompleteAttached]: null == B,
-                [m.autocompletePopout]: null != B,
-                [m.bottom]: null == B && "bottom" === e.position
+                [m.autocompleteAttached]: null == k,
+                [m.autocompletePopout]: null != k,
+                [m.bottom]: null == k && "bottom" === e.position
             },
             x = 490;
-        null != B && (x = (null === (N = C.autocomplete) || void 0 === N ? void 0 : N.small) ? 200 : (null === (O = y.query) || void 0 === O ? void 0 : O.type) === S.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), x = Math.min(window.innerHeight - 175, x);
+        null != k && (x = (null === (N = C.autocomplete) || void 0 === N ? void 0 : N.small) ? 200 : (null === (O = y.query) || void 0 === O ? void 0 : O.type) === S.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), x = Math.min(window.innerHeight - 175, x);
         let H = (0, i.jsx)(c.default, {
             id: D,
             className: a()(m.autocomplete, F),
@@ -101,10 +101,10 @@ function(e, t, n) {
                 })
             })
         });
-        return null != B ? (0, i.jsx)(b, {
+        return null != k ? (0, i.jsx)(b, {
             children: (0, i.jsx)(u.ReferencePositionLayer, {
-                reference: () => B,
-                positionKey: k,
+                reference: () => k,
+                positionKey: B,
                 position: null !== (p = e.position) && void 0 !== p ? p : "top",
                 align: "left",
                 spacing: 8,

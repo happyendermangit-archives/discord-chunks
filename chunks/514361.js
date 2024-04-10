@@ -14,9 +14,9 @@ function(e, t, n) {
         T = n("74538"),
         f = n("51144"),
         S = n("47760"),
-        h = n("469115");
+        A = n("469115");
 
-    function A(e, t, n) {
+    function h(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -41,11 +41,11 @@ function(e, t, n) {
         g = () => {
             var e, t;
             let n = null === (t = d.default.getAppearanceSettings()) || void 0 === t ? void 0 : null === (e = t.clientThemeSettings) || void 0 === e ? void 0 : e.backgroundGradientPresetId;
-            null != n && (i = h.BACKGROUND_GRADIENT_PRESETS_MAP[n])
+            null != n && (i = A.BACKGROUND_GRADIENT_PRESETS_MAP[n])
         };
     class L extends(s = a.default.PersistedStore) {
         initialize(e) {
-            null != e && (i = (null == e ? void 0 : e.gradientPresetId) != null ? h.BACKGROUND_GRADIENT_PRESETS_MAP[e.gradientPresetId] : void 0), this.waitFor(I.default, _.default, E.default, d.default), this.syncWith([I.default], C), this.syncWith([d.default], g)
+            null != e && (i = (null == e ? void 0 : e.gradientPresetId) != null ? A.BACKGROUND_GRADIENT_PRESETS_MAP[e.gradientPresetId] : void 0), this.waitFor(I.default, _.default, E.default, d.default), this.syncWith([I.default], C), this.syncWith([d.default], g)
         }
         getState() {
             return N ? {} : {
@@ -71,7 +71,7 @@ function(e, t, n) {
             return r
         }
         constructor(...e) {
-            super(...e), A(this, "migrations", [e => {
+            super(...e), h(this, "migrations", [e => {
                 var t;
                 return {
                     gradientPresetId: null == e ? void 0 : null === (t = e.gradientPreset) || void 0 === t ? void 0 : t.id
@@ -79,7 +79,7 @@ function(e, t, n) {
             }])
         }
     }
-    A(L, "displayName", "ClientThemesBackgroundStore"), A(L, "persistKey", "ClientThemesBackgroundStore"), t.default = new L(l.default, {
+    h(L, "displayName", "ClientThemesBackgroundStore"), h(L, "persistKey", "ClientThemesBackgroundStore"), t.default = new L(l.default, {
         UPDATE_BACKGROUND_GRADIENT_PRESET: e => {
             let {
                 presetId: t
@@ -88,7 +88,7 @@ function(e, t, n) {
                 i = void 0;
                 return
             }
-            i = h.BACKGROUND_GRADIENT_PRESETS_MAP[t]
+            i = A.BACKGROUND_GRADIENT_PRESETS_MAP[t]
         },
         UPDATE_MOBILE_PENDING_THEME_INDEX: e => {
             let {

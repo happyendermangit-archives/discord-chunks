@@ -20,8 +20,8 @@ function(e, t, n) {
         T = n("125988"),
         f = n("335131"),
         S = n("597688"),
-        h = n("884697"),
-        A = n("731896"),
+        A = n("884697"),
+        h = n("731896"),
         m = n("594174"),
         N = n("465670"),
         O = n("74538"),
@@ -91,20 +91,20 @@ function(e, t, n) {
             analyticsLocations: b
         } = (0, E.default)(c.default.COLLECTIBLES_USER_POPOUT_UPSELL), G = (0, l.useStateFromStores)([_.default], () => _.default.useReducedMotion), {
             ref: w,
-            height: B
-        } = (0, d.default)(), k = r.useMemo(() => ({
-            top: "-".concat((null != B ? B : v) + 6, "px")
-        }), [B]), V = (0, l.useStateFromStores)([m.default], () => m.default.getCurrentUser()), F = O.default.canUseCollectibles(V), {
+            height: k
+        } = (0, d.default)(), B = r.useMemo(() => ({
+            top: "-".concat((null != k ? k : v) + 6, "px")
+        }), [k]), V = (0, l.useStateFromStores)([m.default], () => m.default.getCurrentUser()), F = O.default.canUseCollectibles(V), {
             setUpsellSource: x,
             reset: H
         } = (0, p.useUserPopoutCollectiblesUpsellStore)();
         r.useEffect(() => (x(U), () => {
             H()
         }), [x, U, H]);
-        let Y = (0, A.useProfileEffectPreset)(null == s ? void 0 : s.profileEffectId),
+        let Y = (0, h.useProfileEffectPreset)(null == s ? void 0 : s.profileEffectId),
             [j, W] = (0, l.useStateFromStoresArray)([S.default], () => {
                 var e;
-                return [(0, h.isPremiumCollectiblesProduct)(S.default.getProduct(null === (e = n.avatarDecoration) || void 0 === e ? void 0 : e.skuId)), (0, h.isPremiumCollectiblesProduct)(S.default.getProduct(null == Y ? void 0 : Y.skuId))]
+                return [(0, A.isPremiumCollectiblesProduct)(S.default.getProduct(null === (e = n.avatarDecoration) || void 0 === e ? void 0 : e.skuId)), (0, A.isPremiumCollectiblesProduct)(S.default.getProduct(null == Y ? void 0 : Y.skuId))]
             }),
             K = r.useCallback(() => {
                 var e, t, i, r;
@@ -136,7 +136,7 @@ function(e, t, n) {
             openShop: M
         }))).otherwise(() => null);
         return (0, i.jsx)("div", {
-            style: k,
+            style: B,
             className: a()(g.containerWrapper, {
                 [g.animation]: !G,
                 [g.inSidebar]: N

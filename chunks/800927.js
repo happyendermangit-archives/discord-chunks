@@ -45,11 +45,11 @@ function(e, t, n) {
                             T = n._list,
                             S = n._listLevel;
                         n._list = !0, n._listLevel = (null != S ? S : 0) + 1, c ? (n.inline = !1, r = u.replace(E, "\n\n")) : (n.inline = !0, r = u.replace(E, ""));
-                        let h = f(t(r, {
+                        let A = f(t(r, {
                             ...n,
                             allowHeading: !1
                         }));
-                        return n.inline = I, n._list = T, n._listLevel = S, h
+                        return n.inline = I, n._list = T, n._listLevel = S, A
                     })
                 }
             }
