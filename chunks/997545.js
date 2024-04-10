@@ -480,7 +480,6 @@ function(e, t, n) {
                 },
                 s = this.videoQualityManager.getQuality();
             (!T.VideoQuality.equals(r, s.capture) || s.bitrateMax !== i) && (this.videoQualityManager.setQuality({
-                encode: r,
                 capture: r,
                 bitrateMax: i
             }), this.videoStreamParameters.length > 0 && (this.videoStreamParameters[0].maxResolution = {

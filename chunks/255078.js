@@ -95,6 +95,12 @@ function(e, t, n) {
         get hasPremiumNitroMonthly() {
             return null != this.items.find(e => e.planId === d.SubscriptionPlans.PREMIUM_MONTH_TIER_2)
         }
+        get isPausedOrPausePending() {
+            return u.SubscriptionStatusTypesSets.ALL_PAUSE.has(this.status)
+        }
+        get isPaused() {
+            return this.status === u.SubscriptionStatusTypes.PAUSED
+        }
         constructor(e) {
             super(), _(this, "id", void 0), _(this, "type", void 0), _(this, "items", void 0), _(this, "createdAt", void 0), _(this, "canceledAt", void 0), _(this, "currentPeriodStart", void 0), _(this, "currentPeriodEnd", void 0), _(this, "status", void 0), _(this, "paymentSourceId", void 0), _(this, "paymentGateway", void 0), _(this, "paymentGatewayPlanId", void 0), _(this, "paymentGatewaySubscriptionId", void 0), _(this, "trialId", void 0), _(this, "trialEndsAt", void 0), _(this, "renewalMutations", void 0), _(this, "streakStartedAt", void 0), _(this, "currency", void 0), _(this, "pauseEndsAt", void 0), _(this, "planId", void 0), _(this, "additionalPlans", void 0), _(this, "metadata", void 0), _(this, "latestInvoice", void 0), _(this, "useStorekitResubscribe", void 0), _(this, "price", void 0), _(this, "userId", void 0), this.id = e.id, this.type = e.type, this.items = e.items, this.createdAt = e.createdAt, this.canceledAt = e.canceledAt, this.currentPeriodStart = e.currentPeriodStart, this.currentPeriodEnd = e.currentPeriodEnd, this.status = e.status, this.paymentSourceId = e.paymentSourceId, this.paymentGateway = e.paymentGateway, this.paymentGatewayPlanId = e.paymentGatewayPlanId, this.paymentGatewaySubscriptionId = e.paymentGatewaySubscriptionId, this.trialId = e.trialId, this.trialEndsAt = e.trialEndsAt, this.renewalMutations = e.renewalMutations, this.currency = e.currency, this.pauseEndsAt = e.pauseEndsAt, this.metadata = e.metadata, this.latestInvoice = e.latestInvoice, this.useStorekitResubscribe = e.useStorekitResubscribe, this.price = e.price, this.userId = e.userId;
             let t = this.renewalMutations,

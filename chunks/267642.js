@@ -332,14 +332,15 @@ function(e, t, n) {
     }
 
     function y() {
-        let e = l.default.getPremiumTypeSubscription(),
-            {
-                numAvailableGuildBoostSlots: t,
-                numCanceledGuildBoostSlots: n
-            } = Object.values(o.default.boostSlots).reduce((e, t) => (F(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e), {
-                numAvailableGuildBoostSlots: 0,
-                numCanceledGuildBoostSlots: 0
-            });
+        let e = l.default.getPremiumTypeSubscription();
+        if (null == e ? void 0 : e.isPausedOrPausePending) return T.default.Messages.GUILD_BOOSTING_DISABLED_FOR_PAUSED_SUBSCRIPTION;
+        let {
+            numAvailableGuildBoostSlots: t,
+            numCanceledGuildBoostSlots: n
+        } = Object.values(o.default.boostSlots).reduce((e, t) => (F(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e), {
+            numAvailableGuildBoostSlots: 0,
+            numCanceledGuildBoostSlots: 0
+        });
         if (null == e || t > 0) return null;
         if (e.status === E.SubscriptionStatusTypes.PAST_DUE) return T.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_SUBSCRIPTION_PAST_DUE;
         if (e.status === E.SubscriptionStatusTypes.ACCOUNT_HOLD) return T.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_SUBSCRIPTION_ACCOUNT_HOLD;

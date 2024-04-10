@@ -877,7 +877,7 @@ function(e, t, n) {
         }
         a = null != a ? a : (0, D.formatPrice)(E, r.currency);
         let I = null === (i = null !== (n = null == o ? void 0 : o.taxInclusive) && void 0 !== n ? n : null === (t = r.latestInvoice) || void 0 === t ? void 0 : t.taxInclusive) || void 0 === i || i;
-        return ed(r) ? r.isPurchasedViaGoogle ? U.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_RENEWAL_INFO_PENDING_CANCELATION_NO_PRICE.format({
+        if (ed(r)) return r.isPurchasedViaGoogle ? U.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_RENEWAL_INFO_PENDING_CANCELATION_NO_PRICE.format({
             quantity: c
         }) : I ? U.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_RENEWAL_INFO_PENDING_CANCELATION.format({
             quantity: c,
@@ -885,26 +885,35 @@ function(e, t, n) {
         }) : U.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_RENEWAL_INFO_PENDING_CANCELATION_TAX_EXCLUSIVE.format({
             quantity: c,
             rate: (0, D.formatRate)(a, _.interval, _.intervalCount)
-        }) : r.status === v.SubscriptionStatusTypes.ACCOUNT_HOLD ? r.isPurchasedViaGoogle ? U.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_RENEWAL_INFO_ACCOUNT_HOLD_NO_PRICE.format({
-            quantity: c,
-            boostQuantity: c
-        }) : I ? U.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_RENEWAL_INFO_ACCOUNT_HOLD.format({
-            quantity: c,
-            boostQuantity: c,
-            rate: (0, D.formatRate)(a, _.interval, _.intervalCount)
-        }) : U.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_RENEWAL_INFO_ACCOUNT_HOLD_TAX_EXCLUSIVE.format({
-            quantity: c,
-            boostQuantity: c,
-            rate: (0, D.formatRate)(a, _.interval, _.intervalCount)
-        }) : r.isPurchasedViaGoogle ? U.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_RENEWAL_INFO_NO_PRICE.format({
-            quantity: c
-        }) : I ? U.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_RENEWAL_INFO.format({
-            quantity: c,
-            rate: (0, D.formatRate)(a, _.interval, _.intervalCount)
-        }) : U.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_RENEWAL_INFO_TAX_EXCLUSIVE.format({
-            quantity: c,
-            rate: (0, D.formatRate)(a, _.interval, _.intervalCount)
-        })
+        });
+        switch (r.status) {
+            case v.SubscriptionStatusTypes.ACCOUNT_HOLD:
+                return r.isPurchasedViaGoogle ? U.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_RENEWAL_INFO_ACCOUNT_HOLD_NO_PRICE.format({
+                    quantity: c,
+                    boostQuantity: c
+                }) : I ? U.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_RENEWAL_INFO_ACCOUNT_HOLD.format({
+                    quantity: c,
+                    boostQuantity: c,
+                    rate: (0, D.formatRate)(a, _.interval, _.intervalCount)
+                }) : U.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_RENEWAL_INFO_ACCOUNT_HOLD_TAX_EXCLUSIVE.format({
+                    quantity: c,
+                    boostQuantity: c,
+                    rate: (0, D.formatRate)(a, _.interval, _.intervalCount)
+                });
+            case v.SubscriptionStatusTypes.PAUSE_PENDING:
+            case v.SubscriptionStatusTypes.PAUSED:
+                return U.default.Messages.GUILD_BOOSTING_DISABLED_HEADER;
+            default:
+                return r.isPurchasedViaGoogle ? U.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_RENEWAL_INFO_NO_PRICE.format({
+                    quantity: c
+                }) : I ? U.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_RENEWAL_INFO.format({
+                    quantity: c,
+                    rate: (0, D.formatRate)(a, _.interval, _.intervalCount)
+                }) : U.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_RENEWAL_INFO_TAX_EXCLUSIVE.format({
+                    quantity: c,
+                    rate: (0, D.formatRate)(a, _.interval, _.intervalCount)
+                })
+        }
     }
 
     function ec(e, t, n) {
