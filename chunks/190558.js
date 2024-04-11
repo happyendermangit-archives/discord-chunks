@@ -373,6 +373,14 @@ function(_, E, e) {
             [I.DARKER]: {
                 raw: "PLUM_20",
                 opacity: 1
+            },
+            gradient: {
+                light: {
+                    color: "gradient.start"
+                },
+                dark: {
+                    color: "gradient.start"
+                }
             }
         },
         BACKGROUND_MODIFIER_ACCENT: {

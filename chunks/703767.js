@@ -37,10 +37,7 @@ function(e, t, n) {
                 treatments: r
             })
         }
-    }("2024-03_amd_vdec_tests_1", "AMD video decode tests 1", [
-        [4098, 5686],
-        [4098, 5688]
-    ], ["disable_media_foundation_clear_playback", "disable_d3d11_video_decoder"])];
+    }("2024-03_amd_vdec_tests_1", "AMD video decode tests 1", [u(5592), u(5597), u(5686), u(5688), u(5708), u(5761), u(26607), u(26591), u(29471), u(29504), u(29631), u(29679), u(29663), u(29695), u(29759), u(29772), u(29822), u(29824)], ["disable_media_foundation_clear_playback", "disable_d3d11_video_decoder"])];
 
     function _(e) {
         for (let t of e)
