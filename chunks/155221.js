@@ -7,8 +7,8 @@ function(e, t, a) {
     }), a("47120");
     var d = a("735250"),
         n = a("470079"),
-        i = a("664751"),
-        c = a("266067"),
+        c = a("664751"),
+        i = a("266067"),
         o = a("613828"),
         r = a("990547"),
         f = a("719711"),
@@ -234,16 +234,16 @@ function(e, t, a) {
                     render: () => {
                         var e, t, a;
                         let d = null === (e = w.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
-                            n = (0, i.parse)((null !== (a = window.location.search) && void 0 !== a ? a : "").substr(1)),
-                            c = null === (t = n.referring_location) || void 0 === t ? void 0 : t.toString();
+                            n = (0, c.parse)((null !== (a = window.location.search) && void 0 !== a ? a : "").substr(1)),
+                            i = null === (t = n.referring_location) || void 0 === t ? void 0 : t.toString();
                         return ("iOS" === d || "Android" === d) && w.default.track(N.AnalyticEvents.DOWNLOAD_APP, {
                             platform: d,
                             ptb: !1,
                             released: !0,
                             has_e_mail: "true" === n.has_e_mail,
-                            referring_location: c,
+                            referring_location: i,
                             qr_code: !0
-                        }), window.location.href = (0, v.getMobileDownloadLink)(null != c && "" !== c ? c : "qr_code", d), null
+                        }), window.location.href = (0, v.getMobileDownloadLink)(null != i && "" !== i ? i : "qr_code", d), null
                     }
                 }), (0, d.jsx)(m.default, {
                     path: N.Routes.OPEN_APP_FROM_EMAIL,
@@ -306,7 +306,7 @@ function(e, t, a) {
             let {
                 pathname: e
             } = (0, o.useLocation)();
-            return null != (0, c.matchPath)(e, {
+            return null != (0, i.matchPath)(e, {
                 path: N.Routes.APPLICATION_DIRECTORY
             })
         }();
