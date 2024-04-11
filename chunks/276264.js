@@ -49,8 +49,8 @@ function(e, t, n) {
             applicationStream: w,
             status: k,
             shouldAnimateStatus: B = !1,
-            isMobile: V,
-            premiumSince: F,
+            isMobile: F,
+            premiumSince: V,
             channel: x,
             guildId: H,
             className: Y,
@@ -103,9 +103,9 @@ function(e, t, n) {
                 ...e,
                 className: D.ownerIcon
             })
-        }) : null, eN = () => null == F ? null : (0, i.jsx)(l.Tooltip, {
+        }) : null, eN = () => null == V ? null : (0, i.jsx)(l.Tooltip, {
             text: L.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_TOOLTIP.format({
-                date: F
+                date: V
             }),
             children: e => (0, i.jsx)(l.Clickable, {
                 onClick: X,
@@ -132,7 +132,7 @@ function(e, t, n) {
                     ...eE,
                     size: l.AvatarSizes.SIZE_32,
                     src: ec,
-                    isMobile: V,
+                    isMobile: F,
                     isTyping: y,
                     status: r,
                     "aria-label": e.username,

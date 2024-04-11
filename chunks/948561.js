@@ -202,7 +202,7 @@ function(e, t, n) {
         })
     }
 
-    function V(e) {
+    function F(e) {
         var t, n;
         let {
             channelId: i,
@@ -223,7 +223,7 @@ function(e, t, n) {
         })
     }
 
-    function F(e) {
+    function V(e) {
         let {
             channelId: t,
             messages: n
@@ -332,11 +332,11 @@ function(e, t, n) {
         constructor(...e) {
             var t, n, i;
             super(...e), t = this, n = "actions", i = {
-                LOAD_MESSAGES_SUCCESS: F,
+                LOAD_MESSAGES_SUCCESS: V,
                 LOAD_FORUM_POSTS: H,
                 LOAD_THREADS_SUCCESS: Y,
                 LOAD_ARCHIVED_THREADS_SUCCESS: Y,
-                MESSAGE_CREATE: V,
+                MESSAGE_CREATE: F,
                 MESSAGE_UPDATE: B,
                 LOGOUT: P,
                 SEARCH_FINISH: x,

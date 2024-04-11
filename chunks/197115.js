@@ -42,8 +42,8 @@ function(e, t, n) {
             showIcon: w = !0,
             disableShine: k,
             applicationId: B,
-            giftMessage: V,
-            overrideDisabledButtonText: F,
+            giftMessage: F,
+            overrideDisabledButtonText: V,
             shinyButtonClassName: x,
             ...H
         } = e, Y = (0, a.useStateFromStores)([I.default], () => I.default.getCurrentUser()), j = (0, a.useStateFromStores)([f.default], () => f.default.isFocused()), W = (0, a.useStateFromStores)([T.default], () => T.default.getPremiumTypeSubscription()), {
@@ -134,7 +134,7 @@ function(e, t, n) {
                 analyticsLocations: K,
                 premiumModalAnalyticsLocation: G,
                 applicationId: B,
-                giftMessage: V
+                giftMessage: F
             })
         };
         if (v) return (0, i.jsxs)(o.Button, {
@@ -171,7 +171,7 @@ function(e, t, n) {
             J = r === N.PremiumSubscriptionSKUs.TIER_2 && null != q && [N.PremiumTypes.TIER_0, N.PremiumTypes.TIER_1].includes(q);
         J && (X = p.default.Messages.BILLING_SWITCH_PLAN_UPGRADE);
         let Z = null != W && W.status !== O.SubscriptionStatusTypes.ACCOUNT_HOLD && !(0, E.isNoneSubscription)(W.planId) && !J,
-            $ = Z ? null != F ? F : function(e) {
+            $ = Z ? null != V ? V : function(e) {
                 let {
                     ctaSubscriptionSkuId: t,
                     currentPremiumType: n

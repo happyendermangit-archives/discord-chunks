@@ -11,7 +11,7 @@ function(e, t, n) {
             return k
         },
         CLIPS_EDUCATION_MAX_DISMISSALS_DISABLED: function() {
-            return V
+            return F
         },
         CLIPS_EDUCATION_MAX_DISMISSALS_ENABLED: function() {
             return B
@@ -124,5 +124,5 @@ function(e, t, n) {
         w = 14 * c.default.Millis.DAY,
         k = 5,
         B = 5,
-        V = 1
+        F = 1
 }

@@ -224,7 +224,7 @@ function(e, t, n) {
         null != t && t.forEach(e => C(e, !0)), null != n && n.forEach(e => p(e.user, !0))
     }
 
-    function V(e) {
+    function F(e) {
         let {
             threads: t
         } = e;
@@ -238,7 +238,7 @@ function(e, t, n) {
         })
     }
 
-    function F(e) {
+    function V(e) {
         let {
             supplementalData: t
         } = e;
@@ -683,11 +683,11 @@ function(e, t, n) {
                 GUILD_FEED_FETCH_SUCCESS: k,
                 LOAD_THREADS_SUCCESS: B,
                 LOAD_ARCHIVED_THREADS_SUCCESS: B,
-                LOAD_FORUM_POSTS: V,
+                LOAD_FORUM_POSTS: F,
                 GUILD_SCHEDULED_EVENT_USERS_FETCH_SUCCESS: x,
                 LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: H,
                 NOTIFICATION_CENTER_ITEM_CREATE: Y,
-                LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: F,
+                LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: V,
                 PASSIVE_UPDATE_V1: et,
                 LOCAL_MESSAGES_LOADED: en,
                 FETCH_PRIVATE_CHANNEL_INTEGRATIONS_SUCCESS: eI,

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return V
+            return F
         }
     }), n("47120");
     var i = n("735250"),
@@ -42,12 +42,12 @@ function(e, t, n) {
         k = n("981631"),
         B = n("689938");
 
-    function V(e) {
+    function F(e) {
         let {
             activity: t,
             currentEmbeddedApplication: n,
-            isCurrentUser: V,
-            color: F,
+            isCurrentUser: F,
+            color: V,
             look: x,
             hover: H,
             user: Y,
@@ -86,9 +86,9 @@ function(e, t, n) {
             PermissionStore: h.default
         })), ei = (0, s.useStateFromStores)([D.default], () => Array.from(D.default.getSelfEmbeddedActivities().values()).some(e => e.applicationId === (null == q ? void 0 : q.applicationId) && e.channelId === (null == q ? void 0 : q.channelId))), er = (0, d.useAnalyticsContext)(), es = !g.isPlatformEmbedded, ea = (0, P.default)(t, k.ActivityFlags.JOIN) || j;
         if (null == t || !ea || null == t.application_id) return null;
-        let eo = !V && (es || Z) && !K && !$ && (!j || en),
+        let eo = !F && (es || Z) && !K && !$ && (!j || en),
             el = null;
-        V ? el = B.default.Messages.USER_ACTIVITY_CANNOT_JOIN_SELF : !es && !Z && (el = B.default.Messages.USER_ACTIVITY_NOT_DETECTED.format({
+        F ? el = B.default.Messages.USER_ACTIVITY_CANNOT_JOIN_SELF : !es && !Z && (el = B.default.Messages.USER_ACTIVITY_NOT_DETECTED.format({
             name: t.name
         }));
         let eu = async (e, t) => {
@@ -144,7 +144,7 @@ function(e, t, n) {
                     onClick: ed,
                     onMouseEnter: t,
                     onMouseLeave: n,
-                    color: F,
+                    color: V,
                     look: x,
                     hover: H,
                     disabled: !eo,

@@ -37,8 +37,8 @@ function(e, t, n) {
         w = n("883661"),
         k = n("880949"),
         B = n("784222"),
-        V = n("566083"),
-        F = n("172800"),
+        F = n("566083"),
+        V = n("172800"),
         x = n("149203"),
         H = n("981631"),
         Y = n("957825"),
@@ -108,7 +108,7 @@ function(e, t, n) {
             }, []), es = (0, _.useStateFromStores)([R.HotspotStore], () => R.HotspotStore.hasHotspot(R.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), []), ea = r.useMemo(() => l().memoize((e, t) => {
                 let n = s[e],
                     r = E[t.sectionIndex];
-                return (0, i.jsx)(F.default, {
+                return (0, i.jsx)(V.default, {
                     emojiDescriptors: n,
                     emojiSize: o,
                     surrogateCodePoint: W,
@@ -189,7 +189,7 @@ function(e, t, n) {
                         glowOpacity: P
                     }) : et(e) ? (0, i.jsx)("div", {
                         className: K.nitroBottomDivider
-                    }) : null : (0, i.jsx)(V.default, {
+                    }) : null : (0, i.jsx)(F.default, {
                         className: K.premiumUpsell
                     }, "emoji-picker-inline-upsell")
                 }, [E, t, P, U, en, et]),
@@ -232,7 +232,7 @@ function(e, t, n) {
                 messageId: w,
                 isBurstReaction: k,
                 listHeaderClassName: B
-            } = e, V = r.useRef(!1), F = h.EmojiPickerStore.useStore(e => e.activeCategoryIndex), x = (0, m.useExpressionPickerStore)(e => e.searchQuery), Y = L.AnimateEmoji.useSetting(), z = (0, _.useStateFromStores)([D.default], () => D.default.getCurrentUser()), X = (0, P.isPremium)(z), {
+            } = e, F = r.useRef(!1), V = h.EmojiPickerStore.useStore(e => e.activeCategoryIndex), x = (0, m.useExpressionPickerStore)(e => e.searchQuery), Y = L.AnimateEmoji.useSetting(), z = (0, _.useStateFromStores)([D.default], () => D.default.getCurrentUser()), X = (0, P.isPremium)(z), {
                 location: Q
             } = (0, f.useAnalyticsContext)(), {
                 analyticsLocations: q
@@ -270,7 +270,7 @@ function(e, t, n) {
                 setCollapsedSections: N,
                 getEmojiItemProps: p,
                 getEmojiRowProps: R,
-                isScrolling: V,
+                isScrolling: F,
                 isUsingKeyboardNavigation: U,
                 allowAnimatedEmoji: Y,
                 channelGuildId: G,
@@ -287,8 +287,8 @@ function(e, t, n) {
                 setUpsellGlowOpacity: er,
                 emojiSectionDescriptors: l
             }), eA = (0, O.useSynchronizedActiveCategoryIndexForScrollPosition)({
-                activeCategoryIndex: F,
-                isScrolling: V,
+                activeCategoryIndex: V,
+                isScrolling: F,
                 listRef: s,
                 onActiveCategoryIndexChange: e => {
                     Z(e), "" === x && h.EmojiPickerStore.setActiveCategoryIndex(e)
@@ -299,7 +299,7 @@ function(e, t, n) {
             });
             (0, O.useSynchronizedScrollPositionForActiveCategoryIndex)({
                 searchQuery: x,
-                activeCategoryIndex: F,
+                activeCategoryIndex: V,
                 listRef: s
             });
             let eh = r.useCallback(e => {

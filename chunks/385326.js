@@ -39,7 +39,7 @@ function(e, t, n) {
         let {
             channel: t,
             isLoading: n
-        } = e, [s, D] = r.useState(!1), w = (0, o.useStateFromStores)([p.default], () => p.default.getSelfEmbeddedActivityForChannel(t.id)), k = (0, o.useStateFromStores)([p.default], () => p.default.getActivityPanelMode()), B = (0, E.useGetOrFetchApplication)(null == w ? void 0 : w.applicationId), V = null == w ? void 0 : w.instanceId, F = (0, o.useStateFromStores)([m.default], () => m.default.getChannelId() === t.id), {
+        } = e, [s, D] = r.useState(!1), w = (0, o.useStateFromStores)([p.default], () => p.default.getSelfEmbeddedActivityForChannel(t.id)), k = (0, o.useStateFromStores)([p.default], () => p.default.getActivityPanelMode()), B = (0, E.useGetOrFetchApplication)(null == w ? void 0 : w.applicationId), F = null == w ? void 0 : w.instanceId, V = (0, o.useStateFromStores)([m.default], () => m.default.getChannelId() === t.id), {
             dockedRect: x,
             isHidden: H
         } = (0, o.useStateFromStoresObject)([h.default], () => {
@@ -56,7 +56,7 @@ function(e, t, n) {
             activityParticipant: null != w ? I.default.getParticipant(t.id, w.applicationId) : null,
             selectedParticipant: I.default.getSelectedParticipant(t.id),
             participantsOpen: I.default.getParticipantsOpen(t.id)
-        })), z = F || null != Y, X = (0, C.default)(t.id), Q = X && (null == W ? void 0 : W.type) !== P.ParticipantTypes.ACTIVITY, q = !X && k === M.ActivityPanelModes.PIP, J = (!z || z && (Q || q) && null == x) && !H, Z = J && null != h.default.pipVideoWindow && null != h.default.pipActivityWindow;
+        })), z = V || null != Y, X = (0, C.default)(t.id), Q = X && (null == W ? void 0 : W.type) !== P.ParticipantTypes.ACTIVITY, q = !X && k === M.ActivityPanelModes.PIP, J = (!z || z && (Q || q) && null == x) && !H, Z = J && null != h.default.pipVideoWindow && null != h.default.pipActivityWindow;
 
         function $() {
             var e;
@@ -79,10 +79,10 @@ function(e, t, n) {
                 })
             }
         }, [null == w ? void 0 : w.applicationId, J]);
-        if (null == w || null == V || null == j && (0, C.default)(t.id) || null == B) return null;
+        if (null == w || null == F || null == j && (0, C.default)(t.id) || null == B) return null;
         let et = Array.from(w.userIds).map(e => N.default.getUser(e)).filter(e => null != e),
             en = {
-                instance_id: V,
+                instance_id: F,
                 channel_id: t.id
             };
         return null != t.guild_id && "" !== t.guild_id && (en.guild_id = t.guild_id), (0, i.jsx)(A.default, {
@@ -161,7 +161,7 @@ function(e, t, n) {
                             [U.pipModeTall]: J && s,
                             [U.pipNonInteractive]: J && !(null === (o = w.config) || void 0 === o ? void 0 : o.useInteractivePIP)
                         }),
-                        shouldRefocus: !J && F
+                        shouldRefocus: !J && V
                     }), !J && (0, i.jsx)(L.TileOverlay, {
                         participantsOpen: K,
                         showToggleParticipants: !1,

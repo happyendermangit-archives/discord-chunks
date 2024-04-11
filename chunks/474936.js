@@ -182,10 +182,10 @@ function(e, t, n) {
             return l
         },
         PremiumUserLimits: function() {
-            return eF
+            return eV
         },
         PromotionFlags: function() {
-            return eV
+            return eF
         },
         PurchasedFlags: function() {
             return u
@@ -236,8 +236,8 @@ function(e, t, n) {
             return ec
         }
     }), n("47120");
-    var i, r, s, a, o, l, u, d, _, c, E, I, T, f, S, A, h, m, N, O, p, R, C, g, L, D, v, M, y, P, U, b, G, w, k, B, V = n("981631"),
-        F = n("185923");
+    var i, r, s, a, o, l, u, d, _, c, E, I, T, f, S, A, h, m, N, O, p, R, C, g, L, D, v, M, y, P, U, b, G, w, k, B, F = n("981631"),
+        V = n("185923");
     (N = i || (i = {}))[N.TIER_1 = 1] = "TIER_1", N[N.TIER_2 = 2] = "TIER_2", N[N.TIER_0 = 3] = "TIER_0";
     let x = void 0,
         H = [{
@@ -504,78 +504,78 @@ function(e, t, n) {
         }),
         ey = 52428800,
         eP = {
-            [V.BoostedGuildTiers.NONE]: 5,
-            [V.BoostedGuildTiers.TIER_1]: 10,
-            [V.BoostedGuildTiers.TIER_2]: 15,
-            [V.BoostedGuildTiers.TIER_3]: 30
+            [F.BoostedGuildTiers.NONE]: 5,
+            [F.BoostedGuildTiers.TIER_1]: 10,
+            [F.BoostedGuildTiers.TIER_2]: 15,
+            [F.BoostedGuildTiers.TIER_3]: 30
         },
         eU = {
-            [V.BoostedGuildTiers.NONE]: eP[V.BoostedGuildTiers.NONE],
-            [V.BoostedGuildTiers.TIER_1]: eP[V.BoostedGuildTiers.NONE] + eP[V.BoostedGuildTiers.TIER_1],
-            [V.BoostedGuildTiers.TIER_2]: eP[V.BoostedGuildTiers.NONE] + eP[V.BoostedGuildTiers.TIER_1] + eP[V.BoostedGuildTiers.TIER_2],
-            [V.BoostedGuildTiers.TIER_3]: eP[V.BoostedGuildTiers.NONE] + eP[V.BoostedGuildTiers.TIER_1] + eP[V.BoostedGuildTiers.TIER_2] + eP[V.BoostedGuildTiers.TIER_3]
+            [F.BoostedGuildTiers.NONE]: eP[F.BoostedGuildTiers.NONE],
+            [F.BoostedGuildTiers.TIER_1]: eP[F.BoostedGuildTiers.NONE] + eP[F.BoostedGuildTiers.TIER_1],
+            [F.BoostedGuildTiers.TIER_2]: eP[F.BoostedGuildTiers.NONE] + eP[F.BoostedGuildTiers.TIER_1] + eP[F.BoostedGuildTiers.TIER_2],
+            [F.BoostedGuildTiers.TIER_3]: eP[F.BoostedGuildTiers.NONE] + eP[F.BoostedGuildTiers.TIER_1] + eP[F.BoostedGuildTiers.TIER_2] + eP[F.BoostedGuildTiers.TIER_3]
         },
         eb = {
-            [V.BoostedGuildTiers.NONE]: 8,
-            [V.BoostedGuildTiers.TIER_1]: 24,
-            [V.BoostedGuildTiers.TIER_2]: 36,
-            [V.BoostedGuildTiers.TIER_3]: 48
+            [F.BoostedGuildTiers.NONE]: 8,
+            [F.BoostedGuildTiers.TIER_1]: 24,
+            [F.BoostedGuildTiers.TIER_2]: 36,
+            [F.BoostedGuildTiers.TIER_3]: 48
         },
         eG = Object.freeze({
-            [V.BoostedGuildTiers.NONE]: {
+            [F.BoostedGuildTiers.NONE]: {
                 features: [],
                 limits: {
-                    emoji: F.EMOJI_MAX_SLOTS,
-                    bitrate: V.BITRATE_MAX,
-                    fileSize: V.MAX_ATTACHMENT_SIZE,
+                    emoji: V.EMOJI_MAX_SLOTS,
+                    bitrate: F.BITRATE_MAX,
+                    fileSize: F.MAX_ATTACHMENT_SIZE,
                     screenShareQualityFramerate: 30,
                     screenShareQualityResolution: "720p",
-                    soundboardSounds: eb[V.BoostedGuildTiers.NONE],
+                    soundboardSounds: eb[F.BoostedGuildTiers.NONE],
                     maxConcurrentActivities: 2,
-                    stickers: eU[V.BoostedGuildTiers.NONE],
-                    stageVideoUsers: V.MAX_STAGE_VIDEO_USER_LIMIT_TIER01
+                    stickers: eU[F.BoostedGuildTiers.NONE],
+                    stageVideoUsers: F.MAX_STAGE_VIDEO_USER_LIMIT_TIER01
                 }
             },
-            [V.BoostedGuildTiers.TIER_1]: {
-                features: [V.GuildFeatures.INVITE_SPLASH, V.GuildFeatures.ANIMATED_ICON],
+            [F.BoostedGuildTiers.TIER_1]: {
+                features: [F.GuildFeatures.INVITE_SPLASH, F.GuildFeatures.ANIMATED_ICON],
                 limits: {
                     emoji: 100,
                     bitrate: 128e3,
-                    fileSize: V.MAX_ATTACHMENT_SIZE,
+                    fileSize: F.MAX_ATTACHMENT_SIZE,
                     screenShareQualityFramerate: 60,
                     screenShareQualityResolution: "720p",
-                    soundboardSounds: eb[V.BoostedGuildTiers.TIER_1],
+                    soundboardSounds: eb[F.BoostedGuildTiers.TIER_1],
                     maxConcurrentActivities: 3,
-                    stickers: eU[V.BoostedGuildTiers.TIER_1],
-                    stageVideoUsers: V.MAX_STAGE_VIDEO_USER_LIMIT_TIER01
+                    stickers: eU[F.BoostedGuildTiers.TIER_1],
+                    stageVideoUsers: F.MAX_STAGE_VIDEO_USER_LIMIT_TIER01
                 }
             },
-            [V.BoostedGuildTiers.TIER_2]: {
-                features: [V.GuildFeatures.INVITE_SPLASH, V.GuildFeatures.ANIMATED_ICON, V.GuildFeatures.BANNER, V.GuildFeatures.ROLE_ICONS],
+            [F.BoostedGuildTiers.TIER_2]: {
+                features: [F.GuildFeatures.INVITE_SPLASH, F.GuildFeatures.ANIMATED_ICON, F.GuildFeatures.BANNER, F.GuildFeatures.ROLE_ICONS],
                 limits: {
                     emoji: 150,
                     bitrate: 256e3,
                     fileSize: 52428800,
                     screenShareQualityFramerate: 60,
                     screenShareQualityResolution: "1080p",
-                    soundboardSounds: eb[V.BoostedGuildTiers.TIER_2],
+                    soundboardSounds: eb[F.BoostedGuildTiers.TIER_2],
                     maxConcurrentActivities: 5,
-                    stickers: eU[V.BoostedGuildTiers.TIER_2],
-                    stageVideoUsers: V.MAX_STAGE_VIDEO_USER_LIMIT_TIER2
+                    stickers: eU[F.BoostedGuildTiers.TIER_2],
+                    stageVideoUsers: F.MAX_STAGE_VIDEO_USER_LIMIT_TIER2
                 }
             },
-            [V.BoostedGuildTiers.TIER_3]: {
-                features: [V.GuildFeatures.INVITE_SPLASH, V.GuildFeatures.ANIMATED_ICON, V.GuildFeatures.BANNER, V.GuildFeatures.ANIMATED_BANNER, V.GuildFeatures.VANITY_URL, V.GuildFeatures.ROLE_ICONS],
+            [F.BoostedGuildTiers.TIER_3]: {
+                features: [F.GuildFeatures.INVITE_SPLASH, F.GuildFeatures.ANIMATED_ICON, F.GuildFeatures.BANNER, F.GuildFeatures.ANIMATED_BANNER, F.GuildFeatures.VANITY_URL, F.GuildFeatures.ROLE_ICONS],
                 limits: {
                     emoji: 250,
                     bitrate: 384e3,
                     fileSize: 104857600,
                     screenShareQualityFramerate: 60,
                     screenShareQualityResolution: "1080p",
-                    soundboardSounds: eb[V.BoostedGuildTiers.TIER_3],
+                    soundboardSounds: eb[F.BoostedGuildTiers.TIER_3],
                     maxConcurrentActivities: Number.MAX_SAFE_INTEGER,
-                    stickers: eU[V.BoostedGuildTiers.TIER_3],
-                    stageVideoUsers: V.MAX_STAGE_VIDEO_USER_LIMIT_TIER3
+                    stickers: eU[F.BoostedGuildTiers.TIER_3],
+                    stageVideoUsers: F.MAX_STAGE_VIDEO_USER_LIMIT_TIER3
                 }
             }
         }),
@@ -594,12 +594,12 @@ function(e, t, n) {
         mid_streaming_quality: 1
     });
     (y = E || (E = {}))[y.UserSettings = 0] = "UserSettings", y[y.ApplicationStoreHome = 1] = "ApplicationStoreHome", (P = I || (I = {}))[P.DEFAULT = 0] = "DEFAULT", P[P.WINTER = 1] = "WINTER", (U = T || (T = {}))[U.SNOWGLOBE = 1] = "SNOWGLOBE", U[U.BOX = 2] = "BOX", U[U.CUP = 3] = "CUP", U[U.STANDARD_BOX = 4] = "STANDARD_BOX", U[U.CAKE = 5] = "CAKE", U[U.CHEST = 6] = "CHEST", U[U.COFFEE = 7] = "COFFEE", U[U.SEASONAL_STANDARD_BOX = 8] = "SEASONAL_STANDARD_BOX", U[U.SEASONAL_CAKE = 9] = "SEASONAL_CAKE", U[U.SEASONAL_CHEST = 10] = "SEASONAL_CHEST", U[U.SEASONAL_COFFEE = 11] = "SEASONAL_COFFEE", (b = f || (f = {})).USER_NOT_VERIFIED = "user_not_verified", b.NO_CODE_BODY = "no_code_body", b.NO_PROMOTION = "no_promotion", b.CODE_CLAIMED = "code_claimed", b.EXISTING_SUBSCRIBER = "existing_subscriber", b.PREVIOUS_SUBSCRIBER = "previous_subscriber", b.BLOCKED_PAYMENT = "blocked_payment";
-    let eV = Object.freeze({
+    let eF = Object.freeze({
             IS_BLOCKED_IOS: 32,
             IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS: 64,
             SUPPRESS_NOTIFICATION: 128
         }),
-        eF = Object.freeze({
+        eV = Object.freeze({
             3: {
                 fileSize: ey
             },

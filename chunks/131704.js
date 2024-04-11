@@ -56,7 +56,7 @@ function(e, t, n) {
             return P
         },
         THREADED_CHANNEL_TYPES: function() {
-            return V
+            return F
         },
         THREAD_CHANNEL_TYPES: function() {
             return B
@@ -119,7 +119,7 @@ function(e, t, n) {
             return U
         },
         isThread: function() {
-            return F
+            return V
         },
         isVoiceChannel: function() {
             return G
@@ -197,9 +197,9 @@ function(e, t, n) {
         return w.has(e)
     }
     let B = new Set([E.ChannelTypes.ANNOUNCEMENT_THREAD, E.ChannelTypes.PUBLIC_THREAD, E.ChannelTypes.PRIVATE_THREAD]),
-        V = new Set([E.ChannelTypes.GUILD_TEXT, E.ChannelTypes.GUILD_ANNOUNCEMENT, E.ChannelTypes.GUILD_FORUM, E.ChannelTypes.GUILD_MEDIA]);
+        F = new Set([E.ChannelTypes.GUILD_TEXT, E.ChannelTypes.GUILD_ANNOUNCEMENT, E.ChannelTypes.GUILD_FORUM, E.ChannelTypes.GUILD_MEDIA]);
 
-    function F(e) {
+    function V(e) {
         return B.has(e)
     }
     let x = new Set([E.ChannelTypes.DM, E.ChannelTypes.GROUP_DM, E.ChannelTypes.GUILD_TEXT, E.ChannelTypes.GUILD_ANNOUNCEMENT, E.ChannelTypes.ANNOUNCEMENT_THREAD, E.ChannelTypes.PUBLIC_THREAD, E.ChannelTypes.PRIVATE_THREAD, E.ChannelTypes.GUILD_FORUM, E.ChannelTypes.GUILD_MEDIA, E.ChannelTypes.GUILD_DIRECTORY, E.ChannelTypes.GUILD_VOICE, E.ChannelTypes.GUILD_STAGE_VOICE]);
@@ -404,7 +404,7 @@ function(e, t, n) {
             return this.isGuildStageVoice()
         }
         isThread() {
-            return F(this.type)
+            return V(this.type)
         }
         isAnnouncementThread() {
             return this.type === E.ChannelTypes.ANNOUNCEMENT_THREAD

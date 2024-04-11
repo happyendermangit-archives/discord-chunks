@@ -2,146 +2,147 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         ANIMATED_AVATAR: function() {
-            return f
-        },
-        ANIMATED_EMOJIS: function() {
-            return _
-        },
-        APP_ICONS: function() {
-            return O
-        },
-        BOOST_DISCOUNT: function() {
-            return R
-        },
-        CLIENT_THEMES: function() {
-            return p
-        },
-        COLLECTIBLES: function() {
-            return N
-        },
-        CUSTOM_CALL_SOUNDS: function() {
-            return T
-        },
-        CUSTOM_DISCRIMINATOR: function() {
             return S
         },
-        EMOJIS_EVERYWHERE: function() {
+        ANIMATED_EMOJIS: function() {
             return c
         },
-        FANCY_VOICE_CHANNEL_REACTIONS: function() {
-            return D
+        APP_ICONS: function() {
+            return p
         },
-        FREE_BOOSTS: function() {
+        BOOST_DISCOUNT: function() {
             return C
         },
-        INCREASED_GUILD_LIMIT: function() {
-            return P
+        CLIENT_THEMES: function() {
+            return R
         },
-        INCREASED_MESSAGE_LENGTH: function() {
-            return U
+        COLLECTIBLES: function() {
+            return O
         },
-        INCREASED_VIDEO_UPLOAD_QUALITY: function() {
-            return b
+        CUSTOM_CALL_SOUNDS: function() {
+            return f
         },
-        INSTALL_PREMIUM_APPLICATIONS: function() {
-            return v
-        },
-        PREMIUM_GUILD_MEMBER_PROFILE: function() {
+        CUSTOM_DISCRIMINATOR: function() {
             return A
         },
-        PROFILE_BADGES: function() {
-            return h
-        },
-        PROFILE_PREMIUM_FEATURES: function() {
-            return m
-        },
-        REDEEM_PREMIUM_PERKS: function() {
-            return M
-        },
-        SOUNDBOARD_EVERYWHERE: function() {
-            return I
-        },
-        STICKERS_EVERYWHERE: function() {
+        EMOJIS_EVERYWHERE: function() {
             return E
         },
-        STREAM_HIGH_QUALITY: function() {
-            return L
+        FANCY_VOICE_CHANNEL_REACTIONS: function() {
+            return v
         },
-        STREAM_MID_QUALITY: function() {
+        FREE_BOOSTS: function() {
             return g
         },
-        UPLOAD_LARGE_FILES: function() {
+        INCREASED_GUILD_LIMIT: function() {
+            return U
+        },
+        INCREASED_MESSAGE_LENGTH: function() {
+            return b
+        },
+        INCREASED_VIDEO_UPLOAD_QUALITY: function() {
             return G
         },
-        VIDEO_FILTER_ASSETS: function() {
+        INSTALL_PREMIUM_APPLICATIONS: function() {
+            return M
+        },
+        PREMIUM_GUILD_MEMBER_PROFILE: function() {
+            return h
+        },
+        PROFILE_BADGES: function() {
+            return m
+        },
+        PROFILE_PREMIUM_FEATURES: function() {
+            return N
+        },
+        REDEEM_PREMIUM_PERKS: function() {
             return y
         },
+        SOUNDBOARD_EVERYWHERE: function() {
+            return T
+        },
+        STICKERS_EVERYWHERE: function() {
+            return I
+        },
+        STREAM_HIGH_QUALITY: function() {
+            return D
+        },
+        STREAM_MID_QUALITY: function() {
+            return L
+        },
+        UPLOAD_LARGE_FILES: function() {
+            return w
+        },
+        VIDEO_FILTER_ASSETS: function() {
+            return P
+        },
         canUserUse: function() {
-            return k
+            return B
         }
     });
-    var i = n("710845"),
-        r = n("380684"),
-        s = n("533293"),
-        a = n("575691"),
-        o = n("474936");
-    let l = new i.default("ProductCatalog.tsx"),
-        u = Object.freeze({
-            [o.PremiumTypes.TIER_0]: o.PremiumSubscriptionSKUs.TIER_0,
-            [o.PremiumTypes.TIER_1]: o.PremiumSubscriptionSKUs.TIER_1,
-            [o.PremiumTypes.TIER_2]: o.PremiumSubscriptionSKUs.TIER_2
+    var i = n("848246"),
+        r = n("710845"),
+        s = n("380684"),
+        a = n("533293"),
+        o = n("575691"),
+        l = n("474936");
+    let u = new r.default("ProductCatalog.tsx"),
+        d = Object.freeze({
+            [l.PremiumTypes.TIER_0]: l.PremiumSubscriptionSKUs.TIER_0,
+            [l.PremiumTypes.TIER_1]: l.PremiumSubscriptionSKUs.TIER_1,
+            [l.PremiumTypes.TIER_2]: l.PremiumSubscriptionSKUs.TIER_2
         });
-    class d extends s.default {
+    class _ extends a.default {
         constructor(e, t) {
             super(e, e => (function(e, t) {
                 if (null == t || null == t.premiumType) return !1;
                 try {
-                    let n = u[t.premiumType];
-                    if (null == n) return l.warn("Cannot find the corresponding SKU to the user's premium type ".concat(t.premiumType)), !1;
-                    let i = w[n];
-                    if (null == i) return l.warn("Cannot find the corresponding product catalog entry to the user's SKU ".concat(n, " and premium type ").concat(t.premiumType)), !1;
+                    let n = d[t.premiumType];
+                    if (null == n) return u.warn("Cannot find the corresponding SKU to the user's premium type ".concat(t.premiumType)), !1;
+                    let i = k[n];
+                    if (null == i) return u.warn("Cannot find the corresponding product catalog entry to the user's SKU ".concat(n, " and premium type ").concat(t.premiumType)), !1;
                     return i.skuFeatures.includes(e)
                 } catch (e) {
                     var n;
-                    l.error("Error while retrieving user's feature access: ".concat(null !== (n = e.message) && void 0 !== n ? n : JSON.stringify(e)))
+                    u.error("Error while retrieving user's feature access: ".concat(null !== (n = e.message) && void 0 !== n ? n : JSON.stringify(e)))
                 }
                 return !1
             })(this, e), t)
         }
     }
-    let _ = new d("animatedEmojis"),
-        c = new d("emojisEverywhere"),
-        E = new d("stickersEverywhere"),
-        I = new d("soundboardEverywhere"),
-        T = new d("customCallSounds"),
-        f = new d("animatedAvatar"),
-        S = new d("customDiscriminator"),
-        A = new d("premiumGuildMemberProfile"),
-        h = new d("profileBadges"),
-        m = new d("profilePremiumFeatures", "custom banner and avatar decoration"),
-        N = new d("collectibles"),
-        O = new d("appIcons"),
-        p = new d("clientThemes"),
-        R = new d("boostDiscount"),
-        C = new d("freeBoosts"),
-        g = new d("streamMidQuality"),
-        L = new d("streamHighQuality"),
-        D = new d("fancyVoiceChannelReactions"),
-        v = new d("installPremiumApplications"),
-        M = new d("redeemPremiumPerks"),
-        y = new d("videoFilterAssets");
-    new s.default("increasedFileUploadSize", r.getUserMaxFileSize);
-    let P = new d("increasedGuildLimit"),
-        U = new d("increasedMessageLength"),
-        b = new d("increasedVideoUploadQuality"),
-        G = new d("uploadLargeFiles"),
-        w = Object.freeze({
-            [o.PremiumSubscriptionSKUs.TIER_0]: new a.default(o.PremiumSubscriptionSKUs.TIER_0, [_, c, E, h, y, b, G, O]),
-            [o.PremiumSubscriptionSKUs.TIER_1]: new a.default(o.PremiumSubscriptionSKUs.TIER_1, [_, c, f, S, h, R, g, D, b, G, O]),
-            [o.PremiumSubscriptionSKUs.TIER_2]: new a.default(o.PremiumSubscriptionSKUs.TIER_2, [_, c, E, I, T, f, S, A, h, m, p, R, C, g, L, D, v, M, y, P, U, b, G, O, N])
+    let c = new _(i.EntitlementFeatureNames.ANIMATED_EMOJIS),
+        E = new _(i.EntitlementFeatureNames.EMOJIS_EVERYWHERE),
+        I = new _(i.EntitlementFeatureNames.STICKERS_EVERYWHERE),
+        T = new _(i.EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE),
+        f = new _(i.EntitlementFeatureNames.CUSTOM_CALL_SOUNDS),
+        S = new _(i.EntitlementFeatureNames.ANIMATED_AVATAR),
+        A = new _(i.EntitlementFeatureNames.CUSTOM_DISCRIMINATOR),
+        h = new _(i.EntitlementFeatureNames.PREMIUM_GUILD_MEMBER_PROFILE),
+        m = new _("profileBadges"),
+        N = new _(i.EntitlementFeatureNames.PROFILE_PREMIUM_FEATURES, "custom banner and avatar decoration"),
+        O = new _("collectibles"),
+        p = new _("appIcons"),
+        R = new _(i.EntitlementFeatureNames.CLIENT_THEMES),
+        C = new _("boostDiscount"),
+        g = new _("freeBoosts"),
+        L = new _(i.EntitlementFeatureNames.STREAM_MID_QUALITY),
+        D = new _(i.EntitlementFeatureNames.STREAM_HIGH_QUALITY),
+        v = new _("fancyVoiceChannelReactions"),
+        M = new _("installPremiumApplications"),
+        y = new _("redeemPremiumPerks"),
+        P = new _(i.EntitlementFeatureNames.VIDEO_FILTER_ASSETS);
+    new a.default(i.EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE, s.getUserMaxFileSize);
+    let U = new _(i.EntitlementFeatureNames.INCREASED_GUILD_LIMIT),
+        b = new _(i.EntitlementFeatureNames.INCREASED_MESSAGE_LENGTH),
+        G = new _("increasedVideoUploadQuality"),
+        w = new _("uploadLargeFiles"),
+        k = Object.freeze({
+            [l.PremiumSubscriptionSKUs.TIER_0]: new o.default(l.PremiumSubscriptionSKUs.TIER_0, [c, E, I, m, P, G, w, p]),
+            [l.PremiumSubscriptionSKUs.TIER_1]: new o.default(l.PremiumSubscriptionSKUs.TIER_1, [c, E, S, A, m, C, L, v, G, w, p]),
+            [l.PremiumSubscriptionSKUs.TIER_2]: new o.default(l.PremiumSubscriptionSKUs.TIER_2, [c, E, I, T, f, S, A, h, m, N, R, C, g, L, D, v, M, y, P, U, b, G, w, p, O])
         });
 
-    function k(e, t) {
+    function B(e, t) {
         return e.getFeatureValue(t)
     }
 }

@@ -55,7 +55,7 @@ function(e, t, n) {
             look: G = D.SelectLooks.FILLED,
             autoFocus: w = !1,
             popoutPosition: k = "bottom",
-            filter: F = !0,
+            filter: V = !0,
             debounceTime: x,
             renderOptionLabel: H = y,
             onSearchChange: Y,
@@ -249,7 +249,7 @@ function(e, t, n) {
         let eB = r.useCallback(() => {
                 eE(""), ek(null), eD(!0)
             }, [ek, eD]),
-            eV = r.useCallback(e => {
+            eF = r.useCallback(e => {
                 switch (e.key) {
                     case "Escape":
                         ed && (e.stopPropagation(), eD(!1));
@@ -259,8 +259,8 @@ function(e, t, n) {
                         eD(!0)
                 }
             }, [eD, ed]),
-            eF = eA;
-        eI && null != ec && !1 !== F && (eF = "function" == typeof F ? F(eA, ec) : (0, o.matchSorter)(eA, ec, {
+            eV = eA;
+        eI && null != ec && !1 !== V && (eV = "function" == typeof V ? V(eA, ec) : (0, o.matchSorter)(eA, ec, {
             keys: ["label"]
         })), r.useEffect(() => {
             let e = ef.current;
@@ -268,7 +268,7 @@ function(e, t, n) {
         }, [ec]), r.useEffect(() => {
             !eh && eI && null !== ec && requestAnimationFrame(() => eb.focusFirstVisibleItem())
         }, [eh, eI, ec]);
-        let ex = I ? V : B;
+        let ex = I ? F : B;
         return (0, i.jsx)(u.ListNavigatorProvider, {
             navigator: eb,
             children: (0, i.jsx)(f.Popout, {
@@ -294,7 +294,7 @@ function(e, t, n) {
                         closePopout: t,
                         onSelect: ek,
                         closeOnSelect: T,
-                        options: eF,
+                        options: eV,
                         activeDescendant: el,
                         renderOptionLabel: H,
                         updatePosition: r,
@@ -376,7 +376,7 @@ function(e, t, n) {
                                         },
                                         onKeyDown: e => {
                                             var t;
-                                            null === (t = $.onKeyDown) || void 0 === t || t.call($, e), E(e), eV(e)
+                                            null === (t = $.onKeyDown) || void 0 === t || t.call($, e), E(e), eF(e)
                                         },
                                         activeDescendant: el,
                                         placeholder: N,
@@ -668,7 +668,7 @@ function(e, t, n) {
             children: [null != o ? (0, i.jsx)("div", {
                 "aria-hidden": !0,
                 children: o
-            }) : null, (0, i.jsx)(F, {
+            }) : null, (0, i.jsx)(V, {
                 selectedOptions: t,
                 ...s
             }), null != l ? (0, i.jsx)("div", {
@@ -678,7 +678,7 @@ function(e, t, n) {
         })
     }
 
-    function V(e) {
+    function F(e) {
         let {
             query: t,
             placeholder: n,
@@ -751,7 +751,7 @@ function(e, t, n) {
                 selectValue: o,
                 focusNextItem: m,
                 focusPreviousItem: h
-            }), (0, i.jsx)(F, {
+            }), (0, i.jsx)(V, {
                 style: {
                     minWidth: "".concat(S, "ch")
                 },
@@ -771,7 +771,7 @@ function(e, t, n) {
         })
     }
 
-    function F(e) {
+    function V(e) {
         let {
             query: t,
             inputId: n,

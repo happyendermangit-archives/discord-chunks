@@ -77,11 +77,11 @@ function(e, t, n) {
         U += 1
     }
 
-    function V() {
+    function F() {
         B()
     }
 
-    function F() {
+    function V() {
         B()
     }
 
@@ -254,17 +254,17 @@ function(e, t, n) {
         configurable: !0,
         writable: !0
     }) : r[s] = a, t.default = new X(_.default, {
-        BACKGROUND_SYNC: V,
-        CONNECTION_OPEN: V,
-        OVERLAY_INITIALIZE: V,
-        CACHE_LOADED: V,
-        CACHE_LOADED_LAZY: V,
+        BACKGROUND_SYNC: F,
+        CONNECTION_OPEN: F,
+        OVERLAY_INITIALIZE: F,
+        CACHE_LOADED: F,
+        CACHE_LOADED_LAZY: F,
         CONNECTION_CLOSED: function() {
             Q()
         },
-        GUILD_CREATE: F,
-        GUILD_UPDATE: F,
-        GUILD_DELETE: F,
+        GUILD_CREATE: V,
+        GUILD_UPDATE: V,
+        GUILD_DELETE: V,
         GUILD_MEMBER_ADD: x,
         GUILD_MEMBER_UPDATE: x,
         CURRENT_USER_UPDATE: x,

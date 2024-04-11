@@ -54,10 +54,10 @@ function(e, t, n) {
         })
     }
 
-    function V() {
+    function F() {
         return !0
     }
-    class F extends(s = E.default.Store) {
+    class V extends(s = E.default.Store) {
         getActiveStreamKey() {
             return (0, m.default)(C.default) ? r : null
         }
@@ -138,21 +138,21 @@ function(e, t, n) {
             return U[e]
         }
     }
-    l = "StreamRTCConnectionStore", (o = "displayName") in(a = F) ? Object.defineProperty(a, o, {
+    l = "StreamRTCConnectionStore", (o = "displayName") in(a = V) ? Object.defineProperty(a, o, {
         value: l,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : a[o] = l, t.default = new F(T.default, !C.default.isSupported() || __OVERLAY__ ? {} : {
+    }) : a[o] = l, t.default = new V(T.default, !C.default.isSupported() || __OVERLAY__ ? {} : {
         CONNECTION_OPEN: function(e) {
             i = e.sessionId, r = null, k()
         },
         CONNECTION_CLOSED: function() {
             i = null, r = null, k()
         },
-        RTC_CONNECTION_STATE: V,
-        RTC_CONNECTION_PING: V,
-        RTC_CONNECTION_LOSS_RATE: V,
+        RTC_CONNECTION_STATE: F,
+        RTC_CONNECTION_PING: F,
+        RTC_CONNECTION_LOSS_RATE: F,
         RTC_CONNECTION_UPDATE_ID: function(e) {
             return c().some(G, t => t === e.connection)
         },

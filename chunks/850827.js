@@ -44,8 +44,8 @@ function(e, t, n) {
                 source: w,
                 color: k = d.Button.Colors.WHITE,
                 look: B = d.Button.Looks.OUTLINED,
-                type: V,
-                onAction: F,
+                type: F,
+                onAction: V,
                 isEmbedded: x = !1
             } = e,
             H = (0, N.default)(),
@@ -53,8 +53,8 @@ function(e, t, n) {
                 let e = T.default.getCurrentUser();
                 return o()(null != e, "UserActivityActions: currentUser cannot be undefined"), e
             }),
-            j = V === A.Types.PROFILE || V === A.Types.PROFILE_V2,
-            W = V === A.Types.STREAM_PREVIEW || null != a,
+            j = F === A.Types.PROFILE || F === A.Types.PROFILE_V2,
+            W = F === A.Types.STREAM_PREVIEW || null != a,
             K = (0, h.default)(n),
             z = (0, E.isStageActivity)(n),
             X = j ? S.default.Align.END : S.default.Align.STRETCH,
@@ -151,7 +151,7 @@ function(e, t, n) {
             wrap: Z ? S.default.Wrap.WRAP : S.default.Wrap.NO_WRAP,
             className: s()(_, U.buttonsWrapper, Z ? U.vertical : U.horizontal),
             onClick: function(e) {
-                (0, l.isElement)(e.target) && "BUTTON" === e.target.nodeName && (null == F || F())
+                (0, l.isElement)(e.target) && "BUTTON" === e.target.nodeName && (null == V || V())
             },
             children: t
         })

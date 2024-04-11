@@ -109,7 +109,7 @@ function(e, t, n) {
                     node: n
                 })
             }, []),
-            V = (0, o.default)({
+            F = (0, o.default)({
                 id: G,
                 isEnabled: !0,
                 useVirtualFocus: !0,
@@ -117,9 +117,9 @@ function(e, t, n) {
                 scrollToEnd: k,
                 setFocus: B
             }),
-            F = C ? _.ListThin : _.ListNone;
+            V = C ? _.ListThin : _.ListNone;
         return (0, i.jsx)(o.ListNavigatorProvider, {
-            navigator: V,
+            navigator: F,
             children: (0, i.jsx)(o.ListNavigatorContainer, {
                 children: e => {
                     let {
@@ -170,7 +170,7 @@ function(e, t, n) {
                                     setSelected: l,
                                     itemToString: R
                                 },
-                                children: (0, i.jsx)(F, {
+                                children: (0, i.jsx)(V, {
                                     ...o,
                                     style: {
                                         maxHeight: 46 * p

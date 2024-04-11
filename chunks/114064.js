@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t);
-    var i, r, s, a, o = n("454908"),
+    var i, r, s, a, o = n("848246"),
         l = n("442837"),
         u = n("570140"),
         d = n("168232");
@@ -58,7 +58,7 @@ function(e, t, n) {
             c.activated[t] = !1
         },
         STREAM_CLOSE: function(e) {
-            null != c.perksDemos && !0 === c.activated[o.NitroPerks.STREAM_HIGH_QUALITY] && (c.perksDemos[o.NitroPerks.STREAM_HIGH_QUALITY] = !1)
+            null != c.perksDemos && !0 === c.activated[o.EntitlementFeatureNames.STREAM_HIGH_QUALITY] && (c.perksDemos[o.EntitlementFeatureNames.STREAM_HIGH_QUALITY] = !1)
         },
         LOGOUT: function() {
             c = _

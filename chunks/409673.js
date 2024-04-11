@@ -91,8 +91,8 @@ function(e, t, n) {
             forceSecondaryActions: w = !1,
             interactive: k = !0,
             enableSecondaryActions: B = !1,
-            suppressPlaySound: V,
-            onMouseEnter: F,
+            suppressPlaySound: F,
+            onMouseEnter: V,
             onSelectItem: x,
             analyticsLocations: H,
             buttonOverlay: Y = p.SoundButtonOverlay.PLAY,
@@ -160,11 +160,11 @@ function(e, t, n) {
                 className: v.buttonOverlay,
                 children: [(0, i.jsx)("div", {
                     className: a()({
-                        [v.buttonOverlayBackground]: !V
+                        [v.buttonOverlayBackground]: !F
                     })
                 }), (0, i.jsxs)("div", {
                     className: v.buttonOverlayActions,
-                    children: [ec && eT, !V && !e_ && (0, i.jsx)(A.default, {
+                    children: [ec && eT, !F && !e_ && (0, i.jsx)(A.default, {
                         className: v.playIcon
                     }), ec && eI()]
                 })]
@@ -177,7 +177,7 @@ function(e, t, n) {
         }, [ea]), (0, i.jsxs)("li", {
             ref: t,
             className: v.soundButtonWrapper,
-            onMouseEnter: F,
+            onMouseEnter: V,
             children: [(0, i.jsxs)(_.ClickableContainer, {
                 ...j,
                 buttonProps: {
@@ -191,7 +191,7 @@ function(e, t, n) {
                 }),
                 className: a()(b, v.soundButton, {
                     [v.playing]: $,
-                    [v.hoverActiveBackground]: V,
+                    [v.hoverActiveBackground]: F,
                     [v.soundButtonInteractive]: k,
                     [v.buttonDisabled]: !k && !w,
                     [v.premiumDisabled]: e_ && !w,
@@ -205,7 +205,7 @@ function(e, t, n) {
                         x();
                         return
                     }
-                    V || J(H)
+                    F || J(H)
                 },
                 onContextMenu: B && !e_ ? q : void 0,
                 children: [(0, i.jsxs)("div", {

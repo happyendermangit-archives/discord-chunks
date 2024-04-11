@@ -8,7 +8,7 @@ function(e, t, n) {
             return H
         },
         UserPopoutBadgeList: function() {
-            return F
+            return V
         },
         default: function() {
             return Y
@@ -50,9 +50,9 @@ function(e, t, n) {
         w = n("689938"),
         k = n("181390");
     let B = d.AvatarSizes.SIZE_80,
-        V = (0, E.getDecorationSizeForAvatarSize)(B);
+        F = (0, E.getDecorationSizeForAvatarSize)(B);
 
-    function F(e) {
+    function V(e) {
         let {
             user: t,
             guildId: n,
@@ -96,7 +96,7 @@ function(e, t, n) {
             hasProfileEffect: m
         } = e, {
             profileTheme: R
-        } = r.useContext(y.UserProfileContext), g = r.useContext(O.AnalyticsContext), D = t.isNonUserBot() && !t.isClyde(), M = p.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, G.PremiumTypes.TIER_2), F = r.useMemo(() => (0, T.shouldDisableUserPresenceInChannel)(t, I), [t, I]), {
+        } = r.useContext(y.UserProfileContext), g = r.useContext(O.AnalyticsContext), D = t.isNonUserBot() && !t.isClyde(), M = p.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, G.PremiumTypes.TIER_2), V = r.useMemo(() => (0, T.shouldDisableUserPresenceInChannel)(t, I), [t, I]), {
             analyticsLocations: H
         } = (0, c.default)(), {
             trackUserProfileAction: Y,
@@ -119,8 +119,8 @@ function(e, t, n) {
                 avatarDecoration: z,
                 size: B,
                 "aria-label": t.username,
-                status: F ? b.StatusTypes.UNKNOWN : u,
-                statusBackdropColor: null != R && M && !F ? (0, d.getStatusBackdropColor)(R) : void 0,
+                status: V ? b.StatusTypes.UNKNOWN : u,
+                statusBackdropColor: null != R && M && !V ? (0, d.getStatusBackdropColor)(R) : void 0,
                 isMobile: _,
                 statusTooltip: !0
             })
@@ -155,9 +155,9 @@ function(e, t, n) {
                 },
                 children: [q, !K && function() {
                     let e = null != z,
-                        t = e ? V : (0, d.getAvatarSize)(B);
+                        t = e ? F : (0, d.getAvatarSize)(B);
                     return (0, i.jsx)(N.default, {
-                        mask: null == u || u === b.StatusTypes.UNKNOWN || F ? N.default.Masks.AVATAR_DEFAULT : (0, o.match)([e, _]).with([!0, !0], () => N.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_MOBILE_SQUARE_80).with([!0, !1], () => N.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_SQUARE_80).with([!1, !0], () => N.default.Masks.AVATAR_STATUS_MOBILE_80).with([!1, !1], () => N.default.Masks.AVATAR_STATUS_ROUND_80).exhaustive(),
+                        mask: null == u || u === b.StatusTypes.UNKNOWN || V ? N.default.Masks.AVATAR_DEFAULT : (0, o.match)([e, _]).with([!0, !0], () => N.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_MOBILE_SQUARE_80).with([!0, !1], () => N.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_SQUARE_80).with([!1, !0], () => N.default.Masks.AVATAR_STATUS_MOBILE_80).with([!1, !1], () => N.default.Masks.AVATAR_STATUS_ROUND_80).exhaustive(),
                         className: e ? k.avatarDecorationHint : k.avatarHint,
                         style: e ? {
                             borderRadius: .4 * t
@@ -215,7 +215,7 @@ function(e, t, n) {
                 hasBanner: (null == n ? void 0 : n.banner) != null,
                 hasProfileEffect: (null == n ? void 0 : n.profileEffectId) != null,
                 profileType: U.UserProfileTypes.POPOUT
-            }), (0, i.jsx)(F, {
+            }), (0, i.jsx)(V, {
                 user: t,
                 guildId: r
             })]
