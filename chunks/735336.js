@@ -2,281 +2,271 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return q
+            return Q
         }
     }), n("47120");
-    var i, r, s = n("735250"),
-        a = n("470079"),
-        o = n("803997"),
-        l = n.n(o),
-        u = n("866442"),
-        d = n("442837"),
-        _ = n("692547"),
-        c = n("481060"),
-        E = n("230711"),
-        I = n("100527"),
-        T = n("906732"),
-        f = n("220082"),
-        S = n("583405"),
-        A = n("556084"),
-        h = n("300284"),
-        m = n("695346"),
-        N = n("314897"),
-        O = n("592125"),
-        p = n("430824"),
-        R = n("944486"),
-        C = n("594174"),
-        g = n("451478"),
-        L = n("311715"),
-        D = n("465670"),
-        v = n("937482"),
-        M = n("466111"),
-        y = n("185403"),
-        P = n("26290"),
-        U = n("626135"),
-        b = n("768581"),
-        G = n("74538"),
-        w = n("785717"),
-        k = n("621853"),
-        B = n("943217"),
-        F = n("793397"),
-        V = n("841040"),
-        x = n("228168"),
-        H = n("981631"),
-        Y = n("474936"),
-        j = n("689938"),
-        W = n("350315");
-    (r = i || (i = {}))[r.SHOULD_LOAD = 0] = "SHOULD_LOAD", r[r.LOADING = 1] = "LOADING", r[r.COMPLETE = 2] = "COMPLETE";
-    let K = {
-            [x.UserProfileTypes.POPOUT]: 18,
-            [x.UserProfileTypes.MODAL]: 24,
-            [x.UserProfileTypes.SETTINGS]: 0,
-            [x.UserProfileTypes.PANEL]: 18,
-            [x.UserProfileTypes.POMELO_POPOUT]: 18,
-            [x.UserProfileTypes.CANCEL_MODAL]: 0
+    var i = n("735250"),
+        r = n("470079"),
+        s = n("803997"),
+        a = n.n(s),
+        o = n("866442"),
+        l = n("442837"),
+        u = n("692547"),
+        d = n("481060"),
+        _ = n("230711"),
+        c = n("100527"),
+        E = n("906732"),
+        I = n("220082"),
+        T = n("583405"),
+        f = n("556084"),
+        S = n("300284"),
+        A = n("695346"),
+        h = n("314897"),
+        m = n("592125"),
+        N = n("430824"),
+        O = n("944486"),
+        p = n("594174"),
+        R = n("451478"),
+        C = n("311715"),
+        g = n("465670"),
+        L = n("937482"),
+        D = n("466111"),
+        v = n("185403"),
+        M = n("26290"),
+        y = n("626135"),
+        P = n("768581"),
+        U = n("74538"),
+        b = n("785717"),
+        G = n("621853"),
+        w = n("888778"),
+        k = n("943217"),
+        B = n("793397"),
+        F = n("841040"),
+        V = n("228168"),
+        x = n("981631"),
+        H = n("474936"),
+        Y = n("689938"),
+        j = n("350315");
+    let W = {
+            [V.UserProfileTypes.POPOUT]: 18,
+            [V.UserProfileTypes.MODAL]: 24,
+            [V.UserProfileTypes.SETTINGS]: 0,
+            [V.UserProfileTypes.PANEL]: 18,
+            [V.UserProfileTypes.POMELO_POPOUT]: 18,
+            [V.UserProfileTypes.CANCEL_MODAL]: 0
         },
-        z = {
-            [x.UserProfileTypes.MODAL]: H.AnalyticsPages.USER_PROFILE,
-            [x.UserProfileTypes.POPOUT]: H.AnalyticsPages.USER_POPOUT,
-            [x.UserProfileTypes.SETTINGS]: H.AnalyticsPages.USER_POPOUT,
-            [x.UserProfileTypes.PANEL]: H.AnalyticsPages.DM_CHANNEL,
-            [x.UserProfileTypes.POMELO_POPOUT]: H.AnalyticsPages.POMELO_POPOUT,
-            [x.UserProfileTypes.CANCEL_MODAL]: H.AnalyticsPages.USER_POPOUT
+        K = {
+            [V.UserProfileTypes.MODAL]: x.AnalyticsPages.USER_PROFILE,
+            [V.UserProfileTypes.POPOUT]: x.AnalyticsPages.USER_POPOUT,
+            [V.UserProfileTypes.SETTINGS]: x.AnalyticsPages.USER_POPOUT,
+            [V.UserProfileTypes.PANEL]: x.AnalyticsPages.DM_CHANNEL,
+            [V.UserProfileTypes.POMELO_POPOUT]: x.AnalyticsPages.POMELO_POPOUT,
+            [V.UserProfileTypes.CANCEL_MODAL]: x.AnalyticsPages.USER_POPOUT
         };
 
-    function X(e) {
+    function z(e) {
         let {
             type: t,
-            shown: i,
-            onClick: r
-        } = e, o = (0, d.useStateFromStores)([C.default], () => {
-            let e = C.default.getCurrentUser();
-            return G.default.canUsePremiumProfileCustomization(e)
-        }), u = a.useRef(!1), {
-            analyticsLocations: _
-        } = (0, T.default)(I.default.BADGE);
-        return a.useEffect(() => {
-            i && !u.current && (u.current = !0, U.default.track(H.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-                type: Y.PremiumUpsellTypes.CUSTOM_PROFILES_PROFILE_BANNER_SOCIAL_UPSELL,
+            shown: s,
+            onClick: o
+        } = e, u = (0, l.useStateFromStores)([p.default], () => {
+            let e = p.default.getCurrentUser();
+            return U.default.canUsePremiumProfileCustomization(e)
+        }), I = r.useRef(!1), {
+            analyticsLocations: T
+        } = (0, E.default)(c.default.BADGE);
+        return r.useEffect(() => {
+            s && !I.current && (I.current = !0, y.default.track(x.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+                type: H.PremiumUpsellTypes.CUSTOM_PROFILES_PROFILE_BANNER_SOCIAL_UPSELL,
                 location: {
-                    page: z[t],
-                    section: H.AnalyticsSections.NITRO_BANNER,
-                    object: H.AnalyticsObjects.NITRO_BADGE
+                    page: K[t],
+                    section: x.AnalyticsSections.NITRO_BANNER,
+                    object: x.AnalyticsObjects.NITRO_BADGE
                 },
-                location_stack: _
+                location_stack: T
             }))
-        }, [_, i, t]), (0, s.jsx)(c.Tooltip, {
-            tooltipContentClassName: W.premiumIconTooltipContent,
-            text: o ? j.default.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP : j.default.Messages.USER_SETTINGS_PROFILE_THEMES_USER_PROFILE_ICON_TOOLTIP_UPSELL,
-            children: e => (0, s.jsx)(c.Clickable, {
+        }, [T, s, t]), (0, i.jsx)(d.Tooltip, {
+            tooltipContentClassName: j.premiumIconTooltipContent,
+            text: u ? Y.default.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP : Y.default.Messages.USER_SETTINGS_PROFILE_THEMES_USER_PROFILE_ICON_TOOLTIP_UPSELL,
+            children: e => (0, i.jsx)(d.Clickable, {
                 ...e,
-                onClick: o ? void 0 : () => {
+                onClick: u ? void 0 : () => {
                     var e;
-                    e = _, (0, c.openModalLazy)(async () => {
+                    e = T, (0, d.openModalLazy)(async () => {
                         let {
                             default: t
                         } = await Promise.all([n.e("99387"), n.e("30364")]).then(n.bind(n, "968031"));
                         return n => {
                             let {
-                                onClose: i,
-                                ...r
+                                onClose: r,
+                                ...s
                             } = n;
-                            return (0, s.jsx)(t, {
+                            return (0, i.jsx)(t, {
                                 analyticsLocations: e,
-                                title: j.default.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_FROM_ICON_MODAL_TITLE,
-                                description: j.default.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_FROM_ICON_MODAL_DESCRIPTION.format({
+                                title: Y.default.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_FROM_ICON_MODAL_TITLE,
+                                description: Y.default.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_FROM_ICON_MODAL_DESCRIPTION.format({
                                     onAndMoreWithPremiumClick: () => {
-                                        i(), E.default.open(H.UserSettingsSections.PREMIUM, null, {
+                                        r(), _.default.open(x.UserSettingsSections.PREMIUM, null, {
                                             analyticsLocations: e
                                         })
                                     }
                                 }),
-                                onClose: i,
-                                ...r
+                                onClose: r,
+                                ...s
                             })
                         }
-                    }), null == r || r()
+                    }), null == o || o()
                 },
-                className: l()(W.premiumIconWrapper, {
-                    [W.visible]: i,
-                    [W.clickable]: !o
+                className: a()(j.premiumIconWrapper, {
+                    [j.visible]: s,
+                    [j.clickable]: !u
                 }),
-                children: (0, s.jsx)(P.TextBadge, {
+                children: (0, i.jsx)(M.TextBadge, {
                     color: "rgba(32, 34, 37, 0.8)",
-                    text: (0, s.jsx)(M.default, {
+                    text: (0, i.jsx)(D.default, {
                         width: 16,
                         height: 16,
-                        className: W.premiumIcon
+                        className: j.premiumIcon
                     })
+                })
+            })
+        })
+    }
+
+    function X(e) {
+        let {
+            darkenOnHover: t,
+            profileType: n,
+            profileLabel: r,
+            icon: s,
+            ...a
+        } = e, o = W[n], l = "pencil" === s ? v.default : L.default;
+        return (0, i.jsx)(d.Clickable, {
+            ...a,
+            "aria-label": r,
+            className: t ? j.pencilContainerDark : j.pencilContainer,
+            children: (0, i.jsx)(d.Tooltip, {
+                text: r,
+                children: e => (0, i.jsx)(l, {
+                    ...e,
+                    width: o,
+                    height: o,
+                    className: j.editIcon
                 })
             })
         })
     }
 
     function Q(e) {
+        var t, n, s;
         let {
-            darkenOnHover: t,
-            profileType: n,
-            profileLabel: i,
-            icon: r,
-            ...a
-        } = e, o = K[n], l = "pencil" === r ? y.default : v.default;
-        return (0, s.jsx)(c.Clickable, {
-            ...a,
-            "aria-label": i,
-            className: t ? W.pencilContainerDark : W.pencilContainer,
-            children: (0, s.jsx)(c.Tooltip, {
-                text: i,
-                children: e => (0, s.jsx)(l, {
-                    ...e,
-                    width: o,
-                    height: o,
-                    className: W.editIcon
-                })
-            })
-        })
-    }
-
-    function q(e) {
-        var t, n, i;
-        let {
-            user: r,
-            displayProfile: o,
+            user: _,
+            displayProfile: c,
             bannerSrc: E,
-            onClose: I,
-            guildId: T,
-            profileType: C = x.UserProfileTypes.POPOUT,
+            onClose: p,
+            guildId: L,
+            profileType: D,
             isHovering: v,
             animateOnHover: M,
             allowEdit: y = !0,
-            showPremiumBadgeUpsell: P = !0,
-            hasProfileEffect: U = !1
-        } = e, [K, z] = a.useState((null == o ? void 0 : o.banner) == null ? 2 : 0), q = (0, d.useStateFromStores)([p.default], () => p.default.getGuild(T)), J = (0, d.useStateFromStores)([N.default], () => N.default.getId()) === r.id && y, Z = G.default.isPremiumAtLeast(null == o ? void 0 : o.premiumType, Y.PremiumTypes.TIER_2), {
-            trackUserProfileAction: $
-        } = (0, w.useUserProfileAnalyticsContext)(), [ee, et] = a.useState(!1), en = (0, d.useStateFromStores)([g.default], () => g.default.isFocused()), ei = m.GifAutoPlay.getSetting(), er = (0, c.useToken)(_.default.unsafe_rawColors.PRIMARY_800).hex(), es = (0, c.getAvatarSize)(c.AvatarSizes.SIZE_80), ea = (0, u.hex2int)((0, f.default)(r.getAvatarURL(T, es), er, !1)), eo = (0, S.default)(null !== (t = null == o ? void 0 : o.primaryColor) && void 0 !== t ? t : ea).hsl, el = (0, F.getUserBannerSize)(C), eu = null != E ? E : null == o ? void 0 : o.getBannerURL({
-            size: el,
-            canAnimate: M || !ei ? ee : en
-        }), ed = null != eu, e_ = (0, d.useStateFromStores)([k.default], () => k.default.getUserProfile(r.id)), ec = O.default.getChannel(R.default.getChannelId()), {
-            appsInGDMEnabled: eE,
-            availableApplications: eI
-        } = (0, A.usePrivateChannelIntegrationState)({
-            channelId: null !== (n = null == ec ? void 0 : ec.id) && void 0 !== n ? n : H.EMPTY_STRING_SNOWFLAKE_ID
-        }), eT = null == e_ ? void 0 : e_.application, ef = eE && null != eI.find(e => e.id === (null == eT ? void 0 : eT.id));
-        (0, a.useEffect)(() => {
-            if (ed && 0 === K) {
-                z(1);
-                let e = new Image;
-                e.src = eu, e.onload = () => z(2)
-            }
-        }, [r, ed, eu, K]), a.useEffect(() => {
-            if (ei || !ed) return;
-            let e = null != E ? E : null == o ? void 0 : o.getBannerURL({
-                size: el,
-                canAnimate: !0
-            });
-            if (null != e) new Image().src = e
-        }, [ei, ed, E, o, el]);
-        let eS = (0, h.default)({
+            showPremiumBadgeUpsell: W = !0,
+            hasProfileEffect: K = !1
+        } = e, Q = (0, l.useStateFromStores)([N.default], () => N.default.getGuild(L)), q = (0, l.useStateFromStores)([h.default], () => h.default.getId()) === _.id && y, J = U.default.isPremiumAtLeast(null == c ? void 0 : c.premiumType, H.PremiumTypes.TIER_2), {
+            trackUserProfileAction: Z
+        } = (0, b.useUserProfileAnalyticsContext)(), [$, ee] = r.useState(!1), et = (0, l.useStateFromStores)([R.default], () => R.default.isFocused()), en = A.GifAutoPlay.getSetting(), {
+            bannerSrc: ei,
+            status: er
+        } = (0, w.default)({
+            displayProfile: c,
+            overrideBannerSrc: E,
+            size: (0, B.getUserBannerSize)(D),
+            canAnimate: M || !en ? $ : et
+        }), es = (0, d.useToken)(u.default.unsafe_rawColors.PRIMARY_800).hex(), ea = (0, d.getAvatarSize)(d.AvatarSizes.SIZE_80), eo = (0, o.hex2int)((0, I.default)(_.getAvatarURL(L, ea), es, !1)), el = (0, T.default)(null !== (t = null == c ? void 0 : c.primaryColor) && void 0 !== t ? t : eo).hsl, eu = (0, l.useStateFromStores)([G.default], () => G.default.getUserProfile(_.id)), ed = m.default.getChannel(O.default.getChannelId()), {
+            appsInGDMEnabled: e_,
+            availableApplications: ec
+        } = (0, f.usePrivateChannelIntegrationState)({
+            channelId: null !== (n = null == ed ? void 0 : ed.id) && void 0 !== n ? n : x.EMPTY_STRING_SNOWFLAKE_ID
+        }), eE = null == eu ? void 0 : eu.application, eI = e_ && null != ec.find(e => e.id === (null == eE ? void 0 : eE.id)), eT = (0, S.default)({
             analyticsLocation: {
-                page: H.AnalyticsPages.USER_POPOUT,
-                section: H.AnalyticsSections.PROFILE_POPOUT
+                page: x.AnalyticsPages.USER_POPOUT,
+                section: x.AnalyticsSections.PROFILE_POPOUT
             }
         });
-        return (0, s.jsx)(B.default, {
-            isPremium: Z,
-            hasThemeColors: null !== (i = null == o ? void 0 : o.canEditThemes) && void 0 !== i && i,
-            profileType: C,
-            hasBanner: ed,
-            hasProfileEffect: U,
-            children: (0, s.jsxs)("div", {
-                className: l()(W.banner, (0, F.getUserBannerStyles)({
-                    profileType: C,
+        return (0, i.jsx)(k.default, {
+            isPremium: J,
+            hasThemeColors: null !== (s = null == c ? void 0 : c.canEditThemes) && void 0 !== s && s,
+            profileType: D,
+            hasBanner: null != ei,
+            hasProfileEffect: K,
+            children: (0, i.jsxs)("div", {
+                className: a()(j.banner, (0, B.getUserBannerStyles)({
+                    profileType: D,
                     user: {
-                        hasBanner: ed,
-                        isPremium: Z,
-                        hasProfileEffect: U
+                        hasBanner: null != ei,
+                        isPremium: J,
+                        hasProfileEffect: K
                     }
                 }), {
-                    [W.reducedMotion]: !ei
+                    [j.reducedMotion]: !en
                 }),
-                onMouseMove: () => et(!0),
-                onMouseLeave: () => et(!1),
+                onMouseMove: () => ee(!0),
+                onMouseLeave: () => ee(!1),
                 style: {
-                    backgroundImage: ed ? "url(".concat(eu, ")") : void 0,
-                    backgroundColor: 2 !== K ? _.default.unsafe_rawColors.PRIMARY_800.css : eo
+                    backgroundImage: null != ei ? "url(".concat(ei, ")") : void 0,
+                    backgroundColor: er !== w.BannerLoadingStatus.COMPLETE ? u.default.unsafe_rawColors.PRIMARY_800.css : el
                 },
-                children: [J ? null == q ? (0, s.jsx)(Q, {
-                    darkenOnHover: U && v,
-                    profileType: C,
-                    profileLabel: j.default.Messages.EDIT_PROFILE,
+                children: [q ? null == Q ? (0, i.jsx)(X, {
+                    darkenOnHover: K && v,
+                    profileType: D,
+                    profileLabel: Y.default.Messages.EDIT_PROFILE,
                     icon: "pencil",
                     onClick: () => {
-                        $({
+                        Z({
                             action: "EDIT_PROFILE"
-                        }), null == I || I(), eS()
+                        }), null == p || p(), eT()
                     }
-                }) : (0, s.jsx)(c.Popout, {
+                }) : (0, i.jsx)(d.Popout, {
                     spacing: 6,
                     position: "bottom",
                     renderPopout: e => {
                         let {
                             closePopout: t
                         } = e;
-                        return (0, s.jsx)(V.default, {
+                        return (0, i.jsx)(F.default, {
                             onClose: t,
-                            onSelect: I,
-                            guild: q
+                            onSelect: p,
+                            guild: Q
                         })
                     },
-                    children: e => (0, s.jsx)(Q, {
-                        darkenOnHover: U && v,
-                        profileLabel: j.default.Messages.EDIT_PROFILE,
+                    children: e => (0, i.jsx)(X, {
+                        darkenOnHover: K && v,
+                        profileLabel: Y.default.Messages.EDIT_PROFILE,
                         icon: "pencil",
                         ...e,
-                        profileType: C
+                        profileType: D
                     })
-                }) : P && ed && C !== x.UserProfileTypes.SETTINGS ? (0, s.jsx)(X, {
-                    type: C,
-                    shown: void 0 === v ? ee : v,
+                }) : W && null != ei && D !== V.UserProfileTypes.SETTINGS ? (0, i.jsx)(z, {
+                    type: D,
+                    shown: void 0 === v ? $ : v,
                     onClick: () => {
-                        $({
+                        Z({
                             action: "PRESS_PREMIUM_UPSELL"
-                        }), null == I || I()
+                        }), null == p || p()
                     }
-                }) : null, ef ? C !== x.UserProfileTypes.MODAL ? null : (0, s.jsx)(c.Clickable, {
-                    onClick: I,
-                    "aria-label": j.default.Messages.BACK,
-                    className: W.pencilContainer,
-                    children: (0, s.jsx)(c.Tooltip, {
-                        text: j.default.Messages.BACK,
-                        children: e => (0, s.jsx)(D.default, {
+                }) : null, eI ? D !== V.UserProfileTypes.MODAL ? null : (0, i.jsx)(d.Clickable, {
+                    onClick: p,
+                    "aria-label": Y.default.Messages.BACK,
+                    className: j.pencilContainer,
+                    children: (0, i.jsx)(d.Tooltip, {
+                        text: Y.default.Messages.BACK,
+                        children: e => (0, i.jsx)(g.default, {
                             ...e,
-                            className: W.closeIcon,
+                            className: j.closeIcon,
                             color: "white"
                         })
                     })
-                }) : null, !ei && (0, b.isAnimatedImageURL)(eu) && (0, s.jsx)(L.default, {
-                    className: W.gifTag
+                }) : null, !en && (0, P.isAnimatedImageURL)(ei) && (0, i.jsx)(C.default, {
+                    className: j.gifTag
                 })]
             })
         })

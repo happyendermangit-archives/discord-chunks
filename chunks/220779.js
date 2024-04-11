@@ -69,31 +69,32 @@ function(e, t, n) {
             let {
                 placeholder: n,
                 onEnter: s,
-                setEditorRef: a,
-                showEmojiButton: o = !1,
-                autoCompletePosition: l,
-                renderAttachButton: u,
-                onFocus: E,
-                channel: I
-            } = e, [T, S] = r.useState(""), [A, N] = r.useState((0, _.toRichValue)("")), O = () => {
-                S(""), N((0, _.toRichValue)(""))
-            }, [p, R] = r.useState(!1), C = d.ChatInputTypes.ATOMIC_REACTOR_REPLY_INPUT;
-            return o && (C.emojis = {
+                setEditorRef: o,
+                showEmojiButton: l = !1,
+                autoCompletePosition: u,
+                renderAttachButton: E,
+                onFocus: I,
+                channel: T,
+                className: S
+            } = e, [A, N] = r.useState(""), [O, p] = r.useState((0, _.toRichValue)("")), R = () => {
+                N(""), p((0, _.toRichValue)(""))
+            }, [C, g] = r.useState(!1), L = d.ChatInputTypes.ATOMIC_REACTOR_REPLY_INPUT;
+            return l && (L.emojis = {
                 button: !0
             }), (0, i.jsx)(c.default, {
                 ref: t,
                 placeholder: n,
-                className: h.replyInput,
+                className: a()(h.replyInput, S),
                 showRemainingCharsAfterCount: -1,
                 allowNewLines: !1,
                 maxCharacterCount: f.MAX_CHAR_COUNT,
-                channel: null != I ? I : m,
+                channel: null != T ? T : m,
                 onChange: (e, t, n) => {
-                    S(t), N(n)
+                    N(t), p(n)
                 },
-                type: C,
-                textValue: T,
-                richValue: A,
+                type: L,
+                textValue: A,
+                richValue: O,
                 onSubmit: e => {
                     let {
                         value: t
@@ -101,24 +102,24 @@ function(e, t, n) {
                     return t.length > f.MAX_CHAR_COUNT ? Promise.resolve({
                         shouldClear: !1,
                         shouldRefocus: !0
-                    }) : (s(t), O(), Promise.resolve({
+                    }) : (s(t), R(), Promise.resolve({
                         shouldClear: !0,
                         shouldRefocus: !1
                     }))
                 },
-                setEditorRef: a,
-                focused: p,
+                setEditorRef: o,
+                focused: C,
                 onFocus: () => {
-                    null == E || E(), R(!0)
+                    null == I || I(), g(!0)
                 },
                 onBlur: () => {
-                    R(!1)
+                    g(!1)
                 },
                 disableThemedBackground: !0,
                 emojiPickerCloseOnModalOuterClick: !0,
                 disabled: !1,
-                autoCompletePosition: l,
-                renderAttachButton: u
+                autoCompletePosition: u,
+                renderAttachButton: E
             })
         }),
         p = (e, t) => {

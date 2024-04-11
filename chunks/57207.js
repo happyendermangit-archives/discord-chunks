@@ -17,7 +17,8 @@ function(e, t, n) {
             [r.DismissibleContent.MJ_NEW_USER_CHAT_BAR]: 0,
             [r.DismissibleContent.NUX_GUILD_CHANNEL_EXPLAINER]: 0,
             [r.DismissibleContent.SEEN_LAUNCH_WELCOME]: 0,
-            [r.DismissibleContent.SEEN_OLD_DESIGN]: 0
+            [r.DismissibleContent.SEEN_OLD_DESIGN]: 0,
+            [r.DismissibleContent.REFERRAL_PROGRAM_PROGRESS_BAR_TOGGLE]: 0
         },
         u = a.default.Millis.DAY;
 

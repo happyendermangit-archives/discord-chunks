@@ -4825,6 +4825,8 @@ function(e) {
         INCOMING_FRIEND_REQUEST_FROM: "Incoming Friend Request from !!{name}!!",
         INCOMING_FRIEND_REQUESTS_COUNT: "{count} incoming friend requests",
         OUTGOING_FRIEND_REQUEST: "Outgoing Friend Request",
+        ACCEPT_FRIEND_REQUEST: "Accept Friend Request",
+        IGNORE_FRIEND_REQUEST: "Ignore Friend Request",
         CANCEL_FRIEND_REQUEST: "Cancel Friend Request",
         OUTGOING_FRIEND_REQUEST_DELETE_MSG: "Are you sure you want to delete your friend request to **!!{name}!!**?",
         FRIEND_REQUESTS_COMBINED_COUNT: "{incoming, number} received  •  {outgoing, number} sent",

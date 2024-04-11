@@ -5,7 +5,7 @@ function(e, t, a) {
             return o
         }
     });
-    var d, n, c, i, o, r, f = a("442837"),
+    var d, n, i, c, o, r, f = a("442837"),
         s = a("570140");
     (d = o || (o = {}))[d.NOT_STARTED = 0] = "NOT_STARTED", d[d.IN_PROGRESS = 1] = "IN_PROGRESS", d[d.FAILED = 2] = "FAILED", d[d.SKIPPED = 3] = "SKIPPED";
     let l = 0;
@@ -14,12 +14,12 @@ function(e, t, a) {
             return l
         }
     }
-    i = "DomainMigrationStore", (c = "displayName") in(n = u) ? Object.defineProperty(n, c, {
-        value: i,
+    c = "DomainMigrationStore", (i = "displayName") in(n = u) ? Object.defineProperty(n, i, {
+        value: c,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : n[c] = i, t.default = new u(s.default, {
+    }) : n[i] = c, t.default = new u(s.default, {
         DOMAIN_MIGRATION_START: function() {
             l = 1
         },
