@@ -1176,6 +1176,7 @@ function(_, E, e) {
             USER_GUILD_SETTINGS_BULK: "/users/@me/guilds/settings",
             USER_GUILD_SETTINGS: _ => "/users/@me/guilds/".concat(_, "/settings"),
             APPLICATIONS_DETECTABLE: "/applications/detectable",
+            APPLICATIONS_GAMES_SUPPLEMENTAL: "/applications/games-supplemental",
             APPLICATION_ICON: (_, E) => "/applications/".concat(_, "/app-icons/").concat(E, ".png"),
             APPLICATION_RPC: _ => "/oauth2/applications/".concat(_, "/rpc"),
             APPLICATION_ASSETS: _ => "/oauth2/applications/".concat(_, "/assets"),

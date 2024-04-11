@@ -7,31 +7,32 @@ function(e, t, n) {
         a = n("566620"),
         o = n("812206"),
         l = n("439849"),
-        u = n("706454"),
-        d = n("757266"),
-        _ = n("77498"),
-        c = n("283595"),
-        E = n("417363"),
-        I = n("630388"),
-        T = n("877481"),
-        f = n("358085"),
-        S = n("278323"),
-        h = n("58642"),
-        A = n("254854"),
-        m = n("981631"),
-        N = n("701488"),
-        O = n("689938");
+        u = n("669764"),
+        d = n("706454"),
+        _ = n("757266"),
+        c = n("77498"),
+        E = n("283595"),
+        I = n("417363"),
+        T = n("630388"),
+        f = n("877481"),
+        S = n("358085"),
+        h = n("278323"),
+        A = n("58642"),
+        m = n("254854"),
+        N = n("981631"),
+        O = n("701488"),
+        p = n("689938");
 
-    function p(e) {
+    function R(e) {
         let {
             applicationId: t,
             secret: n,
             channelId: i,
-            intent: r = N.ActivityIntent.PLAY,
+            intent: r = O.ActivityIntent.PLAY,
             embedded: a = !1,
             analyticsLocations: o = []
         } = e;
-        R(t, null, i, a, o).then(() => T.default.waitConnected(t)).then(() => Promise.race([T.default.waitSubscribed(t, m.RPCEvents.ACTIVITY_JOIN)])).then(() => {
+        C(t, null, i, a, o).then(() => f.default.waitConnected(t)).then(() => Promise.race([f.default.waitSubscribed(t, N.RPCEvents.ACTIVITY_JOIN)])).then(() => {
             s.default.dispatch({
                 type: "ACTIVITY_JOIN",
                 applicationId: t,
@@ -45,29 +46,29 @@ function(e, t, n) {
         }))
     }
 
-    function R(e, t, n) {
+    function C(e, t, n) {
         let l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-            _ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [];
-        if (l) return null == n ? Promise.reject(Error("Invalid channel ID")) : ((0, a.startEmbeddedActivity)(n, e, _), Promise.resolve());
-        if (d.default.isConnected(e)) return Promise.resolve();
-        let I = null;
+            u = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [];
+        if (l) return null == n ? Promise.reject(Error("Invalid channel ID")) : ((0, a.startEmbeddedActivity)(n, e, u), Promise.resolve());
+        if (_.default.isConnected(e)) return Promise.resolve();
+        let c = null;
         if (null == t) {
-            let n = c.default.getActiveLibraryApplication(e);
+            let n = E.default.getActiveLibraryApplication(e);
             t = null != n ? n.branchId : e
         }
-        if (E.default.isLaunchable(e, t)) {
-            var f;
-            let n = E.default.getState(e, t),
-                s = c.default.getActiveLaunchOptionId(e, t);
+        if (I.default.isLaunchable(e, t)) {
+            var T;
+            let n = I.default.getState(e, t),
+                s = E.default.getActiveLaunchOptionId(e, t);
             if (null == n) throw Error("Missing dispatch game when launching");
-            let a = c.default.getLibraryApplication(e, t);
+            let a = E.default.getLibraryApplication(e, t);
             if (null == a) throw Error("Missing library application when launching");
-            I = (f = e, r.HTTP.post({
-                url: m.Endpoints.OAUTH2_AUTHORIZE,
+            c = (T = e, r.HTTP.post({
+                url: N.Endpoints.OAUTH2_AUTHORIZE,
                 query: {
-                    client_id: f,
+                    client_id: T,
                     response_type: "token",
-                    scope: [m.OAuth2Scopes.IDENTIFY].join(" ")
+                    scope: [N.OAuth2Scopes.IDENTIFY].join(" ")
                 },
                 retries: 3,
                 body: {
@@ -86,27 +87,27 @@ function(e, t, n) {
             }, e => {
                 if (404 === e.status) return null;
                 throw e
-            })).then(e => T.default.launchDispatchApplication(n, e, u.default.locale, a.getBranchName(), s))
+            })).then(e => f.default.launchDispatchApplication(n, e, d.default.locale, a.getBranchName(), s))
         } else {
             let t = o.default.getApplication(e);
-            I = null != t ? T.default.launch(t) : T.default.launchGame(e)
+            c = null != t ? f.default.launch(t) : f.default.launchGame(e)
         }
         let S = Error("game not found");
-        return null != I ? (s.default.dispatch({
+        return null != c ? (s.default.dispatch({
             type: "LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE",
             applicationId: e,
             branchId: t
         }), s.default.dispatch({
             type: "GAME_LAUNCH_START",
             applicationId: e
-        }), I.then(t => {
+        }), c.then(t => {
             s.default.dispatch({
                 type: "GAME_LAUNCH_SUCCESS",
                 applicationId: e,
                 pids: t
             })
         }).catch(t => {
-            A.default.show(m.NoticeTypes.LAUNCH_GAME_FAILURE, O.default.Messages.GAME_LAUNCH_FAILED_LAUNCH_TARGET_NOT_FOUND), s.default.dispatch({
+            m.default.show(N.NoticeTypes.LAUNCH_GAME_FAILURE, p.default.Messages.GAME_LAUNCH_FAILED_LAUNCH_TARGET_NOT_FOUND), s.default.dispatch({
                 type: "GAME_LAUNCH_FAIL",
                 applicationId: e,
                 error: S
@@ -125,12 +126,12 @@ function(e, t, n) {
             })
         },
         toggleOverlay(e, t) {
-            let n = _.default.getGameByName(e.name);
+            let n = c.default.getGameByName(e.name);
             if (null != n) {
-                let e = c.default.getActiveLibraryApplication(n.id);
+                let e = E.default.getActiveLibraryApplication(n.id);
                 if (null != e) {
-                    let t = I.toggleFlag(e.getFlags(), m.LibraryApplicationFlags.OVERLAY_DISABLED);
-                    h.updateFlags(e.id, e.branchId, t);
+                    let t = T.toggleFlag(e.getFlags(), N.LibraryApplicationFlags.OVERLAY_DISABLED);
+                    A.updateFlags(e.id, e.branchId, t);
                     return
                 }
             }
@@ -174,14 +175,41 @@ function(e, t, n) {
                 }), n(r)
             })
         })),
+        async getDetectableGamesSupplemental(e) {
+            let t = e.filter(u.default.canFetch);
+            if (0 !== t.length) {
+                s.default.dispatch({
+                    type: "DETECTABLE_GAME_SUPPLEMENTAL_FETCH",
+                    applicationIds: t
+                });
+                try {
+                    let e = await r.HTTP.get({
+                        url: N.Endpoints.APPLICATIONS_GAMES_SUPPLEMENTAL,
+                        query: {
+                            application_ids: t
+                        }
+                    });
+                    s.default.dispatch({
+                        type: "DETECTABLE_GAME_SUPPLEMENTAL_FETCH_SUCCESS",
+                        applicationIds: t,
+                        supplementalGameData: e.body.supplemental_game_data
+                    })
+                } catch {
+                    s.default.dispatch({
+                        type: "DETECTABLE_GAME_SUPPLEMENTAL_FETCH_FAILURE",
+                        applicationIds: t
+                    })
+                }
+            }
+        },
         getDetectableGames() {
-            !_.default.fetching && null == _.default.lastFetched && s.default.wait(() => {
+            !c.default.fetching && null == c.default.lastFetched && s.default.wait(() => {
                 s.default.dispatch({
                     type: "GAMES_DATABASE_FETCH"
                 }), r.HTTP.get({
-                    url: m.Endpoints.APPLICATIONS_DETECTABLE,
+                    url: N.Endpoints.APPLICATIONS_DETECTABLE,
                     headers: {
-                        "If-None-Match": _.default.detectableGamesEtag
+                        "If-None-Match": c.default.detectableGamesEtag
                     },
                     retries: 1,
                     oldFormErrors: !0
@@ -204,7 +232,7 @@ function(e, t, n) {
                     304 === t ? s.default.dispatch({
                         type: "GAMES_DATABASE_UPDATE",
                         games: [],
-                        etag: _.default.detectableGamesEtag
+                        etag: c.default.detectableGamesEtag
                     }) : s.default.dispatch({
                         type: "GAMES_DATABASE_FETCH_FAIL"
                     })
@@ -223,10 +251,10 @@ function(e, t, n) {
             if (null != d) {
                 var _, c;
                 r.HTTP.post({
-                    url: m.Endpoints.UNVERIFIED_APPLICATIONS,
+                    url: N.Endpoints.UNVERIFIED_APPLICATIONS,
                     body: {
                         name: t,
-                        os: (0, f.getPlatformName)(),
+                        os: (0, S.getPlatformName)(),
                         icon: n,
                         distributor_application: (_ = a, c = o, null == _ || "" === _ ? null : {
                             distributor: _,
@@ -257,7 +285,7 @@ function(e, t, n) {
         },
         uploadIcon(e, t, n) {
             r.HTTP.post({
-                url: m.Endpoints.UNVERIFIED_APPLICATIONS_ICONS,
+                url: N.Endpoints.UNVERIFIED_APPLICATIONS_ICONS,
                 body: {
                     application_name: e,
                     application_hash: t,
@@ -273,7 +301,7 @@ function(e, t, n) {
                 game: e
             })
         },
-        launch: R,
+        launch: C,
         async join(e) {
             let {
                 userId: t,
@@ -281,7 +309,7 @@ function(e, t, n) {
                 applicationId: i,
                 channelId: r,
                 messageId: a,
-                intent: o = N.ActivityIntent.PLAY,
+                intent: o = O.ActivityIntent.PLAY,
                 embedded: l = !1
             } = e;
             if (__OVERLAY__) return s.default.dispatch({
@@ -297,8 +325,8 @@ function(e, t, n) {
                 applicationId: i
             });
             try {
-                let e = await S.default.getJoinSecret(t, n, i, r, a);
-                return p({
+                let e = await h.default.getJoinSecret(t, n, i, r, a);
+                return R({
                     applicationId: i,
                     secret: e,
                     channelId: r,
@@ -312,6 +340,6 @@ function(e, t, n) {
                 }), !1
             }
         },
-        joinWithSecret: p
+        joinWithSecret: R
     }
 }
