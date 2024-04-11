@@ -12,6 +12,9 @@ function(e) {
         filterPillSmall: "filterPillSmall_ba6dc1",
         filterTooltip: "filterTooltip__5ddcd",
         filterTooltipContent: "filterTooltipContent_d1b808",
+        languagesIcon: "languagesIcon_cf570e",
+        languagesSelect: "languagesSelect_e8341a",
+        languagesTitle: "languagesTitle__97836",
         playstyleHeader: "playstyleHeader__45372",
         playstyleOption: "playstyleOption_c404e8",
         playstyleSelector: "playstyleSelector_b85eff",
@@ -31,6 +34,12 @@ function(e) {
         toolbar: "toolbar__4e903",
         topPicks: "topPicks__3115d",
         topPicksContent: "topPicksContent__7c8f8",
-        topPicksHeader: "topPicksHeader_d3b9c1"
+        topPicksHeader: "topPicksHeader_d3b9c1",
+        traitCategory: "traitCategory__66878",
+        traitHeader: "traitHeader__19cce",
+        traitSelector: "traitSelector__134a9",
+        traitSelectorContent: "traitSelectorContent__32877",
+        traitSelectorSaveContainer: "traitSelectorSaveContainer__1d1eb",
+        traits: "traits_bdaa3b"
     }
 }

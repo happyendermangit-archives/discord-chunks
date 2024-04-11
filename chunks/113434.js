@@ -4,6 +4,9 @@ function(e, t, n) {
         useDismissNewQuestBadge: function() {
             return m
         },
+        useExpiredQuestsMap: function() {
+            return f
+        },
         useIsQuestExpired: function() {
             return S
         },

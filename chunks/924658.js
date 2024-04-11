@@ -408,6 +408,8 @@ function(e) {
         CLAN_DISCOVERY_PROFILE_TITLE: "Answer a few questions to join!",
         CLAN_DISCOVERY_PROFILE_SUBTITLE: "The Gaming Guild leader will get back to you shortly after you submit.",
         CLAN_DISCOVERY_PLAYSTYLE_TITLE: "What's your playstyle?",
-        CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE: "We'll recommend you Gaming Guilds that fit your playstyle."
+        CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE: "We'll recommend you Gaming Guilds that fit your playstyle.",
+        CLAN_DISCOVERY_TRAIT_TITLE: "Would you prefer to sort by any of these?",
+        CLAN_DISCOVERY_TRAIT_SUBTITLE: "We will prioritize Gaming Guilds that match the criteria you selected."
     })
 }
