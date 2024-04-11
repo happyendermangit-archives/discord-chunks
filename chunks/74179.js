@@ -30,7 +30,8 @@ function(e, t, n) {
             hasPaymentSources: Object.keys(l).length > 0,
             paymentSourceId: _,
             setPaymentSourceId: c,
-            hasFetchedPaymentSources: u
+            hasFetchedPaymentSources: u,
+            defaultPaymentSource: null != o ? l[o] : null
         }
     }
 }
