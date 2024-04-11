@@ -10,8 +10,8 @@ function(e, t, a) {
     }), a("470079"), a("902704");
     var d = a("433517"),
         n = a("159626"),
-        c = a("893638"),
-        i = a("828695"),
+        i = a("893638"),
+        c = a("828695"),
         o = a("70956"),
         r = a("278147");
     let f = {
@@ -53,7 +53,7 @@ function(e, t, a) {
         var a, n;
         let o = !(0, r.isInMainTabsExperiment)(),
             b = !!o || (null == t ? void 0 : t.disable);
-        return i.default.hasLoadedExperiments || b ? (0, c.getMergedExperimentConfigs)(u.existingUsers, u.newUsers, e, {
+        return c.default.hasLoadedExperiments || b ? (0, i.getMergedExperimentConfigs)(u.existingUsers, u.newUsers, e, {
             ...t,
             disable: b,
             autoTrackExposure: !o && (null === (n = null == t ? void 0 : t.autoTrackExposure) || void 0 === n || n)
