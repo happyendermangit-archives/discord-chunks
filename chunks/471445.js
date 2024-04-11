@@ -26,8 +26,8 @@ function(e, t, n) {
         T = n("308540"),
         f = n("814550"),
         S = n("93879"),
-        A = n("535321"),
-        h = n("277942"),
+        h = n("535321"),
+        A = n("277942"),
         m = n("974029"),
         N = n("481479"),
         O = n("160696"),
@@ -148,8 +148,8 @@ function(e, t, n) {
                     if ((0, K.default)(e)) return w.default;
                     else return W.default
                 }
-                if (e.isNSFW()) return h.default;
-                if ((0, K.default)(e)) return A.default;
+                if (e.isNSFW()) return A.default;
+                if ((0, K.default)(e)) return h.default;
                 return S.default;
             case X.ChannelTypes.GUILD_FORUM:
                 let en = e.isMediaChannel();

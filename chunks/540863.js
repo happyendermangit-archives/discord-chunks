@@ -22,7 +22,7 @@ function(e, t, n) {
             title: T,
             error: f,
             ...S
-        } = e, A = r.useId(), h = r.useId(), m = null !== (n = S.titleId) && void 0 !== n ? n : A, N = null != f ? null !== (o = S.errorId) && void 0 !== o ? o : h : void 0;
+        } = e, h = r.useId(), A = r.useId(), m = null !== (n = S.titleId) && void 0 !== n ? n : h, N = null != f ? null !== (o = S.errorId) && void 0 !== o ? o : A : void 0;
         return (0, i.jsxs)("div", {
             ref: t,
             className: null != d ? d : void 0,

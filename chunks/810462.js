@@ -18,7 +18,7 @@ function(e, t, n) {
             expressionsListRef: I,
             defaultSearchPlaceholder: T,
             emptySearchPlaceholder: f
-        } = e, S = r.useRef(null), [A, h] = (0, u.useExpressionPickerStore)(e => [e.searchQuery, e.isSearchSuggestion], s.default), m = n.useStore(e => e.searchPlaceholder), N = n.useStore(e => e.inspectedExpressionPosition, s.default), O = r.useCallback(e => {
+        } = e, S = r.useRef(null), [h, A] = (0, u.useExpressionPickerStore)(e => [e.searchQuery, e.isSearchSuggestion], s.default), m = n.useStore(e => e.searchPlaceholder), N = n.useStore(e => e.inspectedExpressionPosition, s.default), O = r.useCallback(e => {
             var t;
             n.setActiveCategoryIndex("" === e ? 0 : l.INACTIVE_CATEGORY_INDEX), n.setInspectedExpressionPosition(0, 0), n.setSearchPlaceholder(null), (0, u.setSearchQuery)(e), null === (t = I.current) || void 0 === t || t.scrollTo(0)
         }, [I, n]), p = r.useCallback(() => {
@@ -30,16 +30,16 @@ function(e, t, n) {
                 return null === (e = S.current) || void 0 === e ? void 0 : e.focus()
             }
         })), r.useLayoutEffect(() => {
-            if (h) {
+            if (A) {
                 var e;
                 null === (e = S.current) || void 0 === e || e.focus()
             }
-        }, [h]), (0, i.jsx)("div", {
+        }, [A]), (0, i.jsx)("div", {
             className: d.wrapper,
             children: (0, i.jsx)(o.default, {
                 autoFocus: _,
                 disabled: !_,
-                query: A,
+                query: h,
                 ref: S,
                 size: o.default.Sizes.MEDIUM,
                 placeholder: null != m ? m : _ || null == f ? T : f,

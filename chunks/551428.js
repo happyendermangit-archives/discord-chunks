@@ -20,11 +20,11 @@ function(e, t, n) {
         !(null != i && !i.isSlimDirectoryVersion() && r.isSlimDirectoryVersion()) && (!1 === e.published ? (null == T[n] && (T[n] = new Set), T[n].add(t)) : f[n] = t, E[t] = r)
     }
 
-    function A(e, t) {
+    function h(e, t) {
         return "".concat(e, ":").concat(t)
     }
 
-    function h(e) {
+    function A(e) {
         let {
             storeListings: t
         } = e;
@@ -48,14 +48,14 @@ function(e, t, n) {
         }
         getForSKU(e, t) {
             let n = f[e];
-            return null != t ? I[A(t, e)] : null != n ? E[n] : null
+            return null != t ? I[h(t, e)] : null != n ? E[n] : null
         }
         getUnpublishedForSKU(e) {
             let t = T[e];
             return null == t ? [] : Array.from(t).map(e => E[e]).filter(c.isNotNullish)
         }
         getForChannel(e, t) {
-            return I[A(e, t)]
+            return I[h(e, t)]
         }
         getStoreListing(e) {
             let {
@@ -83,8 +83,8 @@ function(e, t, n) {
         configurable: !0,
         writable: !0
     }) : s[a] = o, t.default = new O(u.default, {
-        STORE_LISTINGS_FETCH_SUCCESS: h,
-        APPLICATION_STORE_DIRECTORY_FETCH_SUCCESS: h,
+        STORE_LISTINGS_FETCH_SUCCESS: A,
+        APPLICATION_STORE_DIRECTORY_FETCH_SUCCESS: A,
         STORE_LISTING_FETCH_SUCCESS: function(e) {
             let {
                 storeListing: t,
@@ -92,7 +92,7 @@ function(e, t, n) {
             } = e;
             if (null != n) {
                 let e = _.default.createFromServer(t);
-                I[A(n, e.skuId)] = e, f[e.skuId] = e.id
+                I[h(n, e.skuId)] = e, f[e.skuId] = e.id
             } else S(t)
         },
         USER_SETTINGS_PROTO_UPDATE: N,

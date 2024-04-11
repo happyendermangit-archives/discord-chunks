@@ -14,8 +14,8 @@ function(e, t, n) {
         T = n("77498"),
         f = n("944486"),
         S = n("885110"),
-        A = n("67212"),
-        h = n("770471"),
+        h = n("67212"),
+        A = n("770471"),
         m = n("757454"),
         N = n("158631"),
         O = n("981631");
@@ -26,11 +26,11 @@ function(e, t, n) {
             if (null == e) return;
             let {
                 canBroadcast: t
-            } = h.default.getCurrentConfig({
+            } = A.default.getCurrentConfig({
                 location: "handle_running_games_change"
             }, {
                 autoTrackExposure: !1
-            }), n = S.default.getBroadcast(), i = (0, A.getGameName)(e), r = null != T.default.getGameByName(i), s = (0, N.getIsBroadcastingToAnyone)();
+            }), n = S.default.getBroadcast(), i = (0, h.getGameName)(e), r = null != T.default.getGameByName(i), s = (0, N.getIsBroadcastingToAnyone)();
             if (!t || null != n || !c.BroadcastAutoBroadcast.getSetting() || !r || !s || null != p.find(t => t.pid === e.pid)) return;
             if (p = d.default.getRunningGames(), !(0, m.getCanStartBroadcast)()) return;
             let a = f.default.getVoiceChannelId();
@@ -43,7 +43,7 @@ function(e, t, n) {
             let {
                 streamKey: t
             } = e;
-            (0, A.startBroadcastForStream)(t, i)
+            (0, h.startBroadcastForStream)(t, i)
         }
         handleStreamStop(e) {
             let {
@@ -57,7 +57,7 @@ function(e, t, n) {
             if (null == n || null == a || n !== E.default.getId()) return;
             let o = I.default.getChannel(a),
                 l = null != o && o.isBroadcastChannel();
-            null != o && n === o.ownerId && l && (i = null, r = null, s = null, (0, A.stopBroadcast)())
+            null != o && n === o.ownerId && l && (i = null, r = null, s = null, (0, h.stopBroadcast)())
         }
         handleStartBroadcastStream(e) {
             let {
@@ -89,13 +89,13 @@ function(e, t, n) {
             if (null == r || !r.isBroadcastChannel()) return;
             a.default.closePrivateChannel(t, i === t, !0);
             let s = S.default.getBroadcast();
-            null != s && r.id === s.channelId && (0, A.stopBroadcast)()
+            null != s && r.id === s.channelId && (0, h.stopBroadcast)()
         }
         handleChannelDelete(e) {
             let {
                 channel: t
             } = e, n = S.default.getBroadcast();
-            null != n && t.id === n.channelId && (0, A.stopBroadcast)()
+            null != n && t.id === n.channelId && (0, h.stopBroadcast)()
         }
         handleMessageCreate(e) {
             let {

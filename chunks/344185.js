@@ -22,11 +22,11 @@ function(e, t, n) {
         e in I && delete I[e]
     }
 
-    function A(e) {
-        null != e.threads && e.threads.length > 0 && (I[e.id] = {}, e.threads.filter(e => _.ALL_CHANNEL_TYPES.has(e.type)).forEach(t => h(e.id, t))), e.hasThreadsSubscription && T.add(e.id)
+    function h(e) {
+        null != e.threads && e.threads.length > 0 && (I[e.id] = {}, e.threads.filter(e => _.ALL_CHANNEL_TYPES.has(e.type)).forEach(t => A(e.id, t))), e.hasThreadsSubscription && T.add(e.id)
     }
 
-    function h(e, t) {
+    function A(e, t) {
         let n = I[e],
             i = t.parent_id;
         !(i in n) && (n[i] = {}), I[e][i][t.id] = f(t)
@@ -101,7 +101,7 @@ function(e, t, n) {
     }) : r[s] = a, t.default = new p(d.default, {
         CONNECTION_OPEN: function(e) {
             I = {}, T.clear(), e.guilds.forEach(e => {
-                A(e)
+                h(e)
             })
         },
         OVERLAY_INITIALIZE: function(e) {
@@ -109,14 +109,14 @@ function(e, t, n) {
                 channels: t
             } = e;
             I = {}, l()(t).filter(e => _.THREAD_CHANNEL_TYPES.has(e.type)).groupBy("guild_id").forEach((e, t) => {
-                I[t] = {}, e.forEach(e => h(t, e))
+                I[t] = {}, e.forEach(e => A(t, e))
             })
         },
         GUILD_CREATE: function(e) {
             let {
                 guild: t
             } = e;
-            S(t.id), A(t)
+            S(t.id), h(t)
         },
         GUILD_DELETE: function(e) {
             let {
@@ -137,7 +137,7 @@ function(e, t, n) {
                 }, I[t]) I[t][e] = {
                 ...I[t][e]
             };
-            n.forEach(e => h(t, e))
+            n.forEach(e => A(t, e))
         },
         THREAD_DELETE: function(e) {
             let {

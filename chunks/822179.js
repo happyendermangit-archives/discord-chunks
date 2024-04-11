@@ -40,7 +40,7 @@ function(e, t, n) {
             f()
         };
 
-    function A() {
+    function h() {
         var e;
         let t = null === (e = u.default.frecencyWithoutFetchingLatest.stickerFrecency) || void 0 === e ? void 0 : e.stickers;
         if (null == t) return !1;
@@ -49,9 +49,9 @@ function(e, t, n) {
             recentUses: e.recentUses.map(Number).filter(e => e > 0)
         })), I.pendingUsages)
     }
-    class h extends(i = a.default.PersistedStore) {
+    class A extends(i = a.default.PersistedStore) {
         initialize(e) {
-            this.waitFor(_.default), null != e && (I = e), this.syncWith([_.default], S), this.syncWith([u.default], A)
+            this.waitFor(_.default), null != e && (I = e), this.syncWith([_.default], S), this.syncWith([u.default], h)
         }
         getState() {
             return I
@@ -63,7 +63,7 @@ function(e, t, n) {
             return T
         }
     }
-    E(h, "displayName", "StickersPersistedStore"), E(h, "persistKey", "StickersPersistedStoreV2"), t.default = new h(o.default, {
+    E(A, "displayName", "StickersPersistedStore"), E(A, "persistKey", "StickersPersistedStoreV2"), t.default = new A(o.default, {
         STICKER_TRACK_USAGE: e => {
             let {
                 stickerIds: t

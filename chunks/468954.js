@@ -25,8 +25,8 @@ function(e, t, n) {
             defaultSearchPlaceholder: T,
             emptySearchPlaceholder: f,
             renderEmptyState: S,
-            renderRow: A,
-            renderSection: h,
+            renderRow: h,
+            renderSection: A,
             renderSectionHeader: m,
             renderSectionFooter: N,
             renderInspector: O,
@@ -73,11 +73,11 @@ function(e, t, n) {
             onSelectItem: c,
             store: _,
             gridNavigatorId: U
-        }), $ = r.useCallback(e => A(Y[e], Q(e), {
+        }), $ = r.useCallback(e => h(Y[e], Q(e), {
             isUsingKeyboardNavigation: Z.current,
             gutterWidth: z,
             rowIndex: e
-        }, t => X(e, t), t => _.setInspectedExpressionPosition(t, e)), [Y, X, Q, z, Z, A, _]), ee = r.useCallback(e => null == h ? void 0 : h(t[e]), [t, h]), et = r.useCallback(e => null == m ? void 0 : m(t[e], e), [t, m]), en = r.useCallback(e => null == N ? void 0 : N(t[e]), [t, N]), ei = r.useCallback(() => {
+        }, t => X(e, t), t => _.setInspectedExpressionPosition(t, e)), [Y, X, Q, z, Z, h, _]), ee = r.useCallback(e => null == A ? void 0 : A(t[e]), [t, A]), et = r.useCallback(e => null == m ? void 0 : m(t[e], e), [t, m]), en = r.useCallback(e => null == N ? void 0 : N(t[e]), [t, N]), ei = r.useCallback(() => {
             var e;
             return null == O ? void 0 : O(null == Y ? void 0 : null === (e = Y[x.rowIndex]) || void 0 === e ? void 0 : e[x.columnIndex])
         }, [Y, x.columnIndex, x.rowIndex, O]);
@@ -118,7 +118,7 @@ function(e, t, n) {
                         hasSearchResults: I,
                         listPadding: P,
                         renderRow: $,
-                        renderSection: null != h ? ee : void 0,
+                        renderSection: null != A ? ee : void 0,
                         renderSectionHeader: null != m ? et : void 0,
                         renderSectionFooter: null != N ? en : void 0,
                         renderInspector: null != O ? ei : void 0,

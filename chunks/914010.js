@@ -34,7 +34,7 @@ function(e, t, n) {
         let t = !1;
         return delete I[e], E === e && (E = null, t = !0), c === e && (Object.values(u.default.getGuilds()).find(t => t.id !== e), c = null, (0, o.replaceWith)(d.Routes.ME), t = !0), t
     }
-    class A extends(i = r.default.PersistedStore) {
+    class h extends(i = r.default.PersistedStore) {
         initialize(e) {
             var t, n, i;
             this.mustEmitChanges(e => "CONNECTION_OPEN" !== e.type), this.waitFor(u.default, l.default), I = null !== (t = null == e ? void 0 : e.selectedGuildTimestampMillis) && void 0 !== t ? t : {}, c = null !== (n = null == e ? void 0 : e.selectedGuildId) && void 0 !== n ? n : null, E = null !== (i = null == e ? void 0 : e.lastSelectedGuildId) && void 0 !== i ? i : null
@@ -56,7 +56,7 @@ function(e, t, n) {
             return c === e ? -1 : I[e]
         }
     }
-    _(A, "displayName", "SelectedGuildStore"), _(A, "persistKey", "SelectedGuildStore"), t.default = new A(s.default, {
+    _(h, "displayName", "SelectedGuildStore"), _(h, "persistKey", "SelectedGuildStore"), t.default = new h(s.default, {
         CONNECTION_OPEN: T,
         OVERLAY_INITIALIZE: function(e) {
             c = e.selectedGuildId, E = void 0, T()

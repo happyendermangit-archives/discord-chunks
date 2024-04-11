@@ -22,8 +22,8 @@ function(e, t, n) {
         T = n("594174"),
         f = n("979651"),
         S = n("5192"),
-        A = n("88751"),
-        h = n("427679"),
+        h = n("88751"),
+        A = n("427679"),
         m = n("590415"),
         N = n("974609"),
         O = n("981631");
@@ -81,14 +81,14 @@ function(e, t, n) {
                 a = f.default.getVoiceStateForChannel(this.channelId, e);
             if (null == a) return s;
             let o = T.default.getUser(e);
-            if (null == o) return null != this.guildId && h.default.isPublic(this.channelId) && c.default.requestMember(this.guildId, e), s;
+            if (null == o) return null != this.guildId && A.default.isPublic(this.channelId) && c.default.requestMember(this.guildId, e), s;
             let l = null != t ? t[0] : null,
                 _ = {
                     user: o,
                     userNick: S.default.getName(this.guildId, this.channelId, o),
                     voiceState: a,
                     role: (0, N.getHighestHoistedRole)(this.guildId, e),
-                    speaker: A.default.isSpeaker(e, this.channelId),
+                    speaker: h.default.isSpeaker(e, this.channelId),
                     member: null != this.guildId ? E.default.getMember(this.guildId, e) : null,
                     blocked: I.default.getRelationships()[o.id] === O.RelationshipTypes.BLOCKED,
                     isFriend: I.default.isFriend(o.id),

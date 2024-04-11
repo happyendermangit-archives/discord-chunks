@@ -21,8 +21,8 @@ function(e, t, n) {
             analyticsLocation: t,
             analyticsSourceLocation: n,
             guild: s,
-            buttonText: A,
-            targetBoostedGuildTier: h,
+            buttonText: h,
+            targetBoostedGuildTier: A,
             onClose: m = () => {},
             closeLayer: N = () => {},
             pauseAnimation: O = !1,
@@ -32,7 +32,7 @@ function(e, t, n) {
             ...g
         } = e, {
             analyticsLocations: L
-        } = (0, d.default)(), D = (0, u.useAppContext)() === T.AppContext.POPOUT, [v, M] = r.useState(!1), y = null != h ? Math.max((0, E.getNumberOfAppliedBoostsNeededForTier)(s, h), 1) : 1, P = (0, E.generateBlockGuildSubscriptionPurchasesNode)(), U = async () => {
+        } = (0, d.default)(), D = (0, u.useAppContext)() === T.AppContext.POPOUT, [v, M] = r.useState(!1), y = null != A ? Math.max((0, E.getNumberOfAppliedBoostsNeededForTier)(s, A), 1) : 1, P = (0, E.generateBlockGuildSubscriptionPurchasesNode)(), U = async () => {
             M(!0), await (0, I.addAppliedGuildBoosts)({
                 analyticsLocations: L,
                 analyticsLocation: t,
@@ -46,7 +46,7 @@ function(e, t, n) {
                 handleSubscribeModalClose: R
             }), M(!1)
         }, b = _.default.getPremiumTypeSubscription(), G = (0, i.jsx)("span", {
-            children: null != A ? A : f.default.Messages.PREMIUM_GUILD_PERKS_MODAL_BUTTON_SUBSCRIBE_THIS_SERVER
+            children: null != h ? h : f.default.Messages.PREMIUM_GUILD_PERKS_MODAL_BUTTON_SUBSCRIBE_THIS_SERVER
         });
         return ((null == b ? void 0 : b.isPausedOrPausePending) && (G = (0, i.jsxs)("div", {
             className: S.pausedButton,

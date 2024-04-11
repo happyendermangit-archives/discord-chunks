@@ -334,7 +334,7 @@ function(e, t, n) {
             disableAutoFocus: !0,
             showCharacterCount: !0
         },
-        A = {
+        h = {
             analyticsName: "rules_input",
             drafts: {
                 type: a.DraftType.ChannelMessage
@@ -348,7 +348,7 @@ function(e, t, n) {
             },
             showCharacterCount: !0
         },
-        h = {
+        A = {
             analyticsName: "forum_channel_guidelines",
             drafts: {
                 type: a.DraftType.ChannelMessage
@@ -377,10 +377,10 @@ function(e, t, n) {
             THREAD_CREATION: E,
             PROFILE_BIO_INPUT: f,
             CUSTOM_GIFT: S,
-            RULES_INPUT: A,
+            RULES_INPUT: h,
             CREATE_FORUM_POST: I,
             CREATE_POLL: T,
-            FORUM_CHANNEL_GUIDELINES: h,
+            FORUM_CHANNEL_GUIDELINES: A,
             ATOMIC_REACTOR_REPLY_INPUT: {
                 analyticsName: "atomic_reator_reply_input",
                 drafts: {

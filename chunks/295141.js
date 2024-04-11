@@ -32,7 +32,7 @@ function(e, t, n) {
             return m
         },
         getGuildRoleSubscriptionTrials: function() {
-            return A
+            return h
         },
         getGuildRoleSubscriptionsSettings: function() {
             return _
@@ -47,7 +47,7 @@ function(e, t, n) {
             return c
         },
         updateGuildRoleSubscriptionsTrial: function() {
-            return h
+            return A
         }
     });
     var i = n("544891"),
@@ -171,7 +171,7 @@ function(e, t, n) {
         } catch (e) {
             throw new r.APIError(e)
         }
-    }, A = async e => {
+    }, h = async e => {
         try {
             return (await i.HTTP.get({
                 url: s.Endpoints.GUILD_ROLE_SUBSCRIPTION_TRIALS(e)
@@ -179,7 +179,7 @@ function(e, t, n) {
         } catch (e) {
             throw new r.APIError(e)
         }
-    }, h = async (e, t, n) => {
+    }, A = async (e, t, n) => {
         try {
             return (await i.HTTP.patch({
                 url: s.Endpoints.GUILD_ROLE_SUBSCRIPTION_LISTING_TRIAL(e, t),

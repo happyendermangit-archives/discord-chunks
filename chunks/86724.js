@@ -23,8 +23,8 @@ function(e, t, n) {
         T = n("91313"),
         f = n("53529"),
         S = n("925994"),
-        A = n("436660"),
-        h = n("887490"),
+        h = n("436660"),
+        A = n("887490"),
         m = n("42530"),
         N = n("981631"),
         O = n("665692");
@@ -43,7 +43,7 @@ function(e, t, n) {
             deleteFragment: b
         } = e;
         e.insertData = n => {
-            if (null != t && h.EditorUtils.isEditorEmpty(e) && n.types.includes("application/x-discord-interaction-data")) {
+            if (null != t && A.EditorUtils.isEditorEmpty(e) && n.types.includes("application/x-discord-interaction-data")) {
                 let e = JSON.parse(n.getData("application/x-discord-interaction-data")),
                     {
                         commandKey: d,
@@ -88,7 +88,7 @@ function(e, t, n) {
             if (null != t) {
                 let s = o.default.getState(t.id),
                     u = a.getChangeKeys(t);
-                if (h.EditorUtils.richValue(e) !== G || !h.SelectionUtils.equals(e.selection, w) || s.activeCommand !== k || null == V || u.some((e, t) => V[t] !== e)) {
+                if (A.EditorUtils.richValue(e) !== G || !A.SelectionUtils.equals(e.selection, w) || s.activeCommand !== k || null == V || u.some((e, t) => V[t] !== e)) {
                     let o = f.HistoryUtils.withMergedEntry(e, () => {
                         var o;
                         return function(e) {
@@ -106,7 +106,7 @@ function(e, t, n) {
                             } = M(t), f = n.activeCommand;
                             if (!o || u && (null == f ? void 0 : f.inputType) !== l.ApplicationCommandInputType.BUILT_IN_TEXT && (null == f ? void 0 : f.inputType) !== l.ApplicationCommandInputType.BUILT_IN_INTEGRATION) return null != E && L(t, s.id, f, !0), null;
                             if (null != E) {
-                                if (h.EditorUtils.isEditorEmpty(t) || null == f) return L(t, s.id, f, !1), null;
+                                if (A.EditorUtils.isEditorEmpty(t) || null == f) return L(t, s.id, f, !1), null;
                                 let e = "".concat(O.COMMAND_SENTINEL).concat(E.displayName);
                                 if (null == I || !I.startsWith(e) || 0 === T.getOptionNames(t).length && (I.length < e.length + 1 || " " !== I[e.length])) return L(t, s.id, f, !0), null
                             } else {
@@ -120,11 +120,11 @@ function(e, t, n) {
                                             } = n;
                                             if (null == d) return null;
                                             let _ = (null !== (s = null === (i = d.options) || void 0 === i ? void 0 : i.length) && void 0 !== s ? s : 0) > 0 ? T.findTextOptions(e, d) : null,
-                                                c = (0, S.toTextValue)(h.EditorUtils.richValue(e), {
+                                                c = (0, S.toTextValue)(A.EditorUtils.richValue(e), {
                                                     mode: "raw",
                                                     range: {
-                                                        anchor: h.EditorUtils.start(e, []),
-                                                        focus: null !== (a = null == _ ? void 0 : null === (r = _[0]) || void 0 === r ? void 0 : r.keyRange.anchor) && void 0 !== a ? a : h.EditorUtils.end(e, [])
+                                                        anchor: A.EditorUtils.start(e, []),
+                                                        focus: null !== (a = null == _ ? void 0 : null === (r = _[0]) || void 0 === r ? void 0 : r.keyRange.anchor) && void 0 !== a ? a : A.EditorUtils.end(e, [])
                                                     }
                                                 }),
                                                 E = "",
@@ -180,16 +180,16 @@ function(e, t, n) {
                                                     displayName: d.displayName
                                                 }
                                             };
-                                            h.EditorUtils.withoutNormalizing(e, () => {
-                                                for (let [, t] of(A.SlateTransforms.insertNodes(e, [L], {
+                                            A.EditorUtils.withoutNormalizing(e, () => {
+                                                for (let [, t] of(h.SlateTransforms.insertNodes(e, [L], {
                                                         at: m.FIRST_BLOCK_PATH
-                                                    }), h.EditorUtils.blocks(e).reverse())) h.PathUtils.isAfter(t, m.FIRST_BLOCK_PATH) && A.SlateTransforms.removeNodes(e, {
+                                                    }), A.EditorUtils.blocks(e).reverse())) A.PathUtils.isAfter(t, m.FIRST_BLOCK_PATH) && h.SlateTransforms.removeNodes(e, {
                                                     at: t,
                                                     voids: !0
                                                 })
                                             });
                                             let v = null;
-                                            return null != C ? (A.SlateTransforms.selectCommandOption(e, C.optionName), v = C.optionName) : null != g ? (A.SlateTransforms.selectCommandOption(e, g.optionName, !1), v = g.optionName) : A.SlateTransforms.resetSelectionToEnd(e), null == g && D(e, d), v
+                                            return null != C ? (h.SlateTransforms.selectCommandOption(e, C.optionName), v = C.optionName) : null != g ? (h.SlateTransforms.selectCommandOption(e, g.optionName, !1), v = g.optionName) : h.SlateTransforms.resetSelectionToEnd(e), null == g && D(e, d), v
                                         }(t, s, n),
                                         i = T.getOptionValues(t, f);
                                     return v({
@@ -211,9 +211,9 @@ function(e, t, n) {
                                     command: null,
                                     section: null
                                 }), null;
-                                let e = h.EditorUtils.richValue(t)[0],
+                                let e = A.EditorUtils.richValue(t)[0],
                                     o = e.children[0];
-                                if (C.has(e.type) && h.TextUtils.isText(o)) {
+                                if (C.has(e.type) && A.TextUtils.isText(o)) {
                                     let e = function(e, t) {
                                         if (!e.startsWith("/")) return null;
                                         let n = (0, _.getCommandQuery)(t, e.substring(1));
@@ -251,10 +251,10 @@ function(e, t, n) {
                                 ! function(e, t) {
                                     if (null == t.options || 0 === t.options.length) return !1;
                                     let n = T.findTextOptions(e, t);
-                                    return 0 !== n.length && (h.EditorUtils.withoutNormalizing(e, () => {
+                                    return 0 !== n.length && (A.EditorUtils.withoutNormalizing(e, () => {
                                         for (let t = n.length - 1; t >= 0; t--) {
                                             let i = n[t];
-                                            A.SlateTransforms.textToInline(e, {
+                                            h.SlateTransforms.textToInline(e, {
                                                 type: "applicationCommandOption",
                                                 optionName: i.name,
                                                 optionDisplayName: i.displayName,
@@ -267,10 +267,10 @@ function(e, t, n) {
                                                 focus: i.valueRange.focus
                                             })
                                         }
-                                        let t = h.EditorUtils.getFirstText(e);
+                                        let t = A.EditorUtils.getFirstText(e);
                                         if (null == t) return !1;
                                         let i = t.text.trim();
-                                        t.text !== i && A.SlateTransforms.textToText(e, i, {
+                                        t.text !== i && h.SlateTransforms.textToText(e, i, {
                                             anchor: {
                                                 path: m.FIRST_TEXT_PATH,
                                                 offset: 0
@@ -283,8 +283,8 @@ function(e, t, n) {
                                     }), !0)
                                 }(t, f) && D(t, f);
                                 let e = T.getOptionValues(t, f),
-                                    n = h.EditorUtils.above(t, {
-                                        match: e => h.EditorUtils.isInline(t, e) && "applicationCommandOption" === e.type,
+                                    n = A.EditorUtils.above(t, {
+                                        match: e => A.EditorUtils.isInline(t, e) && "applicationCommandOption" === e.type,
                                         mode: "lowest"
                                     }),
                                     i = null !== (N = null == n ? void 0 : n[0].optionName) && void 0 !== N ? N : null;
@@ -317,7 +317,7 @@ function(e, t, n) {
                         let t = f.HistoryUtils.currentEntry(e);
                         null != t && (t.commandId = o.commandId), B = o.optionValues
                     } else B = null;
-                    G = h.EditorUtils.richValue(e), w = e.selection, k = s.activeCommand, V = u
+                    G = A.EditorUtils.richValue(e), w = e.selection, k = s.activeCommand, V = u
                 }
             }
             N()
@@ -325,7 +325,7 @@ function(e, t, n) {
     }
 
     function L(e, t, n, i) {
-        let [s] = h.EditorUtils.blocks(e)[0], a = (i ? (0, S.serializeDescendant)(s, {
+        let [s] = A.EditorUtils.blocks(e)[0], a = (i ? (0, S.serializeDescendant)(s, {
             mode: "plain"
         }).trimEnd() : "").split("\n").map(e => ({
             type: "line",
@@ -333,9 +333,9 @@ function(e, t, n) {
                 text: e
             }]
         })), o = [a.length - 1];
-        for (let [, t] of(A.SlateTransforms.insertNodes(e, a, {
+        for (let [, t] of(h.SlateTransforms.insertNodes(e, a, {
                 at: m.FIRST_BLOCK_PATH
-            }), h.EditorUtils.blocks(e).reverse())) h.PathUtils.isAfter(t, o) && A.SlateTransforms.removeNodes(e, {
+            }), A.EditorUtils.blocks(e).reverse())) A.PathUtils.isAfter(t, o) && h.SlateTransforms.removeNodes(e, {
             at: t,
             voids: !0
         });
@@ -348,7 +348,7 @@ function(e, t, n) {
 
     function D(e, t) {
         if (null == t.options || 1 !== t.options.length || !0 === t.options[0].required || R.has(t.options[0].type) || T.getOptionNames(e).length > 0 || null == T.getCommandBlock(e)) return !1;
-        let n = h.EditorUtils.getFirstText(e);
+        let n = A.EditorUtils.getFirstText(e);
         if (null == n) return !1;
         let i = t.options[0],
             r = {
@@ -359,7 +359,7 @@ function(e, t, n) {
                 path: m.FIRST_TEXT_PATH,
                 offset: n.text.length
             };
-        return !(!n.text.startsWith("".concat(O.COMMAND_SENTINEL).concat(t.displayName, " ").toLocaleLowerCase()) || h.PointUtils.equals(r, s)) && (A.SlateTransforms.textToInline(e, {
+        return !(!n.text.startsWith("".concat(O.COMMAND_SENTINEL).concat(t.displayName, " ").toLocaleLowerCase()) || A.PointUtils.equals(r, s)) && (h.SlateTransforms.textToInline(e, {
             type: "applicationCommandOption",
             optionName: i.name,
             optionDisplayName: i.displayName,
@@ -390,7 +390,7 @@ function(e, t, n) {
             I = o.default.getOptionStates(n),
             T = !1;
         for (let e of i.options) {
-            var f, S, A;
+            var f, S, h;
             let i = I[e.name],
                 r = u || e.name === c && c !== s || (null == i ? void 0 : null === (f = i.lastValidationResult) || void 0 === f ? void 0 : f.success) === !1 && (null == a ? void 0 : a[e.name]) !== (null == l ? void 0 : l[e.name]),
                 o = {
@@ -398,7 +398,7 @@ function(e, t, n) {
                     isActive: e.name === s,
                     lastValidationResult: r ? (0, d.validateOptionContent)({
                         option: e,
-                        content: null !== (A = null == a ? void 0 : a[e.name]) && void 0 !== A ? A : null,
+                        content: null !== (h = null == a ? void 0 : a[e.name]) && void 0 !== h ? h : null,
                         guildId: t,
                         channelId: n,
                         allowEmptyValues: _
@@ -416,7 +416,7 @@ function(e, t, n) {
             commandText: null
         };
         let [n] = t, i = n.children[0];
-        return h.TextUtils.isText(i) ? {
+        return A.TextUtils.isText(i) ? {
             command: n.command,
             commandText: i.text
         } : {
@@ -428,16 +428,16 @@ function(e, t, n) {
     function y(e, t) {
         let n = T.getOptionNames(e)[0];
         t();
-        let i = h.RangeUtils.toPoint(e.selection);
+        let i = A.RangeUtils.toPoint(e.selection);
         if (null == i || n === T.getOptionNames(e)[0]) return;
         let {
             command: r,
             commandText: s
         } = M(e);
-        !(null == r || null == s || s.endsWith(" ")) && h.PointUtils.equals(i, {
+        !(null == r || null == s || s.endsWith(" ")) && A.PointUtils.equals(i, {
             path: m.FIRST_TEXT_PATH,
             offset: r.displayName.length + 1
-        }) && A.SlateTransforms.insertText(e, " ")
+        }) && h.SlateTransforms.insertText(e, " ")
     }
 
     function P(e, t, n) {

@@ -27,7 +27,7 @@ function(e, t, n) {
         }) : e[t] = n, e
     }
     let S = 100,
-        A = new l.default({
+        h = new l.default({
             computeBonus: () => 100,
             computeWeight: e => {
                 let t = 0;
@@ -41,7 +41,7 @@ function(e, t, n) {
             numFrequentlyItems: S,
             maxSamples: 10
         }),
-        h = null,
+        A = null,
         m = null;
 
     function N(e) {
@@ -49,10 +49,10 @@ function(e, t, n) {
             guildId: t,
             channelId: n
         } = e, i = !1;
-        return n !== h && (h = null != n ? n : null, null != n && I.ID_REGEX.test(n) && (i = !0, A.track(n), p.pendingUsages.push({
+        return n !== A && (A = null != n ? n : null, null != n && I.ID_REGEX.test(n) && (i = !0, h.track(n), p.pendingUsages.push({
             key: n,
             timestamp: Date.now()
-        }))), t !== m && (m = null != t ? t : null, null != t && I.ID_REGEX.test(t) && (i = !0, A.track(t), p.pendingUsages.push({
+        }))), t !== m && (m = null != t ? t : null, null != t && I.ID_REGEX.test(t) && (i = !0, h.track(t), p.pendingUsages.push({
             key: t,
             timestamp: Date.now()
         }))), i
@@ -62,7 +62,7 @@ function(e, t, n) {
         var e;
         let t = null === (e = u.default.frecencyWithoutFetchingLatest.guildAndChannelFrecency) || void 0 === e ? void 0 : e.guildAndChannels;
         if (null == t) return !1;
-        A.overwriteHistory(s().mapValues(t, e => ({
+        h.overwriteHistory(s().mapValues(t, e => ({
             ...e,
             recentUses: e.recentUses.map(Number).filter(e => e > 0)
         })), p.pendingUsages)
@@ -81,14 +81,14 @@ function(e, t, n) {
             return p.pendingUsages.length > 0
         }
         get frecencyWithoutFetchingLatest() {
-            return A
+            return h
         }
         getFrequentlyWithoutFetchingLatest() {
-            return A.frequently
+            return h.frequently
         }
         getScoreWithoutFetchingLatest(e) {
             var t;
-            return null !== (t = A.getFrecency(e)) && void 0 !== t ? t : 0
+            return null !== (t = h.getFrecency(e)) && void 0 !== t ? t : 0
         }
         getScoreForDMWithoutFetchingLatest(e) {
             let t = d.default.getDMFromUserId(e);

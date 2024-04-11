@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return A
+            return h
         }
     }), n("47120");
     var i, r = n("735250"),
@@ -75,7 +75,7 @@ function(e, t, n) {
         }
     }
 
-    function A(e) {
+    function h(e) {
         let t = (0, l.useStateFromStores)([c.default], () => c.default.hidePersonalInformation),
             n = (0, _.default)(e.userId);
         return (0, r.jsx)(S, {

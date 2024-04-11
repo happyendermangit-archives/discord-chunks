@@ -29,8 +29,8 @@ function(e, t, n) {
         } = e, I = (0, i.useStateFromStores)([o.default, s.default], () => {
             let e = s.default.getVoiceChannelId();
             return null != e ? o.default.getVoiceStateForChannel(e, u) : null
-        }), T = c && ((null == I ? void 0 : I.mute) || (null == I ? void 0 : I.selfMute)), f = (0, i.useStateFromStores)([a.default], () => a.default.isSpeaking(u, E) && !T), S = (0, i.useStateFromStores)([a.default], () => a.default.isSoundSharing(u) && d), A = (0, i.useStateFromStores)([r.default], () => r.default.isUserPlayingSounds(u) && _);
-        return t = f, n = A, l = S, t || n || l
+        }), T = c && ((null == I ? void 0 : I.mute) || (null == I ? void 0 : I.selfMute)), f = (0, i.useStateFromStores)([a.default], () => a.default.isSpeaking(u, E) && !T), S = (0, i.useStateFromStores)([a.default], () => a.default.isSoundSharing(u) && d), h = (0, i.useStateFromStores)([r.default], () => r.default.isUserPlayingSounds(u) && _);
+        return t = f, n = h, l = S, t || n || l
     }
 
     function d(e) {
@@ -41,7 +41,7 @@ function(e, t, n) {
             checkSoundboardSounds: d = !0,
             checkIsMuted: _ = !1,
             context: c
-        } = e, E = s.default.getVoiceChannelId(), I = null != E ? o.default.getVoiceStateForChannel(E, l) : null, T = _ && ((null == I ? void 0 : I.mute) || (null == I ? void 0 : I.selfMute)), f = a.default.isSpeaking(l, c) && !T, S = a.default.isSoundSharing(l) && u, A = r.default.isUserPlayingSounds(l) && d;
-        return t = f, n = A, i = S, t || n || i
+        } = e, E = s.default.getVoiceChannelId(), I = null != E ? o.default.getVoiceStateForChannel(E, l) : null, T = _ && ((null == I ? void 0 : I.mute) || (null == I ? void 0 : I.selfMute)), f = a.default.isSpeaking(l, c) && !T, S = a.default.isSoundSharing(l) && u, h = r.default.isUserPlayingSounds(l) && d;
+        return t = f, n = h, i = S, t || n || i
     }
 }

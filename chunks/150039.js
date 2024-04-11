@@ -8,10 +8,10 @@ function(e, t, n) {
             return S
         },
         setNewPendingAvatarDecoration: function() {
-            return A
+            return h
         },
         setNewPendingProfileEffectId: function() {
-            return h
+            return A
         },
         setNewPendingUserBio: function() {
             return f
@@ -107,11 +107,11 @@ function(e, t, n) {
         (0, s.setPendingAvatar)(e === t ? void 0 : e)
     }
 
-    function A(e, t) {
+    function h(e, t) {
         (null != e ? a.setPendingAvatarDecoration : s.setPendingAvatarDecoration)(t)
     }
 
-    function h(e, t, n) {
+    function A(e, t, n) {
         if (e === t) {
             null == n ? (0, s.setPendingProfileEffectId)(void 0) : (0, a.setPendingProfileEffectId)(void 0);
             return

@@ -12,8 +12,8 @@ function(e, t, n) {
         T = n("812206"),
         f = n("283595"),
         S = n("417363"),
-        A = n("391690"),
-        h = n("70956"),
+        h = n("391690"),
+        A = n("70956"),
         m = n("780570"),
         N = n("804739");
     let O = new Set,
@@ -22,9 +22,9 @@ function(e, t, n) {
         C = {},
         g = new Set,
         L = {},
-        D = 10 * h.default.Millis.MINUTE,
-        v = 6 * h.default.Millis.HOUR,
-        M = 10 * h.default.Millis.MINUTE,
+        D = 10 * A.default.Millis.MINUTE,
+        v = 6 * A.default.Millis.HOUR,
+        M = 10 * A.default.Millis.MINUTE,
         y = new d.Timeout;
 
     function P(e) {
@@ -41,7 +41,7 @@ function(e, t, n) {
     }
 
     function b(e, t) {
-        if (null != p[t] && A.default.shouldBeInstalled(e, t)) {
+        if (null != p[t] && h.default.shouldBeInstalled(e, t)) {
             let n = p[t],
                 i = n.manifestIds,
                 r = S.default.getState(e, t);

@@ -11,8 +11,8 @@ function(e, t, n) {
         f = n("770471"),
         S = n("860852");
     (s = i || (i = {}))[s.INVALID = 0] = "INVALID", s[s.VALID_USER_ONLY = 1] = "VALID_USER_ONLY", s[s.VALID = 2] = "VALID";
-    let A = new Set,
-        h = new Set,
+    let h = new Set,
+        A = new Set,
         m = new Set,
         N = [],
         O = {
@@ -21,7 +21,7 @@ function(e, t, n) {
             BROADCASTS_BY_VALIDITY: e => "validity:".concat(e)
         },
         p = new _.SecondaryIndexMap(function(e) {
-            let t = A.has(e.userId) ? 1 : 0;
+            let t = h.has(e.userId) ? 1 : 0;
             return null != e.viewers && (t = 2), [O.BROADCASTS_BY_USER_ID(e.userId), O.BROADCASTS_BY_CHANNEL_ID(e.channelId), O.BROADCASTS_BY_VALIDITY(t)]
         }, e => e.channelId);
 
@@ -30,7 +30,7 @@ function(e, t, n) {
         if (null == t) {
             let t = p.get(e);
             return !!(null != t && (0, u.isEqual)(t.source, n)) && (p.delete(e), void 0)
-        }!A.has(e) && !h.has(e) && (m.add(e), N = [...m]);
+        }!h.has(e) && !A.has(e) && (m.add(e), N = [...m]);
         let i = (0, S.broadcastFromServer)(t, e, n);
         p.set(e, i)
     }
@@ -123,7 +123,7 @@ function(e, t, n) {
                 data: t
             } = e;
             T.default.keys(t).forEach(e => {
-                f.CAN_VIEW_BROADCASTS_BUCKETS.includes(t[e]) ? A.add(e) : h.add(e), m.clear(), N = [...m];
+                f.CAN_VIEW_BROADCASTS_BUCKETS.includes(t[e]) ? h.add(e) : A.add(e), m.clear(), N = [...m];
                 let n = p.get(e);
                 null != n && (p.delete(e), p.set(e, n))
             })
@@ -175,7 +175,7 @@ function(e, t, n) {
             })
         },
         LOGOUT: function() {
-            A.clear(), h.clear(), m.clear(), N = [], p.clear()
+            h.clear(), A.clear(), m.clear(), N = [], p.clear()
         }
     })
 }

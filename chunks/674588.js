@@ -17,10 +17,10 @@ function(e, t, n) {
             return T
         },
         getSimilarApplications: function() {
-            return A
+            return h
         },
         search: function() {
-            return h
+            return A
         }
     }), n("47120");
     var i = n("261470"),
@@ -117,7 +117,7 @@ function(e, t, n) {
             categories: n.body
         })
     }
-    async function A(e) {
+    async function h(e) {
         var t;
         let {
             applicationId: n,
@@ -171,7 +171,7 @@ function(e, t, n) {
             }
         }
     }
-    async function h(e) {
+    async function A(e) {
         var t;
         let {
             query: n,

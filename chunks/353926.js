@@ -21,7 +21,7 @@ function(e, t, n) {
         f = n("987338"),
         S = n("981631");
 
-    function A(e, t, n) {
+    function h(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -29,7 +29,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    let h = "scientist:triggered",
+    let A = "scientist:triggered",
         m = "exerimentOverrides",
         N = "userExperimentOverrides",
         O = "guildExperimentOverrides",
@@ -287,11 +287,11 @@ function(e, t, n) {
         let {
             isSwitchingAccount: t
         } = e;
-        u.Storage.remove(h), !t && (u.Storage.remove(m), u.Storage.remove(N), u.Storage.remove(O), P = {}, U = {}), v = {}, L = [], C = {}, R = !1
+        u.Storage.remove(A), !t && (u.Storage.remove(m), u.Storage.remove(N), u.Storage.remove(O), P = {}, U = {}), v = {}, L = [], C = {}, R = !1
     }
 
     function et() {
-        R = !1, C = {}, u.Storage.remove(h)
+        R = !1, C = {}, u.Storage.remove(A)
     }
 
     function en() {
@@ -315,7 +315,7 @@ function(e, t, n) {
 
     function ei(e) {
         try {
-            u.Storage.set(h, {
+            u.Storage.set(A, {
                 v: 1,
                 e: e
             })
@@ -409,7 +409,7 @@ function(e, t, n) {
     class el extends E.default {
         initialize() {
             C = function() {
-                let e = u.Storage.get(h);
+                let e = u.Storage.get(A);
                 if (null == e || 1 !== e.v) return {};
                 let t = e.e,
                     n = Date.now(),
@@ -616,8 +616,8 @@ function(e, t, n) {
                 EXPERIMENT_OVERRIDE_BUCKET: ea,
                 GUILD_CREATE: eo,
                 GUILD_UPDATE: eo
-            }), A(this, "trackExposure", W)
+            }), h(this, "trackExposure", W)
         }
     }
-    A(el, "displayName", "ExperimentStore"), A(el, "LATEST_SNAPSHOT_VERSION", 1), t.default = new el
+    h(el, "displayName", "ExperimentStore"), h(el, "LATEST_SNAPSHOT_VERSION", 1), t.default = new el
 }

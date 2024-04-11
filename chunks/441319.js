@@ -26,8 +26,8 @@ function(e, t, n) {
         T = n("666475"),
         f = n("591304"),
         S = n("328664"),
-        A = n("328259"),
-        h = n("19009"),
+        h = n("328259"),
+        A = n("19009"),
         m = n("405571"),
         N = n("730886"),
         O = n("473974"),
@@ -52,12 +52,12 @@ function(e, t, n) {
             name: C.default.Messages.APP_ICON_MANGA
         }, {
             id: R.PremiumAppIconIds.MATTE_DARK,
-            iconSource: A,
+            iconSource: h,
             isPremium: !0,
             name: C.default.Messages.APP_ICON_MATTE_DARK
         }, {
             id: R.PremiumAppIconIds.MATTE_LIGHT,
-            iconSource: h,
+            iconSource: A,
             name: C.default.Messages.APP_ICON_MATTE_LIGHT,
             isPremium: !0
         }, {

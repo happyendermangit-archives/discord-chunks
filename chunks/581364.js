@@ -71,8 +71,8 @@ function(e, t, n) {
         T = n("895924"),
         f = n("420582"),
         S = n("531010"),
-        A = n("689079"),
-        h = n("981631"),
+        h = n("689079"),
+        A = n("981631"),
         m = n("231338");
 
     function N(e) {
@@ -92,7 +92,7 @@ function(e, t, n) {
         return {
             version: s.version,
             guildId: s.guild_id,
-            id: [s.id, ...E].join(A.SUB_COMMAND_KEY_SEPARATOR),
+            id: [s.id, ...E].join(h.SUB_COMMAND_KEY_SEPARATOR),
             name: [s.name, ...E].join(" "),
             serverLocalizedName: a.name_localized,
             applicationId: o,
@@ -217,7 +217,7 @@ function(e, t, n) {
     }
 
     function p(e) {
-        return h.ID_REGEX.test(e.trim())
+        return A.ID_REGEX.test(e.trim())
     }
 
     function R(e, t, n, i) {
@@ -306,8 +306,8 @@ function(e, t, n) {
 
     function P(e) {
         if (null != e) {
-            if (e.id === A.BuiltInSectionId.BUILT_IN) return T.ApplicationCommandTriggerSections.BUILT_IN;
-            else if (e.id === A.BuiltInSectionId.FRECENCY) return T.ApplicationCommandTriggerSections.FRECENCY;
+            if (e.id === h.BuiltInSectionId.BUILT_IN) return T.ApplicationCommandTriggerSections.BUILT_IN;
+            else if (e.id === h.BuiltInSectionId.FRECENCY) return T.ApplicationCommandTriggerSections.FRECENCY;
             else return T.ApplicationCommandTriggerSections.APP
         }
     }
@@ -327,9 +327,9 @@ function(e, t, n) {
         let t = e.id,
             n = e.options,
             i = null == n ? void 0 : n.find(e => e.type === d.ApplicationCommandOptionType.SUB_COMMAND_GROUP);
-        null != i && (t += "".concat(A.SUB_COMMAND_KEY_SEPARATOR).concat(i.name), n = i.options);
+        null != i && (t += "".concat(h.SUB_COMMAND_KEY_SEPARATOR).concat(i.name), n = i.options);
         let r = null == n ? void 0 : n.find(e => e.type === d.ApplicationCommandOptionType.SUB_COMMAND);
-        return null != r && (t += "".concat(A.SUB_COMMAND_KEY_SEPARATOR).concat(r.name), n = r.options), {
+        return null != r && (t += "".concat(h.SUB_COMMAND_KEY_SEPARATOR).concat(r.name), n = r.options), {
             commandKey: t,
             interactionOptions: n
         }
@@ -345,7 +345,7 @@ function(e, t, n) {
 
     function k(e, t, n) {
         let i = S.default.useExperiment({
-            guildId: null != e ? e : h.EMPTY_STRING_SNOWFLAKE_ID,
+            guildId: null != e ? e : A.EMPTY_STRING_SNOWFLAKE_ID,
             ...t
         }, n);
         return null == e || i.userAppsTreatment === f.UserAppsTreatment.ALLOWED
@@ -366,7 +366,7 @@ function(e, t, n) {
             triggerSection: s,
             queryLength: a
         } = e;
-        (0, _.trackWithMetadata)(h.AnalyticEvents.APPLICATION_COMMAND_SELECTED, {
+        (0, _.trackWithMetadata)(A.AnalyticEvents.APPLICATION_COMMAND_SELECTED, {
             command_id: null !== (n = null === (t = i.rootCommand) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : i.id,
             application_id: i.applicationId,
             location: r,

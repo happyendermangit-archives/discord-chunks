@@ -23,8 +23,8 @@ function(e, t, n) {
         }) : e[t] = n, e
     }
     let S = 1 * c.default.Millis.MINUTE,
-        A = e => "https://youtube.com/watch?v=".concat(e),
-        h = 5 * c.default.Millis.MINUTE,
+        h = e => "https://youtube.com/watch?v=".concat(e),
+        A = 5 * c.default.Millis.MINUTE,
         m = /live_user_(.*)-\{width\}/,
         N = null,
         O = 0,
@@ -85,11 +85,11 @@ function(e, t, n) {
                 } = l, I = {
                     large_image: null != u && null !== (i = (0, _.getAssetFromImageURL)(T.PlatformTypes.TWITCH, u)) && void 0 !== i ? i : void 0
                 }, f = await L(c, t), S = d.default.get(T.PlatformTypes.TWITCH);
-                let A = null !== (s = u, r = null === (a = m.exec(s)) || void 0 === a ? void 0 : a[1]) && void 0 !== r ? r : e.name;
+                let h = null !== (s = u, r = null === (a = m.exec(s)) || void 0 === a ? void 0 : a[1]) && void 0 !== r ? r : e.name;
                 return {
                     url: null === (n = S.getPlatformUserUrl) || void 0 === n ? void 0 : n.call(S, {
                         id: e.id,
-                        name: A
+                        name: h
                     }),
                     name: S.name,
                     assets: I,
@@ -133,7 +133,7 @@ function(e, t, n) {
                     large_image: null !== (n = (0, _.getAssetFromImageURL)(T.PlatformTypes.YOUTUBE, a.high.url)) && void 0 !== n ? n : void 0
                 };
                 return p = {
-                    url: A(r),
+                    url: h(r),
                     name: d.default.get(T.PlatformTypes.YOUTUBE).name,
                     details: s,
                     assets: l
@@ -150,7 +150,7 @@ function(e, t, n) {
             null != this._nextCheck && clearTimeout(this._nextCheck);
             let t = [T.PlatformTypes.TWITCH],
                 n = Date.now();
-            O <= n && (t.push(T.PlatformTypes.YOUTUBE), O = n + h), Promise.allSettled(e.filter(e => t.includes(e.type)).map(e => e.type === T.PlatformTypes.TWITCH ? this._checkTwitch(e) : this._checkYouTube(e))).then(e => {
+            O <= n && (t.push(T.PlatformTypes.YOUTUBE), O = n + A), Promise.allSettled(e.filter(e => t.includes(e.type)).map(e => e.type === T.PlatformTypes.TWITCH ? this._checkTwitch(e) : this._checkYouTube(e))).then(e => {
                 if (this._started) {
                     var t;
                     let n = null === (t = e.find(e => "fulfilled" === e.status && null != e.value)) || void 0 === t ? void 0 : t.value;

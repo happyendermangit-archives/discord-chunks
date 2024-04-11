@@ -16,7 +16,7 @@ function(e, t, n) {
         T = n("898140"),
         f = n("339487"),
         S = n("149203");
-    let A = e => {
+    let h = e => {
             switch (e) {
                 case S.EmojiCategories.RECENT:
                     return l.default;
@@ -46,14 +46,14 @@ function(e, t, n) {
                     return
             }
         },
-        h = r.memo(function(e) {
+        A = r.memo(function(e) {
             let {
                 categoryId: t,
                 ...n
-            } = e, r = A(t);
+            } = e, r = h(t);
             return null == r ? null : (0, i.jsx)(r, {
                 ...n
             })
         });
-    t.default = h
+    t.default = A
 }

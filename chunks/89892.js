@@ -393,15 +393,15 @@ function(e, t, n) {
             })
         }
         loadComplete(e) {
-            var t, n, i, o, l, d, _, E, f, S, A;
-            let h = [...e.newMessages],
+            var t, n, i, o, l, d, _, E, f, S, h;
+            let A = [...e.newMessages],
                 m = null !== (t = e.isBefore) && void 0 !== t && t,
                 N = null !== (n = e.isAfter) && void 0 !== n && n,
                 O = null !== (i = e.jump) && void 0 !== i ? i : null,
                 p = null !== (o = e.hasMoreBefore) && void 0 !== o && o,
                 R = null !== (l = e.hasMoreAfter) && void 0 !== l && l,
                 C = null !== (d = e.cached) && void 0 !== d && d,
-                g = r()(h).reverse().map(s.default.getCurrentConfig({
+                g = r()(A).reverse().map(s.default.getCurrentConfig({
                     location: "2ecb25_2"
                 }, {
                     autoTrackExposure: !1
@@ -422,7 +422,7 @@ function(e, t, n) {
                 jumpTargetId: null !== (S = null == O ? void 0 : O.messageId) && void 0 !== S ? S : null,
                 jumpTargetOffset: null != O && null != O.messageId && null != O.offset ? O.offset : 0,
                 jumpSequenceId: null != O ? L.jumpSequenceId + 1 : L.jumpSequenceId,
-                jumpReturnTargetId: null !== (A = null == O ? void 0 : O.returnMessageId) && void 0 !== A ? A : null,
+                jumpReturnTargetId: null !== (h = null == O ? void 0 : O.returnMessageId) && void 0 !== h ? h : null,
                 hasMoreBefore: null == O && N ? L.hasMoreBefore : p,
                 hasMoreAfter: null == O && m ? L.hasMoreAfter : R,
                 cached: C,

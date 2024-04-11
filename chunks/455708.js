@@ -16,8 +16,8 @@ function(e, t, n) {
         T = n("824717"),
         f = n("985375"),
         S = n("653235"),
-        A = n("215016"),
-        h = n("981631"),
+        h = n("215016"),
+        A = n("981631"),
         m = n("149203"),
         N = n("689938"),
         O = n("39234");
@@ -33,7 +33,7 @@ function(e, t, n) {
     let R = e => e.stopPropagation();
     class C extends r.PureComponent {
         componentDidMount() {
-            d.initializeSearch(), document.addEventListener("keydown", this.backToFrontPage), "" !== this.props.query && this.search(this.props.query, h.GIFPickerResultTypes.SEARCH)
+            d.initializeSearch(), document.addEventListener("keydown", this.backToFrontPage), "" !== this.props.query && this.search(this.props.query, A.GIFPickerResultTypes.SEARCH)
         }
         componentWillUnmount() {
             u.default.wait(() => d.resetSearch()), document.removeEventListener("keydown", this.backToFrontPage)
@@ -41,8 +41,8 @@ function(e, t, n) {
         search(e, t, n) {
             d.search(e, t, n), "" === e ? this.setState({
                 resultType: null
-            }) : this.state.resultType !== h.GIFPickerResultTypes.SEARCH && this.setState({
-                resultType: h.GIFPickerResultTypes.SEARCH
+            }) : this.state.resultType !== A.GIFPickerResultTypes.SEARCH && this.setState({
+                resultType: A.GIFPickerResultTypes.SEARCH
             })
         }
         renderHeaderContent() {
@@ -52,13 +52,13 @@ function(e, t, n) {
                 resultType: t
             } = this.state;
             switch (t) {
-                case h.GIFPickerResultTypes.FAVORITES:
+                case A.GIFPickerResultTypes.FAVORITES:
                     return (0, i.jsx)(l.FormTitle, {
                         tag: "h5",
                         className: O.searchHeader,
                         children: N.default.Messages.CATEGORY_FAVORITE
                     });
-                case h.GIFPickerResultTypes.TRENDING_GIFS:
+                case A.GIFPickerResultTypes.TRENDING_GIFS:
                     return (0, i.jsx)(l.FormTitle, {
                         tag: "h5",
                         className: O.searchHeader,
@@ -111,8 +111,8 @@ function(e, t, n) {
             return null == d ? (0, i.jsx)(S.default, {
                 hideFavoritesTile: u,
                 onSelectItem: this.handleSelectItem
-            }) : (0, i.jsx)(A.default, {
-                data: d === h.GIFPickerResultTypes.FAVORITES ? r : e,
+            }) : (0, i.jsx)(h.default, {
+                data: d === A.GIFPickerResultTypes.FAVORITES ? r : e,
                 onSelectGIF: this.handleSelectGIF,
                 resultType: d,
                 resultQuery: t,
@@ -152,11 +152,11 @@ function(e, t, n) {
                 let {
                     resultType: t
                 } = this.state;
-                e.keyCode === h.KeyboardKeys.ESCAPE && null != t && (e.stopPropagation(), e.preventDefault(), this.handleClearQuery())
+                e.keyCode === A.KeyboardKeys.ESCAPE && null != t && (e.stopPropagation(), e.preventDefault(), this.handleClearQuery())
             }), p(this, "handleChangeQuery", e => {
-                (0, _.setSearchQuery)(e), this.search(e, h.GIFPickerResultTypes.SEARCH)
+                (0, _.setSearchQuery)(e), this.search(e, A.GIFPickerResultTypes.SEARCH)
             }), p(this, "handleSelectSuggestion", e => {
-                (0, _.setSearchQuery)(""), d.resetSearch(), this.search(e, h.GIFPickerResultTypes.SEARCH_SUGGESTION, !0)
+                (0, _.setSearchQuery)(""), d.resetSearch(), this.search(e, A.GIFPickerResultTypes.SEARCH_SUGGESTION, !0)
             }), p(this, "handleClearQuery", () => {
                 let {
                     current: e
@@ -174,10 +174,10 @@ function(e, t, n) {
                     current: n
                 } = this.searchBarRef;
                 switch (e) {
-                    case h.GIFPickerResultTypes.TRENDING_CATEGORY:
-                        d.search(t, h.GIFPickerResultTypes.TRENDING_CATEGORY, !0), null != n && n.focus();
+                    case A.GIFPickerResultTypes.TRENDING_CATEGORY:
+                        d.search(t, A.GIFPickerResultTypes.TRENDING_CATEGORY, !0), null != n && n.focus();
                         break;
-                    case h.GIFPickerResultTypes.TRENDING_GIFS:
+                    case A.GIFPickerResultTypes.TRENDING_GIFS:
                         d.fetchTrendingGIFs()
                 }
                 this.setState({

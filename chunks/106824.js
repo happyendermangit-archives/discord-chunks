@@ -128,20 +128,20 @@ function(e, t, n) {
             let {
                 results: f,
                 metadata: S
-            } = c.queryResults(this.props.channel, this.props.guild, E, r, I), A = 0;
-            for (let e of Object.values(f)) Array.isArray(e) && (A += e.length);
-            let h = !0 === f.isLoading,
-                m = this.shouldShow(A, h, c),
+            } = c.queryResults(this.props.channel, this.props.guild, E, r, I), h = 0;
+            for (let e of Object.values(f)) Array.isArray(e) && (h += e.length);
+            let A = !0 === f.isLoading,
+                m = this.shouldShow(h, A, c),
                 N = this.state.selectedIndex;
-            !m || h ? N = null : null != N && N >= A && (N = A - 1), m && !this.state.isVisible && (0, s.trackAutocompleteOpen)(_, this.props.channel, S), this.setState({
+            !m || A ? N = null : null != N && N >= h && (N = h - 1), m && !this.state.isVisible && (0, s.trackAutocompleteOpen)(_, this.props.channel, S), this.setState({
                 query: {
                     type: _,
                     typeInfo: c,
                     queryText: E,
                     results: f,
-                    resultCount: A,
+                    resultCount: h,
                     options: r,
-                    isLoading: h
+                    isLoading: A
                 },
                 isVisible: m,
                 selectedIndex: N

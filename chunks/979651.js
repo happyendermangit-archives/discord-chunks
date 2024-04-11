@@ -11,8 +11,8 @@ function(e, t, n) {
         T = n("981631"),
         f = n("354459");
     let S = 0,
-        A = 0,
-        h = {},
+        h = 0,
+        A = {},
         m = new Set,
         N = new Map,
         O = {},
@@ -31,11 +31,11 @@ function(e, t, n) {
 
     function D(e) {
         var t;
-        let n = null !== (t = h[T.ME]) && void 0 !== t ? t : {},
+        let n = null !== (t = A[T.ME]) && void 0 !== t ? t : {},
             i = {};
         d().each(n, (t, n) => {
             t.channelId !== e && (i[n] = t)
-        }), h[T.ME] = i
+        }), A[T.ME] = i
     }
 
     function v(e) {
@@ -45,7 +45,7 @@ function(e, t, n) {
 
     function M(e, t, n) {
         var i, r, s, a;
-        let o = L(h, null != e ? e : T.ME),
+        let o = L(A, null != e ? e : T.ME),
             l = o[t],
             u = n(l);
         if (l === u) return [!1, u, l];
@@ -93,19 +93,19 @@ function(e, t, n) {
         let {
             guild: t
         } = e;
-        d().forEach(h[t.id], e => {
+        d().forEach(A[t.id], e => {
             M(t.id, e.userId, () => null)
-        }), delete h[t.id]
+        }), delete A[t.id]
     }
     class U extends(s = _.default.Store) {
         getAllVoiceStates() {
-            return h
-        }
-        getVoiceStateVersion() {
             return A
         }
+        getVoiceStateVersion() {
+            return h
+        }
         getVoiceStates(e) {
-            return L(h, null != e ? e : T.ME)
+            return L(A, null != e ? e : T.ME)
         }
         getVoiceStatesForChannel(e) {
             return L(O, e)
@@ -173,10 +173,10 @@ function(e, t, n) {
                 user: t,
                 sessionId: n
             } = e, s = null != i && i !== t.id;
-            return s && (h = {}, O = {}, R = {}, p = {}, N.clear()), i = t.id, r = n, s
+            return s && (A = {}, O = {}, R = {}, p = {}, N.clear()), i = t.id, r = n, s
         },
         CONNECTION_OPEN_SUPPLEMENTAL: function() {
-            h = {}, O = {}, R = {}, p = {}, N.clear()
+            A = {}, O = {}, R = {}, p = {}, N.clear()
         },
         OVERLAY_INITIALIZE: function(e) {
             let {
@@ -184,7 +184,7 @@ function(e, t, n) {
                 user: n,
                 sessionId: s
             } = e;
-            for (let [e, n] of(h = {}, O = {}, R = {}, p = {}, Object.entries(t)))
+            for (let [e, n] of(A = {}, O = {}, R = {}, p = {}, Object.entries(t)))
                 for (let [t, i] of Object.entries(n)) M(e, t, () => new E.default(i));
             i = n.id, r = s
         },
@@ -201,7 +201,7 @@ function(e, t, n) {
             } = e;
             return t.reduce((e, t) => {
                 let [n, i, s] = y(t.guildId, t);
-                return n ? (t.sessionId === r && null != i && null != s && s.channelId !== i.channelId && (S += 1), A++, !0) : e
+                return n ? (t.sessionId === r && null != i && null != s && s.channelId !== i.channelId && (S += 1), h++, !0) : e
             }, !1)
         },
         GUILD_DELETE: P,
@@ -221,14 +221,14 @@ function(e, t, n) {
         PASSIVE_UPDATE_V1: function(e) {
             var t, n;
             let i = !1,
-                r = I.default.keys(null !== (t = h[e.guildId]) && void 0 !== t ? t : {}),
+                r = I.default.keys(null !== (t = A[e.guildId]) && void 0 !== t ? t : {}),
                 s = new Set(r);
             for (let t of null !== (n = e.voiceStates) && void 0 !== n ? n : []) {
                 let [n] = y(e.guildId, t);
                 i = i || n, s.delete(t.userId)
             }
             for (let t of s) M(e.guildId, t, () => null), i = !0;
-            return i && A++, i
+            return i && h++, i
         },
         RTC_CONNECTION_PLATFORM: function(e) {
             let {

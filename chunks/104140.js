@@ -19,7 +19,7 @@ function(e, t, n) {
         f = n("215569"),
         S = n("608675");
 
-    function A(e, t, n) {
+    function h(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -27,7 +27,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    let h = {
+    let A = {
             friction: 13,
             tension: 240,
             duration: 150
@@ -79,7 +79,7 @@ function(e, t, n) {
             })
         }
         constructor(...e) {
-            super(...e), A(this, "timeoutId", void 0)
+            super(...e), h(this, "timeoutId", void 0)
         }
     }
 
@@ -161,7 +161,7 @@ function(e, t, n) {
             t && !e.selected ? null == r || r.update({
                 spring: 1,
                 immediate: !1,
-                config: h
+                config: A
             }).start() : !t && e.selected && (null == r || r.update({
                 spring: 0,
                 immediate: !1,
@@ -236,14 +236,14 @@ function(e, t, n) {
                 maskId: _,
                 lowerBadgeMask: E,
                 upperBadgeMask: T,
-                focused: A,
-                hasRenderedBadge: h,
+                focused: h,
+                hasRenderedBadge: A,
                 renderComplex: m
             } = this.state;
             if (!m) return (0, s.jsx)("div", {
                 className: l()(t, {
                     [S.wrapperSimple]: !0,
-                    [S.simpleFocused]: A
+                    [S.simpleFocused]: h
                 }),
                 style: o,
                 onFocus: this.handleFocus,
@@ -289,7 +289,7 @@ function(e, t, n) {
                         }), (0, s.jsx)(c.animated.path, {
                             d: this.getPathInterpolation(),
                             id: p
-                        }), h ? (0, s.jsx)(c.animated.rect, {
+                        }), A ? (0, s.jsx)(c.animated.rect, {
                             id: N,
                             x: 28,
                             y: -4,
@@ -298,7 +298,7 @@ function(e, t, n) {
                             rx: 12,
                             ry: 12,
                             transform: this.getBadgePositionInterpolation(T, -1)
-                        }) : null, h ? (0, s.jsx)(c.animated.rect, {
+                        }) : null, A ? (0, s.jsx)(c.animated.rect, {
                             id: O,
                             x: 48 - (r + 8) + 4,
                             y: 28,
@@ -324,7 +324,7 @@ function(e, t, n) {
                             className: l()({
                                 [S.isHighlighted]: d
                             })
-                        }), h ? (0, s.jsxs)(s.Fragment, {
+                        }), A ? (0, s.jsxs)(s.Fragment, {
                             children: [(0, s.jsx)("use", {
                                 href: "#".concat(N),
                                 fill: "black"
@@ -333,7 +333,7 @@ function(e, t, n) {
                                 fill: "black"
                             })]
                         }) : null]
-                    }), h ? (0, s.jsxs)("mask", {
+                    }), A ? (0, s.jsxs)("mask", {
                         id: C,
                         children: [(0, s.jsx)("rect", {
                             width: "150%",
@@ -348,7 +348,7 @@ function(e, t, n) {
                             href: "#".concat(O),
                             fill: "black"
                         })]
-                    }) : null, A ? (0, s.jsxs)(a.Fragment, {
+                    }) : null, h ? (0, s.jsxs)(a.Fragment, {
                         children: [(0, s.jsx)("g", {
                             className: S.focusStroke,
                             mask: "url(#".concat(C, ")"),
@@ -393,27 +393,27 @@ function(e, t, n) {
             }, "wrapper")
         }
         constructor(...e) {
-            super(...e), A(this, "timeout", new T.Timeout), A(this, "state", {
+            super(...e), h(this, "timeout", new T.Timeout), h(this, "state", {
                 renderComplex: !1,
                 hasRenderedBadge: !1,
                 maskId: (0, E.v4)(),
                 focused: !1
-            }), A(this, "handleTimeout", () => {
+            }), h(this, "handleTimeout", () => {
                 this.timeout.stop(), this.setState({
                     renderComplex: !1
                 })
-            }), A(this, "handleFocus", () => {
+            }), h(this, "handleFocus", () => {
                 this.setState({
                     focused: !0
                 })
-            }), A(this, "handleBlur", () => {
+            }), h(this, "handleBlur", () => {
                 this.setState({
                     focused: !1
                 })
             })
         }
     }
-    A(g, "defaultProps", {
+    h(g, "defaultProps", {
         selected: !1,
         lowerBadgeWidth: 16,
         highlight: !1

@@ -16,8 +16,8 @@ function(e, t, n) {
         T = n("585483"),
         f = n("70956"),
         S = n("36703"),
-        A = n("347312"),
-        h = n("981631"),
+        h = n("347312"),
+        A = n("981631"),
         m = n("689938"),
         N = n("505810");
     let O = r.lazy(() => Promise.all([n.e("26460"), n.e("89792")]).then(n.bind(n, "711635")));
@@ -127,10 +127,10 @@ function(e, t, n) {
                 null != e && cancelAnimationFrame(e)
             }
         }, [t, n, s]), _ = L, R = W, C = K, r.useEffect(() => {
-            if (R) return T.ComponentDispatch.dispatch(h.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, {
+            if (R) return T.ComponentDispatch.dispatch(A.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, {
                 src: _
-            }), T.ComponentDispatch.subscribe(h.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e), () => {
-                T.ComponentDispatch.unsubscribe(h.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e)
+            }), T.ComponentDispatch.subscribe(A.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e), () => {
+                T.ComponentDispatch.unsubscribe(A.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e)
             };
 
             function e(e) {
@@ -197,7 +197,7 @@ function(e, t, n) {
                     width: 18,
                     height: 18
                 })
-            }), (0, i.jsx)(A.default, {
+            }), (0, i.jsx)(h.default, {
                 className: N.waveform,
                 waveform: y,
                 currentTime: V,

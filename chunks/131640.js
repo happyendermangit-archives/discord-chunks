@@ -29,8 +29,8 @@ function(e, t, n) {
         T = n("233440"),
         f = n("680295"),
         S = n("199902"),
-        A = n("430824"),
-        h = n("158776"),
+        h = n("430824"),
+        A = n("158776"),
         m = n("759231"),
         N = n("806519"),
         O = n("626135"),
@@ -58,7 +58,7 @@ function(e, t, n) {
             guildId: n,
             isTryItOutFlow: r,
             forProfileEffectModal: s
-        } = e, a = (0, l.useStateFromStores)([g.default], () => g.default.getUserProfile(t.id), [t]), o = (0, l.useStateFromStores)([A.default], () => A.default.getGuild(n), [n]), _ = (0, I.useClydeProfilesEnabled)(o);
+        } = e, a = (0, l.useStateFromStores)([g.default], () => g.default.getUserProfile(t.id), [t]), o = (0, l.useStateFromStores)([h.default], () => h.default.getGuild(n), [n]), _ = (0, I.useClydeProfilesEnabled)(o);
         return (0, i.jsxs)(i.Fragment, {
             children: [(null == a ? void 0 : a.profileFetchFailed) && (!t.isClyde() || _) && (0, i.jsx)(d.Tooltip, {
                 text: w.default.Messages.USER_PROFILE_LOAD_ERROR,
@@ -91,8 +91,8 @@ function(e, t, n) {
             channelId: I,
             onClose: f,
             disableUserProfileLink: S,
-            profileType: A,
-            animateOnHover: h,
+            profileType: h,
+            animateOnHover: A,
             hasProfileEffect: m
         } = e, {
             profileTheme: R
@@ -110,7 +110,7 @@ function(e, t, n) {
             user: t,
             guildId: E,
             size: B,
-            animateOnHover: h
+            animateOnHover: A
         }), q = (0, i.jsx)("div", {
             className: k.avatarHoverTarget,
             ...Q,
@@ -124,7 +124,7 @@ function(e, t, n) {
                 isMobile: _,
                 statusTooltip: !0
             })
-        }), J = (0, o.match)(A).with(U.UserProfileTypes.POPOUT, () => (0, v.buildGetPremiumUserBannerStyles)({
+        }), J = (0, o.match)(h).with(U.UserProfileTypes.POPOUT, () => (0, v.buildGetPremiumUserBannerStyles)({
             premiumUserWithBanner: k.avatarPositionPremiumBanner,
             premiumUserWithoutBanner: k.avatarPositionPremiumNoBanner,
             default: k.avatarPositionNormal
@@ -235,17 +235,17 @@ function(e, t, n) {
             activity: c,
             status: E,
             isMobile: I
-        } = (0, l.useStateFromStoresObject)([S.default, h.default], () => {
+        } = (0, l.useStateFromStoresObject)([S.default, A.default], () => {
             let e = null != S.default.getAnyStreamForUser(t.id);
             return {
-                activity: h.default.findActivity(t.id, t => {
+                activity: A.default.findActivity(t.id, t => {
                     let {
                         type: n
                     } = t;
                     return e ? n === b.ActivityTypes.PLAYING : n !== b.ActivityTypes.CUSTOM_STATUS
                 }),
-                status: d ? null : h.default.getStatus(t.id),
-                isMobile: h.default.isMobileOnline(t.id)
+                status: d ? null : A.default.getStatus(t.id),
+                isMobile: A.default.isMobileOnline(t.id)
             }
         });
         return (0, i.jsxs)("div", {

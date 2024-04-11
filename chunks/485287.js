@@ -5,7 +5,7 @@ function(e, t, n) {
             return m
         },
         useShowStageMusicMuteButton: function() {
-            return h
+            return A
         }
     }), n("47120");
     var i = n("442837"),
@@ -24,7 +24,7 @@ function(e, t, n) {
         f = !1,
         S = (0, u.createSound)("stage_waiting", "stage_waiting", T(a.default.getOutputVolume()));
 
-    function A() {
+    function h() {
         let e = o.default.getVoiceChannelId();
         if (null == e) {
             S.stop(), f = !1;
@@ -51,7 +51,7 @@ function(e, t, n) {
         n || f ? n && (S.pause(), f = !1) : (S.volume = T(a.default.getOutputVolume()), S.loop(), f = !0)
     }
 
-    function h(e) {
+    function A(e) {
         let t = (0, i.useStateFromStores)([o.default], () => o.default.getVoiceChannelId() === e),
             n = null != (0, _.useStageParticipants)(e, c.StageChannelParticipantNamedIndex.SPEAKER).find(e => !e.voiceState.isVoiceMuted()),
             r = (0, i.useStateFromStores)([E.default], () => E.default.getStageInstanceByChannel(e));
@@ -71,7 +71,7 @@ function(e, t, n) {
             } = e;
             if (null != t) {
                 let e = s.default.getChannel(t);
-                (null == e ? void 0 : e.isGuildStageVoice()) ? A(): (S.stop(), f = !1)
+                (null == e ? void 0 : e.isGuildStageVoice()) ? h(): (S.stop(), f = !1)
             } else S.stop(), f = !1
         }
         handleLogout() {
@@ -81,16 +81,16 @@ function(e, t, n) {
             let {
                 play: t
             } = e;
-            t ? A() : (S.pause(), f = !1)
+            t ? h() : (S.pause(), f = !1)
         }
         handleMute(e) {
             let {
                 muted: t
             } = e;
-            t ? (S.pause(), f = !1) : A()
+            t ? (S.pause(), f = !1) : h()
         }
         handleVoiceStateUpdates() {
-            A()
+            h()
         }
         handleSetOutputVolume(e) {
             let {
@@ -99,7 +99,7 @@ function(e, t, n) {
             S.volume = T(t)
         }
         handleToggleSelfDeaf() {
-            A()
+            h()
         }
         constructor(...e) {
             var t, n, i;

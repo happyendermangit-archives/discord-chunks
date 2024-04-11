@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         startImpersonating: function() {
-            return A
+            return h
         },
         stopImpersonating: function() {
             return m
@@ -17,7 +17,7 @@ function(e, t, n) {
             return p
         },
         updateImpersonating: function() {
-            return h
+            return A
         }
     }), n("47120");
     var i = n("570140"),
@@ -36,7 +36,7 @@ function(e, t, n) {
         f = n("981631"),
         S = n("176505");
 
-    function A(e, t) {
+    function h(e, t) {
         E.default.track(f.AnalyticEvents.VIEW_AS_ROLES_SELECTED, {
             num_roles: Object.keys(t.roles).length,
             ...(0, r.collectGuildAnalyticsMetadata)(e),
@@ -48,7 +48,7 @@ function(e, t, n) {
         }), N(e)
     }
 
-    function h(e, t) {
+    function A(e, t) {
         let n = I.default.getData(e);
         null != n && n.type === t.type && (E.default.track(f.AnalyticEvents.VIEW_AS_ROLES_SELECTED, {
             num_roles: Object.keys(n.roles).length,
@@ -82,7 +82,7 @@ function(e, t, n) {
 
     function O(e, t, n) {
         let i = new Set(c.default.getOptedInChannels(e));
-        t.forEach(e => i.add(e)), n.forEach(e => i.delete(e)), h(e, {
+        t.forEach(e => i.add(e)), n.forEach(e => i.delete(e)), A(e, {
             type: T.ImpersonateType.NEW_MEMBER,
             optInChannels: i
         })
@@ -102,14 +102,14 @@ function(e, t, n) {
             })
         }(e, t);
         let i = {};
-        t.forEach(e => i[e] = n[e]), h(e, {
+        t.forEach(e => i[e] = n[e]), A(e, {
             type: T.ImpersonateType.NEW_MEMBER,
             roles: i
         })
     }
 
     function R(e, t) {
-        h(e, {
+        A(e, {
             type: T.ImpersonateType.NEW_MEMBER,
             ...t
         })

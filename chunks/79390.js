@@ -53,8 +53,8 @@ function(e, t, n) {
         T = n("5192"),
         f = n("192616"),
         S = n("489887"),
-        A = n("981631"),
-        h = n("689938");
+        h = n("981631"),
+        A = n("689938");
 
     function m() {
         return {
@@ -77,8 +77,8 @@ function(e, t, n) {
     }
 
     function p(e) {
-        let t = A.ChannelTypesSets.POLLS.has(null == e ? void 0 : e.type),
-            n = (0, o.useStateFromStores)([c.default], () => c.default.can(A.Permissions.SEND_MESSAGES, e)),
+        let t = h.ChannelTypesSets.POLLS.has(null == e ? void 0 : e.type),
+            n = (0, o.useStateFromStores)([c.default], () => c.default.can(h.Permissions.SEND_MESSAGES, e)),
             {
                 enabled: i
             } = f.CreateGuildPollsExperiment.useExperiment({
@@ -189,27 +189,27 @@ function(e, t, n) {
             }(a, n);
         return 0 === I.length ? "" : function(e, t) {
             let n = Math.max(0, t - e.length);
-            if (1 === e.length) return n > 0 ? h.default.Messages.POLL_VOTES_TOOLTIP_1_N.format({
+            if (1 === e.length) return n > 0 ? A.default.Messages.POLL_VOTES_TOOLTIP_1_N.format({
                 a: e[0],
                 n: n.toLocaleString()
             }) : e[0];
-            if (2 === e.length) return n > 0 ? h.default.Messages.POLL_VOTES_TOOLTIP_2_N.format({
+            if (2 === e.length) return n > 0 ? A.default.Messages.POLL_VOTES_TOOLTIP_2_N.format({
                 a: e[0],
                 b: e[1],
                 n: n.toLocaleString()
-            }) : h.default.Messages.POLL_VOTES_TOOLTIP_2.format({
+            }) : A.default.Messages.POLL_VOTES_TOOLTIP_2.format({
                 a: e[0],
                 b: e[1]
             });
-            if (3 !== e.length) return h.default.Messages.POLL_VOTES_TOOLTIP_N.format({
+            if (3 !== e.length) return A.default.Messages.POLL_VOTES_TOOLTIP_N.format({
                 n: n.toLocaleString()
             });
-            else return n > 0 ? h.default.Messages.POLL_VOTES_TOOLTIP_3_N.format({
+            else return n > 0 ? A.default.Messages.POLL_VOTES_TOOLTIP_3_N.format({
                 a: e[0],
                 b: e[1],
                 c: e[2],
                 n: n.toLocaleString()
-            }) : h.default.Messages.POLL_VOTES_TOOLTIP_3.format({
+            }) : A.default.Messages.POLL_VOTES_TOOLTIP_3.format({
                 a: e[0],
                 b: e[1],
                 c: e[2]

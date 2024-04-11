@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         ALL_CHANNEL_TYPES: function() {
-            return h
+            return A
         },
         CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING: function() {
             return Z
@@ -14,7 +14,7 @@ function(e, t, n) {
             return ec
         },
         DMChannelRecord: function() {
-            return eA
+            return eh
         },
         EDITABLE_CHANNEL_TYPES: function() {
             return j
@@ -98,7 +98,7 @@ function(e, t, n) {
             return k
         },
         isGuildSelectableChannelType: function() {
-            return A
+            return h
         },
         isGuildTextChannelType: function() {
             return N
@@ -149,10 +149,10 @@ function(e, t, n) {
     }
     let S = new Set([E.ChannelTypes.GUILD_TEXT, E.ChannelTypes.GUILD_ANNOUNCEMENT, E.ChannelTypes.GUILD_STORE, E.ChannelTypes.ANNOUNCEMENT_THREAD, E.ChannelTypes.PUBLIC_THREAD, E.ChannelTypes.PRIVATE_THREAD, E.ChannelTypes.GUILD_DIRECTORY, E.ChannelTypes.GUILD_FORUM, E.ChannelTypes.GUILD_MEDIA, E.ChannelTypes.DM, E.ChannelTypes.GROUP_DM]);
 
-    function A(e) {
+    function h(e) {
         return S.has(e)
     }
-    let h = new Set([E.ChannelTypes.DM, E.ChannelTypes.GROUP_DM, E.ChannelTypes.GUILD_TEXT, E.ChannelTypes.GUILD_VOICE, E.ChannelTypes.GUILD_STAGE_VOICE, E.ChannelTypes.GUILD_CATEGORY, E.ChannelTypes.GUILD_ANNOUNCEMENT, E.ChannelTypes.GUILD_STORE, E.ChannelTypes.ANNOUNCEMENT_THREAD, E.ChannelTypes.PUBLIC_THREAD, E.ChannelTypes.PRIVATE_THREAD, E.ChannelTypes.GUILD_DIRECTORY, E.ChannelTypes.GUILD_FORUM, E.ChannelTypes.GUILD_MEDIA]),
+    let A = new Set([E.ChannelTypes.DM, E.ChannelTypes.GROUP_DM, E.ChannelTypes.GUILD_TEXT, E.ChannelTypes.GUILD_VOICE, E.ChannelTypes.GUILD_STAGE_VOICE, E.ChannelTypes.GUILD_CATEGORY, E.ChannelTypes.GUILD_ANNOUNCEMENT, E.ChannelTypes.GUILD_STORE, E.ChannelTypes.ANNOUNCEMENT_THREAD, E.ChannelTypes.PUBLIC_THREAD, E.ChannelTypes.PRIVATE_THREAD, E.ChannelTypes.GUILD_DIRECTORY, E.ChannelTypes.GUILD_FORUM, E.ChannelTypes.GUILD_MEDIA]),
         m = new Set([E.ChannelTypes.GUILD_TEXT, E.ChannelTypes.GUILD_ANNOUNCEMENT, E.ChannelTypes.ANNOUNCEMENT_THREAD, E.ChannelTypes.PUBLIC_THREAD, E.ChannelTypes.PRIVATE_THREAD]);
 
     function N(e) {
@@ -690,8 +690,8 @@ function(e, t, n) {
             super(e), this.application_id = e.application_id, this.flags_ = e.flags_, this.icon = e.icon, this.isMessageRequest = e.isMessageRequest, this.isMessageRequestTimestamp = e.isMessageRequestTimestamp, this.isSpam = e.isSpam, this.lastMessageId = e.lastMessageId, this.lastPinTimestamp = e.lastPinTimestamp, this.nicks = e.nicks, this.ownerId = e.ownerId, this.rawRecipients = eS.sortRecipients(e.rawRecipients), this.recipients = [...null !== (t = e.recipients) && void 0 !== t ? t : []].sort(c.default.compare), this.safetyWarnings = null !== (n = e.safetyWarnings) && void 0 !== n ? n : []
         }
     }
-    class eA extends eS {}
-    class eh extends ec {
+    class eh extends eS {}
+    class eA extends ec {
         static fromServer(e, t) {
             var n, i, r, s, a;
             let o = {
@@ -731,7 +731,7 @@ function(e, t, n) {
                 userLimit_: e.user_limit,
                 videoQualityMode: e.video_quality_mode
             };
-            return (0, l.dangerouslyCast)(o, eh)
+            return (0, l.dangerouslyCast)(o, eA)
         }
         constructor(e) {
             var t;
@@ -747,9 +747,9 @@ function(e, t, n) {
         [E.ChannelTypes.GUILD_CATEGORY]: eT.fromServer,
         [E.ChannelTypes.GUILD_ANNOUNCEMENT]: eT.fromServer,
         [E.ChannelTypes.GUILD_STORE]: eT.fromServer,
-        [E.ChannelTypes.ANNOUNCEMENT_THREAD]: eh.fromServer,
-        [E.ChannelTypes.PUBLIC_THREAD]: eh.fromServer,
-        [E.ChannelTypes.PRIVATE_THREAD]: eh.fromServer,
+        [E.ChannelTypes.ANNOUNCEMENT_THREAD]: eA.fromServer,
+        [E.ChannelTypes.PUBLIC_THREAD]: eA.fromServer,
+        [E.ChannelTypes.PRIVATE_THREAD]: eA.fromServer,
         [E.ChannelTypes.GUILD_DIRECTORY]: eT.fromServer,
         [E.ChannelTypes.GUILD_FORUM]: ef.fromServer,
         [E.ChannelTypes.GUILD_MEDIA]: ef.fromServer
@@ -764,7 +764,7 @@ function(e, t, n) {
         return eC(e)
     }
     let ep = {
-        [E.ChannelTypes.DM]: eA,
+        [E.ChannelTypes.DM]: eh,
         [E.ChannelTypes.GROUP_DM]: class e extends eS {},
         [E.ChannelTypes.GUILD_TEXT]: class e extends eT {},
         [E.ChannelTypes.GUILD_VOICE]: class e extends eI {},
@@ -772,9 +772,9 @@ function(e, t, n) {
         [E.ChannelTypes.GUILD_CATEGORY]: class e extends eT {},
         [E.ChannelTypes.GUILD_ANNOUNCEMENT]: class e extends eT {},
         [E.ChannelTypes.GUILD_STORE]: class e extends eT {},
-        [E.ChannelTypes.ANNOUNCEMENT_THREAD]: eh,
-        [E.ChannelTypes.PUBLIC_THREAD]: eh,
-        [E.ChannelTypes.PRIVATE_THREAD]: eh,
+        [E.ChannelTypes.ANNOUNCEMENT_THREAD]: eA,
+        [E.ChannelTypes.PUBLIC_THREAD]: eA,
+        [E.ChannelTypes.PRIVATE_THREAD]: eA,
         [E.ChannelTypes.GUILD_DIRECTORY]: class e extends eT {},
         [E.ChannelTypes.GUILD_FORUM]: ef,
         [E.ChannelTypes.GUILD_MEDIA]: ef

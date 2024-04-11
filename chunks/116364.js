@@ -17,8 +17,8 @@ function(e, t, n) {
         T = n("689079"),
         f = n("689938"),
         S = n("733243"),
-        A = n("239840");
-    let h = {
+        h = n("239840");
+    let A = {
             results: {
                 choices: []
             }
@@ -56,7 +56,7 @@ function(e, t, n) {
             queryResults(e, t, n, i, r) {
                 var s;
                 let a = u.default.getActiveOption(e.id);
-                if (null == a) return h;
+                if (null == a) return A;
                 if (a.autocomplete) {
                     if (r) {
                         let r = u.default.getActiveCommand(e.id);
@@ -102,7 +102,7 @@ function(e, t, n) {
                 } = e;
                 return r ? (0, i.jsx)(a.default, {
                     message: f.default.Messages.APPLICATION_COMMAND_AUTOCOMPLETE_FAILED,
-                    noResultsImageURL: A,
+                    noResultsImageURL: h,
                     className: S.noAutocompleteResults
                 }) : 0 !== t.length || n ? (0, E.renderAutocompleteGroup)({
                     query: o,
@@ -121,7 +121,7 @@ function(e, t, n) {
                     key: "choice"
                 }) : (0, i.jsx)(a.default, {
                     message: f.default.Messages.APPLICATION_COMMAND_AUTOCOMPLETE_NO_OPTIONS,
-                    noResultsImageURL: A,
+                    noResultsImageURL: h,
                     className: S.noAutocompleteResults
                 })
             },

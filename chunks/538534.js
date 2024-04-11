@@ -26,7 +26,7 @@ function(e, t, n) {
         f = n("981631"),
         S = n("322047");
 
-    function A(e, t, n) {
+    function h(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -34,7 +34,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    let h = {
+    let A = {
         NOT_SET: "",
         NONE: "0",
         SMALL: "7px 10px",
@@ -53,12 +53,12 @@ function(e, t, n) {
             titleClassName: _,
             radioItemClassName: E,
             radioItemIconClassName: f,
-            radioBarClassName: A,
-            hasSelection: h,
+            radioBarClassName: h,
+            hasSelection: A,
             radioPosition: m = "left",
             icon: N,
             withTransparentBackground: O
-        } = e, p = null !== (t = s.color) && void 0 !== t ? t : "", R = i || !h, C = (0, r.jsxs)("div", {
+        } = e, p = null !== (t = s.color) && void 0 !== t ? t : "", R = i || !A, C = (0, r.jsxs)("div", {
             className: f,
             children: [i ? (0, r.jsx)(T.default, {
                 foreground: S.radioIconForeground
@@ -85,7 +85,7 @@ function(e, t, n) {
                 className: o()(S.radioBar, {
                     [S.radioPositionLeft]: "left" === m,
                     [S.radioPositionRight]: "right" === m
-                }, A),
+                }, h),
                 children: ["left" === m ? C : null, (0, r.jsxs)("div", {
                     className: o()(S.info, d),
                     children: [(0, r.jsx)(c.Text, {
@@ -119,8 +119,8 @@ function(e, t, n) {
                 withTransparentBackground: I,
                 radioPosition: T
             } = this.props, f = t || n.disabled, {
-                tooltipText: A,
-                tooltipPosition: h,
+                tooltipText: h,
+                tooltipPosition: A,
                 icon: N
             } = n, O = null != n.collapsibleContent ? (0, r.jsx)(d.Collapsible, {
                 className: c,
@@ -165,9 +165,9 @@ function(e, t, n) {
                 icon: N,
                 withTransparentBackground: I
             });
-            return null != A ? (0, r.jsx)(E.Tooltip, {
-                text: A,
-                position: null != h ? h : "top",
+            return null != h ? (0, r.jsx)(E.Tooltip, {
+                text: h,
+                position: null != A ? A : "top",
                 children: e => (0, r.jsx)("div", {
                     ...e,
                     className: S.tooltipWrapper,
@@ -176,7 +176,7 @@ function(e, t, n) {
             }) : O
         }
         constructor(...e) {
-            super(...e), A(this, "handleClick", e => {
+            super(...e), h(this, "handleClick", e => {
                 e.preventDefault();
                 let {
                     onClick: t,
@@ -253,7 +253,7 @@ function(e, t, n) {
             collapsibleClassName: s,
             className: a,
             value: o = null,
-            size: l = h.MEDIUM,
+            size: l = A.MEDIUM,
             radioPosition: u = "left",
             onChange: d = f.NOOP,
             disabled: c = !1,
@@ -261,8 +261,8 @@ function(e, t, n) {
             "aria-labelledby": I,
             orientation: T,
             withTransparentBackground: S
-        } = e, A = (0, _.useFormContext)(), m = O({
-            labelledBy: null != I ? I : A.titleId,
+        } = e, h = (0, _.useFormContext)(), m = O({
+            labelledBy: null != I ? I : h.titleId,
             orientation: T,
             isDisabled: c
         }), p = E.some(e => e.value === o);
@@ -287,8 +287,8 @@ function(e, t, n) {
             }, e.value))
         })
     }
-    A(N, "defaultProps", {
+    h(N, "defaultProps", {
         withTransparentBackground: !1,
         radioPosition: "left"
-    }), R.Sizes = h
+    }), R.Sizes = A
 }

@@ -12,15 +12,15 @@ function(e, t, n) {
         T = n("981631");
     let f = null,
         S = {},
-        A = null;
+        h = null;
 
-    function h() {
+    function A() {
         return {
             _categories: [],
             null: []
         }
     }
-    let m = h();
+    let m = A();
 
     function N(e, t) {
         e.index = t
@@ -28,7 +28,7 @@ function(e, t, n) {
 
     function O(e) {
         let t = E.default.getChannels(e),
-            n = h(),
+            n = A(),
             i = e => {
                 var t;
                 let {
@@ -81,7 +81,7 @@ function(e, t, n) {
     }
 
     function L(e, t) {
-        if (A = t, null == e || null == e.getGuildId()) return !1;
+        if (h = t, null == e || null == e.getGuildId()) return !1;
         let n = e.getGuildId();
         return null != n && (S[n] = void 0, n === f && O(n), !0)
     }
@@ -159,7 +159,7 @@ function(e, t, n) {
             let {
                 channelId: t
             } = e;
-            return null == t && null != A ? L(c.default.getChannel(A), null) : L(c.default.getChannel(t), t)
+            return null == t && null != h ? L(c.default.getChannel(h), null) : L(c.default.getChannel(t), t)
         },
         VOICE_STATE_UPDATES: function(e) {
             let {

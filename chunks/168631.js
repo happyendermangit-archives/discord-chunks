@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         calculateButtonColor: function() {
-            return A
+            return h
         },
         getProfileTheme: function() {
             return I
@@ -17,7 +17,7 @@ function(e, t, n) {
             return m
         },
         useMessageInputBorderColor: function() {
-            return h
+            return A
         },
         useProfileThemeValues: function() {
             return E
@@ -103,7 +103,7 @@ function(e, t, n) {
         let i = E(e);
         return null == i || null == t ? null : f(t, n ? i.overlaySyncedWithUserTheme : i.overlay)
     }
-    let A = (0, r.memoize)(e => {
+    let h = (0, r.memoize)(e => {
         let t = (0, l.getContrastingColor)(e, {
             base: "#ffffff",
             contrastRatio: l.WCAGContrastRatios.HighContrastText
@@ -111,13 +111,13 @@ function(e, t, n) {
         return (0, s.hex2int)(t)
     }, e => e);
 
-    function h(e, t) {
+    function A(e, t) {
         let n = E(e);
         return null != n && null != t ? f(t, null == n ? void 0 : n.messageInputBorder) : null
     }
 
     function m(e, t) {
         let n = (0, d.useColorValue)(c.Color.WHITE_500).hex;
-        return (0, l.isThemeDark)(e) ? (0, s.hex2int)(n) : null != t ? A(t) : null
+        return (0, l.isThemeDark)(e) ? (0, s.hex2int)(n) : null != t ? h(t) : null
     }
 }

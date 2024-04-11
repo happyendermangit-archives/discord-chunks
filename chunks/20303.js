@@ -12,7 +12,7 @@ function(e, t, n) {
         f = new Set,
         S = null === (i = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT) || void 0 === i ? void 0 : i.replace("//", "");
 
-    function A(e) {
+    function h(e) {
         let t = (0, c.getHostname)(e);
         switch (t) {
             case window.GLOBAL_ENV.CDN_HOST:
@@ -27,7 +27,7 @@ function(e, t, n) {
         }
     }
 
-    function h(e) {
+    function A(e) {
         let t = (0, c.getProtocol)(e);
         return f.has(t)
     }
@@ -45,10 +45,10 @@ function(e, t, n) {
             }
         }
         isTrustedDomain(e) {
-            return A(e)
+            return h(e)
         }
         isTrustedProtocol(e) {
-            return h(e)
+            return A(e)
         }
     }
     o = "MaskedLinkStore", (a = "displayName") in(s = m) ? Object.defineProperty(s, a, {
@@ -61,7 +61,7 @@ function(e, t, n) {
             let {
                 url: t
             } = e;
-            if (A(t)) return !1;
+            if (h(t)) return !1;
             T.add((0, c.getHostname)(t)), u.Storage.set(I, {
                 trustedDomains: T,
                 trustedProtocols: f
@@ -71,7 +71,7 @@ function(e, t, n) {
             let {
                 url: t
             } = e;
-            if (h(t)) return !1;
+            if (A(t)) return !1;
             f.add((0, c.getProtocol)(t)), u.Storage.set(I, {
                 trustedDomains: T,
                 trustedProtocols: f

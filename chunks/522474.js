@@ -23,8 +23,8 @@ function(e, t, n) {
         }) : e[t] = n, e
     }
     let S = {},
-        A = {},
         h = {},
+        A = {},
         m = {},
         N = {},
         O = new Set,
@@ -32,23 +32,23 @@ function(e, t, n) {
         R = o().debounce(p, 150);
 
     function C(e) {
-        let t = h[e];
+        let t = A[e];
         null != t && !t.closed && (S[e] = {
             x: t.screenX,
             y: t.screenY,
             width: t.innerWidth,
             height: t.innerHeight,
-            alwaysOnTop: !!c.isPlatformEmbedded && A[e]
+            alwaysOnTop: !!c.isPlatformEmbedded && h[e]
         })
     }
 
     function g(e) {
-        let t = h[e];
+        let t = A[e];
         null != t && (!t.closed && C(e), t.close(), ! function(e) {
-            let t = h[e];
+            let t = A[e];
             s()(null != t, "Popout window was null during unmount"), t.removeEventListener("focus", p), t.removeEventListener("blur", p), t.removeEventListener("resize", R);
             let n = m[e];
-            s()(null != n, "Window root was null while unmounting"), n.unmount(), delete h[e], delete A[e], delete N[e], delete m[e]
+            s()(null != n, "Window root was null while unmounting"), n.unmount(), delete A[e], delete h[e], delete N[e], delete m[e]
         }(e), M.emitChange())
     }
 
@@ -62,7 +62,7 @@ function(e, t, n) {
             case T.PopoutEventTypes.LOADED:
                 var i;
                 return i = n.key, void(O.has(i) && (! function(e) {
-                    let t = h[e],
+                    let t = A[e],
                         n = N[e];
                     if (null == t) {
                         new _.default("PopoutWindowStore").warn("Failed to open window", e);
@@ -88,8 +88,8 @@ function(e, t, n) {
     }
 
     function D() {
-        for (let e of Object.keys(h)) {
-            let t = h[e];
+        for (let e of Object.keys(A)) {
+            let t = A[e];
             null != t && t.close()
         }
     }
@@ -98,29 +98,29 @@ function(e, t, n) {
             window.addEventListener("message", L), window.addEventListener("beforeunload", D), S = null != e ? e : {}
         }
         getWindow(e) {
-            return h[e]
+            return A[e]
         }
         getWindowState(e) {
             return S[e]
         }
         getWindowKeys() {
-            return Object.keys(h)
+            return Object.keys(A)
         }
         getWindowOpen(e) {
-            let t = h[e];
+            let t = A[e];
             return null != t && !t.closed
         }
         getIsAlwaysOnTop(e) {
-            return !!A[e]
+            return !!h[e]
         }
         getWindowFocused(e) {
             var t, n;
-            let i = h[e];
+            let i = A[e];
             return null !== (n = null == i ? void 0 : null === (t = i.document) || void 0 === t ? void 0 : t.hasFocus()) && void 0 !== n && n
         }
         getWindowVisible(e) {
             var t;
-            let n = h[e];
+            let n = A[e];
             return (null == n ? void 0 : null === (t = n.document) || void 0 === t ? void 0 : t.visibilityState) === "visible"
         }
         getState() {
@@ -139,7 +139,7 @@ function(e, t, n) {
                 render: i
             } = e;
             if (c.isPlatformEmbedded && !E.default.supportsFeature(T.NativeFeatures.POPOUT_WINDOWS)) throw Error("Popout windows not supported on this native module version!");
-            let r = h[t];
+            let r = A[t];
             if (null != r && !r.closed) return c.isPlatformEmbedded ? E.default.focus(t) : r.focus(), !1;
             let {
                 defaultWidth: s,
@@ -171,12 +171,12 @@ function(e, t, n) {
                 }
                 return t
             }(u));
-            I.windowKey = t, null == I || I.focus(), h[t] = I, N[t] = i, c.isPlatformEmbedded && (E.default.setAlwaysOnTop(t, d), A[t] = d, E.default.isAlwaysOnTop(t).then(e => A[t] = e)), O.add(t)
+            I.windowKey = t, null == I || I.focus(), A[t] = I, N[t] = i, c.isPlatformEmbedded && (E.default.setAlwaysOnTop(t, d), h[t] = d, E.default.isAlwaysOnTop(t).then(e => h[t] = e)), O.add(t)
         },
         POPOUT_WINDOW_CLOSE: function(e) {
             let {
                 key: t
-            } = e, n = h[t];
+            } = e, n = A[t];
             null != n && !n.closed && (C(t), n.close())
         },
         POPOUT_WINDOW_SET_ALWAYS_ON_TOP: function(e) {
@@ -184,7 +184,7 @@ function(e, t, n) {
                 key: t,
                 alwaysOnTop: n
             } = e;
-            c.isPlatformEmbedded && (E.default.setAlwaysOnTop(t, n), A[t] = n, E.default.isAlwaysOnTop(t).then(e => A[t] = e))
+            c.isPlatformEmbedded && (E.default.setAlwaysOnTop(t, n), h[t] = n, E.default.isAlwaysOnTop(t).then(e => h[t] = e))
         },
         LOGOUT: D
     });

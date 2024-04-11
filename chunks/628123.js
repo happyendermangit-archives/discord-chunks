@@ -16,8 +16,8 @@ function(e, t, n) {
         T = n("25779"),
         f = n("797614"),
         S = n("703656"),
-        A = n("586576"),
-        h = n("626135"),
+        h = n("586576"),
+        A = n("626135"),
         m = n("960048"),
         N = n("998502"),
         O = n("981631"),
@@ -76,7 +76,7 @@ function(e, t, n) {
                 r = m.default.captureCrash(e, {
                     extra: t
                 });
-            h.default.track(O.AnalyticEvents.APP_CRASHED, {
+            A.default.track(O.AnalyticEvents.APP_CRASHED, {
                 path: n.pathname,
                 extra: t,
                 error_message: e.message,
@@ -119,7 +119,7 @@ function(e, t, n) {
                             children: p.default.Messages.ERRORS_RELOAD
                         }), (0, i.jsx)(g, {})]
                     });
-                return (0, i.jsx)(A.default, {
+                return (0, i.jsx)(h.default, {
                     title: p.default.Messages.UNSUPPORTED_BROWSER_TITLE,
                     note: null != t ? t() : e,
                     action: n,

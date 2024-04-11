@@ -20,8 +20,8 @@ function(e, t, n) {
         T = n("880080"),
         f = n("709054"),
         S = n("765104"),
-        A = n("477291"),
-        h = n("478758"),
+        h = n("477291"),
+        A = n("478758"),
         m = n("789707"),
         N = n("981631"),
         O = n("531578"),
@@ -36,7 +36,7 @@ function(e, t, n) {
             unread: C,
             onClick: g
         } = e, [L, D] = r.useState(!1), v = (0, u.getTimestampString)(f.default.extractTimestamp(t.startId)), M = (0, s.useStateFromStores)([S.default], () => S.default.summaryFeedback(t)), y = (e, n) => {
-            e.stopPropagation(), (0, A.default)({
+            e.stopPropagation(), (0, h.default)({
                 summary: t,
                 channel: _,
                 rating: n
@@ -91,7 +91,7 @@ function(e, t, n) {
                             width: 4,
                             "aria-hidden": "true",
                             className: p.dot
-                        }), (0, i.jsx)(h.default, {
+                        }), (0, i.jsx)(A.default, {
                             partySize: {
                                 knownSize: m.length,
                                 totalSize: m.length

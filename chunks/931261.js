@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         canSeeOnboardingHome: function() {
-            return A
+            return h
         },
         useCanSeeOnboardingHome: function() {
             return S
@@ -58,7 +58,7 @@ function(e, t, n) {
         }, [e, t, n, i])
     }
 
-    function A(e) {
+    function h(e) {
         let t = u.default.getGuild(e),
             {
                 homeSettingsEnabled: n

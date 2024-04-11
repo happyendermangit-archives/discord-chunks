@@ -16,8 +16,8 @@ function(e, t, n) {
         T = n("285651"),
         f = n("373228"),
         S = n("378233"),
-        A = n("419922"),
-        h = n("490095"),
+        h = n("419922"),
+        A = n("490095"),
         m = n("981631"),
         N = n("689938"),
         O = n("900544");
@@ -146,12 +146,12 @@ function(e, t, n) {
                                 "data-type": c.PickerContextMenuDataTypes.STICKER,
                                 "data-id": e.sticker.id,
                                 children: [(0, i.jsx)(u.HiddenVisually, {
-                                    children: (0, A.getStickerAltText)(e.sticker)
+                                    children: (0, h.getStickerAltText)(e.sticker)
                                 }), (0, i.jsxs)("div", {
                                     "aria-hidden": !0,
                                     children: [!B && (0, i.jsx)("div", {
                                         className: O.inspectedIndicator
-                                    }), (0, i.jsx)(A.default, {
+                                    }), (0, i.jsx)(h.default, {
                                         className: a()(O.stickerNode, {
                                             [O.stickerNodeDimmed]: B && !p && null != L && -1 !== L.rowIndex && -1 !== L.columnIndex,
                                             [O.stickerNodeHidden]: R,
@@ -163,7 +163,7 @@ function(e, t, n) {
                                         maskAsset: p,
                                         sticker: e.sticker,
                                         size: w
-                                    }), o ? (0, i.jsx)(h.default, {
+                                    }), o ? (0, i.jsx)(A.default, {
                                         size: 20
                                     }) : null]
                                 })]

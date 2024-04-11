@@ -12,9 +12,9 @@ function(e, t, n) {
     let T = !1,
         f = null,
         S = !1,
-        A = {};
+        h = {};
 
-    function h(e) {
+    function A(e) {
         var t;
         let n = E.default.getCurrentUser();
         if (null == n) return !1;
@@ -23,14 +23,14 @@ function(e, t, n) {
     }
 
     function m() {
-        f !== c.default.getVoiceChannelId() && (S = !1), h() && (S = !0), f = c.default.getVoiceChannelId()
+        f !== c.default.getVoiceChannelId() && (S = !1), A() && (S = !0), f = c.default.getVoiceChannelId()
     }
     class N extends(i = o.default.Store) {
         initialize() {
             this.waitFor(d.default, c.default, _.default), this.syncWith([c.default, _.default], m)
         }
         get videoFilterAssets() {
-            return A
+            return h
         }
         get hasBeenApplied() {
             return T
@@ -49,7 +49,7 @@ function(e, t, n) {
             let {
                 assets: t
             } = e;
-            A = t.reduce((e, t) => ({
+            h = t.reduce((e, t) => ({
                 ...e,
                 [t.id]: t
             }), {})
@@ -58,8 +58,8 @@ function(e, t, n) {
             let {
                 videoFilterAsset: t
             } = e;
-            A = {
-                ...A,
+            h = {
+                ...h,
                 [t.id]: t
             }
         },
@@ -67,15 +67,15 @@ function(e, t, n) {
             let {
                 videoFilterAsset: t
             } = e;
-            A = {
-                ...A
-            }, delete A[t.id]
+            h = {
+                ...h
+            }, delete h[t.id]
         },
         VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION: function(e) {
             let {
                 backgroundOption: t
             } = e;
-            h(t) && (S = !0)
+            A(t) && (S = !0)
         },
         MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: function(e) {
             let {

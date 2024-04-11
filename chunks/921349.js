@@ -20,8 +20,8 @@ function(e, t, n) {
         T = n("742746"),
         f = n("235874"),
         S = n("922770"),
-        A = n("993365"),
-        h = n("393238"),
+        h = n("993365"),
+        A = n("393238"),
         m = n("434650"),
         N = n("98650"),
         O = n("863840"),
@@ -46,7 +46,7 @@ function(e, t, n) {
             multi: I = !1,
             closeOnSelect: T = !0,
             onOpen: S,
-            onClose: A,
+            onClose: h,
             placeholder: N = v.default.Messages.SELECT,
             wrapperClassName: C,
             className: g,
@@ -72,16 +72,16 @@ function(e, t, n) {
         } = e, {
             ref: ee,
             width: et
-        } = (0, h.default)(), {
+        } = (0, A.default)(), {
             titleId: en,
             errorId: ei,
             error: er
         } = (0, E.useFormContext)(), {
             ref: es,
             width: ea
-        } = (0, h.default)(), eo = r.useRef(null), [el, eu] = r.useState(null), [ed, e_] = r.useState(!1), [ec, eE] = r.useState(null), [eI, eT] = r.useState(!1), ef = r.useRef(null), eS = r.useRef(null), {
-            options: eA,
-            loading: eh,
+        } = (0, A.default)(), eo = r.useRef(null), [el, eu] = r.useState(null), [ed, e_] = r.useState(!1), [ec, eE] = r.useState(null), [eI, eT] = r.useState(!1), ef = r.useRef(null), eS = r.useRef(null), {
+            options: eh,
+            loading: eA,
             onQueryChange: em
         } = function(e) {
             let {
@@ -144,10 +144,10 @@ function(e, t, n) {
             debounceTime: x
         }), eN = r.useMemo(() => {
             var e, t;
-            return e = eA, null == (t = s) ? [] : (Array.isArray(t) ? t : [t]).map(t => "object" == typeof t && (null == t || "value" in t) ? t : e.find(e => e.value === t)).filter(Boolean)
-        }, [eA, s]), eO = r.useMemo(() => eN.map(e => e.value), [eN]), ep = eN[eN.length - 1], eR = (0, O.default)(ep), eC = r.useId(), eg = r.useId(), eL = r.useId(), eD = r.useCallback(e => {
-            ed !== e && !P && (e_(e), e ? null == S || S() : null == A || A())
-        }, [P, A, S, ed]), ev = r.useCallback(e => {
+            return e = eh, null == (t = s) ? [] : (Array.isArray(t) ? t : [t]).map(t => "object" == typeof t && (null == t || "value" in t) ? t : e.find(e => e.value === t)).filter(Boolean)
+        }, [eh, s]), eO = r.useMemo(() => eN.map(e => e.value), [eN]), ep = eN[eN.length - 1], eR = (0, O.default)(ep), eC = r.useId(), eg = r.useId(), eL = r.useId(), eD = r.useCallback(e => {
+            ed !== e && !P && (e_(e), e ? null == S || S() : null == h || h())
+        }, [P, h, S, ed]), ev = r.useCallback(e => {
             ed && !e && eD(!1)
         }, [eD, ed]), eM = (0, m.useIsVisible)(ev);
         r.useImperativeHandle(t, () => ({
@@ -188,11 +188,11 @@ function(e, t, n) {
                 disableClickOnSpace: !0
             }),
             eG = (0, O.default)(eb),
-            ew = (0, O.default)(eA);
+            ew = (0, O.default)(eh);
         r.useEffect(() => {
             let e = ew.current,
                 t = eR.current;
-            ed && null != t && !eh && requestAnimationFrame(() => {
+            ed && null != t && !eA && requestAnimationFrame(() => {
                 let n = ef.current,
                     i = e.indexOf(t);
                 null == n || n.scrollToIndex({
@@ -200,9 +200,9 @@ function(e, t, n) {
                     row: i
                 })
             })
-        }, [ed, eh]), r.useEffect(() => {
+        }, [ed, eA]), r.useEffect(() => {
             let e = eG.current;
-            if (ed && !eh) {
+            if (ed && !eA) {
                 var t;
                 let n = eo.current;
                 if (null != n) {
@@ -218,7 +218,7 @@ function(e, t, n) {
                     n = null != t ? String(t.value) : null;
                 e.setFocus(n), eu(null)
             }
-        }, [ed, eh]), r.useLayoutEffect(() => {
+        }, [ed, eA]), r.useLayoutEffect(() => {
             !ed && (I ? eE("") : null != ep && eE(ep.label))
         }, [I, ep, ed]), r.useLayoutEffect(() => {
             I && eE("")
@@ -230,7 +230,7 @@ function(e, t, n) {
                 return
             }
             let i = "function" == typeof n,
-                r = i ? eA.find(t => t.value === e) : e;
+                r = i ? eh.find(t => t.value === e) : e;
             if (I) {
                 let n = null != s ? s : [];
                 if (n.some(t => (i ? t.value : t) === e) ? l(n.filter(t => (i ? t.value : t) !== e)) : l([...n, r]), t) {
@@ -239,7 +239,7 @@ function(e, t, n) {
                 }
             } else l(r);
             eu(null), (!I || T) && eD(!1), eT(!1)
-        }, [n, eA, I, T, l, s, eD]);
+        }, [n, eh, I, T, l, s, eD]);
         r.useLayoutEffect(() => {
             if (w) {
                 var e;
@@ -259,15 +259,15 @@ function(e, t, n) {
                         eD(!0)
                 }
             }, [eD, ed]),
-            eF = eA;
-        eI && null != ec && !1 !== F && (eF = "function" == typeof F ? F(eA, ec) : (0, o.matchSorter)(eA, ec, {
+            eF = eh;
+        eI && null != ec && !1 !== F && (eF = "function" == typeof F ? F(eh, ec) : (0, o.matchSorter)(eh, ec, {
             keys: ["label"]
         })), r.useEffect(() => {
             let e = ef.current;
             null == e || e.scrollToTop()
         }, [ec]), r.useEffect(() => {
-            !eh && eI && null !== ec && requestAnimationFrame(() => eb.focusFirstVisibleItem())
-        }, [eh, eI, ec]);
+            !eA && eI && null !== ec && requestAnimationFrame(() => eb.focusFirstVisibleItem())
+        }, [eA, eI, ec]);
         let ex = I ? V : B;
         return (0, i.jsx)(u.ListNavigatorProvider, {
             navigator: eb,
@@ -284,7 +284,7 @@ function(e, t, n) {
                         updatePosition: r
                     } = e;
                     return (0, i.jsx)(U, {
-                        loading: eh,
+                        loading: eA,
                         multi: I,
                         listRef: ef,
                         listId: eC,
@@ -353,7 +353,7 @@ function(e, t, n) {
                                     children: (0, i.jsx)(ex, {
                                         query: ec,
                                         selectedOptions: eN,
-                                        loading: eh,
+                                        loading: eA,
                                         renderOptionPrefix: j,
                                         renderOptionSuffix: W,
                                         isDisabled: P,
@@ -439,7 +439,7 @@ function(e, t, n) {
             listId: E,
             renderOptionLabel: I,
             updatePosition: f,
-            loading: h = !1,
+            loading: A = !1,
             multi: m,
             popoutPosition: O,
             closeOnSelect: p,
@@ -448,7 +448,7 @@ function(e, t, n) {
         } = e, g = r.useRef(null), L = r.useCallback(e => {
             t(e), p && n()
         }, [p, n, t]);
-        return ((0, N.default)(f), h) ? (0, i.jsx)("div", {
+        return ((0, N.default)(f), A) ? (0, i.jsx)("div", {
             "aria-busy": !0,
             className: a()(M.popout, M.loading, {
                 [M.popoutPositionTop]: "top" === O
@@ -467,7 +467,7 @@ function(e, t, n) {
             style: {
                 width: l
             },
-            children: (0, i.jsx)(A.Text, {
+            children: (0, i.jsx)(h.Text, {
                 color: "text-muted",
                 variant: "text-md/normal",
                 children: v.default.Messages.NO_RESULTS_FOUND
@@ -692,8 +692,8 @@ function(e, t, n) {
             renderOptionSuffix: I,
             inputClassNames: T,
             ...f
-        } = e, S = Math.max(n.length, (null != t ? t : "").length), A = r.useRef(null), {
-            focusPreviousItem: h,
+        } = e, S = Math.max(n.length, (null != t ? t : "").length), h = r.useRef(null), {
+            focusPreviousItem: A,
             focusNextItem: m,
             focusLastItem: N
         } = function(e, t, n) {
@@ -741,16 +741,16 @@ function(e, t, n) {
                     return null == e ? void 0 : e.focus()
                 }, [i])
             }
-        }(A, c, s);
+        }(h, c, s);
         return (0, i.jsxs)(i.Fragment, {
             children: [s.length > 0 && (0, i.jsx)(G, {
-                listRef: A,
+                listRef: h,
                 selectedOptions: s,
                 renderOptionPrefix: E,
                 renderOptionSuffix: I,
                 selectValue: o,
                 focusNextItem: m,
-                focusPreviousItem: h
+                focusPreviousItem: A
             }), (0, i.jsx)(F, {
                 style: {
                     minWidth: "".concat(S, "ch")
@@ -787,8 +787,8 @@ function(e, t, n) {
             onChange: T,
             onFocus: f,
             setInputRef: S,
-            isEditing: A,
-            onKeyDown: h,
+            isEditing: h,
+            onKeyDown: A,
             placeholder: m,
             loading: N,
             style: O,
@@ -816,10 +816,10 @@ function(e, t, n) {
             },
             onFocus: f,
             className: a()(M.searchInput, p, {
-                [M.editing]: A,
+                [M.editing]: h,
                 [M.disabled]: _
             }),
-            onKeyDown: h,
+            onKeyDown: A,
             placeholder: "" !== (null != t ? t : "").trim() ? void 0 : m,
             ref: S
         })

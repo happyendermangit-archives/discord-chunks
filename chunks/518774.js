@@ -55,10 +55,10 @@ function(e, t, n) {
                 dockedRect: d
             } = this.props, c = Math.round(n), E = Math.round(o - r - this._height), I = Math.round(i), T = Math.round(a - s - this._width), f = (0, u.getPlatform)() !== u.PlatformTypes.WEB && this.inPopout ? 22 : 0;
             if (null != d) {
-                var S, A;
+                var S, h;
                 return {
                     y: (null !== (S = null == d ? void 0 : d.y) && void 0 !== S ? S : 0) - f,
-                    x: null !== (A = null == d ? void 0 : d.x) && void 0 !== A ? A : 0
+                    x: null !== (h = null == d ? void 0 : d.x) && void 0 !== h ? h : 0
                 }
             }
             switch (e) {

@@ -29,10 +29,10 @@ function(e, t, n) {
             return L
         },
         saveAccountChanges: function() {
-            return h
+            return A
         },
         saveAccountRequest: function() {
-            return A
+            return h
         },
         setDisableSubmit: function() {
             return M
@@ -94,7 +94,7 @@ function(e, t, n) {
             _.default.logoutInternal(), (0, o.transitionTo)(c.Routes.DEFAULT_LOGGED_OUT)
         })
     }
-    async function A(e) {
+    async function h(e) {
         let t = await i.HTTP.patch({
                 url: c.Endpoints.ME,
                 oldFormErrors: !0,
@@ -118,7 +118,7 @@ function(e, t, n) {
         }), t
     }
 
-    function h(e) {
+    function A(e) {
         let {
             username: t,
             discriminator: n,
@@ -149,7 +149,7 @@ function(e, t, n) {
                 u = (0, E.getDevicePushProvider)();
             null != u && null != l && (a.push_provider = u, a.push_token = l);
             let d = r.Storage.get(c.DEVICE_VOIP_TOKEN);
-            return null != E.DEVICE_PUSH_VOIP_PROVIDER && null != d && (a.push_voip_provider = E.DEVICE_PUSH_VOIP_PROVIDER, a.push_voip_token = d), A(a)
+            return null != E.DEVICE_PUSH_VOIP_PROVIDER && null != d && (a.push_voip_provider = E.DEVICE_PUSH_VOIP_PROVIDER, a.push_voip_token = d), h(a)
         }, {
             checkEnabled: !1,
             modalProps: {

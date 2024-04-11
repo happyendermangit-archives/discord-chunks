@@ -21,8 +21,8 @@ function(e, t, n) {
         T = n("826298"),
         f = n("496675"),
         S = n("156361"),
-        A = n("226951"),
-        h = n("877565"),
+        h = n("226951"),
+        A = n("877565"),
         m = n("590921"),
         N = n("665692"),
         O = n("689079"),
@@ -52,7 +52,7 @@ function(e, t, n) {
             if (0 === n.length && i.commands !== m.CommandMode.OLD_BUILT_INS) return C;
             if (i.commands === m.CommandMode.OLD_BUILT_INS) {
                 let i = (0, l.getBuiltInCommands)(a.ApplicationCommandType.CHAT, !1, !1),
-                    r = RegExp("^".concat(A.default.escape(n)), "i"),
+                    r = RegExp("^".concat(h.default.escape(n)), "i"),
                     s = (0, I.getMatchingGroupCommands)(i, r, {
                         channel: e,
                         guild: t
@@ -108,7 +108,7 @@ function(e, t, n) {
                 onHover: l,
                 onClick: u
             } = e, d = (0, T.getCommandQuery)(s, a), _ = o.commands === m.CommandMode.OLD_BUILT_INS;
-            return (0, h.renderAutocompleteGroup)({
+            return (0, A.renderAutocompleteGroup)({
                 query: d.text,
                 selectedIndex: n,
                 autocompletes: t,

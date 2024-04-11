@@ -34,8 +34,8 @@ function(e, t, n) {
     let T = ["http:", "https:", "discord:"],
         f = [_.AST_KEY.TEXT, _.AST_KEY.UNDERLINE, _.AST_KEY.STRONG, _.AST_KEY.ITALICS, _.AST_KEY.STRIKETHROUGH, _.AST_KEY.INLINE_CODE, _.AST_KEY.SPOILER, _.AST_KEY.LINE_BREAK, _.AST_KEY.TIMESTAMP],
         S = [...f, _.AST_KEY.EMOJI, _.AST_KEY.CUSTOM_EMOJI],
-        A = [_.AST_KEY.LIST, _.AST_KEY.HEADING, _.AST_KEY.BLOCK_QUOTE],
-        h = [_.AST_KEY.TEXT],
+        h = [_.AST_KEY.LIST, _.AST_KEY.HEADING, _.AST_KEY.BLOCK_QUOTE],
+        A = [_.AST_KEY.TEXT],
         m = [_.AST_KEY.UNDERLINE, _.AST_KEY.STRONG, _.AST_KEY.ITALICS, _.AST_KEY.STRIKETHROUGH, _.AST_KEY.INLINE_CODE, _.AST_KEY.SPOILER, _.AST_KEY.LINE_BREAK, _.AST_KEY.TIMESTAMP, _.AST_KEY.EMOJI, _.AST_KEY.CUSTOM_EMOJI, _.AST_KEY.LIST, _.AST_KEY.HEADING, _.AST_KEY.BLOCK_QUOTE];
 
     function N(e, t) {
@@ -87,8 +87,8 @@ function(e, t, n) {
                     parseInlineCodeChildContent: !0
                 },
                 y = n.allowEmojiLinks ? S : f,
-                P = [...y, ...A],
-                U = [...h, ...m],
+                P = [...y, ...h],
+                U = [...A, ...m],
                 b = N(t(C, M), P, [_.AST_KEY.EMOJI]),
                 G = N(t(g, M), U);
             if (null == b || null == G || 0 === (function e(t) {

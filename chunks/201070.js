@@ -28,8 +28,8 @@ function(e, t, n) {
         T = n("709054"),
         f = n("823596"),
         S = n("733026"),
-        A = n("588215"),
-        h = n("496135"),
+        h = n("588215"),
+        A = n("496135"),
         m = n("893966");
     let N = new _.Logger("MemberSafetySearchManager");
 
@@ -184,7 +184,7 @@ function(e, t, n) {
                 } = e, d = {};
                 a && (d.unusual_dm_activity_until = {
                     range: {
-                        gte: Date.now() - A.UNUSUAL_DM_COMPARISON_DELTA
+                        gte: Date.now() - h.UNUSUAL_DM_COMPARISON_DELTA
                     }
                 }), o && (d.communication_disabled_until = {
                     range: {
@@ -234,19 +234,19 @@ function(e, t, n) {
                 null != f && (i.join_source_type = {
                     or_query: [f]
                 });
-                let h = {
+                let A = {
                         or_query: r,
                         and_query: i
                     },
                     {
                         selectedSort: m
                     } = e;
-                return null != m && (h.sort = m), h
+                return null != m && (A.sort = m), A
             }(o), null == (s = p) ? r : {
                 ...r,
                 ...s
             }),
-            v = null !== (t = o.selectedSort) && void 0 !== t ? t : A.OrderBy.ORDER_BY_GUILD_JOINED_AT_DESC;
+            v = null !== (t = o.selectedSort) && void 0 !== t ? t : h.OrderBy.ORDER_BY_GUILD_JOINED_AT_DESC;
         if (function(e, t) {
                 let n = L(e);
                 return l()(n.query, t)
@@ -272,7 +272,7 @@ function(e, t, n) {
                     query: M.query,
                     guildId: e
                 }), null == M.query) throw Error("Query is null");
-            await (0, h.searchGuildMembers)(e, M.query, {
+            await (0, A.searchGuildMembers)(e, M.query, {
                 signal: null !== (i = null === (n = M.abortController) || void 0 === n ? void 0 : n.signal) && void 0 !== i ? i : void 0
             })
         } catch (e) {
