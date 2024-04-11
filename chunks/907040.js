@@ -16,8 +16,8 @@ function(e, t, n) {
         T = n("410575"),
         f = n("2052"),
         S = n("100527"),
-        h = n("906732"),
-        A = n("243778"),
+        A = n("906732"),
+        h = n("243778"),
         m = n("339085"),
         N = n("438332"),
         O = n("664437"),
@@ -107,8 +107,8 @@ function(e, t, n) {
                 gridDispatch: T,
                 getItemProps: f,
                 getRowProps: S,
-                gridContainerProps: h,
-                handleGridContainerKeyDown: A,
+                gridContainerProps: A,
+                handleGridContainerKeyDown: h,
                 isUsingKeyboardNavigation: O
             } = (0, g.useExpressionPickerGridKeyboardNavigation)({
                 columnCounts: i,
@@ -133,8 +133,8 @@ function(e, t, n) {
             }, e => e.inspectedExpressionPosition), [T]), {
                 getItemProps: f,
                 getRowProps: S,
-                gridContainerProps: h,
-                handleGridContainerKeyDown: A,
+                gridContainerProps: A,
+                handleGridContainerKeyDown: h,
                 isUsingKeyboardNavigation: O
             }
         },
@@ -182,8 +182,8 @@ function(e, t, n) {
                 analyticsOverride: eT = eu,
                 searchProps: ef = {},
                 wrapper: eS,
-                shouldHidePickerActions: eh = !1,
-                messageId: eA,
+                shouldHidePickerActions: eA = !1,
+                messageId: eh,
                 renderHeader: em,
                 listHeaderClassName: eN
             } = e,
@@ -220,7 +220,7 @@ function(e, t, n) {
             section: null != ex ? ex : q.AnalyticsSections.EMOJI_PICKER_POPOUT
         }), [eV, ex]), {
             analyticsLocations: eW
-        } = (0, h.default)(S.default.EMOJI_PICKER), {
+        } = (0, A.default)(S.default.EMOJI_PICKER), {
             diversitySurrogate: eK
         } = (0, d.useStateFromStoresObject)([m.default], () => ({
             diversitySurrogate: m.default.diversitySurrogate
@@ -394,7 +394,7 @@ function(e, t, n) {
                         children: [(0, i.jsx)(z.default, {
                             channel: u,
                             closePopout: I
-                        }), (0, i.jsx)(A.default, {
+                        }), (0, i.jsx)(h.default, {
                             contentTypes: ta,
                             children: e => {
                                 let {
@@ -405,7 +405,7 @@ function(e, t, n) {
                                     markAsDismissed: () => n(J.ContentDismissActionType.UNKNOWN)
                                 })
                             }
-                        }), eh ? null : (0, i.jsx)("div", {
+                        }), eA ? null : (0, i.jsx)("div", {
                             className: $.emojiPickerListWrapper,
                             id: Q.GRID_NAVIGATOR_ID,
                             ...te,
@@ -430,7 +430,7 @@ function(e, t, n) {
                                 sectionDescriptors: e0,
                                 setCollapsedSections: eJ,
                                 channelGuildId: eb,
-                                messageId: eA,
+                                messageId: eh,
                                 isBurstReaction: eG,
                                 listHeaderClassName: eN
                             }) : null
@@ -442,7 +442,7 @@ function(e, t, n) {
                         pickerIntention: l,
                         channel: u
                     }), o]
-                }), eh ? null : (0, i.jsx)(x.default, {
+                }), eA ? null : (0, i.jsx)(x.default, {
                     className: $.categoryList,
                     emojiListRef: eP,
                     sectionDescriptors: e0,
@@ -451,7 +451,7 @@ function(e, t, n) {
                 })]
             })
         });
-        return (0, i.jsx)(h.AnalyticsLocationProvider, {
+        return (0, i.jsx)(A.AnalyticsLocationProvider, {
             value: eW,
             children: to
         })

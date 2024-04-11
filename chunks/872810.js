@@ -59,8 +59,8 @@ function(e, t, n) {
         T = n("430824"),
         f = n("944486"),
         S = n("979651"),
-        h = n("934415"),
-        A = n("70956"),
+        A = n("934415"),
+        h = n("70956"),
         m = n("557457"),
         N = n("573261"),
         O = n("26151"),
@@ -92,7 +92,7 @@ function(e, t, n) {
 
     function M(e, t) {
         let n = I.default.getChannel(t);
-        return r()(null != n, "Cannot join a null voice channel"), !S.default.isInChannel(t) && (0, h.isChannelFull)(n, S.default, T.default)
+        return r()(null != n, "Cannot join a null voice channel"), !S.default.isInChannel(t) && (0, A.isChannelFull)(n, S.default, T.default)
     }
 
     function y(e, t) {
@@ -179,7 +179,7 @@ function(e, t, n) {
             })
         } catch (t) {
             let e;
-            429 === t.status && (e = t.body.retry_after * A.default.Millis.SECOND), o.default.dispatch({
+            429 === t.status && (e = t.body.retry_after * h.default.Millis.SECOND), o.default.dispatch({
                 type: "STREAM_PREVIEW_FETCH_FAIL",
                 streamKey: i,
                 retryAfter: e

@@ -8,10 +8,10 @@ function(e, t, n) {
             return I
         },
         fetchMutualFriends: function() {
-            return A
+            return h
         },
         fetchProfile: function() {
-            return h
+            return A
         },
         getUser: function() {
             return S
@@ -89,7 +89,7 @@ function(e, t, n) {
             user: t.body
         }), d.default.getUser(e)))
     }
-    async function h(e) {
+    async function A(e) {
         let {
             friendToken: t,
             withMutualGuilds: n,
@@ -133,7 +133,7 @@ function(e, t, n) {
             }), t
         }
     }
-    async function A(e, t) {
+    async function h(e, t) {
         l.default.dispatch({
             type: "MUTUAL_FRIENDS_FETCH_START",
             userId: e

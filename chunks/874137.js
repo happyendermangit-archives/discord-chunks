@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         QuestContentImpressionTracker: function() {
-            return h
+            return A
         }
     }), n("47120");
     var i = n("735250"),
@@ -82,14 +82,14 @@ function(e, t, n) {
         }
     }
 
-    function h(e) {
+    function A(e) {
         let t = Array.isArray(e.questId) ? e.questId.sort().join("_") : e.questId;
-        return (0, i.jsx)(A, {
+        return (0, i.jsx)(h, {
             ...e
         }, "".concat(t, "_").concat(e.questContent))
     }
 
-    function A(e) {
+    function h(e) {
         var t;
         let n = (0, o.useStateFromStores)([_.default], () => _.default.isFocused()),
             s = n !== (0, u.default)(n),

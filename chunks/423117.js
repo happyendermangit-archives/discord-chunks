@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         archiveSubscriptionListing: function() {
-            return h
+            return A
         },
         createSubscriptionGroupListing: function() {
             return T
@@ -29,7 +29,7 @@ function(e, t, n) {
             return O
         },
         updateSubscriptionTrial: function() {
-            return A
+            return h
         },
         updateSubscriptionsSettings: function() {
             return E
@@ -111,14 +111,14 @@ function(e, t, n) {
             listingId: n
         })
     }
-    async function h(e, t, n) {
+    async function A(e, t, n) {
         let i = await d.archiveGuildRoleSubscriptionListing(e, t, n);
         r.default.dispatch({
             type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING",
             listing: i
         })
     }
-    async function A(e, t, n) {
+    async function h(e, t, n) {
         let i = await d.updateGuildRoleSubscriptionsTrial(e, t, n);
         r.default.dispatch({
             type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTION_TRIAL",

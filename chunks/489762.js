@@ -16,8 +16,8 @@ function(e, t, n) {
         T = n("28546"),
         f = n("691251"),
         S = n("98528"),
-        h = n("551058"),
-        A = n("695346"),
+        A = n("551058"),
+        h = n("695346"),
         m = n("430824"),
         N = n("594174"),
         O = n("695464"),
@@ -147,7 +147,7 @@ function(e, t, n) {
                 channel: L,
                 currentUser: b
             }), [j, W] = r.useState(!1), K = r.useCallback(e => {
-                A.StickerPickerCollapsedSections.updateSetting(Array.from(e))
+                h.StickerPickerCollapsedSections.updateSetting(Array.from(e))
             }, []), z = r.useCallback(e => {
                 let t = f[e];
                 return null != t ? (0, i.jsx)(G.default, {
@@ -194,7 +194,7 @@ function(e, t, n) {
                         children: [r ? (0, i.jsx)("div", {
                             className: F.divider,
                             children: (0, i.jsx)(l.FormDivider, {})
-                        }) : null, (0, i.jsx)(h.default, {
+                        }) : null, (0, i.jsx)(A.default, {
                             className: F.packHeader,
                             "aria-label": V.default.Messages.STICKERS_YOU_MIGHT_LIKE_A11Y,
                             children: V.default.Messages.STICKERS_YOU_MIGHT_LIKE
@@ -203,7 +203,7 @@ function(e, t, n) {
                 }
                 switch (n.type) {
                     case M.StickerCategoryTypes.FAVORITE:
-                        return (0, i.jsx)(h.default, {
+                        return (0, i.jsx)(A.default, {
                             className: F.packHeader,
                             "aria-label": V.default.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
                                 categoryName: n.name
@@ -219,7 +219,7 @@ function(e, t, n) {
                             children: n.name
                         }, "header-".concat(n.id));
                     case M.StickerCategoryTypes.RECENT:
-                        return (0, i.jsx)(h.default, {
+                        return (0, i.jsx)(A.default, {
                             className: F.packHeader,
                             "aria-label": V.default.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
                                 categoryName: n.name
@@ -235,7 +235,7 @@ function(e, t, n) {
                     case M.StickerCategoryTypes.EMPTY_GUILD_UPSELL: {
                         let e = m.default.getGuild(n.id);
                         if (null == e) return null;
-                        return (0, i.jsx)(h.default, {
+                        return (0, i.jsx)(A.default, {
                             className: F.packHeader,
                             "aria-label": V.default.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
                                 categoryName: e.name
@@ -253,7 +253,7 @@ function(e, t, n) {
                     case M.StickerCategoryTypes.PACK: {
                         let e = v.default.getStickerPack(n.id);
                         if (null == e) return null;
-                        return (0, i.jsx)(h.default, {
+                        return (0, i.jsx)(A.default, {
                             className: F.packHeader,
                             "aria-label": V.default.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
                                 categoryName: e.name
@@ -310,8 +310,8 @@ function(e, t, n) {
                 getStickerItemProps: d,
                 getStickerRowProps: E,
                 gutterWidth: f,
-                isUsingKeyboardNavigation: h,
-                onSelectSticker: A,
+                isUsingKeyboardNavigation: A,
+                onSelectSticker: h,
                 rowCount: m,
                 rowCountBySection: N,
                 stickersCategories: p,
@@ -332,8 +332,8 @@ function(e, t, n) {
                 stickersCategories: p,
                 stickersGrid: R,
                 isScrolling: g,
-                isUsingKeyboardNavigation: h,
-                onSelectSticker: A,
+                isUsingKeyboardNavigation: A,
+                onSelectSticker: h,
                 getStickerItemProps: d,
                 getStickerRowProps: E,
                 gutterWidth: f,

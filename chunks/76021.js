@@ -22,8 +22,8 @@ function(e, t, n) {
         f = n("37113");
 
     function S(e, t, S) {
-        let h = l.default.getWindowOpen(T.PopoutWindowKeys.CHANNEL_CALL_POPOUT) ? T.PopoutWindowKeys.CHANNEL_CALL_POPOUT : null;
-        if ((0, o.default)(h), I.isPlatformEmbedded)(0, r.openModalLazy)(async () => {
+        let A = l.default.getWindowOpen(T.PopoutWindowKeys.CHANNEL_CALL_POPOUT) ? T.PopoutWindowKeys.CHANNEL_CALL_POPOUT : null;
+        if ((0, o.default)(A), I.isPlatformEmbedded)(0, r.openModalLazy)(async () => {
             let {
                 default: t
             } = await Promise.all([n.e("49237"), n.e("99387"), n.e("79477"), n.e("88099")]).then(n.bind(n, "60594"));
@@ -34,8 +34,8 @@ function(e, t, n) {
             })
         }), (0, d.shouldFetchPerksDemos)() && (0, u.fetchPerksDemos)();
         else {
-            var A;
-            let n = (0, a.default)(f.ApplicationStreamPresets.PRESET_CUSTOM, f.ApplicationStreamResolutions.RESOLUTION_1080, f.ApplicationStreamFPS.FPS_30, E.default.getCurrentUser(), null === (A = _.default.getGuild(e)) || void 0 === A ? void 0 : A.premiumTier) ? {
+            var h;
+            let n = (0, a.default)(f.ApplicationStreamPresets.PRESET_CUSTOM, f.ApplicationStreamResolutions.RESOLUTION_1080, f.ApplicationStreamFPS.FPS_30, E.default.getCurrentUser(), null === (h = _.default.getGuild(e)) || void 0 === h ? void 0 : h.premiumTier) ? {
                 width: 1920,
                 height: 1080
             } : {

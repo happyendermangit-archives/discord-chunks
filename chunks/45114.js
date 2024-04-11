@@ -11,7 +11,7 @@ function(e, t, n) {
             return S
         },
         ackUserFeature: function() {
-            return h
+            return A
         },
         bulkAck: function() {
             return E
@@ -120,7 +120,7 @@ function(e, t, n) {
         })
     }
 
-    function h(e, t) {
+    function A(e, t) {
         var n;
         null != (null === (n = l.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && i.default.dispatch({
             type: "USER_NON_CHANNEL_ACK",

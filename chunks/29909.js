@@ -21,15 +21,15 @@ function(e, t, n) {
             src: s,
             url: f,
             format: S,
-            className: h
-        } = e, [A, m] = r.useState(!1), N = (0, u.useIsFavoriteGIF)(f), O = N ? I.default.Messages.GIF_TOOLTIP_REMOVE_FROM_FAVORITES : I.default.Messages.GIF_TOOLTIP_ADD_TO_FAVORITES, p = N ? _.default : d.default;
+            className: A
+        } = e, [h, m] = r.useState(!1), N = (0, u.useIsFavoriteGIF)(f), O = N ? I.default.Messages.GIF_TOOLTIP_REMOVE_FROM_FAVORITES : I.default.Messages.GIF_TOOLTIP_ADD_TO_FAVORITES, p = N ? _.default : d.default;
         r.useEffect(() => {
-            if (!A) return;
+            if (!h) return;
             let e = setTimeout(() => {
                 m(!1)
             }, 500);
             return () => clearTimeout(e)
-        }, [A]);
+        }, [h]);
         let R = e => {
             e.preventDefault(), e.stopPropagation(), m(!0), N ? (0, l.removeFavoriteGIF)(f) : ((0, l.addFavoriteGIF)({
                 url: f,
@@ -43,9 +43,9 @@ function(e, t, n) {
             text: O,
             children: e => (0, i.jsx)(o.Clickable, {
                 ...e,
-                className: a()(h, T.size, T.gifFavoriteButton, {
+                className: a()(A, T.size, T.gifFavoriteButton, {
                     [T.selected]: N,
-                    [T.showPulse]: A
+                    [T.showPulse]: h
                 }),
                 onMouseDown: e => e.preventDefault(),
                 onClick: R,

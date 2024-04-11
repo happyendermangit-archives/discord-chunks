@@ -11,16 +11,16 @@ function(e, t, n) {
         T = new Map,
         f = I,
         S = T,
-        h = !1;
-    let A = () => {
-        f = I, S = T, r = void 0, h = !1, i = void 0
+        A = !1;
+    let h = () => {
+        f = I, S = T, r = void 0, A = !1, i = void 0
     };
     class m extends(s = d.default.Store) {
         initialize() {
-            this.syncWith([c.default], A)
+            this.syncWith([c.default], h)
         }
         get isFetching() {
-            return h
+            return A
         }
         get error() {
             return i
@@ -52,29 +52,29 @@ function(e, t, n) {
         writable: !0
     }) : a[o] = l, t.default = new m(_.default, {
         COLLECTIBLES_CATEGORIES_FETCH: e => {
-            h = !0, i = void 0
+            A = !0, i = void 0
         },
         COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: e => {
-            0 === e.categories.length ? (f = I, S = T) : !(0, u.isEqual)([...f.values()], e.categories) && (f = new Map(e.categories.map(e => [e.skuId, e])), S = new Map((0, E.getProductsFromCategories)(f).map(e => [e.skuId, e]))), r = Date.now(), h = !1, i = void 0
+            0 === e.categories.length ? (f = I, S = T) : !(0, u.isEqual)([...f.values()], e.categories) && (f = new Map(e.categories.map(e => [e.skuId, e])), S = new Map((0, E.getProductsFromCategories)(f).map(e => [e.skuId, e]))), r = Date.now(), A = !1, i = void 0
         },
         COLLECTIBLES_CATEGORIES_FETCH_FAILURE: e => {
             let {
                 error: t
             } = e;
-            f = I, S = T, h = !1, i = t
+            f = I, S = T, A = !1, i = t
         },
         COLLECTIBLES_PRODUCT_FETCH: e => {
-            h = !0, i = void 0
+            A = !0, i = void 0
         },
         COLLECTIBLES_PRODUCT_FETCH_SUCCESS: e => {
-            S.set(e.product.skuId, e.product), h = !1, i = void 0
+            S.set(e.product.skuId, e.product), A = !1, i = void 0
         },
         COLLECTIBLES_PRODUCT_FETCH_FAILURE: e => {
             let {
                 error: t
             } = e;
-            h = !1, i = t
+            A = !1, i = t
         },
-        LOGOUT: A
+        LOGOUT: h
     })
 }

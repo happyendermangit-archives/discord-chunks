@@ -20,10 +20,10 @@ function(e, t, n) {
             ...I
         } = e, [T, f] = r.useState(!1), S = r.useCallback(e => {
             f(!0), null == c || c(e)
-        }, [f, c]), h = r.useCallback(e => {
+        }, [f, c]), A = r.useCallback(e => {
             f(!1), null == E || E(e)
-        }, [f, E]), A = {};
-        return null != s && (A = {
+        }, [f, E]), h = {};
+        return null != s && (h = {
             color: (0, o.int2hex)(s),
             backgroundColor: T ? (0, o.int2rgba)(s, .3) : (0, o.int2rgba)(s, .1)
         }), (0, i.jsx)(l.Clickable, {
@@ -34,8 +34,8 @@ function(e, t, n) {
                 interactive: I.onClick
             }),
             onMouseEnter: S,
-            onMouseLeave: h,
-            style: A,
+            onMouseLeave: A,
+            style: h,
             tabIndex: null != I.onClick ? 0 : -1,
             children: null != _ ? (0, i.jsx)(u.default, {
                 iconType: _,

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         maybeJoinEmbeddedActivity: function() {
-            return h
+            return A
         }
     });
     var i = n("668781"),
@@ -20,18 +20,18 @@ function(e, t, n) {
         T = n("782769"),
         f = n("527805"),
         S = n("689938");
-    async function h(e) {
+    async function A(e) {
         var t;
         let {
             channelId: n,
-            applicationId: h,
-            instanceId: A,
+            applicationId: A,
+            instanceId: h,
             inputApplication: m,
             analyticsLocations: N,
             embeddedActivitiesManager: O
-        } = e, p = E.default.getEmbeddedActivitiesForChannel(n).find(e => e.applicationId === h && (null == A || e.instanceId === A)), R = m;
+        } = e, p = E.default.getEmbeddedActivitiesForChannel(n).find(e => e.applicationId === A && (null == h || e.instanceId === h)), R = m;
         if (null == R) {
-            let e = await r.default.fetchApplication(h);
+            let e = await r.default.fetchApplication(A);
             R = o.default.createFromServer(e)
         }
         if (null == p || null == R) return;

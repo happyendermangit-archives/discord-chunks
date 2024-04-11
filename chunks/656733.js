@@ -26,8 +26,8 @@ function(e, t, n) {
         T = E.MP4,
         f = null,
         S = "",
-        h = "",
-        A = [],
+        A = "",
+        h = [],
         m = [],
         N = [],
         O = [];
@@ -43,10 +43,10 @@ function(e, t, n) {
             return S
         }
         getResultQuery() {
-            return h
+            return A
         }
         getResultItems() {
-            return A
+            return h
         }
         getTrendingCategories() {
             return m
@@ -71,11 +71,11 @@ function(e, t, n) {
             f = e.analyticsID
         },
         GIF_PICKER_QUERY: function(e) {
-            "" === (S = e.query) && (h = "", A = [], N = [])
+            "" === (S = e.query) && (A = "", h = [], N = [])
         },
         GIF_PICKER_QUERY_SUCCESS: function(e) {
-            if (null != e.query && S === h) return !1;
-            null != e.query && (h = e.query), A = e.items.map(e => {
+            if (null != e.query && S === A) return !1;
+            null != e.query && (A = e.query), h = e.items.map(e => {
                 let {
                     width: t,
                     height: n,
@@ -118,7 +118,7 @@ function(e, t, n) {
                 query: t
             } = e;
             if (null == t) return !1;
-            h = t, A = []
+            A = t, h = []
         },
         GIF_PICKER_TRENDING_FETCH_SUCCESS: function(e) {
             let t = e.trendingCategories;

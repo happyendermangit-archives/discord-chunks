@@ -25,8 +25,8 @@ function(e, t, n) {
             followupSKUInfo: T,
             onClose: f,
             onComplete: S,
-            onSubscriptionConfirmation: h,
-            analyticsLocations: A,
+            onSubscriptionConfirmation: A,
+            analyticsLocations: h,
             analyticsObject: m,
             analyticsLocation: N,
             analyticsSourceLocation: O,
@@ -63,13 +63,13 @@ function(e, t, n) {
                     initialPlanId: t,
                     followupSKUInfo: T,
                     onClose: (e, t) => {
-                        r(), null == f || f(e), e && (null == h || h(), !p && null != t && t === I.PremiumSubscriptionSKUs.TIER_2 && !B && _.ComponentDispatch.dispatch(E.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED))
+                        r(), null == f || f(e), e && (null == A || A(), !p && null != t && t === I.PremiumSubscriptionSKUs.TIER_2 && !B && _.ComponentDispatch.dispatch(E.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED))
                     },
                     onComplete: () => {
                         G = !0, null == S || S(), !p && (0, l.setCanPlayWowMoment)(!0)
                     },
-                    onSubscriptionConfirmation: h,
-                    analyticsLocations: A,
+                    onSubscriptionConfirmation: A,
+                    analyticsLocations: h,
                     analyticsObject: m,
                     analyticsLocation: N,
                     analyticsSourceLocation: O,
@@ -96,8 +96,8 @@ function(e, t, n) {
                     is_gift: p,
                     eligible_for_trial: null != g,
                     application_id: v,
-                    location_stack: A
-                }), (0, a.clearError)(), (0, o.clearPurchaseTokenAuthState)(), null == f || f(G), G && (null == h || h())
+                    location_stack: h
+                }), (0, a.clearError)(), (0, o.clearPurchaseTokenAuthState)(), null == f || f(G), G && (null == A || A())
             }
         })
     }

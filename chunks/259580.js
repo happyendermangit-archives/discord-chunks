@@ -27,12 +27,12 @@ function(e, t, n) {
                 transition: T = c.transition,
                 className: f,
                 foreground: S,
-                expanded: h,
-                ...A
+                expanded: A,
+                ...h
             } = e, {
                 enabled: m
             } = (0, d.useRedesignIconContext)(), N = t;
-            if (!0 === h ? N = E.DOWN : !1 === h && (N = E.RIGHT), m) {
+            if (!0 === A ? N = E.DOWN : !1 === A && (N = E.RIGHT), m) {
                 let e = {
                     [E.UP]: u.ChevronSmallUpIcon,
                     [E.DOWN]: a.ChevronSmallDownIcon,
@@ -40,7 +40,7 @@ function(e, t, n) {
                     [E.RIGHT]: l.ChevronSmallRightIcon
                 } [N];
                 return (0, i.jsx)(e, {
-                    ...A,
+                    ...h,
                     className: f,
                     width: n,
                     height: r,
@@ -53,7 +53,7 @@ function(e, t, n) {
                 width: n,
                 height: r,
                 viewBox: "0 0 24 24",
-                ...(0, _.default)(A),
+                ...(0, _.default)(h),
                 children: (0, i.jsx)("path", {
                     className: S,
                     fill: "none",

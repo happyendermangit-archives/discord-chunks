@@ -25,10 +25,10 @@ function(e, t, n) {
             focusIndex: E,
             isUsingKeyboardNavigation: I,
             ...T
-        } = _, f = r.useRef(null), S = r.useRef(null), h = r.useRef(null);
+        } = _, f = r.useRef(null), S = r.useRef(null), A = r.useRef(null);
         return r.useLayoutEffect(() => {
             var e;
-            s && ((0, l.ensureItemVisible)(f), null === (e = h.current) || void 0 === e || e.focus())
+            s && ((0, l.ensureItemVisible)(f), null === (e = A.current) || void 0 === e || e.focus())
         }, [s]), (0, i.jsxs)("div", {
             ref: f,
             className: d.__invalid_submenuContainer,
@@ -47,7 +47,7 @@ function(e, t, n) {
                     children: (0, i.jsx)("div", {
                         className: a()(d.submenu, t),
                         ...T,
-                        ref: h,
+                        ref: A,
                         children: (0, i.jsx)(u.ScrollerThin, {
                             className: d.scroller,
                             children: c()

@@ -86,20 +86,20 @@ function(e, t, n) {
             hovered: T,
             shouldShowBirthdayUX: f,
             isLightTheme: S,
-            ...h
-        } = e, [A, m] = r.useState(o), N = null !== (t = l.get(A)) && void 0 !== t ? t : null;
+            ...A
+        } = e, [h, m] = r.useState(o), N = null !== (t = l.get(h)) && void 0 !== t ? t : null;
         return r.useEffect(() => {
             T ? m(e => c(T, f, S, I, e)) : I && m(o)
         }, [T, f, S, I]), (0, i.jsxs)("svg", {
             width: n,
             height: u,
-            ...(0, a.default)(h),
+            ...(0, a.default)(A),
             xmlns: "http://www.w3.org/2000/svg",
             children: [I ? (0, i.jsx)(_, {
-                fillColor: A
+                fillColor: h
             }) : (0, i.jsx)(d, {
                 referralsRemaining: E,
-                fillColor: T ? A : o,
+                fillColor: T ? h : o,
                 secondaryFillColor: T ? N : null
             }), (0, i.jsxs)("defs", {
                 children: [(0, i.jsxs)("linearGradient", {

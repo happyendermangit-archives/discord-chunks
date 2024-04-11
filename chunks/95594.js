@@ -33,8 +33,8 @@ function(e, t, n) {
             sectionGutter: T,
             padding: f,
             paddingVertical: S,
-            paddingHorizontal: h,
-            dir: A
+            paddingHorizontal: A,
+            dir: h
         } = e, m = (0, s.default)(), N = (0, i.useRef)(o), [O] = (0, i.useState)(() => new r.default), {
             offsetWidth: p
         } = c(), {
@@ -59,9 +59,9 @@ function(e, t, n) {
             sectionGutter: T,
             padding: f,
             paddingVertical: S,
-            paddingHorizontal: h,
-            dir: A
-        }), O.computeVisibleSections(Math.max(0, C * _), g * _), O.getState()), [R, O, t, n, l, u, d, C, g, _, E, I, T, f, S, h, p, A]), {
+            paddingHorizontal: A,
+            dir: h
+        }), O.computeVisibleSections(Math.max(0, C * _), g * _), O.getState()), [R, O, t, n, l, u, d, C, g, _, E, I, T, f, S, A, p, h]), {
             ...N.current,
             masonryComputer: O,
             forceUpdateOnChunkChange: L,

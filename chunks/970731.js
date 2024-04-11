@@ -38,19 +38,19 @@ function(e, t, n) {
                 color: _.Button.Colors.BRAND,
                 look: _.Button.Looks.INVERTED
             },
-            onComponentMount: h,
-            asset: A,
+            onComponentMount: A,
+            asset: h,
             markAsDismissed: m,
             caretPosition: N = "caretTopCenter",
             buttonLayout: O = 0
         } = e;
         l.useEffect(() => {
-            null == h || h()
+            null == A || A()
         }, []);
         let p = null != u;
         return (0, o.jsxs)("div", {
             className: d()(t, E.upsellTooltipWrapper, E[N]),
-            children: [A, null == n ? null : (0, o.jsx)(_.Heading, {
+            children: [h, null == n ? null : (0, o.jsx)(_.Heading, {
                 className: d()(i, E.upsellTooltipHeader),
                 variant: "heading-md/semibold",
                 children: n

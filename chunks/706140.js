@@ -26,7 +26,7 @@ function(e, t, n) {
             f = null;
         s.default.hasLoaded(c.UserSettingsTypes.PRELOADED_USER_SETTINGS) ? f = T.find(e => null == E || !(0, o.hasBit)(E, e)) : null != E && (f = T.find(e => !(0, o.hasBit)(E, e)));
         let S = (0, u.default)(e => null != f && e.currentlyShown.has(f)),
-            h = (0, r.useStateFromStores)([l.default], () => null != f && l.default.hasUserHitDCCap(f));
+            A = (0, r.useStateFromStores)([l.default], () => null != f && l.default.hasUserHitDCCap(f));
         i.useEffect(() => {
             if (null != f) return (0, d.requestMarkDismissibleContentAsShown)(f, {
                 groupName: t,
@@ -39,14 +39,14 @@ function(e, t, n) {
                     groupName: t
                 }, e)
             }
-        }, [f, t, I, h, n]);
-        let A = i.useCallback(e => {
+        }, [f, t, I, A, n]);
+        let h = i.useCallback(e => {
             null != f && (0, d.markDismissibleContentAsDismissed)(f, {
                 dismissAction: e,
                 groupName: t,
                 guildId: I
             })
         }, [f, t, I]);
-        return [S && null != f ? f : null, A]
+        return [S && null != f ? f : null, h]
     }
 }

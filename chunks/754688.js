@@ -8,10 +8,10 @@ function(e, t, n) {
             return T
         },
         canViewChannel: function() {
-            return h
+            return A
         },
         isAccessibleChannelPath: function() {
-            return A
+            return h
         },
         tryParseChannelPath: function() {
             return f
@@ -73,11 +73,11 @@ function(e, t, n) {
         } : null
     }
 
-    function h(e) {
+    function A(e) {
         return !!e.isPrivate() || s.default.can(o.Permissions.VIEW_CHANNEL, e)
     }
 
-    function A(e) {
+    function h(e) {
         let {
             guildId: t,
             channelId: n
@@ -85,6 +85,6 @@ function(e, t, n) {
         if (null == r.default.getGuild(t) && t !== o.ME) return !1;
         if (null == n) return !0;
         let s = i.default.getChannel(n);
-        return null != s && h(s)
+        return null != s && A(s)
     }
 }

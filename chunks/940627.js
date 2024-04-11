@@ -14,9 +14,9 @@ function(e, t, n) {
         T = n("507957"),
         f = n("981631"),
         S = n("689938"),
-        h = n("262199");
+        A = n("262199");
     (r = i || (i = {}))[r.PARTNERED = 0] = "PARTNERED", r[r.STAFF = 1] = "STAFF", r[r.VERIFIED = 2] = "VERIFIED", r[r.VERIFIED_AND_PARTNERED = 3] = "VERIFIED_AND_PARTNERED", r[r.VERIFIED_AND_HUB = 4] = "VERIFIED_AND_HUB", r[r.HUB = 5] = "HUB", r[r.NONE = 6] = "NONE";
-    class A extends a.PureComponent {
+    class h extends a.PureComponent {
         renderBadge(e, t, n) {
             let {
                 className: i,
@@ -59,7 +59,7 @@ function(e, t, n) {
                         height: c
                     },
                     children: (0, s.jsx)(t, {
-                        className: l()(h.icon, I)
+                        className: l()(A.icon, I)
                     })
                 }) : (0, s.jsx)(_.default, {
                     ...a,
@@ -69,7 +69,7 @@ function(e, t, n) {
                     stroke: r,
                     size: c,
                     children: (0, s.jsx)(t, {
-                        className: l()(h.icon, I)
+                        className: l()(A.icon, I)
                     })
                 })
             })
@@ -78,8 +78,8 @@ function(e, t, n) {
             let {
                 guild: e
             } = this.props, t = new Set(e.features);
-            return t.has(f.GuildFeatures.INTERNAL_EMPLOYEE_ONLY) ? this.renderBadge(1, I.default, h.staff) : t.has(f.GuildFeatures.VERIFIED) && t.has(f.GuildFeatures.HUB) ? this.renderBadge(4, c.default, h.verifiedHub) : t.has(f.GuildFeatures.HUB) ? this.renderBadge(5, c.default, h.hub) : t.has(f.GuildFeatures.VERIFIED) && t.has(f.GuildFeatures.PARTNERED) ? this.renderBadge(3, T.default, h.verified) : t.has(f.GuildFeatures.VERIFIED) ? this.renderBadge(2, T.default, h.verified) : t.has(f.GuildFeatures.PARTNERED) ? this.renderBadge(0, E.default, h.partnered) : null
+            return t.has(f.GuildFeatures.INTERNAL_EMPLOYEE_ONLY) ? this.renderBadge(1, I.default, A.staff) : t.has(f.GuildFeatures.VERIFIED) && t.has(f.GuildFeatures.HUB) ? this.renderBadge(4, c.default, A.verifiedHub) : t.has(f.GuildFeatures.HUB) ? this.renderBadge(5, c.default, A.hub) : t.has(f.GuildFeatures.VERIFIED) && t.has(f.GuildFeatures.PARTNERED) ? this.renderBadge(3, T.default, A.verified) : t.has(f.GuildFeatures.VERIFIED) ? this.renderBadge(2, T.default, A.verified) : t.has(f.GuildFeatures.PARTNERED) ? this.renderBadge(0, E.default, A.partnered) : null
         }
     }
-    t.default = A
+    t.default = h
 }

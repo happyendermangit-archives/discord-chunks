@@ -70,7 +70,7 @@ function(e, t, n) {
             ...s.default.getCollapsedCategories()
         }
     }
-    class h extends r.default {
+    class A extends r.default {
         constructor(...e) {
             super(...e), u(this, "actions", {
                 CATEGORY_COLLAPSE: I,
@@ -82,5 +82,5 @@ function(e, t, n) {
             }), u(this, "saveUserGuildSettings", T), u(this, "saveUserGuildSettingsBulk", f)
         }
     }
-    t.default = new h
+    t.default = new A
 }

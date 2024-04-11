@@ -17,7 +17,7 @@ function(e, t, n) {
             return y
         },
         isBlockedByOnboarding: function() {
-            return A
+            return h
         },
         isChattableChannel: function() {
             return R
@@ -26,7 +26,7 @@ function(e, t, n) {
             return p
         },
         isGuildOnboardingSettingsAvailable: function() {
-            return h
+            return A
         },
         useChannelCoverageForOnboarding: function() {
             return O
@@ -66,7 +66,7 @@ function(e, t, n) {
         })
     }
 
-    function h(e) {
+    function A(e) {
         let t = l.default.getGuild(e),
             n = !!(null == t ? void 0 : t.hasFeature(I.GuildFeatures.COMMUNITY)),
             i = u.default.can(I.Permissions.MANAGE_GUILD, t),
@@ -74,7 +74,7 @@ function(e, t, n) {
         return n && i && r
     }
 
-    function A(e, t) {
+    function h(e, t) {
         var n;
         if (null == e || !e.hasFeature(I.GuildFeatures.GUILD_ONBOARDING) || null == t || null == t.joinedAt || new Date(t.joinedAt) < f) return !1;
         let i = null !== (n = t.flags) && void 0 !== n ? n : 0;

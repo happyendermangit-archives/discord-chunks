@@ -12,10 +12,10 @@ function(e, t, n) {
         T = n("689938");
     let f = !1,
         S = null,
-        h = null;
+        A = null;
 
-    function A() {
-        f = !1, h = null
+    function h() {
+        f = !1, A = null
     }
 
     function m(e) {
@@ -52,14 +52,14 @@ function(e, t, n) {
             payment: t
         } = e;
         if (!f || t.id !== S || ![I.PaymentStatusTypes.COMPLETED, I.PaymentStatusTypes.CANCELED].includes(t.status)) return !1;
-        f = !1, h = null, S = null, l.default.wait(u.clearError), l.default.wait(d.clearPurchaseError)
+        f = !1, A = null, S = null, l.default.wait(u.clearError), l.default.wait(d.clearPurchaseError)
     }
     class p extends(i = o.default.Store) {
         get isAwaitingAuthentication() {
             return f
         }
         get error() {
-            return h
+            return A
         }
         get awaitingPaymentId() {
             return S
@@ -71,18 +71,18 @@ function(e, t, n) {
         configurable: !0,
         writable: !0
     }) : r[s] = a, t.default = new p(l.default, {
-        BILLING_SUBSCRIPTION_UPDATE_START: A,
-        PAYMENT_AUTHENTICATION_CLEAR_ERROR: A,
-        PREMIUM_PAYMENT_ERROR_CLEAR: A,
-        PREMIUM_PAYMENT_MODAL_CLOSE: A,
-        PREMIUM_PAYMENT_MODAL_OPEN: A,
-        PREMIUM_PAYMENT_SUBSCRIBE_START: A,
-        PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: A,
-        PREMIUM_PAYMENT_UPDATE_SUCCESS: A,
-        SKU_PURCHASE_MODAL_CLOSE: A,
-        SKU_PURCHASE_MODAL_OPEN: A,
-        SKU_PURCHASE_START: A,
-        SKU_PURCHASE_SUCCESS: A,
+        BILLING_SUBSCRIPTION_UPDATE_START: h,
+        PAYMENT_AUTHENTICATION_CLEAR_ERROR: h,
+        PREMIUM_PAYMENT_ERROR_CLEAR: h,
+        PREMIUM_PAYMENT_MODAL_CLOSE: h,
+        PREMIUM_PAYMENT_MODAL_OPEN: h,
+        PREMIUM_PAYMENT_SUBSCRIBE_START: h,
+        PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: h,
+        PREMIUM_PAYMENT_UPDATE_SUCCESS: h,
+        SKU_PURCHASE_MODAL_CLOSE: h,
+        SKU_PURCHASE_MODAL_OPEN: h,
+        SKU_PURCHASE_START: h,
+        SKU_PURCHASE_SUCCESS: h,
         BILLING_SUBSCRIPTION_UPDATE_FAIL: m,
         PREMIUM_PAYMENT_SUBSCRIBE_FAIL: m,
         PREMIUM_PAYMENT_UPDATE_FAIL: m,
@@ -92,7 +92,7 @@ function(e, t, n) {
             let {
                 error: t
             } = e;
-            h = t, f = !1
+            A = t, f = !1
         },
         PAYMENT_UPDATE: O,
         BILLING_PAYMENT_FETCH_SUCCESS: O

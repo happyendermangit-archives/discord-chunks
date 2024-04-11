@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return h
+            return A
         }
     }), n("47120");
     var i, r = n("735250"),
@@ -65,8 +65,8 @@ function(e, t, n) {
                     height: c,
                     animated: T,
                     children: S,
-                    renderLinkComponent: h,
-                    isWindowFocused: A,
+                    renderLinkComponent: A,
+                    isWindowFocused: h,
                     shouldHideMediaOptions: m = !1
                 } = this.props, N = {
                     alt: s,
@@ -77,7 +77,7 @@ function(e, t, n) {
                     animated: T,
                     children: S,
                     zoomThumbnailPlaceholder: n,
-                    renderLinkComponent: h,
+                    renderLinkComponent: A,
                     onContextMenu: m ? e => {
                         e.stopPropagation(), e.preventDefault()
                     } : void 0,
@@ -91,7 +91,7 @@ function(e, t, n) {
                     children: (0, r.jsx)(d.ImageModal, {
                         ...N,
                         className: I.image,
-                        shouldAnimate: A,
+                        shouldAnimate: h,
                         onClose: this.onCloseImage,
                         shouldHideMediaOptions: m
                     })
@@ -102,7 +102,7 @@ function(e, t, n) {
         }
     }
 
-    function h(e) {
+    function A(e) {
         let t = (0, l.useAppContext)(),
             n = (0, c.useIsWindowFocused)();
         return (0, r.jsx)(S, {

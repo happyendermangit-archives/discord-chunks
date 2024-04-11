@@ -59,14 +59,14 @@ function(e, t, n) {
         for (let e of t) c(e)
     }
 
-    function h(e) {
+    function A(e) {
         let {
             channel: t
         } = e;
         return !!o.has(t.id) && (o.delete(t.id), !0)
     }
 
-    function A(e) {
+    function h(e) {
         let {
             messageRequestChannelIds: t
         } = e;
@@ -116,10 +116,10 @@ function(e, t, n) {
                 CONNECTION_OPEN: I,
                 CONNECTION_OPEN_SUPPLEMENTAL: I,
                 CACHE_LOADED_LAZY: () => this.loadCache(),
-                OVERLAY_INITIALIZE: A,
+                OVERLAY_INITIALIZE: h,
                 CHANNEL_CREATE: f,
                 CHANNEL_UPDATES: S,
-                CHANNEL_DELETE: h,
+                CHANNEL_DELETE: A,
                 SET_LOCATION_METADATA: m,
                 MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: T
             })

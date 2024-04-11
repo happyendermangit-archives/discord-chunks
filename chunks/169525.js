@@ -8,10 +8,10 @@ function(e, t, n) {
             return m
         },
         getObscureReason: function() {
-            return h
+            return A
         },
         getObscureReasonForEmbed: function() {
-            return A
+            return h
         },
         getObscuredAlt: function() {
             return O
@@ -34,7 +34,7 @@ function(e, t, n) {
         f = n("981631"),
         S = n("689938");
     (r = i || (i = {})).SPOILER = "spoiler", r.EXPLICIT_CONTENT = "explicit_content", r.POTENTIAL_EXPLICIT_CONTENT = "potential_explicit_content";
-    let h = (e, t) => {
+    let A = (e, t) => {
             let {
                 spoiler: n,
                 flags: i = 0,
@@ -42,7 +42,7 @@ function(e, t, n) {
             } = e;
             return t && (0, l.isPendingScan)(r) ? "potential_explicit_content" : t && ((0, I.hasFlag)(i, f.MessageAttachmentFlags.CONTAINS_EXPLICIT_MEDIA) || o.default.get("obscure_blur_effect_enabled")) ? "explicit_content" : n || (0, I.hasFlag)(i, f.MessageAttachmentFlags.IS_SPOILER) ? "spoiler" : null
         },
-        A = (e, t, n, i, r) => {
+        h = (e, t, n, i, r) => {
             let {
                 flags: s = 0,
                 contentScanVersion: a

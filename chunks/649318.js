@@ -37,8 +37,8 @@ function(e, t, n) {
         T = n("988367"),
         f = n("259443"),
         S = n("65154"),
-        h = n("436620");
-    let A = new f.Logger("SDP");
+        A = n("436620");
+    let h = new f.Logger("SDP");
     (s = i || (i = {})).AUDIO = "a", s.VIDEO = "v", (a = r || (r = {})).SENDRECV = "sendrecv", a.SENDONLY = "sendonly", a.RECVONLY = "recvonly", a.INACTIVE = "inactive";
     let m = "UDP/TLS/RTP/SAVPF";
 
@@ -120,7 +120,7 @@ function(e, t, n) {
             rtxPayload: c,
             sendingVideo: E
         } = e;
-        if ("inactive" === r && !h.BROWSER_SUPPORTS_UNIFIED_PLAN) return {
+        if ("inactive" === r && !A.BROWSER_SUPPORTS_UNIFIED_PLAN) return {
             connection: {
                 ip: "0.0.0.0",
                 version: 4
@@ -152,7 +152,7 @@ function(e, t, n) {
                     ...e
                 }, e.id += 1, e));
                 return [...e, ...t]
-            }).flat()), h.BROWSER_SUPPORTS_UNIFIED_PLAN || "Firefox" === I().name)) {
+            }).flat()), A.BROWSER_SUPPORTS_UNIFIED_PLAN || "Firefox" === I().name)) {
             let e = d.find(e => "msid" === e.attribute);
             if (null == e) throw Error("msid missing");
             f.msid = e.value, f.ssrcs = f.ssrcs.filter(e => "cname" === e.attribute)
@@ -178,9 +178,9 @@ function(e, t, n) {
                     payload: o,
                     rate: 9e4
                 });
-                let A = "x-google-max-bitrate=".concat(u);
-                a === S.Codecs.H264 && (A += ";level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42e01f"), f.fmtp.push({
-                    config: A,
+                let h = "x-google-max-bitrate=".concat(u);
+                a === S.Codecs.H264 && (h += ";level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42e01f"), f.fmtp.push({
+                    config: h,
                     payload: o
                 }), f.rtcpFb = [{
                     type: "ccm",
@@ -226,7 +226,7 @@ function(e, t, n) {
             ssrcs: _,
             extensions: c
         } = e, E = [];
-        if (A.info("generateSessionDescription: ".concat(JSON.stringify(_))), "Firefox" === I().name) {
+        if (h.info("generateSessionDescription: ".concat(JSON.stringify(_))), "Firefox" === I().name) {
             let e = "answer" === t ? "passive" : "active";
             _.forEach(t => {
                 let [i, _, I, T, f] = t;
@@ -314,11 +314,11 @@ function(e, t, n) {
                 cname: T,
                 type: f,
                 direction: S,
-                mid: h
+                mid: A
             } = e;
             "" !== T ? t = O(T, _, "audio" === f ? "a" : "v") : (t = [], "sendonly" === S ? S = "inactive" : "sendrecv" === S && (S = "recvonly"));
             E.push(R({
-                mid: h,
+                mid: A,
                 type: f,
                 setup: I,
                 direction: S,
@@ -382,7 +382,7 @@ function(e, t, n) {
                     [S.Codecs.H264, S.Codecs.VP8, S.Codecs.VP9].forEach((t, n) => {
                         let s = L(r, a, i, t, n);
                         null != s && e.codecs.push(s)
-                    }), "sendrecv" === o && (null != (n = null == s ? void 0 : s.find(e => "cname" === e.attribute)) && (e.videoSSRC = n.id), null != (n = null == s ? void 0 : s.findLast(e => "cname" === e.attribute)) && (n.id === e.videoSSRC && A.warn("Unable to find a unique rtx SSRC!"), e.rtxSSRC = n.id))
+                    }), "sendrecv" === o && (null != (n = null == s ? void 0 : s.find(e => "cname" === e.attribute)) && (e.videoSSRC = n.id), null != (n = null == s ? void 0 : s.findLast(e => "cname" === e.attribute)) && (n.id === e.videoSSRC && h.warn("Unable to find a unique rtx SSRC!"), e.rtxSSRC = n.id))
             }
             return e
         }, {
@@ -407,13 +407,13 @@ function(e, t, n) {
     }
 
     function M(e) {
-        if (!e.includes("a=fingerprint")) return A.error("Remote SDP does not include fingerprint!"), !1;
-        if (!e.includes("a=ice-ufrag")) return A.error("Remote SDP does not include ICE user name!"), !1;
-        if (!e.includes("a=ice-pwd")) return A.error("Remote SDP does not include ICE password!"), !1;
-        if (!e.includes("a=candidate")) return A.error("Remote SDP does not include ICE candidate!"), !1;
-        if (!e.includes("c=")) return A.error("Remote SDP does not include c-line!"), !1;
+        if (!e.includes("a=fingerprint")) return h.error("Remote SDP does not include fingerprint!"), !1;
+        if (!e.includes("a=ice-ufrag")) return h.error("Remote SDP does not include ICE user name!"), !1;
+        if (!e.includes("a=ice-pwd")) return h.error("Remote SDP does not include ICE password!"), !1;
+        if (!e.includes("a=candidate")) return h.error("Remote SDP does not include ICE candidate!"), !1;
+        if (!e.includes("c=")) return h.error("Remote SDP does not include c-line!"), !1;
         let t = e.split("\n").filter(e => e.startsWith("c=")).join().trim();
-        return !(t.split(" ").length < 3) || (A.error("Incorrect c-line: ".concat(t)), !1)
+        return !(t.split(" ").length < 3) || (h.error("Incorrect c-line: ".concat(t)), !1)
     }
 
     function y(e) {

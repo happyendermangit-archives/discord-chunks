@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return h
+            return A
         }
     }), n("47120"), n("411104");
     var i = n("264344"),
@@ -31,7 +31,7 @@ function(e, t, n) {
     function S(e) {
         return (null != e ? e : T.DEFAULT_VOLUME) / T.DEFAULT_VOLUME
     }
-    class h extends a.default {
+    class A extends a.default {
         destroy() {
             this.eachConnection(e => e.destroy()), this.emit(o.MediaEngineEvent.Destroy), this.removeAllListeners()
         }
@@ -513,8 +513,8 @@ function(e, t, n) {
                     ducking: !1
                 }), this.on("removeListener", this.handleRemoveListener), this.on("newListener", this.handleNewListener), null != (0, c.getVoiceEngine)().getAudioSubsystem ? (0, c.getVoiceEngine)().getAudioSubsystem((e, t) => {
                     this.audioSubsystem = e, this.audioLayer = t
-                }) : null != (0, c.getVoiceEngine)().getUseLegacyAudioDevice && (this.audioSubsystem = (0, c.getVoiceEngine)().getUseLegacyAudioDevice() ? T.AudioSubsystems.LEGACY : T.AudioSubsystems.STANDARD), null != n.pingVoiceThread && "undefined" != typeof window && "canary" === window.GLOBAL_ENV.RELEASE_CHANNEL && this.watchdogTick(), this.getDebugLogging() && !h.installedLogHooks)
-                for (let e of (h.installedLogHooks = !0, ["trace", "debug", "info", "warn", "error", "log"])) {
+                }) : null != (0, c.getVoiceEngine)().getUseLegacyAudioDevice && (this.audioSubsystem = (0, c.getVoiceEngine)().getUseLegacyAudioDevice() ? T.AudioSubsystems.LEGACY : T.AudioSubsystems.STANDARD), null != n.pingVoiceThread && "undefined" != typeof window && "canary" === window.GLOBAL_ENV.RELEASE_CHANNEL && this.watchdogTick(), this.getDebugLogging() && !A.installedLogHooks)
+                for (let e of (A.installedLogHooks = !0, ["trace", "debug", "info", "warn", "error", "log"])) {
                     let t = console,
                         n = t[e];
                     null != n && (t[e] = function() {
@@ -528,5 +528,5 @@ function(e, t, n) {
             null != n.setActiveSinksChangeCallback && n.setActiveSinksChangeCallback(this.handleActiveSinksChange), (0, l.default)(this)
         }
     }
-    f(h, "installedLogHooks", !1)
+    f(A, "installedLogHooks", !1)
 }

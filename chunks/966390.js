@@ -16,8 +16,8 @@ function(e, t, n) {
         T = n("539573"),
         f = n("786761"),
         S = n("3148"),
-        h = n("785359"),
-        A = n("79390"),
+        A = n("785359"),
+        h = n("79390"),
         m = n("623292"),
         N = n("807092"),
         O = n("467798"),
@@ -59,7 +59,7 @@ function(e, t, n) {
                 messageReference: w.message_reference,
                 flags: w.flags,
                 nonce: V,
-                poll: (0, A.createPollServerDataFromCreateRequest)(P.poll)
+                poll: (0, h.createPollServerDataFromCreateRequest)(P.poll)
             });
         return (w.nonce = V, b.on("start", e => {
             _ = (0, f.createMessageRecord)({
@@ -84,7 +84,7 @@ function(e, t, n) {
                     channelId: c,
                     file: e,
                     messageRecord: _
-                }), (0, h.logMessageSendFailure)({
+                }), (0, A.logMessageSendFailure)({
                     fileItems: e.items,
                     failureCode: t,
                     errorMessage: null == i ? void 0 : i.msg
@@ -195,7 +195,7 @@ function(e, t, n) {
                         type: "UPLOAD_FAIL",
                         channelId: n,
                         file: t
-                    }), (0, h.logMessageSendFailure)({
+                    }), (0, A.logMessageSendFailure)({
                         fileItems: t.items,
                         failureCode: _
                     }), _ === L.AbortCodes.EXPLICIT_CONTENT) {

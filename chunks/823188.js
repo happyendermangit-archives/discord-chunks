@@ -34,8 +34,8 @@ function(e, t, n) {
         T = n.n(I),
         f = n("442837"),
         S = n("692547"),
-        h = n("780384"),
-        A = n("481060"),
+        A = n("780384"),
+        h = n("481060"),
         m = n("410030"),
         N = n("607070"),
         O = n("100527"),
@@ -88,7 +88,7 @@ function(e, t, n) {
                 [et.freeTrialPillTier2OldGradientFill]: 4 === i,
                 [et.lightBackgroundPill]: 5 === i
             }),
-            children: (0, _.jsx)(A.Text, {
+            children: (0, _.jsx)(h.Text, {
                 variant: "text-xs/bold",
                 className: E()(et.freeTrialPillText, {
                     [et.freeTrialPillTextInverted]: 0 !== i && 2 !== i,
@@ -215,7 +215,7 @@ function(e, t, n) {
             className: et.item,
             children: [(0, _.jsx)(t, {
                 className: et.icon
-            }), (0, _.jsx)(A.Text, {
+            }), (0, _.jsx)(h.Text, {
                 variant: "text-md/normal",
                 color: "always-white",
                 children: n
@@ -254,14 +254,14 @@ function(e, t, n) {
             showYearlyPrice: c,
             isStacked: I,
             isFullScreen: S,
-            priceOptions: h
+            priceOptions: A
         } = e, m = (0, f.useStateFromStores)([L.default], () => L.default.getPremiumTypeSubscription()), N = (0, f.useStateFromStores)([g.default], () => g.default.getCurrentUser()), O = (0, Y.useHasDiscountApplied)(), p = (0, Y.useActiveDiscountInfo)(), R = l === Z.PremiumTypes.TIER_0 ? Z.PremiumSubscriptionSKUs.TIER_0 : Z.PremiumSubscriptionSKUs.TIER_2, C = (null == m ? void 0 : m.trialId) != null ? null == N ? void 0 : N.premiumType : O ? Z.PremiumTypes.TIER_2 : null, D = (0, W.usePremiumTrialOffer)(), v = (0, j.usePremiumDiscountOffer)(), M = null == D ? void 0 : D.subscription_trial;
         if (!o && null != C && l === C && null != m && null != m.planIdFromItems && !I) {
             let e = null != m.trialEndsAt ? T()(null == m ? void 0 : m.trialEndsAt).diff(T()(), "d") : 0,
                 i = Z.SubscriptionPlanInfo[m.planIdFromItems],
                 r = F.default.formatPriceString(F.default.getDefaultPrice(i.id), i.interval);
             return (0, _.jsx)(_.Fragment, {
-                children: (0, _.jsx)(A.Heading, {
+                children: (0, _.jsx)(h.Heading, {
                     variant: "heading-md/normal",
                     color: "always-white",
                     className: et.trialHeader,
@@ -278,7 +278,7 @@ function(e, t, n) {
         }
         if (!o && u && !I) {
             let e = F.default.formatPriceString(F.default.getDefaultPrice(l === Z.PremiumTypes.TIER_0 ? Z.SubscriptionPlans.PREMIUM_MONTH_TIER_0 : Z.SubscriptionPlans.PREMIUM_MONTH_TIER_2), Z.SubscriptionIntervalTypes.MONTH);
-            if (0 === d) return (0, _.jsx)(A.Heading, {
+            if (0 === d) return (0, _.jsx)(h.Heading, {
                 variant: "heading-md/normal",
                 color: "always-white",
                 className: et.trialHeader,
@@ -292,7 +292,7 @@ function(e, t, n) {
                     price: e
                 })
             });
-            if (null != v) return (0, _.jsx)(A.Heading, {
+            if (null != v) return (0, _.jsx)(h.Heading, {
                 variant: "heading-md/normal",
                 color: "always-white",
                 className: et.trialHeader,
@@ -312,13 +312,13 @@ function(e, t, n) {
                     [et.priceStackedSmallScreen]: I && !S
                 }),
                 variant: I ? "heading-lg/extrabold" : void 0,
-                priceOptions: h
+                priceOptions: A
             }), c && (0, _.jsx)(Q.default, {
                 subscriptionTier: R,
                 interval: Z.SubscriptionIntervalTypes.YEAR,
                 isGift: o,
                 className: et.price,
-                priceOptions: h
+                priceOptions: A
             })]
         })
     }
@@ -357,7 +357,7 @@ function(e, t, n) {
             variant: l = 0,
             isFullScreen: u,
             priceOptions: d
-        } = e, c = (0, f.useStateFromStores)([L.default], () => L.default.getPremiumTypeSubscription()), I = (0, f.useStateFromStores)([g.default], () => g.default.getCurrentUser()), T = (0, W.usePremiumTrialOffer)(), S = null == T ? void 0 : null === (t = T.subscription_trial) || void 0 === t ? void 0 : t.sku_id, h = (null == c ? void 0 : c.trialId) != null, m = (null == c ? void 0 : c.trialId) != null ? null == I ? void 0 : I.premiumType : null, N = null != S || h, O = 1 === l;
+        } = e, c = (0, f.useStateFromStores)([L.default], () => L.default.getPremiumTypeSubscription()), I = (0, f.useStateFromStores)([g.default], () => g.default.getCurrentUser()), T = (0, W.usePremiumTrialOffer)(), S = null == T ? void 0 : null === (t = T.subscription_trial) || void 0 === t ? void 0 : t.sku_id, A = (null == c ? void 0 : c.trialId) != null, m = (null == c ? void 0 : c.trialId) != null ? null == I ? void 0 : I.premiumType : null, N = null != S || A, O = 1 === l;
         return (0, _.jsxs)("div", {
             className: E()(et.card, a, {
                 [et.card]: !O,
@@ -440,7 +440,7 @@ function(e, t, n) {
                         [et.perkContainerSmallScreen]: O && !u
                     }),
                     children: [(0, _.jsxs)("div", {
-                        children: [O && (0, _.jsx)(A.Heading, {
+                        children: [O && (0, _.jsx)(h.Heading, {
                             variant: "heading-xxl/extrabold",
                             className: u ? et.stackedCardTitle : et.stackedCardTitleSmallScreen,
                             children: ee.default.Messages.NITRO_MARKETING_JUST_THE_BASICS
@@ -552,7 +552,7 @@ function(e, t, n) {
             P = (0, z.useIsEligibleForBogoPromotion)(),
             b = !l && R,
             G = (0, z.getBOGOPillCopy)(),
-            w = (0, h.isThemeLight)((0, m.default)()),
+            w = (0, A.isThemeLight)((0, m.default)()),
             k = w ? 5 : 2;
         return !b || y || w ? b && y && !w && (n = et.rimGlowTier2Stacked) : n = et.rimGlowTier2, (0, _.jsxs)("div", {
             className: E()(et.card, o, {
@@ -626,7 +626,7 @@ function(e, t, n) {
                                 [et.tier2TitleStacked]: y && c,
                                 [et.tier2TitleStackedSmallScreen]: y && !c
                             })
-                        }), !l && O !== Z.PremiumSubscriptionSKUs.TIER_2 && P && (0, _.jsx)(A.Text, {
+                        }), !l && O !== Z.PremiumSubscriptionSKUs.TIER_2 && P && (0, _.jsx)(h.Text, {
                             variant: "text-xs/bold",
                             className: et.freeTrialPillInline,
                             children: G
@@ -647,7 +647,7 @@ function(e, t, n) {
                         [et.perkContainerSmallScreen]: y && !c
                     }),
                     children: [(0, _.jsxs)("div", {
-                        children: [y && (0, _.jsx)(A.Heading, {
+                        children: [y && (0, _.jsx)(h.Heading, {
                             className: E()({
                                 [et.stackedCardTitle]: c,
                                 [et.stackedCardTitleSmallScreen]: !c

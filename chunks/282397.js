@@ -12,15 +12,15 @@ function(e, t, n) {
         f = {},
         S = {};
 
-    function h(e) {
+    function A(e) {
         var t;
         if (null == e) return !1;
         let n = T[e];
         if (null == n) return !1;
-        null === (t = n.onSuccess) || void 0 === t || t.call(n), A(e)
+        null === (t = n.onSuccess) || void 0 === t || t.call(n), h(e)
     }
 
-    function A(e) {
+    function h(e) {
         delete T[e];
         let t = S[e];
         null != t && delete f[t], delete S[e]
@@ -92,7 +92,7 @@ function(e, t, n) {
             let {
                 nonce: t
             } = e;
-            h(t)
+            A(t)
         },
         INTERACTION_FAILURE: function(e) {
             var t;
@@ -104,7 +104,7 @@ function(e, t, n) {
             if (null == n) return !1;
             let s = T[n];
             if (null == s) return !1;
-            null === (t = s.onFailure) || void 0 === t || t.call(s, i, r), s.data.interactionType === _.InteractionTypes.APPLICATION_COMMAND ? A(n) : T[n] = {
+            null === (t = s.onFailure) || void 0 === t || t.call(s, i, r), s.data.interactionType === _.InteractionTypes.APPLICATION_COMMAND ? h(n) : T[n] = {
                 ...s,
                 state: I.InteractionState.FAILED,
                 errorCode: i,
@@ -120,7 +120,7 @@ function(e, t, n) {
                 var n;
                 let e = T[t.nonce];
                 if (null == e) return !1;
-                null === (n = e.onSuccess) || void 0 === n || n.call(e), A(t.nonce)
+                null === (n = e.onSuccess) || void 0 === n || n.call(e), h(t.nonce)
             }
         },
         CHANNEL_SELECT: function(e) {
@@ -128,7 +128,7 @@ function(e, t, n) {
                 channelId: t
             } = e;
             if (null == E.default.getChannel(t)) return !1;
-            for (let [e, t] of Object.entries(T)) t.state === I.InteractionState.FAILED && A(e)
+            for (let [e, t] of Object.entries(T)) t.state === I.InteractionState.FAILED && h(e)
         },
         INTERACTION_IFRAME_MODAL_CREATE: function(e) {
             let {
@@ -149,7 +149,7 @@ function(e, t, n) {
             let {
                 participants: t
             } = e, n = c.default.getSessionId(), i = c.default.getId(), r = t.find(e => e.user_id === i && e.session_id === n);
-            null != r && null != r.nonce && h(r.nonce)
+            null != r && null != r.nonce && A(r.nonce)
         }
     })
 }

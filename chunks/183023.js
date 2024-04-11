@@ -32,8 +32,8 @@ function(e, t, n) {
         T = n("213609"),
         f = n("738774"),
         S = n("29598"),
-        h = n("400106"),
-        A = n("944386"),
+        A = n("400106"),
+        h = n("944386"),
         m = n("889564"),
         N = n("687476"),
         O = n("761966"),
@@ -71,7 +71,7 @@ function(e, t, n) {
             let {
                 node: t
             } = e;
-            (0, A.useTrackOpenPopout)({
+            (0, h.useTrackOpenPopout)({
                 emojiId: t.emojiId,
                 currentGuildId: M.default.getGuildId()
             });
@@ -298,7 +298,7 @@ function(e, t, n) {
                 }),
                 e_ = $ && es && !eo && (q && er || !q),
                 ec = ed.emojiDescription,
-                eE = (0, A.useTrackOpenPopout)({
+                eE = (0, h.useTrackOpenPopout)({
                     emojiId: u.emojiId,
                     currentGuildId: eu,
                     popoutData: ed,
@@ -309,7 +309,7 @@ function(e, t, n) {
                 eI = ed.type === H.EmojiPopoutType.JOIN_GUILD,
                 eT = ed.type === H.EmojiPopoutType.GET_PREMIUM,
                 [ef, eS] = r.useState(!1),
-                eh = et || $ && !Z || null != S;
+                eA = et || $ && !Z || null != S;
             return (0, i.jsxs)(Y.MessagePopoutContent, {
                 className: X.popoutContent,
                 children: [(() => {
@@ -379,7 +379,7 @@ function(e, t, n) {
                             children: ea ? z.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_UPGRADE_UPSELL_BUTTON : z.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_PURCHASE_UPSELL_BUTTON
                         })]
                     })
-                })(), eh && (() => {
+                })(), eA && (() => {
                     let e = null != S && !$ && et,
                         t = () => {
                             e && (null == v || v(), !ef && !b && B.default.track(j.AnalyticEvents.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, eE), eS(!ef))
@@ -390,7 +390,7 @@ function(e, t, n) {
                             className: X.guildTitle,
                             children: $ ? z.default.Messages.EMOJI_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION : z.default.Messages.EMOJI_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION
                         }), (0, i.jsx)(J, {
-                            expressionSourceGuild: null != S ? S : h.default.createFromGuildRecord(g),
+                            expressionSourceGuild: null != S ? S : A.default.createFromGuildRecord(g),
                             hasJoinedExpressionSourceGuild: $,
                             isDisplayingJoinGuildButtonInPopout: eI
                         }), e && (0, i.jsxs)(i.Fragment, {

@@ -24,8 +24,8 @@ function(e, t, n) {
             width: T,
             height: f,
             className: S,
-            initialAnimation: h,
-            markers: A
+            initialAnimation: A,
+            markers: h
         } = e, [m, N] = r.useState(null), O = r.useRef(null), p = r.useRef(null), R = r.useRef(null), C = "custom" === I ? {
             width: T,
             height: f
@@ -38,7 +38,7 @@ function(e, t, n) {
             play: e => {
                 if (null != R.current) {
                     if (p.current = e, v) {
-                        let t = A[e];
+                        let t = h[e];
                         R.current.setSegment(t.start, t.start + t.duration), R.current.goToAndStop(t.duration, !0)
                     } else R.current.setLoop(!g && e.includes("hover")), R.current.goToAndPlay(e)
                 }
@@ -49,16 +49,16 @@ function(e, t, n) {
             stopIfPlaying: e => {
                 null != R.current && !v && p.current === e && R.current.goToAndStop(0, !0)
             }
-        }), [v, g, A]), r.useEffect(() => {
+        }), [v, g, h]), r.useEffect(() => {
             null == m && o().then(e => N(e.default))
         }, [m, o]), r.useEffect(() => (n.e("23755").then(n.t.bind(n, "500923", 23)).then(e => {
             var t;
             let n, {
                     default: i
                 } = e,
-                r = null !== (t = p.current) && void 0 !== t ? t : h;
-            if (null != r && null != A[r]) {
-                let e = A[r];
+                r = null !== (t = p.current) && void 0 !== t ? t : A;
+            if (null != r && null != h[r]) {
+                let e = h[r];
                 n = [e.start, e.start + e.duration]
             }
             null != O.current && (R.current = i.loadAnimation({
@@ -72,7 +72,7 @@ function(e, t, n) {
         }), () => {
             var e;
             null === (e = R.current) || void 0 === e || e.destroy()
-        }), [m, h, A]), (0, i.jsx)("div", {
+        }), [m, A, h]), (0, i.jsx)("div", {
             style: {
                 "--__lottieIconColor": null != s && "string" == typeof s ? s : null == s ? void 0 : s.css,
                 display: "flex",

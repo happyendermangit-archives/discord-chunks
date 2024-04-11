@@ -5,7 +5,7 @@ function(e, t, n) {
             return f
         },
         canWatchStream: function() {
-            return h
+            return A
         },
         getStreamCTAString: function() {
             return S
@@ -14,7 +14,7 @@ function(e, t, n) {
             return m
         },
         useCanWatchStream: function() {
-            return A
+            return h
         }
     }), n("653041"), n("47120");
     var i, r, s = n("442837"),
@@ -51,7 +51,7 @@ function(e, t, n) {
         }
     }
 
-    function h(e, t, n, i, r) {
+    function A(e, t, n, i, r) {
         let s;
         if (null == e) return [!1, 2];
         let a = t.isInChannel(e.id),
@@ -61,8 +61,8 @@ function(e, t, n) {
         return d ? s = 0 : u || a ? l && !a && (s = 1) : s = 2, [!__OVERLAY__ && !d && (a || u && !l), s]
     }
 
-    function A(e) {
-        return (0, s.useStateFromStoresArray)([_.default, u.default, d.default, a.default], () => h(e, _.default, u.default, d.default, a.default))
+    function h(e) {
+        return (0, s.useStateFromStoresArray)([_.default, u.default, d.default, a.default], () => A(e, _.default, u.default, d.default, a.default))
     }
 
     function m(e, t, n) {

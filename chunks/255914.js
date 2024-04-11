@@ -38,9 +38,9 @@ function(e, t, n) {
     let T = [0, 5e5, 1e6, 15e5, 2e6, 3e6, 4e6, 5e6, 6e6, 7e6, 8e6],
         f = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60],
         S = [720, 480, 360],
-        h = ["framesCodec", "framesNetwork", "packets", "packetsLost", "framesDropped", "framesCodecError", "bytes", "nackCount", "pliCount", "qpSum", "freezeCount", "pauseCount", "totalFreezesDuration", "totalPausesDuration", "totalFramesDuration", "keyframes", "passthroughCount", "cryptorSuccessCount", "cryptorFailureCount", "cryptorDuration", "cryptorAttempts", "qualityDecodeErrors", "qualityDecoderReboots", "qualityScoreErrors", "qualityFrameDrops", "qualitySizeMismatches"];
+        A = ["framesCodec", "framesNetwork", "packets", "packetsLost", "framesDropped", "framesCodecError", "bytes", "nackCount", "pliCount", "qpSum", "freezeCount", "pauseCount", "totalFreezesDuration", "totalPausesDuration", "totalFramesDuration", "keyframes", "passthroughCount", "cryptorSuccessCount", "cryptorFailureCount", "cryptorDuration", "cryptorAttempts", "qualityDecodeErrors", "qualityDecoderReboots", "qualityScoreErrors", "qualityFrameDrops", "qualitySizeMismatches"];
     (o = i || (i = {})).H264 = "H264", o.H265 = "H265", o.VP8 = "VP8", o.VP9 = "VP9", o.AV1 = "AV1", o.UNKNOWN = "UNKNOWN", (l = r || (r = {})).NVIDIA_CUDA = "nvidia_cuda", l.NVIDIA_DIRECT_3D = "nvidia_direct_3d", l.OPENH264 = "openh264", l.VIDEOTOOLBOX = "videotoolbox", l.AMD_DIRECT_3D = "amd_direct_3d", l.INTEL = "intel", l.INTEL_DIRECT_3D = "intel_direct_3d", l.VP8_LIBVPX = "vp8_libvpx", l.UNCATEGORIZED = "uncategorized", l.UNKNOWN = "unknown", (u = s || (s = {})).NVIDIA_DIRECT_3D = "nvidia_direct_3d", u.OPENH264 = "openh264", u.VIDEOTOOLBOX = "videotoolbox", u.AMD_DIRECT_3D = "amd_direct_3d", u.INTEL = "intel", u.INTEL_DIRECT_3D = "intel_direct_3d", u.VP8_LIBVPX = "vp8_libvpx", u.UNCATEGORIZED = "uncategorized", u.UNKNOWN = "unknown";
-    let A = Object.freeze({
+    let h = Object.freeze({
             "nvidia: cuda": "nvidia_cuda",
             "nvidia: direct3d": "nvidia_direct_3d",
             "amd: direct3d": "amd_direct_3d",
@@ -62,8 +62,8 @@ function(e, t, n) {
 
     function N(e) {
         if (null == e) return "unknown";
-        for (let t of Object.keys(A))
-            if (e.includes(t)) return A[t];
+        for (let t of Object.keys(h))
+            if (e.includes(t)) return h[t];
         return "uncategorized"
     }(d = a || (a = {}))[d.None = 0] = "None", d[d.ClientSideDisableVideo = 1] = "ClientSideDisableVideo", d[d.SenderStopped = 2] = "SenderStopped";
 
@@ -88,7 +88,7 @@ function(e, t, n) {
             }(e.decoderImplementationName), u.codecType = O(e.codec.name), u.qpSum = 0, u.freezeCount = e.freezeCount, u.pauseCount = e.pauseCount, u.totalFreezesDuration = e.totalFreezesDuration, u.totalPausesDuration = e.totalPausesDuration, u.totalFramesDuration = e.totalFramesDuration, u.keyframes = null !== (i = e.keyFramesDecoded) && void 0 !== i ? i : null, u.passthroughCount = null !== (r = e.passthroughCount) && void 0 !== r ? r : 0, u.cryptorSuccessCount = null !== (s = e.decryptSuccessCount) && void 0 !== s ? s : 0, u.cryptorFailureCount = null !== (a = e.decryptFailureCount) && void 0 !== a ? a : 0, u.cryptorDuration = null !== (o = e.decryptDuration) && void 0 !== o ? o : 0, u.cryptorAttempts = null !== (l = e.decryptAttempts) && void 0 !== l ? l : 0, u)
         }
         static parseOutboundStats(e, t) {
-            var n, i, r, s, a, o, l, u, d, _, c, E, I, T, f, S, h, A, m, R;
+            var n, i, r, s, a, o, l, u, d, _, c, E, I, T, f, S, A, h, m, R;
             let C = new p;
             return null == e ? C : {
                 bytes: e.bytesSent,
@@ -127,8 +127,8 @@ function(e, t, n) {
                 framesDroppedCongestionWindow: null !== (T = e.framesDroppedCongestionWindow) && void 0 !== T ? T : null,
                 passthroughCount: null !== (f = e.passthroughCount) && void 0 !== f ? f : 0,
                 cryptorSuccessCount: null !== (S = e.encryptSuccessCount) && void 0 !== S ? S : 0,
-                cryptorFailureCount: null !== (h = e.encryptFailureCount) && void 0 !== h ? h : 0,
-                cryptorDuration: null !== (A = e.encryptDuration) && void 0 !== A ? A : 0,
+                cryptorFailureCount: null !== (A = e.encryptFailureCount) && void 0 !== A ? A : 0,
+                cryptorDuration: null !== (h = e.encryptDuration) && void 0 !== h ? h : 0,
                 cryptorAttempts: null !== (m = e.encryptAttempts) && void 0 !== m ? m : 0,
                 cryptorMaxAttempts: null !== (R = e.encryptMaxAttempts) && void 0 !== R ? R : 0
             }
@@ -145,7 +145,7 @@ function(e, t, n) {
             return this.videoStoppedWatch.elapsed()
         }
         collectAggregationStats(e, t) {
-            for (let i of h) {
+            for (let i of A) {
                 var n;
                 let r = e[i];
                 if (null === r) continue;
@@ -183,15 +183,15 @@ function(e, t, n) {
             if (this.intervalTotal += E, this.resolutionTotal += a * E, this.minorResolutionTotal += o * E, this.majorResolutionTotal += l * E, this.cryptorMaxAttempts = Math.max(this.cryptorMaxAttempts, t.cryptorMaxAttempts), null != u && null != _ && "encoderBuckets" in this && (this.encoderBuckets[u] += E, this.codecBuckets[_] += E, null != t.codecType && "UNKNOWN" !== t.codecType && (this.encoderCodec = t.codecType), null != e.vmafScore && e.vmafScore >= 0 && (this.vmafScoreNum += 1, this.vmafScoreSum += e.vmafScore, this.vmafHistogram.addSample(e.vmafScore)), null != e.psnrDb && e.psnrDb >= 0 && (this.psnrDbNum += 1, this.psnrDbSum += e.psnrDb, this.psnrHistogram.addSample(e.psnrDb)), null != e.outboundSinkWant && 0 !== e.outboundSinkWant && (this.outboundSinkWantNum += 1, this.outboundSinkWantSum += e.outboundSinkWant)), null != d && null != _ && "decoderBuckets" in this && (this.decoderBuckets[d] += E, this.codecBuckets[_] += E, null != t.codecType && "UNKNOWN" !== t.codecType && (this.decoderCodec = t.codecType)), this.statsWindow.length < 6) return;
             let {
                 bytes: I,
-                framesCodec: h,
-                timestamp: A
+                framesCodec: A,
+                timestamp: h
             } = this.statsWindow[this.statsWindow.length - 3];
             S.forEach(e => {
                 a <= e && (this.resolutionBuckets[e] += E)
             });
-            let m = (s - A) / 1e3,
+            let m = (s - h) / 1e3,
                 N = (i - I) * 8 / m,
-                O = (r - h) / m;
+                O = (r - A) / m;
             T.forEach(e => {
                 N <= e && (this.bitrateBuckets[e] += E)
             }), f.forEach(e => {

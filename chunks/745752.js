@@ -11,7 +11,7 @@ function(e, t, n) {
             return S
         },
         startOnboarding: function() {
-            return h
+            return A
         }
     }), n("789020");
     var i = n("544891"),
@@ -63,19 +63,19 @@ function(e, t, n) {
         if (null == s || !s.hasFeature(E.GuildFeatures.GUILD_ONBOARDING)) return Promise.resolve();
         let u = _.default.shouldFetchPrompts(e),
             c = _.default.getOnboardingPrompts(e);
-        if (!u && c.length > 0) return c.every(e => !e.inOnboarding) ? (A(e), Promise.resolve()) : (!r && h(e), Promise.resolve());
+        if (!u && c.length > 0) return c.every(e => !e.inOnboarding) ? (h(e), Promise.resolve()) : (!r && A(e), Promise.resolve());
         let T = await f(e);
-        return Array.isArray(T) && T.every(e => !e.inOnboarding) ? (A(e), Promise.resolve()) : (!r && h(e), T)
+        return Array.isArray(T) && T.every(e => !e.inOnboarding) ? (h(e), Promise.resolve()) : (!r && A(e), T)
     }
 
-    function h(e) {
+    function A(e) {
         r.default.dispatch({
             type: "GUILD_ONBOARDING_START",
             guildId: e
         })
     }
 
-    function A(e) {
+    function h(e) {
         u.default.track(E.AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, {
             ...(0, s.collectGuildAnalyticsMetadata)(e),
             step: -2,

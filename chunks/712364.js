@@ -33,8 +33,8 @@ function(e, t, n) {
                 retrySuccessMessage: f
             } = this.props, {
                 code: S,
-                errorMessage: h,
-                retrySuccess: A
+                errorMessage: A,
+                retrySuccess: h
             } = this.state, m = s.Children.count(i) > 0 ? (0, r.jsx)(l.Card, {
                 type: l.Card.Types.WARNING,
                 className: d.card,
@@ -52,7 +52,7 @@ function(e, t, n) {
                         children: T
                     })
                 })]
-            }) : null, O = A ? (0, r.jsx)(l.Card, {
+            }) : null, O = h ? (0, r.jsx)(l.Card, {
                 type: l.Card.Types.SUCCESS,
                 className: d.card,
                 children: (0, r.jsx)(l.Text, {
@@ -91,7 +91,7 @@ function(e, t, n) {
                                 color: "text-danger",
                                 variant: "text-xs/normal",
                                 className: d.error,
-                                children: null != a ? a : h
+                                children: null != a ? a : A
                             }) : null, N]
                         })]
                     }), (0, r.jsxs)(l.ModalFooter, {

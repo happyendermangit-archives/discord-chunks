@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return h
+            return A
         }
     });
     var i = n("735250"),
@@ -21,10 +21,10 @@ function(e, t, n) {
         f = n("65154"),
         S = n("689938");
 
-    function h(e, t) {
+    function A(e, t) {
         let {
-            preset: h,
-            resolution: A,
+            preset: A,
+            resolution: h,
             fps: m
         } = (0, s.useStateFromStoresObject)([d.default], () => d.default.getState()), N = (0, s.useStateFromStores)([c.default], () => c.default.getGoLiveSource()), O = (0, s.useStateFromStores)([E.default], () => E.default.getCurrentUser()), p = (0, s.useStateFromStores)([_.default], () => {
             var t;
@@ -70,18 +70,18 @@ function(e, t, n) {
             }
         }, [t, R, N]);
         if (null == e) return null;
-        let g = h === T.ApplicationStreamPresets.PRESET_DOCUMENTS ? T.ApplicationStreamFPS.FPS_30 : m,
+        let g = A === T.ApplicationStreamPresets.PRESET_DOCUMENTS ? T.ApplicationStreamFPS.FPS_30 : m,
             L = T.ApplicationStreamFPSButtonsWithSuffixLabel.map(e => {
                 let {
                     value: t,
                     label: n
-                } = e, r = (0, u.default)(T.ApplicationStreamPresets.PRESET_CUSTOM, A, t, O, p);
+                } = e, r = (0, u.default)(T.ApplicationStreamPresets.PRESET_CUSTOM, h, t, O, p);
                 return (0, i.jsx)(a.MenuRadioItem, {
                     group: "stream-settings-fps",
                     id: "stream-settings-fps-".concat(t),
                     label: n,
                     checked: t === m,
-                    action: () => C(r, A, t, I.AnalyticsObjectTypes.RESOLUTION)
+                    action: () => C(r, h, t, I.AnalyticsObjectTypes.RESOLUTION)
                 }, "stream-settings-fps-".concat(t))
             }),
             D = T.ApplicationStreamResolutionButtonsWithSuffixLabel.map(e => {
@@ -93,7 +93,7 @@ function(e, t, n) {
                     group: "stream-settings-resolution",
                     id: "stream-settings-resolution-".concat(t),
                     label: n,
-                    checked: t === A,
+                    checked: t === h,
                     action: () => C(r, t, g, I.AnalyticsObjectTypes.RESOLUTION)
                 }, "stream-settings-resolution-".concat(t))
             });

@@ -17,7 +17,7 @@ function(e, t, n) {
         f = n("981631"),
         S = n("243013");
 
-    function h(e, t, n) {
+    function A(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -25,7 +25,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    let A = {
+    let h = {
             side: S.side,
             top: S.top,
             "top-pill": S.topPill
@@ -126,10 +126,10 @@ function(e, t, n) {
             })
         }
         constructor(...e) {
-            super(...e), h(this, "state", {
+            super(...e), A(this, "state", {
                 hover: !1,
                 active: !1
-            }), h(this, "handleClick", e => {
+            }), A(this, "handleClick", e => {
                 let {
                     disabled: t,
                     onClick: n,
@@ -137,22 +137,22 @@ function(e, t, n) {
                     onItemSelect: r
                 } = this.props;
                 !t && (null != n ? n(e) : null != r && r(i))
-            }), h(this, "handleMouseDown", () => {
+            }), A(this, "handleMouseDown", () => {
                 let {
                     color: e
                 } = this.props;
                 null != e && this.setState({
                     active: !0
                 })
-            }), h(this, "handleMouseUp", () => {
+            }), A(this, "handleMouseUp", () => {
                 this.setState({
                     active: !1
                 })
-            }), h(this, "handleMouseOver", () => {
+            }), A(this, "handleMouseOver", () => {
                 this.setState({
                     hover: !0
                 })
-            }), h(this, "handleMouseOut", () => {
+            }), A(this, "handleMouseOut", () => {
                 this.setState({
                     hover: !1,
                     active: !1
@@ -160,7 +160,7 @@ function(e, t, n) {
             })
         }
     }
-    h(p, "defaultProps", {
+    A(p, "defaultProps", {
         disabled: !1,
         look: "grey",
         disableItemStyles: !1
@@ -177,7 +177,7 @@ function(e, t, n) {
             } = this.props;
             return (0, o.jsx)("div", {
                 ref: this.tabBarRef,
-                className: d()(e, A[n]),
+                className: d()(e, h[n]),
                 style: i,
                 role: "tablist",
                 "aria-orientation": s,
@@ -187,7 +187,7 @@ function(e, t, n) {
             })
         }
         constructor(...e) {
-            super(...e), h(this, "tabBarRef", l.createRef()), h(this, "focusManager", (0, _.createFocusManager)({
+            super(...e), A(this, "tabBarRef", l.createRef()), A(this, "focusManager", (0, _.createFocusManager)({
                 getFocusableElements: () => {
                     let e = this.tabBarRef.current;
                     return null != e ? Array.from(e.querySelectorAll('[role="tab"][aria-disabled="false"]')) : []
@@ -196,7 +196,7 @@ function(e, t, n) {
                     var e;
                     return null === (e = this.tabBarRef.current) || void 0 === e ? void 0 : e.ownerDocument.activeElement
                 }
-            })), h(this, "renderChildren", e => {
+            })), A(this, "renderChildren", e => {
                 let {
                     selectedItem: t,
                     onItemSelect: n,
@@ -209,7 +209,7 @@ function(e, t, n) {
                     itemType: i,
                     look: r
                 }) : null
-            }), h(this, "getNodeForKeydownEvent", async e => {
+            }), A(this, "getNodeForKeydownEvent", async e => {
                 let {
                     orientation: t = "horizontal"
                 } = this.props, n = "vertical" === t ? f.KeyboardKeys.ARROW_UP : f.KeyboardKeys.ARROW_LEFT, i = "vertical" === t ? f.KeyboardKeys.ARROW_DOWN : f.KeyboardKeys.ARROW_RIGHT;
@@ -224,13 +224,13 @@ function(e, t, n) {
                         return this.focusManager.getLastFocusableElement()
                 }
                 return null
-            }), h(this, "handleKeyDown", async e => {
+            }), A(this, "handleKeyDown", async e => {
                 let t = await this.getNodeForKeydownEvent(e);
                 null != t && (e.preventDefault(), t.focus())
             })
         }
     }
-    h(R, "Header", function(e) {
+    A(R, "Header", function(e) {
         let {
             className: t,
             onClick: n,
@@ -256,7 +256,7 @@ function(e, t, n) {
                 children: i
             })
         })
-    }), h(R, "Item", p), h(R, "Separator", function(e) {
+    }), A(R, "Item", p), A(R, "Separator", function(e) {
         let {
             style: t
         } = e;
@@ -264,5 +264,5 @@ function(e, t, n) {
             className: S.separator,
             style: t
         })
-    }), h(R, "Panel", m)
+    }), A(R, "Panel", m)
 }

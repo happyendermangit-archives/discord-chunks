@@ -11,10 +11,10 @@ function(e, t, n) {
             return N
         },
         mergeEmbedsOnURL: function() {
-            return A
+            return h
         },
         sanitizeEmbed: function() {
-            return h
+            return A
         }
     }), n("47120"), n("789020"), n("653041");
     var i = n("392711"),
@@ -58,7 +58,7 @@ function(e, t, n) {
         }
     }
 
-    function h(e, t, n) {
+    function A(e, t, n) {
         let i = {
             id: r().uniqueId("embed_"),
             url: n.url,
@@ -116,7 +116,7 @@ function(e, t, n) {
         return i
     }
 
-    function A(e) {
+    function h(e) {
         let t = new Map,
             n = [];
         return e.forEach(e => {

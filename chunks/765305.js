@@ -29,7 +29,7 @@ function(e, t, n) {
             return m
         },
         GUILD_EVENT_MAX_NAME_LENGTH: function() {
-            return A
+            return h
         },
         GuildScheduledEventEntityTypes: function() {
             return r
@@ -63,8 +63,8 @@ function(e, t, n) {
         }
     }), n("47120");
     var i, r, s, a, o, l, u, d, _, c, E, I, T, f, S = n("70956"),
-        h = n("981631");
-    let A = 100,
+        A = n("981631");
+    let h = 100,
         m = 1e3,
         N = 100,
         O = "Guild Events Modal",
@@ -73,8 +73,8 @@ function(e, t, n) {
     let R = new Set([3, 4]);
     (_ = r || (r = {}))[_.NONE = 0] = "NONE", _[_.STAGE_INSTANCE = 1] = "STAGE_INSTANCE", _[_.VOICE = 2] = "VOICE", _[_.EXTERNAL = 3] = "EXTERNAL", (c = s || (s = {}))[c.EVENT_START = 1] = "EVENT_START", (E = a || (a = {}))[E.PUBLIC = 1] = "PUBLIC", E[E.GUILD_ONLY = 2] = "GUILD_ONLY";
     let C = {
-            1: h.ChannelTypes.GUILD_STAGE_VOICE,
-            2: h.ChannelTypes.GUILD_VOICE
+            1: A.ChannelTypes.GUILD_STAGE_VOICE,
+            2: A.ChannelTypes.GUILD_VOICE
         },
         g = new Set([3]),
         L = new Set([1, 2]);

@@ -21,8 +21,8 @@ function(e, t, n) {
         T = n("594174"),
         f = n("267642"),
         S = n("797717"),
-        h = n("672752"),
-        A = n("665786"),
+        A = n("672752"),
+        h = n("665786"),
         m = n("639740"),
         N = n("433564"),
         O = n("697725"),
@@ -54,7 +54,7 @@ function(e, t, n) {
             backgroundLightColor: o.default.unsafe_rawColors.GREEN_360.css
         },
         [d.BadgeCategory.PARTNERED]: {
-            IconComponent: A.default,
+            IconComponent: h.default,
             foregroundDarkColor: o.default.unsafe_rawColors.WHITE_400.css,
             foregroundLightColor: o.default.unsafe_rawColors.WHITE_400.css,
             backgroundDarkColor: o.default.unsafe_rawColors.BRAND_500.css,
@@ -66,7 +66,7 @@ function(e, t, n) {
             foregroundLightColor: o.default.unsafe_rawColors.WHITE_400.css,
             backgroundDarkColor: o.default.unsafe_rawColors.WHITE_400.css,
             backgroundLightColor: o.default.unsafe_rawColors.PRIMARY_500.css,
-            premiumBackgroundColor: h.GradientCssUrls.PREMIUM_GUILD_BADGE_V2_BACKGROUND,
+            premiumBackgroundColor: A.GradientCssUrls.PREMIUM_GUILD_BADGE_V2_BACKGROUND,
             premiumForegroundColor: o.default.unsafe_rawColors.WHITE_400.css
         },
         [d.BadgeCategory.DISCOVERABLE]: {
@@ -75,7 +75,7 @@ function(e, t, n) {
             foregroundLightColor: o.default.unsafe_rawColors.WHITE_400.css,
             backgroundDarkColor: o.default.unsafe_rawColors.WHITE_400.css,
             backgroundLightColor: o.default.unsafe_rawColors.PRIMARY_500.css,
-            premiumBackgroundColor: h.GradientCssUrls.PREMIUM_GUILD_BADGE_V2_BACKGROUND,
+            premiumBackgroundColor: A.GradientCssUrls.PREMIUM_GUILD_BADGE_V2_BACKGROUND,
             premiumForegroundColor: o.default.unsafe_rawColors.WHITE_400.css
         },
         [d.BadgeCategory.NONE]: {}
@@ -180,8 +180,8 @@ function(e, t, n) {
                 tooltipColor: s = u.Tooltip.Colors.BRAND,
                 tooltipPosition: o,
                 className: f,
-                flowerStarClassName: h,
-                iconClassName: A,
+                flowerStarClassName: A,
+                iconClassName: h,
                 badgeStrokeColor: m,
                 badgeColor: N,
                 size: O = 16,
@@ -233,12 +233,12 @@ function(e, t, n) {
                 children: (0, i.jsx)(S.default, {
                     ...e,
                     className: f,
-                    flowerStarClassName: h,
+                    flowerStarClassName: A,
                     color: null != n ? n : N,
                     stroke: m,
                     size: O,
                     children: (0, i.jsx)(U, {
-                        className: A,
+                        className: h,
                         color: t
                     })
                 })

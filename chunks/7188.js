@@ -20,8 +20,8 @@ function(e, t, n) {
         T = n("806519"),
         f = n("74538"),
         S = n("618158"),
-        h = n("871499"),
-        A = n("981631"),
+        A = n("871499"),
+        h = n("981631"),
         m = n("474936"),
         N = n("689938"),
         O = n("126161");
@@ -56,7 +56,7 @@ function(e, t, n) {
             stream: n,
             ...E
         } = e, I = (0, s.useStateFromStores)([c.default], () => f.default.isPremium(c.default.getCurrentUser(), m.PremiumTypes.TIER_1)), T = (0, s.useStateFromStores)([_.default], () => _.default.getChannel(null == n ? void 0 : n.channelId)), O = r.useMemo(() => null != n ? [n] : [], [n]), C = (0, o.useIsBroadcastingInChannel)(null == T ? void 0 : T.id), g = r.useCallback(() => {
-            null != T && (0, d.default)(T.getGuildId(), T.id, A.AnalyticsSections.STREAM_SETTINGS)
+            null != T && (0, d.default)(T.getGuildId(), T.id, h.AnalyticsSections.STREAM_SETTINGS)
         }, [T]);
         if (null == n || null == T) return null;
         let L = p;
@@ -80,7 +80,7 @@ function(e, t, n) {
                 })
             },
             animation: a.Popout.Animation.FADE,
-            children: e => (0, i.jsx)(h.default, {
+            children: e => (0, i.jsx)(A.default, {
                 ...e,
                 label: N.default.Messages.STREAMER_SETTINGS_TITLE,
                 iconComponent: L,

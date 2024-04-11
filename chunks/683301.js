@@ -15,8 +15,8 @@ function(e, t, n) {
         T = n("117496"),
         f = n("314897"),
         S = n("230307"),
-        h = n("981631"),
-        A = n("731455");
+        A = n("981631"),
+        h = n("731455");
     (s = i || (i = {})).UNSET = "unset", s.FETCHING = "fetching", s.FAILED = "failed", s.SUCCEEDED = "succeeded";
     let m = {
             guilds: [],
@@ -27,17 +27,17 @@ function(e, t, n) {
             isFirstLoad: !0
         },
         N = {
-            [h.GuildDiscoverySections.FEATURED]: {
+            [A.GuildDiscoverySections.FEATURED]: {
                 ...m
             },
-            [h.GuildDiscoverySections.GAMES_YOU_PLAY]: {
+            [A.GuildDiscoverySections.GAMES_YOU_PLAY]: {
                 ...m
             },
-            [h.GuildDiscoverySections.MISC]: {
+            [A.GuildDiscoverySections.MISC]: {
                 ...m
             },
-            [h.GuildDiscoverySections.SEARCH]: {},
-            [A.DISCOVERY_ALL_CATEGORIES_ID]: {
+            [A.GuildDiscoverySections.SEARCH]: {},
+            [h.DISCOVERY_ALL_CATEGORIES_ID]: {
                 ...m
             }
         },
@@ -45,8 +45,8 @@ function(e, t, n) {
         p = !1,
         R = "unset",
         C = null,
-        g = A.DISCOVERY_ALL_CATEGORIES_ID,
-        L = A.DISCOVERY_ALL_CATEGORIES_ID,
+        g = h.DISCOVERY_ALL_CATEGORIES_ID,
+        L = h.DISCOVERY_ALL_CATEGORIES_ID,
         D = null,
         v = [],
         M = (0, T.makeAnalyticsID)(),
@@ -101,7 +101,7 @@ function(e, t, n) {
         }
         getTopCategoryCounts(e) {
             var t;
-            return null === (t = N[h.GuildDiscoverySections.SEARCH][e]) || void 0 === t ? void 0 : t.resultCounts
+            return null === (t = N[A.GuildDiscoverySections.SEARCH][e]) || void 0 === t ? void 0 : t.resultCounts
         }
         getSeenGuildIds() {
             return v
@@ -305,19 +305,19 @@ function(e, t, n) {
             if (null != n) {
                 var s;
                 let e = null !== (s = n["categories.id"]) && void 0 !== s ? s : {};
-                delete e[A.DEFAULT_DISCOVERY_CATEGORY_ID], r = Object.entries(e).map(e => {
+                delete e[h.DEFAULT_DISCOVERY_CATEGORY_ID], r = Object.entries(e).map(e => {
                     let [t, n] = e;
                     return [parseInt(t, 10), n]
                 }).sort((e, t) => t[1] - e[1]).slice(0, 7)
             }
             N = {
                 ...N,
-                [h.GuildDiscoverySections.SEARCH]: {
-                    ...N[h.GuildDiscoverySections.SEARCH],
+                [A.GuildDiscoverySections.SEARCH]: {
+                    ...N[A.GuildDiscoverySections.SEARCH],
                     [i]: {
-                        ...N[h.GuildDiscoverySections.SEARCH][i],
+                        ...N[A.GuildDiscoverySections.SEARCH][i],
                         resultCounts: [
-                            [A.DISCOVERY_ALL_CATEGORIES_ID, Math.min(A.MAX_ALGOLIA_PAGINATOR_RESULTS, t)], ...r
+                            [h.DISCOVERY_ALL_CATEGORIES_ID, Math.min(h.MAX_ALGOLIA_PAGINATOR_RESULTS, t)], ...r
                         ]
                     }
                 }
@@ -329,10 +329,10 @@ function(e, t, n) {
             } = e;
             N = {
                 ...N,
-                [h.GuildDiscoverySections.SEARCH]: {
-                    ...N[h.GuildDiscoverySections.SEARCH],
+                [A.GuildDiscoverySections.SEARCH]: {
+                    ...N[A.GuildDiscoverySections.SEARCH],
                     [t]: {
-                        ...N[h.GuildDiscoverySections.SEARCH][t],
+                        ...N[A.GuildDiscoverySections.SEARCH][t],
                         resultCounts: null
                     }
                 }
@@ -351,7 +351,7 @@ function(e, t, n) {
             let {
                 forClanDiscovery: t
             } = e;
-            t && (g = A.CategoryId.Clans, L = A.CategoryId.Clans, y = !0)
+            t && (g = h.CategoryId.Clans, L = h.CategoryId.Clans, y = !0)
         }
     })
 }

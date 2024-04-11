@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         sendReactionToActivity: function() {
-            return A
+            return h
         },
         sendReplyToActivity: function() {
             return m
@@ -23,8 +23,8 @@ function(e, t, n) {
         T = n("55000"),
         f = n("314091"),
         S = n("981631"),
-        h = n("689938");
-    let A = async e => {
+        A = n("689938");
+    let h = async e => {
         let {
             reaction: t,
             altText: n,
@@ -59,7 +59,7 @@ function(e, t, n) {
         } = (0, f.getProfileInfo)(s, "black"), o = "dark" === a, l = (0, f.getActivityPlatform)(i), {
             assets: u,
             application_id: d
-        } = i, _ = (0, c.getAssetImage)(d, null == u ? void 0 : u.large_image, 64), I = null == r ? void 0 : r.getIconURL(64), T = null != l ? o ? l.icon.darkPNG : l.icon.lightPNG : i.type === S.ActivityTypes.PLAYING ? o ? n("414575") : n("807612") : null, h = i.type === S.ActivityTypes.HANG_STATUS && (null === (t = i.emoji) || void 0 === t ? void 0 : t.id) != null ? (0, E.getEmojiUrl)({
+        } = i, _ = (0, c.getAssetImage)(d, null == u ? void 0 : u.large_image, 64), I = null == r ? void 0 : r.getIconURL(64), T = null != l ? o ? l.icon.darkPNG : l.icon.lightPNG : i.type === S.ActivityTypes.PLAYING ? o ? n("414575") : n("807612") : null, A = i.type === S.ActivityTypes.HANG_STATUS && (null === (t = i.emoji) || void 0 === t ? void 0 : t.id) != null ? (0, E.getEmojiUrl)({
             id: i.emoji.id,
             name: i.emoji.name,
             animated: !1
@@ -74,8 +74,8 @@ function(e, t, n) {
             ...null != I && {
                 ApplicationImage: I
             },
-            ...null != h && {
-                HangStatus: h
+            ...null != A && {
+                HangStatus: A
             }
         }
     }, O = async e => {
@@ -240,7 +240,7 @@ function(e, t, n) {
             size: 14,
             family: ["gg sans", "sans-serif"],
             weight: 700
-        }), e.drawText(h.default.Messages.STATUS_LEAD_IN_JUST, {
+        }), e.drawText(A.default.Messages.STATUS_LEAD_IN_JUST, {
             x: l,
             y: T.fontPadding + 1 * T.lineHeight,
             w: (null === (s = e.assetMap) || void 0 === s ? void 0 : s.has(T.AssetTypes.Platform)) ? T.titleMaxWidthPlatform : T.titleMaxWidthNoPlatform

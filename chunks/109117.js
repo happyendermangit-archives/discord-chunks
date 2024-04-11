@@ -36,7 +36,7 @@ function(e, t, n) {
                 }
             }(r.Storage.get(_, {}), n),
             l = function(e, t, n) {
-                var r, s, a, o, l, u, d, _, c, E, I, T, f, S, h, A, m, N, O;
+                var r, s, a, o, l, u, d, _, c, E, I, T, f, S, A, h, m, N, O;
 
                 function p(e) {
                     return (null == n ? void 0 : n.storedInformation) != null && 1 === n.storedInformation[e]
@@ -76,8 +76,8 @@ function(e, t, n) {
                 let g = null == n ? void 0 : n.minidumpInformation;
                 return {
                     electron_crash_reporter_did_crash: e,
-                    minidump_exception_type: null !== (h = null == g ? void 0 : g.exceptionString) && void 0 !== h ? h : null,
-                    minidump_exception_module_name: null !== (A = null == g ? void 0 : g.exceptionModuleName) && void 0 !== A ? A : null,
+                    minidump_exception_type: null !== (A = null == g ? void 0 : g.exceptionString) && void 0 !== A ? A : null,
+                    minidump_exception_module_name: null !== (h = null == g ? void 0 : g.exceptionModuleName) && void 0 !== h ? h : null,
                     minidump_relative_crash_address: null !== (m = null == g ? void 0 : g.relativeCrashAddress) && void 0 !== m ? m : null,
                     minidump_exception_module_version: null !== (N = null == g ? void 0 : g.exceptionModuleVersion) && void 0 !== N ? N : null,
                     minidump_exception_module_code_id: null !== (O = null == g ? void 0 : g.exceptionModuleCodeId) && void 0 !== O ? O : null,

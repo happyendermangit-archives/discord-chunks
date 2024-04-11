@@ -10,8 +10,8 @@ function(e, t, n) {
         T = n.n(I),
         f = n("442837"),
         S = n("433517"),
-        h = n("570140"),
-        A = n("278147"),
+        A = n("570140"),
+        h = n("278147"),
         m = n("869735"),
         N = n("703656"),
         O = n("131704"),
@@ -90,7 +90,7 @@ function(e, t, n) {
         }
         let n = null != L.default.getGuild(t) ? t : null,
             i = !1;
-        o === e && (o = null, i = !0), !(0, A.isInMainTabsExperiment)() && (U[k(n)] === e && (U[k(n)] = V(k(n)), v.default.getGuildId() === n && (0, N.replaceWith)(M.Routes.CHANNEL(t, U[k(n)])), i = !0), null != n && G[n] === e && (delete G[n], i = !0)), i && B()
+        o === e && (o = null, i = !0), !(0, h.isInMainTabsExperiment)() && (U[k(n)] === e && (U[k(n)] = V(k(n)), v.default.getGuildId() === n && (0, N.replaceWith)(M.Routes.CHANNEL(t, U[k(n)])), i = !0), null != n && G[n] === e && (delete G[n], i = !0)), i && B()
     }
 
     function j(e) {
@@ -152,7 +152,7 @@ function(e, t, n) {
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : _[c] = E, t.default = new W(h.default, {
+    }) : _[c] = E, t.default = new W(A.default, {
         CONNECTION_OPEN: function(e) {
             i = e.sessionId, null != o && null == C.default.getChannel(o) && (o = null), H() && B()
         },
@@ -168,7 +168,7 @@ function(e, t, n) {
                 channelId: n
             } = e;
             if (void 0 === t) return !1;
-            null == n && (!(0, A.isInMainTabsExperiment)() || (0, m.shouldHandleNewPanelsRoute)(t)) && (n = V(t)), null != s && n !== s && (r = s), s = n, F(t, n), U[k(t)] !== n && (b[k(t)] = U[k(t)], U[k(t)] = s), B()
+            null == n && (!(0, h.isInMainTabsExperiment)() || (0, m.shouldHandleNewPanelsRoute)(t)) && (n = V(t)), null != s && n !== s && (r = s), s = n, F(t, n), U[k(t)] !== n && (b[k(t)] = U[k(t)], U[k(t)] = s), B()
         },
         CHANNEL_CREATE: function(e) {
             let {

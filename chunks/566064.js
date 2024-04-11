@@ -34,8 +34,8 @@ function(e, t, n) {
             maintainFocusPosition: T = !0,
             enabled: f = !0,
             onDispatch: S,
-            autoFocusElement: h = !0,
-            useVirtualFocus: A = !1
+            autoFocusElement: A = !0,
+            useVirtualFocus: h = !1
         } = e, m = i.useCallback((e, t) => {
             let n = (0, r.default)(e, t);
             return null != S && S(e, n, t), n
@@ -66,8 +66,8 @@ function(e, t, n) {
                     dispatch: T,
                     maintainFocusPosition: f,
                     enabled: S,
-                    autoFocusElement: h,
-                    useVirtualFocus: A
+                    autoFocusElement: A,
+                    useVirtualFocus: h
                 } = e, m = i.useRef();
                 m.current = S;
                 let N = u(l(t, d, _)),
@@ -86,9 +86,9 @@ function(e, t, n) {
                     }));
                 i.useEffect(() => () => D.clean(), [D]);
                 let v = i.useCallback(e => {
-                        if (!m.current || !h) return !1;
+                        if (!m.current || !A) return !1;
                         e.focus()
-                    }, [h]),
+                    }, [A]),
                     M = i.useCallback((e, n) => {
                         let i = l(t, e, n);
                         (null != E ? E(e, n, i) : Promise.resolve()).then(() => {
@@ -133,7 +133,7 @@ function(e, t, n) {
                 }, [d, _]);
                 let G = i.useCallback(e => {
                         if (!m.current) return;
-                        if (!A && o.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
+                        if (!h && o.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
                             e.preventDefault(), e.stopPropagation(), y();
                             return
                         }
@@ -172,12 +172,12 @@ function(e, t, n) {
                                 return;
                             case s.ActionType.SELECT_FOCUSED_ITEM:
                                 var i;
-                                if (h && (null == (i = N) ? void 0 : i.ownerDocument.activeElement) !== i || e.repeat) return;
+                                if (A && (null == (i = N) ? void 0 : i.ownerDocument.activeElement) !== i || e.repeat) return;
                                 e.preventDefault(), e.stopPropagation(), T({
                                     type: t
                                 }), null != c ? c(d, _, e) : null != N && N.click()
                         }
-                    }, [y, T, h, N, c, d, _]),
+                    }, [y, T, A, N, c, d, _]),
                     w = i.useCallback(e => e.currentTarget !== e.target ? (!O && (p(!0), L(!0)), !1) : O ? (y(!1), !1) : void(f && null != N ? M(d, _) : y(!0)), [O, f, N, y, M, d, _]),
                     k = i.useCallback(e => {
                         if (e.target !== e.currentTarget) {
@@ -228,8 +228,8 @@ function(e, t, n) {
                 getNewFocusPosition: I,
                 maintainFocusPosition: T,
                 enabled: f,
-                autoFocusElement: h,
-                useVirtualFocus: A
+                autoFocusElement: A,
+                useVirtualFocus: h
             })
     }
 }

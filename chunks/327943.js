@@ -30,7 +30,7 @@ function(e, t, n) {
         S = () => {
             f = !l.default.canUsePremiumAppIcons(a.default.getCurrentUser())
         },
-        h = e => {
+        A = e => {
             if (I.client.desktop = e, !f) {
                 var t;
                 o.default.track(d.AnalyticEvents.APP_ICON_UPDATED, {
@@ -41,7 +41,7 @@ function(e, t, n) {
             }
         };
 
-    function A() {
+    function h() {
         f && (I.client = {
             desktop: u.FreemiumAppIconIds.DEFAULT,
             coachmarkImpressions: 2
@@ -70,17 +70,17 @@ function(e, t, n) {
             let {
                 id: t
             } = e;
-            null != t && h(t)
+            null != t && A(t)
         },
         APP_ICON_EDITOR_OPEN: function() {
             T = !0
         },
-        APP_ICON_EDITOR_CLOSE: A,
+        APP_ICON_EDITOR_CLOSE: h,
         APP_ICON_TRACK_IMPRESSION: function(e) {
             let {
                 markAsDismissed: t
             } = e;
-            I.client.coachmarkImpressions += 1, I.client.coachmarkImpressions >= 2 && (null == t || t(_.ContentDismissActionType.UNKNOWN), A())
+            I.client.coachmarkImpressions += 1, I.client.coachmarkImpressions >= 2 && (null == t || t(_.ContentDismissActionType.UNKNOWN), h())
         }
     })
 }

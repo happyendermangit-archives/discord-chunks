@@ -32,8 +32,8 @@ function(e, t, n) {
         T = n("926491"),
         f = n("131704"),
         S = n("430824"),
-        h = n("306680"),
-        A = n("411198");
+        A = n("306680"),
+        h = n("411198");
     let m = new E.default("ReadyPayloadUtils"),
         N = {},
         O = null,
@@ -99,11 +99,11 @@ function(e, t, n) {
             let t = Object.values(S.default.getGuilds()),
                 n = I.default.getGuilds(),
                 i = T.default.getRawStickersByGuild(),
-                r = h.default.getReadStatesByChannel();
+                r = A.default.getReadStatesByChannel();
             for (let o of t) {
                 var s, a, l;
                 o.id in e.guildVersions && e.guildChannels.has(o.id) && (N[o.id] = {
-                    properties: A.toServer(o),
+                    properties: h.toServer(o),
                     roles: S.default.getRoles(o.id),
                     emojis: null !== (a = null === (s = n[o.id]) || void 0 === s ? void 0 : s.rawEmojis) && void 0 !== a ? a : null,
                     stickers: null !== (l = i.get(o.id)) && void 0 !== l ? l : null,
@@ -136,7 +136,7 @@ function(e, t, n) {
         var n, i, r;
         let s = S.default.getGuild(e.id),
             a = P(e, null == s ? void 0 : {
-                properties: A.toServer(s),
+                properties: h.toServer(s),
                 roles: S.default.getRoles(s.id),
                 emojis: null !== (i = null === (n = I.default.getGuilds()[s.id]) || void 0 === n ? void 0 : n.rawEmojis) && void 0 !== i ? i : null,
                 stickers: null !== (r = T.default.getRawStickersByGuild().get(s.id)) && void 0 !== r ? r : null,
@@ -207,7 +207,7 @@ function(e, t, n) {
             members: e.members,
             premium_subscription_count: e.premium_subscription_count,
             properties: null !== (u = e.properties) && void 0 !== u ? u : null,
-            roles: A.filterRoleDeletes(e.id, E.roles, e.partial_updates.roles, e.partial_updates.deleted_role_ids),
+            roles: h.filterRoleDeletes(e.id, E.roles, e.partial_updates.roles, e.partial_updates.deleted_role_ids),
             stage_instances: e.stage_instances,
             stickers: null == E.stickers ? null : b(E.stickers, e.partial_updates.stickers, e.partial_updates.deleted_sticker_ids),
             stickerUpdates: {
@@ -269,7 +269,7 @@ function(e, t, n) {
             premium_subscription_count: e.premium_subscription_count,
             presences: e.presences,
             properties: null !== (d = e.properties) && void 0 !== d ? d : t.properties,
-            roles: A.filterRoleDeletes(e.id, t.roles, e.partial_updates.roles, e.partial_updates.deleted_role_ids),
+            roles: h.filterRoleDeletes(e.id, t.roles, e.partial_updates.roles, e.partial_updates.deleted_role_ids),
             stage_instances: e.stage_instances,
             stickers: null == t.stickers ? null : b(t.stickers, e.partial_updates.stickers, e.partial_updates.deleted_sticker_ids),
             stickerUpdates: {

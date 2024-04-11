@@ -27,7 +27,7 @@ function(e, t, n) {
         f = n("616922");
     let S = 30 * l.default.Millis.SECOND;
 
-    function h(e) {
+    function A(e) {
         let {
             currentUserTrackId: t,
             syncingWithUser: n,
@@ -49,12 +49,12 @@ function(e, t, n) {
         }
     }
 
-    function A(e, t) {
+    function h(e, t) {
         return (0, r.useStateFromStoresObject)([d.default, o.default], () => (0, E.default)(d.default, o.default, t, e), [e, t])
     }
 
     function m(e, t, n) {
-        let r = A(e, t),
+        let r = h(e, t),
             {
                 notPlayable: s,
                 isCurrentUser: a,
@@ -64,7 +64,7 @@ function(e, t, n) {
                 loading: l,
                 startLoading: u,
                 clearLoading: d
-            } = h(r),
+            } = A(r),
             E = i.useCallback(() => {
                 u(), (0, T.default)(r, f.SpotifyActionTypes.USER_ACTIVITY_PLAY, n).catch(d)
             }, [r, n, u, d]);
@@ -80,7 +80,7 @@ function(e, t, n) {
 
     function N(e, t, n, r) {
         let s = null != r ? r : u.default.getName(t),
-            a = A(e, t),
+            a = h(e, t),
             {
                 syncingWithUser: o,
                 syncingWithParty: l,
@@ -90,7 +90,7 @@ function(e, t, n) {
                 loading: E,
                 startLoading: T,
                 clearLoading: S
-            } = h(a),
+            } = A(a),
             m = i.useCallback(() => {
                 T(), (0, I.default)(a, f.SpotifyActionTypes.USER_ACTIVITY_SYNC, n).catch(S)
             }, [a, n, T, S]);
@@ -105,7 +105,7 @@ function(e, t, n) {
     }
 
     function O(e, t, n) {
-        let r = A(e, t),
+        let r = h(e, t),
             {
                 notPlayable: s,
                 syncingWithUser: a,
@@ -116,7 +116,7 @@ function(e, t, n) {
                 loading: u,
                 startLoading: d,
                 clearLoading: E
-            } = h(r),
+            } = A(r),
             T = i.useCallback(() => {
                 d(), (0, I.default)(r, f.SpotifyActionTypes.EMBED_SYNC, n).catch(E)
             }, [r, n, d, E]);

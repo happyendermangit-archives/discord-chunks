@@ -20,8 +20,8 @@ function(e, t, n) {
         T = n("251625"),
         f = n("985375"),
         S = n("132748"),
-        h = n("353903"),
-        A = n("215016"),
+        A = n("353903"),
+        h = n("215016"),
         m = n("981631"),
         N = n("689938"),
         O = n("423426");
@@ -34,7 +34,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    let R = (e, t) => (0, i.jsx)(h.CategoryColumn, {
+    let R = (e, t) => (0, i.jsx)(A.CategoryColumn, {
         columns: e
     }, t);
     class C extends r.PureComponent {
@@ -130,7 +130,7 @@ function(e, t, n) {
                 } = this.props, {
                     focusedId: d
                 } = this.state;
-                return (0, i.jsx)(A.GIFPickerSearchItem, {
+                return (0, i.jsx)(h.GIFPickerSearchItem, {
                     format: s.format,
                     color: u.default.unsafe_rawColors.PRIMARY_800.css,
                     src: s.src,
@@ -147,7 +147,7 @@ function(e, t, n) {
                 let {
                     trendingCategories: r
                 } = this.props;
-                return 0 === r.length ? (0, i.jsx)(h.ResultsLoader, {
+                return 0 === r.length ? (0, i.jsx)(A.ResultsLoader, {
                     columns: e,
                     width: t,
                     renderColumn: R
@@ -180,7 +180,7 @@ function(e, t, n) {
     function g(e) {
         let t = (0, o.useStateFromStores)([E.default], () => E.default.getTrendingCategories()),
             n = (0, f.useFavoriteGIFs)(),
-            r = (0, A.useElementPools)();
+            r = (0, h.useElementPools)();
         return (0, i.jsx)(C, {
             ...e,
             ...r,

@@ -8,13 +8,13 @@ function(e, t, n) {
             return S
         },
         fetchNewMemberActions: function() {
-            return h
+            return A
         },
         getBlockForChannelDeletion: function() {
             return O
         },
         selectHomeResourceChannel: function() {
-            return A
+            return h
         },
         selectNewMemberActionChannel: function() {
             return m
@@ -56,7 +56,7 @@ function(e, t, n) {
                 guildId: e
             })
         }
-    }, h = async e => {
+    }, A = async e => {
         if (!o.default.isFullServerPreview(e)) {
             r.default.dispatch({
                 type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_START",
@@ -80,7 +80,7 @@ function(e, t, n) {
                 })
             }
         }
-    }, A = function(e, t) {
+    }, h = function(e, t) {
         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
         if (r.default.dispatch({
                 type: "SELECT_HOME_RESOURCE_CHANNEL",

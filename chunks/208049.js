@@ -66,22 +66,22 @@ function(e, t, n) {
                 type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS_FAILURE"
             }), new l.default(e)
         }
-    }, h = e => new Promise(t => {
+    }, A = e => new Promise(t => {
         let n = () => {
             a.default.unsubscribe(e, n), setTimeout(t, 0)
         };
         a.default.subscribe(e, n)
-    }), A = e => {
+    }), h = e => {
         if (!d.default.shouldFetchDefaultSounds()) return Promise.resolve();
         a.default.dispatch({
             type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS"
         });
-        let t = h("SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS");
+        let t = A("SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS");
         return S(e), t
     }, m = () => {
         let e = (0, c.getGuildIdsToFetchSoundsFor)();
         if (0 === e.length) return Promise.resolve();
-        let t = h("SOUNDBOARD_SOUNDS_RECEIVED");
+        let t = A("SOUNDBOARD_SOUNDS_RECEIVED");
         return a.default.dispatch({
             type: "GUILD_SOUNDBOARD_FETCH"
         }), a.default.dispatch({
@@ -90,7 +90,7 @@ function(e, t, n) {
         }), t
     }, N = () => __OVERLAY__ ? (a.default.dispatch({
         type: "OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST"
-    }), Promise.all([])) : Promise.all([A(), m()]);
+    }), Promise.all([])) : Promise.all([h(), m()]);
     async function O(e) {
         let {
             guildId: t,

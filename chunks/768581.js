@@ -12,7 +12,7 @@ function(e, t, n) {
             return g
         },
         getEmojiURL: function() {
-            return A
+            return h
         },
         getGuildMemberAvatarURL: function() {
             return R
@@ -58,7 +58,7 @@ function(e, t, n) {
     let f = i.canUseWebp(),
         S = (0, d.isAndroid)();
 
-    function h(e) {
+    function A(e) {
         let t, {
             endpoint: n,
             path: i,
@@ -78,7 +78,7 @@ function(e, t, n) {
         return null != o && (I.size = (0, l.getBestMediaProxySize)(o * (0, l.getDevicePixelRatio)())), null != d && (I.keep_aspect_ratio = d), t + "?".concat(a.stringify(I))
     }
 
-    function A(e) {
+    function h(e) {
         let {
             id: t,
             animated: n,
@@ -106,7 +106,7 @@ function(e, t, n) {
             if (e) return e;
             if (null == n && "0000" === r) return T[0]
         }
-        return h({
+        return A({
             endpoint: c.Endpoints.AVATAR,
             path: "avatars",
             id: t,
@@ -255,7 +255,7 @@ function(e, t, n) {
             size: i,
             canAnimate: r = !1
         } = e;
-        return h({
+        return A({
             endpoint: c.Endpoints.GUILD_ICON,
             path: "icons",
             id: t,
@@ -272,7 +272,7 @@ function(e, t, n) {
             size: i = c.AVATAR_SIZE,
             canAnimate: r = !1
         } = e;
-        return h({
+        return A({
             endpoint: c.Endpoints.GUILD_TEMPLATE_ICON,
             path: "guild-templates",
             id: t,
@@ -295,7 +295,7 @@ function(e, t, n) {
             let e = N(r, !1, i);
             if (null != e) return e
         }
-        if (null != n) return h({
+        if (null != n) return A({
             endpoint: c.Endpoints.APPLICATION_ICON,
             path: "app-icons",
             id: t,
@@ -318,7 +318,7 @@ function(e, t, n) {
             keepAspectRatio: r = !1,
             format: s
         } = e;
-        return h({
+        return A({
             endpoint: c.Endpoints.APPLICATION_ICON,
             path: "app-icons",
             id: t,
@@ -338,7 +338,7 @@ function(e, t, n) {
             size: r,
             canAnimate: s = !0
         } = e;
-        return h({
+        return A({
             endpoint: (e, r, s) => c.Endpoints.VIDEO_FILTER_ASSET_STORAGE(t, n, i, s),
             path: "video-filter-assets/".concat(t),
             id: n,
@@ -361,7 +361,7 @@ function(e, t, n) {
             icon: a,
             size: l
         })) && void 0 !== t ? t : i.DEFAULT_CHANNEL_ICON;
-        return null !== (n = h({
+        return null !== (n = A({
             endpoint: c.Endpoints.CHANNEL_ICON,
             path: "channel-icons",
             id: s,
@@ -429,7 +429,7 @@ function(e, t, n) {
                 channelId: t,
                 icon: n
             } = e;
-            return null == n ? null : h({
+            return null == n ? null : A({
                 endpoint: c.Endpoints.GUILD_RESOURCE_CHANNELS_ICON,
                 path: "resource-channels",
                 id: t,
@@ -443,7 +443,7 @@ function(e, t, n) {
                 channelId: t,
                 icon: n
             } = e;
-            return null == n ? null : h({
+            return null == n ? null : A({
                 endpoint: c.Endpoints.GUILD_NEW_MEMBER_ACTIONS_ICON,
                 path: "new-member-actions",
                 id: t,
@@ -454,7 +454,7 @@ function(e, t, n) {
         },
         getGuildTemplateIconURL: U,
         getChannelIconURL: k,
-        getEmojiURL: A,
+        getEmojiURL: h,
         getApplicationIconURL: b,
         getGameAssetURL: G,
         getVideoFilterAssetURL: w,

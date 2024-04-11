@@ -16,8 +16,8 @@ function(e, t, n) {
         T = n("555932"),
         f = n("808189"),
         S = n("362948"),
-        h = n("245004"),
-        A = n("383881"),
+        A = n("245004"),
+        h = n("383881"),
         m = n("981631"),
         N = n("689938"),
         O = n("983973");
@@ -90,10 +90,10 @@ function(e, t, n) {
                         }), (0, i.jsx)(f.default, {
                             guild: n
                         })]
-                    }), (0, i.jsx)(A.HeaderWave, {})]
+                    }), (0, i.jsx)(h.HeaderWave, {})]
                 }), (0, i.jsx)("div", {
                     className: O.middleBodyContentWrapper,
-                    children: (0, i.jsx)(h.default, {})
+                    children: (0, i.jsx)(A.default, {})
                 }), (0, i.jsxs)("div", {
                     className: O.lowerBody,
                     children: [(0, i.jsxs)("div", {
@@ -102,7 +102,7 @@ function(e, t, n) {
                             className: O.tierComparisonTable,
                             guild: n
                         }), (0, i.jsx)(_.default, {}), (0, i.jsx)(E.default, {})]
-                    }), (0, i.jsx)(A.BodyWave, {}), (0, i.jsx)("div", {
+                    }), (0, i.jsx)(h.BodyWave, {}), (0, i.jsx)("div", {
                         className: O.lowerBodyBackgroundImage
                     })]
                 }), (0, i.jsx)(a.VisibilitySensor, {

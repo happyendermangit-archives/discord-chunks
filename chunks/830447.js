@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         Menu: function() {
-            return A
+            return h
         },
         MenuSpinner: function() {
             return m
@@ -23,16 +23,16 @@ function(e, t, n) {
         T = n("828214"),
         f = n("898560"),
         S = n("788314"),
-        h = n("989608");
+        A = n("989608");
 
-    function A(e) {
+    function h(e) {
         var t;
         let {
             navId: n,
             variant: s = "flexible",
             hideScroller: o = !1,
             className: c,
-            children: A,
+            children: h,
             onClose: m,
             onSelect: O
         } = e, p = function e(t) {
@@ -105,7 +105,7 @@ function(e, t, n) {
                 }), t;
                 throw Error("Menu API only allows Items and groups of Items as children. Received ".concat(null !== (r = null !== (i = null == n ? void 0 : n.type) && void 0 !== i ? i : n) && void 0 !== r ? r : typeof n, " (").concat(typeof n, ") instead"))
             }, [])
-        }(A), R = function e(t) {
+        }(h), R = function e(t) {
             return t.reduce((t, n) => n.navigable ? (t.push({
                 key: n.key,
                 children: "item" === n.type && null != n.children ? e(n.children) : void 0
@@ -128,12 +128,12 @@ function(e, t, n) {
         return (0, i.jsx)(f.OnMenuSelectContext.Provider, {
             value: O,
             children: (0, i.jsx)("div", {
-                className: a()(h.menu, h[s], c),
+                className: a()(A.menu, A[s], c),
                 ...L.getContainerProps(),
                 ref: D,
                 "aria-label": e["aria-label"],
                 children: (0, i.jsxs)(v, {
-                    className: h.scroller,
+                    className: A.scroller,
                     children: [0 === p.length && (0, i.jsx)(S.Item, {
                         disabled: !0,
                         label: () => (0, i.jsx)(N, {}),
@@ -279,7 +279,7 @@ function(e, t, n) {
 
     function m() {
         return (0, i.jsx)("div", {
-            className: a()(h.menu, h.loader, h.flexible),
+            className: a()(A.menu, A.loader, A.flexible),
             children: (0, i.jsx)(c.Spinner, {})
         })
     }

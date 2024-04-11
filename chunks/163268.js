@@ -66,8 +66,8 @@ function(e, t, n) {
         T = n("182274"),
         f = n("695346"),
         S = n("592125"),
-        h = n("699516"),
-        A = n("594174"),
+        A = n("699516"),
+        h = n("594174"),
         m = n("626135"),
         N = n("630388"),
         O = n("948561"),
@@ -103,7 +103,7 @@ function(e, t, n) {
                 isFriend: i = !1
             } = e;
             if (null != t && t !== c.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION) return t;
-            let r = A.default.getCurrentUser();
+            let r = h.default.getCurrentUser();
             return (null == r ? void 0 : r.nsfwAllowed) === !1 ? U({
                 isDm: n,
                 isFriend: i
@@ -155,7 +155,7 @@ function(e, t, n) {
     function w(e) {
         var t;
         if (!(0, p.isEligibleForExplicitMediaRedaction)()) return !1;
-        let n = A.default.getCurrentUser();
+        let n = h.default.getCurrentUser();
         if (null == n || (null === (t = e.author) || void 0 === t ? void 0 : t.id) === n.id) return !1;
         let {
             explicitContentGuilds: i,
@@ -163,7 +163,7 @@ function(e, t, n) {
             explicitContentNonFriendDm: s
         } = b(), a = S.default.getChannel(e.channel_id);
         if (null == a) return !1;
-        if (a.isDM() || a.isGroupDM()) return null != e.author && h.default.getFriendIDs().includes(e.author.id) ? G(r) : G(s);
+        if (a.isDM() || a.isGroupDM()) return null != e.author && A.default.getFriendIDs().includes(e.author.id) ? G(r) : G(s);
         return G(i)
     }
     let k = e => {

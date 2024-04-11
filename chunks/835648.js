@@ -20,8 +20,8 @@ function(e, t, n) {
         T = n("68972"),
         f = n("887208"),
         S = n("697426"),
-        h = n("689938"),
-        A = n("89358");
+        A = n("689938"),
+        h = n("89358");
     let m = [8, 8, 8, 8];
 
     function N(e) {
@@ -36,11 +36,11 @@ function(e, t, n) {
             ...s,
             ...o,
             onClick: r,
-            className: a()(A.categoryIcon, {
-                [A.selected]: n
+            className: a()(h.categoryIcon, {
+                [h.selected]: n
             }),
             children: (0, i.jsx)(t, {
-                className: A.categoryIconIcon
+                className: h.categoryIconIcon
             })
         })
     }
@@ -56,32 +56,32 @@ function(e, t, n) {
             text: function(e) {
                 switch (e.categoryInfo.type) {
                     case S.SoundboardSoundGridSectionType.FAVORITES:
-                        return h.default.Messages.FAVORITES;
+                        return A.default.Messages.FAVORITES;
                     case S.SoundboardSoundGridSectionType.RECENTLY_HEARD:
-                        return h.default.Messages.RECENTLY_HEARD;
+                        return A.default.Messages.RECENTLY_HEARD;
                     case S.SoundboardSoundGridSectionType.FREQUENTLY_USED:
-                        return h.default.Messages.FREQUENTLY_USED;
+                        return A.default.Messages.FREQUENTLY_USED;
                     case S.SoundboardSoundGridSectionType.GUILD:
                         return (0, i.jsx)(E.GuildTooltipText, {
                             guild: e.categoryInfo.guild,
                             includeActivity: !1
                         });
                     case S.SoundboardSoundGridSectionType.DEFAULTS:
-                        return h.default.Messages.SOUNDBOARD_SOUND_SECTION_DEFAULTS
+                        return A.default.Messages.SOUNDBOARD_SOUND_SECTION_DEFAULTS
                 }
             }(t),
             "aria-label": function(e) {
                 switch (e.categoryInfo.type) {
                     case S.SoundboardSoundGridSectionType.FAVORITES:
-                        return h.default.Messages.FAVORITES;
+                        return A.default.Messages.FAVORITES;
                     case S.SoundboardSoundGridSectionType.RECENTLY_HEARD:
-                        return h.default.Messages.RECENTLY_HEARD;
+                        return A.default.Messages.RECENTLY_HEARD;
                     case S.SoundboardSoundGridSectionType.FREQUENTLY_USED:
-                        return h.default.Messages.FREQUENTLY_USED;
+                        return A.default.Messages.FREQUENTLY_USED;
                     case S.SoundboardSoundGridSectionType.GUILD:
                         return e.categoryInfo.guild.name;
                     case S.SoundboardSoundGridSectionType.DEFAULTS:
-                        return h.default.Messages.SOUNDBOARD_SOUND_SECTION_DEFAULTS
+                        return A.default.Messages.SOUNDBOARD_SOUND_SECTION_DEFAULTS
                 }
             }(t),
             position: "right",
@@ -115,7 +115,7 @@ function(e, t, n) {
                         return (0, i.jsx)(u.Clickable, {
                             ...s,
                             ...r,
-                            className: A.category,
+                            className: h.category,
                             onClick: t,
                             children: (0, i.jsx)(d.default, {
                                 guild: e.categoryInfo.guild,
@@ -149,7 +149,7 @@ function(e, t, n) {
             isSelected: r
         }), []);
         return (0, i.jsx)(c.default, {
-            className: A.categoryList,
+            className: h.categoryList,
             categoryListRef: a,
             expressionsListRef: t,
             store: _.SoundboardPickerStore,

@@ -47,10 +47,10 @@ function(e, t, n) {
             return v
         },
         PREMIUM_GUILD_MEMBER_PROFILE: function() {
-            return h
+            return A
         },
         PROFILE_BADGES: function() {
-            return A
+            return h
         },
         PROFILE_PREMIUM_FEATURES: function() {
             return m
@@ -116,8 +116,8 @@ function(e, t, n) {
         T = new d("customCallSounds"),
         f = new d("animatedAvatar"),
         S = new d("customDiscriminator"),
-        h = new d("premiumGuildMemberProfile"),
-        A = new d("profileBadges"),
+        A = new d("premiumGuildMemberProfile"),
+        h = new d("profileBadges"),
         m = new d("profilePremiumFeatures", "custom banner and avatar decoration"),
         N = new d("collectibles"),
         O = new d("appIcons"),
@@ -136,9 +136,9 @@ function(e, t, n) {
         b = new d("increasedVideoUploadQuality"),
         G = new d("uploadLargeFiles"),
         w = Object.freeze({
-            [o.PremiumSubscriptionSKUs.TIER_0]: new a.default(o.PremiumSubscriptionSKUs.TIER_0, [_, c, E, A, y, b, G, O]),
-            [o.PremiumSubscriptionSKUs.TIER_1]: new a.default(o.PremiumSubscriptionSKUs.TIER_1, [_, c, f, S, A, R, g, D, b, G, O]),
-            [o.PremiumSubscriptionSKUs.TIER_2]: new a.default(o.PremiumSubscriptionSKUs.TIER_2, [_, c, E, I, T, f, S, h, A, m, p, R, C, g, L, D, v, M, y, P, U, b, G, O, N])
+            [o.PremiumSubscriptionSKUs.TIER_0]: new a.default(o.PremiumSubscriptionSKUs.TIER_0, [_, c, E, h, y, b, G, O]),
+            [o.PremiumSubscriptionSKUs.TIER_1]: new a.default(o.PremiumSubscriptionSKUs.TIER_1, [_, c, f, S, h, R, g, D, b, G, O]),
+            [o.PremiumSubscriptionSKUs.TIER_2]: new a.default(o.PremiumSubscriptionSKUs.TIER_2, [_, c, E, I, T, f, S, A, h, m, p, R, C, g, L, D, v, M, y, P, U, b, G, O, N])
         });
 
     function k(e, t) {

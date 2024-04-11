@@ -17,8 +17,8 @@ function(e, t, n) {
         T = n("410030"),
         f = n("726542"),
         S = n("740265"),
-        h = n("122810"),
-        A = n("833664"),
+        A = n("122810"),
+        h = n("833664"),
         m = n("503438"),
         N = n("802856"),
         O = n("420660"),
@@ -284,7 +284,7 @@ function(e, t, n) {
                 application: i,
                 activityGuild: r
             } = this.props;
-            return null != e.assets || (0, h.default)(e) || e.type !== B.ActivityTypes.PLAYING || "ActivityFeed" === n || t.bot ? null : null == i && null != r ? (0, a.jsx)("div", {
+            return null != e.assets || (0, A.default)(e) || e.type !== B.ActivityTypes.PLAYING || "ActivityFeed" === n || t.bot ? null : null == i && null != r ? (0, a.jsx)("div", {
                 className: u()(x.gameIcon, x.screenshareIcon)
             }) : (0, a.jsx)(U.default, {
                 className: x.gameIcon,
@@ -303,7 +303,7 @@ function(e, t, n) {
                 type: s
             } = e;
             if (s === B.ActivityTypes.CUSTOM_STATUS) return null;
-            let o = (0, A.default)(e),
+            let o = (0, h.default)(e),
                 l = e.name,
                 u = l;
             return (s === B.ActivityTypes.HANG_STATUS ? u = (0, R.getHangStatusText)(e) : o && null != n ? u = (0, a.jsx)("span", {
@@ -334,7 +334,7 @@ function(e, t, n) {
             }) : null, t = null != r ? () => {
                 (0, g.transitionToGuild)(r.id)
             } : void 0;
-            else if (!(0, A.default)(e)) {
+            else if (!(0, h.default)(e)) {
                 if (o = s = i, (0, m.default)(e) && null != i) s = F.default.Messages.USER_ACTIVITY_LISTENING_ARTISTS.format({
                     artists: o,
                     artistsHook: (t, n) => (0, a.jsx)(w.default, {
@@ -366,11 +366,11 @@ function(e, t, n) {
             let {
                 activityGuild: t
             } = this.props;
-            if (!(0, A.default)(e) || (0, m.default)(e)) return null;
+            if (!(0, h.default)(e) || (0, m.default)(e)) return null;
             let {
                 timestamps: n
             } = e;
-            return null == n ? null : (0, h.default)(e) ? (0, a.jsx)(W, {
+            return null == n ? null : (0, A.default)(e) ? (0, a.jsx)(W, {
                 timestamps: n
             }) : (0, a.jsx)(G.default, {
                 start: n.start,
@@ -404,7 +404,7 @@ function(e, t, n) {
                 party: o,
                 assets: l
             } = e, u = s, d = u;
-            return (!(0, A.default)(e) && (d = u = null == l ? void 0 : l.large_text, (0, m.default)(e) && null != u && (u = F.default.Messages.USER_ACTIVITY_LISTENING_ALBUM.format({
+            return (!(0, h.default)(e) && (d = u = null == l ? void 0 : l.large_text, (0, m.default)(e) && null != u && (u = F.default.Messages.USER_ACTIVITY_LISTENING_ALBUM.format({
                 album: d,
                 albumHook: (t, n) => null != e.sync_id && null != d ? (0, a.jsx)(E.Anchor, {
                     className: x.bodyLink,
@@ -450,9 +450,9 @@ function(e, t, n) {
                 T = this.renderDetails(o),
                 f = this.renderState(o, r),
                 S = this.renderTimePlayed(o),
-                h = null != n ? n() : null,
-                A = this.renderTimeBar(o),
-                m = ![e, I, T, f, S, A, h].some(e => null != e);
+                A = null != n ? n() : null,
+                h = this.renderTimeBar(o),
+                m = ![e, I, T, f, S, h, A].some(e => null != e);
             return (0, a.jsxs)("div", {
                 className: u()(this.getTypeClass("activity"), i),
                 children: [this.renderHeader(m), (0, a.jsxs)("div", {
@@ -461,10 +461,10 @@ function(e, t, n) {
                         className: x.activityDetails,
                         children: [e, this.isStreamerOnTypeActivityFeed() ? null : (0, a.jsxs)(P.default.Child, {
                             className: u()((0, M.getClass)(x, "content", E ? "GameImage" : null != e ? "Images" : "NoImages", t)),
-                            children: [I, T, f, S, l || c ? null : A, _ ? h : null]
+                            children: [I, T, f, S, l || c ? null : h, _ ? A : null]
                         })]
-                    }), d ? h : null]
-                }), l ? A : null, l || c ? h : null, (0, a.jsx)(K, {
+                    }), d ? A : null]
+                }), l ? h : null, l || c ? A : null, (0, a.jsx)(K, {
                     activity: o
                 })]
             })
