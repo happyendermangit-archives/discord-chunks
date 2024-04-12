@@ -7,8 +7,8 @@ function(e, t, a) {
     }), a("47120");
     var d = a("735250"),
         n = a("470079"),
-        c = a("664751"),
-        i = a("266067"),
+        i = a("664751"),
+        c = a("266067"),
         o = a("613828"),
         r = a("990547"),
         f = a("719711"),
@@ -70,7 +70,7 @@ function(e, t, a) {
             name: "ActivateDevice"
         }),
         j = (0, _.makeLazy)({
-            createPromise: () => Promise.all([a.e("49237"), a.e("99387"), a.e("24267"), a.e("23755"), a.e("61613"), a.e("55765"), a.e("63958"), a.e("79504"), a.e("92223"), a.e("58153"), a.e("2047"), a.e("25381"), a.e("11250"), a.e("81539"), a.e("57878"), a.e("70866"), a.e("95393"), a.e("67535"), a.e("90508"), a.e("39285"), a.e("14262"), a.e("7590"), a.e("90687"), a.e("56630"), a.e("87983"), a.e("6380"), a.e("41947"), a.e("3084"), a.e("71697"), a.e("53466"), a.e("30243"), a.e("23404"), a.e("40866"), a.e("38779"), a.e("43643"), a.e("58286"), a.e("37766"), a.e("21597"), a.e("19087"), a.e("28216"), a.e("18101"), a.e("37220"), a.e("75301"), a.e("42225"), a.e("91315"), a.e("80954"), a.e("62856"), a.e("37839"), a.e("90212"), a.e("11256"), a.e("49508"), a.e("80026"), a.e("70205"), a.e("47217"), a.e("64979"), a.e("63731"), a.e("38651"), a.e("47849"), a.e("95468"), a.e("46048")]).then(a.bind(a, "457094")),
+            createPromise: () => Promise.all([a.e("49237"), a.e("99387"), a.e("24267"), a.e("23755"), a.e("61613"), a.e("55765"), a.e("63958"), a.e("79504"), a.e("92223"), a.e("58153"), a.e("2047"), a.e("25381"), a.e("11250"), a.e("81539"), a.e("57878"), a.e("70866"), a.e("95393"), a.e("67535"), a.e("39285"), a.e("14262"), a.e("90687"), a.e("56630"), a.e("87983"), a.e("90508"), a.e("6380"), a.e("7590"), a.e("41947"), a.e("3084"), a.e("71697"), a.e("53466"), a.e("30243"), a.e("23404"), a.e("40866"), a.e("38779"), a.e("43643"), a.e("58286"), a.e("37766"), a.e("21597"), a.e("19087"), a.e("28216"), a.e("18101"), a.e("37220"), a.e("75301"), a.e("42225"), a.e("91315"), a.e("80954"), a.e("62856"), a.e("37839"), a.e("90212"), a.e("11256"), a.e("49508"), a.e("80026"), a.e("70205"), a.e("47217"), a.e("64979"), a.e("63731"), a.e("38651"), a.e("47849"), a.e("95468"), a.e("46048")]).then(a.bind(a, "457094")),
             webpackId: "457094",
             name: "ViewsWithMainInterface",
             memo: !0,
@@ -112,7 +112,7 @@ function(e, t, a) {
             name: "MobileWebHandoffFallback"
         }),
         z = (0, _.makeLazy)({
-            createPromise: () => Promise.all([a.e("49237"), a.e("99387"), a.e("23755"), a.e("61613"), a.e("55765"), a.e("79504"), a.e("92223"), a.e("58153"), a.e("2047"), a.e("25381"), a.e("11250"), a.e("81539"), a.e("57878"), a.e("70866"), a.e("95393"), a.e("67535"), a.e("90508"), a.e("39285"), a.e("14262"), a.e("7590"), a.e("90687"), a.e("56630"), a.e("87983"), a.e("6380"), a.e("41947"), a.e("3084"), a.e("71697"), a.e("53466"), a.e("30243"), a.e("23404"), a.e("40866"), a.e("38779"), a.e("43643"), a.e("58286"), a.e("37766"), a.e("21597"), a.e("28216"), a.e("18101"), a.e("37220"), a.e("75301"), a.e("42225"), a.e("91315"), a.e("80954"), a.e("62856"), a.e("37839"), a.e("70205"), a.e("64979"), a.e("63731"), a.e("35665")]).then(a.bind(a, "290161")),
+            createPromise: () => Promise.all([a.e("49237"), a.e("99387"), a.e("23755"), a.e("61613"), a.e("55765"), a.e("79504"), a.e("92223"), a.e("58153"), a.e("2047"), a.e("25381"), a.e("11250"), a.e("81539"), a.e("57878"), a.e("70866"), a.e("95393"), a.e("67535"), a.e("39285"), a.e("14262"), a.e("90687"), a.e("56630"), a.e("87983"), a.e("90508"), a.e("6380"), a.e("7590"), a.e("41947"), a.e("3084"), a.e("71697"), a.e("53466"), a.e("30243"), a.e("23404"), a.e("40866"), a.e("38779"), a.e("43643"), a.e("58286"), a.e("37766"), a.e("21597"), a.e("28216"), a.e("18101"), a.e("37220"), a.e("75301"), a.e("42225"), a.e("91315"), a.e("80954"), a.e("62856"), a.e("37839"), a.e("70205"), a.e("64979"), a.e("63731"), a.e("35665")]).then(a.bind(a, "290161")),
             webpackId: "290161",
             name: "Overlay"
         }),
@@ -234,16 +234,16 @@ function(e, t, a) {
                     render: () => {
                         var e, t, a;
                         let d = null === (e = w.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
-                            n = (0, c.parse)((null !== (a = window.location.search) && void 0 !== a ? a : "").substr(1)),
-                            i = null === (t = n.referring_location) || void 0 === t ? void 0 : t.toString();
+                            n = (0, i.parse)((null !== (a = window.location.search) && void 0 !== a ? a : "").substr(1)),
+                            c = null === (t = n.referring_location) || void 0 === t ? void 0 : t.toString();
                         return ("iOS" === d || "Android" === d) && w.default.track(N.AnalyticEvents.DOWNLOAD_APP, {
                             platform: d,
                             ptb: !1,
                             released: !0,
                             has_e_mail: "true" === n.has_e_mail,
-                            referring_location: i,
+                            referring_location: c,
                             qr_code: !0
-                        }), window.location.href = (0, v.getMobileDownloadLink)(null != i && "" !== i ? i : "qr_code", d), null
+                        }), window.location.href = (0, v.getMobileDownloadLink)(null != c && "" !== c ? c : "qr_code", d), null
                     }
                 }), (0, d.jsx)(m.default, {
                     path: N.Routes.OPEN_APP_FROM_EMAIL,
@@ -306,7 +306,7 @@ function(e, t, a) {
             let {
                 pathname: e
             } = (0, o.useLocation)();
-            return null != (0, i.matchPath)(e, {
+            return null != (0, c.matchPath)(e, {
                 path: N.Routes.APPLICATION_DIRECTORY
             })
         }();

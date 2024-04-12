@@ -206,8 +206,16 @@ function(e, t, n) {
 
     function e8(e) {
         let t = e7(e.context),
-            n = !eL || t.mute || t.deaf;
-        e.context === eS.MediaEngineContextTypes.DEFAULT ? n = n || eU || eb || eG || !X.default.didHavePermission(eT.NativePermissionTypes.AUDIO) : e.context === eS.MediaEngineContextTypes.STREAM && (n = !0), e.setSelfMute(n), e.setSelfDeaf(t.deaf)
+            i = !eL || t.mute || t.deaf;
+        e.context === eS.MediaEngineContextTypes.DEFAULT ? i = i || eU || eb || eG || !X.default.didHavePermission(eT.NativePermissionTypes.AUDIO) : e.context === eS.MediaEngineContextTypes.STREAM && (i = !0), e.setSelfMute(i), e.setSelfDeaf(t.deaf),
+            function(e) {
+                Promise.resolve().then(n.bind(n, "44744")).then(t => {
+                    let {
+                        default: n
+                    } = t;
+                    n.updateNativeMute(e)
+                })
+            }(e.context)
     }
 
     function e9() {
@@ -1198,6 +1206,15 @@ function(e, t, n) {
             !(i = !r && !i) && (r = !1), n && (eF = !0), ts({
                 mute: i,
                 deaf: r
+            }, t), eR.eachConnection(e8)
+        },
+        AUDIO_SET_SELF_MUTE: function(e) {
+            let {
+                context: t,
+                mute: n
+            } = e;
+            ts({
+                mute: n
             }, t), eR.eachConnection(e8)
         },
         AUDIO_TOGGLE_SELF_DEAF: function(e) {
