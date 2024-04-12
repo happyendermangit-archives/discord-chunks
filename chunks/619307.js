@@ -164,8 +164,8 @@ function(e, t, n) {
             select: w,
             isSelected: k,
             serialize: B,
-            clear: F,
-            hideIcon: V = !1,
+            clear: V,
+            hideIcon: F = !1,
             "aria-label": x,
             "aria-labelledby": H
         } = e, [Y, j] = r.useState(!1), {
@@ -176,14 +176,14 @@ function(e, t, n) {
             Y !== e && !o && (j(e), e ? null == C || C() : null == R || R())
         }, [o, R, C, Y]), Q = r.useCallback(e => {
             Y && !e && X(!1)
-        }, [X, Y]), q = (0, I.useIsVisible)(Q), J = r.useCallback(e => {
+        }, [X, Y]), q = (0, I.useIsVisible)(Q), Z = r.useCallback(e => {
             if (w(e), G) {
                 var t;
                 null === (t = W.current) || void 0 === t || t.focus()
             }
-        }, [w, G]), Z = r.useCallback(e => {
-            e.stopPropagation(), null == F || F()
-        }, [F]), $ = t.filter(e => k(e.value));
+        }, [w, G]), J = r.useCallback(e => {
+            e.stopPropagation(), null == V || V()
+        }, [V]), $ = t.filter(e => k(e.value));
         r.useLayoutEffect(() => {
             if (_) {
                 var e;
@@ -215,7 +215,7 @@ function(e, t, n) {
                     isSelected: k,
                     closePopout: n,
                     buttonHeight: null != z ? z : 0,
-                    onSelect: J,
+                    onSelect: Z,
                     options: t,
                     serialize: B,
                     renderOptionLabel: g,
@@ -269,14 +269,14 @@ function(e, t, n) {
                         children: [A ? (0, i.jsx)(l.Clickable, {
                             role: "button",
                             "aria-disabled": o,
-                            onClick: Z,
+                            onClick: J,
                             "aria-label": N.default.Messages.CLEAR,
                             children: (0, i.jsx)(h.default, {
                                 width: 16,
                                 height: 16,
                                 className: O.clear
                             })
-                        }) : null, V ? null : (0, i.jsx)(E, {
+                        }) : null, F ? null : (0, i.jsx)(E, {
                             width: I,
                             height: I
                         })]

@@ -38,7 +38,7 @@ function(e, t, n) {
             return D
         },
         createAdyenPrepaidPaymentSource: function() {
-            return V
+            return F
         },
         createAdyenVaultablePaymentSource: function() {
             return x
@@ -59,13 +59,13 @@ function(e, t, n) {
             return Y
         },
         createStripePaymentSource: function() {
-            return F
+            return V
         },
         createStripePaymentSourceToken: function() {
             return H
         },
         createSubscription: function() {
-            return J
+            return Z
         },
         deletePaymentSource: function() {
             return O
@@ -110,7 +110,7 @@ function(e, t, n) {
             return eI
         },
         payInvoiceManually: function() {
-            return Z
+            return J
         },
         paymentIntentSucceeded: function() {
             return ei
@@ -629,7 +629,7 @@ function(e, t, n) {
             analyticsLocation: n
         })
     }
-    async function F(e, t, n, i) {
+    async function V(e, t, n, i) {
         if (null == e) throw M("Stripe not loaded");
         let r = await L(t),
             {
@@ -667,7 +667,7 @@ function(e, t, n) {
             analyticsLocation: i
         })
     }
-    async function V(e, t, n) {
+    async function F(e, t, n) {
         let i = await L(e),
             r = {
                 type: m.ADYEN_PAYMENT_SOURCES.get(t)
@@ -915,7 +915,7 @@ function(e, t, n) {
             })
         }
     }
-    async function J(e) {
+    async function Z(e) {
         let {
             items: t,
             paymentSource: n,
@@ -979,7 +979,7 @@ function(e, t, n) {
             return $(t.body, n)
         }
     }
-    async function Z(e, t, n, i) {
+    async function J(e, t, n, i) {
         let r = null;
         if (null != n && m.PREPAID_PAYMENT_SOURCES.has(n.type)) {
             let e = await em(n.type);

@@ -131,11 +131,11 @@ function(e, t, n) {
                 k = l().parserFor(w)(T.whitespaceSanitized, M),
                 B = p.whitespaceSanitized,
                 {
-                    target: F
+                    target: V
                 } = D;
             return {
                 content: k,
-                target: F,
+                target: V,
                 title: B
             }
         }

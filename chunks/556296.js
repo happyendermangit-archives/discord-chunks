@@ -64,16 +64,16 @@ function(e, t, n) {
         null == c().find(P, e => M.action === e.action && e.enabled && e.shortcut.length > 0) && !__OVERLAY__ && !w && b && e && (H(M), w = !0)
     }
 
-    function F() {
+    function V() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         (w || e) && (x(M.id), w = !1)
     }
 
-    function V(e) {
+    function F(e) {
         let {
             showKeybindIndicators: t
         } = e;
-        t ? B() : F(!0)
+        t ? B() : V(!0)
     }
 
     function x(e) {
@@ -99,7 +99,7 @@ function(e, t, n) {
         }
         let r = e.id,
             s = G[n].keyEvents;
-        e.action === R.GlobalKeybindActions.TOGGLE_MUTE && F(), ! function(e, t, n, i) {
+        e.action === R.GlobalKeybindActions.TOGGLE_MUTE && V(), ! function(e, t, n, i) {
             if (m.isPlatformEmbedded) N.default.inputEventRegister(parseInt(e), t, n, i);
             else {
                 x(e);
@@ -324,7 +324,7 @@ function(e, t, n) {
             let {
                 enable: t
             } = e;
-            b = t, t ? (T.default.enable(), c().forEach(P, H), B()) : (T.default.disable(), c().forEach(P, e => x(e.id)), F())
+            b = t, t ? (T.default.enable(), c().forEach(P, H), B()) : (T.default.disable(), c().forEach(P, e => x(e.id)), V())
         },
         KEYBINDS_REGISTER_GLOBAL_KEYBIND_ACTIONS: function(e) {
             let {
@@ -339,7 +339,7 @@ function(e, t, n) {
                 }
             }), b = !0, null == i && (i = S.default.subscribe({
                 location: "KeybindsStore"
-            }, V))
+            }, F))
         }
     })
 }

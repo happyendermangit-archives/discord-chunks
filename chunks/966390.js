@@ -50,20 +50,20 @@ function(e, t, n) {
         null != y && (w.content = null == y ? void 0 : y.content), null != N.default.getPendingReply(c) && (w.type = L.MessageTypes.REPLY, w.message_reference = P.messageReference, w.allowed_mentions = P.allowedMentions, (0, m.deletePendingReply)(c));
         let [k, B] = (0, O.default)(w.content);
         k && (w.content = B, w.flags = (0, C.addFlag)(null !== (t = w.flags) && void 0 !== t ? t : 0, L.MessageFlags.SUPPRESS_NOTIFICATIONS));
-        let F = null !== (n = P.nonce) && void 0 !== n ? n : (0, S.createNonce)(),
-            V = (0, S.default)({
+        let V = null !== (n = P.nonce) && void 0 !== n ? n : (0, S.createNonce)(),
+            F = (0, S.default)({
                 channelId: c,
                 content: w.content,
                 tts: null !== (i = null == y ? void 0 : y.tts) && void 0 !== i && i,
                 type: w.type,
                 messageReference: w.message_reference,
                 flags: w.flags,
-                nonce: F,
+                nonce: V,
                 poll: (0, h.createPollServerDataFromCreateRequest)(P.poll)
             });
-        return (w.nonce = F, b.on("start", e => {
+        return (w.nonce = V, b.on("start", e => {
             _ = (0, f.createMessageRecord)({
-                ...V,
+                ...F,
                 id: e.id
             }), r.default.dispatch({
                 type: "UPLOAD_START",

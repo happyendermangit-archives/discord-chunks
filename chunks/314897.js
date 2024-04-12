@@ -32,8 +32,8 @@ function(e, t, n) {
         w = null,
         k = null,
         B = null,
-        F = null,
         V = null,
+        F = null,
         x = null,
         H = D.LoginStates.NONE,
         Y = D.RegistrationStates.NONE,
@@ -44,8 +44,8 @@ function(e, t, n) {
         X = null,
         Q = !1,
         q = !1,
-        J = "",
-        Z = !1,
+        Z = "",
+        J = !1,
         $ = !1,
         ee = {},
         et = {},
@@ -65,8 +65,8 @@ function(e, t, n) {
 
     function eo() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        if (F = T.Storage.get(P), null != ei) return ei;
-        let t = null != F ? F : _.getToken();
+        if (V = T.Storage.get(P), null != ei) return ei;
+        let t = null != V ? V : _.getToken();
         !(!(0, N.isValidFingerprintRoute)() || !e && null != t || g.default.isHandoffAvailable()) && el({
             withGuildExperiments: !0
         })
@@ -76,7 +76,7 @@ function(e, t, n) {
         let {
             withGuildExperiments: t
         } = e, n = {}, i = p.default.getSuperPropertiesBase64();
-        null != i && (n["X-Super-Properties"] = i), null != F && (n["X-Fingerprint"] = F), ei = I.HTTP.get({
+        null != i && (n["X-Super-Properties"] = i), null != V && (n["X-Fingerprint"] = V), ei = I.HTTP.get({
             url: D.Endpoints.EXPERIMENTS,
             query: {
                 with_guild_experiments: t
@@ -110,7 +110,7 @@ function(e, t, n) {
     }
 
     function eu() {
-        V = F, F = null, T.Storage.remove(P)
+        F = V, V = null, T.Storage.remove(P)
     }
 
     function ed(e, t) {
@@ -131,7 +131,7 @@ function(e, t, n) {
         ea("handleLogout called."), e_(), eu(), !(null == e ? void 0 : e.isSwitchingAccount) && eo(), E.default.PersistedStore.clearAll({
             omit: ["InstallationManagerStore", "AgeGateStore", "NativePermissionsStore", "MultiAccountStore", "DraftStore", "OverlayStoreV2", "StreamerModeStore", "LoginRequiredActionStore"],
             type: (null == e ? void 0 : e.isSwitchingAccount) ? "user-data-only" : "all"
-        }), L.default.clearAll(), h.clear(), C.default.clearUser(), T.Storage.remove(b), G = null, H = (null == e ? void 0 : e.isSwitchingAccount) ? D.LoginStates.LOGGING_IN : D.LoginStates.NONE, Y = D.RegistrationStates.NONE, K = "", J = "", X = null, z = !1, Z = !1, $ = !1, ee = {}, et = {}
+        }), L.default.clearAll(), h.clear(), C.default.clearUser(), T.Storage.remove(b), G = null, H = (null == e ? void 0 : e.isSwitchingAccount) ? D.LoginStates.LOGGING_IN : D.LoginStates.NONE, Y = D.RegistrationStates.NONE, K = "", Z = "", X = null, z = !1, J = !1, $ = !1, ee = {}, et = {}
     }
     class eI extends(s = E.default.Store) {
         initialize() {
@@ -144,7 +144,7 @@ function(e, t, n) {
             return er
         }
         didVerifyFail() {
-            return Z
+            return J
         }
         getVerifyErrors() {
             return ee
@@ -174,7 +174,7 @@ function(e, t, n) {
             return (0, R.isAuthenticated)()
         }
         getFingerprint() {
-            return F
+            return V
         }
         getAnalyticsToken() {
             return x
@@ -221,7 +221,7 @@ function(e, t, n) {
             return W.includes(S.AuthenticatorType.WEBAUTHN)
         }
         getMaskedPhone() {
-            return J
+            return Z
         }
         getCredentials() {
             if (null == i) throw Error("no credentials");
@@ -291,13 +291,13 @@ function(e, t, n) {
             null != t && (B = t)
         },
         LOGIN: function(e) {
-            et = {}, H = D.LoginStates.LOGGING_IN, J = "", r = null, null != e.login && (er = e.login)
+            et = {}, H = D.LoginStates.LOGGING_IN, Z = "", r = null, null != e.login && (er = e.login)
         },
         LOGIN_SUCCESS: function(e) {
             let {
                 token: t
             } = e;
-            H = D.LoginStates.NONE, ed(t), eu(), K = "", z = !1, X = null, J = ""
+            H = D.LoginStates.NONE, ed(t), eu(), K = "", z = !1, X = null, Z = ""
         },
         LOGIN_FAILURE: function(e) {
             let {
@@ -319,7 +319,7 @@ function(e, t, n) {
                 backup: r,
                 totp: s
             } = e;
-            null != t && (K = t, z = n, J = "", X = null != i ? i : null, q = r, Q = s), et = {}, H = D.LoginStates.MFA_STEP
+            null != t && (K = t, z = n, Z = "", X = null != i ? i : null, q = r, Q = s), et = {}, H = D.LoginStates.MFA_STEP
         },
         LOGIN_MFA: function() {
             H = D.LoginStates.LOGGING_IN_MFA
@@ -339,7 +339,7 @@ function(e, t, n) {
             let {
                 phone: t
             } = e;
-            H = D.LoginStates.MFA_SMS_STEP, J = t
+            H = D.LoginStates.MFA_SMS_STEP, Z = t
         },
         LOGIN_MFA_SMS_FAILURE: function(e) {
             let {
@@ -389,11 +389,11 @@ function(e, t, n) {
         LOGOUT: eE,
         FINGERPRINT: function(e) {
             let t = e.fingerprint;
-            null == F ? null != t ? (p.default.track(D.AnalyticEvents.USER_FINGERPRINT_CHANGED, {
-                old_fingerprint: null != V ? (0, c.extractId)(V) : null,
+            null == V ? null != t ? (p.default.track(D.AnalyticEvents.USER_FINGERPRINT_CHANGED, {
+                old_fingerprint: null != F ? (0, c.extractId)(F) : null,
                 new_fingerprint: (0, c.extractId)(t)
-            }), F = t, V = t, T.Storage.set(P, F)) : eo() : null != t && F !== t && p.default.track(D.AnalyticEvents.EXTERNAL_FINGERPRINT_DROPPED, {
-                fingerprint: (0, c.extractId)(F),
+            }), V = t, F = t, T.Storage.set(P, V)) : eo() : null != t && V !== t && p.default.track(D.AnalyticEvents.EXTERNAL_FINGERPRINT_DROPPED, {
+                fingerprint: (0, c.extractId)(V),
                 dropped_fingerprint: (0, c.extractId)(t)
             })
         },
@@ -435,10 +435,10 @@ function(e, t, n) {
             let {
                 errors: t
             } = e;
-            Z = !0, $ = !1, ee = null != t ? t : {}
+            J = !0, $ = !1, ee = null != t ? t : {}
         },
         VERIFY_SUCCESS: function(e) {
-            $ = !0, Z = !1, ee = {}, en = e.verifyingUserId
+            $ = !0, J = !1, ee = {}, en = e.verifyingUserId
         },
         START_SESSION: function() {
             if (0 === Object.keys(et).length) return !1;

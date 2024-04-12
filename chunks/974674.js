@@ -439,8 +439,8 @@ function(e, t, n) {
         }), [P, S, g, l, c]), {
             avatarCutoutX: k,
             avatarCutoutY: B,
-            avatarCutoutWidth: F,
-            avatarCutoutHeight: V,
+            avatarCutoutWidth: V,
+            avatarCutoutHeight: F,
             avatarCutoutRadius: x,
             fill: H,
             ...Y
@@ -449,7 +449,7 @@ function(e, t, n) {
             config: h,
             from: G,
             to: w
-        }), j = (0, I.getAvatarSize)(S), W = (0, I.getAvatarSpecs)(S), K = W.status * I.TYPING_WIDTH_RATIO, z = W.status * I.MOBILE_HEIGHT_RATIO, X = null != g ? (W.status * I.TYPING_WIDTH_RATIO - W.status) / 2 : 0, Q = W.size - W.status - X - W.offset, q = W.size - z - W.offset, J = W.size + Math.ceil(X);
+        }), j = (0, I.getAvatarSize)(S), W = (0, I.getAvatarSpecs)(S), K = W.status * I.TYPING_WIDTH_RATIO, z = W.status * I.MOBILE_HEIGHT_RATIO, X = null != g ? (W.status * I.TYPING_WIDTH_RATIO - W.status) / 2 : 0, Q = W.size - W.status - X - W.offset, q = W.size - z - W.offset, Z = W.size + Math.ceil(X);
         return (0, i.jsx)(R, {
             ...e,
             ariaLabel: y,
@@ -457,9 +457,9 @@ function(e, t, n) {
             typingOffset: X,
             specs: W,
             children: (0, i.jsxs)("svg", {
-                width: J,
-                height: J,
-                viewBox: "0 0 ".concat(J, " ").concat(J),
+                width: Z,
+                height: Z,
+                viewBox: "0 0 ".concat(Z, " ").concat(Z),
                 className: a()(A.mask, A.svg),
                 "aria-hidden": !0,
                 children: [(0, i.jsxs)("mask", {
@@ -475,8 +475,8 @@ function(e, t, n) {
                         color: "black",
                         x: k,
                         y: B,
-                        width: F,
-                        height: V,
+                        width: V,
+                        height: F,
                         rx: x,
                         ry: x
                     })]

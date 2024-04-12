@@ -39,7 +39,7 @@ function(e, t, n) {
         let {
             channel: t,
             isLoading: n
-        } = e, [s, D] = r.useState(!1), w = (0, o.useStateFromStores)([p.default], () => p.default.getSelfEmbeddedActivityForChannel(t.id)), k = (0, o.useStateFromStores)([p.default], () => p.default.getActivityPanelMode()), B = (0, E.useGetOrFetchApplication)(null == w ? void 0 : w.applicationId), F = null == w ? void 0 : w.instanceId, V = (0, o.useStateFromStores)([m.default], () => m.default.getChannelId() === t.id), {
+        } = e, [s, D] = r.useState(!1), w = (0, o.useStateFromStores)([p.default], () => p.default.getSelfEmbeddedActivityForChannel(t.id)), k = (0, o.useStateFromStores)([p.default], () => p.default.getActivityPanelMode()), B = (0, E.useGetOrFetchApplication)(null == w ? void 0 : w.applicationId), V = null == w ? void 0 : w.instanceId, F = (0, o.useStateFromStores)([m.default], () => m.default.getChannelId() === t.id), {
             dockedRect: x,
             isHidden: H
         } = (0, o.useStateFromStoresObject)([h.default], () => {
@@ -56,7 +56,7 @@ function(e, t, n) {
             activityParticipant: null != w ? I.default.getParticipant(t.id, w.applicationId) : null,
             selectedParticipant: I.default.getSelectedParticipant(t.id),
             participantsOpen: I.default.getParticipantsOpen(t.id)
-        })), z = V || null != Y, X = (0, C.default)(t.id), Q = X && (null == W ? void 0 : W.type) !== P.ParticipantTypes.ACTIVITY, q = !X && k === M.ActivityPanelModes.PIP, J = (!z || z && (Q || q) && null == x) && !H, Z = J && null != h.default.pipVideoWindow && null != h.default.pipActivityWindow;
+        })), z = F || null != Y, X = (0, C.default)(t.id), Q = X && (null == W ? void 0 : W.type) !== P.ParticipantTypes.ACTIVITY, q = !X && k === M.ActivityPanelModes.PIP, Z = (!z || z && (Q || q) && null == x) && !H, J = Z && null != h.default.pipVideoWindow && null != h.default.pipActivityWindow;
 
         function $() {
             var e;
@@ -71,18 +71,18 @@ function(e, t, n) {
         }
         r.useEffect(() => {
             if ((null == w ? void 0 : w.applicationId) != null) {
-                let e = J ? v.ActivityLayoutMode.PIP : v.ActivityLayoutMode.FOCUSED;
+                let e = Z ? v.ActivityLayoutMode.PIP : v.ActivityLayoutMode.FOCUSED;
                 u.default.dispatch({
                     type: "ACTIVITY_LAYOUT_MODE_UPDATE",
                     layoutMode: e,
                     applicationId: w.applicationId
                 })
             }
-        }, [null == w ? void 0 : w.applicationId, J]);
-        if (null == w || null == F || null == j && (0, C.default)(t.id) || null == B) return null;
+        }, [null == w ? void 0 : w.applicationId, Z]);
+        if (null == w || null == V || null == j && (0, C.default)(t.id) || null == B) return null;
         let et = Array.from(w.userIds).map(e => N.default.getUser(e)).filter(e => null != e),
             en = {
-                instance_id: F,
+                instance_id: V,
                 channel_id: t.id
             };
         return null != t.guild_id && "" !== t.guild_id && (en.guild_id = t.guild_id), (0, i.jsx)(A.default, {
@@ -96,16 +96,16 @@ function(e, t, n) {
                 } = e;
                 return (0, i.jsxs)(S.default, {
                     className: a()(U.root, {
-                        [U.pipMode]: J,
-                        [G.elevationHigh]: J,
+                        [U.pipMode]: Z,
+                        [G.elevationHigh]: Z,
                         [b.idle]: T && !(null === (r = w.config) || void 0 === r ? void 0 : r.useInteractivePIP),
-                        [U.pipModeShort]: J && !s,
-                        [U.pipModeTall]: J && s,
+                        [U.pipModeShort]: Z && !s,
+                        [U.pipModeTall]: Z && s,
                         [U.hidden]: H,
-                        [U.multiPIPMode]: Z
+                        [U.multiPIPMode]: J
                     }),
-                    noBorder: !J,
-                    children: [(u = f, d = A, _ = T, c = q, E = et, J && null != w && ((null == j ? void 0 : j.type) === P.ParticipantTypes.ACTIVITY || c) ? (null === (I = w.config) || void 0 === I ? void 0 : I.useInteractivePIP) ? (0, i.jsx)(L.InteractivePIPHeader, {
+                    noBorder: !Z,
+                    children: [(u = f, d = A, _ = T, c = q, E = et, Z && null != w && ((null == j ? void 0 : j.type) === P.ParticipantTypes.ACTIVITY || c) ? (null === (I = w.config) || void 0 === I ? void 0 : I.useInteractivePIP) ? (0, i.jsx)(L.InteractivePIPHeader, {
                         onJumpToChannel: $,
                         applicationId: w.applicationId,
                         channel: t,
@@ -148,8 +148,8 @@ function(e, t, n) {
                         })]
                     }) : null), n ? (0, i.jsx)(l.Spinner, {
                         className: a()(U.iframe, {
-                            [U.pipModeShort]: J && !s,
-                            [U.pipModeTall]: J && s
+                            [U.pipModeShort]: Z && !s,
+                            [U.pipModeTall]: Z && s
                         })
                     }) : (0, i.jsx)(g.EmbedIFrameWithLoadingBackground, {
                         allowPopups: (0, R.allowPopups)(B),
@@ -157,12 +157,12 @@ function(e, t, n) {
                         url: w.url,
                         queryParams: en,
                         className: a()(U.iframe, {
-                            [U.pipModeShort]: J && !s,
-                            [U.pipModeTall]: J && s,
-                            [U.pipNonInteractive]: J && !(null === (o = w.config) || void 0 === o ? void 0 : o.useInteractivePIP)
+                            [U.pipModeShort]: Z && !s,
+                            [U.pipModeTall]: Z && s,
+                            [U.pipNonInteractive]: Z && !(null === (o = w.config) || void 0 === o ? void 0 : o.useInteractivePIP)
                         }),
-                        shouldRefocus: !J && V
-                    }), !J && (0, i.jsx)(L.TileOverlay, {
+                        shouldRefocus: !Z && F
+                    }), !Z && (0, i.jsx)(L.TileOverlay, {
                         participantsOpen: K,
                         showToggleParticipants: !1,
                         channelId: t.id

@@ -111,7 +111,7 @@ function(e, t, n) {
             isBurstReaction: G,
             rowPosition: w,
             inNitroLockedSection: k
-        } = e, [B, F] = r.useState(""), V = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), x = (0, o.useStateFromStores)([_.default], () => _.default.getDisambiguatedEmojiContext(I), [I]), H = r.useRef(null), {
+        } = e, [B, V] = r.useState(""), F = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), x = (0, o.useStateFromStores)([_.default], () => _.default.getDisambiguatedEmojiContext(I), [I]), H = r.useRef(null), {
             emoji: Y,
             size: j,
             isDisabled: W,
@@ -164,10 +164,10 @@ function(e, t, n) {
                 onMouseEnter: t,
                 onMouseLeave: n,
                 onClick: e => {
-                    if (null != H.current && null != w && null != b && !e.shiftKey && null != Y.name && G && !V && P) {
+                    if (null != H.current && null != w && null != b && !e.shiftKey && null != Y.name && G && !F && P) {
                         let e = null == Y.id ? E.default.convertNameToSurrogate(Y.name) : Y.name,
                             t = H.current.getBoundingClientRect();
-                        t.x = w.x + (K + 1) * j, F(p(K, c)), (0, f.addReactionPickerAnimation)(b, e, Y.id, t)
+                        t.x = w.x + (K + 1) * j, V(p(K, c)), (0, f.addReactionPickerAnimation)(b, e, Y.id, t)
                     }
                     z(e)
                 },

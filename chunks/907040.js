@@ -37,8 +37,8 @@ function(e, t, n) {
         w = n("111361"),
         k = n("624138"),
         B = n("543241"),
-        F = n("199257"),
-        V = n("636411"),
+        V = n("199257"),
+        F = n("636411"),
         x = n("380331"),
         H = n("170762"),
         Y = n("22363"),
@@ -49,8 +49,8 @@ function(e, t, n) {
         X = n("212263"),
         Q = n("149203"),
         q = n("981631"),
-        J = n("921944"),
-        Z = n("185923"),
+        Z = n("921944"),
+        J = n("185923"),
         $ = n("776464");
     let ee = (0, k.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_HORIZONTAL),
         et = (0, k.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
@@ -209,24 +209,24 @@ function(e, t, n) {
             onPickerOpen: e7
         }));
         let {
-            location: eF
+            location: eV
         } = (0, f.useAnalyticsContext)(), {
-            page: eV,
+            page: eF,
             section: ex,
             object: eH,
             openPopoutType: eY
         } = eT, ej = r.useMemo(() => ({
-            ...eF,
+            ...eV,
             section: null != ex ? ex : q.AnalyticsSections.EMOJI_PICKER_POPOUT
-        }), [eF, ex]), {
+        }), [eV, ex]), {
             analyticsLocations: eW
         } = (0, A.default)(S.default.EMOJI_PICKER), {
             diversitySurrogate: eK
         } = (0, d.useStateFromStoresObject)([m.default], () => ({
             diversitySurrogate: m.default.diversitySurrogate
-        })), ez = (0, B.useEmojiSearchResults)(eM, u, l), eX = null == ez ? 0 : ez.locked.length + ez.unlocked.length, eQ = P.EmojiPickerCollapsedSections.useSetting(), eq = r.useMemo(() => new Set(eQ), [eQ]), eJ = r.useCallback(e => {
+        })), ez = (0, B.useEmojiSearchResults)(eM, u, l), eX = null == ez ? 0 : ez.locked.length + ez.unlocked.length, eQ = P.EmojiPickerCollapsedSections.useSetting(), eq = r.useMemo(() => new Set(eQ), [eQ]), eZ = r.useCallback(e => {
             P.EmojiPickerCollapsedSections.updateSetting(Array.from(e))
-        }, []), eZ = (0, g.useExpressionPickerGridWidth)({
+        }, []), eJ = (0, g.useExpressionPickerGridWidth)({
             gridWrapperRef: ey,
             containerWidth: ed,
             listPaddingLeft: et,
@@ -237,7 +237,7 @@ function(e, t, n) {
             emojiGrid: e1,
             columnCounts: e2
         } = (0, j.useEmojiGrid)({
-            gridWidth: eZ,
+            gridWidth: eJ,
             channel: u,
             includeCreateEmojiButton: k,
             pickerIntention: l,
@@ -247,7 +247,7 @@ function(e, t, n) {
             emojiSpriteSize: C
         }), {
             newlyAddedEmojis: e3
-        } = (0, F.default)(eb, l), {
+        } = (0, V.default)(eb, l), {
             trackOnPickerOpen: e4
         } = (0, B.useTrackEmojiPickerOpened)({
             intention: l,
@@ -279,8 +279,8 @@ function(e, t, n) {
                         location: {
                             ...ej,
                             object: null != eH ? eH : q.AnalyticsObjects.EMOJI,
-                            ...null != eV && {
-                                page: eV
+                            ...null != eF && {
+                                page: eF
                             }
                         },
                         pickerIntention: l,
@@ -341,7 +341,7 @@ function(e, t, n) {
             ev.current = eM
         }, [eM, ej, eX, ez, l]);
         let ti = null != eS ? eS : D ? "div" : E.Dialog,
-            tr = null != eZ;
+            tr = null != eJ;
         (null == eL ? void 0 : eL.type) === j.EmojiUpsellType.PREMIUM ? o = (0, i.jsx)(X.default, {
             onLearnMore: e5,
             emojiDescriptor: eL.emojiDescriptor,
@@ -353,7 +353,7 @@ function(e, t, n) {
             onClose: () => eD(null),
             guildId: eL.guildId,
             emojiId: eL.emojiId
-        }) : eG && !eB && (o = (0, i.jsx)(V.default, {
+        }) : eG && !eB && (o = (0, i.jsx)(F.default, {
             onDismiss: () => ew(!1)
         }));
         let ts = (0, i.jsx)(Y.default, {
@@ -374,7 +374,7 @@ function(e, t, n) {
                 renderHeader: em
             }),
             ta = [];
-        l === Z.EmojiIntention.REACTION && ta.push(_.DismissibleContent.SUPER_REACTIONS_NITRO_MARKETING), !m.default.hasFavoriteEmojis(eb) && ta.push(_.DismissibleContent.EMOJI_PICKER_FAVORITE_EMOJIS_TIP);
+        l === J.EmojiIntention.REACTION && ta.push(_.DismissibleContent.SUPER_REACTIONS_NITRO_MARKETING), !m.default.hasFavoriteEmojis(eb) && ta.push(_.DismissibleContent.EMOJI_PICKER_FAVORITE_EMOJIS_TIP);
         let to = (0, i.jsx)(T.default, {
             ...ej,
             children: (0, i.jsxs)(ti, {
@@ -402,7 +402,7 @@ function(e, t, n) {
                                     markAsDismissed: n
                                 } = e;
                                 if (t === _.DismissibleContent.EMOJI_PICKER_FAVORITE_EMOJIS_TIP) return (0, i.jsx)(H.default, {
-                                    markAsDismissed: () => n(J.ContentDismissActionType.UNKNOWN)
+                                    markAsDismissed: () => n(Z.ContentDismissActionType.UNKNOWN)
                                 })
                             }
                         }), eA ? null : (0, i.jsx)("div", {
@@ -417,7 +417,7 @@ function(e, t, n) {
                                 emojiSize: C,
                                 getEmojiItemProps: e8,
                                 getEmojiRowProps: e9,
-                                gridWidth: eZ,
+                                gridWidth: eJ,
                                 isUsingKeyboardNavigation: tn,
                                 onEmojiSelect: (e, t) => {
                                     e6(e, {
@@ -428,7 +428,7 @@ function(e, t, n) {
                                 rowCount: e1.length,
                                 rowCountBySection: e$,
                                 sectionDescriptors: e0,
-                                setCollapsedSections: eJ,
+                                setCollapsedSections: eZ,
                                 channelGuildId: eb,
                                 messageId: eh,
                                 isBurstReaction: eG,

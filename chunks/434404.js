@@ -18,9 +18,10 @@ function(e, t, n) {
         S = n("573261"),
         A = n("999382"),
         h = n("981631"),
-        m = n("689938");
-    let N = new o.default("GuildSettingsActionCreators"),
-        O = {
+        m = n("308083"),
+        N = n("689938");
+    let O = new o.default("GuildSettingsActionCreators"),
+        p = {
             init(e, t, n, i) {
                 s.default.dispatch({
                     type: "GUILD_SETTINGS_INIT",
@@ -32,7 +33,7 @@ function(e, t, n) {
             },
             async open(e, t, i, r) {
                 var s;
-                await Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("24267"), n.e("23755"), n.e("61613"), n.e("79504"), n.e("58153"), n.e("25381"), n.e("33053"), n.e("49146"), n.e("75475"), n.e("90508"), n.e("85093"), n.e("85552"), n.e("56630"), n.e("58227"), n.e("43502"), n.e("3084"), n.e("71697"), n.e("40866"), n.e("43643"), n.e("66177"), n.e("13545"), n.e("75301"), n.e("62856"), n.e("20443")]).then(n.bind(n, "994763")), (null === (s = T.default.getGuild(e)) || void 0 === s ? void 0 : s.hasFeature(h.GuildFeatures.COMMUNITY)) && (t === h.GuildSettingsSections.GUILD_AUTOMOD && (t = h.GuildSettingsSections.SAFETY, r = h.GuildSettingsSubsections.SAFETY_AUTOMOD), t === h.GuildSettingsSections.MEMBER_VERIFICATION && (t = h.GuildSettingsSections.SAFETY, r = h.GuildSettingsSubsections.SAFETY_DM_AND_SPAM_PROTECTION)), O.init(e, t, i, r), (0, a.pushLayer)(h.Layers.GUILD_SETTINGS)
+                await Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("24267"), n.e("23755"), n.e("61613"), n.e("58153"), n.e("25381"), n.e("79504"), n.e("33053"), n.e("49146"), n.e("56630"), n.e("75475"), n.e("90508"), n.e("85093"), n.e("85552"), n.e("3084"), n.e("74456"), n.e("58227"), n.e("43502"), n.e("75181"), n.e("65840"), n.e("43643"), n.e("66177"), n.e("75301"), n.e("65892"), n.e("62856"), n.e("20443")]).then(n.bind(n, "994763")), (null === (s = T.default.getGuild(e)) || void 0 === s ? void 0 : s.hasFeature(h.GuildFeatures.COMMUNITY)) && (t === h.GuildSettingsSections.GUILD_AUTOMOD && (t = h.GuildSettingsSections.SAFETY, r = h.GuildSettingsSubsections.SAFETY_AUTOMOD), t === h.GuildSettingsSections.MEMBER_VERIFICATION && (t = h.GuildSettingsSections.SAFETY, r = h.GuildSettingsSubsections.SAFETY_DM_AND_SPAM_PROTECTION)), p.init(e, t, i, r), (0, a.pushLayer)(h.Layers.GUILD_SETTINGS)
             },
             close() {
                 s.default.dispatch({
@@ -97,8 +98,8 @@ function(e, t, n) {
                     oldFormErrors: !0
                 }), {
                     modalProps: {
-                        title: m.default.Messages.GUILD_SECURITY_REQ_MFA_LABEL,
-                        actionText: i ? m.default.Messages.GUILD_SECURITY_REQ_MFA_TURN_OFF : m.default.Messages.GUILD_SECURITY_REQ_MFA_TURN_ON
+                        title: N.default.Messages.GUILD_SECURITY_REQ_MFA_LABEL,
+                        actionText: i ? N.default.Messages.GUILD_SECURITY_REQ_MFA_TURN_OFF : N.default.Messages.GUILD_SECURITY_REQ_MFA_TURN_ON
                     },
                     checkEnabled: !1
                 }).then(e => s.default.dispatch({
@@ -130,22 +131,25 @@ function(e, t, n) {
                 })
             },
             updateGuild(e) {
+                var t, n;
                 let {
-                    safetyAlertsChannelId: t,
-                    ...n
-                } = e, i = {
-                    ...n
-                }, r = A.default.getGuildId();
-                if (null != r) {
-                    var a;
-                    (null === (a = l.RaidAlertExperiment.getCurrentConfig({
-                        guildId: r,
-                        location: "be0372_1"
-                    })) || void 0 === a ? void 0 : a.enableRaidAlerts) && null != t && (i.safetyAlertsChannelId = t)
-                }
-                s.default.dispatch({
+                    safetyAlertsChannelId: i,
+                    clan: r,
+                    ...a
+                } = e, o = {
+                    ...a
+                };
+                null != r && (o.clan = {
+                    ...null !== (t = o.clan) && void 0 !== t ? t : {},
+                    ...r
+                });
+                let u = A.default.getGuildId();
+                null != u && (null === (n = l.RaidAlertExperiment.getCurrentConfig({
+                    guildId: u,
+                    location: "be0372_1"
+                })) || void 0 === n ? void 0 : n.enableRaidAlerts) && null != i && (o.safetyAlertsChannelId = i), s.default.dispatch({
                     type: "GUILD_SETTINGS_UPDATE",
-                    ...i
+                    ...o
                 })
             },
             saveGuild(e, t) {
@@ -164,13 +168,14 @@ function(e, t, n) {
                     explicitContentFilter: f,
                     features: S,
                     systemChannelFlags: A,
-                    preferredLocale: m,
-                    rulesChannelId: O,
-                    safetyAlertsChannelId: p,
-                    discoverySplash: R,
-                    publicUpdatesChannelId: C,
-                    premiumProgressBarEnabled: g
-                } = t, L = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, D = {
+                    preferredLocale: N,
+                    rulesChannelId: p,
+                    safetyAlertsChannelId: R,
+                    discoverySplash: C,
+                    publicUpdatesChannelId: g,
+                    premiumProgressBarEnabled: L,
+                    clan: D
+                } = t, v = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, M = {
                     name: n,
                     description: i,
                     icon: a,
@@ -178,7 +183,7 @@ function(e, t, n) {
                     banner: l,
                     home_header: d,
                     features: S,
-                    preferred_locale: m,
+                    preferred_locale: N,
                     afk_channel_id: _,
                     afk_timeout: c,
                     system_channel_id: E,
@@ -186,22 +191,23 @@ function(e, t, n) {
                     default_message_notifications: T,
                     explicit_content_filter: f,
                     system_channel_flags: A,
-                    rules_channel_id: O,
-                    discovery_splash: R,
-                    public_updates_channel_id: C,
-                    safety_alerts_channel_id: p,
-                    ...null != g ? {
-                        premium_progress_bar_enabled: g
-                    } : null
+                    rules_channel_id: p,
+                    discovery_splash: C,
+                    public_updates_channel_id: g,
+                    safety_alerts_channel_id: R,
+                    ...null != L ? {
+                        premium_progress_bar_enabled: L
+                    } : null,
+                    clan: null != D ? (0, m.toServerClanData)(D) : D
                 };
                 return s.default.dispatch({
                     type: "GUILD_SETTINGS_SUBMIT"
                 }), r.HTTP.patch({
                     url: h.Endpoints.GUILD(e),
                     query: {
-                        for_discovery: L.isForDiscovery
+                        for_discovery: v.isForDiscovery
                     },
-                    body: D,
+                    body: M,
                     oldFormErrors: !0
                 }).then(t => {
                     s.default.dispatch({
@@ -212,9 +218,9 @@ function(e, t, n) {
                     if (s.default.dispatch({
                             type: "GUILD_SETTINGS_SUBMIT_FAILURE",
                             errors: e.body
-                        }), N.error("Failed to save guild settings", {
+                        }), O.error("Failed to save guild settings", {
                             errors: e.body
-                        }), L.throwErr) throw e.body
+                        }), v.throwErr) throw e.body
                 })
             },
             updateGuildModeration: (e, t) => r.HTTP.patch({
@@ -245,8 +251,8 @@ function(e, t, n) {
                     }
                 }), {
                     modalProps: {
-                        title: m.default.Messages.TRANSFER_OWNERSHIP,
-                        actionText: m.default.Messages.TRANSFER_OWNERSHIP
+                        title: N.default.Messages.TRANSFER_OWNERSHIP,
+                        actionText: N.default.Messages.TRANSFER_OWNERSHIP
                     },
                     checkEnabled: !1
                 })
@@ -271,15 +277,15 @@ function(e, t, n) {
                 oldFormErrors: !0
             }), {
                 modalProps: {
-                    title: m.default.Messages.DELETE_SERVER_TITLE.format({
+                    title: N.default.Messages.DELETE_SERVER_TITLE.format({
                         name: t
                     }),
-                    actionText: m.default.Messages.DELETE_SERVER,
+                    actionText: N.default.Messages.DELETE_SERVER,
                     disallowBackupCodes: !0
                 },
                 checkEnabled: !1
             }).then(() => {
-                O.close()
+                p.close()
             }),
             async leaveGuild(e) {
                 await r.HTTP.del({
@@ -288,7 +294,7 @@ function(e, t, n) {
                         lurking: c.default.isLurking(e) || I.default.isCurrentUserGuest(e)
                     },
                     oldFormErrors: !0
-                }), O.close()
+                }), p.close()
             },
             async updateMemberRoles(e, t, n, i, a) {
                 if (_.default.isFullServerPreview(e) && t === E.default.getId()) {
@@ -360,5 +366,5 @@ function(e, t, n) {
                 })
             }
         };
-    t.default = O
+    t.default = p
 }

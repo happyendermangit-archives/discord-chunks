@@ -2,13 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getChannelIconComponent: function() {
-            return J
+            return Z
         },
         getChannelIconTooltipText: function() {
             return q
         },
         getSimpleChannelIconComponent: function() {
-            return Z
+            return J
         }
     });
     var i = n("859802"),
@@ -47,8 +47,8 @@ function(e, t, n) {
         w = n("761529"),
         k = n("308570"),
         B = n("632184"),
-        F = n("414896"),
-        V = n("398856"),
+        V = n("414896"),
+        F = n("398856"),
         x = n("170039"),
         H = n("178695"),
         Y = n("548420"),
@@ -106,13 +106,13 @@ function(e, t, n) {
         }
     }
 
-    function J(e, t) {
+    function Z(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
             {
                 locked: Q = !1,
                 video: q = !1,
-                stream: J = !1,
-                hasActiveThreads: Z = !1,
+                stream: Z = !1,
+                hasActiveThreads: J = !1,
                 textFocused: $ = !1
             } = n;
         if (null == e) return null;
@@ -122,7 +122,7 @@ function(e, t, n) {
         if ((null == e ? void 0 : e.id) === (null == t ? void 0 : t.rulesChannelId)) return f.default;
         switch (e.type) {
             case X.ChannelTypes.GUILD_ANNOUNCEMENT:
-                if (Z) {
+                if (J) {
                     if (e.isNSFW()) return U.default;
                     if ((0, K.default)(e)) return G.default;
                     else return u.default
@@ -143,7 +143,7 @@ function(e, t, n) {
                 if (e.isForumPost()) return R.default;
                 else return W.default;
             case X.ChannelTypes.GUILD_TEXT:
-                if (Z) {
+                if (J) {
                     if (e.isNSFW()) return b.default;
                     if ((0, K.default)(e)) return w.default;
                     else return W.default
@@ -167,14 +167,14 @@ function(e, t, n) {
                 else return x.default;
             case X.ChannelTypes.GUILD_VOICE:
                 if ($) return m.default;
-                if (e.isNSFW()) return V.default;
-                if (J) return j.default;
+                if (e.isNSFW()) return F.default;
+                if (Z) return j.default;
                 if (ee) {
                     if ((0, K.default)(e)) return g.default;
-                    return q ? c.default : F.default
+                    return q ? c.default : V.default
                 }
                 if (Q) return g.default;
-                if ((0, K.default)(e)) return q ? c.default : F.default;
+                if ((0, K.default)(e)) return q ? c.default : V.default;
                 else return q ? _.default : B.default;
             case X.ChannelTypes.GUILD_DIRECTORY:
                 return T.default;
@@ -192,7 +192,7 @@ function(e, t, n) {
         }
     }
 
-    function Z(e) {
+    function J(e) {
         switch (e) {
             case X.ChannelTypes.GUILD_ANNOUNCEMENT:
                 return M.default;

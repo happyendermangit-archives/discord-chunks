@@ -1,7 +1,7 @@
 function(e, t, a) {
     "use strict";
     a.r(t), a("177593");
-    var d, n, i, c, o, r = a("735250");
+    var d, n, c, i, o, r = a("735250");
     a("92138"), a("470079");
     var f = a("202226"),
         s = a("512722"),
@@ -44,8 +44,8 @@ function(e, t, a) {
                 throw E.default.captureCrash(e), e
             })
         });
-        let e = null === (n = (i = N.default.remoteApp).getVersion) || void 0 === n ? void 0 : n.call(i),
-            t = null === (c = (o = N.default.remoteApp).getBuildNumber) || void 0 === c ? void 0 : c.call(o),
+        let e = null === (n = (c = N.default.remoteApp).getVersion) || void 0 === n ? void 0 : n.call(c),
+            t = null === (i = (o = N.default.remoteApp).getBuildNumber) || void 0 === i ? void 0 : i.call(o),
             a = {};
         null != N.default.remoteApp.getModuleVersions && (a = N.default.remoteApp.getModuleVersions()), E.default.setExtra({
             hostVersion: e,

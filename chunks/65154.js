@@ -29,10 +29,10 @@ function(e, t, n) {
             return x
         },
         DEFAULT_STREAM_VOLUME: function() {
-            return F
+            return V
         },
         DEFAULT_VOICE_BITRATE: function() {
-            return V
+            return F
         },
         DEFAULT_VOLUME: function() {
             return B
@@ -92,10 +92,10 @@ function(e, t, n) {
             return q
         },
         VIDEO_QUALITY_FRAMERATE_MUTED: function() {
-            return J
+            return Z
         },
         VIDEO_QUALITY_FRAMERATE_MUTED_2: function() {
-            return Z
+            return J
         },
         VIDEO_QUALITY_FRAMRATE_NOT_SPEAKING_TIMEOUT: function() {
             return Q
@@ -116,8 +116,8 @@ function(e, t, n) {
     var i, r, s, a, o, l, u, d, _, c, E, I, T, f, S, A, h, m, N, O, p, R, C, g, L, D, v, M, y, P, U, b, G, w, k = n("268146");
     (i = m || (m = {})).DEFAULT = "default", i.STREAM = "stream", (r = N || (N = {})).AUDIO_INPUT = "audioinput", r.AUDIO_OUTPUT = "audiooutput", r.VIDEO_INPUT = "videoinput", (s = O || (O = {})).PUSH_TO_TALK = "PUSH_TO_TALK", s.VOICE_ACTIVITY = "VOICE_ACTIVITY", (a = p || (p = {})).DISCONNECTED = "DISCONNECTED", a.CONNECTING = "CONNECTING", a.CONNECTED = "CONNECTED", a.NO_ROUTE = "NO_ROUTE", a.ICE_CHECKING = "ICE_CHECKING", a.DTLS_CONNECTING = "DTLS_CONNECTING", (o = R || (R = {}))[o.TRANSPORT = 1] = "TRANSPORT", o[o.OUTBOUND = 2] = "OUTBOUND", o[o.INBOUND = 4] = "INBOUND", o[o.ALL = 7] = "ALL", (l = C || (C = {})).MANUAL_DISABLE = "video_manual_disable", l.MANUAL_ENABLE = "video_manual_enable", l.MANUAL_REENABLE = "video_manual_reenable", l.AUTO_DISABLE = "video_auto_disable", l.AUTO_ENABLE = "video_auto_enable", l.AUTO_DOWNGRADE = "video_auto_downgrade", l.AUTO_UPGRADE = "video_auto_upgrade,";
     let B = 100,
-        F = 18,
-        V = 64e3,
+        V = 18,
+        F = 64e3,
         x = 128e3,
         H = "default",
         Y = "disabled",
@@ -128,8 +128,8 @@ function(e, t, n) {
         X = 5e3,
         Q = 15e3,
         q = 30,
-        J = 20,
-        Z = 12,
+        Z = 20,
+        J = 12,
         $ = 4e6,
         ee = 8e6,
         et = ["remoteSinkWantsPixelCount", "remoteSinkWantsMaxFramerate", "encodingVideoMinBitRate", "encodingVideoMaxBitRate", "encodingVideoBitRate", "streamParameters"],

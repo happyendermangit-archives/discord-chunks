@@ -74,10 +74,10 @@ function(e, t, n) {
             return N
         },
         EnableTTSCommand: function() {
-            return J
+            return Z
         },
         ExplicitContentFilter: function() {
-            return Z
+            return J
         },
         ExplicitContentSettings: function() {
             return eP
@@ -95,7 +95,7 @@ function(e, t, n) {
             return h
         },
         FriendSourceFlagsSetting: function() {
-            return V
+            return F
         },
         GifAutoPlay: function() {
             return eN
@@ -155,7 +155,7 @@ function(e, t, n) {
             return f
         },
         RestrictedGuildIds: function() {
-            return F
+            return V
         },
         RtcPanelShowVoiceStates: function() {
             return x
@@ -336,14 +336,14 @@ function(e, t, n) {
         value: e
     }));
     let B = (0, o.defineProtoSetting)("privacy", "defaultGuildsRestricted", e => null != e && e, e => e),
-        F = (0, o.defineProtoSetting)("privacy", "restrictedGuildIds", e => null != e ? e : [], e => e);
+        V = (0, o.defineProtoSetting)("privacy", "restrictedGuildIds", e => null != e ? e : [], e => e);
     (0, o.defineProtoSetting)("privacy", "friendDiscoveryFlags", e => {
         var t;
         return null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : 0
     }, e => s.UInt32Value.create({
         value: e
     }));
-    let V = (0, o.defineProtoSetting)("privacy", "friendSourceFlags", e => {
+    let F = (0, o.defineProtoSetting)("privacy", "friendSourceFlags", e => {
             var t;
             return null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : d.AllFriendSourceFlags
         }, e => s.UInt32Value.create({
@@ -416,13 +416,13 @@ function(e, t, n) {
         }, e => s.BoolValue.create({
             value: e
         })),
-        J = (0, o.defineProtoSetting)("textAndImages", "enableTtsCommand", e => {
+        Z = (0, o.defineProtoSetting)("textAndImages", "enableTtsCommand", e => {
             var t;
             return null === (t = null == e ? void 0 : e.value) || void 0 === t || t
         }, e => s.BoolValue.create({
             value: e
         })),
-        Z = (0, o.defineProtoSetting)("textAndImages", "explicitContentFilter", e => {
+        J = (0, o.defineProtoSetting)("textAndImages", "explicitContentFilter", e => {
             var t;
             return null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : u.ExplicitContentFilterTypes.NON_FRIENDS
         }, e => s.UInt32Value.create({

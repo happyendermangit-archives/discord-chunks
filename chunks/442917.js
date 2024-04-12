@@ -37,8 +37,8 @@ function(e, t, n) {
         w = n("199902"),
         k = n("314897"),
         B = n("131951"),
-        F = n("699516"),
-        V = n("594174"),
+        V = n("699516"),
+        F = n("594174"),
         x = n("248402"),
         H = n("33039"),
         Y = n("451478"),
@@ -49,8 +49,8 @@ function(e, t, n) {
         X = n("534388"),
         Q = n("484286"),
         q = n("822296"),
-        J = n("916771"),
-        Z = n("792517"),
+        Z = n("916771"),
+        J = n("792517"),
         $ = n("560688"),
         ee = n("127608"),
         et = n("76021"),
@@ -143,12 +143,12 @@ function(e, t, n) {
                 stream: e,
                 width: ei.PIP_WIDTH
             });
-            if ((null == e ? void 0 : e.state) === en.ApplicationStreamStates.FAILED) return (0, i.jsx)(J.default, {
+            if ((null == e ? void 0 : e.state) === en.ApplicationStreamStates.FAILED) return (0, i.jsx)(Z.default, {
                 stream: e,
                 width: ei.PIP_WIDTH
             });
             if (this.isEmptyBroadcast()) return (0, i.jsx)(X.default, {});
-            else if ((null == t ? void 0 : t.type) === ei.ParticipantTypes.HIDDEN_STREAM) return (0, i.jsx)(Z.default, {
+            else if ((null == t ? void 0 : t.type) === ei.ParticipantTypes.HIDDEN_STREAM) return (0, i.jsx)(J.default, {
                 participant: t,
                 width: ei.PIP_WIDTH
             });
@@ -178,7 +178,7 @@ function(e, t, n) {
                 streamId: t,
                 participantOnScreen: n,
                 isVideoEnabled: r
-            } = this.props, s = (0, O.computeChannelName)(e, V.default, F.default), o = this.isEmptyBroadcast(), l = (null == n ? void 0 : n.id) === k.default.getId() && r, u = this.renderStreamState(), d = null;
+            } = this.props, s = (0, O.computeChannelName)(e, F.default, V.default), o = this.isEmptyBroadcast(), l = (null == n ? void 0 : n.id) === k.default.getId() && r, u = this.renderStreamState(), d = null;
             return (null == n ? void 0 : n.type) !== ei.ParticipantTypes.ACTIVITY && (null != u ? d = u : ((null == n ? void 0 : n.type) === ei.ParticipantTypes.USER || (null == n ? void 0 : n.type) === ei.ParticipantTypes.STREAM) && (d = (0, i.jsx)(Q.default, {
                 paused: this.streamerPaused,
                 streamId: t,

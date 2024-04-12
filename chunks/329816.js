@@ -37,8 +37,8 @@ function(e, t, n) {
         w = n("210887"),
         k = n("819640"),
         B = n("594174"),
-        F = n("451478"),
-        V = n("672752"),
+        V = n("451478"),
+        F = n("672752"),
         x = n("812663"),
         H = n("153850"),
         Y = n("725568"),
@@ -49,8 +49,8 @@ function(e, t, n) {
         X = n("663993"),
         Q = n("823453"),
         q = n("628123"),
-        J = n("962745"),
-        Z = n("151851"),
+        Z = n("962745"),
+        J = n("151851"),
         $ = n("981631"),
         ee = n("921944"),
         et = n("155118");
@@ -70,8 +70,8 @@ function(e, t, n) {
             webpackId: "177741"
         }),
         ei = r.memo(function(e) {
-            let t = (0, _.useStateFromStores)([F.default], () => F.default.isFocused());
-            return (0, i.jsx)(Z.default, {
+            let t = (0, _.useStateFromStores)([V.default], () => V.default.isFocused());
+            return (0, i.jsx)(J.default, {
                 ...e,
                 focused: t
             })
@@ -82,13 +82,13 @@ function(e, t, n) {
             skipsSettingDefaultPageTitle: n
         } = e, {
             pathname: s
-        } = (0, u.useLocation)(), E = (0, K.getPlatform)(), h = d.isMobile || d.isTablet, F = (0, _.useStateFromStores)([w.default], () => w.default.darkSidebar ? $.ThemeTypes.DARK : void 0), X = (0, _.useStateFromStores)([N.default], () => N.default.useForcedColors ? "yes" : "no"), [Z, er] = (0, _.useStateFromStoresArray)([D.default], () => [D.default.isEditorOpen, D.default.isCoachmark]), es = (0, _.useStateFromStores)([C.default], () => C.default.isEditorOpen), {
+        } = (0, u.useLocation)(), E = (0, K.getPlatform)(), h = d.isMobile || d.isTablet, V = (0, _.useStateFromStores)([w.default], () => w.default.darkSidebar ? $.ThemeTypes.DARK : void 0), X = (0, _.useStateFromStores)([N.default], () => N.default.useForcedColors ? "yes" : "no"), [J, er] = (0, _.useStateFromStoresArray)([D.default], () => [D.default.isEditorOpen, D.default.isCoachmark]), es = (0, _.useStateFromStores)([C.default], () => C.default.isEditorOpen), {
             enabled: ea
         } = b.default.useExperiment({
             location: "client_themes_coachmark_reintro"
         }, {
             autoTrackExposure: !0
-        }), eo = (0, _.useStateFromStores)([k.default], () => k.default.getLayers().includes($.Layers.USER_SETTINGS)), el = (0, _.useStateFromStores)([B.default], () => z.default.canUseClientThemes(B.default.getCurrentUser())), eu = Z && !eo, ed = [];
+        }), eo = (0, _.useStateFromStores)([k.default], () => k.default.getLayers().includes($.Layers.USER_SETTINGS)), el = (0, _.useStateFromStores)([B.default], () => z.default.canUseClientThemes(B.default.getCurrentUser())), eu = J && !eo, ed = [];
         eu && er && ea && !el && ed.push(c.DismissibleContent.CLIENT_THEMES_COACHMARK);
         let [e_, ec] = (0, P.useSelectedDismissibleContent)(ed, ee.DismissibleContentGroupName.SIDEBAR, !0);
         ed.push(c.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
@@ -112,13 +112,13 @@ function(e, t, n) {
                 children: (0, i.jsxs)(I.RedesignIconContextProvider, {
                     children: [(0, i.jsx)(Q.default, {
                         skipsSettingDefaultPageTitle: n
-                    }), (0, i.jsx)(J.default, {
+                    }), (0, i.jsx)(Z.default, {
                         children: (0, i.jsx)(q.default, {
                             children: (0, i.jsxs)(I.FocusRingScope, {
                                 containerRef: eT,
-                                children: [(0, i.jsx)(W.MaskLibrary, {}), (0, i.jsx)(V.default, {}), (0, i.jsx)(o.FocusGuard, {}), null != E ? (0, i.jsx)(ei, {
+                                children: [(0, i.jsx)(W.MaskLibrary, {}), (0, i.jsx)(F.default, {}), (0, i.jsx)(o.FocusGuard, {}), null != E ? (0, i.jsx)(ei, {
                                     type: E,
-                                    themeOverride: F
+                                    themeOverride: V
                                 }) : null, (0, i.jsx)(m.AppWindowContextProvider, {
                                     appContext: $.AppContext.APP,
                                     renderWindow: window,

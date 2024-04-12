@@ -5,10 +5,10 @@ function(e, t, n) {
             return C
         },
         ACTIVITY_SHELF_WEB_MODAL_KEY: function() {
-            return J
+            return Z
         },
         APPLICATIONS_WITH_ALLOWED_POPUPS: function() {
-            return Z
+            return J
         },
         APPLICATIONS_WITH_NO_REFFERER: function() {
             return $
@@ -44,13 +44,13 @@ function(e, t, n) {
             return j
         },
         CHECKERS_IN_THE_PARK_APP_ID: function() {
-            return F
+            return V
         },
         CHEF_SHOWDOWN_APPLICATION_ID: function() {
             return W
         },
         CHESS_IN_THE_PARK_APP_ID: function() {
-            return V
+            return F
         },
         COLOR_TOGETHER_APPLICATION_ID: function() {
             return U
@@ -135,8 +135,8 @@ function(e, t, n) {
         w = "880218394199220334",
         k = "1078728822972764312",
         B = "947957217959759964",
-        F = "832013003968348200",
-        V = "832012774040141894",
+        V = "832013003968348200",
+        F = "832012774040141894",
         x = "832025144389533716",
         H = "755827207812677713",
         Y = "879863686565621790",
@@ -151,8 +151,8 @@ function(e, t, n) {
         },
         q = ["in_development", "activities_team", "employee_release"];
     (E = i || (i = {})).FAILED_LOAD = "FAILED_LOAD", E.LAGGING = "LAGGING", E.CONFUSING = "CONFUSING", E.NOT_FUN = "NOT_FUN", E.OTHER = "OTHER", (I = r || (r = {}))[I.PLAY = 0] = "PLAY", I[I.SPECTATE = 1] = "SPECTATE", (T = s || (s = {})).DESKTOP = "desktop", T.MOBILE = "mobile", (f = a || (a = {})).BETRAYAL_MARKETING_TOOLTIP = "BETRAYAL_MARKETING_TOOLTIP", f.FISHINGTON_MARKETING_TOOLTIP = "FISHINGTON_MARKETING_TOOLTIP", f.POKER_MARKETING_TOOLTIP = "POKER_MARKETING_TOOLTIP", f.YOUTUBE_MARKETING_TOOLTIP = "YOUTUBE_MARKETING_TOOLTIP", (S = o || (o = {}))[S.NO_UPDATE = 0] = "NO_UPDATE", S[S.ACTIVITY_STATE_UPDATE = 1] = "ACTIVITY_STATE_UPDATE", S[S.ACTIVITY_STARTED = 2] = "ACTIVITY_STARTED", S[S.ACTIVITY_ENDED = 3] = "ACTIVITY_ENDED", S[S.USER_JOINED = 4] = "USER_JOINED", S[S.USER_LEFT = 5] = "USER_LEFT", S[S.ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST = 6] = "ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST", (A = l || (l = {}))[A.UNLOCKED = 1] = "UNLOCKED", A[A.PORTRAIT = 2] = "PORTRAIT", A[A.LANDSCAPE = 3] = "LANDSCAPE", (h = u || (u = {}))[h.DIRECTORY = 0] = "DIRECTORY", h[h.SELECT_CHANNEL = 1] = "SELECT_CHANNEL", h[h.DETAIL_PAGE = 2] = "DETAIL_PAGE";
-    let J = "activity-shelf",
-        Z = new Set(["755600276941176913", v, M, w]),
+    let Z = "activity-shelf",
+        J = new Set(["755600276941176913", v, M, w]),
         $ = new Set([v, M, w]);
     (m = d || (d = {})).DISCORD_TURNS_8 = "DISCORD_TURNS_8", m.GDM_ACTIVITIES = "GDM_ACTIVITIES", m.PUTT_PARTY = "PUTT_PARTY", m.JAMSPACE_OLD = "JAMSPACE", m.JAMSPACE = "JAMSPACE2", m.POKER = "POKER", m.FREE = "FREE", (N = _ || (_ = {}))[N.PORTRAIT = 0] = "PORTRAIT", N[N.LANDSCAPE = 1] = "LANDSCAPE", (O = c || (c = {}))[O.FOCUSED = 0] = "FOCUSED", O[O.PIP = 1] = "PIP", O[O.GRID = 2] = "GRID";
     let ee = {

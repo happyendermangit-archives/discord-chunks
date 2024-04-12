@@ -88,7 +88,7 @@ function(e, t, n) {
             };
         D.clearTimer(e), s().forEach(r, e => {
             v.clearTimer(e.channel_id)
-        }), F(e, o), p[e] = o, P[e] = Q(p[e]);
+        }), V(e, o), p[e] = o, P[e] = Q(p[e]);
         let l = s().filter(o.channel_overrides, e => {
             var t;
             return E.hasFlag(null !== (t = e.flags) && void 0 !== t ? t : 0, N.ChannelNotificationSettingsFlags.OPT_IN_ENABLED)
@@ -107,9 +107,9 @@ function(e, t, n) {
             }(e), delete R[e]
     }
 
-    function F(e, t) {
+    function V(e, t) {
         !0 === t.muted && D.setTimer(e, t.mute_config, () => {
-            V(e, {
+            F(e, {
                 muted: !1
             }), o.default.dispatch({
                 type: "GUILD_MUTE_EXPIRED",
@@ -128,7 +128,7 @@ function(e, t, n) {
         })
     }
 
-    function V(e, t) {
+    function F(e, t) {
         var n;
         let i = p[e];
         B(e, {
@@ -211,14 +211,14 @@ function(e, t, n) {
         return !0
     }
 
-    function J() {
+    function Z() {
         return C && d.NotificationsExperiment.getCurrentConfig({
             location: "UserGuildSettingsStore"
         }, {
             autoTrackExposure: !1
         }).enabled
     }
-    class Z extends(i = a.default.PersistedStore) {
+    class J extends(i = a.default.PersistedStore) {
         initialize(e) {
             if (this.waitFor(S.default, f.default, u.default, _.default), null != e) {
                 var t, n;
@@ -304,7 +304,7 @@ function(e, t, n) {
             return this.getMessageNotifications(e.guild_id)
         }
         resolveUnreadSetting(e) {
-            if (c.THREAD_CHANNEL_TYPES.has(e.type) || (0, c.isPrivate)(e.type) || !J()) return m.UnreadSetting.ALL_MESSAGES;
+            if (c.THREAD_CHANNEL_TYPES.has(e.type) || (0, c.isPrivate)(e.type) || !Z()) return m.UnreadSetting.ALL_MESSAGES;
             let t = this.getChannelUnreadSetting(e.guild_id, e.id);
             if (t !== m.UnreadSetting.UNSET) return t;
             if (null != e.parent_id) {
@@ -414,13 +414,13 @@ function(e, t, n) {
             return C
         }
         getGuildUnreadSetting(e) {
-            if (!J()) return m.UnreadSetting.ALL_MESSAGES;
+            if (!Z()) return m.UnreadSetting.ALL_MESSAGES;
             let t = this.getGuildFlags(e);
             return E.hasFlag(t, N.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES) ? m.UnreadSetting.ALL_MESSAGES : E.hasFlag(t, N.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS) ? m.UnreadSetting.ONLY_MENTIONS : m.UnreadSetting.UNSET
         }
         resolveGuildUnreadSetting(e) {
             let t = this.getGuildFlags(e.id);
-            return !J() || E.hasFlag(t, N.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES) ? m.UnreadSetting.ALL_MESSAGES : E.hasFlag(t, N.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS) ? m.UnreadSetting.ONLY_MENTIONS : e.defaultMessageNotifications === A.UserNotificationSettings.ALL_MESSAGES ? m.UnreadSetting.ALL_MESSAGES : m.UnreadSetting.ONLY_MENTIONS
+            return !Z() || E.hasFlag(t, N.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES) ? m.UnreadSetting.ALL_MESSAGES : E.hasFlag(t, N.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS) ? m.UnreadSetting.ONLY_MENTIONS : e.defaultMessageNotifications === A.UserNotificationSettings.ALL_MESSAGES ? m.UnreadSetting.ALL_MESSAGES : m.UnreadSetting.ONLY_MENTIONS
         }
         getChannelRecordUnreadSetting(e) {
             return this.getChannelUnreadSetting(e.guild_id, e.id)
@@ -430,8 +430,8 @@ function(e, t, n) {
             return E.hasFlag(n, N.ChannelNotificationSettingsFlags.UNREADS_ALL_MESSAGES) ? m.UnreadSetting.ALL_MESSAGES : E.hasFlag(n, N.ChannelNotificationSettingsFlags.UNREADS_ONLY_MENTIONS) ? m.UnreadSetting.ONLY_MENTIONS : m.UnreadSetting.UNSET
         }
     }
-    O(Z, "displayName", "UserGuildSettingsStore"), O(Z, "persistKey", "collapsedGuilds");
-    let $ = new Z(o.default, {
+    O(J, "displayName", "UserGuildSettingsStore"), O(J, "persistKey", "collapsedGuilds");
+    let $ = new J(o.default, {
         USER_GUILD_SETTINGS_FULL_UPDATE: function(e) {
             let {
                 userGuildSettings: t
@@ -448,14 +448,14 @@ function(e, t, n) {
                 guildId: t,
                 settings: n
             } = e;
-            V(t, n)
+            F(t, n)
         },
         USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: function(e) {
             let {
                 guildId: t,
                 settings: n
             } = e;
-            V(t, n), H(t, n.channel_overrides)
+            F(t, n), H(t, n.channel_overrides)
         },
         USER_GUILD_SETTINGS_CHANNEL_UPDATE: function(e) {
             let {
@@ -482,7 +482,7 @@ function(e, t, n) {
             let t = new Set;
             for (let n in e.userGuildSettings.entries.forEach(e => {
                     !("channel_overrides" in e) && (e.channel_overrides = {}), B(e.guild_id, e), null != e.guild_id && t.add(e.guild_id)
-                }), p) !t.has(n) && F(n, p[n])
+                }), p) !t.has(n) && V(n, p[n])
         },
         CACHE_LOADED: function(e) {
             null != e.userGuildSettings && 0 !== e.userGuildSettings.length && (p = {}, P = {}, U = {}, e.userGuildSettings.forEach(e => {

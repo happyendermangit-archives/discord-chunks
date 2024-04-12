@@ -50,7 +50,7 @@ function(e, t, n) {
             return y
         },
         trackForumPostSidebarViewed: function() {
-            return F
+            return V
         },
         trackForumPreviewPostClicked: function() {
             return B
@@ -74,7 +74,7 @@ function(e, t, n) {
             return U
         },
         trackForumUpsellModalViewed: function() {
-            return V
+            return F
         }
     });
     var i = n("313361"),
@@ -404,7 +404,7 @@ function(e, t, n) {
         r.default.trackWithMetadata(f.AnalyticEvents.FORUM_CHANNEL_ENABLE_PREVIEW_CLICKED)
     }
 
-    function F(e) {
+    function V(e) {
         r.default.trackWithMetadata(f.AnalyticEvents.CHANNEL_OPENED, {
             ...(0, r.collectGuildAnalyticsMetadata)(e.guild_id),
             ...(0, r.collectChannelAnalyticsMetadata)(e),
@@ -417,7 +417,7 @@ function(e, t, n) {
         })
     }
 
-    function V() {
+    function F() {
         r.default.trackWithMetadata(f.AnalyticEvents.OPEN_MODAL, {
             type: "Forum Channel Upsell Modal",
             location: {

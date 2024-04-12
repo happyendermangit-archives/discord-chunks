@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return F
+            return V
         }
     }), n("47120");
     var i = n("735250"),
@@ -42,23 +42,23 @@ function(e, t, n) {
         k = n("981631"),
         B = n("689938");
 
-    function F(e) {
+    function V(e) {
         let {
             activity: t,
             currentEmbeddedApplication: n,
-            isCurrentUser: F,
-            color: V,
+            isCurrentUser: V,
+            color: F,
             look: x,
             hover: H,
             user: Y,
             isEmbedded: j = !1
         } = e, {
             analyticsLocations: W
-        } = (0, _.default)(), [K, z] = r.useState(!1), X = (0, s.useStateFromStores)([O.default], () => O.default.getCurrentUser()), Q = null == t ? void 0 : t.application_id, q = (0, s.useStateFromStores)([D.default], () => j ? D.default.getEmbeddedActivityForUserId(Y.id, Q) : null, [Y.id, j, Q]), J = (0, y.default)({
+        } = (0, _.default)(), [K, z] = r.useState(!1), X = (0, s.useStateFromStores)([O.default], () => O.default.getCurrentUser()), Q = null == t ? void 0 : t.application_id, q = (0, s.useStateFromStores)([D.default], () => j ? D.default.getEmbeddedActivityForUserId(Y.id, Q) : null, [Y.id, j, Q]), Z = (0, y.default)({
             channelId: null == q ? void 0 : q.channelId,
             userId: Y.id,
             activity: t
-        }), Z = (0, s.useStateFromStores)([A.default, E.default, C.default, T.default], () => j || (null == t ? void 0 : t.application_id) != null && (0, L.isLaunchable)({
+        }), J = (0, s.useStateFromStores)([A.default, E.default, C.default, T.default], () => j || (null == t ? void 0 : t.application_id) != null && (0, L.isLaunchable)({
             LibraryApplicationStore: A.default,
             LaunchableGameStore: E.default,
             DispatchApplicationStore: C.default,
@@ -69,12 +69,12 @@ function(e, t, n) {
                 applicationId: n,
                 channelId: i
             } = e;
-            return n === (null == t ? void 0 : t.application_id) && i === J
+            return n === (null == t ? void 0 : t.application_id) && i === Z
         })), ee = (0, s.useStateFromStores)([R.default], () => null != t && null != t.application_id && R.default.getState(t.application_id, k.ActivityActionTypes.JOIN) === k.ActivityActionStates.LOADING), [et] = (0, c.default)((null == t ? void 0 : t.application_id) != null ? [null == t ? void 0 : t.application_id] : []), en = (0, s.useStateFromStores)([I.default, S.default, f.default, m.default, N.default, p.default, h.default], () => (0, M.default)({
             user: Y,
             activity: t,
             application: et,
-            channelId: J,
+            channelId: Z,
             currentUser: X,
             isEmbedded: j,
             ChannelStore: I.default,
@@ -86,9 +86,9 @@ function(e, t, n) {
             PermissionStore: h.default
         })), ei = (0, s.useStateFromStores)([D.default], () => Array.from(D.default.getSelfEmbeddedActivities().values()).some(e => e.applicationId === (null == q ? void 0 : q.applicationId) && e.channelId === (null == q ? void 0 : q.channelId))), er = (0, d.useAnalyticsContext)(), es = !g.isPlatformEmbedded, ea = (0, P.default)(t, k.ActivityFlags.JOIN) || j;
         if (null == t || !ea || null == t.application_id) return null;
-        let eo = !F && (es || Z) && !K && !$ && (!j || en),
+        let eo = !V && (es || J) && !K && !$ && (!j || en),
             el = null;
-        F ? el = B.default.Messages.USER_ACTIVITY_CANNOT_JOIN_SELF : !es && !Z && (el = B.default.Messages.USER_ACTIVITY_NOT_DETECTED.format({
+        V ? el = B.default.Messages.USER_ACTIVITY_CANNOT_JOIN_SELF : !es && !J && (el = B.default.Messages.USER_ACTIVITY_NOT_DETECTED.format({
             name: t.name
         }));
         let eu = async (e, t) => {
@@ -112,11 +112,11 @@ function(e, t, n) {
         }, ed = async () => {
             let e = !1;
             if (j) {
-                if (!en || null == J || null == t.application_id) return;
+                if (!en || null == Z || null == t.application_id) return;
                 e = await (0, v.default)({
                     applicationId: t.application_id,
                     currentEmbeddedApplication: n,
-                    activityChannelId: J,
+                    activityChannelId: Z,
                     locationObject: er.location,
                     embeddedActivitiesManager: b.default,
                     analyticsLocations: W
@@ -144,7 +144,7 @@ function(e, t, n) {
                     onClick: ed,
                     onMouseEnter: t,
                     onMouseLeave: n,
-                    color: V,
+                    color: F,
                     look: x,
                     hover: H,
                     disabled: !eo,

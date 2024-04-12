@@ -23,11 +23,11 @@ function(e, t, n) {
         U = n("981631"),
         b = n("731455"),
         G = n("135899");
-    let w = ["name", "description", "icon", "splash", "banner", "homeHeader", "afkChannelId", "afkTimeout", "systemChannelId", "verificationLevel", "defaultMessageNotifications", "explicitContentFilter", "features", "systemChannelFlags", "preferredLocale", "rulesChannelId", "safetyAlertsChannelId", "discoverySplash", "publicUpdatesChannelId", "premiumProgressBarEnabled"],
+    let w = ["name", "description", "icon", "splash", "banner", "homeHeader", "afkChannelId", "afkTimeout", "systemChannelId", "verificationLevel", "defaultMessageNotifications", "explicitContentFilter", "features", "systemChannelFlags", "preferredLocale", "rulesChannelId", "safetyAlertsChannelId", "discoverySplash", "publicUpdatesChannelId", "premiumProgressBarEnabled", "clan"],
         k = new Set(["icon", "splash", "banner", "discoverySplash", "homeHeader"]),
         B = !1,
-        F = U.FormStates.CLOSED,
-        V = {},
+        V = U.FormStates.CLOSED,
+        F = {},
         x = !1,
         H = null,
         Y = null,
@@ -49,8 +49,8 @@ function(e, t, n) {
         X = !1,
         Q = z,
         q = z,
-        J = null,
-        Z = 0,
+        Z = null,
+        J = 0,
         $ = null,
         ee = null,
         et = null;
@@ -70,14 +70,14 @@ function(e, t, n) {
             location: u
         } = e, _ = D.default.getGuild(n);
         if (null == _) return er();
-        a = o = _, F = U.FormStates.OPEN, V = {}, l = M.default.castGuildIdAsEveryoneGuildRoleId(n), W = o.mfaLevel, q = Q, d = null, K = u, es({
+        a = o = _, V = U.FormStates.OPEN, F = {}, l = M.default.castGuildIdAsEveryoneGuildRoleId(n), W = o.mfaLevel, q = Q, d = null, K = u, es({
             section: null !== (t = null != r ? r : i) && void 0 !== t ? t : U.GuildSettingsSections.OVERVIEW,
             subsection: null != s ? s : null
         })
     }
 
     function er() {
-        B = !1, F = U.FormStates.CLOSED, a = o = null, x = !1, H = null, Y = null, j = 0, J = null, ee = null, et = null, i = null, r = null, s = null, W = U.MFALevels.NONE, u = void 0
+        B = !1, V = U.FormStates.CLOSED, a = o = null, x = !1, H = null, Y = null, j = 0, Z = null, ee = null, et = null, i = null, r = null, s = null, W = U.MFALevels.NONE, u = void 0
     }
 
     function es(e) {
@@ -152,7 +152,7 @@ function(e, t, n) {
     }
 
     function eo(e) {
-        if (null == o || F !== U.FormStates.OPEN || "GUILD_INTEGRATIONS_UPDATE" === e.type && e.guildId !== o.id) return !1;
+        if (null == o || V !== U.FormStates.OPEN || "GUILD_INTEGRATIONS_UPDATE" === e.type && e.guildId !== o.id) return !1;
         (0, P.fetchGuildIntegrationsApplications)(o.id)
     }
     class el extends(_ = h.default.Store) {
@@ -187,13 +187,13 @@ function(e, t, n) {
             return o
         }
         isSubmitting() {
-            return F === U.FormStates.SUBMITTING
+            return V === U.FormStates.SUBMITTING
         }
         isGuildMetadataLoaded() {
             return X
         }
         getErrors() {
-            return V
+            return F
         }
         getSelectedRoleId() {
             return l
@@ -202,7 +202,7 @@ function(e, t, n) {
             return d
         }
         getBans() {
-            return [J, Z]
+            return [Z, J]
         }
         getProps() {
             return {
@@ -210,10 +210,10 @@ function(e, t, n) {
                 integrations: et,
                 section: i,
                 subsection: r,
-                errors: V,
+                errors: F,
                 guild: o,
-                bans: J,
-                bansVersion: Z,
+                bans: Z,
+                bansVersion: J,
                 invites: ee,
                 selectedRoleId: l,
                 embedEnabled: x,
@@ -256,7 +256,7 @@ function(e, t, n) {
             let {
                 guildId: t
             } = e;
-            V = {};
+            F = {};
             let n = D.default.getGuild(t);
             null != n && (a = o = n)
         },
@@ -267,28 +267,28 @@ function(e, t, n) {
             return u = t, !1
         },
         GUILD_SETTINGS_SUBMIT: function() {
-            F = U.FormStates.SUBMITTING, V = {}
+            V = U.FormStates.SUBMITTING, F = {}
         },
         GUILD_SETTINGS_SUBMIT_SUCCESS: function() {
-            F = U.FormStates.OPEN
+            V = U.FormStates.OPEN
         },
         GUILD_SETTINGS_SUBMIT_FAILURE: function(e) {
             var t;
-            F = U.FormStates.OPEN, i = null != i ? i : U.GuildSettingsSections.OVERVIEW, r = null, V = null !== (t = e.errors) && void 0 !== t ? t : {}
+            V = U.FormStates.OPEN, i = null != i ? i : U.GuildSettingsSections.OVERVIEW, r = null, F = null !== (t = e.errors) && void 0 !== t ? t : {}
         },
         GUILD_SETTINGS_SET_SECTION: es,
         GUILD_SETTINGS_SET_SEARCH_QUERY: function(e) {
             s = e.searchQuery
         },
         GUILD_SETTINGS_LOADED_BANS: function(e) {
-            J = e.bans.reduce((e, t) => (null != t.user && null != t.user.id && e.set(t.user.id, t), e), new Map), Z++
+            Z = e.bans.reduce((e, t) => (null != t.user && null != t.user.id && e.set(t.user.id, t), e), new Map), J++
         },
         GUILD_SETTINGS_LOADED_BANS_BATCH: function(e) {
             let {
                 bans: t,
                 guildId: n
             } = e;
-            ($ !== n || null == J) && ($ = n, J = new Map), J = t.reduce((e, t) => (null != t.user && null != t.user.id && e.set(t.user.id, t), e), J), Z++
+            ($ !== n || null == Z) && ($ = n, Z = new Map), Z = t.reduce((e, t) => (null != t.user && null != t.user.id && e.set(t.user.id, t), e), Z), J++
         },
         GUILD_SETTINGS_LOADED_INVITES: function(e) {
             ee = e.invites.reduce((e, t) => (e[t.code] = ea(t), e), {})
@@ -320,19 +320,19 @@ function(e, t, n) {
                 user: t,
                 guildId: n
             } = e;
-            if (null == J || null == o || o.id !== n) return !1;
-            J.set(t.id, {
+            if (null == Z || null == o || o.id !== n) return !1;
+            Z.set(t.id, {
                 user: t,
                 reason: null
-            }), Z++
+            }), J++
         },
         GUILD_BAN_REMOVE: function(e) {
             let {
                 user: t,
                 guildId: n
             } = e;
-            if (null == J || null == o || o.id !== n) return !1;
-            J.delete(t.id), Z++
+            if (null == Z || null == o || o.id !== n) return !1;
+            Z.delete(t.id), J++
         },
         GUILD_ROLE_CREATE: function(e) {
             let {
@@ -408,7 +408,7 @@ function(e, t, n) {
                 reasonsToJoin: null !== (u = E.reasonsToJoin) && void 0 !== u ? u : [],
                 socialLinks: null !== (d = E.socialLinks) && void 0 !== d ? d : [],
                 about: null !== (_ = E.about) && void 0 !== _ ? _ : ""
-            }, V = {})
+            }, F = {})
         },
         GUILD_DISCOVERY_METADATA_FETCH_FAIL: function() {
             Q = q = z
@@ -445,7 +445,7 @@ function(e, t, n) {
                 guildId: t,
                 errors: n
             } = e;
-            null != o && t === o.id && (V = null != n ? n : {})
+            null != o && t === o.id && (F = null != n ? n : {})
         },
         GUILD_UPDATE_DISCOVERY_METADATA: function(e) {
             let {
@@ -474,7 +474,7 @@ function(e, t, n) {
                 guildId: t,
                 errors: n
             } = e;
-            null != o && t === o.id && (V = null != n ? n : {})
+            null != o && t === o.id && (F = null != n ? n : {})
         },
         GUILD_DISCOVERY_SLUG_FETCH_SUCCESS: function(e) {
             let {

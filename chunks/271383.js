@@ -5,7 +5,7 @@ function(e, t, n) {
             return x
         },
         getUserIdFromCommunicationDisabledUserKey: function() {
-            return V
+            return F
         }
     }), n("47120"), n("789020"), n("653041");
     var i, r, s, a, o, l, u = n("392711"),
@@ -40,14 +40,14 @@ function(e, t, n) {
 
     function G(e, t) {
         if (null == t.communicationDisabledUntil || !(0, T.isMemberCommunicationDisabled)(t)) return w(e, t.userId);
-        let n = F(e, t.userId);
+        let n = V(e, t.userId);
         D[n] !== t.communicationDisabledUntil && (0, T.isMemberCommunicationDisabled)(t) && (D[n] = t.communicationDisabledUntil, k(n))
     }
 
     function w(e, t) {
         if (null != t) {
-            let n = F(e, t);
-            null != D[n] && k(n), B(F(e, t))
+            let n = V(e, t);
+            null != D[n] && k(n), B(V(e, t))
         } else
             for (let t in D) x(t) === e && (k(t), B(t))
     }
@@ -57,15 +57,15 @@ function(e, t, n) {
     }
 
     function B(e) {
-        V(e) === N.default.getId() && (0, f.clearCommunicationDisabledNotice)(x(e)), delete D[e]
+        F(e) === N.default.getId() && (0, f.clearCommunicationDisabledNotice)(x(e)), delete D[e]
     }
 
-    function F(e, t) {
+    function V(e, t) {
         let n = [];
         return n[0] = e, n[1] = t, n.join("-")
     }
 
-    function V(e) {
+    function F(e) {
         return e.split("-")[1]
     }
 
@@ -315,7 +315,7 @@ function(e, t, n) {
         })
     }
 
-    function J(e) {
+    function Z(e) {
         var t;
         let {
             message: n,
@@ -334,7 +334,7 @@ function(e, t, n) {
         })
     }
 
-    function Z(e) {
+    function J(e) {
         let {
             messages: t
         } = e;
@@ -360,7 +360,7 @@ function(e, t, n) {
         let {
             messages: t
         } = e;
-        t.forEach(e => Z({
+        t.forEach(e => J({
             messages: e
         }))
     }
@@ -656,12 +656,12 @@ function(e, t, n) {
             for (let t of (v = !0, g[e.guildId] = null !== (n = g[e.guildId]) && void 0 !== n ? n : {}, e.members)) null == g[e.guildId][t.userId] && (i = !0, g[e.guildId][t.userId] = t);
             return i
         },
-        MESSAGE_CREATE: J,
-        MESSAGE_UPDATE: J,
-        LOAD_MESSAGES_SUCCESS: Z,
-        LOAD_MESSAGES_AROUND_SUCCESS: Z,
-        LOAD_PINNED_MESSAGES_SUCCESS: Z,
-        LOAD_RECENT_MENTIONS_SUCCESS: Z,
+        MESSAGE_CREATE: Z,
+        MESSAGE_UPDATE: Z,
+        LOAD_MESSAGES_SUCCESS: J,
+        LOAD_MESSAGES_AROUND_SUCCESS: J,
+        LOAD_PINNED_MESSAGES_SUCCESS: J,
+        LOAD_RECENT_MENTIONS_SUCCESS: J,
         SEARCH_FINISH: $,
         MOD_VIEW_SEARCH_FINISH: $,
         MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: function(e) {

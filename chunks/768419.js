@@ -40,8 +40,8 @@ function(e, t, n) {
         w = 30 * v.default.Millis.SECOND,
         k = 30 * v.default.Millis.SECOND,
         B = 5 * v.default.Millis.MINUTE,
-        F = 5 * v.default.Millis.SECOND,
-        V = 1.5 * v.default.Millis.SECOND,
+        V = 5 * v.default.Millis.SECOND,
+        F = 1.5 * v.default.Millis.SECOND,
         x = 1 * v.default.Millis.MINUTE,
         H = 3 * v.default.Millis.SECOND;
     (l = a || (a = {})).PLAYER_STATE_CHANGED = "PLAYER_STATE_CHANGED", l.DEVICE_STATE_CHANGED = "DEVICE_STATE_CHANGED";
@@ -59,17 +59,17 @@ function(e, t, n) {
         X = new I.Timeout,
         Q = new I.Timeout,
         q = new I.Timeout,
-        J = {},
         Z = {},
+        J = {},
         $ = {},
         ee = !1,
         et = null;
 
     function en() {
-        for (let e in J) {
-            let t = J[e];
-            if (!t.connected || null == Z[e]) continue;
-            let n = Z[e].find(e => e.is_active);
+        for (let e in Z) {
+            let t = Z[e];
+            if (!t.connected || null == J[e]) continue;
+            let n = J[e].find(e => e.is_active);
             if (null != n) return {
                 socket: t,
                 device: n
@@ -174,18 +174,18 @@ function(e, t, n) {
     }
 
     function eo(e, t) {
-        e in J ? (J[e].accessToken = t, W.info("Updated account access token: ".concat(e))) : (J[e] = new ea(e, t), W.info("Added account: ".concat(e)))
+        e in Z ? (Z[e].accessToken = t, W.info("Updated account access token: ".concat(e))) : (Z[e] = new ea(e, t), W.info("Added account: ".concat(e)))
     }
 
     function el(e) {
-        if (!(e in J)) return;
-        J[e].disconnect(), delete J[e];
+        if (!(e in Z)) return;
+        Z[e].disconnect(), delete Z[e];
         let t = $[e];
         null != t && null != i && t.track.id === i.track.id && (i = null), delete $[e], W.info("Removed account: ".concat(e))
     }
 
     function eu(e, t) {
-        for (let n of Z[e]) n.is_active = n.id === t
+        for (let n of J[e]) n.is_active = n.id === t
     }
 
     function ed(e, t, n) {
@@ -241,7 +241,7 @@ function(e, t, n) {
     }
 
     function ec() {
-        let e = Object.keys(J),
+        let e = Object.keys(Z),
             t = O.default.getAccounts().filter(e => {
                 let {
                     type: t
@@ -391,17 +391,17 @@ function(e, t, n) {
             })()), (0, M.fetchIsSpotifyProtocolRegistered)()
         }
         hasConnectedAccount() {
-            return Object.keys(J).length > 0
+            return Object.keys(Z).length > 0
         }
         getActiveSocketAndDevice() {
             return en()
         }
         getPlayableComputerDevices() {
             let e = [];
-            for (let t in J) {
-                let n = J[t];
-                if (!n.connected || null == Z[t]) continue;
-                let i = Z[t].find(e => !e.is_restricted && "Computer" === e.type);
+            for (let t in Z) {
+                let n = Z[t];
+                if (!n.connected || null == J[t]) continue;
+                let i = J[t].find(e => !e.is_restricted && "Computer" === e.type);
                 null != i && e.push({
                     socket: n,
                     device: i
@@ -507,7 +507,7 @@ function(e, t, n) {
             let {
                 accountId: t,
                 isPremium: n
-            } = e, i = J[t];
+            } = e, i = Z[t];
             if (null == i) return !1;
             i.isPremium = n, W.info("Profile updated for ".concat(t, ": isPremium = ").concat(n))
         },
@@ -522,15 +522,15 @@ function(e, t, n) {
                 context: u
             } = e, _ = !1;
             if (null != l) {
-                if (null != Z[t]) {
-                    let e = Z[t].find(e => {
+                if (null != J[t]) {
+                    let e = J[t].find(e => {
                         let {
                             id: t
                         } = e;
                         return t === l.id
                     });
-                    null == e ? (Z[t].push(l), _ = !0) : !(0, E.default)(e, l) && (Object.assign(e, l), _ = !0), eu(t, l.id)
-                } else Z[t] = [l], _ = !0
+                    null == e ? (J[t].push(l), _ = !0) : !(0, E.default)(e, l) && (Object.assign(e, l), _ = !0), eu(t, l.id)
+                } else J[t] = [l], _ = !0
             }
             n ? null == et || et.start(k, eE) : (a = null, null == et || et.stop());
             let c = O.default.getAccount(t, P.PlatformTypes.SPOTIFY);
@@ -543,7 +543,7 @@ function(e, t, n) {
                         let n = Date.now(),
                             i = null != e ? e.startTime : 0,
                             r = n - t;
-                        return Math.abs(r - i) > V ? r : i
+                        return Math.abs(r - i) > F ? r : i
                     }(I, o),
                     context: u,
                     repeat: s
@@ -551,7 +551,7 @@ function(e, t, n) {
                 f = null != l && null != r && 0 === o && !n;
             !f && ($[t] = T);
             let S = i;
-            if (i = d().values($).find(e => null != e), eI(N.default.getId()), null == a || f ? Q.stop() : Q.start(a.duration - o + F, () => ei(c.id)), null != r && (!n && o > 0 || null == l || null != T && r.trackId !== T.track.id) ? (W.info("Listen along active but playback stopped or track changed. Stopping listen along in ".concat(F, "ms")), q.start(F, () => {
+            if (i = d().values($).find(e => null != e), eI(N.default.getId()), null == a || f ? Q.stop() : Q.start(a.duration - o + V, () => ei(c.id)), null != r && (!n && o > 0 || null == l || null != T && r.trackId !== T.track.id) ? (W.info("Listen along active but playback stopped or track changed. Stopping listen along in ".concat(V, "ms")), q.start(V, () => {
                     W.info("Stopping listening along"), (0, A.default)(), ei(c.id)
                 })) : q.isStarted() && (W.info("Listen along stop cancelled as playback of track resumed"), q.stop()), S === i || null == I && null == T || null != I && null != T && I.track.id === T.track.id && I.startTime === T.startTime) return _;
             null != a && L.default.track(P.AnalyticEvents.ACTIVITY_UPDATED, {
@@ -604,7 +604,7 @@ function(e, t, n) {
                 accountId: t,
                 devices: n
             } = e;
-            Z[t] = n, W.info("Devices updated for ".concat(t, ":"), n)
+            J[t] = n, W.info("Devices updated for ".concat(t, ":"), n)
         },
         SPOTIFY_SET_ACTIVE_DEVICE: function(e) {
             let {

@@ -3,7 +3,7 @@ function(e, t, n) {
     let i;
     n.r(t), n.d(t, {
         computeThreadIdsSnapshot: function() {
-            return F
+            return V
         }
     }), n("47120");
     var r, s, a, o, l = n("392711"),
@@ -56,12 +56,12 @@ function(e, t, n) {
         var e;
         let t = A.default.getChannelId();
         if (null == t || !(null === (e = f.default.getChannel(t)) || void 0 === e ? void 0 : e.isForumLikeChannel())) return k(), !1;
-        V({
+        F({
             refreshThreadIds: !0
         })
     }
 
-    function F(e) {
+    function V(e) {
         let t = f.default.getChannel(e);
         return null == t ? [] : Object.values(E.default.getThreadsForParent(t.guild_id, t.id)).map(e => {
             let {
@@ -71,7 +71,7 @@ function(e, t, n) {
         }).sort(w(g))
     }
 
-    function V(e) {
+    function F(e) {
         var t;
         let n = f.default.getChannel(R);
         if (null == n) return;
@@ -106,11 +106,11 @@ function(e, t, n) {
             let i = e !== R,
                 r = !(0, h.areSetsEqual)(n, C),
                 s = t !== g;
-            return R = e, C = n, g = t, i ? V({
+            return R = e, C = n, g = t, i ? F({
                 refreshThreadIds: !0
-            }) : s ? V({
+            }) : s ? F({
                 sortThreadIds: !0
-            }) : r && V(), D
+            }) : r && F(), D
         }
         getCurrentThreadIds() {
             return D
@@ -146,7 +146,7 @@ function(e, t, n) {
                 guildId: n
             } = e;
             if (null == R || n !== (null === (t = f.default.getChannel(R)) || void 0 === t ? void 0 : t.guild_id)) return !1;
-            V({
+            F({
                 refreshThreadIds: !0
             })
         },
@@ -165,12 +165,12 @@ function(e, t, n) {
             if (null == t.parent_id || t.parent_id !== R) return !1;
             let n = (0, N.isForumPostPinned)(t.id),
                 i = b.has(t.id);
-            if (n && !i) b.add(t.id), V({
+            if (n && !i) b.add(t.id), F({
                 sortThreadIds: !0
             });
             else {
                 if (n || !i) return !1;
-                b.delete(t.id), V({
+                b.delete(t.id), F({
                     sortThreadIds: !0
                 })
             }
@@ -180,7 +180,7 @@ function(e, t, n) {
                 channel: t
             } = e;
             if (null == t.parent_id || t.parent_id !== R) return !1;
-            U.add(t.id), V({
+            U.add(t.id), F({
                 sortThreadIds: !0
             })
         },
@@ -189,7 +189,7 @@ function(e, t, n) {
                 channelId: t
             } = e;
             if (null == t || t !== R) return !1;
-            V({
+            F({
                 refreshThreadIds: !0
             })
         },

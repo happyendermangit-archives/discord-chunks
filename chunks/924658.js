@@ -386,6 +386,20 @@ function(e) {
         CLAN_LOOK_BANNER: "Banner",
         CLAN_LOOK_PRESET_BADGE: "Badge",
         CLAN_LOOK_PRESET_CUSTOM: "Custom",
+        CLAN_OVERVIEW_LABEL_CLAN_TAG: "Guild Tag",
+        CLAN_ADOPT_CLAN_IDENTITY: "Adopt Guild Identity",
+        CLAN_CLEAR_CLAN_IDENTITY: "Clear Guild Identity",
+        CLAN_TAG_GUILD_PROFILE_MEMBERSHIP: "Member Of Guild",
+        CLAN_USER_ADOPT_TAG_UPSELL_TITLE: "{guildName} - Tag Up!",
+        CLAN_USER_ADOPT_TAG_UPSELL_ARIA_LABEL: "Adopt the {guildName} guild tag as part of your identity",
+        CLAN_USER_ADOPT_TAG_UPSELL_DESCRIPTION: "Rep your guild everywhere...",
+        CLAN_USER_ADOPT_TAG_MODAL_HEADING: "{guildName} Tag Up",
+        CLAN_USER_ADOPT_TAG_MODAL_DESCRIPTION: "{guildName} adopted a new guild tag, and you can now rep this server everywhere you chat.",
+        CLAN_USER_ADOPT_TAG_MODAL_FEATURE: "Wear this tag everywhere",
+        CLAN_USER_ADOPT_TAG_MODAL_FEATURE_CALLOUT: "You can always change your tag in User Profile",
+        CLAN_USER_ADOPT_TAG_MODAL_CTA: "Adopt Tag",
+        CLAN_USER_ADOPT_TAG_MODAL_CANCEL: "Not Now",
+        CLAN_USER_ADOPT_TAG_GUILD_PROFILE_CTA: "Don The Tag",
         SIGNUP_BUTTON_TOOLTIP_CTA: "Click to preview",
         SIGNUP_COMPLETE_CTA: "Sign Up",
         SIGNUP_EMAIL_PROMPT: "Confirm your email to secure your spot on the waitlist",
@@ -419,6 +433,10 @@ function(e) {
         CLAN_DISCOVERY_PLAYSTYLE_TITLE: "What's your playstyle?",
         CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE: "We'll recommend you Gaming Guilds that fit your playstyle.",
         CLAN_DISCOVERY_TRAIT_TITLE: "Would you prefer to sort by any of these?",
-        CLAN_DISCOVERY_TRAIT_SUBTITLE: "We will prioritize Gaming Guilds that match the criteria you selected."
+        CLAN_DISCOVERY_TRAIT_SUBTITLE: "We will prioritize Gaming Guilds that match the criteria you selected.",
+        CLAN_DISCOVERY_GAME_TITLE: "What games do you play?",
+        CLAN_DISCOVERY_GAME_SUBTITLE: "We'll recommend Gaming Guilds to join based on games you play.",
+        CLAN_DISCOVERY_GAMES_SEARCH_PLACEHOLDER: "Look for a Game...",
+        CLAN_DISCOVERY_GAMES_SELECTED: "Selected Games"
     })
 }

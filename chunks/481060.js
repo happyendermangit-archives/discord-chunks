@@ -29,7 +29,7 @@ function(e, t, n) {
             return N.AnimatedDots
         },
         AnimatedStatus: function() {
-            return eF.AnimatedStatus
+            return eV.AnimatedStatus
         },
         Avatar: function() {
             return o.Avatar
@@ -188,10 +188,10 @@ function(e, t, n) {
             return B.FormTextTypes
         },
         FormTitle: function() {
-            return F.FormTitle
+            return V.FormTitle
         },
         FormTitleTags: function() {
-            return F.FormTitleTags
+            return V.FormTitleTags
         },
         H: function() {
             return H.H
@@ -209,7 +209,7 @@ function(e, t, n) {
             return eW.InputError
         },
         Interactive: function() {
-            return V.Interactive
+            return F.Interactive
         },
         KeyCombo: function() {
             return j.KeyCombo
@@ -269,19 +269,19 @@ function(e, t, n) {
             return q.MasonryListThin
         },
         Menu: function() {
-            return J.Menu
+            return Z.Menu
         },
         MenuCheckboxItem: function() {
-            return Z.MenuCheckboxItem
+            return J.MenuCheckboxItem
         },
         MenuControlItem: function() {
-            return Z.MenuControlItem
+            return J.MenuControlItem
         },
         MenuCustomItemRenderProps: function() {
             return $.MenuCustomItemRenderProps
         },
         MenuGroup: function() {
-            return Z.MenuGroup
+            return J.MenuGroup
         },
         MenuImageUploadControl: function() {
             return ee.MenuImageUploadControl
@@ -290,22 +290,22 @@ function(e, t, n) {
             return et.MenuInteractiveCompositeControl
         },
         MenuItem: function() {
-            return Z.MenuItem
+            return J.MenuItem
         },
         MenuRadioItem: function() {
-            return Z.MenuRadioItem
+            return J.MenuRadioItem
         },
         MenuSearchControl: function() {
             return en.MenuSearchControl
         },
         MenuSeparator: function() {
-            return Z.MenuSeparator
+            return J.MenuSeparator
         },
         MenuSliderControl: function() {
             return ei.MenuSliderControl
         },
         MenuSpinner: function() {
-            return J.MenuSpinner
+            return Z.MenuSpinner
         },
         Modal: function() {
             return es.Modal
@@ -452,13 +452,13 @@ function(e, t, n) {
             return eE.StackedProgress
         },
         Status: function() {
-            return eF.Status
+            return eV.Status
         },
         StatusTypes: function() {
-            return eF.StatusTypes
+            return eV.StatusTypes
         },
         Switch: function() {
-            return eV.Switch
+            return eF.Switch
         },
         TabBar: function() {
             return ex.TabBar
@@ -515,16 +515,16 @@ function(e, t, n) {
             return eQ.ToastType
         },
         Tooltip: function() {
-            return eJ.Tooltip
+            return eZ.Tooltip
         },
         TooltipColors: function() {
-            return eJ.TooltipColors
+            return eZ.TooltipColors
         },
         TooltipContainer: function() {
-            return eJ.TooltipContainer
+            return eZ.TooltipContainer
         },
         TooltipLayer: function() {
-            return eJ.TooltipLayer
+            return eZ.TooltipLayer
         },
         TransitionGroup: function() {
             return e0.TransitionGroup
@@ -578,13 +578,13 @@ function(e, t, n) {
             return W.getParentLayerContainer
         },
         getStatusBackdropColor: function() {
-            return eF.getStatusBackdropColor
+            return eV.getStatusBackdropColor
         },
         getStatusBackdropOpacity: function() {
-            return eF.getStatusBackdropOpacity
+            return eV.getStatusBackdropOpacity
         },
         getStatusMask: function() {
-            return eF.getStatusMask
+            return eV.getStatusMask
         },
         hasAnyModalOpen: function() {
             return ea.hasAnyModalOpen
@@ -635,7 +635,7 @@ function(e, t, n) {
             return eM.toggleSelect
         },
         tokens: function() {
-            return eZ.default
+            return eJ.default
         },
         updateModal: function() {
             return ea.updateModal
@@ -695,7 +695,7 @@ function(e, t, n) {
             return eM.useSingleSelectState
         },
         useStatusFillColor: function() {
-            return eF.useStatusFillColor
+            return eV.useStatusFillColor
         },
         useThemeContext: function() {
             return e1.useThemeContext
@@ -746,8 +746,8 @@ function(e, t, n) {
         w = n("789164"),
         k = n("471141"),
         B = n("534542"),
-        F = n("512983"),
-        V = n("652334"),
+        V = n("512983"),
+        F = n("652334"),
         x = n("260034"),
         H = n("337033"),
         Y = n("766646"),
@@ -758,8 +758,8 @@ function(e, t, n) {
         X = n("742746"),
         Q = n("478922"),
         q = n("215838"),
-        J = n("830447"),
-        Z = n("828214"),
+        Z = n("830447"),
+        J = n("828214"),
         $ = n("756710"),
         ee = n("639627"),
         et = n("54281"),
@@ -800,8 +800,8 @@ function(e, t, n) {
         ew = n("718580"),
         ek = n("561779"),
         eB = n("922770"),
-        eF = n("696826"),
-        eV = n("437337"),
+        eV = n("696826"),
+        eF = n("437337"),
         ex = n("706898"),
         eH = n("993365"),
         eY = n("419993"),
@@ -812,8 +812,8 @@ function(e, t, n) {
         eX = n("417153"),
         eQ = n("561466"),
         eq = n("70308"),
-        eJ = n("981729"),
-        eZ = n("692547"),
+        eZ = n("981729"),
+        eJ = n("692547"),
         e$ = n("180035"),
         e0 = n("981292"),
         e1 = n("801787"),

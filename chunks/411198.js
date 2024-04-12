@@ -80,7 +80,8 @@ function(e, t, n) {
             maxMembers: null !== (S = e.properties.max_members) && void 0 !== S ? S : -1,
             nsfwLevel: null !== (A = e.properties.nsfw_level) && void 0 !== A ? A : l.GuildNSFWContentLevel.DEFAULT,
             hubType: e.properties.hub_type,
-            latestOnboardingQuestionId: e.properties.latest_onboarding_question_id
+            latestOnboardingQuestionId: e.properties.latest_onboarding_question_id,
+            clan: e.properties.clan
         };
         return null == t ? (0, s.dangerouslyCast)(N, a.default) : t.merge(N)
     }
@@ -127,7 +128,8 @@ function(e, t, n) {
                 maxMembers: null !== (T = S.max_members) && void 0 !== T ? T : -1,
                 nsfwLevel: null !== (f = S.nsfw_level) && void 0 !== f ? f : l.GuildNSFWContentLevel.DEFAULT,
                 hubType: S.hub_type,
-                latestOnboardingQuestionId: S.latest_onboarding_question_id
+                latestOnboardingQuestionId: S.latest_onboarding_question_id,
+                clan: S.clan
             };
         return t.merge(A)
     }
@@ -168,7 +170,8 @@ function(e, t, n) {
             maxMembers: e.max_members,
             nsfwLevel: e.nsfw_level,
             hubType: e.hub_type,
-            latestOnboardingQuestionId: e.latest_onboarding_question_id
+            latestOnboardingQuestionId: e.latest_onboarding_question_id,
+            clan: e.clan
         };
         return null == t ? new a.default(n) : t.merge(n)
     }
@@ -225,7 +228,8 @@ function(e, t, n) {
             max_members: e.maxMembers,
             nsfw_level: e.nsfwLevel,
             hub_type: e.hubType,
-            latest_onboarding_question_id: e.latestOnboardingQuestionId
+            latest_onboarding_question_id: e.latestOnboardingQuestionId,
+            clan: e.clan
         }
     }
 

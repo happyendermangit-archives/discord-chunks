@@ -328,6 +328,9 @@ function(_, E, e) {
         HELP_CENTER_CTA_ANALYTICS_NAME: function() {
             return az
         },
+        HEXColors: function() {
+            return oB.default
+        },
         HelpdeskArticles: function() {
             return E_
         },
@@ -1457,6 +1460,8 @@ function(_, E, e) {
             GUILD_PRODUCT_LISTINGS: (_, E) => "/guilds/".concat(_, "/products/listings").concat(null != E ? "/".concat(E) : ""),
             GUILD_PRODUCT_ATTACHMENT_DOWNLOAD: (_, E, e) => "/guilds/".concat(_, "/products/listings/").concat(E, "/attachments/").concat(e, "/download"),
             GUILD_CONVERT_TO_CLAN: _ => "/clan/".concat(_),
+            GUILD_CLAN_INFO: _ => "/clan/".concat(_),
+            USER_SET_CLAN_IDENTITY: "/users/@me/clan",
             TENOR_ASSET_PATH: "/tenor",
             EMAIL_SETTINGS: "/users/@me/email-settings",
             ACCOUNT_NOTIFICATION_SETTINGS: "/users/@me/notification-settings",

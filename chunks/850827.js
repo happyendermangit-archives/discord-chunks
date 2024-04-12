@@ -44,8 +44,8 @@ function(e, t, n) {
                 source: w,
                 color: k = d.Button.Colors.WHITE,
                 look: B = d.Button.Looks.OUTLINED,
-                type: F,
-                onAction: V,
+                type: V,
+                onAction: F,
                 isEmbedded: x = !1
             } = e,
             H = (0, N.default)(),
@@ -53,14 +53,14 @@ function(e, t, n) {
                 let e = T.default.getCurrentUser();
                 return o()(null != e, "UserActivityActions: currentUser cannot be undefined"), e
             }),
-            j = F === A.Types.PROFILE || F === A.Types.PROFILE_V2,
-            W = F === A.Types.STREAM_PREVIEW || null != a,
+            j = V === A.Types.PROFILE || V === A.Types.PROFILE_V2,
+            W = V === A.Types.STREAM_PREVIEW || null != a,
             K = (0, h.default)(n),
             z = (0, E.isStageActivity)(n),
             X = j ? S.default.Align.END : S.default.Align.STRETCH,
             Q = K || W ? S.default.Direction.HORIZONTAL : S.default.Direction.VERTICAL,
             q = (null == n ? void 0 : n.type) === P.ActivityTypes.HANG_STATUS,
-            J = (0, u.useStateFromStores)([f.default, I.default], () => {
+            Z = (0, u.useStateFromStores)([f.default, I.default], () => {
                 var e;
                 return q ? I.default.getChannel(null === (e = f.default.getVoiceStateForUser(r.id)) || void 0 === e ? void 0 : e.channelId) : null
             });
@@ -108,10 +108,10 @@ function(e, t, n) {
             look: B,
             applicationStream: a
         }, "watch-button")];
-        else if (q && null != J) t = [(0, i.jsx)(C.default, {
+        else if (q && null != Z) t = [(0, i.jsx)(C.default, {
             color: k,
             look: B,
-            hangStatusChannel: J
+            hangStatusChannel: Z
         }, "hang-status-button")];
         else {
             let e = (0, i.jsx)(M.default, {
@@ -143,15 +143,15 @@ function(e, t, n) {
             if (null == s && null == a && null == e && null == o) return null;
             t = [s, a, e, o]
         }
-        let Z = Q === S.default.Direction.VERTICAL;
+        let J = Q === S.default.Direction.VERTICAL;
         return (0, i.jsx)(S.default, {
             grow: 0,
             align: X,
             direction: Q,
-            wrap: Z ? S.default.Wrap.WRAP : S.default.Wrap.NO_WRAP,
-            className: s()(_, U.buttonsWrapper, Z ? U.vertical : U.horizontal),
+            wrap: J ? S.default.Wrap.WRAP : S.default.Wrap.NO_WRAP,
+            className: s()(_, U.buttonsWrapper, J ? U.vertical : U.horizontal),
             onClick: function(e) {
-                (0, l.isElement)(e.target) && "BUTTON" === e.target.nodeName && (null == V || V())
+                (0, l.isElement)(e.target) && "BUTTON" === e.target.nodeName && (null == F || F())
             },
             children: t
         })

@@ -55,8 +55,8 @@ function(e, t, n) {
             stepConfigs: w,
             breadcrumbs: k = [],
             skuIDs: B,
-            isGift: F = !1,
-            children: V,
+            isGift: V = !1,
+            children: F,
             defaultPlanId: x,
             purchaseType: H = P.PurchaseTypes.SUBSCRIPTION,
             applicationId: Y,
@@ -65,10 +65,10 @@ function(e, t, n) {
             paymentSources: X,
             hasPaymentSources: Q,
             paymentSourceId: q,
-            setPaymentSourceId: J,
-            hasFetchedPaymentSources: Z
+            setPaymentSourceId: Z,
+            hasFetchedPaymentSources: J
         } = (0, p.default)({
-            isGift: F,
+            isGift: V,
             activeSubscription: G
         }), $ = r.useRef(Q), {
             hasFetchedSubscriptionPlans: ee,
@@ -80,7 +80,7 @@ function(e, t, n) {
             activeSubscription: G,
             skuIDs: B,
             paymentSourceId: q,
-            isGift: F
+            isGift: V
         }), es = (0, L.default)(), [ea, eo] = r.useState(!1), {
             step: el,
             setStep: eu,
@@ -109,7 +109,7 @@ function(e, t, n) {
             selectedPlan: eN,
             setSelectedSkuId: eO,
             setSelectedPlanId: ep
-        } = (0, m.default)(), [eR, eC] = (0, l.useStateFromStoresArray)([E.default], () => [E.default.purchaseTokenAuthState, E.default.purchaseTokenHash]), [eg, eL] = (0, l.useStateFromStoresArray)([y.default], () => [y.default.browserCheckoutState, y.default.loadId]), [eD, ev] = r.useState(null), [eM, ey] = r.useState(null), [eP, eU] = r.useState(null), [eb, eG] = r.useState(null), [ew, ek] = r.useState(null), [eB, eF] = r.useState(void 0), [eV, ex] = r.useState([]), eH = r.useMemo(() => null == eN || (0, A.isPremiumSubscriptionPlan)(eN.id), [eN]), eY = r.useRef(null != G ? G.planId : null);
+        } = (0, m.default)(), [eR, eC] = (0, l.useStateFromStoresArray)([E.default], () => [E.default.purchaseTokenAuthState, E.default.purchaseTokenHash]), [eg, eL] = (0, l.useStateFromStoresArray)([y.default], () => [y.default.browserCheckoutState, y.default.loadId]), [eD, ev] = r.useState(null), [eM, ey] = r.useState(null), [eP, eU] = r.useState(null), [eb, eG] = r.useState(null), [ew, ek] = r.useState(null), [eB, eV] = r.useState(void 0), [eF, ex] = r.useState([]), eH = r.useMemo(() => null == eN || (0, A.isPremiumSubscriptionPlan)(eN.id), [eN]), eY = r.useRef(null != G ? G.planId : null);
         r.useEffect(() => {
             null == eY.current && null != G && (eY.current = G.planId)
         }, [G]);
@@ -121,7 +121,7 @@ function(e, t, n) {
             applicationId: null != Y ? Y : U.PREMIUM_SUBSCRIPTION_APPLICATION,
             skuIDs: B,
             currentPaymentSourceId: q,
-            isGift: F
+            isGift: V
         }), ez = r.useMemo(() => {
             if (null == em) return null;
             let e = eK[em];
@@ -131,7 +131,7 @@ function(e, t, n) {
                 applicationId: t
             } = e;
             return t === Y
-        })), eJ = (0, d.default)(eq), eZ = (0, l.useStateFromStores)([T.default], () => null != em ? T.default.getForSKU(em) : null, [em]), e$ = ej[null != em ? em : ""], [e0, e1] = r.useState(null);
+        })), eZ = (0, d.default)(eq), eJ = (0, l.useStateFromStores)([T.default], () => null != em ? T.default.getForSKU(em) : null, [em]), e$ = ej[null != em ? em : ""], [e0, e1] = r.useState(null);
         return (0, i.jsx)(b.Provider, {
             value: {
                 stripe: W,
@@ -144,11 +144,11 @@ function(e, t, n) {
                 setUpdatedSubscription: eG,
                 subscriptionMetadataRequest: ew,
                 setSubscriptionMetadataRequest: ek,
-                hasFetchedPaymentSources: Z,
+                hasFetchedPaymentSources: J,
                 paymentSources: X,
                 hasPaymentSources: Q,
                 paymentSourceId: q,
-                setPaymentSourceId: J,
+                setPaymentSourceId: Z,
                 priceOptions: et,
                 setCurrency: en,
                 currencyLoading: ei,
@@ -180,12 +180,12 @@ function(e, t, n) {
                 setModalOverlayNode: eU,
                 selectedSkuId: em,
                 selectedSku: e$,
-                selectedStoreListing: eZ,
+                selectedStoreListing: eJ,
                 selectedPlan: eN,
                 setSelectedSkuId: eO,
                 setSelectedPlanId: ep,
                 readySlideId: eB,
-                setReadySlideId: eF,
+                setReadySlideId: eV,
                 defaultPlanId: x,
                 isPremium: eH,
                 startedPaymentFlowWithPaymentSourcesRef: $,
@@ -197,8 +197,8 @@ function(e, t, n) {
                 application: eX,
                 purchaseType: H,
                 isEmbeddedIAP: eQ,
-                activitySessionId: eJ,
-                entitlementsGranted: eV,
+                activitySessionId: eZ,
+                entitlementsGranted: eF,
                 setEntitlementsGranted: ex,
                 referralCode: j,
                 invoicePreview: e0,
@@ -207,7 +207,7 @@ function(e, t, n) {
             children: (0, i.jsx)(s.Elements, {
                 options: P.StripeElementsOptions,
                 stripe: W,
-                children: V
+                children: F
             })
         })
     }

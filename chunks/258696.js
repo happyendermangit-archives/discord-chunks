@@ -58,8 +58,8 @@ function(e, t, n) {
             handleSubmit: U,
             isEmpty: b
         } = e, G = (0, a.useStateFromStores)([l.default], () => l.default.isSubmitButtonEnabled), w = (0, a.useStateFromStores)([I.default], () => I.default.getStickerPreview(P.id, M.drafts.type)), k = null != w && w.length > 0, B = (0, a.useStateFromStores)([T.default], () => T.default.getUploads(P.id, M.drafts.type)), {
-            activeCommand: F,
-            activeCommandOption: V
+            activeCommand: V,
+            activeCommandOption: F
         } = (0, a.useStateFromStoresObject)([u.default], () => ({
             activeCommand: u.default.getActiveCommand(P.id),
             activeCommandOption: u.default.getActiveOption(P.id)
@@ -89,23 +89,23 @@ function(e, t, n) {
                 r = _.default.getRecipientEligibility(t);
             return [Y && i && r, r]
         });
-        return (!s.isMobile && (P.isDM() && (null === (m = M.gifts) || void 0 === m ? void 0 : m.button) != null && null == F && (S.default.isPremiumExactly(j, C.PremiumTypes.TIER_2) && X && E.default.trackExposure({
+        return (!s.isMobile && (P.isDM() && (null === (m = M.gifts) || void 0 === m ? void 0 : m.button) != null && null == V && (S.default.isPremiumExactly(j, C.PremiumTypes.TIER_2) && X && E.default.trackExposure({
             location: "dc120b_5"
         }), z && H.push((0, i.jsx)(N.default, {
             disabled: y,
             referralsRemaining: W,
             channel: P,
             isResending: K
-        }, "referral"))), (null === (O = M.gifts) || void 0 === O ? void 0 : O.button) != null && null == F && !x && H.push((0, i.jsx)(L, {
+        }, "referral"))), (null === (O = M.gifts) || void 0 === O ? void 0 : O.button) != null && null == V && !x && H.push((0, i.jsx)(L, {
             disabled: y,
             channel: P
-        }, "gift")), (null === (D = M.gifs) || void 0 === D ? void 0 : D.button) != null && null == F && H.push((0, i.jsx)(h.default, {
+        }, "gift")), (null === (D = M.gifs) || void 0 === D ? void 0 : D.button) != null && null == V && H.push((0, i.jsx)(h.default, {
             disabled: y,
             type: M
-        }, "gif")), (null === (v = M.stickers) || void 0 === v ? void 0 : v.button) != null && null == F && H.push((0, i.jsx)(R.default, {
+        }, "gif")), (null === (v = M.stickers) || void 0 === v ? void 0 : v.button) != null && null == V && H.push((0, i.jsx)(R.default, {
             disabled: y,
             type: M
-        }, "sticker"))), (null === (t = M.emojis) || void 0 === t ? void 0 : t.button) != null && (null == F || null != V && V.type !== o.ApplicationCommandOptionType.ATTACHMENT) && H.push((0, i.jsx)(A.default, {
+        }, "sticker"))), (null === (t = M.emojis) || void 0 === t ? void 0 : t.button) != null && (null == V || null != F && F.type !== o.ApplicationCommandOptionType.ATTACHMENT) && H.push((0, i.jsx)(A.default, {
             disabled: y,
             type: M
         }, "emoji")), (null === (n = M.submit) || void 0 === n ? void 0 : n.button) != null && ((null === (r = M.submit) || void 0 === r ? void 0 : r.ignorePreference) || G) && H.push((0, i.jsx)(p.default, {

@@ -33,8 +33,8 @@ function(e, t, n) {
         w = {},
         k = {},
         B = {},
-        F = {},
         V = {},
+        F = {},
         x = {};
 
     function H(e) {
@@ -126,7 +126,7 @@ function(e, t, n) {
         delete P[e], delete U[e], delete G[e], delete w[e]
     }
 
-    function J() {
+    function Z() {
         return Y(e => e.rebuild(), function() {
             let e = [],
                 t = N.default.getChannelId();
@@ -141,7 +141,7 @@ function(e, t, n) {
         }())
     }
 
-    function Z() {
+    function J() {
         return Y(e => e.updateEmbeddedActivities())
     }
 
@@ -172,7 +172,7 @@ function(e, t, n) {
                 id: t
             }
         } = e;
-        return delete F[t], delete V[t], q(t)
+        return delete V[t], delete F[t], q(t)
     }
 
     function ei(e) {
@@ -191,7 +191,7 @@ function(e, t, n) {
     }
     class es extends(i = _.default.Store) {
         initialize() {
-            this.waitFor(S.default, A.default, h.default, m.default, E.default, N.default, O.default, p.default, R.default, C.default), this.syncWith([E.default], Z), this.syncWith([T.default], J)
+            this.waitFor(S.default, A.default, h.default, m.default, E.default, N.default, O.default, p.default, R.default, C.default), this.syncWith([E.default], J), this.syncWith([T.default], Z)
         }
         getParticipantsVersion(e) {
             return H(e).version
@@ -264,14 +264,14 @@ function(e, t, n) {
         }
         getChatOpen(e) {
             var t;
-            return null !== (t = F[e]) && void 0 !== t && t
+            return null !== (t = V[e]) && void 0 !== t && t
         }
         isFullscreenInContext() {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : D.AppContext.APP;
             return Object.values(w).some(t => t[e] === D.ChannelLayouts.FULL_SCREEN)
         }
         getStageStreamSize(e) {
-            return V[e]
+            return F[e]
         }
         getStageVideoLimitBoostUpsellDismissed(e) {
             return x[e]
@@ -283,25 +283,25 @@ function(e, t, n) {
         configurable: !0,
         writable: !0
     }) : r[s] = a, t.default = new es(c.default, {
-        CONNECTION_OPEN: J,
-        CONNECTION_OPEN_SUPPLEMENTAL: J,
-        THREAD_LIST_SYNC: J,
-        OVERLAY_INITIALIZE: J,
+        CONNECTION_OPEN: Z,
+        CONNECTION_OPEN_SUPPLEMENTAL: Z,
+        THREAD_LIST_SYNC: Z,
+        OVERLAY_INITIALIZE: Z,
         VOICE_CHANNEL_SELECT: function(e) {
             let {
                 channelId: t,
                 currentVoiceChannelId: n
             } = e;
-            return null != t ? delete b[t] : null != n && (delete F[n], delete V[n], z(n)), J()
+            return null != t ? delete b[t] : null != n && (delete V[n], delete F[n], z(n)), Z()
         },
         CHANNEL_SELECT: function(e) {
             let {
                 channelId: t,
                 messageId: n
-            } = e, i = J(), r = m.default.getChannel(t);
-            return null == t || null == n || (null == r ? void 0 : r.type) !== D.ChannelTypes.GUILD_VOICE && (null == r ? void 0 : r.type) !== D.ChannelTypes.GUILD_STAGE_VOICE || F[t] ? i : (F[t] = !0, !0)
+            } = e, i = Z(), r = m.default.getChannel(t);
+            return null == t || null == n || (null == r ? void 0 : r.type) !== D.ChannelTypes.GUILD_VOICE && (null == r ? void 0 : r.type) !== D.ChannelTypes.GUILD_STAGE_VOICE || V[t] ? i : (V[t] = !0, !0)
         },
-        CHANNEL_RTC_ACTIVE_CHANNELS: J,
+        CHANNEL_RTC_ACTIVE_CHANNELS: Z,
         VOICE_STATE_UPDATES: function(e) {
             let {
                 voiceStates: t,
@@ -393,7 +393,7 @@ function(e, t, n) {
                 channelId: t,
                 large: n
             } = e;
-            V[t] = n
+            F[t] = n
         },
         CHANNEL_RTC_UPDATE_STAGE_VIDEO_LIMIT_BOOST_UPSELL_DISMISSED: function(e) {
             let {
@@ -418,7 +418,7 @@ function(e, t, n) {
                 channelId: t,
                 chatOpen: n
             } = e;
-            F[t] = n
+            V[t] = n
         },
         RTC_CONNECTION_VIDEO: function(e) {
             let {

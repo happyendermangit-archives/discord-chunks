@@ -3,19 +3,19 @@ function(e, t, a) {
     a.r(t), a("47120");
     var d = a("317770"),
         n = a("626135"),
-        i = a("358085"),
-        c = a("998502"),
+        c = a("358085"),
+        i = a("998502"),
         o = a("801814"),
         r = a("981631");
     class f extends d.default {
         _initialize() {
-            i.isPlatformEmbedded && (c.default.on("UPDATE_DOWNLOADED", () => this.processModuleEvents()), c.default.on("MODULE_INSTALLED", (e, t, a) => this.processModuleEvents()), c.default.on("UPDATER_HISTORY_RESPONSE", (e, t) => {
+            c.isPlatformEmbedded && (i.default.on("UPDATE_DOWNLOADED", () => this.processModuleEvents()), i.default.on("MODULE_INSTALLED", (e, t, a) => this.processModuleEvents()), i.default.on("UPDATER_HISTORY_RESPONSE", (e, t) => {
                 this._handleHistoryResponse(t)
             }), this.processModuleEvents())
         }
         _terminate() {}
         processModuleEvents() {
-            c.default.send("UPDATER_HISTORY_QUERY_AND_TRUNCATE")
+            i.default.send("UPDATER_HISTORY_QUERY_AND_TRUNCATE")
         }
         _handleHistoryResponse(e) {
             null != e && (e.forEach(e => {
