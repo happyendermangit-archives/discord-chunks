@@ -3,8 +3,8 @@ function(e, t, a) {
     a.r(t), a("411104");
     var d = a("570140"),
         n = a("846027"),
-        c = a("872810"),
-        i = a("710845"),
+        i = a("872810"),
+        c = a("710845"),
         r = a("252759"),
         o = a("361291"),
         f = a("199902"),
@@ -78,7 +78,7 @@ function(e, t, a) {
                 a = o.default.getState();
             switch (e.type) {
                 case r.StreamDirectorActionType.STREAM:
-                    if (null != t && (0, c.setStreamPaused)(t, !1), e.sourceId.startsWith("camera") && null != e.audioSourceId) {
+                    if (null != t && (0, i.setStreamPaused)(t, !1), e.sourceId.startsWith("camera") && null != e.audioSourceId) {
                         let t = e.sourceId.split(":")[1];
                         n.default.setGoLiveSource({
                             cameraSettings: {
@@ -109,7 +109,7 @@ function(e, t, a) {
                     }
                     break;
                 case r.StreamDirectorActionType.PAUSE:
-                    null != t && (0, c.setStreamPaused)(t, !0);
+                    null != t && (0, i.setStreamPaused)(t, !0);
                     break;
                 case r.StreamDirectorActionType.STOP:
                     null != t && (0, u.default)(t);
@@ -120,7 +120,7 @@ function(e, t, a) {
         }
         _onCapturePaused(e) {
             let t = f.default.getCurrentUserActiveStream();
-            null != t && (0, c.setStreamPaused)(t, e)
+            null != t && (0, i.setStreamPaused)(t, e)
         }
         _onCaptureEnded() {
             switch (this.mode) {
@@ -142,7 +142,7 @@ function(e, t, a) {
                     guildId: a,
                     channelId: d,
                     pid: n,
-                    sourceId: c,
+                    sourceId: i,
                     audioSourceId: r,
                     sound: o
                 } = e, f = l.default.getId(), u = (0, s.encodeStreamKey)({
@@ -151,7 +151,7 @@ function(e, t, a) {
                     channelId: d,
                     ownerId: f
                 });
-                null == n != (null == c) ? (null != n && this._onStreamApplication(u, n), null != c && this._onStreamDirectSource(u, c, r, o)) : new i.default("ApplicationSwitchingManager").warn("invalid start_stream: both application + display modes were specified (pid: ".concat(n, ", source-id: ").concat(c, ")"))
+                null == n != (null == i) ? (null != n && this._onStreamApplication(u, n), null != i && this._onStreamDirectSource(u, i, r, o)) : new c.default("ApplicationSwitchingManager").warn("invalid start_stream: both application + display modes were specified (pid: ".concat(n, ", source-id: ").concat(i, ")"))
             }), d.default.subscribe("STREAM_DELETE", e => {
                 let {
                     streamKey: t

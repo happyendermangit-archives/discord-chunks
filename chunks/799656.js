@@ -4,12 +4,12 @@ function(e, t, a) {
     var d = a("735250");
     a("470079");
     var n = a("613828"),
-        c = a("442837"),
-        i = a("314897"),
+        i = a("442837"),
+        c = a("314897"),
         r = a("828695"),
         o = a("981631");
-    t.default = c.default.connectStores([r.default, i.default], () => {
-        let e = i.default.getToken();
+    t.default = i.default.connectStores([r.default, c.default], () => {
+        let e = c.default.getToken();
         return {
             token: e,
             hasLoadedExperiments: null != e || r.default.hasLoadedExperiments
