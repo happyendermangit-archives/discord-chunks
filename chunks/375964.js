@@ -17085,7 +17085,7 @@ function(e) {
         QUESTS_MEMBERS_LIST_AVAILBLE: "Quest Available!",
         QUESTS_MEMBERS_LIST_FINISH: "Finish your Quest!",
         QUESTS_MEMBERS_LIST_CLAIM_REWARD: "You did it!",
-        QUESTS_MEMBERS_LIST_START_CTA: "Start unlocking your reward",
+        QUESTS_MEMBERS_LIST_START_CTA: "Start unlocking rewards",
         QUESTS_MEMBERS_LIST_STREAM_CTA: "Join me and check it out",
         QUESTS_MEMBERS_LIST_FINISH_CTA: "Check out your progress",
         QUESTS_MEMBERS_LIST_CLAIM_REWARD_CTA: "Claim your reward",

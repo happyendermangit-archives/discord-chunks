@@ -21,10 +21,9 @@ function(e, t, n) {
             pronouns: t,
             variant: n = "text-xs/medium"
         } = e;
-        return null == t || 0 === t.length ? null : (0, i.jsx)(r.Tooltip, {
+        return null == t || 0 === t.length ? null : (0, i.jsx)(r.TooltipContainer, {
             text: o.default.Messages.USER_PROFILE_PRONOUNS,
-            children: e => (0, i.jsx)(s.Text, {
-                ...e,
+            children: (0, i.jsx)(s.Text, {
                 className: l.pronouns,
                 variant: n,
                 children: t
