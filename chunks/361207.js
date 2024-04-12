@@ -16,8 +16,8 @@ function(e, t, a) {
     });
     var d = a("525654"),
         n = a.n(d),
-        i = a("271579"),
-        c = a("314897"),
+        c = a("271579"),
+        i = a("314897"),
         r = a("981631");
     let o = "linux";
 
@@ -50,17 +50,17 @@ function(e, t, a) {
         let d = null != a ? a.toString() : null;
         switch (t) {
             case "iOS":
-                return (0, i.default)(null != d ? d : "https://itunes.apple.com/us/app/discord-chat-for-games/id985746746", {
+                return (0, c.default)(null != d ? d : "https://itunes.apple.com/us/app/discord-chat-for-games/id985746746", {
                     utmSource: e,
-                    fingerprint: c.default.getFingerprint(),
-                    attemptId: (0, i.generateAttemptId)()
+                    fingerprint: i.default.getFingerprint(),
+                    attemptId: (0, c.generateAttemptId)()
                 });
             case "Android":
-                return (0, i.default)(null != d ? d : "https://play.google.com/store/apps/details", {
+                return (0, c.default)(null != d ? d : "https://play.google.com/store/apps/details", {
                     utmSource: e,
                     id: "com.discord",
-                    fingerprint: c.default.getFingerprint(),
-                    attemptId: (0, i.generateAttemptId)()
+                    fingerprint: i.default.getFingerprint(),
+                    attemptId: (0, c.generateAttemptId)()
                 });
             default:
                 return null != d ? d : "https://www.discord.com"

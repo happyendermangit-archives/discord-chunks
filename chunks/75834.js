@@ -5,36 +5,36 @@ function(e, t, a) {
             return n
         },
         getStreamTarget: function() {
-            return c
+            return i
         }
     }), a("47120");
     var d = a("823379");
 
     function n(e, t) {
         let a = e.find(e => e.processId === t);
-        return null == a ? null : c(e, a)
+        return null == a ? null : i(e, a)
     }
-    let i = "356869127241072640";
+    let c = "356869127241072640";
 
-    function c(e, t) {
+    function i(e, t) {
         var a;
         if (null == t) return null;
-        if (t.applicationId === i) return function(e, t) {
+        if (t.applicationId === c) return function(e, t) {
             let a = t.processPath.length > 1 ? t.processPath[t.processPath.length - 2] : 0,
-                d = e.filter(e => e.applicationId === i && e.processPath.includes(a)),
+                d = e.filter(e => e.applicationId === c && e.processPath.includes(a)),
                 n = d.find(e => "league of legends.exe" === e.executableName);
             return void 0 !== n ? n : d.length > 0 ? d[0] : null
         }(e, t);
         let n = new Map(e.map(e => [e.processId, e])),
-            c = t.processPath.map(e => n.get(e)).find(e => null != e);
-        if (null == c) return null;
+            i = t.processPath.map(e => n.get(e)).find(e => null != e);
+        if (null == i) return null;
         let o = e.map(e => {
             let t = e.processPath.findIndex(e => n.has(e));
             return -1 === t ? null : {
                 application: e,
                 rootedPath: e.processPath.slice(t)
             }
-        }).filter(d.isNotNullish).filter(e => e.rootedPath[0] === c.processId);
+        }).filter(d.isNotNullish).filter(e => e.rootedPath[0] === i.processId);
         o.sort((e, t) => {
             let a = e.rootedPath.map(e => n.get(e)).filter(e => null != e && null != e.windowHandle),
                 d = r(t.rootedPath.map(e => n.get(e)).filter(e => null != e && null != e.windowHandle), a);
