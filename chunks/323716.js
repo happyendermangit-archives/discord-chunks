@@ -59,14 +59,14 @@ function(e, t, n) {
                         if (!T.test(t)) {
                             let i = function(e) {
                                 let t = new URLSearchParams;
-                                t.append("query", '@guid.x-client-trace-id:"'.concat(e, '"')), t.append("showAllSpans", "true");
+                                t.append("query", '@http.x_client_trace_id:"'.concat(e, '"')), t.append("showAllSpans", "true");
                                 let n = d.default.toURLSafe("traces?".concat(t.toString()), "https://datadog.discord.tools/apm/");
                                 return null == n ? null : n.toString()
                             }(n);
                             null !== i && console.debug("%c[tracing]%c %s %s\n%s", "font-weight: bold", "", e.method, t, i)
                         }
                     } catch (e) {
-                        console.error("error while printing Lightstep log", e)
+                        console.error("error while printing tracing log", e)
                     }
                 }
             }

@@ -25,26 +25,29 @@ function(e, t, n) {
         CUSTOM_DISCRIMINATOR: function() {
             return A
         },
+        CUSTOM_NOTIFICATION_SOUNDS: function() {
+            return v
+        },
         EMOJIS_EVERYWHERE: function() {
             return E
         },
         FANCY_VOICE_CHANNEL_REACTIONS: function() {
-            return v
+            return M
         },
         FREE_BOOSTS: function() {
             return g
         },
         INCREASED_GUILD_LIMIT: function() {
-            return U
-        },
-        INCREASED_MESSAGE_LENGTH: function() {
             return b
         },
-        INCREASED_VIDEO_UPLOAD_QUALITY: function() {
+        INCREASED_MESSAGE_LENGTH: function() {
             return G
         },
+        INCREASED_VIDEO_UPLOAD_QUALITY: function() {
+            return w
+        },
         INSTALL_PREMIUM_APPLICATIONS: function() {
-            return M
+            return y
         },
         PREMIUM_GUILD_MEMBER_PROFILE: function() {
             return h
@@ -56,7 +59,7 @@ function(e, t, n) {
             return N
         },
         REDEEM_PREMIUM_PERKS: function() {
-            return y
+            return P
         },
         SOUNDBOARD_EVERYWHERE: function() {
             return T
@@ -71,13 +74,13 @@ function(e, t, n) {
             return L
         },
         UPLOAD_LARGE_FILES: function() {
-            return w
+            return k
         },
         VIDEO_FILTER_ASSETS: function() {
-            return P
+            return U
         },
         canUserUse: function() {
-            return B
+            return V
         }
     });
     var i = n("848246"),
@@ -99,7 +102,7 @@ function(e, t, n) {
                 try {
                     let n = d[t.premiumType];
                     if (null == n) return u.warn("Cannot find the corresponding SKU to the user's premium type ".concat(t.premiumType)), !1;
-                    let i = k[n];
+                    let i = B[n];
                     if (null == i) return u.warn("Cannot find the corresponding product catalog entry to the user's SKU ".concat(n, " and premium type ").concat(t.premiumType)), !1;
                     return i.skuFeatures.includes(e)
                 } catch (e) {
@@ -127,22 +130,23 @@ function(e, t, n) {
         g = new _("freeBoosts"),
         L = new _(i.EntitlementFeatureNames.STREAM_MID_QUALITY),
         D = new _(i.EntitlementFeatureNames.STREAM_HIGH_QUALITY),
-        v = new _("fancyVoiceChannelReactions"),
-        M = new _("installPremiumApplications"),
-        y = new _("redeemPremiumPerks"),
-        P = new _(i.EntitlementFeatureNames.VIDEO_FILTER_ASSETS);
+        v = new _(i.EntitlementFeatureNames.CUSTOM_NOTIFICATION_SOUNDS),
+        M = new _("fancyVoiceChannelReactions"),
+        y = new _("installPremiumApplications"),
+        P = new _("redeemPremiumPerks"),
+        U = new _(i.EntitlementFeatureNames.VIDEO_FILTER_ASSETS);
     new a.default(i.EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE, s.getUserMaxFileSize);
-    let U = new _(i.EntitlementFeatureNames.INCREASED_GUILD_LIMIT),
-        b = new _(i.EntitlementFeatureNames.INCREASED_MESSAGE_LENGTH),
-        G = new _("increasedVideoUploadQuality"),
-        w = new _("uploadLargeFiles"),
-        k = Object.freeze({
-            [l.PremiumSubscriptionSKUs.TIER_0]: new o.default(l.PremiumSubscriptionSKUs.TIER_0, [c, E, I, m, P, G, w, p]),
-            [l.PremiumSubscriptionSKUs.TIER_1]: new o.default(l.PremiumSubscriptionSKUs.TIER_1, [c, E, S, A, m, C, L, v, G, w, p]),
-            [l.PremiumSubscriptionSKUs.TIER_2]: new o.default(l.PremiumSubscriptionSKUs.TIER_2, [c, E, I, T, f, S, A, h, m, N, R, C, g, L, D, v, M, y, P, U, b, G, w, p, O])
+    let b = new _(i.EntitlementFeatureNames.INCREASED_GUILD_LIMIT),
+        G = new _(i.EntitlementFeatureNames.INCREASED_MESSAGE_LENGTH),
+        w = new _("increasedVideoUploadQuality"),
+        k = new _("uploadLargeFiles"),
+        B = Object.freeze({
+            [l.PremiumSubscriptionSKUs.TIER_0]: new o.default(l.PremiumSubscriptionSKUs.TIER_0, [c, E, I, m, U, w, k, p]),
+            [l.PremiumSubscriptionSKUs.TIER_1]: new o.default(l.PremiumSubscriptionSKUs.TIER_1, [c, E, S, A, m, C, L, M, w, k, p]),
+            [l.PremiumSubscriptionSKUs.TIER_2]: new o.default(l.PremiumSubscriptionSKUs.TIER_2, [c, E, I, T, f, S, A, h, m, N, R, C, g, L, D, M, y, P, U, b, G, w, k, p, O, v])
         });
 
-    function B(e, t) {
+    function V(e, t) {
         return e.getFeatureValue(t)
     }
 }
