@@ -132,7 +132,17 @@ function(e, t, n) {
             claimedTier: null !== (t = e.claimed_tier) && void 0 !== t ? t : null,
             lastStreamHeartbeatAt: e.last_stream_heartbeat_at,
             streamProgressSeconds: e.stream_progress_seconds,
-            dismissedQuestContent: e.dismissed_quest_content
+            dismissedQuestContent: e.dismissed_quest_content,
+            progress: function(e) {
+                let t = {};
+                for (let [n, i] of Object.entries(e)) t[n] = {
+                    eventName: i.event_name,
+                    value: i.value,
+                    updatedAt: i.updated_at,
+                    completedAt: i.completed_at
+                };
+                return t
+            }(e.progress)
         }
     }
 
