@@ -347,6 +347,11 @@ function(e, t, n) {
             inlineRequire: () => n("696287").default,
             neverLoadBeforeConnectionOpen: !0
         },
+        DmSettingsUpsellManager: {
+            actions: ["DM_SETTINGS_UPSELL_SHOW"],
+            inlineRequire: () => n("401416").default,
+            neverLoadBeforeConnectionOpen: !0
+        },
         TenureRewardManager: {
             actions: ["POST_CONNECTION_OPEN", "CONNECTION_CLOSED", "ENTITLEMENT_FETCH_APPLICATION_SUCCESS", "ENTITLEMENT_CREATE", "ENTITLEMENT_UPDATE", "ENTITLEMENT_DELETE", "LOGOUT"],
             inlineRequire: () => n("944880").default,

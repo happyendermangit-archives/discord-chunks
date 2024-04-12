@@ -3,8 +3,8 @@ function(e, t, a) {
     a.r(t), a("47120");
     var d = a("348327"),
         n = a.n(d),
-        i = a("392711"),
-        c = a.n(i),
+        c = a("392711"),
+        i = a.n(c),
         o = a("570140"),
         r = a("846027"),
         f = a("287734"),
@@ -53,7 +53,7 @@ function(e, t, a) {
                     return
                 }
                 this.callbackActions[e.buttonName]()
-            }), T(this, "handleViewUpdate", c().debounce(() => {
+            }), T(this, "handleViewUpdate", i().debounce(() => {
                 let e = _.default.getVoiceChannelId();
                 if (null == e) {
                     this.setThumbarButtons([]);
@@ -63,21 +63,21 @@ function(e, t, a) {
                     a = m.default.isSelfDeaf(),
                     d = m.default.isVideoEnabled(),
                     n = m.default.isVideoAvailable(),
-                    i = p.default.getChannel(e),
-                    c = null == i || (0, u.getVideoPermission)(i),
+                    c = p.default.getChannel(e),
+                    i = null == c || (0, u.getVideoPermission)(c),
                     {
                         reachedLimit: o,
                         limit: r
-                    } = null != i ? (0, l.getChannelVideoLimit)(i) : {
+                    } = null != c ? (0, l.getChannelVideoLimit)(c) : {
                         reachedLimit: void 0,
                         limit: void 0
                     },
                     f = (0, b.getVideoButtonLabel)({
                         enabled: d,
                         join: !1,
-                        channel: i,
+                        channel: c,
                         cameraUnavailable: !n,
-                        hasPermission: c,
+                        hasPermission: i,
                         channelLimit: r,
                         channelLimitReached: o
                     });

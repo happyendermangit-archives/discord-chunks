@@ -8,11 +8,11 @@ function(e, t, a) {
     var d = a("735250");
     a("470079");
     var n = a("481060"),
-        i = a("695346"),
-        c = a("981631");
+        c = a("695346"),
+        i = a("981631");
 
     function o(e, t) {
-        i.AlwaysPreviewVideo.getSetting() ? (0, n.openModalLazy)(async () => {
+        c.AlwaysPreviewVideo.getSetting() ? (0, n.openModalLazy)(async () => {
             let {
                 default: t
             } = await Promise.all([a.e("99387"), a.e("5528"), a.e("45733")]).then(a.bind(a, "601572"));
@@ -23,7 +23,7 @@ function(e, t, a) {
             })
         }, {
             modalKey: "camera-preview",
-            contextKey: t === c.AppContext.POPOUT ? n.POPOUT_MODAL_CONTEXT : n.DEFAULT_MODAL_CONTEXT
+            contextKey: t === i.AppContext.POPOUT ? n.POPOUT_MODAL_CONTEXT : n.DEFAULT_MODAL_CONTEXT
         }) : null == e || e()
     }
 }

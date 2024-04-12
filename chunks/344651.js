@@ -1487,5 +1487,10 @@ function(e, t, n) {
             type: "USER_APPLICATION_REMOVE",
             applicationId: e.application_id
         })
+    }), b(["DM_SETTINGS_UPSELL_SHOW"], e => {
+        k({
+            type: "DM_SETTINGS_UPSELL_SHOW",
+            guildId: e.guild_id
+        })
     })
 }

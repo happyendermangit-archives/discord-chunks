@@ -12,8 +12,8 @@ function(e, t, a) {
         if (null != t) return [t.params.guildId, t.params.channelId];
         let a = (0, d.coerceGuildsRoute)(e);
         if (null != a) {
-            var n, i;
-            return [null === (n = a.params) || void 0 === n ? void 0 : n.guildId, null === (i = a.params) || void 0 === i ? void 0 : i.channelId]
+            var n, c;
+            return [null === (n = a.params) || void 0 === n ? void 0 : n.guildId, null === (c = a.params) || void 0 === c ? void 0 : c.channelId]
         }
         return [void 0, void 0]
     }
