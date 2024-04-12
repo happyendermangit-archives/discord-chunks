@@ -76,6 +76,7 @@ function(e, t, n) {
                     }, f.className),
                     color: f.color,
                     look: f.look,
+                    innerClassName: f.innerClassName,
                     onClick: e => {
                         I(e), null == m || m(c.ContentDismissActionType.PRIMARY)
                     },

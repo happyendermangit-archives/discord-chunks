@@ -7,8 +7,8 @@ function(e, t, a) {
     }), a("653041"), a("47120");
     var d = a("512722"),
         n = a.n(d),
-        i = a("90757"),
-        c = a.n(i),
+        c = a("90757"),
+        i = a.n(c),
         r = a("65154");
 
     function o(e, t, a) {
@@ -17,10 +17,10 @@ function(e, t, a) {
             width: 150,
             height: 150
         };
-        let i = [];
-        return t.includes(r.DesktopSources.SCREEN) && e.supports(r.Features.SCREEN_PREVIEWS) && (i.push(e.getScreenPreviews(a.width, a.height)), t = t.filter(e => e !== r.DesktopSources.SCREEN)), t.includes(r.DesktopSources.WINDOW) && e.supports(r.Features.WINDOW_PREVIEWS) && (i.push(e.getWindowPreviews(a.width, a.height)), t = t.filter(e => e !== r.DesktopSources.WINDOW)), 0 !== t.length && i.push(d.desktopCapture.getDesktopCaptureSources({
+        let c = [];
+        return t.includes(r.DesktopSources.SCREEN) && e.supports(r.Features.SCREEN_PREVIEWS) && (c.push(e.getScreenPreviews(a.width, a.height)), t = t.filter(e => e !== r.DesktopSources.SCREEN)), t.includes(r.DesktopSources.WINDOW) && e.supports(r.Features.WINDOW_PREVIEWS) && (c.push(e.getWindowPreviews(a.width, a.height)), t = t.filter(e => e !== r.DesktopSources.WINDOW)), 0 !== t.length && c.push(d.desktopCapture.getDesktopCaptureSources({
             types: t,
             thumbnailSize: a
-        })), Promise.all(i).then(e => c()(e))
+        })), Promise.all(c).then(e => i()(e))
     }
 }

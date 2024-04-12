@@ -3,12 +3,12 @@ function(e, t, a) {
     a.r(t);
     var d = a("585483"),
         n = a("5967"),
-        i = a("933513"),
-        c = a("981631");
+        c = a("933513"),
+        i = a("981631");
     t.default = {
         init() {
             document.addEventListener("paste", e => {
-                !(0, i.default)((0, n.eventOwnerDocument)(e)) && d.ComponentDispatch.dispatchToLastSubscribed(c.ComponentActions.GLOBAL_CLIPBOARD_PASTE, {
+                !(0, c.default)((0, n.eventOwnerDocument)(e)) && d.ComponentDispatch.dispatchToLastSubscribed(i.ComponentActions.GLOBAL_CLIPBOARD_PASTE, {
                     event: e
                 })
             })
