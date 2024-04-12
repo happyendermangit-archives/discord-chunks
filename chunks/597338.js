@@ -33,7 +33,6 @@ function(e) {
         slideContent: "slideContent__6ae94",
         stepNum: "stepNum_b5f2f3",
         subtitle: "subtitle__62596",
-        tagInput: "tagInput__4fbf8",
         timeSelection: "timeSelection_cf3393",
         timeSelectorRow: "timeSelectorRow_d86011",
         title: "title__20916",
