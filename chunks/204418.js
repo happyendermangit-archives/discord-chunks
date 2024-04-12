@@ -15,11 +15,12 @@ function(e, t, n) {
             avatarDecorationOverride: a,
             status: u,
             avatarSize: d = r.AvatarSizes.SIZE_120,
-            "aria-hidden": _ = !1
+            "aria-hidden": _ = !1,
+            className: c
         } = e, {
-            avatarDecorationSrc: c,
-            avatarSrc: E,
-            eventHandlers: I
+            avatarDecorationSrc: E,
+            avatarSrc: I,
+            eventHandlers: T
         } = (0, s.default)({
             user: t,
             guildId: n,
@@ -28,13 +29,14 @@ function(e, t, n) {
             avatarDecorationOverride: a
         });
         return (0, i.jsx)(l, {
-            avatarDecoration: c,
-            src: E,
+            avatarDecoration: E,
+            src: I,
             size: d,
             status: u,
             "aria-label": _ ? void 0 : o.default.Messages.USER_SETTINGS_AVATAR,
             "aria-hidden": _,
-            ...I
+            className: c,
+            ...T
         })
     }
 }

@@ -128,24 +128,24 @@ function(e, t, n) {
                             decode: e.decode
                         }
                     })], this.logger.info("Video codecs: ".concat(this.codecs.map(e => e.name))), t.getEncryptionModes(i => {
-                        var r, s, u, d, _, c, E, I, T, S, A;
-                        this.logger.info("Encryption modes: ".concat(i)), t.setTransportOptions(this.getConnectionTransportOptions()), t.setSelfMute(this.selfMute || this.context === p.MediaEngineContextTypes.STREAM), t.setSelfDeafen(this.selfDeaf), t.setOnSpeakingCallback(this.handleSpeakingNative), null === (r = t.setOnNativeMuteToggleCallback) || void 0 === r || r.call(t, this.handleNativeMuteToggled), null === (s = t.setOnNativeMuteChangedCallback) || void 0 === s || s.call(t, this.handleNativeMuteChanged), null === (u = t.setOnSpeakingWhileMutedCallback) || void 0 === u || u.call(t, this.handleSpeakingWhileMuted), null === (d = t.setPingInterval) || void 0 === d || d.call(t, p.PING_INTERVAL), t.setPingCallback(this.handlePing), null === (_ = t.setPingTimeoutCallback) || void 0 === _ || _.call(t, this.handlePingTimeout), null === (c = t.setOnVideoEncoderFallbackCallback) || void 0 === c || c.call(t, this.handleVideoEncoderFallback), n.setTransportOptions({
+                        var r, s, u, d, _, c, E, I, T, S;
+                        this.logger.info("Encryption modes: ".concat(i)), t.setTransportOptions(this.getConnectionTransportOptions()), t.setSelfMute(this.selfMute || this.context === p.MediaEngineContextTypes.STREAM), t.setSelfDeafen(this.selfDeaf), t.setOnSpeakingCallback(this.handleSpeakingNative), null === (r = t.setOnNativeMuteToggleCallback) || void 0 === r || r.call(t, this.handleNativeMuteToggled), null === (s = t.setOnSpeakingWhileMutedCallback) || void 0 === s || s.call(t, this.handleSpeakingWhileMuted), null === (u = t.setPingInterval) || void 0 === u || u.call(t, p.PING_INTERVAL), t.setPingCallback(this.handlePing), null === (d = t.setPingTimeoutCallback) || void 0 === d || d.call(t, this.handlePingTimeout), null === (_ = t.setOnVideoEncoderFallbackCallback) || void 0 === _ || _.call(t, this.handleVideoEncoderFallback), n.setTransportOptions({
                             builtInEchoCancellation: !0,
                             echoCancellation: this.echoCancellation,
                             noiseSuppression: this.noiseSuppression,
                             automaticGainControl: this.automaticGainControl,
                             noiseCancellation: this.noiseCancellation
-                        }), n.setNoInputThreshold(-100), n.setNoInputCallback(this.handleNoInput), this.videoSupported && (t.setOnVideoCallback(this.handleVideo), null === (E = t.setOnFirstFrameCallback) || void 0 === E || E.call(t, this.handleFirstFrame), null === (I = t.setOnDesktopSourceEnded) || void 0 === I || I.call(t, this.handleDesktopSourceEnded), null === (T = t.setOnSoundshare) || void 0 === T || T.call(t, this.handleSoundshare), null === (S = t.setOnSoundshareEnded) || void 0 === S || S.call(t, this.handleSoundshareEnded), null === (A = t.setOnSoundshareFailed) || void 0 === A || A.call(t, this.handleSoundshareFailed)), this.setConnectionState(p.ConnectionStates.CONNECTED), this.emit(f.BaseConnectionEvent.Connected, a, {
+                        }), n.setNoInputThreshold(-100), n.setNoInputCallback(this.handleNoInput), this.videoSupported && (t.setOnVideoCallback(this.handleVideo), null === (c = t.setOnFirstFrameCallback) || void 0 === c || c.call(t, this.handleFirstFrame), null === (E = t.setOnDesktopSourceEnded) || void 0 === E || E.call(t, this.handleDesktopSourceEnded), null === (I = t.setOnSoundshare) || void 0 === I || I.call(t, this.handleSoundshare), null === (T = t.setOnSoundshareEnded) || void 0 === T || T.call(t, this.handleSoundshareEnded), null === (S = t.setOnSoundshareFailed) || void 0 === S || S.call(t, this.handleSoundshareFailed)), this.setConnectionState(p.ConnectionStates.CONNECTED), this.emit(f.BaseConnectionEvent.Connected, a, {
                             address: o,
                             port: l,
                             mode: this.chooseEncryptionMode(e.modes, i),
                             codecs: this.codecs
                         }), this.on(f.BaseConnectionEvent.Stats, this.handleStats);
-                        let h = this.getUserOptions();
-                        for (let e of (h.forEach(e => {
+                        let A = this.getUserOptions();
+                        for (let e of (A.forEach(e => {
                                 var t, n;
                                 return this.logger.info("Creating user: ".concat(e.id, " with audio SSRC: ").concat(e.ssrc, " and video SSRCs: ").concat(null !== (n = null === (t = e.videoSsrcs) || void 0 === t ? void 0 : t.join(",")) && void 0 !== n ? n : 0))
-                            }), t.mergeUsers(h), this.emit(f.BaseConnectionEvent.RemoteStreamsReady, h.length), Object.keys(this.localSpeakingFlags))) e !== this.userId && this.setSpeakingFlags(e, this.localSpeakingFlags[e])
+                            }), t.mergeUsers(A), this.emit(f.BaseConnectionEvent.RemoteStreamsReady, A.length), Object.keys(this.localSpeakingFlags))) e !== this.userId && this.setSpeakingFlags(e, this.localSpeakingFlags[e])
                     })
                 })
             })).setDesktopSourceStatusCallback) || void 0 === r || r.call(t, e => {
@@ -755,8 +755,6 @@ function(e, t, n) {
                 n = "boolean" == typeof t ? t ? p.SpeakingFlags.VOICE : p.SpeakingFlags.NONE : t, this.handleSpeakingFlags(e, n)
             }), R(this, "handleNativeMuteToggled", () => {
                 this.emit(f.BaseConnectionEvent.ToggleMuteFromNative)
-            }), R(this, "handleNativeMuteChanged", e => {
-                this.emit(f.BaseConnectionEvent.NativeMuteChanged, e)
             }), R(this, "handleSpeakingFlags", (e, t) => {
                 this.localSpeakingFlags[e] = t;
                 let n = e === this.userId ? this.audioSSRC : this.remoteAudioSSRCs[e];
