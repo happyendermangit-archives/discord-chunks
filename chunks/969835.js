@@ -10,71 +10,73 @@ function(e, t, n) {
         u = n("727637"),
         d = n("100527"),
         _ = n("906732"),
-        c = n("271383"),
-        E = n("430824"),
-        I = n("594174"),
-        T = n("785717"),
-        f = n("318661"),
-        S = n("747074"),
-        A = n("131640"),
+        c = n("680295"),
+        E = n("271383"),
+        I = n("430824"),
+        T = n("594174"),
+        f = n("785717"),
+        S = n("318661"),
+        A = n("502762"),
         h = n("958120"),
-        m = n("228168");
+        m = n("23293"),
+        N = n("228168");
 
-    function N(e) {
+    function O(e) {
         e.stopPropagation()
     }
 
-    function O(e) {
+    function p(e) {
         let {
             user: t,
             guildId: n,
             channelId: s,
             messageId: a,
-            closePopout: I,
-            setPopoutRef: O,
-            disableUserProfileLink: p = __OVERLAY__,
-            newAnalyticsLocations: R = []
+            closePopout: T,
+            setPopoutRef: p,
+            disableUserProfileLink: R = __OVERLAY__,
+            newAnalyticsLocations: C = []
         } = e, {
-            analyticsLocations: C
-        } = (0, _.default)([...R, d.default.BITE_SIZE_PROFILE_POPOUT]), g = r.useRef(null), L = (0, f.default)(t.id, n), D = (0, u.default)(g), v = (0, o.useStateFromStores)([E.default], () => null != n ? E.default.getGuild(n) : null), M = (0, o.useStateFromStores)([c.default], () => null != n ? c.default.getMember(n, t.id) : null);
+            analyticsLocations: g
+        } = (0, _.default)([...C, d.default.BITE_SIZE_PROFILE_POPOUT]), L = r.useRef(null), D = (0, S.default)(t.id, n), v = (0, u.default)(L), M = (0, o.useStateFromStores)([I.default], () => null != n ? I.default.getGuild(n) : null), y = (0, o.useStateFromStores)([E.default], () => null != n ? E.default.getMember(n, t.id) : null);
         return r.useEffect(() => {
-            null == O || O(null == g ? void 0 : g.current)
-        }, [g, O]), (0, i.jsx)(_.AnalyticsLocationProvider, {
-            value: C,
-            children: (0, i.jsx)(T.UserProfileAnalyticsProvider, {
+            null == p || p(null == L ? void 0 : L.current)
+        }, [L, p]), (0, i.jsx)(_.AnalyticsLocationProvider, {
+            value: g,
+            children: (0, i.jsx)(f.UserProfileAnalyticsProvider, {
                 layout: "BITE_SIZE_POPOUT",
                 userId: t.id,
                 guildId: n,
                 channelId: s,
                 messageId: a,
-                shouldTrackViewOnMount: null == M || null != M.fullProfileLoadedTimestamp,
-                children: (0, i.jsx)(l.Dialog, {
-                    ref: g,
+                shouldTrackViewOnMount: null == y || null != y.fullProfileLoadedTimestamp,
+                children: (0, i.jsxs)(l.Dialog, {
+                    ref: L,
                     "aria-label": t.username,
-                    onClick: N,
-                    onContextMenu: N,
-                    children: (0, i.jsxs)(S.default, {
+                    onClick: O,
+                    onContextMenu: O,
+                    children: [(0, i.jsxs)(A.default, {
                         user: t,
                         guildId: n,
-                        profileType: m.UserProfileTypes.POPOUT,
-                        children: [(0, i.jsx)(A.BiteSizeProfileHeader, {
+                        profileType: N.UserProfileTypes.POPOUT,
+                        children: [(0, i.jsx)(m.default, {
                             user: t,
-                            displayProfile: L,
+                            displayProfile: D,
                             guildId: n,
                             channelId: s,
-                            onClose: I,
-                            disableUserProfileLink: p,
-                            isHovering: D
-                        }), (0, i.jsx)(S.default.Inner, {
-                            children: (0, i.jsx)(h.default, {
-                                user: t,
-                                displayProfile: L,
-                                guild: v,
-                                channelId: s,
-                                onClose: I
-                            })
+                            onClose: T,
+                            disableUserProfileLink: R
+                        }), (0, i.jsx)(h.default, {
+                            user: t,
+                            displayProfile: D,
+                            guild: M,
+                            channelId: s,
+                            onClose: T
                         })]
-                    })
+                    }), (null == D ? void 0 : D.profileEffectId) != null && (0, i.jsx)(c.default, {
+                        profileEffectId: null == D ? void 0 : D.profileEffectId,
+                        bannerAdjustment: 0,
+                        isHovering: v
+                    })]
                 })
             })
         })
@@ -84,8 +86,8 @@ function(e, t, n) {
             userId: t,
             user: n,
             ...r
-        } = e, s = (0, o.useStateFromStores)([I.default], () => I.default.getUser(t), [t]), l = null != n ? n : s;
-        return a()(null != l, "Unexpected missing user"), (0, i.jsx)(O, {
+        } = e, s = (0, o.useStateFromStores)([T.default], () => T.default.getUser(t), [t]), l = null != n ? n : s;
+        return a()(null != l, "Unexpected missing user"), (0, i.jsx)(p, {
             user: l,
             ...r
         })

@@ -12,7 +12,7 @@ function(e, t, n) {
         _ = n("607070"),
         c = n("605236"),
         E = n("725790"),
-        I = n("747074"),
+        I = n("652853"),
         T = n("228168"),
         f = n("556777");
     let S = () => {
@@ -21,16 +21,16 @@ function(e, t, n) {
             n = (0, u.default)(),
             {
                 profileTheme: i
-            } = r.useContext(I.UserProfileContext),
-            l = (0, o.isThemeDark)(n) && (0, o.isThemeLight)(i);
-        return !e && !t && l
+            } = (0, I.useUserProfileThemeContext)(),
+            r = (0, o.isThemeDark)(n) && (0, o.isThemeLight)(i);
+        return !e && !t && r
     };
     t.default = e => {
         let {
             onTooltipClose: t
         } = e, {
             profileType: n
-        } = r.useContext(I.UserProfileContext), s = n === T.UserProfileTypes.POPOUT, a = S(), [o, u] = r.useState(!s && a);
+        } = (0, I.useUserProfileThemeContext)(), s = n === T.UserProfileTypes.POPOUT, a = S(), [o, u] = r.useState(!s && a);
         return (0, d.default)(() => u(a), s ? 300 : null), (0, i.jsx)(l.Popout, {
             shouldShow: o,
             position: "left",

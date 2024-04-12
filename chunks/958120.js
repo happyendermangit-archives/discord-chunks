@@ -25,25 +25,20 @@ function(e, t, n) {
         let {
             user: t,
             displayProfile: n,
-            onClose: S,
-            guild: A,
-            channelId: h
+            guild: S,
+            channelId: A,
+            onClose: h
         } = e, {
             moreUserDetailsEnabled: m
         } = (0, o.useSimplifiedProfileExperiment)({
             location: "BiteSizeProfileBody"
-        }), N = a.default.getName(null == A ? void 0 : A.id, h, t), O = (0, l.default)(t.id, null == A ? void 0 : A.id), p = (0, r.useStateFromStores)([s.default], () => s.default.hidePersonalInformation);
-        return t.isSystemUser() ? null : t.isNonUserBot() ? (0, i.jsx)(u.default, {
-            className: f.paddingBottom,
-            user: t,
-            guildId: null == A ? void 0 : A.id
-        }) : (0, i.jsxs)("div", {
-            className: f.paddingBottom,
+        }), N = a.default.getName(null == S ? void 0 : S.id, A, t), O = (0, l.default)(t.id, null == S ? void 0 : S.id), p = (0, r.useStateFromStores)([s.default], () => s.default.hidePersonalInformation);
+        return t.isSystemUser() ? null : (0, i.jsxs)("div", {
+            className: f.body,
             children: [(0, i.jsx)(u.default, {
-                className: f.username,
                 user: t,
-                guildId: null == A ? void 0 : A.id,
-                icon: t.hasAvatarForGuild(null == A ? void 0 : A.id) && (0, i.jsx)(_.default, {
+                guildId: null == S ? void 0 : S.id,
+                icon: t.hasAvatarForGuild(null == S ? void 0 : S.id) && (0, i.jsx)(_.default, {
                     user: t,
                     nickname: N
                 }),
@@ -52,7 +47,7 @@ function(e, t, n) {
                         pronouns: null == n ? void 0 : n.pronouns
                     }), (0, i.jsx)(d.UserProfileBadgesTag, {
                         user: t,
-                        guildId: null == A ? void 0 : A.id
+                        guildId: null == S ? void 0 : S.id
                     })]
                 })
             }), m && (0, i.jsx)(I.default, {
@@ -61,10 +56,10 @@ function(e, t, n) {
                 user: t,
                 bio: null == n ? void 0 : n.bio,
                 hidePersonalInformation: p,
-                onClose: S
+                onClose: h
             }), (0, i.jsx)(T.default, {
                 user: t,
-                guild: A
+                guild: S
             }), O && (0, i.jsx)(E.default, {
                 user: t
             })]
