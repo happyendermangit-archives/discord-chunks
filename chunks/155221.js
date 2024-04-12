@@ -7,13 +7,13 @@ function(e, t, a) {
     }), a("47120");
     var d = a("735250"),
         n = a("470079"),
-        c = a("664751"),
-        i = a("266067"),
-        o = a("613828"),
-        r = a("990547"),
+        i = a("664751"),
+        c = a("266067"),
+        r = a("613828"),
+        o = a("990547"),
         f = a("719711"),
-        s = a("271579"),
-        l = a("756647"),
+        l = a("271579"),
+        s = a("756647"),
         u = a("442837"),
         b = a("433517"),
         h = a("799656"),
@@ -23,23 +23,23 @@ function(e, t, a) {
         E = a("329816"),
         g = a("554608"),
         I = a("83949"),
-        O = a("137412"),
-        T = a("314897"),
-        w = a("626135"),
+        T = a("137412"),
+        O = a("314897"),
+        R = a("626135"),
         v = a("361207"),
-        R = a("690032"),
+        w = a("690032"),
         S = a("358085"),
         A = a("998502"),
         N = a("981631"),
         C = a("188785"),
         D = a("436620");
     a("928518"), a("972830"), a("704806");
-    let P = (0, _.makeLazy)({
+    let L = (0, _.makeLazy)({
             createPromise: () => Promise.all([a.e("49237"), a.e("61482")]).then(a.bind(a, "576184")),
             webpackId: "576184",
             name: "UnsupportedBrowser"
         }),
-        L = (0, _.makeLazy)({
+        P = (0, _.makeLazy)({
             createPromise: () => Promise.all([a.e("99387"), a.e("88571")]).then(a.bind(a, "431583")),
             webpackId: "431583",
             name: "DownloadApps"
@@ -91,12 +91,12 @@ function(e, t, a) {
             webpackId: "822699",
             name: "ViewsWithAuth"
         }),
-        F = (0, _.makeLazy)({
+        B = (0, _.makeLazy)({
             createPromise: () => a.e("32640").then(a.bind(a, "285773")),
             webpackId: "285773",
             name: "ViewsWithOAuth2"
         }),
-        B = (0, _.makeLazy)({
+        F = (0, _.makeLazy)({
             createPromise: () => Promise.all([a.e("49237"), a.e("99387"), a.e("81539"), a.e("56630"), a.e("6380"), a.e("65840"), a.e("18101"), a.e("11256"), a.e("47849"), a.e("83749")]).then(a.bind(a, "317281")),
             webpackId: "317281",
             name: "ViewsWithUnauthenticatedApplicationDirectory"
@@ -134,10 +134,10 @@ function(e, t, a) {
     }
     class J extends n.Component {
         componentDidMount() {
-            A.default.cleanupDisplaySleep(), O.default.initialize()
+            A.default.cleanupDisplaySleep(), T.default.initialize()
         }
         componentWillUnmount() {
-            O.default.terminate()
+            T.default.terminate()
         }
         render() {
             let e;
@@ -146,57 +146,57 @@ function(e, t, a) {
                 migrationStatus: a,
                 skipsSettingDefaultPageTitle: n
             } = this.props;
-            return e = a === g.MigrationStatus.IN_PROGRESS ? null : D.IS_APP_COMPATIBLE_BROWSER ? S.isPlatformEmbedded ? (0, d.jsxs)(o.Switch, {
-                children: [(0, d.jsx)(o.Route, {
+            return e = a === g.MigrationStatus.IN_PROGRESS ? null : D.IS_APP_COMPATIBLE_BROWSER ? S.isPlatformEmbedded ? (0, d.jsxs)(r.Switch, {
+                children: [(0, d.jsx)(r.Route, {
                     exact: !0,
                     path: N.Routes.INDEX,
                     render: () => (0, d.jsx)(h.default, {})
                 }), (0, d.jsx)(m.default, {
                     exact: !0,
                     path: N.Routes.APPS,
-                    component: L
-                }), (0, d.jsx)(o.Route, {
+                    component: P
+                }), (0, d.jsx)(r.Route, {
                     path: Q([N.Routes.LOGIN, N.Routes.REGISTER, N.Routes.INVITE(":inviteCode"), N.Routes.INVITE_LOGIN(":inviteCode"), N.Routes.GIFT_CODE(":giftCode"), N.Routes.GIFT_CODE_LOGIN(":giftCode"), N.Routes.RESET], C.CONFERENCE_MODE_ENABLED),
                     component: H
                 }), (0, d.jsx)(m.default, {
                     path: N.Routes.INVITE_PROXY(":channelId"),
                     component: y
-                }), (0, d.jsx)(o.Redirect, {
+                }), (0, d.jsx)(r.Redirect, {
                     from: N.Routes.INVITE(""),
                     to: N.Routes.LOGIN
-                }), (0, d.jsx)(o.Redirect, {
+                }), (0, d.jsx)(r.Redirect, {
                     from: N.Routes.GIFT_CODE(""),
                     to: N.Routes.LOGIN
-                }), (0, d.jsx)(o.Route, {
+                }), (0, d.jsx)(r.Route, {
                     render: q
                 })]
-            }) : (0, d.jsxs)(o.Switch, {
+            }) : (0, d.jsxs)(r.Switch, {
                 children: [(0, d.jsx)(m.default, {
                     exact: !0,
                     path: N.Routes.INDEX,
                     render: () => (0, d.jsx)(h.default, {})
-                }), (0, d.jsx)(o.Route, {
+                }), (0, d.jsx)(r.Route, {
                     path: Q([N.Routes.LOGIN, N.Routes.LOGIN_HANDOFF, N.Routes.REGISTER, N.Routes.BILLING_PREFIX, N.Routes.BILLING_PROMOTION_REDEMPTION(":code"), N.Routes.INVITE(":inviteCode"), N.Routes.INVITE_LOGIN(":inviteCode"), N.Routes.GIFT_CODE(":giftCode"), N.Routes.GIFT_CODE_LOGIN(":giftCode"), N.Routes.GUILD_TEMPLATE(":guildTemplateCode"), N.Routes.GUILD_TEMPLATE_LOGIN(":guildTemplateCode"), N.Routes.DISABLE_EMAIL_NOTIFICATIONS, N.Routes.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, N.Routes.RESET, N.Routes.REPORT, N.Routes.REPORT_SECOND_LOOK], C.CONFERENCE_MODE_ENABLED),
                     component: H
-                }), t ? null : (0, d.jsx)(o.Route, {
+                }), t ? null : (0, d.jsx)(r.Route, {
                     path: N.Routes.PICK_GUILD_SETTINGS(":section?", ":subsection?"),
                     component: H
-                }), t ? null : (0, d.jsx)(o.Route, {
+                }), t ? null : (0, d.jsx)(r.Route, {
                     path: N.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?"),
                     component: H
-                }), (0, d.jsx)(o.Redirect, {
+                }), (0, d.jsx)(r.Redirect, {
                     from: N.Routes.INVITE(""),
                     to: N.Routes.LOGIN
                 }), (0, d.jsx)(m.default, {
                     path: N.Routes.INVITE_PROXY(":channelId"),
                     component: y
-                }), (0, d.jsx)(o.Redirect, {
+                }), (0, d.jsx)(r.Redirect, {
                     from: N.Routes.GIFT_CODE(""),
                     to: N.Routes.LOGIN
                 }), (0, d.jsx)(m.default, {
                     path: N.Routes.QUESTS(":questId"),
                     component: X,
-                    impressionName: r.ImpressionNames.QUESTS_LANDING_PAGE,
+                    impressionName: o.ImpressionNames.QUESTS_LANDING_PAGE,
                     impressionProperties: e => {
                         let {
                             computedMatch: t
@@ -233,62 +233,62 @@ function(e, t, a) {
                     path: N.Routes.DOWNLOAD_QR_CODE_REDIRECT,
                     render: () => {
                         var e, t, a;
-                        let d = null === (e = w.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
-                            n = (0, c.parse)((null !== (a = window.location.search) && void 0 !== a ? a : "").substr(1)),
-                            i = null === (t = n.referring_location) || void 0 === t ? void 0 : t.toString();
-                        return ("iOS" === d || "Android" === d) && w.default.track(N.AnalyticEvents.DOWNLOAD_APP, {
+                        let d = null === (e = R.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
+                            n = (0, i.parse)((null !== (a = window.location.search) && void 0 !== a ? a : "").substr(1)),
+                            c = null === (t = n.referring_location) || void 0 === t ? void 0 : t.toString();
+                        return ("iOS" === d || "Android" === d) && R.default.track(N.AnalyticEvents.DOWNLOAD_APP, {
                             platform: d,
                             ptb: !1,
                             released: !0,
                             has_e_mail: "true" === n.has_e_mail,
-                            referring_location: i,
+                            referring_location: c,
                             qr_code: !0
-                        }), window.location.href = (0, v.getMobileDownloadLink)(null != i && "" !== i ? i : "qr_code", d), null
+                        }), window.location.href = (0, v.getMobileDownloadLink)(null != c && "" !== c ? c : "qr_code", d), null
                     }
                 }), (0, d.jsx)(m.default, {
                     path: N.Routes.OPEN_APP_FROM_EMAIL,
                     render: () => {
                         var e, t;
-                        let a = null === (e = w.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
-                            n = (0, R.getOpenAppFromEmailDestinations)(null !== (t = window.location.search) && void 0 !== t ? t : "");
-                        if ("iOS" !== a && "Android" !== a) return (0, d.jsx)(o.Redirect, {
+                        let a = null === (e = R.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
+                            n = (0, w.getOpenAppFromEmailDestinations)(null !== (t = window.location.search) && void 0 !== t ? t : "");
+                        if ("iOS" !== a && "Android" !== a) return (0, d.jsx)(r.Redirect, {
                             to: null != n.desktop ? "".concat(n.desktop.pathname).concat(n.desktop.search) : N.Routes.APP
                         });
                         {
                             let e = (0, v.getMobileDownloadLink)("app_open_from_email", a, n.mobile),
-                                t = (0, s.parseDynamicLink)(e);
-                            null != t && w.default.track(N.AnalyticEvents.DEEP_LINK_CLICKED, {
-                                fingerprint: (0, l.maybeExtractId)(t.fingerprint),
+                                t = (0, l.parseDynamicLink)(e);
+                            null != t && R.default.track(N.AnalyticEvents.DEEP_LINK_CLICKED, {
+                                fingerprint: (0, s.maybeExtractId)(t.fingerprint),
                                 attempt_id: t.attemptId,
                                 source: t.utmSource,
                                 destination: null != n.mobile ? n.mobile.toString() : null
                             }), window.location.href = e
                         }
                     }
-                }), (0, d.jsx)(o.Redirect, {
+                }), (0, d.jsx)(r.Redirect, {
                     from: N.Routes.CONNECT_AUTHORIZE,
                     to: {
                         ...location,
                         pathname: N.Routes.OAUTH2_AUTHORIZE
                     }
-                }), (0, d.jsx)(o.Route, {
+                }), (0, d.jsx)(r.Route, {
                     path: [N.Routes.OAUTH2_AUTHORIZED, N.Routes.OAUTH2_AUTHORIZE, N.Routes.OAUTH2_ERROR, N.Routes.OAUTH2_WHITELIST_ACCEPT],
-                    component: F
-                }), t ? null : (0, d.jsx)(o.Route, {
+                    component: B
+                }), t ? null : (0, d.jsx)(r.Route, {
                     path: [N.Routes.ACCOUNT_STANDING],
                     component: Y
-                }), t ? null : (0, d.jsx)(o.Route, {
+                }), t ? null : (0, d.jsx)(r.Route, {
                     path: N.Routes.APPLICATION_STORE,
                     component: p.default
-                }), t ? null : (0, d.jsx)(o.Route, {
+                }), t ? null : (0, d.jsx)(r.Route, {
                     path: [N.Routes.APPLICATION_DIRECTORY_SEARCH, N.Routes.APPLICATION_DIRECTORY_PROFILE(":applicationId", ":section?"), N.Routes.APPLICATION_DIRECTORY],
-                    component: B
-                }), (0, d.jsx)(o.Route, {
+                    component: F
+                }), (0, d.jsx)(r.Route, {
                     render: q
                 })]
-            }) : (0, d.jsx)(o.Switch, {
+            }) : (0, d.jsx)(r.Switch, {
                 children: (0, d.jsx)(m.default, {
-                    component: P
+                    component: L
                 })
             }), (0, d.jsxs)(E.default, {
                 skipsSettingDefaultPageTitle: n,
@@ -296,8 +296,8 @@ function(e, t, a) {
             })
         }
     }
-    t.default = u.default.connectStores([T.default, g.default], () => ({
-        isAuthenticated: T.default.isAuthenticated(),
+    t.default = u.default.connectStores([O.default, g.default], () => ({
+        isAuthenticated: O.default.isAuthenticated(),
         migrationStatus: g.default.getMigrationStatus()
     }), {
         forwardRef: !0
@@ -305,8 +305,8 @@ function(e, t, a) {
         let t = function() {
             let {
                 pathname: e
-            } = (0, o.useLocation)();
-            return null != (0, i.matchPath)(e, {
+            } = (0, r.useLocation)();
+            return null != (0, c.matchPath)(e, {
                 path: N.Routes.APPLICATION_DIRECTORY
             })
         }();
