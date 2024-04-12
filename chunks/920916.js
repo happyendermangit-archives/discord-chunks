@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return L
+            return M
         },
         useCollectibleRewardModal: function() {
-            return v
+            return y
         }
     }), n("773603"), n("47120");
     var i = n("735250"),
@@ -16,24 +16,30 @@ function(e, t, n) {
         l = n("481060"),
         u = n("809206"),
         d = n("607070"),
-        _ = n("100527"),
+        _ = n("235400"),
         c = n("204418"),
-        E = n("1585"),
-        I = n("583434"),
-        T = n("530618"),
-        f = n("164946"),
-        S = n("166625"),
-        A = n("25990"),
-        h = n("594174"),
-        m = n("810090"),
-        N = n("272008"),
-        O = n("497505"),
-        p = n("918701"),
+        E = n("583434"),
+        I = n("530618"),
+        T = n("164946"),
+        f = n("166625"),
+        S = n("25990"),
+        A = n("594174"),
+        h = n("810090"),
+        m = n("272008"),
+        N = n("497505"),
+        O = n("918701"),
+        p = n("114732"),
         R = n("675654"),
         C = n("689938"),
         g = n("174415");
 
-    function L(e) {
+    function L() {
+        let e = S.default.getAllPending(),
+            t = (0, T.getAccountUpdateForUpdateRequest)(e);
+        return (0, u.saveAccountChanges)(t).finally(u.resetPendingAccountChanges)
+    }
+
+    function D(e) {
         let {
             transitionState: t,
             onClose: n,
@@ -42,44 +48,48 @@ function(e, t, n) {
             reward: _,
             decoration: c,
             onUseNow: E
-        } = e, I = r.useRef(null), [f, S] = r.useState(null), A = r.useRef(new s.Environment), m = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), C = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), L = (0, p.getHeroAssetUrl)(a), [v, M] = r.useState(!1);
+        } = e, T = r.useRef(null), [f, S] = r.useState(null), h = r.useRef(new s.Environment), C = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), L = (0, o.useStateFromStores)([A.default], () => A.default.getCurrentUser()), D = (0, O.getHeroAssetUrl)(a), [M, y] = r.useState("loading");
         r.useEffect(() => {
             var e;
-            (null === (e = a.userStatus) || void 0 === e ? void 0 : e.claimedAt) == null && (0, N.claimQuestReward)(a.id, O.QuestRewardCodePlatforms.CROSS_PLATFORM, u)
+            (null === (e = a.userStatus) || void 0 === e ? void 0 : e.claimedAt) == null && (0, m.claimQuestReward)(a.id, N.QuestRewardCodePlatforms.CROSS_PLATFORM, u).then(() => y("claimed")).catch(() => y("error"))
         }, [a, u]);
-        r.useEffect(() => () => M(!1), []);
-        let y = null == C;
+        let P = null == L || null == c || "loading" === M;
         return (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(s.ConfettiCanvas, {
                 ref: S,
                 className: g.confettiCanvas,
-                environment: A.current
+                environment: h.current
             }), (0, i.jsx)("div", {
-                ref: I,
+                ref: T,
                 children: (0, i.jsx)(l.ModalRoot, {
                     transitionState: t,
                     size: l.ModalSize.DYNAMIC,
                     className: g.rootContainer,
                     hideShadow: !0,
-                    children: y ? (0, i.jsx)(l.Spinner, {
-                        className: g.spinner,
-                        type: l.Spinner.Type.SPINNING_CIRCLE
-                    }) : (0, i.jsx)(D, {
-                        user: C,
+                    children: P ? (0, i.jsx)("div", {
+                        className: g.spinnerContainer,
+                        children: (0, i.jsx)(l.Spinner, {
+                            className: g.spinner,
+                            type: l.Spinner.Type.SPINNING_CIRCLE
+                        })
+                    }) : "error" === M ? (0, i.jsx)(p.default, {
+                        onClose: n
+                    }) : (0, i.jsx)(v, {
+                        user: L,
                         primaryColor: a.config.colors.primary,
                         secondaryColor: a.config.colors.secondary,
                         decoration: c,
                         decorationName: _.messages.name,
-                        backgroundUrl: L,
-                        isSaving: v,
+                        backgroundUrl: D,
+                        isSaving: "applying" === M,
                         onClose: n,
                         onConfirm: () => {
-                            M(!0), E().finally(n)
+                            y("applying"), E().finally(n)
                         }
                     })
                 })
-            }), !m && !y && (0, i.jsx)(T.default, {
-                confettiTarget: I.current,
+            }), !C && "claimed" === M && (0, i.jsx)(I.default, {
+                confettiTarget: T.current,
                 confettiCanvas: f,
                 sprites: R.COMMON_CONFETTI_SPRITES,
                 colors: R.COMMON_CONFETTI_COLORS
@@ -87,7 +97,7 @@ function(e, t, n) {
         })
     }
 
-    function D(e) {
+    function v(e) {
         let {
             user: t,
             decoration: n,
@@ -99,10 +109,11 @@ function(e, t, n) {
             onClose: d,
             onConfirm: _
         } = e;
-        return (0, i.jsxs)(i.Fragment, {
+        return (0, i.jsxs)("div", {
+            className: g.claimedRootContainer,
             children: [(0, i.jsxs)("div", {
                 className: g.headerContainer,
-                children: [(0, i.jsx)(m.default, {
+                children: [(0, i.jsx)(h.default, {
                     className: g.headerBackground,
                     autoPlay: !1,
                     loop: !1,
@@ -155,47 +166,57 @@ function(e, t, n) {
         })
     }
 
-    function v(e, t) {
-        var s;
-        let o = r.useMemo(() => {
-                var t;
-                return null !== (t = null == e ? void 0 : e.config.rewardsConfig.rewards.find(p.isCollectibleReward)) && void 0 !== t ? t : null
-            }, [e]),
-            [d, c] = function(e) {
-                let {
-                    product: t,
-                    isFetching: n
-                } = (0, I.useFetchCollectiblesProduct)(e), {} = (0, S.default)({}), i = r.useMemo(() => {
-                    if (null == t || n) return null;
-                    let e = t.items.find(e => e.type === a.CollectiblesItemType.AVATAR_DECORATION);
-                    return null == e ? null : e
-                }, [t, n]);
-                return [i, () => {
-                    if (null == i) return Promise.reject();
-                    (0, u.setPendingAvatarDecoration)(i);
-                    let e = A.default.getAllPending(),
-                        t = (0, f.getAccountUpdateForUpdateRequest)(e);
-                    return (0, u.saveAccountChanges)(t).finally(u.resetPendingAccountChanges)
-                }]
-            }(null !== (s = null == o ? void 0 : o.skuId) && void 0 !== s ? s : null);
-        return () => {
-            var r;
-            return null == e || null == o || null == d ? null : ((null === (r = e.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null ? (0, E.openAvatarDecorationModal)({
-                initialSelectedDecoration: d,
-                analyticsLocations: [_.default.USER_SETTINGS_GIFT_INVENTORY]
-            }) : (0, l.openModalLazy)(async () => {
-                let {
-                    default: r
-                } = await Promise.resolve().then(n.bind(n, "920916"));
-                return n => (0, i.jsx)(r, {
-                    ...n,
-                    quest: e,
-                    location: t,
-                    reward: o,
-                    decoration: d,
-                    onUseNow: c
-                })
-            }), null)
-        }
+    function M(e) {
+        var t;
+        let {
+            quest: n,
+            location: s,
+            reward: o,
+            onClose: l,
+            transitionState: d
+        } = e, [c, I] = function(e) {
+            let {
+                product: t,
+                isFetching: n
+            } = (0, E.useFetchCollectiblesProduct)(e), {} = (0, f.default)({}), i = r.useMemo(() => {
+                if (null == t || n) return null;
+                let e = t.items.find(e => e.type === a.CollectiblesItemType.AVATAR_DECORATION);
+                return null == e ? null : e
+            }, [t, n]);
+            return [i, () => null == i ? Promise.reject() : ((0, u.setPendingAvatarDecoration)(i), L())]
+        }(o.skuId);
+        return (null === (t = n.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null ? (0, i.jsx)(_.default, {
+            transitionState: d,
+            onCloseModal: L,
+            onClose: l,
+            analyticsLocations: [],
+            initialSelectedDecoration: c
+        }) : (0, i.jsx)(D, {
+            onClose: l,
+            transitionState: d,
+            quest: n,
+            location: s,
+            reward: o,
+            decoration: c,
+            onUseNow: I
+        })
+    }
+
+    function y(e, t) {
+        let s = r.useMemo(() => {
+            var t;
+            return null !== (t = null == e ? void 0 : e.config.rewardsConfig.rewards.find(O.isCollectibleReward)) && void 0 !== t ? t : null
+        }, [e]);
+        return () => null == e || null == s ? null : ((0, l.openModalLazy)(async () => {
+            let {
+                default: r
+            } = await Promise.resolve().then(n.bind(n, "920916"));
+            return n => (0, i.jsx)(r, {
+                ...n,
+                quest: e,
+                location: t,
+                reward: s
+            })
+        }), null)
     }
 }

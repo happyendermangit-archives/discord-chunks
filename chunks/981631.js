@@ -1322,6 +1322,7 @@ function(_, E, e) {
             USER_TRIAL_OFFER: "/users/@me/billing/user-trial-offer",
             USER_TRIAL_OFFER_ACKNOWLEDGED: _ => "/users/@me/billing/user-trial-offer/".concat(_, "/ack"),
             USER_OFFER: "/users/@me/billing/user-offer",
+            ANNUAL_USER_OFFER: "/users/@me/billing/annual-user-offer",
             USER_OFFER_ACKNOWLEDGED: "/users/@me/billing/user-offer/ack",
             CHURN_USER_OFFER: "/users/@me/billing/churn-user-offer",
             USER_OFFER_REDEEM: "/users/@me/billing/user-offer/redeem",

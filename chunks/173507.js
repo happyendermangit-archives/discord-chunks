@@ -15,7 +15,7 @@ function(e, t, a) {
         i.AlwaysPreviewVideo.getSetting() ? (0, n.openModalLazy)(async () => {
             let {
                 default: t
-            } = await Promise.all([a.e("99387"), a.e("5528"), a.e("13170")]).then(a.bind(a, "601572"));
+            } = await Promise.all([a.e("99387"), a.e("5528"), a.e("45733")]).then(a.bind(a, "601572"));
             return a => (0, d.jsx)(t, {
                 ...a,
                 onEnable: e,
