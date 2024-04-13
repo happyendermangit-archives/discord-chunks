@@ -3,9 +3,9 @@ function(e, t, a) {
     a.r(t), a("47120");
     var d = a("213919"),
         n = a("570140"),
-        c = a("317770"),
-        i = a("358085");
-    class r extends c.default {
+        i = a("317770"),
+        c = a("358085");
+    class r extends i.default {
         _initialize() {
             n.default.subscribe("CONNECTION_OPEN", this.handleConnectionOpen)
         }
@@ -15,7 +15,7 @@ function(e, t, a) {
         constructor(...e) {
             var t, a, n;
             super(...e), t = this, a = "handleConnectionOpen", n = e => {
-                ((0, i.isWindows)() || (0, i.isMac)()) && d.encryptAndStoreTokens()
+                ((0, c.isWindows)() || (0, c.isMac)()) && d.encryptAndStoreTokens()
             }, a in t ? Object.defineProperty(t, a, {
                 value: n,
                 enumerable: !0,
