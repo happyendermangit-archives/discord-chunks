@@ -3,69 +3,67 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("570140"),
         r = n("147913"),
-        s = n("162461"),
-        a = n("564990"),
-        o = n("146282"),
-        l = n("206583");
-    let u = l.ContentInventoryFeedKey.GLOBAL_FEED,
-        d = null,
-        _ = !1,
-        c = 0;
-
-    function E() {
-        A()
-    }
-
-    function I() {
-        S()
-    }
-
-    function T(e) {
-        e.idle ? S() : A()
-    }
+        s = n("38618"),
+        a = n("517100"),
+        o = n("451478"),
+        l = n("162461"),
+        u = n("564990"),
+        d = n("146282"),
+        _ = n("206583");
+    let c = _.ContentInventoryFeedKey.GLOBAL_FEED,
+        E = null,
+        I = !1,
+        T = 0;
 
     function f() {
-        return !!(0, s.isEligibleForContentInventoryV1)("ContentInventoryManager") && !_ && !o.default.hidden && !0
+        A()
     }
 
     function S() {
-        clearTimeout(d), d = null
+        if (!(0, l.isEligibleForContentInventoryV1)("ContentInventoryManager") || I || d.default.hidden || !o.default.isFocused() || !s.default.isConnected()) return !1;
+        let e = a.default.getIdleSince();
+        return !(null != e && Date.now() - e > 9e5) && !0
     }
 
     function A() {
-        if (S(), !f()) return;
-        let e = o.default.getFeed(u),
-            t = null == e ? void 0 : e.expired_at;
-        d = setTimeout(() => h(), null == t ? 0 : new Date(t).getTime() - Date.now())
+        clearTimeout(E), E = null
     }
-    async function h() {
-        if (f()) try {
-            _ = !0;
-            let e = await (0, a.getMyContentInventory)();
+
+    function h() {
+        if (A(), !S()) return;
+        let e = d.default.getFeed(c),
+            t = null == e ? void 0 : e.expired_at;
+        E = setTimeout(() => m(), null == t ? 0 : new Date(t).getTime() - Date.now())
+    }
+    async function m() {
+        if (S()) try {
+            I = !0;
+            let e = await (0, u.getMyContentInventory)();
             i.default.dispatch({
                 type: "CONTENT_INVENTORY_SET_FEED",
-                feedId: u,
+                feedId: c,
                 feed: e
-            }), c = 0, _ = !1, A()
+            }), T = 0, I = !1, h()
         } catch (e) {
-            c < 3 ? (d = setTimeout(() => h(), 1e3 * Math.pow(5, c)), c += 1) : i.default.dispatch({
+            T < 3 ? (E = setTimeout(() => m(), 1e3 * Math.pow(5, T)), T += 1) : i.default.dispatch({
                 type: "CONTENT_INVENTORY_CLEAR_FEED",
-                feedId: u
-            }), _ = !1
+                feedId: c
+            }), I = !1
         }
     }
 
-    function m() {
-        A()
+    function N() {
+        h()
     }
-    class N extends r.default {
+    class O extends r.default {
         constructor(...e) {
             var t, n, i;
             super(...e), t = this, n = "actions", i = {
-                POST_CONNECTION_OPEN: E,
-                CONNECTION_CLOSED: I,
-                IDLE: T,
-                CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: m
+                POST_CONNECTION_OPEN: N,
+                CONNECTION_CLOSED: f,
+                WINDOW_FOCUS: N,
+                IDLE: N,
+                CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: N
             }, n in t ? Object.defineProperty(t, n, {
                 value: i,
                 enumerable: !0,
@@ -74,5 +72,5 @@ function(e, t, n) {
             }) : t[n] = i
         }
     }
-    t.default = new N
+    t.default = new O
 }

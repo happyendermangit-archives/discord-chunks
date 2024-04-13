@@ -338,7 +338,7 @@ function(e, t, n) {
             neverLoadBeforeConnectionOpen: !0
         },
         ContentInventoryManager: {
-            actions: ["POST_CONNECTION_OPEN", "CONNECTION_CLOSED", "IDLE", "CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN"],
+            actions: ["POST_CONNECTION_OPEN", "CONNECTION_CLOSED", "IDLE", "WINDOW_FOCUS", "CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN"],
             inlineRequire: () => n("342879").default,
             neverLoadBeforeConnectionOpen: !0
         },
