@@ -100,9 +100,9 @@ function(e, t, n) {
         return e.unread = Object.values(e.unreadByType).some(e => e), e
     }
 
-    function k(e, t) {}
+    function B(e, t) {}
 
-    function B(e, t, n) {
+    function k(e, t, n) {
         if (w(t), t.mentionCount = r()(t.mentionCounts).values().sum(), t.unread !== n.unread || t.mentionCount !== n.mentionCount) return C[null != e ? e : R] = t, null != e && (t.unread ? g.add(e) : g.delete(e)), L++, M(null != e ? e : R), !0;
         return !1
     }
@@ -126,14 +126,14 @@ function(e, t, n) {
             if (!(null != e && !t.includes(e.id) && T.default.hasUnread(e.id) && P(e))) return x(n);
             null != n && g.add(n), r.unreadByType[O.ReadStateTypes.CHANNEL] = !0
         }
-        return B(n, r, i)
+        return k(n, r, i)
     }
 
     function F(e, t) {
         if (null == e) return;
         let n = v(e),
             i = G(e, n);
-        return i.unreadByType[O.ReadStateTypes.GUILD_EVENT] = b(e, t), B(e, i, n)
+        return i.unreadByType[O.ReadStateTypes.GUILD_EVENT] = b(e, t), k(e, i, n)
     }
 
     function x(e, t) {

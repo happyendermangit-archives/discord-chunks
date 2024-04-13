@@ -92,7 +92,7 @@ function(e, t, n) {
             return e_
         },
         getPremiumPlanItem: function() {
-            return B
+            return k
         },
         getPremiumPlanOptions: function() {
             return ee
@@ -182,7 +182,7 @@ function(e, t, n) {
             BILLING_HISTORY: "https://play.google.com/store/account/orderhistory"
         },
         w = new c.default("PremiumUtils.tsx"),
-        k = {
+        B = {
             [y.SubscriptionPlans.NONE_MONTH]: [y.SubscriptionPlans.NONE_YEAR, y.SubscriptionPlans.PREMIUM_YEAR_TIER_2, y.SubscriptionPlans.PREMIUM_MONTH_TIER_2, y.SubscriptionPlans.PREMIUM_YEAR_TIER_1, y.SubscriptionPlans.PREMIUM_MONTH_TIER_1],
             [y.SubscriptionPlans.NONE_YEAR]: [y.SubscriptionPlans.PREMIUM_YEAR_TIER_2, y.SubscriptionPlans.PREMIUM_MONTH_TIER_2, y.SubscriptionPlans.PREMIUM_YEAR_TIER_1, y.SubscriptionPlans.PREMIUM_MONTH_TIER_1],
             [y.SubscriptionPlans.PREMIUM_MONTH_TIER_0]: [y.SubscriptionPlans.PREMIUM_YEAR_TIER_2, y.SubscriptionPlans.PREMIUM_MONTH_TIER_2, y.SubscriptionPlans.PREMIUM_YEAR_TIER_1, y.SubscriptionPlans.PREMIUM_MONTH_TIER_1, y.SubscriptionPlans.PREMIUM_YEAR_TIER_0],
@@ -194,7 +194,7 @@ function(e, t, n) {
             ALL: [y.SubscriptionPlans.NONE_MONTH, y.SubscriptionPlans.NONE_YEAR, y.SubscriptionPlans.PREMIUM_YEAR_TIER_2, y.SubscriptionPlans.PREMIUM_MONTH_TIER_2, y.SubscriptionPlans.PREMIUM_YEAR_TIER_1, y.SubscriptionPlans.PREMIUM_MONTH_TIER_1, y.SubscriptionPlans.PREMIUM_YEAR_TIER_0, y.SubscriptionPlans.PREMIUM_MONTH_TIER_0]
         };
 
-    function B(e) {
+    function k(e) {
         return e.items.find(e => y.PREMIUM_PLANS.has(e.planId))
     }
 
@@ -775,7 +775,7 @@ function(e, t, n) {
 
     function en(e) {
         var t;
-        return null == e ? k.ALL : null !== (t = k[e]) && void 0 !== t ? t : []
+        return null == e ? B.ALL : null !== (t = B[e]) && void 0 !== t ? t : []
     }
 
     function ei(e) {
@@ -1222,7 +1222,7 @@ function(e, t, n) {
     }
 
     function eP(e) {
-        let t = null != e ? B(e) : null;
+        let t = null != e ? k(e) : null;
         return null != t ? et(t.planId) : null
     }
 
@@ -1398,21 +1398,21 @@ function(e, t, n) {
         },
         getBillingReviewSubheader: eS,
         getIntervalForInvoice: eA,
-        getPremiumPlanItem: B,
+        getPremiumPlanItem: k,
         getGuildBoostPlanItem: ey,
         isBoostOnlySubscription: function(e) {
-            return null != e && null == B(e) && null != ey(e)
+            return null != e && null == k(e) && null != ey(e)
         },
         getPremiumSkuIdForSubscription: eP,
         getPremiumTypeFromSubscription: function(e) {
             if (null != e) {
-                let t = B(e);
+                let t = k(e);
                 if (null != t) return W(t.planId)
             }
         },
         getPremiumTypeFromSubscriptionRenewalMutations: function(e) {
             if (null != e && null != e.renewalMutations) {
-                let t = B(e.renewalMutations);
+                let t = k(e.renewalMutations);
                 if (null != t) return W(t.planId)
             }
         },

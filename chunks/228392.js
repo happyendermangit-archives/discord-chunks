@@ -23,7 +23,7 @@ function(e, t, n) {
             return x
         },
         trackForumEnableAutomodClicked: function() {
-            return k
+            return B
         },
         trackForumHelperCardClicked: function() {
             return G
@@ -53,7 +53,7 @@ function(e, t, n) {
             return V
         },
         trackForumPreviewPostClicked: function() {
-            return B
+            return k
         },
         trackForumScrolled: function() {
             return g
@@ -396,11 +396,11 @@ function(e, t, n) {
         })
     }
 
-    function k() {
+    function B() {
         r.default.trackWithMetadata(f.AnalyticEvents.FORUM_CHANNEL_ENABLE_AUTOMOD_CLICKED)
     }
 
-    function B() {
+    function k() {
         r.default.trackWithMetadata(f.AnalyticEvents.FORUM_CHANNEL_ENABLE_PREVIEW_CLICKED)
     }
 

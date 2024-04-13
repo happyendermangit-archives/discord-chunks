@@ -53,8 +53,8 @@ function(e, t, n) {
         b = n("599250"),
         G = n("466111"),
         w = n("761374"),
-        k = n("363138"),
-        B = n("325767"),
+        B = n("363138"),
+        k = n("325767"),
         V = n("930153"),
         F = n("74538"),
         x = n("326151"),
@@ -168,7 +168,7 @@ function(e, t, n) {
             ...i
         } = e;
         return (0, _.jsxs)("svg", {
-            ...(0, B.default)({
+            ...(0, k.default)({
                 ...i
             }),
             width: t,
@@ -326,7 +326,7 @@ function(e, t, n) {
     function ed() {
         return (0, _.jsxs)(_.Fragment, {
             children: [(0, _.jsx)(eo, {
-                Icon: k.default,
+                Icon: B.default,
                 text: ee.default.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
                     maxUploadPremium: (0, F.getMaxFileSizeForPremiumType)(J.PremiumTypes.TIER_0, {
                         useSpace: !1
@@ -481,7 +481,7 @@ function(e, t, n) {
                     percentageOff: (0, V.formatPercent)(r, J.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
                 })
             }), (0, _.jsx)(eo, {
-                Icon: k.default,
+                Icon: B.default,
                 text: ee.default.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
                     maxUploadPremium: (0, F.getMaxFileSizeForPremiumType)(J.PremiumTypes.TIER_2, {
                         useSpace: !1
@@ -500,7 +500,7 @@ function(e, t, n) {
         });
         return (0, _.jsxs)(_.Fragment, {
             children: [(0, _.jsx)(eo, {
-                Icon: k.default,
+                Icon: B.default,
                 text: ee.default.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
                     maxUploadPremium: (0, F.getMaxFileSizeForPremiumType)(J.PremiumTypes.TIER_2, {
                         useSpace: !1
@@ -553,7 +553,7 @@ function(e, t, n) {
             b = !l && R,
             G = (0, z.getBOGOPillCopy)(),
             w = (0, A.isThemeLight)((0, m.default)()),
-            k = w ? 5 : 2;
+            B = w ? 5 : 2;
         return !b || y || w ? b && y && !w && (n = et.rimGlowTier2Stacked) : n = et.rimGlowTier2, (0, _.jsxs)("div", {
             className: E()(et.card, o, {
                 [et.withTier2Rim]: b && !y,
@@ -568,7 +568,7 @@ function(e, t, n) {
                         percent: C.discount.amount
                     }),
                     className: et.topRimPill,
-                    colorOptions: k
+                    colorOptions: B
                 }), (0, _.jsx)("div", {
                     className: n
                 })]
@@ -576,7 +576,7 @@ function(e, t, n) {
                 children: [(0, _.jsx)(es, {
                     text: ee.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT,
                     className: et.topRimPill,
-                    colorOptions: k
+                    colorOptions: B
                 }), (0, _.jsx)("div", {
                     className: n
                 })]
@@ -584,7 +584,7 @@ function(e, t, n) {
                 children: [(0, _.jsx)(es, {
                     text: ee.default.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED,
                     className: et.topRimPill,
-                    colorOptions: k
+                    colorOptions: B
                 }), (0, _.jsx)("div", {
                     className: n
                 })]
@@ -592,7 +592,7 @@ function(e, t, n) {
                 children: [(0, _.jsx)(es, {
                     text: ee.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED,
                     className: et.topRimPill,
-                    colorOptions: k
+                    colorOptions: B
                 }), (0, _.jsx)("div", {
                     className: n
                 })]

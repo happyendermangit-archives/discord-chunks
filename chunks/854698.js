@@ -20,7 +20,7 @@ function(e, t, n) {
             return v
         },
         generateNextRecurrences: function() {
-            return k
+            return B
         },
         getBaseScheduleForRecurrence: function() {
             return y
@@ -32,7 +32,7 @@ function(e, t, n) {
             return C
         },
         getNextRecurrenceIdInEvent: function() {
-            return B
+            return k
         },
         getRRule: function() {
             return w
@@ -215,7 +215,7 @@ function(e, t, n) {
         })
     }
 
-    function k(e, t, n) {
+    function B(e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
             r = [],
             s = n;
@@ -230,7 +230,7 @@ function(e, t, n) {
         return r
     }
 
-    function B(e) {
+    function k(e) {
         var t;
         if (null == e) return null;
         let n = null == (t = e).recurrence_rule ? null : new Date(t.scheduled_start_time);

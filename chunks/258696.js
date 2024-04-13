@@ -57,7 +57,7 @@ function(e, t, n) {
             channel: P,
             handleSubmit: U,
             isEmpty: b
-        } = e, G = (0, a.useStateFromStores)([l.default], () => l.default.isSubmitButtonEnabled), w = (0, a.useStateFromStores)([I.default], () => I.default.getStickerPreview(P.id, M.drafts.type)), k = null != w && w.length > 0, B = (0, a.useStateFromStores)([T.default], () => T.default.getUploads(P.id, M.drafts.type)), {
+        } = e, G = (0, a.useStateFromStores)([l.default], () => l.default.isSubmitButtonEnabled), w = (0, a.useStateFromStores)([I.default], () => I.default.getStickerPreview(P.id, M.drafts.type)), B = null != w && w.length > 0, k = (0, a.useStateFromStores)([T.default], () => T.default.getUploads(P.id, M.drafts.type)), {
             activeCommand: V,
             activeCommandOption: F
         } = (0, a.useStateFromStoresObject)([u.default], () => ({
@@ -110,7 +110,7 @@ function(e, t, n) {
             type: M
         }, "emoji")), (null === (n = M.submit) || void 0 === n ? void 0 : n.button) != null && ((null === (r = M.submit) || void 0 === r ? void 0 : r.ignorePreference) || G) && H.push((0, i.jsx)(p.default, {
             onClick: U,
-            disabled: y || 0 === B.length && b && !k
+            disabled: y || 0 === k.length && b && !B
         }, "submit")), 0 === H.length) ? null : (0, i.jsx)("div", {
             className: g.buttons,
             children: H

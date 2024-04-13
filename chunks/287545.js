@@ -50,9 +50,9 @@ function(e, t, n) {
         }) : e[t] = n, e
     }
     let w = {},
-        k = {};
+        B = {};
 
-    function B(e) {
+    function k(e) {
         var t;
         return {
             releasePhase: null == e ? void 0 : null === (t = e.activity) || void 0 === t ? void 0 : t.client_platform_config[(0, v.default)((0, m.getOS)())].release_phase
@@ -75,9 +75,9 @@ function(e, t, n) {
             E = 1 + l.findIndex(e => e === n),
             {
                 releasePhase: I
-            } = B(d),
+            } = k(d),
             f = await (0, c.default)();
-        k[n] = e => {
+        B[n] = e => {
             var t, s, o;
             w[n] = e, h.default.track(U.AnalyticEvents.ACTIVITY_SESSION_JOINED, {
                 channel_id: r.id,
@@ -126,7 +126,7 @@ function(e, t, n) {
             }),
             {
                 releasePhase: E
-            } = B(_),
+            } = k(_),
             I = await (0, c.default)();
         h.default.track(U.AnalyticEvents.ACTIVITY_SESSION_LEFT, {
             channel_id: a.id,
@@ -152,7 +152,7 @@ function(e, t, n) {
             activity_user_session_id: s.activityUserSessionId,
             raw_thermal_state: I,
             duration_ms: o
-        }), delete k[r], delete w[r]
+        }), delete B[r], delete w[r]
     }
 
     function x(e) {
@@ -183,12 +183,12 @@ function(e, t, n) {
         let c = f.default.getMediaSessionId(),
             E = (0, D.default)(t),
             I = null == c && (null == _ ? void 0 : _.isVocal()) === !0 && (null == _ ? void 0 : _.isPrivate()) === !1;
-        null != E && !I && (null === (l = k[n]) || void 0 === l || l.call(k, {
+        null != E && !I && (null === (l = B[n]) || void 0 === l || l.call(B, {
             activitySessionId: E,
             activityUserSessionId: (0, s.v4)(),
             instanceId: i,
             mediaSessionIds: null != c ? [c] : []
-        }), delete k[n])
+        }), delete B[n])
     }
 
     function j(e) {
@@ -205,13 +205,13 @@ function(e, t, n) {
                 o = (0, D.default)(e);
             if (null != i && null != t && null != o && null != a) {
                 let e = w[i],
-                    n = k[i];
+                    n = B[i];
                 r()(null == e || null == n, "an active session and awaiting session both exist"), null == n || n({
                     activitySessionId: o,
                     activityUserSessionId: (0, s.v4)(),
                     instanceId: a,
                     mediaSessionIds: [t]
-                }), delete k[i]
+                }), delete B[i]
             }
         }
     }

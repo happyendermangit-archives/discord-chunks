@@ -43,7 +43,7 @@ function(e, t, n) {
             gridNavigatorId: U,
             gridNotice: b,
             renderHeader: G
-        } = e, w = r.useRef(null), k = r.useRef(null), B = r.useRef(null), V = 0 === t.length, F = (0, s.useExpressionPickerStore)(e => e.searchQuery), x = _.useStore(e => e.inspectedExpressionPosition), H = (0, a.useExpressionPickerGridWidth)({
+        } = e, w = r.useRef(null), B = r.useRef(null), k = r.useRef(null), V = 0 === t.length, F = (0, s.useExpressionPickerStore)(e => e.searchQuery), x = _.useStore(e => e.inspectedExpressionPosition), H = (0, a.useExpressionPickerGridWidth)({
             gridWrapperRef: w,
             containerWidth: d,
             showingEmptyState: V
@@ -68,7 +68,7 @@ function(e, t, n) {
             isUsingKeyboardNavigation: J
         } = (0, a.useKeyboardNavigation)({
             columnCounts: K,
-            expressionsListRef: k,
+            expressionsListRef: B,
             expressionsGrid: Y,
             onSelectItem: c,
             store: _,
@@ -85,15 +85,15 @@ function(e, t, n) {
             E(F)
         }, [E, F]), r.useEffect(() => _.resetStoreState, [_.resetStoreState]), r.useLayoutEffect(() => {
             var e;
-            null === (e = B.current) || void 0 === e || e.focus()
+            null === (e = k.current) || void 0 === e || e.focus()
         }, []);
         let er = (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(l.default, {
-                ref: B,
+                ref: k,
                 store: _,
                 hasSendableExpressions: !0,
                 onKeyDown: Z,
-                expressionsListRef: k,
+                expressionsListRef: B,
                 gridNavigatorId: U,
                 defaultSearchPlaceholder: T,
                 emptySearchPlaceholder: f
@@ -104,7 +104,7 @@ function(e, t, n) {
                 className: u.header,
                 children: [" ", er, " "]
             }), V && null != S ? S(u.emptyState) : (0, i.jsxs)(i.Fragment, {
-                children: [R(k), null != b && (0, i.jsx)("div", {
+                children: [R(B), null != b && (0, i.jsx)("div", {
                     className: u.gridNoticeWrapper,
                     children: b
                 }), (0, i.jsx)("div", {
@@ -113,7 +113,7 @@ function(e, t, n) {
                     id: U,
                     ...q,
                     children: null != H ? (0, i.jsx)(o.default, {
-                        ref: k,
+                        ref: B,
                         store: _,
                         hasSearchResults: I,
                         listPadding: P,

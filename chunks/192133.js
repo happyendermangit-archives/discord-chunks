@@ -39,8 +39,8 @@ function(e, t, n) {
         b = n("579729"),
         G = n("302316"),
         w = n("186395"),
-        k = n("584045"),
-        B = n("58307"),
+        B = n("584045"),
+        k = n("58307"),
         V = n("981631"),
         F = n("700481"),
         x = n("27729");
@@ -64,7 +64,7 @@ function(e, t, n) {
         } = e, et = (0, o.useStateFromStores)([I.default], () => I.default.hidePersonalInformation), en = (0, o.useStateFromStores)([A.default], () => {
             var e;
             return null === (e = A.default.getUserProfile(j.id)) || void 0 === e ? void 0 : e.application
-        }), ei = (0, o.useStateFromStores)([_.default], () => null != _.default.getAnyStreamForUser(j.id)), er = (0, B.useGetVoiceChannelInfoForVoiceActivitySection)(j.id, null == K ? void 0 : K.id), es = (null == H ? void 0 : H.type) === V.ActivityTypes.HANG_STATUS, ea = !ei && null != er && !es, {
+        }), ei = (0, o.useStateFromStores)([_.default], () => null != _.default.getAnyStreamForUser(j.id)), er = (0, k.useGetVoiceChannelInfoForVoiceActivitySection)(j.id, null == K ? void 0 : K.id), es = (null == H ? void 0 : H.type) === V.ActivityTypes.HANG_STATUS, ea = !ei && null != er && !es, {
             showVoiceActivityInProfile: eo
         } = h.VoiceActivityProfileExperiment.useExperiment({
             location: "user popout"
@@ -102,7 +102,7 @@ function(e, t, n) {
                 location: "28tk0bf_1"
             });
         if (j.isSystemUser()) return null;
-        if (j.isNonUserBot()) return (0, i.jsx)(k.default, {
+        if (j.isNonUserBot()) return (0, i.jsx)(B.default, {
             user: j,
             nickname: null,
             pronouns: null,
@@ -117,7 +117,7 @@ function(e, t, n) {
                 }
             };
         return (0, i.jsxs)(i.Fragment, {
-            children: [(0, i.jsx)(k.default, {
+            children: [(0, i.jsx)(B.default, {
                 className: F.usernameSection,
                 user: j,
                 nickname: eh,
@@ -155,7 +155,7 @@ function(e, t, n) {
                         userId: j.id,
                         guild: K,
                         guildMember: z
-                    }), eo && ea && (0, i.jsx)(B.default, {
+                    }), eo && ea && (0, i.jsx)(k.default, {
                         voiceChannel: er.voiceChannel,
                         voiceGuild: er.voiceGuild,
                         color: x.buttonColor

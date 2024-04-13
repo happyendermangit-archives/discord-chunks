@@ -81,14 +81,14 @@ function(e, t, n) {
         };
         let G = null,
             w = null,
-            k = null,
             B = null,
+            k = null,
             V = null;
         return e.onChange = () => {
             if (null != t) {
                 let s = o.default.getState(t.id),
                     u = a.getChangeKeys(t);
-                if (h.EditorUtils.richValue(e) !== G || !h.SelectionUtils.equals(e.selection, w) || s.activeCommand !== k || null == V || u.some((e, t) => V[t] !== e)) {
+                if (h.EditorUtils.richValue(e) !== G || !h.SelectionUtils.equals(e.selection, w) || s.activeCommand !== B || null == V || u.some((e, t) => V[t] !== e)) {
                     let o = f.HistoryUtils.withMergedEntry(e, () => {
                         var o;
                         return function(e) {
@@ -309,15 +309,15 @@ function(e, t, n) {
                             channel: t,
                             canUseCommands: n,
                             canOnlyUseTextCommands: d,
-                            commandChanged: (null === (o = s.activeCommand) || void 0 === o ? void 0 : o.id) !== (null == k ? void 0 : k.id),
-                            previousOptionValues: B
+                            commandChanged: (null === (o = s.activeCommand) || void 0 === o ? void 0 : o.id) !== (null == B ? void 0 : B.id),
+                            previousOptionValues: k
                         })
                     });
                     if (null != o) {
                         let t = f.HistoryUtils.currentEntry(e);
-                        null != t && (t.commandId = o.commandId), B = o.optionValues
-                    } else B = null;
-                    G = h.EditorUtils.richValue(e), w = e.selection, k = s.activeCommand, V = u
+                        null != t && (t.commandId = o.commandId), k = o.optionValues
+                    } else k = null;
+                    G = h.EditorUtils.richValue(e), w = e.selection, B = s.activeCommand, V = u
                 }
             }
             N()

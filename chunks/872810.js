@@ -17,7 +17,7 @@ function(e, t, n) {
             return H
         },
         notifyStreamStart: function() {
-            return k
+            return B
         },
         setStreamPaused: function() {
             return v
@@ -35,7 +35,7 @@ function(e, t, n) {
             return P
         },
         updateStreamSettings: function() {
-            return B
+            return k
         },
         watchStream: function() {
             return y
@@ -186,7 +186,7 @@ function(e, t, n) {
             })
         }
     }
-    async function k(e) {
+    async function B(e) {
         try {
             await N.default.post({
                 url: g.Endpoints.STREAM_NOTIFY(e),
@@ -198,7 +198,7 @@ function(e, t, n) {
         } catch (e) {}
     }
 
-    function B(e) {
+    function k(e) {
         (0, m.trackStreamSettingsUpdate)(e.preset, e.resolution, e.frameRate), o.default.dispatch({
             type: "STREAM_UPDATE_SETTINGS",
             ...e

@@ -451,11 +451,11 @@ function(e, t, n) {
         }
     }
 
-    function k(e) {
+    function B(e) {
         R.verbose("MESSAGE_ACKED", e), v.desktopMessageEvent("ack")
     }
 
-    function B(e) {
+    function k(e) {
         e.message.state === N.MessageStates.SENDING && v.desktopMessageEvent("created")
     }
 
@@ -548,8 +548,8 @@ function(e, t, n) {
                 OVERLAY_MESSAGE_EVENT_ACTION: w,
                 RUNNING_GAMES_CHANGE: M,
                 SOUNDBOARD_SET_OVERLAY_ENABLED: G,
-                MESSAGE_ACKED: k,
-                MESSAGE_CREATE: B,
+                MESSAGE_ACKED: B,
+                MESSAGE_CREATE: k,
                 WINDOW_FOCUS: F,
                 RTC_CONNECTION_STATE: H.handleRTCConnectionState,
                 AUDIO_TOGGLE_SELF_MUTE: V,

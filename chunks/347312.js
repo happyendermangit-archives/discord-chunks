@@ -106,8 +106,8 @@ function(e, t, n) {
                 }(null != n ? n : [], i)) && void 0 !== e ? e : h
             }, [n, i])
         }(n, v), U = r.useRef(A), b = r.useRef(R), G = r.useRef(null), w = window.devicePixelRatio, {
-            lastBackgroundFillColor: k,
-            backgroundFillColor: B,
+            lastBackgroundFillColor: B,
+            backgroundFillColor: k,
             lastActiveFillColor: V,
             activeFillColor: F,
             lastInactiveFillColor: x,
@@ -167,7 +167,7 @@ function(e, t, n) {
                 (U.current !== A || b.current !== R) && (U.current = A, b.current = R, G.current = n), null != G.current && n > G.current + 200 && (G.current = null);
                 let o = i.height / w;
                 r.clearRect(0, 0, i.width, i.height), r.beginPath();
-                let [l, u] = p(k, B, n, G.current);
+                let [l, u] = p(B, k, n, G.current);
                 a = a || u, r.fillStyle = l;
                 for (let e = 0; e < P.length; e++) N({
                     context: r,
@@ -198,7 +198,7 @@ function(e, t, n) {
             }), () => {
                 null != e && cancelAnimationFrame(e)
             }
-        }, [D, w, P, v, s, _, A, R, k, B, V, F, x, H]);
+        }, [D, w, P, v, s, _, A, R, B, k, V, F, x, H]);
         let [, Y] = (0, d.default)({
             ref: D,
             onDrag: C,

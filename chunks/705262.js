@@ -40,8 +40,8 @@ function(e, t, n) {
         b = n("874893"),
         G = n("526761"),
         w = n("231338"),
-        k = n("689938"),
-        B = n("209395");
+        B = n("689938"),
+        k = n("209395");
     (r = i || (i = {})).EDITOR = "EDITOR", r.SETTINGS = "SETTINGS";
     let V = Object.freeze({
             EDITOR: G.UserSettingsDelay.SLOW_USER_ACTION,
@@ -74,18 +74,18 @@ function(e, t, n) {
                 type: "EDITOR",
                 isCoachmark: !0,
                 isPreview: !0
-            }, () => k.default.Messages.CLIENT_THEMES_EDITOR_PREVIEW_A_THEME_HEADER).with({
+            }, () => B.default.Messages.CLIENT_THEMES_EDITOR_PREVIEW_A_THEME_HEADER).with({
                 type: "EDITOR",
                 isCoachmark: !0
-            }, () => k.default.Messages.CLIENT_THEMES_EDITOR_PICK_A_THEME_HEADER).otherwise(() => k.default.Messages.USER_SETTINGS_APPEARANCE_GRADIENT_THEME_TITLE);
+            }, () => B.default.Messages.CLIENT_THEMES_EDITOR_PICK_A_THEME_HEADER).otherwise(() => B.default.Messages.USER_SETTINGS_APPEARANCE_GRADIENT_THEME_TITLE);
             return (0, s.jsxs)("div", {
-                className: B.title,
+                className: k.title,
                 children: [(0, s.jsx)(E.Heading, {
                     "aria-label": r,
                     variant: "text-md/medium",
                     children: r
                 }), (0, s.jsx)(N.default, {
-                    className: B.premiumIcon
+                    className: k.premiumIcon
                 })]
             })
         },
@@ -104,19 +104,19 @@ function(e, t, n) {
             }).with({
                 type: "EDITOR",
                 isPreview: !0
-            }, () => k.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({
+            }, () => B.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({
                 onPremiumClick: A.navigateToPremiumMarketingPage
             })).with({
                 type: "EDITOR",
                 isCoachmark: !0
-            }, () => k.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_COACHMARK).with({
+            }, () => B.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_COACHMARK).with({
                 type: "EDITOR",
                 isPreview: !1
-            }, () => k.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION).with({
+            }, () => B.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION).with({
                 isPreview: !0
-            }, () => k.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_WITH_LINK.format({
+            }, () => B.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_WITH_LINK.format({
                 onPremiumClick: A.navigateToPremiumMarketingPage
-            })).otherwise(() => k.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_SETTINGS);
+            })).otherwise(() => B.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_SETTINGS);
             return (0, s.jsx)(E.Heading, {
                 variant: "text-sm/normal",
                 children: o
@@ -137,7 +137,7 @@ function(e, t, n) {
                 value: o,
                 children: (0, s.jsx)("div", {
                     ...r,
-                    className: B.__invalid_container,
+                    className: k.__invalid_container,
                     children: n
                 })
             })
@@ -159,7 +159,7 @@ function(e, t, n) {
             }, n)
         };
         return (0, s.jsxs)("section", {
-            className: l()(B.presets, t),
+            className: l()(k.presets, t),
             children: [(0, s.jsx)(M.DefaultThemeSelection, {
                 theme: w.ThemeTypes.LIGHT,
                 isSelected: o && !u && (0, c.isThemeLight)(r),
@@ -217,13 +217,13 @@ function(e, t, n) {
             children: ["EDITOR" === u && N && V ? (0, s.jsx)(m.default, {
                 type: U.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                 subscriptionTier: U.PremiumSubscriptionSKUs.TIER_2,
-                children: k.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({
+                children: B.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({
                     onPremiumClick: A.navigateToPremiumMarketingPage
                 })
             }) : (0, s.jsxs)("div", {
-                className: B.header,
+                className: k.header,
                 children: [(0, s.jsxs)("div", {
-                    className: B.headings,
+                    className: k.headings,
                     children: [(0, s.jsx)(H, {
                         type: u,
                         isPreview: N,
@@ -235,7 +235,7 @@ function(e, t, n) {
                     })]
                 }), null == o ? void 0 : o()]
             }), (0, s.jsxs)("div", {
-                className: B.presets,
+                className: k.presets,
                 children: [y.BACKGROUND_GRADIENT_PRESETS.filter(e => {
                     let {
                         id: t
@@ -258,7 +258,7 @@ function(e, t, n) {
                         return e
                     }
                     return (0, s.jsxs)("div", {
-                        className: B.easterEggSelection,
+                        className: k.easterEggSelection,
                         children: [(0, s.jsx)(M.GradientThemeSelection, {
                             preset: e,
                             isSelected: R === _.BackgroundGradientPresetId.EASTER_EGG,
@@ -266,7 +266,7 @@ function(e, t, n) {
                         }), (0, s.jsx)(C.default, {
                             importData: t,
                             shouldAnimate: !w,
-                            className: B.sparkles
+                            className: k.sparkles
                         })]
                     })
                 })()]

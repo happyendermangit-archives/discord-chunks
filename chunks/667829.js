@@ -189,8 +189,8 @@ function(e, t, n) {
                 maxCharacterCount: b,
                 allowNewLines: G,
                 "aria-describedby": w,
-                "aria-labelledby": k,
-                accessibilityLabel: B
+                "aria-labelledby": B,
+                accessibilityLabel: k
             } = this.props, {
                 submitting: V,
                 popup: F
@@ -203,7 +203,7 @@ function(e, t, n) {
                 id: y,
                 placeholder: this.getPlaceholder(),
                 required: P,
-                accessibilityLabel: B,
+                accessibilityLabel: k,
                 disabled: d || !1,
                 submitting: V,
                 isEdit: S === O.ChatInputTypes.EDIT,
@@ -235,7 +235,7 @@ function(e, t, n) {
                 "aria-activedescendant": null !== (o = F.activeDescendant) && void 0 !== o ? o : void 0,
                 "aria-invalid": l.length > b,
                 "aria-describedby": w,
-                "aria-labelledby": k,
+                "aria-labelledby": B,
                 "aria-autocomplete": "list"
             }, H = h ? (0, i.jsx)(g.default, {
                 ref: this.ref,

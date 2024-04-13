@@ -83,7 +83,7 @@ function(e, t, n) {
             return p
         },
         toServerClanData: function() {
-            return k
+            return B
         }
     }), n("47120");
     var i, r, s, a, o, l, u, d, _ = n("913527"),
@@ -203,7 +203,7 @@ function(e, t, n) {
         }
     }
 
-    function k(e) {
+    function B(e) {
         return {
             tag: e.tag
         }

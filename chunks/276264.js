@@ -47,8 +47,8 @@ function(e, t, n) {
             user: b,
             currentUser: G,
             activities: w,
-            applicationStream: k,
-            status: B,
+            applicationStream: B,
+            status: k,
             shouldAnimateStatus: V = !1,
             isMobile: F,
             premiumSince: x,
@@ -92,7 +92,7 @@ function(e, t, n) {
                 textClassName: v.activityText,
                 emojiClassName: v.activityEmoji,
                 activities: w,
-                applicationStream: k,
+                applicationStream: B,
                 animate: eo,
                 hideEmoji: !t,
                 hideTooltip: !0,
@@ -128,7 +128,7 @@ function(e, t, n) {
             children: [eO(), em(), eN()]
         }), eR = (e, t) => {
             let n = V ? l.AnimatedAvatar : l.Avatar,
-                r = (0, u.default)(w) ? C.StatusTypes.STREAMING : B;
+                r = (0, u.default)(w) ? C.StatusTypes.STREAMING : k;
             return r = t ? void 0 : r, (0, i.jsxs)(i.Fragment, {
                 children: [(0, i.jsx)(n, {
                     ...eE,
@@ -156,14 +156,14 @@ function(e, t, n) {
                 clan: null == b ? void 0 : b.clan,
                 userId: null == b ? void 0 : b.id
             })]
-        }), eg = B === C.StatusTypes.OFFLINE;
+        }), eg = k === C.StatusTypes.OFFLINE;
         return null == b ? (0, i.jsx)(A.default, {
             avatarSize: l.AvatarSizes.SIZE_32,
             className: v.placeholder
         }) : (0, i.jsx)(l.Popout, {
             renderPopout: e => (0, i.jsx)(I.default, {
                 quest: eI,
-                applicationStream: k,
+                applicationStream: B,
                 onClosePopout: W,
                 ...e
             }),

@@ -39,8 +39,8 @@ function(e, t, n) {
         b = n("271383"),
         G = n("430824"),
         w = n("607744"),
-        k = n("341165"),
-        B = n("496675"),
+        B = n("341165"),
+        k = n("496675"),
         V = n("594174"),
         F = n("626135"),
         x = n("70956"),
@@ -85,7 +85,7 @@ function(e, t, n) {
             if ((null == n ? void 0 : n.targetType) === Q.InviteTargetTypes.ROLE_SUBSCRIPTIONS_PURCHASE) return z.StaticChannelRoute.ROLE_SUBSCRIPTIONS;
             if ((null == n ? void 0 : n.targetType) == null && !M.GUILD_VOCAL_CHANNEL_TYPES.has(t.type) && ((0, S.canSeeGuildHome)(e) || (0, m.canSeeOnboardingHome)(e))) return z.StaticChannelRoute.GUILD_HOME;
             let s = P.default.getChannel(t.id);
-            return B.default.can(K.Permissions.VIEW_CHANNEL, s) ? t.id : null !== (r = null === (i = U.default.getDefaultChannel(e, !0, K.Permissions.CREATE_INSTANT_INVITE)) || void 0 === i ? void 0 : i.id) && void 0 !== r ? r : t.id
+            return k.default.can(K.Permissions.VIEW_CHANNEL, s) ? t.id : null !== (r = null === (i = U.default.getDefaultChannel(e, !0, K.Permissions.CREATE_INSTANT_INVITE)) || void 0 === i ? void 0 : i.id) && void 0 !== r ? r : t.id
         }(t, i, r), {
             targetUserId: u,
             targetType: d,
@@ -211,7 +211,7 @@ function(e, t, n) {
             }
         },
         async mobileCreateInvite(e, t) {
-            let n = k.default.getInvite(e.id);
+            let n = B.default.getInvite(e.id);
             if (null != n && !n.isExpired()) return n.code;
             let i = {
                     max_age: x.default.Seconds.DAY
@@ -222,7 +222,7 @@ function(e, t, n) {
             return null == r ? void 0 : r.code
         },
         async getAllFriendInvites(e) {
-            if (await new Promise(e => d.default.wait(() => e(null))), k.default.getFriendInvitesFetching()) return null != J ? J.then(e => e.body) : Promise.reject(Error("Invalid friend invite fetch request"));
+            if (await new Promise(e => d.default.wait(() => e(null))), B.default.getFriendInvitesFetching()) return null != J ? J.then(e => e.body) : Promise.reject(Error("Invalid friend invite fetch request"));
             J = u.HTTP.get({
                 url: K.Endpoints.FRIEND_INVITES,
                 context: {

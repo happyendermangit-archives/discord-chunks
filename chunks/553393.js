@@ -41,7 +41,7 @@ function(e, t, n) {
             location: S.QuestContent.MEMBERS_LIST
         }), U = (0, f.useIsQuestExpired)(L), b = (null == L ? void 0 : null === (t = L.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, G = (null == L ? void 0 : null === (C = L.userStatus) || void 0 === C ? void 0 : C.enrolledAt) != null, w = (null == L ? void 0 : null === (g = L.userStatus) || void 0 === g ? void 0 : g.completedAt) != null;
         if (null == L || U || b && !(null != D)) return null;
-        let k = () => {
+        let B = () => {
                 (0, T.trackQuestContentClicked)({
                     questId: L.id,
                     questContent: S.QuestContent.MEMBERS_LIST,
@@ -58,7 +58,7 @@ function(e, t, n) {
                     })
                 })
             },
-            B = () => {
+            k = () => {
                 (0, T.trackQuestContentClicked)({
                     questId: L.id,
                     questContent: S.QuestContent.MEMBERS_LIST,
@@ -67,7 +67,7 @@ function(e, t, n) {
                 }), l.default.open(N.UserSettingsSections.INVENTORY)
             },
             V = e => {
-                e.stopPropagation(), k()
+                e.stopPropagation(), B()
             },
             F = () => {
                 if (null != D) {
@@ -79,7 +79,7 @@ function(e, t, n) {
                         trackGuildAndChannelMetadata: !0
                     }), a.default.selectVoiceChannel(e.id), (0, o.watchStreamAndTransitionToStream)(D)
                 }
-                B()
+                k()
             },
             x = (() => null != D ? {
                 headerText: O.default.Messages.QUESTS_MEMBERS_LIST_AVAILBLE,
@@ -95,12 +95,12 @@ function(e, t, n) {
                 headerText: O.default.Messages.QUESTS_MEMBERS_LIST_FINISH,
                 ctaText: O.default.Messages.QUESTS_MEMBERS_LIST_FINISH_CTA,
                 tileAssetUrl: (0, A.getRewardAssetUrl)(L),
-                handleClickCta: B
+                handleClickCta: k
             } : {
                 headerText: O.default.Messages.QUESTS_MEMBERS_LIST_AVAILBLE,
                 ctaText: O.default.Messages.QUESTS_MEMBERS_LIST_START_CTA,
                 tileAssetUrl: (0, A.getGameTileAssetUrl)(L),
-                handleClickCta: B
+                handleClickCta: k
             })();
         return (0, i.jsx)(h.QuestContentImpressionTracker, {
             questId: L.id,

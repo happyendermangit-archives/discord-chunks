@@ -55,8 +55,8 @@ function(e, t, n) {
         b = n("807675"),
         G = n("489863"),
         w = n("228763"),
-        k = n("422559"),
-        B = n("713938"),
+        B = n("422559"),
+        k = n("713938"),
         V = n("166148"),
         F = n("807989"),
         x = n("260430"),
@@ -168,7 +168,7 @@ function(e, t, n) {
         a.useEffect(() => {
             M.default.isAuthenticated() && !ep && A.default.getExperiments()
         }, [ep]);
-        let [eR, eC] = a.useState(null), [eg, eL] = a.useState(null), [eD, ev] = a.useState(null), [eM, ey] = a.useState(!1), eP = null == eR ? void 0 : eR.guilds, [eU, eb] = a.useState(null != eu ? eu : null), [eG, ew] = a.useState(null != ed ? ed : null), [ek, eB] = a.useState(P.NONE), eV = a.useMemo(() => (null == eR ? void 0 : eR.user) != null ? new v.default(eR.user) : null, [null == eR ? void 0 : eR.user]), eF = a.useMemo(() => null == eP ? void 0 : eP.find(e => e.id === eU), [eP, eU]), [ex, eH] = a.useState(null), eY = a.useMemo(() => {
+        let [eR, eC] = a.useState(null), [eg, eL] = a.useState(null), [eD, ev] = a.useState(null), [eM, ey] = a.useState(!1), eP = null == eR ? void 0 : eR.guilds, [eU, eb] = a.useState(null != eu ? eu : null), [eG, ew] = a.useState(null != ed ? ed : null), [eB, ek] = a.useState(P.NONE), eV = a.useMemo(() => (null == eR ? void 0 : eR.user) != null ? new v.default(eR.user) : null, [null == eR ? void 0 : eR.user]), eF = a.useMemo(() => null == eP ? void 0 : eP.find(e => e.id === eU), [eP, eU]), [ex, eH] = a.useState(null), eY = a.useMemo(() => {
             var e;
             return eO && null == ea && null == e_ && (null !== (e = null == eo ? void 0 : eo.length) && void 0 !== e ? e : 0) === 0 && null == et
         }, [ea, eO, null == eo ? void 0 : eo.length, et, e_]), [ej, eW] = a.useState(null);
@@ -185,7 +185,7 @@ function(e, t, n) {
             } = a.useMemo(() => {
                 let e = eY ? null == eK ? void 0 : eK.scopes : eo,
                     t = (0, b.filterScopes)(null != e ? e : []),
-                    n = B.OrderedAccountScopes.filter(e => t.includes(e));
+                    n = k.OrderedAccountScopes.filter(e => t.includes(e));
                 return {
                     requestedScopes: t,
                     accountScopes: n
@@ -241,7 +241,7 @@ function(e, t, n) {
                         codeChallengeMethod: ei,
                         state: er,
                         integrationType: ex,
-                        permissions: c.remove(eQ, ek),
+                        permissions: c.remove(eQ, eB),
                         guildId: ex === _.ApplicationIntegrationType.GUILD_INSTALL && null != eU ? eU : void 0,
                         channelId: ex === _.ApplicationIntegrationType.GUILD_INSTALL && null != eG ? eG : void 0
                     });
@@ -266,7 +266,7 @@ function(e, t, n) {
                     let e = t.body;
                     (null == e ? void 0 : e.message) != null && "" !== e.message ? ev(Error(e.message)) : ev(e), eL(1), ey(!1)
                 }
-            }, [eh, eI, eA, null == eR ? void 0 : eR.application, eF, em, K, ez, ee, et, en, ei, er, eQ, ek, eU, ex, eG]),
+            }, [eh, eI, eA, null == eR ? void 0 : eR.application, eF, em, K, ez, ee, et, en, ei, er, eQ, eB, eU, ex, eG]),
             e0 = a.useRef(!1),
             e1 = a.useCallback(async () => {
                 if (!M.default.isAuthenticated()) {
@@ -324,8 +324,8 @@ function(e, t, n) {
             }, [ea, e2, ej, eO, eY, e_, eg, ep]), a.useEffect(() => {
                 if (null == ex || null != eR || null != eD) return;
                 ex === _.ApplicationIntegrationType.USER_INSTALL && (eb(null), ew(null));
-                let e = ez.filter(e => !B.ValidScopes.includes(e));
-                0 === ez.length ? ev(Error("No scopes were provided.")) : e.length > 0 ? ev(Error("Invalid scope: ".concat(e[0]))) : (0, k.containsDisallowedPermission)(eQ) ? ev(Error("Invalid permission(s) provided.")) : e1()
+                let e = ez.filter(e => !k.ValidScopes.includes(e));
+                0 === ez.length ? ev(Error("No scopes were provided.")) : e.length > 0 ? ev(Error("Invalid scope: ".concat(e[0]))) : (0, B.containsDisallowedPermission)(eQ) ? ev(Error("Invalid permission(s) provided.")) : e1()
             }, [e1, ez, eQ, ex, eR, eD]), eD instanceof Error) return {
             body: (0, s.jsx)(z.OAuth2Error, {
                 message: eD.message
@@ -389,9 +389,9 @@ function(e, t, n) {
                 l = (0, s.jsx)(H.default, {
                     application: eR.application,
                     permissions: eQ,
-                    deniedPermissions: ek,
+                    deniedPermissions: eB,
                     onPermissionsChange: (e, t) => {
-                        eB(n => e ? c.remove(n, t) : c.add(n, t))
+                        ek(n => e ? c.remove(n, t) : c.add(n, t))
                     },
                     guild: eF
                 }), T = 1

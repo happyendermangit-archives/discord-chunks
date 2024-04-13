@@ -35,8 +35,8 @@ function(e, t, n) {
         b = n("436478"),
         G = n("131640"),
         w = n("664202"),
-        k = n("228168"),
-        B = n("981631"),
+        B = n("228168"),
+        k = n("981631"),
         V = n("616922"),
         F = n("617538");
 
@@ -75,13 +75,13 @@ function(e, t, n) {
                     let {
                         type: n
                     } = t;
-                    return e ? n === B.ActivityTypes.PLAYING : n !== B.ActivityTypes.CUSTOM_STATUS
+                    return e ? n === k.ActivityTypes.PLAYING : n !== k.ActivityTypes.CUSTOM_STATUS
                 }),
                 customStatusActivity: O.default.findActivity(t.id, e => {
                     let {
                         type: t
                     } = e;
-                    return t === B.ActivityTypes.CUSTOM_STATUS
+                    return t === k.ActivityTypes.CUSTOM_STATUS
                 }),
                 status: et ? null : O.default.getStatus(t.id),
                 isMobile: O.default.isMobileOnline(t.id),
@@ -108,7 +108,7 @@ function(e, t, n) {
                 let i, r, a;
                 null != en && (i = en.party, r = en.assets, a = null != en.application_id ? S.default.getApplication(en.application_id) : null);
                 let o = er;
-                er === B.StatusTypes.ONLINE && (o = es ? B.AnalyticsUserStatusTypes.ONLINE_MOBILE : B.AnalyticsUserStatusTypes.ONLINE_DESKTOP);
+                er === k.StatusTypes.ONLINE && (o = es ? k.AnalyticsUserStatusTypes.ONLINE_MOBILE : k.AnalyticsUserStatusTypes.ONLINE_DESKTOP);
                 let l = null != ee ? {
                         has_nickname: !!(null == ee ? void 0 : ee.nick),
                         has_guild_member_avatar: !!(null == ee ? void 0 : ee.avatar),
@@ -119,7 +119,7 @@ function(e, t, n) {
                         other_application_id: null == J ? void 0 : J.id,
                         other_application_name: t.toString()
                     } : {};
-                C.default.track(B.AnalyticEvents.OPEN_POPOUT, {
+                C.default.track(k.AnalyticEvents.OPEN_POPOUT, {
                     type: "Profile Popout",
                     guild_id: n,
                     channel_id: s,
@@ -131,7 +131,7 @@ function(e, t, n) {
                     has_images: !!(null !== (e = null == r ? void 0 : r.large_image) && void 0 !== e ? e : null == r ? void 0 : r.small_image),
                     party_max: null != i && null != i.size ? i.size[1] : void 0,
                     party_id: null != i ? i.id : void 0,
-                    party_platform: null != i && (0, V.isSpotifyParty)(i.id) ? B.PlatformTypes.SPOTIFY : null,
+                    party_platform: null != i && (0, V.isSpotifyParty)(i.id) ? k.PlatformTypes.SPOTIFY : null,
                     game_platform: (0, E.default)(en),
                     profile_user_status: o,
                     is_streaming: ea,
@@ -157,7 +157,7 @@ function(e, t, n) {
                 roleId: R,
                 shouldTrackViewOnMount: null == ee || null != ee.fullProfileLoadedTimestamp,
                 children: (0, i.jsx)(u.default, {
-                    section: B.AnalyticsSections.PROFILE_POPOUT,
+                    section: k.AnalyticsSections.PROFILE_POPOUT,
                     children: (0, i.jsx)(l.Dialog, {
                         ref: Q,
                         "aria-label": t.username,
@@ -169,7 +169,7 @@ function(e, t, n) {
                         children: (0, i.jsxs)(y.default, {
                             user: t,
                             guildId: n,
-                            profileType: k.UserProfileTypes.POPOUT,
+                            profileType: B.UserProfileTypes.POPOUT,
                             className: e_.shouldShow ? F.hasCollectiblesUpsell : void 0,
                             showOutOfBoundaryComponents: ec,
                             children: [(0, i.jsx)(G.default, {

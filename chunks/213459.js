@@ -53,8 +53,8 @@ function(e, t, n) {
     }
     let G = new u.Logger("ApplicationCommandIndexStore"),
         w = Symbol("currentUser"),
-        k = Symbol("stale"),
-        B = Symbol("current"),
+        B = Symbol("stale"),
+        k = Symbol("current"),
         V = Object.freeze({
             descriptors: [],
             commands: [],
@@ -62,18 +62,18 @@ function(e, t, n) {
             loading: !0
         }),
         F = Object.freeze({
-            serverVersion: B,
+            serverVersion: k,
             fetchState: {
                 fetching: !1
             },
             result: {
                 sections: {},
                 sectionIdsByBotId: {},
-                version: B
+                version: k
             }
         }),
         x = Object.freeze({
-            serverVersion: k,
+            serverVersion: B,
             fetchState: {
                 fetching: !1
             }
@@ -104,7 +104,7 @@ function(e, t, n) {
             ...s,
             ...t
         }) : i && (n = {
-            serverVersion: k,
+            serverVersion: B,
             fetchState: {
                 fetching: !1
             },
@@ -127,7 +127,7 @@ function(e, t, n) {
         j({
             type: "user"
         }, {
-            serverVersion: k
+            serverVersion: B
         })
     }
     class X extends(i = d.default.Store) {
@@ -220,7 +220,7 @@ function(e, t, n) {
     let Q = new X(_.default, {
         LOGOUT: K,
         CONNECTION_OPEN: function() {
-            for (let e of Object.values(Q.indices)) e.serverVersion = k
+            for (let e of Object.values(Q.indices)) e.serverVersion = B
         },
         APPLICATION_COMMAND_INDEX_FETCH_REQUEST: function(e) {
             var t;
@@ -291,7 +291,7 @@ function(e, t, n) {
                 }
                 t.commands[e.id] = e
             }
-            let u = null !== (n = r.version) && void 0 !== n ? n : B;
+            let u = null !== (n = r.version) && void 0 !== n ? n : k;
             j(i, {
                 serverVersion: u,
                 result: {
@@ -327,7 +327,7 @@ function(e, t, n) {
                 type: "channel",
                 channelId: n
             }, {
-                serverVersion: k
+                serverVersion: B
             })
         },
         CHANNEL_DELETE: function(e) {
@@ -357,7 +357,7 @@ function(e, t, n) {
                 type: "guild",
                 guildId: n
             }, {
-                serverVersion: null != i ? i : k
+                serverVersion: null != i ? i : B
             }), s = null == r ? void 0 : null === (t = r.result) || void 0 === t ? void 0 : t.sectionIdsByBotId;
             if (null != s)
                 for (let e in s) {
@@ -366,7 +366,7 @@ function(e, t, n) {
                         type: "channel",
                         channelId: t
                     }, {
-                        serverVersion: k
+                        serverVersion: B
                     })
                 }
         },

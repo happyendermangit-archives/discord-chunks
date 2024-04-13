@@ -35,8 +35,8 @@ function(e, t, n) {
         b = n("489762"),
         G = n("31543"),
         w = n("814042"),
-        k = n("15350"),
-        B = n("611480"),
+        B = n("15350"),
+        k = n("611480"),
         V = n("981631"),
         F = n("80678");
     let x = (0, R.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
@@ -86,7 +86,7 @@ function(e, t, n) {
                 ed = N.StickerPickerCollapsedSections.useSetting(),
                 e_ = r.useMemo(() => new Set(ed), [ed]),
                 ec = (0, l.useStateFromStores)([O.default], () => O.default.getCurrentUser()),
-                eE = r.useMemo(() => (0, k.getFilteredStickers)(er, ec, u), [er, ec, u]),
+                eE = r.useMemo(() => (0, B.getFilteredStickers)(er, ec, u), [er, ec, u]),
                 eI = (0, D.useFavoriteStickers)(),
                 eT = (0, D.useLatestFrecentStickers)(),
                 ef = (0, l.useStateFromStoresObject)([v.default], () => v.default.getAllGuildStickers()),
@@ -150,7 +150,7 @@ function(e, t, n) {
                     onGridItemSelect: eL,
                     store: I.StickerPickerStore,
                     setInspectedStickerPosition: I.StickerPickerStore.setInspectedExpressionPosition,
-                    gridNavigatorId: B.GRID_NAVIGATOR_ID
+                    gridNavigatorId: k.GRID_NAVIGATOR_ID
                 });
             r.useEffect(() => I.StickerPickerStore.resetStoreState, []);
             let eU = () => {
@@ -201,7 +201,7 @@ function(e, t, n) {
                     children: [(0, i.jsx)("div", {
                         ref: ee,
                         className: F.listWrapper,
-                        id: B.GRID_NAVIGATOR_ID,
+                        id: k.GRID_NAVIGATOR_ID,
                         ...eM,
                         children: null != eu ? (0, i.jsx)(b.default, {
                             ref: et,
@@ -230,8 +230,8 @@ function(e, t, n) {
         });
     t.default = r.forwardRef((e, t) => ((0, D.useFetchStickerPacks)(), (0, i.jsx)("div", {
         className: F.wrapper,
-        id: B.STICKER_PICKER_TAB_PANEL_ID,
-        "aria-labelledby": B.STICKER_PICKER_TAB_ID,
+        id: k.STICKER_PICKER_TAB_PANEL_ID,
+        "aria-labelledby": k.STICKER_PICKER_TAB_ID,
         role: "tabpanel",
         children: e.isLoading ? (0, i.jsx)(d.Spinner, {
             className: F.loadingIndicator

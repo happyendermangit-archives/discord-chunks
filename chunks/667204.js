@@ -45,7 +45,7 @@ function(e, t, n) {
             var n;
             return null == e ? void 0 : null === (n = e.find(e => e.displayName === t)) || void 0 === n ? void 0 : n.value
         },
-        k = function(e, t, n) {
+        B = function(e, t, n) {
             var i, r;
             let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : e => e;
             if (e.name === (null === (i = n.autocomplete) || void 0 === i ? void 0 : i.name)) return n.autocomplete.query;
@@ -53,7 +53,7 @@ function(e, t, n) {
             let a = L.default.getAutocompleteLastChoices(n.channel.id, e.name);
             return null != a ? null !== (r = w(a, t)) && void 0 !== r ? r : s(t) : s(t)
         },
-        B = e => {
+        k = e => {
             let t = e.toLowerCase() === P.TRUE_OPTION_NAME.toLowerCase(),
                 n = e.toLowerCase() === P.FALSE_OPTION_NAME.toLowerCase();
             return t || n ? t : null
@@ -84,7 +84,7 @@ function(e, t, n) {
                     n = null;
                 if (e.type === u.ApplicationCommandOptionType.STRING) {
                     let i = null !== (l = null === (a = D.getOptionalString(L, e.name)) || void 0 === a ? void 0 : a.trim()) && void 0 !== l ? l : "";
-                    n = null != e.choices ? w(e.choices, i) : e.autocomplete ? k(e, i, v) : i, r()(null != v.autocomplete || null != n, 'Option "'.concat(e.name, '" expects a value')), null != n && V.push({
+                    n = null != e.choices ? w(e.choices, i) : e.autocomplete ? B(e, i, v) : i, r()(null != v.autocomplete || null != n, 'Option "'.concat(e.name, '" expects a value')), null != n && V.push({
                         type: e.type,
                         name: e.name,
                         value: n,
@@ -159,18 +159,18 @@ function(e, t, n) {
                         }
                         break;
                     case u.ApplicationCommandOptionType.BOOLEAN:
-                        "text" === o.type && (n = B(o.text.trim()));
+                        "text" === o.type && (n = k(o.text.trim()));
                         break;
                     case u.ApplicationCommandOptionType.INTEGER:
                         if ("text" === o.type) {
                             let t = o.text.trim();
-                            n = null != e.choices ? Number(w(e.choices, t)) : e.autocomplete ? k(e, t, v, Number) : Number(D.normalizeNumericString(h.default.locale, t))
+                            n = null != e.choices ? Number(w(e.choices, t)) : e.autocomplete ? B(e, t, v, Number) : Number(D.normalizeNumericString(h.default.locale, t))
                         }
                         break;
                     case u.ApplicationCommandOptionType.NUMBER:
                         if ("text" === o.type) {
                             let t = o.text.trim();
-                            n = null != e.choices ? Number(w(e.choices, t)) : e.autocomplete ? k(e, t, v, Number) : Number(D.normalizeNumericString(h.default.locale, t))
+                            n = null != e.choices ? Number(w(e.choices, t)) : e.autocomplete ? B(e, t, v, Number) : Number(D.normalizeNumericString(h.default.locale, t))
                         }
                         break;
                     default:

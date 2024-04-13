@@ -54,7 +54,7 @@ function(e, t, n) {
             maxVisibleItems: b = 7,
             look: G = D.SelectLooks.FILLED,
             autoFocus: w = !1,
-            popoutPosition: k = "bottom",
+            popoutPosition: B = "bottom",
             filter: F = !0,
             debounceTime: x,
             renderOptionLabel: H = y,
@@ -223,7 +223,7 @@ function(e, t, n) {
         }, [I, ep, ed]), r.useLayoutEffect(() => {
             I && eE("")
         }, [I, eN.length]);
-        let ek = r.useCallback(function(e) {
+        let eB = r.useCallback(function(e) {
             let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
             if (null == e) {
                 l(I ? [] : void 0);
@@ -246,9 +246,9 @@ function(e, t, n) {
                 null === (e = eo.current) || void 0 === e || e.focus()
             }
         }, [w]);
-        let eB = r.useCallback(() => {
-                eE(""), ek(null), eD(!0)
-            }, [ek, eD]),
+        let ek = r.useCallback(() => {
+                eE(""), eB(null), eD(!0)
+            }, [eB, eD]),
             eV = r.useCallback(e => {
                 switch (e.key) {
                     case "Escape":
@@ -268,7 +268,7 @@ function(e, t, n) {
         }, [ec]), r.useEffect(() => {
             !eh && eI && null !== ec && requestAnimationFrame(() => eb.focusFirstVisibleItem())
         }, [eh, eI, ec]);
-        let ex = I ? V : B;
+        let ex = I ? V : k;
         return (0, i.jsx)(u.ListNavigatorProvider, {
             navigator: eb,
             children: (0, i.jsx)(f.Popout, {
@@ -292,7 +292,7 @@ function(e, t, n) {
                         width: ea,
                         selectedValues: eO,
                         closePopout: t,
-                        onSelect: ek,
+                        onSelect: eB,
                         closeOnSelect: T,
                         options: eF,
                         activeDescendant: el,
@@ -303,7 +303,7 @@ function(e, t, n) {
                         renderOptionSuffix: W
                     })
                 },
-                position: k,
+                position: B,
                 children: (e, t) => {
                     let {
                         "aria-expanded": n,
@@ -385,7 +385,7 @@ function(e, t, n) {
                                         navigatorId: eg,
                                         selectValue: function(e) {
                                             let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-                                            ek(e, t)
+                                            eB(e, t)
                                         },
                                         inputClassNames: q
                                     })
@@ -400,7 +400,7 @@ function(e, t, n) {
                             children: [d && (null != ec && "" !== ec || eN.length > 0) ? (0, i.jsx)(_.Clickable, {
                                 "aria-label": v.default.Messages.CLEAR,
                                 "aria-controls": eL,
-                                onClick: eB,
+                                onClick: ek,
                                 children: (0, i.jsx)(L.default, {
                                     width: 16,
                                     height: 16,
@@ -622,14 +622,14 @@ function(e, t, n) {
             }), " ", null != s && (0, i.jsx)("div", {
                 className: M.suffix,
                 children: s
-            }), " ", (0, i.jsx)(k, {
+            }), " ", (0, i.jsx)(B, {
                 isSelected: l,
                 multi: c
             })]
         })
     }
 
-    function k(e) {
+    function B(e) {
         let {
             isSelected: t,
             multi: n
@@ -651,7 +651,7 @@ function(e, t, n) {
         }) : null
     }
 
-    function B(e) {
+    function k(e) {
         let {
             selectedOptions: t,
             renderOptionPrefix: n,

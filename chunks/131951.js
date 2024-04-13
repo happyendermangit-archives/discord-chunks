@@ -29,8 +29,8 @@ function(e, t, n) {
         b = n("836157"),
         G = n("166884"),
         w = n("924371"),
-        k = n("894180"),
-        B = n("86614"),
+        B = n("894180"),
+        k = n("86614"),
         V = n("498600"),
         F = n("631610"),
         x = n("951958"),
@@ -151,8 +151,8 @@ function(e, t, n) {
         eb = !1,
         eG = !1,
         ew = !1,
-        ek = !1,
-        eB = eS.DISABLED_DEVICE_ID,
+        eB = !1,
+        ek = eS.DISABLED_DEVICE_ID,
         eV = !1,
         eF = !1,
         ex = !1,
@@ -220,10 +220,10 @@ function(e, t, n) {
 
     function e9() {
         var e, t, n;
-        let r = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ek,
+        let r = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eB,
             a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s,
             o = s;
-        if ((null == o ? void 0 : o.desktopSource) != null && o.desktopSource.id !== (null == a ? void 0 : null === (e = a.desktopSource) || void 0 === e ? void 0 : e.id) && (null != o.desktopSource.soundshareId && (0, et.isWindows)() && O.cancelAttachToProcess(o.desktopSource.soundshareId), eR.setGoLiveSource(null, ev)), (null == o ? void 0 : o.cameraSource) != null && (o.cameraSource.videoDeviceGuid !== (null == a ? void 0 : null === (t = a.cameraSource) || void 0 === t ? void 0 : t.videoDeviceGuid) || o.cameraSource.audioDeviceGuid !== (null == a ? void 0 : null === (n = a.cameraSource) || void 0 === n ? void 0 : n.audioDeviceGuid)) && eR.setGoLiveSource(null, ev), (ek || r) && (eB = (ek = r) ? tu(eP, e7().videoDeviceId) : eS.DISABLED_DEVICE_ID, eR.setVideoInputDevice(eB)), s = a, null != a) {
+        if ((null == o ? void 0 : o.desktopSource) != null && o.desktopSource.id !== (null == a ? void 0 : null === (e = a.desktopSource) || void 0 === e ? void 0 : e.id) && (null != o.desktopSource.soundshareId && (0, et.isWindows)() && O.cancelAttachToProcess(o.desktopSource.soundshareId), eR.setGoLiveSource(null, ev)), (null == o ? void 0 : o.cameraSource) != null && (o.cameraSource.videoDeviceGuid !== (null == a ? void 0 : null === (t = a.cameraSource) || void 0 === t ? void 0 : t.videoDeviceGuid) || o.cameraSource.audioDeviceGuid !== (null == a ? void 0 : null === (n = a.cameraSource) || void 0 === n ? void 0 : n.audioDeviceGuid)) && eR.setGoLiveSource(null, ev), (eB || r) && (ek = (eB = r) ? tu(eP, e7().videoDeviceId) : eS.DISABLED_DEVICE_ID, eR.setVideoInputDevice(ek)), s = a, null != a) {
             let e = {
                 resolution: a.quality.resolution,
                 frameRate: a.quality.frameRate
@@ -528,7 +528,7 @@ function(e, t, n) {
                     (0, et.isWindows)() && e.setExperimentFlag(eS.ExperimentFlags.SIGNAL_H265_DECODE_SUPPORT, !0);
                     let {
                         signalH265SupportNvenc: t
-                    } = B.default.getCurrentConfig({
+                    } = k.default.getCurrentConfig({
                         location: "f627ab_9"
                     }, {
                         autoTrackExposure: !0
@@ -536,7 +536,7 @@ function(e, t, n) {
                     t && e.setExperimentFlag(eS.ExperimentFlags.SIGNAL_H265_SUPPORT, !0);
                     let {
                         signalH265SupportAMD: n
-                    } = k.default.getCurrentConfig({
+                    } = B.default.getCurrentConfig({
                         location: "f627ab_9"
                     }, {
                         autoTrackExposure: !0
@@ -877,7 +877,7 @@ function(e, t, n) {
             return !this.isSupported() || e7(e).deaf
         }
         isVideoEnabled() {
-            return ek && eH
+            return eB && eH
         }
         isVideoAvailable() {
             return Object.values(eP).some(e => {
@@ -1153,7 +1153,7 @@ function(e, t, n) {
             let {
                 voiceStates: t
             } = e;
-            return t.reduce((e, t) => r === t.sessionId ? (eU = t.mute || t.suppress, ew = t.deaf, eR.eachConnection(e8), e9(!(null != t.guildId && null != t.channelId && null != eQ && eQ !== t.channelId) && ek), eQ = t.channelId, !0) : (!__OVERLAY__ && t.userId === es.default.getId() && null == e_.default.getChannelId() && e9(!1, null), e), !1)
+            return t.reduce((e, t) => r === t.sessionId ? (eU = t.mute || t.suppress, ew = t.deaf, eR.eachConnection(e8), e9(!(null != t.guildId && null != t.channelId && null != eQ && eQ !== t.channelId) && eB), eQ = t.channelId, !0) : (!__OVERLAY__ && t.userId === es.default.getId() && null == e_.default.getChannelId() && e9(!1, null), e), !1)
         },
         CONNECTION_OPEN: function(e) {
             r = e.sessionId, eU = !1, ew = !1, (0, Q.shouldReadWriteAudioSettings)() && td()
@@ -1448,10 +1448,10 @@ function(e, t, n) {
             }(n), ! function(e) {
                 eH = e.length > 0;
                 let t = eP;
-                if (eP = tl(e, eA.default.Messages.NO_VIDEO_DEVICES), ek && !E().isEqual(eP, t)) {
+                if (eP = tl(e, eA.default.Messages.NO_VIDEO_DEVICES), eB && !E().isEqual(eP, t)) {
                     var n;
-                    let e = void 0 !== eP[eB],
-                        i = eB === eS.DEFAULT_DEVICE_ID && (null === (n = t[eS.DEFAULT_DEVICE_ID]) || void 0 === n ? void 0 : n.disabled);
+                    let e = void 0 !== eP[ek],
+                        i = ek === eS.DEFAULT_DEVICE_ID && (null === (n = t[eS.DEFAULT_DEVICE_ID]) || void 0 === n ? void 0 : n.disabled);
                     e9(e || i)
                 }
             }(i)
@@ -1525,7 +1525,7 @@ function(e, t, n) {
                 et.isPlatformEmbedded && !0 === l && ({
                     soundshareId: e,
                     soundshareSession: i
-                } = t_(_), null != e && tc(e, i)), (a = u) !== ev && (null != s && eR.setGoLiveSource(null, ev), ev = a), e9(u === eS.MediaEngineContextTypes.STREAM && ek, {
+                } = t_(_), null != e && tc(e, i)), (a = u) !== ev && (null != s && eR.setGoLiveSource(null, ev), ev = a), e9(u === eS.MediaEngineContextTypes.STREAM && eB, {
                     desktopSource: {
                         id: r,
                         sourcePid: _,
@@ -1543,7 +1543,7 @@ function(e, t, n) {
                         videoDeviceGuid: t,
                         audioDeviceGuid: n
                     } = o.cameraSettings,
-                    s = e === eS.MediaEngineContextTypes.STREAM && ek,
+                    s = e === eS.MediaEngineContextTypes.STREAM && eB,
                     a = null !== (r = o.qualityOptions) && void 0 !== r ? r : {
                         resolution: 720,
                         frameRate: 30
@@ -1558,7 +1558,7 @@ function(e, t, n) {
                         frameRate: a.frameRate
                     }
                 })
-            } else e9(ek, null)
+            } else e9(eB, null)
         },
         MEDIA_ENGINE_SET_VIDEO_DEVICE: function(e) {
             let {
@@ -1628,7 +1628,7 @@ function(e, t, n) {
             let {
                 state: t
             } = e, n = D.default.isEnabled();
-            if (t === eE.AppStates.BACKGROUND && ek && !n) ex = !0, e9(!1);
+            if (t === eE.AppStates.BACKGROUND && eB && !n) ex = !0, e9(!1);
             else {
                 if (t !== eE.AppStates.ACTIVE || !ex) return !1;
                 ex = !1, e9(!0)
@@ -1655,7 +1655,7 @@ function(e, t, n) {
                     eJ = !0, eR.eachConnection(e8);
                     break;
                 case eT.NativePermissionTypes.CAMERA:
-                    !i && ek && e9(!1);
+                    !i && eB && e9(!1);
                     break;
                 default:
                     return !1
@@ -1673,7 +1673,7 @@ function(e, t, n) {
             eR.setAecDump(n.aecDumpEnabled)
         },
         CHANNEL_DELETE: function() {
-            if (!ek && null == s || null != e_.default.getRTCConnectionId()) return !1;
+            if (!eB && null == s || null != e_.default.getRTCConnectionId()) return !1;
             e9(!1, null)
         },
         MEDIA_ENGINE_NOISE_CANCELLATION_ERROR_RESET: function() {
