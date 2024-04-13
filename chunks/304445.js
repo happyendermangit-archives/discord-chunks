@@ -3,8 +3,8 @@ function(e, t, a) {
     a.r(t), a("47120"), a("411104");
     var d = a("540571"),
         n = a("266067"),
-        i = a("38618"),
-        c = a("278147"),
+        c = a("38618"),
+        i = a("278147"),
         r = a("215355"),
         o = a("777639"),
         f = a("311163"),
@@ -29,13 +29,13 @@ function(e, t, a) {
             let {
                 pathname: e
             } = (0, h.getHistory)().location;
-            b.default.getState().resetPath(e), this.unlistenKeyboardChange = b.default.subscribe(this.handleKeybindRouteChange), i.default.addChangeListener(this.handleConnectionChange)
+            b.default.getState().resetPath(e), this.unlistenKeyboardChange = b.default.subscribe(this.handleKeybindRouteChange), c.default.addChangeListener(this.handleConnectionChange)
         }
         convertRouteToNavigation(e, t) {
-            var a, d, i;
+            var a, d, c;
             let {
                 pathname: b
-            } = e, h = (0, o.getRootNavigationRef)(), m = (0, c.isInMainTabsExperiment)(), {
+            } = e, h = (0, o.getRootNavigationRef)(), m = (0, i.isInMainTabsExperiment)(), {
                 mergeTabs: _
             } = (0, r.getMergedTabsExperiment)({
                 location: "convertRouteToNavigation"
@@ -66,7 +66,7 @@ function(e, t, a) {
                     });
                 if (!m) {
                     let e = h.getRootState();
-                    (null == e ? void 0 : null === (i = e.routes) || void 0 === i ? void 0 : null === (d = i[0]) || void 0 === d ? void 0 : d.name) !== "panels" && (0, l.resetToPanelsUI)();
+                    (null == e ? void 0 : null === (c = e.routes) || void 0 === c ? void 0 : null === (d = c[0]) || void 0 === d ? void 0 : d.name) !== "panels" && (0, l.resetToPanelsUI)();
                     return
                 }
                 if (null != t) {
@@ -147,20 +147,20 @@ function(e, t, a) {
             if (this.routeChangeCount += 1, this.routeChangeCount < 10)
                 for (let a of this.rewrites) {
                     let n = (0, h.getHistory)().location.pathname,
-                        i = a(e, t);
-                    if (null != i) return (0, d.addBreadcrumb)({
+                        c = a(e, t);
+                    if (null != c) return (0, d.addBreadcrumb)({
                         message: "RouteManager.handleRouteChange: A route rewrite is replacing the current route",
                         data: {
-                            replacePath: i.path,
+                            replacePath: c.path,
                             previousPath: n
                         }
-                    }), (0, h.replaceWith)(i.path, i.state), !0
+                    }), (0, h.replaceWith)(c.path, c.state), !0
                 } else throw Error("RouteManager: Something has gone horribly wrong with rewrites");
             return !1
         }
         cleanup() {
             var e, t;
-            null === (e = this.unlistenHistory) || void 0 === e || e.call(this), this.unlistenHistory = void 0, null === (t = this.unlistenKeyboardChange) || void 0 === t || t.call(this), this.unlistenKeyboardChange = void 0, i.default.removeChangeListener(this.handleConnectionChange)
+            null === (e = this.unlistenHistory) || void 0 === e || e.call(this), this.unlistenHistory = void 0, null === (t = this.unlistenKeyboardChange) || void 0 === t || t.call(this), this.unlistenKeyboardChange = void 0, c.default.removeChangeListener(this.handleConnectionChange)
         }
         addRouteChangeListener(e) {
             return null != this.unlistenHistory && e((0, h.getHistory)().location, "REPLACE"), this.listeners.add(e), () => this.removeRouteChangeListener(e)
@@ -183,7 +183,7 @@ function(e, t, a) {
         }
         constructor() {
             m(this, "unlistenHistory", void 0), m(this, "unlistenKeyboardChange", void 0), m(this, "rewrites", new Set), m(this, "listeners", new Set), m(this, "routeChangeCount", 0), m(this, "timer", -1), m(this, "connected", !1), m(this, "handleConnectionChange", () => {
-                let e = i.default.isConnected(),
+                let e = c.default.isConnected(),
                     t = e && !this.connected;
                 this.connected = e, t && (this.routeChangeCount = 0, this.executeRouteRewrites((0, h.getHistory)().location, "REPLACE"))
             }), m(this, "handleRouteChange", (e, t) => {

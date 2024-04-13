@@ -7,8 +7,8 @@ function(e, t, a) {
     }), a("470079"), a("902704");
     var d = a("433517"),
         n = a("159626"),
-        i = a("893638"),
-        c = a("828695"),
+        c = a("893638"),
+        i = a("828695"),
         r = a("278147");
     let o = {
             mergeTabs: !1,
@@ -111,7 +111,7 @@ function(e, t, a) {
         var a, n;
         let u = !(0, r.isInMainTabsExperiment)(),
             b = !!u || (null == t ? void 0 : t.disable);
-        return c.default.hasLoadedExperiments || b ? (0, i.getMergedExperimentConfigs)(s.existingUsers, s.newUsers, e, {
+        return i.default.hasLoadedExperiments || b ? (0, c.getMergedExperimentConfigs)(s.existingUsers, s.newUsers, e, {
             ...t,
             disable: b,
             autoTrackExposure: !u && (null === (n = null == t ? void 0 : t.autoTrackExposure) || void 0 === n || n)
