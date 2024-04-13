@@ -7,10 +7,10 @@ function(e, t, a) {
     }), a("47120");
     var d = a("735250"),
         n = a("470079"),
-        i = a("525654"),
-        c = a.n(i),
-        r = a("445131"),
-        o = a("442837"),
+        c = a("525654"),
+        i = a.n(c),
+        o = a("445131"),
+        r = a("442837"),
         f = a("946188"),
         l = a("481060"),
         s = a("596454"),
@@ -23,14 +23,14 @@ function(e, t, a) {
         E = a("998502"),
         g = a("151851"),
         I = a("981631"),
-        T = a("689938");
-    let O = o.default.connectStores([u.default], () => ({
+        O = a("689938");
+    let T = r.default.connectStores([u.default], () => ({
         focused: u.default.isFocused()
     }))(g.default);
     class R extends n.PureComponent {
         getPlatform() {
             var e;
-            let t = null === (e = c().os) || void 0 === e ? void 0 : e.family;
+            let t = null === (e = i().os) || void 0 === e ? void 0 : e.family;
             return null != t && /^win/i.test(t) ? m.PlatformTypes.WINDOWS : null != t && /darwin|os x/i.test(t) ? m.PlatformTypes.OSX : m.PlatformTypes.LINUX
         }
         componentDidMount() {
@@ -44,7 +44,7 @@ function(e, t, a) {
         render() {
             let e = (0, d.jsx)("div", {
                     children: (0, d.jsxs)("p", {
-                        children: [T.default.Messages.VERY_OUT_OF_DATE_DESCRIPTION, " ", (0, d.jsx)(s.default, {
+                        children: [O.default.Messages.VERY_OUT_OF_DATE_DESCRIPTION, " ", (0, d.jsx)(s.default, {
                             src: h.default.getURL(f.default.convert.fromCodePoint("1f44c")),
                             emojiName: ":ok_hand:",
                             animated: !1
@@ -54,17 +54,17 @@ function(e, t, a) {
                 t = (0, d.jsx)(l.Button, {
                     size: l.ButtonSizes.LARGE,
                     onClick: this.handleDownload,
-                    children: T.default.Messages.DOWNLOAD
+                    children: O.default.Messages.DOWNLOAD
                 });
             return (0, d.jsxs)(n.Fragment, {
-                children: [(0, d.jsx)(r.Helmet, {
+                children: [(0, d.jsx)(o.Helmet, {
                     children: (0, d.jsx)("html", {
                         className: (0, _.getThemeClass)(I.ThemeTypes.DARK)
                     })
-                }), (0, d.jsx)(O, {
+                }), (0, d.jsx)(T, {
                     type: this.getPlatform()
                 }), (0, d.jsx)(b.default, {
-                    title: T.default.Messages.UNSUPPORTED_BROWSER_TITLE,
+                    title: O.default.Messages.UNSUPPORTED_BROWSER_TITLE,
                     note: e,
                     action: t
                 })]

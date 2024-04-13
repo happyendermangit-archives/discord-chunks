@@ -1,28 +1,28 @@
-function(e, t, a) {
+function(e, t, n) {
     "use strict";
-    a.r(t), a.d(t, {
+    n.r(t), n.d(t, {
         getMergedTabsExperiment: function() {
-            return u
+            return c
         }
-    }), a("470079"), a("902704");
-    var d = a("433517"),
-        n = a("159626"),
-        i = a("893638"),
-        c = a("828695"),
-        r = a("278147");
-    let o = {
+    }), n("470079"), n("902704");
+    var i = n("433517"),
+        r = n("159626"),
+        s = n("893638"),
+        a = n("828695"),
+        o = n("57132");
+    let l = {
             mergeTabs: !1,
             hideLabels: !1,
             roundedCorners: !1,
             blurTabBar: !1
         },
-        f = !1,
-        l = o,
-        s = (0, n.default)({
+        u = !1,
+        d = l,
+        _ = (0, r.default)({
             kind: "user",
             id: "2024-04_merged_tabs",
             label: "Mobile Redesign - Merge Tabs Last Stand Experiment",
-            defaultConfig: o,
+            defaultConfig: l,
             treatments: [{
                 id: 0,
                 label: "Control",
@@ -107,14 +107,14 @@ function(e, t, a) {
             }]
         });
 
-    function u(e, t) {
-        var a, n;
-        let u = !(0, r.isInMainTabsExperiment)(),
-            b = !!u || (null == t ? void 0 : t.disable);
-        return c.default.hasLoadedExperiments || b ? (0, i.getMergedExperimentConfigs)(s.existingUsers, s.newUsers, e, {
+    function c(e, t) {
+        var n, r;
+        let c = !(0, o.isInMainTabsExperiment)(),
+            E = !!c || (null == t ? void 0 : t.disable);
+        return a.default.hasLoadedExperiments || E ? (0, s.getMergedExperimentConfigs)(_.existingUsers, _.newUsers, e, {
             ...t,
-            disable: b,
-            autoTrackExposure: !u && (null === (n = null == t ? void 0 : t.autoTrackExposure) || void 0 === n || n)
-        }) : (!f && (l = null !== (a = d.Storage.get("--merged-tabs-experiment-cached-config")) && void 0 !== a ? a : o, f = !0), l)
+            disable: E,
+            autoTrackExposure: !c && (null === (r = null == t ? void 0 : t.autoTrackExposure) || void 0 === r || r)
+        }) : (!u && (d = null !== (n = i.Storage.get("--merged-tabs-experiment-cached-config")) && void 0 !== n ? n : l, u = !0), d)
     }
 }

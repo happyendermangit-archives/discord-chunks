@@ -4,20 +4,20 @@ function(e, t, a) {
     var d = a("735250");
     a("470079");
     var n = a("525654"),
-        i = a.n(n),
-        c = a("481060"),
-        r = a("570140"),
-        o = a("468026"),
+        c = a.n(n),
+        i = a("481060"),
+        o = a("570140"),
+        r = a("468026"),
         f = a("317770"),
         l = a("63063"),
         s = a("981631"),
         u = a("689938");
     class b extends f.default {
         _initialize() {
-            r.default.subscribe("MEDIA_ENGINE_PERMISSION", this.handlePermission)
+            o.default.subscribe("MEDIA_ENGINE_PERMISSION", this.handlePermission)
         }
         _terminate() {
-            r.default.unsubscribe("MEDIA_ENGINE_PERMISSION", this.handlePermission)
+            o.default.unsubscribe("MEDIA_ENGINE_PERMISSION", this.handlePermission)
         }
         constructor(...e) {
             var t, a, n;
@@ -25,10 +25,10 @@ function(e, t, a) {
                 let {
                     kind: t,
                     granted: a
-                } = e, n = "Firefox" === i().name ? s.HelpdeskArticles.ENABLE_MIC_FIREFOX : s.HelpdeskArticles.ENABLE_MIC_CHROME;
+                } = e, n = "Firefox" === c().name ? s.HelpdeskArticles.ENABLE_MIC_FIREFOX : s.HelpdeskArticles.ENABLE_MIC_CHROME;
                 if (!a) {
                     let e = "audio" !== t;
-                    (0, c.openModal)(t => (0, d.jsx)(o.default, {
+                    (0, i.openModal)(t => (0, d.jsx)(r.default, {
                         title: e ? u.default.Messages.NO_CAMERA_TITLE : u.default.Messages.NO_MIC_TITLE,
                         body: e ? u.default.Messages.NO_CAMERA_BODY : u.default.Messages.NO_MIC_BODY,
                         onConfirm: () => window.open(l.default.getArticleURL(n), "_blank"),
