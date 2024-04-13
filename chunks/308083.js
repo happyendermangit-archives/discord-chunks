@@ -11,7 +11,7 @@ function(e, t, n) {
             return m
         },
         CLAN_BRAND_PALETTE_PRESETS: function() {
-            return U
+            return b
         },
         CLAN_SETUP_MODAL_LAYER_KEY: function() {
             return T
@@ -59,13 +59,16 @@ function(e, t, n) {
             return I
         },
         PLACEHOLDER_CLAN_LANGUAGE: function() {
-            return G
+            return w
         },
         PLACEHOLDER_CLAN_LOCATION: function() {
-            return b
+            return G
         },
         PLAYSTYLE_GROUPS: function() {
             return O
+        },
+        SUGGESTED_TRAITS_SET: function() {
+            return U
         },
         VALORANT_ID: function() {
             return C
@@ -74,7 +77,7 @@ function(e, t, n) {
             return L
         },
         ensureUserClanData: function() {
-            return w
+            return B
         },
         getPlaystyleOptions: function() {
             return R
@@ -83,7 +86,7 @@ function(e, t, n) {
             return p
         },
         toServerClanData: function() {
-            return B
+            return k
         }
     }), n("47120");
     var i, r, s, a, o, l, u, d, _ = n("913527"),
@@ -149,7 +152,7 @@ function(e, t, n) {
                 subtitle: E.default.Messages.CLAN_SETUP_PLAYSTYLE_VERY_HARDCORE_SUBTITLE
             }
         }
-    }(l = r || (r = {}))[l.INTRO_ANIMATION = 0] = "INTRO_ANIMATION", l[l.SETUP = 1] = "SETUP", l[l.SIGN = 2] = "SIGN", (u = s || (s = {}))[u.FOUNDATIONAL_INTRO = 0] = "FOUNDATIONAL_INTRO", u[u.GAMES = 1] = "GAMES", u[u.PLAYSTYLE = 2] = "PLAYSTYLE", u[u.PERSONALITY_INTRO = 3] = "PERSONALITY_INTRO", u[u.INTERESTS = 4] = "INTERESTS", u[u.UTILITY_TRAITS = 5] = "UTILITY_TRAITS", u[u.DESCRIPTION = 6] = "DESCRIPTION", u[u.PRIMETIME = 7] = "PRIMETIME", u[u.IDENTITY_INTRO = 8] = "IDENTITY_INTRO", u[u.CUSTOMIZE_TAG_BADGE = 9] = "CUSTOMIZE_TAG_BADGE", u[u.CUSTOMIZE_BANNER = 10] = "CUSTOMIZE_BANNER", u[u.APPLICATION_INTRO = 11] = "APPLICATION_INTRO", u[u.MEMBER_APPLICATION = 12] = "MEMBER_APPLICATION";
+    }(l = r || (r = {}))[l.INTRO_ANIMATION = 0] = "INTRO_ANIMATION", l[l.SETUP = 1] = "SETUP", l[l.SIGN = 2] = "SIGN", (u = s || (s = {}))[u.FOUNDATIONAL_INTRO = 0] = "FOUNDATIONAL_INTRO", u[u.GAMES = 1] = "GAMES", u[u.PLAYSTYLE = 2] = "PLAYSTYLE", u[u.PERSONALITY_INTRO = 3] = "PERSONALITY_INTRO", u[u.UTILITY_TRAITS = 4] = "UTILITY_TRAITS", u[u.INTERESTS = 5] = "INTERESTS", u[u.DESCRIPTION = 6] = "DESCRIPTION", u[u.PRIMETIME = 7] = "PRIMETIME", u[u.IDENTITY_INTRO = 8] = "IDENTITY_INTRO", u[u.CUSTOMIZE_TAG_BADGE = 9] = "CUSTOMIZE_TAG_BADGE", u[u.CUSTOMIZE_BANNER = 10] = "CUSTOMIZE_BANNER", u[u.APPLICATION_INTRO = 11] = "APPLICATION_INTRO", u[u.MEMBER_APPLICATION = 12] = "MEMBER_APPLICATION";
     let C = "700136079562375258",
         g = "762434991303950386",
         L = ["Unrated", "Spike Rush", "Death Match", "Swift", "TDM", "Server: NA", "Server: EU", "Server: LATAM", "Server: KR", "Server: AP", "Voice ON", "Voice OFF"],
@@ -157,9 +160,10 @@ function(e, t, n) {
         v = ["LGBTQIA-Friendly", "All genders"],
         M = ["NA", "LATAM", "EU West", "SEA", "OCE", "Global"],
         y = new Set([...L, ...D, ...v, ...M]),
-        P = new Set(E.default.getAvailableLocales().map(e => e.value));
+        P = new Set(E.default.getAvailableLocales().map(e => e.value)),
+        U = new Set(["Anime", "Art and Craft", "Architecture", "Baseball", "Basketball", "Beauty", "Beer", "Board Games", "Books", "Cars", "Celebrities", "Coffee", "Coding", "Craft", "Design", "F1", "Fashion", "Fitness", "Food", "Football", "Healthcare", "Home Decor", "Houseplants", "K-Pop", "Knitting", "LEGO", "MARVEL", "Motorcycles", "Movies", "Music", "Nail Art", "Pets", "Photography", "Pok\xe9mon", "Programming", "Roman History", "Science", "Skiing", "Soccer", "Star Wars", "TCG", "TEA", "Tech", "Travel", "TV Shows", "Wine"]);
     (d = a || (a = {}))[d.PIXEL_RUSH = 0] = "PIXEL_RUSH", d[d.SCANLINES = 1] = "SCANLINES", d[d.TEXTURED = 2] = "TEXTURED", d[d.MAGIC = 3] = "MAGIC", d[d.CUSTOM = 4] = "CUSTOM";
-    let U = [{
+    let b = [{
             name: "Boulder",
             primary: "#8c8d8d",
             secondary: "#d0d0d1"
@@ -192,10 +196,10 @@ function(e, t, n) {
             primary: "#4892d5",
             secondary: "#78b6f0"
         }],
-        b = "United States",
-        G = "English";
+        G = "United States",
+        w = "English";
 
-    function w(e) {
+    function B(e) {
         return null == e ? null : "identityGuildId" in e ? e : {
             identityGuildId: e.identity_guild_id,
             identityEnabled: e.identity_enabled,
@@ -203,7 +207,7 @@ function(e, t, n) {
         }
     }
 
-    function B(e) {
+    function k(e) {
         return {
             tag: e.tag
         }

@@ -27,13 +27,15 @@ function(e, t, n) {
             clan: n,
             isLoading: A,
             onAdoptTag: h,
-            onMouseLeave: m
-        } = e, N = (0, I.useClanInfo)(null !== (t = null == n ? void 0 : n.identityGuildId) && void 0 !== t ? t : null), O = null == n ? void 0 : n.tag, p = (0, d.useIsInUserClanExperiment)(), R = null == n ? void 0 : n.identityGuildId, C = (0, a.useStateFromStores)([o.default], () => o.default.getId()), g = (0, a.useStateFromStores)([l.default], () => null != R ? l.default.getMember(R, C) : null, [R, C]), L = (0, a.useStateFromStores)([u.default], () => u.default.getUser(C), [C]), D = (null == g ? void 0 : g.joinedAt) != null, v = (0, c.isGuildAdoptedUserClanIdentity)(R, null == L ? void 0 : L.clan), M = r.useCallback(e => {
-            null != R && (e.stopPropagation(), e.preventDefault(), null == h || h(), (0, _.openAdoptClanIdentityModal)(R))
-        }, [R, h]);
-        return null == O || (null == N ? void 0 : N.guild) == null || null == R || A ? (0, i.jsx)(s.Spinner, {}) : (0, i.jsxs)("div", {
+            onMouseEnter: m,
+            onMouseLeave: N
+        } = e, O = (0, I.useClanInfo)(null !== (t = null == n ? void 0 : n.identityGuildId) && void 0 !== t ? t : null), p = null == n ? void 0 : n.tag, R = (0, d.useIsInUserClanExperiment)(), C = null == n ? void 0 : n.identityGuildId, g = (0, a.useStateFromStores)([o.default], () => o.default.getId()), L = (0, a.useStateFromStores)([l.default], () => null != C ? l.default.getMember(C, g) : null, [C, g]), D = (0, a.useStateFromStores)([u.default], () => u.default.getUser(g), [g]), v = (null == L ? void 0 : L.joinedAt) != null, M = (0, c.isGuildAdoptedUserClanIdentity)(C, null == D ? void 0 : D.clan), y = r.useCallback(e => {
+            null != C && (e.stopPropagation(), e.preventDefault(), null == h || h(), (0, _.openAdoptClanIdentityModal)(C))
+        }, [C, h]);
+        return null == p || (null == O ? void 0 : O.guild) == null || null == C || A ? (0, i.jsx)(s.Spinner, {}) : (0, i.jsxs)("div", {
             className: S.tooltipContainer,
-            onMouseLeave: m,
+            onMouseLeave: N,
+            onMouseEnter: m,
             children: [(0, i.jsxs)("div", {
                 className: S.tooltipHeader,
                 children: [(0, i.jsx)(s.Text, {
@@ -42,15 +44,15 @@ function(e, t, n) {
                     color: "text-muted",
                     children: f.default.Messages.CLAN_TAG_GUILD_PROFILE_MEMBERSHIP
                 }), (0, i.jsx)(T.BaseClanTagChiplet, {
-                    clanTag: O
+                    clanTag: p
                 })]
             }), (0, i.jsxs)("div", {
                 className: S.tooltipContent,
                 children: [(0, i.jsx)("div", {
                     children: (0, i.jsx)(E.default, {
-                        guild: N.guild,
-                        iconSize: 32,
-                        backupSize: "MEDIUM"
+                        guild: O.guild,
+                        iconSize: 40,
+                        backupSize: "LARGE"
                     })
                 }), (0, i.jsxs)("div", {
                     className: S.guildInfoContainer,
@@ -59,7 +61,7 @@ function(e, t, n) {
                         children: (0, i.jsx)(s.Heading, {
                             variant: "heading-md/semibold",
                             color: "header-primary",
-                            children: N.guild.name
+                            children: O.guild.name
                         })
                     }), (0, i.jsxs)("div", {
                         className: S.guildMemberCount,
@@ -72,10 +74,10 @@ function(e, t, n) {
                         })]
                     })]
                 })]
-            }), D && !v && p && (0, i.jsx)("div", {
+            }), v && !M && R && (0, i.jsx)("div", {
                 className: S.tooltipFooter,
                 children: (0, i.jsx)(s.Button, {
-                    onClick: M,
+                    onClick: y,
                     color: s.Button.Colors.BRAND,
                     size: s.Button.Sizes.SMALL,
                     fullWidth: !0,

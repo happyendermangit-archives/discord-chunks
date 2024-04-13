@@ -151,10 +151,13 @@ function(e, t, n) {
             children: [(0, i.jsx)(l.NameWithRole, {
                 roleName: o,
                 color: null != s ? s : void 0,
-                name: null != U ? U : es
+                name: null != U ? U : es,
+                className: v.name
             }), (0, i.jsx)(d.default, {
                 clan: null == b ? void 0 : b.clan,
-                userId: null == b ? void 0 : b.id
+                userId: null == b ? void 0 : b.id,
+                disableTooltip: !0,
+                className: v.clanTag
             })]
         }), eg = k === C.StatusTypes.OFFLINE;
         return null == b ? (0, i.jsx)(A.default, {

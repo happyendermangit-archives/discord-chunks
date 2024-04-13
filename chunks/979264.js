@@ -25,13 +25,14 @@ function(e, t, n) {
             clanTag: t,
             className: n,
             onClick: r,
-            onMouseEnter: s
+            onMouseEnter: s,
+            disableTooltip: o = !0
         } = e;
         return (0, i.jsx)(d.Clickable, {
             tag: "span",
             onClick: r,
             onMouseEnter: s,
-            className: a()(S.chipletContainerInner, n),
+            className: a()(S.chipletContainerInner, o && S.noTooltip, n),
             children: (0, i.jsxs)(d.Text, {
                 variant: "text-xs/medium",
                 color: "text-normal",
@@ -51,35 +52,56 @@ function(e, t, n) {
             clan: s,
             userId: a,
             className: o,
-            disableTooltip: f
-        } = e, S = (0, u.useStateFromStores)([c.default], () => c.default.getUser(a), [a]), h = null !== (t = null == S ? void 0 : S.clan) && void 0 !== t ? t : s, m = (0, E.getTagFromClan)(h), N = (0, _.default)(h), [O, p] = (0, I.useFetchClanInfo)(null !== (n = null == h ? void 0 : h.identityGuildId) && void 0 !== n ? n : null), [R, C] = r.useState(!1), g = r.useCallback(e => {
-            !f && (e.stopPropagation(), e.preventDefault(), C(e => !e))
-        }, [f]), L = r.useCallback(() => {
-            !f && p()
-        }, [p, f]);
+            disableTooltip: f = !1
+        } = e, h = (0, u.useStateFromStores)([c.default], () => c.default.getUser(a), [a]), m = null !== (t = null == h ? void 0 : h.clan) && void 0 !== t ? t : s, N = (0, E.getTagFromClan)(m), O = (0, _.default)(m), [p, R] = (0, I.useFetchClanInfo)(null !== (n = null == m ? void 0 : m.identityGuildId) && void 0 !== n ? n : null), [C, g] = r.useState(!1), [L, D] = r.useState(!1), [v, M] = r.useState(!1), y = r.useRef(null), P = r.useCallback(e => {
+            !f && (e.stopPropagation(), e.preventDefault(), g(e => !e))
+        }, [f]), U = r.useCallback(() => {
+            !f && R()
+        }, [R, f]);
         return (r.useEffect(() => {
-            !l()(N, h) && C(!1)
-        }, [N, h]), null == m) ? null : (0, i.jsx)(d.Tooltip, {
+            !l()(O, m) && g(!1)
+        }, [O, m]), r.useEffect(() => (!L && !v && (y.current = setTimeout(() => {
+            g(!1)
+        }, 500)), () => {
+            null != y.current && clearTimeout(y.current)
+        }), [L, v]), null == N) ? null : f ? (0, i.jsx)(A, {
+            clanTag: N,
+            className: o,
+            onClick: P,
+            onMouseEnter: U,
+            disableTooltip: f
+        }) : (0, i.jsx)(d.Tooltip, {
             text: (0, i.jsx)(T.default, {
-                isLoading: O,
-                clan: h,
-                onAdoptTag: () => C(!1),
-                onMouseLeave: () => C(!1)
+                isLoading: p,
+                clan: m,
+                onAdoptTag: () => g(!1),
+                onMouseEnter: () => D(!0),
+                onMouseLeave: () => D(!1)
             }),
-            onTooltipShow: () => p(),
+            onTooltipShow: () => R(),
             hideOnClick: !0,
             disableTooltipPointerEvents: !1,
-            color: d.Tooltip.Colors.GREY,
+            color: d.Tooltip.Colors.CUSTOM,
+            tooltipClassName: S.tooltip,
             "aria-label": "Guild Profile",
-            shouldShow: R,
-            forceOpen: R,
+            shouldShow: C,
+            forceOpen: C,
             children: e => (0, i.jsx)("span", {
                 ...e,
+                onMouseEnter: () => {
+                    var t;
+                    M(!0), null === (t = e.onMouseEnter) || void 0 === t || t.call(e)
+                },
+                onMouseLeave: () => {
+                    var t;
+                    M(!1), null === (t = e.onMouseLeave) || void 0 === t || t.call(e)
+                },
                 children: (0, i.jsx)(A, {
-                    clanTag: m,
+                    clanTag: N,
                     className: o,
-                    onClick: g,
-                    onMouseEnter: L
+                    onClick: P,
+                    onMouseEnter: U,
+                    disableTooltip: f
                 })
             })
         })
