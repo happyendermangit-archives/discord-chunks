@@ -124,7 +124,8 @@ function(e, t, n) {
                     installParams: v.install_params,
                     integrationTypesConfig: v.integration_types_config,
                     flags: v.flags,
-                    popularApplicationCommandIds: v.popular_application_command_ids
+                    popularApplicationCommandIds: v.popular_application_command_ids,
+                    store_available: v.store_available
                 } : null,
                 badges: e.badges
             }, null != e.guild_member_profile) {

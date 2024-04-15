@@ -22,7 +22,7 @@ function(e, t, n) {
             url: f,
             format: S,
             className: A
-        } = e, [h, m] = r.useState(!1), N = (0, u.useIsFavoriteGIF)(f), O = N ? I.default.Messages.GIF_TOOLTIP_REMOVE_FROM_FAVORITES : I.default.Messages.GIF_TOOLTIP_ADD_TO_FAVORITES, p = N ? _.default : d.default;
+        } = e, [h, m] = r.useState(!1), N = (0, u.useIsFavoriteGIF)((0, l.gifUrlKey)(f)), O = N ? I.default.Messages.GIF_TOOLTIP_REMOVE_FROM_FAVORITES : I.default.Messages.GIF_TOOLTIP_ADD_TO_FAVORITES, p = N ? _.default : d.default;
         r.useEffect(() => {
             if (!h) return;
             let e = setTimeout(() => {

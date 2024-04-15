@@ -13,6 +13,9 @@ function(e, t, n) {
         fetchTrendingGIFs: function() {
             return P
         },
+        gifUrlKey: function() {
+            return U
+        },
         initializeSearch: function() {
             return M
         },
