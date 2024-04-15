@@ -459,11 +459,11 @@ function(e, t, n) {
         e.message.state === N.MessageStates.SENDING && v.desktopMessageEvent("created")
     }
 
-    function F(e) {
+    function V(e) {
         null != (0, h.default)() && (R.verbose("AUDIO_TOGGLE_SELF_MUTE", e), v.handleMuteToggled())
     }
 
-    function V(e) {
+    function F(e) {
         R.verbose("WINDOW_FOCUS", e);
         let t = (0, A.getMainWindowId)();
         if (e.windowId !== t) {
@@ -550,9 +550,9 @@ function(e, t, n) {
                 SOUNDBOARD_SET_OVERLAY_ENABLED: G,
                 MESSAGE_ACKED: B,
                 MESSAGE_CREATE: k,
-                WINDOW_FOCUS: V,
+                WINDOW_FOCUS: F,
                 RTC_CONNECTION_STATE: H.handleRTCConnectionState,
-                AUDIO_TOGGLE_SELF_MUTE: F,
+                AUDIO_TOGGLE_SELF_MUTE: V,
                 OVERLAY_SUCCESSFULLY_SHOWN: x
             })
         }

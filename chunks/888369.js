@@ -107,7 +107,7 @@ function(e, t, n) {
         return !1
     }
 
-    function F(e, t) {
+    function V(e, t) {
         let n = U(e),
             i = v(n),
             r = G(n, i),
@@ -129,7 +129,7 @@ function(e, t, n) {
         return k(n, r, i)
     }
 
-    function V(e, t) {
+    function F(e, t) {
         if (null == e) return;
         let n = v(e),
             i = G(e, n);
@@ -240,12 +240,12 @@ function(e, t, n) {
                 guild_id: n
             }
         } = e;
-        return F(n, [t])
+        return V(n, [t])
     }
 
     function X() {
         let e = c.default.getChannel(f.default.getChannelId());
-        return null != e && F(e.getGuildId(), [e.id])
+        return null != e && V(e.getGuildId(), [e.id])
     }
 
     function Q(e) {
@@ -260,7 +260,7 @@ function(e, t, n) {
         let {
             channelId: t
         } = e, n = c.default.getChannel(t);
-        return null != n && F(n.getGuildId(), [n.id])
+        return null != n && V(n.getGuildId(), [n.id])
     }
 
     function Z(e) {
@@ -272,7 +272,7 @@ function(e, t, n) {
             let e = v(n.guild_id);
             if (((n.isThread() ? !o.default.hasJoined(n.id) || o.default.isMuted(n.id) : A.default.isGuildOrCategoryOrChannelMuted(n.guild_id, n.id)) || e.unreadByType[O.ReadStateTypes.CHANNEL]) && 0 === T.default.getMentionCount(t)) return !1
         }
-        return F(n.getGuildId(), [n.id])
+        return V(n.getGuildId(), [n.id])
     }
 
     function J(e) {
@@ -280,21 +280,21 @@ function(e, t, n) {
             channelId: t,
             guildId: n
         } = e;
-        return n !== m.FAVORITES && null != t && F(n, [t])
+        return n !== m.FAVORITES && null != t && V(n, [t])
     }
 
     function $(e) {
         let {
             channel: t
         } = e;
-        return F(t.getGuildId(), [t.id])
+        return V(t.getGuildId(), [t.id])
     }
 
     function ee(e) {
         let {
             channels: t
         } = e;
-        return r()(t).groupBy(e => e.getGuildId()).reduce((e, t, n) => F(n, t.map(e => e.id)) || e, !1)
+        return r()(t).groupBy(e => e.getGuildId()).reduce((e, t, n) => V(n, t.map(e => e.id)) || e, !1)
     }
 
     function et(e) {
@@ -309,28 +309,28 @@ function(e, t, n) {
         }).filter(e => null != c.default.getChannel(e)).groupBy(e => {
             var t;
             return null === (t = c.default.getChannel(e)) || void 0 === t ? void 0 : t.getGuildId()
-        }).reduce((e, t, n) => F(n, t) || e, !1)
+        }).reduce((e, t, n) => V(n, t) || e, !1)
     }
 
     function en(e) {
         let {
             channel: t
         } = e;
-        return F(t.getGuildId(), [t.id, t.parent_id])
+        return V(t.getGuildId(), [t.id, t.parent_id])
     }
 
     function ei(e) {
         let {
             guildScheduledEvent: t
         } = e;
-        return V(t.guild_id, O.ReadStateTypes.GUILD_EVENT)
+        return F(t.guild_id, O.ReadStateTypes.GUILD_EVENT)
     }
 
     function er(e) {
         let {
             guildScheduledEvent: t
         } = e;
-        return V(t.guild_id, O.ReadStateTypes.GUILD_EVENT)
+        return F(t.guild_id, O.ReadStateTypes.GUILD_EVENT)
     }
 
     function es(e) {
@@ -338,7 +338,7 @@ function(e, t, n) {
             id: t,
             ackType: n
         } = e;
-        return V(t, n)
+        return F(t, n)
     }
 
     function ea(e) {
@@ -346,11 +346,11 @@ function(e, t, n) {
             id: t,
             guildId: n
         } = e;
-        return F(n, [t])
+        return V(n, [t])
     }
 
     function eo(e) {
-        return (0, l.doesThreadMembersActionAffectMe)(e) && F(e.guildId, [e.id])
+        return (0, l.doesThreadMembersActionAffectMe)(e) && V(e.guildId, [e.id])
     }
 
     function el(e) {
@@ -358,11 +358,11 @@ function(e, t, n) {
             threads: t,
             guildId: n
         } = e;
-        return F(n, t.filter(e => o.default.hasJoined(e.id)).map(e => e.id))
+        return V(n, t.filter(e => o.default.hasJoined(e.id)).map(e => e.id))
     }
 
     function eu(e) {
-        return null != e.channels && F(e.guildId, e.channels.map(e => e.id))
+        return null != e.channels && V(e.guildId, e.channels.map(e => e.id))
     }
 
     function ed(e) {

@@ -53,8 +53,8 @@ function(e, t, n) {
         w = n("605403"),
         B = n("806519"),
         k = n("626135"),
-        F = n("768581"),
-        V = n("900849"),
+        V = n("768581"),
+        F = n("900849"),
         x = n("74538"),
         H = n("886132"),
         Y = n("524444"),
@@ -117,13 +117,13 @@ function(e, t, n) {
                 id: s,
                 icon: o,
                 name: l
-            } = t, u = F.default.getGuildIconURL({
+            } = t, u = V.default.getGuildIconURL({
                 id: s,
                 icon: o,
                 size: 32,
                 canAnimate: !0
             }), _ = (n = null == n || n) || t.isDiscoverable(), c = () => {
-                t.isDiscoverable() ? (0, V.startLurking)(s, {}) : n && (0, g.transitionTo)(j.Routes.CHANNEL(s, v.default.getChannelId(s)))
+                t.isDiscoverable() ? (0, F.startLurking)(s, {}) : n && (0, g.transitionTo)(j.Routes.CHANNEL(s, v.default.getChannelId(s)))
             }, E = t.isDiscoverable() && null != t.presenceCount, I = () => {
                 let e = !r && !n;
                 return (0, i.jsxs)(i.Fragment, {
@@ -245,7 +245,7 @@ function(e, t, n) {
                 guildEmoji: U,
                 demoMode: b = !1,
                 nonce: B
-            } = e, F = (0, l.useStateFromStores)([y.default], () => y.default.getCurrentUser()), V = (0, l.useStateFromStores)([M.default], () => M.default.getGuildId()), q = x.default.isPremium(F), J = null != V && (V === (null == S ? void 0 : S.id) || V === (null == g ? void 0 : g.id)), $ = null != g, et = null !== (t = null == S ? void 0 : S.isDiscoverable()) && void 0 !== t && t;
+            } = e, V = (0, l.useStateFromStores)([y.default], () => y.default.getCurrentUser()), F = (0, l.useStateFromStores)([M.default], () => M.default.getGuildId()), q = x.default.isPremium(V), J = null != F && (F === (null == S ? void 0 : S.id) || F === (null == g ? void 0 : g.id)), $ = null != g, et = null !== (t = null == S ? void 0 : S.isDiscoverable()) && void 0 !== t && t;
             b && (q = !0, et = !0, $ = !1, J = !1);
             let {
                 enabled: en
@@ -263,9 +263,9 @@ function(e, t, n) {
                 userIsRoleSubscriber: !1
             } : {
                 isRoleSubscriptionEmoji: m.isPurchasableRoleSubscriptionEmoji(U),
-                isUnusableRoleSubscriptionEmoji: m.isUnusableRoleSubscriptionEmoji(U, null != V ? V : void 0),
+                isUnusableRoleSubscriptionEmoji: m.isUnusableRoleSubscriptionEmoji(U, null != F ? F : void 0),
                 userIsRoleSubscriber: N.default.getUserSubscriptionRoles(U.guildId).size > 0
-            }, [U, V]), eo = !!es && (0, f.shouldHideGuildPurchaseEntryPoints)(null == U ? void 0 : U.guildId), {
+            }, [U, F]), eo = !!es && (0, f.shouldHideGuildPurchaseEntryPoints)(null == U ? void 0 : U.guildId), {
                 analyticsLocations: el
             } = (0, I.default)(E.default.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL);
             (0, T.default)({
@@ -474,7 +474,7 @@ function(e, t, n) {
                     color: d.ButtonColors.BRAND,
                     fullWidth: !0,
                     onClick: () => {
-                        (0, V.startLurking)(r.id, {})
+                        (0, F.startLurking)(r.id, {})
                     },
                     children: a.text
                 }) : null)]

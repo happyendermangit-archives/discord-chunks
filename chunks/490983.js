@@ -33,19 +33,19 @@ function(e, t, n) {
     let w = c()().subtract(1, "week"),
         B = [],
         k = "",
-        F = !1;
+        V = !1;
 
-    function V(e, t) {
+    function F(e, t) {
         return e.application.name.localeCompare(t.application.name, A.default.locale, {
             sensitivity: "base"
         })
     }
     let x = {
-            [G.GameTableListKeys.NAME]: V,
+            [G.GameTableListKeys.NAME]: F,
             [G.GameTableListKeys.PLATFORM]: (e, t, n) => {
                 let i = e.libraryApplication.getDistributor(),
                     r = t.libraryApplication.getDistributor();
-                return i === r ? (n === G.TableSortDirections.DESCENDING ? -1 : 1) * V(e, t) : null == i ? 1 : null == r ? -1 : i.localeCompare(r)
+                return i === r ? (n === G.TableSortDirections.DESCENDING ? -1 : 1) * F(e, t) : null == i ? 1 : null == r ? -1 : i.localeCompare(r)
             },
             [G.GameTableListKeys.LAST_PLAYED]: (e, t) => e.isNew && !t.isNew ? -1 : !e.isNew && t.isNew ? 1 : e.lastPlayed === t.lastPlayed ? 0 : e.lastPlayed > t.lastPlayed ? -1 : 1,
             [G.GameTableListKeys.ACTIONS]: null
@@ -131,7 +131,7 @@ function(e, t, n) {
                     defaultAction: null
                 }
             })(i, n, t, e)).filter(v.isNotNullish), ...r].sort((e, t) => e.lastPlayed === t.lastPlayed ? 0 : e.lastPlayed > t.lastPlayed ? -1 : 1);
-        return F = null != m.default.lastFetched && N.default.fetched, !d().isEqual(s, B) && (B = s, y.isPlatformEmbedded && P.default.setSystemTrayApplications(Y(B).map(e => e.application).slice(0, 5)), !0)
+        return V = null != m.default.lastFetched && N.default.fetched, !d().isEqual(s, B) && (B = s, y.isPlatformEmbedded && P.default.setSystemTrayApplications(Y(B).map(e => e.application).slice(0, 5)), !0)
     }
     class Q extends(i = E.default.Store) {
         initialize() {
@@ -159,7 +159,7 @@ function(e, t, n) {
             return K(B)
         }
         get hasFetchedApplications() {
-            return F
+            return V
         }
     }
     a = "ApplicationViewStore", (s = "displayName") in(r = Q) ? Object.defineProperty(r, s, {

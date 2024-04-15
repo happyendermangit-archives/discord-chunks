@@ -32,8 +32,8 @@ function(e, t, n) {
         w = null,
         B = null,
         k = null,
-        F = null,
         V = null,
+        F = null,
         x = null,
         H = D.LoginStates.NONE,
         Y = D.RegistrationStates.NONE,
@@ -65,8 +65,8 @@ function(e, t, n) {
 
     function eo() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        if (F = T.Storage.get(P), null != ei) return ei;
-        let t = null != F ? F : _.getToken();
+        if (V = T.Storage.get(P), null != ei) return ei;
+        let t = null != V ? V : _.getToken();
         !(!(0, N.isValidFingerprintRoute)() || !e && null != t || g.default.isHandoffAvailable()) && el({
             withGuildExperiments: !0
         })
@@ -76,7 +76,7 @@ function(e, t, n) {
         let {
             withGuildExperiments: t
         } = e, n = {}, i = p.default.getSuperPropertiesBase64();
-        null != i && (n["X-Super-Properties"] = i), null != F && (n["X-Fingerprint"] = F), ei = I.HTTP.get({
+        null != i && (n["X-Super-Properties"] = i), null != V && (n["X-Fingerprint"] = V), ei = I.HTTP.get({
             url: D.Endpoints.EXPERIMENTS,
             query: {
                 with_guild_experiments: t
@@ -110,7 +110,7 @@ function(e, t, n) {
     }
 
     function eu() {
-        V = F, F = null, T.Storage.remove(P)
+        F = V, V = null, T.Storage.remove(P)
     }
 
     function ed(e, t) {
@@ -174,7 +174,7 @@ function(e, t, n) {
             return (0, R.isAuthenticated)()
         }
         getFingerprint() {
-            return F
+            return V
         }
         getAnalyticsToken() {
             return x
@@ -389,11 +389,11 @@ function(e, t, n) {
         LOGOUT: eE,
         FINGERPRINT: function(e) {
             let t = e.fingerprint;
-            null == F ? null != t ? (p.default.track(D.AnalyticEvents.USER_FINGERPRINT_CHANGED, {
-                old_fingerprint: null != V ? (0, c.extractId)(V) : null,
+            null == V ? null != t ? (p.default.track(D.AnalyticEvents.USER_FINGERPRINT_CHANGED, {
+                old_fingerprint: null != F ? (0, c.extractId)(F) : null,
                 new_fingerprint: (0, c.extractId)(t)
-            }), F = t, V = t, T.Storage.set(P, F)) : eo() : null != t && F !== t && p.default.track(D.AnalyticEvents.EXTERNAL_FINGERPRINT_DROPPED, {
-                fingerprint: (0, c.extractId)(F),
+            }), V = t, F = t, T.Storage.set(P, V)) : eo() : null != t && V !== t && p.default.track(D.AnalyticEvents.EXTERNAL_FINGERPRINT_DROPPED, {
+                fingerprint: (0, c.extractId)(V),
                 dropped_fingerprint: (0, c.extractId)(t)
             })
         },

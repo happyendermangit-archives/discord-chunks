@@ -43,11 +43,11 @@ function(e, t, n) {
         B = n("689938"),
         k = n("209395");
     (r = i || (i = {})).EDITOR = "EDITOR", r.SETTINGS = "SETTINGS";
-    let F = Object.freeze({
+    let V = Object.freeze({
             EDITOR: G.UserSettingsDelay.SLOW_USER_ACTION,
             SETTINGS: G.UserSettingsDelay.INFREQUENT_USER_ACTION
         }),
-        V = a.createContext({}),
+        F = a.createContext({}),
         x = e => {
             let {
                 isPersisted: t,
@@ -131,9 +131,9 @@ function(e, t, n) {
                 labelledBy: i
             }), o = a.useMemo(() => ({
                 type: t,
-                delay: F[t]
+                delay: V[t]
             }), [t]);
-            return (0, s.jsx)(V.Provider, {
+            return (0, s.jsx)(F.Provider, {
                 value: o,
                 children: (0, s.jsx)("div", {
                     ...r,
@@ -147,7 +147,7 @@ function(e, t, n) {
             className: t
         } = e, {
             delay: n
-        } = a.useContext(V), {
+        } = a.useContext(F), {
             analyticsLocations: i
         } = (0, S.default)(f.default.CLIENT_THEMES_THEME_SELECTOR), [r, o, u] = (0, d.useStateFromStoresArray)([p.default, R.default, v.default], () => [p.default.theme, null == v.default.gradientPreset, R.default.useSystemTheme === b.SystemThemeState.ON]), _ = e => {
             (0, D.resetBackgroundGradientPreset)(), x({
@@ -183,12 +183,12 @@ function(e, t, n) {
         } = e, {
             type: u,
             delay: c
-        } = a.useContext(V), {
+        } = a.useContext(F), {
             analyticsLocations: E
         } = (0, S.default)(f.default.CLIENT_THEMES_THEME_SELECTOR), [N, p, R] = (0, d.useStateFromStoresArray)([v.default], () => {
             var e;
             return [v.default.isPreview, v.default.isCoachmark, null === (e = v.default.gradientPreset) || void 0 === e ? void 0 : e.id]
-        }), [g, L] = a.useState(!1), [P, G] = a.useState(-1), w = (0, d.useStateFromStores)([T.default], () => T.default.useReducedMotion), F = (null === (i = (0, h.usePremiumTrialOffer)()) || void 0 === i ? void 0 : null === (t = i.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === U.PremiumSubscriptionSKUs.TIER_2;
+        }), [g, L] = a.useState(!1), [P, G] = a.useState(-1), w = (0, d.useStateFromStores)([T.default], () => T.default.useReducedMotion), V = (null === (i = (0, h.usePremiumTrialOffer)()) || void 0 === i ? void 0 : null === (t = i.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === U.PremiumSubscriptionSKUs.TIER_2;
         a.useEffect(() => {
             (P === y.BACKGROUND_GRADIENT_PRESETS.length - 2 && "EDITOR" === u || R === _.BackgroundGradientPresetId.EASTER_EGG) && L(!0)
         }, [P, u, R]);
@@ -214,7 +214,7 @@ function(e, t, n) {
         };
         return (0, s.jsxs)("section", {
             className: r,
-            children: ["EDITOR" === u && N && F ? (0, s.jsx)(m.default, {
+            children: ["EDITOR" === u && N && V ? (0, s.jsx)(m.default, {
                 type: U.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                 subscriptionTier: U.PremiumSubscriptionSKUs.TIER_2,
                 children: B.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({

@@ -11,7 +11,7 @@ function(e, t, n) {
             return x
         },
         getEffectUrl: function() {
-            return F
+            return V
         },
         getResizedEmojiData: function() {
             return B
@@ -84,7 +84,7 @@ function(e, t, n) {
             return Math.floor(Math.random() * n.length)
         };
 
-    function F(e) {
+    function V(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : P.EMOJI_SIZE;
         if (null != e.id) {
             var n;
@@ -99,7 +99,7 @@ function(e, t, n) {
         return null != r ? y.default.getURL(r.surrogates) : ""
     }
 
-    function V(e, t) {
+    function F(e, t) {
         return r()(e).map(e => {
             var n;
             return null !== (n = e[t]) && void 0 !== n ? n : null
@@ -109,8 +109,8 @@ function(e, t, n) {
     function x(e) {
         var t, n, i, r, s, a;
         if (e.length < 1) return "";
-        let o = V(e, "userId"),
-            l = V(e, "emojiName"),
+        let o = F(e, "userId"),
+            l = F(e, "emojiName"),
             u = l.length < 2 ? null !== (t = null == l ? void 0 : l[0]) && void 0 !== t ? t : "" : l.join(", ");
         if (o.length < 1) return "";
         if (1 === o.length) return U.default.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_SINGLE.format({

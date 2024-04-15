@@ -42,8 +42,8 @@ function(e, t, n) {
             premiumModalAnalyticsLocation: w,
             showIcon: B = !0,
             disableShine: k,
-            applicationId: F,
-            giftMessage: V,
+            applicationId: V,
+            giftMessage: F,
             overrideDisabledButtonText: x,
             shinyButtonClassName: H,
             ...Y
@@ -136,8 +136,8 @@ function(e, t, n) {
                 onSubscribeModalClose: G,
                 analyticsLocations: z,
                 premiumModalAnalyticsLocation: w,
-                applicationId: F,
-                giftMessage: V
+                applicationId: V,
+                giftMessage: F
             })
         };
         if (M) return (0, i.jsxs)(o.Button, {

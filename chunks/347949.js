@@ -217,7 +217,7 @@ function(e, t, n) {
         let {
             userId: t,
             containerClassName: n
-        } = e, s = r.useCallback(e => (0, i.jsx)(m.default.Inner, {
+        } = e, s = r.useCallback(e => (0, i.jsx)(m.default.Overlay, {
             children: (0, i.jsx)(N.default, {
                 children: e
             })

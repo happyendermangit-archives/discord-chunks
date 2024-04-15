@@ -48,7 +48,7 @@ function(e, t, n) {
             }() && !d.default.keyboardNavigationExplainerModalSeen && 0 === A && (0, r.openModalLazy)(async () => {
                 let {
                     default: e
-                } = await Promise.all([n.e("99387"), n.e("6380"), n.e("56181")]).then(n.bind(n, "461964"));
+                } = await Promise.all([n.e("99387"), n.e("6380"), n.e("73872")]).then(n.bind(n, "461964"));
                 return t => (0, i.jsx)(e, {
                     ...t
                 })

@@ -2,132 +2,132 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return T
+            return E
         }
     }), n("411104"), n("627341");
     var i = n("735250");
     n("470079");
     var r = n("278074"),
-        s = n("477690"),
-        a = n("481060"),
-        o = n("1585"),
-        l = n("153124"),
-        u = n("624138"),
-        d = n("793397"),
-        _ = n("228168"),
-        c = n("419061"),
-        E = n("384882");
-    let I = {
-        [_.UserProfileTypes.POPOUT]: a.AvatarSizes.SIZE_80,
-        [_.UserProfileTypes.MODAL]: a.AvatarSizes.SIZE_120,
-        [_.UserProfileTypes.SETTINGS]: a.AvatarSizes.SIZE_80,
-        [_.UserProfileTypes.PANEL]: a.AvatarSizes.SIZE_80,
-        [_.UserProfileTypes.POMELO_POPOUT]: a.AvatarSizes.SIZE_80,
-        [_.UserProfileTypes.CANCEL_MODAL]: a.AvatarSizes.SIZE_56
+        s = n("481060"),
+        a = n("1585"),
+        o = n("153124"),
+        l = n("793397"),
+        u = n("228168"),
+        d = n("419061"),
+        _ = n("384882");
+    let c = {
+        [u.UserProfileTypes.POPOUT]: s.AvatarSizes.SIZE_80,
+        [u.UserProfileTypes.MODAL]: s.AvatarSizes.SIZE_120,
+        [u.UserProfileTypes.SETTINGS]: s.AvatarSizes.SIZE_80,
+        [u.UserProfileTypes.PANEL]: s.AvatarSizes.SIZE_80,
+        [u.UserProfileTypes.POMELO_POPOUT]: s.AvatarSizes.SIZE_80,
+        [u.UserProfileTypes.CANCEL_MODAL]: s.AvatarSizes.SIZE_56,
+        [u.UserProfileTypes.BITE_SIZE]: s.AvatarSizes.SIZE_80,
+        [u.UserProfileTypes.FULL_SIZE]: s.AvatarSizes.SIZE_120
     };
 
-    function T(e) {
+    function E(e) {
         let {
             children: t,
             profileType: n,
-            isPremium: T,
-            hasThemeColors: f,
-            hasBanner: S,
-            forProfileEffectModal: A,
-            hasProfileEffect: h = !1
-        } = e, m = I[n], N = (0, l.useUID)(), O = function(e) {
+            isPremium: E,
+            hasThemeColors: I,
+            hasBanner: T,
+            overrideBannerWidth: f,
+            hasProfileEffect: S = !1
+        } = e, A = c[n], h = (0, o.useUID)(), m = function(e) {
             let {
                 profileType: t,
                 avatarSize: n,
                 hasBanner: i,
-                isPremium: l,
-                hasThemeColors: E,
-                hasProfileEffect: I
-            } = e, T = c.AvatarDecorationBorderSizes[n];
-            if (null == T) throw Error("Unsupported avatar size for banner mask");
-            let f = (0, o.getDecorationSizeForAvatarSize)(n),
+                isPremium: o,
+                hasThemeColors: _,
+                hasProfileEffect: c,
+                overrideBannerWidth: E
+            } = e, I = d.AvatarDecorationBorderSizes[n];
+            if (null == I) throw Error("Unsupported avatar size for banner mask");
+            let T = (0, a.getDecorationSizeForAvatarSize)(n),
                 {
-                    size: S,
-                    stroke: A
-                } = (0, a.getAvatarSpecs)(n),
-                h = {
-                    avatarSize: S,
-                    avatarBorderSize: A,
-                    avatarDecorationSize: f,
-                    avatarDecorationBorderSize: T,
-                    avatarDecorationOffsetY: -(f + 2 * T) / 2,
-                    bannerHeight: (0, d.getUserBannerHeight)({
+                    size: f,
+                    stroke: S
+                } = (0, s.getAvatarSpecs)(n),
+                A = {
+                    avatarSize: f,
+                    avatarBorderSize: S,
+                    avatarDecorationSize: T,
+                    avatarDecorationBorderSize: I,
+                    avatarDecorationOffsetY: -(T + 2 * I) / 2,
+                    bannerHeight: (0, l.getUserBannerHeight)({
                         profileType: t,
                         user: {
                             hasBanner: i,
-                            isPremium: l,
-                            hasProfileEffect: I
+                            isPremium: o,
+                            hasProfileEffect: c
                         }
                     })
-                };
-            return (0, r.match)(t).with(_.UserProfileTypes.POPOUT, () => {
-                let e = E ? (0, u.cssValueToNumber)(s.default.USER_PROFILE_THEMED_CONTAINER_USER_PROFILE_THEMED_PADDING) : 0;
-                return {
-                    ...h,
-                    bannerWidth: (0, u.cssValueToNumber)(s.default.USER_PROFILE_THEMED_CONTAINER_USER_POPOUT_WIDTH),
-                    offsetX: 16 - e,
-                    offsetY: 4 + e,
+                },
+                h = (0, r.match)(t).with(u.UserProfileTypes.POPOUT, u.UserProfileTypes.BITE_SIZE, () => {
+                    let e = _ ? 4 : 0;
+                    return {
+                        ...A,
+                        bannerWidth: (0, l.getUserBannerSize)(t),
+                        offsetX: 16 - e,
+                        offsetY: 4 + e,
+                        avatarDecorationOffsetX: 4
+                    }
+                }).with(u.UserProfileTypes.MODAL, u.UserProfileTypes.FULL_SIZE, () => ({
+                    ...A,
+                    bannerWidth: (0, l.getUserBannerSize)(t),
+                    offsetX: 14,
+                    offsetY: 5,
+                    avatarDecorationOffsetX: 2
+                })).with(u.UserProfileTypes.SETTINGS, () => ({
+                    ...A,
+                    bannerWidth: 660,
+                    offsetX: 16,
+                    offsetY: -22,
+                    avatarDecorationOffsetX: 8
+                })).with(u.UserProfileTypes.PANEL, () => ({
+                    ...A,
+                    bannerWidth: (0, l.getUserBannerSize)(u.UserProfileTypes.PANEL),
+                    offsetX: 12,
+                    offsetY: 8,
                     avatarDecorationOffsetX: 4
-                }
-            }).with(_.UserProfileTypes.MODAL, () => ({
+                })).with(u.UserProfileTypes.POMELO_POPOUT, () => ({
+                    ...A,
+                    bannerWidth: (0, l.getUserBannerSize)(u.UserProfileTypes.POMELO_POPOUT),
+                    offsetX: 20,
+                    offsetY: -20,
+                    avatarDecorationOffsetX: 10
+                })).with(u.UserProfileTypes.CANCEL_MODAL, () => ({
+                    ...A,
+                    bannerWidth: (0, l.getUserBannerSize)(u.UserProfileTypes.CANCEL_MODAL),
+                    offsetX: 8,
+                    offsetY: 2,
+                    avatarDecorationOffsetX: 8
+                })).exhaustive();
+            return null != E ? {
                 ...h,
-                bannerWidth: (0, d.getUserBannerSize)(_.UserProfileTypes.MODAL),
-                offsetX: 14,
-                offsetY: 5,
-                avatarDecorationOffsetX: 2
-            })).with(_.UserProfileTypes.SETTINGS, () => ({
-                ...h,
-                bannerWidth: 660,
-                offsetX: 16,
-                offsetY: -22,
-                avatarDecorationOffsetX: 8
-            })).with(_.UserProfileTypes.PANEL, () => {
-                let e = (0, u.cssValueToNumber)(s.default.USER_PROFILE_THEMED_CONTAINER_USER_PROFILE_THEMED_PADDING);
-                return {
-                    ...h,
-                    bannerWidth: (0, u.cssValueToNumber)(s.default.USER_PROFILE_THEMED_CONTAINER_USER_POPOUT_WIDTH),
-                    offsetX: 16 - e,
-                    offsetY: 4 + e,
-                    avatarDecorationOffsetX: 4
-                }
-            }).with(_.UserProfileTypes.POMELO_POPOUT, () => ({
-                ...h,
-                bannerWidth: (0, d.getUserBannerSize)(_.UserProfileTypes.POMELO_POPOUT),
-                offsetX: 20,
-                offsetY: -20,
-                avatarDecorationOffsetX: 10
-            })).with(_.UserProfileTypes.CANCEL_MODAL, () => ({
-                ...h,
-                bannerWidth: (0, d.getUserBannerSize)(_.UserProfileTypes.CANCEL_MODAL),
-                offsetX: 8,
-                offsetY: 2,
-                avatarDecorationOffsetX: 8
-            })).exhaustive()
+                bannerWidth: E
+            } : h
         }({
             profileType: n,
-            avatarSize: m,
-            hasBanner: S,
-            isPremium: T,
-            hasThemeColors: f,
-            hasProfileEffect: h
-        });
-        A && (O.bannerWidth = (0, u.cssValueToNumber)(s.default.USER_PROFILE_THEMED_CONTAINER_PROFILE_EFFECTS_USER_POPOUT_WIDTH));
-        let p = O.avatarSize / 2 + O.avatarBorderSize,
-            R = O.bannerHeight - O.offsetY;
+            avatarSize: A,
+            hasBanner: T,
+            isPremium: E,
+            hasThemeColors: I,
+            hasProfileEffect: S,
+            overrideBannerWidth: f
+        }), N = m.avatarSize / 2 + m.avatarBorderSize, O = m.bannerHeight - m.offsetY;
         return (0, i.jsxs)("svg", {
-            className: E.bannerSVGWrapper,
-            viewBox: "0 0 ".concat(O.bannerWidth, " ").concat(O.bannerHeight),
+            className: _.bannerSVGWrapper,
+            viewBox: "0 0 ".concat(m.bannerWidth, " ").concat(m.bannerHeight),
             style: {
-                minWidth: O.bannerWidth,
-                minHeight: O.bannerHeight
+                minWidth: m.bannerWidth,
+                minHeight: m.bannerHeight
             },
             children: [(0, i.jsxs)("mask", {
-                id: N,
+                id: h,
                 children: [(0, i.jsx)("rect", {
                     fill: "white",
                     x: "0",
@@ -136,9 +136,9 @@ function(e, t, n) {
                     height: "100%"
                 }), (0, i.jsx)("circle", {
                     fill: "black",
-                    cx: O.offsetX + p,
-                    cy: R,
-                    r: p
+                    cx: m.offsetX + N,
+                    cy: O,
+                    r: N
                 })]
             }), (0, i.jsx)("foreignObject", {
                 x: "0",
@@ -146,7 +146,7 @@ function(e, t, n) {
                 width: "100%",
                 height: "100%",
                 overflow: "visible",
-                mask: "url(#".concat(N, ")"),
+                mask: "url(#".concat(h, ")"),
                 children: t
             })]
         })

@@ -49,8 +49,8 @@ function(e, t, n) {
             activities: w,
             applicationStream: B,
             status: k,
-            shouldAnimateStatus: F = !1,
-            isMobile: V,
+            shouldAnimateStatus: V = !1,
+            isMobile: F,
             premiumSince: x,
             channel: H,
             guildId: Y,
@@ -127,14 +127,14 @@ function(e, t, n) {
         }, ep = () => (0, i.jsxs)(i.Fragment, {
             children: [eO(), em(), eN()]
         }), eR = (e, t) => {
-            let n = F ? l.AnimatedAvatar : l.Avatar,
+            let n = V ? l.AnimatedAvatar : l.Avatar,
                 r = (0, u.default)(w) ? C.StatusTypes.STREAMING : k;
             return r = t ? void 0 : r, (0, i.jsxs)(i.Fragment, {
                 children: [(0, i.jsx)(n, {
                     ...eE,
                     size: l.AvatarSizes.SIZE_32,
                     src: ec,
-                    isMobile: V,
+                    isMobile: F,
                     isTyping: P,
                     status: r,
                     "aria-label": e.username,

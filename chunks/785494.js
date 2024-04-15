@@ -1,6 +1,12 @@
 function(e) {
     "use strict";
     e.exports = {
+        biteSizeInner: "biteSizeInner__7b036",
+        biteSizeInnerThemed: "biteSizeInnerThemed__5cdaf",
+        biteSizeOuter: "biteSizeOuter_e0bb1d userPopoutOuter_d67f56 userProfileOuter__35e59",
+        biteSizeOverlayBackground: "biteSizeOverlayBackground__11aa7 overlayBackground__345c9",
+        fullSizeInnerThemed: "fullSizeInnerThemed_ae6977",
+        fullSizeOuter: "fullSizeOuter__64397 userProfileModalOuter__90b4a userProfileOuter__35e59",
         overlayBackground: "overlayBackground__345c9",
         showOutOfBoundaryComponents: "showOutOfBoundaryComponents__3e39f",
         userCardInner: "userCardInner_e36852 userProfileInner__8ff35",
@@ -13,11 +19,9 @@ function(e) {
         userPopoutOuter: "userPopoutOuter_d67f56 userProfileOuter__35e59",
         userPopoutOverlayBackground: "userPopoutOverlayBackground__3e7e6 overlayBackground__345c9",
         userProfileInner: "userProfileInner__8ff35",
-        userProfileInnerThemed: "userProfileInnerThemed__126d9",
         userProfileInnerThemedNonPremium: "userProfileInnerThemedNonPremium_b64fb4",
         userProfileInnerThemedPremiumWithoutBanner: "userProfileInnerThemedPremiumWithoutBanner_ee8277",
         userProfileInnerThemedWithBanner: "userProfileInnerThemedWithBanner_e9e7c5",
-        userProfileInnerUnthemed: "userProfileInnerUnthemed__4670d",
         userProfileModalInner: "userProfileModalInner__84e47 userProfileInner__8ff35",
         userProfileModalOuter: "userProfileModalOuter__90b4a userProfileOuter__35e59",
         userProfileModalOverlayBackground: "userProfileModalOverlayBackground_a5b043 overlayBackground__345c9",

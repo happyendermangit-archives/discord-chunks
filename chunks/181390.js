@@ -5,6 +5,7 @@ function(e) {
         avatarHint: "avatarHint__15059",
         avatarHintInner: "avatarHintInner_c8ddb1",
         avatarHoverTarget: "avatarHoverTarget__9b4a9",
+        avatarPositionBiteSize: "avatarPositionBiteSize_edf897",
         avatarPositionNormal: "avatarPositionNormal_ba6daa",
         avatarPositionPanel: "avatarPositionPanel__2d765",
         avatarPositionPomelo: "avatarPositionPomelo__6cc14",

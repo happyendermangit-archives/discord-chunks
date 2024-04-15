@@ -67,7 +67,7 @@ function(e, t, n) {
             let i = G(n);
             return e(i) ? (! function(e, t) {
                 let n = S.default.getChannel(e);
-                null != n && n.isGuildStageVoice() ? 0 === t.size() ? F(n.id) : null == v.get(n.id) && v.set(n.id, n) : F(e)
+                null != n && n.isGuildStageVoice() ? 0 === t.size() ? V(n.id) : null == v.get(n.id) && v.set(n.id, n) : V(e)
             }(n, i), !0) : t
         }, !1)
     }
@@ -77,11 +77,11 @@ function(e, t, n) {
         return B(t => t.updateParticipant(e), t)
     }
 
-    function F(e) {
+    function V(e) {
         return null != e && (delete y[e], v.delete(e), !0)
     }
 
-    function V() {
+    function F() {
         M.clear(), v.clear(), y = {}
     }
 
@@ -167,8 +167,8 @@ function(e, t, n) {
         configurable: !0,
         writable: !0
     }) : r[s] = a, t.default = new z(E.default, {
-        CONNECTION_OPEN: V,
-        OVERLAY_INITIALIZE: V,
+        CONNECTION_OPEN: F,
+        OVERLAY_INITIALIZE: F,
         VOICE_STATE_UPDATES: function(e) {
             let {
                 voiceStates: t
@@ -185,7 +185,7 @@ function(e, t, n) {
                     id: t
                 }
             } = e;
-            return F(t)
+            return V(t)
         },
         GUILD_MEMBERS_CHUNK: function(e) {
             let {
