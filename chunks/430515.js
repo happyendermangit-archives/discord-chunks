@@ -10,11 +10,12 @@ function(e) {
         modalContent: "modalContent__75af5",
         platformSelectionOptionIcon: "platformSelectionOptionIcon__6225b",
         platformSelectionOptionLabelContainer: "platformSelectionOptionLabelContainer__5864f",
-        reward: "reward__29972",
         rewardHeading: "rewardHeading__6600e",
         rewardSubheading: "rewardSubheading__52cec",
         rewardSubheadingIcon: "rewardSubheadingIcon_f35288",
         rewardSubheadingText: "rewardSubheadingText_a5a2b6",
-        rewardTile: "rewardTile__77515"
+        rewardTile: "rewardTile__77515",
+        rewardTileAsset: "rewardTileAsset_cb8b2b",
+        rewardTileWrapper: "rewardTileWrapper__1e38a"
     }
 }

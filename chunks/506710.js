@@ -15,7 +15,6 @@ function(e) {
         outerContainerSm: "outerContainerSm__15951",
         outerContainerXs: "outerContainerXs__59efb",
         questCopyCta: "questCopyCta__613f6",
-        questReward: "questReward__47d57",
         questRewardEmbed: "questRewardEmbed__683db",
         questRewardEmbedSm: "questRewardEmbedSm__1c12e",
         questRewardEmbedXs: "questRewardEmbedXs_a1f7c1",
