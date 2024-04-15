@@ -122,27 +122,31 @@ function(e, t, n) {
             iconClassName: f,
             onPopoutClick: S,
             popoutOpen: A = !1,
-            ...h
-        } = e, m = (0, _.default)(t, n), N = (0, o.default)("(max-width: 456px)"), O = (0, i.jsx)(I, {
-            ...h,
+            premiumGlow: h = !1,
+            ...m
+        } = e, N = (0, _.default)(t, n), O = (0, o.default)("(max-width: 456px)"), p = (0, i.jsx)(I, {
+            ...m,
             grow: !1,
             onContextMenu: S,
             iconClassName: s()(f, E.centerIcon),
-            className: s()(N ? r : null, E.staticButton, E.centerButton, T[m])
+            className: s()(O ? r : null, E.staticButton, E.centerButton, T[N])
         });
-        return N ? O : (0, i.jsxs)("div", {
+        return O ? p : (0, i.jsxs)("div", {
             className: s()(r, E.contextMenuContainer),
             children: [(0, i.jsx)(u.default, {
+                className: s()({
+                    [E.buttonPremiumGlow]: h
+                }),
                 mask: null == S ? null : u.MaskIDs.CHANNEL_CALL_CONTROL_BUTTON,
                 width: 56,
                 height: 56,
-                children: O
+                children: p
             }), null != S ? (0, i.jsx)(d.default, {
                 children: (0, i.jsx)(a.Clickable, {
                     "aria-label": c.default.Messages.MORE_OPTIONS,
                     onClick: S,
                     onContextMenu: S,
-                    className: s()(E.contextMenuNub, T[m], {
+                    className: s()(E.contextMenuNub, T[N], {
                         [E.active]: A
                     }),
                     children: (0, i.jsx)(l.default, {

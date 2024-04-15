@@ -26,7 +26,7 @@ function(e, t, n) {
         if ((0, o.default)(A), I.isPlatformEmbedded)(0, r.openModalLazy)(async () => {
             let {
                 default: t
-            } = await Promise.all([n.e("49237"), n.e("99387"), n.e("79477"), n.e("88099")]).then(n.bind(n, "60594"));
+            } = await Promise.all([n.e("49237"), n.e("99387"), n.e("79477"), n.e("95499")]).then(n.bind(n, "60594"));
             return n => (0, i.jsx)(t, {
                 ...n,
                 guildId: e,

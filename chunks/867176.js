@@ -2,24 +2,23 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         isActivitiesInTextEnabled: function() {
-            return d
-        },
-        isActivityInTextSupportedForChannel: function() {
             return u
         },
-        useActivitiesInTextExperimentConfig: function() {
-            return c
+        isActivityInTextSupportedForChannel: function() {
+            return l
         },
         useIsActivitiesInTextEnabled: function() {
+            return d
+        },
+        useShowActivitiesInOmniButtonMenu: function() {
             return _
         }
     });
     var i = n("106351"),
         r = n("442837"),
-        s = n("802171"),
-        a = n("818083"),
-        o = n("592125");
-    let l = (0, a.createExperiment)({
+        s = n("818083"),
+        a = n("592125");
+    let o = (0, s.createExperiment)({
         kind: "user",
         id: "2023-08_activities_in_text",
         label: "Activities in Text User",
@@ -53,72 +52,54 @@ function(e, t, n) {
         }]
     });
 
-    function u(e) {
+    function l(e) {
         var t;
         if (null == e || void 0 === e) return !1;
-        let n = o.default.getChannel(e.parent_id);
+        let n = a.default.getChannel(e.parent_id);
         if (null != n && (null == n ? void 0 : n.type) !== i.ChannelTypes.GUILD_CATEGORY) return !1;
         return t = e.type, [i.ChannelTypes.GUILD_TEXT, i.ChannelTypes.GROUP_DM, i.ChannelTypes.DM].includes(t)
     }
 
-    function d(e, t) {
+    function u(e, t) {
         if (null == e) return !1;
-        let n = u(e);
-        return (null == e ? void 0 : e.guild_id) != null ? s.default.getCurrentConfig({
-            guildId: e.guild_id,
-            location: t
-        }, {
-            autoTrackExposure: !0
-        }).activitiesInTextEnabled && n : l.getCurrentConfig({
+        let n = l(e);
+        return (null == e ? void 0 : e.guild_id) != null ? n : o.getCurrentConfig({
             location: t
         }, {
             autoTrackExposure: !0
         }).activitiesInTextEnabled && n
     }
 
-    function _(e, t) {
+    function d(e, t) {
         let {
             isActivitiesInTextEnabledForChannelType: n,
             channelGuildId: i
-        } = (0, r.useStateFromStoresObject)([o.default], () => {
-            let t = o.default.getChannel(e);
+        } = (0, r.useStateFromStoresObject)([a.default], () => {
+            let t = a.default.getChannel(e);
             return {
-                isActivitiesInTextEnabledForChannelType: u(t),
+                isActivitiesInTextEnabledForChannelType: l(t),
                 channelGuildId: null == t ? void 0 : t.guild_id
             }
-        }), a = null != i, d = s.default.useExperiment({
-            guildId: i,
+        }), s = null != i, u = o.useExperiment({
             location: t
         }, {
-            autoTrackExposure: a,
-            disable: !a
-        }), _ = l.useExperiment({
-            location: t
-        }, {
-            autoTrackExposure: !a,
-            disable: a
+            autoTrackExposure: !s,
+            disable: s
         });
-        return a ? d.activitiesInTextEnabled && n : _.activitiesInTextEnabled && n
+        return s ? n : u.activitiesInTextEnabled && n
     }
 
-    function c(e, t) {
-        let n = (0, r.useStateFromStores)([o.default], () => o.default.getChannel(e)),
-            i = u(n),
-            a = null == n ? void 0 : n.guild_id,
-            d = null != a,
-            _ = s.default.useExperiment({
-                guildId: a,
+    function _(e, t) {
+        let n = (0, r.useStateFromStores)([a.default], () => a.default.getChannel(e)),
+            i = l(n),
+            s = null == n ? void 0 : n.guild_id,
+            u = null != s,
+            d = o.useExperiment({
                 location: t
             }, {
-                autoTrackExposure: d,
-                disable: !d
-            }),
-            c = l.useExperiment({
-                location: t
-            }, {
-                autoTrackExposure: !d,
-                disable: d
+                autoTrackExposure: !u,
+                disable: u
             });
-        return i ? d ? _ : c : null
+        return u ? i : d.showInOmniButtonMenu && i
     }
 }
