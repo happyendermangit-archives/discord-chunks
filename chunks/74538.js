@@ -29,7 +29,7 @@ function(e, t, n) {
             return eS
         },
         getDefaultPrice: function() {
-            return V
+            return F
         },
         getDiscountIntervalString: function() {
             return H
@@ -107,7 +107,7 @@ function(e, t, n) {
             return q
         },
         getPrice: function() {
-            return F
+            return V
         },
         getTierDisplayName: function() {
             return X
@@ -198,18 +198,18 @@ function(e, t, n) {
         return e.items.find(e => y.PREMIUM_PLANS.has(e.planId))
     }
 
-    function V(e) {
+    function F(e) {
         var t;
         let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             r = null !== (t = h.default.defaultPaymentSourceId) && void 0 !== t ? t : void 0,
             s = N.default.getPremiumTypeSubscription();
-        return null != s && null != s.paymentSourceId && (r = s.paymentSourceId), F(e, n, i, {
+        return null != s && null != s.paymentSourceId && (r = s.paymentSourceId), V(e, n, i, {
             paymentSourceId: r
         })
     }
 
-    function F(e) {
+    function V(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
@@ -678,7 +678,7 @@ function(e, t, n) {
                         } = e;
                         return t === n.id
                     }),
-                    r = null == i ? F(n.id, !1, !1, {
+                    r = null == i ? V(n.id, !1, !1, {
                         paymentSourceId: t.paymentSourceId,
                         currency: t.currency
                     }).amount : i.amount;
@@ -918,7 +918,7 @@ function(e, t, n) {
 
     function ec(e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-            r = null != t ? F(e.id, !1, i, t) : V(e.id, !1, i),
+            r = null != t ? V(e.id, !1, i, t) : F(e.id, !1, i),
             s = (0, D.formatPrice)(r.amount, r.currency);
         return e.currency !== P.CurrencyCodes.USD && !0 === n && (s = s.concat("*")), s
     }
@@ -966,7 +966,7 @@ function(e, t, n) {
                 }
             }), t
         }
-        return F(a.id, (0, g.isPremium)(i), !1, r)
+        return V(a.id, (0, g.isPremium)(i), !1, r)
     }
 
     function eS(e, t, n) {
@@ -1234,8 +1234,8 @@ function(e, t, n) {
         isPremiumAtLeast: g.isPremiumAtLeast,
         isPremium: g.isPremium,
         isPremiumExactly: g.isPremiumExactly,
-        getPrice: F,
-        getDefaultPrice: V,
+        getPrice: V,
+        getDefaultPrice: F,
         getInterval: function(e) {
             let t = y.SubscriptionPlanInfo[e];
             if (null != t) return {

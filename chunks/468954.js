@@ -43,10 +43,10 @@ function(e, t, n) {
             gridNavigatorId: U,
             gridNotice: b,
             renderHeader: G
-        } = e, w = r.useRef(null), B = r.useRef(null), k = r.useRef(null), V = 0 === t.length, F = (0, s.useExpressionPickerStore)(e => e.searchQuery), x = _.useStore(e => e.inspectedExpressionPosition), H = (0, a.useExpressionPickerGridWidth)({
+        } = e, w = r.useRef(null), B = r.useRef(null), k = r.useRef(null), F = 0 === t.length, V = (0, s.useExpressionPickerStore)(e => e.searchQuery), x = _.useStore(e => e.inspectedExpressionPosition), H = (0, a.useExpressionPickerGridWidth)({
             gridWrapperRef: w,
             containerWidth: d,
-            showingEmptyState: V
+            showingEmptyState: F
         }), {
             expressionsGrid: Y,
             rowCount: j,
@@ -82,8 +82,8 @@ function(e, t, n) {
             return null == O ? void 0 : O(null == Y ? void 0 : null === (e = Y[x.rowIndex]) || void 0 === e ? void 0 : e[x.columnIndex])
         }, [Y, x.columnIndex, x.rowIndex, O]);
         r.useEffect(() => {
-            E(F)
-        }, [E, F]), r.useEffect(() => _.resetStoreState, [_.resetStoreState]), r.useLayoutEffect(() => {
+            E(V)
+        }, [E, V]), r.useEffect(() => _.resetStoreState, [_.resetStoreState]), r.useLayoutEffect(() => {
             var e;
             null === (e = k.current) || void 0 === e || e.focus()
         }, []);
@@ -103,7 +103,7 @@ function(e, t, n) {
             children: [null != G ? G(er) : (0, i.jsxs)("div", {
                 className: u.header,
                 children: [" ", er, " "]
-            }), V && null != S ? S(u.emptyState) : (0, i.jsxs)(i.Fragment, {
+            }), F && null != S ? S(u.emptyState) : (0, i.jsxs)(i.Fragment, {
                 children: [R(B), null != b && (0, i.jsx)("div", {
                     className: u.gridNoticeWrapper,
                     children: b

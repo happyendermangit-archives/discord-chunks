@@ -38,8 +38,8 @@ function(e, t, n) {
         w = n("936195"),
         B = n("806519"),
         k = n("981631"),
-        V = n("701488"),
-        F = n("689938"),
+        F = n("701488"),
+        V = n("689938"),
         x = n("333745");
 
     function H(e, t, n) {
@@ -92,7 +92,7 @@ function(e, t, n) {
             } = this.props;
             return null != t && (null == e ? void 0 : e.type) !== k.ActivityTypes.PLAYING && (null == e ? void 0 : e.type) !== k.ActivityTypes.WATCHING && (null == e ? void 0 : e.type) !== k.ActivityTypes.HANG_STATUS ? {
                 type: k.ActivityTypes.PLAYING,
-                name: F.default.Messages.SHARING_SCREEN
+                name: V.default.Messages.SHARING_SCREEN
             } : e
         }
         getTypeClass(e, t) {
@@ -119,17 +119,17 @@ function(e, t, n) {
             } = l;
             switch (l.type) {
                 case k.ActivityTypes.STREAMING:
-                    t = F.default.Messages.USER_ACTIVITY_HEADER_LIVE_ON_PLATFORM.format({
+                    t = V.default.Messages.USER_ACTIVITY_HEADER_LIVE_ON_PLATFORM.format({
                         platform: [k.PlatformTypes.TWITCH, k.PlatformTypes.YOUTUBE].includes(d.toLowerCase()) ? d : f.default.get(k.PlatformTypes.TWITCH).name
                     });
                     break;
                 case k.ActivityTypes.LISTENING:
-                    t = F.default.Messages.USER_ACTIVITY_HEADER_LISTENING.format({
+                    t = V.default.Messages.USER_ACTIVITY_HEADER_LISTENING.format({
                         name: d
                     });
                     break;
                 case k.ActivityTypes.WATCHING:
-                    t = F.default.Messages.USER_ACTIVITY_HEADER_WATCHING.format({
+                    t = V.default.Messages.USER_ACTIVITY_HEADER_WATCHING.format({
                         name: d
                     });
                     break;
@@ -137,20 +137,20 @@ function(e, t, n) {
                     t = (0, S.default)(l);
                     break;
                 case k.ActivityTypes.COMPETING:
-                    t = F.default.Messages.USER_ACTIVITY_HEADER_COMPETING.format({
+                    t = V.default.Messages.USER_ACTIVITY_HEADER_COMPETING.format({
                         name: d
                     })
             }
             if (null != i) {
                 var _;
-                t = (0, v.hasFlag)(null !== (_ = null == l ? void 0 : l.flags) && void 0 !== _ ? _ : 0, k.ActivityFlags.EMBEDDED) ? l.type === k.ActivityTypes.WATCHING ? F.default.Messages.EMBEDDED_ACTIVITIES_WATCHING_IN_GUILD.format({
+                t = (0, v.hasFlag)(null !== (_ = null == l ? void 0 : l.flags) && void 0 !== _ ? _ : 0, k.ActivityFlags.EMBEDDED) ? l.type === k.ActivityTypes.WATCHING ? V.default.Messages.EMBEDDED_ACTIVITIES_WATCHING_IN_GUILD.format({
                     guildName: i.name
-                }) : F.default.Messages.EMBEDDED_ACTIVITIES_PLAYING_IN_GUILD.format({
+                }) : V.default.Messages.EMBEDDED_ACTIVITIES_PLAYING_IN_GUILD.format({
                     guildName: i.name
-                }) : F.default.Messages.USER_ACTIVITY_HEADER_STREAMING_TO_GUILD.format({
+                }) : V.default.Messages.USER_ACTIVITY_HEADER_STREAMING_TO_GUILD.format({
                     server: i.name
                 })
-            }(null == l ? void 0 : l.type) === k.ActivityTypes.HANG_STATUS && (t = F.default.Messages.STATUS_LEAD_IN_JUST);
+            }(null == l ? void 0 : l.type) === k.ActivityTypes.HANG_STATUS && (t = V.default.Messages.STATUS_LEAD_IN_JUST);
             let c = (0, p.getChannelIconComponent)(r, i);
             return null != r && (t = r.name), (0, a.jsxs)("div", {
                 className: x.headerContainer,
@@ -197,7 +197,7 @@ function(e, t, n) {
             let c = (0, m.default)(e),
                 I = null != d.large_image ? (0, a.jsx)("img", {
                     alt: null !== (t = d.large_text) && void 0 !== t ? t : "",
-                    src: j(_, d.large_image, null != r ? r : [V.ImageSizes.LARGE, V.ImageSizes.LARGE]),
+                    src: j(_, d.large_image, null != r ? r : [F.ImageSizes.LARGE, F.ImageSizes.LARGE]),
                     className: u()(this.getTypeClass("assetsLargeImage", this.isStreamerOnTypeProfile() || this.isStreamerOnTypeActivityFeed() ? k.PlatformTypes.TWITCH : ""), {
                         [null !== (n = this.getTypeClass("assetsLargeMask")) && void 0 !== n ? n : ""]: null != d.small_image
                     }, {
@@ -213,13 +213,13 @@ function(e, t, n) {
                 if (null == t) return null;
                 I = (0, a.jsx)(B.default, {
                     mask: B.default.Masks.SQUIRCLE,
-                    width: V.ImageSizes.SMALL,
-                    height: V.ImageSizes.SMALL,
+                    width: F.ImageSizes.SMALL,
+                    height: F.ImageSizes.SMALL,
                     children: (0, a.jsx)("img", {
                         src: null !== (i = D.default.getGuildIconURL({
                             id: t.guildId,
                             icon: d.small_image,
-                            size: V.ImageSizes.SMALL
+                            size: F.ImageSizes.SMALL
                         })) && void 0 !== i ? i : void 0,
                         className: x.assetsLargeImageVoiceChannel,
                         alt: ""
@@ -235,7 +235,7 @@ function(e, t, n) {
                         children: e.name
                     }), (0, a.jsx)("div", {
                         className: x.streamGame,
-                        children: F.default.Messages.STREAMER_PLAYING.format({
+                        children: V.default.Messages.STREAMER_PLAYING.format({
                             game: e.details
                         })
                     })]
@@ -251,7 +251,7 @@ function(e, t, n) {
                     var t;
                     return (0, a.jsx)("img", {
                         alt: null !== (t = d.small_text) && void 0 !== t ? t : "",
-                        src: j(_, d.small_image, [V.ImageSizes.SMALL, V.ImageSizes.SMALL]),
+                        src: j(_, d.small_image, [F.ImageSizes.SMALL, F.ImageSizes.SMALL]),
                         className: this.getTypeClass("assetsSmallImage", null == I ? "WithoutLargeImage" : void 0),
                         ...e
                     })
@@ -329,13 +329,13 @@ function(e, t, n) {
                 activityGuild: r
             } = this.props, s = n, o = n;
             if (e.type === k.ActivityTypes.CUSTOM_STATUS) s = i;
-            else if (e.type === k.ActivityTypes.HANG_STATUS) s = null != r ? F.default.Messages.HANG_STATUS_LOCATION.format({
+            else if (e.type === k.ActivityTypes.HANG_STATUS) s = null != r ? V.default.Messages.HANG_STATUS_LOCATION.format({
                 guildName: r.name
             }) : null, t = null != r ? () => {
                 (0, g.transitionToGuild)(r.id)
             } : void 0;
             else if (!(0, h.default)(e)) {
-                if (o = s = i, (0, m.default)(e) && null != i) s = F.default.Messages.USER_ACTIVITY_LISTENING_ARTISTS.format({
+                if (o = s = i, (0, m.default)(e) && null != i) s = V.default.Messages.USER_ACTIVITY_LISTENING_ARTISTS.format({
                     artists: o,
                     artistsHook: (t, n) => (0, a.jsx)(w.default, {
                         artists: i,
@@ -349,7 +349,7 @@ function(e, t, n) {
                     s = null === (l = e.assets) || void 0 === l ? void 0 : l.small_text
                 }
             }
-            return null == s || 0 === s.length ? null : ((0, O.default)(e) && (s = F.default.Messages.STREAMER_PLAYING.format({
+            return null == s || 0 === s.length ? null : ((0, O.default)(e) && (s = V.default.Messages.STREAMER_PLAYING.format({
                 game: s
             })), null != t) ? (0, a.jsx)(E.Clickable, {
                 onClick: t,
@@ -404,20 +404,20 @@ function(e, t, n) {
                 party: o,
                 assets: l
             } = e, u = s, d = u;
-            return (!(0, h.default)(e) && (d = u = null == l ? void 0 : l.large_text, (0, m.default)(e) && null != u && (u = F.default.Messages.USER_ACTIVITY_LISTENING_ALBUM.format({
+            return (!(0, h.default)(e) && (d = u = null == l ? void 0 : l.large_text, (0, m.default)(e) && null != u && (u = V.default.Messages.USER_ACTIVITY_LISTENING_ALBUM.format({
                 album: d,
                 albumHook: (t, n) => null != e.sync_id && null != d ? (0, a.jsx)(E.Anchor, {
                     className: x.bodyLink,
                     onClick: this.handleOpenSpotifyAlbum,
                     children: d
                 }, n) : d
-            }))), null != u && 0 !== u.length && e.type !== k.ActivityTypes.CUSTOM_STATUS || (0, L.isStageActivity)(e)) ? ((null == o ? void 0 : o.size) == null && [(0, V.POKER_NIGHT_APPLICATION_ID)].includes(null !== (n = e.application_id) && void 0 !== n ? n : "") ? r = F.default.Messages.USER_ACTIVITY_STATE_SIZE.format({
+            }))), null != u && 0 !== u.length && e.type !== k.ActivityTypes.CUSTOM_STATUS || (0, L.isStageActivity)(e)) ? ((null == o ? void 0 : o.size) == null && [(0, F.POKER_NIGHT_APPLICATION_ID)].includes(null !== (n = e.application_id) && void 0 !== n ? n : "") ? r = V.default.Messages.USER_ACTIVITY_STATE_SIZE.format({
                 count: "0",
                 max: null !== (i = null == t ? void 0 : t.getMaxParticipants()) && void 0 !== i ? i : 0
-            }) : (0, L.isStageActivity)(e) && (null == o ? void 0 : o.size) != null ? r = F.default.Messages.USER_ACTIVITY_STAGE_STATE_SIZE.format({
+            }) : (0, L.isStageActivity)(e) && (null == o ? void 0 : o.size) != null ? r = V.default.Messages.USER_ACTIVITY_STAGE_STATE_SIZE.format({
                 numSpeakers: o.size[0],
                 numListeners: o.size[1] - o.size[0]
-            }) : (null == o ? void 0 : o.size) != null && o.size.length >= 2 && (r = F.default.Messages.USER_ACTIVITY_STATE_SIZE.format({
+            }) : (null == o ? void 0 : o.size) != null && o.size.length >= 2 && (r = V.default.Messages.USER_ACTIVITY_STATE_SIZE.format({
                 count: o.size[0],
                 max: o.size[1]
             })), (0, a.jsxs)("div", {

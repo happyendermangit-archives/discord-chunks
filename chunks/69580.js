@@ -57,8 +57,8 @@ function(e, t, n) {
         w = n("228763"),
         B = n("422559"),
         k = n("713938"),
-        V = n("166148"),
-        F = n("807989"),
+        F = n("166148"),
+        V = n("807989"),
         x = n("260430"),
         H = n("668185"),
         Y = n("407546"),
@@ -168,7 +168,7 @@ function(e, t, n) {
         a.useEffect(() => {
             M.default.isAuthenticated() && !ep && A.default.getExperiments()
         }, [ep]);
-        let [eR, eC] = a.useState(null), [eg, eL] = a.useState(null), [eD, ev] = a.useState(null), [eM, ey] = a.useState(!1), eP = null == eR ? void 0 : eR.guilds, [eU, eb] = a.useState(null != eu ? eu : null), [eG, ew] = a.useState(null != ed ? ed : null), [eB, ek] = a.useState(P.NONE), eV = a.useMemo(() => (null == eR ? void 0 : eR.user) != null ? new v.default(eR.user) : null, [null == eR ? void 0 : eR.user]), eF = a.useMemo(() => null == eP ? void 0 : eP.find(e => e.id === eU), [eP, eU]), [ex, eH] = a.useState(null), eY = a.useMemo(() => {
+        let [eR, eC] = a.useState(null), [eg, eL] = a.useState(null), [eD, ev] = a.useState(null), [eM, ey] = a.useState(!1), eP = null == eR ? void 0 : eR.guilds, [eU, eb] = a.useState(null != eu ? eu : null), [eG, ew] = a.useState(null != ed ? ed : null), [eB, ek] = a.useState(P.NONE), eF = a.useMemo(() => (null == eR ? void 0 : eR.user) != null ? new v.default(eR.user) : null, [null == eR ? void 0 : eR.user]), eV = a.useMemo(() => null == eP ? void 0 : eP.find(e => e.id === eU), [eP, eU]), [ex, eH] = a.useState(null), eY = a.useMemo(() => {
             var e;
             return eO && null == ea && null == e_ && (null !== (e = null == eo ? void 0 : eo.length) && void 0 !== e ? e : 0) === 0 && null == et
         }, [ea, eO, null == eo ? void 0 : eo.length, et, e_]), [ej, eW] = a.useState(null);
@@ -221,7 +221,7 @@ function(e, t, n) {
                 if (!e && !eI) {
                     null != eA && (eA({
                         application: null == eR ? void 0 : eR.application,
-                        guild: eF
+                        guild: eV
                     }), null == em || em());
                     return
                 }
@@ -248,7 +248,7 @@ function(e, t, n) {
                     if (null != eA) eA({
                         application: null == eR ? void 0 : eR.application,
                         location: t.location,
-                        guild: eF
+                        guild: eV
                     }), null == em || em();
                     else if (null != t.location) {
                         let {
@@ -258,7 +258,7 @@ function(e, t, n) {
                         U.default.isDiscordHostname(e) && n === Q.Routes.OAUTH2_AUTHORIZED ? (0, L.transitionTo)(Q.Routes.OAUTH2_AUTHORIZED, {
                             state: {
                                 application: null == eR ? void 0 : eR.application,
-                                guild: eF
+                                guild: eV
                             }
                         }) : window.location = t.location
                     } else ey(!1)
@@ -266,7 +266,7 @@ function(e, t, n) {
                     let e = t.body;
                     (null == e ? void 0 : e.message) != null && "" !== e.message ? ev(Error(e.message)) : ev(e), eL(1), ey(!1)
                 }
-            }, [eh, eI, eA, null == eR ? void 0 : eR.application, eF, em, K, ez, ee, et, en, ei, er, eQ, eB, eU, ex, eG]),
+            }, [eh, eI, eA, null == eR ? void 0 : eR.application, eV, em, K, ez, ee, et, en, ei, er, eQ, eB, eU, ex, eG]),
             e0 = a.useRef(!1),
             e1 = a.useCallback(async () => {
                 if (!M.default.isAuthenticated()) {
@@ -286,7 +286,7 @@ function(e, t, n) {
                             state: er,
                             userInstall: ex === _.ApplicationIntegrationType.USER_INSTALL
                         });
-                        eC((0, w.convertOAuth2Authorization)(e)), es === V.OAuth2Prompts.NONE && e.authorized && e$(!0), (0, N.trackWithMetadata)(Q.AnalyticEvents.OAUTH2_AUTHORIZE_VIEWED, {
+                        eC((0, w.convertOAuth2Authorization)(e)), es === F.OAuth2Prompts.NONE && e.authorized && e$(!0), (0, N.trackWithMetadata)(Q.AnalyticEvents.OAUTH2_AUTHORIZE_VIEWED, {
                             application_id: e.application.id
                         })
                     } catch (n) {
@@ -353,7 +353,7 @@ function(e, t, n) {
                 }), e4 = !1, e7 = !1, e6 = eS;
                 break;
             case 1:
-                if (null == eR || null == eV || null == ex) return {
+                if (null == eR || null == eF || null == ex) return {
                     body: (0, s.jsx)(S.Spinner, {})
                 };
                 let e5 = null == eD || eD instanceof Error ? {} : eD,
@@ -380,7 +380,7 @@ function(e, t, n) {
                         selectedGuildId: eU,
                         onChannelChange: ew
                     }) : null]
-                }), ez.includes(Q.OAuth2Scopes.BOT) && !c.equals(eQ, P.NONE) && (f = 2), e2.length > 1 && (T = 0), e3 = te && null == eF || e9 && null == eG;
+                }), ez.includes(Q.OAuth2Scopes.BOT) && !c.equals(eQ, P.NONE) && (f = 2), e2.length > 1 && (T = 0), e3 = te && null == eV || e9 && null == eG;
                 break;
             case 2:
                 if (null == eR) return {
@@ -393,12 +393,12 @@ function(e, t, n) {
                     onPermissionsChange: (e, t) => {
                         ek(n => e ? c.remove(n, t) : c.add(n, t))
                     },
-                    guild: eF
+                    guild: eV
                 }), T = 1
         }
         if (e4 && null != eR) {
             let e = null === (r = eR.bot) || void 0 === r ? void 0 : r.approximate_guild_count;
-            O = (0, s.jsx)(F.default, {
+            O = (0, s.jsx)(V.default, {
                 embeddedActivityConfig: eJ,
                 application: eR.application,
                 scopes: ez,
@@ -407,9 +407,9 @@ function(e, t, n) {
                 isEmbeddedFlow: ef
             })
         }
-        return e7 && null != eR && null != eV && (C = (0, s.jsx)(j.default, {
+        return e7 && null != eR && null != eF && (C = (0, s.jsx)(j.default, {
             id: $,
-            user: eV,
+            user: eF,
             application: eR.application,
             bot: eR.bot,
             accountScopes: eX,

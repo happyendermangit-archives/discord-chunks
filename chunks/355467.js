@@ -38,7 +38,7 @@ function(e, t, n) {
             return D
         },
         createAdyenPrepaidPaymentSource: function() {
-            return F
+            return V
         },
         createAdyenVaultablePaymentSource: function() {
             return x
@@ -59,7 +59,7 @@ function(e, t, n) {
             return Y
         },
         createStripePaymentSource: function() {
-            return V
+            return F
         },
         createStripePaymentSourceToken: function() {
             return H
@@ -629,7 +629,7 @@ function(e, t, n) {
             analyticsLocation: n
         })
     }
-    async function V(e, t, n, i) {
+    async function F(e, t, n, i) {
         if (null == e) throw M("Stripe not loaded");
         let r = await L(t),
             {
@@ -667,7 +667,7 @@ function(e, t, n) {
             analyticsLocation: i
         })
     }
-    async function F(e, t, n) {
+    async function V(e, t, n) {
         let i = await L(e),
             r = {
                 type: m.ADYEN_PAYMENT_SOURCES.get(t)

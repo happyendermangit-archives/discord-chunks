@@ -50,8 +50,8 @@ function(e, t, n) {
             w = null != e.interaction ? l.default.createFromServer(e.interaction) : null,
             B = e.type === A.MessageTypes.THREAD_STARTER_MESSAGE ? null === (i = e.referenced_message) || void 0 === i ? void 0 : null === (n = i.author) || void 0 === n ? void 0 : n.id : void 0,
             k = e.type === A.MessageTypes.PREMIUM_REFERRAL ? e.content : void 0,
-            V = e.content;
-        return e.type === A.MessageTypes.PREMIUM_REFERRAL && (V = ""), new u.default({
+            F = e.content;
+        return e.type === A.MessageTypes.PREMIUM_REFERRAL && (F = ""), new u.default({
             ...e,
             author: b,
             webhookId: e.webhook_id,
@@ -74,7 +74,7 @@ function(e, t, n) {
             embeds: C(e),
             codedLinks: U,
             giftCodes: (0, T.isGiftCodeEmbed)(e) ? (0, T.findGiftCodes)(null == e ? void 0 : e.embeds[0].url) : (0, T.findGiftCodes)(e.content),
-            content: V,
+            content: F,
             referralTrialOfferId: k,
             call: R(e.call, P),
             reactions: g(null != O ? O : e.reactions, e.poll),

@@ -45,8 +45,8 @@ function(e, t, n) {
             onClose: w,
             onSubscribeClick: B,
             onSecondaryClick: k,
-            secondaryCTA: V,
-            subscribeButtonText: F,
+            secondaryCTA: F,
+            subscribeButtonText: V,
             showNewBadge: x = !1,
             enableArtBoxShadow: H = !0,
             subscriptionTier: Y = h.PremiumSubscriptionSKUs.TIER_2,
@@ -138,7 +138,7 @@ function(e, t, n) {
                     className: a()(O.primaryActions, {
                         [O.enhancedPrimaryActions]: et
                     }),
-                    children: [null != V ? (0, i.jsx)(o.Button, {
+                    children: [null != F ? (0, i.jsx)(o.Button, {
                         className: a()(O.secondaryAction, {
                             [O.enhancedSecondaryAction]: en
                         }),
@@ -146,7 +146,7 @@ function(e, t, n) {
                         size: o.Button.Sizes.SMALL,
                         color: en ? o.Button.Colors.CUSTOM : o.Button.Colors.PRIMARY,
                         look: o.Button.Looks.LINK,
-                        children: V
+                        children: F
                     }) : null, (() => {
                         let e;
                         if (X) return (0, i.jsx)(d.default, {
@@ -178,7 +178,7 @@ function(e, t, n) {
                             onClick: () => {
                                 null == B || B(), w()
                             },
-                            buttonText: null != F ? F : t
+                            buttonText: null != V ? V : t
                         })
                     })()]
                 }), !W && !et && (0, i.jsx)(o.Button, {

@@ -33,8 +33,8 @@ function(e, t, n) {
         w = {},
         B = {},
         k = {},
-        V = {},
         F = {},
+        V = {},
         x = {};
 
     function H(e) {
@@ -172,7 +172,7 @@ function(e, t, n) {
                 id: t
             }
         } = e;
-        return delete V[t], delete F[t], q(t)
+        return delete F[t], delete V[t], q(t)
     }
 
     function ei(e) {
@@ -264,14 +264,14 @@ function(e, t, n) {
         }
         getChatOpen(e) {
             var t;
-            return null !== (t = V[e]) && void 0 !== t && t
+            return null !== (t = F[e]) && void 0 !== t && t
         }
         isFullscreenInContext() {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : D.AppContext.APP;
             return Object.values(w).some(t => t[e] === D.ChannelLayouts.FULL_SCREEN)
         }
         getStageStreamSize(e) {
-            return F[e]
+            return V[e]
         }
         getStageVideoLimitBoostUpsellDismissed(e) {
             return x[e]
@@ -292,14 +292,14 @@ function(e, t, n) {
                 channelId: t,
                 currentVoiceChannelId: n
             } = e;
-            return null != t ? delete b[t] : null != n && (delete V[n], delete F[n], z(n)), Z()
+            return null != t ? delete b[t] : null != n && (delete F[n], delete V[n], z(n)), Z()
         },
         CHANNEL_SELECT: function(e) {
             let {
                 channelId: t,
                 messageId: n
             } = e, i = Z(), r = m.default.getChannel(t);
-            return null == t || null == n || (null == r ? void 0 : r.type) !== D.ChannelTypes.GUILD_VOICE && (null == r ? void 0 : r.type) !== D.ChannelTypes.GUILD_STAGE_VOICE || V[t] ? i : (V[t] = !0, !0)
+            return null == t || null == n || (null == r ? void 0 : r.type) !== D.ChannelTypes.GUILD_VOICE && (null == r ? void 0 : r.type) !== D.ChannelTypes.GUILD_STAGE_VOICE || F[t] ? i : (F[t] = !0, !0)
         },
         CHANNEL_RTC_ACTIVE_CHANNELS: Z,
         VOICE_STATE_UPDATES: function(e) {
@@ -393,7 +393,7 @@ function(e, t, n) {
                 channelId: t,
                 large: n
             } = e;
-            F[t] = n
+            V[t] = n
         },
         CHANNEL_RTC_UPDATE_STAGE_VIDEO_LIMIT_BOOST_UPSELL_DISMISSED: function(e) {
             let {
@@ -418,7 +418,7 @@ function(e, t, n) {
                 channelId: t,
                 chatOpen: n
             } = e;
-            V[t] = n
+            F[t] = n
         },
         RTC_CONNECTION_VIDEO: function(e) {
             let {

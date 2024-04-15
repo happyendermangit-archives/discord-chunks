@@ -44,7 +44,7 @@ function(e, t, n) {
             overrideBannerSrc: C,
             size: (0, m.getUserBannerSize)(g),
             canAnimate: L || !U ? M : P
-        }), w = (0, d.useToken)(u.default.unsafe_rawColors.PRIMARY_800).hex(), B = (0, d.getAvatarSize)(d.AvatarSizes.SIZE_80), k = (0, o.hex2int)((0, _.default)(s.getAvatarURL(R, B), w, !1)), V = (0, c.default)(null !== (t = null == p ? void 0 : p.primaryColor) && void 0 !== t ? t : k).hsl;
+        }), w = (0, d.useToken)(u.default.unsafe_rawColors.PRIMARY_800).hex(), B = (0, d.getAvatarSize)(d.AvatarSizes.SIZE_80), k = (0, o.hex2int)((0, _.default)(s.getAvatarURL(R, B), w, !1)), F = (0, c.default)(null !== (t = null == p ? void 0 : p.primaryColor) && void 0 !== t ? t : k).hsl;
         return (0, i.jsx)(h.default, {
             isPremium: v,
             hasThemeColors: null !== (n = null == p ? void 0 : p.canEditThemes) && void 0 !== n && n,
@@ -64,7 +64,7 @@ function(e, t, n) {
                 onMouseLeave: () => y(!1),
                 style: {
                     backgroundImage: null != b ? "url(".concat(b, ")") : void 0,
-                    backgroundColor: G !== A.BannerLoadingStatus.COMPLETE ? u.default.unsafe_rawColors.PRIMARY_800.css : V
+                    backgroundColor: G !== A.BannerLoadingStatus.COMPLETE ? u.default.unsafe_rawColors.PRIMARY_800.css : F
                 },
                 children: !U && (0, f.isAnimatedImageURL)(b) && (0, i.jsx)(T.default, {
                     className: O.gifTag
