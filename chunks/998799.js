@@ -4,6 +4,7 @@ function(e) {
         container: "container_bbc20d",
         divider: "divider__5d410",
         header: "header__10a82",
+        newBadge: "newBadge__242e8",
         nitroWheel: "nitroWheel__7ee03",
         option: "option__13442",
         optionPlaying: "optionPlaying__05ded",
