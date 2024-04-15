@@ -12,6 +12,7 @@ function(e) {
         userTagNoNickname: "userTagNoNickname__24253 userTag_eb9b2a",
         userTagUsernameBase: "userTagUsernameBase_bb3e38",
         userTagUsernameNoNickname: "userTagUsernameNoNickname__6c8c2 userTagUsernameBase_bb3e38",
-        userTagWithNickname: "userTagWithNickname_fb8bc3 userTag_eb9b2a"
+        userTagWithNickname: "userTagWithNickname_fb8bc3 userTag_eb9b2a",
+        usernameRow: "usernameRow__73bf0"
     }
 }

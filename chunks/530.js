@@ -19,27 +19,31 @@ function(e, t, n) {
             user: t,
             guildId: n,
             channelId: r,
-            icon: d,
+            usernameIcon: d,
             tags: _,
-            className: c,
-            nicknameVariant: E = "heading-lg/bold"
-        } = e, I = t.isNonUserBot() ? null : l.default.getName(n, r, t);
+            nicknameIcon: c,
+            className: E,
+            nicknameVariant: I = "heading-lg/bold"
+        } = e, T = t.isNonUserBot() ? null : l.default.getName(n, r, t);
         return (0, i.jsxs)("div", {
-            className: s()(u.container, c),
-            children: [null != I && (0, i.jsx)(a.Heading, {
-                className: u.nickname,
-                variant: E,
-                children: I
-            }), (0, i.jsxs)("div", {
+            className: s()(u.container, E),
+            children: [null != T ? (0, i.jsxs)("div", {
+                className: u.usernameRow,
+                children: [(0, i.jsx)(a.Heading, {
+                    className: u.nickname,
+                    variant: I,
+                    children: T
+                }), c]
+            }) : null, (0, i.jsxs)("div", {
                 className: u.tags,
                 children: [(0, i.jsx)(o.default, {
                     user: t,
                     usernameIcon: d,
                     forceUsername: !0,
-                    className: null == I ? u.userTagNoNickname : u.userTagWithNickname,
-                    usernameClass: null == I ? u.userTagUsernameNoNickname : u.userTagUsernameBase,
-                    discriminatorClass: null == I ? u.userTagDiscriminatorNoNickname : u.discrimBase,
-                    botClass: null == I ? u.headerBotTag : u.headerBotTagWithNickname
+                    className: null == T ? u.userTagNoNickname : u.userTagWithNickname,
+                    usernameClass: null == T ? u.userTagUsernameNoNickname : u.userTagUsernameBase,
+                    discriminatorClass: null == T ? u.userTagDiscriminatorNoNickname : u.discrimBase,
+                    botClass: null == T ? u.headerBotTag : u.headerBotTagWithNickname
                 }), _]
             })]
         })
