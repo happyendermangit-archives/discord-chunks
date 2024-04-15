@@ -16,27 +16,29 @@ function(e, t, n) {
             status: u,
             avatarSize: d = r.AvatarSizes.SIZE_120,
             "aria-hidden": _ = !1,
-            className: c
+            className: c,
+            animateOnHover: E = !1
         } = e, {
-            avatarDecorationSrc: E,
-            avatarSrc: I,
-            eventHandlers: T
+            avatarDecorationSrc: I,
+            avatarSrc: T,
+            eventHandlers: f
         } = (0, s.default)({
             user: t,
             guildId: n,
             size: d,
             showPending: !0,
-            avatarDecorationOverride: a
+            avatarDecorationOverride: a,
+            animateOnHover: E
         });
         return (0, i.jsx)(l, {
-            avatarDecoration: E,
-            src: I,
+            avatarDecoration: I,
+            src: T,
             size: d,
             status: u,
             "aria-label": _ ? void 0 : o.default.Messages.USER_SETTINGS_AVATAR,
             "aria-hidden": _,
             className: c,
-            ...T
+            ...f
         })
     }
 }
