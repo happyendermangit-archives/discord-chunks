@@ -12,19 +12,19 @@ function(e, t, n) {
         T = [],
         f = new Set,
         S = !1,
-        A = new Set,
         h = new Set,
+        A = new Set,
         m = {},
         N = 0,
-        O = null,
-        p = [],
+        p = null,
+        O = [],
         R = !1,
         C = 0,
         g = !1,
         L = () => !0;
 
     function D(e) {
-        A.add(e)
+        h.add(e)
     }
 
     function v(e) {
@@ -37,9 +37,9 @@ function(e, t, n) {
     function M(e) {
         let t = e.type === o.MessageTypes.PREMIUM_REFERRAL ? e.content : null;
         if (null == t) return !1;
-        if (!h.has(t) && !A.has(t)) {
+        if (!A.has(t) && !h.has(t)) {
             var n;
-            n = t, A.add(n), u.default.wait(() => (0, _.resolveReferralTrialOffer)(t).catch(c.NOOP_NULL))
+            n = t, h.add(n), u.default.wait(() => (0, _.resolveReferralTrialOffer)(t).catch(c.NOOP_NULL))
         }
     }
     class y extends(i = l.default.Store) {
@@ -47,7 +47,7 @@ function(e, t, n) {
             this.waitFor(d.default), this.syncWith([d.default], L)
         }
         checkAndFetchReferralsRemaining() {
-            null == E && !S && N < 5 && (null == O || O < Date.now()) && (0, _.fetchReferralsRemaining)()
+            null == E && !S && N < 5 && (null == p || p < Date.now()) && (0, _.fetchReferralsRemaining)()
         }
         getReferralsRemaining() {
             return this.checkAndFetchReferralsRemaining(), E
@@ -68,10 +68,10 @@ function(e, t, n) {
             return m[e]
         }
         isResolving(e) {
-            return A.has(e)
+            return h.has(e)
         }
         getEligibleUsers() {
-            return p
+            return O
         }
         getFetchingEligibleUsers() {
             return R
@@ -94,9 +94,9 @@ function(e, t, n) {
                 userTrialOfferId: t,
                 recipientId: n
             } = e;
-            if (!S && (0, _.fetchReferralsRemaining)(), !f.has(n) && (0, _.checkRecipientEligibility)(n), !A.has(t)) {
+            if (!S && (0, _.fetchReferralsRemaining)(), !f.has(n) && (0, _.checkRecipientEligibility)(n), !h.has(t)) {
                 var i;
-                i = t, A.add(i), u.default.wait(() => (0, _.resolveReferralTrialOffer)(t).catch(c.NOOP_NULL))
+                i = t, h.add(i), u.default.wait(() => (0, _.resolveReferralTrialOffer)(t).catch(c.NOOP_NULL))
             }
         },
         BILLING_REFERRALS_REMAINING_FETCH_START: function(e) {
@@ -112,7 +112,7 @@ function(e, t, n) {
         },
         BILLING_REFERRALS_REMAINING_FETCH_FAIL: function(e) {
             let {} = e;
-            g = !1, S = !1, N += 1, O = Date.now() + 1e3 * Math.pow(2, N)
+            g = !1, S = !1, N += 1, p = Date.now() + 1e3 * Math.pow(2, N)
         },
         BILLING_CREATE_REFERRAL_PREVIEW_START: function(e) {
             let {
@@ -143,13 +143,13 @@ function(e, t, n) {
             let {
                 userTrialOffer: t
             } = e;
-            null != t && (A.delete(t.id), h.add(t.id), m[t.id] = t)
+            null != t && (h.delete(t.id), A.add(t.id), m[t.id] = t)
         },
         BILLING_REFERRAL_RESOLVE_FAIL: function(e) {
             let {
                 userTrialOfferId: t
             } = e;
-            A.delete(t), h.add(t)
+            h.delete(t), A.add(t)
         },
         REFERRALS_FETCH_ELIGIBLE_USER_START: function() {
             R = !0
@@ -159,7 +159,7 @@ function(e, t, n) {
                 users: t,
                 nextIndex: n
             } = e;
-            R = !1, p = t, C = n
+            R = !1, O = t, C = n
         },
         REFERRALS_FETCH_ELIGIBLE_USER_FAIL: function() {
             R = !1
@@ -173,7 +173,7 @@ function(e, t, n) {
         },
         LOAD_MESSAGES_AROUND_SUCCESS: v,
         LOGOUT: function() {
-            E = null, I = {}, T = [], f = new Set, S = !1, A = new Set, h = new Set, m = {}, N = 0, O = null, p = [], R = !1, C = 0, g = !1
+            E = null, I = {}, T = [], f = new Set, S = !1, h = new Set, A = new Set, m = {}, N = 0, p = null, O = [], R = !1, C = 0, g = !1
         }
     })
 }

@@ -26,8 +26,8 @@ function(e, t, n) {
             content: T,
             stickers: f,
             uploads: S,
-            channel: A,
-            restrictMentions: h = !0,
+            channel: h,
+            restrictMentions: A = !0,
             respectCooldown: m = !0
         } = e, N = c.default.canUseIncreasedMessageLength(u.default.getCurrentUser());
         return new Promise(e => (function(e) {
@@ -37,23 +37,23 @@ function(e, t, n) {
                 type: T,
                 content: f,
                 stickers: S,
-                uploads: A,
-                channel: h,
+                uploads: h,
+                channel: A,
                 restrictMentions: m,
                 respectCooldown: N,
-                userCanUsePremiumMessageLength: O,
-                resolve: p
+                userCanUsePremiumMessageLength: p,
+                resolve: O
             } = e;
-            if (0 === f.length && !(null === (t = T.submit) || void 0 === t ? void 0 : t.allowEmptyMessage) && (null == S || 0 === S.length) && (null == A || 0 === A.length)) {
-                p({
+            if (0 === f.length && !(null === (t = T.submit) || void 0 === t ? void 0 : t.allowEmptyMessage) && (null == S || 0 === S.length) && (null == h || 0 === h.length)) {
+                O({
                     valid: !1,
                     failureReason: E.MessageRestrictionTypes.EMPTY_MESSAGE
                 });
                 return
             }
-            let R = O ? E.MAX_MESSAGE_LENGTH_PREMIUM : E.MAX_MESSAGE_LENGTH;
+            let R = p ? E.MAX_MESSAGE_LENGTH_PREMIUM : E.MAX_MESSAGE_LENGTH;
             if (f.length > R) {
-                if (O || null == h) {
+                if (p || null == A) {
                     ;
                     n = f.length, u = R, (0, r.openModal)(e => (0, i.jsx)(a.default, {
                         title: I.default.Messages.MESSAGE_TOO_LONG_HEADER,
@@ -69,18 +69,18 @@ function(e, t, n) {
                     })
                 } else s.default.dispatch({
                     type: "MESSAGE_LENGTH_UPSELL",
-                    channel: h,
+                    channel: A,
                     content: f
                 });
-                p({
+                O({
                     valid: !1,
                     failureReason: E.MessageRestrictionTypes.MESSAGE_TOO_LONG
                 });
                 return
             }
-            if (null != h) {
-                if (null != h.getGuildId() && N && l.default.getSlowmodeCooldownGuess(h.id) > 0) {
-                    p({
+            if (null != A) {
+                if (null != A.getGuildId() && N && l.default.getSlowmodeCooldownGuess(A.id) > 0) {
+                    O({
                         valid: !1,
                         failureReason: E.MessageRestrictionTypes.SLOWMODE_COOLDOWN
                     });
@@ -93,16 +93,16 @@ function(e, t, n) {
                             animation: n
                         }
                         of _.RESTRICTIONS) {
-                        let i = e(f, h, m);
+                        let i = e(f, A, m);
                         if (!1 !== i) {
                             c({
                                 analyticsType: t,
-                                channel: h,
-                                onCancel: () => p({
+                                channel: A,
+                                onCancel: () => O({
                                     valid: !1,
                                     failureReason: E.MessageRestrictionTypes.SHOUTING_CANCELLED
                                 }),
-                                onConfirm: () => p({
+                                onConfirm: () => O({
                                     valid: !0
                                 }),
                                 popoutText: i,
@@ -120,13 +120,13 @@ function(e, t, n) {
                     ...e
                 }), {
                     onCloseRequest: E.NOOP
-                }), p({
+                }), O({
                     valid: !1,
                     failureReason: E.MessageRestrictionTypes.RATE_LIMITED
                 });
                 return
             }
-            p({
+            O({
                 valid: !0
             })
         })({
@@ -135,8 +135,8 @@ function(e, t, n) {
             content: T,
             stickers: f,
             uploads: S,
-            channel: A,
-            restrictMentions: h,
+            channel: h,
+            restrictMentions: A,
             respectCooldown: m,
             userCanUsePremiumMessageLength: N,
             resolve: e

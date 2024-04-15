@@ -16,11 +16,11 @@ function(e, t, n) {
         T = n("482207"),
         f = n("436896"),
         S = n("590921"),
-        A = n("606992"),
-        h = n("51062"),
+        h = n("606992"),
+        A = n("51062"),
         m = n("881338");
     t.default = r.forwardRef(function(e, t) {
-        var n, s, N, O, p;
+        var n, s, N, p, O;
         let {
             channel: R,
             type: C,
@@ -29,7 +29,7 @@ function(e, t, n) {
         } = e, D = (0, E.useUID)(), v = (0, l.useStateFromStores)([_.default], () => {
             var e;
             return null !== (e = _.default.getGuild(R.guild_id)) && void 0 !== e ? e : null
-        }, [R.guild_id]), M = r.useRef(), [y, P, U] = (0, h.default)({
+        }, [R.guild_id]), M = r.useRef(), [y, P, U] = (0, A.default)({
             ...e,
             guild: v
         }, t, M), b = (null === (n = C.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? T.default : I.default, G = (0, c.getAutocompleteRowId)(y.selectedIndex);
@@ -42,7 +42,7 @@ function(e, t, n) {
             location: "6e9811_2"
         }, {
             autoTrackExposure: !1
-        }), B = (0, A.useChannelAutocompleteLayerPosition)({
+        }), B = (0, h.useChannelAutocompleteLayerPosition)({
             editorHeight: g,
             type: C,
             state: y,
@@ -68,7 +68,7 @@ function(e, t, n) {
                 [m.bottom]: null == B && "bottom" === e.position
             },
             x = 490;
-        null != B && (x = (null === (N = C.autocomplete) || void 0 === N ? void 0 : N.small) ? 200 : (null === (O = y.query) || void 0 === O ? void 0 : O.type) === S.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), x = Math.min(window.innerHeight - 175, x);
+        null != B && (x = (null === (N = C.autocomplete) || void 0 === N ? void 0 : N.small) ? 200 : (null === (p = y.query) || void 0 === p ? void 0 : p.type) === S.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), x = Math.min(window.innerHeight - 175, x);
         let H = (0, i.jsx)(c.default, {
             id: D,
             className: a()(m.autocomplete, F),
@@ -105,7 +105,7 @@ function(e, t, n) {
             children: (0, i.jsx)(u.ReferencePositionLayer, {
                 reference: () => B,
                 positionKey: k,
-                position: null !== (p = e.position) && void 0 !== p ? p : "top",
+                position: null !== (O = e.position) && void 0 !== O ? O : "top",
                 align: "left",
                 spacing: 8,
                 autoInvert: !0,

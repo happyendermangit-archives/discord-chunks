@@ -19,9 +19,9 @@ function(e, t, n) {
             canChat: !0
         },
         S = new Set,
-        A = {};
+        h = {};
 
-    function h(e) {
+    function A(e) {
         let t;
         m(e), S.add(e);
         let n = c.default.getGuild(e),
@@ -44,21 +44,21 @@ function(e, t, n) {
             o = +n.joinedAt + 6e4 * I.VerificationCriteria.MEMBER_AGE - Date.now(),
             d = n.verificationLevel >= I.VerificationLevels.LOW && !i.isClaimed(),
             f = !1,
-            h = !1,
+            A = !1,
             N = !1,
-            O = !1;
-        !i.isPhoneVerified() && !i.isStaff() && (f = n.verificationLevel >= I.VerificationLevels.LOW && !i.verified, h = n.verificationLevel >= I.VerificationLevels.VERY_HIGH, N = n.verificationLevel >= I.VerificationLevels.MEDIUM && a > 0, O = n.verificationLevel >= I.VerificationLevels.HIGH && o > 0);
-        let p = [];
-        O && p.push(o), N && p.push(a), p.length > 0 && (t = setTimeout(() => l.default.dispatch({
+            p = !1;
+        !i.isPhoneVerified() && !i.isStaff() && (f = n.verificationLevel >= I.VerificationLevels.LOW && !i.verified, A = n.verificationLevel >= I.VerificationLevels.VERY_HIGH, N = n.verificationLevel >= I.VerificationLevels.MEDIUM && a > 0, p = n.verificationLevel >= I.VerificationLevels.HIGH && o > 0);
+        let O = [];
+        p && O.push(o), N && O.push(a), O.length > 0 && (t = setTimeout(() => l.default.dispatch({
             type: "GUILD_VERIFICATION_CHECK",
             guildId: e
-        }), Math.max(...p))), A[e] = {
+        }), Math.max(...O))), h[e] = {
             notClaimed: d,
             notEmailVerified: f,
-            notPhoneVerified: h,
+            notPhoneVerified: A,
             newAccount: N,
-            newMember: O,
-            canChat: !(d || f || h || N || O),
+            newMember: p,
+            canChat: !(d || f || A || N || p),
             accountDeadline: new Date(Date.now() + a),
             memberDeadline: new Date(Date.now() + o),
             timeoutRef: t
@@ -66,36 +66,36 @@ function(e, t, n) {
     }
 
     function m(e) {
-        let t = A[e];
-        null != t && clearTimeout(t.timeoutRef), delete A[e]
+        let t = h[e];
+        null != t && clearTimeout(t.timeoutRef), delete h[e]
     }
 
     function N(e) {
-        S.delete(e.guild.id), h(e.guild.id)
+        S.delete(e.guild.id), A(e.guild.id)
     }
-    class O extends(i = o.default.Store) {
+    class p extends(i = o.default.Store) {
         initialize() {
             this.waitFor(c.default, E.default)
         }
         getCheck(e) {
             var t;
-            return !S.has(e) && h(e), null !== (t = A[e]) && void 0 !== t ? t : f
+            return !S.has(e) && A(e), null !== (t = h[e]) && void 0 !== t ? t : f
         }
         canChatInGuild(e) {
             return this.getCheck(e).canChat
         }
     }
-    a = "GuildVerificationStore", (s = "displayName") in(r = O) ? Object.defineProperty(r, s, {
+    a = "GuildVerificationStore", (s = "displayName") in(r = p) ? Object.defineProperty(r, s, {
         value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a, t.default = new O(l.default, {
+    }) : r[s] = a, t.default = new p(l.default, {
         CONNECTION_OPEN: function() {
-            for (let e in S.clear(), A) m(e)
+            for (let e in S.clear(), h) m(e)
         },
         CONNECTION_CLOSED: function() {
-            d.default.keys(A).forEach(m)
+            d.default.keys(h).forEach(m)
         },
         CURRENT_USER_UPDATE: function() {
             S.clear()
@@ -121,7 +121,7 @@ function(e, t, n) {
             let {
                 guildId: t
             } = e;
-            h(t)
+            A(t)
         }
     })
 }

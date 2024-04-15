@@ -5,7 +5,7 @@ function(e, t, n) {
             return r
         },
         default: function() {
-            return O
+            return p
         },
         getTimeAndUnit: function() {
             return N
@@ -61,11 +61,11 @@ function(e, t, n) {
             unit: "YEARS",
             max: 1 / 0
         }],
-        A = e => (t, n) => null == n ? "" : e().format({
+        h = e => (t, n) => null == n ? "" : e().format({
             time: t,
             ...n
         }),
-        h = {
+        A = {
             ACTIVITY_FEED: {
                 START: {
                     SECONDS: () => I.default.Messages.GAME_FEED_USER_PLAYING_JUST_STARTED,
@@ -103,10 +103,10 @@ function(e, t, n) {
             },
             ACTIVITY_FEED_NEW: {
                 START: {
-                    SECONDS: A(() => I.default.Messages.ACTIVITY_FEED_USER_PLAYING_JUST_STARTED),
-                    MINUTES: A(() => I.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_MINUTES),
-                    HOURS: A(() => I.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_HOURS),
-                    DAYS: A(() => I.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_DAYS)
+                    SECONDS: h(() => I.default.Messages.ACTIVITY_FEED_USER_PLAYING_JUST_STARTED),
+                    MINUTES: h(() => I.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_MINUTES),
+                    HOURS: h(() => I.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_HOURS),
+                    DAYS: h(() => I.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_DAYS)
                 },
                 END: {
                     SECONDS: e => I.default.Messages.DURATION_SECONDS_AGO.format({
@@ -225,7 +225,7 @@ function(e, t, n) {
         }
     }
 
-    function O(e) {
+    function p(e) {
         var t, n;
         return n = class extends(t = d.PureComponent) {
             componentDidMount() {
@@ -255,7 +255,7 @@ function(e, t, n) {
             }
             getTimeUnit(e, t, n) {
                 let i = m(e, e => (function(e, t, n) {
-                    let i = h[n];
+                    let i = A[n];
                     if (null != i) {
                         let n = i[t];
                         if (null != n) return null != n[e]
@@ -290,7 +290,7 @@ function(e, t, n) {
                 } = this.state, a = this.getType();
                 if (null == a) return null;
                 let o = this.getTimeUnit(s, t, a),
-                    l = h[t][a];
+                    l = A[t][a];
                 if (null == l) return null;
                 let d = l[o],
                     _ = Math.floor(this.transformTime(o, s));

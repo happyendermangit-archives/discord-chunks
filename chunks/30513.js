@@ -50,12 +50,12 @@ function(e, t, n) {
                 description: T.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_ANIMATED_ICON
             }
         },
-        A = () => ({
+        h = () => ({
             color: i.default.unsafe_rawColors.PREMIUM_PERK_GREEN.css,
             icon: u.default,
             description: T.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_GUILD_BANNER
         }),
-        h = () => ({
+        A = () => ({
             color: i.default.unsafe_rawColors.PREMIUM_PERK_GREEN.css,
             icon: o.default,
             description: T.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_ANIMATED_GUILD_BANNER
@@ -73,7 +73,7 @@ function(e, t, n) {
                 description: T.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_STICKERS
             }
         },
-        O = function(e) {
+        p = function(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.default.unsafe_rawColors.PREMIUM_PERK_PURPLE.css,
                 n = 0,
                 r = 0;
@@ -96,7 +96,7 @@ function(e, t, n) {
                 })
             }
         },
-        p = () => ({
+        O = () => ({
             color: i.default.unsafe_rawColors.PREMIUM_PERK_GOLD.css,
             icon: _.default,
             description: T.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_VANITY_URL
@@ -143,19 +143,19 @@ function(e, t, n) {
         };
 
     function y() {
-        return [m(), A(), N(), D()]
+        return [m(), h(), N(), D()]
     }
 
     function P() {
-        return [m(), O(I.BoostedGuildTiers.TIER_2), M(), D()]
+        return [m(), p(I.BoostedGuildTiers.TIER_2), M(), D()]
     }
 
     function U() {
-        return [O(I.BoostedGuildTiers.TIER_3, i.default.unsafe_rawColors.PREMIUM_PERK_GREEN.css), v(), p(), D()]
+        return [p(I.BoostedGuildTiers.TIER_3, i.default.unsafe_rawColors.PREMIUM_PERK_GREEN.css), v(), O(), D()]
     }
 
     function b() {
-        return [p(), h(), O(I.BoostedGuildTiers.TIER_3), D()]
+        return [O(), A(), p(I.BoostedGuildTiers.TIER_3), D()]
     }
 
     function G() {

@@ -37,7 +37,7 @@ function(e, t, n) {
         }), f = {
             background: T,
             backdropFilter: "blur(0px)"
-        }, S = (0, _.default)(i), A = (0, u.useTransition)(o, {
+        }, S = (0, _.default)(i), h = (0, u.useTransition)(o, {
             keys: e => e ? "backdrop" : "empty",
             config: {
                 duration: i || S ? 0 : 300
@@ -53,7 +53,7 @@ function(e, t, n) {
             let e = {
                 zIndex: 1e3 + r
             };
-            return A((t, n) => n ? (0, s.jsx)(u.animated.div, {
+            return h((t, n) => n ? (0, s.jsx)(u.animated.div, {
                 className: c.backdrop,
                 style: {
                     ...t,
@@ -63,7 +63,7 @@ function(e, t, n) {
             }) : null)
         }
         return (0, s.jsx)(a, {
-            children: A((e, t) => t ? (0, s.jsx)(u.animated.div, {
+            children: h((e, t) => t ? (0, s.jsx)(u.animated.div, {
                 className: l()(c.backdrop, c.withLayer),
                 style: e,
                 onClick: E

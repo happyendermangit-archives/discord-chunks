@@ -16,20 +16,20 @@ function(e, t, n) {
         T = n("555932"),
         f = n("808189"),
         S = n("362948"),
-        A = n("245004"),
-        h = n("383881"),
+        h = n("245004"),
+        A = n("383881"),
         m = n("981631"),
         N = n("689938"),
-        O = n("983973");
+        p = n("983973");
     t.default = function(e) {
         let {
             analyticsLocation: t,
             guild: n,
-            onClose: p
+            onClose: O
         } = e, [R, C] = r.useState(!0), g = r.useRef(!1), L = (0, s.useLazyValue)(() => Date.now()), {
             analyticsLocations: D
         } = (0, u.default)(), v = r.useCallback(() => {
-            p(), d.default.track(m.AnalyticEvents.MODAL_DISMISSED, {
+            O(), d.default.track(m.AnalyticEvents.MODAL_DISMISSED, {
                 type: m.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
                 location_stack: D,
                 location_section: t.section,
@@ -37,7 +37,7 @@ function(e, t, n) {
                 guild_id: n.id,
                 duration_open_ms: Date.now() - L
             })
-        }, [p, t, D, L, n.id]), M = r.useCallback(e => {
+        }, [O, t, D, L, n.id]), M = r.useCallback(e => {
             e && !g.current && (d.default.track(m.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
                 type: m.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
                 location_stack: D,
@@ -63,21 +63,21 @@ function(e, t, n) {
             }
         }, [v]), (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)("div", {
-                className: O.closeIconWrapper,
+                className: p.closeIconWrapper,
                 children: (0, i.jsx)(l.default, {
-                    className: O.closeIcon,
+                    className: p.closeIcon,
                     closeAction: v,
                     keybind: "ESC",
                     variant: l.default.Variants.SOLID
                 })
             }), (0, i.jsxs)(o.AdvancedScrollerAuto, {
-                className: O.scroller,
+                className: p.scroller,
                 children: [(0, i.jsxs)("div", {
-                    className: O.header,
+                    className: p.header,
                     children: [(0, i.jsxs)("div", {
-                        className: O.headerContentWrapper,
+                        className: p.headerContentWrapper,
                         children: [(0, i.jsx)(o.Heading, {
-                            className: O.heading,
+                            className: p.heading,
                             color: "always-white",
                             variant: "display-lg",
                             children: N.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_HEADING
@@ -90,25 +90,25 @@ function(e, t, n) {
                         }), (0, i.jsx)(f.default, {
                             guild: n
                         })]
-                    }), (0, i.jsx)(h.HeaderWave, {})]
+                    }), (0, i.jsx)(A.HeaderWave, {})]
                 }), (0, i.jsx)("div", {
-                    className: O.middleBodyContentWrapper,
-                    children: (0, i.jsx)(A.default, {})
+                    className: p.middleBodyContentWrapper,
+                    children: (0, i.jsx)(h.default, {})
                 }), (0, i.jsxs)("div", {
-                    className: O.lowerBody,
+                    className: p.lowerBody,
                     children: [(0, i.jsxs)("div", {
-                        className: O.lowerBodyContentWrapper,
+                        className: p.lowerBodyContentWrapper,
                         children: [(0, i.jsx)(S.default, {
-                            className: O.tierComparisonTable,
+                            className: p.tierComparisonTable,
                             guild: n
                         }), (0, i.jsx)(_.default, {}), (0, i.jsx)(E.default, {})]
-                    }), (0, i.jsx)(h.BodyWave, {}), (0, i.jsx)("div", {
-                        className: O.lowerBodyBackgroundImage
+                    }), (0, i.jsx)(A.BodyWave, {}), (0, i.jsx)("div", {
+                        className: p.lowerBodyBackgroundImage
                     })]
                 }), (0, i.jsx)(a.VisibilitySensor, {
                     onChange: M,
                     children: (0, i.jsx)("div", {
-                        className: O.persistentCtaSpacer
+                        className: p.persistentCtaSpacer
                     })
                 })]
             }), (0, i.jsx)(I.default, {

@@ -22,8 +22,8 @@ function(e, t, n) {
         T = {},
         f = {},
         S = null !== (r = o.Storage.get(E)) && void 0 !== r ? r : {},
-        A = "";
-    let h = null;
+        h = "";
+    let A = null;
 
     function m(e) {
         return {
@@ -45,14 +45,14 @@ function(e, t, n) {
         if ((0, _.isDesktop)())
             for (let n of e.executables) f[n.name] = t
     }
-    class O extends(s = a.default.PersistedStore) {
+    class p extends(s = a.default.PersistedStore) {
         initialize(e) {
             var t;
-            null != e && (null != e.detectableGamesEtag && (A = e.detectableGamesEtag), null === (t = e.detectableGames) || void 0 === t || t.forEach(e => N(e)))
+            null != e && (null != e.detectableGamesEtag && (h = e.detectableGamesEtag), null === (t = e.detectableGames) || void 0 === t || t.forEach(e => N(e)))
         }
         getState() {
             return (0, _.isDesktop)() ? {
-                detectableGamesEtag: A,
+                detectableGamesEtag: h,
                 detectableGames: Object.values(I)
             } : {
                 detectableGamesEtag: "",
@@ -77,10 +77,10 @@ function(e, t, n) {
             return !0 === i
         }
         get detectableGamesEtag() {
-            return A
+            return h
         }
         get lastFetched() {
-            return h
+            return A
         }
         getGameByExecutable(e) {
             return f[e]
@@ -111,7 +111,7 @@ function(e, t, n) {
             S[e] = !0, o.Storage.set(E, S)
         }
     }
-    c(O, "displayName", "GameStore"), c(O, "persistKey", "GameStore"), c(O, "migrations", [e => {
+    c(p, "displayName", "GameStore"), c(p, "persistKey", "GameStore"), c(p, "migrations", [e => {
         var t, n;
         if (null == e) return {
             detectableGamesEtag: "",
@@ -124,7 +124,7 @@ function(e, t, n) {
     }, e => (0, _.isDesktop)() ? e : {
         detectableGamesEtag: "",
         detectableGames: []
-    }]), t.default = new O(l.default, {
+    }]), t.default = new p(l.default, {
         OVERLAY_INITIALIZE: function(e) {
             let {
                 detectableApplications: t
@@ -142,7 +142,7 @@ function(e, t, n) {
                 games: t,
                 etag: n
             } = e;
-            for (let e of (null != n && A !== n && (A = n), t)) N(function(e) {
+            for (let e of (null != n && h !== n && (h = n), t)) N(function(e) {
                 var t, n, i, r, s, a;
                 return {
                     id: e.id,
@@ -156,7 +156,7 @@ function(e, t, n) {
                     supportsOutOfProcessOverlay: d.default.supportsOutOfProcessOverlay(e.overlay_methods)
                 }
             }(e));
-            i = void 0, h = Date.now()
+            i = void 0, A = Date.now()
         }
     })
 }

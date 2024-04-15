@@ -16,12 +16,12 @@ function(e, t, n) {
         T = n("117530"),
         f = n("594174"),
         S = n("74538"),
-        A = n("94161"),
-        h = n("9277"),
+        h = n("94161"),
+        A = n("9277"),
         m = n("897291"),
         N = n("764794"),
-        O = n("241553"),
-        p = n("319417"),
+        p = n("241553"),
+        O = n("319417"),
         R = n("728386"),
         C = n("474936"),
         g = n("23383");
@@ -41,7 +41,7 @@ function(e, t, n) {
             a && c.default.trackExposure({
                 location: "dc120b_2"
             })
-        }, [a]), s && a ? (0, i.jsx)(O.default, {
+        }, [a]), s && a ? (0, i.jsx)(p.default, {
             disabled: t,
             channel: n
         }) : (0, i.jsx)(m.default, {
@@ -50,7 +50,7 @@ function(e, t, n) {
         })
     }
     t.default = r.memo(function(e) {
-        var t, n, r, c, m, O, D, v;
+        var t, n, r, c, m, p, D, v;
         let {
             type: M,
             disabled: y,
@@ -96,19 +96,19 @@ function(e, t, n) {
             referralsRemaining: W,
             channel: P,
             isResending: K
-        }, "referral"))), (null === (O = M.gifts) || void 0 === O ? void 0 : O.button) != null && null == V && !x && H.push((0, i.jsx)(L, {
+        }, "referral"))), (null === (p = M.gifts) || void 0 === p ? void 0 : p.button) != null && null == V && !x && H.push((0, i.jsx)(L, {
             disabled: y,
             channel: P
-        }, "gift")), (null === (D = M.gifs) || void 0 === D ? void 0 : D.button) != null && null == V && H.push((0, i.jsx)(h.default, {
+        }, "gift")), (null === (D = M.gifs) || void 0 === D ? void 0 : D.button) != null && null == V && H.push((0, i.jsx)(A.default, {
             disabled: y,
             type: M
         }, "gif")), (null === (v = M.stickers) || void 0 === v ? void 0 : v.button) != null && null == V && H.push((0, i.jsx)(R.default, {
             disabled: y,
             type: M
-        }, "sticker"))), (null === (t = M.emojis) || void 0 === t ? void 0 : t.button) != null && (null == V || null != F && F.type !== o.ApplicationCommandOptionType.ATTACHMENT) && H.push((0, i.jsx)(A.default, {
+        }, "sticker"))), (null === (t = M.emojis) || void 0 === t ? void 0 : t.button) != null && (null == V || null != F && F.type !== o.ApplicationCommandOptionType.ATTACHMENT) && H.push((0, i.jsx)(h.default, {
             disabled: y,
             type: M
-        }, "emoji")), (null === (n = M.submit) || void 0 === n ? void 0 : n.button) != null && ((null === (r = M.submit) || void 0 === r ? void 0 : r.ignorePreference) || G) && H.push((0, i.jsx)(p.default, {
+        }, "emoji")), (null === (n = M.submit) || void 0 === n ? void 0 : n.button) != null && ((null === (r = M.submit) || void 0 === r ? void 0 : r.ignorePreference) || G) && H.push((0, i.jsx)(O.default, {
             onClick: U,
             disabled: y || 0 === k.length && b && !B
         }, "submit")), 0 === H.length) ? null : (0, i.jsx)("div", {

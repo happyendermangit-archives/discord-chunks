@@ -12,12 +12,12 @@ function(e, t, n) {
         T = n("93093"),
         f = n("430824"),
         S = n("70956"),
-        A = n("373228"),
-        h = n("378233");
+        h = n("373228"),
+        A = n("378233");
     let m = 2,
         N = new Map,
-        O = new Map,
-        p = null,
+        p = new Map,
+        O = null,
         R = [],
         C = null,
         g = !1,
@@ -39,50 +39,50 @@ function(e, t, n) {
         }, y = function(e) {
             let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
                 n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-            O.set(e.id, e), t && P(e, n)
+            p.set(e.id, e), t && P(e, n)
         }, P = function(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-            if (null == p) return;
+            if (null == O) return;
             let {
                 tags: n
             } = e, i = {
-                type: A.StickerMetadataTypes.STICKER_NAME,
+                type: h.StickerMetadataTypes.STICKER_NAME,
                 value: e.name.trim().toLocaleLowerCase()
             };
-            if ((0, h.isStandardSticker)(e)) {
+            if ((0, A.isStandardSticker)(e)) {
                 let t = R.find(t => t.id === e.pack_id),
                     r = [i, ...(null != n ? n : "").split(",").map(e => ({
-                        type: A.StickerMetadataTypes.TAG,
+                        type: h.StickerMetadataTypes.TAG,
                         value: e.trim().toLocaleLowerCase()
                     }))];
                 null != t && r.push({
-                    type: A.StickerMetadataTypes.PACK_NAME,
+                    type: h.StickerMetadataTypes.PACK_NAME,
                     value: t.name
-                }), p.set(e.id, r)
-            } else if ((0, h.isGuildSticker)(e) && null != n) {
+                }), O.set(e.id, r)
+            } else if ((0, A.isGuildSticker)(e) && null != n) {
                 let r = E.default.getByName(n),
                     s = [i, {
-                        type: A.StickerMetadataTypes.TAG,
+                        type: h.StickerMetadataTypes.TAG,
                         value: n.trim().toLocaleLowerCase()
                     }];
                 if (null != t) {
                     let e = t.name.trim().toLocaleLowerCase();
                     null != e && "" !== e && s.push({
-                        type: A.StickerMetadataTypes.GUILD_NAME,
+                        type: h.StickerMetadataTypes.GUILD_NAME,
                         value: e
                     })
                 }
                 if (null == r) {
-                    p.set(e.id, s);
+                    O.set(e.id, s);
                     return
                 }
                 s.push({
-                    type: A.StickerMetadataTypes.CORRELATED_EMOJI,
+                    type: h.StickerMetadataTypes.CORRELATED_EMOJI,
                     value: r.surrogates
                 }), r.forEachDiversity(e => s.push({
-                    type: A.StickerMetadataTypes.CORRELATED_EMOJI,
+                    type: h.StickerMetadataTypes.CORRELATED_EMOJI,
                     value: e.surrogates
-                })), p.set(e.id, s)
+                })), O.set(e.id, s)
             }
         }, U = (e, t, n) => {
             N.set(e.id, e);
@@ -114,7 +114,7 @@ function(e, t, n) {
             return m
         }
         get stickerMetadata() {
-            return M(), null == p && (p = new Map, b()), p
+            return M(), null == O && (O = new Map, b()), O
         }
         get hasLoadedStickerPacks() {
             return null != C && C + v > Date.now()
@@ -123,7 +123,7 @@ function(e, t, n) {
             return g
         }
         getStickerById(e) {
-            return !O.has(e) && M(), O.get(e)
+            return !p.has(e) && M(), p.get(e)
         }
         getStickerPack(e) {
             return N.get(e)
@@ -138,7 +138,7 @@ function(e, t, n) {
             return L
         }
         getAllStickersIterator() {
-            return M(), O.values()
+            return M(), p.values()
         }
         getAllGuildStickers() {
             return M(), L
@@ -154,13 +154,13 @@ function(e, t, n) {
         writable: !0
     }) : r[s] = a, t.default = new w(u.default, {
         BACKGROUND_SYNC: () => {
-            p = null, O = new Map, L = new Map, m = 0
+            O = null, p = new Map, L = new Map, m = 0
         },
         CONNECTION_OPEN: e => {
             let {
                 guilds: t
             } = e;
-            p = null, O = new Map, L = new Map, t.forEach(G), m = t.every(e => null != e.stickers) ? 1 : 0
+            O = null, p = new Map, L = new Map, t.forEach(G), m = t.every(e => null != e.stickers) ? 1 : 0
         },
         GUILD_CREATE: function(e) {
             let {
@@ -174,11 +174,11 @@ function(e, t, n) {
                 guild: n
             } = e;
             (null !== (t = L.get(n.id)) && void 0 !== t ? t : []).forEach(e => {
-                null != p && p.delete(e.id), O.delete(e.id)
+                null != O && O.delete(e.id), p.delete(e.id)
             }), L.delete(n.id), L = new Map(L)
         },
         LOGOUT: () => {
-            m = 0, R = [], O.clear(), N.clear(), p = null, L.clear(), L = new Map(L), g = !1, C = null
+            m = 0, R = [], p.clear(), N.clear(), O = null, L.clear(), L = new Map(L), g = !1, C = null
         },
         STICKER_PACKS_FETCH_START: () => {
             g = !0
@@ -224,14 +224,14 @@ function(e, t, n) {
                 stickers: i
             } = e, r = e => {
                 let t;
-                let n = O.get(e.id);
-                return null != n && (0, h.isGuildSticker)(n) && (t = null != n.user ? n.user : void 0), {
+                let n = p.get(e.id);
+                return null != n && (0, A.isGuildSticker)(n) && (t = null != n.user ? n.user : void 0), {
                     ...e,
                     user: t
                 }
             };
             (null !== (t = L.get(n)) && void 0 !== t ? t : []).filter(e => null == i.find(t => t.id === e.id)).forEach(e => {
-                O.delete(e.id), null != p && p.delete(e.id)
+                p.delete(e.id), null != O && O.delete(e.id)
             });
             let s = i.map(e => r(e));
             s.forEach(e => y(e)), D(n, s)

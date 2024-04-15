@@ -66,12 +66,12 @@ function(e, t, n) {
         T = n("797614"),
         f = n("182274"),
         S = n("695346"),
-        A = n("592125"),
-        h = n("699516"),
+        h = n("592125"),
+        A = n("699516"),
         m = n("594174"),
         N = n("626135"),
-        O = n("630388"),
-        p = n("948561"),
+        p = n("630388"),
+        O = n("948561"),
         R = n("651530"),
         C = n("719548"),
         g = n("981631"),
@@ -162,9 +162,9 @@ function(e, t, n) {
             explicitContentGuilds: i,
             explicitContentFriendDm: r,
             explicitContentNonFriendDm: s
-        } = G(), a = A.default.getChannel(e.channel_id);
+        } = G(), a = h.default.getChannel(e.channel_id);
         if (null == a) return !1;
-        if (a.isDM() || a.isGroupDM()) return null != e.author && h.default.getFriendIDs().includes(e.author.id) ? w(r) : w(s);
+        if (a.isDM() || a.isGroupDM()) return null != e.author && A.default.getFriendIDs().includes(e.author.id) ? w(r) : w(s);
         return w(i)
     }
     let k = e => {
@@ -181,11 +181,11 @@ function(e, t, n) {
         if (E.default.get("obscure_blur_effect_enabled")) return !0;
         switch (e.type) {
             case 1:
-                return (0, O.hasFlag)(null !== (n = e.media.flags) && void 0 !== n ? n : 0, g.MessageEmbedFlags.CONTAINS_EXPLICIT_MEDIA);
+                return (0, p.hasFlag)(null !== (n = e.media.flags) && void 0 !== n ? n : 0, g.MessageEmbedFlags.CONTAINS_EXPLICIT_MEDIA);
             case 0:
-                return (0, O.hasFlag)(null !== (i = e.media.flags) && void 0 !== i ? i : 0, g.MessageAttachmentFlags.CONTAINS_EXPLICIT_MEDIA);
+                return (0, p.hasFlag)(null !== (i = e.media.flags) && void 0 !== i ? i : 0, g.MessageAttachmentFlags.CONTAINS_EXPLICIT_MEDIA);
             case 2:
-                return (0, O.hasFlag)(null !== (s = null === (r = e.media.contentScanMetadata) || void 0 === r ? void 0 : r.contentScanFlags) && void 0 !== s ? s : 0, I.ContentScanFlags.EXPLICIT);
+                return (0, p.hasFlag)(null !== (s = null === (r = e.media.contentScanMetadata) || void 0 === r ? void 0 : r.contentScanFlags) && void 0 !== s ? s : 0, I.ContentScanFlags.EXPLICIT);
             default:
                 return !1
         }
@@ -219,7 +219,7 @@ function(e, t, n) {
             context: r
         } = e;
         if (null == n || null == i) return;
-        let s = A.default.getChannel(n);
+        let s = h.default.getChannel(n);
         N.default.track(g.AnalyticEvents.EXPLICIT_MEDIA_ACTION, {
             action: t,
             guild_id: null == s ? void 0 : s.guild_id,
@@ -247,14 +247,14 @@ function(e, t, n) {
             embedIds: l
         } = e;
         if (null == s || null == a || (null !== (t = null == o ? void 0 : o.length) && void 0 !== t ? t : 0) === 0 && (null !== (n = null == l ? void 0 : l.length) && void 0 !== n ? n : 0) === 0) return;
-        let u = A.default.getChannel(s);
+        let u = h.default.getChannel(s);
         N.default.track(g.AnalyticEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, {
             channel_id: s,
             guild_id: null == u ? void 0 : u.guild_id,
             message_id: a,
             embed_ids: l,
             user_is_underage: (0, f.isCurrentUserTeen)(),
-            scan_timeout_duration: p.MESSAGE_SCAN_TIMEOUT,
+            scan_timeout_duration: O.MESSAGE_SCAN_TIMEOUT,
             attachment_ids_v2: o
         }), T.default.increment({
             name: _.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT,
@@ -273,7 +273,7 @@ function(e, t, n) {
             numOfEmbedsPendingScan: s
         } = e;
         if (null == t) return;
-        let a = A.default.getChannel(t);
+        let a = h.default.getChannel(t);
         N.default.track(g.AnalyticEvents.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED, {
             channel_id: t,
             guild_id: null == a ? void 0 : a.guild_id,
@@ -298,7 +298,7 @@ function(e, t, n) {
             numOfExplicitEmbeds: a
         } = e;
         if (null == n) return;
-        let o = A.default.getChannel(n);
+        let o = h.default.getChannel(n);
         N.default.track(g.AnalyticEvents.EXPLICIT_MEDIA_RETROACTIVE_SCAN_COMPLETE, {
             message_id: t,
             channel_id: n,

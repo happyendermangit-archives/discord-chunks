@@ -34,12 +34,12 @@ function(e, t, n) {
             hideMentionDescription: T,
             hidePersonalInformation: f,
             type: S,
-            emojiIntention: A,
-            editorRef: h,
+            emojiIntention: h,
+            editorRef: A,
             onSendMessage: m,
             onSendSticker: N,
-            setValue: O
-        } = e, p = {
+            setValue: p
+        } = e, O = {
             mentions: {
                 channel: l.ChannelMentionMode.DENY,
                 global: l.GlobalMentionMode.DENY,
@@ -53,26 +53,26 @@ function(e, t, n) {
             hideMentionDescription: !0 === T,
             hidePersonalInformation: !0 === f,
             chatInputType: S,
-            emojiIntention: A,
+            emojiIntention: h,
             sendMessage: m,
             sendSticker: N,
             insertText: (e, t) => {
                 var n;
-                null === (n = h.current) || void 0 === n || n.insertAutocomplete(e, null != t ? t : e)
+                null === (n = A.current) || void 0 === n || n.insertAutocomplete(e, null != t ? t : e)
             },
             replaceText: (e, t) => {
-                O(e, null != t ? t : (0, s.toRichValue)(e))
+                p(e, null != t ? t : (0, s.toRichValue)(e))
             },
             getCommandOptionValues: () => {
                 var e;
-                return null === (e = h.current) || void 0 === e ? void 0 : e.getCommandOptionValues()
+                return null === (e = A.current) || void 0 === e ? void 0 : e.getCommandOptionValues()
             }
         };
         if (null != n) {
             let e = (0, r.getApplicationCommandOptionQueryOptions)(n);
-            e.canMentionChannels && (p.mentions.channel = l.ChannelMentionMode.ALLOW_SELECTABLE), e.canMentionEveryone && (p.mentions.global = e.canMentionHere ? l.GlobalMentionMode.ALLOW_EVERYONE_OR_HERE : l.GlobalMentionMode.ALLOW_EVERYONE), e.canMentionRoles && (p.mentions.role = e.canMentionNonMentionableRoles ? l.RoleMentionMode.ALLOW_ALL : l.RoleMentionMode.ALLOW_MENTIONABLE), e.canMentionUsers && (p.mentions.user = e.canMentionAnyGuildUser ? l.UserMentionMode.ALLOW_GUILD : l.UserMentionMode.ALLOW_CHANNEL), p.hideMentionDescription = !0
-        } else u && (p.mentions.channel = l.ChannelMentionMode.ALLOW_SELECTABLE), o && (p.mentions.role = l.RoleMentionMode.ALLOW_MENTIONABLE), a && (p.mentions.user = l.UserMentionMode.ALLOW_CHANNEL), d && (p.mentions.global = l.GlobalMentionMode.ALLOW_EVERYONE_OR_HERE), _ && (p.mentions.clyde = l.ClydeMentionMode.ALLOW);
-        return (null === (t = S.commands) || void 0 === t ? void 0 : t.enabled) && (c ? p.commands = E ? l.CommandMode.NEW_TEXT_ONLY : l.CommandMode.NEW : p.commands = l.CommandMode.OLD_BUILT_INS), null != n && null != n.channelTypes && (p.allowedChannelTypes = n.channelTypes), p
+            e.canMentionChannels && (O.mentions.channel = l.ChannelMentionMode.ALLOW_SELECTABLE), e.canMentionEveryone && (O.mentions.global = e.canMentionHere ? l.GlobalMentionMode.ALLOW_EVERYONE_OR_HERE : l.GlobalMentionMode.ALLOW_EVERYONE), e.canMentionRoles && (O.mentions.role = e.canMentionNonMentionableRoles ? l.RoleMentionMode.ALLOW_ALL : l.RoleMentionMode.ALLOW_MENTIONABLE), e.canMentionUsers && (O.mentions.user = e.canMentionAnyGuildUser ? l.UserMentionMode.ALLOW_GUILD : l.UserMentionMode.ALLOW_CHANNEL), O.hideMentionDescription = !0
+        } else u && (O.mentions.channel = l.ChannelMentionMode.ALLOW_SELECTABLE), o && (O.mentions.role = l.RoleMentionMode.ALLOW_MENTIONABLE), a && (O.mentions.user = l.UserMentionMode.ALLOW_CHANNEL), d && (O.mentions.global = l.GlobalMentionMode.ALLOW_EVERYONE_OR_HERE), _ && (O.mentions.clyde = l.ClydeMentionMode.ALLOW);
+        return (null === (t = S.commands) || void 0 === t ? void 0 : t.enabled) && (c ? O.commands = E ? l.CommandMode.NEW_TEXT_ONLY : l.CommandMode.NEW : O.commands = l.CommandMode.OLD_BUILT_INS), null != n && null != n.channelTypes && (O.allowedChannelTypes = n.channelTypes), O
     }
 
     function _(e) {
@@ -102,7 +102,7 @@ function(e, t, n) {
             optionText: c
         } = e, E = null;
         for (let e of o.AUTOCOMPLETE_PRIORITY) {
-            var I, T, f, S, A, h;
+            var I, T, f, S, h, A;
             let m = o.AUTOCOMPLETE_OPTIONS[e];
             if (e === l.AutocompleteOptionTypes.GIFS || e === l.AutocompleteOptionTypes.CHOICES) {
                 if (i.commands === l.CommandMode.OLD_BUILT_INS) {
@@ -192,7 +192,7 @@ function(e, t, n) {
                 E = {
                     type: e,
                     typeInfo: m,
-                    query: r.substring(null !== (h = null === (A = m.sentinel) || void 0 === A ? void 0 : A.length) && void 0 !== h ? h : 0)
+                    query: r.substring(null !== (A = null === (h = m.sentinel) || void 0 === h ? void 0 : h.length) && void 0 !== A ? A : 0)
                 };
                 break
             }

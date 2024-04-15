@@ -20,12 +20,12 @@ function(e, t, n) {
         T = n("5192"),
         f = n("51144"),
         S = n("342656"),
-        A = n("621853"),
-        h = n("895618"),
+        h = n("621853"),
+        A = n("895618"),
         m = n("358794"),
         N = n("421486"),
-        O = n("347949"),
-        p = n("138394"),
+        p = n("347949"),
+        O = n("138394"),
         R = n("790711"),
         C = n("248345"),
         g = n("337125"),
@@ -55,18 +55,18 @@ function(e, t, n) {
             guild: K,
             guildMember: z,
             channelId: X,
-            onClose: Q,
-            setNote: q = !1,
+            onClose: q,
+            setNote: Q = !1,
             canDM: Z,
             hideNote: J = !1,
             showCopiableUsername: $ = !1,
             analyticsParams: ee
-        } = e, et = (0, o.useStateFromStores)([I.default], () => I.default.hidePersonalInformation), en = (0, o.useStateFromStores)([A.default], () => {
+        } = e, et = (0, o.useStateFromStores)([I.default], () => I.default.hidePersonalInformation), en = (0, o.useStateFromStores)([h.default], () => {
             var e;
-            return null === (e = A.default.getUserProfile(j.id)) || void 0 === e ? void 0 : e.application
+            return null === (e = h.default.getUserProfile(j.id)) || void 0 === e ? void 0 : e.application
         }), ei = (0, o.useStateFromStores)([_.default], () => null != _.default.getAnyStreamForUser(j.id)), er = (0, k.useGetVoiceChannelInfoForVoiceActivitySection)(j.id, null == K ? void 0 : K.id), es = (null == H ? void 0 : H.type) === V.ActivityTypes.HANG_STATUS, ea = !ei && null != er && !es, {
             showVoiceActivityInProfile: eo
-        } = h.VoiceActivityProfileExperiment.useExperiment({
+        } = A.VoiceActivityProfileExperiment.useExperiment({
             location: "user popout"
         }, {
             autoTrackExposure: ea
@@ -97,7 +97,7 @@ function(e, t, n) {
                 location: u.default.PROFILE_POPOUT,
                 disable: ef
             }),
-            eA = (0, d.useIsUserRecentGamesEnabled)({
+            eh = (0, d.useIsUserRecentGamesEnabled)({
                 userId: j.id,
                 location: "28tk0bf_1"
             });
@@ -109,7 +109,7 @@ function(e, t, n) {
             className: F.usernameSection,
             lastSection: !0
         });
-        let eh = null !== (t = T.default.getNickname(null == K ? void 0 : K.id, X, j)) && void 0 !== t ? t : f.default.getName(j),
+        let eA = null !== (t = T.default.getNickname(null == K ? void 0 : K.id, X, j)) && void 0 !== t ? t : f.default.getName(j),
             em = {
                 location: {
                     page: V.AnalyticsPages.USER_POPOUT,
@@ -120,18 +120,18 @@ function(e, t, n) {
             children: [(0, i.jsx)(B.default, {
                 className: F.usernameSection,
                 user: j,
-                nickname: eh,
+                nickname: eA,
                 pronouns: null == W ? void 0 : W.pronouns,
                 usernameIcon: j.hasAvatarForGuild(null == K ? void 0 : K.id) && (0, i.jsx)(R.default, {
                     user: j,
-                    nickname: eh
+                    nickname: eA
                 }),
                 shouldCopyOnClick: $
             }), (0, i.jsxs)(l.HeadingLevel, {
                 children: [(0, i.jsx)(M.default, {
                     className: F.customStatusSection,
                     customStatusActivity: Y
-                }), (0, i.jsx)(p.default, {
+                }), (0, i.jsx)(O.default, {
                     className: F.divider
                 }), (0, i.jsxs)(l.AdvancedScroller, {
                     className: a()(F.scroller, {
@@ -150,7 +150,7 @@ function(e, t, n) {
                     }), eS && (0, i.jsx)(N.default, {
                         className: F.profileMutuals,
                         user: j,
-                        onClose: Q
+                        onClose: q
                     }), (0, i.jsx)(P.default, {
                         userId: j.id,
                         guild: K,
@@ -164,16 +164,16 @@ function(e, t, n) {
                         user: j,
                         guild: K,
                         channelId: X,
-                        onClose: Q,
+                        onClose: q,
                         analyticsParams: (null == ee ? void 0 : ee.location) != null ? ee : em
-                    }), eA && (0, i.jsx)(O.UserProfileRecentGamesSection, {
+                    }), eh && (0, i.jsx)(p.UserProfileRecentGamesSection, {
                         userId: j.id
                     }), (null == en ? void 0 : en.popularApplicationCommandIds) != null && null != el ? (0, i.jsx)(b.default, {
                         applicationId: en.id,
                         commandIds: en.popularApplicationCommandIds,
                         channel: el,
                         guildId: null == K ? void 0 : K.id,
-                        onClick: Q
+                        onClick: q
                     }) : null, (0, i.jsx)(g.default, {
                         user: j,
                         guildId: null == K ? void 0 : K.id
@@ -186,21 +186,21 @@ function(e, t, n) {
                         userId: j.id,
                         channelId: X,
                         guild: K,
-                        onClose: Q,
+                        onClose: q,
                         theme: eu
                     }), null != en && void 0 !== X && (0, i.jsx)(G.default, {
                         channelId: X,
                         applicationId: en.id
                     }), !et && !J && (0, i.jsx)(U.default, {
                         user: j,
-                        setNote: q,
+                        setNote: Q,
                         autoFocus: !Z,
                         lastSection: !Z
                     }), !j.isNonUserBot() && Z && (0, i.jsx)(y.default, {
                         user: j,
-                        setNote: q,
+                        setNote: Q,
                         canDM: Z,
-                        onClose: Q
+                        onClose: q
                     })]
                 })]
             })]

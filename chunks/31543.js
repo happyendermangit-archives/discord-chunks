@@ -18,15 +18,15 @@ function(e, t, n) {
             stickersListRef: I,
             channel: T
         } = e, f = (0, d.useHasSendableSticker)(T), S = r.useRef(null), {
-            searchQuery: A,
-            isSearchSuggestion: h
+            searchQuery: h,
+            isSearchSuggestion: A
         } = (0, u.useExpressionPickerStore)(e => ({
             searchQuery: e.searchQuery,
             isSearchSuggestion: e.isSearchSuggestion
-        }), s.default), m = l.StickerPickerStore.useStore(e => e.searchPlaceholder), N = l.StickerPickerStore.useStore(e => e.inspectedExpressionPosition, s.default), O = r.useCallback(e => {
+        }), s.default), m = l.StickerPickerStore.useStore(e => e.searchPlaceholder), N = l.StickerPickerStore.useStore(e => e.inspectedExpressionPosition, s.default), p = r.useCallback(e => {
             var t;
             l.StickerPickerStore.setActiveCategoryIndex("" === e ? 0 : _.INACTIVE_CATEGORY_INDEX), l.StickerPickerStore.setInspectedExpressionPosition(0, 0), l.StickerPickerStore.setSearchPlaceholder(null), (0, u.setSearchQuery)(e), null === (t = I.current) || void 0 === t || t.scrollTo(0)
-        }, [I]), p = r.useCallback(() => {
+        }, [I]), O = r.useCallback(() => {
             (0, u.setSearchQuery)("")
         }, []);
         return r.useImperativeHandle(t, () => ({
@@ -35,22 +35,22 @@ function(e, t, n) {
                 return null === (e = S.current) || void 0 === e ? void 0 : e.focus()
             }
         })), r.useLayoutEffect(() => {
-            if (h) {
+            if (A) {
                 var e;
                 null === (e = S.current) || void 0 === e || e.focus()
             }
-        }, [h]), (0, i.jsx)("div", {
+        }, [A]), (0, i.jsx)("div", {
             className: E.wrapper,
             children: (0, i.jsx)(o.default, {
                 autoFocus: f,
                 disabled: !f,
-                query: A,
+                query: h,
                 ref: S,
                 size: o.default.Sizes.MEDIUM,
                 placeholder: null != m ? m : f ? c.default.Messages.SEARCH_FOR_STICKERS : c.default.Messages.NO_STICKERS_TO_SEARCH_THROUGH,
-                onClear: p,
+                onClear: O,
                 onKeyDown: n,
-                onQueryChange: O,
+                onQueryChange: p,
                 className: E.__invalid_searchBar,
                 preventEscapePropagation: !1,
                 useKeyboardNavigation: !1,

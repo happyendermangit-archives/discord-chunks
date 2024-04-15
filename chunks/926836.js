@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         ImageModal: function() {
-            return O
+            return p
         },
         VideoModal: function() {
-            return p
+            return O
         }
     }), n("47120");
     var i = n("735250"),
@@ -23,15 +23,15 @@ function(e, t, n) {
         T = n("133910"),
         f = n("68588"),
         S = n("981631"),
-        A = n("689938"),
-        h = n("873415");
+        h = n("689938"),
+        A = n("873415");
 
     function m(e) {
         let {
             onClose: t
         } = e, n = r.useRef(null);
         return (0, i.jsx)("div", {
-            className: h.mobileCloseWrapper,
+            className: A.mobileCloseWrapper,
             ref: n,
             children: (0, i.jsx)(l.FocusRingScope, {
                 containerRef: n,
@@ -58,19 +58,19 @@ function(e, t, n) {
             children: (0, i.jsx)(f.default, {
                 type: f.default.Types.ATTACHMENT,
                 reason: d.ObscureReason.EXPLICIT_CONTENT,
-                className: h.obscureContainer,
+                className: A.obscureContainer,
                 obscured: !0,
                 isSingleMosaicItem: !0,
                 obscurityControlClassName: a()({
-                    [h.controlsOffset]: n && l
+                    [A.controlsOffset]: n && l
                 }),
                 onToggleObscurity: e => {
                     e.stopPropagation(), e.nativeEvent.stopPropagation(), u(e => !e)
                 },
                 children: e => (0, i.jsx)(i.Fragment, {
                     children: (0, i.jsx)("div", {
-                        className: a()(h.obscureWrapper, {
-                            [h.obscure]: e
+                        className: a()(A.obscureWrapper, {
+                            [A.obscure]: e
                         }),
                         children: t(e)
                     })
@@ -81,7 +81,7 @@ function(e, t, n) {
         })
     };
 
-    function O(e) {
+    function p(e) {
         let {
             src: t,
             original: n,
@@ -93,8 +93,8 @@ function(e, t, n) {
             responsive: E,
             renderLinkComponent: T,
             maxWidth: f,
-            maxHeight: O,
-            shouldAnimate: p,
+            maxHeight: p,
+            shouldAnimate: O,
             onClose: R,
             shouldHideMediaOptions: C = !1,
             obscure: g = !1,
@@ -112,7 +112,7 @@ function(e, t, n) {
             e.stopPropagation(), e.preventDefault()
         } : L.onContextMenu;
         return (0, i.jsxs)("div", {
-            className: h.wrapper,
+            className: A.wrapper,
             children: [M ? (0, i.jsx)(m, {
                 onClose: R
             }) : null, (0, i.jsx)(N, {
@@ -137,13 +137,13 @@ function(e, t, n) {
                 href: n,
                 target: "_blank",
                 rel: "noreferrer noopener",
-                className: h.downloadLink,
-                children: A.default.Messages.OPEN_IN_BROWSER
+                className: A.downloadLink,
+                children: h.default.Messages.OPEN_IN_BROWSER
             })]
         })
     }
 
-    function p(e) {
+    function O(e) {
         let {
             src: t,
             width: n,
@@ -156,11 +156,11 @@ function(e, t, n) {
         } = e, {
             width: I,
             height: f
-        } = (0, c.zoomFit)(n, r), S = o.isMobile && null != s, O = u ? e => {
+        } = (0, c.zoomFit)(n, r), S = o.isMobile && null != s, p = u ? e => {
             e.stopPropagation(), e.preventDefault()
         } : _.onContextMenu;
         return (0, i.jsxs)("div", {
-            className: a()(h.wrapper, h.videoWrapper),
+            className: a()(A.wrapper, A.videoWrapper),
             children: [S ? (0, i.jsx)(m, {
                 onClose: s
             }) : null, (0, i.jsx)(N, {
@@ -179,15 +179,15 @@ function(e, t, n) {
                     onVolumeChange: E.setVolume,
                     onMute: E.setMuted,
                     autoPlay: !e,
-                    onContextMenu: O,
+                    onContextMenu: p,
                     ..._
                 }, t)
             }), !u && l({
                 href: t,
                 target: "_blank",
                 rel: "noreferrer noopener",
-                className: h.downloadLink,
-                children: A.default.Messages.OPEN_IN_BROWSER
+                className: A.downloadLink,
+                children: h.default.Messages.OPEN_IN_BROWSER
             })]
         })
     }

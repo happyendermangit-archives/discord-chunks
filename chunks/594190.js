@@ -25,12 +25,12 @@ function(e, t, n) {
         T = n("593472"),
         f = n("726542"),
         S = n("710845"),
-        A = n("630699"),
-        h = n("855403"),
+        h = n("630699"),
+        A = n("855403"),
         m = n("454991"),
         N = n("77498"),
-        O = n("283595"),
-        p = n("417363"),
+        p = n("283595"),
+        O = n("417363"),
         R = n("626135"),
         C = n("70956"),
         g = n("877481"),
@@ -135,8 +135,8 @@ function(e, t, n) {
         },
         z = function() {},
         X = {},
-        Q = 0,
-        q = null,
+        q = 0,
+        Q = null,
         Z = null,
         J = {};
 
@@ -188,14 +188,14 @@ function(e, t, n) {
         };
         let t = N.default.getGameByName(e.name);
         if (null != t) {
-            let e = O.default.getActiveLibraryApplication(t.id);
+            let e = p.default.getActiveLibraryApplication(t.id);
             if (null != e) return {
                 source: y.OverlayGameStatusSource.LIBRARY_APPLICATION,
                 enabled: e.isOverlayEnabled(),
                 overlayMethod: U.OverlayMethod.Disabled
             }
         }
-        let n = A.isOOPExperimentEnabled() && (0, M.supportsOutOfProcess)() && !m.OverlayStoredSettings.legacyEnabled,
+        let n = h.isOOPExperimentEnabled() && (0, M.supportsOutOfProcess)() && !m.OverlayStoredSettings.legacyEnabled,
             i = n ? U.OverlayMethod.OutOfProcess : U.OverlayMethod.Hook,
             r = K.enableOverlay[ei(e)];
         if (null != r) return {
@@ -246,10 +246,10 @@ function(e, t, n) {
 
     function eu() {
         let e = !1;
-        return V = u().values(O.default.libraryApplications).reduce((t, n) => {
+        return V = u().values(p.default.libraryApplications).reduce((t, n) => {
             let i = N.default.getDetectableGame(n.id);
             if (null == i) return t;
-            for (let r of p.default.getLaunchOptions(n.id, n.branchId)) {
+            for (let r of O.default.getLaunchOptions(n.id, n.branchId)) {
                 let s = "".concat(n.id, ":").concat(n.branchId);
                 !k.has(s) && (e = !0, k.add(s));
                 let {
@@ -362,9 +362,9 @@ function(e, t, n) {
                 return n === e.name
             }) || (n.push(e), !1)));
             let s = n.filter(et).length;
-            s !== Q && (Q = s, I.default.dispatch({
+            s !== q && (q = s, I.default.dispatch({
                 type: "RUNNING_STREAMER_TOOLS_CHANGE",
-                count: Q
+                count: q
             })), x = e, Y = n, i = r, en()
         }), ed()
     });
@@ -384,7 +384,7 @@ function(e, t, n) {
                     K.gameOverrides[t] = e
                 }), K.enableOverlay = null !== (n = r.enableOverlay) && void 0 !== n ? n : {}, K.enableDetection = null !== (i = r.enableDetection) && void 0 !== i ? i : {}, ed(), Array.isArray(r.gamesSeen))
                 for (let e of r.gamesSeen) "number" == typeof e.id && (e.nativeProcessObserverId = e.id, delete e.id, s = !0);
-            e_(r.gamesSeen), this.waitFor(N.default), this.syncWith([O.default, N.default, p.default], u().throttle(eu, 1e3)), s && eo()
+            e_(r.gamesSeen), this.waitFor(N.default), this.syncWith([p.default, N.default, O.default], u().throttle(eu, 1e3)), s && eo()
         }
         getVisibleGame() {
             return null == H || ea(H) ? H : null
@@ -421,7 +421,7 @@ function(e, t, n) {
             }
         }
         shouldElevateProcessForPID(e) {
-            return null != q && q === e
+            return null != Q && Q === e
         }
         shouldContinueWithoutElevatedProcessForPID(e) {
             return null != Z && Z === e
@@ -460,7 +460,7 @@ function(e, t, n) {
         }
         getObservedAppNameForWindow(e) {
             var t, n;
-            return null !== (n = null === (t = Y.find(t => (0, h.default)(e, t.windowHandle))) || void 0 === t ? void 0 : t.name) && void 0 !== n ? n : null
+            return null !== (n = null === (t = Y.find(t => (0, A.default)(e, t.windowHandle))) || void 0 === t ? void 0 : t.name) && void 0 !== n ? n : null
         }
         get canShowAdminWarning() {
             return B
@@ -485,16 +485,16 @@ function(e, t, n) {
             let {
                 pid: t
             } = e;
-            q = t, Z = null
+            Q = t, Z = null
         },
         PERMISSION_CLEAR_ELEVATED_PROCESS: function() {
-            q = null
+            Q = null
         },
         PERMISSION_CONTINUE_NONELEVATED_PROCESS: function(e) {
             let {
                 pid: t
             } = e;
-            Z = t, q = null
+            Z = t, Q = null
         },
         RUNNING_GAME_ADD_OVERRIDE: function(e) {
             let t;

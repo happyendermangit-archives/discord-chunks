@@ -16,8 +16,8 @@ function(e, t, n) {
         T = n("626135"),
         f = n("981631"),
         S = n("474936"),
-        A = n("689938"),
-        h = n("23383");
+        h = n("689938"),
+        A = n("23383");
     t.default = r.memo(function(e) {
         let {
             disabled: t,
@@ -25,17 +25,17 @@ function(e, t, n) {
             channel: m,
             isResending: N
         } = e, {
-            enabled: O
+            enabled: p
         } = _.default.useExperiment({
             location: "ec41f5_1"
         }, {
             autoTrackExposure: !0
-        }), p = O ? A.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP.format() : N ? A.default.Messages.SHARE_NITRO_RESEND_TOOLTIP : A.default.Messages.SHARE_NITRO_TOOLTIP, R = O ? A.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : null, [C, g] = r.useState(!1), [L, D] = r.useState(!1), v = (0, o.default)(null, () => D(!1)), {
+        }), O = p ? h.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP.format() : N ? h.default.Messages.SHARE_NITRO_RESEND_TOOLTIP : h.default.Messages.SHARE_NITRO_TOOLTIP, R = p ? h.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : null, [C, g] = r.useState(!1), [L, D] = r.useState(!1), v = (0, o.default)(null, () => D(!1)), {
             analyticsLocations: M
         } = (0, d.default)(u.default.REFERRAL_TRIALS_COMPOSER_BUTTON), y = m.isDM() && void 0 !== m.recipients ? m.recipients[0] : null, P = (0, l.default)();
         return t ? null : (0, i.jsxs)("div", {
             ref: v,
-            className: h.buttonContainer,
+            className: A.buttonContainer,
             children: [(0, i.jsx)(c.default, {
                 shouldShowPopout: L,
                 referralsRemaining: n,
@@ -43,9 +43,9 @@ function(e, t, n) {
                 onClose: () => D(!1),
                 isResending: N
             }), (0, i.jsx)(s.Tooltip, {
-                text: p,
+                text: O,
                 shouldShow: !L,
-                "aria-label": null != R ? R : p,
+                "aria-label": null != R ? R : O,
                 children: e => (0, i.jsx)("div", {
                     onMouseEnter: () => {
                         !L && !C && (g(!0), T.default.track(f.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
@@ -59,9 +59,9 @@ function(e, t, n) {
                     },
                     children: (0, i.jsx)(E.default, {
                         ...e,
-                        innerClassName: h.button,
+                        innerClassName: A.button,
                         isActive: L,
-                        "aria-label": null != R ? R : p,
+                        "aria-label": null != R ? R : O,
                         "aria-haspopup": "dialog",
                         onClick: () => {
                             D(e => !e), T.default.track(f.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
@@ -74,7 +74,7 @@ function(e, t, n) {
                             referralsRemaining: n,
                             hovered: C,
                             isResending: N,
-                            shouldShowBirthdayUX: O,
+                            shouldShowBirthdayUX: p,
                             isLightTheme: (0, a.isThemeLight)(P)
                         })
                     })

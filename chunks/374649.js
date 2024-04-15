@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getItemUnitPriceWithDiscount: function() {
-            return O
+            return p
         },
         updateSubscriptionInvoicePreview: function() {
             return T
@@ -11,7 +11,7 @@ function(e, t, n) {
             return N
         },
         useOneTimePurchaseInvoicePreview: function() {
-            return h
+            return A
         },
         useSubscriptionInvoicePreview: function() {
             return m
@@ -152,7 +152,7 @@ function(e, t, n) {
         return u.default.createInvoiceFromServer(i.body)
     }
 
-    function A(e, t) {
+    function h(e, t) {
         let {
             preventFetch: n = !1
         } = e, [r, s] = (0, i.useState)(null), [o, l] = (0, i.useState)(null), u = (0, a.useStateFromStores)([d.default], () => d.default.getSubscriptions());
@@ -173,9 +173,9 @@ function(e, t, n) {
         }, [n, t, u]), [r, o]
     }
 
-    function h(e) {
+    function A(e) {
         let t = (0, i.useCallback)(() => f(e), [JSON.stringify(e)]);
-        return A(e, t)
+        return h(e, t)
     }
 
     function m(e) {
@@ -187,15 +187,15 @@ function(e, t, n) {
             e = n
         }
         let t = (0, i.useCallback)(() => "subscriptionId" in e ? T(e) : "items" in e ? I(e) : null, [JSON.stringify(e)]);
-        return A(e, t)
+        return h(e, t)
     }
 
     function N(e) {
         let t = (0, i.useCallback)(() => S(e), [JSON.stringify(e)]);
-        return A(e, t)
+        return h(e, t)
     }
 
-    function O(e) {
+    function p(e) {
         let t = e.subscriptionPlanPrice;
         return e.discounts.forEach(n => {
             let i = n.amount / e.quantity;

@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return p
+            return O
         },
         useOtherStreams: function() {
-            return O
+            return p
         }
     });
     var i = n("735250");
@@ -24,12 +24,12 @@ function(e, t, n) {
         T = n("990138"),
         f = n("948573"),
         S = n("5192"),
-        A = n("358085"),
-        h = n("981631"),
+        h = n("358085"),
+        A = n("981631"),
         m = n("65154"),
         N = n("689938");
 
-    function O(e, t, n) {
+    function p(e, t, n) {
         let i = (0, r.useStateFromStores)([o.default], () => o.default.getSelectedParticipantId(e.id)),
             s = (0, r.useStateFromStores)([_.default], () => null != i ? _.default.getActiveStreamForStreamKey(i) : null, [i]);
         return (0, r.useStateFromStoresArray)([E.default], () => {
@@ -41,7 +41,7 @@ function(e, t, n) {
         }, [e, s, n, t])
     }
 
-    function p(e) {
+    function O(e) {
         var t;
         let {
             channel: n,
@@ -50,16 +50,16 @@ function(e, t, n) {
             hideSelfOptions: _ = !1,
             showReportOption: E = !1,
             handleGoLive: S,
-            onClose: p,
+            onClose: O,
             onSelect: R,
-            appContext: C = h.AppContext.APP
-        } = e, g = c.default.supports(m.Features.DESKTOP_CAPTURE_APPLICATIONS), L = null !== (t = o.find(e => e.ownerId === (null == r ? void 0 : r.id))) && void 0 !== t ? t : null, D = O(n, r, o), v = (0, u.default)(L, C), M = (0, l.default)(L, C, h.NOOP_NULL), y = null == L ? (0, i.jsx)(s.MenuItem, {
+            appContext: C = A.AppContext.APP
+        } = e, g = c.default.supports(m.Features.DESKTOP_CAPTURE_APPLICATIONS), L = null !== (t = o.find(e => e.ownerId === (null == r ? void 0 : r.id))) && void 0 !== t ? t : null, D = p(n, r, o), v = (0, u.default)(L, C), M = (0, l.default)(L, C, A.NOOP_NULL), y = null == L ? (0, i.jsx)(s.MenuItem, {
             id: "share-your-screen",
             label: N.default.Messages.SHARE_YOUR_SCREEN,
             icon: I.default,
             action: S
         }) : (0, i.jsxs)(i.Fragment, {
-            children: [A.isPlatformEmbedded ? (0, i.jsx)(s.MenuItem, {
+            children: [h.isPlatformEmbedded ? (0, i.jsx)(s.MenuItem, {
                 id: "stream-settings",
                 label: N.default.Messages.SCREENSHARE_STREAM_QUALITY,
                 children: v
@@ -76,11 +76,11 @@ function(e, t, n) {
             })]
         });
         return (0, i.jsx)(a.default, {
-            section: h.AnalyticsSections.CONTEXT_MENU,
+            section: A.AnalyticsSections.CONTEXT_MENU,
             children: (0, i.jsxs)(s.Menu, {
                 onSelect: R,
                 navId: "manage-streams",
-                onClose: p,
+                onClose: O,
                 "aria-label": null != L ? N.default.Messages.STOP_STREAMING : N.default.Messages.SHARE_YOUR_SCREEN,
                 children: [(0, i.jsx)(s.MenuGroup, {
                     children: D.map(e => {

@@ -23,12 +23,12 @@ function(e, t, n) {
         T = n("314897"),
         f = n("592125"),
         S = n("650774"),
-        A = n("271383"),
-        h = n("430824"),
+        h = n("271383"),
+        A = n("430824"),
         m = n("158776"),
         N = n("885110"),
-        O = n("594174"),
-        p = n("981631"),
+        p = n("594174"),
+        O = n("981631"),
         R = n("689938");
 
     function C(e, t, n) {
@@ -44,15 +44,15 @@ function(e, t, n) {
 
     function D(e, t, n, i) {
         switch (t) {
-            case p.StatusTypes.ONLINE:
-            case p.StatusTypes.OFFLINE:
-            case p.StatusTypes.UNKNOWN:
+            case O.StatusTypes.ONLINE:
+            case O.StatusTypes.OFFLINE:
+            case O.StatusTypes.UNKNOWN:
                 return {
                     type: "GROUP", key: t, id: t, get title() {
                         switch (t) {
-                            case p.StatusTypes.ONLINE:
+                            case O.StatusTypes.ONLINE:
                                 return R.default.Messages.STATUS_ONLINE;
-                            case p.StatusTypes.OFFLINE:
+                            case O.StatusTypes.OFFLINE:
                                 return R.default.Messages.STATUS_OFFLINE;
                             default:
                                 return R.default.Messages.STATUS_UNKNOWN
@@ -60,8 +60,8 @@ function(e, t, n) {
                     }, count: n, index: i
                 };
             default:
-                let r = h.default.getGuild(e),
-                    s = null != r ? h.default.getRole(r.id, t) : null;
+                let r = A.default.getGuild(e),
+                    s = null != r ? A.default.getRole(r.id, t) : null;
                 return {
                     type: "GROUP", key: t, id: t, title: null != s ? s.name : "", count: n, index: i
                 }
@@ -74,10 +74,10 @@ function(e, t, n) {
             s = i ? N.default.getStatus() : m.default.getStatus(n, e),
             a = i ? N.default.getActivities() : m.default.getActivities(n, e),
             o = I.default.getStreamForUser(n, e),
-            l = O.default.getUser(n);
+            l = p.default.getUser(n);
         return null == l ? null : {
             type: "MEMBER",
-            ...A.default.getMember(e, n),
+            ...h.default.getMember(e, n),
             user: l,
             status: s,
             activities: a,
@@ -90,19 +90,19 @@ function(e, t, n) {
     function M(e) {
         let t = f.default.getChannel(e);
         return null == t ? g : null == t.memberListId ? function(e) {
-            return E.canEveryone(p.Permissions.VIEW_CHANNEL, e) ? g : u().v3(o()(e.permissionOverwrites).reduce((e, t) => {
+            return E.canEveryone(O.Permissions.VIEW_CHANNEL, e) ? g : u().v3(o()(e.permissionOverwrites).reduce((e, t) => {
                 let {
                     id: n,
                     allow: i,
                     deny: r
                 } = t;
-                return d.has(i, p.Permissions.VIEW_CHANNEL) ? e.push("allow:".concat(n)) : d.has(r, p.Permissions.VIEW_CHANNEL) && e.push("deny:".concat(n)), e
+                return d.has(i, O.Permissions.VIEW_CHANNEL) ? e.push("allow:".concat(n)) : d.has(r, O.Permissions.VIEW_CHANNEL) && e.push("deny:".concat(n)), e
             }, []).sort().join(",")).toString()
         }(t) : t.memberListId
     }(s = i || (i = {})).GROUP = "GROUP", s.MEMBER = "MEMBER", s.CONTENT_INVENTORY = "CONTENT_INVENTORY", s.CONTENT_INVENTORY_GROUP = "CONTENT_INVENTORY_GROUP", s.HIDDEN_CONTENT_INVENTORY = "HIDDEN_CONTENT_INVENTORY";
     class y {
         updateOwnerId() {
-            let e = h.default.getGuild(this.guildId);
+            let e = A.default.getGuild(this.guildId);
             if (null == e) return !1;
             let t = E.getGuildVisualOwnerId(e);
             return this.ownerId !== t && (this.ownerId = t, !0)
@@ -178,7 +178,7 @@ function(e, t, n) {
             null == n && (n = this._guildLists[e] = {});
             let i = n[t];
             return null == i && ((i = new y(e, t)).setGroups([{
-                id: p.StatusTypes.UNKNOWN,
+                id: O.StatusTypes.UNKNOWN,
                 count: 0
             }]), n[t] = i), i
         }
@@ -221,7 +221,7 @@ function(e, t, n) {
     }
     class B extends(r = _.default.Store) {
         initialize() {
-            this.waitFor(O.default, h.default, f.default, A.default, m.default, N.default, T.default, S.default, I.default), this.syncWith([N.default], w), this.syncWith([I.default], G)
+            this.waitFor(p.default, A.default, f.default, h.default, m.default, N.default, T.default, S.default, I.default), this.syncWith([N.default], w), this.syncWith([I.default], G)
         }
         getProps(e, t) {
             let n = P.get(e, M(t));

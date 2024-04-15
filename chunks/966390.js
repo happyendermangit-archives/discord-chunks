@@ -16,12 +16,12 @@ function(e, t, n) {
         T = n("539573"),
         f = n("786761"),
         S = n("3148"),
-        A = n("785359"),
-        h = n("79390"),
+        h = n("785359"),
+        A = n("79390"),
         m = n("623292"),
         N = n("807092"),
-        O = n("467798"),
-        p = n("703558"),
+        p = n("467798"),
+        O = n("703558"),
         R = n("117530"),
         C = n("630388"),
         g = n("226351"),
@@ -48,7 +48,7 @@ function(e, t, n) {
                 poll: null == P ? void 0 : P.poll
             };
         null != y && (w.content = null == y ? void 0 : y.content), null != N.default.getPendingReply(c) && (w.type = L.MessageTypes.REPLY, w.message_reference = P.messageReference, w.allowed_mentions = P.allowedMentions, (0, m.deletePendingReply)(c));
-        let [B, k] = (0, O.default)(w.content);
+        let [B, k] = (0, p.default)(w.content);
         B && (w.content = k, w.flags = (0, C.addFlag)(null !== (t = w.flags) && void 0 !== t ? t : 0, L.MessageFlags.SUPPRESS_NOTIFICATIONS));
         let V = null !== (n = P.nonce) && void 0 !== n ? n : (0, S.createNonce)(),
             F = (0, S.default)({
@@ -59,7 +59,7 @@ function(e, t, n) {
                 messageReference: w.message_reference,
                 flags: w.flags,
                 nonce: V,
-                poll: (0, h.createPollServerDataFromCreateRequest)(P.poll)
+                poll: (0, A.createPollServerDataFromCreateRequest)(P.poll)
             });
         return (w.nonce = V, b.on("start", e => {
             _ = (0, f.createMessageRecord)({
@@ -84,7 +84,7 @@ function(e, t, n) {
                     channelId: c,
                     file: e,
                     messageRecord: _
-                }), (0, A.logMessageSendFailure)({
+                }), (0, h.logMessageSendFailure)({
                     fileItems: e.items,
                     failureCode: t,
                     errorMessage: null == i ? void 0 : i.msg
@@ -116,7 +116,7 @@ function(e, t, n) {
             }, t)) : (0, l.openUploadError)({
                 title: D.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
                 help: D.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_RETRY_HELP
-            }), "" !== w.content && "" === p.default.getDraft(c, M) && s.default.saveDraft(c, w.content, M), 0 === R.default.getUploadCount(c, M) && o.default.setUploads({
+            }), "" !== w.content && "" === O.default.getDraft(c, M) && s.default.saveDraft(c, w.content, M), 0 === R.default.getUploadCount(c, M) && o.default.setUploads({
                 channelId: c,
                 uploads: v,
                 draftType: M
@@ -195,7 +195,7 @@ function(e, t, n) {
                         type: "UPLOAD_FAIL",
                         channelId: n,
                         file: t
-                    }), (0, A.logMessageSendFailure)({
+                    }), (0, h.logMessageSendFailure)({
                         fileItems: t.items,
                         failureCode: _
                     }), _ === L.AbortCodes.EXPLICIT_CONTENT) {
@@ -213,7 +213,7 @@ function(e, t, n) {
                             })
                         }
                     })
-                }), "" !== T.content && "" === p.default.getDraft(n, u) && s.default.saveDraft(n, T.content, u)
+                }), "" !== T.content && "" === O.default.getDraft(n, u) && s.default.saveDraft(n, T.content, u)
             }), f.on("complete", e => {
                 r.default.dispatch({
                     type: "UPLOAD_COMPLETE",
@@ -227,11 +227,11 @@ function(e, t, n) {
             r.default.dispatch({
                 type: "UPLOAD_CANCEL_REQUEST",
                 file: e
-            }), null != e.draftContent && null != e.channelId && "" === p.default.getDraft(e.channelId, p.DraftType.ChannelMessage) && r.default.dispatch({
+            }), null != e.draftContent && null != e.channelId && "" === O.default.getDraft(e.channelId, O.DraftType.ChannelMessage) && r.default.dispatch({
                 type: "DRAFT_SAVE",
                 channelId: e.channelId,
                 draft: e.draftContent,
-                draftType: p.DraftType.ChannelMessage
+                draftType: O.DraftType.ChannelMessage
             })
         }
     }

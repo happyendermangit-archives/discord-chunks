@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         generateEbayMetadataItems: function() {
-            return A
+            return h
         },
         generatePaypalMetadataItems: function() {
             return S
@@ -17,7 +17,7 @@ function(e, t, n) {
             return f
         },
         generateTikTokMetadataItems: function() {
-            return h
+            return A
         },
         generateTwitterMetadataItems: function() {
             return T
@@ -84,14 +84,14 @@ function(e, t, n) {
             className: a,
             count: l,
             label: c.default.Messages.CONNECTIONS_PROFILE_STEAM_GAMES
-        }, _.MetadataFields.STEAM_GAME_COUNT)), u > -1 && o.push((0, i.jsx)(p, {
+        }, _.MetadataFields.STEAM_GAME_COUNT)), u > -1 && o.push((0, i.jsx)(O, {
             className: a,
             label: c.default.Messages.CONNECTIONS_STEAM_ITEMS.format({
                 count: u
             }),
             imageSrc: n("448238"),
             imageAlt: c.default.Messages.CONNECTIONS_STEAM_DOTA2
-        }, _.MetadataFields.STEAM_ITEM_COUNT_DOTA2)), d > -1 && o.push((0, i.jsx)(p, {
+        }, _.MetadataFields.STEAM_ITEM_COUNT_DOTA2)), d > -1 && o.push((0, i.jsx)(O, {
             className: a,
             label: c.default.Messages.CONNECTIONS_STEAM_ITEMS.format({
                 count: d
@@ -110,7 +110,7 @@ function(e, t, n) {
         }, _.MetadataFields.PAYPAL_VERIFIED)), n
     }
 
-    function A(e) {
+    function h(e) {
         var t;
         let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
             r = [],
@@ -127,7 +127,7 @@ function(e, t, n) {
         }, _.MetadataFields.EBAY_TOP_RATED_SELLER)), r
     }
 
-    function h(e) {
+    function A(e) {
         var t, n, r;
         let s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
             a = [],
@@ -177,7 +177,7 @@ function(e, t, n) {
                         break;
                     case _.MetadataItemTypes.DATETIME_GREATER_THAN_EQUAL:
                     case _.MetadataItemTypes.DATETIME_LESS_THAN_EQUAL:
-                        r.push((0, i.jsx)(O, {
+                        r.push((0, i.jsx)(p, {
                             className: t,
                             date: o,
                             locale: n,
@@ -220,7 +220,7 @@ function(e, t, n) {
         })
     }
 
-    function O(e) {
+    function p(e) {
         let {
             date: t,
             locale: n,
@@ -238,7 +238,7 @@ function(e, t, n) {
         })
     }
 
-    function p(e) {
+    function O(e) {
         let {
             label: t,
             imageSrc: n,

@@ -20,13 +20,13 @@ function(e, t, n) {
         T = n("806519"),
         f = n("74538"),
         S = n("618158"),
-        A = n("871499"),
-        h = n("981631"),
+        h = n("871499"),
+        A = n("981631"),
         m = n("474936"),
         N = n("689938"),
-        O = n("126161");
+        p = n("126161");
 
-    function p(e) {
+    function O(e) {
         let {
             className: t
         } = e;
@@ -43,9 +43,9 @@ function(e, t, n) {
             children: [(0, i.jsx)(T.default, {
                 className: t,
                 mask: T.default.Masks.HEADER_BAR_BADGE,
-                children: (0, i.jsx)(p, {})
+                children: (0, i.jsx)(O, {})
             }), (0, i.jsx)(I.default, {
-                className: O.badgeUpgrade
+                className: p.badgeUpgrade
             })]
         })
     }
@@ -55,11 +55,11 @@ function(e, t, n) {
             hideBadges: t = !1,
             stream: n,
             ...E
-        } = e, I = (0, s.useStateFromStores)([c.default], () => f.default.isPremium(c.default.getCurrentUser(), m.PremiumTypes.TIER_1)), T = (0, s.useStateFromStores)([_.default], () => _.default.getChannel(null == n ? void 0 : n.channelId)), O = r.useMemo(() => null != n ? [n] : [], [n]), C = (0, o.useIsBroadcastingInChannel)(null == T ? void 0 : T.id), g = r.useCallback(() => {
-            null != T && (0, d.default)(T.getGuildId(), T.id, h.AnalyticsSections.STREAM_SETTINGS)
+        } = e, I = (0, s.useStateFromStores)([c.default], () => f.default.isPremium(c.default.getCurrentUser(), m.PremiumTypes.TIER_1)), T = (0, s.useStateFromStores)([_.default], () => _.default.getChannel(null == n ? void 0 : n.channelId)), p = r.useMemo(() => null != n ? [n] : [], [n]), C = (0, o.useIsBroadcastingInChannel)(null == T ? void 0 : T.id), g = r.useCallback(() => {
+            null != T && (0, d.default)(T.getGuildId(), T.id, A.AnalyticsSections.STREAM_SETTINGS)
         }, [T]);
         if (null == n || null == T) return null;
-        let L = p;
+        let L = O;
         return !t && !I && (L = R), (0, i.jsx)(a.Popout, {
             position: "top",
             renderPopout: e => {
@@ -72,7 +72,7 @@ function(e, t, n) {
                     }) : (0, i.jsx)(u.default, {
                         channel: T,
                         currentUser: c.default.getCurrentUser(),
-                        activeStreams: O,
+                        activeStreams: p,
                         onClose: t,
                         showReportOption: !0,
                         handleGoLive: g
@@ -80,7 +80,7 @@ function(e, t, n) {
                 })
             },
             animation: a.Popout.Animation.FADE,
-            children: e => (0, i.jsx)(A.default, {
+            children: e => (0, i.jsx)(h.default, {
                 ...e,
                 label: N.default.Messages.STREAMER_SETTINGS_TITLE,
                 iconComponent: L,

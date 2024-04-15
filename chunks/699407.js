@@ -6,7 +6,7 @@ function(e, t, n) {
             return T
         },
         analyticsTrackingStoreMaker: function() {
-            return A
+            return h
         }
     }), n("177593"), n("733860"), n("47120"), n("653041"), n("17089");
     var a, o = n("756647"),
@@ -35,29 +35,29 @@ function(e, t, n) {
         S = () => Promise.resolve({
             sessionId: void 0
         }),
-        A = e => {
+        h = e => {
             let {
                 dispatcher: t,
                 actionHandler: n,
                 getFingerprint: a,
                 getSessionId: d = S,
-                TRACKING_URL: A,
-                drainTimeoutOverride: h,
+                TRACKING_URL: h,
+                drainTimeoutOverride: A,
                 waitFor: m
             } = e;
-            c = null != h ? h : 1500;
+            c = null != A ? A : 1500;
 
             function N() {
                 return 0 !== f.length && (null != r ? null != i : null != a())
             }
 
-            function O() {
-                null == s && N() && (s = E(p, {
+            function p() {
+                null == s && N() && (s = E(O, {
                     timeout: c
                 }))
             }
 
-            function p() {
+            function O() {
                 if (s = null, !N()) return;
                 let e = f.slice();
                 f = [], R(e).then(() => {
@@ -84,7 +84,7 @@ function(e, t, n) {
                         }
                     }));
                 return u.HTTP.post({
-                    url: A,
+                    url: h,
                     body: {
                         token: i,
                         events: n
@@ -97,11 +97,11 @@ function(e, t, n) {
                     analyticsToken: t,
                     user: n
                 } = e;
-                return null != t && (i = t), null != n.id && (r = n.id), O(), !1
+                return null != t && (i = t), null != n.id && (r = n.id), p(), !1
             }, T.handleConnectionClosed = function() {
-                return p(), i = null, r = null, !1
+                return O(), i = null, r = null, !1
             }, T.handleFingerprint = function() {
-                return p(), !1
+                return O(), !1
             }, T.handleTrack = function(e) {
                 let {
                     event: t,
@@ -127,7 +127,7 @@ function(e, t, n) {
                         let t = e.fingerprint || a();
                         return null != t ? (0, o.extractId)(t) : null
                     }(d);
-                    null != _ && (d.properties.client_uuid = I.generate(_)), f.push(d), f.length > 1e4 && (f = f.slice(-1e4)), i ? p() : O()
+                    null != _ && (d.properties.client_uuid = I.generate(_)), f.push(d), f.length > 1e4 && (f = f.slice(-1e4)), i ? O() : p()
                 }), !1
             };
             class C extends l.Store {

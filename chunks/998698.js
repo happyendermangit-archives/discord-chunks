@@ -96,7 +96,7 @@ function(e, t, n) {
         }
         return i.optionStates = r, !0
     }
-    class A extends(i = o.default.Store) {
+    class h extends(i = o.default.Store) {
         initialize() {
             u.default.addChangeListener(() => {
                 let e = d.default.getChannelId();
@@ -141,13 +141,13 @@ function(e, t, n) {
             }
         }
     }
-    a = "ApplicationCommandStore", (s = "displayName") in(r = A) ? Object.defineProperty(r, s, {
+    a = "ApplicationCommandStore", (s = "displayName") in(r = h) ? Object.defineProperty(r, s, {
         value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
     }) : r[s] = a;
-    let h = new A(l.default, {
+    let A = new h(l.default, {
         CONNECTION_OPEN: E,
         CHANNEL_SELECT: E,
         LOGOUT: E,
@@ -180,5 +180,5 @@ function(e, t, n) {
             return o || l || u
         }
     });
-    t.default = h
+    t.default = A
 }

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return p
+            return O
         }
     });
     var i = n("668781"),
@@ -20,22 +20,22 @@ function(e, t, n) {
         T = n("917107"),
         f = n("89425"),
         S = n("275920"),
-        A = n("197386"),
-        h = n("451576"),
+        h = n("197386"),
+        A = n("451576"),
         m = n("701488"),
         N = n("981631"),
-        O = n("689938");
-    async function p(e) {
+        p = n("689938");
+    async function O(e) {
         let {
             activityItem: t,
             currentEmbeddedApplication: n,
-            locationObject: p,
+            locationObject: O,
             channelId: R,
             guildId: C,
             embeddedActivitiesManager: g,
             analyticsLocations: L
         } = e, D = a.default.getGuild(C), v = l.default.getCurrentUser();
-        if (null == D && !(0, h.isPrivateChannelWithEnabledActivities)(R) || null == v || null == t || null == t.application) return !1;
+        if (null == D && !(0, A.isPrivateChannelWithEnabledActivities)(R) || null == v || null == t || null == t.application) return !1;
         if (null == R) return u.ComponentDispatch.dispatch(N.ComponentActions.SHOW_ACTIVITIES_CHANNEL_SELECTOR, {
             applicationId: t.application.id
         }), !1;
@@ -48,8 +48,8 @@ function(e, t, n) {
             PermissionStore: o.default
         }) : I.EmbeddedActivityLaunchability.NO_CHANNEL;
         if (y !== I.EmbeddedActivityLaunchability.CAN_LAUNCH) return y === I.EmbeddedActivityLaunchability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION ? (0, r.showActivitiesInvalidPermissionsAlert)() : y === I.EmbeddedActivityLaunchability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS && i.default.show({
-            title: O.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC,
-            body: O.default.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS,
+            title: p.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC,
+            body: p.default.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS,
             hideActionSheet: !1
         }), !1;
         if (!await (0, E.confirmActivityLaunchChecks)({
@@ -68,11 +68,11 @@ function(e, t, n) {
                     bypassChangeModal: null != n
                 })) return !1
         } else if (!(0, d.isActivitiesInTextEnabled)(M, "handleStartEmbeddedActivity") || !U) return !1;
-        return c.startEmbeddedActivity(R, t.application.id, L), (0, A.default)(C, R), (0, S.default)({
+        return c.startEmbeddedActivity(R, t.application.id, L), (0, h.default)(C, R), (0, S.default)({
             type: N.AnalyticsGameOpenTypes.LAUNCH,
             userId: v.id,
             applicationId: t.application.id,
-            locationObject: p,
+            locationObject: O,
             analyticsLocations: L
         }), _.markActivityUsed(t.application.id), !0
     }

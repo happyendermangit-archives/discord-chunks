@@ -12,12 +12,12 @@ function(e, t, n) {
         T = n("427679"),
         f = n("569471"),
         S = n("195663"),
-        A = n("131704"),
-        h = n("601964"),
+        h = n("131704"),
+        A = n("601964"),
         m = n("598077"),
         N = n("386438"),
-        O = n("700785"),
-        p = n("592125"),
+        p = n("700785"),
+        O = n("592125"),
         R = n("683301"),
         C = n("271383"),
         g = n("430824"),
@@ -34,9 +34,9 @@ function(e, t, n) {
             n = M[e];
         if (null != n) return n;
         let i = L.default.getCurrentUser();
-        if (null == i) return O.NONE;
+        if (null == i) return p.NONE;
         let r = g.default.getGuild(e);
-        return null == r ? O.NONE : M[e] = O.computePermissions({
+        return null == r ? p.NONE : M[e] = p.computePermissions({
             user: i,
             context: r,
             checkElevated: t
@@ -47,12 +47,12 @@ function(e, t, n) {
         var t;
         let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             i = L.default.getCurrentUser();
-        if (null == i) return O.NONE;
-        let r = p.default.getChannel(e);
-        if (null == r) return O.NONE;
+        if (null == i) return p.NONE;
+        let r = O.default.getChannel(e);
+        if (null == r) return p.NONE;
         let s = r.getGuildId(),
             a = null != s && (I.default.isLurking(s) || (null === (t = C.default.getMember(s, i.id)) || void 0 === t ? void 0 : t.isPending));
-        return !r.isScheduledForDeletion() && !a && l().isEmpty(r.permissionOverwrites) && null != s ? b(s) : O.computePermissions({
+        return !r.isScheduledForDeletion() && !a && l().isEmpty(r.permissionOverwrites) && null != s ? b(s) : p.computePermissions({
             user: i,
             context: r,
             checkElevated: n
@@ -111,7 +111,7 @@ function(e, t, n) {
             guildId: t
         } = e;
         delete M[t];
-        let n = p.default.getMutableBasicGuildChannelsForGuild(t);
+        let n = O.default.getMutableBasicGuildChannelsForGuild(t);
         l().forEach(n, e => {
             delete y[e.id]
         }), U += 1, B(t)
@@ -120,10 +120,10 @@ function(e, t, n) {
     function W(e) {
         let {
             instance: t
-        } = e, n = p.default.getChannel(t.channel_id);
+        } = e, n = O.default.getChannel(t.channel_id);
         if (null == n) return !1;
         let i = L.default.getCurrentUser(),
-            r = O.computePermissions({
+            r = p.computePermissions({
                 user: i,
                 context: n
             });
@@ -136,22 +136,22 @@ function(e, t, n) {
             guildId: t
         } = e;
         delete M[t];
-        let n = p.default.getMutableBasicGuildChannelsForGuild(t);
+        let n = O.default.getMutableBasicGuildChannelsForGuild(t);
         l().forEach(n, e => {
             delete y[e.id]
         }), U += 1, B(t)
     }
 
     function z(e, t, n, i) {
-        let r = O.NONE;
-        if (e instanceof A.ChannelRecordBase) {
-            if (A.THREAD_CHANNEL_TYPES.has(e.type)) {
-                let r = p.default.getChannel(e.parent_id);
-                return null == r ? O.NONE : O.applyThreadPermissions(e, z(r, t, n, i), f.default.hasJoined(e.id))
+        let r = p.NONE;
+        if (e instanceof h.ChannelRecordBase) {
+            if (h.THREAD_CHANNEL_TYPES.has(e.type)) {
+                let r = O.default.getChannel(e.parent_id);
+                return null == r ? p.NONE : p.applyThreadPermissions(e, z(r, t, n, i), f.default.hasJoined(e.id))
             }
             r = w(e.id)
-        } else e instanceof h.default && (r = b(e.id));
-        return void 0 !== t || void 0 !== n || void 0 !== i ? O.computePermissions({
+        } else e instanceof A.default && (r = b(e.id));
+        return void 0 !== t || void 0 !== n || void 0 !== i ? p.computePermissions({
             user: L.default.getCurrentUser(),
             context: e,
             overwrites: t,
@@ -162,10 +162,10 @@ function(e, t, n) {
     }
     class X extends(i = d.default.Store) {
         initialize() {
-            this.waitFor(L.default, g.default, p.default, C.default, R.default, f.default, T.default, E.default)
+            this.waitFor(L.default, g.default, O.default, C.default, R.default, f.default, T.default, E.default)
         }
         getChannelPermissions(e) {
-            return A.THREAD_CHANNEL_TYPES.has(e.type) ? G(e.id) : w(e.id)
+            return h.THREAD_CHANNEL_TYPES.has(e.type) ? G(e.id) : w(e.id)
         }
         getGuildPermissions(e) {
             return b(e.id)
@@ -194,10 +194,10 @@ function(e, t, n) {
             return u.hasAny(b(e.id), v.MemberSafetyPagePermissions)
         }
         canAccessGuildSettings(e) {
-            return u.hasAny(b(e.id), O.VIEW_GUILD_SETTINGS)
+            return u.hasAny(b(e.id), p.VIEW_GUILD_SETTINGS)
         }
         canWithPartialContext(e, t) {
-            return "channelId" in t && "string" == typeof t.channelId ? this.can(e, p.default.getChannel(t.channelId)) : "guildId" in t && "string" == typeof t.guildId && this.can(e, g.default.getGuild(t.guildId))
+            return "channelId" in t && "string" == typeof t.channelId ? this.can(e, O.default.getChannel(t.channelId)) : "guildId" in t && "string" == typeof t.guildId && this.can(e, g.default.getGuild(t.guildId))
         }
         can(e, t, n, i, r) {
             let s = z(t, n, i, r);
@@ -217,18 +217,18 @@ function(e, t, n) {
             if (n.isOwner(i)) return !1;
             let r = L.default.getCurrentUser();
             if (!this.can(e, n)) return !1;
-            let s = null != r ? O.getHighestRole(n, r.id) : void 0,
-                a = O.getHighestRole(n, i);
-            return null != r && O.isRoleHigher(n, r.id, s, a)
+            let s = null != r ? p.getHighestRole(n, r.id) : void 0,
+                a = p.getHighestRole(n, i);
+            return null != r && p.isRoleHigher(n, r.id, s, a)
         }
         getHighestRole(e) {
             let t = L.default.getCurrentUser();
-            return null != t ? O.getHighestRole(e, t.id) : null
+            return null != t ? p.getHighestRole(e, t.id) : null
         }
         isRoleHigher(e, t, n) {
             let i = L.default.getCurrentUser(),
                 r = E.default.isViewingRoles(e.id);
-            return O.isRoleHigher(e, r ? void 0 : null == i ? void 0 : i.id, t, n)
+            return p.isRoleHigher(e, r ? void 0 : null == i ? void 0 : i.id, t, n)
         }
         canImpersonateRole(e, t) {
             let n = this.getHighestRole(e),
@@ -245,7 +245,7 @@ function(e, t, n) {
         }
     }
 
-    function Q() {
+    function q() {
         y = {}, M = {}, P = {}, U = 0
     }
     a = "PermissionStore", (s = "displayName") in(r = X) ? Object.defineProperty(r, s, {
@@ -260,7 +260,7 @@ function(e, t, n) {
         CACHE_LOADED: V,
         CACHE_LOADED_LAZY: V,
         CONNECTION_CLOSED: function() {
-            Q()
+            q()
         },
         GUILD_CREATE: F,
         GUILD_UPDATE: F,
@@ -273,10 +273,10 @@ function(e, t, n) {
                 channel: {
                     id: t
                 }
-            } = e, n = p.default.getChannel(t);
+            } = e, n = O.default.getChannel(t);
             if (null == n || n.isPrivate()) return !1;
             let i = L.default.getCurrentUser(),
-                r = O.computePermissions({
+                r = p.computePermissions({
                     user: i,
                     context: n
                 });
@@ -296,10 +296,10 @@ function(e, t, n) {
                     id: e
                 }
                 of t) {
-                let t = p.default.getChannel(e);
+                let t = O.default.getChannel(e);
                 if (null == t || t.isPrivate()) continue;
                 let i = L.default.getCurrentUser(),
-                    r = O.computePermissions({
+                    r = p.computePermissions({
                         user: i,
                         context: t
                     });
@@ -337,7 +337,7 @@ function(e, t, n) {
         GUILD_ROLE_CREATE: j,
         GUILD_ROLE_UPDATE: j,
         GUILD_ROLE_DELETE: j,
-        LOGOUT: Q,
+        LOGOUT: q,
         STAGE_INSTANCE_CREATE: W,
         STAGE_INSTANCE_UPDATE: W,
         STAGE_INSTANCE_DELETE: W,

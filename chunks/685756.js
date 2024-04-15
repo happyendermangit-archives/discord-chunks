@@ -15,8 +15,8 @@ function(e, t, n) {
         T = n("710845"),
         f = n("857192"),
         S = n("70956"),
-        A = n("358085"),
-        h = n("65154");
+        h = n("358085"),
+        A = n("65154");
 
     function m(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
@@ -28,8 +28,8 @@ function(e, t, n) {
     }
 
     function N() {}(o = i || (i = {}))[o.IDENTIFY = 0] = "IDENTIFY", o[o.SELECT_PROTOCOL = 1] = "SELECT_PROTOCOL", o[o.READY = 2] = "READY", o[o.HEARTBEAT = 3] = "HEARTBEAT", o[o.SELECT_PROTOCOL_ACK = 4] = "SELECT_PROTOCOL_ACK", o[o.SPEAKING = 5] = "SPEAKING", o[o.HEARTBEAT_ACK = 6] = "HEARTBEAT_ACK", o[o.RESUME = 7] = "RESUME", o[o.HELLO = 8] = "HELLO", o[o.RESUMED = 9] = "RESUMED", o[o.VIDEO = 12] = "VIDEO", o[o.CLIENT_DISCONNECT = 13] = "CLIENT_DISCONNECT", o[o.SESSION_UPDATE = 14] = "SESSION_UPDATE", o[o.MEDIA_SINK_WANTS = 15] = "MEDIA_SINK_WANTS", o[o.VOICE_BACKEND_VERSION = 16] = "VOICE_BACKEND_VERSION", o[o.CHANNEL_OPTIONS_UPDATE = 17] = "CHANNEL_OPTIONS_UPDATE", o[o.FLAGS = 18] = "FLAGS", o[o.SPEED_TEST = 19] = "SPEED_TEST", o[o.PLATFORM = 20] = "PLATFORM", o[o.SECURE_FRAMES_PREPARE_PROTOCOL_TRANSITION = 21] = "SECURE_FRAMES_PREPARE_PROTOCOL_TRANSITION", o[o.SECURE_FRAMES_EXECUTE_TRANSITION = 22] = "SECURE_FRAMES_EXECUTE_TRANSITION", o[o.SECURE_FRAMES_READY_FOR_TRANSITION = 23] = "SECURE_FRAMES_READY_FOR_TRANSITION", o[o.SECURE_FRAMES_PREPARE_EPOCH = 24] = "SECURE_FRAMES_PREPARE_EPOCH", o[o.MLS_EXTERNAL_SENDER_PACKAGE = 25] = "MLS_EXTERNAL_SENDER_PACKAGE", o[o.MLS_KEY_PACKAGE = 26] = "MLS_KEY_PACKAGE", o[o.MLS_PROPOSALS = 27] = "MLS_PROPOSALS", o[o.MLS_COMMIT_WELCOME = 28] = "MLS_COMMIT_WELCOME", o[o.MLS_PREPARE_COMMIT_TRANSITION = 29] = "MLS_PREPARE_COMMIT_TRANSITION", o[o.MLS_WELCOME = 30] = "MLS_WELCOME", (l = r || (r = {}))[l.AUTHENTICATION_FAILED = 4004] = "AUTHENTICATION_FAILED", l[l.INVALID_SESSION = 4006] = "INVALID_SESSION", l[l.SERVER_NOT_FOUND = 4011] = "SERVER_NOT_FOUND", l[l.SERVER_CRASH = 4015] = "SERVER_CRASH", l[l.CANCELED = 4016] = "CANCELED", l[l.HEARTBEAT_TIMEOUT = 4800] = "HEARTBEAT_TIMEOUT", l[l.UNRESUMABLE = 4801] = "UNRESUMABLE", l[l.RESET_BACKOFF = 4802] = "RESET_BACKOFF", (u = s || (s = {}))[u.DISCONNECTED = 0] = "DISCONNECTED", u[u.CONNECTING = 1] = "CONNECTING", u[u.IDENTIFYING = 2] = "IDENTIFYING", u[u.RESUMING = 3] = "RESUMING", u[u.CONNECTED = 4] = "CONNECTED", u[u.RECONNECTING = 5] = "RECONNECTING";
-    let O = 20 * S.default.Millis.SECOND,
-        p = 1 * S.default.Millis.MINUTE,
+    let p = 20 * S.default.Millis.SECOND,
+        O = 1 * S.default.Millis.MINUTE,
         R = 5 * S.default.Millis.SECOND;
 
     function C(e) {
@@ -66,10 +66,10 @@ function(e, t, n) {
         var t;
         return null !== (t = null == e ? void 0 : e.map(e => ({
             type: function(e) {
-                if ("audio" === e) return h.MediaTypes.AUDIO;
-                if ("test" === e) return h.MediaTypes.TEST;
-                if ("screen" === e) return h.MediaTypes.SCREEN;
-                else return h.MediaTypes.VIDEO
+                if ("audio" === e) return A.MediaTypes.AUDIO;
+                if ("test" === e) return A.MediaTypes.TEST;
+                if ("screen" === e) return A.MediaTypes.SCREEN;
+                else return A.MediaTypes.VIDEO
             }(e.type),
             rid: e.rid,
             ssrc: e.ssrc,
@@ -90,7 +90,7 @@ function(e, t, n) {
             this.logger.info("[CONNECT] ".concat(this.url)), null !== this.webSocket && (this.logger.error("Connect called with already existing websocket"), this.cleanupWebSocket(e => e.close(4e3))), this.connectionStartTime = Date.now(), this.helloTimeout = setTimeout(() => {
                 let e = Date.now() - this.connectionStartTime;
                 this.handleClose(!1, 0, "The connection timed out after ".concat(e, " ms - did not receive OP_HELLO in time."))
-            }, O);
+            }, p);
             let e = this.webSocket = new WebSocket("".concat(this.url, "?v=").concat(7));
             e.binaryType = "arraybuffer", e.onopen = () => {
                 1 === this.connectionState ? this.emit("connect") : 5 === this.connectionState && this.doResumeOrClose(), this.connectionState = 4;
@@ -122,7 +122,7 @@ function(e, t, n) {
                         break;
                     case 5:
                         let i = n.speaking;
-                        "boolean" == typeof i && (i = i ? h.SpeakingFlags.VOICE : h.SpeakingFlags.NONE), this.emit("speaking", n.user_id, n.ssrc, i);
+                        "boolean" == typeof i && (i = i ? A.SpeakingFlags.VOICE : A.SpeakingFlags.NONE), this.emit("speaking", n.user_id, n.ssrc, i);
                         break;
                     case 3:
                         this.sendHeartbeat();
@@ -220,7 +220,7 @@ function(e, t, n) {
         }
         doResumeOrClose() {
             let e = Date.now();
-            null !== this.serverId && null !== this.token && null !== this.sessionId && this.resumable && (null == this.lastHeartbeatAckTime || e - this.lastHeartbeatAckTime <= p) ? (this.doResume(), this.lastHeartbeatAckTime = e) : this.disconnect(!1, 4801, "Cannot resume connection.")
+            null !== this.serverId && null !== this.token && null !== this.sessionId && this.resumable && (null == this.lastHeartbeatAckTime || e - this.lastHeartbeatAckTime <= O) ? (this.doResume(), this.lastHeartbeatAckTime = e) : this.disconnect(!1, 4801, "Cannot resume connection.")
         }
         doResume() {
             var e, t;
@@ -233,9 +233,9 @@ function(e, t, n) {
         handleHello(e) {
             var t, n, i;
             if (this.serverVersion = null !== (t = e.v) && void 0 !== t ? t : 3, this.serverVersion <= 3) {
-                let t = A.isPlatformEmbedded ? .25 : .1;
+                let t = h.isPlatformEmbedded ? .25 : .1;
                 this.heartbeatInterval = e.heartbeat_interval * t
-            } else this.heartbeatInterval = e.heartbeat_interval * this.heartbeatIntervalModifier, !A.isPlatformEmbedded && (this.heartbeatInterval = Math.min(R, null !== (n = this.heartbeatInterval) && void 0 !== n ? n : NaN));
+            } else this.heartbeatInterval = e.heartbeat_interval * this.heartbeatIntervalModifier, !h.isPlatformEmbedded && (this.heartbeatInterval = Math.min(R, null !== (n = this.heartbeatInterval) && void 0 !== n ? n : NaN));
             let r = Date.now() - this.connectionStartTime;
             this.logger.info("[HELLO] heartbeat interval: ".concat(null !== (i = this.heartbeatInterval) && void 0 !== i ? i : "??", ", version: ").concat(this.serverVersion, ", took ").concat(r, " ms")), this.startHeartbeater()
         }

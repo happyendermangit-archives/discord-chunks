@@ -2,22 +2,22 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         startImpersonating: function() {
-            return A
+            return h
         },
         stopImpersonating: function() {
             return m
         },
         updateImpersonatedChannels: function() {
-            return O
+            return p
         },
         updateImpersonatedData: function() {
             return R
         },
         updateImpersonatedRoles: function() {
-            return p
+            return O
         },
         updateImpersonating: function() {
-            return h
+            return A
         }
     }), n("47120");
     var i = n("570140"),
@@ -36,7 +36,7 @@ function(e, t, n) {
         f = n("981631"),
         S = n("176505");
 
-    function A(e, t) {
+    function h(e, t) {
         E.default.track(f.AnalyticEvents.VIEW_AS_ROLES_SELECTED, {
             num_roles: Object.keys(t.roles).length,
             ...(0, r.collectGuildAnalyticsMetadata)(e),
@@ -48,7 +48,7 @@ function(e, t, n) {
         }), N(e)
     }
 
-    function h(e, t) {
+    function A(e, t) {
         let n = I.default.getData(e);
         null != n && n.type === t.type && (E.default.track(f.AnalyticEvents.VIEW_AS_ROLES_SELECTED, {
             num_roles: Object.keys(n.roles).length,
@@ -80,15 +80,15 @@ function(e, t, n) {
         }
     }
 
-    function O(e, t, n) {
+    function p(e, t, n) {
         let i = new Set(c.default.getOptedInChannels(e));
-        t.forEach(e => i.add(e)), n.forEach(e => i.delete(e)), h(e, {
+        t.forEach(e => i.add(e)), n.forEach(e => i.delete(e)), A(e, {
             type: T.ImpersonateType.NEW_MEMBER,
             optInChannels: i
         })
     }
 
-    function p(e, t) {
+    function O(e, t) {
         let n = u.default.getRoles(e);
         ! function(e, t) {
             let n = [...o.default.getSelectableChannelIds(e), ...o.default.getVocalChannelIds(e)],
@@ -98,18 +98,18 @@ function(e, t, n) {
                 if (null == t) return !1;
                 if (i.some(e => !t.roles.includes(e))) return !0;
                 let r = [...o.default.getSelectableChannelIds(e), ...o.default.getVocalChannelIds(e)].filter(e => !n.includes(e));
-                return r.length > 0 && O(e, r, []), !1
+                return r.length > 0 && p(e, r, []), !1
             })
         }(e, t);
         let i = {};
-        t.forEach(e => i[e] = n[e]), h(e, {
+        t.forEach(e => i[e] = n[e]), A(e, {
             type: T.ImpersonateType.NEW_MEMBER,
             roles: i
         })
     }
 
     function R(e, t) {
-        h(e, {
+        A(e, {
             type: T.ImpersonateType.NEW_MEMBER,
             ...t
         })

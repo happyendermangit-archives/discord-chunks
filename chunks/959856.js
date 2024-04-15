@@ -20,13 +20,13 @@ function(e, t, n) {
         T = n("384136"),
         f = n("740197"),
         S = n("548820"),
-        A = n("579237"),
-        h = n("582168"),
+        h = n("579237"),
+        A = n("582168"),
         m = n("825040"),
         N = n("65154"),
-        O = n("436620");
+        p = n("436620");
 
-    function p(e, t, n) {
+    function O(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -43,7 +43,7 @@ function(e, t, n) {
             !this.interacted && (document.createElement("audio").play(), this.interacted = !0), this.eachConnection(e => e.interact())
         }
         static supported() {
-            return !__OVERLAY__ && (O.BROWSER_SUPPORTS_VOICE && null != window.AudioContext && null != window.RTCPeerConnection ? (n("250678"), !0) : (R.info("WebRTC is not supported on", r().name, r().version), !1))
+            return !__OVERLAY__ && (p.BROWSER_SUPPORTS_VOICE && null != window.AudioContext && null != window.RTCPeerConnection ? (n("250678"), !0) : (R.info("WebRTC is not supported on", r().name, r().version), !1))
         }
         supported() {
             return !0
@@ -55,7 +55,7 @@ function(e, t, n) {
                 case N.Features.AUDIO_OUTPUT_DEVICE:
                     return f.CAN_SET_OUTPUT_DEVICES;
                 case N.Features.VIDEO:
-                    return O.BROWSER_SUPPORTS_VIDEO;
+                    return p.BROWSER_SUPPORTS_VIDEO;
                 case N.Features.DESKTOP_CAPTURE:
                     var t;
                     return (null === (t = navigator.mediaDevices) || void 0 === t ? void 0 : t.getDisplayMedia) != null;
@@ -63,7 +63,7 @@ function(e, t, n) {
                     return "Chrome" === r().name;
                 case N.Features.NATIVE_PING:
                 case N.Features.DIAGNOSTICS:
-                    return O.BROWSER_SUPPORTS_DIAGNOSTICS;
+                    return p.BROWSER_SUPPORTS_DIAGNOSTICS;
                 case N.Features.DESKTOP_CAPTURE_APPLICATIONS:
                 case N.Features.LOOPBACK:
                 case N.Features.NOISE_SUPPRESSION:
@@ -215,7 +215,7 @@ function(e, t, n) {
         }
         setExperimentalAdm(e) {}
         setLoopback(e, t) {
-            e && null == this.loopback ? (this.enable(), this.loopback = new A.default(this.getAudioContext(), this.sourceId, this.sinkId), this.loopback.setNoiseCancellation(t.noiseCancellation)) : !e && null != this.loopback && (this.loopback.stop(), this.loopback = null)
+            e && null == this.loopback ? (this.enable(), this.loopback = new h.default(this.getAudioContext(), this.sourceId, this.sinkId), this.loopback.setNoiseCancellation(t.noiseCancellation)) : !e && null != this.loopback && (this.loopback.stop(), this.loopback = null)
         }
         getLoopback() {
             return null != this.loopback
@@ -255,9 +255,9 @@ function(e, t, n) {
             e([])
         }
         constructor() {
-            super(), p(this, "Video", m.default), p(this, "Camera", h.default), p(this, "_audioContext", null), p(this, "outputVolume", N.DEFAULT_VOLUME), p(this, "sourceId", N.DEFAULT_DEVICE_ID), p(this, "sinkId", N.DEFAULT_DEVICE_ID), p(this, "enabled", !1), p(this, "connections", new Set), p(this, "interacted", !1), p(this, "loopback", null), p(this, "voiceActivityInput", null), p(this, "pendingDesktopInputs", {}), p(this, "enablePromise", null), p(this, "handleActiveSinksChange", (e, t) => {
+            super(), O(this, "Video", m.default), O(this, "Camera", A.default), O(this, "_audioContext", null), O(this, "outputVolume", N.DEFAULT_VOLUME), O(this, "sourceId", N.DEFAULT_DEVICE_ID), O(this, "sinkId", N.DEFAULT_DEVICE_ID), O(this, "enabled", !1), O(this, "connections", new Set), O(this, "interacted", !1), O(this, "loopback", null), O(this, "voiceActivityInput", null), O(this, "pendingDesktopInputs", {}), O(this, "enablePromise", null), O(this, "handleActiveSinksChange", (e, t) => {
                 this.connections.forEach(n => n.setHasActiveVideoOutputSink(e, t))
-            }), p(this, "handleNewListener", e => {
+            }), O(this, "handleNewListener", e => {
                 switch (e) {
                     case d.MediaEngineEvent.DeviceChange:
                         null != navigator.mediaDevices && null == navigator.mediaDevices.ondevicechange && (navigator.mediaDevices.ondevicechange = () => {
@@ -267,7 +267,7 @@ function(e, t, n) {
                     case d.MediaEngineEvent.VoiceActivity:
                         null == this.voiceActivityInput && (this.voiceActivityInput = new E.default(this.getAudioContext()), this.voiceActivityInput.setSource(this.sourceId), this.voiceActivityInput.on("voiceactivity", this.handleVoiceActivity), this.enabled && this.voiceActivityInput.enable())
                 }
-            }), p(this, "handleRemoveListener", e => {
+            }), O(this, "handleRemoveListener", e => {
                 switch (e) {
                     case d.MediaEngineEvent.DeviceChange:
                         var t;
@@ -276,16 +276,16 @@ function(e, t, n) {
                     case d.MediaEngineEvent.VoiceActivity:
                         null != this.voiceActivityInput && 0 === this.listenerCount(d.MediaEngineEvent.VoiceActivity) && (this.voiceActivityInput.destroy(), this.voiceActivityInput = null)
                 }
-            }), p(this, "handleDeviceChange", () => (0, f.getDevices)().then(e => {
+            }), O(this, "handleDeviceChange", () => (0, f.getDevices)().then(e => {
                 let [t, n, i] = e;
                 return this.emit(d.MediaEngineEvent.DeviceChange, t, n, i)
-            })), p(this, "handleVoiceActivity", e => {
+            })), O(this, "handleVoiceActivity", e => {
                 this.emit(d.MediaEngineEvent.VoiceActivity, e, 0)
-            }), p(this, "handleDesktopSourceEnd", () => {
+            }), O(this, "handleDesktopSourceEnd", () => {
                 this.emit(d.MediaEngineEvent.DesktopSourceEnd)
-            }), p(this, "handleAudioPermission", e => {
+            }), O(this, "handleAudioPermission", e => {
                 this.emit(d.MediaEngineEvent.AudioPermission, e)
-            }), p(this, "handleVideoPermission", e => {
+            }), O(this, "handleVideoPermission", e => {
                 this.emit(d.MediaEngineEvent.VideoPermission, e)
             }), this.on("newListener", this.handleNewListener), this.on("removeListener", this.handleRemoveListener), (0, c.setActiveSinksChangeCallback)(this.handleActiveSinksChange), (0, _.default)(this)
         }

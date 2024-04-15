@@ -20,12 +20,12 @@ function(e, t, n) {
         T = n("451478"),
         f = n("151785"),
         S = n("768581"),
-        A = n("392552"),
-        h = n("543241"),
+        h = n("392552"),
+        A = n("543241"),
         m = n("199257"),
         N = n("880949"),
-        O = n("784222"),
-        p = n("149203"),
+        p = n("784222"),
+        O = n("149203"),
         R = n("689938"),
         C = n("821568");
 
@@ -51,7 +51,7 @@ function(e, t, n) {
                 } = e,
                 {
                     enabled: P
-                } = A.default.useExperiment({
+                } = h.default.useExperiment({
                     location: "EmojiPicker"
                 }, {
                     autoTrackExposure: !1
@@ -65,7 +65,7 @@ function(e, t, n) {
                     } = U;
                     return null === (e = D[t]) || void 0 === e ? void 0 : e[n]
                 }, [D, U]),
-                G = (null == b ? void 0 : b.type) === O.EmojiGridItemTypes.EMOJI ? null == b ? void 0 : b.emoji : {
+                G = (null == b ? void 0 : b.type) === p.EmojiGridItemTypes.EMOJI ? null == b ? void 0 : b.emoji : {
                     type: "CREATE_EMOJI",
                     guildId: null == b ? void 0 : b.guildId,
                     allNamesString: null == b ? void 0 : b.name
@@ -74,20 +74,20 @@ function(e, t, n) {
                 B = (0, s.useStateFromStores)([T.default], () => T.default.isFocused()),
                 k = (0, s.useStateFromStores)([o.default], () => o.default.useReducedMotion, []),
                 V = E.AnimateEmoji.useSetting(),
-                F = (0, h.useIsFavoriteEmoji)(v, g(G) ? G : null),
+                F = (0, A.useIsFavoriteEmoji)(v, g(G) ? G : null),
                 {
                     newlyAddedEmojis: x
                 } = (0, m.default)(v, M),
                 H = G.id,
-                Y = (null == b ? void 0 : b.type) === O.EmojiGridItemTypes.EMOJI ? b.subCategory : p.EmojiSubCategory.NONE;
+                Y = (null == b ? void 0 : b.type) === p.EmojiGridItemTypes.EMOJI ? b.subCategory : O.EmojiSubCategory.NONE;
             if (r.useEffect(() => {
                     let e = Date.now();
                     return () => {
-                        Date.now() - e >= 250 && g(G) && Y !== p.EmojiSubCategory.NONE && (Y === p.EmojiSubCategory.NEWLY_ADDED_EMOJI && null !== G && G.type === l.EmojiTypes.GUILD && (0, d.updateNewlyAddedEmojiSeenAcknowledged)(G.guildId, x[0].id), null != U.source && (0, h.trackEmojiFocus)({
+                        Date.now() - e >= 250 && g(G) && Y !== O.EmojiSubCategory.NONE && (Y === O.EmojiSubCategory.NEWLY_ADDED_EMOJI && null !== G && G.type === l.EmojiTypes.GUILD && (0, d.updateNewlyAddedEmojiSeenAcknowledged)(G.guildId, x[0].id), null != U.source && (0, A.trackEmojiFocus)({
                             emoji: G,
                             subCategory: Y,
                             position: b.columnIndex + 1,
-                            newlyAddedHighlight: Y === p.EmojiSubCategory.NEWLY_ADDED_EMOJI && u.default.isNewerThanLastSeen(v, H)
+                            newlyAddedHighlight: Y === O.EmojiSubCategory.NEWLY_ADDED_EMOJI && u.default.isNewerThanLastSeen(v, H)
                         }))
                     }
                 }), null == G) return null;

@@ -157,32 +157,32 @@ function(e, t, n) {
             for (let [T, f] of Object.entries(this.periodicInboundStats)) {
                 let {
                     previous: S,
-                    current: A,
-                    currentTimestampMs: h,
+                    current: h,
+                    currentTimestampMs: A,
                     previousTimestampMs: m,
                     numRateSamples: N
                 } = f;
-                if (void 0 !== m && h > m) {
+                if (void 0 !== m && A > m) {
                     var t, n, i, r, s, a, o, l, u, d, _, c, E, I;
-                    let O = h - m,
-                        p = {
+                    let p = A - m,
+                        O = {
                             userId: T,
-                            silent: null !== (n = A.silent) && void 0 !== n ? n : 0 - (null !== (t = S.silent) && void 0 !== t ? t : 0),
-                            normal: null !== (r = A.normal) && void 0 !== r ? r : 0 - (null !== (i = S.normal) && void 0 !== i ? i : 0),
-                            merged: null !== (a = A.merged) && void 0 !== a ? a : 0 - (null !== (s = S.merged) && void 0 !== s ? s : 0),
-                            expanded: null !== (l = A.expanded) && void 0 !== l ? l : 0 - (null !== (o = S.expanded) && void 0 !== o ? o : 0),
-                            accelerated: null !== (d = A.accelerated) && void 0 !== d ? d : 0 - (null !== (u = S.accelerated) && void 0 !== u ? u : 0),
-                            preemptiveExpanded: null !== (c = A.preemptiveExpanded) && void 0 !== c ? c : 0 - (null !== (_ = S.preemptiveExpanded) && void 0 !== _ ? _ : 0),
-                            cng: null !== (I = A.cng) && void 0 !== I ? I : 0 - (null !== (E = S.cng) && void 0 !== E ? E : 0),
+                            silent: null !== (n = h.silent) && void 0 !== n ? n : 0 - (null !== (t = S.silent) && void 0 !== t ? t : 0),
+                            normal: null !== (r = h.normal) && void 0 !== r ? r : 0 - (null !== (i = S.normal) && void 0 !== i ? i : 0),
+                            merged: null !== (a = h.merged) && void 0 !== a ? a : 0 - (null !== (s = S.merged) && void 0 !== s ? s : 0),
+                            expanded: null !== (l = h.expanded) && void 0 !== l ? l : 0 - (null !== (o = S.expanded) && void 0 !== o ? o : 0),
+                            accelerated: null !== (d = h.accelerated) && void 0 !== d ? d : 0 - (null !== (u = S.accelerated) && void 0 !== u ? u : 0),
+                            preemptiveExpanded: null !== (c = h.preemptiveExpanded) && void 0 !== c ? c : 0 - (null !== (_ = S.preemptiveExpanded) && void 0 !== _ ? _ : 0),
+                            cng: null !== (I = h.cng) && void 0 !== I ? I : 0 - (null !== (E = S.cng) && void 0 !== E ? E : 0),
                             accelerateRate: f.accelerateRateSum / N,
                             expandRate: f.expandRateSum / N,
                             preemptiveExpandRate: f.preemptiveExpandRateSum / N,
                             speechExpandRate: f.speechExpandRateSum / N,
-                            durationMs: O
+                            durationMs: p
                         };
-                    p.normal + p.merged + p.expanded + p.accelerated + p.preemptiveExpanded > 0 && e.push(p)
+                    O.normal + O.merged + O.expanded + O.accelerated + O.preemptiveExpanded > 0 && e.push(O)
                 }
-                this.periodicInboundStats[T].accelerateRateSum = 0, this.periodicInboundStats[T].expandRateSum = 0, this.periodicInboundStats[T].preemptiveExpandRateSum = 0, this.periodicInboundStats[T].speechExpandRateSum = 0, this.periodicInboundStats[T].numRateSamples = 0, this.periodicInboundStats[T].previous = A, this.periodicInboundStats[T].previousTimestampMs = h
+                this.periodicInboundStats[T].accelerateRateSum = 0, this.periodicInboundStats[T].expandRateSum = 0, this.periodicInboundStats[T].preemptiveExpandRateSum = 0, this.periodicInboundStats[T].speechExpandRateSum = 0, this.periodicInboundStats[T].numRateSamples = 0, this.periodicInboundStats[T].previous = h, this.periodicInboundStats[T].previousTimestampMs = A
             }
             return e
         }
@@ -219,10 +219,10 @@ function(e, t, n) {
                 }), r().forEach(e.rtp.inbound, (t, n) => {
                     r().forEach(t, t => {
                         if ("audio" === t.type) {
-                            var i, s, a, o, l, u, d, _, c, E, I, T, f, S, A, h, m;
+                            var i, s, a, o, l, u, d, _, c, E, I, T, f, S, h, A, m;
                             let N = null !== (i = e.transport.ping) && void 0 !== i ? i : 0,
-                                O = t.packetsReceived,
-                                p = t.packetsLost,
+                                p = t.packetsReceived,
+                                O = t.packetsLost,
                                 R = t.bytesReceived,
                                 C = null !== (s = t.fecPacketsReceived) && void 0 !== s ? s : 0,
                                 g = null !== (a = t.fecPacketsDiscarded) && void 0 !== a ? a : 0,
@@ -251,14 +251,14 @@ function(e, t, n) {
                                     decryptAttempts: null !== (c = t.decryptAttempts) && void 0 !== c ? c : 0
                                 };
                             if (null != this.inboundStats[n]) {
-                                let e = O - this.inboundStats[n].packetsReceived,
-                                    i = p - this.inboundStats[n].packetsLost,
+                                let e = p - this.inboundStats[n].packetsReceived,
+                                    i = O - this.inboundStats[n].packetsLost,
                                     s = 0,
                                     a = this.inboundStats[n].mosBuckets;
                                 e > 0 && i >= 0 && (s = this.calculateMos(N + L, r().clamp(i / (e + i), 0, 1)), a[Math.floor(s)]++), this.inboundStats[n] = {
-                                    packetsReceived: O,
+                                    packetsReceived: p,
                                     bytesReceived: R,
-                                    packetsLost: p,
+                                    packetsLost: O,
                                     fecPacketsReceived: C,
                                     fecPacketsDiscarded: g,
                                     mos: s,
@@ -280,9 +280,9 @@ function(e, t, n) {
                                     numRateSamples: this.periodicInboundStats[n].numRateSamples + 1
                                 }
                             } else this.inboundStats[n] = {
-                                packetsReceived: O,
+                                packetsReceived: p,
                                 bytesReceived: R,
-                                packetsLost: p,
+                                packetsLost: O,
                                 fecPacketsReceived: C,
                                 fecPacketsDiscarded: g,
                                 mos: 0,
@@ -298,8 +298,8 @@ function(e, t, n) {
                                 currentTimestampMs: Date.now(),
                                 current: v,
                                 accelerateRateSum: null !== (S = t.accelerateRate) && void 0 !== S ? S : 0,
-                                expandRateSum: null !== (A = t.expandRate) && void 0 !== A ? A : 0,
-                                preemptiveExpandRateSum: null !== (h = t.preemptiveExpandRate) && void 0 !== h ? h : 0,
+                                expandRateSum: null !== (h = t.expandRate) && void 0 !== h ? h : 0,
+                                preemptiveExpandRateSum: null !== (A = t.preemptiveExpandRate) && void 0 !== A ? A : 0,
                                 speechExpandRateSum: null !== (m = t.speechExpandRate) && void 0 !== m ? m : 0,
                                 numRateSamples: 1
                             }

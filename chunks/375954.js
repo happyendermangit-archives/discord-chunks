@@ -12,13 +12,13 @@ function(e, t, n) {
         T = n("723352"),
         f = n("160404"),
         S = n("786761"),
-        A = n("418476");
+        h = n("418476");
     n("739566");
-    var h = n("995774"),
+    var A = n("995774"),
         m = n("706454"),
         N = n("630388"),
-        O = n("709054"),
-        p = n("314897"),
+        p = n("709054"),
+        O = n("314897"),
         R = n("592125"),
         C = n("796974"),
         g = n("984933"),
@@ -69,8 +69,8 @@ function(e, t, n) {
             emoji: s,
             reactionType: a
         } = e, o = _.default.get(n);
-        if (null == o || !(0, h.shouldApplyReaction)(e)) return !1;
-        let l = p.default.getId() === r;
+        if (null == o || !(0, A.shouldApplyReaction)(e)) return !1;
+        let l = O.default.getId() === r;
         o = o.update(i, n => "MESSAGE_REACTION_ADD" === t ? n.addReaction(s, l, e.colors, a) : n.removeReaction(s, l, a)), _.default.commit(o)
     }
 
@@ -104,7 +104,7 @@ function(e, t, n) {
         }
         getLastEditableMessage(e) {
             let t = U.default.getCurrentUser();
-            return l()(this.getMessages(e).toArray()).reverse().find(e => (0, A.default)(e, null == t ? void 0 : t.id))
+            return l()(this.getMessages(e).toArray()).reverse().find(e => (0, h.default)(e, null == t ? void 0 : t.id))
         }
         getLastCommandMessage(e) {
             let t = U.default.getCurrentUser();
@@ -169,7 +169,7 @@ function(e, t, n) {
         CONNECTION_OPEN: k,
         OVERLAY_INITIALIZE: k,
         CACHE_LOADED: function(e) {
-            for (let [t, n] of O.default.entries(e.messages)) {
+            for (let [t, n] of p.default.entries(e.messages)) {
                 let e = _.default.getOrCreate(t).addCachedMessages(n, !0);
                 _.default.commit(e)
             }

@@ -16,7 +16,7 @@ function(e, t, n) {
         f = n("940627"),
         S = n("795798");
 
-    function A(e, t, n) {
+    function h(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -24,7 +24,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    let h = {
+    let A = {
             SMOL: "Smol",
             MINI: "Mini",
             SMALLER: "Smaller",
@@ -35,26 +35,26 @@ function(e, t, n) {
             XLARGE: "XLarge"
         },
         m = {
-            [h.SMOL]: 16,
-            [h.MINI]: 20,
-            [h.SMALLER]: 24,
-            [h.SMALL]: 30,
-            [h.MEDIUM]: 40,
-            [h.LARGE]: 50,
-            [h.LARGER]: 64,
-            [h.XLARGE]: 100
+            [A.SMOL]: 16,
+            [A.MINI]: 20,
+            [A.SMALLER]: 24,
+            [A.SMALL]: 30,
+            [A.MEDIUM]: 40,
+            [A.LARGE]: 50,
+            [A.LARGER]: 64,
+            [A.XLARGE]: 100
         },
         N = {
-            [h.SMOL]: [10, 10, 8, 6, 6, 4],
-            [h.MINI]: [12, 12, 10, 10, 8, 6, 4],
-            [h.SMALLER]: [13, 13, 11, 11, 9, 7, 5],
-            [h.SMALL]: [14, 14, 12, 12, 10, 8, 6],
-            [h.MEDIUM]: [16, 16, 14, 14, 12, 10, 8],
-            [h.LARGE]: [18, 18, 16, 16, 14, 12, 10],
-            [h.LARGER]: [19, 19, 17, 17, 15, 13, 11],
-            [h.XLARGE]: [20, 20, 18, 18, 16, 14, 12]
+            [A.SMOL]: [10, 10, 8, 6, 6, 4],
+            [A.MINI]: [12, 12, 10, 10, 8, 6, 4],
+            [A.SMALLER]: [13, 13, 11, 11, 9, 7, 5],
+            [A.SMALL]: [14, 14, 12, 12, 10, 8, 6],
+            [A.MEDIUM]: [16, 16, 14, 14, 12, 10, 8],
+            [A.LARGE]: [18, 18, 16, 16, 14, 12, 10],
+            [A.LARGER]: [19, 19, 17, 17, 15, 13, 11],
+            [A.XLARGE]: [20, 20, 18, 18, 16, 14, 12]
         };
-    class O extends s.PureComponent {
+    class p extends s.PureComponent {
         renderAcronym() {
             let {
                 guild: e,
@@ -91,11 +91,11 @@ function(e, t, n) {
                 tooltipPosition: E,
                 onClick: I,
                 to: f,
-                badgeStrokeColor: A,
-                animate: h,
+                badgeStrokeColor: h,
+                animate: A,
                 tabIndex: m,
-                iconSrc: O,
-                "aria-hidden": p,
+                iconSrc: p,
+                "aria-hidden": O,
                 ...R
             } = this.props, C = N[l], g = null != I ? _.Clickable : "div";
             return (0, r.jsxs)(g, {
@@ -104,7 +104,7 @@ function(e, t, n) {
                     [S.iconInactive]: !a,
                     [S.noIcon]: null == n.icon
                 }),
-                "aria-hidden": p,
+                "aria-hidden": O,
                 style: null == n.icon ? {
                     fontSize: (null !== (t = C[n.acronym.length]) && void 0 !== t ? t : C[C.length - 1]) * d,
                     ...u
@@ -152,7 +152,7 @@ function(e, t, n) {
             }) : this.renderTooltip()
         }
     }
-    let p = u.default.connectStores([E.default], e => {
+    let O = u.default.connectStores([E.default], e => {
         let {
             guild: t,
             animate: n,
@@ -166,18 +166,18 @@ function(e, t, n) {
                 backgroundImage: (0, I.makeCssUrlString)(null != i ? i : t.getIconURL(m[s], n && E.default.isFocused()))
             }
         }
-    })((0, c.backgroundImagePreloader)(e => (0, r.jsx)(O, {
+    })((0, c.backgroundImagePreloader)(e => (0, r.jsx)(p, {
         ...e
     })));
     class R extends(i = s.PureComponent) {
         render() {
-            return (0, r.jsx)(p, {
+            return (0, r.jsx)(O, {
                 ...this.props
             })
         }
     }
-    A(R, "Sizes", h), A(R, "defaultProps", {
-        size: h.LARGE,
+    h(R, "Sizes", A), h(R, "defaultProps", {
+        size: A.LARGE,
         textScale: 1,
         showBadge: !1,
         showTooltip: !1,

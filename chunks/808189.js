@@ -17,69 +17,69 @@ function(e, t, n) {
         T = n("31698"),
         f = n("528771"),
         S = n("632184"),
-        A = n("170039"),
-        h = n("617506"),
+        h = n("170039"),
+        A = n("617506"),
         m = n("267642"),
         N = n("981631"),
-        O = n("474936"),
-        p = n("689938"),
+        p = n("474936"),
+        O = n("689938"),
         R = n("855260");
     let C = [{
         tier: N.BoostedGuildTiers.TIER_1,
         perks: [{
             icon: l.default,
-            getCopy: () => p.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_CUSTOM_EMOJI.format({
-                numEmojiSlots: O.BoostedGuildFeatures[N.BoostedGuildTiers.TIER_1].limits.emoji
+            getCopy: () => O.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_CUSTOM_EMOJI.format({
+                numEmojiSlots: p.BoostedGuildFeatures[N.BoostedGuildTiers.TIER_1].limits.emoji
             })
         }, {
             icon: I.default,
-            getCopy: () => p.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_CUSTOM_SOUNDS.format({
-                numSoundboardSlots: O.BoostedGuildFeatures[N.BoostedGuildTiers.TIER_1].limits.soundboardSounds
+            getCopy: () => O.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_CUSTOM_SOUNDS.format({
+                numSoundboardSlots: p.BoostedGuildFeatures[N.BoostedGuildTiers.TIER_1].limits.soundboardSounds
             }),
             isNew: !0
         }, {
             icon: _.default,
-            getCopy: () => p.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_ANIMATED_GUILD_ICON
+            getCopy: () => O.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_ANIMATED_GUILD_ICON
         }, {
             icon: S.default,
-            getCopy: () => p.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_AUDIO_QUALITY
+            getCopy: () => O.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_AUDIO_QUALITY
         }]
     }, {
         tier: N.BoostedGuildTiers.TIER_2,
         perks: [{
             icon: E.default,
-            getCopy: () => p.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_STREAM_QUALITY
+            getCopy: () => O.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_STREAM_QUALITY
         }, {
-            icon: h.default,
-            getCopy: () => p.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_LARGER_FILE_UPLOADS.format({
-                uploadSizeLimit: p.default.Messages.FILE_UPLOAD_LIMIT_BOOSTED_GUILD_TIER_2
+            icon: A.default,
+            getCopy: () => O.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_LARGER_FILE_UPLOADS.format({
+                uploadSizeLimit: O.default.Messages.FILE_UPLOAD_LIMIT_BOOSTED_GUILD_TIER_2
             })
         }, {
             icon: u.default,
-            getCopy: () => p.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_ROLE_ICONS
+            getCopy: () => O.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_ROLE_ICONS
         }, {
             icon: d.default,
-            getCopy: () => p.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_GUILD_BANNER
+            getCopy: () => O.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_GUILD_BANNER
         }]
     }, {
         tier: N.BoostedGuildTiers.TIER_3,
         perks: [{
             icon: c.default,
-            getCopy: () => p.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_VANITY_URL
+            getCopy: () => O.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_VANITY_URL
         }, {
-            icon: h.default,
-            getCopy: () => p.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_LARGER_FILE_UPLOADS.format({
-                uploadSizeLimit: p.default.Messages.FILE_UPLOAD_LIMIT_BOOSTED_GUILD_TIER_3
+            icon: A.default,
+            getCopy: () => O.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_LARGER_FILE_UPLOADS.format({
+                uploadSizeLimit: O.default.Messages.FILE_UPLOAD_LIMIT_BOOSTED_GUILD_TIER_3
             })
         }, {
             icon: S.default,
-            getCopy: () => p.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_HIGHEST_AUDIO_QUALITY
+            getCopy: () => O.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_HIGHEST_AUDIO_QUALITY
         }, {
             icon: _.default,
-            getCopy: () => p.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_ANIMATED_GUILD_BANNER
+            getCopy: () => O.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_ANIMATED_GUILD_BANNER
         }, {
-            icon: A.default,
-            getCopy: () => p.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_STAGE_SEATS_AND_MORE.format({
+            icon: h.default,
+            getCopy: () => O.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_STAGE_SEATS_AND_MORE.format({
                 numStageSeats: N.MAX_STAGE_VIDEO_USER_LIMIT_TIER3
             })
         }]
@@ -117,7 +117,7 @@ function(e, t, n) {
                     tag: "div",
                     variant: "text-xs/semibold",
                     color: "always-white",
-                    children: p.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_CURRENT_TIER_LABEL
+                    children: O.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_CURRENT_TIER_LABEL
                 }), (0, i.jsxs)("div", {
                     className: R.tierCardHeader,
                     children: [(0, i.jsx)(a.Heading, {
@@ -131,7 +131,7 @@ function(e, t, n) {
                         className: R.tierCardBoostRequirement,
                         variant: "text-md/normal",
                         color: "always-white",
-                        children: p.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_BOOSTS_REQUIRED.format({
+                        children: O.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_BOOSTS_REQUIRED.format({
                             numBoostsRequired: N.AppliedGuildBoostsRequiredForBoostedGuildTier[e.tier]
                         })
                     })]

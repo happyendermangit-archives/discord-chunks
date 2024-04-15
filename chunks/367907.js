@@ -41,12 +41,12 @@ function(e, t, n) {
         T = n("131951"),
         f = n("496675"),
         S = n("158776"),
-        A = n("19780"),
-        h = n("306680"),
+        h = n("19780"),
+        A = n("306680"),
         m = n("944486"),
         N = n("914010"),
-        O = n("9156"),
-        p = n("979651"),
+        p = n("9156"),
+        O = n("979651"),
         R = n("626135"),
         C = n("70956"),
         g = n("700785"),
@@ -71,7 +71,7 @@ function(e, t, n) {
             a = _.default.getChannels(e),
             o = a[_.GUILD_SELECTABLE_CHANNELS_KEY].length,
             l = a[_.GUILD_VOCAL_CHANNELS_KEY].length,
-            d = p.default.getVoiceStates(e);
+            d = O.default.getVoiceStates(e);
         return {
             guild_id: n.id,
             guild_size_total: c.default.getMemberCount(e),
@@ -120,7 +120,7 @@ function(e, t, n) {
         let t = d.default.getChannel(e);
         if (null == t) return null;
         let n = T.default.isVideoEnabled(),
-            i = A.default.getMediaSessionId();
+            i = h.default.getMediaSessionId();
         return {
             channel_id: t.id,
             channel_type: t.type,
@@ -163,21 +163,21 @@ function(e, t, n) {
         if (null == n) return {
             channel_id: e
         };
-        let i = h.default.getSnapshot(e, 10 * C.default.Millis.SECOND);
+        let i = A.default.getSnapshot(e, 10 * C.default.Millis.SECOND);
         return {
             channel_id: e,
             channel_was_unread: i.unread,
             channel_mention_count: i.mentionCount,
-            channel_is_muted: O.default.isChannelMuted(t.guild_id, t.id),
+            channel_is_muted: p.default.isChannelMuted(t.guild_id, t.id),
             channel_is_nsfw: t.isNSFW(),
-            channel_resolved_unread_setting: O.default.resolveUnreadSetting(t),
-            channel_preset: (0, o.presetFromSettings)(O.default.resolveUnreadSetting(t), O.default.resolvedMessageNotifications(t)),
+            channel_resolved_unread_setting: p.default.resolveUnreadSetting(t),
+            channel_preset: (0, o.presetFromSettings)(p.default.resolveUnreadSetting(t), p.default.resolvedMessageNotifications(t)),
             guild_id: t.guild_id,
             guild_was_unread: i.guildUnread,
             guild_mention_count: i.guildMentionCount,
-            guild_is_muted: O.default.isMuted(t.guild_id),
-            guild_resolved_unread_setting: O.default.resolveGuildUnreadSetting(n),
-            guild_preset: (0, o.presetFromSettings)(O.default.resolveGuildUnreadSetting(n), O.default.getMessageNotifications(t.guild_id)),
+            guild_is_muted: p.default.isMuted(t.guild_id),
+            guild_resolved_unread_setting: p.default.resolveGuildUnreadSetting(n),
+            guild_preset: (0, o.presetFromSettings)(p.default.resolveGuildUnreadSetting(n), p.default.getMessageNotifications(t.guild_id)),
             parent_id: t.parent_id,
             parent_channel_type: t.parentChannelThreadType,
             has_pending_member_action: (0, a.hasPendingMemberAction)(t.guild_id, e),
@@ -191,7 +191,7 @@ function(e, t, n) {
             video_stream_count: 0,
             video_enabled: n
         };
-        return r()(p.default.getVoiceStates(e)).filter(e => e.channelId === t).filter(e => e.userId !== u.default.getId()).forEach(e => {
+        return r()(O.default.getVoiceStates(e)).filter(e => e.channelId === t).filter(e => e.userId !== u.default.getId()).forEach(e => {
             i.voice_state_count++, (e.selfVideo || e.selfStream) && i.video_stream_count++
         }), i
     }
@@ -200,7 +200,7 @@ function(e, t, n) {
         let n = {
             custom_status_count: 0
         };
-        return r()(p.default.getVoiceStates(e)).forEach(e => {
+        return r()(O.default.getVoiceStates(e)).forEach(e => {
             e.channelId === t && null != S.default.findActivity(e.userId, e => e.type === D.ActivityTypes.CUSTOM_STATUS) && n.custom_status_count++
         }), n
     }

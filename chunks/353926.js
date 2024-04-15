@@ -21,7 +21,7 @@ function(e, t, n) {
         f = n("987338"),
         S = n("981631");
 
-    function A(e, t, n) {
+    function h(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -29,11 +29,11 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    let h = "scientist:triggered",
+    let A = "scientist:triggered",
         m = "exerimentOverrides",
         N = "userExperimentOverrides",
-        O = "guildExperimentOverrides",
-        p = new _.default("ExperimentStore"),
+        p = "guildExperimentOverrides",
+        O = new _.default("ExperimentStore"),
         R = !1,
         C = {},
         g = {},
@@ -181,10 +181,10 @@ function(e, t, n) {
                 experiments: n,
                 guildExperiments: i
             } = e;
-        t && Q(n, i), R = !0
+        t && q(n, i), R = !0
     }
 
-    function Q(e, t) {
+    function q(e, t) {
         L = e, D = null != t ? t : [], e.forEach(e => {
             let [t, n, i, r, s, a, o, l] = e;
             v[t] = {
@@ -223,7 +223,7 @@ function(e, t, n) {
         })
     }
 
-    function q(e, t, n) {
+    function Q(e, t, n) {
         let i = null;
         for (let {
                 buckets: s,
@@ -287,26 +287,26 @@ function(e, t, n) {
         let {
             isSwitchingAccount: t
         } = e;
-        u.Storage.remove(h), !t && (u.Storage.remove(m), u.Storage.remove(N), u.Storage.remove(O), P = {}, U = {}), v = {}, L = [], C = {}, R = !1
+        u.Storage.remove(A), !t && (u.Storage.remove(m), u.Storage.remove(N), u.Storage.remove(p), P = {}, U = {}), v = {}, L = [], C = {}, R = !1
     }
 
     function et() {
-        R = !1, C = {}, u.Storage.remove(h)
+        R = !1, C = {}, u.Storage.remove(A)
     }
 
     function en() {
         try {
             u.Storage.set(N, P)
         } catch (e) {
-            p.error("Error saving user experiment overrides, unsaved data will be lost", e), I.default.track(S.AnalyticEvents.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
+            O.error("Error saving user experiment overrides, unsaved data will be lost", e), I.default.track(S.AnalyticEvents.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
                 module: "discord_app",
                 call: "ExperimentStore.saveExperimentOverrides"
             })
         }
         try {
-            u.Storage.set(O, U)
+            u.Storage.set(p, U)
         } catch (e) {
-            p.error("Error saving guild experiment overrides, unsaved data will be lost", e), I.default.track(S.AnalyticEvents.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
+            O.error("Error saving guild experiment overrides, unsaved data will be lost", e), I.default.track(S.AnalyticEvents.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
                 module: "discord_app",
                 call: "ExperimentStore.saveExperimentOverrides"
             })
@@ -315,12 +315,12 @@ function(e, t, n) {
 
     function ei(e) {
         try {
-            u.Storage.set(h, {
+            u.Storage.set(A, {
                 v: 1,
                 e: e
             })
         } catch (e) {
-            p.error("Error saving tracked exposure experiments, unsaved data will be lost", e), I.default.track(S.AnalyticEvents.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
+            O.error("Error saving tracked exposure experiments, unsaved data will be lost", e), I.default.track(S.AnalyticEvents.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
                 module: "discord_app",
                 call: "ExperimentStore.saveTrackedExposureExperiments"
             })
@@ -409,7 +409,7 @@ function(e, t, n) {
     class el extends E.default {
         initialize() {
             C = function() {
-                let e = u.Storage.get(h);
+                let e = u.Storage.get(A);
                 if (null == e || 1 !== e.v) return {};
                 let t = e.e,
                     n = Date.now(),
@@ -418,7 +418,7 @@ function(e, t, n) {
                 return i && ei(t), t
             }(), ! function() {
                 var e, t, n;
-                let i = [null !== (e = u.Storage.get(m)) && void 0 !== e ? e : {}, null !== (t = u.Storage.get(N)) && void 0 !== t ? t : {}, null !== (n = u.Storage.get(O)) && void 0 !== n ? n : {}];
+                let i = [null !== (e = u.Storage.get(m)) && void 0 !== e ? e : {}, null !== (t = u.Storage.get(N)) && void 0 !== t ? t : {}, null !== (n = u.Storage.get(p)) && void 0 !== n ? n : {}];
                 P = {}, U = {};
                 let r = !a().isEmpty(i[0]);
                 for (let e of i)
@@ -446,7 +446,7 @@ function(e, t, n) {
         }
         loadCache() {
             let e = this.readSnapshot(el.LATEST_SNAPSHOT_VERSION);
-            null != e && ("loadedUserExperiments" in e ? (v = e.loadedUserExperiments, M = Z(e.loadedGuildExperiments)) : Q(e.rawUserExperiments, e.rawGuildExperiments))
+            null != e && ("loadedUserExperiments" in e ? (v = e.loadedUserExperiments, M = Z(e.loadedGuildExperiments)) : q(e.rawUserExperiments, e.rawGuildExperiments))
         }
         takeSnapshot() {
             return {
@@ -498,7 +498,7 @@ function(e, t, n) {
                 let _ = w("".concat(null !== (i = a.hashKey) && void 0 !== i ? i : n, ":").concat(t)) % 1e4,
                     c = null;
                 for (let e of null !== (r = a.overridesFormatted) && void 0 !== r ? r : [])
-                    if (null !== (c = q(t, e, _))) return {
+                    if (null !== (c = Q(t, e, _))) return {
                         type: f.ExperimentTypes.GUILD,
                         guildId: t,
                         revision: a.revision,
@@ -507,7 +507,7 @@ function(e, t, n) {
                         hashResult: _,
                         triggerDebuggingEnabled: d
                     };
-                if (null == (c = q(t, a.populations, _))) return null;
+                if (null == (c = Q(t, a.populations, _))) return null;
                 if (null != a.holdoutName && null != a.holdoutBucket && a.holdoutName !== n) {
                     let n = e(t, a.holdoutName);
                     if ((null == n ? void 0 : n.bucket) != null && (!0 !== n.override && W({
@@ -616,8 +616,8 @@ function(e, t, n) {
                 EXPERIMENT_OVERRIDE_BUCKET: ea,
                 GUILD_CREATE: eo,
                 GUILD_UPDATE: eo
-            }), A(this, "trackExposure", W)
+            }), h(this, "trackExposure", W)
         }
     }
-    A(el, "displayName", "ExperimentStore"), A(el, "LATEST_SNAPSHOT_VERSION", 1), t.default = new el
+    h(el, "displayName", "ExperimentStore"), h(el, "LATEST_SNAPSHOT_VERSION", 1), t.default = new el
 }

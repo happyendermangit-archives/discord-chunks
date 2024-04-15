@@ -26,12 +26,12 @@ function(e, t, n) {
         T = n("680295"),
         f = n("430824"),
         S = n("759231"),
-        A = n("806519"),
-        h = n("626135"),
+        h = n("806519"),
+        A = n("626135"),
         m = n("74538"),
         N = n("998502"),
-        O = n("785717"),
-        p = n("621853"),
+        p = n("785717"),
+        O = n("621853"),
         R = n("204197"),
         C = n("735336"),
         g = n("793397"),
@@ -52,7 +52,7 @@ function(e, t, n) {
             guildId: n,
             isTryItOutFlow: r,
             forProfileEffectModal: s
-        } = e, a = (0, l.useStateFromStores)([p.default], () => p.default.getUserProfile(t.id), [t]), o = (0, l.useStateFromStores)([f.default], () => f.default.getGuild(n), [n]), _ = (0, E.useClydeProfilesEnabled)(o);
+        } = e, a = (0, l.useStateFromStores)([O.default], () => O.default.getUserProfile(t.id), [t]), o = (0, l.useStateFromStores)([f.default], () => f.default.getGuild(n), [n]), _ = (0, E.useClydeProfilesEnabled)(o);
         return (0, i.jsxs)(i.Fragment, {
             children: [(null == a ? void 0 : a.profileFetchFailed) && (!t.isClyde() || _) && (0, i.jsx)(d.Tooltip, {
                 text: U.default.Messages.USER_PROFILE_LOAD_ERROR,
@@ -86,28 +86,28 @@ function(e, t, n) {
             onClose: f,
             disableUserProfileLink: S,
             profileType: N,
-            animateOnHover: p,
+            animateOnHover: O,
             hasProfileEffect: C
         } = e, {
             profileTheme: L
-        } = (0, D.useUserProfileThemeContext)(), B = r.useContext(h.AnalyticsContext), V = t.isNonUserBot() && !t.isClyde(), F = m.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, P.PremiumTypes.TIER_2), x = r.useMemo(() => (0, I.shouldDisableUserPresenceInChannel)(t, T), [t, T]), {
+        } = (0, D.useUserProfileThemeContext)(), B = r.useContext(A.AnalyticsContext), V = t.isNonUserBot() && !t.isClyde(), F = m.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, P.PremiumTypes.TIER_2), x = r.useMemo(() => (0, I.shouldDisableUserPresenceInChannel)(t, T), [t, T]), {
             analyticsLocations: H
         } = (0, _.default)(), {
             trackUserProfileAction: Y,
             messageId: j,
             roleId: W
-        } = (0, O.useUserProfileAnalyticsContext)(), K = S || t.isClyde(), {
+        } = (0, p.useUserProfileAnalyticsContext)(), K = S || t.isClyde(), {
             avatarDecorationSrc: z,
             avatarSrc: X,
-            eventHandlers: Q
+            eventHandlers: q
         } = (0, R.default)({
             user: t,
             guildId: E,
             size: G,
-            animateOnHover: p
-        }), q = (0, i.jsx)("div", {
+            animateOnHover: O
+        }), Q = (0, i.jsx)("div", {
             className: b.avatarHoverTarget,
-            ...Q,
+            ...q,
             children: (0, i.jsx)(k, {
                 src: null != s ? s : X,
                 avatarDecoration: z,
@@ -147,11 +147,11 @@ function(e, t, n) {
                         analyticsLocation: B.location
                     }), null == f || f()
                 },
-                children: [q, !K && function() {
+                children: [Q, !K && function() {
                     let e = null != z,
                         t = e ? w : (0, d.getAvatarSize)(G);
-                    return (0, i.jsx)(A.default, {
-                        mask: null == u || u === y.StatusTypes.UNKNOWN || x ? A.default.Masks.AVATAR_DEFAULT : (0, o.match)([e, c]).with([!0, !0], () => A.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_MOBILE_SQUARE_80).with([!0, !1], () => A.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_SQUARE_80).with([!1, !0], () => A.default.Masks.AVATAR_STATUS_MOBILE_80).with([!1, !1], () => A.default.Masks.AVATAR_STATUS_ROUND_80).exhaustive(),
+                    return (0, i.jsx)(h.default, {
+                        mask: null == u || u === y.StatusTypes.UNKNOWN || x ? h.default.Masks.AVATAR_DEFAULT : (0, o.match)([e, c]).with([!0, !0], () => h.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_MOBILE_SQUARE_80).with([!0, !1], () => h.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_SQUARE_80).with([!1, !0], () => h.default.Masks.AVATAR_STATUS_MOBILE_80).with([!1, !1], () => h.default.Masks.AVATAR_STATUS_ROUND_80).exhaustive(),
                         className: e ? b.avatarDecorationHint : b.avatarHint,
                         style: e ? {
                             borderRadius: .4 * t

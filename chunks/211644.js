@@ -2,25 +2,25 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         addCandidateContent: function() {
-            return A
+            return h
         },
         default: function() {
             return C
         },
         getCurrentlyShownCounts: function() {
-            return p
+            return O
         },
         isContentShown: function() {
             return m
         },
         removeCandidateContent: function() {
-            return h
+            return A
         },
         reset: function() {
             return R
         },
         useIsAnyContentShown: function() {
-            return O
+            return p
         },
         useIsContentShown: function() {
             return N
@@ -81,14 +81,14 @@ function(e, t, n) {
                 })
             }, 250), e)
         },
-        A = e => {
+        h = e => {
             let t = r.CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(e.content);
             o.setState(n => {
                 let i = l(n);
                 return t ? d(i, e) : S(_(i, e))
             })
         },
-        h = (e, t) => {
+        A = (e, t) => {
             o.setState(n => {
                 let i = l(n);
                 return t ? S(u(c(i, e), e)) : u(c(i, e), e)
@@ -96,8 +96,8 @@ function(e, t, n) {
         },
         m = e => o.getState().currentlyShown.has(e),
         N = e => o(t => t.currentlyShown.has(e)),
-        O = e => o(t => e.some(e => t.currentlyShown.has(e))),
-        p = () => {
+        p = e => o(t => e.some(e => t.currentlyShown.has(e))),
+        O = () => {
             let e = [...o.getState().currentlyShown].filter(e => !r.CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(e)).length;
             return [o.getState().currentlyShown.size, e]
         },

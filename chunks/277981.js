@@ -16,8 +16,8 @@ function(e, t, n) {
         T = n("590921"),
         f = n("665692"),
         S = n("981631"),
-        A = n("689938"),
-        h = n("490293");
+        h = n("689938"),
+        A = n("490293");
     let m = {
         results: {
             command: null,
@@ -34,7 +34,7 @@ function(e, t, n) {
             query: t.trim()
         }
     }
-    let O = {
+    let p = {
         stores: [d.default, c.default],
         matches(e, t, n, i, r) {
             var s;
@@ -75,17 +75,17 @@ function(e, t, n) {
             } = N(a, l, u);
             if (null == f || 0 === m.length) return null;
             if (n) return (0, i.jsx)(o.Spinner, {
-                className: h.spinner,
+                className: A.spinner,
                 type: o.Spinner.Type.SPINNING_CIRCLE
             });
             if (null != t) {
-                var O, p;
+                var p, O;
                 let e = !1,
                     n = t.map((t, n) => {
                         if (t.type === S.ChannelTextAreaIntegrationTypes.GIF) {
                             var r, a, o;
                             return e = !0, (0, i.jsx)(E.default.GIFIntegration, {
-                                className: h.horizontalAutocomplete,
+                                className: A.horizontalAutocomplete,
                                 onClick: c,
                                 onHover: _,
                                 selected: s === n,
@@ -97,8 +97,8 @@ function(e, t, n) {
                             }, "".concat(t.meta.url).concat(t.meta.src))
                         }
                     }),
-                    o = u.commands === T.CommandMode.OLD_BUILT_INS ? f : null !== (p = null === (O = d.default.getActiveCommand(a.id)) || void 0 === O ? void 0 : O.integrationTitle) && void 0 !== p ? p : f,
-                    l = m.length > 0 && null != o ? A.default.Messages.CONTENT_MATCHING.format({
+                    o = u.commands === T.CommandMode.OLD_BUILT_INS ? f : null !== (O = null === (p = d.default.getActiveCommand(a.id)) || void 0 === p ? void 0 : p.integrationTitle) && void 0 !== O ? O : f,
+                    l = m.length > 0 && null != o ? h.default.Messages.CONTENT_MATCHING.format({
                         query: m,
                         command: o
                     }) : null != o ? o : f;
@@ -106,7 +106,7 @@ function(e, t, n) {
                     children: [(0, i.jsx)(E.default.Title, {
                         title: l
                     }), e ? (0, i.jsx)(I.default, {
-                        className: h.horizontalAutocompletes,
+                        className: A.horizontalAutocompletes,
                         children: n
                     }) : n]
                 }, "gifs")
@@ -149,8 +149,8 @@ function(e, t, n) {
         }
     };
 
-    function p(e) {
+    function O(e) {
         return e.meta.url
     }
-    t.default = O
+    t.default = p
 }

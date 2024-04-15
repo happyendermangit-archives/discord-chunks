@@ -26,12 +26,12 @@ function(e, t, n) {
             showIconFirst: T = !1,
             imageUrl: f,
             hint: S,
-            subtext: A,
-            hasSubmenu: h,
+            subtext: h,
+            hasSubmenu: A,
             disabled: m,
             isFocused: N,
-            menuItemProps: O,
-            action: p,
+            menuItemProps: p,
+            action: O,
             onClose: R,
             onFocus: C,
             className: g,
@@ -42,9 +42,9 @@ function(e, t, n) {
             iconProps: y,
             sparkle: P
         } = e, U = r.useContext(u.OnMenuSelectContext), b = r.useRef(null), G = r.useCallback(e => {
-            if (null == p) return !1;
-            !(e.shiftKey && v) && !M && R(), e.persist(), null == U || U(), requestAnimationFrame(() => p(e))
-        }, [p, R, U, v, M]);
+            if (null == O) return !1;
+            !(e.shiftKey && v) && !M && R(), e.persist(), null == U || U(), requestAnimationFrame(() => O(e))
+        }, [O, R, U, v, M]);
         return r.useEffect(() => {
             N && ((0, d.ensureItemVisible)(b), null == C || C())
         }, [N, C]), (0, i.jsxs)(o.Clickable, {
@@ -56,7 +56,7 @@ function(e, t, n) {
             }),
             onClick: m ? void 0 : G,
             "aria-disabled": m,
-            ...O,
+            ...p,
             "data-menu-item": "true",
             children: [T && null != s && (0, i.jsx)("div", {
                 className: I.iconContainerLeft,
@@ -67,9 +67,9 @@ function(e, t, n) {
                 })
             }), (0, i.jsxs)("div", {
                 className: I.label,
-                children: [(0, l.renderSubnode)(n, e), null != A && (0, i.jsx)("div", {
+                children: [(0, l.renderSubnode)(n, e), null != h && (0, i.jsx)("div", {
                     className: I.subtext,
-                    children: A
+                    children: h
                 })]
             }), null != S && (0, i.jsx)("div", {
                 className: I.hintContainer,
@@ -88,7 +88,7 @@ function(e, t, n) {
                     src: (0, l.renderSubnode)(f, e),
                     alt: ""
                 })
-            }), h && (0, i.jsxs)("div", {
+            }), A && (0, i.jsxs)("div", {
                 className: I.iconContainer,
                 children: [(0, i.jsx)(c.default, {
                     className: a()(I.caret, D)

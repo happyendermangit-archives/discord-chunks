@@ -34,8 +34,8 @@ function(e, t, n) {
             guildId: T,
             reviewWarningMessage: f,
             applicationId: S,
-            showBenefitsFirst: A,
-            eligibleApplicationSubscriptionGuilds: h,
+            showBenefitsFirst: h,
+            eligibleApplicationSubscriptionGuilds: A,
             onComplete: m,
             forcesTransitionToGuild: N
         } = e;
@@ -44,15 +44,15 @@ function(e, t, n) {
                 PaymentContextProvider: e
             } = await Promise.resolve().then(n.bind(n, "598")), a = (await Promise.all([n.e("49237"), n.e("99387"), n.e("15972"), n.e("6416"), n.e("32776"), n.e("10993")]).then(n.bind(n, "405083"))).default, {
                 getApplicationPaymentSteps: c
-            } = await Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("40326"), n.e("23357"), n.e("58625"), n.e("14720"), n.e("63438"), n.e("62511"), n.e("61247"), n.e("58600"), n.e("95900"), n.e("74195")]).then(n.bind(n, "759386")), O = c({
+            } = await Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("40326"), n.e("23357"), n.e("58625"), n.e("14720"), n.e("63438"), n.e("62511"), n.e("61247"), n.e("58600"), n.e("95900"), n.e("74195")]).then(n.bind(n, "759386")), p = c({
                 guildId: T,
-                showBenefitsFirst: A,
-                eligibleApplicationSubscriptionGuilds: h
+                showBenefitsFirst: h,
+                eligibleApplicationSubscriptionGuilds: A
             });
             return n => (0, i.jsx)(e, {
                 applicationId: S,
                 activeSubscription: r,
-                stepConfigs: O,
+                stepConfigs: p,
                 skuIDs: [I],
                 children: (0, i.jsx)(_.GiftContextProvider, {
                     children: (0, i.jsx)(a, {

@@ -23,12 +23,12 @@ function(e, t, n) {
         T = n("603721"),
         f = n("188597"),
         S = n("3148"),
-        A = n("346479"),
-        h = n("706454"),
+        h = n("346479"),
+        A = n("706454"),
         m = n("430824"),
         N = n("117530"),
-        O = n("594174"),
-        p = n("403182"),
+        p = n("594174"),
+        O = n("403182"),
         R = n("823379"),
         C = n("861990"),
         g = n("555573"),
@@ -59,7 +59,7 @@ function(e, t, n) {
             return t || n ? t : null
         };
     async function V(e) {
-        var t, n, i, a, l, d, _, I, T, f, S, m, O, p, R;
+        var t, n, i, a, l, d, _, I, T, f, S, m, p, O, R;
         let {
             command: C,
             optionValues: L,
@@ -73,7 +73,7 @@ function(e, t, n) {
             context: v,
             command: C,
             commandOrigin: G
-        }), await A.default.unarchiveThreadIfNecessary(v.channel.id);
+        }), await h.default.unarchiveThreadIfNecessary(v.channel.id);
         let V = [],
             x = [],
             Y = (0, y.getCommandAttachmentDraftType)(G);
@@ -154,7 +154,7 @@ function(e, t, n) {
                             if ((0, y.isSnowflake)(o.text)) n = o.text.trim();
                             else {
                                 let e = (0, E.resolveApplicationCommandOption)(o.text, null === (m = v.guild) || void 0 === m ? void 0 : m.id, v.channel.id);
-                                (null == e ? void 0 : e.type) === "userMention" ? n = e.userId: (null == e ? void 0 : e.type) === "roleMention" ? n = e.roleId : (null == e ? void 0 : e.type) === "textMention" && "@everyone" === e.text ? n = null === (O = v.guild) || void 0 === O ? void 0 : O.id : r()(!1, "Failed to resolve ".concat(o.text))
+                                (null == e ? void 0 : e.type) === "userMention" ? n = e.userId: (null == e ? void 0 : e.type) === "roleMention" ? n = e.roleId : (null == e ? void 0 : e.type) === "textMention" && "@everyone" === e.text ? n = null === (p = v.guild) || void 0 === p ? void 0 : p.id : r()(!1, "Failed to resolve ".concat(o.text))
                             }
                         }
                         break;
@@ -164,13 +164,13 @@ function(e, t, n) {
                     case u.ApplicationCommandOptionType.INTEGER:
                         if ("text" === o.type) {
                             let t = o.text.trim();
-                            n = null != e.choices ? Number(w(e.choices, t)) : e.autocomplete ? B(e, t, v, Number) : Number(D.normalizeNumericString(h.default.locale, t))
+                            n = null != e.choices ? Number(w(e.choices, t)) : e.autocomplete ? B(e, t, v, Number) : Number(D.normalizeNumericString(A.default.locale, t))
                         }
                         break;
                     case u.ApplicationCommandOptionType.NUMBER:
                         if ("text" === o.type) {
                             let t = o.text.trim();
-                            n = null != e.choices ? Number(w(e.choices, t)) : e.autocomplete ? B(e, t, v, Number) : Number(D.normalizeNumericString(h.default.locale, t))
+                            n = null != e.choices ? Number(w(e.choices, t)) : e.autocomplete ? B(e, t, v, Number) : Number(D.normalizeNumericString(A.default.locale, t))
                         }
                         break;
                     default:
@@ -205,7 +205,7 @@ function(e, t, n) {
         if (C.inputType === M.ApplicationCommandInputType.BUILT_IN || C.inputType === M.ApplicationCommandInputType.BUILT_IN_TEXT || C.inputType === M.ApplicationCommandInputType.BUILT_IN_INTEGRATION) return;
         let j = {
             version: C.version,
-            id: null !== (p = null === (t = C.rootCommand) || void 0 === t ? void 0 : t.id) && void 0 !== p ? p : C.id,
+            id: null !== (O = null === (t = C.rootCommand) || void 0 === t ? void 0 : t.id) && void 0 !== O ? O : C.id,
             guild_id: C.guildId,
             name: null !== (R = null === (n = C.rootCommand) || void 0 === n ? void 0 : n.name) && void 0 !== R ? R : C.name,
             type: C.type,
@@ -261,15 +261,15 @@ function(e, t, n) {
             } = e, {
                 channel: I,
                 guild: f
-            } = r, A = I.id, h = null == f ? void 0 : f.id, m = v.getCachedApplicationSection(r.channel, i.type, n);
+            } = r, h = I.id, A = null == f ? void 0 : f.id, m = v.getCachedApplicationSection(r.channel, i.type, n);
             if (null == m) return;
             let N = null === (t = m.application) || void 0 === t ? void 0 : t.bot;
             if (null == N && null != m.botId) try {
                 await l.getUser(m.botId)
             } catch {}
-            let p = {
+            let O = {
                 ...(0, S.default)({
-                    channelId: A,
+                    channelId: h,
                     content: "",
                     type: i.type === u.ApplicationCommandType.CHAT ? U.MessageTypes.CHAT_INPUT_COMMAND : U.MessageTypes.CONTEXT_MENU_COMMAND,
                     author: null != N ? N : {
@@ -286,42 +286,42 @@ function(e, t, n) {
                     name: i.name,
                     name_localized: c,
                     type: u.InteractionTypes.APPLICATION_COMMAND,
-                    user: (0, S.userRecordToServer)(O.default.getCurrentUser())
+                    user: (0, S.userRecordToServer)(p.default.getCurrentUser())
                 },
                 interaction_data: i
             };
-            a.default.receiveMessage(A, p, !0, {
+            a.default.receiveMessage(h, O, !0, {
                 applicationId: n
             });
             let R = (e, t) => {
-                    null == t && null != e && a.default.sendClydeError(A, e), s.default.dispatch({
+                    null == t && null != e && a.default.sendClydeError(h, e), s.default.dispatch({
                         type: "MESSAGE_SEND_FAILED",
-                        messageId: p.id,
-                        channelId: A,
+                        messageId: O.id,
+                        channelId: h,
                         reason: t
                     })
                 },
                 C = {
                     applicationId: n,
-                    channelId: A,
-                    guildId: h,
+                    channelId: h,
+                    guildId: A,
                     data: i,
-                    nonce: p.id,
+                    nonce: O.id,
                     attachments: o,
                     maxSizeCallback: d,
                     analytics_location: E
                 };
             T.addQueued(C.nonce, {
-                messageId: p.id,
+                messageId: O.id,
                 onCreate: e => {
-                    null != p.interaction && (p.interaction.id = e)
+                    null != O.interaction && (O.interaction.id = e)
                 },
                 onFailure: (e, t) => R(e, t),
                 data: {
                     interactionType: u.InteractionTypes.APPLICATION_COMMAND,
-                    channelId: A
+                    channelId: h
                 }
-            }), null != o ? W(o, C.nonce, h, d).then(e => {
+            }), null != o ? W(o, C.nonce, A, d).then(e => {
                 e && Y(C, _)
             }) : Y(C, _)
         };
@@ -349,10 +349,10 @@ function(e, t, n) {
         }
     }
     async function W(e, t, n, i) {
-        let r = (0, p.maxFileSize)(n),
+        let r = (0, O.maxFileSize)(n),
             s = e => {
                 null == i || i(r, e), T.setFailed(t, U.AbortCodes.ENTITY_TOO_LARGE, G.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
-                    maxSize: (0, p.sizeString)(r)
+                    maxSize: (0, O.sizeString)(r)
                 }))
             },
             {

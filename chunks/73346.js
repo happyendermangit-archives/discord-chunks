@@ -44,13 +44,13 @@ function(e, t, n) {
         T = n("78839"),
         f = n("526167"),
         S = n("630388"),
-        A = n("823379"),
-        h = n("358085"),
+        h = n("823379"),
+        A = n("358085"),
         m = n("709054"),
         N = n("981631"),
-        O = n("689938");
+        p = n("689938");
     l().shim();
-    let p = !u.isMobile && !u.isTablet && -1 !== (0, f.getChromeVersion)();
+    let O = !u.isMobile && !u.isTablet && -1 !== (0, f.getChromeVersion)();
 
     function R(e, t) {
         let {
@@ -101,7 +101,7 @@ function(e, t, n) {
             default:
                 i = "webp"
         }
-        "webp" === i && !p && (i = "png");
+        "webp" === i && !O && (i = "png");
         let o = "string" == typeof t ? t : t.id,
             l = (r = "https:", "https:");
         return s = null != a ? "".concat(l, "//").concat(a, "/app-assets/").concat(e, "/store/").concat(o, ".").concat(i) : "".concat(l).concat(window.GLOBAL_ENV.API_ENDPOINT).concat(N.Endpoints.STORE_ASSET(e, o, i)), null != n && (s += "?size=".concat((0, c.getBestMediaProxySize)(n * (0, c.getDevicePixelRatio)()))), s
@@ -141,11 +141,11 @@ function(e, t, n) {
 
     function D(e) {
         switch (e) {
-            case h.PlatformTypes.WINDOWS:
+            case A.PlatformTypes.WINDOWS:
                 return N.OperatingSystems.WINDOWS;
-            case h.PlatformTypes.OSX:
+            case A.PlatformTypes.OSX:
                 return N.OperatingSystems.MACOS;
-            case h.PlatformTypes.LINUX:
+            case A.PlatformTypes.LINUX:
                 return N.OperatingSystems.LINUX;
             default:
                 return null
@@ -155,11 +155,11 @@ function(e, t, n) {
     function v(e) {
         switch (e) {
             case N.OperatingSystems.WINDOWS:
-                return O.default.Messages.WINDOWS;
+                return p.default.Messages.WINDOWS;
             case N.OperatingSystems.MACOS:
-                return O.default.Messages.MACOS;
+                return p.default.Messages.MACOS;
             case N.OperatingSystems.LINUX:
-                return O.default.Messages.LINUX
+                return p.default.Messages.LINUX
         }
         throw Error("Unknown operating system value: ".concat(e))
     }
@@ -185,7 +185,7 @@ function(e, t, n) {
                             user: n,
                             startTime: r[n.id].startedPlaying
                         }
-                    }).filter(A.isNotNullish).sort((e, t) => t.startTime - e.startTime);
+                    }).filter(h.isNotNullish).sort((e, t) => t.startTime - e.startTime);
                 return 0 === s.length ? null : {
                     type: N.StoreRecommendationTypes.NOW_PLAYING,
                     userInfo: s
@@ -210,7 +210,7 @@ function(e, t, n) {
                             user: n,
                             endTime: Date.parse(e.last_played_at)
                         }
-                    }).filter(A.isNotNullish).sort((e, t) => t.endTime - e.endTime);
+                    }).filter(h.isNotNullish).sort((e, t) => t.endTime - e.endTime);
                     return 0 === r.length ? null : {
                         type: N.StoreRecommendationTypes.EVER_PLAYED,
                         userInfo: r

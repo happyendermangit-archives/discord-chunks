@@ -5,7 +5,7 @@ function(e, t, n) {
             return C
         },
         getAssetFromImageURL: function() {
-            return h
+            return A
         },
         getAssetIds: function() {
             return g
@@ -55,7 +55,7 @@ function(e, t, n) {
             }
         },
         S = {};
-    async function A(e) {
+    async function h(e) {
         let {
             body: t
         } = await s.HTTP.get({
@@ -69,7 +69,7 @@ function(e, t, n) {
         }), o.default.getApplicationAssets(e)
     }
 
-    function h(e, t) {
+    function A(e, t) {
         let n = f[e].serialize(t);
         return n ? "".concat(e, ":").concat(n.toString()) : null
     }
@@ -95,11 +95,11 @@ function(e, t, n) {
         function(e) {
             var t;
             let n = o.default.getApplicationAssets(e);
-            return null == n || (t = n.lastUpdated, Date.now() - t > 36e5) ? A(e) : Promise.resolve(n)
+            return null == n || (t = n.lastUpdated, Date.now() - t > 36e5) ? h(e) : Promise.resolve(n)
         }(e);
         return null == t ? void 0 : t.assets
     }
-    async function O(e, t) {
+    async function p(e, t) {
         let n = t.filter(e => null != e && !Object.prototype.hasOwnProperty.call(S, e) && null == S[e]);
         if (0 === n.length) return;
         let {
@@ -118,14 +118,14 @@ function(e, t, n) {
             of i) S[e] = t
     }
 
-    function p(e, t) {
+    function O(e, t) {
         let n = 0;
         if (e.filter(e => (null == e ? void 0 : e.startsWith("http:")) || (null == e ? void 0 : e.startsWith("https:"))).length > 0)
             for (let i = 0; i < e.length; i++) {
                 let r = e[i];
                 if (null == r) continue;
                 let s = Object.prototype.hasOwnProperty.call(S, r) ? S[r] : void 0;
-                null != s && (t[i] = h("mp", s), n++)
+                null != s && (t[i] = A("mp", s), n++)
             }
         return n === e.length
     }
@@ -155,10 +155,10 @@ function(e, t, n) {
         });
         let i = [],
             r = t.filter(e => (null == e ? void 0 : e.startsWith("http:")) || (null == e ? void 0 : e.startsWith("https:")));
-        return (r.length > 0 && await O(e, r), p(t, i)) ? (a.default.dispatch({
+        return (r.length > 0 && await p(e, r), O(t, i)) ? (a.default.dispatch({
             type: "APPLICATION_ASSETS_FETCH_SUCCESS",
             applicationId: e
-        }), i) : R(t, i, await N(e), n) ? A(e).then(() => C(e, t, n - 1)) : (a.default.dispatch({
+        }), i) : R(t, i, await N(e), n) ? h(e).then(() => C(e, t, n - 1)) : (a.default.dispatch({
             type: "APPLICATION_ASSETS_FETCH_SUCCESS",
             applicationId: e
         }), i)
@@ -166,7 +166,7 @@ function(e, t, n) {
 
     function g(e, t) {
         let n = [];
-        if (p(t, n)) return n;
+        if (O(t, n)) return n;
         let i = o.default.getApplicationAssets(e);
         return null == i ? n : (R(t, n, i), n)
     }

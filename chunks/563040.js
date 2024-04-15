@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         TimeOptions: function() {
-            return A
+            return h
         },
         convertToTimeOfADay: function() {
             return I
@@ -40,7 +40,7 @@ function(e, t, n) {
         T = r()("2021-04-12T00:00:00"),
         f = (e, t) => e.clone().hours(t.hour()).minutes(t.minutes()).seconds(0),
         S = (e, t) => e.value.unix() - t.value.unix();
-    class A {
+    class h {
         lookupByValue(e) {
             if (null == e) return;
             let t = f(T, e);

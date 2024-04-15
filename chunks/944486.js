@@ -10,12 +10,12 @@ function(e, t, n) {
         T = n.n(I),
         f = n("442837"),
         S = n("433517"),
-        A = n("570140"),
-        h = n("57132"),
+        h = n("570140"),
+        A = n("57132"),
         m = n("781157"),
         N = n("703656"),
-        O = n("131704"),
-        p = n("823379"),
+        p = n("131704"),
+        O = n("823379"),
         R = n("314897"),
         C = n("592125"),
         g = n("984933"),
@@ -42,9 +42,9 @@ function(e, t, n) {
             lastConnectedTime: l,
             selectedChannelIds: U,
             mostRecentSelectedTextChannelIds: G,
-            knownThreadIds: T()(U).values().concat(T().values(G)).filter(p.isNotNullish).uniq().filter(e => {
+            knownThreadIds: T()(U).values().concat(T().values(G)).filter(O.isNotNullish).uniq().filter(e => {
                 let t = C.default.getBasicChannel(e);
-                return w.has(e) || null != t && O.THREAD_CHANNEL_TYPES.has(t.type)
+                return w.has(e) || null != t && p.THREAD_CHANNEL_TYPES.has(t.type)
             }).value()
         })
     }
@@ -59,7 +59,7 @@ function(e, t, n) {
     function F(e, t) {
         if (null == e || null == t || G[e] === t) return !1;
         let n = C.default.getChannel(t),
-            i = null != n && (0, O.isGuildTextChannelType)(n.type),
+            i = null != n && (0, p.isGuildTextChannelType)(n.type),
             r = (null == n ? void 0 : n.getGuildId()) === e;
         return !!i && !!r && (G[e] = t, !0)
     }
@@ -90,7 +90,7 @@ function(e, t, n) {
         }
         let n = null != L.default.getGuild(t) ? t : null,
             i = !1;
-        o === e && (o = null, i = !0), !(0, h.isInMainTabsExperiment)() && (U[B(n)] === e && (U[B(n)] = V(B(n)), v.default.getGuildId() === n && (0, N.replaceWith)(M.Routes.CHANNEL(t, U[B(n)])), i = !0), null != n && G[n] === e && (delete G[n], i = !0)), i && k()
+        o === e && (o = null, i = !0), !(0, A.isInMainTabsExperiment)() && (U[B(n)] === e && (U[B(n)] = V(B(n)), v.default.getGuildId() === n && (0, N.replaceWith)(M.Routes.CHANNEL(t, U[B(n)])), i = !0), null != n && G[n] === e && (delete G[n], i = !0)), i && k()
     }
 
     function j(e) {
@@ -152,7 +152,7 @@ function(e, t, n) {
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : _[c] = E, t.default = new W(A.default, {
+    }) : _[c] = E, t.default = new W(h.default, {
         CONNECTION_OPEN: function(e) {
             i = e.sessionId, null != o && null == C.default.getChannel(o) && (o = null), H() && k()
         },
@@ -168,7 +168,7 @@ function(e, t, n) {
                 channelId: n
             } = e;
             if (void 0 === t) return !1;
-            null == n && (!(0, h.isInMainTabsExperiment)() || (0, m.shouldHandleNewPanelsRoute)(t)) && (n = V(t)), null != s && n !== s && (r = s), s = n, F(t, n), U[B(t)] !== n && (b[B(t)] = U[B(t)], U[B(t)] = s), k()
+            null == n && (!(0, A.isInMainTabsExperiment)() || (0, m.shouldHandleNewPanelsRoute)(t)) && (n = V(t)), null != s && n !== s && (r = s), s = n, F(t, n), U[B(t)] !== n && (b[B(t)] = U[B(t)], U[B(t)] = s), k()
         },
         CHANNEL_CREATE: function(e) {
             let {

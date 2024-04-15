@@ -16,9 +16,9 @@ function(e, t, n) {
         T = n("430824"),
         f = n("412788"),
         S = n("9156"),
-        A = n("594174");
+        h = n("594174");
 
-    function h(e, t, n) {
+    function A(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -43,7 +43,7 @@ function(e, t, n) {
         }
     }
 
-    function O(e, t) {
+    function p(e, t) {
         let n = m;
         if (m = new l.GuildsTree, 0 === e.length && t.length > 0)
             for (let e of t) m.addNode((0, l.createGuildNode)(e));
@@ -62,15 +62,15 @@ function(e, t, n) {
         }(e => null == m.nodes[e], e => m.addNode((0, l.createGuildNode)(e), m.root, !1)), !s()(n, m)
     }
 
-    function p() {
+    function O() {
         var e, t, n;
-        return O(null !== (t = d.default.getGuildFolders()) && void 0 !== t ? t : [], null !== (n = null === (e = d.default.settings.guildFolders) || void 0 === e ? void 0 : e.guildPositions) && void 0 !== n ? n : [])
+        return p(null !== (t = d.default.getGuildFolders()) && void 0 !== t ? t : [], null !== (n = null === (e = d.default.settings.guildFolders) || void 0 === e ? void 0 : e.guildPositions) && void 0 !== n ? n : [])
     }
 
     function R() {
         var e, t;
         let n = d.default.getGuildFolders();
-        return !(null != i && s()(i, n)) && O(null != (i = n) ? i : [], null !== (t = null === (e = d.default.settings.guildFolders) || void 0 === e ? void 0 : e.guildPositions) && void 0 !== t ? t : [])
+        return !(null != i && s()(i, n)) && p(null != (i = n) ? i : [], null !== (t = null === (e = d.default.settings.guildFolders) || void 0 === e ? void 0 : e.guildPositions) && void 0 !== t ? t : [])
     }
 
     function C(e) {
@@ -145,10 +145,10 @@ function(e, t, n) {
             guildId: t,
             joinedAt: n,
             user: i
-        } = e, r = A.default.getCurrentUser(), s = T.default.getGuild(t);
+        } = e, r = h.default.getCurrentUser(), s = T.default.getGuild(t);
         if ((null == r ? void 0 : r.id) !== i.id || null == s) return !1;
         let a = "string" == typeof n ? new Date(n) : n;
-        return a !== s.joinedAt && null != a && p()
+        return a !== s.joinedAt && null != a && O()
     }
     let M = (0, _.cachedFunction)((e, t) => e.sortedGuildNodes().map(e => e.id)),
         y = (0, _.cachedFunction)((e, t) => e.getRoots().map(N));
@@ -181,23 +181,23 @@ function(e, t, n) {
         }
         constructor() {
             super({
-                CONNECTION_OPEN: p,
-                OVERLAY_INITIALIZE: p,
+                CONNECTION_OPEN: O,
+                OVERLAY_INITIALIZE: O,
                 CACHE_LOADED_LAZY: () => this.loadCache(),
-                GUILD_CREATE: p,
-                GUILD_DELETE: p,
+                GUILD_CREATE: O,
+                GUILD_DELETE: O,
                 GUILD_MEMBER_ADD: v,
                 USER_SETTINGS_PROTO_UPDATE: R,
                 GUILD_MOVE_BY_ID: C,
                 GUILD_FOLDER_CREATE_LOCAL: g,
                 GUILD_FOLDER_EDIT_LOCAL: L,
                 GUILD_FOLDER_DELETE_LOCAL: D
-            }), h(this, "loadCache", () => {
+            }), A(this, "loadCache", () => {
                 let e = this.readSnapshot(P.LATEST_SNAPSHOT_VERSION),
                     t = null == e ? void 0 : e.tree;
                 null != t && (m = new l.GuildsTree).loadSnapshot(t)
             })
         }
     }
-    h(P, "displayName", "SortedGuildStore"), h(P, "LATEST_SNAPSHOT_VERSION", 1), t.default = new P
+    A(P, "displayName", "SortedGuildStore"), A(P, "LATEST_SNAPSHOT_VERSION", 1), t.default = new P
 }

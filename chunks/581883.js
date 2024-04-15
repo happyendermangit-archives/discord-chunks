@@ -28,24 +28,24 @@ function(e, t, n) {
             lazyLoaded: !1,
             editInfo: (0, T.createEmptyEditInfo)()
         },
-        A = {
+        h = {
             ProtoClass: u.FrecencyUserSettings,
             proto: u.FrecencyUserSettings.create(),
             lazyLoaded: !0,
             editInfo: (0, T.createEmptyEditInfo)()
         },
-        h = {
+        A = {
             [T.UserSettingsTypes.PRELOADED_USER_SETTINGS]: S,
-            [T.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS]: A
+            [T.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS]: h
         },
         m = !1;
 
     function N() {
-        O()
+        p()
     }
 
-    function O() {
-        Object.values(h).forEach(e => {
+    function p() {
+        Object.values(A).forEach(e => {
             if (null != e.editInfo.timeout) {
                 var t, n;
                 clearTimeout(e.editInfo.timeout), e.editInfo.timeout = void 0, e.editInfo.timeoutDelay = Number.MAX_SAFE_INTEGER, e.editInfo.rateLimited = !1, e.editInfo.offlineEditDataVersion = null !== (n = null === (t = e.proto.versions) || void 0 === t ? void 0 : t.dataVersion) && void 0 !== n ? n : 0
@@ -53,7 +53,7 @@ function(e, t, n) {
         })
     }
 
-    function p(e) {
+    function O(e) {
         null != e.editInfo.timeout && clearTimeout(e.editInfo.timeout), e.editInfo = (0, T.createEmptyEditInfo)()
     }
 
@@ -68,12 +68,12 @@ function(e, t, n) {
             local: a
         } = e;
         m = !a;
-        let o = h[n];
-        r && p(o), i ? (o.proto = (0, I.mergeTopLevelFields)(o.ProtoClass, o.proto, t), s()("string" != typeof o.proto, "UserSettingsProto cannot be a string")) : (o.proto = t, s()("string" != typeof o.proto, "UserSettingsProto cannot be a string"), o.editInfo.loaded = !0, o.editInfo.loading = !1)
+        let o = A[n];
+        r && O(o), i ? (o.proto = (0, I.mergeTopLevelFields)(o.ProtoClass, o.proto, t), s()("string" != typeof o.proto, "UserSettingsProto cannot be a string")) : (o.proto = t, s()("string" != typeof o.proto, "UserSettingsProto cannot be a string"), o.editInfo.loaded = !0, o.editInfo.loading = !1)
     }
 
     function C(e) {
-        null != e && o().forEach(h, (t, n) => {
+        null != e && o().forEach(A, (t, n) => {
             var i, r;
             let a = e[Number(n)];
             if (null == a) return;
@@ -95,7 +95,7 @@ function(e, t, n) {
             return this.computeState()
         }
         computeState() {
-            return o().mapValues(h, e => {
+            return o().mapValues(A, e => {
                 let t = {
                     proto: (0, I.protoToB64)(e.ProtoClass, e.proto)
                 };
@@ -103,19 +103,19 @@ function(e, t, n) {
             })
         }
         hasLoaded(e) {
-            return h[e].editInfo.loaded
+            return A[e].editInfo.loaded
         }
         get settings() {
             return S.proto
         }
         get frecencyWithoutFetchingLatest() {
-            return A.proto
+            return h.proto
         }
         get wasMostRecentUpdateFromServer() {
             return m
         }
         getFullState() {
-            return h
+            return A
         }
         getGuildFolders() {
             var e;
@@ -164,7 +164,7 @@ function(e, t, n) {
                 }
             } = e;
             s()(!__OVERLAY__, "this cannot run in the overlay");
-            let i = h[t];
+            let i = A[t];
             return i.editInfo = {
                 ...i.editInfo,
                 ...n
@@ -180,9 +180,9 @@ function(e, t, n) {
                 isDirty: i,
                 cleanupFuncs: r
             } = (0, I.runMigrations)(S.proto, E.default[T.UserSettingsTypes.PRELOADED_USER_SETTINGS]);
-            i && p(S), S.proto = n, s()("string" != typeof S.proto, "UserSettingsProto cannot be a string"), S.editInfo.triggeredMigrations = i, S.editInfo.cleanupFuncs = r, S.editInfo.loaded = !0, Object.values(h).forEach(e => {
+            i && O(S), S.proto = n, s()("string" != typeof S.proto, "UserSettingsProto cannot be a string"), S.editInfo.triggeredMigrations = i, S.editInfo.cleanupFuncs = r, S.editInfo.loaded = !0, Object.values(A).forEach(e => {
                 e.lazyLoaded && (e.editInfo.loaded = !1, e.editInfo.loading = !1)
-            }), O()
+            }), p()
         },
         CONNECTION_CLOSED: N,
         CONNECTION_RESUMED: N,
@@ -193,7 +193,7 @@ function(e, t, n) {
             S.proto = (0, I.b64ToPreloadedUserSettingsProto)(t), s()("string" != typeof S.proto, "UserSettingsProto cannot be a string")
         },
         LOGOUT: function() {
-            O(), Object.values(h).forEach(e => {
+            p(), Object.values(A).forEach(e => {
                 e.proto = e.ProtoClass.create(), e.editInfo = (0, T.createEmptyEditInfo)()
             })
         }

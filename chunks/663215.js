@@ -5,7 +5,7 @@ function(e, t, n) {
             return N
         },
         useSearchCategories: function() {
-            return O
+            return p
         }
     }), n("47120"), n("653041");
     var i = n("470079"),
@@ -24,7 +24,7 @@ function(e, t, n) {
         f = n("549771"),
         S = n("710111");
 
-    function A(e) {
+    function h(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             n = e.map(e => ({
                 type: T.SoundboardSoundItemType.SOUND,
@@ -33,7 +33,7 @@ function(e, t, n) {
         return t ? n.sort((e, t) => _.default.compare(e.sound.soundId, t.sound.soundId)) : n
     }
 
-    function h(e) {
+    function A(e) {
         let {
             sections: t,
             guildIds: n,
@@ -51,7 +51,7 @@ function(e, t, n) {
             let t = o[e];
             null != t && u.push(t)
         }
-        let d = A(u, a);
+        let d = h(u, a);
         d.length > 0 && t.push({
             key: s,
             categoryInfo: {
@@ -69,16 +69,16 @@ function(e, t, n) {
             categoryInfo: {
                 type: T.SoundboardSoundGridSectionType.DEFAULTS
             },
-            items: A(i)
+            items: h(i)
         })
     }
 
     function N(e) {
         let {
             filterOutEmptyCurrentGuild: t = !1
-        } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2], _ = (0, r.useStateFromStores)([u.default], () => u.default.getCurrentUser()), [S, N, O] = (0, r.useStateFromStoresArray)([I.default], () => [I.default.getSounds(), I.default.getFavorites(), I.default.isFetching()]), p = (0, f.useSortedGuildIdsForSoundboard)(e, !1), R = (0, r.useStateFromStoresArray)([o.default], () => {
+        } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2], _ = (0, r.useStateFromStores)([u.default], () => u.default.getCurrentUser()), [S, N, p] = (0, r.useStateFromStoresArray)([I.default], () => [I.default.getSounds(), I.default.getFavorites(), I.default.isFetching()]), O = (0, f.useSortedGuildIdsForSoundboard)(e, !1), R = (0, r.useStateFromStoresArray)([o.default], () => {
             let e = [];
-            return p.forEach(t => {
+            return O.forEach(t => {
                 let n = o.default.getGuild(t);
                 null != n && e.push(n)
             }), e
@@ -102,24 +102,24 @@ function(e, t, n) {
             let e = [];
             return n ? (m(e, S), {
                 categories: e,
-                isFetching: O
-            }) : (h({
+                isFetching: p
+            }) : (A({
                 sections: e,
-                guildIds: p,
+                guildIds: O,
                 allSounds: S,
                 potentialSoundIdsForSection: Array.from(N),
                 sectionType: T.SoundboardSoundGridSectionType.FAVORITES,
                 sortById: !0
-            }), D && h({
+            }), D && A({
                 sections: e,
-                guildIds: p,
+                guildIds: O,
                 allSounds: S,
                 potentialSoundIdsForSection: y,
                 sectionType: T.SoundboardSoundGridSectionType.RECENTLY_HEARD,
                 sortById: !1
-            }), v && h({
+            }), v && A({
                 sections: e,
-                guildIds: p,
+                guildIds: O,
                 allSounds: S,
                 potentialSoundIdsForSection: M.map(e => e.soundId),
                 sectionType: T.SoundboardSoundGridSectionType.FREQUENTLY_USED,
@@ -128,7 +128,7 @@ function(e, t, n) {
                 var s;
                 if (null == t) return;
                 let a = null !== (s = i.get(t.id)) && void 0 !== s ? s : [],
-                    o = A(a),
+                    o = h(a),
                     l = a.length < t.getMaxSoundboardSlots() && n,
                     u = 0 === o.length;
                 (l || u) && !r && o.push({
@@ -147,7 +147,7 @@ function(e, t, n) {
                 for (let s of t) {
                     var r;
                     if (s.id === n) continue;
-                    let t = A(null !== (r = i.get(s.id)) && void 0 !== r ? r : []);
+                    let t = h(null !== (r = i.get(s.id)) && void 0 !== r ? r : []);
                     t.length > 0 && e.push({
                         categoryInfo: {
                             type: T.SoundboardSoundGridSectionType.GUILD,
@@ -159,18 +159,18 @@ function(e, t, n) {
                 }
             }(e, R, null == g ? void 0 : g.id, S), C && m(e, S), {
                 categories: e,
-                isFetching: O
+                isFetching: p
             })
-        }, [p, S, N, y, M, v, D, g, L, t, C, R, n, O])
+        }, [O, S, N, y, M, v, D, g, L, t, C, R, n, p])
     }
 
-    function O(e, t, n) {
+    function p(e, t, n) {
         return i.useMemo(() => n.length > 0 ? [{
             key: T.SoundboardSoundGridSectionType.SEARCH,
             categoryInfo: {
                 type: T.SoundboardSoundGridSectionType.SEARCH
             },
-            items: A(t, !1)
+            items: h(t, !1)
         }] : e, [e, n.length, t])
     }
 }

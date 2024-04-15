@@ -14,7 +14,7 @@ function(e, t, n) {
             return J
         },
         MessageStandardEmojiPopout: function() {
-            return q
+            return Q
         }
     }), n("47120");
     var i = n("735250"),
@@ -32,12 +32,12 @@ function(e, t, n) {
         T = n("213609"),
         f = n("738774"),
         S = n("29598"),
-        A = n("400106"),
-        h = n("944386"),
+        h = n("400106"),
+        A = n("944386"),
         m = n("889564"),
         N = n("687476"),
-        O = n("761966"),
-        p = n("98278"),
+        p = n("761966"),
+        O = n("98278"),
         R = n("642345"),
         C = n("197115"),
         g = n("703656"),
@@ -63,15 +63,15 @@ function(e, t, n) {
         K = n("474936"),
         z = n("689938"),
         X = n("163237");
-    let Q = () => ({
+    let q = () => ({
             page: null != (0, l.useStateFromStores)([M.default], () => M.default.getGuildId()) ? j.AnalyticsPages.GUILD_CHANNEL : j.AnalyticsPages.DM_CHANNEL,
             section: j.AnalyticsSections.EMOJI_UPSELL_POPOUT
         }),
-        q = e => {
+        Q = e => {
             let {
                 node: t
             } = e;
-            (0, h.useTrackOpenPopout)({
+            (0, A.useTrackOpenPopout)({
                 emojiId: t.emojiId,
                 currentGuildId: M.default.getGuildId()
             });
@@ -245,15 +245,15 @@ function(e, t, n) {
                 guildEmoji: U,
                 demoMode: b = !1,
                 nonce: B
-            } = e, V = (0, l.useStateFromStores)([y.default], () => y.default.getCurrentUser()), F = (0, l.useStateFromStores)([M.default], () => M.default.getGuildId()), q = x.default.isPremium(V), J = null != F && (F === (null == S ? void 0 : S.id) || F === (null == g ? void 0 : g.id)), $ = null != g, et = null !== (t = null == S ? void 0 : S.isDiscoverable()) && void 0 !== t && t;
-            b && (q = !0, et = !0, $ = !1, J = !1);
+            } = e, V = (0, l.useStateFromStores)([y.default], () => y.default.getCurrentUser()), F = (0, l.useStateFromStores)([M.default], () => M.default.getGuildId()), Q = x.default.isPremium(V), J = null != F && (F === (null == S ? void 0 : S.id) || F === (null == g ? void 0 : g.id)), $ = null != g, et = null !== (t = null == S ? void 0 : S.isDiscoverable()) && void 0 !== t && t;
+            b && (Q = !0, et = !0, $ = !1, J = !1);
             let {
                 enabled: en
             } = R.NitroBadgeOnEmojiHoverExperiment.useExperiment({
                 location: "CustomGuildEmojiPopout"
             }, {
                 autoTrackExposure: !0
-            }), ei = Q(), {
+            }), ei = q(), {
                 isRoleSubscriptionEmoji: er,
                 isUnusableRoleSubscriptionEmoji: es,
                 userIsRoleSubscriber: ea
@@ -281,7 +281,7 @@ function(e, t, n) {
             });
             let eu = M.default.getGuildId(),
                 ed = (0, H.getEmojiPopoutData)({
-                    isPremium: q,
+                    isPremium: Q,
                     hasJoinedEmojiSourceGuild: $,
                     isRoleSubscriptionEmoji: er,
                     isUnusableRoleSubscriptionEmoji: es,
@@ -293,12 +293,12 @@ function(e, t, n) {
                         L(), k.default.track(j.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
                             location_page: ei.page,
                             location_section: ei.section
-                        }), (0, p.navigateToPremiumMarketingPage)()
+                        }), (0, O.navigateToPremiumMarketingPage)()
                     }
                 }),
-                e_ = $ && es && !eo && (q && er || !q),
+                e_ = $ && es && !eo && (Q && er || !Q),
                 ec = ed.emojiDescription,
-                eE = (0, h.useTrackOpenPopout)({
+                eE = (0, A.useTrackOpenPopout)({
                     emojiId: u.emojiId,
                     currentGuildId: eu,
                     popoutData: ed,
@@ -309,7 +309,7 @@ function(e, t, n) {
                 eI = ed.type === H.EmojiPopoutType.JOIN_GUILD,
                 eT = ed.type === H.EmojiPopoutType.GET_PREMIUM,
                 [ef, eS] = r.useState(!1),
-                eA = et || $ && !J || null != S;
+                eh = et || $ && !J || null != S;
             return (0, i.jsxs)(Y.MessagePopoutContent, {
                 className: X.popoutContent,
                 children: [(() => {
@@ -369,7 +369,7 @@ function(e, t, n) {
                             fullWidth: !0,
                             onClick: e,
                             children: ed.text
-                        }) : void 0, e_ && (0, i.jsx)(O.default, {
+                        }) : void 0, e_ && (0, i.jsx)(p.default, {
                             className: X.ctaButton,
                             size: d.Button.Sizes.SMALL,
                             fullWidth: !0,
@@ -379,7 +379,7 @@ function(e, t, n) {
                             children: ea ? z.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_UPGRADE_UPSELL_BUTTON : z.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_PURCHASE_UPSELL_BUTTON
                         })]
                     })
-                })(), eA && (() => {
+                })(), eh && (() => {
                     let e = null != S && !$ && et,
                         t = () => {
                             e && (null == v || v(), !ef && !b && k.default.track(j.AnalyticEvents.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, eE), eS(!ef))
@@ -390,7 +390,7 @@ function(e, t, n) {
                             className: X.guildTitle,
                             children: $ ? z.default.Messages.EMOJI_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION : z.default.Messages.EMOJI_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION
                         }), (0, i.jsx)(Z, {
-                            expressionSourceGuild: null != S ? S : A.default.createFromGuildRecord(g),
+                            expressionSourceGuild: null != S ? S : h.default.createFromGuildRecord(g),
                             hasJoinedExpressionSourceGuild: $,
                             isDisplayingJoinGuildButtonInPopout: eI
                         }), e && (0, i.jsxs)(i.Fragment, {

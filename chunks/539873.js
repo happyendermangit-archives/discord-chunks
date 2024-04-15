@@ -25,14 +25,14 @@ function(e, t, n) {
             className: t,
             disabled: n,
             renderCTAButtons: S
-        } = e, [A, h] = (0, s.useStateFromStoresArray)([_.default], () => [_.default.getCurrentDesktopIcon(), _.default.isEditorOpen]), m = r.useRef(null);
+        } = e, [h, A] = (0, s.useStateFromStoresArray)([_.default], () => [_.default.getCurrentDesktopIcon(), _.default.isEditorOpen]), m = r.useRef(null);
         (0, u.default)(m, I.AppearanceScrollPositions.CUSTOM_APP_ICONS);
         let N = (0, d.useUID)(),
-            O = (0, a.useRadioGroup)({
+            p = (0, a.useRadioGroup)({
                 orientation: "horizontal",
                 labelledBy: N
             }),
-            p = e => {
+            O = e => {
                 o.default.dispatch({
                     type: "APP_ICON_UPDATED",
                     id: e
@@ -41,7 +41,7 @@ function(e, t, n) {
         return (0, i.jsx)("div", {
             ref: m,
             children: (0, i.jsx)("div", {
-                ...O,
+                ...p,
                 className: f.__invalid_container,
                 children: (0, i.jsxs)("div", {
                     className: t,
@@ -49,7 +49,7 @@ function(e, t, n) {
                         className: f.header,
                         children: [(0, i.jsxs)("div", {
                             className: f.headings,
-                            children: [h ? null : (0, i.jsxs)("div", {
+                            children: [A ? null : (0, i.jsxs)("div", {
                                 className: f.title,
                                 children: [(0, i.jsx)(a.Heading, {
                                     variant: "text-md/medium",
@@ -71,8 +71,8 @@ function(e, t, n) {
                             return !0 !== t
                         }).map((e, t) => (0, i.jsx)(c.default, {
                             icon: e,
-                            isSelected: A === e.id,
-                            onSelect: e => p(e),
+                            isSelected: h === e.id,
+                            onSelect: e => O(e),
                             disabled: n,
                             tabIndex: 0 !== t || n ? void 0 : 0
                         }, e.id))

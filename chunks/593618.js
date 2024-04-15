@@ -23,12 +23,12 @@ function(e, t, n) {
         T = n("746916"),
         f = n("965638"),
         S = n("160404"),
-        A = n("777861"),
-        h = n("565799"),
+        h = n("777861"),
+        A = n("565799"),
         m = n("501655"),
         N = n("517334"),
-        O = n("344185"),
-        p = n("199902"),
+        p = n("344185"),
+        O = n("199902"),
         R = n("77498"),
         C = n("984933"),
         g = n("158776"),
@@ -76,17 +76,17 @@ function(e, t, n) {
             color: "text-muted",
             className: n,
             children: H.default.Messages.FORM_LABEL_MUTED
-        }) : (0, i.jsx)(A.default, {
+        }) : (0, i.jsx)(h.default, {
             muteConfig: t,
             className: n
         })
     }
 
-    function Q(e) {
+    function q(e) {
         var t, n, s;
         let {
             guild: o
-        } = e, d = o.id, E = (0, u.useStateFromStoresArray)([C.default, O.default], () => {
+        } = e, d = o.id, E = (0, u.useStateFromStoresArray)([C.default, p.default], () => {
             let e = C.default.getChannels(d)[C.GUILD_VOCAL_CHANNELS_KEY].filter(e => {
                 let {
                     channel: t
@@ -98,7 +98,7 @@ function(e, t, n) {
                 } = e;
                 return t.id
             });
-            return [...e, ...Object.values(O.default.getThreadsForGuild(d)).flatMap(e => Object.keys(e))]
+            return [...e, ...Object.values(p.default.getThreadsForGuild(d)).flatMap(e => Object.keys(e))]
         }, [d]), I = (0, N.default)(d), T = r.useMemo(() => I.map(e => e.id), [I]), f = (0, u.useStateFromStores)([v.default], () => v.default.getVoiceStates(d), [d]), S = l().flatMap(E, e => {
             var t;
             return e === o.afkChannelId ? [] : (null !== (t = f[e]) && void 0 !== t ? t : []).map(e => {
@@ -107,17 +107,17 @@ function(e, t, n) {
                 } = e;
                 return t
             })
-        }), A = (0, u.useStateFromStoresArray)([h.default], () => l().flatMap(T, e => e === o.afkChannelId ? [] : h.default.getMutableParticipants(e, m.StageChannelParticipantNamedIndex.SPEAKER).filter(e => e.type === m.StageChannelParticipantTypes.VOICE).map(e => {
+        }), h = (0, u.useStateFromStoresArray)([A.default], () => l().flatMap(T, e => e === o.afkChannelId ? [] : A.default.getMutableParticipants(e, m.StageChannelParticipantNamedIndex.SPEAKER).filter(e => e.type === m.StageChannelParticipantTypes.VOICE).map(e => {
             let {
                 user: t
             } = e;
             return t
-        }))), M = (0, u.useStateFromStores)([h.default], () => {
+        }))), M = (0, u.useStateFromStores)([A.default], () => {
             let e = 0;
-            for (let t of T) e += h.default.getParticipantCount(t, m.StageChannelParticipantNamedIndex.AUDIENCE);
+            for (let t of T) e += A.default.getParticipantCount(t, m.StageChannelParticipantNamedIndex.AUDIENCE);
             return e
-        }), y = (0, u.useStateFromStoresArray)([p.default], () => p.default.getAllApplicationStreams().filter(e => e.guildId === d).map(e => e.ownerId), [d]), V = (0, F.useIsGamingVoiceActivityEnabled)("Guild Tooltip", !1), H = (0, u.useStateFromStoresArray)([g.default, R.default], () => S.filter(e => g.default.getActivities(e.id, d).some(e => (null == e ? void 0 : e.application_id) != null && null != R.default.getDetectableGame(null == e ? void 0 : e.application_id)))), j = z(P.default, H, d), W = V ? H.map(e => e.id) : [], K = (0, u.useStateFromStoresArray)([c.default], () => c.default.getEmbeddedActivitiesForGuild(d).flatMap(e => Array.from(e.userIds)), [d]), Q = (0, u.useStateFromStoresArray)([D.default], () => K.map(e => D.default.getUser(e)), [K]), q = (0, u.useStateFromStoresArray)([D.default], () => y.map(e => D.default.getUser(e)), [y]), Z = z(G.default, S.filter(e => !y.includes(e.id) && !K.includes(e.id) && !W.includes(e.id)), d);
-        let J = (t = d, n = A, s = M, 0 === n.length ? null : (0, i.jsxs)("div", {
+        }), y = (0, u.useStateFromStoresArray)([O.default], () => O.default.getAllApplicationStreams().filter(e => e.guildId === d).map(e => e.ownerId), [d]), V = (0, F.useIsGamingVoiceActivityEnabled)("Guild Tooltip", !1), H = (0, u.useStateFromStoresArray)([g.default, R.default], () => S.filter(e => g.default.getActivities(e.id, d).some(e => (null == e ? void 0 : e.application_id) != null && null != R.default.getDetectableGame(null == e ? void 0 : e.application_id)))), j = z(P.default, H, d), W = V ? H.map(e => e.id) : [], K = (0, u.useStateFromStoresArray)([c.default], () => c.default.getEmbeddedActivitiesForGuild(d).flatMap(e => Array.from(e.userIds)), [d]), q = (0, u.useStateFromStoresArray)([D.default], () => K.map(e => D.default.getUser(e)), [K]), Q = (0, u.useStateFromStoresArray)([D.default], () => y.map(e => D.default.getUser(e)), [y]), Z = z(G.default, S.filter(e => !y.includes(e.id) && !K.includes(e.id) && !W.includes(e.id)), d);
+        let J = (t = d, n = h, s = M, 0 === n.length ? null : (0, i.jsxs)("div", {
                 className: Y.row,
                 children: [(0, i.jsx)(w.default, {
                     className: Y.activityIcon
@@ -138,8 +138,8 @@ function(e, t, n) {
                     })]
                 })]
             })),
-            $ = z(B.default, q.filter(e => null != e && !K.includes(e.id)), d),
-            ee = z(b.default, Q, d),
+            $ = z(B.default, Q.filter(e => null != e && !K.includes(e.id)), d),
+            ee = z(b.default, q, d),
             {
                 isMuted: et,
                 muteConfig: en
@@ -159,7 +159,7 @@ function(e, t, n) {
         })
     }
 
-    function q(e) {
+    function Q(e) {
         let {
             guildJoinRequestStatus: t
         } = e;
@@ -186,9 +186,9 @@ function(e, t, n) {
         let {
             guild: t,
             includeActivity: n = !0
-        } = e, r = (0, E.default)(t), s = (0, T.useCurrentUserGuildBadgeStatus)(t.id), o = null != s ? (0, i.jsx)(q, {
+        } = e, r = (0, E.default)(t), s = (0, T.useCurrentUserGuildBadgeStatus)(t.id), o = null != s ? (0, i.jsx)(Q, {
             guildJoinRequestStatus: s
-        }) : null, l = n ? (0, i.jsx)(Q, {
+        }) : null, l = n ? (0, i.jsx)(q, {
             guild: t
         }) : null, d = (0, u.useStateFromStores)([S.default], () => S.default.isViewingRoles(t.id)), c = (0, f.useShouldShowInvitesDisabledNotif)(t);
         return (0, i.jsxs)(i.Fragment, {

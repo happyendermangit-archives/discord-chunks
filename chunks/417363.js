@@ -11,12 +11,12 @@ function(e, t, n) {
         T = n("283595"),
         f = n("129542"),
         S = n("70956"),
-        A = n("780570"),
-        h = n("358085"),
+        h = n("780570"),
+        A = n("358085"),
         m = n("804739"),
         N = n("941128"),
-        O = n("391690"),
-        p = n("981631");
+        p = n("391690"),
+        O = n("981631");
     let R = 1 * S.default.Millis.MINUTE;
     (i || (i = {})).DISPATCH_APPLICATION_PROGRESS = "dispatch_application_progress";
     let C = {},
@@ -31,15 +31,15 @@ function(e, t, n) {
         b = !1;
 
     function G(e) {
-        return e.type === p.LocalDispatchApplicationStates.INSTALLING || e.type === p.LocalDispatchApplicationStates.UPDATING || e.type === p.LocalDispatchApplicationStates.REPAIRING ? e.networkProgress : null
+        return e.type === O.LocalDispatchApplicationStates.INSTALLING || e.type === O.LocalDispatchApplicationStates.UPDATING || e.type === O.LocalDispatchApplicationStates.REPAIRING ? e.networkProgress : null
     }
 
     function w(e) {
-        return e.type === p.LocalDispatchApplicationStates.INSTALLING || e.type === p.LocalDispatchApplicationStates.UPDATING || e.type === p.LocalDispatchApplicationStates.REPAIRING ? e.diskProgress : null
+        return e.type === O.LocalDispatchApplicationStates.INSTALLING || e.type === O.LocalDispatchApplicationStates.UPDATING || e.type === O.LocalDispatchApplicationStates.REPAIRING ? e.diskProgress : null
     }
 
     function B(e) {
-        return e.type === p.LocalDispatchApplicationStates.INSTALLING || e.type === p.LocalDispatchApplicationStates.UPDATING || e.type === p.LocalDispatchApplicationStates.REPAIRING ? e.readerProgress : null
+        return e.type === O.LocalDispatchApplicationStates.INSTALLING || e.type === O.LocalDispatchApplicationStates.UPDATING || e.type === O.LocalDispatchApplicationStates.REPAIRING ? e.readerProgress : null
     }
     let k = u().throttle(function(e) {
             P = (P = [{
@@ -77,32 +77,32 @@ function(e, t, n) {
             this.waitFor(I.default)
         }
         getState(e, t) {
-            return C[(0, A.getComboId)(e, t)]
+            return C[(0, h.getComboId)(e, t)]
         }
         isUpToDate(e, t) {
-            let n = C[(0, A.getComboId)(e, t)];
-            return null != n && n.type === p.LocalDispatchApplicationStates.UP_TO_DATE
+            let n = C[(0, h.getComboId)(e, t)];
+            return null != n && n.type === O.LocalDispatchApplicationStates.UP_TO_DATE
         }
         shouldPatch(e, t) {
-            let n = C[(0, A.getComboId)(e, t)];
+            let n = C[(0, h.getComboId)(e, t)];
             return null != n && !0 === n.shouldPatch
         }
         isInstalled(e, t) {
-            let n = C[(0, A.getComboId)(e, t)];
-            return null != n ? n.type !== p.LocalDispatchApplicationStates.UNINSTALLING : O.default.shouldBeInstalled(e, t)
+            let n = C[(0, h.getComboId)(e, t)];
+            return null != n ? n.type !== O.LocalDispatchApplicationStates.UNINSTALLING : p.default.shouldBeInstalled(e, t)
         }
         supportsCloudSync(e, t) {
             null == t && (t = e);
-            let n = C[(0, A.getComboId)(e, t)];
+            let n = C[(0, h.getComboId)(e, t)];
             return null != n && null != n.storage && !!n.storage.sync
         }
         isLaunchable(e, t) {
             if (!(0, m.isSupportedPlatform)()) return !1;
-            let n = C[(0, A.getComboId)(e, t)];
-            return null != n && n.type === p.LocalDispatchApplicationStates.UP_TO_DATE && null != n.launchOptions && 0 !== n.launchOptions.length
+            let n = C[(0, h.getComboId)(e, t)];
+            return null != n && n.type === O.LocalDispatchApplicationStates.UP_TO_DATE && null != n.launchOptions && 0 !== n.launchOptions.length
         }
         getDefaultLaunchOption(e, t) {
-            let n = C[(0, A.getComboId)(e, t)];
+            let n = C[(0, h.getComboId)(e, t)];
             if (null == n) return null;
             let {
                 defaultLaunchOptionId: i,
@@ -111,7 +111,7 @@ function(e, t, n) {
             return null == i || null == r ? null : r[i]
         }
         getLaunchOptions(e, t) {
-            let n = C[(0, A.getComboId)(e, t)];
+            let n = C[(0, h.getComboId)(e, t)];
             return null == n || null == n.launchOptions ? [] : Object.values(n.launchOptions)
         }
         getHistoricalTotalBytesRead() {
@@ -149,7 +149,7 @@ function(e, t, n) {
                 s = !1;
             for (let e in i)
                 for (let t in i[e]) {
-                    let a = (0, A.getComboId)(e, t);
+                    let a = (0, h.getComboId)(e, t);
                     if (n[a] = function(e) {
                             let {
                                 build_id: t,
@@ -168,19 +168,19 @@ function(e, t, n) {
                                 should_patch: T
                             } = e;
                             switch (null == T && (T = !0), e.state.type) {
-                                case p.DispatchApplicationStates.COMPLETE: {
+                                case O.DispatchApplicationStates.COMPLETE: {
                                     let e;
-                                    let A = {},
+                                    let h = {},
                                         m = null;
-                                    if (I) e = p.LocalDispatchApplicationStates.REPAIRING;
-                                    else if (null == t) e = p.LocalDispatchApplicationStates.INSTALL_REQUIRED;
-                                    else if (T && (t !== n || null != i && 0 !== u().difference(i, r).length)) e = p.LocalDispatchApplicationStates.UPDATE_REQUIRED;
-                                    else if (e = p.LocalDispatchApplicationStates.UP_TO_DATE, null != _) {
+                                    if (I) e = O.LocalDispatchApplicationStates.REPAIRING;
+                                    else if (null == t) e = O.LocalDispatchApplicationStates.INSTALL_REQUIRED;
+                                    else if (T && (t !== n || null != i && 0 !== u().difference(i, r).length)) e = O.LocalDispatchApplicationStates.UPDATE_REQUIRED;
+                                    else if (e = O.LocalDispatchApplicationStates.UP_TO_DATE, null != _) {
                                         let e = c.default.fileManager.join(_, "content"),
                                             t = (0, f.getBuildPlatform)();
                                         if (null != l && 0 !== l.length) {
                                             var S;
-                                            if (t === p.BuildPlatformTypes.WIN64 && (S = t, !l.some(e => e.platforms.includes(S)))) t = p.BuildPlatformTypes.WIN32;
+                                            if (t === O.BuildPlatformTypes.WIN64 && (S = t, !l.some(e => e.platforms.includes(S)))) t = O.BuildPlatformTypes.WIN32;
                                             for (let n of l)
                                                 if (n.platforms.includes(t)) {
                                                     let t;
@@ -189,7 +189,7 @@ function(e, t, n) {
                                                         name: r,
                                                         working_dir: s
                                                     } = n, a = c.default.fileManager.join(e, i);
-                                                    (0, h.isMac)() && !a.startsWith(g) && (a = "".concat(g).concat(a)), t = null != s ? c.default.fileManager.join(e, s) : c.default.fileManager.dirname(a), A[r] = {
+                                                    (0, A.isMac)() && !a.startsWith(g) && (a = "".concat(g).concat(a)), t = null != s ? c.default.fileManager.join(e, s) : c.default.fileManager.dirname(a), h[r] = {
                                                         ...n,
                                                         id: r,
                                                         fullExecutablePath: a,
@@ -197,13 +197,13 @@ function(e, t, n) {
                                                     }, null == m && (m = r)
                                                 }
                                         } else if (null != o) {
-                                            t === p.BuildPlatformTypes.WIN64 && null == o[t] && (t = p.BuildPlatformTypes.WIN32);
+                                            t === O.BuildPlatformTypes.WIN64 && null == o[t] && (t = O.BuildPlatformTypes.WIN32);
                                             let n = o[t];
                                             if (null != n) {
                                                 let {
                                                     executable: i
                                                 } = n, r = "Default";
-                                                A[r] = {
+                                                h[r] = {
                                                     ...n,
                                                     name: r,
                                                     id: r,
@@ -224,13 +224,13 @@ function(e, t, n) {
                                         targetManifestIds: r,
                                         installPath: _,
                                         installedSize: E,
-                                        launchOptions: A,
+                                        launchOptions: h,
                                         defaultLaunchOptionId: m,
                                         shouldPatch: T,
                                         storage: d
                                     }
                                 }
-                                case p.DispatchApplicationStates.TRANSITION: {
+                                case O.DispatchApplicationStates.TRANSITION: {
                                     let o;
                                     let {
                                         stage: l,
@@ -239,11 +239,11 @@ function(e, t, n) {
                                         reader_progress: c,
                                         progress: f,
                                         total: S,
-                                        paused: A
-                                    } = e.state, h = l.type;
+                                        paused: h
+                                    } = e.state, A = l.type;
                                     return {
-                                        type: o = h === p.DispatchApplicationStages.UNINSTALLING ? p.LocalDispatchApplicationStates.UNINSTALLING : I ? p.LocalDispatchApplicationStates.REPAIRING : null == t ? p.LocalDispatchApplicationStates.INSTALLING : p.LocalDispatchApplicationStates.UPDATING,
-                                        stage: h,
+                                        type: o = A === O.DispatchApplicationStages.UNINSTALLING ? O.LocalDispatchApplicationStates.UNINSTALLING : I ? O.LocalDispatchApplicationStates.REPAIRING : null == t ? O.LocalDispatchApplicationStates.INSTALLING : O.LocalDispatchApplicationStates.UPDATING,
+                                        stage: A,
                                         applicationId: s,
                                         branchId: a,
                                         buildId: t,
@@ -257,7 +257,7 @@ function(e, t, n) {
                                         readerProgress: c,
                                         progress: f,
                                         total: S,
-                                        paused: A,
+                                        paused: h,
                                         shouldPatch: T
                                     }
                                 }
@@ -271,26 +271,26 @@ function(e, t, n) {
                         let o = x(n, a, B);
                         if (o > 0 && V(M += o), r === t) {
                             let e = n[a];
-                            if (!0 !== e.paused && (e.type === p.LocalDispatchApplicationStates.UNINSTALLING || e.type === p.LocalDispatchApplicationStates.INSTALLING || e.type === p.LocalDispatchApplicationStates.UPDATING)) switch (e.stage) {
-                                case p.DispatchApplicationStages.PATCHING:
-                                case p.DispatchApplicationStages.FINALIZING:
-                                case p.DispatchApplicationStages.VERIFYING:
-                                case p.DispatchApplicationStages.REPAIRING:
-                                case p.DispatchApplicationStages.POST_INSTALL_SCRIPTS:
-                                    E.default.setProgress("dispatch_application_progress", (0, A.calculateProgressPercentage)(e.progress, e.total) / 100), s = !0
+                            if (!0 !== e.paused && (e.type === O.LocalDispatchApplicationStates.UNINSTALLING || e.type === O.LocalDispatchApplicationStates.INSTALLING || e.type === O.LocalDispatchApplicationStates.UPDATING)) switch (e.stage) {
+                                case O.DispatchApplicationStages.PATCHING:
+                                case O.DispatchApplicationStages.FINALIZING:
+                                case O.DispatchApplicationStages.VERIFYING:
+                                case O.DispatchApplicationStages.REPAIRING:
+                                case O.DispatchApplicationStages.POST_INSTALL_SCRIPTS:
+                                    E.default.setProgress("dispatch_application_progress", (0, h.calculateProgressPercentage)(e.progress, e.total) / 100), s = !0
                             }
                         }
                     }
                     if (!b) {
                         let i = c.default.fileManager.dirname(n[a].installPath);
-                        O.default.getInstallationPath(e, t) !== i && _.default.wait(() => {
+                        p.default.getInstallationPath(e, t) !== i && _.default.wait(() => {
                             _.default.dispatch({
                                 type: "DISPATCH_APPLICATION_ADD_TO_INSTALLATIONS",
                                 applicationId: e,
                                 branchId: t,
                                 installationPath: i
                             })
-                        }), -1 === N.default.getQueuePosition(e, t) && (n[a].type === p.LocalDispatchApplicationStates.INSTALLING || n[a].type === p.LocalDispatchApplicationStates.UPDATING) && T.default.hasApplication(e, t) && O.default.shouldBeInstalled(e, t) && _.default.wait(() => {
+                        }), -1 === N.default.getQueuePosition(e, t) && (n[a].type === O.LocalDispatchApplicationStates.INSTALLING || n[a].type === O.LocalDispatchApplicationStates.UPDATING) && T.default.hasApplication(e, t) && p.default.shouldBeInstalled(e, t) && _.default.wait(() => {
                             _.default.dispatch({
                                 type: "DISPATCH_APPLICATION_UPDATE",
                                 applicationId: e,

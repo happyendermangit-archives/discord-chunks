@@ -8,10 +8,10 @@ function(e, t, n) {
             return R
         },
         openThreadSidebarForCreating: function() {
-            return p
+            return O
         },
         openThreadSidebarForViewing: function() {
-            return O
+            return p
         }
     });
     var i = n("512722"),
@@ -29,12 +29,12 @@ function(e, t, n) {
         T = n("703558"),
         f = n("944486"),
         S = n("979651"),
-        A = n("585483"),
-        h = n("124368"),
+        h = n("585483"),
+        A = n("124368"),
         m = n("981631"),
         N = n("176505");
 
-    function O(e, t, n) {
+    function p(e, t, n) {
         u.MainWindowDispatch.dispatch(m.ComponentActions.POPOUT_CLOSE);
         let i = !a().isEmpty(S.default.getVoiceStatesForChannel(e.id));
         if (t || !I.UseThreadSidebar.getSetting() || __OVERLAY__ || i) {
@@ -46,14 +46,14 @@ function(e, t, n) {
         }
         r()(null != e.parent_id, "all threads must have parents");
         let s = f.default.getChannelId();
-        e.parent_id !== s && !(0, N.isGuildHomeChannel)(s) && (0, E.transitionToChannel)(e.parent_id), (0, c.transitionTo)(m.Routes.CHANNEL_THREAD_VIEW((0, _.getGuildIdForGenericRedirect)(e), (0, N.isGuildHomeChannel)(s) ? N.StaticChannelRoute.GUILD_HOME : e.parent_id, e.id), void 0, e.isForumPost() ? h.OpenThreadAnalyticsLocations.FORUM : void 0), setTimeout(() => {
-            A.ComponentDispatch.dispatch(m.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
+        e.parent_id !== s && !(0, N.isGuildHomeChannel)(s) && (0, E.transitionToChannel)(e.parent_id), (0, c.transitionTo)(m.Routes.CHANNEL_THREAD_VIEW((0, _.getGuildIdForGenericRedirect)(e), (0, N.isGuildHomeChannel)(s) ? N.StaticChannelRoute.GUILD_HOME : e.parent_id, e.id), void 0, e.isForumPost() ? A.OpenThreadAnalyticsLocations.FORUM : void 0), setTimeout(() => {
+            h.ComponentDispatch.dispatch(m.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
                 channelId: e.id
             })
         }, 0)
     }
 
-    function p(e, t, n) {
+    function O(e, t, n) {
         if (r()(!e.isForumLikeChannel(), "cannot open thread creation sidebar in forums"), r()(!__OVERLAY__, "Cannot create threads in the overlay."), (0, d.trackWithMetadata)(m.AnalyticEvents.THREAD_CREATION_STARTED, {
                 location: n,
                 channel_id: e.id,

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return h
+            return A
         }
     }), n("47120");
     var i = n("470079"),
@@ -20,10 +20,10 @@ function(e, t, n) {
         T = n("691841"),
         f = n("981631"),
         S = n("377668"),
-        A = n("185923");
+        h = n("185923");
 
-    function h(e, t, n) {
-        var h, m, N, O, p, R, C;
+    function A(e, t, n) {
+        var A, m, N, p, O, R, C;
         let {
             channel: g,
             type: L
@@ -54,17 +54,17 @@ function(e, t, n) {
             scrollerRef: n,
             state: D,
             onFocus: e => x.setSelectedIndex(e)
-        }), V = null === (h = e.editorRef.current) || void 0 === h ? void 0 : h.getCurrentWord(), F = {
+        }), V = null === (A = e.editorRef.current) || void 0 === A ? void 0 : A.getCurrentWord(), F = {
             ...e,
             navigator: k,
             activeCommand: w,
             activeCommandOption: B,
-            canMentionUsers: null !== (p = null === (m = L.users) || void 0 === m ? void 0 : m.allowMentioning) && void 0 !== p && p,
+            canMentionUsers: null !== (O = null === (m = L.users) || void 0 === m ? void 0 : m.allowMentioning) && void 0 !== O && O,
             canMentionEveryone: b,
             canMentionClyde: P,
             hidePersonalInformation: G,
             hideMentionDescription: L === l.ChatInputTypes.RULES_INPUT,
-            emojiIntention: L === l.ChatInputTypes.RULES_INPUT ? A.EmojiIntention.COMMUNITY_CONTENT : A.EmojiIntention.CHAT,
+            emojiIntention: L === l.ChatInputTypes.RULES_INPUT ? h.EmojiIntention.COMMUNITY_CONTENT : h.EmojiIntention.CHAT,
             currentWord: null !== (R = null == V ? void 0 : V.word) && void 0 !== R ? R : "",
             currentWordIsAtStart: (null == V ? void 0 : V.isAtStart) === !0,
             optionText: null != B ? (0, a.getString)({
@@ -88,6 +88,6 @@ function(e, t, n) {
                     for (let n of t) n.removeChangeListener(e)
                 }
             }
-        }, [x, null === (O = D.query) || void 0 === O ? void 0 : O.typeInfo]), [D, x, k]
+        }, [x, null === (p = D.query) || void 0 === p ? void 0 : p.typeInfo]), [D, x, k]
     }
 }

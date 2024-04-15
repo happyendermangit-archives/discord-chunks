@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         TextArea: function() {
-            return O
+            return p
         }
     }), n("653041");
     var i, r = n("735250"),
@@ -20,7 +20,7 @@ function(e, t, n) {
         f = n("717897"),
         S = n("633353");
 
-    function A(e, t, n) {
+    function h(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -28,10 +28,10 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    let h = (0, l.v4)(),
+    let A = (0, l.v4)(),
         m = (0, l.v4)(),
         N = (0, l.v4)();
-    class O extends(i = s.Component) {
+    class p extends(i = s.Component) {
         getPaddingRight() {
             let {
                 maxLength: e,
@@ -105,7 +105,7 @@ function(e, t, n) {
         renderErrorMessage() {
             let e = this.getErrorMessage();
             return null == e ? null : (0, r.jsx)(c.Text, {
-                id: h,
+                id: A,
                 variant: "text-xs/normal",
                 color: "text-danger",
                 className: T.errorMessage,
@@ -122,10 +122,10 @@ function(e, t, n) {
                 minLength: l,
                 maxLength: d,
                 allowOverflow: c,
-                spellCheck: A,
-                resizeable: h,
-                className: O,
-                id: p,
+                spellCheck: h,
+                resizeable: A,
+                className: p,
+                id: O,
                 rows: R,
                 flex: C,
                 autosize: g,
@@ -144,10 +144,10 @@ function(e, t, n) {
                     children: [(0, r.jsx)(u.FocusRing, {
                         children: (0, r.jsx)(M, {
                             type: "text",
-                            className: o()(f.inputDefault, T.textArea, S.scrollbarDefault, O, {
+                            className: o()(f.inputDefault, T.textArea, S.scrollbarDefault, p, {
                                 [f.error]: y,
                                 [f.disabled]: n,
-                                [T.resizeable]: h
+                                [T.resizeable]: A
                             }),
                             "aria-labelledby": P,
                             "aria-describedby": U,
@@ -155,14 +155,14 @@ function(e, t, n) {
                             style: {
                                 paddingRight: this.getPaddingRight()
                             },
-                            id: p,
+                            id: O,
                             disabled: n,
                             placeholder: s,
                             value: i,
                             autoFocus: a,
                             minLength: l,
                             maxLength: c ? void 0 : d,
-                            spellCheck: A,
+                            spellCheck: h,
                             required: L,
                             onChange: this.onChange,
                             onBlur: this.onBlur,
@@ -188,15 +188,15 @@ function(e, t, n) {
         }
         constructor(e) {
             var t;
-            super(e), A(this, "getAriaDescribedBy", () => {
+            super(e), h(this, "getAriaDescribedBy", () => {
                 var e;
                 let {
                     maxLength: t,
                     minLength: n,
                     error: i
                 } = this.props, r = [], s = null === (e = this.context) || void 0 === e ? void 0 : e.errorId;
-                return null != s && r.push(s), null != i ? r.push(h) : (null != t && r.push(N), null != n && r.push(m)), r.length > 0 ? r.join(" ") : void 0
-            }), A(this, "onChange", e => {
+                return null != s && r.push(s), null != i ? r.push(A) : (null != t && r.push(N), null != n && r.push(m)), r.length > 0 ? r.join(" ") : void 0
+            }), h(this, "onChange", e => {
                 let {
                     onChange: t,
                     name: n
@@ -204,19 +204,19 @@ function(e, t, n) {
                 null == t || t(e.currentTarget.value, n), this.setState({
                     dirty: !0
                 })
-            }), A(this, "onFocus", e => {
+            }), h(this, "onFocus", e => {
                 let {
                     onFocus: t,
                     name: n
                 } = this.props;
                 null == t || t(e, n)
-            }), A(this, "onBlur", e => {
+            }), h(this, "onBlur", e => {
                 let {
                     onBlur: t,
                     name: n
                 } = this.props;
                 null == t || t(e, n)
-            }), A(this, "onKeyDown", e => {
+            }), h(this, "onKeyDown", e => {
                 let {
                     onKeyDown: t
                 } = this.props;
@@ -226,7 +226,7 @@ function(e, t, n) {
             }
         }
     }
-    A(O, "contextType", d.FormContext), A(O, "defaultProps", {
+    h(p, "contextType", d.FormContext), h(p, "defaultProps", {
         name: "",
         disabled: !1,
         placeholder: "",

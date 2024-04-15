@@ -20,13 +20,13 @@ function(e, t, n) {
         T = n("944486"),
         f = n("672752"),
         S = n("466111"),
-        A = n("626135"),
-        h = n("981631"),
+        h = n("626135"),
+        A = n("981631"),
         m = n("474936"),
         N = n("689938"),
-        O = n("459229");
+        p = n("459229");
 
-    function p() {
+    function O() {
         (0, l.openModalLazy)(async () => {
             let {
                 default: e
@@ -46,16 +46,16 @@ function(e, t, n) {
             remaining: R
         } = e, C = (0, o.useStateFromStores)([T.default, I.default], () => {
             let e = I.default.getChannel(T.default.getChannelId());
-            return (null == e ? void 0 : e.isPrivate()) ? h.AnalyticsPages.DM_CHANNEL : h.AnalyticsPages.GUILD_CHANNEL
+            return (null == e ? void 0 : e.isPrivate()) ? A.AnalyticsPages.DM_CHANNEL : A.AnalyticsPages.GUILD_CHANNEL
         }), {
             analyticsLocations: g
         } = (0, d.default)(u.default.PREMIUM_UPSELL), L = (0, _.usePremiumDiscountOffer)(), D = (0, c.usePremiumTrialOffer)(), v = (0, _.discountOfferHasTier)(L, m.PremiumSubscriptionSKUs.TIER_2), M = (null == D ? void 0 : null === (t = D.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === m.PremiumSubscriptionSKUs.TIER_2;
         return (r.useEffect(() => {
-            A.default.track(h.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+            h.default.track(A.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                 type: "longer messages inline",
                 location: {
                     location_page: C,
-                    location_section: h.AnalyticsSections.CHANNEL_TEXT_AREA
+                    location_section: A.AnalyticsSections.CHANNEL_TEXT_AREA
                 },
                 location_stack: g
             })
@@ -66,29 +66,29 @@ function(e, t, n) {
             discountOffer: L,
             trialOffer: D,
             children: N.default.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({
-                onLearnMore: p
+                onLearnMore: O
             })
         }) : s ? (0, i.jsx)(l.Clickable, {
-            className: O.iconOnly,
-            onClick: () => p(),
+            className: p.iconOnly,
+            onClick: () => O(),
             children: (0, i.jsx)(l.Tooltip, {
                 text: N.default.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP_WITHOUT_LINK,
                 position: "top",
                 children: e => (0, i.jsx)(S.default, {
-                    className: O.premium,
+                    className: p.premium,
                     ...e
                 })
             })
         }) : (0, i.jsxs)("div", {
-            className: a()(O.root, n),
+            className: a()(p.root, n),
             children: [(0, i.jsx)(S.default, {
-                className: O.premium,
+                className: p.premium,
                 color: f.GradientCssUrls.PREMIUM_TIER_2
             }), (0, i.jsx)(l.Text, {
-                className: O.text,
+                className: p.text,
                 variant: "text-sm/normal",
                 children: N.default.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({
-                    onLearnMore: p
+                    onLearnMore: O
                 })
             })]
         })

@@ -14,7 +14,7 @@ function(e, t, n) {
             return i
         },
         getCurrentChannelSettings: function() {
-            return p
+            return O
         },
         getCurrentGuildSettings: function() {
             return N
@@ -23,10 +23,10 @@ function(e, t, n) {
             return R
         },
         getManyCurrentGuildSettings: function() {
-            return O
+            return p
         },
         muteConfigToTimestamp: function() {
-            return h
+            return A
         },
         trackChannelNotificationSettingsUpdate: function() {
             return m
@@ -86,10 +86,10 @@ function(e, t, n) {
             },
             d = u(n),
             E = u(N(e), t),
-            T = A(d, E, "RETURN_PREVIOUS_WHEN_CHANGED"),
+            T = h(d, E, "RETURN_PREVIOUS_WHEN_CHANGED"),
             S = null !== (s = T("guild_flags")) && void 0 !== s ? s : 0,
-            h = (null !== (a = E.guild_flags) && void 0 !== a ? a : 0) ^ S,
-            m = 0 === (0, _.removeFlags)(h, I.GuildNotificationSettingsFlags.OPT_IN_CHANNELS_OFF, I.GuildNotificationSettingsFlags.OPT_IN_CHANNELS_ON);
+            A = (null !== (a = E.guild_flags) && void 0 !== a ? a : 0) ^ S,
+            m = 0 === (0, _.removeFlags)(A, I.GuildNotificationSettingsFlags.OPT_IN_CHANNELS_OFF, I.GuildNotificationSettingsFlags.OPT_IN_CHANNELS_ON);
         o.default.trackWithMetadata(c.AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, {
             ...E,
             ...l.default.getStats(e),
@@ -109,13 +109,13 @@ function(e, t, n) {
         })
     }
 
-    function A(e, t, n) {
+    function h(e, t, n) {
         return i => {
             if ("RETURN_PREVIOUS_WHEN_CHANGED" === n) return e[i] !== t[i] ? e[i] : void 0
         }
     }
 
-    function h(e) {
+    function A(e) {
         return null != e && null != e.end_time ? new Date(e.end_time).getTime() : null
     }
 
@@ -132,15 +132,15 @@ function(e, t, n) {
                     channel_is_overridden: o,
                     channel_flags: null !== (i = r.flags) && void 0 !== i ? i : null == t ? void 0 : t.channel_flags,
                     channel_message_notification_settings: a,
-                    channel_muted_until: h(r.mute_config)
+                    channel_muted_until: A(r.mute_config)
                 }
             },
             T = E(i),
-            S = E(p(e, t), n),
-            m = A(T, S, "RETURN_PREVIOUS_WHEN_CHANGED"),
+            S = E(O(e, t), n),
+            m = h(T, S, "RETURN_PREVIOUS_WHEN_CHANGED"),
             N = u.default.getChannel(t),
-            O = null !== (a = m("channel_flags")) && void 0 !== a ? a : 0,
-            R = (null !== (d = S.channel_flags) && void 0 !== d ? d : 0) ^ O,
+            p = null !== (a = m("channel_flags")) && void 0 !== a ? a : 0,
+            R = (null !== (d = S.channel_flags) && void 0 !== d ? d : 0) ^ p,
             C = 0 === (0, _.removeFlags)(R, I.ChannelNotificationSettingsFlags.FAVORITED, I.ChannelNotificationSettingsFlags.OPT_IN_ENABLED);
         o.default.trackWithMetadata(c.AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, {
             ...S,
@@ -176,12 +176,12 @@ function(e, t, n) {
         }
     }
 
-    function O(e) {
+    function p(e) {
         let t = new Map;
         return e.forEach(e => t.set(e, N(e))), t
     }
 
-    function p(e, t) {
+    function O(e, t) {
         let n = d.default.isChannelMuted(e, t),
             i = d.default.getChannelMuteConfig(e, t);
         return {
@@ -194,6 +194,6 @@ function(e, t, n) {
 
     function R(e, t) {
         let n = new Map;
-        return t.forEach(t => n.set(t, p(e, t))), n
+        return t.forEach(t => n.set(t, O(e, t))), n
     }
 }

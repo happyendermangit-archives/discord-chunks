@@ -11,12 +11,12 @@ function(e, t, n) {
         T = n("570140"),
         f = n("594190"),
         S = n("444852"),
-        A = n("569545"),
-        h = n("687516"),
+        h = n("569545"),
+        A = n("687516"),
         m = n("139656"),
         N = n("358085"),
-        O = n("199902"),
-        p = n("314897"),
+        p = n("199902"),
+        O = n("314897"),
         R = n("592125"),
         C = n("131951"),
         g = n("158776"),
@@ -70,8 +70,8 @@ function(e, t, n) {
         getStatsHistory(e, t, n) {
             if (!(0, m.default)(C.default) || null == t) return null;
             if (n) {
-                let n = O.default.getActiveStreamForUser(t, e);
-                if (null == n || 0 === O.default.getViewerIds(n).length) return null
+                let n = p.default.getActiveStreamForUser(t, e);
+                if (null == n || 0 === p.default.getViewerIds(n).length) return null
             }
             return w.map(e => n ? function(e) {
                 var t, n, i, r, s;
@@ -164,11 +164,11 @@ function(e, t, n) {
                 appContext: r,
                 pid: s,
                 sourceId: a
-            } = e, o = (0, A.encodeStreamKey)({
+            } = e, o = (0, h.encodeStreamKey)({
                 streamType: t,
                 guildId: n,
                 channelId: i,
-                ownerId: p.default.getId()
+                ownerId: O.default.getId()
             });
             if (M[o] = r, c().forEach(G, e => {
                     let {
@@ -209,8 +209,8 @@ function(e, t, n) {
             if (null == o && null != n) {
                 var l, u, _;
                 null == P[t] && (y[t] = null);
-                let e = (0, A.decodeStreamKey)(t);
-                null == y[t] && null == U[t] && (y[t] = (0, h.getStreamerApplication)(e, g.default));
+                let e = (0, h.decodeStreamKey)(t);
+                null == y[t] && null == U[t] && (y[t] = (0, A.getStreamerApplication)(e, g.default));
                 let r = R.default.getChannel(e.channelId),
                     c = null != r && r.isBroadcastChannel(),
                     E = new S.StreamRTCAnalyticsContext({

@@ -5,10 +5,10 @@ function(e, t, n) {
             return r
         },
         addReaction: function() {
-            return p
+            return O
         },
         getReactors: function() {
-            return O
+            return p
         },
         playBurstReaction: function() {
             return R
@@ -39,9 +39,9 @@ function(e, t, n) {
         T = n("176354"),
         f = n("563114"),
         S = n("981631"),
-        A = n("689938");
+        h = n("689938");
 
-    function h(e, t, n) {
+    function A(e, t, n) {
         let {
             status: i,
             body: r
@@ -50,9 +50,9 @@ function(e, t, n) {
         if (403 === i) switch (r && r.code) {
             case S.AbortCodes.TOO_MANY_REACTIONS:
                 l.default.show({
-                    title: A.default.Messages.TOO_MANY_REACTIONS_ALERT_HEADER,
-                    body: A.default.Messages.TOO_MANY_REACTIONS_ALERT_BODY,
-                    confirmText: A.default.Messages.OKAY
+                    title: h.default.Messages.TOO_MANY_REACTIONS_ALERT_HEADER,
+                    body: h.default.Messages.TOO_MANY_REACTIONS_ALERT_BODY,
+                    confirmText: h.default.Messages.OKAY
                 });
                 break;
             case S.AbortCodes.REACTION_BLOCKED:
@@ -89,7 +89,7 @@ function(e, t, n) {
         } = e, o = null != i.id ? "".concat(i.name, ":").concat(i.id) : i.name;
         return null == r ? S.Endpoints.REACTIONS(t, n, o) : s ? S.Endpoints.REACTION_WITH_TYPE(t, n, o, r, a) : S.Endpoints.REACTION(t, n, o, r)
     }(i = r || (r = {})).MESSAGE = "Message", i.FORUM_TOOLBAR = "Forum Toolbar", i.MOBILE_MEDIA_VIEWER = "Mobile Media Viewer";
-    async function O(e) {
+    async function p(e) {
         let {
             channelId: t,
             messageId: n,
@@ -123,7 +123,7 @@ function(e, t, n) {
             reactionType: l
         }), c
     }
-    async function p(e, t, n) {
+    async function O(e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "Message",
             r = arguments.length > 4 ? arguments[4] : void 0,
             o = null != r && !!r.burst,
@@ -133,9 +133,9 @@ function(e, t, n) {
                 return null != r && r.userHasReactedWithEmoji(n, i)
             }(e, t, n, o)) {
             l.default.show({
-                title: A.default.Messages.EMOJI_PICKER_DOUBLE_REACTION_SUPER_ERROR_TITLE,
-                body: A.default.Messages.EMOJI_PICKER_DOUBLE_REACTION_SUPER_ERROR_BODY,
-                confirmText: A.default.Messages.GOT_IT
+                title: h.default.Messages.EMOJI_PICKER_DOUBLE_REACTION_SUPER_ERROR_TITLE,
+                body: h.default.Messages.EMOJI_PICKER_DOUBLE_REACTION_SUPER_ERROR_BODY,
+                confirmText: h.default.Messages.GOT_IT
             });
             return
         }
@@ -156,7 +156,7 @@ function(e, t, n) {
             },
             oldFormErrors: !0
         }).then(() => {
-            o ? (a.AccessibilityAnnouncer.announce(A.default.Messages.BURST_REACTION_ADD_UNLIMITED_SUCCESS_A11Y.format({
+            o ? (a.AccessibilityAnnouncer.announce(h.default.Messages.BURST_REACTION_ADD_UNLIMITED_SUCCESS_A11Y.format({
                 name: n.name
             })), f.default.triggerFullscreenAnimation({
                 channelId: e,
@@ -165,20 +165,20 @@ function(e, t, n) {
                     ...n,
                     animated: !1
                 }
-            })) : a.AccessibilityAnnouncer.announce(A.default.Messages.REACTION_ADD_SUCCESS_A11Y.format({
+            })) : a.AccessibilityAnnouncer.announce(h.default.Messages.REACTION_ADD_SUCCESS_A11Y.format({
                 name: n.name
             }))
         }).catch(r => {
-            h(r, () => p(e, t, n, i, {
+            A(r, () => O(e, t, n, i, {
                 burst: o,
                 isRetry: !0
             }), {
                 isRetry: _
             }) && (m("MESSAGE_REACTION_REMOVE", e, t, n, {
                 burst: o
-            }), o ? a.AccessibilityAnnouncer.announce(A.default.Messages.BURST_REACTION_ADD_UNLIMITED_ERROR_A11Y.format({
+            }), o ? a.AccessibilityAnnouncer.announce(h.default.Messages.BURST_REACTION_ADD_UNLIMITED_ERROR_A11Y.format({
                 name: n.name
-            })) : a.AccessibilityAnnouncer.announce(A.default.Messages.REACTION_ADD_ERROR_A11Y.format({
+            })) : a.AccessibilityAnnouncer.announce(h.default.Messages.REACTION_ADD_ERROR_A11Y.format({
                 name: n.name
             })))
         })
@@ -205,7 +205,7 @@ function(e, t, n) {
             url: S.Endpoints.REMOVE_REACTIONS(e, t),
             oldFormErrors: !0
         }).catch(n => {
-            h(n, () => C(e, t, {
+            A(n, () => C(e, t, {
                 isRetry: !0
             }), {
                 isRetry: i
@@ -220,7 +220,7 @@ function(e, t, n) {
             url: S.Endpoints.REMOVE_EMOJI_REACTIONS(e, t, a),
             oldFormErrors: !0
         }).catch(i => {
-            h(i, () => g(e, t, n, {
+            A(i, () => g(e, t, n, {
                 isRetry: !0
             }), {
                 isRetry: r
@@ -250,13 +250,13 @@ function(e, t, n) {
             },
             oldFormErrors: !0
         }).then(() => {
-            (null == o ? void 0 : o.burst) ? a.AccessibilityAnnouncer.announce(A.default.Messages.BURST_REACTION_REMOVE_SUCCESS_A11Y.format({
+            (null == o ? void 0 : o.burst) ? a.AccessibilityAnnouncer.announce(h.default.Messages.BURST_REACTION_REMOVE_SUCCESS_A11Y.format({
                 name: n.name
-            })): a.AccessibilityAnnouncer.announce(A.default.Messages.REACTION_REMOVE_SUCCESS_A11Y.format({
+            })): a.AccessibilityAnnouncer.announce(h.default.Messages.REACTION_REMOVE_SUCCESS_A11Y.format({
                 name: n.name
             }))
         }).catch(async s => {
-            if (h(s, () => L(e, t, n, i, r, {
+            if (A(s, () => L(e, t, n, i, r, {
                     burst: l,
                     isRetry: !0
                 }), {
@@ -267,9 +267,9 @@ function(e, t, n) {
                     userId: i,
                     burst: l,
                     colors: r
-                }), (null == o ? void 0 : o.burst) ? a.AccessibilityAnnouncer.announce(A.default.Messages.BURST_REACTION_REMOVE_ERROR_A11Y.format({
+                }), (null == o ? void 0 : o.burst) ? a.AccessibilityAnnouncer.announce(h.default.Messages.BURST_REACTION_REMOVE_ERROR_A11Y.format({
                     name: n.name
-                })) : a.AccessibilityAnnouncer.announce(A.default.Messages.REACTION_REMOVE_ERROR_A11Y.format({
+                })) : a.AccessibilityAnnouncer.announce(h.default.Messages.REACTION_REMOVE_ERROR_A11Y.format({
                     name: n.name
                 }))
             }

@@ -16,12 +16,12 @@ function(e, t, n) {
         T = n("592125"),
         f = n("984933"),
         S = n("271383"),
-        A = n("430824"),
-        h = n("496675"),
+        h = n("430824"),
+        A = n("496675"),
         m = n("699516"),
         N = n("246946"),
-        O = n("594174"),
-        p = n("483360"),
+        p = n("594174"),
+        O = n("483360"),
         R = n("176354"),
         C = n("51144"),
         g = n("981631"),
@@ -221,7 +221,7 @@ function(e, t, n) {
                 parse(e, t, n) {
                     let {
                         isNotification: i
-                    } = n, r = O.default.getUser(e[1]);
+                    } = n, r = p.default.getUser(e[1]);
                     if (null == r) return {
                         content: e[0]
                     };
@@ -246,7 +246,7 @@ function(e, t, n) {
                         guild: i
                     } = n;
                     if (null != i) {
-                        let t = A.default.getRoles(i.id)[e[1]];
+                        let t = h.default.getRoles(i.id)[e[1]];
                         if (null != t) return {
                             content: "@".concat(t.name)
                         }
@@ -261,7 +261,7 @@ function(e, t, n) {
                 parse(e) {
                     let t = T.default.getChannel(e[1]);
                     return {
-                        content: null == t ? e[0] : (0, o.computeChannelName)(t, O.default, m.default, !0, !0)
+                        content: null == t ? e[0] : (0, o.computeChannelName)(t, p.default, m.default, !0, !0)
                     }
                 }
             },
@@ -348,8 +348,8 @@ function(e, t, n) {
     function j(e) {
         let t;
         let n = null == e ? void 0 : e.getGuildId(),
-            i = null != n ? A.default.getGuild(n) : null,
-            s = h.default.can(g.Permissions.MENTION_EVERYONE, e);
+            i = null != n ? h.default.getGuild(n) : null,
+            s = A.default.can(g.Permissions.MENTION_EVERYONE, e);
         t = (null == e ? void 0 : e.isPrivate()) ? e.recipients.map(e => ({
             userId: e,
             nick: null
@@ -366,13 +366,13 @@ function(e, t, n) {
         let a = r()(t.reduce((e, t) => {
                 let {
                     userId: n
-                } = t, i = O.default.getUser(n);
+                } = t, i = p.default.getUser(n);
                 return null == i ? e : (e.push({
                     id: n,
                     text: i.tag
                 }), e)
             }, [])),
-            o = r()(null != i ? A.default.getRoles(i.id) : {}).values().filter(e => {
+            o = r()(null != i ? h.default.getRoles(i.id) : {}).values().filter(e => {
                 let {
                     mentionable: t
                 } = e;
@@ -397,7 +397,7 @@ function(e, t, n) {
                     text: n
                 }
             }),
-            d = null != n ? r()(p.COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS).filter(e => e !== f.GUILD_SELECTABLE_CHANNELS_KEY).flatMap(e => f.default.getChannels(n)[e].map(e => ({
+            d = null != n ? r()(O.COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS).filter(e => e !== f.GUILD_SELECTABLE_CHANNELS_KEY).flatMap(e => f.default.getChannels(n)[e].map(e => ({
                 id: e.channel.id,
                 text: e.channel.name
             }))).value() : [],
@@ -449,7 +449,7 @@ function(e, t, n) {
         unparse(e, t, n) {
             let i = T.default.getChannel(t),
                 s = null != i ? i.getGuildId() : null,
-                o = null != s ? A.default.getGuild(s) : null,
+                o = null != s ? h.default.getGuild(s) : null,
                 l = n ? F : r().omit(F, ["spoiler", "timestamp"]),
                 d = n ? W : u.default.translateSurrogatesToInlineEmoji,
                 _ = a().parserFor(l),

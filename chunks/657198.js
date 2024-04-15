@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return A
+            return h
         }
     }), n("47120");
     var i = n("735250"),
@@ -21,7 +21,7 @@ function(e, t, n) {
         f = n("689938"),
         S = n("500813");
 
-    function A(e, t, n) {
+    function h(e, t, n) {
         let {
             attributes: r,
             children: s,
@@ -53,7 +53,7 @@ function(e, t, n) {
                     children: s
                 });
             case "applicationCommandOption":
-                return (0, i.jsx)(h, {
+                return (0, i.jsx)(A, {
                     attributes: r,
                     channelId: n,
                     element: a,
@@ -63,19 +63,19 @@ function(e, t, n) {
                 return null
         }
     }
-    let h = e => {
+    let A = e => {
         let t, {
                 channelId: n,
                 element: s,
                 attributes: E,
-                children: A
+                children: h
             } = e,
-            h = (0, o.useSelected)(),
+            A = (0, o.useSelected)(),
             m = (0, o.useFocused)(),
             N = (0, o.useSlateStatic)(),
             {
-                optionType: O,
-                errored: p
+                optionType: p,
+                errored: O
             } = (0, l.useStateFromStoresObject)([d.default], () => {
                 var e, t, i;
                 return {
@@ -87,23 +87,23 @@ function(e, t, n) {
             C = s.children[s.children.length - 1],
             g = null != C && T.TextUtils.isText(C) && C.text.endsWith("\n"),
             L = a()(S.inlineElement, S.optionPill, {
-                [S.selectedPill]: m && h,
-                [S.erroredPill]: (!m || !h) && p
+                [S.selectedPill]: m && A,
+                [S.erroredPill]: (!m || !A) && O
             }),
             D = r.useCallback(() => {
                 !T.EditorUtils.isVoid(N, s) && I.SlateTransforms.selectCommandOption(N, s.optionName, !0)
             }, [N, s]);
-        return t = O === u.ApplicationCommandOptionType.ATTACHMENT ? (null == R ? void 0 : R.filename) != null ? (0, i.jsxs)("span", {
+        return t = p === u.ApplicationCommandOptionType.ATTACHMENT ? (null == R ? void 0 : R.filename) != null ? (0, i.jsxs)("span", {
             className: a()(S.optionPillValue, S.attachmentFilename),
             contentEditable: !1,
-            children: [R.filename, A]
+            children: [R.filename, h]
         }) : (0, i.jsxs)("span", {
             className: a()(S.optionPillValue, S.readonlyPillValue),
             contentEditable: !1,
-            children: [f.default.Messages.APPLICATION_COMMAND_FILE_ATTACHMENT, A]
+            children: [f.default.Messages.APPLICATION_COMMAND_FILE_ATTACHMENT, h]
         }) : (0, i.jsxs)("span", {
             className: S.optionPillValue,
-            children: [A, g ? (0, i.jsx)("span", {
+            children: [h, g ? (0, i.jsx)("span", {
                 className: S.newLine,
                 contentEditable: !1
             }) : null]

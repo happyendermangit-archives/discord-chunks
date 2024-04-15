@@ -21,8 +21,8 @@ function(e, t, n) {
         T = n("873572"),
         f = n("520978"),
         S = n("659101"),
-        A = n("981631"),
-        h = n("689938"),
+        h = n("981631"),
+        A = n("689938"),
         m = n("220862");
 
     function N(e) {
@@ -53,11 +53,11 @@ function(e, t, n) {
                 children: [(0, i.jsx)(f.default, {
                     application: s,
                     className: m.button
-                }), l && (d ? (0, i.jsx)(p, {
+                }), l && (d ? (0, i.jsx)(O, {
                     app: s,
                     listing: null != u ? u : void 0,
                     guildId: n
-                }) : (0, i.jsx)(O, {
+                }) : (0, i.jsx)(p, {
                     guildId: n,
                     listing: u
                 }))]
@@ -65,7 +65,7 @@ function(e, t, n) {
         }) : null
     }
 
-    function O(e) {
+    function p(e) {
         let {
             listing: t,
             guildId: n
@@ -76,7 +76,7 @@ function(e, t, n) {
             guildId: n,
             groupListingId: null == t ? void 0 : t.id,
             showBenefitsFirst: !0,
-            analyticsLocation: A.AnalyticsLocations.BOT_PROFILE_POPOUT
+            analyticsLocation: h.AnalyticsLocations.BOT_PROFILE_POPOUT
         });
         return (0, i.jsx)(l.default, {
             onClick: s,
@@ -89,12 +89,12 @@ function(e, t, n) {
                 }), (0, i.jsx)(_.default, {
                     size: 4,
                     horizontal: !0
-                }), h.default.Messages.BOT_PROFILE_UPGRADE_CTA]
+                }), A.default.Messages.BOT_PROFILE_UPGRADE_CTA]
             })
         })
     }
 
-    function p(e) {
+    function O(e) {
         let {
             app: t,
             listing: r,

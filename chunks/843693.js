@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         shouldTrackMessage: function() {
-            return O
+            return p
         }
     }), n("47120");
     var i, r, s, a, o = n("442837"),
@@ -16,8 +16,8 @@ function(e, t, n) {
         T = n("641033"),
         f = n("524484"),
         S = n("981631");
-    let A = new Set,
-        h = new l.SecondaryIndexMap(function(e) {
+    let h = new Set,
+        A = new l.SecondaryIndexMap(function(e) {
             let {
                 userId: t,
                 channelId: n
@@ -57,22 +57,22 @@ function(e, t, n) {
             return "".concat(t, "-").concat(n)
         };
 
-    function O(e, t, n, i) {
+    function p(e, t, n, i) {
         return !(e !== t || null == n || i.has(n)) && (i.add(n), !0)
     }
-    class p extends(i = o.default.Store) {
+    class O extends(i = o.default.Store) {
         initialize() {
             this.waitFor(_.default, c.default)
         }
         getComboScore(e, t) {
-            let n = h.get(N({
+            let n = A.get(N({
                 userId: e,
                 channelId: t
             }));
             return null == n ? 0 : (0, T.getComboScore)(n)
         }
         getUserCombo(e, t) {
-            return h.get(N({
+            return A.get(N({
                 userId: e,
                 channelId: t
             }))
@@ -96,13 +96,13 @@ function(e, t, n) {
             return null != r ? (0, T.getComboShakeIntensity)(r, i) * n : 0
         }
     }
-    a = "PoggermodeStore", (s = "displayName") in(r = p) ? Object.defineProperty(r, s, {
+    a = "PoggermodeStore", (s = "displayName") in(r = O) ? Object.defineProperty(r, s, {
         value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
     }) : r[s] = a;
-    let R = new p(d.default, {
+    let R = new O(d.default, {
         POGGERMODE_UPDATE_COMBO: function(e) {
             let {
                 type: t,
@@ -112,7 +112,7 @@ function(e, t, n) {
             ! function e(t) {
                 var n, i, r, s, a, o;
                 let l = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-                    d = h.get(N(t)),
+                    d = A.get(N(t)),
                     _ = {
                         ...d,
                         ...t,
@@ -120,8 +120,8 @@ function(e, t, n) {
                         multiplier: Math.min(null !== (s = null !== (r = t.multiplier) && void 0 !== r ? r : null == d ? void 0 : d.multiplier) && void 0 !== s ? s : 1, 7),
                         decayInterval: null !== (a = null == d ? void 0 : d.decayInterval) && void 0 !== a ? a : new u.Interval
                     };
-                h.set(N(t), _), l && (null === (o = _.decayInterval) || void 0 === o || o.start(1e3, () => {
-                    let t = h.get(N(_));
+                A.set(N(t), _), l && (null === (o = _.decayInterval) || void 0 === o || o.start(1e3, () => {
+                    let t = A.get(N(_));
                     if (null != t) {
                         let i = _.multiplier !== t.multiplier && _.value !== t.value;
                         if (t.value <= 0 || i) {
@@ -159,8 +159,8 @@ function(e, t, n) {
             } = e;
             if (!I.default.isEnabled()) return !1;
             let o = _.default.getId();
-            if (!O(null == s ? void 0 : s.id, o, a, A)) return !1;
-            let l = h.get(N({
+            if (!p(null == s ? void 0 : s.id, o, a, h)) return !1;
+            let l = A.get(N({
                 userId: null !== (t = null == s ? void 0 : s.id) && void 0 !== t ? t : "???",
                 channelId: i
             }));

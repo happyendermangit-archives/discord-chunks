@@ -21,9 +21,9 @@ function(e, t, n) {
             guildId: T,
             channelId: f,
             messageId: S,
-            roleId: A
+            roleId: h
         } = (0, o.useUserProfileAnalyticsContext)(), {
-            analyticsLocations: h
+            analyticsLocations: A
         } = (0, a.default)(), [m, N] = r.useState(!1);
         return I || null == E || "" === E ? null : (0, i.jsxs)("div", {
             children: [(0, i.jsx)("div", {
@@ -42,11 +42,11 @@ function(e, t, n) {
                         guildId: null != T ? T : void 0,
                         channelId: null != f ? f : void 0,
                         messageId: null != S ? S : void 0,
-                        roleId: null != A ? A : void 0,
+                        roleId: null != h ? h : void 0,
                         analyticsLocation: {
                             section: d.AnalyticsSections.BITE_SIZE_PROFILE_POPOUT
                         },
-                        sourceAnalyticsLocations: h
+                        sourceAnalyticsLocations: A
                     })
                 },
                 className: c.seeMoreText,

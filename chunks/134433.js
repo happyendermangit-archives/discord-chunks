@@ -26,10 +26,10 @@ function(e, t, n) {
                 iconClassName: T
             } = e,
             [f, S] = (0, o.useStateFromStoresArray)([d.default], () => [d.default.desaturateUserColors, d.default.saturation]),
-            A = (0, u.useToken)(l.default.unsafe_rawColors.PRIMARY_300).hex(),
-            h = (0, a.hex2int)(null != n ? n : A),
-            m = (0, a.int2hsl)(h, !1, f ? S : null);
-        t = null != E ? E : .3 > (0, a.getDarkness)(h) ? l.default.unsafe_rawColors.PRIMARY_630.css : l.default.unsafe_rawColors.WHITE_500.css;
+            h = (0, u.useToken)(l.default.unsafe_rawColors.PRIMARY_300).hex(),
+            A = (0, a.hex2int)(null != n ? n : h),
+            m = (0, a.int2hsl)(A, !1, f ? S : null);
+        t = null != E ? E : .3 > (0, a.getDarkness)(A) ? l.default.unsafe_rawColors.PRIMARY_630.css : l.default.unsafe_rawColors.WHITE_500.css;
         let N = r / 8;
         return (0, i.jsx)("div", {
             style: {

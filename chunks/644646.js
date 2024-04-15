@@ -16,36 +16,36 @@ function(e, t, n) {
         T = n("78826"),
         f = n("981631"),
         S = n("689938"),
-        A = n("176126");
+        h = n("176126");
     t.default = function(e) {
         let {
             className: t,
             quest: n,
             autoplay: s = !0,
-            learnMoreStyle: h = null
-        } = e, m = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), N = r.useMemo(() => (0, I.isAssetAnimated)(n.config.assets.rewardTile), [n]), O = r.useCallback(() => {
+            learnMoreStyle: A = null
+        } = e, m = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), N = r.useMemo(() => (0, I.isAssetAnimated)(n.config.assets.rewardTile), [n]), p = r.useCallback(() => {
             (0, E.trackQuestContentClicked)({
                 questId: n.id,
                 questContent: e.questContent,
                 questContentCTA: E.QuestContentCTA.REWARD_LEARN_MORE
             }), u.default.open(f.UserSettingsSections.INVENTORY)
-        }, [n, e.questContent]), p = r.useRef(null), R = r.useRef(s);
+        }, [n, e.questContent]), O = r.useRef(null), R = r.useRef(s);
         r.useEffect(() => {
             var e, t;
-            N && !m && null != p.current && (s && !R.current ? null === (e = p.current) || void 0 === e || e.play() : !s && R.current && (null === (t = p.current) || void 0 === t || t.pause()), R.current = s)
+            N && !m && null != O.current && (s && !R.current ? null === (e = O.current) || void 0 === e || e.play() : !s && R.current && (null === (t = O.current) || void 0 === t || t.pause()), R.current = s)
         }, [s, N, m]);
         let C = (0, I.getRewardAssetUrl)(n),
             g = N ? (0, i.jsx)(T.QuestsAsset, {
                 id: "QuestRewardTile_rewardTileAnimated",
                 children: e => (0, i.jsx)(c.default, {
                     ref: t => {
-                        e.current = t, p.current = t
+                        e.current = t, O.current = t
                     },
                     autoPlay: !m && s,
                     loop: !0,
                     muted: !0,
                     playsInline: !0,
-                    className: A.questRewardTileAsset,
+                    className: h.questRewardTileAsset,
                     controls: !1,
                     children: (0, i.jsx)("source", {
                         src: C,
@@ -57,23 +57,23 @@ function(e, t, n) {
                 children: e => (0, i.jsx)("img", {
                     ref: e,
                     alt: n.config.messages.rewardName,
-                    className: a()(A.questRewardTileAsset, A.questRewardTileAssetStatic),
+                    className: a()(h.questRewardTileAsset, h.questRewardTileAssetStatic),
                     src: C
                 })
             });
-        return null == h ? (0, i.jsx)("div", {
-            className: a()(t, A.questRewardTile),
+        return null == A ? (0, i.jsx)("div", {
+            className: a()(t, h.questRewardTile),
             children: g
         }) : (0, i.jsxs)(l.Clickable, {
-            className: a()(A.questRewardTile, A.questRewardTileInteractive, t),
-            onClick: O,
-            children: ["text" === h && (0, i.jsx)(l.Text, {
+            className: a()(h.questRewardTile, h.questRewardTileInteractive, t),
+            onClick: p,
+            children: ["text" === A && (0, i.jsx)(l.Text, {
                 color: "always-white",
                 variant: "text-xs/normal",
-                className: A.questRewardTileDetailsLearnMore,
+                className: h.questRewardTileDetailsLearnMore,
                 children: S.default.Messages.QUESTS_LEARN_MORE_STACKED.format()
-            }), "icon" === h && (0, i.jsx)("div", {
-                className: A.questRewardTileDetailsLearnMore,
+            }), "icon" === A && (0, i.jsx)("div", {
+                className: h.questRewardTileDetailsLearnMore,
                 children: (0, i.jsx)(_.default, {
                     color: l.tokens.colors.WHITE.css,
                     width: 12,

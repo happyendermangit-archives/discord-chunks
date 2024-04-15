@@ -16,12 +16,12 @@ function(e, t, n) {
         T = n("998698"),
         f = n("703558"),
         S = n("117530"),
-        A = n("132338"),
-        h = n("459273"),
+        h = n("132338"),
+        A = n("459273"),
         m = n("444282"),
         N = n("898463"),
-        O = n("981631"),
-        p = n("683600"),
+        p = n("981631"),
+        O = n("683600"),
         R = n("633353");
     let C = [];
 
@@ -62,8 +62,8 @@ function(e, t, n) {
         let b = r.useCallback(() => {
             g.focusFirstVisibleItem()
         }, [g]);
-        return ((0, h.useComponentAction)({
-            event: O.ComponentActions.FOCUS_ATTACHMENT_AREA,
+        return ((0, A.useComponentAction)({
+            event: p.ComponentActions.FOCUS_ATTACHMENT_AREA,
             handler: b
         }), r.useEffect(() => {
             if (D) {
@@ -86,7 +86,7 @@ function(e, t, n) {
                         return (0, i.jsx)("ul", {
                             ref: r,
                             ...o,
-                            className: a()(p.channelAttachmentArea, R.scrollbarGhost),
+                            className: a()(O.channelAttachmentArea, R.scrollbarGhost),
                             children: D ? y.map(e => (0, i.jsx)(m.default, {
                                 channelId: t,
                                 keyboardModeEnabled: s,
@@ -101,7 +101,7 @@ function(e, t, n) {
                         })
                     }
                 })
-            }), n.drafts.type === f.DraftType.FirstThreadMessage ? null : (0, i.jsx)(A.default, {})]
+            }), n.drafts.type === f.DraftType.FirstThreadMessage ? null : (0, i.jsx)(h.default, {})]
         })
     }
     t.default = r.memo(function(e) {

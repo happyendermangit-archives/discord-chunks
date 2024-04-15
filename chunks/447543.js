@@ -20,12 +20,12 @@ function(e, t, n) {
         T = n("625128"),
         f = n("972830"),
         S = n("859802"),
-        A = n("305325"),
-        h = n("281956"),
+        h = n("305325"),
+        A = n("281956"),
         m = n("931261"),
         N = n("15274"),
-        O = n("924301"),
-        p = n("82085"),
+        p = n("924301"),
+        O = n("82085"),
         R = n("264229"),
         C = n("652898"),
         g = n("895886"),
@@ -51,8 +51,8 @@ function(e, t, n) {
         K = n("981631"),
         z = n("176505"),
         X = n("70722"),
-        Q = n("245335"),
-        q = n("157925");
+        q = n("245335"),
+        Q = n("157925");
     let Z = "invite",
         J = null;
 
@@ -60,13 +60,13 @@ function(e, t, n) {
         var t, n, i;
         let r = {};
         switch (e.target_type) {
-            case Q.InviteTargetTypes.STREAM:
+            case q.InviteTargetTypes.STREAM:
                 r.targetType = e.target_type, r.targetUserId = null === (n = e.target_user) || void 0 === n ? void 0 : n.id;
                 break;
-            case Q.InviteTargetTypes.EMBEDDED_APPLICATION:
+            case q.InviteTargetTypes.EMBEDDED_APPLICATION:
                 r.targetType = e.target_type, r.targetApplicationId = null === (i = e.target_application) || void 0 === i ? void 0 : i.id;
                 break;
-            case Q.InviteTargetTypes.ROLE_SUBSCRIPTIONS_PURCHASE:
+            case q.InviteTargetTypes.ROLE_SUBSCRIPTIONS_PURCHASE:
                 r.targetType = e.target_type
         }
         return (!(null != G.default.getGuild(null === (t = e.guild) || void 0 === t ? void 0 : t.id)) || e.new_member) && null != e.channel && (0, M.isGuildTextChannelType)(e.channel.type) && (r.welcomeModalChannelId = e.channel.id), null != e.guild_scheduled_event && (r.guildScheduledEvent = e.guild_scheduled_event), r
@@ -82,7 +82,7 @@ function(e, t, n) {
             type: a
         } = i, o = P.default.getChannel(i.id), l = function(e, t, n) {
             var i, r;
-            if ((null == n ? void 0 : n.targetType) === Q.InviteTargetTypes.ROLE_SUBSCRIPTIONS_PURCHASE) return z.StaticChannelRoute.ROLE_SUBSCRIPTIONS;
+            if ((null == n ? void 0 : n.targetType) === q.InviteTargetTypes.ROLE_SUBSCRIPTIONS_PURCHASE) return z.StaticChannelRoute.ROLE_SUBSCRIPTIONS;
             if ((null == n ? void 0 : n.targetType) == null && !M.GUILD_VOCAL_CHANNEL_TYPES.has(t.type) && ((0, S.canSeeGuildHome)(e) || (0, m.canSeeOnboardingHome)(e))) return z.StaticChannelRoute.GUILD_HOME;
             let s = P.default.getChannel(t.id);
             return k.default.can(K.Permissions.VIEW_CHANNEL, s) ? t.id : null !== (r = null === (i = U.default.getDefaultChannel(e, !0, K.Permissions.CREATE_INSTANT_INVITE)) || void 0 === i ? void 0 : i.id) && void 0 !== r ? r : t.id
@@ -100,16 +100,16 @@ function(e, t, n) {
                         (0, v.connectAndOpen)(i instanceof M.ChannelRecordBase ? i : (0, M.createChannelRecord)(i)), (0, D.transitionTo)(T);
                         return
                     }
-                    n.selectVoiceChannel(l), d === Q.InviteTargetTypes.STREAM && null != u && W.watchStreamAndTransitionToStream({
+                    n.selectVoiceChannel(l), d === q.InviteTargetTypes.STREAM && null != u && W.watchStreamAndTransitionToStream({
                         streamType: X.StreamTypes.GUILD,
                         ownerId: u,
                         guildId: t,
                         channelId: l
-                    }), d === Q.InviteTargetTypes.EMBEDDED_APPLICATION && null != _ && ((0, D.transitionTo)(K.Routes.CHANNEL(null != t ? t : K.ME, l)), (0, I.default)(l, _, s, null == r ? void 0 : r.intent))
+                    }), d === q.InviteTargetTypes.EMBEDDED_APPLICATION && null != _ && ((0, D.transitionTo)(K.Routes.CHANNEL(null != t ? t : K.ME, l)), (0, I.default)(l, _, s, null == r ? void 0 : r.intent))
                 };
-                (0, h.shouldShowMembershipVerificationGate)(t, [G.default, w.default, V.default, b.default]) ? (0, A.openMemberVerificationModal)(t, a) : a()
+                (0, A.shouldShowMembershipVerificationGate)(t, [G.default, w.default, V.default, b.default]) ? (0, h.openMemberVerificationModal)(t, a) : a()
             })
-        }) : (0, E.isActivityInTextSupportedForChannel)(o) && d === Q.InviteTargetTypes.EMBEDDED_APPLICATION && null != _ && ((0, D.transitionTo)(K.Routes.CHANNEL(null != t ? t : K.ME, l)), (0, I.default)(l, _, s, null == r ? void 0 : r.intent)), (function(e, t) {
+        }) : (0, E.isActivityInTextSupportedForChannel)(o) && d === q.InviteTargetTypes.EMBEDDED_APPLICATION && null != _ && ((0, D.transitionTo)(K.Routes.CHANNEL(null != t ? t : K.ME, l)), (0, I.default)(l, _, s, null == r ? void 0 : r.intent)), (function(e, t) {
             let {
                 type: n
             } = e, {
@@ -119,7 +119,7 @@ function(e, t, n) {
             } = null != t ? t : {}, a = n === K.ChannelTypes.GUILD_STAGE_VOICE, o = {
                 navigationReplace: !0
             };
-            return null != r && (o.welcomeModalChannelId = r), a && (o.state = q.STAGE_INVITE_STATE_KEY), null != s && (o.guildScheduledEventId = s.id), e => null != i ? i(e, o, L.default.INVITE_ACCEPT) : (0, D.transitionTo)(e, o, L.default.INVITE_ACCEPT)
+            return null != r && (o.welcomeModalChannelId = r), a && (o.state = Q.STAGE_INVITE_STATE_KEY), null != s && (o.guildScheduledEventId = s.id), e => null != i ? i(e, o, L.default.INVITE_ACCEPT) : (0, D.transitionTo)(e, o, L.default.INVITE_ACCEPT)
         })(i, r)(T)
     }
     let et = function(e, t) {
@@ -152,7 +152,7 @@ function(e, t, n) {
                 guild_id: t,
                 channel_id: n
             } = e;
-            (0, O.isGuildScheduledEventActive)(e) && null != n ? et(n) : await j.default.transitionToGuildSync(t)
+            (0, p.isGuildScheduledEventActive)(e) && null != n ? et(n) : await j.default.transitionToGuildSync(t)
         };
     t.default = {
         resolveInvite: function e(t, n, i) {
@@ -343,7 +343,7 @@ function(e, t, n) {
                     invite: e.body,
                     code: E
                 });
-                let r = O.default.getGuildScheduledEvent(_.guildScheduledEventId),
+                let r = p.default.getGuildScheduledEvent(_.guildScheduledEventId),
                     s = {
                         ...e.body,
                         guild_scheduled_event: r
@@ -398,7 +398,7 @@ function(e, t, n) {
                 guild: a
             } = e;
             if (null != a && (null === (n = a.features) || void 0 === n ? void 0 : n.includes(K.GuildFeatures.HUB))) {
-                p.default.onOpenHubInvite(e);
+                O.default.onOpenHubInvite(e);
                 return
             }
             if (null != a && (null === (i = a.features) || void 0 === i ? void 0 : i.includes(K.GuildFeatures.COMMUNITY)) && (null === (r = a.features) || void 0 === r ? void 0 : r.includes(K.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED)) && !a.features.includes(K.GuildFeatures.PREVIEW_ENABLED)) {

@@ -17,18 +17,18 @@ function(e, t, n) {
         let {
             disabled: n,
             type: s
-        } = e, [T, f] = (0, d.useExpressionPickerStore)(e => [e.activeView, e.pickerId], o.default), S = r.useContext(u.default), [A, h] = r.useState(!1), m = T === c.ExpressionPickerViewType.STICKER, N = r.useCallback(() => {
+        } = e, [T, f] = (0, d.useExpressionPickerStore)(e => [e.activeView, e.pickerId], o.default), S = r.useContext(u.default), [h, A] = r.useState(!1), m = T === c.ExpressionPickerViewType.STICKER, N = r.useCallback(() => {
             (0, d.toggleExpressionPicker)(c.ExpressionPickerViewType.STICKER, s)
         }, [s]);
         r.useEffect(() => {
             let e = () => {
                     requestAnimationFrame(() => {
-                        h(!0)
+                        A(!0)
                     })
                 },
                 t = () => {
                     requestAnimationFrame(() => {
-                        h(!1)
+                        A(!1)
                     })
                 };
             return S.addListener("sticker-suggestions-shown", e), S.addListener("sticker-suggestions-hidden", t), () => {
@@ -36,8 +36,8 @@ function(e, t, n) {
             }
         }, [S]);
         let {
-            Component: O,
-            events: p,
+            Component: p,
+            events: O,
             play: R
         } = (0, l.useStickerLottie)();
         return n ? null : (0, i.jsx)("div", {
@@ -45,9 +45,9 @@ function(e, t, n) {
             ref: t,
             children: (0, i.jsx)(_.default, {
                 innerClassName: a()(I.button, I.stickerButton, {
-                    [I.stickerButtonTilted]: A && !m
+                    [I.stickerButtonTilted]: h && !m
                 }),
-                ...p,
+                ...O,
                 onClick: () => {
                     N(), R()
                 },
@@ -58,7 +58,7 @@ function(e, t, n) {
                 "aria-controls": f,
                 sparkle: !1,
                 notification: null,
-                children: (0, i.jsx)(O, {
+                children: (0, i.jsx)(p, {
                     color: "currentColor"
                 })
             })

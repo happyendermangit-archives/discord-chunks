@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         bulkOptInChannels: function() {
-            return p
+            return O
         },
         dimissFavoriteSuggestion: function() {
             return L
@@ -14,10 +14,10 @@ function(e, t, n) {
             return C
         },
         setOptInChannel: function() {
-            return h
+            return A
         },
         updateOptInChannelsBatched: function() {
-            return O
+            return p
         },
         updateOptInChannelsImmediate: function() {
             return m
@@ -38,19 +38,19 @@ function(e, t, n) {
         T = n("630388"),
         f = n("621600"),
         S = n("981631"),
-        A = n("526761");
+        h = n("526761");
 
-    function h(e, t, n, i) {
+    function A(e, t, n, i) {
         if (null == e) return;
         if (u.default.isFullServerPreview(e)) {
             (0, l.updateImpersonatedChannels)(e, n ? [t] : [], n ? [] : [t]);
             return
         }
         let r = E.default.getChannelIdFlags(e, t);
-        !n && (r = (0, T.setFlag)(r, A.ChannelNotificationSettingsFlags.FAVORITED, !1));
+        !n && (r = (0, T.setFlag)(r, h.ChannelNotificationSettingsFlags.FAVORITED, !1));
         let a = (0, f.getCurrentChannelSettings)(e, t),
             _ = {
-                flags: (0, T.setFlag)(r, A.ChannelNotificationSettingsFlags.OPT_IN_ENABLED, n)
+                flags: (0, T.setFlag)(r, h.ChannelNotificationSettingsFlags.OPT_IN_ENABLED, n)
             };
         d.default.saveUserGuildSettingsBulk({
             [e]: {
@@ -80,13 +80,13 @@ function(e, t, n) {
             return
         }
         let r = E.default.getChannelIdFlags(e, t);
-        !n && (r = (0, T.setFlag)(r, A.ChannelNotificationSettingsFlags.FAVORITED, !1));
+        !n && (r = (0, T.setFlag)(r, h.ChannelNotificationSettingsFlags.FAVORITED, !1));
         let a = (0, f.getCurrentChannelSettings)(e, t),
             _ = {
-                flags: (0, T.setFlag)(r, A.ChannelNotificationSettingsFlags.OPT_IN_ENABLED, n)
+                flags: (0, T.setFlag)(r, h.ChannelNotificationSettingsFlags.OPT_IN_ENABLED, n)
             };
         if (!E.default.isOptInEnabled(e)) {
-            let n = (0, T.setFlag)(E.default.getGuildFlags(e), A.GuildNotificationSettingsFlags.OPT_IN_CHANNELS_ON, !0);
+            let n = (0, T.setFlag)(E.default.getGuildFlags(e), h.GuildNotificationSettingsFlags.OPT_IN_CHANNELS_ON, !0);
             d.default.saveUserGuildSettingsBulk({
                 [e]: {
                     channel_overrides: {
@@ -119,9 +119,9 @@ function(e, t, n) {
             updates: t
         })
     }
-    let O = (0, i.debounce)((e, t) => N(e, t), 1e3);
+    let p = (0, i.debounce)((e, t) => N(e, t), 1e3);
 
-    function p(e, t) {
+    function O(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             i = arguments.length > 3 ? arguments[3] : void 0;
         if (null == e) return;
@@ -135,10 +135,10 @@ function(e, t, n) {
         if (t.forEach(t => {
                 let n = E.default.getChannelIdFlags(e, t);
                 r[t] = {
-                    flags: (0, T.setFlag)(n, A.ChannelNotificationSettingsFlags.OPT_IN_ENABLED, !0)
+                    flags: (0, T.setFlag)(n, h.ChannelNotificationSettingsFlags.OPT_IN_ENABLED, !0)
                 }
             }), n) {
-            let t = (0, T.setFlag)(E.default.getGuildFlags(e), A.GuildNotificationSettingsFlags.OPT_IN_CHANNELS_ON, !0);
+            let t = (0, T.setFlag)(E.default.getGuildFlags(e), h.GuildNotificationSettingsFlags.OPT_IN_CHANNELS_ON, !0);
             a.default.updateGuildAndChannelNotificationSettings(e, {
                 flags: t,
                 channel_overrides: r
@@ -163,7 +163,7 @@ function(e, t, n) {
         }
         let i = E.default.getGuildFlags(e);
         a.default.updateGuildNotificationSettings(e, {
-            flags: (0, T.setFlag)(i, A.GuildNotificationSettingsFlags.OPT_IN_CHANNELS_ON, t)
+            flags: (0, T.setFlag)(i, h.GuildNotificationSettingsFlags.OPT_IN_CHANNELS_ON, t)
         }, f.NotificationLabel.optedIn(t)), I.default.track(S.AnalyticEvents.CHANNEL_LIST_UPDATED, {
             ...(0, o.collectGuildAnalyticsMetadata)(e),
             action_type: t ? "guild_enabled" : "guild_disabled",
@@ -174,8 +174,8 @@ function(e, t, n) {
     function C(e, t, n, i) {
         if (null == e || u.default.isFullServerPreview(e)) return;
         let r = E.default.getChannelIdFlags(e, t);
-        !(0, T.hasFlag)(r, A.ChannelNotificationSettingsFlags.OPT_IN_ENABLED) && n && (r = (0, T.setFlag)(r, A.ChannelNotificationSettingsFlags.OPT_IN_ENABLED, !0)), a.default.updateChannelOverrideSettings(e, t, {
-            flags: (0, T.setFlag)(r, A.ChannelNotificationSettingsFlags.FAVORITED, n)
+        !(0, T.hasFlag)(r, h.ChannelNotificationSettingsFlags.OPT_IN_ENABLED) && n && (r = (0, T.setFlag)(r, h.ChannelNotificationSettingsFlags.OPT_IN_ENABLED, !0)), a.default.updateChannelOverrideSettings(e, t, {
+            flags: (0, T.setFlag)(r, h.ChannelNotificationSettingsFlags.FAVORITED, n)
         }, f.NotificationLabel.favorited(n)), I.default.track(S.AnalyticEvents.CHANNEL_LIST_UPDATED, {
             ...(0, o.collectGuildAnalyticsMetadata)(e),
             action_type: n ? "favorited" : "unfavorited",

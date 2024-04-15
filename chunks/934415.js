@@ -56,21 +56,21 @@ function(e, t, n) {
         T = n("700785"),
         f = n("709054"),
         S = n("981631"),
-        A = n("474936"),
-        h = n("689938");
+        h = n("474936"),
+        A = n("689938");
     let {
         GUILD_VOICE: m,
         GUILD_CATEGORY: N,
-        GUILD_STAGE_VOICE: O
+        GUILD_STAGE_VOICE: p
     } = S.ChannelTypes;
 
-    function p(e, t) {
+    function O(e, t) {
         return e === t || e === N
     }
 
     function R(e, t, n) {
         let r = T.NONE;
-        return ((0, u.isGuildSelectableChannelType)(t) || t === N) && (r = i.add(r, S.Permissions.VIEW_CHANNEL)), (p(t, m) || p(t, O)) && (r = i.add(r, S.Permissions.VIEW_CHANNEL), r = i.add(r, S.Permissions.CONNECT)), {
+        return ((0, u.isGuildSelectableChannelType)(t) || t === N) && (r = i.add(r, S.Permissions.VIEW_CHANNEL)), (O(t, m) || O(t, p)) && (r = i.add(r, S.Permissions.VIEW_CHANNEL), r = i.add(r, S.Permissions.CONNECT)), {
             id: e,
             type: n,
             deny: T.NONE,
@@ -84,7 +84,7 @@ function(e, t, n) {
         if (n.length > 0 || s) {
             var o, l, d;
             let n;
-            a.push((o = e, l = t, d = r.PermissionOverwriteType.ROLE, n = T.NONE, ((0, u.isGuildSelectableChannelType)(l) || l === N) && (n = i.add(n, S.Permissions.VIEW_CHANNEL)), p(l, m) && (n = i.add(n, S.Permissions.VIEW_CHANNEL), n = i.add(n, S.Permissions.CONNECT)), {
+            a.push((o = e, l = t, d = r.PermissionOverwriteType.ROLE, n = T.NONE, ((0, u.isGuildSelectableChannelType)(l) || l === N) && (n = i.add(n, S.Permissions.VIEW_CHANNEL)), O(l, m) && (n = i.add(n, S.Permissions.VIEW_CHANNEL), n = i.add(n, S.Permissions.CONNECT)), {
                 id: o,
                 type: d,
                 allow: T.NONE,
@@ -123,13 +123,13 @@ function(e, t, n) {
             _ = I.default.getVoiceStatesForChannel(e),
             E = c.default.can(S.Permissions.MOVE_MEMBERS, e) && c.default.can(S.Permissions.CONNECT, e),
             T = !1;
-        T = e.type === O ? null != s && (t.hasVideo(e.id) || (0, a.hasStream)(_)) && u > 0 && d >= u : null != s && t.hasVideo(e.id) && l > 0 && d >= l + (E ? 1 : 0);
+        T = e.type === p ? null != s && (t.hasVideo(e.id) || (0, a.hasStream)(_)) && u > 0 && d >= u : null != s && t.hasVideo(e.id) && l > 0 && d >= l + (E ? 1 : 0);
         let f = e.userLimit > 0 && d >= e.userLimit;
         return T || f && !E
     }
 
     function M(e, t) {
-        return t.isGuildStageVoice() ? S.BITRATE_DEFAULT : null == e ? S.BITRATE_MAX : Math.max(e.hasFeature(S.GuildFeatures.VIP_REGIONS) ? A.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_3].limits.bitrate : S.BITRATE_MAX, A.BoostedGuildFeatures[e.premiumTier].limits.bitrate)
+        return t.isGuildStageVoice() ? S.BITRATE_DEFAULT : null == e ? S.BITRATE_MAX : Math.max(e.hasFeature(S.GuildFeatures.VIP_REGIONS) ? h.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_3].limits.bitrate : S.BITRATE_MAX, h.BoostedGuildFeatures[e.premiumTier].limits.bitrate)
     }
 
     function y(e) {
@@ -167,25 +167,25 @@ function(e, t, n) {
         } = e;
         switch (t) {
             case S.ChannelTypes.DM:
-                return h.default.Messages.DM;
+                return A.default.Messages.DM;
             case S.ChannelTypes.GROUP_DM:
-                return h.default.Messages.GROUP_DM;
+                return A.default.Messages.GROUP_DM;
             case S.ChannelTypes.GUILD_TEXT:
-                return h.default.Messages.TEXT_CHANNEL;
+                return A.default.Messages.TEXT_CHANNEL;
             case S.ChannelTypes.GUILD_FORUM:
-                return h.default.Messages.FORUM_CHANNEL;
+                return A.default.Messages.FORUM_CHANNEL;
             case S.ChannelTypes.GUILD_MEDIA:
-                return h.default.Messages.MEDIA_CHANNEL;
+                return A.default.Messages.MEDIA_CHANNEL;
             case S.ChannelTypes.GUILD_VOICE:
-                return h.default.Messages.VOICE_CHANNEL;
+                return A.default.Messages.VOICE_CHANNEL;
             case S.ChannelTypes.GUILD_STAGE_VOICE:
-                return h.default.Messages.STAGE_CHANNEL;
+                return A.default.Messages.STAGE_CHANNEL;
             case S.ChannelTypes.GUILD_ANNOUNCEMENT:
-                return h.default.Messages.NEWS_CHANNEL;
+                return A.default.Messages.NEWS_CHANNEL;
             case S.ChannelTypes.GUILD_STORE:
-                return h.default.Messages.STORE_CHANNEL;
+                return A.default.Messages.STORE_CHANNEL;
             case S.ChannelTypes.GUILD_CATEGORY:
-                return h.default.Messages.CATEGORY;
+                return A.default.Messages.CATEGORY;
             default:
                 return null
         }

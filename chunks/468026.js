@@ -19,12 +19,12 @@ function(e, t, n) {
             cancelText: T,
             className: f,
             confirmColor: S,
-            confirmText: A = c.default.Messages.OKAY,
-            secondaryConfirmText: h,
+            confirmText: h = c.default.Messages.OKAY,
+            secondaryConfirmText: A,
             onCancel: m,
             onClose: N,
-            onConfirm: O,
-            onConfirmSecondary: p,
+            onConfirm: p,
+            onConfirmSecondary: O,
             title: R,
             transitionState: C,
             titleClassName: g
@@ -38,22 +38,22 @@ function(e, t, n) {
             },
             className: E.secondaryButton,
             children: T
-        })), null != A && "" !== A && (n = (0, i.jsx)(a.Button, {
+        })), null != h && "" !== h && (n = (0, i.jsx)(a.Button, {
             type: "submit",
             color: S,
             size: a.Button.Sizes.XLARGE,
             className: s()(E.primaryButton, null != t ? E.gutter : null),
             autoFocus: !0,
-            children: A
-        })), null != h && "" !== h && (r = (0, i.jsx)(o.Clickable, {
+            children: h
+        })), null != A && "" !== A && (r = (0, i.jsx)(o.Clickable, {
             onClick: () => {
-                null == N || N(), null == p || p()
+                null == N || N(), null == O || O()
             },
             className: E.minorContainer,
             children: (0, i.jsx)(d.Text, {
                 className: E.secondaryAction,
                 variant: "text-xs/normal",
-                children: h
+                children: A
             })
         })), (0, i.jsx)(u.ModalRoot, {
             transitionState: C,
@@ -61,7 +61,7 @@ function(e, t, n) {
             "aria-label": R,
             children: (0, i.jsxs)("form", {
                 onSubmit: e => {
-                    null != e && e.preventDefault(), null == N || N(), null == O || O()
+                    null != e && e.preventDefault(), null == N || N(), null == p || p()
                 },
                 className: E.form,
                 children: [(0, i.jsx)(u.ModalContent, {

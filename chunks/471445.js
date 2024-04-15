@@ -5,7 +5,7 @@ function(e, t, n) {
             return Z
         },
         getChannelIconTooltipText: function() {
-            return q
+            return Q
         },
         getSimpleChannelIconComponent: function() {
             return J
@@ -26,12 +26,12 @@ function(e, t, n) {
         T = n("308540"),
         f = n("814550"),
         S = n("93879"),
-        A = n("535321"),
-        h = n("277942"),
+        h = n("535321"),
+        A = n("277942"),
         m = n("974029"),
         N = n("481479"),
-        O = n("160696"),
-        p = n("832440"),
+        p = n("160696"),
+        O = n("832440"),
         R = n("634648"),
         C = n("356842"),
         g = n("630641"),
@@ -57,50 +57,50 @@ function(e, t, n) {
         K = n("447003"),
         z = n("176505"),
         X = n("981631"),
-        Q = n("689938");
+        q = n("689938");
 
-    function q(e, t, n, i) {
+    function Q(e, t, n, i) {
         if (null == e) return null;
-        if (e.id === (null == t ? void 0 : t.rulesChannelId)) return Q.default.Messages.CHANNEL_TOOLTIP_RULES;
+        if (e.id === (null == t ? void 0 : t.rulesChannelId)) return q.default.Messages.CHANNEL_TOOLTIP_RULES;
         switch (e.type) {
             case X.ChannelTypes.GUILD_TEXT:
-                if (i) return Q.default.Messages.CHANNEL_TOOLTIP_TEXT_ACTIVE_THREADS;
-                if (e.isNSFW()) return Q.default.Messages.CHANNEL_TOOLTIP_TEXT_NSFW;
-                if ((0, K.default)(e)) return Q.default.Messages.CHANNEL_TOOLTIP_TEXT_LIMITED;
-                return Q.default.Messages.CHANNEL_TOOLTIP_TEXT;
+                if (i) return q.default.Messages.CHANNEL_TOOLTIP_TEXT_ACTIVE_THREADS;
+                if (e.isNSFW()) return q.default.Messages.CHANNEL_TOOLTIP_TEXT_NSFW;
+                if ((0, K.default)(e)) return q.default.Messages.CHANNEL_TOOLTIP_TEXT_LIMITED;
+                return q.default.Messages.CHANNEL_TOOLTIP_TEXT;
             case X.ChannelTypes.GUILD_FORUM:
                 let r = e.isMediaChannel();
-                if (e.isNSFW()) return r ? Q.default.Messages.CHANNEL_TOOLTIP_MEDIA_NSFW : Q.default.Messages.CHANNEL_TOOLTIP_FORUM_NSFW;
-                if ((0, K.default)(e)) return r ? Q.default.Messages.CHANNEL_TOOLTIP_MEDIA_LIMITED : Q.default.Messages.CHANNEL_TOOLTIP_FORUM_LIMITED;
-                return r ? Q.default.Messages.MEDIA_CHANNEL : Q.default.Messages.FORUM;
+                if (e.isNSFW()) return r ? q.default.Messages.CHANNEL_TOOLTIP_MEDIA_NSFW : q.default.Messages.CHANNEL_TOOLTIP_FORUM_NSFW;
+                if ((0, K.default)(e)) return r ? q.default.Messages.CHANNEL_TOOLTIP_MEDIA_LIMITED : q.default.Messages.CHANNEL_TOOLTIP_FORUM_LIMITED;
+                return r ? q.default.Messages.MEDIA_CHANNEL : q.default.Messages.FORUM;
             case X.ChannelTypes.GUILD_MEDIA:
-                if (e.isNSFW()) return Q.default.Messages.CHANNEL_TOOLTIP_MEDIA_NSFW;
-                if ((0, K.default)(e)) return Q.default.Messages.CHANNEL_TOOLTIP_MEDIA_LIMITED;
-                return Q.default.Messages.MEDIA_CHANNEL;
+                if (e.isNSFW()) return q.default.Messages.CHANNEL_TOOLTIP_MEDIA_NSFW;
+                if ((0, K.default)(e)) return q.default.Messages.CHANNEL_TOOLTIP_MEDIA_LIMITED;
+                return q.default.Messages.MEDIA_CHANNEL;
             case X.ChannelTypes.GUILD_STAGE_VOICE:
-                if (n) return Q.default.Messages.CHANNEL_TOOLTIP_STAGE_LOCKED;
-                if ((0, K.default)(e)) return Q.default.Messages.CHANNEL_TOOLTIP_STAGE_LIMITED;
-                return Q.default.Messages.CHANNEL_TOOLTIP_STAGE;
+                if (n) return q.default.Messages.CHANNEL_TOOLTIP_STAGE_LOCKED;
+                if ((0, K.default)(e)) return q.default.Messages.CHANNEL_TOOLTIP_STAGE_LIMITED;
+                return q.default.Messages.CHANNEL_TOOLTIP_STAGE;
             case X.ChannelTypes.GUILD_VOICE:
-                if (n) return Q.default.Messages.CHANNEL_TOOLTIP_VOICE_LOCKED;
-                if ((0, K.default)(e)) return Q.default.Messages.CHANNEL_TOOLTIP_VOICE_LIMITED;
-                return Q.default.Messages.CHANNEL_TOOLTIP_VOICE;
+                if (n) return q.default.Messages.CHANNEL_TOOLTIP_VOICE_LOCKED;
+                if ((0, K.default)(e)) return q.default.Messages.CHANNEL_TOOLTIP_VOICE_LIMITED;
+                return q.default.Messages.CHANNEL_TOOLTIP_VOICE;
             case X.ChannelTypes.GUILD_ANNOUNCEMENT:
-                if (e.isNSFW()) return Q.default.Messages.CHANNEL_TOOLTIP_ANNOUNCEMENTS_NSFW;
-                if ((0, K.default)(e)) return Q.default.Messages.CHANNEL_TOOLTIP_ANNOUNCEMENTS_LIMITED;
-                return Q.default.Messages.CHANNEL_TOOLTIP_ANNOUNCEMENTS;
+                if (e.isNSFW()) return q.default.Messages.CHANNEL_TOOLTIP_ANNOUNCEMENTS_NSFW;
+                if ((0, K.default)(e)) return q.default.Messages.CHANNEL_TOOLTIP_ANNOUNCEMENTS_LIMITED;
+                return q.default.Messages.CHANNEL_TOOLTIP_ANNOUNCEMENTS;
             case X.ChannelTypes.GUILD_STORE:
-                return Q.default.Messages.CHANNEL_TOOLTIP_STORE;
+                return q.default.Messages.CHANNEL_TOOLTIP_STORE;
             case X.ChannelTypes.DM:
-                return Q.default.Messages.DM;
+                return q.default.Messages.DM;
             case X.ChannelTypes.GROUP_DM:
-                return Q.default.Messages.GROUP_DM;
+                return q.default.Messages.GROUP_DM;
             case X.ChannelTypes.GUILD_DIRECTORY:
-                return Q.default.Messages.CHANNEL_TOOLTIP_DIRECTORY;
+                return q.default.Messages.CHANNEL_TOOLTIP_DIRECTORY;
             case X.ChannelTypes.PUBLIC_THREAD:
-                return Q.default.Messages.THREAD;
+                return q.default.Messages.THREAD;
             case X.ChannelTypes.PRIVATE_THREAD:
-                return Q.default.Messages.PRIVATE_THREAD;
+                return q.default.Messages.PRIVATE_THREAD;
             default:
                 return null
         }
@@ -109,8 +109,8 @@ function(e, t, n) {
     function Z(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
             {
-                locked: Q = !1,
-                video: q = !1,
+                locked: q = !1,
+                video: Q = !1,
                 stream: Z = !1,
                 hasActiveThreads: J = !1,
                 textFocused: $ = !1
@@ -148,13 +148,13 @@ function(e, t, n) {
                     if ((0, K.default)(e)) return w.default;
                     else return W.default
                 }
-                if (e.isNSFW()) return h.default;
-                if ((0, K.default)(e)) return A.default;
+                if (e.isNSFW()) return A.default;
+                if ((0, K.default)(e)) return h.default;
                 return S.default;
             case X.ChannelTypes.GUILD_FORUM:
                 let en = e.isMediaChannel();
-                if (e.isNSFW()) return en ? v.default : p.default;
-                if ((0, K.default)(e)) return en ? D.default : O.default;
+                if (e.isNSFW()) return en ? v.default : O.default;
+                if ((0, K.default)(e)) return en ? D.default : p.default;
                 else return en ? L.default : N.default;
             case X.ChannelTypes.GUILD_MEDIA:
                 if (e.isNSFW()) return v.default;
@@ -162,7 +162,7 @@ function(e, t, n) {
                 else return L.default;
             case X.ChannelTypes.GUILD_STAGE_VOICE:
                 if (ee) return (0, K.default)(e) ? g.default : H.default;
-                if (Q) return g.default;
+                if (q) return g.default;
                 if ((0, K.default)(e)) return H.default;
                 else return x.default;
             case X.ChannelTypes.GUILD_VOICE:
@@ -171,11 +171,11 @@ function(e, t, n) {
                 if (Z) return j.default;
                 if (ee) {
                     if ((0, K.default)(e)) return g.default;
-                    return q ? c.default : V.default
+                    return Q ? c.default : V.default
                 }
-                if (Q) return g.default;
-                if ((0, K.default)(e)) return q ? c.default : V.default;
-                else return q ? _.default : k.default;
+                if (q) return g.default;
+                if ((0, K.default)(e)) return Q ? c.default : V.default;
+                else return Q ? _.default : k.default;
             case X.ChannelTypes.GUILD_DIRECTORY:
                 return T.default;
             case X.ChannelTypes.GUILD_CATEGORY:

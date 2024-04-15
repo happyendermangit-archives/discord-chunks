@@ -19,14 +19,14 @@ function(e, t, n) {
             renderInspector: T,
             renderEmptySearchState: f,
             rowCount: S,
-            rowCountBySection: A,
-            rowHeight: h,
+            rowCountBySection: h,
+            rowHeight: A,
             sectionHeaderHeight: m,
             sectionFooterHeight: N
-        } = e, O = r.useRef(!1), p = r.useRef(null), R = (0, a.useExpressionPickerStore)(e => e.searchQuery), C = n.useStore(e => e.activeCategoryIndex), g = (0, o.useSynchronizedActiveCategoryIndexForScrollPosition)({
+        } = e, p = r.useRef(!1), O = r.useRef(null), R = (0, a.useExpressionPickerStore)(e => e.searchQuery), C = n.useStore(e => e.activeCategoryIndex), g = (0, o.useSynchronizedActiveCategoryIndexForScrollPosition)({
             activeCategoryIndex: C,
-            isScrolling: O,
-            listRef: p,
+            isScrolling: p,
+            listRef: O,
             onActiveCategoryIndexChange: n.setActiveCategoryIndex,
             scrollOffset: 20,
             searchQuery: R
@@ -34,39 +34,39 @@ function(e, t, n) {
         return (0, o.useSynchronizedScrollPositionForActiveCategoryIndex)({
             searchQuery: R,
             activeCategoryIndex: C,
-            listRef: p
+            listRef: O
         }), r.useImperativeHandle(t, () => ({
             scrollTo: function() {
                 for (var e, t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
-                return null === (e = p.current) || void 0 === e ? void 0 : e.scrollTo(...n)
+                return null === (e = O.current) || void 0 === e ? void 0 : e.scrollTo(...n)
             },
             getRowDescriptors: () => {
                 var e, t;
-                return null !== (t = null === (e = p.current) || void 0 === e ? void 0 : e.getRowDescriptors()) && void 0 !== t ? t : []
+                return null !== (t = null === (e = O.current) || void 0 === e ? void 0 : e.getRowDescriptors()) && void 0 !== t ? t : []
             },
             getSectionDescriptors: () => {
                 var e, t;
-                return null !== (t = null === (e = p.current) || void 0 === e ? void 0 : e.getSectionDescriptors()) && void 0 !== t ? t : []
+                return null !== (t = null === (e = O.current) || void 0 === e ? void 0 : e.getSectionDescriptors()) && void 0 !== t ? t : []
             },
             scrollToSectionTop: function() {
                 for (var e, t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
-                return null === (e = p.current) || void 0 === e ? void 0 : e.scrollToSectionTop(...n)
+                return null === (e = O.current) || void 0 === e ? void 0 : e.scrollToSectionTop(...n)
             },
             scrollRowIntoView: function() {
                 for (var e, t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
-                return null === (e = p.current) || void 0 === e ? void 0 : e.scrollRowIntoView(...n)
+                return null === (e = O.current) || void 0 === e ? void 0 : e.scrollRowIntoView(...n)
             },
             getScrollerNode: function() {
                 for (var e, t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
-                return null === (e = p.current) || void 0 === e ? void 0 : e.getScrollerNode(...n)
+                return null === (e = O.current) || void 0 === e ? void 0 : e.getScrollerNode(...n)
             },
             scrollIntoViewNode: function() {
                 for (var e, t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
-                return null === (e = p.current) || void 0 === e ? void 0 : e.scrollIntoViewNode(...n)
+                return null === (e = O.current) || void 0 === e ? void 0 : e.scrollIntoViewNode(...n)
             },
             getListDimensions: function() {
                 for (var e, t, n = arguments.length, i = Array(n), r = 0; r < n; r++) i[r] = arguments[r];
-                return null !== (t = null === (e = p.current) || void 0 === e ? void 0 : e.getListDimensions(...i)) && void 0 !== t ? t : {
+                return null !== (t = null === (e = O.current) || void 0 === e ? void 0 : e.getListDimensions(...i)) && void 0 !== t ? t : {
                     height: -1,
                     totalHeight: -1
                 }
@@ -82,12 +82,12 @@ function(e, t, n) {
                 renderSectionHeader: E,
                 renderSectionFooter: I,
                 rowCount: S,
-                rowCountBySection: A,
-                rowHeight: h,
+                rowCountBySection: h,
+                rowHeight: A,
                 sectionHeaderHeight: m,
                 sectionFooterHeight: N,
                 stickyHeaders: !0,
-                ref: p
+                ref: O
             }), null == T ? void 0 : T()]
         })
     });

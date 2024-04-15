@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return O
+            return p
         }
     });
     var i = n("735250");
@@ -21,28 +21,28 @@ function(e, t, n) {
         T = n("151785"),
         f = n("572004"),
         S = n("591759"),
-        A = n("135431"),
-        h = n("981631"),
+        h = n("135431"),
+        A = n("981631"),
         m = n("689938"),
         N = n("681132");
 
-    function O(e) {
+    function p(e) {
         var t;
         let {
             application: n,
             className: r
-        } = e, O = _.default.getChannel(c.default.getChannelId()), {
-            appsInGDMEnabled: p,
+        } = e, p = _.default.getChannel(c.default.getChannelId()), {
+            appsInGDMEnabled: O,
             availableApplications: R
         } = (0, d.usePrivateChannelIntegrationState)({
-            channelId: null !== (t = null == O ? void 0 : O.id) && void 0 !== t ? t : h.EMPTY_STRING_SNOWFLAKE_ID
+            channelId: null !== (t = null == p ? void 0 : p.id) && void 0 !== t ? t : A.EMPTY_STRING_SNOWFLAKE_ID
         });
-        if (null == n || !(0, A.canInstallApplication)({
+        if (null == n || !(0, h.canInstallApplication)({
                 customInstallUrl: n.customInstallUrl,
                 installParams: n.installParams,
                 integrationTypesConfig: n.integrationTypesConfig
             })) return null;
-        let C = p && null != R.find(e => e.id === (null == n ? void 0 : n.id));
+        let C = O && null != R.find(e => e.id === (null == n ? void 0 : n.id));
         return (0, i.jsx)(a.Button, {
             color: a.Button.Colors.PRIMARY,
             look: a.Button.Looks.FILLED,
@@ -66,10 +66,10 @@ function(e, t, n) {
             onClick: () => {
                 C ? (0, u.openOAuth2Modal)({
                     clientId: n.id,
-                    scopes: [h.OAuth2Scopes.APPLICATIONS_COMMANDS],
-                    channelId: O.id,
+                    scopes: [A.OAuth2Scopes.APPLICATIONS_COMMANDS],
+                    channelId: p.id,
                     disableGuildSelect: !0
-                }) : (0, A.installApplication)({
+                }) : (0, h.installApplication)({
                     applicationId: n.id,
                     customInstallUrl: n.customInstallUrl,
                     installParams: n.installParams,

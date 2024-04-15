@@ -32,12 +32,12 @@ function(e, t, n) {
         T = n("926491"),
         f = n("131704"),
         S = n("430824"),
-        A = n("306680"),
-        h = n("411198");
+        h = n("306680"),
+        A = n("411198");
     let m = new E.default("ReadyPayloadUtils"),
         N = {},
-        O = null,
-        p = {};
+        p = null,
+        O = {};
 
     function R(e, t) {
         var n;
@@ -46,9 +46,9 @@ function(e, t, n) {
             merged_members: r,
             merged_presences: s,
             ...a
-        } = e, o = v(p, null == s ? void 0 : s.friends), l = null !== (n = null == i ? void 0 : i.map((e, t) => {
-            let n = v(p, null == s ? void 0 : s.guilds[t]),
-                i = v(p, null == r ? void 0 : r[t]);
+        } = e, o = v(O, null == s ? void 0 : s.friends), l = null !== (n = null == i ? void 0 : i.map((e, t) => {
+            let n = v(O, null == s ? void 0 : s.guilds[t]),
+                i = v(O, null == r ? void 0 : r[t]);
             return {
                 ...e,
                 unavailable: void 0 === e.voice_states,
@@ -63,7 +63,7 @@ function(e, t, n) {
             voice_states: e.voice_states,
             unavailable: !1
         }));
-        return null != u && l.push(u), p = {}, {
+        return null != u && l.push(u), O = {}, {
             ...a,
             presences: o,
             guilds: l
@@ -99,11 +99,11 @@ function(e, t, n) {
             let t = Object.values(S.default.getGuilds()),
                 n = I.default.getGuilds(),
                 i = T.default.getRawStickersByGuild(),
-                r = A.default.getReadStatesByChannel();
+                r = h.default.getReadStatesByChannel();
             for (let o of t) {
                 var s, a, l;
                 o.id in e.guildVersions && e.guildChannels.has(o.id) && (N[o.id] = {
-                    properties: h.toServer(o),
+                    properties: A.toServer(o),
                     roles: S.default.getRoles(o.id),
                     emojis: null !== (a = null === (s = n[o.id]) || void 0 === s ? void 0 : s.rawEmojis) && void 0 !== a ? a : null,
                     stickers: null !== (l = i.get(o.id)) && void 0 !== l ? l : null,
@@ -111,14 +111,14 @@ function(e, t, n) {
                 })
             }
         })(n);
-        let f = v(p = a().keyBy(s, e => e.id), l);
+        let f = v(O = a().keyBy(s, e => e.id), l);
         null == u || u.forEach(e => {
             let t = e.recipient_ids;
-            null != t && (e.recipients = t.map(e => (r()(null != p[e], "Missing user in compressed ready payload"), p[e]))), delete e.recipient_ids
+            null != t && (e.recipients = t.map(e => (r()(null != O[e], "Missing user in compressed ready payload"), O[e]))), delete e.recipient_ids
         });
-        let m = null !== (i = null == c ? void 0 : c.map((e, t) => !0 === e.unavailable ? e : (e.members = v(p, null == d ? void 0 : d[t]), y(e)))) && void 0 !== i ? i : [],
-            O = L(t, c, e => y(e));
-        return null != O && m.push(O), {
+        let m = null !== (i = null == c ? void 0 : c.map((e, t) => !0 === e.unavailable ? e : (e.members = v(O, null == d ? void 0 : d[t]), y(e)))) && void 0 !== i ? i : [],
+            p = L(t, c, e => y(e));
+        return null != p && m.push(p), {
             ...E,
             users: s,
             presences: [],
@@ -129,20 +129,20 @@ function(e, t, n) {
     }
 
     function L(e, t, n) {
-        return null == O || O.identifyTime !== e || null != t && t.some(e => e.id === O.guild.id) ? null : n(O.guild)
+        return null == p || p.identifyTime !== e || null != t && t.some(e => e.id === p.guild.id) ? null : n(p.guild)
     }
 
     function D(e, t) {
         var n, i, r;
         let s = S.default.getGuild(e.id),
             a = P(e, null == s ? void 0 : {
-                properties: h.toServer(s),
+                properties: A.toServer(s),
                 roles: S.default.getRoles(s.id),
                 emojis: null !== (i = null === (n = I.default.getGuilds()[s.id]) || void 0 === n ? void 0 : n.rawEmojis) && void 0 !== i ? i : null,
                 stickers: null !== (r = T.default.getRawStickersByGuild().get(s.id)) && void 0 !== r ? r : null,
                 readStates: {}
             });
-        return O = {
+        return p = {
             guild: e,
             identifyTime: t
         }, a
@@ -207,7 +207,7 @@ function(e, t, n) {
             members: e.members,
             premium_subscription_count: e.premium_subscription_count,
             properties: null !== (u = e.properties) && void 0 !== u ? u : null,
-            roles: h.filterRoleDeletes(e.id, E.roles, e.partial_updates.roles, e.partial_updates.deleted_role_ids),
+            roles: A.filterRoleDeletes(e.id, E.roles, e.partial_updates.roles, e.partial_updates.deleted_role_ids),
             stage_instances: e.stage_instances,
             stickers: null == E.stickers ? null : b(E.stickers, e.partial_updates.stickers, e.partial_updates.deleted_sticker_ids),
             stickerUpdates: {
@@ -269,7 +269,7 @@ function(e, t, n) {
             premium_subscription_count: e.premium_subscription_count,
             presences: e.presences,
             properties: null !== (d = e.properties) && void 0 !== d ? d : t.properties,
-            roles: h.filterRoleDeletes(e.id, t.roles, e.partial_updates.roles, e.partial_updates.deleted_role_ids),
+            roles: A.filterRoleDeletes(e.id, t.roles, e.partial_updates.roles, e.partial_updates.deleted_role_ids),
             stage_instances: e.stage_instances,
             stickers: null == t.stickers ? null : b(t.stickers, e.partial_updates.stickers, e.partial_updates.deleted_sticker_ids),
             stickerUpdates: {

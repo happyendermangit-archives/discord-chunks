@@ -5,22 +5,22 @@ function(e, t, n) {
             return g
         },
         fetchSummaries: function() {
-            return A
+            return h
         },
         setHighlightedSummary: function() {
-            return h
+            return A
         },
         setSelectedSummary: function() {
             return N
         },
         setSummaryFeedback: function() {
-            return p
+            return O
         },
         toggleTopicsBar: function() {
             return m
         },
         updateVisibleMessages: function() {
-            return O
+            return p
         }
     });
     var i = n("470079"),
@@ -62,7 +62,7 @@ function(e, t, n) {
             receivedAt: Date.now()
         })
     }
-    async function A(e) {
+    async function h(e) {
         var t, n;
         let i, r;
         if (!I.default.shouldFetch(e)) return;
@@ -88,7 +88,7 @@ function(e, t, n) {
         })
     }
 
-    function h(e, t) {
+    function A(e, t) {
         l.default.dispatch({
             type: "SET_HIGHLIGHTED_SUMMARY",
             channelId: e,
@@ -110,7 +110,7 @@ function(e, t, n) {
         })
     }
 
-    function O(e, t) {
+    function p(e, t) {
         l.default.dispatch({
             type: "UPDATE_VISIBLE_MESSAGES",
             topVisibleMessage: null != e ? e : null,
@@ -118,7 +118,7 @@ function(e, t, n) {
         })
     }
 
-    function p(e, t) {
+    function O(e, t) {
         l.default.dispatch({
             type: "SET_SUMMARY_FEEDBACK",
             summary: e,
@@ -206,11 +206,11 @@ function(e, t, n) {
         }
     }
     t.default = {
-        setSummaryFeedback: p,
-        updateVisibleMessages: O,
+        setSummaryFeedback: O,
+        updateVisibleMessages: p,
         setSelectedSummary: N,
-        setHighlightedSummary: h,
-        fetchSummaries: A,
+        setHighlightedSummary: A,
+        fetchSummaries: h,
         fetchSummariesBulk: C,
         useChannelSummaries: function(e) {
             let {

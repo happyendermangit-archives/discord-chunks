@@ -12,19 +12,19 @@ function(e, t, n) {
         T = n("812206"),
         f = n("283595"),
         S = n("417363"),
-        A = n("391690"),
-        h = n("70956"),
+        h = n("391690"),
+        A = n("70956"),
         m = n("780570"),
         N = n("804739");
-    let O = new Set,
-        p = {},
+    let p = new Set,
+        O = {},
         R = new Set,
         C = {},
         g = new Set,
         L = {},
-        D = 10 * h.default.Millis.MINUTE,
-        v = 6 * h.default.Millis.HOUR,
-        M = 10 * h.default.Millis.MINUTE,
+        D = 10 * A.default.Millis.MINUTE,
+        v = 6 * A.default.Millis.HOUR,
+        M = 10 * A.default.Millis.MINUTE,
         y = new d.Timeout;
 
     function P(e) {
@@ -41,8 +41,8 @@ function(e, t, n) {
     }
 
     function b(e, t) {
-        if (null != p[t] && A.default.shouldBeInstalled(e, t)) {
-            let n = p[t],
+        if (null != O[t] && h.default.shouldBeInstalled(e, t)) {
+            let n = O[t],
                 i = n.manifestIds,
                 r = S.default.getState(e, t);
             null != r && r.shouldPatch && (r.buildId !== n.id || !l().isEqual(r.manifestIds, i)) && _.default.wait(() => {
@@ -60,16 +60,16 @@ function(e, t, n) {
             this.syncWith([f.default], U), this.waitFor(S.default, f.default, T.default)
         }
         getTargetBuildId(e, t) {
-            return null == p[t] ? null : p[t].id
+            return null == O[t] ? null : O[t].id
         }
         getTargetManifests(e, t) {
-            return null == p[t] ? null : p[t].manifestIds
+            return null == O[t] ? null : O[t].manifestIds
         }
         hasNoBuild(e, t) {
             return R.has(t)
         }
         isFetching(e, t) {
-            return O.has(t)
+            return p.has(t)
         }
         needsToFetchBuildSize(e) {
             return !C.hasOwnProperty(e)
@@ -101,7 +101,7 @@ function(e, t, n) {
             let {
                 branchId: t
             } = e;
-            O.add(t)
+            p.add(t)
         },
         APPLICATION_BUILD_FETCH_SUCCESS: function(e) {
             let {
@@ -110,7 +110,7 @@ function(e, t, n) {
                 locale: i,
                 build: r
             } = e;
-            O.delete(n);
+            p.delete(n);
             let s = r.manifests.map(e => {
                     let {
                         id: t
@@ -118,7 +118,7 @@ function(e, t, n) {
                     return t
                 }),
                 a = r.id;
-            R.delete(n), p[n] = {
+            R.delete(n), O[n] = {
                 id: a,
                 applicationId: t,
                 branchId: n,
@@ -130,7 +130,7 @@ function(e, t, n) {
             let {
                 branchId: t
             } = e;
-            O.delete(t), R.add(t)
+            p.delete(t), R.add(t)
         },
         APPLICATION_BUILD_SIZE_FETCH_START: function(e) {
             let {

@@ -20,12 +20,12 @@ function(e, t, n) {
         T = n("250407"),
         f = n("710845"),
         S = n("797614"),
-        A = n("218543"),
-        h = n("857192"),
+        h = n("218543"),
+        A = n("857192"),
         m = n("626135"),
         N = n("12647"),
-        O = n("70956"),
-        p = n("358085"),
+        p = n("70956"),
+        O = n("358085"),
         R = n("960048"),
         C = n("138859"),
         g = n("14639"),
@@ -51,9 +51,9 @@ function(e, t, n) {
         B = new D.default;
 
     function k() {}
-    let V = 30 * O.default.Millis.SECOND,
-        F = 3 * O.default.Millis.MINUTE,
-        x = 1 * O.default.Millis.MINUTE;
+    let V = 30 * p.default.Millis.SECOND,
+        F = 3 * p.default.Millis.MINUTE,
+        x = 1 * p.default.Millis.MINUTE;
 
     function H(e) {
         return null == e ? 0 : "string" == typeof e ? e.length : e.byteLength
@@ -148,7 +148,7 @@ function(e, t, n) {
                         } = B.unpack(e);
                     i !== y.Opcode.DISPATCH && o.default.mark("\uD83C\uDF10", "GatewaySocket.onMessage ".concat(i, " ").concat(y.Opcode[i]));
                     let l = Date.now() - n;
-                    switch ("READY" === s ? A.default.parseReady.set(n, l) : "READY_SUPPLEMENTAL" === s ? A.default.parseReadySupplemental.set(n, l) : l > 10 && o.default.mark("\uD83C\uDF10", "Parse " + s, l), null != r && (this.seq = r), i) {
+                    switch ("READY" === s ? h.default.parseReady.set(n, l) : "READY_SUPPLEMENTAL" === s ? h.default.parseReadySupplemental.set(n, l) : l > 10 && o.default.mark("\uD83C\uDF10", "Parse " + s, l), null != r && (this.seq = r), i) {
                         case y.Opcode.HELLO:
                             this._clearHelloTimeout(), this._handleHello(a);
                             break;
@@ -250,7 +250,7 @@ function(e, t, n) {
             }
         }
         _tryDetectInvalidIOSToken(e, t, n) {
-            (0, p.isIOS)() && null != this.token && 1001 === e && "Stream end encountered" === t && (this.iosGoingAwayEventCount += 1, 3 === this.iosGoingAwayEventCount && d.HTTP.get({
+            (0, O.isIOS)() && null != this.token && 1001 === e && "Stream end encountered" === t && (this.iosGoingAwayEventCount += 1, 3 === this.iosGoingAwayEventCount && d.HTTP.get({
                 url: b.Endpoints.ME,
                 headers: {
                     authorization: this.token
@@ -460,7 +460,7 @@ function(e, t, n) {
         }
         constructor() {
             super(), G(this, "gatewayBackoff", void 0), G(this, "handleIdentify", void 0), G(this, "dispatchExceptionBackoff", new a.default(1e3, x)), G(this, "dispatchSuccessTimer", 0), G(this, "connectionState_", void 0), G(this, "webSocket", void 0), G(this, "seq", void 0), G(this, "sessionId", void 0), G(this, "token", void 0), G(this, "initialHeartbeatTimeout", void 0), G(this, "expeditedHeartbeatTimeout", void 0), G(this, "heartbeatInterval", void 0), G(this, "helloTimeout", void 0), G(this, "heartbeater", void 0), G(this, "lastHeartbeatAckTime", void 0), G(this, "heartbeatAck", void 0), G(this, "connectionStartTime", void 0), G(this, "identifyStartTime", void 0), G(this, "nextReconnectIsImmediate", void 0), G(this, "compressionHandler", void 0), G(this, "hasConnectedOnce", void 0), G(this, "isFastConnect", void 0), G(this, "didForceClearGuildHashes", !1), G(this, "identifyUncompressedByteSize", 0), G(this, "identifyCompressedByteSize", 0), G(this, "analytics", {}), G(this, "identifyCount", 0), G(this, "resumeUrl", null), G(this, "iosGoingAwayEventCount", 0), G(this, "dispatcher", void 0), G(this, "send", (e, t, n) => {
-                h.default.isLoggingGatewayEvents && w.verboseDangerously("~>", e, t);
+                A.default.isLoggingGatewayEvents && w.verboseDangerously("~>", e, t);
                 let i = B.pack({
                     op: e,
                     d: t

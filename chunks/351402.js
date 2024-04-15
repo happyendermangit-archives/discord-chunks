@@ -9,12 +9,12 @@ function(e, t, n) {
     let T = !1,
         f = !1,
         S = !1,
-        A = !1,
         h = !1,
+        A = !1,
         m = null,
         N = null,
-        O = !1,
-        p = !1;
+        p = !1,
+        O = !1;
 
     function R() {
         T = !1
@@ -25,19 +25,19 @@ function(e, t, n) {
     }
 
     function g() {
-        A = !1
+        h = !1
     }
 
     function L() {
-        h = !0
+        A = !0
     }
 
     function D() {
-        h = !1
+        A = !1
     }
     class v extends(d = _.default.Store) {
         get isBusy() {
-            return T || f || h || S
+            return T || f || A || S
         }
         get isUpdatingPaymentSource() {
             return f
@@ -49,7 +49,7 @@ function(e, t, n) {
             return this.isPaymentSourceFetching || this.isSubscriptionFetching
         }
         get isSubscriptionFetching() {
-            return A
+            return h
         }
         get isPaymentSourceFetching() {
             return null != i
@@ -73,7 +73,7 @@ function(e, t, n) {
             return null != r ? r : I.FallbackCurrencyCountry
         }
         get ipCountryCodeHasError() {
-            return O
+            return p
         }
         get paymentSourcesFetchRequest() {
             return i
@@ -82,7 +82,7 @@ function(e, t, n) {
             return a
         }
         get localizedPricingPromoHasError() {
-            return p
+            return O
         }
         get isLocalizedPromoEnabled() {
             return null != a
@@ -139,7 +139,7 @@ function(e, t, n) {
         BILLING_PAYMENT_SOURCES_FETCH_SUCCESS: C,
         BILLING_PAYMENT_SOURCES_FETCH_FAIL: C,
         BILLING_SUBSCRIPTION_FETCH_START: function() {
-            A = !0
+            h = !0
         },
         BILLING_SUBSCRIPTION_FETCH_SUCCESS: g,
         BILLING_SUBSCRIPTION_FETCH_FAIL: g,
@@ -162,7 +162,7 @@ function(e, t, n) {
             r = t
         },
         BILLING_IP_COUNTRY_CODE_FAILURE: function() {
-            r = null, O = !0
+            r = null, p = !0
         },
         BILLING_SET_LOCALIZED_PRICING_PROMO: function(e) {
             let {
@@ -171,10 +171,10 @@ function(e, t, n) {
             a = E.LocalizedPricingPromoRecord.createFromServer(t)
         },
         BILLING_LOCALIZED_PRICING_PROMO_FAILURE: function() {
-            a = null, p = !0
+            a = null, O = !0
         },
         LOGOUT: function() {
-            i = void 0, s = void 0, r = void 0, O = !1, a = null, N = null, m = null
+            i = void 0, s = void 0, r = void 0, p = !1, a = null, N = null, m = null
         },
         CONNECTION_OPEN: e => {
             let {

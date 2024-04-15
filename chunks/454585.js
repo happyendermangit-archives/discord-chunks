@@ -38,8 +38,8 @@ function(e, t, n) {
         })]),
         f = d(o.default.EMBED_TITLE_RULES, [(0, a.default)(_)]),
         S = d(o.default.INLINE_REPLY_RULES, [(0, a.default)(_)]),
-        A = d(o.default.GUILD_VERIFICATION_FORM_RULES, [(0, a.default)(_)]),
-        h = d(o.default.GUILD_EVENT_RULES, [(0, a.default)(_)]),
+        h = d(o.default.GUILD_VERIFICATION_FORM_RULES, [(0, a.default)(_)]),
+        A = d(o.default.GUILD_EVENT_RULES, [(0, a.default)(_)]),
         m = d(o.default.INLINE_REPLY_RULES, [(0, a.default)({
             ..._,
             emoji: {
@@ -49,14 +49,14 @@ function(e, t, n) {
             }
         })]),
         N = d(o.default.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, a.default)(_)]),
-        O = r().omit(d(o.default.RULES, [(0, a.default)({
+        p = r().omit(d(o.default.RULES, [(0, a.default)({
             ..._,
             emoji: {
                 height: 14,
                 width: 14
             }
         })]), "paragraph", "newline", "strong", "codeBlock", "inlineCode", "u", "link", "url", "autolink", "list", "heading"),
-        p = {
+        O = {
             text: o.default.RULES.text
         };
     t.default = {
@@ -64,9 +64,9 @@ function(e, t, n) {
         createReactRules: a.default,
         defaultReactRuleOptions: _,
         defaultRules: c,
-        guildEventRules: h,
-        notifCenterV2MessagePreviewRules: O,
-        lockscreenWidgetMessageRules: p,
+        guildEventRules: A,
+        notifCenterV2MessagePreviewRules: p,
+        lockscreenWidgetMessageRules: O,
         astParserFor: s.astParserFor,
         reactParserFor: s.reactParserFor,
         parse: s.reactParserFor(c),
@@ -74,12 +74,12 @@ function(e, t, n) {
         parseVoiceChannelStatus: s.reactParserFor(T),
         parseEmbedTitle: s.reactParserFor(f),
         parseInlineReply: s.reactParserFor(S),
-        parseGuildVerificationFormRule: s.reactParserFor(A),
-        parseGuildEventDescription: s.reactParserFor(h),
+        parseGuildVerificationFormRule: s.reactParserFor(h),
+        parseGuildEventDescription: s.reactParserFor(A),
         parseAutoModerationSystemMessage: s.reactParserFor(N),
         parseForumPostGuidelines: s.reactParserFor(E),
         parseForumPostMostRecentMessage: s.reactParserFor(m),
-        parseNotifCenterMessagePreview: s.reactParserFor(O),
+        parseNotifCenterMessagePreview: s.reactParserFor(p),
         parseToAST: s.astParserFor(c),
         parseTopicToAST: s.astParserFor(I),
         parseEmbedTitleToAST: s.astParserFor(f),

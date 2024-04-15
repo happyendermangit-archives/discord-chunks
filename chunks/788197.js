@@ -16,12 +16,12 @@ function(e, t, n) {
         T = n("100527"),
         f = n("906732"),
         S = n("812206"),
-        A = n("835473"),
-        h = n("199902"),
+        h = n("835473"),
+        A = n("199902"),
         m = n("271383"),
         N = n("430824"),
-        O = n("158776"),
-        p = n("699516"),
+        p = n("158776"),
+        O = n("699516"),
         R = n("594174"),
         C = n("626135"),
         g = n("785717"),
@@ -59,7 +59,7 @@ function(e, t, n) {
             newAnalyticsLocations: z = []
         } = e, {
             analyticsLocations: X
-        } = (0, f.default)([...z, T.default.PROFILE_POPOUT]), Q = r.useRef(null), q = (0, v.default)(t.id, n), Z = (0, d.default)(Q), J = (0, o.useStateFromStores)([L.default], () => {
+        } = (0, f.default)([...z, T.default.PROFILE_POPOUT]), q = r.useRef(null), Q = (0, v.default)(t.id, n), Z = (0, d.default)(q), J = (0, o.useStateFromStores)([L.default], () => {
             var e;
             return null === (e = L.default.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application
         }), $ = (0, o.useStateFromStores)([N.default], () => null != n ? N.default.getGuild(n) : null), ee = (0, o.useStateFromStores)([m.default], () => null != n ? m.default.getMember(n, t.id) : null), et = t.isNonUserBot(), {
@@ -68,23 +68,23 @@ function(e, t, n) {
             status: er,
             isMobile: es,
             isApplicationStreaming: ea
-        } = (0, o.useStateFromStoresObject)([h.default, O.default], () => {
-            let e = null != h.default.getAnyStreamForUser(t.id);
+        } = (0, o.useStateFromStoresObject)([A.default, p.default], () => {
+            let e = null != A.default.getAnyStreamForUser(t.id);
             return {
-                activity: O.default.findActivity(t.id, t => {
+                activity: p.default.findActivity(t.id, t => {
                     let {
                         type: n
                     } = t;
                     return e ? n === k.ActivityTypes.PLAYING : n !== k.ActivityTypes.CUSTOM_STATUS
                 }),
-                customStatusActivity: O.default.findActivity(t.id, e => {
+                customStatusActivity: p.default.findActivity(t.id, e => {
                     let {
                         type: t
                     } = e;
                     return t === k.ActivityTypes.CUSTOM_STATUS
                 }),
-                status: et ? null : O.default.getStatus(t.id),
-                isMobile: O.default.isMobileOnline(t.id),
+                status: et ? null : p.default.getStatus(t.id),
+                isMobile: p.default.isMobileOnline(t.id),
                 isApplicationStreaming: e
             }
         }), [eo, el] = r.useState(!1), eu = r.useMemo(() => null != n ? {
@@ -99,10 +99,10 @@ function(e, t, n) {
             }),
             [ec, eE] = r.useState(!1);
         (0, _.default)(() => eE(!0), e_.shouldShow ? 250 : null);
-        let eI = (0, A.useGetOrFetchApplication)(null == en ? void 0 : en.application_id);
+        let eI = (0, h.useGetOrFetchApplication)(null == en ? void 0 : en.application_id);
         return r.useEffect(() => {
-            null == j || j(null == Q ? void 0 : Q.current)
-        }, [Q, j]), r.useEffect(() => {
+            null == j || j(null == q ? void 0 : q.current)
+        }, [q, j]), r.useEffect(() => {
             if (!eo)((null == en ? void 0 : en.application_id) == null || null != eI) && (null == n || (null == ee ? void 0 : ee.fullProfileLoadedTimestamp) != null) && (function() {
                 var e;
                 let i, r, a;
@@ -112,8 +112,8 @@ function(e, t, n) {
                 let l = null != ee ? {
                         has_nickname: !!(null == ee ? void 0 : ee.nick),
                         has_guild_member_avatar: !!(null == ee ? void 0 : ee.avatar),
-                        has_guild_member_banner: !!(null == q ? void 0 : q.isUsingGuildMemberBanner()),
-                        has_guild_member_bio: !!(null == q ? void 0 : q.isUsingGuildMemberBio())
+                        has_guild_member_banner: !!(null == Q ? void 0 : Q.isUsingGuildMemberBanner()),
+                        has_guild_member_bio: !!(null == Q ? void 0 : Q.isUsingGuildMemberBio())
                     } : {},
                     u = null != J ? {
                         other_application_id: null == J ? void 0 : J.id,
@@ -127,7 +127,7 @@ function(e, t, n) {
                     application_id: null != en ? en.application_id : void 0,
                     application_name: null != en ? en.name : void 0,
                     sku_id: null != a ? a.primarySkuId : null,
-                    is_friend: p.default.isFriend(t.id),
+                    is_friend: O.default.isFriend(t.id),
                     has_images: !!(null !== (e = null == r ? void 0 : r.large_image) && void 0 !== e ? e : null == r ? void 0 : r.small_image),
                     party_max: null != i && null != i.size ? i.size[1] : void 0,
                     party_id: null != i ? i.id : void 0,
@@ -137,10 +137,10 @@ function(e, t, n) {
                     is_streaming: ea,
                     has_custom_status: null != ei,
                     has_avatar_decoration: null != t.avatarDecoration,
-                    has_profile_effect: (null == q ? void 0 : q.profileEffectId) != null,
-                    profile_has_nitro_customization: null != q && (null == q ? void 0 : q.hasPremiumCustomization()),
-                    profile_has_theme_color_customized: null != q && q.hasThemeColors(),
-                    profile_has_theme_animation: (null == q ? void 0 : q.popoutAnimationParticleType) != null,
+                    has_profile_effect: (null == Q ? void 0 : Q.profileEffectId) != null,
+                    profile_has_nitro_customization: null != Q && (null == Q ? void 0 : Q.hasPremiumCustomization()),
+                    profile_has_theme_color_customized: null != Q && Q.hasThemeColors(),
+                    profile_has_theme_animation: (null == Q ? void 0 : Q.popoutAnimationParticleType) != null,
                     ...l,
                     ...u,
                     ...K
@@ -159,7 +159,7 @@ function(e, t, n) {
                 children: (0, i.jsx)(u.default, {
                     section: k.AnalyticsSections.PROFILE_POPOUT,
                     children: (0, i.jsx)(l.Dialog, {
-                        ref: Q,
+                        ref: q,
                         "aria-label": t.username,
                         onClick: x,
                         onContextMenu: x,
@@ -168,13 +168,13 @@ function(e, t, n) {
                         } : void 0,
                         children: (0, i.jsxs)(y.default, {
                             user: t,
-                            guildId: n,
+                            displayProfile: Q,
                             profileType: B.UserProfileTypes.POPOUT,
                             className: e_.shouldShow ? F.hasCollectiblesUpsell : void 0,
                             showOutOfBoundaryComponents: ec,
                             children: [(0, i.jsx)(G.default, {
                                 user: t,
-                                displayProfile: q,
+                                displayProfile: Q,
                                 guildId: n,
                                 channelId: s,
                                 onClose: () => null == Y ? void 0 : Y(),
@@ -186,7 +186,7 @@ function(e, t, n) {
                                 upsell: e_.shouldShow ? (0, i.jsx)(U.default, {
                                     user: t,
                                     upsellSource: b.UserPopoutUpsellSource.USER_POPOUT,
-                                    displayProfile: q,
+                                    displayProfile: Q,
                                     onClose: Y,
                                     ...e_
                                 }) : void 0
@@ -196,7 +196,7 @@ function(e, t, n) {
                                 }), (0, i.jsx)(P.default, {
                                     activity: en,
                                     customStatusActivity: ei,
-                                    displayProfile: q,
+                                    displayProfile: Q,
                                     user: t,
                                     guild: $,
                                     guildMember: ee,

@@ -159,13 +159,13 @@ function(e, t, n) {
                 type: "inlineObject"
             }
         },
-        A = new Set(["*", "_", "\\"]),
-        h = {},
+        h = new Set(["*", "_", "\\"]),
+        A = {},
         m = {};
     for (let e in _.default.RULES) {
         if (!(e in S)) throw Error("Slate: Unknown markdown rule: ".concat(e, ".  If you have just added a new markdown rule ") + "then you probably need to add it to this file so that the rich chat box understands it.");
         let t = S[e];
-        "skip" !== t.type && (h[e] = N(_.default.RULES[e])), "skip" !== t.type && "inlineObject" !== t.type && (m[e] = N("text" === e ? c.default : _.default.RULES[e]))
+        "skip" !== t.type && (A[e] = N(_.default.RULES[e])), "skip" !== t.type && "inlineObject" !== t.type && (m[e] = N("text" === e ? c.default : _.default.RULES[e]))
     }
 
     function N(e) {
@@ -179,7 +179,7 @@ function(e, t, n) {
             }
         }
     }
-    let O = {
+    let p = {
             url: {
                 parse: e => null == (0, d.punycodeLink)(e[1]) ? {
                     type: "text",
@@ -220,9 +220,9 @@ function(e, t, n) {
                 }
             }
         },
-        p = (0, E.default)([h, O]),
-        R = (0, E.default)([m, O]),
-        C = l.astParserFor(p),
+        O = (0, E.default)([A, p]),
+        R = (0, E.default)([m, p]),
+        C = l.astParserFor(O),
         g = l.astParserFor(R),
         L = {
             max: 1 / 0,
@@ -465,7 +465,7 @@ function(e, t, n) {
 
     function w(e, t, n, i) {
         for (; n < i;)
-            if (A.has(t[n])) n = U(e, t, t[n], n, "syntaxBefore"), n = G(t, n);
+            if (h.has(t[n])) n = U(e, t, t[n], n, "syntaxBefore"), n = G(t, n);
             else break;
         return n
     }

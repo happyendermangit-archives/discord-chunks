@@ -16,12 +16,12 @@ function(e, t, n) {
         T = n("126900"),
         f = n("466111"),
         S = n("783014"),
-        A = n("242411"),
-        h = n("26290"),
+        h = n("242411"),
+        A = n("26290"),
         m = n("74538"),
         N = n("864106"),
-        O = n("439959"),
-        p = n("125988"),
+        p = n("439959"),
+        O = n("125988"),
         R = n("689938"),
         C = n("566253");
     let g = () => 80,
@@ -51,9 +51,9 @@ function(e, t, n) {
             } = e, T = (0, u.useStateFromStores)([c.default], () => {
                 let e = c.default.getProduct(n.skuId);
                 return (0, E.isPremiumCollectiblesProduct)(e)
-            }), S = (0, I.default)(n, o), N = m.default.canUseCollectibles(t), g = a === O.Section.PREMIUM_PURCHASE && !N, D = r.useRef(null), v = (0, _.default)(null != s ? s : D), {
+            }), S = (0, I.default)(n, o), N = m.default.canUseCollectibles(t), g = a === p.Section.PREMIUM_PURCHASE && !N, D = r.useRef(null), v = (0, _.default)(null != s ? s : D), {
                 avatarDecorationSrc: M
-            } = (0, p.default)({
+            } = (0, O.default)({
                 user: t,
                 avatarDecorationOverride: n,
                 size: 80,
@@ -68,20 +68,20 @@ function(e, t, n) {
                     className: C.presetDecorationImg,
                     src: M,
                     alt: n.label
-                }), a === O.Section.PURCHASE || a === O.Section.PREMIUM_PURCHASE && N ? null : S ? (0, i.jsx)(h.PremiumBadge, {
+                }), a === p.Section.PURCHASE || a === p.Section.PREMIUM_PURCHASE && N ? null : S ? (0, i.jsx)(A.PremiumBadge, {
                     className: C.newBadge,
                     text: (0, i.jsxs)("div", {
                         className: C.newBadgeText,
-                        children: [(0, i.jsx)(A.default, {
+                        children: [(0, i.jsx)(h.default, {
                             width: 12,
                             height: 12
                         }), R.default.Messages.NEW]
                     })
-                }) : (0, i.jsx)(h.IconBadge, {
+                }) : (0, i.jsx)(A.IconBadge, {
                     icon: T ? () => (0, i.jsx)(f.default, {
                         width: 14,
                         height: 14
-                    }) : () => (0, i.jsx)(A.default, {
+                    }) : () => (0, i.jsx)(h.default, {
                         width: 12,
                         height: 12
                     }),
@@ -98,7 +98,7 @@ function(e, t, n) {
             selectedAvatarDecorationRef: s,
             onSelect: a,
             onOpenShop: l
-        } = e, u = (0, O.default)();
+        } = e, u = (0, p.default)();
         return (0, i.jsx)(d.MasonryList, {
             fade: !0,
             className: C.list,
@@ -119,7 +119,7 @@ function(e, t, n) {
                     section: I,
                     items: f
                 } = u[e];
-                return (0, o.match)(f[_]).with(O.NONE_ITEM, () => (0, i.jsxs)(L, {
+                return (0, o.match)(f[_]).with(p.NONE_ITEM, () => (0, i.jsxs)(L, {
                     style: {
                         ...c
                     },
@@ -132,7 +132,7 @@ function(e, t, n) {
                         color: "header-primary",
                         children: (0, N.hasGlobalDefaultAvatarDecoration)(t, n) ? R.default.Messages.USER_SETTINGS_REMOVE_PER_GUILD_AVATAR_DECORATION : R.default.Messages.NONE
                     })]
-                }, E)).with(O.SHOP_ITEM, () => (0, i.jsxs)(L, {
+                }, E)).with(p.SHOP_ITEM, () => (0, i.jsxs)(L, {
                     style: c,
                     onSelect: l,
                     children: [(0, i.jsx)(T.default, {

@@ -20,12 +20,12 @@ function(e, t, n) {
         T = n("757266"),
         f = n("650774"),
         S = n("430824"),
-        A = n("283595"),
-        h = n("496675"),
+        h = n("283595"),
+        A = n("496675"),
         m = n("699516"),
         N = n("944486"),
-        O = n("594174"),
-        p = n("979651"),
+        p = n("594174"),
+        O = n("979651"),
         R = n("181106"),
         C = n("417363"),
         g = n("358085"),
@@ -54,12 +54,12 @@ function(e, t, n) {
             isEmbedded: j = !1
         } = e, {
             analyticsLocations: W
-        } = (0, _.default)(), [K, z] = r.useState(!1), X = (0, s.useStateFromStores)([O.default], () => O.default.getCurrentUser()), Q = null == t ? void 0 : t.application_id, q = (0, s.useStateFromStores)([D.default], () => j ? D.default.getEmbeddedActivityForUserId(Y.id, Q) : null, [Y.id, j, Q]), Z = (0, y.default)({
-            channelId: null == q ? void 0 : q.channelId,
+        } = (0, _.default)(), [K, z] = r.useState(!1), X = (0, s.useStateFromStores)([p.default], () => p.default.getCurrentUser()), q = null == t ? void 0 : t.application_id, Q = (0, s.useStateFromStores)([D.default], () => j ? D.default.getEmbeddedActivityForUserId(Y.id, q) : null, [Y.id, j, q]), Z = (0, y.default)({
+            channelId: null == Q ? void 0 : Q.channelId,
             userId: Y.id,
             activity: t
-        }), J = (0, s.useStateFromStores)([A.default, E.default, C.default, T.default], () => j || (null == t ? void 0 : t.application_id) != null && (0, L.isLaunchable)({
-            LibraryApplicationStore: A.default,
+        }), J = (0, s.useStateFromStores)([h.default, E.default, C.default, T.default], () => j || (null == t ? void 0 : t.application_id) != null && (0, L.isLaunchable)({
+            LibraryApplicationStore: h.default,
             LaunchableGameStore: E.default,
             DispatchApplicationStore: C.default,
             ConnectedAppsStore: T.default,
@@ -70,7 +70,7 @@ function(e, t, n) {
                 channelId: i
             } = e;
             return n === (null == t ? void 0 : t.application_id) && i === Z
-        })), ee = (0, s.useStateFromStores)([R.default], () => null != t && null != t.application_id && R.default.getState(t.application_id, B.ActivityActionTypes.JOIN) === B.ActivityActionStates.LOADING), [et] = (0, c.default)((null == t ? void 0 : t.application_id) != null ? [null == t ? void 0 : t.application_id] : []), en = (0, s.useStateFromStores)([I.default, S.default, f.default, m.default, N.default, p.default, h.default], () => (0, M.default)({
+        })), ee = (0, s.useStateFromStores)([R.default], () => null != t && null != t.application_id && R.default.getState(t.application_id, B.ActivityActionTypes.JOIN) === B.ActivityActionStates.LOADING), [et] = (0, c.default)((null == t ? void 0 : t.application_id) != null ? [null == t ? void 0 : t.application_id] : []), en = (0, s.useStateFromStores)([I.default, S.default, f.default, m.default, N.default, O.default, A.default], () => (0, M.default)({
             user: Y,
             activity: t,
             application: et,
@@ -82,9 +82,9 @@ function(e, t, n) {
             GuildMemberCountStore: f.default,
             RelationshipStore: m.default,
             SelectedChannelStore: N.default,
-            VoiceStateStore: p.default,
-            PermissionStore: h.default
-        })), ei = (0, s.useStateFromStores)([D.default], () => Array.from(D.default.getSelfEmbeddedActivities().values()).some(e => e.applicationId === (null == q ? void 0 : q.applicationId) && e.channelId === (null == q ? void 0 : q.channelId))), er = (0, d.useAnalyticsContext)(), es = !g.isPlatformEmbedded, ea = (0, P.default)(t, B.ActivityFlags.JOIN) || j;
+            VoiceStateStore: O.default,
+            PermissionStore: A.default
+        })), ei = (0, s.useStateFromStores)([D.default], () => Array.from(D.default.getSelfEmbeddedActivities().values()).some(e => e.applicationId === (null == Q ? void 0 : Q.applicationId) && e.channelId === (null == Q ? void 0 : Q.channelId))), er = (0, d.useAnalyticsContext)(), es = !g.isPlatformEmbedded, ea = (0, P.default)(t, B.ActivityFlags.JOIN) || j;
         if (null == t || !ea || null == t.application_id) return null;
         let eo = !V && (es || J) && !K && !$ && (!j || en),
             el = null;

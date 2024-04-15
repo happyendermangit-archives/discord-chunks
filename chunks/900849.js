@@ -11,7 +11,7 @@ function(e, t, n) {
             return g
         },
         makeDiscoverableGuild: function() {
-            return A
+            return h
         },
         startLurking: function() {
             return f
@@ -20,7 +20,7 @@ function(e, t, n) {
             return m
         },
         trackDiscoveryViewed: function() {
-            return h
+            return A
         },
         trackGuildJoinClicked: function() {
             return C
@@ -32,10 +32,10 @@ function(e, t, n) {
             return R
         },
         trackSearchStarted: function() {
-            return O
+            return p
         },
         trackTagSearchStarted: function() {
-            return p
+            return O
         },
         viewGuild: function() {
             return S
@@ -128,7 +128,7 @@ function(e, t, n) {
             })
     }
 
-    function A(e) {
+    function h(e) {
         return {
             id: e.id,
             name: e.name,
@@ -150,7 +150,7 @@ function(e, t, n) {
         }
     }
 
-    function h(e) {
+    function A(e) {
         let {
             loadId: t,
             gamesYouPlayGuilds: n,
@@ -184,7 +184,7 @@ function(e, t, n) {
         })
     }
 
-    function O(e, t) {
+    function p(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         E.default.track(I.AnalyticEvents.SEARCH_STARTED, {
             search_type: I.SearchTypes.GUILD_DISCOVERY,
@@ -194,7 +194,7 @@ function(e, t, n) {
         })
     }
 
-    function p(e, t, n, i) {
+    function O(e, t, n, i) {
         E.default.track(I.AnalyticEvents.SEARCH_STARTED, {
             search_type: I.SearchTypes.GUILD_DISCOVERY_TAG,
             load_id: e,
@@ -249,7 +249,7 @@ function(e, t, n) {
                 }),
                 r = null === (n = i.body) || void 0 === n ? void 0 : null === (t = n.guilds) || void 0 === t ? void 0 : t[0];
             if (null == r) return r;
-            return A(r)
+            return h(r)
         } catch (e) {
             return null
         }

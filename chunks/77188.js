@@ -20,13 +20,13 @@ function(e, t, n) {
         T = n("196483"),
         f = n("417662"),
         S = n("847302"),
-        A = n("374157");
+        h = n("374157");
     n("209073");
-    var h = n("814011"),
+    var A = n("814011"),
         m = n("50607"),
         N = n("618136"),
-        O = n("247765"),
-        p = n("15559"),
+        p = n("247765"),
+        O = n("15559"),
         R = n("42530");
 
     function C(e) {
@@ -57,7 +57,7 @@ function(e, t, n) {
                         } = v;
                         v.chatInputType = a, v.windowContext = d, v.previewMarkdown = R, v.composition = null, v.events = new r.EventEmitter, v.isMac = "MacIntel" === navigator.platform, v.onChange = () => {
                             v.events.emit("onChange"), M()
-                        }, v = (0, m.withReact)(v, !0 === C), v = (0, h.default)(v), v = (0, A.default)(v), (null === (t = a.commands) || void 0 === t ? void 0 : t.enabled) && (v = (0, _.default)(v, o, !0 === l, !0 === u)), v = (0, S.default)(v, o.guild_id, o.id), !(null === (n = a.markdown) || void 0 === n ? void 0 : n.disableBlockQuotes) && (v = (0, c.default)(v)), !(null === (i = a.markdown) || void 0 === i ? void 0 : i.disableCodeBlocks) && (v = (0, E.default)(v)), C && (v = (0, O.default)(v)), v = (0, f.default)(v), v = (0, I.default)(v), v = (0, N.default)(v), v = (0, p.default)(v, g, L), v = (0, T.default)(v, e => {
+                        }, v = (0, m.withReact)(v, !0 === C), v = (0, A.default)(v), v = (0, h.default)(v), (null === (t = a.commands) || void 0 === t ? void 0 : t.enabled) && (v = (0, _.default)(v, o, !0 === l, !0 === u)), v = (0, S.default)(v, o.guild_id, o.id), !(null === (n = a.markdown) || void 0 === n ? void 0 : n.disableBlockQuotes) && (v = (0, c.default)(v)), !(null === (i = a.markdown) || void 0 === i ? void 0 : i.disableCodeBlocks) && (v = (0, E.default)(v)), C && (v = (0, p.default)(v)), v = (0, f.default)(v), v = (0, I.default)(v), v = (0, N.default)(v), v = (0, O.default)(v, g, L), v = (0, T.default)(v, e => {
                             let {
                                 newValue: t,
                                 newSelection: n

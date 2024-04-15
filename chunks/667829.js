@@ -20,12 +20,12 @@ function(e, t, n) {
         T = n("911969"),
         f = n("476326"),
         S = n("998698"),
-        A = n("710845"),
-        h = n("117530"),
+        h = n("710845"),
+        A = n("117530"),
         m = n("459273"),
         N = n("403182"),
-        O = n("541716"),
-        p = n("752305"),
+        p = n("541716"),
+        O = n("752305"),
         R = n("30465"),
         C = n("140963"),
         g = n("4484"),
@@ -42,7 +42,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    new A.default("ChannelEditor.tsx");
+    new h.default("ChannelEditor.tsx");
     let P = function() {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n]
         },
@@ -65,7 +65,7 @@ function(e, t, n) {
                 let e;
                 e = this.props.useSlate ? this.props.textValue : (0, L.toTextValue)(this.props.richValue, {
                     mode: "plain"
-                }), null === (t = (n = this.props).onChange) || void 0 === t || t.call(n, null, e, (0, p.toRichValue)(e))
+                }), null === (t = (n = this.props).onChange) || void 0 === t || t.call(n, null, e, (0, O.toRichValue)(e))
             } else this.props.textValue !== e.textValue && this.saveCurrentTextThrottled()
         }
         componentWillUnmount() {
@@ -178,8 +178,8 @@ function(e, t, n) {
                 onSubmit: T,
                 channel: f,
                 type: S,
-                fontSize: A,
-                useSlate: h,
+                fontSize: h,
+                useSlate: A,
                 spellcheckEnabled: N,
                 useNewSlashCommands: R,
                 canOnlyUseTextCommands: L,
@@ -197,7 +197,7 @@ function(e, t, n) {
             } = this.state, x = {
                 channel: f,
                 className: a()(v, M.textArea, {
-                    [M.textAreaSlate]: h,
+                    [M.textAreaSlate]: A,
                     [M.textAreaDisabled]: d || V
                 }),
                 id: y,
@@ -206,7 +206,7 @@ function(e, t, n) {
                 accessibilityLabel: k,
                 disabled: d || !1,
                 submitting: V,
-                isEdit: S === O.ChatInputTypes.EDIT,
+                isEdit: S === p.ChatInputTypes.EDIT,
                 onFocus: this.handleFocus,
                 onBlur: this.handleBlur,
                 onPaste: this.handlePaste,
@@ -220,10 +220,10 @@ function(e, t, n) {
                 onResize: I,
                 onKeyDown: E,
                 onSubmit: T,
-                textAreaPaddingClassName: a()(U[A], {
-                    [M.textAreaWithoutAttachmentButton]: S !== O.ChatInputTypes.NORMAL && S !== O.ChatInputTypes.OVERLAY && S !== O.ChatInputTypes.THREAD_CREATION && S !== O.ChatInputTypes.SIDEBAR,
-                    [M.textAreaForPostCreation]: S === O.ChatInputTypes.CREATE_FORUM_POST,
-                    [M.textAreaCustomGift]: S === O.ChatInputTypes.CUSTOM_GIFT
+                textAreaPaddingClassName: a()(U[h], {
+                    [M.textAreaWithoutAttachmentButton]: S !== p.ChatInputTypes.NORMAL && S !== p.ChatInputTypes.OVERLAY && S !== p.ChatInputTypes.THREAD_CREATION && S !== p.ChatInputTypes.SIDEBAR,
+                    [M.textAreaForPostCreation]: S === p.ChatInputTypes.CREATE_FORUM_POST,
+                    [M.textAreaCustomGift]: S === p.ChatInputTypes.CUSTOM_GIFT
                 }),
                 spellcheckEnabled: N,
                 useNewSlashCommands: R,
@@ -237,11 +237,11 @@ function(e, t, n) {
                 "aria-describedby": w,
                 "aria-labelledby": B,
                 "aria-autocomplete": "list"
-            }, H = h ? (0, i.jsx)(g.default, {
+            }, H = A ? (0, i.jsx)(g.default, {
                 ref: this.ref,
                 ...x,
                 type: S,
-                value: d ? (0, p.toRichValue)("") : u,
+                value: d ? (0, O.toRichValue)("") : u,
                 canUseCommands: null === (t = S.commands) || void 0 === t ? void 0 : t.enabled,
                 canOnlyUseTextCommands: L
             }) : (0, i.jsx)(C.default, {
@@ -302,7 +302,7 @@ function(e, t, n) {
                 E.default.saveDraft(e, this.props.textValue, this.props.type.drafts.type)
             }), y(this, "handleClearText", () => {
                 var e, t;
-                null === (e = (t = this.props).onChange) || void 0 === e || e.call(t, null, "", (0, p.toRichValue)(""))
+                null === (e = (t = this.props).onChange) || void 0 === e || e.call(t, null, "", (0, O.toRichValue)(""))
             }), y(this, "handleInsertText", e => {
                 let {
                     plainText: t,
@@ -420,7 +420,7 @@ function(e, t, n) {
                         u = null,
                         d = S.default.getActiveOption(t.id);
                     null != (u = (null == d ? void 0 : d.type) === T.ApplicationCommandOptionType.ATTACHMENT ? d : null === (s = o.options) || void 0 === s ? void 0 : s.find(e => {
-                        if (e.type === T.ApplicationCommandOptionType.ATTACHMENT) return null == h.default.getUpload(t.id, e.name, l)
+                        if (e.type === T.ApplicationCommandOptionType.ATTACHMENT) return null == A.default.getUpload(t.id, e.name, l)
                     })) && I.default.setFile({
                         channelId: t.id,
                         id: u.name,

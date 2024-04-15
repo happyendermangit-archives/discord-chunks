@@ -5,7 +5,7 @@ function(e, t, n) {
             return y
         },
         ANALYTICS_GUILD_EVENTS_MODAL_NAME: function() {
-            return O
+            return p
         },
         ENTITY_TYPES_REQUIRED_CHANNEL_ID: function() {
             return L
@@ -23,13 +23,13 @@ function(e, t, n) {
             return o
         },
         FAKE_EVENT_ID: function() {
-            return p
+            return O
         },
         GUILD_EVENT_MAX_DESCRIPTION_LENGTH: function() {
             return m
         },
         GUILD_EVENT_MAX_NAME_LENGTH: function() {
-            return h
+            return A
         },
         GuildScheduledEventEntityTypes: function() {
             return r
@@ -63,18 +63,18 @@ function(e, t, n) {
         }
     }), n("47120");
     var i, r, s, a, o, l, u, d, _, c, E, I, T, f, S = n("70956"),
-        A = n("981631");
-    let h = 100,
+        h = n("981631");
+    let A = 100,
         m = 1e3,
         N = 100,
-        O = "Guild Events Modal",
-        p = "-1";
+        p = "Guild Events Modal",
+        O = "-1";
     (d = i || (i = {}))[d.SCHEDULED = 1] = "SCHEDULED", d[d.ACTIVE = 2] = "ACTIVE", d[d.COMPLETED = 3] = "COMPLETED", d[d.CANCELED = 4] = "CANCELED";
     let R = new Set([3, 4]);
     (_ = r || (r = {}))[_.NONE = 0] = "NONE", _[_.STAGE_INSTANCE = 1] = "STAGE_INSTANCE", _[_.VOICE = 2] = "VOICE", _[_.EXTERNAL = 3] = "EXTERNAL", _[_.PRIME_TIME = 4] = "PRIME_TIME", (c = s || (s = {}))[c.EVENT_START = 1] = "EVENT_START", (E = a || (a = {}))[E.PUBLIC = 1] = "PUBLIC", E[E.GUILD_ONLY = 2] = "GUILD_ONLY";
     let C = {
-            1: A.ChannelTypes.GUILD_STAGE_VOICE,
-            2: A.ChannelTypes.GUILD_VOICE
+            1: h.ChannelTypes.GUILD_STAGE_VOICE,
+            2: h.ChannelTypes.GUILD_VOICE
         },
         g = new Set([3]),
         L = new Set([1, 2]);

@@ -12,28 +12,28 @@ function(e, t, n) {
         T = n("981631"),
         f = n("65154");
     let S = Date.now(),
-        A = !1,
         h = !1,
+        A = !1,
         m = !1,
         N = !1,
-        O = !1;
+        p = !1;
 
-    function p() {
-        return m || N || (0, E.isAndroid)() && O
+    function O() {
+        return m || N || (0, E.isAndroid)() && p
     }
 
     function R() {
-        Date.now() - S > T.IDLE_DURATION || p() ? A || l.default.dispatch({
+        Date.now() - S > T.IDLE_DURATION || O() ? h || l.default.dispatch({
             type: "IDLE",
             idle: !0,
             idleSince: S
-        }) : A && l.default.dispatch({
+        }) : h && l.default.dispatch({
             type: "IDLE",
             idle: !1
-        }), Date.now() - S > Math.min(_.AfkTimeout.getSetting() * c.default.Millis.SECOND, T.IDLE_DURATION) || p() ? h || l.default.dispatch({
+        }), Date.now() - S > Math.min(_.AfkTimeout.getSetting() * c.default.Millis.SECOND, T.IDLE_DURATION) || O() ? A || l.default.dispatch({
             type: "AFK",
             afk: !0
-        }) : h && l.default.dispatch({
+        }) : A && l.default.dispatch({
             type: "AFK",
             afk: !1
         })
@@ -68,13 +68,13 @@ function(e, t, n) {
     }
     class g extends(a = o.default.Store) {
         isIdle() {
-            return A
-        }
-        isAFK() {
             return h
         }
+        isAFK() {
+            return A
+        }
         getIdleSince() {
-            return A ? S : null
+            return h ? S : null
         }
     }
     s = "IdleStore", (r = "displayName") in(i = g) ? Object.defineProperty(i, r, {
@@ -84,10 +84,10 @@ function(e, t, n) {
         writable: !0
     }) : i[r] = s, t.default = new g(l.default, {
         IDLE: function(e) {
-            A = e.idle
+            h = e.idle
         },
         AFK: function(e) {
-            h = e.afk
+            A = e.afk
         },
         SPEAKING: function(e) {
             let {
@@ -100,7 +100,7 @@ function(e, t, n) {
             let {
                 state: t
             } = e;
-            return O = t === T.AppStates.BACKGROUND, S = Date.now(), R(), !1
+            return p = t === T.AppStates.BACKGROUND, S = Date.now(), R(), !1
         },
         OVERLAY_SET_NOT_IDLE: C,
         CHANNEL_SELECT: C,

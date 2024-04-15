@@ -12,12 +12,12 @@ function(e, t, n) {
         T = n("314897"),
         f = n("523746"),
         S = n("592125"),
-        A = n("131951"),
-        h = n("19780"),
+        h = n("131951"),
+        A = n("19780"),
         m = n("936349"),
         N = n("944486"),
-        O = n("885110"),
-        p = n("959457"),
+        p = n("885110"),
+        O = n("959457"),
         R = n("358085"),
         C = n("138859"),
         g = n("955132"),
@@ -44,7 +44,7 @@ function(e, t, n) {
                     guildId: e.getGuildId(),
                     channelId: n
                 })
-            } else h.default.setLastSessionVoiceChannelId(null != n ? n : null), _.default.selectVoiceChannel(null)
+            } else A.default.setLastSessionVoiceChannelId(null != n ? n : null), _.default.selectVoiceChannel(null)
         }
         g.localVoiceState.update(t, !0), G = !1
     }
@@ -66,7 +66,7 @@ function(e, t, n) {
     }
     class H extends(i = u.default.Store) {
         initialize() {
-            this.waitFor(T.default, N.default, S.default, f.default, I.default), this.syncWith([A.default], V), this.syncWith([O.default], F)
+            this.waitFor(T.default, N.default, S.default, f.default, I.default), this.syncWith([h.default], V), this.syncWith([p.default], F)
         }
         getSocket() {
             return g.socket
@@ -231,9 +231,9 @@ function(e, t, n) {
             } = e;
             return g.socket.isSessionEstablished() && (n || ! function() {
                 let e = function() {
-                    return p.default.getAllActiveStreamKeys().find(e => (0, E.decodeStreamKey)(e).ownerId === T.default.getId())
+                    return O.default.getAllActiveStreamKeys().find(e => (0, E.decodeStreamKey)(e).ownerId === T.default.getId())
                 }();
-                p.default.getAllActiveStreamKeys().filter(t => t !== e).forEach(e => x(e))
+                O.default.getAllActiveStreamKeys().filter(t => t !== e).forEach(e => x(e))
             }(), g.socket.streamWatch(t)), !1
         },
         STREAM_STOP: function(e) {

@@ -16,12 +16,12 @@ function(e, t, n) {
         T = n("131704"),
         f = n("433355"),
         S = n("592125"),
-        A = n("430824"),
-        h = n("306680"),
+        h = n("430824"),
+        A = n("306680"),
         m = n("944486"),
         N = n("914010"),
-        O = n("70956"),
-        p = n("796798"),
+        p = n("70956"),
+        O = n("796798"),
         R = n("198620"),
         C = n("981631"),
         g = n("176505"),
@@ -62,7 +62,7 @@ function(e, t, n) {
             return
         }
         let f = c.default.getOrCreate(n);
-        p.AttachmentLinkRefreshExperiment.getCurrentConfig({
+        O.AttachmentLinkRefreshExperiment.getCurrentConfig({
             location: "fetch_messages"
         }).enabled && f.some(R.messageHasExpiredAttachmentUrl) && (v.log("Found expired attachment link, clearing messages"), c.default.clear(n), f = c.default.getOrCreate(n)), null != f.jumpTargetId && null == r && (f = f.mutate({
             jumpTargetId: null,
@@ -72,7 +72,7 @@ function(e, t, n) {
             focusTargetId: null
         }), c.default.commit(f));
         let m = s;
-        if (!o || E.default.isConnected() || f.loadingMore ? f.loadingMore || f.ready && !f.cached ? null != r ? m = !0 : I && v.log("Skipping fetch because no other conditions matched") : null == t || null != A.default.getGuild(t) ? m = !0 : I && v.log("Skipping fetch we are connected and have loaded messages") : m = !0, m) {
+        if (!o || E.default.isConnected() || f.loadingMore ? f.loadingMore || f.ready && !f.cached ? null != r ? m = !0 : I && v.log("Skipping fetch because no other conditions matched") : null == t || null != h.default.getGuild(t) ? m = !0 : I && v.log("Skipping fetch we are connected and have loaded messages") : m = !0, m) {
             if (c.default.commit(f.mutate({
                     loadingMore: !0
                 })), null != r) u.default.jumpToMessage({
@@ -84,7 +84,7 @@ function(e, t, n) {
                 jumpType: l
             });
             else if ((null == T ? void 0 : T.isThread()) && function(e) {
-                    if (h.default.hasOpenedThread(e)) return !1;
+                    if (A.default.hasOpenedThread(e)) return !1;
                     if (null == i) {
                         var t;
                         i = null !== (t = a.Storage.get(P, {})) && void 0 !== t ? t : {}
@@ -104,8 +104,8 @@ function(e, t, n) {
                 isPreload: o,
                 skipLocalFetch: _
             });
-            else if ((null == T ? void 0 : T.isThread()) && h.default.hasTrackedUnread(T.id) && !f.ready) {
-                let e = h.default.getTrackedAckMessageId(T.id);
+            else if ((null == T ? void 0 : T.isThread()) && A.default.hasTrackedUnread(T.id) && !f.ready) {
+                let e = A.default.getTrackedAckMessageId(T.id);
                 v.log("Jumping to most recent message in thread ".concat(T.id, " - ").concat(e)), u.default.fetchMessages({
                     channelId: n,
                     limit: C.MAX_MESSAGES_PER_CHANNEL,
@@ -128,7 +128,7 @@ function(e, t, n) {
             })
         }
     }
-    let y = 90 * O.default.Millis.DAY,
+    let y = 90 * p.default.Millis.DAY,
         P = "viewedThreadIds";
 
     function U() {
@@ -272,7 +272,7 @@ function(e, t, n) {
         } = e;
         if (s) return;
         let a = null !== (t = Y[n]) && void 0 !== t ? t : 0;
-        if (Date.now() - a < 10 * O.default.Millis.SECOND) return;
+        if (Date.now() - a < 10 * p.default.Millis.SECOND) return;
         Y[n] = Date.now();
         let o = m.default.getChannelId(),
             l = f.default.getCurrentSidebarChannelId(o),

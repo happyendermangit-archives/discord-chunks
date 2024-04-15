@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return Q
+            return q
         }
     }), n("47120");
     var i = n("735250"),
@@ -20,12 +20,12 @@ function(e, t, n) {
         T = n("583405"),
         f = n("556084"),
         S = n("300284"),
-        A = n("695346"),
-        h = n("314897"),
+        h = n("695346"),
+        A = n("314897"),
         m = n("592125"),
         N = n("430824"),
-        O = n("944486"),
-        p = n("594174"),
+        p = n("944486"),
+        O = n("594174"),
         R = n("451478"),
         C = n("311715"),
         g = n("465670"),
@@ -69,8 +69,8 @@ function(e, t, n) {
             type: t,
             shown: s,
             onClick: o
-        } = e, u = (0, l.useStateFromStores)([p.default], () => {
-            let e = p.default.getCurrentUser();
+        } = e, u = (0, l.useStateFromStores)([O.default], () => {
+            let e = O.default.getCurrentUser();
             return U.default.canUsePremiumProfileCustomization(e)
         }), I = r.useRef(!1), {
             analyticsLocations: T
@@ -157,13 +157,13 @@ function(e, t, n) {
         })
     }
 
-    function Q(e) {
+    function q(e) {
         var t, n, s;
         let {
             user: _,
             displayProfile: c,
             bannerSrc: E,
-            onClose: p,
+            onClose: O,
             guildId: L,
             profileType: D,
             isHovering: v,
@@ -171,9 +171,9 @@ function(e, t, n) {
             allowEdit: y = !0,
             showPremiumBadgeUpsell: W = !0,
             hasProfileEffect: K = !1
-        } = e, Q = (0, l.useStateFromStores)([N.default], () => N.default.getGuild(L)), q = (0, l.useStateFromStores)([h.default], () => h.default.getId()) === _.id && y, Z = U.default.isPremiumAtLeast(null == c ? void 0 : c.premiumType, H.PremiumTypes.TIER_2), {
+        } = e, q = (0, l.useStateFromStores)([N.default], () => N.default.getGuild(L)), Q = (0, l.useStateFromStores)([A.default], () => A.default.getId()) === _.id && y, Z = U.default.isPremiumAtLeast(null == c ? void 0 : c.premiumType, H.PremiumTypes.TIER_2), {
             trackUserProfileAction: J
-        } = (0, b.useUserProfileAnalyticsContext)(), [$, ee] = r.useState(!1), et = (0, l.useStateFromStores)([R.default], () => R.default.isFocused()), en = A.GifAutoPlay.getSetting(), {
+        } = (0, b.useUserProfileAnalyticsContext)(), [$, ee] = r.useState(!1), et = (0, l.useStateFromStores)([R.default], () => R.default.isFocused()), en = h.GifAutoPlay.getSetting(), {
             bannerSrc: ei,
             status: er
         } = (0, w.default)({
@@ -181,7 +181,7 @@ function(e, t, n) {
             overrideBannerSrc: E,
             size: (0, k.getUserBannerSize)(D),
             canAnimate: M || !en ? $ : et
-        }), es = (0, d.useToken)(u.default.unsafe_rawColors.PRIMARY_800).hex(), ea = (0, d.getAvatarSize)(d.AvatarSizes.SIZE_80), eo = (0, o.hex2int)((0, I.default)(_.getAvatarURL(L, ea), es, !1)), el = (0, T.default)(null !== (t = null == c ? void 0 : c.primaryColor) && void 0 !== t ? t : eo).hsl, eu = (0, l.useStateFromStores)([G.default], () => G.default.getUserProfile(_.id)), ed = m.default.getChannel(O.default.getChannelId()), {
+        }), es = (0, d.useToken)(u.default.unsafe_rawColors.PRIMARY_800).hex(), ea = (0, d.getAvatarSize)(d.AvatarSizes.SIZE_80), eo = (0, o.hex2int)((0, I.default)(_.getAvatarURL(L, ea), es, !1)), el = (0, T.default)(null !== (t = null == c ? void 0 : c.primaryColor) && void 0 !== t ? t : eo).hsl, eu = (0, l.useStateFromStores)([G.default], () => G.default.getUserProfile(_.id)), ed = m.default.getChannel(p.default.getChannelId()), {
             appsInGDMEnabled: e_,
             availableApplications: ec
         } = (0, f.usePrivateChannelIntegrationState)({
@@ -215,7 +215,7 @@ function(e, t, n) {
                     backgroundImage: null != ei ? "url(".concat(ei, ")") : void 0,
                     backgroundColor: er !== w.BannerLoadingStatus.COMPLETE ? u.default.unsafe_rawColors.PRIMARY_800.css : el
                 },
-                children: [q ? null == Q ? (0, i.jsx)(X, {
+                children: [Q ? null == q ? (0, i.jsx)(X, {
                     darkenOnHover: K && v,
                     profileType: D,
                     profileLabel: Y.default.Messages.EDIT_PROFILE,
@@ -223,7 +223,7 @@ function(e, t, n) {
                     onClick: () => {
                         J({
                             action: "EDIT_PROFILE"
-                        }), null == p || p(), eT()
+                        }), null == O || O(), eT()
                     }
                 }) : (0, i.jsx)(d.Popout, {
                     spacing: 6,
@@ -234,8 +234,8 @@ function(e, t, n) {
                         } = e;
                         return (0, i.jsx)(V.default, {
                             onClose: t,
-                            onSelect: p,
-                            guild: Q
+                            onSelect: O,
+                            guild: q
                         })
                     },
                     children: e => (0, i.jsx)(X, {
@@ -251,10 +251,10 @@ function(e, t, n) {
                     onClick: () => {
                         J({
                             action: "PRESS_PREMIUM_UPSELL"
-                        }), null == p || p()
+                        }), null == O || O()
                     }
                 }) : null, eI ? D !== F.UserProfileTypes.MODAL ? null : (0, i.jsx)(d.Clickable, {
-                    onClick: p,
+                    onClick: O,
                     "aria-label": Y.default.Messages.BACK,
                     className: j.pencilContainer,
                     children: (0, i.jsx)(d.Tooltip, {

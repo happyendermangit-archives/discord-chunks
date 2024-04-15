@@ -26,12 +26,12 @@ function(e, t, n) {
         T = n("666475"),
         f = n("591304"),
         S = n("328664"),
-        A = n("328259"),
-        h = n("19009"),
+        h = n("328259"),
+        A = n("19009"),
         m = n("405571"),
         N = n("730886"),
-        O = n("473974"),
-        p = n("563856"),
+        p = n("473974"),
+        O = n("563856"),
         R = n("997945"),
         C = n("689938");
     let g = 60,
@@ -52,12 +52,12 @@ function(e, t, n) {
             name: C.default.Messages.APP_ICON_MANGA
         }, {
             id: R.PremiumAppIconIds.MATTE_DARK,
-            iconSource: A,
+            iconSource: h,
             isPremium: !0,
             name: C.default.Messages.APP_ICON_MATTE_DARK
         }, {
             id: R.PremiumAppIconIds.MATTE_LIGHT,
-            iconSource: h,
+            iconSource: A,
             name: C.default.Messages.APP_ICON_MATTE_LIGHT,
             isPremium: !0
         }, {
@@ -77,7 +77,7 @@ function(e, t, n) {
             name: C.default.Messages.APP_ICON_CAMO
         }, {
             id: R.PremiumAppIconIds.SUNSET,
-            iconSource: O,
+            iconSource: p,
             isPremium: !0,
             name: C.default.Messages.APP_ICON_SUNSET
         }, {
@@ -87,7 +87,7 @@ function(e, t, n) {
             name: C.default.Messages.APP_ICON_GALAXY
         }, {
             id: R.PremiumAppIconIds.Y2K,
-            iconSource: p,
+            iconSource: O,
             isPremium: !0,
             name: C.default.Messages.APP_ICON_Y2K
         }, {

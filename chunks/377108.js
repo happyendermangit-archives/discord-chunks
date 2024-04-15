@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         ApplicationCommandFrecency: function() {
-            return O
+            return p
         },
         ApplicationFrecency: function() {
             return P
@@ -11,7 +11,7 @@ function(e, t, n) {
             return m
         },
         FavoriteEmojis: function() {
-            return A
+            return h
         },
         FavoriteGIF: function() {
             return c
@@ -74,13 +74,13 @@ function(e, t, n) {
                         r.stickerFrecency = f.internalBinaryRead(e, e.uint32(), n, r.stickerFrecency);
                         break;
                     case 5:
-                        r.favoriteEmojis = A.internalBinaryRead(e, e.uint32(), n, r.favoriteEmojis);
+                        r.favoriteEmojis = h.internalBinaryRead(e, e.uint32(), n, r.favoriteEmojis);
                         break;
                     case 6:
                         r.emojiFrecency = m.internalBinaryRead(e, e.uint32(), n, r.emojiFrecency);
                         break;
                     case 7:
-                        r.applicationCommandFrecency = O.internalBinaryRead(e, e.uint32(), n, r.applicationCommandFrecency);
+                        r.applicationCommandFrecency = p.internalBinaryRead(e, e.uint32(), n, r.applicationCommandFrecency);
                         break;
                     case 8:
                         r.favoriteSoundboardSounds = g.internalBinaryRead(e, e.uint32(), n, r.favoriteSoundboardSounds);
@@ -107,7 +107,7 @@ function(e, t, n) {
             return r
         }
         internalBinaryWrite(e, t, n) {
-            e.versions && a.Versions.internalBinaryWrite(e.versions, t.tag(1, s.WireType.LengthDelimited).fork(), n).join(), e.favoriteGifs && d.internalBinaryWrite(e.favoriteGifs, t.tag(2, s.WireType.LengthDelimited).fork(), n).join(), e.favoriteStickers && I.internalBinaryWrite(e.favoriteStickers, t.tag(3, s.WireType.LengthDelimited).fork(), n).join(), e.stickerFrecency && f.internalBinaryWrite(e.stickerFrecency, t.tag(4, s.WireType.LengthDelimited).fork(), n).join(), e.favoriteEmojis && A.internalBinaryWrite(e.favoriteEmojis, t.tag(5, s.WireType.LengthDelimited).fork(), n).join(), e.emojiFrecency && m.internalBinaryWrite(e.emojiFrecency, t.tag(6, s.WireType.LengthDelimited).fork(), n).join(), e.applicationCommandFrecency && O.internalBinaryWrite(e.applicationCommandFrecency, t.tag(7, s.WireType.LengthDelimited).fork(), n).join(), e.favoriteSoundboardSounds && g.internalBinaryWrite(e.favoriteSoundboardSounds, t.tag(8, s.WireType.LengthDelimited).fork(), n).join(), e.applicationFrecency && P.internalBinaryWrite(e.applicationFrecency, t.tag(9, s.WireType.LengthDelimited).fork(), n).join(), e.heardSoundFrecency && D.internalBinaryWrite(e.heardSoundFrecency, t.tag(10, s.WireType.LengthDelimited).fork(), n).join(), e.playedSoundFrecency && M.internalBinaryWrite(e.playedSoundFrecency, t.tag(11, s.WireType.LengthDelimited).fork(), n).join(), e.guildAndChannelFrecency && b.internalBinaryWrite(e.guildAndChannelFrecency, t.tag(12, s.WireType.LengthDelimited).fork(), n).join();
+            e.versions && a.Versions.internalBinaryWrite(e.versions, t.tag(1, s.WireType.LengthDelimited).fork(), n).join(), e.favoriteGifs && d.internalBinaryWrite(e.favoriteGifs, t.tag(2, s.WireType.LengthDelimited).fork(), n).join(), e.favoriteStickers && I.internalBinaryWrite(e.favoriteStickers, t.tag(3, s.WireType.LengthDelimited).fork(), n).join(), e.stickerFrecency && f.internalBinaryWrite(e.stickerFrecency, t.tag(4, s.WireType.LengthDelimited).fork(), n).join(), e.favoriteEmojis && h.internalBinaryWrite(e.favoriteEmojis, t.tag(5, s.WireType.LengthDelimited).fork(), n).join(), e.emojiFrecency && m.internalBinaryWrite(e.emojiFrecency, t.tag(6, s.WireType.LengthDelimited).fork(), n).join(), e.applicationCommandFrecency && p.internalBinaryWrite(e.applicationCommandFrecency, t.tag(7, s.WireType.LengthDelimited).fork(), n).join(), e.favoriteSoundboardSounds && g.internalBinaryWrite(e.favoriteSoundboardSounds, t.tag(8, s.WireType.LengthDelimited).fork(), n).join(), e.applicationFrecency && P.internalBinaryWrite(e.applicationFrecency, t.tag(9, s.WireType.LengthDelimited).fork(), n).join(), e.heardSoundFrecency && D.internalBinaryWrite(e.heardSoundFrecency, t.tag(10, s.WireType.LengthDelimited).fork(), n).join(), e.playedSoundFrecency && M.internalBinaryWrite(e.playedSoundFrecency, t.tag(11, s.WireType.LengthDelimited).fork(), n).join(), e.guildAndChannelFrecency && b.internalBinaryWrite(e.guildAndChannelFrecency, t.tag(12, s.WireType.LengthDelimited).fork(), n).join();
             let i = n.writeUnknownFields;
             return !1 !== i && (!0 == i ? s.UnknownFieldHandler.onWrite : i)(this.typeName, e, t), t
         }
@@ -136,7 +136,7 @@ function(e, t, n) {
                 no: 5,
                 name: "favorite_emojis",
                 kind: "message",
-                T: () => A
+                T: () => h
             }, {
                 no: 6,
                 name: "emoji_frecency",
@@ -146,7 +146,7 @@ function(e, t, n) {
                 no: 7,
                 name: "application_command_frecency",
                 kind: "message",
-                T: () => O
+                T: () => p
             }, {
                 no: 8,
                 name: "favorite_soundboard_sounds",
@@ -482,8 +482,8 @@ function(e, t, n) {
             }])
         }
     }
-    let A = new S;
-    class h extends s.MessageType {
+    let h = new S;
+    class A extends s.MessageType {
         create(e) {
             let t = {
                 emojis: {}
@@ -545,7 +545,7 @@ function(e, t, n) {
             }])
         }
     }
-    let m = new h;
+    let m = new A;
     class N extends s.MessageType {
         create(e) {
             let t = {
@@ -608,8 +608,8 @@ function(e, t, n) {
             }])
         }
     }
-    let O = new N;
-    class p extends s.MessageType {
+    let p = new N;
+    class O extends s.MessageType {
         create(e) {
             let t = {
                 totalUses: 0,
@@ -686,7 +686,7 @@ function(e, t, n) {
             }])
         }
     }
-    let R = new p;
+    let R = new O;
     class C extends s.MessageType {
         create(e) {
             let t = {

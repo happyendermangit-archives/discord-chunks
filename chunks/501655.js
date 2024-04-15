@@ -22,13 +22,13 @@ function(e, t, n) {
         T = n("594174"),
         f = n("979651"),
         S = n("5192"),
-        A = n("88751"),
-        h = n("427679"),
+        h = n("88751"),
+        A = n("427679"),
         m = n("590415"),
         N = n("974609"),
-        O = n("981631");
+        p = n("981631");
 
-    function p(e, t, n) {
+    function O(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -81,26 +81,26 @@ function(e, t, n) {
                 a = f.default.getVoiceStateForChannel(this.channelId, e);
             if (null == a) return s;
             let o = T.default.getUser(e);
-            if (null == o) return null != this.guildId && h.default.isPublic(this.channelId) && c.default.requestMember(this.guildId, e), s;
+            if (null == o) return null != this.guildId && A.default.isPublic(this.channelId) && c.default.requestMember(this.guildId, e), s;
             let l = null != t ? t[0] : null,
                 _ = {
                     user: o,
                     userNick: S.default.getName(this.guildId, this.channelId, o),
                     voiceState: a,
                     role: (0, N.getHighestHoistedRole)(this.guildId, e),
-                    speaker: A.default.isSpeaker(e, this.channelId),
+                    speaker: h.default.isSpeaker(e, this.channelId),
                     member: null != this.guildId ? E.default.getMember(this.guildId, e) : null,
-                    blocked: I.default.getRelationships()[o.id] === O.RelationshipTypes.BLOCKED,
+                    blocked: I.default.getRelationships()[o.id] === p.RelationshipTypes.BLOCKED,
                     isFriend: I.default.isFriend(o.id),
                     connectedOn: null !== (n = null == l ? void 0 : l.connectedOn) && void 0 !== n ? n : Date.now()
                 },
-                p = {
+                O = {
                     ..._,
                     type: "VOICE",
                     id: o.id,
                     rtsState: (0, m.getAudienceRequestToSpeakState)(a)
                 };
-            s.push(p);
+            s.push(O);
             let R = null !== (i = d.default.getStreamForUser(e, this.guildId)) && void 0 !== i ? i : d.default.getActiveStreamForUser(e, this.guildId);
             if (null != R && R.channelId === this.channelId) {
                 let e = (0, u.encodeStreamKey)(R);
@@ -149,7 +149,7 @@ function(e, t, n) {
         }
         constructor(e) {
             var t;
-            p(this, "channelId", void 0), p(this, "guildId", void 0), p(this, "participants", {}), p(this, "_participantsIndex", new o.SecondaryIndexMap(L, R)), p(this, "_requestToSpeakIndex", new o.SecondaryIndexMap(() => [], C)), this.channelId = e, this.guildId = null === (t = _.default.getChannel(e)) || void 0 === t ? void 0 : t.getGuildId()
+            O(this, "channelId", void 0), O(this, "guildId", void 0), O(this, "participants", {}), O(this, "_participantsIndex", new o.SecondaryIndexMap(L, R)), O(this, "_requestToSpeakIndex", new o.SecondaryIndexMap(() => [], C)), this.channelId = e, this.guildId = null === (t = _.default.getChannel(e)) || void 0 === t ? void 0 : t.getGuildId()
         }
     }
 }

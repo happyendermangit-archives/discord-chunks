@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return A
+            return h
         }
     });
     var i = n("735250"),
@@ -21,18 +21,18 @@ function(e, t, n) {
         f = n("689938"),
         S = n("221840");
 
-    function A(e) {
+    function h(e) {
         var t;
         let {
             clan: n,
-            isLoading: A,
-            onAdoptTag: h,
+            isLoading: h,
+            onAdoptTag: A,
             onMouseEnter: m,
             onMouseLeave: N
-        } = e, O = (0, I.useClanInfo)(null !== (t = null == n ? void 0 : n.identityGuildId) && void 0 !== t ? t : null), p = null == n ? void 0 : n.tag, R = (0, d.useIsInUserClanExperiment)(), C = null == n ? void 0 : n.identityGuildId, g = (0, a.useStateFromStores)([o.default], () => o.default.getId()), L = (0, a.useStateFromStores)([l.default], () => null != C ? l.default.getMember(C, g) : null, [C, g]), D = (0, a.useStateFromStores)([u.default], () => u.default.getUser(g), [g]), v = (null == L ? void 0 : L.joinedAt) != null, M = (0, c.isGuildAdoptedUserClanIdentity)(C, null == D ? void 0 : D.clan), y = r.useCallback(e => {
-            null != C && (e.stopPropagation(), e.preventDefault(), null == h || h(), (0, _.openAdoptClanIdentityModal)(C))
-        }, [C, h]);
-        return null == p || (null == O ? void 0 : O.guild) == null || null == C || A ? (0, i.jsx)(s.Spinner, {}) : (0, i.jsxs)("div", {
+        } = e, p = (0, I.useClanInfo)(null !== (t = null == n ? void 0 : n.identityGuildId) && void 0 !== t ? t : null), O = null == n ? void 0 : n.tag, R = (0, d.useIsInUserClanExperiment)(), C = null == n ? void 0 : n.identityGuildId, g = (0, a.useStateFromStores)([o.default], () => o.default.getId()), L = (0, a.useStateFromStores)([l.default], () => null != C ? l.default.getMember(C, g) : null, [C, g]), D = (0, a.useStateFromStores)([u.default], () => u.default.getUser(g), [g]), v = (null == L ? void 0 : L.joinedAt) != null, M = (0, c.isGuildAdoptedUserClanIdentity)(C, null == D ? void 0 : D.clan), y = r.useCallback(e => {
+            null != C && (e.stopPropagation(), e.preventDefault(), null == A || A(), (0, _.openAdoptClanIdentityModal)(C))
+        }, [C, A]);
+        return null == O || (null == p ? void 0 : p.guild) == null || null == C || h ? (0, i.jsx)(s.Spinner, {}) : (0, i.jsxs)("div", {
             className: S.tooltipContainer,
             onMouseLeave: N,
             onMouseEnter: m,
@@ -44,13 +44,13 @@ function(e, t, n) {
                     color: "text-muted",
                     children: f.default.Messages.CLAN_TAG_GUILD_PROFILE_MEMBERSHIP
                 }), (0, i.jsx)(T.BaseClanTagChiplet, {
-                    clanTag: p
+                    clanTag: O
                 })]
             }), (0, i.jsxs)("div", {
                 className: S.tooltipContent,
                 children: [(0, i.jsx)("div", {
                     children: (0, i.jsx)(E.default, {
-                        guild: O.guild,
+                        guild: p.guild,
                         iconSize: 40
                     })
                 }), (0, i.jsxs)("div", {
@@ -60,7 +60,7 @@ function(e, t, n) {
                         children: (0, i.jsx)(s.Heading, {
                             variant: "heading-md/semibold",
                             color: "header-primary",
-                            children: O.guild.name
+                            children: p.guild.name
                         })
                     }), (0, i.jsxs)("div", {
                         className: S.guildMemberCount,

@@ -17,8 +17,8 @@ function(e, t, n) {
         T = n("621113"),
         f = n("981631"),
         S = n("354459"),
-        A = n("689938"),
-        h = n("438249");
+        h = n("689938"),
+        A = n("438249");
 
     function m(e) {
         let {
@@ -29,10 +29,10 @@ function(e, t, n) {
             onSelect: T
         } = e;
         n && t();
-        let h = (0, r.useStateFromStores)([u.default], () => u.default.getSelfEmbeddedActivityForChannel(I)),
+        let A = (0, r.useStateFromStores)([u.default], () => u.default.getSelfEmbeddedActivityForChannel(I)),
             m = (0, r.useStateFromStores)([E.default], () => E.default.pipWindow),
             N = (0, r.useStateFromStores)([_.default], () => _.default.getSelectedParticipant(I)),
-            O = (0, r.useStateFromStores)([_.default], () => _.default.getStreamParticipants(I));
+            p = (0, r.useStateFromStores)([_.default], () => _.default.getStreamParticipants(I));
         return (0, i.jsx)(a.Menu, {
             navId: "pip-menu",
             "aria-label": "switch PIP",
@@ -44,7 +44,7 @@ function(e, t, n) {
                     n = [];
                 return null != e && (null == m ? void 0 : m.id) !== e.id && n.push({
                     pipWindow: e
-                }), null != t && O.forEach(e => {
+                }), null != t && p.forEach(e => {
                     let i = c.default.getActiveStreamForApplicationStream(e.stream),
                         r = e.id === (null == N ? void 0 : N.id) && (null == m ? void 0 : m.id) === t.id;
                     null != i && !r && n.push({
@@ -58,14 +58,14 @@ function(e, t, n) {
                 let n = e.pipWindow.id,
                     r = null === (t = e.participant) || void 0 === t ? void 0 : t.id,
                     s = function(e) {
-                        if (e.pipWindow.component === f.PictureInPictureComponents.EMBED_IFRAME && null != h) {
+                        if (e.pipWindow.component === f.PictureInPictureComponents.EMBED_IFRAME && null != A) {
                             var t;
-                            let e = null === (t = d.default.getApplication(h.applicationId)) || void 0 === t ? void 0 : t.name;
-                            return null == e ? A.default.Messages.SWITCH_PIP_TO_ACTIVITY : A.default.Messages.SWITCH_PIP_TO_ACTIVITY_NAME.format({
+                            let e = null === (t = d.default.getApplication(A.applicationId)) || void 0 === t ? void 0 : t.name;
+                            return null == e ? h.default.Messages.SWITCH_PIP_TO_ACTIVITY : h.default.Messages.SWITCH_PIP_TO_ACTIVITY_NAME.format({
                                 activityName: e
                             })
                         }
-                        return null == e.participant || e.participant.type !== S.ParticipantTypes.STREAM ? A.default.Messages.SWITCH_PIP_TO_GO_LIVE : A.default.Messages.SWITCH_PIP_TO_USER_STREAM.format({
+                        return null == e.participant || e.participant.type !== S.ParticipantTypes.STREAM ? h.default.Messages.SWITCH_PIP_TO_GO_LIVE : h.default.Messages.SWITCH_PIP_TO_USER_STREAM.format({
                             username: e.participant.userNick
                         })
                     }(e),
@@ -99,7 +99,7 @@ function(e, t, n) {
                 ...e
             }),
             children: e => (0, i.jsx)(a.Clickable, {
-                className: h.menuIcon,
+                className: A.menuIcon,
                 ...e,
                 children: (0, i.jsx)(T.default, {
                     color: s.default.unsafe_rawColors.WHITE_500.css

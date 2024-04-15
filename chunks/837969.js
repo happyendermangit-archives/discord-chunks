@@ -35,20 +35,20 @@ function(e, t, n) {
             maintainFocusPosition: T = !0,
             includeSetSizes: f = !0,
             focusOnMount: S = !0,
-            enabled: A = !0,
-            onDispatch: h
+            enabled: h = !0,
+            onDispatch: A
         } = e, m = i.useCallback((e, t) => {
             let n = (0, r.default)(e, t);
-            return null != h && h(e, n, t), n
-        }, [h]), [N, O] = i.useReducer(m, {
+            return null != A && A(e, n, t), n
+        }, [A]), [N, p] = i.useReducer(m, {
             focusedIndex: _,
             itemCount: n
         }), {
-            itemCount: p,
+            itemCount: O,
             focusedIndex: R
-        } = N, [C] = i.useState(() => (0, a.throttle)(O, 16));
+        } = N, [C] = i.useState(() => (0, a.throttle)(p, 16));
         return i.useEffect(() => {
-                O({
+                p({
                     type: r.ListActionType.UPDATE_ITEM_COUNT,
                     itemCount: n
                 })
@@ -64,18 +64,18 @@ function(e, t, n) {
                     dispatch: T,
                     maintainFocusPosition: f,
                     includeSetSizes: S,
-                    focusOnMount: A,
-                    enabled: h,
+                    focusOnMount: h,
+                    enabled: A,
                     makeId: m = a.makeId,
                     getIndexFromId: N
-                } = e, O = i.useRef(n), p = i.useRef(N);
-                p.current = N, O.current = n;
+                } = e, p = i.useRef(n), O = i.useRef(N);
+                O.current = N, p.current = n;
                 let R = i.useRef();
                 i.useEffect(() => {
-                    R.current = h
-                }, [h]);
+                    R.current = A
+                }, [A]);
                 let [C, g] = i.useState(!1), [L] = i.useState(() => new a.HandlerMemoizer(e => () => {
-                    let t = null != p.current && "string" == typeof e ? p.current(e) : e;
+                    let t = null != O.current && "string" == typeof e ? O.current(e) : e;
                     "number" == typeof t && !(t < 0) && T({
                         type: r.ListActionType.SET_FOCUSED_INDEX,
                         index: t
@@ -87,7 +87,7 @@ function(e, t, n) {
                     }, [E]),
                     [v, M] = i.useState(!0);
                 i.useEffect(() => {
-                    if (v && !A) {
+                    if (v && !h) {
                         M(!1);
                         return
                     }
@@ -179,11 +179,11 @@ function(e, t, n) {
                         } = e;
                         return {
                             role: "listitem",
-                            "aria-setsize": S ? O.current : void 0,
+                            "aria-setsize": S ? p.current : void 0,
                             "aria-posinset": S ? n + 1 : void 0,
                             id: m(t, n),
                             tabIndex: f && n === _ ? 0 : -1,
-                            onFocus: L.get(null != p.current ? m(t, n) : n)
+                            onFocus: L.get(null != O.current ? m(t, n) : n)
                         }
                     }, [m, t, _, f, L, S]);
                 return i.useMemo(() => ({
@@ -193,7 +193,7 @@ function(e, t, n) {
                 }), [T, B, k])
             }({
                 navId: t,
-                itemCount: p,
+                itemCount: O,
                 focusedIndex: R,
                 dispatch: C,
                 onSelect: c,
@@ -202,7 +202,7 @@ function(e, t, n) {
                 maintainFocusPosition: T,
                 includeSetSizes: f,
                 focusOnMount: S,
-                enabled: A
+                enabled: h
             })
     }
 }

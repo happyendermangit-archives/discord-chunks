@@ -41,10 +41,10 @@ function(e, t, n) {
                 disabled: T,
                 className: f,
                 focusProps: S,
-                innerRef: A
+                innerRef: h
             } = e, {
-                reducedMotion: h
-            } = r.useContext(u.AccessibilityPreferencesContext), m = r.useRef(null), [N, O] = r.useState(!1), p = (0, _.useToken)(l.default.unsafe_rawColors.PRIMARY_400).spring(), R = (0, _.useToken)(l.default.unsafe_rawColors.GREEN_360).spring(), {
+                reducedMotion: A
+            } = r.useContext(u.AccessibilityPreferencesContext), m = r.useRef(null), [N, p] = r.useState(!1), O = (0, _.useToken)(l.default.unsafe_rawColors.PRIMARY_400).spring(), R = (0, _.useToken)(l.default.unsafe_rawColors.GREEN_360).spring(), {
                 state: C,
                 opacity: g
             } = (0, o.useSpring)({
@@ -61,13 +61,13 @@ function(e, t, n) {
                         [c.checked]: s,
                         [c.disabled]: T
                     }),
-                    onMouseDown: () => !T && O(!0),
-                    onMouseUp: () => O(!1),
-                    onMouseLeave: () => O(!1),
+                    onMouseDown: () => !T && p(!0),
+                    onMouseUp: () => p(!1),
+                    onMouseLeave: () => p(!1),
                     style: {
                         opacity: g,
                         backgroundColor: C.to({
-                            output: [p, R]
+                            output: [O, R]
                         })
                     },
                     children: [(0, i.jsxs)(o.animated.svg, {
@@ -123,24 +123,24 @@ function(e, t, n) {
                                     })
                                 })]
                             })
-                        }(C, p, R, h.enabled)]
+                        }(C, O, R, A.enabled)]
                     }), (0, i.jsx)("input", {
                         id: t,
                         type: "checkbox",
                         ref: e => {
-                            m.current = e, null != A && (A.current = e)
+                            m.current = e, null != h && (h.current = e)
                         },
                         className: c.input,
                         tabIndex: T ? -1 : 0,
                         onKeyDown: function(e) {
-                            if (!T && !e.repeat)(" " === e.key || "Enter" === e.key) && O(!0)
+                            if (!T && !e.repeat)(" " === e.key || "Enter" === e.key) && p(!0)
                         },
                         onKeyUp: function(e) {
                             var t;
-                            if (!T && !!N && !e.repeat) O(!1), "Enter" === e.key && (null === (t = m.current) || void 0 === t || t.click())
+                            if (!T && !!N && !e.repeat) p(!1), "Enter" === e.key && (null === (t = m.current) || void 0 === t || t.click())
                         },
                         onChange: function(e) {
-                            O(!1), null == n || n(e.currentTarget.checked, e)
+                            p(!1), null == n || n(e.currentTarget.checked, e)
                         },
                         checked: s,
                         disabled: T

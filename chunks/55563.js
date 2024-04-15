@@ -13,16 +13,16 @@ function(e, t, n) {
         f = new Map,
         S = new Map;
 
-    function A(e) {
+    function h(e) {
         T.set(e.id, _.default.createFromServer(e)), !f.has(e.application_id) && f.set(e.application_id, new Set), f.get(e.application_id).add(e.id)
     }
 
-    function h(e) {
-        E.delete(e.id), I.delete(e.id), A(e)
+    function A(e) {
+        E.delete(e.id), I.delete(e.id), h(e)
     }
 
     function m(e) {
-        A(e.sku), null != e.child_skus && e.child_skus.forEach(e => A(e)), null != e.alternative_skus && e.alternative_skus.forEach(e => A(e))
+        h(e.sku), null != e.child_skus && e.child_skus.forEach(e => h(e)), null != e.alternative_skus && e.alternative_skus.forEach(e => h(e))
     }
 
     function N(e) {
@@ -32,20 +32,20 @@ function(e, t, n) {
         for (let e of t) m(e)
     }
 
-    function O(e) {
+    function p(e) {
         let {
             entitlements: t
         } = e;
-        for (let e of t) null != e.sku && A(e.sku)
+        for (let e of t) null != e.sku && h(e.sku)
     }
 
-    function p() {
+    function O() {
         E = new Set, I = new Set, T = new Map, f = new Map, S = new Map
     }
 
     function R() {
         if (i === d.default.locale) return !1;
-        i = d.default.locale, p()
+        i = d.default.locale, O()
     }
     class C extends(r = l.Store) {
         initialize() {
@@ -87,7 +87,7 @@ function(e, t, n) {
                 giftCode: t
             } = e;
             if (null == t.store_listing) return !1;
-            A(t.store_listing.sku)
+            h(t.store_listing.sku)
         },
         SKU_FETCH_START: function(e) {
             let {
@@ -99,7 +99,7 @@ function(e, t, n) {
             let {
                 sku: t
             } = e;
-            h(t)
+            A(t)
         },
         SKU_FETCH_FAIL: function(e) {
             let {
@@ -112,12 +112,12 @@ function(e, t, n) {
                 guildId: t,
                 skus: n
             } = e;
-            for (let e of n) h(e);
+            for (let e of n) A(e);
             null != t && S.set(t, new Set(n.map(e => e.id)))
         },
-        ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: O,
-        APPLICATION_STORE_CLEAR_DATA: p,
-        APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: O,
-        ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: O
+        ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: p,
+        APPLICATION_STORE_CLEAR_DATA: O,
+        APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: p,
+        ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: p
     })
 }

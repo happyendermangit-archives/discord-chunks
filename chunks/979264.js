@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         BaseClanTagChiplet: function() {
-            return h
+            return A
         }
     }), n("47120");
     var i = n("735250"),
@@ -20,8 +20,8 @@ function(e, t, n) {
         T = n("460578"),
         f = n("277602"),
         S = n("738103"),
-        A = n("319695");
-    let h = r.memo(function(e) {
+        h = n("319695");
+    let A = r.memo(function(e) {
         let {
             clanTag: t,
             className: n,
@@ -33,14 +33,14 @@ function(e, t, n) {
             tag: "span",
             onClick: r,
             onMouseEnter: s,
-            className: a()(A.chipletContainerInner, o && A.noTooltip, n),
+            className: a()(h.chipletContainerInner, o && h.noTooltip, n),
             children: (0, i.jsxs)(d.Text, {
                 variant: "text-xs/medium",
                 color: "text-normal",
                 tag: "span",
-                className: A.text,
+                className: h.text,
                 children: [(0, i.jsx)(S.TempBadgeIcon, {
-                    className: A.badge,
+                    className: h.badge,
                     width: 12,
                     height: 12
                 }), t]
@@ -54,19 +54,19 @@ function(e, t, n) {
             userId: a,
             className: o,
             disableTooltip: S = !1
-        } = e, m = (0, u.useStateFromStores)([c.default], () => c.default.getUser(a), [a]), N = null !== (t = null == m ? void 0 : m.clan) && void 0 !== t ? t : s, O = (0, I.getTagFromClan)(N), p = (0, _.default)(N), [R, C] = (0, T.useFetchClanInfo)(null !== (n = null == N ? void 0 : N.identityGuildId) && void 0 !== n ? n : null), [g, L] = r.useState(!1), [D, v] = r.useState(!1), [M, y] = r.useState(!1), P = r.useRef(null), U = r.useCallback(e => {
+        } = e, m = (0, u.useStateFromStores)([c.default], () => c.default.getUser(a), [a]), N = null !== (t = null == m ? void 0 : m.clan) && void 0 !== t ? t : s, p = (0, I.getTagFromClan)(N), O = (0, _.default)(N), [R, C] = (0, T.useFetchClanInfo)(null !== (n = null == N ? void 0 : N.identityGuildId) && void 0 !== n ? n : null), [g, L] = r.useState(!1), [D, v] = r.useState(!1), [M, y] = r.useState(!1), P = r.useRef(null), U = r.useCallback(e => {
             !S && (e.stopPropagation(), e.preventDefault(), L(e => !e))
         }, [S]), b = r.useCallback(() => {
             !S && C()
         }, [C, S]);
         return (r.useEffect(() => {
-            !l()(p, N) && L(!1)
-        }, [p, N]), r.useEffect(() => (!D && !M && (P.current = setTimeout(() => {
+            !l()(O, N) && L(!1)
+        }, [O, N]), r.useEffect(() => (!D && !M && (P.current = setTimeout(() => {
             L(!1)
         }, 500)), () => {
             null != P.current && clearTimeout(P.current)
-        }), [D, M]), (0, E.useIsInUserClanExperiment)() && null != O) ? S ? (0, i.jsx)(h, {
-            clanTag: O,
+        }), [D, M]), (0, E.useIsInUserClanExperiment)() && null != p) ? S ? (0, i.jsx)(A, {
+            clanTag: p,
             className: o,
             onClick: U,
             onMouseEnter: b,
@@ -82,8 +82,8 @@ function(e, t, n) {
             onTooltipShow: () => C(),
             hideOnClick: !0,
             disableTooltipPointerEvents: !1,
-            tooltipClassName: A.tooltip,
-            tooltipContentClassName: A.tooltipContainer,
+            tooltipClassName: h.tooltip,
+            tooltipContentClassName: h.tooltipContainer,
             "aria-label": "Guild Profile",
             shouldShow: g,
             forceOpen: g,
@@ -97,8 +97,8 @@ function(e, t, n) {
                     var t;
                     y(!1), null === (t = e.onMouseLeave) || void 0 === t || t.call(e)
                 },
-                children: (0, i.jsx)(h, {
-                    clanTag: O,
+                children: (0, i.jsx)(A, {
+                    clanTag: p,
                     className: o,
                     onClick: U,
                     onMouseEnter: b,

@@ -16,12 +16,12 @@ function(e, t, n) {
         T = n("369780"),
         f = n("444758"),
         S = n("723454"),
-        A = n("772096"),
-        h = n("800927"),
+        h = n("772096"),
+        A = n("800927"),
         m = n("594199"),
         N = n("97734"),
-        O = n("660199"),
-        p = n("364458"),
+        p = n("660199"),
+        O = n("364458"),
         R = n("981631"),
         C = n("689079"),
         g = n("377668"),
@@ -32,7 +32,7 @@ function(e, t, n) {
         y = /^ *> ?/gm;
 
     function P(e) {
-        let t = (0, A.punycodeLink)(e[1]);
+        let t = (0, h.punycodeLink)(e[1]);
         if (null == t) return {
             type: "text",
             content: e[1]
@@ -94,7 +94,7 @@ function(e, t, n) {
                     }
                 }
             },
-            link: A.default,
+            link: h.default,
             autolink: {
                 ...a().defaultRules.autolink,
                 parse: P
@@ -297,9 +297,9 @@ function(e, t, n) {
             timestamp: {
                 order: m.default.order - 1,
                 requiredFirstCharacters: ["<"],
-                match: e => O.TIMESTAMP_REGEX.exec(e),
+                match: e => p.TIMESTAMP_REGEX.exec(e),
                 parse(e) {
-                    let [t, n, i] = e, r = (0, O.parseTimestamp)(n, i);
+                    let [t, n, i] = e, r = (0, p.parseTimestamp)(n, i);
                     return null == r ? {
                         type: "text",
                         content: t
@@ -341,13 +341,13 @@ function(e, t, n) {
                 })
             },
             heading: S.default,
-            list: h.default
+            list: A.default
         },
-        w = (0, p.default)([G, N.default]),
+        w = (0, O.default)([G, N.default]),
         B = r().omit(w, ["inlineCode", "codeBlock", "br", "blockQuote"]),
         k = r().omit(w, ["inlineCode", "codeBlock", "br", "blockQuote", "url", "attachmentLink", "mention", "roleMention", "channelMention", "channelOrMessageUrl", "mediaPostLink"]),
         V = r().omit(w, ["codeBlock", "br", "mention", "channel", "roleMention", "attachmentLink"]),
-        F = r().omit((0, p.default)([w, {
+        F = r().omit((0, O.default)([w, {
             inlineCode: {
                 match(e, t, n) {
                     let i = w.codeBlock.match(e, t, n);
@@ -365,7 +365,7 @@ function(e, t, n) {
     function W(e, t) {
         return 0 === e.length || 0 === t || "" === e.charAt(t - 1).trim()
     }
-    let K = (0, p.default)([{
+    let K = (0, O.default)([{
         highlightWord: {
             order: -1,
             match(e, t) {

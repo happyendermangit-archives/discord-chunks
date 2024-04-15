@@ -16,12 +16,12 @@ function(e, t, n) {
         T = n("887490"),
         f = n("77224"),
         S = n("135223"),
-        A = n("704875"),
-        h = n("653309"),
+        h = n("704875"),
+        A = n("653309"),
         m = n("559366"),
         N = n("931093");
 
-    function O(e, t, n) {
+    function p(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -29,7 +29,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    class p extends r.PureComponent {
+    class O extends r.PureComponent {
         componentDidMount() {
             this.props.editor.events.addListener("onChange", this.handleOnChange)
         }
@@ -69,7 +69,7 @@ function(e, t, n) {
                 ...a.style,
                 textAlign: "right"
             });
-            let l = null !== (t = null == s ? void 0 : s(e)) && void 0 !== t ? t : (0, A.default)(e, n, r);
+            let l = null !== (t = null == s ? void 0 : s(e)) && void 0 !== t ? t : (0, h.default)(e, n, r);
             return null != l ? l : (0, i.jsx)("div", {
                 ...a,
                 children: o
@@ -83,7 +83,7 @@ function(e, t, n) {
             } = this.props, {
                 attributes: s,
                 children: a
-            } = e, o = null !== (t = null == r ? void 0 : r(e)) && void 0 !== t ? t : (0, h.default)(n, e);
+            } = e, o = null !== (t = null == r ? void 0 : r(e)) && void 0 !== t ? t : (0, A.default)(n, e);
             return null != o ? o : (0, i.jsx)("span", {
                 ...s,
                 children: a
@@ -300,8 +300,8 @@ function(e, t, n) {
                 onKeyUp: T,
                 decorateExtra: f,
                 renderExtraElement: S,
-                renderExtraLeaf: A,
-                ...h
+                renderExtraLeaf: h,
+                ...A
             } = this.props;
             return (0, i.jsxs)("div", {
                 ref: this.containerRef,
@@ -314,7 +314,7 @@ function(e, t, n) {
                     editor: e,
                     value: [...this.state.initialValue],
                     children: (0, i.jsx)(o.Editable, {
-                        ...h,
+                        ...A,
                         className: a()(N.markup, m.editor, t),
                         decorate: this.decorate,
                         renderElement: this.renderElement,
@@ -338,7 +338,7 @@ function(e, t, n) {
             })
         }
         constructor(e) {
-            super(e), O(this, "containerRef", r.createRef()), O(this, "state", void 0), this.decorate = this.decorate.bind(this), this.renderElement = this.renderElement.bind(this), this.renderLeaf = this.renderLeaf.bind(this), this.handleOnChange = this.handleOnChange.bind(this), this.handleKeyDown = this.handleKeyDown.bind(this), this.handleKeyUp = this.handleKeyUp.bind(this), this.handleBeforeInput = this.handleBeforeInput.bind(this), this.handleCompositionStart = this.handleCompositionStart.bind(this), this.handleCompositionEnd = this.handleCompositionEnd.bind(this), this.handleFocusCapture = this.handleFocusCapture.bind(this), this.handleBlurCapture = this.handleBlurCapture.bind(this), this.handleContextMenu = this.handleContextMenu.bind(this), this.handlePasteCapture = this.handlePasteCapture.bind(this), T.EditorUtils.isEditorEmpty(e.editor) ? this.state = {
+            super(e), p(this, "containerRef", r.createRef()), p(this, "state", void 0), this.decorate = this.decorate.bind(this), this.renderElement = this.renderElement.bind(this), this.renderLeaf = this.renderLeaf.bind(this), this.handleOnChange = this.handleOnChange.bind(this), this.handleKeyDown = this.handleKeyDown.bind(this), this.handleKeyUp = this.handleKeyUp.bind(this), this.handleBeforeInput = this.handleBeforeInput.bind(this), this.handleCompositionStart = this.handleCompositionStart.bind(this), this.handleCompositionEnd = this.handleCompositionEnd.bind(this), this.handleFocusCapture = this.handleFocusCapture.bind(this), this.handleBlurCapture = this.handleBlurCapture.bind(this), this.handleContextMenu = this.handleContextMenu.bind(this), this.handlePasteCapture = this.handlePasteCapture.bind(this), T.EditorUtils.isEditorEmpty(e.editor) ? this.state = {
                 initialValue: (0, _.createEmptyState)().richValue,
                 showPlaceholder: !0
             } : this.state = {
@@ -347,5 +347,5 @@ function(e, t, n) {
             }
         }
     }
-    t.default = p
+    t.default = O
 }

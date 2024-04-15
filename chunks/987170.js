@@ -104,21 +104,21 @@ function(e, t, n) {
                     I = !1 !== o.autoTrackExposure,
                     T = u(e.kind, e.id, t),
                     S = null == o.trackExposureOptions ? void 0 : (0, r.default)(null !== (s = o.trackExposureOptions) && void 0 !== s ? s : {}),
-                    A = null !== (a = null == T ? void 0 : T.triggerDebuggingEnabled) && void 0 !== a && a,
+                    h = null !== (a = null == T ? void 0 : T.triggerDebuggingEnabled) && void 0 !== a && a,
                     [
-                        [h, m, N], O
+                        [A, m, N], p
                     ] = (0, i.useState)(() => {
                         let t = null == T || c ? l.ExperimentBuckets.NOT_ELIGIBLE : T.bucket;
                         return [d(e, t, _, T), t, null == T ? -1 : T.revision]
                     }),
-                    p = (0, r.default)(t);
+                    O = (0, r.default)(t);
                 return (0, i.useEffect)(() => {
-                    if (!c && (!!I || !!A)) E(p, S, !1 === I)
-                }, [c, I, p, S, m, N, A]), (0, i.useEffect)(() => f(p, (e, t, n) => {
-                    O(i => i[0] === e && i[1] === t && i[2] === n ? i : [e, t, n])
+                    if (!c && (!!I || !!h)) E(O, S, !1 === I)
+                }, [c, I, O, S, m, N, h]), (0, i.useEffect)(() => f(O, (e, t, n) => {
+                    p(i => i[0] === e && i[1] === t && i[2] === n ? i : [e, t, n])
                 }, {
                     disable: c
-                }), [c, p]), h
+                }), [c, O]), A
             },
             subscribe: f,
             trackExposure: I,

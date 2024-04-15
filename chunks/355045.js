@@ -16,72 +16,72 @@ function(e, t, n) {
         T = n("559629"),
         f = n("709586"),
         S = n("74538"),
-        A = n("678558"),
-        h = n("981631"),
+        h = n("678558"),
+        A = n("981631"),
         m = n("474936"),
         N = n("689938"),
-        O = n("999150");
+        p = n("999150");
     t.default = function(e) {
         let {
             closeLayer: t,
             guild: n,
             onCtaVisibilityChange: s
-        } = e, p = (0, o.useStateFromStores)([c.default], () => c.default.getCurrentUser()), R = (0, o.useStateFromStores)([E.default], () => E.default.boostSlots), {
+        } = e, O = (0, o.useStateFromStores)([c.default], () => c.default.getCurrentUser()), R = (0, o.useStateFromStores)([E.default], () => E.default.boostSlots), {
             analyticsLocations: C
         } = (0, d.default)(), g = r.useMemo(() => Object.keys(R).filter(e => {
             let t = R[e];
             return null != t.premiumGuildSubscription && t.premiumGuildSubscription.guildId === n.id
         }), [R, n.id]);
         return (0, i.jsxs)("div", {
-            className: O.guildStatus,
+            className: p.guildStatus,
             children: [(0, i.jsx)(I.default, {
-                className: O.guildIcon,
+                className: p.guildIcon,
                 guild: n,
                 size: I.default.Sizes.LARGER
             }), (0, i.jsx)(u.Heading, {
-                className: O.guildName,
+                className: p.guildName,
                 color: "always-white",
                 variant: "text-lg/bold",
                 children: n.name
             }), (0, i.jsxs)("div", {
-                className: O.guildBoostCountWrapper,
+                className: p.guildBoostCountWrapper,
                 children: [(0, i.jsxs)("div", {
-                    className: O.guildBoostCount,
+                    className: p.guildBoostCount,
                     children: [(0, i.jsx)(f.default, {
-                        className: a()(O.guildBoostBadge, {
-                            [O.guildBoostBadgeWithBoosts]: n.premiumSubscriberCount > 0
+                        className: a()(p.guildBoostBadge, {
+                            [p.guildBoostBadgeWithBoosts]: n.premiumSubscriberCount > 0
                         })
                     }), (0, i.jsx)(u.Text, {
-                        className: O.guildStatusCopy,
+                        className: p.guildStatusCopy,
                         variant: "text-md/bold",
                         children: N.default.Messages.PREMIUM_GUILD_PERKS_MODAL_HEADER_SUBSCRIPTION_COUNT.format({
                             subscriptions: n.premiumSubscriberCount
                         })
                     })]
                 }), g.length > 0 ? (0, i.jsx)(u.Text, {
-                    className: O.guildBoostCountCurrentUser,
+                    className: p.guildBoostCountCurrentUser,
                     variant: "text-sm/normal",
                     children: N.default.Messages.PREMIUM_GUILD_PERKS_MODAL_HEADER_USER_SUBSCRIPTION_COUNT.format({
                         numSubscriptions: g.length
                     })
                 }) : null]
             }), (0, i.jsxs)("div", {
-                className: O.guildBoostCtas,
+                className: p.guildBoostCtas,
                 children: [(0, i.jsx)(l.VisibilitySensor, {
                     onChange: s,
                     threshold: .9,
                     children: (0, i.jsx)("div", {
-                        className: a()(O.guildBoostCta, O.guildBoostCtaBoostWrapper),
-                        children: (0, i.jsx)(A.default, {
-                            className: O.guildBoostCtaBoost,
-                            innerClassName: a()(O.__invalid_guildBoostCtaContent, O.guildBoostCtaBoostContent),
-                            buttonShineClassName: O.guildBoostCtaBoostShine,
+                        className: a()(p.guildBoostCta, p.guildBoostCtaBoostWrapper),
+                        children: (0, i.jsx)(h.default, {
+                            className: p.guildBoostCtaBoost,
+                            innerClassName: a()(p.__invalid_guildBoostCtaContent, p.guildBoostCtaBoostContent),
+                            buttonShineClassName: p.guildBoostCtaBoostShine,
                             guild: n,
                             analyticsLocation: {
-                                page: h.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
-                                section: h.AnalyticsSections.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-                                object: h.AnalyticsObjects.BUTTON_CTA,
-                                objectType: h.AnalyticsObjectTypes.BUY
+                                page: A.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
+                                section: A.AnalyticsSections.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+                                object: A.AnalyticsObjects.BUTTON_CTA,
+                                objectType: A.AnalyticsObjectTypes.BUY
                             },
                             closeLayer: t,
                             color: u.Button.Colors.WHITE,
@@ -89,9 +89,9 @@ function(e, t, n) {
                             fullWidth: !0
                         })
                     })
-                }), S.default.hasFreeBoosts(p) || S.default.isPremium(p, m.PremiumTypes.TIER_2) ? (0, i.jsxs)(u.Button, {
-                    className: a()(O.guildBoostCta, O.guildBoostCtaSecondary),
-                    innerClassName: a()(O.__invalid_guildBoostCtaContent, O.guildBoostCtaGiftContent),
+                }), S.default.hasFreeBoosts(O) || S.default.isPremium(O, m.PremiumTypes.TIER_2) ? (0, i.jsxs)(u.Button, {
+                    className: a()(p.guildBoostCta, p.guildBoostCtaSecondary),
+                    innerClassName: a()(p.__invalid_guildBoostCtaContent, p.guildBoostCtaGiftContent),
                     look: u.Button.Looks.OUTLINED,
                     color: u.Button.Colors.WHITE,
                     onClick: function() {
@@ -101,21 +101,21 @@ function(e, t, n) {
                             isGift: !0,
                             analyticsLocations: C,
                             analyticsObject: {
-                                page: h.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
-                                section: h.AnalyticsSections.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-                                object: h.AnalyticsObjects.BUTTON_ICON,
-                                objectType: h.AnalyticsObjectTypes.GIFT
+                                page: A.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
+                                section: A.AnalyticsSections.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+                                object: A.AnalyticsObjects.BUTTON_ICON,
+                                objectType: A.AnalyticsObjectTypes.GIFT
                             },
                             onClose: e => e && t()
                         })
                     },
                     size: u.Button.Sizes.LARGE,
                     children: [(0, i.jsx)(T.default, {
-                        className: O.guildBoostCtaGiftIcon
+                        className: p.guildBoostCtaGiftIcon
                     }), N.default.Messages.PREMIUM_GUILD_PERKS_MODAL_GIFT_NITRO]
                 }) : (0, i.jsx)(u.Button, {
-                    className: a()(O.guildBoostCta, O.guildBoostCtaSecondary),
-                    innerClassName: a()(O.__invalid_guildBoostCtaContent, O.__invalid_guildBoostCtaSubscribeContent),
+                    className: a()(p.guildBoostCta, p.guildBoostCtaSecondary),
+                    innerClassName: a()(p.__invalid_guildBoostCtaContent, p.__invalid_guildBoostCtaSubscribeContent),
                     look: u.Button.Looks.OUTLINED,
                     color: u.Button.Colors.WHITE,
                     onClick: function() {
@@ -124,10 +124,10 @@ function(e, t, n) {
                             subscriptionTier: m.PremiumSubscriptionSKUs.TIER_2,
                             analyticsLocations: C,
                             analyticsObject: {
-                                page: h.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
-                                section: h.AnalyticsSections.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-                                object: h.AnalyticsObjects.BUTTON_ICON,
-                                objectType: h.AnalyticsObjectTypes.BUY
+                                page: A.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
+                                section: A.AnalyticsSections.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+                                object: A.AnalyticsObjects.BUTTON_ICON,
+                                objectType: A.AnalyticsObjectTypes.BUY
                             },
                             onClose: e => e && t()
                         })

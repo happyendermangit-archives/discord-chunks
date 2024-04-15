@@ -5,7 +5,7 @@ function(e, t, n) {
             return r
         },
         sendVoiceChannelCustomCallSoundEffect: function() {
-            return p
+            return O
         },
         sendVoiceChannelEffect: function() {
             return C
@@ -27,12 +27,12 @@ function(e, t, n) {
         T = n("176354"),
         f = n("696900"),
         S = n("456631"),
-        A = n("963838"),
-        h = n("353368"),
+        h = n("963838"),
+        A = n("353368"),
         m = n("981631"),
         N = n("710111");
 
-    function O(e) {
+    function p(e) {
         let t = new AbortController,
             n = (0, s.throttle)(n => {
                 E.default.getVoiceChannelId() !== e && t.abort()
@@ -43,14 +43,14 @@ function(e, t, n) {
         }
     }
 
-    function p(e, t, n) {
+    function O(e, t, n) {
         var i;
         let {
             abortController: r,
             onRequestProgress: s
-        } = O(e), o = null !== (i = f.default.getState().animationType) && void 0 !== i ? i : h.VoiceChannelEffectAnimationType.BASIC, u = {
+        } = p(e), o = null !== (i = f.default.getState().animationType) && void 0 !== i ? i : A.VoiceChannelEffectAnimationType.BASIC, u = {
             animation_type: o,
-            animation_id: (0, A.sampleAnimationId)(o, A.CUSTOM_CALL_SOUND_ANIMATION_RANGE)
+            animation_id: (0, h.sampleAnimationId)(o, h.CUSTOM_CALL_SOUND_ANIMATION_RANGE)
         };
         a.HTTP.post({
             url: m.Endpoints.CUSTOM_CALL_SOUNDS(e),
@@ -68,7 +68,7 @@ function(e, t, n) {
             {
                 abortController: l,
                 onRequestProgress: u
-            } = O(e),
+            } = p(e),
             E = {
                 sound_id: t.soundId,
                 emoji_id: t.emojiId,
@@ -93,7 +93,7 @@ function(e, t, n) {
             isPremium: l
         } = e;
         if (null == n || S.default.isOnCooldown) return;
-        let u = l && null != r ? r : h.VoiceChannelEffectAnimationType.BASIC;
+        let u = l && null != r ? r : A.VoiceChannelEffectAnimationType.BASIC;
         try {
             let e = null != n.id ? {
                 emoji_id: n.id,
@@ -122,8 +122,8 @@ function(e, t, n) {
             }
         }
     }, g = {
-        [h.VoiceChannelEffectAnimationType.BASIC]: "Basic",
-        [h.VoiceChannelEffectAnimationType.PREMIUM]: "Premium"
+        [A.VoiceChannelEffectAnimationType.BASIC]: "Basic",
+        [A.VoiceChannelEffectAnimationType.PREMIUM]: "Premium"
     }, L = (e, t, n, i) => {
         let {
             unicode: r,

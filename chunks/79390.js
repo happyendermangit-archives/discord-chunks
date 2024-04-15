@@ -17,7 +17,7 @@ function(e, t, n) {
             return M
         },
         hasNonVoteReactions: function() {
-            return O
+            return p
         },
         isAnswerFilled: function() {
             return L
@@ -32,7 +32,7 @@ function(e, t, n) {
             return C
         },
         useCanPostPollsInChannel: function() {
-            return p
+            return O
         },
         useCanShowPollsChatInputCoachmarkInGuild: function() {
             return R
@@ -53,8 +53,8 @@ function(e, t, n) {
         T = n("5192"),
         f = n("192616"),
         S = n("489887"),
-        A = n("981631"),
-        h = n("689938");
+        h = n("981631"),
+        A = n("689938");
 
     function m() {
         return {
@@ -70,15 +70,15 @@ function(e, t, n) {
         return e.replace(/\b[a-f\d]{8}-(?:[a-f\d]{4}-){3}[a-f\d]{12}-\b/i, "")
     }
 
-    function O(e) {
+    function p(e) {
         for (let t of e.reactions)
             if (null == t.me_vote) return !0;
         return !1
     }
 
-    function p(e) {
-        let t = A.ChannelTypesSets.POLLS.has(null == e ? void 0 : e.type),
-            n = (0, o.useStateFromStores)([c.default], () => c.default.can(A.Permissions.SEND_MESSAGES, e)),
+    function O(e) {
+        let t = h.ChannelTypesSets.POLLS.has(null == e ? void 0 : e.type),
+            n = (0, o.useStateFromStores)([c.default], () => c.default.can(h.Permissions.SEND_MESSAGES, e)),
             {
                 enabled: i
             } = f.CreateGuildPollsExperiment.useExperiment({
@@ -189,27 +189,27 @@ function(e, t, n) {
             }(a, n);
         return 0 === I.length ? "" : function(e, t) {
             let n = Math.max(0, t - e.length);
-            if (1 === e.length) return n > 0 ? h.default.Messages.POLL_VOTES_TOOLTIP_1_N.format({
+            if (1 === e.length) return n > 0 ? A.default.Messages.POLL_VOTES_TOOLTIP_1_N.format({
                 a: e[0],
                 n: n.toLocaleString()
             }) : e[0];
-            if (2 === e.length) return n > 0 ? h.default.Messages.POLL_VOTES_TOOLTIP_2_N.format({
+            if (2 === e.length) return n > 0 ? A.default.Messages.POLL_VOTES_TOOLTIP_2_N.format({
                 a: e[0],
                 b: e[1],
                 n: n.toLocaleString()
-            }) : h.default.Messages.POLL_VOTES_TOOLTIP_2.format({
+            }) : A.default.Messages.POLL_VOTES_TOOLTIP_2.format({
                 a: e[0],
                 b: e[1]
             });
-            if (3 !== e.length) return h.default.Messages.POLL_VOTES_TOOLTIP_N.format({
+            if (3 !== e.length) return A.default.Messages.POLL_VOTES_TOOLTIP_N.format({
                 n: n.toLocaleString()
             });
-            else return n > 0 ? h.default.Messages.POLL_VOTES_TOOLTIP_3_N.format({
+            else return n > 0 ? A.default.Messages.POLL_VOTES_TOOLTIP_3_N.format({
                 a: e[0],
                 b: e[1],
                 c: e[2],
                 n: n.toLocaleString()
-            }) : h.default.Messages.POLL_VOTES_TOOLTIP_3.format({
+            }) : A.default.Messages.POLL_VOTES_TOOLTIP_3.format({
                 a: e[0],
                 b: e[1],
                 c: e[2]

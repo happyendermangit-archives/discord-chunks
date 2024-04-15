@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return p
+            return O
         }
     });
     var i = n("735250"),
@@ -20,24 +20,24 @@ function(e, t, n) {
         T = n("957730"),
         f = n("592125"),
         S = n("699516"),
-        A = n("51144"),
-        h = n("838440"),
+        h = n("51144"),
+        A = n("838440"),
         m = n("981631"),
         N = n("689938"),
-        O = n("726286");
+        p = n("726286");
 
-    function p(e) {
+    function O(e) {
         let {
             user: t,
             autoFocus: n = !1,
             className: s,
             inputClassName: o,
-            onSend: p
+            onSend: O
         } = e, R = r.useRef(null), C = (0, u.useStateFromStores)([S.default], () => S.default.isBlocked(t.id)), g = r.useCallback(e => {
             if ("Enter" === e.key) {
                 e.preventDefault(), l()(null != R.current, "Keypress on Input when not mounted");
                 let n = R.current.value.trim();
-                return (0, h.applyChatRestrictions)({
+                return (0, A.applyChatRestrictions)({
                     type: I.ChatInputTypes.NORMAL,
                     content: n,
                     channel: null
@@ -48,16 +48,16 @@ function(e, t, n) {
                     i && (_.default.openPrivateChannel(t.id, !1, !1, "Quick Message Input").then(e => {
                         let t = f.default.getChannel(e);
                         l()(null != t, "Newly created PrivateChannel is null"), E.default.sendMessage(t.id, T.default.parse(t, n)), (0, c.popLayer)()
-                    }), null == p || p())
+                    }), null == O || O())
                 }), !0
             }
             e.which === m.KeyboardKeys.SPACE && e.stopPropagation()
-        }, [t, p]), L = C ? N.default.Messages.QUICK_DM_BLOCKED : N.default.Messages.QUICK_DM_USER.format({
-            name: A.default.getName(t)
+        }, [t, O]), L = C ? N.default.Messages.QUICK_DM_BLOCKED : N.default.Messages.QUICK_DM_USER.format({
+            name: h.default.getName(t)
         });
         return (0, i.jsx)(d.TextInput, {
             className: s,
-            inputClassName: a()(o, O.input),
+            inputClassName: a()(o, p.input),
             inputRef: R,
             autoFocus: n,
             placeholder: L,

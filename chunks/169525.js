@@ -8,13 +8,13 @@ function(e, t, n) {
             return m
         },
         getObscureReasonForAttachment: function() {
-            return A
-        },
-        getObscureReasonForEmbed: function() {
             return h
         },
+        getObscureReasonForEmbed: function() {
+            return A
+        },
         getObscuredAlt: function() {
-            return O
+            return p
         },
         useShouldObscure: function() {
             return N
@@ -35,7 +35,7 @@ function(e, t, n) {
         f = n("981631"),
         S = n("689938");
     (r = i || (i = {})).SPOILER = "spoiler", r.EXPLICIT_CONTENT = "explicit_content", r.POTENTIAL_EXPLICIT_CONTENT = "potential_explicit_content";
-    let A = (e, t) => {
+    let h = (e, t) => {
             let {
                 spoiler: n,
                 flags: i = 0,
@@ -47,7 +47,7 @@ function(e, t, n) {
             }
             return n || (0, I.hasFlag)(i, f.MessageAttachmentFlags.IS_SPOILER) ? "spoiler" : null
         },
-        h = (e, t, n, i, r) => {
+        A = (e, t, n, i, r) => {
             let {
                 flags: s = 0,
                 contentScanVersion: a
@@ -86,5 +86,5 @@ function(e, t, n) {
         } = e, i = (0, a.useStateFromStores)([E.default], () => null != t && E.default.can(f.Permissions.MANAGE_MESSAGES, t)), r = _.RenderSpoilers.useSetting(), s = (0, u.useShouldRedactExplicitContentForForum)();
         return m(n, !(0, T.default)(r, i), s)
     }
-    let O = e => (0, s.match)(e).with("explicit_content", () => S.default.Messages.EXPLICIT_CONTENT_ALT).with("spoiler", () => S.default.Messages.SPOILER_HIDDEN_A11Y_LABEL).otherwise(() => void 0)
+    let p = e => (0, s.match)(e).with("explicit_content", () => S.default.Messages.EXPLICIT_CONTENT_ALT).with("spoiler", () => S.default.Messages.SPOILER_HIDDEN_A11Y_LABEL).otherwise(() => void 0)
 }

@@ -3,7 +3,7 @@ function(e, t, n) {
     let i;
     n.r(t), n.d(t, {
         clearVoiceChannelEffectForUser: function() {
-            return A
+            return h
         }
     }), n("47120"), n("733860");
     var r, s, a, o, l = n("392711"),
@@ -16,19 +16,19 @@ function(e, t, n) {
     let T = [],
         f = {},
         S = [],
-        A = e => {
+        h = e => {
             null != e && _.default.dispatch({
                 type: "VOICE_CHANNEL_EFFECT_CLEAR",
                 userId: e
             })
         },
-        h = [],
+        A = [],
         m = 10 * c.default.Millis.SECOND,
         N = (0, l.debounce)(() => {
             let e = (0, E.getEffectAnnouncement)(S);
             d.AccessibilityAnnouncer.announce(e, "polite"), S = []
         }, 500);
-    class O extends(r = u.default.Store) {
+    class p extends(r = u.default.Store) {
         get recentlyUsedEmojis() {
             return T
         }
@@ -42,12 +42,12 @@ function(e, t, n) {
             return f[e]
         }
     }
-    o = "VoiceChannelEffectsStore", (a = "displayName") in(s = O) ? Object.defineProperty(s, a, {
+    o = "VoiceChannelEffectsStore", (a = "displayName") in(s = p) ? Object.defineProperty(s, a, {
         value: o,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : s[a] = o, t.default = new O(_.default, {
+    }) : s[a] = o, t.default = new p(_.default, {
         VOICE_CHANNEL_EFFECT_CLEAR: e => {
             let {
                 userId: t
@@ -77,8 +77,8 @@ function(e, t, n) {
         },
         VOICE_CHANNEL_EFFECT_SENT_LOCAL: () => {
             let e = new Date;
-            if ((h = [e, ...h].slice(0, 20)).length >= 20) {
-                let t = h[h.length - 1],
+            if ((A = [e, ...A].slice(0, 20)).length >= 20) {
+                let t = A[A.length - 1],
                     n = e.getTime() - t.getTime();
                 n < m && (i = new Date(e.getTime() + m - n))
             }

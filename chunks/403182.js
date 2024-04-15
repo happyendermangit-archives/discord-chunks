@@ -8,10 +8,10 @@ function(e, t, n) {
             return S
         },
         classifyFileName: function() {
-            return A
+            return h
         },
         getMaxRequestSize: function() {
-            return p
+            return O
         },
         makeFile: function() {
             return T
@@ -20,13 +20,13 @@ function(e, t, n) {
             return m
         },
         sizeString: function() {
-            return h
+            return A
         },
         transformNativeFile: function() {
             return I
         },
         uploadSumTooLarge: function() {
-            return O
+            return p
         }
     }), n("47120");
     var i = n("119516"),
@@ -100,17 +100,17 @@ function(e, t, n) {
     }];
 
     function S(e) {
-        return A(e.name, e.type)
+        return h(e.name, e.type)
     }
 
-    function A(e, t) {
+    function h(e, t) {
         var n;
         e = null !== (n = null == e ? void 0 : e.toLowerCase()) && void 0 !== n ? n : "";
         let i = a().find(f, n => null != n.reType && null != t ? n.reType.test(t) : null != n.reName && "" !== e && n.reName.test(e));
         return null != i ? i.klass : "unknown"
     }
 
-    function h(e) {
+    function A(e) {
         return r().filesize(e)
     }
 
@@ -132,15 +132,15 @@ function(e, t, n) {
         return Array.from(e).some(e => e.size > n)
     }
 
-    function O(e) {
+    function p(e) {
         return function(e) {
             let t = 0;
             for (let n of e) t += n.size;
             return t
-        }(e) > p()
+        }(e) > O()
     }
 
-    function p() {
+    function O() {
         let e = d.default.getCurrentUser();
         return null != e && e.isStaff() ? 524288e3 : 524288e3
     }

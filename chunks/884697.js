@@ -23,10 +23,10 @@ function(e, t, n) {
             return T
         },
         getProfileEffectsFromCategories: function() {
-            return p
+            return O
         },
         getProfileEffectsFromPurchases: function() {
-            return O
+            return p
         },
         groupProfileEffects: function() {
             return R
@@ -92,9 +92,9 @@ function(e, t, n) {
                 return (0, i.uniqBy)(e, "id")
             }
         },
-        A = e => f(e, r.CollectiblesItemType.AVATAR_DECORATION),
-        h = e => S(e, r.CollectiblesItemType.AVATAR_DECORATION),
-        m = (e, t) => (0, i.uniqBy)([...A(e), ...h(t)], "id"),
+        h = e => f(e, r.CollectiblesItemType.AVATAR_DECORATION),
+        A = e => S(e, r.CollectiblesItemType.AVATAR_DECORATION),
+        m = (e, t) => (0, i.uniqBy)([...h(e), ...A(t)], "id"),
         N = (e, t) => {
             var n;
             let {
@@ -105,11 +105,11 @@ function(e, t, n) {
             let l = u.Endpoints.APPLICATION_ASSET(u.COLLECTIBLES_APPLICATION_ID, e, o);
             return "".concat(location.protocol).concat(r).concat(l, "?size=").concat(a)
         },
-        O = e => f(e, r.CollectiblesItemType.PROFILE_EFFECT),
-        p = e => S(e, r.CollectiblesItemType.PROFILE_EFFECT),
+        p = e => f(e, r.CollectiblesItemType.PROFILE_EFFECT),
+        O = e => S(e, r.CollectiblesItemType.PROFILE_EFFECT),
         R = (e, t) => {
-            let n = O(t),
-                i = p(e).filter(e => {
+            let n = p(t),
+                i = O(e).filter(e => {
                     let {
                         id: t
                     } = e;

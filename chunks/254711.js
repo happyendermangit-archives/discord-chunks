@@ -23,12 +23,12 @@ function(e, t, n) {
         T = n("968437"),
         f = n("928477"),
         S = n("665906"),
-        A = n("695346"),
-        h = n("592125"),
+        h = n("695346"),
+        A = n("592125"),
         m = n("496675"),
         N = n("594174"),
-        O = n("70956"),
-        p = n("51144"),
+        p = n("70956"),
+        O = n("51144"),
         R = n("895924"),
         C = n("689079"),
         g = n("981631"),
@@ -177,7 +177,7 @@ function(e, t, n) {
                 let {
                     channel: t
                 } = e;
-                return !t.isPrivate() && A.EnableTTSCommand.getSetting() && m.default.can(g.Permissions.SEND_TTS_MESSAGES, t)
+                return !t.isPrivate() && h.EnableTTSCommand.getSetting() && m.default.can(g.Permissions.SEND_TTS_MESSAGES, t)
             },
             execute: e => {
                 var t;
@@ -397,7 +397,7 @@ function(e, t, n) {
                     let n = N.default.getUser(s);
                     if (null == n) throw Error();
                     await d.default.kickUser(i.id, s, null !== (t = M(e, "reason")) && void 0 !== t ? t : ""), _.default.sendBotMessage(r.id, D.default.Messages.COMMAND_KICK_CONFIRMATION.format({
-                        user: p.default.getUserTag(n)
+                        user: O.default.getUserTag(n)
                     }))
                 })().catch(() => {
                     _.default.sendBotMessage(r.id, D.default.Messages.COMMAND_KICK_ERROR)
@@ -446,27 +446,27 @@ function(e, t, n) {
                     }, {
                         name: D.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_1HR,
                         displayName: D.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_1HR,
-                        value: O.default.Seconds.HOUR
+                        value: p.default.Seconds.HOUR
                     }, {
                         name: D.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_6HR,
                         displayName: D.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_6HR,
-                        value: 6 * O.default.Seconds.HOUR
+                        value: 6 * p.default.Seconds.HOUR
                     }, {
                         name: D.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_12HR,
                         displayName: D.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_12HR,
-                        value: 12 * O.default.Seconds.HOUR
+                        value: 12 * p.default.Seconds.HOUR
                     }, {
                         name: D.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_24HR,
                         displayName: D.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_24HR,
-                        value: O.default.Seconds.DAY
+                        value: p.default.Seconds.DAY
                     }, {
                         name: D.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_3D,
                         displayName: D.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_3D,
-                        value: 3 * O.default.Seconds.DAY
+                        value: 3 * p.default.Seconds.DAY
                     }, {
                         name: D.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_7D,
                         displayName: D.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_7D,
-                        value: 7 * O.default.Seconds.DAY
+                        value: 7 * p.default.Seconds.DAY
                     }]
                 }
             }, {
@@ -505,7 +505,7 @@ function(e, t, n) {
                         o = null !== (n = M(e, "reason")) && void 0 !== n ? n : "",
                         l = N.default.getUser(s);
                     await d.default.banUser(i.id, s, a, o), _.default.sendBotMessage(r.id, D.default.Messages.COMMAND_BAN_CONFIRMATION.format({
-                        user: null != l ? p.default.getUserTag(l) : s
+                        user: null != l ? O.default.getUserTag(l) : s
                     }))
                 })().catch(() => {
                     _.default.sendBotMessage(r.id, D.default.Messages.COMMAND_BAN_ERROR)
@@ -594,7 +594,7 @@ function(e, t, n) {
                         duration: o,
                         reason: l
                     }), _.default.sendBotMessage(i.id, D.default.Messages.COMMAND_TIMEOUT_CONFIRMATION.format({
-                        user: p.default.getUserTag(u),
+                        user: O.default.getUserTag(u),
                         duration: o
                     }))
                 })().catch(() => {
@@ -648,7 +648,7 @@ function(e, t, n) {
                 } = t, s = M(e, "user"), a = null !== (n = M(e, "message")) && void 0 !== n ? n : "";
                 (async () => {
                     await u.default.openPrivateChannel(s).then(e => {
-                        let t = h.default.getChannel(e);
+                        let t = A.default.getChannel(e);
                         r()(null != t, "Newly created PrivateChannel is null"), _.default.sendMessage(t.id, I.default.parse(t, a))
                     })
                 })().catch(() => {

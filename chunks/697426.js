@@ -22,7 +22,7 @@ function(e, t, n) {
         }
     }
 
-    function A(e) {
+    function h(e) {
         let {
             soundId: t,
             guildId: n,
@@ -66,7 +66,7 @@ function(e, t, n) {
             return S
         },
         soundboardSoundToAPI: function() {
-            return A
+            return h
         }
     }), (d = i || (i = {}))[d.PLAY = 0] = "PLAY", d[d.ADD = 1] = "ADD", (_ = r || (r = {})).ENTRY = "entry_sound", _.EXIT = "exit_sound", _.DEFAULT = "default", (c = s || (s = {})).ADDED = "added", c.UPDATED = "updated", c.REMOVED = "removed", (E = a || (a = {})).DEFAULT = "default", E.CUSTOM = "custom", (I = o || (o = {}))[I.FAVORITES = 0] = "FAVORITES", I[I.RECENTLY_HEARD = 1] = "RECENTLY_HEARD", I[I.FREQUENTLY_USED = 2] = "FREQUENTLY_USED", I[I.GUILD = 3] = "GUILD", I[I.DEFAULTS = 4] = "DEFAULTS", I[I.SEARCH = 5] = "SEARCH", (T = l || (l = {}))[T.SOUND = 0] = "SOUND", T[T.ADD_SOUND = 1] = "ADD_SOUND", (f = u || (u = {}))[f.GIFT_CODE = 0] = "GIFT_CODE", f[f.SOUNDBOARD = 1] = "SOUNDBOARD", f[f.JOINED_VOICE_CHANNEL = 2] = "JOINED_VOICE_CHANNEL"
 }

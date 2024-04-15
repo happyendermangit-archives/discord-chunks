@@ -33,32 +33,32 @@ function(e, t, n) {
             canAccess: S = !1
         } = e;
         if (null == u) return null;
-        let A = (0, l.getThumbnailImage)(u.thumbnail),
-            h = !S && u.has_media_attachment,
+        let h = (0, l.getThumbnailImage)(u.thumbnail),
+            A = !S && u.has_media_attachment,
             m = S ? _.default.Messages.MEDIA_POST_EMBED_SUBSCRIBED_CTA : _.default.Messages.MEDIA_POST_EMBED_SUBSCRIBE_CTA,
             N = null != T ? o.default.getName(u.guild_id, u.channel_id, T) : void 0,
-            O = null == T ? void 0 : T.getAvatarURL(null == c ? void 0 : c.id, 40);
-        (null == O || f !== u.guild_id) && (O = a.default.getGuildIconURL({
+            p = null == T ? void 0 : T.getAvatarURL(null == c ? void 0 : c.id, 40);
+        (null == p || f !== u.guild_id) && (p = a.default.getGuildIconURL({
             id: u.guild_id,
             icon: u.guild_icon,
             size: 40,
             canAnimate: !1
         }));
-        let p = function(e) {
+        let O = function(e) {
                 if (null == e) return !1;
                 let {
                     height: t,
                     width: n
                 } = e;
                 return null != t && null != n && t >= n
-            }(u.thumbnail) && !h,
+            }(u.thumbnail) && !A,
             R = (null === (t = u.thumbnail) || void 0 === t ? void 0 : t.filename) != null && (null === (i = u.thumbnail) || void 0 === i ? void 0 : null === (n = i.filename) || void 0 === n ? void 0 : n.startsWith(d.SPOILER_ATTACHMENT_PREFIX));
         return {
             title: null !== (r = u.title) && void 0 !== r ? r : "",
             subtitle: u.description,
             ctaText: m,
-            coverImage: A,
-            coverImageOverlayText: h ? _.default.Messages.MEDIA_POST_EMBED_BLURRED_THUMBNAIL_TEXT : void 0,
+            coverImage: h,
+            coverImageOverlayText: A ? _.default.Messages.MEDIA_POST_EMBED_BLURRED_THUMBNAIL_TEXT : void 0,
             parentChannelId: u.parent_channel_id,
             threadId: u.channel_id,
             postThread: I,
@@ -69,9 +69,9 @@ function(e, t, n) {
             authorId: null == u ? void 0 : u.author_id,
             authorName: N,
             channelName: null == E ? void 0 : E.name,
-            avatarUrl: O,
-            shouldShowBlurredThumbnailImage: h,
-            shouldContainMediaWithBackground: p,
+            avatarUrl: p,
+            shouldShowBlurredThumbnailImage: A,
+            shouldContainMediaWithBackground: O,
             shouldSpoiler: R,
             obscureAwaitingScan: !1,
             flags: u.flags,

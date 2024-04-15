@@ -20,7 +20,7 @@ function(e, t, n) {
         f = n("51144"),
         S = n("981631");
 
-    function A(e, t, n) {
+    function h(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -28,7 +28,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    let h = Object.freeze([]),
+    let A = Object.freeze([]),
         m = {};
 
     function N(e) {
@@ -36,11 +36,11 @@ function(e, t, n) {
         return null == t && (t = new g(e), m[e] = t), t
     }
 
-    function O(e, t) {
+    function p(e, t) {
         return c.default.getMember(e, t.id)
     }
 
-    function p(e, t, n) {
+    function O(e, t, n) {
         var i;
         let r = null !== (i = null == t ? void 0 : t.nick) && void 0 !== i ? i : f.default.getName(n);
         return {
@@ -65,7 +65,7 @@ function(e, t, n) {
         let {
             member: a,
             comparator: o
-        } = p(e, O(t, i = r), i), l = {
+        } = O(e, p(t, i = r), i), l = {
             voiceState: e,
             user: r,
             member: a,
@@ -84,7 +84,7 @@ function(e, t, n) {
                 if (null == n) return this._voiceStates.set(e, C(t, this.guildId, e)), !0;
                 if (n.voiceState !== t) {
                     var r;
-                    let s = O(this.guildId, i),
+                    let s = p(this.guildId, i),
                         a = null !== (r = null == s ? void 0 : s.nick) && void 0 !== r ? r : f.default.getName(i);
                     return this._voiceStates.set(e, {
                         ...n,
@@ -103,11 +103,11 @@ function(e, t, n) {
                 n = E.default.getUser(e);
             if (null != t && null != n) {
                 var i, r;
-                let s = O(this.guildId, n);
+                let s = p(this.guildId, n);
                 if ((null == s ? void 0 : s.nick) !== (null === (i = t.member) || void 0 === i ? void 0 : i.nick) || (null == s ? void 0 : s.avatar) !== (null === (r = t.member) || void 0 === r ? void 0 : r.avatar)) {
                     let {
                         comparator: i
-                    } = p(t.voiceState, s, n);
+                    } = O(t.voiceState, s, n);
                     return this._voiceStates.set(e, {
                         ...t,
                         member: s,
@@ -133,7 +133,7 @@ function(e, t, n) {
         getVoiceStatesForChannel(e) {
             this.processPending();
             let t = this._voiceStates.values(e);
-            return 0 === t.length ? h : t
+            return 0 === t.length ? A : t
         }
         countVoiceStatesForChannel(e) {
             return this.processPending(), this._voiceStates.size(e)
@@ -148,7 +148,7 @@ function(e, t, n) {
             }
         }
         constructor(e) {
-            A(this, "guildId", void 0), A(this, "_pending", new Set), A(this, "_voiceStates", new o.SecondaryIndexMap(e => {
+            h(this, "guildId", void 0), h(this, "_pending", new Set), h(this, "_voiceStates", new o.SecondaryIndexMap(e => {
                 let {
                     voiceState: {
                         channelId: t
@@ -205,7 +205,7 @@ function(e, t, n) {
             return N(null != e ? e : S.ME).getVersion()
         }
     }
-    A(v, "displayName", "SortedVoiceStateStore"), t.default = new v(l.default, {
+    h(v, "displayName", "SortedVoiceStateStore"), t.default = new v(l.default, {
         CONNECTION_OPEN: function() {
             m = {}
         },

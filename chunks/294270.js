@@ -19,13 +19,13 @@ function(e, t, n) {
             let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
             return "".concat(e, ":").concat(t, ":").concat(n)
         },
-        A = new s.Timeout,
-        h = [],
+        h = new s.Timeout,
+        A = [],
         m = {},
         N = (0, u.createSound)("highfive_whistle", "highfive_whistle", .6),
-        O = (0, u.createSound)("highfive_clap", "highfive_clap", .6);
+        p = (0, u.createSound)("highfive_clap", "highfive_clap", .6);
 
-    function p(e) {
+    function O(e) {
         let {
             emoji: t,
             channelId: n,
@@ -40,7 +40,7 @@ function(e, t, n) {
                     let [t] = e;
                     return t !== r
                 })) && void 0 !== i ? i : [];
-                if (null != a && null != o) o.cancel(), O.play(), delete m[a], (0, d.completeHighFive)(a.split(":")[0], t, n, e);
+                if (null != a && null != o) o.cancel(), p.play(), delete m[a], (0, d.completeHighFive)(a.split(":")[0], t, n, e);
                 else {
                     (0, d.queueHighFive)(e, t, n), N.play();
                     let i = new s.DelayedCall(I, () => {
@@ -49,7 +49,7 @@ function(e, t, n) {
                     m[t] = i, i.delay()
                 }
             }(t.name, i, n);
-            i === a && (h = [...h, t.name].slice(-1 * f), r().isEqual(h, T) ? (N.play(), A.stop(), h = [], (0, d.setHighFiveEnabled)(!l)) : A.start(E, () => h = []))
+            i === a && (A = [...A, t.name].slice(-1 * f), r().isEqual(A, T) ? (N.play(), h.stop(), A = [], (0, d.setHighFiveEnabled)(!l)) : h.start(E, () => A = []))
         }
     }
 
@@ -70,7 +70,7 @@ function(e, t, n) {
         constructor(...e) {
             var t, n, i;
             super(...e), t = this, n = "actions", i = {
-                VOICE_CHANNEL_EFFECT_SEND: p,
+                VOICE_CHANNEL_EFFECT_SEND: O,
                 HIGH_FIVE_COMPLETE: R
             }, n in t ? Object.defineProperty(t, n, {
                 value: i,

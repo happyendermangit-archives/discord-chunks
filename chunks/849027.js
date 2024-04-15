@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return A
+            return h
         }
     });
     var i = n("430198"),
@@ -20,28 +20,28 @@ function(e, t, n) {
         T = n("754688"),
         f = n("981631"),
         S = n("176505");
-    async function A(e) {
+    async function h(e) {
         let {
             guildId: t,
             channelId: n
-        } = e, A = E.default.getGuild(t), h = E.default.getRoles(t);
-        if (null == A && t !== f.ME) return !1;
+        } = e, h = E.default.getGuild(t), A = E.default.getRoles(t);
+        if (null == h && t !== f.ME) return !1;
         if (null == n) return !0;
         if ((0, S.isStaticChannelRoute)(n)) switch (n) {
             case S.StaticChannelRoute.ROLE_SUBSCRIPTIONS:
-                return (0, d.areRoleSubscriptionsVisibleInGuild)(t, h);
+                return (0, d.areRoleSubscriptionsVisibleInGuild)(t, A);
             case S.StaticChannelRoute.GUILD_SHOP:
-                return (0, r.isGuildShopVisibleInGuild)(A, h);
+                return (0, r.isGuildShopVisibleInGuild)(h, A);
             case S.StaticChannelRoute.MEMBER_APPLICATIONS:
                 return (0, a.canReviewGuildMemberApplications)(t);
             case S.StaticChannelRoute.GUILD_HOME:
                 return (0, s.canSeeGuildHome)(t) || (0, u.canSeeOnboardingHome)(t);
             case S.StaticChannelRoute.CHANNEL_BROWSER:
-                return null != A && A.hasFeature(f.GuildFeatures.COMMUNITY);
+                return null != h && h.hasFeature(f.GuildFeatures.COMMUNITY);
             case S.StaticChannelRoute.GUILD_ONBOARDING:
                 return l.default.shouldShowOnboarding(t);
             case S.StaticChannelRoute.CUSTOMIZE_COMMUNITY:
-                return null != A && A.hasFeature(f.GuildFeatures.COMMUNITY);
+                return null != h && h.hasFeature(f.GuildFeatures.COMMUNITY);
             case S.StaticChannelRoute.MEMBER_SAFETY:
                 return (0, o.canAccessMemberSafetyPage)(t);
             default:

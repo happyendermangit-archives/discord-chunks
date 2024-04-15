@@ -12,11 +12,11 @@ function(e, t, n) {
         T = n("592125"),
         f = n("430824"),
         S = n("981631");
-    let A = {},
-        h = !1;
+    let h = {},
+        A = !1;
 
     function m(e) {
-        return null == A[e] && (A[e] = {
+        return null == h[e] && (h[e] = {
             searchId: e,
             searchType: N(e),
             isIndexing: !1,
@@ -34,20 +34,20 @@ function(e, t, n) {
             resultsBlocked: 0,
             showBlockedResults: !1,
             showNoResultsAlt: !1
-        }), A[e]
+        }), h[e]
     }
 
     function N(e) {
         return e === S.SearchTypes.DMS ? S.SearchTypes.DMS : e === S.FAVORITES ? S.SearchTypes.FAVORITES : null != f.default.getGuild(e) ? S.SearchTypes.GUILD : null != T.default.getChannel(e) ? S.SearchTypes.CHANNEL : null
     }
 
-    function O(e, t) {
+    function p(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
         if (null == e) return n;
-        let i = A[e];
+        let i = h[e];
         return null == i ? n : t(i)
     }
-    let p = "SearchStore",
+    let O = "SearchStore",
         R = !1,
         C = {},
         g = null;
@@ -60,7 +60,7 @@ function(e, t, n) {
         } = e;
         if ("string" != typeof i || "" === (i = i.trim())) return;
         let r = C[n] = null !== (t = C[n]) && void 0 !== t ? t : [],
-            s = r.indexOf(i); - 1 !== s ? (r.splice(s, 1), r.unshift(i)) : null != r[0] && "" !== r[0] && i.startsWith(r[0]) ? r[0] = i : s < 0 && r.unshift(i), r.length > 5 && r.splice(5, r.length), _.Storage.set(p, {
+            s = r.indexOf(i); - 1 !== s ? (r.splice(s, 1), r.unshift(i)) : null != r[0] && "" !== r[0] && i.startsWith(r[0]) ? r[0] = i : s < 0 && r.unshift(i), r.length > 5 && r.splice(5, r.length), _.Storage.set(O, {
             history: C
         })
     }
@@ -68,19 +68,19 @@ function(e, t, n) {
     function D(e) {
         let {
             searchId: t
-        } = e, n = A[t];
+        } = e, n = h[t];
         if (null == n) return !1;
-        null != n.searchFetcher && n.searchFetcher.cancel(), delete A[t]
+        null != n.searchFetcher && n.searchFetcher.cancel(), delete h[t]
     }
 
     function v(e) {
         if (e === g) return !1;
-        null != e && null == A[e] && m(e), g = e
+        null != e && null == h[e] && m(e), g = e
     }
     class M extends(r = d.default.Store) {
         initialize() {
             this.waitFor(f.default, T.default);
-            let e = _.Storage.get(p);
+            let e = _.Storage.get(O);
             if ((null == e ? void 0 : e.history) != null) {
                 var t;
                 Object.keys(t = e.history).forEach(e => {
@@ -90,7 +90,7 @@ function(e, t, n) {
             R = !!_.Storage.get("tokenized")
         }
         isOpen() {
-            return h
+            return A
         }
         getCurrentSearchModalType() {
             return i
@@ -106,63 +106,63 @@ function(e, t, n) {
             return R
         }
         getSearchType(e) {
-            return O(null != e ? e : g, e => e.searchType)
+            return p(null != e ? e : g, e => e.searchType)
         }
         getRawResults(e) {
-            return O(e, e => e.rawResults)
+            return p(e, e => e.rawResults)
         }
         hasResults(e) {
-            return null != O(e, e => e.rawResults)
+            return null != p(e, e => e.rawResults)
         }
         isIndexing(e) {
-            return O(e, e => e.isIndexing) || !1
+            return p(e, e => e.isIndexing) || !1
         }
         isHistoricalIndexing(e) {
-            return O(e, e => e.isHistoricalIndexing) || !1
+            return p(e, e => e.isHistoricalIndexing) || !1
         }
         isSearching(e) {
-            return O(e, e => e.isSearching) || !1
+            return p(e, e => e.isSearching) || !1
         }
         getAnalyticsId(e) {
-            return O(e, e => e.analyticsId)
+            return p(e, e => e.analyticsId)
         }
         getResultsBlocked(e) {
-            return O(e, e => e.resultsBlocked)
+            return p(e, e => e.resultsBlocked)
         }
         getDocumentsIndexedCount(e) {
-            return O(e, e => e.documentsIndexed)
+            return p(e, e => e.documentsIndexed)
         }
         getSearchFetcher(e) {
-            return O(e, e => e.searchFetcher)
+            return p(e, e => e.searchFetcher)
         }
         getTotalResults(e) {
             var t;
-            return null !== (t = O(e, e => e.totalResults)) && void 0 !== t ? t : 0
+            return null !== (t = p(e, e => e.totalResults)) && void 0 !== t ? t : 0
         }
         getEditorState(e) {
-            return O(e, e => e.editorState)
+            return p(e, e => e.editorState)
         }
         getHistory(e) {
             return C[e]
         }
         getOffset(e) {
             var t;
-            return null !== (t = O(e, e => e.offset)) && void 0 !== t ? t : 0
+            return null !== (t = p(e, e => e.offset)) && void 0 !== t ? t : 0
         }
         getQuery(e) {
-            return O(e, e => e.query)
+            return p(e, e => e.query)
         }
         hasError(e) {
             var t;
-            return null !== (t = O(e, e => e.hasError)) && void 0 !== t && t
+            return null !== (t = p(e, e => e.hasError)) && void 0 !== t && t
         }
         shouldShowBlockedResults(e) {
             var t;
-            return null !== (t = O(e, e => e.showBlockedResults, !1)) && void 0 !== t && t
+            return null !== (t = p(e, e => e.showBlockedResults, !1)) && void 0 !== t && t
         }
         shouldShowNoResultsAlt(e) {
             var t;
-            return null !== (t = O(e, e => e.showNoResultsAlt, !1)) && void 0 !== t && t
+            return null !== (t = p(e, e => e.showNoResultsAlt, !1)) && void 0 !== t && t
         }
         getResultsState(e) {
             return {
@@ -291,7 +291,7 @@ function(e, t, n) {
             let {
                 searchId: t
             } = e;
-            null == t ? (_.Storage.remove(p), C = {}) : (delete C[t], _.Storage.set(p, {
+            null == t ? (_.Storage.remove(O), C = {}) : (delete C[t], _.Storage.set(O, {
                 history: C
             }))
         },
@@ -300,17 +300,17 @@ function(e, t, n) {
                 searchId: t,
                 query: n
             } = e;
-            null != C[t] && (C[t] = C[t].filter(e => e !== n), _.Storage.set(p, {
+            null != C[t] && (C[t] = C[t].filter(e => e !== n), _.Storage.set(O, {
                 history: C
             }))
         },
         SEARCH_ADD_HISTORY: L,
         LOGOUT: function() {
-            _.Storage.remove(p), C = {}
+            _.Storage.remove(O), C = {}
         },
         CONNECTION_OPEN: function() {
-            Object.keys(A).forEach(e => {
-                null != A[e] && (A[e].searchType = N(e))
+            Object.keys(h).forEach(e => {
+                null != h[e] && (h[e].searchType = N(e))
             })
         },
         SEARCH_MODAL_OPEN: function(e) {
@@ -318,10 +318,10 @@ function(e, t, n) {
                 searchId: t,
                 searchType: n
             } = e;
-            null != t && (g = t), h = !0, i = n
+            null != t && (g = t), A = !0, i = n
         },
         SEARCH_MODAL_CLOSE: function() {
-            h = !1, i = void 0
+            A = !1, i = void 0
         }
     })
 }

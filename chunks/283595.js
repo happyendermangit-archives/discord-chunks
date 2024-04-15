@@ -13,29 +13,29 @@ function(e, t, n) {
         f = n("981631");
     let S = "LibraryApplicationStore";
 
-    function A() {
+    function h() {
         var e;
         return null !== (e = d.Storage.get(S)) && void 0 !== e ? e : {}
     }
-    let h = !1,
+    let A = !1,
         m = {},
         N = {},
-        O = new Set,
-        p = {},
+        p = new Set,
+        O = {},
         R = {},
         C = !1;
 
     function g() {
         d.Storage.set(S, {
-            ...A(),
+            ...h(),
             activeLaunchOptionIds: R
         })
     }
 
     function L() {
         d.Storage.set(S, {
-            ...A(),
-            activeLibraryApplicationBranchIds: p
+            ...h(),
+            activeLibraryApplicationBranchIds: O
         })
     }
 
@@ -50,7 +50,7 @@ function(e, t, n) {
         let {
             libraryApplication: t
         } = e, n = c.default.createFromServer(t), i = (0, I.getComboId)(n.id, n.branchId);
-        m[i] = n, O.delete(i)
+        m[i] = n, p.delete(i)
     }
 
     function M(e, t) {
@@ -69,7 +69,7 @@ function(e, t, n) {
         initialize() {
             this.waitFor(T.default);
             let e = d.Storage.get(S);
-            null != e && (null == e.activeLaunchOptionIds ? g() : R = e.activeLaunchOptionIds, null == e.activeLibraryApplicationBranchIds ? L() : p = e.activeLibraryApplicationBranchIds)
+            null != e && (null == e.activeLaunchOptionIds ? g() : R = e.activeLaunchOptionIds, null == e.activeLibraryApplicationBranchIds ? L() : O = e.activeLibraryApplicationBranchIds)
         }
         get libraryApplications() {
             return function(e) {
@@ -97,7 +97,7 @@ function(e, t, n) {
         }
         getActiveLibraryApplication(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                n = p[e];
+                n = O[e];
             if (null != n) {
                 var i;
                 let r = (0, I.getComboId)(e, n),
@@ -112,13 +112,13 @@ function(e, t, n) {
                 }
         }
         isUpdatingFlags(e, t) {
-            return O.has((0, I.getComboId)(e, t))
+            return p.has((0, I.getComboId)(e, t))
         }
         getActiveLaunchOptionId(e, t) {
             return R[(0, I.getComboId)(e, t)]
         }
         get fetched() {
-            return h
+            return A
         }
         get entitledBranchIds() {
             return l()(y()).values().filter(e => (0, I.isUserEntitledToLibraryApplication)(e)).map(e => e.branchId).value()
@@ -128,7 +128,7 @@ function(e, t, n) {
         }
         whenInitialized(e) {
             this.addConditionalChangeListener(() => {
-                if (h) return setImmediate(e), !1
+                if (A) return setImmediate(e), !1
             })
         }
     }
@@ -139,13 +139,13 @@ function(e, t, n) {
         writable: !0
     }) : r[s] = a, t.default = new P(_.default, {
         LOGOUT: function() {
-            h = !1
+            A = !1
         },
         LIBRARY_FETCH_SUCCESS: function(e) {
             let {
                 libraryApplications: t
             } = e;
-            m = {}, D(t), h = !0
+            m = {}, D(t), A = !0
         },
         SKU_PURCHASE_SUCCESS: function(e) {
             let {
@@ -159,7 +159,7 @@ function(e, t, n) {
                 branchId: n,
                 flags: i
             } = e, r = (0, I.getComboId)(t, n), s = M(t, n);
-            null != s && !s.isHidden() && E.hasFlag(i, f.LibraryApplicationFlags.HIDDEN) && (C = !0), O.add(r)
+            null != s && !s.isHidden() && E.hasFlag(i, f.LibraryApplicationFlags.HIDDEN) && (C = !0), p.add(r)
         },
         LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: v,
         LIBRARY_APPLICATION_UPDATE: v,
@@ -176,8 +176,8 @@ function(e, t, n) {
                 applicationId: t,
                 branchId: n
             } = e;
-            if (p[t] === n) return !1;
-            p[t] = n, L()
+            if (O[t] === n) return !1;
+            O[t] = n, L()
         },
         LIBRARY_APPLICATIONS_TEST_MODE_ENABLED: function(e) {
             let {

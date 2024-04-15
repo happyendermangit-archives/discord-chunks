@@ -20,12 +20,12 @@ function(e, t, n) {
         T = n("55935"),
         f = n("63063"),
         S = n("281494"),
-        A = n("790368"),
-        h = n("474936"),
+        h = n("790368"),
+        A = n("474936"),
         m = n("981631"),
         N = n("689938"),
-        O = n("74097"),
-        p = n("751599"),
+        p = n("74097"),
+        O = n("751599"),
         R = n("397293"),
         C = n("352175"),
         g = n("90351");
@@ -44,54 +44,54 @@ function(e, t, n) {
             shouldShowBirthdayUX: l
         } = e, [u, _] = r.useState(!1), c = n - 1;
         return (0, i.jsxs)("div", {
-            className: O.confirmationContainer,
+            className: p.confirmationContainer,
             children: [(0, i.jsxs)("div", {
                 className: a()({
-                    [O.confirmationBody]: !l,
-                    [O.confirmationBirthdayBody]: l
+                    [p.confirmationBody]: !l,
+                    [p.confirmationBirthdayBody]: l
                 }),
                 children: [(0, i.jsx)(d.ModalCloseButton, {
                     onClick: t,
-                    className: O.closeButton
+                    className: p.closeButton
                 }), (0, i.jsx)("img", {
                     alt: "",
                     src: l ? R : C,
-                    className: O.confirmationImage
+                    className: p.confirmationImage
                 }), (0, i.jsx)(d.Heading, {
                     variant: "heading-xl/bold",
                     color: "interactive-active",
-                    className: O.confirmationHeading,
+                    className: p.confirmationHeading,
                     children: N.default.Messages.SAHRE_NITRO_MODAL_CONFIRMATION_HEADER
                 }), (0, i.jsx)(d.Text, {
-                    className: O.confirmationBodyCopy,
+                    className: p.confirmationBodyCopy,
                     variant: "text-md/medium",
                     color: "header-primary",
                     children: c > 0 ? N.default.Messages.SHARE_NITRO_MODAL_CONFIRMATION_GENERAL.format({
                         count: c
                     }) : N.default.Messages.SHARE_NITRO_MODAL_CONFIRMATION_GENERAL_LAST_REFERRAL
                 }), (0, i.jsx)("hr", {
-                    className: O.confirmationBodySeparator
+                    className: p.confirmationBodySeparator
                 })]
             }), (0, i.jsxs)("div", {
-                className: O.confirmationButtonContainer,
+                className: p.confirmationButtonContainer,
                 children: [(0, i.jsx)(d.Button, {
-                    className: O.confirmationShareButton,
+                    className: p.confirmationShareButton,
                     submitting: u,
                     onClick: () => {
                         L(s, t, _), I.default.track(m.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
                             location_stack: o,
-                            step: h.ReferralTrialsAnalyticSteps.FLOW_COMPLETED,
+                            step: A.ReferralTrialsAnalyticSteps.FLOW_COMPLETED,
                             other_user_id: Number(s)
                         })
                     },
                     children: N.default.Messages.SHAER_NITRO_CONFIRMATION_BUTTON_TEXT
                 }), (0, i.jsx)("div", {
-                    className: O.confirmationCancelButtonContainer,
+                    className: p.confirmationCancelButtonContainer,
                     children: (0, i.jsx)(d.Clickable, {
                         onClick: t,
                         children: (0, i.jsx)(d.Text, {
                             variant: "text-sm/medium",
-                            className: O.confirmationCancelCopy,
+                            className: p.confirmationCancelCopy,
                             children: N.default.Messages.CANCEL
                         })
                     })
@@ -110,7 +110,7 @@ function(e, t, n) {
             analyticsLocations: M
         } = (0, E.default)(c.default.REFERRAL_TRIALS_POPOUT), {
             enabled: y
-        } = A.default.useExperiment({
+        } = h.default.useExperiment({
             location: "200c24_1"
         }, {
             autoTrackExposure: !0
@@ -122,35 +122,35 @@ function(e, t, n) {
             analyticsLocations: M,
             shouldShowBirthdayUX: y
         }) : (0, i.jsxs)("div", {
-            className: O.generalContainer,
+            className: p.generalContainer,
             children: [(0, i.jsxs)("div", {
-                className: O.generalBodyContainer,
+                className: p.generalBodyContainer,
                 children: [(0, i.jsx)("img", {
                     alt: "",
                     src: y ? R : g,
-                    className: O.generalBodyImage
+                    className: p.generalBodyImage
                 }), (0, i.jsxs)("div", {
-                    className: O.innerContent,
+                    className: p.innerContent,
                     children: [(0, i.jsx)(d.ModalCloseButton, {
                         onClick: s,
-                        className: O.closeButton
+                        className: p.closeButton
                     }), (0, i.jsx)(d.Heading, {
-                        className: O.generalHeading,
+                        className: p.generalHeading,
                         variant: "heading-xl/bold",
                         children: o ? N.default.Messages.SHARE_NITRO_RESEND_TRIAL_HEADER : N.default.Messages.SHARE_NITRO_MODAL_HEADER
                     }), (0, i.jsxs)(d.Text, {
-                        className: O.generalBodyCopy,
+                        className: p.generalBodyCopy,
                         variant: "text-md/normal",
                         children: [(0, i.jsx)(d.Anchor, {
-                            className: a()(O.learnMore, {
-                                [O.learnMoreResendUnderlinedText]: o
+                            className: a()(p.learnMore, {
+                                [p.learnMoreResendUnderlinedText]: o
                             }),
                             href: f.default.getArticleURL(m.HelpdeskArticles.SHARE_NITRO_FAQ),
                             children: o ? N.default.Messages.SHARE_NITRO_RESEND_TRIAL_BODY : N.default.Messages.SHARE_NITRO_MODAL_BODY_GENERAL.format({
                                 count: t
                             })
                         }), o ? (0, i.jsx)("div", {
-                            className: O.shareNitroResendCopySuffix,
+                            className: p.shareNitroResendCopySuffix,
                             children: N.default.Messages.SHARE_NITRO_RESEND_TRIAL_BODY_2
                         }) : (0, i.jsx)("div", {
                             children: N.default.Messages.SHARE_NITRO_MODAL_BODY_SHARE_THEM_BY.format({
@@ -160,18 +160,18 @@ function(e, t, n) {
                     })]
                 }), y && (0, i.jsx)("img", {
                     alt: "",
-                    src: p,
-                    className: O.birthdayBackgroundImage
+                    src: O,
+                    className: p.birthdayBackgroundImage
                 })]
             }), (0, i.jsx)("div", {
-                className: O.generalButtonContainer,
+                className: p.generalButtonContainer,
                 children: (0, i.jsx)(d.Button, {
-                    className: O.generalShareButton,
+                    className: p.generalShareButton,
                     submitting: S,
                     onClick: () => {
                         o ? L(v, s, C) : (_(!0), I.default.track(m.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
                             location_stack: M,
-                            step: h.ReferralTrialsAnalyticSteps.FLOW_STARTED,
+                            step: A.ReferralTrialsAnalyticSteps.FLOW_STARTED,
                             other_user_id: Number(v)
                         }))
                     },
@@ -206,7 +206,7 @@ function(e, t, n) {
                 closeOnScroll: !1,
                 ignoreModalClicks: !0,
                 children: () => (0, i.jsx)("div", {
-                    className: O.__invalid_popoutTarget
+                    className: p.__invalid_popoutTarget
                 })
             })
         }) : null

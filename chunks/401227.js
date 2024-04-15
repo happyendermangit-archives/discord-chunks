@@ -28,17 +28,17 @@ function(e, t, n) {
             renderButtonContents: T,
             active: f,
             onClick: S,
-            "aria-controls": A,
-            focusProps: h
-        } = e, [m, N] = r.useState(!1), [O, p] = r.useState(50), R = m || f, C = (0, d.getClass)(E, "emojiButton", R ? "Hovered" : "Normal");
-        let g = (t = O, {
+            "aria-controls": h,
+            focusProps: A
+        } = e, [m, N] = r.useState(!1), [p, O] = r.useState(50), R = m || f, C = (0, d.getClass)(E, "emojiButton", R ? "Hovered" : "Normal");
+        let g = (t = p, {
                 "--custom-emoji-sprite-size": "".concat(24, "px"),
                 "--custom-emoji-sprite-row": Math.floor(t / 20),
                 "--custom-emoji-sprite-col": t % 20
             }),
             L = r.useCallback(() => {
-                if (!R) N(!0), p(Math.floor(77 * Math.random())), (0, u.initiateEmojiInteraction)(_.EmojiInteractionPoint.EmojiButtonMouseEntered)
-            }, [R, N, p]),
+                if (!R) N(!0), O(Math.floor(77 * Math.random())), (0, u.initiateEmojiInteraction)(_.EmojiInteractionPoint.EmojiButtonMouseEntered)
+            }, [R, N, O]),
             D = r.useCallback(() => {
                 N(!1)
             }, [N]),
@@ -54,10 +54,10 @@ function(e, t, n) {
             onFocus: v,
             onClick: S,
             "aria-label": c.default.Messages.SELECT_EMOJI,
-            "aria-controls": A,
+            "aria-controls": h,
             "aria-expanded": f,
             "aria-haspopup": "dialog",
-            focusProps: h,
+            focusProps: A,
             children: null != T ? T() : (0, i.jsx)(o.Spring, {
                 config: I,
                 to: {

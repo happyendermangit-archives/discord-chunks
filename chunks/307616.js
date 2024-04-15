@@ -5,7 +5,7 @@ function(e, t, n) {
             return R
         },
         useModalContext: function() {
-            return O
+            return p
         }
     }), n("47120"), n("411104"), n("852437");
     var i = n("735250"),
@@ -23,9 +23,9 @@ function(e, t, n) {
         T = n("952265"),
         f = n("602091"),
         S = n("981631"),
-        A = n("493772");
+        h = n("493772");
 
-    function h(e, t, n) {
+    function A(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -46,7 +46,7 @@ function(e, t, n) {
             } = this.state;
             return (s === f.ModalTransitionState.ENTERING || s === f.ModalTransitionState.ENTERED) && !n && (s = f.ModalTransitionState.HIDDEN), r && (s = f.ModalTransitionState.ENTERED), (0, i.jsx)(t, {
                 children: (0, i.jsx)("div", {
-                    className: a()(A.layer, !n && A.hidden),
+                    className: a()(h.layer, !n && h.hidden),
                     children: e({
                         transitionState: s,
                         onClose: this.close
@@ -55,11 +55,11 @@ function(e, t, n) {
             })
         }
         constructor(...e) {
-            super(...e), h(this, "state", {
+            super(...e), A(this, "state", {
                 transitionState: null
-            }), h(this, "componentWillAppear", e => {
+            }), A(this, "componentWillAppear", e => {
                 this.componentWillEnter(e)
-            }), h(this, "componentWillEnter", e => {
+            }), A(this, "componentWillEnter", e => {
                 let {
                     instant: t
                 } = this.props;
@@ -70,7 +70,7 @@ function(e, t, n) {
                         transitionState: f.ModalTransitionState.ENTERED
                     }), e()
                 }, t ? 0 : f.TRANSITION_DURATION)
-            }), h(this, "componentWillLeave", e => {
+            }), A(this, "componentWillLeave", e => {
                 let {
                     instant: t
                 } = this.props;
@@ -81,20 +81,20 @@ function(e, t, n) {
                         transitionState: f.ModalTransitionState.EXITED
                     }), e()
                 }, t ? 0 : f.TRANSITION_DURATION)
-            }), h(this, "close", () => new Promise(e => {
+            }), A(this, "close", () => new Promise(e => {
                 this.props.closeModal(this.props.modalKey), setTimeout(() => e(), f.TRANSITION_DURATION)
             }))
         }
     }
 
-    function O() {
+    function p() {
         return (0, T.modalContextFromAppContext)((0, d.useAppContext)())
     }
-    let p = [];
+    let O = [];
 
     function R() {
-        let e = O(),
-            t = (0, T.useModalsStore)(t => void 0 !== t[e] ? t[e] : p),
+        let e = p(),
+            t = (0, T.useModalsStore)(t => void 0 !== t[e] ? t[e] : O),
             n = r.useRef();
         r.useLayoutEffect(() => {
             n.current = t[t.length - 1]

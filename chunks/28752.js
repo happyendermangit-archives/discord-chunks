@@ -20,8 +20,8 @@ function(e, t, n) {
         T = n("63063"),
         f = n("981631"),
         S = n("182294"),
-        A = n("689079"),
-        h = n("689938"),
+        h = n("689079"),
+        A = n("689938"),
         m = n("593275");
 
     function N(e) {
@@ -32,17 +32,17 @@ function(e, t, n) {
         } = e, N = r.useMemo(() => I.default.getApplicationIconURL({
             id: n.id,
             icon: n.icon
-        }), [n.icon, n.id]), O = r.useMemo(() => [{
+        }), [n.icon, n.id]), p = r.useMemo(() => [{
             type: o.ApplicationIntegrationType.USER_INSTALL,
             icon: (0, d.UserPlusIcon),
-            title: h.default.Messages.OAUTH2_INTEGRATION_SELECT_USER,
-            subtitle: h.default.Messages.OAUTH2_INTEGRATION_SELECT_USER_SUBTITLE,
+            title: A.default.Messages.OAUTH2_INTEGRATION_SELECT_USER,
+            subtitle: A.default.Messages.OAUTH2_INTEGRATION_SELECT_USER_SUBTITLE,
             beta: !0
         }, {
             type: o.ApplicationIntegrationType.GUILD_INSTALL,
             icon: (0, u.ServerIcon),
-            title: h.default.Messages.OAUTH2_INTEGRATION_SELECT_GUILD,
-            subtitle: h.default.Messages.OAUTH2_INTEGRATION_SELECT_GUILD_SUBTITLE,
+            title: A.default.Messages.OAUTH2_INTEGRATION_SELECT_GUILD,
+            subtitle: A.default.Messages.OAUTH2_INTEGRATION_SELECT_GUILD_SUBTITLE,
             beta: !1
         }].filter(e => {
             var t, i;
@@ -63,7 +63,7 @@ function(e, t, n) {
                 })]
             }), (0, i.jsx)("ul", {
                 className: m.rows,
-                children: O.map(e => (0, i.jsxs)(_.Clickable, {
+                children: p.map(e => (0, i.jsxs)(_.Clickable, {
                     tag: "li",
                     className: a()(m.row, {
                         [m.inApp]: t
@@ -95,8 +95,8 @@ function(e, t, n) {
                 variant: "text-xs/normal",
                 color: "text-muted",
                 className: m.learnMore,
-                children: h.default.Messages.OAUTH2_INTEGRATION_SELECT_DETAILS.format({
-                    betaUserLimit: A.APPLICATION_USER_INSTALL_BETA_USER_LIMIT,
+                children: A.default.Messages.OAUTH2_INTEGRATION_SELECT_DETAILS.format({
+                    betaUserLimit: h.APPLICATION_USER_INSTALL_BETA_USER_LIMIT,
                     learnMoreUrl: T.default.getArticleURL(f.HelpdeskArticles.USING_APPS_FAQ)
                 })
             })]

@@ -146,17 +146,17 @@ function(e, t, n) {
         }
         if (null == c) return;
         let f = s.EditorUtils.range(e, c),
-            [S, A] = s.RangeUtils.edges(f),
-            h = s.EditorUtils.richValue(e),
+            [S, h] = s.RangeUtils.edges(f),
+            A = s.EditorUtils.richValue(e),
             m = I ? -1 : 1,
             N = null !== (i = null === (t = S.path) || void 0 === t ? void 0 : t[0]) && void 0 !== i ? i : 0,
-            O = null !== (r = null === (n = A.path) || void 0 === n ? void 0 : n[0]) && void 0 !== r ? r : h.length - 1,
-            p = I ? N : O,
-            R = I ? O : N;
+            p = null !== (r = null === (n = h.path) || void 0 === n ? void 0 : n[0]) && void 0 !== r ? r : A.length - 1,
+            O = I ? N : p,
+            R = I ? p : N;
         for (;;) {
-            let t = h[R],
+            let t = A[R],
                 n = null !== (u = R === N ? null === (a = S.path) || void 0 === a ? void 0 : a[1] : null) && void 0 !== u ? u : 0,
-                i = null !== (d = R === O ? null === (o = A.path) || void 0 === o ? void 0 : o[1] : null) && void 0 !== d ? d : t.children.length - 1,
+                i = null !== (d = R === p ? null === (o = h.path) || void 0 === o ? void 0 : o[1] : null) && void 0 !== d ? d : t.children.length - 1,
                 r = I ? i : n,
                 c = I ? n : i,
                 E = r;
@@ -164,7 +164,7 @@ function(e, t, n) {
                 let n, i;
                 let r = t.children[E],
                     a = [R, E];
-                if (n = s.PathUtils.equals(a, S.path) || s.PathUtils.isAncestor(a, S.path) ? !I && s.EditorUtils.isEnd(e, S, a) ? null : S : s.EditorUtils.start(e, a), i = s.PathUtils.equals(a, A.path) || s.PathUtils.isAncestor(a, A.path) ? I && s.EditorUtils.isStart(e, A, a) ? null : A : s.EditorUtils.end(e, a), null != n && null != i) {
+                if (n = s.PathUtils.equals(a, S.path) || s.PathUtils.isAncestor(a, S.path) ? !I && s.EditorUtils.isEnd(e, S, a) ? null : S : s.EditorUtils.start(e, a), i = s.PathUtils.equals(a, h.path) || s.PathUtils.isAncestor(a, h.path) ? I && s.EditorUtils.isStart(e, h, a) ? null : h : s.EditorUtils.end(e, a), null != n && null != i) {
                     if (s.TextUtils.isText(r) && 0 === r.text.length) {
                         let e = {
                             path: a,
@@ -191,7 +191,7 @@ function(e, t, n) {
                 if (E === c) break;
                 E += m
             }
-            if (R === p) break;
+            if (R === O) break;
             R += m
         }
     }

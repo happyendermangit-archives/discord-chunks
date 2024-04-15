@@ -95,17 +95,17 @@ function(e, t, n) {
                 channel: E,
                 showOptions: T,
                 showImage: S,
-                optionStates: A,
-                onOptionClick: h,
+                optionStates: h,
+                onOptionClick: A,
                 section: m,
                 isSelectable: N = !0
             } = e,
-            O = r.useMemo(() => {
+            p = r.useMemo(() => {
                 var e;
                 return null == u ? void 0 : null === (e = u.options) || void 0 === e ? void 0 : e.find(e => e.name === d)
             }, [d, u]),
-            p = null != d ? null == A ? void 0 : A[d] : null;
-        o = null != p && (null === (t = p.lastValidationResult) || void 0 === t ? void 0 : t.success) === !1 ? null !== (n = p.lastValidationResult.error) && void 0 !== n ? n : "" : null;
+            O = null != d ? null == h ? void 0 : h[d] : null;
+        o = null != O && (null === (t = O.lastValidationResult) || void 0 === t ? void 0 : t.success) === !1 ? null !== (n = O.lastValidationResult.error) && void 0 !== n ? n : "" : null;
         let R = S && null != m ? (0, _.getIconComponent)(m) : null;
         return (0, i.jsxs)("div", {
             className: a()(I.wrapper, N ? null : I.disabled),
@@ -124,12 +124,12 @@ function(e, t, n) {
                         children: c.COMMAND_SENTINEL + u.displayName
                     }), T ? (0, i.jsx)(f, {
                         command: u,
-                        optionStates: A,
-                        onOptionClick: h
+                        optionStates: h,
+                        onOptionClick: A
                     }) : null]
                 }), (0, i.jsx)(l.AutocompleteRowSubheading, {
                     className: a()(I.description, null != o ? I.error : null),
-                    children: null !== (s = null != o ? o : null == O ? void 0 : O.displayDescription) && void 0 !== s ? s : u.displayDescription
+                    children: null !== (s = null != o ? o : null == p ? void 0 : p.displayDescription) && void 0 !== s ? s : u.displayDescription
                 })]
             }), (0, i.jsx)(l.AutocompleteRowContentSecondary, {
                 className: I.source,

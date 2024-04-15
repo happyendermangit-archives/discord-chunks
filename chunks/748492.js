@@ -30,12 +30,12 @@ function(e, t, n) {
         T = n("618158"),
         f = n("922745"),
         S = n("871499"),
-        A = n("402113"),
-        h = n("800965"),
+        h = n("402113"),
+        A = n("800965"),
         m = n("157813"),
         N = n("25827"),
-        O = n("131951"),
-        p = n("285952"),
+        p = n("131951"),
+        O = n("285952"),
         R = n("605403"),
         C = n("808268"),
         g = n("602623"),
@@ -72,7 +72,7 @@ function(e, t, n) {
             onJumpToChannel: R,
             idle: C,
             selectedParticipant: g
-        } = e, M = (0, u.useAppContext)() === D.AppContext.POPOUT, U = (0, a.useStateFromStores)([O.default], () => O.default.isVideoEnabled()), b = (0, a.useStateFromStores)([O.default], () => Object.values(O.default.getVideoDevices())[0]), G = !1 === (null === (t = null == b ? void 0 : b.disabled) || void 0 === t || t), w = (0, d.default)([s])[0], B = (0, E.default)(r), k = e => {
+        } = e, M = (0, u.useAppContext)() === D.AppContext.POPOUT, U = (0, a.useStateFromStores)([p.default], () => p.default.isVideoEnabled()), b = (0, a.useStateFromStores)([p.default], () => Object.values(p.default.getVideoDevices())[0]), G = !1 === (null === (t = null == b ? void 0 : b.disabled) || void 0 === t || t), w = (0, d.default)([s])[0], B = (0, E.default)(r), k = e => {
             l.default.setVideoEnabled(e)
         };
         return (0, i.jsxs)("div", {
@@ -90,11 +90,11 @@ function(e, t, n) {
                 })
             }), (0, i.jsxs)("div", {
                 className: P.bottomControls,
-                children: [(0, i.jsxs)(p.default, {
+                children: [(0, i.jsxs)(O.default, {
                     grow: 0,
                     shrink: 1,
                     basis: "50%",
-                    align: p.default.Align.CENTER,
+                    align: O.default.Align.CENTER,
                     children: [(0, i.jsx)(N.default, {
                         className: y.leftPipIcon,
                         enabled: U,
@@ -113,20 +113,20 @@ function(e, t, n) {
                             compact: !0
                         })
                     })]
-                }), (0, i.jsxs)(p.default, {
+                }), (0, i.jsxs)(O.default, {
                     grow: 0,
                     shrink: 1,
-                    justify: p.default.Justify.END,
+                    justify: O.default.Justify.END,
                     basis: "50%",
-                    align: p.default.Align.CENTER,
-                    children: [M ? null : (0, i.jsx)(h.default, {
+                    align: O.default.Align.CENTER,
+                    children: [M ? null : (0, i.jsx)(A.default, {
                         className: y.rightPipIcon,
                         popoutOpen: !1,
                         onOpenPopout: () => {
                             (0, L.default)(() => c.openChannelCallPopout(r))
                         },
                         onClosePopout: v.NOOP_NULL
-                    }), (0, i.jsx)(A.default, {
+                    }), (0, i.jsx)(h.default, {
                         applicationId: s,
                         channelId: r.id,
                         className: y.rightPipIcon
@@ -170,7 +170,7 @@ function(e, t, n) {
                     size: 24,
                     max: 3,
                     className: y.__invalid_userSummaryContainer
-                }), (0, i.jsx)(A.default, {
+                }), (0, i.jsx)(h.default, {
                     applicationId: r,
                     channelId: n.id,
                     iconClassName: y.leaveActivityIcon,
@@ -231,7 +231,7 @@ function(e, t, n) {
                         children: [I ? null : (0, i.jsx)(U, {
                             isExpanded: E,
                             onClick: c
-                        }), (0, i.jsx)(A.default, {
+                        }), (0, i.jsx)(h.default, {
                             applicationId: l,
                             channelId: u.id,
                             iconClassName: y.leaveActivityIcon

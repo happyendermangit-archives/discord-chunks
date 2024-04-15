@@ -8,7 +8,7 @@ function(e, t, n) {
             return v
         },
         computeCanStartPublicThread: function() {
-            return h
+            return A
         },
         computeIsReadOnlyThread: function() {
             return P
@@ -26,7 +26,7 @@ function(e, t, n) {
             return m
         },
         useCanStartPublicThread: function() {
-            return A
+            return h
         },
         useCanStartThread: function() {
             return N
@@ -35,7 +35,7 @@ function(e, t, n) {
             return D
         },
         useCanViewThreadForMessage: function() {
-            return p
+            return O
         },
         useHasActiveThreads: function() {
             return R
@@ -80,34 +80,34 @@ function(e, t, n) {
         }]
     });
 
-    function A(e, t) {
-        return O((0, a.useStateFromStores)([E.default], () => {
+    function h(e, t) {
+        return p((0, a.useStateFromStores)([E.default], () => {
             let t = e.isForumLikeChannel() ? f.Permissions.SEND_MESSAGES : s.combine(f.Permissions.CREATE_PUBLIC_THREADS, f.Permissions.READ_MESSAGE_HISTORY);
             return E.default.can(t, e)
         }, [e]), e, t)
     }
 
-    function h(e, t) {
+    function A(e, t) {
         let n = e.isForumLikeChannel() ? f.Permissions.SEND_MESSAGES : s.combine(f.Permissions.CREATE_PUBLIC_THREADS, f.Permissions.READ_MESSAGE_HISTORY);
-        return O(E.default.can(n, e), e, t)
+        return p(E.default.can(n, e), e, t)
     }
 
     function m(e) {
         let t = (0, a.useStateFromStores)([E.default], () => E.default.can(s.combine(f.Permissions.CREATE_PRIVATE_THREADS), e), [e]);
-        return e.type === f.ChannelTypes.GUILD_TEXT && O(t, e)
+        return e.type === f.ChannelTypes.GUILD_TEXT && p(t, e)
     }
 
     function N(e) {
-        let t = A(e),
+        let t = h(e),
             n = m(e);
         return t || n
     }
 
-    function O(e, t, n) {
+    function p(e, t, n) {
         return !(__OVERLAY__ || !e || !d.THREADED_CHANNEL_TYPES.has(t.type) || null != n && (n.hasFlag(f.MessageFlags.HAS_THREAD) || (0, u.default)(n))) && !0
     }
 
-    function p(e) {
+    function O(e) {
         let t = (0, a.useStateFromStores)([c.default], () => c.default.getChannel(I.default.castMessageIdAsChannelId(e.id)), [e]);
         return function(e, t, n) {
             return !!t.hasFlag(f.MessageFlags.HAS_THREAD) && null != n && !!e || !1

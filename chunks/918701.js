@@ -14,7 +14,7 @@ function(e, t, n) {
             return R
         },
         getGameTileAssetUrl: function() {
-            return p
+            return O
         },
         getHeroAssetUrl: function() {
             return N
@@ -23,7 +23,7 @@ function(e, t, n) {
             return D
         },
         getQuestBarHeroAssetUrl: function() {
-            return O
+            return p
         },
         getQuestByApplicationId: function() {
             return E
@@ -86,7 +86,7 @@ function(e, t, n) {
             return f
         },
         questsEntitlementsFromServer: function() {
-            return h
+            return A
         },
         questsRewardCodeFromServer: function() {
             return S
@@ -205,7 +205,7 @@ function(e, t, n) {
         }
     }
 
-    function A(e) {
+    function h(e) {
         return {
             skuId: e.sku_id,
             tenantMetadata: function(e) {
@@ -234,10 +234,10 @@ function(e, t, n) {
         }
     }
 
-    function h(e) {
+    function A(e) {
         return {
             claimedAt: e.claimed_at,
-            items: e.entitlements.map(A),
+            items: e.entitlements.map(h),
             errors: e.errors
         }
     }
@@ -253,14 +253,14 @@ function(e, t, n) {
             return "".concat(_).concat(e.id, "/").concat(r)
         },
         N = e => "".concat(_).concat(e.id, "/").concat(e.config.assets.hero),
-        O = e => "".concat(_).concat(e.id, "/").concat(e.config.assets.questBarHero),
-        p = e => "".concat(_).concat(e.id, "/").concat(e.config.assets.gameTile),
+        p = e => "".concat(_).concat(e.id, "/").concat(e.config.assets.questBarHero),
+        O = e => "".concat(_).concat(e.id, "/").concat(e.config.assets.gameTile),
         R = (e, t) => "".concat(_).concat(e.id, "/").concat(t, "/").concat(e.config.assets.logotype),
         C = e => "".concat(location.protocol, "//").concat(location.host, "/quests/").concat(e);
 
     function g(e, t) {
         for (let [n, i] of e)
-            if (i.targetedContent.includes(t)) return i;
+            if (!I(i) && i.targetedContent.includes(t)) return i;
         return null
     }
 

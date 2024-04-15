@@ -5,7 +5,7 @@ function(e, t, n) {
             return c
         },
         canBulkBanUser: function() {
-            return A
+            return h
         },
         useCanAccessBulkBanningFeature: function() {
             return T
@@ -76,7 +76,7 @@ function(e, t, n) {
         }, [t, e, n])
     }
 
-    function A(e, t, n) {
+    function h(e, t, n) {
         let i = s.default.getGuild(e);
         return null != i && t && a.default.canManageUser(d.Permissions.BAN_MEMBERS, n, i)
     }

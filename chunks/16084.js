@@ -5,22 +5,22 @@ function(e, t, n) {
             return R
         },
         fetchPurchasePreview: function() {
-            return h
+            return A
         },
         fetchSKU: function() {
             return S
         },
         fetchTestSKUsForApplication: function() {
-            return A
+            return h
         },
         grantChannelBranchEntitlement: function() {
             return m
         },
         purchaseSKU: function() {
-            return O
+            return p
         },
         resendPaymentVerificationEmail: function() {
-            return p
+            return O
         },
         showPurchaseConfirmationStep: function() {
             return C
@@ -67,7 +67,7 @@ function(e, t, n) {
             }
         }
     }
-    async function A(e) {
+    async function h(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
         if (!(d.default.inTestModeForApplication(e) || l.default.inDevModeForApplication(e)) && t) throw Error("this should only be used in test mode");
         let n = (await (0, I.httpGetWithCountryCodeQuery)(f.Endpoints.APPLICATION_SKUS(e))).body;
@@ -76,7 +76,7 @@ function(e, t, n) {
             skus: n
         }), n
     }
-    async function h(e, t, n, i) {
+    async function A(e, t, n, i) {
         let s;
         let a = {
             payment_source_id: n,
@@ -135,17 +135,17 @@ function(e, t, n) {
     let N = {
         isGift: !1
     };
-    async function O(e, t, n) {
+    async function p(e, t, n) {
         let {
             paymentSource: o,
             expectedAmount: u,
             expectedCurrency: I,
             analyticsLoadId: S,
-            isGift: A,
-            giftInfoOptions: h,
+            isGift: h,
+            giftInfoOptions: A,
             subscriptionPlanId: m,
-            loadId: O,
-            countryCode: p
+            loadId: p,
+            countryCode: O
         } = {
             ...N,
             ...n
@@ -160,10 +160,10 @@ function(e, t, n) {
         let R = d.default.inTestModeForApplication(e) || l.default.inDevModeForApplication(e);
         try {
             let e = {
-                gift: A,
+                gift: h,
                 sku_subscription_plan_id: m,
                 gateway_checkout_context: await (0, _.createGatewayCheckoutContext)(o),
-                load_id: O
+                load_id: p
             };
             if (R) e.test_mode = !0;
             else {
@@ -171,7 +171,7 @@ function(e, t, n) {
                     let t = await (0, T.popupBridgeState)(o.type);
                     e.return_url = (0, i.getAPIBaseURL)() + f.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(o.type, null != t ? t : "", "success")
                 }
-                null != u && (e.expected_amount = u), null != I && (e.expected_currency = I), e.gift_info_options = h, null != p && (e.country_code = p), e.purchase_token = (0, E.getPurchaseToken)()
+                null != u && (e.expected_amount = u), null != I && (e.expected_currency = I), e.gift_info_options = A, null != O && (e.country_code = O), e.purchase_token = (0, E.getPurchaseToken)()
             }
             let n = await i.HTTP.post({
                 url: f.Endpoints.STORE_SKU_PURCHASE(t),
@@ -196,7 +196,7 @@ function(e, t, n) {
             if ((n.code === a.ErrorCodes.CONFIRMATION_REQUIRED || n.code === a.ErrorCodes.AUTHENTICATION_REQUIRED) && r.default.dispatch({
                     type: "SKU_PURCHASE_AWAIT_CONFIRMATION",
                     skuId: t,
-                    isGift: A
+                    isGift: h
                 }), n.code !== a.ErrorCodes.CONFIRMATION_REQUIRED) throw r.default.dispatch({
                 type: "SKU_PURCHASE_FAIL",
                 applicationId: e,
@@ -207,7 +207,7 @@ function(e, t, n) {
             return (0, T.handleConfirmation)(i.body, o)
         }
     }
-    async function p() {
+    async function O() {
         try {
             let e = {
                 purchase_token: (0, E.getPurchaseToken)()

@@ -20,12 +20,12 @@ function(e, t, n) {
         T = n("785717"),
         f = n("621853"),
         S = n("335191"),
-        A = n("171368"),
-        h = n("659101"),
+        h = n("171368"),
+        A = n("659101"),
         m = n("228168"),
         N = n("981631"),
-        O = n("689938"),
-        p = n("424860"),
+        p = n("689938"),
+        O = n("424860"),
         R = n("989171");
 
     function C(e) {
@@ -76,12 +76,12 @@ function(e, t, n) {
             children: [(0, i.jsx)(l.Heading, {
                 variant: "eyebrow",
                 className: R.title,
-                children: O.default.Messages.CONNECTIONS
+                children: p.default.Messages.CONNECTIONS
             }), (0, i.jsxs)("div", {
-                className: a()(p.connectionsContainer, y),
+                className: a()(O.connectionsContainer, y),
                 children: [Y, (0, i.jsxs)(l.Clickable, {
                     onClick: function() {
-                        (0, A.openUserProfileModal)({
+                        (0, h.openUserProfileModal)({
                             userId: g,
                             channelId: L,
                             guildId: null == D ? void 0 : D.id,
@@ -94,15 +94,15 @@ function(e, t, n) {
                             }
                         }), null == M || M()
                     },
-                    className: p.connections,
+                    className: O.connections,
                     children: [(0, i.jsx)(l.Text, {
                         variant: "text-md/semibold",
                         color: "interactive-active",
-                        className: p.connectionsText,
-                        children: O.default.Messages.CONNECTIONS_ROLE_POPOUT_VIEW_ALL
+                        className: O.connectionsText,
+                        children: p.default.Messages.CONNECTIONS_ROLE_POPOUT_VIEW_ALL
                     }), (0, i.jsx)(I.default, {
                         direction: I.default.Directions.RIGHT,
-                        className: p.connectionsCaret
+                        className: O.connectionsCaret
                     })]
                 })]
             })]
@@ -110,15 +110,15 @@ function(e, t, n) {
             children: [(0, i.jsx)(l.Heading, {
                 variant: "eyebrow",
                 className: R.title,
-                children: O.default.Messages.APPS
+                children: p.default.Messages.APPS
             }), (0, i.jsx)("div", {
-                className: a()(p.connectionsContainer, y),
+                className: a()(O.connectionsContainer, y),
                 children: F.map(e => (0, i.jsx)(S.ConnectedApplicationUserRoleAccount, {
                     applicationRoleConnection: e,
                     locale: H
                 }, e.application.id))
             })]
-        })), null == s && null == C) ? null : (0, i.jsxs)(h.default, {
+        })), null == s && null == C) ? null : (0, i.jsxs)(A.default, {
             children: [C, s]
         })
     }

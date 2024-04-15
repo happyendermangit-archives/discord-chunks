@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         Menu: function() {
-            return h
+            return A
         },
         MenuSpinner: function() {
             return m
@@ -23,19 +23,19 @@ function(e, t, n) {
         T = n("828214"),
         f = n("898560"),
         S = n("788314"),
-        A = n("989608");
+        h = n("989608");
 
-    function h(e) {
+    function A(e) {
         var t;
         let {
             navId: n,
             variant: s = "flexible",
             hideScroller: o = !1,
             className: c,
-            children: h,
+            children: A,
             onClose: m,
-            onSelect: O
-        } = e, p = function e(t) {
+            onSelect: p
+        } = e, O = function e(t) {
             return (function e(t) {
                 return null == t ? [] : r.Children.toArray(t).flatMap(t => {
                     var n;
@@ -105,14 +105,14 @@ function(e, t, n) {
                 }), t;
                 throw Error("Menu API only allows Items and groups of Items as children. Received ".concat(null !== (r = null !== (i = null == n ? void 0 : n.type) && void 0 !== i ? i : n) && void 0 !== r ? r : typeof n, " (").concat(typeof n, ") instead"))
             }, [])
-        }(h), R = function e(t) {
+        }(A), R = function e(t) {
             return t.reduce((t, n) => n.navigable ? (t.push({
                 key: n.key,
                 children: "item" === n.type && null != n.children ? e(n.children) : void 0
             }), t) : t, [])
-        }(p), C = r.useRef([]);
+        }(O), C = r.useRef([]);
         !l()(C.current, R) && (C.current = R);
-        let g = null === (t = p.find(e => null != e.key)) || void 0 === t ? void 0 : t.key,
+        let g = null === (t = O.find(e => null != e.key)) || void 0 === t ? void 0 : t.key,
             L = (0, u.useMenuNavigator)({
                 navId: n,
                 items: C.current,
@@ -126,15 +126,15 @@ function(e, t, n) {
         (0, d.useFocusLock)(D);
         let v = o ? _.ScrollerNone : _.ScrollerThin;
         return (0, i.jsx)(f.OnMenuSelectContext.Provider, {
-            value: O,
+            value: p,
             children: (0, i.jsx)("div", {
-                className: a()(A.menu, A[s], c),
+                className: a()(h.menu, h[s], c),
                 ...L.getContainerProps(),
                 ref: D,
                 "aria-label": e["aria-label"],
                 children: (0, i.jsxs)(v, {
-                    className: A.scroller,
-                    children: [0 === p.length && (0, i.jsx)(S.Item, {
+                    className: h.scroller,
+                    children: [0 === O.length && (0, i.jsx)(S.Item, {
                         disabled: !0,
                         label: () => (0, i.jsx)(N, {}),
                         menuItemProps: L.getItemProps({
@@ -143,7 +143,7 @@ function(e, t, n) {
                         isFocused: !1,
                         onFocus: () => {},
                         onClose: m
-                    }), p.length > 0 && function e(t, n, r, s) {
+                    }), O.length > 0 && function e(t, n, r, s) {
                         let a = 0,
                             o = [];
                         return t.reduce((t, l, u) => {
@@ -271,7 +271,7 @@ function(e, t, n) {
                             }
                             return t
                         }, [])
-                    }(p, L, [], m)]
+                    }(O, L, [], m)]
                 })
             })
         })
@@ -279,7 +279,7 @@ function(e, t, n) {
 
     function m() {
         return (0, i.jsx)("div", {
-            className: a()(A.menu, A.loader, A.flexible),
+            className: a()(h.menu, h.loader, h.flexible),
             children: (0, i.jsx)(c.Spinner, {})
         })
     }

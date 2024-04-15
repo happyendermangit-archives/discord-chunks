@@ -22,12 +22,12 @@ function(e, t, n) {
         T = n("497505"),
         f = n("626135"),
         S = n("785717"),
-        A = n("221292"),
-        h = n("290421"),
+        h = n("221292"),
+        A = n("290421"),
         m = n("318661"),
         N = n("228168"),
-        O = n("981631"),
-        p = n("689938"),
+        p = n("981631"),
+        O = n("689938"),
         R = n("649570"),
         C = n("839973");
 
@@ -45,20 +45,20 @@ function(e, t, n) {
         } = (0, c.default)(_.default.BADGE), {
             trackUserProfileAction: M,
             ...y
-        } = (0, S.useUserProfileAnalyticsContext)(), P = (0, h.default)(D).map(e => ({
+        } = (0, S.useUserProfileAnalyticsContext)(), P = (0, A.default)(D).map(e => ({
             ...e,
             src: (0, N.getBadgeAsset)(e.icon)
         })), U = (0, d.useWindowDispatch)();
         if (t.isClyde()) return (0, s.jsx)("div", {
             className: o()(i, R.container, R.clydeBadgeList),
-            "aria-label": p.default.Messages.PROFILE_USER_BADGES,
+            "aria-label": O.default.Messages.PROFILE_USER_BADGES,
             role: "group",
             children: (0, s.jsx)(E.default, {})
         });
         g && null == P.find(e => "premium" === e.id) && P.push({
             id: "premium",
             src: C,
-            description: p.default.Messages.PREMIUM_BADGE_TOOLTIP.format({
+            description: O.default.Messages.PREMIUM_BADGE_TOOLTIP.format({
                 date: new Date
             })
         });
@@ -67,7 +67,7 @@ function(e, t, n) {
             value: v,
             children: (0, s.jsx)("div", {
                 className: o()(i, P.length > 0 ? R.containerWithContent : R.container),
-                "aria-label": p.default.Messages.PROFILE_USER_BADGES,
+                "aria-label": O.default.Messages.PROFILE_USER_BADGES,
                 role: "group",
                 children: P.map(e => (0, s.jsx)(l.Tooltip, {
                     position: "top",
@@ -79,7 +79,7 @@ function(e, t, n) {
                             var i;
                             M({
                                 action: "PRESS_BADGE"
-                            }), (0, A.trackUserProfileBadgePressed)({
+                            }), (0, h.trackUserProfileBadgePressed)({
                                 badge: e.id,
                                 analyticsLocations: v,
                                 ...y
@@ -87,13 +87,13 @@ function(e, t, n) {
                             let r = null != e.link ? (0, u.default)(e.link, {
                                 analyticsLocations: v
                             }) : null;
-                            if (null != r) return U.dispatch(O.ComponentActions.POPOUT_CLOSE), r(n)
+                            if (null != r) return U.dispatch(p.ComponentActions.POPOUT_CLOSE), r(n)
                         },
                         onMouseEnter: () => {
                             var n;
-                            e.id === h.QUEST_COMPLETED_BADGE && (f.default.track(O.AnalyticEvents.QUEST_CONTENT_VIEWED, {
+                            e.id === A.QUEST_COMPLETED_BADGE && (f.default.track(p.AnalyticEvents.QUEST_CONTENT_VIEWED, {
                                 ...(0, I.getContentProperties)(T.QuestContent.QUEST_BADGE)
-                            }), (0, A.trackUserProfileBadgeHovered)({
+                            }), (0, h.trackUserProfileBadgeHovered)({
                                 badge: e.id,
                                 analyticsLocations: v,
                                 ...y

@@ -29,22 +29,19 @@ function(e, t, n) {
             return L
         },
         saveAccountChanges: function() {
-            return h
-        },
-        saveAccountRequest: function() {
             return A
         },
-        setDisableSubmit: function() {
-            return M
+        saveAccountRequest: function() {
+            return h
         },
         setPendingAvatar: function() {
-            return O
+            return p
         },
         setPendingAvatarDecoration: function() {
             return R
         },
         setPendingGlobalNameName: function() {
-            return p
+            return O
         },
         setPendingProfileEffectId: function() {
             return C
@@ -94,7 +91,7 @@ function(e, t, n) {
             _.default.logoutInternal(), (0, o.transitionTo)(c.Routes.DEFAULT_LOGGED_OUT)
         })
     }
-    async function A(e) {
+    async function h(e) {
         let t = await i.HTTP.patch({
                 url: c.Endpoints.ME,
                 oldFormErrors: !0,
@@ -118,7 +115,7 @@ function(e, t, n) {
         }), t
     }
 
-    function h(e) {
+    function A(e) {
         let {
             username: t,
             discriminator: n,
@@ -149,7 +146,7 @@ function(e, t, n) {
                 u = (0, E.getDevicePushProvider)();
             null != u && null != l && (a.push_provider = u, a.push_token = l);
             let d = r.Storage.get(c.DEVICE_VOIP_TOKEN);
-            return null != E.DEVICE_PUSH_VOIP_PROVIDER && null != d && (a.push_voip_provider = E.DEVICE_PUSH_VOIP_PROVIDER, a.push_voip_token = d), A(a)
+            return null != E.DEVICE_PUSH_VOIP_PROVIDER && null != d && (a.push_voip_provider = E.DEVICE_PUSH_VOIP_PROVIDER, a.push_voip_token = d), h(a)
         }, {
             checkEnabled: !1,
             modalProps: {
@@ -188,14 +185,14 @@ function(e, t, n) {
         })
     }
 
-    function O(e) {
+    function p(e) {
         a.default.dispatch({
             type: "USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR",
             avatar: e
         }), null == e ? s.AccessibilityAnnouncer.announce(I.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_NONE) : s.AccessibilityAnnouncer.announce(I.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_CHANGED)
     }
 
-    function p(e) {
+    function O(e) {
         a.default.dispatch({
             type: "USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME",
             globalName: e
@@ -237,13 +234,6 @@ function(e, t, n) {
     function v() {
         a.default.dispatch({
             type: "USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM"
-        })
-    }
-
-    function M(e) {
-        a.default.dispatch({
-            type: "USER_SETTINGS_ACCOUNT_SET_DISABLE_SUBMIT",
-            disable: e
         })
     }
 }

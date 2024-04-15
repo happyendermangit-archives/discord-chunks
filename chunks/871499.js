@@ -35,17 +35,17 @@ function(e, t, n) {
             iconComponent: T,
             themeable: f = !1,
             disabled: S = !1,
-            isActive: A = !1,
-            tooltipPosition: h = "top",
+            isActive: h = !1,
+            tooltipPosition: A = "top",
             shouldShowTooltip: m = !0,
             forceTooltipOpen: N = !1,
-            buttonRef: O,
-            grow: p,
+            buttonRef: p,
+            grow: O,
             "aria-label": R
         } = e;
         return (0, i.jsx)(d.default, {
             children: (0, i.jsx)(a.Tooltip, {
-                position: h,
+                position: A,
                 text: t,
                 "aria-label": R,
                 shouldShow: m,
@@ -54,7 +54,7 @@ function(e, t, n) {
                     let {
                         onClick: t,
                         onContextMenu: d,
-                        onMouseEnter: h,
+                        onMouseEnter: A,
                         onMouseLeave: m,
                         ...N
                     } = e;
@@ -68,7 +68,7 @@ function(e, t, n) {
                             null == t || t(), null == n || n(e)
                         },
                         onMouseEnter: e => {
-                            null == h || h(), null == o || o(e)
+                            null == A || A(), null == o || o(e)
                         },
                         onMouseLeave: e => {
                             null == m || m(), null == l || l(e)
@@ -77,7 +77,7 @@ function(e, t, n) {
                             null == d || d(), null == u || u(e)
                         },
                         onFocus: e => {
-                            null == h || h(), null == o || o(e)
+                            null == A || A(), null == o || o(e)
                         },
                         onBlur: e => {
                             null == m || m(), null == l || l(e)
@@ -85,17 +85,17 @@ function(e, t, n) {
                         disabled: S,
                         innerClassName: E.lineHeightReset,
                         className: s()({
-                            [E.active]: A
+                            [E.active]: h
                         }, _),
                         wrapperClassName: c,
-                        buttonRef: O,
-                        grow: p,
+                        buttonRef: p,
+                        grow: O,
                         "aria-label": R,
                         ...N,
                         children: (0, i.jsx)(T, {
                             className: s()(E.controlIcon, I, {
                                 [E.themeable]: f,
-                                [E.active]: A
+                                [E.active]: h
                             }),
                             color: "currentColor"
                         })
@@ -121,37 +121,37 @@ function(e, t, n) {
             className: r,
             iconClassName: f,
             onPopoutClick: S,
-            popoutOpen: A = !1,
-            premiumGlow: h = !1,
+            popoutOpen: h = !1,
+            premiumGlow: A = !1,
             ...m
-        } = e, N = (0, _.default)(t, n), O = (0, o.default)("(max-width: 456px)"), p = (0, i.jsx)(I, {
+        } = e, N = (0, _.default)(t, n), p = (0, o.default)("(max-width: 456px)"), O = (0, i.jsx)(I, {
             ...m,
             grow: !1,
             onContextMenu: S,
             iconClassName: s()(f, E.centerIcon),
-            className: s()(O ? r : null, E.staticButton, E.centerButton, T[N])
+            className: s()(p ? r : null, E.staticButton, E.centerButton, T[N])
         });
-        return O ? p : (0, i.jsxs)("div", {
+        return p ? O : (0, i.jsxs)("div", {
             className: s()(r, E.contextMenuContainer),
             children: [(0, i.jsx)(u.default, {
                 className: s()({
-                    [E.buttonPremiumGlow]: h
+                    [E.buttonPremiumGlow]: A
                 }),
                 mask: null == S ? null : u.MaskIDs.CHANNEL_CALL_CONTROL_BUTTON,
                 width: 56,
                 height: 56,
-                children: p
+                children: O
             }), null != S ? (0, i.jsx)(d.default, {
                 children: (0, i.jsx)(a.Clickable, {
                     "aria-label": c.default.Messages.MORE_OPTIONS,
                     onClick: S,
                     onContextMenu: S,
                     className: s()(E.contextMenuNub, T[N], {
-                        [E.active]: A
+                        [E.active]: h
                     }),
                     children: (0, i.jsx)(l.default, {
                         className: s()(E.contextMenuCaret, {
-                            [E.open]: A
+                            [E.open]: h
                         })
                     })
                 })

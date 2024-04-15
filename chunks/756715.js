@@ -26,13 +26,13 @@ function(e, t, n) {
             target: T,
             useDefaultUnderlineStyles: f = !0,
             title: S,
-            style: A,
-            focusProps: h,
+            style: h,
+            focusProps: A,
             ...m
         } = e;
         null != t && null == n && (n = d.designConfig.getDefaultLinkInterceptor(t));
         let N = r.useContext(o.BlockInteractionsContext),
-            O = {
+            p = {
                 className: a()(c.anchor, {
                     [c.anchorUnderlineOnHover]: f
                 }, s),
@@ -41,20 +41,20 @@ function(e, t, n) {
                 rel: null != I ? I : void 0,
                 target: null != T ? T : void 0,
                 title: null != S ? S : void 0,
-                style: null != A ? A : void 0
+                style: null != h ? h : void 0
             };
-        return (null != t && !(0, _.isSafeRedirect)(t) && (O.rel = "noreferrer noopener", O.target = "_blank"), N && delete O.href, null != n) ? (0, i.jsx)(l.Clickable, {
+        return (null != t && !(0, _.isSafeRedirect)(t) && (p.rel = "noreferrer noopener", p.target = "_blank"), N && delete p.href, null != n) ? (0, i.jsx)(l.Clickable, {
             tag: "a",
             ...m,
-            ...O,
+            ...p,
             onClick: n,
-            focusProps: h,
+            focusProps: A,
             children: E
         }) : (0, i.jsx)(u.FocusRing, {
-            ...h,
+            ...A,
             children: (0, i.jsx)("a", {
                 ...m,
-                ...O,
+                ...p,
                 children: E
             })
         })

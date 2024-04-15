@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         closeAllModals: function() {
-            return O
+            return p
         },
         closeModal: function() {
             return f
@@ -11,16 +11,16 @@ function(e, t, n) {
             return _
         },
         hasAnyModalOpen: function() {
-            return h
+            return A
         },
         hasAnyModalOpenSelector: function() {
-            return A
+            return h
         },
         hasModalOpen: function() {
             return R
         },
         hasModalOpenSelector: function() {
-            return p
+            return O
         },
         modalContextFromAppContext: function() {
             return c
@@ -153,7 +153,7 @@ function(e, t, n) {
         })
     }
 
-    function A(e) {
+    function h(e) {
         for (let t of d) {
             let n = e[t];
             if (null != n && n.length > 0) return !0
@@ -161,12 +161,12 @@ function(e, t, n) {
         return !1
     }
 
-    function h() {
-        return A(E.getState())
+    function A() {
+        return h(E.getState())
     }
 
     function m() {
-        return A(E())
+        return h(E())
     }
 
     function N(e) {
@@ -178,19 +178,19 @@ function(e, t, n) {
         return r.length > 0 ? (null === (t = r.at(-1)) || void 0 === t ? void 0 : t.key) === e : (null === (n = i.at(-1)) || void 0 === n ? void 0 : n.key) === e
     }
 
-    function O() {
+    function p() {
         let e = E.getState();
         for (let t in e)
             for (let n of e[t]) f(n.key, t)
     }
 
-    function p(e, t) {
+    function O(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.DEFAULT_MODAL_CONTEXT,
             i = e[n];
         return null != i && i.some(e => e.key === t)
     }
 
     function R(e, t) {
-        return p(E.getState(), e, t)
+        return O(E.getState(), e, t)
     }
 }

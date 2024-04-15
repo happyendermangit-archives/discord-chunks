@@ -16,17 +16,17 @@ function(e, t, n) {
         T = n("819758"),
         f = n("392552"),
         S = n("784222"),
-        A = n("926243"),
-        h = n("149203"),
+        h = n("926243"),
+        A = n("149203"),
         m = n("981631"),
         N = n("689938"),
-        O = n("975903");
+        p = n("975903");
     t.default = e => {
         let {
             emojiDescriptors: t,
             emojiSize: n,
             onSelect: s,
-            onInspect: p,
+            onInspect: O,
             surrogateCodePoint: R,
             getEmojiItemProps: C,
             getEmojiRowProps: g,
@@ -51,8 +51,8 @@ function(e, t, n) {
         r.useEffect(() => _.EmojiPickerStore.useStore.subscribe(e => x(e), e => e.inspectedExpressionPosition), []), r.useEffect(() => {
             E.FrecencyUserSettingsActionCreators.loadIfNecessary()
         }, []);
-        let W = n === h.EmojiSize.LARGE,
-            K = n === h.EmojiSize.MEDIUM,
+        let W = n === A.EmojiSize.LARGE,
+            K = n === A.EmojiSize.MEDIUM,
             z = e => {
                 let t = "".concat(e.rowIndex, "c").concat(e.columnIndex);
                 switch (e.type) {
@@ -66,7 +66,7 @@ function(e, t, n) {
                                 toggleFavorite: !1
                             }), c.default.open(e.guildId, m.GuildSettingsSections.EMOJI, m.AnalyticsSections.EMOJI_PICKER_POPOUT))
                         }, _ = () => {
-                            !L.current && !D.current && p(e)
+                            !L.current && !D.current && O(e)
                         };
                         return function() {
                             var e;
@@ -86,12 +86,12 @@ function(e, t, n) {
                                 children: (0, i.jsx)("button", {
                                     "aria-label": N.default.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE,
                                     ref: c,
-                                    className: a()(O.emojiItem, {
-                                        [O.emojiItemLarge]: W,
-                                        [O.emojiItemMedium]: K,
-                                        [O.emojiItemSelected]: u,
+                                    className: a()(p.emojiItem, {
+                                        [p.emojiItemLarge]: W,
+                                        [p.emojiItemMedium]: K,
+                                        [p.emojiItemSelected]: u,
                                         [null != b ? b : ""]: u,
-                                        [O.showPulse]: H === t
+                                        [p.showPulse]: H === t
                                     }),
                                     onFocus: null != T ? T : _,
                                     onMouseOver: _,
@@ -100,8 +100,8 @@ function(e, t, n) {
                                     onClick: d,
                                     tabIndex: E,
                                     children: (0, i.jsx)(I.default, {
-                                        className: O.icon,
-                                        foreground: O.icon,
+                                        className: p.icon,
+                                        foreground: p.icon,
                                         width: 24,
                                         height: 24
                                     })
@@ -115,7 +115,7 @@ function(e, t, n) {
                             columnIndex: r,
                             visibleRowIndex: a
                         } = e, o = F.rowIndex === a && F.columnIndex === r;
-                        return (0, i.jsx)(A.default, {
+                        return (0, i.jsx)(h.default, {
                             rowIndex: v,
                             descriptor: e,
                             emojiItemKey: t,
@@ -126,7 +126,7 @@ function(e, t, n) {
                             allowAnimatedEmoji: M,
                             selectedItemClassName: b,
                             onSelect: s,
-                            onInspect: p,
+                            onInspect: O,
                             channelGuildId: P,
                             getEmojiItemProps: C,
                             isMediumSize: K,
@@ -144,39 +144,39 @@ function(e, t, n) {
             },
             X = e => (0, i.jsx)("ul", {
                 ...g(v),
-                className: a()(O.emojiListRow, {
-                    [O.emojiListRowLargeSize]: W,
-                    [O.emojiListRowMediumSize]: K
+                className: a()(p.emojiListRow, {
+                    [p.emojiListRowLargeSize]: W,
+                    [p.emojiListRowMediumSize]: K
                 }),
                 ref: j,
                 children: e.map(z)
             });
-        if (U !== h.EmojiCategoryTypes.TOP_GUILD_EMOJI) return X(t);
-        let Q = t.filter(e => !!k && e.type === S.EmojiGridItemTypes.CREATE_EMOJI || e.subCategory === h.EmojiSubCategory.TOP_GUILD_EMOJI || e.subCategory === h.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && !d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id)),
-            q = t.filter(e => e.subCategory === h.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id));
-        return 0 === q.length ? X(t) : (0, i.jsxs)("div", {
-            className: O.topEmojiSectionContainer,
+        if (U !== A.EmojiCategoryTypes.TOP_GUILD_EMOJI) return X(t);
+        let q = t.filter(e => !!k && e.type === S.EmojiGridItemTypes.CREATE_EMOJI || e.subCategory === A.EmojiSubCategory.TOP_GUILD_EMOJI || e.subCategory === A.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && !d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id)),
+            Q = t.filter(e => e.subCategory === A.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id));
+        return 0 === Q.length ? X(t) : (0, i.jsxs)("div", {
+            className: p.topEmojiSectionContainer,
             children: [(0, i.jsx)("div", {
-                className: a()(O.topEmojiContainer, {
-                    [O.noEmojis]: 0 === Q.length
+                className: a()(p.topEmojiContainer, {
+                    [p.noEmojis]: 0 === q.length
                 }),
-                children: X(Q)
+                children: X(q)
             }), (0, i.jsxs)("div", {
-                className: O.newlyAddedHighlightContainer,
+                className: p.newlyAddedHighlightContainer,
                 children: [(0, i.jsx)("div", {
-                    className: a()(O.newlyAddedHighlight, {
-                        [O.oneItem]: 1 === q.length,
-                        [O.alignRight]: Q.length > 0
+                    className: a()(p.newlyAddedHighlight, {
+                        [p.oneItem]: 1 === Q.length,
+                        [p.alignRight]: q.length > 0
                     }),
-                    children: X(q)
+                    children: X(Q)
                 }), (0, i.jsxs)("div", {
-                    className: a()(O.newlyAddedBadge, {
-                        [O.newlyAddedBadgeLarge]: W,
-                        [O.newlyAddedBadgeMedium]: K,
-                        [O.alignRight]: Q.length > 0
+                    className: a()(p.newlyAddedBadge, {
+                        [p.newlyAddedBadgeLarge]: W,
+                        [p.newlyAddedBadgeMedium]: K,
+                        [p.alignRight]: q.length > 0
                     }),
                     children: [(0, i.jsx)(T.default, {
-                        foreground: O.newlyAddedBadgeStar
+                        foreground: p.newlyAddedBadgeStar
                     }), (0, i.jsx)(o.Text, {
                         variant: "text-xs/semibold",
                         color: "always-white",

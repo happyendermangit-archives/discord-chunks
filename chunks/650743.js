@@ -21,19 +21,19 @@ function(e, t, n) {
         T = n("451478"),
         f = n("465670"),
         S = n("84017"),
-        A = n("759231"),
-        h = n("358085"),
+        h = n("759231"),
+        A = n("358085"),
         m = n("13140"),
         N = n("763296"),
-        O = n("981631"),
-        p = n("689938"),
+        p = n("981631"),
+        O = n("689938"),
         R = n("838924");
 
     function C(e) {
         let {
             soundboardSound: t,
             closePicker: C
-        } = e, g = (0, _.useExpressionPickerStore)(e => e.searchQuery), L = (0, r.useStateFromStores)([N.default], () => null != t && N.default.isFavoriteSound(t.soundId)), D = (0, r.useStateFromStores)([E.default], () => E.default.getGuild(null == t ? void 0 : t.guildId)), v = (0, r.useStateFromStores)([l.default], () => l.default.useReducedMotion, []), M = (0, r.useStateFromStores)([T.default], () => T.default.isFocused()), y = (0, r.useStateFromStores)([I.default], () => I.default.getKeybindForAction(O.GlobalKeybindActions.SOUNDBOARD_HOLD));
+        } = e, g = (0, _.useExpressionPickerStore)(e => e.searchQuery), L = (0, r.useStateFromStores)([N.default], () => null != t && N.default.isFavoriteSound(t.soundId)), D = (0, r.useStateFromStores)([E.default], () => E.default.getGuild(null == t ? void 0 : t.guildId)), v = (0, r.useStateFromStores)([l.default], () => l.default.useReducedMotion, []), M = (0, r.useStateFromStores)([T.default], () => T.default.isFocused()), y = (0, r.useStateFromStores)([I.default], () => I.default.getKeybindForAction(p.GlobalKeybindActions.SOUNDBOARD_HOLD));
         if (null != t && g.length > 0) return (0, i.jsx)(c.default, {
             graphicPrimary: null != t.emojiId || null != t.emojiName ? (0, i.jsx)(o.default, {
                 emojiId: t.emojiId,
@@ -61,7 +61,7 @@ function(e, t, n) {
                 })
             },
             U = (0, u.isDismissibleContentDismissed)(s.DismissibleContent.SOUNDBOARD_KEYBIND_TIP),
-            b = null != y && (0, h.isWindows)() && !U ? p.default.Messages.SOUNDBOARD_KEYBIND_HINT_NO_POPOUT_WHEEL_SUPPORT.format({
+            b = null != y && (0, A.isWindows)() && !U ? O.default.Messages.SOUNDBOARD_KEYBIND_HINT_NO_POPOUT_WHEEL_SUPPORT.format({
                 keybind: (0, m.toString)(y.shortcut, !0),
                 openSettingsHook: (e, t) => (0, i.jsx)(a.Anchor, {
                     onClick: P,
@@ -70,7 +70,7 @@ function(e, t, n) {
             }) : null;
         return null == b ? null : (0, i.jsxs)("div", {
             className: R.keybindHint,
-            children: [(0, i.jsx)(A.default, {
+            children: [(0, i.jsx)(h.default, {
                 className: R.warningIcon
             }), (0, i.jsx)(a.Text, {
                 variant: "text-sm/medium",

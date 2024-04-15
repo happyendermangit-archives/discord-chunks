@@ -23,12 +23,12 @@ function(e, t, n) {
     }
     let f = "default",
         S = [],
-        A = [],
         h = [],
+        A = [],
         m = 0,
         N = null,
-        O = null,
-        p = {},
+        p = null,
+        O = {},
         R = null,
         C = null,
         g = {},
@@ -69,10 +69,10 @@ function(e, t, n) {
             null != e && (D = e), v(), this.waitFor(o.default)
         }
         getClips() {
-            return A
+            return h
         }
         getPendingClips() {
-            return h
+            return A
         }
         getUserAgnosticState() {
             return D
@@ -81,7 +81,7 @@ function(e, t, n) {
             return D.clipsSettings
         }
         getLastClipsSession() {
-            return O
+            return p
         }
         getClipsWarningShown(e) {
             return N === e
@@ -113,15 +113,15 @@ function(e, t, n) {
         }
         isClipsEnabledForUser(e) {
             var t, n;
-            return null !== (n = null === (t = p[e]) || void 0 === t ? void 0 : t.clipsEnabled) && void 0 !== n && n
+            return null !== (n = null === (t = O[e]) || void 0 === t ? void 0 : t.clipsEnabled) && void 0 !== n && n
         }
         isVoiceRecordingAllowedForUser(e) {
             var t, n;
-            return null !== (n = null === (t = p[e]) || void 0 === t ? void 0 : t.allowVoiceRecording) && void 0 !== n && n
+            return null !== (n = null === (t = O[e]) || void 0 === t ? void 0 : t.allowVoiceRecording) && void 0 !== n && n
         }
         isViewerClippingAllowedForUser(e) {
             var t, n;
-            return null !== (n = null === (t = p[e]) || void 0 === t ? void 0 : t.allowAnyViewerClips) && void 0 !== n && n
+            return null !== (n = null === (t = O[e]) || void 0 === t ? void 0 : t.allowAnyViewerClips) && void 0 !== n && n
         }
         hasClips() {
             return D.hasClips
@@ -236,32 +236,32 @@ function(e, t, n) {
             let {
                 clip: i
             } = e;
-            m = Math.max(m - 1, 0), O = {
+            m = Math.max(m - 1, 0), p = {
                 applicationName: i.applicationName,
                 ended: !1,
-                ...O,
-                newClipIds: [...null !== (t = null == O ? void 0 : O.newClipIds) && void 0 !== t ? t : [], i.id]
+                ...p,
+                newClipIds: [...null !== (t = null == p ? void 0 : p.newClipIds) && void 0 !== t ? t : [], i.id]
             }, D = {
                 ...D,
                 newClipIds: [...null !== (n = D.newClipIds) && void 0 !== n ? n : [], i.id]
-            }, h = h.filter(e => {
+            }, A = A.filter(e => {
                 let {
                     id: t
                 } = e;
                 return t !== i.id
-            }), A = [i, ...A], D.hasClips = !0
+            }), h = [i, ...h], D.hasClips = !0
         },
         CLIPS_SAVE_CLIP_PLACEHOLDER: function(e) {
             let {
                 clip: t
             } = e;
-            h = [t, ...h]
+            A = [t, ...A]
         },
         CLIPS_SAVE_CLIP_PLACEHOLDER_ERROR: function(e) {
             let {
                 clipId: t
             } = e;
-            h = h.filter(e => {
+            A = A.filter(e => {
                 let {
                     id: n
                 } = e;
@@ -306,7 +306,7 @@ function(e, t, n) {
                 i = null !== (r = null == e ? void 0 : e.name) && void 0 !== r ? r : i
             }
             if (null == i || "" === i) return !1;
-            O = {
+            p = {
                 applicationName: i,
                 newClipIds: [],
                 ended: !1
@@ -316,24 +316,24 @@ function(e, t, n) {
             let {
                 streamKey: t
             } = e;
-            if (C = null, g[t] = [], null == O || (0, l.decodeStreamKey)(t).ownerId !== u.default.getId()) return !1;
-            O = 0 === O.newClipIds.length ? null : {
-                ...O,
+            if (C = null, g[t] = [], null == p || (0, l.decodeStreamKey)(t).ownerId !== u.default.getId()) return !1;
+            p = 0 === p.newClipIds.length ? null : {
+                ...p,
                 ended: !0
             }
         },
         CLIPS_CLEAR_CLIPS_SESSION: function() {
-            if (null == O) return !1;
-            O = null
+            if (null == p) return !1;
+            p = null
         },
         CLIPS_CLEAR_NEW_CLIP_IDS: function() {
             D.newClipIds = []
         },
         CLIPS_LOAD_DIRECTORY_SUCCESS: function(e) {
-            D.hasClips = e.clips.length > 0, A = e.clips
+            D.hasClips = e.clips.length > 0, h = e.clips
         },
         CLIPS_DELETE_CLIP: function(e) {
-            0 === (A = A.filter(t => {
+            0 === (h = h.filter(t => {
                 let {
                     filepath: n
                 } = t;
@@ -344,14 +344,14 @@ function(e, t, n) {
             let {
                 clip: t
             } = e;
-            for (let [e, n] of A.entries())
+            for (let [e, n] of h.entries())
                 if (n.id === t.id) {
-                    A[e] = t, A = [...A];
+                    h[e] = t, h = [...h];
                     return
                 }
         },
         RTC_CONNECTION_FLAGS: function(e) {
-            p[e.userId] = {
+            O[e.userId] = {
                 clipsEnabled: (0, d.hasFlag)(e.flags, E.VoiceFlags.CLIPS_ENABLED),
                 allowVoiceRecording: (0, d.hasFlag)(e.flags, E.VoiceFlags.ALLOW_VOICE_RECORDING),
                 allowAnyViewerClips: (0, d.hasFlag)(e.flags, E.VoiceFlags.ALLOW_ANY_VIEWER_CLIPS)
@@ -382,7 +382,7 @@ function(e, t, n) {
                 applicationName: t
             } = e;
             if (R = null, !D.clipsSettings.clipsEnabled) return !1;
-            O = {
+            p = {
                 applicationName: t,
                 newClipIds: [],
                 ended: !1

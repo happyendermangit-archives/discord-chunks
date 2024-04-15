@@ -20,12 +20,12 @@ function(e, t, n) {
         T = n("639119"),
         f = n("197115"),
         S = n("587446"),
-        A = n("594174"),
-        h = n("696202"),
+        h = n("594174"),
+        A = n("696202"),
         m = n("626135"),
         N = n("74538"),
-        O = n("327943"),
-        p = n("539873"),
+        p = n("327943"),
+        O = n("539873"),
         R = n("981631"),
         C = n("921944"),
         g = n("474936"),
@@ -38,7 +38,7 @@ function(e, t, n) {
         },
         M = () => {
             var e, t, n;
-            let r = (0, o.useStateFromStores)([A.default], () => N.default.isPremium(A.default.getCurrentUser())),
+            let r = (0, o.useStateFromStores)([h.default], () => N.default.isPremium(h.default.getCurrentUser())),
                 s = (0, T.usePremiumTrialOffer)(),
                 a = (null == s ? void 0 : null === (e = s.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === g.PremiumSubscriptionSKUs.TIER_2;
             return (0, i.jsx)(f.default, {
@@ -61,7 +61,7 @@ function(e, t, n) {
                 children: [(0, i.jsx)(l.Clickable, {
                     className: D.closeCircleButton,
                     onClick: () => n(),
-                    children: (0, i.jsx)(h.default, {
+                    children: (0, i.jsx)(A.default, {
                         className: D.closeCircle
                     })
                 }), (0, i.jsxs)("div", {
@@ -79,7 +79,7 @@ function(e, t, n) {
             let {
                 isCoachmark: t,
                 markAsDismissed: n
-            } = e, r = (0, o.useStateFromStores)([O.default], () => O.default.isUpsellPreview);
+            } = e, r = (0, o.useStateFromStores)([p.default], () => p.default.isUpsellPreview);
             return (0, i.jsxs)("div", {
                 className: D.editorFooter,
                 children: [r && (0, i.jsx)(M, {}), (0, i.jsx)(l.Button, {
@@ -100,13 +100,13 @@ function(e, t, n) {
             markAsDismissed: n
         } = e, {
             analyticsLocations: s
-        } = (0, I.default)(E.default.APP_ICON_EDITOR), u = (0, o.useStateFromStores)([A.default], () => A.default.getCurrentUser()), {
+        } = (0, I.default)(E.default.APP_ICON_EDITOR), u = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), {
             isUpsellPreview: d,
             isEditorOpen: T,
             shouldEditorAnimate: f
-        } = (0, o.useStateFromStoresObject)([O.default, c.default], () => ({
-            isUpsellPreview: O.default.isUpsellPreview,
-            isEditorOpen: O.default.isEditorOpen,
+        } = (0, o.useStateFromStoresObject)([p.default, c.default], () => ({
+            isUpsellPreview: p.default.isUpsellPreview,
+            isEditorOpen: p.default.isEditorOpen,
             shouldEditorAnimate: t && !c.default.useReducedMotion
         }));
         r.useEffect(() => {
@@ -128,7 +128,7 @@ function(e, t, n) {
                         markAsDismissed: n
                     }), (0, i.jsx)(l.Scroller, {
                         className: D.editorBody,
-                        children: (0, i.jsx)(p.default, {
+                        children: (0, i.jsx)(O.default, {
                             className: D.selectionGroup
                         })
                     }), (0, i.jsx)(P, {

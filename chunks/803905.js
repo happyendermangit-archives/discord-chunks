@@ -8,7 +8,7 @@ function(e, t, n) {
             return c
         },
         APP_ICONS: function() {
-            return p
+            return O
         },
         BOOST_DISCOUNT: function() {
             return C
@@ -17,13 +17,13 @@ function(e, t, n) {
             return R
         },
         COLLECTIBLES: function() {
-            return O
+            return p
         },
         CUSTOM_CALL_SOUNDS: function() {
             return f
         },
         CUSTOM_DISCRIMINATOR: function() {
-            return A
+            return h
         },
         CUSTOM_NOTIFICATION_SOUNDS: function() {
             return v
@@ -50,7 +50,7 @@ function(e, t, n) {
             return y
         },
         PREMIUM_GUILD_MEMBER_PROFILE: function() {
-            return h
+            return A
         },
         PROFILE_BADGES: function() {
             return m
@@ -119,12 +119,12 @@ function(e, t, n) {
         T = new _(i.EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE),
         f = new _(i.EntitlementFeatureNames.CUSTOM_CALL_SOUNDS),
         S = new _(i.EntitlementFeatureNames.ANIMATED_AVATAR),
-        A = new _(i.EntitlementFeatureNames.CUSTOM_DISCRIMINATOR),
-        h = new _(i.EntitlementFeatureNames.PREMIUM_GUILD_MEMBER_PROFILE),
+        h = new _(i.EntitlementFeatureNames.CUSTOM_DISCRIMINATOR),
+        A = new _(i.EntitlementFeatureNames.PREMIUM_GUILD_MEMBER_PROFILE),
         m = new _("profileBadges"),
         N = new _(i.EntitlementFeatureNames.PROFILE_PREMIUM_FEATURES, "custom banner and avatar decoration"),
-        O = new _("collectibles"),
-        p = new _("appIcons"),
+        p = new _("collectibles"),
+        O = new _("appIcons"),
         R = new _(i.EntitlementFeatureNames.CLIENT_THEMES),
         C = new _("boostDiscount"),
         g = new _("freeBoosts"),
@@ -141,9 +141,9 @@ function(e, t, n) {
         w = new _("increasedVideoUploadQuality"),
         B = new _("uploadLargeFiles"),
         k = Object.freeze({
-            [l.PremiumSubscriptionSKUs.TIER_0]: new o.default(l.PremiumSubscriptionSKUs.TIER_0, [c, E, I, m, U, w, B, p]),
-            [l.PremiumSubscriptionSKUs.TIER_1]: new o.default(l.PremiumSubscriptionSKUs.TIER_1, [c, E, S, A, m, C, L, M, w, B, p]),
-            [l.PremiumSubscriptionSKUs.TIER_2]: new o.default(l.PremiumSubscriptionSKUs.TIER_2, [c, E, I, T, f, S, A, h, m, N, R, C, g, L, D, M, y, P, U, b, G, w, B, p, O, v])
+            [l.PremiumSubscriptionSKUs.TIER_0]: new o.default(l.PremiumSubscriptionSKUs.TIER_0, [c, E, I, m, U, w, B, O]),
+            [l.PremiumSubscriptionSKUs.TIER_1]: new o.default(l.PremiumSubscriptionSKUs.TIER_1, [c, E, S, h, m, C, L, M, w, B, O]),
+            [l.PremiumSubscriptionSKUs.TIER_2]: new o.default(l.PremiumSubscriptionSKUs.TIER_2, [c, E, I, T, f, S, h, A, m, N, R, C, g, L, D, M, y, P, U, b, G, w, B, O, p, v])
         });
 
     function V(e, t) {

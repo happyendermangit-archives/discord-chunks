@@ -12,12 +12,12 @@ function(e, t, n) {
         T = new Set,
         f = new Set,
         S = new Set,
-        A = new Set,
-        h = new Map,
+        h = new Set,
+        A = new Map,
         m = new Map,
         N = new Map;
 
-    function O(e, t) {
+    function p(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
                 updateProgress: !1
             },
@@ -36,16 +36,16 @@ function(e, t, n) {
         }
     }
 
-    function p(e, t) {
-        let n = new Map(h);
-        n.set(e, t), h = n
+    function O(e, t) {
+        let n = new Map(A);
+        n.set(e, t), A = n
     }
 
     function R(e, t) {
-        p(e, t);
+        O(e, t);
         let n = c.get(e),
             i = null == n ? void 0 : n.userStatus;
-        null != i && null == i.claimedAt && O(e, {
+        null != i && null == i.claimedAt && p(e, {
             userStatus: {
                 ...i,
                 claimedAt: t.claimedAt
@@ -63,8 +63,8 @@ function(e, t, n) {
     }
 
     function L(e) {
-        let t = new Set(A);
-        t.delete(e), A = t
+        let t = new Set(h);
+        t.delete(e), h = t
     }
     class D extends(i = l.default.Store) {
         get quests() {
@@ -89,10 +89,10 @@ function(e, t, n) {
             return S.has(e)
         }
         isDismissingContent(e) {
-            return A.has(e)
+            return h.has(e)
         }
         getRewardCode(e) {
-            return h.get(e)
+            return A.get(e)
         }
         getRewards(e) {
             return m.get(e)
@@ -131,7 +131,7 @@ function(e, t, n) {
                 streamKey: n,
                 userStatus: i
             } = e;
-            O(t, {
+            p(t, {
                 userStatus: i
             }, {
                 updateProgress: !0
@@ -158,7 +158,7 @@ function(e, t, n) {
             let {
                 enrolledQuestUserStatus: t
             } = e;
-            O(t.questId, {
+            p(t.questId, {
                 userStatus: t
             }), g(t.questId)
         },
@@ -239,7 +239,7 @@ function(e, t, n) {
                         quest: i,
                         entitlements: t
                     });
-                    null != n && p(e, n), O(e, {
+                    null != n && O(e, n), p(e, {
                         userStatus: {
                             ...r,
                             claimedAt: t.claimedAt,
@@ -258,14 +258,14 @@ function(e, t, n) {
         QUESTS_DISMISS_CONTENT_BEGIN: function(e) {
             let {
                 questId: t
-            } = e, n = new Set(A);
-            n.add(t), A = n
+            } = e, n = new Set(h);
+            n.add(t), h = n
         },
         QUESTS_DISMISS_CONTENT_SUCCESS: function(e) {
             let {
                 dismissedQuestUserStatus: t
             } = e;
-            O(t.questId, {
+            p(t.questId, {
                 userStatus: t
             }), L(t.questId)
         },
@@ -291,15 +291,15 @@ function(e, t, n) {
             let {
                 previewQuestUserStatus: t
             } = e;
-            O(t.questId, {
+            p(t.questId, {
                 userStatus: t
-            }), null == t.claimedAt && (h = new Map(h)).delete(t.questId)
+            }), null == t.claimedAt && (A = new Map(A)).delete(t.questId)
         },
         QUESTS_OPTIMISTIC_PROGRESS_UPDATE: function(e) {
             let {
                 userStatus: t
             } = e;
-            O(t.questId, {
+            p(t.questId, {
                 userStatus: t
             }, {
                 updateProgress: !0

@@ -23,12 +23,12 @@ function(e, t, n) {
         T = n("594174"),
         f = n("225196"),
         S = n("887208"),
-        A = n("897353"),
-        h = n("729285"),
+        h = n("897353"),
+        A = n("729285"),
         m = n("632184"),
         N = n("208049"),
-        O = n("763296"),
-        p = n("697426"),
+        p = n("763296"),
+        O = n("697426"),
         R = n("242291"),
         C = n("706667"),
         g = n("286654"),
@@ -95,14 +95,14 @@ function(e, t, n) {
             onMouseEnter: F,
             onSelectItem: x,
             analyticsLocations: H,
-            buttonOverlay: Y = p.SoundButtonOverlay.PLAY,
+            buttonOverlay: Y = O.SoundButtonOverlay.PLAY,
             ...j
         } = e, {
             soundId: W,
             name: K,
             emojiId: z,
             emojiName: X
-        } = P, Q = (0, l.useStateFromStores)([T.default], () => T.default.getCurrentUser()), q = (0, g.useSoundButtonContextMenu)(P, null == U ? void 0 : U.guild_id), {
+        } = P, q = (0, l.useStateFromStores)([T.default], () => T.default.getCurrentUser()), Q = (0, g.useSoundButtonContextMenu)(P, null == U ? void 0 : U.guild_id), {
             playSoundboardSound: Z,
             previewSound: J,
             isPlayingSound: $
@@ -124,11 +124,11 @@ function(e, t, n) {
             er = r.useRef(.01),
             es = r.useRef(new u.Interval),
             ea = "1" === P.soundId,
-            eo = (0, l.useStateFromStores)([O.default], () => O.default.isFavoriteSound(W), [W]),
+            eo = (0, l.useStateFromStores)([p.default], () => p.default.isFavoriteSound(W), [W]),
             el = "sound-".concat(P.soundId),
             eu = (0, o.useListItem)(el),
             ed = null != z || null != X,
-            e_ = !(0, R.canUseSoundboardSound)(Q, P, U),
+            e_ = !(0, R.canUseSoundboardSound)(q, P, U),
             ec = w || k && !e_;
 
         function eE(e) {
@@ -164,7 +164,7 @@ function(e, t, n) {
                     })
                 }), (0, i.jsxs)("div", {
                     className: v.buttonOverlayActions,
-                    children: [ec && eT, !V && !e_ && (0, i.jsx)(A.default, {
+                    children: [ec && eT, !V && !e_ && (0, i.jsx)(h.default, {
                         className: v.playIcon
                     }), ec && eI()]
                 })]
@@ -207,7 +207,7 @@ function(e, t, n) {
                     }
                     V || Z(H)
                 },
-                onContextMenu: k && !e_ ? q : void 0,
+                onContextMenu: k && !e_ ? Q : void 0,
                 children: [(0, i.jsxs)("div", {
                     className: v.soundInfo,
                     "aria-hidden": !0,
@@ -226,7 +226,7 @@ function(e, t, n) {
                     })]
                 }), function() {
                     switch (Y) {
-                        case p.SoundButtonOverlay.ADD:
+                        case O.SoundButtonOverlay.ADD:
                             return (0, i.jsxs)("div", {
                                 className: v.addButtonOverlay,
                                 children: [(0, i.jsx)("div", {
@@ -235,7 +235,7 @@ function(e, t, n) {
                                     className: v.buttonOverlayActions,
                                     children: [eT, (0, i.jsxs)("div", {
                                         className: v.addButton,
-                                        children: [(0, i.jsx)(h.default, {
+                                        children: [(0, i.jsx)(A.default, {
                                             className: v.plusSign
                                         }), (0, i.jsx)(_.Text, {
                                             variant: "text-xs/medium",
@@ -245,7 +245,7 @@ function(e, t, n) {
                                     }), ec && eI()]
                                 })]
                             });
-                        case p.SoundButtonOverlay.PLAY:
+                        case O.SoundButtonOverlay.PLAY:
                         default:
                             return ef()
                     }

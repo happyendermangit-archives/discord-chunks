@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return p
+            return O
         }
     }), n("47120"), n("411104"), n("733860"), n("653041");
     var i, r = n("735250"),
@@ -19,8 +19,8 @@ function(e, t, n) {
         T = n("278297"),
         f = n("768581"),
         S = n("176354"),
-        A = n("506071"),
-        h = n("149203");
+        h = n("506071"),
+        A = n("149203");
 
     function m(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
@@ -52,7 +52,7 @@ function(e, t, n) {
                 } = this.state;
             if (null != t) return t;
             if (null != n) {
-                let e = h.EMOJI_SIZE_MAP[l];
+                let e = A.EMOJI_SIZE_MAP[l];
                 return f.default.getEmojiURL({
                     id: n,
                     animated: a && !0 === r && (!0 === s || u || !0 === o),
@@ -132,7 +132,7 @@ function(e, t, n) {
     m(N, "defaultProps", {
         isInteracting: !1
     });
-    let O = function(e) {
+    let p = function(e) {
         if (null == window.IntersectionObserver) return function(t) {
             return (0, r.jsx)(e, {
                 ...t,
@@ -208,14 +208,14 @@ function(e, t, n) {
         }
     }(N);
 
-    function p(e) {
+    function O(e) {
         let t = E.AnimateEmoji.useSetting(),
             n = {
                 autoplay: null == e.autoplay ? t : e.autoplay,
                 allowAnimatedEmoji: t
             },
-            i = __OVERLAY__ ? (0, _.useStateFromStores)([I.default], () => I.default.isInstanceFocused()) : (0, A.useIsWindowFocused)();
-        return (0, r.jsx)(O, {
+            i = __OVERLAY__ ? (0, _.useStateFromStores)([I.default], () => I.default.isInstanceFocused()) : (0, h.useIsWindowFocused)();
+        return (0, r.jsx)(p, {
             ...e,
             ...n,
             isFocused: i

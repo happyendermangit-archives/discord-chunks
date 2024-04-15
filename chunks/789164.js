@@ -23,7 +23,7 @@ function(e, t, n) {
             htmlFor: T,
             tag: f = "h5",
             ...S
-        } = e, A = r.useId(), h = null !== (n = S.titleId) && void 0 !== n ? n : A;
+        } = e, h = r.useId(), A = null !== (n = S.titleId) && void 0 !== n ? n : h;
         return (0, i.jsx)("div", {
             ref: t,
             className: d,
@@ -32,7 +32,7 @@ function(e, t, n) {
                     className: l.sectionTitle,
                     children: [E, null != c ? (0, i.jsx)(o.FormTitle, {
                         tag: f,
-                        id: h,
+                        id: A,
                         htmlFor: T,
                         disabled: I,
                         className: _,
@@ -42,7 +42,7 @@ function(e, t, n) {
                 children: (0, i.jsx)("div", {
                     className: l.children,
                     children: (0, i.jsx)(a.FormContextProvider, {
-                        titleId: h,
+                        titleId: A,
                         children: u
                     })
                 })

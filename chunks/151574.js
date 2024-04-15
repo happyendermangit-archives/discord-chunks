@@ -14,12 +14,12 @@ function(e, t, n) {
         T = n("906732"),
         f = n("570220"),
         S = n("28546"),
-        A = n("285651"),
-        h = n("926491"),
+        h = n("285651"),
+        A = n("926491"),
         m = n("373228"),
         N = n("378233"),
-        O = n("419922"),
-        p = n("490095"),
+        p = n("419922"),
+        O = n("490095"),
         R = n("652136"),
         C = n("695346"),
         g = n("465670"),
@@ -67,12 +67,12 @@ function(e, t, n) {
                 children: (0, s.jsx)("div", {
                     className: U.maskBackground
                 })
-            }), (0, s.jsx)(O.default, {
+            }), (0, s.jsx)(p.default, {
                 maskAsset: !0,
                 size: G,
                 sticker: a,
                 className: U.__invalid_sticker
-            }), i !== A.StickerSendability.SENDABLE && (0, s.jsx)(p.default, {
+            }), i !== h.StickerSendability.SENDABLE && (0, s.jsx)(O.default, {
                 size: 14
             })]
         })
@@ -86,7 +86,7 @@ function(e, t, n) {
             onSelectSticker: o,
             stickerIconVisible: _ = !1,
             submitButtonVisible: c = !1
-        } = e, O = a.useContext(f.default), [p, L] = a.useState(null), [b, G] = a.useState(!1), [V, F] = a.useState(null), x = (0, S.useExpressionPickerStore)(e => null != e.activeView), H = a.useRef(null), [Y, j] = a.useState(""), [W, K] = a.useState(""), [z, X] = a.useState(!1), [Q, q] = a.useState(!1), Z = (0, v.useStickerSuggestionResults)(Y, b, i), {
+        } = e, p = a.useContext(f.default), [O, L] = a.useState(null), [b, G] = a.useState(!1), [V, F] = a.useState(null), x = (0, S.useExpressionPickerStore)(e => null != e.activeView), H = a.useRef(null), [Y, j] = a.useState(""), [W, K] = a.useState(""), [z, X] = a.useState(!1), [q, Q] = a.useState(!1), Z = (0, v.useStickerSuggestionResults)(Y, b, i), {
             analyticsLocations: J
         } = (0, T.default)(I.default.EXPRESSION_SUGGESTIONS), {
             handleTextChange: $,
@@ -94,7 +94,7 @@ function(e, t, n) {
         } = (0, v.useTextChangeHandler)({
             setTextInputValue: j,
             setHasDismissed: G,
-            setHasSelection: q,
+            setHasSelection: Q,
             setFocusedSuggestionType: L
         });
         a.useEffect(() => {
@@ -103,17 +103,17 @@ function(e, t, n) {
                 },
                 t = e => {
                     let t = "" !== e && null != e;
-                    if (q(t), t) {
+                    if (Q(t), t) {
                         var i;
                         L(null), null === (i = n.current) || void 0 === i || i.focus()
                     }
                 };
-            return O.addListener("text-changed", $), O.addListener("autocomplete-visibility-change", e), O.addListener("selection-changed", t), () => {
-                O.removeListener("text-changed", $), O.removeListener("autocomplete-visibility-change", e), O.removeListener("selection-changed", t)
+            return p.addListener("text-changed", $), p.addListener("autocomplete-visibility-change", e), p.addListener("selection-changed", t), () => {
+                p.removeListener("text-changed", $), p.removeListener("autocomplete-visibility-change", e), p.removeListener("selection-changed", t)
             }
-        }, [$, n, O]), a.useLayoutEffect(() => {
-            null == p && F(null)
-        }, [p]);
+        }, [$, n, p]), a.useLayoutEffect(() => {
+            null == O && F(null)
+        }, [O]);
         let [et, en] = a.useState(!1);
         a.useLayoutEffect(() => {
             requestAnimationFrame(() => {
@@ -122,7 +122,7 @@ function(e, t, n) {
             })
         }, [r]);
         let ei = Z.length > 0,
-            er = et && !x && !z && !b && !Q && ei,
+            er = et && !x && !z && !b && !q && ei,
             {
                 stickersNavigator: es
             } = function(e) {
@@ -175,7 +175,7 @@ function(e, t, n) {
                 editorRef: n,
                 hasStickerResults: ei,
                 shouldRenderSuggestions: er,
-                focusedSuggestionType: p,
+                focusedSuggestionType: O,
                 setFocusedSuggestionType: L,
                 setHasDismissed: G,
                 setFocusedStickerListItem: F,
@@ -186,22 +186,22 @@ function(e, t, n) {
                     if (D.default.track(y.AnalyticEvents.AUTO_SUGGEST_EXPRESSION_SELECTED, {
                             sticker_id: e.id,
                             suggestion_trigger: W
-                        }), t === A.StickerSendability.SENDABLE) G(!0), o(e, m.StickerSelectLocation.EXPRESSION_SUGGESTIONS), ee.cancel(), j("");
+                        }), t === h.StickerSendability.SENDABLE) G(!0), o(e, m.StickerSelectLocation.EXPRESSION_SUGGESTIONS), ee.cancel(), j("");
                     else if ((0, N.isStandardSticker)(e)) {
-                        let t = h.default.getStickerPack(e.pack_id);
+                        let t = A.default.getStickerPack(e.pack_id);
                         null != t && (0, R.default)({
                             stickerPack: t,
                             analyticsLocations: J
                         })
                     }
-                    O.emit("sticker-suggestions-hidden")
+                    p.emit("sticker-suggestions-hidden")
                 }
             },
             eo = a.useRef([]),
             el = a.useRef(!1);
         a.useEffect(() => {
-            er && (eo.current = Z), er !== el.current && (O.emit(er ? "sticker-suggestions-shown" : "sticker-suggestions-hidden"), er && ((0, M.throttledTrackExpressionSuggestionDisplayed)(Y), K(Y))), el.current = er
-        }, [O, er, Z, Y]);
+            er && (eo.current = Z), er !== el.current && (p.emit(er ? "sticker-suggestions-shown" : "sticker-suggestions-hidden"), er && ((0, M.throttledTrackExpressionSuggestionDisplayed)(Y), K(Y))), el.current = er
+        }, [p, er, Z, Y]);
         let eu = !er,
             ed = er ? Z : eo.current;
         return (0, s.jsx)(T.AnalyticsLocationProvider, {
@@ -238,7 +238,7 @@ function(e, t, n) {
                                         t.current = e
                                     },
                                     onMouseLeave: () => {
-                                        null == p && F(null)
+                                        null == O && F(null)
                                     },
                                     tabIndex: eu ? -1 : n,
                                     ...i,

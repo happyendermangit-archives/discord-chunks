@@ -12,12 +12,12 @@ function(e, t, n) {
         T = n("812206"),
         f = n("594190"),
         S = n("592745"),
-        A = n("706454"),
-        h = n("757266"),
+        h = n("706454"),
+        A = n("757266"),
         m = n("77498"),
         N = n("283595"),
-        O = n("246946"),
-        p = n("230307"),
+        p = n("246946"),
+        O = n("230307"),
         R = n("799777"),
         C = n("417363"),
         g = n("941128"),
@@ -36,7 +36,7 @@ function(e, t, n) {
         V = !1;
 
     function F(e, t) {
-        return e.application.name.localeCompare(t.application.name, A.default.locale, {
+        return e.application.name.localeCompare(t.application.name, h.default.locale, {
             sensitivity: "base"
         })
     }
@@ -62,7 +62,7 @@ function(e, t, n) {
         K = (0, D.cachedFunction)(e => e.filter(e => null != e.libraryApplication && e.libraryApplication.isHidden()));
 
     function z(e, t) {
-        let n = p.default.getCurrentUserStatisticsForApplication(e.id);
+        let n = O.default.getCurrentUserStatisticsForApplication(e.id);
         if (null != n) return new Date(n.last_played_at).getTime();
         let i = t[e.id];
         return null != i ? i : 0
@@ -96,12 +96,12 @@ function(e, t, n) {
                         LibraryApplicationStore: N.default,
                         LaunchableGameStore: S.default,
                         DispatchApplicationStore: C.default,
-                        ConnectedAppsStore: h.default,
+                        ConnectedAppsStore: A.default,
                         applicationId: e.id,
                         branchId: e.branchId
                     }),
                     isUpdatingFlags: N.default.isUpdatingFlags(e.id, e.branchId),
-                    shouldShowInLibrary: (0, M.shouldShowGameInLibrary)(o, e, O.default),
+                    shouldShowInLibrary: (0, M.shouldShowGameInLibrary)(o, e, p.default),
                     defaultAction: (0, b.getDefaultLibraryApplicationAction)(e, C.default, g.default)
                 }
             })(i, n, t, e, !0)).filter(v.isNotNullish),
@@ -121,7 +121,7 @@ function(e, t, n) {
                         LibraryApplicationStore: N.default,
                         LaunchableGameStore: S.default,
                         DispatchApplicationStore: C.default,
-                        ConnectedAppsStore: h.default,
+                        ConnectedAppsStore: A.default,
                         applicationId: e,
                         branchId: null
                     }),
@@ -133,9 +133,9 @@ function(e, t, n) {
             })(i, n, t, e)).filter(v.isNotNullish), ...r].sort((e, t) => e.lastPlayed === t.lastPlayed ? 0 : e.lastPlayed > t.lastPlayed ? -1 : 1);
         return V = null != m.default.lastFetched && N.default.fetched, !d().isEqual(s, B) && (B = s, y.isPlatformEmbedded && P.default.setSystemTrayApplications(Y(B).map(e => e.application).slice(0, 5)), !0)
     }
-    class Q extends(i = E.default.Store) {
+    class q extends(i = E.default.Store) {
         initialize() {
-            this.syncWith([T.default, m.default, S.default, f.default, C.default, g.default, N.default, p.default, O.default, h.default], X, 200), this.syncWith([R.default, A.default], () => !0)
+            this.syncWith([T.default, m.default, S.default, f.default, C.default, g.default, N.default, O.default, p.default, A.default], X, 200), this.syncWith([R.default, h.default], () => !0)
         }
         get applicationFilterQuery() {
             return k
@@ -153,7 +153,7 @@ function(e, t, n) {
             return j(this.libraryApplicationViewItems, k)
         }
         get sortedFilteredLibraryApplicationViewItems() {
-            return W(this.filteredLibraryApplicationViewItems, R.default.sortKey, R.default.sortDirection, A.default.locale)
+            return W(this.filteredLibraryApplicationViewItems, R.default.sortKey, R.default.sortDirection, h.default.locale)
         }
         get hiddenLibraryApplicationViewItems() {
             return K(B)
@@ -162,12 +162,12 @@ function(e, t, n) {
             return V
         }
     }
-    a = "ApplicationViewStore", (s = "displayName") in(r = Q) ? Object.defineProperty(r, s, {
+    a = "ApplicationViewStore", (s = "displayName") in(r = q) ? Object.defineProperty(r, s, {
         value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a, t.default = new Q(I.default, {
+    }) : r[s] = a, t.default = new q(I.default, {
         LIBRARY_APPLICATION_FILTER_UPDATE: function(e) {
             let {
                 query: t

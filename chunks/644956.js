@@ -21,12 +21,12 @@ function(e, t, n) {
         T = n("906732"),
         f = n("818083"),
         S = n("480608"),
-        A = n("484459"),
-        h = n("103575"),
+        h = n("484459"),
+        A = n("103575"),
         m = n("592125"),
         N = n("271383"),
-        O = n("430824"),
-        p = n("594174"),
+        p = n("430824"),
+        O = n("594174"),
         R = n("285952"),
         C = n("797053"),
         g = n("151827"),
@@ -88,21 +88,21 @@ function(e, t, n) {
                 },
                 renderPopout: e => {
                     let t = m.default.getChannel(a),
-                        s = O.default.getGuild(y),
+                        s = p.default.getGuild(y),
                         l = N.default.getMembers(s.id),
-                        u = O.default.getRole(y, null != r ? r : s.getEveryoneRoleId()),
-                        E = o()(l).filter(e => !!("@everyone" === f || e.roles.includes(r)) && null != p.default.getUser(e.userId)).sortBy(e => {
+                        u = p.default.getRole(y, null != r ? r : s.getEveryoneRoleId()),
+                        E = o()(l).filter(e => !!("@everyone" === f || e.roles.includes(r)) && null != O.default.getUser(e.userId)).sortBy(e => {
                             var t;
-                            let n = p.default.getUser(e.userId);
+                            let n = O.default.getUser(e.userId);
                             return (null != n ? null !== (t = e.nick) && void 0 !== t ? t : n.username : "").toLocaleLowerCase()
                         }).map(e => {
-                            let r = p.default.getUser(e.userId);
+                            let r = O.default.getUser(e.userId);
                             return (0, i.jsx)(d.Popout, {
-                                preload: () => (0, A.default)(r.id, r.getAvatarURL(t.guild_id, 80), {
+                                preload: () => (0, h.default)(r.id, r.getAvatarURL(t.guild_id, 80), {
                                     guildId: t.guild_id,
                                     channelId: t.id
                                 }),
-                                renderPopout: n => (0, i.jsx)(h.default, {
+                                renderPopout: n => (0, i.jsx)(A.default, {
                                     ...n,
                                     location: "RoleMention",
                                     userId: e.userId,
@@ -129,7 +129,7 @@ function(e, t, n) {
                                             (0, _.openContextMenuLazy)(e, async () => {
                                                 let {
                                                     default: e
-                                                } = await Promise.all([n.e("99387"), n.e("79695"), n.e("85559"), n.e("70866"), n.e("12435"), n.e("64578")]).then(n.bind(n, "757387"));
+                                                } = await Promise.all([n.e("99387"), n.e("79695"), n.e("1502"), n.e("70866"), n.e("12435"), n.e("6696")]).then(n.bind(n, "757387"));
                                                 return n => (0, i.jsx)(e, {
                                                     ...n,
                                                     user: r,

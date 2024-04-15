@@ -8,7 +8,7 @@ function(e, t, n) {
             return S
         },
         run: function() {
-            return A
+            return h
         }
     }), n("47120"), n("653041");
     var i = n("512722"),
@@ -38,28 +38,28 @@ function(e, t, n) {
         return e.onChange = () => {
             let i = c.EditorUtils.richValue(e);
             (i !== a || e.previewMarkdown !== o) && (l.HistoryUtils.withMergedEntry(e, () => {
-                c.EditorUtils.withoutNormalizing(e, () => A(e, t, n))
+                c.EditorUtils.withoutNormalizing(e, () => h(e, t, n))
             }), a = i, o = e.previewMarkdown), s()
         }, e
     }
 
-    function A(e, t, n) {
+    function h(e, t, n) {
         let i = c.EditorUtils.areStylesDisabled(e);
         for (let r of c.EditorUtils.blocks(e))
-            if (T.has(r[0].type)) i ? m(e, r, !0, null) : h(e, r, t, n);
+            if (T.has(r[0].type)) i ? m(e, r, !0, null) : A(e, r, t, n);
             else {
                 let [s, a] = r;
                 for (let r = s.children.length - 1; r >= 0; r--) {
                     let o = s.children[r];
                     if (f.has(o.type)) {
                         let s = [o, c.PathUtils.child(a, r)];
-                        i ? m(e, s, !0, null) : h(e, s, t, n)
+                        i ? m(e, s, !0, null) : A(e, s, t, n)
                     }
                 }
             }
     }
 
-    function h(e, t, n, i) {
+    function A(e, t, n, i) {
         var s;
         let a = "line" === t[0].type && (null === (s = t[0].codeBlockState) || void 0 === s ? void 0 : s.isInCodeBlock) === !0,
             l = c.ElementUtils.markdown(t[0], n);
@@ -76,12 +76,12 @@ function(e, t, n) {
                         E.lastIndex = I.index + 1;
                         continue
                     }
-                    if (O(e, l, {
+                    if (p(e, l, {
                             path: f,
                             offset: I.index
                         }, s)) continue;
                     let r = (0, o.resolvePlaintextInlineVoid)(I[0], n, i);
-                    null != r && p(i, t[0], r) ? S.push({
+                    null != r && O(i, t[0], r) ? S.push({
                         index: I.index,
                         length: I[0].length,
                         node: r
@@ -135,7 +135,7 @@ function(e, t, n) {
                         path: c.PathUtils.child(r, 0),
                         offset: 0
                     };
-                (n || null != i && O(e, s, l, i)) && (_.SlateTransforms.voidToText(e, (0, d.serializeDescendant)(o, {
+                (n || null != i && p(e, s, l, i)) && (_.SlateTransforms.voidToText(e, (0, d.serializeDescendant)(o, {
                     mode: "plain",
                     preventEmojiSurrogates: !0
                 }), r), a = !0)
@@ -244,7 +244,7 @@ function(e, t, n) {
                 default:
                     continue
             }
-            if (!p(n, t[0], o)) continue;
+            if (!O(n, t[0], o)) continue;
             let l = (0, u.getPointFromPosition)(e, r, i.serializedChildren, a.start),
                 d = (0, u.getPointFromPosition)(e, r, i.serializedChildren, a.start + a.text.length);
             _.SlateTransforms.textToVoid(e, o, {
@@ -255,7 +255,7 @@ function(e, t, n) {
         return s
     }
 
-    function O(e, t, n, i) {
+    function p(e, t, n, i) {
         let r = 0;
         for (let [i, s] of c.EditorUtils.nodes(e, {
                 at: {
@@ -273,7 +273,7 @@ function(e, t, n) {
         return !1
     }
 
-    function p(e, t, n) {
+    function O(e, t, n) {
         if ("applicationCommandOption" !== t.type) return !0;
         switch (t.optionType) {
             case s.ApplicationCommandOptionType.CHANNEL:

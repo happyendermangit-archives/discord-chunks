@@ -68,7 +68,7 @@ function(e, t, n) {
             })
         };
     S.Sizes = f;
-    class A extends(i = s.PureComponent) {
+    class h extends(i = s.PureComponent) {
         focus() {
             let {
                 current: e
@@ -95,12 +95,12 @@ function(e, t, n) {
                 isLoading: c,
                 size: T,
                 disabled: f,
-                onChange: A,
-                onBlur: h,
+                onChange: h,
+                onBlur: A,
                 onFocus: m,
                 autoComplete: N,
-                inputProps: O,
-                hideSearchIcon: p,
+                inputProps: p,
+                hideSearchIcon: O,
                 "aria-label": R = E.default.Messages.SEARCH,
                 ...C
             } = this.props;
@@ -116,9 +116,9 @@ function(e, t, n) {
                     children: (0, r.jsxs)("div", {
                         className: I.inner,
                         children: [(0, r.jsx)("input", {
-                            ...O,
+                            ...p,
                             onFocus: m,
-                            onBlur: h,
+                            onBlur: A,
                             className: I.input,
                             value: e,
                             onChange: this.handleOnChange,
@@ -131,7 +131,7 @@ function(e, t, n) {
                             autoComplete: N,
                             "aria-label": R,
                             ref: this.inputRef
-                        }), !p && (0, r.jsx)(S, {
+                        }), !O && (0, r.jsx)(S, {
                             size: T,
                             hasContent: e.length > 0,
                             onClear: n,
@@ -151,9 +151,9 @@ function(e, t, n) {
             })
         }
     }
-    T(A, "Sizes", f), T(A, "defaultProps", {
+    T(h, "Sizes", f), T(h, "defaultProps", {
         size: f.SMALL,
         isLoading: !1,
         disabled: !1
-    }), t.default = A
+    }), t.default = h
 }

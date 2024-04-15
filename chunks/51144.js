@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         ageEligibleForPremiumUpsell: function() {
-            return A
+            return h
         },
         getName: function() {
             return E
@@ -14,10 +14,10 @@ function(e, t, n) {
             return f
         },
         isNewUser: function() {
-            return h
+            return A
         },
         useDirectMessageRecipient: function() {
-            return O
+            return p
         },
         useName: function() {
             return I
@@ -103,14 +103,14 @@ function(e, t, n) {
         return (null == n || !!(r <= 864e5 * n)) && !!(r >= 864e5 * i) || !1
     }
 
-    function A(e) {
+    function h(e) {
         return !S(e, {
             minDaysOld: 0,
             maxDaysOld: 30
         })
     }
 
-    function h(e) {
+    function A(e) {
         return S(e, {
             minDaysOld: 0,
             maxDaysOld: 7
@@ -135,7 +135,7 @@ function(e, t, n) {
         return m(e, n, i)
     }
 
-    function O(e) {
+    function p(e) {
         return (0, i.useStateFromStores)([s.default], () => {
             if (null != e) return e.isPrivate() && e.isDM() ? s.default.getUser(e.getRecipientId()) : null
         })
@@ -161,6 +161,6 @@ function(e, t, n) {
         },
         getGlobalName: T,
         humanizeStatus: f,
-        useDirectMessageRecipient: O
+        useDirectMessageRecipient: p
     }
 }

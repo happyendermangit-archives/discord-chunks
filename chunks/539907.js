@@ -23,7 +23,7 @@ function(e, t, n) {
         f = n("981631"),
         S = n("260064");
 
-    function A(e, t, n) {
+    function h(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -31,13 +31,13 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    let h = new WeakMap;
+    let A = new WeakMap;
 
     function m(e, t) {
         if (e.contains(t)) return !0;
         let n = (0, I.default)(t, S.layer);
         for (; null != n;) {
-            let t = h.get(n);
+            let t = A.get(n);
             if (null == t) break;
             if (e.contains(t)) return !0;
             n = (0, I.default)(t, S.layer)
@@ -54,7 +54,7 @@ function(e, t, n) {
         return null != t ? t : "".concat(n, ":").concat(i)
     }
 
-    function O(e, t, n, i) {
+    function p(e, t, n, i) {
         switch (e) {
             case "top":
                 return u()(null != t.bottom, "Missing bottom"), i.offsetHeight - (t.bottom + n.offsetHeight);
@@ -72,7 +72,7 @@ function(e, t, n) {
         }
     }
 
-    function p(e, t, n) {
+    function O(e, t, n) {
         if (null != e && e < 0 && ("top" === n.position || "bottom" === n.position) && null != t && Math.abs(e) < (null == t ? void 0 : t.offsetHeight) && null != n.style) {
             let t = "top" === n.position ? "bottom" : "top",
                 i = n.style[t];
@@ -258,7 +258,7 @@ function(e, t, n) {
                 } = this.calculatePositionStyle(e, n, i),
                 a = null,
                 o = null;
-            if (t && (a = O(e, r, n, i)) < 0) {
+            if (t && (a = p(e, r, n, i)) < 0) {
                 let t = function(e) {
                         switch (e) {
                             case "top":
@@ -281,13 +281,13 @@ function(e, t, n) {
                         style: r,
                         nudge: s
                     } = this.calculatePositionStyle(t, n, i);
-                if ((o = O(t, r, n, i)) > a) return p(o, n, {
+                if ((o = p(t, r, n, i)) > a) return O(o, n, {
                     position: t,
                     nudge: s,
                     style: r
                 })
             }
-            return p(a, n, {
+            return O(a, n, {
                 position: e,
                 nudge: s,
                 style: r
@@ -304,7 +304,7 @@ function(e, t, n) {
                 ...this.calculateState()
             });
             let r = this.elementRef.current;
-            u()(null != r, "Missing elementRef"), "function" != typeof n && null != n.current && h.set(r, n.current), c.ComponentDispatch.subscribe(f.ComponentActions.LAYER_POP_START, this.handleLayerPopStart), c.ComponentDispatch.subscribe(f.ComponentActions.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == r || null === (t = r.ownerDocument) || void 0 === t || null === (e = t.defaultView) || void 0 === e || e.addEventListener("resize", this.handleLayerPopComplete), null == i || i()
+            u()(null != r, "Missing elementRef"), "function" != typeof n && null != n.current && A.set(r, n.current), c.ComponentDispatch.subscribe(f.ComponentActions.LAYER_POP_START, this.handleLayerPopStart), c.ComponentDispatch.subscribe(f.ComponentActions.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == r || null === (t = r.ownerDocument) || void 0 === t || null === (e = t.defaultView) || void 0 === e || e.addEventListener("resize", this.handleLayerPopComplete), null == i || i()
         }
         componentDidUpdate(e, t) {
             if (N(e) !== N(this.props) ? this.updatePosition() : ! function(e, t) {
@@ -322,7 +322,7 @@ function(e, t, n) {
         componentWillUnmount() {
             var e, t, n, i;
             let r = this.elementRef.current;
-            u()(null != r, "Missing elementRef"), h.delete(r), c.ComponentDispatch.unsubscribe(f.ComponentActions.LAYER_POP_START, this.handleLayerPopStart), c.ComponentDispatch.unsubscribe(f.ComponentActions.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == r || null === (t = r.ownerDocument) || void 0 === t || null === (e = t.defaultView) || void 0 === e || e.removeEventListener("resize", this.handleLayerPopComplete), null === (n = (i = this.props).onUnmount) || void 0 === n || n.call(i)
+            u()(null != r, "Missing elementRef"), A.delete(r), c.ComponentDispatch.unsubscribe(f.ComponentActions.LAYER_POP_START, this.handleLayerPopStart), c.ComponentDispatch.unsubscribe(f.ComponentActions.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == r || null === (t = r.ownerDocument) || void 0 === t || null === (e = t.defaultView) || void 0 === e || e.removeEventListener("resize", this.handleLayerPopComplete), null === (n = (i = this.props).onUnmount) || void 0 === n || n.call(i)
         }
         render() {
             let {
@@ -367,28 +367,28 @@ function(e, t, n) {
             })
         }
         constructor(...e) {
-            super(...e), A(this, "elementRef", s.createRef()), A(this, "state", {
+            super(...e), h(this, "elementRef", s.createRef()), h(this, "state", {
                 style: Object.freeze({}),
                 position: this.props.autoInvert ? null : this.props.position,
                 nudge: 0,
                 isPositioned: !1,
                 isSettingsLayerTransitioning: !1
-            }), A(this, "handleLayerPopStart", () => {
+            }), h(this, "handleLayerPopStart", () => {
                 this.setState({
                     isSettingsLayerTransitioning: !0
                 })
-            }), A(this, "handleLayerPopComplete", () => {
+            }), h(this, "handleLayerPopComplete", () => {
                 let e = this.calculateState();
                 this.setState({
                     ...e,
                     isSettingsLayerTransitioning: !1
                 })
-            }), A(this, "updatePosition", () => {
+            }), h(this, "updatePosition", () => {
                 this.setState(this.calculateState())
             })
         }
     }
-    A(R, "defaultProps", {
+    h(R, "defaultProps", {
         nudgeAlignIntoViewport: !1,
         spacing: 0,
         autoInvert: !1,

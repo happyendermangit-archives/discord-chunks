@@ -54,27 +54,27 @@ function(e, t, n) {
                 shouldLoop: T,
                 durationMin: f,
                 durationMax: S,
-                ...A
-            } = n, h = t._value, m = E(n.duration, f, S), N = E(n.toValue, s, a), O = i[I](t, {
-                ...A,
+                ...h
+            } = n, A = t._value, m = E(n.duration, f, S), N = E(n.toValue, s, a), p = i[I](t, {
+                ...h,
                 toValue: N,
                 tension: o,
                 friction: l,
                 duration: m
-            }), p = O;
+            }), O = p;
             if (d || _) {
                 let e = E(n.duration, f, S);
                 r = i[I](t, {
-                    ...A,
-                    toValue: d ? h : -N,
+                    ...h,
+                    toValue: d ? A : -N,
                     tension: o,
                     friction: l,
                     duration: e
-                }), p = i.sequence([O, r])
+                }), O = i.sequence([p, r])
             }
-            u ? p.start(() => {
+            u ? O.start(() => {
                 (!T || T && T()) && (c ? c(e.bind(null, t, n)) : e(t, n))
-            }) : p.start(c)
+            }) : O.start(c)
         },
         interpolate: function(e) {
             for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];

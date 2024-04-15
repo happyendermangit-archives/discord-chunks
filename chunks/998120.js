@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return _
+            return c
         }
     });
     var i = n("735250");
@@ -11,32 +11,39 @@ function(e, t, n) {
         s = n("10683"),
         a = n("955623"),
         o = n("481060"),
-        l = n("702557"),
-        u = n("689938"),
-        d = n("222477");
+        l = n("785717"),
+        u = n("702557"),
+        d = n("689938"),
+        _ = n("222477");
 
-    function _(e) {
+    function c(e) {
         let {
             user: t,
-            onClick: n
-        } = e, _ = (0, l.default)(t.id), c = null == _.note ? u.default.Messages.ADD_NOTE : (0, i.jsxs)("div", {
-            className: d.noteText,
+            onOpenProfile: n
+        } = e, {
+            trackUserProfileAction: c
+        } = (0, l.useUserProfileAnalyticsContext)(), E = (0, u.default)(t.id), I = null == E.note ? d.default.Messages.ADD_NOTE : (0, i.jsxs)("div", {
+            className: _.noteText,
             children: [(0, i.jsx)(o.TextAreaAutosize, {
-                className: d.noteTextArea,
-                value: _.note
+                className: _.noteTextArea,
+                value: E.note
             }), (0, i.jsx)(a.PencilIcon, {
-                className: d.noteIcon,
+                className: _.noteIcon,
                 height: 14,
                 width: 14,
                 color: r.default.colors.INTERACTIVE_MUTED
             })]
-        }), E = null == _.note ? u.default.Messages.ADD_NOTE : _.note;
+        }), T = null == E.note ? d.default.Messages.ADD_NOTE : E.note;
         return (0, i.jsx)(o.TooltipContainer, {
-            text: c,
-            "aria-label": E,
+            text: I,
+            "aria-label": T,
             children: (0, i.jsx)(o.Clickable, {
-                onClick: n,
-                className: d.noteClickable,
+                onClick: () => {
+                    c({
+                        action: "PRESS_ADD_NOTE"
+                    }), n()
+                },
+                className: _.noteClickable,
                 children: (0, i.jsx)(s.PaperIcon, {
                     height: 16,
                     width: 16,

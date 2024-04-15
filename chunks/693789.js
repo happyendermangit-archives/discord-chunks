@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         Button: function() {
-            return h
+            return A
         },
         ButtonBorderColors: function() {
             return T
@@ -23,7 +23,7 @@ function(e, t, n) {
             return S
         },
         getButtonStyle: function() {
-            return A
+            return h
         }
     });
     var i = n("735250"),
@@ -91,7 +91,7 @@ function(e, t, n) {
             ICON: c.sizeIcon
         };
 
-    function A() {
+    function h() {
         let {
             look: e = E.FILLED,
             color: t = I.BRAND,
@@ -111,7 +111,7 @@ function(e, t, n) {
         })
     }
 
-    function h(e) {
+    function A(e) {
         let {
             look: t = E.FILLED,
             color: n = I.BRAND,
@@ -119,11 +119,11 @@ function(e, t, n) {
             hover: o,
             size: T = S.MEDIUM,
             fullWidth: f = !1,
-            grow: h = !0,
+            grow: A = !0,
             disabled: m = !1,
             submitting: N = !1,
-            type: O = "button",
-            style: p,
+            type: p = "button",
+            style: O,
             wrapperClassName: R,
             className: C,
             innerClassName: g,
@@ -173,18 +173,18 @@ function(e, t, n) {
                 onMouseEnter: y,
                 onMouseLeave: P,
                 onKeyDown: m ? void 0 : U,
-                type: O,
+                type: p,
                 disabled: m,
-                style: p,
+                style: O,
                 rel: G,
-                className: a()(C, A({
+                className: a()(C, h({
                     look: t,
                     color: n,
                     borderColor: s,
                     hover: o,
                     size: T,
                     fullWidth: f,
-                    grow: h,
+                    grow: A,
                     submitting: N,
                     disabled: m
                 }), Y ? null : R),
@@ -200,7 +200,7 @@ function(e, t, n) {
         });
         return Y ? (0, i.jsxs)("span", {
             className: a()(c.disabledButtonWrapper, R, T, {
-                [c.grow]: h,
+                [c.grow]: A,
                 [c.fullWidth]: f
             }),
             children: [K, (0, i.jsx)("span", {
@@ -222,20 +222,20 @@ function(e, t, n) {
             grow: d = !0,
             style: _,
             className: T,
-            innerClassName: A,
-            to: h,
+            innerClassName: h,
+            to: A,
             onClick: m,
             onMouseDown: N,
-            onMouseUp: O,
-            children: p,
+            onMouseUp: p,
+            children: O,
             rel: R,
             ...C
         } = e;
         return (0, i.jsx)(o.Link, {
             ...C,
-            to: h,
+            to: A,
             onClick: m,
-            onMouseUp: O,
+            onMouseUp: p,
             onMouseDown: N,
             style: _,
             rel: R,
@@ -245,10 +245,10 @@ function(e, t, n) {
                 [c.hasHover]: null != s && s !== f.DEFAULT
             }),
             children: (0, i.jsx)("span", {
-                className: a()(c.contents, A),
-                children: p
+                className: a()(c.contents, h),
+                children: O
             })
         })
     }
-    h.Looks = E, h.Colors = I, h.BorderColors = T, h.Hovers = f, h.Sizes = S, h.Link = m
+    A.Looks = E, A.Colors = I, A.BorderColors = T, A.Hovers = f, A.Sizes = S, A.Link = m
 }

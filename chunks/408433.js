@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getMaxEmbedMediaSize: function() {
-            return O
+            return p
         },
         isEmbedInline: function() {
             return m
@@ -11,10 +11,10 @@ function(e, t, n) {
             return N
         },
         mergeEmbedsOnURL: function() {
-            return h
+            return A
         },
         sanitizeEmbed: function() {
-            return A
+            return h
         }
     }), n("47120"), n("789020"), n("653041");
     var i = n("392711"),
@@ -58,7 +58,7 @@ function(e, t, n) {
         }
     }
 
-    function A(e, t, n) {
+    function h(e, t, n) {
         let i = {
             id: r().uniqueId("embed_"),
             url: n.url,
@@ -116,7 +116,7 @@ function(e, t, n) {
         return i
     }
 
-    function h(e) {
+    function A(e) {
         let t = new Map,
             n = [];
         return e.forEach(e => {
@@ -148,7 +148,7 @@ function(e, t, n) {
         return e.type === u.MessageEmbedTypes.ARTICLE && null != e.url && (I.test(e.url) || E.test(e.url))
     }
 
-    function O(e, t, n) {
+    function p(e, t, n) {
         var i;
         return null != t && null != n ? {
             maxMediaWidth: t,

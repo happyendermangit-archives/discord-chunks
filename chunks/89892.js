@@ -393,38 +393,38 @@ function(e, t, n) {
             })
         }
         loadComplete(e) {
-            var t, n, i, o, l, d, _, E, f, S, A;
-            let h = [...e.newMessages],
+            var t, n, i, o, l, d, _, E, f, S, h;
+            let A = [...e.newMessages],
                 m = null !== (t = e.isBefore) && void 0 !== t && t,
                 N = null !== (n = e.isAfter) && void 0 !== n && n,
-                O = null !== (i = e.jump) && void 0 !== i ? i : null,
-                p = null !== (o = e.hasMoreBefore) && void 0 !== o && o,
+                p = null !== (i = e.jump) && void 0 !== i ? i : null,
+                O = null !== (o = e.hasMoreBefore) && void 0 !== o && o,
                 R = null !== (l = e.hasMoreAfter) && void 0 !== l && l,
                 C = null !== (d = e.cached) && void 0 !== d && d,
-                g = r()(h).reverse().map(s.default.getCurrentConfig({
+                g = r()(A).reverse().map(s.default.getCurrentConfig({
                     location: "2ecb25_2"
                 }, {
                     autoTrackExposure: !1
                 }).enabled ? e => (0, u.createMessageRecord)(e) : e => T(this, e)).value(),
                 L = null;
-            if ((m || N) && null == O && this.ready) L = this.merge(g, m, !0);
+            if ((m || N) && null == p && this.ready) L = this.merge(g, m, !0);
             else {
                 let e = this._array.filter(e => e.state === c.MessageStates.SENDING);
-                L = this.reset(g), !(e.length > 0) || m || N || (null == O ? void 0 : O.messageId) != null || (null == O ? void 0 : O.offset) != null ? I.info("loadComplete: resetting state for channelId=".concat(this.channelId, ", sending.length=").concat(e.length)) : (I.info("loadComplete: merging with SENDING messages for channelId=".concat(this.channelId)), L = L.merge(e))
+                L = this.reset(g), !(e.length > 0) || m || N || (null == p ? void 0 : p.messageId) != null || (null == p ? void 0 : p.offset) != null ? I.info("loadComplete: resetting state for channelId=".concat(this.channelId, ", sending.length=").concat(e.length)) : (I.info("loadComplete: merging with SENDING messages for channelId=".concat(this.channelId)), L = L.merge(e))
             }
             return L = L.mutate({
                 ready: !0,
                 loadingMore: !1,
-                jumpType: null !== (_ = null == O ? void 0 : O.jumpType) && void 0 !== _ ? _ : a.JumpTypes.ANIMATED,
-                jumpFlash: null !== (E = null == O ? void 0 : O.flash) && void 0 !== E && E,
-                jumped: null != O,
-                jumpedToPresent: null !== (f = null == O ? void 0 : O.present) && void 0 !== f && f,
-                jumpTargetId: null !== (S = null == O ? void 0 : O.messageId) && void 0 !== S ? S : null,
-                jumpTargetOffset: null != O && null != O.messageId && null != O.offset ? O.offset : 0,
-                jumpSequenceId: null != O ? L.jumpSequenceId + 1 : L.jumpSequenceId,
-                jumpReturnTargetId: null !== (A = null == O ? void 0 : O.returnMessageId) && void 0 !== A ? A : null,
-                hasMoreBefore: null == O && N ? L.hasMoreBefore : p,
-                hasMoreAfter: null == O && m ? L.hasMoreAfter : R,
+                jumpType: null !== (_ = null == p ? void 0 : p.jumpType) && void 0 !== _ ? _ : a.JumpTypes.ANIMATED,
+                jumpFlash: null !== (E = null == p ? void 0 : p.flash) && void 0 !== E && E,
+                jumped: null != p,
+                jumpedToPresent: null !== (f = null == p ? void 0 : p.present) && void 0 !== f && f,
+                jumpTargetId: null !== (S = null == p ? void 0 : p.messageId) && void 0 !== S ? S : null,
+                jumpTargetOffset: null != p && null != p.messageId && null != p.offset ? p.offset : 0,
+                jumpSequenceId: null != p ? L.jumpSequenceId + 1 : L.jumpSequenceId,
+                jumpReturnTargetId: null !== (h = null == p ? void 0 : p.returnMessageId) && void 0 !== h ? h : null,
+                hasMoreBefore: null == p && N ? L.hasMoreBefore : O,
+                hasMoreAfter: null == p && m ? L.hasMoreAfter : R,
                 cached: C,
                 hasFetched: e.hasFetched,
                 error: !1

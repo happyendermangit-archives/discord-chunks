@@ -16,12 +16,12 @@ function(e, t, n) {
         T = n("131704"),
         f = n("592125"),
         S = n("306680"),
-        A = n("823379"),
-        h = n("709054"),
+        h = n("823379"),
+        A = n("709054"),
         m = n("569471");
     let N = 25,
-        O = !1,
-        p = !0,
+        p = !1,
+        O = !0,
         R = !1,
         C = !1,
         g = null,
@@ -30,7 +30,7 @@ function(e, t, n) {
         v = 0;
 
     function M() {
-        O = !1, p = !0, R = !1, C = !1, g = null, L = d.ThreadSortOrder.LATEST_ACTIVITY, i = new Set, v = 0, D = []
+        p = !1, O = !0, R = !1, C = !1, g = null, L = d.ThreadSortOrder.LATEST_ACTIVITY, i = new Set, v = 0, D = []
     }
 
     function y(e, t) {
@@ -48,9 +48,9 @@ function(e, t, n) {
             if (e || null == n) return !0;
             {
                 let e = null == t ? null : y(t, L);
-                return null != e && h.default.compare(e, n) >= 0
+                return null != e && A.default.compare(e, n) >= 0
             }
-        }).sort((e, t) => h.default.compare(y(e, L), y(t, L))).map(e => e.id).reverse().value()
+        }).sort((e, t) => A.default.compare(y(e, L), y(t, L))).map(e => e.id).reverse().value()
     }
 
     function U(e) {
@@ -63,19 +63,19 @@ function(e, t, n) {
             this.waitFor(f.default, m.default, S.default)
         }
         get canLoadMore() {
-            return R && !O && !C
+            return R && !p && !C
         }
         get nextOffset() {
             return v
         }
         get isInitialLoad() {
-            return p
+            return O
         }
         isLoading(e, t, n) {
-            return g === e && L === t && (0, A.areSetsEqual)(i, n) ? O : (M(), !1)
+            return g === e && L === t && (0, h.areSetsEqual)(i, n) ? p : (M(), !1)
         }
         getThreads(e, t, n) {
-            return g === e && L === t && (0, A.areSetsEqual)(i, n) ? D : b
+            return g === e && L === t && (0, h.areSetsEqual)(i, n) ? D : b
         }
     }
     o = "ArchivedThreadsStore", (a = "displayName") in(s = G) ? Object.defineProperty(s, a, {
@@ -102,10 +102,10 @@ function(e, t, n) {
             M()
         },
         LOAD_ARCHIVED_THREADS: function(e) {
-            (e.channelId !== g || e.sortOrder !== L || !(0, A.areSetsEqual)(e.tagFilter, i)) && M(), g = e.channelId, L = e.sortOrder, i = e.tagFilter instanceof Set ? e.tagFilter : new Set(e.tagFilter), O = !0, p = !1
+            (e.channelId !== g || e.sortOrder !== L || !(0, h.areSetsEqual)(e.tagFilter, i)) && M(), g = e.channelId, L = e.sortOrder, i = e.tagFilter instanceof Set ? e.tagFilter : new Set(e.tagFilter), p = !0, O = !1
         },
         LOAD_ARCHIVED_THREADS_SUCCESS: function(e) {
-            if (e.channelId !== g || e.sortOrder !== L || !(0, A.areSetsEqual)(e.tagFilter, i)) return !1;
+            if (e.channelId !== g || e.sortOrder !== L || !(0, h.areSetsEqual)(e.tagFilter, i)) return !1;
             let t = e.threads.filter(e => T.ALL_CHANNEL_TYPES.has(e.type)).map(e => e.id);
             D = D.concat(t);
             let n = f.default.getChannel(g);
@@ -116,11 +116,11 @@ function(e, t, n) {
                 hasMoreThreads: e.hasMore,
                 filterTagIds: Array.from(e.tagFilter),
                 sortOrder: e.sortOrder
-            }), P(), R = e.hasMore, v = e.offset + N, O = !1, p = !1
+            }), P(), R = e.hasMore, v = e.offset + N, p = !1, O = !1
         },
         LOAD_ARCHIVED_THREADS_FAIL: function(e) {
-            if (e.channelId !== g || e.sortOrder !== L || !(0, A.areSetsEqual)(e.tagFilter, i)) return !1;
-            O = !1, C = !0, p = !1
+            if (e.channelId !== g || e.sortOrder !== L || !(0, h.areSetsEqual)(e.tagFilter, i)) return !1;
+            p = !1, C = !0, O = !1
         },
         RESORT_THREADS: function(e) {
             return (null == g || null == e.channelId || g === e.channelId) && P()

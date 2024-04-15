@@ -32,12 +32,12 @@ function(e, t, n) {
                 dir: T = "ltr",
                 sections: f,
                 columns: S,
-                getItemKey: A,
-                getItemHeight: h,
+                getItemKey: h,
+                getItemHeight: A,
                 getSectionHeight: m,
                 chunkSize: N,
-                renderSection: O,
-                renderItem: p,
+                renderSection: p,
+                renderItem: O,
                 getSectionProps: R,
                 itemGutter: C,
                 removeEdgeItemGutters: g,
@@ -72,8 +72,8 @@ function(e, t, n) {
             } = (0, u.useVirtualizedMasonryState)({
                 sections: f,
                 columns: S,
-                getItemKey: A,
-                getItemHeight: h,
+                getItemKey: h,
+                getItemHeight: A,
                 getSectionHeight: m,
                 chunkSize: N,
                 itemGutter: C,
@@ -84,10 +84,10 @@ function(e, t, n) {
                 paddingHorizontal: M,
                 getScrollerState: x,
                 dir: T
-            }), Q = (0, r.useCallback)(function() {
+            }), q = (0, r.useCallback)(function() {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
                 e > F.current.dirty && (F.current.dirty = e, 2 === e ? z() : H(1))
-            }, [H, F, z]), q = (0, u.useScrollSpring)(V), Z = (0, r.useCallback)(() => X.itemGrid, [X]), J = (0, r.useCallback)(() => X.coordsMap, [X]), $ = s().useCallback(() => Q(), [Q]);
+            }, [H, F, z]), Q = (0, u.useScrollSpring)(V), Z = (0, r.useCallback)(() => X.itemGrid, [X]), J = (0, r.useCallback)(() => X.coordsMap, [X]), $ = s().useCallback(() => q(), [q]);
             (0, u.useResizeObserverSubscription)({
                 ref: V,
                 key: "container",
@@ -99,13 +99,13 @@ function(e, t, n) {
                 getItemGrid: Z,
                 getCoordsMap: J,
                 getScrollerState: x,
-                ...(0, u.getAnimatedScrollHelpers)(V, x, q)
-            }), [V, x, Z, q, J]);
+                ...(0, u.getAnimatedScrollHelpers)(V, x, Q)
+            }), [V, x, Z, Q, J]);
             let ee = (0, r.useCallback)(e => {
-                Q(1), null == G.current ? k(!0) : clearTimeout(G.current), G.current = setTimeout(() => {
+                q(1), null == G.current ? k(!0) : clearTimeout(G.current), G.current = setTimeout(() => {
                     G.current = null, k(!1)
                 }, 200), null != I && I(e)
-            }, [I, Q]);
+            }, [I, q]);
             return (0, i.jsx)("div", {
                 ref: V,
                 onScroll: ee,
@@ -133,14 +133,14 @@ function(e, t, n) {
                             return null != n && null != r ? (0, i.jsxs)("div", {
                                 style: n,
                                 ...a,
-                                children: [null != O && null != s && O(t, s, e), r.map(e => {
+                                children: [null != p && null != s && p(t, s, e), r.map(e => {
                                     let [t, n, i] = e, r = Y[t];
-                                    return null != r ? p(n, i, r, t, j) : null
+                                    return null != r ? O(n, i, r, t, j) : null
                                 })]
                             }, e) : null
                         })
                     })
-                }), [W, p, O, Y, K, R, j])
+                }), [W, O, p, Y, K, R, j])
             })
         })
     }

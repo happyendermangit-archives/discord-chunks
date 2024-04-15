@@ -48,12 +48,12 @@ function(e, t, n) {
         T = n("246946"),
         f = n("594174"),
         S = n("797053"),
-        A = n("934415"),
-        h = n("5192"),
+        h = n("934415"),
+        A = n("5192"),
         m = n("51144"),
         N = n("377668"),
-        O = n("689938"),
-        p = n("813517"),
+        p = n("689938"),
+        O = n("813517"),
         R = n("931093");
 
     function C(e) {
@@ -107,24 +107,24 @@ function(e, t, n) {
             id: t,
             guildId: n,
             channelId: a
-        } = e, l = (0, r.useStateFromStores)([f.default], () => f.default.getUser(t)), u = (0, r.useStateFromStores)([T.default], () => T.default.hidePersonalInformation), d = h.default.useName(n, a, l), _ = (0, i.jsx)(S.default, {
+        } = e, l = (0, r.useStateFromStores)([f.default], () => f.default.getUser(t)), u = (0, r.useStateFromStores)([T.default], () => T.default.hidePersonalInformation), d = A.default.useName(n, a, l), _ = (0, i.jsx)(S.default, {
             children: null == d ? "<@".concat(t, ">") : "@".concat(d)
         });
         if (null != l) {
             let e = u || l.isPomelo() ? null : "#".concat(l.discriminator);
             return (0, i.jsx)(s.Tooltip, {
                 text: (0, i.jsxs)("div", {
-                    className: p.userTooltip,
+                    className: O.userTooltip,
                     children: [(0, i.jsx)(o.default, {
                         user: l,
                         animate: !0,
                         size: s.AvatarSizes.SIZE_16,
-                        className: p.avatar
+                        className: O.avatar
                     }), m.default.getUserTag(l, {
                         mode: "username",
                         identifiable: u ? "never" : "always"
                     }), (0, i.jsx)("span", {
-                        className: p.discriminator,
+                        className: O.discriminator,
                         children: e
                     })]
                 }),
@@ -165,10 +165,10 @@ function(e, t, n) {
     function M(e) {
         let {
             id: t
-        } = e, n = (0, r.useStateFromStores)([E.default], () => E.default.getChannel(t)), s = O.default.Messages.UNKNOWN_CHANNEL, a = "text", o = !0;
+        } = e, n = (0, r.useStateFromStores)([E.default], () => E.default.getChannel(t)), s = p.default.Messages.UNKNOWN_CHANNEL, a = "text", o = !0;
         if (null != n) {
             var l;
-            s = (0, d.canViewChannel)(n) ? n.name : O.default.Messages.NO_ACCESS, a = (0, d.canViewChannel)(n) ? null !== (l = (0, A.getMentionIconType)(n)) && void 0 !== l ? l : "text" : "locked", o = (0, _.isChannelTypeMentionable)(n.type)
+            s = (0, d.canViewChannel)(n) ? n.name : p.default.Messages.NO_ACCESS, a = (0, d.canViewChannel)(n) ? null !== (l = (0, h.getMentionIconType)(n)) && void 0 !== l ? l : "text" : "locked", o = (0, _.isChannelTypeMentionable)(n.type)
         }
         return o ? (0, i.jsx)(S.default, {
             iconType: a,
@@ -192,10 +192,10 @@ function(e, t, n) {
         let {
             id: t
         } = e, n = {
-            home: O.default.Messages.SERVER_GUIDE,
-            guide: O.default.Messages.SERVER_GUIDE,
-            browse: O.default.Messages.CHANNEL_BROWSER_TITLE,
-            customize: O.default.Messages.CHANNELS_AND_ROLES
+            home: p.default.Messages.SERVER_GUIDE,
+            guide: p.default.Messages.SERVER_GUIDE,
+            browse: p.default.Messages.CHANNEL_BROWSER_TITLE,
+            customize: p.default.Messages.CHANNELS_AND_ROLES
         };
         return (0, i.jsx)(S.default, {
             iconType: t,

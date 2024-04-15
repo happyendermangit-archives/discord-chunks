@@ -23,23 +23,23 @@ function(e, t, n) {
         }) : e[t] = n, e
     }
     let S = c.isPlatformEmbedded && (0, c.isWindows)(),
-        A = S && 10 > parseFloat(l.default.os.release),
-        h = !0;
-    if (S && !A) {
+        h = S && 10 > parseFloat(l.default.os.release),
+        A = !0;
+    if (S && !h) {
         let [e, , t] = l.default.os.release.split(".");
-        h = parseInt(e) > 10 || parseInt(t) >= 15063
+        A = parseInt(e) > 10 || parseInt(t) >= 15063
     }
-    let m = S && h || "Chrome" === o().name && 47 > parseFloat(o().version) || "Firefox" === o().name && 52 > parseFloat(o().version),
+    let m = S && A || "Chrome" === o().name && 47 > parseFloat(o().version) || "Firefox" === o().name && 52 > parseFloat(o().version),
         N = s().throttle(E.playSound, 1e3, {
             leading: !0
         });
 
-    function O() {
+    function p() {
         I.default.flashFrame(!1)
     }
-    S && (window.addEventListener("focus", O), I.default.on("MAIN_WINDOW_FOCUS", O));
-    let p = window.Notification;
-    if (A) {
+    S && (window.addEventListener("focus", p), I.default.on("MAIN_WINDOW_FOCUS", p));
+    let O = window.Notification;
+    if (h) {
         let e = {};
         I.default.on("NOTIFICATION_CLICK", (t, n) => {
             let i = e[n];
@@ -55,18 +55,18 @@ function(e, t, n) {
                 body: n,
                 icon: i
             }) {
-                f(this, "id", p._id++), f(this, "title", void 0), f(this, "body", void 0), f(this, "icon", void 0), f(this, "onshow", function() {}), f(this, "onclick", function() {}), f(this, "onclose", function() {}), this.title = t, this.body = n, this.icon = i, setImmediate(() => this.onshow()), e[this.id] = this, I.default.send("NOTIFICATION_SHOW", {
+                f(this, "id", O._id++), f(this, "title", void 0), f(this, "body", void 0), f(this, "icon", void 0), f(this, "onshow", function() {}), f(this, "onclick", function() {}), f(this, "onclose", function() {}), this.title = t, this.body = n, this.icon = i, setImmediate(() => this.onshow()), e[this.id] = this, I.default.send("NOTIFICATION_SHOW", {
                     id: this.id,
                     title: this.title,
                     body: this.body,
                     icon: this.icon
                 })
             }
-        }, f(i, "permission", "granted"), f(i, "_id", 0), p = i
+        }, f(i, "permission", "granted"), f(i, "_id", 0), O = i
     }
 
     function R() {
-        return null != p && "granted" === p.permission
+        return null != O && "granted" === O.permission
     }
 
     function C(e) {
@@ -80,7 +80,7 @@ function(e, t, n) {
     t.default = {
         hasPermission: R,
         requestPermission: function(e) {
-            null != p && p.requestPermission(() => {
+            null != O && O.requestPermission(() => {
                 null != e && e(R())
             })
         },
@@ -94,7 +94,7 @@ function(e, t, n) {
             null != r.sound && C(r.sound, null !== (l = r.volume) && void 0 !== l ? l : 1);
             let f = null !== (d = null == r ? void 0 : r.tag) && void 0 !== d ? d : null;
             (0, c.isLinux)() && (n = s().escape(n));
-            let A = {
+            let h = {
                 icon: e,
                 body: n,
                 tag: f,
@@ -102,14 +102,14 @@ function(e, t, n) {
             };
             S && u.default.taskbarFlash && I.default.flashFrame(!0);
             try {
-                E = new p(t, A)
+                E = new O(t, h)
             } catch (e) {
                 return null
             }
             return (null === (a = r.onShown) || void 0 === a || a.call(r), !r.omitViewTracking && _.default.track(T.AnalyticEvents.NOTIFICATION_VIEWED, i), E.onclick = () => {
                 var e;
                 c.isPlatformEmbedded ? I.default.focus() : (window.focus(), E.close()), !r.omitClickTracking && _.default.track(T.AnalyticEvents.NOTIFICATION_CLICKED, i), null === (e = r.onClick) || void 0 === e || e.call(r)
-            }, m && setTimeout(() => E.close(), 5e3), h) ? E : {
+            }, m && setTimeout(() => E.close(), 5e3), A) ? E : {
                 close() {
                     var e;
                     null == E || null === (e = E.onclose) || void 0 === e || e.call(E)

@@ -16,13 +16,13 @@ function(e, t, n) {
         T = n("585483"),
         f = n("70956"),
         S = n("36703"),
-        A = n("347312"),
-        h = n("981631"),
+        h = n("347312"),
+        A = n("981631"),
         m = n("689938"),
         N = n("505810");
-    let O = r.lazy(() => Promise.all([n.e("26460"), n.e("89792")]).then(n.bind(n, "711635")));
+    let p = r.lazy(() => Promise.all([n.e("26460"), n.e("89792")]).then(n.bind(n, "711635")));
 
-    function p(e) {
+    function O(e) {
         let {
             played: t,
             duration: n,
@@ -56,7 +56,7 @@ function(e, t, n) {
             [Y, j] = r.useState(!1),
             [W, K] = r.useState(!1),
             [z, X] = r.useState(!1),
-            [Q, q] = r.useState(!1),
+            [q, Q] = r.useState(!1),
             [Z, J] = r.useState("none"),
             [$, ee] = r.useState(() => "function" == typeof D ? D() : D),
             et = r.useRef(void 0),
@@ -72,7 +72,7 @@ function(e, t, n) {
             }, []),
             es = r.useCallback(() => {
                 K(!1), null == et.current && (et.current = setTimeout(() => {
-                    q(!1), et.current = void 0
+                    Q(!1), et.current = void 0
                 }, 500))
             }, []),
             ea = r.useCallback(() => {
@@ -101,14 +101,14 @@ function(e, t, n) {
                 let t = k.current;
                 if (null == x || null == t) return;
                 let n = e * x;
-                F(n), t.currentTime = n, q(!0), clearTimeout(et.current), et.current = void 0
+                F(n), t.currentTime = n, Q(!0), clearTimeout(et.current), et.current = void 0
             }, [x]);
         r.useEffect(() => {
-            !Q && W && q(!0)
-        }, [W, Q]);
+            !q && W && Q(!0)
+        }, [W, q]);
         let eE = r.useRef(null);
         r.useEffect(() => {
-            if (Q || W) {
+            if (q || W) {
                 if (W) {
                     var e, t;
                     eE.current = performance.now(), null == G || G(!1, V, (null !== (t = null === (e = k.current) || void 0 === e ? void 0 : e.duration) && void 0 !== t ? t : 0) * f.default.Millis.SECOND)
@@ -127,10 +127,10 @@ function(e, t, n) {
                 null != e && cancelAnimationFrame(e)
             }
         }, [t, n, s]), _ = L, R = W, C = K, r.useEffect(() => {
-            if (R) return T.ComponentDispatch.dispatch(h.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, {
+            if (R) return T.ComponentDispatch.dispatch(A.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, {
                 src: _
-            }), T.ComponentDispatch.subscribe(h.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e), () => {
-                T.ComponentDispatch.unsubscribe(h.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e)
+            }), T.ComponentDispatch.subscribe(A.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e), () => {
+                T.ComponentDispatch.unsubscribe(A.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e)
             };
 
             function e(e) {
@@ -143,7 +143,7 @@ function(e, t, n) {
         let eI = W ? E.default : I.default,
             eT = W ? m.default.Messages.PAUSE : m.default.Messages.PLAY;
         g = "Safari" === platform.name ? (0, i.jsx)(r.Suspense, {
-            children: (0, i.jsx)(O, {
+            children: (0, i.jsx)(p, {
                 ref: k,
                 className: N.audioElement,
                 src: L,
@@ -197,18 +197,18 @@ function(e, t, n) {
                     width: 18,
                     height: 18
                 })
-            }), (0, i.jsx)(A.default, {
+            }), (0, i.jsx)(h.default, {
                 className: N.waveform,
                 waveform: y,
                 currentTime: V,
                 duration: null != x ? x : 1,
                 playing: W,
-                played: Q,
+                played: q,
                 onDrag: ec,
                 onDragStart: ed,
                 onDragEnd: e_
-            }), (0, i.jsx)(p, {
-                played: Q,
+            }), (0, i.jsx)(O, {
+                played: q,
                 currentTime: V,
                 duration: x
             }), (0, i.jsx)(c.default, {

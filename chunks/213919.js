@@ -9,10 +9,10 @@ function(e, t, n) {
             return m
         },
         hideToken: function() {
-            return O
+            return p
         },
         init: function() {
-            return h
+            return A
         },
         removeToken: function() {
             return R
@@ -21,7 +21,7 @@ function(e, t, n) {
             return N
         },
         showToken: function() {
-            return p
+            return O
         }
     }), n("47120"), n("724458");
     var s = n("433517"),
@@ -64,11 +64,11 @@ function(e, t, n) {
         }
     }
 
-    function A(e) {
+    function h(e) {
         return (null == u ? void 0 : u.isEncryptionAvailable()) && !e.startsWith(o) ? "".concat(o).concat(u.encryptString(e)) : e
     }
 
-    function h() {
+    function A() {
         if (T) return;
         r = s.Storage.get(a.TOKEN_KEY), E = s.Storage.get(a.TOKENS_KEY) || {};
         let {
@@ -88,7 +88,7 @@ function(e, t, n) {
     }
 
     function m(e) {
-        return (h(), null != e) ? c[e] : i
+        return (A(), null != e) ? c[e] : i
     }
 
     function N(e, t) {
@@ -99,11 +99,11 @@ function(e, t, n) {
         i = e, null != t && (c[t] = e), _ ? C() : (r = i, E = c, f())
     }
 
-    function O() {
+    function p() {
         !I && (I = !0, f())
     }
 
-    function p() {
+    function O() {
         I && (I = !1, f())
     }
 
@@ -113,9 +113,9 @@ function(e, t, n) {
     }
 
     function C() {
-        (null == u ? void 0 : u.isEncryptionAvailable()) ? (null != i && (r = A(i)), E = l(Object.entries(c).map(e => {
+        (null == u ? void 0 : u.isEncryptionAvailable()) ? (null != i && (r = h(i)), E = l(Object.entries(c).map(e => {
             let [t, n] = e;
-            return [t, A(n)]
+            return [t, h(n)]
         })), _ = !0) : (r = i, E = c), f()
     }
 }

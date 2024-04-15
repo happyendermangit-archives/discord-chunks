@@ -15,12 +15,12 @@ function(e, t, n) {
         T = n("210887"),
         f = n("314897"),
         S = n("592125"),
-        A = n("703558"),
-        h = n("984933"),
+        h = n("703558"),
+        A = n("984933"),
         m = n("271383"),
         N = n("430824"),
-        O = n("496675"),
-        p = n("306680"),
+        p = n("496675"),
+        O = n("306680"),
         R = n("944486"),
         C = n("914010"),
         g = n("9156"),
@@ -119,19 +119,19 @@ function(e, t, n) {
                         limit: 100,
                         fuzzy: !0,
                         filter: () => !0,
-                        type: h.GUILD_VOCAL_CHANNELS_KEY
+                        type: A.GUILD_VOCAL_CHANNELS_KEY
                     })
             }
             let r = [],
                 s = [];
             for (let e = 1; e < H.length; e += 1) {
                 let t = j(H[e]);
-                if (null != t)(t.type !== d.AutocompleterResultTypes.TEXT_CHANNEL && t.type !== d.AutocompleterResultTypes.VOICE_CHANNEL || O.default.can(v.Permissions.VIEW_CHANNEL, t.record)) && s.push(t)
+                if (null != t)(t.type !== d.AutocompleterResultTypes.TEXT_CHANNEL && t.type !== d.AutocompleterResultTypes.VOICE_CHANNEL || p.default.can(v.Permissions.VIEW_CHANNEL, t.record)) && s.push(t)
             }
             s.length > 0 && r.push((0, d.createHeaderResult)(M.default.Messages.QUICKSWITCHER_LAST_CHANNEL), ...s);
             let o = function(e) {
                 let t = [];
-                return A.default.getRecentlyEditedDrafts(A.DraftType.ChannelMessage).forEach(n => {
+                return h.default.getRecentlyEditedDrafts(h.DraftType.ChannelMessage).forEach(n => {
                     let {
                         channelId: i
                     } = n;
@@ -141,9 +141,9 @@ function(e, t, n) {
                 }), t
             }(e => e === i || H.includes(e));
             o.length > 0 && r.push((0, d.createHeaderResult)(M.default.Messages.QUICKSWITCHER_DRAFTS), ...o);
-            let l = p.default.getMentionChannelIds().filter(e => e !== i && !H.includes(e)).map(e => j(e)).filter(D.isNotNullish).reverse();
+            let l = O.default.getMentionChannelIds().filter(e => e !== i && !H.includes(e)).map(e => j(e)).filter(D.isNotNullish).reverse();
             if (l.length > 0 && (r.push((0, d.createHeaderResult)(M.default.Messages.QUICKSWITCHER_MENTIONS)), r = r.concat(l)), null != n) {
-                let e = h.default.getSelectableChannelIds(n).filter(e => {
+                let e = A.default.getSelectableChannelIds(n).filter(e => {
                     let t = S.default.getChannel(e);
                     return !(null == t || e === i || H.includes(e) || g.default.isChannelMuted(t.guild_id, e) || null != t.parent_id && g.default.isChannelMuted(t.guild_id, t.parent_id)) && (0, E.getHasImportantUnread)(t)
                 }).map(e => j(e)).filter(e => e);
@@ -184,7 +184,7 @@ function(e, t, n) {
                 let e = k[b];
                 null != e && e.type === d.AutocompleterResultTypes.HEADER && (b = (0, d.findNextSelectedResult)(d.FindResultDirections.DOWN, b, k))
             }
-            Q.emitChange()
+            q.emitChange()
         }(e, t))
     }
 
@@ -233,7 +233,7 @@ function(e, t, n) {
         }
     }
     y(X, "displayName", "QuickSwitcherStore"), y(X, "persistKey", "QuickSwitcherStore");
-    let Q = new X(u.default, {
+    let q = new X(u.default, {
         CONNECTION_OPEN: Y,
         CONNECTION_OPEN_SUPPLEMENTAL: Y,
         QUICKSWITCHER_SHOW: W,
@@ -281,5 +281,5 @@ function(e, t, n) {
             (H = H.filter(e => e !== t)).unshift(t), H.length > 4 && (H.length = 4)
         }
     });
-    t.default = Q
+    t.default = q
 }

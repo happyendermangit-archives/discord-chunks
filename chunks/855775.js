@@ -15,23 +15,23 @@ function(e, t, n) {
         T = null,
         f = null,
         S = null,
-        A = {},
-        h = null,
+        h = {},
+        A = null,
         m = !1,
         N = null,
-        O = !1,
         p = !1,
+        O = !1,
         R = !1,
         C = !1,
         g = null,
         L = new Set;
 
     function D(e) {
-        null != i && null != h ? i(h) : null != r && r(e), i = null, r = null
+        null != i && null != A ? i(A) : null != r && r(e), i = null, r = null
     }
     class v extends(s = u.default.Store) {
         getPricesForSku(e) {
-            return A[e]
+            return h[e]
         }
         isOpen() {
             let e = __OVERLAY__ ? _.AppContext.OVERLAY : _.AppContext.APP;
@@ -41,7 +41,7 @@ function(e, t, n) {
             return m
         }
         get forceConfirmationStepOnMount() {
-            return O
+            return p
         }
         get error() {
             return N
@@ -59,7 +59,7 @@ function(e, t, n) {
             return S
         }
         get isIAP() {
-            return p
+            return O
         }
         get giftCode() {
             return I
@@ -78,7 +78,7 @@ function(e, t, n) {
         writable: !0
     }) : a[o] = l, t.default = new v(d.default, {
         SKU_PURCHASE_MODAL_OPEN: function(e) {
-            D(), E = e.skuId, T = e.applicationId, p = e.isIAP, f = e.analyticsLocation, g = e.context, C = e.isGift, R = !0, O = !1, i = e.resolve, r = e.reject, N = null, h = null, S = e.promotionId
+            D(), E = e.skuId, T = e.applicationId, O = e.isIAP, f = e.analyticsLocation, g = e.context, C = e.isGift, R = !0, p = !1, i = e.resolve, r = e.reject, N = null, A = null, S = e.promotionId
         },
         SKU_PURCHASE_MODAL_CLOSE: function(e) {
             let {
@@ -98,10 +98,10 @@ function(e, t, n) {
                 paymentSourceId: n,
                 price: i
             } = e;
-            A = {
-                ...A,
+            h = {
+                ...h,
                 [t]: {
-                    ...A[t],
+                    ...h[t],
                     [null != n ? n : c]: i
                 }
             }, L.delete(t)
@@ -120,7 +120,7 @@ function(e, t, n) {
                 entitlements: t,
                 giftCode: n
             } = e;
-            m = !1, h = t, I = n
+            m = !1, A = t, I = n
         },
         SKU_PURCHASE_FAIL: function(e) {
             let {
@@ -129,7 +129,7 @@ function(e, t, n) {
             m = !1, N = t
         },
         SKU_PURCHASE_SHOW_CONFIRMATION_STEP: function() {
-            O = !0
+            p = !0
         },
         SKU_PURCHASE_CLEAR_ERROR: function() {
             N = null

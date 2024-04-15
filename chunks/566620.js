@@ -56,20 +56,20 @@ function(e, t, n) {
         T = n("314897"),
         f = n("592125"),
         S = n("944486"),
-        A = n("594174"),
-        h = n("823379"),
+        h = n("594174"),
+        A = n("823379"),
         m = n("573261"),
         N = n("867176"),
-        O = n("317381"),
-        p = n("672181"),
+        p = n("317381"),
+        O = n("672181"),
         R = n("917107"),
         C = n("981631"),
         g = n("245335");
 
     function L(e, t, n) {
         let i = T.default.getId(),
-            r = O.default.getSelfEmbeddedActivityForChannel(e),
-            a = O.default.getEmbeddedActivitiesForChannel(e).find(e => e.applicationId === t && e.userIds.has(i));
+            r = p.default.getSelfEmbeddedActivityForChannel(e),
+            a = p.default.getEmbeddedActivitiesForChannel(e).find(e => e.applicationId === t && e.userIds.has(i));
         null != r ? v({
             channelId: e,
             applicationId: r.applicationId,
@@ -79,14 +79,14 @@ function(e, t, n) {
             channelId: e,
             applicationId: t,
             analyticsLocations: n
-        }), (0, R.default)(e) ? (o.default.selectParticipant(e, t), o.default.updateLayout(e, C.ChannelLayouts.NO_CHAT)) : (0, p.default)(e)
+        }), (0, R.default)(e) ? (o.default.selectParticipant(e, t), o.default.updateLayout(e, C.ChannelLayouts.NO_CHAT)) : (0, O.default)(e)
     }
     async function D(e) {
         var t, n;
         let r = f.default.getChannel(e),
             a = null !== (t = null == r ? void 0 : r.getGuildId()) && void 0 !== t ? t : void 0;
         if (null == a && !(null !== (n = null == r ? void 0 : r.isPrivate()) && void 0 !== n && n)) return;
-        let o = O.default.getSelfEmbeddedActivityForChannel(e);
+        let o = p.default.getSelfEmbeddedActivityForChannel(e);
         if (null === o) return;
         let l = T.default.getSessionId();
         try {
@@ -96,7 +96,7 @@ function(e, t, n) {
                 }),
                 function(e, t) {
                     let n = f.default.getChannel(e);
-                    if (O.default.getEmbeddedActivitiesForChannel(e).some(e => e.applicationId === t)) return !1;
+                    if (p.default.getEmbeddedActivitiesForChannel(e).some(e => e.applicationId === t)) return !1;
                     let i = (0, N.isActivitiesInTextEnabled)(n, "EmbeddedActivitiesActionCreators#isActivityInTextStart");
                     return !!((null == n ? void 0 : n.type) === C.ChannelTypes.GUILD_TEXT && i || null != n && n.isPrivate() && i && null == S.default.getVoiceChannelId()) || !1
                 }(e, o.applicationId) ? await (0, E.executePrimaryEntryPointInteraction)({
@@ -152,8 +152,8 @@ function(e, t, n) {
             showFeedback: r
         });
         let a = c.default.getSelectedParticipantId(n),
-            l = null === (t = A.default.getCurrentUser()) || void 0 === t ? void 0 : t.id;
-        null != O.default.getEmbeddedActivitiesForChannel(n).find(e => e.applicationId === i) && null != l && "" !== l && a === i && o.default.selectParticipant(n, null)
+            l = null === (t = h.default.getCurrentUser()) || void 0 === t ? void 0 : t.id;
+        null != p.default.getEmbeddedActivitiesForChannel(n).find(e => e.applicationId === i) && null != l && "" !== l && a === i && o.default.selectParticipant(n, null)
     }
 
     function M(e, t) {
@@ -223,9 +223,9 @@ function(e, t, n) {
         let {
             guildId: o,
             force: l = !1
-        } = e, u = O.default.getShelfActivities(o), d = u.map(e => _.default.getApplication(e.application_id)).filter(h.isNotNullish);
-        if (!l && !O.default.shouldFetchShelf(o)) {
-            if (null === (t = O.default.getShelfFetchStatus(o)) || void 0 === t ? void 0 : t.isFetching) {
+        } = e, u = p.default.getShelfActivities(o), d = u.map(e => _.default.getApplication(e.application_id)).filter(A.isNotNullish);
+        if (!l && !p.default.shouldFetchShelf(o)) {
+            if (null === (t = p.default.getShelfFetchStatus(o)) || void 0 === t ? void 0 : t.isFetching) {
                 let e, t;
                 let n = new Promise(t => {
                         e = U.bind(null, o, t), s.default.subscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS", e)

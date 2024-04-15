@@ -22,22 +22,22 @@ function(e, t, n) {
             query: T,
             onChange: f,
             loading: S = !1,
-            disabled: A = !1,
-            placeholder: h = c.default.Messages.SEARCH,
+            disabled: h = !1,
+            placeholder: A = c.default.Messages.SEARCH,
             "aria-label": m
-        } = e, N = r.useRef(null), O = r.useRef(null);
+        } = e, N = r.useRef(null), p = r.useRef(null);
         r.useImperativeHandle(t, () => ({
             focus: () => {
                 var e;
-                return null === (e = O.current) || void 0 === e ? void 0 : e.focus()
+                return null === (e = p.current) || void 0 === e ? void 0 : e.focus()
             },
             blur: () => {
                 var e;
-                return null === (e = O.current) || void 0 === e ? void 0 : e.blur()
+                return null === (e = p.current) || void 0 === e ? void 0 : e.blur()
             },
             activate: () => !1
         }), []);
-        let p = (n = T, s = S, I = f, s ? (0, i.jsx)("div", {
+        let O = (n = T, s = S, I = f, s ? (0, i.jsx)("div", {
             className: E.iconContainer,
             children: (0, i.jsx)(u.Spinner, {
                 type: u.Spinner.Type.SPINNING_CIRCLE,
@@ -76,7 +76,7 @@ function(e, t, n) {
             })
         }));
         return (0, i.jsx)(l.FocusRing, {
-            focusTarget: O,
+            focusTarget: p,
             ringTarget: N,
             offset: {
                 top: 2,
@@ -90,14 +90,14 @@ function(e, t, n) {
                 children: [(0, i.jsx)("input", {
                     role: "searchbox",
                     "aria-busy": S,
-                    ref: O,
+                    ref: p,
                     className: E.input,
                     value: T,
                     onChange: e => f(e.currentTarget.value),
                     "aria-label": m,
-                    placeholder: h,
-                    disabled: A
-                }), p]
+                    placeholder: A,
+                    disabled: h
+                }), O]
             })
         })
     })

@@ -16,12 +16,12 @@ function(e, t, n) {
         T = n("466111"),
         f = n("74538"),
         S = n("543241"),
-        A = n("981631"),
-        h = n("474936"),
+        h = n("981631"),
+        A = n("474936"),
         m = n("689938"),
         N = n("139267");
-    let O = "premiumRetentionEmojiPickerNotice",
-        p = l.Storage.get(O);
+    let p = "premiumRetentionEmojiPickerNotice",
+        O = l.Storage.get(p);
     t.default = e => {
         let {
             closePopout: t,
@@ -36,10 +36,10 @@ function(e, t, n) {
         if (r.useEffect(() => {
                 !g && (0, d.fetchSubscriptions)()
             }, [g]), null == C || !(0, f.isSubscriptionStatusFailedPayment)(C.status) || s) return null;
-        let L = C.status === A.SubscriptionStatusTypes.PAST_DUE ? (0, f.getBillingGracePeriodDaysAndExpiresDate)(C).expiresDate : a()(C.currentPeriodStart).add(h.MAX_ACCOUNT_HOLD_DAYS),
+        let L = C.status === h.SubscriptionStatusTypes.PAST_DUE ? (0, f.getBillingGracePeriodDaysAndExpiresDate)(C).expiresDate : a()(C.currentPeriodStart).add(A.MAX_ACCOUNT_HOLD_DAYS),
             D = "".concat(C.id, ":").concat(L.toISOString());
-        if (p === D) return null;
-        let v = f.default.getPremiumType(C.planId) === h.PremiumTypes.TIER_0 ? E.GradientCssUrls.PREMIUM_TIER_0 : f.default.getPremiumType(C.planId) === h.PremiumTypes.TIER_1 ? E.GradientCssUrls.PREMIUM_TIER_1 : E.GradientCssUrls.PREMIUM_TIER_2;
+        if (O === D) return null;
+        let v = f.default.getPremiumType(C.planId) === A.PremiumTypes.TIER_0 ? E.GradientCssUrls.PREMIUM_TIER_0 : f.default.getPremiumType(C.planId) === A.PremiumTypes.TIER_1 ? E.GradientCssUrls.PREMIUM_TIER_1 : E.GradientCssUrls.PREMIUM_TIER_2;
         return (0, i.jsxs)("div", {
             className: N.premiumRetentionNotice,
             children: [(0, i.jsx)(T.default, {
@@ -56,14 +56,14 @@ function(e, t, n) {
                 }), (0, i.jsx)("div", {
                     children: (0, i.jsx)(u.Anchor, {
                         onClick: () => {
-                            (0, S.trackPremiumSettingsPaneOpened)(n), t(), _.default.open(A.UserSettingsSections.PREMIUM)
+                            (0, S.trackPremiumSettingsPaneOpened)(n), t(), _.default.open(h.UserSettingsSections.PREMIUM)
                         },
                         children: m.default.Messages.PREMIUM_RETENTION_EMOJI_PICKER_UPDATE_PAYMENT_INFORMATION
                     })
                 })]
             }), (0, i.jsx)(u.Clickable, {
                 onClick: () => {
-                    l.Storage.set(O, D), p = D, R(!0)
+                    l.Storage.set(p, D), O = D, R(!0)
                 },
                 children: (0, i.jsx)(I.default, {
                     className: N.premiumRetentionNoticeClose

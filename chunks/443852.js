@@ -11,7 +11,7 @@ function(e, t, n) {
             return f
         },
         getOutboundPromotionRedemptionUrl: function() {
-            return A
+            return h
         },
         getPromotionImageURL: function() {
             return c
@@ -20,13 +20,13 @@ function(e, t, n) {
             return N
         },
         isTrialUserEligibleToSeeOutboundPromotion: function() {
-            return O
+            return p
         },
         outboundPromotionFromServer: function() {
             return E
         },
         shouldShowOutboundPromotionNotice: function() {
-            return h
+            return A
         },
         shouldShowOutboundPromotionOnPlatform: function() {
             return m
@@ -95,11 +95,11 @@ function(e, t, n) {
         })).body)
     }
 
-    function A(e, t) {
+    function h(e, t) {
         return null != t.outboundRedemptionUrlFormat ? t.outboundRedemptionUrlFormat.replace("{code}", encodeURIComponent(e)) : t.outboundRedemptionPageLink
     }
 
-    function h() {
+    function A() {
         let e = u.default.lastSeenOutboundPromotionStartDate,
             t = u.default.outboundPromotions,
             n = u.default.consumedInboundPromotionId,
@@ -135,7 +135,7 @@ function(e, t, n) {
         return (0, o.hasFlag)(e.flags, d.PromotionFlags.IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS)
     }
 
-    function O(e, t) {
+    function p(e, t) {
         return null != t[e.id] || N(e)
     }
 }

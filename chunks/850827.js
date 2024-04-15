@@ -17,12 +17,12 @@ function(e, t, n) {
         T = n("594174"),
         f = n("979651"),
         S = n("285952"),
-        A = n("543595"),
-        h = n("503438"),
+        h = n("543595"),
+        A = n("503438"),
         m = n("802856"),
         N = n("952561"),
-        O = n("606925"),
-        p = n("719216"),
+        p = n("606925"),
+        O = n("719216"),
         R = n("429589"),
         C = n("276149"),
         g = n("636245"),
@@ -53,23 +53,23 @@ function(e, t, n) {
                 let e = T.default.getCurrentUser();
                 return o()(null != e, "UserActivityActions: currentUser cannot be undefined"), e
             }),
-            j = V === A.Types.PROFILE || V === A.Types.PROFILE_V2,
-            W = V === A.Types.STREAM_PREVIEW || null != a,
-            K = (0, h.default)(n),
+            j = V === h.Types.PROFILE || V === h.Types.PROFILE_V2,
+            W = V === h.Types.STREAM_PREVIEW || null != a,
+            K = (0, A.default)(n),
             z = (0, E.isStageActivity)(n),
             X = j ? S.default.Align.END : S.default.Align.STRETCH,
-            Q = K || W ? S.default.Direction.HORIZONTAL : S.default.Direction.VERTICAL,
-            q = (null == n ? void 0 : n.type) === P.ActivityTypes.HANG_STATUS,
+            q = K || W ? S.default.Direction.HORIZONTAL : S.default.Direction.VERTICAL,
+            Q = (null == n ? void 0 : n.type) === P.ActivityTypes.HANG_STATUS,
             Z = (0, u.useStateFromStores)([f.default, I.default], () => {
                 var e;
-                return q ? I.default.getChannel(null === (e = f.default.getVoiceStateForUser(r.id)) || void 0 === e ? void 0 : e.channelId) : null
+                return Q ? I.default.getChannel(null === (e = f.default.getVoiceStateForUser(r.id)) || void 0 === e ? void 0 : e.channelId) : null
             });
-        if ((0, m.default)(n)) t = [(0, i.jsx)(O.default, {
+        if ((0, m.default)(n)) t = [(0, i.jsx)(p.default, {
             look: k,
             color: B,
             platform: c.default.get(P.PlatformTypes.XBOX)
         }, "ConnectPlatformActivityButton")];
-        else if ((null == n ? void 0 : n.platform) != null && [P.ActivityGamePlatforms.PS4, P.ActivityGamePlatforms.PS5].includes(n.platform)) t = [(0, i.jsx)(O.default, {
+        else if ((null == n ? void 0 : n.platform) != null && [P.ActivityGamePlatforms.PS4, P.ActivityGamePlatforms.PS5].includes(n.platform)) t = [(0, i.jsx)(p.default, {
             look: k,
             color: B,
             platform: c.default.get(P.PlatformTypes.PLAYSTATION)
@@ -108,7 +108,7 @@ function(e, t, n) {
             look: k,
             applicationStream: a
         }, "watch-button")];
-        else if (q && null != Z) t = [(0, i.jsx)(C.default, {
+        else if (Q && null != Z) t = [(0, i.jsx)(C.default, {
             color: B,
             look: k,
             hangStatusChannel: Z
@@ -134,7 +134,7 @@ function(e, t, n) {
                     color: B,
                     look: k
                 }, "notify-button"),
-                o = (0, i.jsx)(p.default, {
+                o = (0, i.jsx)(O.default, {
                     user: r,
                     color: B,
                     look: k,
@@ -143,11 +143,11 @@ function(e, t, n) {
             if (null == s && null == a && null == e && null == o) return null;
             t = [s, a, e, o]
         }
-        let J = Q === S.default.Direction.VERTICAL;
+        let J = q === S.default.Direction.VERTICAL;
         return (0, i.jsx)(S.default, {
             grow: 0,
             align: X,
-            direction: Q,
+            direction: q,
             wrap: J ? S.default.Wrap.WRAP : S.default.Wrap.NO_WRAP,
             className: s()(_, U.buttonsWrapper, J ? U.vertical : U.horizontal),
             onClick: function(e) {

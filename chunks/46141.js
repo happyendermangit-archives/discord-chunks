@@ -17,22 +17,22 @@ function(e, t, n) {
             return T
         },
         GcashSourceRecord: function() {
-            return A
+            return h
         },
         GiropaySourceRecord: function() {
             return E
         },
         GoPayWalletSourceRecord: function() {
-            return p
+            return O
         },
         GrabPayMySourceRecord: function() {
-            return h
+            return A
         },
         IdealSourceRecord: function() {
             return f
         },
         KaKaoPaySourceRecord: function() {
-            return O
+            return p
         },
         MomoWalletSourceRecord: function() {
             return m
@@ -137,11 +137,11 @@ function(e, t, n) {
                         ...i
                     });
                 case o.PaymentSourceTypes.GCASH:
-                    return new A({
+                    return new h({
                         ...i
                     });
                 case o.PaymentSourceTypes.GRABPAY_MY:
-                    return new h({
+                    return new A({
                         ...i
                     });
                 case o.PaymentSourceTypes.MOMO_WALLET:
@@ -149,11 +149,11 @@ function(e, t, n) {
                         ...i
                     });
                 case o.PaymentSourceTypes.KAKAOPAY:
-                    return new O({
+                    return new p({
                         ...i
                     });
                 case o.PaymentSourceTypes.GOPAY_WALLET:
-                    return new p({
+                    return new O({
                         ...i
                     });
                 case o.PaymentSourceTypes.BANCONTACT:
@@ -191,17 +191,17 @@ function(e, t, n) {
                 case o.PaymentSourceTypes.PAYSAFE_CARD:
                     return new S(e);
                 case o.PaymentSourceTypes.GCASH:
-                    return new A(e);
-                case o.PaymentSourceTypes.GRABPAY_MY:
                     return new h(e);
+                case o.PaymentSourceTypes.GRABPAY_MY:
+                    return new A(e);
                 case o.PaymentSourceTypes.MOMO_WALLET:
                     return new m(e);
                 case o.PaymentSourceTypes.VENMO:
                     return new N(e);
                 case o.PaymentSourceTypes.KAKAOPAY:
-                    return new O(e);
-                case o.PaymentSourceTypes.GOPAY_WALLET:
                     return new p(e);
+                case o.PaymentSourceTypes.GOPAY_WALLET:
+                    return new O(e);
                 case o.PaymentSourceTypes.BANCONTACT:
                     return new R(e);
                 case o.PaymentSourceTypes.EPS:
@@ -281,12 +281,12 @@ function(e, t, n) {
             if (super(e), e.type !== o.PaymentSourceTypes.PAYSAFE_CARD) throw Error("Cannot instantiate PaysafeSourceRecord with type: ".concat(e.type, ", must be ").concat(o.PaymentSourceTypes.PAYSAFE_CARD))
         }
     }
-    class A extends u {
+    class h extends u {
         constructor(e) {
             if (super(e), e.type !== o.PaymentSourceTypes.GCASH) throw Error("Cannot instantiate GcashSourceRecord with type: ".concat(e.type, ", must be ").concat(o.PaymentSourceTypes.GCASH))
         }
     }
-    class h extends u {
+    class A extends u {
         constructor(e) {
             if (super(e), e.type !== o.PaymentSourceTypes.GRABPAY_MY) throw Error("Cannot instantiate GrabPayMySourceRecord with type: ".concat(e.type, ", must be ").concat(o.PaymentSourceTypes.GRABPAY_MY))
         }
@@ -302,12 +302,12 @@ function(e, t, n) {
             this.username = e.username || ""
         }
     }
-    class O extends u {
+    class p extends u {
         constructor(e) {
             if (super(e), e.type !== o.PaymentSourceTypes.KAKAOPAY) throw Error("Cannot instantiate KaKaoPaySourceRecord with type: ".concat(e.type, ", must be ").concat(o.PaymentSourceTypes.KAKAOPAY))
         }
     }
-    class p extends u {
+    class O extends u {
         constructor(e) {
             if (super(e), e.type !== o.PaymentSourceTypes.GOPAY_WALLET) throw Error("Cannot instantiate GoPayWalletSourceRecord with type: ".concat(e.type, ", must be ").concat(o.PaymentSourceTypes.GOPAY_WALLET))
         }

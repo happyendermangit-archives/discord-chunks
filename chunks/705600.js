@@ -21,19 +21,19 @@ function(e, t, n) {
         T = n("594174"),
         f = n("267642"),
         S = n("797717"),
-        A = n("672752"),
-        h = n("665786"),
+        h = n("672752"),
+        A = n("665786"),
         m = n("639740"),
         N = n("433564"),
-        O = n("697725"),
-        p = n("192091"),
+        p = n("697725"),
+        O = n("192091"),
         R = n("507957"),
         C = n("981631"),
         g = n("689938"),
         L = n("509252");
     let D = {
         [d.BadgeCategory.STAFF]: {
-            IconComponent: p.default,
+            IconComponent: O.default,
             foregroundDarkColor: o.default.unsafe_rawColors.WHITE_400.css,
             foregroundLightColor: o.default.unsafe_rawColors.WHITE_400.css,
             backgroundDarkColor: o.default.unsafe_rawColors.GREEN_360.css,
@@ -54,7 +54,7 @@ function(e, t, n) {
             backgroundLightColor: o.default.unsafe_rawColors.GREEN_360.css
         },
         [d.BadgeCategory.PARTNERED]: {
-            IconComponent: h.default,
+            IconComponent: A.default,
             foregroundDarkColor: o.default.unsafe_rawColors.WHITE_400.css,
             foregroundLightColor: o.default.unsafe_rawColors.WHITE_400.css,
             backgroundDarkColor: o.default.unsafe_rawColors.BRAND_500.css,
@@ -66,7 +66,7 @@ function(e, t, n) {
             foregroundLightColor: o.default.unsafe_rawColors.WHITE_400.css,
             backgroundDarkColor: o.default.unsafe_rawColors.WHITE_400.css,
             backgroundLightColor: o.default.unsafe_rawColors.PRIMARY_500.css,
-            premiumBackgroundColor: A.GradientCssUrls.PREMIUM_GUILD_BADGE_V2_BACKGROUND,
+            premiumBackgroundColor: h.GradientCssUrls.PREMIUM_GUILD_BADGE_V2_BACKGROUND,
             premiumForegroundColor: o.default.unsafe_rawColors.WHITE_400.css
         },
         [d.BadgeCategory.DISCOVERABLE]: {
@@ -75,7 +75,7 @@ function(e, t, n) {
             foregroundLightColor: o.default.unsafe_rawColors.WHITE_400.css,
             backgroundDarkColor: o.default.unsafe_rawColors.WHITE_400.css,
             backgroundLightColor: o.default.unsafe_rawColors.PRIMARY_500.css,
-            premiumBackgroundColor: A.GradientCssUrls.PREMIUM_GUILD_BADGE_V2_BACKGROUND,
+            premiumBackgroundColor: h.GradientCssUrls.PREMIUM_GUILD_BADGE_V2_BACKGROUND,
             premiumForegroundColor: o.default.unsafe_rawColors.WHITE_400.css
         },
         [d.BadgeCategory.NONE]: {}
@@ -89,7 +89,7 @@ function(e, t, n) {
             className: L.tooltipPremiumFooterContainer,
             children: [(0, i.jsxs)("div", {
                 className: s()(L.tooltipPremiumFooterSegment, L.tooltipPremiumFooterTierSegment),
-                children: [(0, i.jsx)(O.default, {
+                children: [(0, i.jsx)(p.default, {
                     width: 18,
                     height: 18,
                     className: L.gemIcon
@@ -180,12 +180,12 @@ function(e, t, n) {
                 tooltipColor: s = u.Tooltip.Colors.BRAND,
                 tooltipPosition: o,
                 className: f,
-                flowerStarClassName: A,
-                iconClassName: h,
+                flowerStarClassName: h,
+                iconClassName: A,
                 badgeStrokeColor: m,
                 badgeColor: N,
-                size: O = 16,
-                disableBoostClick: p,
+                size: p = 16,
+                disableBoostClick: O,
                 "aria-label": R = !1
             } = e,
             g = (0, a.useStateFromStores)([T.default, I.default], () => {
@@ -211,7 +211,7 @@ function(e, t, n) {
             x = (0, l.isThemeDark)(v) ? b : G;
         t = null != t ? t : F, n = null != n ? n : x;
         let H = e => {
-            y.premium && g && !p && (e.stopPropagation(), e.preventDefault(), (0, c.openGuildBoostingMarketingModal)({
+            y.premium && g && !O && (e.stopPropagation(), e.preventDefault(), (0, c.openGuildBoostingMarketingModal)({
                 guildId: r.id,
                 location: {
                     section: C.AnalyticsSections.GUILD_HEADER,
@@ -233,12 +233,12 @@ function(e, t, n) {
                 children: (0, i.jsx)(S.default, {
                     ...e,
                     className: f,
-                    flowerStarClassName: A,
+                    flowerStarClassName: h,
                     color: null != n ? n : N,
                     stroke: m,
-                    size: O,
+                    size: p,
                     children: (0, i.jsx)(U, {
-                        className: h,
+                        className: A,
                         color: t
                     })
                 })

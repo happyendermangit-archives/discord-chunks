@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         EXPRESSION_TOOLTIP_PROPS: function() {
-            return Q
+            return q
         },
         ErrorLoadingBar: function() {
             return ea
@@ -66,12 +66,12 @@ function(e, t, n) {
         T = n("45114"),
         f = n("431279"),
         S = n("794295"),
-        A = n("593472"),
-        h = n("110924"),
+        h = n("593472"),
+        A = n("110924"),
         m = n("688465"),
         N = n("479313"),
-        O = n("765104"),
-        p = n("505953"),
+        p = n("765104"),
+        O = n("505953"),
         R = n("695346"),
         C = n("170671"),
         g = n("201542"),
@@ -97,11 +97,11 @@ function(e, t, n) {
         K = n("768760"),
         z = n("689938"),
         X = n("179216");
-    let Q = {
+    let q = {
             delay: 300,
             position: "top"
         },
-        q = e => t => {
+        Q = e => t => {
             null == e || e(t), (0, x.setVolume)(t)
         },
         Z = e => t => {
@@ -118,7 +118,7 @@ function(e, t, n) {
             renderAdjacentContent: l,
             renderOverlayContent: u,
             ...d
-        } = e, _ = q(t), c = Z(n);
+        } = e, _ = Q(t), c = Z(n);
         return i = null == i ? x.getVolume : i, r = null == r ? x.getMuted : r, (0, s.jsxs)(a.Fragment, {
             children: [(0, s.jsx)(y.default, {
                 ...d,
@@ -142,7 +142,7 @@ function(e, t, n) {
             onVolumeHide: o,
             renderAdjacentContent: l,
             ...u
-        } = e, d = q(t), _ = Z(i);
+        } = e, d = Q(t), _ = Z(i);
         return n = null == n ? x.getVolume : n, (0, s.jsxs)(a.Fragment, {
             children: [(0, s.jsx)(M.default, {
                 ...u,
@@ -163,7 +163,7 @@ function(e, t, n) {
             volume: n,
             onMute: i,
             ...r
-        } = e, a = q(t), o = Z(i);
+        } = e, a = Q(t), o = Z(i);
         return n = null == n ? x.getVolume : n, (0, s.jsx)(g.default, {
             ...r,
             onVolumeChange: a,
@@ -408,10 +408,10 @@ function(e, t, n) {
             scrollManager: u
         } = e, {
             disableInteractions: f
-        } = a.useContext(b.MessagesInteractionContext), [S, R] = a.useState(null), C = a.useRef(null), [g, v] = a.useState(null), M = a.useRef(null), y = (0, c.useStateFromStoresArray)([O.default], () => {
+        } = a.useContext(b.MessagesInteractionContext), [S, R] = a.useState(null), C = a.useRef(null), [g, v] = a.useState(null), M = a.useRef(null), y = (0, c.useStateFromStoresArray)([p.default], () => {
             var e;
-            return null !== (e = O.default.summaries(r.id)) && void 0 !== e ? e : []
-        }, [r]), P = (0, h.default)(y);
+            return null !== (e = p.default.summaries(r.id)) && void 0 !== e ? e : []
+        }, [r]), P = (0, A.default)(y);
         a.useEffect(() => {
             !d().isEqual(P, y) && V.default.track(Y.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
                 num_summaries: y.length,
@@ -434,21 +434,21 @@ function(e, t, n) {
                     }).filter(F.isNotNullish)
                 })) && void 0 !== e ? e : []
             }, [y], eu),
-            x = null !== (n = (0, c.useStateFromStores)([O.default], () => O.default.visibleSummaryIndex())) && void 0 !== n ? n : -1,
+            x = null !== (n = (0, c.useStateFromStores)([p.default], () => p.default.visibleSummaryIndex())) && void 0 !== n ? n : -1,
             j = null == y ? void 0 : null === (t = y[x]) || void 0 === t ? void 0 : t.topic;
         null == j && null == S && (null == y ? void 0 : y.length) >= 1 && (j = null === (i = y[0]) || void 0 === i ? void 0 : i.topic);
         let K = a.useMemo(() => d().debounce(e => {
                 var t;
                 R(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : null)
             }, 64), [R]),
-            Q = a.useMemo(() => d().throttle(() => {
+            q = a.useMemo(() => d().throttle(() => {
                 (0, N.setHighlightedSummary)(null)
             }, 1200, {
                 trailing: !1
             }), []),
-            q = a.useCallback(e => {
-                Q(), K(e)
-            }, [K, Q]),
+            Q = a.useCallback(e => {
+                q(), K(e)
+            }, [K, q]),
             [Z, J] = a.useState(!1),
             $ = a.useCallback(() => {
                 V.default.track(Y.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
@@ -470,10 +470,10 @@ function(e, t, n) {
                 (0, N.setSelectedSummary)(r.id, n.id), (0, N.setHighlightedSummary)(r.id, n.id);
                 let i = () => {
                     u.removeScrollCompleteCallback(i), setTimeout(() => {
-                        u.addAutomaticAnchorCallback(q, !1)
+                        u.addAutomaticAnchorCallback(Q, !1)
                     }, 100)
                 };
-                u.removeAutomaticAnchorCallback(q), u.addScrollCompleteCallback(i), V.default.track(Y.AnalyticEvents.SUMMARIES_TOPIC_CLICKED, {
+                u.removeAutomaticAnchorCallback(Q), u.addScrollCompleteCallback(i), V.default.track(Y.AnalyticEvents.SUMMARIES_TOPIC_CLICKED, {
                     source: t,
                     message_id: n.startId,
                     guild_id: r.guild_id,
@@ -484,10 +484,10 @@ function(e, t, n) {
                     messageId: n.startId,
                     flash: !0,
                     offset: 0,
-                    jumpType: A.JumpTypes.ANIMATED,
+                    jumpType: h.JumpTypes.ANIMATED,
                     context: "Summary Jump"
                 })
-            }, [y, r, q, u]),
+            }, [y, r, Q, u]),
             et = a.useCallback(e => {
                 var t;
                 J(e);
@@ -516,14 +516,14 @@ function(e, t, n) {
                 channel_type: r.type
             }), et(!1))
         }, [Z, y, r, et]);
-        a.useEffect(() => (u.addAutomaticAnchorCallback(q), () => {
-            u.removeAutomaticAnchorCallback(q)
-        }), [u, q]), a.useEffect(() => {
+        a.useEffect(() => (u.addAutomaticAnchorCallback(Q), () => {
+            u.removeAutomaticAnchorCallback(Q)
+        }), [u, Q]), a.useEffect(() => {
             (0, N.fetchSummaries)(r.id)
         }, [r.id]), a.useEffect(() => (document.addEventListener("mousedown", en), () => {
             document.removeEventListener("mousedown", en)
         }), [en]);
-        let ei = a.useMemo(() => (0, s.jsx)(p.default, {
+        let ei = a.useMemo(() => (0, s.jsx)(O.default, {
                 channel: r,
                 summaries: y,
                 summariesMembers: U,
@@ -639,10 +639,10 @@ function(e, t, n) {
             scrollManager: o
         } = e, {
             disableInteractions: u
-        } = a.useContext(b.MessagesInteractionContext), [T, f] = a.useState(null), S = a.useRef(null), [R, C] = a.useState(null), g = a.useRef(null), L = (0, c.useStateFromStoresArray)([O.default], () => {
+        } = a.useContext(b.MessagesInteractionContext), [T, f] = a.useState(null), S = a.useRef(null), [R, C] = a.useState(null), g = a.useRef(null), L = (0, c.useStateFromStoresArray)([p.default], () => {
             var e;
-            return null !== (e = O.default.summaries(r.id)) && void 0 !== e ? e : []
-        }, [r]), v = (0, h.default)(L);
+            return null !== (e = p.default.summaries(r.id)) && void 0 !== e ? e : []
+        }, [r]), v = (0, A.default)(L);
         a.useEffect(() => {
             !d().isEqual(v, L) && V.default.track(Y.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
                 num_summaries: L.length,
@@ -665,7 +665,7 @@ function(e, t, n) {
                     }).filter(F.isNotNullish)
                 })) && void 0 !== e ? e : []
             }, [L], eu),
-            y = null !== (n = (0, c.useStateFromStores)([O.default], () => O.default.visibleSummaryIndex())) && void 0 !== n ? n : -1,
+            y = null !== (n = (0, c.useStateFromStores)([p.default], () => p.default.visibleSummaryIndex())) && void 0 !== n ? n : -1,
             P = null == L ? void 0 : null === (t = L[y]) || void 0 === t ? void 0 : t.topic;
         null == P && null == T && (null == L ? void 0 : L.length) >= 1 && (P = null === (i = L[0]) || void 0 === i ? void 0 : i.topic);
         let U = a.useMemo(() => d().get(L, y - 1), [y, L]),
@@ -682,8 +682,8 @@ function(e, t, n) {
             j = a.useCallback(e => {
                 H(), x(e)
             }, [x, H]),
-            [K, Q] = a.useState(!1),
-            q = a.useCallback(() => {
+            [K, q] = a.useState(!1),
+            Q = a.useCallback(() => {
                 V.default.track(Y.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
                     topics_dropdown_open: !K,
                     num_summaries: L.length,
@@ -694,8 +694,8 @@ function(e, t, n) {
                     guild_id: r.guild_id,
                     channel_id: r.id,
                     channel_type: r.type
-                }), Q(!K)
-            }, [K, L, Q, r]),
+                }), q(!K)
+            }, [K, L, q, r]),
             Z = a.useCallback(function(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : W.SummariesTopicClickedSource.PILL_DROPDOWN,
                     n = L[e];
@@ -717,7 +717,7 @@ function(e, t, n) {
                     messageId: n.startId,
                     flash: !0,
                     offset: 0,
-                    jumpType: A.JumpTypes.ANIMATED,
+                    jumpType: h.JumpTypes.ANIMATED,
                     context: "Summary Jump"
                 })
             }, [L, r, j, o]),
@@ -729,7 +729,7 @@ function(e, t, n) {
             }, [y, Z]),
             ee = a.useCallback(e => {
                 var t;
-                Q(e);
+                q(e);
                 let n = null === (t = g.current) || void 0 === t ? void 0 : t.scrollTop;
                 null != n && C(n)
             }, []);
@@ -762,14 +762,14 @@ function(e, t, n) {
         }, [r.id]), a.useEffect(() => (document.addEventListener("mousedown", et), () => {
             document.removeEventListener("mousedown", et)
         }), [et]);
-        let en = a.useMemo(() => (0, s.jsx)(p.default, {
+        let en = a.useMemo(() => (0, s.jsx)(O.default, {
             channel: r,
             summaries: L,
             summariesMembers: M,
             selectTopic: Z,
             setOpen: ee
         }), [L, M, Z, ee, r]);
-        if (!(0, c.useStateFromStores)([O.default], () => O.default.shouldShowTopicsBar())) return null;
+        if (!(0, c.useStateFromStores)([p.default], () => p.default.shouldShowTopicsBar())) return null;
         let ei = z.default.Messages.SUMMARIES_NO_SUMMARIES;
         return L.length > 0 && (ei = "" === P || null == P ? z.default.Messages.SUMMARIES_VIEW_ALL : P), u ? null : (0, s.jsxs)("div", {
             ref: S,
@@ -779,7 +779,7 @@ function(e, t, n) {
                 children: [(0, s.jsx)(E.Clickable, {
                     className: X.topicsPillText,
                     "aria-label": z.default.Messages.SUMMARY_PILL,
-                    onClick: q,
+                    onClick: Q,
                     children: (0, s.jsxs)("div", {
                         className: l()({
                             [X.topicsPillTextUnselected]: !K,
@@ -846,7 +846,7 @@ function(e, t, n) {
                         })]
                     }), (0, s.jsx)(E.Clickable, {
                         "aria-label": z.default.Messages.CLOSE,
-                        onClick: q,
+                        onClick: Q,
                         className: X.topicsDropdownClose,
                         children: (0, s.jsx)(B.default, {})
                     })]

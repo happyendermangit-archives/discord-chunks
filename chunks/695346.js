@@ -20,10 +20,10 @@ function(e, t, n) {
             return g
         },
         AnimateEmoji: function() {
-            return eO
+            return ep
         },
         AnimateStickers: function() {
-            return ep
+            return eO
         },
         BroadcastAllowFriends: function() {
             return eo
@@ -56,10 +56,10 @@ function(e, t, n) {
             return k
         },
         DeveloperMode: function() {
-            return eh
+            return eA
         },
         DisableGamesTab: function() {
-            return q
+            return Q
         },
         DisableHomeAutoNav: function() {
             return ev
@@ -89,10 +89,10 @@ function(e, t, n) {
             return eM
         },
         FocusMode: function() {
-            return A
+            return h
         },
         FocusModeExpiresAtSetting: function() {
-            return h
+            return A
         },
         FriendSourceFlagsSetting: function() {
             return F
@@ -167,7 +167,7 @@ function(e, t, n) {
             return ee
         },
         SoundboardPickerCollapsedSections: function() {
-            return p
+            return O
         },
         SoundboardSettings: function() {
             return j
@@ -179,7 +179,7 @@ function(e, t, n) {
             return ei
         },
         StickerPickerCollapsedSections: function() {
-            return O
+            return p
         },
         TimezoneOffset: function() {
             return ef
@@ -197,7 +197,7 @@ function(e, t, n) {
             return R
         },
         ViewNsfwCommands: function() {
-            return Q
+            return q
         },
         ViewNsfwGuilds: function() {
             return X
@@ -254,17 +254,17 @@ function(e, t, n) {
     }, e => s.BoolValue.create({
         value: e
     }));
-    let A = (0, o.defineProtoSetting)("notifications", "quietMode", e => {
+    let h = (0, o.defineProtoSetting)("notifications", "quietMode", e => {
             var t;
             return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t
         }, e => s.BoolValue.create({
             value: !!e
         })),
-        h = (0, o.defineProtoSetting)("notifications", "focusModeExpiresAtMs", e => null != e ? e : "0", e => e),
+        A = (0, o.defineProtoSetting)("notifications", "focusModeExpiresAtMs", e => null != e ? e : "0", e => e),
         m = [],
         N = (0, o.defineProtoSetting)("textAndImages", "emojiPickerCollapsedSections", e => null != e ? e : m, e => e),
-        O = (0, o.defineProtoSetting)("textAndImages", "stickerPickerCollapsedSections", e => null != e ? e : m, e => e),
-        p = (0, o.defineProtoSetting)("textAndImages", "soundboardPickerCollapsedSections", e => null != e ? e : m, e => e),
+        p = (0, o.defineProtoSetting)("textAndImages", "stickerPickerCollapsedSections", e => null != e ? e : m, e => e),
+        O = (0, o.defineProtoSetting)("textAndImages", "soundboardPickerCollapsedSections", e => null != e ? e : m, e => e),
         R = (0, o.defineProtoSetting)("textAndImages", "viewImageDescriptions", e => {
             var t;
             return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t
@@ -398,7 +398,7 @@ function(e, t, n) {
         }, e => s.BoolValue.create({
             value: e
         })),
-        Q = (0, o.defineProtoSetting)("textAndImages", "viewNsfwCommands", e => {
+        q = (0, o.defineProtoSetting)("textAndImages", "viewNsfwCommands", e => {
             var t;
             return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t
         }, e => s.BoolValue.create({
@@ -410,7 +410,7 @@ function(e, t, n) {
     }, e => s.BoolValue.create({
         value: e
     }));
-    let q = (0, o.defineProtoSetting)("gameLibrary", "disableGamesTab", e => {
+    let Q = (0, o.defineProtoSetting)("gameLibrary", "disableGamesTab", e => {
             var t;
             return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t
         }, e => s.BoolValue.create({
@@ -506,11 +506,11 @@ function(e, t, n) {
     (0, o.defineProtoSetting)("appearance", "channelListLayout", e => null != e && eS.has(e.value) ? e.value : a.ChannelListLayoutTypes.COZY, e => s.StringValue.create({
         value: e
     }));
-    let eA = new Set([a.MessagePreviewTypes.ALL, a.MessagePreviewTypes.UNREADS, a.MessagePreviewTypes.NONE]);
-    (0, o.defineProtoSetting)("appearance", "messagePreviews", e => null != e && eA.has(e.value) ? e.value : a.MessagePreviewTypes.ALL, e => s.StringValue.create({
+    let eh = new Set([a.MessagePreviewTypes.ALL, a.MessagePreviewTypes.UNREADS, a.MessagePreviewTypes.NONE]);
+    (0, o.defineProtoSetting)("appearance", "messagePreviews", e => null != e && eh.has(e.value) ? e.value : a.MessagePreviewTypes.ALL, e => s.StringValue.create({
         value: e
     }));
-    let eh = (0, o.wrapSettingWithSelectiveSyncing)((0, o.defineProtoSetting)("appearance", "developerMode", e => null != e && e, e => e), "appearance", "developerMode"),
+    let eA = (0, o.wrapSettingWithSelectiveSyncing)((0, o.defineProtoSetting)("appearance", "developerMode", e => null != e && e, e => e), "appearance", "developerMode"),
         em = (0, o.defineProtoSetting)("appearance", "clientThemeSettings", e => {
             var t;
             return {
@@ -533,7 +533,7 @@ function(e, t, n) {
             var e;
             return null === (e = l.default.getOverride("gifAutoPlay")) || void 0 === e ? void 0 : e.value
         })),
-        eO = (0, o.wrapSettingWithOverride)((0, o.wrapSettingWithSelectiveSyncing)((0, o.defineProtoSetting)("textAndImages", "animateEmoji", e => {
+        ep = (0, o.wrapSettingWithOverride)((0, o.wrapSettingWithSelectiveSyncing)((0, o.defineProtoSetting)("textAndImages", "animateEmoji", e => {
             var t;
             return null === (t = null == e ? void 0 : e.value) || void 0 === t || t
         }, e => s.BoolValue.create({
@@ -545,7 +545,7 @@ function(e, t, n) {
             var e;
             return null === (e = l.default.getOverride("animateEmoji")) || void 0 === e ? void 0 : e.value
         })),
-        ep = (0, o.wrapSettingWithOverride)((0, o.wrapSettingWithSelectiveSyncing)((0, o.defineProtoSetting)("textAndImages", "animateStickers", e => {
+        eO = (0, o.wrapSettingWithOverride)((0, o.wrapSettingWithSelectiveSyncing)((0, o.defineProtoSetting)("textAndImages", "animateStickers", e => {
             var t;
             return null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : _.StickerAnimationSettings.ALWAYS_ANIMATE
         }, e => s.UInt32Value.create({

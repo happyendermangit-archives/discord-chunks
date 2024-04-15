@@ -14,10 +14,10 @@ function(e, t, n) {
             return L
         },
         OAuth2Success: function() {
-            return p
+            return O
         },
         default: function() {
-            return O
+            return p
         }
     });
     var i = n("735250"),
@@ -35,12 +35,12 @@ function(e, t, n) {
         T = n("703656"),
         f = n("920440"),
         S = n("626135"),
-        A = n("787025"),
-        h = n("981631"),
+        h = n("787025"),
+        A = n("981631"),
         m = n("689938"),
         N = n("771160");
 
-    function O(e) {
+    function p(e) {
         let {
             message: t,
             footer: n,
@@ -73,8 +73,8 @@ function(e, t, n) {
         })
     }
 
-    function p(e) {
-        return (0, i.jsx)(O, {
+    function O(e) {
+        return (0, i.jsx)(p, {
             ...e,
             headerClassName: N.headerSuccess
         })
@@ -88,12 +88,12 @@ function(e, t, n) {
         } = e, {
             onClose: a
         } = s, o = m.default.Messages.AUTHORIZED_SUCCESS, l = r.useCallback(() => {
-            (null == t ? void 0 : t.id) != null && ((0, f.transitionToGuild)(null == t ? void 0 : t.id), null == a || a(), S.default.track(h.AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED, {
+            (null == t ? void 0 : t.id) != null && ((0, f.transitionToGuild)(null == t ? void 0 : t.id), null == a || a(), S.default.track(A.AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED, {
                 application_id: null == n ? void 0 : n.id,
                 guild_id: null == t ? void 0 : t.id
             }))
         }, [a, null == n ? void 0 : n.id, null == t ? void 0 : t.id]), u = r.useCallback(() => {
-            null == a || a(), S.default.track(h.AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, {
+            null == a || a(), S.default.track(A.AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, {
                 application_id: null == n ? void 0 : n.id
             })
         }, [a, null == n ? void 0 : n.id]), d = r.useMemo(() => {
@@ -129,12 +129,12 @@ function(e, t, n) {
             })]
         });
         return r.useEffect(() => {
-            S.default.track(h.AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, {
+            S.default.track(A.AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, {
                 application_id: null == n ? void 0 : n.id
             })
         }, [null == n ? void 0 : n.id]), (0, i.jsx)("div", {
             className: N.authorizedSuccessWrapper,
-            children: (0, i.jsx)(p, {
+            children: (0, i.jsx)(O, {
                 message: o,
                 footer: _,
                 ...s
@@ -143,7 +143,7 @@ function(e, t, n) {
     }
 
     function C(e) {
-        return (0, i.jsx)(O, {
+        return (0, i.jsx)(p, {
             ...e,
             headerClassName: N.headerFailure
         })
@@ -152,7 +152,7 @@ function(e, t, n) {
     function g() {
         var e, t;
         let n = (0, l.useLocation)();
-        return (0, i.jsx)(A.OAuth2Page, {
+        return (0, i.jsx)(h.OAuth2Page, {
             children: (0, i.jsx)(R, {
                 guild: null === (e = n.state) || void 0 === e ? void 0 : e.guild,
                 application: null === (t = n.state) || void 0 === t ? void 0 : t.application,
@@ -169,11 +169,11 @@ function(e, t, n) {
         r.useEffect(() => {
             if (null == s) return;
             let e = null != document.referrer && "" !== document.referrer ? u.parse(document.referrer) : null;
-            (null == e || e.host !== window.location.host || e.pathname !== h.Routes.OAUTH2_AUTHORIZE) && (0, T.transitionTo)(h.Routes.INDEX)
+            (null == e || e.host !== window.location.host || e.pathname !== A.Routes.OAUTH2_AUTHORIZE) && (0, T.transitionTo)(A.Routes.INDEX)
         }, [s]);
         let a = null != s ? (0, o.parse)(s.search) : {},
             l = null !== (n = null !== (t = a.error_description) && void 0 !== t ? t : a.error) && void 0 !== n ? n : m.default.Messages.OAUTH2_UNKNOWN_ERROR;
-        return (0, i.jsx)(A.OAuth2Page, {
+        return (0, i.jsx)(h.OAuth2Page, {
             children: (0, i.jsx)(C, {
                 message: l,
                 showsCloseWindowText: !0

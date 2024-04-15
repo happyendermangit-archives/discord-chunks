@@ -20,31 +20,31 @@ function(e, t, n) {
             backgroundSrc: T,
             userId: f,
             pulseSpeakingIndicator: S = !1,
-            speaking: A = !1,
-            ...h
-        } = e, m = null != T ? T : n, N = (0, o.default)(m, s.default.unsafe_rawColors.PRIMARY_800.css), O = (0, l.useCallBannerBackgroundExperiment)(!0, "VideoBackground-web").enabled, p = (0, _.default)(null != f ? f : E.EMPTY_STRING_SNOWFLAKE_ID), R = null == p ? void 0 : p.getBannerURL({
+            speaking: h = !1,
+            ...A
+        } = e, m = null != T ? T : n, N = (0, o.default)(m, s.default.unsafe_rawColors.PRIMARY_800.css), p = (0, l.useCallBannerBackgroundExperiment)(!0, "VideoBackground-web").enabled, O = (0, _.default)(null != f ? f : E.EMPTY_STRING_SNOWFLAKE_ID), R = null == O ? void 0 : O.getBannerURL({
             size: 1024,
             canAnimate: c.GifAutoPlay.getSetting()
         });
         if (r.useEffect(() => {
-                null != f && O && (0, d.default)(f, void 0, {
+                null != f && p && (0, d.default)(f, void 0, {
                     dispatchWait: !0
                 })
-            }, [O, f]), null == n) return null;
+            }, [p, f]), null == n) return null;
         let C = (0, i.jsx)(a.Avatar, {
                 className: I.avatarWrapper,
                 src: n,
-                ...h
+                ...A
             }),
             g = {
                 ...t,
                 backgroundColor: N
             };
-        return null != R && A && O && (g.backgroundImage = "url(".concat(R, ")"), g.backgroundSize = "cover"), (0, i.jsx)("div", {
+        return null != R && h && p && (g.backgroundImage = "url(".concat(R, ")"), g.backgroundSize = "cover"), (0, i.jsx)("div", {
             style: g,
             className: I.background,
             children: S ? (0, i.jsx)(u.default, {
-                shouldAnimate: A,
+                shouldAnimate: h,
                 children: C
             }) : C
         })

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         BasePopout: function() {
-            return p
+            return O
         }
     }), n("47120"), n("411104");
     var i, r = n("735250"),
@@ -19,8 +19,8 @@ function(e, t, n) {
         T = n("952265"),
         f = n("632120"),
         S = n("40851"),
-        A = n("153850"),
-        h = n("920676"),
+        h = n("153850"),
+        A = n("920676"),
         m = n("981631");
 
     function N(e, t, n) {
@@ -31,8 +31,8 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    let O = new Set(["Spacebar", " ", "Enter"]);
-    class p extends(i = s.Component) {
+    let p = new Set(["Spacebar", " ", "Enter"]);
+    class O extends(i = s.Component) {
         shouldShowPopout(e, t) {
             return null != e.shouldShow ? e.shouldShow : t.shouldShowPopout
         }
@@ -108,7 +108,7 @@ function(e, t, n) {
                 shouldShowLoadingState: c
             } = this.state;
             return _ && !c ? null : (0, r.jsx)(E.Layer, {
-                layerContext: null != u ? u : A.appLayerContext,
+                layerContext: null != u ? u : h.appLayerContext,
                 children: (0, r.jsx)(I.ReferencePositionLayer, {
                     ref: this.layerRef,
                     onMount: this.handlePopoutShow,
@@ -216,7 +216,7 @@ function(e, t, n) {
                     }
                 }
             }), N(this, "handleKeyboardPreload", e => {
-                O.has(e.key) && this.handlePreload()
+                p.has(e.key) && this.handlePreload()
             }), N(this, "handleDocumentMouseDown", e => {
                 let {
                     ignoreModalClicks: t
@@ -234,10 +234,10 @@ function(e, t, n) {
             })
         }
     }
-    N(p, "defaultProps", {
+    N(O, "defaultProps", {
         autoInvert: !1,
         nudgeAlignIntoViewport: !1,
         spacing: 0,
-        loadingComponent: (0, r.jsx)(h.LoadingPopout, {})
-    }), N(p, "contextType", S.default)
+        loadingComponent: (0, r.jsx)(A.LoadingPopout, {})
+    }), N(O, "contextType", S.default)
 }

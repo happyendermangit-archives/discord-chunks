@@ -21,12 +21,12 @@ function(e, t, n) {
         T = n("826298"),
         f = n("496675"),
         S = n("156361"),
-        A = n("226951"),
-        h = n("877565"),
+        h = n("226951"),
+        A = n("877565"),
         m = n("590921"),
         N = n("665692"),
-        O = n("689079"),
-        p = n("689938"),
+        p = n("689079"),
+        O = n("689938"),
         R = n("157304");
     let C = {
         results: {
@@ -52,12 +52,12 @@ function(e, t, n) {
             if (0 === n.length && i.commands !== m.CommandMode.OLD_BUILT_INS) return C;
             if (i.commands === m.CommandMode.OLD_BUILT_INS) {
                 let i = (0, l.getBuiltInCommands)(a.ApplicationCommandType.CHAT, !1, !1),
-                    r = RegExp("^".concat(A.default.escape(n)), "i"),
+                    r = RegExp("^".concat(h.default.escape(n)), "i"),
                     s = (0, I.getMatchingGroupCommands)(i, r, {
                         channel: e,
                         guild: t
                     }, m.MAX_COMMAND_AUTOCOMPLETE_RESULTS),
-                    o = l.BUILT_IN_SECTIONS[O.BuiltInSectionId.BUILT_IN];
+                    o = l.BUILT_IN_SECTIONS[p.BuiltInSectionId.BUILT_IN];
                 return 0 === s.length ? C : {
                     results: {
                         entries: s.map(e => ({
@@ -108,14 +108,14 @@ function(e, t, n) {
                 onHover: l,
                 onClick: u
             } = e, d = (0, T.getCommandQuery)(s, a), _ = o.commands === m.CommandMode.OLD_BUILT_INS;
-            return (0, h.renderAutocompleteGroup)({
+            return (0, A.renderAutocompleteGroup)({
                 query: d.text,
                 selectedIndex: n,
                 autocompletes: t,
                 onHover: l,
                 onClick: u,
-                titleWithQuery: p.default.Messages.COMMANDS_MATCHING,
-                titleWithoutQuery: p.default.Messages.COMMANDS,
+                titleWithQuery: O.default.Messages.COMMANDS_MATCHING,
+                titleWithoutQuery: O.default.Messages.COMMANDS,
                 getQuery: e => "".concat(N.COMMAND_SENTINEL).concat(e),
                 Component: _ ? S.default.Command : S.default.NewCommand,
                 getProps: e => {
@@ -140,7 +140,7 @@ function(e, t, n) {
                     color: r.Button.Colors.BRAND,
                     size: r.Button.Sizes.MIN,
                     onClick: g,
-                    children: p.default.Messages.LEGACY_CHAT_INPUT_SLASH_COMMAND_MISSING_HELP_MESSAGE
+                    children: O.default.Messages.LEGACY_CHAT_INPUT_SLASH_COMMAND_MISSING_HELP_MESSAGE
                 }) : null
             })
         },

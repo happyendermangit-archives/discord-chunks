@@ -11,13 +11,13 @@ function(e, t, n) {
             return D
         },
         destroy: function() {
-            return A
+            return h
         },
         init: function() {
             return S
         },
         installApplication: function() {
-            return h
+            return A
         },
         moveUp: function() {
             return C
@@ -32,10 +32,10 @@ function(e, t, n) {
             return m
         },
         resume: function() {
-            return p
+            return O
         },
         uninstallApplication: function() {
-            return O
+            return p
         },
         updateApplication: function() {
             return N
@@ -77,11 +77,11 @@ function(e, t, n) {
         })
     }
 
-    function A() {
+    function h() {
         E.default.destroy()
     }
 
-    function h(e) {
+    function A(e) {
         let {
             application: t,
             branchId: n,
@@ -149,7 +149,7 @@ function(e, t, n) {
         })
     }
 
-    function O(e, t, n) {
+    function p(e, t, n) {
         let i = s.default.getApplication(e);
         null != i && (c.default.removeShortcuts(i.name), d.default.track(T.AnalyticEvents.LIBRARY_UNINSTALL_INITIATED, {
             application_id: i.id,
@@ -163,7 +163,7 @@ function(e, t, n) {
         })
     }
 
-    function p() {
+    function O() {
         E.default.resume()
     }
 

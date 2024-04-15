@@ -38,19 +38,19 @@ function(e, t, n) {
                 color: _.Button.Colors.BRAND,
                 look: _.Button.Looks.INVERTED
             },
-            onComponentMount: A,
-            asset: h,
+            onComponentMount: h,
+            asset: A,
             markAsDismissed: m,
             caretPosition: N = "caretTopCenter",
-            buttonLayout: O = 0
+            buttonLayout: p = 0
         } = e;
         l.useEffect(() => {
-            null == A || A()
+            null == h || h()
         }, []);
-        let p = null != u;
+        let O = null != u;
         return (0, o.jsxs)("div", {
             className: d()(t, E.upsellTooltipWrapper, E[N]),
-            children: [h, null == n ? null : (0, o.jsx)(_.Heading, {
+            children: [A, null == n ? null : (0, o.jsx)(_.Heading, {
                 className: d()(i, E.upsellTooltipHeader),
                 variant: "heading-md/semibold",
                 children: n
@@ -59,12 +59,12 @@ function(e, t, n) {
                 className: d()(s, E.content),
                 variant: "text-sm/normal",
                 children: r
-            }), null != a || p ? (0, o.jsxs)("div", {
+            }), null != a || O ? (0, o.jsxs)("div", {
                 className: d()(E.upsellButtonsContainer, {
-                    [E.upsellButtonsAdjacent]: 0 === O,
-                    [E.upsellButtonsStacked]: 1 === O
+                    [E.upsellButtonsAdjacent]: 0 === p,
+                    [E.upsellButtonsStacked]: 1 === p
                 }),
-                children: [p ? (0, o.jsx)(_.Button, {
+                children: [O ? (0, o.jsx)(_.Button, {
                     ...S,
                     onClick: () => {
                         null == T || T(), null == m || m(c.ContentDismissActionType.SECONDARY)
@@ -72,7 +72,7 @@ function(e, t, n) {
                     children: u
                 }) : null, null == a ? null : (0, o.jsx)(_.Button, {
                     className: d()({
-                        [E.fullWidth]: !p
+                        [E.fullWidth]: !O
                     }, f.className),
                     color: f.color,
                     look: f.look,

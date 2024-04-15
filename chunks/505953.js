@@ -20,12 +20,12 @@ function(e, t, n) {
         T = n("880080"),
         f = n("709054"),
         S = n("765104"),
-        A = n("477291"),
-        h = n("478758"),
+        h = n("477291"),
+        A = n("478758"),
         m = n("789707"),
         N = n("981631"),
-        O = n("531578"),
-        p = n("405198");
+        p = n("531578"),
+        O = n("405198");
 
     function R(e) {
         let {
@@ -36,14 +36,14 @@ function(e, t, n) {
             unread: C,
             onClick: g
         } = e, [L, D] = r.useState(!1), v = (0, u.getTimestampString)(f.default.extractTimestamp(t.startId)), M = (0, s.useStateFromStores)([S.default], () => S.default.summaryFeedback(t)), y = (e, n) => {
-            e.stopPropagation(), (0, A.default)({
+            e.stopPropagation(), (0, h.default)({
                 summary: t,
                 channel: _,
                 rating: n
             })
         }, P = d.default.can(N.Permissions.MANAGE_MESSAGES, _);
         return (0, i.jsxs)(a.Clickable, {
-            className: p.container,
+            className: O.container,
             onClick: g,
             onContextMenu: e => {
                 P && (0, o.openContextMenuLazy)(e, async () => {
@@ -61,13 +61,13 @@ function(e, t, n) {
             children: [(0, i.jsx)(T.default, {
                 hovered: L,
                 unread: C,
-                className: p.unreadPill
+                className: O.unreadPill
             }), (0, i.jsx)("div", {
-                className: p.rowHeader,
+                className: O.rowHeader,
                 children: (0, i.jsxs)("div", {
-                    className: p.rowHeaderLeft,
+                    className: O.rowHeaderLeft,
                     children: [(0, i.jsx)(a.Text, {
-                        className: p.timestamp,
+                        className: O.timestamp,
                         color: "interactive-normal",
                         variant: "text-xs/normal",
                         children: v
@@ -75,13 +75,13 @@ function(e, t, n) {
                         height: 4,
                         width: 4,
                         "aria-hidden": "true",
-                        className: p.dot
+                        className: O.dot
                     }), (0, i.jsx)(c.default, {
                         height: 12,
                         width: 12,
-                        className: p.icon
+                        className: O.icon
                     }), (0, i.jsx)(a.Text, {
-                        className: p.count,
+                        className: O.count,
                         color: "interactive-normal",
                         variant: "text-xs/normal",
                         children: t.count
@@ -90,8 +90,8 @@ function(e, t, n) {
                             height: 4,
                             width: 4,
                             "aria-hidden": "true",
-                            className: p.dot
-                        }), (0, i.jsx)(h.default, {
+                            className: O.dot
+                        }), (0, i.jsx)(A.default, {
                             partySize: {
                                 knownSize: m.length,
                                 totalSize: m.length
@@ -103,18 +103,18 @@ function(e, t, n) {
                     })]
                 })
             }), L && !M && (0, i.jsxs)("div", {
-                className: p.feedbackContainer,
+                className: O.feedbackContainer,
                 children: [(0, i.jsx)(a.Clickable, {
-                    onClick: e => y(e, O.FeedbackRating.GOOD),
+                    onClick: e => y(e, p.FeedbackRating.GOOD),
                     children: (0, i.jsx)(I.default, {
-                        className: p.thumbIcon,
+                        className: O.thumbIcon,
                         width: 12,
                         height: 12
                     })
                 }), (0, i.jsx)(a.Clickable, {
-                    onClick: e => y(e, O.FeedbackRating.BAD),
+                    onClick: e => y(e, p.FeedbackRating.BAD),
                     children: (0, i.jsx)(E.default, {
-                        className: p.thumbIcon,
+                        className: O.thumbIcon,
                         width: 12,
                         height: 12
                     })
@@ -122,12 +122,12 @@ function(e, t, n) {
             }), (0, i.jsx)(a.Text, {
                 color: "header-primary",
                 variant: "text-sm/semibold",
-                className: p.title,
+                className: O.title,
                 children: t.topic
             }), (0, i.jsx)(a.Text, {
                 color: "header-secondary",
                 variant: "text-sm/normal",
-                className: p.subtitle,
+                className: O.subtitle,
                 children: t.summShort
             })]
         })

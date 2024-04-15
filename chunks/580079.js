@@ -17,9 +17,9 @@ function(e, t, n) {
         T = {},
         f = {},
         S = {},
-        A = {};
+        h = {};
 
-    function h(e) {
+    function A(e) {
         let t = f[e];
         if (null == t) return;
         let n = c.default.fromTimestamp(Date.now() - 9e5),
@@ -35,7 +35,7 @@ function(e, t, n) {
     function m(e, t, n, i) {
         T[e].add(t);
         let r = S[t];
-        (null == r || r + 3e5 > Date.now()) && h(t), null == f[t] && (f[t] = []), f[t].push({
+        (null == r || r + 3e5 > Date.now()) && A(t), null == f[t] && (f[t] = []), f[t].push({
             id: n,
             userId: i
         })
@@ -47,9 +47,9 @@ function(e, t, n) {
         } = e;
         delete f[t.id], delete S[t.id]
     }
-    class O extends(i = u.default.Store) {
+    class p extends(i = u.default.Store) {
         getActiveChannelsFetchStatus(e) {
-            return A[e]
+            return h[e]
         }
         getActiveChannelIds(e) {
             return T[e]
@@ -59,15 +59,15 @@ function(e, t, n) {
         }
         shouldFetch(e) {
             var t;
-            return null == T[e] && !(null === (t = A[e]) || void 0 === t ? void 0 : t.loading)
+            return null == T[e] && !(null === (t = h[e]) || void 0 === t ? void 0 : t.loading)
         }
     }
-    a = "ActiveChannelsStore", (s = "displayName") in(r = O) ? Object.defineProperty(r, s, {
+    a = "ActiveChannelsStore", (s = "displayName") in(r = p) ? Object.defineProperty(r, s, {
         value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a, t.default = new O(d.default, {
+    }) : r[s] = a, t.default = new p(d.default, {
         CHANNEL_SELECT: function(e) {
             let {
                 channelId: t,
@@ -78,7 +78,7 @@ function(e, t, n) {
             if (null == i) return !1;
             i.forEach(e => {
                 var t;
-                h(e), (null === (t = f[e]) || void 0 === t ? void 0 : t.length) === 0 && delete f[e]
+                A(e), (null === (t = f[e]) || void 0 === t ? void 0 : t.length) === 0 && delete f[e]
             });
             let r = l().chain(Array.from(i)).filter(e => e in f).sortBy(e => {
                 var t, n;
@@ -113,7 +113,7 @@ function(e, t, n) {
             let {
                 guildId: t
             } = e;
-            A[t] = {
+            h[t] = {
                 loading: !0,
                 error: null,
                 fetchedAt: Date.now()
@@ -124,7 +124,7 @@ function(e, t, n) {
                 guildId: t,
                 channels: n
             } = e;
-            A[t] = {
+            h[t] = {
                 loading: !1,
                 error: null,
                 fetchedAt: Date.now()
@@ -143,7 +143,7 @@ function(e, t, n) {
                 guildId: t,
                 error: n
             } = e;
-            A[t] = {
+            h[t] = {
                 loading: !1,
                 error: n,
                 fetchedAt: null

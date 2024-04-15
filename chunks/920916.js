@@ -23,12 +23,12 @@ function(e, t, n) {
         T = n("164946"),
         f = n("166625"),
         S = n("25990"),
-        A = n("594174"),
-        h = n("810090"),
+        h = n("594174"),
+        A = n("810090"),
         m = n("272008"),
         N = n("497505"),
-        O = n("918701"),
-        p = n("114732"),
+        p = n("918701"),
+        O = n("114732"),
         R = n("675654"),
         C = n("689938"),
         g = n("174415");
@@ -48,7 +48,7 @@ function(e, t, n) {
             reward: _,
             decoration: c,
             onUseNow: E
-        } = e, T = r.useRef(null), [f, S] = r.useState(null), h = r.useRef(new s.Environment), C = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), L = (0, o.useStateFromStores)([A.default], () => A.default.getCurrentUser()), D = (0, O.getHeroAssetUrl)(a), [M, y] = r.useState("loading");
+        } = e, T = r.useRef(null), [f, S] = r.useState(null), A = r.useRef(new s.Environment), C = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), L = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), D = (0, p.getHeroAssetUrl)(a), [M, y] = r.useState("loading");
         r.useEffect(() => {
             var e;
             (null === (e = a.userStatus) || void 0 === e ? void 0 : e.claimedAt) == null && (0, m.claimQuestReward)(a.id, N.QuestRewardCodePlatforms.CROSS_PLATFORM, u).then(() => y("claimed")).catch(() => y("error"))
@@ -58,7 +58,7 @@ function(e, t, n) {
             children: [(0, i.jsx)(s.ConfettiCanvas, {
                 ref: S,
                 className: g.confettiCanvas,
-                environment: h.current
+                environment: A.current
             }), (0, i.jsx)("div", {
                 ref: T,
                 children: (0, i.jsx)(l.ModalRoot, {
@@ -72,7 +72,7 @@ function(e, t, n) {
                             className: g.spinner,
                             type: l.Spinner.Type.SPINNING_CIRCLE
                         })
-                    }) : "error" === M ? (0, i.jsx)(p.default, {
+                    }) : "error" === M ? (0, i.jsx)(O.default, {
                         onClose: n
                     }) : (0, i.jsx)(v, {
                         user: L,
@@ -113,7 +113,7 @@ function(e, t, n) {
             className: g.claimedRootContainer,
             children: [(0, i.jsxs)("div", {
                 className: g.headerContainer,
-                children: [(0, i.jsx)(h.default, {
+                children: [(0, i.jsx)(A.default, {
                     className: g.headerBackground,
                     autoPlay: !1,
                     loop: !1,
@@ -205,7 +205,7 @@ function(e, t, n) {
     function y(e, t) {
         let s = r.useMemo(() => {
             var t;
-            return null !== (t = null == e ? void 0 : e.config.rewardsConfig.rewards.find(O.isCollectibleReward)) && void 0 !== t ? t : null
+            return null !== (t = null == e ? void 0 : e.config.rewardsConfig.rewards.find(p.isCollectibleReward)) && void 0 !== t ? t : null
         }, [e]);
         return () => null == e || null == s ? null : ((0, l.openModalLazy)(async () => {
             let {

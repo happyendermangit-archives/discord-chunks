@@ -42,38 +42,38 @@ function(e, t, n) {
             withMutualGuilds: T = !1,
             withMutualFriendsCount: f = !1,
             withMutualFriends: S = !1,
-            friendToken: A,
-            preloadUserBanner: h = !0,
+            friendToken: h,
+            preloadUserBanner: A = !0,
             dispatchWait: m = !1,
             guildId: N,
-            channelId: O
+            channelId: p
         } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         if ("" === e) return;
         (0, o.fetchUserProfileEffects)(), null != t && (0, s.maybeFetchColors)(t), null != N && !T && (T = !0), null != N && (I = null !== (l = null === (n = (0, a.getVisibleConnectionsRole)({
             guildMember: d.default.getMember(N, e),
-            channel: u.default.getChannel(O)
+            channel: u.default.getChannel(p)
         })) || void 0 === n ? void 0 : n.id) && void 0 !== l ? l : void 0);
-        let p = c.default.getUserProfile(e),
+        let O = c.default.getUserProfile(e),
             R = c.default.getMutualGuilds(e),
             C = c.default.getMutualFriendsCount(e),
             g = c.default.isFetchingProfile(e),
             L = !Array.isArray(R) && T,
             D = null == C && f,
-            v = (null == p ? void 0 : p.profileFetchFailed) || !g && (L || D),
-            M = h ? E.default : void 0,
+            v = (null == O ? void 0 : O.profileFetchFailed) || !g && (L || D),
+            M = A ? E.default : void 0,
             y = !1;
-        null != N && (y = null == c.default.getGuildMemberProfile(e, N)), !(!v && !y && (g || Date.now() - (null !== (_ = null == p ? void 0 : p.lastFetched) && void 0 !== _ ? _ : 0) < 6e4)) && (m ? await i.default.wait(() => (0, r.fetchProfile)(e, {
+        null != N && (y = null == c.default.getGuildMemberProfile(e, N)), !(!v && !y && (g || Date.now() - (null !== (_ = null == O ? void 0 : O.lastFetched) && void 0 !== _ ? _ : 0) < 6e4)) && (m ? await i.default.wait(() => (0, r.fetchProfile)(e, {
             withMutualGuilds: T,
             withMutualFriends: S,
             withMutualFriendsCount: f,
-            friendToken: A,
+            friendToken: h,
             guildId: N,
             connectionsRoleId: I
         }, M)) : await (0, r.fetchProfile)(e, {
             withMutualGuilds: T,
             withMutualFriends: S,
             withMutualFriendsCount: f,
-            friendToken: A,
+            friendToken: h,
             guildId: N,
             connectionsRoleId: I
         }, M))

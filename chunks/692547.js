@@ -20,12 +20,12 @@ function(e, t, n) {
     } = u._private, {
         Shadows: S
     } = c._private, {
-        Spacing: A
+        Spacing: h
     } = E._private, {
-        Modules: h
+        Modules: A
     } = d._private, m = l()(f, e => r()(e)), N = {
         themes: I,
-        modules: h,
+        modules: A,
         colors: l()(T, (e, t) => ({
             css: C(t),
             resolve(t) {
@@ -35,7 +35,7 @@ function(e, t, n) {
                 if (1 === r) return N.unsafe_rawColors[i].resolve(t);
                 {
                     let e = m[i];
-                    return 0 !== e.alpha() && 1 !== r && (e = e.alpha(r)), O(e, t.saturation)
+                    return 0 !== e.alpha() && 1 !== r && (e = e.alpha(r)), p(e, t.saturation)
                 }
             }
         })),
@@ -43,7 +43,7 @@ function(e, t, n) {
             let n = m[t];
             return {
                 css: C(t),
-                resolve: e => O(n, e.saturation)
+                resolve: e => p(n, e.saturation)
             }
         }),
         shadows: l()(S, (e, t) => ({
@@ -55,33 +55,33 @@ function(e, t, n) {
             })
         })),
         radii: _.Radius,
-        spacing: l()(A, e => "".concat(e, "px"))
+        spacing: l()(h, e => "".concat(e, "px"))
     };
 
-    function O(e, t) {
+    function p(e, t) {
         return {
             spring() {
                 let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                return p(e, t, n).hex("rgba")
+                return O(e, t, n).hex("rgba")
             },
             hsl() {
                 let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                return p(e, t, n).css("hsl")
+                return O(e, t, n).css("hsl")
             },
             hex() {
                 let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                return p(e, t, n).hex()
+                return O(e, t, n).hex()
             },
             int() {
                 let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-                    i = p(e, t, n),
+                    i = O(e, t, n),
                     r = i.num();
                 return 1 !== i.alpha() ? r << 8 | Math.round(255 * i.alpha()) : r
             }
         }
     }
 
-    function p(e, t, n) {
+    function O(e, t, n) {
         var i;
         let r = a()(null !== (i = n.opacity) && void 0 !== i ? i : 1, 0, 1),
             s = e;

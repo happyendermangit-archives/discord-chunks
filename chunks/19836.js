@@ -21,9 +21,9 @@ function(e, t, n) {
         T = n("981631"),
         f = n("689938"),
         S = n("181035"),
-        A = n("989171");
+        h = n("989171");
 
-    function h(e) {
+    function A(e) {
         let {
             guildName: t
         } = e;
@@ -44,8 +44,8 @@ function(e, t, n) {
             hidePersonalInformation: _,
             isUsingGuildBio: m,
             lastSection: N = !1,
-            animateOnHover: O = !1,
-            isHovering: p = !1,
+            animateOnHover: p = !1,
+            isHovering: O = !1,
             lineClamp: R
         } = e, {
             location: C
@@ -54,14 +54,14 @@ function(e, t, n) {
             lastSection: N,
             children: [(0, i.jsxs)(o.Heading, {
                 variant: "eyebrow",
-                className: A.title,
+                className: h.title,
                 children: [f.default.Messages.USER_POPOUT_ABOUT_ME, null != t && m && (0, i.jsx)(o.Tooltip, {
                     color: o.Tooltip.Colors.CUSTOM,
                     tooltipClassName: S.aboutMeGuildIconTooltip,
                     "aria-label": f.default.Messages.GUILD_IDENTITY_BIO_TOAST.format({
                         guildName: t.name
                     }),
-                    text: (0, i.jsx)(h, {
+                    text: (0, i.jsx)(A, {
                         guildName: t.name
                     }),
                     children: e => (0, i.jsx)(d.default, {
@@ -90,8 +90,8 @@ function(e, t, n) {
                 })]
             }), (0, i.jsx)(E.default, {
                 userBio: r,
-                animateOnHover: O,
-                isHovering: p,
+                animateOnHover: p,
+                isHovering: O,
                 lineClamp: R
             })]
         })

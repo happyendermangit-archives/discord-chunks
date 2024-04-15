@@ -27,13 +27,13 @@ function(e, t, n) {
         T = n("914010"),
         f = n("246946"),
         S = n("594174"),
-        A = n("483360"),
-        h = n("226951"),
+        h = n("483360"),
+        A = n("226951"),
         m = n("51144"),
         N = n("981631"),
-        O = n("689938");
+        p = n("689938");
 
-    function p() {
+    function O() {
         return new Set(d().months().map(e => e.toLowerCase()))
     }
 
@@ -61,11 +61,11 @@ function(e, t, n) {
 
     function v() {
         return {
-            [O.default.Messages.SEARCH_SHORTCUT_TODAY]: () => L("day"),
-            [O.default.Messages.SEARCH_SHORTCUT_YESTERDAY]: () => L("day", -1),
-            [O.default.Messages.SEARCH_SHORTCUT_WEEK]: () => L("week"),
-            [O.default.Messages.SEARCH_SHORTCUT_MONTH]: () => L("month"),
-            [O.default.Messages.SEARCH_SHORTCUT_YEAR]: () => L("year")
+            [p.default.Messages.SEARCH_SHORTCUT_TODAY]: () => L("day"),
+            [p.default.Messages.SEARCH_SHORTCUT_YESTERDAY]: () => L("day", -1),
+            [p.default.Messages.SEARCH_SHORTCUT_WEEK]: () => L("week"),
+            [p.default.Messages.SEARCH_SHORTCUT_MONTH]: () => L("month"),
+            [p.default.Messages.SEARCH_SHORTCUT_YEAR]: () => L("year")
         }
     }
     let M = RegExp("(?:\\s*(".concat("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", "|").concat("([0-9]{4})-([0-9]{1,2})", "|").concat("\\d{4}", "|").concat("([^\\d\\s]+)", "))"), "i"),
@@ -90,7 +90,7 @@ function(e, t, n) {
         let n, i;
         let r = e.getFullMatch().trim().toLowerCase(),
             s = v()[r];
-        return null != s ? [n, i] = s() : p().has(r) ? [n, i] = D(r, "MMMM", "month") : R().has(r) ? [n, i] = D(r, "dddd", "day") : C().has(r) ? [n, i] = D(r, "YYYY", "year") : [n, i] = D(r, N.SEARCH_DATE_FORMAT, "day"), !!(n.isValid() && i.isValid()) && ("before" === t ? (i = n, n = null) : "after" === t && (n = i, i = null), e.setData("start", n), e.setData("end", i), !0)
+        return null != s ? [n, i] = s() : O().has(r) ? [n, i] = D(r, "MMMM", "month") : R().has(r) ? [n, i] = D(r, "dddd", "day") : C().has(r) ? [n, i] = D(r, "YYYY", "year") : [n, i] = D(r, N.SEARCH_DATE_FORMAT, "day"), !!(n.isValid() && i.isValid()) && ("before" === t ? (i = n, n = null) : "after" === t && (n = i, i = null), e.setData("start", n), e.setData("end", i), !0)
     }
 
     function w(e) {
@@ -112,20 +112,20 @@ function(e, t, n) {
 
     function B(e) {
         let t = {
-            [O.default.Messages.SEARCH_ANSWER_HAS_LINK]: "link",
-            [O.default.Messages.SEARCH_ANSWER_HAS_EMBED]: "embed",
-            [O.default.Messages.SEARCH_ANSWER_HAS_POLL]: "poll",
-            [O.default.Messages.SEARCH_ANSWER_HAS_ATTACHMENT]: "file",
-            [O.default.Messages.SEARCH_ANSWER_HAS_VIDEO]: "video",
-            [O.default.Messages.SEARCH_ANSWER_HAS_IMAGE]: "image",
-            [O.default.Messages.SEARCH_ANSWER_HAS_SOUND]: "sound",
-            [O.default.Messages.SEARCH_ANSWER_HAS_STICKER]: "sticker"
+            [p.default.Messages.SEARCH_ANSWER_HAS_LINK]: "link",
+            [p.default.Messages.SEARCH_ANSWER_HAS_EMBED]: "embed",
+            [p.default.Messages.SEARCH_ANSWER_HAS_POLL]: "poll",
+            [p.default.Messages.SEARCH_ANSWER_HAS_ATTACHMENT]: "file",
+            [p.default.Messages.SEARCH_ANSWER_HAS_VIDEO]: "video",
+            [p.default.Messages.SEARCH_ANSWER_HAS_IMAGE]: "image",
+            [p.default.Messages.SEARCH_ANSWER_HAS_SOUND]: "sound",
+            [p.default.Messages.SEARCH_ANSWER_HAS_STICKER]: "sticker"
         } [e.getMatch(1)];
         return null != t && "" !== t && (e.setData("has", t), !0)
     }
 
     function k() {
-        return [...Array.from(p()), ...Array.from(R()), ...Array.from(C()), ...Object.keys(v())]
+        return [...Array.from(O()), ...Array.from(R()), ...Array.from(C()), ...Object.keys(v())]
     }
 
     function V() {
@@ -158,19 +158,19 @@ function(e, t, n) {
             };
         switch (s) {
             case N.SearchTypes.GUILD:
-                n = A.default.queryGuildUsers({
+                n = h.default.queryGuildUsers({
                     ...a,
                     guildId: t
                 });
                 break;
             case N.SearchTypes.CHANNEL:
-                n = A.default.queryChannelUsers({
+                n = h.default.queryChannelUsers({
                     ...a,
                     channelId: t
                 });
                 break;
             case N.SearchTypes.DMS:
-                n = A.default.queryUsers(e, i, !0, r, () => !0);
+                n = h.default.queryUsers(e, i, !0, r, () => !0);
                 break;
             default:
                 return []
@@ -204,13 +204,13 @@ function(e, t, n) {
 
     function z() {
         Object.assign(K, function() {
-            let e = [O.default.Messages.SEARCH_ANSWER_HAS_LINK, O.default.Messages.SEARCH_ANSWER_HAS_EMBED, O.default.Messages.SEARCH_ANSWER_HAS_POLL, O.default.Messages.SEARCH_ANSWER_HAS_ATTACHMENT, O.default.Messages.SEARCH_ANSWER_HAS_VIDEO, O.default.Messages.SEARCH_ANSWER_HAS_IMAGE, O.default.Messages.SEARCH_ANSWER_HAS_SOUND, O.default.Messages.SEARCH_ANSWER_HAS_STICKER];
+            let e = [p.default.Messages.SEARCH_ANSWER_HAS_LINK, p.default.Messages.SEARCH_ANSWER_HAS_EMBED, p.default.Messages.SEARCH_ANSWER_HAS_POLL, p.default.Messages.SEARCH_ANSWER_HAS_ATTACHMENT, p.default.Messages.SEARCH_ANSWER_HAS_VIDEO, p.default.Messages.SEARCH_ANSWER_HAS_IMAGE, p.default.Messages.SEARCH_ANSWER_HAS_SOUND, p.default.Messages.SEARCH_ANSWER_HAS_STICKER];
             return {
                 [N.SearchTokenTypes.FILTER_FROM]: {
-                    regex: U(O.default.Messages.SEARCH_FILTER_FROM),
+                    regex: U(p.default.Messages.SEARCH_FILTER_FROM),
                     componentType: "FILTER",
-                    key: P(O.default.Messages.SEARCH_FILTER_FROM),
-                    plainText: O.default.Messages.SEARCH_FILTER_FROM,
+                    key: P(p.default.Messages.SEARCH_FILTER_FROM),
+                    plainText: p.default.Messages.SEARCH_FILTER_FROM,
                     validator: j,
                     getAutocompletions: H
                 },
@@ -223,10 +223,10 @@ function(e, t, n) {
                     queryKey: "author_id"
                 },
                 [N.SearchTokenTypes.FILTER_MENTIONS]: {
-                    regex: U(O.default.Messages.SEARCH_FILTER_MENTIONS),
+                    regex: U(p.default.Messages.SEARCH_FILTER_MENTIONS),
                     componentType: "FILTER",
-                    key: P(O.default.Messages.SEARCH_FILTER_MENTIONS),
-                    plainText: O.default.Messages.SEARCH_FILTER_MENTIONS,
+                    key: P(p.default.Messages.SEARCH_FILTER_MENTIONS),
+                    plainText: p.default.Messages.SEARCH_FILTER_MENTIONS,
                     validator: j,
                     getAutocompletions: H
                 },
@@ -239,23 +239,23 @@ function(e, t, n) {
                     queryKey: "mentions"
                 },
                 [N.SearchTokenTypes.FILTER_HAS]: {
-                    regex: U(O.default.Messages.SEARCH_FILTER_HAS),
+                    regex: U(p.default.Messages.SEARCH_FILTER_HAS),
                     componentType: "FILTER",
-                    key: P(O.default.Messages.SEARCH_FILTER_HAS),
-                    plainText: O.default.Messages.SEARCH_FILTER_HAS,
+                    key: P(p.default.Messages.SEARCH_FILTER_HAS),
+                    plainText: p.default.Messages.SEARCH_FILTER_HAS,
                     getAutocompletions: (t, n, i) => x(t, i, e)
                 },
                 [N.SearchTokenTypes.ANSWER_HAS]: {
-                    regex: RegExp("(?:\\s*-?(".concat(e.map(e => h.default.escape(e)).join("|"), "))"), "i"),
+                    regex: RegExp("(?:\\s*-?(".concat(e.map(e => A.default.escape(e)).join("|"), "))"), "i"),
                     follows: [N.SearchTokenTypes.FILTER_HAS],
                     validator: B,
                     componentType: "ANSWER",
                     queryKey: "has"
                 },
                 [N.SearchTokenTypes.FILTER_FILE_TYPE]: {
-                    regex: U(O.default.Messages.SEARCH_FILTER_FILE_TYPE),
-                    key: P(O.default.Messages.SEARCH_FILTER_FILE_TYPE),
-                    plainText: O.default.Messages.SEARCH_FILTER_FILE_TYPE,
+                    regex: U(p.default.Messages.SEARCH_FILTER_FILE_TYPE),
+                    key: P(p.default.Messages.SEARCH_FILTER_FILE_TYPE),
+                    plainText: p.default.Messages.SEARCH_FILTER_FILE_TYPE,
                     componentType: "FILTER"
                 },
                 [N.SearchTokenTypes.ANSWER_FILE_TYPE]: {
@@ -266,9 +266,9 @@ function(e, t, n) {
                     queryKey: "attachment_extensions"
                 },
                 [N.SearchTokenTypes.FILTER_FILE_NAME]: {
-                    regex: U(O.default.Messages.SEARCH_FILTER_FILE_NAME),
-                    key: P(O.default.Messages.SEARCH_FILTER_FILE_NAME),
-                    plainText: O.default.Messages.SEARCH_FILTER_FILE_NAME,
+                    regex: U(p.default.Messages.SEARCH_FILTER_FILE_NAME),
+                    key: P(p.default.Messages.SEARCH_FILTER_FILE_NAME),
+                    plainText: p.default.Messages.SEARCH_FILTER_FILE_NAME,
                     componentType: "FILTER"
                 },
                 [N.SearchTokenTypes.ANSWER_FILE_NAME]: {
@@ -279,24 +279,24 @@ function(e, t, n) {
                     queryKey: "attachment_filename"
                 },
                 [N.SearchTokenTypes.FILTER_BEFORE]: {
-                    regex: U(O.default.Messages.SEARCH_FILTER_BEFORE),
+                    regex: U(p.default.Messages.SEARCH_FILTER_BEFORE),
                     componentType: "FILTER",
-                    key: P(O.default.Messages.SEARCH_FILTER_BEFORE),
-                    plainText: O.default.Messages.SEARCH_FILTER_BEFORE,
+                    key: P(p.default.Messages.SEARCH_FILTER_BEFORE),
+                    plainText: p.default.Messages.SEARCH_FILTER_BEFORE,
                     getAutocompletions: (e, t, n) => F(e, n, N.SearchTokenTypes.FILTER_BEFORE)
                 },
                 [N.SearchTokenTypes.FILTER_ON]: {
-                    regex: U("(".concat(O.default.Messages.SEARCH_FILTER_ON, "|").concat(O.default.Messages.SEARCH_FILTER_DURING, ")")),
+                    regex: U("(".concat(p.default.Messages.SEARCH_FILTER_ON, "|").concat(p.default.Messages.SEARCH_FILTER_DURING, ")")),
                     componentType: "FILTER",
-                    key: P(O.default.Messages.SEARCH_FILTER_DURING),
-                    plainText: O.default.Messages.SEARCH_FILTER_DURING,
+                    key: P(p.default.Messages.SEARCH_FILTER_DURING),
+                    plainText: p.default.Messages.SEARCH_FILTER_DURING,
                     getAutocompletions: (e, t, n) => F(e, n, N.SearchTokenTypes.FILTER_ON)
                 },
                 [N.SearchTokenTypes.FILTER_AFTER]: {
-                    regex: U(O.default.Messages.SEARCH_FILTER_AFTER),
+                    regex: U(p.default.Messages.SEARCH_FILTER_AFTER),
                     componentType: "FILTER",
-                    key: P(O.default.Messages.SEARCH_FILTER_AFTER),
-                    plainText: O.default.Messages.SEARCH_FILTER_AFTER,
+                    key: P(p.default.Messages.SEARCH_FILTER_AFTER),
+                    plainText: p.default.Messages.SEARCH_FILTER_AFTER,
                     getAutocompletions: (e, t, n) => F(e, n, N.SearchTokenTypes.FILTER_AFTER)
                 },
                 [N.SearchTokenTypes.ANSWER_BEFORE]: {
@@ -321,19 +321,19 @@ function(e, t, n) {
                     validator: e => G(e, "after")
                 },
                 [N.SearchTokenTypes.FILTER_IN]: {
-                    regex: U(O.default.Messages.SEARCH_FILTER_IN),
+                    regex: U(p.default.Messages.SEARCH_FILTER_IN),
                     componentType: "FILTER",
-                    key: P(O.default.Messages.SEARCH_FILTER_IN),
-                    plainText: O.default.Messages.SEARCH_FILTER_IN,
+                    key: P(p.default.Messages.SEARCH_FILTER_IN),
+                    plainText: p.default.Messages.SEARCH_FILTER_IN,
                     validator: Y,
                     getAutocompletions(e, t, n) {
                         "#" === e[0] && (e = e.substring(1));
-                        let i = A.default.queryChannels({
+                        let i = h.default.queryChannels({
                             query: e,
                             type: _.GUILD_SELECTABLE_CHANNELS_KEY,
                             guildId: t,
                             limit: 1 / 0
-                        }).concat(A.default.queryChannels({
+                        }).concat(h.default.queryChannels({
                             query: e,
                             type: _.GUILD_VOCAL_CHANNELS_KEY,
                             guildId: t,
@@ -368,10 +368,10 @@ function(e, t, n) {
                     queryKey: "channel_id"
                 },
                 [N.SearchTokenTypes.FILTER_PINNED]: {
-                    regex: U(O.default.Messages.SEARCH_FILTER_PINNED),
+                    regex: U(p.default.Messages.SEARCH_FILTER_PINNED),
                     componentType: "FILTER",
-                    key: P(O.default.Messages.SEARCH_FILTER_PINNED),
-                    plainText: O.default.Messages.SEARCH_FILTER_PINNED,
+                    key: P(p.default.Messages.SEARCH_FILTER_PINNED),
+                    plainText: p.default.Messages.SEARCH_FILTER_PINNED,
                     getAutocompletions: () => [{
                         text: "true"
                     }, {

@@ -29,12 +29,12 @@ function(e, t, n) {
         T = n("74538"),
         f = n("316941"),
         S = n("59561"),
-        A = n("388622"),
-        h = n("61196"),
+        h = n("388622"),
+        A = n("61196"),
         m = n("639119"),
         N = n("748770"),
-        O = n("725727"),
-        p = n("1844"),
+        p = n("725727"),
+        O = n("1844"),
         R = n("474936"),
         C = n("981631"),
         g = n("689938");
@@ -72,9 +72,9 @@ function(e, t, n) {
             autoTrackExposure: !1
         }), {
             promotion: n
-        } = (0, O.useBogoPromotion)(), {
+        } = (0, p.useBogoPromotion)(), {
             enabled: i
-        } = (0, h.default)(), {
+        } = (0, A.default)(), {
             mostRecentSubscription: r,
             premiumSubscription: a
         } = (0, s.useStateFromStoresObject)([E.default], () => ({
@@ -90,7 +90,7 @@ function(e, t, n) {
             c = Date.now(),
             {
                 enabled: I
-            } = A.default.useExperiment({
+            } = h.default.useExperiment({
                 location: "153d31_2"
             }, {
                 autoTrackExposure: _,
@@ -111,10 +111,10 @@ function(e, t, n) {
             }),
             {
                 enabled: r
-            } = (0, h.isBogoPromotionExperimentEnabled)(),
+            } = (0, A.isBogoPromotionExperimentEnabled)(),
             {
                 enabled: s
-            } = A.default.getCurrentConfig({
+            } = h.default.getCurrentConfig({
                 location: "153d31_4"
             }, {
                 autoTrackExposure: !1
@@ -138,17 +138,17 @@ function(e, t, n) {
     }
     async function M() {
         if (!await v()) return;
-        let e = p.default.bogoPromotion;
+        let e = O.default.bogoPromotion;
         if (!(null != e && new Date(e.endDate).valueOf() >= Date.now())) await (0, N.fetchActiveBogoPromotion)()
     }
     async function y() {
-        let e = p.default.bogoPromotion,
+        let e = O.default.bogoPromotion,
             t = null != e && new Date(e.endDate).valueOf() >= Date.now() && new Date(e.startDate).valueOf() <= Date.now(),
             n = (0, d.isDismissibleContentDismissed)(a.DismissibleContent.SUMMER_2023_BOGO_ANNOUNCEMENT_MODAL),
             i = await v(),
             {
                 enabled: r
-            } = h.BogoPromotionExperiment.getCurrentConfig({
+            } = A.BogoPromotionExperiment.getCurrentConfig({
                 location: "153d31_6"
             }, {
                 autoTrackExposure: !1

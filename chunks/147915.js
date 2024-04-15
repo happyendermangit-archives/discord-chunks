@@ -49,12 +49,12 @@ function(e, t, n) {
             icon: o,
             children: f,
             onClick: S,
-            isActive: A,
-            onMouseEnter: h,
+            isActive: h,
+            onMouseEnter: A,
             onMouseLeave: m,
             onFocus: N,
-            onBlur: O,
-            pulse: p,
+            onBlur: p,
+            pulse: O,
             sparkle: R,
             notification: C,
             "aria-label": g,
@@ -90,16 +90,16 @@ function(e, t, n) {
             "aria-controls": v,
             disabled: n,
             className: l()(t, {
-                [I.active]: A
+                [I.active]: h
             }),
             innerClassName: l()(I.button, i, {
-                [I.pulseButton]: p
+                [I.pulseButton]: O
             }),
             onClick: S,
-            onMouseEnter: h,
+            onMouseEnter: A,
             onMouseLeave: m,
             onFocus: N,
-            onBlur: O,
+            onBlur: p,
             focusProps: {
                 offset: {
                     top: 4,
@@ -122,7 +122,7 @@ function(e, t, n) {
                     children: y({
                         component: (0, s.jsx)(o, {
                             className: l()(I.icon, a, {
-                                [I.pulseIcon]: p
+                                [I.pulseIcon]: O
                             })
                         })
                     })

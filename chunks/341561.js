@@ -16,12 +16,12 @@ function(e, t, n) {
         T = n("419922"),
         f = n("430824"),
         S = n("156361"),
-        A = n("466111"),
-        h = n("483360"),
+        h = n("466111"),
+        A = n("483360"),
         m = n("877565"),
         N = n("590921"),
-        O = n("665692"),
-        p = n("981631"),
+        p = n("665692"),
+        O = n("981631"),
         R = n("689938"),
         C = n("106488");
 
@@ -33,18 +33,18 @@ function(e, t, n) {
         })
     }
     let L = {
-        sentinel: O.EMOJI_SENTINEL,
+        sentinel: p.EMOJI_SENTINEL,
         stores: [E.default],
         matches: (e, t, n, i, r) => n.length > 1,
         queryResults(e, t, n, i, r) {
             let s = i.allowStickers ? 0 : 40,
-                a = p.MAX_AUTOCOMPLETE_RESULTS + s,
+                a = O.MAX_AUTOCOMPLETE_RESULTS + s,
                 {
                     emojis: {
                         locked: o,
                         unlocked: l
                     }
-                } = h.default.queryEmojiResults({
+                } = A.default.queryEmojiResults({
                     query: n,
                     channel: e,
                     intention: i.emojiIntention,
@@ -60,7 +60,7 @@ function(e, t, n) {
             let d = [];
             if (i.allowStickers) {
                 (0, c.fetchStickerPacks)();
-                let t = h.default.queryStickers([n], !0, [e, (e, t) => t === _.StickerSendability.SENDABLE]),
+                let t = A.default.queryStickers([n], !0, [e, (e, t) => t === _.StickerSendability.SENDABLE]),
                     i = Math.max(4, 8 - l.length);
                 d = t.slice(0, i), "-" === n[0] && (d = t.filter(e => e.sticker.name === n))
             }
@@ -104,7 +104,7 @@ function(e, t, n) {
                     className: C.premiumSectionDivider
                 }), (0, i.jsxs)("div", {
                     className: a()(C.premiumHeader),
-                    children: [(0, i.jsx)(A.default, {
+                    children: [(0, i.jsx)(h.default, {
                         className: C.premiumIcon,
                         width: 20,
                         height: 20
@@ -128,11 +128,11 @@ function(e, t, n) {
                     getProps: e => ({
                         emoji: e,
                         key: e.id || e.uniqueName || e.name,
-                        sentinel: O.EMOJI_SENTINEL,
+                        sentinel: p.EMOJI_SENTINEL,
                         guild: null != e.guildId ? f.default.getGuild(e.guildId) : null,
                         isLocked: !1
                     }),
-                    getQuery: e => "".concat(O.EMOJI_SENTINEL).concat(e),
+                    getQuery: e => "".concat(p.EMOJI_SENTINEL).concat(e),
                     key: "emoji"
                 }), u.length > 0 ? (0, m.renderAutocompleteGroup)({
                     query: c,
@@ -155,11 +155,11 @@ function(e, t, n) {
                     getProps: e => ({
                         emoji: e,
                         key: e.id || e.uniqueName || e.name,
-                        sentinel: O.EMOJI_SENTINEL,
+                        sentinel: p.EMOJI_SENTINEL,
                         guild: null != e.guildId ? f.default.getGuild(e.guildId) : null,
                         isLocked: !0
                     }),
-                    getQuery: e => "".concat(O.EMOJI_SENTINEL).concat(e),
+                    getQuery: e => "".concat(p.EMOJI_SENTINEL).concat(e),
                     key: "emoji-upsell",
                     indexOffset: t.length,
                     subHeader: T
@@ -207,11 +207,11 @@ function(e, t, n) {
                 let e = t[r],
                     a = t.length + n.length;
                 return s.insertText(function(e) {
-                    return "".concat(O.EMOJI_SENTINEL).concat(e.name).concat(O.EMOJI_SENTINEL)
+                    return "".concat(p.EMOJI_SENTINEL).concat(e.name).concat(p.EMOJI_SENTINEL)
                 }(e), function(e) {
                     var t;
                     let n = e.animated ? "a" : "";
-                    return e.managed || null == e.id ? "".concat(O.EMOJI_SENTINEL).concat(e.name).concat(O.EMOJI_SENTINEL) : "<".concat(n, ":").concat(null !== (t = e.originalName) && void 0 !== t ? t : e.name, ":").concat(e.id, ">")
+                    return e.managed || null == e.id ? "".concat(p.EMOJI_SENTINEL).concat(e.name).concat(p.EMOJI_SENTINEL) : "<".concat(n, ":").concat(null !== (t = e.originalName) && void 0 !== t ? t : e.name, ":").concat(e.id, ">")
                 }(e)), {
                     type: N.AutocompleteSelectionTypes.EMOJI,
                     metadata: {

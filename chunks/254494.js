@@ -42,17 +42,17 @@ function(e, t, n) {
             rowCount: T,
             getScrollOffsetForIndex: f,
             categoryHeight: S,
-            onScroll: A,
-            renderCategoryListItem: h,
+            onScroll: h,
+            renderCategoryListItem: A,
             rowCountBySection: m,
             renderSection: N
-        } = e, O = u.useStore(e => e.activeCategoryIndex);
+        } = e, p = u.useStore(e => e.activeCategoryIndex);
         _({
-            activeIndex: O,
+            activeIndex: p,
             categoryListRef: t,
             getScrollOffsetForIndex: f
         });
-        let p = r.useCallback(e => {
+        let O = r.useCallback(e => {
                 let {
                     searchQuery: t
                 } = l.useExpressionPickerStore.getState();
@@ -62,13 +62,13 @@ function(e, t, n) {
                     null === (i = n.current) || void 0 === i || i.scrollToSectionTop(e)
                 }
             }, [n, u]),
-            R = r.useCallback(e => h(s[e], e, () => p(e), O === e), [O, s, p, h]),
+            R = r.useCallback(e => A(s[e], e, () => O(e), p === e), [p, s, O, A]),
             C = r.useMemo(() => "function" == typeof S ? e => S(s[e], e) : S, [s, S]);
         return (0, i.jsxs)("div", {
             className: a()(d.wrapper, E),
             children: [(0, i.jsx)(o.default, {
                 listPadding: I,
-                onScroll: A,
+                onScroll: h,
                 ref: t,
                 renderRow: R,
                 rowCount: T,
@@ -76,7 +76,7 @@ function(e, t, n) {
                 hideScrollbar: !0,
                 rowCountBySection: m,
                 renderSection: N
-            }), null == c ? void 0 : c(p)]
+            }), null == c ? void 0 : c(O)]
         })
     }
 }

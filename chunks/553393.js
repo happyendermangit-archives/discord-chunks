@@ -17,12 +17,12 @@ function(e, t, n) {
         T = n("617136"),
         f = n("113434"),
         S = n("497505"),
-        A = n("918701"),
-        h = n("874137"),
+        h = n("918701"),
+        A = n("874137"),
         m = n("644646"),
         N = n("667105"),
-        O = n("981631"),
-        p = n("689938"),
+        p = n("981631"),
+        O = n("689938"),
         R = n("258758");
     let C = "11px";
 
@@ -65,7 +65,7 @@ function(e, t, n) {
                     questContent: S.QuestContent.MEMBERS_LIST,
                     questContentCTA: T.QuestContentCTA.LEARN_MORE,
                     trackGuildAndChannelMetadata: !0
-                }), l.default.open(O.UserSettingsSections.INVENTORY)
+                }), l.default.open(p.UserSettingsSections.INVENTORY)
             },
             F = e => {
                 e.stopPropagation(), k()
@@ -83,27 +83,27 @@ function(e, t, n) {
                 V()
             },
             H = (() => null != v ? {
-                headerText: p.default.Messages.QUESTS_MEMBERS_LIST_AVAILBLE,
-                ctaText: p.default.Messages.QUESTS_MEMBERS_LIST_STREAM_CTA,
+                headerText: O.default.Messages.QUESTS_MEMBERS_LIST_AVAILBLE,
+                ctaText: O.default.Messages.QUESTS_MEMBERS_LIST_STREAM_CTA,
                 handleClickCta: x,
                 tileAssetType: "game"
             } : B && !G ? {
-                headerText: p.default.Messages.QUESTS_MEMBERS_LIST_CLAIM_REWARD,
-                ctaText: p.default.Messages.QUESTS_MEMBERS_LIST_CLAIM_REWARD_CTA,
+                headerText: O.default.Messages.QUESTS_MEMBERS_LIST_CLAIM_REWARD,
+                ctaText: O.default.Messages.QUESTS_MEMBERS_LIST_CLAIM_REWARD_CTA,
                 handleClickCta: U,
                 tileAssetType: "reward"
             } : w ? {
-                headerText: p.default.Messages.QUESTS_MEMBERS_LIST_FINISH,
-                ctaText: p.default.Messages.QUESTS_MEMBERS_LIST_FINISH_CTA,
+                headerText: O.default.Messages.QUESTS_MEMBERS_LIST_FINISH,
+                ctaText: O.default.Messages.QUESTS_MEMBERS_LIST_FINISH_CTA,
                 handleClickCta: V,
                 tileAssetType: "reward"
             } : {
-                headerText: p.default.Messages.QUESTS_MEMBERS_LIST_AVAILBLE,
-                ctaText: p.default.Messages.QUESTS_MEMBERS_LIST_START_CTA,
+                headerText: O.default.Messages.QUESTS_MEMBERS_LIST_AVAILBLE,
+                ctaText: O.default.Messages.QUESTS_MEMBERS_LIST_START_CTA,
                 handleClickCta: V,
                 tileAssetType: "game"
             })();
-        return (0, i.jsx)(h.QuestContentImpressionTracker, {
+        return (0, i.jsx)(A.QuestContentImpressionTracker, {
             questId: D.id,
             questContent: S.QuestContent.MEMBERS_LIST,
             trackGuildAndChannelMetadata: !0,
@@ -135,7 +135,7 @@ function(e, t, n) {
                                 children: [(0, i.jsx)(s.Text, {
                                     variant: "text-xs/medium",
                                     color: "text-muted",
-                                    children: p.default.Messages.QUESTS_MEMBERS_LIST_PROMOTED_BY.format({
+                                    children: O.default.Messages.QUESTS_MEMBERS_LIST_PROMOTED_BY.format({
                                         gamePublisher: D.config.messages.gamePublisher
                                     })
                                 }), (0, i.jsx)(r.CircleQuestionIcon, {
@@ -151,12 +151,12 @@ function(e, t, n) {
                                 children: [(0, i.jsx)("div", {
                                     className: R.imgUnderlay
                                 }), "game" === H.tileAssetType && (0, i.jsx)("img", {
-                                    alt: p.default.Messages.QUESTS_MEMBERS_LIST_GAME_TILE_ALT.format({
+                                    alt: O.default.Messages.QUESTS_MEMBERS_LIST_GAME_TILE_ALT.format({
                                         gameTitle: D.config.messages.gameTitle,
                                         gamePublisher: D.config.messages.gamePublisher
                                     }),
                                     className: R.assetTile,
-                                    src: (0, A.getGameTileAssetUrl)(D)
+                                    src: (0, h.getGameTileAssetUrl)(D)
                                 }), "reward" === H.tileAssetType && (0, i.jsx)(m.default, {
                                     className: R.assetTile,
                                     learnMoreStyle: "icon",

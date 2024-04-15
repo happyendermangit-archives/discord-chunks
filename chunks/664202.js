@@ -33,19 +33,19 @@ function(e, t, n) {
         });
         let S = (0, _.default)(f),
             {
-                upsellSource: A
+                upsellSource: h
             } = (0, T.useUserPopoutCollectiblesUpsellStore)(),
-            h = (0, a.useStateFromStores)([E.default], () => E.default.getCurrentUser());
-        s()(null != h, "currentUser should not be null");
+            A = (0, a.useStateFromStores)([E.default], () => E.default.getCurrentUser());
+        s()(null != A, "currentUser should not be null");
         let m = (0, d.useBlockedPaymentsConfig)(),
-            N = (0, I.default)(h.id, r),
-            O = (0, I.default)(t.id, r);
+            N = (0, I.default)(A.id, r),
+            p = (0, I.default)(t.id, r);
         i.useEffect(() => {
-            null == N && (0, l.fetchProfile)(h.id)
-        }, [N, h]);
-        let p = S !== _.CollectiblesShopMarketingVariants.DEFAULT && (null == h ? void 0 : h.id) !== t.id && !m && !(null != A && A !== n),
-            R = p && (null == h ? void 0 : h.avatarDecoration) == null && (null == t ? void 0 : t.avatarDecoration) != null,
-            C = p && null != N && null == N.profileEffectId && (null == O ? void 0 : O.profileEffectId) != null,
+            null == N && (0, l.fetchProfile)(A.id)
+        }, [N, A]);
+        let O = S !== _.CollectiblesShopMarketingVariants.DEFAULT && (null == A ? void 0 : A.id) !== t.id && !m && !(null != h && h !== n),
+            R = O && (null == A ? void 0 : A.avatarDecoration) == null && (null == t ? void 0 : t.avatarDecoration) != null,
+            C = O && null != N && null == N.profileEffectId && (null == p ? void 0 : p.profileEffectId) != null,
             [g, L] = (0, c.useSelectedDismissibleContent)((R, []), void 0, !0);
         return {
             shouldShow: g === o.DismissibleContent.SHOP_FOR_ALL_USER_POPOUT_UPSELL,

@@ -15,12 +15,12 @@ function(e, t, n) {
         T = n("188742"),
         f = n("973542"),
         S = n("889564"),
-        A = n("687476"),
-        h = n("978519"),
+        h = n("687476"),
+        A = n("978519"),
         m = n("706454"),
         N = n("581883"),
-        O = n("271383"),
-        p = n("93093"),
+        p = n("271383"),
+        O = n("93093"),
         R = n("430824"),
         C = n("771845"),
         g = n("594174"),
@@ -61,7 +61,7 @@ function(e, t, n) {
         }
         isUsable(e) {
             if (0 === e.roles.length) return !0;
-            let t = O.default.getMember(this.id, this._userId);
+            let t = p.default.getMember(this.id, this._userId);
             return null != t && (!!(t.roles.some(t => e.roles.includes(t)) || (0, S.isPurchasableRoleSubscriptionEmoji)(e)) || !1)
         }
         get rawEmojis() {
@@ -93,22 +93,22 @@ function(e, t, n) {
         K = [],
         z = 2,
         X = H.slice(0),
-        Q = {},
         q = {},
+        Q = {},
         Z = null,
         J = new Map;
 
     function $(e) {
         var t;
         let n = ee()[e];
-        return null != n ? null === (t = Q[n]) || void 0 === t ? void 0 : t.getUsableEmoji(e) : null
+        return null != n ? null === (t = q[n]) || void 0 === t ? void 0 : t.getUsableEmoji(e) : null
     }
 
     function ee() {
-        if (et(), null == q)
-            for (let e in q = {}, Q)
-                for (let t of Q[e].rawEmojis) q[t.id] = e;
-        return q
+        if (et(), null == Q)
+            for (let e in Q = {}, q)
+                for (let t of q[e].rawEmojis) Q[t.id] = e;
+        return Q
     }
     async function et() {
         if (0 !== z) return;
@@ -255,7 +255,7 @@ function(e, t, n) {
                 };
             b.default.forEach(n);
             let r = e => {
-                let t = Q[null == e ? k.NULL_STRING_GUILD_ID : e];
+                let t = q[null == e ? k.NULL_STRING_GUILD_ID : e];
                 null != t && (s().each(t.usableEmojis, n), s().each(t.emoticons, i))
             };
             for (let e in r(this.guildId), this.newlyAddedEmoji) null != this.newlyAddedEmoji[e] ? this.newlyAddedEmoji[e] = this.newlyAddedEmoji[e].sort((e, t) => P.default.compare(t.id, e.id)).slice(0, 3) : this.newlyAddedEmoji[e] = [];
@@ -284,29 +284,29 @@ function(e, t, n) {
             return null !== (t = b.default.getByName(e)) && void 0 !== t ? t : $(e)
         },
         afterCompute: () => {
-            en.resetFrequentlyUsed(), X = H.slice(0), !s().some(Q, e => e.usableEmojis.length > 0) && X.splice(H.indexOf(V.EmojiCategories.CUSTOM), 1)
+            en.resetFrequentlyUsed(), X = H.slice(0), !s().some(q, e => e.usableEmojis.length > 0) && X.splice(H.indexOf(V.EmojiCategories.CUSTOM), 1)
         },
         numFrequentlyItems: 42
     });
 
     function er() {
-        Q = {}, q = {}, en.reset(), J.clear(), z = 2
+        q = {}, Q = {}, en.reset(), J.clear(), z = 2
     }
 
     function es(e) {
-        null != Q[e] && delete Q[e]
+        null != q[e] && delete q[e]
     }
 
     function ea() {
-        q = null, en.reset(), 0 !== z && ei.compute()
+        Q = null, en.reset(), 0 !== z && ei.compute()
     }
 
     function eo(e, t) {
         if (es(e), en.clear(e), null == t) return;
         let n = g.default.getCurrentUser();
         if (null == n) return;
-        let i = (0, h.canUseRoleSubscriptionIAP)(e);
-        Q[e] = new j(e, n.id, t, i)
+        let i = (0, A.canUseRoleSubscriptionIAP)(e);
+        q[e] = new j(e, n.id, t, i)
     }
 
     function el() {
@@ -341,13 +341,13 @@ function(e, t, n) {
         } = e;
         if (!(0, f.isSubscriptionRole)(n)) return !1;
         {
-            let e = Q[t];
+            let e = q[t];
             eo(t, null == e ? void 0 : e.emojis), ea()
         }
     }
     class e_ extends(i = u.default.PersistedStore) {
         initialize(e) {
-            this.waitFor(c.default, p.default, O.default, R.default, m.default, A.default, w.default, g.default), null != e && (Y = e), this.syncWith([N.default], el)
+            this.waitFor(c.default, O.default, p.default, R.default, m.default, h.default, w.default, g.default), null != e && (Y = e), this.syncWith([N.default], el)
         }
         getState() {
             return Y
@@ -371,17 +371,17 @@ function(e, t, n) {
         getGuildEmoji(e) {
             var t;
             et();
-            let n = Q[e];
+            let n = q[e];
             return null !== (t = null == n ? void 0 : n.emojis) && void 0 !== t ? t : []
         }
         getUsableGuildEmoji(e) {
             var t;
             et();
-            let n = Q[e];
+            let n = q[e];
             return null !== (t = null == n ? void 0 : n.usableEmojis) && void 0 !== t ? t : []
         }
         getGuilds() {
-            return Q
+            return q
         }
         getDisambiguatedEmojiContext(e) {
             return et(), en.get(e)
@@ -448,7 +448,7 @@ function(e, t, n) {
                 function(e) {
                     var t;
                     let n = ee()[e];
-                    return null != n ? null === (t = Q[n]) || void 0 === t ? void 0 : t.getEmoji(e) : null
+                    return null != n ? null === (t = q[n]) || void 0 === t ? void 0 : t.getEmoji(e) : null
                 }(e)
         }
         getTopEmoji(e) {
@@ -476,7 +476,7 @@ function(e, t, n) {
             return []
         }
         hasUsableEmojiInAnyGuild() {
-            return et(), P.default.keys(Q).some(e => Q[e].usableEmojis.length > 0)
+            return et(), P.default.keys(q).some(e => q[e].usableEmojis.length > 0)
         }
         hasFavoriteEmojis(e) {
             let t = en.get(e);
@@ -495,7 +495,7 @@ function(e, t, n) {
             let {
                 emojis: t
             } = e;
-            for (let [e, n] of t) !Object.hasOwn(Q, e) && p.default.isMember(e) && eo(e, n);
+            for (let [e, n] of t) !Object.hasOwn(q, e) && O.default.isMember(e) && eo(e, n);
             ea()
         },
         GUILD_MEMBER_UPDATE: function(e) {
@@ -505,7 +505,7 @@ function(e, t, n) {
                 user: i
             } = e;
             if (i.id !== (null === (t = g.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return;
-            let r = Q[n];
+            let r = q[n];
             eo(n, null == r ? void 0 : r.usableEmojis), ea()
         },
         GUILD_CREATE: function(e) {

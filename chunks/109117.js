@@ -36,9 +36,9 @@ function(e, t, n) {
                 }
             }(r.Storage.get(_, {}), n),
             l = function(e, t, n) {
-                var r, s, a, o, l, u, d, _, c, E, I, T, f, S, A, h, m, N, O;
+                var r, s, a, o, l, u, d, _, c, E, I, T, f, S, h, A, m, N, p;
 
-                function p(e) {
+                function O(e) {
                     return (null == n ? void 0 : n.storedInformation) != null && 1 === n.storedInformation[e]
                 }
 
@@ -49,11 +49,11 @@ function(e, t, n) {
                     did_crash: t,
                     renderer_crash_reason: null !== (d = null == n ? void 0 : n.rendererCrashReason) && void 0 !== d ? d : null,
                     renderer_crash_exit_code: null !== (_ = null == n ? void 0 : n.rendererCrashExitCode) && void 0 !== _ ? _ : null,
-                    had_rtc_connection: p(i.StoredCrashInformation.HasRTCConnection),
-                    was_sending_video: p(i.StoredCrashInformation.IsSendingVideo),
-                    was_sending_stream: p(i.StoredCrashInformation.IsSendingStream),
-                    was_receiving_video: p(i.StoredCrashInformation.IsReceivingVideo),
-                    was_receiving_stream: p(i.StoredCrashInformation.IsReceivingStream),
+                    had_rtc_connection: O(i.StoredCrashInformation.HasRTCConnection),
+                    was_sending_video: O(i.StoredCrashInformation.IsSendingVideo),
+                    was_sending_stream: O(i.StoredCrashInformation.IsSendingStream),
+                    was_receiving_video: O(i.StoredCrashInformation.IsReceivingVideo),
+                    was_receiving_stream: O(i.StoredCrashInformation.IsReceivingStream),
                     video_media_session_id: R(i.StoredCrashInformation.VideoMediaSessionId),
                     stream_media_session_id: R(i.StoredCrashInformation.StreamMediaSessionId),
                     last_memory_usage_kb: null !== (c = null == n ? void 0 : null === (r = n.lastMemoryInformation) || void 0 === r ? void 0 : r.memoryUsageKB) && void 0 !== c ? c : null,
@@ -76,11 +76,11 @@ function(e, t, n) {
                 let g = null == n ? void 0 : n.minidumpInformation;
                 return {
                     electron_crash_reporter_did_crash: e,
-                    minidump_exception_type: null !== (A = null == g ? void 0 : g.exceptionString) && void 0 !== A ? A : null,
-                    minidump_exception_module_name: null !== (h = null == g ? void 0 : g.exceptionModuleName) && void 0 !== h ? h : null,
+                    minidump_exception_type: null !== (h = null == g ? void 0 : g.exceptionString) && void 0 !== h ? h : null,
+                    minidump_exception_module_name: null !== (A = null == g ? void 0 : g.exceptionModuleName) && void 0 !== A ? A : null,
                     minidump_relative_crash_address: null !== (m = null == g ? void 0 : g.relativeCrashAddress) && void 0 !== m ? m : null,
                     minidump_exception_module_version: null !== (N = null == g ? void 0 : g.exceptionModuleVersion) && void 0 !== N ? N : null,
-                    minidump_exception_module_code_id: null !== (O = null == g ? void 0 : g.exceptionModuleCodeId) && void 0 !== O ? O : null,
+                    minidump_exception_module_code_id: null !== (p = null == g ? void 0 : g.exceptionModuleCodeId) && void 0 !== p ? p : null,
                     ...C
                 }
             }(s, a, n);

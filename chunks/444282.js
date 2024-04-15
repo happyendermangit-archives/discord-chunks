@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return A
+            return h
         }
     }), n("47120");
     var i = n("735250"),
@@ -21,12 +21,12 @@ function(e, t, n) {
         f = n("117168"),
         S = n("451328");
 
-    function A(e) {
+    function h(e) {
         let {
             channelId: t,
             option: n,
             keyboardModeEnabled: s
-        } = e, A = r.useRef(null), [h, m] = r.useState(!1), N = c.default.getUpload(t, n.name, _.DraftType.SlashCommand), O = r.useRef(null), p = r.useCallback(() => {
+        } = e, h = r.useRef(null), [A, m] = r.useState(!1), N = c.default.getUpload(t, n.name, _.DraftType.SlashCommand), p = r.useRef(null), O = r.useCallback(() => {
             m(!0)
         }, []), R = r.useCallback(() => {
             m(!1)
@@ -46,11 +46,11 @@ function(e, t, n) {
             })
         }, [t, n]);
         return (r.useEffect(() => {
-            let e = O.current;
-            return null == N && (null == e || e.addEventListener("dragover", p, !1), null == e || e.addEventListener("dragleave", R, !1), null == e || e.addEventListener("drop", C, !1)), () => {
-                null == e || e.removeEventListener("dragover", p, !1), null == e || e.removeEventListener("dragleave", R, !1), null == e || e.removeEventListener("drop", C, !1)
+            let e = p.current;
+            return null == N && (null == e || e.addEventListener("dragover", O, !1), null == e || e.addEventListener("dragleave", R, !1), null == e || e.addEventListener("drop", C, !1)), () => {
+                null == e || e.removeEventListener("dragover", O, !1), null == e || e.removeEventListener("dragleave", R, !1), null == e || e.removeEventListener("drop", C, !1)
             }
-        }, [N, p, R, C]), null != N) ? (0, i.jsx)(I.default, {
+        }, [N, O, R, C]), null != N) ? (0, i.jsx)(I.default, {
             channelId: t,
             upload: N,
             keyboardModeEnabled: s,
@@ -75,24 +75,24 @@ function(e, t, n) {
             onKeyDown: e => {
                 if (e.which === T.KeyboardKeys.ENTER) {
                     var t;
-                    e.preventDefault(), null === (t = A.current) || void 0 === t || t.activateUploadDialogue()
+                    e.preventDefault(), null === (t = h.current) || void 0 === t || t.activateUploadDialogue()
                 }
             },
             className: a()(f.emptyOption, {
-                [f.emptyOptionActive]: h
+                [f.emptyOptionActive]: A
             }),
             draftType: _.DraftType.SlashCommand,
-            ref: O,
+            ref: p,
             children: [(0, i.jsx)("span", {
                 className: a()(f.optionName, {
-                    [f.optionNameActive]: h
+                    [f.optionNameActive]: A
                 }),
                 children: n.name
             }), (0, i.jsx)(o.Clickable, {
                 className: f.clickContainer,
                 onClick: () => {
                     var e;
-                    return null === (e = A.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
+                    return null === (e = h.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
                 },
                 children: (0, i.jsxs)("div", {
                     className: f.commandOptionContainer,
@@ -105,7 +105,7 @@ function(e, t, n) {
                         variant: "text-sm/normal",
                         children: "Drag and drop or click to upload file"
                     }), (0, i.jsx)(u.default, {
-                        ref: A,
+                        ref: h,
                         onChange: e => {
                             var i, r;
                             if (null != t && (null === (r = e.currentTarget) || void 0 === r ? void 0 : null === (i = r.files) || void 0 === i ? void 0 : i[0]) != null) {

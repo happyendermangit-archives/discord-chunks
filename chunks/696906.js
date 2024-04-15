@@ -16,16 +16,16 @@ function(e, t, n) {
         T = n("270144"),
         f = n("171246"),
         S = n("689011"),
-        A = n("714441"),
-        h = n("981631"),
+        h = n("714441"),
+        A = n("981631"),
         m = n("689938");
     t.default = e => {
         var t;
         let n, {
                 listing: s,
                 guildId: N,
-                groupListingId: O,
-                analyticsLocation: p,
+                groupListingId: p,
+                analyticsLocation: O,
                 showBenefitsFirst: R,
                 onComplete: C,
                 forcesTransitionToGuild: g
@@ -37,7 +37,7 @@ function(e, t, n) {
             y = null == L ? void 0 : L.sku_id,
             P = (0, o.useStateFromStores)([I.default], () => null != v ? I.default.get(v) : null),
             U = (0, T.useApplication)(D),
-            b = (0, T.useSubscriptionListingsForGroup)(O, {
+            b = (0, T.useSubscriptionListingsForGroup)(p, {
                 includeSoftDeleted: !0
             }).map(e => e.subscription_plans[0].id),
             {
@@ -68,9 +68,9 @@ function(e, t, n) {
                 let e = () => {
                     (0, c.openApplicationPaymentModal)({
                         activeSubscription: w,
-                        analyticsSubscriptionType: h.SubscriptionTypes.APPLICATION,
+                        analyticsSubscriptionType: A.SubscriptionTypes.APPLICATION,
                         analyticsLocations: G,
-                        analyticsLocation: p,
+                        analyticsLocation: O,
                         renderHeader: (e, t, n) => (0, i.jsx)(S.PurchaseHeader, {
                             step: n,
                             onClose: () => t(!1)
@@ -86,12 +86,12 @@ function(e, t, n) {
                         forcesTransitionToGuild: g
                     })
                 };
-                !j && F ? (0, A.confirmNoSharedServerSubscribeWarningModal)({
+                !j && F ? (0, h.confirmNoSharedServerSubscribeWarningModal)({
                     applicationName: U.name,
                     onConfirm: e,
                     onCancel: () => {}
                 }) : e()
-            }, [M, L, b, U, N, j, F, G, p, w, R, k, C, g]),
+            }, [M, L, b, U, N, j, F, G, O, w, R, k, C, g]),
             canOpenModal: K,
             cannotOpenReason: n
         }

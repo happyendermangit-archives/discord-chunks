@@ -15,9 +15,9 @@ function(e, t, n) {
         T = n("520687"),
         f = n("756286"),
         S = n("981631"),
-        A = n("991506");
+        h = n("991506");
 
-    function h(e, t, n) {
+    function A(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -27,7 +27,7 @@ function(e, t, n) {
     }
     let m = (0, c.cssValueToNumber)(u.default.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
         N = 1 / 120;
-    class O extends(i = s.Component) {
+    class p extends(i = s.Component) {
         componentDidMount() {
             this.initialize()
         }
@@ -84,13 +84,13 @@ function(e, t, n) {
                         reducedMotion: s
                     } = i;
                     return s.enabled ? (0, r.jsx)("div", {
-                        className: o()(A.fallbackImage, {
-                            [A.embedded]: n,
-                            [A.visible]: !t && e >= f.WaveStates.ENTERED
+                        className: o()(h.fallbackImage, {
+                            [h.embedded]: n,
+                            [h.visible]: !t && e >= f.WaveStates.ENTERED
                         })
                     }) : (0, r.jsx)("canvas", {
-                        className: o()(A.canvas, {
-                            [A.embedded]: n
+                        className: o()(h.canvas, {
+                            [h.embedded]: n
                         }),
                         ref: this.setCanvas
                     })
@@ -98,14 +98,14 @@ function(e, t, n) {
             })
         }
         constructor(e) {
-            super(e), h(this, "width", 0), h(this, "height", 0), h(this, "canvas", void 0), h(this, "canvasContext", void 0), h(this, "children", []), h(this, "wave", void 0), h(this, "ratio", 0), h(this, "_lastTick", 0), h(this, "_isPlaying", !1), h(this, "_reqAnimId", null), h(this, "_pauseTimeout", void 0), h(this, "setCanvas", e => {
+            super(e), A(this, "width", 0), A(this, "height", 0), A(this, "canvas", void 0), A(this, "canvasContext", void 0), A(this, "children", []), A(this, "wave", void 0), A(this, "ratio", 0), A(this, "_lastTick", 0), A(this, "_isPlaying", !1), A(this, "_reqAnimId", null), A(this, "_pauseTimeout", void 0), A(this, "setCanvas", e => {
                 var t;
                 if (null == e) return;
                 this.canvas = e, this.canvasContext = this.canvas.getContext("2d");
                 let n = null !== (t = window.devicePixelRatio) && void 0 !== t ? t : 1,
                     i = this.canvasContext.webkitBackingStorePixelRatio || this.canvasContext.mozBackingStorePixelRatio || this.canvasContext.msBackingStorePixelRatio || this.canvasContext.oBackingStorePixelRatio || this.canvasContext.backingStorePixelRatio || 1;
                 this.ratio = n / i, this.resizeCanvas()
-            }), h(this, "resizeCanvas", () => {
+            }), A(this, "resizeCanvas", () => {
                 this.width = window.innerWidth, this.height = window.innerHeight;
                 let {
                     canvas: e,
@@ -115,22 +115,22 @@ function(e, t, n) {
                     ratio: r
                 } = this;
                 null != e && null != t && (e.width = n * r, e.height = i * r, e.style.width = n + "px", e.style.height = i + "px", t.scale(r, r)), n <= m ? this.pause() : this.play(), this.wave.resizeWave(), this.renderAnimation()
-            }), h(this, "handleVisibilityChange", () => {
+            }), A(this, "handleVisibilityChange", () => {
                 document.hidden ? this.delayedPause() : this.play()
-            }), h(this, "play", () => {
+            }), A(this, "play", () => {
                 clearTimeout(this._pauseTimeout), !this._isPlaying && (this._isPlaying = !0, this.run())
-            }), h(this, "pause", () => {
+            }), A(this, "pause", () => {
                 clearTimeout(this._pauseTimeout), this._isPlaying = !1, null != this._reqAnimId && window.cancelAnimationFrame(this._reqAnimId), this._reqAnimId = null, this.advanceTransitionalState()
-            }), h(this, "delayedPause", () => {
+            }), A(this, "delayedPause", () => {
                 clearTimeout(this._pauseTimeout), this._pauseTimeout = setTimeout(this.pause, 4e3)
-            }), h(this, "updateWaveState", e => {
+            }), A(this, "updateWaveState", e => {
                 let {
                     updateWaveState: t
                 } = this.props;
                 t(e)
-            }), h(this, "handleWaveEmphasize", () => {
+            }), A(this, "handleWaveEmphasize", () => {
                 this.wave.emphasize()
-            }), h(this, "run", () => {
+            }), A(this, "run", () => {
                 if (!this._isPlaying) return;
                 if (0 === this._lastTick) {
                     this._lastTick = Date.now(), this._reqAnimId = requestAnimationFrame(this.run);
@@ -146,12 +146,12 @@ function(e, t, n) {
             }), this.wave = new T.default(this.updateWaveState), this.children = [new E.default, new I.default, this.wave]
         }
     }
-    h(O, "defaultProps", {
+    A(p, "defaultProps", {
         embedded: !1
     });
     t.default = e => {
         let t = (0, d.useToken)(l.default.unsafe_rawColors.PRIMARY_630).hex();
-        return (0, r.jsx)(O, {
+        return (0, r.jsx)(p, {
             canvasFillStyle: t,
             ...e
         })

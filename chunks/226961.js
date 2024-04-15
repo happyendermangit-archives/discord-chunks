@@ -5,10 +5,10 @@ function(e, t, n) {
             return f
         },
         keySection: function() {
-            return O
+            return p
         },
         parseSection: function() {
-            return p
+            return O
         }
     }), n("47120"), n("653041");
     var i, r = n("442837"),
@@ -28,7 +28,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    let E = O(_.MediaEngineContextTypes.DEFAULT, d.RTCDebugSections.TRANSPORT, 0),
+    let E = p(_.MediaEngineContextTypes.DEFAULT, d.RTCDebugSections.TRANSPORT, 0),
         I = E,
         T = {},
         f = {
@@ -55,18 +55,18 @@ function(e, t, n) {
     function S(e, t, n) {
         return "".concat(e, ":").concat(t, ":").concat(n)
     }
-    class A {
+    class h {
         static empty() {
-            return new A({})
+            return new h({})
         }
         put(e, t, n, i) {
             if ("" === i) {
                 let i = {
                     ...this.state
                 };
-                return delete i[S(e, t, n)], new A(i)
+                return delete i[S(e, t, n)], new h(i)
             }
-            return new A({
+            return new h({
                 [S(e, t, n)]: i,
                 ...this.state
             })
@@ -79,15 +79,15 @@ function(e, t, n) {
             c(this, "state", void 0), this.state = e
         }
     }
-    let h = A.empty(),
+    let A = h.empty(),
         m = !1,
         N = null;
 
-    function O(e, t, n) {
+    function p(e, t, n) {
         return "".concat(e, ":").concat(t, ":").concat(n)
     }
 
-    function p(e) {
+    function O(e) {
         let [t, n] = e.split(":");
         return {
             context: t,
@@ -118,7 +118,7 @@ function(e, t, n) {
             return Object.values(T[e])
         }
         getVideoStreams() {
-            return h
+            return A
         }
         shouldRecordNextConnection() {
             return m
@@ -202,7 +202,7 @@ function(e, t, n) {
             }), a.default.wait(() => o.open()))
         },
         RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT: function(e) {
-            h = h.put(e.mediaEngineConnectionId, e.userId, e.videoSsrc, e.streamId)
+            A = A.put(e.mediaEngineConnectionId, e.userId, e.videoSsrc, e.streamId)
         },
         RTC_DEBUG_SET_RECORDING_FLAG: function(e) {
             let {

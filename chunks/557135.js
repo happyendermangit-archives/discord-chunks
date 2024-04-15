@@ -21,15 +21,15 @@ function(e, t, n) {
                 connected: T,
                 needSubscriptionToAccess: f,
                 locked: S = !1,
-                routeDirectlyToChannel: A = !1,
-                bypassChangeModal: h,
+                routeDirectlyToChannel: h = !1,
+                bypassChangeModal: A,
                 bypassGuildIdCheck: m = !1
             } = e;
             t.isThread() && (await u.default.unarchiveThreadIfNecessary(t.id), !l.default.hasJoined(t.id) && await u.default.joinThread(t, "Join Voice"));
             let N = a.default.getRemoteSessionId(),
-                O = c.default.getVoiceStateForSession(d.default.getId(), N),
-                p = (null == O ? void 0 : O.channelId) === t.id || _.default.getChannelId() === c.default.getCurrentClientVoiceChannelId(t.guild_id);
-            return !h && !S && (0, E.shouldShowVoiceChannelChangeConfirmation)(t) ? new Promise(e => {
+                p = c.default.getVoiceStateForSession(d.default.getId(), N),
+                O = (null == p ? void 0 : p.channelId) === t.id || _.default.getChannelId() === c.default.getCurrentClientVoiceChannelId(t.guild_id);
+            return !A && !S && (0, E.shouldShowVoiceChannelChangeConfirmation)(t) ? new Promise(e => {
                 (0, r.openModalLazy)(async () => {
                     let {
                         default: r
@@ -40,14 +40,14 @@ function(e, t, n) {
                             channel: t,
                             connected: T,
                             needSubscriptionToAccess: f,
-                            routeDirectlyToChannel: A,
+                            routeDirectlyToChannel: h,
                             locked: S,
                             bypassChangeModal: !0
                         })),
                         ...n
                     })
                 })
-            }) : (!S && !T && s.default.selectVoiceChannel(t.id), !__OVERLAY__ && (T || p || f || A) && ! function(e) {
+            }) : (!S && !T && s.default.selectVoiceChannel(t.id), !__OVERLAY__ && (T || O || f || h) && ! function(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                     n = e.getGuildId();
                 if (null == n && !t) throw Error("VoiceChannel, transitionTo: Channel does not have a guildId");

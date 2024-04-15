@@ -16,12 +16,12 @@ function(e, t, n) {
         T = n("28546"),
         f = n("98528"),
         S = n("98278"),
-        A = n("857185"),
-        h = n("911200"),
+        h = n("857185"),
+        A = n("911200"),
         m = n("639119"),
         N = n("695346"),
-        O = n("594174"),
-        p = n("626135"),
+        p = n("594174"),
+        O = n("626135"),
         R = n("624138"),
         C = n("191177"),
         g = n("285651"),
@@ -47,8 +47,8 @@ function(e, t, n) {
         K = (0, R.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
         z = (0, R.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
         X = (0, R.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING),
-        Q = K + 2 * X,
-        q = z + 2 * X,
+        q = K + 2 * X,
+        Q = z + 2 * X,
         Z = a()(L.trackStickerSearchEmpty, 200),
         J = a()(L.trackStickerSearchResultsViewed, 200),
         $ = r.forwardRef(function(e, t) {
@@ -63,7 +63,7 @@ function(e, t, n) {
             } = (0, _.useAnalyticsContext)(), {
                 analyticsLocations: X
             } = (0, E.default)(c.default.STICKER_PICKER);
-            (0, A.useMaybeFetchPremiumLikelihood)(h.default);
+            (0, h.useMaybeFetchPremiumLikelihood)(A.default);
             let $ = (null === (s = (0, m.usePremiumTrialOffer)()) || void 0 === s ? void 0 : s.subscription_trial) != null,
                 ee = r.useRef(null),
                 et = r.useRef(null),
@@ -85,23 +85,23 @@ function(e, t, n) {
                 }),
                 ed = N.StickerPickerCollapsedSections.useSetting(),
                 e_ = r.useMemo(() => new Set(ed), [ed]),
-                ec = (0, l.useStateFromStores)([O.default], () => O.default.getCurrentUser()),
+                ec = (0, l.useStateFromStores)([p.default], () => p.default.getCurrentUser()),
                 eE = r.useMemo(() => (0, B.getFilteredStickers)(er, ec, u), [er, ec, u]),
                 eI = (0, D.useFavoriteStickers)(),
                 eT = (0, D.useLatestFrecentStickers)(),
                 ef = (0, l.useStateFromStoresObject)([v.default], () => v.default.getAllGuildStickers()),
                 {
                     sendable: eS = [],
-                    sendableWithPremium: eA = []
+                    sendableWithPremium: eh = []
                 } = null != eE ? eE : {},
-                eh = eS.length + eA.length,
+                eA = eS.length + eh.length,
                 em = r.useCallback(e => {
-                    "" === er ? (0, L.trackStickerSelect)(e) : (0, L.trackStickerSearchSelect)(e, er, eh), R(e.sticker, M.StickerSelectLocation.STICKER_PICKER)
-                }, [R, er, eh]),
+                    "" === er ? (0, L.trackStickerSelect)(e) : (0, L.trackStickerSearchSelect)(e, er, eA), R(e.sticker, M.StickerSelectLocation.STICKER_PICKER)
+                }, [R, er, eA]),
                 eN = null != eu && eu > x,
                 {
-                    rowCount: eO,
-                    rowCountBySection: ep,
+                    rowCount: ep,
+                    rowCountBySection: eO,
                     stickersGrid: eR,
                     gutterWidth: eC,
                     columnCounts: eg
@@ -112,7 +112,7 @@ function(e, t, n) {
                     listWidth: eu,
                     listPaddingRight: Y,
                     stickerNodeMargin: eN ? j : W,
-                    stickerNodeWidth: eN ? Q : q
+                    stickerNodeWidth: eN ? q : Q
                 }),
                 eL = r.useCallback((e, t) => {
                     let {
@@ -120,7 +120,7 @@ function(e, t, n) {
                     } = t;
                     switch (e.type) {
                         case M.StickerGridItemTypes.CREATE_STICKER:
-                            p.default.track(V.AnalyticEvents.OPEN_MODAL, {
+                            O.default.track(V.AnalyticEvents.OPEN_MODAL, {
                                 type: V.AnalyticsSections.CREATE_STICKER_MODAL,
                                 location: z
                             }), (0, d.openModalLazy)(async () => {
@@ -174,13 +174,13 @@ function(e, t, n) {
             r.useEffect(() => {
                 "" === ea.current && "" !== er && (0, L.trackStickerSearchStart)(), ea.current = er
             }, [er]), r.useEffect(() => {
-                0 === eh ? Z(er) : J(er, eh, es)
-            }, [er, eh, es]), r.useLayoutEffect(() => {
+                0 === eA ? Z(er) : J(er, eA, es)
+            }, [er, eA, es]), r.useLayoutEffect(() => {
                 var e;
                 null === (e = en.current) || void 0 === e || e.focus()
             }, []);
             let eb = r.useCallback(() => {
-                K(), p.default.track(V.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
+                K(), O.default.track(V.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
                     location_section: V.AnalyticsSections.STICKER_PICKER_UPSELL
                 }), (0, S.navigateToPremiumMarketingPage)()
             }, [K]);
@@ -213,8 +213,8 @@ function(e, t, n) {
                             gutterWidth: eC,
                             isUsingKeyboardNavigation: eP,
                             onSelectSticker: em,
-                            rowCount: eO,
-                            rowCountBySection: ep,
+                            rowCount: ep,
+                            rowCountBySection: eO,
                             stickersCategories: eo,
                             stickersGrid: eR,
                             channel: u

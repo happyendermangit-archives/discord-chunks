@@ -20,12 +20,12 @@ function(e, t, n) {
         T = n("797053"),
         f = n("68588"),
         S = n("263704"),
-        A = n("757206"),
-        h = n("332870"),
+        h = n("757206"),
+        A = n("332870"),
         m = n("750156"),
         N = n("979516"),
-        O = n("671612"),
-        p = n("572004"),
+        p = n("671612"),
+        O = n("572004"),
         R = n("900849"),
         C = n("746878"),
         g = n("285063"),
@@ -48,7 +48,7 @@ function(e, t, n) {
         return (0, i.jsx)(l.Clickable, {
             onClick: () => {
                 try {
-                    (0, p.copy)(t), s(!0)
+                    (0, O.copy)(t), s(!0)
                 } catch (e) {
                     s(!1)
                 }
@@ -56,7 +56,7 @@ function(e, t, n) {
             children: n ? (0, i.jsx)(S.default, {
                 width: 16,
                 height: 16
-            }) : (0, i.jsx)(A.default, {
+            }) : (0, i.jsx)(h.default, {
                 width: 16,
                 height: 16
             })
@@ -104,7 +104,7 @@ function(e, t, n) {
                 return (0, i.jsx)("pre", {
                     children: (0, i.jsxs)("div", {
                         className: w.codeContainer,
-                        children: [p.SUPPORTS_COPY ? (0, i.jsx)("div", {
+                        children: [O.SUPPORTS_COPY ? (0, i.jsx)("div", {
                             className: w.codeActions,
                             children: (0, i.jsx)(B, {
                                 text: e.content
@@ -148,7 +148,7 @@ function(e, t, n) {
             }, n.key)
         },
         soundboard: {
-            react: e => (0, i.jsx)(O.default, {
+            react: e => (0, i.jsx)(p.default, {
                 channelId: e.channelId,
                 soundId: e.soundId,
                 jumbo: e.jumboable
@@ -256,7 +256,7 @@ function(e, t, n) {
             }
         },
         channel: {
-            react: (e, t, n) => (0, i.jsx)(h.default, {
+            react: (e, t, n) => (0, i.jsx)(A.default, {
                 iconType: e.iconType,
                 children: (0, C.smartOutput)(e, t, n)
             }, n.key)

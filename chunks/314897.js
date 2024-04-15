@@ -11,12 +11,12 @@ function(e, t, n) {
         T = n("433517"),
         f = n("570140"),
         S = n("911969"),
-        A = n("670890"),
-        h = n("569611"),
+        h = n("670890"),
+        A = n("569611"),
         m = n("710845"),
         N = n("703656"),
-        O = n("786213"),
-        p = n("626135"),
+        p = n("786213"),
+        O = n("626135"),
         R = n("449934"),
         C = n("960048"),
         g = n("117240"),
@@ -42,8 +42,8 @@ function(e, t, n) {
         K = "",
         z = !1,
         X = null,
-        Q = !1,
         q = !1,
+        Q = !1,
         Z = "",
         J = !1,
         $ = !1,
@@ -75,7 +75,7 @@ function(e, t, n) {
     function el(e) {
         let {
             withGuildExperiments: t
-        } = e, n = {}, i = p.default.getSuperPropertiesBase64();
+        } = e, n = {}, i = O.default.getSuperPropertiesBase64();
         null != i && (n["X-Super-Properties"] = i), null != V && (n["X-Fingerprint"] = V), ei = I.HTTP.get({
             url: D.Endpoints.EXPERIMENTS,
             query: {
@@ -131,11 +131,11 @@ function(e, t, n) {
         ea("handleLogout called."), e_(), eu(), !(null == e ? void 0 : e.isSwitchingAccount) && eo(), E.default.PersistedStore.clearAll({
             omit: ["InstallationManagerStore", "AgeGateStore", "NativePermissionsStore", "MultiAccountStore", "DraftStore", "OverlayStoreV2", "StreamerModeStore", "LoginRequiredActionStore"],
             type: (null == e ? void 0 : e.isSwitchingAccount) ? "user-data-only" : "all"
-        }), L.default.clearAll(), h.clear(), C.default.clearUser(), T.Storage.remove(b), G = null, H = (null == e ? void 0 : e.isSwitchingAccount) ? D.LoginStates.LOGGING_IN : D.LoginStates.NONE, Y = D.RegistrationStates.NONE, K = "", Z = "", X = null, z = !1, J = !1, $ = !1, ee = {}, et = {}
+        }), L.default.clearAll(), A.clear(), C.default.clearUser(), T.Storage.remove(b), G = null, H = (null == e ? void 0 : e.isSwitchingAccount) ? D.LoginStates.LOGGING_IN : D.LoginStates.NONE, Y = D.RegistrationStates.NONE, K = "", Z = "", X = null, z = !1, J = !1, $ = !1, ee = {}, et = {}
     }
     class eI extends(s = E.default.Store) {
         initialize() {
-            G = T.Storage.get(b), w = T.Storage.get(U), er = T.Storage.get("login_cache"), null == _.getToken() && eo(), this.addChangeListener(() => (0, A.setClientState)(G))
+            G = T.Storage.get(b), w = T.Storage.get(U), er = T.Storage.get("login_cache"), null == _.getToken() && eo(), this.addChangeListener(() => (0, h.setClientState)(G))
         }
         getEmail() {
             return w
@@ -189,10 +189,10 @@ function(e, t, n) {
             return z
         }
         getMFATotp() {
-            return Q
+            return q
         }
         getMFABackup() {
-            return q
+            return Q
         }
         getMFAWebAuthn() {
             return X
@@ -202,10 +202,10 @@ function(e, t, n) {
             return null != X && e.push({
                 type: "webauthn",
                 challenge: X
-            }), Q && e.push({
-                type: "totp",
-                backup_codes_allowed: q
             }), q && e.push({
+                type: "totp",
+                backup_codes_allowed: Q
+            }), Q && e.push({
                 type: "backup"
             }), z && e.push({
                 type: "sms"
@@ -258,7 +258,7 @@ function(e, t, n) {
                 analyticsToken: s,
                 auth: a
             } = e;
-            ea("handleConnectionOpen called"), C.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, O.default)(n)), B = i, k = r, x = s, G = n.id, w = n.email, void 0 !== a && (W = a.authenticator_types), T.Storage.set(U, n.email), T.Storage.set(b, n.id)
+            ea("handleConnectionOpen called"), C.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, p.default)(n)), B = i, k = r, x = s, G = n.id, w = n.email, void 0 !== a && (W = a.authenticator_types), T.Storage.set(U, n.email), T.Storage.set(b, n.id)
         },
         OVERLAY_INITIALIZE: function(e) {
             var t;
@@ -268,7 +268,7 @@ function(e, t, n) {
                 analyticsToken: r,
                 token: s
             } = e;
-            C.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, O.default)(n)), B = i, x = r, ed(s), eu(), G = n.id, T.Storage.set(b, n.id)
+            C.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, p.default)(n)), B = i, x = r, ed(s), eu(), G = n.id, T.Storage.set(b, n.id)
         },
         CONNECTION_CLOSED: function(e) {
             let {
@@ -279,7 +279,7 @@ function(e, t, n) {
                     ec();
                     return
                 }
-                p.default.track(D.AnalyticEvents.APP_USER_DEAUTHENTICATED, {
+                O.default.track(D.AnalyticEvents.APP_USER_DEAUTHENTICATED, {
                     user_id: T.Storage.get(b)
                 }), eE(), setImmediate(() => (0, N.transitionTo)(D.Routes.DEFAULT_LOGGED_OUT))
             }
@@ -319,7 +319,7 @@ function(e, t, n) {
                 backup: r,
                 totp: s
             } = e;
-            null != t && (K = t, z = n, Z = "", X = null != i ? i : null, q = r, Q = s), et = {}, H = D.LoginStates.MFA_STEP
+            null != t && (K = t, z = n, Z = "", X = null != i ? i : null, Q = r, q = s), et = {}, H = D.LoginStates.MFA_STEP
         },
         LOGIN_MFA: function() {
             H = D.LoginStates.LOGGING_IN_MFA
@@ -389,10 +389,10 @@ function(e, t, n) {
         LOGOUT: eE,
         FINGERPRINT: function(e) {
             let t = e.fingerprint;
-            null == V ? null != t ? (p.default.track(D.AnalyticEvents.USER_FINGERPRINT_CHANGED, {
+            null == V ? null != t ? (O.default.track(D.AnalyticEvents.USER_FINGERPRINT_CHANGED, {
                 old_fingerprint: null != F ? (0, c.extractId)(F) : null,
                 new_fingerprint: (0, c.extractId)(t)
-            }), V = t, F = t, T.Storage.set(P, V)) : eo() : null != t && V !== t && p.default.track(D.AnalyticEvents.EXTERNAL_FINGERPRINT_DROPPED, {
+            }), V = t, F = t, T.Storage.set(P, V)) : eo() : null != t && V !== t && O.default.track(D.AnalyticEvents.EXTERNAL_FINGERPRINT_DROPPED, {
                 fingerprint: (0, c.extractId)(V),
                 dropped_fingerprint: (0, c.extractId)(t)
             })

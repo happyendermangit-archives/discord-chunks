@@ -16,12 +16,12 @@ function(e, t, n) {
         T = n("551058"),
         f = n("156361"),
         S = n("695464"),
-        A = n("153124"),
-        h = n("555573"),
+        h = n("153124"),
+        A = n("555573"),
         m = n("10718"),
         N = n("367790"),
-        O = n("895924"),
-        p = n("581364"),
+        p = n("895924"),
+        O = n("581364"),
         R = n("56801"),
         C = n("342687"),
         g = n("826298"),
@@ -63,7 +63,7 @@ function(e, t, n) {
             placeholderCount: 7,
             limit: L.DISCOVERY_COMMANDS_QUERY_LIMIT,
             includeFrecency: !0
-        }), Q = (0, I.useSynchronizedActiveCategoryIndexForScrollPosition)({
+        }), q = (0, I.useSynchronizedActiveCategoryIndexForScrollPosition)({
             activeCategoryIndex: F,
             isScrolling: o,
             listRef: B,
@@ -76,13 +76,13 @@ function(e, t, n) {
             },
             scrollOffset: 20,
             searchQuery: ""
-        }), q = e => {
+        }), Q = e => {
             let t = H.length,
                 n = Y.reduce((e, t) => e + t.data.length, 0) - (j ? 7 : 0);
-            j && e + 420 > 48 * t + 56 * n - 512 && z(), Q(e), U(), l.current = e
+            j && e + 420 > 48 * t + 56 * n - 512 && z(), q(e), U(), l.current = e
         };
         r.useEffect(() => {
-            q(l.current)
+            Q(l.current)
         }, [W]);
         let Z = r.useCallback(e => e !== H.length - 1 || j ? 16 : 0, [H.length, j]),
             J = Y.map(e => e.data.length);
@@ -101,11 +101,11 @@ function(e, t, n) {
                 } else X(e.id)
             }, [X, K]),
             ee = r.useCallback((e, t, i) => {
-                h.setActiveCommand({
+                A.setActiveCommand({
                     channelId: n.id,
                     command: e,
                     section: t,
-                    location: O.ApplicationCommandTriggerLocations.DISCOVERY,
+                    location: p.ApplicationCommandTriggerLocations.DISCOVERY,
                     triggerSection: i
                 })
             }, [n.id]);
@@ -119,7 +119,7 @@ function(e, t, n) {
                     if (t = n, G < (n += e.data.length)) {
                         let n = e.data[G - t],
                             i = x.find(e => e.id === n.applicationId);
-                        ee(n, i, (0, p.getCommandTriggerSection)(e.section));
+                        ee(n, i, (0, O.getCommandTriggerSection)(e.section));
                         break
                     } return !0
             },
@@ -174,7 +174,7 @@ function(e, t, n) {
                 let s = Y[t.sectionIndex],
                     a = s.data[t.sectionRowIndex],
                     o = "".concat(s.section.id, ":").concat(null !== (r = null == a ? void 0 : a.id) && void 0 !== r ? r : e);
-                if (null == a || s.section.id !== a.applicationId && s.section.id !== L.BuiltInSectionId.FRECENCY || a.inputType === O.ApplicationCommandInputType.PLACEHOLDER) return (0, i.jsx)(C.default, {}, o);
+                if (null == a || s.section.id !== a.applicationId && s.section.id !== L.BuiltInSectionId.FRECENCY || a.inputType === p.ApplicationCommandInputType.PLACEHOLDER) return (0, i.jsx)(C.default, {}, o);
                 let l = x.find(e => e.id === a.applicationId);
                 return (0, i.jsx)(f.default.NewCommand, {
                     index: e,
@@ -184,13 +184,13 @@ function(e, t, n) {
                     selected: G === e,
                     showImage: s.section.id !== a.applicationId,
                     section: l,
-                    onClick: () => ee(a, l, (0, p.getCommandTriggerSection)(s.section)),
+                    onClick: () => ee(a, l, (0, O.getCommandTriggerSection)(s.section)),
                     onHover: () => {
                         w(null), V(!1)
                     }
                 }, o)
             }, [n, Y, ee, x, G]),
-            er = (0, A.useUID)();
+            er = (0, h.useUID)();
         return (0, c.useChannelEditorPopup)(er, !0, (0, f.getAutocompleteRowId)(G)), r.useEffect(() => () => {
             (0, c.dismissChannelEditorPopup)()
         }, []), (0, i.jsxs)(f.default, {
@@ -210,7 +210,7 @@ function(e, t, n) {
                 role: "listbox",
                 className: M.list,
                 listPadding: P,
-                onScroll: q,
+                onScroll: Q,
                 renderRow: ei,
                 renderSection: en,
                 renderSectionHeader: et,

@@ -22,12 +22,12 @@ function(e, t, n) {
             onFocus: T,
             autoFocus: f,
             searchBarRef: S,
-            hasTabWrapper: A,
-            diversitySurrogate: h,
+            hasTabWrapper: h,
+            diversitySurrogate: A,
             isBurstReaction: m,
             onBurstReactionToggle: N,
-            renderHeader: O
-        } = e, p = (0, i.jsxs)(i.Fragment, {
+            renderHeader: p
+        } = e, O = (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(u.default, {
                 emojiListRef: E,
                 gridNavigatorId: d.GRID_NAVIGATOR_ID,
@@ -47,13 +47,13 @@ function(e, t, n) {
             }) : null, n === _.EmojiIntention.COMMUNITY_CONTENT_ONLY ? null : null != t ? t : (0, i.jsx)(l.default, {
                 searchBarRef: S,
                 className: c.diversitySelector,
-                hasTabWrapper: A,
-                selectedSurrogate: h
+                hasTabWrapper: h,
+                selectedSurrogate: A
             })]
         });
         return (0, i.jsx)("div", {
             className: s()(c.header, r),
-            children: null != O ? O(p) : p
+            children: null != p ? p(O) : O
         })
     }
 }

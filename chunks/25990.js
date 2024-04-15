@@ -2,38 +2,37 @@ function(e, t, n) {
     "use strict";
     let i, r, s, a, o, l, u, d, _, c, E, I, T, f;
     n.r(t);
-    var S, A, h, m, N = n("979554"),
-        O = n("442837"),
-        p = n("570140"),
+    var S, h, A, m, N = n("979554"),
+        p = n("442837"),
+        O = n("570140"),
         R = n("981631");
     let C = R.FormStates.CLOSED,
-        g = {},
-        L = !1;
+        g = {};
 
-    function D() {
+    function L() {
         C = R.FormStates.OPEN, g = {}
     }
 
-    function v() {
+    function D() {
         C = R.FormStates.CLOSED, g = {}
     }
 
-    function M() {
-        y(), P(), g = {}
+    function v() {
+        M(), y(), g = {}
     }
 
-    function y() {
+    function M() {
         i = void 0, r = void 0, s = void 0, a = void 0
     }
 
-    function P() {
+    function y() {
         o = void 0, l = void 0, u = void 0, d = void 0, _ = void 0, a = void 0
     }
 
-    function U() {
+    function P() {
         E = void 0, I = void 0, T = void 0, f = void 0, c = void 0
     }
-    class b extends(m = O.default.Store) {
+    class U extends(m = p.default.Store) {
         getFormState() {
             return C
         }
@@ -42,6 +41,9 @@ function(e, t, n) {
         }
         showNotice() {
             return void 0 !== i || void 0 !== o || void 0 !== l || void 0 !== u || void 0 !== d || void 0 !== _ || void 0 !== s || void 0 !== a || void 0 !== r
+        }
+        getIsSubmitDisabled() {
+            return void 0 !== l && l.length > R.BIO_MAX_LENGTH
         }
         getPendingAvatar() {
             return i
@@ -107,28 +109,25 @@ function(e, t, n) {
                 tryItOutBanner: f
             }
         }
-        getIsDisableSubmit() {
-            return L
-        }
     }
-    h = "UserSettingsAccountStore", (A = "displayName") in(S = b) ? Object.defineProperty(S, A, {
-        value: h,
+    A = "UserSettingsAccountStore", (h = "displayName") in(S = U) ? Object.defineProperty(S, h, {
+        value: A,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : S[A] = h, t.default = new b(p.default, {
-        USER_SETTINGS_ACCOUNT_INIT: D,
-        USER_SETTINGS_MODAL_INIT: D,
-        USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: D,
+    }) : S[h] = A, t.default = new U(O.default, {
+        USER_SETTINGS_ACCOUNT_INIT: L,
+        USER_SETTINGS_MODAL_INIT: L,
+        USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: L,
         USER_SETTINGS_MODAL_SET_SECTION: function(e) {
             let {
                 section: t
             } = e;
-            return t === R.UserSettingsSections.ACCOUNT && D()
+            return t === R.UserSettingsSections.ACCOUNT && L()
         },
-        USER_SETTINGS_ACCOUNT_CLOSE: v,
+        USER_SETTINGS_ACCOUNT_CLOSE: D,
         USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: function() {
-            M(), U(), v()
+            v(), P(), D()
         },
         USER_SETTINGS_ACCOUNT_SUBMIT: function() {
             C = R.FormStates.SUBMITTING, g = {}
@@ -231,21 +230,15 @@ function(e, t, n) {
         USER_SETTINGS_CLEAR_ERRORS: function() {
             g = {}
         },
-        USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: y,
-        USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES: P,
-        USER_SETTINGS_RESET_ALL_PENDING: M,
-        USER_SETTINGS_RESET_ALL_TRY_IT_OUT: U,
+        USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: M,
+        USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES: y,
+        USER_SETTINGS_RESET_ALL_PENDING: v,
+        USER_SETTINGS_RESET_ALL_TRY_IT_OUT: P,
         USER_SETTINGS_RESET_PENDING_AVATAR_DECORATION: function() {
             s = void 0
         },
         LOGOUT: function() {
             i = void 0
-        },
-        USER_SETTINGS_ACCOUNT_SET_DISABLE_SUBMIT: function(e) {
-            let {
-                disable: t
-            } = e;
-            L = t
         }
     })
 }

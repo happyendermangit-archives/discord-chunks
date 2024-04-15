@@ -11,7 +11,7 @@ function(e, t, n) {
             return z
         },
         dismissClipsUserEducation: function() {
-            return Q
+            return q
         },
         dismissSaveClipAnimation: function() {
             return H
@@ -68,12 +68,12 @@ function(e, t, n) {
         T = n("199902"),
         f = n("314897"),
         S = n("131951"),
-        A = n("959457"),
-        h = n("33039"),
+        h = n("959457"),
+        A = n("33039"),
         m = n("626135"),
         N = n("358085"),
-        O = n("557177"),
-        p = n("435064"),
+        p = n("557177"),
+        O = n("435064"),
         R = n("61994"),
         C = n("550351"),
         g = n("659487"),
@@ -215,7 +215,7 @@ function(e, t, n) {
             frames_encoded_during_clip: t.framesEncodedDuringClip,
             frames_dropped: t.framesDropped,
             frames_dropped_during_clip: t.framesDroppedDuringClip,
-            clip_duration_setting: p.default.getSettings().clipsLength,
+            clip_duration_setting: O.default.getSettings().clipsLength,
             clip_duration: t.clipDuration,
             clip_resolution_width: t.clipResolutionWidth,
             clip_resolution_height: t.clipResolutionHeight,
@@ -228,7 +228,7 @@ function(e, t, n) {
         }
     }
     async function F(e) {
-        let t = p.default.getSettings().storageLocation,
+        let t = O.default.getSettings().storageLocation,
             n = (0, C.default)(e),
             i = "".concat((0, R.default)(n.applicationName.substring(0, 20)), "_").concat(n.id, ".mp4"),
             r = o.default.fileManager.join(t, i),
@@ -239,13 +239,13 @@ function(e, t, n) {
                 var t;
                 let n, i, r;
                 if (null != e) {
-                    n = null != e ? A.default.getRTCConnection(e) : null;
+                    n = null != e ? h.default.getRTCConnection(e) : null;
                     let t = (0, d.decodeStreamKey)(e);
                     i = t.guildId, r = t.channelId
                 } else {
                     let e = f.default.getId(),
                         t = T.default.getActiveStreamForUser(e, null);
-                    n = null != t ? A.default.getRTCConnection((0, d.encodeStreamKey)(t)) : null, i = null == t ? void 0 : t.guildId, r = null == t ? void 0 : t.channelId
+                    n = null != t ? h.default.getRTCConnection((0, d.encodeStreamKey)(t)) : null, i = null == t ? void 0 : t.guildId, r = null == t ? void 0 : t.channelId
                 }
                 let s = null == n ? void 0 : null === (t = n.analyticsContext) || void 0 === t ? void 0 : t.streamApplication;
                 return {
@@ -301,14 +301,14 @@ function(e, t, n) {
         }, {
             autoTrackExposure: !1
         });
-        if (p.default.getIsAtMaxSaveClipOperations()) return;
-        let o = p.default.getSettings().clipsEnabled && null != T.default.getCurrentUserActiveStream(),
-            l = n && p.default.getSettings().decoupledClipsEnabled && (null === (t = u.default.getVisibleGame()) || void 0 === t ? void 0 : t.windowHandle) != null && S.default.hasClipsSource(),
+        if (O.default.getIsAtMaxSaveClipOperations()) return;
+        let o = O.default.getSettings().clipsEnabled && null != T.default.getCurrentUserActiveStream(),
+            l = n && O.default.getSettings().decoupledClipsEnabled && (null === (t = u.default.getVisibleGame()) || void 0 === t ? void 0 : t.windowHandle) != null && S.default.hasClipsSource(),
             E = null != e && null != T.default.getActiveStreamForStreamKey(e) && s;
         if (!o && !l && !E) return;
         let I = T.default.getCurrentUserActiveStream(),
-            A = null != I ? (0, d.encodeStreamKey)(I) : void 0,
-            m = null != e ? e : A,
+            h = null != I ? (0, d.encodeStreamKey)(I) : void 0,
+            m = null != e ? e : h,
             N = (() => {
                 let e = null != m ? (0, d.decodeStreamKey)(m).ownerId : void 0;
                 return e === f.default.getId() ? v.ClipSaveTypes.STREAMER : null != e ? v.ClipSaveTypes.VIEWER : v.ClipSaveTypes.DECOUPLED
@@ -318,7 +318,7 @@ function(e, t, n) {
                 let {
                     ownerId: e,
                     guildId: t
-                } = (0, d.decodeStreamKey)(m), n = h.default.getStreamId(e, t, i.MediaEngineContextTypes.STREAM);
+                } = (0, d.decodeStreamKey)(m), n = A.default.getStreamId(e, t, i.MediaEngineContextTypes.STREAM);
                 if (null != n) try {
                     let e = (0, r.getVoiceEngine)(),
                         t = await e.getNextVideoOutputFrame(n);
@@ -333,7 +333,7 @@ function(e, t, n) {
             streamKey: m,
             thumbnail: R
         });
-        let C = (0, O.playSound)("clip_save", .5),
+        let C = (0, p.playSound)("clip_save", .5),
             g = performance.now();
         try {
             let e = await F(m);
@@ -342,11 +342,11 @@ function(e, t, n) {
                 clip: e
             })
         } catch (e) {
-            v.ClipsLogger.error("Clip Failed to Save", e), null == C || C.stop(), (0, O.playSound)("clip_error", .5), a.default.dispatch({
+            v.ClipsLogger.error("Clip Failed to Save", e), null == C || C.stop(), (0, p.playSound)("clip_error", .5), a.default.dispatch({
                 type: "CLIPS_SAVE_CLIP_ERROR"
             })
         }
-        v.ClipsLogger.info("".concat(p.default.getSettings().clipsLength / 1e3, "s clip save took ").concat(Math.round(performance.now() - g), "ms"))
+        v.ClipsLogger.info("".concat(O.default.getSettings().clipsLength / 1e3, "s clip save took ").concat(Math.round(performance.now() - g), "ms"))
     }
 
     function H(e, t) {
@@ -357,7 +357,7 @@ function(e, t, n) {
         })
     }
     async function Y(e, t) {
-        let n = p.default.getClips().find(t => t.id === e);
+        let n = O.default.getClips().find(t => t.id === e);
         if (null == n) return;
         let i = {
             ...n,
@@ -412,7 +412,7 @@ function(e, t, n) {
         return (0, L.default)(i)
     }
 
-    function Q(e) {
+    function q(e) {
         a.default.dispatch({
             type: "CLIPS_DISMISS_EDUCATION",
             educationType: e

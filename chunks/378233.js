@@ -20,7 +20,7 @@ function(e, t, n) {
             return L
         },
         getStickerPackPreviewSticker: function() {
-            return O
+            return p
         },
         isAvailableGuildSticker: function() {
             return w
@@ -60,13 +60,13 @@ function(e, t, n) {
         PROJECT_ENV: T,
         ASSET_ENDPOINT: f,
         CDN_HOST: S
-    } = window.GLOBAL_ENV, A = Object.values(d.StickerExtensions), h = decodeURIComponent(c.Endpoints.STICKER_ASSET("[\\d]+", "(".concat(A.join("|"), ")"))), m = RegExp("(".concat(location.protocol).concat(f, "|").concat(location.protocol).concat(I, ")(").concat(h, ")"), "ig"), N = RegExp("".concat(location.protocol).concat(E, "(").concat(h, ")"), "ig"), O = e => {
+    } = window.GLOBAL_ENV, h = Object.values(d.StickerExtensions), A = decodeURIComponent(c.Endpoints.STICKER_ASSET("[\\d]+", "(".concat(h.join("|"), ")"))), m = RegExp("(".concat(location.protocol).concat(f, "|").concat(location.protocol).concat(I, ")(").concat(A, ")"), "ig"), N = RegExp("".concat(location.protocol).concat(E, "(").concat(A, ")"), "ig"), p = e => {
         if (null != e.cover_sticker_id) {
             let t = e.stickers.find(t => t.id === e.cover_sticker_id);
             if (null != t) return t
         }
         return e.stickers[0]
-    }, p = e => {
+    }, O = e => {
         switch (e) {
             case d.StickerFormat.PNG:
                 return o.SUPPORTS_WEBP ? d.StickerExtensions.WEBP : d.StickerExtensions.PNG;
@@ -93,13 +93,13 @@ function(e, t, n) {
             default:
                 throw Error("Unexpected file type: ".concat(e))
         }
-    }, C = e => null == e ? null : "".concat(e.name, ".").concat(p(e.format_type)), g = function(e) {
+    }, C = e => null == e ? null : "".concat(e.name, ".").concat(O(e.format_type)), g = function(e) {
         let {
             isPreview: t = !1,
             size: n = _.DEFAULT_STICKER_DIMENSIONS
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         if (null == e.format_type) return null;
-        let i = c.Endpoints.STICKER_ASSET(e.id, p(e.format_type));
+        let i = c.Endpoints.STICKER_ASSET(e.id, O(e.format_type));
         if ("development" !== T) {
             if (e.format_type === d.StickerFormat.LOTTIE) return "".concat(location.protocol).concat(f).concat(i);
             let s = e.format_type === d.StickerFormat.APNG && t && !(0, l.isAndroid)() ? "&passthrough=false" : "",
@@ -123,7 +123,7 @@ function(e, t, n) {
         id: e.id,
         name: e.name,
         stickers: e.stickers,
-        previewSticker: O(e)
+        previewSticker: p(e)
     }), y = (e, t) => e === _.StickerAnimationSettings.ANIMATE_ON_INTERACTION ? t : e !== _.StickerAnimationSettings.NEVER_ANIMATE, P = (e, t, n, r) => {
         if (a.default.getUploadCount(n, r) > 0) return !0;
         let s = u.default.getStickerPreview(n, r);

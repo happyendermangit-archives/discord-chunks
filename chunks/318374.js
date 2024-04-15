@@ -26,8 +26,8 @@ function(e, t, n) {
             onFocus: T,
             size: f = u.AvatarSizes.SIZE_24,
             hideOverflowCount: S = !1,
-            disableUsernameTooltip: A = !1
-        } = e, [h, m] = r.useState(!1);
+            disableUsernameTooltip: h = !1
+        } = e, [A, m] = r.useState(!1);
 
         function N() {
             return (0, i.jsx)(u.Dialog, {
@@ -41,7 +41,7 @@ function(e, t, n) {
                         onContextMenu: t => (0, d.openContextMenuLazy)(t, async () => {
                             let {
                                 default: t
-                            } = await Promise.all([n.e("99387"), n.e("79695"), n.e("85559"), n.e("15421")]).then(n.bind(n, "881351"));
+                            } = await Promise.all([n.e("99387"), n.e("79695"), n.e("1502"), n.e("15421")]).then(n.bind(n, "881351"));
                             return n => (0, i.jsx)(t, {
                                 ...n,
                                 user: e
@@ -58,7 +58,7 @@ function(e, t, n) {
             children: function() {
                 let e = l()(o).take(s).map(e => {
                         let t = c.default.getName(e);
-                        return A ? (0, i.jsx)("div", {
+                        return h ? (0, i.jsx)("div", {
                             className: E.avatar,
                             children: (0, i.jsx)(u.Avatar, {
                                 src: e.getAvatarURL(I, 24),
@@ -78,7 +78,7 @@ function(e, t, n) {
                     t = o.length - s;
                 return t > 0 && !S && (e[e.length - 1] = (0, i.jsx)(u.Popout, {
                     renderPopout: N,
-                    shouldShow: h,
+                    shouldShow: A,
                     position: "bottom",
                     onRequestClose: () => m(!1),
                     children: () => (0, i.jsxs)(u.Button, {

@@ -35,7 +35,7 @@ function(e, t, n) {
             hasBanner: T,
             overrideBannerWidth: f,
             hasProfileEffect: S = !1
-        } = e, A = c[n], h = (0, o.useUID)(), m = function(e) {
+        } = e, h = c[n], A = (0, o.useUID)(), m = function(e) {
             let {
                 profileType: t,
                 avatarSize: n,
@@ -51,7 +51,7 @@ function(e, t, n) {
                     size: f,
                     stroke: S
                 } = (0, s.getAvatarSpecs)(n),
-                A = {
+                h = {
                     avatarSize: f,
                     avatarBorderSize: S,
                     avatarDecorationSize: T,
@@ -66,59 +66,59 @@ function(e, t, n) {
                         }
                     })
                 },
-                h = (0, r.match)(t).with(u.UserProfileTypes.POPOUT, u.UserProfileTypes.BITE_SIZE, () => {
+                A = (0, r.match)(t).with(u.UserProfileTypes.POPOUT, u.UserProfileTypes.BITE_SIZE, () => {
                     let e = _ ? 4 : 0;
                     return {
-                        ...A,
+                        ...h,
                         bannerWidth: (0, l.getUserBannerSize)(t),
                         offsetX: 16 - e,
                         offsetY: 4 + e,
                         avatarDecorationOffsetX: 4
                     }
                 }).with(u.UserProfileTypes.MODAL, u.UserProfileTypes.FULL_SIZE, () => ({
-                    ...A,
+                    ...h,
                     bannerWidth: (0, l.getUserBannerSize)(t),
                     offsetX: 14,
                     offsetY: 5,
                     avatarDecorationOffsetX: 2
                 })).with(u.UserProfileTypes.SETTINGS, () => ({
-                    ...A,
+                    ...h,
                     bannerWidth: 660,
                     offsetX: 16,
                     offsetY: -22,
                     avatarDecorationOffsetX: 8
                 })).with(u.UserProfileTypes.PANEL, () => ({
-                    ...A,
+                    ...h,
                     bannerWidth: (0, l.getUserBannerSize)(u.UserProfileTypes.PANEL),
                     offsetX: 12,
                     offsetY: 8,
                     avatarDecorationOffsetX: 4
                 })).with(u.UserProfileTypes.POMELO_POPOUT, () => ({
-                    ...A,
+                    ...h,
                     bannerWidth: (0, l.getUserBannerSize)(u.UserProfileTypes.POMELO_POPOUT),
                     offsetX: 20,
                     offsetY: -20,
                     avatarDecorationOffsetX: 10
                 })).with(u.UserProfileTypes.CANCEL_MODAL, () => ({
-                    ...A,
+                    ...h,
                     bannerWidth: (0, l.getUserBannerSize)(u.UserProfileTypes.CANCEL_MODAL),
                     offsetX: 8,
                     offsetY: 2,
                     avatarDecorationOffsetX: 8
                 })).exhaustive();
             return null != E ? {
-                ...h,
+                ...A,
                 bannerWidth: E
-            } : h
+            } : A
         }({
             profileType: n,
-            avatarSize: A,
+            avatarSize: h,
             hasBanner: T,
             isPremium: E,
             hasThemeColors: I,
             hasProfileEffect: S,
             overrideBannerWidth: f
-        }), N = m.avatarSize / 2 + m.avatarBorderSize, O = m.bannerHeight - m.offsetY;
+        }), N = m.avatarSize / 2 + m.avatarBorderSize, p = m.bannerHeight - m.offsetY;
         return (0, i.jsxs)("svg", {
             className: _.bannerSVGWrapper,
             viewBox: "0 0 ".concat(m.bannerWidth, " ").concat(m.bannerHeight),
@@ -127,7 +127,7 @@ function(e, t, n) {
                 minHeight: m.bannerHeight
             },
             children: [(0, i.jsxs)("mask", {
-                id: h,
+                id: A,
                 children: [(0, i.jsx)("rect", {
                     fill: "white",
                     x: "0",
@@ -137,7 +137,7 @@ function(e, t, n) {
                 }), (0, i.jsx)("circle", {
                     fill: "black",
                     cx: m.offsetX + N,
-                    cy: O,
+                    cy: p,
                     r: N
                 })]
             }), (0, i.jsx)("foreignObject", {
@@ -146,7 +146,7 @@ function(e, t, n) {
                 width: "100%",
                 height: "100%",
                 overflow: "visible",
-                mask: "url(#".concat(h, ")"),
+                mask: "url(#".concat(A, ")"),
                 children: t
             })]
         })

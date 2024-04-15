@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return A
+            return h
         }
     }), n("47120");
     var i = n("735250"),
@@ -21,39 +21,39 @@ function(e, t, n) {
         f = n("565384"),
         S = n("129852");
 
-    function A() {
+    function h() {
         let {
             debugTrackedData: e,
             impressions: t
         } = (0, f.useImpressionStore)(e => ({
             debugTrackedData: e.debugTrackedData,
             impressions: e.impressions
-        })), n = (0, o.useStateFromStores)([d.default], () => d.default.isAnalyticsDebuggerEnabled), s = (0, o.useStateFromStores)([u.default], () => u.default.isDeveloper), [A, h] = r.useState(!1), {
+        })), n = (0, o.useStateFromStores)([d.default], () => d.default.isAnalyticsDebuggerEnabled), s = (0, o.useStateFromStores)([u.default], () => u.default.isDeveloper), [h, A] = r.useState(!1), {
             name: m,
             ...N
-        } = null != e ? e : {}, O = null != m;
+        } = null != e ? e : {}, p = null != m;
         return s && n ? (0, i.jsx)(T.default, {
             children: (0, i.jsxs)("div", {
                 className: a()(S.container, {
-                    [S.containerMinimized]: A,
-                    [S.notTracked]: !O
+                    [S.containerMinimized]: h,
+                    [S.notTracked]: !p
                 }),
                 children: [(0, i.jsx)(l.Clickable, {
                     className: S.minimizeButton,
                     onClick: () => {
-                        h(!A)
+                        A(!h)
                     },
-                    children: A ? (0, i.jsx)(E.default, {}) : (0, i.jsx)(I.default, {})
+                    children: h ? (0, i.jsx)(E.default, {}) : (0, i.jsx)(I.default, {})
                 }), (0, i.jsxs)("div", {
                     className: a()(S.content, {
-                        [S.contentMinimized]: A
+                        [S.contentMinimized]: h
                     }),
                     children: [(0, i.jsxs)(l.Text, {
                         className: a()(S.label, {
-                            [S.notTracked]: !O
+                            [S.notTracked]: !p
                         }),
                         variant: "text-xxs/normal",
-                        children: [O ? (0, i.jsx)(_.default, {
+                        children: [p ? (0, i.jsx)(_.default, {
                             className: S.iconTracked
                         }) : (0, i.jsx)(c.default, {
                             className: S.iconNotTracked
@@ -63,7 +63,7 @@ function(e, t, n) {
                         children: JSON.stringify(N, void 0, 2)
                     }), (0, i.jsx)(l.Text, {
                         className: a()(S.label, {
-                            [S.notTracked]: !O
+                            [S.notTracked]: !p
                         }),
                         variant: "text-xxs/normal",
                         children: "impressions stack"

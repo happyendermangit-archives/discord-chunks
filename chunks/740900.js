@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         GuildMemberSafetyMembers: function() {
-            return h
+            return A
         },
         MemberSafetySecondaryIndex: function() {
             return i
@@ -37,12 +37,12 @@ function(e, t, n) {
         return e.sort
     }
 
-    function A() {
+    function h() {
         return new o.SecondaryIndexMap(f, S)
     }(r = i || (i = {})).NEW_GUILD_MEMBER = "NEW_GUILD_MEMBER", r.CURRENT_GUILD_MEMBER = "CURRENT_GUILD_MEMBER", r.INCLUDED_IN_SEARCH_RESULTS = "INCLUDED_IN_SEARCH_RESULTS";
-    class h {
+    class A {
         reset() {
-            this._membersMap.clear(), this._membersMap = A(), this.resetNewMemberTimestamp()
+            this._membersMap.clear(), this._membersMap = h(), this.resetNewMemberTimestamp()
         }
         resetNewMemberTimestamp() {
             this.newMemberTimestamp = Date.now()
@@ -137,7 +137,7 @@ function(e, t, n) {
             return this._membersMap.version
         }
         constructor(e) {
-            I(this, "guildId", void 0), I(this, "_membersMap", void 0), I(this, "newMemberTimestamp", Date.now()), this.guildId = e, this._membersMap = A()
+            I(this, "guildId", void 0), I(this, "_membersMap", void 0), I(this, "newMemberTimestamp", Date.now()), this.guildId = e, this._membersMap = h()
         }
     }
 }

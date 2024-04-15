@@ -16,12 +16,12 @@ function(e, t, n) {
         T = n("25779"),
         f = n("797614"),
         S = n("703656"),
-        A = n("586576"),
-        h = n("626135"),
+        h = n("586576"),
+        A = n("626135"),
         m = n("960048"),
         N = n("998502"),
-        O = n("981631"),
-        p = n("689938"),
+        p = n("981631"),
+        O = n("689938"),
         R = n("588483");
 
     function C(e, t, n) {
@@ -51,7 +51,7 @@ function(e, t, n) {
             onClick: n,
             submitting: e,
             className: R.clearOverrideButton,
-            children: p.default.Messages.CLEAR_BUILD_OVERRIDE
+            children: O.default.Messages.CLEAR_BUILD_OVERRIDE
         })
     }
     let L = a().throttle(e => {
@@ -76,7 +76,7 @@ function(e, t, n) {
                 r = m.default.captureCrash(e, {
                     extra: t
                 });
-            h.default.track(O.AnalyticEvents.APP_CRASHED, {
+            A.default.track(p.AnalyticEvents.APP_CRASHED, {
                 path: n.pathname,
                 extra: t,
                 error_message: e.message,
@@ -106,9 +106,9 @@ function(e, t, n) {
             if (null !== this.state.error) {
                 let e = (0, i.jsxs)("div", {
                         children: [(0, i.jsx)("p", {
-                            children: p.default.Messages.ERRORS_UNEXPECTED_CRASH
+                            children: O.default.Messages.ERRORS_UNEXPECTED_CRASH
                         }), (0, i.jsx)("p", {
-                            children: p.default.Messages.ERRORS_ACTION_TO_TAKE
+                            children: O.default.Messages.ERRORS_ACTION_TO_TAKE
                         })]
                     }),
                     n = (0, i.jsxs)("div", {
@@ -116,11 +116,11 @@ function(e, t, n) {
                         children: [(0, i.jsx)(_.Button, {
                             size: _.ButtonSizes.LARGE,
                             onClick: this._handleSubmitReport,
-                            children: p.default.Messages.ERRORS_RELOAD
+                            children: O.default.Messages.ERRORS_RELOAD
                         }), (0, i.jsx)(g, {})]
                     });
-                return (0, i.jsx)(A.default, {
-                    title: p.default.Messages.UNSUPPORTED_BROWSER_TITLE,
+                return (0, i.jsx)(h.default, {
+                    title: O.default.Messages.UNSUPPORTED_BROWSER_TITLE,
                     note: null != t ? t() : e,
                     action: n,
                     className: R.errorPage

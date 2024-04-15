@@ -10,18 +10,18 @@ function(e, t, n) {
         T = n("899742"),
         f = n("598077"),
         S = n("12647"),
-        A = n("358085"),
-        h = n("374023");
+        h = n("358085"),
+        A = n("374023");
     let m = "BrowserHandoffStore",
         N = !1,
-        O = new E.Timeout;
+        p = new E.Timeout;
 
-    function p() {
+    function O() {
         null != i && null != r && (window.open("".concat(i, "&key=").concat(r)), S.default.focus(null, !0))
     }
 
     function R() {
-        r = null, O.stop(), N = !1, c.Storage.set(m, N)
+        r = null, p.stop(), N = !1, c.Storage.set(m, N)
     }
 
     function C() {
@@ -29,10 +29,10 @@ function(e, t, n) {
     }
     class g extends(u = _.default.Store) {
         initialize() {
-            !1 !== c.Storage.get(m) && (N = A.isPlatformEmbedded && "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL)
+            !1 !== c.Storage.get(m) && (N = h.isPlatformEmbedded && "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL)
         }
         isHandoffAvailable() {
-            return !h.ProcessArgs.isDisallowPopupsSet() && N
+            return !A.ProcessArgs.isDisallowPopupsSet() && N
         }
         get user() {
             return s
@@ -48,11 +48,11 @@ function(e, t, n) {
         writable: !0
     }) : a[o] = l, t.default = new g(I.default, {
         RPC_SERVER_READY: function(e) {
-            i = "".concat(location.protocol, "//").concat(location.host, "/handoff?rpc=").concat(e.port), p()
+            i = "".concat(location.protocol, "//").concat(location.host, "/handoff?rpc=").concat(e.port), O()
         },
         BROWSER_HANDOFF_BEGIN: function(e) {
             if (null != r) return !1;
-            r = (0, d.v4)(), O.start(e.timeout, () => (0, T.handoffEnd)()), p()
+            r = (0, d.v4)(), p.start(e.timeout, () => (0, T.handoffEnd)()), O()
         },
         BROWSER_HANDOFF_FROM_APP: function(e) {
             let {
@@ -61,7 +61,7 @@ function(e, t, n) {
                 timeout: i
             } = e;
             if (null == t || null == n) return !1;
-            N = !0, O.start(i, () => (0, T.handoffEnd)())
+            N = !0, p.start(i, () => (0, T.handoffEnd)())
         },
         BROWSER_HANDOFF_UNAVAILABLE: R,
         BROWSER_HANDOFF_SET_USER: function(e) {

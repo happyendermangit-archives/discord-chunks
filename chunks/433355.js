@@ -22,9 +22,9 @@ function(e, t, n) {
         T = n("594174"),
         f = n("981631"),
         S = n("176505"),
-        A = n("231338");
+        h = n("231338");
 
-    function h(e, t, n) {
+    function A(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -34,8 +34,8 @@ function(e, t, n) {
     }
     let m = "message_requests",
         N = !1,
-        O = !1,
-        p = !0,
+        p = !1,
+        O = !0,
         R = !1,
         C = {},
         g = {};
@@ -66,7 +66,7 @@ function(e, t, n) {
             let n = C[t];
             if (n.type === o.SidebarType.VIEW_THREAD || n.type === o.SidebarType.VIEW_CHANNEL) {
                 let i = d.default.getChannel(n.channelId);
-                (null == i || !_.default.can(A.Permissions.VIEW_CHANNEL, i)) && (delete C[t], e = !0)
+                (null == i || !_.default.can(h.Permissions.VIEW_CHANNEL, i)) && (delete C[t], e = !0)
             }
         }
         return e
@@ -80,15 +80,15 @@ function(e, t, n) {
         initialize(e) {
             if (null != e) {
                 var t, n, i, r, s;
-                N = null !== (t = e.isMembersOpen) && void 0 !== t && t, O = null !== (n = e.isSummariesOpen) && void 0 !== n && n, p = null === (i = e.isProfileOpen) || void 0 === i || i, C = null !== (r = e.sidebars) && void 0 !== r ? r : {}, g = null !== (s = e.guildSidebars) && void 0 !== s ? s : {}
+                N = null !== (t = e.isMembersOpen) && void 0 !== t && t, p = null !== (n = e.isSummariesOpen) && void 0 !== n && n, O = null === (i = e.isProfileOpen) || void 0 === i || i, C = null !== (r = e.sidebars) && void 0 !== r ? r : {}, g = null !== (s = e.guildSidebars) && void 0 !== s ? s : {}
             }
             this.syncWith([c.default], y), this.syncWith([_.default], M)
         }
         getState() {
             return {
                 isMembersOpen: N,
-                isSummariesOpen: O,
-                isProfileOpen: p,
+                isSummariesOpen: p,
+                isProfileOpen: O,
                 sidebars: C,
                 guildSidebars: g
             }
@@ -96,7 +96,7 @@ function(e, t, n) {
         getSection(e, t) {
             if (R) return f.ChannelSections.SEARCH;
             let n = L(e);
-            return null != n && null != C[n] ? f.ChannelSections.SIDEBAR_CHAT : t && p ? f.ChannelSections.PROFILE : O ? f.ChannelSections.SUMMARIES : N ? f.ChannelSections.MEMBERS : f.ChannelSections.NONE
+            return null != n && null != C[n] ? f.ChannelSections.SIDEBAR_CHAT : t && O ? f.ChannelSections.PROFILE : p ? f.ChannelSections.SUMMARIES : N ? f.ChannelSections.MEMBERS : f.ChannelSections.NONE
         }
         getSidebarState(e) {
             let t = L(e);
@@ -119,15 +119,15 @@ function(e, t, n) {
             return null == i ? null : i.type === o.SidebarType.VIEW_THREAD || i.type === o.SidebarType.VIEW_CHANNEL ? null === (t = i.details) || void 0 === t ? void 0 : t.initialMessageId : null
         }
     }
-    h(P, "displayName", "ChannelSectionStore"), h(P, "persistKey", "ChannelSectionStore2"), t.default = new P(a.default, {
+    A(P, "displayName", "ChannelSectionStore"), A(P, "persistKey", "ChannelSectionStore2"), t.default = new P(a.default, {
         CHANNEL_TOGGLE_MEMBERS_SECTION: function() {
-            O && (O = v(O)), N = v(N)
+            p && (p = v(p)), N = v(N)
         },
         PROFILE_PANEL_TOGGLE_SECTION: function() {
-            !p && l.ComponentDispatch.dispatch(f.ComponentActions.SEARCH_RESULTS_CLOSE), p = v(p)
+            !O && l.ComponentDispatch.dispatch(f.ComponentActions.SEARCH_RESULTS_CLOSE), O = v(O)
         },
         CHANNEL_TOGGLE_SUMMARIES_SECTION: function() {
-            N && (N = v(N)), O = v(O)
+            N && (N = v(N)), p = v(p)
         },
         SIDEBAR_VIEW_CHANNEL: function(e) {
             let {
@@ -200,7 +200,7 @@ function(e, t, n) {
             return n
         },
         CHANNEL_SELECT: function() {
-            r.isMobile && N && (N = !1, O = !1)
+            r.isMobile && N && (N = !1, p = !1)
         },
         THREAD_CREATE: function(e) {
             var t;

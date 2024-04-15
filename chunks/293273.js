@@ -12,12 +12,12 @@ function(e, t, n) {
         T = n("676035"),
         f = n("594190"),
         S = n("106301"),
-        A = n("406066"),
-        h = n("768419"),
+        h = n("406066"),
+        A = n("768419"),
         m = n("695346"),
         N = n("581883"),
-        O = n("199902"),
-        p = n("272053"),
+        p = n("199902"),
+        O = n("272053"),
         R = n("981631"),
         C = n("689938");
     let g = [],
@@ -27,9 +27,9 @@ function(e, t, n) {
         let e = [],
             t = m.CustomStatusSetting.getSetting();
         null != t && ("0" === t.expiresAtMs || new Date(Number(t.expiresAtMs)).getTime() - new Date().getTime() > 0) && e.push((0, T.getActivityFromCustomStatus)(t));
-        let n = A.default.getActivities();
+        let n = h.default.getActivities();
         e.push(...n);
-        let i = p.default.getStream();
+        let i = O.default.getStream();
         null != i && e.push({
             type: R.ActivityTypes.STREAMING,
             ...i
@@ -55,7 +55,7 @@ function(e, t, n) {
         let a = f.default.getVisibleGame(),
             o = null != a && null != a.name && r.has(a.name),
             u = null != a && a.isLauncher,
-            _ = O.default.getCurrentUserActiveStream();
+            _ = p.default.getCurrentUserActiveStream();
         null != a && null != a.name && !(o || u && !(null != _)) && e.push({
             type: R.ActivityTypes.PLAYING,
             name: a.name,
@@ -64,7 +64,7 @@ function(e, t, n) {
                 start: a.start
             }
         });
-        let c = h.default.getActivity();
+        let c = A.default.getActivity();
         null != c && e.push({
             type: R.ActivityTypes.LISTENING,
             ...c
@@ -83,7 +83,7 @@ function(e, t, n) {
     }
     class v extends(i = _.default.Store) {
         initialize() {
-            this.waitFor(f.default, E.default, p.default, O.default, h.default, N.default, S.default), this.syncWith([A.default, S.default], () => D())
+            this.waitFor(f.default, E.default, O.default, p.default, A.default, N.default, S.default), this.syncWith([h.default, S.default], () => D())
         }
         getActivities() {
             return g

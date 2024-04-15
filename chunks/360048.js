@@ -21,21 +21,21 @@ function(e, t, n) {
             muted: T,
             to: f,
             avatarClassName: S,
-            selectedClassName: A,
-            innerClassName: h,
+            selectedClassName: h,
+            innerClassName: A,
             wrapContent: m,
             highlighted: N,
-            focusProps: O,
-            ...p
+            focusProps: p,
+            ...O
         } = e;
-        p.className = a()(p.className, u.container, {
+        O.className = a()(O.className, u.container, {
             [u.selected]: I,
             [u.highlighted]: N,
-            [null != A ? A : ""]: I,
+            [null != h ? h : ""]: I,
             [u.clickable]: !I && (null != f || null != E)
-        }), p["aria-selected"] = null !== (n = p["aria-selected"]) && void 0 !== n ? n : I;
+        }), O["aria-selected"] = null !== (n = O["aria-selected"]) && void 0 !== n ? n : I;
         let R = (0, i.jsxs)("div", {
-            className: a()(h, u.layout, {
+            className: a()(A, u.layout, {
                 [u.muted]: !I && T,
                 [u.wrappedLayout]: m
             }),
@@ -62,26 +62,26 @@ function(e, t, n) {
             }) : null]
         });
         return null != f ? (0, i.jsx)(l.FocusRing, {
-            ...O,
+            ...p,
             children: (0, i.jsx)(o.Link, {
                 to: f,
                 onClick: E,
-                ...p,
+                ...O,
                 role: "listitem",
                 ref: t,
                 children: R
             })
         }) : null != E ? (0, i.jsx)(l.Clickable, {
             onClick: E,
-            focusProps: O,
-            ...p,
+            focusProps: p,
+            ...O,
             role: "listitem",
             innerRef: t,
             children: R
         }) : (0, i.jsx)(l.FocusRing, {
-            ...O,
+            ...p,
             children: (0, i.jsx)("div", {
-                ...p,
+                ...O,
                 role: "listitem",
                 ref: t,
                 children: R

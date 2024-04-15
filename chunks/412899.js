@@ -26,12 +26,12 @@ function(e, t, n) {
         T = n("239091"),
         f = n("749210"),
         S = n("112724"),
-        A = n("607070"),
-        h = n("605436"),
+        h = n("607070"),
+        A = n("605436"),
         m = n("134433"),
         N = n("518738"),
-        O = n("434404"),
-        p = n("271383"),
+        p = n("434404"),
+        O = n("271383"),
         R = n("430824"),
         C = n("496675"),
         g = n("594174"),
@@ -91,30 +91,30 @@ function(e, t, n) {
         let {
             canRemove: f,
             className: S,
-            role: h,
-            onRemove: O,
-            guildId: p,
+            role: A,
+            onRemove: p,
+            guildId: O,
             disableBorderColor: R,
             onMouseDown: C
         } = e, {
             tabIndex: g,
             ...L
-        } = (0, d.useListItem)(h.id), D = (0, N.useRoleIcon)({
-            roleId: h.id,
+        } = (0, d.useListItem)(A.id), D = (0, N.useRoleIcon)({
+            roleId: A.id,
             size: 16,
-            guildId: p
-        }), M = (0, c.useStateFromStores)([A.default], () => A.default.roleStyle), y = (null === (s = h.tags) || void 0 === s ? void 0 : s.guild_connections) === null, U = r.useCallback(e => {
+            guildId: O
+        }), M = (0, c.useStateFromStores)([h.default], () => h.default.roleStyle), y = (null === (s = A.tags) || void 0 === s ? void 0 : s.guild_connections) === null, U = r.useCallback(e => {
             (0, T.openContextMenuLazy)(e, async () => {
                 let {
                     default: e
                 } = await n.e("5396").then(n.bind(n, "731646"));
                 return t => (0, i.jsx)(e, {
                     ...t,
-                    id: h.id,
+                    id: A.id,
                     label: w.default.Messages.COPY_ID_ROLE
                 })
             })
-        }, [h.id]), b = (0, I.useToken)(E.default.unsafe_rawColors.PRIMARY_300).hsl(), G = null !== (o = h.colorString) && void 0 !== o ? o : b, k = null !== (l = (0, _.hex2rgb)(G, .6)) && void 0 !== l ? l : void 0, V = E.default.unsafe_rawColors.WHITE_500.css, F = (0, _.hex2int)(G);
+        }, [A.id]), b = (0, I.useToken)(E.default.unsafe_rawColors.PRIMARY_300).hsl(), G = null !== (o = A.colorString) && void 0 !== o ? o : b, k = null !== (l = (0, _.hex2rgb)(G, .6)) && void 0 !== l ? l : void 0, V = E.default.unsafe_rawColors.WHITE_500.css, F = (0, _.hex2int)(G);
         null != F && .3 > (0, _.getDarkness)(F) && (V = E.default.unsafe_rawColors.PRIMARY_630.css), u = y ? (0, i.jsx)(m.default, {
             className: B.roleFlowerStar,
             iconClassName: f ? B.roleVerifiedIcon : void 0,
@@ -142,19 +142,19 @@ function(e, t, n) {
                 style: x,
                 onContextMenu: U,
                 onMouseDown: C,
-                "aria-label": h.name,
+                "aria-label": A.name,
                 tabIndex: g,
                 ...L,
                 children: [(0, i.jsxs)(I.Clickable, {
                     className: B.roleRemoveButton,
-                    onClick: f ? O : void 0,
+                    onClick: f ? p : void 0,
                     tabIndex: f ? g : -1,
                     focusProps: {
                         focusClassName: B.roleRemoveIconFocused
                     },
                     "aria-hidden": !f,
                     "aria-label": w.default.Messages.GUILD_SETTINGS_MEMBERS_REMOVE_ROLE.format({
-                        roleName: h.name
+                        roleName: A.name
                     }),
                     children: [u, f ? (0, i.jsx)(v.default, {
                         color: V,
@@ -171,7 +171,7 @@ function(e, t, n) {
                     children: (0, i.jsx)(I.Text, {
                         variant: "text-xs/medium",
                         className: B.roleNameOverflow,
-                        children: h.name
+                        children: A.name
                     })
                 })]
             })
@@ -215,7 +215,7 @@ function(e, t, n) {
             roleClassName: s,
             addButtonClassName: o,
             addButtonIconClassName: l
-        } = e, u = (0, d.useListItem)("overflow-add-roles-".concat(n.id)), _ = (0, c.useStateFromStores)([A.default], () => A.default.roleStyle), E = C.default.getHighestRole(t), T = p.default.getMember(t.id, n.id), f = e => (0, h.isNotEveryoneRoleId)(t.id, e.id) && !e.managed && C.default.isRoleHigher(t, E, e) && (null == T || -1 === T.roles.indexOf(e.id));
+        } = e, u = (0, d.useListItem)("overflow-add-roles-".concat(n.id)), _ = (0, c.useStateFromStores)([h.default], () => h.default.roleStyle), E = C.default.getHighestRole(t), T = O.default.getMember(t.id, n.id), f = e => (0, A.isNotEveryoneRoleId)(t.id, e.id) && !e.managed && C.default.isRoleHigher(t, E, e) && (null == T || -1 === T.roles.indexOf(e.id));
         return (0, i.jsx)(I.Popout, {
             renderPopout: e => {
                 let {
@@ -258,22 +258,22 @@ function(e, t, n) {
             className: I,
             readOnly: T,
             roleClassName: S,
-            disableBorderColor: A
-        } = e, h = r.useRef({}), m = r.useCallback(e => {
+            disableBorderColor: h
+        } = e, A = r.useRef({}), m = r.useCallback(e => {
             var t;
             let i = o.filter(t => t !== e.id);
-            (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null ? f.default.unassignGuildRoleConnection(s.id, e.id) : O.default.updateMemberRoles(s.id, n.id, i, [], [e.id])
+            (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null ? f.default.unassignGuildRoleConnection(s.id, e.id) : p.default.updateMemberRoles(s.id, n.id, i, [], [e.id])
         }, [o, s.id, n.id]), N = r.useCallback(e => {
-            let t = o; - 1 === t.indexOf(e) && (t = t.concat([e])), O.default.updateMemberRoles(s.id, n.id, t, [e], [])
-        }, [o, s.id, n.id]), [p, L] = r.useState(null), D = (0, c.useStateFromStores)([R.default], () => R.default.getRoles(s.id)), v = r.useMemo(() => {
+            let t = o; - 1 === t.indexOf(e) && (t = t.concat([e])), p.default.updateMemberRoles(s.id, n.id, t, [e], [])
+        }, [o, s.id, n.id]), [O, L] = r.useState(null), D = (0, c.useStateFromStores)([R.default], () => R.default.getRoles(s.id)), v = r.useMemo(() => {
             let e = Object.values(D).filter(e => o.includes(e.id)).sort((e, t) => {
                 var n, i;
                 let r = (null === (n = e.tags) || void 0 === n ? void 0 : n.guild_connections) !== null,
                     s = (null === (i = t.tags) || void 0 === i ? void 0 : i.guild_connections) !== null;
                 return r && !s ? 1 : !r && s ? -1 : 0
             });
-            return null != p ? e.slice(0, p) : e
-        }, [D, p, o]), M = o.length - v.length;
+            return null != O ? e.slice(0, O) : e
+        }, [D, O, o]), M = o.length - v.length;
         r.useLayoutEffect(() => {
             if (_) return;
             if ("number" != typeof E) throw Error("Unexpected null width");
@@ -282,7 +282,7 @@ function(e, t, n) {
                 n = E - 30 - 4;
             for (let i = 0; i < v.length; i++) {
                 let r = v[i],
-                    s = h.current[r.id];
+                    s = A.current[r.id];
                 if (null != s) {
                     if ((t += s.offsetWidth + 4) > n) break;
                     e++
@@ -311,13 +311,13 @@ function(e, t, n) {
                     onRemove: () => m(e),
                     ref: t => {
                         var n, i;
-                        return n = e.id, void(null != (i = t) ? h.current[n] = i : delete h.current[n])
+                        return n = e.id, void(null != (i = t) ? A.current[n] = i : delete A.current[n])
                     },
                     guildId: s.id,
-                    disableBorderColor: A
+                    disableBorderColor: h
                 }, e.id)
             });
-        return null != p && 0 !== M ? t = (0, i.jsx)(x, {
+        return null != O && 0 !== M ? t = (0, i.jsx)(x, {
             ...e,
             numRolesHidden: M
         }) : P && (t = (0, i.jsx)(H, {

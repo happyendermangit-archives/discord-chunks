@@ -20,7 +20,7 @@ function(e, t, n) {
             return g
         },
         expandLocation: function() {
-            return O
+            return p
         },
         setUTMContext: function() {
             return C
@@ -46,11 +46,11 @@ function(e, t, n) {
             location: {}
         }),
         S = {},
-        A = performance.now(),
-        h = [];
+        h = performance.now(),
+        A = [];
 
     function m(e) {
-        h.push(e)
+        A.push(e)
     }
     let N = {
         [E.AnalyticEvents.APP_OPENED]: {
@@ -232,7 +232,7 @@ function(e, t, n) {
         }
     };
 
-    function O(e) {
+    function p(e) {
         return "string" == typeof e ? {
             location: e
         } : {
@@ -243,7 +243,7 @@ function(e, t, n) {
             location_object_type: e.objectType
         }
     }
-    let p = () => I.AccessibilityFeatureFlags.NONE,
+    let O = () => I.AccessibilityFeatureFlags.NONE,
         R = (0, r.trackMaker)({
             analyticEventConfigs: N,
             dispatcher: s.default,
@@ -264,7 +264,7 @@ function(e, t, n) {
             } = a;
             a = {
                 ...t,
-                ...O(e)
+                ...p(e)
             }
         }
         if (null != a.source) {
@@ -286,7 +286,7 @@ function(e, t, n) {
                 }
             }
         }
-        a.client_performance_cpu = _.default.getCurrentCPUUsagePercent(), a.client_performance_memory = _.default.getCurrentMemoryUsageKB(), a.cpu_core_count = _.default.getCPUCoreCount(), a.accessibility_features = p(), a.rendered_locale = T.default.getLocale(), a.uptime_app = Math.floor((performance.now() - A) / 1e3);
+        a.client_performance_cpu = _.default.getCurrentCPUUsagePercent(), a.client_performance_memory = _.default.getCurrentMemoryUsageKB(), a.cpu_core_count = _.default.getCPUCoreCount(), a.accessibility_features = O(), a.rendered_locale = T.default.getLocale(), a.uptime_app = Math.floor((performance.now() - h) / 1e3);
         let o = _.default.getProcessUptime();
         null != o && (a.uptime_process_renderer = Math.floor(o));
         let {
@@ -295,7 +295,7 @@ function(e, t, n) {
             utmCampaign: d,
             utmContent: c
         } = S;
-        return a.utm_source = null !== (t = a.utm_source) && void 0 !== t ? t : l, a.utm_medium = null !== (n = a.utm_medium) && void 0 !== n ? n : u, a.utm_campaign = null !== (i = a.utm_campaign) && void 0 !== i ? i : d, a.utm_content = null !== (r = a.utm_content) && void 0 !== r ? r : c, h.forEach(e => e(a)), a
+        return a.utm_source = null !== (t = a.utm_source) && void 0 !== t ? t : l, a.utm_medium = null !== (n = a.utm_medium) && void 0 !== n ? n : u, a.utm_campaign = null !== (i = a.utm_campaign) && void 0 !== i ? i : d, a.utm_content = null !== (r = a.utm_content) && void 0 !== r ? r : c, A.forEach(e => e(a)), a
     }
 
     function L(e, t) {
@@ -322,7 +322,7 @@ function(e, t, n) {
         ...r,
         getCampaignParams: r.getCampaignParams,
         setSystemAccessibilityFeatures: function(e) {
-            p = e
+            O = e
         },
         expandEventProperties: g,
         track: function(e, t) {

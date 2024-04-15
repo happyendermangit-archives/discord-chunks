@@ -20,12 +20,12 @@ function(e, t, n) {
         T = n("74538"),
         f = n("191177"),
         S = n("27733"),
-        A = n("981631"),
-        h = n("474936"),
+        h = n("981631"),
+        A = n("474936"),
         m = n("689938"),
         N = n("302458"),
-        O = n("867250");
-    let p = () => (0, f.setShowPremiumUpsell)(!1),
+        p = n("867250");
+    let O = () => (0, f.setShowPremiumUpsell)(!1),
         R = e => {
             var t, n, s;
             let {
@@ -34,15 +34,15 @@ function(e, t, n) {
                 analyticsLocations: R
             } = (0, u.default)(l.default.PREMIUM_UPSELL);
             r.useEffect(() => {
-                I.default.track(A.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-                    location_section: A.AnalyticsSections.STICKER_PICKER_UPSELL,
-                    type: h.PremiumUpsellTypes.STICKER_PICKER_UPSELL,
+                I.default.track(h.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+                    location_section: h.AnalyticsSections.STICKER_PICKER_UPSELL,
+                    type: A.PremiumUpsellTypes.STICKER_PICKER_UPSELL,
                     location_stack: R
                 })
             }, [R]);
             let C = (0, _.usePremiumTrialOffer)(),
                 g = (0, d.usePremiumDiscountOffer)(),
-                L = (null == C ? void 0 : null === (t = C.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === h.PremiumSubscriptionSKUs.TIER_0,
+                L = (null == C ? void 0 : null === (t = C.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === A.PremiumSubscriptionSKUs.TIER_0,
                 D = null != C || null != g;
             return (0, i.jsxs)("div", {
                 className: a()(N.upsellWrapper, {
@@ -51,11 +51,11 @@ function(e, t, n) {
                 children: [D ? (0, i.jsx)(c.default, {
                     trialOffer: C,
                     discountOffer: g,
-                    onClose: p,
-                    type: h.PremiumUpsellTypes.STICKER_PICKER_UPSELL,
-                    subscriptionTier: null !== (s = null == C ? void 0 : null === (n = C.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== s ? s : h.PremiumSubscriptionSKUs.TIER_2,
+                    onClose: O,
+                    type: A.PremiumUpsellTypes.STICKER_PICKER_UPSELL,
+                    subscriptionTier: null !== (s = null == C ? void 0 : null === (n = C.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== s ? s : A.PremiumSubscriptionSKUs.TIER_2,
                     children: L ? m.default.Messages.STICKER_PICKER_PREMIUM_TIER_UPSELL_DESCRIPTION.format({
-                        planName: (0, T.getTierDisplayName)(h.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
+                        planName: (0, T.getTierDisplayName)(A.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
                         onClick: f
                     }) : m.default.Messages.STICKER_PICKER_PREMIUM_UPSELL_DESCRIPTION.format({
                         onClick: f
@@ -63,7 +63,7 @@ function(e, t, n) {
                 }) : (0, i.jsxs)(i.Fragment, {
                     children: [(0, i.jsx)("img", {
                         className: N.upsellImage,
-                        src: O,
+                        src: p,
                         alt: m.default.Messages.STICKER_PICKER_PREMIUM_UPSELL_ALT
                     }), (0, i.jsx)(o.Text, {
                         className: N.upsellTitle,
@@ -78,11 +78,11 @@ function(e, t, n) {
                         })
                     })]
                 }), !D && (0, i.jsx)(S.default, {
-                    analyticsSection: A.AnalyticsSections.EXPRESSION_PICKER,
+                    analyticsSection: h.AnalyticsSections.EXPRESSION_PICKER,
                     buttonText: D ? L ? m.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : m.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0
                 }), (0, i.jsx)(o.Clickable, {
                     className: N.upsellClose,
-                    onClick: p,
+                    onClick: O,
                     children: (0, i.jsx)(E.default, {})
                 })]
             })

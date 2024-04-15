@@ -20,13 +20,13 @@ function(e, t, n) {
         T = n("594174"),
         f = n("483360"),
         S = n("892880"),
-        A = n("591759"),
-        h = n("279779"),
+        h = n("591759"),
+        A = n("279779"),
         m = n("620490"),
         N = n("727785"),
-        O = n("981631");
+        p = n("981631");
 
-    function p(e, t, n) {
+    function O(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -52,7 +52,7 @@ function(e, t, n) {
                 a = r.filter(e => e instanceof u.default);
                 break;
             case N.AutocompleterResultTypes.USER:
-                a = r.filter(e => e instanceof l.ChannelRecordBase && e.type === O.ChannelTypes.DM);
+                a = r.filter(e => e instanceof l.ChannelRecordBase && e.type === p.ChannelTypes.DM);
                 break;
             case N.AutocompleterResultTypes.GROUP_DM:
                 a = r.filter(e => e instanceof l.ChannelRecordBase && e.isMultiUserDM());
@@ -69,8 +69,8 @@ function(e, t, n) {
                 id: n
             } = t, i = c.default.getScoreWithoutFetchingLatest(n);
             if (e === N.AutocompleterResultTypes.USER && t instanceof l.PrivateChannelRecord) {
-                if (t.type === O.ChannelTypes.DM) o[n = t.getRecipientId()] = 1 + i / s;
-                else if (t.type === O.ChannelTypes.GROUP_DM) {
+                if (t.type === p.ChannelTypes.DM) o[n = t.getRecipientId()] = 1 + i / s;
+                else if (t.type === p.ChannelTypes.GROUP_DM) {
                     let e = t.recipients.length;
                     for (let n of t.recipients) o[n] = 1 + i / s * (1 / e)
                 }
@@ -82,7 +82,7 @@ function(e, t, n) {
     }
     class g {
         createSearchContext() {
-            null == this.userSearchContext && (this.userSearchContext = h.default.getSearchContext(this.parseUserResults, this._limit))
+            null == this.userSearchContext && (this.userSearchContext = A.default.getSearchContext(this.parseUserResults, this._limit))
         }
         setLimit(e) {
             let {
@@ -223,15 +223,15 @@ function(e, t, n) {
                 pathname: r,
                 hostname: s = "",
                 host: o
-            } = n, l = A.default.isDiscordHostname(s) || window.location.host === o;
-            return null !== r && l && A.default.isAppRoute(r) ? [{
+            } = n, l = h.default.isDiscordHostname(s) || window.location.host === o;
+            return null !== r && l && h.default.isAppRoute(r) ? [{
                 type: N.AutocompleterResultTypes.LINK,
                 record: d.default.fromPath(r),
                 score: 1
             }] : []
         }
         constructor(e, t, n = 100, i = R) {
-            p(this, "query", ""), p(this, "options", R), p(this, "results", []), p(this, "_userResults", []), p(this, "_groupDMResults", []), p(this, "_textChannelResults", []), p(this, "_voiceChannelResults", []), p(this, "_guildResults", []), p(this, "_applicationResults", []), p(this, "_linkResults", []), p(this, "_asyncTimeout", void 0), p(this, "userSearchContext", void 0), p(this, "onResultsChange", void 0), p(this, "resultTypes", void 0), p(this, "_userBlacklist", null), p(this, "_limit", void 0), p(this, "parseUserResults", e => {
+            O(this, "query", ""), O(this, "options", R), O(this, "results", []), O(this, "_userResults", []), O(this, "_groupDMResults", []), O(this, "_textChannelResults", []), O(this, "_voiceChannelResults", []), O(this, "_guildResults", []), O(this, "_applicationResults", []), O(this, "_linkResults", []), O(this, "_asyncTimeout", void 0), O(this, "userSearchContext", void 0), O(this, "onResultsChange", void 0), O(this, "resultTypes", void 0), O(this, "_userBlacklist", null), O(this, "_limit", void 0), O(this, "parseUserResults", e => {
                 let {
                     results: t
                 } = e;
@@ -256,7 +256,7 @@ function(e, t, n) {
                     }
                     this._userResults.length > this._limit && (this._userResults.length = this._limit), this.updateAllResults()
                 }
-            }), p(this, "updateAllResults", () => {
+            }), O(this, "updateAllResults", () => {
                 clearTimeout(this._asyncTimeout), this.results = r()([...this._userResults, ...this._groupDMResults, ...this._textChannelResults, ...this._voiceChannelResults, ...this._guildResults, ...this._linkResults]).uniqBy(e => "".concat(e.type, "-").concat(e.record.id)).sort(m.default).value(), this.onResultsChange(this.results, this.query)
             }), this.onResultsChange = e, this.setOptions(i, !0), this._limit = n, this.createSearchContext(), this.setResultTypes(t)
         }

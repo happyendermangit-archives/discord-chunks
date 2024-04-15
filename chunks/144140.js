@@ -12,18 +12,18 @@ function(e, t, n) {
         T = n("598077"),
         f = n("592125"),
         S = n("375954"),
-        A = n("709054"),
-        h = n("124368"),
+        h = n("709054"),
+        A = n("124368"),
         m = n("981631");
     let N = new Set,
-        O = {},
-        p = {};
+        p = {},
+        O = {};
 
     function R(e, t) {
         E.ALL_CHANNEL_TYPES.has(e.type) && C(function(e) {
-            if (!(e.id in O)) {
+            if (!(e.id in p)) {
                 var t;
-                O[e.id] = {
+                p[e.id] = {
                     guildId: e.guild_id,
                     parentId: e.parent_id,
                     count: null !== (t = e.messageCount) && void 0 !== t ? t : 0,
@@ -31,14 +31,14 @@ function(e, t, n) {
                     mostRecentMessage: null
                 }
             }
-            return O[e.id]
+            return p[e.id]
         }(e), t)
     }
 
     function C(e, t) {
         var n;
-        let i = (null !== (n = p[e.parentId]) && void 0 !== n ? n : 0) + 1;
-        p[e.parentId] = i, t(e)
+        let i = (null !== (n = O[e.parentId]) && void 0 !== n ? n : 0) + 1;
+        O[e.parentId] = i, t(e)
     }
 
     function g(e) {
@@ -56,7 +56,7 @@ function(e, t, n) {
     }
 
     function D(e) {
-        if (null != e && !(e.id in O)) {
+        if (null != e && !(e.id in p)) {
             let t = f.default.getChannel(e.id);
             if (null != t) return L(t), !0
         }
@@ -92,18 +92,18 @@ function(e, t, n) {
         }
         getCount(e) {
             var t, n;
-            return null !== (n = null === (t = O[e]) || void 0 === t ? void 0 : t.count) && void 0 !== n ? n : null
+            return null !== (n = null === (t = p[e]) || void 0 === t ? void 0 : t.count) && void 0 !== n ? n : null
         }
         getMostRecentMessage(e) {
             var t, n;
-            let i = O[e];
+            let i = p[e];
             return null == i ? null : (null == i.mostRecentMessage && null != i.mostRecentRawMessage && (i.mostRecentMessage = null !== (t = S.default.getMessage(e, i.mostRecentRawMessage.id)) && void 0 !== t ? t : (0, c.createMessageRecord)(i.mostRecentRawMessage), i.mostRecentRawMessage = null), null !== (n = i.mostRecentMessage) && void 0 !== n ? n : null)
         }
         getChannelThreadsVersion(e) {
-            return p[e]
+            return O[e]
         }
         getInitialOverlayState() {
-            return O
+            return p
         }
     }
     a = "ThreadMessageStore", (s = "displayName") in(r = P) ? Object.defineProperty(r, s, {
@@ -113,13 +113,13 @@ function(e, t, n) {
         writable: !0
     }) : r[s] = a, t.default = new P(d.default, {
         CONNECTION_OPEN: function(e) {
-            p = {}, N.clear(), e.guilds.forEach(g)
+            O = {}, N.clear(), e.guilds.forEach(g)
         },
         OVERLAY_INITIALIZE: function(e) {
             let {
                 threadMessages: t
             } = e;
-            for (let e in O = {
+            for (let e in p = {
                     ...t
                 }) {
                 let n = t[e].mostRecentMessage;
@@ -140,9 +140,9 @@ function(e, t, n) {
             let {
                 guild: n
             } = e;
-            t = n.id, O = l().omitBy(O, e => {
+            t = n.id, p = l().omitBy(p, e => {
                 let n = e.guildId === t;
-                return n && delete p[e.parentId], n
+                return n && delete O[e.parentId], n
             })
         },
         THREAD_CREATE: v,
@@ -167,14 +167,14 @@ function(e, t, n) {
             let {
                 channel: t
             } = e;
-            delete O[t.id]
+            delete p[t.id]
         },
         CHANNEL_DELETE: function(e) {
             var t;
             let {
                 channel: n
             } = e;
-            t = n.id, O = l().omitBy(O, e => e.parentId === t), delete p[t]
+            t = n.id, p = l().omitBy(p, e => e.parentId === t), delete O[t]
         },
         MESSAGE_CREATE: function(e) {
             let {
@@ -186,17 +186,17 @@ function(e, t, n) {
             if (n || i || null != r) return !1;
             let s = f.default.getChannel(t.channel_id);
             if (null == s || !E.THREAD_CHANNEL_TYPES.has(s.type) || ! function(e, t) {
-                    return !(t.type === m.MessageTypes.THREAD_STARTER_MESSAGE || e.isForumPost() && t.id === A.default.castChannelIdAsMessageId(e.id)) && !0
+                    return !(t.type === m.MessageTypes.THREAD_STARTER_MESSAGE || e.isForumPost() && t.id === h.default.castChannelIdAsMessageId(e.id)) && !0
                 }(s, t)) return !1;
             R(s, e => {
-                e.count = Math.min(e.count + 1, h.MAX_THREAD_MESSAGE_COUNT), e.mostRecentRawMessage = t, e.mostRecentMessage = null
+                e.count = Math.min(e.count + 1, A.MAX_THREAD_MESSAGE_COUNT), e.mostRecentRawMessage = t, e.mostRecentMessage = null
             })
         },
         MESSAGE_UPDATE: function(e) {
             var t;
             let {
                 message: n
-            } = e, i = O[n.channel_id], r = null !== (t = null == i ? void 0 : i.mostRecentRawMessage) && void 0 !== t ? t : null == i ? void 0 : i.mostRecentMessage;
+            } = e, i = p[n.channel_id], r = null !== (t = null == i ? void 0 : i.mostRecentRawMessage) && void 0 !== t ? t : null == i ? void 0 : i.mostRecentMessage;
             if (null == i || null == r || r.id !== n.id) return !1;
             C(i, e => {
                 null != e.mostRecentMessage && (e.mostRecentMessage = (0, c.updateMessageRecord)(e.mostRecentMessage, n)), null != e.mostRecentRawMessage && (e.mostRecentRawMessage = (0, c.updateServerMessage)(e.mostRecentRawMessage, n))
@@ -206,9 +206,9 @@ function(e, t, n) {
             let {
                 id: t,
                 channelId: n
-            } = e, i = O[n];
+            } = e, i = p[n];
             if (null == i) return !1;
-            let r = A.default.castChannelIdAsMessageId(n) !== t,
+            let r = h.default.castChannelIdAsMessageId(n) !== t,
                 s = !N.has(t);
             C(i, e => {
                 var n;
@@ -220,10 +220,10 @@ function(e, t, n) {
             let {
                 ids: t,
                 channelId: n
-            } = e, i = O[n];
+            } = e, i = p[n];
             if (null == i) return !1;
             let r = t.filter(e => {
-                let t = A.default.castChannelIdAsMessageId(n) !== e,
+                let t = h.default.castChannelIdAsMessageId(n) !== e,
                     i = !N.has(e);
                 return t && i
             }).length;
@@ -244,7 +244,7 @@ function(e, t, n) {
                 else {
                     var n;
                     let i = null !== (n = e.messages[0]) && void 0 !== n ? n : null;
-                    t.count = e.messages.length >= h.MAX_THREAD_MESSAGE_COUNT ? h.MAX_THREAD_MESSAGE_COUNT : t.count, (null == i ? void 0 : i.type) !== m.MessageTypes.THREAD_STARTER_MESSAGE && (t.mostRecentRawMessage = i, t.mostRecentMessage = null)
+                    t.count = e.messages.length >= A.MAX_THREAD_MESSAGE_COUNT ? A.MAX_THREAD_MESSAGE_COUNT : t.count, (null == i ? void 0 : i.type) !== m.MessageTypes.THREAD_STARTER_MESSAGE && (t.mostRecentRawMessage = i, t.mostRecentMessage = null)
                 }
             })
         },

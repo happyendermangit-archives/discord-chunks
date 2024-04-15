@@ -8,7 +8,7 @@ function(e, t, n) {
             return l
         },
         GUILD_BANNER_ASPECT_RATIO: function() {
-            return A
+            return h
         },
         GUILD_BANNER_MAX_HEIGHT: function() {
             return c
@@ -29,13 +29,13 @@ function(e, t, n) {
             return N
         },
         MAX_GUILD_BANNER_OVERLAY_HEIGHT: function() {
-            return O
+            return p
         },
         MAX_HOME_HEADER_OVERLAY_HEIGHT: function() {
             return R
         },
         MAX_SCHEDULED_EVENT_IMAGE_OVERLAY_HEIGHT: function() {
-            return p
+            return O
         },
         MAX_VIDEO_OVERLAY_HEIGHT: function() {
             return g
@@ -44,7 +44,7 @@ function(e, t, n) {
             return a
         },
         SCHEDULED_EVENT_IMAGE_ASPECT_RATIO: function() {
-            return h
+            return A
         },
         SCHEDULED_EVENT_IMAGE_MAX_HEIGHT: function() {
             return I
@@ -77,12 +77,12 @@ function(e, t, n) {
         T = 2400,
         f = 600,
         S = 17 / 6,
-        A = 16 / 9,
-        h = 2.5,
+        h = 16 / 9,
+        A = 2.5,
         m = 4,
         N = 568 / (17 / 6),
-        O = 568 / (16 / 9),
-        p = 227.2,
+        p = 568 / (16 / 9),
+        O = 227.2,
         R = 142,
         C = o.BACKGROUND_REPLACEMENT_SIZE.width / o.BACKGROUND_REPLACEMENT_SIZE.height,
         g = l / C;

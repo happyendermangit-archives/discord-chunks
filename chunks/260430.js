@@ -60,15 +60,15 @@ function(e, t, n) {
             isTrustedName: _ = !1
         } = e, S = (0, a.useLazyValue)(() => c.FAKE_SCOPES[Math.floor(Math.random() * c.FAKE_SCOPES.length)]);
         if (0 === r.length) return null;
-        let A = S(),
-            h = _ ? I.default.Messages.OAUTH2_SCOPES_LABEL_TRUSTED_NAME : I.default.Messages.OAUTH2_SCOPES_LABEL,
+        let h = S(),
+            A = _ ? I.default.Messages.OAUTH2_SCOPES_LABEL_TRUSTED_NAME : I.default.Messages.OAUTH2_SCOPES_LABEL,
             m = u === o.ApplicationIntegrationType.USER_INSTALL && s.includes(E.OAuth2Scopes.APPLICATIONS_COMMANDS);
         return (0, i.jsxs)("div", {
             className: T.scopes,
             children: [(0, i.jsx)(l.Heading, {
                 variant: "heading-deprecated-12/semibold",
                 className: T.sectionLabel,
-                children: h.format({
+                children: A.format({
                     application: null !== (t = null == n ? void 0 : n.name) && void 0 !== t ? t : ""
                 })
             }), r.map(e => {
@@ -80,7 +80,7 @@ function(e, t, n) {
             }), m && (0, i.jsx)(f, {
                 text: I.default.Messages.SCOPE_DM_YOU
             }), (0, i.jsx)(f, {
-                text: A,
+                text: h,
                 isFake: !0
             })]
         })

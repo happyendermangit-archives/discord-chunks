@@ -47,25 +47,25 @@ function(e, t, n) {
                 minValue: T,
                 maxValue: f,
                 value: S,
-                onVolumeShow: A,
-                onVolumeHide: h
+                onVolumeShow: h,
+                onVolumeHide: A
             } = this.props, {
                 hovered: m,
                 focused: N,
-                dragging: O
-            } = this.state, p = d.default;
-            return a || S === T ? p = _.default : S < f / 2 && (p = c.default), (0, r.jsxs)("div", {
+                dragging: p
+            } = this.state, O = d.default;
+            return a || S === T ? O = _.default : S < f / 2 && (O = c.default), (0, r.jsxs)("div", {
                 className: o()(t, I.container),
                 onMouseEnter: () => {
                     clearTimeout(this._hoverTimeout), this.setState({
                         hovered: !0
-                    }), null == A || A()
+                    }), null == h || h()
                 },
                 onMouseLeave: () => {
                     clearTimeout(this._hoverTimeout), this._hoverTimeout = setTimeout(() => {
                         this.setState({
                             hovered: !1
-                        }), null == h || h()
+                        }), null == A || A()
                     }, 150)
                 },
                 onFocus: () => this.setState({
@@ -77,7 +77,7 @@ function(e, t, n) {
                 onKeyDown: this.handleKeyDown,
                 children: [(0, r.jsx)("div", {
                     className: o()(I.volumeButtonSlider, n, {
-                        [I.sliderVisible]: m || N || O
+                        [I.sliderVisible]: m || N || p
                     }),
                     onMouseEnter: () => {
                         clearTimeout(this._hoverTimeout), this.setState({
@@ -105,7 +105,7 @@ function(e, t, n) {
                     size: l.Button.Sizes.NONE,
                     look: l.Button.Looks.BLANK,
                     onClick: this.handleToggleMute,
-                    children: (0, r.jsx)(p, {
+                    children: (0, r.jsx)(O, {
                         className: e
                     })
                 })]

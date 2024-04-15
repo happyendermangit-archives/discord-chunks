@@ -8,12 +8,12 @@ function(e, t, n) {
         T = n("570140"),
         f = n("51025"),
         S = n("594190"),
-        A = n("314897"),
-        h = n("173747"),
+        h = n("314897"),
+        A = n("173747"),
         m = n("780570"),
         N = n("830168"),
-        O = n("358085"),
-        p = n("417363"),
+        p = n("358085"),
+        O = n("417363"),
         R = n("981631"),
         C = n("186901");
     (a = i || (i = {})).INSTALL = "Install", a.REPAIR = "Repair", (o = r || (r = {})).PATCH = "Patch", o.REPAIR = "Repair";
@@ -50,8 +50,8 @@ function(e, t, n) {
                 branchId: a
             } = (0, m.convertComboId)(i);
             if (t = s, n = a, (null == y || y.applicationId !== t || y.branchId !== n) && (null == P || P.applicationId !== t || P.branchId !== n)) {
-                let e = A.default.getToken(),
-                    t = A.default.getId();
+                let e = h.default.getToken(),
+                    t = h.default.getId();
                 if (null == e) throw Error("missing user token");
                 G = !N.default.setCurrentTask(s, a, r, t, e)
             }
@@ -96,8 +96,8 @@ function(e, t, n) {
     }
 
     function j() {
-        let e = A.default.getToken(),
-            t = A.default.getId();
+        let e = h.default.getToken(),
+            t = h.default.getId();
         null != e && N.default.setCredentials(t, e)
     }
 
@@ -118,7 +118,7 @@ function(e, t, n) {
                 comboId: e,
                 action: "Patch"
             } : e);
-            null != t.paused && (M = t.paused), null != t.userActions && (b = new Map(Array.from(t.userActions))), this.waitFor(p.default, S.default), this.syncWith([S.default], W), this.waitFor(p.default)
+            null != t.paused && (M = t.paused), null != t.userActions && (b = new Map(Array.from(t.userActions))), this.waitFor(O.default, S.default), this.syncWith([S.default], W), this.waitFor(O.default)
         }
         get activeItems() {
             return D.map(e => {
@@ -196,7 +196,7 @@ function(e, t, n) {
                 } = e, {
                     applicationId: n,
                     branchId: r
-                } = (0, m.convertComboId)(t), s = p.default.getState(n, r), a = h.default.getTargetBuildId(n, r), o = h.default.getTargetManifests(n, r);
+                } = (0, m.convertComboId)(t), s = O.default.getState(n, r), a = A.default.getTargetBuildId(n, r), o = A.default.getTargetManifests(n, r);
                 if (null != s && s.type === R.LocalDispatchApplicationStates.UP_TO_DATE && s.buildId === s.targetBuildId && s.buildId === a && c().isEqual(s.manifestIds, s.targetManifestIds) && c().isEqual(s.manifestIds, o)) {
                     if (v.push(t), b.has(t)) {
                         switch (b.get(t)) {
@@ -236,10 +236,10 @@ function(e, t, n) {
             }
         },
         CONNECTION_OPEN: function() {
-            (0, O.isDesktop)() && j()
+            (0, p.isDesktop)() && j()
         },
         LOGOUT: function() {
-            I.Storage.remove(L), (0, O.isDesktop)() && N.default.pause()
+            I.Storage.remove(L), (0, p.isDesktop)() && N.default.pause()
         }
     })
 }

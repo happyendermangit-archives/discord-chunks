@@ -21,17 +21,17 @@ function(e, t, n) {
             ...T
         } = e, {
             analyticsLocations: f
-        } = (0, u.default)(l.default.MASKED_LINK), S = r.useCallback(t => (0, d.handleClick)(e, t, f), [f, e]), A = r.useCallback(e => {
+        } = (0, u.default)(l.default.MASKED_LINK), S = r.useCallback(t => (0, d.handleClick)(e, t, f), [f, e]), h = r.useCallback(e => {
             1 === e.button && S(e)
-        }, [S]), h = a().sanitizeUrl(_);
+        }, [S]), A = a().sanitizeUrl(_);
         return (0, i.jsx)(o.Anchor, {
             ...T,
             title: s,
             target: "_blank",
             rel: "noreferrer noopener",
-            href: h,
+            href: A,
             onClick: S,
-            onAuxClick: A,
+            onAuxClick: h,
             children: null != c ? c : s
         })
     })

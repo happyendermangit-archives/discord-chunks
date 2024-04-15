@@ -31,9 +31,9 @@ function(e, t, n) {
                 })) && void 0 !== e ? e : []
             }, [s]),
             S = (0, o.useStateFromStores)([E.default], () => E.default.getMutualGuilds(t.id)),
-            [A, h] = (0, o.useStateFromStoresArray)([E.default], () => [E.default.isFetchingFriends(t.id), E.default.isFetchingProfile(t.id)]);
+            [h, A] = (0, o.useStateFromStoresArray)([E.default], () => [E.default.isFetchingFriends(t.id), E.default.isFetchingProfile(t.id)]);
         if (t.id === (null == n ? void 0 : n.id) || (null == s ? void 0 : s.length) === 0 && (null == S ? void 0 : S.length) === 0) return null;
-        if (A || h) return (0, i.jsx)("div", {
+        if (h || A) return (0, i.jsx)("div", {
             className: a()(T.spinnerContainer),
             children: (0, i.jsx)(l.Spinner, {
                 className: T.spinner

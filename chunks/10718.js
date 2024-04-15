@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         executeQuery: function() {
-            return h
+            return A
         },
         getCachedApplicationSection: function() {
             return T
@@ -23,7 +23,7 @@ function(e, t, n) {
             return N
         },
         useDiscovery: function() {
-            return A
+            return h
         }
     }), n("47120"), n("653041"), n("724458");
     var i = n("470079"),
@@ -88,7 +88,7 @@ function(e, t, n) {
         return [null == t ? void 0 : t.result, null == n ? void 0 : n.result]
     }
 
-    function A(e, t, n) {
+    function h(e, t, n) {
         let a = (0, r.useStateFromStores)([s.default], () => s.default.getGuild(null == e ? void 0 : e.guild_id), [e.guild_id]),
             {
                 descriptors: u,
@@ -102,10 +102,10 @@ function(e, t, n) {
             [T, f] = i.useState(null),
             S = i.useRef(!1);
         S.current = I;
-        let A = i.useMemo(() => {
+        let h = i.useMemo(() => {
             let e = [];
             if (null != n.placeholderCount)
-                for (let i = 0; i < n.placeholderCount; i++) e.push(p(i, t.commandType));
+                for (let i = 0; i < n.placeholderCount; i++) e.push(O(i, t.commandType));
             return e
         }, [t.commandType, n.placeholderCount]);
         return i.useMemo(() => {
@@ -116,7 +116,7 @@ function(e, t, n) {
                 commandsByActiveSection: _,
                 filteredSectionId: T,
                 hasMoreAfter: !1,
-                placeholders: I ? A : [],
+                placeholders: I ? h : [],
                 sectionDescriptors: u,
                 filterSection: e => {
                     f(e)
@@ -131,29 +131,29 @@ function(e, t, n) {
                 let t = _[0];
                 if (null != t) e.commandsByActiveSection = [{
                     section: t.section,
-                    data: [...t.data, ...A]
+                    data: [...t.data, ...h]
                 }, ..._.slice(1)];
                 else {
                     let t = o.BUILT_IN_SECTIONS[c.BuiltInSectionId.BUILT_IN];
                     e.activeSections = [t], e.commandsByActiveSection = [{
                         section: t,
-                        data: A
+                        data: h
                     }]
                 }
-                e.commands = [...d, ...A]
+                e.commands = [...d, ...h]
             }
             return e
-        }, [d, u, T, _, I, A])
+        }, [d, u, T, _, I, h])
     }
 
-    function h(e, t, n) {
+    function A(e, t, n) {
         let {
             descriptors: i,
             commands: r,
             loading: s
         } = l.default.query(e, t, n), a = [];
         if (null != n.placeholderCount && s)
-            for (let e = 0; e < n.placeholderCount; e++) a.push(p(e, t.commandType));
+            for (let e = 0; e < n.placeholderCount; e++) a.push(O(e, t.commandType));
         return {
             commands: s ? [...r, ...a] : r,
             sections: s && 0 === i.length ? [o.BUILT_IN_SECTIONS[c.BuiltInSectionId.BUILT_IN]] : i
@@ -198,13 +198,13 @@ function(e, t, n) {
             }
         }, [null == r ? void 0 : r.result, null == s ? void 0 : s.result, t, n])
     }
-    let O = {
+    let p = {
         id: "placeholder-section",
         type: d.ApplicationCommandSectionType.APPLICATION,
         name: ""
     };
 
-    function p(e, t) {
+    function O(e, t) {
         return {
             type: t,
             inputType: d.ApplicationCommandInputType.PLACEHOLDER,
@@ -214,7 +214,7 @@ function(e, t, n) {
             description: "",
             displayDescription: "",
             applicationId: "",
-            section: O
+            section: p
         }
     }
 }

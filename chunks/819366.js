@@ -21,12 +21,12 @@ function(e, t, n) {
         T = n("592125"),
         f = n("271383"),
         S = n("430824"),
-        A = n("699516"),
-        h = n("594174"),
+        h = n("699516"),
+        A = n("594174"),
         m = n("797053"),
         N = n("5192"),
-        O = n("51144"),
-        p = n("377668");
+        p = n("51144"),
+        O = n("377668");
 
     function R(e) {
         let {
@@ -36,11 +36,11 @@ function(e, t, n) {
             inlinePreview: C = !1
         } = e, {
             analyticsLocations: g
-        } = (0, _.default)(d.default.USER_MENTION), L = (0, o.useStateFromStores)([h.default], () => h.default.getUser(r)), D = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(R)), v = null != D ? D.getGuildId() : null, M = C || null == L || null == v || null == R ? void 0 : e => {
+        } = (0, _.default)(d.default.USER_MENTION), L = (0, o.useStateFromStores)([A.default], () => A.default.getUser(r)), D = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(R)), v = null != D ? D.getGuildId() : null, M = C || null == L || null == v || null == R ? void 0 : e => {
             null != D && (0, u.openContextMenuLazy)(e, async () => {
                 let {
                     default: e
-                } = await Promise.all([n.e("99387"), n.e("79695"), n.e("85559"), n.e("70866"), n.e("12435"), n.e("64578")]).then(n.bind(n, "757387"));
+                } = await Promise.all([n.e("99387"), n.e("79695"), n.e("1502"), n.e("70866"), n.e("12435"), n.e("6696")]).then(n.bind(n, "757387"));
                 return t => (0, i.jsx)(e, {
                     ...t,
                     user: L,
@@ -48,7 +48,7 @@ function(e, t, n) {
                     guildId: v
                 })
             })
-        }, y = O.default.useName(L), P = (0, o.useStateFromStores)([T.default, f.default, A.default], () => N.default.getNickname(v, R, L)), U = S.default.getGuild(v), b = (0, c.useClydeEnabled)(U, D) && r === p.CLYDE_AI_USER_ID ? p.CLYDE_AI_MENTION_COLOR : null, G = e => (0, i.jsx)(m.default, {
+        }, y = p.default.useName(L), P = (0, o.useStateFromStores)([T.default, f.default, h.default], () => N.default.getNickname(v, R, L)), U = S.default.getGuild(v), b = (0, c.useClydeEnabled)(U, D) && r === O.CLYDE_AI_USER_ID ? O.CLYDE_AI_MENTION_COLOR : null, G = e => (0, i.jsx)(m.default, {
             className: t,
             onContextMenu: M,
             color: b,

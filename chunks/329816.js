@@ -16,12 +16,12 @@ function(e, t, n) {
         T = n("570140"),
         f = n("721037"),
         S = n("490173"),
-        A = n("114250"),
-        h = n("315263"),
+        h = n("114250"),
+        A = n("315263"),
         m = n("40851"),
         N = n("607070"),
-        O = n("545006"),
-        p = n("213609"),
+        p = n("545006"),
+        O = n("213609"),
         R = n("613413"),
         C = n("327943"),
         g = n("907459"),
@@ -47,8 +47,8 @@ function(e, t, n) {
         K = n("358085"),
         z = n("74538"),
         X = n("663993"),
-        Q = n("823453"),
-        q = n("628123"),
+        q = n("823453"),
+        Q = n("628123"),
         Z = n("962745"),
         J = n("151851"),
         $ = n("981631"),
@@ -57,7 +57,7 @@ function(e, t, n) {
     n("792295"), Promise.resolve().then(n.bind(n, "62883")).then(e => {
         K.isPlatformEmbedded ? window.addEventListener("contextmenu", e.contextMenuCallbackNative, !1) : window.addEventListener("contextmenu", e.contextMenuCallbackWeb, !1)
     }), (0, E.setDesignConfig)({
-        getDefaultLinkInterceptor: h.default
+        getDefaultLinkInterceptor: A.default
     }), (0, X.makeLazy)({
         createPromise: () => Promise.all([n.e("99387"), n.e("40326"), n.e("80451"), n.e("30634"), n.e("54343")]).then(n.bind(n, "849493")),
         webpackId: "849493"
@@ -82,7 +82,7 @@ function(e, t, n) {
             skipsSettingDefaultPageTitle: n
         } = e, {
             pathname: s
-        } = (0, u.useLocation)(), E = (0, K.getPlatform)(), h = d.isMobile || d.isTablet, V = (0, _.useStateFromStores)([w.default], () => w.default.darkSidebar ? $.ThemeTypes.DARK : void 0), X = (0, _.useStateFromStores)([N.default], () => N.default.useForcedColors ? "yes" : "no"), [J, er] = (0, _.useStateFromStoresArray)([D.default], () => [D.default.isEditorOpen, D.default.isCoachmark]), es = (0, _.useStateFromStores)([C.default], () => C.default.isEditorOpen), {
+        } = (0, u.useLocation)(), E = (0, K.getPlatform)(), A = d.isMobile || d.isTablet, V = (0, _.useStateFromStores)([w.default], () => w.default.darkSidebar ? $.ThemeTypes.DARK : void 0), X = (0, _.useStateFromStores)([N.default], () => N.default.useForcedColors ? "yes" : "no"), [J, er] = (0, _.useStateFromStoresArray)([D.default], () => [D.default.isEditorOpen, D.default.isCoachmark]), es = (0, _.useStateFromStores)([C.default], () => C.default.isEditorOpen), {
             enabled: ea
         } = b.default.useExperiment({
             location: "client_themes_coachmark_reintro"
@@ -108,12 +108,12 @@ function(e, t, n) {
         }, [eE, eI, ec, s]);
         let eT = r.useRef(document.body);
         return (0, i.jsx)(G.default, {
-            children: (0, i.jsx)(O.default, {
+            children: (0, i.jsx)(p.default, {
                 children: (0, i.jsxs)(I.RedesignIconContextProvider, {
-                    children: [(0, i.jsx)(Q.default, {
+                    children: [(0, i.jsx)(q.default, {
                         skipsSettingDefaultPageTitle: n
                     }), (0, i.jsx)(Z.default, {
-                        children: (0, i.jsx)(q.default, {
+                        children: (0, i.jsx)(Q.default, {
                             children: (0, i.jsxs)(I.FocusRingScope, {
                                 containerRef: eT,
                                 children: [(0, i.jsx)(W.MaskLibrary, {}), (0, i.jsx)(F.default, {}), (0, i.jsx)(o.FocusGuard, {}), null != E ? (0, i.jsx)(ei, {
@@ -124,7 +124,7 @@ function(e, t, n) {
                                     renderWindow: window,
                                     children: (0, i.jsxs)(H.AppLayerProvider, {
                                         children: [(0, i.jsxs)("div", {
-                                            className: a()(et.appAsidePanelWrapper, h && et.mobileAppAsidePanelWrapper, {
+                                            className: a()(et.appAsidePanelWrapper, A && et.mobileAppAsidePanelWrapper, {
                                                 [et.allowsScrolling]: (() => {
                                                     let e = (0, l.matchPath)(s, {
                                                         path: $.Routes.APPLICATION_DIRECTORY,
@@ -140,11 +140,11 @@ function(e, t, n) {
                                                 children: (0, i.jsx)(M.CommonConfettiCannonContextProvider, {
                                                     children: (0, i.jsx)(j.VerificationLayerProvider, {
                                                         children: (0, i.jsxs)(x.default.Provider, {
-                                                            value: p.default,
+                                                            value: O.default,
                                                             children: [(0, i.jsx)("div", {
-                                                                className: a()(h ? et.mobileApp : et.app),
+                                                                className: a()(A ? et.mobileApp : et.app),
                                                                 children: t
-                                                            }), (0, i.jsx)(L.default, {}), (0, i.jsx)(S.default, {}), (0, i.jsx)(I.Modals, {}), (0, i.jsx)(A.default, {}), (0, i.jsx)(Y.FullScreenLayers, {}), (0, i.jsx)(H.AppLayerContainer, {}), (0, i.jsx)(j.VerificationLayerContainer, {}), (0, i.jsx)(I.ToastContainer, {}), (0, i.jsx)(R.default, {}), (0, i.jsx)(U.default, {}), (0, i.jsx)(en, {})]
+                                                            }), (0, i.jsx)(L.default, {}), (0, i.jsx)(S.default, {}), (0, i.jsx)(I.Modals, {}), (0, i.jsx)(h.default, {}), (0, i.jsx)(Y.FullScreenLayers, {}), (0, i.jsx)(H.AppLayerContainer, {}), (0, i.jsx)(j.VerificationLayerContainer, {}), (0, i.jsx)(I.ToastContainer, {}), (0, i.jsx)(R.default, {}), (0, i.jsx)(U.default, {}), (0, i.jsx)(en, {})]
                                                         })
                                                     })
                                                 })
@@ -154,7 +154,7 @@ function(e, t, n) {
                                                 isCoachmark: eE,
                                                 markAsDismissed: ec
                                             }), (0, i.jsx)(y.default, {
-                                                mobile: h
+                                                mobile: A
                                             })]
                                         }), !1]
                                     })

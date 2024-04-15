@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         punycodeLink: function() {
-            return O
+            return p
         }
     }), n("47120"), n("315314"), n("610138"), n("216116"), n("78328"), n("815648"), n("411104");
     var i = n("392711"),
@@ -34,8 +34,8 @@ function(e, t, n) {
     let T = ["http:", "https:", "discord:"],
         f = [_.AST_KEY.TEXT, _.AST_KEY.UNDERLINE, _.AST_KEY.STRONG, _.AST_KEY.ITALICS, _.AST_KEY.STRIKETHROUGH, _.AST_KEY.INLINE_CODE, _.AST_KEY.SPOILER, _.AST_KEY.LINE_BREAK, _.AST_KEY.TIMESTAMP],
         S = [...f, _.AST_KEY.EMOJI, _.AST_KEY.CUSTOM_EMOJI],
-        A = [_.AST_KEY.LIST, _.AST_KEY.HEADING, _.AST_KEY.BLOCK_QUOTE],
-        h = [_.AST_KEY.TEXT],
+        h = [_.AST_KEY.LIST, _.AST_KEY.HEADING, _.AST_KEY.BLOCK_QUOTE],
+        A = [_.AST_KEY.TEXT],
         m = [_.AST_KEY.UNDERLINE, _.AST_KEY.STRONG, _.AST_KEY.ITALICS, _.AST_KEY.STRIKETHROUGH, _.AST_KEY.INLINE_CODE, _.AST_KEY.SPOILER, _.AST_KEY.LINE_BREAK, _.AST_KEY.TIMESTAMP, _.AST_KEY.EMOJI, _.AST_KEY.CUSTOM_EMOJI, _.AST_KEY.LIST, _.AST_KEY.HEADING, _.AST_KEY.BLOCK_QUOTE];
 
     function N(e, t) {
@@ -51,7 +51,7 @@ function(e, t, n) {
         return e
     }
 
-    function O(e) {
+    function p(e) {
         try {
             var t;
             let n = new URL(e),
@@ -76,9 +76,9 @@ function(e, t, n) {
             let [i, s, a, o] = e, c = () => ({
                 type: _.AST_KEY.TEXT,
                 content: i
-            }), E = I(a), T = I(s), p = I(null != o ? o : ""), R = E.whitespaceSanitized, C = T.fullySanitized, g = p.fullySanitized, L = C.trim();
+            }), E = I(a), T = I(s), O = I(null != o ? o : ""), R = E.whitespaceSanitized, C = T.fullySanitized, g = O.fullySanitized, L = C.trim();
             if (0 === R.trim().length || 0 === L.length) return c();
-            let D = O(l().unescapeUrl(a)),
+            let D = p(l().unescapeUrl(a)),
                 v = (0, u.default)(s).length > 0 || (0, u.default)(o).length > 0;
             if (null == D || v) return c();
             let M = {
@@ -87,8 +87,8 @@ function(e, t, n) {
                     parseInlineCodeChildContent: !0
                 },
                 y = n.allowEmojiLinks ? S : f,
-                P = [...y, ...A],
-                U = [...h, ...m],
+                P = [...y, ...h],
+                U = [...A, ...m],
                 b = N(t(C, M), P, [_.AST_KEY.EMOJI]),
                 G = N(t(g, M), U);
             if (null == b || null == G || 0 === (function e(t) {
@@ -129,7 +129,7 @@ function(e, t, n) {
                 })(b).trim().length) return c();
             let w = r().pick(t.rules, y),
                 B = l().parserFor(w)(T.whitespaceSanitized, M),
-                k = p.whitespaceSanitized,
+                k = O.whitespaceSanitized,
                 {
                     target: V
                 } = D;

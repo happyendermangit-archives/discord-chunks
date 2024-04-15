@@ -16,12 +16,12 @@ function(e, t, n) {
         T = n("19759"),
         f = n("706454"),
         S = n("210887"),
-        A = n("451478"),
-        h = n("792125"),
+        h = n("451478"),
+        A = n("792125"),
         m = n("597952"),
         N = n("252618"),
-        O = n("587061"),
-        p = n("392358"),
+        p = n("587061"),
+        O = n("392358"),
         R = n("981631");
     n("309538");
     let C = new Set([R.Routes.LOGIN, R.Routes.REGISTER]);
@@ -47,7 +47,7 @@ function(e, t, n) {
                 } = (0, d.useStateFromStoresObject)([S.default, f.default], () => ({
                     locale: f.default.locale,
                     theme: S.default.theme
-                })), s = (0, d.useStateFromStores)([A.default], () => A.default.isFocused(), []), {
+                })), s = (0, d.useStateFromStores)([h.default], () => h.default.isFocused(), []), {
                     reducedMotion: o,
                     alwaysShowLinkDecorations: _
                 } = r.useContext(c.AccessibilityPreferencesContext), {
@@ -78,8 +78,8 @@ function(e, t, n) {
                         systemForcedColors: a
                     }
                 }), M = (0, l.useLocation)(), y = r.useMemo(() => C.has(M.pathname), [M.pathname]);
-                (0, O.default)(window, y);
-                let P = (0, p.default)(window, __OVERLAY__ || s),
+                (0, p.default)(window, y);
+                let P = (0, O.default)(window, __OVERLAY__ || s),
                     U = (0, d.useStateFromStores)([T.default], () => T.default.sidebarWidth),
                     b = (0, c.useRedesignIconContext)().enabled;
                 return (0, i.jsx)("html", {
@@ -99,7 +99,7 @@ function(e, t, n) {
                         "disable-forced-colors": !D && "active" === v,
                         "enable-forced-colors": D,
                         "show-redesigned-icons": b
-                    }, (0, h.getThemeClass)(n), (0, m.default)(), N)
+                    }, (0, A.getThemeClass)(n), (0, m.default)(), N)
                 })
             }(R), function() {
                 let [e, t] = r.useState([]);

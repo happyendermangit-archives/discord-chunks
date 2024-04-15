@@ -27,32 +27,32 @@ function(e, t, n) {
                 var t;
                 return Number(null !== (t = e.num_year_opens) && void 0 !== t ? t : 0)
             }),
-            A = c("one month", i, I, e => {
+            h = c("one month", i, I, e => {
                 var t;
                 return Number(null !== (t = e.num_month_opens) && void 0 !== t ? t : 0)
             }),
-            h = c("three month", i, I, e => {
+            A = c("three month", i, I, e => {
                 var t;
                 return Number(null !== (t = e.num_three_month_opens) && void 0 !== t ? t : 0)
             }),
-            m = [A, h, c("six month", i, I, e => {
+            m = [h, A, c("six month", i, I, e => {
                 var t;
                 return Number(null !== (t = e.num_six_month_opens) && void 0 !== t ? t : 0)
             }), S],
             N = 0,
-            O = 0;
+            p = 0;
         I.forEach(e => {
             var t;
-            N++, O += null !== (t = Number(e.num_messages)) && void 0 !== t ? t : 0
+            N++, p += null !== (t = Number(e.num_messages)) && void 0 !== t ? t : 0
         });
-        let p = "\n**Pain**:\n- Everyones: ".concat(d.PainLevel[null !== (o = T.everyones) && void 0 !== o ? o : 0], "\n- Messages: ").concat(d.PainLevel[null !== (u = T.messages) && void 0 !== u ? u : 0], "\n- Size: ").concat(f, "\n**Remote**:\n- Channels: ").concat(N, "\n- AllVisits: ").concat(m.map(e => e.totalOpensAcrossAllServers).join(" / "), "\n- GuildVisits: ").concat(m.map(e => e.guildOpens).join(" / "), "\n- Biggest Channel (abs): ").concat(m.map(e => e.biggestChannel).join(" / "), "\n- Biggest Channel (%): ").concat(m.map(e => e.biggestChannelFormatted).join(" / "), "\n- Sent Msgs: ").concat(O, "\n"),
-            R = h.guildOpens >= .02 * h.totalOpensAcrossAllServers,
+        let O = "\n**Pain**:\n- Everyones: ".concat(d.PainLevel[null !== (o = T.everyones) && void 0 !== o ? o : 0], "\n- Messages: ").concat(d.PainLevel[null !== (u = T.messages) && void 0 !== u ? u : 0], "\n- Size: ").concat(f, "\n**Remote**:\n- Channels: ").concat(N, "\n- AllVisits: ").concat(m.map(e => e.totalOpensAcrossAllServers).join(" / "), "\n- GuildVisits: ").concat(m.map(e => e.guildOpens).join(" / "), "\n- Biggest Channel (abs): ").concat(m.map(e => e.biggestChannel).join(" / "), "\n- Biggest Channel (%): ").concat(m.map(e => e.biggestChannelFormatted).join(" / "), "\n- Sent Msgs: ").concat(p, "\n"),
+            R = A.guildOpens >= .02 * A.totalOpensAcrossAllServers,
             C = (null !== (_ = S.guildOpens) && void 0 !== _ ? _ : 0) > 0;
         if (T.messages === d.PainLevel.High) {
-            if (!r) return [d.Mode.UseGreyDot, R, "UseGreyDot" + p];
-            if (!R && C) return [d.Mode.UseGreyDot, R, "UseGreyDot" + p]
+            if (!r) return [d.Mode.UseGreyDot, R, "UseGreyDot" + O];
+            if (!R && C) return [d.Mode.UseGreyDot, R, "UseGreyDot" + O]
         }
-        return [d.Mode.KeepAsIs, R, "KeepAsIs" + p]
+        return [d.Mode.KeepAsIs, R, "KeepAsIs" + O]
     }
 
     function c(e, t, n, i) {
