@@ -96,8 +96,8 @@ function(e, t, n) {
                 }, e.id)
             }),
             {
-                guildId: V,
-                channelId: F,
+                guildId: F,
+                channelId: V,
                 messageId: x,
                 roleId: H
             } = (0, m.useUserProfileAnalyticsContext)(),
@@ -108,8 +108,8 @@ function(e, t, n) {
                 onClick: () => {
                     (0, N.openUserProfileModal)({
                         userId: t.id,
-                        guildId: V,
-                        channelId: F,
+                        guildId: F,
+                        channelId: V,
                         messageId: x,
                         roleId: H,
                         analyticsLocation: {

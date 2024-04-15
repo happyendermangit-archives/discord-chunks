@@ -48,8 +48,8 @@ function(e, t, n) {
             G = (0, _.default)(D, g, L),
             [w, B] = r.useState(new Set),
             k = (0, o.useStateFromStores)([f.default], () => f.default.getUserProfile(g)),
-            V = null !== (t = null == k ? void 0 : k.connectedAccounts) && void 0 !== t ? t : [],
-            F = null !== (n = null == k ? void 0 : k.applicationRoleConnections) && void 0 !== n ? n : [],
+            F = null !== (t = null == k ? void 0 : k.connectedAccounts) && void 0 !== t ? t : [],
+            V = null !== (n = null == k ? void 0 : k.applicationRoleConnections) && void 0 !== n ? n : [],
             x = (0, o.useStateFromStores)([E.default], () => E.default.hidePersonalInformation),
             H = (0, o.useStateFromStores)([c.default], () => c.default.locale);
         if (r.useEffect(() => {
@@ -64,7 +64,7 @@ function(e, t, n) {
                 })
             }, [null == D ? void 0 : D.id, null == G ? void 0 : G.id]), x || null == G) return null;
         let Y = Array.from(w).map(e => {
-            let t = V.find(t => t.type === e);
+            let t = F.find(t => t.type === e);
             return null == t ? null : (0, i.jsx)(S.ConnectedUserAccount, {
                 connectedAccount: t,
                 theme: v,
@@ -106,14 +106,14 @@ function(e, t, n) {
                     })]
                 })]
             })]
-        })), F.length > 0 && (C = (0, i.jsxs)(i.Fragment, {
+        })), V.length > 0 && (C = (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(l.Heading, {
                 variant: "eyebrow",
                 className: R.title,
                 children: O.default.Messages.APPS
             }), (0, i.jsx)("div", {
                 className: a()(p.connectionsContainer, y),
-                children: F.map(e => (0, i.jsx)(S.ConnectedApplicationUserRoleAccount, {
+                children: V.map(e => (0, i.jsx)(S.ConnectedApplicationUserRoleAccount, {
                     applicationRoleConnection: e,
                     locale: H
                 }, e.application.id))

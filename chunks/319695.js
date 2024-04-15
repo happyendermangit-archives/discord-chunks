@@ -5,6 +5,7 @@ function(e) {
         chipletContainerInner: "chipletContainerInner_bfcb1e",
         noTooltip: "noTooltip_e2f660",
         text: "text_c2b2cb",
-        tooltip: "tooltip_a9f8fc"
+        tooltip: "tooltip_a9f8fc",
+        tooltipContainer: "tooltipContainer_d9b1ea"
     }
 }

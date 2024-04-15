@@ -164,8 +164,8 @@ function(e, t, n) {
             select: w,
             isSelected: B,
             serialize: k,
-            clear: V,
-            hideIcon: F = !1,
+            clear: F,
+            hideIcon: V = !1,
             "aria-label": x,
             "aria-labelledby": H
         } = e, [Y, j] = r.useState(!1), {
@@ -182,8 +182,8 @@ function(e, t, n) {
                 null === (t = W.current) || void 0 === t || t.focus()
             }
         }, [w, G]), J = r.useCallback(e => {
-            e.stopPropagation(), null == V || V()
-        }, [V]), $ = t.filter(e => B(e.value));
+            e.stopPropagation(), null == F || F()
+        }, [F]), $ = t.filter(e => B(e.value));
         r.useLayoutEffect(() => {
             if (_) {
                 var e;
@@ -276,7 +276,7 @@ function(e, t, n) {
                                 height: 16,
                                 className: O.clear
                             })
-                        }) : null, F ? null : (0, i.jsx)(E, {
+                        }) : null, V ? null : (0, i.jsx)(E, {
                             width: I,
                             height: I
                         })]

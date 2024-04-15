@@ -44,13 +44,13 @@ function(e, t, n) {
             return j
         },
         CHECKERS_IN_THE_PARK_APP_ID: function() {
-            return V
+            return F
         },
         CHEF_SHOWDOWN_APPLICATION_ID: function() {
             return W
         },
         CHESS_IN_THE_PARK_APP_ID: function() {
-            return F
+            return V
         },
         COLOR_TOGETHER_APPLICATION_ID: function() {
             return U
@@ -135,8 +135,8 @@ function(e, t, n) {
         w = "880218394199220334",
         B = "1078728822972764312",
         k = "947957217959759964",
-        V = "832013003968348200",
-        F = "832012774040141894",
+        F = "832013003968348200",
+        V = "832012774040141894",
         x = "832025144389533716",
         H = "755827207812677713",
         Y = "879863686565621790",

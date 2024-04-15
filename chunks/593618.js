@@ -44,14 +44,14 @@ function(e, t, n) {
         w = n("170039"),
         B = n("761374"),
         k = n("602623"),
-        V = n("624138"),
-        F = n("510601"),
+        F = n("624138"),
+        V = n("510601"),
         x = n("981631"),
         H = n("689938"),
         Y = n("499890"),
         j = n("337341");
-    let W = (0, V.cssValueToNumber)(d.default.GUILD_TOOLTIP_ICON_SIZE),
-        K = (0, V.cssValueToNumber)(d.default.GUILD_TOOLTIP_ICON_SIZE_V_2);
+    let W = (0, F.cssValueToNumber)(d.default.GUILD_TOOLTIP_ICON_SIZE),
+        K = (0, F.cssValueToNumber)(d.default.GUILD_TOOLTIP_ICON_SIZE_V_2);
 
     function z(e, t, n) {
         return 0 === t.length ? null : (0, i.jsxs)("div", {
@@ -116,7 +116,7 @@ function(e, t, n) {
             let e = 0;
             for (let t of T) e += h.default.getParticipantCount(t, m.StageChannelParticipantNamedIndex.AUDIENCE);
             return e
-        }), y = (0, u.useStateFromStoresArray)([p.default], () => p.default.getAllApplicationStreams().filter(e => e.guildId === d).map(e => e.ownerId), [d]), V = (0, F.useIsGamingVoiceActivityEnabled)("Guild Tooltip", !1), H = (0, u.useStateFromStoresArray)([g.default, R.default], () => S.filter(e => g.default.getActivities(e.id, d).some(e => (null == e ? void 0 : e.application_id) != null && null != R.default.getDetectableGame(null == e ? void 0 : e.application_id)))), j = z(P.default, H, d), W = V ? H.map(e => e.id) : [], K = (0, u.useStateFromStoresArray)([c.default], () => c.default.getEmbeddedActivitiesForGuild(d).flatMap(e => Array.from(e.userIds)), [d]), Q = (0, u.useStateFromStoresArray)([D.default], () => K.map(e => D.default.getUser(e)), [K]), q = (0, u.useStateFromStoresArray)([D.default], () => y.map(e => D.default.getUser(e)), [y]), Z = z(G.default, S.filter(e => !y.includes(e.id) && !K.includes(e.id) && !W.includes(e.id)), d);
+        }), y = (0, u.useStateFromStoresArray)([p.default], () => p.default.getAllApplicationStreams().filter(e => e.guildId === d).map(e => e.ownerId), [d]), F = (0, V.useIsGamingVoiceActivityEnabled)("Guild Tooltip", !1), H = (0, u.useStateFromStoresArray)([g.default, R.default], () => S.filter(e => g.default.getActivities(e.id, d).some(e => (null == e ? void 0 : e.application_id) != null && null != R.default.getDetectableGame(null == e ? void 0 : e.application_id)))), j = z(P.default, H, d), W = F ? H.map(e => e.id) : [], K = (0, u.useStateFromStoresArray)([c.default], () => c.default.getEmbeddedActivitiesForGuild(d).flatMap(e => Array.from(e.userIds)), [d]), Q = (0, u.useStateFromStoresArray)([D.default], () => K.map(e => D.default.getUser(e)), [K]), q = (0, u.useStateFromStoresArray)([D.default], () => y.map(e => D.default.getUser(e)), [y]), Z = z(G.default, S.filter(e => !y.includes(e.id) && !K.includes(e.id) && !W.includes(e.id)), d);
         let J = (t = d, n = A, s = M, 0 === n.length ? null : (0, i.jsxs)("div", {
                 className: Y.row,
                 children: [(0, i.jsx)(w.default, {
@@ -147,10 +147,10 @@ function(e, t, n) {
                 isMuted: L.default.isMuted(d),
                 muteConfig: L.default.getMuteConfig(d)
             }), [d]);
-        return null != j && F.default.trackExposure({
+        return null != j && V.default.trackExposure({
             location: "Guild Tooltip"
         }), (0, i.jsxs)(i.Fragment, {
-            children: [J, Z, $, V && j, ee, et ? (0, i.jsx)(X, {
+            children: [J, Z, $, F && j, ee, et ? (0, i.jsx)(X, {
                 muteConfig: en,
                 className: a()(Y.muteText, {
                     [Y.muteTextWithActivity]: null != Z || null != $

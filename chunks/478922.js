@@ -50,12 +50,12 @@ function(e, t, n) {
                 style: U,
                 ...b
             } = n, G = s().useRef(null), w = s().useRef(null), [B, k] = s().useState(!1), {
-                scrollerRef: V,
-                scrollerState: F,
+                scrollerRef: F,
+                scrollerState: V,
                 getScrollerState: x
             } = (0, u.useCachedScrollerState)();
             (0, u.usePaddingFixes)({
-                scrollerRef: V,
+                scrollerRef: F,
                 className: P,
                 specs: a,
                 orientation: "vertical",
@@ -86,28 +86,28 @@ function(e, t, n) {
                 dir: T
             }), Q = (0, r.useCallback)(function() {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
-                e > F.current.dirty && (F.current.dirty = e, 2 === e ? z() : H(1))
-            }, [H, F, z]), q = (0, u.useScrollSpring)(V), Z = (0, r.useCallback)(() => X.itemGrid, [X]), J = (0, r.useCallback)(() => X.coordsMap, [X]), $ = s().useCallback(() => Q(), [Q]);
+                e > V.current.dirty && (V.current.dirty = e, 2 === e ? z() : H(1))
+            }, [H, V, z]), q = (0, u.useScrollSpring)(F), Z = (0, r.useCallback)(() => X.itemGrid, [X]), J = (0, r.useCallback)(() => X.coordsMap, [X]), $ = s().useCallback(() => Q(), [Q]);
             (0, u.useResizeObserverSubscription)({
-                ref: V,
+                ref: F,
                 key: "container",
                 onUpdate: $,
                 resizeObserver: c,
                 listenerMap: _
             }), (0, r.useImperativeHandle)(E, () => ({
-                getScrollerNode: () => V.current,
+                getScrollerNode: () => F.current,
                 getItemGrid: Z,
                 getCoordsMap: J,
                 getScrollerState: x,
-                ...(0, u.getAnimatedScrollHelpers)(V, x, q)
-            }), [V, x, Z, q, J]);
+                ...(0, u.getAnimatedScrollHelpers)(F, x, q)
+            }), [F, x, Z, q, J]);
             let ee = (0, r.useCallback)(e => {
                 Q(1), null == G.current ? k(!0) : clearTimeout(G.current), G.current = setTimeout(() => {
                     G.current = null, k(!1)
                 }, 200), null != I && I(e)
             }, [I, Q]);
             return (0, i.jsx)("div", {
-                ref: V,
+                ref: F,
                 onScroll: ee,
                 className: o()(P, {
                     [e]: !0,

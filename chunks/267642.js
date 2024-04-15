@@ -41,7 +41,7 @@ function(e, t, n) {
             return S
         },
         getNumberOfAppliedBoostsNeededForTier: function() {
-            return V
+            return F
         },
         getShortenedTierName: function() {
             return R
@@ -59,7 +59,7 @@ function(e, t, n) {
             return A
         },
         isGuildBoostSlotCanceled: function() {
-            return F
+            return V
         },
         isGuildBoostedAtLeast: function() {
             return D
@@ -337,7 +337,7 @@ function(e, t, n) {
         let {
             numAvailableGuildBoostSlots: t,
             numCanceledGuildBoostSlots: n
-        } = Object.values(o.default.boostSlots).reduce((e, t) => (F(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e), {
+        } = Object.values(o.default.boostSlots).reduce((e, t) => (V(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e), {
             numAvailableGuildBoostSlots: 0,
             numCanceledGuildBoostSlots: 0
         });
@@ -405,12 +405,12 @@ function(e, t, n) {
         return -1 === f.indexOf(t) ? 0 : Math.max(0, m(t) - e.length)
     }
 
-    function V(e, t) {
+    function F(e, t) {
         let n = e.premiumSubscriberCount;
         return Math.max(0, b(e.id)[t] - n)
     }
 
-    function F(e) {
+    function V(e) {
         var t;
         return (null === (t = e.subscription) || void 0 === t ? void 0 : t.status) === E.SubscriptionStatusTypes.CANCELED || e.canceled
     }

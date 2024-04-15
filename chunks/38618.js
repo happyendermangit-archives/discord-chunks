@@ -53,11 +53,11 @@ function(e, t, n) {
         g.localVoiceState.update()
     }
 
-    function V() {
+    function F() {
         return g.localVoiceState.update(), !1
     }
 
-    function F() {
+    function V() {
         return g.localPresenceState.update(), !1
     }
 
@@ -66,7 +66,7 @@ function(e, t, n) {
     }
     class H extends(i = u.default.Store) {
         initialize() {
-            this.waitFor(T.default, N.default, S.default, f.default, I.default), this.syncWith([A.default], V), this.syncWith([O.default], F)
+            this.waitFor(T.default, N.default, S.default, f.default, I.default), this.syncWith([A.default], F), this.syncWith([O.default], V)
         }
         getSocket() {
             return g.socket

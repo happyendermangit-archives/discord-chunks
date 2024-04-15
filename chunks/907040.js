@@ -37,8 +37,8 @@ function(e, t, n) {
         w = n("111361"),
         B = n("624138"),
         k = n("543241"),
-        V = n("199257"),
-        F = n("636411"),
+        F = n("199257"),
+        V = n("636411"),
         x = n("380331"),
         H = n("170762"),
         Y = n("22363"),
@@ -209,16 +209,16 @@ function(e, t, n) {
             onPickerOpen: e6
         }));
         let {
-            location: eV
+            location: eF
         } = (0, f.useAnalyticsContext)(), {
-            page: eF,
+            page: eV,
             section: ex,
             object: eH,
             openPopoutType: eY
         } = eT, ej = r.useMemo(() => ({
-            ...eV,
+            ...eF,
             section: null != ex ? ex : q.AnalyticsSections.EMOJI_PICKER_POPOUT
-        }), [eV, ex]), {
+        }), [eF, ex]), {
             analyticsLocations: eW
         } = (0, A.default)(S.default.EMOJI_PICKER), {
             diversitySurrogate: eK
@@ -247,7 +247,7 @@ function(e, t, n) {
             emojiSpriteSize: C
         }), {
             newlyAddedEmojis: e3
-        } = (0, V.default)(eb, l), {
+        } = (0, F.default)(eb, l), {
             trackOnPickerOpen: e4
         } = (0, k.useTrackEmojiPickerOpened)({
             intention: l,
@@ -279,8 +279,8 @@ function(e, t, n) {
                         location: {
                             ...ej,
                             object: null != eH ? eH : q.AnalyticsObjects.EMOJI,
-                            ...null != eF && {
-                                page: eF
+                            ...null != eV && {
+                                page: eV
                             }
                         },
                         pickerIntention: l,
@@ -353,7 +353,7 @@ function(e, t, n) {
             onClose: () => eD(null),
             guildId: eL.guildId,
             emojiId: eL.emojiId
-        }) : eG && !ek && (o = (0, i.jsx)(F.default, {
+        }) : eG && !ek && (o = (0, i.jsx)(V.default, {
             onDismiss: () => ew(!1)
         }));
         let ts = (0, i.jsx)(Y.default, {

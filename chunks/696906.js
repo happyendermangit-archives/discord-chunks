@@ -48,21 +48,21 @@ function(e, t, n) {
                 activeEntitlement: B
             } = (0, T.useActiveSubscriptionListingForApplication)(D, N),
             k = (0, T.useEligibleApplicationSubscriptionGuilds)(D, N),
-            V = (0, _.default)(),
-            F = null != s && (0, f.isApplicationUserSubscription)(s.sku_flags),
+            F = (0, _.default)(),
+            V = null != s && (0, f.isApplicationUserSubscription)(s.sku_flags),
             x = null != B && B.userId === (null === (t = E.default.getCurrentUser()) || void 0 === t ? void 0 : t.id),
             H = null == B || x,
             Y = null == B || b.length > 1,
             j = null != N || k.length > 0,
-            W = F && x,
-            K = null != P && null != U && H && Y && (j || F) && !W;
+            W = V && x,
+            K = null != P && null != U && H && Y && (j || V) && !W;
         return H ? j ? W && null != P && (n = m.default.Messages.APPLICATION_USER_SUBSCRIPTION_ALREADY_SUBSCRIBED.format({
             tierName: P.name
         })) : n = m.default.Messages.APPLICATION_SUBSCRIPTION_NO_GUILD_AVAILABLE : n = m.default.Messages.APPLICATION_SUBSCRIPTIONS_CANNOT_MANAGE_SUBSCRIPTION, r.useEffect(() => {
-            M && null != y && V && l.default.wait(() => {
+            M && null != y && F && l.default.wait(() => {
                 (0, u.fetchSubscriptionPlansForSKU)(y)
             })
-        }, [M, y, V]), {
+        }, [M, y, F]), {
             openModal: r.useCallback(() => {
                 a()(null != U, "No application"), a()(null != L, "No subscription plan"), a()(M, "Cannot purchase this unpublished plan");
                 let e = () => {
@@ -86,12 +86,12 @@ function(e, t, n) {
                         forcesTransitionToGuild: g
                     })
                 };
-                !j && F ? (0, A.confirmNoSharedServerSubscribeWarningModal)({
+                !j && V ? (0, A.confirmNoSharedServerSubscribeWarningModal)({
                     applicationName: U.name,
                     onConfirm: e,
                     onCancel: () => {}
                 }) : e()
-            }, [M, L, b, U, N, j, F, G, p, w, R, k, C, g]),
+            }, [M, L, b, U, N, j, V, G, p, w, R, k, C, g]),
             canOpenModal: K,
             cannotOpenReason: n
         }

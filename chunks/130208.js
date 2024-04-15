@@ -77,8 +77,8 @@ function(e, t, n) {
         let {
             className: t,
             url: n,
-            filename: s,
-            size: o,
+            fileName: s,
+            fileSize: o,
             onClick: d,
             onContextMenu: _,
             renderAdjacentContent: c
