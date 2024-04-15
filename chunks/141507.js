@@ -73,8 +73,8 @@ function(e, t, n) {
                 w = (0, s.useStateFromStores)([I.default], () => null !== G && G.type === l.EmojiTypes.GUILD ? I.default.getGuild(G.guildId) : null, [G]),
                 B = (0, s.useStateFromStores)([T.default], () => T.default.isFocused()),
                 k = (0, s.useStateFromStores)([o.default], () => o.default.useReducedMotion, []),
-                F = E.AnimateEmoji.useSetting(),
-                V = (0, h.useIsFavoriteEmoji)(v, g(G) ? G : null),
+                V = E.AnimateEmoji.useSetting(),
+                F = (0, h.useIsFavoriteEmoji)(v, g(G) ? G : null),
                 {
                     newlyAddedEmojis: x
                 } = (0, m.default)(v, M),
@@ -95,7 +95,7 @@ function(e, t, n) {
                 var j;
                 let e = null != G.id ? S.default.getEmojiURL({
                     id: G.id,
-                    animated: F && G.animated,
+                    animated: V && G.animated,
                     size: 28
                 }) : G.url;
                 t = "" === e ? (0, i.jsx)(a.Text, {
@@ -132,7 +132,7 @@ function(e, t, n) {
                 graphicSecondary: W,
                 titlePrimary: K,
                 titleSecondary: z,
-                isFavorite: V,
+                isFavorite: F,
                 emojiSubCategory: Y
             })
         })

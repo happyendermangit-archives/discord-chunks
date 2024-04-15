@@ -3,7 +3,7 @@ function(e, t, n) {
     n.r(t), n("47120"), n("653041");
     var i = n("735250"),
         r = n("470079"),
-        s = n("803997"),
+        s = n("120356"),
         a = n.n(s),
         o = n("954955"),
         l = n.n(o),
@@ -37,8 +37,8 @@ function(e, t, n) {
         w = n("111361"),
         B = n("624138"),
         k = n("543241"),
-        F = n("199257"),
-        V = n("636411"),
+        V = n("199257"),
+        F = n("636411"),
         x = n("380331"),
         H = n("170762"),
         Y = n("22363"),
@@ -206,19 +206,19 @@ function(e, t, n) {
             eB = b.default.getCurrentUser(),
             ek = (0, w.isPremium)(eB);
         r.useImperativeHandle(t, () => ({
-            onPickerOpen: e7
+            onPickerOpen: e6
         }));
         let {
-            location: eF
+            location: eV
         } = (0, f.useAnalyticsContext)(), {
-            page: eV,
+            page: eF,
             section: ex,
             object: eH,
             openPopoutType: eY
         } = eT, ej = r.useMemo(() => ({
-            ...eF,
+            ...eV,
             section: null != ex ? ex : q.AnalyticsSections.EMOJI_PICKER_POPOUT
-        }), [eF, ex]), {
+        }), [eV, ex]), {
             analyticsLocations: eW
         } = (0, A.default)(S.default.EMOJI_PICKER), {
             diversitySurrogate: eK
@@ -247,7 +247,7 @@ function(e, t, n) {
             emojiSpriteSize: C
         }), {
             newlyAddedEmojis: e3
-        } = (0, F.default)(eb, l), {
+        } = (0, V.default)(eb, l), {
             trackOnPickerOpen: e4
         } = (0, k.useTrackEmojiPickerOpened)({
             intention: l,
@@ -255,11 +255,11 @@ function(e, t, n) {
             analyticsObject: eH
         });
         (0, M.useMaybeFetchPremiumLikelihood)(y.default);
-        let e7 = r.useCallback(() => {
+        let e6 = r.useCallback(() => {
                 let e = e3.length > 0 ? e3[0].id : null;
                 (0, O.updateNewlyAddedLastSeen)(eb, e), e4()
             }, [e4, e3, eb]),
-            e6 = (0, j.useEmojiSelectHandler)({
+            e7 = (0, j.useEmojiSelectHandler)({
                 pickerIntention: l,
                 selectedChannel: u,
                 closePopout: I,
@@ -279,8 +279,8 @@ function(e, t, n) {
                         location: {
                             ...ej,
                             object: null != eH ? eH : q.AnalyticsObjects.EMOJI,
-                            ...null != eV && {
-                                page: eV
+                            ...null != eF && {
+                                page: eF
                             }
                         },
                         pickerIntention: l,
@@ -353,7 +353,7 @@ function(e, t, n) {
             onClose: () => eD(null),
             guildId: eL.guildId,
             emojiId: eL.emojiId
-        }) : eG && !ek && (o = (0, i.jsx)(V.default, {
+        }) : eG && !ek && (o = (0, i.jsx)(F.default, {
             onDismiss: () => ew(!1)
         }));
         let ts = (0, i.jsx)(Y.default, {
@@ -420,7 +420,7 @@ function(e, t, n) {
                                 gridWidth: eJ,
                                 isUsingKeyboardNavigation: tn,
                                 onEmojiSelect: (e, t) => {
-                                    e6(e, {
+                                    e7(e, {
                                         ...t,
                                         isBurst: eG
                                     })

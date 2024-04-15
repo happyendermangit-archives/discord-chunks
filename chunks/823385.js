@@ -44,8 +44,8 @@ function(e, t, n) {
         w = !1,
         B = null,
         k = [],
-        F = null,
-        V = 0,
+        V = null,
+        F = 0,
         x = [],
         H = [];
 
@@ -67,7 +67,7 @@ function(e, t, n) {
         null != s && a.add("guild:".concat(s)), i = null != i ? i : new d.default(K, U, null != r ? 100 : 5, {
             frecencyBoosters: !0,
             blacklist: a
-        }), F = null, V = n.length, B = r, i.search(n)
+        }), V = null, F = n.length, B = r, i.search(n)
     }
 
     function K(e, t) {
@@ -179,7 +179,7 @@ function(e, t, n) {
                 default:
                     k = e
             }
-            if (t !== F) F = t, V = Math.max(t.length, V), b = (0, d.findNextSelectedResult)(d.FindResultDirections.DOWN, -1, k);
+            if (t !== V) V = t, F = Math.max(t.length, F), b = (0, d.findNextSelectedResult)(d.FindResultDirections.DOWN, -1, k);
             else {
                 let e = k[b];
                 null != e && e.type === d.AutocompleterResultTypes.HEADER && (b = (0, d.findNextSelectedResult)(d.FindResultDirections.DOWN, b, k))
@@ -189,7 +189,7 @@ function(e, t, n) {
     }
 
     function z() {
-        F = null, V = 0, x = [], null != i && (i.destroy(), i = null)
+        V = null, F = 0, x = [], null != i && (i.destroy(), i = null)
     }
     class X extends(r = o.default.PersistedStore) {
         initialize(e) {
@@ -228,7 +228,7 @@ function(e, t, n) {
                 results: k,
                 selectedIndex: b,
                 seenTutorial: G,
-                maxQueryLength: V
+                maxQueryLength: F
             }
         }
     }

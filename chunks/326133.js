@@ -3,7 +3,7 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("803997"),
+        s = n("120356"),
         a = n.n(s),
         o = n("924826"),
         l = n("442837"),
@@ -51,7 +51,7 @@ function(e, t, n) {
         if (r.useEffect(() => {
                 L(y.isVisible)
             }, [L, y.isVisible]), !y.isVisible || null == y.query || void 0 === B) return null;
-        let F = null !== (s = y.query.typeInfo.renderResults({
+        let V = null !== (s = y.query.typeInfo.renderResults({
             results: y.query.results,
             selectedIndex: y.selectedIndex,
             channel: R,
@@ -61,8 +61,8 @@ function(e, t, n) {
             onHover: e => P.onResultHover(e),
             onClick: e => P.onResultClick(e)
         })) && void 0 !== s ? s : null;
-        if (null == F) return null;
-        let V = {
+        if (null == V) return null;
+        let F = {
                 [m.autocompleteAttached]: null == B,
                 [m.autocompletePopout]: null != B,
                 [m.bottom]: null == B && "bottom" === e.position
@@ -71,7 +71,7 @@ function(e, t, n) {
         null != B && (x = (null === (N = C.autocomplete) || void 0 === N ? void 0 : N.small) ? 200 : (null === (O = y.query) || void 0 === O ? void 0 : O.type) === S.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), x = Math.min(window.innerHeight - 175, x);
         let H = (0, i.jsx)(c.default, {
             id: D,
-            className: a()(m.autocomplete, V),
+            className: a()(m.autocomplete, F),
             innerClassName: m.autocompleteInner,
             onMouseDown: e => e.preventDefault(),
             children: (0, i.jsx)(o.ListNavigatorProvider, {
@@ -95,7 +95,7 @@ function(e, t, n) {
                             },
                             role: "listbox",
                             "aria-labelledby": (0, c.getAutocompleteTitleId)(D),
-                            children: F
+                            children: V
                         })
                     }
                 })

@@ -3,7 +3,7 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("803997"),
+        s = n("120356"),
         a = n.n(s),
         o = n("780384"),
         l = n("481060"),
@@ -37,7 +37,7 @@ function(e, t, n) {
             emojiDescriptor: b,
             pickerIntention: G,
             analyticsLocation: w
-        } = e, B = (0, u.default)(), [k, F] = r.useState(!1), V = () => {
+        } = e, B = (0, u.default)(), [k, V] = r.useState(!1), F = () => {
             (0, p.trackPremiumSettingsPaneOpened)(U), (0, E.navigateToPremiumMarketingPage)(), y()
         }, x = (0, o.isThemeLight)(B) ? n("537381") : n("341048"), H = (0, S.usePremiumTrialOffer)(), Y = (0, f.usePremiumDiscountOffer)(), j = null != H || null != Y, {
             isLoading: W,
@@ -84,9 +84,9 @@ function(e, t, n) {
                     discountOffer: Y,
                     children: q ? D.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_TIER_UPSELL.format({
                         planName: (0, O.getTierDisplayName)(L.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
-                        onClick: V
+                        onClick: F
                     }) : D.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL.format({
-                        onClick: V
+                        onClick: F
                     })
                 }) : (0, i.jsxs)(i.Fragment, {
                     children: [(0, i.jsx)("img", {
@@ -100,9 +100,9 @@ function(e, t, n) {
                         className: v.premiumPromoDescription,
                         children: q ? D.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_TIER_UPSELL.format({
                             planName: (0, O.getTierDisplayName)(L.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
-                            onClick: V
+                            onClick: F
                         }) : D.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL.format({
-                            onClick: V
+                            onClick: F
                         })
                     })]
                 }), !j && (0, i.jsx)(h.default, {
@@ -115,10 +115,10 @@ function(e, t, n) {
                     size: l.Button.Sizes.SMALL,
                     color: l.Button.Colors.GREEN,
                     onClick: () => {
-                        F(!0)
+                        V(!0)
                     },
                     onSubscribeModalClose: e => {
-                        F(!1), e && P()
+                        V(!1), e && P()
                     },
                     buttonText: (() => {
                         if (j) return q ? D.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : D.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT;

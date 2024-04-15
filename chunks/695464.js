@@ -3,7 +3,7 @@ function(e, t, n) {
     n.r(t), n("47120"), n("653041");
     var i = n("735250"),
         r = n("470079"),
-        s = n("803997"),
+        s = n("120356"),
         a = n.n(s),
         o = n("147479"),
         l = n("68389");
@@ -52,11 +52,11 @@ function(e, t, n) {
                 let t = "function" == typeof m ? m(e) : m;
                 return null == t ? 0 : t
             }, [m]),
-            F = r.useCallback(e => {
+            V = r.useCallback(e => {
                 let t = "function" == typeof A ? A(e) : A;
                 return null == t ? 0 : t
             }, [A]),
-            V = r.useRef([]),
+            F = r.useRef([]),
             x = r.useRef([]),
             {
                 totalHeight: H,
@@ -91,15 +91,15 @@ function(e, t, n) {
                             offset: s
                         }, i = n, e++
                     }
-                    i += k(a) + F(a), s[a].offset.bottom = i
+                    i += k(a) + V(a), s[a].offset.bottom = i
                 }
                 return {
                     totalHeight: i += u[2],
                     rowDescriptors: r,
                     sectionDescriptors: s
                 }
-            }, [w, k, B, F, u, T, f, G]);
-        V.current = j, x.current = Y;
+            }, [w, k, B, V, u, T, f, G]);
+        F.current = j, x.current = Y;
         let W = r.useCallback(() => {
             var e;
             let t = null === (e = P.current) || void 0 === e ? void 0 : e.getScrollerNode();
@@ -184,7 +184,7 @@ function(e, t, n) {
                         animate: n = !1,
                         offset: i = 0
                     } = t,
-                    r = V.current[e];
+                    r = F.current[e];
                 null != r && window.requestAnimationFrame(() => {
                     var t;
                     null === (t = P.current) || void 0 === t || t.scrollTo({
@@ -197,7 +197,7 @@ function(e, t, n) {
                 height: M,
                 totalHeight: H
             }),
-            getSectionDescriptors: () => V.current,
+            getSectionDescriptors: () => F.current,
             getRowDescriptors: () => x.current,
             getScrollerNode: () => {
                 var e;
@@ -235,7 +235,7 @@ function(e, t, n) {
                 if (0 === l) continue;
                 let u = B(r),
                     I = k(r),
-                    T = F(r);
+                    T = V(r);
                 if (o <= D) n = o;
                 else if (o > D && a < e) {
                     t = s;
@@ -264,7 +264,7 @@ function(e, t, n) {
                 visibleItems: i,
                 listOffset: n
             }
-        }, [w, k, B, F, u, d, _, E, c, D, j, O, I, G, M]), Q = r.useMemo(() => {
+        }, [w, k, B, V, u, d, _, E, c, D, j, O, I, G, M]), Q = r.useMemo(() => {
             var e, t, n;
             return {
                 top: X,

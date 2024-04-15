@@ -13,7 +13,7 @@ function(e, t, n) {
     }), n("653041");
     var i = n("735250"),
         r = n("470079"),
-        s = n("803997"),
+        s = n("120356"),
         a = n.n(s),
         o = n("692547"),
         l = n("780384"),
@@ -93,7 +93,7 @@ function(e, t, n) {
         }));
         let B = (0, u.useToken)(o.default.colors.INTERACTIVE_MUTED).hex(),
             k = (0, u.useToken)(o.default.colors.INTERACTIVE_ACTIVE).hex(),
-            F = S.verified ? (0, i.jsx)(f.default, {
+            V = S.verified ? (0, i.jsx)(f.default, {
                 className: R.connectedAccountVerifiedIcon,
                 color: null != s ? s : B,
                 forcedIconColor: k,
@@ -130,7 +130,7 @@ function(e, t, n) {
                                     className: R.connectedAccountNameText,
                                     children: S.name
                                 })
-                            }), F]
+                            }), V]
                         }), d]
                     }), null != P ? (0, i.jsx)(u.Text, {
                         variant: "text-xs/normal",

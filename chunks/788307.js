@@ -7,7 +7,7 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("803997"),
+        s = n("120356"),
         a = n.n(s),
         o = n("844099"),
         l = n("442837"),
@@ -108,8 +108,8 @@ function(e, t, n) {
             location: "ActivityStatus"
         }, {
             autoTrackExposure: !1
-        }), B = (0, E.useColorValue)(C.Color.BRAND_345), k = null, F = w && null != b && N.default.can(C.Permissions.CONNECT, G);
-        F ? k = (0, i.jsx)(S.default, {
+        }), B = (0, E.useColorValue)(C.Color.BRAND_345), k = null, V = w && null != b && N.default.can(C.Permissions.CONNECT, G);
+        V ? k = (0, i.jsx)(S.default, {
             className: u,
             hangStatusActivity: b
         }) : null != P && null != P.emoji && !A && (k = (0, i.jsx)(D, {
@@ -118,9 +118,9 @@ function(e, t, n) {
             hideTooltip: I,
             className: u
         }));
-        let V = (0, l.useStateFromStores)([O.default], () => null != M ? O.default.getStatus(M.id) : null),
-            x = null !== V && [C.StatusTypes.OFFLINE, C.StatusTypes.INVISIBLE].includes(V),
-            H = null === (t = (0, c.default)(n, r, void 0, F)) || void 0 === t ? void 0 : t.activityText,
+        let F = (0, l.useStateFromStores)([O.default], () => null != M ? O.default.getStatus(M.id) : null),
+            x = null !== F && [C.StatusTypes.OFFLINE, C.StatusTypes.INVISIBLE].includes(F),
+            H = null === (t = (0, c.default)(n, r, void 0, V)) || void 0 === t ? void 0 : t.activityText,
             Y = null != H && H.length > 0;
         return x || null == k && !Y ? null : (0, i.jsxs)("div", {
             className: s,
@@ -132,7 +132,7 @@ function(e, t, n) {
                 height: L,
                 width: L,
                 color: B.hex
-            }), null != n && n.some(e => (0, _.default)(e, F)) ? (0, i.jsx)(R.default, {
+            }), null != n && n.some(e => (0, _.default)(e, V)) ? (0, i.jsx)(R.default, {
                 width: 16,
                 height: 16,
                 className: g.icon

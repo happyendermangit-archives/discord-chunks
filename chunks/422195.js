@@ -3,7 +3,7 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("803997"),
+        s = n("120356"),
         a = n.n(s),
         o = n("477690"),
         l = n("481060"),
@@ -92,17 +92,17 @@ function(e, t, n) {
                     w = n[s + 1],
                     B = null != w && G.type === O.StickerCategoryTypes.GUILD && w.type !== O.StickerCategoryTypes.GUILD,
                     k = G.type === O.StickerCategoryTypes.PACK,
-                    F = "",
-                    V = null;
+                    V = "",
+                    F = null;
                 if (G.type === O.StickerCategoryTypes.GUILD || G.type === O.StickerCategoryTypes.EMPTY_GUILD_UPSELL) {
                     let e = I.default.getGuild(G.id);
-                    null != e && (c = e.id, F = e.name, V = (0, i.jsx)(d.default, {
+                    null != e && (c = e.id, V = e.name, F = (0, i.jsx)(d.default, {
                         guild: e,
                         isSelected: b
                     }))
                 } else if (k) {
                     let e = N.default.getStickerPack(G.id);
-                    null != e && (F = e.name, V = (0, i.jsx)(R.default, {
+                    null != e && (V = e.name, F = (0, i.jsx)(R.default, {
                         disableAnimation: !b || S,
                         size: M,
                         sticker: (0, p.getStickerPackPreviewSticker)(e)
@@ -111,7 +111,7 @@ function(e, t, n) {
                 return (0, i.jsxs)(r.Fragment, {
                     children: [(0, i.jsx)(l.Tooltip, {
                         position: "right",
-                        text: F,
+                        text: V,
                         tooltipContentClassName: D.__invalid_tooltip,
                         children: e => (0, i.jsx)("div", {
                             role: "listitem",
@@ -119,7 +119,7 @@ function(e, t, n) {
                             "aria-posinset": s,
                             children: (0, i.jsx)(l.Clickable, {
                                 ...e,
-                                "aria-label": F,
+                                "aria-label": V,
                                 className: a()(D.stickerCategory, {
                                     [D.firstPartyCategory]: k,
                                     [D.firstPartyCategorySelected]: !S && b && k
@@ -132,7 +132,7 @@ function(e, t, n) {
                                         guild_id: c
                                     }), o()
                                 },
-                                children: V
+                                children: F
                             })
                         })
                     }), B ? (0, i.jsx)("hr", {

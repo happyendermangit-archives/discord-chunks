@@ -3,7 +3,7 @@ function(e, t, n) {
     n.r(t), n("47120"), n("411104");
     var i = n("735250"),
         r = n("470079"),
-        s = n("803997"),
+        s = n("120356"),
         a = n.n(s),
         o = n("836560"),
         l = n("512722"),
@@ -37,8 +37,8 @@ function(e, t, n) {
         w = n("378233"),
         B = n("665906"),
         k = n("695346"),
-        F = n("271383"),
-        V = n("496675"),
+        V = n("271383"),
+        F = n("496675"),
         x = n("944486"),
         H = n("398327"),
         Y = n("117530"),
@@ -82,8 +82,8 @@ function(e, t, n) {
             renderApplicationCommandIcon: ew,
             pendingReply: eB,
             onChange: ek,
-            onResize: eF,
-            onBlur: eV,
+            onResize: eV,
+            onBlur: eF,
             onFocus: ex,
             onKeyDown: eH,
             onSubmit: eY,
@@ -102,11 +102,11 @@ function(e, t, n) {
             children: e2,
             disableThemedBackground: e3 = !1,
             emojiPickerCloseOnModalOuterClick: e4,
-            parentModalKey: e7
+            parentModalKey: e6
         } = e;
         u()(null != eP, "chat input type must be set");
         let {
-            analyticsLocations: e6
+            analyticsLocations: e7
         } = (0, A.default)(S.default.CHANNEL_TEXT_AREA), e5 = function(e) {
             let t = r.useRef(null);
             if (null != e && "function" == typeof e) throw Error("Only Ref objects are supported");
@@ -132,15 +132,15 @@ function(e, t, n) {
         } = function(e, t, n, i) {
             let r = e.getGuildId(),
                 s = (0, E.useStateFromStores)([y.default], () => null != r && y.default.isLurking(r), [r]),
-                a = (0, E.useStateFromStores)([F.default, j.default], () => {
+                a = (0, E.useStateFromStores)([V.default, j.default], () => {
                     var e, t;
                     let n = j.default.getCurrentUser();
-                    return null !== (t = null != r && null != n ? null === (e = F.default.getMember(r, n.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t
+                    return null !== (t = null != r && null != n ? null === (e = V.default.getMember(r, n.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t
                 }),
-                o = (0, E.useStateFromStoresObject)([V.default], () => {
+                o = (0, E.useStateFromStoresObject)([F.default], () => {
                     var r, s;
                     let o = e.isPrivate(),
-                        l = V.default.computePermissions(e),
+                        l = F.default.computePermissions(e),
                         u = c.has(l, es.Permissions.CREATE_PUBLIC_THREADS) || c.has(l, es.Permissions.CREATE_PRIVATE_THREADS),
                         d = (!(null === (r = t.permissions) || void 0 === r ? void 0 : r.requireCreateTherads) || u) && (!(null === (s = t.permissions) || void 0 === s ? void 0 : s.requireSendMessages) || c.has(l, es.Permissions.SEND_MESSAGES)),
                         _ = d && c.has(l, es.Permissions.ATTACH_FILES),
@@ -336,7 +336,7 @@ function(e, t, n) {
                         n(null != t ? t : 0), null == e || e(t)
                     }, [e])
                 }
-            }(eF),
+            }(eV),
             {
                 handleTab: tP,
                 handleEnter: tU,
@@ -384,18 +384,18 @@ function(e, t, n) {
                     handleOuterClick: o
                 }
             }(eP, tS, e9),
-            tF = h.AppLauncherDesktopExperiment.useExperiment({
+            tV = h.AppLauncherDesktopExperiment.useExperiment({
                 location: "chat_input"
             }, {
                 autoTrackExposure: !1
             }).enabled,
-            tV = (0, E.useStateFromStores)([m.default], () => m.default.shouldShowPopup(), []);
+            tF = (0, E.useStateFromStores)([m.default], () => m.default.shouldShowPopup(), []);
         (0, X.useHereMentionCallback)(tS, ey.guild_id, ey.id);
         let tx = null != eB,
             tH = ta && !((tr || ts) && tu) || th && (null === (l = eP.submit) || void 0 === l ? void 0 : l.useDisabledStylesOnSubmit),
             tY = null,
             tj = null;
-        null != tn ? tY = null == ew ? void 0 : ew(tn, ti, el.attachButton) : (!ta || tl) && (tY = null == eb ? void 0 : eb(tx, el.attachButton), tF && (tj = null == eG ? void 0 : eG()));
+        null != tn ? tY = null == ew ? void 0 : ew(tn, ti, el.attachButton) : (!ta || tl) && (tY = null == eb ? void 0 : eb(tx, el.attachButton), tV && (tj = null == eG ? void 0 : eG()));
         let tW = t_ && null != eO && !ta && eP.showCharacterCount && null == tn,
             tK = t_ && !__OVERLAY__ && null != eO && null == tn,
             tz = function(e, t, n, i) {
@@ -411,7 +411,7 @@ function(e, t, n) {
         return (0, i.jsx)(g.EventEmitterProvider, {
             value: tS,
             children: (0, i.jsxs)(A.AnalyticsLocationProvider, {
-                value: e6,
+                value: e7,
                 children: [tK && td ? (0, i.jsx)(er.default, {
                     editorRef: e9,
                     options: eP.markdown,
@@ -482,7 +482,7 @@ function(e, t, n) {
                                     "aria-describedby": eJ,
                                     onChange: ek,
                                     onResize: ty,
-                                    onBlur: eV,
+                                    onBlur: eF,
                                     onFocus: ex,
                                     onKeyDown: eH,
                                     onSubmit: tm,
@@ -561,15 +561,15 @@ function(e, t, n) {
                     onSelectSound: tD,
                     channel: ey,
                     closeOnModalOuterClick: e4,
-                    parentModalKey: e7,
+                    parentModalKey: e6,
                     position: "top",
                     align: "right",
                     positionLayerClassName: el.expressionPickerPositionLayer
-                }), tV ? (0, i.jsx)(N.default, {
+                }), tF ? (0, i.jsx)(N.default, {
                     positionTargetRef: e5,
                     channel: ey,
                     closeOnModalOuterClick: e4,
-                    parentModalKey: e7
+                    parentModalKey: e6
                 }) : null]
             })
         })

@@ -7,7 +7,7 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("803997"),
+        s = n("120356"),
         a = n.n(s),
         o = n("442837"),
         l = n("481060"),
@@ -86,7 +86,7 @@ function(e, t, n) {
         }), G = (0, o.useStateFromStores)([N.default], () => s ? N.default.getAnyStreamForUser(n.id) : null), w = b && R.default.can(v.Permissions.CONNECT, U), B = (null == t ? void 0 : t.type) === v.ActivityTypes.HANG_STATUS && w ? U : null, k = (0, o.useStateFromStores)([p.default, C.default, O.default], () => {
             var e, i;
             return (0, u.default)(t, v.ActivityFlags.EMBEDDED) ? p.default.getGuild(null === (e = O.default.getChannel(null === (i = C.default.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != B ? p.default.getGuild(B.getGuildId()) : null
-        }), F = (0, o.useStateFromStores)([p.default], () => null != G ? p.default.getGuild(G.guildId) : null), V = (0, o.useStateFromStores)([c.default], () => {
+        }), V = (0, o.useStateFromStores)([p.default], () => null != G ? p.default.getGuild(G.guildId) : null), F = (0, o.useStateFromStores)([c.default], () => {
             if (null != t) return null != t.application_id ? c.default.getApplication(t.application_id) : c.default.getApplicationByName(t.name);
             return null
         }), x = (0, E.default)(), H = (0, A.default)(n), Y = x && null != t && H;
@@ -100,9 +100,9 @@ function(e, t, n) {
             ...D,
             activity: t,
             user: n,
-            application: V,
+            application: F,
             hideHeader: d,
-            activityGuild: null != k ? k : F,
+            activityGuild: null != k ? k : V,
             showReactions: Y,
             renderActions: l ? () => (0, i.jsxs)("div", {
                 className: a()(Y && y.actionsWrapper),
@@ -134,14 +134,14 @@ function(e, t, n) {
                             reaction: r,
                             user: n,
                             activity: t,
-                            application: V,
+                            application: F,
                             altText: (0, S.getActivityAltText)(n, t),
                             stream: G
                         }), i === T.AtomicReactorInteractionTypes.ReplySubmit && null != s && (0, f.sendReplyToActivity)({
                             reply: s,
                             user: n,
                             activity: t,
-                            application: V,
+                            application: F,
                             altText: (0, S.getActivityAltText)(n, t),
                             stream: G
                         })

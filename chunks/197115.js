@@ -3,7 +3,7 @@ function(e, t, n) {
     n.r(t);
     var i = n("735250");
     n("470079");
-    var r = n("803997"),
+    var r = n("120356"),
         s = n.n(r),
         a = n("442837"),
         o = n("481060"),
@@ -42,8 +42,8 @@ function(e, t, n) {
             premiumModalAnalyticsLocation: w,
             showIcon: B = !0,
             disableShine: k,
-            applicationId: F,
-            giftMessage: V,
+            applicationId: V,
+            giftMessage: F,
             overrideDisabledButtonText: x,
             shinyButtonClassName: H,
             ...Y
@@ -136,8 +136,8 @@ function(e, t, n) {
                 onSubscribeModalClose: G,
                 analyticsLocations: z,
                 premiumModalAnalyticsLocation: w,
-                applicationId: F,
-                giftMessage: V
+                applicationId: V,
+                giftMessage: F
             })
         };
         if (M) return (0, i.jsxs)(o.Button, {

@@ -47,8 +47,8 @@ function(e, t, n) {
         w = n("761529"),
         B = n("308570"),
         k = n("632184"),
-        F = n("414896"),
-        V = n("398856"),
+        V = n("414896"),
+        F = n("398856"),
         x = n("170039"),
         H = n("178695"),
         Y = n("548420"),
@@ -167,14 +167,14 @@ function(e, t, n) {
                 else return x.default;
             case X.ChannelTypes.GUILD_VOICE:
                 if ($) return m.default;
-                if (e.isNSFW()) return V.default;
+                if (e.isNSFW()) return F.default;
                 if (Z) return j.default;
                 if (ee) {
                     if ((0, K.default)(e)) return g.default;
-                    return q ? c.default : F.default
+                    return q ? c.default : V.default
                 }
                 if (Q) return g.default;
-                if ((0, K.default)(e)) return q ? c.default : F.default;
+                if ((0, K.default)(e)) return q ? c.default : V.default;
                 else return q ? _.default : k.default;
             case X.ChannelTypes.GUILD_DIRECTORY:
                 return T.default;

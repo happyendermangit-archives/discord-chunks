@@ -17,7 +17,7 @@ function(e, t, n) {
             return b
         },
         getObscuredMediaForMessage: function() {
-            return F
+            return V
         },
         getShouldObscureForSetting: function() {
             return G
@@ -32,7 +32,7 @@ function(e, t, n) {
             return k
         },
         isPendingScan: function() {
-            return V
+            return F
         },
         resolveSettingWithDefaults: function() {
             return y
@@ -188,7 +188,7 @@ function(e, t, n) {
         }
     }
 
-    function F(e) {
+    function V(e) {
         return w(e) ? {
             obscuredAttachments: e.attachments.filter(e => k({
                 type: 0,
@@ -204,7 +204,7 @@ function(e, t, n) {
         }
     }
 
-    function V(e) {
+    function F(e) {
         return !E.default.get("explicit_media_redaction_ignore_pending_scan") && null == e
     }
 

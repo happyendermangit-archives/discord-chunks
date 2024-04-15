@@ -7,7 +7,7 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("803997"),
+        s = n("120356"),
         a = n.n(s),
         o = n("442837"),
         l = n("481060"),
@@ -48,8 +48,8 @@ function(e, t, n) {
             G = (0, _.default)(D, g, L),
             [w, B] = r.useState(new Set),
             k = (0, o.useStateFromStores)([f.default], () => f.default.getUserProfile(g)),
-            F = null !== (t = null == k ? void 0 : k.connectedAccounts) && void 0 !== t ? t : [],
-            V = null !== (n = null == k ? void 0 : k.applicationRoleConnections) && void 0 !== n ? n : [],
+            V = null !== (t = null == k ? void 0 : k.connectedAccounts) && void 0 !== t ? t : [],
+            F = null !== (n = null == k ? void 0 : k.applicationRoleConnections) && void 0 !== n ? n : [],
             x = (0, o.useStateFromStores)([E.default], () => E.default.hidePersonalInformation),
             H = (0, o.useStateFromStores)([c.default], () => c.default.locale);
         if (r.useEffect(() => {
@@ -64,7 +64,7 @@ function(e, t, n) {
                 })
             }, [null == D ? void 0 : D.id, null == G ? void 0 : G.id]), x || null == G) return null;
         let Y = Array.from(w).map(e => {
-            let t = F.find(t => t.type === e);
+            let t = V.find(t => t.type === e);
             return null == t ? null : (0, i.jsx)(S.ConnectedUserAccount, {
                 connectedAccount: t,
                 theme: v,
@@ -106,14 +106,14 @@ function(e, t, n) {
                     })]
                 })]
             })]
-        })), V.length > 0 && (C = (0, i.jsxs)(i.Fragment, {
+        })), F.length > 0 && (C = (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(l.Heading, {
                 variant: "eyebrow",
                 className: R.title,
                 children: O.default.Messages.APPS
             }), (0, i.jsx)("div", {
                 className: a()(p.connectionsContainer, y),
-                children: V.map(e => (0, i.jsx)(S.ConnectedApplicationUserRoleAccount, {
+                children: F.map(e => (0, i.jsx)(S.ConnectedApplicationUserRoleAccount, {
                     applicationRoleConnection: e,
                     locale: H
                 }, e.application.id))

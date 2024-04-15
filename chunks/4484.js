@@ -3,7 +3,7 @@ function(e, t, n) {
     n.r(t), n("47120"), n("653041");
     var i = n("735250"),
         r = n("470079"),
-        s = n("803997"),
+        s = n("120356"),
         a = n.n(s),
         o = n("911969"),
         l = n("367907"),
@@ -41,8 +41,8 @@ function(e, t, n) {
             placeholder: w,
             required: B,
             textAreaPaddingClassName: k,
-            onChange: F,
-            onPaste: V,
+            onChange: V,
+            onPaste: F,
             onResize: x,
             onFocus: H,
             onBlur: Y,
@@ -176,13 +176,13 @@ function(e, t, n) {
         }), {
             handlePaste: eg,
             handleGlobalPaste: eL
-        } = (0, p.default)(eN, eS, V), eD = r.useCallback(e => {
+        } = (0, p.default)(eN, eS, F), eD = r.useCallback(e => {
             null == Q || Q()
         }, [Q]), ev = r.useCallback(e => {
-            e !== eI.current ? ef.current && (null == F || F(null, (0, f.toTextValue)(e, {
+            e !== eI.current ? ef.current && (null == V || V(null, (0, f.toTextValue)(e, {
                 mode: "raw"
             }), e)) : ef.current && Q()
-        }, [Q, F]);
+        }, [Q, V]);
         r.useLayoutEffect(() => {
             eT.current && (eI.current = n, eA(eN, "parent", {
                 value: n

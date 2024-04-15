@@ -41,8 +41,8 @@ function(e, t, n) {
         w = n("607744"),
         B = n("341165"),
         k = n("496675"),
-        F = n("594174"),
-        V = n("626135"),
+        V = n("594174"),
+        F = n("626135"),
         x = n("70956"),
         H = n("573261"),
         Y = n("954824"),
@@ -107,7 +107,7 @@ function(e, t, n) {
                         channelId: l
                     }), d === Q.InviteTargetTypes.EMBEDDED_APPLICATION && null != _ && ((0, D.transitionTo)(K.Routes.CHANNEL(null != t ? t : K.ME, l)), (0, I.default)(l, _, s, null == r ? void 0 : r.intent))
                 };
-                (0, h.shouldShowMembershipVerificationGate)(t, [G.default, w.default, F.default, b.default]) ? (0, A.openMemberVerificationModal)(t, a) : a()
+                (0, h.shouldShowMembershipVerificationGate)(t, [G.default, w.default, V.default, b.default]) ? (0, A.openMemberVerificationModal)(t, a) : a()
             })
         }) : (0, E.isActivityInTextSupportedForChannel)(o) && d === Q.InviteTargetTypes.EMBEDDED_APPLICATION && null != _ && ((0, D.transitionTo)(K.Routes.CHANNEL(null != t ? t : K.ME, l)), (0, I.default)(l, _, s, null == r ? void 0 : r.intent)), (function(e, t) {
             let {
@@ -127,7 +127,7 @@ function(e, t, n) {
             P.default.addConditionalChangeListener(() => {
                 var i;
                 let r = P.default.getChannel(e),
-                    s = F.default.getCurrentUser();
+                    s = V.default.getCurrentUser();
                 return null == r || null == s || (!r.nsfw || !!s.nsfwAllowed) && ((null == t ? void 0 : t.guildScheduledEvent) != null ? (! function(e) {
                     let {
                         guildScheduledEvent: t,
@@ -325,7 +325,7 @@ function(e, t, n) {
                     ...i,
                     invite_guild_scheduled_event_id: r.guildScheduledEventId
                 }),
-                f = F.default.getCurrentUser();
+                f = V.default.getCurrentUser();
             return null !== (t = null == f ? void 0 : f.hasFlag(K.UserFlags.QUARANTINED)) && void 0 !== t && t ? ((0, g.default)(), new Promise((e, t) => t(Error()))) : (d.default.dispatch({
                 type: "INVITE_ACCEPT",
                 code: E
@@ -451,7 +451,7 @@ function(e, t, n) {
                     attemptId: t,
                     event: null == E ? void 0 : E.guildScheduledEventId,
                     iosFallbackLink: "https://discord.com/api/download/mobile?invite_code=".concat(I)
-                }), V.default.track(K.AnalyticEvents.DEEP_LINK_CLICKED, {
+                }), F.default.track(K.AnalyticEvents.DEEP_LINK_CLICKED, {
                     fingerprint: (0, l.maybeExtractId)(n),
                     attempt_id: t,
                     source: Z,

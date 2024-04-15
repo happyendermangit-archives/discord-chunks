@@ -7,7 +7,7 @@ function(e, t, n) {
     }), n("724458"), n("411104");
     var i, r, s, a = n("735250"),
         o = n("470079"),
-        l = n("803997"),
+        l = n("120356"),
         u = n.n(l),
         d = n("392711"),
         _ = n.n(d),
@@ -135,7 +135,7 @@ function(e, t, n) {
             } = this.props, B = 0;
             S ? null != s && (null != l ? B = s[l] : null != o && (B = s[o])) : B = this.scaleValue(t);
             let k = "".concat(B, "%"),
-                F = null != s && null != r ? s.map((e, t) => {
+                V = null != s && null != r ? s.map((e, t) => {
                     let n = r[t],
                         i = null != R && R === n,
                         s = this.renderMark(n);
@@ -158,7 +158,7 @@ function(e, t, n) {
                         })
                     }, t)
                 }) : null,
-                V = null != g ? g(t) : "".concat(B.toFixed(0), "%"),
+                F = null != g ? g(t) : "".concat(B.toFixed(0), "%"),
                 x = null !== (e = null == D ? void 0 : D(t)) && void 0 !== e ? e : void 0;
             return (0, a.jsx)(E.FocusRing, {
                 focusTarget: this.containerRef,
@@ -187,7 +187,7 @@ function(e, t, n) {
                     ref: this.containerRef,
                     children: [(0, a.jsx)("div", {
                         className: f.track,
-                        children: F
+                        children: V
                     }), (0, a.jsx)("div", {
                         className: u()(f.bar, v),
                         style: m,
@@ -203,7 +203,7 @@ function(e, t, n) {
                         children: (0, a.jsx)(I.Tooltip, {
                             color: I.Tooltip.Colors.GREY,
                             hideOnClick: !1,
-                            text: p || S ? null : V,
+                            text: p || S ? null : F,
                             forceOpen: n || i && T.default.keyboardModeEnabled,
                             children: e => (0, a.jsx)("div", {
                                 ...e,
