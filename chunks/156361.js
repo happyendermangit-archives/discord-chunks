@@ -357,7 +357,7 @@ function(e, t, n) {
             })
         }
         constructor(...e) {
-            super(...e), y(this, "layoutClass", o()(M.autocompleteRowVertical, M.autocompleteRowVerticalSmall, this.props.isLocked ? M.premiumEmoji : null))
+            super(...e), y(this, "layoutClass", o()(M.autocompleteRowVertical, M.autocompleteRowVerticalSmall))
         }
     }), y(w, "GIFIntegration", class e extends G {
         renderContent() {

@@ -1362,6 +1362,7 @@ function(_, E, e) {
             ACTIVITY_SHELF: "/activities/shelf",
             ACTIVITY_CHANNEL_LAUNCH: (_, E) => "/activities/".concat(_, "/").concat(E),
             ACTIVITY_TEST_MODE: _ => "/activities/".concat(_, "/test-mode"),
+            ACTIVITY_LEAVE: (_, E, e) => "/applications/".concat(_, "/activities/").concat(E, "/instances/").concat(e, "/leave"),
             APPLICATION_UPLOAD_ATTACHMENT: _ => "/applications/".concat(_, "/attachment"),
             CHANNEL_THREADS: _ => "/channels/".concat(_, "/threads"),
             CHANNEL_MESSAGE_THREADS: (_, E) => "/channels/".concat(_, "/messages/").concat(E, "/threads"),
