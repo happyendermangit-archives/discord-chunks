@@ -19,7 +19,7 @@ function(e, t, n) {
         l = n("692547"),
         u = n("622535"),
         d = n("298433"),
-        _ = n("420166"),
+        _ = n("434559"),
         c = n("481060"),
         E = n("812206"),
         I = n("566454"),
@@ -93,7 +93,7 @@ function(e, t, n) {
                     children: a
                 }), t.isNew && (0, i.jsxs)("div", {
                     className: C.newIcon,
-                    children: [(0, i.jsx)(_.NewUserIcon, {
+                    children: [(0, i.jsx)(_.NewUserLargeIcon, {
                         height: 12,
                         width: 12,
                         color: l.default.colors.STATUS_POSITIVE

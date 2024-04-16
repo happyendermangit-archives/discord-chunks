@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
-        NewUserIcon: function() {
+        NewUserLargeIcon: function() {
             return a
         }
     });

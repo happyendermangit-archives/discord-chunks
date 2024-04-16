@@ -15,7 +15,7 @@ function(e, t, n) {
     function u(e) {
         let t = (0, r.useStateFromStores)([s.default], () => null != e ? s.default.get(e) : null),
             n = null != t && t.productLine !== l.SKUProductLines.COLLECTIBLES,
-            [u, d] = (0, r.useStateFromStoresArray)([o.default], () => [o.default.isFetching, o.default.getProduct(e)]);
+            [u, d] = (0, r.useStateFromStoresArray)([o.default], () => [o.default.isFetchingProduct(e), o.default.getProduct(e)]);
         return (0, i.useEffect)(() => {
             null != e && null == d && !n && !u && (0, a.fetchCollectiblesProduct)(e)
         }, [e, d, n, u]), {
