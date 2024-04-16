@@ -7,6 +7,9 @@ function(e, t, n) {
         hasUserDiscountExpired: function() {
             return d
         },
+        usePremiumAnnualDiscountOffer: function() {
+            return I
+        },
         usePremiumDiscountOffer: function() {
             return E
         }
@@ -52,5 +55,11 @@ function(e, t, n) {
             r = c(u.PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_30_PERCENT_DISCOUNT_ID),
             s = c(u.PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_40_PERCENT_DISCOUNT_ID);
         return null !== (t = null !== (e = null != n ? n : i) && void 0 !== e ? e : r) && void 0 !== t ? t : s
+    }
+
+    function I() {
+        let e = c(u.PREMIUM_TIER_2_ANNUAL_25_PERCENT_DISCOUNT_ID),
+            t = c(u.PREMIUM_TIER_2_ANNUAL_20_PERCENT_DISCOUNT_ID);
+        return null != e ? e : t
     }
 }
