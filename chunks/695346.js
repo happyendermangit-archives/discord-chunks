@@ -500,9 +500,8 @@ function(e, t, n) {
             return null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : null
         }, e => s.Int32Value.create({
             value: null != e ? e : 0
-        }));
-    (0, o.defineProtoSetting)("appearance", "mobileRedesignDisabled", e => null != e && e, e => e);
-    let eS = new Set([a.ChannelListLayoutTypes.COZY, a.ChannelListLayoutTypes.COMPACT]);
+        })),
+        eS = new Set([a.ChannelListLayoutTypes.COZY, a.ChannelListLayoutTypes.COMPACT]);
     (0, o.defineProtoSetting)("appearance", "channelListLayout", e => null != e && eS.has(e.value) ? e.value : a.ChannelListLayoutTypes.COZY, e => s.StringValue.create({
         value: e
     }));
