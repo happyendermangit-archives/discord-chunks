@@ -14,24 +14,27 @@ function(e, t, n) {
         o = n("231338");
     let l = s.createContext({
         profileType: null,
-        primaryProfileColor: null,
-        profileTheme: null !== (i = (0, a.default)()) && void 0 !== i ? i : o.ThemeTypes.DARK
+        theme: null !== (i = (0, a.default)()) && void 0 !== i ? i : o.ThemeTypes.DARK,
+        primaryColor: null,
+        secondaryColor: null
     });
 
     function u(e) {
         let {
             profileType: t,
-            profileTheme: n,
-            primaryProfileColor: i,
-            children: a
-        } = e, o = s.useMemo(() => ({
+            theme: n,
+            primaryColor: i,
+            secondaryColor: a,
+            children: o
+        } = e, u = s.useMemo(() => ({
             profileType: t,
-            profileTheme: n,
-            primaryProfileColor: i
-        }), [t, n, i]);
+            theme: n,
+            primaryColor: i,
+            secondaryColor: a
+        }), [t, n, i, a]);
         return (0, r.jsx)(l.Provider, {
-            value: o,
-            children: a
+            value: u,
+            children: o
         })
     }
     let d = () => s.useContext(l)

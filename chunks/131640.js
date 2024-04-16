@@ -89,7 +89,7 @@ function(e, t, n) {
             animateOnHover: O,
             hasProfileEffect: C
         } = e, {
-            profileTheme: L
+            theme: L
         } = (0, D.useUserProfileThemeContext)(), B = r.useContext(A.AnalyticsContext), V = t.isNonUserBot() && !t.isClyde(), F = m.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, P.PremiumTypes.TIER_2), x = r.useMemo(() => (0, I.shouldDisableUserPresenceInChannel)(t, T), [t, T]), {
             analyticsLocations: H
         } = (0, _.default)(), {
@@ -114,7 +114,7 @@ function(e, t, n) {
                 size: G,
                 "aria-label": t.username,
                 status: x ? y.StatusTypes.UNKNOWN : u,
-                statusBackdropColor: null != L && F && !x ? (0, d.getStatusBackdropColor)(L) : void 0,
+                statusBackdropColor: F && !x ? (0, d.getStatusBackdropColor)(L) : void 0,
                 isMobile: c,
                 statusTooltip: !0
             })

@@ -20,7 +20,7 @@ function(e, t, n) {
             t = (0, s.useStateFromStores)([_.default], () => _.default.syncProfileThemeWithUserTheme),
             n = (0, u.default)(),
             {
-                profileTheme: i
+                theme: i
             } = (0, I.useUserProfileThemeContext)(),
             r = (0, o.isThemeDark)(n) && (0, o.isThemeLight)(i);
         return !e && !t && r
