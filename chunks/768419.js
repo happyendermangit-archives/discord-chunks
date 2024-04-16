@@ -57,8 +57,8 @@ function(e, t, n) {
         K = new I.Timeout,
         z = new I.Timeout,
         X = new I.Timeout,
-        q = new I.Timeout,
         Q = new I.Timeout,
+        q = new I.Timeout,
         Z = {},
         J = {},
         $ = {},
@@ -551,9 +551,9 @@ function(e, t, n) {
                 f = null != l && null != r && 0 === o && !n;
             !f && ($[t] = T);
             let S = i;
-            if (i = d().values($).find(e => null != e), eI(N.default.getId()), null == a || f ? q.stop() : q.start(a.duration - o + V, () => ei(c.id)), null != r && (!n && o > 0 || null == l || null != T && r.trackId !== T.track.id) ? (W.info("Listen along active but playback stopped or track changed. Stopping listen along in ".concat(V, "ms")), Q.start(V, () => {
+            if (i = d().values($).find(e => null != e), eI(N.default.getId()), null == a || f ? Q.stop() : Q.start(a.duration - o + V, () => ei(c.id)), null != r && (!n && o > 0 || null == l || null != T && r.trackId !== T.track.id) ? (W.info("Listen along active but playback stopped or track changed. Stopping listen along in ".concat(V, "ms")), q.start(V, () => {
                     W.info("Stopping listening along"), (0, h.default)(), ei(c.id)
-                })) : Q.isStarted() && (W.info("Listen along stop cancelled as playback of track resumed"), Q.stop()), S === i || null == I && null == T || null != I && null != T && I.track.id === T.track.id && I.startTime === T.startTime) return _;
+                })) : q.isStarted() && (W.info("Listen along stop cancelled as playback of track resumed"), q.stop()), S === i || null == I && null == T || null != I && null != T && I.track.id === T.track.id && I.startTime === T.startTime) return _;
             null != a && L.default.track(P.AnalyticEvents.ACTIVITY_UPDATED, {
                 party_platform: P.PlatformTypes.SPOTIFY,
                 track_id: a.id,

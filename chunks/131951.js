@@ -41,8 +41,8 @@ function(e, t, n) {
         K = n("904272"),
         z = n("338336"),
         X = n("751571"),
-        q = n("815016"),
-        Q = n("725380"),
+        Q = n("815016"),
+        q = n("725380"),
         Z = n("581883"),
         J = n("626135"),
         $ = n("12647"),
@@ -163,8 +163,8 @@ function(e, t, n) {
         eK = !1,
         ez = !1,
         eX = !1,
-        eq = null,
-        eQ = !1,
+        eQ = null,
+        eq = !1,
         eZ = !1,
         eJ = !1;
     X.default.hasPermission(eT.NativePermissionTypes.AUDIO, {
@@ -385,7 +385,7 @@ function(e, t, n) {
                     localMutes: o,
                     localVolumes: l
                 } = e6(r);
-            for (let [e, t] of Object.entries(a)) null == (0, Q.getPendingAudioSettings)(r, e) && (t.muted ? o[e] = !0 : delete o[e], t.volume !== s ? l[e] = t.volume : delete l[e], eR.eachConnection(n => {
+            for (let [e, t] of Object.entries(a)) null == (0, q.getPendingAudioSettings)(r, e) && (t.muted ? o[e] = !0 : delete o[e], t.volume !== s ? l[e] = t.volume : delete l[e], eR.eachConnection(n => {
                 n.setLocalVolume(e, t.volume), n.setLocalMute(e, t.muted)
             }, r));
             if (n)
@@ -665,7 +665,7 @@ function(e, t, n) {
                         ...(0, M.default)(null == s ? void 0 : s.desktopSource)
                     })
                 }), e.on(S.BaseConnectionEvent.NoiseCancellationError, e => {
-                    em.warn("noisecancellererror event: ".concat(e)), eQ = !0, J.default.track(eE.AnalyticEvents.VOICE_PROCESSING, {
+                    em.warn("noisecancellererror event: ".concat(e)), eq = !0, J.default.track(eE.AnalyticEvents.VOICE_PROCESSING, {
                         noise_canceller_error: e
                     }), m.default.dispatch({
                         type: "AUDIO_SET_NOISE_SUPPRESSION",
@@ -809,7 +809,7 @@ function(e, t, n) {
             return eX || !1
         }
         isNoiseCancellationError() {
-            return eQ
+            return eq
         }
         isAutomaticGainControlSupported() {
             return eR.supports(eS.Features.AUTOMATIC_GAIN_CONTROL)
@@ -1153,10 +1153,10 @@ function(e, t, n) {
             let {
                 voiceStates: t
             } = e;
-            return t.reduce((e, t) => r === t.sessionId ? (eU = t.mute || t.suppress, ew = t.deaf, eR.eachConnection(e8), e9(!(null != t.guildId && null != t.channelId && null != eq && eq !== t.channelId) && eB), eq = t.channelId, !0) : (!__OVERLAY__ && t.userId === es.default.getId() && null == e_.default.getChannelId() && e9(!1, null), e), !1)
+            return t.reduce((e, t) => r === t.sessionId ? (eU = t.mute || t.suppress, ew = t.deaf, eR.eachConnection(e8), e9(!(null != t.guildId && null != t.channelId && null != eQ && eQ !== t.channelId) && eB), eQ = t.channelId, !0) : (!__OVERLAY__ && t.userId === es.default.getId() && null == e_.default.getChannelId() && e9(!1, null), e), !1)
         },
         CONNECTION_OPEN: function(e) {
-            r = e.sessionId, eU = !1, ew = !1, (0, q.shouldReadWriteAudioSettings)() && td()
+            r = e.sessionId, eU = !1, ew = !1, (0, Q.shouldReadWriteAudioSettings)() && td()
         },
         CONNECTION_CLOSED: function() {
             r = null
@@ -1677,7 +1677,7 @@ function(e, t, n) {
             e9(!1, null)
         },
         MEDIA_ENGINE_NOISE_CANCELLATION_ERROR_RESET: function() {
-            return !!eQ && (eQ = !1, !0)
+            return !!eq && (eq = !1, !0)
         },
         MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: function(e) {
             let {
@@ -1701,7 +1701,7 @@ function(e, t, n) {
                 local: n,
                 wasSaved: i
             } = e;
-            if (!(0, q.shouldReadWriteAudioSettings)() || t !== ef.UserSettingsTypes.PRELOADED_USER_SETTINGS || n || null != i) return !1;
+            if (!(0, Q.shouldReadWriteAudioSettings)() || t !== ef.UserSettingsTypes.PRELOADED_USER_SETTINGS || n || null != i) return !1;
             td(!0)
         },
         CLIPS_INIT: function(e) {

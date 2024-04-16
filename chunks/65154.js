@@ -89,7 +89,7 @@ function(e, t, n) {
             return R
         },
         VIDEO_QUALITY_FRAMERATE: function() {
-            return Q
+            return q
         },
         VIDEO_QUALITY_FRAMERATE_MUTED: function() {
             return Z
@@ -98,7 +98,7 @@ function(e, t, n) {
             return J
         },
         VIDEO_QUALITY_FRAMRATE_NOT_SPEAKING_TIMEOUT: function() {
-            return q
+            return Q
         },
         VIEWERSIDE_CLIP_KFI_MS: function() {
             return ei
@@ -126,8 +126,8 @@ function(e, t, n) {
         K = 15e4,
         z = 1e7,
         X = 5e3,
-        q = 15e3,
-        Q = 30,
+        Q = 15e3,
+        q = 30,
         Z = 20,
         J = 12,
         $ = 4e6,
@@ -137,7 +137,7 @@ function(e, t, n) {
             videoBudget: {
                 width: 1280,
                 height: 720,
-                framerate: Q
+                framerate: q
             },
             videoCapture: {
                 width: 1280,

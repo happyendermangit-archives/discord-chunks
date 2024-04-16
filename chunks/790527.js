@@ -54,7 +54,7 @@ function(e, t, n) {
             hideBackButton: W,
             backButtonText: K,
             ...z
-        } = e, X = null != g, q = (0, T.usePremiumTrialOffer)(), Q = (0, I.usePremiumDiscountOffer)(), Z = ((null == q ? void 0 : null === (t = q.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === Y || (0, I.discountOfferHasTier)(Q, Y)) && !X, {
+        } = e, X = null != g, Q = (0, T.usePremiumTrialOffer)(), q = (0, I.usePremiumDiscountOffer)(), Z = ((null == Q ? void 0 : null === (t = Q.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === Y || (0, I.discountOfferHasTier)(q, Y)) && !X, {
             analyticsLocations: J
         } = (0, u.default)(l.default.PREMIUM_UPSELL_MODAL), {
             enabled: $,
@@ -106,12 +106,12 @@ function(e, t, n) {
                         children: (0, i.jsx)(f.default, {
                             onClose: w,
                             type: C,
-                            subscriptionTier: null !== (s = null == q ? void 0 : null === (n = q.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== s ? s : A.PremiumSubscriptionSKUs.TIER_2,
+                            subscriptionTier: null !== (s = null == Q ? void 0 : null === (n = Q.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== s ? s : A.PremiumSubscriptionSKUs.TIER_2,
                             headingText: R,
                             context: M,
                             analyticsLocationObject: D,
-                            discountOffer: Q,
-                            trialOffer: q,
+                            discountOffer: q,
+                            trialOffer: Q,
                             children: y
                         })
                     }) : (0, i.jsxs)(i.Fragment, {
@@ -156,14 +156,14 @@ function(e, t, n) {
                         });
                         let t = et ? N.default.Messages.PREMIUM_UPSELL_GET_NITRO : void 0;
                         if (Z) {
-                            if (null != q) {
+                            if (null != Q) {
                                 var n, r;
                                 t = (0, c.formatTrialCtaIntervalDuration)({
-                                    intervalType: null == q ? void 0 : null === (n = q.subscription_trial) || void 0 === n ? void 0 : n.interval,
-                                    intervalCount: null == q ? void 0 : null === (r = q.subscription_trial) || void 0 === r ? void 0 : r.interval_count
-                                }), e = null == q ? void 0 : q.trial_id
-                            } else null != Q && (t = N.default.Messages.PREMIUM_DISCOUNT_CTA.format({
-                                percent: Q.discount.amount
+                                    intervalType: null == Q ? void 0 : null === (n = Q.subscription_trial) || void 0 === n ? void 0 : n.interval,
+                                    intervalCount: null == Q ? void 0 : null === (r = Q.subscription_trial) || void 0 === r ? void 0 : r.interval_count
+                                }), e = null == Q ? void 0 : Q.trial_id
+                            } else null != q && (t = N.default.Messages.PREMIUM_DISCOUNT_CTA.format({
+                                percent: q.discount.amount
                             }))
                         }
                         return (0, i.jsx)(S.default, {

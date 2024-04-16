@@ -41,7 +41,7 @@ function(e, t, n) {
             return z
         },
         getDisplayPremiumType: function() {
-            return q
+            return Q
         },
         getExternalPlanDisplayName: function() {
             return $
@@ -104,7 +104,7 @@ function(e, t, n) {
             return W
         },
         getPremiumTypeDisplayName: function() {
-            return Q
+            return q
         },
         getPrice: function() {
             return F
@@ -471,7 +471,7 @@ function(e, t, n) {
         }), t
     }
 
-    function q(e) {
+    function Q(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         switch (e) {
             case y.SubscriptionPlans.PREMIUM_MONTH_TIER_0:
@@ -494,7 +494,7 @@ function(e, t, n) {
         }), n
     }
 
-    function Q(e) {
+    function q(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         switch (e) {
             case y.PremiumTypes.TIER_0:
@@ -1253,7 +1253,7 @@ function(e, t, n) {
         getIntervalStringAsNoun: j,
         getPremiumType: W,
         getDisplayName: K,
-        getDisplayPremiumType: q,
+        getDisplayPremiumType: Q,
         getPremiumPlanOptions: ee,
         getUpgradeEligibilities: en,
         getPlanDescription: Z,

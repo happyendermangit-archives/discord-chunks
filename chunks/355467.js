@@ -83,7 +83,7 @@ function(e, t, n) {
             return eO
         },
         fetchMostRecentSubscription: function() {
-            return Q
+            return q
         },
         fetchPayment: function() {
             return W
@@ -98,7 +98,7 @@ function(e, t, n) {
             return z
         },
         getNitroAffinity: function() {
-            return q
+            return Q
         },
         getPerksRelevance: function() {
             return X
@@ -870,7 +870,7 @@ function(e, t, n) {
             })
         }
     }
-    async function q() {
+    async function Q() {
         try {
             let e = await a.HTTP.get(h.Endpoints.BILLING_NITRO_AFFINITY);
             o.default.dispatch({
@@ -883,7 +883,7 @@ function(e, t, n) {
             })
         }
     }
-    async function Q() {
+    async function q() {
         o.default.wait(() => {
             o.default.dispatch({
                 type: "BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_START"

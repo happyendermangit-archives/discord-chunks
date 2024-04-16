@@ -95,7 +95,7 @@ function(e, t, n) {
             }
         }(u, t);
         else {
-            let e = (0, d.getActionRowErrorText)(u, t, s);
+            let e = (0, d.getLayoutComponentErrorText)(u, t, s);
             null != e && (E = h(e))
         }
         if (null == E) return null;

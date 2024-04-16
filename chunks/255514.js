@@ -65,7 +65,7 @@ function(e, t, n) {
             multiSelect: k,
             reportId: V,
             textInput: F
-        } = e, x = U(t, "checkbox"), H = U(t, "text_line_resource"), Y = b(t, "external_link"), j = b(t, "free_text"), W = b(t, "dropdown"), [K, z] = r.useState(!1), [X, q] = r.useState(""), [Q, Z] = r.useState(() => ({})), [J, $] = r.useState(() => ({})), [ee, et] = r.useState((0, o.areRequiredElementsUnfilled)(j, W, x, F, k)), en = function(e, t) {
+        } = e, x = U(t, "checkbox"), H = U(t, "text_line_resource"), Y = b(t, "external_link"), j = b(t, "free_text"), W = b(t, "dropdown"), [K, z] = r.useState(!1), [X, Q] = r.useState(""), [q, Z] = r.useState(() => ({})), [J, $] = r.useState(() => ({})), [ee, et] = r.useState((0, o.areRequiredElementsUnfilled)(j, W, x, F, k)), en = function(e, t) {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
                 i = {
                     ...J
@@ -73,7 +73,7 @@ function(e, t, n) {
             i[e] = {
                 value: t,
                 isValid: n
-            }, $(i), et((0, o.areRequiredElementsUnfilled)(j, W, x, i, Q))
+            }, $(i), et((0, o.areRequiredElementsUnfilled)(j, W, x, i, q))
         }, ei = r.useMemo(() => e => {
             w({
                 nodeRef: t.id,
@@ -81,22 +81,22 @@ function(e, t, n) {
                 textInput: null != j || null != W ? J : void 0,
                 multiSelect: null != x ? {
                     name: x.name,
-                    state: Q
+                    state: q
                 } : void 0
             })
-        }, [t, w, x, Q, J, j, W]);
+        }, [t, w, x, q, J, j, W]);
         r.useEffect(() => {
             null != k && Z(k), null != F && $(F)
         }, [k, F]);
         let er = e => {
-                if (e === M.AbortCodes.INVALID_FORM_BODY) q(y.default.Messages.IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR);
-                else q(y.default.Messages.MOBILE_REPORTS_SUBMIT_FAILED)
+                if (e === M.AbortCodes.INVALID_FORM_BODY) Q(y.default.Messages.IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR);
+                else Q(y.default.Messages.MOBILE_REPORTS_SUBMIT_FAILED)
             },
             es = () => e.onSubmit({
                 nodeRef: t.id,
                 destination: ["", e.successNodeId]
             }).then(() => {
-                q(""), ei(["", e.successNodeId])
+                Q(""), ei(["", e.successNodeId])
             }).catch(e => {
                 var t;
                 er(null === (t = e.body) || void 0 === t ? void 0 : t.code)
@@ -162,11 +162,11 @@ function(e, t, n) {
                     element: x,
                     onChange: (e, t) => {
                         let n = {
-                            ...Q
+                            ...q
                         };
-                        e in Q ? delete n[e] : n[e] = t, Z(n), et((0, o.areRequiredElementsUnfilled)(j, W, x, J, n))
+                        e in q ? delete n[e] : n[e] = t, Z(n), et((0, o.areRequiredElementsUnfilled)(j, W, x, J, n))
                     },
-                    state: Q
+                    state: q
                 }), ("user_urf" === n.name || "message_urf" === n.name) && null != W && W.length > 0 && (0, i.jsx)(E.default, {
                     elements: W,
                     onChange: en,
@@ -183,7 +183,7 @@ function(e, t, n) {
                 }) : null, (0, i.jsx)(I.default, {
                     errorMessage: X,
                     onClose: () => {
-                        q("")
+                        Q("")
                     }
                 })]
             }), (0, i.jsx)(l.default, {

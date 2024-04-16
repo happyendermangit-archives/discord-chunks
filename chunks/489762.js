@@ -47,8 +47,8 @@ function(e, t, n) {
         K = (0, g.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
         z = (0, g.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_BOTTOM),
         X = (0, g.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
-        q = (0, g.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKERS_LIST_DIVIDER_HEIGHT),
-        Q = (0, g.cssValueToNumber)(o.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_LIST_SECTION_HEADING_HEIGHT),
+        Q = (0, g.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKERS_LIST_DIVIDER_HEIGHT),
+        q = (0, g.cssValueToNumber)(o.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_LIST_SECTION_HEADING_HEIGHT),
         Z = (0, g.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
         J = (0, g.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
         $ = (0, g.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING),
@@ -275,9 +275,9 @@ function(e, t, n) {
                         sendable: t,
                         sendableWithPremium: n
                     } = p;
-                    return 0 === e && t.length > 0 ? 0 : Q + (t.length > 0 && n.length > 0 ? q : 0)
+                    return 0 === e && t.length > 0 ? 0 : q + (t.length > 0 && n.length > 0 ? Q : 0)
                 }
-                return Q
+                return q
             }, [p]), en = r.useCallback(e => {
                 let n = S[e],
                     r = t.has(n.id);

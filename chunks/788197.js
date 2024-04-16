@@ -59,7 +59,7 @@ function(e, t, n) {
             newAnalyticsLocations: z = []
         } = e, {
             analyticsLocations: X
-        } = (0, f.default)([...z, T.default.PROFILE_POPOUT]), q = r.useRef(null), Q = (0, v.default)(t.id, n), Z = (0, d.default)(q), J = (0, o.useStateFromStores)([L.default], () => {
+        } = (0, f.default)([...z, T.default.PROFILE_POPOUT]), Q = r.useRef(null), q = (0, v.default)(t.id, n), Z = (0, d.default)(Q), J = (0, o.useStateFromStores)([L.default], () => {
             var e;
             return null === (e = L.default.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application
         }), $ = (0, o.useStateFromStores)([N.default], () => null != n ? N.default.getGuild(n) : null), ee = (0, o.useStateFromStores)([m.default], () => null != n ? m.default.getMember(n, t.id) : null), et = t.isNonUserBot(), {
@@ -101,8 +101,8 @@ function(e, t, n) {
         (0, _.default)(() => eE(!0), e_.shouldShow ? 250 : null);
         let eI = (0, h.useGetOrFetchApplication)(null == en ? void 0 : en.application_id);
         return r.useEffect(() => {
-            null == j || j(null == q ? void 0 : q.current)
-        }, [q, j]), r.useEffect(() => {
+            null == j || j(null == Q ? void 0 : Q.current)
+        }, [Q, j]), r.useEffect(() => {
             if (!eo)((null == en ? void 0 : en.application_id) == null || null != eI) && (null == n || (null == ee ? void 0 : ee.fullProfileLoadedTimestamp) != null) && (function() {
                 var e;
                 let i, r, a;
@@ -112,8 +112,8 @@ function(e, t, n) {
                 let l = null != ee ? {
                         has_nickname: !!(null == ee ? void 0 : ee.nick),
                         has_guild_member_avatar: !!(null == ee ? void 0 : ee.avatar),
-                        has_guild_member_banner: !!(null == Q ? void 0 : Q.isUsingGuildMemberBanner()),
-                        has_guild_member_bio: !!(null == Q ? void 0 : Q.isUsingGuildMemberBio())
+                        has_guild_member_banner: !!(null == q ? void 0 : q.isUsingGuildMemberBanner()),
+                        has_guild_member_bio: !!(null == q ? void 0 : q.isUsingGuildMemberBio())
                     } : {},
                     u = null != J ? {
                         other_application_id: null == J ? void 0 : J.id,
@@ -137,10 +137,10 @@ function(e, t, n) {
                     is_streaming: ea,
                     has_custom_status: null != ei,
                     has_avatar_decoration: null != t.avatarDecoration,
-                    has_profile_effect: (null == Q ? void 0 : Q.profileEffectId) != null,
-                    profile_has_nitro_customization: null != Q && (null == Q ? void 0 : Q.hasPremiumCustomization()),
-                    profile_has_theme_color_customized: null != Q && Q.hasThemeColors(),
-                    profile_has_theme_animation: (null == Q ? void 0 : Q.popoutAnimationParticleType) != null,
+                    has_profile_effect: (null == q ? void 0 : q.profileEffectId) != null,
+                    profile_has_nitro_customization: null != q && (null == q ? void 0 : q.hasPremiumCustomization()),
+                    profile_has_theme_color_customized: null != q && q.hasThemeColors(),
+                    profile_has_theme_animation: (null == q ? void 0 : q.popoutAnimationParticleType) != null,
                     ...l,
                     ...u,
                     ...K
@@ -159,7 +159,7 @@ function(e, t, n) {
                 children: (0, i.jsx)(u.default, {
                     section: k.AnalyticsSections.PROFILE_POPOUT,
                     children: (0, i.jsx)(l.Dialog, {
-                        ref: q,
+                        ref: Q,
                         "aria-label": t.username,
                         onClick: x,
                         onContextMenu: x,
@@ -168,13 +168,13 @@ function(e, t, n) {
                         } : void 0,
                         children: (0, i.jsxs)(y.default, {
                             user: t,
-                            displayProfile: Q,
+                            displayProfile: q,
                             profileType: B.UserProfileTypes.POPOUT,
                             className: e_.shouldShow ? F.hasCollectiblesUpsell : void 0,
                             showOutOfBoundaryComponents: ec,
                             children: [(0, i.jsx)(G.default, {
                                 user: t,
-                                displayProfile: Q,
+                                displayProfile: q,
                                 guildId: n,
                                 channelId: s,
                                 onClose: () => null == Y ? void 0 : Y(),
@@ -186,7 +186,7 @@ function(e, t, n) {
                                 upsell: e_.shouldShow ? (0, i.jsx)(U.default, {
                                     user: t,
                                     upsellSource: b.UserPopoutUpsellSource.USER_POPOUT,
-                                    displayProfile: Q,
+                                    displayProfile: q,
                                     onClose: Y,
                                     ...e_
                                 }) : void 0
@@ -196,7 +196,7 @@ function(e, t, n) {
                                 }), (0, i.jsx)(P.default, {
                                     activity: en,
                                     customStatusActivity: ei,
-                                    displayProfile: Q,
+                                    displayProfile: q,
                                     user: t,
                                     guild: $,
                                     guildMember: ee,

@@ -65,8 +65,8 @@ function(e, t, n) {
         K = n("230916"),
         z = n("248042"),
         X = n("94027"),
-        q = n("504865"),
-        Q = n("63802"),
+        Q = n("504865"),
+        q = n("63802"),
         Z = n("318990"),
         J = n("474936"),
         $ = n("768760"),
@@ -112,33 +112,33 @@ function(e, t, n) {
                 t = S.default.unsafe_rawColors.PREMIUM_TIER_0_PURPLE_FOR_GRADIENTS.css;
                 break;
             case 3:
-                t = "url(#".concat(Q.PREMIUM_NEW_TIER_2_SVG_GRADIENT_ID, ")");
+                t = "url(#".concat(q.PREMIUM_NEW_TIER_2_SVG_GRADIENT_ID, ")");
                 break;
             case 4:
             case 5:
-                t = "url(#".concat(Q.PREMIUM_OLD_TIER_2_SVG_GRADIENT_ID, ")");
+                t = "url(#".concat(q.PREMIUM_OLD_TIER_2_SVG_GRADIENT_ID, ")");
                 break;
             default:
                 t = "white"
         }
         return s ? (0, _.jsxs)("div", {
             className: E()(i, et.freeTrialPillWithSparkles),
-            children: [(0, _.jsx)(Q.SparkleStar, {
+            children: [(0, _.jsx)(q.SparkleStar, {
                 foreground: et.sparkleStar1,
                 color: t
-            }), (0, _.jsx)(Q.SparkleStar, {
+            }), (0, _.jsx)(q.SparkleStar, {
                 foreground: et.sparkleStar2,
                 color: t
-            }), (0, _.jsx)(Q.SparkleStar, {
+            }), (0, _.jsx)(q.SparkleStar, {
                 foreground: et.sparkleStar3,
                 color: t
             }), (0, _.jsx)(er, {
                 text: n,
                 colorOptions: r
-            }), (0, _.jsx)(Q.SparkleStar, {
+            }), (0, _.jsx)(q.SparkleStar, {
                 foreground: et.sparkleStar4,
                 color: t
-            }), (0, _.jsx)(Q.SparkleStar, {
+            }), (0, _.jsx)(q.SparkleStar, {
                 foreground: et.sparkleStar5,
                 color: t
             })]
@@ -147,14 +147,14 @@ function(e, t, n) {
             children: [(0, _.jsx)(er, {
                 text: n,
                 colorOptions: r
-            }), (0, _.jsx)(Q.SparkleStar, {
+            }), (0, _.jsx)(q.SparkleStar, {
                 foreground: et.sparkleStar1,
                 style: {
                     marginLeft: 4,
                     marginBottom: -6
                 },
                 color: t
-            }), (0, _.jsx)(Q.SparkleStar, {
+            }), (0, _.jsx)(q.SparkleStar, {
                 foreground: et.sparkleStar2,
                 color: t
             })]
@@ -304,7 +304,7 @@ function(e, t, n) {
             })
         }
         return (0, _.jsxs)(_.Fragment, {
-            children: [(0, _.jsx)(q.default, {
+            children: [(0, _.jsx)(Q.default, {
                 subscriptionTier: R,
                 isGift: o,
                 className: E()(et.price, {
@@ -313,7 +313,7 @@ function(e, t, n) {
                 }),
                 variant: I ? "heading-lg/extrabold" : void 0,
                 priceOptions: h
-            }), c && (0, _.jsx)(q.default, {
+            }), c && (0, _.jsx)(Q.default, {
                 subscriptionTier: R,
                 interval: J.SubscriptionIntervalTypes.YEAR,
                 isGift: o,
@@ -452,7 +452,7 @@ function(e, t, n) {
                         })]
                     }), p && r]
                 })]
-            }), !p && r, o || S !== J.PremiumSubscriptionSKUs.TIER_0 ? null : (0, _.jsx)(Q.ButtonSparkleGroup, {
+            }), !p && r, o || S !== J.PremiumSubscriptionSKUs.TIER_0 ? null : (0, _.jsx)(q.ButtonSparkleGroup, {
                 tier: J.PremiumTypes.TIER_0
             })]
         })

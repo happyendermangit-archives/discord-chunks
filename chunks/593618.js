@@ -82,7 +82,7 @@ function(e, t, n) {
         })
     }
 
-    function q(e) {
+    function Q(e) {
         var t, n, s;
         let {
             guild: o
@@ -116,7 +116,7 @@ function(e, t, n) {
             let e = 0;
             for (let t of T) e += A.default.getParticipantCount(t, m.StageChannelParticipantNamedIndex.AUDIENCE);
             return e
-        }), y = (0, u.useStateFromStoresArray)([O.default], () => O.default.getAllApplicationStreams().filter(e => e.guildId === d).map(e => e.ownerId), [d]), V = (0, F.useIsGamingVoiceActivityEnabled)("Guild Tooltip", !1), H = (0, u.useStateFromStoresArray)([g.default, R.default], () => S.filter(e => g.default.getActivities(e.id, d).some(e => (null == e ? void 0 : e.application_id) != null && null != R.default.getDetectableGame(null == e ? void 0 : e.application_id)))), j = z(P.default, H, d), W = V ? H.map(e => e.id) : [], K = (0, u.useStateFromStoresArray)([c.default], () => c.default.getEmbeddedActivitiesForGuild(d).flatMap(e => Array.from(e.userIds)), [d]), q = (0, u.useStateFromStoresArray)([D.default], () => K.map(e => D.default.getUser(e)), [K]), Q = (0, u.useStateFromStoresArray)([D.default], () => y.map(e => D.default.getUser(e)), [y]), Z = z(G.default, S.filter(e => !y.includes(e.id) && !K.includes(e.id) && !W.includes(e.id)), d);
+        }), y = (0, u.useStateFromStoresArray)([O.default], () => O.default.getAllApplicationStreams().filter(e => e.guildId === d).map(e => e.ownerId), [d]), V = (0, F.useIsGamingVoiceActivityEnabled)("Guild Tooltip", !1), H = (0, u.useStateFromStoresArray)([g.default, R.default], () => S.filter(e => g.default.getActivities(e.id, d).some(e => (null == e ? void 0 : e.application_id) != null && null != R.default.getDetectableGame(null == e ? void 0 : e.application_id)))), j = z(P.default, H, d), W = V ? H.map(e => e.id) : [], K = (0, u.useStateFromStoresArray)([c.default], () => c.default.getEmbeddedActivitiesForGuild(d).flatMap(e => Array.from(e.userIds)), [d]), Q = (0, u.useStateFromStoresArray)([D.default], () => K.map(e => D.default.getUser(e)), [K]), q = (0, u.useStateFromStoresArray)([D.default], () => y.map(e => D.default.getUser(e)), [y]), Z = z(G.default, S.filter(e => !y.includes(e.id) && !K.includes(e.id) && !W.includes(e.id)), d);
         let J = (t = d, n = h, s = M, 0 === n.length ? null : (0, i.jsxs)("div", {
                 className: Y.row,
                 children: [(0, i.jsx)(w.default, {
@@ -138,8 +138,8 @@ function(e, t, n) {
                     })]
                 })]
             })),
-            $ = z(B.default, Q.filter(e => null != e && !K.includes(e.id)), d),
-            ee = z(b.default, q, d),
+            $ = z(B.default, q.filter(e => null != e && !K.includes(e.id)), d),
+            ee = z(b.default, Q, d),
             {
                 isMuted: et,
                 muteConfig: en
@@ -159,7 +159,7 @@ function(e, t, n) {
         })
     }
 
-    function Q(e) {
+    function q(e) {
         let {
             guildJoinRequestStatus: t
         } = e;
@@ -186,9 +186,9 @@ function(e, t, n) {
         let {
             guild: t,
             includeActivity: n = !0
-        } = e, r = (0, E.default)(t), s = (0, T.useCurrentUserGuildBadgeStatus)(t.id), o = null != s ? (0, i.jsx)(Q, {
+        } = e, r = (0, E.default)(t), s = (0, T.useCurrentUserGuildBadgeStatus)(t.id), o = null != s ? (0, i.jsx)(q, {
             guildJoinRequestStatus: s
-        }) : null, l = n ? (0, i.jsx)(q, {
+        }) : null, l = n ? (0, i.jsx)(Q, {
             guild: t
         }) : null, d = (0, u.useStateFromStores)([S.default], () => S.default.isViewingRoles(t.id)), c = (0, f.useShouldShowInvitesDisabledNotif)(t);
         return (0, i.jsxs)(i.Fragment, {

@@ -51,7 +51,7 @@ function(e, t, n) {
             analyticsLocations: z
         } = (0, u.default)(), X = N.default.useExperiment({
             location: "PremiumSubscribeButton"
-        }).enabled, q = e => {
+        }).enabled, Q = e => {
             if (e.preventDefault(), null == j) {
                 (0, c.transitionTo)(O.Routes.LOGIN);
                 return
@@ -145,7 +145,7 @@ function(e, t, n) {
             className: D,
             innerClassName: C.premiumSubscribeButton,
             look: o.Button.Looks.INVERTED,
-            onClick: q,
+            onClick: Q,
             ...Y,
             children: [B && (0, i.jsx)(A.default, {
                 className: C.premiumIcon
@@ -159,7 +159,7 @@ function(e, t, n) {
             className: D,
             innerClassName: C.giftButton,
             color: o.Button.Colors.PRIMARY,
-            onClick: q,
+            onClick: Q,
             ...Y,
             children: [(0, i.jsx)(h.default, {
                 className: C.giftIcon
@@ -168,11 +168,11 @@ function(e, t, n) {
                 children: null != y ? y : R.default.Messages.PREMIUM_GIFTING_BUTTON
             })]
         });
-        let Q = R.default.Messages.APPLICATION_STORE_GET_PREMIUM,
+        let q = R.default.Messages.APPLICATION_STORE_GET_PREMIUM,
             Z = null != K ? (0, m.getPremiumPlanItem)(K) : null,
             J = null != Z ? m.default.getPremiumType(Z.planId) : null == j ? void 0 : j.premiumType,
             $ = r === p.PremiumSubscriptionSKUs.TIER_2 && null != J && [p.PremiumTypes.TIER_0, p.PremiumTypes.TIER_1].includes(J);
-        $ ? Q = R.default.Messages.BILLING_SWITCH_PLAN_UPGRADE : X && null == K && (r === p.PremiumSubscriptionSKUs.TIER_2 || null == r) && (Q = R.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_BUTTON_CTA_NON_SUB);
+        $ ? q = R.default.Messages.BILLING_SWITCH_PLAN_UPGRADE : X && null == K && (r === p.PremiumSubscriptionSKUs.TIER_2 || null == r) && (q = R.default.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_MODAL_BUTTON_CTA_NON_SUB);
         let ee = null != K && K.status !== O.SubscriptionStatusTypes.ACCOUNT_HOLD && !(0, E.isNoneSubscription)(K.planId) && !$,
             et = ee ? null != x ? x : function(e) {
                 let {
@@ -199,7 +199,7 @@ function(e, t, n) {
             var t, n;
             return (0, i.jsxs)(S.default, {
                 disabled: ee,
-                onClick: q,
+                onClick: Q,
                 innerClassName: C.premiumSubscribeButton,
                 color: r === p.PremiumSubscriptionSKUs.TIER_1 ? o.Button.Colors.PRIMARY : o.Button.Colors.GREEN,
                 size: L,
@@ -212,7 +212,7 @@ function(e, t, n) {
                     className: s()(C.premiumIcon, U)
                 }), (0, i.jsx)("span", {
                     className: s()(C.buttonText, P),
-                    children: null !== (n = null !== (t = null == et ? void 0 : et.disabledButtonText) && void 0 !== t ? t : y) && void 0 !== n ? n : Q
+                    children: null !== (n = null !== (t = null == et ? void 0 : et.disabledButtonText) && void 0 !== t ? t : y) && void 0 !== n ? n : q
                 })]
             })
         }

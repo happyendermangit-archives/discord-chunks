@@ -64,8 +64,8 @@ function(e, t, n) {
             "aria-describedby": K,
             "aria-invalid": z,
             "aria-labelledby": X,
-            "aria-required": q,
-            inputClassNames: Q,
+            "aria-required": Q,
+            inputClassNames: q,
             centerCaret: Z = !1,
             onBlur: J,
             ...$
@@ -360,7 +360,7 @@ function(e, t, n) {
                                         isEditing: eI,
                                         inputRef: eo,
                                         "aria-describedby": null != K ? K : ei,
-                                        "aria-required": q,
+                                        "aria-required": Q,
                                         "aria-invalid": null != z ? z : null != er,
                                         "aria-labelledby": null != X ? X : en,
                                         "aria-expanded": n,
@@ -387,7 +387,7 @@ function(e, t, n) {
                                             let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
                                             eB(e, t)
                                         },
-                                        inputClassNames: Q
+                                        inputClassNames: q
                                     })
                                 })
                             })

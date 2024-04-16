@@ -56,7 +56,7 @@ function(e, t, n) {
             activityParticipant: null != w ? I.default.getParticipant(t.id, w.applicationId) : null,
             selectedParticipant: I.default.getSelectedParticipant(t.id),
             participantsOpen: I.default.getParticipantsOpen(t.id)
-        })), z = F || null != Y, X = (0, C.default)(t.id), q = X && (null == W ? void 0 : W.type) !== P.ParticipantTypes.ACTIVITY, Q = !X && B === M.ActivityPanelModes.PIP, Z = (!z || z && (q || Q) && null == x) && !H, J = Z && null != A.default.pipVideoWindow && null != A.default.pipActivityWindow;
+        })), z = F || null != Y, X = (0, C.default)(t.id), Q = X && (null == W ? void 0 : W.type) !== P.ParticipantTypes.ACTIVITY, q = !X && B === M.ActivityPanelModes.PIP, Z = (!z || z && (Q || q) && null == x) && !H, J = Z && null != A.default.pipVideoWindow && null != A.default.pipActivityWindow;
 
         function $() {
             var e;
@@ -105,7 +105,7 @@ function(e, t, n) {
                         [U.multiPIPMode]: J
                     }),
                     noBorder: !Z,
-                    children: [(u = f, d = h, _ = T, c = Q, E = et, Z && null != w && ((null == j ? void 0 : j.type) === P.ParticipantTypes.ACTIVITY || c) ? (null === (I = w.config) || void 0 === I ? void 0 : I.useInteractivePIP) ? (0, i.jsx)(L.InteractivePIPHeader, {
+                    children: [(u = f, d = h, _ = T, c = q, E = et, Z && null != w && ((null == j ? void 0 : j.type) === P.ParticipantTypes.ACTIVITY || c) ? (null === (I = w.config) || void 0 === I ? void 0 : I.useInteractivePIP) ? (0, i.jsx)(L.InteractivePIPHeader, {
                         onJumpToChannel: $,
                         applicationId: w.applicationId,
                         channel: t,

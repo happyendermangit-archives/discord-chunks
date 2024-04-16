@@ -84,10 +84,10 @@ function(e, t, n) {
                 paddingHorizontal: M,
                 getScrollerState: x,
                 dir: T
-            }), q = (0, r.useCallback)(function() {
+            }), Q = (0, r.useCallback)(function() {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
                 e > F.current.dirty && (F.current.dirty = e, 2 === e ? z() : H(1))
-            }, [H, F, z]), Q = (0, u.useScrollSpring)(V), Z = (0, r.useCallback)(() => X.itemGrid, [X]), J = (0, r.useCallback)(() => X.coordsMap, [X]), $ = s().useCallback(() => q(), [q]);
+            }, [H, F, z]), q = (0, u.useScrollSpring)(V), Z = (0, r.useCallback)(() => X.itemGrid, [X]), J = (0, r.useCallback)(() => X.coordsMap, [X]), $ = s().useCallback(() => Q(), [Q]);
             (0, u.useResizeObserverSubscription)({
                 ref: V,
                 key: "container",
@@ -99,13 +99,13 @@ function(e, t, n) {
                 getItemGrid: Z,
                 getCoordsMap: J,
                 getScrollerState: x,
-                ...(0, u.getAnimatedScrollHelpers)(V, x, Q)
-            }), [V, x, Z, Q, J]);
+                ...(0, u.getAnimatedScrollHelpers)(V, x, q)
+            }), [V, x, Z, q, J]);
             let ee = (0, r.useCallback)(e => {
-                q(1), null == G.current ? k(!0) : clearTimeout(G.current), G.current = setTimeout(() => {
+                Q(1), null == G.current ? k(!0) : clearTimeout(G.current), G.current = setTimeout(() => {
                     G.current = null, k(!1)
                 }, 200), null != I && I(e)
-            }, [I, q]);
+            }, [I, Q]);
             return (0, i.jsx)("div", {
                 ref: V,
                 onScroll: ee,

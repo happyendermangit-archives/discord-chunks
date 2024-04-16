@@ -248,7 +248,7 @@ function(e, t, n) {
         return null != e && V(e.getGuildId(), [e.id])
     }
 
-    function q(e) {
+    function Q(e) {
         let {
             user: t,
             guildId: n
@@ -256,7 +256,7 @@ function(e, t, n) {
         return t.id === _.default.getId() && x(n)
     }
 
-    function Q(e) {
+    function q(e) {
         let {
             channelId: t
         } = e, n = c.default.getChannel(t);
@@ -495,9 +495,9 @@ function(e, t, n) {
                 GUILD_CREATE: W,
                 GUILD_DELETE: K,
                 MESSAGE_CREATE: Z,
-                MESSAGE_ACK: Q,
+                MESSAGE_ACK: q,
                 BULK_ACK: et,
-                UPDATE_CHANNEL_DIMENSIONS: Q,
+                UPDATE_CHANNEL_DIMENSIONS: q,
                 CHANNEL_SELECT: J,
                 CHANNEL_DELETE: z,
                 WINDOW_FOCUS: X,
@@ -514,7 +514,7 @@ function(e, t, n) {
                 THREAD_MEMBER_UPDATE: ea,
                 THREAD_MEMBERS_UPDATE: eo,
                 PASSIVE_UPDATE_V1: eu,
-                GUILD_MEMBER_UPDATE: q,
+                GUILD_MEMBER_UPDATE: Q,
                 USER_GUILD_SETTINGS_FULL_UPDATE: ec,
                 USER_GUILD_SETTINGS_CHANNEL_UPDATE: eI,
                 USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: eI,
@@ -524,17 +524,17 @@ function(e, t, n) {
                 GUILD_SCHEDULED_EVENT_CREATE: ei,
                 GUILD_SCHEDULED_EVENT_UPDATE: ei,
                 GUILD_SCHEDULED_EVENT_DELETE: er,
-                CHANNEL_RTC_UPDATE_CHAT_OPEN: Q,
-                LOAD_MESSAGES_SUCCESS: Q,
-                CHANNEL_ACK: Q,
-                CHANNEL_LOCAL_ACK: Q,
+                CHANNEL_RTC_UPDATE_CHAT_OPEN: q,
+                LOAD_MESSAGES_SUCCESS: q,
+                CHANNEL_ACK: q,
+                CHANNEL_LOCAL_ACK: q,
                 NOTIFICATION_SETTINGS_UPDATE: j,
                 RECOMPUTE_READ_STATES: j,
-                VOICE_CHANNEL_SELECT: Q,
-                ENABLE_AUTOMATIC_ACK: Q,
-                RESORT_THREADS: Q,
+                VOICE_CHANNEL_SELECT: q,
+                ENABLE_AUTOMATIC_ACK: q,
+                RESORT_THREADS: q,
                 NOTIFICATION_CENTER_CLEAR_GUILD_MENTIONS: eE,
-                TRY_ACK: Q
+                TRY_ACK: q
             })
         }
     }
