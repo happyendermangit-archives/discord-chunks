@@ -207,6 +207,9 @@ function(e, t, n) {
         isPoll() {
             return null != this.poll
         }
+        isUIKitComponents() {
+            return (0, l.hasFlag)(this.flags, d.MessageFlags.IS_UIKIT_COMPONENTS)
+        }
         isInteractionPlaceholder() {
             return null != this.interaction && this.author.isNonUserBot()
         }
