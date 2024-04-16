@@ -76,8 +76,6 @@ function(e, t, n) {
             null != e && e.endsWith("/") && (e = e.substring(0, e.length - 1)), null !== e && w.verbose("Updating resume url to ".concat(e)), this.resumeUrl = e
         }
         _connect() {
-            var e, t;
-            let n;
             if (!this.willReconnect()) {
                 w.verbose("Skipping _connect because willReconnect is false");
                 return
@@ -86,18 +84,17 @@ function(e, t, n) {
                 w.info("Skipping _connect because socket is paused");
                 return
             }
-            this.connectionState = C.default.CONNECTING, this.nextReconnectIsImmediate = !1, this.compressionHandler.recomputeAlgorithm();
-            let i = this.compressionHandler.getAlgorithm(),
-                r = B.getName(),
-                s = this._getGatewayUrl(),
-                a = window.GLOBAL_ENV.API_VERSION;
-            o.default.mark("\uD83C\uDF10", "Socket._connect"), w.info("[CONNECT] ".concat(s, ", ") + "encoding: ".concat(r, ", ") + "version: ".concat(a, ", ") + "compression: ".concat(null != i ? i : "none")), null !== this.webSocket && (w.error("_connect called with already existing websocket"), this._cleanup(e => e.close(4e3))), this.connectionStartTime = Date.now(), this.helloTimeout = setTimeout(() => {
+            this.connectionState = C.default.CONNECTING, this.nextReconnectIsImmediate = !1;
+            let e = this.compressionHandler.getAlgorithm(),
+                t = B.getName(),
+                n = this._getGatewayUrl(),
+                i = window.GLOBAL_ENV.API_VERSION;
+            o.default.mark("\uD83C\uDF10", "Socket._connect"), w.info("[CONNECT] ".concat(n, ", ") + "encoding: ".concat(t, ", ") + "version: ".concat(i, ", ") + "compression: ".concat(null != e ? e : "none")), null !== this.webSocket && (w.error("_connect called with already existing websocket"), this._cleanup(e => e.close(4e3))), this.connectionStartTime = Date.now(), this.helloTimeout = setTimeout(() => {
                 let e = Date.now() - this.connectionStartTime;
                 this._handleClose(!1, 0, "The connection timed out after ".concat(e, " ms - did not receive OP_HELLO in time.")), this.setResumeUrl(null)
             }, V);
-            let l = new URL(s);
-            l.searchParams.append("encoding", r), l.searchParams.append("v", a.toString()), null != i && l.searchParams.append("compress", i);
-            ! function(e) {
+            let r = new URL(n);
+            r.searchParams.append("encoding", t), r.searchParams.append("v", i.toString()), null != e && r.searchParams.append("compress", e), ! function(e) {
                 let t, {
                         gatewayURL: n,
                         newCallback: i,
@@ -129,16 +126,35 @@ function(e, t, n) {
                 }
                 null == t && ((t = (0, U.default)(n)).binaryType = "arraybuffer"), i(t), u && r(d, c), null != _ && _.forEach(s), t.onopen = () => r(d, c), t.onmessage = s, t.onclose = o, t.onerror = a
             }({
-                gatewayURL: l.toString(),
+                gatewayURL: r.toString(),
                 newCallback: e => {
                     this.webSocket = e, this.compressionHandler.bindWebSocket(e)
                 },
                 onOpen: e => {
                     o.default.mark("\uD83C\uDF10", "GatewaySocket.onOpen ".concat(e));
                     let t = Date.now() - this.connectionStartTime;
-                    w.info("[CONNECTED] ".concat(l.toString(), " in ").concat(t, " ms")), this.isFastConnect = e, e ? this._doFastConnectIdentify() : this._doResumeOrIdentify()
+                    w.info("[CONNECTED] ".concat(r.toString(), " in ").concat(t, " ms")), this.isFastConnect = e, e ? this._doFastConnectIdentify() : this._doResumeOrIdentify()
                 },
-                onMessage: (e = this.compressionHandler, t = (e, t) => {
+                onMessage: function(e, t, n) {
+                    let i = 0;
+                    e.dataReady(e => {
+                        try {
+                            return n(e, i)
+                        } finally {
+                            i = 0
+                        }
+                    });
+                    let r = !1;
+                    return n => {
+                        let s = n.data;
+                        null != n.raw_length ? i += n.raw_length : i += H(s);
+                        try {
+                            e.feed(s)
+                        } catch (e) {
+                            throw !r && (r = !0, t(!1, 0, "A decompression error occurred")), e
+                        }
+                    }
+                }(this.compressionHandler, this._handleClose.bind(this), (e, t) => {
                     let n = Date.now(),
                         {
                             op: i,
@@ -176,15 +192,6 @@ function(e, t, n) {
                         default:
                             w.info("Unhandled op ".concat(i))
                     }
-                }, n = 0, e.dataReady(e => {
-                    try {
-                        return t(e, n)
-                    } finally {
-                        n = 0
-                    }
-                }), t => {
-                    let i = t.data;
-                    null != t.raw_length ? n += t.raw_length : n += H(i), e.feed(i)
                 }),
                 onError: () => {
                     this.setResumeUrl(null), N.default.flushDNSCache(), this._handleClose(!1, 0, "An error with the websocket occurred")
@@ -299,7 +306,7 @@ function(e, t, n) {
         _cleanup(e) {
             u.default.Emitter.resume(), this._stopHeartbeater(), this._clearHelloTimeout();
             let t = this.webSocket;
-            this.webSocket = null, null != t && (t.onopen = k, t.onmessage = k, t.onerror = k, t.onclose = k, null == e || e(t)), this.gatewayBackoff.cancel(), this.compressionHandler.close(), this.compressionHandler = new L.default(B)
+            this.webSocket = null, null != t && (t.onopen = k, t.onmessage = k, t.onerror = k, t.onclose = k, null == e || e(t)), this.gatewayBackoff.cancel(), this.compressionHandler.close(), this.compressionHandler = (0, L.getCompressionHandler)(B)
         }
         _doResume() {
             var e;
@@ -468,7 +475,7 @@ function(e, t, n) {
                 if (!n || this.isSessionEstablished()) try {
                     null != this.webSocket ? this.webSocket.send(i) : w.warn("Attempted to send without a websocket that exists. Opcode: ".concat(e))
                 } catch (e) {} else w.warn("Attempted to send while not being in a connected state opcode: ".concat(e))
-            }), this.dispatcher = new M.default(this), this.gatewayBackoff = new a.default(1e3, 6e4), this.connectionState_ = C.default.CLOSED, this.webSocket = null, this.seq = 0, this.sessionId = null, this.token = null, this.initialHeartbeatTimeout = null, this.expeditedHeartbeatTimeout = null, this.lastHeartbeatAckTime = null, this.helloTimeout = null, this.heartbeatInterval = null, this.heartbeater = null, this.heartbeatAck = !0, this.connectionStartTime = 0, this.identifyStartTime = 0, this.nextReconnectIsImmediate = !1, this.compressionHandler = new L.default(B), this.hasConnectedOnce = !1, this.isFastConnect = !1, this.identifyCount = 0, this.iosGoingAwayEventCount = 0
+            }), this.dispatcher = new M.default(this), this.gatewayBackoff = new a.default(1e3, 6e4), this.connectionState_ = C.default.CLOSED, this.webSocket = null, this.seq = 0, this.sessionId = null, this.token = null, this.initialHeartbeatTimeout = null, this.expeditedHeartbeatTimeout = null, this.lastHeartbeatAckTime = null, this.helloTimeout = null, this.heartbeatInterval = null, this.heartbeater = null, this.heartbeatAck = !0, this.connectionStartTime = 0, this.identifyStartTime = 0, this.nextReconnectIsImmediate = !1, this.compressionHandler = (0, L.getCompressionHandler)(B), this.hasConnectedOnce = !1, this.isFastConnect = !1, this.identifyCount = 0, this.iosGoingAwayEventCount = 0
         }
     }
 }
