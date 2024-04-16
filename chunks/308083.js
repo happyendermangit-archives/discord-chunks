@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         AGE_TRAITS: function() {
-            return D
+            return v
         },
         ALL_TRAITS_SET: function() {
             return y
@@ -28,23 +28,23 @@ function(e, t, n) {
         ClanSetupSteps: function() {
             return s
         },
+        EMPTY_WILDCARD: function() {
+            return p
+        },
         GENSHIN_ID: function() {
-            return g
+            return L
         },
         HOISTED_SEARCH_APPLICATION_IDS_BY_PRIORITY: function() {
             return V
         },
         IDENTITY_TRAITS: function() {
-            return v
+            return M
         },
         LANGUAGES_SET: function() {
             return P
         },
         LOCALE_TIME_FORMAT: function() {
             return N
-        },
-        LOCALE_TRAITS: function() {
-            return M
         },
         MAX_GAME_HOURS: function() {
             return A
@@ -68,25 +68,25 @@ function(e, t, n) {
             return G
         },
         PLAYSTYLE_GROUPS: function() {
-            return p
+            return O
         },
         SUGGESTED_TRAITS_SET: function() {
             return U
         },
         VALORANT_ID: function() {
-            return C
+            return g
         },
         VALORANT_TRAITS: function() {
-            return L
+            return D
         },
         ensureUserClanData: function() {
             return B
         },
         getPlaystyleOptions: function() {
-            return R
+            return C
         },
         getPlaystyleTitle: function() {
-            return O
+            return R
         },
         toServerClanData: function() {
             return k
@@ -102,9 +102,10 @@ function(e, t, n) {
         h = 50,
         A = 7,
         m = c()("2024-01-01T00:00:00"),
-        N = "LT";
+        N = "LT",
+        p = "";
     (o = i || (i = {}))[o.NONE = 0] = "NONE", o[o.SOCIAL = 1] = "SOCIAL", o[o.CASUAL = 2] = "CASUAL", o[o.COMPETITIVE = 3] = "COMPETITIVE", o[o.CREATIVE = 4] = "CREATIVE", o[o.VERY_HARDCORE = 5] = "VERY_HARDCORE";
-    let p = {
+    let O = {
         0: "NONE",
         4: "NONE",
         1: "CASUAL",
@@ -113,7 +114,7 @@ function(e, t, n) {
         5: "COMPETITIVE"
     };
 
-    function O(e) {
+    function R(e) {
         switch (e) {
             case 1:
                 return E.default.Messages.CLAN_SETUP_PLAYSTYLE_SOCIAL_TITLE;
@@ -128,7 +129,7 @@ function(e, t, n) {
         }
     }
 
-    function R() {
+    function C() {
         return {
             1: {
                 type: 1,
@@ -156,13 +157,12 @@ function(e, t, n) {
             }
         }
     }(l = r || (r = {}))[l.INTRO_ANIMATION = 0] = "INTRO_ANIMATION", l[l.SETUP = 1] = "SETUP", l[l.SIGN = 2] = "SIGN", (u = s || (s = {}))[u.FOUNDATIONAL_INTRO = 0] = "FOUNDATIONAL_INTRO", u[u.GAMES = 1] = "GAMES", u[u.PLAYSTYLE = 2] = "PLAYSTYLE", u[u.PERSONALITY_INTRO = 3] = "PERSONALITY_INTRO", u[u.UTILITY_TRAITS = 4] = "UTILITY_TRAITS", u[u.INTERESTS = 5] = "INTERESTS", u[u.DESCRIPTION = 6] = "DESCRIPTION", u[u.PRIMETIME = 7] = "PRIMETIME", u[u.IDENTITY_INTRO = 8] = "IDENTITY_INTRO", u[u.CUSTOMIZE_TAG_BADGE = 9] = "CUSTOMIZE_TAG_BADGE", u[u.CUSTOMIZE_BANNER = 10] = "CUSTOMIZE_BANNER", u[u.APPLICATION_INTRO = 11] = "APPLICATION_INTRO", u[u.MEMBER_APPLICATION = 12] = "MEMBER_APPLICATION";
-    let C = "700136079562375258",
-        g = "762434991303950386",
-        L = ["Unrated", "Spike Rush", "Death Match", "Swift", "TDM", "Server: NA", "Server: EU", "Server: LATAM", "Server: KR", "Server: AP", "Voice ON", "Voice OFF"],
-        D = ["20+", "30+", "40+", "All Ages"],
-        v = ["LGBTQIA-Friendly", "All genders"],
-        M = ["NA", "LATAM", "EU West", "SEA", "OCE", "Global"],
-        y = new Set([...L, ...D, ...v, ...M]),
+    let g = "700136079562375258",
+        L = "762434991303950386",
+        D = ["Unrated", "Spike Rush", "Death Match", "Swift", "TDM", "Server: NA", "Server: EU", "Server: LATAM", "Server: KR", "Server: AP", "Voice ON", "Voice OFF"],
+        v = ["20+", "30+", "40+", "All Ages"],
+        M = ["LGBTQIA-Friendly", "All genders"],
+        y = new Set([...D, ...v, ...M]),
         P = new Set(E.default.getAvailableLocales().map(e => e.value)),
         U = new Set(["Anime", "Art and Craft", "Architecture", "Baseball", "Basketball", "Beauty", "Beer", "Board Games", "Books", "Cars", "Celebrities", "Coffee", "Coding", "Craft", "Design", "F1", "Fashion", "Fitness", "Food", "Football", "Healthcare", "Home Decor", "Houseplants", "K-Pop", "Knitting", "LEGO", "MARVEL", "Motorcycles", "Movies", "Music", "Nail Art", "Pets", "Photography", "Pok\xe9mon", "Programming", "Roman History", "Science", "Skiing", "Soccer", "Star Wars", "TCG", "TEA", "Tech", "Travel", "TV Shows", "Wine"]);
     (d = a || (a = {}))[d.PIXEL_RUSH = 0] = "PIXEL_RUSH", d[d.SCANLINES = 1] = "SCANLINES", d[d.TEXTURED = 2] = "TEXTURED", d[d.MAGIC = 3] = "MAGIC", d[d.CUSTOM = 4] = "CUSTOM";

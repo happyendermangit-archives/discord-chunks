@@ -11,12 +11,14 @@ function(e) {
         flex: "flex__7aeec",
         icon: "icon_e8e1b2",
         iconSmall: "iconSmall_cd3113",
+        input: "input_e60656",
         inputContainer: "inputContainer__1e798",
         interestsCategory: "interestsCategory__14517",
         interestsCategoryTitle: "interestsCategoryTitle__18aeb",
         interestsTag: "interestsTag__64479",
         introTitle: "introTitle__6a50e",
         languageSelect: "languageSelect__46f09",
+        optionalTag: "optionalTag__36ca8",
         playstyleOption: "playstyleOption__67567",
         playstyleSelect: "playstyleSelect_b7d88b",
         playstyleTitle: "playstyleTitle__00d17",
@@ -33,6 +35,8 @@ function(e) {
         timeSelectorRow: "timeSelectorRow_d86011",
         title: "title__20916",
         twoColumn: "twoColumn_b751a1",
-        utilityTagIcon: "utilityTagIcon__2b2c9"
+        utilityTagIcon: "utilityTagIcon__2b2c9",
+        wildcardInput: "wildcardInput_c66fdf",
+        wildcardRow: "wildcardRow__85791"
     }
 }

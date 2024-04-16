@@ -37,11 +37,11 @@ function(e, t, n) {
         m = n("889564"),
         N = n("687476"),
         p = n("761966"),
-        O = n("98278"),
-        R = n("642345"),
-        C = n("197115"),
-        g = n("703656"),
-        L = n("706454"),
+        O = n("563927"),
+        R = n("98278"),
+        C = n("642345"),
+        g = n("197115"),
+        L = n("703656"),
         D = n("170671"),
         v = n("944486"),
         M = n("914010"),
@@ -75,10 +75,7 @@ function(e, t, n) {
                 emojiId: t.emojiId,
                 currentGuildId: M.default.getGuildId()
             });
-            let n = (0, l.useStateFromStores)([L.default], () => L.default.locale.startsWith("en-")),
-                r = ":pizza:" === t.name && n ? z.default.Messages.POLLS_MARKETING_EASTER_EGG_PIZZA_EMOJI_DESCRIPTION.format({
-                    emojiName: t.name
-                }) : t.name;
+            let n = (0, O.default)(t.name);
             return (0, i.jsx)(u.Dialog, {
                 children: (0, i.jsx)(Y.MessagePopoutContent, {
                     children: (0, i.jsxs)(P.default, {
@@ -97,7 +94,7 @@ function(e, t, n) {
                                 className: X.__invalid_emojiName,
                                 variant: "text-md/semibold",
                                 children: (0, i.jsx)(G.default, {
-                                    children: r
+                                    children: n
                                 })
                             }), (0, i.jsx)(d.Text, {
                                 variant: "text-sm/normal",
@@ -123,7 +120,7 @@ function(e, t, n) {
                 size: 32,
                 canAnimate: !0
             }), _ = (n = null == n || n) || t.isDiscoverable(), c = () => {
-                t.isDiscoverable() ? (0, F.startLurking)(s, {}) : n && (0, g.transitionTo)(j.Routes.CHANNEL(s, v.default.getChannelId(s)))
+                t.isDiscoverable() ? (0, F.startLurking)(s, {}) : n && (0, L.transitionTo)(j.Routes.CHANNEL(s, v.default.getChannelId(s)))
             }, E = t.isDiscoverable() && null != t.presenceCount, I = () => {
                 let e = !r && !n;
                 return (0, i.jsxs)(i.Fragment, {
@@ -239,17 +236,17 @@ function(e, t, n) {
             let {
                 node: u,
                 expressionSourceGuild: S,
-                joinedEmojiSourceGuildRecord: g,
+                joinedEmojiSourceGuildRecord: O,
                 closePopout: L,
                 onToggleShowMoreEmojis: v,
                 guildEmoji: U,
                 demoMode: b = !1,
                 nonce: B
-            } = e, V = (0, l.useStateFromStores)([y.default], () => y.default.getCurrentUser()), F = (0, l.useStateFromStores)([M.default], () => M.default.getGuildId()), q = x.default.isPremium(V), J = null != F && (F === (null == S ? void 0 : S.id) || F === (null == g ? void 0 : g.id)), $ = null != g, et = null !== (t = null == S ? void 0 : S.isDiscoverable()) && void 0 !== t && t;
+            } = e, V = (0, l.useStateFromStores)([y.default], () => y.default.getCurrentUser()), F = (0, l.useStateFromStores)([M.default], () => M.default.getGuildId()), q = x.default.isPremium(V), J = null != F && (F === (null == S ? void 0 : S.id) || F === (null == O ? void 0 : O.id)), $ = null != O, et = null !== (t = null == S ? void 0 : S.isDiscoverable()) && void 0 !== t && t;
             b && (q = !0, et = !0, $ = !1, J = !1);
             let {
                 enabled: en
-            } = R.NitroBadgeOnEmojiHoverExperiment.useExperiment({
+            } = C.NitroBadgeOnEmojiHoverExperiment.useExperiment({
                 location: "CustomGuildEmojiPopout"
             }, {
                 autoTrackExposure: !0
@@ -293,7 +290,7 @@ function(e, t, n) {
                         L(), k.default.track(j.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
                             location_page: ei.page,
                             location_section: ei.section
-                        }), (0, O.navigateToPremiumMarketingPage)()
+                        }), (0, R.navigateToPremiumMarketingPage)()
                     }
                 }),
                 e_ = $ && es && !eo && (q && er || !q),
@@ -353,7 +350,7 @@ function(e, t, n) {
                                     children: ec
                                 })]
                             })]
-                        }), eT ? (0, i.jsx)(C.default, {
+                        }), eT ? (0, i.jsx)(g.default, {
                             className: X.ctaButton,
                             subscriptionTier: K.PremiumSubscriptionSKUs.TIER_2,
                             size: d.Button.Sizes.SMALL,
@@ -374,7 +371,7 @@ function(e, t, n) {
                             size: d.Button.Sizes.SMALL,
                             fullWidth: !0,
                             onClick: () => {
-                                L(), (null == g ? void 0 : g.id) != null && _.default.transitionToGuildSync(g.id, void 0, W.StaticChannelRoute.ROLE_SUBSCRIPTIONS, [E.default.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL])
+                                L(), (null == O ? void 0 : O.id) != null && _.default.transitionToGuildSync(O.id, void 0, W.StaticChannelRoute.ROLE_SUBSCRIPTIONS, [E.default.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL])
                             },
                             children: ea ? z.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_UPGRADE_UPSELL_BUTTON : z.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_PURCHASE_UPSELL_BUTTON
                         })]
@@ -390,7 +387,7 @@ function(e, t, n) {
                             className: X.guildTitle,
                             children: $ ? z.default.Messages.EMOJI_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION : z.default.Messages.EMOJI_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION
                         }), (0, i.jsx)(Z, {
-                            expressionSourceGuild: null != S ? S : h.default.createFromGuildRecord(g),
+                            expressionSourceGuild: null != S ? S : h.default.createFromGuildRecord(O),
                             hasJoinedExpressionSourceGuild: $,
                             isDisplayingJoinGuildButtonInPopout: eI
                         }), e && (0, i.jsxs)(i.Fragment, {
@@ -454,7 +451,7 @@ function(e, t, n) {
                         ...t
                     })
                 }, e.id)), !l && (_ === H.EmojiPopoutType.GET_PREMIUM ? (0, i.jsxs)(i.Fragment, {
-                    children: [(0, i.jsx)(C.default, {
+                    children: [(0, i.jsx)(g.default, {
                         subscriptionTier: K.PremiumSubscriptionSKUs.TIER_2,
                         buttonText: a.text,
                         className: X.ctaButton,
