@@ -3,6 +3,9 @@ function(e, t, n) {
     n.r(t), n.d(t, {
         CLIENT_THEMES_DATA_ATTRIBUTE: function() {
             return a
+        },
+        CUSTOM_THEME_BACKGROUND_CLASS_NAME: function() {
+            return o
         }
     });
     var i = n("470079"),

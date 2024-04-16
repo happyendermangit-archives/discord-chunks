@@ -2,16 +2,19 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return d
+            return E
         }
     }), n("47120");
     var i = n("470079"),
-        r = n("866442"),
-        s = n("442837"),
-        a = n("607070"),
-        o = n("792125"),
-        l = n("168631");
-    let u = Object.freeze({
+        r = n("120356"),
+        s = n.n(r),
+        a = n("866442"),
+        o = n("442837"),
+        l = n("607070"),
+        u = n("168551"),
+        d = n("792125"),
+        _ = n("168631");
+    let c = Object.freeze({
         "--profile-gradient-primary-color": "var(--background-secondary-alt)",
         "--profile-gradient-secondary-color": "var(--background-secondary-alt)",
         "--profile-gradient-overlay-color": "rgba(0, 0, 0, 0)",
@@ -20,38 +23,43 @@ function(e, t, n) {
         "--profile-body-background-color": "var(--background-floating)",
         "--profile-body-background-hover": "var(--background-modifier-hover)",
         "--profile-body-divider-color": "var(--background-modifier-accent)",
+        "--profile-body-border-color": "var(--border-faint)",
         "--profile-message-input-border-color": "var(--background-modifier-accent)",
         "--profile-note-background-color": "var(--background-tertiary)",
         "--profile-role-pill-background-color": "var(--background-secondary-alt)",
         "--profile-role-pill-border-color": "var(--interactive-normal)"
     });
 
-    function d(e) {
+    function E(e) {
         let {
             theme: t,
             primaryColor: n,
-            secondaryColor: d
-        } = e, [_, c] = (0, s.useStateFromStoresArray)([a.default], () => [a.default.desaturateUserColors, a.default.syncProfileThemeWithUserTheme]), E = (0, l.useProfileThemeValues)(t), I = (0, l.useAvatarBorderColor)(t, n, c), T = (0, l.useDividerColor)(t, n), f = (0, l.useMessageInputBorderColor)(t, d), S = c ? null == E ? void 0 : E.overlaySyncedWithUserTheme : null == E ? void 0 : E.overlay;
+            secondaryColor: r
+        } = e, [E, I] = (0, o.useStateFromStoresArray)([l.default], () => [l.default.desaturateUserColors, l.default.syncProfileThemeWithUserTheme]), T = (0, _.useProfileThemeValues)(t), f = (0, _.useAvatarBorderColor)(t, n, I), S = (0, _.useDividerColor)(t, n), h = (0, _.useMessageInputBorderColor)(t, r), A = I ? null == T ? void 0 : T.overlaySyncedWithUserTheme : null == T ? void 0 : T.overlay;
         return {
             profileThemeStyle: (0, i.useMemo)(() => {
-                if (null == n || null == d || null == E || null == I || null == T || null == f || null == S) return u;
-                let e = (e, t) => (0, r.int2hsl)(e, _, null, t);
+                if (null == n || null == r || null == T || null == f || null == S || null == h || null == A) return c;
+                let e = (e, t) => (0, a.int2hsl)(e, E, null, t);
                 return {
                     "--profile-gradient-primary-color": e(n),
-                    "--profile-gradient-secondary-color": e(d),
-                    "--profile-gradient-overlay-color": S,
-                    "--profile-gradient-button-color": e((0, l.calculateButtonColor)(n)),
-                    "--profile-avatar-border-color": e(I),
-                    "--profile-body-background-color": E.sectionBox,
-                    "--profile-body-background-hover": E.profileBodyBackgroundHover,
-                    "--profile-body-divider-color": e(T, E.dividerOpacity),
-                    "--profile-message-input-border-color": e(f),
-                    "--profile-note-background-color": E.noteBackgroundColor,
-                    "--profile-role-pill-background-color": E.rolePillBackgroundColor,
-                    "--profile-role-pill-border-color": E.rolePillBorderColor
+                    "--profile-gradient-secondary-color": e(r),
+                    "--profile-gradient-overlay-color": A,
+                    "--profile-gradient-button-color": e((0, _.calculateButtonColor)(n)),
+                    "--profile-avatar-border-color": e(f),
+                    "--profile-body-background-color": T.sectionBox,
+                    "--profile-body-background-hover": T.profileBodyBackgroundHover,
+                    "--profile-body-divider-color": e(S, T.dividerOpacity),
+                    "--profile-body-border-color": e(S, .12),
+                    "--profile-message-input-border-color": e(h),
+                    "--profile-note-background-color": T.noteBackgroundColor,
+                    "--profile-role-pill-background-color": T.rolePillBackgroundColor,
+                    "--profile-role-pill-border-color": T.rolePillBorderColor
                 }
-            }, [n, d, I, _, T, f, S, E]),
-            profileThemeClassName: (0, o.getThemeClass)(t)
+            }, [n, r, f, E, S, h, A, T]),
+            profileThemeClassName: s()((0, d.getThemeClass)(t), {
+                [u.CUSTOM_THEME_BACKGROUND_CLASS_NAME]: null != n,
+                "custom-profile-theme": null != n
+            })
         }
     }
 }
