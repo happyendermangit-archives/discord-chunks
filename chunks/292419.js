@@ -47,6 +47,7 @@ function(e, t, n) {
                 case i.ComponentType.ROLE_SELECT:
                 case i.ComponentType.MENTIONABLE_SELECT:
                 case i.ComponentType.CHANNEL_SELECT:
+                case i.ComponentType.TEXT:
                     return !0
             }
         };
@@ -114,6 +115,10 @@ function(e, t, n) {
                 case i.ComponentType.CHANNEL_SELECT:
                     return {
                         type: i.ComponentType.CHANNEL_SELECT, id: I(r), customId: t.custom_id, disabled: t.disabled, placeholder: null !== (f = t.placeholder) && void 0 !== f ? f : l.default.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER, minValues: t.min_values, maxValues: t.max_values, channelTypes: t.channel_types, defaultValues: t.default_values
+                    };
+                case i.ComponentType.TEXT:
+                    return {
+                        type: i.ComponentType.TEXT, id: I(r), items: t.items
                     };
                 default:
                     return null

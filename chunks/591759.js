@@ -71,7 +71,7 @@ function(e, t, n) {
             }
         },
         makeUrl: function(e) {
-            let t = __DEV__ ? window.GLOBAL_ENV.INVITE_HOST : location.host;
+            let t = (0, location.host);
             return "".concat(location.protocol, "//").concat(t).concat(e)
         }
     }

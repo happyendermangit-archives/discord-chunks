@@ -2,10 +2,16 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
+            return _
+        },
+        getInitialParserState: function() {
+            return d
+        },
+        getInitialParserStateFromMessage: function() {
             return u
         },
         renderAutomodMessageMarkup: function() {
-            return d
+            return c
         }
     }), n("47120"), n("757143"), n("865427");
     var i = n("830121"),
@@ -15,41 +21,63 @@ function(e, t, n) {
     let o = new Set([a.MessageEmbedTypes.IMAGE, a.MessageEmbedTypes.GIFV]),
         l = new Set(["strong", "em", "u", "text", "inlineCode", "s", "spoiler"]);
 
-    function u(e) {
+    function u(e, t) {
+        let n = d({
+                channelId: e.channel_id,
+                messageId: e.id,
+                renderOptions: t
+            }),
+            i = null != e.webhookId;
+        return {
+            ...n,
+            allowLinks: i || n.allowLinks,
+            allowEmojiLinks: i,
+            mentionChannels: e.mentionChannels
+        }
+    }
+
+    function d(e) {
+        let {
+            channelId: t,
+            messageId: n,
+            renderOptions: i
+        } = e;
+        return {
+            channelId: t,
+            messageId: n,
+            allowLinks: !!i.allowLinks,
+            allowDevLinks: !!i.allowDevLinks,
+            formatInline: !!i.formatInline,
+            noStyleAndInteraction: !!i.noStyleAndInteraction,
+            allowHeading: !!i.allowHeading,
+            allowList: !!i.allowList,
+            previewLinkTarget: !!i.previewLinkTarget,
+            disableAnimatedEmoji: !!i.disableAnimatedEmoji,
+            isInteracting: !!i.isInteracting,
+            allowEmojiLinks: !1,
+            disableAutoBlockNewlines: !0,
+            mentionChannels: [],
+            muted: !1
+        }
+    }
+
+    function _(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         return function(e, t, n) {
-            var r, a;
             let {
-                toAST: u = !1,
-                hideSimpleEmbedContent: d = !0,
-                formatInline: E = !1,
-                postProcessor: I
-            } = n, T = !1;
-            let f = e(t.content, !0, (r = t, a = n, {
-                allowLinks: null != r.webhookId || !!a.allowLinks,
-                allowDevLinks: !!a.allowDevLinks,
-                allowEmojiLinks: null != r.webhookId,
-                channelId: r.channel_id,
-                messageId: r.id,
-                mentionChannels: r.mentionChannels,
-                isInteracting: !!a.isInteracting,
-                formatInline: !!a.formatInline,
-                noStyleAndInteraction: !!a.noStyleAndInteraction,
-                allowHeading: !!a.allowHeading,
-                allowList: !!a.allowList,
-                previewLinkTarget: !!a.previewLinkTarget,
-                disableAnimatedEmoji: !!a.disableAnimatedEmoji,
-                disableAutoBlockNewlines: !0,
-                muted: !1
-            }), (e, n) => (!Array.isArray(e) && (e = [e]), d && (e = function(e, t) {
+                toAST: r = !1,
+                hideSimpleEmbedContent: a = !0,
+                formatInline: d = !1,
+                postProcessor: _
+            } = n, c = !1, T = e(t.content, !0, u(t, n), (e, n) => (!Array.isArray(e) && (e = [e]), a && (e = function(e, t) {
                 if (1 !== e.length || 1 !== t.length) return e;
                 let n = e[0],
                     i = t[0];
                 return ("link" === n.type || "attachmentLink" === n.type) && o.has(i.type) && (0, s.isEmbedInline)(i) ? [] : e
-            }(e, t.embeds)), !E && (e = function(e, t) {
-                return t ? _(e) : ("paragraph" === e[0].type && e[0].content instanceof Array && (e[0].content = _(e[0].content)), e)
-            }(e, n)), T = function(e, t) {
-                return t ? c(e) : "paragraph" === e[0].type && e[0].content instanceof Array && c(e[0].content)
+            }(e, t.embeds)), !d && (e = function(e, t) {
+                return t ? E(e) : ("paragraph" === e[0].type && e[0].content instanceof Array && (e[0].content = E(e[0].content)), e)
+            }(e, n)), c = function(e, t) {
+                return t ? I(e) : "paragraph" === e[0].type && e[0].content instanceof Array && I(e[0].content)
             }(e = function(e) {
                 let t = e.some(e => "link" !== e.type || !1);
                 return e.filter(e => {
@@ -57,19 +85,19 @@ function(e, t, n) {
                         r = (0, i.parseQuestsEmbedCode)(e.target);
                     return !(n && null != r && !t)
                 })
-            }(e), n), E && (e = function e(t) {
+            }(e), n), d && (e = function e(t) {
                 return t.forEach(t => {
                     l.has(t.type) && null != t.content && (Array.isArray(t.content) ? e(t.content) : t.content = t.content.replace(/\n/g, " "))
                 }), t
-            }(e)), null != I && (e = I(e, n)), e));
+            }(e)), null != _ && (e = _(e, n)), e));
             return {
-                hasSpoilerEmbeds: T,
-                content: f
+                hasSpoilerEmbeds: c,
+                content: T
             }
         }(t.formatInline ? r.default.parseInlineReply : r.default.parse, e, t)
     }
 
-    function d(e, t, n) {
+    function c(e, t, n) {
         var i;
         return i = r.default.parseAutoModerationSystemMessage, i(e, !0, {
             allowLinks: !1,
@@ -89,7 +117,7 @@ function(e, t, n) {
         }, e => (!Array.isArray(e) && (e = [e]), e))
     }
 
-    function _(e) {
+    function E(e) {
         if (e.some(e => "emoji" !== e.type && "customEmoji" !== e.type && "soundboard" !== e.type && ("string" != typeof e.content || "" !== e.content.trim()) && !0)) return e;
         let t = 0;
         return (e.forEach(e => {
@@ -99,7 +127,7 @@ function(e, t, n) {
         }), e)
     }
 
-    function c(e) {
+    function I(e) {
         return e.some(e => "spoiler" === e.type && Array.isArray(e.content) && e.content.some(e => "link" === e.type || "attachmentLink" === e.type))
     }
 }
