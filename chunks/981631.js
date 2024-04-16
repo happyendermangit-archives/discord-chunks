@@ -922,6 +922,7 @@ function(_, E, e) {
             GUILD_FEATURE_ACK: (_, E, e) => "/guilds/".concat(_, "/ack/").concat(e, "/").concat(E),
             USER_NON_CHANNEL_ACK: (_, E) => "/users/@me/".concat(E, "/").concat(_, "/ack"),
             BULK_ACK: "/read-states/ack-bulk",
+            DM_SETTINGS_UPSELL_ACK: _ => "/users/@me/guilds/".concat(_, "/member/ack-dm-upsell-settings"),
             GUILD_CHANNELS: _ => "/guilds/".concat(_, "/channels"),
             GUILD_MEMBERS: _ => "/guilds/".concat(_, "/members"),
             GUILD_MEMBER: (_, E) => "/guilds/".concat(_, "/members/").concat(E),

@@ -1,11 +1,17 @@
 function(e, t, n) {
     "use strict";
-    n.r(t), n("47120");
-    var i = n("147913"),
-        r = n("25733");
-    class s extends i.default {
+    n.r(t), n.d(t, {
+        acknowledgeDmSettingsUpsell: function() {
+            return l
+        }
+    }), n("47120");
+    var i = n("544891"),
+        r = n("147913"),
+        s = n("25733"),
+        a = n("981631");
+    class o extends r.default {
         handleDmSettingsUpsellShow(e) {
-            r.default.openDmSettingsUpsellModal(e.guildId)
+            s.default.openDmSettingsUpsellModal(e.guildId)
         }
         constructor(...e) {
             var t, n, i;
@@ -19,5 +25,11 @@ function(e, t, n) {
             }) : t[n] = i
         }
     }
-    t.default = new s
+
+    function l(e) {
+        return i.HTTP.post({
+            url: a.Endpoints.DM_SETTINGS_UPSELL_ACK(e)
+        })
+    }
+    t.default = new o
 }
