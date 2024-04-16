@@ -23,6 +23,7 @@ function(e, t, n) {
             _experimentCacheInitialized: !1,
             _experimentEnabled: !1,
             getExperimentEnabled() {
+                if (!(0, l.isMainTabsExperimentPlatformSupported)()) return !1;
                 let {
                     _experimentCacheInitialized: e
                 } = t();

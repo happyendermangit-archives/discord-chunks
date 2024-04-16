@@ -549,24 +549,27 @@ function(e, t, n) {
                     }, {
                         autoTrackExposure: !0
                     });
-                    i && e.setExperimentFlag(eS.ExperimentFlags.SIGNAL_H265_SUPPORT, !0)
+                    if (i) {
+                        var u;
+                        (0, et.isMac)() && (null === (u = window.DiscordNative) || void 0 === u ? void 0 : u.os.arch) === "arm64" && e.setExperimentFlag(eS.ExperimentFlags.SIGNAL_H265_SUPPORT, !0)
+                    }
                 }
                 let {
-                    signalAV1Support: u
+                    signalAV1Support: d
                 } = y.default.getCurrentConfig({
                     location: "f627ab_10"
                 }, {
                     autoTrackExposure: !0
                 });
-                u && e.setExperimentFlag(eS.ExperimentFlags.SIGNAL_AV1_SUPPORT, !0);
+                d && e.setExperimentFlag(eS.ExperimentFlags.SIGNAL_AV1_SUPPORT, !0);
                 let {
-                    allowSettingFullbandAndroid: d
+                    allowSettingFullbandAndroid: _
                 } = F.default.getCurrentConfig({
                     location: "f627ab_14"
                 }, {
                     autoTrackExposure: !0
                 });
-                if (d && eR.setHasFullbandPerformance((0, L.hasPerformanceForKrispFullband)()), (0, C.default)(i)) {
+                if (_ && eR.setHasFullbandPerformance((0, L.hasPerformanceForKrispFullband)()), (0, C.default)(i)) {
                     let t = R.default.getSettings();
                     e.setExperimentFlag(eS.ExperimentFlags.STREAMER_CLIP, t.clipsEnabled);
                     let {
@@ -623,11 +626,11 @@ function(e, t, n) {
                         type: "MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING"
                     })))
                 });
-                let _ = new A.Timeout;
+                let c = new A.Timeout;
                 e.on(S.BaseConnectionEvent.SoundshareTrace, e => {
                     switch (e.type) {
                         case "soundshare_attach_requested":
-                            _.start(e4, () => {
+                            c.start(e4, () => {
                                 m.default.dispatch({
                                     type: "MEDIA_ENGINE_SOUNDSHARE_FAILED",
                                     errorMessage: "Sound Hook Failed"
@@ -638,14 +641,14 @@ function(e, t, n) {
                             let t = e.reason,
                                 n = e.code,
                                 i = e.retry;
-                            (null == s ? void 0 : s.desktopSource) != null && (te(null == s ? void 0 : s.desktopSource, n, t, i), !i && (_.stop(), m.default.wait(() => m.default.dispatch({
+                            (null == s ? void 0 : s.desktopSource) != null && (te(null == s ? void 0 : s.desktopSource, n, t, i), !i && (c.stop(), m.default.wait(() => m.default.dispatch({
                                 type: "MEDIA_ENGINE_SOUNDSHARE_FAILED",
                                 errorMessage: t,
                                 errorCode: n
                             }))));
                             break;
                         case "soundshare_state_transition":
-                            4 === e.newState && (_.stop(), m.default.wait(() => m.default.dispatch({
+                            4 === e.newState && (c.stop(), m.default.wait(() => m.default.dispatch({
                                 type: "MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING"
                             })))
                     }
@@ -699,7 +702,7 @@ function(e, t, n) {
                         context: e.context
                     })
                 }), e.on(S.BaseConnectionEvent.Destroy, () => {
-                    _.stop()
+                    c.stop()
                 }), e.setBitRate(ea.default.bitrate), e.applyVideoQualityMode(ec.default.mode)
             }), eR.on(S.MediaEngineEvent.DeviceChange, (e, t, n) => {
                 m.default.dispatch({
