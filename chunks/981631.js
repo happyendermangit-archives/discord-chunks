@@ -1116,7 +1116,6 @@ function(_, E, e) {
             RESEND_PHONE: "/phone-verifications/resend",
             CONNECTIONS: "/users/@me/connections",
             CONNECTIONS_AUTHORIZE: _ => "/connections/".concat(_, "/authorize"),
-            CONNECTIONS_AUTHORIZE_CONTINUATION: _ => "/connections/".concat(_, "/authorize?continuation=true"),
             CONNECTIONS_AUTHORIZE_LINK: (_, E) => "/connections/".concat(_, "/authorize?two_way_link=true&two_way_link_type=").concat(E),
             CONNECTIONS_AUTHORIZE_LINK_DEVICE: (_, E) => "/connections/".concat(_, "/authorize?two_way_link=true&two_way_link_type=").concat(oy.TwoWayLinkType.DEVICE_CODE, "&two_way_user_code=").concat(E),
             CONNECTIONS_CALLBACK: _ => "/connections/".concat(_, "/callback"),
@@ -1124,10 +1123,6 @@ function(_, E, e) {
             CONNECTION_REFRESH: (_, E) => "/users/@me/connections/".concat(_, "/").concat(E, "/refresh"),
             CONNECTION_SYNC_CONTACTS: "/users/@me/connections/contacts/@me/external-friend-list-entries",
             CONNECTION_ACCESS_TOKEN: (_, E) => "/users/@me/connections/".concat(_, "/").concat(E, "/access-token"),
-            CONNECTIONS_CALLBACK_CONTINUATION: function(_) {
-                let E = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-                return "/connections/".concat(_, "/callback-continuation").concat(null != E ? "/".concat(E) : "")
-            },
             CONNECTIONS_LINK_DISPATCH_AUTH_CALLBACK: _ => "/connections/".concat(_, "/link-dispatch-auth-callback"),
             XBOX_HANDOFF: "/consoles/xbox-handoff",
             NOTES: "/users/@me/notes",
