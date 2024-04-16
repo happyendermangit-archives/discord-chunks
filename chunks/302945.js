@@ -24,33 +24,34 @@ function(e, t, n) {
     function h(e) {
         let {
             premiumUpsellType: t,
-            className: n
-        } = e, s = (0, l.useStateFromStores)([d.default], () => d.default.affinities), h = s.length > 0 && S.includes(t), A = _.default.useExperiment({
+            className: n,
+            forceShow: s = !1
+        } = e, h = (0, l.useStateFromStores)([d.default], () => d.default.affinities), A = h.length > 0 && S.includes(t), m = _.default.useExperiment({
             location: "HD Streaming Upsell"
         }, {
-            autoTrackExposure: h,
-            disable: !h
-        }).enabled, m = (0, l.useStateFromStores)([d.default], () => d.default.hasFetched);
+            autoTrackExposure: A,
+            disable: !A || s
+        }).enabled || s && A, N = (0, l.useStateFromStores)([d.default], () => d.default.hasFetched);
         r.useEffect(() => {
-            !m && u.getNitroAffinity()
-        }, [m]);
-        let N = s.map((e, t) => (0, i.jsx)(c.AvatarWrapper, {
+            !N && u.getNitroAffinity()
+        }, [N]);
+        let p = h.map((e, t) => (0, i.jsx)(c.AvatarWrapper, {
             affinity: e,
-            applyMask: t !== s.length - 1,
+            applyMask: t !== h.length - 1,
             size: I.AvatarSizes.SIZE_20
         }, e.id));
-        return A ? (0, i.jsxs)("div", {
+        return m ? (0, i.jsxs)("div", {
             className: a()(f.container, n),
             children: [(0, i.jsx)("div", {
                 className: f.iconContainer,
-                children: N
+                children: p
             }), (0, i.jsx)("div", {
                 className: f.textContainer,
                 children: (0, i.jsx)(o.Text, {
                     variant: "text-sm/medium",
                     children: (() => {
                         if (t === E.PremiumUpsellTypes.STREAM_QUALITY_UPSELL) return T.default.Messages.STREAM_PREMIUM_AFFINITY_UPSELL.format({
-                            numFriends: s.length
+                            numFriends: h.length
                         });
                         return null
                     })()

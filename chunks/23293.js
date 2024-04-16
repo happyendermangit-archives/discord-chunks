@@ -2,69 +2,82 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return I
+            return S
         }
     });
     var i = n("735250");
     n("470079");
-    var r = n("442837"),
-        s = n("420660"),
-        a = n("199902"),
-        o = n("158776"),
-        l = n("78675"),
-        u = n("131640"),
-        d = n("228168"),
-        _ = n("981631"),
-        c = n("231338"),
-        E = n("247076");
+    var r = n("120356"),
+        s = n.n(r),
+        a = n("442837"),
+        o = n("420660"),
+        l = n("199902"),
+        u = n("158776"),
+        d = n("78675"),
+        _ = n("438163"),
+        c = n("131640"),
+        E = n("228168"),
+        I = n("981631"),
+        T = n("231338"),
+        f = n("247076");
 
-    function I(e) {
+    function S(e) {
         let {
             user: t,
             displayProfile: n,
-            disableUserProfileLink: I,
-            guildId: T,
-            channelId: f,
-            onClose: S
+            disableUserProfileLink: r,
+            guildId: S,
+            channelId: h,
+            onClose: A
         } = e, {
-            activity: h,
-            status: A,
-            isMobile: m
-        } = (0, r.useStateFromStoresObject)([a.default, o.default], () => {
-            let e = null != a.default.getAnyStreamForUser(t.id);
+            activity: m,
+            customStatusActivity: N,
+            status: p,
+            isMobile: O
+        } = (0, a.useStateFromStoresObject)([l.default, u.default], () => {
+            let e = null != l.default.getAnyStreamForUser(t.id);
             return {
-                activity: o.default.findActivity(t.id, t => {
+                activity: u.default.findActivity(t.id, t => {
                     let {
                         type: n
                     } = t;
-                    return e ? n === _.ActivityTypes.PLAYING : n !== _.ActivityTypes.CUSTOM_STATUS
+                    return e ? n === I.ActivityTypes.PLAYING : n !== I.ActivityTypes.CUSTOM_STATUS
                 }),
-                status: o.default.getStatus(t.id),
-                isMobile: o.default.isMobileOnline(t.id)
+                customStatusActivity: u.default.findActivity(t.id, e => {
+                    let {
+                        type: t
+                    } = e;
+                    return t === I.ActivityTypes.CUSTOM_STATUS
+                }),
+                status: u.default.getStatus(t.id),
+                isMobile: u.default.isMobileOnline(t.id)
             }
+        }), R = s()(f.header, {
+            [f.noCustomStatusMargin]: null == N
         });
         return (0, i.jsxs)("header", {
-            className: E.header,
-            children: [(0, i.jsx)(l.default, {
+            className: R,
+            children: [(0, i.jsx)(d.default, {
                 user: t,
                 displayProfile: n,
-                guildId: T,
-                profileType: d.UserProfileTypes.BITE_SIZE,
+                guildId: S,
+                profileType: E.UserProfileTypes.BITE_SIZE,
                 hasProfileEffect: (null == n ? void 0 : n.profileEffectId) != null
-            }), (0, i.jsx)(u.UserPopoutAvatar, {
+            }), (0, i.jsx)(c.UserPopoutAvatar, {
                 user: t,
                 displayProfile: n,
-                status: (0, s.default)(h) ? c.StatusTypes.STREAMING : A,
-                isMobile: m,
-                guildId: T,
-                channelId: f,
-                onClose: S,
-                disableUserProfileLink: I,
+                status: (0, o.default)(m) ? T.StatusTypes.STREAMING : p,
+                isMobile: O,
+                guildId: S,
+                channelId: h,
+                onClose: A,
+                disableUserProfileLink: r,
                 hasBanner: (null == n ? void 0 : n.banner) != null,
                 hasProfileEffect: (null == n ? void 0 : n.profileEffectId) != null,
-                profileType: d.UserProfileTypes.BITE_SIZE
-            }), (0, i.jsx)("div", {
-                className: E.customStatus
+                profileType: E.UserProfileTypes.BITE_SIZE
+            }), null != N && (0, i.jsx)(_.UserProfileCustomStatusBubble, {
+                positionStyle: f.statusBubblePosition,
+                statusActivity: N
             })]
         })
     }
