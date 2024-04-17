@@ -443,7 +443,7 @@ function(e) {
         CLAN_DISCOVERY_TOP_PICKS_SUBTITLE: "Best {playstyle} Gaming Guilds to join based on your preferences",
         CLAN_DISCOVERY_GAME_FILTER: "{count, number} Games",
         CLAN_DISCOVERY_PRIMETIME_FILTER: "Prime Time",
-        CLAN_DISCOVERY_MEMBER_COUNT: "{count, number} Members",
+        CLAN_DISCOVERY_MEMBER_COUNT: "{count, plural, =1 {1 Member} other {{count} Members}}",
         CLAN_DISCOVERY_PROFILE_TITLE: "Answer a few questions to join!",
         CLAN_DISCOVERY_PROFILE_SUBTITLE: "The Gaming Guild leader will get back to you shortly after you submit.",
         CLAN_DISCOVERY_PLAYSTYLE_TITLE: "What's your playstyle?",
@@ -453,6 +453,8 @@ function(e) {
         CLAN_DISCOVERY_GAME_TITLE: "What games do you play?",
         CLAN_DISCOVERY_GAME_SUBTITLE: "We'll recommend Gaming Guilds to join based on games you play.",
         CLAN_DISCOVERY_GAMES_SEARCH_PLACEHOLDER: "Look for a Game...",
-        CLAN_DISCOVERY_GAMES_SELECTED: "Selected Games"
+        CLAN_DISCOVERY_GAMES_SELECTED: "Selected Games",
+        CLAN_DISCOVERY_TRAIT_OVERFLOW: "+ {count, number} more",
+        CLAN_DISCOVERY_UNKNOWN_PLAYSTYLE: "Unknown"
     })
 }
