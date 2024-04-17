@@ -73,7 +73,7 @@ function(e, t, n) {
             void 0 !== t && (0, d.isStaffEnv)(t) && (c.overrides[n] = {
                 available: i,
                 activateSuccess: r
-            }, null == c.perksDemos && (c.perksDemos = {}), c.perksDemos[n] = i || !1, c.lastFetched = null)
+            }, null == c.perksDemos && (c.perksDemos = {}), c.perksDemos[n] = i || !1, c.activated[n] = !1, c.lastFetched = null)
         }
     })
 }

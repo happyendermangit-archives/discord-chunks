@@ -260,34 +260,33 @@ function(e, t, n) {
             }), w(this, "handleActivityLaunchFail", e => {
                 let {
                     error: t,
-                    applicationId: n,
-                    guildId: i
+                    applicationId: n
                 } = e;
-                if (delete k[n], null == i) return;
-                let r = G.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC;
+                delete k[n];
+                let i = G.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC;
                 switch (t.code) {
                     case b.AbortCodes.INVALID_ACTIVITY_LAUNCH_NO_ACCESS:
-                        r = G.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_ACCESS;
+                        i = G.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_ACCESS;
                         break;
                     case b.AbortCodes.INVALID_ACTIVITY_LAUNCH_PREMIUM_TIER:
-                        r = G.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_PREMIUM;
+                        i = G.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_PREMIUM;
                         break;
                     case b.AbortCodes.INVALID_ACTIVITY_LAUNCH_CONCURRENT_ACTIVITIES:
-                        r = G.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_CONCURRENT;
+                        i = G.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_CONCURRENT;
                         break;
                     case b.AbortCodes.INVALID_PERMISSIONS:
-                        r = G.default.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS;
+                        i = G.default.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS;
                         break;
                     case b.AbortCodes.INVALID_ACTIVITY_LAUNCH_AFK_CHANNEL:
-                        r = G.default.Messages.EMBEDDED_ACTIVITIES_INVALID_CHANNEL;
+                        i = G.default.Messages.EMBEDDED_ACTIVITIES_INVALID_CHANNEL;
                         break;
                     case b.AbortCodes.INVALID_ACTIVITY_LAUNCH_AGE_GATED:
-                        r = G.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_AGE_GATE;
+                        i = G.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_AGE_GATE;
                         break;
                     case b.AbortCodes.INVALID_ACTIVITY_LAUNCH_DEV_PREVIEW_GUILD_SIZE:
-                        r = G.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GUILD_SIZE
+                        i = G.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GUILD_SIZE
                 }
-                this.showLaunchErrorModal(r)
+                this.showLaunchErrorModal(i)
             }), w(this, "superHandleRPCDisconnect", e => {
                 let {
                     reason: t,
