@@ -5,7 +5,6 @@ function(e) {
         buttonsContainer: "buttonsContainer_a90621",
         clickable: "clickable_b41429",
         closeButton: "closeButton_e88b7d",
-        currentStep: "currentStep_f2459e",
         fadeIn: "fadeIn__0663f",
         fadeOut: "fadeOut_de0df3",
         finishButton: "finishButton__8590c",
