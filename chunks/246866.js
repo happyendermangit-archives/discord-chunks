@@ -60,7 +60,7 @@ function(e, t, n) {
             if ("number" != typeof E) throw Error("Unexpected null width");
             let e = 0,
                 t = 0,
-                n = E - 24,
+                n = E - 32,
                 i = n - 32;
             for (let r = 0; r < 2; r++) {
                 t = 0;
