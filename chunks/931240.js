@@ -39,7 +39,7 @@ function(e, t, n) {
                     description: t.description,
                     play_style: t.playstyle,
                     search_terms: Array.from(null !== (d = t.interests) && void 0 !== d ? d : new Set),
-                    game_application_ids: Array.from((null !== (_ = t.selectedGames) && void 0 !== _ ? _ : new Map).keys()),
+                    game_application_ids: Array.from(null !== (_ = t.gameApplicationIds) && void 0 !== _ ? _ : new Set),
                     prime_time: I,
                     verification_form: {
                         form_fields: null !== (c = null === (u = t.verificationForm) || void 0 === u ? void 0 : u.formFields) && void 0 !== c ? c : []
@@ -95,18 +95,18 @@ function(e, t, n) {
         })
     }
     let E = e => {
-        var t, n, i, r, s;
+        var t, n, i, r, s, a;
         return {
             tag: e.tag,
-            selectedGames: new Map,
-            interests: new Set(null !== (i = e.search_terms) && void 0 !== i ? i : []),
+            gameApplicationIds: new Set(null !== (i = e.game_application_ids) && void 0 !== i ? i : []),
+            interests: new Set(null !== (r = e.search_terms) && void 0 !== r ? r : []),
             playstyle: e.play_style,
             description: e.description,
             wildcardDescriptors: e.wildcard_descriptors,
             primetime: e.prime_time.map(e => (0, o.guildEventToPrimeTimeSelection)(e)),
             verificationForm: {
-                description: null !== (r = null === (t = e.verification_form) || void 0 === t ? void 0 : t.description) && void 0 !== r ? r : "",
-                formFields: null !== (s = null === (n = e.verification_form) || void 0 === n ? void 0 : n.form_fields) && void 0 !== s ? s : [],
+                description: null !== (s = null === (t = e.verification_form) || void 0 === t ? void 0 : t.description) && void 0 !== s ? s : "",
+                formFields: null !== (a = null === (n = e.verification_form) || void 0 === n ? void 0 : n.form_fields) && void 0 !== a ? a : [],
                 version: ""
             },
             badgeKind: e.badge,
