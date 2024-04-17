@@ -1955,7 +1955,8 @@ function(_, E, e) {
     });
     (IO = _K || (_K = {}))[IO.UNPAID = 0] = "UNPAID", IO[IO.ACTIVE = 1] = "ACTIVE", IO[IO.PAST_DUE = 2] = "PAST_DUE", IO[IO.CANCELED = 3] = "CANCELED", IO[IO.ENDED = 4] = "ENDED", IO[IO.ACCOUNT_HOLD = 6] = "ACCOUNT_HOLD", IO[IO.BILLING_RETRY = 7] = "BILLING_RETRY", IO[IO.PAUSED = 8] = "PAUSED", IO[IO.PAUSE_PENDING = 9] = "PAUSE_PENDING";
     let Ro = {
-        ALL_PAUSE: new Set([9, 8])
+        ALL_PAUSE: new Set([9, 8]),
+        ALL_PAUSEABLE: new Set([1, 8])
     };
     (In = _V || (_V = {}))[In.OPEN = 1] = "OPEN", In[In.PAID = 2] = "PAID", In[In.VOID = 3] = "VOID", In[In.UNCOLLECTIBLE = 4] = "UNCOLLECTIBLE";
     let Ra = "Price changed";
