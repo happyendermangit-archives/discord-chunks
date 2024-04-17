@@ -327,6 +327,7 @@ function(_, E, e) {
             SEND_MESSAGES_IN_THREADS: _t.getFlag(38),
             SEND_VOICE_MESSAGES: _t.getFlag(46),
             USE_CLYDE_AI: _t.getFlag(47),
+            SEND_POLLS: _t.getFlag(49),
             CONNECT: _t.getFlag(20),
             SPEAK: _t.getFlag(21),
             MUTE_MEMBERS: _t.getFlag(22),

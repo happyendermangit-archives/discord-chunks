@@ -78,7 +78,7 @@ function(e, t, n) {
 
     function O(e) {
         let t = h.ChannelTypesSets.POLLS.has(null == e ? void 0 : e.type),
-            n = (0, o.useStateFromStores)([c.default], () => c.default.can(h.Permissions.SEND_MESSAGES, e)),
+            n = (0, o.useStateFromStores)([c.default], () => c.default.can(h.Permissions.SEND_MESSAGES, e) && c.default.can(h.Permissions.SEND_POLLS, e)),
             {
                 enabled: i
             } = f.CreateGuildPollsExperiment.useExperiment({
@@ -94,7 +94,7 @@ function(e, t, n) {
                 location: "useCanPostPollsInChannel"
             }, {
                 autoTrackExposure: !0,
-                disable: !t
+                disable: !t || !(null == e ? void 0 : e.isPrivate()) && !n
             });
         return i || r
     }
