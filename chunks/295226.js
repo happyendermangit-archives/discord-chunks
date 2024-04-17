@@ -31,7 +31,15 @@ function(e, t, n) {
     let I = () => !0;
 
     function T() {
-        return null != l.default.getPremiumTypeSubscription() && (c.userTrialOffers = {}, c.userDiscountOffers = {}, !0)
+        if (null != l.default.getPremiumTypeSubscription()) {
+            let e = c.userDiscountOffers[u.PREMIUM_TIER_2_ANNUAL_20_PERCENT_DISCOUNT_ID],
+                t = c.userDiscountOffers[u.PREMIUM_TIER_2_ANNUAL_25_PERCENT_DISCOUNT_ID];
+            return c.userDiscountOffers = {
+                [u.PREMIUM_TIER_2_ANNUAL_20_PERCENT_DISCOUNT_ID]: e,
+                [u.PREMIUM_TIER_2_ANNUAL_25_PERCENT_DISCOUNT_ID]: t
+            }, c.userTrialOffers = {}, !0
+        }
+        return !1
     }
     class f extends(i = r.default.PersistedStore) {
         initialize(e) {

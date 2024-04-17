@@ -1,6 +1,7 @@
 function(e) {
     "use strict";
     e.exports = {
+        annualPlanOptionDiscount: "annualPlanOptionDiscount_b32fc7",
         discountPlanOptionSubtext: "discountPlanOptionSubtext_ee7e12",
         optionPriceSelected: "optionPriceSelected__1287a",
         optionSelected: "optionSelected__54637",

@@ -31,21 +31,21 @@ function(e, t, n) {
         return null != e && new Set(null === (n = e.discount) || void 0 === n ? void 0 : n.plan_ids.map(e => u.SubscriptionPlanInfo[e].skuId)).has(t)
     }
 
-    function c(e) {
-        let t = (0, r.useStateFromStores)([o.default], () => o.default.getUserDiscountOffer(e)),
-            [n, u] = i.useState(d(t)),
-            _ = (0, r.useStateFromStores)([a.default], () => (0, l.isPremium)(a.default.getCurrentUser()));
+    function c(e, t) {
+        let n = (0, r.useStateFromStores)([o.default], () => o.default.getUserDiscountOffer(e)),
+            [u, _] = i.useState(d(n)),
+            c = (0, r.useStateFromStores)([a.default], () => (0, l.isPremium)(a.default.getCurrentUser()));
         return i.useEffect(() => {
-            if (null == t || null == t.expires_at) return;
+            if (null == n || null == n.expires_at) return;
             let e = new s.Timeout,
-                i = () => {
-                    let r = null != t.expires_at ? Date.parse(t.expires_at) - Date.now() : 0;
-                    null == e || e.start(r, () => {
-                        !n && d(t) ? u(!0) : i()
+                t = () => {
+                    let i = null != n.expires_at ? Date.parse(n.expires_at) - Date.now() : 0;
+                    null == e || e.start(i, () => {
+                        !u && d(n) ? _(!0) : t()
                     })
                 };
-            return i(), () => e.stop()
-        }, [n, t]), n || _ ? null : t
+            return t(), () => e.stop()
+        }, [u, n]), u || c && !t ? null : n
     }
 
     function E() {
@@ -58,8 +58,8 @@ function(e, t, n) {
     }
 
     function I() {
-        let e = c(u.PREMIUM_TIER_2_ANNUAL_25_PERCENT_DISCOUNT_ID),
-            t = c(u.PREMIUM_TIER_2_ANNUAL_20_PERCENT_DISCOUNT_ID);
+        let e = c(u.PREMIUM_TIER_2_ANNUAL_25_PERCENT_DISCOUNT_ID, !0),
+            t = c(u.PREMIUM_TIER_2_ANNUAL_20_PERCENT_DISCOUNT_ID, !0);
         return null != e ? e : t
     }
 }
