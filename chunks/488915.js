@@ -49,7 +49,7 @@ function(e, t, n) {
             p.set(e.id, e)
         })(n)
     }
-    class D extends(r = _.default.Store) {
+    class D extends(r = _.Store) {
         getSubscriptionGroupListingsForApplicationFetchState(e) {
             var t;
             return null !== (t = R[e]) && void 0 !== t ? t : 0

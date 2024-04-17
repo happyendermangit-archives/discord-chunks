@@ -30,7 +30,7 @@ function(e, t, n) {
     function g(e) {
         return R(e.entitlement)
     }
-    class L extends(i = u.default.Store) {
+    class L extends(i = u.Store) {
         initialize() {
             this.syncWith([c.default], () => !0)
         }
