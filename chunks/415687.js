@@ -10,6 +10,7 @@ function(e) {
         header: "header__0eb6b",
         list: "list_d24b0a",
         searchbar: "searchbar_f3ff3c",
+        separator: "separator__391be",
         submit: "submit__78b24",
         title: "title__47a52",
         titleImage: "titleImage__31509"

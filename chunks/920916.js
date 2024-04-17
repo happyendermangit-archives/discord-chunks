@@ -4,7 +4,7 @@ function(e, t, n) {
         default: function() {
             return M
         },
-        useCollectibleRewardModal: function() {
+        openCollectibleRewardModal: function() {
             return y
         }
     }), n("773603"), n("47120");
@@ -167,14 +167,16 @@ function(e, t, n) {
     }
 
     function M(e) {
-        var t;
+        var t, n;
         let {
-            quest: n,
-            location: s,
-            reward: o,
+            quest: s,
+            location: o,
             onClose: l,
             transitionState: d
-        } = e, [c, I] = function(e) {
+        } = e, c = r.useMemo(() => {
+            var e;
+            return null !== (e = null == s ? void 0 : s.config.rewardsConfig.rewards.find(p.isCollectibleReward)) && void 0 !== e ? e : null
+        }, [s]), [I, T] = function(e) {
             let {
                 product: t,
                 isFetching: n
@@ -184,39 +186,34 @@ function(e, t, n) {
                 return null == e ? null : e
             }, [t, n]);
             return [i, () => null == i ? Promise.reject() : ((0, u.setPendingAvatarDecoration)(i), L())]
-        }(o.skuId);
-        return (null === (t = n.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null ? (0, i.jsx)(_.default, {
+        }(null !== (n = null == c ? void 0 : c.skuId) && void 0 !== n ? n : null);
+        return null == c ? null : (null === (t = s.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null ? (0, i.jsx)(_.default, {
             transitionState: d,
             onCloseModal: L,
             onClose: l,
             analyticsLocations: [],
-            initialSelectedDecoration: c
+            initialSelectedDecoration: I
         }) : (0, i.jsx)(D, {
             onClose: l,
             transitionState: d,
-            quest: n,
-            location: s,
-            reward: o,
-            decoration: c,
-            onUseNow: I
+            quest: s,
+            location: o,
+            reward: c,
+            decoration: I,
+            onUseNow: T
         })
     }
 
     function y(e, t) {
-        let s = r.useMemo(() => {
-            var t;
-            return null !== (t = null == e ? void 0 : e.config.rewardsConfig.rewards.find(p.isCollectibleReward)) && void 0 !== t ? t : null
-        }, [e]);
-        return () => null == e || null == s ? null : ((0, l.openModalLazy)(async () => {
+        (0, l.openModalLazy)(async () => {
             let {
                 default: r
             } = await Promise.resolve().then(n.bind(n, "920916"));
             return n => (0, i.jsx)(r, {
                 ...n,
                 quest: e,
-                location: t,
-                reward: s
+                location: t
             })
-        }), null)
+        })
     }
 }
