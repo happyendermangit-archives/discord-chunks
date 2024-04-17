@@ -42,8 +42,8 @@ function(e, t, n) {
                 stickerSize: w = O,
                 ownedStickerPacks: B,
                 enlargeOnInteraction: k = !1,
-                channel: F,
-                currentUser: V,
+                channel: V,
+                currentUser: F,
                 checkSendability: x = !0
             } = e, {
                 location: H
@@ -155,7 +155,7 @@ function(e, t, n) {
                                         className: a()(p.stickerNode, {
                                             [p.stickerNodeDimmed]: k && !O && null != L && -1 !== L.rowIndex && -1 !== L.columnIndex,
                                             [p.stickerNodeHidden]: R,
-                                            [p.stickerUnsendable]: x && !(0, T.isSendableSticker)(e.sticker, V, F)
+                                            [p.stickerUnsendable]: x && !(0, T.isSendableSticker)(e.sticker, F, V)
                                         }),
                                         disableAnimation: !O && !s,
                                         enlargeOnInteraction: k,

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         allowUnicodeEmojiForIntention: function() {
-            return F
+            return V
         },
         dedupeUnicodeEmojis: function() {
             return z
@@ -53,7 +53,7 @@ function(e, t, n) {
             return j
         },
         useEmojiSearchResults: function() {
-            return V
+            return F
         },
         useFavoriteEmojis: function() {
             return H
@@ -180,7 +180,7 @@ function(e, t, n) {
                     } else if (i === N.EmojiCategories.CUSTOM) {
                         let e = u;
                         !r && (e = u.filter(e => e.type === N.EmojiCategoryTypes.GUILD && e.guild.id === n)), t.push(...e)
-                    } else if (F(e)) t.push({
+                    } else if (V(e)) t.push({
                         type: N.EmojiCategoryTypes.UNICODE,
                         id: i,
                         name: i
@@ -377,9 +377,9 @@ function(e, t, n) {
                     return null != t ? t : e
             }
         },
-        F = e => e !== O.EmojiIntention.COMMUNITY_CONTENT_ONLY;
+        V = e => e !== O.EmojiIntention.COMMUNITY_CONTENT_ONLY;
 
-    function V(e, t, n) {
+    function F(e, t, n) {
         i.useEffect(() => {
             d.FrecencyUserSettingsActionCreators.loadIfNecessary()
         }, []);

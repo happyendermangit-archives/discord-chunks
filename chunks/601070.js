@@ -121,7 +121,7 @@ function(e, t, n) {
 
     function k(e) {
         let t = c.default.getChannel(e.channelId);
-        if (null == t) F();
+        if (null == t) V();
         else {
             let {
                 guild_id: e,
@@ -155,7 +155,7 @@ function(e, t, n) {
         }
     }
 
-    function F() {
+    function V() {
         for (let e in p = {}, C = {}, N)
             for (let t in N[e])
                 for (let n in N[e][t]) {
@@ -176,7 +176,7 @@ function(e, t, n) {
         P()
     }
 
-    function V() {
+    function F() {
         let e = L;
         if ((L = T.default.getChannelId()) === e) return !1;
         U(e), U(L)
@@ -248,7 +248,7 @@ function(e, t, n) {
         J = {};
     class $ extends(i = u.default.Store) {
         initialize() {
-            this.waitFor(S.default, c.default, h.default, I.default), this.syncWith([T.default], V)
+            this.waitFor(S.default, c.default, h.default, I.default), this.syncWith([T.default], F)
         }
         hasActiveJoinedUnreadThreads(e, t) {
             return e in p && t in p[e]
@@ -385,15 +385,15 @@ function(e, t, n) {
         CHANNEL_ACK: k,
         CHANNEL_LOCAL_ACK: k,
         CHANNEL_SELECT: function(e) {
-            k(e), V()
+            k(e), F()
         },
         PASSIVE_UPDATE_V1: function(e) {
-            null != e.channels && F()
+            null != e.channels && V()
         },
-        WINDOW_FOCUS: F,
-        UPDATE_CHANNEL_DIMENSIONS: F,
-        DRAWER_OPEN: F,
-        DRAWER_CLOSE: F,
-        BULK_ACK: F
+        WINDOW_FOCUS: V,
+        UPDATE_CHANNEL_DIMENSIONS: V,
+        DRAWER_OPEN: V,
+        DRAWER_CLOSE: V,
+        BULK_ACK: V
     })
 }

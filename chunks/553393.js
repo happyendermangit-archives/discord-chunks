@@ -44,8 +44,8 @@ function(e, t, n) {
         } = e, B = (0, R.useHandleClaimQuestsReward)({
             quest: P,
             location: m.QuestContent.MEMBERS_LIST
-        }), k = (0, A.useIsQuestExpired)(P), F = (null == P ? void 0 : null === (t = P.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, V = (null == P ? void 0 : null === (M = P.userStatus) || void 0 === M ? void 0 : M.enrolledAt) != null, x = (null == P ? void 0 : null === (y = P.userStatus) || void 0 === y ? void 0 : y.completedAt) != null, H = (0, s.useStateFromStores)([E.default], () => E.default.getState().theme), Y = (0, a.isThemeDark)(H) ? g.ThemeTypes.DARK : g.ThemeTypes.LIGHT;
-        if (null == P || k || F && !(null != U)) return null;
+        }), k = (0, A.useIsQuestExpired)(P), V = (null == P ? void 0 : null === (t = P.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, F = (null == P ? void 0 : null === (M = P.userStatus) || void 0 === M ? void 0 : M.enrolledAt) != null, x = (null == P ? void 0 : null === (y = P.userStatus) || void 0 === y ? void 0 : y.completedAt) != null, H = (0, s.useStateFromStores)([E.default], () => E.default.getState().theme), Y = (0, a.isThemeDark)(H) ? g.ThemeTypes.DARK : g.ThemeTypes.LIGHT;
+        if (null == P || k || V && !(null != U)) return null;
         let j = () => {
                 (0, h.trackQuestContentClicked)({
                     questId: P.id,
@@ -91,12 +91,12 @@ function(e, t, n) {
                 ctaText: L.default.Messages.QUESTS_MEMBERS_LIST_STREAM_CTA,
                 handleClickCta: z,
                 tileAssetType: "game"
-            } : x && !F ? {
+            } : x && !V ? {
                 headerText: L.default.Messages.QUESTS_MEMBERS_LIST_CLAIM_REWARD,
                 ctaText: L.default.Messages.QUESTS_MEMBERS_LIST_CLAIM_REWARD_CTA,
                 handleClickCta: B,
                 tileAssetType: "reward"
-            } : V ? {
+            } : F ? {
                 headerText: L.default.Messages.QUESTS_MEMBERS_LIST_FINISH,
                 ctaText: L.default.Messages.QUESTS_MEMBERS_LIST_FINISH_CTA,
                 handleClickCta: W,

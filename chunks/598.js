@@ -55,8 +55,8 @@ function(e, t, n) {
             stepConfigs: w,
             breadcrumbs: B = [],
             skuIDs: k,
-            isGift: F = !1,
-            children: V,
+            isGift: V = !1,
+            children: F,
             defaultPlanId: x,
             purchaseType: H = P.PurchaseTypes.SUBSCRIPTION,
             applicationId: Y,
@@ -68,7 +68,7 @@ function(e, t, n) {
             setPaymentSourceId: Z,
             hasFetchedPaymentSources: J
         } = (0, O.default)({
-            isGift: F,
+            isGift: V,
             activeSubscription: G
         }), $ = r.useRef(Q), {
             hasFetchedSubscriptionPlans: ee,
@@ -80,7 +80,7 @@ function(e, t, n) {
             activeSubscription: G,
             skuIDs: k,
             paymentSourceId: q,
-            isGift: F
+            isGift: V
         }), es = (0, L.default)(), [ea, eo] = r.useState(!1), {
             step: el,
             setStep: eu,
@@ -109,7 +109,7 @@ function(e, t, n) {
             selectedPlan: eN,
             setSelectedSkuId: ep,
             setSelectedPlanId: eO
-        } = (0, m.default)(), [eR, eC] = (0, l.useStateFromStoresArray)([E.default], () => [E.default.purchaseTokenAuthState, E.default.purchaseTokenHash]), [eg, eL] = (0, l.useStateFromStoresArray)([y.default], () => [y.default.browserCheckoutState, y.default.loadId]), [eD, ev] = r.useState(null), [eM, ey] = r.useState(null), [eP, eU] = r.useState(null), [eb, eG] = r.useState(null), [ew, eB] = r.useState(null), [ek, eF] = r.useState(void 0), [eV, ex] = r.useState([]), eH = r.useMemo(() => null == eN || (0, h.isPremiumSubscriptionPlan)(eN.id), [eN]), eY = r.useRef(null != G ? G.planId : null);
+        } = (0, m.default)(), [eR, eC] = (0, l.useStateFromStoresArray)([E.default], () => [E.default.purchaseTokenAuthState, E.default.purchaseTokenHash]), [eg, eL] = (0, l.useStateFromStoresArray)([y.default], () => [y.default.browserCheckoutState, y.default.loadId]), [eD, ev] = r.useState(null), [eM, ey] = r.useState(null), [eP, eU] = r.useState(null), [eb, eG] = r.useState(null), [ew, eB] = r.useState(null), [ek, eV] = r.useState(void 0), [eF, ex] = r.useState([]), eH = r.useMemo(() => null == eN || (0, h.isPremiumSubscriptionPlan)(eN.id), [eN]), eY = r.useRef(null != G ? G.planId : null);
         r.useEffect(() => {
             null == eY.current && null != G && (eY.current = G.planId)
         }, [G]);
@@ -121,7 +121,7 @@ function(e, t, n) {
             applicationId: null != Y ? Y : U.PREMIUM_SUBSCRIPTION_APPLICATION,
             skuIDs: k,
             currentPaymentSourceId: q,
-            isGift: F
+            isGift: V
         }), ez = r.useMemo(() => {
             if (null == em) return null;
             let e = eK[em];
@@ -185,7 +185,7 @@ function(e, t, n) {
                 setSelectedSkuId: ep,
                 setSelectedPlanId: eO,
                 readySlideId: ek,
-                setReadySlideId: eF,
+                setReadySlideId: eV,
                 defaultPlanId: x,
                 isPremium: eH,
                 startedPaymentFlowWithPaymentSourcesRef: $,
@@ -198,7 +198,7 @@ function(e, t, n) {
                 purchaseType: H,
                 isEmbeddedIAP: eQ,
                 activitySessionId: eZ,
-                entitlementsGranted: eV,
+                entitlementsGranted: eF,
                 setEntitlementsGranted: ex,
                 referralCode: j,
                 invoicePreview: e0,
@@ -209,7 +209,7 @@ function(e, t, n) {
             children: (0, i.jsx)(s.Elements, {
                 options: P.StripeElementsOptions,
                 stripe: W,
-                children: V
+                children: F
             })
         })
     }

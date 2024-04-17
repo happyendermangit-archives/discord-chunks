@@ -227,7 +227,7 @@ function(e, t, n) {
         }, [I, eC, ec]), r.useLayoutEffect(() => {
             I && eT("")
         }, [I, eO.length]);
-        let eF = r.useCallback(function(e) {
+        let eV = r.useCallback(function(e) {
             let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
             if (null == e) {
                 l(I ? [] : void 0);
@@ -250,9 +250,9 @@ function(e, t, n) {
                 null === (e = eu.current) || void 0 === e || e.focus()
             }
         }, [B]);
-        let eV = r.useCallback(() => {
-                eT(""), eF(null), eM(!0)
-            }, [eF, eM]),
+        let eF = r.useCallback(() => {
+                eT(""), eV(null), eM(!0)
+            }, [eV, eM]),
             ex = r.useCallback(e => {
                 switch (e.key) {
                     case "Escape":
@@ -270,7 +270,7 @@ function(e, t, n) {
         }, [eI]), r.useEffect(() => {
             !eN && ef && null !== eI && requestAnimationFrame(() => ew.focusFirstVisibleItem())
         }, [eN, ef, eI]);
-        let eY = I ? V : F;
+        let eY = I ? F : V;
         return (0, i.jsx)(u.ListNavigatorProvider, {
             navigator: ew,
             children: (0, i.jsx)(f.Popout, {
@@ -294,7 +294,7 @@ function(e, t, n) {
                         width: el,
                         selectedValues: eR,
                         closePopout: t,
-                        onSelect: eF,
+                        onSelect: eV,
                         closeOnSelect: T,
                         options: eH,
                         activeDescendant: ed,
@@ -387,7 +387,7 @@ function(e, t, n) {
                                         navigatorId: eD,
                                         selectValue: function(e) {
                                             let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-                                            eF(e, t)
+                                            eV(e, t)
                                         },
                                         inputClassNames: Z
                                     })
@@ -402,7 +402,7 @@ function(e, t, n) {
                             children: [d && (null != eI && "" !== eI || eO.length > 0) ? (0, i.jsx)(_.Clickable, {
                                 "aria-label": v.default.Messages.CLEAR,
                                 "aria-controls": ev,
-                                onClick: eV,
+                                onClick: eF,
                                 children: (0, i.jsx)(L.default, {
                                     width: 16,
                                     height: 16,
@@ -653,7 +653,7 @@ function(e, t, n) {
         }) : null
     }
 
-    function F(e) {
+    function V(e) {
         let {
             selectedOptions: t,
             renderOptionPrefix: n,
@@ -680,7 +680,7 @@ function(e, t, n) {
         })
     }
 
-    function V(e) {
+    function F(e) {
         let {
             query: t,
             placeholder: n,

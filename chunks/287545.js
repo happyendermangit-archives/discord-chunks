@@ -53,13 +53,13 @@ function(e, t, n) {
     let B = {},
         k = {};
 
-    function F(e) {
+    function V(e) {
         var t;
         return {
             releasePhase: null == e ? void 0 : null === (t = e.activity) || void 0 === t ? void 0 : t.client_platform_config[(0, M.default)((0, N.getOS)())].release_phase
         }
     }
-    async function V(e) {
+    async function F(e) {
         let {
             channelId: t,
             applicationId: n,
@@ -76,7 +76,7 @@ function(e, t, n) {
             _ = 1 + l.findIndex(e => e === n),
             {
                 releasePhase: I
-            } = F(d),
+            } = V(d),
             T = await (0, E.default)();
         k[n] = e => {
             var t, s, o;
@@ -127,7 +127,7 @@ function(e, t, n) {
             }),
             {
                 releasePhase: c
-            } = F(_),
+            } = V(_),
             I = await (0, E.default)();
         m.default.track(b.AnalyticEvents.ACTIVITY_SESSION_LEFT, {
             channel_id: a.id,
@@ -234,10 +234,10 @@ function(e, t, n) {
     }
     class X extends u.default {
         _initialize() {
-            h.default.addChangeListener(this.handleSelectedChannelUpdate), o.default.subscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail), o.default.subscribe("EMBEDDED_ACTIVITY_OPEN", V), o.default.subscribe("EMBEDDED_ACTIVITY_CLOSE", x), o.default.subscribe("EMBEDDED_ACTIVITY_UPDATE", H), o.default.subscribe("EMBEDDED_ACTIVITY_UPDATE_V2", Y), o.default.subscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen), o.default.subscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect), o.default.subscribe("MEDIA_SESSION_JOINED", W), o.default.subscribe("CALL_DELETE", K)
+            h.default.addChangeListener(this.handleSelectedChannelUpdate), o.default.subscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail), o.default.subscribe("EMBEDDED_ACTIVITY_OPEN", F), o.default.subscribe("EMBEDDED_ACTIVITY_CLOSE", x), o.default.subscribe("EMBEDDED_ACTIVITY_UPDATE", H), o.default.subscribe("EMBEDDED_ACTIVITY_UPDATE_V2", Y), o.default.subscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen), o.default.subscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect), o.default.subscribe("MEDIA_SESSION_JOINED", W), o.default.subscribe("CALL_DELETE", K)
         }
         _terminate() {
-            h.default.removeChangeListener(this.handleSelectedChannelUpdate), o.default.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail), o.default.unsubscribe("EMBEDDED_ACTIVITY_OPEN", V), o.default.unsubscribe("EMBEDDED_ACTIVITY_CLOSE", x), o.default.unsubscribe("EMBEDDED_ACTIVITY_UPDATE", H), o.default.unsubscribe("EMBEDDED_ACTIVITY_UPDATE_V2", Y), o.default.unsubscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen), o.default.unsubscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect), o.default.unsubscribe("MEDIA_SESSION_JOINED", W), o.default.unsubscribe("CALL_DELETE", K)
+            h.default.removeChangeListener(this.handleSelectedChannelUpdate), o.default.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail), o.default.unsubscribe("EMBEDDED_ACTIVITY_OPEN", F), o.default.unsubscribe("EMBEDDED_ACTIVITY_CLOSE", x), o.default.unsubscribe("EMBEDDED_ACTIVITY_UPDATE", H), o.default.unsubscribe("EMBEDDED_ACTIVITY_UPDATE_V2", Y), o.default.unsubscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen), o.default.unsubscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect), o.default.unsubscribe("MEDIA_SESSION_JOINED", W), o.default.unsubscribe("CALL_DELETE", K)
         }
         constructor(...e) {
             super(...e), w(this, "handleSelectedChannelUpdate", () => {

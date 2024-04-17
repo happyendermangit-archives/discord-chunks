@@ -40,8 +40,8 @@ function(e, t, n) {
         w = 30 * v.default.Millis.SECOND,
         B = 30 * v.default.Millis.SECOND,
         k = 5 * v.default.Millis.MINUTE,
-        F = 5 * v.default.Millis.SECOND,
-        V = 1.5 * v.default.Millis.SECOND,
+        V = 5 * v.default.Millis.SECOND,
+        F = 1.5 * v.default.Millis.SECOND,
         x = 1 * v.default.Millis.MINUTE,
         H = 3 * v.default.Millis.SECOND;
     (l = a || (a = {})).PLAYER_STATE_CHANGED = "PLAYER_STATE_CHANGED", l.DEVICE_STATE_CHANGED = "DEVICE_STATE_CHANGED";
@@ -543,7 +543,7 @@ function(e, t, n) {
                         let n = Date.now(),
                             i = null != e ? e.startTime : 0,
                             r = n - t;
-                        return Math.abs(r - i) > V ? r : i
+                        return Math.abs(r - i) > F ? r : i
                     }(I, o),
                     context: u,
                     repeat: s
@@ -551,7 +551,7 @@ function(e, t, n) {
                 f = null != l && null != r && 0 === o && !n;
             !f && ($[t] = T);
             let S = i;
-            if (i = d().values($).find(e => null != e), eI(N.default.getId()), null == a || f ? Q.stop() : Q.start(a.duration - o + F, () => ei(c.id)), null != r && (!n && o > 0 || null == l || null != T && r.trackId !== T.track.id) ? (W.info("Listen along active but playback stopped or track changed. Stopping listen along in ".concat(F, "ms")), q.start(F, () => {
+            if (i = d().values($).find(e => null != e), eI(N.default.getId()), null == a || f ? Q.stop() : Q.start(a.duration - o + V, () => ei(c.id)), null != r && (!n && o > 0 || null == l || null != T && r.trackId !== T.track.id) ? (W.info("Listen along active but playback stopped or track changed. Stopping listen along in ".concat(V, "ms")), q.start(V, () => {
                     W.info("Stopping listening along"), (0, h.default)(), ei(c.id)
                 })) : q.isStarted() && (W.info("Listen along stop cancelled as playback of track resumed"), q.stop()), S === i || null == I && null == T || null != I && null != T && I.track.id === T.track.id && I.startTime === T.startTime) return _;
             null != a && L.default.track(P.AnalyticEvents.ACTIVITY_UPDATED, {

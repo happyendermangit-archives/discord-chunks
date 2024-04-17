@@ -41,8 +41,8 @@ function(e, t, n) {
         w = n("394740"),
         B = n("343747"),
         k = n("981631"),
-        F = n("689938"),
-        V = n("6503");
+        V = n("689938"),
+        F = n("6503");
     let x = [8, 0, 8, 8];
 
     function H(e) {
@@ -57,28 +57,28 @@ function(e, t, n) {
             index: s
         } = e;
         return (0, i.jsx)("div", {
-            className: V.sectionContainer,
+            className: F.sectionContainer,
             children: (0, i.jsx)(u.Clickable, {
-                className: a()(V.sectionHeader, {
-                    [V.notFirstSectionHeader]: 0 !== s
+                className: a()(F.sectionHeader, {
+                    [F.notFirstSectionHeader]: 0 !== s
                 }),
                 onClick: r,
                 "aria-expanded": !n,
                 children: (0, i.jsxs)("div", {
-                    className: V.sectionHeaderContent,
+                    className: F.sectionHeaderContent,
                     children: [function() {
                         switch (t.type) {
                             case D.SoundboardSoundGridSectionType.FAVORITES:
                                 return (0, i.jsx)(R.default, {
-                                    className: V.headerIcon
+                                    className: F.headerIcon
                                 });
                             case D.SoundboardSoundGridSectionType.RECENTLY_HEARD:
                                 return (0, i.jsx)(p.default, {
-                                    className: V.headerIcon
+                                    className: F.headerIcon
                                 });
                             case D.SoundboardSoundGridSectionType.FREQUENTLY_USED:
                                 return (0, i.jsx)(l.AnalyticsIcon, {
-                                    className: V.headerIcon
+                                    className: F.headerIcon
                                 });
                             case D.SoundboardSoundGridSectionType.GUILD:
                                 return (0, i.jsx)(E.default, {
@@ -88,35 +88,35 @@ function(e, t, n) {
                                 });
                             case D.SoundboardSoundGridSectionType.DEFAULTS:
                                 return (0, i.jsx)(O.default, {
-                                    className: V.headerIcon
+                                    className: F.headerIcon
                                 });
                             case D.SoundboardSoundGridSectionType.SEARCH:
                                 return (0, i.jsx)(C.default, {
-                                    className: V.headerIcon
+                                    className: F.headerIcon
                                 })
                         }
                     }(), (0, i.jsx)(u.Heading, {
                         variant: "eyebrow",
                         color: "none",
-                        className: V.sectionTitle,
+                        className: F.sectionTitle,
                         children: function() {
                             switch (t.type) {
                                 case D.SoundboardSoundGridSectionType.FAVORITES:
-                                    return F.default.Messages.FAVORITES;
+                                    return V.default.Messages.FAVORITES;
                                 case D.SoundboardSoundGridSectionType.RECENTLY_HEARD:
-                                    return F.default.Messages.RECENTLY_HEARD;
+                                    return V.default.Messages.RECENTLY_HEARD;
                                 case D.SoundboardSoundGridSectionType.FREQUENTLY_USED:
-                                    return F.default.Messages.FREQUENTLY_USED;
+                                    return V.default.Messages.FREQUENTLY_USED;
                                 case D.SoundboardSoundGridSectionType.GUILD:
                                     return t.guild.name;
                                 case D.SoundboardSoundGridSectionType.DEFAULTS:
-                                    return F.default.Messages.SOUNDBOARD_SOUND_SECTION_DEFAULTS;
+                                    return V.default.Messages.SOUNDBOARD_SOUND_SECTION_DEFAULTS;
                                 case D.SoundboardSoundGridSectionType.SEARCH:
-                                    return F.default.Messages.SEARCH_RESULTS_SECTION_LABEL
+                                    return V.default.Messages.SEARCH_RESULTS_SECTION_LABEL
                             }
                         }()
                     }), (0, i.jsx)(N.default, {
-                        className: V.headerIcon,
+                        className: F.headerIcon,
                         direction: n ? N.default.Directions.RIGHT : N.default.Directions.DOWN
                     })]
                 })
@@ -126,7 +126,7 @@ function(e, t, n) {
 
     function j() {
         return (0, i.jsx)(_.default, {
-            message: F.default.Messages.SOUNDBOARD_SEARCH_EMPTY_STATE_BODY
+            message: V.default.Messages.SOUNDBOARD_SEARCH_EMPTY_STATE_BODY
         })
     }
 
@@ -145,7 +145,7 @@ function(e, t, n) {
         } = e, E = I.SoundboardPickerStore.useStore(e => e.inspectedExpressionPosition);
         return (0, i.jsx)("ul", {
             ...l,
-            className: V.soundRow,
+            className: F.soundRow,
             children: t.map((e, t) => {
                 let i = "item-".concat(t),
                     l = a && E.rowIndex === s && E.columnIndex === t;
@@ -248,11 +248,11 @@ function(e, t, n) {
             })
         }, []), eI = r.useCallback(() => (0, i.jsx)(u.Clickable, {
             tabIndex: 0,
-            className: V.settingsClickArea,
+            className: F.settingsClickArea,
             onClick: eE,
-            "aria-label": F.default.Messages.USER_SETTINGS_SOUNDBOARD_VOLUME,
+            "aria-label": V.default.Messages.USER_SETTINGS_SOUNDBOARD_VOLUME,
             children: (0, i.jsx)(g.default, {
-                className: V.settingsIcon
+                className: F.settingsIcon
             })
         }), [eE]), eT = r.useCallback(e => (0, i.jsx)(b.default, {
             soundboardListRef: e,
@@ -282,7 +282,7 @@ function(e, t, n) {
                 onSelectItem: eu,
                 onSearchExpressions: ec,
                 hasSearchResults: ee.length > 0,
-                defaultSearchPlaceholder: F.default.Messages.SOUNDBOARD_SEARCH_PLACEHOLDER,
+                defaultSearchPlaceholder: V.default.Messages.SOUNDBOARD_SEARCH_PLACEHOLDER,
                 renderRow: ed,
                 renderSectionHeader: e_,
                 renderCategoryList: eT,

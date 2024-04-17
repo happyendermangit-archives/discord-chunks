@@ -36,10 +36,10 @@ function(e, t, n) {
             return k
         },
         isAnimatedImageURL: function() {
-            return V
+            return F
         },
         isVideoAssetHash: function() {
-            return F
+            return V
         }
     }), n("315314"), n("610138"), n("216116"), n("78328"), n("815648"), n("47120");
     var r = n("654861"),
@@ -71,7 +71,7 @@ function(e, t, n) {
         } = e;
         if (null == r || null == s) return;
         let c = null != _ ? _ : u && k(s) ? "gif" : "jpg";
-        u && F(s) && (c = "mp4");
+        u && V(s) && (c = "mp4");
         let E = window.GLOBAL_ENV.CDN_HOST;
         if (null != E ? ("jpg" === c && (c = f ? "webp" : "png"), t = "".concat(location.protocol, "//").concat(E, "/").concat(i, "/").concat(r, "/").concat(s, ".").concat(c)) : t = location.protocol + window.GLOBAL_ENV.API_ENDPOINT + n(r, s, c), "mp4" === c) return t;
         let I = {};
@@ -375,11 +375,11 @@ function(e, t, n) {
         return null != e && e.startsWith("a_")
     }
 
-    function F(e) {
+    function V(e) {
         return null != e && e.startsWith("v_")
     }
 
-    function V(e) {
+    function F(e) {
         return null != e && k(function(e) {
             let t;
             try {

@@ -96,7 +96,7 @@ function(e, t, n) {
         }))
     }
 
-    function F(e, t, n) {
+    function V(e, t, n) {
         let {
             roles: i,
             nick: s,
@@ -126,19 +126,19 @@ function(e, t, n) {
         })
     }
 
-    function V(e) {
+    function F(e) {
         let {
             member: t,
             mentions: n,
             author: i,
             guild_id: r
         } = e;
-        null != t && null != r && F(r, i, t), null != n && n.forEach(e => {
+        null != t && null != r && V(r, i, t), null != n && n.forEach(e => {
             if (null != e.member && null != r) {
                 let {
                     member: t
                 } = e;
-                delete e.member, F(r, e, t)
+                delete e.member, V(r, e, t)
             }
         })
     }
@@ -333,7 +333,7 @@ function(e, t, n) {
             type: "CONNECTION_RESUMED"
         })
     }), G(["TYPING_START"], e => {
-        null != e.member && F(e.guild_id, e.member.user, e.member), k({
+        null != e.member && V(e.guild_id, e.member.user, e.member), k({
             type: "TYPING_START",
             channelId: e.channel_id,
             userId: e.user_id
@@ -354,7 +354,7 @@ function(e, t, n) {
             messageId: e.message_id
         })
     }), w(["MESSAGE_CREATE"], e => A.ChannelLoader.loadGuildIds([e.guild_id]), e => {
-        V(e), null != e.author && k({
+        F(e), null != e.author && k({
             type: "MESSAGE_CREATE",
             guildId: e.guild_id,
             channelId: e.channel_id,
@@ -363,7 +363,7 @@ function(e, t, n) {
             isPushNotification: !1
         })
     }), w(["MESSAGE_UPDATE"], e => A.ChannelLoader.loadGuildIds([e.guild_id]), e => {
-        V(e), k({
+        F(e), k({
             type: "MESSAGE_UPDATE",
             guildId: e.guild_id,
             message: e
@@ -749,7 +749,7 @@ function(e, t, n) {
         })
     }), G(["VOICE_STATE_UPDATE"], e => {
         var t;
-        null != e.member && F(e.guild_id, e.member.user, e.member), k({
+        null != e.member && V(e.guild_id, e.member.user, e.member), k({
             type: "VOICE_STATE_UPDATES",
             voiceStates: [{
                 userId: e.user_id,
@@ -940,7 +940,7 @@ function(e, t, n) {
                 let {
                     member: n
                 } = t;
-                if (F(e.guild_id, n.user, n), null == n.presence) return;
+                if (V(e.guild_id, n.user, n), null == n.presence) return;
                 let {
                     presence: i
                 } = n;

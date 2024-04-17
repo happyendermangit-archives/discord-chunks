@@ -439,8 +439,8 @@ function(e, t, n) {
         }), [P, S, g, l, c]), {
             avatarCutoutX: B,
             avatarCutoutY: k,
-            avatarCutoutWidth: F,
-            avatarCutoutHeight: V,
+            avatarCutoutWidth: V,
+            avatarCutoutHeight: F,
             avatarCutoutRadius: x,
             fill: H,
             ...Y
@@ -475,8 +475,8 @@ function(e, t, n) {
                         color: "black",
                         x: B,
                         y: k,
-                        width: F,
-                        height: V,
+                        width: V,
+                        height: F,
                         rx: x,
                         ry: x
                     })]

@@ -88,7 +88,7 @@ function(e, t, n) {
                 scrollToEnd: p.NOOP_PROMISE,
                 wrap: !0
             }),
-            F = P.map(e => {
+            V = P.map(e => {
                 var r;
                 return (0, i.jsx)(c.MemberRole, {
                     className: R.role,
@@ -104,7 +104,7 @@ function(e, t, n) {
                 }, e.id)
             }),
             {
-                guildId: V,
+                guildId: F,
                 channelId: x,
                 messageId: H,
                 roleId: Y
@@ -116,7 +116,7 @@ function(e, t, n) {
                 onClick: () => {
                     (0, N.openUserProfileModal)({
                         userId: t.id,
-                        guildId: V,
+                        guildId: F,
                         channelId: x,
                         messageId: H,
                         roleId: Y,
@@ -167,7 +167,7 @@ function(e, t, n) {
                             }),
                             ref: t,
                             ...n,
-                            children: [F, W]
+                            children: [V, W]
                         })
                     }
                 })

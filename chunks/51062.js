@@ -54,7 +54,7 @@ function(e, t, n) {
             scrollerRef: n,
             state: D,
             onFocus: e => x.setSelectedIndex(e)
-        }), F = null === (A = e.editorRef.current) || void 0 === A ? void 0 : A.getCurrentWord(), V = {
+        }), V = null === (A = e.editorRef.current) || void 0 === A ? void 0 : A.getCurrentWord(), F = {
             ...e,
             navigator: k,
             activeCommand: w,
@@ -65,14 +65,14 @@ function(e, t, n) {
             hidePersonalInformation: G,
             hideMentionDescription: L === l.ChatInputTypes.RULES_INPUT,
             emojiIntention: L === l.ChatInputTypes.RULES_INPUT ? h.EmojiIntention.COMMUNITY_CONTENT : h.EmojiIntention.CHAT,
-            currentWord: null !== (R = null == F ? void 0 : F.word) && void 0 !== R ? R : "",
-            currentWordIsAtStart: (null == F ? void 0 : F.isAtStart) === !0,
+            currentWord: null !== (R = null == V ? void 0 : V.word) && void 0 !== R ? R : "",
+            currentWordIsAtStart: (null == V ? void 0 : V.isAtStart) === !0,
             optionText: null != B ? (0, a.getString)({
                 [B.name]: null !== (C = null === (N = e.editorRef.current) || void 0 === N ? void 0 : N.getCurrentCommandOptionValue()) && void 0 !== C ? C : []
             }, B.name) : ""
-        }, [x] = i.useState(() => new I.default(V));
+        }, [x] = i.useState(() => new I.default(F));
         return i.useEffect(() => {
-            x.updateProps(V)
+            x.updateProps(F)
         }), i.useImperativeHandle(t, () => x, [x]), i.useEffect(() => {
             let e = e => v(e);
             return x.on("change", e), x.on("update", M), () => {

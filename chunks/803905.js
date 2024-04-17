@@ -80,7 +80,7 @@ function(e, t, n) {
             return U
         },
         canUserUse: function() {
-            return F
+            return V
         }
     });
     var i = n("848246"),
@@ -146,7 +146,7 @@ function(e, t, n) {
             [l.PremiumSubscriptionSKUs.TIER_2]: new o.default(l.PremiumSubscriptionSKUs.TIER_2, [c, E, I, T, f, S, h, A, m, N, R, C, g, L, D, M, y, P, U, b, G, w, B, O, p, v])
         });
 
-    function F(e, t) {
+    function V(e, t) {
         return e.getFeatureValue(t)
     }
 }

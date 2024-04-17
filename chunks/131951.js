@@ -31,8 +31,8 @@ function(e, t, n) {
         w = n("924371"),
         B = n("894180"),
         k = n("86614"),
-        F = n("498600"),
-        V = n("631610"),
+        V = n("498600"),
+        F = n("631610"),
         x = n("951958"),
         H = n("529558"),
         Y = n("263853"),
@@ -153,8 +153,8 @@ function(e, t, n) {
         ew = !1,
         eB = !1,
         ek = eS.DISABLED_DEVICE_ID,
-        eF = !1,
         eV = !1,
+        eF = !1,
         ex = !1,
         eH = !1,
         eY = null,
@@ -231,7 +231,7 @@ function(e, t, n) {
             if (null != a.desktopSource) {
                 let {
                     hdrCaptureMode: t
-                } = F.default.getCurrentConfig({
+                } = V.default.getCurrentConfig({
                     location: "f627ab_2"
                 }, {
                     autoTrackExposure: !1
@@ -564,7 +564,7 @@ function(e, t, n) {
                 d && e.setExperimentFlag(eS.ExperimentFlags.SIGNAL_AV1_SUPPORT, !0);
                 let {
                     allowSettingFullbandAndroid: _
-                } = V.default.getCurrentConfig({
+                } = F.default.getCurrentConfig({
                     location: "f627ab_14"
                 }, {
                     autoTrackExposure: !0
@@ -603,8 +603,8 @@ function(e, t, n) {
                         userId: t,
                         speakingFlags: n
                     })
-                }), e.context === eS.MediaEngineContextTypes.DEFAULT && (eV = !1, e.on(S.BaseConnectionEvent.SpeakingWhileMuted, () => {
-                    eV = !0, i.emitChange()
+                }), e.context === eS.MediaEngineContextTypes.DEFAULT && (eF = !1, e.on(S.BaseConnectionEvent.SpeakingWhileMuted, () => {
+                    eF = !0, i.emitChange()
                 })), e.on(S.BaseConnectionEvent.DesktopSourceEnd, () => {
                     m.default.dispatch({
                         type: "MEDIA_ENGINE_SET_GO_LIVE_SOURCE",
@@ -866,10 +866,10 @@ function(e, t, n) {
             }, {
                 autoTrackExposure: !0
             });
-            return !!e && eF
+            return !!e && eV
         }
         notifyMuteUnmuteSoundWasSkipped() {
-            eF = !1
+            eV = !1
         }
         isHardwareMute() {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eS.MediaEngineContextTypes.DEFAULT;
@@ -1089,7 +1089,7 @@ function(e, t, n) {
             return e6().av1Enabled
         }
         getEverSpeakingWhileMuted() {
-            return eV
+            return eF
         }
         supportsScreenSoundshare() {
             return (0, et.isMac)() && eR.supports(eS.Features.SOUNDSHARE) && T().satisfies(null === N.default || void 0 === N.default ? void 0 : N.default.os.release, eI.DARWIN_SCKIT_AUDIO_VERSION) && ti() || (0, et.isWindows)() && eR.supports(eS.Features.SCREEN_SOUNDSHARE) && this.getExperimentalSoundshare()
@@ -1206,7 +1206,7 @@ function(e, t, n) {
                 deaf: r
             } = e6(t);
             if (t === eS.MediaEngineContextTypes.DEFAULT && (X.default.requestPermission(eT.NativePermissionTypes.AUDIO), eG)) return !1;
-            !(i = !r && !i) && (r = !1), n && (eF = !0), ts({
+            !(i = !r && !i) && (r = !1), n && (eV = !0), ts({
                 mute: i,
                 deaf: r
             }, t), eR.eachConnection(e8)
@@ -1739,7 +1739,7 @@ function(e, t, n) {
             null != a && a.desktopSource.id !== _.desktopSource.id && (eR.setClipsSource(null), (0, et.isWindows)() && null != a.desktopSource.soundshareId && p.cancelAttachToProcess(a.desktopSource.soundshareId)), null != l && tc(l, u), a = _;
             let {
                 hdrCaptureMode: c
-            } = F.default.getCurrentConfig({
+            } = V.default.getCurrentConfig({
                 location: "f627ab_12"
             }, {
                 autoTrackExposure: !1

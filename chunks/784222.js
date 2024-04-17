@@ -57,8 +57,8 @@ function(e, t, n) {
         } = e, d = (0, E.useStateFromStores)([T.default], () => T.default.categories), I = (0, E.useStateFromStores)([p.default], () => p.default.getGuild(null == t ? void 0 : t.getGuildId()), [t]), h = null == t ? null : t.getGuildId(), A = (0, E.useStateFromStores)([T.default], () => T.default.getDisambiguatedEmojiContext(h), [h]), G = (0, v.useFavoriteEmojis)(h), w = (0, v.useFrequentlyUsedEmojis)(h), {
             topEmojis: B,
             newlyAddedEmojis: k
-        } = (0, y.default)(h, r), F = (0, E.useStateFromStoresArray)([R.default], () => R.default.getFlattenedGuildIds(), []), {
-            canCreateExpressions: V
+        } = (0, y.default)(h, r), V = (0, E.useStateFromStoresArray)([R.default], () => R.default.getFlattenedGuildIds(), []), {
+            canCreateExpressions: F
         } = (0, m.useManageResourcePermissions)(I), x = (0, E.useStateFromStores)([C.default], () => C.default.getCurrentUser()), H = (0, L.isPremium)(x), Y = A.getCustomEmoji(), j = e => {
             if (e.type === f.EmojiTypes.GUILD) return e.guildId
         }, W = u.useMemo(() => _().groupBy(Y, j), [Y]), {
@@ -68,7 +68,7 @@ function(e, t, n) {
             location: "EmojiPicker"
         }, {
             autoTrackExposure: !0,
-            disable: !V
+            disable: !F
         });
         return u.useMemo(() => {
             let e = [],
@@ -97,7 +97,7 @@ function(e, t, n) {
                             R = !p && null != m && N === m.id && S.length < m.getMaxEmojiSlots(),
                             C = p && S.length < A && !K,
                             L = null != m && p && K && z === D.EmojiPickerUploadTreatment.WITH_TOP_LIST && W[m.id].length < m.getMaxEmojiSlots(),
-                            M = i && V && null != m && (R || C || L);
+                            M = i && F && null != m && (R || C || L);
                         M && L && S.length === A && S.shift();
                         let y = K && M && !d,
                             U = Math.ceil((M ? S.length + 1 : S.length) / A),
@@ -191,7 +191,7 @@ function(e, t, n) {
                                 })
                             };
                             if (null != I && n(I.id), (0, U.isExternalEmojiAllowedForIntention)(r))
-                                for (let e of F)(null == I || I.id !== e) && n(e)
+                                for (let e of V)(null == I || I.id !== e) && n(e)
                         } else if (e === P.EmojiCategories.TOP_GUILD_EMOJI) {
                     if (null != I) {
                         let {
@@ -252,7 +252,7 @@ function(e, t, n) {
                 rowCountBySection: e,
                 sectionDescriptors: u
             }
-        }, [A, a, l, o, s, n, t, r, d, I, W, F, k, B, w, G, V, i, H, K, z])
+        }, [A, a, l, o, s, n, t, r, d, I, W, V, k, B, w, G, F, i, H, K, z])
     };
     (l = s || (s = {}))[l.PREMIUM = 0] = "PREMIUM", l[l.ROLE_SUBSCRIPTION = 1] = "ROLE_SUBSCRIPTION";
     let w = e => {

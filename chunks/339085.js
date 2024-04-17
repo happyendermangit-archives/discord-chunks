@@ -36,8 +36,8 @@ function(e, t, n) {
         w = n("396352"),
         B = n("185923"),
         k = n("981631"),
-        F = n("149203"),
-        V = n("526761");
+        V = n("149203"),
+        F = n("526761");
 
     function x(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
@@ -47,7 +47,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    let H = [F.EmojiCategories.TOP_GUILD_EMOJI.toString(), F.EmojiCategories.FAVORITES.toString(), F.EmojiCategories.RECENT.toString(), F.EmojiCategories.CUSTOM.toString()].concat(b.default.getCategories()),
+    let H = [V.EmojiCategories.TOP_GUILD_EMOJI.toString(), V.EmojiCategories.FAVORITES.toString(), V.EmojiCategories.RECENT.toString(), V.EmojiCategories.CUSTOM.toString()].concat(b.default.getCategories()),
         Y = {
             pendingUsages: []
         };
@@ -284,7 +284,7 @@ function(e, t, n) {
             return null !== (t = b.default.getByName(e)) && void 0 !== t ? t : $(e)
         },
         afterCompute: () => {
-            en.resetFrequentlyUsed(), X = H.slice(0), !s().some(Q, e => e.usableEmojis.length > 0) && X.splice(H.indexOf(F.EmojiCategories.CUSTOM), 1)
+            en.resetFrequentlyUsed(), X = H.slice(0), !s().some(Q, e => e.usableEmojis.length > 0) && X.splice(H.indexOf(V.EmojiCategories.CUSTOM), 1)
         },
         numFrequentlyItems: 42
     });
@@ -317,7 +317,7 @@ function(e, t, n) {
         ei.overwriteHistory(s().mapValues(a, e => ({
             ...e,
             recentUses: e.recentUses.map(Number).filter(e => e > 0)
-        })), Y.pendingUsages), s().isEmpty(a) && s().isEmpty(Y.pendingUsages) && N.default.hasLoaded(V.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (ei.track("thumbsup"), ei.track("thumbsup"), ei.track("eyes"), ei.track("eyes"), ei.track("laughing"), ei.track("laughing"), ei.track("watermelon"), ei.track("fork_and_knife"), ei.track("yum"), ei.track("weary"), ei.track("tired_face"), ei.track("poop"), ei.track("100"))
+        })), Y.pendingUsages), s().isEmpty(a) && s().isEmpty(Y.pendingUsages) && N.default.hasLoaded(F.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (ei.track("thumbsup"), ei.track("thumbsup"), ei.track("eyes"), ei.track("eyes"), ei.track("laughing"), ei.track("laughing"), ei.track("watermelon"), ei.track("fork_and_knife"), ei.track("yum"), ei.track("weary"), ei.track("tired_face"), ei.track("poop"), ei.track("100"))
     }
 
     function eu(e) {
@@ -546,7 +546,7 @@ function(e, t, n) {
                 },
                 wasSaved: n
             } = e;
-            if (T.default.setEmojiLocale(m.default.locale), t !== V.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
+            if (T.default.setEmojiLocale(m.default.locale), t !== F.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
             Y.pendingUsages = []
         },
         GUILD_ROLE_CREATE: ed,

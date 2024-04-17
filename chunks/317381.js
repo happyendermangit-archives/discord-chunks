@@ -58,7 +58,7 @@ function(e, t, n) {
         return null != e ? e : "0"
     }
 
-    function F(e) {
+    function V(e) {
         var t, n, i;
         let {
             guildId: r,
@@ -104,14 +104,14 @@ function(e, t, n) {
         A.length > 0 && (y.push(M), U.push(M)), g.set(s, y), C.set(P, U)
     }
 
-    function V(e) {
+    function F(e) {
         e.embedded_activities.forEach(t => {
             let {
                 channel_id: n,
                 embedded_activity: i,
                 connections: r
             } = t;
-            F({
+            V({
                 guildId: e.id,
                 channelId: n,
                 applicationId: i.application_id,
@@ -302,13 +302,13 @@ function(e, t, n) {
             let {
                 guilds: t
             } = e;
-            g.clear(), C.clear(), t.forEach(e => V(e))
+            g.clear(), C.clear(), t.forEach(e => F(e))
         },
         GUILD_CREATE: function(e) {
             let {
                 guild: t
             } = e;
-            V(t)
+            F(t)
         },
         CALL_CREATE: function(e) {
             let {
@@ -322,7 +322,7 @@ function(e, t, n) {
                         embedded_activity: n,
                         connections: i
                     } = e;
-                    F({
+                    V({
                         guildId: null,
                         channelId: t,
                         applicationId: n.application_id,
@@ -388,7 +388,7 @@ function(e, t, n) {
                 embeddedActivity: i,
                 connections: r
             } = e;
-            F({
+            V({
                 guildId: t,
                 channelId: n,
                 applicationId: i.application_id,
@@ -406,7 +406,7 @@ function(e, t, n) {
                 location: i,
                 participants: r
             } = e;
-            null != u.default.getChannel(i.channel_id) && F({
+            null != u.default.getChannel(i.channel_id) && V({
                 guildId: i.guild_id,
                 channelId: i.channel_id,
                 location: i,

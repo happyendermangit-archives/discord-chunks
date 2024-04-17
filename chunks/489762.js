@@ -37,8 +37,8 @@ function(e, t, n) {
         w = n("652136"),
         B = n("981631"),
         k = n("957825"),
-        F = n("689938"),
-        V = n("626672"),
+        V = n("689938"),
+        F = n("626672"),
         x = n("239840");
     let H = (0, g.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
         Y = (0, g.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_MEDIUM),
@@ -64,9 +64,9 @@ function(e, t, n) {
                 onSuggestionClick: t
             } = e;
             return (0, i.jsx)("div", {
-                className: V.searchSuggestions,
+                className: F.searchSuggestions,
                 children: ea.map(e => (0, i.jsx)(l.Clickable, {
-                    className: V.searchSuggestion,
+                    className: F.searchSuggestion,
                     onClick: () => t(e),
                     children: (0, i.jsx)(l.Text, {
                         variant: "text-sm/normal",
@@ -160,7 +160,7 @@ function(e, t, n) {
                     onInspect: w,
                     onSelect: x,
                     rowIndex: e,
-                    stickerClassName: V.sticker,
+                    stickerClassName: F.sticker,
                     stickerDescriptors: t,
                     stickerSize: n > H ? Z : J,
                     preferAnimation: n <= Y,
@@ -192,20 +192,20 @@ function(e, t, n) {
                     let r = t.length > 0 && n.length > 0;
                     return (0, i.jsxs)(i.Fragment, {
                         children: [r ? (0, i.jsx)("div", {
-                            className: V.divider,
+                            className: F.divider,
                             children: (0, i.jsx)(l.FormDivider, {})
                         }) : null, (0, i.jsx)(h.default, {
-                            className: V.packHeader,
-                            "aria-label": F.default.Messages.STICKERS_YOU_MIGHT_LIKE_A11Y,
-                            children: F.default.Messages.STICKERS_YOU_MIGHT_LIKE
+                            className: F.packHeader,
+                            "aria-label": V.default.Messages.STICKERS_YOU_MIGHT_LIKE_A11Y,
+                            children: V.default.Messages.STICKERS_YOU_MIGHT_LIKE
                         }, "stickers-you-might-like-header")]
                     })
                 }
                 switch (n.type) {
                     case M.StickerCategoryTypes.FAVORITE:
                         return (0, i.jsx)(h.default, {
-                            className: V.packHeader,
-                            "aria-label": F.default.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
+                            className: F.packHeader,
+                            "aria-label": V.default.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
                                 categoryName: n.name
                             }),
                             icon: (0, i.jsx)(R.default, {
@@ -220,8 +220,8 @@ function(e, t, n) {
                         }, "header-".concat(n.id));
                     case M.StickerCategoryTypes.RECENT:
                         return (0, i.jsx)(h.default, {
-                            className: V.packHeader,
-                            "aria-label": F.default.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
+                            className: F.packHeader,
+                            "aria-label": V.default.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
                                 categoryName: n.name
                             }),
                             icon: (0, i.jsx)(O.default, {}),
@@ -236,8 +236,8 @@ function(e, t, n) {
                         let e = m.default.getGuild(n.id);
                         if (null == e) return null;
                         return (0, i.jsx)(h.default, {
-                            className: V.packHeader,
-                            "aria-label": F.default.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
+                            className: F.packHeader,
+                            "aria-label": V.default.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
                                 categoryName: e.name
                             }),
                             icon: (0, i.jsx)(E.default, {
@@ -254,8 +254,8 @@ function(e, t, n) {
                         let e = v.default.getStickerPack(n.id);
                         if (null == e) return null;
                         return (0, i.jsx)(h.default, {
-                            className: V.packHeader,
-                            "aria-label": F.default.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
+                            className: F.packHeader,
+                            "aria-label": V.default.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
                                 categoryName: e.name
                             }),
                             icon: (0, i.jsx)(P.default, {
@@ -282,7 +282,7 @@ function(e, t, n) {
                 let n = S[e],
                     r = t.has(n.id);
                 return n.type !== M.StickerCategoryTypes.EMPTY_GUILD_UPSELL || null != p || r ? null : (0, i.jsx)(U.default, {
-                    className: V.emptyGuildUpsell,
+                    className: F.emptyGuildUpsell,
                     guildId: n.id,
                     channel: L,
                     shouldTrackUpsellViewed: !j,
@@ -392,10 +392,10 @@ function(e, t, n) {
             }), []), (0, i.jsx)(c.AnalyticsLocationProvider, {
                 value: y,
                 children: (0, i.jsxs)("div", {
-                    className: V.wrapper,
+                    className: F.wrapper,
                     children: [null != l && 0 === l.sendable.length && 0 === l.sendableWithPremium.length ? (0, i.jsx)(u.default, {
-                        message: F.default.Messages.NO_STICKER_SEARCH_RESULTS_WITH_SUGGESTIONS,
-                        className: V.__invalid_noSearchResultsContainer,
+                        message: V.default.Messages.NO_STICKER_SEARCH_RESULTS_WITH_SUGGESTIONS,
+                        className: F.__invalid_noSearchResultsContainer,
                         noResultsImageURL: x,
                         suggestions: (0, i.jsx)(eo, {
                             onSuggestionClick: e => (0, T.setSearchQuery)(e, !0)
