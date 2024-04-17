@@ -55,8 +55,8 @@ function(e, t, n) {
         w = n("761374"),
         B = n("363138"),
         k = n("325767"),
-        V = n("930153"),
-        F = n("74538"),
+        F = n("930153"),
+        V = n("74538"),
         x = n("326151"),
         H = n("357355"),
         Y = n("140465"),
@@ -262,7 +262,7 @@ function(e, t, n) {
         if (!t && null != m && n === m && null != u && null != u.planIdFromItems && !a) {
             let e = null != u.trialEndsAt ? T()(null == u ? void 0 : u.trialEndsAt).diff(T()(), "d") : 0,
                 t = ee.SubscriptionPlanInfo[u.planIdFromItems],
-                n = F.default.formatPriceString(F.default.getDefaultPrice(t.id), t.interval);
+                n = V.default.formatPriceString(V.default.getDefaultPrice(t.id), t.interval);
             return (0, _.jsx)(_.Fragment, {
                 children: (0, _.jsx)(A.Heading, {
                     variant: "heading-md/normal",
@@ -288,7 +288,7 @@ function(e, t, n) {
             })
         }
         if (!t && i && !a) {
-            let e = F.default.formatPriceString(F.default.getDefaultPrice(n === ee.PremiumTypes.TIER_0 ? ee.SubscriptionPlans.PREMIUM_MONTH_TIER_0 : ee.SubscriptionPlans.PREMIUM_MONTH_TIER_2), ee.SubscriptionIntervalTypes.MONTH);
+            let e = V.default.formatPriceString(V.default.getDefaultPrice(n === ee.PremiumTypes.TIER_0 ? ee.SubscriptionPlans.PREMIUM_MONTH_TIER_0 : ee.SubscriptionPlans.PREMIUM_MONTH_TIER_2), ee.SubscriptionIntervalTypes.MONTH);
             if (0 === r) {
                 var R, C, D, v;
                 return (0, _.jsx)(A.Heading, {
@@ -296,8 +296,8 @@ function(e, t, n) {
                     color: "always-white",
                     className: ei.trialHeader,
                     children: en.default.Messages.PREMIUM_TIER_CARD_TRIAL_HEADER_BEFORE_REDEMPTION_NEW.format({
-                        planName: (0, F.getTierDisplayName)(null !== (C = ee.PREMIUM_SKU_TO_MONTHLY_PLAN[null !== (R = null == O ? void 0 : O.sku_id) && void 0 !== R ? R : ee.PremiumSubscriptionSKUs.NONE]) && void 0 !== C ? C : ee.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
-                        duration: (0, F.formatIntervalDuration)({
+                        planName: (0, V.getTierDisplayName)(null !== (C = ee.PREMIUM_SKU_TO_MONTHLY_PLAN[null !== (R = null == O ? void 0 : O.sku_id) && void 0 !== R ? R : ee.PremiumSubscriptionSKUs.NONE]) && void 0 !== C ? C : ee.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
+                        duration: (0, V.formatIntervalDuration)({
                             intervalType: null !== (D = null == O ? void 0 : O.interval) && void 0 !== D ? D : ee.SubscriptionIntervalTypes.DAY,
                             intervalCount: null !== (v = null == O ? void 0 : O.interval_count) && void 0 !== v ? v : 30,
                             capitalize: !1
@@ -342,7 +342,7 @@ function(e, t, n) {
             children: [(0, _.jsx)(eu, {
                 Icon: B.default,
                 text: en.default.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
-                    maxUploadPremium: (0, F.getMaxFileSizeForPremiumType)(ee.PremiumTypes.TIER_0, {
+                    maxUploadPremium: (0, V.getMaxFileSizeForPremiumType)(ee.PremiumTypes.TIER_0, {
                         useSpace: !1
                     })
                 })
@@ -492,12 +492,12 @@ function(e, t, n) {
                 Icon: P.default,
                 text: en.default.Messages.PREMIUM_TIER_SERVER_BOOST_WITH_PERCENTAGE_ITEM.format({
                     numBoosts: ee.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM,
-                    percentageOff: (0, V.formatPercent)(r, ee.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
+                    percentageOff: (0, F.formatPercent)(r, ee.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
                 })
             }), (0, _.jsx)(eu, {
                 Icon: B.default,
                 text: en.default.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
-                    maxUploadPremium: (0, F.getMaxFileSizeForPremiumType)(ee.PremiumTypes.TIER_2, {
+                    maxUploadPremium: (0, V.getMaxFileSizeForPremiumType)(ee.PremiumTypes.TIER_2, {
                         useSpace: !1
                     })
                 })
@@ -516,7 +516,7 @@ function(e, t, n) {
             children: [(0, _.jsx)(eu, {
                 Icon: B.default,
                 text: en.default.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
-                    maxUploadPremium: (0, F.getMaxFileSizeForPremiumType)(ee.PremiumTypes.TIER_2, {
+                    maxUploadPremium: (0, V.getMaxFileSizeForPremiumType)(ee.PremiumTypes.TIER_2, {
                         useSpace: !1
                     })
                 })
@@ -575,8 +575,8 @@ function(e, t, n) {
             }, {
                 autoTrackExposure: !1
             }),
-            V = en.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT;
-        return k && (null == N ? void 0 : N.trial_id) === ee.PREMIUM_TIER_2_REFERRAL_TRIAL_ID && (V = en.default.Messages.REFERRAL_PROGRAM_TWO_WEEK_TRIAL), !b || y || w ? b && y && !w && (n = ei.rimGlowTier2Stacked) : n = ei.rimGlowTier2, (0, _.jsxs)("div", {
+            F = en.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT;
+        return k && (null == N ? void 0 : N.trial_id) === ee.PREMIUM_TIER_2_REFERRAL_TRIAL_ID && (F = en.default.Messages.REFERRAL_PROGRAM_TWO_WEEK_TRIAL), !b || y || w ? b && y && !w && (n = ei.rimGlowTier2Stacked) : n = ei.rimGlowTier2, (0, _.jsxs)("div", {
             className: E()(ei.card, o, {
                 [ei.withTier2Rim]: b && !y,
                 [ei.withTier2RimStacked]: b && y,
@@ -596,7 +596,7 @@ function(e, t, n) {
                 })]
             }) : null, l || p !== ee.PremiumSubscriptionSKUs.TIER_2 ? null : (0, _.jsxs)(_.Fragment, {
                 children: [(0, _.jsx)(eo, {
-                    text: V,
+                    text: F,
                     className: ei.topRimPill,
                     colorOptions: B
                 }), (0, _.jsx)("div", {

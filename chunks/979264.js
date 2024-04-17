@@ -16,8 +16,8 @@ function(e, t, n) {
         _ = n("110924"),
         c = n("594174"),
         E = n("963202"),
-        I = n("353093"),
-        T = n("460578"),
+        I = n("645896"),
+        T = n("353093"),
         f = n("277602"),
         S = n("738103"),
         h = n("319695");
@@ -54,7 +54,7 @@ function(e, t, n) {
             userId: a,
             className: o,
             disableTooltip: S = !1
-        } = e, m = (0, u.useStateFromStores)([c.default], () => c.default.getUser(a), [a]), N = null !== (t = null == m ? void 0 : m.clan) && void 0 !== t ? t : s, p = (0, I.getTagFromClan)(N), O = (0, _.default)(N), [R, C] = (0, T.useFetchClanInfo)(null !== (n = null == N ? void 0 : N.identityGuildId) && void 0 !== n ? n : null), [g, L] = r.useState(!1), [D, v] = r.useState(!1), [M, y] = r.useState(!1), P = r.useRef(null), U = r.useCallback(e => {
+        } = e, m = (0, u.useStateFromStores)([c.default], () => c.default.getUser(a), [a]), N = null !== (t = null == m ? void 0 : m.clan) && void 0 !== t ? t : s, p = (0, T.getTagFromClan)(N), O = (0, _.default)(N), [R, C] = (0, I.useFetchClanInfo)(null !== (n = null == N ? void 0 : N.identityGuildId) && void 0 !== n ? n : null), [g, L] = r.useState(!1), [D, v] = r.useState(!1), [M, y] = r.useState(!1), P = r.useRef(null), U = r.useCallback(e => {
             !S && (e.stopPropagation(), e.preventDefault(), L(e => !e))
         }, [S]), b = r.useCallback(() => {
             !S && C()
@@ -75,7 +75,7 @@ function(e, t, n) {
             text: (0, i.jsx)(f.default, {
                 isLoading: R,
                 clan: N,
-                onAdoptTag: () => L(!1),
+                onClose: () => L(!1),
                 onMouseEnter: () => v(!0),
                 onMouseLeave: () => v(!1)
             }),

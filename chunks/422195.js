@@ -92,17 +92,17 @@ function(e, t, n) {
                     w = n[s + 1],
                     B = null != w && G.type === p.StickerCategoryTypes.GUILD && w.type !== p.StickerCategoryTypes.GUILD,
                     k = G.type === p.StickerCategoryTypes.PACK,
-                    V = "",
-                    F = null;
+                    F = "",
+                    V = null;
                 if (G.type === p.StickerCategoryTypes.GUILD || G.type === p.StickerCategoryTypes.EMPTY_GUILD_UPSELL) {
                     let e = I.default.getGuild(G.id);
-                    null != e && (c = e.id, V = e.name, F = (0, i.jsx)(d.default, {
+                    null != e && (c = e.id, F = e.name, V = (0, i.jsx)(d.default, {
                         guild: e,
                         isSelected: b
                     }))
                 } else if (k) {
                     let e = N.default.getStickerPack(G.id);
-                    null != e && (V = e.name, F = (0, i.jsx)(R.default, {
+                    null != e && (F = e.name, V = (0, i.jsx)(R.default, {
                         disableAnimation: !b || S,
                         size: M,
                         sticker: (0, O.getStickerPackPreviewSticker)(e)
@@ -111,7 +111,7 @@ function(e, t, n) {
                 return (0, i.jsxs)(r.Fragment, {
                     children: [(0, i.jsx)(l.Tooltip, {
                         position: "right",
-                        text: V,
+                        text: F,
                         tooltipContentClassName: D.__invalid_tooltip,
                         children: e => (0, i.jsx)("div", {
                             role: "listitem",
@@ -119,7 +119,7 @@ function(e, t, n) {
                             "aria-posinset": s,
                             children: (0, i.jsx)(l.Clickable, {
                                 ...e,
-                                "aria-label": V,
+                                "aria-label": F,
                                 className: a()(D.stickerCategory, {
                                     [D.firstPartyCategory]: k,
                                     [D.firstPartyCategorySelected]: !S && b && k
@@ -132,7 +132,7 @@ function(e, t, n) {
                                         guild_id: c
                                     }), o()
                                 },
-                                children: F
+                                children: V
                             })
                         })
                     }), B ? (0, i.jsx)("hr", {

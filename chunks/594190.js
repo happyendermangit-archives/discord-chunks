@@ -120,8 +120,8 @@ function(e, t, n) {
         }],
         B = !0,
         k = new Set,
-        V = [],
         F = [],
+        V = [],
         x = [],
         H = null,
         Y = [],
@@ -246,7 +246,7 @@ function(e, t, n) {
 
     function eu() {
         let e = !1;
-        return V = u().values(p.default.libraryApplications).reduce((t, n) => {
+        return F = u().values(p.default.libraryApplications).reduce((t, n) => {
             let i = N.default.getDetectableGame(n.id);
             if (null == i) return t;
             for (let r of O.default.getLaunchOptions(n.id, n.branchId)) {
@@ -270,7 +270,7 @@ function(e, t, n) {
 
     function ed() {
         if (!__OVERLAY__ && D.isPlatformEmbedded) {
-            let e = [...V, ...u().values(K.gameOverrides)];
+            let e = [...F, ...u().values(K.gameOverrides)];
             v.default.setGameCandidateOverrides(e)
         }
     }
@@ -427,7 +427,7 @@ function(e, t, n) {
             return null != Z && Z === e
         }
         getCandidateGames() {
-            return F.filter(e => e.hidden || null == e.id).filter(e => void 0 === K.gameOverrides[ei(e)])
+            return V.filter(e => e.hidden || null == e.id).filter(e => void 0 === K.gameOverrides[ei(e)])
         }
         getGamesSeen(e) {
             let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
@@ -476,7 +476,7 @@ function(e, t, n) {
             e_(x)
         },
         CANDIDATE_GAMES_CHANGE: function(e) {
-            F = e.games
+            V = e.games
         },
         PERMISSION_CLEAR_PTT_ADMIN_WARNING: function() {
             B = !1
@@ -501,7 +501,7 @@ function(e, t, n) {
             let n = e.pid,
                 i = x.find(e => e.pid === n);
             if (null == i) {
-                let e = F.find(e => e.pid === n);
+                let e = V.find(e => e.pid === n);
                 if (null == e) return;
                 (i = {
                     ...e

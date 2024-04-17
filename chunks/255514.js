@@ -63,9 +63,9 @@ function(e, t, n) {
             onSelectChild: w,
             onModalClose: B,
             multiSelect: k,
-            reportId: V,
-            textInput: F
-        } = e, x = U(t, "checkbox"), H = U(t, "text_line_resource"), Y = b(t, "external_link"), j = b(t, "free_text"), W = b(t, "dropdown"), [K, z] = r.useState(!1), [X, Q] = r.useState(""), [q, Z] = r.useState(() => ({})), [J, $] = r.useState(() => ({})), [ee, et] = r.useState((0, o.areRequiredElementsUnfilled)(j, W, x, F, k)), en = function(e, t) {
+            reportId: F,
+            textInput: V
+        } = e, x = U(t, "checkbox"), H = U(t, "text_line_resource"), Y = b(t, "external_link"), j = b(t, "free_text"), W = b(t, "dropdown"), [K, z] = r.useState(!1), [X, Q] = r.useState(""), [q, Z] = r.useState(() => ({})), [J, $] = r.useState(() => ({})), [ee, et] = r.useState((0, o.areRequiredElementsUnfilled)(j, W, x, V, k)), en = function(e, t) {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
                 i = {
                     ...J
@@ -86,8 +86,8 @@ function(e, t, n) {
             })
         }, [t, w, x, q, J, j, W]);
         r.useEffect(() => {
-            null != k && Z(k), null != F && $(F)
-        }, [k, F]);
+            null != k && Z(k), null != V && $(V)
+        }, [k, V]);
         let er = e => {
                 if (e === M.AbortCodes.INVALID_FORM_BODY) Q(y.default.Messages.IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR);
                 else Q(y.default.Messages.MOBILE_REPORTS_SUBMIT_FAILED)
@@ -142,14 +142,14 @@ function(e, t, n) {
                     children: y.default.Messages.MOBILE_REPORTS_BLOCK_ELEMENT_HEADER
                 }), null != U(t, "block_users") && ("message" === n.name || "first_dm" === n.name || "user" === n.name) && (0, i.jsx)(u.default, {
                     userId: "user" === n.name ? n.record.id : n.record.author.id,
-                    reportId: V,
+                    reportId: F,
                     reportName: n.name
                 }), null != U(t, "delete_message") && "message" === n.name && (0, i.jsx)(c.default, {
                     message: n.record,
-                    reportId: V
+                    reportId: F
                 }), null != U(t, "leave_guild") && "guild" === n.name && (0, i.jsx)(p.default, {
                     guildId: n.record.id,
-                    reportId: V
+                    reportId: F
                 }), null != U(t, "channel_preview") && "stage_channel" === n.name && (0, i.jsx)(C.default, {
                     stageInstance: n.record
                 }), null != U(t, "guild_scheduled_event_preview") && "guild_scheduled_event" === n.name && (0, i.jsx)(A.default, {

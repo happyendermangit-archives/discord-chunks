@@ -8,7 +8,7 @@ function(e, t, n) {
             return X
         },
         getRandomDateShortcut: function() {
-            return V
+            return F
         },
         refreshSearchTokens: function() {
             return z
@@ -128,11 +128,11 @@ function(e, t, n) {
         return [...Array.from(O()), ...Array.from(R()), ...Array.from(C()), ...Object.keys(v())]
     }
 
-    function V() {
+    function F() {
         return l().sample(k())
     }
 
-    function F(e, t, n) {
+    function V(e, t, n) {
         return x(e, t, k()).map(e => ({
             ...e,
             group: n,
@@ -283,21 +283,21 @@ function(e, t, n) {
                     componentType: "FILTER",
                     key: P(p.default.Messages.SEARCH_FILTER_BEFORE),
                     plainText: p.default.Messages.SEARCH_FILTER_BEFORE,
-                    getAutocompletions: (e, t, n) => F(e, n, N.SearchTokenTypes.FILTER_BEFORE)
+                    getAutocompletions: (e, t, n) => V(e, n, N.SearchTokenTypes.FILTER_BEFORE)
                 },
                 [N.SearchTokenTypes.FILTER_ON]: {
                     regex: U("(".concat(p.default.Messages.SEARCH_FILTER_ON, "|").concat(p.default.Messages.SEARCH_FILTER_DURING, ")")),
                     componentType: "FILTER",
                     key: P(p.default.Messages.SEARCH_FILTER_DURING),
                     plainText: p.default.Messages.SEARCH_FILTER_DURING,
-                    getAutocompletions: (e, t, n) => F(e, n, N.SearchTokenTypes.FILTER_ON)
+                    getAutocompletions: (e, t, n) => V(e, n, N.SearchTokenTypes.FILTER_ON)
                 },
                 [N.SearchTokenTypes.FILTER_AFTER]: {
                     regex: U(p.default.Messages.SEARCH_FILTER_AFTER),
                     componentType: "FILTER",
                     key: P(p.default.Messages.SEARCH_FILTER_AFTER),
                     plainText: p.default.Messages.SEARCH_FILTER_AFTER,
-                    getAutocompletions: (e, t, n) => F(e, n, N.SearchTokenTypes.FILTER_AFTER)
+                    getAutocompletions: (e, t, n) => V(e, n, N.SearchTokenTypes.FILTER_AFTER)
                 },
                 [N.SearchTokenTypes.ANSWER_BEFORE]: {
                     regex: M,

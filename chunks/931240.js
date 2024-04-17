@@ -2,19 +2,25 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         adoptClanIdentity: function() {
-            return _
+            return c
         },
         convertGuildToClan: function() {
-            return u
-        },
-        fetchClanSettings: function() {
-            return I
-        },
-        getClanInfo: function() {
             return d
         },
+        fetchClanSettings: function() {
+            return f
+        },
+        getClanInfo: function() {
+            return _
+        },
+        saveClanSettings: function() {
+            return S
+        },
+        updateClanSettings: function() {
+            return I
+        },
         updateClanSetup: function() {
-            return c
+            return E
         }
     }), n("47120");
     var i = n("392711"),
@@ -22,8 +28,9 @@ function(e, t, n) {
         s = n("570140"),
         a = n("479531"),
         o = n("924801"),
-        l = n("981631");
-    async function u(e, t) {
+        l = n("981631"),
+        u = n("976757");
+    async function d(e, t) {
         var n, u, d, _, c;
         let E = (0, i.uniqWith)(null !== (n = t.primetime) && void 0 !== n ? n : [], i.isEqual),
             I = (0, o.formatTimesForServer)(E);
@@ -32,7 +39,7 @@ function(e, t, n) {
             guildId: e
         });
         try {
-            await r.HTTP.put({
+            await r.HTTP.post({
                 url: l.Endpoints.GUILD_CONVERT_TO_CLAN(e),
                 body: {
                     tag: t.tag,
@@ -64,12 +71,13 @@ function(e, t, n) {
             }), t
         }
     }
-    async function d(e) {
-        return (await r.HTTP.get({
-            url: l.Endpoints.GUILD_CLAN_INFO(e)
-        })).body
+    async function _(e) {
+        let t = await r.HTTP.get({
+            url: l.Endpoints.GUILD_CLAN_DISCOVERY_INFO(e)
+        });
+        return (0, u.buildClanFromServer)(t.body)
     }
-    async function _(e, t) {
+    async function c(e, t) {
         try {
             let n = await r.HTTP.put({
                 url: l.Endpoints.USER_SET_CLAN_IDENTITY,
@@ -87,14 +95,22 @@ function(e, t, n) {
         }
     }
 
-    function c(e, t) {
+    function E(e, t) {
         s.default.dispatch({
             type: "CLAN_SETUP_UPDATE",
             guildId: e,
             updates: t
         })
     }
-    let E = e => {
+
+    function I(e, t) {
+        s.default.dispatch({
+            type: "CLAN_SETTINGS_UPDATE",
+            guildId: e,
+            updates: t
+        })
+    }
+    let T = e => {
         var t, n, i, r, s, a;
         return {
             tag: e.tag,
@@ -117,14 +133,40 @@ function(e, t, n) {
             brandSecondaryColor: e.brand_color_secondary
         }
     };
-    async function I(e) {
+    async function f(e) {
+        s.default.dispatch({
+            type: "CLAN_SETTINGS_FETCH_START"
+        });
         let t = await r.HTTP.get({
             url: l.Endpoints.CLAN_SETTINGS(e)
         });
         s.default.dispatch({
-            type: "CLAN_SETTINGS_FETCH",
+            type: "CLAN_SETTINGS_FETCH_SUCCESS",
             guildId: e,
-            settings: E(t.body)
+            settings: T(t.body)
+        })
+    }
+    async function S(e, t) {
+        var n, i, s, a;
+        return await r.HTTP.patch({
+            url: l.Endpoints.CLAN_SETTINGS(e),
+            body: {
+                tag: t.tag,
+                description: t.description,
+                play_style: t.playstyle,
+                search_terms: Array.from(null !== (i = t.interests) && void 0 !== i ? i : new Set),
+                game_application_ids: Array.from(null !== (s = t.gameApplicationIds) && void 0 !== s ? s : new Set),
+                verification_form: {
+                    form_fields: null !== (a = null === (n = t.verificationForm) || void 0 === n ? void 0 : n.formFields) && void 0 !== a ? a : []
+                },
+                badge: t.badgeKind,
+                badge_color_primary: t.badgePrimaryColor,
+                badge_color_secondary: t.badgeSecondaryColor,
+                banner: t.banner,
+                brand_color_primary: t.brandPrimaryColor,
+                brand_color_secondary: t.brandSecondaryColor,
+                wildcard_descriptors: t.wildcardDescriptors
+            }
         })
     }
 }

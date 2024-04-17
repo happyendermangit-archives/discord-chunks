@@ -415,6 +415,7 @@ function(e) {
         CLAN_USER_ADOPT_TAG_MODAL_CTA: "Adopt Tag",
         CLAN_USER_ADOPT_TAG_MODAL_CANCEL: "Not Now",
         CLAN_USER_ADOPT_TAG_GUILD_PROFILE_CTA: "Don The Tag",
+        CLAN_USER_APPLY_TAG_GUILD_PROFILE_CTA: "Apply To Join",
         SIGNUP_BUTTON_TOOLTIP_CTA: "Click to preview",
         SIGNUP_COMPLETE_CTA: "Sign Up",
         SIGNUP_EMAIL_PROMPT: "Confirm your email to secure your spot on the waitlist",
