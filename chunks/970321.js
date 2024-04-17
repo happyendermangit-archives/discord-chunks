@@ -12,7 +12,7 @@ function(e, t, n) {
     function a(e) {
         return (0, i.useStateFromStores)([r.default, s.default], () => {
             var t, n, i, a, o;
-            return null !== (o = null !== (a = null === (t = r.default.getApplication(e)) || void 0 === t ? void 0 : t.storefront_available) && void 0 !== a ? a : null === (i = s.default.getUserProfile(e)) || void 0 === i ? void 0 : null === (n = i.application) || void 0 === n ? void 0 : n.store_available) && void 0 !== o && o
+            return null !== (o = null !== (a = null === (t = r.default.getApplication(e)) || void 0 === t ? void 0 : t.storefront_available) && void 0 !== a ? a : null === (i = s.default.getUserProfile(e)) || void 0 === i ? void 0 : null === (n = i.application) || void 0 === n ? void 0 : n.storefront_available) && void 0 !== o && o
         }, [e])
     }
 }
