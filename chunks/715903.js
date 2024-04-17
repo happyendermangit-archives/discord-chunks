@@ -18,7 +18,7 @@ function(e, t, n) {
         r = n("271383"),
         s = n("630388"),
         a = n("372897");
-    let o = [a.GuildMemberFlags.AUTOMOD_QUARANTINED_BIO, a.GuildMemberFlags.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME];
+    let o = [a.GuildMemberFlags.AUTOMOD_QUARANTINED_BIO, a.GuildMemberFlags.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME, a.GuildMemberFlags.AUTOMOD_QUARANTINED_CLAN_TAG];
 
     function l(e) {
         return null == e ? new Set : new Set(o.reduce((t, n) => ((0, s.hasFlag)(null != e ? e : 0, n) && t.push(n), t), []))
