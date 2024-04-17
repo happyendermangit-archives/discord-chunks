@@ -52,6 +52,9 @@ function(e, t, n) {
         getValidWeekdays: function() {
             return F
         },
+        getValidWeekends: function() {
+            return x
+        },
         hasScheduleChanges: function() {
             return j
         },

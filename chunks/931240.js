@@ -7,10 +7,13 @@ function(e, t, n) {
         convertGuildToClan: function() {
             return u
         },
+        fetchClanSettings: function() {
+            return I
+        },
         getClanInfo: function() {
             return d
         },
-        updateClanSettings: function() {
+        updateClanSetup: function() {
             return c
         }
     }), n("47120");
@@ -89,6 +92,39 @@ function(e, t, n) {
             type: "CLAN_SETUP_UPDATE",
             guildId: e,
             updates: t
+        })
+    }
+    let E = e => {
+        var t, n, i, r, s;
+        return {
+            tag: e.tag,
+            selectedGames: new Map,
+            interests: new Set(null !== (i = e.search_terms) && void 0 !== i ? i : []),
+            playstyle: e.play_style,
+            description: e.description,
+            wildcardDescriptors: e.wildcard_descriptors,
+            primetime: e.prime_time.map(e => (0, o.guildEventToPrimeTimeSelection)(e)),
+            verificationForm: {
+                description: null !== (r = null === (t = e.verification_form) || void 0 === t ? void 0 : t.description) && void 0 !== r ? r : "",
+                formFields: null !== (s = null === (n = e.verification_form) || void 0 === n ? void 0 : n.form_fields) && void 0 !== s ? s : [],
+                version: ""
+            },
+            badgeKind: e.badge,
+            badgePrimaryColor: e.badge_color_primary,
+            badgeSecondaryColor: e.badge_color_secondary,
+            banner: e.banner,
+            brandPrimaryColor: e.brand_color_primary,
+            brandSecondaryColor: e.brand_color_secondary
+        }
+    };
+    async function I(e) {
+        let t = await r.HTTP.get({
+            url: l.Endpoints.CLAN_SETTINGS(e)
+        });
+        s.default.dispatch({
+            type: "CLAN_SETTINGS_FETCH",
+            guildId: e,
+            settings: E(t.body)
         })
     }
 }
