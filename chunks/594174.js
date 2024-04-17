@@ -214,14 +214,14 @@ function(e, t, n) {
         return t.forEach(e => v(e, !0)), !1
     }
 
-    function V(e) {
+    function F(e) {
         let {
             mostRecentMessages: t
         } = e;
         return null == t || t.forEach(e => v(e, !1)), !1
     }
 
-    function F(e) {
+    function V(e) {
         let {
             messages: t
         } = e;
@@ -681,13 +681,13 @@ function(e, t, n) {
                 USER_UPDATE: G,
                 CURRENT_USER_UPDATE: w,
                 PRESENCE_UPDATES: J,
-                SEARCH_FINISH: F,
-                MOD_VIEW_SEARCH_FINISH: F,
+                SEARCH_FINISH: V,
+                MOD_VIEW_SEARCH_FINISH: V,
                 LOAD_MESSAGES_SUCCESS: k,
                 LOAD_MESSAGES_AROUND_SUCCESS: k,
                 LOAD_PINNED_MESSAGES_SUCCESS: k,
                 LOAD_RECENT_MENTIONS_SUCCESS: k,
-                THREAD_LIST_SYNC: V,
+                THREAD_LIST_SYNC: F,
                 MESSAGE_CREATE: X,
                 MESSAGE_UPDATE: X,
                 GUILD_SETTINGS_LOADED_BANS: $,

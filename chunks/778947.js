@@ -50,8 +50,8 @@ function(e, t, n) {
         w = n("307187"),
         B = n("750858"),
         k = n("981631"),
-        V = n("689938"),
-        F = n("50182"),
+        F = n("689938"),
+        V = n("50182"),
         x = n("255963");
 
     function H(e) {
@@ -78,14 +78,14 @@ function(e, t, n) {
                 onMouseLeave: d,
                 src: t,
                 "aria-hidden": !0,
-                className: a()(E, F.avatar, {
-                    [F.compact]: r,
-                    [F.clickable]: null != s,
-                    [F.communicationDisabledOpacity]: c
+                className: a()(E, V.avatar, {
+                    [V.compact]: r,
+                    [V.clickable]: null != s,
+                    [V.communicationDisabledOpacity]: c
                 }),
                 alt: " "
             }), null == n || r ? null : (0, i.jsx)("img", {
-                className: F.avatarDecoration,
+                className: V.avatarDecoration,
                 src: n,
                 alt: " ",
                 "aria-hidden": !0
@@ -121,7 +121,7 @@ function(e, t, n) {
                 renderRemixTag: !0
             }), o && (0, i.jsxs)(i.Fragment, {
                 children: [(0, i.jsx)("i", {
-                    className: F.separator,
+                    className: V.separator,
                     children: ":"
                 }), " "]
             })]
@@ -155,8 +155,8 @@ function(e, t, n) {
             id: G
         } = b, w = S ? 32 : 80, {
             avatarSrc: B,
-            avatarDecorationSrc: V,
-            eventHandlers: F
+            avatarDecorationSrc: F,
+            eventHandlers: V
         } = (0, R.default)({
             user: b,
             guildId: a,
@@ -193,9 +193,9 @@ function(e, t, n) {
                 position: o.isMobile ? "window_center" : "right",
                 onRequestClose: p,
                 children: e => H({
-                    ...F,
+                    ...V,
                     avatarSrc: Y,
-                    avatarDecorationSrc: V,
+                    avatarDecorationSrc: F,
                     compact: S,
                     onClick: N,
                     onContextMenu: m,
@@ -208,9 +208,9 @@ function(e, t, n) {
         }) : (0, i.jsx)(_.AnalyticsLocationProvider, {
             value: v,
             children: H({
-                ...F,
+                ...V,
                 avatarSrc: Y,
-                avatarDecorationSrc: V,
+                avatarDecorationSrc: F,
                 compact: S,
                 onClick: N,
                 onContextMenu: m,
@@ -240,7 +240,7 @@ function(e, t, n) {
         } = e;
         return (0, i.jsxs)(i.Fragment, {
             children: [!l && n, (0, i.jsxs)(u.H, {
-                className: a()(F.header, I),
+                className: a()(V.header, I),
                 "aria-describedby": E,
                 "aria-labelledby": c,
                 children: [d && l && (0, i.jsx)(G.default, {
@@ -259,7 +259,7 @@ function(e, t, n) {
                     timestamp: t.timestamp,
                     className: T
                 }), null != S && S.length > 0 ? (0, i.jsx)("div", {
-                    className: F.badgesContainer,
+                    className: V.badgesContainer,
                     children: S
                 }) : null]
             })]
@@ -278,21 +278,21 @@ function(e, t, n) {
             return null === (e = p.default.getUserProfile(n.id)) || void 0 === e ? void 0 : e.premiumSince
         });
         return (0, i.jsx)(u.Tooltip, {
-            tooltipClassName: F.nitroAuthorBadgeTootip,
+            tooltipClassName: V.nitroAuthorBadgeTootip,
             shouldShow: null != r,
-            text: V.default.Messages.PREMIUM_BADGE_TOOLTIP.format({
+            text: F.default.Messages.PREMIUM_BADGE_TOOLTIP.format({
                 date: r
             }),
             onTooltipShow: () => (0, O.default)(n.id),
             children: e => (0, i.jsx)(u.Clickable, {
-                className: F.nitroAuthorBadgeContainer,
+                className: V.nitroAuthorBadgeContainer,
                 onClick: () => K(t),
-                "aria-label": V.default.Messages.PREMIUM_BADGE_TOOLTIP.format({
+                "aria-label": F.default.Messages.PREMIUM_BADGE_TOOLTIP.format({
                     date: r
                 }),
                 children: (0, i.jsx)("img", {
                     alt: "",
-                    className: F.nitroBadgeSvg,
+                    className: V.nitroBadgeSvg,
                     src: x,
                     ...e
                 })
@@ -336,13 +336,13 @@ function(e, t, n) {
                 } = e;
                 return (0, i.jsx)(M.default, {
                     ..._,
-                    className: F.roleIcon,
+                    className: V.roleIcon,
                     onClick: t
                 })
             }
         }, "role-icon-children") : (!s || X) && null != _ ? (0, i.jsx)(M.default, {
             ..._,
-            className: F.roleIcon
+            className: V.roleIcon
         }, "role-icon-children") : null, q = (0, w.renderSystemTag)({
             message: t,
             channel: R,
@@ -364,7 +364,7 @@ function(e, t, n) {
         }, "connections"));
         let en = [];
         (0, U.hasFlag)(t.flags, k.MessageFlags.SUPPRESS_NOTIFICATIONS) && en.push((0, i.jsx)(N.default, {}, "suppress-notifications")), t.isPoll() && en.push((0, i.jsx)(h.default, {
-            className: F.pollBadgeDefault
+            className: V.pollBadgeDefault
         }, "poll"));
         let ei = {};
         ei[B.UsernameDecorationTypes.SYSTEM_TAG] = q, ei[B.UsernameDecorationTypes.BADGES] = Z;
@@ -378,23 +378,23 @@ function(e, t, n) {
             avatar: K,
             username: (0, i.jsxs)(i.Fragment, {
                 children: [H && (0, i.jsx)(u.Tooltip, {
-                    text: V.default.Messages.GUILD_COMMUNICATION_DISABLED_ICON_TOOLTIP_BODY,
+                    text: F.default.Messages.GUILD_COMMUNICATION_DISABLED_ICON_TOOLTIP_BODY,
                     children: e => (0, i.jsxs)(i.Fragment, {
                         children: [(0, i.jsx)(v.default, {
                             ...e,
                             width: 12,
                             height: 12,
-                            className: s ? F.compactCommunicationDisabled : F.communicationDisabled
+                            className: s ? V.compactCommunicationDisabled : V.communicationDisabled
                         }), (0, i.jsx)(u.HiddenVisually, {
-                            children: V.default.Messages.GUILD_COMMUNICATION_DISABLED_BOTTOM_SHEET_TITLE
+                            children: F.default.Messages.GUILD_COMMUNICATION_DISABLED_BOTTOM_SHEET_TITLE
                         })]
                     })
                 }), er]
             }),
             usernameSpanId: (0, f.getMessageUsernameId)(t, A),
-            usernameClassName: a()(F.headerText, {
-                [F.hasRoleIcon]: null != Q,
-                [F.hasBadges]: null != q || en.length > 0
+            usernameClassName: a()(V.headerText, {
+                [V.hasRoleIcon]: null != Q,
+                [V.hasBadges]: null != q || en.length > 0
             }),
             compact: s,
             showTimestamp: !0 !== p,

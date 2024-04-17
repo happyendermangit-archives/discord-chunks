@@ -54,7 +54,7 @@ function(e, t, n) {
         r.useEffect(() => {
             null == v || v(null == b ? void 0 : b.current)
         }, [b, v]);
-        let V = () => {
+        let F = () => {
             null == D || D(), (0, p.openUserProfileModal)({
                 sourceAnalyticsLocations: P,
                 userId: t.id,
@@ -100,7 +100,7 @@ function(e, t, n) {
                                         U({
                                             action: "PRESS_VIEW_PROFILE",
                                             analyticsLocations: P
-                                        }), V()
+                                        }), F()
                                     }
                                 })
                             })]
@@ -116,7 +116,7 @@ function(e, t, n) {
                             displayProfile: G,
                             guild: B,
                             channelId: s,
-                            onOpenProfile: V,
+                            onOpenProfile: F,
                             onClose: D
                         })]
                     }), (null == G ? void 0 : G.profileEffectId) != null && (0, i.jsx)(c.default, {

@@ -10,13 +10,13 @@ function(e, t, n) {
     var r = n("442837"),
         s = n("481060"),
         a = n("395661"),
-        o = n("171246"),
-        l = n("359610"),
-        u = n("886491"),
-        d = n("696906"),
-        _ = n("682864"),
-        c = n("191741"),
-        E = n("135431"),
+        o = n("970321"),
+        l = n("171246"),
+        u = n("359610"),
+        d = n("886491"),
+        _ = n("696906"),
+        c = n("682864"),
+        E = n("191741"),
         I = n("621853"),
         T = n("873572"),
         f = n("520978"),
@@ -26,81 +26,82 @@ function(e, t, n) {
         m = n("220862");
 
     function N(e) {
+        var t;
         let {
-            user: t,
-            guildId: n
-        } = e, s = (0, r.useStateFromStores)([I.default], () => {
+            user: n,
+            guildId: s
+        } = e, l = (0, r.useStateFromStores)([I.default], () => {
             var e;
-            return null === (e = I.default.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application
-        }), o = null != s && (0, E.canInstallApplication)({
-            customInstallUrl: s.customInstallUrl,
-            installParams: s.installParams,
-            integrationTypesConfig: s.integrationTypesConfig
+            return null === (e = I.default.getUserProfile(n.id)) || void 0 === e ? void 0 : e.application
         }), {
-            botUpgradeable: l,
-            subscriptionGroupListing: u
-        } = (0, T.default)({
-            user: t,
-            guildId: n
-        }), {
-            enabled: d
+            enabled: u
         } = a.appStorefrontExperiment.useExperiment({
             location: "BotButtonsSection"
-        });
-        return o || l ? (0, i.jsx)(S.default, {
+        }), d = (0, o.useAppStorefrontAvailable)(null !== (t = null == l ? void 0 : l.id) && void 0 !== t ? t : "");
+        return (0, i.jsx)(S.default, {
             children: (0, i.jsxs)("div", {
                 className: m.buttonsContainer,
                 children: [(0, i.jsx)(f.default, {
-                    application: s,
+                    application: l,
                     className: m.button
-                }), l && (d ? (0, i.jsx)(O, {
-                    app: s,
-                    listing: null != u ? u : void 0,
-                    guildId: n
+                }), u && d ? (0, i.jsx)(O, {
+                    app: l,
+                    user: n,
+                    guildId: s
                 }) : (0, i.jsx)(p, {
-                    guildId: n,
-                    listing: u
-                }))]
-            })
-        }) : null
-    }
-
-    function p(e) {
-        let {
-            listing: t,
-            guildId: n
-        } = e, r = null != t ? (0, o.getPayableSubscriptionListing)(t) : null, {
-            openModal: s
-        } = (0, d.default)({
-            listing: r,
-            guildId: n,
-            groupListingId: null == t ? void 0 : t.id,
-            showBenefitsFirst: !0,
-            analyticsLocation: h.AnalyticsLocations.BOT_PROFILE_POPOUT
-        });
-        return (0, i.jsx)(l.default, {
-            onClick: s,
-            className: m.button,
-            children: (0, i.jsxs)("div", {
-                className: m.botUpgradeButtonContent,
-                children: [(0, i.jsx)(c.default, {
-                    width: 16,
-                    height: 16
-                }), (0, i.jsx)(_.default, {
-                    size: 4,
-                    horizontal: !0
-                }), A.default.Messages.BOT_PROFILE_UPGRADE_CTA]
+                    guildId: s,
+                    user: n
+                })]
             })
         })
     }
 
-    function O(e) {
+    function p(e) {
         let {
-            app: t,
-            listing: r,
-            guildId: a
-        } = e;
-        return null == t || null == a ? null : (0, i.jsx)(u.StorefrontButton, {
+            user: t,
+            guildId: n
+        } = e, {
+            botUpgradeable: r,
+            subscriptionGroupListing: s
+        } = (0, T.default)({
+            user: t,
+            guildId: n
+        }), a = null != s ? (0, l.getPayableSubscriptionListing)(s) : null, {
+            openModal: o
+        } = (0, _.default)({
+            listing: a,
+            guildId: n,
+            groupListingId: null == s ? void 0 : s.id,
+            showBenefitsFirst: !0,
+            analyticsLocation: h.AnalyticsLocations.BOT_PROFILE_POPOUT
+        });
+        return r ? (0, i.jsx)(u.default, {
+            onClick: o,
+            className: m.button,
+            children: (0, i.jsxs)("div", {
+                className: m.botUpgradeButtonContent,
+                children: [(0, i.jsx)(E.default, {
+                    width: 16,
+                    height: 16
+                }), (0, i.jsx)(c.default, {
+                    size: 4,
+                    horizontal: !0
+                }), A.default.Messages.BOT_PROFILE_UPGRADE_CTA]
+            })
+        }) : null
+    }
+
+    function O(e) {
+        var t;
+        let {
+            app: r,
+            user: a,
+            guildId: o
+        } = e, l = null !== (t = (0, T.default)({
+            user: a,
+            guildId: o
+        }).subscriptionGroupListing) && void 0 !== t ? t : void 0;
+        return null == r || null == o ? null : (0, i.jsx)(d.StorefrontButton, {
             onClick: () => (function(e, t, r) {
                 (0, s.openModalLazy)(async () => {
                     let {
@@ -114,7 +115,7 @@ function(e, t, n) {
                         guildId: r
                     })
                 })
-            })(t, r, a),
+            })(r, l, o),
             className: m.button,
             size: s.ButtonSizes.SMALL
         })

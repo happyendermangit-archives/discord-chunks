@@ -47,7 +47,7 @@ function(e, t, n) {
             return H
         },
         getVideoAssetMimeType: function() {
-            return F
+            return V
         },
         hasQuestCollectibleRewards: function() {
             return b
@@ -254,7 +254,7 @@ function(e, t, n) {
         },
         N = e => "".concat(_).concat(e.id, "/").concat(e.config.assets.hero),
         p = e => "".concat(_).concat(e.id, "/").concat(e.config.assets.questBarHero),
-        O = e => "".concat(_).concat(e.id, "/").concat(e.config.assets.gameTile),
+        O = (e, t) => "".concat(_).concat(e.id, "/").concat(t, "/").concat(e.config.assets.gameTile),
         R = (e, t) => "".concat(_).concat(e.id, "/").concat(t, "/").concat(e.config.assets.logotype),
         C = e => "".concat(location.protocol, "//").concat(location.host, "/quests/").concat(e);
 
@@ -352,11 +352,11 @@ function(e, t, n) {
     function k(e) {
         return e.endsWith(".webm") || e.endsWith(".mp4")
     }
-    let V = /\.([a-zA-Z]+)$/;
+    let F = /\.([a-zA-Z]+)$/;
 
-    function F(e) {
+    function V(e) {
         var t, n;
-        switch (null === (n = V.exec(e)) || void 0 === n ? void 0 : null === (t = n[1]) || void 0 === t ? void 0 : t.toLowerCase()) {
+        switch (null === (n = F.exec(e)) || void 0 === n ? void 0 : null === (t = n[1]) || void 0 === t ? void 0 : t.toLowerCase()) {
             case "webm":
                 return "video/webm";
             case "mp4":

@@ -37,8 +37,8 @@ function(e, t, n) {
         w = n("664202"),
         B = n("228168"),
         k = n("981631"),
-        V = n("616922"),
-        F = n("617538");
+        F = n("616922"),
+        V = n("617538");
 
     function x(e) {
         e.stopPropagation()
@@ -131,7 +131,7 @@ function(e, t, n) {
                     has_images: !!(null !== (e = null == r ? void 0 : r.large_image) && void 0 !== e ? e : null == r ? void 0 : r.small_image),
                     party_max: null != i && null != i.size ? i.size[1] : void 0,
                     party_id: null != i ? i.id : void 0,
-                    party_platform: null != i && (0, V.isSpotifyParty)(i.id) ? k.PlatformTypes.SPOTIFY : null,
+                    party_platform: null != i && (0, F.isSpotifyParty)(i.id) ? k.PlatformTypes.SPOTIFY : null,
                     game_platform: (0, E.default)(en),
                     profile_user_status: o,
                     is_streaming: ea,
@@ -170,7 +170,7 @@ function(e, t, n) {
                             user: t,
                             displayProfile: q,
                             profileType: B.UserProfileTypes.POPOUT,
-                            className: e_.shouldShow ? F.hasCollectiblesUpsell : void 0,
+                            className: e_.shouldShow ? V.hasCollectiblesUpsell : void 0,
                             showOutOfBoundaryComponents: ec,
                             children: [(0, i.jsx)(G.default, {
                                 user: t,

@@ -88,7 +88,7 @@ function(e, t, n) {
             };
         D.clearTimer(e), s().forEach(r, e => {
             v.clearTimer(e.channel_id)
-        }), V(e, o), O[e] = o, P[e] = Q(O[e]);
+        }), F(e, o), O[e] = o, P[e] = Q(O[e]);
         let l = s().filter(o.channel_overrides, e => {
             var t;
             return E.hasFlag(null !== (t = e.flags) && void 0 !== t ? t : 0, N.ChannelNotificationSettingsFlags.OPT_IN_ENABLED)
@@ -107,9 +107,9 @@ function(e, t, n) {
             }(e), delete R[e]
     }
 
-    function V(e, t) {
+    function F(e, t) {
         !0 === t.muted && D.setTimer(e, t.mute_config, () => {
-            F(e, {
+            V(e, {
                 muted: !1
             }), o.default.dispatch({
                 type: "GUILD_MUTE_EXPIRED",
@@ -128,7 +128,7 @@ function(e, t, n) {
         })
     }
 
-    function F(e, t) {
+    function V(e, t) {
         var n;
         let i = O[e];
         k(e, {
@@ -448,14 +448,14 @@ function(e, t, n) {
                 guildId: t,
                 settings: n
             } = e;
-            F(t, n)
+            V(t, n)
         },
         USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: function(e) {
             let {
                 guildId: t,
                 settings: n
             } = e;
-            F(t, n), H(t, n.channel_overrides)
+            V(t, n), H(t, n.channel_overrides)
         },
         USER_GUILD_SETTINGS_CHANNEL_UPDATE: function(e) {
             let {
@@ -482,7 +482,7 @@ function(e, t, n) {
             let t = new Set;
             for (let n in e.userGuildSettings.entries.forEach(e => {
                     !("channel_overrides" in e) && (e.channel_overrides = {}), k(e.guild_id, e), null != e.guild_id && t.add(e.guild_id)
-                }), O) !t.has(n) && V(n, O[n])
+                }), O) !t.has(n) && F(n, O[n])
         },
         CACHE_LOADED: function(e) {
             null != e.userGuildSettings && 0 !== e.userGuildSettings.length && (O = {}, P = {}, U = {}, e.userGuildSettings.forEach(e => {

@@ -41,27 +41,27 @@ function(e, t, n) {
         w = n("888778"),
         B = n("943217"),
         k = n("793397"),
-        V = n("841040"),
-        F = n("228168"),
+        F = n("841040"),
+        V = n("228168"),
         x = n("981631"),
         H = n("474936"),
         Y = n("689938"),
         j = n("350315");
     let W = {
-            [F.UserProfileTypes.POPOUT]: 18,
-            [F.UserProfileTypes.MODAL]: 24,
-            [F.UserProfileTypes.SETTINGS]: 0,
-            [F.UserProfileTypes.PANEL]: 18,
-            [F.UserProfileTypes.POMELO_POPOUT]: 18,
-            [F.UserProfileTypes.CANCEL_MODAL]: 0
+            [V.UserProfileTypes.POPOUT]: 18,
+            [V.UserProfileTypes.MODAL]: 24,
+            [V.UserProfileTypes.SETTINGS]: 0,
+            [V.UserProfileTypes.PANEL]: 18,
+            [V.UserProfileTypes.POMELO_POPOUT]: 18,
+            [V.UserProfileTypes.CANCEL_MODAL]: 0
         },
         K = {
-            [F.UserProfileTypes.MODAL]: x.AnalyticsPages.USER_PROFILE,
-            [F.UserProfileTypes.POPOUT]: x.AnalyticsPages.USER_POPOUT,
-            [F.UserProfileTypes.SETTINGS]: x.AnalyticsPages.USER_POPOUT,
-            [F.UserProfileTypes.PANEL]: x.AnalyticsPages.DM_CHANNEL,
-            [F.UserProfileTypes.POMELO_POPOUT]: x.AnalyticsPages.POMELO_POPOUT,
-            [F.UserProfileTypes.CANCEL_MODAL]: x.AnalyticsPages.USER_POPOUT
+            [V.UserProfileTypes.MODAL]: x.AnalyticsPages.USER_PROFILE,
+            [V.UserProfileTypes.POPOUT]: x.AnalyticsPages.USER_POPOUT,
+            [V.UserProfileTypes.SETTINGS]: x.AnalyticsPages.USER_POPOUT,
+            [V.UserProfileTypes.PANEL]: x.AnalyticsPages.DM_CHANNEL,
+            [V.UserProfileTypes.POMELO_POPOUT]: x.AnalyticsPages.POMELO_POPOUT,
+            [V.UserProfileTypes.CANCEL_MODAL]: x.AnalyticsPages.USER_POPOUT
         };
 
     function z(e) {
@@ -232,7 +232,7 @@ function(e, t, n) {
                         let {
                             closePopout: t
                         } = e;
-                        return (0, i.jsx)(V.default, {
+                        return (0, i.jsx)(F.default, {
                             onClose: t,
                             onSelect: O,
                             guild: Q
@@ -245,7 +245,7 @@ function(e, t, n) {
                         ...e,
                         profileType: D
                     })
-                }) : W && null != ei && D !== F.UserProfileTypes.SETTINGS ? (0, i.jsx)(z, {
+                }) : W && null != ei && D !== V.UserProfileTypes.SETTINGS ? (0, i.jsx)(z, {
                     type: D,
                     shown: void 0 === v ? $ : v,
                     onClick: () => {
@@ -253,7 +253,7 @@ function(e, t, n) {
                             action: "PRESS_PREMIUM_UPSELL"
                         }), null == O || O()
                     }
-                }) : null, eI ? D !== F.UserProfileTypes.MODAL ? null : (0, i.jsx)(d.Clickable, {
+                }) : null, eI ? D !== V.UserProfileTypes.MODAL ? null : (0, i.jsx)(d.Clickable, {
                     onClick: O,
                     "aria-label": Y.default.Messages.BACK,
                     className: j.pencilContainer,

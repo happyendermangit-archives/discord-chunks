@@ -71,12 +71,12 @@ function(e, t, n) {
         e && t ? (0, o.focus)(window, !0) : (0, o.focus)(window, !1)
     }
 
-    function V() {
+    function F() {
         if (R !== (0, h.getPID)()) return !1;
         P.clear()
     }
 
-    function F(e) {
+    function V(e) {
         let t = (0, h.getPID)();
         if (null == e.pid || e.pid === t) switch (e.type) {
             case m.OverlayEventTypes.STORAGE_SYNC:
@@ -286,7 +286,7 @@ function(e, t, n) {
                     token: (0, h.getRPCAuthToken)(),
                     payloads: [e]
                 }), !w.has(e.type)
-            }), (0, l.setReceiveEventHandler)(F, (0, h.getRPCAuthToken)()), (0, l.connect)(), (0, l.send)({
+            }), (0, l.setReceiveEventHandler)(V, (0, h.getRPCAuthToken)()), (0, l.connect)(), (0, l.send)({
                 type: m.OverlayEventTypes.CONNECT,
                 pid: (0, h.getPID)(),
                 token: (0, h.getRPCAuthToken)()
@@ -383,7 +383,7 @@ function(e, t, n) {
                 locked: t,
                 pid: n
             } = e;
-            t ? L.delete(n) : L.add(n), V(), k(), U = !1
+            t ? L.delete(n) : L.add(n), F(), k(), U = !1
         },
         OVERLAY_ACTIVATE_REGION: function(e) {
             let {
@@ -392,7 +392,7 @@ function(e, t, n) {
             if (R !== (0, h.getPID)() || P.has(t)) return !1;
             P.add(t)
         },
-        OVERLAY_DEACTIVATE_ALL_REGIONS: V,
+        OVERLAY_DEACTIVATE_ALL_REGIONS: F,
         OVERLAY_SET_PREVIEW_IN_GAME_MODE: function(e) {
             U = e.isPreviewingInGame
         },

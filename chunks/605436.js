@@ -44,7 +44,7 @@ function(e, t, n) {
             return w
         },
         grantUserChannelAccess: function() {
-            return F
+            return V
         },
         hasCustomRoles: function() {
             return H
@@ -65,7 +65,7 @@ function(e, t, n) {
             return m
         },
         toggleChannelEveryonePermission: function() {
-            return V
+            return F
         }
     }), n("653041");
     var i = n("149765"),
@@ -252,12 +252,12 @@ function(e, t, n) {
         return s.deny = i.remove(s.deny, t), s.allow = i.remove(s.allow, t), !n && (s.deny = i.add(s.deny, t)), s
     }
 
-    function V(e, t, n) {
+    function F(e, t, n) {
         let i = k(e, t, n);
         (0, s.updatePermission)(e, i.id, i.allow, i.deny)
     }
 
-    function F(e, t) {
+    function V(e, t) {
         let n = u.default.getCurrentUser();
         if (null == n) return;
         let r = e.permissionOverwrites[n.id];

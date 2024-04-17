@@ -65,8 +65,8 @@ function(e, t, n) {
             } = n,
             B = null != i.messageReference && null != i.webhookId,
             k = (0, d.useStateFromStores)([c.default], () => c.default.roleStyle),
-            V = (0, h.useCanSeeRemixBadge)(),
-            F = {
+            F = (0, h.useCanSeeRemixBadge)(),
+            V = {
                 className: p.username,
                 style: "username" === k && null != G ? {
                     color: G
@@ -106,13 +106,13 @@ function(e, t, n) {
                 return (0, s.jsx)(_.Clickable, {
                     tag: "span",
                     ...n,
-                    ...F,
-                    className: l()(F.className, p.clickable, C)
+                    ...V,
+                    className: l()(V.className, p.clickable, C)
                 })
             }
         }) : (0, s.jsx)(_.Clickable, {
-            ...F,
-            className: l()(F.className, C)
+            ...V,
+            className: l()(V.className, C)
         });
         let x = null != y ? y[0] : null,
             H = null != y ? y[1] : null;
@@ -126,7 +126,7 @@ function(e, t, n) {
                 className: p.roleDot
             }) : null, t, null != H ? (0, s.jsx)(s.Fragment, {
                 children: H
-            }) : null, null == x || o ? null : x, null != i && (0, S.default)(i) && V && M ? (0, s.jsx)(O, {}) : null]
+            }) : null, null == x || o ? null : x, null != i && (0, S.default)(i) && F && M ? (0, s.jsx)(O, {}) : null]
         })
     }(i = r || (r = {}))[i.SYSTEM_TAG = 0] = "SYSTEM_TAG", i[i.BADGES = 1] = "BADGES"
 }

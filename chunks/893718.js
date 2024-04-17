@@ -37,8 +37,8 @@ function(e, t, n) {
         w = n("378233"),
         B = n("665906"),
         k = n("695346"),
-        V = n("271383"),
-        F = n("496675"),
+        F = n("271383"),
+        V = n("496675"),
         x = n("944486"),
         H = n("398327"),
         Y = n("117530"),
@@ -82,8 +82,8 @@ function(e, t, n) {
             renderApplicationCommandIcon: ew,
             pendingReply: eB,
             onChange: ek,
-            onResize: eV,
-            onBlur: eF,
+            onResize: eF,
+            onBlur: eV,
             onFocus: ex,
             onKeyDown: eH,
             onSubmit: eY,
@@ -132,15 +132,15 @@ function(e, t, n) {
         } = function(e, t, n, i) {
             let r = e.getGuildId(),
                 s = (0, E.useStateFromStores)([y.default], () => null != r && y.default.isLurking(r), [r]),
-                a = (0, E.useStateFromStores)([V.default, j.default], () => {
+                a = (0, E.useStateFromStores)([F.default, j.default], () => {
                     var e, t;
                     let n = j.default.getCurrentUser();
-                    return null !== (t = null != r && null != n ? null === (e = V.default.getMember(r, n.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t
+                    return null !== (t = null != r && null != n ? null === (e = F.default.getMember(r, n.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t
                 }),
-                o = (0, E.useStateFromStoresObject)([F.default], () => {
+                o = (0, E.useStateFromStoresObject)([V.default], () => {
                     var r, s;
                     let o = e.isPrivate(),
-                        l = F.default.computePermissions(e),
+                        l = V.default.computePermissions(e),
                         u = c.has(l, es.Permissions.CREATE_PUBLIC_THREADS) || c.has(l, es.Permissions.CREATE_PRIVATE_THREADS),
                         d = (!(null === (r = t.permissions) || void 0 === r ? void 0 : r.requireCreateTherads) || u) && (!(null === (s = t.permissions) || void 0 === s ? void 0 : s.requireSendMessages) || c.has(l, es.Permissions.SEND_MESSAGES)),
                         _ = d && c.has(l, es.Permissions.ATTACH_FILES),
@@ -336,7 +336,7 @@ function(e, t, n) {
                         n(null != t ? t : 0), null == e || e(t)
                     }, [e])
                 }
-            }(eV),
+            }(eF),
             {
                 handleTab: tP,
                 handleEnter: tU,
@@ -384,18 +384,18 @@ function(e, t, n) {
                     handleOuterClick: o
                 }
             }(eP, tS, e9),
-            tV = A.AppLauncherDesktopExperiment.useExperiment({
+            tF = A.AppLauncherDesktopExperiment.useExperiment({
                 location: "chat_input"
             }, {
                 autoTrackExposure: !1
             }).enabled,
-            tF = (0, E.useStateFromStores)([m.default], () => m.default.shouldShowPopup(), []);
+            tV = (0, E.useStateFromStores)([m.default], () => m.default.shouldShowPopup(), []);
         (0, X.useHereMentionCallback)(tS, ey.guild_id, ey.id);
         let tx = null != eB,
             tH = ta && !((tr || ts) && tu) || tA && (null === (l = eP.submit) || void 0 === l ? void 0 : l.useDisabledStylesOnSubmit),
             tY = null,
             tj = null;
-        null != tn ? tY = null == ew ? void 0 : ew(tn, ti, el.attachButton) : (!ta || tl) && (tY = null == eb ? void 0 : eb(tx, el.attachButton), tV && (tj = null == eG ? void 0 : eG()));
+        null != tn ? tY = null == ew ? void 0 : ew(tn, ti, el.attachButton) : (!ta || tl) && (tY = null == eb ? void 0 : eb(tx, el.attachButton), tF && (tj = null == eG ? void 0 : eG()));
         let tW = t_ && null != ep && !ta && eP.showCharacterCount && null == tn,
             tK = t_ && !__OVERLAY__ && null != ep && null == tn,
             tz = function(e, t, n, i) {
@@ -482,7 +482,7 @@ function(e, t, n) {
                                     "aria-describedby": eJ,
                                     onChange: ek,
                                     onResize: ty,
-                                    onBlur: eF,
+                                    onBlur: eV,
                                     onFocus: ex,
                                     onKeyDown: eH,
                                     onSubmit: tm,
@@ -565,7 +565,7 @@ function(e, t, n) {
                     position: "top",
                     align: "right",
                     positionLayerClassName: el.expressionPickerPositionLayer
-                }), tF ? (0, i.jsx)(N.default, {
+                }), tV ? (0, i.jsx)(N.default, {
                     positionTargetRef: e5,
                     channel: ey,
                     closeOnModalOuterClick: e4,

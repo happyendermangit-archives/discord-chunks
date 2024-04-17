@@ -87,8 +87,8 @@ function(e, t, n) {
         w = n("386103"),
         B = n("465670"),
         k = n("839523"),
-        V = n("626135"),
-        F = n("823379"),
+        F = n("626135"),
+        V = n("823379"),
         x = n("589530"),
         H = n("709054"),
         Y = n("981631"),
@@ -283,7 +283,7 @@ function(e, t, n) {
                                     case 1:
                                         return z.default.Messages.JUMP_BAR_VIEWING_REPLY;
                                     default:
-                                        return (0, F.assertNever)(e)
+                                        return (0, V.assertNever)(e)
                                 }
                             }(t)
                         })
@@ -300,7 +300,7 @@ function(e, t, n) {
                                     case 1:
                                         return z.default.Messages.JUMP_TO_ORIGINAL_MESSAGE;
                                     default:
-                                        return (0, F.assertNever)(e)
+                                        return (0, V.assertNever)(e)
                                 }
                             }(t), (0, s.jsx)(G.default, {
                                 className: X.barButtonIcon
@@ -413,7 +413,7 @@ function(e, t, n) {
             return null !== (e = p.default.summaries(r.id)) && void 0 !== e ? e : []
         }, [r]), P = (0, A.default)(y);
         a.useEffect(() => {
-            !d().isEqual(P, y) && V.default.track(Y.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
+            !d().isEqual(P, y) && F.default.track(Y.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
                 num_summaries: y.length,
                 message_counts: y.map(e => e.count),
                 start_message_ids: y.map(e => e.startId),
@@ -431,7 +431,7 @@ function(e, t, n) {
                     return null === (t = e.people) || void 0 === t ? void 0 : t.map(e => {
                         var t;
                         return null !== (t = D.default.getUser(e)) && void 0 !== t ? t : null
-                    }).filter(F.isNotNullish)
+                    }).filter(V.isNotNullish)
                 })) && void 0 !== e ? e : []
             }, [y], eu),
             x = null !== (n = (0, c.useStateFromStores)([p.default], () => p.default.visibleSummaryIndex())) && void 0 !== n ? n : -1,
@@ -451,7 +451,7 @@ function(e, t, n) {
             }, [K, Q]),
             [Z, J] = a.useState(!1),
             $ = a.useCallback(() => {
-                V.default.track(Y.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
+                F.default.track(Y.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
                     topics_dropdown_open: !Z,
                     num_summaries: y.length,
                     message_counts: y.map(e => e.count),
@@ -473,7 +473,7 @@ function(e, t, n) {
                         u.addAutomaticAnchorCallback(q, !1)
                     }, 100)
                 };
-                u.removeAutomaticAnchorCallback(q), u.addScrollCompleteCallback(i), V.default.track(Y.AnalyticEvents.SUMMARIES_TOPIC_CLICKED, {
+                u.removeAutomaticAnchorCallback(q), u.addScrollCompleteCallback(i), F.default.track(Y.AnalyticEvents.SUMMARIES_TOPIC_CLICKED, {
                     source: t,
                     message_id: n.startId,
                     guild_id: r.guild_id,
@@ -504,7 +504,7 @@ function(e, t, n) {
         }, [g, Z]);
         let en = a.useCallback(e => {
             var t;
-            !((0, _.isElement)(e.target) && (null === (t = C.current) || void 0 === t ? void 0 : t.contains(e.target))) && (Z && V.default.track(Y.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
+            !((0, _.isElement)(e.target) && (null === (t = C.current) || void 0 === t ? void 0 : t.contains(e.target))) && (Z && F.default.track(Y.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
                 topics_dropdown_open: !1,
                 num_summaries: y.length,
                 message_counts: y.map(e => e.count),
@@ -644,7 +644,7 @@ function(e, t, n) {
             return null !== (e = p.default.summaries(r.id)) && void 0 !== e ? e : []
         }, [r]), v = (0, A.default)(L);
         a.useEffect(() => {
-            !d().isEqual(v, L) && V.default.track(Y.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
+            !d().isEqual(v, L) && F.default.track(Y.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
                 num_summaries: L.length,
                 message_counts: L.map(e => e.count),
                 start_message_ids: L.map(e => e.startId),
@@ -662,7 +662,7 @@ function(e, t, n) {
                     return null === (t = e.people) || void 0 === t ? void 0 : t.map(e => {
                         var t;
                         return null !== (t = D.default.getUser(e)) && void 0 !== t ? t : null
-                    }).filter(F.isNotNullish)
+                    }).filter(V.isNotNullish)
                 })) && void 0 !== e ? e : []
             }, [L], eu),
             y = null !== (n = (0, c.useStateFromStores)([p.default], () => p.default.visibleSummaryIndex())) && void 0 !== n ? n : -1,
@@ -684,7 +684,7 @@ function(e, t, n) {
             }, [x, H]),
             [K, Q] = a.useState(!1),
             q = a.useCallback(() => {
-                V.default.track(Y.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
+                F.default.track(Y.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
                     topics_dropdown_open: !K,
                     num_summaries: L.length,
                     message_counts: L.map(e => e.count),
@@ -706,7 +706,7 @@ function(e, t, n) {
                         o.addAutomaticAnchorCallback(j, !1)
                     }, 100)
                 };
-                o.removeAutomaticAnchorCallback(j), o.addScrollCompleteCallback(i), V.default.track(Y.AnalyticEvents.SUMMARIES_TOPIC_CLICKED, {
+                o.removeAutomaticAnchorCallback(j), o.addScrollCompleteCallback(i), F.default.track(Y.AnalyticEvents.SUMMARIES_TOPIC_CLICKED, {
                     source: t,
                     message_id: n.startId,
                     guild_id: r.guild_id,
@@ -743,7 +743,7 @@ function(e, t, n) {
         }, [R, K]);
         let et = a.useCallback(e => {
             var t;
-            !((0, _.isElement)(e.target) && (null === (t = S.current) || void 0 === t ? void 0 : t.contains(e.target))) && (K && V.default.track(Y.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
+            !((0, _.isElement)(e.target) && (null === (t = S.current) || void 0 === t ? void 0 : t.contains(e.target))) && (K && F.default.track(Y.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
                 topics_dropdown_open: !1,
                 num_summaries: L.length,
                 message_counts: L.map(e => e.count),

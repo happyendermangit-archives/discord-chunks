@@ -63,9 +63,9 @@ function(e, t, n) {
     let w = {},
         B = {},
         k = {},
-        V = {};
+        F = {};
 
-    function F(e, t, n) {
+    function V(e, t, n) {
         var i, r;
         return null === (r = y[e]) || void 0 === r ? void 0 : null === (i = r[t]) || void 0 === i ? void 0 : i[n]
     }
@@ -84,7 +84,7 @@ function(e, t, n) {
         if (null == e || null == t) return !1;
         let i = x(e, t);
         if (null == i) return !1;
-        let r = F(i, e, t);
+        let r = V(i, e, t);
         if (null == r) return !1;
         let s = n(r);
         return y[i][e][t] = s, !0
@@ -112,7 +112,7 @@ function(e, t, n) {
             if (null == n) return;
             let i = (0, A.default)(n),
                 r = U(e);
-            !(Array.from((0, S.getAllMessagesFromFeedItem)(n)).filter(t => F(e, t.channel_id, t.id)).length > 0) && r.delete(i)
+            !(Array.from((0, S.getAllMessagesFromFeedItem)(n)).filter(t => V(e, t.channel_id, t.id)).length > 0) && r.delete(i)
         }(s, t), !0)
     }
 
@@ -171,7 +171,7 @@ function(e, t, n) {
             return null === (t = v[e]) || void 0 === t ? void 0 : t.load_id
         }
         getCachedMessage(e, t, n) {
-            return F(e, t, n)
+            return V(e, t, n)
         }
         getFetchStatus(e) {
             var t;
@@ -203,11 +203,11 @@ function(e, t, n) {
         }
         getFeaturedItems(e) {
             var t;
-            return Object.values(null !== (t = V[e]) && void 0 !== t ? t : [])
+            return Object.values(null !== (t = F[e]) && void 0 !== t ? t : [])
         }
         getFeaturedItemByMessageId(e, t) {
             var n;
-            return Object.values(null !== (n = V[e]) && void 0 !== n ? n : []).find(e => "message" in e && e.message.id === t)
+            return Object.values(null !== (n = F[e]) && void 0 !== n ? n : []).find(e => "message" in e && e.message.id === t)
         }
     }
     l = "GuildFeedStore", (o = "displayName") in(a = Z) ? Object.defineProperty(a, o, {
@@ -288,7 +288,7 @@ function(e, t, n) {
                 let n = (0, f.createGuildFeedItemFromServer)(r, e);
                 null != n && (0, f.isGuildFeedFeaturedItem)(n) && (n.featured && k[t].add(n.id), j(t, n), i[n.id] = n)
             }
-            V[t] = i
+            F[t] = i
         },
         GUILD_FEED_FEATURED_ITEMS_FETCH_FAILURE: function(e) {
             let {
@@ -338,7 +338,7 @@ function(e, t, n) {
             } = e, {
                 guildId: a
             } = s, o = (0, A.getGuildFeedItemIdFromFeatureableItem)(s);
-            t = a, n = o, null === (i = k[t]) || void 0 === i || i.delete(n), null === (r = V[t]) || void 0 === r || delete r[n]
+            t = a, n = o, null === (i = k[t]) || void 0 === i || i.delete(n), null === (r = F[t]) || void 0 === r || delete r[n]
         },
         CHANNEL_SELECT: function() {
             for (let e of T.default.keys(w)) null == B[e] && (B[e] = new Set), B[e] = new Set([...Array.from(B[e]), ...Array.from(w[e])]), delete w[e]
@@ -362,7 +362,7 @@ function(e, t, n) {
                 if (null == e ? void 0 : e.hasFlag(N.ChannelFlags.GUILD_FEED_REMOVED)) return q(e)
         },
         LOGOUT: function() {
-            C = {}, v = {}, M = {}, y = {}, P = {}, w = {}, B = {}, k = {}, V = {}
+            C = {}, v = {}, M = {}, y = {}, P = {}, w = {}, B = {}, k = {}, F = {}
         },
         MESSAGE_UPDATE: function(e) {
             let {
