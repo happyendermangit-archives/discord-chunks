@@ -25,9 +25,10 @@ function(e, t, n) {
         react(e, t, n) {
             let {
                 userId: r,
-                channelId: o
+                channelId: o,
+                roleId: l
             } = e;
-            return null == r ? (0, i.jsx)(s.default, {
+            return null == r && null != l ? (0, i.jsx)(s.default, {
                 inlinePreview: n.formatInline,
                 ...e,
                 children: t(e.content, n)

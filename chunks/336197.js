@@ -2,50 +2,43 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return c
+            return _
         }
     });
-    var i = n("735250");
-    n("470079");
-    var r = n("952265"),
-        s = n("727429"),
-        a = n("703656"),
-        o = n("920440"),
-        l = n("592125"),
-        u = n("754688"),
-        d = n("849027"),
-        _ = n("981631");
-    async function c(e, t, c) {
-        let E = (0, u.tryParseChannelPath)(e);
-        if (null != E && !await (0, d.default)(E)) {
-            (0, r.openModalLazy)(async () => {
-                let {
-                    default: e
-                } = await Promise.all([n.e("99387"), n.e("22706")]).then(n.bind(n, "438725"));
-                return t => (0, i.jsx)(e, {
-                    ...t
-                })
+    var i = n("727429"),
+        r = n("703656"),
+        s = n("920440"),
+        a = n("592125"),
+        o = n("754688"),
+        l = n("849027"),
+        u = n("927723"),
+        d = n("981631");
+    async function _(e, t, n) {
+        let _ = (0, o.tryParseChannelPath)(e);
+        if (null != _ && !await (0, l.default)(_)) {
+            (0, u.showInaccessibleLinkModal)({
+                kind: "channel"
             });
             return
         }
-        if (null == E) {
-            (0, a.transitionTo)(e);
+        if (null == _) {
+            (0, r.transitionTo)(e);
             return
         }
-        let I = function(e) {
+        let c = function(e) {
             if (null == e.channelId) return e;
-            let t = l.default.getChannel(e.channelId);
+            let t = a.default.getChannel(e.channelId);
             if (null == t) return e;
-            let n = (0, s.getGuildIdForGenericRedirect)(t);
+            let n = (0, i.getGuildIdForGenericRedirect)(t);
             return {
                 ...e,
-                guildId: null != n ? n : _.ME
+                guildId: null != n ? n : d.ME
             }
-        }(E);
-        if (null == I.channelId) {
-            (0, o.transitionToGuild)(I.guildId);
+        }(_);
+        if (null == c.channelId) {
+            (0, s.transitionToGuild)(c.guildId);
             return
         }
-        null != I.threadId ? (0, a.transitionTo)(_.Routes.CHANNEL_THREAD_VIEW(I.guildId, I.channelId, I.threadId, I.messageId), t, c) : (0, a.transitionTo)(_.Routes.CHANNEL(I.guildId, I.channelId, I.messageId), t, c)
+        null != c.threadId ? (0, r.transitionTo)(d.Routes.CHANNEL_THREAD_VIEW(c.guildId, c.channelId, c.threadId, c.messageId), t, n) : (0, r.transitionTo)(d.Routes.CHANNEL(c.guildId, c.channelId, c.messageId), t, n)
     }
 }

@@ -139,21 +139,23 @@ function(e, t, n) {
     }
 
     function v(e) {
-        var t;
+        var t, n;
         let {
-            channelId: n,
-            applicationId: i,
-            showFeedback: r = !0
-        } = e;
+            channelId: i,
+            applicationId: r,
+            showFeedback: a = !0
+        } = e, l = p.default.getSelfEmbeddedActivityForChannel(i);
         s.default.dispatch({
             type: "EMBEDDED_ACTIVITY_CLOSE",
-            channelId: n,
-            applicationId: i,
-            showFeedback: r
+            channelId: i,
+            applicationId: r,
+            locationId: null == l ? void 0 : null === (t = l.location) || void 0 === t ? void 0 : t.id,
+            instanceId: null == l ? void 0 : l.instanceId,
+            showFeedback: a
         });
-        let a = c.default.getSelectedParticipantId(n),
-            l = null === (t = h.default.getCurrentUser()) || void 0 === t ? void 0 : t.id;
-        null != p.default.getEmbeddedActivitiesForChannel(n).find(e => e.applicationId === i) && null != l && "" !== l && a === i && o.default.selectParticipant(n, null)
+        let u = c.default.getSelectedParticipantId(i),
+            d = null === (n = h.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
+        null != p.default.getEmbeddedActivitiesForChannel(i).find(e => e.applicationId === r) && null != d && "" !== d && u === r && o.default.selectParticipant(i, null)
     }
 
     function M(e, t) {

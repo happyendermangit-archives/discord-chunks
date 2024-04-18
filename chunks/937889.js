@@ -57,7 +57,8 @@ function(e, t, n) {
             allowEmojiLinks: !1,
             disableAutoBlockNewlines: !0,
             mentionChannels: [],
-            muted: !1
+            muted: !1,
+            unknownUserMentionPlaceholder: !0
         }
     }
 
