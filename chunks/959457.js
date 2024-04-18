@@ -137,6 +137,11 @@ function(e, t, n) {
         getStreamSourceId(e) {
             return U[e]
         }
+        setFocusedGoLiveStream(e) {
+            c().forEach(G, (t, n) => {
+                t.setSelectedGoLiveStream(n === e ? n : null)
+            })
+        }
     }
     l = "StreamRTCConnectionStore", (o = "displayName") in(a = V) ? Object.defineProperty(a, o, {
         value: l,
