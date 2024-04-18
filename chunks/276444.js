@@ -86,6 +86,9 @@ function(e, t, n) {
         getRefreshAt() {
             return L
         }
+        getRelevantReferralTrialOffers() {
+            return m
+        }
     }
     a = "ReferralTrialStore", (s = "displayName") in(r = P) ? Object.defineProperty(r, s, {
         value: a,
