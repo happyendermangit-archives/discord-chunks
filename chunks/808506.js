@@ -97,7 +97,7 @@ function(e, t, n) {
                         }
                 })
             }
-            X.delete(e), J.info("pid=".concat(e, " status transition ").concat(null != i ? i : "DISCONNECTED", " -> ").concat(null != t ? t : "DISCONNECTED"), F), V !== (V = Array.from(F.values()).some(e => "READY" === e)) && b.default.setBackgroundThrottling(!V)
+            X.delete(e), J.info("pid=".concat(e, " status transition ").concat(null != i ? i : "DISCONNECTED", " -> ").concat(null != t ? t : "DISCONNECTED"), F), V = Array.from(F.values()).some(e => "READY" === e)
         }
     }
     async function ei(e) {
@@ -515,7 +515,7 @@ function(e, t, n) {
             } = e;
             z = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
             let n = new URLSearchParams;
-            n.append("build_id", "06e4882179b51e9f59f8820c5c9a85dcdbaa2e9b"), n.append("rpc", String(t)), n.append("rpc_auth_token", z), i = "".concat(location.protocol, "//").concat(location.host, "/overlay?").concat(n.toString())
+            n.append("build_id", "119d5084711bc48ae57ce4d8484f1ae37e166c57"), n.append("rpc", String(t)), n.append("rpc_auth_token", z), i = "".concat(location.protocol, "//").concat(location.host, "/overlay?").concat(n.toString())
         },
         OVERLAY_CALL_PRIVATE_CHANNEL: function(e) {
             let {

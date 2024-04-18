@@ -75,7 +75,7 @@ function(e, t, n) {
             showBenefitsFirst: !0,
             analyticsLocation: h.AnalyticsLocations.BOT_PROFILE_POPOUT
         });
-        return r ? (0, i.jsx)(u.default, {
+        return r && null != a ? (0, i.jsx)(u.default, {
             onClick: o,
             className: m.button,
             children: (0, i.jsxs)("div", {

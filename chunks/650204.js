@@ -54,7 +54,7 @@ function(e, t, a) {
             nativeBuildNumber: null == t ? void 0 : t.toString()
         });
         let r = Object.keys(a).filter(e => null != a[e]).map(e => "".concat(e, ": ").concat(a[e])).join(", ");
-        new y.default().log("[NATIVE INFO] host ".concat(e, ", modules: ").concat(r, ", build: ").concat(t)), O.default.initializeExitHook()
+        new y.default().log("[NATIVE INFO] host ".concat(e, ", modules: ").concat(r, ", build: ").concat(t)), O.default.setBackgroundThrottling(!1), O.default.initializeExitHook()
     }
     if ((0, S.setupWindow)(window), __OVERLAY__) x(u.default.Overlay);
     else if (null != window.require && null == window.DiscordNative) x(u.default.OutdatedClient);
