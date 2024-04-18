@@ -10,45 +10,46 @@ function(e, t, n) {
     let E = null,
         I = {},
         T = [],
-        f = new Set,
-        S = !1,
-        h = new Set,
+        f = new Map,
+        S = new Set,
+        h = !1,
         A = new Set,
-        m = {},
-        N = 0,
-        p = null,
-        O = [],
-        R = !1,
-        C = 0,
-        g = !1,
-        L = null,
-        D = () => !0;
-
-    function v(e) {
-        h.add(e)
-    }
+        m = new Set,
+        N = {},
+        p = 0,
+        O = null,
+        R = [],
+        C = !1,
+        g = 0,
+        L = !1,
+        D = null,
+        v = () => !0;
 
     function M(e) {
-        let {
-            messages: t
-        } = e;
-        t.forEach(e => y(e))
+        A.add(e)
     }
 
     function y(e) {
+        let {
+            messages: t
+        } = e;
+        t.forEach(e => P(e))
+    }
+
+    function P(e) {
         let t = e.type === o.MessageTypes.PREMIUM_REFERRAL ? e.content : null;
         if (null == t) return !1;
-        if (!A.has(t) && !h.has(t)) {
+        if (!m.has(t) && !A.has(t)) {
             var n;
-            n = t, h.add(n), u.default.wait(() => (0, _.resolveReferralTrialOffer)(t).catch(c.NOOP_NULL))
+            n = t, A.add(n), u.default.wait(() => (0, _.resolveReferralTrialOffer)(t).catch(c.NOOP_NULL))
         }
     }
-    class P extends(i = l.default.Store) {
+    class U extends(i = l.default.Store) {
         initialize() {
-            this.waitFor(d.default), this.syncWith([d.default], D)
+            this.waitFor(d.default), this.syncWith([d.default], v)
         }
         checkAndFetchReferralsRemaining() {
-            null == E && !S && N < 5 && (null == p || p < Date.now()) && (0, _.fetchReferralsRemaining)()
+            null == E && !h && p < 5 && (null == O || O < Date.now()) && (0, _.fetchReferralsRemaining)()
         }
         getReferralsRemaining() {
             return this.checkAndFetchReferralsRemaining(), E
@@ -57,137 +58,141 @@ function(e, t, n) {
             return this.checkAndFetchReferralsRemaining(), null == T ? [] : T
         }
         isFetchingReferralsRemaining() {
-            return S
+            return h
         }
         isFetchingRecipientEligibility(e) {
-            return f.has(e)
+            return S.has(e)
         }
         getRecipientEligibility(e) {
-            return void 0 === I[e] && !f.has(e) && (0, _.checkRecipientEligibility)(e), I[e]
+            return void 0 === I[e] && !S.has(e) && (0, _.checkRecipientEligibility)(e), I[e]
         }
         getRelevantUserTrialOffer(e) {
-            return m[e]
+            return N[e]
         }
         isResolving(e) {
-            return h.has(e)
+            return A.has(e)
         }
         getEligibleUsers() {
-            return O
-        }
-        getFetchingEligibleUsers() {
             return R
         }
-        getNextIndexOfEligibleUsers() {
+        getFetchingEligibleUsers() {
             return C
         }
-        getIsEligibleToSendReferrals() {
+        getNextIndexOfEligibleUsers() {
             return g
         }
-        getRefreshAt() {
+        getIsEligibleToSendReferrals() {
             return L
         }
+        getRefreshAt() {
+            return D
+        }
         getRelevantReferralTrialOffers() {
-            return m
+            return N
+        }
+        getRecipientStatus() {
+            return f
         }
     }
-    a = "ReferralTrialStore", (s = "displayName") in(r = P) ? Object.defineProperty(r, s, {
+    a = "ReferralTrialStore", (s = "displayName") in(r = U) ? Object.defineProperty(r, s, {
         value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a, t.default = new P(u.default, {
+    }) : r[s] = a, t.default = new U(u.default, {
         BILLING_REFERRAL_TRIAL_OFFER_UPDATE: function(e) {
             let {
                 userTrialOfferId: t,
                 recipientId: n
             } = e;
-            if (!S && (0, _.fetchReferralsRemaining)(), !f.has(n) && (0, _.checkRecipientEligibility)(n), !h.has(t)) {
+            if (!h && (0, _.fetchReferralsRemaining)(), !S.has(n) && (0, _.checkRecipientEligibility)(n), !A.has(t)) {
                 var i;
-                i = t, h.add(i), u.default.wait(() => (0, _.resolveReferralTrialOffer)(t).catch(c.NOOP_NULL))
+                i = t, A.add(i), u.default.wait(() => (0, _.resolveReferralTrialOffer)(t).catch(c.NOOP_NULL))
             }
         },
         BILLING_REFERRALS_REMAINING_FETCH_START: function(e) {
             let {} = e;
-            g = !1, L = null, S = !0
+            L = !1, D = null, h = !0
         },
         BILLING_REFERRALS_REMAINING_FETCH_SUCCESS: function(e) {
             let {
                 referrals_remaining: t,
                 sent_user_ids: n,
-                refresh_at: i
+                refresh_at: i,
+                recipient_status: r
             } = e;
-            g = null == i, S = !1, E = t, T = n, L = i
+            L = null == i, h = !1, E = t, T = n, D = i, f = r
         },
         BILLING_REFERRALS_REMAINING_FETCH_FAIL: function(e) {
             let {} = e;
-            g = !1, L = null, S = !1, N += 1, p = Date.now() + 1e3 * Math.pow(2, N)
+            L = !1, D = null, h = !1, p += 1, O = Date.now() + 1e3 * Math.pow(2, p)
         },
         BILLING_CREATE_REFERRAL_PREVIEW_START: function(e) {
             let {
                 recipientId: t
             } = e;
-            f.add(t)
+            S.add(t)
         },
         BILLING_CREATE_REFERRAL_PREVIEW_SUCCESS: function(e) {
             let {
                 recipientId: t,
                 is_eligible: n
             } = e;
-            I[t] = n, f.delete(t)
+            I[t] = n, S.delete(t)
         },
         BILLING_CREATE_REFERRAL_PREVIEW_FAIL: function(e) {
             let {
                 recipientId: t
             } = e;
-            I[t] = !1, f.delete(t)
+            I[t] = !1, S.delete(t)
         },
         BILLING_CREATE_REFERRAL_SUCCESS: function(e) {
             let {
                 userTrialOffer: t
             } = e;
-            (0, _.fetchReferralsRemaining)(), m[t.id] = t, T = [...T, t.user_id]
+            (0, _.fetchReferralsRemaining)(), N[t.id] = t, T = [...T, t.user_id]
         },
         CREATE_REFERRALS_SUCCESS: function(e) {
             let {
                 userTrialOffers: t
             } = e;
-            for (let e of ((0, _.fetchReferralsRemaining)(), t)) m[e.id] = e, T = [...T, e.user_id]
+            for (let e of ((0, _.fetchReferralsRemaining)(), t)) N[e.id] = e, T = [...T, e.user_id]
         },
         BILLING_REFERRAL_RESOLVE_SUCCESS: function(e) {
             let {
                 userTrialOffer: t
             } = e;
-            null != t && (h.delete(t.id), A.add(t.id), m[t.id] = t)
+            null != t && (A.delete(t.id), m.add(t.id), N[t.id] = t)
         },
         BILLING_REFERRAL_RESOLVE_FAIL: function(e) {
             let {
                 userTrialOfferId: t
             } = e;
-            h.delete(t), A.add(t)
+            A.delete(t), m.add(t)
         },
         REFERRALS_FETCH_ELIGIBLE_USER_START: function() {
-            R = !0
+            C = !0
         },
         REFERRALS_FETCH_ELIGIBLE_USER_SUCCESS: function(e) {
             let {
                 users: t,
                 nextIndex: n
             } = e;
-            R = !1, O = t, C = n
+            C = !1, R = t, g = n
         },
         REFERRALS_FETCH_ELIGIBLE_USER_FAIL: function() {
-            R = !1
+            C = !1
         },
-        LOAD_MESSAGES_SUCCESS: M,
+        LOAD_MESSAGES_SUCCESS: y,
         MESSAGE_CREATE: function(e) {
             let {
                 message: t
             } = e;
-            y(t)
+            P(t)
         },
-        LOAD_MESSAGES_AROUND_SUCCESS: M,
+        LOAD_MESSAGES_AROUND_SUCCESS: y,
         LOGOUT: function() {
-            E = null, I = {}, T = [], f = new Set, S = !1, h = new Set, A = new Set, m = {}, N = 0, p = null, O = [], R = !1, C = 0, g = !1, L = null
+            E = null, I = {}, T = [], S = new Set, h = !1, A = new Set, m = new Set, N = {}, p = 0, O = null, R = [], C = !1, g = 0, L = !1, D = null, f = new Map
         }
     })
 }
