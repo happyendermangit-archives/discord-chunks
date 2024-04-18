@@ -5,22 +5,22 @@ function(e, t, n) {
             return i
         },
         default: function() {
-            return l
+            return u
         }
     }), n("653041"), n("47120");
-    var i, r = n("392711"),
-        s = n.n(r),
-        a = n("47770");
+    var i, r, s = n("392711"),
+        a = n.n(s),
+        o = n("47770");
 
-    function o(e, t, n) {
+    function l(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
             configurable: !0,
             writable: !0
         }) : e[t] = n, e
-    }(i || (i = {})).RequestedSSRCsUpdate = "requested-ssrcs-update";
-    class l extends a.default {
+    }(r = i || (i = {})).RequestedSSRCsUpdate = "requested-ssrcs-update", r.RequestedStreamsUpdate = "requested-streams-update";
+    class u extends o.default {
         setUserID(e) {
             this.userId = e
         }
@@ -31,20 +31,23 @@ function(e, t, n) {
             this.focused = e, this.update()
         }
         update() {
+            let e = {
+                any: 50
+            };
             if (null != this.userId) {
-                let e = [];
+                let t = [];
                 if (this.focused) {
-                    let t = s().maxBy(this.videoStreams, e => e.quality);
-                    null != t && e.push(t.ssrc)
+                    let n = a().maxBy(this.videoStreams, e => e.quality);
+                    null != n && (t.push(n.ssrc), e[n.ssrc] = 100)
                 } else {
-                    let t = s().minBy(this.videoStreams, e => e.quality);
-                    null != t && e.push(t.ssrc)
+                    let n = a().minBy(this.videoStreams, e => e.quality);
+                    null != n && (t.push(n.ssrc), e[n.ssrc] = 50)
                 }
-                this.emit("requested-ssrcs-update", this.userId, this.audioSSRC, e)
+                this.emit("requested-ssrcs-update", this.userId, this.audioSSRC, t), this.emit("requested-streams-update", e)
             }
         }
         constructor(...e) {
-            super(...e), o(this, "userId", void 0), o(this, "videoStreams", []), o(this, "audioSSRC", 0), o(this, "focused", !1)
+            super(...e), l(this, "userId", void 0), l(this, "videoStreams", []), l(this, "audioSSRC", 0), l(this, "focused", !1)
         }
     }
 }

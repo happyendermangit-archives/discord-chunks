@@ -954,6 +954,11 @@ function(e, t, n) {
             }).enableGoLiveSimulcast && (this._goLiveQualityManager = new N.default, this._goLiveQualityManager.on(N.GoLiveQualityManagerEvent.RequestedSSRCsUpdate, (e, t, n) => {
                 var i;
                 null === (i = this._connection) || void 0 === i || i.createUser(e, t, n)
+            }), this._goLiveQualityManager.on(N.GoLiveQualityManagerEvent.RequestedStreamsUpdate, e => {
+                if (this.state === J.RTCConnectionStates.RTC_CONNECTED && null != this._socket) {
+                    var t;
+                    this.logger.info("Go Live Media sink wants: ".concat(JSON.stringify(e))), this._socket.mediaSinkWants(e), null === (t = this._connection) || void 0 === t || t.setLocalVideoSinkWants(e)
+                }
             }));
             this._remoteVideoSinkWants = K.DEFAULT_WANTS_FULL, w.default.shouldRecordNextConnection() ? (this._recordingEnabled = !0, f.setShouldRecordNextConnection(!1)) : this._recordingEnabled = !1, this._soundshareStats = new z.default, F.default.addOnlineCallback(this._handleNetworkOnline), F.default.addOfflineCallback(this._handleNetworkOffline), (0, V.isDesktop)() && (this.powerMonitorListener = x.default.remotePowerMonitor.on("resume", this._handlePowerResume)), this._supportedBandwidthEstimationExperiments = [], this._bandwidthEstimationExperiment = null, b.default.getMediaEngine().getSupportedBandwidthEstimationExperiments(e => {
                 this._supportedBandwidthEstimationExperiments = e
