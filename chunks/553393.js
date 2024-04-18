@@ -163,9 +163,9 @@ function(e, t, n) {
                                     src: (0, N.getGameTileAssetUrl)(P, Y)
                                 }), "reward" === X.tileAssetType && (0, i.jsx)(O.default, {
                                     className: D.assetTile,
-                                    learnMoreStyle: "icon",
                                     quest: P,
-                                    questContent: m.QuestContent.MEMBERS_LIST
+                                    questContent: m.QuestContent.MEMBERS_LIST,
+                                    learnMoreStyle: "icon"
                                 })]
                             })
                         })]

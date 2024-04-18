@@ -410,9 +410,7 @@ function(e, t, n) {
             let {
                 resolution: t,
                 frameRate: n
-            } = e.quality, i = t <= 480 ? t / 3 * 4 : t / 9 * 16;
-            "undefined" != typeof window && "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL && (0 === t || t > 1080) && this.handleVideoEncoderFallback("H265");
-            let r = null;
+            } = e.quality, i = t <= 480 ? t / 3 * 4 : t / 9 * 16, r = null;
             if (null != e.desktopDescription ? r = e.desktopDescription.id : null != e.cameraDescription && (r = "".concat(e.cameraDescription.videoDeviceGuid, ":").concat(e.cameraDescription.audioDeviceGuid)), this.goLiveSourceIdentifier === r) {
                 this.setDesktopEncodingOptions(i, t, n);
                 return

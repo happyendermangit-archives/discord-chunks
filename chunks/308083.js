@@ -91,10 +91,20 @@ function(e, t, n) {
         getRandomClanBrandPreset: function() {
             return G
         },
+        getSortedTraits: function() {
+            return function e(t, n) {
+                let i = null != n ? e(t.filter(e => null == n ? void 0 : n.includes(e))) : [];
+                for (let e of D) !i.includes(e) && t.includes(e) && i.push(e);
+                for (let e of v) !i.includes(e) && t.includes(e) && i.push(e);
+                for (let e of M) !i.includes(e) && t.includes(e) && i.push(e);
+                for (let e of t) !i.includes(e) && i.push(e);
+                return i
+            }
+        },
         toServerClanData: function() {
             return F
         }
-    }), n("47120");
+    }), n("47120"), n("653041");
     var i, r, s, a, o, l, u, d, _ = n("913527"),
         c = n.n(_),
         E = n("689938");

@@ -455,6 +455,7 @@ function(e) {
         CLAN_DISCOVERY_GAMES_SEARCH_PLACEHOLDER: "Look for a Game...",
         CLAN_DISCOVERY_GAMES_SELECTED: "Selected Games",
         CLAN_DISCOVERY_TRAIT_OVERFLOW: "+ {count, number} more",
-        CLAN_DISCOVERY_UNKNOWN_PLAYSTYLE: "Unknown"
+        CLAN_DISCOVERY_UNKNOWN_PLAYSTYLE: "Unknown",
+        CLAN_DISCOVERY_PLAYSTYLE_ARIA_LABEL: "Playstyle"
     })
 }
