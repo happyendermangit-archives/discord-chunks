@@ -54,7 +54,8 @@ function(e, t, n) {
             permissions: _,
             guildId: c,
             channelId: E,
-            integrationType: I
+            integrationType: I,
+            nonce: T
         } = e;
         return (await s.HTTP.post({
             url: o.Endpoints.OAUTH2_AUTHORIZE,
@@ -65,7 +66,8 @@ function(e, t, n) {
                 code_challenge: l,
                 code_challenge_method: u,
                 scope: i.join(" "),
-                state: d
+                state: d,
+                nonce: T
             },
             body: {
                 guild_id: c,
@@ -87,7 +89,8 @@ function(e, t, n) {
             codeChallenge: l,
             codeChallengeMethod: u,
             state: d,
-            userInstall: _
+            userInstall: _,
+            nonce: c
         } = e;
         return (await s.HTTP.get({
             url: o.Endpoints.OAUTH2_AUTHORIZE,
@@ -99,7 +102,8 @@ function(e, t, n) {
                 code_challenge_method: u,
                 scope: n.join(" "),
                 state: d,
-                integration_type: _ ? i.ApplicationIntegrationType.USER_INSTALL : i.ApplicationIntegrationType.GUILD_INSTALL
+                integration_type: _ ? i.ApplicationIntegrationType.USER_INSTALL : i.ApplicationIntegrationType.GUILD_INSTALL,
+                nonce: c
             },
             retries: 3,
             oldFormErrors: !0

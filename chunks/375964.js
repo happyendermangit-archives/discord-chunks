@@ -4611,6 +4611,7 @@ function(e) {
         OAUTH2_FAKE_SCOPE_8: "Read you a bedtime story",
         OAUTH2_UNKNOWN_ERROR: "Oops, something went wrong...",
         SCOPE_IDENTIFY: "Access your username, avatar, and banner",
+        SCOPE_OPENID: "Access your profile information",
         SCOPE_EMAIL: "Access your email address",
         SCOPE_CONNECTIONS: "Access your third-party connections",
         SCOPE_GUILDS: "Know what servers you're in",

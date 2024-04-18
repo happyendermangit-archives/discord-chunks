@@ -5,6 +5,9 @@ function(e, t, n) {
             return _
         },
         createReferralTrial: function() {
+            return E
+        },
+        createReferralTrials: function() {
             return c
         },
         fetchReferralEligibleUsers: function() {
@@ -14,9 +17,9 @@ function(e, t, n) {
             return d
         },
         resolveReferralTrialOffer: function() {
-            return E
+            return I
         }
-    });
+    }), n("653041"), n("47120");
     var i = n("544891"),
         r = n("570140"),
         s = n("904245"),
@@ -78,6 +81,21 @@ function(e, t, n) {
             })
         }));
     async function c(e) {
+        let t = [];
+        for (let r of e) {
+            var n;
+            let e = null !== (n = (await i.HTTP.post({
+                url: l.Endpoints.CREATE_REFERRAL(r),
+                oldFormErrors: !0
+            })).body) && void 0 !== n ? n : null;
+            null != e && t.push(e)
+        }
+        return r.default.dispatch({
+            type: "CREATE_REFERRALS_SUCCESS",
+            userTrialOffers: t
+        }), t
+    }
+    async function E(e) {
         try {
             var t;
             let n = await i.HTTP.post({
@@ -100,7 +118,7 @@ function(e, t, n) {
             }
         }
     }
-    async function E(e) {
+    async function I(e) {
         try {
             var t;
             let n = await i.HTTP.get({

@@ -143,67 +143,68 @@ function(e, t, n) {
                 codeChallenge: en,
                 codeChallengeMethod: ei,
                 state: er,
-                prompt: es,
-                authorization: ea,
-                scopes: eo,
-                permissions: el,
-                guildId: eu,
-                channelId: ed,
-                integrationType: e_,
-                disableGuildSelect: ec = !1,
-                showLogout: eE = !1,
-                cancelCompletesFlow: eI = !0,
-                isTrustedName: eT = !1,
-                isEmbeddedFlow: ef = !1,
-                inApp: eS = !1,
-                callback: eh,
-                callbackWithoutPost: eA,
-                onClose: em
+                nonce: es,
+                prompt: ea,
+                authorization: eo,
+                scopes: el,
+                permissions: eu,
+                guildId: ed,
+                channelId: e_,
+                integrationType: ec,
+                disableGuildSelect: eE = !1,
+                showLogout: eI = !1,
+                cancelCompletesFlow: eT = !0,
+                isTrustedName: ef = !1,
+                isEmbeddedFlow: eS = !1,
+                inApp: eh = !1,
+                callback: eA,
+                callbackWithoutPost: em,
+                onClose: eN
             } = e,
-            eN = (0, u.useLocation)(),
-            ep = O.default.useExperiment({
+            ep = (0, u.useLocation)(),
+            eO = O.default.useExperiment({
                 location: "auth web"
             }).userAppsTreatment === O.UserAppsTreatment.ALLOWED,
-            eO = (0, E.useStateFromStores)([y.default], () => y.default.hasLoadedExperiments);
+            eR = (0, E.useStateFromStores)([y.default], () => y.default.hasLoadedExperiments);
         a.useEffect(() => {
-            M.default.isAuthenticated() && !eO && h.default.getExperiments()
-        }, [eO]);
-        let [eR, eC] = a.useState(null), [eg, eL] = a.useState(null), [eD, ev] = a.useState(null), [eM, ey] = a.useState(!1), eP = null == eR ? void 0 : eR.guilds, [eU, eb] = a.useState(null != eu ? eu : null), [eG, ew] = a.useState(null != ed ? ed : null), [eB, ek] = a.useState(P.NONE), eF = a.useMemo(() => (null == eR ? void 0 : eR.user) != null ? new v.default(eR.user) : null, [null == eR ? void 0 : eR.user]), eV = a.useMemo(() => null == eP ? void 0 : eP.find(e => e.id === eU), [eP, eU]), [ex, eH] = a.useState(null), eY = a.useMemo(() => {
+            M.default.isAuthenticated() && !eR && h.default.getExperiments()
+        }, [eR]);
+        let [eC, eg] = a.useState(null), [eL, eD] = a.useState(null), [ev, eM] = a.useState(null), [ey, eP] = a.useState(!1), eU = null == eC ? void 0 : eC.guilds, [eb, eG] = a.useState(null != ed ? ed : null), [ew, eB] = a.useState(null != e_ ? e_ : null), [ek, eF] = a.useState(P.NONE), eV = a.useMemo(() => (null == eC ? void 0 : eC.user) != null ? new v.default(eC.user) : null, [null == eC ? void 0 : eC.user]), ex = a.useMemo(() => null == eU ? void 0 : eU.find(e => e.id === eb), [eU, eb]), [eH, eY] = a.useState(null), ej = a.useMemo(() => {
             var e;
-            return ep && null == ea && null == e_ && (null !== (e = null == eo ? void 0 : eo.length) && void 0 !== e ? e : 0) === 0 && null == et
-        }, [ea, ep, null == eo ? void 0 : eo.length, et, e_]), [ej, eW] = a.useState(null);
+            return eO && null == eo && null == ec && (null !== (e = null == el ? void 0 : el.length) && void 0 !== e ? e : 0) === 0 && null == et
+        }, [eo, eO, null == el ? void 0 : el.length, et, ec]), [eW, eK] = a.useState(null);
         a.useEffect(() => {
-            eY && R.default.fetchApplication(K).then(e => eW(D.default.createFromServer(e)))
-        }, [K, eY]);
-        let eK = a.useMemo(() => {
+            ej && R.default.fetchApplication(K).then(e => eK(D.default.createFromServer(e)))
+        }, [K, ej]);
+        let ez = a.useMemo(() => {
                 var e, t;
-                return null == ex ? null : null == ej ? void 0 : null === (t = ej.integrationTypesConfig) || void 0 === t ? void 0 : null === (e = t[ex]) || void 0 === e ? void 0 : e.oauth2InstallParams
-            }, [null == ej ? void 0 : ej.integrationTypesConfig, ex]),
+                return null == eH ? null : null == eW ? void 0 : null === (t = eW.integrationTypesConfig) || void 0 === t ? void 0 : null === (e = t[eH]) || void 0 === e ? void 0 : e.oauth2InstallParams
+            }, [null == eW ? void 0 : eW.integrationTypesConfig, eH]),
             {
-                requestedScopes: ez,
-                accountScopes: eX
+                requestedScopes: eX,
+                accountScopes: eQ
             } = a.useMemo(() => {
-                let e = eY ? null == eK ? void 0 : eK.scopes : eo,
+                let e = ej ? null == ez ? void 0 : ez.scopes : el,
                     t = (0, b.filterScopes)(null != e ? e : []),
                     n = k.OrderedAccountScopes.filter(e => t.includes(e));
                 return {
                     requestedScopes: t,
                     accountScopes: n
                 }
-            }, [null == eK ? void 0 : eK.scopes, eo, eY]),
-            eQ = a.useMemo(() => {
+            }, [null == ez ? void 0 : ez.scopes, el, ej]),
+            eq = a.useMemo(() => {
                 var e;
-                let t = eY ? c.deserialize(null !== (e = null == eK ? void 0 : eK.permissions) && void 0 !== e ? e : 0) : el;
+                let t = ej ? c.deserialize(null !== (e = null == ez ? void 0 : ez.permissions) && void 0 !== e ? e : 0) : eu;
                 return null != t ? t : P.NONE
-            }, [null == eK ? void 0 : eK.permissions, el, eY]),
-            eq = (0, E.useStateFromStores)([m.default], () => m.default.getCurrentEmbeddedActivity()),
-            eZ = (0, E.useStateFromStoresObject)([A.default, m.default], () => {
+            }, [null == ez ? void 0 : ez.permissions, eu, ej]),
+            eZ = (0, E.useStateFromStores)([m.default], () => m.default.getCurrentEmbeddedActivity()),
+            eJ = (0, E.useStateFromStoresObject)([A.default, m.default], () => {
                 let e;
                 let t = A.default.getIsEnabled();
-                if (null != eq) {
-                    if (e = m.default.getShelfActivities(eq.guildId).find(e => e.application_id === eq.applicationId), t && void 0 === e) {
+                if (null != eZ) {
+                    if (e = m.default.getShelfActivities(eZ.guildId).find(e => e.application_id === eZ.applicationId), t && void 0 === e) {
                         var n;
-                        e = null === (n = A.default.getDeveloperShelfItems().find(e => e.id === eq.applicationId)) || void 0 === n ? void 0 : n.embeddedActivityConfig
+                        e = null === (n = A.default.getDeveloperShelfItems().find(e => e.id === eZ.applicationId)) || void 0 === n ? void 0 : n.embeddedActivityConfig
                     }
                     if (null != e) return {
                         ...q.DEFAULT_EMBEDDED_ACTIVITY_CONFIG,
@@ -211,45 +212,46 @@ function(e, t, n) {
                     }
                 }
                 return {}
-            }, [eq]),
-            eJ = Object.keys(eZ).length > 0 ? eZ : null,
-            e$ = a.useCallback(async e => {
-                if (null != eA) {
-                    eA(e);
+            }, [eZ]),
+            e$ = Object.keys(eJ).length > 0 ? eJ : null,
+            e0 = a.useCallback(async e => {
+                if (null != em) {
+                    em(e);
                     return
                 }
-                if (!e && !eI) {
-                    null != eh && (eh({
-                        application: null == eR ? void 0 : eR.application,
-                        guild: eV
-                    }), null == em || em());
+                if (!e && !eT) {
+                    null != eA && (eA({
+                        application: null == eC ? void 0 : eC.application,
+                        guild: ex
+                    }), null == eN || eN());
                     return
                 }
-                if (null == ex) {
-                    ev(Error("No integration type was selected."));
+                if (null == eH) {
+                    eM(Error("No integration type was selected."));
                     return
                 }
                 try {
-                    ey(!0);
+                    eP(!0);
                     let t = await (0, G.authorize)({
                         authorize: e,
                         clientId: K,
-                        scopes: ez,
+                        scopes: eX,
                         responseType: ee,
                         redirectUri: et,
                         codeChallenge: en,
                         codeChallengeMethod: ei,
                         state: er,
-                        integrationType: ex,
-                        permissions: c.remove(eQ, eB),
-                        guildId: ex === _.ApplicationIntegrationType.GUILD_INSTALL && null != eU ? eU : void 0,
-                        channelId: ex === _.ApplicationIntegrationType.GUILD_INSTALL && null != eG ? eG : void 0
+                        nonce: es,
+                        integrationType: eH,
+                        permissions: c.remove(eq, ek),
+                        guildId: eH === _.ApplicationIntegrationType.GUILD_INSTALL && null != eb ? eb : void 0,
+                        channelId: eH === _.ApplicationIntegrationType.GUILD_INSTALL && null != ew ? ew : void 0
                     });
-                    if (null != eh) eh({
-                        application: null == eR ? void 0 : eR.application,
+                    if (null != eA) eA({
+                        application: null == eC ? void 0 : eC.application,
                         location: t.location,
-                        guild: eV
-                    }), null == em || em();
+                        guild: ex
+                    }), null == eN || eN();
                     else if (null != t.location) {
                         let {
                             host: e,
@@ -257,36 +259,37 @@ function(e, t, n) {
                         } = d.parse(t.location);
                         U.default.isDiscordHostname(e) && n === Q.Routes.OAUTH2_AUTHORIZED ? (0, L.transitionTo)(Q.Routes.OAUTH2_AUTHORIZED, {
                             state: {
-                                application: null == eR ? void 0 : eR.application,
-                                guild: eV
+                                application: null == eC ? void 0 : eC.application,
+                                guild: ex
                             }
                         }) : window.location = t.location
-                    } else ey(!1)
+                    } else eP(!1)
                 } catch (t) {
                     let e = t.body;
-                    (null == e ? void 0 : e.message) != null && "" !== e.message ? ev(Error(e.message)) : ev(e), eL(1), ey(!1)
+                    (null == e ? void 0 : e.message) != null && "" !== e.message ? eM(Error(e.message)) : eM(e), eD(1), eP(!1)
                 }
-            }, [eA, eI, eh, null == eR ? void 0 : eR.application, eV, em, K, ez, ee, et, en, ei, er, eQ, eB, eU, ex, eG]),
-            e0 = a.useRef(!1),
-            e1 = a.useCallback(async () => {
+            }, [em, eT, eA, null == eC ? void 0 : eC.application, ex, eN, K, eX, ee, et, en, ei, er, es, eq, ek, eb, eH, ew]),
+            e1 = a.useRef(!1),
+            e2 = a.useCallback(async () => {
                 if (!M.default.isAuthenticated()) {
-                    (0, G.logoutWithRedirect)(eN);
+                    (0, G.logoutWithRedirect)(ep);
                     return
                 }
-                if (!e0.current) {
-                    e0.current = !0;
+                if (!e1.current) {
+                    e1.current = !0;
                     try {
-                        let e = null != ea ? ea : await (0, G.fetchAuthorization)({
+                        let e = null != eo ? eo : await (0, G.fetchAuthorization)({
                             clientId: K,
-                            scopes: ez,
+                            scopes: eX,
                             responseType: ee,
                             redirectUri: et,
                             codeChallenge: en,
                             codeChallengeMethod: ei,
                             state: er,
-                            userInstall: ex === _.ApplicationIntegrationType.USER_INSTALL
+                            nonce: es,
+                            userInstall: eH === _.ApplicationIntegrationType.USER_INSTALL
                         });
-                        eC((0, w.convertOAuth2Authorization)(e)), es === F.OAuth2Prompts.NONE && e.authorized && e$(!0), (0, N.trackWithMetadata)(Q.AnalyticEvents.OAUTH2_AUTHORIZE_VIEWED, {
+                        eg((0, w.convertOAuth2Authorization)(e)), ea === F.OAuth2Prompts.NONE && e.authorized && e0(!0), (0, N.trackWithMetadata)(Q.AnalyticEvents.OAUTH2_AUTHORIZE_VIEWED, {
                             application_id: e.application.id
                         })
                     } catch (n) {
@@ -295,147 +298,147 @@ function(e, t, n) {
                             body: t
                         } = n;
                         if (401 === e) {
-                            (0, G.logoutWithRedirect)(eN);
+                            (0, G.logoutWithRedirect)(ep);
                             return
                         }
-                        ev(Error(null != t.message ? t.message : "".concat(Object.keys(t)[0], ": ").concat(Object.values(t)[0])))
+                        eM(Error(null != t.message ? t.message : "".concat(Object.keys(t)[0], ": ").concat(Object.values(t)[0])))
                     } finally {
-                        e0.current = !1
+                        e1.current = !1
                     }
                 }
-            }, [eN, ea, K, ez, ee, et, en, ei, er, ex, es, e$]),
-            e2 = a.useMemo(() => {
+            }, [ep, eo, K, eX, ee, et, en, ei, er, es, eH, ea, e0]),
+            e3 = a.useMemo(() => {
                 var e;
-                return null != ej && eY ? Object.entries(null !== (e = ej.integrationTypesConfig) && void 0 !== e ? e : {}).filter(e => {
+                return null != eW && ej ? Object.entries(null !== (e = eW.integrationTypesConfig) && void 0 !== e ? e : {}).filter(e => {
                     let [t, n] = e;
                     return null != n.oauth2InstallParams
                 }).map(e => {
                     let [t, n] = e;
                     return Number(t)
                 }) : []
-            }, [ej, eY]);
+            }, [eW, ej]);
         if (a.useEffect(() => {
-                if (null == eg && (!eY || null != ej) && eO) {
-                    if (null != ea) {
+                if (null == eL && (!ej || null != eW) && eR) {
+                    if (null != eo) {
                         var e;
-                        eH(null !== (e = ea.integration_type) && void 0 !== e ? e : _.ApplicationIntegrationType.GUILD_INSTALL), eL(1)
-                    } else e2.length > 1 ? eL(0) : (1 === e2.length ? eH(e2[0]) : ep && null != e_ ? eH(e_) : eH(_.ApplicationIntegrationType.GUILD_INSTALL), eL(1))
+                        eY(null !== (e = eo.integration_type) && void 0 !== e ? e : _.ApplicationIntegrationType.GUILD_INSTALL), eD(1)
+                    } else e3.length > 1 ? eD(0) : (1 === e3.length ? eY(e3[0]) : eO && null != ec ? eY(ec) : eY(_.ApplicationIntegrationType.GUILD_INSTALL), eD(1))
                 }
-            }, [ea, e2, ej, ep, eY, e_, eg, eO]), a.useEffect(() => {
-                if (null == ex || null != eR || null != eD) return;
-                ex === _.ApplicationIntegrationType.USER_INSTALL && (eb(null), ew(null));
-                let e = ez.filter(e => !k.ValidScopes.includes(e));
-                0 === ez.length ? ev(Error("No scopes were provided.")) : e.length > 0 ? ev(Error("Invalid scope: ".concat(e[0]))) : (0, B.containsDisallowedPermission)(eQ) ? ev(Error("Invalid permission(s) provided.")) : e1()
-            }, [e1, ez, eQ, ex, eR, eD]), eD instanceof Error) return {
+            }, [eo, e3, eW, eO, ej, ec, eL, eR]), a.useEffect(() => {
+                if (null == eH || null != eC || null != ev) return;
+                eH === _.ApplicationIntegrationType.USER_INSTALL && (eG(null), eB(null));
+                let e = eX.filter(e => !k.ValidScopes.includes(e));
+                0 === eX.length ? eM(Error("No scopes were provided.")) : e.length > 0 ? eM(Error("Invalid scope: ".concat(e[0]))) : (0, B.containsDisallowedPermission)(eq) ? eM(Error("Invalid permission(s) provided.")) : e2()
+            }, [e2, eX, eq, eH, eC, ev]), ev instanceof Error) return {
             body: (0, s.jsx)(z.OAuth2Error, {
-                message: eD.message
+                message: ev.message
             })
         };
-        let e3 = !1,
-            e4 = !0,
+        let e4 = !1,
             e6 = !0,
-            e7 = !0;
-        switch (eg) {
+            e7 = !0,
+            e5 = !0;
+        switch (eL) {
             case null:
                 return {
                     body: (0, s.jsx)(S.Spinner, {})
                 };
             case 0:
-                if (null == ej) return {
+                if (null == eW) return {
                     body: (0, s.jsx)(S.Spinner, {})
                 };
                 l = (0, s.jsx)(W.default, {
-                    inApp: eS,
-                    application: ej,
+                    inApp: eh,
+                    application: eW,
                     onSelect: e => {
-                        eH(e), eC(null), eL(1)
+                        eY(e), eg(null), eD(1)
                     }
-                }), e4 = !1, e6 = !1, e7 = eS;
+                }), e6 = !1, e7 = !1, e5 = eh;
                 break;
             case 1:
-                if (null == eR || null == eF || null == ex) return {
+                if (null == eC || null == eV || null == eH) return {
                     body: (0, s.jsx)(S.Spinner, {})
                 };
-                let e5 = null == eD || eD instanceof Error ? {} : eD,
-                    e8 = null == eP ? void 0 : eP.sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())),
-                    e9 = ex === _.ApplicationIntegrationType.GUILD_INSTALL && ez.includes(Q.OAuth2Scopes.WEBHOOK_INCOMING),
-                    te = e9 || ex === _.ApplicationIntegrationType.GUILD_INSTALL && (ez.includes(Q.OAuth2Scopes.BOT) || ez.includes(Q.OAuth2Scopes.APPLICATIONS_COMMANDS));
+                let e8 = null == ev || ev instanceof Error ? {} : ev,
+                    e9 = null == eU ? void 0 : eU.sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())),
+                    te = eH === _.ApplicationIntegrationType.GUILD_INSTALL && eX.includes(Q.OAuth2Scopes.WEBHOOK_INCOMING),
+                    tt = te || eH === _.ApplicationIntegrationType.GUILD_INSTALL && (eX.includes(Q.OAuth2Scopes.BOT) || eX.includes(Q.OAuth2Scopes.APPLICATIONS_COMMANDS));
                 l = (0, s.jsxs)(s.Fragment, {
                     children: [(0, s.jsx)(x.default, {
-                        application: eR.application,
-                        accountScopes: eX,
-                        requestedScopes: ez,
-                        integrationType: ex,
-                        errors: e5,
-                        isTrustedName: eT
-                    }), te ? (0, s.jsx)(Y.default, {
-                        error: (null !== (n = null !== (t = e5[Q.OAuth2Scopes.BOT]) && void 0 !== t ? t : e5[Q.OAuth2Scopes.APPLICATIONS_COMMANDS]) && void 0 !== n ? n : [])[0],
-                        selectedGuildId: eU,
-                        onGuildChange: eb,
-                        guilds: null != e8 ? e8 : [],
-                        disabled: "" !== eU && null != eU && !0 === ec
-                    }) : null, e9 ? (0, s.jsx)(X.default, {
-                        error: (null !== (i = e5[Q.OAuth2Scopes.WEBHOOK_INCOMING]) && void 0 !== i ? i : [])[0],
-                        selectedChannelId: eG,
-                        selectedGuildId: eU,
-                        onChannelChange: ew
+                        application: eC.application,
+                        accountScopes: eQ,
+                        requestedScopes: eX,
+                        integrationType: eH,
+                        errors: e8,
+                        isTrustedName: ef
+                    }), tt ? (0, s.jsx)(Y.default, {
+                        error: (null !== (n = null !== (t = e8[Q.OAuth2Scopes.BOT]) && void 0 !== t ? t : e8[Q.OAuth2Scopes.APPLICATIONS_COMMANDS]) && void 0 !== n ? n : [])[0],
+                        selectedGuildId: eb,
+                        onGuildChange: eG,
+                        guilds: null != e9 ? e9 : [],
+                        disabled: "" !== eb && null != eb && !0 === eE
+                    }) : null, te ? (0, s.jsx)(X.default, {
+                        error: (null !== (i = e8[Q.OAuth2Scopes.WEBHOOK_INCOMING]) && void 0 !== i ? i : [])[0],
+                        selectedChannelId: ew,
+                        selectedGuildId: eb,
+                        onChannelChange: eB
                     }) : null]
-                }), ez.includes(Q.OAuth2Scopes.BOT) && !c.equals(eQ, P.NONE) && (f = 2), e2.length > 1 && (T = 0), e3 = te && null == eV || e9 && null == eG;
+                }), eX.includes(Q.OAuth2Scopes.BOT) && !c.equals(eq, P.NONE) && (f = 2), e3.length > 1 && (T = 0), e4 = tt && null == ex || te && null == ew;
                 break;
             case 2:
-                if (null == eR) return {
+                if (null == eC) return {
                     body: (0, s.jsx)(S.Spinner, {})
                 };
                 l = (0, s.jsx)(H.default, {
-                    application: eR.application,
-                    permissions: eQ,
-                    deniedPermissions: eB,
+                    application: eC.application,
+                    permissions: eq,
+                    deniedPermissions: ek,
                     onPermissionsChange: (e, t) => {
-                        ek(n => e ? c.remove(n, t) : c.add(n, t))
+                        eF(n => e ? c.remove(n, t) : c.add(n, t))
                     },
-                    guild: eV
+                    guild: ex
                 }), T = 1
         }
-        if (e4 && null != eR) {
-            let e = null === (r = eR.bot) || void 0 === r ? void 0 : r.approximate_guild_count;
+        if (e6 && null != eC) {
+            let e = null === (r = eC.bot) || void 0 === r ? void 0 : r.approximate_guild_count;
             p = (0, s.jsx)(V.default, {
-                embeddedActivityConfig: eJ,
-                application: eR.application,
-                scopes: ez,
-                redirectUri: null !== (o = eR.redirect_uri) && void 0 !== o ? o : null,
+                embeddedActivityConfig: e$,
+                application: eC.application,
+                scopes: eX,
+                redirectUri: null !== (o = eC.redirect_uri) && void 0 !== o ? o : null,
                 approximateGuildCount: void 0 !== e ? e : null,
-                isEmbeddedFlow: ef
+                isEmbeddedFlow: eS
             })
         }
-        return e6 && null != eR && null != eF && (C = (0, s.jsx)(j.default, {
+        return e7 && null != eC && null != eV && (C = (0, s.jsx)(j.default, {
             id: $,
-            user: eF,
-            application: eR.application,
-            bot: eR.bot,
-            accountScopes: eX,
-            showLogout: eE || !1,
-            location: eN,
-            isTrustedName: eT
-        })), e7 && (g = (0, s.jsxs)("div", {
+            user: eV,
+            application: eC.application,
+            bot: eC.bot,
+            accountScopes: eQ,
+            showLogout: eI || !1,
+            location: ep,
+            isTrustedName: ef
+        })), e5 && (g = (0, s.jsxs)("div", {
             className: J.footer,
             children: [null != T ? (0, s.jsx)(I.Button, {
                 look: I.Button.Looks.LINK,
                 color: I.Button.Colors.PRIMARY,
-                onClick: () => eL(T),
+                onClick: () => eD(T),
                 children: Z.default.Messages.BACK
             }) : (0, s.jsx)(I.Button, {
                 look: I.Button.Looks.LINK,
                 color: I.Button.Colors.PRIMARY,
-                onClick: () => e$(!1),
+                onClick: () => e0(!1),
                 children: Z.default.Messages.CANCEL
-            }), 0 !== eg ? null != f ? (0, s.jsx)(I.Button, {
-                onClick: () => eL(f),
-                disabled: e3,
+            }), 0 !== eL ? null != f ? (0, s.jsx)(I.Button, {
+                onClick: () => eD(f),
+                disabled: e4,
                 children: Z.default.Messages.CONTINUE
             }) : (0, s.jsx)(I.Button, {
-                onClick: () => e$(!0),
-                disabled: e3,
-                submitting: eM,
+                onClick: () => e0(!0),
+                disabled: e4,
+                submitting: ey,
                 children: Z.default.Messages.AUTHORIZE
             }) : null]
         })), {
@@ -444,7 +447,7 @@ function(e, t, n) {
             footer: g,
             nextStep: f,
             appDetails: p,
-            sendAuthorize: e$
+            sendAuthorize: e0
         }
     }
 

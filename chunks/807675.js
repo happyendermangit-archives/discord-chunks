@@ -45,7 +45,8 @@ function(e, t, n) {
             guildId: T,
             prompt: c.prompt,
             disableGuildSelect: "true" === c.disable_guild_select,
-            integrationType: null == c.integration_type ? void 0 : Number(c.integration_type)
+            integrationType: null == c.integration_type ? void 0 : Number(c.integration_type),
+            nonce: c.nonce
         }
     }
 }

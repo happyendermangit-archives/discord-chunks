@@ -144,6 +144,12 @@ function(e, t, n) {
             } = e;
             (0, _.fetchReferralsRemaining)(), m[t.id] = t, T = [...T, t.user_id]
         },
+        CREATE_REFERRALS_SUCCESS: function(e) {
+            let {
+                userTrialOffers: t
+            } = e;
+            for (let e of ((0, _.fetchReferralsRemaining)(), t)) m[e.id] = e, T = [...T, e.user_id]
+        },
         BILLING_REFERRAL_RESOLVE_SUCCESS: function(e) {
             let {
                 userTrialOffer: t
