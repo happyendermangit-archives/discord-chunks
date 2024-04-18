@@ -17132,6 +17132,7 @@ function(e) {
         STOREFRONT_PURCHASE_FOR: "Buy for {price}",
         STOREFRONT_ONE_TIME_PURCHASE: "One-Time Purchase",
         STOREFRONT_DURABLE_AVAILABILITY: "1 / 1 Available",
+        STOREFRONT_DURABLE_AVAILABILITY_NONE: "0 / 1 Available",
         STOREFRONT_MUST_LOGIN: "Login to browse store",
         QUIET_MODE_DISABLED: "Focus Mode Disabled",
         QUIET_MODE_ENABLED: "Focus Mode Enabled",

@@ -57,7 +57,8 @@ function(e, t, n) {
                     banner: t.banner,
                     brand_color_primary: t.brandPrimaryColor,
                     brand_color_secondary: t.brandSecondaryColor,
-                    wildcard_descriptors: t.wildcardDescriptors
+                    wildcard_descriptors: t.wildcardDescriptors,
+                    badge_image: t.badgeImage
                 }
             }), s.default.dispatch({
                 type: "CLAN_SETUP_SUCCESS",

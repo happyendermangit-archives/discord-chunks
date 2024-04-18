@@ -125,7 +125,7 @@ function(e, t, n) {
             originalLink: r,
             inContent: null == s || a ? null : [p(s)],
             content: [O({
-                name: m.default.Messages.UNKNOWN_CHANNEL,
+                name: m.default.Messages.UNKNOWN_CHANNEL.toLowerCase(),
                 type: A.ChannelTypes.UNKNOWN,
                 iconType: "text"
             }, "italics")]

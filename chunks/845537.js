@@ -165,7 +165,7 @@ function(e, t, n) {
     function M(e) {
         let {
             id: t
-        } = e, n = (0, r.useStateFromStores)([E.default], () => E.default.getChannel(t)), s = p.default.Messages.UNKNOWN_CHANNEL, a = "text", o = !0;
+        } = e, n = (0, r.useStateFromStores)([E.default], () => E.default.getChannel(t)), s = p.default.Messages.UNKNOWN_CHANNEL.toLowerCase(), a = "text", o = !0;
         if (null != n) {
             var l;
             s = (0, d.canViewChannel)(n) ? n.name : p.default.Messages.NO_ACCESS, a = (0, d.canViewChannel)(n) ? null !== (l = (0, h.getMentionIconType)(n)) && void 0 !== l ? l : "text" : "locked", o = (0, _.isChannelTypeMentionable)(n.type)
