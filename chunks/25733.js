@@ -12,12 +12,9 @@ function(e, t, n) {
             if (!(0, a.isEligibleForDmSettingsUpsell)({
                     location: "DmSettingsUpsellManager"
                 })) return;
-            let t = (0, a.isInStaffBypassForDmSettingsUpsell)({
-                    location: "DmSettingsUpsellManager"
-                }),
-                l = r.Storage.get(o.DM_SETTINGS_UPSELL_LAST_SHOWN_KEY),
-                u = Date.now();
-            (null == l || u - l > o.DM_SETTINGS_UPSELL_LAST_SHOWN_MAX_TIME_MS || t) && (r.Storage.set(o.DM_SETTINGS_UPSELL_LAST_SHOWN_KEY, u), (0, s.openModalLazy)(async () => {
+            let t = r.Storage.get(o.DM_SETTINGS_UPSELL_LAST_SHOWN_KEY),
+                l = Date.now();
+            (null == t || l - t > o.DM_SETTINGS_UPSELL_LAST_SHOWN_MAX_TIME_MS) && (r.Storage.set(o.DM_SETTINGS_UPSELL_LAST_SHOWN_KEY, l), (0, s.openModalLazy)(async () => {
                 let {
                     default: t
                 } = await Promise.all([n.e("99387"), n.e("35489")]).then(n.bind(n, "582712"));

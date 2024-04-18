@@ -2,62 +2,37 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         isEligibleForDmSettingsUpsell: function() {
-            return a
-        },
-        isInStaffBypassForDmSettingsUpsell: function() {
-            return o
+            return r
         }
     });
-    var i = n("818083");
-    let r = (0, i.createExperiment)({
-            kind: "user",
-            id: "2024-04_dm_settings_upsell",
-            label: "DM Settings Upsell",
-            defaultConfig: {
-                enabled: !1
-            },
-            treatments: [{
-                id: 1,
-                label: "Enable DM Settings Upsell",
-                config: {
-                    enabled: !0
-                }
-            }]
-        }),
-        s = (0, i.createExperiment)({
-            kind: "user",
-            id: "2024-04_dm_settings_upsell_staff_bypass",
-            label: "DM Settings Upsell Staff Bypass",
-            defaultConfig: {
-                enabled: !1
-            },
-            treatments: [{
-                id: 1,
-                label: "Enable DM Settings Upsell Staff Bypass to ignore cooldown",
-                config: {
-                    enabled: !0
-                }
-            }]
-        });
-
-    function a(e) {
-        let {
-            location: t,
-            autoTrackExposure: n = !1
-        } = e;
-        return r.getCurrentConfig({
-            location: t
+    let i = (0, n("818083").createExperiment)({
+        kind: "user",
+        id: "2024-04_dm_settings_upsell",
+        label: "DM Settings Upsell",
+        defaultConfig: {
+            enabled: !1
+        },
+        treatments: [{
+            id: 1,
+            label: "Enable DM Settings Upsell (with upsell threshold at 2 rejected MRs)",
+            config: {
+                enabled: !0
+            }
         }, {
-            autoTrackExposure: n
-        }).enabled
-    }
+            id: 2,
+            label: "Enable DM Settings Upsell (with upsell threshold at 3 rejected MRs)",
+            config: {
+                enabled: !0
+            }
+        }]
+    });
 
-    function o(e) {
+    function r(e) {
         let {
             location: t,
             autoTrackExposure: n = !1
         } = e;
-        return s.getCurrentConfig({
+        return i.getCurrentConfig({
             location: t
         }, {
             autoTrackExposure: n
