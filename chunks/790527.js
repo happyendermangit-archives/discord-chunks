@@ -53,38 +53,39 @@ function(e, t, n) {
             hideBackButton: j,
             backButtonText: W,
             showEnhancedUpsell: K,
-            ...z
-        } = e, X = null != C, Q = (0, I.usePremiumTrialOffer)(), q = (0, E.usePremiumDiscountOffer)(), Z = ((null == Q ? void 0 : null === (t = Q.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === H || (0, E.discountOfferHasTier)(q, H)) && !X, {
-            analyticsLocations: J
+            children: z,
+            ...X
+        } = e, Q = null != C, q = (0, I.usePremiumTrialOffer)(), Z = (0, E.usePremiumDiscountOffer)(), J = ((null == q ? void 0 : null === (t = q.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === H || (0, E.discountOfferHasTier)(Z, H)) && !Q, {
+            analyticsLocations: $
         } = (0, u.default)(l.default.PREMIUM_UPSELL_MODAL);
         r.useEffect(() => {
-            !Y && (X ? _.default.track(A.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
+            !Y && (Q ? _.default.track(A.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
                 type: "".concat(R, " - Tier ").concat(C.boostedGuildTier),
                 guild_id: C.guild.id,
                 channel_id: C.channelId,
                 location: L,
-                location_stack: J
+                location_stack: $
             }) : _.default.track(A.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                 type: R,
                 source: g,
                 location: L,
-                location_stack: J,
+                location_stack: $,
                 sku_id: (0, c.castPremiumSubscriptionAsSkuId)(H)
             }))
-        }, [X, H, Y]);
-        let $ = x ? a()(N.artContainer, N.artContainerBoxShadow, P) : a()(N.artContainer, P),
-            ee = null;
-        return ee = "artURL" in z ? (0, i.jsx)("img", {
+        }, [Q, H, Y]);
+        let ee = x ? a()(N.artContainer, N.artContainerBoxShadow, P) : a()(N.artContainer, P),
+            et = null;
+        return et = "artURL" in X ? (0, i.jsx)("img", {
             className: N.art,
             alt: "",
-            src: z.artURL
-        }) : z.artElement, (0, i.jsxs)(o.ModalRoot, {
+            src: X.artURL
+        }) : X.artElement, (0, i.jsxs)(o.ModalRoot, {
             className: a()(N.root, y),
             "aria-label": O,
             transitionState: b,
             children: [(0, i.jsxs)("div", {
-                className: $,
-                children: [ee, V ? (0, i.jsx)("img", {
+                className: ee,
+                children: [et, V ? (0, i.jsx)("img", {
                     className: N.sparkleBadge,
                     alt: "",
                     src: p
@@ -96,16 +97,16 @@ function(e, t, n) {
                 scrollbarType: "none",
                 className: N.content,
                 children: Y ? (0, i.jsx)(o.Spinner, {}) : (0, i.jsx)(i.Fragment, {
-                    children: Z ? (0, i.jsx)(i.Fragment, {
+                    children: J ? (0, i.jsx)(i.Fragment, {
                         children: (0, i.jsx)(T.default, {
                             onClose: G,
                             type: R,
-                            subscriptionTier: null !== (s = null == Q ? void 0 : null === (n = Q.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== s ? s : h.PremiumSubscriptionSKUs.TIER_2,
+                            subscriptionTier: null !== (s = null == q ? void 0 : null === (n = q.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== s ? s : h.PremiumSubscriptionSKUs.TIER_2,
                             headingText: O,
                             context: v,
                             analyticsLocationObject: L,
-                            discountOffer: q,
-                            trialOffer: Q,
+                            discountOffer: Z,
+                            trialOffer: q,
                             children: M
                         })
                     }) : (0, i.jsxs)(i.Fragment, {
@@ -117,7 +118,7 @@ function(e, t, n) {
                             children: O
                         }), (0, i.jsx)(S.default, {
                             premiumUpsellType: R
-                        }), (0, i.jsx)(o.Text, {
+                        }), z, (0, i.jsx)(o.Text, {
                             variant: "text-md/normal",
                             className: a()(U, N.subHeader),
                             children: D
@@ -143,21 +144,21 @@ function(e, t, n) {
                         children: k
                     }) : null, (() => {
                         let e;
-                        if (X) return (0, i.jsx)(d.default, {
+                        if (Q) return (0, i.jsx)(d.default, {
                             analyticsLocation: L,
                             guild: C.guild,
                             onClose: G
                         });
                         let t = K ? m.default.Messages.PREMIUM_UPSELL_GET_NITRO : void 0;
-                        if (Z) {
-                            if (null != Q) {
+                        if (J) {
+                            if (null != q) {
                                 var n, r;
                                 t = (0, c.formatTrialCtaIntervalDuration)({
-                                    intervalType: null == Q ? void 0 : null === (n = Q.subscription_trial) || void 0 === n ? void 0 : n.interval,
-                                    intervalCount: null == Q ? void 0 : null === (r = Q.subscription_trial) || void 0 === r ? void 0 : r.interval_count
-                                }), e = null == Q ? void 0 : Q.trial_id
-                            } else null != q && (t = m.default.Messages.PREMIUM_DISCOUNT_CTA.format({
-                                percent: q.discount.amount
+                                    intervalType: null == q ? void 0 : null === (n = q.subscription_trial) || void 0 === n ? void 0 : n.interval,
+                                    intervalCount: null == q ? void 0 : null === (r = q.subscription_trial) || void 0 === r ? void 0 : r.interval_count
+                                }), e = null == q ? void 0 : q.trial_id
+                            } else null != Z && (t = m.default.Messages.PREMIUM_DISCOUNT_CTA.format({
+                                percent: Z.discount.amount
                             }))
                         }
                         return (0, i.jsx)(f.default, {

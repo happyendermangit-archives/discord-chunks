@@ -166,13 +166,15 @@ function(e, t, n) {
                                 children: [(0, i.jsx)(u.Text, {
                                     variant: "text-xs/medium",
                                     color: "text-muted",
+                                    className: P.helpText,
                                     children: y.default.Messages.QUESTS_MEMBERS_LIST_PROMOTED_BY.format({
                                         gamePublisher: w.config.messages.gamePublisher
                                     })
                                 }), (0, i.jsx)(a.CircleQuestionIcon, {
+                                    className: P.helpIcon,
                                     width: U,
                                     height: U,
-                                    color: u.tokens.colors.INTERACTIVE_MUTED
+                                    color: u.tokens.colors.INTERACTIVE_NORMAL
                                 })]
                             })]
                         }), (0, i.jsx)("div", {

@@ -5,6 +5,8 @@ function(e) {
         container: "container_bad367",
         ctaButton: "ctaButton__56c73",
         help: "help__474cb",
+        helpIcon: "helpIcon__0bf94",
+        helpText: "helpText__42bfb",
         imgUnderlay: "imgUnderlay__35c23",
         imgWrapper: "imgWrapper__00a3b",
         left: "left_e916ef",

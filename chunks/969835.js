@@ -118,9 +118,9 @@ function(e, t, n) {
                         }), (0, i.jsx)(R.default, {
                             user: t,
                             displayProfile: w,
+                            onOpenProfile: () => V(!0),
                             guild: k,
                             channelId: s,
-                            onOpenProfile: () => V(!0),
                             onClose: v
                         })]
                     }), (null == w ? void 0 : w.profileEffectId) != null && (0, i.jsx)(c.default, {

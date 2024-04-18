@@ -32,104 +32,105 @@ function(e, t, n) {
             user: t,
             guild: n,
             userRoles: s,
-            width: E
+            onClose: E,
+            width: C
         } = e, {
-            trackUserProfileAction: C
-        } = (0, m.useUserProfileAnalyticsContext)(), g = r.useRef({}), L = r.useCallback(e => {
+            trackUserProfileAction: g
+        } = (0, m.useUserProfileAnalyticsContext)(), L = r.useRef({}), D = r.useCallback(e => {
             var i;
-            C({
+            g({
                 action: "REMOVE_ROLE"
             });
             let r = s.filter(t => t !== e.id);
             (null === (i = e.tags) || void 0 === i ? void 0 : i.guild_connections) === null ? _.default.unassignGuildRoleConnection(n.id, e.id) : T.default.updateMemberRoles(n.id, t.id, r, [], [e.id])
-        }, [s, n.id, t.id, C]), D = r.useCallback(e => {
-            C({
+        }, [s, n.id, t.id, g]), v = r.useCallback(e => {
+            g({
                 action: "ADD_ROLE"
             });
             let i = s; - 1 === i.indexOf(e) && (i = i.concat([e])), T.default.updateMemberRoles(n.id, t.id, i, [e], [])
-        }, [s, n.id, t.id, C]), [v, M] = r.useState(null), y = (0, u.useStateFromStores)([f.default], () => f.default.getRoles(n.id)), P = r.useMemo(() => {
-            let e = Object.values(y).filter(e => s.includes(e.id)).sort((e, t) => {
+        }, [s, n.id, t.id, g]), [M, y] = r.useState(null), P = (0, u.useStateFromStores)([f.default], () => f.default.getRoles(n.id)), U = r.useMemo(() => {
+            let e = Object.values(P).filter(e => s.includes(e.id)).sort((e, t) => {
                 var n, i;
                 let r = (null === (n = e.tags) || void 0 === n ? void 0 : n.guild_connections) !== null,
                     s = (null === (i = t.tags) || void 0 === i ? void 0 : i.guild_connections) !== null;
                 return r && !s ? 1 : !r && s ? -1 : 0
             });
-            return null != v ? e.slice(0, v) : e
-        }, [y, v, s]), U = s.length - P.length;
+            return null != M ? e.slice(0, M) : e
+        }, [P, M, s]), b = s.length - U.length;
         r.useLayoutEffect(() => {
-            if ("number" != typeof E) throw Error("Unexpected null width");
+            if ("number" != typeof C) throw Error("Unexpected null width");
             let e = 0,
                 t = 0,
-                n = E - 32,
+                n = C - 32,
                 i = n - 32;
             for (let r = 0; r < 2; r++) {
                 t = 0;
                 let s = 1 === r ? i : n;
-                for (let n = e; n < P.length; n++) {
-                    let i = P[n],
-                        r = g.current[i.id];
+                for (let n = e; n < U.length; n++) {
+                    let i = U[n],
+                        r = L.current[i.id];
                     if (null != r) {
                         if ((t += r.offsetWidth + 4) > s) break;
                         e++
                     }
                 }
             }
-            M(t => e < P.length ? e : t)
-        }, [E, P]);
-        let b = h.default.getCurrentUser();
-        a()(null != b, "MemberRolesList: currentUser cannot be undefined");
-        let G = S.default.can(p.Permissions.MANAGE_ROLES, n),
-            w = A.getHighestRole(n, b.id),
-            B = r.useMemo(() => "roles-".concat((0, o.v4)()), []),
-            k = (0, l.default)({
-                id: B,
+            y(t => e < U.length ? e : t)
+        }, [C, U]);
+        let G = h.default.getCurrentUser();
+        a()(null != G, "MemberRolesList: currentUser cannot be undefined");
+        let w = S.default.can(p.Permissions.MANAGE_ROLES, n),
+            B = A.getHighestRole(n, G.id),
+            k = r.useMemo(() => "roles-".concat((0, o.v4)()), []),
+            F = (0, l.default)({
+                id: k,
                 isEnabled: !0,
                 scrollToStart: p.NOOP_PROMISE,
                 scrollToEnd: p.NOOP_PROMISE,
                 wrap: !0
             }),
-            F = P.map(e => {
+            V = U.map(e => {
                 var r;
                 return (0, i.jsx)(c.MemberRole, {
                     className: R.role,
                     role: e,
-                    canRemove: G && A.isRoleHigher(n, b.id, w, e) || (null === (r = e.tags) || void 0 === r ? void 0 : r.guild_connections) === null && t.id === b.id,
-                    onRemove: () => L(e),
+                    canRemove: w && A.isRoleHigher(n, G.id, B, e) || (null === (r = e.tags) || void 0 === r ? void 0 : r.guild_connections) === null && t.id === G.id,
+                    onRemove: () => D(e),
                     ref: t => {
                         var n, i;
-                        return n = e.id, void(null != (i = t) ? g.current[n] = i : delete g.current[n])
+                        return n = e.id, void(null != (i = t) ? L.current[n] = i : delete L.current[n])
                     },
                     guildId: n.id,
                     disableBorderColor: !0
                 }, e.id)
             }),
             {
-                guildId: V,
-                channelId: x,
-                messageId: H,
-                roleId: Y
+                guildId: x,
+                channelId: H,
+                messageId: Y,
+                roleId: j
             } = (0, m.useUserProfileAnalyticsContext)(),
             {
-                analyticsLocations: j
+                analyticsLocations: W
             } = (0, I.default)(),
-            W = null != v && 0 !== U ? (0, i.jsx)(d.Clickable, {
+            K = null != M && 0 !== b ? (0, i.jsx)(d.Clickable, {
                 onClick: () => {
-                    (0, N.openUserProfileModal)({
+                    null == E || E(), (0, N.openUserProfileModal)({
                         userId: t.id,
-                        guildId: V,
-                        channelId: x,
-                        messageId: H,
-                        roleId: Y,
+                        guildId: x,
+                        channelId: H,
+                        messageId: Y,
+                        roleId: j,
                         analyticsLocation: {
                             section: p.AnalyticsSections.BITE_SIZE_PROFILE_POPOUT
                         },
-                        sourceAnalyticsLocations: j
+                        sourceAnalyticsLocations: W
                     })
                 },
                 className: R.overflowButton,
                 children: (0, i.jsx)(d.Text, {
                     variant: "text-xs/medium",
-                    children: "+".concat(U)
+                    children: "+".concat(b)
                 })
             }) : null;
         return (0, i.jsxs)("div", {
@@ -140,20 +141,20 @@ function(e, t, n) {
                     variant: "text-xs/semibold",
                     className: R.rolesHeaderText,
                     children: O.default.Messages.ROLES
-                }), G && (0, i.jsx)(d.Tooltip, {
+                }), w && (0, i.jsx)(d.Tooltip, {
                     text: O.default.Messages.USER_PROFILE_ADD_ROLE,
                     children: t => (0, i.jsx)("div", {
                         ...t,
                         children: (0, i.jsx)(c.OverflowAddRolesButton, {
                             ...e,
-                            handleAddRole: D,
+                            handleAddRole: v,
                             addButtonClassName: R.addButton,
                             addButtonIconClassName: R.addButtonIcon
                         })
                     })
                 })]
             }), (0, i.jsx)(l.ListNavigatorProvider, {
-                navigator: k,
+                navigator: F,
                 children: (0, i.jsx)(l.ListNavigatorContainer, {
                     children: e => {
                         let {
@@ -167,7 +168,7 @@ function(e, t, n) {
                             }),
                             ref: t,
                             ...n,
-                            children: [F, W]
+                            children: [V, K]
                         })
                     }
                 })
