@@ -47,10 +47,12 @@ function(e, t, n) {
             url: l.Endpoints.GET_REFERRALS_REMAINING,
             oldFormErrors: !0
         }).then(e => {
+            var t, n;
             r.default.dispatch({
                 type: "BILLING_REFERRALS_REMAINING_FETCH_SUCCESS",
                 referrals_remaining: null != e.body && null != e.body.referrals_remaining ? e.body.referrals_remaining : 0,
-                sent_user_ids: null != e.body && null != e.body.sent_user_ids ? e.body.sent_user_ids : []
+                sent_user_ids: null != e.body && null != e.body.sent_user_ids ? e.body.sent_user_ids : [],
+                refresh_at: null !== (n = null === (t = e.body) || void 0 === t ? void 0 : t.refresh_at) && void 0 !== n ? n : null
             })
         }, () => {
             r.default.dispatch({

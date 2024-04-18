@@ -21,20 +21,21 @@ function(e, t, n) {
         R = !1,
         C = 0,
         g = !1,
-        L = () => !0;
+        L = null,
+        D = () => !0;
 
-    function D(e) {
+    function v(e) {
         h.add(e)
     }
 
-    function v(e) {
+    function M(e) {
         let {
             messages: t
         } = e;
-        t.forEach(e => M(e))
+        t.forEach(e => y(e))
     }
 
-    function M(e) {
+    function y(e) {
         let t = e.type === o.MessageTypes.PREMIUM_REFERRAL ? e.content : null;
         if (null == t) return !1;
         if (!A.has(t) && !h.has(t)) {
@@ -42,9 +43,9 @@ function(e, t, n) {
             n = t, h.add(n), u.default.wait(() => (0, _.resolveReferralTrialOffer)(t).catch(c.NOOP_NULL))
         }
     }
-    class y extends(i = l.default.Store) {
+    class P extends(i = l.default.Store) {
         initialize() {
-            this.waitFor(d.default), this.syncWith([d.default], L)
+            this.waitFor(d.default), this.syncWith([d.default], D)
         }
         checkAndFetchReferralsRemaining() {
             null == E && !S && N < 5 && (null == p || p < Date.now()) && (0, _.fetchReferralsRemaining)()
@@ -82,13 +83,16 @@ function(e, t, n) {
         getIsEligibleToSendReferrals() {
             return g
         }
+        getRefreshAt() {
+            return L
+        }
     }
-    a = "ReferralTrialStore", (s = "displayName") in(r = y) ? Object.defineProperty(r, s, {
+    a = "ReferralTrialStore", (s = "displayName") in(r = P) ? Object.defineProperty(r, s, {
         value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a, t.default = new y(u.default, {
+    }) : r[s] = a, t.default = new P(u.default, {
         BILLING_REFERRAL_TRIAL_OFFER_UPDATE: function(e) {
             let {
                 userTrialOfferId: t,
@@ -101,18 +105,19 @@ function(e, t, n) {
         },
         BILLING_REFERRALS_REMAINING_FETCH_START: function(e) {
             let {} = e;
-            g = !1, S = !0
+            g = !1, L = null, S = !0
         },
         BILLING_REFERRALS_REMAINING_FETCH_SUCCESS: function(e) {
             let {
                 referrals_remaining: t,
-                sent_user_ids: n
+                sent_user_ids: n,
+                refresh_at: i
             } = e;
-            g = !0, S = !1, E = t, T = n
+            g = null == i, S = !1, E = t, T = n, L = i
         },
         BILLING_REFERRALS_REMAINING_FETCH_FAIL: function(e) {
             let {} = e;
-            g = !1, S = !1, N += 1, p = Date.now() + 1e3 * Math.pow(2, N)
+            g = !1, L = null, S = !1, N += 1, p = Date.now() + 1e3 * Math.pow(2, N)
         },
         BILLING_CREATE_REFERRAL_PREVIEW_START: function(e) {
             let {
@@ -164,16 +169,16 @@ function(e, t, n) {
         REFERRALS_FETCH_ELIGIBLE_USER_FAIL: function() {
             R = !1
         },
-        LOAD_MESSAGES_SUCCESS: v,
+        LOAD_MESSAGES_SUCCESS: M,
         MESSAGE_CREATE: function(e) {
             let {
                 message: t
             } = e;
-            M(t)
+            y(t)
         },
-        LOAD_MESSAGES_AROUND_SUCCESS: v,
+        LOAD_MESSAGES_AROUND_SUCCESS: M,
         LOGOUT: function() {
-            E = null, I = {}, T = [], f = new Set, S = !1, h = new Set, A = new Set, m = {}, N = 0, p = null, O = [], R = !1, C = 0, g = !1
+            E = null, I = {}, T = [], f = new Set, S = !1, h = new Set, A = new Set, m = {}, N = 0, p = null, O = [], R = !1, C = 0, g = !1, L = null
         }
     })
 }

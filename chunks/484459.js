@@ -55,27 +55,29 @@ function(e, t, n) {
         })) || void 0 === n ? void 0 : n.id) && void 0 !== l ? l : void 0);
         let O = c.default.getUserProfile(e),
             R = c.default.getMutualGuilds(e),
-            C = c.default.getMutualFriendsCount(e),
-            g = c.default.isFetchingProfile(e),
-            L = !Array.isArray(R) && T,
-            D = null == C && f,
-            v = (null == O ? void 0 : O.profileFetchFailed) || !g && (L || D),
-            M = A ? E.default : void 0,
-            y = !1;
-        null != N && (y = null == c.default.getGuildMemberProfile(e, N)), !(!v && !y && (g || Date.now() - (null !== (_ = null == O ? void 0 : O.lastFetched) && void 0 !== _ ? _ : 0) < 6e4)) && (m ? await i.default.wait(() => (0, r.fetchProfile)(e, {
+            C = c.default.getMutualFriends(e),
+            g = c.default.getMutualFriendsCount(e),
+            L = c.default.isFetchingProfile(e),
+            D = !Array.isArray(R) && T,
+            v = null == C && S,
+            M = null == g && f,
+            y = (null == O ? void 0 : O.profileFetchFailed) || !L && (D || v || M),
+            P = A ? E.default : void 0,
+            U = !1;
+        null != N && (U = null == c.default.getGuildMemberProfile(e, N)), !(!y && !U && (L || Date.now() - (null !== (_ = null == O ? void 0 : O.lastFetched) && void 0 !== _ ? _ : 0) < 6e4)) && (m ? await i.default.wait(() => (0, r.fetchProfile)(e, {
             withMutualGuilds: T,
             withMutualFriends: S,
             withMutualFriendsCount: f,
             friendToken: h,
             guildId: N,
             connectionsRoleId: I
-        }, M)) : await (0, r.fetchProfile)(e, {
+        }, P)) : await (0, r.fetchProfile)(e, {
             withMutualGuilds: T,
             withMutualFriends: S,
             withMutualFriendsCount: f,
             friendToken: h,
             guildId: N,
             connectionsRoleId: I
-        }, M))
+        }, P))
     }
 }
