@@ -2,23 +2,25 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         isActivitiesInTextEnabled: function() {
-            return u
+            return _
         },
         isActivityInTextSupportedForChannel: function() {
-            return l
-        },
-        useIsActivitiesInTextEnabled: function() {
             return d
         },
+        useIsActivitiesInTextEnabled: function() {
+            return c
+        },
         useShowActivitiesInOmniButtonMenu: function() {
-            return _
+            return E
         }
     });
     var i = n("106351"),
         r = n("442837"),
         s = n("818083"),
-        a = n("592125");
-    let o = (0, s.createExperiment)({
+        a = n("592125"),
+        o = n("496675"),
+        l = n("231338");
+    let u = (0, s.createExperiment)({
         kind: "user",
         id: "2023-08_activities_in_text",
         label: "Activities in Text User",
@@ -52,7 +54,7 @@ function(e, t, n) {
         }]
     });
 
-    function l(e) {
+    function d(e) {
         var t;
         if (null == e || void 0 === e) return !1;
         let n = a.default.getChannel(e.parent_id);
@@ -60,46 +62,50 @@ function(e, t, n) {
         return t = e.type, [i.ChannelTypes.GUILD_TEXT, i.ChannelTypes.GROUP_DM, i.ChannelTypes.DM].includes(t)
     }
 
-    function u(e, t) {
+    function _(e, t) {
         if (null == e) return !1;
-        let n = l(e);
-        return (null == e ? void 0 : e.guild_id) != null ? n : o.getCurrentConfig({
+        let n = d(e),
+            i = o.default.can(l.Permissions.USE_EMBEDDED_ACTIVITIES, e);
+        return (null == e ? void 0 : e.guild_id) != null ? i && n : u.getCurrentConfig({
             location: t
         }, {
             autoTrackExposure: !0
         }).activitiesInTextEnabled && n
     }
 
-    function d(e, t) {
+    function c(e, t) {
         let {
             isActivitiesInTextEnabledForChannelType: n,
-            channelGuildId: i
-        } = (0, r.useStateFromStoresObject)([a.default], () => {
+            channelGuildId: i,
+            hasPermission: s
+        } = (0, r.useStateFromStoresObject)([a.default, o.default], () => {
             let t = a.default.getChannel(e);
             return {
-                isActivitiesInTextEnabledForChannelType: l(t),
-                channelGuildId: null == t ? void 0 : t.guild_id
+                isActivitiesInTextEnabledForChannelType: d(t),
+                channelGuildId: null == t ? void 0 : t.guild_id,
+                hasPermission: o.default.can(l.Permissions.USE_EMBEDDED_ACTIVITIES, t)
             }
-        }), s = null != i, u = o.useExperiment({
+        }), _ = null != i, c = u.useExperiment({
             location: t
         }, {
-            autoTrackExposure: !s,
-            disable: s
+            autoTrackExposure: !_,
+            disable: _
         });
-        return s ? n : u.activitiesInTextEnabled && n
+        return _ ? s && n : c.activitiesInTextEnabled && n
     }
 
-    function _(e, t) {
+    function E(e, t) {
         let n = (0, r.useStateFromStores)([a.default], () => a.default.getChannel(e)),
-            i = l(n),
-            s = null == n ? void 0 : n.guild_id,
-            u = null != s,
-            d = o.useExperiment({
+            i = (0, r.useStateFromStores)([o.default], () => o.default.can(l.Permissions.USE_EMBEDDED_ACTIVITIES, n)),
+            s = d(n),
+            _ = null == n ? void 0 : n.guild_id,
+            c = null != _,
+            E = u.useExperiment({
                 location: t
             }, {
-                autoTrackExposure: !u,
-                disable: u
+                autoTrackExposure: !c,
+                disable: c
             });
-        return u ? i : d.showInOmniButtonMenu && i
+        return c ? i && s : E.showInOmniButtonMenu && s
     }
 }

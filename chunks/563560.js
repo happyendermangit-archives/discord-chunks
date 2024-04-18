@@ -22,6 +22,7 @@ function(e) {
         clanTagChiplet: "clanTagChiplet__7f357",
         clanTagChipletWrapper: "clanTagChipletWrapper__734a9",
         clickableCard: "clickableCard__1c1e9",
+        expandedTraitsContainer: "expandedTraitsContainer__95480",
         header: "header__2b527",
         highlightedTrait: "highlightedTrait__03953",
         overflowTooltip: "overflowTooltip__7c9d4",
