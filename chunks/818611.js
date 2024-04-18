@@ -94,16 +94,18 @@ function(e, t, n) {
         let {
             user: t,
             guild: n,
-            pendingAvatarDecoration: r,
-            selectedAvatarDecorationRef: s,
-            onSelect: a,
-            onOpenShop: l
-        } = e, u = (0, p.default)();
+            pendingAvatarDecoration: s,
+            selectedAvatarDecorationRef: a,
+            onSelect: l,
+            onOpenShop: u
+        } = e, _ = (0, p.default)(), c = r.useCallback(() => {
+            u(void 0)
+        }, [u]);
         return (0, i.jsx)(d.MasonryList, {
             fade: !0,
             className: C.list,
             columns: 3,
-            sections: u.map(e => {
+            sections: _.map(e => {
                 let {
                     items: t
                 } = e;
@@ -114,17 +116,17 @@ function(e, t, n) {
             paddingHorizontal: 12,
             paddingVertical: 0,
             removeEdgeItemGutters: !0,
-            renderItem: (e, _, c, E) => {
+            renderItem: (e, r, u, E) => {
                 let {
                     section: I,
                     items: f
-                } = u[e];
-                return (0, o.match)(f[_]).with(p.NONE_ITEM, () => (0, i.jsxs)(L, {
+                } = _[e];
+                return (0, o.match)(f[r]).with(p.NONE_ITEM, () => (0, i.jsxs)(L, {
                     style: {
-                        ...c
+                        ...u
                     },
-                    isSelected: null === r,
-                    onSelect: () => a(null),
+                    isSelected: null === s,
+                    onSelect: () => l(null),
                     children: [(0, i.jsx)(S.default, {
                         className: C.notAllowedIcon
                     }), (0, i.jsx)(d.Text, {
@@ -133,8 +135,8 @@ function(e, t, n) {
                         children: (0, N.hasGlobalDefaultAvatarDecoration)(t, n) ? R.default.Messages.USER_SETTINGS_REMOVE_PER_GUILD_AVATAR_DECORATION : R.default.Messages.NONE
                     })]
                 }, E)).with(p.SHOP_ITEM, () => (0, i.jsxs)(L, {
-                    style: c,
-                    onSelect: l,
+                    style: u,
+                    onSelect: c,
                     children: [(0, i.jsx)(T.default, {
                         className: C.shopIcon
                     }), (0, i.jsx)(d.Text, {
@@ -143,24 +145,24 @@ function(e, t, n) {
                         children: R.default.Messages.COLLECTIBLES_SHOP
                     })]
                 }, E)).otherwise(e => {
-                    let n = (null == r ? void 0 : r.id) === e.id;
+                    let n = (null == s ? void 0 : s.id) === e.id;
                     return (0, i.jsx)(D, {
                         style: {
-                            ...c
+                            ...u
                         },
                         user: t,
                         avatarDecoration: e,
                         section: I,
-                        innerRef: n ? s : void 0,
+                        innerRef: n ? a : void 0,
                         isSelected: n,
-                        onSelect: () => a(e)
+                        onSelect: () => l(e)
                     }, E)
                 })
             },
             renderSection: e => {
                 let {
                     header: t
-                } = u[e];
+                } = _[e];
                 return (0, i.jsx)("div", {
                     className: C.headings,
                     children: (0, i.jsx)(d.HeadingLevel, {
@@ -173,8 +175,8 @@ function(e, t, n) {
                     })
                 })
             },
-            getSectionHeight: e => u[e].height,
-            getItemKey: (e, t) => u[e].items[t].id,
+            getSectionHeight: e => _[e].height,
+            getItemKey: (e, t) => _[e].items[t].id,
             getItemHeight: g
         })
     }
