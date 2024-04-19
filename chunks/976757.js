@@ -2,30 +2,28 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         buildClanFromServer: function() {
-            return l
+            return a
         },
         getClanDiscoveryAffinity: function() {
-            return _
-        },
-        isLoadedSearchResult: function() {
             return u
         },
+        isLoadedSearchResult: function() {
+            return o
+        },
         isUnloadedSearchResult: function() {
-            return d
+            return l
         }
-    }), n("536091");
-    var i = n("924801"),
-        r = n("854698"),
-        s = n("116175"),
-        a = n("308083");
+    });
+    var i = n("116175"),
+        r = n("308083");
 
-    function o(e, t) {
+    function s(e, t) {
         return void 0 === e || "" === e ? t : e
     }
 
-    function l(e) {
-        let t = (0, s.getRandomClanBadgePreset)(),
-            n = (0, a.getRandomClanBrandPreset)();
+    function a(e) {
+        let t = (0, i.getRandomClanBadgePreset)(),
+            n = (0, r.getRandomClanBrandPreset)();
         return {
             id: e.id,
             name: e.name,
@@ -35,37 +33,32 @@ function(e, t, n) {
             games: e.game_ids,
             playstyle: e.playstyle,
             traits: e.search_terms,
-            primetime: e.primetime,
             tag: e.tag,
             banner: e.banner,
             badge: {
                 badgeKind: e.badge,
-                primaryColor: o(e.badge_color_primary, t.primary),
-                secondaryColor: o(e.badge_color_secondary, t.secondary)
+                primaryColor: s(e.badge_color_primary, t.primary),
+                secondaryColor: s(e.badge_color_secondary, t.secondary)
             },
             branding: {
-                primaryColor: o(e.brand_color_primary, n.primary),
-                secondaryColor: o(e.brand_color_secondary, n.secondary)
+                primaryColor: s(e.brand_color_primary, n.primary),
+                secondaryColor: s(e.brand_color_secondary, n.secondary)
             },
-            location: a.PLACEHOLDER_CLAN_LOCATION,
-            language: a.PLACEHOLDER_CLAN_LANGUAGE
+            location: r.PLACEHOLDER_CLAN_LOCATION,
+            language: r.PLACEHOLDER_CLAN_LANGUAGE
         }
     }
 
-    function u(e) {
+    function o(e) {
         return "loaded" === e.status
     }
 
-    function d(e) {
+    function l(e) {
         return "unloaded" === e.status
     }
 
-    function _(e, t) {
+    function u(e, t) {
         let n = 0;
-        if (null != t.games && (n += 2 * t.games.filter(t => e.games.includes(t)).length), null != t.playstyle && (t.playstyle === e.playstyle ? n += 2 : a.PLAYSTYLE_GROUPS[e.playstyle] === a.PLAYSTYLE_GROUPS[t.playstyle] && (n += 1)), null != t.traits && (n += 2 * Array.from(t.traits).filter(t => e.traits.includes(t)).length), null != t.primetimes) {
-            let s = e.primetime.map(e => (0, r.getRRule)(e).between(new Date, new Date(Date.now() + 6048e5))).flat();
-            n += 2 * (0, i.getTimeRangesInNextWeek)(t.primetimes).filter(e => s.some(t => e.start.subtract(1).isBefore(t) && e.end.add(1).isAfter(t))).length
-        }
-        return n
+        return null != t.games && (n += 2 * t.games.filter(t => e.games.includes(t)).length), null != t.playstyle && (t.playstyle === e.playstyle ? n += 2 : r.PLAYSTYLE_GROUPS[e.playstyle] === r.PLAYSTYLE_GROUPS[t.playstyle] && (n += 1)), null != t.traits && (n += 2 * Array.from(t.traits).filter(t => e.traits.includes(t)).length), n
     }
 }

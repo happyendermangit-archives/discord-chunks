@@ -135,8 +135,8 @@ function(e, t, n) {
         },
         z = function() {},
         X = {},
-        q = 0,
-        Q = null,
+        Q = 0,
+        q = null,
         Z = null,
         J = {};
 
@@ -362,9 +362,9 @@ function(e, t, n) {
                 return n === e.name
             }) || (n.push(e), !1)));
             let s = n.filter(et).length;
-            s !== q && (q = s, I.default.dispatch({
+            s !== Q && (Q = s, I.default.dispatch({
                 type: "RUNNING_STREAMER_TOOLS_CHANGE",
-                count: q
+                count: Q
             })), x = e, Y = n, i = r, en()
         }), ed()
     });
@@ -421,7 +421,7 @@ function(e, t, n) {
             }
         }
         shouldElevateProcessForPID(e) {
-            return null != Q && Q === e
+            return null != q && q === e
         }
         shouldContinueWithoutElevatedProcessForPID(e) {
             return null != Z && Z === e
@@ -485,16 +485,16 @@ function(e, t, n) {
             let {
                 pid: t
             } = e;
-            Q = t, Z = null
+            q = t, Z = null
         },
         PERMISSION_CLEAR_ELEVATED_PROCESS: function() {
-            Q = null
+            q = null
         },
         PERMISSION_CONTINUE_NONELEVATED_PROCESS: function(e) {
             let {
                 pid: t
             } = e;
-            Z = t, Q = null
+            Z = t, q = null
         },
         RUNNING_GAME_ADD_OVERRIDE: function(e) {
             let t;

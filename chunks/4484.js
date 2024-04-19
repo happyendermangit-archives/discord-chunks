@@ -51,8 +51,8 @@ function(e, t, n) {
             onTab: K,
             onEnter: z,
             onSubmit: X,
-            maybeShowAutocomplete: q,
-            hideAutocomplete: Q,
+            maybeShowAutocomplete: Q,
+            hideAutocomplete: q,
             moveSelection: Z,
             spellcheckEnabled: J,
             canUseCommands: $,
@@ -171,18 +171,18 @@ function(e, t, n) {
             onEnter: z,
             allowNewLines: ei,
             submit: eO,
-            hideAutocomplete: Q,
+            hideAutocomplete: q,
             moveSelection: Z
         }), {
             handlePaste: eg,
             handleGlobalPaste: eL
         } = (0, O.default)(eN, eS, V), eD = r.useCallback(e => {
-            null == q || q()
-        }, [q]), ev = r.useCallback(e => {
+            null == Q || Q()
+        }, [Q]), ev = r.useCallback(e => {
             e !== eI.current ? ef.current && (null == F || F(null, (0, f.toTextValue)(e, {
                 mode: "raw"
-            }), e)) : ef.current && q()
-        }, [q, F]);
+            }), e)) : ef.current && Q()
+        }, [Q, F]);
         r.useLayoutEffect(() => {
             eT.current && (eI.current = n, eh(eN, "parent", {
                 value: n

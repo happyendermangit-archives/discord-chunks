@@ -56,7 +56,7 @@ function(e, t, n) {
             [Y, j] = r.useState(!1),
             [W, K] = r.useState(!1),
             [z, X] = r.useState(!1),
-            [q, Q] = r.useState(!1),
+            [Q, q] = r.useState(!1),
             [Z, J] = r.useState("none"),
             [$, ee] = r.useState(() => "function" == typeof D ? D() : D),
             et = r.useRef(void 0),
@@ -72,7 +72,7 @@ function(e, t, n) {
             }, []),
             es = r.useCallback(() => {
                 K(!1), null == et.current && (et.current = setTimeout(() => {
-                    Q(!1), et.current = void 0
+                    q(!1), et.current = void 0
                 }, 500))
             }, []),
             ea = r.useCallback(() => {
@@ -101,14 +101,14 @@ function(e, t, n) {
                 let t = k.current;
                 if (null == x || null == t) return;
                 let n = e * x;
-                V(n), t.currentTime = n, Q(!0), clearTimeout(et.current), et.current = void 0
+                V(n), t.currentTime = n, q(!0), clearTimeout(et.current), et.current = void 0
             }, [x]);
         r.useEffect(() => {
-            !q && W && Q(!0)
-        }, [W, q]);
+            !Q && W && q(!0)
+        }, [W, Q]);
         let eE = r.useRef(null);
         r.useEffect(() => {
-            if (q || W) {
+            if (Q || W) {
                 if (W) {
                     var e, t;
                     eE.current = performance.now(), null == G || G(!1, F, (null !== (t = null === (e = k.current) || void 0 === e ? void 0 : e.duration) && void 0 !== t ? t : 0) * f.default.Millis.SECOND)
@@ -203,12 +203,12 @@ function(e, t, n) {
                 currentTime: F,
                 duration: null != x ? x : 1,
                 playing: W,
-                played: q,
+                played: Q,
                 onDrag: ec,
                 onDragStart: ed,
                 onDragEnd: e_
             }), (0, i.jsx)(O, {
-                played: q,
+                played: Q,
                 currentTime: F,
                 duration: x
             }), (0, i.jsx)(c.default, {

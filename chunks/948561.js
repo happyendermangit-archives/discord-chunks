@@ -328,7 +328,7 @@ function(e, t, n) {
         } = await (0, p.fetchValidContentScanVersion)();
         i = e.version
     }
-    class q extends d.default {
+    class Q extends d.default {
         constructor(...e) {
             var t, n, i;
             super(...e), t = this, n = "actions", i = {
@@ -354,5 +354,5 @@ function(e, t, n) {
             }) : t[n] = i
         }
     }
-    t.default = new q
+    t.default = new Q
 }

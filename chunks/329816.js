@@ -47,8 +47,8 @@ function(e, t, n) {
         K = n("358085"),
         z = n("74538"),
         X = n("663993"),
-        q = n("823453"),
-        Q = n("628123"),
+        Q = n("823453"),
+        q = n("628123"),
         Z = n("962745"),
         J = n("151851"),
         $ = n("981631"),
@@ -110,10 +110,10 @@ function(e, t, n) {
         return (0, i.jsx)(G.default, {
             children: (0, i.jsx)(p.default, {
                 children: (0, i.jsxs)(I.RedesignIconContextProvider, {
-                    children: [(0, i.jsx)(q.default, {
+                    children: [(0, i.jsx)(Q.default, {
                         skipsSettingDefaultPageTitle: n
                     }), (0, i.jsx)(Z.default, {
-                        children: (0, i.jsx)(Q.default, {
+                        children: (0, i.jsx)(q.default, {
                             children: (0, i.jsxs)(I.FocusRingScope, {
                                 containerRef: eT,
                                 children: [(0, i.jsx)(W.MaskLibrary, {}), (0, i.jsx)(V.default, {}), (0, i.jsx)(o.FocusGuard, {}), null != E ? (0, i.jsx)(ei, {

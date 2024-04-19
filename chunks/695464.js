@@ -264,7 +264,7 @@ function(e, t, n) {
                 visibleItems: i,
                 listOffset: n
             }
-        }, [w, k, B, F, u, d, _, E, c, D, j, p, I, G, M]), q = r.useMemo(() => {
+        }, [w, k, B, F, u, d, _, E, c, D, j, p, I, G, M]), Q = r.useMemo(() => {
             var e, t, n;
             return {
                 top: X,
@@ -272,7 +272,7 @@ function(e, t, n) {
                 bottom: null !== (t = null == u ? void 0 : u[2]) && void 0 !== t ? t : 0,
                 left: null !== (n = null == u ? void 0 : u[3]) && void 0 !== n ? n : 0
             }
-        }, [X, u]), Q = r.useMemo(() => ({
+        }, [X, u]), q = r.useMemo(() => ({
             height: H
         }), [H]), Z = R ? o.AdvancedScrollerNone : o.AdvancedScrollerThin;
         return (0, i.jsxs)(Z, {
@@ -283,11 +283,11 @@ function(e, t, n) {
             children: [(0, i.jsx)("div", {
                 role: L,
                 className: l.listItems,
-                style: q,
+                style: Q,
                 children: z
             }), (0, i.jsx)("div", {
                 className: l.listHeight,
-                style: Q
+                style: q
             })]
         })
     }));
