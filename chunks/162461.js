@@ -2,10 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         VoiceEnrichmentsExperiment: function() {
-            return u
+            return _
         },
         isEligibleForContentInventoryV1: function() {
             return a
+        },
+        isEligibleForListenedMediaInventory: function() {
+            return d
         }
     });
     var i = n("818083");
@@ -95,19 +98,45 @@ function(e, t, n) {
         }),
         u = (0, i.createExperiment)({
             kind: "user",
-            id: "2024-04_content_inventory_voice_enrichments",
-            label: "Experimental enrichments",
+            id: "2024-04_content_inventory_listened_media",
+            label: "Content Inventory: LISTENED_MEDIA",
             defaultConfig: {
-                showBadge: !1,
-                showJoinButton: !1
+                enabled: !1
             },
             treatments: [{
                 id: 1,
-                label: "Treament",
+                label: "Enabled",
                 config: {
-                    showBadge: !0,
-                    showJoinButton: !0
+                    enabled: !0
                 }
             }]
-        })
+        });
+
+    function d(e) {
+        let {
+            enabled: t
+        } = u.getCurrentConfig({
+            location: e
+        }, {
+            autoTrackExposure: !0
+        });
+        return t
+    }
+    let _ = (0, i.createExperiment)({
+        kind: "user",
+        id: "2024-04_content_inventory_voice_enrichments",
+        label: "Experimental enrichments",
+        defaultConfig: {
+            showBadge: !1,
+            showJoinButton: !1
+        },
+        treatments: [{
+            id: 1,
+            label: "Treament",
+            config: {
+                showBadge: !0,
+                showJoinButton: !0
+            }
+        }]
+    })
 }

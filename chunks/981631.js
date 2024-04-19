@@ -1577,6 +1577,7 @@ function(_, E, e) {
             DELETE_SAFETY_WARNINGS: _ => "/channels/".concat(_, "/safety-warnings"),
             SAFETY_WARNING_FALSE_POSITIVE: _ => "/channels/".concat(_, "/safety-warning/report-false-positive"),
             MY_CONTENT_INVENTORY: "/content-inventory/users/@me",
+            MY_SPOTIFY_CONTENT_INVENTORY: "/content-inventory/users/@me/spotify",
             TENURE_REWARD_SYNC: "/users/@me/tenure-reward/sync",
             USER_RECENT_GAMES: _ => "/users/".concat(_, "/profile/recent-games")
         }),

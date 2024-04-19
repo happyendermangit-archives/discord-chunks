@@ -55,7 +55,15 @@ function(e, t, n) {
     function N() {
         A()
     }
-    class p extends r.default {
+
+    function p(e) {
+        let {
+            connectionId: t,
+            track: n
+        } = e;
+        if (null != t)(0, l.isEligibleForListenedMediaInventory)("ContentInventoryManager.handleSpotifyNewTrack") && (0, u.postTrackToContentInventory)(t, n)
+    }
+    class O extends r.default {
         constructor(...e) {
             var t, n, i;
             super(...e), t = this, n = "actions", i = {
@@ -63,7 +71,8 @@ function(e, t, n) {
                 CONNECTION_CLOSED: f,
                 WINDOW_FOCUS: N,
                 IDLE: N,
-                CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: N
+                CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: N,
+                SPOTIFY_NEW_TRACK: p
             }, n in t ? Object.defineProperty(t, n, {
                 value: i,
                 enumerable: !0,
@@ -72,5 +81,5 @@ function(e, t, n) {
             }) : t[n] = i
         }
     }
-    t.default = new p
+    t.default = new O
 }

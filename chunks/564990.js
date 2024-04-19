@@ -3,6 +3,9 @@ function(e, t, n) {
     n.r(t), n.d(t, {
         getMyContentInventory: function() {
             return a
+        },
+        postTrackToContentInventory: function() {
+            return o
         }
     });
     var i = n("544891"),
@@ -19,6 +22,19 @@ function(e, t, n) {
                 e.expired_at = n.toISOString()
             }
             return e
+        } catch (e) {
+            throw new r.APIError(e)
+        }
+    };
+    async function o(e, t) {
+        try {
+            await i.HTTP.post({
+                url: s.Endpoints.MY_SPOTIFY_CONTENT_INVENTORY,
+                body: {
+                    connection_id: e,
+                    tracks: [t]
+                }
+            })
         } catch (e) {
             throw new r.APIError(e)
         }
