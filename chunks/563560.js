@@ -17,6 +17,8 @@ function(e) {
         cardNameAndTagWrapper: "cardNameAndTagWrapper_d87ceb",
         clanBadge: "clanBadge__4c045",
         clanIcon: "clanIcon_d70524",
+        clanInfoItem: "clanInfoItem__65fdd",
+        clanInfoRow: "clanInfoRow__15925",
         clanTagChiplet: "clanTagChiplet__7f357",
         clanTagChipletWrapper: "clanTagChipletWrapper__734a9",
         clickableCard: "clickableCard__1c1e9",
@@ -29,6 +31,8 @@ function(e) {
         primetimeContainer: "primetimeContainer__2c3ce",
         primetimeIcon: "primetimeIcon_c4d213",
         trait: "trait_dfdb34",
-        traitsContainer: "traitsContainer__23f4b"
+        traitsContainer: "traitsContainer__23f4b",
+        wildcards: "wildcards__62f49",
+        wildcardsOverride: "wildcardsOverride__26026"
     }
 }

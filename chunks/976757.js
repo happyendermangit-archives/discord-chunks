@@ -44,8 +44,7 @@ function(e, t, n) {
                 primaryColor: s(e.brand_color_primary, n.primary),
                 secondaryColor: s(e.brand_color_secondary, n.secondary)
             },
-            location: r.PLACEHOLDER_CLAN_LOCATION,
-            language: r.PLACEHOLDER_CLAN_LANGUAGE
+            wildcardDescriptors: e.wildcard_descriptors
         }
     }
 
