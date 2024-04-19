@@ -48,10 +48,10 @@ function(e, t, n) {
         } = e, H = (0, D.useHandleClaimQuestsReward)({
             quest: w,
             location: R.QuestContent.MEMBERS_LIST
-        }), Y = (0, O.useIsQuestExpired)(w), j = (null == w ? void 0 : null === (t = w.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, W = (null == w ? void 0 : null === (b = w.userStatus) || void 0 === b ? void 0 : b.enrolledAt) != null, K = (null == w ? void 0 : null === (G = w.userStatus) || void 0 === G ? void 0 : G.completedAt) != null, z = (0, o.useStateFromStores)([S.default], () => S.default.getState().theme), X = (0, l.isThemeDark)(z) ? M.ThemeTypes.DARK : M.ThemeTypes.LIGHT, Q = (0, o.useStateFromStores)([I.default], () => I.default.useReducedMotion), {
-            ref: q,
+        }), Y = (0, O.useIsQuestExpired)(w), j = (null == w ? void 0 : null === (t = w.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, W = (null == w ? void 0 : null === (b = w.userStatus) || void 0 === b ? void 0 : b.enrolledAt) != null, K = (null == w ? void 0 : null === (G = w.userStatus) || void 0 === G ? void 0 : G.completedAt) != null, z = (0, o.useStateFromStores)([S.default], () => S.default.getState().theme), X = (0, l.isThemeDark)(z) ? M.ThemeTypes.DARK : M.ThemeTypes.LIGHT, q = (0, o.useStateFromStores)([I.default], () => I.default.useReducedMotion), {
+            ref: Q,
             height: Z
-        } = (0, E.default)(), [J, $] = r.useState(Q), ee = (0, s.useSpring)({
+        } = (0, E.default)(), [J, $] = r.useState(q), ee = (0, s.useSpring)({
             from: {
                 height: 0
             },
@@ -63,7 +63,7 @@ function(e, t, n) {
                 precision: .01,
                 velocity: 0
             },
-            immediate: Q,
+            immediate: q,
             onRest: () => $(!0)
         }), et = (0, s.useTransition)(J, {
             from: {
@@ -155,7 +155,7 @@ function(e, t, n) {
                 },
                 children: (0, i.jsxs)("div", {
                     ref: e => {
-                        q.current = e
+                        Q.current = e
                     },
                     className: P.container,
                     style: {

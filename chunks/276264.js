@@ -59,8 +59,8 @@ function(e, t, n) {
             onMouseDown: K,
             onKeyDown: z,
             onClick: X,
-            onContextMenu: Q,
-            onClickPremiumGuildIcon: q,
+            onContextMenu: q,
+            onClickPremiumGuildIcon: Q,
             onFocus: Z,
             "aria-controls": J,
             "aria-expanded": $,
@@ -110,7 +110,7 @@ function(e, t, n) {
                 date: x
             }),
             children: e => (0, i.jsx)(l.Clickable, {
-                onClick: q,
+                onClick: Q,
                 tabIndex: -1,
                 children: (0, i.jsx)(m.default, {
                     ...e,
@@ -189,7 +189,7 @@ function(e, t, n) {
                 onClick: X,
                 onKeyDown: z,
                 onMouseDown: K,
-                onContextMenu: Q,
+                onContextMenu: q,
                 onMouseEnter: eS,
                 onMouseLeave: eh,
                 name: null == y ? (0, i.jsx)("span", {

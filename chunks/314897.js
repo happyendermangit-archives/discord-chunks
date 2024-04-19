@@ -42,8 +42,8 @@ function(e, t, n) {
         K = "",
         z = !1,
         X = null,
-        Q = !1,
         q = !1,
+        Q = !1,
         Z = "",
         J = !1,
         $ = !1,
@@ -189,10 +189,10 @@ function(e, t, n) {
             return z
         }
         getMFATotp() {
-            return Q
+            return q
         }
         getMFABackup() {
-            return q
+            return Q
         }
         getMFAWebAuthn() {
             return X
@@ -202,10 +202,10 @@ function(e, t, n) {
             return null != X && e.push({
                 type: "webauthn",
                 challenge: X
-            }), Q && e.push({
-                type: "totp",
-                backup_codes_allowed: q
             }), q && e.push({
+                type: "totp",
+                backup_codes_allowed: Q
+            }), Q && e.push({
                 type: "backup"
             }), z && e.push({
                 type: "sms"
@@ -319,7 +319,7 @@ function(e, t, n) {
                 backup: r,
                 totp: s
             } = e;
-            null != t && (K = t, z = n, Z = "", X = null != i ? i : null, q = r, Q = s), et = {}, H = D.LoginStates.MFA_STEP
+            null != t && (K = t, z = n, Z = "", X = null != i ? i : null, Q = r, q = s), et = {}, H = D.LoginStates.MFA_STEP
         },
         LOGIN_MFA: function() {
             H = D.LoginStates.LOGGING_IN_MFA

@@ -133,7 +133,7 @@ function(e, t, n) {
             })(i, n, t, e)).filter(v.isNotNullish), ...r].sort((e, t) => e.lastPlayed === t.lastPlayed ? 0 : e.lastPlayed > t.lastPlayed ? -1 : 1);
         return F = null != m.default.lastFetched && N.default.fetched, !d().isEqual(s, B) && (B = s, y.isPlatformEmbedded && P.default.setSystemTrayApplications(Y(B).map(e => e.application).slice(0, 5)), !0)
     }
-    class Q extends(i = E.default.Store) {
+    class q extends(i = E.default.Store) {
         initialize() {
             this.syncWith([T.default, m.default, S.default, f.default, C.default, g.default, N.default, O.default, p.default, A.default], X, 200), this.syncWith([R.default, h.default], () => !0)
         }
@@ -162,12 +162,12 @@ function(e, t, n) {
             return F
         }
     }
-    a = "ApplicationViewStore", (s = "displayName") in(r = Q) ? Object.defineProperty(r, s, {
+    a = "ApplicationViewStore", (s = "displayName") in(r = q) ? Object.defineProperty(r, s, {
         value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a, t.default = new Q(I.default, {
+    }) : r[s] = a, t.default = new q(I.default, {
         LIBRARY_APPLICATION_FILTER_UPDATE: function(e) {
             let {
                 query: t
