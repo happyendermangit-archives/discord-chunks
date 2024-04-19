@@ -17191,7 +17191,7 @@ function(e) {
         MEMBER_LIST_CONTENT_FEED_TOP_GAME: "Top game",
         MEMBER_LIST_CONTENT_FEED_TOP_GAME_WEEK_POPOUT: "{userName}'s top game this week: **{gameName}**",
         MEMBER_LIST_CONTENT_FEED_WATCH_SEASON_EPISODE: "S{seasonNum}E{episodeNum}",
-        MEMBER_LIST_CONTENT_FEED_RESURRECTED: "Resurrected",
+        MEMBER_LIST_CONTENT_FEED_RESURRECTED: "Returning",
         MEMBER_LIST_CONTENT_FEED_MARATHON: "Marathon",
         MEMBER_LIST_CONTENT_FEED_STREAK_DAYS: "{days}x Streak",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Activity",
