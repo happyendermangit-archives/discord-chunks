@@ -2,107 +2,120 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         BaseClanTagChiplet: function() {
-            return A
+            return N
+        },
+        ClanTagBadgeSize: function() {
+            return i
         }
     }), n("47120");
-    var i = n("735250"),
-        r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
-        o = n("348327"),
+    var i, r, s = n("735250"),
+        a = n("470079"),
+        o = n("120356"),
         l = n.n(o),
-        u = n("442837"),
-        d = n("481060"),
-        _ = n("110924"),
-        c = n("594174"),
-        E = n("963202"),
-        I = n("645896"),
-        T = n("353093"),
-        f = n("277602"),
-        S = n("738103"),
-        h = n("319695");
-    let A = r.memo(function(e) {
+        u = n("348327"),
+        d = n.n(u),
+        _ = n("442837"),
+        c = n("481060"),
+        E = n("110924"),
+        I = n("594174"),
+        T = n("963202"),
+        f = n("645896"),
+        S = n("353093"),
+        h = n("277602"),
+        A = n("738103"),
+        m = n("319695");
+    (r = i || (i = {}))[r.X_SMALL = 12] = "X_SMALL", r[r.SMALL = 16] = "SMALL";
+    let N = a.memo(function(e) {
         let {
             clanTag: t,
             className: n,
-            onClick: r,
-            onMouseEnter: s,
-            disableTooltip: o = !0
+            onClick: i,
+            onMouseEnter: r,
+            textVariant: a = "text-xs/medium",
+            textColor: o = "text-normal",
+            badgeSize: u = 12
         } = e;
-        return (0, E.useIsInUserClanExperiment)() ? (0, i.jsx)(d.Clickable, {
+        return (0, T.useIsInUserClanExperiment)() ? (0, s.jsx)(c.Clickable, {
             tag: "span",
-            onClick: r,
-            onMouseEnter: s,
-            className: a()(h.chipletContainerInner, o && h.noTooltip, n),
-            children: (0, i.jsxs)(d.Text, {
-                variant: "text-xs/medium",
-                color: "text-normal",
+            onClick: i,
+            onMouseEnter: r,
+            className: l()(m.chipletContainerInner, null != i && m.clickable, n),
+            children: (0, s.jsxs)(c.Text, {
+                variant: a,
+                color: o,
                 tag: "span",
-                className: h.text,
-                children: [(0, i.jsx)(S.TempBadgeIcon, {
-                    className: h.badge,
-                    width: 12,
-                    height: 12
+                className: m.text,
+                children: [(0, s.jsx)(A.TempBadgeIcon, {
+                    className: m.badge,
+                    width: u,
+                    height: u
                 }), t]
             })
         }) : null
     });
-    t.default = r.memo(function(e) {
+    t.default = a.memo(function(e) {
         var t, n;
         let {
-            clan: s,
-            userId: a,
+            clan: i,
+            userId: r,
             className: o,
-            disableTooltip: S = !1
-        } = e, m = (0, u.useStateFromStores)([c.default], () => c.default.getUser(a), [a]), N = null !== (t = null == m ? void 0 : m.clan) && void 0 !== t ? t : s, p = (0, T.getTagFromClan)(N), O = (0, _.default)(N), [R, C] = (0, I.useFetchClanInfo)(null !== (n = null == N ? void 0 : N.identityGuildId) && void 0 !== n ? n : null), [g, L] = r.useState(!1), [D, v] = r.useState(!1), [M, y] = r.useState(!1), P = r.useRef(null), U = r.useCallback(e => {
-            !S && (e.stopPropagation(), e.preventDefault(), L(e => !e))
-        }, [S]), b = r.useCallback(() => {
-            !S && C()
-        }, [C, S]);
-        return (r.useEffect(() => {
-            !l()(O, N) && L(!1)
-        }, [O, N]), r.useEffect(() => (!D && !M && (P.current = setTimeout(() => {
-            L(!1)
+            textVariant: u,
+            textColor: A,
+            badgeSize: p,
+            disableTooltip: O = !1
+        } = e, R = (0, _.useStateFromStores)([I.default], () => I.default.getUser(r), [r]), C = null !== (t = null == R ? void 0 : R.clan) && void 0 !== t ? t : i, g = (0, S.getTagFromUserClan)(C), L = (0, E.default)(C), [D, v] = (0, f.useFetchClanInfo)(null !== (n = null == C ? void 0 : C.identityGuildId) && void 0 !== n ? n : null), [M, y] = a.useState(!1), [P, U] = a.useState(!1), [b, G] = a.useState(!1), w = a.useRef(null), B = a.useCallback(e => {
+            !O && (e.stopPropagation(), e.preventDefault(), y(e => !e))
+        }, [O]), k = a.useCallback(() => {
+            !O && v()
+        }, [v, O]);
+        return (a.useEffect(() => {
+            !d()(L, C) && y(!1)
+        }, [L, C]), a.useEffect(() => (!P && !b && (w.current = setTimeout(() => {
+            y(!1)
         }, 500)), () => {
-            null != P.current && clearTimeout(P.current)
-        }), [D, M]), (0, E.useIsInUserClanExperiment)() && null != p) ? S ? (0, i.jsx)(A, {
-            clanTag: p,
-            className: o,
-            onClick: U,
-            onMouseEnter: b,
-            disableTooltip: S
-        }) : (0, i.jsx)(d.Tooltip, {
-            text: (0, i.jsx)(f.default, {
-                isLoading: R,
-                clan: N,
-                onClose: () => L(!1),
-                onMouseEnter: () => v(!0),
-                onMouseLeave: () => v(!1)
+            null != w.current && clearTimeout(w.current)
+        }), [P, b]), (0, T.useIsInUserClanExperiment)() && null != g) ? O ? (0, s.jsx)(N, {
+            clanTag: g,
+            className: l()(m.noTooltip, o),
+            onClick: B,
+            onMouseEnter: k,
+            textVariant: u,
+            textColor: A,
+            badgeSize: p
+        }) : (0, s.jsx)(c.Tooltip, {
+            text: (0, s.jsx)(h.default, {
+                isLoading: D,
+                clan: C,
+                onClose: () => y(!1),
+                onMouseEnter: () => U(!0),
+                onMouseLeave: () => U(!1)
             }),
-            onTooltipShow: () => C(),
+            onTooltipShow: () => v(),
             hideOnClick: !0,
             disableTooltipPointerEvents: !1,
-            tooltipClassName: h.tooltip,
-            tooltipContentClassName: h.tooltipContainer,
+            tooltipClassName: m.tooltip,
+            tooltipContentClassName: m.tooltipContainer,
             "aria-label": "Guild Profile",
-            shouldShow: g,
-            forceOpen: g,
-            children: e => (0, i.jsx)("span", {
+            shouldShow: M,
+            forceOpen: M,
+            children: e => (0, s.jsx)("span", {
                 ...e,
                 onMouseEnter: () => {
                     var t;
-                    y(!0), null === (t = e.onMouseEnter) || void 0 === t || t.call(e)
+                    G(!0), null === (t = e.onMouseEnter) || void 0 === t || t.call(e)
                 },
                 onMouseLeave: () => {
                     var t;
-                    y(!1), null === (t = e.onMouseLeave) || void 0 === t || t.call(e)
+                    G(!1), null === (t = e.onMouseLeave) || void 0 === t || t.call(e)
                 },
-                children: (0, i.jsx)(A, {
-                    clanTag: p,
+                children: (0, s.jsx)(N, {
+                    clanTag: g,
                     className: o,
-                    onClick: U,
-                    onMouseEnter: b,
-                    disableTooltip: S
+                    onClick: B,
+                    onMouseEnter: k,
+                    textVariant: u,
+                    textColor: A,
+                    badgeSize: p
                 })
             })
         }) : null

@@ -416,6 +416,7 @@ function(e) {
         CLAN_USER_ADOPT_TAG_MODAL_CANCEL: "Not Now",
         CLAN_USER_ADOPT_TAG_GUILD_PROFILE_CTA: "Don The Tag",
         CLAN_USER_APPLY_TAG_GUILD_PROFILE_CTA: "Apply To Join",
+        CLAN_USER_PROFILE_USE_CLAN_TAG: "Would you like to adopt the {guildName} guild tag as part of your identity?",
         SIGNUP_BUTTON_TOOLTIP_CTA: "Click to preview",
         SIGNUP_COMPLETE_CTA: "Sign Up",
         SIGNUP_EMAIL_PROMPT: "Confirm your email to secure your spot on the waitlist",
@@ -457,6 +458,8 @@ function(e) {
         CLAN_DISCOVERY_TRAIT_OVERFLOW: "+ {count, number} more",
         CLAN_DISCOVERY_UNKNOWN_PLAYSTYLE: "Unknown",
         CLAN_DISCOVERY_PLAYSTYLE_ARIA_LABEL: "Playstyle",
+        CLANS: "Clans",
+        CLAN_USER_PROFILE_PRIMARY_CLAN: "Primary Clan",
         MESSAGE_ACTION_FORWARD: "Forward"
     })
 }

@@ -1,6 +1,7 @@
 function(e) {
     "use strict";
     e.exports = {
+        clans: "clans__3c2a1",
         infoScroller: "infoScroller__0920a",
         note: "note__7a4f4",
         recentGames: "recentGames__2995b",
