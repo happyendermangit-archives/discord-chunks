@@ -14,14 +14,12 @@ function(e, t, n) {
     function o(e) {
         let {
             userId: t,
-            guild: n,
-            guildMember: o
+            guildId: n
         } = e;
         return (0, i.jsx)(s.default, {
             children: (0, i.jsx)(r.default, {
                 userId: t,
-                guild: n,
-                guildMember: o,
+                guildId: n,
                 headingClassName: a.title,
                 textClassName: a.body
             })

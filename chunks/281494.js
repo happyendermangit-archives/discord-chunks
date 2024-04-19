@@ -5,22 +5,22 @@ function(e, t, n) {
             return i
         },
         checkRecipientEligibility: function() {
-            return E
-        },
-        createReferralTrial: function() {
             return T
         },
+        createReferralTrial: function() {
+            return S
+        },
         createReferralTrials: function() {
-            return I
+            return f
         },
         fetchReferralEligibleUsers: function() {
-            return _
+            return E
         },
         fetchReferralsRemaining: function() {
-            return c
+            return I
         },
         resolveReferralTrialOffer: function() {
-            return f
+            return h
         }
     }), n("47120"), n("653041");
     var i, r, s = n("544891"),
@@ -29,10 +29,41 @@ function(e, t, n) {
         l = n("598077"),
         u = n("944486"),
         d = n("981631");
-    async function _(e, t) {
+
+    function _(e, t, n) {
+        return t in e ? Object.defineProperty(e, t, {
+            value: n,
+            enumerable: !0,
+            configurable: !0,
+            writable: !0
+        }) : e[t] = n, e
+    }(r = i || (i = {}))[r.REDEEMED = 1] = "REDEEMED", r[r.PENDING = 2] = "PENDING";
+    let c = new class e {
+        set(e, t) {
+            this.cache.set(e, t)
+        }
+        get(e) {
+            return this._checkExpiration(), this.cache.get(e)
+        }
+        has(e) {
+            return this._checkExpiration(), this.cache.has(e)
+        }
+        _checkExpiration() {
+            this.expiration < Date.now() && this.cache.clear()
+        }
+        constructor() {
+            _(this, "cache", void 0), _(this, "expiration", void 0), this.cache = new Map, this.expiration = Date.now() + 6e5
+        }
+    };
+    async function E(e, t) {
+        let n = JSON.stringify({
+            index: e,
+            searchQuery: t
+        });
+        if (c.has(n)) return c.get(n);
         let {
-            users: n,
-            next_index: i
+            users: i,
+            next_index: r
         } = (await s.HTTP.post({
             url: d.Endpoints.GET_REFERRAL_ELIGIBLE_USERS,
             body: {
@@ -41,13 +72,13 @@ function(e, t, n) {
                 search_query: t
             },
             oldFormErrors: !0
-        })).body;
-        return {
-            users: n.map(e => new l.default(e)),
-            nextIndex: i
-        }
-    }(r = i || (i = {}))[r.REDEEMED = 1] = "REDEEMED", r[r.PENDING = 2] = "PENDING";
-    let c = () => (a.default.dispatch({
+        })).body, a = {
+            users: i.map(e => new l.default(e)),
+            nextIndex: r
+        };
+        return c.set(n, a), a
+    }
+    let I = () => (a.default.dispatch({
             type: "BILLING_REFERRALS_REMAINING_FETCH_START"
         }), s.HTTP.get({
             url: d.Endpoints.GET_REFERRALS_REMAINING,
@@ -72,7 +103,7 @@ function(e, t, n) {
                 type: "BILLING_REFERRALS_REMAINING_FETCH_FAIL"
             })
         })),
-        E = e => (a.default.dispatch({
+        T = e => (a.default.dispatch({
             type: "BILLING_CREATE_REFERRAL_PREVIEW_START",
             recipientId: e
         }), s.HTTP.post({
@@ -90,7 +121,7 @@ function(e, t, n) {
                 recipientId: e
             })
         }));
-    async function I(e) {
+    async function f(e) {
         let t = [];
         for (let i of e) {
             var n;
@@ -105,7 +136,7 @@ function(e, t, n) {
             userTrialOffers: t
         }), t
     }
-    async function T(e) {
+    async function S(e) {
         try {
             var t;
             let n = await s.HTTP.post({
@@ -128,7 +159,7 @@ function(e, t, n) {
             }
         }
     }
-    async function f(e) {
+    async function h(e) {
         try {
             var t;
             let n = await s.HTTP.get({

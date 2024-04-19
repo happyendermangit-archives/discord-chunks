@@ -2,26 +2,27 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return o
+            return l
         }
     });
     var i = n("735250");
     n("470079");
     var r = n("442837"),
         s = n("271383"),
-        a = n("246866");
+        a = n("430824"),
+        o = n("246866");
 
-    function o(e) {
+    function l(e) {
         let {
             user: t,
-            guild: n,
-            onClose: o
-        } = e, l = (0, r.useStateFromStores)([s.default], () => null != n ? s.default.getMember(n.id, t.id) : null);
-        return null == n || null == l || 0 === l.roles.length ? null : (0, i.jsx)(a.default, {
-            guild: n,
+            guildId: n,
+            onClose: l
+        } = e, u = (0, r.useStateFromStores)([a.default], () => null != n ? a.default.getGuild(n) : null), d = (0, r.useStateFromStores)([s.default], () => null != u ? s.default.getMember(u.id, t.id) : null);
+        return null == u || null == d || 0 === d.roles.length ? null : (0, i.jsx)(o.default, {
+            guild: u,
             user: t,
-            userRoles: l.roles,
-            onClose: o
+            userRoles: d.roles,
+            onClose: l
         })
     }
 }

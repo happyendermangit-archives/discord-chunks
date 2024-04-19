@@ -27,16 +27,6 @@ function(e, t, n) {
         isError(e) {
             return S.has(e)
         }
-        getCurrentUserApplicationIds() {
-            let e = c.default.getId(),
-                t = T.get(e);
-            return null == t ? null : new Set(t.recentGames.map(e => {
-                let {
-                    applicationId: t
-                } = e;
-                return t
-            }))
-        }
     }
     a = "UserRecentGamesStore", (s = "displayName") in(r = h) ? Object.defineProperty(r, s, {
         value: a,

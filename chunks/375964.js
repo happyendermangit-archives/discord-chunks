@@ -17211,6 +17211,7 @@ function(e) {
         USER_RECENT_GAMES_ON_PROFILE: "Show recent games on profile",
         USER_RECENT_GAMES_YOU_BOTH_PLAY: "You both play this game",
         NEW_TO_THIS_GAME: "New to this game",
+        LAST_PLAYED_GAMES: "Last played games",
         RECENT_GAMES_SETTING_NOTE: "Display up to six recently played games on your profile. Learn more about recent games sharing [here.]({helpdeskArticle})",
         RECENT_GAMES_SETTING_REQUIREMENT: "You must have [Activity Sharing](onSettingClick) enabled.",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES: "{count} {count, plural, =1 {min} other {mins}} ago",

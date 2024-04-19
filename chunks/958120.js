@@ -30,20 +30,20 @@ function(e, t, n) {
             user: t,
             displayProfile: n,
             onOpenProfile: N,
-            guild: p,
+            guildId: p,
             channelId: O,
             onClose: R
         } = e, {
             moreUserDetailsEnabled: C
         } = (0, l.useSimplifiedProfileExperiment)({
             location: "BiteSizeProfileBody"
-        }), g = o.default.getName(null == p ? void 0 : p.id, O, t), L = (0, u.default)(t.id, null == p ? void 0 : p.id), D = (0, r.useStateFromStores)([a.default], () => a.default.hidePersonalInformation), v = (0, r.useStateFromStores)([s.default], () => s.default.findActivity(t.id, e => e.type === A.ActivityTypes.PLAYING), [t]);
+        }), g = o.default.getName(p, O, t), L = (0, u.default)(t.id, p), D = (0, r.useStateFromStores)([a.default], () => a.default.hidePersonalInformation), v = (0, r.useStateFromStores)([s.default], () => s.default.findActivity(t.id, e => e.type === A.ActivityTypes.PLAYING), [t]);
         return (0, i.jsxs)("div", {
             className: m.body,
             children: [(0, i.jsx)(c.default, {
                 user: t,
-                guildId: null == p ? void 0 : p.id,
-                usernameIcon: t.hasAvatarForGuild(null == p ? void 0 : p.id) && (0, i.jsx)(I.default, {
+                guildId: p,
+                usernameIcon: t.hasAvatarForGuild(p) && (0, i.jsx)(I.default, {
                     user: t,
                     nickname: g
                 }),
@@ -52,7 +52,7 @@ function(e, t, n) {
                         pronouns: null == n ? void 0 : n.pronouns
                     }), (0, i.jsx)(E.UserProfileBadgesTag, {
                         user: t,
-                        guildId: null == p ? void 0 : p.id
+                        guildId: p
                     })]
                 }),
                 nicknameIcon: C && !D ? (0, i.jsx)(_.default, {
@@ -60,7 +60,8 @@ function(e, t, n) {
                     onOpenProfile: N
                 }) : null
             }), C && (0, i.jsx)(S.default, {
-                user: t
+                user: t,
+                onClose: R
             }), C && (0, i.jsx)(T.default, {
                 user: t,
                 bio: null == n ? void 0 : n.bio,
@@ -70,7 +71,7 @@ function(e, t, n) {
                 activity: v
             }), (0, i.jsx)(h.default, {
                 user: t,
-                guild: p,
+                guildId: p,
                 onClose: R
             }), L && (0, i.jsx)(f.default, {
                 user: t

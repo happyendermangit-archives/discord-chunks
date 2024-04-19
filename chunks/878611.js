@@ -26,9 +26,10 @@ function(e, t, n) {
             let {
                 userId: r,
                 channelId: o,
-                roleId: l
+                roleId: l,
+                roleName: u
             } = e;
-            return null == r && null != l ? (0, i.jsx)(s.default, {
+            return null == r && (null != l || "@everyone" === u || "@here" === u) ? (0, i.jsx)(s.default, {
                 inlinePreview: n.formatInline,
                 ...e,
                 children: t(e.content, n)
