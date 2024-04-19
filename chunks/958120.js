@@ -38,7 +38,7 @@ function(e, t, n) {
         } = (0, l.useSimplifiedProfileExperiment)({
             location: "BiteSizeProfileBody"
         }), g = o.default.getName(null == p ? void 0 : p.id, O, t), L = (0, u.default)(t.id, null == p ? void 0 : p.id), D = (0, r.useStateFromStores)([a.default], () => a.default.hidePersonalInformation), v = (0, r.useStateFromStores)([s.default], () => s.default.findActivity(t.id, e => e.type === A.ActivityTypes.PLAYING), [t]);
-        return t.isSystemUser() ? null : (0, i.jsxs)("div", {
+        return (0, i.jsxs)("div", {
             className: m.body,
             children: [(0, i.jsx)(c.default, {
                 user: t,

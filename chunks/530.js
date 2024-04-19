@@ -24,26 +24,25 @@ function(e, t, n) {
             nicknameIcon: c,
             className: E,
             nicknameVariant: I = "heading-lg/bold"
-        } = e, T = t.isNonUserBot() ? null : l.default.getName(n, r, t);
+        } = e;
         return (0, i.jsxs)("div", {
             className: s()(u.container, E),
-            children: [null != T ? (0, i.jsxs)("div", {
+            children: [(0, i.jsxs)("div", {
                 className: u.usernameRow,
                 children: [(0, i.jsx)(a.Heading, {
                     className: u.nickname,
                     variant: I,
-                    children: T
+                    children: l.default.getName(n, r, t)
                 }), c]
-            }) : null, (0, i.jsxs)("div", {
+            }), (0, i.jsxs)("div", {
                 className: u.tags,
                 children: [(0, i.jsx)(o.default, {
                     user: t,
                     usernameIcon: d,
                     forceUsername: !0,
-                    className: null == T ? u.userTagNoNickname : u.userTagWithNickname,
-                    usernameClass: null == T ? u.userTagUsernameNoNickname : u.userTagUsernameBase,
-                    discriminatorClass: null == T ? u.userTagDiscriminatorNoNickname : u.discrimBase,
-                    botClass: null == T ? u.headerBotTag : u.headerBotTagWithNickname
+                    className: u.userTag,
+                    usernameClass: u.userTagUsername,
+                    discriminatorClass: u.userTagDiscriminator
                 }), _]
             })]
         })
