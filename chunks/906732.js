@@ -4,6 +4,9 @@ function(e, t, n) {
         AnalyticsLocationProvider: function() {
             return d
         },
+        LocationContext: function() {
+            return u
+        },
         default: function() {
             return c
         }

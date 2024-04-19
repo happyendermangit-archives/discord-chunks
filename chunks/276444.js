@@ -119,9 +119,10 @@ function(e, t, n) {
                 referrals_remaining: t,
                 sent_user_ids: n,
                 refresh_at: i,
-                recipient_status: r
+                recipient_status: r,
+                has_eligible_friends: s
             } = e;
-            L = null == i, h = !1, E = t, T = n, D = i, f = r
+            L = null == i && s, h = !1, E = t, T = n, D = i, f = r
         },
         BILLING_REFERRALS_REMAINING_FETCH_FAIL: function(e) {
             let {} = e;
