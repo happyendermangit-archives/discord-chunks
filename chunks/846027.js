@@ -306,18 +306,6 @@ function(e, t, n) {
                 enabled: e
             })
         },
-        setAV1Enabled(e) {
-            !S() && i.default.dispatch({
-                type: "MEDIA_ENGINE_SET_AV1",
-                enabled: e
-            })
-        },
-        setH265Enabled(e) {
-            !S() && i.default.dispatch({
-                type: "MEDIA_ENGINE_SET_H265",
-                enabled: e
-            })
-        },
         setAecDump(e) {
             !S() && i.default.dispatch({
                 type: "MEDIA_ENGINE_SET_AEC_DUMP",

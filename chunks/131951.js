@@ -96,7 +96,6 @@ function(e, t, n) {
             vadUseKrispSettingVersion: 0,
             ncUseKrispSettingVersion: 0,
             ncUseKrispjsSettingVersion: 0,
-            av1EnabledSettingVersion: 0,
             mute: !1,
             deaf: !1,
             echoCancellation: !0,
@@ -125,7 +124,6 @@ function(e, t, n) {
             videoHook: eO.supports(eT.Features.VIDEO_HOOK),
             experimentalSoundshare2: null,
             openH264: !0,
-            av1Enabled: !0,
             h265Enabled: !0,
             vadThrehsoldMigrated: !1,
             aecDumpEnabled: !1
@@ -528,25 +526,25 @@ function(e, t, n) {
                     }, {
                         autoTrackExposure: !0
                     });
-                    t && e.setExperimentFlag(eT.ExperimentFlags.SIGNAL_H265_SUPPORT, !0);
+                    t && n.hardwareH264 && e.setExperimentFlag(eT.ExperimentFlags.SIGNAL_H265_SUPPORT, !0);
                     let {
-                        signalH265SupportAMD: n
+                        signalH265SupportAMD: i
                     } = B.default.getCurrentConfig({
                         location: "f627ab_9"
                     }, {
                         autoTrackExposure: !0
                     });
-                    n && e.setExperimentFlag(eT.ExperimentFlags.SIGNAL_H265_SUPPORT, !0);
+                    i && n.hardwareH264 && e.setExperimentFlag(eT.ExperimentFlags.SIGNAL_H265_SUPPORT, !0);
                     let {
-                        signalH265SupportMacOS: i
+                        signalH265SupportMacOS: r
                     } = w.default.getCurrentConfig({
                         location: "f627ab_8"
                     }, {
                         autoTrackExposure: !0
                     });
-                    if (i) {
+                    if (r) {
                         var u;
-                        (0, $.isMac)() && (null === (u = window.DiscordNative) || void 0 === u ? void 0 : u.os.arch) === "arm64" && e.setExperimentFlag(eT.ExperimentFlags.SIGNAL_H265_SUPPORT, !0)
+                        (0, $.isMac)() && (null === (u = window.DiscordNative) || void 0 === u ? void 0 : u.os.arch) === "arm64" && (n.hardwareH264 ? e.setExperimentFlag(eT.ExperimentFlags.SIGNAL_H265_SUPPORT, !0) : e.setExperimentFlag(eT.ExperimentFlags.SIGNAL_H265_DECODE_SUPPORT, !0))
                     }
                 }
                 let {
@@ -774,11 +772,11 @@ function(e, t, n) {
                         if (E().defaultsDeep(e, ep()), null != e.modeOptions && "string" == typeof e.modeOptions.shortcut && (e.modeOptions.shortcut = (0, en.toCombo)(e.modeOptions.shortcut)), null != e.modeOptions && 4 !== e.vadUseKrispSettingVersion && (e.vadUseKrispSettingVersion = 4, e.modeOptions.vadUseKrisp = !0), !e.qosMigrated && (e.qosMigrated = !0, e.qos = !1), !e.vadThrehsoldMigrated) {
                             var t;
                             e.vadThrehsoldMigrated = !0, (null === (t = e.modeOptions) || void 0 === t ? void 0 : t.threshold) === -40 && (e.modeOptions.threshold = -60)
-                        }(0, $.isWeb)() ? 1 !== e.ncUseKrispjsSettingVersion && (e.ncUseKrispjsSettingVersion = 1, e.noiseSuppression = !1, e.noiseCancellation = !0): 1 !== e.ncUseKrispSettingVersion && (e.ncUseKrispSettingVersion = 1, e.noiseSuppression = !1, e.noiseCancellation = !0), 1 !== e.av1EnabledSettingVersion && (e.av1EnabledSettingVersion = 1, e.av1Enabled = !0), 1 !== e.hardwareEnabledVersion && (e.hardwareH264 = !0, e.hardwareEnabledVersion = 1)
+                        }(0, $.isWeb)() ? 1 !== e.ncUseKrispjsSettingVersion && (e.ncUseKrispjsSettingVersion = 1, e.noiseSuppression = !1, e.noiseCancellation = !0): 1 !== e.ncUseKrispSettingVersion && (e.ncUseKrispSettingVersion = 1, e.noiseSuppression = !1, e.noiseCancellation = !0), 1 !== e.hardwareEnabledVersion && (e.hardwareH264 = !0, e.hardwareEnabledVersion = 1)
                     }),
                     function() {
                         let e = e4();
-                        eO.setAudioInputDevice(e.inputDeviceId), eO.setAudioOutputDevice(e.outputDeviceId), e8(), eO.setInputVolume(e.inputVolume), eO.setOutputVolume(e.outputVolume), eO.setH264Enabled(e.openH264), eO.setAv1Enabled(e.av1Enabled), eO.setAecDump(e.aecDumpEnabled)
+                        eO.setAudioInputDevice(e.inputDeviceId), eO.setAudioOutputDevice(e.outputDeviceId), e8(), eO.setInputVolume(e.inputVolume), eO.setOutputVolume(e.outputVolume), eO.setH264Enabled(e.openH264), eO.setAv1Enabled(e.hardwareH264), eO.setH265Enabled(e.hardwareH264), eO.setAecDump(e.aecDumpEnabled)
                     }()
             }(), !(0, $.isDesktop)() || __OVERLAY__ || eK || ez ? (0, $.isWeb)() && eO.supports(eT.Features.NOISE_CANCELLATION) ? (ez = !0, i.emitChange()) : (0, $.isWeb)() && tr({
                 noiseCancellation: !1
@@ -1080,9 +1078,6 @@ function(e, t, n) {
         getOpenH264() {
             return e4().openH264
         }
-        getAv1Enabled() {
-            return e4().av1Enabled
-        }
         getEverSpeakingWhileMuted() {
             return eF
         }
@@ -1355,12 +1350,6 @@ function(e, t, n) {
             });
             eO.eachConnection(e => e.setEchoCancellation(t.echoCancellation)), tI(), tE(e.location)
         },
-        MEDIA_ENGINE_SET_H265: function(e) {
-            let t = tr({
-                h265Enabled: e.enabled
-            });
-            eO.setH265Enabled(t.h265Enabled)
-        },
         AUDIO_SET_LOOPBACK: function(e) {
             let {
                 enabled: t
@@ -1612,15 +1601,7 @@ function(e, t, n) {
             } = e, n = tr({
                 hardwareH264: t
             });
-            eO.eachConnection(e => e.setHardwareH264(n.hardwareH264))
-        },
-        MEDIA_ENGINE_SET_AV1: function(e) {
-            let {
-                enabled: t
-            } = e, n = tr({
-                av1Enabled: t
-            });
-            eO.setAv1Enabled(n.av1Enabled)
+            eO.eachConnection(e => e.setHardwareH264(n.hardwareH264)), eO.setAv1Enabled(n.hardwareH264), eO.setH265Enabled(n.hardwareH264)
         },
         APP_STATE_UPDATE: function(e) {
             let {
