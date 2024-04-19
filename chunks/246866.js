@@ -140,16 +140,14 @@ function(e, t, n) {
                 children: [(0, i.jsx)(d.Heading, {
                     variant: "text-xs/semibold",
                     children: O.default.Messages.ROLES
-                }), w && (0, i.jsx)(d.Tooltip, {
+                }), w && (0, i.jsx)(d.TooltipContainer, {
+                    className: R.hiddenTooltip,
                     text: O.default.Messages.USER_PROFILE_ADD_ROLE,
-                    children: t => (0, i.jsx)("div", {
-                        ...t,
-                        children: (0, i.jsx)(c.OverflowAddRolesButton, {
-                            ...e,
-                            handleAddRole: v,
-                            addButtonClassName: R.addButton,
-                            addButtonIconClassName: R.addButtonIcon
-                        })
+                    children: (0, i.jsx)(c.OverflowAddRolesButton, {
+                        ...e,
+                        handleAddRole: v,
+                        addButtonClassName: R.addButton,
+                        addButtonIconClassName: R.addButtonIcon
                     })
                 })]
             }), (0, i.jsx)(l.ListNavigatorProvider, {
