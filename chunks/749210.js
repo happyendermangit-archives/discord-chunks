@@ -17,8 +17,8 @@ function(e, t, n) {
         c = n("272423"),
         E = n("781157"),
         I = n("895886"),
-        T = n("703656"),
-        f = n("920440"),
+        T = n("35225"),
+        f = n("703656"),
         S = n("314897"),
         h = n("592125"),
         A = n("664915"),
@@ -65,8 +65,8 @@ function(e, t, n) {
                 lurkLocation: c
             } = u,
             E = null !== (t = u.lurker) && void 0 !== t && t,
-            f = R.default.getCurrentUser();
-        if (null !== (i = null == f ? void 0 : f.hasFlag(M.UserFlags.QUARANTINED)) && void 0 !== i && i) return (0, I.default)(), new Promise((e, t) => t(Error()));
+            T = R.default.getCurrentUser();
+        if (null !== (i = null == T ? void 0 : T.hasFlag(M.UserFlags.QUARANTINED)) && void 0 !== i && i) return (0, I.default)(), new Promise((e, t) => t(Error()));
         a.default.wait(() => a.default.dispatch({
             type: "GUILD_JOIN",
             guildId: e,
@@ -95,7 +95,7 @@ function(e, t, n) {
                     type: "USER_GUILD_JOIN_REQUEST_UPDATE",
                     guildId: e,
                     request: r.body.join_request
-                }), null == N.default.getGuild(e) && r.body.show_verification_form) return (0, T.transitionTo)(M.Routes.GUILD_MEMBER_VERIFICATION(e)), r;
+                }), null == N.default.getGuild(e) && r.body.show_verification_form) return (0, f.transitionTo)(M.Routes.GUILD_MEMBER_VERIFICATION(e)), r;
             if (null != r.body.welcome_screen && a.default.dispatch({
                     type: "WELCOME_SCREEN_UPDATE",
                     guildId: r.body.id,
@@ -134,12 +134,12 @@ function(e, t, n) {
         waitForGuild: w,
         async transitionToGuildSync(e, t, n, i) {
             var r, s;
-            let a = (r = (await w(e)).id, null != (s = n) ? s : !(0, d.isInMainTabsExperiment)() || (0, E.isOnNewPanels)() ? (0, f.getChannelIdForGuildTransition)(r) : void 0),
+            let a = (r = (await w(e)).id, null != (s = n) ? s : !(0, d.isInMainTabsExperiment)() || (0, E.isOnNewPanels)() ? (0, T.getChannelIdForGuildTransition)(r) : void 0),
                 o = t;
             (null == t ? void 0 : t.hasOwnProperty("welcomeModalChannelId")) && null == t.welcomeModalChannelId && (o = {
                 ...t,
                 welcomeModalChannelId: a
-            }), (0, T.transitionTo)(M.Routes.CHANNEL(e, a), o, void 0, i), await new Promise(setImmediate)
+            }), (0, f.transitionTo)(M.Routes.CHANNEL(e, a), o, void 0, i), await new Promise(setImmediate)
         },
         deleteGuild: U,
         selectGuild(e) {
@@ -423,15 +423,15 @@ function(e, t, n) {
                 return
             }
             if (null == e) {
-                (0, T.transitionTo)(M.Routes.FRIENDS);
+                (0, f.transitionTo)(M.Routes.FRIENDS);
                 return
             }
             let t = m.default.getDefaultChannel(e);
-            null == t || t.isNSFW() ? (0, T.transitionTo)(M.Routes.FRIENDS) : (0, T.transitionTo)(M.Routes.CHANNEL(e, t.id))
+            null == t || t.isNSFW() ? (0, f.transitionTo)(M.Routes.FRIENDS) : (0, f.transitionTo)(M.Routes.CHANNEL(e, t.id))
         },
         escapeToDefaultChannel(e) {
             let t = m.default.getDefaultChannel(e);
-            null != t ? (0, T.transitionTo)(M.Routes.CHANNEL(e, t.id)) : (0, T.transitionTo)(M.Routes.FRIENDS)
+            null != t ? (0, f.transitionTo)(M.Routes.CHANNEL(e, t.id)) : (0, f.transitionTo)(M.Routes.FRIENDS)
         },
         async fetchApplications(e, t) {
             let n = {
