@@ -19,6 +19,7 @@ function(e) {
         popoutTitle: "popoutTitle__6f44d",
         shareToChannelButton: "shareToChannelButton_ee0e50",
         shareToChannelInput: "shareToChannelInput_a160d6",
-        shareToChannelInputHasAttachments: "shareToChannelInputHasAttachments__4d1e1"
+        shareToChannelInputHasAttachments: "shareToChannelInputHasAttachments__4d1e1",
+        toastContainer: "toastContainer__40273"
     }
 }
