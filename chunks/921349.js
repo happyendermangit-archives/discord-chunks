@@ -66,8 +66,8 @@ function(e, t, n) {
             renderOptionSuffix: K = () => null,
             "aria-describedby": z,
             "aria-invalid": X,
-            "aria-labelledby": q,
-            "aria-required": Q,
+            "aria-labelledby": Q,
+            "aria-required": q,
             inputClassNames: Z,
             centerCaret: J = !1,
             onBlur: $,
@@ -362,9 +362,9 @@ function(e, t, n) {
                                         isEditing: ef,
                                         inputRef: eu,
                                         "aria-describedby": null != z ? z : es,
-                                        "aria-required": Q,
+                                        "aria-required": q,
                                         "aria-invalid": null != X ? X : null != ea,
-                                        "aria-labelledby": null != q ? q : er,
+                                        "aria-labelledby": null != Q ? Q : er,
                                         "aria-expanded": n,
                                         setInputRef: e => {
                                             u.current = e, eu.current = e

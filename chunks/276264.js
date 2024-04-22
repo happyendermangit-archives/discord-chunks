@@ -59,8 +59,8 @@ function(e, t, n) {
             onKeyDown: K,
             onClick: z,
             onContextMenu: X,
-            onClickPremiumGuildIcon: q,
-            onFocus: Q,
+            onClickPremiumGuildIcon: Q,
+            onFocus: q,
             "aria-controls": Z,
             "aria-expanded": J,
             "aria-posinset": $,
@@ -120,7 +120,7 @@ function(e, t, n) {
                     date: x
                 }),
                 children: e => (0, i.jsx)(l.Clickable, {
-                    onClick: q,
+                    onClick: Q,
                     tabIndex: -1,
                     children: (0, i.jsx)(m.default, {
                         ...e,
@@ -227,7 +227,7 @@ function(e, t, n) {
                 "aria-posinset": $,
                 id: et,
                 tabIndex: en,
-                onFocus: Q,
+                onFocus: q,
                 focusProps: {
                     offset: {
                         top: 4,

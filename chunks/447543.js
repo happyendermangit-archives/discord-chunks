@@ -51,8 +51,8 @@ function(e, t, n) {
         K = n("981631"),
         z = n("176505"),
         X = n("70722"),
-        q = n("245335"),
-        Q = n("157925");
+        Q = n("245335"),
+        q = n("157925");
     let Z = "invite",
         J = null;
 
@@ -60,13 +60,13 @@ function(e, t, n) {
         var t, n, i;
         let r = {};
         switch (e.target_type) {
-            case q.InviteTargetTypes.STREAM:
+            case Q.InviteTargetTypes.STREAM:
                 r.targetType = e.target_type, r.targetUserId = null === (n = e.target_user) || void 0 === n ? void 0 : n.id;
                 break;
-            case q.InviteTargetTypes.EMBEDDED_APPLICATION:
+            case Q.InviteTargetTypes.EMBEDDED_APPLICATION:
                 r.targetType = e.target_type, r.targetApplicationId = null === (i = e.target_application) || void 0 === i ? void 0 : i.id;
                 break;
-            case q.InviteTargetTypes.ROLE_SUBSCRIPTIONS_PURCHASE:
+            case Q.InviteTargetTypes.ROLE_SUBSCRIPTIONS_PURCHASE:
                 r.targetType = e.target_type
         }
         return (!(null != G.default.getGuild(null === (t = e.guild) || void 0 === t ? void 0 : t.id)) || e.new_member) && null != e.channel && (0, M.isGuildTextChannelType)(e.channel.type) && (r.welcomeModalChannelId = e.channel.id), null != e.guild_scheduled_event && (r.guildScheduledEvent = e.guild_scheduled_event), r
@@ -82,7 +82,7 @@ function(e, t, n) {
             type: a
         } = i, o = P.default.getChannel(i.id), l = function(e, t, n) {
             var i, r;
-            if ((null == n ? void 0 : n.targetType) === q.InviteTargetTypes.ROLE_SUBSCRIPTIONS_PURCHASE) return z.StaticChannelRoute.ROLE_SUBSCRIPTIONS;
+            if ((null == n ? void 0 : n.targetType) === Q.InviteTargetTypes.ROLE_SUBSCRIPTIONS_PURCHASE) return z.StaticChannelRoute.ROLE_SUBSCRIPTIONS;
             if ((null == n ? void 0 : n.targetType) == null && !M.GUILD_VOCAL_CHANNEL_TYPES.has(t.type) && ((0, S.canSeeGuildHome)(e) || (0, m.canSeeOnboardingHome)(e))) return z.StaticChannelRoute.GUILD_HOME;
             let s = P.default.getChannel(t.id);
             return B.default.can(K.Permissions.VIEW_CHANNEL, s) ? t.id : null !== (r = null === (i = U.default.getDefaultChannel(e, !0, K.Permissions.CREATE_INSTANT_INVITE)) || void 0 === i ? void 0 : i.id) && void 0 !== r ? r : t.id
@@ -100,16 +100,16 @@ function(e, t, n) {
                         (0, v.connectAndOpen)(i instanceof M.ChannelRecordBase ? i : (0, M.createChannelRecord)(i)), (0, D.transitionTo)(T);
                         return
                     }
-                    n.selectVoiceChannel(l), d === q.InviteTargetTypes.STREAM && null != u && W.watchStreamAndTransitionToStream({
+                    n.selectVoiceChannel(l), d === Q.InviteTargetTypes.STREAM && null != u && W.watchStreamAndTransitionToStream({
                         streamType: X.StreamTypes.GUILD,
                         ownerId: u,
                         guildId: t,
                         channelId: l
-                    }), d === q.InviteTargetTypes.EMBEDDED_APPLICATION && null != _ && ((0, D.transitionTo)(K.Routes.CHANNEL(null != t ? t : K.ME, l)), (0, I.default)(l, _, s, null == r ? void 0 : r.intent))
+                    }), d === Q.InviteTargetTypes.EMBEDDED_APPLICATION && null != _ && ((0, D.transitionTo)(K.Routes.CHANNEL(null != t ? t : K.ME, l)), (0, I.default)(l, _, s, null == r ? void 0 : r.intent))
                 };
                 (0, A.shouldShowMembershipVerificationGate)(t, [G.default, w.default, F.default, b.default]) ? (0, h.openMemberVerificationModal)(t, a) : a()
             })
-        }) : (0, E.isActivityInTextSupportedForChannel)(o) && d === q.InviteTargetTypes.EMBEDDED_APPLICATION && null != _ && ((0, D.transitionTo)(K.Routes.CHANNEL(null != t ? t : K.ME, l)), (0, I.default)(l, _, s, null == r ? void 0 : r.intent)), (function(e, t) {
+        }) : (0, E.isActivityInTextSupportedForChannel)(o) && d === Q.InviteTargetTypes.EMBEDDED_APPLICATION && null != _ && ((0, D.transitionTo)(K.Routes.CHANNEL(null != t ? t : K.ME, l)), (0, I.default)(l, _, s, null == r ? void 0 : r.intent)), (function(e, t) {
             let {
                 type: n
             } = e, {
@@ -119,7 +119,7 @@ function(e, t, n) {
             } = null != t ? t : {}, a = n === K.ChannelTypes.GUILD_STAGE_VOICE, o = {
                 navigationReplace: !0
             };
-            return null != r && (o.welcomeModalChannelId = r), a && (o.state = Q.STAGE_INVITE_STATE_KEY), null != s && (o.guildScheduledEventId = s.id), e => null != i ? i(e, o, L.default.INVITE_ACCEPT) : (0, D.transitionTo)(e, o, L.default.INVITE_ACCEPT)
+            return null != r && (o.welcomeModalChannelId = r), a && (o.state = q.STAGE_INVITE_STATE_KEY), null != s && (o.guildScheduledEventId = s.id), e => null != i ? i(e, o, L.default.INVITE_ACCEPT) : (0, D.transitionTo)(e, o, L.default.INVITE_ACCEPT)
         })(i, r)(T)
     }
     let et = function(e, t) {

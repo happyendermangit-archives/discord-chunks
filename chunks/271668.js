@@ -63,7 +63,7 @@ function(e, t, n) {
             placeholderCount: 7,
             limit: L.DISCOVERY_COMMANDS_QUERY_LIMIT,
             includeFrecency: !0
-        }), q = (0, I.useSynchronizedActiveCategoryIndexForScrollPosition)({
+        }), Q = (0, I.useSynchronizedActiveCategoryIndexForScrollPosition)({
             activeCategoryIndex: V,
             isScrolling: o,
             listRef: k,
@@ -76,13 +76,13 @@ function(e, t, n) {
             },
             scrollOffset: 20,
             searchQuery: ""
-        }), Q = e => {
+        }), q = e => {
             let t = H.length,
                 n = Y.reduce((e, t) => e + t.data.length, 0) - (j ? 7 : 0);
-            j && e + 420 > 48 * t + 56 * n - 512 && z(), q(e), U(), l.current = e
+            j && e + 420 > 48 * t + 56 * n - 512 && z(), Q(e), U(), l.current = e
         };
         r.useEffect(() => {
-            Q(l.current)
+            q(l.current)
         }, [W]);
         let Z = r.useCallback(e => e !== H.length - 1 || j ? 16 : 0, [H.length, j]),
             J = Y.map(e => e.data.length);
@@ -210,7 +210,7 @@ function(e, t, n) {
                 role: "listbox",
                 className: M.list,
                 listPadding: P,
-                onScroll: Q,
+                onScroll: q,
                 renderRow: ei,
                 renderSection: en,
                 renderSectionHeader: et,

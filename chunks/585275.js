@@ -21,14 +21,14 @@ function(e, t, a) {
         I = a("981631"),
         O = a("65154");
     let T = {},
-        R = new u.Timeout,
-        w = !1,
-        v = window.document.createElement("canvas");
-    v.width = 512, v.height = 288;
-    let S = v.getContext("2d");
+        v = new u.Timeout,
+        R = !1,
+        w = window.document.createElement("canvas");
+    w.width = 512, w.height = 288;
+    let S = w.getContext("2d");
 
     function A() {
-        R.stop(), null != d && (l.default.removeSink(d, T), d = null)
+        v.stop(), null != d && (l.default.removeSink(d, T), d = null)
     }
     let N = o().debounce((e, t, a, d) => {
         C(e, (0, E.encodeStreamKey)({
@@ -41,7 +41,7 @@ function(e, t, a) {
     async function C(e, t) {
         if (d !== e) return;
         let a = () => C(e, t);
-        if (!w) try {
+        if (!R) try {
             let a = await
             function(e, t) {
                 let a = 0;
@@ -96,7 +96,7 @@ function(e, t, a) {
                     a = Math.min(t, 288 / e.height),
                     d = e.width * a,
                     n = e.height * a;
-                v.width = d, v.height = n;
+                w.width = d, w.height = n;
                 let c = window.document.createElement("canvas"),
                     i = c.getContext("2d");
                 c.width = e.width, c.height = e.height;
@@ -105,7 +105,7 @@ function(e, t, a) {
                     null == S || S.drawImage(c, 0, 0, e.width, e.height, 0, 0, d, n), t()
                 })
             }(a);
-            let n = v.toDataURL("image/jpeg");
+            let n = w.toDataURL("image/jpeg");
             if (b.default.dispatch({
                     type: "STREAM_PREVIEW_FETCH_SUCCESS",
                     streamKey: t,
@@ -126,10 +126,10 @@ function(e, t, a) {
                 oldFormErrors: !0
             })
         } catch (t) {
-            new h.default("ApplicationStreamPreviewUploadManager").error("Failed to post stream preview", t), d === e && R.start(6e4, a);
+            new h.default("ApplicationStreamPreviewUploadManager").error("Failed to post stream preview", t), d === e && v.start(6e4, a);
             return
         }
-        d === e && (w ? R.start(6e4, a) : R.start(3e5, a))
+        d === e && (R ? v.start(6e4, a) : v.start(3e5, a))
     }
     t.default = {
         init() {
@@ -146,7 +146,7 @@ function(e, t, a) {
                 let {
                     videoState: t
                 } = e;
-                w = t === I.MediaEngineVideoStates.PAUSED || !1
+                R = t === I.MediaEngineVideoStates.PAUSED || !1
             })
         }
     }

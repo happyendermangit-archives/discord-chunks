@@ -2,7 +2,7 @@ function(e, t, a) {
     "use strict";
     a.r(t), a.d(t, {
         default: function() {
-            return R
+            return v
         }
     }), a("47120");
     var d = a("735250"),
@@ -27,7 +27,7 @@ function(e, t, a) {
     let T = r.default.connectStores([u.default], () => ({
         focused: u.default.isFocused()
     }))(g.default);
-    class R extends n.PureComponent {
+    class v extends n.PureComponent {
         getPlatform() {
             var e;
             let t = null === (e = i().os) || void 0 === e ? void 0 : e.family;

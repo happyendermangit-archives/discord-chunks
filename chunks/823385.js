@@ -184,7 +184,7 @@ function(e, t, n) {
                 let e = B[b];
                 null != e && e.type === d.AutocompleterResultTypes.HEADER && (b = (0, d.findNextSelectedResult)(d.FindResultDirections.DOWN, b, B))
             }
-            q.emitChange()
+            Q.emitChange()
         }(e, t))
     }
 
@@ -233,7 +233,7 @@ function(e, t, n) {
         }
     }
     y(X, "displayName", "QuickSwitcherStore"), y(X, "persistKey", "QuickSwitcherStore");
-    let q = new X(u.default, {
+    let Q = new X(u.default, {
         CONNECTION_OPEN: Y,
         CONNECTION_OPEN_SUPPLEMENTAL: Y,
         QUICKSWITCHER_SHOW: W,
@@ -281,5 +281,5 @@ function(e, t, n) {
             (H = H.filter(e => e !== t)).unshift(t), H.length > 4 && (H.length = 4)
         }
     });
-    t.default = q
+    t.default = Q
 }

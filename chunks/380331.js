@@ -153,14 +153,14 @@ function(e, t, n) {
                 firstUnicodeCategoryOffsetTop: r,
                 rowCountBySection: [e, n, i]
             }
-        }, [N]), [q, Q] = r.useState(!0);
+        }, [N]), [Q, q] = r.useState(!0);
         r.useLayoutEffect(() => {
-            Q(W >= 7)
+            q(W >= 7)
         }, [W]);
         let Z = r.useCallback(e => {
                 var t;
                 let n = null === (t = p.current) || void 0 === t ? void 0 : t.getListDimensions();
-                if (null != n) e + n.height - B >= z ? Q(!1) : Q(!0)
+                if (null != n) e + n.height - B >= z ? q(!1) : q(!0)
             }, [z]),
             J = r.useCallback(e => {
                 var t;
@@ -169,20 +169,20 @@ function(e, t, n) {
             $ = r.useCallback((e, t) => {
                 let n = N[e];
                 if (null == n) return 0;
-                let i = q ? k : 0;
+                let i = Q ? k : 0;
                 if (n.type === L.EmojiCategoryTypes.RECENT) return t ? 0 : G;
                 if (n.type === L.EmojiCategoryTypes.GUILD) {
                     let n = N[e + 1];
                     return null != n && n.type !== L.EmojiCategoryTypes.GUILD ? t ? B + -2 * F + U + i : U : t ? i : U
                 }
                 return t ? U + i : 2 * U
-            }, [N, q]),
+            }, [N, Q]),
             ee = r.useMemo(() => function(e, t) {
                 return (0, i.jsx)(r.Fragment, {
                     children: t
                 }, e)
             }, []),
-            et = q ? "shortcut" : "hiddenshortcut";
+            et = Q ? "shortcut" : "hiddenshortcut";
         return (0, i.jsx)(f.default, {
             categoryListRef: p,
             expressionsListRef: n,
@@ -198,12 +198,12 @@ function(e, t, n) {
             getScrollOffsetForIndex: $,
             rowCountBySection: X,
             children: e => W >= 7 && (0, i.jsx)(c.Clickable, {
-                "aria-hidden": !q,
+                "aria-hidden": !Q,
                 "aria-label": M.default.Messages.EMOJI_PICKER_SCROLL_TO_UNICODE_A11Y_LABEL,
                 className: a()(y.unicodeShortcut, {
-                    [y.unicodeShortcutInvisible]: !q
+                    [y.unicodeShortcutInvisible]: !Q
                 }),
-                tabIndex: q ? 0 : -1,
+                tabIndex: Q ? 0 : -1,
                 onClick: () => J(e),
                 children: (0, i.jsx)(A.default, {
                     height: b,

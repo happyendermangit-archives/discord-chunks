@@ -5,55 +5,60 @@ function(e, t, n) {
         r = n("470079"),
         s = n("481060"),
         a = n("906732"),
-        o = n("785717"),
-        l = n("588822"),
-        u = n("171368"),
-        d = n("981631"),
-        _ = n("689938"),
-        c = n("772723");
+        o = n("692437"),
+        l = n("785717"),
+        u = n("588822"),
+        d = n("171368"),
+        _ = n("981631"),
+        c = n("689938"),
+        E = n("772723");
     t.default = r.memo(function(e) {
         let {
             user: t,
             onClose: n,
-            bio: E,
-            hidePersonalInformation: I
+            bio: I,
+            hidePersonalInformation: T
         } = e, {
-            guildId: T,
-            channelId: f,
-            messageId: S,
-            roleId: h
-        } = (0, o.useUserProfileAnalyticsContext)(), {
-            analyticsLocations: A
-        } = (0, a.default)(), [m, N] = r.useState(!1);
-        return I || null == E || "" === E ? null : (0, i.jsxs)("div", {
+            guildId: f,
+            channelId: S,
+            messageId: h,
+            roleId: A
+        } = (0, l.useUserProfileAnalyticsContext)(), {
+            analyticsLocations: m
+        } = (0, a.default)(), [N, p] = r.useState(!1);
+        return T || null == I || "" === I ? null : (0, i.jsxs)("div", {
             children: [(0, i.jsx)("div", {
                 ref: e => {
-                    null != e && N(e.scrollHeight - e.clientHeight > 1)
+                    null != e && p(e.scrollHeight - e.clientHeight > 1)
                 },
-                className: c.descriptionClamp,
-                children: (0, i.jsx)(l.default, {
-                    userBio: E,
+                className: E.descriptionClamp,
+                children: (0, i.jsx)(u.default, {
+                    userBio: I,
                     setLineClamp: !1
                 })
-            }), m && (0, i.jsx)(s.Clickable, {
+            }), N && (0, i.jsxs)(s.Clickable, {
                 onClick: () => {
-                    null == n || n(), (0, u.openUserProfileModal)({
+                    null == n || n(), (0, d.openUserProfileModal)({
                         userId: t.id,
-                        guildId: null != T ? T : void 0,
-                        channelId: null != f ? f : void 0,
-                        messageId: null != S ? S : void 0,
-                        roleId: null != h ? h : void 0,
+                        guildId: null != f ? f : void 0,
+                        channelId: null != S ? S : void 0,
+                        messageId: null != h ? h : void 0,
+                        roleId: null != A ? A : void 0,
                         analyticsLocation: {
-                            section: d.AnalyticsSections.BITE_SIZE_PROFILE_POPOUT
+                            section: _.AnalyticsSections.BITE_SIZE_PROFILE_POPOUT
                         },
-                        sourceAnalyticsLocations: A
+                        sourceAnalyticsLocations: m
                     })
                 },
-                className: c.seeMoreText,
-                children: (0, i.jsx)(s.Text, {
-                    variant: "text-sm/normal",
-                    children: _.default.Messages.USER_PROFILE_BIO_SEE_MORE
-                })
+                className: E.seeMoreText,
+                children: [(0, i.jsx)(s.Text, {
+                    variant: "text-xs/normal",
+                    children: c.default.Messages.USER_PROFILE_VIEW_FULL_BIO
+                }), (0, i.jsx)(o.default, {
+                    width: 16,
+                    height: 16,
+                    color: "var(--interactive-normal)"
+                })]
             })]
         })
     })

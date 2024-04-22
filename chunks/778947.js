@@ -320,7 +320,7 @@ function(e, t, n) {
         }), X = (0, l.useStateFromStores)([C.default], () => {
             var t;
             return null !== (t = e.displayCompactAvatars) && void 0 !== t ? t : C.default.displayCompactAvatars
-        }), q = (!s || X) && null != _ && null != G ? (0, i.jsx)(u.Popout, {
+        }), Q = (!s || X) && null != _ && null != G ? (0, i.jsx)(u.Popout, {
             animation: u.Popout.Animation.TRANSLATE,
             align: "center",
             autoInvert: !0,
@@ -343,7 +343,7 @@ function(e, t, n) {
         }, "role-icon-children") : (!s || X) && null != _ ? (0, i.jsx)(M.default, {
             ..._,
             className: V.roleIcon
-        }, "role-icon-children") : null, Q = (0, w.renderSystemTag)({
+        }, "role-icon-children") : null, q = (0, w.renderSystemTag)({
             message: t,
             channel: R,
             user: null == t ? void 0 : t.author,
@@ -353,7 +353,7 @@ function(e, t, n) {
         (0, T.shouldShowNitroBadge)(null != _, "Message Username") && $ && !s && !et && Z.push((0, i.jsx)(z, {
             currentUserIsPremium: ee,
             author: t.author
-        }, "nitro-author")), null != q && Z.push(q), null != G && Z.push((0, i.jsx)(I.default, {
+        }, "nitro-author")), null != Q && Z.push(Q), null != G && Z.push((0, i.jsx)(I.default, {
             guild: G,
             message: t
         }, "new-member")), null != R && null != G && Z.push((0, i.jsx)(c.default, {
@@ -367,7 +367,7 @@ function(e, t, n) {
             className: V.pollBadgeDefault
         }, "poll"));
         let ei = {};
-        ei[k.UsernameDecorationTypes.SYSTEM_TAG] = Q, ei[k.UsernameDecorationTypes.BADGES] = Z;
+        ei[k.UsernameDecorationTypes.SYSTEM_TAG] = q, ei[k.UsernameDecorationTypes.BADGES] = Z;
         let er = Y(e, y, ei),
             es = (0, f.getMessageUsernameId)(t, A),
             ea = (0, f.getMessageTimestampId)(t),
@@ -393,8 +393,8 @@ function(e, t, n) {
             }),
             usernameSpanId: (0, f.getMessageUsernameId)(t, A),
             usernameClassName: a()(V.headerText, {
-                [V.hasRoleIcon]: null != q,
-                [V.hasBadges]: null != Q || en.length > 0
+                [V.hasRoleIcon]: null != Q,
+                [V.hasBadges]: null != q || en.length > 0
             }),
             compact: s,
             showTimestamp: !0 !== p,

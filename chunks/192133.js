@@ -55,8 +55,8 @@ function(e, t, n) {
             user: K,
             displayProfile: z,
             guild: X,
-            guildMember: q,
-            channelId: Q,
+            guildMember: Q,
+            channelId: q,
             onClose: Z,
             setNote: J = !1,
             canDM: $,
@@ -72,7 +72,7 @@ function(e, t, n) {
             location: "user popout"
         }, {
             autoTrackExposure: el
-        }), ed = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(Q)), {
+        }), ed = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(q)), {
             theme: e_
         } = (0, p.useUserProfileThemeContext)(), ec = r.useRef(null), [eE, eI] = r.useState(!0), eT = r.useCallback(() => {
             let {
@@ -112,7 +112,7 @@ function(e, t, n) {
             className: H.usernameSection,
             lastSection: !0
         });
-        let ep = null !== (t = S.default.getNickname(null == X ? void 0 : X.id, Q, K)) && void 0 !== t ? t : h.default.getName(K),
+        let ep = null !== (t = S.default.getNickname(null == X ? void 0 : X.id, q, K)) && void 0 !== t ? t : h.default.getName(K),
             eO = {
                 location: {
                     page: x.AnalyticsPages.USER_POPOUT,
@@ -167,7 +167,7 @@ function(e, t, n) {
                         activity: j,
                         user: K,
                         guild: X,
-                        channelId: Q,
+                        channelId: q,
                         onClose: Z,
                         analyticsParams: (null == en ? void 0 : en.location) != null ? en : eO
                     }), em && (0, i.jsx)(R.UserProfileRecentGamesSection, {
@@ -184,16 +184,16 @@ function(e, t, n) {
                     }), (0, i.jsx)(B.default, {
                         user: K,
                         guild: X,
-                        guildMember: q,
+                        guildMember: Q,
                         showBorder: null !== (s = null == z ? void 0 : z.canEditThemes) && void 0 !== s && s
                     }), (0, i.jsx)(y.default, {
                         userId: K.id,
-                        channelId: Q,
+                        channelId: q,
                         guild: X,
                         onClose: Z,
                         theme: e_
-                    }), null != er && void 0 !== Q && (0, i.jsx)(k.default, {
-                        channelId: Q,
+                    }), null != er && void 0 !== q && (0, i.jsx)(k.default, {
+                        channelId: q,
                         applicationId: er.id
                     }), !ei && !ee && (0, i.jsx)(G.default, {
                         user: K,

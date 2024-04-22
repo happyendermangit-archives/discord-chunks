@@ -25,9 +25,9 @@ function(e, t, a) {
         I = a("83949"),
         O = a("137412"),
         T = a("314897"),
-        R = a("626135"),
-        w = a("361207"),
-        v = a("690032"),
+        v = a("626135"),
+        R = a("361207"),
+        w = a("690032"),
         S = a("358085"),
         A = a("998502"),
         N = a("981631"),
@@ -217,31 +217,31 @@ function(e, t, a) {
                     path: N.Routes.DOWNLOAD_QR_CODE_REDIRECT,
                     render: () => {
                         var e, t, a;
-                        let d = null === (e = R.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
+                        let d = null === (e = v.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
                             n = (0, c.parse)((null !== (a = window.location.search) && void 0 !== a ? a : "").substr(1)),
                             i = null === (t = n.referring_location) || void 0 === t ? void 0 : t.toString();
-                        return ("iOS" === d || "Android" === d) && R.default.track(N.AnalyticEvents.DOWNLOAD_APP, {
+                        return ("iOS" === d || "Android" === d) && v.default.track(N.AnalyticEvents.DOWNLOAD_APP, {
                             platform: d,
                             ptb: !1,
                             released: !0,
                             has_e_mail: "true" === n.has_e_mail,
                             referring_location: i,
                             qr_code: !0
-                        }), window.location.href = (0, w.getMobileDownloadLink)(null != i && "" !== i ? i : "qr_code", d), null
+                        }), window.location.href = (0, R.getMobileDownloadLink)(null != i && "" !== i ? i : "qr_code", d), null
                     }
                 }), (0, d.jsx)(m.default, {
                     path: N.Routes.OPEN_APP_FROM_EMAIL,
                     render: () => {
                         var e, t;
-                        let a = null === (e = R.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
-                            n = (0, v.getOpenAppFromEmailDestinations)(null !== (t = window.location.search) && void 0 !== t ? t : "");
+                        let a = null === (e = v.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
+                            n = (0, w.getOpenAppFromEmailDestinations)(null !== (t = window.location.search) && void 0 !== t ? t : "");
                         if ("iOS" !== a && "Android" !== a) return (0, d.jsx)(o.Redirect, {
                             to: null != n.desktop ? "".concat(n.desktop.pathname).concat(n.desktop.search) : N.Routes.APP
                         });
                         {
-                            let e = (0, w.getMobileDownloadLink)("app_open_from_email", a, n.mobile),
+                            let e = (0, R.getMobileDownloadLink)("app_open_from_email", a, n.mobile),
                                 t = (0, l.parseDynamicLink)(e);
-                            null != t && R.default.track(N.AnalyticEvents.DEEP_LINK_CLICKED, {
+                            null != t && v.default.track(N.AnalyticEvents.DEEP_LINK_CLICKED, {
                                 fingerprint: (0, s.maybeExtractId)(t.fingerprint),
                                 attempt_id: t.attemptId,
                                 source: t.utmSource,

@@ -55,11 +55,11 @@ function(e, t, n) {
             showEnhancedUpsell: K,
             children: z,
             ...X
-        } = e, q = null != C, Q = (0, I.usePremiumTrialOffer)(), Z = (0, E.usePremiumDiscountOffer)(), J = ((null == Q ? void 0 : null === (t = Q.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === H || (0, E.discountOfferHasTier)(Z, H)) && !q, {
+        } = e, Q = null != C, q = (0, I.usePremiumTrialOffer)(), Z = (0, E.usePremiumDiscountOffer)(), J = ((null == q ? void 0 : null === (t = q.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === H || (0, E.discountOfferHasTier)(Z, H)) && !Q, {
             analyticsLocations: $
         } = (0, u.default)(l.default.PREMIUM_UPSELL_MODAL);
         r.useEffect(() => {
-            !Y && (q ? _.default.track(A.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
+            !Y && (Q ? _.default.track(A.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
                 type: "".concat(R, " - Tier ").concat(C.boostedGuildTier),
                 guild_id: C.guild.id,
                 channel_id: C.channelId,
@@ -72,7 +72,7 @@ function(e, t, n) {
                 location_stack: $,
                 sku_id: (0, c.castPremiumSubscriptionAsSkuId)(H)
             }))
-        }, [q, H, Y]);
+        }, [Q, H, Y]);
         let ee = x ? a()(N.artContainer, N.artContainerBoxShadow, P) : a()(N.artContainer, P),
             et = null;
         return et = "artURL" in X ? (0, i.jsx)("img", {
@@ -101,12 +101,12 @@ function(e, t, n) {
                         children: (0, i.jsx)(T.default, {
                             onClose: G,
                             type: R,
-                            subscriptionTier: null !== (s = null == Q ? void 0 : null === (n = Q.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== s ? s : h.PremiumSubscriptionSKUs.TIER_2,
+                            subscriptionTier: null !== (s = null == q ? void 0 : null === (n = q.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== s ? s : h.PremiumSubscriptionSKUs.TIER_2,
                             headingText: O,
                             context: v,
                             analyticsLocationObject: L,
                             discountOffer: Z,
-                            trialOffer: Q,
+                            trialOffer: q,
                             children: M
                         })
                     }) : (0, i.jsxs)(i.Fragment, {
@@ -144,19 +144,19 @@ function(e, t, n) {
                         children: B
                     }) : null, (() => {
                         let e;
-                        if (q) return (0, i.jsx)(d.default, {
+                        if (Q) return (0, i.jsx)(d.default, {
                             analyticsLocation: L,
                             guild: C.guild,
                             onClose: G
                         });
                         let t = K ? m.default.Messages.PREMIUM_UPSELL_GET_NITRO : void 0;
                         if (J) {
-                            if (null != Q) {
+                            if (null != q) {
                                 var n, r;
                                 t = (0, c.formatTrialCtaIntervalDuration)({
-                                    intervalType: null == Q ? void 0 : null === (n = Q.subscription_trial) || void 0 === n ? void 0 : n.interval,
-                                    intervalCount: null == Q ? void 0 : null === (r = Q.subscription_trial) || void 0 === r ? void 0 : r.interval_count
-                                }), e = null == Q ? void 0 : Q.trial_id
+                                    intervalType: null == q ? void 0 : null === (n = q.subscription_trial) || void 0 === n ? void 0 : n.interval,
+                                    intervalCount: null == q ? void 0 : null === (r = q.subscription_trial) || void 0 === r ? void 0 : r.interval_count
+                                }), e = null == q ? void 0 : q.trial_id
                             } else null != Z && (t = m.default.Messages.PREMIUM_DISCOUNT_CTA.format({
                                 percent: Z.discount.amount
                             }))

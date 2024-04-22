@@ -316,7 +316,7 @@ function(e, t, n) {
         return !1
     }
 
-    function q(e) {
+    function Q(e) {
         let {
             channel: {
                 rawRecipients: t
@@ -325,7 +325,7 @@ function(e, t, n) {
         return null != t && t.forEach(e => L(e)), !1
     }
 
-    function Q(e) {
+    function q(e) {
         let {
             channels: t
         } = e;
@@ -705,8 +705,8 @@ function(e, t, n) {
                 GUILD_MEMBER_LIST_UPDATE: er,
                 THREAD_MEMBER_LIST_UPDATE: el,
                 THREAD_MEMBERS_UPDATE: eu,
-                CHANNEL_CREATE: q,
-                CHANNEL_UPDATES: Q,
+                CHANNEL_CREATE: Q,
+                CHANNEL_UPDATES: q,
                 RELATIONSHIP_ADD: e_,
                 LOAD_RELATIONSHIPS_SUCCESS: ec,
                 FRIEND_SUGGESTION_CREATE: eE,

@@ -22,7 +22,7 @@ function(e, t, n) {
         useQuests: function() {
             return T
         },
-        useShouldShowSettingBadgeForQuests: function() {
+        useQuestsForSettingsBadge: function() {
             return A
         }
     }), n("47120"), n("653041");
@@ -120,13 +120,13 @@ function(e, t, n) {
                 var r;
                 if (!(0, E.includesTarget)(t, c.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE) || null !== (r = n.get(t.id)) && void 0 !== r && r) continue;
                 if ((null == t ? void 0 : t.userStatus) == null) {
-                    i.push(t.id);
+                    i.push(t);
                     continue
                 }
                 let e = null != t.userStatus.claimedAt,
                     s = (0, E.isDismissed)(t.userStatus, c.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE);
                 if (!e && !s) {
-                    i.push(t.id);
+                    i.push(t);
                     continue
                 }
             }
@@ -137,7 +137,7 @@ function(e, t, n) {
     function m() {
         let e = A();
         i.useEffect(() => {
-            for (let t of e)(0, l.dismissQuestContent)(t, c.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE)
+            for (let t of e)(0, l.dismissQuestContent)(t.id, c.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE)
         }, [e])
     }
 
