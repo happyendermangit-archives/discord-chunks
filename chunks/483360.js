@@ -51,8 +51,8 @@ function(e, t, n) {
         K = n("176505"),
         z = n("689938");
     let X = new c.default("AutocompleteUtils"),
-        Q = () => !0,
-        q = /(\t|\s)/,
+        q = () => !0,
+        Q = /(\t|\s)/,
         Z = [],
         J = (i = n("786074").default).MENTION_EVERYONE,
         $ = i.MENTION_HERE,
@@ -285,7 +285,7 @@ function(e, t, n) {
                     guildId: i,
                     limit: r = j.MAX_AUTOCOMPLETE_RESULTS,
                     fuzzy: s = !0,
-                    filter: a = Q,
+                    filter: a = q,
                     type: d = g.GUILD_SELECTABLE_CHANNELS_KEY,
                     allowEmptyQueries: _ = !1,
                     requireVocalConnectAccess: c = !0,
@@ -369,7 +369,7 @@ function(e, t, n) {
                 query: t,
                 limit: n = 10,
                 fuzzy: i = !0,
-                filter: r = Q,
+                filter: r = q,
                 boosters: s = {}
             } = e, a = "" === t ? "" : t.toLocaleLowerCase(), u = {
                 exactQuery: RegExp("^".concat(V.default.escape(a)), "i"),
@@ -395,7 +395,7 @@ function(e, t, n) {
                 query: t,
                 limit: n = 10,
                 fuzzy: i = !0,
-                filter: r = Q,
+                filter: r = q,
                 boosters: s = {}
             } = e, a = (0, H.stripDiacritics)((0, H.normalize)(t.toLocaleLowerCase())), d = {
                 exactQuery: RegExp("^".concat(V.default.escape(a)), "i"),
@@ -422,7 +422,7 @@ function(e, t, n) {
                 query: t,
                 limit: n = 10,
                 fuzzy: i = !0,
-                filter: r = Q
+                filter: r = q
             } = e, s = t.toLocaleLowerCase(), a = {
                 exactQuery: RegExp("^".concat(V.default.escape(s)), "i"),
                 containQuery: RegExp(V.default.escape(s), "i"),
@@ -450,7 +450,7 @@ function(e, t, n) {
                 query: t,
                 limit: n = 10,
                 fuzzy: i = !0,
-                filter: r = Q
+                filter: r = q
             } = e, s = t.toLocaleLowerCase(), a = {
                 exactQuery: RegExp("^".concat(V.default.escape(s)), "i"),
                 containQuery: RegExp(V.default.escape(s), "i"),
@@ -702,7 +702,7 @@ function(e, t, n) {
         },
         queryStickers(e) {
             let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-                [n, i] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [null, Q],
+                [n, i] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [null, q],
                 {
                     stickerMetadata: r
                 } = A.default,
@@ -751,7 +751,7 @@ function(e, t, n) {
             }
             return 0 === (l = o()(l).sortBy(e => -1 * e.score).value()).length && (l = Z), l
         },
-        matchSentinel: (e, t, n) => !q.test(t) && e === n,
+        matchSentinel: (e, t, n) => !Q.test(t) && e === n,
         hasSameRoleAsUsername(e, t) {
             if (!t.isPomelo()) return !1;
             let n = D.default.getGuild(e.getGuildId());

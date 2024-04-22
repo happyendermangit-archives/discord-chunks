@@ -99,15 +99,15 @@ function(e, t, n) {
         } = (0, p.useUserProfileAnalyticsContext)(), K = S || t.isClyde(), {
             avatarDecorationSrc: z,
             avatarSrc: X,
-            eventHandlers: Q
+            eventHandlers: q
         } = (0, R.default)({
             user: t,
             guildId: E,
             size: G,
             animateOnHover: O
-        }), q = (0, i.jsx)("div", {
+        }), Q = (0, i.jsx)("div", {
             className: b.avatarHoverTarget,
-            ...Q,
+            ...q,
             children: (0, i.jsx)(B, {
                 src: null != s ? s : X,
                 avatarDecoration: z,
@@ -147,7 +147,7 @@ function(e, t, n) {
                         analyticsLocation: k.location
                     }), null == f || f()
                 },
-                children: [q, !K && function() {
+                children: [Q, !K && function() {
                     let e = null != z,
                         t = e ? w : (0, d.getAvatarSize)(G);
                     return (0, i.jsx)(h.default, {

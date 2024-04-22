@@ -63,9 +63,9 @@ function(e, t, n) {
             g = E.default.getMutualFriendsCount(e),
             L = E.default.isFetchingProfile(e),
             D = !Array.isArray(R) && T,
-            v = null == C && S,
+            v = !Array.isArray(C) && S,
             M = null == g && f,
-            y = (null == O ? void 0 : O.profileFetchFailed) || !L && (D || v || M),
+            y = (null == O ? void 0 : O.profileFetchFailed) || !L && (D || M || v),
             P = A ? I.default : void 0,
             U = !1;
         null != N && (U = null == E.default.getGuildMemberProfile(e, N)), !(!y && !U && (L || Date.now() - (null !== (_ = null == O ? void 0 : O.lastFetched) && void 0 !== _ ? _ : 0) < 6e4)) && (m ? await i.default.wait(() => (0, r.fetchProfile)(e, {

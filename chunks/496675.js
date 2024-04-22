@@ -245,7 +245,7 @@ function(e, t, n) {
         }
     }
 
-    function Q() {
+    function q() {
         y = {}, M = {}, P = {}, U = 0
     }
     a = "PermissionStore", (s = "displayName") in(r = X) ? Object.defineProperty(r, s, {
@@ -260,7 +260,7 @@ function(e, t, n) {
         CACHE_LOADED: F,
         CACHE_LOADED_LAZY: F,
         CONNECTION_CLOSED: function() {
-            Q()
+            q()
         },
         GUILD_CREATE: V,
         GUILD_UPDATE: V,
@@ -337,7 +337,7 @@ function(e, t, n) {
         GUILD_ROLE_CREATE: j,
         GUILD_ROLE_UPDATE: j,
         GUILD_ROLE_DELETE: j,
-        LOGOUT: Q,
+        LOGOUT: q,
         STAGE_INSTANCE_CREATE: W,
         STAGE_INSTANCE_UPDATE: W,
         STAGE_INSTANCE_DELETE: W,

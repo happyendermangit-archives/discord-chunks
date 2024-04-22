@@ -54,8 +54,8 @@ function(e, t, n) {
             location: g.QuestContent.MEMBERS_LIST
         }), x = (0, C.useIsQuestExpired)(N), H = (null == N ? void 0 : null === (t = N.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, Y = (null == N ? void 0 : null === (S = N.userStatus) || void 0 === S ? void 0 : S.enrolledAt) != null, j = (null == N ? void 0 : null === (h = N.userStatus) || void 0 === h ? void 0 : h.completedAt) != null, W = (0, l.useStateFromStores)([A.default], () => A.default.getState().theme), K = (0, u.isThemeDark)(W) ? P.ThemeTypes.DARK : P.ThemeTypes.LIGHT, z = (0, l.useStateFromStores)([f.default], () => f.default.useReducedMotion), {
             ref: X,
-            height: Q
-        } = (0, I.default)(), [q, Z] = r.useState(z), J = (0, T.useWindowDispatch)(), $ = (0, a.useListContainerScrollerRef)();
+            height: q
+        } = (0, I.default)(), [Q, Z] = r.useState(z), J = (0, T.useWindowDispatch)(), $ = (0, a.useListContainerScrollerRef)();
         r.useEffect(() => {
             let e = $.current;
             return null == e || e.addEventListener("scroll", B), () => {
@@ -66,7 +66,7 @@ function(e, t, n) {
                 from: {
                     height: 0
                 },
-                height: null != Q ? Q : 0,
+                height: null != q ? q : 0,
                 config: {
                     mass: 1,
                     tension: 170,
@@ -77,7 +77,7 @@ function(e, t, n) {
                 immediate: z,
                 onRest: () => Z(!0)
             }),
-            et = (0, s.useTransition)(q, {
+            et = (0, s.useTransition)(Q, {
                 from: {
                     opacity: 0,
                     scale: 0
@@ -158,12 +158,12 @@ function(e, t, n) {
                 ref: t => {
                     e.current = t
                 },
-                "aria-expanded": q,
+                "aria-expanded": Q,
                 className: b.wrapper,
                 style: {
                     width: p,
                     height: ee.height,
-                    overflow: q ? "visible" : "hidden",
+                    overflow: Q ? "visible" : "hidden",
                     borderRadius: ei
                 },
                 children: (0, i.jsxs)("div", {

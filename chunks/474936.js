@@ -11,7 +11,7 @@ function(e, t, n) {
             return eP
         },
         AllSeasonalGiftStyles: function() {
-            return eQ
+            return eq
         },
         AnalyticsPremiumFeatureNames: function() {
             return d
@@ -29,7 +29,7 @@ function(e, t, n) {
             return A
         },
         CUSTOM_GIFT_MESSAGE_MAX_LENGTH: function() {
-            return eq
+            return eQ
         },
         DEFAULT_APPLE_GRACE_PERIOD_DAYS: function() {
             return es
@@ -77,7 +77,7 @@ function(e, t, n) {
             return eG
         },
         MULTI_MONTH_PLANS: function() {
-            return q
+            return Q
         },
         NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: function() {
             return ei
@@ -95,7 +95,7 @@ function(e, t, n) {
             return et
         },
         PREMIUM_GUILD_SUBSCRIPTION_PLANS: function() {
-            return Q
+            return q
         },
         PREMIUM_MONTHLY_PLANS: function() {
             return Z
@@ -283,8 +283,8 @@ function(e, t, n) {
     (O = s || (s = {})).NONE_MONTH = "628379151761408000", O.NONE_YEAR = "628381571568631808", O.PREMIUM_MONTH_TIER_0 = "978380692553465866", O.PREMIUM_YEAR_TIER_0 = "1024422698568122368", O.PREMIUM_MONTH_TIER_1 = "511651871736201216", O.PREMIUM_YEAR_TIER_1 = "511651876987469824", O.PREMIUM_MONTH_TIER_2 = "511651880837840896", O.PREMIUM_YEAR_TIER_2 = "511651885459963904", O.PREMIUM_MONTH_GUILD = "590665532894740483", O.PREMIUM_YEAR_GUILD = "590665538238152709", O.NONE_3_MONTH = "944265614527037440", O.NONE_6_MONTH = "944265636643602432", O.PREMIUM_3_MONTH_TIER_2 = "642251038925127690", O.PREMIUM_6_MONTH_TIER_2 = "944037208325619722", O.PREMIUM_3_MONTH_GUILD = "944037355453415424", O.PREMIUM_6_MONTH_GUILD = "944037391444738048", O.PREMIUM_MONTH_LEGACY = "511651856145973248", O.PREMIUM_YEAR_LEGACY = "511651860671627264";
     let z = new Set(["978380692553465866", "1024422698568122368", "511651871736201216", "511651876987469824", "511651880837840896", "642251038925127690", "944037208325619722", "511651885459963904", "511651856145973248", "511651860671627264"]),
         X = new Set(["511651880837840896", "642251038925127690", "944037208325619722", "511651885459963904"]),
-        Q = new Set(["590665532894740483", "944037355453415424", "944037391444738048", "590665538238152709"]),
-        q = new Set(["642251038925127690", "944037208325619722", "944037355453415424", "944037391444738048"]),
+        q = new Set(["590665532894740483", "944037355453415424", "944037391444738048", "590665538238152709"]),
+        Q = new Set(["642251038925127690", "944037208325619722", "944037355453415424", "944037391444738048"]),
         Z = new Set(["978380692553465866", "511651871736201216", "511651880837840896"]),
         J = Object.freeze({
             "978380684370378762": "978380692553465866",
@@ -635,8 +635,8 @@ function(e, t, n) {
         eK = [1, 2, 3],
         ez = [4, 5, 7, 6],
         eX = [8, 9, 11, 10],
-        eQ = eX.concat(eK),
-        eq = 190,
+        eq = eX.concat(eK),
+        eQ = 190,
         eZ = 3,
         eJ = 30
 }

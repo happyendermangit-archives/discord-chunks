@@ -67,8 +67,8 @@ function(e, t, n) {
         K = n("397394"),
         z = n("574384"),
         X = n("981631"),
-        Q = n("689938"),
-        q = n("418089");
+        q = n("689938"),
+        Q = n("418089");
     let Z = "oauth2-authorize-header-id";
 
     function J() {
@@ -110,21 +110,21 @@ function(e, t, n) {
             appDetails: u
         } = et(n), d = (0, s.jsxs)(s.Fragment, {
             children: [(0, s.jsxs)("div", {
-                className: q.content,
+                className: Q.content,
                 children: [i, r, null == o ? u : null]
             }), a]
         });
         return t ? (0, s.jsx)("div", {
-            className: l()(q.authorize, {
-                [q.inApp]: n.inApp
+            className: l()(Q.authorize, {
+                [Q.inApp]: n.inApp
             }),
             children: (0, s.jsx)(f.ScrollerThin, {
                 orientation: "auto",
                 children: d
             })
         }) : (0, s.jsx)("div", {
-            className: l()(q.authorize, {
-                [q.inApp]: n.inApp
+            className: l()(Q.authorize, {
+                [Q.inApp]: n.inApp
             }),
             children: (0, s.jsx)("div", {
                 children: d
@@ -191,18 +191,18 @@ function(e, t, n) {
                     accountScopes: n
                 }
             }, [null == eK ? void 0 : eK.scopes, ea, eY]),
-            eQ = a.useMemo(() => {
+            eq = a.useMemo(() => {
                 var e;
                 let t = eY ? c.deserialize(null !== (e = null == eK ? void 0 : eK.permissions) && void 0 !== e ? e : 0) : eo;
                 return null != t ? t : y.NONE
             }, [null == eK ? void 0 : eK.permissions, eo, eY]),
-            eq = a.useRef(!1),
+            eQ = a.useRef(!1),
             [eZ, eJ] = a.useState(null != em ? em : []),
             [e$, e0] = a.useState(null != em && em.length > 0);
         a.useEffect(() => {
-            if (eq.current) return;
+            if (eQ.current) return;
             let e = async () => {
-                eq.current = !0;
+                eQ.current = !0;
                 try {
                     let {
                         disclosures: e,
@@ -215,7 +215,7 @@ function(e, t, n) {
                     } = t;
                     ev(Error(null != e.message ? e.message : "".concat(Object.keys(e)[0], ": ").concat(Object.values(e)[0])))
                 } finally {
-                    eq.current = !1
+                    eQ.current = !1
                 }
             };
             null == em && e()
@@ -249,7 +249,7 @@ function(e, t, n) {
                         state: en,
                         nonce: ei,
                         integrationType: ex,
-                        permissions: c.remove(eQ, ek),
+                        permissions: c.remove(eq, ek),
                         guildId: ex === _.ApplicationIntegrationType.GUILD_INSTALL && null != eU ? eU : void 0,
                         channelId: ex === _.ApplicationIntegrationType.GUILD_INSTALL && null != eG ? eG : void 0
                     });
@@ -274,14 +274,14 @@ function(e, t, n) {
                     let e = t.body;
                     (null == e ? void 0 : e.message) != null && "" !== e.message ? ev(Error(e.message)) : ev(e), eL(1), ey(!1)
                 }
-            }, [eh, eE, eS, null == eR ? void 0 : eR.application, eV, eA, W, ez, J, $, ee, et, en, ei, eQ, ek, eU, ex, eG, eZ]),
+            }, [eh, eE, eS, null == eR ? void 0 : eR.application, eV, eA, W, ez, J, $, ee, et, en, ei, eq, ek, eU, ex, eG, eZ]),
             e2 = a.useRef(!1),
             e3 = a.useCallback(async () => {
                 if (!v.default.isAuthenticated()) {
                     (0, b.logoutWithRedirect)(eN);
                     return
                 }
-                if (!eq.current) {
+                if (!eQ.current) {
                     if (!e2.current) {
                         e2.current = !0;
                         try {
@@ -336,8 +336,8 @@ function(e, t, n) {
                 if (null == ex || null != eR || null != eD) return;
                 ex === _.ApplicationIntegrationType.USER_INSTALL && (eb(null), ew(null));
                 let e = ez.filter(e => !k.ValidScopes.includes(e));
-                0 === ez.length ? ev(Error("No scopes were provided.")) : e.length > 0 ? ev(Error("Invalid scope: ".concat(e[0]))) : (0, w.containsDisallowedPermission)(eQ) ? ev(Error("Invalid permission(s) provided.")) : e3()
-            }, [e$, e3, ez, eQ, ex, eR, eD]), eD instanceof Error) return {
+                0 === ez.length ? ev(Error("No scopes were provided.")) : e.length > 0 ? ev(Error("Invalid scope: ".concat(e[0]))) : (0, w.containsDisallowedPermission)(eq) ? ev(Error("Invalid permission(s) provided.")) : e3()
+            }, [e$, e3, ez, eq, ex, eR, eD]), eD instanceof Error) return {
             body: (0, s.jsx)(K.OAuth2Error, {
                 message: eD.message
             })
@@ -391,7 +391,7 @@ function(e, t, n) {
                         selectedGuildId: eU,
                         onChannelChange: ew
                     }) : null]
-                }), ez.includes(X.OAuth2Scopes.BOT) && !c.equals(eQ, y.NONE) && (f = 2), e4.length > 1 && (T = 0), e6 = tn && null == eV || tt && null == eG;
+                }), ez.includes(X.OAuth2Scopes.BOT) && !c.equals(eq, y.NONE) && (f = 2), e4.length > 1 && (T = 0), e6 = tn && null == eV || tt && null == eG;
                 break;
             case 2:
                 if (null == eR) return {
@@ -399,7 +399,7 @@ function(e, t, n) {
                 };
                 l = (0, s.jsx)(x.default, {
                     application: eR.application,
-                    permissions: eQ,
+                    permissions: eq,
                     deniedPermissions: ek,
                     onPermissionsChange: (e, t) => {
                         eB(n => e ? c.remove(n, t) : c.add(n, t))
@@ -428,26 +428,26 @@ function(e, t, n) {
             location: eN,
             isTrustedName: eI
         })), e8 && (C = (0, s.jsxs)("div", {
-            className: q.footer,
+            className: Q.footer,
             children: [null != T ? (0, s.jsx)(I.Button, {
                 look: I.Button.Looks.LINK,
                 color: I.Button.Colors.PRIMARY,
                 onClick: () => eL(T),
-                children: Q.default.Messages.BACK
+                children: q.default.Messages.BACK
             }) : (0, s.jsx)(I.Button, {
                 look: I.Button.Looks.LINK,
                 color: I.Button.Colors.PRIMARY,
                 onClick: () => e1(!1),
-                children: Q.default.Messages.CANCEL
+                children: q.default.Messages.CANCEL
             }), 0 !== eg ? null != f ? (0, s.jsx)(I.Button, {
                 onClick: () => eL(f),
                 disabled: e6,
-                children: Q.default.Messages.CONTINUE
+                children: q.default.Messages.CONTINUE
             }) : (0, s.jsx)(I.Button, {
                 onClick: () => e1(!0),
                 disabled: e6,
                 submitting: eM,
-                children: Q.default.Messages.AUTHORIZE
+                children: q.default.Messages.AUTHORIZE
             }) : null]
         })), {
             header: R,
@@ -476,7 +476,7 @@ function(e, t, n) {
             })
         }));
         else if (a && (null == i ? void 0 : i.startsWith(X.Routes.OAUTH2_ERROR)))(0, T.openModal)(e => {
-            let t = r.error_description || r.error || Q.default.Messages.OAUTH2_UNKNOWN_ERROR;
+            let t = r.error_description || r.error || q.default.Messages.OAUTH2_UNKNOWN_ERROR;
             return Array.isArray(t) && (t = t[0]), (0, s.jsx)(W.OAuth2Modal, {
                 ...e,
                 "aria-labelledby": Z,

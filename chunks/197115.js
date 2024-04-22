@@ -166,9 +166,9 @@ function(e, t, n) {
             })]
         });
         let X = O.default.Messages.APPLICATION_STORE_GET_PREMIUM,
-            Q = null != W ? (0, m.getPremiumPlanItem)(W) : null,
-            q = null != Q ? m.default.getPremiumType(Q.planId) : null == Y ? void 0 : Y.premiumType,
-            Z = r === N.PremiumSubscriptionSKUs.TIER_2 && null != q && [N.PremiumTypes.TIER_0, N.PremiumTypes.TIER_1].includes(q);
+            q = null != W ? (0, m.getPremiumPlanItem)(W) : null,
+            Q = null != q ? m.default.getPremiumType(q.planId) : null == Y ? void 0 : Y.premiumType,
+            Z = r === N.PremiumSubscriptionSKUs.TIER_2 && null != Q && [N.PremiumTypes.TIER_0, N.PremiumTypes.TIER_1].includes(Q);
         Z && (X = O.default.Messages.BILLING_SWITCH_PLAN_UPGRADE);
         let J = null != W && W.status !== p.SubscriptionStatusTypes.ACCOUNT_HOLD && !(0, E.isNoneSubscription)(W.planId) && !Z,
             $ = J ? null != V ? V : function(e) {
@@ -189,7 +189,7 @@ function(e, t, n) {
                 }
             }({
                 ctaSubscriptionSkuId: r,
-                currentPremiumType: q
+                currentPremiumType: Q
             }) : null;
 
         function ee(e) {

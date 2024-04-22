@@ -152,28 +152,28 @@ function(e, t, n) {
                 children: e.map(z)
             });
         if (U !== A.EmojiCategoryTypes.TOP_GUILD_EMOJI) return X(t);
-        let Q = t.filter(e => !!B && e.type === S.EmojiGridItemTypes.CREATE_EMOJI || e.subCategory === A.EmojiSubCategory.TOP_GUILD_EMOJI || e.subCategory === A.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && !d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id)),
-            q = t.filter(e => e.subCategory === A.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id));
-        return 0 === q.length ? X(t) : (0, i.jsxs)("div", {
+        let q = t.filter(e => !!B && e.type === S.EmojiGridItemTypes.CREATE_EMOJI || e.subCategory === A.EmojiSubCategory.TOP_GUILD_EMOJI || e.subCategory === A.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && !d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id)),
+            Q = t.filter(e => e.subCategory === A.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id));
+        return 0 === Q.length ? X(t) : (0, i.jsxs)("div", {
             className: p.topEmojiSectionContainer,
             children: [(0, i.jsx)("div", {
                 className: a()(p.topEmojiContainer, {
-                    [p.noEmojis]: 0 === Q.length
+                    [p.noEmojis]: 0 === q.length
                 }),
-                children: X(Q)
+                children: X(q)
             }), (0, i.jsxs)("div", {
                 className: p.newlyAddedHighlightContainer,
                 children: [(0, i.jsx)("div", {
                     className: a()(p.newlyAddedHighlight, {
-                        [p.oneItem]: 1 === q.length,
-                        [p.alignRight]: Q.length > 0
+                        [p.oneItem]: 1 === Q.length,
+                        [p.alignRight]: q.length > 0
                     }),
-                    children: X(q)
+                    children: X(Q)
                 }), (0, i.jsxs)("div", {
                     className: a()(p.newlyAddedBadge, {
                         [p.newlyAddedBadgeLarge]: W,
                         [p.newlyAddedBadgeMedium]: K,
-                        [p.alignRight]: Q.length > 0
+                        [p.alignRight]: q.length > 0
                     }),
                     children: [(0, i.jsx)(T.default, {
                         foreground: p.newlyAddedBadgeStar

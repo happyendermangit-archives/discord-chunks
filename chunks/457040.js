@@ -47,8 +47,8 @@ function(e, t, n) {
         K = (0, R.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
         z = (0, R.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
         X = (0, R.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING),
-        Q = K + 2 * X,
-        q = z + 2 * X,
+        q = K + 2 * X,
+        Q = z + 2 * X,
         Z = a()(L.trackStickerSearchEmpty, 200),
         J = a()(L.trackStickerSearchResultsViewed, 200),
         $ = r.forwardRef(function(e, t) {
@@ -112,7 +112,7 @@ function(e, t, n) {
                     listWidth: eu,
                     listPaddingRight: Y,
                     stickerNodeMargin: eN ? j : W,
-                    stickerNodeWidth: eN ? Q : q
+                    stickerNodeWidth: eN ? q : Q
                 }),
                 eL = r.useCallback((e, t) => {
                     let {
