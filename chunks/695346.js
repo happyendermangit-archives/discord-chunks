@@ -59,7 +59,7 @@ function(e, t, n) {
             return eA
         },
         DisableGamesTab: function() {
-            return q
+            return Q
         },
         DisableHomeAutoNav: function() {
             return ev
@@ -197,7 +197,7 @@ function(e, t, n) {
             return R
         },
         ViewNsfwCommands: function() {
-            return Q
+            return q
         },
         ViewNsfwGuilds: function() {
             return X
@@ -398,7 +398,7 @@ function(e, t, n) {
         }, e => s.BoolValue.create({
             value: e
         })),
-        Q = (0, o.defineProtoSetting)("textAndImages", "viewNsfwCommands", e => {
+        q = (0, o.defineProtoSetting)("textAndImages", "viewNsfwCommands", e => {
             var t;
             return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t
         }, e => s.BoolValue.create({
@@ -410,7 +410,7 @@ function(e, t, n) {
     }, e => s.BoolValue.create({
         value: e
     }));
-    let q = (0, o.defineProtoSetting)("gameLibrary", "disableGamesTab", e => {
+    let Q = (0, o.defineProtoSetting)("gameLibrary", "disableGamesTab", e => {
             var t;
             return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t
         }, e => s.BoolValue.create({

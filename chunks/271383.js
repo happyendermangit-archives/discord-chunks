@@ -265,7 +265,7 @@ function(e, t, n) {
         return !0
     }
 
-    function Q(e) {
+    function q(e) {
         let t = g[e.guildId];
         if (null == t) return !1;
         let n = O.default.getGuild(e.guildId);
@@ -289,7 +289,7 @@ function(e, t, n) {
         }
     }
 
-    function q(e) {
+    function Q(e) {
         let {
             guildId: t
         } = e, n = g[t];
@@ -573,8 +573,8 @@ function(e, t, n) {
             } = e;
             return K(t, Object.values(n).map(e => e.owner).filter(A.isNotNullish))
         },
-        GUILD_ROLE_UPDATE: Q,
-        GUILD_ROLE_DELETE: Q,
+        GUILD_ROLE_UPDATE: q,
+        GUILD_ROLE_DELETE: q,
         GUILD_ROLE_MEMBER_REMOVE: function(e) {
             let {
                 guildId: t,
@@ -636,8 +636,8 @@ function(e, t, n) {
                 fullProfileLoadedTimestamp: Date.now()
             }), G(n, i[t.user.id])
         },
-        IMPERSONATE_UPDATE: q,
-        IMPERSONATE_STOP: q,
+        IMPERSONATE_UPDATE: Q,
+        IMPERSONATE_STOP: Q,
         PASSIVE_UPDATE_V1: function(e) {
             return null != e.members && K(e.guildId, e.members)
         },

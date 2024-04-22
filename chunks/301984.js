@@ -25,14 +25,33 @@ function(e, t, n) {
     function h(e) {
         let {
             user: t,
-            friendToken: n
+            friendToken: h
         } = e, {
-            trackUserProfileAction: h
-        } = (0, I.useUserProfileAnalyticsContext)(), A = (0, r.useStateFromStores)([d.default], () => d.default.getId() === (null == t ? void 0 : t.id)), m = (0, r.useStateFromStores)([_.default], () => null != t ? _.default.getRelationshipType(t.id) : f.RelationshipTypes.NONE);
-        return null == t || t.bot || A || m === f.RelationshipTypes.BLOCKED ? null : m === f.RelationshipTypes.FRIEND ? (0, i.jsx)(T.default, {
+            trackUserProfileAction: A
+        } = (0, I.useUserProfileAnalyticsContext)(), m = (0, r.useStateFromStores)([d.default], () => d.default.getId() === (null == t ? void 0 : t.id)), N = (0, r.useStateFromStores)([_.default], () => null != t ? _.default.getRelationshipType(t.id) : f.RelationshipTypes.NONE);
+        return null == t || t.bot || m || N === f.RelationshipTypes.BLOCKED ? null : N === f.RelationshipTypes.FRIEND ? (0, i.jsx)(T.default, {
             icon: a.UserCheckIcon,
-            text: S.default.Messages.FRIENDS
-        }) : m === f.RelationshipTypes.PENDING_INCOMING ? (0, i.jsxs)(i.Fragment, {
+            text: S.default.Messages.FRIENDS,
+            onClick: () => (function(e) {
+                let t = () => {
+                    A({
+                        action: "REMOVE_FRIEND"
+                    }), u.default.removeFriend(e.id, {
+                        location: "UserProfileFriendRequestButtons"
+                    })
+                };
+                (0, l.openModalLazy)(async () => {
+                    let {
+                        default: r
+                    } = await n.e("69938").then(n.bind(n, "637697"));
+                    return n => (0, i.jsx)(r, {
+                        user: e,
+                        onConfirmRemoveFriend: t,
+                        ...n
+                    })
+                })
+            })(t)
+        }) : N === f.RelationshipTypes.PENDING_INCOMING ? (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(T.default, {
                 icon: e => (0, i.jsx)(s.CheckmarkLargeIcon, {
                     ...e,
@@ -40,23 +59,23 @@ function(e, t, n) {
                 }),
                 text: S.default.Messages.ACCEPT_FRIEND_REQUEST,
                 onClick: () => {
-                    h({
+                    A({
                         action: "ACCEPT_FRIEND_REQUEST"
                     }), u.default.addRelationship({
                         userId: t.id,
-                        friendToken: n
+                        friendToken: h
                     })
                 }
             }), (0, i.jsx)(T.default, {
                 icon: c.default,
                 text: S.default.Messages.IGNORE_FRIEND_REQUEST,
                 onClick: () => {
-                    h({
+                    A({
                         action: "IGNORE_FRIEND_REQUEST"
                     }), u.default.cancelFriendRequest(t.id)
                 }
             })]
-        }) : m === f.RelationshipTypes.PENDING_OUTGOING ? (0, i.jsx)(T.default, {
+        }) : N === f.RelationshipTypes.PENDING_OUTGOING ? (0, i.jsx)(T.default, {
             icon: o.UserClockIcon,
             text: S.default.Messages.REQUEST_SENT,
             disabled: !0
@@ -64,11 +83,11 @@ function(e, t, n) {
             icon: E.default,
             text: S.default.Messages.ADD_FRIEND,
             onClick: () => {
-                h({
+                A({
                     action: "SEND_FRIEND_REQUEST"
                 }), u.default.addRelationship({
                     userId: t.id,
-                    friendToken: n
+                    friendToken: h
                 })
             }
         })

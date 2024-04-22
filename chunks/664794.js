@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return h
+            return S
         }
     });
     var i = n("735250");
@@ -14,75 +14,66 @@ function(e, t, n) {
         l = n("858488"),
         u = n("389052"),
         d = n("813872"),
-        _ = n("822972"),
-        c = n("622724"),
-        E = n("314897"),
-        I = n("808268"),
-        T = n("785717"),
-        f = n("537387"),
-        S = n("689938");
+        _ = n("622724"),
+        c = n("314897"),
+        E = n("808268"),
+        I = n("785717"),
+        T = n("537387"),
+        f = n("689938");
 
-    function h(e) {
+    function S(e) {
         let {
             user: t,
             guildId: n,
-            channelId: h,
-            viewProfileItem: A,
-            onClose: m
-        } = e, N = (0, r.useStateFromStores)([E.default], () => E.default.getId() === t.id), {
-            trackUserProfileAction: p
-        } = (0, T.useUserProfileAnalyticsContext)(), {
-            analyticsLocations: O,
-            newestAnalyticsLocation: R
-        } = (0, o.default)(a.default.USER_PROFILE_OVERFLOW_MENU), C = (0, l.default)({
+            channelId: S,
+            viewProfileItem: h,
+            onClose: A
+        } = e, m = (0, r.useStateFromStores)([c.default], () => c.default.getId() === t.id), {
+            trackUserProfileAction: N
+        } = (0, I.useUserProfileAnalyticsContext)(), {
+            analyticsLocations: p,
+            newestAnalyticsLocation: O
+        } = (0, o.default)(a.default.USER_PROFILE_OVERFLOW_MENU), R = (0, l.default)({
             user: t,
-            onAction: () => p({
+            onAction: () => N({
                 action: "PRESS_SET_FRIEND_NICKNAME",
-                analyticsLocations: O
+                analyticsLocations: p
             })
-        }), g = (0, d.default)({
+        }), C = (0, d.default)({
             userId: t.id,
             guildId: null != n ? n : null,
-            channelId: h,
-            location: R,
+            channelId: S,
+            location: O,
             onAction: () => {
-                p({
+                N({
                     action: "PRESS_MOD_VIEW",
-                    analyticsLocations: O
-                }), null == m || m()
+                    analyticsLocations: p
+                }), null == A || A()
             }
-        }), L = (0, _.default)({
+        }), g = (0, u.default)({
             user: t,
             color: "danger",
-            location: R,
-            onAction: () => p({
-                action: "REMOVE_FRIEND",
-                analyticsLocations: O
-            })
-        }), D = (0, u.default)({
-            user: t,
-            color: "danger",
-            location: R,
-            onBlock: () => p({
+            location: O,
+            onBlock: () => N({
                 action: "BLOCK",
-                analyticsLocations: O
+                analyticsLocations: p
             }),
-            onUnblock: () => p({
+            onUnblock: () => N({
                 action: "UNBLOCK",
-                analyticsLocations: O
+                analyticsLocations: p
             })
-        }), v = (0, c.default)({
+        }), L = (0, _.default)({
             user: t,
             guildId: n,
             color: "danger",
-            location: R,
-            onAction: () => p({
+            location: O,
+            onAction: () => N({
                 action: "REPORT",
-                analyticsLocations: O
+                analyticsLocations: p
             })
         });
-        return N ? null : (0, i.jsx)(o.AnalyticsLocationProvider, {
-            value: O,
+        return m ? null : (0, i.jsx)(o.AnalyticsLocationProvider, {
+            value: p,
             children: (0, i.jsx)(s.Popout, {
                 renderPopout: e => {
                     let {
@@ -92,16 +83,16 @@ function(e, t, n) {
                         navId: "user-profile-overflow-menu",
                         onSelect: void 0,
                         onClose: t,
-                        "aria-label": S.default.Messages.PROFILE_ACTIONS_MENU_LABEL,
+                        "aria-label": f.default.Messages.PROFILE_ACTIONS_MENU_LABEL,
                         children: [(0, i.jsxs)(s.MenuGroup, {
-                            children: [A, C, g]
+                            children: [h, R, C]
                         }), (0, i.jsxs)(s.MenuGroup, {
-                            children: [L, D, v]
+                            children: [g, L]
                         })]
                     })
                 },
-                children: e => (0, i.jsx)(f.default, {
-                    icon: I.default,
+                children: e => (0, i.jsx)(T.default, {
+                    icon: E.default,
                     ...e
                 })
             })
