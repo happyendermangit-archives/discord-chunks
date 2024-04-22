@@ -45,13 +45,15 @@ function(e, t, a) {
                 g = null !== (a = e.useScreen) && void 0 !== a && a;
             if (m && (0, s.isSplitMessagesTab)() && b === p.Routes.ME) {
                 (0, l.navigateToRootTab)({
-                    screen: "messages"
+                    screen: "messages",
+                    resetRoot: E
                 });
                 return
             }
             if (m && b === p.Routes.NOTIFICATIONS) {
                 (0, l.navigateToRootTab)({
-                    screen: "notifications"
+                    screen: "notifications",
+                    resetRoot: E
                 });
                 return
             }
@@ -91,7 +93,8 @@ function(e, t, a) {
                     if (!(0, s.isSplitMessagesTab)() && !_) {
                         (0, l.navigateToRootTab)({
                             screen: "guilds",
-                            guildId: a
+                            guildId: a,
+                            resetRoot: E
                         });
                         return
                     }
@@ -102,9 +105,11 @@ function(e, t, a) {
                     null == t || (0, s.shouldHandleNewPanelsRoute)(a) && !1 !== E ? a !== p.ME || _ ? (0, l.navigateToRootTab)({
                         screen: "guilds",
                         guildId: a,
-                        channelId: (0, s.isOnNewPanels)() ? t : void 0
+                        channelId: (0, s.isOnNewPanels)() ? t : void 0,
+                        resetRoot: E
                     }) : (0, l.navigateToRootTab)({
-                        screen: "messages"
+                        screen: "messages",
+                        resetRoot: E
                     }) : null != a && (0, l.navigateToChannel)({
                         channelId: t,
                         guildId: a,
@@ -134,7 +139,8 @@ function(e, t, a) {
                 return
             }
             m && (0, l.navigateToRootTab)({
-                screen: "messages"
+                screen: "messages",
+                resetRoot: E
             })
         }
         executeRouteRewrites(e, t) {
