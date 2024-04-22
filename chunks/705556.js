@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return I
+            return T
         }
     });
     var i = n("735250");
@@ -15,24 +15,26 @@ function(e, t, n) {
         u = n("185403"),
         d = n("785717"),
         _ = n("841040"),
-        c = n("537387"),
-        E = n("689938");
+        c = n("993409"),
+        E = n("537387"),
+        I = n("689938");
 
-    function I(e) {
+    function T(e) {
         let {
-            user: t,
-            guildId: n,
-            onClose: I
-        } = e, T = (0, r.useStateFromStores)([o.default], () => o.default.getId() === t.id), f = (0, r.useStateFromStores)([l.default], () => null != n ? l.default.getGuild(n) : null), {
-            trackUserProfileAction: S
-        } = (0, d.useUserProfileAnalyticsContext)(), h = (0, a.default)();
-        return T ? null == f ? (0, i.jsx)(c.default, {
+            type: t,
+            user: n,
+            guildId: T,
+            onClose: f
+        } = e, S = "action" === t ? c.default : E.default, h = (0, r.useStateFromStores)([o.default], () => o.default.getId() === n.id), A = (0, r.useStateFromStores)([l.default], () => null != T ? l.default.getGuild(T) : null), {
+            trackUserProfileAction: m
+        } = (0, d.useUserProfileAnalyticsContext)(), N = (0, a.default)();
+        return h ? null == A ? (0, i.jsx)(S, {
             icon: u.default,
-            text: E.default.Messages.EDIT_PROFILE,
+            text: I.default.Messages.EDIT_PROFILE,
             onClick: () => {
-                S({
+                m({
                     action: "EDIT_PROFILE"
-                }), h(), null == I || I()
+                }), N(), null == f || f()
             }
         }) : (0, i.jsx)(s.Popout, {
             renderPopout: e => {
@@ -40,15 +42,15 @@ function(e, t, n) {
                     closePopout: t
                 } = e;
                 return (0, i.jsx)(_.default, {
-                    guild: f,
+                    guild: A,
                     onClose: () => {
-                        t(), null == I || I()
+                        t(), null == f || f()
                     }
                 })
             },
-            children: e => (0, i.jsx)(c.default, {
+            children: e => (0, i.jsx)(S, {
                 icon: u.default,
-                text: E.default.Messages.EDIT_PROFILE,
+                text: I.default.Messages.EDIT_PROFILE,
                 ...e
             })
         }) : null

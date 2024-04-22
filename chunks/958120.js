@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return N
+            return p
         }
     });
     var i = n("735250");
@@ -17,64 +17,70 @@ function(e, t, n) {
         _ = n("998120"),
         c = n("530"),
         E = n("894374"),
-        I = n("790711"),
-        T = n("67152"),
-        f = n("901952"),
-        S = n("287612"),
-        h = n("165818"),
-        A = n("981631"),
-        m = n("797849");
+        I = n("705556"),
+        T = n("790711"),
+        f = n("67152"),
+        S = n("901952"),
+        h = n("287612"),
+        A = n("165818"),
+        m = n("981631"),
+        N = n("797849");
 
-    function N(e) {
+    function p(e) {
         let {
             user: t,
             displayProfile: n,
-            onOpenProfile: N,
-            guildId: p,
-            channelId: O,
-            onClose: R
+            onOpenProfile: p,
+            guildId: O,
+            channelId: R,
+            onClose: C
         } = e, {
-            moreUserDetailsEnabled: C
+            moreUserDetailsEnabled: g
         } = (0, l.useSimplifiedProfileExperiment)({
             location: "BiteSizeProfileBody"
-        }), g = o.default.getName(p, O, t), L = (0, u.default)(t.id, p), D = (0, r.useStateFromStores)([a.default], () => a.default.hidePersonalInformation), v = (0, r.useStateFromStores)([s.default], () => s.default.findActivity(t.id, e => e.type === A.ActivityTypes.PLAYING), [t]);
+        }), L = o.default.getName(O, R, t), D = (0, u.default)(t.id, O), v = (0, r.useStateFromStores)([a.default], () => a.default.hidePersonalInformation), M = (0, r.useStateFromStores)([s.default], () => s.default.findActivity(t.id, e => e.type === m.ActivityTypes.PLAYING), [t]);
         return (0, i.jsxs)("div", {
-            className: m.body,
+            className: N.body,
             children: [(0, i.jsx)(c.default, {
                 user: t,
-                guildId: p,
-                usernameIcon: t.hasAvatarForGuild(p) && (0, i.jsx)(I.default, {
+                guildId: O,
+                usernameIcon: t.hasAvatarForGuild(O) && (0, i.jsx)(T.default, {
                     user: t,
-                    nickname: g
+                    nickname: L
                 }),
                 tags: (0, i.jsxs)(i.Fragment, {
                     children: [(0, i.jsx)(E.UserProfilePronounsTag, {
                         pronouns: null == n ? void 0 : n.pronouns
                     }), (0, i.jsx)(E.UserProfileBadgesTag, {
                         user: t,
-                        guildId: p
+                        guildId: O
                     })]
                 }),
-                nicknameIcon: C && !D ? (0, i.jsx)(_.default, {
+                nicknameIcon: g && !v ? (0, i.jsx)(_.default, {
                     user: t,
-                    onOpenProfile: N
+                    onOpenProfile: p
                 }) : null
-            }), (0, i.jsx)(S.default, {
-                user: t,
-                onClose: R
-            }), C && (0, i.jsx)(T.default, {
-                user: t,
-                bio: null == n ? void 0 : n.bio,
-                hidePersonalInformation: D,
-                onClose: R
-            }), null != v && (0, i.jsx)(d.default, {
-                activity: v
             }), (0, i.jsx)(h.default, {
                 user: t,
-                guildId: p,
-                onClose: R
-            }), L && (0, i.jsx)(f.default, {
+                onClose: C
+            }), g && (0, i.jsx)(f.default, {
+                user: t,
+                bio: null == n ? void 0 : n.bio,
+                hidePersonalInformation: v,
+                onClose: C
+            }), null != M && (0, i.jsx)(d.default, {
+                activity: M
+            }), (0, i.jsx)(A.default, {
+                user: t,
+                guildId: O,
+                onClose: C
+            }), D && (0, i.jsx)(S.default, {
                 user: t
+            }), (0, i.jsx)(I.default, {
+                type: "action",
+                user: t,
+                guildId: O,
+                onClose: C
             })]
         })
     }

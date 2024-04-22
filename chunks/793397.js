@@ -61,7 +61,7 @@ function(e, t, n) {
                 premiumUserWithBanner: 212,
                 premiumUserWithoutBanner: 106,
                 default: 106
-            })(n)).with(r.UserProfileTypes.BITE_SIZE, () => 110).with(r.UserProfileTypes.FULL_SIZE, () => 210).with(r.UserProfileTypes.POMELO_POPOUT, () => 64).with(r.UserProfileTypes.SETTINGS, () => 100).with(r.UserProfileTypes.PANEL, () => 120).with(r.UserProfileTypes.CANCEL_MODAL, () => 42).exhaustive()
+            })(n)).with(r.UserProfileTypes.BITE_SIZE, () => 120).with(r.UserProfileTypes.FULL_SIZE, () => 210).with(r.UserProfileTypes.POMELO_POPOUT, () => 64).with(r.UserProfileTypes.SETTINGS, () => 100).with(r.UserProfileTypes.PANEL, () => 120).with(r.UserProfileTypes.CANCEL_MODAL, () => 42).exhaustive()
         },
         u = Object.freeze({
             [r.UserProfileTypes.POPOUT]: 340,
