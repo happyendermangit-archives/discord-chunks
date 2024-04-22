@@ -23,7 +23,6 @@ function(e, t, n) {
         WITHOUT_POSTAL_CODES: new Set(["AE", "AG", "AN", "AO", "AW", "BF", "BI", "BJ", "BM", "BO", "BQ", "BS", "BW", "BZ", "CD", "CF", "CG", "CI", "CK", "CM", "CW", "DJ", "DM", "ER", "FJ", "GA", "GD", "GH", "GM", "GQ", "GY", "HK", "HM", "IE", "JM", "KE", "KI", "KM", "KN", "KP", "LY", "ML", "MO", "MR", "MW", "NA", "NR", "NU", "QA", "RW", "SB", "SC", "SL", "SR", "ST", "SX", "SY", "TD", "TF", "TG", "TK", "TL", "TO", "TV", "UG", "VU", "YE", "ZA", "ZW"]),
         TAX_EXCLUSIVE: new Set(["CA", "US"]),
         TAX_ADDRESS_REQUIRE_POSTAL_CODE: new Set(["CA", "US"]),
-        NITRO_TAX_EXCLUSIVE_EXPERIMENT_COUNTRIES: new Set(["US"]),
         NITRO_TAX_EXCLUSIVE_EXPERIMENT_STATES: new Set(["TN", "WI"]),
         NITRO_TAX_EXCLUSIVE_PHASE_1_STATES: new Set(["IL", "NC", "NY", "OH", "PA", "TX", "VA", "WA"]),
         NITRO_TAX_EXCLUSIVE_PHASE_2_STATES: new Set(["AL", "AR", "AZ", "CO", "CT", "DC", "HI", "IA", "IN", "KS", "KY", "LA", "MA", "MD", "ME", "MI", "MN", "MO", "MS", "MT", "ND", "NE", "NH", "NJ", "NM", "OK", "RI", "SC", "SD", "UT", "VT", "WV", "WY"])
