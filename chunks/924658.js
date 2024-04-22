@@ -460,6 +460,9 @@ function(e) {
         CLAN_DISCOVERY_PLAYSTYLE_ARIA_LABEL: "Playstyle",
         CLANS: "Clans",
         CLAN_USER_PROFILE_PRIMARY_CLAN: "Primary Clan",
-        MESSAGE_ACTION_FORWARD: "Forward"
+        MESSAGE_ACTION_FORWARD: "Forward",
+        GUILD_POPOUT_ACTIVITY_EVENT_LOCATION: "Event in",
+        GUILD_POPOUT_ACTIVITY_EVENT_LOCATION_A11Y: "Event in {location}",
+        GUILD_POPOUT_ACTIVITY_EVENT_CREATED_BY: "Created by {creatorName}"
     })
 }
