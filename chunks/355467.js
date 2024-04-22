@@ -44,13 +44,13 @@ function(e, t, n) {
             return x
         },
         createBraintreePaymentSource: function() {
-            return k
+            return B
         },
         createCardToken: function() {
             return y
         },
         createPaymentRequestPaymentSource: function() {
-            return B
+            return k
         },
         createPaymentSource: function() {
             return v
@@ -83,7 +83,7 @@ function(e, t, n) {
             return eO
         },
         fetchMostRecentSubscription: function() {
-            return Q
+            return q
         },
         fetchPayment: function() {
             return W
@@ -98,7 +98,7 @@ function(e, t, n) {
             return z
         },
         getNitroAffinity: function() {
-            return q
+            return Q
         },
         getPerksRelevance: function() {
             return X
@@ -614,7 +614,7 @@ function(e, t, n) {
         })
     }
 
-    function B(e, t, n) {
+    function k(e, t, n) {
         let {
             token: i,
             billingAddressInfo: r
@@ -624,7 +624,7 @@ function(e, t, n) {
         })
     }
 
-    function k(e, t, n) {
+    function B(e, t, n) {
         return v(h.PaymentGateways.BRAINTREE, e, t, {
             analyticsLocation: n
         })
@@ -870,7 +870,7 @@ function(e, t, n) {
             })
         }
     }
-    async function q() {
+    async function Q() {
         try {
             let e = await a.HTTP.get(h.Endpoints.BILLING_NITRO_AFFINITY);
             o.default.dispatch({
@@ -883,7 +883,7 @@ function(e, t, n) {
             })
         }
     }
-    async function Q() {
+    async function q() {
         o.default.wait(() => {
             o.default.dispatch({
                 type: "BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_START"

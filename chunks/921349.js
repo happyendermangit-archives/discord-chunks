@@ -56,8 +56,8 @@ function(e, t, n) {
             isDisabled: U = !1,
             maxVisibleItems: G = 7,
             look: w = D.SelectLooks.FILLED,
-            autoFocus: B = !1,
-            popoutPosition: k = "bottom",
+            autoFocus: k = !1,
+            popoutPosition: B = "bottom",
             filter: x = !0,
             debounceTime: H,
             renderOptionLabel: Y = P,
@@ -66,8 +66,8 @@ function(e, t, n) {
             renderOptionSuffix: K = () => null,
             "aria-describedby": z,
             "aria-invalid": X,
-            "aria-labelledby": q,
-            "aria-required": Q,
+            "aria-labelledby": Q,
+            "aria-required": q,
             inputClassNames: Z,
             centerCaret: J = !1,
             onBlur: $,
@@ -191,10 +191,10 @@ function(e, t, n) {
                 setFocus: eU,
                 disableClickOnSpace: !0
             }),
-            eB = (0, p.default)(ew),
-            ek = (0, p.default)(em);
+            ek = (0, p.default)(ew),
+            eB = (0, p.default)(em);
         r.useEffect(() => {
-            let e = ek.current,
+            let e = eB.current,
                 t = eg.current;
             ec && null != t && !eN && requestAnimationFrame(() => {
                 let n = eh.current,
@@ -205,7 +205,7 @@ function(e, t, n) {
                 })
             })
         }, [ec, eN]), r.useEffect(() => {
-            let e = eB.current;
+            let e = ek.current;
             if (ec && !eN) {
                 var t;
                 let n = eu.current;
@@ -245,11 +245,11 @@ function(e, t, n) {
             e_(null), (!I || T) && eM(!1), eS(!1)
         }, [n, em, I, T, l, s, eM]);
         r.useLayoutEffect(() => {
-            if (B) {
+            if (k) {
                 var e;
                 null === (e = eu.current) || void 0 === e || e.focus()
             }
-        }, [B]);
+        }, [k]);
         let eV = r.useCallback(() => {
                 eT(""), eF(null), eM(!0)
             }, [eF, eM]),
@@ -305,7 +305,7 @@ function(e, t, n) {
                         renderOptionSuffix: K
                     })
                 },
-                position: k,
+                position: B,
                 children: (e, t) => {
                     let {
                         "aria-expanded": n,
@@ -362,9 +362,9 @@ function(e, t, n) {
                                         isEditing: ef,
                                         inputRef: eu,
                                         "aria-describedby": null != z ? z : es,
-                                        "aria-required": Q,
+                                        "aria-required": q,
                                         "aria-invalid": null != X ? X : null != ea,
-                                        "aria-labelledby": null != q ? q : er,
+                                        "aria-labelledby": null != Q ? Q : er,
                                         "aria-expanded": n,
                                         setInputRef: e => {
                                             u.current = e, eu.current = e
@@ -509,7 +509,7 @@ function(e, t, n) {
                         let {
                             row: n
                         } = e, r = o[n], a = I(r);
-                        return (0, i.jsx)(B, {
+                        return (0, i.jsx)(k, {
                             multi: m,
                             "aria-posinset": n,
                             "aria-setsize": o.length,
@@ -585,7 +585,7 @@ function(e, t, n) {
         })
     }
 
-    function B(e) {
+    function k(e) {
         let {
             value: t,
             label: n,
@@ -624,14 +624,14 @@ function(e, t, n) {
             }), " ", null != s && (0, i.jsx)("div", {
                 className: M.suffix,
                 children: s
-            }), " ", (0, i.jsx)(k, {
+            }), " ", (0, i.jsx)(B, {
                 isSelected: l,
                 multi: c
             })]
         })
     }
 
-    function k(e) {
+    function B(e) {
         let {
             isSelected: t,
             multi: n

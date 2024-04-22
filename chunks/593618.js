@@ -42,8 +42,8 @@ function(e, t, n) {
         b = n("944581"),
         G = n("632184"),
         w = n("170039"),
-        B = n("761374"),
-        k = n("602623"),
+        k = n("761374"),
+        B = n("602623"),
         F = n("624138"),
         V = n("510601"),
         x = n("59688"),
@@ -55,12 +55,12 @@ function(e, t, n) {
     let z = (0, F.cssValueToNumber)(d.default.GUILD_TOOLTIP_ICON_SIZE),
         X = (0, F.cssValueToNumber)(d.default.GUILD_TOOLTIP_ICON_SIZE_V_2);
 
-    function q(e, t, n) {
+    function Q(e, t, n) {
         return 0 === t.length ? null : (0, i.jsxs)("div", {
             className: W.row,
             children: [(0, i.jsx)(e, {
                 className: W.activityIcon
-            }), (0, i.jsx)(k.default, {
+            }), (0, i.jsx)(B.default, {
                 guildId: n,
                 users: t,
                 max: 6
@@ -68,7 +68,7 @@ function(e, t, n) {
         })
     }
 
-    function Q(e) {
+    function q(e) {
         let {
             muteConfig: t,
             className: n
@@ -118,12 +118,12 @@ function(e, t, n) {
             let e = 0;
             for (let t of T) e += A.default.getParticipantCount(t, m.StageChannelParticipantNamedIndex.AUDIENCE);
             return e
-        }), y = (0, u.useStateFromStoresArray)([O.default], () => O.default.getAllApplicationStreams().filter(e => e.guildId === d).map(e => e.ownerId), [d]), F = (0, V.useIsGamingVoiceActivityEnabled)("Guild Tooltip", !1), x = (0, u.useStateFromStoresArray)([g.default, R.default], () => S.filter(e => g.default.getActivities(e.id, d).some(e => (null == e ? void 0 : e.application_id) != null && null != R.default.getDetectableGame(null == e ? void 0 : e.application_id)))), H = q(P.default, x, d), j = F ? x.map(e => e.id) : [], K = (0, u.useStateFromStoresArray)([c.default], () => c.default.getEmbeddedActivitiesForGuild(d).flatMap(e => Array.from(e.userIds)), [d]), z = (0, u.useStateFromStoresArray)([D.default], () => K.map(e => D.default.getUser(e)), [K]), X = (0, u.useStateFromStoresArray)([D.default], () => y.map(e => D.default.getUser(e)), [y]), Z = q(G.default, S.filter(e => !y.includes(e.id) && !K.includes(e.id) && !j.includes(e.id)), d);
+        }), y = (0, u.useStateFromStoresArray)([O.default], () => O.default.getAllApplicationStreams().filter(e => e.guildId === d).map(e => e.ownerId), [d]), F = (0, V.useIsGamingVoiceActivityEnabled)("Guild Tooltip", !1), x = (0, u.useStateFromStoresArray)([g.default, R.default], () => S.filter(e => g.default.getActivities(e.id, d).some(e => (null == e ? void 0 : e.application_id) != null && null != R.default.getDetectableGame(null == e ? void 0 : e.application_id)))), H = Q(P.default, x, d), j = F ? x.map(e => e.id) : [], K = (0, u.useStateFromStoresArray)([c.default], () => c.default.getEmbeddedActivitiesForGuild(d).flatMap(e => Array.from(e.userIds)), [d]), z = (0, u.useStateFromStoresArray)([D.default], () => K.map(e => D.default.getUser(e)), [K]), X = (0, u.useStateFromStoresArray)([D.default], () => y.map(e => D.default.getUser(e)), [y]), Z = Q(G.default, S.filter(e => !y.includes(e.id) && !K.includes(e.id) && !j.includes(e.id)), d);
         let J = (t = d, n = h, s = M, 0 === n.length ? null : (0, i.jsxs)("div", {
                 className: W.row,
                 children: [(0, i.jsx)(w.default, {
                     className: W.activityIcon
-                }), (0, i.jsx)(k.default, {
+                }), (0, i.jsx)(B.default, {
                     guildId: t,
                     users: n,
                     max: 3
@@ -140,8 +140,8 @@ function(e, t, n) {
                     })]
                 })]
             })),
-            $ = q(B.default, X.filter(e => null != e && !K.includes(e.id)), d),
-            ee = q(b.default, z, d),
+            $ = Q(k.default, X.filter(e => null != e && !K.includes(e.id)), d),
+            ee = Q(b.default, z, d),
             {
                 isMuted: et,
                 muteConfig: en
@@ -152,7 +152,7 @@ function(e, t, n) {
         return null != H && V.default.trackExposure({
             location: "Guild Tooltip"
         }), (0, i.jsxs)(i.Fragment, {
-            children: [J, Z, $, F && H, ee, et ? (0, i.jsx)(Q, {
+            children: [J, Z, $, F && H, ee, et ? (0, i.jsx)(q, {
                 muteConfig: en,
                 className: a()(W.muteText, {
                     [W.muteTextWithActivity]: null != Z || null != $

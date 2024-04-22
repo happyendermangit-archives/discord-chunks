@@ -32,9 +32,9 @@ function(e, t, n) {
         b = n("981631");
     let G = new Set,
         w = new E.default("MessageStore"),
-        B = !1;
+        k = !1;
 
-    function k() {
+    function B() {
         _.default.forEach(e => {
             _.default.commit(e.mutate({
                 ready: !1,
@@ -145,7 +145,7 @@ function(e, t, n) {
             return null != this.getMessages(e).findNewest(e => e.author.id === (null == t ? void 0 : t.id))
         }
         hasCurrentUserSentMessageSinceAppStart() {
-            return B
+            return k
         }
     }
     a = "MessageStore", (s = "displayName") in(r = j) ? Object.defineProperty(r, s, {
@@ -166,8 +166,8 @@ function(e, t, n) {
                 }
             }
         },
-        CONNECTION_OPEN: k,
-        OVERLAY_INITIALIZE: k,
+        CONNECTION_OPEN: B,
+        OVERLAY_INITIALIZE: B,
         CACHE_LOADED: function(e) {
             for (let [t, n] of p.default.entries(e.messages)) {
                 let e = _.default.getOrCreate(t).addCachedMessages(n, !0);
@@ -408,7 +408,7 @@ function(e, t, n) {
             let {
                 message: t
             } = e, n = U.default.getCurrentUser();
-            null != t && null != t.author && null != n && t.author.id === n.id && (B = !0)
+            null != t && null != t.author && null != n && t.author.id === n.id && (k = !0)
         }
     })
 }

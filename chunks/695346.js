@@ -53,13 +53,13 @@ function(e, t, n) {
             return eD
         },
         DefaultGuildsRestricted: function() {
-            return k
+            return B
         },
         DeveloperMode: function() {
             return eA
         },
         DisableGamesTab: function() {
-            return Q
+            return q
         },
         DisableHomeAutoNav: function() {
             return ev
@@ -134,7 +134,7 @@ function(e, t, n) {
             return K
         },
         NonSpamRetrainingOptIn: function() {
-            return B
+            return k
         },
         NotificationCenterAckedBeforeId: function() {
             return v
@@ -197,7 +197,7 @@ function(e, t, n) {
             return R
         },
         ViewNsfwCommands: function() {
-            return q
+            return Q
         },
         ViewNsfwGuilds: function() {
             return X
@@ -326,7 +326,7 @@ function(e, t, n) {
         }, e => s.BoolValue.create({
             value: e
         })),
-        B = (0, o.defineProtoSetting)("privacy", "nonSpamRetrainingOptIn", e => null == e ? void 0 : e.value, e => null == e ? void 0 : s.BoolValue.create({
+        k = (0, o.defineProtoSetting)("privacy", "nonSpamRetrainingOptIn", e => null == e ? void 0 : e.value, e => null == e ? void 0 : s.BoolValue.create({
             value: e
         }));
     (0, o.defineProtoSetting)("privacy", "contactSyncEnabled", e => {
@@ -335,7 +335,7 @@ function(e, t, n) {
     }, e => s.BoolValue.create({
         value: e
     }));
-    let k = (0, o.defineProtoSetting)("privacy", "defaultGuildsRestricted", e => null != e && e, e => e),
+    let B = (0, o.defineProtoSetting)("privacy", "defaultGuildsRestricted", e => null != e && e, e => e),
         F = (0, o.defineProtoSetting)("privacy", "restrictedGuildIds", e => null != e ? e : [], e => e);
     (0, o.defineProtoSetting)("privacy", "friendDiscoveryFlags", e => {
         var t;
@@ -398,7 +398,7 @@ function(e, t, n) {
         }, e => s.BoolValue.create({
             value: e
         })),
-        q = (0, o.defineProtoSetting)("textAndImages", "viewNsfwCommands", e => {
+        Q = (0, o.defineProtoSetting)("textAndImages", "viewNsfwCommands", e => {
             var t;
             return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t
         }, e => s.BoolValue.create({
@@ -410,7 +410,7 @@ function(e, t, n) {
     }, e => s.BoolValue.create({
         value: e
     }));
-    let Q = (0, o.defineProtoSetting)("gameLibrary", "disableGamesTab", e => {
+    let q = (0, o.defineProtoSetting)("gameLibrary", "disableGamesTab", e => {
             var t;
             return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t
         }, e => s.BoolValue.create({

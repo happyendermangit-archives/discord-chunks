@@ -61,8 +61,8 @@ function(e, t, n) {
         return n ? i.push(m.GuildFeedSectionTypes.HIGHLIGHTED) : t ? i.push(m.GuildFeedSectionTypes.READ) : i.push(m.GuildFeedSectionTypes.UNREAD), i
     }
     let w = {},
-        B = {},
         k = {},
+        B = {},
         F = {};
 
     function V(e, t, n) {
@@ -134,14 +134,14 @@ function(e, t, n) {
         })
     }
 
-    function q(e) {
+    function Q(e) {
         let {
             channel: t
         } = e;
-        return Q(t)
+        return q(t)
     }
 
-    function Q(e) {
+    function q(e) {
         var t;
         let n = e.guild_id;
         if (null == n) return !1;
@@ -191,7 +191,7 @@ function(e, t, n) {
         }
         getIsItemHidden(e, t) {
             var n;
-            return !!(null === (n = B[e]) || void 0 === n ? void 0 : n.has(t))
+            return !!(null === (n = k[e]) || void 0 === n ? void 0 : n.has(t))
         }
         getIsItemFeatured(e) {
             var t;
@@ -199,7 +199,7 @@ function(e, t, n) {
                 {
                     guildId: i
                 } = e;
-            return !!(null === (t = k[i]) || void 0 === t ? void 0 : t.has(n))
+            return !!(null === (t = B[i]) || void 0 === t ? void 0 : t.has(n))
         }
         getFeaturedItems(e) {
             var t;
@@ -223,7 +223,7 @@ function(e, t, n) {
             g[t] = {
                 loading: 0,
                 error: null
-            }, delete P[t], delete v[t], delete L[t], w[t] = new Set, B[t] = new Set, k[t] = new Set, y[t] = {}
+            }, delete P[t], delete v[t], delete L[t], w[t] = new Set, k[t] = new Set, B[t] = new Set, y[t] = {}
         },
         GUILD_FEED_FETCH_PAGE_START: function(e) {
             let {
@@ -256,7 +256,7 @@ function(e, t, n) {
                 _ = d;
             for (let e of o.results.items) {
                 let t = (0, f.createGuildFeedItemFromServer)(e, _);
-                if (null != t) _ += 1, null == u.get(t.id) && (t.featured && k[a].add(t.id), j(a, t), u.set(t.id, t))
+                if (null != t) _ += 1, null == u.get(t.id) && (t.featured && B[a].add(t.id), j(a, t), u.set(t.id, t))
             }
             let c = null !== (s = null === (i = L[a]) || void 0 === i ? void 0 : i.offset) && void 0 !== s ? s : 0;
             L[a] = {
@@ -286,7 +286,7 @@ function(e, t, n) {
             let i = {};
             for (let [e, r] of n.results.entries()) {
                 let n = (0, f.createGuildFeedItemFromServer)(r, e);
-                null != n && (0, f.isGuildFeedFeaturedItem)(n) && (n.featured && k[t].add(n.id), j(t, n), i[n.id] = n)
+                null != n && (0, f.isGuildFeedFeaturedItem)(n) && (n.featured && B[t].add(n.id), j(t, n), i[n.id] = n)
             }
             F[t] = i
         },
@@ -326,7 +326,7 @@ function(e, t, n) {
             } = e, {
                 guildId: a
             } = r, o = (0, A.getGuildFeedItemIdFromFeatureableItem)(r);
-            if (!(a in k) && (k[a] = new Set), k[a].add(o), !s.hoist) return;
+            if (!(a in B) && (B[a] = new Set), B[a].add(o), !s.hoist) return;
             let l = U(a),
                 u = null !== (i = l.get(o)) && void 0 !== i ? i : (0, h.createFakeGuildFeedItem)(r);
             null != u && (null != u.message && (null === (n = y[a]) || void 0 === n ? void 0 : null === (t = n[u.message.channel_id]) || void 0 === t ? void 0 : t[u.message.id]) == null && W(a, u.message), l.delete(u.id), u.featured = !0, u.seen = !1, l.set(u.id, u))
@@ -338,13 +338,13 @@ function(e, t, n) {
             } = e, {
                 guildId: a
             } = s, o = (0, A.getGuildFeedItemIdFromFeatureableItem)(s);
-            t = a, n = o, null === (i = k[t]) || void 0 === i || i.delete(n), null === (r = F[t]) || void 0 === r || delete r[n]
+            t = a, n = o, null === (i = B[t]) || void 0 === i || i.delete(n), null === (r = F[t]) || void 0 === r || delete r[n]
         },
         CHANNEL_SELECT: function() {
-            for (let e of T.default.keys(w)) null == B[e] && (B[e] = new Set), B[e] = new Set([...Array.from(B[e]), ...Array.from(w[e])]), delete w[e]
+            for (let e of T.default.keys(w)) null == k[e] && (k[e] = new Set), k[e] = new Set([...Array.from(k[e]), ...Array.from(w[e])]), delete w[e]
         },
-        CHANNEL_DELETE: q,
-        THREAD_DELETE: q,
+        CHANNEL_DELETE: Q,
+        THREAD_DELETE: Q,
         GUILD_DELETE: function(e) {
             var t;
             let {
@@ -359,10 +359,10 @@ function(e, t, n) {
                 channels: t
             } = e;
             for (let e of t)
-                if (null == e ? void 0 : e.hasFlag(N.ChannelFlags.GUILD_FEED_REMOVED)) return Q(e)
+                if (null == e ? void 0 : e.hasFlag(N.ChannelFlags.GUILD_FEED_REMOVED)) return q(e)
         },
         LOGOUT: function() {
-            C = {}, v = {}, M = {}, y = {}, P = {}, w = {}, B = {}, k = {}, F = {}
+            C = {}, v = {}, M = {}, y = {}, P = {}, w = {}, k = {}, B = {}, F = {}
         },
         MESSAGE_UPDATE: function(e) {
             let {

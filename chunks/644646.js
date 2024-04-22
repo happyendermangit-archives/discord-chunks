@@ -23,13 +23,14 @@ function(e, t, n) {
             quest: n,
             autoplay: s = !0,
             learnMoreStyle: A = null
-        } = e, m = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), N = r.useMemo(() => (0, I.isAssetAnimated)(n.config.assets.rewardTile), [n]), p = r.useCallback(() => {
+        } = e, m = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), N = r.useMemo(() => (0, I.isAssetAnimated)(n.config.assets.rewardTile), [n]), p = r.useCallback(t => {
+            var i;
             (0, E.trackQuestContentClicked)({
                 questId: n.id,
                 questContent: e.questContent,
                 questContentCTA: E.QuestContentCTA.REWARD_LEARN_MORE
-            }), u.default.open(f.UserSettingsSections.INVENTORY)
-        }, [n, e.questContent]), O = r.useRef(null), R = r.useRef(s);
+            }), u.default.open(f.UserSettingsSections.INVENTORY), null === (i = e.onClick) || void 0 === i || i.call(e, t)
+        }, [n.id, e]), O = r.useRef(null), R = r.useRef(s);
         r.useEffect(() => {
             var e, t;
             N && !m && null != O.current && (s && !R.current ? null === (e = O.current) || void 0 === e || e.play() : !s && R.current && (null === (t = O.current) || void 0 === t || t.pause()), R.current = s)

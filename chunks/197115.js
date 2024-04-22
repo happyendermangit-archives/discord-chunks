@@ -40,8 +40,8 @@ function(e, t, n) {
             onSubscribeModalClose: b,
             premiumModalAnalyticsLocation: G,
             showIcon: w = !0,
-            disableShine: B,
-            applicationId: k,
+            disableShine: k,
+            applicationId: B,
             giftMessage: F,
             overrideDisabledButtonText: V,
             shinyButtonClassName: x,
@@ -133,7 +133,7 @@ function(e, t, n) {
                 onSubscribeModalClose: b,
                 analyticsLocations: K,
                 premiumModalAnalyticsLocation: G,
-                applicationId: k,
+                applicationId: B,
                 giftMessage: F
             })
         };
@@ -166,9 +166,9 @@ function(e, t, n) {
             })]
         });
         let X = O.default.Messages.APPLICATION_STORE_GET_PREMIUM,
-            q = null != W ? (0, m.getPremiumPlanItem)(W) : null,
-            Q = null != q ? m.default.getPremiumType(q.planId) : null == Y ? void 0 : Y.premiumType,
-            Z = r === N.PremiumSubscriptionSKUs.TIER_2 && null != Q && [N.PremiumTypes.TIER_0, N.PremiumTypes.TIER_1].includes(Q);
+            Q = null != W ? (0, m.getPremiumPlanItem)(W) : null,
+            q = null != Q ? m.default.getPremiumType(Q.planId) : null == Y ? void 0 : Y.premiumType,
+            Z = r === N.PremiumSubscriptionSKUs.TIER_2 && null != q && [N.PremiumTypes.TIER_0, N.PremiumTypes.TIER_1].includes(q);
         Z && (X = O.default.Messages.BILLING_SWITCH_PLAN_UPGRADE);
         let J = null != W && W.status !== p.SubscriptionStatusTypes.ACCOUNT_HOLD && !(0, E.isNoneSubscription)(W.planId) && !Z,
             $ = J ? null != V ? V : function(e) {
@@ -189,7 +189,7 @@ function(e, t, n) {
                 }
             }({
                 ctaSubscriptionSkuId: r,
-                currentPremiumType: Q
+                currentPremiumType: q
             }) : null;
 
         function ee(e) {
@@ -202,7 +202,7 @@ function(e, t, n) {
                 size: g,
                 className: x,
                 wrapperClassName: L,
-                pauseAnimation: !j || B,
+                pauseAnimation: !j || k,
                 ...H,
                 ...e,
                 children: [w && (0, i.jsx)(A.default, {

@@ -179,13 +179,13 @@ function(e, t, n) {
             return w.FormSection
         },
         FormSwitch: function() {
-            return B.FormSwitch
+            return k.FormSwitch
         },
         FormText: function() {
-            return k.FormText
+            return B.FormText
         },
         FormTextTypes: function() {
-            return k.FormTextTypes
+            return B.FormTextTypes
         },
         FormTitle: function() {
             return F.FormTitle
@@ -251,22 +251,22 @@ function(e, t, n) {
             return eT.LoadingPopout
         },
         MasonryList: function() {
-            return Q.MasonryListThin
+            return q.MasonryListThin
         },
         MasonryListAuto: function() {
-            return Q.MasonryListAuto
+            return q.MasonryListAuto
         },
         MasonryListComputer: function() {
             return ep.MasonryListComputer
         },
         MasonryListScrollerProps: function() {
-            return q.MasonryListScrollerProps
+            return Q.MasonryListScrollerProps
         },
         MasonryListScrollerRef: function() {
-            return q.MasonryListScrollerRef
+            return Q.MasonryListScrollerRef
         },
         MasonryListThin: function() {
-            return Q.MasonryListThin
+            return q.MasonryListThin
         },
         Menu: function() {
             return Z.Menu
@@ -380,10 +380,10 @@ function(e, t, n) {
             return K.ReferencePositionLayer
         },
         RenderItem: function() {
-            return q.RenderItem
+            return Q.RenderItem
         },
         RenderSection: function() {
-            return q.RenderSection
+            return Q.RenderSection
         },
         RoleCircle: function() {
             return eN.RoleCircle
@@ -437,16 +437,16 @@ function(e, t, n) {
             return ew.Slide
         },
         Slider: function() {
-            return eB.Slider
+            return ek.Slider
         },
         Slides: function() {
             return ew.Slides
         },
         Spinner: function() {
-            return ek.Spinner
+            return eB.Spinner
         },
         SpinnerTypes: function() {
-            return ek.SpinnerTypes
+            return eB.SpinnerTypes
         },
         StackedProgress: function() {
             return eE.StackedProgress
@@ -506,13 +506,13 @@ function(e, t, n) {
             return ez.Toast
         },
         ToastContainer: function() {
-            return eQ.ToastContainer
+            return eq.ToastContainer
         },
         ToastPosition: function() {
-            return eq.ToastPosition
+            return eQ.ToastPosition
         },
         ToastType: function() {
-            return eq.ToastType
+            return eQ.ToastType
         },
         Tooltip: function() {
             return eZ.Tooltip
@@ -554,7 +554,7 @@ function(e, t, n) {
             return eC.createManagedReactiveScroller
         },
         createMasonryListScroller: function() {
-            return q.createMasonryListScroller
+            return Q.createMasonryListScroller
         },
         createScroller: function() {
             return eg.createScroller
@@ -744,8 +744,8 @@ function(e, t, n) {
         b = n("722187"),
         G = n("383838"),
         w = n("789164"),
-        B = n("471141"),
-        k = n("534542"),
+        k = n("471141"),
+        B = n("534542"),
         F = n("512983"),
         V = n("652334"),
         x = n("260034"),
@@ -756,8 +756,8 @@ function(e, t, n) {
         K = n("539907"),
         z = n("915287"),
         X = n("742746"),
-        q = n("478922"),
-        Q = n("215838"),
+        Q = n("478922"),
+        q = n("215838"),
         Z = n("830447"),
         J = n("828214"),
         $ = n("756710"),
@@ -798,8 +798,8 @@ function(e, t, n) {
         eb = n("503145"),
         eG = n("936621"),
         ew = n("718580"),
-        eB = n("561779"),
-        ek = n("922770"),
+        ek = n("561779"),
+        eB = n("922770"),
         eF = n("696826"),
         eV = n("437337"),
         ex = n("706898"),
@@ -810,8 +810,8 @@ function(e, t, n) {
         eK = n("397943"),
         ez = n("345332"),
         eX = n("417153"),
-        eq = n("561466"),
-        eQ = n("70308"),
+        eQ = n("561466"),
+        eq = n("70308"),
         eZ = n("981729"),
         eJ = n("692547"),
         e$ = n("180035"),

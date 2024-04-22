@@ -11,7 +11,7 @@ function(e, t, n) {
             return z
         },
         dismissClipsUserEducation: function() {
-            return q
+            return Q
         },
         dismissSaveClipAnimation: function() {
             return H
@@ -35,7 +35,7 @@ function(e, t, n) {
             return P
         },
         updateClipsLength: function() {
-            return B
+            return k
         },
         updateClipsQuality: function() {
             return w
@@ -50,7 +50,7 @@ function(e, t, n) {
             return b
         },
         updateViewerClipsEnabled: function() {
-            return k
+            return B
         }
     }), n("47120"), n("653041");
     var i = n("46973"),
@@ -165,7 +165,7 @@ function(e, t, n) {
         })
     }
 
-    function B(e) {
+    function k(e) {
         a.default.dispatch({
             type: "CLIPS_SETTINGS_UPDATE",
             settings: {
@@ -174,7 +174,7 @@ function(e, t, n) {
         })
     }
 
-    function k(e) {
+    function B(e) {
         let {
             enabled: t,
             trackAnalytics: n = !1
@@ -412,7 +412,7 @@ function(e, t, n) {
         return (0, L.default)(i)
     }
 
-    function q(e) {
+    function Q(e) {
         a.default.dispatch({
             type: "CLIPS_DISMISS_EDUCATION",
             educationType: e

@@ -82,12 +82,12 @@ function(e, t, n) {
         a.useEffect(() => {
             G()
         }, [G, D]);
-        let B = g.length > 0,
-            k = L.length > 0;
+        let k = g.length > 0,
+            B = L.length > 0;
         return (0, s.jsxs)("div", {
             className: l()(O.compactItemContainer, !y && O.hideElement),
             ref: M,
-            children: [B && (0, s.jsx)(d.Tooltip, {
+            children: [k && (0, s.jsx)(d.Tooltip, {
                 text: p.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP,
                 children: e => (0, s.jsxs)(d.Clickable, {
                     ...e,
@@ -109,13 +109,13 @@ function(e, t, n) {
                         children: D
                     })]
                 })
-            }), I && !B && (0, s.jsx)(d.Text, {
+            }), I && !k && (0, s.jsx)(d.Text, {
                 variant: "text-xs/normal",
                 children: p.default.Messages.USER_PROFILE_NO_MUTUAL_FRIENDS
-            }), (B && k || I) && (0, s.jsx)("div", {
+            }), (k && B || I) && (0, s.jsx)("div", {
                 "aria-hidden": "true",
                 className: O.dotSpacer
-            }), k && (0, s.jsx)(d.Tooltip, {
+            }), B && (0, s.jsx)(d.Tooltip, {
                 text: p.default.Messages.USER_PROFILE_MUTUAL_GUILDS_TOOLTIP,
                 children: e => (0, s.jsxs)(d.Clickable, {
                     ...e,
@@ -137,7 +137,7 @@ function(e, t, n) {
                         children: v
                     })]
                 })
-            }), I && !k && (0, s.jsx)(d.Text, {
+            }), I && !B && (0, s.jsx)(d.Text, {
                 variant: "text-xs/normal",
                 children: p.default.Messages.USER_PROFILE_NO_MUTUAL_FRIENDS
             })]

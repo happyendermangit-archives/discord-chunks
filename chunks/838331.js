@@ -94,14 +94,14 @@ function(e, t, n) {
                     callback: () => requestAnimationFrame(() => e())
                 })
             }), []),
-            B = r.useCallback(() => new Promise(e => {
+            k = r.useCallback(() => new Promise(e => {
                 let t = P.current;
                 if (null == t) return e();
                 t.scrollToTop({
                     callback: () => requestAnimationFrame(() => e())
                 })
             }), []),
-            k = r.useCallback((e, t) => {
+            B = r.useCallback((e, t) => {
                 M(t);
                 let n = document.querySelector(e),
                     i = P.current;
@@ -114,8 +114,8 @@ function(e, t, n) {
                 isEnabled: !0,
                 useVirtualFocus: !0,
                 scrollToStart: w,
-                scrollToEnd: B,
-                setFocus: k
+                scrollToEnd: k,
+                setFocus: B
             }),
             V = C ? _.ListThin : _.ListNone;
         return (0, i.jsx)(o.ListNavigatorProvider, {

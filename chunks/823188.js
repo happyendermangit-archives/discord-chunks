@@ -53,8 +53,8 @@ function(e, t, n) {
         b = n("599250"),
         G = n("466111"),
         w = n("761374"),
-        B = n("363138"),
-        k = n("325767"),
+        k = n("363138"),
+        B = n("325767"),
         F = n("930153"),
         V = n("74538"),
         x = n("326151"),
@@ -65,8 +65,8 @@ function(e, t, n) {
         K = n("104494"),
         z = n("639119"),
         X = n("230916"),
-        q = n("248042"),
-        Q = n("94027"),
+        Q = n("248042"),
+        q = n("94027"),
         Z = n("504865"),
         J = n("63802"),
         $ = n("318990"),
@@ -170,7 +170,7 @@ function(e, t, n) {
             ...i
         } = e;
         return (0, _.jsxs)("svg", {
-            ...(0, k.default)({
+            ...(0, B.default)({
                 ...i
             }),
             width: t,
@@ -340,7 +340,7 @@ function(e, t, n) {
     function ec() {
         return (0, _.jsxs)(_.Fragment, {
             children: [(0, _.jsx)(eu, {
-                Icon: B.default,
+                Icon: k.default,
                 text: en.default.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
                     maxUploadPremium: (0, V.getMaxFileSizeForPremiumType)(ee.PremiumTypes.TIER_0, {
                         useSpace: !1
@@ -495,7 +495,7 @@ function(e, t, n) {
                     percentageOff: (0, F.formatPercent)(r, ee.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
                 })
             }), (0, _.jsx)(eu, {
-                Icon: B.default,
+                Icon: k.default,
                 text: en.default.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
                     maxUploadPremium: (0, V.getMaxFileSizeForPremiumType)(ee.PremiumTypes.TIER_2, {
                         useSpace: !1
@@ -514,7 +514,7 @@ function(e, t, n) {
         });
         return (0, _.jsxs)(_.Fragment, {
             children: [(0, _.jsx)(eu, {
-                Icon: B.default,
+                Icon: k.default,
                 text: en.default.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
                     maxUploadPremium: (0, V.getMaxFileSizeForPremiumType)(ee.PremiumTypes.TIER_2, {
                         useSpace: !1
@@ -563,20 +563,20 @@ function(e, t, n) {
             v = (0, Y.useHasDiscountApplied)(),
             M = null != p || null != O ? 0 : null != C || v ? 1 : null,
             y = 1 === d,
-            P = (0, q.useIsEligibleForBogoPromotion)(),
+            P = (0, Q.useIsEligibleForBogoPromotion)(),
             b = !l && R,
-            G = (0, q.getBOGOPillCopy)(),
+            G = (0, Q.getBOGOPillCopy)(),
             w = (0, h.isThemeLight)((0, m.default)()),
-            B = w ? 5 : 2,
+            k = w ? 5 : 2,
             {
-                enabled: k
+                enabled: B
             } = W.ReferralProgramRecipient.useExperiment({
                 location: "Tier2Card"
             }, {
                 autoTrackExposure: !1
             }),
             F = en.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT;
-        return k && (null == N ? void 0 : N.trial_id) === ee.PREMIUM_TIER_2_REFERRAL_TRIAL_ID && (F = en.default.Messages.REFERRAL_PROGRAM_TWO_WEEK_TRIAL), !b || y || w ? b && y && !w && (n = ei.rimGlowTier2Stacked) : n = ei.rimGlowTier2, (0, _.jsxs)("div", {
+        return B && (null == N ? void 0 : N.trial_id) === ee.PREMIUM_TIER_2_REFERRAL_TRIAL_ID && (F = en.default.Messages.REFERRAL_PROGRAM_TWO_WEEK_TRIAL), !b || y || w ? b && y && !w && (n = ei.rimGlowTier2Stacked) : n = ei.rimGlowTier2, (0, _.jsxs)("div", {
             className: E()(ei.card, o, {
                 [ei.withTier2Rim]: b && !y,
                 [ei.withTier2RimStacked]: b && y,
@@ -590,7 +590,7 @@ function(e, t, n) {
                         percent: C.discount.amount
                     }),
                     className: ei.topRimPill,
-                    colorOptions: B
+                    colorOptions: k
                 }), (0, _.jsx)("div", {
                     className: n
                 })]
@@ -598,7 +598,7 @@ function(e, t, n) {
                 children: [(0, _.jsx)(eo, {
                     text: F,
                     className: ei.topRimPill,
-                    colorOptions: B
+                    colorOptions: k
                 }), (0, _.jsx)("div", {
                     className: n
                 })]
@@ -606,7 +606,7 @@ function(e, t, n) {
                 children: [(0, _.jsx)(eo, {
                     text: en.default.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED,
                     className: ei.topRimPill,
-                    colorOptions: B
+                    colorOptions: k
                 }), (0, _.jsx)("div", {
                     className: n
                 })]
@@ -614,7 +614,7 @@ function(e, t, n) {
                 children: [(0, _.jsx)(eo, {
                     text: en.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED,
                     className: ei.topRimPill,
-                    colorOptions: B
+                    colorOptions: k
                 }), (0, _.jsx)("div", {
                     className: n
                 })]
@@ -686,7 +686,7 @@ function(e, t, n) {
                                 isGift: l
                             })
                         })]
-                    }), y && (0, _.jsx)(Q.default, {
+                    }), y && (0, _.jsx)(q.default, {
                         isStacked: y,
                         ctaButton: r,
                         isGift: l,
@@ -694,7 +694,7 @@ function(e, t, n) {
                         discountOffer: C
                     })]
                 })]
-            }), !y && (0, _.jsx)(Q.default, {
+            }), !y && (0, _.jsx)(q.default, {
                 isStacked: y,
                 ctaButton: r,
                 isGift: l,

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         PremiumTrialGradientBadge: function() {
-            return B
+            return k
         },
         default: function() {
             return x
@@ -134,7 +134,7 @@ function(e, t, n) {
         })
     }
 
-    function B(e) {
+    function k(e) {
         var t, n;
         let r = null === (t = (0, g.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial,
             s = null !== (n = null == r ? void 0 : r.sku_id) && void 0 !== n ? n : v.PremiumSubscriptionSKUs.TIER_2;
@@ -152,7 +152,7 @@ function(e, t, n) {
         })
     }
 
-    function k(e) {
+    function B(e) {
         let {
             subscriptionTier: t,
             onClose: n,
@@ -272,7 +272,7 @@ function(e, t, n) {
                                 onClick: () => (0, h.transitionTo)(M.Routes.APPLICATION_STORE)
                             })
                         })]
-                    }), (0, i.jsx)(k, {
+                    }), (0, i.jsx)(B, {
                         subscriptionTier: d,
                         onClose: o,
                         analyticsLocationObject: {
@@ -303,7 +303,7 @@ function(e, t, n) {
                                 onClick: () => (0, h.transitionTo)(M.Routes.APPLICATION_STORE)
                             })
                         })]
-                    }), (0, i.jsx)(k, {
+                    }), (0, i.jsx)(B, {
                         subscriptionTier: d,
                         onClose: o,
                         analyticsLocationObject: {
@@ -336,7 +336,7 @@ function(e, t, n) {
                                 onClick: () => (0, h.transitionTo)(M.Routes.APPLICATION_STORE)
                             })
                         })]
-                    }), (0, i.jsx)(k, {
+                    }), (0, i.jsx)(B, {
                         subscriptionTier: d,
                         onClose: o,
                         analyticsLocationObject: {

@@ -48,15 +48,15 @@ function(e, t, n) {
                 onVolumeHide: b,
                 onPlay: G,
                 onPause: w,
-                onError: B
+                onError: k
             } = e,
-            k = r.useRef(null),
+            B = r.useRef(null),
             [F, V] = r.useState(0),
             [x, H] = r.useState(P),
             [Y, j] = r.useState(!1),
             [W, K] = r.useState(!1),
             [z, X] = r.useState(!1),
-            [q, Q] = r.useState(!1),
+            [Q, q] = r.useState(!1),
             [Z, J] = r.useState("none"),
             [$, ee] = r.useState(() => "function" == typeof D ? D() : D),
             et = r.useRef(void 0),
@@ -72,18 +72,18 @@ function(e, t, n) {
             }, []),
             es = r.useCallback(() => {
                 K(!1), null == et.current && (et.current = setTimeout(() => {
-                    Q(!1), et.current = void 0
+                    q(!1), et.current = void 0
                 }, 500))
             }, []),
             ea = r.useCallback(() => {
                 !z && es()
             }, [es, z]),
             eo = r.useCallback(() => {
-                let e = k.current;
+                let e = B.current;
                 if (null == e) return;
                 let t = e.error;
-                null == B || B(t)
-            }, [B]),
+                null == k || k(t)
+            }, [k]),
             el = r.useCallback(e => {
                 let t = (0, S.perceptualToAmplitude)(e, 1);
                 j(0 === t), ee(t), null == v || v(t)
@@ -98,27 +98,27 @@ function(e, t, n) {
                 X(!1), F === x && es()
             }, [F, x, es]),
             ec = r.useCallback(e => {
-                let t = k.current;
+                let t = B.current;
                 if (null == x || null == t) return;
                 let n = e * x;
-                V(n), t.currentTime = n, Q(!0), clearTimeout(et.current), et.current = void 0
+                V(n), t.currentTime = n, q(!0), clearTimeout(et.current), et.current = void 0
             }, [x]);
         r.useEffect(() => {
-            !q && W && Q(!0)
-        }, [W, q]);
+            !Q && W && q(!0)
+        }, [W, Q]);
         let eE = r.useRef(null);
         r.useEffect(() => {
-            if (q || W) {
+            if (Q || W) {
                 if (W) {
                     var e, t;
-                    eE.current = performance.now(), null == G || G(!1, F, (null !== (t = null === (e = k.current) || void 0 === e ? void 0 : e.duration) && void 0 !== t ? t : 0) * f.default.Millis.SECOND)
+                    eE.current = performance.now(), null == G || G(!1, F, (null !== (t = null === (e = B.current) || void 0 === e ? void 0 : e.duration) && void 0 !== t ? t : 0) * f.default.Millis.SECOND)
                 } else {
                     let e = performance.now(),
                         t = eE.current;
                     null == w || w(F, null != t ? (e - t) / 1e3 : 0), eE.current = null
                 }
             }
-        }, [W]), t = k, n = W, s = V, r.useEffect(() => {
+        }, [W]), t = B, n = W, s = V, r.useEffect(() => {
             let e;
             return ! function i() {
                 let r = t.current;
@@ -144,7 +144,7 @@ function(e, t, n) {
             eT = W ? m.default.Messages.PAUSE : m.default.Messages.PLAY;
         g = "Safari" === platform.name ? (0, i.jsx)(r.Suspense, {
             children: (0, i.jsx)(p, {
-                ref: k,
+                ref: B,
                 className: N.audioElement,
                 src: L,
                 preload: Z,
@@ -156,7 +156,7 @@ function(e, t, n) {
                 volume: $
             })
         }) : (0, i.jsx)(d.default, {
-            ref: k,
+            ref: B,
             className: N.audioElement,
             controls: !1,
             preload: Z,
@@ -203,12 +203,12 @@ function(e, t, n) {
                 currentTime: F,
                 duration: null != x ? x : 1,
                 playing: W,
-                played: q,
+                played: Q,
                 onDrag: ec,
                 onDragStart: ed,
                 onDragEnd: e_
             }), (0, i.jsx)(O, {
-                played: q,
+                played: Q,
                 currentTime: F,
                 duration: x
             }), (0, i.jsx)(c.default, {

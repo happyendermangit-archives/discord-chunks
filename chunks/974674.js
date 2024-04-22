@@ -437,8 +437,8 @@ function(e, t, n) {
                 isTyping: c
             })
         }), [P, S, g, l, c]), {
-            avatarCutoutX: B,
-            avatarCutoutY: k,
+            avatarCutoutX: k,
+            avatarCutoutY: B,
             avatarCutoutWidth: F,
             avatarCutoutHeight: V,
             avatarCutoutRadius: x,
@@ -449,7 +449,7 @@ function(e, t, n) {
             config: A,
             from: G,
             to: w
-        }), j = (0, I.getAvatarSize)(S), W = (0, I.getAvatarSpecs)(S), K = W.status * I.TYPING_WIDTH_RATIO, z = W.status * I.MOBILE_HEIGHT_RATIO, X = null != g ? (W.status * I.TYPING_WIDTH_RATIO - W.status) / 2 : 0, q = W.size - W.status - X - W.offset, Q = W.size - z - W.offset, Z = W.size + Math.ceil(X);
+        }), j = (0, I.getAvatarSize)(S), W = (0, I.getAvatarSpecs)(S), K = W.status * I.TYPING_WIDTH_RATIO, z = W.status * I.MOBILE_HEIGHT_RATIO, X = null != g ? (W.status * I.TYPING_WIDTH_RATIO - W.status) / 2 : 0, Q = W.size - W.status - X - W.offset, q = W.size - z - W.offset, Z = W.size + Math.ceil(X);
         return (0, i.jsx)(R, {
             ...e,
             ariaLabel: y,
@@ -473,8 +473,8 @@ function(e, t, n) {
                         fill: "white"
                     }), (0, i.jsx)(o.animated.rect, {
                         color: "black",
-                        x: B,
-                        y: k,
+                        x: k,
+                        y: B,
                         width: F,
                         height: V,
                         rx: x,
@@ -501,8 +501,8 @@ function(e, t, n) {
                     }(W.status, W.stroke, l, c),
                     children: e => (0, i.jsxs)(i.Fragment, {
                         children: [null != v && p(v, l, W, g), (0, i.jsxs)("svg", {
-                            x: q,
-                            y: Q,
+                            x: Q,
+                            y: q,
                             width: K,
                             height: z,
                             viewBox: "0 0 ".concat(K, " ").concat(z),

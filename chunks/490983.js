@@ -31,8 +31,8 @@ function(e, t, n) {
         b = n("7956"),
         G = n("981631");
     let w = c()().subtract(1, "week"),
-        B = [],
-        k = "",
+        k = [],
+        B = "",
         F = !1;
 
     function V(e, t) {
@@ -131,48 +131,48 @@ function(e, t, n) {
                     defaultAction: null
                 }
             })(i, n, t, e)).filter(v.isNotNullish), ...r].sort((e, t) => e.lastPlayed === t.lastPlayed ? 0 : e.lastPlayed > t.lastPlayed ? -1 : 1);
-        return F = null != m.default.lastFetched && N.default.fetched, !d().isEqual(s, B) && (B = s, y.isPlatformEmbedded && P.default.setSystemTrayApplications(Y(B).map(e => e.application).slice(0, 5)), !0)
+        return F = null != m.default.lastFetched && N.default.fetched, !d().isEqual(s, k) && (k = s, y.isPlatformEmbedded && P.default.setSystemTrayApplications(Y(k).map(e => e.application).slice(0, 5)), !0)
     }
-    class q extends(i = E.default.Store) {
+    class Q extends(i = E.default.Store) {
         initialize() {
             this.syncWith([T.default, m.default, S.default, f.default, C.default, g.default, N.default, O.default, p.default, A.default], X, 200), this.syncWith([R.default, h.default], () => !0)
         }
         get applicationFilterQuery() {
-            return k
-        }
-        get applicationViewItems() {
             return B
         }
+        get applicationViewItems() {
+            return k
+        }
         get launchableApplicationViewItems() {
-            return Y(B)
+            return Y(k)
         }
         get libraryApplicationViewItems() {
-            return H(B)
+            return H(k)
         }
         get filteredLibraryApplicationViewItems() {
-            return j(this.libraryApplicationViewItems, k)
+            return j(this.libraryApplicationViewItems, B)
         }
         get sortedFilteredLibraryApplicationViewItems() {
             return W(this.filteredLibraryApplicationViewItems, R.default.sortKey, R.default.sortDirection, h.default.locale)
         }
         get hiddenLibraryApplicationViewItems() {
-            return K(B)
+            return K(k)
         }
         get hasFetchedApplications() {
             return F
         }
     }
-    a = "ApplicationViewStore", (s = "displayName") in(r = q) ? Object.defineProperty(r, s, {
+    a = "ApplicationViewStore", (s = "displayName") in(r = Q) ? Object.defineProperty(r, s, {
         value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a, t.default = new q(I.default, {
+    }) : r[s] = a, t.default = new Q(I.default, {
         LIBRARY_APPLICATION_FILTER_UPDATE: function(e) {
             let {
                 query: t
             } = e;
-            k = t
+            B = t
         }
     })
 }

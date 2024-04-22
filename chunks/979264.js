@@ -63,9 +63,9 @@ function(e, t, n) {
             textColor: A,
             badgeSize: p,
             disableTooltip: O = !1
-        } = e, R = (0, _.useStateFromStores)([I.default], () => I.default.getUser(r), [r]), C = null !== (t = null == R ? void 0 : R.clan) && void 0 !== t ? t : i, g = (0, S.getTagFromUserClan)(C), L = (0, E.default)(C), [D, v] = (0, f.useFetchClanInfo)(null !== (n = null == C ? void 0 : C.identityGuildId) && void 0 !== n ? n : null), [M, y] = a.useState(!1), [P, U] = a.useState(!1), [b, G] = a.useState(!1), w = a.useRef(null), B = a.useCallback(e => {
+        } = e, R = (0, _.useStateFromStores)([I.default], () => I.default.getUser(r), [r]), C = null !== (t = null == R ? void 0 : R.clan) && void 0 !== t ? t : i, g = (0, S.getTagFromUserClan)(C), L = (0, E.default)(C), [D, v] = (0, f.useFetchClanInfo)(null !== (n = null == C ? void 0 : C.identityGuildId) && void 0 !== n ? n : null), [M, y] = a.useState(!1), [P, U] = a.useState(!1), [b, G] = a.useState(!1), w = a.useRef(null), k = a.useCallback(e => {
             !O && (e.stopPropagation(), e.preventDefault(), y(e => !e))
-        }, [O]), k = a.useCallback(() => {
+        }, [O]), B = a.useCallback(() => {
             !O && v()
         }, [v, O]);
         return (a.useEffect(() => {
@@ -77,8 +77,8 @@ function(e, t, n) {
         }), [P, b]), (0, T.useIsInUserClanExperiment)() && null != g) ? O ? (0, s.jsx)(N, {
             clanTag: g,
             className: l()(m.noTooltip, o),
-            onClick: B,
-            onMouseEnter: k,
+            onClick: k,
+            onMouseEnter: B,
             textVariant: u,
             textColor: A,
             badgeSize: p
@@ -111,8 +111,8 @@ function(e, t, n) {
                 children: (0, s.jsx)(N, {
                     clanTag: g,
                     className: o,
-                    onClick: B,
-                    onMouseEnter: k,
+                    onClick: k,
+                    onMouseEnter: B,
                     textVariant: u,
                     textColor: A,
                     badgeSize: p

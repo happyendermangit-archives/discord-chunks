@@ -133,12 +133,12 @@ function(e, t, n) {
                     t = null == e ? void 0 : e.getAttribute(l.LIST_ITEM_ID_ATTRIBUTE);
                 null != t ? M(t) : null == e && null != I && I()
             }, [y, G, I, M]),
-            B = i.useCallback(async () => {
+            k = i.useCallback(async () => {
                 let e = await y.getPreviousFocusableElement(G),
                     t = null == e ? void 0 : e.getAttribute(l.LIST_ITEM_ID_ATTRIBUTE);
                 null != t ? M(t) : null == e && null != E && E()
             }, [y, G, E, M]),
-            k = i.useCallback(e => {
+            B = i.useCallback(e => {
                 if (!C.current || !h && !b.current) return;
                 let n = m === o.Orientations.HORIZONTAL ? o.Keys.RIGHT : o.Keys.DOWN,
                     i = m === o.Orientations.HORIZONTAL ? o.Keys.LEFT : o.Keys.UP;
@@ -147,7 +147,7 @@ function(e, t, n) {
                         e.stopPropagation(), e.preventDefault(), w();
                         return;
                     case i:
-                        e.stopPropagation(), e.preventDefault(), B();
+                        e.stopPropagation(), e.preventDefault(), k();
                         return;
                     case o.Keys.HOME:
                         e.stopPropagation(), e.preventDefault(), _().then(() => {
@@ -177,7 +177,7 @@ function(e, t, n) {
                         }
                     }
                 }
-            }, [w, B, t, m, c, _, M, h]),
+            }, [w, k, t, m, c, _, M, h]),
             F = i.useCallback(e => {
                 let n = null != e ? (0, l.createListItemId)(t, e) : null;
                 p.current = n
@@ -185,7 +185,7 @@ function(e, t, n) {
         return i.useMemo(() => ({
             id: t,
             containerProps: {
-                onKeyDown: k,
+                onKeyDown: B,
                 ref: R,
                 tabIndex: P && S ? -1 : 0
             },
@@ -201,13 +201,13 @@ function(e, t, n) {
                 let n = await (0, a.findFirstVisibleItem)(null !== (e = R.current) && void 0 !== e ? e : document.body, d(t, R));
                 null !== n && M(n)
             },
-            focusPreviousItem: B,
+            focusPreviousItem: k,
             focusNextItem: w,
             focusedItemId() {
                 let e = p.current;
                 return e ? (0, l.getItemId)(e) : null
             }
-        }), [t, k, m, P, S, F, B, w, M])
+        }), [t, B, m, P, S, F, k, w, M])
     }
     n.es(u, t)
 }

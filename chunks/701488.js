@@ -35,7 +35,7 @@ function(e, t, n) {
             return x
         },
         BOBBLE_LEAGUE_APPLICATION_ID: function() {
-            return k
+            return B
         },
         BYS_LETTER_APP_ID: function() {
             return Y
@@ -71,7 +71,7 @@ function(e, t, n) {
             return P
         },
         ImageSizes: function() {
-            return q
+            return Q
         },
         JAM_SPACE_APPLICATION_ID: function() {
             return y
@@ -80,7 +80,7 @@ function(e, t, n) {
             return z
         },
         KWIM_APPLICATION_ID: function() {
-            return B
+            return k
         },
         LAND_IO_APPLICATION_ID: function() {
             return G
@@ -101,7 +101,7 @@ function(e, t, n) {
             return b
         },
         STAFF_RELEASE_PHASES: function() {
-            return Q
+            return q
         },
         SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES: function() {
             return en
@@ -133,8 +133,8 @@ function(e, t, n) {
         b = "852509694341283871",
         G = "903769130790969345",
         w = "880218394199220334",
-        B = "1078728822972764312",
-        k = "947957217959759964",
+        k = "1078728822972764312",
+        B = "947957217959759964",
         F = "832013003968348200",
         V = "832012774040141894",
         x = "832025144389533716",
@@ -145,11 +145,11 @@ function(e, t, n) {
         K = "945737671223947305",
         z = "1011683823555199066",
         X = "https://discord.sjc1.qualtrics.com/jfe/form/SV_6SvWAOxlcSRWiEu",
-        q = {
+        Q = {
             SMALL: 64,
             LARGE: 160
         },
-        Q = ["in_development", "activities_team", "employee_release"];
+        q = ["in_development", "activities_team", "employee_release"];
     (E = i || (i = {})).FAILED_LOAD = "FAILED_LOAD", E.LAGGING = "LAGGING", E.CONFUSING = "CONFUSING", E.NOT_FUN = "NOT_FUN", E.OTHER = "OTHER", (I = r || (r = {}))[I.PLAY = 0] = "PLAY", I[I.SPECTATE = 1] = "SPECTATE", (T = s || (s = {})).DESKTOP = "desktop", T.MOBILE = "mobile", (f = a || (a = {})).BETRAYAL_MARKETING_TOOLTIP = "BETRAYAL_MARKETING_TOOLTIP", f.FISHINGTON_MARKETING_TOOLTIP = "FISHINGTON_MARKETING_TOOLTIP", f.POKER_MARKETING_TOOLTIP = "POKER_MARKETING_TOOLTIP", f.YOUTUBE_MARKETING_TOOLTIP = "YOUTUBE_MARKETING_TOOLTIP", (S = o || (o = {}))[S.NO_UPDATE = 0] = "NO_UPDATE", S[S.ACTIVITY_STATE_UPDATE = 1] = "ACTIVITY_STATE_UPDATE", S[S.ACTIVITY_STARTED = 2] = "ACTIVITY_STARTED", S[S.ACTIVITY_ENDED = 3] = "ACTIVITY_ENDED", S[S.USER_JOINED = 4] = "USER_JOINED", S[S.USER_LEFT = 5] = "USER_LEFT", S[S.ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST = 6] = "ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST", (h = l || (l = {}))[h.UNLOCKED = 1] = "UNLOCKED", h[h.PORTRAIT = 2] = "PORTRAIT", h[h.LANDSCAPE = 3] = "LANDSCAPE", (A = u || (u = {}))[A.DIRECTORY = 0] = "DIRECTORY", A[A.SELECT_CHANNEL = 1] = "SELECT_CHANNEL", A[A.DETAIL_PAGE = 2] = "DETAIL_PAGE";
     let Z = "activity-shelf",
         J = new Set(["755600276941176913", v, M, w]),

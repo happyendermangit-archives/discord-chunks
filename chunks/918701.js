@@ -35,7 +35,7 @@ function(e, t, n) {
             return C
         },
         getQuestsFromActivities: function() {
-            return B
+            return k
         },
         getQuestsInstructionsToWinReward: function() {
             return Y
@@ -56,7 +56,7 @@ function(e, t, n) {
             return G
         },
         isAssetAnimated: function() {
-            return k
+            return B
         },
         isCollectibleReward: function() {
             return U
@@ -339,7 +339,7 @@ function(e, t, n) {
         })
     }
 
-    function B(e, t) {
+    function k(e, t) {
         if (null == t || null == e) return null;
         for (let n of t) {
             if (null == n.application_id) continue;
@@ -349,7 +349,7 @@ function(e, t, n) {
         return null
     }
 
-    function k(e) {
+    function B(e) {
         return e.endsWith(".webm") || e.endsWith(".mp4")
     }
     let F = /\.([a-zA-Z]+)$/;

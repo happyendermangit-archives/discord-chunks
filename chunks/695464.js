@@ -44,11 +44,11 @@ function(e, t, n) {
                 sectionIndex: e,
                 sectionRowIndex: t
             }) : S, [S]),
-            B = r.useCallback(e => {
+            k = r.useCallback(e => {
                 let t = "function" == typeof A ? A(e) : A;
                 return null == t ? 0 : t
             }, [A]),
-            k = r.useCallback(e => {
+            B = r.useCallback(e => {
                 let t = "function" == typeof m ? m(e) : m;
                 return null == t ? 0 : t
             }, [m]),
@@ -79,7 +79,7 @@ function(e, t, n) {
                             top: i,
                             bottom: -1
                         }
-                    }, i += B(a);
+                    }, i += k(a);
                     for (let t = 0; t < n; t++) {
                         let n = i + (o ? w(a, t, e) : 0),
                             s = {
@@ -91,14 +91,14 @@ function(e, t, n) {
                             offset: s
                         }, i = n, e++
                     }
-                    i += k(a) + F(a), s[a].offset.bottom = i
+                    i += B(a) + F(a), s[a].offset.bottom = i
                 }
                 return {
                     totalHeight: i += u[2],
                     rowDescriptors: r,
                     sectionDescriptors: s
                 }
-            }, [w, k, B, F, u, T, f, G]);
+            }, [w, B, k, F, u, T, f, G]);
         V.current = j, x.current = Y;
         let W = r.useCallback(() => {
             var e;
@@ -161,7 +161,7 @@ function(e, t, n) {
                             top: o,
                             bottom: l
                         }
-                    } = r, u = B(a), d = o - (p ? u : 0) - i <= U.current, _ = l + i >= U.current + M;
+                    } = r, u = k(a), d = o - (p ? u : 0) - i <= U.current, _ = l + i >= U.current + M;
                     if (d) {
                         let r = U.current + u - o,
                             s = p ? U.current - r : o;
@@ -209,7 +209,7 @@ function(e, t, n) {
                     node: e
                 })
             }
-        }), [B, p, H, M]);
+        }), [k, p, H, M]);
         let {
             visibleItems: z,
             listOffset: X
@@ -233,8 +233,8 @@ function(e, t, n) {
                     }
                 } = j[r], l = o - a;
                 if (0 === l) continue;
-                let u = B(r),
-                    I = k(r),
+                let u = k(r),
+                    I = B(r),
                     T = F(r);
                 if (o <= D) n = o;
                 else if (o > D && a < e) {
@@ -264,7 +264,7 @@ function(e, t, n) {
                 visibleItems: i,
                 listOffset: n
             }
-        }, [w, k, B, F, u, d, _, E, c, D, j, p, I, G, M]), q = r.useMemo(() => {
+        }, [w, B, k, F, u, d, _, E, c, D, j, p, I, G, M]), Q = r.useMemo(() => {
             var e, t, n;
             return {
                 top: X,
@@ -272,7 +272,7 @@ function(e, t, n) {
                 bottom: null !== (t = null == u ? void 0 : u[2]) && void 0 !== t ? t : 0,
                 left: null !== (n = null == u ? void 0 : u[3]) && void 0 !== n ? n : 0
             }
-        }, [X, u]), Q = r.useMemo(() => ({
+        }, [X, u]), q = r.useMemo(() => ({
             height: H
         }), [H]), Z = R ? o.AdvancedScrollerNone : o.AdvancedScrollerThin;
         return (0, i.jsxs)(Z, {
@@ -283,11 +283,11 @@ function(e, t, n) {
             children: [(0, i.jsx)("div", {
                 role: L,
                 className: l.listItems,
-                style: q,
+                style: Q,
                 children: z
             }), (0, i.jsx)("div", {
                 className: l.listHeight,
-                style: Q
+                style: q
             })]
         })
     }));

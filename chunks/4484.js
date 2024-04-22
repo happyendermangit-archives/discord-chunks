@@ -39,8 +39,8 @@ function(e, t, n) {
             disabled: b,
             submitting: G,
             placeholder: w,
-            required: B,
-            textAreaPaddingClassName: k,
+            required: k,
+            textAreaPaddingClassName: B,
             onChange: F,
             onPaste: V,
             onResize: x,
@@ -51,8 +51,8 @@ function(e, t, n) {
             onTab: K,
             onEnter: z,
             onSubmit: X,
-            maybeShowAutocomplete: q,
-            hideAutocomplete: Q,
+            maybeShowAutocomplete: Q,
+            hideAutocomplete: q,
             moveSelection: Z,
             spellcheckEnabled: J,
             canUseCommands: $,
@@ -171,18 +171,18 @@ function(e, t, n) {
             onEnter: z,
             allowNewLines: ei,
             submit: eO,
-            hideAutocomplete: Q,
+            hideAutocomplete: q,
             moveSelection: Z
         }), {
             handlePaste: eg,
             handleGlobalPaste: eL
         } = (0, O.default)(eN, eS, V), eD = r.useCallback(e => {
-            null == q || q()
-        }, [q]), ev = r.useCallback(e => {
+            null == Q || Q()
+        }, [Q]), ev = r.useCallback(e => {
             e !== eI.current ? ef.current && (null == F || F(null, (0, f.toTextValue)(e, {
                 mode: "raw"
-            }), e)) : ef.current && q()
-        }, [q, F]);
+            }), e)) : ef.current && Q()
+        }, [Q, F]);
         r.useLayoutEffect(() => {
             eT.current && (eI.current = n, eh(eN, "parent", {
                 value: n
@@ -210,7 +210,7 @@ function(e, t, n) {
                     editor: eN,
                     channelId: y.id,
                     guildId: y.guild_id,
-                    className: a()(M.slateTextArea, k),
+                    className: a()(M.slateTextArea, B),
                     placeholder: w,
                     readOnly: eS,
                     spellCheck: J,
@@ -235,7 +235,7 @@ function(e, t, n) {
                     "aria-describedby": ed,
                     "aria-invalid": eu,
                     "aria-autocomplete": ec,
-                    "aria-required": B
+                    "aria-required": k
                 })
             })]
         })

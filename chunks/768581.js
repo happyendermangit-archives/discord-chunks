@@ -33,7 +33,7 @@ function(e, t, n) {
             return w
         },
         isAnimatedIconHash: function() {
-            return k
+            return B
         },
         isAnimatedImageURL: function() {
             return V
@@ -70,7 +70,7 @@ function(e, t, n) {
             format: _ = null
         } = e;
         if (null == r || null == s) return;
-        let c = null != _ ? _ : u && k(s) ? "gif" : "jpg";
+        let c = null != _ ? _ : u && B(s) ? "gif" : "jpg";
         u && F(s) && (c = "mp4");
         let E = window.GLOBAL_ENV.CDN_HOST;
         if (null != E ? ("jpg" === c && (c = f ? "webp" : "png"), t = "".concat(location.protocol, "//").concat(E, "/").concat(i, "/").concat(r, "/").concat(s, ".").concat(c)) : t = location.protocol + window.GLOBAL_ENV.API_ENDPOINT + n(r, s, c), "mp4" === c) return t;
@@ -133,7 +133,7 @@ function(e, t, n) {
                 canAnimate: s = !1,
                 size: o = c.AVATAR_SIZE
             } = e,
-            u = s && k(r) ? "gif" : "jpg",
+            u = s && B(r) ? "gif" : "jpg",
             {
                 CDN_HOST: d
             } = window.GLOBAL_ENV;
@@ -165,7 +165,7 @@ function(e, t, n) {
         } = e;
         if (null == i) return;
         let a = window.GLOBAL_ENV.CDN_HOST,
-            o = r && k(i) ? "gif" : "png";
+            o = r && B(i) ? "gif" : "png";
         return t = (null != a ? "".concat(location.protocol, "//").concat(a, "/banners/").concat(n, "/").concat(i, ".").concat(o) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + c.Endpoints.USER_BANNER(n, i, o)) + "?size=".concat((0, l.getBestMediaProxySize)(s * (0, l.getDevicePixelRatio)()))
     }
 
@@ -194,7 +194,7 @@ function(e, t, n) {
         } = e;
         if (null == r || null == i) return;
         let o = window.GLOBAL_ENV.CDN_HOST,
-            u = s && k(r) ? "gif" : "png",
+            u = s && B(r) ? "gif" : "png",
             d = c.Endpoints.GUILD_MEMBER_BANNER(i, n, r, u);
         return t = (null != o ? "".concat(location.protocol, "//").concat(o).concat(d) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + d) + "?size=".concat((0, l.getBestMediaProxySize)(a * (0, l.getDevicePixelRatio)()))
     }
@@ -220,7 +220,7 @@ function(e, t, n) {
         if (null == i) return null;
         let s = (0, l.getBestMediaProxySize)(240 * (0, l.getDevicePixelRatio)()),
             a = f ? "webp" : "jpg",
-            o = r && k(i) ? "gif" : a,
+            o = r && B(i) ? "gif" : a,
             u = window.GLOBAL_ENV.CDN_HOST;
         return t = (null != u ? "".concat(location.protocol, "//").concat(u, "/banners/").concat(n, "/").concat(i, ".").concat(o) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + c.Endpoints.GUILD_BANNER(n, i, o)) + "?size=".concat(s), "jpg" === o && (t += "&quality=lossless"), t
     }
@@ -348,7 +348,7 @@ function(e, t, n) {
         })
     }
 
-    function B(e) {
+    function k(e) {
         var t, n, r;
         let {
             id: s,
@@ -371,7 +371,7 @@ function(e, t, n) {
         })) && void 0 !== n ? n : (r = s, i.DEFAULT_GROUP_DM_AVATARS[_.default.extractTimestamp(r) % i.DEFAULT_GROUP_DM_AVATARS.length])
     }
 
-    function k(e) {
+    function B(e) {
         return null != e && e.startsWith("a_")
     }
 
@@ -380,7 +380,7 @@ function(e, t, n) {
     }
 
     function V(e) {
-        return null != e && k(function(e) {
+        return null != e && B(function(e) {
             let t;
             try {
                 return (t = new URL(e).pathname).split("/").pop()
@@ -409,9 +409,9 @@ function(e, t, n) {
         getUserBannerURL: C,
         getAvatarDecorationURL: g,
         hasAnimatedGuildIcon: function(e) {
-            return k(null == e ? void 0 : e.icon)
+            return B(null == e ? void 0 : e.icon)
         },
-        isAnimatedIconHash: k,
+        isAnimatedIconHash: B,
         getUserAvatarSource: (e, t, n) => x(p(e, t, n)),
         getGuildIconURL: P,
         getGuildSplashURL: D,
@@ -453,7 +453,7 @@ function(e, t, n) {
             })
         },
         getGuildTemplateIconURL: U,
-        getChannelIconURL: B,
+        getChannelIconURL: k,
         getEmojiURL: A,
         getApplicationIconURL: b,
         getGameAssetURL: G,
@@ -466,7 +466,7 @@ function(e, t, n) {
             return x(v(e, t))
         },
         getGuildHomeHeaderSource: e => x(M(e)),
-        getChannelIconSource: e => x(B(e)),
+        getChannelIconSource: e => x(k(e)),
         getApplicationIconSource: e => x(b(e)),
         makeSource: x,
         getAnimatableSourceWithFallback(e, t) {

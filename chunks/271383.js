@@ -41,22 +41,22 @@ function(e, t, n) {
     function G(e, t) {
         if (null == t.communicationDisabledUntil || !(0, T.isMemberCommunicationDisabled)(t)) return w(e, t.userId);
         let n = F(e, t.userId);
-        D[n] !== t.communicationDisabledUntil && (0, T.isMemberCommunicationDisabled)(t) && (D[n] = t.communicationDisabledUntil, B(n))
+        D[n] !== t.communicationDisabledUntil && (0, T.isMemberCommunicationDisabled)(t) && (D[n] = t.communicationDisabledUntil, k(n))
     }
 
     function w(e, t) {
         if (null != t) {
             let n = F(e, t);
-            null != D[n] && B(n), k(F(e, t))
+            null != D[n] && k(n), B(F(e, t))
         } else
-            for (let t in D) x(t) === e && (B(t), k(t))
-    }
-
-    function B(e) {
-        M += 1, P[e] = M
+            for (let t in D) x(t) === e && (k(t), B(t))
     }
 
     function k(e) {
+        M += 1, P[e] = M
+    }
+
+    function B(e) {
         V(e) === N.default.getId() && (0, f.clearCommunicationDisabledNotice)(x(e)), delete D[e]
     }
 
@@ -265,7 +265,7 @@ function(e, t, n) {
         return !0
     }
 
-    function q(e) {
+    function Q(e) {
         let t = g[e.guildId];
         if (null == t) return !1;
         let n = O.default.getGuild(e.guildId);
@@ -289,7 +289,7 @@ function(e, t, n) {
         }
     }
 
-    function Q(e) {
+    function q(e) {
         let {
             guildId: t
         } = e, n = g[t];
@@ -573,8 +573,8 @@ function(e, t, n) {
             } = e;
             return K(t, Object.values(n).map(e => e.owner).filter(A.isNotNullish))
         },
-        GUILD_ROLE_UPDATE: q,
-        GUILD_ROLE_DELETE: q,
+        GUILD_ROLE_UPDATE: Q,
+        GUILD_ROLE_DELETE: Q,
         GUILD_ROLE_MEMBER_REMOVE: function(e) {
             let {
                 guildId: t,
@@ -636,8 +636,8 @@ function(e, t, n) {
                 fullProfileLoadedTimestamp: Date.now()
             }), G(n, i[t.user.id])
         },
-        IMPERSONATE_UPDATE: Q,
-        IMPERSONATE_STOP: Q,
+        IMPERSONATE_UPDATE: q,
+        IMPERSONATE_STOP: q,
         PASSIVE_UPDATE_V1: function(e) {
             return null != e.members && K(e.guildId, e.members)
         },

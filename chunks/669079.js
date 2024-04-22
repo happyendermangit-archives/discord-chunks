@@ -5,7 +5,7 @@ function(e, t, n) {
             return i
         },
         findGiftCodes: function() {
-            return k
+            return B
         },
         firstLibraryApplicationForGiftCode: function() {
             return z
@@ -32,7 +32,7 @@ function(e, t, n) {
             return H
         },
         isGiftCodeEmbed: function() {
-            return B
+            return k
         },
         makeComboId: function() {
             return b
@@ -53,7 +53,7 @@ function(e, t, n) {
             return x
         },
         useGetGiftCode: function() {
-            return q
+            return Q
         }
     }), n("47120"), n("757143"), n("627341");
     var i, r, s = n("278074"),
@@ -105,8 +105,8 @@ function(e, t, n) {
     function w(e) {
         return e.replace(/[^A-Za-z0-9]/g, "")
     }
-    let B = e => (null == e ? void 0 : e.type) === h.MessageTypes.CUSTOM_GIFT && (null == e ? void 0 : e.embeds.length) === 1 && (null == e ? void 0 : e.embeds[0].type) === h.MessageEmbedTypes.GIFT,
-        k = e => {
+    let k = e => (null == e ? void 0 : e.type) === h.MessageTypes.CUSTOM_GIFT && (null == e ? void 0 : e.embeds.length) === 1 && (null == e ? void 0 : e.embeds[0].type) === h.MessageEmbedTypes.GIFT,
+        B = e => {
             let t;
             if (null == e) return [];
             let n = new Set;
@@ -295,7 +295,7 @@ function(e, t, n) {
         let [n, i, r] = t;
         return null == r ? null : r.replace(/-/g, "")
     }
-    let q = (e, t) => (0, o.useStateFromStores)([d.default], () => {
+    let Q = (e, t) => (0, o.useStateFromStores)([d.default], () => {
         if (null == e || !t) return null;
         let n = d.default.getGiftCode(e);
         return null == n || "" === n ? null : n

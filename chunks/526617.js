@@ -39,8 +39,8 @@ function(e, t, n) {
         b = n("835648"),
         G = n("650743"),
         w = n("394740"),
-        B = n("343747"),
-        k = n("981631"),
+        k = n("343747"),
+        B = n("981631"),
         F = n("689938"),
         V = n("6503");
     let x = [8, 0, 8, 8];
@@ -191,17 +191,17 @@ function(e, t, n) {
             defaultSoundsOnly: P = !1
         } = e, {
             analyticsLocations: U
-        } = (0, c.default)(), [K, z] = r.useState(null), X = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), q = (0, o.useStateFromStores)([A.default], () => {
+        } = (0, c.default)(), [K, z] = r.useState(null), X = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), Q = (0, o.useStateFromStores)([A.default], () => {
             var e;
-            return A.default.getVoiceState(t, null !== (e = null == X ? void 0 : X.id) && void 0 !== e ? e : k.EMPTY_STRING_SNOWFLAKE_ID)
-        }), Q = (null == q ? void 0 : q.selfDeaf) || (null == q ? void 0 : q.mute) || (null == q ? void 0 : q.suppress), Z = (0, T.useExpressionPickerStore)(e => e.searchQuery), J = (0, m.useUID)(), {
+            return A.default.getVoiceState(t, null !== (e = null == X ? void 0 : X.id) && void 0 !== e ? e : B.EMPTY_STRING_SNOWFLAKE_ID)
+        }), q = (null == Q ? void 0 : Q.selfDeaf) || (null == Q ? void 0 : Q.mute) || (null == Q ? void 0 : Q.suppress), Z = (0, T.useExpressionPickerStore)(e => e.searchQuery), J = (0, m.useUID)(), {
             categories: $
         } = (0, y.default)(s, void 0, P), [ee, et] = r.useState([]), en = (0, y.useSearchCategories)($, ee, Z), ei = S.SoundboardPickerCollapsedSections.useSetting(), er = r.useMemo(() => new Set(ei), [ei]), es = null == s, ea = L.default.canUseCustomCallSounds(X), eo = r.useCallback(e => {
             er.has(e) ? er.delete(e) : er.add(e), S.SoundboardPickerCollapsedSections.updateSetting(Array.from(er))
         }, [er]), el = r.useCallback((e, t) => {
             if (!E && (0, v.canUseSoundboardSound)(X, e, s, !1)) {
                 var n;
-                (0, v.playSound)(e, null !== (n = null == s ? void 0 : s.id) && void 0 !== n ? n : k.EMPTY_STRING_SNOWFLAKE_ID, t)
+                (0, v.playSound)(e, null !== (n = null == s ? void 0 : s.id) && void 0 !== n ? n : B.EMPTY_STRING_SNOWFLAKE_ID, t)
             } else {
                 if ((0, v.canUseSoundboardSound)(X, e, s)) return;
                 N && z(e)
@@ -211,7 +211,7 @@ function(e, t, n) {
                 case D.SoundboardSoundItemType.SOUND:
                     return null == _ || _(e.item.sound), el(e.item.sound, U);
                 case D.SoundboardSoundItemType.ADD_SOUND:
-                    return (0, B.default)(e.item.guild.id)
+                    return (0, k.default)(e.item.guild.id)
             }
         }, [U, el, _]), ed = r.useCallback((e, t, n, r, a) => (0, i.jsx)(W, {
             descriptors: e,
@@ -224,12 +224,12 @@ function(e, t, n) {
             onSelectItem: eu,
             soundButtonProps: {
                 channel: s,
-                interactive: es ? ea : !Q,
+                interactive: es ? ea : !q,
                 forceSecondaryActions: es,
                 analyticsLocations: U
             },
             buttonOverlay: O
-        }, "row-".concat(t["aria-rowindex"])), [eu, s, Q, E, U, es, ea, O]), e_ = r.useCallback((e, t) => {
+        }, "row-".concat(t["aria-rowindex"])), [eu, s, q, E, U, es, ea, O]), e_ = r.useCallback((e, t) => {
             let n = "".concat(e.key);
             return (0, i.jsx)(Y, {
                 categoryInfo: e.categoryInfo,

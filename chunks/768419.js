@@ -38,8 +38,8 @@ function(e, t, n) {
     let b = S.default.get(P.PlatformTypes.SPOTIFY),
         G = "hm://pusher/v1/connections/",
         w = 30 * v.default.Millis.SECOND,
-        B = 30 * v.default.Millis.SECOND,
-        k = 5 * v.default.Millis.MINUTE,
+        k = 30 * v.default.Millis.SECOND,
+        B = 5 * v.default.Millis.MINUTE,
         F = 5 * v.default.Millis.SECOND,
         V = 1.5 * v.default.Millis.SECOND,
         x = 1 * v.default.Millis.MINUTE,
@@ -57,8 +57,8 @@ function(e, t, n) {
         K = new I.Timeout,
         z = new I.Timeout,
         X = new I.Timeout,
-        q = new I.Timeout,
         Q = new I.Timeout,
+        q = new I.Timeout,
         Z = {},
         J = {},
         $ = {},
@@ -284,7 +284,7 @@ function(e, t, n) {
                     checkSoundSharing: !0,
                     checkSoundboardSounds: !1
                 });
-            t && n && null != i ? (K.start(B, eE, !1), z.stop()) : z.start(100, () => K.stop(), !1)
+            t && n && null != i ? (K.start(k, eE, !1), z.stop()) : z.start(100, () => K.stop(), !1)
         }
         return !1
     }
@@ -380,7 +380,7 @@ function(e, t, n) {
                 let {
                     userId: e
                 } = r, t = er(e);
-                if (null == t) return X.start(k, () => {
+                if (null == t) return X.start(B, () => {
                     null != r && r.userId === e && (0, h.default)()
                 }), !1;
                 X.stop();
@@ -536,7 +536,7 @@ function(e, t, n) {
                     null == e ? (J[t].push(l), _ = !0) : !(0, E.default)(e, l) && (Object.assign(e, l), _ = !0), eu(t, l.id)
                 } else J[t] = [l], _ = !0
             }
-            n ? null == et || et.start(B, eE) : (a = null, null == et || et.stop());
+            n ? null == et || et.start(k, eE) : (a = null, null == et || et.stop());
             let c = p.default.getAccount(t, P.PlatformTypes.SPOTIFY);
             if (null == c) return _;
             let I = $[t],
@@ -555,9 +555,9 @@ function(e, t, n) {
                 S = null != l && null != r && 0 === o && !n;
             !S && ($[t] = f);
             let A = i;
-            if (i = d().values($).find(e => null != e), eI(N.default.getId()), null == a || S ? q.stop() : q.start(a.duration - o + F, () => ei(c.id)), null != r && (!n && o > 0 || null == l || null != f && r.trackId !== f.track.id) ? (W.info("Listen along active but playback stopped or track changed. Stopping listen along in ".concat(F, "ms")), Q.start(F, () => {
+            if (i = d().values($).find(e => null != e), eI(N.default.getId()), null == a || S ? Q.stop() : Q.start(a.duration - o + F, () => ei(c.id)), null != r && (!n && o > 0 || null == l || null != f && r.trackId !== f.track.id) ? (W.info("Listen along active but playback stopped or track changed. Stopping listen along in ".concat(F, "ms")), q.start(F, () => {
                     W.info("Stopping listening along"), (0, h.default)(), ei(c.id)
-                })) : Q.isStarted() && (W.info("Listen along stop cancelled as playback of track resumed"), Q.stop()), A === i || null == I && null == f || null != I && null != f && I.track.id === f.track.id && I.startTime === f.startTime) return _;
+                })) : q.isStarted() && (W.info("Listen along stop cancelled as playback of track resumed"), q.stop()), A === i || null == I && null == f || null != I && null != f && I.track.id === f.track.id && I.startTime === f.startTime) return _;
             null != a && (T.default.dispatch({
                 type: "SPOTIFY_NEW_TRACK",
                 track: a,
@@ -648,7 +648,7 @@ function(e, t, n) {
                     sourceId: e,
                     sound: n
                 } = null == t ? void 0 : t.desktopSettings;
-                null != e && m.default.getObservedAppNameForWindow(e) === b.name && n ? (et = new I.Interval).start(B, eE) : et = null
+                null != e && m.default.getObservedAppNameForWindow(e) === b.name && n ? (et = new I.Interval).start(k, eE) : et = null
             }
         }
     });

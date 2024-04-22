@@ -45,8 +45,8 @@ function(e, t, n) {
             })
         },
         w = F(C.NULL_STRING_GUILD_ID),
-        B = [],
-        k = {};
+        k = [],
+        B = {};
 
     function F(e) {
         return {
@@ -192,7 +192,7 @@ function(e, t, n) {
     function X() {
         H(C.FAVORITES)
     }
-    class q extends(i = d.default.Store) {
+    class Q extends(i = d.default.Store) {
         initialize() {
             this.waitFor(N.default, m.default, A.default, p.default, h.default, c.default, I.default), this.syncWith([I.default], X)
         }
@@ -249,7 +249,7 @@ function(e, t, n) {
                     channel: t
                 } = e;
                 return t.id
-            })) && void 0 !== n ? n : B
+            })) && void 0 !== n ? n : k
         }
         hasSelectableChannel(e, t) {
             return this.getSelectableChannelIds(e).includes(t)
@@ -265,15 +265,15 @@ function(e, t, n) {
         }
         getTextChannelNameDisambiguations(e) {
             var t;
-            return null != e && null !== (t = y[e]) && void 0 !== t ? t : k
+            return null != e && null !== (t = y[e]) && void 0 !== t ? t : B
         }
     }
-    a = "GuildChannelStore", (s = "displayName") in(r = q) ? Object.defineProperty(r, s, {
+    a = "GuildChannelStore", (s = "displayName") in(r = Q) ? Object.defineProperty(r, s, {
         value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a, t.default = new q(_.default, {
+    }) : r[s] = a, t.default = new Q(_.default, {
         BACKGROUND_SYNC: x,
         CHANNEL_SELECT: function(e) {
             let {

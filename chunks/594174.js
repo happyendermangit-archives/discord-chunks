@@ -200,14 +200,14 @@ function(e, t, n) {
         L(t)
     }
 
-    function B(e) {
+    function k(e) {
         let {
             user: t
         } = e;
         L(t)
     }
 
-    function k(e) {
+    function B(e) {
         let {
             messages: t
         } = e;
@@ -225,7 +225,7 @@ function(e, t, n) {
         let {
             messages: t
         } = e;
-        return t.forEach(e => k({
+        return t.forEach(e => B({
             messages: e
         })), !1
     }
@@ -316,7 +316,7 @@ function(e, t, n) {
         return !1
     }
 
-    function q(e) {
+    function Q(e) {
         let {
             channel: {
                 rawRecipients: t
@@ -325,7 +325,7 @@ function(e, t, n) {
         return null != t && t.forEach(e => L(e)), !1
     }
 
-    function Q(e) {
+    function q(e) {
         let {
             channels: t
         } = e;
@@ -675,7 +675,7 @@ function(e, t, n) {
             super({
                 CONNECTION_OPEN: y,
                 CONNECTION_OPEN_SUPPLEMENTAL: P,
-                UPDATE_CLIENT_PREMIUM_TYPE: B,
+                UPDATE_CLIENT_PREMIUM_TYPE: k,
                 OVERLAY_INITIALIZE: b,
                 CACHE_LOADED: e => this.handleLoadCache(e),
                 USER_UPDATE: G,
@@ -683,10 +683,10 @@ function(e, t, n) {
                 PRESENCE_UPDATES: J,
                 SEARCH_FINISH: V,
                 MOD_VIEW_SEARCH_FINISH: V,
-                LOAD_MESSAGES_SUCCESS: k,
-                LOAD_MESSAGES_AROUND_SUCCESS: k,
-                LOAD_PINNED_MESSAGES_SUCCESS: k,
-                LOAD_RECENT_MENTIONS_SUCCESS: k,
+                LOAD_MESSAGES_SUCCESS: B,
+                LOAD_MESSAGES_AROUND_SUCCESS: B,
+                LOAD_PINNED_MESSAGES_SUCCESS: B,
+                LOAD_RECENT_MENTIONS_SUCCESS: B,
                 THREAD_LIST_SYNC: F,
                 MESSAGE_CREATE: X,
                 MESSAGE_UPDATE: X,
@@ -705,8 +705,8 @@ function(e, t, n) {
                 GUILD_MEMBER_LIST_UPDATE: er,
                 THREAD_MEMBER_LIST_UPDATE: el,
                 THREAD_MEMBERS_UPDATE: eu,
-                CHANNEL_CREATE: q,
-                CHANNEL_UPDATES: Q,
+                CHANNEL_CREATE: Q,
+                CHANNEL_UPDATES: q,
                 RELATIONSHIP_ADD: e_,
                 LOAD_RELATIONSHIPS_SUCCESS: ec,
                 FRIEND_SUGGESTION_CREATE: eE,

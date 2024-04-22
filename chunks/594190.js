@@ -118,8 +118,8 @@ function(e, t, n) {
             }],
             name: f.default.get(P.PlatformTypes.SPOTIFY).name
         }],
-        B = !0,
-        k = new Set,
+        k = !0,
+        B = new Set,
         F = [],
         V = [],
         x = [],
@@ -135,8 +135,8 @@ function(e, t, n) {
         },
         z = function() {},
         X = {},
-        q = 0,
-        Q = null,
+        Q = 0,
+        q = null,
         Z = null,
         J = {};
 
@@ -251,7 +251,7 @@ function(e, t, n) {
             if (null == i) return t;
             for (let r of O.default.getLaunchOptions(n.id, n.branchId)) {
                 let s = "".concat(n.id, ":").concat(n.branchId);
-                !k.has(s) && (e = !0, k.add(s));
+                !B.has(s) && (e = !0, B.add(s));
                 let {
                     fullExecutablePath: a
                 } = r, o = a.replace(/\\/g, "/").toLowerCase();
@@ -362,9 +362,9 @@ function(e, t, n) {
                 return n === e.name
             }) || (n.push(e), !1)));
             let s = n.filter(et).length;
-            s !== q && (q = s, I.default.dispatch({
+            s !== Q && (Q = s, I.default.dispatch({
                 type: "RUNNING_STREAMER_TOOLS_CHANGE",
-                count: q
+                count: Q
             })), x = e, Y = n, i = r, en()
         }), ed()
     });
@@ -421,7 +421,7 @@ function(e, t, n) {
             }
         }
         shouldElevateProcessForPID(e) {
-            return null != Q && Q === e
+            return null != q && q === e
         }
         shouldContinueWithoutElevatedProcessForPID(e) {
             return null != Z && Z === e
@@ -463,7 +463,7 @@ function(e, t, n) {
             return null !== (n = null === (t = Y.find(t => (0, A.default)(e, t.windowHandle))) || void 0 === t ? void 0 : t.name) && void 0 !== n ? n : null
         }
         get canShowAdminWarning() {
-            return B
+            return k
         }
     }
     o = "RunningGameStore", (a = "displayName") in(s = eE) ? Object.defineProperty(s, a, {
@@ -479,22 +479,22 @@ function(e, t, n) {
             V = e.games
         },
         PERMISSION_CLEAR_PTT_ADMIN_WARNING: function() {
-            B = !1
+            k = !1
         },
         PERMISSION_REQUEST_ELEVATED_PROCESS: function(e) {
             let {
                 pid: t
             } = e;
-            Q = t, Z = null
+            q = t, Z = null
         },
         PERMISSION_CLEAR_ELEVATED_PROCESS: function() {
-            Q = null
+            q = null
         },
         PERMISSION_CONTINUE_NONELEVATED_PROCESS: function(e) {
             let {
                 pid: t
             } = e;
-            Z = t, Q = null
+            Z = t, q = null
         },
         RUNNING_GAME_ADD_OVERRIDE: function(e) {
             let t;

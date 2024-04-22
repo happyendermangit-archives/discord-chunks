@@ -38,10 +38,10 @@ function(e, t, n) {
         return e.type === O.LocalDispatchApplicationStates.INSTALLING || e.type === O.LocalDispatchApplicationStates.UPDATING || e.type === O.LocalDispatchApplicationStates.REPAIRING ? e.diskProgress : null
     }
 
-    function B(e) {
+    function k(e) {
         return e.type === O.LocalDispatchApplicationStates.INSTALLING || e.type === O.LocalDispatchApplicationStates.UPDATING || e.type === O.LocalDispatchApplicationStates.REPAIRING ? e.readerProgress : null
     }
-    let k = u().throttle(function(e) {
+    let B = u().throttle(function(e) {
             P = (P = [{
                 bytes: e,
                 timestamp: Date.now()
@@ -265,10 +265,10 @@ function(e, t, n) {
                             throw Error("Invalid Dispatch State. state=".concat(e.state.type))
                         }(i[e][t]), null != C[a]) {
                         let e = x(n, a, G);
-                        e > 0 && k(D += e);
+                        e > 0 && B(D += e);
                         let i = x(n, a, w);
                         i > 0 && V(v += i);
-                        let o = x(n, a, B);
+                        let o = x(n, a, k);
                         if (o > 0 && F(M += o), r === t) {
                             let e = n[a];
                             if (!0 !== e.paused && (e.type === O.LocalDispatchApplicationStates.UNINSTALLING || e.type === O.LocalDispatchApplicationStates.INSTALLING || e.type === O.LocalDispatchApplicationStates.UPDATING)) switch (e.stage) {

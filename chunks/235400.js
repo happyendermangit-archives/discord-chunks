@@ -57,7 +57,7 @@ function(e, t, n) {
         }), {
             product: P,
             purchase: U
-        } = (0, c.default)(null == M ? void 0 : M.skuId), b = A.default.canUseCollectibles(t), G = r.useRef(null), w = (0, I.default)(a), B = (0, m.isEqualAvatarDecoration)(M, void 0 === L ? v : L), k = () => {
+        } = (0, c.default)(null == M ? void 0 : M.skuId), b = A.default.canUseCollectibles(t), G = r.useRef(null), w = (0, I.default)(a), k = (0, m.isEqualAvatarDecoration)(M, void 0 === L ? v : L), B = () => {
             D(M), u()
         }, F = r.useCallback(e => {
             u(), (0, d.openCollectiblesShop)({
@@ -98,8 +98,8 @@ function(e, t, n) {
             }), (0, i.jsxs)(o.ModalFooter, {
                 className: g.modalFooter,
                 children: [null != U && (!(0, _.isPremiumCollectiblesPurchase)(U) || b) || null === M ? (0, i.jsx)(o.Button, {
-                    onClick: k,
-                    disabled: B,
+                    onClick: B,
+                    disabled: k,
                     children: C.default.Messages.AVATAR_DECORATION_MODAL_APPLY
                 }) : null == U && (b || !(0, _.isPremiumCollectiblesProduct)(P)) ? (0, i.jsx)(o.Button, {
                     className: g.modalFooterShopButton,

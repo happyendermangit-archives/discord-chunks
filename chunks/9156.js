@@ -73,9 +73,9 @@ function(e, t, n) {
         b = new Set,
         G = new Set,
         w = {},
-        B = {};
+        k = {};
 
-    function k(e, t) {
+    function B(e, t) {
         var n;
         let i = O[e],
             r = null !== (n = null == i ? void 0 : i.channel_overrides) && void 0 !== n ? n : {},
@@ -88,7 +88,7 @@ function(e, t, n) {
             };
         D.clearTimer(e), s().forEach(r, e => {
             v.clearTimer(e.channel_id)
-        }), F(e, o), O[e] = o, P[e] = q(O[e]);
+        }), F(e, o), O[e] = o, P[e] = Q(O[e]);
         let l = s().filter(o.channel_overrides, e => {
             var t;
             return E.hasFlag(null !== (t = e.flags) && void 0 !== t ? t : 0, N.ChannelNotificationSettingsFlags.OPT_IN_ENABLED)
@@ -103,7 +103,7 @@ function(e, t, n) {
                     let t = i[e];
                     E.hasFlag(t.flags, N.ChannelNotificationSettingsFlags.OPT_IN_ENABLED) ? n.add(e) : n.delete(e)
                 }
-                Object.keys(i).length > 0 ? B[e] = n : delete B[e]
+                Object.keys(i).length > 0 ? k[e] = n : delete k[e]
             }(e), delete R[e]
     }
 
@@ -131,7 +131,7 @@ function(e, t, n) {
     function V(e, t) {
         var n;
         let i = O[e];
-        k(e, {
+        B(e, {
             channel_overrides: null !== (n = null == i ? void 0 : i.channel_overrides) && void 0 !== n ? n : {},
             ...t
         })
@@ -164,7 +164,7 @@ function(e, t, n) {
         var n;
         let i = O[e],
             r = null !== (n = null == i ? void 0 : i.channel_overrides) && void 0 !== n ? n : {};
-        k(e, {
+        B(e, {
             channel_overrides: null == i ? t : {
                 ...r,
                 ...t
@@ -203,11 +203,11 @@ function(e, t, n) {
         C = E.hasFlag(e.flags, A.AccountNotificationFlags.USE_NEW_NOTIFICATIONS), g = E.hasFlag(e.flags, A.AccountNotificationFlags.MENTION_ON_ALL_MESSAGES), L = e
     }
 
-    function q(e) {
+    function Q(e) {
         return new Set(null != e.channel_overrides ? s()(e.channel_overrides).filter(e => (0, l.computeIsMuted)(e)).map(e => e.channel_id).value() : null)
     }
 
-    function Q() {
+    function q() {
         return !0
     }
 
@@ -223,7 +223,7 @@ function(e, t, n) {
             if (this.waitFor(S.default, f.default, u.default, _.default), null != e) {
                 var t, n;
                 C = null !== (t = e.useNewNotifications) && void 0 !== t && t, "userGuildSettings" in e && (O = e.userGuildSettings, U = s().mapValues(null !== (n = e.optedInChannelsByGuild) && void 0 !== n ? n : {}, e => new Set(e)), s().forEach(O, (e, t) => {
-                    P[t] = q(e)
+                    P[t] = Q(e)
                 }))
             }
         }
@@ -364,7 +364,7 @@ function(e, t, n) {
             let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
             if (null == e) return !1;
             if (u.default.isFullServerPreview(e)) return u.default.isChannelOptedIn(e, t);
-            if (r && null != B[e]) return B[e].has(t);
+            if (r && null != k[e]) return k[e].has(t);
             let s = null !== (i = null === (n = this.getChannelOverrides(e)[t]) || void 0 === n ? void 0 : n.flags) && void 0 !== i ? i : 0;
             return E.hasFlag(s, N.ChannelNotificationSettingsFlags.OPT_IN_ENABLED)
         }
@@ -373,7 +373,7 @@ function(e, t, n) {
             return u.default.isFullServerPreview(e) ? null !== (t = u.default.getViewingChannels(e)) && void 0 !== t ? t : G : null !== (n = U[e]) && void 0 !== n ? n : G
         }
         getOptedInChannelsWithPendingUpdates(e) {
-            return B[e]
+            return k[e]
         }
         getPendingChannelUpdates(e) {
             return w[e]
@@ -437,7 +437,7 @@ function(e, t, n) {
                 userGuildSettings: t
             } = e;
             t.forEach(e => {
-                k(e.guild_id, {
+                B(e.guild_id, {
                     channel_overrides: {},
                     ...e
                 })
@@ -481,7 +481,7 @@ function(e, t, n) {
             X(e.notificationSettings), D.reset(), v.reset(), !e.userGuildSettings.partial && (O = {}, P = {}, U = {});
             let t = new Set;
             for (let n in e.userGuildSettings.entries.forEach(e => {
-                    !("channel_overrides" in e) && (e.channel_overrides = {}), k(e.guild_id, e), null != e.guild_id && t.add(e.guild_id)
+                    !("channel_overrides" in e) && (e.channel_overrides = {}), B(e.guild_id, e), null != e.guild_id && t.add(e.guild_id)
                 }), O) !t.has(n) && F(n, O[n])
         },
         CACHE_LOADED: function(e) {
@@ -514,8 +514,8 @@ function(e, t, n) {
                 U[e] = new Set(r[e])
             })
         },
-        GUILD_CREATE: Q,
-        GUILD_UPDATE: Q,
+        GUILD_CREATE: q,
+        GUILD_UPDATE: q,
         GUILD_TOGGLE_COLLAPSE_MUTED: function(e) {
             let {
                 guildId: t
@@ -526,8 +526,8 @@ function(e, t, n) {
                 hide_muted_channels: !0 !== n.hide_muted_channels
             }
         },
-        IMPERSONATE_UPDATE: Q,
-        IMPERSONATE_STOP: Q,
+        IMPERSONATE_UPDATE: q,
+        IMPERSONATE_STOP: q,
         USER_GUILD_SETTINGS_REMOVE_PENDING_CHANNEL_UPDATES: function(e) {
             let {
                 guildId: t,
@@ -543,7 +543,7 @@ function(e, t, n) {
                 guildId: t
             } = e;
             if (null == t) return !1;
-            delete w[t], delete B[t]
+            delete w[t], delete k[t]
         },
         NOTIFICATION_SETTINGS_UPDATE: function(e) {
             let {

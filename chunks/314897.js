@@ -30,8 +30,8 @@ function(e, t, n) {
         b = "user_id_cache",
         G = null,
         w = null,
-        B = null,
         k = null,
+        B = null,
         F = null,
         V = null,
         x = null,
@@ -42,8 +42,8 @@ function(e, t, n) {
         K = "",
         z = !1,
         X = null,
-        q = !1,
         Q = !1,
+        q = !1,
         Z = "",
         J = !1,
         $ = !1,
@@ -162,10 +162,10 @@ function(e, t, n) {
             return G
         }
         getSessionId() {
-            return B
+            return k
         }
         getAuthSessionIdHash() {
-            return k
+            return B
         }
         getToken() {
             return (0, R.getToken)()
@@ -189,10 +189,10 @@ function(e, t, n) {
             return z
         }
         getMFATotp() {
-            return q
+            return Q
         }
         getMFABackup() {
-            return Q
+            return q
         }
         getMFAWebAuthn() {
             return X
@@ -202,10 +202,10 @@ function(e, t, n) {
             return null != X && e.push({
                 type: "webauthn",
                 challenge: X
-            }), q && e.push({
-                type: "totp",
-                backup_codes_allowed: Q
             }), Q && e.push({
+                type: "totp",
+                backup_codes_allowed: q
+            }), q && e.push({
                 type: "backup"
             }), z && e.push({
                 type: "sms"
@@ -258,7 +258,7 @@ function(e, t, n) {
                 analyticsToken: s,
                 auth: a
             } = e;
-            ea("handleConnectionOpen called"), C.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, p.default)(n)), B = i, k = r, x = s, G = n.id, w = n.email, void 0 !== a && (W = a.authenticator_types), T.Storage.set(U, n.email), T.Storage.set(b, n.id)
+            ea("handleConnectionOpen called"), C.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, p.default)(n)), k = i, B = r, x = s, G = n.id, w = n.email, void 0 !== a && (W = a.authenticator_types), T.Storage.set(U, n.email), T.Storage.set(b, n.id)
         },
         OVERLAY_INITIALIZE: function(e) {
             var t;
@@ -268,7 +268,7 @@ function(e, t, n) {
                 analyticsToken: r,
                 token: s
             } = e;
-            C.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, p.default)(n)), B = i, x = r, ed(s), eu(), G = n.id, T.Storage.set(b, n.id)
+            C.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, p.default)(n)), k = i, x = r, ed(s), eu(), G = n.id, T.Storage.set(b, n.id)
         },
         CONNECTION_CLOSED: function(e) {
             let {
@@ -288,7 +288,7 @@ function(e, t, n) {
             let {
                 authSessionIdHash: t
             } = e;
-            null != t && (k = t)
+            null != t && (B = t)
         },
         LOGIN: function(e) {
             et = {}, H = D.LoginStates.LOGGING_IN, Z = "", r = null, null != e.login && (er = e.login)
@@ -319,7 +319,7 @@ function(e, t, n) {
                 backup: r,
                 totp: s
             } = e;
-            null != t && (K = t, z = n, Z = "", X = null != i ? i : null, Q = r, q = s), et = {}, H = D.LoginStates.MFA_STEP
+            null != t && (K = t, z = n, Z = "", X = null != i ? i : null, q = r, Q = s), et = {}, H = D.LoginStates.MFA_STEP
         },
         LOGIN_MFA: function() {
             H = D.LoginStates.LOGGING_IN_MFA

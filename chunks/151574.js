@@ -33,9 +33,9 @@ function(e, t, n) {
     let b = (0, _.cssValueToNumber)(c.default.EXPRESSION_SUGGESTIONS_CONTAINER_PADDING),
         G = (0, _.cssValueToNumber)(c.default.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_SIZE),
         w = 2 * G + (0, _.cssValueToNumber)(c.default.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_MARGIN) + 2 * b,
-        B = () => Promise.resolve();
+        k = () => Promise.resolve();
 
-    function k(e) {
+    function B(e) {
         let {
             isFocused: t,
             isHidden: n,
@@ -86,7 +86,7 @@ function(e, t, n) {
             onSelectSticker: o,
             stickerIconVisible: _ = !1,
             submitButtonVisible: c = !1
-        } = e, p = a.useContext(f.default), [O, L] = a.useState(null), [b, G] = a.useState(!1), [F, V] = a.useState(null), x = (0, S.useExpressionPickerStore)(e => null != e.activeView), H = a.useRef(null), [Y, j] = a.useState(""), [W, K] = a.useState(""), [z, X] = a.useState(!1), [q, Q] = a.useState(!1), Z = (0, v.useStickerSuggestionResults)(Y, b, i), {
+        } = e, p = a.useContext(f.default), [O, L] = a.useState(null), [b, G] = a.useState(!1), [F, V] = a.useState(null), x = (0, S.useExpressionPickerStore)(e => null != e.activeView), H = a.useRef(null), [Y, j] = a.useState(""), [W, K] = a.useState(""), [z, X] = a.useState(!1), [Q, q] = a.useState(!1), Z = (0, v.useStickerSuggestionResults)(Y, b, i), {
             analyticsLocations: J
         } = (0, T.default)(I.default.EXPRESSION_SUGGESTIONS), {
             handleTextChange: $,
@@ -94,7 +94,7 @@ function(e, t, n) {
         } = (0, v.useTextChangeHandler)({
             setTextInputValue: j,
             setHasDismissed: G,
-            setHasSelection: Q,
+            setHasSelection: q,
             setFocusedSuggestionType: L
         });
         a.useEffect(() => {
@@ -103,7 +103,7 @@ function(e, t, n) {
                 },
                 t = e => {
                     let t = "" !== e && null != e;
-                    if (Q(t), t) {
+                    if (q(t), t) {
                         var i;
                         L(null), null === (i = n.current) || void 0 === i || i.focus()
                     }
@@ -122,7 +122,7 @@ function(e, t, n) {
             })
         }, [r]);
         let ei = Z.length > 0,
-            er = et && !x && !z && !b && !q && ei,
+            er = et && !x && !z && !b && !Q && ei,
             {
                 stickersNavigator: es
             } = function(e) {
@@ -140,8 +140,8 @@ function(e, t, n) {
                 }, [s]), E = (0, u.default)({
                     id: "expression-suggestions-stickers",
                     isEnabled: !0,
-                    scrollToStart: B,
-                    scrollToEnd: B,
+                    scrollToStart: k,
+                    scrollToEnd: k,
                     orientation: d.Orientations.HORIZONTAL,
                     setFocus: c,
                     useVirtualFocus: !0
@@ -247,7 +247,7 @@ function(e, t, n) {
                                             sticker: n,
                                             sendability: i
                                         } = e;
-                                        return (0, s.jsx)(k, {
+                                        return (0, s.jsx)(B, {
                                             isFocused: F === "".concat(t),
                                             isHidden: eu,
                                             sendability: i,

@@ -114,12 +114,12 @@ function(e, t, n) {
         return G(e.channel.guild_id, e.channel.parent_id, e.channel.id)
     }
 
-    function B(e) {
+    function k(e) {
         let t = c.default.getChannel(e.id);
         return !!(null != t && S.default.isActive(e.guildId, t.parent_id, e.id)) && G(t.guild_id, t.parent_id, t.id)
     }
 
-    function k(e) {
+    function B(e) {
         let t = c.default.getChannel(e.channelId);
         if (null == t) F();
         else {
@@ -242,8 +242,8 @@ function(e, t, n) {
         return t in e && n in e[t] && i in e[t][n]
     }
     let X = {},
-        q = {},
         Q = {},
+        q = {},
         Z = {},
         J = {};
     class $ extends(i = u.default.Store) {
@@ -259,7 +259,7 @@ function(e, t, n) {
         }
         getActiveJoinedThreadsForParent(e, t) {
             var n;
-            return e in N && null !== (n = N[e][t]) && void 0 !== n ? n : Q
+            return e in N && null !== (n = N[e][t]) && void 0 !== n ? n : q
         }
         getActiveJoinedThreadsForGuild(e) {
             var t;
@@ -271,7 +271,7 @@ function(e, t, n) {
         }
         getActiveJoinedUnreadThreadsForParent(e, t) {
             var n;
-            return null !== (n = this.getActiveJoinedUnreadThreadsForGuild(e)[t]) && void 0 !== n ? n : Q
+            return null !== (n = this.getActiveJoinedUnreadThreadsForGuild(e)[t]) && void 0 !== n ? n : q
         }
         getActiveJoinedRelevantThreadsForGuild(e) {
             var t;
@@ -279,11 +279,11 @@ function(e, t, n) {
         }
         getActiveJoinedRelevantThreadsForParent(e, t) {
             var n;
-            return null !== (n = this.getActiveJoinedRelevantThreadsForGuild(e)[t]) && void 0 !== n ? n : Q
+            return null !== (n = this.getActiveJoinedRelevantThreadsForGuild(e)[t]) && void 0 !== n ? n : q
         }
         getActiveUnjoinedThreadsForGuild(e) {
             var t;
-            return null !== (t = O[e]) && void 0 !== t ? t : q
+            return null !== (t = O[e]) && void 0 !== t ? t : Q
         }
         getActiveUnjoinedUnreadThreadsForGuild(e) {
             var t;
@@ -291,7 +291,7 @@ function(e, t, n) {
         }
         getActiveUnjoinedUnreadThreadsForParent(e, t) {
             var n;
-            return null !== (n = this.getActiveUnjoinedUnreadThreadsForGuild(e)[t]) && void 0 !== n ? n : Q
+            return null !== (n = this.getActiveUnjoinedUnreadThreadsForGuild(e)[t]) && void 0 !== n ? n : q
         }
         getNewThreadCountsForGuild(e) {
             var t;
@@ -375,17 +375,17 @@ function(e, t, n) {
             } = e, n = !1;
             return null != t.guild_id && null != t.parent_id && (t.guild_id in N && t.parent_id in N[t.guild_id] && (delete N[t.guild_id][t.parent_id], n = !0), t.guild_id in p && t.parent_id in p[t.guild_id] && (delete p[t.guild_id][t.parent_id], n = !0), t.guild_id in C && t.parent_id in C[t.guild_id] && (f.default.keys(C[t.guild_id][t.parent_id]).forEach(Y), delete C[t.guild_id][t.parent_id], n = !0), t.guild_id in O && t.parent_id in O[t.guild_id] && (delete O[t.guild_id][t.parent_id], n = !0), t.guild_id in R && t.parent_id in R[t.guild_id] && (delete R[t.guild_id][t.parent_id], n = !0), n && b(t.guild_id, t.parent_id)), n
         },
-        THREAD_MEMBER_UPDATE: B,
-        THREAD_MEMBERS_UPDATE: B,
-        LOAD_MESSAGES_SUCCESS: k,
-        MESSAGE_CREATE: k,
-        MESSAGE_DELETE: k,
-        MESSAGE_DELETE_BULK: k,
-        MESSAGE_ACK: k,
-        CHANNEL_ACK: k,
-        CHANNEL_LOCAL_ACK: k,
+        THREAD_MEMBER_UPDATE: k,
+        THREAD_MEMBERS_UPDATE: k,
+        LOAD_MESSAGES_SUCCESS: B,
+        MESSAGE_CREATE: B,
+        MESSAGE_DELETE: B,
+        MESSAGE_DELETE_BULK: B,
+        MESSAGE_ACK: B,
+        CHANNEL_ACK: B,
+        CHANNEL_LOCAL_ACK: B,
         CHANNEL_SELECT: function(e) {
-            k(e), V()
+            B(e), V()
         },
         PASSIVE_UPDATE_V1: function(e) {
             null != e.channels && F()

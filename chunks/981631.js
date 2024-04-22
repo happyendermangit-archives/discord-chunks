@@ -1306,6 +1306,7 @@ function(_, E, e) {
             APPLICATION_ASSET: (_, E, e) => "/applications/".concat(_, "/app-assets/").concat(E, ".").concat(e),
             HYPESQUAD_ONLINE: "/hypesquad/online",
             APPLICATION_STORAGE: (_, E) => "/applications/".concat(_, "/branches/").concat(E, "/storage"),
+            APPLICATION_DISCLOSURES: _ => "/applications/".concat(_, "/disclosures"),
             GIFS_SEARCH: "/gifs/search",
             GIFS_TRENDING: "/gifs/trending",
             GIFS_TRENDING_GIFS: "/gifs/trending-gifs",

@@ -35,8 +35,8 @@ function(e, t, n) {
         b = n("904085"),
         G = n("892254"),
         w = n("210887"),
-        B = n("819640"),
-        k = n("594174"),
+        k = n("819640"),
+        B = n("594174"),
         F = n("451478"),
         V = n("672752"),
         x = n("812663"),
@@ -47,8 +47,8 @@ function(e, t, n) {
         K = n("358085"),
         z = n("74538"),
         X = n("663993"),
-        q = n("823453"),
-        Q = n("628123"),
+        Q = n("823453"),
+        q = n("628123"),
         Z = n("962745"),
         J = n("151851"),
         $ = n("981631"),
@@ -88,7 +88,7 @@ function(e, t, n) {
             location: "client_themes_coachmark_reintro"
         }, {
             autoTrackExposure: !0
-        }), eo = (0, _.useStateFromStores)([B.default], () => B.default.getLayers().includes($.Layers.USER_SETTINGS)), el = (0, _.useStateFromStores)([k.default], () => z.default.canUseClientThemes(k.default.getCurrentUser())), eu = J && !eo, ed = [];
+        }), eo = (0, _.useStateFromStores)([k.default], () => k.default.getLayers().includes($.Layers.USER_SETTINGS)), el = (0, _.useStateFromStores)([B.default], () => z.default.canUseClientThemes(B.default.getCurrentUser())), eu = J && !eo, ed = [];
         eu && er && ea && !el && ed.push(c.DismissibleContent.CLIENT_THEMES_COACHMARK);
         let [e_, ec] = (0, P.useSelectedDismissibleContent)(ed, ee.DismissibleContentGroupName.SIDEBAR, !0);
         ed.push(c.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
@@ -110,10 +110,10 @@ function(e, t, n) {
         return (0, i.jsx)(G.default, {
             children: (0, i.jsx)(p.default, {
                 children: (0, i.jsxs)(I.RedesignIconContextProvider, {
-                    children: [(0, i.jsx)(q.default, {
+                    children: [(0, i.jsx)(Q.default, {
                         skipsSettingDefaultPageTitle: n
                     }), (0, i.jsx)(Z.default, {
-                        children: (0, i.jsx)(Q.default, {
+                        children: (0, i.jsx)(q.default, {
                             children: (0, i.jsxs)(I.FocusRingScope, {
                                 containerRef: eT,
                                 children: [(0, i.jsx)(W.MaskLibrary, {}), (0, i.jsx)(V.default, {}), (0, i.jsx)(o.FocusGuard, {}), null != E ? (0, i.jsx)(ei, {

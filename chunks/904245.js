@@ -36,8 +36,8 @@ function(e, t, n) {
         G = n("617136");
     n("807092");
     var w = n("869765"),
-        B = n("926491"),
-        k = n("467798"),
+        k = n("926491"),
+        B = n("467798"),
         F = n("346479"),
         V = n("218543"),
         x = n("199902"),
@@ -49,8 +49,8 @@ function(e, t, n) {
         K = n("496675"),
         z = n("158776"),
         X = n("306680"),
-        q = n("944486"),
-        Q = n("914010"),
+        Q = n("944486"),
+        q = n("914010"),
         Z = n("300429"),
         J = n("594174"),
         $ = n("626135"),
@@ -628,7 +628,7 @@ function(e, t, n) {
                         poll: R
                     } = n,
                     C = null !== (i = n.flags) && void 0 !== i ? i : 0,
-                    [M, w] = (0, k.default)(l);
+                    [M, w] = (0, B.default)(l);
                 if (M && (l = w, C = (0, et.addFlag)(C, eo.MessageFlags.SUPPRESS_NOTIFICATIONS)), "" === l && null == f && null == A && null == R) return Promise.resolve();
                 let F = null != p ? eo.MessageTypes.REPLY : eo.MessageTypes.DEFAULT,
                     V = null !== (s = n.nonce) && void 0 !== s ? s : (0, D.createNonce)();
@@ -644,7 +644,7 @@ function(e, t, n) {
                         nonce: V,
                         poll: (0, U.createPollServerDataFromCreateRequest)(R)
                     });
-                    (0, y.updateComboOnMessageSend)(e, t.id), null != A && (t.sticker_items = A.map(e => B.default.getStickerById(e)).filter(e => null != e)), eS.receiveMessage(e, t, !0, n)
+                    (0, y.updateComboOnMessageSend)(e, t.id), null != A && (t.sticker_items = A.map(e => k.default.getStickerById(e)).filter(e => null != e)), eS.receiveMessage(e, t, !0, n)
                 }
                 if (!eE && null != _ && _.length > 0) {
                     let t, n;
@@ -745,8 +745,8 @@ function(e, t, n) {
                                 else if (t === I.CodedLinkType.APP_DIRECTORY_PROFILE) $.default.track(eo.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_SENT, {
                                     application_id: l,
                                     device_platform: r.isMobile ? "mobile_web" : "desktop_web",
-                                    guild_id: Q.default.getGuildId(),
-                                    channel_id: q.default.getChannelId()
+                                    guild_id: q.default.getGuildId(),
+                                    channel_id: Q.default.getChannelId()
                                 });
                                 else if (t === I.CodedLinkType.ACTIVITY_BOOKMARK);
                                 else if (t === I.CodedLinkType.EMBEDDED_ACTIVITY_INVITE);

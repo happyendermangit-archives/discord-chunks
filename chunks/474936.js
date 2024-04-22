@@ -11,7 +11,7 @@ function(e, t, n) {
             return eP
         },
         AllSeasonalGiftStyles: function() {
-            return eq
+            return eQ
         },
         AnalyticsPremiumFeatureNames: function() {
             return d
@@ -29,7 +29,7 @@ function(e, t, n) {
             return A
         },
         CUSTOM_GIFT_MESSAGE_MAX_LENGTH: function() {
-            return eQ
+            return eq
         },
         DEFAULT_APPLE_GRACE_PERIOD_DAYS: function() {
             return es
@@ -77,7 +77,7 @@ function(e, t, n) {
             return eG
         },
         MULTI_MONTH_PLANS: function() {
-            return Q
+            return q
         },
         NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: function() {
             return ei
@@ -95,7 +95,7 @@ function(e, t, n) {
             return et
         },
         PREMIUM_GUILD_SUBSCRIPTION_PLANS: function() {
-            return q
+            return Q
         },
         PREMIUM_MONTHLY_PLANS: function() {
             return Z
@@ -236,10 +236,10 @@ function(e, t, n) {
             return eU
         },
         TotalSoundboardSoundCountsByTier: function() {
-            return ek
+            return eB
         },
         TotalStickerCountsByTier: function() {
-            return eB
+            return ek
         },
         UNSELECTED_PREMIUM_TYPE_OVERRIDE: function() {
             return x
@@ -248,7 +248,7 @@ function(e, t, n) {
             return ec
         }
     }), n("47120");
-    var i, r, s, a, o, l, u, d, _, c, E, I, T, f, S, h, A, m, N, p, O, R, C, g, L, D, v, M, y, P, U, b, G, w, B, k, F = n("981631"),
+    var i, r, s, a, o, l, u, d, _, c, E, I, T, f, S, h, A, m, N, p, O, R, C, g, L, D, v, M, y, P, U, b, G, w, k, B, F = n("981631"),
         V = n("185923");
     (N = i || (i = {}))[N.TIER_1 = 1] = "TIER_1", N[N.TIER_2 = 2] = "TIER_2", N[N.TIER_0 = 3] = "TIER_0";
     let x = void 0,
@@ -283,8 +283,8 @@ function(e, t, n) {
     (O = s || (s = {})).NONE_MONTH = "628379151761408000", O.NONE_YEAR = "628381571568631808", O.PREMIUM_MONTH_TIER_0 = "978380692553465866", O.PREMIUM_YEAR_TIER_0 = "1024422698568122368", O.PREMIUM_MONTH_TIER_1 = "511651871736201216", O.PREMIUM_YEAR_TIER_1 = "511651876987469824", O.PREMIUM_MONTH_TIER_2 = "511651880837840896", O.PREMIUM_YEAR_TIER_2 = "511651885459963904", O.PREMIUM_MONTH_GUILD = "590665532894740483", O.PREMIUM_YEAR_GUILD = "590665538238152709", O.NONE_3_MONTH = "944265614527037440", O.NONE_6_MONTH = "944265636643602432", O.PREMIUM_3_MONTH_TIER_2 = "642251038925127690", O.PREMIUM_6_MONTH_TIER_2 = "944037208325619722", O.PREMIUM_3_MONTH_GUILD = "944037355453415424", O.PREMIUM_6_MONTH_GUILD = "944037391444738048", O.PREMIUM_MONTH_LEGACY = "511651856145973248", O.PREMIUM_YEAR_LEGACY = "511651860671627264";
     let z = new Set(["978380692553465866", "1024422698568122368", "511651871736201216", "511651876987469824", "511651880837840896", "642251038925127690", "944037208325619722", "511651885459963904", "511651856145973248", "511651860671627264"]),
         X = new Set(["511651880837840896", "642251038925127690", "944037208325619722", "511651885459963904"]),
-        q = new Set(["590665532894740483", "944037355453415424", "944037391444738048", "590665538238152709"]),
-        Q = new Set(["642251038925127690", "944037208325619722", "944037355453415424", "944037391444738048"]),
+        Q = new Set(["590665532894740483", "944037355453415424", "944037391444738048", "590665538238152709"]),
+        q = new Set(["642251038925127690", "944037208325619722", "944037355453415424", "944037391444738048"]),
         Z = new Set(["978380692553465866", "511651871736201216", "511651880837840896"]),
         J = Object.freeze({
             "978380684370378762": "978380692553465866",
@@ -529,13 +529,13 @@ function(e, t, n) {
             [F.BoostedGuildTiers.TIER_2]: 15,
             [F.BoostedGuildTiers.TIER_3]: 30
         },
-        eB = {
+        ek = {
             [F.BoostedGuildTiers.NONE]: ew[F.BoostedGuildTiers.NONE],
             [F.BoostedGuildTiers.TIER_1]: ew[F.BoostedGuildTiers.NONE] + ew[F.BoostedGuildTiers.TIER_1],
             [F.BoostedGuildTiers.TIER_2]: ew[F.BoostedGuildTiers.NONE] + ew[F.BoostedGuildTiers.TIER_1] + ew[F.BoostedGuildTiers.TIER_2],
             [F.BoostedGuildTiers.TIER_3]: ew[F.BoostedGuildTiers.NONE] + ew[F.BoostedGuildTiers.TIER_1] + ew[F.BoostedGuildTiers.TIER_2] + ew[F.BoostedGuildTiers.TIER_3]
         },
-        ek = {
+        eB = {
             [F.BoostedGuildTiers.NONE]: 8,
             [F.BoostedGuildTiers.TIER_1]: 24,
             [F.BoostedGuildTiers.TIER_2]: 36,
@@ -550,9 +550,9 @@ function(e, t, n) {
                     fileSize: F.MAX_ATTACHMENT_SIZE,
                     screenShareQualityFramerate: 30,
                     screenShareQualityResolution: "720p",
-                    soundboardSounds: ek[F.BoostedGuildTiers.NONE],
+                    soundboardSounds: eB[F.BoostedGuildTiers.NONE],
                     maxConcurrentActivities: 2,
-                    stickers: eB[F.BoostedGuildTiers.NONE],
+                    stickers: ek[F.BoostedGuildTiers.NONE],
                     stageVideoUsers: F.MAX_STAGE_VIDEO_USER_LIMIT_TIER01
                 }
             },
@@ -564,9 +564,9 @@ function(e, t, n) {
                     fileSize: F.MAX_ATTACHMENT_SIZE,
                     screenShareQualityFramerate: 60,
                     screenShareQualityResolution: "720p",
-                    soundboardSounds: ek[F.BoostedGuildTiers.TIER_1],
+                    soundboardSounds: eB[F.BoostedGuildTiers.TIER_1],
                     maxConcurrentActivities: 3,
-                    stickers: eB[F.BoostedGuildTiers.TIER_1],
+                    stickers: ek[F.BoostedGuildTiers.TIER_1],
                     stageVideoUsers: F.MAX_STAGE_VIDEO_USER_LIMIT_TIER01
                 }
             },
@@ -578,9 +578,9 @@ function(e, t, n) {
                     fileSize: 52428800,
                     screenShareQualityFramerate: 60,
                     screenShareQualityResolution: "1080p",
-                    soundboardSounds: ek[F.BoostedGuildTiers.TIER_2],
+                    soundboardSounds: eB[F.BoostedGuildTiers.TIER_2],
                     maxConcurrentActivities: 5,
-                    stickers: eB[F.BoostedGuildTiers.TIER_2],
+                    stickers: ek[F.BoostedGuildTiers.TIER_2],
                     stageVideoUsers: F.MAX_STAGE_VIDEO_USER_LIMIT_TIER2
                 }
             },
@@ -592,9 +592,9 @@ function(e, t, n) {
                     fileSize: 104857600,
                     screenShareQualityFramerate: 60,
                     screenShareQualityResolution: "1080p",
-                    soundboardSounds: ek[F.BoostedGuildTiers.TIER_3],
+                    soundboardSounds: eB[F.BoostedGuildTiers.TIER_3],
                     maxConcurrentActivities: Number.MAX_SAFE_INTEGER,
-                    stickers: eB[F.BoostedGuildTiers.TIER_3],
+                    stickers: ek[F.BoostedGuildTiers.TIER_3],
                     stageVideoUsers: F.MAX_STAGE_VIDEO_USER_LIMIT_TIER3
                 }
             }
@@ -630,13 +630,13 @@ function(e, t, n) {
                 fileSize: 524288e3
             }
         });
-    (G = S || (S = {})).EXPLORE_ALL_PERKS_CLICKED = "explore_all_perks_clicked", G.HELPER_COLLAPSED = "helper_collapsed", G.HELPER_UNCOLLAPSED = "helper_uncollapsed", G.UNLOCK_EMOJI_CLICKED = "unlock_emoji_clicked", G.CUSTOM_PROFILES_CLICKED = "custom_profiles_clicked", G.SERVER_BOOSTS_CLICKED = "server_boosts_clicked", G.HELPER_DISMISSED = "premium_feature_helper_dismissed", G.HELPER_RENDERED = "premium_feature_helper_rendered", (w = h || (h = {})).EMOJI_TUTORIAL_STARTED = "emoji_tutorial_started", w.EMOJI_INTRO_VIEWED = "emoji_intro_viewed", w.EMOJI_PROMPT_VIEWED = "emoji_prompt_viewed", w.CUSTOM_PROFILE_TUTORIAL_STARTED = "custom_profile_tutorial_started", w.CUSTOM_PROFILE_AVATAR_INTRO_VIEWED = "custom_profile_avatar_intro_viewed", w.CUSTOM_PROFILE_AVATAR_DECORATIONS_VIEWED = "custom_profile_avatar_decorations_viewed", w.CUSTOM_PROFILE_BANNER_INTRO_VIEWED = "custom_profile_banner_intro_viewed", w.CUSTOM_PROFILE_THEME_INTRO_VIEWED = "custom_profile_theme_intro_viewed", w.SERVER_PROFILE_INTRO_VIEWED = "server_profile_intro_viewed", w.SERVER_BOOST_TUTORIAL_STARTED = "server_boost_tutorial_started", w.BOOST_INTRO_VIEWED = "boost_intro_viewed", w.BOOST_PROMPT_VIEWED = "boost_prompt_viewed", (B = A || (A = {})).BOOST = "boost", B.DISMISS = "dismiss", (k = m || (m = {})).BADGE_TOOLTIP_VIEWED = "share_nitro_bagde_tooltip_viewed", k.BADGE_CLICKED = "share_nitro_badge_clicked", k.FLOW_STARTED = "share_nitro_flow_started", k.FLOW_COMPLETED = "share_nitro_flow_completed";
+    (G = S || (S = {})).EXPLORE_ALL_PERKS_CLICKED = "explore_all_perks_clicked", G.HELPER_COLLAPSED = "helper_collapsed", G.HELPER_UNCOLLAPSED = "helper_uncollapsed", G.UNLOCK_EMOJI_CLICKED = "unlock_emoji_clicked", G.CUSTOM_PROFILES_CLICKED = "custom_profiles_clicked", G.SERVER_BOOSTS_CLICKED = "server_boosts_clicked", G.HELPER_DISMISSED = "premium_feature_helper_dismissed", G.HELPER_RENDERED = "premium_feature_helper_rendered", (w = h || (h = {})).EMOJI_TUTORIAL_STARTED = "emoji_tutorial_started", w.EMOJI_INTRO_VIEWED = "emoji_intro_viewed", w.EMOJI_PROMPT_VIEWED = "emoji_prompt_viewed", w.CUSTOM_PROFILE_TUTORIAL_STARTED = "custom_profile_tutorial_started", w.CUSTOM_PROFILE_AVATAR_INTRO_VIEWED = "custom_profile_avatar_intro_viewed", w.CUSTOM_PROFILE_AVATAR_DECORATIONS_VIEWED = "custom_profile_avatar_decorations_viewed", w.CUSTOM_PROFILE_BANNER_INTRO_VIEWED = "custom_profile_banner_intro_viewed", w.CUSTOM_PROFILE_THEME_INTRO_VIEWED = "custom_profile_theme_intro_viewed", w.SERVER_PROFILE_INTRO_VIEWED = "server_profile_intro_viewed", w.SERVER_BOOST_TUTORIAL_STARTED = "server_boost_tutorial_started", w.BOOST_INTRO_VIEWED = "boost_intro_viewed", w.BOOST_PROMPT_VIEWED = "boost_prompt_viewed", (k = A || (A = {})).BOOST = "boost", k.DISMISS = "dismiss", (B = m || (m = {})).BADGE_TOOLTIP_VIEWED = "share_nitro_bagde_tooltip_viewed", B.BADGE_CLICKED = "share_nitro_badge_clicked", B.FLOW_STARTED = "share_nitro_flow_started", B.FLOW_COMPLETED = "share_nitro_flow_completed";
     let eW = new Set(["PL", "TR"]),
         eK = [1, 2, 3],
         ez = [4, 5, 7, 6],
         eX = [8, 9, 11, 10],
-        eq = eX.concat(eK),
-        eQ = 190,
+        eQ = eX.concat(eK),
+        eq = 190,
         eZ = 3,
         eJ = 30
 }

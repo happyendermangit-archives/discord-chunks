@@ -55,14 +55,14 @@ function(e, t, n) {
             return G[e] = t, t
         }
     }
-    let B = f.TriggerDebuggingAAExperiments.map(e => w(e)),
-        k = {
+    let k = f.TriggerDebuggingAAExperiments.map(e => w(e)),
+        B = {
             title: "Unnamed Experiment",
             description: "No description provided"
         };
 
     function F(e, t) {
-        return e || B.includes(t)
+        return e || k.includes(t)
     }
 
     function V(e) {
@@ -181,10 +181,10 @@ function(e, t, n) {
                 experiments: n,
                 guildExperiments: i
             } = e;
-        t && q(n, i), R = !0
+        t && Q(n, i), R = !0
     }
 
-    function q(e, t) {
+    function Q(e, t) {
         L = e, D = null != t ? t : [], e.forEach(e => {
             let [t, n, i, r, s, a, o, l] = e;
             v[t] = {
@@ -223,7 +223,7 @@ function(e, t, n) {
         })
     }
 
-    function Q(e, t, n) {
+    function q(e, t, n) {
         let i = null;
         for (let {
                 buckets: s,
@@ -353,7 +353,7 @@ function(e, t, n) {
             } = e,
             a = "function" == typeof i.getExperimentId ? i.getExperimentId() : null;
         if (!a) throw Error("Experiment Store must have a static getExperimentId method defined");
-        let o = "function" == typeof i.getMetaData ? i.getMetaData() : k;
+        let o = "function" == typeof i.getMetaData ? i.getMetaData() : B;
         Object.keys(s).forEach(e => {
             if (e !== f.ExperimentTypes.NONE_LEGACY) r()(null != s[e], "Unexpected missing renderFunctions"), t = e, n = Object.keys(s[e]).map(e => parseInt(e))
         }), er({
@@ -446,7 +446,7 @@ function(e, t, n) {
         }
         loadCache() {
             let e = this.readSnapshot(el.LATEST_SNAPSHOT_VERSION);
-            null != e && ("loadedUserExperiments" in e ? (v = e.loadedUserExperiments, M = Z(e.loadedGuildExperiments)) : q(e.rawUserExperiments, e.rawGuildExperiments))
+            null != e && ("loadedUserExperiments" in e ? (v = e.loadedUserExperiments, M = Z(e.loadedGuildExperiments)) : Q(e.rawUserExperiments, e.rawGuildExperiments))
         }
         takeSnapshot() {
             return {
@@ -498,7 +498,7 @@ function(e, t, n) {
                 let _ = w("".concat(null !== (i = a.hashKey) && void 0 !== i ? i : n, ":").concat(t)) % 1e4,
                     c = null;
                 for (let e of null !== (r = a.overridesFormatted) && void 0 !== r ? r : [])
-                    if (null !== (c = Q(t, e, _))) return {
+                    if (null !== (c = q(t, e, _))) return {
                         type: f.ExperimentTypes.GUILD,
                         guildId: t,
                         revision: a.revision,
@@ -507,7 +507,7 @@ function(e, t, n) {
                         hashResult: _,
                         triggerDebuggingEnabled: d
                     };
-                if (null == (c = Q(t, a.populations, _))) return null;
+                if (null == (c = q(t, a.populations, _))) return null;
                 if (null != a.holdoutName && null != a.holdoutBucket && a.holdoutName !== n) {
                     let n = e(t, a.holdoutName);
                     if ((null == n ? void 0 : n.bucket) != null && (!0 !== n.override && W({

@@ -162,8 +162,8 @@ function(e, t, n) {
             optionClassName: b,
             closeOnSelect: G,
             select: w,
-            isSelected: B,
-            serialize: k,
+            isSelected: k,
+            serialize: B,
             clear: F,
             hideIcon: V = !1,
             "aria-label": x,
@@ -174,16 +174,16 @@ function(e, t, n) {
             height: z
         } = (0, E.default)(), X = r.useCallback(e => {
             Y !== e && !o && (j(e), e ? null == C || C() : null == R || R())
-        }, [o, R, C, Y]), q = r.useCallback(e => {
+        }, [o, R, C, Y]), Q = r.useCallback(e => {
             Y && !e && X(!1)
-        }, [X, Y]), Q = (0, I.useIsVisible)(q), Z = r.useCallback(e => {
+        }, [X, Y]), q = (0, I.useIsVisible)(Q), Z = r.useCallback(e => {
             if (w(e), G) {
                 var t;
                 null === (t = W.current) || void 0 === t || t.focus()
             }
         }, [w, G]), J = r.useCallback(e => {
             e.stopPropagation(), null == F || F()
-        }, [F]), $ = t.filter(e => B(e.value));
+        }, [F]), $ = t.filter(e => k(e.value));
         r.useLayoutEffect(() => {
             if (_) {
                 var e;
@@ -212,12 +212,12 @@ function(e, t, n) {
                     closeOnSelect: G,
                     maxVisibleItems: u,
                     width: null != T ? T : K,
-                    isSelected: B,
+                    isSelected: k,
                     closePopout: n,
                     buttonHeight: null != z ? z : 0,
                     onSelect: Z,
                     options: t,
-                    serialize: k,
+                    serialize: B,
                     renderOptionLabel: g,
                     optionClassName: b,
                     updatePosition: s,
@@ -239,7 +239,7 @@ function(e, t, n) {
                     role: "button",
                     "aria-disabled": o,
                     innerRef: e => {
-                        W.current = e, Q.current = e
+                        W.current = e, q.current = e
                     },
                     onClick: o ? void 0 : e => {
                         r(e), X(!Y)

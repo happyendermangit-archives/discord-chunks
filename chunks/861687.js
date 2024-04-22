@@ -39,8 +39,8 @@ function(e, t, n) {
         b = n("131951"),
         G = n("19780"),
         w = n("226961"),
-        B = n("936349"),
-        k = n("626135"),
+        k = n("936349"),
+        B = n("626135"),
         F = n("931619"),
         V = n("358085"),
         x = n("579806"),
@@ -51,8 +51,8 @@ function(e, t, n) {
         K = n("655306"),
         z = n("583794"),
         X = n("824096"),
-        q = n("53114"),
-        Q = n("174532"),
+        Q = n("53114"),
+        q = n("174532"),
         Z = n("895066"),
         J = n("981631"),
         $ = n("65154");
@@ -273,7 +273,7 @@ function(e, t, n) {
         }
         _handleDisconnect(e, t, n, i) {
             var r, s, a, o, l, u;
-            this.logger.info("Disconnected from RTC server, clean: ".concat(t, ", code: ").concat(n, ", reason: ").concat(i, ", state: ").concat(this.state)), !t && this._connecting && !this._encountered_socket_failure && (k.default.track(J.AnalyticEvents.VOICE_CONNECTION_SOCKET_FAILURE, {
+            this.logger.info("Disconnected from RTC server, clean: ".concat(t, ", code: ").concat(n, ", reason: ").concat(i, ", state: ").concat(this.state)), !t && this._connecting && !this._encountered_socket_failure && (B.default.track(J.AnalyticEvents.VOICE_CONNECTION_SOCKET_FAILURE, {
                 ...this._getAnalyticsProperties(),
                 hostname: this.hostname,
                 connect_count: this._connectCount,
@@ -289,13 +289,13 @@ function(e, t, n) {
                 let e = this._videoQuality;
                 null != e && this.context === $.MediaEngineContextTypes.DEFAULT && (e.stop(), this._sentVideo && e.getOutboundStats().forEach(t => {
                     var n;
-                    (null !== (n = t.num_frames) && void 0 !== n ? n : 0) > 0 && k.default.track(J.AnalyticEvents.VIDEO_STREAM_ENDED, {
+                    (null !== (n = t.num_frames) && void 0 !== n ? n : 0) > 0 && B.default.track(J.AnalyticEvents.VIDEO_STREAM_ENDED, {
                         ...this._getAnalyticsProperties(),
                         media_session_id: this.getMediaSessionId(),
                         sender_user_id: this.userId,
                         reason: i,
                         participant_type: "sender",
-                        guild_region: B.default.getRegion(this.hostname),
+                        guild_region: k.default.getRegion(this.hostname),
                         hostname: this.hostname,
                         hardware_enabled: b.default.getHardwareH264(),
                         ...t,
@@ -307,13 +307,13 @@ function(e, t, n) {
                 }), e.getInboundParticipants().forEach(t => {
                     var n;
                     let r = e.getInboundStats(t);
-                    (null !== (n = null == r ? void 0 : r.num_frames) && void 0 !== n ? n : 0) > 0 && k.default.track(J.AnalyticEvents.VIDEO_STREAM_ENDED, {
+                    (null !== (n = null == r ? void 0 : r.num_frames) && void 0 !== n ? n : 0) > 0 && B.default.track(J.AnalyticEvents.VIDEO_STREAM_ENDED, {
                         ...this._getAnalyticsProperties(),
                         media_session_id: this.getMediaSessionId(),
                         sender_user_id: t,
                         reason: i,
                         participant_type: "receiver",
-                        guild_region: B.default.getRegion(this.hostname),
+                        guild_region: k.default.getRegion(this.hostname),
                         hostname: this.hostname,
                         hardware_enabled: b.default.getHardwareH264(),
                         ...r,
@@ -321,10 +321,10 @@ function(e, t, n) {
                         ...e.getCodecUsageStats("receiver", t)
                     })
                 }));
-                let t = B.default.shouldIncludePreferredRegion() ? B.default.getPreferredRegion() : null,
+                let t = k.default.shouldIncludePreferredRegion() ? k.default.getPreferredRegion() : null,
                     n = b.default.getSettings(),
                     r = U.default.getChannel(this.channelId);
-                k.default.track(J.AnalyticEvents.VOICE_DISCONNECT, {
+                B.default.track(J.AnalyticEvents.VOICE_DISCONNECT, {
                     ...this._getAnalyticsProperties(),
                     hostname: this.hostname,
                     port: this.port,
@@ -373,7 +373,7 @@ function(e, t, n) {
                 b.default.getMediaEngine().getCodecSurvey().then(e => {
                     let t = JSON.parse(e);
                     if (null == t || null == t.available_video_encoders || null == t.available_video_decoders) throw Error("codec survey is not available");
-                    k.default.track(J.AnalyticEvents.VOICE_CODEC_DETECTED, {
+                    B.default.track(J.AnalyticEvents.VOICE_CODEC_DETECTED, {
                         ...t,
                         rtc_connection_id: this.getRTCConnectionId(),
                         media_session_id: s
@@ -494,7 +494,7 @@ function(e, t, n) {
                     this.logger.warn("Socket mismatch, disconnecting");
                     return
                 }
-                switch (this._voiceQuality = new Z.default(l), this._voiceQuality.start(), this._voiceQualityPeriodicStatsSequenceId = 0, this._voiceQualityPeriodicStatsInterval = setInterval(this._handleVoiceQualityPeriodicsStats, 3e5), this._noiseCancellationError = 0, this._voiceDuration = new Q.default(this.userId, l), this._voiceDuration.start(), this.protocol = i, i) {
+                switch (this._voiceQuality = new Z.default(l), this._voiceQuality.start(), this._voiceQualityPeriodicStatsSequenceId = 0, this._voiceQualityPeriodicStatsInterval = setInterval(this._handleVoiceQualityPeriodicsStats, 3e5), this._noiseCancellationError = 0, this._voiceDuration = new q.default(this.userId, l), this._voiceDuration.start(), this.protocol = i, i) {
                     case "udp":
                         this.logger.info("Sending UDP info to RTC server.", r, this._selectedExperiments), e.once(W.SocketEvent.Encryption, (e, t) => {
                             l === this._connection && (l.setEncryption(e, t), this._encryptionMode = e)
@@ -515,8 +515,8 @@ function(e, t, n) {
                 })
             }), l.on(c.BaseConnectionEvent.Error, t => {
                 if (e !== this._socket) return;
-                let n = B.default.shouldIncludePreferredRegion() ? B.default.getPreferredRegion() : null;
-                this.logger.error("Error occurred while connecting to RTC server: ".concat(t)), k.default.track(J.AnalyticEvents.VOICE_CONNECTION_FAILURE, {
+                let n = k.default.shouldIncludePreferredRegion() ? k.default.getPreferredRegion() : null;
+                this.logger.error("Error occurred while connecting to RTC server: ".concat(t)), B.default.track(J.AnalyticEvents.VOICE_CONNECTION_FAILURE, {
                     ...this._getAnalyticsProperties(),
                     hostname: this.hostname,
                     port: this.port,
@@ -549,8 +549,8 @@ function(e, t, n) {
                 }
                 if (n === J.RTCConnectionStates.RTC_CONNECTING && this.state === J.RTCConnectionStates.RTC_DISCONNECTED ? this.reconnect() : this.state === J.RTCConnectionStates.NO_ROUTE && this._backoff.fail(this.reconnect), this.state === J.RTCConnectionStates.RTC_CONNECTED) {
                     var i;
-                    let e = B.default.shouldIncludePreferredRegion() ? B.default.getPreferredRegion() : null;
-                    this._connecting && k.default.track(J.AnalyticEvents.VOICE_CONNECTION_SUCCESS, {
+                    let e = k.default.shouldIncludePreferredRegion() ? k.default.getPreferredRegion() : null;
+                    this._connecting && B.default.track(J.AnalyticEvents.VOICE_CONNECTION_SUCCESS, {
                         ...this._getAnalyticsProperties(),
                         hostname: this.hostname,
                         port: this.port,
@@ -587,7 +587,7 @@ function(e, t, n) {
         }
         getOrCreateVideoQuality() {
             if (null != this._connection && null == this._videoQuality) {
-                this._videoQuality = new q.VideoQuality(this._connection), this._videoQuality.start();
+                this._videoQuality = new Q.VideoQuality(this._connection), this._videoQuality.start();
                 let {
                     featureEnabled: e,
                     windowLength: t,
@@ -597,7 +597,7 @@ function(e, t, n) {
                 } = v.default.getConfig(!0);
                 if (e) {
                     this._videoHealthManager = new X.VideoHealthManager(t, n, i, r), null != this._localMediaSinkWantsManager && (this._localMediaSinkWantsManager.videoHealthManager = this._videoHealthManager);
-                    this._videoQuality.on(q.VideoQualityEvent.FpsUpdate, (e, t, n) => {
+                    this._videoQuality.on(Q.VideoQualityEvent.FpsUpdate, (e, t, n) => {
                         var i, r;
                         (null === (i = this._localMediaSinkWantsManager) || void 0 === i ? void 0 : i.shouldReceiveFromUser(e)) && (null === (r = this._videoHealthManager) || void 0 === r || r.updateFps(e, t, n))
                     })
@@ -635,7 +635,7 @@ function(e, t, n) {
         }
         _handleRemoteStreamsReady(e) {
             let t = (0, E.now)() - this._connectStartTime;
-            k.default.track(J.AnalyticEvents.VOICE_CONNECTION_REMOTE_STREAMS_CREATED, {
+            B.default.track(J.AnalyticEvents.VOICE_CONNECTION_REMOTE_STREAMS_CREATED, {
                 ...this._getAnalyticsProperties(),
                 number_of_users: e,
                 duration_ms: t
@@ -718,13 +718,13 @@ function(e, t, n) {
             if (null != r && this.context === $.MediaEngineContextTypes.DEFAULT) {
                 let t = r.getInboundStats(e),
                     s = null !== (n = null == t ? void 0 : t.num_frames) && void 0 !== n ? n : 0;
-                null != t && s > 0 && (k.default.track(J.AnalyticEvents.VIDEO_STREAM_ENDED, {
+                null != t && s > 0 && (B.default.track(J.AnalyticEvents.VIDEO_STREAM_ENDED, {
                     ...this._getAnalyticsProperties(),
                     media_session_id: this.getMediaSessionId(),
                     sender_user_id: e,
                     reason: "User disconnected",
                     participant_type: "receiver",
-                    guild_region: B.default.getRegion(this.hostname),
+                    guild_region: k.default.getRegion(this.hostname),
                     hostname: this.hostname,
                     hardware_enabled: b.default.getHardwareH264(),
                     ...t,
@@ -746,7 +746,7 @@ function(e, t, n) {
         async _handleMediaSessionId(e) {
             this._mediaSessionId = e, this.logger.info("Setting media-session-id: ".concat(e, " for rtc-connection-id: ").concat(this.getRTCConnectionId()));
             let t = await (0, m.default)();
-            k.default.track(J.AnalyticEvents.MEDIA_SESSION_JOINED, {
+            B.default.track(J.AnalyticEvents.MEDIA_SESSION_JOINED, {
                 ...this._getAnalyticsProperties(),
                 media_session_id: this.getMediaSessionId(),
                 parent_media_session_id: this.parentMediaSessionId,
@@ -777,7 +777,7 @@ function(e, t, n) {
             }
         }
         _trackSecureFrameTransition(e, t) {
-            k.default.track(J.AnalyticEvents.SECURE_FRAMES_TRANSITION, {
+            B.default.track(J.AnalyticEvents.SECURE_FRAMES_TRANSITION, {
                 ...this._getAnalyticsProperties(),
                 media_session_id: this.getMediaSessionId(),
                 parent_media_session_id: this.parentMediaSessionId,
@@ -897,7 +897,7 @@ function(e, t, n) {
                     if (null != this._voiceQuality) {
                         let e = this._voiceQuality.getPeriodicStats();
                         if (this.shouldReportPeriodicStats(e))
-                            for (let t of e) k.default.track(J.AnalyticEvents.VOICE_QUALITY_PERIODIC_STATS, {
+                            for (let t of e) B.default.track(J.AnalyticEvents.VOICE_QUALITY_PERIODIC_STATS, {
                                 ...this._getAnalyticsProperties(),
                                 media_session_id: this.getMediaSessionId(),
                                 sender_user_id: t.userId,
@@ -926,7 +926,7 @@ function(e, t, n) {
                 }), ee(this, "_trackVoiceConnectionConnecting", () => {
                     let e = U.default.getChannel(this.channelId),
                         t = null != e ? e.type : null;
-                    k.default.track(J.AnalyticEvents.VOICE_CONNECTION_CONNECTING, {
+                    B.default.track(J.AnalyticEvents.VOICE_CONNECTION_CONNECTING, {
                         guild_id: this.guildId,
                         channel_id: this.channelId,
                         rtc_connection_id: this.getRTCConnectionId(),

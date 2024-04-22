@@ -31,8 +31,8 @@ function(e, t, n) {
         b = {},
         G = {},
         w = {},
-        B = {},
         k = {},
+        B = {},
         F = {},
         V = {},
         x = {};
@@ -47,7 +47,7 @@ function(e, t, n) {
         return t.reduce((t, n) => e(H(n)) ? (function(e) {
             let t = H(e);
             if (0 === t.size()) return;
-            let n = er(e) || q(t) ? D.ChannelModes.VIDEO : D.ChannelModes.VOICE;
+            let n = er(e) || Q(t) ? D.ChannelModes.VIDEO : D.ChannelModes.VOICE;
             n === D.ChannelModes.VOICE ? (delete G[e], delete w[e]) : G[e] = n
         }(n), function(e) {
             let t = h.default.getId(),
@@ -118,11 +118,11 @@ function(e, t, n) {
         null == t ? delete U[e] : U[e] = t, n !== K(e) && b[e].toggleCount++
     }
 
-    function q(e) {
+    function Q(e) {
         return e.size(g.ChannelRTCParticipantsIndexes.STREAM) > 0 || e.size(g.ChannelRTCParticipantsIndexes.VIDEO) > 0 || e.hasEmbeddedActivity()
     }
 
-    function Q(e) {
+    function q(e) {
         delete P[e], delete U[e], delete G[e], delete w[e]
     }
 
@@ -135,7 +135,7 @@ function(e, t, n) {
             null != n && !e.includes(n) && e.push(n);
             let i = T.default.getRemoteSessionId(),
                 r = C.default.getVoiceStateForSession(h.default.getId(), i);
-            (null == r ? void 0 : r.channelId) != null && e.push(null == r ? void 0 : r.channelId), d().difference(y, e).forEach(Q);
+            (null == r ? void 0 : r.channelId) != null && e.push(null == r ? void 0 : r.channelId), d().difference(y, e).forEach(q);
             let s = d().difference(e, y);
             return y = e, s
         }())
@@ -172,7 +172,7 @@ function(e, t, n) {
                 id: t
             }
         } = e;
-        return delete F[t], delete V[t], Q(t)
+        return delete F[t], delete V[t], q(t)
     }
 
     function ei(e) {
@@ -205,7 +205,7 @@ function(e, t, n) {
             return null !== (t = H(e).toArray(g.ChannelRTCParticipantsIndexes.SPEAKING)) && void 0 !== t ? t : M
         }
         getFilteredParticipants(e) {
-            return k[e] ? H(e).toArray(g.ChannelRTCParticipantsIndexes.FILTERED) : H(e).toArray()
+            return B[e] ? H(e).toArray(g.ChannelRTCParticipantsIndexes.FILTERED) : H(e).toArray()
         }
         getVideoParticipants(e) {
             var t;
@@ -228,11 +228,11 @@ function(e, t, n) {
         }
         getParticipantsOpen(e) {
             var t;
-            return null === (t = B[e]) || void 0 === t || t
+            return null === (t = k[e]) || void 0 === t || t
         }
         getVoiceParticipantsHidden(e) {
             var t;
-            return null !== (t = k[e]) && void 0 !== t && t
+            return null !== (t = B[e]) && void 0 !== t && t
         }
         getSelectedParticipantId(e) {
             let [t, n] = W(e);
@@ -341,7 +341,7 @@ function(e, t, n) {
             let {
                 channelId: t
             } = e;
-            return Q(t)
+            return q(t)
         },
         CHANNEL_RTC_SELECT_PARTICIPANT: function(e) {
             let {
@@ -360,7 +360,7 @@ function(e, t, n) {
                     e === h.default.getId() && j(e, [t])
                 } catch (e) {
                     v.warn("INVALID STREAM KEY FORMAT ".concat(n), e)
-                }!q(i) && (B[t] = !1)
+                }!Q(i) && (k[t] = !1)
             }
         },
         CHANNEL_RTC_UPDATE_LAYOUT: function(e) {
@@ -379,14 +379,14 @@ function(e, t, n) {
                 channelId: t,
                 participantsOpen: n
             } = e;
-            B[t] = n
+            k[t] = n
         },
         CHANNEL_RTC_UPDATE_VOICE_PARTICIPANTS_HIDDEN: function(e) {
             let {
                 channelId: t,
                 voiceParticipantsHidden: n
             } = e;
-            k[t] = n
+            B[t] = n
         },
         CHANNEL_RTC_UPDATE_STAGE_STREAM_SIZE: function(e) {
             let {
@@ -473,7 +473,7 @@ function(e, t, n) {
                     let i = m.default.getChannel(e);
                     (null == i || i.getGuildId() === t.id) && n.push(e)
                 }), 0 === n.length) return !1;
-            d().forEach(n, e => Q(e))
+            d().forEach(n, e => q(e))
         }
     })
 }

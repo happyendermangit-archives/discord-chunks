@@ -110,8 +110,8 @@ function(e, t, n) {
             messageId: b,
             isBurstReaction: G,
             rowPosition: w,
-            inNitroLockedSection: B
-        } = e, [k, F] = r.useState(""), V = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), x = (0, o.useStateFromStores)([_.default], () => _.default.getDisambiguatedEmojiContext(I), [I]), H = r.useRef(null), {
+            inNitroLockedSection: k
+        } = e, [B, F] = r.useState(""), V = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), x = (0, o.useStateFromStores)([_.default], () => _.default.getDisambiguatedEmojiContext(I), [I]), H = r.useRef(null), {
             emoji: Y,
             size: j,
             isDisabled: W,
@@ -125,7 +125,7 @@ function(e, t, n) {
             })
         }, X = () => {
             !m.current && !p.current && S(t)
-        }, q = e => {
+        }, Q = e => {
             (0, u.openContextMenuLazy)(e, async () => {
                 let {
                     default: e
@@ -134,7 +134,7 @@ function(e, t, n) {
                     ...t
                 })
             })
-        }, Q = function() {
+        }, q = function() {
             var e;
             let {
                 onMouseEnter: t,
@@ -149,7 +149,7 @@ function(e, t, n) {
                 ...d,
                 key: s,
                 ref: H
-            }, k !== O(K, c) && (0, i.jsx)(R, {
+            }, B !== O(K, c) && (0, i.jsx)(R, {
                 ref: o,
                 emoji: Y,
                 isFavorite: x.isFavoriteEmojiWithoutFetchingLatest(Y),
@@ -171,14 +171,14 @@ function(e, t, n) {
                     }
                     z(e)
                 },
-                onContextMenu: q,
+                onContextMenu: Q,
                 tabIndex: l,
                 columnIndex: K,
                 rowIndex: c,
                 size: j,
                 surrogateCodePoint: g,
                 selectedItemClassName: L,
-                inNitroLockedSection: B
+                inNitroLockedSection: k
             }))
         };
         return C ? (0, i.jsx)(l.Tooltip, {
@@ -187,7 +187,7 @@ function(e, t, n) {
             }),
             position: "top",
             delay: 200,
-            children: e => Q(e)
-        }, s) : Q()
+            children: e => q(e)
+        }, s) : q()
     }
 }
