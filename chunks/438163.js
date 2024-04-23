@@ -25,15 +25,13 @@ function(e, t, n) {
         } = n, c = null != _, E = null != n.state && "" !== n.state ? n.state : null, I = null != E && E.length > 0;
         if (!c && !I) return null;
         let T = I ? Math.floor(E.length / 30) + 1 : 1,
-            f = s()({
-                [u.maxLinePositioningOffset]: T >= 3
-            }),
-            S = s()(u.statusBubbleOutline, t, {
+            f = s()(u.statusBubbleOuter, {
                 [u.statusBubbleSingleLineShape]: 1 === T,
                 [u.statusBubbleMultiLineShape]: T > 1,
-                [u.statusBubbleOutlineMaxLinePadding]: T >= 3
+                [u.statusBubbleOuterMaxLinePadding]: T >= 3,
+                [u.statusBubbleOuterMaxLinePositioningOffset]: T >= 3
             }),
-            h = s()(u.statusBubble, {
+            S = s()(u.statusBubble, {
                 [u.statusBubbleSingleLineEmojiOnly]: c && !I,
                 [u.statusBubbleSingleLineTextOrMixed]: 1 === T && I,
                 [u.statusBubbleMultiLinePadding]: T > 1 && T < 3,
@@ -42,11 +40,11 @@ function(e, t, n) {
                 [u.statusBubbleMultiLineShape]: T > 1
             });
         return (0, i.jsx)("div", {
-            className: f,
+            className: t,
             children: (0, i.jsx)("div", {
-                className: S,
+                className: f,
                 children: (0, i.jsxs)("span", {
-                    className: h,
+                    className: S,
                     children: [c ? I ? (0, i.jsx)(o.default, {
                         className: u.inlineStatusEmoji,
                         emojiId: _.id,
