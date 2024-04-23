@@ -128,7 +128,7 @@ function(e, t, n) {
             },
             el = j && !H ? {
                 headerText: U.default.Messages.QUESTS_MEMBERS_LIST_CLAIM_REWARD,
-                ctaText: U.default.Messages.QUESTS_MEMBERS_LIST_CLAIM_CTA,
+                ctaText: U.default.Messages.QUESTS_CLAIM_REWARD,
                 handleClickCta: V,
                 tileAssetType: "reward"
             } : Y ? {
