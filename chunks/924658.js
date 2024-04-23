@@ -373,6 +373,7 @@ function(e) {
         CLAN_SETUP_OVERVIEW_SIGN_HELP: "By signing this charter, I agree to grow and uphold the values of the Guild.",
         CLAN_OVERVIEW_LIST_TWO_ITEMS: "!!{item1}!! and !!{item2}!!",
         CLAN_OVERVIEW_LIST_MULTIPLE_ITEMS: "!!{items}!!, and !!{last}!!",
+        CLAN_OVERVIEW_LIST_OTHERS_COUNT: "{n, plural, one {1 other} other {{n} others}}",
         CLAN_SUBMIT_ERROR: "Something went wrong! Please fix any errors and try again.",
         CLAN_SETTINGS: "Guild Settings",
         CLAN_SETTINGS_BASIC_INFO: "Basic Info",
@@ -469,6 +470,13 @@ function(e) {
         MESSAGE_ACTION_FORWARD: "Forward",
         GUILD_POPOUT_ACTIVITY_EVENT_LOCATION: "Event in",
         GUILD_POPOUT_ACTIVITY_EVENT_LOCATION_A11Y: "Event in {location}",
-        GUILD_POPOUT_ACTIVITY_EVENT_CREATED_BY: "Created by {creatorName}"
+        GUILD_POPOUT_ACTIVITY_EVENT_CREATED_BY: "Created by {creatorName}",
+        GUILD_POPOUT_ACTIVITY_USERS_1_N: "!!{a}!! and {n, plural, one {{n} other} other {{n} others}}",
+        GUILD_POPOUT_ACTIVITY_USERS_2: "!!{a}!! and !!{b}!!",
+        GUILD_POPOUT_ACTIVITY_USERS_2_N: "!!{a}!!, !!{b}!!, and {n, plural, one {{n} other} other {{n} others}}",
+        GUILD_POPOUT_ACTIVITY_USERS_3: "!!{a}!!, !!{b}!!, and !!{c}!!",
+        GUILD_POPOUT_ACTIVITY_USERS_3_N: "!!{a}!!, !!{b}!!, !!{c}!!, and {n, plural, one {{n} other} other {{n} others}}",
+        GUILD_POPOUT_ACTIVITY_USERS_N: "{n, plural, one {1 person} other {{n} people}}",
+        GUILD_POPOUT_ACTIVITY_VOICE: "In voice"
     })
 }

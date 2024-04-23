@@ -47,13 +47,22 @@ function(e, t, n) {
     function d(e, t) {
         return null != e && null != t && null != t.identityGuildId && t.identityGuildId === e && !!t.identityEnabled || !1
     }
-    let _ = e => {
+    let _ = (e, t) => {
         if (1 === e.length) return e[0];
         if (2 === e.length) return r.default.Messages.CLAN_OVERVIEW_LIST_TWO_ITEMS.format({
             item1: e[0],
             item2: e[1]
         });
-        {
+        if (null != t && e.length > t) {
+            let n = e.slice(0, t).join(", "),
+                i = r.default.Messages.CLAN_OVERVIEW_LIST_OTHERS_COUNT.format({
+                    n: e.length - t
+                });
+            return r.default.Messages.CLAN_OVERVIEW_LIST_MULTIPLE_ITEMS.format({
+                items: n,
+                last: i
+            })
+        } {
             let t = e.slice(0, -1).join(", "),
                 n = e[e.length - 1];
             return r.default.Messages.CLAN_OVERVIEW_LIST_MULTIPLE_ITEMS.format({

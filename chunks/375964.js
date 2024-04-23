@@ -946,6 +946,8 @@ function(e) {
         ACTIVITY_REPORT_ACTIVITY_CONFUSING: "Activity controls are confusing",
         ACTIVITY_REPORT_ACTIVITY_END_NOT_FUN: "Activity was not fun",
         ACTIVITY_REPORT_ACTIVITY_NOT_FUN: "Activity is not fun",
+        ACTIVITY_REPORT_ACTIVITY_END_INCLUDED_ADS: "Activity included ads",
+        ACTIVITY_REPORT_ACTIVITY_INCLUDES_ADS: "Activity includes ads",
         OTHER: "Other",
         POMELO_ADD_FRIEND_ERROR: "Hm, didn’t work. Double check that the username is correct.",
         POMELO_ADD_FRIEND_DESCRIPTION: "You can add friends with their Discord username.",
