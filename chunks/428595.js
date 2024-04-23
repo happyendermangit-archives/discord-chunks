@@ -369,7 +369,7 @@ function(e, t, n) {
         highlightWord: {
             order: -1,
             match(e, t) {
-                if (null == t.highlightWord || 0 === t.highlightWord.length) return null;
+                if (null != t.parseDepth && t.parseDepth > 10 || null == t.highlightWord || 0 === t.highlightWord.length) return null;
                 let n = e.indexOf(t.highlightWord);
                 if (-1 === n) return null;
                 let i = !W(e, n);
@@ -381,12 +381,18 @@ function(e, t, n) {
                 return [e, t.highlightWord, r, s]
             },
             parse(e, t, n) {
-                let i = t(e[2], n),
-                    r = t(e[3], n);
-                return [...i, {
+                var i;
+                let r = null !== (i = n.parseDepth) && void 0 !== i ? i : 0,
+                    s = {
+                        ...n,
+                        parseDepth: r + 1
+                    },
+                    a = t(e[2], s),
+                    o = t(e[3], s);
+                return [...a, {
                     type: "highlight",
                     content: e[1]
-                }, ...r]
+                }, ...o]
             }
         }
     }, r().omit(w, ["url"])]);
