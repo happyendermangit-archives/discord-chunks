@@ -1,6 +1,7 @@
 function(e) {
     "use strict";
     e.exports = {
+        card: "card__56b24",
         container: "container_ec1fbc",
         content: "content__7833e",
         scroller: "scroller__6a588",
