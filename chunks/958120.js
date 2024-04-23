@@ -21,66 +21,68 @@ function(e, t, n) {
         T = n("790711"),
         f = n("67152"),
         S = n("901952"),
-        h = n("287612"),
-        A = n("165818"),
+        h = n("579285"),
+        A = n("287612"),
         m = n("981631"),
         N = n("797849");
 
     function p(e) {
         let {
             user: t,
-            displayProfile: n,
-            onOpenProfile: p,
-            guildId: O,
-            channelId: R,
-            onClose: C
+            currentUser: n,
+            displayProfile: p,
+            guild: O,
+            onOpenProfile: R,
+            channelId: C,
+            onClose: g
         } = e, {
-            moreUserDetailsEnabled: g
+            moreUserDetailsEnabled: L
         } = (0, l.useSimplifiedProfileExperiment)({
             location: "BiteSizeProfileBody"
-        }), L = o.default.getName(O, R, t), D = (0, u.default)(t.id, O), v = (0, r.useStateFromStores)([a.default], () => a.default.hidePersonalInformation), M = (0, r.useStateFromStores)([s.default], () => s.default.findActivity(t.id, e => e.type === m.ActivityTypes.PLAYING), [t]);
+        }), D = o.default.getName(null == O ? void 0 : O.id, C, t), v = (0, u.default)(t.id, null == O ? void 0 : O.id), M = (0, r.useStateFromStores)([a.default], () => a.default.hidePersonalInformation), y = (0, r.useStateFromStores)([s.default], () => s.default.findActivity(t.id, e => e.type === m.ActivityTypes.PLAYING), [t]);
         return (0, i.jsxs)("div", {
             className: N.body,
             children: [(0, i.jsx)(c.default, {
                 user: t,
-                guildId: O,
-                usernameIcon: t.hasAvatarForGuild(O) && (0, i.jsx)(T.default, {
+                guildId: null == O ? void 0 : O.id,
+                usernameIcon: t.hasAvatarForGuild(null == O ? void 0 : O.id) && (0, i.jsx)(T.default, {
                     user: t,
-                    nickname: L
+                    nickname: D
                 }),
                 tags: (0, i.jsxs)(i.Fragment, {
                     children: [(0, i.jsx)(E.UserProfilePronounsTag, {
-                        pronouns: null == n ? void 0 : n.pronouns
+                        pronouns: null == p ? void 0 : p.pronouns
                     }), (0, i.jsx)(E.UserProfileBadgesTag, {
                         user: t,
-                        guildId: O
+                        guildId: null == O ? void 0 : O.id
                     })]
                 }),
-                nicknameIcon: g && !v ? (0, i.jsx)(_.default, {
+                nicknameIcon: L && !M ? (0, i.jsx)(_.default, {
                     user: t,
-                    onOpenProfile: p
+                    onOpenProfile: () => R(!0)
                 }) : null
-            }), (0, i.jsx)(h.default, {
-                user: t,
-                onClose: C
-            }), g && (0, i.jsx)(f.default, {
-                user: t,
-                bio: null == n ? void 0 : n.bio,
-                hidePersonalInformation: v,
-                onClose: C
-            }), null != M && (0, i.jsx)(d.default, {
-                activity: M
             }), (0, i.jsx)(A.default, {
                 user: t,
-                guildId: O,
-                onClose: C
-            }), D && (0, i.jsx)(S.default, {
+                onClose: g
+            }), L && (0, i.jsx)(f.default, {
+                user: t,
+                bio: null == p ? void 0 : p.bio,
+                hidePersonalInformation: M,
+                onClose: g
+            }), null != y && (0, i.jsx)(d.default, {
+                activity: y
+            }), null != O && (0, i.jsx)(h.default, {
+                user: t,
+                currentUser: n,
+                guild: O,
+                onOpenProfile: () => R(!1)
+            }), v && (0, i.jsx)(S.default, {
                 user: t
             }), (0, i.jsx)(I.default, {
                 type: "action",
                 user: t,
-                guildId: O,
-                onClose: C
+                guildId: null == O ? void 0 : O.id,
+                onClose: g
             })]
         })
     }

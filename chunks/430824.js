@@ -30,7 +30,7 @@ function(e, t, n) {
         i = {
             ...i,
             [n.id]: E.fromServerRole(n)
-        }, h[t] = i
+        }, i = E.sortClientRoles(t, Object.values(i)), h[t] = i
     }
     let R = Object.freeze({});
     class C extends(r = l.default.Store) {

@@ -95,6 +95,8 @@ function(e, t, n) {
             h = t, f = !1
         },
         PAYMENT_UPDATE: p,
-        BILLING_PAYMENT_FETCH_SUCCESS: p
+        BILLING_PAYMENT_FETCH_SUCCESS: p,
+        LIGHTNING_CHECKOUT_OPEN: A,
+        LIGHTNING_CHECKOUT_CLOSE: A
     })
 }
