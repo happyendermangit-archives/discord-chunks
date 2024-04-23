@@ -9,13 +9,11 @@ function(e) {
         brandItemContainer: "brandItemContainer_f07c0f",
         brandItemContainerSelected: "brandItemContainerSelected__51923",
         clanCardWrapper: "clanCardWrapper__06f56",
-        colorPicker: "colorPicker_a9f8d8",
         colorPickerContainer: "colorPickerContainer__9b7d0",
         colorPickerGrid: "colorPickerGrid_ba6389",
         colorsContainer: "colorsContainer__2dee9",
         container: "container__0d48f",
         content: "content__4e550",
-        customColorPickerContainer: "customColorPickerContainer_e36253",
         noWrap: "noWrap__133e4"
     }
 }
