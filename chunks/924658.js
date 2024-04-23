@@ -467,6 +467,7 @@ function(e) {
         CLANS: "Clans",
         CLAN_USER_PROFILE_PRIMARY_CLAN: "Primary Clan",
         CLAN_DISCOVERY_SAVED_FILTER: "{count, number} Saved",
+        CLAN_DISCOVERY_CARD_TAG_TOOLTIP: "Become a member to unlock this tag",
         MESSAGE_ACTION_FORWARD: "Forward",
         GUILD_POPOUT_ACTIVITY_EVENT_LOCATION: "Event in",
         GUILD_POPOUT_ACTIVITY_EVENT_LOCATION_A11Y: "Event in {location}",

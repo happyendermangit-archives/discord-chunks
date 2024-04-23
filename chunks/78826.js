@@ -29,65 +29,68 @@ function(e, t, n) {
     function u(e) {
         let {
             children: t,
-            sentrySource: n
-        } = e, [u, d] = r.useState(!1), [_, c] = r.useState(new Set), [E, I] = r.useState(!1), T = r.useRef(!1);
+            isPreview: n = !1,
+            sentrySource: u
+        } = e, [d, _] = r.useState(!1), [c, E] = r.useState(new Set), [I, T] = r.useState(!1), f = r.useRef(!1);
         r.useEffect(() => {
             let e = new Set;
-            for (let t of _) !l(t) && e.add(t);
-            e.size !== _.size && c(e)
-        }, [_]);
-        let f = r.useCallback(e => {
-                var t, i, r;
+            for (let t of c) !l(t) && e.add(t);
+            e.size !== c.size && E(e)
+        }, [c]);
+        let S = r.useCallback(e => {
                 let {
-                    assetNode: o,
-                    nodeId: l,
-                    errorPrefix: u,
-                    errorMessage: _
+                    assetNode: t,
+                    nodeId: i,
+                    errorPrefix: r,
+                    errorMessage: o
                 } = e;
-                a.default.captureException(Error("".concat(u, ": ").concat(null != _ ? "".concat(_, ", ") : "").concat((t = o, (0, s.isElement)(t, HTMLImageElement) ? t.getAttribute("src") : (0, s.isElement)(t, HTMLVideoElement) ? null !== (r = null === (i = t.querySelectorAll("source")[0]) || void 0 === i ? void 0 : i.getAttribute("src")) && void 0 !== r ? r : "video" : t.tagName), ", ").concat(l)), {
-                    tags: {
-                        source: n
-                    }
-                }), d(!0)
-            }, [n]),
-            S = r.useCallback(e => {
-                c(t => {
+                if (!n && null != u) {
+                    var l, d, c;
+                    a.default.captureException(Error("".concat(r, ": ").concat(null != o ? "".concat(o, ", ") : "").concat((l = t, (0, s.isElement)(l, HTMLImageElement) ? l.getAttribute("src") : (0, s.isElement)(l, HTMLVideoElement) ? null !== (c = null === (d = l.querySelectorAll("source")[0]) || void 0 === d ? void 0 : d.getAttribute("src")) && void 0 !== c ? c : "video" : l.tagName), ", ").concat(i)), {
+                        tags: {
+                            source: u
+                        }
+                    }), _(!0)
+                }
+            }, [n, u]),
+            h = r.useCallback(e => {
+                E(t => {
                     let n = new Set(t);
                     return n.delete(e), n
                 })
             }, []),
-            h = r.useCallback((e, t) => {
+            A = r.useCallback((e, t) => {
                 var n;
-                if (I(!0), l(e)) return;
-                c(t => {
+                if (T(!0), l(e)) return;
+                E(t => {
                     let n = new Set(t);
                     return n.add(e), n
                 });
                 let i = (n = e, (0, s.isElement)(n, HTMLImageElement) ? "load" : (0, s.isElement)(n, HTMLVideoElement) ? "canplaythrough" : "load");
                 e.addEventListener(i, function t() {
-                    S(e), e.removeEventListener(i, t)
+                    h(e), e.removeEventListener(i, t)
                 });
                 e.addEventListener("error", function n(i) {
-                    S(e), f({
+                    h(e), S({
                         assetNode: e,
                         nodeId: t,
                         errorPrefix: "Error loading asset",
                         errorMessage: "message" in i ? i.message : null
                     }), e.removeEventListener("error", n)
                 })
-            }, [f, S]),
-            A = r.useMemo(() => _.size > 0 || !E, [E, _]);
+            }, [S, h]),
+            m = r.useMemo(() => c.size > 0 || !I, [I, c]);
         r.useEffect(() => {
-            !A && (T.current = !0)
-        }, [A]);
-        let m = r.useMemo(() => ({
-            registerAsset: h,
-            unregisterAsset: S,
-            hasError: u,
-            isLoading: A && !T.current
-        }), [h, S, u, A]);
+            !m && (f.current = !0)
+        }, [m]);
+        let N = r.useMemo(() => ({
+            registerAsset: A,
+            unregisterAsset: h,
+            hasError: d,
+            isLoading: m && !f.current
+        }), [A, h, d, m]);
         return (0, i.jsx)(o.Provider, {
-            value: m,
+            value: N,
             children: t
         })
     }

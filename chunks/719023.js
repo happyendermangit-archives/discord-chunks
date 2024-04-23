@@ -2,6 +2,7 @@ function(e) {
     "use strict";
     e.exports = {
         divider: "divider__1ed5b",
+        questCards: "questCards__2c9ba",
         questsContainer: "questsContainer__0b371",
         questsHeading: "questsHeading__8d16b",
         questsHeadingLearnMore: "questsHeadingLearnMore_f97459",

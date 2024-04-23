@@ -2,14 +2,18 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getIsEligibleForQuests: function() {
-            return s
+            return a
+        },
+        isQuestPreviewToolEnabled: function() {
+            return u
         },
         useIsEligibleForQuests: function() {
-            return a
+            return o
         }
     });
-    var i = n("211242");
-    let r = (0, n("818083").createExperiment)({
+    var i = n("211242"),
+        r = n("818083");
+    let s = (0, r.createExperiment)({
             id: "2023-12_quests",
             kind: "user",
             label: "Quests",
@@ -30,32 +34,58 @@ function(e, t, n) {
                 }
             }]
         }),
-        s = e => {
-            let {
-                location: t
-            } = e, n = r.getCurrentConfig({
-                location: t
-            }, {
-                autoTrackExposure: !1
-            }), s = i.default.getCurrentConfig({
-                location: t
-            }, {
-                autoTrackExposure: !1
-            });
-            return n.enabled && !s.paymentsBlocked
-        },
         a = e => {
             let {
                 location: t
-            } = e, n = r.useExperiment({
+            } = e, n = s.getCurrentConfig({
                 location: t
             }, {
                 autoTrackExposure: !1
-            }), s = i.default.useExperiment({
+            }), r = i.default.getCurrentConfig({
                 location: t
             }, {
                 autoTrackExposure: !1
             });
-            return n.enabled && !s.paymentsBlocked
-        }
+            return n.enabled && !r.paymentsBlocked
+        },
+        o = e => {
+            let {
+                location: t
+            } = e, n = s.useExperiment({
+                location: t
+            }, {
+                autoTrackExposure: !1
+            }), r = i.default.useExperiment({
+                location: t
+            }, {
+                autoTrackExposure: !1
+            });
+            return n.enabled && !r.paymentsBlocked
+        },
+        l = (0, r.createExperiment)({
+            id: "2024-04_quest_preview_tool",
+            kind: "user",
+            label: "Quest Preview Tool",
+            defaultConfig: {
+                enabled: !1
+            },
+            treatments: [{
+                id: 1,
+                label: "Preview tool enabled",
+                config: {
+                    enabled: !0
+                }
+            }]
+        });
+
+    function u(e) {
+        let {
+            location: t
+        } = e;
+        return l.getCurrentConfig({
+            location: t
+        }, {
+            autoTrackExposure: !1
+        }).enabled
+    }
 }
