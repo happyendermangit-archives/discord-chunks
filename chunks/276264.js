@@ -192,6 +192,7 @@ function(e, t, n) {
             position: "bottom",
             shouldShow: eS,
             nudgeAlignIntoViewport: !1,
+            useRawTargetDimensions: !0,
             animation: l.Popout.Animation.NONE,
             spacing: -3,
             children: () => (0, i.jsx)(N.default, {

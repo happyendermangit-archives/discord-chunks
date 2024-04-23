@@ -96,19 +96,20 @@ function(e, t, n) {
                 position: e,
                 align: t,
                 nudgeAlignIntoViewport: n,
-                spacing: i,
-                autoInvert: s,
-                fixed: a,
-                positionKey: o,
-                disablePointerEvents: l,
-                layerContext: u
+                useRawTargetDimensions: i,
+                spacing: s,
+                autoInvert: a,
+                fixed: o,
+                positionKey: l,
+                disablePointerEvents: u,
+                layerContext: d
             } = this.props, {
-                resizeKey: d,
-                isLoading: _,
-                shouldShowLoadingState: c
+                resizeKey: _,
+                isLoading: c,
+                shouldShowLoadingState: T
             } = this.state;
-            return _ && !c ? null : (0, r.jsx)(E.Layer, {
-                layerContext: null != u ? u : h.appLayerContext,
+            return c && !T ? null : (0, r.jsx)(E.Layer, {
+                layerContext: null != d ? d : h.appLayerContext,
                 children: (0, r.jsx)(I.ReferencePositionLayer, {
                     ref: this.layerRef,
                     onMount: this.handlePopoutShow,
@@ -118,11 +119,12 @@ function(e, t, n) {
                     position: e,
                     align: t,
                     nudgeAlignIntoViewport: n,
-                    spacing: i,
-                    autoInvert: s,
-                    fixed: a,
-                    positionKey: null != o ? o : String(d),
-                    disablePointerEvents: l,
+                    useRawTargetDimensions: i,
+                    spacing: s,
+                    autoInvert: a,
+                    fixed: o,
+                    positionKey: null != l ? l : String(_),
+                    disablePointerEvents: u,
                     onPositionChange: this.handlePopoutPositionChange,
                     children: this.renderPopout
                 })
