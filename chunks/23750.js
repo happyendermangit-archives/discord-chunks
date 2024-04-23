@@ -217,7 +217,7 @@ function(e, t, n) {
             var t, n, r;
             if (this.author.id === e) return !0;
             let s = null !== (r = null === (t = this.interactionMetadata) || void 0 === t ? void 0 : t.authorizing_integration_owners) && void 0 !== r ? r : {};
-            return (null === (n = this.interactionMetadata) || void 0 === n ? void 0 : n.user_id) === e && 1 === Object.keys(s).length && i.ApplicationIntegrationType.USER_INSTALL in s
+            return (null === (n = this.interactionMetadata) || void 0 === n ? void 0 : n.user.id) === e && 1 === Object.keys(s).length && i.ApplicationIntegrationType.USER_INSTALL in s
         }
         toJS() {
             return {
