@@ -21,8 +21,6 @@ function(e, t, n) {
     function a() {
         return null == s && (s = function() {
             if (null == window.DiscordNative || void 0 === window.Uint8Array || void 0 === window.TextDecoder) return !1;
-            let e = window.GLOBAL_ENV.RELEASE_CHANNEL;
-            if ("ptb" === e || "stable" === e) return !1;
             try {
                 return r.default.requireModule("discord_zstd"), !0
             } catch (e) {

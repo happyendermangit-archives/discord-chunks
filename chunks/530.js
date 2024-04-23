@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return d
+            return _
         }
     });
     var i = n("735250");
@@ -12,41 +12,56 @@ function(e, t, n) {
         a = n("481060"),
         o = n("129861"),
         l = n("5192"),
-        u = n("690612");
+        u = n("689938"),
+        d = n("690612");
 
-    function d(e) {
+    function _(e) {
         let {
             user: t,
             guildId: n,
             channelId: r,
-            usernameIcon: d,
-            tags: _,
-            nicknameIcon: c,
-            className: E,
-            nicknameVariant: I = "heading-lg/bold"
+            usernameIcon: _,
+            tags: c,
+            nicknameIcon: E,
+            pronouns: I,
+            className: T,
+            nicknameVariant: f = "heading-lg/bold",
+            pronounsVariant: S = "text-sm/medium"
         } = e;
         return (0, i.jsxs)("div", {
-            className: s()(u.container, E),
+            className: s()(d.container, T),
             children: [(0, i.jsxs)("div", {
-                className: u.usernameRow,
+                className: d.usernameRow,
                 children: [(0, i.jsx)(a.Heading, {
-                    className: u.nickname,
-                    variant: I,
+                    className: d.nickname,
+                    variant: f,
                     children: l.default.getName(n, r, t)
                 }), (0, i.jsx)("div", {
-                    className: u.nicknameIcon,
-                    children: c
+                    className: d.nicknameIcon,
+                    children: E
                 })]
             }), (0, i.jsxs)("div", {
-                className: u.tags,
+                className: d.tags,
                 children: [(0, i.jsx)(o.default, {
                     user: t,
-                    usernameIcon: d,
+                    usernameIcon: _,
                     forceUsername: !0,
-                    className: u.userTag,
-                    usernameClass: u.userTagUsername,
-                    discriminatorClass: u.userTagDiscriminator
-                }), _]
+                    className: d.userTag,
+                    usernameClass: d.userTagUsername,
+                    discriminatorClass: d.userTagDiscriminator
+                }), null != I && I.length > 0 && (0, i.jsxs)(i.Fragment, {
+                    children: [(0, i.jsx)("div", {
+                        "aria-hidden": "true",
+                        className: d.dotSpacer
+                    }), (0, i.jsx)(a.TooltipContainer, {
+                        text: u.default.Messages.USER_PROFILE_PRONOUNS,
+                        children: (0, i.jsx)(a.Text, {
+                            variant: S,
+                            className: d.userTag,
+                            children: I
+                        })
+                    })]
+                }), c]
             })]
         })
     }

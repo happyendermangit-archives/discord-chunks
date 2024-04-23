@@ -360,7 +360,7 @@ function(e) {
         CLAN_PRIMETIME_RECURRING_AFTERNOON: "afternoons",
         CLAN_PRIMETIME_RECURRING_EVENING: "evenings",
         CLAN_PRIMETIME_RECURRING_LATE_NIGHT: "late nights",
-        CLAN_SETUP_OVERVIEW_TITLE: "We the people of **!!{guildName}!!**",
+        CLAN_SETUP_OVERVIEW_TITLE: "We the people of",
         CLAN_SETUP_OVERVIEW_ESTABLISHED: "Est. {date}",
         CLAN_SETUP_OVERVIEW_TEXT_DEFAULT: "...in order to create a space to play games, establish this charter for the Guild.",
         CLAN_SETUP_OVERVIEW_TEXT_GAMES: "...in order to create a space to play **!!{games}!!**, establish this charter for the Guild.",

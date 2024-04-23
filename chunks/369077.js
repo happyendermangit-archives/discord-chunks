@@ -78,7 +78,7 @@ function(e, t, n) {
                     className: m.tag,
                     clanTag: n,
                     onClick: s,
-                    badgeSize: h.ClanTagBadgeSize.SMALL,
+                    badgeSize: h.ClanTagBadgeSize.SIZE_16,
                     textColor: "interactive-normal",
                     textVariant: "text-sm/medium"
                 })

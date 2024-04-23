@@ -48,7 +48,8 @@ function(e, t, n) {
         return null != e && null != t && null != t.identityGuildId && t.identityGuildId === e && !!t.identityEnabled || !1
     }
     let _ = (e, t) => {
-        if (1 === e.length) return e[0];
+        if (0 === e.length) return null;
+        if (1 === e.length) return e[1];
         if (2 === e.length) return r.default.Messages.CLAN_OVERVIEW_LIST_TWO_ITEMS.format({
             item1: e[0],
             item2: e[1]

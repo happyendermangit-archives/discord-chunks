@@ -49,13 +49,10 @@ function(e, t, n) {
                     user: t,
                     nickname: D
                 }),
-                tags: (0, i.jsxs)(i.Fragment, {
-                    children: [(0, i.jsx)(E.UserProfilePronounsTag, {
-                        pronouns: null == p ? void 0 : p.pronouns
-                    }), (0, i.jsx)(E.UserProfileBadgesTag, {
-                        user: t,
-                        guildId: null == O ? void 0 : O.id
-                    })]
+                pronouns: null == p ? void 0 : p.pronouns,
+                tags: (0, i.jsx)(E.UserProfileBadgesTag, {
+                    user: t,
+                    guildId: null == O ? void 0 : O.id
                 }),
                 nicknameIcon: L && !M ? (0, i.jsx)(_.default, {
                     user: t,

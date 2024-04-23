@@ -27,7 +27,7 @@ function(e, t, n) {
         h = n("277602"),
         A = n("738103"),
         m = n("319695");
-    (r = i || (i = {}))[r.X_SMALL = 12] = "X_SMALL", r[r.SMALL = 16] = "SMALL";
+    (r = i || (i = {}))[r.SIZE_12 = 12] = "SIZE_12", r[r.SIZE_16 = 16] = "SIZE_16", r[r.SIZE_24 = 24] = "SIZE_24";
     let N = a.memo(function(e) {
             let {
                 className: t,
