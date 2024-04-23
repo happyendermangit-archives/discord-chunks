@@ -38,11 +38,12 @@ function(e, t, n) {
     function d(e) {
         var t;
         let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-            i = arguments.length > 2 ? arguments[2] : void 0;
+            i = arguments.length > 2 ? arguments[2] : void 0,
+            r = arguments.length > 3 ? arguments[3] : void 0;
         if (o.default.disableSounds) return;
-        let r = u(null !== (t = (0, a.default)(s.default.getSoundpack())[e]) && void 0 !== t ? t : e, e, n);
-        return null != i ? r.playWithListener().then(e => {
+        let l = u(null !== (t = (0, a.default)(null != r ? r : s.default.getSoundpack())[e]) && void 0 !== t ? t : e, e, n);
+        return null != i ? l.playWithListener().then(e => {
             e && i()
-        }) : r.play(), r
+        }) : l.play(), l
     }
 }

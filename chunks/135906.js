@@ -50,6 +50,18 @@ function(e, t, n) {
             stream_ended: "detune_stream_ended",
             stream_user_joined: "detune_stream_user_joined",
             stream_user_left: "detune_stream_user_left"
+        },
+        [i.Soundpacks.RETRO]: {
+            message1: "bit_message1"
+        },
+        [i.Soundpacks.BOP]: {
+            message1: "bop_message1"
+        },
+        [i.Soundpacks.DUCKY]: {
+            message1: "ducky_message1"
+        },
+        [i.Soundpacks.LOFI]: {
+            message1: "lofi_message1"
         }
     };
 
