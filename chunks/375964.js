@@ -16631,6 +16631,7 @@ function(e) {
         SAFETY_HUB_CLASSIFICATION_DETAIL_EVIDENCE_HEADER: "YOUR RECENT ACTIVITY",
         SAFETY_HUB_CLASSIFICATION_DETAIL_ACTIONS_TAKEN_HEADER: "WE TOOK THESE ACTIONS",
         SAFETY_HUB_CLASSIFICATION_DETAIL_ACTIONS_TAKEN_HEADER_V2: "What this means for you",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_ACTIONS_TAKEN_VIOLATION_ACCOUNT_STATUS: "This violation affects your account status until {expirationDate}",
         SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_EXPLAINED_HEADER: "WHY WE TOOK THIS ACTION",
         SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_EXPLAINED_DESCRIPTION: "Our teams use automation and manual review to enforce our rules. We found your activity violated our [Terms of Service]({tosLink}) or [Community Guidelines]({communityGuidelinesLink}).",
         SAFETY_HUB_CLASSIFICATION_DETAIL_WHAT_YOU_CAN_DO_HEADER: "What you can do",
