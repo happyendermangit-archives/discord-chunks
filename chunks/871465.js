@@ -17,23 +17,28 @@ function(e, t, n) {
         return [{
             value: "classic",
             label: "Discord Default",
-            description: "Wumpus' Favorite"
+            description: "Wumpus' Favorite",
+            requirePremium: !1
         }, {
             value: "retro",
             label: "Power up!",
-            description: "Retro"
+            description: "Retro",
+            requirePremium: !0
         }, {
             value: "bop",
             label: "*hey you*",
-            description: "BOP"
+            description: "BOP",
+            requirePremium: !0
         }, {
             value: "ducky",
             label: "Quack quack",
-            description: "Ducky"
+            description: "Ducky",
+            requirePremium: !0
         }, {
             value: "lofi",
             label: "Twinkle",
-            description: "Lofi"
+            description: "Lofi",
+            requirePremium: !0
         }]
     }
 

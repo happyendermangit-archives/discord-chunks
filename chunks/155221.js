@@ -70,7 +70,7 @@ function(e, t, a) {
             name: "ActivateDevice"
         }),
         j = (0, _.makeLazy)({
-            createPromise: () => Promise.all([a.e("49237"), a.e("99387"), a.e("24267"), a.e("23755"), a.e("61613"), a.e("36385"), a.e("63958"), a.e("48375"), a.e("81539"), a.e("57878"), a.e("95393"), a.e("39285"), a.e("14262"), a.e("67535"), a.e("90687"), a.e("56630"), a.e("70866"), a.e("87983"), a.e("8739"), a.e("43643"), a.e("90508"), a.e("58286"), a.e("6380"), a.e("7590"), a.e("41947"), a.e("71697"), a.e("3084"), a.e("30243"), a.e("37766"), a.e("53466"), a.e("6857"), a.e("38779"), a.e("71401"), a.e("25464"), a.e("23404"), a.e("78690"), a.e("74870"), a.e("74526"), a.e("18101"), a.e("37220"), a.e("33361"), a.e("61447"), a.e("91315"), a.e("80026"), a.e("80954"), a.e("62856"), a.e("37839"), a.e("90212"), a.e("11256"), a.e("49508"), a.e("91632"), a.e("67256"), a.e("88396"), a.e("5257"), a.e("47849"), a.e("60330"), a.e("95468"), a.e("46048")]).then(a.bind(a, "457094")),
+            createPromise: () => Promise.all([a.e("49237"), a.e("99387"), a.e("24267"), a.e("23755"), a.e("61613"), a.e("36385"), a.e("63958"), a.e("48375"), a.e("81539"), a.e("57878"), a.e("95393"), a.e("90508"), a.e("39285"), a.e("14262"), a.e("67535"), a.e("7590"), a.e("90687"), a.e("56630"), a.e("70866"), a.e("87983"), a.e("8739"), a.e("43643"), a.e("58286"), a.e("6380"), a.e("41947"), a.e("71697"), a.e("3084"), a.e("30243"), a.e("37766"), a.e("53466"), a.e("6857"), a.e("38779"), a.e("71401"), a.e("25464"), a.e("23404"), a.e("78690"), a.e("74870"), a.e("74526"), a.e("18101"), a.e("37220"), a.e("33361"), a.e("61447"), a.e("91315"), a.e("80026"), a.e("80954"), a.e("62856"), a.e("37839"), a.e("90212"), a.e("11256"), a.e("49508"), a.e("91632"), a.e("67256"), a.e("88396"), a.e("5257"), a.e("47849"), a.e("60330"), a.e("95468"), a.e("46048")]).then(a.bind(a, "457094")),
             webpackId: "457094",
             name: "ViewsWithMainInterface",
             memo: !0,
@@ -102,7 +102,7 @@ function(e, t, a) {
             name: "MobileWebHandoffFallback"
         }),
         W = (0, _.makeLazy)({
-            createPromise: () => Promise.all([a.e("49237"), a.e("99387"), a.e("23755"), a.e("61613"), a.e("36385"), a.e("48375"), a.e("81539"), a.e("57878"), a.e("95393"), a.e("39285"), a.e("14262"), a.e("67535"), a.e("90687"), a.e("56630"), a.e("70866"), a.e("87983"), a.e("8739"), a.e("43643"), a.e("90508"), a.e("58286"), a.e("6380"), a.e("7590"), a.e("41947"), a.e("71697"), a.e("3084"), a.e("30243"), a.e("37766"), a.e("53466"), a.e("6857"), a.e("38779"), a.e("71401"), a.e("25464"), a.e("23404"), a.e("78690"), a.e("74526"), a.e("18101"), a.e("37220"), a.e("33361"), a.e("61447"), a.e("91315"), a.e("80954"), a.e("62856"), a.e("37839"), a.e("67256"), a.e("88396"), a.e("71700")]).then(a.bind(a, "290161")),
+            createPromise: () => Promise.all([a.e("49237"), a.e("99387"), a.e("23755"), a.e("61613"), a.e("36385"), a.e("48375"), a.e("81539"), a.e("57878"), a.e("95393"), a.e("90508"), a.e("39285"), a.e("14262"), a.e("67535"), a.e("7590"), a.e("90687"), a.e("56630"), a.e("70866"), a.e("87983"), a.e("8739"), a.e("43643"), a.e("58286"), a.e("6380"), a.e("41947"), a.e("71697"), a.e("3084"), a.e("30243"), a.e("37766"), a.e("53466"), a.e("6857"), a.e("38779"), a.e("71401"), a.e("25464"), a.e("23404"), a.e("78690"), a.e("74526"), a.e("18101"), a.e("37220"), a.e("33361"), a.e("61447"), a.e("91315"), a.e("80954"), a.e("62856"), a.e("37839"), a.e("67256"), a.e("88396"), a.e("71700")]).then(a.bind(a, "290161")),
             webpackId: "290161",
             name: "Overlay"
         }),
@@ -116,13 +116,18 @@ function(e, t, a) {
             webpackId: "630107",
             name: "QuestsLandingPage"
         }),
-        Y = () => (0, d.jsx)(j, {}),
-        q = new Set([N.Routes.LOGIN, N.Routes.LOGIN_HANDOFF, N.Routes.INVITE_LOGIN(":inviteCode"), N.Routes.GIFT_CODE_LOGIN(":giftCode"), N.Routes.GUILD_TEMPLATE_LOGIN(":guildTemplateCode")]);
+        Y = (0, _.makeLazy)({
+            createPromise: () => Promise.all([a.e("99387"), a.e("47228")]).then(a.bind(a, "531338")),
+            webpackId: "531338",
+            name: "ConnectionsAuthorizeContinue"
+        }),
+        q = () => (0, d.jsx)(j, {}),
+        X = new Set([N.Routes.LOGIN, N.Routes.LOGIN_HANDOFF, N.Routes.INVITE_LOGIN(":inviteCode"), N.Routes.GIFT_CODE_LOGIN(":giftCode"), N.Routes.GUILD_TEMPLATE_LOGIN(":guildTemplateCode")]);
 
-    function X(e, t) {
-        return t ? e.filter(e => !q.has(e)) : e
+    function Z(e, t) {
+        return t ? e.filter(e => !X.has(e)) : e
     }
-    class Z extends n.Component {
+    class Q extends n.Component {
         componentDidMount() {
             A.default.cleanupDisplaySleep(), O.default.initialize()
         }
@@ -146,7 +151,7 @@ function(e, t, a) {
                     path: N.Routes.APPS,
                     component: L
                 }), (0, d.jsx)(o.Route, {
-                    path: X([N.Routes.LOGIN, N.Routes.REGISTER, N.Routes.INVITE(":inviteCode"), N.Routes.INVITE_LOGIN(":inviteCode"), N.Routes.GIFT_CODE(":giftCode"), N.Routes.GIFT_CODE_LOGIN(":giftCode"), N.Routes.RESET], C.CONFERENCE_MODE_ENABLED),
+                    path: Z([N.Routes.LOGIN, N.Routes.REGISTER, N.Routes.INVITE(":inviteCode"), N.Routes.INVITE_LOGIN(":inviteCode"), N.Routes.GIFT_CODE(":giftCode"), N.Routes.GIFT_CODE_LOGIN(":giftCode"), N.Routes.RESET], C.CONFERENCE_MODE_ENABLED),
                     component: V
                 }), (0, d.jsx)(m.default, {
                     path: N.Routes.INVITE_PROXY(":channelId"),
@@ -158,7 +163,7 @@ function(e, t, a) {
                     from: N.Routes.GIFT_CODE(""),
                     to: N.Routes.LOGIN
                 }), (0, d.jsx)(o.Route, {
-                    render: Y
+                    render: q
                 })]
             }) : (0, d.jsxs)(o.Switch, {
                 children: [(0, d.jsx)(m.default, {
@@ -166,7 +171,7 @@ function(e, t, a) {
                     path: N.Routes.INDEX,
                     render: () => (0, d.jsx)(h.default, {})
                 }), (0, d.jsx)(o.Route, {
-                    path: X([N.Routes.LOGIN, N.Routes.LOGIN_HANDOFF, N.Routes.REGISTER, N.Routes.BILLING_PREFIX, N.Routes.BILLING_PROMOTION_REDEMPTION(":code"), N.Routes.INVITE(":inviteCode"), N.Routes.INVITE_LOGIN(":inviteCode"), N.Routes.GIFT_CODE(":giftCode"), N.Routes.GIFT_CODE_LOGIN(":giftCode"), N.Routes.GUILD_TEMPLATE(":guildTemplateCode"), N.Routes.GUILD_TEMPLATE_LOGIN(":guildTemplateCode"), N.Routes.DISABLE_EMAIL_NOTIFICATIONS, N.Routes.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, N.Routes.RESET, N.Routes.REPORT, N.Routes.REPORT_SECOND_LOOK], C.CONFERENCE_MODE_ENABLED),
+                    path: Z([N.Routes.LOGIN, N.Routes.LOGIN_HANDOFF, N.Routes.REGISTER, N.Routes.BILLING_PREFIX, N.Routes.BILLING_PROMOTION_REDEMPTION(":code"), N.Routes.INVITE(":inviteCode"), N.Routes.INVITE_LOGIN(":inviteCode"), N.Routes.GIFT_CODE(":giftCode"), N.Routes.GIFT_CODE_LOGIN(":giftCode"), N.Routes.GUILD_TEMPLATE(":guildTemplateCode"), N.Routes.GUILD_TEMPLATE_LOGIN(":guildTemplateCode"), N.Routes.DISABLE_EMAIL_NOTIFICATIONS, N.Routes.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, N.Routes.RESET, N.Routes.REPORT, N.Routes.REPORT_SECOND_LOOK], C.CONFERENCE_MODE_ENABLED),
                     component: V
                 }), t ? null : (0, d.jsx)(o.Route, {
                     path: N.Routes.PICK_GUILD_SETTINGS(":section?", ":subsection?"),
@@ -210,6 +215,9 @@ function(e, t, a) {
                 }), (0, d.jsx)(m.default, {
                     path: N.Routes.ACTIVATE,
                     component: x
+                }), (0, d.jsx)(m.default, {
+                    path: N.Routes.CONNECTIONS_AUTHORIZE_CONTINUE(":type"),
+                    component: Y
                 }), (0, d.jsx)(m.default, {
                     path: N.Routes.CONNECTIONS(":type"),
                     component: M
@@ -268,7 +276,7 @@ function(e, t, a) {
                     path: [N.Routes.APPLICATION_DIRECTORY_SEARCH, N.Routes.APPLICATION_DIRECTORY_PROFILE(":applicationId", ":section?"), N.Routes.APPLICATION_DIRECTORY],
                     component: H
                 }), (0, d.jsx)(o.Route, {
-                    render: Y
+                    render: q
                 })]
             }) : (0, d.jsx)(o.Switch, {
                 children: (0, d.jsx)(m.default, {
@@ -294,7 +302,7 @@ function(e, t, a) {
                 path: N.Routes.APPLICATION_DIRECTORY
             })
         }();
-        return (0, d.jsx)(Z, {
+        return (0, d.jsx)(Q, {
             ...e,
             skipsSettingDefaultPageTitle: t
         })

@@ -51,8 +51,7 @@ function(e, t, n) {
                 }),
                 pronouns: null == p ? void 0 : p.pronouns,
                 tags: (0, i.jsx)(E.UserProfileBadgesTag, {
-                    user: t,
-                    guildId: null == O ? void 0 : O.id
+                    displayProfile: p
                 }),
                 nicknameIcon: L && !M ? (0, i.jsx)(_.default, {
                     user: t,
