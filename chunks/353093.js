@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         formatSelectionList: function() {
-            return d
+            return _
         },
         getGuildIdFromUserClan: function() {
             return o
@@ -14,6 +14,9 @@ function(e, t, n) {
             return l
         },
         isGuildAdoptedUserClanIdentity: function() {
+            return d
+        },
+        userHasAdoptedAnyClanIdentity: function() {
             return u
         }
     });
@@ -37,10 +40,14 @@ function(e, t, n) {
         return null != e && e.hasFeature(i.GuildFeatures.CLAN)
     }
 
-    function u(e, t) {
+    function u(e) {
+        return null != e && !!e.identityEnabled
+    }
+
+    function d(e, t) {
         return null != e && null != t && null != t.identityGuildId && t.identityGuildId === e && !!t.identityEnabled || !1
     }
-    let d = e => {
+    let _ = e => {
         if (1 === e.length) return e[0];
         if (2 === e.length) return r.default.Messages.CLAN_OVERVIEW_LIST_TWO_ITEMS.format({
             item1: e[0],
