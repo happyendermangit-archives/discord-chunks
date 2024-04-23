@@ -27,7 +27,7 @@ function(e, t, n) {
         h = n("277602"),
         A = n("738103"),
         m = n("319695");
-    (r = i || (i = {}))[r.SIZE_12 = 12] = "SIZE_12", r[r.SIZE_16 = 16] = "SIZE_16", r[r.SIZE_24 = 24] = "SIZE_24";
+    (r = i || (i = {}))[r.SIZE_12 = 12] = "SIZE_12", r[r.SIZE_16 = 16] = "SIZE_16", r[r.SIZE_24 = 24] = "SIZE_24", r[r.SIZE_36 = 36] = "SIZE_36";
     let N = a.memo(function(e) {
             let {
                 className: t,
@@ -43,24 +43,25 @@ function(e, t, n) {
             let {
                 clanTag: t,
                 className: n,
-                onClick: i,
-                onMouseEnter: r,
-                textVariant: a = "text-xs/medium",
-                textColor: o = "text-normal",
-                badgeSize: u = 12
+                textClassName: i,
+                onClick: r,
+                onMouseEnter: a,
+                textVariant: o = "text-xs/medium",
+                textColor: u = "text-normal",
+                badgeSize: d = 12
             } = e;
             return (0, T.useIsInUserClanExperiment)() ? (0, s.jsx)(c.Clickable, {
                 tag: "span",
-                onClick: i,
-                onMouseEnter: r,
-                className: l()(m.chipletContainerInner, null != i && m.clickable, n),
+                onClick: r,
+                onMouseEnter: a,
+                className: l()(m.chipletContainerInner, null != r && m.clickable, n),
                 children: (0, s.jsxs)(c.Text, {
-                    variant: a,
-                    color: o,
+                    variant: o,
+                    color: u,
                     tag: "span",
-                    className: m.text,
+                    className: l()(m.text, i),
                     children: [(0, s.jsx)(N, {
-                        size: u
+                        size: d
                     }), t]
                 })
             }) : null
