@@ -2,20 +2,25 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         openAdoptClanIdentityModal: function() {
-            return s
+            return o
         }
     });
     var i = n("735250");
     n("470079");
-    var r = n("481060");
+    var r = n("524437"),
+        s = n("481060"),
+        a = n("645041");
 
-    function s(e) {
-        (0, r.openModalLazy)(async () => {
+    function o(e) {
+        (0, s.openModalLazy)(async () => {
             let {
                 default: t
             } = await Promise.all([n.e("99387"), n.e("95883")]).then(n.bind(n, "83521"));
             return n => (0, i.jsx)(t, {
                 ...n,
+                onClose: t => {
+                    (0, a.markContentAsDismissed)(r.DismissibleGuildContent.ADOPT_CLAN_IDENTITY_NOTICE, e, !0, t), n.onClose()
+                },
                 guildId: e
             })
         })
