@@ -38,21 +38,21 @@ function(e, t, n) {
             (0, I.showInaccessibleLinkModal)({
                 kind: "user"
             })
-        }, []);
+        }, []), o = r.useCallback(e => {
+            null != t && (0, d.openContextMenuLazy)(e, async () => {
+                let {
+                    default: e
+                } = await n.e("25073").then(n.bind(n, "80742"));
+                return n => (0, i.jsx)(e, {
+                    ...n,
+                    userId: t
+                })
+            })
+        }, [t]);
         return (0, i.jsx)(p.default, {
             className: s,
             onClick: a,
-            onContextMenu: e => {
-                (0, d.openContextMenuLazy)(e, async () => {
-                    let {
-                        default: e
-                    } = await n.e("25073").then(n.bind(n, "80742"));
-                    return n => (0, i.jsx)(e, {
-                        ...n,
-                        userId: t
-                    })
-                })
-            },
+            onContextMenu: o,
             children: "@".concat(g.default.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER)
         })
     }
@@ -79,7 +79,7 @@ function(e, t, n) {
                 })
             })
         }, U = R.default.useName(v), b = (0, l.useStateFromStores)([S.default, h.default, m.default], () => O.default.getNickname(y, s, v)), G = A.default.getGuild(y), w = (0, E.useClydeEnabled)(G, M) && r === C.CLYDE_AI_USER_ID ? C.CLYDE_AI_MENTION_COLOR : null;
-        if (null == v && null != I) return (0, i.jsx)(L, {
+        if (null == v) return (0, i.jsx)(L, {
             userId: I,
             className: t
         });
