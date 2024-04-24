@@ -342,6 +342,11 @@ function(e, t, n) {
             inlineRequire: () => n("342879").default,
             neverLoadBeforeConnectionOpen: !0
         },
+        RunningGameDetectionManager: {
+            actions: ["RUNNING_GAME_DELETE_ENTRY", "RUNNING_GAME_TOGGLE_DETECTION"],
+            inlineRequire: () => n("611184").default,
+            neverLoadBeforeConnectionOpen: !0
+        },
         RunningGameHeartbeatManager: {
             actions: ["RUNNING_GAMES_CHANGE", "LOGOUT", "CONNECTION_CLOSED", "POST_CONNECTION_OPEN"],
             inlineRequire: () => n("696287").default,

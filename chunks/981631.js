@@ -1576,6 +1576,7 @@ function(_, E, e) {
             SAFETY_WARNING_FALSE_POSITIVE: _ => "/channels/".concat(_, "/safety-warning/report-false-positive"),
             MY_CONTENT_INVENTORY: "/content-inventory/users/@me",
             MY_SPOTIFY_CONTENT_INVENTORY: "/content-inventory/users/@me/spotify",
+            MY_CONTENT_INVENTORY_APPLICATION: _ => "/content-inventory/users/@me/applications/".concat(_),
             TENURE_REWARD_SYNC: "/users/@me/tenure-reward/sync",
             USER_RECENT_GAMES: _ => "/users/".concat(_, "/profile/recent-games"),
             STORE_LAYOUT: _ => "/applications/".concat(_, "/store-layout")

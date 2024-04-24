@@ -1,50 +1,86 @@
 function(e, t, n) {
     "use strict";
-    n.r(t), n("47120");
+    n.r(t), n.d(t, {
+        SUPPORTED_ACTIVITY_TYPES: function() {
+            return S
+        }
+    }), n("47120");
     var i = n("735250"),
         r = n("470079"),
         s = n("499237"),
-        a = n("692547"),
-        o = n("835473"),
-        l = n("443487"),
-        u = n("43205"),
-        d = n("371991"),
-        _ = n("55935"),
-        c = n("689938"),
-        E = n("40803");
+        a = n("1385"),
+        o = n("692547"),
+        l = n("835473"),
+        u = n("443487"),
+        d = n("43205"),
+        _ = n("371991"),
+        c = n("81063"),
+        E = n("55935"),
+        I = n("981631"),
+        T = n("689938"),
+        f = n("40803");
+    let S = new Set([I.ActivityTypes.PLAYING, I.ActivityTypes.LISTENING]);
     t.default = r.memo(function(e) {
-        var t, n, I, T;
+        var t, n, S, h;
         let {
-            activity: f
-        } = e, S = null === (t = (0, o.useGetOrFetchApplication)(null == f ? void 0 : f.application_id)) || void 0 === t ? void 0 : t.getIconURL(128), h = null !== (T = null !== (I = null === (n = f.timestamps) || void 0 === n ? void 0 : n.start) && void 0 !== I ? I : f.created_at) && void 0 !== T ? T : 0, [A, m] = r.useState(Date.now()), {
-            seconds: N,
-            minutes: p,
-            hours: O
-        } = (0, _.diffAsUnits)(h, A);
+            activity: A
+        } = e, {
+            assets: m,
+            application_id: N
+        } = A, p = null === (t = (0, l.useGetOrFetchApplication)(N)) || void 0 === t ? void 0 : t.getIconURL(128), O = (0, c.getAssetImage)(N, null == m ? void 0 : m.large_image, 128), R = null !== (h = null !== (S = null === (n = A.timestamps) || void 0 === n ? void 0 : n.start) && void 0 !== S ? S : A.created_at) && void 0 !== h ? h : 0, [C, g] = r.useState(Date.now()), {
+            seconds: L,
+            minutes: D,
+            hours: v
+        } = (0, E.diffAsUnits)(R, C), {
+            Icon: M,
+            title: y,
+            iconColor: P,
+            textColor: U
+        } = function(e) {
+            switch (e.type) {
+                case I.ActivityTypes.PLAYING:
+                    return {
+                        Icon: s.GameControllerIcon, title: T.default.Messages.MEMBER_LIST_CONTENT_FEED_PLAYING_GAME.format({
+                            gameName: e.name
+                        }), iconColor: o.default.colors.STATUS_POSITIVE, textColor: "status-positive"
+                    };
+                case I.ActivityTypes.LISTENING:
+                    var t;
+                    return {
+                        Icon: a.RecordPlayerIcon, title: T.default.Messages.USER_PROFILE_ACTIVITY_LISTENING_TO.format({
+                            name: null !== (t = e.state) && void 0 !== t ? t : e.name
+                        }), iconColor: o.default.colors.TEXT_SECONDARY, textColor: "text-secondary"
+                    };
+                default:
+                    return {
+                        Icon: s.GameControllerIcon, title: T.default.Messages.MEMBER_LIST_CONTENT_FEED_PLAYING_GAME.format({
+                            gameName: e.name
+                        }), iconColor: o.default.colors.STATUS_POSITIVE, textColor: "status-positive"
+                    }
+            }
+        }(A);
         return (0, i.jsxs)("div", {
-            className: E.cardContainer,
-            children: [(0, i.jsx)(u.ContentImage, {
-                src: S,
+            className: f.cardContainer,
+            children: [(0, i.jsx)(d.ContentImage, {
+                src: null != p ? p : O,
                 size: 48
-            }), (0, i.jsxs)(l.CardInfoSection, {
-                children: [(0, i.jsx)(l.CardTitle, {
-                    children: c.default.Messages.MEMBER_LIST_CONTENT_FEED_PLAYING_GAME.format({
-                        gameName: f.name
-                    })
-                }), null != h && (0, i.jsxs)("div", {
-                    className: E.playtimeContainer,
-                    children: [(0, i.jsx)(s.GameControllerIcon, {
+            }), (0, i.jsxs)(u.CardInfoSection, {
+                children: [(0, i.jsx)(u.CardTitle, {
+                    children: y
+                }), null != R && (0, i.jsxs)("div", {
+                    className: f.playtimeContainer,
+                    children: [(0, i.jsx)(M, {
                         width: 12,
                         height: 12,
-                        color: a.default.colors.STATUS_POSITIVE
-                    }), (0, i.jsx)(d.ActiveTimestampFromDuration, {
-                        startTime: h,
-                        seconds: N,
-                        minutes: p,
-                        hours: O,
-                        now: A,
-                        setNow: m,
-                        textColor: "status-positive"
+                        color: P
+                    }), (0, i.jsx)(_.ActiveTimestampFromDuration, {
+                        startTime: R,
+                        seconds: L,
+                        minutes: D,
+                        hours: v,
+                        now: C,
+                        setNow: g,
+                        textColor: U
                     })]
                 })]
             })]
