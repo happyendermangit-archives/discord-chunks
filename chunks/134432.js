@@ -100,6 +100,11 @@ function(e, t, n) {
 
     function h(e) {
         var t;
+        let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (n) {
+            let t = c.filter(t => t <= e).pop();
+            if (null != t && e / t <= 1.25) return t
+        }
         return null !== (t = c.find(t => e <= t)) && void 0 !== t ? t : c[c.length - 1]
     }
 

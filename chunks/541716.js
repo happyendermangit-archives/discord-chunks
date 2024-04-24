@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         ChatInputTypes: function() {
-            return m
+            return N
         },
         SlateToolbarTypes: function() {
             return r
@@ -301,6 +301,26 @@ function(e, t, n) {
             }
         },
         f = {
+            analyticsName: "user_profile",
+            drafts: {
+                type: a.DraftType.ChannelMessage
+            },
+            emojis: {
+                button: !0
+            },
+            permissions: {
+                requireSendMessages: !1
+            },
+            users: {
+                allowMentioning: !0
+            },
+            submit: {
+                useDisabledStylesOnSubmit: !0,
+                clearOnSubmit: !0
+            },
+            disableAutoFocus: !0
+        },
+        S = {
             analyticsName: "profile_bio_input",
             drafts: {
                 type: a.DraftType.ChannelMessage
@@ -318,7 +338,7 @@ function(e, t, n) {
             disableAutoFocus: !0,
             showCharacterCount: !0
         },
-        S = {
+        h = {
             analyticsName: "custom_gift_type",
             drafts: {
                 type: a.DraftType.ChannelMessage
@@ -334,7 +354,7 @@ function(e, t, n) {
             disableAutoFocus: !0,
             showCharacterCount: !0
         },
-        h = {
+        A = {
             analyticsName: "rules_input",
             drafts: {
                 type: a.DraftType.ChannelMessage
@@ -348,7 +368,7 @@ function(e, t, n) {
             },
             showCharacterCount: !0
         },
-        A = {
+        m = {
             analyticsName: "forum_channel_guidelines",
             drafts: {
                 type: a.DraftType.ChannelMessage
@@ -367,7 +387,7 @@ function(e, t, n) {
             showCharacterCount: !0,
             toolbarType: 1
         },
-        m = {
+        N = {
             NORMAL: o,
             OVERLAY: l,
             SIDEBAR: u,
@@ -375,12 +395,13 @@ function(e, t, n) {
             FORM: _,
             VOICE_CHANNEL_STATUS: c,
             THREAD_CREATION: E,
-            PROFILE_BIO_INPUT: f,
-            CUSTOM_GIFT: S,
-            RULES_INPUT: h,
+            USER_PROFILE: f,
+            PROFILE_BIO_INPUT: S,
+            CUSTOM_GIFT: h,
+            RULES_INPUT: A,
             CREATE_FORUM_POST: I,
             CREATE_POLL: T,
-            FORUM_CHANNEL_GUIDELINES: A,
+            FORUM_CHANNEL_GUIDELINES: m,
             ATOMIC_REACTOR_REPLY_INPUT: {
                 analyticsName: "atomic_reator_reply_input",
                 drafts: {

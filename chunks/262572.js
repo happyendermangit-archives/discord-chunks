@@ -3,7 +3,6 @@ function(e) {
     e.exports = {
         avatar: "avatar__4188a",
         buttons: "buttons__3345e",
-        inner: "inner__14185",
-        statusBubblePosition: "statusBubblePosition_e98f49"
+        inner: "inner__14185"
     }
 }

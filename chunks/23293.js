@@ -76,8 +76,8 @@ function(e, t, n) {
                 hasProfileEffect: (null == n ? void 0 : n.profileEffectId) != null,
                 profileType: E.UserProfileTypes.BITE_SIZE
             }), null != N && (0, i.jsx)(_.UserProfileCustomStatusBubble, {
-                positionStyle: f.statusBubblePosition,
-                statusActivity: N
+                statusActivity: N,
+                profileType: E.UserProfileTypes.BITE_SIZE
             })]
         })
     }

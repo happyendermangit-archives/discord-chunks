@@ -1,7 +1,7 @@
 function(e) {
     "use strict";
     e.exports = {
-        messageInput: "messageInput_c1c1c4",
-        messageInputContainer: "messageInputContainer__67b4c"
+        editor: "editor_f63872",
+        inner: "inner_e8ffd7"
     }
 }

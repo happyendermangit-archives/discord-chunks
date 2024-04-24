@@ -72,7 +72,9 @@ function(e, t, n) {
                 guild: p,
                 onOpenProfile: () => O(!1)
             }), D && (0, i.jsx)(S.default, {
-                user: t
+                user: t,
+                channelId: R,
+                onClose: C
             }), (0, i.jsx)(I.default, {
                 type: "action",
                 user: t,
