@@ -53,11 +53,11 @@ function(e, t, n) {
         b = n("599250"),
         G = n("466111"),
         w = n("761374"),
-        k = n("363138"),
-        B = n("325767"),
-        F = n("930153"),
-        V = n("74538"),
-        x = n("326151"),
+        B = n("363138"),
+        k = n("325767"),
+        V = n("930153"),
+        x = n("74538"),
+        F = n("326151"),
         H = n("357355"),
         Y = n("140465"),
         j = n("424082"),
@@ -170,7 +170,7 @@ function(e, t, n) {
             ...i
         } = e;
         return (0, _.jsxs)("svg", {
-            ...(0, B.default)({
+            ...(0, k.default)({
                 ...i
             }),
             width: t,
@@ -262,7 +262,7 @@ function(e, t, n) {
         if (!t && null != m && n === m && null != u && null != u.planIdFromItems && !a) {
             let e = null != u.trialEndsAt ? T()(null == u ? void 0 : u.trialEndsAt).diff(T()(), "d") : 0,
                 t = ee.SubscriptionPlanInfo[u.planIdFromItems],
-                n = V.default.formatPriceString(V.default.getDefaultPrice(t.id), t.interval);
+                n = x.default.formatPriceString(x.default.getDefaultPrice(t.id), t.interval);
             return (0, _.jsx)(_.Fragment, {
                 children: (0, _.jsx)(A.Heading, {
                     variant: "heading-md/normal",
@@ -288,7 +288,7 @@ function(e, t, n) {
             })
         }
         if (!t && i && !a) {
-            let e = V.default.formatPriceString(V.default.getDefaultPrice(n === ee.PremiumTypes.TIER_0 ? ee.SubscriptionPlans.PREMIUM_MONTH_TIER_0 : ee.SubscriptionPlans.PREMIUM_MONTH_TIER_2), ee.SubscriptionIntervalTypes.MONTH);
+            let e = x.default.formatPriceString(x.default.getDefaultPrice(n === ee.PremiumTypes.TIER_0 ? ee.SubscriptionPlans.PREMIUM_MONTH_TIER_0 : ee.SubscriptionPlans.PREMIUM_MONTH_TIER_2), ee.SubscriptionIntervalTypes.MONTH);
             if (0 === r) {
                 var R, C, D, v;
                 return (0, _.jsx)(A.Heading, {
@@ -296,8 +296,8 @@ function(e, t, n) {
                     color: "always-white",
                     className: ei.trialHeader,
                     children: en.default.Messages.PREMIUM_TIER_CARD_TRIAL_HEADER_BEFORE_REDEMPTION_NEW.format({
-                        planName: (0, V.getTierDisplayName)(null !== (C = ee.PREMIUM_SKU_TO_MONTHLY_PLAN[null !== (R = null == O ? void 0 : O.sku_id) && void 0 !== R ? R : ee.PremiumSubscriptionSKUs.NONE]) && void 0 !== C ? C : ee.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
-                        duration: (0, V.formatIntervalDuration)({
+                        planName: (0, x.getTierDisplayName)(null !== (C = ee.PREMIUM_SKU_TO_MONTHLY_PLAN[null !== (R = null == O ? void 0 : O.sku_id) && void 0 !== R ? R : ee.PremiumSubscriptionSKUs.NONE]) && void 0 !== C ? C : ee.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
+                        duration: (0, x.formatIntervalDuration)({
                             intervalType: null !== (D = null == O ? void 0 : O.interval) && void 0 !== D ? D : ee.SubscriptionIntervalTypes.DAY,
                             intervalCount: null !== (v = null == O ? void 0 : O.interval_count) && void 0 !== v ? v : 30,
                             capitalize: !1
@@ -340,9 +340,9 @@ function(e, t, n) {
     function ec() {
         return (0, _.jsxs)(_.Fragment, {
             children: [(0, _.jsx)(eu, {
-                Icon: k.default,
+                Icon: B.default,
                 text: en.default.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
-                    maxUploadPremium: (0, V.getMaxFileSizeForPremiumType)(ee.PremiumTypes.TIER_0, {
+                    maxUploadPremium: (0, x.getMaxFileSizeForPremiumType)(ee.PremiumTypes.TIER_0, {
                         useSpace: !1
                     })
                 })
@@ -479,12 +479,12 @@ function(e, t, n) {
             isGift: i = !1
         } = e, r = (0, f.useStateFromStores)([C.default], () => C.default.locale), s = (0, f.useStateFromStores)([H.default], () => H.default.affinities), {
             planSelectionEnabled: a
-        } = x.default.useExperiment({
+        } = F.default.useExperiment({
             location: "planSelection"
         }, {
             autoTrackExposure: !1
         }), o = n && !i && s.length > 0;
-        o && x.default.trackExposure({
+        o && F.default.trackExposure({
             location: "planSelection"
         });
         if (1 === t) return (0, _.jsxs)(_.Fragment, {
@@ -492,12 +492,12 @@ function(e, t, n) {
                 Icon: P.default,
                 text: en.default.Messages.PREMIUM_TIER_SERVER_BOOST_WITH_PERCENTAGE_ITEM.format({
                     numBoosts: ee.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM,
-                    percentageOff: (0, F.formatPercent)(r, ee.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
+                    percentageOff: (0, V.formatPercent)(r, ee.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
                 })
             }), (0, _.jsx)(eu, {
-                Icon: k.default,
+                Icon: B.default,
                 text: en.default.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
-                    maxUploadPremium: (0, V.getMaxFileSizeForPremiumType)(ee.PremiumTypes.TIER_2, {
+                    maxUploadPremium: (0, x.getMaxFileSizeForPremiumType)(ee.PremiumTypes.TIER_2, {
                         useSpace: !1
                     })
                 })
@@ -514,9 +514,9 @@ function(e, t, n) {
         });
         return (0, _.jsxs)(_.Fragment, {
             children: [(0, _.jsx)(eu, {
-                Icon: k.default,
+                Icon: B.default,
                 text: en.default.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
-                    maxUploadPremium: (0, V.getMaxFileSizeForPremiumType)(ee.PremiumTypes.TIER_2, {
+                    maxUploadPremium: (0, x.getMaxFileSizeForPremiumType)(ee.PremiumTypes.TIER_2, {
                         useSpace: !1
                     })
                 })
@@ -567,16 +567,16 @@ function(e, t, n) {
             b = !l && R,
             G = (0, Q.getBOGOPillCopy)(),
             w = (0, h.isThemeLight)((0, m.default)()),
-            k = w ? 5 : 2,
+            B = w ? 5 : 2,
             {
-                enabled: B
+                enabled: k
             } = W.ReferralProgramRecipient.useExperiment({
                 location: "Tier2Card"
             }, {
                 autoTrackExposure: !1
             }),
-            F = en.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT;
-        return B && (null == N ? void 0 : N.trial_id) === ee.PREMIUM_TIER_2_REFERRAL_TRIAL_ID && (F = en.default.Messages.REFERRAL_PROGRAM_TWO_WEEK_TRIAL), !b || y || w ? b && y && !w && (n = ei.rimGlowTier2Stacked) : n = ei.rimGlowTier2, (0, _.jsxs)("div", {
+            V = en.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT;
+        return k && (null == N ? void 0 : N.trial_id) === ee.PREMIUM_TIER_2_REFERRAL_TRIAL_ID && (V = en.default.Messages.REFERRAL_PROGRAM_TWO_WEEK_TRIAL), !b || y || w ? b && y && !w && (n = ei.rimGlowTier2Stacked) : n = ei.rimGlowTier2, (0, _.jsxs)("div", {
             className: E()(ei.card, o, {
                 [ei.withTier2Rim]: b && !y,
                 [ei.withTier2RimStacked]: b && y,
@@ -590,15 +590,15 @@ function(e, t, n) {
                         percent: C.discount.amount
                     }),
                     className: ei.topRimPill,
-                    colorOptions: k
+                    colorOptions: B
                 }), (0, _.jsx)("div", {
                     className: n
                 })]
             }) : null, l || p !== ee.PremiumSubscriptionSKUs.TIER_2 ? null : (0, _.jsxs)(_.Fragment, {
                 children: [(0, _.jsx)(eo, {
-                    text: F,
+                    text: V,
                     className: ei.topRimPill,
-                    colorOptions: k
+                    colorOptions: B
                 }), (0, _.jsx)("div", {
                     className: n
                 })]
@@ -606,7 +606,7 @@ function(e, t, n) {
                 children: [(0, _.jsx)(eo, {
                     text: en.default.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED,
                     className: ei.topRimPill,
-                    colorOptions: k
+                    colorOptions: B
                 }), (0, _.jsx)("div", {
                     className: n
                 })]
@@ -614,7 +614,7 @@ function(e, t, n) {
                 children: [(0, _.jsx)(eo, {
                     text: en.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED,
                     className: ei.topRimPill,
-                    colorOptions: k
+                    colorOptions: B
                 }), (0, _.jsx)("div", {
                     className: n
                 })]

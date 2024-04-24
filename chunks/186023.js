@@ -67,22 +67,22 @@ function(e, t, n) {
                 })
             }
             g(null == r ? void 0 : null === (e = r.multiSelect) || void 0 === e ? void 0 : e.state), D(null == r ? void 0 : r.textInput), R(s), M(i), null == T || T("..")
-        }, w = [], k = [];
+        }, w = [], B = [];
         for (let e in A) {
-            var B, F;
+            var k, V;
             let t = A[e];
             if (t.id !== N && t.id !== p && t.id !== m) {
                 if (t.key.endsWith("_SUBMIT")) {
-                    k.push(t);
+                    B.push(t);
                     continue
                 }
-                if (w.push(t), (null === (B = t.button) || void 0 === B ? void 0 : B.type) === "next") {
-                    let e = null === (F = t.button) || void 0 === F ? void 0 : F.target,
+                if (w.push(t), (null === (k = t.button) || void 0 === k ? void 0 : k.type) === "next") {
+                    let e = null === (V = t.button) || void 0 === V ? void 0 : V.target,
                         n = w.indexOf(A[e]); - 1 !== n && (w.splice(n, 1), w.push(A[e]))
                 }
             }
         }
-        let V = [A[m], ...w, ...k, A[N], A[p]];
+        let x = [A[m], ...w, ...B, A[N], A[p]];
         return (0, i.jsx)(s.ModalRoot, {
             transitionState: E.transitionState,
             "aria-labelledby": h,
@@ -90,7 +90,7 @@ function(e, t, n) {
                 width: 440,
                 activeSlide: O,
                 centered: !1,
-                children: V.map(e => (0, i.jsx)(s.Slide, {
+                children: x.map(e => (0, i.jsx)(s.Slide, {
                     id: e.id,
                     children: (0, i.jsx)("div", {
                         className: c.slideContainer,

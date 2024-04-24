@@ -8,7 +8,7 @@ function(e, t, n) {
             return X
         },
         getRandomDateShortcut: function() {
-            return F
+            return V
         },
         refreshSearchTokens: function() {
             return z
@@ -110,7 +110,7 @@ function(e, t, n) {
         return null != s && (e.setData("channel", s), !0)
     }
 
-    function k(e) {
+    function B(e) {
         let t = {
             [p.default.Messages.SEARCH_ANSWER_HAS_LINK]: "link",
             [p.default.Messages.SEARCH_ANSWER_HAS_EMBED]: "embed",
@@ -124,23 +124,23 @@ function(e, t, n) {
         return null != t && "" !== t && (e.setData("has", t), !0)
     }
 
-    function B() {
+    function k() {
         return [...Array.from(O()), ...Array.from(R()), ...Array.from(C()), ...Object.keys(v())]
     }
 
-    function F() {
-        return l().sample(B())
+    function V() {
+        return l().sample(k())
     }
 
-    function V(e, t, n) {
-        return x(e, t, B()).map(e => ({
+    function x(e, t, n) {
+        return F(e, t, k()).map(e => ({
             ...e,
             group: n,
             key: "".concat(n, "-").concat(e.text)
         }))
     }
 
-    function x(e, t, n) {
+    function F(e, t, n) {
         let i = e.toLocaleLowerCase();
         return l()(n).filter(e => a()(i, e.toLocaleLowerCase())).take(t).map(e => ({
             text: e
@@ -243,12 +243,12 @@ function(e, t, n) {
                     componentType: "FILTER",
                     key: P(p.default.Messages.SEARCH_FILTER_HAS),
                     plainText: p.default.Messages.SEARCH_FILTER_HAS,
-                    getAutocompletions: (t, n, i) => x(t, i, e)
+                    getAutocompletions: (t, n, i) => F(t, i, e)
                 },
                 [N.SearchTokenTypes.ANSWER_HAS]: {
                     regex: RegExp("(?:\\s*-?(".concat(e.map(e => A.default.escape(e)).join("|"), "))"), "i"),
                     follows: [N.SearchTokenTypes.FILTER_HAS],
-                    validator: k,
+                    validator: B,
                     componentType: "ANSWER",
                     queryKey: "has"
                 },
@@ -283,21 +283,21 @@ function(e, t, n) {
                     componentType: "FILTER",
                     key: P(p.default.Messages.SEARCH_FILTER_BEFORE),
                     plainText: p.default.Messages.SEARCH_FILTER_BEFORE,
-                    getAutocompletions: (e, t, n) => V(e, n, N.SearchTokenTypes.FILTER_BEFORE)
+                    getAutocompletions: (e, t, n) => x(e, n, N.SearchTokenTypes.FILTER_BEFORE)
                 },
                 [N.SearchTokenTypes.FILTER_ON]: {
                     regex: U("(".concat(p.default.Messages.SEARCH_FILTER_ON, "|").concat(p.default.Messages.SEARCH_FILTER_DURING, ")")),
                     componentType: "FILTER",
                     key: P(p.default.Messages.SEARCH_FILTER_DURING),
                     plainText: p.default.Messages.SEARCH_FILTER_DURING,
-                    getAutocompletions: (e, t, n) => V(e, n, N.SearchTokenTypes.FILTER_ON)
+                    getAutocompletions: (e, t, n) => x(e, n, N.SearchTokenTypes.FILTER_ON)
                 },
                 [N.SearchTokenTypes.FILTER_AFTER]: {
                     regex: U(p.default.Messages.SEARCH_FILTER_AFTER),
                     componentType: "FILTER",
                     key: P(p.default.Messages.SEARCH_FILTER_AFTER),
                     plainText: p.default.Messages.SEARCH_FILTER_AFTER,
-                    getAutocompletions: (e, t, n) => V(e, n, N.SearchTokenTypes.FILTER_AFTER)
+                    getAutocompletions: (e, t, n) => x(e, n, N.SearchTokenTypes.FILTER_AFTER)
                 },
                 [N.SearchTokenTypes.ANSWER_BEFORE]: {
                     regex: M,

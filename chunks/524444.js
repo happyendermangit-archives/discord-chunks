@@ -85,11 +85,11 @@ function(e, t, n) {
         b = n("278297"),
         G = n("259580"),
         w = n("386103"),
-        k = n("465670"),
-        B = n("839523"),
-        F = n("626135"),
-        V = n("823379"),
-        x = n("589530"),
+        B = n("465670"),
+        k = n("839523"),
+        V = n("626135"),
+        x = n("823379"),
+        F = n("589530"),
         H = n("709054"),
         Y = n("981631"),
         j = n("420212"),
@@ -102,10 +102,10 @@ function(e, t, n) {
             position: "top"
         },
         q = e => t => {
-            null == e || e(t), (0, x.setVolume)(t)
+            null == e || e(t), (0, F.setVolume)(t)
         },
         Z = e => t => {
-            null == e || e(t), (0, x.setMuted)(t)
+            null == e || e(t), (0, F.setMuted)(t)
         };
 
     function J(e) {
@@ -119,7 +119,7 @@ function(e, t, n) {
             renderOverlayContent: u,
             ...d
         } = e, _ = q(t), c = Z(n);
-        return i = null == i ? x.getVolume : i, r = null == r ? x.getMuted : r, (0, s.jsxs)(a.Fragment, {
+        return i = null == i ? F.getVolume : i, r = null == r ? F.getMuted : r, (0, s.jsxs)(a.Fragment, {
             children: [(0, s.jsx)(y.default, {
                 ...d,
                 alt: o,
@@ -143,7 +143,7 @@ function(e, t, n) {
             renderAdjacentContent: l,
             ...u
         } = e, d = q(t), _ = Z(i);
-        return n = null == n ? x.getVolume : n, (0, s.jsxs)(a.Fragment, {
+        return n = null == n ? F.getVolume : n, (0, s.jsxs)(a.Fragment, {
             children: [(0, s.jsx)(M.default, {
                 ...u,
                 onVolumeChange: d,
@@ -164,7 +164,7 @@ function(e, t, n) {
             onMute: i,
             ...r
         } = e, a = q(t), o = Z(i);
-        return n = null == n ? x.getVolume : n, (0, s.jsx)(g.default, {
+        return n = null == n ? F.getVolume : n, (0, s.jsx)(g.default, {
             ...r,
             onVolumeChange: a,
             onMute: o,
@@ -283,7 +283,7 @@ function(e, t, n) {
                                     case 1:
                                         return z.default.Messages.JUMP_BAR_VIEWING_REPLY;
                                     default:
-                                        return (0, V.assertNever)(e)
+                                        return (0, x.assertNever)(e)
                                 }
                             }(t)
                         })
@@ -300,7 +300,7 @@ function(e, t, n) {
                                     case 1:
                                         return z.default.Messages.JUMP_TO_ORIGINAL_MESSAGE;
                                     default:
-                                        return (0, V.assertNever)(e)
+                                        return (0, x.assertNever)(e)
                                 }
                             }(t), (0, s.jsx)(G.default, {
                                 className: X.barButtonIcon
@@ -413,7 +413,7 @@ function(e, t, n) {
             return null !== (e = p.default.summaries(r.id)) && void 0 !== e ? e : []
         }, [r]), P = (0, A.default)(y);
         a.useEffect(() => {
-            !d().isEqual(P, y) && F.default.track(Y.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
+            !d().isEqual(P, y) && V.default.track(Y.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
                 num_summaries: y.length,
                 message_counts: y.map(e => e.count),
                 start_message_ids: y.map(e => e.startId),
@@ -431,11 +431,11 @@ function(e, t, n) {
                     return null === (t = e.people) || void 0 === t ? void 0 : t.map(e => {
                         var t;
                         return null !== (t = D.default.getUser(e)) && void 0 !== t ? t : null
-                    }).filter(V.isNotNullish)
+                    }).filter(x.isNotNullish)
                 })) && void 0 !== e ? e : []
             }, [y], eu),
-            x = null !== (n = (0, c.useStateFromStores)([p.default], () => p.default.visibleSummaryIndex())) && void 0 !== n ? n : -1,
-            j = null == y ? void 0 : null === (t = y[x]) || void 0 === t ? void 0 : t.topic;
+            F = null !== (n = (0, c.useStateFromStores)([p.default], () => p.default.visibleSummaryIndex())) && void 0 !== n ? n : -1,
+            j = null == y ? void 0 : null === (t = y[F]) || void 0 === t ? void 0 : t.topic;
         null == j && null == S && (null == y ? void 0 : y.length) >= 1 && (j = null === (i = y[0]) || void 0 === i ? void 0 : i.topic);
         let K = a.useMemo(() => d().debounce(e => {
                 var t;
@@ -451,7 +451,7 @@ function(e, t, n) {
             }, [K, Q]),
             [Z, J] = a.useState(!1),
             $ = a.useCallback(() => {
-                F.default.track(Y.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
+                V.default.track(Y.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
                     topics_dropdown_open: !Z,
                     num_summaries: y.length,
                     message_counts: y.map(e => e.count),
@@ -473,7 +473,7 @@ function(e, t, n) {
                         u.addAutomaticAnchorCallback(q, !1)
                     }, 100)
                 };
-                u.removeAutomaticAnchorCallback(q), u.addScrollCompleteCallback(i), F.default.track(Y.AnalyticEvents.SUMMARIES_TOPIC_CLICKED, {
+                u.removeAutomaticAnchorCallback(q), u.addScrollCompleteCallback(i), V.default.track(Y.AnalyticEvents.SUMMARIES_TOPIC_CLICKED, {
                     source: t,
                     message_id: n.startId,
                     guild_id: r.guild_id,
@@ -504,7 +504,7 @@ function(e, t, n) {
         }, [g, Z]);
         let en = a.useCallback(e => {
             var t;
-            !((0, _.isElement)(e.target) && (null === (t = C.current) || void 0 === t ? void 0 : t.contains(e.target))) && (Z && F.default.track(Y.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
+            !((0, _.isElement)(e.target) && (null === (t = C.current) || void 0 === t ? void 0 : t.contains(e.target))) && (Z && V.default.track(Y.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
                 topics_dropdown_open: !1,
                 num_summaries: y.length,
                 message_counts: y.map(e => e.count),
@@ -562,7 +562,7 @@ function(e, t, n) {
                             [X.newTopicsBarTextUnselected]: !Z,
                             [X.newTopicsBarTextSelected]: Z
                         }),
-                        children: [(0, s.jsx)(B.default, {
+                        children: [(0, s.jsx)(k.default, {
                             className: X.newTopicsBarIcon,
                             width: 16,
                             height: 16
@@ -597,7 +597,7 @@ function(e, t, n) {
                     className: X.topicsDropdownHeading,
                     children: [(0, s.jsxs)("div", {
                         className: X.topicsDropdownHeadingText,
-                        children: [(0, s.jsx)(B.default, {
+                        children: [(0, s.jsx)(k.default, {
                             className: X.topicsPillHeadingIcon,
                             width: 18,
                             height: 20
@@ -613,7 +613,7 @@ function(e, t, n) {
                         "aria-label": z.default.Messages.CLOSE,
                         onClick: $,
                         className: X.topicsDropdownClose,
-                        children: (0, s.jsx)(k.default, {})
+                        children: (0, s.jsx)(B.default, {})
                     })]
                 }), (0, s.jsx)(E.Scroller, {
                     ref: M,
@@ -644,7 +644,7 @@ function(e, t, n) {
             return null !== (e = p.default.summaries(r.id)) && void 0 !== e ? e : []
         }, [r]), v = (0, A.default)(L);
         a.useEffect(() => {
-            !d().isEqual(v, L) && F.default.track(Y.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
+            !d().isEqual(v, L) && V.default.track(Y.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
                 num_summaries: L.length,
                 message_counts: L.map(e => e.count),
                 start_message_ids: L.map(e => e.startId),
@@ -662,7 +662,7 @@ function(e, t, n) {
                     return null === (t = e.people) || void 0 === t ? void 0 : t.map(e => {
                         var t;
                         return null !== (t = D.default.getUser(e)) && void 0 !== t ? t : null
-                    }).filter(V.isNotNullish)
+                    }).filter(x.isNotNullish)
                 })) && void 0 !== e ? e : []
             }, [L], eu),
             y = null !== (n = (0, c.useStateFromStores)([p.default], () => p.default.visibleSummaryIndex())) && void 0 !== n ? n : -1,
@@ -670,7 +670,7 @@ function(e, t, n) {
         null == P && null == T && (null == L ? void 0 : L.length) >= 1 && (P = null === (i = L[0]) || void 0 === i ? void 0 : i.topic);
         let U = a.useMemo(() => d().get(L, y - 1), [y, L]),
             w = a.useMemo(() => d().get(L, y + 1), [y, L]),
-            x = a.useMemo(() => d().debounce(e => {
+            F = a.useMemo(() => d().debounce(e => {
                 var t;
                 f(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : null)
             }, 64), [f]),
@@ -680,11 +680,11 @@ function(e, t, n) {
                 trailing: !1
             }), []),
             j = a.useCallback(e => {
-                H(), x(e)
-            }, [x, H]),
+                H(), F(e)
+            }, [F, H]),
             [K, Q] = a.useState(!1),
             q = a.useCallback(() => {
-                F.default.track(Y.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
+                V.default.track(Y.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
                     topics_dropdown_open: !K,
                     num_summaries: L.length,
                     message_counts: L.map(e => e.count),
@@ -706,7 +706,7 @@ function(e, t, n) {
                         o.addAutomaticAnchorCallback(j, !1)
                     }, 100)
                 };
-                o.removeAutomaticAnchorCallback(j), o.addScrollCompleteCallback(i), F.default.track(Y.AnalyticEvents.SUMMARIES_TOPIC_CLICKED, {
+                o.removeAutomaticAnchorCallback(j), o.addScrollCompleteCallback(i), V.default.track(Y.AnalyticEvents.SUMMARIES_TOPIC_CLICKED, {
                     source: t,
                     message_id: n.startId,
                     guild_id: r.guild_id,
@@ -743,7 +743,7 @@ function(e, t, n) {
         }, [R, K]);
         let et = a.useCallback(e => {
             var t;
-            !((0, _.isElement)(e.target) && (null === (t = S.current) || void 0 === t ? void 0 : t.contains(e.target))) && (K && F.default.track(Y.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
+            !((0, _.isElement)(e.target) && (null === (t = S.current) || void 0 === t ? void 0 : t.contains(e.target))) && (K && V.default.track(Y.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
                 topics_dropdown_open: !1,
                 num_summaries: L.length,
                 message_counts: L.map(e => e.count),
@@ -785,7 +785,7 @@ function(e, t, n) {
                             [X.topicsPillTextUnselected]: !K,
                             [X.topicsPillTextSelected]: K
                         }),
-                        children: [(0, s.jsx)(B.default, {
+                        children: [(0, s.jsx)(k.default, {
                             className: X.topicsPillSummaryIcon,
                             width: 16,
                             height: 16
@@ -832,7 +832,7 @@ function(e, t, n) {
                     className: X.topicsDropdownHeading,
                     children: [(0, s.jsxs)("div", {
                         className: X.topicsDropdownHeadingText,
-                        children: [(0, s.jsx)(B.default, {
+                        children: [(0, s.jsx)(k.default, {
                             className: X.topicsPillHeadingIcon,
                             width: 18,
                             height: 20
@@ -848,7 +848,7 @@ function(e, t, n) {
                         "aria-label": z.default.Messages.CLOSE,
                         onClick: q,
                         className: X.topicsDropdownClose,
-                        children: (0, s.jsx)(k.default, {})
+                        children: (0, s.jsx)(B.default, {})
                     })]
                 }), (0, s.jsx)(E.Scroller, {
                     ref: g,

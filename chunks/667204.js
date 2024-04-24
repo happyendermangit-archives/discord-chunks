@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return F
+            return V
         },
         retryCommandMessage: function() {
-            return x
+            return F
         }
     }), n("653041"), n("47120"), n("390547"), n("627494"), n("757143");
     var i = n("512722"),
@@ -45,7 +45,7 @@ function(e, t, n) {
             var n;
             return null == e ? void 0 : null === (n = e.find(e => e.displayName === t)) || void 0 === n ? void 0 : n.value
         },
-        k = function(e, t, n) {
+        B = function(e, t, n) {
             var i, r;
             let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : e => e;
             if (e.name === (null === (i = n.autocomplete) || void 0 === i ? void 0 : i.name)) return n.autocomplete.query;
@@ -53,12 +53,12 @@ function(e, t, n) {
             let a = L.default.getAutocompleteLastChoices(n.channel.id, e.name);
             return null != a ? null !== (r = w(a, t)) && void 0 !== r ? r : s(t) : s(t)
         },
-        B = e => {
+        k = e => {
             let t = e.toLowerCase() === P.TRUE_OPTION_NAME.toLowerCase(),
                 n = e.toLowerCase() === P.FALSE_OPTION_NAME.toLowerCase();
             return t || n ? t : null
         };
-    async function F(e) {
+    async function V(e) {
         var t, n, i, a, l, d, _, I, T, f, S, m, p, O, R;
         let {
             command: C,
@@ -74,8 +74,8 @@ function(e, t, n) {
             command: C,
             commandOrigin: G
         }), await h.default.unarchiveThreadIfNecessary(v.channel.id);
-        let F = [],
-            x = [],
+        let V = [],
+            F = [],
             Y = (0, y.getCommandAttachmentDraftType)(G);
         if (null != C.options)
             for (let e of C.options) {
@@ -84,7 +84,7 @@ function(e, t, n) {
                     n = null;
                 if (e.type === u.ApplicationCommandOptionType.STRING) {
                     let i = null !== (l = null === (a = D.getOptionalString(L, e.name)) || void 0 === a ? void 0 : a.trim()) && void 0 !== l ? l : "";
-                    n = null != e.choices ? w(e.choices, i) : e.autocomplete ? k(e, i, v) : i, r()(null != v.autocomplete || null != n, 'Option "'.concat(e.name, '" expects a value')), null != n && F.push({
+                    n = null != e.choices ? w(e.choices, i) : e.autocomplete ? B(e, i, v) : i, r()(null != v.autocomplete || null != n, 'Option "'.concat(e.name, '" expects a value')), null != n && V.push({
                         type: e.type,
                         name: e.name,
                         value: n,
@@ -97,7 +97,7 @@ function(e, t, n) {
                     let i = N.default.getUpload(v.channel.id, e.name, Y);
                     if (null == i) continue;
                     let r = N.default.getUploads(v.channel.id, Y).findIndex(e => i.id === e.id);
-                    x.push(i), n = r, F.push({
+                    F.push(i), n = r, V.push({
                         type: e.type,
                         name: e.name,
                         value: n,
@@ -159,25 +159,25 @@ function(e, t, n) {
                         }
                         break;
                     case u.ApplicationCommandOptionType.BOOLEAN:
-                        "text" === o.type && (n = B(o.text.trim()));
+                        "text" === o.type && (n = k(o.text.trim()));
                         break;
                     case u.ApplicationCommandOptionType.INTEGER:
                         if ("text" === o.type) {
                             let t = o.text.trim();
-                            n = null != e.choices ? Number(w(e.choices, t)) : e.autocomplete ? k(e, t, v, Number) : Number(D.normalizeNumericString(A.default.locale, t))
+                            n = null != e.choices ? Number(w(e.choices, t)) : e.autocomplete ? B(e, t, v, Number) : Number(D.normalizeNumericString(A.default.locale, t))
                         }
                         break;
                     case u.ApplicationCommandOptionType.NUMBER:
                         if ("text" === o.type) {
                             let t = o.text.trim();
-                            n = null != e.choices ? Number(w(e.choices, t)) : e.autocomplete ? k(e, t, v, Number) : Number(D.normalizeNumericString(A.default.locale, t))
+                            n = null != e.choices ? Number(w(e.choices, t)) : e.autocomplete ? B(e, t, v, Number) : Number(D.normalizeNumericString(A.default.locale, t))
                         }
                         break;
                     default:
                         r()(!1, "Unsupported option type: ".concat(e.type));
                         continue
                 }
-                r()(null != v.autocomplete || null != n, 'Unexpected value for option "'.concat(e.name, '"')), null != n && F.push({
+                r()(null != v.autocomplete || null != n, 'Unexpected value for option "'.concat(e.name, '"')), null != n && V.push({
                     type: e.type,
                     name: e.name,
                     value: n,
@@ -190,10 +190,10 @@ function(e, t, n) {
                     name: t,
                     type: n
                 } = C.subCommandPath[e];
-                F = [{
+                V = [{
                     type: n,
                     name: t,
-                    options: F
+                    options: V
                 }]
             }
         if (null != C.execute) return c.default.trackWithMetadata(U.AnalyticEvents.APPLICATION_COMMAND_USED, {
@@ -201,7 +201,7 @@ function(e, t, n) {
             application_id: C.applicationId,
             command_type: C.type,
             location: G === M.CommandOrigin.APPLICATION_LAUNCHER ? M.ApplicationCommandTriggerLocations.APP_LAUNCHER : M.ApplicationCommandTriggerLocations.SLASH_UI
-        }), C.execute(F, v);
+        }), C.execute(V, v);
         if (C.inputType === M.ApplicationCommandInputType.BUILT_IN || C.inputType === M.ApplicationCommandInputType.BUILT_IN_TEXT || C.inputType === M.ApplicationCommandInputType.BUILT_IN_INTEGRATION) return;
         let j = {
             version: C.version,
@@ -209,23 +209,23 @@ function(e, t, n) {
             guild_id: C.guildId,
             name: null !== (R = null === (n = C.rootCommand) || void 0 === n ? void 0 : n.name) && void 0 !== R ? R : C.name,
             type: C.type,
-            options: F,
+            options: V,
             application_command: C.rootCommand
         };
         null != P && (j.target_id = P), null != v.autocomplete ? (0, g.performAutocomplete)(C, v, j) : (o.default.clearAll(v.channel.id, Y), await H({
             applicationId: C.applicationId,
             data: j,
             context: v,
-            attachments: x,
+            attachments: F,
             maxSizeCallback: b,
             onMessageSuccess: () => {
-                V(L)
+                x(L)
             },
             commandDisplayName: C.displayName,
             analytics_location: G === M.CommandOrigin.APPLICATION_LAUNCHER ? M.ApplicationCommandTriggerLocations.APP_LAUNCHER : M.ApplicationCommandTriggerLocations.SLASH_UI
         }))
     }
-    let V = e => {
+    let x = e => {
             let t = Object.values(e).flatMap(e => e.map(e => "emoji" === e.type ? {
                 name: e.name.replaceAll(":", "")
             } : "customEmoji" === e.type ? I.default.getCustomEmojiById(e.emojiId) : null).filter(R.isNotNullish));
@@ -234,7 +234,7 @@ function(e, t, n) {
                 emojiUsed: t
             })
         },
-        x = (e, t, n) => {
+        F = (e, t, n) => {
             if (e.isCommandType()) {
                 let i = t.guild_id;
                 null != e.interactionData && H({

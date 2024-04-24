@@ -33,13 +33,13 @@ function(e, t, n) {
             return w
         },
         isAnimatedIconHash: function() {
-            return B
+            return k
         },
         isAnimatedImageURL: function() {
-            return V
+            return x
         },
         isVideoAssetHash: function() {
-            return F
+            return V
         }
     }), n("315314"), n("610138"), n("216116"), n("78328"), n("815648"), n("47120");
     var r = n("654861"),
@@ -70,8 +70,8 @@ function(e, t, n) {
             format: _ = null
         } = e;
         if (null == r || null == s) return;
-        let c = null != _ ? _ : u && B(s) ? "gif" : "jpg";
-        u && F(s) && (c = "mp4");
+        let c = null != _ ? _ : u && k(s) ? "gif" : "jpg";
+        u && V(s) && (c = "mp4");
         let E = window.GLOBAL_ENV.CDN_HOST;
         if (null != E ? ("jpg" === c && (c = f ? "webp" : "png"), t = "".concat(location.protocol, "//").concat(E, "/").concat(i, "/").concat(r, "/").concat(s, ".").concat(c)) : t = location.protocol + window.GLOBAL_ENV.API_ENDPOINT + n(r, s, c), "mp4" === c) return t;
         let I = {};
@@ -133,7 +133,7 @@ function(e, t, n) {
                 canAnimate: s = !1,
                 size: o = c.AVATAR_SIZE
             } = e,
-            u = s && B(r) ? "gif" : "jpg",
+            u = s && k(r) ? "gif" : "jpg",
             {
                 CDN_HOST: d
             } = window.GLOBAL_ENV;
@@ -165,7 +165,7 @@ function(e, t, n) {
         } = e;
         if (null == i) return;
         let a = window.GLOBAL_ENV.CDN_HOST,
-            o = r && B(i) ? "gif" : "png";
+            o = r && k(i) ? "gif" : "png";
         return t = (null != a ? "".concat(location.protocol, "//").concat(a, "/banners/").concat(n, "/").concat(i, ".").concat(o) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + c.Endpoints.USER_BANNER(n, i, o)) + "?size=".concat((0, l.getBestMediaProxySize)(s * (0, l.getDevicePixelRatio)()))
     }
 
@@ -194,7 +194,7 @@ function(e, t, n) {
         } = e;
         if (null == r || null == i) return;
         let o = window.GLOBAL_ENV.CDN_HOST,
-            u = s && B(r) ? "gif" : "png",
+            u = s && k(r) ? "gif" : "png",
             d = c.Endpoints.GUILD_MEMBER_BANNER(i, n, r, u);
         return t = (null != o ? "".concat(location.protocol, "//").concat(o).concat(d) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + d) + "?size=".concat((0, l.getBestMediaProxySize)(a * (0, l.getDevicePixelRatio)()))
     }
@@ -220,7 +220,7 @@ function(e, t, n) {
         if (null == i) return null;
         let s = (0, l.getBestMediaProxySize)(240 * (0, l.getDevicePixelRatio)()),
             a = f ? "webp" : "jpg",
-            o = r && B(i) ? "gif" : a,
+            o = r && k(i) ? "gif" : a,
             u = window.GLOBAL_ENV.CDN_HOST;
         return t = (null != u ? "".concat(location.protocol, "//").concat(u, "/banners/").concat(n, "/").concat(i, ".").concat(o) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + c.Endpoints.GUILD_BANNER(n, i, o)) + "?size=".concat(s), "jpg" === o && (t += "&quality=lossless"), t
     }
@@ -348,7 +348,7 @@ function(e, t, n) {
         })
     }
 
-    function k(e) {
+    function B(e) {
         var t, n, r;
         let {
             id: s,
@@ -371,16 +371,16 @@ function(e, t, n) {
         })) && void 0 !== n ? n : (r = s, i.DEFAULT_GROUP_DM_AVATARS[_.default.extractTimestamp(r) % i.DEFAULT_GROUP_DM_AVATARS.length])
     }
 
-    function B(e) {
+    function k(e) {
         return null != e && e.startsWith("a_")
     }
 
-    function F(e) {
+    function V(e) {
         return null != e && e.startsWith("v_")
     }
 
-    function V(e) {
-        return null != e && B(function(e) {
+    function x(e) {
+        return null != e && k(function(e) {
             let t;
             try {
                 return (t = new URL(e).pathname).split("/").pop()
@@ -390,7 +390,7 @@ function(e, t, n) {
         }(e))
     }
 
-    function x(e) {
+    function F(e) {
         return "number" == typeof e ? e : {
             uri: null != e ? e : void 0
         }
@@ -403,24 +403,24 @@ function(e, t, n) {
         getGuildMemberAvatarSource: function(e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                 i = R(e, n);
-            return null != i ? x(i) : t.getAvatarSource(e.guildId, n)
+            return null != i ? F(i) : t.getAvatarSource(e.guildId, n)
         },
         getGuildMemberBannerURL: L,
         getUserBannerURL: C,
         getAvatarDecorationURL: g,
         hasAnimatedGuildIcon: function(e) {
-            return B(null == e ? void 0 : e.icon)
+            return k(null == e ? void 0 : e.icon)
         },
-        isAnimatedIconHash: B,
-        getUserAvatarSource: (e, t, n) => x(p(e, t, n)),
+        isAnimatedIconHash: k,
+        getUserAvatarSource: (e, t, n) => F(p(e, t, n)),
         getGuildIconURL: P,
         getGuildSplashURL: D,
         getGuildSplashSource: function(e) {
-            return x(D(e))
+            return F(D(e))
         },
         getGuildDiscoverySplashURL: y,
         getGuildDiscoverySplashSource: function(e) {
-            return x(y(e))
+            return F(y(e))
         },
         getGuildBannerURL: v,
         getGuildHomeHeaderURL: M,
@@ -453,22 +453,22 @@ function(e, t, n) {
             })
         },
         getGuildTemplateIconURL: U,
-        getChannelIconURL: k,
+        getChannelIconURL: B,
         getEmojiURL: A,
         getApplicationIconURL: b,
         getGameAssetURL: G,
         getVideoFilterAssetURL: w,
-        getGameAssetSource: e => x(G(e)),
-        getGuildIconSource: e => x(P(e)),
-        getGuildTemplateIconSource: e => x(U(e)),
+        getGameAssetSource: e => F(G(e)),
+        getGuildIconSource: e => F(P(e)),
+        getGuildTemplateIconSource: e => F(U(e)),
         getGuildBannerSource(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            return x(v(e, t))
+            return F(v(e, t))
         },
-        getGuildHomeHeaderSource: e => x(M(e)),
-        getChannelIconSource: e => x(k(e)),
-        getApplicationIconSource: e => x(b(e)),
-        makeSource: x,
+        getGuildHomeHeaderSource: e => F(M(e)),
+        getChannelIconSource: e => F(B(e)),
+        getApplicationIconSource: e => F(b(e)),
+        makeSource: F,
         getAnimatableSourceWithFallback(e, t) {
             let n = t(e);
             if (!(0, d.isAndroid)() || !e || "number" == typeof n) return n;

@@ -2,13 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         UserPopoutAvatar: function() {
-            return F
+            return V
         },
         UserPopoutBadgeList: function() {
-            return k
+            return B
         },
         default: function() {
-            return V
+            return x
         }
     }), n("627341");
     var i = n("735250"),
@@ -46,7 +46,7 @@ function(e, t, n) {
     let G = d.AvatarSizes.SIZE_80,
         w = (0, c.getDecorationSizeForAvatarSize)(G);
 
-    function k(e) {
+    function B(e) {
         let {
             user: t,
             guildId: n,
@@ -71,9 +71,9 @@ function(e, t, n) {
             })]
         })
     }
-    let B = N.default.getEnableHardwareAcceleration() ? d.AnimatedAvatar : d.Avatar;
+    let k = N.default.getEnableHardwareAcceleration() ? d.AnimatedAvatar : d.Avatar;
 
-    function F(e) {
+    function V(e) {
         let {
             user: t,
             displayProfile: n,
@@ -90,7 +90,7 @@ function(e, t, n) {
             hasProfileEffect: C
         } = e, {
             theme: L
-        } = (0, D.useUserProfileThemeContext)(), k = r.useContext(A.AnalyticsContext), F = t.isNonUserBot() && !t.isClyde(), V = m.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, P.PremiumTypes.TIER_2), x = r.useMemo(() => (0, I.shouldDisableUserPresenceInChannel)(t, T), [t, T]), {
+        } = (0, D.useUserProfileThemeContext)(), B = r.useContext(A.AnalyticsContext), V = t.isNonUserBot() && !t.isClyde(), x = m.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, P.PremiumTypes.TIER_2), F = r.useMemo(() => (0, I.shouldDisableUserPresenceInChannel)(t, T), [t, T]), {
             analyticsLocations: H
         } = (0, _.default)(), {
             trackUserProfileAction: Y,
@@ -108,13 +108,13 @@ function(e, t, n) {
         }), q = (0, i.jsx)("div", {
             className: b.avatarHoverTarget,
             ...Q,
-            children: (0, i.jsx)(B, {
+            children: (0, i.jsx)(k, {
                 src: null != s ? s : X,
                 avatarDecoration: z,
                 size: G,
                 "aria-label": t.username,
-                status: x ? y.StatusTypes.UNKNOWN : u,
-                statusBackdropColor: V && !x ? (0, d.getStatusBackdropColor)(L) : void 0,
+                status: F ? y.StatusTypes.UNKNOWN : u,
+                statusBackdropColor: x && !F ? (0, d.getStatusBackdropColor)(L) : void 0,
                 isMobile: c,
                 statusTooltip: !0
             })
@@ -123,7 +123,7 @@ function(e, t, n) {
             premiumUserWithoutBanner: b.avatarPositionPremiumNoBanner,
             default: b.avatarPositionNormal
         })({
-            isPremium: V,
+            isPremium: x,
             hasBanner: l,
             hasProfileEffect: C
         })).with(M.UserProfileTypes.POMELO_POPOUT, () => b.avatarPositionPomelo).with(M.UserProfileTypes.PANEL, () => b.avatarPositionPanel).with(M.UserProfileTypes.BITE_SIZE, () => b.avatarPositionBiteSize).exhaustive();
@@ -131,10 +131,10 @@ function(e, t, n) {
             children: (0, i.jsxs)(d.Clickable, {
                 className: a()({
                     [b.clickable]: !K,
-                    [b.avatarWrapperNonUserBot]: F,
-                    [b.avatarWrapperNormal]: !F
+                    [b.avatarWrapperNonUserBot]: V,
+                    [b.avatarWrapperNormal]: !V
                 }, Z),
-                onClick: F || K ? void 0 : function() {
+                onClick: V || K ? void 0 : function() {
                     Y({
                         action: "PRESS_VIEW_PROFILE"
                     }), (0, v.openUserProfileModal)({
@@ -144,14 +144,14 @@ function(e, t, n) {
                         messageId: j,
                         roleId: W,
                         sourceAnalyticsLocations: H,
-                        analyticsLocation: k.location
+                        analyticsLocation: B.location
                     }), null == f || f()
                 },
                 children: [q, !K && function() {
                     let e = null != z,
                         t = e ? w : (0, d.getAvatarSize)(G);
                     return (0, i.jsx)(h.default, {
-                        mask: null == u || u === y.StatusTypes.UNKNOWN || x ? h.default.Masks.AVATAR_DEFAULT : (0, o.match)([e, c]).with([!0, !0], () => h.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_MOBILE_SQUARE_80).with([!0, !1], () => h.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_SQUARE_80).with([!1, !0], () => h.default.Masks.AVATAR_STATUS_MOBILE_80).with([!1, !1], () => h.default.Masks.AVATAR_STATUS_ROUND_80).exhaustive(),
+                        mask: null == u || u === y.StatusTypes.UNKNOWN || F ? h.default.Masks.AVATAR_DEFAULT : (0, o.match)([e, c]).with([!0, !0], () => h.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_MOBILE_SQUARE_80).with([!0, !1], () => h.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_SQUARE_80).with([!1, !0], () => h.default.Masks.AVATAR_STATUS_MOBILE_80).with([!1, !1], () => h.default.Masks.AVATAR_STATUS_ROUND_80).exhaustive(),
                         className: e ? b.avatarDecorationHint : b.avatarHint,
                         style: e ? {
                             borderRadius: .4 * t
@@ -168,7 +168,7 @@ function(e, t, n) {
         })
     }
 
-    function V(e) {
+    function x(e) {
         let {
             user: t,
             displayProfile: n,
@@ -197,7 +197,7 @@ function(e, t, n) {
                 profileEffectId: null == n ? void 0 : n.profileEffectId,
                 bannerAdjustment: 0,
                 isHovering: _
-            }), (0, i.jsx)(F, {
+            }), (0, i.jsx)(V, {
                 user: t,
                 displayProfile: n,
                 status: l ? y.StatusTypes.STREAMING : u,
@@ -209,7 +209,7 @@ function(e, t, n) {
                 hasBanner: (null == n ? void 0 : n.banner) != null,
                 hasProfileEffect: (null == n ? void 0 : n.profileEffectId) != null,
                 profileType: M.UserProfileTypes.POPOUT
-            }), (0, i.jsx)(k, {
+            }), (0, i.jsx)(B, {
                 user: t,
                 guildId: r
             })]

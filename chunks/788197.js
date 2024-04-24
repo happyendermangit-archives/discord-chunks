@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return F
+            return V
         }
     }), n("47120");
     var i = n("735250"),
@@ -39,19 +39,19 @@ function(e, t, n) {
         b = n("228168"),
         G = n("981631"),
         w = n("616922"),
-        k = n("617538");
+        B = n("617538");
 
-    function B(e) {
+    function k(e) {
         e.stopPropagation()
     }
 
-    function F(e) {
+    function V(e) {
         let {
             user: t,
             guildId: n,
-            channelId: F,
-            messageId: V,
-            roleId: x,
+            channelId: V,
+            messageId: x,
+            roleId: F,
             setNote: H,
             closePopout: Y,
             setPopoutRef: j,
@@ -123,7 +123,7 @@ function(e, t, n) {
                 p.default.track(G.AnalyticEvents.OPEN_POPOUT, {
                     type: "Profile Popout",
                     guild_id: n,
-                    channel_id: F,
+                    channel_id: V,
                     other_user_id: t.id,
                     application_id: null != en ? en.application_id : void 0,
                     application_name: null != en ? en.name : void 0,
@@ -153,17 +153,17 @@ function(e, t, n) {
                 layout: "POPOUT",
                 userId: t.id,
                 guildId: n,
-                channelId: F,
-                messageId: V,
-                roleId: x,
+                channelId: V,
+                messageId: x,
+                roleId: F,
                 shouldTrackViewOnMount: null == ee || null != ee.fullProfileLoadedTimestamp,
                 children: (0, i.jsx)(o.default, {
                     section: G.AnalyticsSections.PROFILE_POPOUT,
                     children: (0, i.jsx)(a.Dialog, {
                         ref: Q,
                         "aria-label": t.username,
-                        onClick: B,
-                        onContextMenu: B,
+                        onClick: k,
+                        onContextMenu: k,
                         style: e_.shouldShow ? {
                             marginTop: M.DEFAULT_COLLECTIBLES_UPSELL_HEIGHT
                         } : void 0,
@@ -171,13 +171,13 @@ function(e, t, n) {
                             user: t,
                             displayProfile: q,
                             profileType: b.UserProfileTypes.POPOUT,
-                            className: e_.shouldShow ? k.hasCollectiblesUpsell : void 0,
+                            className: e_.shouldShow ? B.hasCollectiblesUpsell : void 0,
                             showOutOfBoundaryComponents: ec,
                             children: [(0, i.jsx)(P.default, {
                                 user: t,
                                 displayProfile: q,
                                 guildId: n,
-                                channelId: F,
+                                channelId: V,
                                 onClose: () => null == Y ? void 0 : Y(),
                                 isMobile: es,
                                 isStreaming: (0, c.default)(en),
@@ -201,7 +201,7 @@ function(e, t, n) {
                                     user: t,
                                     guild: $,
                                     guildMember: ee,
-                                    channelId: F,
+                                    channelId: V,
                                     onClose: Y,
                                     setNote: H,
                                     canDM: ed,

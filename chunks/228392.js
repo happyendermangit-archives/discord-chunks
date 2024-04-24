@@ -20,10 +20,10 @@ function(e, t, n) {
             return p
         },
         trackForumCreateNewPostStarted: function() {
-            return x
+            return F
         },
         trackForumEnableAutomodClicked: function() {
-            return k
+            return B
         },
         trackForumHelperCardClicked: function() {
             return G
@@ -50,10 +50,10 @@ function(e, t, n) {
             return y
         },
         trackForumPostSidebarViewed: function() {
-            return F
+            return V
         },
         trackForumPreviewPostClicked: function() {
-            return B
+            return k
         },
         trackForumScrolled: function() {
             return g
@@ -74,7 +74,7 @@ function(e, t, n) {
             return U
         },
         trackForumUpsellModalViewed: function() {
-            return V
+            return x
         }
     });
     var i = n("313361"),
@@ -396,15 +396,15 @@ function(e, t, n) {
         })
     }
 
-    function k() {
+    function B() {
         r.default.trackWithMetadata(f.AnalyticEvents.FORUM_CHANNEL_ENABLE_AUTOMOD_CLICKED)
     }
 
-    function B() {
+    function k() {
         r.default.trackWithMetadata(f.AnalyticEvents.FORUM_CHANNEL_ENABLE_PREVIEW_CLICKED)
     }
 
-    function F(e) {
+    function V(e) {
         r.default.trackWithMetadata(f.AnalyticEvents.CHANNEL_OPENED, {
             ...(0, r.collectGuildAnalyticsMetadata)(e.guild_id),
             ...(0, r.collectChannelAnalyticsMetadata)(e),
@@ -417,7 +417,7 @@ function(e, t, n) {
         })
     }
 
-    function V() {
+    function x() {
         r.default.trackWithMetadata(f.AnalyticEvents.OPEN_MODAL, {
             type: "Forum Channel Upsell Modal",
             location: {
@@ -426,7 +426,7 @@ function(e, t, n) {
         })
     }
 
-    function x(e) {
+    function F(e) {
         let {
             guildId: t,
             channelId: n

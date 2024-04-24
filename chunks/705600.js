@@ -201,15 +201,15 @@ function(e, t, n) {
             backgroundDarkColor: b,
             backgroundLightColor: G,
             foregroundDarkColor: w,
-            foregroundLightColor: k,
-            premiumBackgroundColor: B,
-            premiumForegroundColor: F
+            foregroundLightColor: B,
+            premiumBackgroundColor: k,
+            premiumForegroundColor: V
         } = D[P];
         if (null == U) return null;
-        y.premium && (t = F, n = B);
-        let V = (0, l.isThemeDark)(v) ? w : k,
-            x = (0, l.isThemeDark)(v) ? b : G;
-        t = null != t ? t : V, n = null != n ? n : x;
+        y.premium && (t = V, n = k);
+        let x = (0, l.isThemeDark)(v) ? w : B,
+            F = (0, l.isThemeDark)(v) ? b : G;
+        t = null != t ? t : x, n = null != n ? n : F;
         let H = e => {
             y.premium && g && !O && (e.stopPropagation(), e.preventDefault(), (0, c.openGuildBoostingMarketingModal)({
                 guildId: r.id,

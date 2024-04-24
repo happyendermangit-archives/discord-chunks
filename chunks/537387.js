@@ -24,16 +24,15 @@ function(e, t, n) {
             height: 16,
             color: "currentColor"
         });
-        return null != n ? (0, i.jsx)(a.Tooltip, {
+        return null != n ? (0, i.jsx)(a.TooltipContainer, {
             text: n,
-            children: e => (0, i.jsx)(a.Button, {
+            children: (0, i.jsx)(a.Button, {
                 className: s()(o.button, r),
                 innerClassName: s()(o.buttonInner, l),
                 color: o.color,
                 look: a.Button.Looks.FILLED,
                 size: a.Button.Sizes.NONE,
                 grow: !1,
-                ...e,
                 ...u,
                 children: d
             })

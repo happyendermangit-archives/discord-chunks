@@ -38,19 +38,19 @@ function(e, t, n) {
             return D
         },
         createAdyenPrepaidPaymentSource: function() {
-            return V
-        },
-        createAdyenVaultablePaymentSource: function() {
             return x
         },
+        createAdyenVaultablePaymentSource: function() {
+            return F
+        },
         createBraintreePaymentSource: function() {
-            return B
+            return k
         },
         createCardToken: function() {
             return y
         },
         createPaymentRequestPaymentSource: function() {
-            return k
+            return B
         },
         createPaymentSource: function() {
             return v
@@ -59,7 +59,7 @@ function(e, t, n) {
             return Y
         },
         createStripePaymentSource: function() {
-            return F
+            return V
         },
         createStripePaymentSourceToken: function() {
             return H
@@ -614,7 +614,7 @@ function(e, t, n) {
         })
     }
 
-    function k(e, t, n) {
+    function B(e, t, n) {
         let {
             token: i,
             billingAddressInfo: r
@@ -624,12 +624,12 @@ function(e, t, n) {
         })
     }
 
-    function B(e, t, n) {
+    function k(e, t, n) {
         return v(h.PaymentGateways.BRAINTREE, e, t, {
             analyticsLocation: n
         })
     }
-    async function F(e, t, n, i) {
+    async function V(e, t, n, i) {
         if (null == e) throw M("Stripe not loaded");
         let r = await L(t),
             {
@@ -667,7 +667,7 @@ function(e, t, n) {
             analyticsLocation: i
         })
     }
-    async function V(e, t, n) {
+    async function x(e, t, n) {
         let i = await L(e),
             r = {
                 type: m.ADYEN_PAYMENT_SOURCES.get(t)
@@ -677,7 +677,7 @@ function(e, t, n) {
             analyticsLocation: n
         })
     }
-    async function x(e, t, n, i) {
+    async function F(e, t, n, i) {
         var r;
         let s = await L(e),
             d = {

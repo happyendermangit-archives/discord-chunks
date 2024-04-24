@@ -46,11 +46,11 @@ function(e, t, n) {
                 roleId: b
             } = (0, T.useUserProfileAnalyticsContext)(),
             G = (0, _.default)(D, g, L),
-            [w, k] = r.useState(new Set),
-            B = (0, o.useStateFromStores)([f.default], () => f.default.getUserProfile(g)),
-            F = null !== (t = null == B ? void 0 : B.connectedAccounts) && void 0 !== t ? t : [],
-            V = null !== (n = null == B ? void 0 : B.applicationRoleConnections) && void 0 !== n ? n : [],
-            x = (0, o.useStateFromStores)([E.default], () => E.default.hidePersonalInformation),
+            [w, B] = r.useState(new Set),
+            k = (0, o.useStateFromStores)([f.default], () => f.default.getUserProfile(g)),
+            V = null !== (t = null == k ? void 0 : k.connectedAccounts) && void 0 !== t ? t : [],
+            x = null !== (n = null == k ? void 0 : k.applicationRoleConnections) && void 0 !== n ? n : [],
+            F = (0, o.useStateFromStores)([E.default], () => E.default.hidePersonalInformation),
             H = (0, o.useStateFromStores)([c.default], () => c.default.locale);
         if (r.useEffect(() => {
                 (null == D ? void 0 : D.id) != null && (null == G ? void 0 : G.id) != null && u.default.fetchGuildRoleConnectionsEligibility(D.id, G.id).then(e => {
@@ -60,11 +60,11 @@ function(e, t, n) {
                                 connection_type: e
                             }
                             of n) t.add(e);
-                    k(t)
+                    B(t)
                 })
-            }, [null == D ? void 0 : D.id, null == G ? void 0 : G.id]), x || null == G) return null;
+            }, [null == D ? void 0 : D.id, null == G ? void 0 : G.id]), F || null == G) return null;
         let Y = Array.from(w).map(e => {
-            let t = F.find(t => t.type === e);
+            let t = V.find(t => t.type === e);
             return null == t ? null : (0, i.jsx)(S.ConnectedUserAccount, {
                 connectedAccount: t,
                 theme: v,
@@ -106,14 +106,14 @@ function(e, t, n) {
                     })]
                 })]
             })]
-        })), V.length > 0 && (C = (0, i.jsxs)(i.Fragment, {
+        })), x.length > 0 && (C = (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(l.Heading, {
                 variant: "eyebrow",
                 className: R.title,
                 children: p.default.Messages.APPS
             }), (0, i.jsx)("div", {
                 className: a()(O.connectionsContainer, y),
-                children: V.map(e => (0, i.jsx)(S.ConnectedApplicationUserRoleAccount, {
+                children: x.map(e => (0, i.jsx)(S.ConnectedApplicationUserRoleAccount, {
                     applicationRoleConnection: e,
                     locale: H
                 }, e.application.id))

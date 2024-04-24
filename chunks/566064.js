@@ -179,24 +179,24 @@ function(e, t, n) {
                         }
                     }, [y, T, h, N, c, d, _]),
                     w = i.useCallback(e => e.currentTarget !== e.target ? (!p && (O(!0), L(!0)), !1) : p ? (y(!1), !1) : void(f && null != N ? M(d, _) : y(!0)), [p, f, N, y, M, d, _]),
-                    k = i.useCallback(e => {
+                    B = i.useCallback(e => {
                         if (e.target !== e.currentTarget) {
                             if (e.currentTarget.contains(e.relatedTarget)) return !1;
                             O(!1)
                         }
                     }, []),
-                    B = i.useMemo(() => Math.max(...n), [n]),
-                    F = i.useCallback(() => ({
+                    k = i.useMemo(() => Math.max(...n), [n]),
+                    V = i.useCallback(() => ({
                         role: "grid",
                         "aria-rowcount": n.length,
-                        "aria-colcount": B,
+                        "aria-colcount": k,
                         tabIndex: p && f ? -1 : 0,
                         "data-ref-id": t,
                         onKeyDown: G,
                         onFocus: w,
-                        onBlur: k
-                    }), [n.length, B, p, f, t, G, w, k]),
-                    V = i.useCallback((e, n) => {
+                        onBlur: B
+                    }), [n.length, k, p, f, t, G, w, B]),
+                    x = i.useCallback((e, n) => {
                         let i = {
                             role: "gridcell",
                             "aria-rowindex": n + 1,
@@ -207,16 +207,16 @@ function(e, t, n) {
                         };
                         return e === d && n === _ && (i.ref = b), i
                     }, [t, f, d, _, D, b]),
-                    x = i.useCallback(e => ({
+                    F = i.useCallback(e => ({
                         role: "row",
                         "aria-rowindex": e + 1
                     }), []);
                 return i.useMemo(() => ({
                     dispatch: T,
-                    getContainerProps: F,
-                    getItemProps: V,
-                    getRowProps: x
-                }), [T, F, V, x])
+                    getContainerProps: V,
+                    getItemProps: x,
+                    getRowProps: F
+                }), [T, V, x, F])
             }({
                 navId: t,
                 columnCounts: O,

@@ -61,11 +61,11 @@ function(e, t, n) {
             reportType: n,
             history: G,
             onSelectChild: w,
-            onModalClose: k,
-            multiSelect: B,
-            reportId: F,
-            textInput: V
-        } = e, x = U(t, "checkbox"), H = U(t, "text_line_resource"), Y = b(t, "external_link"), j = b(t, "free_text"), W = b(t, "dropdown"), [K, z] = r.useState(!1), [X, Q] = r.useState(""), [q, Z] = r.useState(() => ({})), [J, $] = r.useState(() => ({})), [ee, et] = r.useState((0, o.areRequiredElementsUnfilled)(j, W, x, V, B)), en = function(e, t) {
+            onModalClose: B,
+            multiSelect: k,
+            reportId: V,
+            textInput: x
+        } = e, F = U(t, "checkbox"), H = U(t, "text_line_resource"), Y = b(t, "external_link"), j = b(t, "free_text"), W = b(t, "dropdown"), [K, z] = r.useState(!1), [X, Q] = r.useState(""), [q, Z] = r.useState(() => ({})), [J, $] = r.useState(() => ({})), [ee, et] = r.useState((0, o.areRequiredElementsUnfilled)(j, W, F, x, k)), en = function(e, t) {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
                 i = {
                     ...J
@@ -73,21 +73,21 @@ function(e, t, n) {
             i[e] = {
                 value: t,
                 isValid: n
-            }, $(i), et((0, o.areRequiredElementsUnfilled)(j, W, x, i, q))
+            }, $(i), et((0, o.areRequiredElementsUnfilled)(j, W, F, i, q))
         }, ei = r.useMemo(() => e => {
             w({
                 nodeRef: t.id,
                 destination: e,
                 textInput: null != j || null != W ? J : void 0,
-                multiSelect: null != x ? {
-                    name: x.name,
+                multiSelect: null != F ? {
+                    name: F.name,
                     state: q
                 } : void 0
             })
-        }, [t, w, x, q, J, j, W]);
+        }, [t, w, F, q, J, j, W]);
         r.useEffect(() => {
-            null != B && Z(B), null != V && $(V)
-        }, [B, V]);
+            null != k && Z(k), null != x && $(x)
+        }, [k, x]);
         let er = e => {
                 if (e === M.AbortCodes.INVALID_FORM_BODY) Q(y.default.Messages.IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR);
                 else Q(y.default.Messages.MOBILE_REPORTS_SUBMIT_FAILED)
@@ -142,14 +142,14 @@ function(e, t, n) {
                     children: y.default.Messages.MOBILE_REPORTS_BLOCK_ELEMENT_HEADER
                 }), null != U(t, "block_users") && ("message" === n.name || "first_dm" === n.name || "user" === n.name) && (0, i.jsx)(u.default, {
                     userId: "user" === n.name ? n.record.id : n.record.author.id,
-                    reportId: F,
+                    reportId: V,
                     reportName: n.name
                 }), null != U(t, "delete_message") && "message" === n.name && (0, i.jsx)(c.default, {
                     message: n.record,
-                    reportId: F
+                    reportId: V
                 }), null != U(t, "leave_guild") && "guild" === n.name && (0, i.jsx)(p.default, {
                     guildId: n.record.id,
-                    reportId: F
+                    reportId: V
                 }), null != U(t, "channel_preview") && "stage_channel" === n.name && (0, i.jsx)(C.default, {
                     stageInstance: n.record
                 }), null != U(t, "guild_scheduled_event_preview") && "guild_scheduled_event" === n.name && (0, i.jsx)(A.default, {
@@ -158,13 +158,13 @@ function(e, t, n) {
                     entry: n.record
                 }), null != U(t, "guild_discovery_preview") && "guild_discovery" === n.name && (0, i.jsx)(h.default, {
                     entry: n.record
-                }), null != x && (0, i.jsx)(R.default, {
-                    element: x,
+                }), null != F && (0, i.jsx)(R.default, {
+                    element: F,
                     onChange: (e, t) => {
                         let n = {
                             ...q
                         };
-                        e in q ? delete n[e] : n[e] = t, Z(n), et((0, o.areRequiredElementsUnfilled)(j, W, x, J, n))
+                        e in q ? delete n[e] : n[e] = t, Z(n), et((0, o.areRequiredElementsUnfilled)(j, W, F, J, n))
                     },
                     state: q
                 }), ("user_urf" === n.name || "message_urf" === n.name) && null != W && W.length > 0 && (0, i.jsx)(E.default, {
@@ -194,7 +194,7 @@ function(e, t, n) {
                     switch (e.type) {
                         case "done":
                         case "cancel":
-                            k();
+                            B();
                             break;
                         case "next":
                             ei(["", e.target]);
@@ -207,7 +207,7 @@ function(e, t, n) {
                 canNavigateBack: G.length > 0
             }), (0, i.jsx)(s.ModalCloseButton, {
                 className: P.closeButton,
-                onClick: k
+                onClick: B
             })]
         })
     }

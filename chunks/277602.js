@@ -2,16 +2,16 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return O
+            return m
         }
     });
     var i = n("735250"),
         r = n("470079"),
         s = n("481060"),
         a = n("442837"),
-        o = n("741606"),
-        l = n("703656"),
-        u = n("601964"),
+        o = n("231467"),
+        l = n("741606"),
+        u = n("703656"),
         d = n("314897"),
         _ = n("271383"),
         c = n("594174"),
@@ -19,97 +19,83 @@ function(e, t, n) {
         I = n("645896"),
         T = n("905362"),
         f = n("353093"),
-        S = n("114487"),
-        h = n("219039"),
-        A = n("979264"),
-        m = n("981631"),
-        N = n("689938"),
-        p = n("221840");
+        S = n("981631"),
+        h = n("689938"),
+        A = n("221840");
 
-    function O(e) {
+    function m(e) {
         var t;
         let {
-            clan: O,
-            isLoading: R,
-            onClose: C,
-            onMouseEnter: g,
-            onMouseLeave: L
-        } = e, D = (0, I.useClanInfo)(null !== (t = null == O ? void 0 : O.identityGuildId) && void 0 !== t ? t : null), v = null == O ? void 0 : O.tag, M = (0, E.useIsInUserClanExperiment)(), y = null == O ? void 0 : O.identityGuildId, P = (0, a.useStateFromStores)([d.default], () => d.default.getId()), U = (0, a.useStateFromStores)([_.default], () => null != y ? _.default.getMember(y, P) : null, [y, P]), b = (0, a.useStateFromStores)([c.default], () => c.default.getUser(P), [P]), G = (null == U ? void 0 : U.joinedAt) != null, w = (0, f.isGuildAdoptedUserClanIdentity)(y, null == b ? void 0 : b.clan), k = null != (0, o.default)(y), B = r.useCallback(e => {
-            null != y && (e.stopPropagation(), e.preventDefault(), null == C || C(), (0, T.openAdoptClanIdentityModal)(y))
-        }, [y, C]), F = r.useCallback(e => {
-            if (null != D) e.stopPropagation(), e.preventDefault(), null == C || C(), !k && (0, s.openModalLazy)(async () => {
+            clan: m,
+            isLoading: N,
+            onClose: p,
+            onMouseEnter: O,
+            onMouseLeave: R
+        } = e, C = (0, I.useClanInfo)(null !== (t = null == m ? void 0 : m.identityGuildId) && void 0 !== t ? t : null), g = null == m ? void 0 : m.tag, L = (0, E.useIsInUserClanExperiment)(), D = null == m ? void 0 : m.identityGuildId, v = (0, a.useStateFromStores)([d.default], () => d.default.getId()), M = (0, a.useStateFromStores)([_.default], () => null != D ? _.default.getMember(D, v) : null, [D, v]), y = (0, a.useStateFromStores)([c.default], () => c.default.getUser(v), [v]), P = (null == M ? void 0 : M.joinedAt) != null, U = (0, f.isGuildAdoptedUserClanIdentity)(D, null == y ? void 0 : y.clan), b = null != (0, l.default)(D), G = r.useCallback(e => {
+            null != D && (e.stopPropagation(), e.preventDefault(), null == p || p(), (0, T.openAdoptClanIdentityModal)(D))
+        }, [D, p]), w = r.useCallback(e => {
+            if (null != C) e.stopPropagation(), e.preventDefault(), null == p || p(), !b && (0, s.openModalLazy)(async () => {
                 let {
                     default: e
-                } = await Promise.all([n.e("99387"), n.e("80026"), n.e("60330"), n.e("27233")]).then(n.bind(n, "767593"));
+                } = await Promise.all([n.e("99387"), n.e("80026"), n.e("18482")]).then(n.bind(n, "767593"));
                 return t => (0, i.jsx)(e, {
                     ...t,
-                    clan: D
+                    clan: C
                 })
             })
-        }, [D, k, C]), V = r.useCallback(() => {
-            null != y && (0, l.transitionTo)(m.Routes.GUILD_MEMBER_VERIFICATION(y))
-        }, [y]);
-        return null == v || null == D || null == y || R ? (0, i.jsx)(s.Spinner, {}) : (0, i.jsxs)("div", {
-            className: p.tooltipContainer,
-            onMouseLeave: L,
-            onMouseEnter: g,
-            children: [(0, i.jsxs)("div", {
-                className: p.tooltipHeader,
-                children: [(0, i.jsx)(s.Text, {
-                    tag: "span",
-                    variant: "text-xs/medium",
-                    color: "text-muted",
-                    children: N.default.Messages.CLAN_TAG_GUILD_PROFILE_MEMBERSHIP
-                }), (0, i.jsx)(A.BaseClanTagChiplet, {
-                    clanTag: v
-                })]
-            }), (0, i.jsxs)("div", {
-                className: p.tooltipContent,
-                children: [(0, i.jsx)("div", {
-                    children: (0, i.jsx)(S.default, {
-                        guild: new u.default(D),
-                        iconSize: 40
-                    })
-                }), (0, i.jsxs)("div", {
-                    className: p.guildInfoContainer,
-                    children: [(0, i.jsx)("div", {
-                        className: p.guildName,
-                        children: (0, i.jsx)(s.Heading, {
-                            variant: "heading-md/semibold",
-                            color: "header-primary",
-                            children: D.name
-                        })
-                    }), (0, i.jsx)(h.default, {
-                        count: D.memberCount
-                    })]
-                })]
-            }), G && !w && M && (0, i.jsx)("div", {
-                className: p.tooltipFooter,
-                children: (0, i.jsx)(s.Button, {
-                    onClick: B,
-                    color: s.Button.Colors.BRAND,
+        }, [C, b, p]), B = r.useCallback(() => {
+            null != D && (0, u.transitionTo)(S.Routes.GUILD_MEMBER_VERIFICATION(D))
+        }, [D]), k = r.useMemo(() => {
+            var e, t;
+            let n = null !== (t = null == C ? void 0 : null === (e = C.branding) || void 0 === e ? void 0 : e.primaryColor) && void 0 !== t ? t : null,
+                i = {
+                    color: null != n ? s.Button.Colors.CUSTOM : s.Button.Colors.BRAND,
                     size: s.Button.Sizes.SMALL,
-                    fullWidth: !0,
-                    children: N.default.Messages.CLAN_USER_ADOPT_TAG_GUILD_PROFILE_CTA
-                })
-            }), !G && M && !k && (0, i.jsx)("div", {
-                className: p.tooltipFooter,
-                children: (0, i.jsx)(s.Button, {
-                    onClick: F,
-                    color: s.Button.Colors.BRAND,
-                    size: s.Button.Sizes.SMALL,
-                    fullWidth: !0,
-                    children: N.default.Messages.CLAN_USER_APPLY_TAG_GUILD_PROFILE_CTA
-                })
-            }), !G && M && k && (0, i.jsx)("div", {
-                className: p.tooltipFooter,
-                children: (0, i.jsx)(s.Button, {
-                    onClick: V,
-                    color: s.Button.Colors.PRIMARY,
-                    size: s.Button.Sizes.SMALL,
-                    fullWidth: !0,
-                    children: N.default.Messages.CLAN_USER_APPLICATION_EXISTS_TAG_GUILD_PROFILE_CTA
-                })
+                    fullWidth: !0
+                };
+            return null != n && (i = {
+                ...i,
+                style: {
+                    backgroundColor: n,
+                    color: (0, f.getAccessibleTextColor)(n).hex()
+                }
+            }), i
+        }, [C]), V = r.useMemo(() => {
+            switch (!0) {
+                case !L:
+                    return null;
+                case !P && b:
+                    return (0, i.jsx)(s.Button, {
+                        onClick: B,
+                        ...k,
+                        children: h.default.Messages.CLAN_USER_APPLICATION_EXISTS_TAG_GUILD_PROFILE_CTA
+                    });
+                case !P:
+                    return (0, i.jsx)(s.Button, {
+                        onClick: w,
+                        ...k,
+                        children: h.default.Messages.CLAN_USER_APPLY_TAG_GUILD_PROFILE_CTA
+                    });
+                case P && !U:
+                    return (0, i.jsx)(s.Button, {
+                        onClick: G,
+                        ...k,
+                        children: h.default.Messages.CLAN_USER_ADOPT_TAG_GUILD_PROFILE_CTA
+                    });
+                default:
+                    return null
+            }
+        }, [k, G, w, B, b, U, P, L]);
+        return null == g || null == C || null == D || N ? (0, i.jsx)(s.Spinner, {}) : (0, i.jsxs)("div", {
+            className: A.tooltipContainer,
+            onMouseLeave: R,
+            onMouseEnter: O,
+            children: [(0, i.jsx)(o.ClanDiscoveryCardView, {
+                clan: C,
+                className: A.cardContainer
+            }), null != V && (0, i.jsx)("div", {
+                className: A.buttonContainer,
+                children: V
             })]
         })
     }

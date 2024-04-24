@@ -35,8 +35,8 @@ function(e, t, n) {
         b = (0, A.cssValueToNumber)(o.default.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
         G = [v, v, v, v],
         w = (M + y) * 2 + v,
-        k = U + 2 * b,
-        B = e => {
+        B = U + 2 * b,
+        k = e => {
             let {
                 activeIndex: t,
                 stickerPickerCategories: n,
@@ -90,19 +90,19 @@ function(e, t, n) {
                 let b = t === s,
                     G = n[s],
                     w = n[s + 1],
-                    k = null != w && G.type === p.StickerCategoryTypes.GUILD && w.type !== p.StickerCategoryTypes.GUILD,
-                    B = G.type === p.StickerCategoryTypes.PACK,
-                    F = "",
-                    V = null;
+                    B = null != w && G.type === p.StickerCategoryTypes.GUILD && w.type !== p.StickerCategoryTypes.GUILD,
+                    k = G.type === p.StickerCategoryTypes.PACK,
+                    V = "",
+                    x = null;
                 if (G.type === p.StickerCategoryTypes.GUILD || G.type === p.StickerCategoryTypes.EMPTY_GUILD_UPSELL) {
                     let e = I.default.getGuild(G.id);
-                    null != e && (c = e.id, F = e.name, V = (0, i.jsx)(d.default, {
+                    null != e && (c = e.id, V = e.name, x = (0, i.jsx)(d.default, {
                         guild: e,
                         isSelected: b
                     }))
-                } else if (B) {
+                } else if (k) {
                     let e = N.default.getStickerPack(G.id);
-                    null != e && (F = e.name, V = (0, i.jsx)(R.default, {
+                    null != e && (V = e.name, x = (0, i.jsx)(R.default, {
                         disableAnimation: !b || S,
                         size: M,
                         sticker: (0, O.getStickerPackPreviewSticker)(e)
@@ -111,7 +111,7 @@ function(e, t, n) {
                 return (0, i.jsxs)(r.Fragment, {
                     children: [(0, i.jsx)(l.Tooltip, {
                         position: "right",
-                        text: F,
+                        text: V,
                         tooltipContentClassName: D.__invalid_tooltip,
                         children: e => (0, i.jsx)("div", {
                             role: "listitem",
@@ -119,10 +119,10 @@ function(e, t, n) {
                             "aria-posinset": s,
                             children: (0, i.jsx)(l.Clickable, {
                                 ...e,
-                                "aria-label": F,
+                                "aria-label": V,
                                 className: a()(D.stickerCategory, {
-                                    [D.firstPartyCategory]: B,
-                                    [D.firstPartyCategorySelected]: !S && b && B
+                                    [D.firstPartyCategory]: k,
+                                    [D.firstPartyCategorySelected]: !S && b && k
                                 }),
                                 onClick: () => {
                                     G.type === p.StickerCategoryTypes.PACK && h.default.track(C.AnalyticEvents.EXPRESSION_PICKER_CATEGORY_SELECTED, {
@@ -132,17 +132,17 @@ function(e, t, n) {
                                         guild_id: c
                                     }), o()
                                 },
-                                children: V
+                                children: x
                             })
                         })
-                    }), k ? (0, i.jsx)("hr", {
+                    }), B ? (0, i.jsx)("hr", {
                         className: D.guildCategorySeparator
                     }, "separator") : null]
                 }, G.id)
             }, [t, E, S, n]), m = r.useCallback((e, t) => t ? w : 0, []), v = r.useCallback((e, t) => {
                 let i = n[t],
                     r = n[t + 1];
-                return M + (null != r && i.type === p.StickerCategoryTypes.GUILD && r.type !== p.StickerCategoryTypes.GUILD ? k : y)
+                return M + (null != r && i.type === p.StickerCategoryTypes.GUILD && r.type !== p.StickerCategoryTypes.GUILD ? B : y)
             }, [n]);
             return {
                 getScrollOffsetForIndex: m,
@@ -171,7 +171,7 @@ function(e, t, n) {
             let n = c.filter(e => e.type === p.StickerCategoryTypes.GUILD).length,
                 i = (null === (e = c[0]) || void 0 === e ? void 0 : e.type) === p.StickerCategoryTypes.RECENT,
                 r = n + (i ? 1 : 0) + ((null === (t = c[0]) || void 0 === t ? void 0 : t.type) === p.StickerCategoryTypes.FAVORITE ? 1 : 0),
-                s = r * (M + y) - y + k;
+                s = r * (M + y) - y + B;
             return {
                 firstStandardStickerCategoryIndex: r + 1,
                 firstStandardStickerCategoryOffsetTop: s,
@@ -186,7 +186,7 @@ function(e, t, n) {
             renderCategoryListItem: A,
             rowHeight: N,
             onScroll: O
-        } = B({
+        } = k({
             activeIndex: d,
             stickerPickerCategories: c,
             categoryListRef: s,

@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         PremiumTrialGradientBadge: function() {
-            return k
+            return B
         },
         default: function() {
-            return x
+            return F
         }
     }), n("47120");
     var i = n("735250"),
@@ -134,7 +134,7 @@ function(e, t, n) {
         })
     }
 
-    function k(e) {
+    function B(e) {
         var t, n;
         let r = null === (t = (0, g.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial,
             s = null !== (n = null == r ? void 0 : r.sku_id) && void 0 !== n ? n : v.PremiumSubscriptionSKUs.TIER_2;
@@ -152,7 +152,7 @@ function(e, t, n) {
         })
     }
 
-    function B(e) {
+    function k(e) {
         let {
             subscriptionTier: t,
             onClose: n,
@@ -179,7 +179,7 @@ function(e, t, n) {
         })
     }
 
-    function F(e) {
+    function V(e) {
         let {
             onClose: t,
             analyticsLocationObject: n
@@ -210,7 +210,7 @@ function(e, t, n) {
         })
     }
 
-    function V(e) {
+    function x(e) {
         let {
             headingText: t,
             context: n,
@@ -235,7 +235,7 @@ function(e, t, n) {
         })
     }
 
-    function x(e) {
+    function F(e) {
         let {
             headingText: t,
             context: r,
@@ -272,7 +272,7 @@ function(e, t, n) {
                                 onClick: () => (0, h.transitionTo)(M.Routes.APPLICATION_STORE)
                             })
                         })]
-                    }), (0, i.jsx)(B, {
+                    }), (0, i.jsx)(k, {
                         subscriptionTier: d,
                         onClose: o,
                         analyticsLocationObject: {
@@ -303,7 +303,7 @@ function(e, t, n) {
                                 onClick: () => (0, h.transitionTo)(M.Routes.APPLICATION_STORE)
                             })
                         })]
-                    }), (0, i.jsx)(B, {
+                    }), (0, i.jsx)(k, {
                         subscriptionTier: d,
                         onClose: o,
                         analyticsLocationObject: {
@@ -336,7 +336,7 @@ function(e, t, n) {
                                 onClick: () => (0, h.transitionTo)(M.Routes.APPLICATION_STORE)
                             })
                         })]
-                    }), (0, i.jsx)(B, {
+                    }), (0, i.jsx)(k, {
                         subscriptionTier: d,
                         onClose: o,
                         analyticsLocationObject: {
@@ -475,7 +475,7 @@ function(e, t, n) {
                 });
             case v.PremiumUpsellTypes.CUSTOM_PROFILE_TRY_OUT_UPSELL:
             case v.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL:
-                return (0, i.jsx)(F, {});
+                return (0, i.jsx)(V, {});
             case v.PremiumUpsellTypes.GUILD_CAP_MODAL_UPSELL:
             case v.PremiumUpsellTypes.PREMIUM_GUILD_IDENTITY_MODAL:
             case v.PremiumUpsellTypes.CUSTOM_PROFILE_UPSELL:
@@ -483,7 +483,7 @@ function(e, t, n) {
             case v.PremiumUpsellTypes.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED:
             case v.PremiumUpsellTypes.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED:
             case v.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED:
-                return (0, i.jsx)(V, {
+                return (0, i.jsx)(x, {
                     trialOffer: N,
                     discountOffer: p,
                     headingText: t,
@@ -491,7 +491,7 @@ function(e, t, n) {
                     children: s
                 });
             default:
-                return R.default.captureMessage("Possible mishandling of a PremiumUpsellType: ".concat(u)), (0, i.jsx)(V, {
+                return R.default.captureMessage("Possible mishandling of a PremiumUpsellType: ".concat(u)), (0, i.jsx)(x, {
                     headingText: t,
                     context: r,
                     children: s,

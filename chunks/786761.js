@@ -47,16 +47,16 @@ function(e, t, n) {
             interactionData: v
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, M = null !== (r = null === (t = e.mentions) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== r ? r : [], y = null !== (l = e.mention_roles) && void 0 !== l ? l : [], P = null !== (T = e.mention_channels) && void 0 !== T ? T : [], U = e.message_reference, b = new Date(e.timestamp), G = e.type === A.MessageTypes.THREAD_CREATED ? [] : (0, s.default)(e.content);
         let w = null == (p = e).author ? m : null != p.webhook_id ? new _.default(p.author) : null !== (O = I.default.getUser(p.author.id)) && void 0 !== O ? O : new _.default(p.author),
-            k = null == e ? void 0 : e.gift_info,
-            B = null != e.interaction ? u.default.createFromServer(e.interaction) : null,
-            F = e.type === A.MessageTypes.THREAD_STARTER_MESSAGE ? null === (i = e.referenced_message) || void 0 === i ? void 0 : null === (n = i.author) || void 0 === n ? void 0 : n.id : void 0,
-            V = e.type === A.MessageTypes.PREMIUM_REFERRAL ? e.content : void 0,
-            x = e.content;
-        return e.type === A.MessageTypes.PREMIUM_REFERRAL && (x = ""), new d.default({
+            B = null == e ? void 0 : e.gift_info,
+            k = null != e.interaction ? u.default.createFromServer(e.interaction) : null,
+            V = e.type === A.MessageTypes.THREAD_STARTER_MESSAGE ? null === (i = e.referenced_message) || void 0 === i ? void 0 : null === (n = i.author) || void 0 === n ? void 0 : n.id : void 0,
+            x = e.type === A.MessageTypes.PREMIUM_REFERRAL ? e.content : void 0,
+            F = e.content;
+        return e.type === A.MessageTypes.PREMIUM_REFERRAL && (F = ""), new d.default({
             ...e,
             author: w,
             webhookId: e.webhook_id,
-            blocked: E.default.isBlocked(w.id) || null != F && E.default.isBlocked(F),
+            blocked: E.default.isBlocked(w.id) || null != V && E.default.isBlocked(V),
             timestamp: b,
             editedTimestamp: null != e.edited_timestamp ? new Date(e.edited_timestamp) : null,
             mentionEveryone: e.mention_everyone,
@@ -78,17 +78,17 @@ function(e, t, n) {
             }),
             codedLinks: G,
             giftCodes: (0, f.isGiftCodeEmbed)(e) ? (0, f.findGiftCodes)(null == e ? void 0 : e.embeds[0].url) : (0, f.findGiftCodes)(e.content),
-            content: x,
-            referralTrialOfferId: V,
+            content: F,
+            referralTrialOfferId: x,
             call: C(e.call, b),
             reactions: L(null != D ? D : e.reactions, e.poll),
-            interaction: B,
+            interaction: k,
             interactionData: null != v ? v : e.interaction_data,
             interactionMetadata: e.interaction_metadata,
             roleSubscriptionData: e.role_subscription_data,
             purchaseNotification: e.purchase_notification,
             poll: null == e.poll ? void 0 : (0, o.default)(e.poll),
-            giftInfo: null == k ? void 0 : k
+            giftInfo: null == B ? void 0 : B
         })
     }
 

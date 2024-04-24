@@ -31,13 +31,13 @@ function(e, t, n) {
             lastRequest: null,
             lastResponse: null
         },
-        k = [],
-        B = [];
+        B = [],
+        k = [];
 
-    function F() {
-        k = m.default.getProps().results.filter(e => e.type === h.AutocompleterResultTypes.TEXT_CHANNEL && 0 === e.record.type).map(e => e.record.id)
+    function V() {
+        B = m.default.getProps().results.filter(e => e.type === h.AutocompleterResultTypes.TEXT_CHANNEL && 0 === e.record.type).map(e => e.record.id)
     }
-    class V extends(l = T.default.PersistedStore) {
+    class x extends(l = T.default.PersistedStore) {
         getState() {
             return {
                 shouldShowTopicsBar: i
@@ -45,7 +45,7 @@ function(e, t, n) {
         }
         initialize(e) {
             var t;
-            i = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t, this.waitFor(N.default, g.default, R.default, p.default, A.default), this.syncWith([m.default], F)
+            i = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t, this.waitFor(N.default, g.default, R.default, p.default, A.default), this.syncWith([m.default], V)
         }
         allSummaries() {
             return y
@@ -55,7 +55,7 @@ function(e, t, n) {
         }
         summaries(e) {
             var t;
-            return null !== (t = y[e]) && void 0 !== t ? t : B
+            return null !== (t = y[e]) && void 0 !== t ? t : k
         }
         shouldShowTopicsBar() {
             return i
@@ -109,7 +109,7 @@ function(e, t, n) {
                 withUnreads: i,
                 numChannels: r = 25
             } = e, s = [];
-            return t && (s = s.concat(k)), n && (s = s.concat(b.map(e => e.channel_id))), i && (s = s.filter(e => {
+            return t && (s = s.concat(B)), n && (s = s.concat(b.map(e => e.channel_id))), i && (s = s.filter(e => {
                 let t = N.default.getChannel(e);
                 return null != t && !C.default.isChannelMuted(t.guild_id, e) && O.default.hasUnread(e)
             })), (s = s.filter(e => {
@@ -121,13 +121,13 @@ function(e, t, n) {
             return s
         }
     }
-    c = "SummaryStore", (_ = "persistKey") in(d = V) ? Object.defineProperty(d, _, {
+    c = "SummaryStore", (_ = "persistKey") in(d = x) ? Object.defineProperty(d, _, {
         value: c,
         enumerable: !0,
         configurable: !0,
         writable: !0
     }) : d[_] = c;
-    let x = new V(f.default, {
+    let F = new x(f.default, {
         CONNECTION_OPEN: () => !1,
         CHANNEL_SELECT(e) {
             let {
@@ -349,5 +349,5 @@ function(e, t, n) {
                 i = (null !== (t = y[n]) && void 0 !== t ? t : []).indexOf(e.summary); - 1 !== i && y[n].splice(i, 1)
         }
     });
-    t.default = x
+    t.default = F
 }

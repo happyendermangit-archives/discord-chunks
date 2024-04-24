@@ -53,27 +53,27 @@ function(e, t, n) {
     }
     let G = new u.Logger("ApplicationCommandIndexStore"),
         w = Symbol("currentUser"),
-        k = Symbol("stale"),
-        B = Symbol("current"),
-        F = Object.freeze({
+        B = Symbol("stale"),
+        k = Symbol("current"),
+        V = Object.freeze({
             descriptors: [],
             commands: [],
             sectionedCommands: [],
             loading: !0
         }),
-        V = Object.freeze({
-            serverVersion: B,
+        x = Object.freeze({
+            serverVersion: k,
             fetchState: {
                 fetching: !1
             },
             result: {
                 sections: {},
                 sectionIdsByBotId: {},
-                version: B
+                version: k
             }
         }),
-        x = Object.freeze({
-            serverVersion: k,
+        F = Object.freeze({
+            serverVersion: B,
             fetchState: {
                 fetching: !1
             }
@@ -104,7 +104,7 @@ function(e, t, n) {
             ...s,
             ...t
         }) : i && (n = {
-            serverVersion: k,
+            serverVersion: B,
             fetchState: {
                 fetching: !1
             },
@@ -127,7 +127,7 @@ function(e, t, n) {
         j({
             type: "user"
         }, {
-            serverVersion: k
+            serverVersion: B
         })
     }
     class X extends(i = d.default.Store) {
@@ -144,7 +144,7 @@ function(e, t, n) {
         }
         getContextState(e) {
             var t, n;
-            return null != e && ei(e) ? null !== (n = this.indices[null !== (t = e.guild_id) && void 0 !== t ? t : e.id]) && void 0 !== n ? n : x : V
+            return null != e && ei(e) ? null !== (n = this.indices[null !== (t = e.guild_id) && void 0 !== t ? t : e.id]) && void 0 !== n ? n : F : x
         }
         getUserState() {
             var e;
@@ -152,17 +152,17 @@ function(e, t, n) {
                 location: "getUserState"
             }, {
                 autoTrackExposure: !1
-            }) ? null !== (e = this.indices[w]) && void 0 !== e ? e : x : V
+            }) ? null !== (e = this.indices[w]) && void 0 !== e ? e : F : x
         }
         getApplicationState(e) {
             var t;
-            return null == e ? V : null !== (t = this.indices[e]) && void 0 !== t ? t : x
+            return null == e ? x : null !== (t = this.indices[e]) && void 0 !== t ? t : F
         }
         getApplicationStates() {
             return this.applicationIndices
         }
         query(e, t, n) {
-            if (null == m.default.getCurrentUser()) return F;
+            if (null == m.default.getCurrentUser()) return V;
             let i = this.getContextState(e),
                 r = this.getUserState(),
                 s = this.getApplicationState(n.applicationId),
@@ -220,7 +220,7 @@ function(e, t, n) {
     let Q = new X(_.default, {
         LOGOUT: K,
         CONNECTION_OPEN: function() {
-            for (let e of Object.values(Q.indices)) e.serverVersion = k
+            for (let e of Object.values(Q.indices)) e.serverVersion = B
         },
         APPLICATION_COMMAND_INDEX_FETCH_REQUEST: function(e) {
             var t;
@@ -228,7 +228,7 @@ function(e, t, n) {
                 target: n,
                 start: i
             } = e;
-            if (er(null !== (t = Q.indices[Y(n)]) && void 0 !== t ? t : x)) {
+            if (er(null !== (t = Q.indices[Y(n)]) && void 0 !== t ? t : F)) {
                 let e = new AbortController;
                 j(n, {
                     fetchState: {
@@ -291,7 +291,7 @@ function(e, t, n) {
                 }
                 t.commands[e.id] = e
             }
-            let u = null !== (n = r.version) && void 0 !== n ? n : B;
+            let u = null !== (n = r.version) && void 0 !== n ? n : k;
             j(i, {
                 serverVersion: u,
                 result: {
@@ -327,7 +327,7 @@ function(e, t, n) {
                 type: "channel",
                 channelId: n
             }, {
-                serverVersion: k
+                serverVersion: B
             })
         },
         CHANNEL_DELETE: function(e) {
@@ -357,7 +357,7 @@ function(e, t, n) {
                 type: "guild",
                 guildId: n
             }, {
-                serverVersion: null != i ? i : k
+                serverVersion: null != i ? i : B
             }), s = null == r ? void 0 : null === (t = r.result) || void 0 === t ? void 0 : t.sectionIdsByBotId;
             if (null != s)
                 for (let e in s) {
@@ -366,7 +366,7 @@ function(e, t, n) {
                         type: "channel",
                         channelId: t
                     }, {
-                        serverVersion: k
+                        serverVersion: B
                     })
                 }
         },
@@ -427,7 +427,7 @@ function(e, t, n) {
     function Z(e, t) {
         let [n, i] = a.useState(!0), r = (0, d.useStateFromStoresObject)([Q], () => {
             var t;
-            return null !== (t = Q.indices[e]) && void 0 !== t ? t : x
+            return null !== (t = Q.indices[e]) && void 0 !== t ? t : F
         });
         return a.useEffect(() => {
             n && null != e && (t && (N.default.track(P.AnalyticEvents.APPLICATION_COMMAND_CACHE_FETCH, {

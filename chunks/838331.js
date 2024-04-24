@@ -94,14 +94,14 @@ function(e, t, n) {
                     callback: () => requestAnimationFrame(() => e())
                 })
             }), []),
-            k = r.useCallback(() => new Promise(e => {
+            B = r.useCallback(() => new Promise(e => {
                 let t = P.current;
                 if (null == t) return e();
                 t.scrollToTop({
                     callback: () => requestAnimationFrame(() => e())
                 })
             }), []),
-            B = r.useCallback((e, t) => {
+            k = r.useCallback((e, t) => {
                 M(t);
                 let n = document.querySelector(e),
                     i = P.current;
@@ -109,17 +109,17 @@ function(e, t, n) {
                     node: n
                 })
             }, []),
-            F = (0, o.default)({
+            V = (0, o.default)({
                 id: G,
                 isEnabled: !0,
                 useVirtualFocus: !0,
                 scrollToStart: w,
-                scrollToEnd: k,
-                setFocus: B
+                scrollToEnd: B,
+                setFocus: k
             }),
-            V = C ? _.ListThin : _.ListNone;
+            x = C ? _.ListThin : _.ListNone;
         return (0, i.jsx)(o.ListNavigatorProvider, {
-            navigator: F,
+            navigator: V,
             children: (0, i.jsx)(o.ListNavigatorContainer, {
                 children: e => {
                     let {
@@ -170,7 +170,7 @@ function(e, t, n) {
                                     setSelected: l,
                                     itemToString: R
                                 },
-                                children: (0, i.jsx)(V, {
+                                children: (0, i.jsx)(x, {
                                     ...o,
                                     style: {
                                         maxHeight: 46 * O

@@ -1,19 +1,25 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
+        QuestBarExperiment: function() {
+            return c
+        },
+        QuestBarExperimentVariants: function() {
+            return r
+        },
         getIsEligibleForQuests: function() {
-            return a
+            return l
         },
         isQuestPreviewToolEnabled: function() {
-            return u
+            return _
         },
         useIsEligibleForQuests: function() {
-            return o
+            return u
         }
     });
-    var i = n("211242"),
-        r = n("818083");
-    let s = (0, r.createExperiment)({
+    var i, r, s = n("211242"),
+        a = n("818083");
+    let o = (0, a.createExperiment)({
             id: "2023-12_quests",
             kind: "user",
             label: "Quests",
@@ -34,35 +40,35 @@ function(e, t, n) {
                 }
             }]
         }),
-        a = e => {
+        l = e => {
             let {
                 location: t
-            } = e, n = s.getCurrentConfig({
+            } = e, n = o.getCurrentConfig({
                 location: t
             }, {
                 autoTrackExposure: !1
-            }), r = i.default.getCurrentConfig({
+            }), i = s.default.getCurrentConfig({
                 location: t
             }, {
                 autoTrackExposure: !1
             });
-            return n.enabled && !r.paymentsBlocked
+            return n.enabled && !i.paymentsBlocked
         },
-        o = e => {
+        u = e => {
             let {
                 location: t
-            } = e, n = s.useExperiment({
+            } = e, n = o.useExperiment({
                 location: t
             }, {
                 autoTrackExposure: !1
-            }), r = i.default.useExperiment({
+            }), i = s.default.useExperiment({
                 location: t
             }, {
                 autoTrackExposure: !1
             });
-            return n.enabled && !r.paymentsBlocked
+            return n.enabled && !i.paymentsBlocked
         },
-        l = (0, r.createExperiment)({
+        d = (0, a.createExperiment)({
             id: "2024-04_quest_preview_tool",
             kind: "user",
             label: "Quest Preview Tool",
@@ -78,14 +84,38 @@ function(e, t, n) {
             }]
         });
 
-    function u(e) {
+    function _(e) {
         let {
             location: t
         } = e;
-        return l.getCurrentConfig({
+        return d.getCurrentConfig({
             location: t
         }, {
             autoTrackExposure: !1
         }).enabled
-    }
+    }(i = r || (r = {}))[i.V1 = 0] = "V1", i[i.V2 = 1] = "V2";
+    let c = (0, a.createExperiment)({
+        id: "2024-05_quest_bar",
+        kind: "user",
+        label: "Quest Bar",
+        defaultConfig: {
+            primaryVariant: 0,
+            progressVariant: 0
+        },
+        treatments: [{
+            id: 1,
+            label: "Quest Bar V2 with V1 Progress",
+            config: {
+                primaryVariant: 1,
+                progressVariant: 0
+            }
+        }, {
+            id: 2,
+            label: "Quest Bar V2",
+            config: {
+                primaryVariant: 1,
+                progressVariant: 1
+            }
+        }]
+    })
 }

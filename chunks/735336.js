@@ -39,29 +39,29 @@ function(e, t, n) {
         b = n("785717"),
         G = n("621853"),
         w = n("888778"),
-        k = n("943217"),
-        B = n("793397"),
-        F = n("841040"),
-        V = n("228168"),
-        x = n("981631"),
+        B = n("943217"),
+        k = n("793397"),
+        V = n("841040"),
+        x = n("228168"),
+        F = n("981631"),
         H = n("474936"),
         Y = n("689938"),
         j = n("350315");
     let W = {
-            [V.UserProfileTypes.POPOUT]: 18,
-            [V.UserProfileTypes.MODAL]: 24,
-            [V.UserProfileTypes.SETTINGS]: 0,
-            [V.UserProfileTypes.PANEL]: 18,
-            [V.UserProfileTypes.POMELO_POPOUT]: 18,
-            [V.UserProfileTypes.CANCEL_MODAL]: 0
+            [x.UserProfileTypes.POPOUT]: 18,
+            [x.UserProfileTypes.MODAL]: 24,
+            [x.UserProfileTypes.SETTINGS]: 0,
+            [x.UserProfileTypes.PANEL]: 18,
+            [x.UserProfileTypes.POMELO_POPOUT]: 18,
+            [x.UserProfileTypes.CANCEL_MODAL]: 0
         },
         K = {
-            [V.UserProfileTypes.MODAL]: x.AnalyticsPages.USER_PROFILE,
-            [V.UserProfileTypes.POPOUT]: x.AnalyticsPages.USER_POPOUT,
-            [V.UserProfileTypes.SETTINGS]: x.AnalyticsPages.USER_POPOUT,
-            [V.UserProfileTypes.PANEL]: x.AnalyticsPages.DM_CHANNEL,
-            [V.UserProfileTypes.POMELO_POPOUT]: x.AnalyticsPages.POMELO_POPOUT,
-            [V.UserProfileTypes.CANCEL_MODAL]: x.AnalyticsPages.USER_POPOUT
+            [x.UserProfileTypes.MODAL]: F.AnalyticsPages.USER_PROFILE,
+            [x.UserProfileTypes.POPOUT]: F.AnalyticsPages.USER_POPOUT,
+            [x.UserProfileTypes.SETTINGS]: F.AnalyticsPages.USER_POPOUT,
+            [x.UserProfileTypes.PANEL]: F.AnalyticsPages.DM_CHANNEL,
+            [x.UserProfileTypes.POMELO_POPOUT]: F.AnalyticsPages.POMELO_POPOUT,
+            [x.UserProfileTypes.CANCEL_MODAL]: F.AnalyticsPages.USER_POPOUT
         };
 
     function z(e) {
@@ -76,12 +76,12 @@ function(e, t, n) {
             analyticsLocations: T
         } = (0, E.default)(c.default.BADGE);
         return r.useEffect(() => {
-            s && !I.current && (I.current = !0, y.default.track(x.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+            s && !I.current && (I.current = !0, y.default.track(F.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                 type: H.PremiumUpsellTypes.CUSTOM_PROFILES_PROFILE_BANNER_SOCIAL_UPSELL,
                 location: {
                     page: K[t],
-                    section: x.AnalyticsSections.NITRO_BANNER,
-                    object: x.AnalyticsObjects.NITRO_BADGE
+                    section: F.AnalyticsSections.NITRO_BANNER,
+                    object: F.AnalyticsObjects.NITRO_BADGE
                 },
                 location_stack: T
             }))
@@ -106,7 +106,7 @@ function(e, t, n) {
                                 title: Y.default.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_FROM_ICON_MODAL_TITLE,
                                 description: Y.default.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_FROM_ICON_MODAL_DESCRIPTION.format({
                                     onAndMoreWithPremiumClick: () => {
-                                        r(), _.default.open(x.UserSettingsSections.PREMIUM, null, {
+                                        r(), _.default.open(F.UserSettingsSections.PREMIUM, null, {
                                             analyticsLocations: e
                                         })
                                     }
@@ -179,27 +179,27 @@ function(e, t, n) {
         } = (0, w.default)({
             displayProfile: c,
             overrideBannerSrc: E,
-            size: (0, B.getUserBannerSize)(D),
+            size: (0, k.getUserBannerSize)(D),
             canAnimate: M || !en ? $ : et
         }), es = (0, d.useToken)(u.default.unsafe_rawColors.PRIMARY_800).hex(), ea = (0, d.getAvatarSize)(d.AvatarSizes.SIZE_80), eo = (0, o.hex2int)((0, I.default)(_.getAvatarURL(L, ea), es, !1)), el = (0, T.default)(null !== (t = null == c ? void 0 : c.primaryColor) && void 0 !== t ? t : eo).hsl, eu = (0, l.useStateFromStores)([G.default], () => G.default.getUserProfile(_.id)), ed = m.default.getChannel(p.default.getChannelId()), {
             appsInGDMEnabled: e_,
             availableApplications: ec
         } = (0, f.usePrivateChannelIntegrationState)({
-            channelId: null !== (n = null == ed ? void 0 : ed.id) && void 0 !== n ? n : x.EMPTY_STRING_SNOWFLAKE_ID
+            channelId: null !== (n = null == ed ? void 0 : ed.id) && void 0 !== n ? n : F.EMPTY_STRING_SNOWFLAKE_ID
         }), eE = null == eu ? void 0 : eu.application, eI = e_ && null != ec.find(e => e.id === (null == eE ? void 0 : eE.id)), eT = (0, S.default)({
             analyticsLocation: {
-                page: x.AnalyticsPages.USER_POPOUT,
-                section: x.AnalyticsSections.PROFILE_POPOUT
+                page: F.AnalyticsPages.USER_POPOUT,
+                section: F.AnalyticsSections.PROFILE_POPOUT
             }
         });
-        return (0, i.jsx)(k.default, {
+        return (0, i.jsx)(B.default, {
             isPremium: Z,
             hasThemeColors: null !== (s = null == c ? void 0 : c.canEditThemes) && void 0 !== s && s,
             profileType: D,
             hasBanner: null != ei,
             hasProfileEffect: K,
             children: (0, i.jsxs)("div", {
-                className: a()(j.banner, (0, B.getUserBannerStyles)({
+                className: a()(j.banner, (0, k.getUserBannerStyles)({
                     profileType: D,
                     user: {
                         hasBanner: null != ei,
@@ -232,7 +232,7 @@ function(e, t, n) {
                         let {
                             closePopout: t
                         } = e;
-                        return (0, i.jsx)(F.default, {
+                        return (0, i.jsx)(V.default, {
                             onClose: t,
                             onSelect: O,
                             guild: Q
@@ -245,7 +245,7 @@ function(e, t, n) {
                         ...e,
                         profileType: D
                     })
-                }) : W && null != ei && D !== V.UserProfileTypes.SETTINGS ? (0, i.jsx)(z, {
+                }) : W && null != ei && D !== x.UserProfileTypes.SETTINGS ? (0, i.jsx)(z, {
                     type: D,
                     shown: void 0 === v ? $ : v,
                     onClick: () => {
@@ -253,7 +253,7 @@ function(e, t, n) {
                             action: "PRESS_PREMIUM_UPSELL"
                         }), null == O || O()
                     }
-                }) : null, eI ? D !== V.UserProfileTypes.MODAL ? null : (0, i.jsx)(d.Clickable, {
+                }) : null, eI ? D !== x.UserProfileTypes.MODAL ? null : (0, i.jsx)(d.Clickable, {
                     onClick: O,
                     "aria-label": Y.default.Messages.BACK,
                     className: j.pencilContainer,

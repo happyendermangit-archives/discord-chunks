@@ -189,23 +189,23 @@ function(e, t, n) {
                 maxCharacterCount: b,
                 allowNewLines: G,
                 "aria-describedby": w,
-                "aria-labelledby": k,
-                accessibilityLabel: B
+                "aria-labelledby": B,
+                accessibilityLabel: k
             } = this.props, {
-                submitting: F,
-                popup: V
-            } = this.state, x = {
+                submitting: V,
+                popup: x
+            } = this.state, F = {
                 channel: f,
                 className: a()(v, M.textArea, {
                     [M.textAreaSlate]: A,
-                    [M.textAreaDisabled]: d || F
+                    [M.textAreaDisabled]: d || V
                 }),
                 id: y,
                 placeholder: this.getPlaceholder(),
                 required: P,
-                accessibilityLabel: B,
+                accessibilityLabel: k,
                 disabled: d || !1,
-                submitting: F,
+                submitting: V,
                 isEdit: S === p.ChatInputTypes.EDIT,
                 onFocus: this.handleFocus,
                 onBlur: this.handleBlur,
@@ -229,24 +229,24 @@ function(e, t, n) {
                 useNewSlashCommands: R,
                 disableAutoFocus: c.isMobile || null !== (n = S.disableAutoFocus) && void 0 !== n && n,
                 disableEnterToSubmit: null !== (r = null === (e = S.submit) || void 0 === e ? void 0 : e.disableEnterToSubmit) && void 0 !== r && r,
-                "aria-controls": null !== (s = V.id) && void 0 !== s ? s : void 0,
+                "aria-controls": null !== (s = x.id) && void 0 !== s ? s : void 0,
                 "aria-haspopup": "listbox",
-                "aria-expanded": null !== V.id || void 0,
-                "aria-activedescendant": null !== (o = V.activeDescendant) && void 0 !== o ? o : void 0,
+                "aria-expanded": null !== x.id || void 0,
+                "aria-activedescendant": null !== (o = x.activeDescendant) && void 0 !== o ? o : void 0,
                 "aria-invalid": l.length > b,
                 "aria-describedby": w,
-                "aria-labelledby": k,
+                "aria-labelledby": B,
                 "aria-autocomplete": "list"
             }, H = A ? (0, i.jsx)(g.default, {
                 ref: this.ref,
-                ...x,
+                ...F,
                 type: S,
                 value: d ? (0, O.toRichValue)("") : u,
                 canUseCommands: null === (t = S.commands) || void 0 === t ? void 0 : t.enabled,
                 canOnlyUseTextCommands: L
             }) : (0, i.jsx)(C.default, {
                 ref: this.ref,
-                ...x,
+                ...F,
                 value: d ? "" : l
             });
             return (0, i.jsxs)(i.Fragment, {

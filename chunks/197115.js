@@ -40,11 +40,11 @@ function(e, t, n) {
             onSubscribeModalClose: b,
             premiumModalAnalyticsLocation: G,
             showIcon: w = !0,
-            disableShine: k,
-            applicationId: B,
-            giftMessage: F,
-            overrideDisabledButtonText: V,
-            shinyButtonClassName: x,
+            disableShine: B,
+            applicationId: k,
+            giftMessage: V,
+            overrideDisabledButtonText: x,
+            shinyButtonClassName: F,
             ...H
         } = e, Y = (0, a.useStateFromStores)([I.default], () => I.default.getCurrentUser()), j = (0, a.useStateFromStores)([f.default], () => f.default.isFocused()), W = (0, a.useStateFromStores)([T.default], () => T.default.getPremiumTypeSubscription()), {
             analyticsLocations: K
@@ -133,8 +133,8 @@ function(e, t, n) {
                 onSubscribeModalClose: b,
                 analyticsLocations: K,
                 premiumModalAnalyticsLocation: G,
-                applicationId: B,
-                giftMessage: F
+                applicationId: k,
+                giftMessage: V
             })
         };
         if (v) return (0, i.jsxs)(o.Button, {
@@ -171,7 +171,7 @@ function(e, t, n) {
             Z = r === N.PremiumSubscriptionSKUs.TIER_2 && null != q && [N.PremiumTypes.TIER_0, N.PremiumTypes.TIER_1].includes(q);
         Z && (X = O.default.Messages.BILLING_SWITCH_PLAN_UPGRADE);
         let J = null != W && W.status !== p.SubscriptionStatusTypes.ACCOUNT_HOLD && !(0, E.isNoneSubscription)(W.planId) && !Z,
-            $ = J ? null != V ? V : function(e) {
+            $ = J ? null != x ? x : function(e) {
                 let {
                     ctaSubscriptionSkuId: t,
                     currentPremiumType: n
@@ -200,9 +200,9 @@ function(e, t, n) {
                 innerClassName: R.premiumSubscribeButton,
                 color: r === N.PremiumSubscriptionSKUs.TIER_1 ? o.Button.Colors.PRIMARY : o.Button.Colors.GREEN,
                 size: g,
-                className: x,
+                className: F,
                 wrapperClassName: L,
-                pauseAnimation: !j || k,
+                pauseAnimation: !j || B,
                 ...H,
                 ...e,
                 children: [w && (0, i.jsx)(A.default, {

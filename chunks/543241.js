@@ -2,13 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         allowUnicodeEmojiForIntention: function() {
-            return F
+            return V
         },
         dedupeUnicodeEmojis: function() {
             return z
         },
         getAriaIdForEmojiCategory: function() {
-            return k
+            return B
         },
         getEmojiSubCategory: function() {
             return K
@@ -17,7 +17,7 @@ function(e, t, n) {
             return X
         },
         getStringForEmojiCategory: function() {
-            return B
+            return k
         },
         trackEmojiFavorited: function() {
             return w
@@ -53,13 +53,13 @@ function(e, t, n) {
             return j
         },
         useEmojiSearchResults: function() {
-            return V
+            return x
         },
         useFavoriteEmojis: function() {
             return H
         },
         useFrequentlyUsedEmojis: function() {
-            return x
+            return F
         },
         useIsFavoriteEmoji: function() {
             return Y
@@ -116,7 +116,7 @@ function(e, t, n) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null == t ? void 0 : t.getGuildId();
             (0, u.maybeFetchTopEmojisByGuild)(n);
             let r = (0, O.isExternalEmojiAllowedForIntention)(e),
-                s = x(n),
+                s = F(n),
                 o = H(n),
                 {
                     topEmojis: d,
@@ -180,7 +180,7 @@ function(e, t, n) {
                     } else if (i === N.EmojiCategories.CUSTOM) {
                         let e = u;
                         !r && (e = u.filter(e => e.type === N.EmojiCategoryTypes.GUILD && e.guild.id === n)), t.push(...e)
-                    } else if (F(e)) t.push({
+                    } else if (V(e)) t.push({
                         type: N.EmojiCategoryTypes.UNICODE,
                         id: i,
                         name: i
@@ -341,11 +341,11 @@ function(e, t, n) {
         leading: !1,
         trailing: !0
     });
-    let k = (e, t) => {
+    let B = (e, t) => {
             if (e.type === N.EmojiCategoryTypes.GUILD) return null != t ? t.toString() : "";
             return e.id
         },
-        B = (e, t) => {
+        k = (e, t) => {
             switch (e) {
                 case N.EmojiCategories.TOP_GUILD_EMOJI:
                     return g.default.Messages.EMOJI_CATEGORY_TOP_GUILD_EMOJI.format({
@@ -377,9 +377,9 @@ function(e, t, n) {
                     return null != t ? t : e
             }
         },
-        F = e => e !== O.EmojiIntention.COMMUNITY_CONTENT_ONLY;
+        V = e => e !== O.EmojiIntention.COMMUNITY_CONTENT_ONLY;
 
-    function V(e, t, n) {
+    function x(e, t, n) {
         i.useEffect(() => {
             d.FrecencyUserSettingsActionCreators.loadIfNecessary()
         }, []);
@@ -396,7 +396,7 @@ function(e, t, n) {
         }, [t, n, e, r], a.statesWillNeverBeEqual)
     }
 
-    function x(e) {
+    function F(e) {
         return i.useEffect(() => {
             d.FrecencyUserSettingsActionCreators.loadIfNecessary()
         }, []), (0, a.useStateFromStoresArray)([l.default], () => l.default.getDisambiguatedEmojiContext(e).getFrequentlyUsedEmojisWithoutFetchingLatest())

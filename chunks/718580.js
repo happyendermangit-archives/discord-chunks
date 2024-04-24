@@ -112,21 +112,21 @@ function(e, t, n) {
             }
         }), G = (0, E.default)(R), {
             width: w,
-            centered: k = !0
-        } = A, B = o.isMobile ? "100%" : U.width.to(e => Math.round(e)), F = o.isMobile ? "100%" : U.height.to(e => Math.round(e)), V = o.isMobile ? {} : k ? {
+            centered: B = !0
+        } = A, k = o.isMobile ? "100%" : U.width.to(e => Math.round(e)), V = o.isMobile ? "100%" : U.height.to(e => Math.round(e)), x = o.isMobile ? {} : B ? {
             transform: "translate3d(0, -50%, 0) scale(1.0, 1.0)",
             top: "50%"
         } : {
             transform: "scale(1.0, 1.0)"
-        }, x = o.isMobile ? {} : {
+        }, F = o.isMobile ? {} : {
             overflow: null !== (n = A.overflow) && void 0 !== n ? n : "hidden"
         };
         return (0, i.jsx)(s.animated.div, {
             style: {
                 position: "relative",
-                width: B,
-                height: F,
-                ...x
+                width: k,
+                height: V,
+                ...F
             },
             children: b((e, t, n) => {
                 let {
@@ -140,7 +140,7 @@ function(e, t, n) {
                         flexDirection: "column",
                         backfaceVisibility: "hidden",
                         width: o.isMobile ? "100%" : w,
-                        ...V,
+                        ...x,
                         ...C.enabled ? {
                             opacity: e.value.to(e => 1 - Math.abs(e))
                         } : {

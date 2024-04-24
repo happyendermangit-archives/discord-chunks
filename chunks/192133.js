@@ -39,11 +39,11 @@ function(e, t, n) {
         b = n("319300"),
         G = n("591600"),
         w = n("579729"),
-        k = n("302316"),
-        B = n("186395"),
-        F = n("584045"),
-        V = n("58307"),
-        x = n("981631"),
+        B = n("302316"),
+        k = n("186395"),
+        V = n("584045"),
+        x = n("58307"),
+        F = n("981631"),
         H = n("700481"),
         Y = n("27729");
 
@@ -66,7 +66,7 @@ function(e, t, n) {
         } = e, ei = (0, o.useStateFromStores)([f.default], () => f.default.hidePersonalInformation), er = (0, o.useStateFromStores)([m.default], () => {
             var e;
             return null === (e = m.default.getUserProfile(K.id)) || void 0 === e ? void 0 : e.application
-        }), es = (0, o.useStateFromStores)([E.default], () => null != E.default.getAnyStreamForUser(K.id)), ea = (0, V.useGetVoiceChannelInfoForVoiceActivitySection)(K.id, null == X ? void 0 : X.id), eo = (null == j ? void 0 : j.type) === x.ActivityTypes.HANG_STATUS, el = !es && null != ea && !eo, {
+        }), es = (0, o.useStateFromStores)([E.default], () => null != E.default.getAnyStreamForUser(K.id)), ea = (0, x.useGetVoiceChannelInfoForVoiceActivitySection)(K.id, null == X ? void 0 : X.id), eo = (null == j ? void 0 : j.type) === F.ActivityTypes.HANG_STATUS, el = !es && null != ea && !eo, {
             showVoiceActivityInProfile: eu
         } = N.VoiceActivityProfileExperiment.useExperiment({
             location: "user popout"
@@ -105,7 +105,7 @@ function(e, t, n) {
             }),
             eN = (0, d.useIsInUserClanExperiment)();
         if (K.isSystemUser()) return null;
-        if (K.isNonUserBot()) return (0, i.jsx)(F.default, {
+        if (K.isNonUserBot()) return (0, i.jsx)(V.default, {
             user: K,
             nickname: null,
             pronouns: null,
@@ -115,12 +115,12 @@ function(e, t, n) {
         let ep = null !== (t = S.default.getNickname(null == X ? void 0 : X.id, q, K)) && void 0 !== t ? t : h.default.getName(K),
             eO = {
                 location: {
-                    page: x.AnalyticsPages.USER_POPOUT,
-                    section: x.AnalyticsSections.USER_PROFILE
+                    page: F.AnalyticsPages.USER_POPOUT,
+                    section: F.AnalyticsSections.USER_PROFILE
                 }
             };
         return (0, i.jsxs)(i.Fragment, {
-            children: [(0, i.jsx)(F.default, {
+            children: [(0, i.jsx)(V.default, {
                 className: H.usernameSection,
                 user: K,
                 nickname: ep,
@@ -159,7 +159,7 @@ function(e, t, n) {
                     }), (0, i.jsx)(b.default, {
                         userId: K.id,
                         guildId: null == X ? void 0 : X.id
-                    }), eu && el && (0, i.jsx)(V.default, {
+                    }), eu && el && (0, i.jsx)(x.default, {
                         voiceChannel: ea.voiceChannel,
                         voiceGuild: ea.voiceGuild,
                         color: Y.buttonColor
@@ -181,7 +181,7 @@ function(e, t, n) {
                     }) : null, (0, i.jsx)(D.default, {
                         user: K,
                         guildId: null == X ? void 0 : X.id
-                    }), (0, i.jsx)(B.default, {
+                    }), (0, i.jsx)(k.default, {
                         user: K,
                         guild: X,
                         guildMember: Q,
@@ -192,7 +192,7 @@ function(e, t, n) {
                         guild: X,
                         onClose: Z,
                         theme: e_
-                    }), null != er && void 0 !== q && (0, i.jsx)(k.default, {
+                    }), null != er && void 0 !== q && (0, i.jsx)(B.default, {
                         channelId: q,
                         applicationId: er.id
                     }), !ei && !ee && (0, i.jsx)(G.default, {

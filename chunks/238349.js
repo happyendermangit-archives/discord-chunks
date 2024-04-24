@@ -3,7 +3,7 @@ function(e, t, n) {
     let i;
     n.r(t), n.d(t, {
         computeThreadIdsSnapshot: function() {
-            return F
+            return V
         }
     }), n("47120");
     var r, s, a, o, l = n("392711"),
@@ -48,20 +48,20 @@ function(e, t, n) {
         }
     }
 
-    function k() {
+    function B() {
         D = [], i = null, R = null, C = new Set, g = d.ThreadSortOrder.LATEST_ACTIVITY, L = 0, M = [], y = u().chain(p), P = u().chain(p), b.clear(), U.clear()
     }
 
-    function B() {
+    function k() {
         var e;
         let t = h.default.getChannelId();
-        if (null == t || !(null === (e = f.default.getChannel(t)) || void 0 === e ? void 0 : e.isForumLikeChannel())) return k(), !1;
-        V({
+        if (null == t || !(null === (e = f.default.getChannel(t)) || void 0 === e ? void 0 : e.isForumLikeChannel())) return B(), !1;
+        x({
             refreshThreadIds: !0
         })
     }
 
-    function F(e) {
+    function V(e) {
         let t = f.default.getChannel(e);
         return null == t ? [] : Object.values(E.default.getThreadsForParent(t.guild_id, t.id)).map(e => {
             let {
@@ -71,7 +71,7 @@ function(e, t, n) {
         }).sort(w(g))
     }
 
-    function V(e) {
+    function x(e) {
         var t;
         let n = f.default.getChannel(R);
         if (null == n) return;
@@ -92,7 +92,7 @@ function(e, t, n) {
         })(e));
         i = null == s ? null : s
     }
-    class x extends(r = _.default.Store) {
+    class F extends(r = _.default.Store) {
         initialize() {
             this.waitFor(f.default, E.default, h.default, S.default)
         }
@@ -106,11 +106,11 @@ function(e, t, n) {
             let i = e !== R,
                 r = !(0, A.areSetsEqual)(n, C),
                 s = t !== g;
-            return R = e, C = n, g = t, i ? V({
+            return R = e, C = n, g = t, i ? x({
                 refreshThreadIds: !0
-            }) : s ? V({
+            }) : s ? x({
                 sortThreadIds: !0
-            }) : r && V(), D
+            }) : r && x(), D
         }
         getCurrentThreadIds() {
             return D
@@ -123,22 +123,22 @@ function(e, t, n) {
             return i
         }
     }
-    o = "ForumActivePostStore", (a = "displayName") in(s = x) ? Object.defineProperty(s, a, {
+    o = "ForumActivePostStore", (a = "displayName") in(s = F) ? Object.defineProperty(s, a, {
         value: o,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : s[a] = o, t.default = new x(c.default, {
-        CONNECTION_OPEN: B,
-        OVERLAY_INITIALIZE: B,
-        GUILD_CREATE: B,
-        CHANNEL_SELECT: B,
+    }) : s[a] = o, t.default = new F(c.default, {
+        CONNECTION_OPEN: k,
+        OVERLAY_INITIALIZE: k,
+        GUILD_CREATE: k,
+        CHANNEL_SELECT: k,
         CHANNEL_DELETE: function(e) {
             let {
                 channel: t
             } = e;
             if (null == t.parent_id || t.parent_id !== R) return !1;
-            k()
+            B()
         },
         THREAD_LIST_SYNC: function(e) {
             var t;
@@ -146,7 +146,7 @@ function(e, t, n) {
                 guildId: n
             } = e;
             if (null == R || n !== (null === (t = f.default.getChannel(R)) || void 0 === t ? void 0 : t.guild_id)) return !1;
-            V({
+            x({
                 refreshThreadIds: !0
             })
         },
@@ -165,12 +165,12 @@ function(e, t, n) {
             if (null == t.parent_id || t.parent_id !== R) return !1;
             let n = (0, N.isForumPostPinned)(t.id),
                 i = b.has(t.id);
-            if (n && !i) b.add(t.id), V({
+            if (n && !i) b.add(t.id), x({
                 sortThreadIds: !0
             });
             else {
                 if (n || !i) return !1;
-                b.delete(t.id), V({
+                b.delete(t.id), x({
                     sortThreadIds: !0
                 })
             }
@@ -180,7 +180,7 @@ function(e, t, n) {
                 channel: t
             } = e;
             if (null == t.parent_id || t.parent_id !== R) return !1;
-            U.add(t.id), V({
+            U.add(t.id), x({
                 sortThreadIds: !0
             })
         },
@@ -189,7 +189,7 @@ function(e, t, n) {
                 channelId: t
             } = e;
             if (null == t || t !== R) return !1;
-            V({
+            x({
                 refreshThreadIds: !0
             })
         },

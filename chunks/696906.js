@@ -45,24 +45,24 @@ function(e, t, n) {
             } = (0, d.default)(),
             {
                 activeSubscription: w,
-                activeEntitlement: k
+                activeEntitlement: B
             } = (0, T.useActiveSubscriptionListingForApplication)(D, N),
-            B = (0, T.useEligibleApplicationSubscriptionGuilds)(D, N),
-            F = (0, _.default)(),
-            V = null != s && (0, f.isApplicationUserSubscription)(s.sku_flags),
-            x = null != k && k.userId === (null === (t = E.default.getCurrentUser()) || void 0 === t ? void 0 : t.id),
-            H = null == k || x,
-            Y = null == k || b.length > 1,
-            j = null != N || B.length > 0,
-            W = V && x,
-            K = null != P && null != U && H && Y && (j || V) && !W;
+            k = (0, T.useEligibleApplicationSubscriptionGuilds)(D, N),
+            V = (0, _.default)(),
+            x = null != s && (0, f.isApplicationUserSubscription)(s.sku_flags),
+            F = null != B && B.userId === (null === (t = E.default.getCurrentUser()) || void 0 === t ? void 0 : t.id),
+            H = null == B || F,
+            Y = null == B || b.length > 1,
+            j = null != N || k.length > 0,
+            W = x && F,
+            K = null != P && null != U && H && Y && (j || x) && !W;
         return H ? j ? W && null != P && (n = m.default.Messages.APPLICATION_USER_SUBSCRIPTION_ALREADY_SUBSCRIBED.format({
             tierName: P.name
         })) : n = m.default.Messages.APPLICATION_SUBSCRIPTION_NO_GUILD_AVAILABLE : n = m.default.Messages.APPLICATION_SUBSCRIPTIONS_CANNOT_MANAGE_SUBSCRIPTION, r.useEffect(() => {
-            M && null != y && F && l.default.wait(() => {
+            M && null != y && V && l.default.wait(() => {
                 (0, u.fetchSubscriptionPlansForSKU)(y)
             })
-        }, [M, y, F]), {
+        }, [M, y, V]), {
             openModal: r.useCallback(() => {
                 a()(null != U, "No application"), a()(null != L, "No subscription plan"), a()(M, "Cannot purchase this unpublished plan");
                 let e = () => {
@@ -78,7 +78,7 @@ function(e, t, n) {
                         initialPlanId: L.id,
                         skuId: L.sku_id,
                         guildId: N,
-                        eligibleApplicationSubscriptionGuilds: B,
+                        eligibleApplicationSubscriptionGuilds: k,
                         planGroup: b,
                         applicationId: U.id,
                         showBenefitsFirst: R,
@@ -86,12 +86,12 @@ function(e, t, n) {
                         forcesTransitionToGuild: g
                     })
                 };
-                !j && V ? (0, h.confirmNoSharedServerSubscribeWarningModal)({
+                !j && x ? (0, h.confirmNoSharedServerSubscribeWarningModal)({
                     applicationName: U.name,
                     onConfirm: e,
                     onCancel: () => {}
                 }) : e()
-            }, [M, L, b, U, N, j, V, G, O, w, R, B, C, g]),
+            }, [M, L, b, U, N, j, x, G, O, w, R, k, C, g]),
             canOpenModal: K,
             cannotOpenReason: n
         }

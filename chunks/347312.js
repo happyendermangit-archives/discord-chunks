@@ -106,11 +106,11 @@ function(e, t, n) {
                 }(null != n ? n : [], i)) && void 0 !== e ? e : A
             }, [n, i])
         }(n, v), U = r.useRef(h), b = r.useRef(R), G = r.useRef(null), w = window.devicePixelRatio, {
-            lastBackgroundFillColor: k,
-            backgroundFillColor: B,
-            lastActiveFillColor: F,
-            activeFillColor: V,
-            lastInactiveFillColor: x,
+            lastBackgroundFillColor: B,
+            backgroundFillColor: k,
+            lastActiveFillColor: V,
+            activeFillColor: x,
+            lastInactiveFillColor: F,
             inactiveFillColor: H
         } = function(e, t) {
             let n = (0, l.useToken)(o.default.colors.INTERACTIVE_MUTED).hex(),
@@ -167,7 +167,7 @@ function(e, t, n) {
                 (U.current !== h || b.current !== R) && (U.current = h, b.current = R, G.current = n), null != G.current && n > G.current + 200 && (G.current = null);
                 let o = i.height / w;
                 r.clearRect(0, 0, i.width, i.height), r.beginPath();
-                let [l, u] = O(k, B, n, G.current);
+                let [l, u] = O(B, k, n, G.current);
                 a = a || u, r.fillStyle = l;
                 for (let e = 0; e < P.length; e++) N({
                     context: r,
@@ -178,9 +178,9 @@ function(e, t, n) {
                     constrainMin: !0
                 });
                 r.fill();
-                let [d, _] = O(x, H, n, G.current);
+                let [d, _] = O(F, H, n, G.current);
                 a = a || _;
-                let [c, E] = O(F, V, n, G.current);
+                let [c, E] = O(V, x, n, G.current);
                 a = a || E;
                 for (let e = 0; e < s.length; e++) {
                     let t = s[e],
@@ -198,7 +198,7 @@ function(e, t, n) {
             }), () => {
                 null != e && cancelAnimationFrame(e)
             }
-        }, [D, w, P, v, s, _, h, R, k, B, F, V, x, H]);
+        }, [D, w, P, v, s, _, h, R, B, k, V, x, F, H]);
         let [, Y] = (0, d.default)({
             ref: D,
             onDrag: C,

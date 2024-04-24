@@ -63,12 +63,12 @@ function(e, t, n) {
                 colorString: G,
                 colorRoleName: w
             } = n,
-            k = null != i.messageReference && null != i.webhookId,
-            B = (0, d.useStateFromStores)([c.default], () => c.default.roleStyle),
-            F = (0, h.useCanSeeRemixBadge)(),
-            V = {
+            B = null != i.messageReference && null != i.webhookId,
+            k = (0, d.useStateFromStores)([c.default], () => c.default.roleStyle),
+            V = (0, h.useCanSeeRemixBadge)(),
+            x = {
                 className: p.username,
-                style: "username" === B && null != G ? {
+                style: "username" === k && null != G ? {
                     color: G
                 } : void 0,
                 onClick: g,
@@ -82,7 +82,7 @@ function(e, t, n) {
                 })
             };
         t = null != v && null != R ? (0, s.jsx)(_.Popout, {
-            preload: k ? void 0 : function() {
+            preload: B ? void 0 : function() {
                 let e = null != r ? r : i.author;
                 return (0, A.default)(e.id, null != n.guildMemberAvatar && null != P ? (0, N.getGuildMemberAvatarURLSimple)({
                     guildId: P,
@@ -106,27 +106,27 @@ function(e, t, n) {
                 return (0, s.jsx)(_.Clickable, {
                     tag: "span",
                     ...n,
-                    ...V,
-                    className: l()(V.className, p.clickable, C)
+                    ...x,
+                    className: l()(x.className, p.clickable, C)
                 })
             }
         }) : (0, s.jsx)(_.Clickable, {
-            ...V,
-            className: l()(V.className, C)
+            ...x,
+            className: l()(x.className, C)
         });
-        let x = null != y ? y[0] : null,
+        let F = null != y ? y[0] : null,
             H = null != y ? y[1] : null;
         return (0, s.jsxs)(I.AnalyticsLocationProvider, {
             value: U,
-            children: [null != x && o ? (0, s.jsxs)(s.Fragment, {
-                children: [" ", x, " "]
-            }) : null, "dot" === B ? (0, s.jsx)(_.RoleDot, {
+            children: [null != F && o ? (0, s.jsxs)(s.Fragment, {
+                children: [" ", F, " "]
+            }) : null, "dot" === k ? (0, s.jsx)(_.RoleDot, {
                 color: G,
                 name: w,
                 className: p.roleDot
             }) : null, t, null != H ? (0, s.jsx)(s.Fragment, {
                 children: H
-            }) : null, null == x || o ? null : x, null != i && (0, S.default)(i) && F && M ? (0, s.jsx)(O, {}) : null]
+            }) : null, null == F || o ? null : F, null != i && (0, S.default)(i) && V && M ? (0, s.jsx)(O, {}) : null]
         })
     }(i = r || (r = {}))[i.SYSTEM_TAG = 0] = "SYSTEM_TAG", i[i.BADGES = 1] = "BADGES"
 }

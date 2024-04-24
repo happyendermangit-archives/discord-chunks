@@ -53,10 +53,10 @@ function(e, t, n) {
             channelId: L,
             messageId: D,
             roleId: v
-        }), w = (0, s.useStateFromStores)([E.default], () => E.default.getCurrentUser()), k = (0, s.useStateFromStores)([c.default], () => null != n ? c.default.getGuild(n) : null), B = (0, s.useStateFromStores)([_.default], () => null != n ? _.default.getMember(n, t.id) : null), F = r.useRef(null), V = (0, T.default)(t.id, n), x = (0, o.default)(F);
+        }), w = (0, s.useStateFromStores)([E.default], () => E.default.getCurrentUser()), B = (0, s.useStateFromStores)([c.default], () => null != n ? c.default.getGuild(n) : null), k = (0, s.useStateFromStores)([_.default], () => null != n ? _.default.getMember(n, t.id) : null), V = r.useRef(null), x = (0, T.default)(t.id, n), F = (0, o.default)(V);
         r.useEffect(() => {
-            null == y || y(null == F ? void 0 : F.current)
-        }, [F, y]);
+            null == y || y(null == V ? void 0 : V.current)
+        }, [V, y]);
         let H = e => {
             null == M || M(), (0, N.openUserProfileModal)({
                 sourceAnalyticsLocations: b,
@@ -77,18 +77,18 @@ function(e, t, n) {
                 channelId: L,
                 messageId: D,
                 roleId: v,
-                shouldTrackViewOnMount: null == B || null != B.fullProfileLoadedTimestamp,
+                shouldTrackViewOnMount: null == k || null != k.fullProfileLoadedTimestamp,
                 children: (0, i.jsxs)(a.Dialog, {
-                    ref: F,
+                    ref: V,
                     "aria-label": t.username,
                     onClick: g,
                     onContextMenu: g,
                     children: [(0, i.jsxs)(f.default, {
                         user: t,
-                        displayProfile: V,
+                        displayProfile: x,
                         profileType: R.UserProfileTypes.BITE_SIZE,
                         children: [(0, i.jsxs)(m.default, {
-                            isFaded: (null == V ? void 0 : V.profileEffectId) != null && !x,
+                            isFaded: (null == x ? void 0 : x.profileEffectId) != null && !F,
                             children: [(0, i.jsx)(h.default, {
                                 user: t,
                                 guildId: n,
@@ -112,7 +112,7 @@ function(e, t, n) {
                             })]
                         }), (0, i.jsx)(O.default, {
                             user: t,
-                            displayProfile: V,
+                            displayProfile: x,
                             guildId: n,
                             channelId: L,
                             onClose: M,
@@ -120,16 +120,16 @@ function(e, t, n) {
                         }), (0, i.jsx)(p.default, {
                             user: t,
                             currentUser: w,
-                            displayProfile: V,
-                            guild: k,
+                            displayProfile: x,
+                            guild: B,
                             onOpenProfile: H,
                             channelId: L,
                             onClose: M
                         })]
-                    }), (null == V ? void 0 : V.profileEffectId) != null && (0, i.jsx)(d.default, {
-                        profileEffectId: null == V ? void 0 : V.profileEffectId,
+                    }), (null == x ? void 0 : x.profileEffectId) != null && (0, i.jsx)(d.default, {
+                        profileEffectId: null == x ? void 0 : x.profileEffectId,
                         bannerAdjustment: 0,
-                        isHovering: x
+                        isHovering: F
                     })]
                 })
             })

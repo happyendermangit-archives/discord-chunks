@@ -32,7 +32,7 @@ function(e, t, n) {
         b = null,
         G = !0,
         w = null;
-    async function k(e) {
+    async function B(e) {
         U = Date.now(), b = e.sessionId, g.localPresenceState.handleConnectionOpen();
         let t = {},
             n = N.default.getVoiceChannelId();
@@ -49,24 +49,24 @@ function(e, t, n) {
         g.localVoiceState.update(t, !0), G = !1
     }
 
-    function B() {
+    function k() {
         g.localVoiceState.update()
     }
 
-    function F() {
+    function V() {
         return g.localVoiceState.update(), !1
     }
 
-    function V() {
+    function x() {
         return g.localPresenceState.update(), !1
     }
 
-    function x(e) {
+    function F(e) {
         g.socket.isSessionEstablished() && g.socket.streamDelete(e)
     }
     class H extends(i = u.default.Store) {
         initialize() {
-            this.waitFor(T.default, N.default, S.default, f.default, I.default), this.syncWith([h.default], F), this.syncWith([p.default], V)
+            this.waitFor(T.default, N.default, S.default, f.default, I.default), this.syncWith([h.default], V), this.syncWith([p.default], x)
         }
         getSocket() {
             return g.socket
@@ -105,7 +105,7 @@ function(e, t, n) {
             return e.resetSocket && (g.socket.close(), g.socket.dispatcher.clear(), g.socket.connect()), !1
         },
         CONNECTION_OPEN: e => {
-            k(e)
+            B(e)
         },
         CONNECTION_CLOSED: function() {
             P.verbose("connection closed dispatched"), U = Date.now()
@@ -210,7 +210,7 @@ function(e, t, n) {
                 g.socket.callConnect(e)
             }), !1
         },
-        STREAM_CREATE: B,
+        STREAM_CREATE: k,
         STREAM_START: function(e) {
             let {
                 streamType: t,
@@ -233,14 +233,14 @@ function(e, t, n) {
                 let e = function() {
                     return O.default.getAllActiveStreamKeys().find(e => (0, E.decodeStreamKey)(e).ownerId === T.default.getId())
                 }();
-                O.default.getAllActiveStreamKeys().filter(t => t !== e).forEach(e => x(e))
+                O.default.getAllActiveStreamKeys().filter(t => t !== e).forEach(e => F(e))
             }(), g.socket.streamWatch(t)), !1
         },
         STREAM_STOP: function(e) {
             let {
                 streamKey: t
             } = e;
-            return x(t), B(), !1
+            return F(t), k(), !1
         },
         STREAM_SET_PAUSED: function(e) {
             let {
@@ -290,11 +290,11 @@ function(e, t, n) {
         RTC_SPEED_TEST_STOP_TEST: function() {
             return g.socket.isSessionEstablished() && g.socket.speedTestDelete(), !1
         },
-        CLIPS_SETTINGS_UPDATE: B,
-        RUNNING_GAMES_CHANGE: B,
+        CLIPS_SETTINGS_UPDATE: k,
+        RUNNING_GAMES_CHANGE: k,
         USER_SETTINGS_PROTO_UPDATE: function(e) {
             var t;
-            e.settings.type === M.UserSettingsTypes.PRELOADED_USER_SETTINGS && (null === (t = e.settings.proto.clips) || void 0 === t ? void 0 : t.allowVoiceRecording) != null && B()
+            e.settings.type === M.UserSettingsTypes.PRELOADED_USER_SETTINGS && (null === (t = e.settings.proto.clips) || void 0 === t ? void 0 : t.allowVoiceRecording) != null && k()
         }
     })
 }

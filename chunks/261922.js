@@ -169,7 +169,7 @@ function(e, t, n) {
                 readyState: M,
                 hasMouseOver: y,
                 hasFocus: P
-            } = this.state, U = null != n, b = this.getRatio(), G = (0, l.clamp)(Math.round(I * b), null != f ? f : 0, null != h ? h : 1 / 0), w = (0, l.clamp)(Math.round(T * b), null != S ? S : 0, null != A ? A : 1 / 0), k = {
+            } = this.state, U = null != n, b = this.getRatio(), G = (0, l.clamp)(Math.round(I * b), null != f ? f : 0, null != h ? h : 1 / 0), w = (0, l.clamp)(Math.round(T * b), null != S ? S : 0, null != A ? A : 1 / 0), B = {
                 alt: e,
                 readyState: M,
                 onContextMenu: null != r ? r : void 0,
@@ -205,16 +205,16 @@ function(e, t, n) {
                 onFocus: this.onFocus,
                 onBlur: this.onBlur
             };
-            if (1 === k.width && 1 === k.height) return null;
-            switch ((U || null != N) && (k.onClick = this.onClick), i && (k.original = null != o && "" !== o ? o : k.src), M) {
+            if (1 === B.width && 1 === B.height) return null;
+            switch ((U || null != N) && (B.onClick = this.onClick), i && (B.original = null != o && "" !== o ? o : B.src), M) {
                 case p.ImageReadyStates.LOADING:
-                    null != t && (k.src = t);
+                    null != t && (B.src = t);
                     break;
                 case p.ImageReadyStates.READY:
                     if (g.isAnimated(this.props)) {
-                        k.onMouseLeave = this.onMouseLeave;
+                        B.onMouseLeave = this.onMouseLeave;
                         let e = (s || y || P) && (null == E || E) && g.visibilityObserver.isVisible(this);
-                        e ? (k.src = this.getSrc(b), k.renderAccessory = O) : (k.src = this.getSrc(b, !c || !s), k.renderAccessory = this.renderAccessory), null != _ && (k.children = t => {
+                        e ? (B.src = this.getSrc(b), B.renderAccessory = O) : (B.src = this.getSrc(b, !c || !s), B.renderAccessory = this.renderAccessory), null != _ && (B.children = t => {
                             let {
                                 src: n,
                                 size: i,
@@ -229,10 +229,10 @@ function(e, t, n) {
                                 mediaLayoutType: s
                             })
                         })
-                    } else k.src = this.getSrc(b)
+                    } else B.src = this.getSrc(b)
             }
             return (0, a.jsx)(m.default, {
-                ...k
+                ...B
             })
         }
         async trackLoadingCompleted(e, t, n) {

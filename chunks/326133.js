@@ -42,16 +42,16 @@ function(e, t, n) {
             location: "6e9811_2"
         }, {
             autoTrackExposure: !1
-        }), k = (0, h.useChannelAutocompleteLayerPosition)({
+        }), B = (0, h.useChannelAutocompleteLayerPosition)({
             editorHeight: g,
             type: C,
             state: y,
             isInPopoutExperiment: w
-        }), B = r.useMemo(() => null == k ? "" : String(Date.now()), [null == k ? void 0 : k.top, null == k ? void 0 : k.left, null == k ? void 0 : k.bottom, null == k ? void 0 : k.right]);
+        }), k = r.useMemo(() => null == B ? "" : String(Date.now()), [null == B ? void 0 : B.top, null == B ? void 0 : B.left, null == B ? void 0 : B.bottom, null == B ? void 0 : B.right]);
         if (r.useEffect(() => {
                 L(y.isVisible)
-            }, [L, y.isVisible]), !y.isVisible || null == y.query || void 0 === k) return null;
-        let F = null !== (s = y.query.typeInfo.renderResults({
+            }, [L, y.isVisible]), !y.isVisible || null == y.query || void 0 === B) return null;
+        let V = null !== (s = y.query.typeInfo.renderResults({
             results: y.query.results,
             selectedIndex: y.selectedIndex,
             channel: R,
@@ -61,17 +61,17 @@ function(e, t, n) {
             onHover: e => P.onResultHover(e),
             onClick: e => P.onResultClick(e)
         })) && void 0 !== s ? s : null;
-        if (null == F) return null;
-        let V = {
-                [m.autocompleteAttached]: null == k,
-                [m.autocompletePopout]: null != k,
-                [m.bottom]: null == k && "bottom" === e.position
+        if (null == V) return null;
+        let x = {
+                [m.autocompleteAttached]: null == B,
+                [m.autocompletePopout]: null != B,
+                [m.bottom]: null == B && "bottom" === e.position
             },
-            x = 490;
-        null != k && (x = (null === (N = C.autocomplete) || void 0 === N ? void 0 : N.small) ? 200 : (null === (p = y.query) || void 0 === p ? void 0 : p.type) === S.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), x = Math.min(window.innerHeight - 175, x);
+            F = 490;
+        null != B && (F = (null === (N = C.autocomplete) || void 0 === N ? void 0 : N.small) ? 200 : (null === (p = y.query) || void 0 === p ? void 0 : p.type) === S.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), F = Math.min(window.innerHeight - 175, F);
         let H = (0, i.jsx)(c.default, {
             id: D,
-            className: a()(m.autocomplete, V),
+            className: a()(m.autocomplete, x),
             innerClassName: m.autocompleteInner,
             onMouseDown: e => e.preventDefault(),
             children: (0, i.jsx)(o.ListNavigatorProvider, {
@@ -91,20 +91,20 @@ function(e, t, n) {
                             ...n,
                             className: m.scroller,
                             style: {
-                                maxHeight: x
+                                maxHeight: F
                             },
                             role: "listbox",
                             "aria-labelledby": (0, c.getAutocompleteTitleId)(D),
-                            children: F
+                            children: V
                         })
                     }
                 })
             })
         });
-        return null != k ? (0, i.jsx)(b, {
+        return null != B ? (0, i.jsx)(b, {
             children: (0, i.jsx)(u.ReferencePositionLayer, {
-                reference: () => k,
-                positionKey: B,
+                reference: () => B,
+                positionKey: k,
                 position: null !== (O = e.position) && void 0 !== O ? O : "top",
                 align: "left",
                 spacing: 8,

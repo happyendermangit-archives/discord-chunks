@@ -110,8 +110,8 @@ function(e, t, n) {
             messageId: b,
             isBurstReaction: G,
             rowPosition: w,
-            inNitroLockedSection: k
-        } = e, [B, F] = r.useState(""), V = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), x = (0, o.useStateFromStores)([_.default], () => _.default.getDisambiguatedEmojiContext(I), [I]), H = r.useRef(null), {
+            inNitroLockedSection: B
+        } = e, [k, V] = r.useState(""), x = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), F = (0, o.useStateFromStores)([_.default], () => _.default.getDisambiguatedEmojiContext(I), [I]), H = r.useRef(null), {
             emoji: Y,
             size: j,
             isDisabled: W,
@@ -149,10 +149,10 @@ function(e, t, n) {
                 ...d,
                 key: s,
                 ref: H
-            }, B !== O(K, c) && (0, i.jsx)(R, {
+            }, k !== O(K, c) && (0, i.jsx)(R, {
                 ref: o,
                 emoji: Y,
-                isFavorite: x.isFavoriteEmojiWithoutFetchingLatest(Y),
+                isFavorite: F.isFavoriteEmojiWithoutFetchingLatest(Y),
                 isLargeSize: M,
                 isMediumSize: v,
                 isInspected: a,
@@ -164,10 +164,10 @@ function(e, t, n) {
                 onMouseEnter: t,
                 onMouseLeave: n,
                 onClick: e => {
-                    if (null != H.current && null != w && null != b && !e.shiftKey && null != Y.name && G && !V && P) {
+                    if (null != H.current && null != w && null != b && !e.shiftKey && null != Y.name && G && !x && P) {
                         let e = null == Y.id ? E.default.convertNameToSurrogate(Y.name) : Y.name,
                             t = H.current.getBoundingClientRect();
-                        t.x = w.x + (K + 1) * j, F(O(K, c)), (0, f.addReactionPickerAnimation)(b, e, Y.id, t)
+                        t.x = w.x + (K + 1) * j, V(O(K, c)), (0, f.addReactionPickerAnimation)(b, e, Y.id, t)
                     }
                     z(e)
                 },
@@ -178,7 +178,7 @@ function(e, t, n) {
                 size: j,
                 surrogateCodePoint: g,
                 selectedItemClassName: L,
-                inNitroLockedSection: k
+                inNitroLockedSection: B
             }))
         };
         return C ? (0, i.jsx)(l.Tooltip, {

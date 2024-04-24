@@ -132,10 +132,10 @@ function(e, t, n) {
                 "aria-label": b,
                 "aria-labelledby": G,
                 "aria-describedby": w
-            } = this.props, k = 0;
-            S ? null != s && (null != l ? k = s[l] : null != o && (k = s[o])) : k = this.scaleValue(t);
-            let B = "".concat(k, "%"),
-                F = null != s && null != r ? s.map((e, t) => {
+            } = this.props, B = 0;
+            S ? null != s && (null != l ? B = s[l] : null != o && (B = s[o])) : B = this.scaleValue(t);
+            let k = "".concat(B, "%"),
+                V = null != s && null != r ? s.map((e, t) => {
                     let n = r[t],
                         i = null != R && R === n,
                         s = this.renderMark(n);
@@ -158,8 +158,8 @@ function(e, t, n) {
                         })
                     }, t)
                 }) : null,
-                V = null != g ? g(t) : "".concat(k.toFixed(0), "%"),
-                x = null !== (e = null == D ? void 0 : D(t)) && void 0 !== e ? e : void 0;
+                x = null != g ? g(t) : "".concat(B.toFixed(0), "%"),
+                F = null !== (e = null == D ? void 0 : D(t)) && void 0 !== e ? e : void 0;
             return (0, a.jsx)(E.FocusRing, {
                 focusTarget: this.containerRef,
                 ringTarget: this.grabberRef,
@@ -177,7 +177,7 @@ function(e, t, n) {
                     "aria-label": b,
                     "aria-labelledby": G,
                     "aria-describedby": w,
-                    "aria-valuetext": x,
+                    "aria-valuetext": F,
                     role: "slider",
                     tabIndex: 0,
                     onKeyDown: this.handleKeyDown,
@@ -187,7 +187,7 @@ function(e, t, n) {
                     ref: this.containerRef,
                     children: [(0, a.jsx)("div", {
                         className: f.track,
-                        children: F
+                        children: V
                     }), (0, a.jsx)("div", {
                         className: u()(f.bar, v),
                         style: m,
@@ -195,7 +195,7 @@ function(e, t, n) {
                             className: f.barFill,
                             style: {
                                 ...N,
-                                width: B
+                                width: k
                             }
                         })
                     }), A, (0, a.jsx)("div", {
@@ -203,14 +203,14 @@ function(e, t, n) {
                         children: (0, a.jsx)(I.Tooltip, {
                             color: I.Tooltip.Colors.GREY,
                             hideOnClick: !1,
-                            text: O || S ? null : V,
+                            text: O || S ? null : x,
                             forceOpen: n || i && T.default.keyboardModeEnabled,
                             children: e => (0, a.jsx)("div", {
                                 ...e,
                                 className: u()(f.grabber, M),
                                 style: {
                                     ...y,
-                                    left: B
+                                    left: k
                                 },
                                 onMouseDown: this.handleMouseDown,
                                 ref: this.grabberRef

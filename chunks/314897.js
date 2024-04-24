@@ -30,11 +30,11 @@ function(e, t, n) {
         b = "user_id_cache",
         G = null,
         w = null,
-        k = null,
         B = null,
-        F = null,
+        k = null,
         V = null,
         x = null,
+        F = null,
         H = D.LoginStates.NONE,
         Y = D.RegistrationStates.NONE,
         j = !1,
@@ -65,8 +65,8 @@ function(e, t, n) {
 
     function eo() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        if (F = T.Storage.get(P), null != ei) return ei;
-        let t = null != F ? F : _.getToken();
+        if (V = T.Storage.get(P), null != ei) return ei;
+        let t = null != V ? V : _.getToken();
         !(!(0, N.isValidFingerprintRoute)() || !e && null != t || g.default.isHandoffAvailable()) && el({
             withGuildExperiments: !0
         })
@@ -76,7 +76,7 @@ function(e, t, n) {
         let {
             withGuildExperiments: t
         } = e, n = {}, i = O.default.getSuperPropertiesBase64();
-        null != i && (n["X-Super-Properties"] = i), null != F && (n["X-Fingerprint"] = F), ei = I.HTTP.get({
+        null != i && (n["X-Super-Properties"] = i), null != V && (n["X-Fingerprint"] = V), ei = I.HTTP.get({
             url: D.Endpoints.EXPERIMENTS,
             query: {
                 with_guild_experiments: t
@@ -110,7 +110,7 @@ function(e, t, n) {
     }
 
     function eu() {
-        V = F, F = null, T.Storage.remove(P)
+        x = V, V = null, T.Storage.remove(P)
     }
 
     function ed(e, t) {
@@ -162,10 +162,10 @@ function(e, t, n) {
             return G
         }
         getSessionId() {
-            return k
+            return B
         }
         getAuthSessionIdHash() {
-            return B
+            return k
         }
         getToken() {
             return (0, R.getToken)()
@@ -174,10 +174,10 @@ function(e, t, n) {
             return (0, R.isAuthenticated)()
         }
         getFingerprint() {
-            return F
+            return V
         }
         getAnalyticsToken() {
-            return x
+            return F
         }
         getErrors() {
             return et
@@ -258,7 +258,7 @@ function(e, t, n) {
                 analyticsToken: s,
                 auth: a
             } = e;
-            ea("handleConnectionOpen called"), C.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, p.default)(n)), k = i, B = r, x = s, G = n.id, w = n.email, void 0 !== a && (W = a.authenticator_types), T.Storage.set(U, n.email), T.Storage.set(b, n.id)
+            ea("handleConnectionOpen called"), C.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, p.default)(n)), B = i, k = r, F = s, G = n.id, w = n.email, void 0 !== a && (W = a.authenticator_types), T.Storage.set(U, n.email), T.Storage.set(b, n.id)
         },
         OVERLAY_INITIALIZE: function(e) {
             var t;
@@ -268,7 +268,7 @@ function(e, t, n) {
                 analyticsToken: r,
                 token: s
             } = e;
-            C.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, p.default)(n)), k = i, x = r, ed(s), eu(), G = n.id, T.Storage.set(b, n.id)
+            C.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, p.default)(n)), B = i, F = r, ed(s), eu(), G = n.id, T.Storage.set(b, n.id)
         },
         CONNECTION_CLOSED: function(e) {
             let {
@@ -288,7 +288,7 @@ function(e, t, n) {
             let {
                 authSessionIdHash: t
             } = e;
-            null != t && (B = t)
+            null != t && (k = t)
         },
         LOGIN: function(e) {
             et = {}, H = D.LoginStates.LOGGING_IN, Z = "", r = null, null != e.login && (er = e.login)
@@ -389,11 +389,11 @@ function(e, t, n) {
         LOGOUT: eE,
         FINGERPRINT: function(e) {
             let t = e.fingerprint;
-            null == F ? null != t ? (O.default.track(D.AnalyticEvents.USER_FINGERPRINT_CHANGED, {
-                old_fingerprint: null != V ? (0, c.extractId)(V) : null,
+            null == V ? null != t ? (O.default.track(D.AnalyticEvents.USER_FINGERPRINT_CHANGED, {
+                old_fingerprint: null != x ? (0, c.extractId)(x) : null,
                 new_fingerprint: (0, c.extractId)(t)
-            }), F = t, V = t, T.Storage.set(P, F)) : eo() : null != t && F !== t && O.default.track(D.AnalyticEvents.EXTERNAL_FINGERPRINT_DROPPED, {
-                fingerprint: (0, c.extractId)(F),
+            }), V = t, x = t, T.Storage.set(P, V)) : eo() : null != t && V !== t && O.default.track(D.AnalyticEvents.EXTERNAL_FINGERPRINT_DROPPED, {
+                fingerprint: (0, c.extractId)(V),
                 dropped_fingerprint: (0, c.extractId)(t)
             })
         },

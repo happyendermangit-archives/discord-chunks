@@ -43,11 +43,11 @@ function(e, t, n) {
             transitionState: b,
             onClose: G,
             onSubscribeClick: w,
-            onSecondaryClick: k,
-            secondaryCTA: B,
-            subscribeButtonText: F,
-            showNewBadge: V = !1,
-            enableArtBoxShadow: x = !0,
+            onSecondaryClick: B,
+            secondaryCTA: k,
+            subscribeButtonText: V,
+            showNewBadge: x = !1,
+            enableArtBoxShadow: F = !0,
             subscriptionTier: H = h.PremiumSubscriptionSKUs.TIER_2,
             isLoading: Y = !1,
             hideBackButton: j,
@@ -73,7 +73,7 @@ function(e, t, n) {
                 sku_id: (0, c.castPremiumSubscriptionAsSkuId)(H)
             }))
         }, [Q, H, Y]);
-        let ee = x ? a()(N.artContainer, N.artContainerBoxShadow, P) : a()(N.artContainer, P),
+        let ee = F ? a()(N.artContainer, N.artContainerBoxShadow, P) : a()(N.artContainer, P),
             et = null;
         return et = "artURL" in X ? (0, i.jsx)("img", {
             className: N.art,
@@ -85,7 +85,7 @@ function(e, t, n) {
             transitionState: b,
             children: [(0, i.jsxs)("div", {
                 className: ee,
-                children: [et, V ? (0, i.jsx)("img", {
+                children: [et, x ? (0, i.jsx)("img", {
                     className: N.sparkleBadge,
                     alt: "",
                     src: p
@@ -133,15 +133,15 @@ function(e, t, n) {
                     className: a()(N.primaryActions, {
                         [N.enhancedPrimaryActions]: K
                     }),
-                    children: [null != B ? (0, i.jsx)(o.Button, {
+                    children: [null != k ? (0, i.jsx)(o.Button, {
                         className: a()(N.secondaryAction, {
                             [N.enhancedSecondaryAction]: K
                         }),
-                        onClick: k,
+                        onClick: B,
                         size: o.Button.Sizes.SMALL,
                         color: K ? o.Button.Colors.CUSTOM : o.Button.Colors.PRIMARY,
                         look: o.Button.Looks.LINK,
-                        children: B
+                        children: k
                     }) : null, (() => {
                         let e;
                         if (Q) return (0, i.jsx)(d.default, {
@@ -173,7 +173,7 @@ function(e, t, n) {
                             onClick: () => {
                                 null == w || w(), G()
                             },
-                            buttonText: null != F ? F : t
+                            buttonText: null != V ? V : t
                         })
                     })()]
                 }), !j && !K && (0, i.jsx)(o.Button, {

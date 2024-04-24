@@ -44,20 +44,20 @@ function(e, t, n) {
                 sectionIndex: e,
                 sectionRowIndex: t
             }) : S, [S]),
-            k = r.useCallback(e => {
+            B = r.useCallback(e => {
                 let t = "function" == typeof A ? A(e) : A;
                 return null == t ? 0 : t
             }, [A]),
-            B = r.useCallback(e => {
+            k = r.useCallback(e => {
                 let t = "function" == typeof m ? m(e) : m;
                 return null == t ? 0 : t
             }, [m]),
-            F = r.useCallback(e => {
+            V = r.useCallback(e => {
                 let t = "function" == typeof h ? h(e) : h;
                 return null == t ? 0 : t
             }, [h]),
-            V = r.useRef([]),
             x = r.useRef([]),
+            F = r.useRef([]),
             {
                 totalHeight: H,
                 rowDescriptors: Y,
@@ -79,7 +79,7 @@ function(e, t, n) {
                             top: i,
                             bottom: -1
                         }
-                    }, i += k(a);
+                    }, i += B(a);
                     for (let t = 0; t < n; t++) {
                         let n = i + (o ? w(a, t, e) : 0),
                             s = {
@@ -91,15 +91,15 @@ function(e, t, n) {
                             offset: s
                         }, i = n, e++
                     }
-                    i += B(a) + F(a), s[a].offset.bottom = i
+                    i += k(a) + V(a), s[a].offset.bottom = i
                 }
                 return {
                     totalHeight: i += u[2],
                     rowDescriptors: r,
                     sectionDescriptors: s
                 }
-            }, [w, B, k, F, u, T, f, G]);
-        V.current = j, x.current = Y;
+            }, [w, k, B, V, u, T, f, G]);
+        x.current = j, F.current = Y;
         let W = r.useCallback(() => {
             var e;
             let t = null === (e = P.current) || void 0 === e ? void 0 : e.getScrollerNode();
@@ -152,7 +152,7 @@ function(e, t, n) {
                         animate: n = !1,
                         offset: i = 0
                     } = t,
-                    r = x.current[e];
+                    r = F.current[e];
                 null != r && window.requestAnimationFrame(() => {
                     var t, s;
                     let {
@@ -161,7 +161,7 @@ function(e, t, n) {
                             top: o,
                             bottom: l
                         }
-                    } = r, u = k(a), d = o - (p ? u : 0) - i <= U.current, _ = l + i >= U.current + M;
+                    } = r, u = B(a), d = o - (p ? u : 0) - i <= U.current, _ = l + i >= U.current + M;
                     if (d) {
                         let r = U.current + u - o,
                             s = p ? U.current - r : o;
@@ -184,7 +184,7 @@ function(e, t, n) {
                         animate: n = !1,
                         offset: i = 0
                     } = t,
-                    r = V.current[e];
+                    r = x.current[e];
                 null != r && window.requestAnimationFrame(() => {
                     var t;
                     null === (t = P.current) || void 0 === t || t.scrollTo({
@@ -197,8 +197,8 @@ function(e, t, n) {
                 height: M,
                 totalHeight: H
             }),
-            getSectionDescriptors: () => V.current,
-            getRowDescriptors: () => x.current,
+            getSectionDescriptors: () => x.current,
+            getRowDescriptors: () => F.current,
             getScrollerNode: () => {
                 var e;
                 return null === (e = P.current) || void 0 === e ? void 0 : e.getScrollerNode()
@@ -209,7 +209,7 @@ function(e, t, n) {
                     node: e
                 })
             }
-        }), [k, p, H, M]);
+        }), [B, p, H, M]);
         let {
             visibleItems: z,
             listOffset: X
@@ -233,9 +233,9 @@ function(e, t, n) {
                     }
                 } = j[r], l = o - a;
                 if (0 === l) continue;
-                let u = k(r),
-                    I = B(r),
-                    T = F(r);
+                let u = B(r),
+                    I = k(r),
+                    T = V(r);
                 if (o <= D) n = o;
                 else if (o > D && a < e) {
                     t = s;
@@ -264,7 +264,7 @@ function(e, t, n) {
                 visibleItems: i,
                 listOffset: n
             }
-        }, [w, B, k, F, u, d, _, E, c, D, j, p, I, G, M]), Q = r.useMemo(() => {
+        }, [w, k, B, V, u, d, _, E, c, D, j, p, I, G, M]), Q = r.useMemo(() => {
             var e, t, n;
             return {
                 top: X,

@@ -29,7 +29,7 @@ function(e, t, n) {
         G = !1,
         w = null;
 
-    function k() {
+    function B() {
         let e = {
             queue: D,
             paused: M,
@@ -38,7 +38,7 @@ function(e, t, n) {
         I.Storage.set(L, e)
     }
 
-    function B() {
+    function k() {
         let e = D[0];
         if (null != e) {
             var t, n;
@@ -58,26 +58,26 @@ function(e, t, n) {
         }
     }
 
-    function F(e, t) {
+    function V(e, t) {
         let n = (0, m.getComboId)(e, t);
         return D.findIndex(e => e.comboId === n)
     }
 
-    function V(e, t, n, i) {
+    function x(e, t, n, i) {
         let r = (0, m.getComboId)(e, t),
             s = {
                 comboId: r,
                 action: i
             },
             a = v.indexOf(r); - 1 !== a && v.splice(a, 1);
-        let o = F(e, t);
-        0 !== o && (n ? -1 === o && (D.push(s), B()) : (o > 0 && D.splice(o, 1), D.unshift(s), B())), !n && M && N.default.resume(), k()
+        let o = V(e, t);
+        0 !== o && (n ? -1 === o && (D.push(s), k()) : (o > 0 && D.splice(o, 1), D.unshift(s), k())), !n && M && N.default.resume(), B()
     }
 
-    function x(e, t) {
+    function F(e, t) {
         let n = (0, m.getComboId)(e, t),
             i = v.indexOf(n); - 1 !== i && v.splice(i, 1);
-        let r = F(e, t); - 1 !== r && (D.splice(r, 1), k()), B()
+        let r = V(e, t); - 1 !== r && (D.splice(r, 1), B()), k()
     }
 
     function H(e) {
@@ -85,7 +85,7 @@ function(e, t, n) {
             applicationId: t,
             branchId: n
         } = e;
-        x(t, n)
+        F(t, n)
     }
 
     function Y(e) {
@@ -135,7 +135,7 @@ function(e, t, n) {
             return M
         }
         getQueuePosition(e, t) {
-            return F(e, t)
+            return V(e, t)
         }
         isCorruptInstallation() {
             return G
@@ -152,7 +152,7 @@ function(e, t, n) {
                 applicationId: t,
                 branchId: n
             } = e;
-            b.set((0, m.getComboId)(t, n), "Install"), V(t, n, !1, "Patch")
+            b.set((0, m.getComboId)(t, n), "Install"), x(t, n, !1, "Patch")
         },
         DISPATCH_APPLICATION_UPDATE: function(e) {
             let {
@@ -160,7 +160,7 @@ function(e, t, n) {
                 branchId: n,
                 automatic: i
             } = e;
-            V(t, n, i, "Patch")
+            x(t, n, i, "Patch")
         },
         DISPATCH_APPLICATION_UNINSTALL: function(e) {
             H(e), Y(e)
@@ -171,22 +171,22 @@ function(e, t, n) {
                 applicationId: t,
                 branchId: n
             } = e;
-            b.set((0, m.getComboId)(t, n), "Repair"), V(t, n, !1, "Repair")
+            b.set((0, m.getComboId)(t, n), "Repair"), x(t, n, !1, "Repair")
         },
         DISPATCH_APPLICATION_MOVE_UP: function(e) {
             let {
                 applicationId: t,
                 branchId: n
-            } = e, i = F(t, n);
+            } = e, i = V(t, n);
             if (i < 1) return !1;
-            D.splice(0, 0, D.splice(i, 1)[0]), B(), M && N.default.resume(), k()
+            D.splice(0, 0, D.splice(i, 1)[0]), k(), M && N.default.resume(), B()
         },
         DISPATCH_APPLICATION_REMOVE_FINISHED: Y,
         DISPATCH_APPLICATION_STATE_UPDATE: function(e) {
             let {
                 state: t
             } = e;
-            !U && (U = !0, B(), !M && N.default.resume());
+            !U && (U = !0, k(), !M && N.default.resume());
             let n = M;
             M = t.paused, y = t.currentTask, P = t.nextTask;
             let i = !1;
@@ -211,7 +211,7 @@ function(e, t, n) {
                     return i = !0, !1
                 }
                 return !0
-            }), B(), (i || n !== M) && k()
+            }), k(), (i || n !== M) && B()
         },
         DISPATCH_APPLICATION_ERROR: function(e) {
             let {
@@ -230,7 +230,7 @@ function(e, t, n) {
                             application_id: t,
                             branch_id: n
                         } = e;
-                        x(t, n)
+                        F(t, n)
                     }
                 }
             }

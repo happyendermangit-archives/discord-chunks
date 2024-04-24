@@ -33,9 +33,9 @@ function(e, t, n) {
     let b = (0, _.cssValueToNumber)(c.default.EXPRESSION_SUGGESTIONS_CONTAINER_PADDING),
         G = (0, _.cssValueToNumber)(c.default.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_SIZE),
         w = 2 * G + (0, _.cssValueToNumber)(c.default.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_MARGIN) + 2 * b,
-        k = () => Promise.resolve();
+        B = () => Promise.resolve();
 
-    function B(e) {
+    function k(e) {
         let {
             isFocused: t,
             isHidden: n,
@@ -86,7 +86,7 @@ function(e, t, n) {
             onSelectSticker: o,
             stickerIconVisible: _ = !1,
             submitButtonVisible: c = !1
-        } = e, p = a.useContext(f.default), [O, L] = a.useState(null), [b, G] = a.useState(!1), [F, V] = a.useState(null), x = (0, S.useExpressionPickerStore)(e => null != e.activeView), H = a.useRef(null), [Y, j] = a.useState(""), [W, K] = a.useState(""), [z, X] = a.useState(!1), [Q, q] = a.useState(!1), Z = (0, v.useStickerSuggestionResults)(Y, b, i), {
+        } = e, p = a.useContext(f.default), [O, L] = a.useState(null), [b, G] = a.useState(!1), [V, x] = a.useState(null), F = (0, S.useExpressionPickerStore)(e => null != e.activeView), H = a.useRef(null), [Y, j] = a.useState(""), [W, K] = a.useState(""), [z, X] = a.useState(!1), [Q, q] = a.useState(!1), Z = (0, v.useStickerSuggestionResults)(Y, b, i), {
             analyticsLocations: J
         } = (0, T.default)(I.default.EXPRESSION_SUGGESTIONS), {
             handleTextChange: $,
@@ -112,7 +112,7 @@ function(e, t, n) {
                 p.removeListener("text-changed", $), p.removeListener("autocomplete-visibility-change", e), p.removeListener("selection-changed", t)
             }
         }, [$, n, p]), a.useLayoutEffect(() => {
-            null == O && V(null)
+            null == O && x(null)
         }, [O]);
         let [et, en] = a.useState(!1);
         a.useLayoutEffect(() => {
@@ -122,7 +122,7 @@ function(e, t, n) {
             })
         }, [r]);
         let ei = Z.length > 0,
-            er = et && !x && !z && !b && !Q && ei,
+            er = et && !F && !z && !b && !Q && ei,
             {
                 stickersNavigator: es
             } = function(e) {
@@ -140,8 +140,8 @@ function(e, t, n) {
                 }, [s]), E = (0, u.default)({
                     id: "expression-suggestions-stickers",
                     isEnabled: !0,
-                    scrollToStart: k,
-                    scrollToEnd: k,
+                    scrollToStart: B,
+                    scrollToEnd: B,
                     orientation: d.Orientations.HORIZONTAL,
                     setFocus: c,
                     useVirtualFocus: !0
@@ -178,7 +178,7 @@ function(e, t, n) {
                 focusedSuggestionType: O,
                 setFocusedSuggestionType: L,
                 setHasDismissed: G,
-                setFocusedStickerListItem: V,
+                setFocusedStickerListItem: x,
                 setTextInputValue: j
             }),
             ea = (e, t) => {
@@ -238,7 +238,7 @@ function(e, t, n) {
                                         t.current = e
                                     },
                                     onMouseLeave: () => {
-                                        null == O && V(null)
+                                        null == O && x(null)
                                     },
                                     tabIndex: eu ? -1 : n,
                                     ...i,
@@ -247,13 +247,13 @@ function(e, t, n) {
                                             sticker: n,
                                             sendability: i
                                         } = e;
-                                        return (0, s.jsx)(B, {
-                                            isFocused: F === "".concat(t),
+                                        return (0, s.jsx)(k, {
+                                            isFocused: V === "".concat(t),
                                             isHidden: eu,
                                             sendability: i,
                                             listIndex: t,
                                             onMouseOver: () => {
-                                                es.setFocus("".concat(t)), V("".concat(t))
+                                                es.setFocus("".concat(t)), x("".concat(t))
                                             },
                                             onSelectSticker: ea,
                                             sticker: n
@@ -274,8 +274,8 @@ function(e, t, n) {
                                     maxWidth: w
                                 },
                                 variant: "text-sm/normal",
-                                children: null != F ? P.default.Messages.EXPRESSION_SUGGESTIONS_STICKER_NAME.format({
-                                    stickerName: null === (t = Z[+F]) || void 0 === t ? void 0 : t.sticker.name
+                                children: null != V ? P.default.Messages.EXPRESSION_SUGGESTIONS_STICKER_NAME.format({
+                                    stickerName: null === (t = Z[+V]) || void 0 === t ? void 0 : t.sticker.name
                                 }) : P.default.Messages.EXPRESSION_SUGGESTIONS_STICKER_SHORT_NAV_PROMPT.format({
                                     upHook: (e, t) => (0, s.jsx)(E.KeyCombo, {
                                         shortcut: "up",

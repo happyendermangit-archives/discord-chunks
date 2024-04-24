@@ -38,11 +38,11 @@ function(e, t, n) {
     let b = S.default.get(P.PlatformTypes.SPOTIFY),
         G = "hm://pusher/v1/connections/",
         w = 30 * v.default.Millis.SECOND,
-        k = 30 * v.default.Millis.SECOND,
-        B = 5 * v.default.Millis.MINUTE,
-        F = 5 * v.default.Millis.SECOND,
-        V = 1.5 * v.default.Millis.SECOND,
-        x = 1 * v.default.Millis.MINUTE,
+        B = 30 * v.default.Millis.SECOND,
+        k = 5 * v.default.Millis.MINUTE,
+        V = 5 * v.default.Millis.SECOND,
+        x = 1.5 * v.default.Millis.SECOND,
+        F = 1 * v.default.Millis.MINUTE,
         H = 3 * v.default.Millis.SECOND;
     (l = a || (a = {})).PLAYER_STATE_CHANGED = "PLAYER_STATE_CHANGED", l.DEVICE_STATE_CHANGED = "DEVICE_STATE_CHANGED";
     let Y = {
@@ -169,7 +169,7 @@ function(e, t, n) {
         constructor(e, t) {
             U(this, "accessToken", void 0), U(this, "accountId", void 0), U(this, "connectionId", void 0), U(this, "isPremium", void 0), U(this, "pingInterval", void 0), U(this, "backoff", void 0), U(this, "socket", void 0), U(this, "_requestedDisconnect", !1), U(this, "_requestedConnect", !1), U(this, "handleDeviceStateChange", d().throttle(() => {
                 (0, M.getDevices)(this.accountId, this.accessToken), ef(this.accountId, this.accessToken)
-            }, H)), this.accountId = e, this.accessToken = t, this.pingInterval = new I.Interval, this.backoff = new _.default(void 0, x), this.connect()
+            }, H)), this.accountId = e, this.accessToken = t, this.pingInterval = new I.Interval, this.backoff = new _.default(void 0, F), this.connect()
         }
     }
 
@@ -284,7 +284,7 @@ function(e, t, n) {
                     checkSoundSharing: !0,
                     checkSoundboardSounds: !1
                 });
-            t && n && null != i ? (K.start(k, eE, !1), z.stop()) : z.start(100, () => K.stop(), !1)
+            t && n && null != i ? (K.start(B, eE, !1), z.stop()) : z.start(100, () => K.stop(), !1)
         }
         return !1
     }
@@ -380,7 +380,7 @@ function(e, t, n) {
                 let {
                     userId: e
                 } = r, t = er(e);
-                if (null == t) return X.start(B, () => {
+                if (null == t) return X.start(k, () => {
                     null != r && r.userId === e && (0, h.default)()
                 }), !1;
                 X.stop();
@@ -536,7 +536,7 @@ function(e, t, n) {
                     null == e ? (J[t].push(l), _ = !0) : !(0, E.default)(e, l) && (Object.assign(e, l), _ = !0), eu(t, l.id)
                 } else J[t] = [l], _ = !0
             }
-            n ? null == et || et.start(k, eE) : (a = null, null == et || et.stop());
+            n ? null == et || et.start(B, eE) : (a = null, null == et || et.stop());
             let c = p.default.getAccount(t, P.PlatformTypes.SPOTIFY);
             if (null == c) return _;
             let I = $[t],
@@ -547,7 +547,7 @@ function(e, t, n) {
                         let n = Date.now(),
                             i = null != e ? e.startTime : 0,
                             r = n - t;
-                        return Math.abs(r - i) > V ? r : i
+                        return Math.abs(r - i) > x ? r : i
                     }(I, o),
                     context: u,
                     repeat: s
@@ -555,7 +555,7 @@ function(e, t, n) {
                 S = null != l && null != r && 0 === o && !n;
             !S && ($[t] = f);
             let A = i;
-            if (i = d().values($).find(e => null != e), eI(N.default.getId()), null == a || S ? Q.stop() : Q.start(a.duration - o + F, () => ei(c.id)), null != r && (!n && o > 0 || null == l || null != f && r.trackId !== f.track.id) ? (W.info("Listen along active but playback stopped or track changed. Stopping listen along in ".concat(F, "ms")), q.start(F, () => {
+            if (i = d().values($).find(e => null != e), eI(N.default.getId()), null == a || S ? Q.stop() : Q.start(a.duration - o + V, () => ei(c.id)), null != r && (!n && o > 0 || null == l || null != f && r.trackId !== f.track.id) ? (W.info("Listen along active but playback stopped or track changed. Stopping listen along in ".concat(V, "ms")), q.start(V, () => {
                     W.info("Stopping listening along"), (0, h.default)(), ei(c.id)
                 })) : q.isStarted() && (W.info("Listen along stop cancelled as playback of track resumed"), q.stop()), A === i || null == I && null == f || null != I && null != f && I.track.id === f.track.id && I.startTime === f.startTime) return _;
             null != a && (T.default.dispatch({
@@ -648,7 +648,7 @@ function(e, t, n) {
                     sourceId: e,
                     sound: n
                 } = null == t ? void 0 : t.desktopSettings;
-                null != e && m.default.getObservedAppNameForWindow(e) === b.name && n ? (et = new I.Interval).start(k, eE) : et = null
+                null != e && m.default.getObservedAppNameForWindow(e) === b.name && n ? (et = new I.Interval).start(B, eE) : et = null
             }
         }
     });

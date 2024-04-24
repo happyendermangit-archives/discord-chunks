@@ -29,11 +29,11 @@ function(e, t, n) {
         b = n("836157"),
         G = n("166884"),
         w = n("924371"),
-        k = n("894180"),
-        B = n("86614"),
-        F = n("498600"),
-        V = n("631610"),
-        x = n("951958"),
+        B = n("894180"),
+        k = n("86614"),
+        V = n("498600"),
+        x = n("631610"),
+        F = n("951958"),
         H = n("529558"),
         Y = n("636458"),
         j = n("441167"),
@@ -149,11 +149,11 @@ function(e, t, n) {
         eb = !1,
         eG = !1,
         ew = !1,
-        ek = eT.DISABLED_DEVICE_ID,
-        eB = !1,
-        eF = !1,
+        eB = eT.DISABLED_DEVICE_ID,
+        ek = !1,
         eV = !1,
         ex = !1,
+        eF = !1,
         eH = null,
         eY = !1,
         ej = !1,
@@ -220,7 +220,7 @@ function(e, t, n) {
         let r = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ew,
             a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s,
             o = s;
-        if ((null == o ? void 0 : o.desktopSource) != null && o.desktopSource.id !== (null == a ? void 0 : null === (e = a.desktopSource) || void 0 === e ? void 0 : e.id) && (null != o.desktopSource.soundshareId && (0, $.isWindows)() && p.cancelAttachToProcess(o.desktopSource.soundshareId), eO.setGoLiveSource(null, eD)), (null == o ? void 0 : o.cameraSource) != null && (o.cameraSource.videoDeviceGuid !== (null == a ? void 0 : null === (t = a.cameraSource) || void 0 === t ? void 0 : t.videoDeviceGuid) || o.cameraSource.audioDeviceGuid !== (null == a ? void 0 : null === (n = a.cameraSource) || void 0 === n ? void 0 : n.audioDeviceGuid)) && eO.setGoLiveSource(null, eD), (ew || r) && (ek = (ew = r) ? tl(ey, e4().videoDeviceId) : eT.DISABLED_DEVICE_ID, eO.setVideoInputDevice(ek)), s = a, null != a) {
+        if ((null == o ? void 0 : o.desktopSource) != null && o.desktopSource.id !== (null == a ? void 0 : null === (e = a.desktopSource) || void 0 === e ? void 0 : e.id) && (null != o.desktopSource.soundshareId && (0, $.isWindows)() && p.cancelAttachToProcess(o.desktopSource.soundshareId), eO.setGoLiveSource(null, eD)), (null == o ? void 0 : o.cameraSource) != null && (o.cameraSource.videoDeviceGuid !== (null == a ? void 0 : null === (t = a.cameraSource) || void 0 === t ? void 0 : t.videoDeviceGuid) || o.cameraSource.audioDeviceGuid !== (null == a ? void 0 : null === (n = a.cameraSource) || void 0 === n ? void 0 : n.audioDeviceGuid)) && eO.setGoLiveSource(null, eD), (ew || r) && (eB = (ew = r) ? tl(ey, e4().videoDeviceId) : eT.DISABLED_DEVICE_ID, eO.setVideoInputDevice(eB)), s = a, null != a) {
             let e = {
                 resolution: a.quality.resolution,
                 frameRate: a.quality.frameRate
@@ -228,7 +228,7 @@ function(e, t, n) {
             if (null != a.desktopSource) {
                 let {
                     hdrCaptureMode: t
-                } = F.default.getCurrentConfig({
+                } = V.default.getCurrentConfig({
                     location: "f627ab_2"
                 }, {
                     autoTrackExposure: !1
@@ -491,7 +491,7 @@ function(e, t, n) {
             eO.on(S.MediaEngineEvent.Connection, e => {
                 let {
                     maxSyncDelayOverride: t
-                } = x.default.getCurrentConfig({
+                } = F.default.getCurrentConfig({
                     location: "f627ab_3"
                 }, {
                     autoTrackExposure: !1
@@ -521,7 +521,7 @@ function(e, t, n) {
                     (0, $.isWindows)() && e.setExperimentFlag(eT.ExperimentFlags.SIGNAL_H265_DECODE_SUPPORT, !0);
                     let {
                         signalH265SupportNvenc: t
-                    } = B.default.getCurrentConfig({
+                    } = k.default.getCurrentConfig({
                         location: "f627ab_9"
                     }, {
                         autoTrackExposure: !0
@@ -529,7 +529,7 @@ function(e, t, n) {
                     t && n.hardwareH264 && e.setExperimentFlag(eT.ExperimentFlags.SIGNAL_H265_SUPPORT, !0);
                     let {
                         signalH265SupportAMD: i
-                    } = k.default.getCurrentConfig({
+                    } = B.default.getCurrentConfig({
                         location: "f627ab_9"
                     }, {
                         autoTrackExposure: !0
@@ -557,7 +557,7 @@ function(e, t, n) {
                 d && e.setExperimentFlag(eT.ExperimentFlags.SIGNAL_AV1_SUPPORT, !0);
                 let {
                     allowSettingFullbandAndroid: _
-                } = V.default.getCurrentConfig({
+                } = x.default.getCurrentConfig({
                     location: "f627ab_14"
                 }, {
                     autoTrackExposure: !0
@@ -596,8 +596,8 @@ function(e, t, n) {
                         userId: t,
                         speakingFlags: n
                     })
-                }), e.context === eT.MediaEngineContextTypes.DEFAULT && (eF = !1, e.on(S.BaseConnectionEvent.SpeakingWhileMuted, () => {
-                    eF = !0, i.emitChange()
+                }), e.context === eT.MediaEngineContextTypes.DEFAULT && (eV = !1, e.on(S.BaseConnectionEvent.SpeakingWhileMuted, () => {
+                    eV = !0, i.emitChange()
                 })), e.on(S.BaseConnectionEvent.DesktopSourceEnd, () => {
                     m.default.dispatch({
                         type: "MEDIA_ENGINE_SET_GO_LIVE_SOURCE",
@@ -859,10 +859,10 @@ function(e, t, n) {
             }, {
                 autoTrackExposure: !0
             });
-            return !!e && eB
+            return !!e && ek
         }
         notifyMuteUnmuteSoundWasSkipped() {
-            eB = !1
+            ek = !1
         }
         isHardwareMute() {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eT.MediaEngineContextTypes.DEFAULT;
@@ -873,7 +873,7 @@ function(e, t, n) {
             return !this.isSupported() || e4(e).deaf
         }
         isVideoEnabled() {
-            return ew && ex
+            return ew && eF
         }
         isVideoAvailable() {
             return Object.values(ey).some(e => {
@@ -1079,7 +1079,7 @@ function(e, t, n) {
             return e4().openH264
         }
         getEverSpeakingWhileMuted() {
-            return eF
+            return eV
         }
         supportsScreenSoundshare() {
             return (0, $.isMac)() && eO.supports(eT.Features.SOUNDSHARE) && T().satisfies(null === N.default || void 0 === N.default ? void 0 : N.default.os.release, ec.DARWIN_SCKIT_AUDIO_VERSION) && tn() || (0, $.isWindows)() && eO.supports(eT.Features.SCREEN_SOUNDSHARE) && this.getExperimentalSoundshare()
@@ -1196,7 +1196,7 @@ function(e, t, n) {
                 deaf: r
             } = e4(t);
             if (t === eT.MediaEngineContextTypes.DEFAULT && (K.default.requestPermission(eE.NativePermissionTypes.AUDIO), eb)) return !1;
-            !(i = !r && !i) && (r = !1), n && (eB = !0), tr({
+            !(i = !r && !i) && (r = !1), n && (ek = !0), tr({
                 mute: i,
                 deaf: r
             }, t), eO.eachConnection(e5)
@@ -1433,12 +1433,12 @@ function(e, t, n) {
                     eO.setAudioOutputDevice(t)
                 }
             }(n), ! function(e) {
-                ex = e.length > 0;
+                eF = e.length > 0;
                 let t = ey;
                 if (ey = to(e, ef.default.Messages.NO_VIDEO_DEVICES), ew && !E().isEqual(ey, t)) {
                     var n;
-                    let e = void 0 !== ey[ek],
-                        i = ek === eT.DEFAULT_DEVICE_ID && (null === (n = t[eT.DEFAULT_DEVICE_ID]) || void 0 === n ? void 0 : n.disabled);
+                    let e = void 0 !== ey[eB],
+                        i = eB === eT.DEFAULT_DEVICE_ID && (null === (n = t[eT.DEFAULT_DEVICE_ID]) || void 0 === n ? void 0 : n.disabled);
                     e8(e || i)
                 }
             }(i)
@@ -1607,10 +1607,10 @@ function(e, t, n) {
             let {
                 state: t
             } = e, n = D.default.isEnabled();
-            if (t === e_.AppStates.BACKGROUND && ew && !n) eV = !0, e8(!1);
+            if (t === e_.AppStates.BACKGROUND && ew && !n) ex = !0, e8(!1);
             else {
-                if (t !== e_.AppStates.ACTIVE || !eV) return !1;
-                eV = !1, e8(!0)
+                if (t !== e_.AppStates.ACTIVE || !ex) return !1;
+                ex = !1, e8(!0)
             }
             return !0
         },
@@ -1715,7 +1715,7 @@ function(e, t, n) {
             null != a && a.desktopSource.id !== _.desktopSource.id && (eO.setClipsSource(null), (0, $.isWindows)() && null != a.desktopSource.soundshareId && p.cancelAttachToProcess(a.desktopSource.soundshareId)), null != l && t_(l, u), a = _;
             let {
                 hdrCaptureMode: c
-            } = F.default.getCurrentConfig({
+            } = V.default.getCurrentConfig({
                 location: "f627ab_12"
             }, {
                 autoTrackExposure: !1

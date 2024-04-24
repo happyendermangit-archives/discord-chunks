@@ -44,24 +44,24 @@ function(e, t, n) {
             quest: N,
             width: p,
             applicationStream: O,
-            position: k,
-            closePopout: B
-        } = e, F = (0, l.useStateFromStores)([m.default], () => {
+            position: B,
+            closePopout: k
+        } = e, V = (0, l.useStateFromStores)([m.default], () => {
             var e;
             return null !== (e = m.default.getChannel(null == O ? void 0 : O.channelId)) && void 0 !== e ? e : null
-        }), V = (0, M.useHandleClaimQuestsReward)({
+        }), x = (0, M.useHandleClaimQuestsReward)({
             quest: N,
             location: g.QuestContent.MEMBERS_LIST
-        }), x = (0, C.useIsQuestExpired)(N), H = (null == N ? void 0 : null === (t = N.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, Y = (null == N ? void 0 : null === (S = N.userStatus) || void 0 === S ? void 0 : S.enrolledAt) != null, j = (null == N ? void 0 : null === (h = N.userStatus) || void 0 === h ? void 0 : h.completedAt) != null, W = (0, l.useStateFromStores)([A.default], () => A.default.getState().theme), K = (0, u.isThemeDark)(W) ? P.ThemeTypes.DARK : P.ThemeTypes.LIGHT, z = (0, l.useStateFromStores)([f.default], () => f.default.useReducedMotion), {
+        }), F = (0, C.useIsQuestExpired)(N), H = (null == N ? void 0 : null === (t = N.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, Y = (null == N ? void 0 : null === (S = N.userStatus) || void 0 === S ? void 0 : S.enrolledAt) != null, j = (null == N ? void 0 : null === (h = N.userStatus) || void 0 === h ? void 0 : h.completedAt) != null, W = (0, l.useStateFromStores)([A.default], () => A.default.getState().theme), K = (0, u.isThemeDark)(W) ? P.ThemeTypes.DARK : P.ThemeTypes.LIGHT, z = (0, l.useStateFromStores)([f.default], () => f.default.useReducedMotion), {
             ref: X,
             height: Q
         } = (0, I.default)(), [q, Z] = r.useState(z), J = (0, T.useWindowDispatch)(), $ = (0, a.useListContainerScrollerRef)();
         r.useEffect(() => {
             let e = $.current;
-            return null == e || e.addEventListener("scroll", B), () => {
-                null == e || e.removeEventListener("scroll", B)
+            return null == e || e.addEventListener("scroll", k), () => {
+                null == e || e.removeEventListener("scroll", k)
             }
-        }, [B, $]);
+        }, [k, $]);
         let ee = (0, s.useSpring)({
                 from: {
                     height: 0
@@ -87,8 +87,8 @@ function(e, t, n) {
             en = () => {
                 J.dispatch(y.ComponentActions.POPOUT_CLOSE)
             },
-            ei = "top" === k ? "".concat("4px", " ").concat("4px", " 0 0") : "0 0 ".concat("4px", " ").concat("4px");
-        if (null == N || x || H && !w(O, F)) return null;
+            ei = "top" === B ? "".concat("4px", " ").concat("4px", " 0 0") : "0 0 ".concat("4px", " ").concat("4px");
+        if (null == N || F || H && !w(O, V)) return null;
         let er = () => {
                 (0, R.trackQuestContentClicked)({
                     questId: N.id,
@@ -118,25 +118,25 @@ function(e, t, n) {
                 e.stopPropagation(), er()
             },
             eo = () => {
-                if (w(O, F) && null != F) return (0, R.trackQuestContentClicked)({
+                if (w(O, V) && null != V) return (0, R.trackQuestContentClicked)({
                     questId: N.id,
                     questContent: g.QuestContent.MEMBERS_LIST,
                     questContentCTA: R.QuestContentCTA.WATCH_STREAM,
                     trackGuildAndChannelMetadata: !0
-                }), _.default.selectVoiceChannel(F.id), (0, c.watchStreamAndTransitionToStream)(O);
+                }), _.default.selectVoiceChannel(V.id), (0, c.watchStreamAndTransitionToStream)(O);
                 es()
             },
             el = j && !H ? {
                 headerText: U.default.Messages.QUESTS_MEMBERS_LIST_CLAIM_REWARD,
                 ctaText: U.default.Messages.QUESTS_CLAIM_REWARD,
-                handleClickCta: V,
+                handleClickCta: x,
                 tileAssetType: "reward"
             } : Y ? {
                 headerText: U.default.Messages.QUESTS_MEMBERS_LIST_FINISH,
                 ctaText: U.default.Messages.QUESTS_MEMBERS_LIST_PROGRESS_CTA,
                 handleClickCta: es,
                 tileAssetType: "reward"
-            } : w(O, F) ? {
+            } : w(O, V) ? {
                 headerText: U.default.Messages.QUESTS_MEMBERS_LIST_AVAILBLE,
                 ctaText: U.default.Messages.QUESTS_MEMBERS_LIST_WATCH_CTA,
                 handleClickCta: eo,

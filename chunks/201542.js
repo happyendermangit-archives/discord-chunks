@@ -48,11 +48,11 @@ function(e, t, n) {
                 onVolumeHide: b,
                 onPlay: G,
                 onPause: w,
-                onError: k
+                onError: B
             } = e,
-            B = r.useRef(null),
-            [F, V] = r.useState(0),
-            [x, H] = r.useState(P),
+            k = r.useRef(null),
+            [V, x] = r.useState(0),
+            [F, H] = r.useState(P),
             [Y, j] = r.useState(!1),
             [W, K] = r.useState(!1),
             [z, X] = r.useState(!1),
@@ -79,11 +79,11 @@ function(e, t, n) {
                 !z && es()
             }, [es, z]),
             eo = r.useCallback(() => {
-                let e = B.current;
+                let e = k.current;
                 if (null == e) return;
                 let t = e.error;
-                null == k || k(t)
-            }, [k]),
+                null == B || B(t)
+            }, [B]),
             el = r.useCallback(e => {
                 let t = (0, S.perceptualToAmplitude)(e, 1);
                 j(0 === t), ee(t), null == v || v(t)
@@ -95,14 +95,14 @@ function(e, t, n) {
                 X(!0)
             }, []),
             e_ = r.useCallback(() => {
-                X(!1), F === x && es()
-            }, [F, x, es]),
+                X(!1), V === F && es()
+            }, [V, F, es]),
             ec = r.useCallback(e => {
-                let t = B.current;
-                if (null == x || null == t) return;
-                let n = e * x;
-                V(n), t.currentTime = n, q(!0), clearTimeout(et.current), et.current = void 0
-            }, [x]);
+                let t = k.current;
+                if (null == F || null == t) return;
+                let n = e * F;
+                x(n), t.currentTime = n, q(!0), clearTimeout(et.current), et.current = void 0
+            }, [F]);
         r.useEffect(() => {
             !Q && W && q(!0)
         }, [W, Q]);
@@ -111,14 +111,14 @@ function(e, t, n) {
             if (Q || W) {
                 if (W) {
                     var e, t;
-                    eE.current = performance.now(), null == G || G(!1, F, (null !== (t = null === (e = B.current) || void 0 === e ? void 0 : e.duration) && void 0 !== t ? t : 0) * f.default.Millis.SECOND)
+                    eE.current = performance.now(), null == G || G(!1, V, (null !== (t = null === (e = k.current) || void 0 === e ? void 0 : e.duration) && void 0 !== t ? t : 0) * f.default.Millis.SECOND)
                 } else {
                     let e = performance.now(),
                         t = eE.current;
-                    null == w || w(F, null != t ? (e - t) / 1e3 : 0), eE.current = null
+                    null == w || w(V, null != t ? (e - t) / 1e3 : 0), eE.current = null
                 }
             }
-        }, [W]), t = B, n = W, s = V, r.useEffect(() => {
+        }, [W]), t = k, n = W, s = x, r.useEffect(() => {
             let e;
             return ! function i() {
                 let r = t.current;
@@ -144,7 +144,7 @@ function(e, t, n) {
             eT = W ? m.default.Messages.PAUSE : m.default.Messages.PLAY;
         g = "Safari" === platform.name ? (0, i.jsx)(r.Suspense, {
             children: (0, i.jsx)(p, {
-                ref: B,
+                ref: k,
                 className: N.audioElement,
                 src: L,
                 preload: Z,
@@ -156,7 +156,7 @@ function(e, t, n) {
                 volume: $
             })
         }) : (0, i.jsx)(d.default, {
-            ref: B,
+            ref: k,
             className: N.audioElement,
             controls: !1,
             preload: Z,
@@ -200,8 +200,8 @@ function(e, t, n) {
             }), (0, i.jsx)(h.default, {
                 className: N.waveform,
                 waveform: y,
-                currentTime: F,
-                duration: null != x ? x : 1,
+                currentTime: V,
+                duration: null != F ? F : 1,
                 playing: W,
                 played: Q,
                 onDrag: ec,
@@ -209,8 +209,8 @@ function(e, t, n) {
                 onDragEnd: e_
             }), (0, i.jsx)(O, {
                 played: Q,
-                currentTime: F,
-                duration: x
+                currentTime: V,
+                duration: F
             }), (0, i.jsx)(c.default, {
                 className: N.volumeButton,
                 iconClassName: N.volumeButtonIcon,

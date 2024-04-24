@@ -5,7 +5,7 @@ function(e, t, n) {
             return y
         },
         captureQuestsException: function() {
-            return B
+            return k
         },
         getContextualEntrypointHeading: function() {
             return P
@@ -35,7 +35,7 @@ function(e, t, n) {
             return L
         },
         getQuestsFromActivities: function() {
-            return F
+            return V
         },
         getQuestsInstructionsToWinReward: function() {
             return K
@@ -53,10 +53,10 @@ function(e, t, n) {
             return w
         },
         includesTarget: function() {
-            return k
+            return B
         },
         isAssetAnimated: function() {
-            return V
+            return x
         },
         isCollectibleReward: function() {
             return G
@@ -381,11 +381,11 @@ function(e, t, n) {
         return e.rewardsConfig.rewards.some(G)
     }
 
-    function k(e, t) {
+    function B(e, t) {
         return e.targetedContent.includes(t)
     }
 
-    function B(e, t) {
+    function k(e, t) {
         o.default.captureException(e, {
             ...t,
             tags: {
@@ -395,7 +395,7 @@ function(e, t, n) {
         })
     }
 
-    function F(e, t) {
+    function V(e, t) {
         if (null == t || null == e) return null;
         for (let n of t) {
             if (null == n.application_id) continue;
@@ -405,15 +405,15 @@ function(e, t, n) {
         return null
     }
 
-    function V(e) {
+    function x(e) {
         return e.endsWith(".webm") || e.endsWith(".mp4") || e.startsWith("data:video")
     }
-    let x = /\.([a-zA-Z0-9]+)$/,
+    let F = /\.([a-zA-Z0-9]+)$/,
         H = /^data:video\/([a-zA-Z0-9]+)\;/;
 
     function Y(e) {
         var t, n, i, r, s;
-        switch (null !== (s = null === (n = x.exec(e)) || void 0 === n ? void 0 : null === (t = n[1]) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== s ? s : null === (r = H.exec(e)) || void 0 === r ? void 0 : null === (i = r[1]) || void 0 === i ? void 0 : i.toLowerCase()) {
+        switch (null !== (s = null === (n = F.exec(e)) || void 0 === n ? void 0 : null === (t = n[1]) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== s ? s : null === (r = H.exec(e)) || void 0 === r ? void 0 : null === (i = r[1]) || void 0 === i ? void 0 : i.toLowerCase()) {
             case "webm":
                 return "video/webm";
             case "mp4":

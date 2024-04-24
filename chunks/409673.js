@@ -89,11 +89,11 @@ function(e, t, n) {
             className: b,
             focused: G,
             forceSecondaryActions: w = !1,
-            interactive: k = !0,
-            enableSecondaryActions: B = !1,
-            suppressPlaySound: F,
-            onMouseEnter: V,
-            onSelectItem: x,
+            interactive: B = !0,
+            enableSecondaryActions: k = !1,
+            suppressPlaySound: V,
+            onMouseEnter: x,
+            onSelectItem: F,
             analyticsLocations: H,
             buttonOverlay: Y = O.SoundButtonOverlay.PLAY,
             ...j
@@ -129,7 +129,7 @@ function(e, t, n) {
             eu = (0, o.useListItem)(el),
             ed = null != z || null != X,
             e_ = !(0, R.canUseSoundboardSound)(Q, P, U),
-            ec = w || B && !e_;
+            ec = w || k && !e_;
 
         function eE(e) {
             e.stopPropagation(), e.currentTarget.blur(), eo ? (0, N.removeFavoriteSound)(W) : (0, N.addFavoriteSound)(W)
@@ -137,7 +137,7 @@ function(e, t, n) {
 
         function eI() {
             return (0, i.jsx)(M, {
-                disabled: !k && !w,
+                disabled: !B && !w,
                 onClick: eE,
                 text: D.default.Messages.SOUNDBOARD_SOUND_FAVORITE_SOUND.format({
                     emojiName: P.emojiName,
@@ -160,11 +160,11 @@ function(e, t, n) {
                 className: v.buttonOverlay,
                 children: [(0, i.jsx)("div", {
                     className: a()({
-                        [v.buttonOverlayBackground]: !F
+                        [v.buttonOverlayBackground]: !V
                     })
                 }), (0, i.jsxs)("div", {
                     className: v.buttonOverlayActions,
-                    children: [ec && eT, !F && !e_ && (0, i.jsx)(h.default, {
+                    children: [ec && eT, !V && !e_ && (0, i.jsx)(h.default, {
                         className: v.playIcon
                     }), ec && eI()]
                 })]
@@ -177,7 +177,7 @@ function(e, t, n) {
         }, [ea]), (0, i.jsxs)("li", {
             ref: t,
             className: v.soundButtonWrapper,
-            onMouseEnter: V,
+            onMouseEnter: x,
             children: [(0, i.jsxs)(_.ClickableContainer, {
                 ...j,
                 buttonProps: {
@@ -191,23 +191,23 @@ function(e, t, n) {
                 }),
                 className: a()(b, v.soundButton, {
                     [v.playing]: $,
-                    [v.hoverActiveBackground]: F,
-                    [v.soundButtonInteractive]: k,
-                    [v.buttonDisabled]: !k && !w,
+                    [v.hoverActiveBackground]: V,
+                    [v.soundButtonInteractive]: B,
+                    [v.buttonDisabled]: !B && !w,
                     [v.premiumDisabled]: e_ && !w,
-                    [v.buttonDisabledSecondaryActionsEnabled]: !k && w,
-                    [v.focused]: k && G
+                    [v.buttonDisabledSecondaryActionsEnabled]: !B && w,
+                    [v.focused]: B && G
                 }),
                 onClick: function() {
                     if (ea && !ei && (er.current = Math.min(er.current + .01, .1), Math.random() < er.current && ee(en.x, en.y, void 0, void 0, {
                             sprite: L.DUCK_CONFETTI_SPRITE
-                        })), null != x) {
-                        x();
+                        })), null != F) {
+                        F();
                         return
                     }
-                    F || Z(H)
+                    V || Z(H)
                 },
-                onContextMenu: B && !e_ ? q : void 0,
+                onContextMenu: k && !e_ ? q : void 0,
                 children: [(0, i.jsxs)("div", {
                     className: v.soundInfo,
                     "aria-hidden": !0,
@@ -218,7 +218,7 @@ function(e, t, n) {
                         className: v.emoji
                     }), (0, i.jsx)(_.Text, {
                         variant: "text-xs/medium",
-                        color: k ? "header-primary" : "text-muted",
+                        color: B ? "header-primary" : "text-muted",
                         className: a()(v.soundName, {
                             [v.hasEmoji]: ed
                         }),

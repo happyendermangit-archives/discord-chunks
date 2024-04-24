@@ -52,13 +52,13 @@ function(e, t, n) {
         b = new Map,
         G = new Map;
     let w = A.ActivityPanelModes.DISCONNECTED,
-        k = A.FocusedActivityLayouts.RESIZABLE;
+        B = A.FocusedActivityLayouts.RESIZABLE;
 
-    function B(e) {
+    function k(e) {
         return null != e ? e : "0"
     }
 
-    function F(e) {
+    function V(e) {
         var t, n, i;
         let {
             guildId: r,
@@ -91,7 +91,7 @@ function(e, t, n) {
         A.some(e => e === N) && null != v && (D || p === O) && R.set(v.applicationId, {
             ...v,
             ...M
-        }), null != v && s === v.channelId && !A.some(e => e === N) && Array.from(v.userIds).some(e => e === N) ? L.get(s) === o ? L.delete(s) : R.delete(o) : A.some(e => e === N) && (null == v || v.applicationId !== o || v.channelId !== s) && (O === l.default.getSessionId() && !D || (0, T.shouldMountActivityIFrameFromGatewayUpdateWithoutSessionIdCheck)("EmbeddedActivitiesStore")) && (x({
+        }), null != v && s === v.channelId && !A.some(e => e === N) && Array.from(v.userIds).some(e => e === N) ? L.get(s) === o ? L.delete(s) : R.delete(o) : A.some(e => e === N) && (null == v || v.applicationId !== o || v.channelId !== s) && (O === l.default.getSessionId() && !D || (0, T.shouldMountActivityIFrameFromGatewayUpdateWithoutSessionIdCheck)("EmbeddedActivitiesStore")) && (F({
             channelId: s,
             applicationId: o,
             instanceId: _
@@ -99,19 +99,19 @@ function(e, t, n) {
             channelId: s
         }));
         let y = (null !== (n = g.get(s)) && void 0 !== n ? n : []).filter(e => e.applicationId !== o),
-            P = B(r),
+            P = k(r),
             U = (null !== (i = C.get(P)) && void 0 !== i ? i : []).filter(e => !(e.applicationId === o && e.channelId === s));
         A.length > 0 && (y.push(M), U.push(M)), g.set(s, y), C.set(P, U)
     }
 
-    function V(e) {
+    function x(e) {
         e.embedded_activities.forEach(t => {
             let {
                 channel_id: n,
                 embedded_activity: i,
                 connections: r
             } = t;
-            F({
+            V({
                 guildId: e.id,
                 channelId: n,
                 applicationId: i.application_id,
@@ -124,7 +124,7 @@ function(e, t, n) {
         })
     }
 
-    function x(e) {
+    function F(e) {
         var t, n;
         let {
             channelId: r,
@@ -200,16 +200,16 @@ function(e, t, n) {
         }
         getShelfActivities(e) {
             var t;
-            let n = B(e);
+            let n = k(e);
             return null !== (t = v.get(n)) && void 0 !== t ? t : []
         }
         getShelfFetchStatus(e) {
-            let t = B(e);
+            let t = k(e);
             return M.get(t)
         }
         shouldFetchShelf(e) {
             var t, n;
-            let i = B(e),
+            let i = k(e),
                 r = null !== (t = M.get(i)) && void 0 !== t ? t : {
                     isFetching: !1
                 },
@@ -238,7 +238,7 @@ function(e, t, n) {
             return w
         }
         getFocusedLayout() {
-            return k
+            return B
         }
         getCurrentEmbeddedActivity() {
             var e;
@@ -302,13 +302,13 @@ function(e, t, n) {
             let {
                 guilds: t
             } = e;
-            g.clear(), C.clear(), t.forEach(e => V(e))
+            g.clear(), C.clear(), t.forEach(e => x(e))
         },
         GUILD_CREATE: function(e) {
             let {
                 guild: t
             } = e;
-            V(t)
+            x(t)
         },
         CALL_CREATE: function(e) {
             let {
@@ -322,7 +322,7 @@ function(e, t, n) {
                         embedded_activity: n,
                         connections: i
                     } = e;
-                    F({
+                    V({
                         guildId: null,
                         channelId: t,
                         applicationId: n.application_id,
@@ -343,7 +343,7 @@ function(e, t, n) {
             let n = t.guild_id;
             if (null != n) {
                 var i;
-                let e = B(n),
+                let e = k(n),
                     r = (null !== (i = C.get(e)) && void 0 !== i ? i : []).filter(e => e.channelId !== t.id);
                 C.set(e, r)
             }
@@ -370,7 +370,7 @@ function(e, t, n) {
                 channelId: t,
                 applicationId: n
             } = e;
-            x({
+            F({
                 channelId: t,
                 applicationId: n
             })
@@ -388,7 +388,7 @@ function(e, t, n) {
                 embeddedActivity: i,
                 connections: r
             } = e;
-            F({
+            V({
                 guildId: t,
                 channelId: n,
                 applicationId: i.application_id,
@@ -406,7 +406,7 @@ function(e, t, n) {
                 location: i,
                 participants: r
             } = e;
-            null != u.default.getChannel(i.channel_id) && F({
+            null != u.default.getChannel(i.channel_id) && V({
                 guildId: i.guild_id,
                 channelId: i.channel_id,
                 location: i,
@@ -443,7 +443,7 @@ function(e, t, n) {
         EMBEDDED_ACTIVITY_FETCH_SHELF: function(e) {
             let {
                 guildId: t
-            } = e, n = B(t), i = M.get(n);
+            } = e, n = k(t), i = M.get(n);
             M.set(n, {
                 isFetching: !0,
                 lastFetchTimestampMs: null == i ? void 0 : i.lastFetchTimestampMs
@@ -453,7 +453,7 @@ function(e, t, n) {
             let {
                 guildId: t,
                 activities: n
-            } = e, i = B(t);
+            } = e, i = k(t);
             v.set(i, n);
             let r = Date.now();
             ! function(e) {
@@ -487,7 +487,7 @@ function(e, t, n) {
         EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL: function(e) {
             let {
                 guildId: t
-            } = e, n = B(t), i = M.get(n);
+            } = e, n = k(t), i = M.get(n);
             M.set(n, {
                 isFetching: !1,
                 lastFetchTimestampMs: null == i ? void 0 : i.lastFetchTimestampMs
@@ -515,7 +515,7 @@ function(e, t, n) {
             let {
                 focusedActivityLayout: t
             } = e;
-            k = t
+            B = t
         },
         CHANNEL_SELECT: function(e) {
             let {

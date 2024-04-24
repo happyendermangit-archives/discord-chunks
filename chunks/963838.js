@@ -8,16 +8,16 @@ function(e, t, n) {
             return b
         },
         getEffectAnnouncement: function() {
-            return x
-        },
-        getEffectUrl: function() {
             return F
         },
+        getEffectUrl: function() {
+            return V
+        },
         getResizedEmojiData: function() {
-            return k
+            return B
         },
         sampleAnimationId: function() {
-            return B
+            return k
         }
     });
     var i = n("392711"),
@@ -63,7 +63,7 @@ function(e, t, n) {
             [P.VoiceChannelEffectAnimationType.BASIC]: G.BASIC,
             [P.VoiceChannelEffectAnimationType.PREMIUM]: G.PREMIUM
         },
-        k = r().memoize(e => new Promise(t => {
+        B = r().memoize(e => new Promise(t => {
             let n = new Image;
             n.src = e, n.crossOrigin = "Anonymous", n.onload = () => {
                 let i = P.EMOJI_SIZE * (0, D.getDevicePixelRatio)();
@@ -75,7 +75,7 @@ function(e, t, n) {
                 }
             }
         })),
-        B = (e, t) => {
+        k = (e, t) => {
             let n = w[e];
             if (null != t && e === P.VoiceChannelEffectAnimationType.PREMIUM) {
                 let e = t.end + 1;
@@ -84,7 +84,7 @@ function(e, t, n) {
             return Math.floor(Math.random() * n.length)
         };
 
-    function F(e) {
+    function V(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : P.EMOJI_SIZE;
         if (null != e.id) {
             var n;
@@ -99,18 +99,18 @@ function(e, t, n) {
         return null != r ? y.default.getURL(r.surrogates) : ""
     }
 
-    function V(e, t) {
+    function x(e, t) {
         return r()(e).map(e => {
             var n;
             return null !== (n = e[t]) && void 0 !== n ? n : null
         }).filter(e => null != e).uniq().value()
     }
 
-    function x(e) {
+    function F(e) {
         var t, n, i, r, s, a;
         if (e.length < 1) return "";
-        let o = V(e, "userId"),
-            l = V(e, "emojiName"),
+        let o = x(e, "userId"),
+            l = x(e, "emojiName"),
             u = l.length < 2 ? null !== (t = null == l ? void 0 : l[0]) && void 0 !== t ? t : "" : l.join(", ");
         if (o.length < 1) return "";
         if (1 === o.length) return U.default.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_SINGLE.format({

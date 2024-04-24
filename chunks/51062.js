@@ -45,49 +45,49 @@ function(e, t, n) {
             hidePersonalInformation: c.default.hidePersonalInformation
         }), [g, L, U]), {
             activeCommand: w,
-            activeCommandOption: k
+            activeCommandOption: B
         } = (0, s.useStateFromStoresObject)([o.default], () => ({
             activeCommand: o.default.getActiveCommand(g.id),
             activeCommandOption: o.default.getActiveOption(g.id)
-        })), B = (0, T.default)({
+        })), k = (0, T.default)({
             navId: "channel-autocomplete",
             scrollerRef: n,
             state: D,
-            onFocus: e => x.setSelectedIndex(e)
-        }), F = null === (A = e.editorRef.current) || void 0 === A ? void 0 : A.getCurrentWord(), V = {
+            onFocus: e => F.setSelectedIndex(e)
+        }), V = null === (A = e.editorRef.current) || void 0 === A ? void 0 : A.getCurrentWord(), x = {
             ...e,
-            navigator: B,
+            navigator: k,
             activeCommand: w,
-            activeCommandOption: k,
+            activeCommandOption: B,
             canMentionUsers: null !== (O = null === (m = L.users) || void 0 === m ? void 0 : m.allowMentioning) && void 0 !== O && O,
             canMentionEveryone: b,
             canMentionClyde: P,
             hidePersonalInformation: G,
             hideMentionDescription: L === l.ChatInputTypes.RULES_INPUT,
             emojiIntention: L === l.ChatInputTypes.RULES_INPUT ? h.EmojiIntention.COMMUNITY_CONTENT : h.EmojiIntention.CHAT,
-            currentWord: null !== (R = null == F ? void 0 : F.word) && void 0 !== R ? R : "",
-            currentWordIsAtStart: (null == F ? void 0 : F.isAtStart) === !0,
-            optionText: null != k ? (0, a.getString)({
-                [k.name]: null !== (C = null === (N = e.editorRef.current) || void 0 === N ? void 0 : N.getCurrentCommandOptionValue()) && void 0 !== C ? C : []
-            }, k.name) : ""
-        }, [x] = i.useState(() => new I.default(V));
+            currentWord: null !== (R = null == V ? void 0 : V.word) && void 0 !== R ? R : "",
+            currentWordIsAtStart: (null == V ? void 0 : V.isAtStart) === !0,
+            optionText: null != B ? (0, a.getString)({
+                [B.name]: null !== (C = null === (N = e.editorRef.current) || void 0 === N ? void 0 : N.getCurrentCommandOptionValue()) && void 0 !== C ? C : []
+            }, B.name) : ""
+        }, [F] = i.useState(() => new I.default(x));
         return i.useEffect(() => {
-            x.updateProps(V)
-        }), i.useImperativeHandle(t, () => x, [x]), i.useEffect(() => {
+            F.updateProps(x)
+        }), i.useImperativeHandle(t, () => F, [F]), i.useEffect(() => {
             let e = e => v(e);
-            return x.on("change", e), x.on("update", M), () => {
-                x.off("change", e), x.off("update", M)
+            return F.on("change", e), F.on("update", M), () => {
+                F.off("change", e), F.off("update", M)
             }
-        }, [M, x]), i.useEffect(() => {
+        }, [M, F]), i.useEffect(() => {
             var e;
             let t = null === (e = D.query) || void 0 === e ? void 0 : e.typeInfo.stores;
             if (null != t) {
-                let e = () => x.queryResults();
+                let e = () => F.queryResults();
                 for (let n of t) n.addChangeListener(e);
                 return () => {
                     for (let n of t) n.removeChangeListener(e)
                 }
             }
-        }, [x, null === (p = D.query) || void 0 === p ? void 0 : p.typeInfo]), [D, x, B]
+        }, [F, null === (p = D.query) || void 0 === p ? void 0 : p.typeInfo]), [D, F, k]
     }
 }

@@ -153,7 +153,7 @@ function(e, t, n) {
         }, {})
     }
 
-    function k(e, t) {
+    function B(e, t) {
         let {
             messagesPendingScan: n,
             attributesByChannelId: i
@@ -183,7 +183,7 @@ function(e, t, n) {
         }), !!(n.length > 0) && (G(n, t), !0)
     }
 
-    function B(e) {
+    function k(e) {
         var t, n, i, r, s, a;
         let {
             message: o
@@ -197,12 +197,12 @@ function(e, t, n) {
             u = T.default.getCurrentSidebarChannelId(l);
         if (!(o.channel_id === l || o.channel_id === u)) return !1;
         let d = S.default.getMessage(o.channel_id, o.id);
-        return null != d && k([d], {
+        return null != d && B([d], {
             isMessageUpdate: !0
         })
     }
 
-    function F(e) {
+    function V(e) {
         var t, n;
         let {
             channelId: i,
@@ -218,12 +218,12 @@ function(e, t, n) {
         if (!u) return !1;
         let _ = null === (n = null == d ? void 0 : d.isPrivate()) || void 0 === n || n,
             c = (null == d ? void 0 : d.memberCount) == null || (null == d ? void 0 : d.memberCount) > 100;
-        return k([r], {
+        return B([r], {
             jitter: _ && c
         })
     }
 
-    function V(e) {
+    function x(e) {
         let {
             channelId: t,
             messages: n
@@ -231,16 +231,16 @@ function(e, t, n) {
         if (!(0, O.isEligibleForExplicitMediaRedaction)() || null == t || null == n) return !1;
         let i = h.default.getChannelId(),
             r = T.default.getCurrentSidebarChannelId(i);
-        return (t === i || t === r) && k(n)
+        return (t === i || t === r) && B(n)
     }
 
-    function x(e) {
+    function F(e) {
         let {
             messages: t
         } = e;
         if (!(0, O.isEligibleForExplicitMediaRedaction)() || null == t) return !1;
         let n = s()(t);
-        return k(o()(n, (e, t) => e.id === t.id && e.channel_id === t.channel_id))
+        return B(o()(n, (e, t) => e.id === t.id && e.channel_id === t.channel_id))
     }
 
     function H(e) {
@@ -248,7 +248,7 @@ function(e, t, n) {
             guildId: t,
             threads: n
         } = e;
-        return !!(null != n && (0, O.isEligibleForExplicitMediaRedaction)()) && A.default.getGuildId() === t && k(m.default.keys(n).map(e => n[e].first_message))
+        return !!(null != n && (0, O.isEligibleForExplicitMediaRedaction)()) && A.default.getGuildId() === t && B(m.default.keys(n).map(e => n[e].first_message))
     }
 
     function Y(e) {
@@ -256,7 +256,7 @@ function(e, t, n) {
             guildId: t,
             firstMessages: n
         } = e;
-        return !!(null != n && (0, O.isEligibleForExplicitMediaRedaction)()) && A.default.getGuildId() === t && k(n, {
+        return !!(null != n && (0, O.isEligibleForExplicitMediaRedaction)()) && A.default.getGuildId() === t && B(n, {
             forceBatchScan: !0
         })
     }
@@ -332,17 +332,17 @@ function(e, t, n) {
         constructor(...e) {
             var t, n, i;
             super(...e), t = this, n = "actions", i = {
-                LOAD_MESSAGES_SUCCESS: V,
+                LOAD_MESSAGES_SUCCESS: x,
                 LOAD_FORUM_POSTS: H,
                 LOAD_THREADS_SUCCESS: Y,
                 LOAD_ARCHIVED_THREADS_SUCCESS: Y,
-                MESSAGE_CREATE: F,
-                MESSAGE_UPDATE: B,
+                MESSAGE_CREATE: V,
+                MESSAGE_UPDATE: k,
                 LOGOUT: P,
-                SEARCH_FINISH: x,
-                MOD_VIEW_SEARCH_FINISH: x,
+                SEARCH_FINISH: F,
+                MOD_VIEW_SEARCH_FINISH: F,
                 CHANNEL_SELECT: j,
-                LOAD_PINNED_MESSAGES_SUCCESS: x,
+                LOAD_PINNED_MESSAGES_SUCCESS: F,
                 USER_SETTINGS_PROTO_UPDATE: W,
                 CHANNEL_RTC_UPDATE_CHAT_OPEN: K,
                 POST_CONNECTION_OPEN: X

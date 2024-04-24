@@ -57,9 +57,9 @@ function(e, t, n) {
         }), {
             product: P,
             purchase: U
-        } = (0, c.default)(null == M ? void 0 : M.skuId), b = A.default.canUseCollectibles(t), G = r.useRef(null), w = (0, I.default)(a), k = (0, m.isEqualAvatarDecoration)(M, void 0 === L ? v : L), B = () => {
+        } = (0, c.default)(null == M ? void 0 : M.skuId), b = A.default.canUseCollectibles(t), G = r.useRef(null), w = (0, I.default)(a), B = (0, m.isEqualAvatarDecoration)(M, void 0 === L ? v : L), k = () => {
             D(M), u()
-        }, F = r.useCallback(e => {
+        }, V = r.useCallback(e => {
             u(), (0, d.openCollectiblesShop)({
                 analyticsLocations: a,
                 analyticsSource: l.default.EDIT_AVATAR_DECORATION_MODAL,
@@ -88,7 +88,7 @@ function(e, t, n) {
                     onSelect: e => {
                         y(e), null != e && w(e)
                     },
-                    onOpenShop: F
+                    onOpenShop: V
                 }), (0, i.jsx)(N.default, {
                     className: g.modalPreview,
                     user: t,
@@ -98,12 +98,12 @@ function(e, t, n) {
             }), (0, i.jsxs)(o.ModalFooter, {
                 className: g.modalFooter,
                 children: [null != U && (!(0, _.isPremiumCollectiblesPurchase)(U) || b) || null === M ? (0, i.jsx)(o.Button, {
-                    onClick: B,
-                    disabled: k,
+                    onClick: k,
+                    disabled: B,
                     children: C.default.Messages.AVATAR_DECORATION_MODAL_APPLY
                 }) : null == U && (b || !(0, _.isPremiumCollectiblesProduct)(P)) ? (0, i.jsx)(o.Button, {
                     className: g.modalFooterShopButton,
-                    onClick: () => F(null == P ? void 0 : P.skuId),
+                    onClick: () => V(null == P ? void 0 : P.skuId),
                     children: C.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
                 }) : (0, i.jsx)(T.default, {
                     subscriptionTier: R.PremiumSubscriptionSKUs.TIER_2,

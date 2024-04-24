@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         MemberRole: function() {
-            return V
+            return x
         },
         OverflowAddRolesButton: function() {
             return H
@@ -45,34 +45,34 @@ function(e, t, n) {
         b = n("944613"),
         G = n("981631"),
         w = n("689938"),
-        k = n("862273");
-    let B = () => Promise.resolve();
+        B = n("862273");
+    let k = () => Promise.resolve();
 
-    function F(e) {
+    function V(e) {
         let {
             userRoles: t,
             position: n,
             ...r
         } = e, s = (0, D.useUID)();
         return (0, i.jsxs)(I.Dialog, {
-            className: a()(k.overflowRolesPopout, {
-                [k.popoutBottom]: "bottom" === n,
-                [k.popoutTop]: "top" === n
+            className: a()(B.overflowRolesPopout, {
+                [B.popoutBottom]: "bottom" === n,
+                [B.popoutTop]: "top" === n
             }),
             "aria-labelledby": s,
             children: [(0, i.jsx)("div", {
-                className: k.overflowRolesPopoutArrowWrapper,
+                className: B.overflowRolesPopoutArrowWrapper,
                 children: (0, i.jsx)("div", {
-                    className: k.overflowRolesPopoutArrow
+                    className: B.overflowRolesPopoutArrow
                 })
             }), (0, i.jsxs)(L.default, {
-                className: k.overflowRolesPopoutHeader,
+                className: B.overflowRolesPopoutHeader,
                 align: L.default.Align.CENTER,
                 children: [(0, i.jsx)(M.default, {
                     color: E.default.unsafe_rawColors.PRIMARY_400.css,
-                    className: k.overflowRolesPopoutHeaderIcon
+                    className: B.overflowRolesPopoutHeaderIcon
                 }), (0, i.jsx)("div", {
-                    className: k.overflowRolesPopoutHeaderText,
+                    className: B.overflowRolesPopoutHeaderText,
                     id: s,
                     children: w.default.Messages.ROLES_LIST.format({
                         numRoles: t.length
@@ -85,7 +85,7 @@ function(e, t, n) {
             })]
         })
     }
-    let V = r.forwardRef(function(e, t) {
+    let x = r.forwardRef(function(e, t) {
         var s, o, l;
         let u;
         let {
@@ -114,63 +114,63 @@ function(e, t, n) {
                     label: w.default.Messages.COPY_ID_ROLE
                 })
             })
-        }, [A.id]), b = (0, I.useToken)(E.default.unsafe_rawColors.PRIMARY_300).hsl(), G = null !== (o = A.colorString) && void 0 !== o ? o : b, B = null !== (l = (0, _.hex2rgb)(G, .6)) && void 0 !== l ? l : void 0, F = E.default.unsafe_rawColors.WHITE_500.css, V = (0, _.hex2int)(G);
-        null != V && .3 > (0, _.getDarkness)(V) && (F = E.default.unsafe_rawColors.PRIMARY_630.css), u = y ? (0, i.jsx)(m.default, {
-            className: k.roleFlowerStar,
-            iconClassName: f ? k.roleVerifiedIcon : void 0,
+        }, [A.id]), b = (0, I.useToken)(E.default.unsafe_rawColors.PRIMARY_300).hsl(), G = null !== (o = A.colorString) && void 0 !== o ? o : b, k = null !== (l = (0, _.hex2rgb)(G, .6)) && void 0 !== l ? l : void 0, V = E.default.unsafe_rawColors.WHITE_500.css, x = (0, _.hex2int)(G);
+        null != x && .3 > (0, _.getDarkness)(x) && (V = E.default.unsafe_rawColors.PRIMARY_630.css), u = y ? (0, i.jsx)(m.default, {
+            className: B.roleFlowerStar,
+            iconClassName: f ? B.roleVerifiedIcon : void 0,
             color: G,
             size: 14
         }) : "dot" === M ? (0, i.jsx)(I.RoleDot, {
-            className: k.roleDot,
+            className: B.roleDot,
             color: G,
             background: !1,
             tooltip: !1
         }) : (0, i.jsx)(I.RoleCircle, {
             color: G
         });
-        let x = r.useMemo(() => {
+        let F = r.useMemo(() => {
             var t;
             return {
-                borderColor: R ? void 0 : B,
+                borderColor: R ? void 0 : k,
                 ...null !== (t = e.style) && void 0 !== t ? t : {}
             }
-        }, [B, R, e.style]);
+        }, [k, R, e.style]);
         return (0, i.jsx)(I.FocusRing, {
             children: (0, i.jsxs)("div", {
                 ref: t,
-                className: a()(k.role, S),
-                style: x,
+                className: a()(B.role, S),
+                style: F,
                 onContextMenu: U,
                 onMouseDown: C,
                 "aria-label": A.name,
                 tabIndex: g,
                 ...L,
                 children: [(0, i.jsxs)(I.Clickable, {
-                    className: k.roleRemoveButton,
+                    className: B.roleRemoveButton,
                     onClick: f ? p : void 0,
                     tabIndex: f ? g : -1,
                     focusProps: {
-                        focusClassName: k.roleRemoveIconFocused
+                        focusClassName: B.roleRemoveIconFocused
                     },
                     "aria-hidden": !f,
                     "aria-label": w.default.Messages.GUILD_SETTINGS_MEMBERS_REMOVE_ROLE.format({
                         roleName: A.name
                     }),
                     children: [u, f ? (0, i.jsx)(v.default, {
-                        color: F,
-                        className: k.roleRemoveIcon,
+                        color: V,
+                        className: B.roleRemoveIcon,
                         "aria-hidden": !0
                     }) : null]
                 }), null != D ? (0, i.jsx)(P.default, {
-                    className: k.roleIcon,
+                    className: B.roleIcon,
                     ...D,
                     enableTooltip: !1
                 }) : null, (0, i.jsx)("div", {
                     "aria-hidden": !0,
-                    className: k.roleName,
+                    className: B.roleName,
                     children: (0, i.jsx)(I.Text, {
                         variant: "text-xs/medium",
-                        className: k.roleNameOverflow,
+                        className: B.roleNameOverflow,
                         children: A.name
                     })
                 })]
@@ -178,7 +178,7 @@ function(e, t, n) {
         })
     });
 
-    function x(e) {
+    function F(e) {
         let {
             user: t,
             numRolesHidden: n,
@@ -189,7 +189,7 @@ function(e, t, n) {
                 let {
                     position: n
                 } = t;
-                return (0, i.jsx)(F, {
+                return (0, i.jsx)(V, {
                     ...e,
                     position: null != n ? n : "top"
                 })
@@ -199,7 +199,7 @@ function(e, t, n) {
             children: e => (0, i.jsx)(I.FocusRing, {
                 children: (0, i.jsx)("button", {
                     ...e,
-                    className: a()(k.overflowButton, r),
+                    className: a()(B.overflowButton, r),
                     ...s,
                     children: "+".concat(n)
                 })
@@ -234,12 +234,12 @@ function(e, t, n) {
             children: e => (0, i.jsx)(I.FocusRing, {
                 children: (0, i.jsx)("button", {
                     ...e,
-                    className: a()(k.addButton, s, o),
+                    className: a()(B.addButton, s, o),
                     "aria-label": w.default.Messages.GUILD_SETTINGS_MEMBERS_ADD_ROLE,
                     type: "button",
                     ...u,
                     children: (0, i.jsx)(y.default, {
-                        className: a()(k.addButtonIcon, l),
+                        className: a()(B.addButtonIcon, l),
                         "aria-hidden": !0
                     })
                 })
@@ -294,17 +294,17 @@ function(e, t, n) {
         l()(null != y, "MemberRolesList: currentUser cannot be undefined");
         let P = !T && C.default.can(G.Permissions.MANAGE_ROLES, s),
             b = U.getHighestRole(s, y.id),
-            F = r.useMemo(() => "roles-".concat((0, u.v4)()), []),
+            V = r.useMemo(() => "roles-".concat((0, u.v4)()), []),
             Y = (0, d.default)({
-                id: F,
+                id: V,
                 isEnabled: !0,
-                scrollToStart: B,
-                scrollToEnd: B,
+                scrollToStart: k,
+                scrollToEnd: k,
                 wrap: !0
             }),
             j = v.map(e => {
                 var t;
-                return (0, i.jsx)(V, {
+                return (0, i.jsx)(x, {
                     className: S,
                     role: e,
                     canRemove: P && U.isRoleHigher(s, y.id, b, e) || (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null && n.id === y.id,
@@ -317,7 +317,7 @@ function(e, t, n) {
                     disableBorderColor: h
                 }, e.id)
             });
-        return null != O && 0 !== M ? t = (0, i.jsx)(x, {
+        return null != O && 0 !== M ? t = (0, i.jsx)(F, {
             ...e,
             numRolesHidden: M
         }) : P && (t = (0, i.jsx)(H, {
@@ -332,7 +332,7 @@ function(e, t, n) {
                         ...r
                     } = e;
                     return (0, i.jsxs)("div", {
-                        className: a()(k.root, I),
+                        className: a()(B.root, I),
                         "aria-label": w.default.Messages.ROLES_LIST.format({
                             numRoles: o.length
                         }),

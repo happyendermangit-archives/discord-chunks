@@ -29,7 +29,7 @@ function(e, t, n) {
             return eh
         },
         getDefaultPrice: function() {
-            return V
+            return x
         },
         getDiscountIntervalString: function() {
             return Y
@@ -92,7 +92,7 @@ function(e, t, n) {
             return ec
         },
         getPremiumPlanItem: function() {
-            return F
+            return V
         },
         getPremiumPlanOptions: function() {
             return et
@@ -107,7 +107,7 @@ function(e, t, n) {
             return Z
         },
         getPrice: function() {
-            return x
+            return F
         },
         getTierDisplayName: function() {
             return Q
@@ -182,8 +182,8 @@ function(e, t, n) {
             PAYMENT_SOURCE_MANAGEMENT: "https://play.google.com/store/paymentmethods",
             BILLING_HISTORY: "https://play.google.com/store/account/orderhistory"
         },
-        k = new c.default("PremiumUtils.tsx"),
-        B = {
+        B = new c.default("PremiumUtils.tsx"),
+        k = {
             [P.SubscriptionPlans.NONE_MONTH]: [P.SubscriptionPlans.NONE_YEAR, P.SubscriptionPlans.PREMIUM_YEAR_TIER_2, P.SubscriptionPlans.PREMIUM_MONTH_TIER_2, P.SubscriptionPlans.PREMIUM_YEAR_TIER_1, P.SubscriptionPlans.PREMIUM_MONTH_TIER_1],
             [P.SubscriptionPlans.NONE_YEAR]: [P.SubscriptionPlans.PREMIUM_YEAR_TIER_2, P.SubscriptionPlans.PREMIUM_MONTH_TIER_2, P.SubscriptionPlans.PREMIUM_YEAR_TIER_1, P.SubscriptionPlans.PREMIUM_MONTH_TIER_1],
             [P.SubscriptionPlans.PREMIUM_MONTH_TIER_0]: [P.SubscriptionPlans.PREMIUM_YEAR_TIER_2, P.SubscriptionPlans.PREMIUM_MONTH_TIER_2, P.SubscriptionPlans.PREMIUM_YEAR_TIER_1, P.SubscriptionPlans.PREMIUM_MONTH_TIER_1, P.SubscriptionPlans.PREMIUM_YEAR_TIER_0],
@@ -195,22 +195,22 @@ function(e, t, n) {
             ALL: [P.SubscriptionPlans.NONE_MONTH, P.SubscriptionPlans.NONE_YEAR, P.SubscriptionPlans.PREMIUM_YEAR_TIER_2, P.SubscriptionPlans.PREMIUM_MONTH_TIER_2, P.SubscriptionPlans.PREMIUM_YEAR_TIER_1, P.SubscriptionPlans.PREMIUM_MONTH_TIER_1, P.SubscriptionPlans.PREMIUM_YEAR_TIER_0, P.SubscriptionPlans.PREMIUM_MONTH_TIER_0]
         };
 
-    function F(e) {
+    function V(e) {
         return e.items.find(e => P.PREMIUM_PLANS.has(e.planId))
     }
 
-    function V(e) {
+    function x(e) {
         var t;
         let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             r = null !== (t = m.default.defaultPaymentSourceId) && void 0 !== t ? t : void 0,
             s = p.default.getPremiumTypeSubscription();
-        return null != s && null != s.paymentSourceId && (r = s.paymentSourceId), x(e, n, i, {
+        return null != s && null != s.paymentSourceId && (r = s.paymentSourceId), F(e, n, i, {
             paymentSourceId: r
         })
     }
 
-    function x(e) {
+    function F(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
@@ -232,7 +232,7 @@ function(e, t, n) {
                     paymentSourceId: t,
                     purchaseType: n
                 });
-                return (0 === r.length && k.warn("No prices found for planId: ".concat(e, ", paymentSourceId: ").concat(t, ", purchaseType: ").concat(n)), null != i) ? r.find(e => e.currency === i) : r[0]
+                return (0 === r.length && B.warn("No prices found for planId: ".concat(e, ", paymentSourceId: ").concat(t, ", purchaseType: ").concat(n)), null != i) ? r.find(e => e.currency === i) : r[0]
             }(e, {
                 paymentSourceId: r,
                 purchaseType: i,
@@ -285,13 +285,13 @@ function(e, t, n) {
             }
             if (null == n.prices) throw Error("No prices returned for ".concat(e, ", is your user in the experiment?"));
             let i = n.prices[t];
-            if (null == i) throw k.info("Purchase types: ".concat(JSON.stringify(Object.keys(n.prices)))), Error("No prices returned for purchase type ".concat(t, " for plan ").concat(e));
+            if (null == i) throw B.info("Purchase types: ".concat(JSON.stringify(Object.keys(n.prices)))), Error("No prices returned for purchase type ".concat(t, " for plan ").concat(e));
             return i
         }(e, n);
         if (null != t) {
             let r = i.paymentSourcePrices[t];
             if (null == r) {
-                k.info("Payment sources IDs: ".concat(JSON.stringify(Object.keys(i.paymentSourcePrices)))), k.info("prices: ".concat(r));
+                B.info("Payment sources IDs: ".concat(JSON.stringify(Object.keys(i.paymentSourcePrices)))), B.info("prices: ".concat(r));
                 let s = Error("Missing prices for payment source on subscription plan");
                 (0, O.captureBillingException)(s, {
                     extra: {
@@ -305,7 +305,7 @@ function(e, t, n) {
             } else if (0 !== r.length) return r
         }
         if (null == i.countryPrices.prices) {
-            k.info("countryPrices: ".concat(JSON.stringify(i.countryPrices)));
+            B.info("countryPrices: ".concat(JSON.stringify(i.countryPrices)));
             let t = Error("Missing prices for country");
             throw (0, O.captureBillingException)(t, {
                 tags: {
@@ -684,7 +684,7 @@ function(e, t, n) {
                         } = e;
                         return t === n.id
                     }),
-                    r = null == i ? x(n.id, !1, !1, {
+                    r = null == i ? F(n.id, !1, !1, {
                         paymentSourceId: t.paymentSourceId,
                         currency: t.currency
                     }).amount : i.amount;
@@ -781,7 +781,7 @@ function(e, t, n) {
 
     function ei(e) {
         var t;
-        return null == e ? B.ALL : null !== (t = B[e]) && void 0 !== t ? t : []
+        return null == e ? k.ALL : null !== (t = k[e]) && void 0 !== t ? t : []
     }
 
     function er(e) {
@@ -924,7 +924,7 @@ function(e, t, n) {
 
     function eE(e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-            r = null != t ? x(e.id, !1, i, t) : V(e.id, !1, i),
+            r = null != t ? F(e.id, !1, i, t) : x(e.id, !1, i),
             s = (0, v.formatPrice)(r.amount, r.currency);
         return e.currency !== U.CurrencyCodes.USD && !0 === n && (s = s.concat("*")), s
     }
@@ -972,7 +972,7 @@ function(e, t, n) {
                 }
             }), t
         }
-        return x(a.id, (0, L.isPremium)(i), !1, r)
+        return F(a.id, (0, L.isPremium)(i), !1, r)
     }
 
     function eh(e, t, n) {
@@ -1228,7 +1228,7 @@ function(e, t, n) {
     }
 
     function eU(e) {
-        let t = null != e ? F(e) : null;
+        let t = null != e ? V(e) : null;
         return null != t ? en(t.planId) : null
     }
 
@@ -1240,8 +1240,8 @@ function(e, t, n) {
         isPremiumAtLeast: L.isPremiumAtLeast,
         isPremium: L.isPremium,
         isPremiumExactly: L.isPremiumExactly,
-        getPrice: x,
-        getDefaultPrice: V,
+        getPrice: F,
+        getDefaultPrice: x,
         getInterval: function(e) {
             let t = P.SubscriptionPlanInfo[e];
             if (null != t) return {
@@ -1404,21 +1404,21 @@ function(e, t, n) {
         },
         getBillingReviewSubheader: eh,
         getIntervalForInvoice: eA,
-        getPremiumPlanItem: F,
+        getPremiumPlanItem: V,
         getGuildBoostPlanItem: eP,
         isBoostOnlySubscription: function(e) {
-            return null != e && null == F(e) && null != eP(e)
+            return null != e && null == V(e) && null != eP(e)
         },
         getPremiumSkuIdForSubscription: eU,
         getPremiumTypeFromSubscription: function(e) {
             if (null != e) {
-                let t = F(e);
+                let t = V(e);
                 if (null != t) return K(t.planId)
             }
         },
         getPremiumTypeFromSubscriptionRenewalMutations: function(e) {
             if (null != e && null != e.renewalMutations) {
-                let t = F(e.renewalMutations);
+                let t = V(e.renewalMutations);
                 if (null != t) return K(t.planId)
             }
         },

@@ -8,7 +8,7 @@ function(e, t, n) {
             return W
         },
         flipEveryonePermission: function() {
-            return B
+            return k
         },
         getExistingMembersRows: function() {
             return G
@@ -29,7 +29,7 @@ function(e, t, n) {
             return j
         },
         getRemoveTooltipHint: function() {
-            return k
+            return B
         },
         getRoleRowData: function() {
             return A
@@ -44,7 +44,7 @@ function(e, t, n) {
             return w
         },
         grantUserChannelAccess: function() {
-            return V
+            return x
         },
         hasCustomRoles: function() {
             return H
@@ -59,13 +59,13 @@ function(e, t, n) {
             return R
         },
         isPrivateGuildChannel: function() {
-            return x
+            return F
         },
         sortRoles: function() {
             return m
         },
         toggleChannelEveryonePermission: function() {
-            return F
+            return V
         }
     }), n("653041");
     var i = n("149765"),
@@ -227,7 +227,7 @@ function(e, t, n) {
         }
     }
 
-    function k(e) {
+    function B(e) {
         switch (e) {
             case T.RowType.ROLE:
                 return S.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP;
@@ -243,7 +243,7 @@ function(e, t, n) {
         }
     }
 
-    function B(e, t, n) {
+    function k(e, t, n) {
         let r = e.permissionOverwrites[e.guild_id];
         null == r && (r = c.makeEveryoneOverwrite(e.guild_id));
         let s = {
@@ -252,12 +252,12 @@ function(e, t, n) {
         return s.deny = i.remove(s.deny, t), s.allow = i.remove(s.allow, t), !n && (s.deny = i.add(s.deny, t)), s
     }
 
-    function F(e, t, n) {
-        let i = B(e, t, n);
+    function V(e, t, n) {
+        let i = k(e, t, n);
         (0, s.updatePermission)(e, i.id, i.allow, i.deny)
     }
 
-    function V(e, t) {
+    function x(e, t) {
         let n = u.default.getCurrentUser();
         if (null == n) return;
         let r = e.permissionOverwrites[n.id];
@@ -278,7 +278,7 @@ function(e, t, n) {
         }
     }
 
-    function x(e, t) {
+    function F(e, t) {
         if (null == e) return !1;
         let n = e.permissionOverwrites[e.guild_id];
         return (null == t ? void 0 : t[e.guild_id]) != null && (n = t[e.guild_id]), null != n && i.has(n.deny, e.accessPermissions)

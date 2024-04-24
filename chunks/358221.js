@@ -31,11 +31,11 @@ function(e, t, n) {
         b = {},
         G = {},
         w = {},
-        k = {},
         B = {},
-        F = {},
+        k = {},
         V = {},
-        x = {};
+        x = {},
+        F = {};
 
     function H(e) {
         let t = P[e];
@@ -172,7 +172,7 @@ function(e, t, n) {
                 id: t
             }
         } = e;
-        return delete F[t], delete V[t], q(t)
+        return delete V[t], delete x[t], q(t)
     }
 
     function ei(e) {
@@ -205,7 +205,7 @@ function(e, t, n) {
             return null !== (t = H(e).toArray(g.ChannelRTCParticipantsIndexes.SPEAKING)) && void 0 !== t ? t : M
         }
         getFilteredParticipants(e) {
-            return B[e] ? H(e).toArray(g.ChannelRTCParticipantsIndexes.FILTERED) : H(e).toArray()
+            return k[e] ? H(e).toArray(g.ChannelRTCParticipantsIndexes.FILTERED) : H(e).toArray()
         }
         getVideoParticipants(e) {
             var t;
@@ -228,11 +228,11 @@ function(e, t, n) {
         }
         getParticipantsOpen(e) {
             var t;
-            return null === (t = k[e]) || void 0 === t || t
+            return null === (t = B[e]) || void 0 === t || t
         }
         getVoiceParticipantsHidden(e) {
             var t;
-            return null !== (t = B[e]) && void 0 !== t && t
+            return null !== (t = k[e]) && void 0 !== t && t
         }
         getSelectedParticipantId(e) {
             let [t, n] = W(e);
@@ -264,17 +264,17 @@ function(e, t, n) {
         }
         getChatOpen(e) {
             var t;
-            return null !== (t = F[e]) && void 0 !== t && t
+            return null !== (t = V[e]) && void 0 !== t && t
         }
         isFullscreenInContext() {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : D.AppContext.APP;
             return Object.values(w).some(t => t[e] === D.ChannelLayouts.FULL_SCREEN)
         }
         getStageStreamSize(e) {
-            return V[e]
+            return x[e]
         }
         getStageVideoLimitBoostUpsellDismissed(e) {
-            return x[e]
+            return F[e]
         }
     }
     a = "ChannelRTCStore", (s = "displayName") in(r = es) ? Object.defineProperty(r, s, {
@@ -292,14 +292,14 @@ function(e, t, n) {
                 channelId: t,
                 currentVoiceChannelId: n
             } = e;
-            return null != t ? delete b[t] : null != n && (delete F[n], delete V[n], z(n)), Z()
+            return null != t ? delete b[t] : null != n && (delete V[n], delete x[n], z(n)), Z()
         },
         CHANNEL_SELECT: function(e) {
             let {
                 channelId: t,
                 messageId: n
             } = e, i = Z(), r = m.default.getChannel(t);
-            return null == t || null == n || (null == r ? void 0 : r.type) !== D.ChannelTypes.GUILD_VOICE && (null == r ? void 0 : r.type) !== D.ChannelTypes.GUILD_STAGE_VOICE || F[t] ? i : (F[t] = !0, !0)
+            return null == t || null == n || (null == r ? void 0 : r.type) !== D.ChannelTypes.GUILD_VOICE && (null == r ? void 0 : r.type) !== D.ChannelTypes.GUILD_STAGE_VOICE || V[t] ? i : (V[t] = !0, !0)
         },
         CHANNEL_RTC_ACTIVE_CHANNELS: Z,
         VOICE_STATE_UPDATES: function(e) {
@@ -360,7 +360,7 @@ function(e, t, n) {
                     e === h.default.getId() && j(e, [t])
                 } catch (e) {
                     v.warn("INVALID STREAM KEY FORMAT ".concat(n), e)
-                }!Q(i) && (k[t] = !1)
+                }!Q(i) && (B[t] = !1)
             }
         },
         CHANNEL_RTC_UPDATE_LAYOUT: function(e) {
@@ -379,28 +379,28 @@ function(e, t, n) {
                 channelId: t,
                 participantsOpen: n
             } = e;
-            k[t] = n
+            B[t] = n
         },
         CHANNEL_RTC_UPDATE_VOICE_PARTICIPANTS_HIDDEN: function(e) {
             let {
                 channelId: t,
                 voiceParticipantsHidden: n
             } = e;
-            B[t] = n
+            k[t] = n
         },
         CHANNEL_RTC_UPDATE_STAGE_STREAM_SIZE: function(e) {
             let {
                 channelId: t,
                 large: n
             } = e;
-            V[t] = n
+            x[t] = n
         },
         CHANNEL_RTC_UPDATE_STAGE_VIDEO_LIMIT_BOOST_UPSELL_DISMISSED: function(e) {
             let {
                 channelId: t,
                 dismissed: n
             } = e;
-            x[t] = n
+            F[t] = n
         },
         STREAM_UPDATE_SELF_HIDDEN: function(e) {
             let {
@@ -418,7 +418,7 @@ function(e, t, n) {
                 channelId: t,
                 chatOpen: n
             } = e;
-            F[t] = n
+            V[t] = n
         },
         RTC_CONNECTION_VIDEO: function(e) {
             let {

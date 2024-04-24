@@ -35,12 +35,12 @@ function(e, t, n) {
         b = (0, N.cssValueToNumber)(_.default.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_SIZE),
         G = (0, N.cssValueToNumber)(_.default.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_MARGIN_VERTICAL),
         w = (0, N.cssValueToNumber)(_.default.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_PADDING),
-        k = (0, N.cssValueToNumber)(y.__invalid_unicodeCategoryShortcutHeight),
-        B = (0, N.cssValueToNumber)(_.default.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
-        F = (0, N.cssValueToNumber)(_.default.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
-        V = b + U + 2 * w,
-        x = P + U,
-        H = x + (B + 2 * F),
+        B = (0, N.cssValueToNumber)(y.__invalid_unicodeCategoryShortcutHeight),
+        k = (0, N.cssValueToNumber)(_.default.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
+        V = (0, N.cssValueToNumber)(_.default.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
+        x = b + U + 2 * w,
+        F = P + U,
+        H = F + (k + 2 * V),
         Y = b + G + 2 * w;
 
     function j(e) {
@@ -127,10 +127,10 @@ function(e, t, n) {
             }, t)
         }), [_, m, N, S, R, C, D]), P = r.useMemo(() => [8, 8, 0, 8], []), w = r.useCallback((e, t) => {
             let n = N[t];
-            if (n.type === L.EmojiCategoryTypes.RECENT) return V;
+            if (n.type === L.EmojiCategoryTypes.RECENT) return x;
             if (n.type === L.EmojiCategoryTypes.GUILD) {
                 let e = N[t + 1];
-                return null != e && e.type !== L.EmojiCategoryTypes.GUILD ? H : x
+                return null != e && e.type !== L.EmojiCategoryTypes.GUILD ? H : F
             }
             return Y
         }, [N]), {
@@ -146,7 +146,7 @@ function(e, t, n) {
             N.forEach(r => {
                 r.type === L.EmojiCategoryTypes.GUILD ? (t += 1, n += 1) : r.type === L.EmojiCategoryTypes.UNICODE ? i += 1 : (e += 1, t += 1)
             });
-            let r = V + t * x + H;
+            let r = x + t * F + H;
             return {
                 nonUnicodeCategoryCount: t,
                 firstUnicodeCategoryIndex: t,
@@ -160,7 +160,7 @@ function(e, t, n) {
         let Z = r.useCallback(e => {
                 var t;
                 let n = null === (t = p.current) || void 0 === t ? void 0 : t.getListDimensions();
-                if (null != n) e + n.height - B >= z ? q(!1) : q(!0)
+                if (null != n) e + n.height - k >= z ? q(!1) : q(!0)
             }, [z]),
             J = r.useCallback(e => {
                 var t;
@@ -169,11 +169,11 @@ function(e, t, n) {
             $ = r.useCallback((e, t) => {
                 let n = N[e];
                 if (null == n) return 0;
-                let i = Q ? k : 0;
+                let i = Q ? B : 0;
                 if (n.type === L.EmojiCategoryTypes.RECENT) return t ? 0 : G;
                 if (n.type === L.EmojiCategoryTypes.GUILD) {
                     let n = N[e + 1];
-                    return null != n && n.type !== L.EmojiCategoryTypes.GUILD ? t ? B + -2 * F + U + i : U : t ? i : U
+                    return null != n && n.type !== L.EmojiCategoryTypes.GUILD ? t ? k + -2 * V + U + i : U : t ? i : U
                 }
                 return t ? U + i : 2 * U
             }, [N, Q]),
