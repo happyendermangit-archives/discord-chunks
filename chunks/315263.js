@@ -107,9 +107,10 @@ function(e, t, n) {
             path: A,
             hostname: p = "",
             host: g,
-            query: v
-        } = i.parse(e), M = R.default.isDiscordHostname(p) || R.default.isDiscordLocalhost(g, p);
-        if (M && (null == A ? void 0 : A.startsWith("/application-directory"))) {
+            query: v,
+            hash: M
+        } = i.parse(e), y = R.default.isDiscordHostname(p) || R.default.isDiscordLocalhost(g, p);
+        if (y && (null == A ? void 0 : A.startsWith("/application-directory"))) {
             let [, , e, t] = A.split("/"), i = null != e && (0, l.isSnowflake)(e) ? e : void 0;
             return s => {
                 var a;
@@ -140,30 +141,28 @@ function(e, t, n) {
                 }), !0
             }
         }
-        if (null != A && M && R.default.isAppRoute(A)) {
-            let e = null != v ? {
-                search: v
-            } : null;
-            return t => (null == t || t.preventDefault(), (0, f.default)(A, e), !0)
+        if (null != A && y && R.default.isAppRoute(A)) {
+            let e = {};
+            return null != v && (e.search = v), null != M && (e.hash = M), t => (null == t || t.preventDefault(), (0, f.default)(A, Object.keys(e).length > 0 ? e : null), !0)
         }
-        if (null != A && M) {
+        if (null != A && y) {
             let {
                 getOAuth2AuthorizeProps: t,
                 openOAuth2ModalWithCreateGuildModal: i
             } = n("69580"), r = t(e);
             if (null != r) return e => (null == e || e.preventDefault(), i(r), !0)
         }
-        let y = (0, T.tryParseEventDetailsPath)(A);
-        if (null != A && M && null != y) return e => {
+        let P = (0, T.tryParseEventDetailsPath)(A);
+        if (null != A && y && null != P) return e => {
             null == e || e.preventDefault();
             let t = N.default.getGuildId();
-            null != y.guildId && "" !== y.guildId && y.guildId !== t && (0, f.default)(C.Routes.CHANNEL(y.guildId));
-            let n = E.default.getGuildScheduledEvent(y.guildEventId);
+            null != P.guildId && "" !== P.guildId && P.guildId !== t && (0, f.default)(C.Routes.CHANNEL(P.guildId));
+            let n = E.default.getGuildScheduledEvent(P.guildEventId);
             return null != n && (0, c.openGuildEventDetails)({
                 eventId: n.id
             }), !0
         };
-        if (M && (null == A ? void 0 : A.startsWith("/settings/"))) {
+        if (y && (null == A ? void 0 : A.startsWith("/settings/"))) {
             let {
                 default: e
             } = n("357269"), t = e(A);
