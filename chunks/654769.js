@@ -70,8 +70,9 @@ function(e, t, n) {
     }
 
     function C(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        e.includes("message") ? N(e, t) : (0, E.playSound)(e, t)
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+            n = arguments.length > 2 ? arguments[2] : void 0;
+        e.includes("message") ? N(e, t, void 0, n) : (0, E.playSound)(e, t)
     }
 
     function g(e) {
@@ -88,10 +89,10 @@ function(e, t, n) {
             var a, o, l, d;
             let E;
             if (g(r)) {
-                null != r.sound && !1 !== r.playSoundIfDisabled && C(r.sound, null !== (o = r.volume) && void 0 !== o ? o : 1);
+                null != r.sound && !1 !== r.playSoundIfDisabled && C(r.sound, null !== (o = r.volume) && void 0 !== o ? o : 1, r.soundpack);
                 return
             }
-            null != r.sound && C(r.sound, null !== (l = r.volume) && void 0 !== l ? l : 1);
+            null != r.sound && C(r.sound, null !== (l = r.volume) && void 0 !== l ? l : 1, r.soundpack);
             let f = null !== (d = null == r ? void 0 : r.tag) && void 0 !== d ? d : null;
             (0, c.isLinux)() && (n = s().escape(n));
             let h = {
