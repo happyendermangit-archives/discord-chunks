@@ -24,8 +24,8 @@ function(e, t, n) {
         b = n("731455"),
         G = n("135899");
     let w = ["name", "description", "icon", "splash", "banner", "homeHeader", "afkChannelId", "afkTimeout", "systemChannelId", "verificationLevel", "defaultMessageNotifications", "explicitContentFilter", "features", "systemChannelFlags", "preferredLocale", "rulesChannelId", "safetyAlertsChannelId", "discoverySplash", "publicUpdatesChannelId", "premiumProgressBarEnabled", "clan"],
-        k = new Set(["icon", "splash", "banner", "discoverySplash", "homeHeader"]),
-        B = !1,
+        B = new Set(["icon", "splash", "banner", "discoverySplash", "homeHeader"]),
+        k = !1,
         V = U.FormStates.CLOSED,
         x = {},
         F = !1,
@@ -77,7 +77,7 @@ function(e, t, n) {
     }
 
     function er() {
-        B = !1, V = U.FormStates.CLOSED, a = o = null, F = !1, H = null, Y = null, j = 0, Z = null, ee = null, et = null, i = null, r = null, s = null, W = U.MFALevels.NONE, u = void 0
+        k = !1, V = U.FormStates.CLOSED, a = o = null, F = !1, H = null, Y = null, j = 0, Z = null, ee = null, et = null, i = null, r = null, s = null, W = U.MFALevels.NONE, u = void 0
     }
 
     function es(e) {
@@ -166,7 +166,7 @@ function(e, t, n) {
             return !f().isEqual(o, a) || !f().isEqual(q, Q)
         }
         isOpen() {
-            return B
+            return k
         }
         getSavedRouteState() {
             return u
@@ -238,7 +238,7 @@ function(e, t, n) {
     }) : c[E] = I, t.default = new el(p.default, __OVERLAY__ ? {} : {
         GUILD_SETTINGS_INIT: ei,
         GUILD_SETTINGS_OPEN: function(e) {
-            B = !0, ei(e)
+            k = !0, ei(e)
         },
         GUILD_SETTINGS_CLOSE: er,
         GUILD_SETTINGS_UPDATE: function(e) {
@@ -362,7 +362,7 @@ function(e, t, n) {
                 let t = a = e,
                     n = o.toJS();
                 w.forEach(e => {
-                    if (!k.has(e)) {
+                    if (!B.has(e)) {
                         if ("rulesChannelId" !== e && "publicUpdatesChannelId" !== e || n[e] !== G.CREATE_NEW_CHANNEL_VALUE) {
                             if ("features" === e) {
                                 t.set(e, new Set(n[e]));

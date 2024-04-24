@@ -53,7 +53,7 @@ function(e, t, n) {
             return eD
         },
         DefaultGuildsRestricted: function() {
-            return B
+            return k
         },
         DeveloperMode: function() {
             return eA
@@ -134,7 +134,7 @@ function(e, t, n) {
             return K
         },
         NonSpamRetrainingOptIn: function() {
-            return k
+            return B
         },
         NotificationCenterAckedBeforeId: function() {
             return v
@@ -326,7 +326,7 @@ function(e, t, n) {
         }, e => s.BoolValue.create({
             value: e
         })),
-        k = (0, o.defineProtoSetting)("privacy", "nonSpamRetrainingOptIn", e => null == e ? void 0 : e.value, e => null == e ? void 0 : s.BoolValue.create({
+        B = (0, o.defineProtoSetting)("privacy", "nonSpamRetrainingOptIn", e => null == e ? void 0 : e.value, e => null == e ? void 0 : s.BoolValue.create({
             value: e
         }));
     (0, o.defineProtoSetting)("privacy", "contactSyncEnabled", e => {
@@ -335,7 +335,7 @@ function(e, t, n) {
     }, e => s.BoolValue.create({
         value: e
     }));
-    let B = (0, o.defineProtoSetting)("privacy", "defaultGuildsRestricted", e => null != e && e, e => e),
+    let k = (0, o.defineProtoSetting)("privacy", "defaultGuildsRestricted", e => null != e && e, e => e),
         V = (0, o.defineProtoSetting)("privacy", "restrictedGuildIds", e => null != e ? e : [], e => e);
     (0, o.defineProtoSetting)("privacy", "friendDiscoveryFlags", e => {
         var t;

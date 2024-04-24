@@ -35,7 +35,7 @@ function(e, t, n) {
             return x
         },
         DEFAULT_VOLUME: function() {
-            return B
+            return k
         },
         DESKTOP_BITRATE: function() {
             return $
@@ -47,7 +47,7 @@ function(e, t, n) {
             return Y
         },
         DesktopSources: function() {
-            return k.DesktopSources
+            return B.DesktopSources
         },
         DeviceTypes: function() {
             return N
@@ -113,9 +113,9 @@ function(e, t, n) {
             return en
         }
     });
-    var i, r, s, a, o, l, u, d, _, c, E, I, T, f, S, h, A, m, N, p, O, R, C, g, L, D, v, M, y, P, U, b, G, w, k = n("268146");
+    var i, r, s, a, o, l, u, d, _, c, E, I, T, f, S, h, A, m, N, p, O, R, C, g, L, D, v, M, y, P, U, b, G, w, B = n("268146");
     (i = m || (m = {})).DEFAULT = "default", i.STREAM = "stream", (r = N || (N = {})).AUDIO_INPUT = "audioinput", r.AUDIO_OUTPUT = "audiooutput", r.VIDEO_INPUT = "videoinput", (s = p || (p = {})).PUSH_TO_TALK = "PUSH_TO_TALK", s.VOICE_ACTIVITY = "VOICE_ACTIVITY", (a = O || (O = {})).DISCONNECTED = "DISCONNECTED", a.CONNECTING = "CONNECTING", a.CONNECTED = "CONNECTED", a.NO_ROUTE = "NO_ROUTE", a.ICE_CHECKING = "ICE_CHECKING", a.DTLS_CONNECTING = "DTLS_CONNECTING", (o = R || (R = {}))[o.TRANSPORT = 1] = "TRANSPORT", o[o.OUTBOUND = 2] = "OUTBOUND", o[o.INBOUND = 4] = "INBOUND", o[o.ALL = 7] = "ALL", (l = C || (C = {})).MANUAL_DISABLE = "video_manual_disable", l.MANUAL_ENABLE = "video_manual_enable", l.MANUAL_REENABLE = "video_manual_reenable", l.AUTO_DISABLE = "video_auto_disable", l.AUTO_ENABLE = "video_auto_enable", l.AUTO_DOWNGRADE = "video_auto_downgrade", l.AUTO_UPGRADE = "video_auto_upgrade,";
-    let B = 100,
+    let k = 100,
         V = 18,
         x = 64e3,
         F = 128e3,

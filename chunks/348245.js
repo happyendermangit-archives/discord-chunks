@@ -145,7 +145,7 @@ function(e, t, n) {
                     guildId: n.getGuildId(),
                     channelId: n.id,
                     messageId: null == e ? void 0 : null === (t = e.params) || void 0 === t ? void 0 : t.message
-                }), k(n.getGuildId(), n.id)
+                }), B(n.getGuildId(), n.id)
             }
         }
     }
@@ -164,7 +164,7 @@ function(e, t, n) {
                 isPreload: e,
                 skipLocalFetch: t,
                 logFailures: n
-            }) : n && v.log("Skipping fetch because the selected channel is not a text channel"), k(r.getGuildId(), r.id)) : n && v.log("Skipping fetch because channel is null")
+            }) : n && v.log("Skipping fetch because the selected channel is not a text channel"), B(r.getGuildId(), r.id)) : n && v.log("Skipping fetch because channel is null")
         } else n && v.log("Skipping fetch because there is no selected channel")
     }
 
@@ -180,7 +180,7 @@ function(e, t, n) {
             channelId: n,
             messageId: i,
             jumpType: r
-        }), k(t, n)
+        }), B(t, n)
     }
 
     function w(e) {
@@ -194,7 +194,7 @@ function(e, t, n) {
         })
     }
 
-    function k(e, t) {
+    function B(e, t) {
         let n = f.default.getCurrentSidebarChannelId(t);
         if (null != n) M({
             guildId: e,
@@ -203,12 +203,12 @@ function(e, t, n) {
         })
     }
 
-    function B() {
+    function k() {
         let e = m.default.getChannelId(),
             t = N.default.getGuildId();
         if (null == t || null == e) return;
         let n = f.default.getSidebarState(e);
-        (null == n ? void 0 : n.type) !== I.SidebarType.VIEW_CHANNEL && k(t, e)
+        (null == n ? void 0 : n.type) !== I.SidebarType.VIEW_CHANNEL && B(t, e)
     }
 
     function V(e) {
@@ -220,7 +220,7 @@ function(e, t, n) {
         i === C.CURRENT_APP_CONTEXT && (M({
             guildId: t,
             channelId: n
-        }), k(t, n))
+        }), B(t, n))
     }
 
     function x(e) {
@@ -315,7 +315,7 @@ function(e, t, n) {
             o.default.unsubscribe("CONNECTION_OPEN", U)
         }
         constructor(...e) {
-            super(...e), D(this, "fetchMessages", M), D(this, "loadSelectedChannelIfNecessary", b), D(this, "stores", new Map().set(f.default, B)), D(this, "actions", {
+            super(...e), D(this, "fetchMessages", M), D(this, "loadSelectedChannelIfNecessary", b), D(this, "stores", new Map().set(f.default, k)), D(this, "actions", {
                 APP_STATE_UPDATE: K,
                 OVERLAY_INITIALIZE: U,
                 CHANNEL_SELECT: G,

@@ -41,7 +41,7 @@ function(e, t, n) {
             return P
         },
         shouldRedactExplicitContent: function() {
-            return k
+            return B
         },
         trackExplicitMediaRedactableMessagedLoaded: function() {
             return K
@@ -59,7 +59,7 @@ function(e, t, n) {
             return W
         },
         updateExplicitContentSetting: function() {
-            return B
+            return k
         }
     }), n("789020");
     var i, r, s, a, o, l, u, d, _ = n("286379"),
@@ -156,7 +156,7 @@ function(e, t, n) {
         return e === c.ExplicitContentRedaction.BLUR || e === c.ExplicitContentRedaction.BLOCK
     }
 
-    function k(e) {
+    function B(e) {
         var t;
         if (!(0, R.isEligibleForExplicitMediaRedaction)()) return !1;
         let n = m.default.getCurrentUser();
@@ -170,7 +170,7 @@ function(e, t, n) {
         if (a.isDM() || a.isGroupDM()) return null != e.author && A.default.getFriendIDs().includes(e.author.id) ? w(r) : w(s);
         return w(i)
     }
-    let B = e => {
+    let k = e => {
         let t = G();
         S.ExplicitContentSettings.updateSetting({
             ...t,
@@ -195,7 +195,7 @@ function(e, t, n) {
     }
 
     function x(e) {
-        return k(e) ? {
+        return B(e) ? {
             obscuredAttachments: e.attachments.filter(e => V({
                 type: 0,
                 media: e

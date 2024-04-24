@@ -30,8 +30,8 @@ function(e, t, n) {
         b = [],
         G = !1,
         w = !0,
-        k = Object.freeze([]),
-        B = [];
+        B = Object.freeze([]),
+        k = [];
 
     function V(e) {
         return (0, N.shouldShareApplicationActivity)(e, C.default)
@@ -68,9 +68,9 @@ function(e, t, n) {
             n = w || y === v.StatusTypes.INVISIBLE ? [] : g.default.getActivities().filter(x);
         !d()(b, n) && (b = n, t = !0);
         let i = D.default.getRemoteActivities();
-        if (k !== i && (k = i, t = !0), t) {
+        if (B !== i && (B = i, t = !0), t) {
             let e = b.find(e => e.type === v.ActivityTypes.CUSTOM_STATUS);
-            B = b.filter(e => e.type !== v.ActivityTypes.CUSTOM_STATUS).length > 0 ? b : null != e ? [e, ...c()(k).filter(e => e.type !== v.ActivityTypes.CUSTOM_STATUS).uniqBy(e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name)).value()] : c().uniqBy(k, e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
+            k = b.filter(e => e.type !== v.ActivityTypes.CUSTOM_STATUS).length > 0 ? b : null != e ? [e, ...c()(B).filter(e => e.type !== v.ActivityTypes.CUSTOM_STATUS).uniqBy(e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name)).value()] : c().uniqBy(B, e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
         }
     }
 
@@ -79,7 +79,7 @@ function(e, t, n) {
     }
 
     function Y() {
-        w = !1, P = v.StatusTypes.UNKNOWN, F(), L.default.setCurrentUserOnConnectionOpen(y, B)
+        w = !1, P = v.StatusTypes.UNKNOWN, F(), L.default.setCurrentUserOnConnectionOpen(y, k)
     }
     class j extends(s = E.default.Store) {
         initialize() {
@@ -99,11 +99,11 @@ function(e, t, n) {
         }
         getActivities() {
             let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-            return e ? B : b
+            return e ? k : b
         }
         getPrimaryActivity() {
             let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-            return e ? B[0] : b[0]
+            return e ? k[0] : b[0]
         }
         getApplicationActivity(e) {
             let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];

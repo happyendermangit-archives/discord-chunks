@@ -48,14 +48,14 @@ function(e, t, n) {
         }
     }
 
-    function k() {
+    function B() {
         D = [], i = null, R = null, C = new Set, g = d.ThreadSortOrder.LATEST_ACTIVITY, L = 0, M = [], y = u().chain(p), P = u().chain(p), b.clear(), U.clear()
     }
 
-    function B() {
+    function k() {
         var e;
         let t = h.default.getChannelId();
-        if (null == t || !(null === (e = f.default.getChannel(t)) || void 0 === e ? void 0 : e.isForumLikeChannel())) return k(), !1;
+        if (null == t || !(null === (e = f.default.getChannel(t)) || void 0 === e ? void 0 : e.isForumLikeChannel())) return B(), !1;
         x({
             refreshThreadIds: !0
         })
@@ -129,16 +129,16 @@ function(e, t, n) {
         configurable: !0,
         writable: !0
     }) : s[a] = o, t.default = new F(c.default, {
-        CONNECTION_OPEN: B,
-        OVERLAY_INITIALIZE: B,
-        GUILD_CREATE: B,
-        CHANNEL_SELECT: B,
+        CONNECTION_OPEN: k,
+        OVERLAY_INITIALIZE: k,
+        GUILD_CREATE: k,
+        CHANNEL_SELECT: k,
         CHANNEL_DELETE: function(e) {
             let {
                 channel: t
             } = e;
             if (null == t.parent_id || t.parent_id !== R) return !1;
-            k()
+            B()
         },
         THREAD_LIST_SYNC: function(e) {
             var t;

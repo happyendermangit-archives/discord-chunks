@@ -61,11 +61,11 @@ function(e, t, n) {
             reportType: n,
             history: G,
             onSelectChild: w,
-            onModalClose: k,
-            multiSelect: B,
+            onModalClose: B,
+            multiSelect: k,
             reportId: V,
             textInput: x
-        } = e, F = U(t, "checkbox"), H = U(t, "text_line_resource"), Y = b(t, "external_link"), j = b(t, "free_text"), W = b(t, "dropdown"), [K, z] = r.useState(!1), [X, Q] = r.useState(""), [q, Z] = r.useState(() => ({})), [J, $] = r.useState(() => ({})), [ee, et] = r.useState((0, o.areRequiredElementsUnfilled)(j, W, F, x, B)), en = function(e, t) {
+        } = e, F = U(t, "checkbox"), H = U(t, "text_line_resource"), Y = b(t, "external_link"), j = b(t, "free_text"), W = b(t, "dropdown"), [K, z] = r.useState(!1), [X, Q] = r.useState(""), [q, Z] = r.useState(() => ({})), [J, $] = r.useState(() => ({})), [ee, et] = r.useState((0, o.areRequiredElementsUnfilled)(j, W, F, x, k)), en = function(e, t) {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
                 i = {
                     ...J
@@ -86,8 +86,8 @@ function(e, t, n) {
             })
         }, [t, w, F, q, J, j, W]);
         r.useEffect(() => {
-            null != B && Z(B), null != x && $(x)
-        }, [B, x]);
+            null != k && Z(k), null != x && $(x)
+        }, [k, x]);
         let er = e => {
                 if (e === M.AbortCodes.INVALID_FORM_BODY) Q(y.default.Messages.IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR);
                 else Q(y.default.Messages.MOBILE_REPORTS_SUBMIT_FAILED)
@@ -194,7 +194,7 @@ function(e, t, n) {
                     switch (e.type) {
                         case "done":
                         case "cancel":
-                            k();
+                            B();
                             break;
                         case "next":
                             ei(["", e.target]);
@@ -207,7 +207,7 @@ function(e, t, n) {
                 canNavigateBack: G.length > 0
             }), (0, i.jsx)(s.ModalCloseButton, {
                 className: P.closeButton,
-                onClick: k
+                onClick: B
             })]
         })
     }

@@ -81,8 +81,8 @@ function(e, t, n) {
         b = /^<@!?(\d+)>/,
         G = /^<@&(\d+)>/,
         w = /^<#(\d+)>/,
-        k = /^<a?:(\w+):(\d+)>/,
-        B = /(@everyone|@here|@Clyde)\b/,
+        B = /^<a?:(\w+):(\d+)>/,
+        k = /(@everyone|@here|@Clyde)\b/,
         V = {
             link: M(a().defaultRules.link),
             autolink: M(a().defaultRules.autolink),
@@ -92,7 +92,7 @@ function(e, t, n) {
             rawUserMention: y(b),
             rawRoleMention: y(G),
             rawChannelMention: y(w),
-            rawEmoji: y(k),
+            rawEmoji: y(B),
             mention: {
                 match(e, t, n) {
                     let i = n.split(" ").pop() + e;
@@ -103,7 +103,7 @@ function(e, t, n) {
                             ...e,
                             text: e.text.split("#")[0]
                         })), "mention"))) return null;
-                    let s = B.exec(e);
+                    let s = k.exec(e);
                     if (null != s && r[0].length <= s[0].length) return null;
                     if ("" === n && (0, c.canSuppressNotifications)()) {
                         let t = c.SILENT_RE.exec(e);
@@ -266,7 +266,7 @@ function(e, t, n) {
                 }
             },
             emoji: {
-                match: a().anyScopeRegex(k),
+                match: a().anyScopeRegex(B),
                 parse(e, t, n) {
                     let [i, r, s] = e, {
                         guild: a

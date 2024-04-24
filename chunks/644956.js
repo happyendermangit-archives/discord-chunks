@@ -60,11 +60,11 @@ function(e, t, n) {
             inlinePreview: U = !1
         } = e, {
             analyticsLocations: b
-        } = (0, T.default)(I.default.ROLE_MENTION), G = (0, u.useStateFromStores)([E.default], () => E.default.roleStyle), w = null != t && 0 !== t && !U, k = w && "dot" === G, B = e => (0, i.jsxs)(C.default, {
+        } = (0, T.default)(I.default.ROLE_MENTION), G = (0, u.useStateFromStores)([E.default], () => E.default.roleStyle), w = null != t && 0 !== t && !U, B = w && "dot" === G, k = e => (0, i.jsxs)(C.default, {
             className: s()(v.roleMention),
             color: "username" === G && w ? t : null,
             ...e,
-            children: [k && (0, i.jsx)(d.RoleDot, {
+            children: [B && (0, i.jsx)(d.RoleDot, {
                 color: (0, l.int2hex)(t),
                 className: D.roleDot,
                 background: !1,
@@ -79,7 +79,7 @@ function(e, t, n) {
         });
         return !V || U || null == a || null == y || null == r && "@everyone" !== f ? (0, i.jsx)(T.AnalyticsLocationProvider, {
             value: b,
-            children: B()
+            children: k()
         }) : (0, i.jsx)(T.AnalyticsLocationProvider, {
             value: b,
             children: (0, i.jsx)(d.Popout, {
@@ -164,7 +164,7 @@ function(e, t, n) {
                     })
                 },
                 position: "right",
-                children: B
+                children: k
             })
         })
     }

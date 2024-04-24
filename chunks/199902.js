@@ -64,12 +64,12 @@ function(e, t, n) {
         return e === D.StreamTypes.CALL || null != n && O.default.canBasicChannel(L.BasicPermissions.VIEW_CHANNEL, n)
     }
 
-    function k(e) {
+    function B(e) {
         if (w(e.streamType, e.channelId)) return !0;
         let t = m.default.getBasicChannel(e.channelId);
         return null != t && (0, f.canWatchStream)(t, g.default, N.default, O.default, E.default)[0]
     }
-    class B extends(o = _.default.Store) {
+    class k extends(o = _.default.Store) {
         initialize() {
             this.syncWith([O.default], () => !0), this.waitFor(I.default, O.default)
         }
@@ -123,13 +123,13 @@ function(e, t, n) {
             var t;
             if (!(0, S.default)(p.default)) return null;
             let n = r[e];
-            return null == n ? null : null !== (t = Object.values(n).find(e => k(e))) && void 0 !== t ? t : null
+            return null == n ? null : null !== (t = Object.values(n).find(e => B(e))) && void 0 !== t ? t : null
         }
         getStreamForUser(e, t) {
             var n;
             if (!(0, S.default)(p.default)) return null;
             let i = null === (n = r[e]) || void 0 === n ? void 0 : n[null != t ? t : L.NULL_STRING_GUILD_ID];
-            return null != i && k(i) ? i : null
+            return null != i && B(i) ? i : null
         }
         getRTCStream(e) {
             var t;
@@ -164,12 +164,12 @@ function(e, t, n) {
             }
         }
     }
-    d = "ApplicationStreamingStore", (u = "displayName") in(l = B) ? Object.defineProperty(l, u, {
+    d = "ApplicationStreamingStore", (u = "displayName") in(l = k) ? Object.defineProperty(l, u, {
         value: d,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : l[u] = d, t.default = new B(c.default, {
+    }) : l[u] = d, t.default = new k(c.default, {
         OVERLAY_INITIALIZE: function(e) {
             let {
                 applicationStreamState: t

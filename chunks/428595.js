@@ -346,8 +346,8 @@ function(e, t, n) {
             list: A.default
         },
         w = (0, O.default)([G, N.default]),
-        k = r().omit(w, ["inlineCode", "codeBlock", "br", "blockQuote"]),
-        B = r().omit(w, ["inlineCode", "codeBlock", "br", "blockQuote", "url", "attachmentLink", "mention", "roleMention", "channelMention", "channelOrMessageUrl", "mediaPostLink"]),
+        B = r().omit(w, ["inlineCode", "codeBlock", "br", "blockQuote"]),
+        k = r().omit(w, ["inlineCode", "codeBlock", "br", "blockQuote", "url", "attachmentLink", "mention", "roleMention", "channelMention", "channelOrMessageUrl", "mediaPostLink"]),
         V = r().omit(w, ["codeBlock", "br", "mention", "channel", "roleMention", "attachmentLink"]),
         x = r().omit((0, O.default)([w, {
             inlineCode: {
@@ -400,8 +400,8 @@ function(e, t, n) {
     }, r().omit(w, ["url"])]);
     t.default = {
         RULES: w,
-        CHANNEL_TOPIC_RULES: k,
-        VOICE_CHANNEL_STATUS_RULES: B,
+        CHANNEL_TOPIC_RULES: B,
+        VOICE_CHANNEL_STATUS_RULES: k,
         EMBED_TITLE_RULES: V,
         INLINE_REPLY_RULES: x,
         GUILD_VERIFICATION_FORM_RULES: F,

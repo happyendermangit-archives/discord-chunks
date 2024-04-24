@@ -44,8 +44,8 @@ function(e, t, n) {
             quest: N,
             width: p,
             applicationStream: O,
-            position: k,
-            closePopout: B
+            position: B,
+            closePopout: k
         } = e, V = (0, l.useStateFromStores)([m.default], () => {
             var e;
             return null !== (e = m.default.getChannel(null == O ? void 0 : O.channelId)) && void 0 !== e ? e : null
@@ -58,10 +58,10 @@ function(e, t, n) {
         } = (0, I.default)(), [q, Z] = r.useState(z), J = (0, T.useWindowDispatch)(), $ = (0, a.useListContainerScrollerRef)();
         r.useEffect(() => {
             let e = $.current;
-            return null == e || e.addEventListener("scroll", B), () => {
-                null == e || e.removeEventListener("scroll", B)
+            return null == e || e.addEventListener("scroll", k), () => {
+                null == e || e.removeEventListener("scroll", k)
             }
-        }, [B, $]);
+        }, [k, $]);
         let ee = (0, s.useSpring)({
                 from: {
                     height: 0
@@ -87,7 +87,7 @@ function(e, t, n) {
             en = () => {
                 J.dispatch(y.ComponentActions.POPOUT_CLOSE)
             },
-            ei = "top" === k ? "".concat("4px", " ").concat("4px", " 0 0") : "0 0 ".concat("4px", " ").concat("4px");
+            ei = "top" === B ? "".concat("4px", " ").concat("4px", " 0 0") : "0 0 ".concat("4px", " ").concat("4px");
         if (null == N || F || H && !w(O, V)) return null;
         let er = () => {
                 (0, R.trackQuestContentClicked)({

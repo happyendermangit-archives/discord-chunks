@@ -56,8 +56,8 @@ function(e, t, n) {
             isDisabled: U = !1,
             maxVisibleItems: G = 7,
             look: w = D.SelectLooks.FILLED,
-            autoFocus: k = !1,
-            popoutPosition: B = "bottom",
+            autoFocus: B = !1,
+            popoutPosition: k = "bottom",
             filter: F = !0,
             debounceTime: H,
             renderOptionLabel: Y = P,
@@ -191,10 +191,10 @@ function(e, t, n) {
                 setFocus: eU,
                 disableClickOnSpace: !0
             }),
-            ek = (0, p.default)(ew),
-            eB = (0, p.default)(em);
+            eB = (0, p.default)(ew),
+            ek = (0, p.default)(em);
         r.useEffect(() => {
-            let e = eB.current,
+            let e = ek.current,
                 t = eg.current;
             ec && null != t && !eN && requestAnimationFrame(() => {
                 let n = eh.current,
@@ -205,7 +205,7 @@ function(e, t, n) {
                 })
             })
         }, [ec, eN]), r.useEffect(() => {
-            let e = ek.current;
+            let e = eB.current;
             if (ec && !eN) {
                 var t;
                 let n = eu.current;
@@ -245,11 +245,11 @@ function(e, t, n) {
             e_(null), (!I || T) && eM(!1), eS(!1)
         }, [n, em, I, T, l, s, eM]);
         r.useLayoutEffect(() => {
-            if (k) {
+            if (B) {
                 var e;
                 null === (e = eu.current) || void 0 === e || e.focus()
             }
-        }, [k]);
+        }, [B]);
         let ex = r.useCallback(() => {
                 eT(""), eV(null), eM(!0)
             }, [eV, eM]),
@@ -305,7 +305,7 @@ function(e, t, n) {
                         renderOptionSuffix: K
                     })
                 },
-                position: B,
+                position: k,
                 children: (e, t) => {
                     let {
                         "aria-expanded": n,
@@ -509,7 +509,7 @@ function(e, t, n) {
                         let {
                             row: n
                         } = e, r = o[n], a = I(r);
-                        return (0, i.jsx)(k, {
+                        return (0, i.jsx)(B, {
                             multi: m,
                             "aria-posinset": n,
                             "aria-setsize": o.length,
@@ -585,7 +585,7 @@ function(e, t, n) {
         })
     }
 
-    function k(e) {
+    function B(e) {
         let {
             value: t,
             label: n,
@@ -624,14 +624,14 @@ function(e, t, n) {
             }), " ", null != s && (0, i.jsx)("div", {
                 className: M.suffix,
                 children: s
-            }), " ", (0, i.jsx)(B, {
+            }), " ", (0, i.jsx)(k, {
                 isSelected: l,
                 multi: c
             })]
         })
     }
 
-    function B(e) {
+    function k(e) {
         let {
             isSelected: t,
             multi: n

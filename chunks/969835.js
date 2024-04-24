@@ -53,7 +53,7 @@ function(e, t, n) {
             channelId: L,
             messageId: D,
             roleId: v
-        }), w = (0, s.useStateFromStores)([E.default], () => E.default.getCurrentUser()), k = (0, s.useStateFromStores)([c.default], () => null != n ? c.default.getGuild(n) : null), B = (0, s.useStateFromStores)([_.default], () => null != n ? _.default.getMember(n, t.id) : null), V = r.useRef(null), x = (0, T.default)(t.id, n), F = (0, o.default)(V);
+        }), w = (0, s.useStateFromStores)([E.default], () => E.default.getCurrentUser()), B = (0, s.useStateFromStores)([c.default], () => null != n ? c.default.getGuild(n) : null), k = (0, s.useStateFromStores)([_.default], () => null != n ? _.default.getMember(n, t.id) : null), V = r.useRef(null), x = (0, T.default)(t.id, n), F = (0, o.default)(V);
         r.useEffect(() => {
             null == y || y(null == V ? void 0 : V.current)
         }, [V, y]);
@@ -77,7 +77,7 @@ function(e, t, n) {
                 channelId: L,
                 messageId: D,
                 roleId: v,
-                shouldTrackViewOnMount: null == B || null != B.fullProfileLoadedTimestamp,
+                shouldTrackViewOnMount: null == k || null != k.fullProfileLoadedTimestamp,
                 children: (0, i.jsxs)(a.Dialog, {
                     ref: V,
                     "aria-label": t.username,
@@ -121,7 +121,7 @@ function(e, t, n) {
                             user: t,
                             currentUser: w,
                             displayProfile: x,
-                            guild: k,
+                            guild: B,
                             onOpenProfile: H,
                             channelId: L,
                             onClose: M

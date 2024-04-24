@@ -2,54 +2,49 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         adoptClanIdentity: function() {
-            return c
-        },
-        convertGuildToClan: function() {
             return d
         },
+        convertGuildToClan: function() {
+            return l
+        },
         fetchClanSettings: function() {
-            return f
-        },
-        getClanInfo: function() {
-            return _
-        },
-        saveClanSettings: function() {
-            return S
-        },
-        updateClanSettings: function() {
             return I
         },
+        getClanInfo: function() {
+            return u
+        },
+        saveClanSettings: function() {
+            return T
+        },
+        updateClanSettings: function() {
+            return c
+        },
         updateClanSetup: function() {
-            return E
+            return _
         }
     }), n("47120");
-    var i = n("392711"),
-        r = n("544891"),
-        s = n("570140"),
-        a = n("479531"),
-        o = n("924801"),
-        l = n("981631"),
-        u = n("976757");
-    async function d(e, t) {
-        var n, u, d, _, c;
-        let E = (0, i.uniqWith)(null !== (n = t.primetime) && void 0 !== n ? n : [], i.isEqual),
-            I = (0, o.formatTimesForServer)(E);
-        s.default.dispatch({
+    var i = n("544891"),
+        r = n("570140"),
+        s = n("479531"),
+        a = n("981631"),
+        o = n("976757");
+    async function l(e, t) {
+        r.default.dispatch({
             type: "CLAN_SETUP_SUBMIT",
             guildId: e
         });
         try {
-            await r.HTTP.post({
-                url: l.Endpoints.GUILD_CONVERT_TO_CLAN(e),
+            var n, o, l, u;
+            await i.HTTP.post({
+                url: a.Endpoints.GUILD_CONVERT_TO_CLAN(e),
                 body: {
                     tag: t.tag,
                     description: t.description,
                     play_style: t.playstyle,
-                    search_terms: Array.from(null !== (d = t.interests) && void 0 !== d ? d : new Set),
-                    game_application_ids: Array.from(null !== (_ = t.gameApplicationIds) && void 0 !== _ ? _ : new Set),
-                    prime_time: I,
+                    search_terms: Array.from(null !== (o = t.interests) && void 0 !== o ? o : new Set),
+                    game_application_ids: Array.from(null !== (l = t.gameApplicationIds) && void 0 !== l ? l : new Set),
                     verification_form: {
-                        form_fields: null !== (c = null === (u = t.verificationForm) || void 0 === u ? void 0 : u.formFields) && void 0 !== c ? c : []
+                        form_fields: null !== (u = null === (n = t.verificationForm) || void 0 === n ? void 0 : n.formFields) && void 0 !== u ? u : []
                     },
                     badge: t.badgeKind,
                     badge_color_primary: t.badgePrimaryColor,
@@ -60,34 +55,34 @@ function(e, t, n) {
                     wildcard_descriptors: t.wildcardDescriptors,
                     badge_image: t.badgeImage
                 }
-            }), s.default.dispatch({
+            }), r.default.dispatch({
                 type: "CLAN_SETUP_SUCCESS",
                 guildId: e
             })
         } catch (t) {
-            throw s.default.dispatch({
+            throw r.default.dispatch({
                 type: "CLAN_SETUP_ERROR",
                 guildId: e,
-                error: new a.default(t)
+                error: new s.default(t)
             }), t
         }
     }
-    async function _(e) {
-        let t = await r.HTTP.get({
-            url: l.Endpoints.GUILD_CLAN_DISCOVERY_INFO(e)
+    async function u(e) {
+        let t = await i.HTTP.get({
+            url: a.Endpoints.GUILD_CLAN_DISCOVERY_INFO(e)
         });
-        return (0, u.buildClanFromServer)(t.body)
+        return (0, o.buildClanFromServer)(t.body)
     }
-    async function c(e, t) {
+    async function d(e, t) {
         try {
-            let n = await r.HTTP.put({
-                url: l.Endpoints.USER_SET_CLAN_IDENTITY,
+            let n = await i.HTTP.put({
+                url: a.Endpoints.USER_SET_CLAN_IDENTITY,
                 body: {
                     identity_guild_id: e,
                     identity_enabled: t
                 }
             });
-            s.default.dispatch({
+            r.default.dispatch({
                 type: "CURRENT_USER_UPDATE",
                 user: n.body
             })
@@ -96,22 +91,22 @@ function(e, t, n) {
         }
     }
 
-    function E(e, t) {
-        s.default.dispatch({
+    function _(e, t) {
+        r.default.dispatch({
             type: "CLAN_SETUP_UPDATE",
             guildId: e,
             updates: t
         })
     }
 
-    function I(e, t) {
-        s.default.dispatch({
+    function c(e, t) {
+        r.default.dispatch({
             type: "CLAN_SETTINGS_UPDATE",
             guildId: e,
             updates: t
         })
     }
-    let T = e => {
+    let E = e => {
         var t, n, i, r, s, a;
         return {
             tag: e.tag,
@@ -120,7 +115,6 @@ function(e, t, n) {
             playstyle: e.play_style,
             description: e.description,
             wildcardDescriptors: e.wildcard_descriptors,
-            primetime: e.prime_time.map(e => (0, o.guildEventToPrimeTimeSelection)(e)),
             verificationForm: {
                 description: null !== (s = null === (t = e.verification_form) || void 0 === t ? void 0 : t.description) && void 0 !== s ? s : "",
                 formFields: null !== (a = null === (n = e.verification_form) || void 0 === n ? void 0 : n.form_fields) && void 0 !== a ? a : [],
@@ -134,31 +128,31 @@ function(e, t, n) {
             brandSecondaryColor: e.brand_color_secondary
         }
     };
-    async function f(e) {
-        s.default.dispatch({
+    async function I(e) {
+        r.default.dispatch({
             type: "CLAN_SETTINGS_FETCH_START"
         });
-        let t = await r.HTTP.get({
-            url: l.Endpoints.CLAN_SETTINGS(e)
+        let t = await i.HTTP.get({
+            url: a.Endpoints.CLAN_SETTINGS(e)
         });
-        s.default.dispatch({
+        r.default.dispatch({
             type: "CLAN_SETTINGS_FETCH_SUCCESS",
             guildId: e,
-            settings: T(t.body)
+            settings: E(t.body)
         })
     }
-    async function S(e, t) {
-        var n, i, s, a;
-        return await r.HTTP.patch({
-            url: l.Endpoints.CLAN_SETTINGS(e),
+    async function T(e, t) {
+        var n, r, s, o;
+        return await i.HTTP.patch({
+            url: a.Endpoints.CLAN_SETTINGS(e),
             body: {
                 tag: t.tag,
                 description: t.description,
                 play_style: t.playstyle,
-                search_terms: Array.from(null !== (i = t.interests) && void 0 !== i ? i : new Set),
+                search_terms: Array.from(null !== (r = t.interests) && void 0 !== r ? r : new Set),
                 game_application_ids: Array.from(null !== (s = t.gameApplicationIds) && void 0 !== s ? s : new Set),
                 verification_form: {
-                    form_fields: null !== (a = null === (n = t.verificationForm) || void 0 === n ? void 0 : n.formFields) && void 0 !== a ? a : []
+                    form_fields: null !== (o = null === (n = t.verificationForm) || void 0 === n ? void 0 : n.formFields) && void 0 !== o ? o : []
                 },
                 badge: t.badgeKind,
                 badge_color_primary: t.badgePrimaryColor,

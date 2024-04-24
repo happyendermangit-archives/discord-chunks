@@ -15384,7 +15384,7 @@ function(e) {
         COLLECTIBLES_CTA_GO_TO_SHOP: "Go to Shop",
         COLLECTIBLES_ACQUIRED_DATE: "Acquired {date}",
         COLLECTIBLES_MOBILE_IAP_NOTICE: "The ability to acquire new decorations is not available on this platform.",
-        COLLECTIBLES_MOBILE_IAP_NOTICE_EDIT_HEADER: "Add more flair to your avatar. The ability to acquire new decorations is not available on this platform.",
+        COLLECTIBLES_MOBILE_IAP_NOTICE_EDIT_HEADER: "Add more flair to your avatar.",
         COLLECTIBLES_PURCHASE: "Buy for {price}",
         COLLECTIBLES_BUY_DECORATION: "Buy Decoration",
         COLLECTIBLES_ADD_TO_YOUR_COLLECTION: "Add to your collection",

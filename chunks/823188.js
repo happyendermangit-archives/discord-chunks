@@ -53,8 +53,8 @@ function(e, t, n) {
         b = n("599250"),
         G = n("466111"),
         w = n("761374"),
-        k = n("363138"),
-        B = n("325767"),
+        B = n("363138"),
+        k = n("325767"),
         V = n("930153"),
         x = n("74538"),
         F = n("326151"),
@@ -170,7 +170,7 @@ function(e, t, n) {
             ...i
         } = e;
         return (0, _.jsxs)("svg", {
-            ...(0, B.default)({
+            ...(0, k.default)({
                 ...i
             }),
             width: t,
@@ -340,7 +340,7 @@ function(e, t, n) {
     function ec() {
         return (0, _.jsxs)(_.Fragment, {
             children: [(0, _.jsx)(eu, {
-                Icon: k.default,
+                Icon: B.default,
                 text: en.default.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
                     maxUploadPremium: (0, x.getMaxFileSizeForPremiumType)(ee.PremiumTypes.TIER_0, {
                         useSpace: !1
@@ -495,7 +495,7 @@ function(e, t, n) {
                     percentageOff: (0, V.formatPercent)(r, ee.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
                 })
             }), (0, _.jsx)(eu, {
-                Icon: k.default,
+                Icon: B.default,
                 text: en.default.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
                     maxUploadPremium: (0, x.getMaxFileSizeForPremiumType)(ee.PremiumTypes.TIER_2, {
                         useSpace: !1
@@ -514,7 +514,7 @@ function(e, t, n) {
         });
         return (0, _.jsxs)(_.Fragment, {
             children: [(0, _.jsx)(eu, {
-                Icon: k.default,
+                Icon: B.default,
                 text: en.default.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
                     maxUploadPremium: (0, x.getMaxFileSizeForPremiumType)(ee.PremiumTypes.TIER_2, {
                         useSpace: !1
@@ -567,16 +567,16 @@ function(e, t, n) {
             b = !l && R,
             G = (0, Q.getBOGOPillCopy)(),
             w = (0, h.isThemeLight)((0, m.default)()),
-            k = w ? 5 : 2,
+            B = w ? 5 : 2,
             {
-                enabled: B
+                enabled: k
             } = W.ReferralProgramRecipient.useExperiment({
                 location: "Tier2Card"
             }, {
                 autoTrackExposure: !1
             }),
             V = en.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT;
-        return B && (null == N ? void 0 : N.trial_id) === ee.PREMIUM_TIER_2_REFERRAL_TRIAL_ID && (V = en.default.Messages.REFERRAL_PROGRAM_TWO_WEEK_TRIAL), !b || y || w ? b && y && !w && (n = ei.rimGlowTier2Stacked) : n = ei.rimGlowTier2, (0, _.jsxs)("div", {
+        return k && (null == N ? void 0 : N.trial_id) === ee.PREMIUM_TIER_2_REFERRAL_TRIAL_ID && (V = en.default.Messages.REFERRAL_PROGRAM_TWO_WEEK_TRIAL), !b || y || w ? b && y && !w && (n = ei.rimGlowTier2Stacked) : n = ei.rimGlowTier2, (0, _.jsxs)("div", {
             className: E()(ei.card, o, {
                 [ei.withTier2Rim]: b && !y,
                 [ei.withTier2RimStacked]: b && y,
@@ -590,7 +590,7 @@ function(e, t, n) {
                         percent: C.discount.amount
                     }),
                     className: ei.topRimPill,
-                    colorOptions: k
+                    colorOptions: B
                 }), (0, _.jsx)("div", {
                     className: n
                 })]
@@ -598,7 +598,7 @@ function(e, t, n) {
                 children: [(0, _.jsx)(eo, {
                     text: V,
                     className: ei.topRimPill,
-                    colorOptions: k
+                    colorOptions: B
                 }), (0, _.jsx)("div", {
                     className: n
                 })]
@@ -606,7 +606,7 @@ function(e, t, n) {
                 children: [(0, _.jsx)(eo, {
                     text: en.default.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED,
                     className: ei.topRimPill,
-                    colorOptions: k
+                    colorOptions: B
                 }), (0, _.jsx)("div", {
                     className: n
                 })]
@@ -614,7 +614,7 @@ function(e, t, n) {
                 children: [(0, _.jsx)(eo, {
                     text: en.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED,
                     className: ei.topRimPill,
-                    colorOptions: k
+                    colorOptions: B
                 }), (0, _.jsx)("div", {
                     className: n
                 })]

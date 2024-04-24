@@ -45,20 +45,20 @@ function(e, t, n) {
             hidePersonalInformation: c.default.hidePersonalInformation
         }), [g, L, U]), {
             activeCommand: w,
-            activeCommandOption: k
+            activeCommandOption: B
         } = (0, s.useStateFromStoresObject)([o.default], () => ({
             activeCommand: o.default.getActiveCommand(g.id),
             activeCommandOption: o.default.getActiveOption(g.id)
-        })), B = (0, T.default)({
+        })), k = (0, T.default)({
             navId: "channel-autocomplete",
             scrollerRef: n,
             state: D,
             onFocus: e => F.setSelectedIndex(e)
         }), V = null === (A = e.editorRef.current) || void 0 === A ? void 0 : A.getCurrentWord(), x = {
             ...e,
-            navigator: B,
+            navigator: k,
             activeCommand: w,
-            activeCommandOption: k,
+            activeCommandOption: B,
             canMentionUsers: null !== (O = null === (m = L.users) || void 0 === m ? void 0 : m.allowMentioning) && void 0 !== O && O,
             canMentionEveryone: b,
             canMentionClyde: P,
@@ -67,9 +67,9 @@ function(e, t, n) {
             emojiIntention: L === l.ChatInputTypes.RULES_INPUT ? h.EmojiIntention.COMMUNITY_CONTENT : h.EmojiIntention.CHAT,
             currentWord: null !== (R = null == V ? void 0 : V.word) && void 0 !== R ? R : "",
             currentWordIsAtStart: (null == V ? void 0 : V.isAtStart) === !0,
-            optionText: null != k ? (0, a.getString)({
-                [k.name]: null !== (C = null === (N = e.editorRef.current) || void 0 === N ? void 0 : N.getCurrentCommandOptionValue()) && void 0 !== C ? C : []
-            }, k.name) : ""
+            optionText: null != B ? (0, a.getString)({
+                [B.name]: null !== (C = null === (N = e.editorRef.current) || void 0 === N ? void 0 : N.getCurrentCommandOptionValue()) && void 0 !== C ? C : []
+            }, B.name) : ""
         }, [F] = i.useState(() => new I.default(x));
         return i.useEffect(() => {
             F.updateProps(x)
@@ -88,6 +88,6 @@ function(e, t, n) {
                     for (let n of t) n.removeChangeListener(e)
                 }
             }
-        }, [F, null === (p = D.query) || void 0 === p ? void 0 : p.typeInfo]), [D, F, B]
+        }, [F, null === (p = D.query) || void 0 === p ? void 0 : p.typeInfo]), [D, F, k]
     }
 }

@@ -35,8 +35,8 @@ function(e, t, n) {
         b = n("540780"),
         G = n("543241"),
         w = n("883661"),
-        k = n("880949"),
-        B = n("784222"),
+        B = n("880949"),
+        k = n("784222"),
         V = n("566083"),
         x = n("172800"),
         F = n("149203"),
@@ -101,7 +101,7 @@ function(e, t, n) {
                 let {
                     columnIndex: t,
                     visibleRowIndex: n
-                } = e, i = e.type === B.EmojiGridItemTypes.EMOJI ? e.emoji.allNamesString : e.name;
+                } = e, i = e.type === k.EmojiGridItemTypes.EMOJI ? e.emoji.allNamesString : e.name;
                 j.current !== H.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID && window.cancelAnimationFrame(j.current), j.current = window.requestAnimationFrame(() => {
                     A.EmojiPickerStore.setInspectedExpressionPosition(t, n, N.InspectedExpressionChangeSource.MOUSE_EVENT), A.EmojiPickerStore.setSearchPlaceholder(i), j.current = H.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID
                 })
@@ -143,7 +143,7 @@ function(e, t, n) {
                         sectionId: l
                     } = n;
                     if (o === F.EmojiCategoryTypes.SEARCH_RESULTS) return;
-                    let u = o === F.EmojiCategoryTypes.GUILD ? null != r ? (0, i.jsx)(k.default, {
+                    let u = o === F.EmojiCategoryTypes.GUILD ? null != r ? (0, i.jsx)(B.default, {
                             guild: r,
                             height: 16,
                             width: 16
@@ -230,8 +230,8 @@ function(e, t, n) {
                 isUsingKeyboardNavigation: U,
                 channelGuildId: G,
                 messageId: w,
-                isBurstReaction: k,
-                listHeaderClassName: B
+                isBurstReaction: B,
+                listHeaderClassName: k
             } = e, V = r.useRef(!1), x = A.EmojiPickerStore.useStore(e => e.activeCategoryIndex), F = (0, m.useExpressionPickerStore)(e => e.searchQuery), Y = L.AnimateEmoji.useSetting(), z = (0, _.useStateFromStores)([D.default], () => D.default.getCurrentUser()), X = (0, P.isPremium)(z), {
                 location: Q
             } = (0, f.useAnalyticsContext)(), {
@@ -275,8 +275,8 @@ function(e, t, n) {
                 allowAnimatedEmoji: Y,
                 channelGuildId: G,
                 messageId: w,
-                isBurstReaction: k,
-                listHeaderClassName: B,
+                isBurstReaction: B,
+                listHeaderClassName: k,
                 activeSectionIndex: Z,
                 upsellGlowOpacity: et,
                 enableNitroUpsell: el

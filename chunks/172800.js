@@ -40,9 +40,9 @@ function(e, t, n) {
             selectedItemClassName: b,
             messageId: G,
             isBurstReaction: w,
-            inNitroLockedSection: k
+            inNitroLockedSection: B
         } = e, {
-            enabled: B
+            enabled: k
         } = f.default.useExperiment({
             location: "EmojiPicker"
         }, {
@@ -137,7 +137,7 @@ function(e, t, n) {
                             messageId: G,
                             isBurstReaction: w,
                             rowPosition: null == j ? void 0 : null === (n = j.current) || void 0 === n ? void 0 : n.getBoundingClientRect(),
-                            inNitroLockedSection: k
+                            inNitroLockedSection: B
                         }, t)
                     }
                 }
@@ -152,7 +152,7 @@ function(e, t, n) {
                 children: e.map(z)
             });
         if (U !== A.EmojiCategoryTypes.TOP_GUILD_EMOJI) return X(t);
-        let Q = t.filter(e => !!B && e.type === S.EmojiGridItemTypes.CREATE_EMOJI || e.subCategory === A.EmojiSubCategory.TOP_GUILD_EMOJI || e.subCategory === A.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && !d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id)),
+        let Q = t.filter(e => !!k && e.type === S.EmojiGridItemTypes.CREATE_EMOJI || e.subCategory === A.EmojiSubCategory.TOP_GUILD_EMOJI || e.subCategory === A.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && !d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id)),
             q = t.filter(e => e.subCategory === A.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id));
         return 0 === q.length ? X(t) : (0, i.jsxs)("div", {
             className: p.topEmojiSectionContainer,

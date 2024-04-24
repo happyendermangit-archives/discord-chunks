@@ -39,8 +39,8 @@ function(e, t, n) {
         b = n("319300"),
         G = n("591600"),
         w = n("579729"),
-        k = n("302316"),
-        B = n("186395"),
+        B = n("302316"),
+        k = n("186395"),
         V = n("584045"),
         x = n("58307"),
         F = n("981631"),
@@ -181,7 +181,7 @@ function(e, t, n) {
                     }) : null, (0, i.jsx)(D.default, {
                         user: K,
                         guildId: null == X ? void 0 : X.id
-                    }), (0, i.jsx)(B.default, {
+                    }), (0, i.jsx)(k.default, {
                         user: K,
                         guild: X,
                         guildMember: Q,
@@ -192,7 +192,7 @@ function(e, t, n) {
                         guild: X,
                         onClose: Z,
                         theme: e_
-                    }), null != er && void 0 !== q && (0, i.jsx)(k.default, {
+                    }), null != er && void 0 !== q && (0, i.jsx)(B.default, {
                         channelId: q,
                         applicationId: er.id
                     }), !ei && !ee && (0, i.jsx)(G.default, {

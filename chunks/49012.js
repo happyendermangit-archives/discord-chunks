@@ -66,13 +66,13 @@ function(e, t, n) {
             G = M,
             w = null;
         if (null != v && null != M) {
-            var k, B, V;
+            var B, k, V;
             let e = N.default.getMessage(M, v),
                 t = S.default.getBasicChannel(M);
             P = null !== (V = null == t ? void 0 : t.guild_id) && void 0 !== V ? V : null;
             let n = h.default.getGuild(P),
-                i = (null == e ? void 0 : null === (k = e.messageReference) || void 0 === k ? void 0 : k.guild_id) != null && (null == e ? void 0 : e.webhookId) != null && (null == e ? void 0 : e.hasFlag(C.MessageFlags.IS_CROSSPOST)) && null != P;
-            i && (null == e ? void 0 : null === (B = e.messageReference) || void 0 === B ? void 0 : B.guild_id) != null ? (b = e.messageReference.message_id, G = e.messageReference.channel_id, w = e.messageReference.guild_id) : w = P;
+                i = (null == e ? void 0 : null === (B = e.messageReference) || void 0 === B ? void 0 : B.guild_id) != null && (null == e ? void 0 : e.webhookId) != null && (null == e ? void 0 : e.hasFlag(C.MessageFlags.IS_CROSSPOST)) && null != P;
+            i && (null == e ? void 0 : null === (k = e.messageReference) || void 0 === k ? void 0 : k.guild_id) != null ? (b = e.messageReference.message_id, G = e.messageReference.channel_id, w = e.messageReference.guild_id) : w = P;
             let r = (null == t ? void 0 : t.type) === C.ChannelTypes.GUILD_ANNOUNCEMENT && (null == n ? void 0 : n.hasFeature(C.GuildFeatures.COMMUNITY)) === !0,
                 s = (null == e ? void 0 : e.hasFlag(C.MessageFlags.EPHEMERAL)) === !0;
             U = null != e && !s && (i || r)
