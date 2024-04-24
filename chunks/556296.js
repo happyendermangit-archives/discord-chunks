@@ -53,9 +53,9 @@ function(e, t, n) {
         b = !0,
         G = {},
         w = !1,
-        B = [R.GlobalKeybindActions.PUSH_TO_TALK, R.GlobalKeybindActions.TOGGLE_OVERLAY_INPUT_LOCK, R.GlobalKeybindActions.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET];
+        k = [R.GlobalKeybindActions.PUSH_TO_TALK, R.GlobalKeybindActions.TOGGLE_OVERLAY_INPUT_LOCK, R.GlobalKeybindActions.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET];
 
-    function k() {
+    function B() {
         let {
             showKeybindIndicators: e
         } = S.default.getCurrentConfig({
@@ -73,7 +73,7 @@ function(e, t, n) {
         let {
             showKeybindIndicators: t
         } = e;
-        t ? k() : V(!0)
+        t ? B() : V(!0)
     }
 
     function F(e) {
@@ -137,7 +137,7 @@ function(e, t, n) {
     function j(e) {
         F(e.id), P = {
             ...P
-        }, delete P[e.id], e.action === R.GlobalKeybindActions.TOGGLE_MUTE && k()
+        }, delete P[e.id], e.action === R.GlobalKeybindActions.TOGGLE_MUTE && B()
     }
 
     function W(e) {
@@ -205,7 +205,7 @@ function(e, t, n) {
     }];
 
     function X() {
-        return k(), z.reduce((e, t) => t() || e, !1)
+        return B(), z.reduce((e, t) => t() || e, !1)
     }
     T.default.setGetKeybindList(() => {
         let e = [];
@@ -324,13 +324,13 @@ function(e, t, n) {
             let {
                 enable: t
             } = e;
-            b = t, t ? (T.default.enable(), c().forEach(P, H), k()) : (T.default.disable(), c().forEach(P, e => F(e.id)), V())
+            b = t, t ? (T.default.enable(), c().forEach(P, H), B()) : (T.default.disable(), c().forEach(P, e => F(e.id)), V())
         },
         KEYBINDS_REGISTER_GLOBAL_KEYBIND_ACTIONS: function(e) {
             let {
                 keybinds: t
             } = e;
-            G = t, y = {}, U = 0, Object.values(P).filter(e => B.includes(e.action) && e.managed).length !== B.length && X(), c().forEach(P, e => {
+            G = t, y = {}, U = 0, Object.values(P).filter(e => k.includes(e.action) && e.managed).length !== k.length && X(), c().forEach(P, e => {
                 U = Math.max(parseInt(e.id, 10), U) + 1;
                 try {
                     H(e)

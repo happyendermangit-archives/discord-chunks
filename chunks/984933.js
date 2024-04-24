@@ -45,8 +45,8 @@ function(e, t, n) {
             })
         },
         w = V(C.NULL_STRING_GUILD_ID),
-        B = [],
-        k = {};
+        k = [],
+        B = {};
 
     function V(e) {
         return {
@@ -249,7 +249,7 @@ function(e, t, n) {
                     channel: t
                 } = e;
                 return t.id
-            })) && void 0 !== n ? n : B
+            })) && void 0 !== n ? n : k
         }
         hasSelectableChannel(e, t) {
             return this.getSelectableChannelIds(e).includes(t)
@@ -265,7 +265,7 @@ function(e, t, n) {
         }
         getTextChannelNameDisambiguations(e) {
             var t;
-            return null != e && null !== (t = y[e]) && void 0 !== t ? t : k
+            return null != e && null !== (t = y[e]) && void 0 !== t ? t : B
         }
     }
     a = "GuildChannelStore", (s = "displayName") in(r = Q) ? Object.defineProperty(r, s, {

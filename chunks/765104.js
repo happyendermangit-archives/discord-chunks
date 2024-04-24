@@ -31,11 +31,11 @@ function(e, t, n) {
             lastRequest: null,
             lastResponse: null
         },
-        B = [],
-        k = [];
+        k = [],
+        B = [];
 
     function V() {
-        B = m.default.getProps().results.filter(e => e.type === h.AutocompleterResultTypes.TEXT_CHANNEL && 0 === e.record.type).map(e => e.record.id)
+        k = m.default.getProps().results.filter(e => e.type === h.AutocompleterResultTypes.TEXT_CHANNEL && 0 === e.record.type).map(e => e.record.id)
     }
     class x extends(l = T.default.PersistedStore) {
         getState() {
@@ -55,7 +55,7 @@ function(e, t, n) {
         }
         summaries(e) {
             var t;
-            return null !== (t = y[e]) && void 0 !== t ? t : k
+            return null !== (t = y[e]) && void 0 !== t ? t : B
         }
         shouldShowTopicsBar() {
             return i
@@ -109,7 +109,7 @@ function(e, t, n) {
                 withUnreads: i,
                 numChannels: r = 25
             } = e, s = [];
-            return t && (s = s.concat(B)), n && (s = s.concat(b.map(e => e.channel_id))), i && (s = s.filter(e => {
+            return t && (s = s.concat(k)), n && (s = s.concat(b.map(e => e.channel_id))), i && (s = s.filter(e => {
                 let t = N.default.getChannel(e);
                 return null != t && !C.default.isChannelMuted(t.guild_id, e) && O.default.hasUnread(e)
             })), (s = s.filter(e => {

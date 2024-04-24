@@ -54,7 +54,7 @@ function(e, t, n) {
             return w
         },
         getSuperPropertiesBase64: function() {
-            return B
+            return k
         },
         isThrottled: function() {
             return U
@@ -245,7 +245,7 @@ function(e, t, n) {
         let i = {},
             r = window.GLOBAL_ENV.RELEASE_CHANNEL;
         r && (i.release_channel = r.split("-")[0]);
-        let s = parseInt((n = "287604", "287604"), 10);
+        let s = parseInt((n = "287635", "287635"), 10);
         !isNaN(s) && (i.client_build_number = s);
         let a = null == g ? void 0 : null === (e = (t = g.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
         return !isNaN(a) && (i.native_build_number = a), i.client_event_source = function() {
@@ -289,7 +289,7 @@ function(e, t, n) {
         return i
     }
 
-    function B() {
+    function k() {
         return r
     }
 }

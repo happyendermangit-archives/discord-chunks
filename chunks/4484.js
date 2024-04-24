@@ -39,8 +39,8 @@ function(e, t, n) {
             disabled: b,
             submitting: G,
             placeholder: w,
-            required: B,
-            textAreaPaddingClassName: k,
+            required: k,
+            textAreaPaddingClassName: B,
             onChange: V,
             onPaste: x,
             onResize: F,
@@ -210,7 +210,7 @@ function(e, t, n) {
                     editor: eN,
                     channelId: y.id,
                     guildId: y.guild_id,
-                    className: a()(M.slateTextArea, k),
+                    className: a()(M.slateTextArea, B),
                     placeholder: w,
                     readOnly: eS,
                     spellCheck: J,
@@ -235,7 +235,7 @@ function(e, t, n) {
                     "aria-describedby": ed,
                     "aria-invalid": eu,
                     "aria-autocomplete": ec,
-                    "aria-required": B
+                    "aria-required": k
                 })
             })]
         })

@@ -412,7 +412,7 @@ function(e, t, n) {
                 frameRate: n
             } = e.quality, i = t <= 480 ? t / 3 * 4 : t / 9 * 16, r = null;
             if (null != e.desktopDescription ? r = e.desktopDescription.id : null != e.cameraDescription && (r = "".concat(e.cameraDescription.videoDeviceGuid, ":").concat(e.cameraDescription.audioDeviceGuid)), this.goLiveSourceIdentifier === r) {
-                this.setDesktopEncodingOptions(i, t, n);
+                this.onDesktopEncodingOptionsSet(i, t, n), this.setDesktopEncodingOptions(i, t, n);
                 return
             }
             if (this.goLiveSourceIdentifier = r, null != this.conn.setDesktopSource) {
@@ -452,7 +452,7 @@ function(e, t, n) {
                         audioInputDeviceId: n
                     })
                 }
-                this.setDesktopEncodingOptions(i, t, n)
+                this.onDesktopEncodingOptionsSet(i, t, n), this.setDesktopEncodingOptions(i, t, n)
             }
         }
         clearGoLiveDevices() {
@@ -485,6 +485,12 @@ function(e, t, n) {
                 width: e,
                 height: t
             }, this.videoStreamParameters[0].maxFrameRate = n, this.videoStreamParameters[0].maxBitrate = i), this.emit(f.BaseConnectionEvent.Video, this.userId, null, this.audioSSRC, this.videoStreamParameters[0].ssrc, g(this.videoStreamParameters[0].ssrc), this.videoStreamParameters), this.conn.setTransportOptions(this.applyQualityConstraints().constraints))
+        }
+        setOnDesktopEncodingOptionsSet(e) {
+            this.onDesktopEncodingOptionsSet = e
+        }
+        setCallExperience(e) {
+            null != this.conn.setCallExperience && this.conn.setCallExperience(e)
         }
         setSDP(e) {}
         setRemoteVideoSinkWants(e) {

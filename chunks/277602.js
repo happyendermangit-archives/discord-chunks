@@ -43,9 +43,9 @@ function(e, t, n) {
                     clan: C
                 })
             })
-        }, [C, b, p]), B = r.useCallback(() => {
+        }, [C, b, p]), k = r.useCallback(() => {
             null != D && (0, u.transitionTo)(S.Routes.GUILD_MEMBER_VERIFICATION(D))
-        }, [D]), k = r.useMemo(() => {
+        }, [D]), B = r.useMemo(() => {
             var e, t;
             let n = null !== (t = null == C ? void 0 : null === (e = C.branding) || void 0 === e ? void 0 : e.primaryColor) && void 0 !== t ? t : null,
                 i = {
@@ -66,26 +66,26 @@ function(e, t, n) {
                     return null;
                 case !P && b:
                     return (0, i.jsx)(s.Button, {
-                        onClick: B,
-                        ...k,
+                        onClick: k,
+                        ...B,
                         children: h.default.Messages.CLAN_USER_APPLICATION_EXISTS_TAG_GUILD_PROFILE_CTA
                     });
                 case !P:
                     return (0, i.jsx)(s.Button, {
                         onClick: w,
-                        ...k,
+                        ...B,
                         children: h.default.Messages.CLAN_USER_APPLY_TAG_GUILD_PROFILE_CTA
                     });
                 case P && !U:
                     return (0, i.jsx)(s.Button, {
                         onClick: G,
-                        ...k,
+                        ...B,
                         children: h.default.Messages.CLAN_USER_ADOPT_TAG_GUILD_PROFILE_CTA
                     });
                 default:
                     return null
             }
-        }, [k, G, w, B, b, U, P, L]);
+        }, [B, G, w, k, b, U, P, L]);
         return null == g || null == C || null == D || N ? (0, i.jsx)(s.Spinner, {}) : (0, i.jsxs)("div", {
             className: A.tooltipContainer,
             onMouseLeave: R,

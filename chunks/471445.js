@@ -45,8 +45,8 @@ function(e, t, n) {
         b = n("883877"),
         G = n("724215"),
         w = n("761529"),
-        B = n("308570"),
-        k = n("632184"),
+        k = n("308570"),
+        B = n("632184"),
         V = n("414896"),
         x = n("398856"),
         F = n("170039"),
@@ -175,7 +175,7 @@ function(e, t, n) {
                 }
                 if (Q) return g.default;
                 if ((0, K.default)(e)) return q ? c.default : V.default;
-                else return q ? _.default : k.default;
+                else return q ? _.default : B.default;
             case X.ChannelTypes.GUILD_DIRECTORY:
                 return T.default;
             case X.ChannelTypes.GUILD_CATEGORY:
@@ -184,7 +184,7 @@ function(e, t, n) {
                 if (z.StaticChannelIds.has(e.id)) {
                     if (e.id === z.StaticChannelId.GUILD_HOME || e.id === z.StaticChannelId.SERVER_GUIDE) {
                         if (et) return C.default;
-                        return B.default
+                        return k.default
                     }
                     if (e.id === z.StaticChannelId.CHANNEL_BROWSER || e.id === z.StaticChannelId.CUSTOMIZE_COMMUNITY) return E.default
                 }
@@ -213,7 +213,7 @@ function(e, t, n) {
             case X.ChannelTypes.GUILD_STAGE_VOICE:
                 return F.default;
             case X.ChannelTypes.GUILD_VOICE:
-                return k.default;
+                return B.default;
             case X.ChannelTypes.GUILD_CATEGORY:
                 return I.default;
             default:

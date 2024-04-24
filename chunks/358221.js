@@ -31,8 +31,8 @@ function(e, t, n) {
         b = {},
         G = {},
         w = {},
-        B = {},
         k = {},
+        B = {},
         V = {},
         x = {},
         F = {};
@@ -205,7 +205,7 @@ function(e, t, n) {
             return null !== (t = H(e).toArray(g.ChannelRTCParticipantsIndexes.SPEAKING)) && void 0 !== t ? t : M
         }
         getFilteredParticipants(e) {
-            return k[e] ? H(e).toArray(g.ChannelRTCParticipantsIndexes.FILTERED) : H(e).toArray()
+            return B[e] ? H(e).toArray(g.ChannelRTCParticipantsIndexes.FILTERED) : H(e).toArray()
         }
         getVideoParticipants(e) {
             var t;
@@ -228,11 +228,11 @@ function(e, t, n) {
         }
         getParticipantsOpen(e) {
             var t;
-            return null === (t = B[e]) || void 0 === t || t
+            return null === (t = k[e]) || void 0 === t || t
         }
         getVoiceParticipantsHidden(e) {
             var t;
-            return null !== (t = k[e]) && void 0 !== t && t
+            return null !== (t = B[e]) && void 0 !== t && t
         }
         getSelectedParticipantId(e) {
             let [t, n] = W(e);
@@ -360,7 +360,7 @@ function(e, t, n) {
                     e === h.default.getId() && j(e, [t])
                 } catch (e) {
                     v.warn("INVALID STREAM KEY FORMAT ".concat(n), e)
-                }!Q(i) && (B[t] = !1)
+                }!Q(i) && (k[t] = !1)
             }
         },
         CHANNEL_RTC_UPDATE_LAYOUT: function(e) {
@@ -379,14 +379,14 @@ function(e, t, n) {
                 channelId: t,
                 participantsOpen: n
             } = e;
-            B[t] = n
+            k[t] = n
         },
         CHANNEL_RTC_UPDATE_VOICE_PARTICIPANTS_HIDDEN: function(e) {
             let {
                 channelId: t,
                 voiceParticipantsHidden: n
             } = e;
-            k[t] = n
+            B[t] = n
         },
         CHANNEL_RTC_UPDATE_STAGE_STREAM_SIZE: function(e) {
             let {

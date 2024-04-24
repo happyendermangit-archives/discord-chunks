@@ -8,13 +8,13 @@ function(e, t, n) {
             return w
         },
         CLIPS_EDUCATION_GAME_LAUNCH_THRESHOLD: function() {
-            return B
+            return k
         },
         CLIPS_EDUCATION_MAX_DISMISSALS_DISABLED: function() {
             return V
         },
         CLIPS_EDUCATION_MAX_DISMISSALS_ENABLED: function() {
-            return k
+            return B
         },
         CLIPS_EXPORT_FILENAME: function() {
             return f
@@ -122,7 +122,7 @@ function(e, t, n) {
         b = 30,
         G = 10,
         w = 14 * c.default.Millis.DAY,
-        B = 5,
         k = 5,
+        B = 5,
         V = 1
 }

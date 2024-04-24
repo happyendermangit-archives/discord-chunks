@@ -201,13 +201,13 @@ function(e, t, n) {
             backgroundDarkColor: b,
             backgroundLightColor: G,
             foregroundDarkColor: w,
-            foregroundLightColor: B,
-            premiumBackgroundColor: k,
+            foregroundLightColor: k,
+            premiumBackgroundColor: B,
             premiumForegroundColor: V
         } = D[P];
         if (null == U) return null;
-        y.premium && (t = V, n = k);
-        let x = (0, l.isThemeDark)(v) ? w : B,
+        y.premium && (t = V, n = B);
+        let x = (0, l.isThemeDark)(v) ? w : k,
             F = (0, l.isThemeDark)(v) ? b : G;
         t = null != t ? t : x, n = null != n ? n : F;
         let H = e => {

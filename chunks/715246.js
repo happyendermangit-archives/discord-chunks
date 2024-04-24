@@ -48,11 +48,11 @@ function(e, t, n) {
             friction: 14,
             tension: 200
         },
-        B = {
+        k = {
             VIDEO: "VIDEO",
             AUDIO: "AUDIO"
         },
-        k = {
+        B = {
             width: "100%",
             height: "100%",
             backgroundColor: "black"
@@ -176,7 +176,7 @@ function(e, t, n) {
                 type: T
             } = this.props;
             return (0, s.jsxs)(_.default.div, {
-                className: T === B.VIDEO ? P.videoControls : P.audioControls,
+                className: T === k.VIDEO ? P.videoControls : P.audioControls,
                 onClick: e => e.stopPropagation(),
                 onDoubleClick: e => e.stopPropagation(),
                 style: this.getAnimatedStyle(),
@@ -683,12 +683,12 @@ function(e, t, n) {
                     dragging: N
                 }
             } = this, O = this.getWidth();
-            return c || n || t === B.AUDIO ? (0, s.jsx)(F, {
+            return c || n || t === k.AUDIO ? (0, s.jsx)(F, {
                 buffers: u,
                 currentTime: d,
                 duration: _,
                 volume: (0, h.amplitudeToPerceptual)(m, 1),
-                hide: t === B.VIDEO && E,
+                hide: t === k.VIDEO && E,
                 muted: T,
                 autoPlay: n,
                 onDrag: this.handleDrag,
@@ -707,7 +707,7 @@ function(e, t, n) {
                 ref: this.controlsRef,
                 width: S ? window.screen.width : O,
                 disabled: !i,
-                children: t === B.VIDEO ? (0, s.jsx)(I.default, {
+                children: t === k.VIDEO ? (0, s.jsx)(I.default, {
                     "aria-label": y.default.Messages.TITLE_BAR_FULLSCREEN_WINDOW,
                     className: P.videoButton,
                     guestWindow: window,
@@ -728,7 +728,7 @@ function(e, t, n) {
                 playable: r,
                 mimeType: a
             } = this.props;
-            return null == e || null == t ? null : i === B.AUDIO ? (0, s.jsx)(H, {
+            return null == e || null == t ? null : i === k.AUDIO ? (0, s.jsx)(H, {
                 fileName: e,
                 fileSize: t,
                 src: n,
@@ -750,7 +750,7 @@ function(e, t, n) {
             } = this.props, {
                 fullscreen: i
             } = this.state, r = this.getWidth();
-            return i ? k : t === B.AUDIO ? {
+            return i ? B : t === k.AUDIO ? {
                 width: void 0,
                 height: "auto"
             } : e ? void 0 : {
@@ -774,7 +774,7 @@ function(e, t, n) {
                 hideControls: c,
                 playing: E
             } = this.state, I = P.wrapperPaused;
-            if (t === B.AUDIO ? I = P.wrapperAudio : c ? I = P.wrapperControlsHidden : E && (I = P.wrapperPlaying), i && t === B.VIDEO) {
+            if (t === k.AUDIO ? I = P.wrapperAudio : c ? I = P.wrapperControlsHidden : E && (I = P.wrapperPlaying), i && t === k.VIDEO) {
                 let t = this.getWidth();
                 return (0, s.jsxs)("div", {
                     className: l()(I, {
@@ -804,7 +804,7 @@ function(e, t, n) {
                 onMouseMove: E ? this.handleMouseMove : void 0,
                 onKeyDown: this.handleKeyDown,
                 style: this.getMediaStyle(),
-                children: [this.renderMetadata(), t === B.AUDIO ? this.renderAudio() : this.renderVideo(), this.renderControls(), t === B.VIDEO ? this.renderPlayPausePop() : null, null != d ? (0, s.jsx)("div", {
+                children: [this.renderMetadata(), t === k.AUDIO ? this.renderAudio() : this.renderVideo(), this.renderControls(), t === k.VIDEO ? this.renderPlayPausePop() : null, null != d ? (0, s.jsx)("div", {
                     className: l()({
                         [P.overlayContentHidden]: E || _
                     }),
@@ -1014,7 +1014,7 @@ function(e, t, n) {
             }
         }
     }
-    b(K, "Types", B), b(K, "defaultProps", {
+    b(K, "Types", k), b(K, "defaultProps", {
         width: 400,
         height: 300,
         forceExternal: !1,

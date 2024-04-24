@@ -85,8 +85,8 @@ function(e, t, n) {
         b = n("278297"),
         G = n("259580"),
         w = n("386103"),
-        B = n("465670"),
-        k = n("839523"),
+        k = n("465670"),
+        B = n("839523"),
         V = n("626135"),
         x = n("823379"),
         F = n("589530"),
@@ -562,7 +562,7 @@ function(e, t, n) {
                             [X.newTopicsBarTextUnselected]: !Z,
                             [X.newTopicsBarTextSelected]: Z
                         }),
-                        children: [(0, s.jsx)(k.default, {
+                        children: [(0, s.jsx)(B.default, {
                             className: X.newTopicsBarIcon,
                             width: 16,
                             height: 16
@@ -597,7 +597,7 @@ function(e, t, n) {
                     className: X.topicsDropdownHeading,
                     children: [(0, s.jsxs)("div", {
                         className: X.topicsDropdownHeadingText,
-                        children: [(0, s.jsx)(k.default, {
+                        children: [(0, s.jsx)(B.default, {
                             className: X.topicsPillHeadingIcon,
                             width: 18,
                             height: 20
@@ -613,7 +613,7 @@ function(e, t, n) {
                         "aria-label": z.default.Messages.CLOSE,
                         onClick: $,
                         className: X.topicsDropdownClose,
-                        children: (0, s.jsx)(B.default, {})
+                        children: (0, s.jsx)(k.default, {})
                     })]
                 }), (0, s.jsx)(E.Scroller, {
                     ref: M,
@@ -785,7 +785,7 @@ function(e, t, n) {
                             [X.topicsPillTextUnselected]: !K,
                             [X.topicsPillTextSelected]: K
                         }),
-                        children: [(0, s.jsx)(k.default, {
+                        children: [(0, s.jsx)(B.default, {
                             className: X.topicsPillSummaryIcon,
                             width: 16,
                             height: 16
@@ -832,7 +832,7 @@ function(e, t, n) {
                     className: X.topicsDropdownHeading,
                     children: [(0, s.jsxs)("div", {
                         className: X.topicsDropdownHeadingText,
-                        children: [(0, s.jsx)(k.default, {
+                        children: [(0, s.jsx)(B.default, {
                             className: X.topicsPillHeadingIcon,
                             width: 18,
                             height: 20
@@ -848,7 +848,7 @@ function(e, t, n) {
                         "aria-label": z.default.Messages.CLOSE,
                         onClick: q,
                         className: X.topicsDropdownClose,
-                        children: (0, s.jsx)(B.default, {})
+                        children: (0, s.jsx)(k.default, {})
                     })]
                 }), (0, s.jsx)(E.Scroller, {
                     ref: g,

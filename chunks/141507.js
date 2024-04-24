@@ -71,8 +71,8 @@ function(e, t, n) {
                     allNamesString: null == b ? void 0 : b.name
                 },
                 w = (0, s.useStateFromStores)([I.default], () => null !== G && G.type === l.EmojiTypes.GUILD ? I.default.getGuild(G.guildId) : null, [G]),
-                B = (0, s.useStateFromStores)([T.default], () => T.default.isFocused()),
-                k = (0, s.useStateFromStores)([o.default], () => o.default.useReducedMotion, []),
+                k = (0, s.useStateFromStores)([T.default], () => T.default.isFocused()),
+                B = (0, s.useStateFromStores)([o.default], () => o.default.useReducedMotion, []),
                 V = E.AnimateEmoji.useSetting(),
                 x = (0, A.useIsFavoriteEmoji)(v, g(G) ? G : null),
                 {
@@ -116,7 +116,7 @@ function(e, t, n) {
             let W = null != w ? (0, i.jsx)(N.default, {
                     className: C.__invalid_guildIcon,
                     guild: w,
-                    shouldAnimate: !k && B
+                    shouldAnimate: !B && k
                 }) : null,
                 K = P && "CREATE_EMOJI" === G.type ? R.default.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE_DESCRIPTION : G.allNamesString,
                 z = P && "CREATE_EMOJI" === G.type ? R.default.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE : L({

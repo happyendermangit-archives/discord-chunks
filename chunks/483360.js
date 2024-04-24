@@ -39,8 +39,8 @@ function(e, t, n) {
         b = n("914010"),
         G = n("594174"),
         w = n("55563"),
-        B = n("823379"),
-        k = n("892880"),
+        k = n("823379"),
+        B = n("892880"),
         V = n("700785"),
         x = n("226951"),
         F = n("709054"),
@@ -180,7 +180,7 @@ function(e, t, n) {
             } = e;
             return es({
                 query: t,
-                members: P.default.getFriendIDs().map(e => G.default.getUser(e)).filter(B.isNotNullish),
+                members: P.default.getFriendIDs().map(e => G.default.getUser(e)).filter(k.isNotNullish),
                 limit: n,
                 filter: r
             })
@@ -193,7 +193,7 @@ function(e, t, n) {
             } = e;
             return es({
                 query: t,
-                members: C.default.getDMUserIds().map(e => G.default.getUser(e)).filter(B.isNotNullish),
+                members: C.default.getDMUserIds().map(e => G.default.getUser(e)).filter(k.isNotNullish),
                 limit: n,
                 filter: i
             })
@@ -230,7 +230,7 @@ function(e, t, n) {
                     let e = eo(l.id, r);
                     if (e.length > 0) return e
                 }
-                t = L.default.getMembers(d.guild_id).filter(er), s && k.default.requestMembers(d.guild_id, i, r)
+                t = L.default.getMembers(d.guild_id).filter(er), s && B.default.requestMembers(d.guild_id, i, r)
             }
             return es({
                 query: i,
@@ -260,7 +260,7 @@ function(e, t, n) {
                 if (e.length > 0) return e
             }
             let l = L.default.getMembers(t).filter(er);
-            return r && n.length > 0 && k.default.requestMembers(t, n, i), es({
+            return r && n.length > 0 && B.default.requestMembers(t, n, i), es({
                 query: n,
                 members: l,
                 limit: i,
@@ -272,7 +272,7 @@ function(e, t, n) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10,
                 n = (arguments.length > 2 && void 0 !== arguments[2] && arguments[2], !(arguments.length > 3) || void 0 === arguments[3] || arguments[3]),
                 i = arguments.length > 4 ? arguments[4] : void 0;
-            return n && e.length > 0 && k.default.requestMembers(null, e, t), es({
+            return n && e.length > 0 && B.default.requestMembers(null, e, t), es({
                 query: e,
                 members: o()(G.default.getUsers()).values().value(),
                 limit: t,
@@ -584,7 +584,7 @@ function(e, t, n) {
                     score: n,
                     originalIndex: t
                 } : null
-            }).filter(B.isNotNullish).sortBy(e => -1 * e.score);
+            }).filter(k.isNotNullish).sortBy(e => -1 * e.score);
             return null !== i && (u = u.take(i)), u.value()
         },
         queryStaticRouteChannels(e) {

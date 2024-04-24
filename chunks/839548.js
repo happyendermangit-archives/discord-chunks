@@ -51,6 +51,8 @@ function(e, t, n) {
         setUseElectronVideo(e) {
             this.useElectronVideo = e
         }
+        setOnDesktopEncodingOptionsSet(e) {}
+        setCallExperience(e) {}
         setClipRecordUser(e, t, n) {}
         setViewerSideClip(e) {}
         setClipsKeyFrameInterval(e) {}
@@ -141,7 +143,7 @@ function(e, t, n) {
                 any: 100
             }), u(this, "localVideoSinkWants", {
                 any: 100
-            }), u(this, "connectionState", l.ConnectionStates.CONNECTING), u(this, "stats", void 0), u(this, "experimentFlags", new Set), u(this, "framerateReducer", void 0), this.context = e, this.userId = t, this.videoQualityManager = new o.VideoQualityManager(e, this);
+            }), u(this, "connectionState", l.ConnectionStates.CONNECTING), u(this, "stats", void 0), u(this, "onDesktopEncodingOptionsSet", (e, t, n) => {}), u(this, "experimentFlags", new Set), u(this, "framerateReducer", void 0), this.context = e, this.userId = t, this.videoQualityManager = new o.VideoQualityManager(e, this);
             let i = n("988746").default;
             this.framerateReducer = new i(this, this.videoQualityManager)
         }

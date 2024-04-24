@@ -162,8 +162,8 @@ function(e, t, n) {
             optionClassName: b,
             closeOnSelect: G,
             select: w,
-            isSelected: B,
-            serialize: k,
+            isSelected: k,
+            serialize: B,
             clear: V,
             hideIcon: x = !1,
             "aria-label": F,
@@ -183,7 +183,7 @@ function(e, t, n) {
             }
         }, [w, G]), J = r.useCallback(e => {
             e.stopPropagation(), null == V || V()
-        }, [V]), $ = t.filter(e => B(e.value));
+        }, [V]), $ = t.filter(e => k(e.value));
         r.useLayoutEffect(() => {
             if (_) {
                 var e;
@@ -212,12 +212,12 @@ function(e, t, n) {
                     closeOnSelect: G,
                     maxVisibleItems: u,
                     width: null != T ? T : K,
-                    isSelected: B,
+                    isSelected: k,
                     closePopout: n,
                     buttonHeight: null != z ? z : 0,
                     onSelect: Z,
                     options: t,
-                    serialize: k,
+                    serialize: B,
                     renderOptionLabel: g,
                     optionClassName: b,
                     updatePosition: s,

@@ -41,22 +41,22 @@ function(e, t, n) {
     function G(e, t) {
         if (null == t.communicationDisabledUntil || !(0, T.isMemberCommunicationDisabled)(t)) return w(e, t.userId);
         let n = V(e, t.userId);
-        D[n] !== t.communicationDisabledUntil && (0, T.isMemberCommunicationDisabled)(t) && (D[n] = t.communicationDisabledUntil, B(n))
+        D[n] !== t.communicationDisabledUntil && (0, T.isMemberCommunicationDisabled)(t) && (D[n] = t.communicationDisabledUntil, k(n))
     }
 
     function w(e, t) {
         if (null != t) {
             let n = V(e, t);
-            null != D[n] && B(n), k(V(e, t))
+            null != D[n] && k(n), B(V(e, t))
         } else
-            for (let t in D) F(t) === e && (B(t), k(t))
-    }
-
-    function B(e) {
-        M += 1, P[e] = M
+            for (let t in D) F(t) === e && (k(t), B(t))
     }
 
     function k(e) {
+        M += 1, P[e] = M
+    }
+
+    function B(e) {
         x(e) === N.default.getId() && (0, f.clearCommunicationDisabledNotice)(F(e)), delete D[e]
     }
 

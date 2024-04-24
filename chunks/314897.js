@@ -30,8 +30,8 @@ function(e, t, n) {
         b = "user_id_cache",
         G = null,
         w = null,
-        B = null,
         k = null,
+        B = null,
         V = null,
         x = null,
         F = null,
@@ -162,10 +162,10 @@ function(e, t, n) {
             return G
         }
         getSessionId() {
-            return B
+            return k
         }
         getAuthSessionIdHash() {
-            return k
+            return B
         }
         getToken() {
             return (0, R.getToken)()
@@ -258,7 +258,7 @@ function(e, t, n) {
                 analyticsToken: s,
                 auth: a
             } = e;
-            ea("handleConnectionOpen called"), C.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, p.default)(n)), B = i, k = r, F = s, G = n.id, w = n.email, void 0 !== a && (W = a.authenticator_types), T.Storage.set(U, n.email), T.Storage.set(b, n.id)
+            ea("handleConnectionOpen called"), C.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, p.default)(n)), k = i, B = r, F = s, G = n.id, w = n.email, void 0 !== a && (W = a.authenticator_types), T.Storage.set(U, n.email), T.Storage.set(b, n.id)
         },
         OVERLAY_INITIALIZE: function(e) {
             var t;
@@ -268,7 +268,7 @@ function(e, t, n) {
                 analyticsToken: r,
                 token: s
             } = e;
-            C.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, p.default)(n)), B = i, F = r, ed(s), eu(), G = n.id, T.Storage.set(b, n.id)
+            C.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, p.default)(n)), k = i, F = r, ed(s), eu(), G = n.id, T.Storage.set(b, n.id)
         },
         CONNECTION_CLOSED: function(e) {
             let {
@@ -288,7 +288,7 @@ function(e, t, n) {
             let {
                 authSessionIdHash: t
             } = e;
-            null != t && (k = t)
+            null != t && (B = t)
         },
         LOGIN: function(e) {
             et = {}, H = D.LoginStates.LOGGING_IN, Z = "", r = null, null != e.login && (er = e.login)

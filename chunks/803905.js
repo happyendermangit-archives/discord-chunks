@@ -74,7 +74,7 @@ function(e, t, n) {
             return L
         },
         UPLOAD_LARGE_FILES: function() {
-            return B
+            return k
         },
         VIDEO_FILTER_ASSETS: function() {
             return U
@@ -102,7 +102,7 @@ function(e, t, n) {
                 try {
                     let n = d[t.premiumType];
                     if (null == n) return u.warn("Cannot find the corresponding SKU to the user's premium type ".concat(t.premiumType)), !1;
-                    let i = k[n];
+                    let i = B[n];
                     if (null == i) return u.warn("Cannot find the corresponding product catalog entry to the user's SKU ".concat(n, " and premium type ").concat(t.premiumType)), !1;
                     return i.skuFeatures.includes(e)
                 } catch (e) {
@@ -139,11 +139,11 @@ function(e, t, n) {
     let b = new _(i.EntitlementFeatureNames.INCREASED_GUILD_LIMIT),
         G = new _(i.EntitlementFeatureNames.INCREASED_MESSAGE_LENGTH),
         w = new _("increasedVideoUploadQuality"),
-        B = new _("uploadLargeFiles"),
-        k = Object.freeze({
-            [l.PremiumSubscriptionSKUs.TIER_0]: new o.default(l.PremiumSubscriptionSKUs.TIER_0, [c, E, I, m, U, w, B, O]),
-            [l.PremiumSubscriptionSKUs.TIER_1]: new o.default(l.PremiumSubscriptionSKUs.TIER_1, [c, E, S, h, m, C, L, M, w, B, O]),
-            [l.PremiumSubscriptionSKUs.TIER_2]: new o.default(l.PremiumSubscriptionSKUs.TIER_2, [c, E, I, T, f, S, h, A, m, N, R, C, g, L, D, M, y, P, U, b, G, w, B, O, p, v])
+        k = new _("uploadLargeFiles"),
+        B = Object.freeze({
+            [l.PremiumSubscriptionSKUs.TIER_0]: new o.default(l.PremiumSubscriptionSKUs.TIER_0, [c, E, I, m, U, w, k, O]),
+            [l.PremiumSubscriptionSKUs.TIER_1]: new o.default(l.PremiumSubscriptionSKUs.TIER_1, [c, E, S, h, m, C, L, M, w, k, O]),
+            [l.PremiumSubscriptionSKUs.TIER_2]: new o.default(l.PremiumSubscriptionSKUs.TIER_2, [c, E, I, T, f, S, h, A, m, N, R, C, g, L, D, M, y, P, U, b, G, w, k, O, p, v])
         });
 
     function V(e, t) {

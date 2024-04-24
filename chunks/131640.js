@@ -5,7 +5,7 @@ function(e, t, n) {
             return V
         },
         UserPopoutBadgeList: function() {
-            return B
+            return k
         },
         default: function() {
             return x
@@ -46,7 +46,7 @@ function(e, t, n) {
     let G = d.AvatarSizes.SIZE_80,
         w = (0, c.getDecorationSizeForAvatarSize)(G);
 
-    function B(e) {
+    function k(e) {
         let {
             user: t,
             guildId: n,
@@ -71,7 +71,7 @@ function(e, t, n) {
             })]
         })
     }
-    let k = N.default.getEnableHardwareAcceleration() ? d.AnimatedAvatar : d.Avatar;
+    let B = N.default.getEnableHardwareAcceleration() ? d.AnimatedAvatar : d.Avatar;
 
     function V(e) {
         let {
@@ -90,7 +90,7 @@ function(e, t, n) {
             hasProfileEffect: C
         } = e, {
             theme: L
-        } = (0, D.useUserProfileThemeContext)(), B = r.useContext(A.AnalyticsContext), V = t.isNonUserBot() && !t.isClyde(), x = m.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, P.PremiumTypes.TIER_2), F = r.useMemo(() => (0, I.shouldDisableUserPresenceInChannel)(t, T), [t, T]), {
+        } = (0, D.useUserProfileThemeContext)(), k = r.useContext(A.AnalyticsContext), V = t.isNonUserBot() && !t.isClyde(), x = m.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, P.PremiumTypes.TIER_2), F = r.useMemo(() => (0, I.shouldDisableUserPresenceInChannel)(t, T), [t, T]), {
             analyticsLocations: H
         } = (0, _.default)(), {
             trackUserProfileAction: Y,
@@ -108,7 +108,7 @@ function(e, t, n) {
         }), q = (0, i.jsx)("div", {
             className: b.avatarHoverTarget,
             ...Q,
-            children: (0, i.jsx)(k, {
+            children: (0, i.jsx)(B, {
                 src: null != s ? s : X,
                 avatarDecoration: z,
                 size: G,
@@ -144,7 +144,7 @@ function(e, t, n) {
                         messageId: j,
                         roleId: W,
                         sourceAnalyticsLocations: H,
-                        analyticsLocation: B.location
+                        analyticsLocation: k.location
                     }), null == f || f()
                 },
                 children: [q, !K && function() {
@@ -209,7 +209,7 @@ function(e, t, n) {
                 hasBanner: (null == n ? void 0 : n.banner) != null,
                 hasProfileEffect: (null == n ? void 0 : n.profileEffectId) != null,
                 profileType: M.UserProfileTypes.POPOUT
-            }), (0, i.jsx)(B, {
+            }), (0, i.jsx)(k, {
                 user: t,
                 guildId: r
             })]

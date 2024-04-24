@@ -35,8 +35,8 @@ function(e, t, n) {
         b = n("491173"),
         G = n("515005"),
         w = n("652136"),
-        B = n("981631"),
-        k = n("957825"),
+        k = n("981631"),
+        B = n("957825"),
         V = n("689938"),
         x = n("626672"),
         F = n("239840");
@@ -101,11 +101,11 @@ function(e, t, n) {
                         type: u
                     } = e, d = {
                         ...s.location,
-                        object: "" === o ? B.AnalyticsObjects.STICKER_PICKER_VIEW_ALL : B.AnalyticsObjects.STICKER_SEARCH_VIEW_ALL
+                        object: "" === o ? k.AnalyticsObjects.STICKER_PICKER_VIEW_ALL : k.AnalyticsObjects.STICKER_SEARCH_VIEW_ALL
                     };
                     if (null != l && !(0, D.isSendableSticker)(l, i, n)) {
                         let e = v.default.getStickerPack(r);
-                        null != e && (C.default.track(B.AnalyticEvents.STICKER_PACK_VIEW_ALL, {
+                        null != e && (C.default.track(k.AnalyticEvents.STICKER_PACK_VIEW_ALL, {
                             sticker_id: l.id,
                             sticker_pack_id: r,
                             location: d,
@@ -175,9 +175,9 @@ function(e, t, n) {
                 let {
                     isStickerPack: n = !0
                 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, i = new Set(t), r = t.has(e);
-                r ? i.delete(e) : i.add(e), C.default.track(B.AnalyticEvents.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
+                r ? i.delete(e) : i.add(e), C.default.track(k.AnalyticEvents.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
                     location: null == D ? void 0 : D.location,
-                    tab: k.ExpressionPickerViewType.STICKER,
+                    tab: B.ExpressionPickerViewType.STICKER,
                     collapsed: !r,
                     sticker_pack_id: n ? e : null
                 }), K(i)
@@ -322,8 +322,8 @@ function(e, t, n) {
             } = (0, c.default)(_.default.STICKER_PICKER), P = (0, T.useExpressionPickerStore)(e => e.searchQuery), U = (0, a.useStateFromStores)([v.default], () => v.default.getPremiumPacks()), {
                 renderRow: G,
                 renderSection: w,
-                renderSectionFooter: B,
-                sectionFooterHeight: k,
+                renderSectionFooter: k,
+                sectionFooterHeight: B,
                 renderSectionHeader: Y,
                 sectionHeaderHeight: j
             } = eu({
@@ -407,12 +407,12 @@ function(e, t, n) {
                         renderRow: G,
                         renderSection: null == l ? w : void 0,
                         renderSectionHeader: Y,
-                        renderSectionFooter: B,
+                        renderSectionFooter: k,
                         rowCount: m,
                         rowCountBySection: N,
                         rowHeight: o > H ? et : en,
                         sectionHeaderHeight: j,
-                        sectionFooterHeight: k,
+                        sectionFooterHeight: B,
                         stickyHeaders: !0,
                         ref: L
                     }), (0, i.jsx)(b.default, {

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return k
+            return B
         }
     }), n("390547"), n("47120");
     var i = n("735250"),
@@ -253,7 +253,7 @@ function(e, t, n) {
         })
     }
 
-    function B(e) {
+    function k(e) {
         let {
             guild: t
         } = e, {
@@ -306,7 +306,7 @@ function(e, t, n) {
         })
     }
 
-    function k(e) {
+    function B(e) {
         let {
             guild: t
         } = e, n = (0, d.default)(t);
@@ -328,7 +328,7 @@ function(e, t, n) {
                     lineClamp: 1,
                     children: t.name
                 })]
-            }), (0, i.jsx)(B, {
+            }), (0, i.jsx)(k, {
                 guild: t
             })]
         })

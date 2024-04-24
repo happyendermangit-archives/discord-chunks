@@ -42,15 +42,15 @@ function(e, t, n) {
             location: "6e9811_2"
         }, {
             autoTrackExposure: !1
-        }), B = (0, h.useChannelAutocompleteLayerPosition)({
+        }), k = (0, h.useChannelAutocompleteLayerPosition)({
             editorHeight: g,
             type: C,
             state: y,
             isInPopoutExperiment: w
-        }), k = r.useMemo(() => null == B ? "" : String(Date.now()), [null == B ? void 0 : B.top, null == B ? void 0 : B.left, null == B ? void 0 : B.bottom, null == B ? void 0 : B.right]);
+        }), B = r.useMemo(() => null == k ? "" : String(Date.now()), [null == k ? void 0 : k.top, null == k ? void 0 : k.left, null == k ? void 0 : k.bottom, null == k ? void 0 : k.right]);
         if (r.useEffect(() => {
                 L(y.isVisible)
-            }, [L, y.isVisible]), !y.isVisible || null == y.query || void 0 === B) return null;
+            }, [L, y.isVisible]), !y.isVisible || null == y.query || void 0 === k) return null;
         let V = null !== (s = y.query.typeInfo.renderResults({
             results: y.query.results,
             selectedIndex: y.selectedIndex,
@@ -63,12 +63,12 @@ function(e, t, n) {
         })) && void 0 !== s ? s : null;
         if (null == V) return null;
         let x = {
-                [m.autocompleteAttached]: null == B,
-                [m.autocompletePopout]: null != B,
-                [m.bottom]: null == B && "bottom" === e.position
+                [m.autocompleteAttached]: null == k,
+                [m.autocompletePopout]: null != k,
+                [m.bottom]: null == k && "bottom" === e.position
             },
             F = 490;
-        null != B && (F = (null === (N = C.autocomplete) || void 0 === N ? void 0 : N.small) ? 200 : (null === (p = y.query) || void 0 === p ? void 0 : p.type) === S.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), F = Math.min(window.innerHeight - 175, F);
+        null != k && (F = (null === (N = C.autocomplete) || void 0 === N ? void 0 : N.small) ? 200 : (null === (p = y.query) || void 0 === p ? void 0 : p.type) === S.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), F = Math.min(window.innerHeight - 175, F);
         let H = (0, i.jsx)(c.default, {
             id: D,
             className: a()(m.autocomplete, x),
@@ -101,10 +101,10 @@ function(e, t, n) {
                 })
             })
         });
-        return null != B ? (0, i.jsx)(b, {
+        return null != k ? (0, i.jsx)(b, {
             children: (0, i.jsx)(u.ReferencePositionLayer, {
-                reference: () => B,
-                positionKey: k,
+                reference: () => k,
+                positionKey: B,
                 position: null !== (O = e.position) && void 0 !== O ? O : "top",
                 align: "left",
                 spacing: 8,

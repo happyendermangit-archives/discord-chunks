@@ -118,8 +118,8 @@ function(e, t, n) {
             }],
             name: f.default.get(P.PlatformTypes.SPOTIFY).name
         }],
-        B = !0,
-        k = new Set,
+        k = !0,
+        B = new Set,
         V = [],
         x = [],
         F = [],
@@ -251,7 +251,7 @@ function(e, t, n) {
             if (null == i) return t;
             for (let r of O.default.getLaunchOptions(n.id, n.branchId)) {
                 let s = "".concat(n.id, ":").concat(n.branchId);
-                !k.has(s) && (e = !0, k.add(s));
+                !B.has(s) && (e = !0, B.add(s));
                 let {
                     fullExecutablePath: a
                 } = r, o = a.replace(/\\/g, "/").toLowerCase();
@@ -463,7 +463,7 @@ function(e, t, n) {
             return null !== (n = null === (t = Y.find(t => (0, A.default)(e, t.windowHandle))) || void 0 === t ? void 0 : t.name) && void 0 !== n ? n : null
         }
         get canShowAdminWarning() {
-            return B
+            return k
         }
         isDetectionEnabled(e) {
             return es(e)
@@ -482,7 +482,7 @@ function(e, t, n) {
             x = e.games
         },
         PERMISSION_CLEAR_PTT_ADMIN_WARNING: function() {
-            B = !1
+            k = !1
         },
         PERMISSION_REQUEST_ELEVATED_PROCESS: function(e) {
             let {

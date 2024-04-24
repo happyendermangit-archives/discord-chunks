@@ -179,23 +179,23 @@ function(e, t, n) {
                         }
                     }, [y, T, h, N, c, d, _]),
                     w = i.useCallback(e => e.currentTarget !== e.target ? (!p && (O(!0), L(!0)), !1) : p ? (y(!1), !1) : void(f && null != N ? M(d, _) : y(!0)), [p, f, N, y, M, d, _]),
-                    B = i.useCallback(e => {
+                    k = i.useCallback(e => {
                         if (e.target !== e.currentTarget) {
                             if (e.currentTarget.contains(e.relatedTarget)) return !1;
                             O(!1)
                         }
                     }, []),
-                    k = i.useMemo(() => Math.max(...n), [n]),
+                    B = i.useMemo(() => Math.max(...n), [n]),
                     V = i.useCallback(() => ({
                         role: "grid",
                         "aria-rowcount": n.length,
-                        "aria-colcount": k,
+                        "aria-colcount": B,
                         tabIndex: p && f ? -1 : 0,
                         "data-ref-id": t,
                         onKeyDown: G,
                         onFocus: w,
-                        onBlur: B
-                    }), [n.length, k, p, f, t, G, w, B]),
+                        onBlur: k
+                    }), [n.length, B, p, f, t, G, w, k]),
                     x = i.useCallback((e, n) => {
                         let i = {
                             role: "gridcell",

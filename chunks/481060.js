@@ -179,13 +179,13 @@ function(e, t, n) {
             return w.FormSection
         },
         FormSwitch: function() {
-            return B.FormSwitch
+            return k.FormSwitch
         },
         FormText: function() {
-            return k.FormText
+            return B.FormText
         },
         FormTextTypes: function() {
-            return k.FormTextTypes
+            return B.FormTextTypes
         },
         FormTitle: function() {
             return V.FormTitle
@@ -437,16 +437,16 @@ function(e, t, n) {
             return ew.Slide
         },
         Slider: function() {
-            return eB.Slider
+            return ek.Slider
         },
         Slides: function() {
             return ew.Slides
         },
         Spinner: function() {
-            return ek.Spinner
+            return eB.Spinner
         },
         SpinnerTypes: function() {
-            return ek.SpinnerTypes
+            return eB.SpinnerTypes
         },
         StackedProgress: function() {
             return eE.StackedProgress
@@ -744,8 +744,8 @@ function(e, t, n) {
         b = n("722187"),
         G = n("383838"),
         w = n("789164"),
-        B = n("471141"),
-        k = n("534542"),
+        k = n("471141"),
+        B = n("534542"),
         V = n("512983"),
         x = n("652334"),
         F = n("260034"),
@@ -798,8 +798,8 @@ function(e, t, n) {
         eb = n("503145"),
         eG = n("936621"),
         ew = n("718580"),
-        eB = n("561779"),
-        ek = n("922770"),
+        ek = n("561779"),
+        eB = n("922770"),
         eV = n("696826"),
         ex = n("437337"),
         eF = n("706898"),

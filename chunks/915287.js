@@ -51,8 +51,8 @@ function(e, t, n) {
                 paddingBottom: b,
                 fade: G = !1,
                 customTheme: w = !1,
-                chunkSize: B,
-                style: k,
+                chunkSize: k,
+                style: B,
                 innerId: V,
                 innerRole: x,
                 innerAriaLabel: F,
@@ -90,7 +90,7 @@ function(e, t, n) {
                 listHeaderHeight: C,
                 paddingTop: U,
                 paddingBottom: b,
-                chunkSize: B,
+                chunkSize: k,
                 getScrollerState: $,
                 getAnchorId: P
             }), eo = (0, d.useScrollSpring)(Z), el = r.useRef(S), eu = r.useRef(h);
@@ -170,7 +170,7 @@ function(e, t, n) {
                     [n]: w,
                     [_.scrolling]: Q
                 }),
-                style: (0, d.getMergedOrientationStyles)(k),
+                style: (0, d.getMergedOrientationStyles)(B),
                 ...K,
                 children: [r.useMemo(() => (0, i.jsx)(W, {
                     id: V,

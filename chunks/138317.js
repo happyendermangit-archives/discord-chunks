@@ -12,6 +12,7 @@ function(e) {
         fontScaling: "fontScaling__42daa",
         infoSection: "infoSection__07f39",
         selected: "selected__31bdc",
+        thumbnail: "thumbnail__18ece",
         userName: "userName__23133",
         userSection: "userSection__9a4c1"
     }

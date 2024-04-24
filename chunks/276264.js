@@ -47,8 +47,8 @@ function(e, t, n) {
             user: b,
             currentUser: G,
             activities: w,
-            applicationStream: B,
-            status: k,
+            applicationStream: k,
+            status: B,
             shouldAnimateStatus: V = !1,
             isMobile: x,
             premiumSince: F,
@@ -100,7 +100,7 @@ function(e, t, n) {
                     textClassName: v.activityText,
                     emojiClassName: v.activityEmoji,
                     activities: w,
-                    applicationStream: B,
+                    applicationStream: k,
                     animate: eo,
                     hideEmoji: !t,
                     hideTooltip: !0,
@@ -141,7 +141,7 @@ function(e, t, n) {
             }),
             eg = (e, t) => {
                 let n = V ? l.AnimatedAvatar : l.Avatar,
-                    r = (0, u.default)(w) ? C.StatusTypes.STREAMING : k;
+                    r = (0, u.default)(w) ? C.StatusTypes.STREAMING : B;
                 return r = t ? void 0 : r, (0, i.jsxs)(i.Fragment, {
                     children: [(0, i.jsx)(n, {
                         ...eE,
@@ -174,7 +174,7 @@ function(e, t, n) {
                     className: v.clanTag
                 })]
             }),
-            eD = k === C.StatusTypes.OFFLINE;
+            eD = B === C.StatusTypes.OFFLINE;
         return null == b ? (0, i.jsx)(h.default, {
             avatarSize: l.AvatarSizes.SIZE_32,
             className: v.placeholder
@@ -183,7 +183,7 @@ function(e, t, n) {
                 var t, n;
                 return (0, i.jsx)(I.default, {
                     quest: ef,
-                    applicationStream: B,
+                    applicationStream: k,
                     width: null !== (n = null === (t = ea.current) || void 0 === t ? void 0 : t.clientWidth) && void 0 !== n ? n : 222,
                     ...e,
                     closePopout: () => eT(!0)

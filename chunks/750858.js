@@ -63,12 +63,12 @@ function(e, t, n) {
                 colorString: G,
                 colorRoleName: w
             } = n,
-            B = null != i.messageReference && null != i.webhookId,
-            k = (0, d.useStateFromStores)([c.default], () => c.default.roleStyle),
+            k = null != i.messageReference && null != i.webhookId,
+            B = (0, d.useStateFromStores)([c.default], () => c.default.roleStyle),
             V = (0, h.useCanSeeRemixBadge)(),
             x = {
                 className: p.username,
-                style: "username" === k && null != G ? {
+                style: "username" === B && null != G ? {
                     color: G
                 } : void 0,
                 onClick: g,
@@ -82,7 +82,7 @@ function(e, t, n) {
                 })
             };
         t = null != v && null != R ? (0, s.jsx)(_.Popout, {
-            preload: B ? void 0 : function() {
+            preload: k ? void 0 : function() {
                 let e = null != r ? r : i.author;
                 return (0, A.default)(e.id, null != n.guildMemberAvatar && null != P ? (0, N.getGuildMemberAvatarURLSimple)({
                     guildId: P,
@@ -120,7 +120,7 @@ function(e, t, n) {
             value: U,
             children: [null != F && o ? (0, s.jsxs)(s.Fragment, {
                 children: [" ", F, " "]
-            }) : null, "dot" === k ? (0, s.jsx)(_.RoleDot, {
+            }) : null, "dot" === B ? (0, s.jsx)(_.RoleDot, {
                 color: G,
                 name: w,
                 className: p.roleDot

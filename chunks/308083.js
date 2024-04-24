@@ -11,7 +11,7 @@ function(e, t, n) {
             return R
         },
         CLAN_BRAND_PALETTE_PRESETS: function() {
-            return k
+            return B
         },
         CLAN_SETTINGS_MODAL_LAYER_KEY: function() {
             return f
@@ -77,7 +77,7 @@ function(e, t, n) {
             return L
         },
         SUGGESTED_TRAITS_SET: function() {
-            return B
+            return k
         },
         VALORANT_ID: function() {
             return M
@@ -187,9 +187,9 @@ function(e, t, n) {
         b = ["LGBTQIA-Friendly", "All genders"],
         G = new Set([...P, ...U, ...b]),
         w = new Set(E.default.getAvailableLocales().map(e => e.value)),
-        B = new Set(["Anime", "Art and Craft", "Architecture", "Baseball", "Basketball", "Beauty", "Beer", "Board Games", "Books", "Cars", "Celebrities", "Coffee", "Coding", "Craft", "Design", "F1", "Fashion", "Fitness", "Food", "Football", "Healthcare", "Home Decor", "Houseplants", "K-Pop", "Knitting", "LEGO", "MARVEL", "Motorcycles", "Movies", "Music", "Nail Art", "Pets", "Photography", "Pok\xe9mon", "Programming", "Roman History", "Science", "Skiing", "Soccer", "Star Wars", "TCG", "TEA", "Tech", "Travel", "TV Shows", "Wine"]);
+        k = new Set(["Anime", "Art and Craft", "Architecture", "Baseball", "Basketball", "Beauty", "Beer", "Board Games", "Books", "Cars", "Celebrities", "Coffee", "Coding", "Craft", "Design", "F1", "Fashion", "Fitness", "Food", "Football", "Healthcare", "Home Decor", "Houseplants", "K-Pop", "Knitting", "LEGO", "MARVEL", "Motorcycles", "Movies", "Music", "Nail Art", "Pets", "Photography", "Pok\xe9mon", "Programming", "Roman History", "Science", "Skiing", "Soccer", "Star Wars", "TCG", "TEA", "Tech", "Travel", "TV Shows", "Wine"]);
     (d = a || (a = {}))[d.PIXEL_RUSH = 0] = "PIXEL_RUSH", d[d.SCANLINES = 1] = "SCANLINES", d[d.TEXTURED = 2] = "TEXTURED", d[d.MAGIC = 3] = "MAGIC", d[d.CUSTOM = 4] = "CUSTOM";
-    let k = [{
+    let B = [{
         name: "Boulder",
         primary: "#8c8d8d",
         secondary: "#d0d0d1"
@@ -224,7 +224,7 @@ function(e, t, n) {
     }];
 
     function V() {
-        return k[Math.floor(Math.random() * k.length)]
+        return B[Math.floor(Math.random() * B.length)]
     }
 
     function x(e) {
