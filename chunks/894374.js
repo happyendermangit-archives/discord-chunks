@@ -14,13 +14,15 @@ function(e, t, n) {
 
     function l(e) {
         let {
-            displayProfile: t
-        } = e, n = (0, s.default)(t);
-        return 0 === n.length ? null : (0, i.jsx)(i.Fragment, {
-            children: (0, r.chunk)(n, 12).map(e => (0, i.jsx)(a.default, {
+            displayProfile: t,
+            onClose: n
+        } = e, l = (0, s.default)(t);
+        return 0 === l.length ? null : (0, i.jsx)(i.Fragment, {
+            children: (0, r.chunk)(l, 12).map(e => (0, i.jsx)(a.default, {
                 badges: e,
                 className: o.badgeList,
-                badgeClassName: o.badge
+                badgeClassName: o.badge,
+                onClose: n
             }, e[0].id))
         })
     }

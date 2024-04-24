@@ -50,7 +50,8 @@ function(e, t, n) {
                 }),
                 pronouns: null == N ? void 0 : N.pronouns,
                 tags: (0, i.jsx)(E.UserProfileBadgesTag, {
-                    displayProfile: N
+                    displayProfile: N,
+                    onClose: C
                 }),
                 nicknameIcon: g && !v ? (0, i.jsx)(_.default, {
                     user: t,
