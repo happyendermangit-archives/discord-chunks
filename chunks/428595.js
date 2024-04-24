@@ -213,15 +213,17 @@ function(e, t, n) {
                     }
                     null == s && "@Clyde" === e[0] && (0, o.getClydeEnabled)(b(n), a) && (r = g.CLYDE_AI_USER_ID);
                     let u = e[1],
-                        _ = null != u && R.ID_REGEX.test(u.trim()) && n.unknownUserMentionPlaceholder ? "@".concat(L.default.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER) : e[0];
+                        _ = null != u && R.ID_REGEX.test(u.trim()),
+                        T = _ && n.unknownUserMentionPlaceholder ? "@".concat(L.default.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER) : e[0];
                     return {
                         userId: r,
                         channelId: n.channelId,
                         guildId: null == a ? void 0 : a.getGuildId(),
+                        parsedUserId: _ ? u : null,
                         roleName: e[2],
                         content: [{
                             type: "text",
-                            content: null != i ? "@".concat(i) : _
+                            content: null != i ? "@".concat(i) : T
                         }]
                     }
                 }
