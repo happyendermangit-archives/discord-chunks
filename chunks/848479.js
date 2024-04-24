@@ -31,6 +31,10 @@ function(e, t, n) {
             var e, t;
             return null === r.default || void 0 === r.default ? void 0 : null === (t = r.default.processUtils) || void 0 === t ? void 0 : null === (e = t.getCurrentCPUUsagePercent) || void 0 === e ? void 0 : e.call(t)
         }
+        getCumulativeCPUUsage() {
+            var e, t;
+            return null === r.default || void 0 === r.default ? void 0 : null === (t = r.default.processUtils) || void 0 === t ? void 0 : null === (e = t.getCumulativeCPUUsage) || void 0 === e ? void 0 : e.call(t)
+        }
         getCurrentMemoryUsageKB() {
             let e = l.getCurrentMemoryUsageKBCore();
             return this.lastMemoryUsageKB = e, e

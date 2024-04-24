@@ -19,14 +19,16 @@ function(e, t, n) {
     class a {
         getStats() {
             let e = this.cpuHistogram.getReport(),
-                t = this.memoryHistogram.getReport();
+                t = this.memoryHistogram.getReport(),
+                n = i.default.getCumulativeCPUUsage(),
+                r = null == this.startCPU || null == n ? void 0 : (n.usage - this.startCPU.usage) * 100 / ((n.sampleTime - this.startCPU.sampleTime) / 1e3);
             return {
                 client_performance_cpu_percentile25: e.percentiles[25],
                 client_performance_cpu_percentile50: e.percentiles[50],
                 client_performance_cpu_percentile75: e.percentiles[75],
                 client_performance_cpu_percentile90: e.percentiles[90],
                 client_performance_cpu_percentile95: e.percentiles[95],
-                client_performance_cpu_mean: e.mean,
+                client_performance_cpu_mean: null != r ? r : e.mean,
                 client_performance_memory_percentile25: t.percentiles[25],
                 client_performance_memory_percentile50: t.percentiles[50],
                 client_performance_memory_percentile75: t.percentiles[75],
@@ -38,12 +40,26 @@ function(e, t, n) {
             }
         }
         takeSample() {
-            let e = i.default.getCurrentCPUUsagePercent(),
+            let e = i.default.getCumulativeCPUUsage(),
                 t = i.default.getCurrentMemoryUsageKB();
-            null != e && this.cpuHistogram.addSample(e), null != t && this.memoryHistogram.addSample(t)
+            if (null != e) {
+                let t = !0;
+                if (null != this.lastCPU) {
+                    let n = e.sampleTime - this.lastCPU.sampleTime;
+                    if (n >= 1) {
+                        let t = e.usage - this.lastCPU.usage;
+                        this.cpuHistogram.addSample(t / (n / 1e3) * 100, n)
+                    } else t = !1
+                }
+                t && (this.lastCPU = e)
+            } else {
+                let e = i.default.getCurrentCPUUsagePercent();
+                null != e && this.cpuHistogram.addSample(e)
+            }
+            null != t && this.memoryHistogram.addSample(t)
         }
         constructor() {
-            s(this, "cpuHistogram", new r.Histogram), s(this, "memoryHistogram", new r.Histogram)
+            s(this, "cpuHistogram", new r.Histogram), s(this, "memoryHistogram", new r.Histogram), s(this, "startCPU", i.default.getCumulativeCPUUsage()), s(this, "lastCPU", this.startCPU)
         }
     }
 }

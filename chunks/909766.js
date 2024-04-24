@@ -17,7 +17,8 @@ function(e, t, n) {
     }
     class s {
         addSample(e) {
-            this.mean = (e + this.mean * this.samples) / (this.samples + 1), this.samples++, this.digest.push(e)
+            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+            this.total += e * t, this.totalWeight += t, this.samples++, i.TDigest.prototype.push.call(this.digest, e, t), this.digest.check_continuous()
         }
         getReport() {
             var e, t, n, i;
@@ -29,12 +30,12 @@ function(e, t, n) {
                 max: null !== (n = this.digest.percentile(1)) && void 0 !== n ? n : 0,
                 count: null !== (i = this.digest.size()) && void 0 !== i ? i : 0,
                 percentiles: s,
-                mean: this.mean,
+                mean: this.totalWeight > 0 ? this.total / this.totalWeight : 0,
                 samples: this.samples
             }
         }
         constructor() {
-            r(this, "digest", new i.Digest), r(this, "mean", 0), r(this, "samples", 0)
+            r(this, "digest", new i.Digest), r(this, "total", 0), r(this, "samples", 0), r(this, "totalWeight", 0)
         }
     }
 }
