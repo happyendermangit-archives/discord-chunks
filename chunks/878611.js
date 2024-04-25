@@ -39,6 +39,7 @@ function(e, t, n) {
                 userId: r,
                 channelId: o,
                 parsedUserId: l,
+                content: t(e.content, n),
                 inlinePreview: n.noStyleAndInteraction
             }, n.key)
         }

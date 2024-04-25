@@ -27,7 +27,7 @@ function(e, t, n) {
 
     function d(e, t, n) {
         var i;
-        return null == n ? l.default.Messages.UNKNOWN_USER : null !== (i = u(e, t, n)) && void 0 !== i ? i : o.default.getName(n)
+        return null == n ? l.default.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER : null !== (i = u(e, t, n)) && void 0 !== i ? i : o.default.getName(n)
     }
 
     function _(e, t, n) {

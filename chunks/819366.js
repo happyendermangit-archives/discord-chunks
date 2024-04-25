@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return D
+            return L
         }
     });
     var i = n("735250"),
@@ -27,18 +27,18 @@ function(e, t, n) {
         p = n("797053"),
         O = n("5192"),
         R = n("51144"),
-        C = n("377668"),
-        g = n("689938");
+        C = n("377668");
 
-    function L(e) {
+    function g(e) {
         let {
             userId: t,
-            className: s
-        } = e, a = r.useCallback(() => {
+            className: s,
+            children: a
+        } = e, o = r.useCallback(() => {
             (0, I.showInaccessibleLinkModal)({
                 kind: "user"
             })
-        }, []), o = r.useCallback(e => {
+        }, []), l = r.useCallback(e => {
             null != t && (0, d.openContextMenuLazy)(e, async () => {
                 let {
                     default: e
@@ -51,64 +51,66 @@ function(e, t, n) {
         }, [t]);
         return (0, i.jsx)(p.default, {
             className: s,
-            onClick: a,
-            onContextMenu: o,
-            children: "@".concat(g.default.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER)
+            onClick: o,
+            onContextMenu: l,
+            children: a
         })
     }
 
-    function D(e) {
+    function L(e) {
         let {
             className: t,
             userId: r,
             channelId: s,
             parsedUserId: I,
-            inlinePreview: g = !1
+            content: L,
+            inlinePreview: D = !1
         } = e, {
-            analyticsLocations: D
-        } = (0, c.default)(_.default.USER_MENTION), v = (0, l.useStateFromStores)([N.default], () => N.default.getUser(r)), M = (0, l.useStateFromStores)([S.default], () => S.default.getChannel(s)), y = null != M ? M.getGuildId() : null, P = g || null == v || null == y || null == s ? void 0 : e => {
-            null != M && (0, d.openContextMenuLazy)(e, async () => {
+            analyticsLocations: v
+        } = (0, c.default)(_.default.USER_MENTION), M = (0, l.useStateFromStores)([N.default], () => N.default.getUser(r)), y = (0, l.useStateFromStores)([S.default], () => S.default.getChannel(s)), P = null != y ? y.getGuildId() : null, U = D || null == M || null == P || null == s ? void 0 : e => {
+            null != y && (0, d.openContextMenuLazy)(e, async () => {
                 let {
                     default: e
                 } = await Promise.all([n.e("99387"), n.e("79695"), n.e("1502"), n.e("70866"), n.e("12435"), n.e("6696")]).then(n.bind(n, "757387"));
                 return t => (0, i.jsx)(e, {
                     ...t,
-                    user: v,
-                    channel: M,
-                    guildId: y
+                    user: M,
+                    channel: y,
+                    guildId: P
                 })
             })
-        }, U = R.default.useName(v), b = (0, l.useStateFromStores)([S.default, h.default, m.default], () => O.default.getNickname(y, s, v)), G = A.default.getGuild(y), w = (0, E.useClydeEnabled)(G, M) && r === C.CLYDE_AI_USER_ID ? C.CLYDE_AI_MENTION_COLOR : null;
-        if (null == v) return (0, i.jsx)(L, {
+        }, b = R.default.useName(M), G = (0, l.useStateFromStores)([S.default, h.default, m.default], () => O.default.getNickname(P, s, M)), w = A.default.getGuild(P), B = (0, E.useClydeEnabled)(w, y) && r === C.CLYDE_AI_USER_ID ? C.CLYDE_AI_MENTION_COLOR : null;
+        if (null == M) return (0, i.jsx)(g, {
             userId: I,
-            className: t
-        });
-        let B = e => (0, i.jsx)(p.default, {
             className: t,
-            onContextMenu: P,
-            color: w,
-            ...e,
-            children: "@".concat(null != b ? b : U)
+            children: L
         });
-        return g ? (0, i.jsx)(c.AnalyticsLocationProvider, {
-            value: D,
-            children: B()
+        let k = e => (0, i.jsx)(p.default, {
+            className: t,
+            onContextMenu: U,
+            color: B,
+            ...e,
+            children: "@".concat(null != G ? G : b)
+        });
+        return D ? (0, i.jsx)(c.AnalyticsLocationProvider, {
+            value: v,
+            children: k()
         }) : (0, i.jsx)(c.AnalyticsLocationProvider, {
-            value: D,
+            value: v,
             children: (0, i.jsx)(u.Popout, {
-                preload: null == v ? void 0 : () => (0, T.default)(v.id, v.getAvatarURL(y, 80), {
-                    guildId: null != y ? y : void 0,
+                preload: null == M ? void 0 : () => (0, T.default)(M.id, M.getAvatarURL(P, 80), {
+                    guildId: null != P ? P : void 0,
                     channelId: null != s ? s : void 0
                 }),
-                renderPopout: e => (a()(null != v, "Unexpected missing user"), (0, i.jsx)(f.default, {
+                renderPopout: e => (a()(null != M, "Unexpected missing user"), (0, i.jsx)(f.default, {
                     location: "UserMention",
-                    userId: v.id,
-                    guildId: null != y ? y : void 0,
+                    userId: M.id,
+                    guildId: null != P ? P : void 0,
                     channelId: s,
                     ...e
                 })),
                 position: o.isMobile ? "top" : "right",
-                children: e => B(e)
+                children: e => k(e)
             })
         })
     }
