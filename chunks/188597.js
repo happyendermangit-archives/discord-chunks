@@ -95,24 +95,31 @@ function(e, t, n) {
         let {
             applicationId: t,
             channelId: n,
-            guildId: i
-        } = e, r = _.default.fromTimestamp(Date.now()), a = {
+            guildId: i,
+            command: r
+        } = e, a = _.default.fromTimestamp(Date.now()), o = null == r ? {
+            type: l.ApplicationCommandType.PRIMARY_ENTRY_POINT
+        } : {
+            application_id: t,
+            name: r.name,
+            type: r.type,
+            version: r.version,
+            id: r.id
+        }, u = {
             type: l.InteractionTypes.APPLICATION_COMMAND,
-            nonce: r,
+            nonce: a,
             guild_id: i,
             channel_id: n,
             application_id: t,
             session_id: d.default.getSessionId(),
-            data: {
-                type: l.ApplicationCommandType.PRIMARY_ENTRY_POINT
-            }
+            data: o
         };
         await s.HTTP.post({
             url: f.Endpoints.INTERACTIONS,
-            body: a,
+            body: u,
             timeout: 3e3
         }, e => {
-            N(r, n, null != i ? i : null, e)
+            N(a, n, null != i ? i : null, e)
         })
     }, m = (e, t, n) => {
         null == n && null != t && o.default.sendClydeError(e, t)

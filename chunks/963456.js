@@ -65,10 +65,12 @@ function(e, t, n) {
     }
 
     function u(e) {
+        let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
         r.default.dispatch({
             type: "APPLICATION_COMMAND_INDEX_FETCH_REQUEST",
             start: performance.now(),
-            target: e
+            target: e,
+            canFetch: t
         })
     }
 }

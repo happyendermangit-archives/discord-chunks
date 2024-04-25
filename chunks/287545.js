@@ -363,7 +363,7 @@ function(e, t, n) {
                     analyticsLocations: o,
                     embeddedActivitiesManager: this
                 }) : await (0, L.default)({
-                    activityItem: m,
+                    targetApplicationId: a,
                     currentEmbeddedApplication: r,
                     channelId: s,
                     guildId: T,

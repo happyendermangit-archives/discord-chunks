@@ -2,78 +2,83 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return O
+            return C
         }
     });
     var i = n("668781"),
-        r = n("835873"),
-        s = n("592125"),
-        a = n("430824"),
-        o = n("496675"),
-        l = n("594174"),
-        u = n("585483"),
-        d = n("867176"),
-        _ = n("337682"),
-        c = n("566620"),
-        E = n("882347"),
-        I = n("374065"),
-        T = n("917107"),
-        f = n("89425"),
-        S = n("275920"),
-        h = n("197386"),
-        A = n("451576"),
-        m = n("701488"),
-        N = n("981631"),
-        p = n("689938");
-    async function O(e) {
+        r = n("812206"),
+        s = n("835873"),
+        a = n("592125"),
+        o = n("430824"),
+        l = n("496675"),
+        u = n("594174"),
+        d = n("585483"),
+        _ = n("867176"),
+        c = n("337682"),
+        E = n("566620"),
+        I = n("882347"),
+        T = n("307091"),
+        f = n("374065"),
+        S = n("917107"),
+        h = n("89425"),
+        A = n("275920"),
+        m = n("197386"),
+        N = n("451576"),
+        p = n("701488"),
+        O = n("981631"),
+        R = n("689938");
+    async function C(e) {
+        var t;
         let {
-            activityItem: t,
-            currentEmbeddedApplication: n,
-            locationObject: O,
-            channelId: R,
-            guildId: C,
-            embeddedActivitiesManager: g,
-            analyticsLocations: L
-        } = e, D = a.default.getGuild(C), v = l.default.getCurrentUser();
-        if (null == D && !(0, A.isPrivateChannelWithEnabledActivities)(R) || null == v || null == t || null == t.application) return !1;
-        if (null == R) return u.ComponentDispatch.dispatch(N.ComponentActions.SHOW_ACTIVITIES_CHANNEL_SELECTOR, {
-            applicationId: t.application.id
+            targetApplicationId: n,
+            currentEmbeddedApplication: C,
+            locationObject: g,
+            channelId: L,
+            guildId: D,
+            embeddedActivitiesManager: v,
+            analyticsLocations: M
+        } = e, y = o.default.getGuild(D), P = u.default.getCurrentUser();
+        if (null == n) return !1;
+        let U = null !== (t = r.default.getApplication(n)) && void 0 !== t ? t : await (0, T.default)(n, L);
+        if (null == y && !(0, N.isPrivateChannelWithEnabledActivities)(L) || null == P || null == U) return !1;
+        if (null == L) return d.ComponentDispatch.dispatch(O.ComponentActions.SHOW_ACTIVITIES_CHANNEL_SELECTOR, {
+            applicationId: n
         }), !1;
-        let M = s.default.getChannel(R);
-        if (null == M) return !1;
-        let y = null != R ? (0, I.getEmbeddedActivityLaunchability)({
-            channelId: R,
-            ChannelStore: s.default,
-            GuildStore: a.default,
-            PermissionStore: o.default
-        }) : I.EmbeddedActivityLaunchability.NO_CHANNEL;
-        if (y !== I.EmbeddedActivityLaunchability.CAN_LAUNCH) return y === I.EmbeddedActivityLaunchability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION ? (0, r.showActivitiesInvalidPermissionsAlert)() : y === I.EmbeddedActivityLaunchability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS && i.default.show({
-            title: p.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC,
-            body: p.default.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS,
+        let b = a.default.getChannel(L);
+        if (null == b) return !1;
+        let G = null != L ? (0, f.getEmbeddedActivityLaunchability)({
+            channelId: L,
+            ChannelStore: a.default,
+            GuildStore: o.default,
+            PermissionStore: l.default
+        }) : f.EmbeddedActivityLaunchability.NO_CHANNEL;
+        if (G !== f.EmbeddedActivityLaunchability.CAN_LAUNCH) return G === f.EmbeddedActivityLaunchability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION ? (0, s.showActivitiesInvalidPermissionsAlert)() : G === f.EmbeddedActivityLaunchability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS && i.default.show({
+            title: R.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC,
+            body: R.default.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS,
             hideActionSheet: !1
         }), !1;
-        if (!await (0, E.confirmActivityLaunchChecks)({
-                applicationId: t.application.id,
-                application: t.application,
-                channel: M,
-                currentEmbeddedApplication: n,
-                embeddedActivitiesManager: g,
-                user: v
+        if (!await (0, I.confirmActivityLaunchChecks)({
+                applicationId: U.id,
+                application: U,
+                channel: b,
+                currentEmbeddedApplication: C,
+                embeddedActivitiesManager: v,
+                user: P
             })) return !1;
-        let P = (0, T.default)(R),
-            U = m.SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES.includes(M.type);
-        if (P) {
-            if (!await (0, f.default)({
-                    channelId: R,
-                    bypassChangeModal: null != n
+        let w = (0, S.default)(L),
+            B = p.SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES.includes(b.type);
+        if (w) {
+            if (!await (0, h.default)({
+                    channelId: L,
+                    bypassChangeModal: null != C
                 })) return !1
-        } else if (!(0, d.isActivitiesInTextEnabled)(M, "handleStartEmbeddedActivity") || !U) return !1;
-        return c.startEmbeddedActivity(R, t.application.id, L), (0, h.default)(C, R), (0, S.default)({
-            type: N.AnalyticsGameOpenTypes.LAUNCH,
-            userId: v.id,
-            applicationId: t.application.id,
-            locationObject: O,
-            analyticsLocations: L
-        }), _.markActivityUsed(t.application.id), !0
+        } else if (!(0, _.isActivitiesInTextEnabled)(b, "handleStartEmbeddedActivity") || !B) return !1;
+        return E.startEmbeddedActivity(L, U.id, M), (0, m.default)(D, L), (0, A.default)({
+            type: O.AnalyticsGameOpenTypes.LAUNCH,
+            userId: P.id,
+            applicationId: U.id,
+            locationObject: g,
+            analyticsLocations: M
+        }), c.markActivityUsed(U.id), !0
     }
 }

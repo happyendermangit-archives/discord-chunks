@@ -226,7 +226,8 @@ function(e, t, n) {
             var t;
             let {
                 target: n,
-                start: i
+                start: i,
+                canFetch: r
             } = e;
             if (er(null !== (t = Q.indices[Y(n)]) && void 0 !== t ? t : F)) {
                 let e = new AbortController;
@@ -235,7 +236,7 @@ function(e, t, n) {
                         fetching: !0,
                         abort: e
                     }
-                }, !0), (0, C.fetchApplicationCommandIndex)(n, i, e)
+                }, !0), (null == r || r) && (0, C.fetchApplicationCommandIndex)(n, i, e)
             }
         },
         APPLICATION_COMMAND_INDEX_FETCH_SUCCESS: function(e) {

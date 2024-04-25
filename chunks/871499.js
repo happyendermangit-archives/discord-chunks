@@ -134,7 +134,7 @@ function(e, t, n) {
         return p ? O : (0, i.jsxs)("div", {
             className: s()(r, E.contextMenuContainer),
             children: [(0, i.jsx)(u.default, {
-                className: s()({
+                className: s()(E.buttonMask, {
                     [E.buttonPremiumGlow]: A
                 }),
                 mask: null == S ? null : u.MaskIDs.CHANNEL_CALL_CONTROL_BUTTON,
