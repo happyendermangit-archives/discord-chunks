@@ -32,11 +32,11 @@ function(e, t, n) {
         a = n("583434"),
         o = n("706454"),
         l = n("272008"),
-        u = n("57655"),
-        d = n("309562"),
-        _ = n("569984"),
-        c = n("497505"),
-        E = n("918701"),
+        u = n("569984"),
+        d = n("497505"),
+        _ = n("918701"),
+        c = n("977156"),
+        E = n("31055"),
         I = n("46140");
 
     function T() {
@@ -44,15 +44,15 @@ function(e, t, n) {
                 fetchPolicy: "cache-only"
             },
             [t, n] = i.useState(!1),
-            r = (0, s.useStateFromStoresArray)([_.default], () => [..._.default.quests.values()]),
+            r = (0, s.useStateFromStoresArray)([u.default], () => [...u.default.quests.values()]),
             {
                 isFetchingCurrentQuests: a,
                 lastFetchedCurrentQuests: o
-            } = (0, s.useStateFromStoresObject)([_.default], () => ({
-                isFetchingCurrentQuests: _.default.isFetchingCurrentQuests,
-                lastFetchedCurrentQuests: _.default.lastFetchedCurrentQuests
+            } = (0, s.useStateFromStoresObject)([u.default], () => ({
+                isFetchingCurrentQuests: u.default.isFetchingCurrentQuests,
+                lastFetchedCurrentQuests: u.default.lastFetchedCurrentQuests
             })),
-            d = (0, u.getIsEligibleForQuests)({
+            d = (0, c.getIsEligibleForQuests)({
                 location: I.QuestsExperimentLocations.USE_QUESTS
             });
         return i.useEffect(() => {
@@ -69,18 +69,18 @@ function(e, t, n) {
             isFetchingCurrentQuests: t
         } = T({
             fetchPolicy: "cache-only"
-        }), [n, s] = i.useState(() => new Map(e.map(e => [e.id, (0, E.isQuestExpired)(e)])));
+        }), [n, s] = i.useState(() => new Map(e.map(e => [e.id, (0, _.isQuestExpired)(e)])));
         return i.useEffect(() => {
             if (t) return;
             let n = [];
             for (let t of e)
-                if (null == t || (0, E.isQuestExpired)(t)) null != t && (0, E.isQuestExpired)(t) && s(e => e.has(t.id) ? e : new Map(e).set(t.id, !0));
+                if (null == t || (0, _.isQuestExpired)(t)) null != t && (0, _.isQuestExpired)(t) && s(e => e.has(t.id) ? e : new Map(e).set(t.id, !0));
                 else {
                     let e = new r.Timeout,
                         i = () => {
                             let r = Date.parse(t.config.expiresAt) - Date.now();
                             e.start(r, () => {
-                                (0, E.isQuestExpired)(t) ? s(e => new Map(e).set(t.id, !0)): i()
+                                (0, _.isQuestExpired)(t) ? s(e => new Map(e).set(t.id, !0)): i()
                             }), n.push(e)
                         };
                     i()
@@ -118,13 +118,13 @@ function(e, t, n) {
             if (t || 0 === e.length) return i;
             for (let t of e) {
                 var r;
-                if (!(0, E.includesTarget)(t, c.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE) || null !== (r = n.get(t.id)) && void 0 !== r && r) continue;
+                if (!(0, _.includesTarget)(t, d.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE) || null !== (r = n.get(t.id)) && void 0 !== r && r) continue;
                 if ((null == t ? void 0 : t.userStatus) == null) {
                     i.push(t);
                     continue
                 }
                 let e = null != t.userStatus.claimedAt,
-                    s = (0, E.isDismissed)(t.userStatus, c.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE);
+                    s = (0, _.isDismissed)(t.userStatus, d.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE);
                 if (!e && !s) {
                     i.push(t);
                     continue
@@ -137,22 +137,22 @@ function(e, t, n) {
     function m() {
         let e = A();
         i.useEffect(() => {
-            for (let t of e)(0, l.dismissQuestContent)(t.id, c.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE)
+            for (let t of e)(0, l.dismissQuestContent)(t.id, d.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE)
         }, [e])
     }
 
     function N(e) {
-        let t = (0, d.useIsEligibleForMembersListQuestEntrypoint)({
+        let t = (0, E.useIsEligibleForMembersListQuestEntrypoint)({
                 location: I.QuestsExperimentLocations.MEMBERS_LIST
             }),
-            n = (0, s.useStateFromStores)([_.default], () => t ? _.default.quests : null),
-            r = i.useMemo(() => (0, E.getQuestsFromActivities)(n, e), [e, n]);
+            n = (0, s.useStateFromStores)([u.default], () => t ? u.default.quests : null),
+            r = i.useMemo(() => (0, _.getQuestsFromActivities)(n, e), [e, n]);
         return S(r) ? null : r
     }
 
     function p(e) {
         var t;
-        let n = (0, E.hasQuestCollectibleRewards)(e),
+        let n = (0, _.hasQuestCollectibleRewards)(e),
             {
                 product: i,
                 isFetching: r

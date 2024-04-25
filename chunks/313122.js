@@ -14,10 +14,10 @@ function(e, t, n) {
         u = n("938475"),
         d = n("70956"),
         _ = n("272008"),
-        c = n("718514"),
-        E = n("57655"),
-        I = n("569984"),
-        T = n("918701"),
+        c = n("569984"),
+        E = n("918701"),
+        I = n("432945"),
+        T = n("977156"),
         f = n("46140"),
         S = n("70722");
 
@@ -48,7 +48,7 @@ function(e, t, n) {
         if ((null == n ? void 0 : n.id) == null) return null;
         let i = l.default.getGameById(n.id);
         if ((null == i ? void 0 : i.id) == null) return null;
-        let r = (0, T.getQuestByApplicationId)(I.default.quests, i.id);
+        let r = (0, E.getQuestByApplicationId)(c.default.quests, i.id);
         return (null == r ? void 0 : null === (e = r.userStatus) || void 0 === e ? void 0 : e.enrolledAt) == null || (null == r ? void 0 : null === (t = r.userStatus) || void 0 === t ? void 0 : t.completedAt) != null ? null : r
     }
 
@@ -64,11 +64,11 @@ function(e, t, n) {
             applicationId: r
         } = e, {
             channelId: o
-        } = (0, s.decodeStreamKey)(i), l = D(o), u = I.default.quests.get(n), d = null != a.default.getRTCStream(i) && (null === (t = L()) || void 0 === t ? void 0 : t.config.applicationId) === r && l && null != u && !(0, T.isQuestExpired)(u), {
+        } = (0, s.decodeStreamKey)(i), l = D(o), u = c.default.quests.get(n), d = null != a.default.getRTCStream(i) && (null === (t = L()) || void 0 === t ? void 0 : t.config.applicationId) === r && l && null != u && !(0, E.isQuestExpired)(u), {
             quest: _,
-            activity: c
-        } = M(), E = (null == _ ? void 0 : _.id) === n && (null == _ ? void 0 : _.config.applicationId) === r && l && (null == c ? void 0 : c.channelId) === o && !(0, T.isQuestExpired)(_);
-        return d || E
+            activity: I
+        } = M(), T = (null == _ ? void 0 : _.id) === n && (null == _ ? void 0 : _.config.applicationId) === r && l && (null == I ? void 0 : I.channelId) === o && !(0, E.isQuestExpired)(_);
+        return d || T
     }
 
     function M(e) {
@@ -76,14 +76,14 @@ function(e, t, n) {
             quest: null,
             activity: null
         };
-        if (!(0, c.getIsEligibleForActivityQuest)({
+        if (!(0, I.getIsEligibleForActivityQuest)({
                 location: f.QuestsExperimentLocations.QUESTS_MANAGER,
                 autoTrackExposure: !1
             })) return t;
         for (let a of r.default.getSelfEmbeddedActivities().values()) {
             var n, i, s;
             if (null != e && a.channelId !== e) continue;
-            let r = null !== (s = (0, T.getQuestByApplicationId)(I.default.quests, a.applicationId)) && void 0 !== s ? s : null;
+            let r = null !== (s = (0, E.getQuestByApplicationId)(c.default.quests, a.applicationId)) && void 0 !== s ? s : null;
             if (null != r && (null == r ? void 0 : null === (n = r.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null && (null == r ? void 0 : null === (i = r.userStatus) || void 0 === i ? void 0 : i.completedAt) == null) return {
                 quest: r,
                 activity: a
@@ -97,9 +97,9 @@ function(e, t, n) {
     }
     class y extends i.default {
         maybeFetchCurrentQuests() {
-            (0, E.getIsEligibleForQuests)({
+            (0, T.getIsEligibleForQuests)({
                 location: f.QuestsExperimentLocations.QUESTS_MANAGER
-            }) && !I.default.isFetchingCurrentQuests && (0, _.fetchCurrentQuests)()
+            }) && !c.default.isFetchingCurrentQuests && (0, _.fetchCurrentQuests)()
         }
         constructor(...e) {
             super(...e), h(this, "instantiatedAt", Date.now()), h(this, "streamKeyToHeartbeatState", new Map), h(this, "optimisticProgressUpdateIntervalIds", new Map), h(this, "lastOptimisticallyUpdatedProgressMap", new Map), h(this, "questsInitialFetchTimerId", null), h(this, "questsRecurringFetchTimerId", null), h(this, "questsLastFetchAttemptedAt", 0), h(this, "initiateHeartbeat", e => {
@@ -132,7 +132,7 @@ function(e, t, n) {
                 };
                 r()
             }), h(this, "calculateHeartbeatDurationMs", e => {
-                let t = I.default.quests.get(e);
+                let t = c.default.quests.get(e);
                 if (null == t || null == t.config || null == t.userStatus) return m;
                 let {
                     streamProgressSeconds: n
@@ -228,7 +228,7 @@ function(e, t, n) {
                 window.clearTimeout(this.questsInitialFetchTimerId), window.clearTimeout(this.questsRecurringFetchTimerId), this.questsRecurringFetchTimerId = window.setInterval(() => {
                     Date.now() - this.questsLastFetchAttemptedAt > R && (this.questsLastFetchAttemptedAt = Date.now(), this.maybeFetchCurrentQuests())
                 }, C), this.questsInitialFetchTimerId = window.setTimeout(() => {
-                    0 === I.default.lastFetchedCurrentQuests && this.maybeFetchCurrentQuests()
+                    0 === c.default.lastFetchedCurrentQuests && this.maybeFetchCurrentQuests()
                 }, Math.floor(Math.random() * p))
             }), h(this, "handleSendHeartbeatSuccess", e => {
                 let {
@@ -245,7 +245,7 @@ function(e, t, n) {
                 } = e;
                 this.terminateOptimisticProgressUpdateInterval(t)
             }), h(this, "handleRunningGamesChange", () => {
-                !(this.instantiatedAt + A > Date.now() || I.default.lastFetchedCurrentQuests + A > Date.now()) && this.maybeFetchCurrentQuests()
+                !(this.instantiatedAt + A > Date.now() || c.default.lastFetchedCurrentQuests + A > Date.now()) && this.maybeFetchCurrentQuests()
             }), h(this, "handleVoiceStateChange", () => {
                 let e = a.default.getCurrentUserActiveStream(),
                     t = L();
