@@ -46,17 +46,16 @@ function(e, t, n) {
             if ("number" != typeof E) throw Error("Unexpected null width");
             let e = 0,
                 t = 0,
-                n = E - 32,
-                i = n - 32;
-            for (let r = 0; r < 2; r++) {
+                n = E - 32;
+            for (let i = 0; i < 2; i++) {
                 t = 0;
-                let s = 1 === r ? i : n;
+                let r = 1 === i ? n : E;
                 for (let n = e; n < g.length; n++) {
                     let i = g[n],
-                        r = p.current[i.id];
-                    if (null != r) {
-                        if ((t += r.offsetWidth + 4) > s) break;
-                        e++
+                        s = p.current[i.id];
+                    if (null != s) {
+                        if ((t += s.offsetWidth) > r) break;
+                        t += 4, e++
                     }
                 }
             }

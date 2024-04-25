@@ -201,7 +201,8 @@ function(e, t, n) {
                         gameTile: i.game_tile,
                         logotype: i.logotype
                     },
-                    inGameQuestConfig: null
+                    inGameQuestConfig: null,
+                    variants: e.variants
                 }
             }).with({
                 config_version: 2
@@ -211,6 +212,7 @@ function(e, t, n) {
                 getGameLink: e.get_game_link,
                 applicationId: e.application_id,
                 applicationName: e.application_name,
+                variants: e.variants,
                 streamDurationRequirementMinutes: 0,
                 rewardCodeExpiresAt: "",
                 gameTitle: "",

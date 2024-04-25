@@ -12,8 +12,6 @@ function(e) {
         expandedProgressBarContainerVariant1: "expandedProgressBarContainerVariant1_ea5ac3",
         expandedProgressBarContainerVariant2: "expandedProgressBarContainerVariant2__775fe",
         expandedProgressBarContent: "expandedProgressBarContent__17ba9",
-        expandedProgressBarContentVariant1: "expandedProgressBarContentVariant1__37efa",
-        expandedProgressBarContentVariant2: "expandedProgressBarContentVariant2_e76181",
         expandedProgressBarGiftingCTA: "expandedProgressBarGiftingCTA_a56dee",
         expandedProgressBarGiftingCTALayout: "expandedProgressBarGiftingCTALayout__376c3",
         expandedProgressBarGiftingCTAMinLayout: "expandedProgressBarGiftingCTAMinLayout_dbec98",
