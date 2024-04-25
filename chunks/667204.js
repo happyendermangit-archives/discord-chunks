@@ -94,13 +94,13 @@ function(e, t, n) {
                 }
                 if (e.type === u.ApplicationCommandOptionType.ATTACHMENT) {
                     if (null != v.autocomplete) continue;
-                    let i = N.default.getUpload(v.channel.id, e.name, Y);
-                    if (null == i) continue;
-                    let r = N.default.getUploads(v.channel.id, Y).findIndex(e => i.id === e.id);
-                    F.push(i), n = r, V.push({
+                    let n = N.default.getUpload(v.channel.id, e.name, Y);
+                    if (null == n) continue;
+                    let i = F.length;
+                    F.push(n), V.push({
                         type: e.type,
                         name: e.name,
-                        value: n,
+                        value: i,
                         focused: t
                     });
                     continue

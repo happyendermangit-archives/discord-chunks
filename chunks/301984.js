@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return h
+            return m
         }
     });
     var i = n("735250");
@@ -13,81 +13,90 @@ function(e, t, n) {
         o = n("97910"),
         l = n("481060"),
         u = n("194359"),
-        d = n("314897"),
-        _ = n("699516"),
-        c = n("465670"),
-        E = n("782089"),
-        I = n("785717"),
-        T = n("537387"),
-        f = n("981631"),
-        S = n("689938");
+        d = n("906732"),
+        _ = n("822972"),
+        c = n("314897"),
+        E = n("699516"),
+        I = n("465670"),
+        T = n("782089"),
+        f = n("785717"),
+        S = n("537387"),
+        h = n("981631"),
+        A = n("689938");
 
-    function h(e) {
+    function m(e) {
         let {
             user: t,
-            friendToken: h
+            friendToken: n
         } = e, {
-            trackUserProfileAction: A
-        } = (0, I.useUserProfileAnalyticsContext)(), m = (0, r.useStateFromStores)([d.default], () => d.default.getId() === (null == t ? void 0 : t.id)), N = (0, r.useStateFromStores)([_.default], () => null != t ? _.default.getRelationshipType(t.id) : f.RelationshipTypes.NONE);
-        return null == t || t.bot || m || N === f.RelationshipTypes.BLOCKED ? null : N === f.RelationshipTypes.FRIEND ? (0, i.jsx)(T.default, {
-            icon: a.UserCheckIcon,
-            text: S.default.Messages.FRIENDS,
-            onClick: () => (function(e) {
-                let t = () => {
-                    A({
-                        action: "REMOVE_FRIEND"
-                    }), u.default.removeFriend(e.id, {
-                        location: "UserProfileFriendRequestButtons"
-                    })
-                };
-                (0, l.openModalLazy)(async () => {
-                    let {
-                        default: r
-                    } = await n.e("69938").then(n.bind(n, "637697"));
-                    return n => (0, i.jsx)(r, {
-                        user: e,
-                        onConfirmRemoveFriend: t,
-                        ...n
-                    })
+            trackUserProfileAction: m
+        } = (0, f.useUserProfileAnalyticsContext)(), N = (0, r.useStateFromStores)([c.default], () => c.default.getId() === (null == t ? void 0 : t.id)), p = (0, r.useStateFromStores)([E.default], () => null != t ? E.default.getRelationshipType(t.id) : h.RelationshipTypes.NONE), {
+            analyticsLocations: O,
+            newestAnalyticsLocation: R
+        } = (0, d.default)(), C = (0, _.default)({
+            user: t,
+            color: "danger",
+            location: R,
+            onAction: () => m({
+                action: "REMOVE_FRIEND",
+                analyticsLocations: O
+            })
+        });
+        return null == t || t.bot || N || p === h.RelationshipTypes.BLOCKED ? null : p === h.RelationshipTypes.FRIEND ? (0, i.jsx)(l.Popout, {
+            renderPopout: e => {
+                let {
+                    closePopout: t
+                } = e;
+                return (0, i.jsx)(l.Menu, {
+                    navId: "user-profile-friend-request-buttons",
+                    onSelect: void 0,
+                    onClose: t,
+                    "aria-label": A.default.Messages.FRIEND_ACTIONS_MENU_LABEL,
+                    children: C
                 })
-            })(t)
-        }) : N === f.RelationshipTypes.PENDING_INCOMING ? (0, i.jsxs)(i.Fragment, {
-            children: [(0, i.jsx)(T.default, {
+            },
+            children: e => (0, i.jsx)(S.default, {
+                icon: a.UserCheckIcon,
+                text: A.default.Messages.FRIENDS,
+                ...e
+            })
+        }) : p === h.RelationshipTypes.PENDING_INCOMING ? (0, i.jsxs)(i.Fragment, {
+            children: [(0, i.jsx)(S.default, {
                 icon: e => (0, i.jsx)(s.CheckmarkLargeIcon, {
                     ...e,
                     color: l.tokens.colors.TEXT_BRAND
                 }),
-                text: S.default.Messages.ACCEPT_FRIEND_REQUEST,
+                text: A.default.Messages.ACCEPT_FRIEND_REQUEST,
                 onClick: () => {
-                    A({
+                    m({
                         action: "ACCEPT_FRIEND_REQUEST"
                     }), u.default.addRelationship({
                         userId: t.id,
-                        friendToken: h
+                        friendToken: n
                     })
                 }
-            }), (0, i.jsx)(T.default, {
-                icon: c.default,
-                text: S.default.Messages.IGNORE_FRIEND_REQUEST,
+            }), (0, i.jsx)(S.default, {
+                icon: I.default,
+                text: A.default.Messages.IGNORE_FRIEND_REQUEST,
                 onClick: () => {
-                    A({
+                    m({
                         action: "IGNORE_FRIEND_REQUEST"
                     }), u.default.cancelFriendRequest(t.id)
                 }
             })]
-        }) : N === f.RelationshipTypes.PENDING_OUTGOING ? (0, i.jsx)(T.default, {
+        }) : p === h.RelationshipTypes.PENDING_OUTGOING ? (0, i.jsx)(S.default, {
             icon: o.UserClockIcon,
-            text: S.default.Messages.REQUEST_SENT,
+            text: A.default.Messages.REQUEST_SENT,
             disabled: !0
-        }) : (0, i.jsx)(T.default, {
-            icon: E.default,
-            text: S.default.Messages.ADD_FRIEND,
+        }) : (0, i.jsx)(S.default, {
+            icon: T.default,
+            text: A.default.Messages.ADD_FRIEND,
             onClick: () => {
-                A({
+                m({
                     action: "SEND_FRIEND_REQUEST"
                 }), u.default.addRelationship({
                     userId: t.id,
-                    friendToken: h
+                    friendToken: n
                 })
             }
         })

@@ -4457,6 +4457,7 @@ function(e) {
         PROGRESS_BAR_ACTIONS_MENU_LABEL: "Progress Bar Actions",
         HOME_ACTIONS_MENU_LABEL: "Home Actions",
         ACTIVITY_SHELF_ITEM_ACTIONS_MENU_LABEL: "Activity Shelf Item Actions",
+        FRIEND_ACTIONS_MENU_LABEL: "Friend Actions",
         MORE_OPTIONS: "More Options",
         SWITCH_TO_COZY_MODE: "Switch to Cozy Mode",
         SWITCH_TO_COMPACT_MODE: "Switch to Compact Mode",
