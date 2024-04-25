@@ -209,17 +209,28 @@ function(e, t, n) {
                         allAcked: t
                     } = await (0, O.getDisclosures)(W);
                     e0(!t), eJ(e)
-                } catch (t) {
+                } catch (n) {
                     let {
-                        body: e
-                    } = t;
-                    ev(Error(null != e.message ? e.message : "".concat(Object.keys(e)[0], ": ").concat(Object.values(e)[0])))
+                        status: e,
+                        body: t
+                    } = n;
+                    if (401 === e) {
+                        (0, b.logoutWithRedirect)(eN);
+                        return
+                    }
+                    ev(Error(null != t.message ? t.message : "".concat(Object.keys(t)[0], ": ").concat(Object.values(t)[0])))
                 } finally {
                     eq.current = !1
                 }
             };
-            null == em && e()
-        }, [W, em, eJ, e0, ev, eL]);
+            if (null == em) {
+                if (!v.default.isAuthenticated()) {
+                    (0, b.logoutWithRedirect)(eN);
+                    return
+                }
+                e()
+            }
+        }, [W, eN, em, eJ, ev, e0, eL]);
         let e1 = a.useCallback(async e => {
                 if (null != eh) {
                     eh(e);
