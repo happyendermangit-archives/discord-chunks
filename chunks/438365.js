@@ -19,18 +19,23 @@ function(e, t, n) {
         } = e, d = (0, r.useStateFromStores)([a.default], () => {
             var e;
             return null === (e = a.default.getUser(u)) || void 0 === e ? void 0 : e.clan
-        }), _ = (0, l.getGuildIdFromUserClan)(d);
+        }), {
+            tag: _,
+            badge: c,
+            guildId: E
+        } = (0, l.getUserClanData)(d);
         i.useEffect(() => {
-            (0, o.fetchClanInfo)(_)
-        }, [_]);
-        let c = (0, o.useClanInfo)(null == d ? void 0 : d.identityGuildId),
-            E = (0, r.useStateFromStores)([s.default], () => s.default.getGuild(null == d ? void 0 : d.identityGuildId));
+            (0, o.fetchClanInfo)(E)
+        }, [E]);
+        let I = (0, o.useClanInfo)(null == d ? void 0 : d.identityGuildId),
+            T = (0, r.useStateFromStores)([s.default], () => s.default.getGuild(null == d ? void 0 : d.identityGuildId));
         return {
-            userClanTag: (0, l.getTagFromUserClan)(d),
-            guildId: _,
-            guildName: null !== (t = null == E ? void 0 : E.name) && void 0 !== t ? t : null == c ? void 0 : c.name,
-            guildIcon: null !== (n = null == E ? void 0 : E.icon) && void 0 !== n ? n : null == c ? void 0 : c.icon,
-            clan: c
+            userClanTag: _,
+            userClanBadge: c,
+            guildId: E,
+            guildName: null !== (t = null == T ? void 0 : T.name) && void 0 !== t ? t : null == I ? void 0 : I.name,
+            guildIcon: null !== (n = null == T ? void 0 : T.icon) && void 0 !== n ? n : null == I ? void 0 : I.icon,
+            clan: I
         }
     }
 }

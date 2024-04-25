@@ -38,7 +38,8 @@ function(e, t, n) {
             badge: {
                 badgeKind: e.badge,
                 primaryColor: s(e.badge_color_primary, t.primary),
-                secondaryColor: s(e.badge_color_secondary, t.secondary)
+                secondaryColor: s(e.badge_color_secondary, t.secondary),
+                imageHash: e.badge_hash
             },
             branding: {
                 primaryColor: s(e.brand_color_primary, n.primary),

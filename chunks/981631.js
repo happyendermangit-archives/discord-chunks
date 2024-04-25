@@ -328,9 +328,6 @@ function(_, E, e) {
         HELP_CENTER_CTA_ANALYTICS_NAME: function() {
             return aj
         },
-        HEXColors: function() {
-            return oB.default
-        },
         HelpdeskArticles: function() {
             return E_
         },
