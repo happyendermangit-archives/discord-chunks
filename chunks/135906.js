@@ -54,7 +54,7 @@ function(e, t, n) {
         [i.Soundpacks.RETRO]: {
             message1: "bit_message1"
         },
-        [i.Soundpacks.BOP]: {
+        [i.Soundpacks.BUBBLE]: {
             message1: "bop_message1"
         },
         [i.Soundpacks.DUCKY]: {

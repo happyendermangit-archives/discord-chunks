@@ -1,20 +1,27 @@
 function(e) {
     "use strict";
     e.exports = {
-        button: "button_e8011a",
-        card100: "card100__09fa7",
-        card80: "card80_f68557",
-        card90: "card90_e78aac",
         cards: "cards__2e3a6",
-        container: "container__1650f",
-        content: "content_d17041",
+        cardsContainer: "cardsContainer__43887",
+        clanCard: "clanCard__50538",
+        clanCardCenter: "clanCardCenter__39685 clanCard__50538",
+        clanCardCenterContainer: "clanCardCenterContainer_f08e39",
+        clanCardInner: "clanCardInner__7b291 clanCard__50538",
+        clanCardInnerContainer: "clanCardInnerContainer__297eb",
+        clanCardInnerLeft: "clanCardInnerLeft_d1e982 clanCardInner__7b291 clanCard__50538",
+        clanCardInnerRight: "clanCardInnerRight_a70df2 clanCardInner__7b291 clanCard__50538",
+        clanCardOuter: "clanCardOuter__79a32 clanCard__50538",
+        clanCardOuterContainer: "clanCardOuterContainer__05636",
+        clanCardOuterLeft: "clanCardOuterLeft_a7787d clanCardOuter__79a32 clanCard__50538",
+        clanCardOuterRight: "clanCardOuterRight__19d1a clanCardOuter__79a32 clanCard__50538",
         footer: "footer__64d74",
         footerActions: "footerActions_f527fe",
-        progressContainer: "progressContainer__6e55f",
-        progressStep: "progressStep__250ee",
-        progressStepCompleted: "progressStepCompleted__6222d",
         scroller: "scroller_cc96df",
-        title: "title_da1746",
+        sequencer: "sequencer__03419",
+        upsellContainer: "upsellContainer_aae5af",
+        upsellCtaSubtitle: "upsellCtaSubtitle__43db3",
+        upsellCtaTitle: "upsellCtaTitle_f32e4e",
+        upsellDetails: "upsellDetails_fe7ec8",
         wizard: "wizard__29f91"
     }
 }
