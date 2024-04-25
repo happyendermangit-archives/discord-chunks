@@ -59,8 +59,8 @@ function(e, t, n) {
         h = n("594174"),
         A = n("823379"),
         m = n("573261"),
-        N = n("867176"),
-        p = n("317381"),
+        N = n("317381"),
+        p = n("844797"),
         O = n("672181"),
         R = n("917107"),
         C = n("981631"),
@@ -68,8 +68,8 @@ function(e, t, n) {
 
     function L(e, t, n) {
         let i = T.default.getId(),
-            r = p.default.getSelfEmbeddedActivityForChannel(e),
-            a = p.default.getEmbeddedActivitiesForChannel(e).find(e => e.applicationId === t && e.userIds.has(i));
+            r = N.default.getSelfEmbeddedActivityForChannel(e),
+            a = N.default.getEmbeddedActivitiesForChannel(e).find(e => e.applicationId === t && e.userIds.has(i));
         null != r ? v({
             channelId: e,
             applicationId: r.applicationId,
@@ -86,44 +86,38 @@ function(e, t, n) {
         let r = f.default.getChannel(e),
             a = null !== (t = null == r ? void 0 : r.getGuildId()) && void 0 !== t ? t : void 0;
         if (null == a && !(null !== (n = null == r ? void 0 : r.isPrivate()) && void 0 !== n && n)) return;
-        let o = p.default.getSelfEmbeddedActivityForChannel(e);
+        let o = N.default.getSelfEmbeddedActivityForChannel(e);
         if (null === o) return;
         let l = T.default.getSessionId();
         try {
             s.default.dispatch({
-                    type: "EMBEDDED_ACTIVITY_LAUNCH_START",
-                    embeddedActivity: o
-                }),
-                function(e, t) {
-                    let n = f.default.getChannel(e);
-                    if (p.default.getEmbeddedActivitiesForChannel(e).some(e => e.applicationId === t)) return !1;
-                    let i = (0, N.isActivitiesInTextEnabled)(n, "EmbeddedActivitiesActionCreators#isActivityInTextStart");
-                    return !!((null == n ? void 0 : n.type) === C.ChannelTypes.GUILD_TEXT && i || null != n && n.isPrivate() && i && null == S.default.getVoiceChannelId()) || !1
-                }(e, o.applicationId) ? await (0, E.executePrimaryEntryPointInteraction)({
-                    applicationId: o.applicationId,
-                    channelId: e,
-                    guildId: a
-                }) : await m.default.post({
-                    url: C.Endpoints.ACTIVITY_CHANNEL_LAUNCH(e, o.applicationId),
-                    body: {
-                        session_id: l,
-                        guild_id: null != a ? a : void 0
-                    },
-                    trackedActionData: {
-                        event: i.NetworkActionNames.EMBEDDED_ACTIVITIES_LAUNCH,
-                        properties: {
-                            guild_id: a,
-                            channel_id: e,
-                            application_id: o.applicationId,
-                            session_id: l
-                        }
-                    },
-                    retries: 3,
-                    oldFormErrors: !0
-                }), s.default.dispatch({
-                    type: "EMBEDDED_ACTIVITY_LAUNCH_SUCCESS",
-                    applicationId: o.applicationId
-                })
+                type: "EMBEDDED_ACTIVITY_LAUNCH_START",
+                embeddedActivity: o
+            }), (0, p.isActivityInTextStart)(e, o.applicationId, S.default, f.default) ? await (0, E.executePrimaryEntryPointInteraction)({
+                applicationId: o.applicationId,
+                channelId: e,
+                guildId: a
+            }) : await m.default.post({
+                url: C.Endpoints.ACTIVITY_CHANNEL_LAUNCH(e, o.applicationId),
+                body: {
+                    session_id: l,
+                    guild_id: null != a ? a : void 0
+                },
+                trackedActionData: {
+                    event: i.NetworkActionNames.EMBEDDED_ACTIVITIES_LAUNCH,
+                    properties: {
+                        guild_id: a,
+                        channel_id: e,
+                        application_id: o.applicationId,
+                        session_id: l
+                    }
+                },
+                retries: 3,
+                oldFormErrors: !0
+            }), s.default.dispatch({
+                type: "EMBEDDED_ACTIVITY_LAUNCH_SUCCESS",
+                applicationId: o.applicationId
+            })
         } catch (t) {
             s.default.dispatch({
                 type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL",
@@ -144,7 +138,7 @@ function(e, t, n) {
             channelId: i,
             applicationId: r,
             showFeedback: a = !0
-        } = e, l = p.default.getSelfEmbeddedActivityForChannel(i);
+        } = e, l = N.default.getSelfEmbeddedActivityForChannel(i);
         s.default.dispatch({
             type: "EMBEDDED_ACTIVITY_CLOSE",
             channelId: i,
@@ -155,7 +149,7 @@ function(e, t, n) {
         });
         let u = c.default.getSelectedParticipantId(i),
             d = null === (n = h.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
-        null != p.default.getEmbeddedActivitiesForChannel(i).find(e => e.applicationId === r) && null != d && "" !== d && u === r && o.default.selectParticipant(i, null)
+        null != N.default.getEmbeddedActivitiesForChannel(i).find(e => e.applicationId === r) && null != d && "" !== d && u === r && o.default.selectParticipant(i, null)
     }
 
     function M(e, t) {
@@ -225,9 +219,9 @@ function(e, t, n) {
         let {
             guildId: o,
             force: l = !1
-        } = e, u = p.default.getShelfActivities(o), d = u.map(e => _.default.getApplication(e.application_id)).filter(A.isNotNullish);
-        if (!l && !p.default.shouldFetchShelf(o)) {
-            if (null === (t = p.default.getShelfFetchStatus(o)) || void 0 === t ? void 0 : t.isFetching) {
+        } = e, u = N.default.getShelfActivities(o), d = u.map(e => _.default.getApplication(e.application_id)).filter(A.isNotNullish);
+        if (!l && !N.default.shouldFetchShelf(o)) {
+            if (null === (t = N.default.getShelfFetchStatus(o)) || void 0 === t ? void 0 : t.isFetching) {
                 let e, t;
                 let n = new Promise(t => {
                         e = U.bind(null, o, t), s.default.subscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS", e)
