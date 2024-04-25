@@ -88,6 +88,7 @@ function(e, t, n) {
                         displayProfile: x,
                         profileType: R.UserProfileTypes.BITE_SIZE,
                         children: [(0, i.jsxs)(m.default, {
+                            profileType: R.UserProfileTypes.BITE_SIZE,
                             isFaded: (null == x ? void 0 : x.profileEffectId) != null && !F,
                             children: [(0, i.jsx)(h.default, {
                                 user: t,

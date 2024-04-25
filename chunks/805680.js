@@ -182,7 +182,7 @@ function(e, t, n) {
             section: P.AnalyticsSections.EXPRESSION_PICKER,
             children: (0, i.jsx)(L.AppReferencePositionLayer, {
                 className: a()(B.positionLayer, eS),
-                reference: o,
+                targetRef: o,
                 position: K,
                 align: z,
                 spacing: 8,

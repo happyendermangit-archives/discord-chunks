@@ -35,7 +35,7 @@ function(e, t, n) {
             children: [(0, i.jsx)("div", {
                 ref: S
             }), n, s ? (0, i.jsx)(o.ReferencePositionLayer, {
-                reference: S,
+                targetRef: S,
                 autoInvert: !0,
                 nudgeAlignIntoViewport: !0,
                 fixed: !0,

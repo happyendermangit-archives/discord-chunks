@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return N
+            return m
         }
     }), n("47120");
     var i = n("735250"),
@@ -18,10 +18,9 @@ function(e, t, n) {
         E = n("574254"),
         I = n("153850"),
         T = n("585483"),
-        f = n("632120"),
-        S = n("981631");
+        f = n("981631");
 
-    function h(e, t, n) {
+    function S(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -29,24 +28,27 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    let A = e => {
+    let h = e => {
         let {
             children: t,
             close: n,
             onUnmount: o,
-            rect: u,
-            position: c,
-            align: E,
-            impressionName: T,
-            impressionProperties: f
-        } = e, h = r.useRef(null);
+            target: u,
+            rect: c,
+            position: E,
+            align: T,
+            impressionName: S,
+            impressionProperties: h
+        } = e, A = r.useRef(null), m = r.useMemo(() => ({
+            current: u
+        }), [u]);
         r.useEffect(() => {
             var e, t;
-            let i = (0, s.findDOMNode)(h.current);
+            let i = (0, s.findDOMNode)(A.current);
             if (null == i) return;
             let r = e => {
                 let t = e.target,
-                    i = (0, s.findDOMNode)(h.current);
+                    i = (0, s.findDOMNode)(A.current);
                 !(null != i && (0, l.referencePortalAwareContains)(i, t)) && (window.getSelection().removeAllRanges(), n())
             };
             return null === (e = i.ownerDocument) || void 0 === e || e.addEventListener("click", r, !0), null === (t = i.ownerDocument) || void 0 === t || t.addEventListener("contextmenu", r, !0), () => {
@@ -54,44 +56,45 @@ function(e, t, n) {
                 null === (e = i.ownerDocument) || void 0 === e || e.removeEventListener("click", r, !0), null === (t = i.ownerDocument) || void 0 === t || t.removeEventListener("contextmenu", r, !0)
             }
         }, [n]);
-        let A = r.useRef(o);
-        r.useEffect(() => void(A.current = o)), r.useEffect(() => () => {
+        let N = r.useRef(o);
+        r.useEffect(() => void(N.current = o)), r.useEffect(() => () => {
             var e;
-            return null === (e = A.current) || void 0 === e ? void 0 : e.call(A)
+            return null === (e = N.current) || void 0 === e ? void 0 : e.call(N)
         }, []), r.useLayoutEffect(() => {
             var e;
-            null === (e = h.current) || void 0 === e || e.updatePosition()
+            null === (e = A.current) || void 0 === e || e.updatePosition()
         }), (0, _.default)({
             type: a.ImpressionTypes.MENU,
-            name: T,
-            properties: f
+            name: S,
+            properties: h
         });
-        let m = (0, d.useWindowDispatch)(),
-            N = r.useCallback(() => {
-                m.dispatch(S.ComponentActions.POPOUT_SHOW)
-            }, [m]),
-            p = r.useCallback(() => {
-                m.dispatch(S.ComponentActions.POPOUT_HIDE)
-            }, [m]);
+        let p = (0, d.useWindowDispatch)(),
+            O = r.useCallback(() => {
+                p.dispatch(f.ComponentActions.POPOUT_SHOW)
+            }, [p]),
+            R = r.useCallback(() => {
+                p.dispatch(f.ComponentActions.POPOUT_HIDE)
+            }, [p]);
         return (0, i.jsx)(I.AppReferencePositionLayer, {
-            onMount: N,
-            onUnmount: p,
-            reference: () => u,
-            position: null != c ? c : "right",
-            align: null != E ? E : "top",
+            onMount: O,
+            onUnmount: R,
+            targetRef: m,
+            overrideTargetRect: c,
+            position: null != E ? E : "right",
+            align: null != T ? T : "top",
             autoInvert: !0,
-            ref: h,
+            ref: A,
             nudgeAlignIntoViewport: !0,
             children: t
         })
     };
-    class m extends r.PureComponent {
+    class A extends r.PureComponent {
         componentDidMount() {
             let {
                 renderLazy: e,
                 renderWindow: t
             } = this.props;
-            if (t.addEventListener("resize", this.closeResize, !0), T.ComponentDispatch.subscribe(S.ComponentActions.CONTEXT_MENU_CLOSE, this.props.closeContextMenu), null != e) {
+            if (t.addEventListener("resize", this.closeResize, !0), T.ComponentDispatch.subscribe(f.ComponentActions.CONTEXT_MENU_CLOSE, this.props.closeContextMenu), null != e) {
                 let t = setTimeout(() => {
                     this.setState({
                         render: () => (0, i.jsx)(l.MenuSpinner, {})
@@ -117,7 +120,7 @@ function(e, t, n) {
             let {
                 renderWindow: e
             } = this.props;
-            e.removeEventListener("resize", this.closeResize, !0), T.ComponentDispatch.unsubscribe(S.ComponentActions.CONTEXT_MENU_CLOSE, this.props.closeContextMenu)
+            e.removeEventListener("resize", this.closeResize, !0), T.ComponentDispatch.unsubscribe(f.ComponentActions.CONTEXT_MENU_CLOSE, this.props.closeContextMenu)
         }
         render() {
             var e;
@@ -129,7 +132,8 @@ function(e, t, n) {
                 config: a,
                 rect: o
             } = this.props, l = null !== (e = this.state.render) && void 0 !== e ? e : this.props.render;
-            return r && null != o && null != a && null != n && null != l && a.context === t ? (0, i.jsx)(A, {
+            return r && null != o && null != a && null != n && null != l && a.context === t ? (0, i.jsx)(h, {
+                target: n,
                 rect: o,
                 close: this.close,
                 onUnmount: a.onClose,
@@ -142,7 +146,6 @@ function(e, t, n) {
                         position: r
                     } = e;
                     return l({
-                        className: f.ContextMenuClassName,
                         position: r,
                         theme: s,
                         onHeightUpdate: i,
@@ -154,14 +157,14 @@ function(e, t, n) {
             }) : null
         }
         constructor(...e) {
-            super(...e), h(this, "state", {
+            super(...e), S(this, "state", {
                 render: void 0
-            }), h(this, "closeResize", e => {
+            }), S(this, "closeResize", e => {
                 let {
                     renderWindow: t
                 } = this.props;
                 e.target === t && this.close()
-            }), h(this, "close", () => {
+            }), S(this, "close", () => {
                 let {
                     isOpen: e,
                     closeContextMenu: t
@@ -171,7 +174,7 @@ function(e, t, n) {
         }
     }
 
-    function N() {
+    function m() {
         let {
             contextMenu: e,
             version: t,
@@ -184,7 +187,7 @@ function(e, t, n) {
             appContext: a,
             renderWindow: l
         } = r.useContext(d.default);
-        return (0, i.jsx)(m, {
+        return (0, i.jsx)(A, {
             appContext: a,
             renderWindow: l,
             ...e,

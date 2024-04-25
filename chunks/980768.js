@@ -2,30 +2,29 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return u
+            return l
         }
     });
     var i = n("735250");
     n("470079");
     var r = n("120356"),
         s = n.n(r),
-        a = n("652853"),
-        o = n("228168"),
-        l = n("3062");
+        a = n("228168"),
+        o = n("3062");
 
-    function u(e) {
+    function l(e) {
         let {
-            children: t,
-            isFaded: n
-        } = e, {
-            profileType: r
-        } = (0, a.useUserProfileThemeContext)();
+            profileType: t,
+            children: n,
+            isFaded: r
+        } = e;
         return (0, i.jsx)("div", {
-            className: s()(l.wrapper, {
-                [l.faded]: n,
-                [l.modal]: r === o.UserProfileTypes.MODAL
+            className: s()(o.wrapper, {
+                [o.biteSize]: t === a.UserProfileTypes.BITE_SIZE,
+                [o.fullSize]: t === a.UserProfileTypes.FULL_SIZE,
+                [o.faded]: r
             }),
-            children: t
+            children: n
         })
     }
 }

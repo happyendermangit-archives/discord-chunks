@@ -60,7 +60,7 @@ function(e, t, n) {
             section: m.AnalyticsSections.EXPRESSION_PICKER,
             children: (0, i.jsx)(E.AppReferencePositionLayer, {
                 className: p.positionLayer,
-                reference: t,
+                targetRef: t,
                 position: "top",
                 align: "left",
                 spacing: 8,

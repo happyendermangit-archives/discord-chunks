@@ -12,6 +12,7 @@ function(e) {
         header: "header_b4bd8d",
         name: "name__991e3",
         nickname: "nickname__1d9af",
+        panel: "panel__21993",
         question: "question__6ebd5",
         remove: "remove__5ed5e",
         scroller: "scroller_b7f6d8",
