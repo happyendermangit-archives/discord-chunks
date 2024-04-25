@@ -194,8 +194,6 @@ function(e, t, n) {
         setPostponeDecodeLevel(e) {}
         setReconnectInterval(e) {}
         setKeyframeInterval(e) {}
-        startSamplesPlayback(e, t, n) {}
-        stopSamplesPlayback() {}
         startSamplesLocalPlayback(e, t, n, i) {}
         stopSamplesLocalPlayback(e) {}
         stopAllSamplesLocalPlayback() {}

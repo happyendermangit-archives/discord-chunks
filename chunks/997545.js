@@ -507,27 +507,6 @@ function(e, t, n) {
             }
             this.localVideoSinkWants = e
         }
-        startSamplesPlayback(e, t, n) {
-            if (e.numberOfChannels > 2) {
-                n(1, "Too many channels");
-                return
-            }
-            for (var i = [], r = 0; r < e.numberOfChannels; r++) {
-                var s = e.getChannelData(r);
-                i.push(s)
-            }
-            try {
-                this.conn.startSamplesPlayback({
-                    sampleRate: e.sampleRate,
-                    volume: t
-                }, i, n)
-            } catch (t) {
-                this.conn.startSamplesPlayback(e.sampleRate, i, n)
-            }
-        }
-        stopSamplesPlayback() {
-            this.conn.stopSamplesPlayback()
-        }
         startSamplesLocalPlayback(e, t, n, i) {
             if (t.numberOfChannels > 2) {
                 i(1, "Too many channels");
