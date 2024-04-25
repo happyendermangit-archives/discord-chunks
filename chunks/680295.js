@@ -1,6 +1,10 @@
 function(e, t, n) {
     "use strict";
-    n.r(t), n("47120");
+    n.r(t), n.d(t, {
+        ProfileEffect: function() {
+            return h
+        }
+    }), n("47120");
     var i = n("735250"),
         r = n("470079"),
         s = n("120356"),
