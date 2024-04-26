@@ -29,7 +29,7 @@ function(e, t, n) {
         M = n("606301"),
         y = n("981631"),
         P = n("689938"),
-        U = n("894041");
+        U = n("629599");
     let b = (0, _.cssValueToNumber)(c.default.EXPRESSION_SUGGESTIONS_CONTAINER_PADDING),
         G = (0, _.cssValueToNumber)(c.default.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_SIZE),
         w = 2 * G + (0, _.cssValueToNumber)(c.default.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_MARGIN) + 2 * b,

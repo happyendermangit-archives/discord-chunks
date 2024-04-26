@@ -19,7 +19,7 @@ function(e, t, n) {
         o = n("285952"),
         l = n("534542"),
         u = n("512983"),
-        d = n("526326");
+        d = n("763873");
     let _ = a.Card.Types,
         c = {
             LEFT: "left",

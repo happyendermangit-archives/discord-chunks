@@ -2,34 +2,31 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         claimPremiumCollectiblesProduct: function() {
-            return h
+            return S
         },
         closeCollectiblesShop: function() {
             return c
         },
         fetchCollectiblesCategories: function() {
-            return T
+            return I
         },
         fetchCollectiblesProduct: function() {
-            return S
+            return f
         },
         fetchCollectiblesPurchases: function() {
-            return f
+            return T
         },
         openCollectiblesShop: function() {
             return _
-        },
-        productDetailsClosed: function() {
-            return I
         },
         productDetailsOpened: function() {
             return E
         },
         setCollectiblesCategoryItemsViewed: function() {
-            return m
+            return A
         },
         validateCollectiblesRecipient: function() {
-            return A
+            return h
         }
     });
     var i = n("544891"),
@@ -63,13 +60,7 @@ function(e, t, n) {
                 item: e
             })
         },
-        I = e => {
-            r.default.dispatch({
-                type: "COLLECTIBLES_PRODUCT_DETAILS_CLOSE",
-                item: e
-            })
-        },
-        T = async e => {
+        I = async e => {
             r.default.dispatch({
                 type: "COLLECTIBLES_CATEGORIES_FETCH"
             });
@@ -90,7 +81,7 @@ function(e, t, n) {
                     error: e
                 }), new a.APIError(e)
             }
-        }, f = async () => {
+        }, T = async () => {
             r.default.dispatch({
                 type: "COLLECTIBLES_PURCHASES_FETCH"
             });
@@ -106,7 +97,7 @@ function(e, t, n) {
                     error: e
                 }), new a.APIError(e)
             }
-        }, S = async (e, t) => {
+        }, f = async (e, t) => {
             r.default.dispatch({
                 type: "COLLECTIBLES_PRODUCT_FETCH",
                 skuId: e
@@ -130,7 +121,7 @@ function(e, t, n) {
                     error: t
                 }), new a.APIError(t)
             }
-        }, h = async e => {
+        }, S = async e => {
             r.default.dispatch({
                 type: "COLLECTIBLES_CLAIM",
                 skuId: e
@@ -155,7 +146,7 @@ function(e, t, n) {
                     error: t
                 }), new a.APIError(t)
             }
-        }, A = async (e, t) => {
+        }, h = async (e, t) => {
             try {
                 return (await i.HTTP.get({
                     url: d.Endpoints.COLLECTIBLES_VALID_GIFT_RECIPIENT,
@@ -167,7 +158,7 @@ function(e, t, n) {
             } catch (e) {
                 throw new a.APIError(e)
             }
-        }, m = e => {
+        }, A = e => {
             r.default.dispatch({
                 type: "COLLECTIBLES_CATEGORY_ITEMS_VIEWED",
                 ...e

@@ -10,7 +10,7 @@ function(e, t, n) {
         u = n("346656"),
         d = n("981631"),
         _ = n("689938"),
-        c = n("903851");
+        c = n("53560");
     t.default = e => {
         let {
             guildId: t,

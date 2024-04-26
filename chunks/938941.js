@@ -25,7 +25,7 @@ function(e, t, n) {
         s = n("408210"),
         a = n("260034"),
         o = n("993365"),
-        l = n("521869");
+        l = n("524290");
 
     function u(e) {
         return (0, i.jsx)(s.Cell, {

@@ -205,7 +205,7 @@ function(e, t, n) {
         let n = g[e];
         if (null == n) return !1;
         let i = O.default.getGuild(e);
-        return null == i ? (C.warn("Guild ".concat(e, " not found during GUILD_MEMBERS_CHUNK.")), !1) : (t.forEach(t => {
+        return null == i ? (C.warn("Guild ".concat(e, " not found during batchUpdateGuildMembers.")), !1) : (t.forEach(t => {
             var r;
             let s = n[t.user.id];
             n[t.user.id] = Y({
@@ -534,8 +534,10 @@ function(e, t, n) {
                 fullProfileLoadedTimestamp: c.fullProfileLoadedTimestamp
             })
         },
-        GUILD_MEMBERS_CHUNK: function(e) {
-            return K(e.guildId, e.members)
+        GUILD_MEMBERS_CHUNK_BATCH: function(e) {
+            let t = !1;
+            for (let n of e.chunks) t = K(n.guildId, n.members) || t;
+            return t
         },
         GUILD_MEMBER_REMOVE: function(e) {
             let {

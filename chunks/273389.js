@@ -6,7 +6,7 @@ function(e, t, n) {
         s = n("481060"),
         a = n("285952"),
         o = n("689938"),
-        l = n("674484");
+        l = n("524942");
     t.default = e => {
         let t, {
                 button: n,

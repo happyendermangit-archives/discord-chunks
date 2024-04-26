@@ -371,12 +371,11 @@ function(e, t, n) {
                     })
                 }
         },
-        GUILD_MEMBERS_CHUNK: function(e) {
+        GUILD_MEMBERS_CHUNK_BATCH: function(e) {
             let {
-                guildId: t,
-                members: n
-            } = e;
-            return function(e, t) {
+                chunks: t
+            } = e, n = !1;
+            for (let e of t) n = function(e, t) {
                 var n;
                 let i = Y({
                         type: "guild",
@@ -403,7 +402,8 @@ function(e, t, n) {
                         ...a
                     }, s = !0
                 }), s
-            }(t, n)
+            }(e.guildId, e.members) || n;
+            return n
         },
         USER_APPLICATION_UPDATE: z,
         USER_APPLICATION_REMOVE: z

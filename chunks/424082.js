@@ -20,7 +20,7 @@ function(e, t, n) {
             id: 0,
             label: "users receive regular standard annual price (16% discount)",
             config: {
-                enabled: !0,
+                enabled: !1,
                 discount_percentage: 16
             }
         }, {

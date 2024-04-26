@@ -17,7 +17,7 @@ function(e, t, n) {
         u = n("981631"),
         d = n("921944"),
         _ = n("689938"),
-        c = n("871183");
+        c = n("659877");
 
     function E(e) {
         return e || !(s.isMobile || s.isTablet) ? _.default.Messages.SEASONAL_GIFTING_DM_POPUP_BODY : _.default.Messages.SEASONAL_GIFTING_MAKE_SOMEONES_DAY_TOOLTIP

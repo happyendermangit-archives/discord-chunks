@@ -20,7 +20,7 @@ function(e, t, n) {
         A = n("981631"),
         m = n("474936"),
         N = n("689938"),
-        p = n("368907");
+        p = n("827019");
     t.default = function(e) {
         let {
             bodyCopy: t = N.default.Messages.EMOJI_PICKER_PREMIUM_UPSELL_BODY,

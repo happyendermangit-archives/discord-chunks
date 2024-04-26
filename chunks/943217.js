@@ -14,7 +14,7 @@ function(e, t, n) {
         l = n("793397"),
         u = n("228168"),
         d = n("419061"),
-        _ = n("384882");
+        _ = n("587886");
     let c = {
         [u.UserProfileTypes.POPOUT]: s.AvatarSizes.SIZE_80,
         [u.UserProfileTypes.MODAL]: s.AvatarSizes.SIZE_120,

@@ -24,7 +24,7 @@ function(e, t, n) {
         I = n("186523"),
         T = n("553826"),
         f = n("981631"),
-        S = n("322047");
+        S = n("954933");
 
     function h(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {

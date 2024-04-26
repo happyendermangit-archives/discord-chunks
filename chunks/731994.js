@@ -11,7 +11,7 @@ function(e, t, n) {
             return a
         }
     });
-    var i, r, s = n("294575");
+    var i, r, s = n("297888");
     (i = r || (r = {}))[i.IMAGE = 0] = "IMAGE", i[i.DOCUMENT = 1] = "DOCUMENT", i[i.CODE = 2] = "CODE";
     let a = {
             0: s.image,

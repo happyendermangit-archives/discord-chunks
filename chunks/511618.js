@@ -10,7 +10,7 @@ function(e, t, n) {
         u = n("981631"),
         d = n("474936"),
         _ = n("689938"),
-        c = n("63502");
+        c = n("129235");
     t.default = e => {
         let {
             emojis: t

@@ -42,7 +42,7 @@ function(e, t, n) {
         N = n("602091"),
         p = n("231338"),
         O = n("689938"),
-        R = n("462278");
+        R = n("821458");
     (i = r || (r = {})).SMALL = "small", i.MEDIUM = "medium", i.LARGE = "large", i.DYNAMIC = "dynamic";
     let C = Object.freeze({
         small: R.small,

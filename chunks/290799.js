@@ -11,7 +11,7 @@ function(e, t, n) {
         d = n("63063"),
         _ = n("981631"),
         c = n("689938"),
-        E = n("236941");
+        E = n("732364");
     let I = [{
         getQuestion: () => c.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_QUESTION_1,
         getAnswer: () => c.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_ANSWER_1

@@ -9,6 +9,6 @@ function(e, t, n) {
         s = n("803997"),
         a = n.n(s),
         o = n("355336"),
-        l = n("173566");
+        l = n("107042");
     let u = (0, o.createManagedReactiveScroller)(a()(l.auto, l.disableScrollAnchor), null !== (i = window.ResizeObserver) && void 0 !== i ? i : r.ResizeObserver)
 }

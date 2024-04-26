@@ -10,7 +10,7 @@ function(e, t, n) {
         l = n("438071"),
         u = n("474936"),
         d = n("689938"),
-        _ = n("810516");
+        _ = n("641114");
     let c = {
             XXSMALL: _.xxsmall,
             XSMALL: _.xsmall,

@@ -13,7 +13,7 @@ function(e, t, n) {
         c = n("626135"),
         E = n("981631"),
         I = n("689938"),
-        T = n("61593");
+        T = n("201882");
     t.default = function(e) {
         let {
             guild: t,

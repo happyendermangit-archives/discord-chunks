@@ -14,7 +14,7 @@ function(e, t, n) {
         s = n.n(r),
         a = n("481060"),
         o = n("285952"),
-        l = n("349611");
+        l = n("407620");
 
     function u(e) {
         return e < 400 ? "small" : e < 1e3 ? "medium" : "large"

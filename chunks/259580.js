@@ -11,7 +11,7 @@ function(e, t, n) {
         u = n("865824"),
         d = n("481060"),
         _ = n("325767"),
-        c = n("715837");
+        c = n("266930");
     let E = {
             UP: c.directionUp,
             RIGHT: c.directionRight,

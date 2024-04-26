@@ -1,6 +1,6 @@
 function(e, t, n) {
     "use strict";
-    n.r(t);
+    n.r(t), n("47120");
     var i, r, s, a, o = n("392711"),
         l = n.n(o),
         u = n("442837"),
@@ -50,7 +50,7 @@ function(e, t, n) {
         } = e;
         return null != t && h(t, l().flatten(n))
     }
-    class N extends(a = u.default.Store) {
+    class N extends(i = u.default.Store) {
         initialize() {
             this.waitFor(E.default, I.default)
         }
@@ -58,26 +58,25 @@ function(e, t, n) {
             S(e, t)
         }
     }
-    s = "GuildMemberRequesterStore", (r = "displayName") in(i = N) ? Object.defineProperty(i, r, {
-        value: s,
+    a = "GuildMemberRequesterStore", (s = "displayName") in(r = N) ? Object.defineProperty(r, s, {
+        value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : i[r] = s, t.default = new N(d.default, {
+    }) : r[s] = a, t.default = new N(d.default, {
         CONNECTION_CLOSED: f,
         CONNECTION_OPEN: f,
         CONNECTION_RESUMED: function() {
             return T.requestUnacknowledged(), !1
         },
-        GUILD_MEMBERS_CHUNK: function(e) {
+        GUILD_MEMBERS_CHUNK_BATCH: function(e) {
             let {
-                guildId: t,
-                members: n,
-                notFound: i
+                chunks: t
             } = e;
-            return n.forEach(e => {
-                T.acknowledge(t, e.user.id)
-            }), null != i && i.forEach(e => T.acknowledge(t, e)), !1
+            for (let e of t) e.members.forEach(t => {
+                T.acknowledge(e.guildId, t.user.id)
+            }), null != e.notFound && e.notFound.forEach(t => T.acknowledge(e.guildId, t));
+            return !1
         },
         SEARCH_FINISH: m,
         MOD_VIEW_SEARCH_FINISH: m,

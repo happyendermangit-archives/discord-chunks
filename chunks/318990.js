@@ -14,7 +14,7 @@ function(e, t, n) {
         u = n("204197"),
         d = n("357355"),
         _ = n("689938"),
-        c = n("888386");
+        c = n("268628");
 
     function E() {
         let e = (0, o.useStateFromStores)([d.default], () => d.default.affinities.slice(0, 3)),

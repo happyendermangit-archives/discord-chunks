@@ -26,7 +26,6 @@ function(e, t, n) {
         label: "Activities in Text User",
         defaultConfig: {
             entryPointEnabled: !1,
-            desktopThrobberEnabled: !1,
             activitiesInTextEnabled: !1,
             showInOmniButtonMenu: !1,
             showNewMobileLeaveUI: !1
@@ -37,7 +36,6 @@ function(e, t, n) {
             config: {
                 entryPointEnabled: !0,
                 activitiesInTextEnabled: !0,
-                desktopThrobberEnabled: !1,
                 showInOmniButtonMenu: !0,
                 showNewMobileLeaveUI: !1
             }
@@ -47,7 +45,6 @@ function(e, t, n) {
             config: {
                 entryPointEnabled: !0,
                 activitiesInTextEnabled: !0,
-                desktopThrobberEnabled: !1,
                 showInOmniButtonMenu: !0,
                 showNewMobileLeaveUI: !0
             }

@@ -403,18 +403,18 @@ function(e, t, n) {
 
     function es(e) {
         let {
-            members: t,
-            guildId: n
-        } = e;
-        return t.reduce((e, t) => {
-            let i = L(t.user),
-                r = m[t.user.id];
-            if (null == r) return i || e;
+            chunks: t
+        } = e, n = !1;
+        for (let e of t) n = e.members.reduce((t, n) => {
+            let i = L(n.user),
+                r = m[n.user.id];
+            if (null == r) return i || t;
             let {
                 avatar: s
-            } = t;
-            return O(r, n, s) || i || e
-        }, !1)
+            } = n;
+            return O(r, e.guildId, s) || i || t
+        }, !1) || n;
+        return n
     }
 
     function ea(e) {
@@ -701,7 +701,7 @@ function(e, t, n) {
                 GUILD_JOIN_REQUEST_UPDATE: eh,
                 GUILD_MEMBER_ADD: ei,
                 GUILD_MEMBER_UPDATE: ei,
-                GUILD_MEMBERS_CHUNK: es,
+                GUILD_MEMBERS_CHUNK_BATCH: es,
                 GUILD_MEMBER_LIST_UPDATE: er,
                 THREAD_MEMBER_LIST_UPDATE: el,
                 THREAD_MEMBERS_UPDATE: eu,

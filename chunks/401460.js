@@ -18,7 +18,7 @@ function(e, t, n) {
         E = n("441319"),
         I = n("981631"),
         T = n("689938"),
-        f = n("354585");
+        f = n("481365");
     let S = () => [T.default.Messages.APP_ICON_PIRATE, T.default.Messages.APP_ICON_PIRATE_1, T.default.Messages.APP_ICON_PIRATE_2, T.default.Messages.APP_ICON_PIRATE_3, T.default.Messages.APP_ICON_PIRATE_4],
         h = () => {
             var e;

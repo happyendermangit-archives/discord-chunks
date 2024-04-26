@@ -6,8 +6,8 @@ function(e, t, n) {
     var r = n("120356"),
         s = n.n(r),
         a = n("481060"),
-        o = n("621292"),
-        l = n("527166");
+        o = n("734023"),
+        l = n("436898");
     let u = Object.freeze({
             SIZE_10: l.size10,
             SIZE_12: l.size12,

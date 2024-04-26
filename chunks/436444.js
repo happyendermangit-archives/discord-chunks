@@ -21,7 +21,7 @@ function(e, t, n) {
         T = n("198466"),
         f = n("981631"),
         S = n("689938"),
-        h = n("90952");
+        h = n("563547");
     let A = {
         [f.BoostedGuildTiers.NONE]: 0,
         [f.BoostedGuildTiers.TIER_1]: 1 / 3,

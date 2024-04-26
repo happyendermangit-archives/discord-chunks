@@ -53,7 +53,7 @@ function(e, t, n) {
         J = n("151851"),
         $ = n("981631"),
         ee = n("921944"),
-        et = n("155118");
+        et = n("595168");
     n("792295"), Promise.resolve().then(n.bind(n, "62883")).then(e => {
         K.isPlatformEmbedded ? window.addEventListener("contextmenu", e.contextMenuCallbackNative, !1) : window.addEventListener("contextmenu", e.contextMenuCallbackWeb, !1)
     }), (0, E.setDesignConfig)({

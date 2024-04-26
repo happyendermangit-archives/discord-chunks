@@ -187,11 +187,12 @@ function(e, t, n) {
             } = e;
             return V(t)
         },
-        GUILD_MEMBERS_CHUNK: function(e) {
+        GUILD_MEMBERS_CHUNK_BATCH: function(e) {
             let {
-                members: t
+                chunks: t
             } = e, n = !1;
-            for (let e of t) n = k(e.user.id) || n;
+            for (let e of t)
+                for (let t of e.members) n = k(t.user.id) || n;
             return n
         },
         USER_UPDATE: H,

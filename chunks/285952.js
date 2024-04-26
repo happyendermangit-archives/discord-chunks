@@ -5,8 +5,8 @@ function(e, t, n) {
         r = n("470079"),
         s = n("120356"),
         a = n.n(s),
-        o = n("14149"),
-        l = n("605094");
+        o = n("781964"),
+        l = n("26673");
     let u = {
             VERTICAL: l.vertical,
             HORIZONTAL: o.horizontal,

@@ -26,7 +26,7 @@ function(e, t, n) {
         C = n("981631"),
         g = n("957825"),
         L = n("689938"),
-        D = n("76302");
+        D = n("681455");
     let v = (0, A.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
         M = (0, A.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_SIZE),
         y = (0, A.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_MARGIN),

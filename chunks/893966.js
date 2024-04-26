@@ -1,6 +1,6 @@
 function(e, t, n) {
     "use strict";
-    n.r(t), n("724458"), n("653041"), n("47120");
+    n.r(t), n("47120"), n("724458"), n("653041");
     var i, r, s, a, o = n("442837"),
         l = n("570140"),
         u = n("314897"),
@@ -167,12 +167,12 @@ function(e, t, n) {
             } = e;
             p(t)
         },
-        GUILD_MEMBERS_CHUNK: function(e) {
+        GUILD_MEMBERS_CHUNK_BATCH: function(e) {
             let {
-                guildId: t,
-                members: n
-            } = e;
-            return N(t).updateServerMembers(n)
+                chunks: t
+            } = e, n = !1;
+            for (let e of t) n = N(e.guildId).updateServerMembers(e.members) || n;
+            return n
         },
         GUILD_MEMBER_ADD: O,
         GUILD_MEMBER_UPDATE: O,

@@ -1,10 +1,9 @@
 function(e) {
     "use strict";
     e.exports = {
-        content: "content__5991f",
-        copy: "copy_cafa62",
-        gameTile: "gameTile__0d8ae",
-        subheading: "subheading_f3c906",
-        wrapper: "wrapper__1c1c3"
+        discriminator: "discriminator_da830e",
+        fill: "fill__7789f",
+        text: "text__422c8",
+        username: "username__941e9"
     }
 }

@@ -20,7 +20,7 @@ function(e, t, n) {
         A = n("490095"),
         m = n("981631"),
         N = n("689938"),
-        p = n("900544");
+        p = n("750178");
     let O = (0, l.cssValueToNumber)(p.__invalid_stickerPickerPreviewDimensions),
         R = (0, l.cssValueToNumber)(p.__invalid_stickerPickerPreviewPadding),
         C = r.memo(function(e) {

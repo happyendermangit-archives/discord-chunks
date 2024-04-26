@@ -7,7 +7,7 @@ function(e, t, n) {
         s = n.n(r),
         a = n("960259"),
         o = n("531057"),
-        l = n("157192");
+        l = n("423034");
     t.default = (0, a.replaceIcon)(function(e) {
         let {
             width: t = 24,

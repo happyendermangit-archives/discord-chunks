@@ -5,7 +5,7 @@ function(e, t, n) {
     n("470079");
     var r = n("974029"),
         s = n("689938"),
-        a = n("574732");
+        a = n("425015");
     t.default = function() {
         return (0, i.jsx)(r.default, {
             className: a.icon,

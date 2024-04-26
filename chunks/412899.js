@@ -45,7 +45,7 @@ function(e, t, n) {
         b = n("944613"),
         G = n("981631"),
         w = n("689938"),
-        B = n("862273");
+        B = n("48125");
     let k = () => Promise.resolve();
 
     function V(e) {

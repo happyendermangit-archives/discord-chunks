@@ -62,7 +62,7 @@ function(e, t, n) {
         W = n("176505"),
         K = n("474936"),
         z = n("689938"),
-        X = n("163237");
+        X = n("180848");
     let Q = () => ({
             page: null != (0, l.useStateFromStores)([M.default], () => M.default.getGuildId()) ? j.AnalyticsPages.GUILD_CHANNEL : j.AnalyticsPages.DM_CHANNEL,
             section: j.AnalyticsSections.EMOJI_UPSELL_POPOUT

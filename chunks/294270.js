@@ -58,7 +58,7 @@ function(e, t, n) {
             completingUserId: t,
             waitingUserId: n,
             channelId: i
-        } = e, r = S(t + n, i, !0);
+        } = e, r = S("".concat(t).concat(n), i, !0);
         m[r] = new s.DelayedCall(550, () => {
             delete m[r], (0, d.clearCompletedHighFive)(t, n, i)
         }), m[r].delay()

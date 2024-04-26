@@ -23,7 +23,7 @@ function(e, t, n) {
         p = n("587061"),
         O = n("392358"),
         R = n("981631");
-    n("309538");
+    n("807151");
     let C = new Set([R.Routes.LOGIN, R.Routes.REGISTER]);
     t.default = r.memo(function(e) {
         let {

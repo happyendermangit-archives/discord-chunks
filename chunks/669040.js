@@ -44,7 +44,7 @@ function(e, t, n) {
         Y = n("957825"),
         j = n("474936"),
         W = n("689938"),
-        K = n("419651");
+        K = n("917350");
     let z = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
         X = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_RIGHT),
         Q = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_BOTTOM),

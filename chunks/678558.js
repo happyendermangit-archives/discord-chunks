@@ -15,7 +15,7 @@ function(e, t, n) {
         I = n("879892"),
         T = n("981631"),
         f = n("689938"),
-        S = n("835299");
+        S = n("195445");
     t.default = e => {
         let {
             analyticsLocation: t,

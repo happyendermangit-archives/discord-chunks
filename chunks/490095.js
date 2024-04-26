@@ -4,7 +4,7 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("630641"),
-        s = n("47825");
+        s = n("737126");
     t.default = e => {
         let {
             size: t
