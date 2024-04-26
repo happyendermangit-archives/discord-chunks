@@ -466,7 +466,7 @@ function(e) {
         CLAN_DISCOVERY_UNKNOWN_PLAYSTYLE: "Unknown",
         CLAN_DISCOVERY_PLAYSTYLE_ARIA_LABEL: "Playstyle",
         CLANS: "Clans",
-        CLAN_USER_PROFILE_PRIMARY_CLAN: "Primary Clan",
+        CLAN_USER_PROFILE_PRIMARY_CLAN: "Primary Guild",
         CLAN_DISCOVERY_SAVED_FILTER: "{count, number} Saved",
         CLAN_DISCOVERY_CARD_TAG_TOOLTIP: "Become a member to unlock this tag",
         CLAN_DISCOVERY_UPSELL_CTA_GUILD_INVITE: "You’re invited to become a Guild!",

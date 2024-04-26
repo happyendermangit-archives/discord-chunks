@@ -2,6 +2,7 @@ function(e) {
     "use strict";
     e.exports = {
         badge: "badge_d12073",
+        chipletContainerInline: "chipletContainerInline_fe40ef",
         chipletContainerInner: "chipletContainerInner_bfcb1e",
         clickable: "clickable__8131d",
         noTooltip: "noTooltip_e2f660",

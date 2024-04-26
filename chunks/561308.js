@@ -22,6 +22,15 @@ function(e, t, n) {
         getEntryDuration: function() {
             return A
         },
+        getFullMarathonDescription: function() {
+            return L
+        },
+        getMarathonDurationStr: function() {
+            return C
+        },
+        getMarathonName: function() {
+            return g
+        },
         getStreakCount: function() {
             return R
         },
@@ -155,5 +164,26 @@ function(e, t, n) {
     function R(e) {
         let t = e.traits.find(e => e.type === s.ContentInventoryTraitType.STREAK_DAYS);
         return null == t ? void 0 : t.streak_count_days
+    }
+
+    function C(e) {
+        let t = A(e);
+        if (null == t) return null;
+        let n = Math.round(t / o.default.Seconds.HOUR);
+        return u.default.Messages.MEMBER_LIST_CONTENT_FEED_PLAYED_FOR_HOURS.format({
+            hours: n
+        })
+    }
+
+    function g(e) {
+        var t;
+        let n = null !== (t = A(e)) && void 0 !== t ? t : 0;
+        return n > 10 * o.default.Seconds.HOUR ? u.default.Messages.MEMBER_LIST_CONTENT_FEED_EPIC_MARATHON : n > 5 * o.default.Seconds.HOUR ? u.default.Messages.MEMBER_LIST_CONTENT_FEED_ULTRA_MARATHON : u.default.Messages.MEMBER_LIST_CONTENT_FEED_MARATHON
+    }
+
+    function L(e) {
+        let t = C(e),
+            n = g(e);
+        return null == t ? n : "".concat(n, " — ").concat(t)
     }
 }

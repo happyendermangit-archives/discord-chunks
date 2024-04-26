@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return m
+            return N
         }
     });
     var i = n("735250"),
@@ -24,28 +24,32 @@ function(e, t, n) {
         A = n("810200");
 
     function m(e) {
+        e.stopPropagation()
+    }
+
+    function N(e) {
         var t;
         let {
-            clan: m,
-            isLoading: N,
-            onClose: p
-        } = e, O = (0, I.useClanInfo)(null !== (t = null == m ? void 0 : m.identityGuildId) && void 0 !== t ? t : null), R = null == m ? void 0 : m.tag, C = (0, E.useIsInUserClanExperiment)(), g = null == m ? void 0 : m.identityGuildId, L = (0, a.useStateFromStores)([d.default], () => d.default.getId()), D = (0, a.useStateFromStores)([_.default], () => null != g ? _.default.getMember(g, L) : null, [g, L]), v = (0, a.useStateFromStores)([c.default], () => c.default.getUser(L), [L]), M = (null == D ? void 0 : D.joinedAt) != null, y = (0, f.isGuildAdoptedUserClanIdentity)(g, null == v ? void 0 : v.clan), P = null != (0, l.default)(g), U = r.useCallback(e => {
-            null != g && (e.stopPropagation(), e.preventDefault(), null == p || p(), (0, T.openAdoptClanIdentityModal)(g))
-        }, [g, p]), b = r.useCallback(e => {
-            if (null != O) e.stopPropagation(), e.preventDefault(), null == p || p(), !P && (0, s.openModalLazy)(async () => {
+            clan: N,
+            isLoading: p,
+            onClose: O
+        } = e, R = (0, I.useClanInfo)(null !== (t = null == N ? void 0 : N.identityGuildId) && void 0 !== t ? t : null), C = null == N ? void 0 : N.tag, g = (0, E.useIsInUserClanExperiment)(), L = null == N ? void 0 : N.identityGuildId, D = (0, a.useStateFromStores)([d.default], () => d.default.getId()), v = (0, a.useStateFromStores)([_.default], () => null != L ? _.default.getMember(L, D) : null, [L, D]), M = (0, a.useStateFromStores)([c.default], () => c.default.getUser(D), [D]), y = (null == v ? void 0 : v.joinedAt) != null, P = (0, f.isGuildAdoptedUserClanIdentity)(L, null == M ? void 0 : M.clan), U = null != (0, l.default)(L), b = r.useCallback(e => {
+            null != L && (e.stopPropagation(), e.preventDefault(), null == O || O(), (0, T.openAdoptClanIdentityModal)(L))
+        }, [L, O]), G = r.useCallback(e => {
+            if (null != R) e.stopPropagation(), e.preventDefault(), null == O || O(), !U && (0, s.openModalLazy)(async () => {
                 let {
                     default: e
                 } = await Promise.all([n.e("99387"), n.e("80026"), n.e("18482")]).then(n.bind(n, "767593"));
                 return t => (0, i.jsx)(e, {
                     ...t,
-                    clan: O
+                    clan: R
                 })
             })
-        }, [O, P, p]), G = r.useCallback(() => {
-            null != g && (0, u.transitionTo)(S.Routes.GUILD_MEMBER_VERIFICATION(g))
-        }, [g]), w = r.useMemo(() => {
+        }, [R, U, O]), w = r.useCallback(() => {
+            null != L && (0, u.transitionTo)(S.Routes.GUILD_MEMBER_VERIFICATION(L))
+        }, [L]), B = r.useMemo(() => {
             var e, t;
-            let n = null !== (t = null == O ? void 0 : null === (e = O.branding) || void 0 === e ? void 0 : e.primaryColor) && void 0 !== t ? t : null,
+            let n = null !== (t = null == R ? void 0 : null === (e = R.branding) || void 0 === e ? void 0 : e.primaryColor) && void 0 !== t ? t : null,
                 i = {
                     color: null != n ? s.Button.Colors.CUSTOM : s.Button.Colors.BRAND,
                     size: s.Button.Sizes.SMALL,
@@ -59,40 +63,46 @@ function(e, t, n) {
                     color: (0, f.getAccessibleTextColor)(n).hex()
                 }
             }), i
-        }, [O]), B = r.useMemo(() => {
+        }, [R]), k = r.useMemo(() => {
             switch (!0) {
-                case !C:
+                case !g:
                     return null;
-                case !M && P:
+                case !y && U:
                     return (0, i.jsx)(s.Button, {
-                        onClick: G,
-                        ...w,
+                        onClick: w,
+                        ...B,
                         children: h.default.Messages.CLAN_USER_APPLICATION_EXISTS_TAG_GUILD_PROFILE_CTA
                     });
-                case !M:
+                case !y:
                     return (0, i.jsx)(s.Button, {
-                        onClick: b,
-                        ...w,
+                        onClick: G,
+                        ...B,
                         children: h.default.Messages.CLAN_USER_APPLY_TAG_GUILD_PROFILE_CTA
                     });
-                case M && !y:
+                case y && !P:
                     return (0, i.jsx)(s.Button, {
-                        onClick: U,
-                        ...w,
+                        onClick: b,
+                        ...B,
                         children: h.default.Messages.CLAN_USER_ADOPT_TAG_GUILD_PROFILE_CTA
                     });
                 default:
                     return null
             }
-        }, [w, U, b, G, P, y, M, C]);
-        return null == R || null == O || null == g || N ? (0, i.jsx)(s.Spinner, {}) : (0, i.jsxs)("div", {
+        }, [B, b, G, w, U, P, y, g]), V = r.useMemo(() => ({
             className: A.container,
+            onClick: m
+        }), []);
+        return null == C || null == R || null == L || p ? (0, i.jsx)("div", {
+            ...V,
+            children: (0, i.jsx)(s.Spinner, {})
+        }) : (0, i.jsxs)("div", {
+            ...V,
             children: [(0, i.jsx)(o.ClanDiscoveryCardView, {
-                clan: O,
+                clan: R,
                 className: A.cardContainer
-            }), null != B && (0, i.jsx)("div", {
+            }), null != k && (0, i.jsx)("div", {
                 className: A.buttonContainer,
-                children: B
+                children: k
             })]
         })
     }
