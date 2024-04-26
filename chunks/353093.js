@@ -2,13 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         formatSelectionList: function() {
-            return _
+            return d
         },
         getAccessibleTextColor: function() {
-            return c
+            return _
         },
         getClanBadgeUrl: function() {
-            return I
+            return E
         },
         getUserClanData: function() {
             return o
@@ -17,9 +17,6 @@ function(e, t, n) {
             return l
         },
         isGuildAdoptedUserClanIdentity: function() {
-            return d
-        },
-        userHasAdoptedAnyClanIdentity: function() {
             return u
         }
     });
@@ -40,14 +37,10 @@ function(e, t, n) {
         return null != e && e.hasFeature(s.GuildFeatures.CLAN)
     }
 
-    function u(e) {
-        return null != e && !!e.identityEnabled
-    }
-
-    function d(e, t) {
+    function u(e, t) {
         return null != e && null != t && null != t.identityGuildId && t.identityGuildId === e && !!t.identityEnabled || !1
     }
-    let _ = (e, t) => {
+    let d = (e, t) => {
         if (0 === e.length) return null;
         if (1 === e.length) return e[1];
         if (2 === e.length) return a.default.Messages.CLAN_OVERVIEW_LIST_TWO_ITEMS.format({
@@ -73,7 +66,7 @@ function(e, t, n) {
         }
     };
 
-    function c(e) {
+    function _(e) {
         let t = parseInt(e.substr(1, 2), 16),
             n = parseInt(e.substr(3, 2), 16),
             r = parseInt(e.substr(5, 2), 16);
@@ -85,19 +78,19 @@ function(e, t, n) {
             saturation: 1
         })
     }
-    let E = {
+    let c = {
         [r.ClanTagBadgeSize.SIZE_12]: 16,
         [r.ClanTagBadgeSize.SIZE_16]: 16,
         [r.ClanTagBadgeSize.SIZE_24]: 24,
         [r.ClanTagBadgeSize.SIZE_36]: 40
     };
 
-    function I(e, t) {
+    function E(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : r.ClanTagBadgeSize.SIZE_12;
         if (null == t) return;
         let {
             CDN_HOST: i
         } = window.GLOBAL_ENV;
-        if (null != i) return "".concat(location.protocol, "//").concat(i, "/clan-badges/").concat(e, "/").concat(t, ".png?size=").concat(E[n])
+        if (null != i) return "".concat(location.protocol, "//").concat(i, "/clan-badges/").concat(e, "/").concat(t, ".png?size=").concat(c[n])
     }
 }

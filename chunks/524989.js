@@ -52,9 +52,11 @@ function(e, t, n) {
         })), f = {
             visibility: 0 === I.parentWidth ? "hidden" : "visible"
         }, S = (0, o.useResizeObserver)(e => {
-            T(n => u(t, {
-                ...n,
-                parentWidth: e.contentRect.width
+            if (null == e) return;
+            let n = e.getBoundingClientRect();
+            T(e => u(t, {
+                ...e,
+                parentWidth: n.width
             }))
         });
         return r.useLayoutEffect(() => {
