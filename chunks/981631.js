@@ -1455,6 +1455,7 @@ function(_, E, e) {
             GUILD_CLAN_DISCOVERY_INFO: _ => "/discovery/".concat(_, "/clan"),
             USER_SET_CLAN_IDENTITY: "/users/@me/clan",
             CLAN_SETTINGS: _ => "/clan/".concat(_, "/settings"),
+            DISABLE_CLAN: _ => "/clan/".concat(_, "/disable"),
             TENOR_ASSET_PATH: "/tenor",
             EMAIL_SETTINGS: "/users/@me/email-settings",
             ACCOUNT_NOTIFICATION_SETTINGS: "/users/@me/notification-settings",
