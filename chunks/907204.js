@@ -19,9 +19,9 @@ function(e) {
         scroller: "scroller_cc96df",
         sequencer: "sequencer__03419",
         upsellContainer: "upsellContainer_aae5af",
-        upsellCtaSubtitle: "upsellCtaSubtitle__43db3",
-        upsellCtaTitle: "upsellCtaTitle_f32e4e",
         upsellDetails: "upsellDetails_fe7ec8",
+        upsellSubtitle: "upsellSubtitle__06626",
+        upsellTitle: "upsellTitle__25132",
         wizard: "wizard__29f91"
     }
 }

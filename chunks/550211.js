@@ -17,9 +17,10 @@ function(e) {
         clanEnvelopeBottom: "clanEnvelopeBottom_e5cdee",
         clanEnvelopeTop: "clanEnvelopeTop_bf09a8",
         upsellCtaContainer: "upsellCtaContainer__5221e",
-        upsellCtaDetail: "upsellCtaDetail_a69e4c",
-        upsellCtaDetails: "upsellCtaDetails__8d79f",
-        upsellCtaTitle: "upsellCtaTitle_e8cbe3",
-        upsellIcon: "upsellIcon__05e46"
+        upsellDetail: "upsellDetail__401db",
+        upsellDetailText: "upsellDetailText__886b7",
+        upsellDetails: "upsellDetails_dbe31a",
+        upsellIcon: "upsellIcon__05e46",
+        upsellTitle: "upsellTitle__75ee7"
     }
 }
