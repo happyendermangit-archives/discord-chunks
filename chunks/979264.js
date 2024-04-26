@@ -3,6 +3,9 @@ function(e, t, n) {
     n.r(t), n.d(t, {
         BaseClanTagChiplet: function() {
             return h
+        },
+        ClanBadgeWithTooltip: function() {
+            return A
         }
     }), n("47120");
     var i = n("735250"),
@@ -65,6 +68,46 @@ function(e, t, n) {
         });
 
     function A(e) {
+        var t, n, s;
+        let {
+            clan: a,
+            size: d = I.ClanTagBadgeSize.SIZE_16,
+            userId: E,
+            className: T
+        } = e, f = (0, o.useStateFromStores)([u.default], () => u.default.getUser(E), [E]), h = null !== (t = null == f ? void 0 : f.clan) && void 0 !== t ? t : a, {
+            tag: A,
+            badge: m,
+            guildId: N
+        } = (0, c.getUserClanData)(h), [p, O] = (0, _.useFetchClanInfo)(null !== (n = null == h ? void 0 : h.identityGuildId) && void 0 !== n ? n : null), R = (0, _.useClanInfo)(null !== (s = null == h ? void 0 : h.identityGuildId) && void 0 !== s ? s : null), [C, g] = r.useState(!1);
+        if (null == N || null == A || null == m) return null;
+        let L = (0, c.getClanBadgeUrl)(N, m, d);
+        return (0, i.jsx)(l.Tooltip, {
+            text: p ? (0, i.jsx)(l.Spinner, {}) : null == R ? void 0 : R.name,
+            onTooltipShow: () => O(),
+            hideOnClick: !0,
+            shouldShow: C,
+            forceOpen: C,
+            children: e => (0, i.jsx)(l.Clickable, {
+                tag: "span",
+                className: T,
+                ...e,
+                onMouseEnter: () => {
+                    var t;
+                    g(!0), null === (t = e.onMouseEnter) || void 0 === t || t.call(e)
+                },
+                onMouseLeave: () => {
+                    var t;
+                    g(!1), null === (t = e.onMouseLeave) || void 0 === t || t.call(e)
+                },
+                children: (0, i.jsx)(S, {
+                    src: L,
+                    size: d
+                })
+            })
+        })
+    }
+
+    function m(e) {
         var t, n;
         let {
             clan: s,
@@ -114,11 +157,11 @@ function(e, t, n) {
             badgeSize: E,
             disableTooltip: I = !1,
             inline: T = !0
-        } = e, S = (0, o.useStateFromStores)([u.default], () => u.default.getUser(r), [r]), m = null !== (t = null == S ? void 0 : S.clan) && void 0 !== t ? t : n, {
+        } = e, S = (0, o.useStateFromStores)([u.default], () => u.default.getUser(r), [r]), A = null !== (t = null == S ? void 0 : S.clan) && void 0 !== t ? t : n, {
             tag: N,
             badge: p,
             guildId: O
-        } = (0, c.getUserClanData)(m);
+        } = (0, c.getUserClanData)(A);
         if (!(0, d.useIsInUserClanExperiment)() || null == O || null == N) return null;
         let R = (0, c.getClanBadgeUrl)(O, p, E);
         return I ? (0, i.jsx)(h, {
@@ -129,8 +172,8 @@ function(e, t, n) {
             textColor: _,
             badgeSize: E,
             inline: T
-        }) : (0, i.jsx)(A, {
-            clan: m,
+        }) : (0, i.jsx)(m, {
+            clan: A,
             userId: r,
             children: (0, i.jsx)(h, {
                 clanTag: N,
