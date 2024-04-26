@@ -2,85 +2,91 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return N
+            return O
         }
     });
     var i = n("735250");
     n("470079");
-    var r = n("442837"),
-        s = n("158776"),
-        a = n("246946"),
-        o = n("5192"),
-        l = n("447452"),
-        u = n("505737"),
-        d = n("193281"),
-        _ = n("998120"),
-        c = n("530"),
-        E = n("894374"),
-        I = n("705556"),
-        T = n("790711"),
-        f = n("67152"),
-        S = n("901952"),
-        h = n("579285"),
-        A = n("287612"),
-        m = n("797849");
+    var r = n("120356"),
+        s = n.n(r),
+        a = n("442837"),
+        o = n("158776"),
+        l = n("246946"),
+        u = n("5192"),
+        d = n("447452"),
+        _ = n("505737"),
+        c = n("193281"),
+        E = n("724593"),
+        I = n("530"),
+        T = n("894374"),
+        f = n("705556"),
+        S = n("790711"),
+        h = n("67152"),
+        A = n("901952"),
+        m = n("579285"),
+        N = n("287612"),
+        p = n("797849");
 
-    function N(e) {
+    function O(e) {
         let {
             user: t,
             currentUser: n,
-            displayProfile: N,
-            guild: p,
-            onOpenProfile: O,
-            channelId: R,
-            onClose: C
+            displayProfile: r,
+            guild: O,
+            isHovering: R,
+            onOpenProfile: C,
+            channelId: g,
+            onClose: L
         } = e, {
-            moreUserDetailsEnabled: g
-        } = (0, l.useSimplifiedProfileExperiment)({
+            moreUserDetailsEnabled: D
+        } = (0, d.useSimplifiedProfileExperiment)({
             location: "BiteSizeProfileBody"
-        }), L = o.default.getName(null == p ? void 0 : p.id, R, t), D = (0, u.default)(t.id, null == p ? void 0 : p.id), v = (0, r.useStateFromStores)([a.default], () => a.default.hidePersonalInformation), M = (0, r.useStateFromStores)([s.default], () => s.default.findActivity(t.id, e => null != e.type && d.SUPPORTED_ACTIVITY_TYPES.has(e.type)), [t]);
+        }), v = u.default.getName(null == O ? void 0 : O.id, g, t), M = (0, _.default)(t.id, null == O ? void 0 : O.id), y = (0, a.useStateFromStores)([l.default], () => l.default.hidePersonalInformation), P = (0, a.useStateFromStores)([o.default], () => o.default.findActivity(t.id, e => null != e.type && c.SUPPORTED_ACTIVITY_TYPES.has(e.type)), [t]);
         return (0, i.jsxs)("div", {
-            className: m.body,
-            children: [(0, i.jsx)(c.default, {
+            className: p.body,
+            children: [(0, i.jsx)(I.default, {
                 user: t,
-                guildId: null == p ? void 0 : p.id,
-                usernameIcon: t.hasAvatarForGuild(null == p ? void 0 : p.id) && (0, i.jsx)(T.default, {
+                guildId: null == O ? void 0 : O.id,
+                usernameIcon: t.hasAvatarForGuild(null == O ? void 0 : O.id) && (0, i.jsx)(S.default, {
                     user: t,
-                    nickname: L
+                    nickname: v
                 }),
-                pronouns: null == N ? void 0 : N.pronouns,
-                tags: (0, i.jsx)(E.UserProfileBadgesTag, {
-                    displayProfile: N,
-                    onClose: C
+                pronouns: null == r ? void 0 : r.pronouns,
+                tags: (0, i.jsx)(T.UserProfileBadgesTag, {
+                    displayProfile: r,
+                    onClose: L
                 }),
-                nicknameIcon: g && !v ? (0, i.jsx)(_.default, {
+                nicknameIcon: D && !y ? (0, i.jsx)(E.default, {
+                    className: s()(p.noteIcon, {
+                        [p.visible]: R
+                    }),
                     user: t,
-                    onOpenProfile: () => O(!0)
+                    onOpenProfile: () => C(!0)
                 }) : null
-            }), (0, i.jsx)(A.default, {
+            }), (0, i.jsx)(N.default, {
                 user: t,
-                onClose: C
-            }), g && (0, i.jsx)(f.default, {
+                onClose: L
+            }), D && (0, i.jsx)(h.default, {
                 user: t,
-                bio: null == N ? void 0 : N.bio,
-                hidePersonalInformation: v,
-                onClose: C
-            }), null != M && (0, i.jsx)(d.default, {
-                activity: M
-            }), null != p && (0, i.jsx)(h.default, {
+                bio: null == r ? void 0 : r.bio,
+                hidePersonalInformation: y,
+                onClose: L
+            }), null != P && (0, i.jsx)(c.default, {
+                activity: P
+            }), null != O && (0, i.jsx)(m.default, {
                 user: t,
                 currentUser: n,
-                guild: p,
-                onOpenProfile: () => O(!1)
-            }), D && (0, i.jsx)(S.default, {
+                guild: O,
+                onOpenProfile: () => C(!1)
+            }), M && (0, i.jsx)(A.default, {
                 user: t,
-                channelId: R,
-                onClose: C
-            }), (0, i.jsx)(I.default, {
+                channelId: g,
+                onClose: L
+            }), (0, i.jsx)(f.default, {
                 type: "action",
                 user: t,
-                guildId: null == p ? void 0 : p.id,
-                onClose: C
+                guildId: null == O ? void 0 : O.id,
+                onClose: L
             })]
         })
     }

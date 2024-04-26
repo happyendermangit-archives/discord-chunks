@@ -36,10 +36,7 @@ function(e, t, n) {
                     className: d.nickname,
                     variant: f,
                     children: l.default.getName(n, r, t)
-                }), (0, i.jsx)("div", {
-                    className: d.nicknameIcon,
-                    children: E
-                })]
+                }), E]
             }), (0, i.jsxs)("div", {
                 className: d.tags,
                 children: [(0, i.jsx)(o.default, {

@@ -123,6 +123,7 @@ function(e, t, n) {
                             currentUser: w,
                             displayProfile: x,
                             guild: B,
+                            isHovering: F,
                             onOpenProfile: H,
                             channelId: L,
                             onClose: M
