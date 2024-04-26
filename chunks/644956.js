@@ -98,7 +98,7 @@ function(e, t, n) {
                         }).map(e => {
                             let r = O.default.getUser(e.userId);
                             return (0, i.jsx)(d.Popout, {
-                                preload: () => (0, h.default)(r.id, r.getAvatarURL(t.guild_id, 80), {
+                                preload: () => (0, h.maybeFetchUserProfileForPopout)(r.id, r.getAvatarURL(t.guild_id, 80), {
                                     guildId: t.guild_id,
                                     channelId: t.id
                                 }),

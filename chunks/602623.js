@@ -112,7 +112,7 @@ function(e, t, n) {
             } = this.state, E = n.find(e => null != e && e.id === l), T = a && null == I.default.getUser(l);
             return (0, r.jsx)(d.Popout, {
                 position: "right",
-                preload: null == E ? void 0 : () => (0, _.default)(E.id, E.getAvatarURL(i, 80), {
+                preload: null == E ? void 0 : () => (0, _.maybeFetchUserProfileForPopout)(E.id, E.getAvatarURL(i, 80), {
                     guildId: i
                 }),
                 shouldShow: !0 === s && null != l,

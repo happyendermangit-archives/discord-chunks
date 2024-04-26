@@ -98,7 +98,7 @@ function(e, t, n) {
         }) : (0, i.jsx)(c.AnalyticsLocationProvider, {
             value: v,
             children: (0, i.jsx)(u.Popout, {
-                preload: null == M ? void 0 : () => (0, T.default)(M.id, M.getAvatarURL(P, 80), {
+                preload: null == M ? void 0 : () => (0, T.maybeFetchUserProfileForPopout)(M.id, M.getAvatarURL(P, 80), {
                     guildId: null != P ? P : void 0,
                     channelId: null != s ? s : void 0
                 }),

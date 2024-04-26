@@ -178,7 +178,7 @@ function(e, t, n) {
             value: v,
             children: (0, i.jsx)(u.Popout, {
                 preload: U ? void 0 : function() {
-                    return (0, O.default)(T.author.id, null != f.guildMemberAvatar && null != a ? y.default.getGuildMemberAvatarURLSimple({
+                    return (0, O.maybeFetchUserProfileForPopout)(T.author.id, null != f.guildMemberAvatar && null != a ? y.default.getGuildMemberAvatarURLSimple({
                         guildId: a,
                         userId: T.author.id,
                         avatar: f.guildMemberAvatar,
