@@ -15,6 +15,7 @@ function(e) {
         footer: "footer_d63e9e",
         footerAlphaMsg: "footerAlphaMsg_e3ec93",
         footerAlphaTag: "footerAlphaTag__21ac5",
+        footerButtons: "footerButtons__6d962",
         mainContent: "mainContent__23e7a",
         modal: "modal_f49d0b",
         modalContents: "modalContents_e19dbf",

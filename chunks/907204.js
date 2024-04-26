@@ -16,12 +16,13 @@ function(e) {
         clanCardOuterRight: "clanCardOuterRight__19d1a clanCardOuter__79a32 clanCard__50538",
         footer: "footer__64d74",
         footerActions: "footerActions_f527fe",
+        footerButtons: "footerButtons__8396f",
         scroller: "scroller_cc96df",
         sequencer: "sequencer__03419",
+        stepsContainer: "stepsContainer__70c41",
         upsellContainer: "upsellContainer_aae5af",
         upsellDetails: "upsellDetails_fe7ec8",
         upsellSubtitle: "upsellSubtitle__06626",
-        upsellTitle: "upsellTitle__25132",
-        wizard: "wizard__29f91"
+        upsellTitle: "upsellTitle__25132"
     }
 }
