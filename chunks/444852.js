@@ -225,7 +225,9 @@ function(e, t, n) {
                 video_layout: this._videoStreamStats.getLayout(),
                 client_event_source: i,
                 is_broadcast: r,
-                auto_broadcast_enabled: this.isOwner ? l : null
+                auto_broadcast_enabled: this.isOwner ? l : null,
+                voice_backend_version: this.voiceVersion,
+                rtc_worker_backend_version: this.rtcWorkerVersion
             }
         }
         _trackVideoStartStats() {
