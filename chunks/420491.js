@@ -7,10 +7,49 @@ function(e, t, n) {
         d = n("570140"),
         _ = n("818083"),
         c = n("353926"),
-        E = n("988348");
-    let I = (0, _.createExperiment)({
+        E = n("988348"),
+        I = n("987338");
+    let T = (0, _.createExperiment)({
             id: "2024-03_gateway_zstd",
             label: "Gateway Zstd compression",
+            kind: "user",
+            defaultConfig: {
+                useZstd: !1,
+                doVerification: !1
+            },
+            treatments: [{
+                id: I.ExperimentBuckets.CONTROL,
+                label: "Control (verification)",
+                config: {
+                    useZstd: !1,
+                    doVerification: !0
+                }
+            }, {
+                id: 1,
+                label: "Use Zstd",
+                config: {
+                    useZstd: !0,
+                    doVerification: !1
+                }
+            }, {
+                id: 2,
+                label: "No Zstd, no verification",
+                config: {
+                    useZstd: !1,
+                    doVerification: !1
+                }
+            }, {
+                id: 3,
+                label: "Use Zstd (2)",
+                config: {
+                    useZstd: !0,
+                    doVerification: !1
+                }
+            }]
+        }),
+        f = (0, _.createExperiment)({
+            id: "2024-04_gateway_zstd_verification",
+            label: "Gateway Zstd Verification",
             kind: "user",
             defaultConfig: {
                 useZstd: !1
@@ -23,54 +62,56 @@ function(e, t, n) {
                 }
             }]
         }),
-        T = new l.Logger("GatewayZstdStore");
-    let f = !1,
-        S = 0,
-        h = !0;
+        S = new l.Logger("GatewayZstdStore");
+    let h = !1,
+        A = 0,
+        m = !0;
 
-    function A() {
+    function N() {
         return null == i && (i = (0, E.supportsZstd)() && (0, E.getFastConnectZstd)()), i
     }
 
-    function m(e) {
+    function p(e) {
         if (e && !(0, E.supportsZstd)()) {
-            T.warn("Attempting to enable zstd but it is not supported");
+            S.warn("Attempting to enable zstd but it is not supported");
             return
-        }(0, E.setFastConnectZstd)(e), e !== i && T.info("Setting Zstd to ".concat(e)), i = e
+        }(0, E.setFastConnectZstd)(e), e !== i && S.info("Setting Zstd to ".concat(e)), i = e
     }
-    class N extends(o = u.default.Store) {
+    class O extends(o = u.default.Store) {
         initialize() {
             this.waitFor(c.default)
         }
         shouldUseZstd() {
-            return A()
+            return N()
         }
         enableFailureTracking() {
-            h = !0
+            m = !0
         }
         disableFailureTracking() {
-            h = !1
+            m = !1
         }
     }
-    a = "GatewayZstdStore", (s = "displayName") in(r = N) ? Object.defineProperty(r, s, {
+    a = "GatewayZstdStore", (s = "displayName") in(r = O) ? Object.defineProperty(r, s, {
         value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a, t.default = new N(d.default, {
+    }) : r[s] = a, t.default = new O(d.default, {
         CONNECTION_OPEN: function() {
-            if (f) {
-                T.info("Ignoring zstd experiment config because we fell back to zlib");
+            if (h) {
+                S.info("Ignoring zstd experiment config because we fell back to zlib");
                 return
             }
-            m(I.getCurrentConfig({
+            let e = T.getCurrentConfig({
+                    location: "GatewayZstdStore"
+                }),
+                t = e.useZstd;
+            e.doVerification && (t = f.getCurrentConfig({
                 location: "GatewayZstdStore"
-            }, {
-                autoTrackExposure: (0, E.supportsZstd)()
-            }).useZstd), S = 0
+            }).useZstd), p(t), A = 0
         },
         CONNECTION_INTERRUPTED: function() {
-            A() && h && (S += 1) > 3 && (T.error("Disabling zstd due to consecutive errors"), m(!1), f = !0)
+            N() && m && (A += 1) > 3 && (S.error("Disabling zstd due to consecutive errors"), p(!1), h = !0)
         }
     })
 }
