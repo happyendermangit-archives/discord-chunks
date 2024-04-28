@@ -5,14 +5,14 @@ function(e, t, n) {
             return i
         }
     });
-    var r = n("954154");
+    var r = n("693598");
 
     function i(e, t) {
-        if ("object" !== (0, r.default)(e) || null === e) return e;
+        if ("object" != (0, r.default)(e) || !e) return e;
         var n = e[Symbol.toPrimitive];
         if (void 0 !== n) {
             var i = n.call(e, t || "default");
-            if ("object" !== (0, r.default)(i)) return i;
+            if ("object" != (0, r.default)(i)) return i;
             throw TypeError("@@toPrimitive must return a primitive value.")
         }
         return ("string" === t ? String : Number)(e)
