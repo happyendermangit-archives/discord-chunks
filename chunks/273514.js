@@ -8,7 +8,7 @@ function(e, t, n) {
         a = n("430824"),
         o = n("346656"),
         l = n("689938"),
-        u = n("939414");
+        u = n("645944");
     t.default = e => {
         let {
             entry: t

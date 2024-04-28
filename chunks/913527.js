@@ -711,8 +711,8 @@ function(e, t, n) {
                 e._f = i + (a || "") + (o || ""), tt(e)
             } else e._isValid = !1
         }
-        var e9 = /^(?:(Mon|Tue|Wed|Thu|Fri|Sat|Sun),?\s)?(\d{1,2})\s(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s(\d{2,4})\s(\d\d):(\d\d)(?::(\d\d))?\s(?:(UT|GMT|[ECMP][SD]T)|([Zz])|([+-]\d{4}))$/,
-            e7 = {
+        var e7 = /^(?:(Mon|Tue|Wed|Thu|Fri|Sat|Sun),?\s)?(\d{1,2})\s(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s(\d{2,4})\s(\d\d):(\d\d)(?::(\d\d))?\s(?:(UT|GMT|[ECMP][SD]T)|([Zz])|([+-]\d{4}))$/,
+            e9 = {
                 UT: 0,
                 GMT: 0,
                 EDT: -240,
@@ -726,7 +726,7 @@ function(e, t, n) {
             };
 
         function te(e) {
-            var t = e9.exec(e._i.replace(/\([^)]*\)|[\n\t]/g, " ").replace(/(\s\s+)/g, " ").replace(/^\s\s*/, "").replace(/\s\s*$/, ""));
+            var t = e7.exec(e._i.replace(/\([^)]*\)|[\n\t]/g, " ").replace(/(\s\s+)/g, " ").replace(/^\s\s*/, "").replace(/\s\s*$/, ""));
             if (t) {
                 var n, r, i, a, o, s, u, c, l, d, p = (n = t[4], r = t[3], i = t[2], a = t[5], o = t[6], s = t[7], u = [function(e) {
                     var t = parseInt(e, 10);
@@ -734,7 +734,7 @@ function(e, t, n) {
                 }(n), eC.indexOf(r), parseInt(i, 10), parseInt(a, 10), parseInt(o, 10)], s && u.push(parseInt(s, 10)), u);
                 if (c = t[1], l = p, d = e, c && eF.indexOf(c) !== new Date(l[0], l[1], l[2]).getDay() && (f(d).weekdayMismatch = !0, d._isValid = !1, 1)) return;
                 e._a = p, e._tzm = function(e, t, n) {
-                    if (e) return e7[e];
+                    if (e) return e9[e];
                     if (t) return 0;
                     var r = parseInt(n, 10),
                         i = r % 100;
@@ -1449,8 +1449,8 @@ function(e, t, n) {
         }
         var t5 = t6("milliseconds"),
             t8 = t6("seconds"),
-            t9 = t6("minutes"),
-            t7 = t6("hours"),
+            t7 = t6("minutes"),
+            t9 = t6("hours"),
             ne = t6("days"),
             nt = t6("months"),
             nn = t6("years"),
@@ -1532,7 +1532,7 @@ function(e, t, n) {
             return ty(this)
         }, nc.get = function(e) {
             return e = B(e), this.isValid() ? this[e + "s"]() : NaN
-        }, nc.milliseconds = t5, nc.seconds = t8, nc.minutes = t9, nc.hours = t7, nc.days = ne, nc.weeks = function() {
+        }, nc.milliseconds = t5, nc.seconds = t8, nc.minutes = t7, nc.hours = t9, nc.days = ne, nc.weeks = function() {
             return C(this.days() / 7)
         }, nc.months = nt, nc.years = nn, nc.humanize = function(e) {
             if (!this.isValid()) return this.localeData().invalidDate();

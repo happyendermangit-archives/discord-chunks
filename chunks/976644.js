@@ -16,7 +16,7 @@ function(e, t, n) {
         I = n("481060"),
         T = n("727637"),
         f = n("285952"),
-        S = n("598");
+        S = n("481887");
     (i = o || (o = {})).DEFAULT = "default", i.SMALL = "small";
     let h = {
             default: S.shineDefault,

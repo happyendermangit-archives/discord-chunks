@@ -11,7 +11,7 @@ function(e, t, n) {
         u = n("793397"),
         d = n("652853"),
         _ = n("228168"),
-        c = n("194502");
+        c = n("983094");
     let E = (e, t) => {
             let n = (0, a.match)(e).with(_.UserProfileTypes.MODAL, () => c.userProfileModalOuter).with(_.UserProfileTypes.PANEL, () => c.userPanelOuter).with(_.UserProfileTypes.CARD, () => c.userCardOuter).with(_.UserProfileTypes.BITE_SIZE, () => c.biteSizeOuter).with(_.UserProfileTypes.FULL_SIZE, () => c.fullSizeOuter).otherwise(() => c.userPopoutOuter),
                 i = t ? c.userProfileOuterThemed : c.userProfileOuterUnthemed;

@@ -96,7 +96,7 @@ function(e, t, n) {
         W = n("814249"),
         K = n("768760"),
         z = n("689938"),
-        X = n("529695");
+        X = n("59369");
     let Q = {
             delay: 300,
             position: "top"

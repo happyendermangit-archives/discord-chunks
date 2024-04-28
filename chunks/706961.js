@@ -1,7 +1,8 @@
 function(e) {
     "use strict";
     e.exports = {
-        checkbox: "checkbox__768df",
-        subText: "subText_f8539a"
+        activityUrlOverride: "activityUrlOverride__6bbd7",
+        container: "container__3c4b3",
+        searchBar: "searchBar_e64f3a"
     }
 }

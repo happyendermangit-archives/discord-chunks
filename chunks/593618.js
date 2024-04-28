@@ -51,8 +51,8 @@ function(e, t, n) {
         Y = n("456774"),
         j = n("981631"),
         W = n("689938"),
-        K = n("807801"),
-        z = n("630839");
+        K = n("952972"),
+        z = n("81311");
     let X = (0, x.cssValueToNumber)(_.default.GUILD_TOOLTIP_ICON_SIZE),
         Q = (0, x.cssValueToNumber)(_.default.GUILD_TOOLTIP_ICON_SIZE_V_2);
 

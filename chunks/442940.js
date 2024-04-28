@@ -1,4 +1,12 @@
 function(e, t, n) {
     "use strict";
-    e.exports = n.p + "de8e90da6c3ecf6c0b11.svg"
+    n.r(t), n.d(t, {
+        default: function() {
+            return r
+        }
+    });
+    var r = {};
+    r = {
+        Empty: `Tu\u{161}\u{10D}ias`
+    }
 }

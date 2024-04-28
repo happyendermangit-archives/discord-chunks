@@ -15,7 +15,7 @@ function(e, t, n) {
         I = n("378233"),
         T = n("419922"),
         f = n("689938"),
-        S = n("753884");
+        S = n("824620");
     let h = (0, _.cssValueToNumber)(s.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
         A = (0, _.cssValueToNumber)(s.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
         m = e => {

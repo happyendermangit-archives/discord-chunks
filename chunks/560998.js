@@ -1,24 +1,13 @@
-function(e, t, n) {
+function(e) {
     "use strict";
-    n.r(t), n.d(t, {
-        useConnectDragPreview: function() {
-            return a
-        },
-        useConnectDragSource: function() {
-            return i
-        }
-    });
-    var r = n("470079");
-
-    function i(e) {
-        return (0, r.useMemo)(function() {
-            return e.hooks.dragSource()
-        }, [e])
-    }
-
-    function a(e) {
-        return (0, r.useMemo)(function() {
-            return e.hooks.dragPreview()
-        }, [e])
+    e.exports = {
+        container: "container__8aa3d",
+        formContainer: "formContainer_f90333",
+        formResponseContainer: "formResponseContainer_eb3b51",
+        guildIcon: "guildIcon__07f41",
+        summaryContainer: "summaryContainer_dbce3a",
+        summaryHeader: "summaryHeader_f4d6e4",
+        summaryHeaderClanInfo: "summaryHeaderClanInfo__9a6ea",
+        summarySeparator: "summarySeparator__7ec66"
     }
 }

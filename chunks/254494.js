@@ -8,7 +8,7 @@ function(e, t, n) {
         o = n("695464"),
         l = n("28546"),
         u = n("981631"),
-        d = n("986308");
+        d = n("425565");
     let _ = e => {
         let {
             activeIndex: t,

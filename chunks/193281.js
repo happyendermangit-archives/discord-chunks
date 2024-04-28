@@ -18,7 +18,7 @@ function(e, t, n) {
         E = n("55935"),
         I = n("981631"),
         T = n("689938"),
-        f = n("948000");
+        f = n("992781");
     let S = new Set([I.ActivityTypes.PLAYING, I.ActivityTypes.LISTENING]);
     t.default = r.memo(function(e) {
         var t, n, S, h;

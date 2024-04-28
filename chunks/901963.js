@@ -19,7 +19,7 @@ function(e, t, n) {
         h = n("981631"),
         A = n("474936"),
         m = n("689938"),
-        N = n("550915");
+        N = n("375660");
     let p = "premiumRetentionEmojiPickerNotice",
         O = l.Storage.get(p);
     t.default = e => {

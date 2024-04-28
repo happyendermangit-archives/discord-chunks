@@ -14,7 +14,7 @@ function(e, t, n) {
         a = n("646476"),
         o = n("975104"),
         l = n("669079"),
-        u = n("563132"),
+        u = n("598"),
         d = n("474936"),
         _ = n("689938");
     let c = d.PremiumGiftStyles.STANDARD_BOX,

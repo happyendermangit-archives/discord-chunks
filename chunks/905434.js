@@ -7,7 +7,7 @@ function(e, t, n) {
         s = n("430824"),
         a = n("346656"),
         o = n("689938"),
-        l = n("683080");
+        l = n("937402");
     t.default = e => {
         let {
             stageInstance: t

@@ -16,7 +16,7 @@ function(e, t, n) {
         l = n("40851"),
         u = n("67844"),
         d = n("871499"),
-        _ = n("914668");
+        _ = n("239618");
 
     function c(e) {
         let t = (0, u.getVideoButtonLabel)(e),

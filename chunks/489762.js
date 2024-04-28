@@ -38,7 +38,7 @@ function(e, t, n) {
         B = n("981631"),
         k = n("957825"),
         V = n("689938"),
-        x = n("532175"),
+        x = n("102554"),
         F = n("239840");
     let H = (0, g.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
         Y = (0, g.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_MEDIUM),

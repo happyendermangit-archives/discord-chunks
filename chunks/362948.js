@@ -13,7 +13,7 @@ function(e, t, n) {
         c = n("981631"),
         E = n("474936"),
         I = n("689938"),
-        T = n("443409");
+        T = n("169709");
     let f = [{
         getPerkHeading: () => I.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_EMOJI_SLOTS,
         getPerkPreviewLightTheme: () => n("414102"),

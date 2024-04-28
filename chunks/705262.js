@@ -33,7 +33,7 @@ function(e, t, n) {
         L = n("626135"),
         D = n("238302"),
         v = n("514361"),
-        M = n("583901"),
+        M = n("110577"),
         y = n("469115"),
         P = n("981631"),
         U = n("474936"),
@@ -41,7 +41,7 @@ function(e, t, n) {
         G = n("526761"),
         w = n("231338"),
         B = n("689938"),
-        k = n("662826");
+        k = n("737679");
     (r = i || (i = {})).EDITOR = "EDITOR", r.SETTINGS = "SETTINGS";
     let V = Object.freeze({
             EDITOR: G.UserSettingsDelay.SLOW_USER_ACTION,

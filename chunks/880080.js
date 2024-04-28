@@ -9,8 +9,8 @@ function(e, t, n) {
     n("470079");
     var r = n("120356"),
         s = n.n(r),
-        a = n("718017"),
-        o = n("667904");
+        a = n("513715"),
+        o = n("771941");
     let l = Object.freeze({
             tension: 400,
             friction: 30

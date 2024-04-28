@@ -11,7 +11,7 @@ function(e, t, n) {
         u = n("898140"),
         d = n("149203"),
         _ = n("689938"),
-        c = n("706611");
+        c = n("181710");
     let E = e => {
         let {
             emojiSubCategory: t

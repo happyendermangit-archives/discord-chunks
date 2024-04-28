@@ -15,7 +15,7 @@ function(e, t, n) {
         E = n("74538"),
         I = n("204418"),
         T = n("689938"),
-        f = n("971100");
+        f = n("959547");
     let S = [{
             avatarSize: l.AvatarSizes.SIZE_40,
             showStatus: !1

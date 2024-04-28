@@ -26,7 +26,7 @@ function(e, t, n) {
         m = n("792125"),
         N = n("998502"),
         p = n("689938"),
-        O = n("644918");
+        O = n("577944");
     let R = e => N.default.close(e),
         C = e => N.default.minimize(e),
         g = (e, t) => {

@@ -14,7 +14,7 @@ function(e, t, n) {
         c = n("927923"),
         E = n("981631"),
         I = n("689938"),
-        T = n("247125");
+        T = n("112995");
     let f = "game_console_alert_modal",
         S = "game_console_ptt_alert_modal";
     t.default = {
