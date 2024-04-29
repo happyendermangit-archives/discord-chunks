@@ -22,7 +22,7 @@ function(e, t, n) {
             channelId: r,
             usernameIcon: _,
             tags: c,
-            nicknameIcon: E,
+            nicknameIcons: E,
             pronouns: I,
             className: T,
             onOpenProfile: f,

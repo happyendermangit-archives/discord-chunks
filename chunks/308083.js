@@ -182,7 +182,7 @@ function(e, t, n) {
         G = new Set([...P, ...U, ...b]),
         w = new Set(S.default.getAvailableLocales().map(e => e.value)),
         B = new Set(["anime", "fanart", "venting", "movie nights", "gacha games", "skincare", "microwaved food", "board games", "sci-fi books", "sleeping", "brunch pics", "pet pictures", "recipes", "speedrunning", "eating on mic", "k-pop", "deafened", "programming", "study buddies", "DnD", "lore dumping", "sleepy cats", "podcasts", "houseplants", "knitting", "tech", "keyboards", "desk setups", "bad movies", "hiking", "lo-fi chilling", "watch together", "listen alongs", "late night tacos", "drip", "trading", "travel", "cups", "coffee", "F1"]);
-    (c = a || (a = {}))[c.PIXEL_RUSH = 0] = "PIXEL_RUSH", c[c.SCANLINES = 1] = "SCANLINES", c[c.TEXTURED = 2] = "TEXTURED", c[c.MAGIC = 3] = "MAGIC", c[c.CUSTOM = 4] = "CUSTOM", (E = o || (o = {})).BOULDER = "boulder", E.CASCADE = "cascade", E.THUNDER = "thunder", E.SOUL = "soul", E.MARSH = "marsh", E.VOLCANO = "volcano", E.EARTH = "earth", E.ZEPHYR = "zephyr";
+    (c = a || (a = {}))[c.NIGHT_SKY = 0] = "NIGHT_SKY", c[c.CASTLE = 1] = "CASTLE", c[c.WORLD_MAP = 2] = "WORLD_MAP", c[c.SEA_FOAM = 3] = "SEA_FOAM", c[c.WARP_TUNNEL = 4] = "WARP_TUNNEL", c[c.HOUSE = 5] = "HOUSE", c[c.HEIGHTMAP = 6] = "HEIGHTMAP", c[c.MESH = 7] = "MESH", c[c.SPATTER = 8] = "SPATTER", (E = o || (o = {})).BOULDER = "boulder", E.CASCADE = "cascade", E.THUNDER = "thunder", E.SOUL = "soul", E.MARSH = "marsh", E.VOLCANO = "volcano", E.EARTH = "earth", E.ZEPHYR = "zephyr";
     let k = [{
             name: "boulder",
             primary: "#8c8d8d",

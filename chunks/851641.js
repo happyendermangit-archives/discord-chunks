@@ -8,6 +8,7 @@ function(e) {
         cancelModalBanner: "cancelModalBanner__14a36 bannerPremium__69560",
         clickable: "clickable_bfa26e",
         closeIcon: "closeIcon__634d6",
+        divider: "divider_f5a440",
         editIcon: "editIcon_f97ad5",
         fullSizeBanner: "fullSizeBanner_edab6b roundedBanner__16aa6",
         fullSizeBannerPremium: "fullSizeBannerPremium__49e14 bannerPremium__69560 roundedBanner__16aa6",

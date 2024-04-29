@@ -118,41 +118,42 @@ function(e, t, n) {
         var t, n;
         let {
             clan: r,
-            expanded: s,
-            affinity: l,
-            isMember: d,
-            traitsToHighlight: E,
-            className: I
+            banner: s,
+            expanded: l,
+            affinity: d,
+            isMember: E,
+            traitsToHighlight: I,
+            className: T
         } = e, {
-            tag: T,
-            badge: S,
+            tag: S,
+            badge: O,
             branding: {
-                primaryColor: O,
-                secondaryColor: R
+                primaryColor: R,
+                secondaryColor: C
             }
-        } = r, C = (0, u.default)(r.games), g = A.default.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
+        } = r, g = (0, u.default)(r.games), L = A.default.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
             count: r.memberCount
-        }), L = null !== (t = f.default.getGuildIconURL({
+        }), D = null !== (t = f.default.getGuildIconURL({
             id: r.id,
             icon: r.icon,
             size: 64,
             canAnimate: !0
         })) && void 0 !== t ? t : void 0;
         return (0, i.jsxs)("div", {
-            className: a()(m.card, I),
-            children: [(0, i.jsx)("div", {
+            className: a()(m.card, T),
+            children: [(0, i.jsxs)("div", {
                 className: m.cardBrandingHeader,
                 style: {
-                    background: "linear-gradient(90deg, ".concat(O, ", ").concat(R, ")")
+                    background: "linear-gradient(90deg, ".concat(R, ", ").concat(C, ")")
                 },
-                children: (0, i.jsx)(c.ClanBadge, {
+                children: [s, (0, i.jsx)(c.ClanBadge, {
                     width: 32,
                     height: 32,
                     className: m.clanBadge,
-                    badge: S.badgeKind,
-                    primaryTintColor: S.primaryColor,
-                    secondaryTintColor: S.secondaryColor
-                })
+                    badge: O.badgeKind,
+                    primaryTintColor: O.primaryColor,
+                    secondaryTintColor: O.secondaryColor
+                })]
             }), (0, i.jsxs)("div", {
                 className: m.cardContent,
                 children: [(0, i.jsxs)("div", {
@@ -161,7 +162,7 @@ function(e, t, n) {
                         className: m.cardNameAndTagWrapper,
                         children: [(0, i.jsx)(_.ClanGuildIconSimple, {
                             guildName: r.name,
-                            guildIconURL: L,
+                            guildIconURL: D,
                             iconSize: 64,
                             className: m.clanIcon
                         }), (0, i.jsx)("div", {
@@ -169,20 +170,20 @@ function(e, t, n) {
                             children: (0, i.jsx)(o.Tooltip, {
                                 text: A.default.Messages.CLAN_DISCOVERY_CARD_TAG_TOOLTIP,
                                 position: "top",
-                                shouldShow: !d,
+                                shouldShow: !E,
                                 children: e => (0, i.jsxs)("div", {
                                     ...e,
                                     className: m.clanTagChiplet,
                                     children: [(0, i.jsx)(c.ClanBadge, {
                                         width: 16,
                                         height: 16,
-                                        badge: S.badgeKind,
-                                        primaryTintColor: S.primaryColor,
-                                        secondaryTintColor: S.secondaryColor
+                                        badge: O.badgeKind,
+                                        primaryTintColor: O.primaryColor,
+                                        secondaryTintColor: O.secondaryColor
                                     }), (0, i.jsx)(o.Text, {
                                         variant: "text-xs/medium",
                                         color: "text-primary",
-                                        children: T
+                                        children: S
                                     })]
                                 })
                             })
@@ -219,9 +220,9 @@ function(e, t, n) {
                         children: r.description
                     })
                 }), (0, i.jsx)(p, {
-                    traits: (0, h.getSortedTraits)(r.traits, E),
-                    expanded: s,
-                    traitsToHighlight: E
+                    traits: (0, h.getSortedTraits)(r.traits, I),
+                    expanded: l,
+                    traitsToHighlight: I
                 })]
             }), (0, i.jsxs)("div", {
                 className: m.cardFooter,
@@ -232,12 +233,12 @@ function(e, t, n) {
                         children: (0, i.jsx)(o.Text, {
                             variant: "text-xs/normal",
                             color: "text-muted",
-                            children: g
+                            children: L
                         })
                     })
                 }), (0, i.jsx)("div", {
                     className: m.cardFooterGames,
-                    children: C.map(e => {
+                    children: g.map(e => {
                         if (null == e) return null;
                         let t = e.getIconURL(24);
                         return null == t ? null : (0, i.jsx)(o.Tooltip, {
@@ -255,17 +256,17 @@ function(e, t, n) {
                         }, e.id)
                     })
                 })]
-            }), null != l ? (0, i.jsxs)("div", {
+            }), null != d ? (0, i.jsxs)("div", {
                 className: m.cardBrandingFooter,
                 style: {
-                    background: "linear-gradient(90deg, ".concat(O, ", ").concat(R, ")")
+                    background: "linear-gradient(90deg, ".concat(R, ", ").concat(C, ")")
                 },
                 children: [(0, i.jsx)(o.Text, {
                     variant: "text-xxs/normal",
-                    children: l
+                    children: d
                 }), (0, i.jsx)(o.Text, {
                     variant: "text-xxs/normal",
-                    children: d ? ", Joined" : ", Not Joined"
+                    children: E ? ", Joined" : ", Not Joined"
                 })]
             }) : null]
         })
