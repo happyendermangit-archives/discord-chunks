@@ -47,7 +47,9 @@ function(e, t, n) {
             })
         }, [R, U, O]), w = r.useCallback(() => {
             null != L && (0, u.transitionTo)(S.Routes.GUILD_MEMBER_VERIFICATION(L))
-        }, [L]), B = r.useMemo(() => {
+        }, [L]), B = r.useCallback(() => {
+            null != L && (0, u.transitionToGuild)(L)
+        }, [L]), k = r.useMemo(() => {
             var e, t;
             let n = null !== (t = null == R ? void 0 : null === (e = R.branding) || void 0 === e ? void 0 : e.primaryColor) && void 0 !== t ? t : null,
                 i = {
@@ -63,46 +65,54 @@ function(e, t, n) {
                     color: (0, f.getAccessibleTextColor)(n).hex()
                 }
             }), i
-        }, [R]), k = r.useMemo(() => {
+        }, [R]), V = r.useMemo(() => {
             switch (!0) {
                 case !g:
                     return null;
                 case !y && U:
                     return (0, i.jsx)(s.Button, {
                         onClick: w,
-                        ...B,
+                        ...k,
                         children: h.default.Messages.CLAN_USER_APPLICATION_EXISTS_TAG_GUILD_PROFILE_CTA
                     });
                 case !y:
                     return (0, i.jsx)(s.Button, {
                         onClick: G,
-                        ...B,
+                        ...k,
                         children: h.default.Messages.CLAN_USER_APPLY_TAG_GUILD_PROFILE_CTA
                     });
                 case y && !P:
                     return (0, i.jsx)(s.Button, {
                         onClick: b,
-                        ...B,
+                        ...k,
                         children: h.default.Messages.CLAN_USER_ADOPT_TAG_GUILD_PROFILE_CTA
+                    });
+                case y && P:
+                    return (0, i.jsx)(s.Button, {
+                        onClick: B,
+                        ...k,
+                        children: h.default.Messages.CLAN_USER_GO_TO_CLAN_CTA
                     });
                 default:
                     return null
             }
-        }, [B, b, G, w, U, P, y, g]), V = r.useMemo(() => ({
+        }, [k, b, G, w, B, U, P, y, g]), x = r.useMemo(() => ({
             className: A.container,
             onClick: m
         }), []);
         return null == C || null == R || null == L || p ? (0, i.jsx)("div", {
-            ...V,
+            ...x,
             children: (0, i.jsx)(s.Spinner, {})
         }) : (0, i.jsxs)("div", {
-            ...V,
+            ...x,
             children: [(0, i.jsx)(o.ClanDiscoveryCardView, {
                 clan: R,
-                className: A.cardContainer
-            }), null != k && (0, i.jsx)("div", {
+                className: A.cardContainer,
+                isMember: y,
+                expanded: !0
+            }), null != V && (0, i.jsx)("div", {
                 className: A.buttonContainer,
-                children: k
+                children: V
             })]
         })
     }

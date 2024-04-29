@@ -169,6 +169,7 @@ function(e, t, n) {
                             children: (0, i.jsx)(o.Tooltip, {
                                 text: A.default.Messages.CLAN_DISCOVERY_CARD_TAG_TOOLTIP,
                                 position: "top",
+                                shouldShow: !d,
                                 children: e => (0, i.jsxs)("div", {
                                     ...e,
                                     className: m.clanTagChiplet,
