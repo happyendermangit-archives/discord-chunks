@@ -5,6 +5,7 @@ function(e, t, n) {
         "./activity_launch.mp3": "12790",
         "./activity_user_join.mp3": "9907",
         "./activity_user_left.mp3": "852674",
+        "./asmr_message1.mp3": "212326",
         "./bit_message1.mp3": "383471",
         "./bop_message1.mp3": "447995",
         "./call_calling.mp3": "646188",

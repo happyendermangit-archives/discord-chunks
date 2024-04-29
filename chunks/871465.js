@@ -1,54 +1,80 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
+        CUSTOM_NOTIFICATION_SOUNDS_ASMR_STORAGE_KEY: function() {
+            return o
+        },
+        CUSTOM_NOTIFICATION_SOUNDS_DISCODO_STORAGE_KEY: function() {
+            return l
+        },
         Soundpacks: function() {
-            return r
+            return i
         },
         getCustomNotificationSoundpackOptions: function() {
-            return a
+            return u
         },
         getSoundpackOptionsAprilFools2023: function() {
-            return o
+            return d
         }
-    });
-    var i, r, s = n("689938");
+    }), n("47120"), n("653041");
+    var i, r, s = n("433517"),
+        a = n("689938");
+    (r = i || (i = {})).CLASSIC = "classic", r.DETUNE = "detune", r.RETRO = "retro", r.BUBBLE = "bop", r.DUCKY = "ducky", r.LOFI = "lofi", r.ASMR = "asmr", r.DISCODO = "discodo";
+    let o = "custom_notification_sounds_asmr",
+        l = "custom_notification_sounds_discodo";
 
-    function a() {
+    function u() {
+        let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
+            t = function(e) {
+                if (!e) return [];
+                let t = [];
+                return s.Storage.get(l, !1) && t.push({
+                    value: "discodo",
+                    label: "DISCODO",
+                    description: "๑(◕‿◕)๑",
+                    requirePremium: !0
+                }), s.Storage.get(o, !1) && t.push({
+                    value: "asmr",
+                    label: "ASMR",
+                    description: "*hey there*",
+                    requirePremium: !0
+                }), t
+            }(e);
         return [{
             value: "classic",
-            label: s.default.Messages.SOUNDPACK_DEFAULT_LABEL,
-            description: s.default.Messages.SOUNDPACK_DEFAULT_DESCRIPTION,
+            label: a.default.Messages.SOUNDPACK_DEFAULT_LABEL,
+            description: a.default.Messages.SOUNDPACK_DEFAULT_DESCRIPTION,
             requirePremium: !1
         }, {
             value: "retro",
-            label: s.default.Messages.SOUNDPACK_RETRO_LABEL,
-            description: s.default.Messages.SOUNDPACK_RETRO_DESCRIPTION,
+            label: a.default.Messages.SOUNDPACK_RETRO_LABEL,
+            description: a.default.Messages.SOUNDPACK_RETRO_DESCRIPTION,
             requirePremium: !0
         }, {
             value: "lofi",
-            label: s.default.Messages.SOUNDPACK_LOFI_LABEL,
-            description: s.default.Messages.SOUNDPACK_LOFI_DESCRIPTION,
+            label: a.default.Messages.SOUNDPACK_LOFI_LABEL,
+            description: a.default.Messages.SOUNDPACK_LOFI_DESCRIPTION,
             requirePremium: !0
         }, {
             value: "ducky",
-            label: s.default.Messages.SOUNDPACK_DUCKY_LABEL,
-            description: s.default.Messages.SOUNDPACK_DUCKY_DESCRIPTION,
+            label: a.default.Messages.SOUNDPACK_DUCKY_LABEL,
+            description: a.default.Messages.SOUNDPACK_DUCKY_DESCRIPTION,
             requirePremium: !0
         }, {
             value: "bop",
-            label: s.default.Messages.SOUNDPACK_BUBBLE_LABEL,
-            description: s.default.Messages.SOUNDPACK_BUBBLE_DESCRIPTION,
+            label: a.default.Messages.SOUNDPACK_BUBBLE_LABEL,
+            description: a.default.Messages.SOUNDPACK_BUBBLE_DESCRIPTION,
             requirePremium: !0
-        }]
+        }, ...t]
     }
 
-    function o() {
+    function d() {
         return [{
             value: "classic",
-            label: s.default.Messages.SOUNDPACK_CLASSIC_LABEL
+            label: a.default.Messages.SOUNDPACK_CLASSIC_LABEL
         }, {
             value: "detune",
-            label: s.default.Messages.SOUNDPACK_DETUNE_LABEL
+            label: a.default.Messages.SOUNDPACK_DETUNE_LABEL
         }]
-    }(i = r || (r = {})).CLASSIC = "classic", i.DETUNE = "detune", i.RETRO = "retro", i.BUBBLE = "bop", i.DUCKY = "ducky", i.LOFI = "lofi"
+    }
 }

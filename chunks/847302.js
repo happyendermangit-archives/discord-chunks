@@ -146,18 +146,22 @@ function(e, t, n) {
 
     function N(e, t, n, i) {
         let r = t[1],
-            s = !1;
-        for (let a of [...i.entries].reverse()) {
-            let o;
-            switch (a.attributes[0]) {
+            s = !1,
+            a = [...i.entries].reverse();
+        for (let o = 0; o < a.length; o++) {
+            let l;
+            let d = a[o],
+                c = a[o + 1];
+            if (null != c && c.text.endsWith("\\") && d.start === c.start + c.text.length) continue;
+            switch (d.attributes[0]) {
                 case "emoji":
-                    o = {
+                    l = {
                         type: "emoji",
                         emoji: {
-                            name: a.data.name,
-                            src: a.data.src,
-                            surrogate: a.data.surrogate,
-                            jumboable: !0 === a.data.jumboable
+                            name: d.data.name,
+                            src: d.data.src,
+                            surrogate: d.data.surrogate,
+                            jumboable: !0 === d.data.jumboable
                         },
                         children: [{
                             text: ""
@@ -165,13 +169,13 @@ function(e, t, n) {
                     };
                     break;
                 case "customEmoji":
-                    o = {
+                    l = {
                         type: "customEmoji",
                         emoji: {
-                            emojiId: a.data.emojiId,
-                            name: a.data.name,
-                            animated: a.data.animated,
-                            jumboable: !0 === a.data.jumboable
+                            emojiId: d.data.emojiId,
+                            name: d.data.name,
+                            animated: d.data.animated,
+                            jumboable: !0 === d.data.jumboable
                         },
                         children: [{
                             text: ""
@@ -179,63 +183,63 @@ function(e, t, n) {
                     };
                     break;
                 case "textMention":
-                    o = {
+                    l = {
                         type: "textMention",
-                        name: a.data.text,
+                        name: d.data.text,
                         children: [{
                             text: ""
                         }]
                     };
                     break;
                 case "mention":
-                    o = {
+                    l = {
                         type: "userMention",
-                        userId: a.data.id,
+                        userId: d.data.id,
                         children: [{
                             text: ""
                         }]
                     };
                     break;
                 case "roleMention":
-                    o = {
+                    l = {
                         type: "roleMention",
-                        roleId: a.data.id,
+                        roleId: d.data.id,
                         children: [{
                             text: ""
                         }]
                     };
                     break;
                 case "channelMention":
-                    o = {
+                    l = {
                         type: "channelMention",
-                        channelId: a.data.id,
+                        channelId: d.data.id,
                         children: [{
                             text: ""
                         }]
                     };
                     break;
                 case "staticRouteLink":
-                    o = {
+                    l = {
                         type: "staticRouteLink",
-                        channelId: a.data.id,
+                        channelId: d.data.id,
                         children: [{
                             text: ""
                         }]
                     };
                     break;
                 case "soundboard":
-                    o = {
+                    l = {
                         type: "soundboard",
-                        soundId: a.data.id,
+                        soundId: d.data.id,
                         children: [{
                             text: ""
                         }]
                     };
                     break;
                 case "timestamp":
-                    o = {
+                    l = {
                         type: "timestamp",
-                        parsed: a.data,
+                        parsed: d.data,
                         children: [{
                             text: ""
                         }]
@@ -244,12 +248,12 @@ function(e, t, n) {
                 default:
                     continue
             }
-            if (!O(n, t[0], o)) continue;
-            let l = (0, u.getPointFromPosition)(e, r, i.serializedChildren, a.start),
-                d = (0, u.getPointFromPosition)(e, r, i.serializedChildren, a.start + a.text.length);
-            _.SlateTransforms.textToVoid(e, o, {
-                anchor: l,
-                focus: d
+            if (!O(n, t[0], l)) continue;
+            let E = (0, u.getPointFromPosition)(e, r, i.serializedChildren, d.start),
+                I = (0, u.getPointFromPosition)(e, r, i.serializedChildren, d.start + d.text.length);
+            _.SlateTransforms.textToVoid(e, l, {
+                anchor: E,
+                focus: I
             }), s = !0
         }
         return s

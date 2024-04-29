@@ -62,6 +62,12 @@ function(e, t, n) {
         },
         [i.Soundpacks.LOFI]: {
             message1: "lofi_message1"
+        },
+        [i.Soundpacks.ASMR]: {
+            message1: "asmr_message1"
+        },
+        [i.Soundpacks.DISCODO]: {
+            message1: "discodo"
         }
     };
 
