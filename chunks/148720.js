@@ -25,11 +25,11 @@ function(e, t, n) {
         let {
             channelId: n,
             applicationId: h,
-            instanceId: A,
+            launchId: A,
             inputApplication: m,
             analyticsLocations: N,
             embeddedActivitiesManager: p
-        } = e, O = E.default.getEmbeddedActivitiesForChannel(n).find(e => e.applicationId === h && (null == A || e.instanceId === A)), R = m;
+        } = e, O = E.default.getEmbeddedActivitiesForChannel(n).find(e => e.applicationId === h && (null == A || e.launchId === A)), R = m;
         if (null == R) {
             let e = await r.default.fetchApplication(h);
             R = o.default.createFromServer(e)

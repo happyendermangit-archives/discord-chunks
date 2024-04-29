@@ -1,6 +1,7 @@
 function(e) {
     "use strict";
     e.exports = {
+        clickableUsername: "clickableUsername_f267b3",
         container: "container_df7ce7",
         dotSpacer: "dotSpacer__0412c",
         nickname: "nickname__745d1",

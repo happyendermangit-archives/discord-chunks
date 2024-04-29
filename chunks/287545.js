@@ -103,7 +103,7 @@ function(e, t, n) {
                 channel_type: r.type,
                 guild_id: r.getGuildId(),
                 application_id: n,
-                instance_id: e.instanceId,
+                instance_id: e.launchId,
                 initial_media_session_id: e.mediaSessionIds[0],
                 activity_user_session_id: e.activityUserSessionId,
                 raw_thermal_state: T,
@@ -155,7 +155,7 @@ function(e, t, n) {
             channel_id: u.id,
             guild_id: u.getGuildId(),
             application_id: r,
-            instance_ids: [l.instanceId],
+            instance_ids: [l.launchId],
             media_session_ids: l.mediaSessionIds,
             activity_user_session_id: l.activityUserSessionId,
             raw_thermal_state: p,
@@ -177,9 +177,9 @@ function(e, t, n) {
         let {
             location: t,
             applicationId: n,
-            instanceId: i,
+            launchId: i,
             participants: r
-        } = e, s = T.default.getId(), a = R.default.getEmbeddedActivitiesForChannel(t.channel_id).find(e => e.instanceId === i), o = r.find(e => e.user_id === s);
+        } = e, s = T.default.getId(), a = R.default.getEmbeddedActivitiesForChannel(t.channel_id).find(e => e.launchId === i), o = r.find(e => e.user_id === s);
         null != a && j(t.channel_id, a, n, i, null == o ? void 0 : o.user_id, !1)
     }
 
@@ -194,7 +194,7 @@ function(e, t, n) {
         null != E && !I && (null === (o = k[n]) || void 0 === o || o.call(k, {
             activitySessionId: E,
             activityUserSessionId: (0, s.v4)(),
-            instanceId: i,
+            launchId: i,
             mediaSessionIds: null != c ? [c] : []
         }), delete k[n])
     }
@@ -209,7 +209,7 @@ function(e, t, n) {
         if (null != n) {
             let e = R.default.getSelfEmbeddedActivityForChannel(n),
                 i = null == e ? void 0 : e.applicationId,
-                a = null == e ? void 0 : e.instanceId,
+                a = null == e ? void 0 : e.launchId,
                 o = (0, v.default)(e);
             if (null != i && null != t && null != o && null != a) {
                 let e = B[i],
@@ -217,7 +217,7 @@ function(e, t, n) {
                 r()(null == e || null == n, "an active session and awaiting session both exist"), null == n || n({
                     activitySessionId: o,
                     activityUserSessionId: (0, s.v4)(),
-                    instanceId: a,
+                    launchId: a,
                     mediaSessionIds: [t]
                 }), delete k[i]
             }
@@ -358,7 +358,7 @@ function(e, t, n) {
                 p > 0 ? (0, g.maybeJoinEmbeddedActivity)({
                     channelId: s,
                     applicationId: a,
-                    instanceId: null == N ? void 0 : N.instanceId,
+                    launchId: null == N ? void 0 : N.launchId,
                     inputApplication: null,
                     analyticsLocations: o,
                     embeddedActivitiesManager: this

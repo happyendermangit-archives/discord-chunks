@@ -46,6 +46,7 @@ function(e, t, n) {
             className: p.body,
             children: [(0, i.jsx)(I.default, {
                 user: t,
+                onOpenProfile: () => C(!1),
                 guildId: null == O ? void 0 : O.id,
                 usernameIcon: t.hasAvatarForGuild(null == O ? void 0 : O.id) && (0, i.jsx)(S.default, {
                     user: t,

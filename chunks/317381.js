@@ -65,43 +65,45 @@ function(e, t, n) {
             channelId: s,
             location: a,
             applicationId: o,
-            instanceId: _,
-            participants: c,
-            analyticsActivitySessionId: I
-        } = e, S = (0, f.default)(o);
-        if (null == S) return;
-        let h = u.default.getBasicChannel(s);
-        if (!(null != h && d.default.canBasicChannel(m.BasicPermissions.CONNECT, h) || (null == h ? void 0 : h.type) === m.ChannelTypes.DM || (null == h ? void 0 : h.type) === m.ChannelTypes.GROUP_DM)) return;
-        let A = c.map(e => e.userId),
-            N = l.default.getId(),
-            p = l.default.getSessionId(),
-            O = null === (t = c.find(e => e.userId === N)) || void 0 === t ? void 0 : t.sessionId,
-            D = null == O,
-            v = R.get(o),
-            M = {
-                analyticsActivitySessionId: null != I ? I : "",
+            launchId: _,
+            compositeInstanceId: c,
+            participants: I,
+            analyticsActivitySessionId: S
+        } = e, h = (0, f.default)(o);
+        if (null == h) return;
+        let A = u.default.getBasicChannel(s);
+        if (!(null != A && d.default.canBasicChannel(m.BasicPermissions.CONNECT, A) || (null == A ? void 0 : A.type) === m.ChannelTypes.DM || (null == A ? void 0 : A.type) === m.ChannelTypes.GROUP_DM)) return;
+        let N = I.map(e => e.userId),
+            p = l.default.getId(),
+            O = l.default.getSessionId(),
+            D = null === (t = I.find(e => e.userId === p)) || void 0 === t ? void 0 : t.sessionId,
+            v = null == D,
+            M = R.get(o),
+            y = {
+                analyticsActivitySessionId: null != S ? S : "",
                 applicationId: o,
                 channelId: s,
                 guildId: r,
                 location: null != a ? a : void 0,
-                instanceId: _,
-                url: S,
-                userIds: new Set(A)
+                launchId: _,
+                compositeInstanceId: c,
+                url: h,
+                userIds: new Set(N)
             };
-        A.some(e => e === N) && null != v && (D || p === O) && R.set(v.applicationId, {
-            ...v,
-            ...M
-        }), null != v && s === v.channelId && !A.some(e => e === N) && Array.from(v.userIds).some(e => e === N) ? L.get(s) === o ? L.delete(s) : R.delete(o) : A.some(e => e === N) && (null == v || v.applicationId !== o || v.channelId !== s) && (O === l.default.getSessionId() && !D || (0, T.shouldMountActivityIFrameFromGatewayUpdateWithoutSessionIdCheck)("EmbeddedActivitiesStore")) && (F({
+        N.some(e => e === p) && null != M && (v || O === D) && R.set(M.applicationId, {
+            ...M,
+            ...y
+        }), null != M && s === M.channelId && !N.some(e => e === p) && Array.from(M.userIds).some(e => e === p) ? L.get(s) === o ? L.delete(s) : R.delete(o) : N.some(e => e === p) && (null == M || M.applicationId !== o || M.channelId !== s) && (D === l.default.getSessionId() && !v || (0, T.shouldMountActivityIFrameFromGatewayUpdateWithoutSessionIdCheck)("EmbeddedActivitiesStore")) && (F({
             channelId: s,
             applicationId: o,
-            instanceId: _
+            launchId: _
         }), E.ComponentDispatch.dispatch(m.ComponentActions.OPEN_EMBEDDED_ACTIVITY, {
             channelId: s
         }));
-        let y = (null !== (n = g.get(s)) && void 0 !== n ? n : []).filter(e => e.applicationId !== o),
-            P = k(r),
-            U = (null !== (i = C.get(P)) && void 0 !== i ? i : []).filter(e => !(e.applicationId === o && e.channelId === s));
-        A.length > 0 && (y.push(M), U.push(M)), g.set(s, y), C.set(P, U)
+        let P = (null !== (n = g.get(s)) && void 0 !== n ? n : []).filter(e => e.applicationId !== o),
+            U = k(r),
+            b = (null !== (i = C.get(U)) && void 0 !== i ? i : []).filter(e => !(e.applicationId === o && e.channelId === s));
+        N.length > 0 && (P.push(y), b.push(y)), g.set(s, P), C.set(U, b)
     }
 
     function x(e) {
@@ -115,7 +117,8 @@ function(e, t, n) {
                 guildId: e.id,
                 channelId: n,
                 applicationId: i.application_id,
-                instanceId: i.activity_id,
+                launchId: i.activity_id,
+                compositeInstanceId: void 0,
                 participants: r.map(e => ({
                     userId: e.user_id
                 })),
@@ -129,7 +132,7 @@ function(e, t, n) {
         let {
             channelId: r,
             applicationId: s,
-            instanceId: a
+            launchId: a
         } = e, o = (0, f.default)(s), d = l.default.getSessionId();
         if (null == o || null == d || (null === (t = R.get(s)) || void 0 === t ? void 0 : t.channelId) === r) return !1;
         let E = u.default.getChannel(r),
@@ -143,7 +146,7 @@ function(e, t, n) {
             url: o,
             userIds: new Set([T.id]),
             connectedSince: Date.now(),
-            instanceId: a
+            launchId: a
         }), w = i !== _.default.getChannelId() || (0, h.default)(r) ? A.ActivityPanelModes.PIP : A.ActivityPanelModes.PANEL, G.set(Y(r, s), Date.now())
     }
 
@@ -326,7 +329,8 @@ function(e, t, n) {
                         guildId: null,
                         channelId: t,
                         applicationId: n.application_id,
-                        instanceId: n.activity_id,
+                        launchId: n.activity_id,
+                        compositeInstanceId: void 0,
                         participants: i.map(e => ({
                             userId: e.user_id
                         })),
@@ -392,7 +396,8 @@ function(e, t, n) {
                 guildId: t,
                 channelId: n,
                 applicationId: i.application_id,
-                instanceId: i.activity_id,
+                launchId: i.activity_id,
+                compositeInstanceId: void 0,
                 participants: r.map(e => ({
                     userId: e.user_id
                 })),
@@ -402,17 +407,19 @@ function(e, t, n) {
         EMBEDDED_ACTIVITY_UPDATE_V2: function(e) {
             let {
                 applicationId: t,
-                instanceId: n,
-                location: i,
-                participants: r
+                launchId: n,
+                compositeInstanceId: i,
+                location: r,
+                participants: s
             } = e;
-            null != u.default.getChannel(i.channel_id) && V({
-                guildId: i.guild_id,
-                channelId: i.channel_id,
-                location: i,
+            null != u.default.getChannel(r.channel_id) && V({
+                guildId: r.guild_id,
+                channelId: r.channel_id,
+                location: r,
                 applicationId: t,
-                instanceId: n,
-                participants: r.map(e => ({
+                launchId: n,
+                compositeInstanceId: i,
+                participants: s.map(e => ({
                     userId: e.user_id,
                     sessionId: e.session_id
                 }))

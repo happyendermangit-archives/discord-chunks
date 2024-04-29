@@ -1313,7 +1313,8 @@ function(e, t, n) {
         V({
             type: "EMBEDDED_ACTIVITY_UPDATE_V2",
             applicationId: e.application_id,
-            instanceId: e.instance_id,
+            launchId: e.launch_id,
+            compositeInstanceId: e.composite_instance_id,
             location: e.location,
             participants: e.participants
         })

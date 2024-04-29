@@ -3,8 +3,6 @@ function(e) {
     e.exports = {
         additionalParticipantBadge: "additionalParticipantBadge__23702",
         additionalParticipantBadgeText: "additionalParticipantBadgeText__1e49a",
-        badgeContainer: "badgeContainer__5607c",
-        badgeRow: "badgeRow__474f5",
         container: "container__8d997",
         contentDescription: "contentDescription_e07aa0",
         facePile: "facePile__28ee7",

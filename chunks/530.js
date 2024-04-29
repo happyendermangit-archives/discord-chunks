@@ -25,35 +25,40 @@ function(e, t, n) {
             nicknameIcon: E,
             pronouns: I,
             className: T,
-            nicknameVariant: f = "heading-lg/bold",
-            pronounsVariant: S = "text-sm/medium"
-        } = e;
+            onOpenProfile: f,
+            nicknameVariant: S = "heading-lg/bold",
+            pronounsVariant: h = "text-sm/medium"
+        } = e, A = e => null == f ? e : (0, i.jsx)(a.Clickable, {
+            onClick: f,
+            className: d.clickableUsername,
+            children: e
+        });
         return (0, i.jsxs)("div", {
             className: s()(d.container, T),
             children: [(0, i.jsxs)("div", {
                 className: d.usernameRow,
-                children: [(0, i.jsx)(a.Heading, {
+                children: [A((0, i.jsx)(a.Heading, {
                     className: d.nickname,
-                    variant: f,
+                    variant: S,
                     children: l.default.getName(n, r, t)
-                }), E]
+                })), E]
             }), (0, i.jsxs)("div", {
                 className: d.tags,
-                children: [(0, i.jsx)(o.default, {
+                children: [A((0, i.jsx)(o.default, {
                     user: t,
                     usernameIcon: _,
                     forceUsername: !0,
                     className: d.userTag,
                     usernameClass: d.userTagUsername,
                     discriminatorClass: d.userTagDiscriminator
-                }), null != I && I.length > 0 && (0, i.jsxs)(i.Fragment, {
+                })), null != I && I.length > 0 && (0, i.jsxs)(i.Fragment, {
                     children: [(0, i.jsx)("div", {
                         "aria-hidden": "true",
                         className: d.dotSpacer
                     }), (0, i.jsx)(a.TooltipContainer, {
                         text: u.default.Messages.USER_PROFILE_PRONOUNS,
                         children: (0, i.jsx)(a.Text, {
-                            variant: S,
+                            variant: h,
                             className: d.userTag,
                             children: I
                         })

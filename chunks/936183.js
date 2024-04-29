@@ -3,7 +3,6 @@ function(e) {
     e.exports = {
         attachment: "attachment_fd624e",
         attachmentContainer: "attachmentContainer__3e3c4",
-        badgeContainer: "badgeContainer__67878",
         contentImage: "contentImage__749b6",
         emoji: "emoji__3bd00",
         emojiHotrail: "emojiHotrail_cac44d",
