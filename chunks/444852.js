@@ -225,9 +225,7 @@ function(e, t, n) {
                 video_layout: this._videoStreamStats.getLayout(),
                 client_event_source: i,
                 is_broadcast: r,
-                auto_broadcast_enabled: this.isOwner ? l : null,
-                voice_backend_version: this.voiceVersion,
-                rtc_worker_backend_version: this.rtcWorkerVersion
+                auto_broadcast_enabled: this.isOwner ? l : null
             }
         }
         _trackVideoStartStats() {
@@ -274,7 +272,9 @@ function(e, t, n) {
                 max_viewers: this.analyticsContext.maxViewers,
                 hostname: this.hostname,
                 hardware_enabled: S.default.getHardwareH264(),
-                device_performance_class: this.isOwner ? (0, _.getMediaPerformanceClass)() : null
+                device_performance_class: this.isOwner ? (0, _.getMediaPerformanceClass)() : null,
+                voice_backend_version: this.voiceVersion,
+                rtc_worker_backend_version: this.rtcWorkerVersion
             })
         }
         _getExtraConnectionOptions() {
