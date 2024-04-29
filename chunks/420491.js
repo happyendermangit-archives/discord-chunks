@@ -110,8 +110,11 @@ function(e, t, n) {
                 location: "GatewayZstdStore"
             }).useZstd), p(t), A = 0
         },
-        CONNECTION_INTERRUPTED: function() {
-            N() && m && (A += 1) > 3 && (S.error("Disabling zstd due to consecutive errors"), p(!1), h = !0)
+        CONNECTION_INTERRUPTED: function(e) {
+            let {
+                code: t
+            } = e;
+            N() && m && 1e3 !== t && (A += 1) > 3 && (S.error("Disabling zstd due to consecutive errors"), p(!1), h = !0)
         }
     })
 }
