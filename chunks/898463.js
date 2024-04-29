@@ -32,7 +32,7 @@ function(e, t, n) {
         R = n("273031"),
         C = n("859235"),
         g = n("689938"),
-        L = n("709982");
+        L = n("670951");
     let D = ["image/jpeg", "image/png", "image/webp", "image/gif", "video/quicktime", "video/mp4"];
 
     function v(e) {

@@ -8,7 +8,7 @@ function(e, t, n) {
     var i = n("735250"),
         r = n("470079"),
         s = n("561779"),
-        a = n("623509");
+        a = n("397905");
     let o = e => "".concat(e.toFixed(0), "%"),
         l = r.forwardRef(function(e, t) {
             let {

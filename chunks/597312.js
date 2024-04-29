@@ -12,7 +12,7 @@ function(e, t, n) {
         }
     });
     var i = n("257705"),
-        r = n("274641");
+        r = n("107042");
     let s = (0, i.createScroller)(r.thin, r.fade),
         a = (0, i.createScroller)(r.auto, r.fade),
         o = (0, i.createScroller)(r.none, r.fade)

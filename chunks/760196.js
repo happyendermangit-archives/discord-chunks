@@ -12,7 +12,7 @@ function(e, t, n) {
         _ = n("920455"),
         c = n("931981"),
         E = n("407661"),
-        I = n("838329");
+        I = n("414367");
     t.default = r.memo(e => {
         let {
             channel: t,

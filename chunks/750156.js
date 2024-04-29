@@ -7,7 +7,7 @@ function(e, t, n) {
         s = n.n(r),
         a = n("346656"),
         o = n("227356"),
-        l = n("816184");
+        l = n("173838");
     t.default = function(e) {
         let {
             guild: t,

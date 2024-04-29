@@ -11,7 +11,7 @@ function(e, t, n) {
         s = n("499033"),
         a = n("839523"),
         o = n("689938"),
-        l = n("86676");
+        l = n("24557");
 
     function u() {
         return (0, i.jsxs)("div", {

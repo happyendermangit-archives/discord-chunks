@@ -38,7 +38,7 @@ function(e, t, n) {
         B = n("15350"),
         k = n("611480"),
         V = n("981631"),
-        x = n("802011");
+        x = n("424197");
     let F = (0, R.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
         H = (0, R.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
         Y = (0, R.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),

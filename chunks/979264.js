@@ -21,7 +21,7 @@ function(e, t, n) {
         E = n("426964"),
         I = n("308083"),
         T = n("689938"),
-        f = n("53408");
+        f = n("40700");
     let S = r.memo(function(e) {
             let {
                 src: t,

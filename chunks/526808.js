@@ -22,7 +22,7 @@ function(e, t, n) {
         throw Error("Not implemented yet")
     });
     else try {
-        var a = n("865605");
+        var a = n("908690");
         if ("function" != typeof a.randomBytes) throw Error("Not supported");
         i.prototype._rand = function(e) {
             return a.randomBytes(e)

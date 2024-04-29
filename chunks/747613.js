@@ -7,7 +7,7 @@ function(e, t, n) {
         a = n.n(s),
         o = n("392711"),
         l = n.n(o),
-        u = n("513715"),
+        u = n("718017"),
         d = n("924826"),
         _ = n("946188"),
         c = n("477690"),
@@ -21,7 +21,7 @@ function(e, t, n) {
         m = n("624138"),
         N = n("981631"),
         p = n("689938"),
-        O = n("809605");
+        O = n("43055");
     let R = (0, h.uid)(),
         C = _.default.convert.fromCodePoint("1f44f"),
         g = (0, m.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),

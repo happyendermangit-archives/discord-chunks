@@ -12,13 +12,13 @@ function(e, t, n) {
         o = n("392711"),
         l = n.n(o),
         u = n("481060"),
-        d = n("110577"),
+        d = n("583901"),
         _ = n("997945"),
         c = n("630117"),
         E = n("441319"),
         I = n("981631"),
         T = n("689938"),
-        f = n("761064");
+        f = n("481365");
     let S = () => [T.default.Messages.APP_ICON_PIRATE, T.default.Messages.APP_ICON_PIRATE_1, T.default.Messages.APP_ICON_PIRATE_2, T.default.Messages.APP_ICON_PIRATE_3, T.default.Messages.APP_ICON_PIRATE_4],
         h = () => {
             var e;

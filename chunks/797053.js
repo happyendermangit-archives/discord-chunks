@@ -8,7 +8,7 @@ function(e, t, n) {
         o = n("866442"),
         l = n("481060"),
         u = n("332870"),
-        d = n("6829");
+        d = n("819729");
     t.default = e => {
         let {
             children: t,

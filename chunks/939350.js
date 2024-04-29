@@ -5,7 +5,7 @@ function(e, t, n) {
             return r
         }
     });
-    var i = n("768160");
+    var i = n("942610");
     let r = {
         default: i.colorDefault,
         brand: i.colorBrand,

@@ -13,7 +13,7 @@ function(e, t, n) {
         c = n("585483"),
         E = n("981631"),
         I = n("689938"),
-        T = n("480710");
+        T = n("740184");
     t.default = r.memo(function(e) {
         let {
             width: t,

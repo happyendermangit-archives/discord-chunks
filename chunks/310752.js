@@ -6,7 +6,7 @@ function(e, t, n) {
     var r = n("120356"),
         s = n.n(r),
         a = n("731994"),
-        o = n("239792");
+        o = n("297888");
     t.default = function(e) {
         let {
             icons: t,

@@ -10,7 +10,7 @@ function(e, t, a) {
     function n(e) {
         var t, a, n, c;
         let i = null == e ? void 0 : e.get("client_id"),
-            o = null == e ? void 0 : null === (t = e.get("scopes")) || void 0 === t ? void 0 : t.split(" "),
+            o = null == e ? void 0 : null === (t = e.get("scope")) || void 0 === t ? void 0 : t.split(" "),
             r = null == e ? void 0 : e.get("state"),
             f = null == e ? void 0 : e.get("redirect_uri"),
             l = null == e ? void 0 : e.get("response_type"),

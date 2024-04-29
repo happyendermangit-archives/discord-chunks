@@ -8,7 +8,7 @@ function(e, t, n) {
         a = n("960259"),
         o = n("783708"),
         l = n("325767"),
-        u = n("79013");
+        u = n("303424");
     t.default = (0, a.replaceIcon)(function(e) {
         let {
             width: t = 24,

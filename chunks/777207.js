@@ -12,8 +12,8 @@ function(e, t, n) {
         a = n("696689"),
         o = n.n(a),
         l = n("692547"),
-        u = n("701717"),
-        d = n("24073");
+        u = n("481517"),
+        d = n("430600");
     let _ = Object.fromEntries(Object.keys(l.default.colors).map(e => [o()(e), e])),
         c = e => {
             let t, {

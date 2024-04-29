@@ -9,7 +9,7 @@ function(e, t, n) {
         o = n("507957"),
         l = n("674563"),
         u = n("689938"),
-        d = n("461369");
+        d = n("542713");
     let _ = e => {
         let t, {
                 invertColor: n = !1,

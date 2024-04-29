@@ -23,7 +23,7 @@ function(e, t, n) {
         h = n("981631"),
         A = n("474936"),
         m = n("689938"),
-        N = n("60135"),
+        N = n("325687"),
         p = n("867250");
     let O = () => (0, f.setShowPremiumUpsell)(!1),
         R = e => {

@@ -51,7 +51,7 @@ function(e, t, n) {
         q = n("981631"),
         Z = n("921944"),
         J = n("185923"),
-        $ = n("773390");
+        $ = n("488192");
     let ee = (0, B.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_HORIZONTAL),
         et = (0, B.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
         en = e => e.stopPropagation(),

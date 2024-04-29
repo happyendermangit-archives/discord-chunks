@@ -18,7 +18,7 @@ function(e, t, n) {
         f = n("934458"),
         S = n("227356"),
         h = n("689938"),
-        A = n("504649");
+        A = n("203074");
     t.default = function(e) {
         let {
             iconType: t,

@@ -5,7 +5,7 @@ function(e, t, n) {
             return r
         }
     });
-    var i = n("513715");
+    var i = n("718017");
     let r = new(n("603767")).default;
     i.Globals.assign({
         frameLoop: r

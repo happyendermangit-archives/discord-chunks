@@ -12,7 +12,7 @@ function(e, t, n) {
         a = n("682864"),
         o = n("359610"),
         l = n("689938"),
-        u = n("502249");
+        u = n("123752");
 
     function d(e) {
         return (0, i.jsx)(o.default, {

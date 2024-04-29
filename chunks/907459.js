@@ -30,7 +30,7 @@ function(e, t, n) {
         C = n("921944"),
         g = n("474936"),
         L = n("689938"),
-        D = n("819074");
+        D = n("158080");
     let v = () => {
             u.default.dispatch({
                 type: "APP_ICON_EDITOR_CLOSE"

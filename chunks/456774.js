@@ -49,7 +49,7 @@ function(e, t, n) {
         Y = n("981631"),
         j = n("765305"),
         W = n("689938"),
-        K = n("303820");
+        K = n("569779");
     (r = i || (i = {})).HANGOUT = "hangout", r.EMBEDDED_ACTIVITY = "embedded-activity", r.EVENT = "event";
 
     function z(e) {

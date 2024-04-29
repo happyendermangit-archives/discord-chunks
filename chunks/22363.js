@@ -11,7 +11,7 @@ function(e, t, n) {
         u = n("533432"),
         d = n("149203"),
         _ = n("185923"),
-        c = n("773390");
+        c = n("488192");
     t.default = e => {
         let {
             accessory: t,
