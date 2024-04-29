@@ -4,6 +4,7 @@ function(e) {
         actionsActivityFeed: "actionsActivityFeed__39f06",
         actionsProfile: "actionsProfile_e93ceb",
         actionsProfileV2: "actionsProfileV2_eea61b",
+        actionsSimplifiedProfile: "actionsSimplifiedProfile__448de",
         actionsStreamPreview: "actionsStreamPreview_ed74d4",
         actionsUserPopout: "actionsUserPopout__36bfb",
         actionsUserPopoutV2: "actionsUserPopoutV2__46596",

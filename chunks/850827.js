@@ -53,7 +53,7 @@ function(e, t, n) {
                 let e = T.default.getCurrentUser();
                 return o()(null != e, "UserActivityActions: currentUser cannot be undefined"), e
             }),
-            j = V === h.Types.PROFILE || V === h.Types.PROFILE_V2,
+            j = V === h.Types.PROFILE || V === h.Types.PROFILE_V2 || V === h.Types.SIMPLIFIED_PROFILE,
             W = V === h.Types.STREAM_PREVIEW || null != a,
             K = (0, A.default)(n),
             z = (0, E.isStageActivity)(n),

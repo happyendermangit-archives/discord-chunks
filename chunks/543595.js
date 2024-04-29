@@ -49,7 +49,7 @@ function(e, t, n) {
             configurable: !0,
             writable: !0
         }) : e[t] = n, e
-    }(s = i || (i = {})).USER_POPOUT = "UserPopout", s.USER_POPOUT_V2 = "UserPopoutV2", s.ACTIVITY_FEED = "ActivityFeed", s.PROFILE = "Profile", s.PROFILE_V2 = "ProfileV2", s.STREAM_PREVIEW = "StreamPreview", s.VOICE_CHANNEL = "VoiceChannel";
+    }(s = i || (i = {})).USER_POPOUT = "UserPopout", s.USER_POPOUT_V2 = "UserPopoutV2", s.ACTIVITY_FEED = "ActivityFeed", s.PROFILE = "Profile", s.PROFILE_V2 = "ProfileV2", s.STREAM_PREVIEW = "StreamPreview", s.VOICE_CHANNEL = "VoiceChannel", s.SIMPLIFIED_PROFILE = "SimplifiedProfile";
     let Y = {
             StreamPreview: [108, 60],
             UserPopout: [108, 60],
@@ -57,6 +57,7 @@ function(e, t, n) {
             VoiceChannel: [108, 60],
             Profile: [162, 90],
             ProfileV2: [162, 90],
+            SimplifiedProfile: [162, 90],
             ActivityFeed: [900, 500]
         },
         {
@@ -441,7 +442,7 @@ function(e, t, n) {
             } = this.props, o = this.activity;
             if (null == o || o.type === k.ActivityTypes.CUSTOM_STATUS) return null;
             let l = "UserPopout" === t || "UserPopoutV2" === t,
-                d = "Profile" === t || "ProfileV2" === t,
+                d = "Profile" === t || "ProfileV2" === t || "SimplifiedProfile" === t,
                 _ = "ActivityFeed" === t,
                 c = "StreamPreview" === t,
                 E = !1;
