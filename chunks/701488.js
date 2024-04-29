@@ -5,13 +5,19 @@ function(e, t, n) {
             return C
         },
         ACTIVITY_SHELF_WEB_MODAL_KEY: function() {
-            return Z
+            return $
+        },
+        AM_HARMONY_PRD_APPLICATION_ID: function() {
+            return Q
+        },
+        AM_HARMONY_STG_APPLICATION_ID: function() {
+            return X
         },
         APPLICATIONS_WITH_ALLOWED_POPUPS: function() {
-            return J
+            return ee
         },
         APPLICATIONS_WITH_NO_REFFERER: function() {
-            return $
+            return et
         },
         ActivityFeedbackReasons: function() {
             return i
@@ -56,10 +62,10 @@ function(e, t, n) {
             return U
         },
         DEFAULT_EMBEDDED_ACTIVITY_CONFIG: function() {
-            return et
+            return ei
         },
         EMBEDDED_ACTIVITY_SURVEY_URL: function() {
-            return X
+            return q
         },
         END_GAME_APPLICATION_ID: function() {
             return D
@@ -71,7 +77,7 @@ function(e, t, n) {
             return P
         },
         ImageSizes: function() {
-            return Q
+            return Z
         },
         JAM_SPACE_APPLICATION_ID: function() {
             return y
@@ -92,7 +98,7 @@ function(e, t, n) {
             return H
         },
         PRIVATE_APPS_HELP_ARTICLE: function() {
-            return ei
+            return es
         },
         PUTT_PARTY_APPLICATION_ID: function() {
             return K
@@ -101,10 +107,10 @@ function(e, t, n) {
             return b
         },
         STAFF_RELEASE_PHASES: function() {
-            return q
+            return J
         },
         SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES: function() {
-            return en
+            return er
         },
         WATCH_YOUTUBE_PROD_APP_ID: function() {
             return w
@@ -144,36 +150,38 @@ function(e, t, n) {
         W = "1037680572660727838",
         K = "945737671223947305",
         z = "1011683823555199066",
-        X = "https://discord.sjc1.qualtrics.com/jfe/form/SV_6SvWAOxlcSRWiEu",
-        Q = {
+        X = "1234546995360694434",
+        Q = "1214629548377768066",
+        q = "https://discord.sjc1.qualtrics.com/jfe/form/SV_6SvWAOxlcSRWiEu",
+        Z = {
             SMALL: 64,
             LARGE: 160
         },
-        q = ["in_development", "activities_team", "employee_release"];
+        J = ["in_development", "activities_team", "employee_release"];
     (E = i || (i = {})).ADS = "ADS", E.FAILED_LOAD = "FAILED_LOAD", E.LAGGING = "LAGGING", E.CONFUSING = "CONFUSING", E.NOT_FUN = "NOT_FUN", E.OTHER = "OTHER", (I = r || (r = {}))[I.PLAY = 0] = "PLAY", I[I.SPECTATE = 1] = "SPECTATE", (T = s || (s = {})).DESKTOP = "desktop", T.MOBILE = "mobile", (f = a || (a = {})).BETRAYAL_MARKETING_TOOLTIP = "BETRAYAL_MARKETING_TOOLTIP", f.FISHINGTON_MARKETING_TOOLTIP = "FISHINGTON_MARKETING_TOOLTIP", f.POKER_MARKETING_TOOLTIP = "POKER_MARKETING_TOOLTIP", f.YOUTUBE_MARKETING_TOOLTIP = "YOUTUBE_MARKETING_TOOLTIP", (S = o || (o = {}))[S.NO_UPDATE = 0] = "NO_UPDATE", S[S.ACTIVITY_STATE_UPDATE = 1] = "ACTIVITY_STATE_UPDATE", S[S.ACTIVITY_STARTED = 2] = "ACTIVITY_STARTED", S[S.ACTIVITY_ENDED = 3] = "ACTIVITY_ENDED", S[S.USER_JOINED = 4] = "USER_JOINED", S[S.USER_LEFT = 5] = "USER_LEFT", S[S.ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST = 6] = "ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST", (h = l || (l = {}))[h.UNLOCKED = 1] = "UNLOCKED", h[h.PORTRAIT = 2] = "PORTRAIT", h[h.LANDSCAPE = 3] = "LANDSCAPE", (A = u || (u = {}))[A.DIRECTORY = 0] = "DIRECTORY", A[A.SELECT_CHANNEL = 1] = "SELECT_CHANNEL", A[A.DETAIL_PAGE = 2] = "DETAIL_PAGE";
-    let Z = "activity-shelf",
-        J = new Set(["755600276941176913", v, M, w]),
-        $ = new Set([v, M, w]);
+    let $ = "activity-shelf",
+        ee = new Set(["755600276941176913", v, M, w]),
+        et = new Set([v, M, w]);
     (m = d || (d = {})).DISCORD_TURNS_8 = "DISCORD_TURNS_8", m.GDM_ACTIVITIES = "GDM_ACTIVITIES", m.PUTT_PARTY = "PUTT_PARTY", m.JAMSPACE_OLD = "JAMSPACE", m.JAMSPACE = "JAMSPACE2", m.POKER = "POKER", m.FREE = "FREE", (N = _ || (_ = {}))[N.PORTRAIT = 0] = "PORTRAIT", N[N.LANDSCAPE = 1] = "LANDSCAPE", (p = c || (c = {}))[p.FOCUSED = 0] = "FOCUSED", p[p.PIP = 1] = "PIP", p[p.GRID = 2] = "GRID";
-    let ee = {
+    let en = {
             label_type: O.EmbeddedActivityLabelTypes.NONE,
             release_phase: "",
             label_until: null
         },
-        et = {
+        ei = {
             application_id: "",
             requires_age_gate: !1,
             default_orientation_lock_state: 1,
             tablet_default_orientation_lock_state: 1,
             supported_platforms: [O.EmbeddedActivitySupportedPlatforms.WEB],
             client_platform_config: {
-                [O.EmbeddedActivitySupportedPlatforms.WEB]: ee,
-                [O.EmbeddedActivitySupportedPlatforms.IOS]: ee,
-                [O.EmbeddedActivitySupportedPlatforms.ANDROID]: ee
+                [O.EmbeddedActivitySupportedPlatforms.WEB]: en,
+                [O.EmbeddedActivitySupportedPlatforms.IOS]: en,
+                [O.EmbeddedActivitySupportedPlatforms.ANDROID]: en
             },
             has_csp_exception: !1,
             displays_advertisements: !1
         },
-        en = [R.ChannelTypes.GUILD_TEXT, R.ChannelTypes.DM, R.ChannelTypes.GROUP_DM],
-        ei = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety"
+        er = [R.ChannelTypes.GUILD_TEXT, R.ChannelTypes.DM, R.ChannelTypes.GROUP_DM],
+        es = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety"
 }
