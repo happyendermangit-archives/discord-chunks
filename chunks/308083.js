@@ -176,12 +176,12 @@ function(e, t, n) {
     }(d = r || (r = {}))[d.INTRO_ANIMATION = 0] = "INTRO_ANIMATION", d[d.SETUP = 1] = "SETUP", d[d.SIGN = 2] = "SIGN", (_ = s || (s = {}))[_.FOUNDATIONAL_INTRO = 0] = "FOUNDATIONAL_INTRO", _[_.GAMES = 1] = "GAMES", _[_.PLAYSTYLE = 2] = "PLAYSTYLE", _[_.PERSONALITY_INTRO = 3] = "PERSONALITY_INTRO", _[_.UTILITY_TRAITS = 4] = "UTILITY_TRAITS", _[_.INTERESTS = 5] = "INTERESTS", _[_.DESCRIPTION = 6] = "DESCRIPTION", _[_.IDENTITY_INTRO = 7] = "IDENTITY_INTRO", _[_.CUSTOMIZE_TAG_BADGE = 8] = "CUSTOMIZE_TAG_BADGE", _[_.CUSTOMIZE_BANNER = 9] = "CUSTOMIZE_BANNER", _[_.APPLICATION_INTRO = 10] = "APPLICATION_INTRO", _[_.MEMBER_APPLICATION = 11] = "MEMBER_APPLICATION";
     let M = "700136079562375258",
         y = "762434991303950386",
-        P = ["Unrated", "Spike Rush", "Death Match", "Swift", "TDM", "Server: NA", "Server: EU", "Server: LATAM", "Server: KR", "Server: AP", "Voice ON", "Voice OFF"],
+        P = ["Server: NA", "Server: EU", "Server: LATAM", "Server: KR", "Server: AP", "Voice ON", "Voice OFF", "Unrated", "All Ranks", "Bronze+", "Silver+", "Gold+", "Platinum+", "Diamond+"],
         U = ["20+", "30+", "40+", "All Ages"],
-        b = ["LGBTQIA-Friendly", "All genders"],
+        b = ["Beginner Friendly", "PUGs", "LGBTQIA+", "Parent Friendly", "Work-life Balance", "Streamers"],
         G = new Set([...P, ...U, ...b]),
         w = new Set(S.default.getAvailableLocales().map(e => e.value)),
-        B = new Set(["Anime", "Arts and Crafts", "Architecture", "Baseball", "Basketball", "Beauty", "Beer", "Board Games", "Books", "Cars", "Celebrities", "Coffee", "Coding", "Craft", "Design", "F1", "Fashion", "Fitness", "Food", "Football", "Healthcare", "Home Decor", "Houseplants", "K-Pop", "Knitting", "LEGO", "MARVEL", "Motorcycles", "Movies", "Music", "Nail Art", "Pets", "Photography", "Pok\xe9mon", "Programming", "Roman History", "Science", "Skiing", "Soccer", "Star Wars", "TCG", "TEA", "Tech", "Travel", "TV Shows", "Wine"]);
+        B = new Set(["anime", "fanart", "venting", "movie nights", "gacha games", "skincare", "microwaved food", "board games", "sci-fi books", "sleeping", "brunch pics", "pet pictures", "recipes", "speedrunning", "eating on mic", "k-pop", "deafened", "programming", "study buddies", "DnD", "lore dumping", "sleepy cats", "podcasts", "houseplants", "knitting", "tech", "keyboards", "desk setups", "bad movies", "hiking", "lo-fi chilling", "watch together", "listen alongs", "late night tacos", "drip", "trading", "travel", "cups", "coffee", "F1"]);
     (c = a || (a = {}))[c.PIXEL_RUSH = 0] = "PIXEL_RUSH", c[c.SCANLINES = 1] = "SCANLINES", c[c.TEXTURED = 2] = "TEXTURED", c[c.MAGIC = 3] = "MAGIC", c[c.CUSTOM = 4] = "CUSTOM", (E = o || (o = {})).BOULDER = "boulder", E.CASCADE = "cascade", E.THUNDER = "thunder", E.SOUL = "soul", E.MARSH = "marsh", E.VOLCANO = "volcano", E.EARTH = "earth", E.ZEPHYR = "zephyr";
     let k = [{
             name: "boulder",
