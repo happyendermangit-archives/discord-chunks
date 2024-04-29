@@ -30,7 +30,6 @@ function(e, t, n) {
             else if (t === o.CodedLinkType.EMBEDDED_ACTIVITY_INVITE);
             else if (t === o.CodedLinkType.GUILD_PRODUCT);
             else if (t === o.CodedLinkType.SERVER_SHOP);
-            else if (t === o.CodedLinkType.CLYDE_PROFILE);
             else if (t === o.CodedLinkType.QUESTS_EMBED);
             else throw Error("Unknown coded link type: ".concat(t))
         })

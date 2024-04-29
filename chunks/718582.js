@@ -80,6 +80,7 @@ function(e, t, n) {
                 })
             }(_, E);
         return {
+            totalUsers: i.length,
             usersToShow: s,
             othersCount: E,
             usersText: I
