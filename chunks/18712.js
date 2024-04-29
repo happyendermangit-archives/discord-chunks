@@ -1,6 +1,7 @@
 function(e) {
     "use strict";
     e.exports = {
+        buttonWithSelect: "buttonWithSelect_eaaa35",
         cardsContainer: "cardsContainer__59327",
         clanCard: "clanCard_ea2802",
         clanCardCenter: "clanCardCenter__00094",
@@ -16,11 +17,14 @@ function(e) {
         clanEnvelope: "clanEnvelope__0b99c",
         clanEnvelopeBottom: "clanEnvelopeBottom_e5cdee",
         clanEnvelopeTop: "clanEnvelopeTop_bf09a8",
+        upsellButton: "upsellButton__6cfb7",
         upsellCtaContainer: "upsellCtaContainer__5221e",
         upsellDetail: "upsellDetail__401db",
         upsellDetailText: "upsellDetailText__886b7",
         upsellDetails: "upsellDetails_dbe31a",
         upsellIcon: "upsellIcon__05e46",
+        upsellSelect: "upsellSelect_e29580",
+        upsellSelectWrapper: "upsellSelectWrapper__63bb4",
         upsellTitle: "upsellTitle__75ee7"
     }
 }

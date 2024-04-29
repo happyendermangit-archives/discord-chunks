@@ -5,13 +5,10 @@ function(e, t, n) {
             return a
         },
         getClanDiscoveryAffinity: function() {
-            return u
+            return l
         },
         isLoadedSearchResult: function() {
             return o
-        },
-        isUnloadedSearchResult: function() {
-            return l
         }
     });
     var i = n("116175"),
@@ -53,11 +50,7 @@ function(e, t, n) {
         return "loaded" === e.status
     }
 
-    function l(e) {
-        return "unloaded" === e.status
-    }
-
-    function u(e, t) {
+    function l(e, t) {
         let n = 0;
         return null != t.games && (n += 2 * t.games.filter(t => e.games.includes(t)).length), null != t.playstyle && (t.playstyle === e.playstyle ? n += 2 : r.PLAYSTYLE_GROUPS[e.playstyle] === r.PLAYSTYLE_GROUPS[t.playstyle] && (n += 1)), null != t.traits && (n += 2 * Array.from(t.traits).filter(t => e.traits.includes(t)).length), n
     }

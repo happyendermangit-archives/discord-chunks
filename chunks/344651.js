@@ -101,32 +101,33 @@ function(e, t, n) {
     }
 
     function x(e, t, n) {
+        var i, s, a;
         let {
-            roles: i,
-            nick: s,
-            avatar: a,
-            avatar_decoration_data: o,
-            flags: l,
-            premium_since: u,
-            pending: d,
-            joined_at: _,
-            communication_disabled_until: c,
-            unusual_dm_activity_until: E
-        } = n, I = m.default.getMember(e, t.id);
-        (!(null != I && I.nick === s && I.avatar === a && r().isEqual(I.roles, i) && r().isEqual(I.avatarDecoration, o)) || I.premiumSince !== u || I.isPending !== d || I.joinedAt !== _ || I.communicationDisabledUntil !== c || I.flags !== l || I.unusualDMActivityUntil !== E) && V({
+            roles: o,
+            nick: l,
+            avatar: u,
+            avatar_decoration_data: d,
+            flags: _,
+            premium_since: c,
+            pending: E,
+            joined_at: I,
+            communication_disabled_until: T,
+            unusual_dm_activity_until: f
+        } = n, S = m.default.getMember(e, t.id);
+        (!(null != S && S.nick === l && S.avatar === u && r().isEqual(S.roles, o)) || (null === (i = S.avatarDecoration) || void 0 === i ? void 0 : i.asset) !== (null == d ? void 0 : d.asset) || (null === (s = S.avatarDecoration) || void 0 === s ? void 0 : s.skuId) !== (null == d ? void 0 : d.sku_id) || S.premiumSince !== c || S.isPending !== E || S.joinedAt !== I || S.communicationDisabledUntil !== T || S.flags !== _ || (null !== (a = S.unusualDMActivityUntil) && void 0 !== a ? a : null) !== (null != f ? f : null)) && V({
             type: "GUILD_MEMBER_ADD",
             guildId: e,
             user: t,
-            roles: i,
-            nick: s,
-            avatar: a,
-            avatarDecoration: o,
-            premiumSince: u,
-            isPending: d,
-            joinedAt: _,
-            communicationDisabledUntil: c,
-            unusualDMActivityUntil: E,
-            flags: l
+            roles: o,
+            nick: l,
+            avatar: u,
+            avatarDecoration: d,
+            premiumSince: c,
+            isPending: E,
+            joinedAt: I,
+            communicationDisabledUntil: T,
+            unusualDMActivityUntil: f,
+            flags: _
         })
     }
 
