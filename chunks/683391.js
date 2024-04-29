@@ -14,7 +14,6 @@ function(e) {
         gamesTooltip: "gamesTooltip_cdb5ec",
         preferences: "preferences__16c1a",
         toolbar: "toolbar__2fcb0",
-        toolbarSpacer: "toolbarSpacer_bc0349",
         trait: "trait__847e0",
         traitsTooltip: "traitsTooltip__02c2a"
     }
