@@ -32,7 +32,7 @@ function(e, t, n) {
         "sv-SE": () => n.e("51477").then(n.bind(n, "240465")),
         th: () => n.e("41023").then(n.bind(n, "225438")),
         tr: () => n.e("64248").then(n.bind(n, "596885")),
-        uk: () => n.e("43353").then(n.bind(n, "423602")),
+        uk: () => Promise.all([n.e("30386"), n.e("43353")]).then(n.bind(n, "423602")),
         vi: () => n.e("67816").then(n.bind(n, "46233")),
         "zh-CN": () => n.e("62236").then(n.bind(n, "98728")),
         "zh-TW": () => n.e("5950").then(n.bind(n, "700966")),
