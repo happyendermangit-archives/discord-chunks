@@ -49,11 +49,12 @@ function(e, t, n) {
             configurable: !0,
             writable: !0
         }) : e[t] = n, e
-    }(s = i || (i = {})).USER_POPOUT = "UserPopout", s.USER_POPOUT_V2 = "UserPopoutV2", s.ACTIVITY_FEED = "ActivityFeed", s.PROFILE = "Profile", s.PROFILE_V2 = "ProfileV2", s.STREAM_PREVIEW = "StreamPreview", s.VOICE_CHANNEL = "VoiceChannel", s.SIMPLIFIED_PROFILE = "SimplifiedProfile";
+    }(s = i || (i = {})).USER_POPOUT = "UserPopout", s.USER_POPOUT_V2 = "UserPopoutV2", s.ACTIVITY_FEED = "ActivityFeed", s.PROFILE = "Profile", s.PROFILE_V2 = "ProfileV2", s.STREAM_PREVIEW = "StreamPreview", s.VOICE_CHANNEL = "VoiceChannel", s.SIMPLIFIED_PROFILE = "SimplifiedProfile", s.BITE_SIZE_POPOUT = "BiteSizePopout";
     let Y = {
             StreamPreview: [108, 60],
             UserPopout: [108, 60],
             UserPopoutV2: [108, 60],
+            BiteSizePopout: [108, 60],
             VoiceChannel: [108, 60],
             Profile: [162, 90],
             ProfileV2: [162, 90],
@@ -394,7 +395,7 @@ function(e, t, n) {
                 start: n,
                 end: i,
                 className: this.getTypeClass("timeBar"),
-                themed: "VoiceChannel" === this.props.type || "UserPopout" === this.props.type || "UserPopoutV2" === this.props.type || "ProfileV2" === this.props.type
+                themed: "VoiceChannel" === this.props.type || "UserPopout" === this.props.type || "UserPopoutV2" === this.props.type || "ProfileV2" === this.props.type || "SimplifiedProfile" === this.props.type || "BiteSizePopout" === this.props.type
             })
         }
         renderState(e, t) {
@@ -441,7 +442,7 @@ function(e, t, n) {
                 showReactions: s
             } = this.props, o = this.activity;
             if (null == o || o.type === k.ActivityTypes.CUSTOM_STATUS) return null;
-            let l = "UserPopout" === t || "UserPopoutV2" === t,
+            let l = "UserPopout" === t || "UserPopoutV2" === t || "BiteSizePopout" === t,
                 d = "Profile" === t || "ProfileV2" === t || "SimplifiedProfile" === t,
                 _ = "ActivityFeed" === t,
                 c = "StreamPreview" === t,

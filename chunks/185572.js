@@ -2,6 +2,7 @@ function(e) {
     "use strict";
     e.exports = {
         actionsActivityFeed: "actionsActivityFeed__39f06",
+        actionsBiteSizePopout: "actionsBiteSizePopout__9de20",
         actionsProfile: "actionsProfile_e93ceb",
         actionsProfileV2: "actionsProfileV2_eea61b",
         actionsSimplifiedProfile: "actionsSimplifiedProfile__448de",

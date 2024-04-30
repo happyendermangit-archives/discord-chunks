@@ -25,7 +25,7 @@ function(e, t, n) {
                 channelId: d,
                 messageId: _,
                 roleId: c,
-                shouldTrackViewOnMount: E = !1
+                shouldTrackViewOnMount: E = !0
             } = e, {
                 analyticsLocations: I
             } = (0, s.default)(), T = r.useMemo(() => ({
