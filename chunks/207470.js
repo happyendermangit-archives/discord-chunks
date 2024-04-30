@@ -708,7 +708,8 @@ function(e, t, n) {
             return r({
                 attributes: _,
                 children: g,
-                element: n
+                element: n,
+                decorations: t
             })
         }, (e, t) => e.element === t.element && e.renderElement === t.renderElement && e.renderLeaf === t.renderLeaf && e.renderPlaceholder === t.renderPlaceholder && eC(e.decorations, t.decorations) && (e.selection === t.selection || !!e.selection && !!t.selection && f.Range.equals(e.selection, t.selection))),
         eU = e => {

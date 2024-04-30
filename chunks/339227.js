@@ -157,6 +157,11 @@ function(e, t, n) {
             },
             timestamp: {
                 type: "inlineObject"
+            },
+            subtext: {
+                type: "inlineStyle",
+                before: "-# ",
+                after: ""
             }
         },
         h = new Set(["*", "_", "\\"]),
@@ -263,7 +268,7 @@ function(e, t, n) {
                                 0: ""
                             },
                             type: "paragraph",
-                            content: (n ? g : C)(a, !1, {
+                            content: (n ? g : C)(a, !0, {
                                 returnMentionIds: !0,
                                 disableAutoBlockNewlines: !0,
                                 guildId: t
@@ -377,7 +382,8 @@ function(e, t, n) {
             case "codeBlockLang":
             case "spoiler":
             case "url":
-            case "link": {
+            case "link":
+            case "subtext": {
                 i = G(t, i);
                 let {
                     before: n,

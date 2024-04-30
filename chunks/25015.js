@@ -20,7 +20,8 @@ function(e, t, n) {
             allowList: _ = !1,
             allowLinks: c = !1,
             allowDevLinks: E = !1,
-            previewLinkTarget: I = !1
+            allowSubtext: I = !1,
+            previewLinkTarget: T = !1
         } = t;
         return i.useMemo(() => null != e.customRenderedContent ? e.customRenderedContent : e.isCommandType() && 0 === e.content.length || e.hasFlag(a.MessageFlags.LOADING) ? (0, s.default)(e) : (0, r.default)(e, {
             hideSimpleEmbedContent: n,
@@ -30,8 +31,9 @@ function(e, t, n) {
             allowHeading: d,
             allowList: _,
             allowLinks: c,
+            allowSubtext: I,
             allowDevLinks: E,
-            previewLinkTarget: I
-        }), [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, n, o, l, u, d, _, c, I])
+            previewLinkTarget: T
+        }), [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, n, o, l, u, d, _, c, T, I])
     }
 }

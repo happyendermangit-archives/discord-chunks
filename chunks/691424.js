@@ -263,6 +263,12 @@ function(e, t, n) {
         },
         message: {
             react: (e, t, n) => (0, i.jsx)(N.default, {}, n.key)
+        },
+        subtext: {
+            react: (e, t, n) => (0, o.reactElement)("small", (null == n ? void 0 : n.key) != null ? "".concat(n.key) : null, {
+                children: t(e.content, n),
+                className: n.formatInline ? w.inlineFormat : null
+            })
         }
     };
 

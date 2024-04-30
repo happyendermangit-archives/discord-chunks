@@ -1,6 +1,9 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
+        cssClasses: function() {
+            return d
+        },
         default: function() {
             return _
         }
@@ -28,7 +31,8 @@ function(e, t, n) {
         syntaxAfter: o.syntaxAfter,
         codeBlockText: o.codeBlockText,
         codeBlockSyntax: o.codeBlockSyntax,
-        codeBlockLang: o.codeBlockLang
+        codeBlockLang: o.codeBlockLang,
+        subtext: o.subtext
     };
 
     function _(e, t) {

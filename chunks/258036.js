@@ -4,7 +4,6 @@ function(e) {
         buttonWithSelect: "buttonWithSelect_eaaa35",
         cardsContainer: "cardsContainer__59327",
         clanCard: "clanCard_ea2802",
-        clanCardCenter: "clanCardCenter__00094",
         clanCardCenterContainer: "clanCardCenterContainer__3c574",
         clanCardInner: "clanCardInner_d227d8 clanCard_ea2802",
         clanCardInnerContainer: "clanCardInnerContainer_ce1024",

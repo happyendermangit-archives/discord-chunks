@@ -34,9 +34,9 @@ function(e, t, n) {
     let T = ["http:", "https:", "discord:"],
         f = [_.AST_KEY.TEXT, _.AST_KEY.UNDERLINE, _.AST_KEY.STRONG, _.AST_KEY.ITALICS, _.AST_KEY.STRIKETHROUGH, _.AST_KEY.INLINE_CODE, _.AST_KEY.SPOILER, _.AST_KEY.LINE_BREAK, _.AST_KEY.TIMESTAMP],
         S = [...f, _.AST_KEY.EMOJI, _.AST_KEY.CUSTOM_EMOJI],
-        h = [_.AST_KEY.LIST, _.AST_KEY.HEADING, _.AST_KEY.BLOCK_QUOTE],
+        h = [_.AST_KEY.LIST, _.AST_KEY.HEADING, _.AST_KEY.BLOCK_QUOTE, _.AST_KEY.SUBTEXT],
         A = [_.AST_KEY.TEXT],
-        m = [_.AST_KEY.UNDERLINE, _.AST_KEY.STRONG, _.AST_KEY.ITALICS, _.AST_KEY.STRIKETHROUGH, _.AST_KEY.INLINE_CODE, _.AST_KEY.SPOILER, _.AST_KEY.LINE_BREAK, _.AST_KEY.TIMESTAMP, _.AST_KEY.EMOJI, _.AST_KEY.CUSTOM_EMOJI, _.AST_KEY.LIST, _.AST_KEY.HEADING, _.AST_KEY.BLOCK_QUOTE];
+        m = [_.AST_KEY.UNDERLINE, _.AST_KEY.STRONG, _.AST_KEY.ITALICS, _.AST_KEY.STRIKETHROUGH, _.AST_KEY.INLINE_CODE, _.AST_KEY.SPOILER, _.AST_KEY.LINE_BREAK, _.AST_KEY.TIMESTAMP, _.AST_KEY.EMOJI, _.AST_KEY.CUSTOM_EMOJI, _.AST_KEY.LIST, _.AST_KEY.HEADING, _.AST_KEY.BLOCK_QUOTE, _.AST_KEY.SUBTEXT];
 
     function N(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
@@ -120,6 +120,7 @@ function(e, t, n) {
                         case _.AST_KEY.BLOCK_QUOTE:
                         case _.AST_KEY.LIST:
                         case _.AST_KEY.HEADING:
+                        case _.AST_KEY.SUBTEXT:
                             n += "<".concat(i.type, "Content>");
                             break;
                         default:

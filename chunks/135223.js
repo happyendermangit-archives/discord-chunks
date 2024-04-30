@@ -40,14 +40,13 @@ function(e, t, n) {
                     else if ("syntaxAfter" === e && null != s)
                     for (let e of s.attributes) I["after_".concat(e)] = !0;
                 for (let [t, n] of E) {
-                    if (r.EditorUtils.isVoid(e, t)) continue;
-                    let i = {
+                    let t = {
                         anchor: r.EditorUtils.start(e, n),
                         focus: r.EditorUtils.end(e, n)
                     };
-                    r.PointUtils.isBefore(i.anchor, c.anchor) && (i.anchor = c.anchor), r.PointUtils.isAfter(i.focus, c.focus) && (i.focus = c.focus), _.push({
+                    r.PointUtils.isBefore(t.anchor, c.anchor) && (t.anchor = c.anchor), r.PointUtils.isAfter(t.focus, c.focus) && (t.focus = c.focus), _.push({
                         ...I,
-                        ...i
+                        ...t
                     })
                 }
             }

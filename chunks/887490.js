@@ -32,7 +32,7 @@ function(e, t, n) {
     var i = n("512722"),
         r = n.n(i),
         s = n("327432"),
-        a = n("136035"),
+        a = n("207470"),
         o = n("339227"),
         l = n("42530");
     n("789952");
@@ -210,7 +210,10 @@ function(e, t, n) {
             markdown(e, t, n) {
                 var i;
                 let r = "line" === e.type && (null === (i = e.codeBlockState) || void 0 === i ? void 0 : i.wasInCodeBlock) === !0,
-                    s = e.children.map(e => E.isText(e) ? e.text : " "),
+                    s = e.children.map(e => {
+                        var t;
+                        return E.isText(e) ? e.text : "((element:".concat(null !== (t = e.type) && void 0 !== t ? t : "unknown", "))")
+                    }),
                     a = s.join("");
                 return {
                     entries: o.parse(a, null != t ? t : null, r, n),
