@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return N
+            return p
         }
     });
     var i = n("735250"),
@@ -15,104 +15,121 @@ function(e, t, n) {
         d = n("314897"),
         _ = n("271383"),
         c = n("594174"),
-        E = n("963202"),
-        I = n("645896"),
-        T = n("905362"),
-        f = n("353093"),
-        S = n("981631"),
-        h = n("689938"),
-        A = n("917013");
+        E = n("626135"),
+        I = n("963202"),
+        T = n("645896"),
+        f = n("905362"),
+        S = n("353093"),
+        h = n("981631"),
+        A = n("689938"),
+        m = n("917013");
 
-    function m(e) {
+    function N(e) {
         e.stopPropagation()
     }
 
-    function N(e) {
+    function p(e) {
         var t;
         let {
-            clan: N,
-            isLoading: p,
-            onClose: O
-        } = e, R = (0, I.useClanInfo)(null !== (t = null == N ? void 0 : N.identityGuildId) && void 0 !== t ? t : null), C = null == N ? void 0 : N.tag, g = (0, E.useIsInUserClanExperiment)(), L = null == N ? void 0 : N.identityGuildId, D = (0, a.useStateFromStores)([d.default], () => d.default.getId()), v = (0, a.useStateFromStores)([_.default], () => null != L ? _.default.getMember(L, D) : null, [L, D]), M = (0, a.useStateFromStores)([c.default], () => c.default.getUser(D), [D]), y = (null == v ? void 0 : v.joinedAt) != null, P = (0, f.isGuildAdoptedUserClanIdentity)(L, null == M ? void 0 : M.clan), U = null != (0, l.default)(L), b = r.useCallback(e => {
-            null != L && (e.stopPropagation(), e.preventDefault(), null == O || O(), (0, T.openAdoptClanIdentityModal)(L))
-        }, [L, O]), G = r.useCallback(e => {
-            if (null != R) e.stopPropagation(), e.preventDefault(), null == O || O(), !U && (0, s.openModalLazy)(async () => {
-                let {
-                    default: e
-                } = await Promise.all([n.e("99387"), n.e("80026"), n.e("18482")]).then(n.bind(n, "767593"));
-                return t => (0, i.jsx)(e, {
-                    ...t,
-                    clan: R
-                })
+            clan: p,
+            isLoading: O,
+            onClose: R,
+            source: C
+        } = e, g = (0, T.useClanInfo)(null !== (t = null == p ? void 0 : p.identityGuildId) && void 0 !== t ? t : null), L = null == p ? void 0 : p.tag, D = (0, I.useIsInUserClanExperiment)(), v = null == p ? void 0 : p.identityGuildId, M = (0, a.useStateFromStores)([d.default], () => d.default.getId()), y = (0, a.useStateFromStores)([_.default], () => null != v ? _.default.getMember(v, M) : null, [v, M]), P = (0, a.useStateFromStores)([c.default], () => c.default.getUser(M), [M]), U = (null == y ? void 0 : y.joinedAt) != null, b = (0, S.isGuildAdoptedUserClanIdentity)(v, null == P ? void 0 : P.clan), G = null != (0, l.default)(v);
+        r.useEffect(() => {
+            E.default.track(h.AnalyticEvents.CLAN_PROFILE_VIEWED, {
+                guild_id: v,
+                is_member: U,
+                has_join_request: G,
+                source: C
             })
-        }, [R, U, O]), w = r.useCallback(() => {
-            null != L && (0, u.transitionTo)(S.Routes.GUILD_MEMBER_VERIFICATION(L))
-        }, [L]), B = r.useCallback(() => {
-            null != L && (0, u.transitionToGuild)(L)
-        }, [L]), k = r.useMemo(() => {
-            var e, t;
-            let n = null !== (t = null == R ? void 0 : null === (e = R.branding) || void 0 === e ? void 0 : e.primaryColor) && void 0 !== t ? t : null,
-                i = {
-                    color: null != n ? s.Button.Colors.CUSTOM : s.Button.Colors.BRAND,
-                    size: s.Button.Sizes.SMALL,
-                    fullWidth: !0,
-                    className: A.button
-                };
-            return null != n && (i = {
-                ...i,
-                style: {
-                    backgroundColor: n,
-                    color: (0, f.getAccessibleTextColor)(n).hex()
+        }, [v, U, G, C]);
+        let w = r.useCallback(e => {
+                null != v && (e.stopPropagation(), e.preventDefault(), null == R || R(), (0, f.openAdoptClanIdentityModal)(v))
+            }, [v, R]),
+            B = r.useCallback(e => {
+                if (null != g) e.stopPropagation(), e.preventDefault(), null == R || R(), !G && (0, s.openModalLazy)(async () => {
+                    let {
+                        default: e
+                    } = await Promise.all([n.e("99387"), n.e("80026"), n.e("18482")]).then(n.bind(n, "767593"));
+                    return t => (0, i.jsx)(e, {
+                        ...t,
+                        clan: g
+                    })
+                })
+            }, [g, G, R]),
+            k = r.useCallback(() => {
+                null != v && (0, u.transitionTo)(h.Routes.GUILD_MEMBER_VERIFICATION(v))
+            }, [v]),
+            V = r.useCallback(() => {
+                null != v && (0, u.transitionToGuild)(v)
+            }, [v]),
+            x = r.useMemo(() => {
+                var e, t;
+                let n = null !== (t = null == g ? void 0 : null === (e = g.branding) || void 0 === e ? void 0 : e.primaryColor) && void 0 !== t ? t : null,
+                    i = {
+                        color: null != n ? s.Button.Colors.CUSTOM : s.Button.Colors.BRAND,
+                        size: s.Button.Sizes.SMALL,
+                        fullWidth: !0,
+                        className: m.button
+                    };
+                return null != n && (i = {
+                    ...i,
+                    style: {
+                        backgroundColor: n,
+                        color: (0, S.getAccessibleTextColor)(n).hex()
+                    }
+                }), i
+            }, [g]),
+            F = r.useMemo(() => {
+                switch (!0) {
+                    case !D:
+                        return null;
+                    case !U && G:
+                        return (0, i.jsx)(s.Button, {
+                            onClick: k,
+                            ...x,
+                            children: A.default.Messages.CLAN_USER_APPLICATION_EXISTS_TAG_GUILD_PROFILE_CTA
+                        });
+                    case !U:
+                        return (0, i.jsx)(s.Button, {
+                            onClick: B,
+                            ...x,
+                            children: A.default.Messages.CLAN_USER_APPLY_TAG_GUILD_PROFILE_CTA
+                        });
+                    case U && !b:
+                        return (0, i.jsx)(s.Button, {
+                            onClick: w,
+                            ...x,
+                            children: A.default.Messages.CLAN_USER_ADOPT_TAG_GUILD_PROFILE_CTA
+                        });
+                    case U && b:
+                        return (0, i.jsx)(s.Button, {
+                            onClick: V,
+                            ...x,
+                            children: A.default.Messages.CLAN_USER_GO_TO_CLAN_CTA
+                        });
+                    default:
+                        return null
                 }
-            }), i
-        }, [R]), V = r.useMemo(() => {
-            switch (!0) {
-                case !g:
-                    return null;
-                case !y && U:
-                    return (0, i.jsx)(s.Button, {
-                        onClick: w,
-                        ...k,
-                        children: h.default.Messages.CLAN_USER_APPLICATION_EXISTS_TAG_GUILD_PROFILE_CTA
-                    });
-                case !y:
-                    return (0, i.jsx)(s.Button, {
-                        onClick: G,
-                        ...k,
-                        children: h.default.Messages.CLAN_USER_APPLY_TAG_GUILD_PROFILE_CTA
-                    });
-                case y && !P:
-                    return (0, i.jsx)(s.Button, {
-                        onClick: b,
-                        ...k,
-                        children: h.default.Messages.CLAN_USER_ADOPT_TAG_GUILD_PROFILE_CTA
-                    });
-                case y && P:
-                    return (0, i.jsx)(s.Button, {
-                        onClick: B,
-                        ...k,
-                        children: h.default.Messages.CLAN_USER_GO_TO_CLAN_CTA
-                    });
-                default:
-                    return null
-            }
-        }, [k, b, G, w, B, U, P, y, g]), x = r.useMemo(() => ({
-            className: A.container,
-            onClick: m
-        }), []);
-        return null == C || null == R || null == L || p ? (0, i.jsx)("div", {
-            ...x,
+            }, [x, w, B, k, V, G, b, U, D]),
+            H = r.useMemo(() => ({
+                className: m.container,
+                onClick: N
+            }), []);
+        return null == L || null == g || null == v || O ? (0, i.jsx)("div", {
+            ...H,
             children: (0, i.jsx)(s.Spinner, {})
         }) : (0, i.jsxs)("div", {
-            ...x,
+            ...H,
             children: [(0, i.jsx)(o.ClanDiscoveryCardView, {
-                clan: R,
-                className: A.cardContainer,
-                isMember: y,
+                clan: g,
+                className: m.cardContainer,
+                isMember: U,
                 expanded: !0
-            }), null != V && (0, i.jsx)("div", {
-                className: A.buttonContainer,
-                children: V
+            }), null != F && (0, i.jsx)("div", {
+                className: m.buttonContainer,
+                children: F
             })]
         })
     }

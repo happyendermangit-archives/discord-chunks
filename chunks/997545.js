@@ -657,7 +657,7 @@ function(e, t, n) {
                     rtxType: null !== (a = null == o ? void 0 : o.rtxPayloadType) && void 0 !== a ? a : 0,
                     params: this.getCodecParams(o.name, !0)
                 };
-                d.push(n), o.name === t && (_ = {
+                this.experimentFlags.has(p.ExperimentFlags.RESET_DECODER_ON_ERRORS) && (n.params["reset-on-errors"] = "1"), this.experimentFlags.has(p.ExperimentFlags.SOFTWARE_FALLBACK_ON_ERRORS) && (n.params["fallback-after-errors"] = "3"), this.experimentFlags.has(p.ExperimentFlags.SOFTWARE_FALLBACK_ON_CONSECUTIVE_ERRORS) && (n.params["fallback-on-consecutive-errors"] = "1"), d.push(n), o.name === t && (_ = {
                     ...n,
                     params: this.getCodecParams(o.name, !1)
                 }, this.experimentFlags.has(p.ExperimentFlags.VIDEOTOOLBOX_RATE_CONTROL) && (_.params["fixed-rate-presentation-timestamps"] = "1"))
