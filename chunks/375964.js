@@ -17302,6 +17302,8 @@ function(e) {
         GUILD_POPOUT_ACTIVITY_EVENT_CARD_ARIA: "!!{eventName}!! is happening now",
         GUILD_POPOUT_INVITES_PAUSED: "Invites are paused for this server. [View invite settings](onClick)",
         GUILD_POPOUT_VIEWING_AS_ROLES: "You are viewing as roles. Notifications may be in channels you can’t see. [View role settings](onClick)",
-        GUILD_POPOUT_JOINED: "Joined"
+        GUILD_POPOUT_JOINED: "Joined",
+        GUILD_POPOUT_EMPTY_PROMPT_HEADER: "No one's in voice yet",
+        GUILD_POPOUT_EMPTY_PROMPT_BODY: "Voice channels are for hanging out. When you're ready to talk, just hop in."
     })
 }

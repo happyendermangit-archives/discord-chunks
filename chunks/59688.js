@@ -3,6 +3,9 @@ function(e, t, n) {
     n.r(t), n.d(t, {
         useCanShowNewGuildTooltip: function() {
             return r
+        },
+        useCanShowNewGuildTooltipActivityEmptyState: function() {
+            return s
         }
     });
     let i = (0, n("818083").createExperiment)({
@@ -35,6 +38,17 @@ function(e, t, n) {
             showNewGuildTooltip: e
         } = i.useExperiment({
             location: "useCanShowNewGuildTooltip"
+        }, {
+            autoTrackExposure: !0
+        });
+        return e
+    }
+
+    function s() {
+        let {
+            showNewGuildTooltipActivityEmptyState: e
+        } = i.useExperiment({
+            location: "useCanShowNewGuildTooltipActivityEmptyState"
         }, {
             autoTrackExposure: !0
         });

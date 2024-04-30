@@ -56,8 +56,51 @@ function(e, t, n) {
             r = (0, a.useStateFromStoresArray)([u.default], () => u.default.getGuildScheduledEventsForGuild(t).filter(e => (0, u.isGuildScheduledEventActive)(e)).map(e => ({
                 category: N.ActivityCategory.EVENT,
                 event: e
-            })), [t]);
-        return function(e) {
+            })), [t]),
+            _ = (0, a.useStateFromStores)([I.default, S.default, o.default, E.default], () => {
+                let i = I.default.getRelationships(),
+                    r = m.default.keys(i).filter(e => i[e] === p.RelationshipTypes.BLOCKED),
+                    s = S.default.getVoiceStates(t),
+                    a = Object.keys(s);
+                return 0 === a.length ? [] : a.filter(t => null == s[t].filter(h.isNotNullish).find(e => {
+                    let {
+                        user: t
+                    } = e;
+                    return r.includes(t.id)
+                }) && t !== e.afkChannelId && n.includes(t)).map(e => {
+                    let t = o.default.getEmbeddedActivitiesForChannel(e);
+                    if (t.length > 0)
+                        for (let e of t) return {
+                            category: N.ActivityCategory.EMBEDDED_ACTIVITY,
+                            embeddedActivity: e
+                        };
+                    let n = s[e].filter(h.isNotNullish);
+                    for (let t of n) {
+                        let i = E.default.findActivity(t.user.id, g(t));
+                        if (null != i && !(0, l.default)(i)) return {
+                            category: N.ActivityCategory.GAMING,
+                            channelId: e,
+                            game: i,
+                            voiceStates: n
+                        }
+                    }
+                    let i = n.map(e => {
+                        let {
+                            user: t
+                        } = e;
+                        return t.id
+                    });
+                    return {
+                        category: N.ActivityCategory.HANGOUT,
+                        channelId: e,
+                        userIds: i
+                    }
+                })
+            }, [n, e.afkChannelId, t]);
+        return 0 === _.length && 0 === r.length ? n.slice(0, 3).map(e => ({
+            category: N.ActivityCategory.EMPTY,
+            channelId: e
+        })) : (function(e) {
             return (0, i.orderBy)(e, [e => (function(e) {
                 let t = e => e > 0 ? Math.log(e + 1) : 0,
                     n = e => e.map(e => {
@@ -81,45 +124,7 @@ function(e, t, n) {
                     return t.id
                 })))), r = r > 0 ? r * i : 1e-5 * i
             })(e)], ["desc"])
-        }([...(0, a.useStateFromStores)([I.default, S.default, o.default, E.default], () => {
-            let i = I.default.getRelationships(),
-                r = m.default.keys(i).filter(e => i[e] === p.RelationshipTypes.BLOCKED),
-                s = S.default.getVoiceStates(t);
-            return Object.keys(s).filter(t => null == s[t].filter(h.isNotNullish).find(e => {
-                let {
-                    user: t
-                } = e;
-                return r.includes(t.id)
-            }) && t !== e.afkChannelId && n.includes(t)).map(e => {
-                let t = o.default.getEmbeddedActivitiesForChannel(e);
-                if (t.length > 0)
-                    for (let e of t) return {
-                        category: N.ActivityCategory.EMBEDDED_ACTIVITY,
-                        embeddedActivity: e
-                    };
-                let n = s[e].filter(h.isNotNullish);
-                for (let t of n) {
-                    let i = E.default.findActivity(t.user.id, g(t));
-                    if (null != i && !(0, l.default)(i)) return {
-                        category: N.ActivityCategory.GAMING,
-                        channelId: e,
-                        game: i,
-                        voiceStates: n
-                    }
-                }
-                let i = n.map(e => {
-                    let {
-                        user: t
-                    } = e;
-                    return t.id
-                });
-                return {
-                    category: N.ActivityCategory.HANGOUT,
-                    channelId: e,
-                    userIds: i
-                }
-            })
-        }, [n, e.afkChannelId, t]), ...r])
+        })([..._, ...r]).slice(0, 3)
     }
     let g = e => t => [p.ActivityTypes.PLAYING, p.ActivityTypes.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId);
 
