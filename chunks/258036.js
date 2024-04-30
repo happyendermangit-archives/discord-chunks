@@ -24,7 +24,6 @@ function(e) {
         upsellDetails: "upsellDetails_dbe31a",
         upsellIcon: "upsellIcon__05e46",
         upsellSelect: "upsellSelect_e29580",
-        upsellSelectWrapper: "upsellSelectWrapper__63bb4",
         upsellTitle: "upsellTitle__75ee7"
     }
 }

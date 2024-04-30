@@ -16,6 +16,9 @@ function(e, t, n) {
         ThemeContextFlags: function() {
             return a.ThemeContextFlags
         },
+        ThemeContextProvider: function() {
+            return a.ThemeContextProvider
+        },
         WCAGContrastRatios: function() {
             return l.WCAGContrastRatios
         },
