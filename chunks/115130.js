@@ -90,7 +90,7 @@ function(e, t, n) {
         },
         DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: function(e) {
             let {
-                items: t
+                applications: t
             } = e;
             c = "loaded", E = t.filter(e => null != e.flags && (0, o.hasFlag)(e.flags, l.ApplicationFlags.EMBEDDED))
         },

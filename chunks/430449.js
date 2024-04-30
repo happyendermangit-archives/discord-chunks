@@ -8,7 +8,24 @@ function(e, t, n) {
     (s = i || (i = {}))[s.NOT_FETCHED = 0] = "NOT_FETCHED", s[s.FETCHING = 1] = "FETCHING", s[s.FETCH_SUCCESS = 2] = "FETCH_SUCCESS";
     let E = {},
         I = {};
-    class T extends(r = _.default.Store) {
+
+    function T(e) {
+        let {
+            assets: t
+        } = e, n = {
+            ...E
+        };
+        for (let e in t) {
+            var i;
+            let r = t[e];
+            n[e] = 2, I[e] = {
+                assets: null !== (i = d().keyBy(r, "name")) && void 0 !== i ? i : {},
+                lastUpdated: Date.now()
+            }
+        }
+        E = n
+    }
+    class f extends(r = _.default.Store) {
         getApplicationAssetFetchState(e) {
             var t;
             return null !== (t = E[e]) && void 0 !== t ? t : 0
@@ -26,12 +43,12 @@ function(e, t, n) {
             return I[e]
         }
     }
-    l = "ApplicationAssetsStore", (o = "displayName") in(a = T) ? Object.defineProperty(a, o, {
+    l = "ApplicationAssetsStore", (o = "displayName") in(a = f) ? Object.defineProperty(a, o, {
         value: l,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : a[o] = l, t.default = new T(c.default, {
+    }) : a[o] = l, t.default = new f(c.default, {
         APPLICATION_ASSETS_FETCH: function(e) {
             let {
                 applicationId: t
@@ -63,21 +80,7 @@ function(e, t, n) {
                 }
             } else delete I[t]
         },
-        EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS: function(e) {
-            let {
-                assets: t
-            } = e, n = {
-                ...E
-            };
-            for (let e in t) {
-                var i;
-                let r = t[e];
-                n[e] = 2, I[e] = {
-                    assets: null !== (i = d().keyBy(r, "name")) && void 0 !== i ? i : {},
-                    lastUpdated: Date.now()
-                }
-            }
-            E = n
-        }
+        EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS: T,
+        DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: T
     })
 }

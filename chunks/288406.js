@@ -39,13 +39,13 @@ function(e, t, n) {
                 allowAnimatedEmoji: o,
                 "aria-label": l,
                 isLocked: d
-            } = e, I = (() => {
+            } = e, f = (() => {
                 if (!t.useSpriteSheet) {
                     var e;
                     let r = null == t.id ? t.url : E.default.getEmojiURL({
                         id: t.id,
                         animated: o && t.animated,
-                        size: 48
+                        size: I.EMOJI_URL_BASE_SIZE
                     });
                     return null != r ? (0, i.jsx)(_.default, {
                         className: T.lockedEmoji,
@@ -66,7 +66,7 @@ function(e, t, n) {
                 })
             })();
             return (0, i.jsxs)(r.Fragment, {
-                children: [I, d ? (0, i.jsx)("div", {
+                children: [f, d ? (0, i.jsx)("div", {
                     className: T.emojiLockIconContainer,
                     children: (0, i.jsx)(c.default, {
                         width: 16,

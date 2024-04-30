@@ -1402,6 +1402,7 @@ function(_, E, e) {
             PRICE_TIERS: "/store/price-tiers",
             TEAMS: "/teams",
             APPLICATIONS: "/applications",
+            APPLICATIONS_WITH_ASSETS: "/applications-with-assets",
             APPLICATION_OWNER_TRANSFER: _ => "/applications/".concat(_, "/transfer"),
             HUB_WAITLIST_SIGNUP: "/hub-waitlist/signup",
             HUB_EMAIL_VERIFY: "/guilds/automations/email-domain-lookup/verify",

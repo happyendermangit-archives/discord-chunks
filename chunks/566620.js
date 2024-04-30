@@ -181,16 +181,18 @@ function(e, t, n) {
             s.default.dispatch({
                 type: "DEVELOPER_ACTIVITY_SHELF_FETCH_START"
             });
-            let e = (await r.HTTP.get({
-                url: g.Endpoints.APPLICATIONS,
-                query: {
-                    with_team_applications: !0
-                },
-                oldFormErrors: !0
-            })).body.map(e => T.default.createFromServer(e));
+            let e = await r.HTTP.get({
+                    url: g.Endpoints.APPLICATIONS_WITH_ASSETS,
+                    query: {
+                        with_team_applications: !0
+                    },
+                    oldFormErrors: !0
+                }),
+                t = e.body.applications.map(e => T.default.createFromServer(e));
             s.default.dispatch({
                 type: "DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS",
-                items: e
+                applications: t,
+                assets: e.body.assets
             })
         } catch (e) {
             s.default.dispatch({
