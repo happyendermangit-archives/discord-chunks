@@ -13,8 +13,6 @@ function(e) {
         colorPickerContainer: "colorPickerContainer__9b7d0",
         colorPickerGrid: "colorPickerGrid_ba6389",
         colorsContainer: "colorsContainer__2dee9",
-        container: "container__0d48f",
-        content: "content__4e550",
         noWrap: "noWrap__133e4"
     }
 }
