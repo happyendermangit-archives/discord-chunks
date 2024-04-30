@@ -1,15 +1,21 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
+        openGameLink: function() {
+            return u
+        },
         openQuestsRewardCodeModal: function() {
-            return s
+            return l
         }
     });
     var i = n("735250");
     n("470079");
-    var r = n("481060");
+    var r = n("481060"),
+        s = n("782568"),
+        a = n("49012"),
+        o = n("617136");
 
-    function s(e) {
+    function l(e) {
         let {
             questId: t,
             location: s
@@ -23,6 +29,19 @@ function(e, t, n) {
                 questId: t,
                 location: s
             })
+        })
+    }
+
+    function u(e, t) {
+        (0, a.handleClick)({
+            href: e.config.getGameLink,
+            onConfirm: () => {
+                (0, o.trackQuestContentClicked)({
+                    questId: e.id,
+                    questContent: t.content,
+                    questContentCTA: t.ctaContent
+                }), (0, s.default)(e.config.getGameLink)
+            }
         })
     }
 }
