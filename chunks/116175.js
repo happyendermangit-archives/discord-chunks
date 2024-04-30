@@ -14,7 +14,7 @@ function(e, t, n) {
         getRandomClanBadgePreset: function() {
             return a
         }
-    }), (r = i || (i = {}))[r.SWORD = 0] = "SWORD", r[r.WATER_DROP = 1] = "WATER_DROP", r[r.SKULL = 2] = "SKULL", r[r.TOADSTOOL = 3] = "TOADSTOOL", r[r.MOON = 4] = "MOON", r[r.LIGHTNING = 5] = "LIGHTNING", r[r.LEAF = 6] = "LEAF", r[r.HEART = 7] = "HEART", r[r.FIRE = 8] = "FIRE", r[r.COMPASS = 9] = "COMPASS", r[r.SWORD_10 = 10] = "SWORD_10", r[r.SWORD_11 = 11] = "SWORD_11", r[r.SWORD_12 = 12] = "SWORD_12", r[r.SWORD_13 = 13] = "SWORD_13", r[r.SWORD_14 = 14] = "SWORD_14", r[r.SWORD_15 = 15] = "SWORD_15", r[r.SWORD_16 = 16] = "SWORD_16", r[r.SWORD_17 = 17] = "SWORD_17", r[r.SWORD_18 = 18] = "SWORD_18", r[r.SWORD_19 = 19] = "SWORD_19", r[r.SWORD_20 = 20] = "SWORD_20";
+    }), (r = i || (i = {}))[r.SWORD = 0] = "SWORD", r[r.WATER_DROP = 1] = "WATER_DROP", r[r.SKULL = 2] = "SKULL", r[r.TOADSTOOL = 3] = "TOADSTOOL", r[r.MOON = 4] = "MOON", r[r.LIGHTNING = 5] = "LIGHTNING", r[r.LEAF = 6] = "LEAF", r[r.HEART = 7] = "HEART", r[r.FIRE = 8] = "FIRE", r[r.COMPASS = 9] = "COMPASS", r[r.CROSSHAIRS = 10] = "CROSSHAIRS", r[r.FLOWER = 11] = "FLOWER", r[r.FORCE = 12] = "FORCE", r[r.GEM = 13] = "GEM", r[r.LAVA = 14] = "LAVA", r[r.PSYCHIC = 15] = "PSYCHIC", r[r.SMOKE = 16] = "SMOKE", r[r.SNOW = 17] = "SNOW", r[r.SOUND = 18] = "SOUND", r[r.SUN = 19] = "SUN", r[r.SWORD_20 = 20] = "SWORD_20";
     let s = [{
         primary: "#ff1c90",
         secondary: "#ff7fc0"

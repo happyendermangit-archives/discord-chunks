@@ -21,8 +21,8 @@ function(e, t, n) {
         C = n("606304"),
         g = n("979651"),
         L = n("626135"),
-        D = n("81063"),
-        v = n("70956"),
+        v = n("81063"),
+        D = n("70956"),
         M = n("823379"),
         y = n("781518"),
         P = n("616922"),
@@ -38,13 +38,13 @@ function(e, t, n) {
     }
     let G = S.default.get(U.PlatformTypes.SPOTIFY),
         w = "hm://pusher/v1/connections/",
-        B = 30 * v.default.Millis.SECOND,
-        k = 30 * v.default.Millis.SECOND,
-        V = 5 * v.default.Millis.MINUTE,
-        x = 5 * v.default.Millis.SECOND,
-        F = 1.5 * v.default.Millis.SECOND,
-        H = 1 * v.default.Millis.MINUTE,
-        Y = 3 * v.default.Millis.SECOND;
+        B = 30 * D.default.Millis.SECOND,
+        k = 30 * D.default.Millis.SECOND,
+        V = 5 * D.default.Millis.MINUTE,
+        x = 5 * D.default.Millis.SECOND,
+        F = 1.5 * D.default.Millis.SECOND,
+        H = 1 * D.default.Millis.MINUTE,
+        Y = 3 * D.default.Millis.SECOND;
     (l = a || (a = {})).PLAYER_STATE_CHANGED = "PLAYER_STATE_CHANGED", l.DEVICE_STATE_CHANGED = "DEVICE_STATE_CHANGED";
     let j = {
             MESSAGE: "message",
@@ -56,10 +56,10 @@ function(e, t, n) {
         },
         K = new A.default("Spotify"),
         z = new I.Timeout,
+        Z = new I.Timeout,
         X = new I.Timeout,
         Q = new I.Timeout,
         q = new I.Timeout,
-        Z = new I.Timeout,
         J = {},
         $ = {},
         ee = {},
@@ -285,7 +285,7 @@ function(e, t, n) {
                     checkSoundSharing: !0,
                     checkSoundboardSounds: !1
                 });
-            t && n && null != i ? (z.start(k, eI, !1), X.stop()) : X.start(100, () => z.stop(), !1)
+            t && n && null != i ? (z.start(k, eI, !1), Z.stop()) : Z.start(100, () => z.stop(), !1)
         }
         return !1
     }
@@ -381,10 +381,10 @@ function(e, t, n) {
                 let {
                     userId: e
                 } = r, t = es(e);
-                if (null == t) return Q.start(V, () => {
+                if (null == t) return X.start(V, () => {
                     null != r && r.userId === e && (0, h.default)()
                 }), !1;
-                Q.stop();
+                X.stop();
                 let {
                     sync_id: n,
                     timestamps: i,
@@ -460,7 +460,7 @@ function(e, t, n) {
                 return t.replace(/;/g, "")
             }).join("; "));
             let T = {},
-                f = null != a.image ? (0, D.getAssetFromImageURL)(U.PlatformTypes.SPOTIFY, a.image.url) : null;
+                f = null != a.image ? (0, v.getAssetFromImageURL)(U.PlatformTypes.SPOTIFY, a.image.url) : null;
             null != a.image && null != f && (T.large_image = f), "single" !== a.type && (T.large_text = a.name), null != E && (t = E.uri), n = null != r && null != r.partyId ? r.partyId : "".concat(P.SPOTIFY_PARTY_PREFIX).concat(N.default.getId());
             let S = o.length > 128 ? o.substring(0, 125) + "..." : o,
                 h = {
@@ -556,9 +556,9 @@ function(e, t, n) {
                 S = null != l && null != r && 0 === o && !n;
             !S && (ee[t] = f);
             let A = i;
-            if (i = d().values(ee).find(e => null != e), eT(N.default.getId()), null == a || S ? q.stop() : q.start(a.duration - o + x, () => er(c.id)), null != r && (!n && o > 0 || null == l || null != f && r.trackId !== f.track.id) ? (K.info("Listen along active but playback stopped or track changed. Stopping listen along in ".concat(x, "ms")), Z.start(x, () => {
+            if (i = d().values(ee).find(e => null != e), eT(N.default.getId()), null == a || S ? Q.stop() : Q.start(a.duration - o + x, () => er(c.id)), null != r && (!n && o > 0 || null == l || null != f && r.trackId !== f.track.id) ? (K.info("Listen along active but playback stopped or track changed. Stopping listen along in ".concat(x, "ms")), q.start(x, () => {
                     K.info("Stopping listening along"), (0, h.default)(), er(c.id)
-                })) : Z.isStarted() && (K.info("Listen along stop cancelled as playback of track resumed"), Z.stop()), A === i || null == I && null == f || null != I && null != f && I.track.id === f.track.id && I.startTime === f.startTime) return _;
+                })) : q.isStarted() && (K.info("Listen along stop cancelled as playback of track resumed"), q.stop()), A === i || null == I && null == f || null != I && null != f && I.track.id === f.track.id && I.startTime === f.startTime) return _;
             null != a && (T.default.dispatch({
                 type: "SPOTIFY_NEW_TRACK",
                 track: a,

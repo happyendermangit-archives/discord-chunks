@@ -43,12 +43,12 @@ function(e, t, n) {
             let C = (0, _.usePremiumTrialOffer)(),
                 g = (0, d.usePremiumDiscountOffer)(),
                 L = (null == C ? void 0 : null === (t = C.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === A.PremiumSubscriptionSKUs.TIER_0,
-                D = null != C || null != g;
+                v = null != C || null != g;
             return (0, i.jsxs)("div", {
                 className: a()(N.upsellWrapper, {
-                    [N.unifyTrialUpsell]: D
+                    [N.unifyTrialUpsell]: v
                 }),
-                children: [D ? (0, i.jsx)(c.default, {
+                children: [v ? (0, i.jsx)(c.default, {
                     trialOffer: C,
                     discountOffer: g,
                     onClose: O,
@@ -77,9 +77,9 @@ function(e, t, n) {
                             onClick: f
                         })
                     })]
-                }), !D && (0, i.jsx)(S.default, {
+                }), !v && (0, i.jsx)(S.default, {
                     analyticsSection: h.AnalyticsSections.EXPRESSION_PICKER,
-                    buttonText: D ? L ? m.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : m.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0
+                    buttonText: v ? L ? m.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : m.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0
                 }), (0, i.jsx)(o.Clickable, {
                     className: N.upsellClose,
                     onClick: O,

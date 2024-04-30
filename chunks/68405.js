@@ -23,7 +23,7 @@ function(e, t, n) {
             return G
         },
         resetSearch: function() {
-            return D
+            return v
         },
         search: function() {
             return g
@@ -35,7 +35,7 @@ function(e, t, n) {
             return p
         },
         trackSelectGIF: function() {
-            return v
+            return D
         }
     }), n("757143");
     var i = n("392711"),
@@ -123,7 +123,7 @@ function(e, t, n) {
     function g(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             i = arguments.length > 3 ? arguments[3] : void 0;
-        "" === e ? D() : (l.default.dispatch({
+        "" === e ? v() : (l.default.dispatch({
             type: "GIF_PICKER_QUERY",
             query: e
         }), n ? R(e, t, i) : C(e, t, i))
@@ -149,14 +149,14 @@ function(e, t, n) {
         })
     }
 
-    function D() {
+    function v() {
         l.default.dispatch({
             type: "GIF_PICKER_QUERY",
             query: ""
         })
     }
 
-    function v(e) {
+    function D(e) {
         let {
             type: t,
             index: n,

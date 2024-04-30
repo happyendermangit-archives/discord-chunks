@@ -78,9 +78,9 @@ function(e, t, n) {
                 content: i
             }), E = I(a), T = I(s), O = I(null != o ? o : ""), R = E.whitespaceSanitized, C = T.fullySanitized, g = O.fullySanitized, L = C.trim();
             if (0 === R.trim().length || 0 === L.length) return c();
-            let D = p(l().unescapeUrl(a)),
-                v = (0, u.default)(s).length > 0 || (0, u.default)(o).length > 0;
-            if (null == D || v) return c();
+            let v = p(l().unescapeUrl(a)),
+                D = (0, u.default)(s).length > 0 || (0, u.default)(o).length > 0;
+            if (null == v || D) return c();
             let M = {
                     ...n,
                     allowEscape: !1,
@@ -133,7 +133,7 @@ function(e, t, n) {
                 k = O.whitespaceSanitized,
                 {
                     target: V
-                } = D;
+                } = v;
             return {
                 content: B,
                 target: V,

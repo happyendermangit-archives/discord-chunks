@@ -11,7 +11,7 @@ function(e, t, n) {
             return p
         },
         getDaysRemaining: function() {
-            return D
+            return v
         },
         getFormattedPriceForCollectiblesProduct: function() {
             return E
@@ -44,7 +44,7 @@ function(e, t, n) {
             return c
         },
         isProductNew: function() {
-            return v
+            return D
         }
     }), n("47120");
     var i = n("392711"),
@@ -126,12 +126,12 @@ function(e, t, n) {
         },
         g = e => e.applicationId === d.COLLECTIBLES_APPLICATION_ID,
         L = e => 3.8 * e,
-        D = e => {
+        v = e => {
             let t = new Date,
                 n = Date.UTC(t.getFullYear(), t.getMonth(), t.getDate());
             return Math.floor((Date.UTC(e.getFullYear(), e.getMonth(), e.getDate()) - n) / 864e5)
         },
-        v = e => {
+        D = e => {
             let t = u.SHOP_CARD_PER_PRODUCT_NEW_BADGE_EXPIRY_SETTINGS[e];
             return null != t && new Date().getTime() < t
         }

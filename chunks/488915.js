@@ -49,7 +49,7 @@ function(e, t, n) {
             p.set(e.id, e)
         })(n)
     }
-    class D extends(r = _.Store) {
+    class v extends(r = _.Store) {
         getSubscriptionGroupListingsForApplicationFetchState(e) {
             var t;
             return null !== (t = R[e]) && void 0 !== t ? t : 0
@@ -87,12 +87,12 @@ function(e, t, n) {
             return O.values(m(t, e))
         }
     }
-    l = "ApplicationSubscriptionStore", (o = "displayName") in(a = D) ? Object.defineProperty(a, o, {
+    l = "ApplicationSubscriptionStore", (o = "displayName") in(a = v) ? Object.defineProperty(a, o, {
         value: l,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : a[o] = l, t.default = new D(E.default, {
+    }) : a[o] = l, t.default = new v(E.default, {
         LOGOUT: function() {
             N.clear(), p.clear(), O.clear(), R = {}, C = {}
         },

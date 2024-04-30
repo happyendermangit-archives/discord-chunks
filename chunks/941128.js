@@ -19,8 +19,8 @@ function(e, t, n) {
     (a = i || (i = {})).INSTALL = "Install", a.REPAIR = "Repair", (o = r || (r = {})).PATCH = "Patch", o.REPAIR = "Repair";
     let g = [C.DispatchErrorCodes.AUTHENTICATION_FAILED, C.DispatchErrorCodes.NOT_ENTITLED],
         L = "DispatchManagerStore",
-        D = [],
         v = [],
+        D = [],
         M = !1,
         y = null,
         P = null,
@@ -31,7 +31,7 @@ function(e, t, n) {
 
     function B() {
         let e = {
-            queue: D,
+            queue: v,
             paused: M,
             userActions: Array.from(b)
         };
@@ -39,7 +39,7 @@ function(e, t, n) {
     }
 
     function k() {
-        let e = D[0];
+        let e = v[0];
         if (null != e) {
             var t, n;
             let {
@@ -60,7 +60,7 @@ function(e, t, n) {
 
     function V(e, t) {
         let n = (0, m.getComboId)(e, t);
-        return D.findIndex(e => e.comboId === n)
+        return v.findIndex(e => e.comboId === n)
     }
 
     function x(e, t, n, i) {
@@ -69,15 +69,15 @@ function(e, t, n) {
                 comboId: r,
                 action: i
             },
-            a = v.indexOf(r); - 1 !== a && v.splice(a, 1);
+            a = D.indexOf(r); - 1 !== a && D.splice(a, 1);
         let o = V(e, t);
-        0 !== o && (n ? -1 === o && (D.push(s), k()) : (o > 0 && D.splice(o, 1), D.unshift(s), k())), !n && M && N.default.resume(), B()
+        0 !== o && (n ? -1 === o && (v.push(s), k()) : (o > 0 && v.splice(o, 1), v.unshift(s), k())), !n && M && N.default.resume(), B()
     }
 
     function F(e, t) {
         let n = (0, m.getComboId)(e, t),
-            i = v.indexOf(n); - 1 !== i && v.splice(i, 1);
-        let r = V(e, t); - 1 !== r && (D.splice(r, 1), B()), k()
+            i = D.indexOf(n); - 1 !== i && D.splice(i, 1);
+        let r = V(e, t); - 1 !== r && (v.splice(r, 1), B()), k()
     }
 
     function H(e) {
@@ -92,7 +92,7 @@ function(e, t, n) {
         let {
             applicationId: t,
             branchId: n
-        } = e, i = (0, m.getComboId)(t, n), r = v.indexOf(i); - 1 !== r && v.splice(r, 1)
+        } = e, i = (0, m.getComboId)(t, n), r = D.indexOf(i); - 1 !== r && D.splice(r, 1)
     }
 
     function j() {
@@ -114,14 +114,14 @@ function(e, t, n) {
                 paused: null,
                 userActions: null
             };
-            if (null != t.queue) D = t.queue.map(e => "string" == typeof e ? {
+            if (null != t.queue) v = t.queue.map(e => "string" == typeof e ? {
                 comboId: e,
                 action: "Patch"
             } : e);
             null != t.paused && (M = t.paused), null != t.userActions && (b = new Map(Array.from(t.userActions))), this.waitFor(O.default, S.default), this.syncWith([S.default], W), this.waitFor(O.default)
         }
         get activeItems() {
-            return D.map(e => {
+            return v.map(e => {
                 let {
                     comboId: t
                 } = e;
@@ -129,7 +129,7 @@ function(e, t, n) {
             })
         }
         get finishedItems() {
-            return v.map(m.convertComboId)
+            return D.map(m.convertComboId)
         }
         get paused() {
             return M
@@ -179,7 +179,7 @@ function(e, t, n) {
                 branchId: n
             } = e, i = V(t, n);
             if (i < 1) return !1;
-            D.splice(0, 0, D.splice(i, 1)[0]), k(), M && N.default.resume(), B()
+            v.splice(0, 0, v.splice(i, 1)[0]), k(), M && N.default.resume(), B()
         },
         DISPATCH_APPLICATION_REMOVE_FINISHED: Y,
         DISPATCH_APPLICATION_STATE_UPDATE: function(e) {
@@ -190,7 +190,7 @@ function(e, t, n) {
             let n = M;
             M = t.paused, y = t.currentTask, P = t.nextTask;
             let i = !1;
-            D = D.filter(e => {
+            v = v.filter(e => {
                 let {
                     comboId: t
                 } = e, {
@@ -198,7 +198,7 @@ function(e, t, n) {
                     branchId: r
                 } = (0, m.convertComboId)(t), s = O.default.getState(n, r), a = A.default.getTargetBuildId(n, r), o = A.default.getTargetManifests(n, r);
                 if (null != s && s.type === R.LocalDispatchApplicationStates.UP_TO_DATE && s.buildId === s.targetBuildId && s.buildId === a && c().isEqual(s.manifestIds, s.targetManifestIds) && c().isEqual(s.manifestIds, o)) {
-                    if (v.push(t), b.has(t)) {
+                    if (D.push(t), b.has(t)) {
                         switch (b.get(t)) {
                             case "Install":
                                 f.completeInstall(n, s);

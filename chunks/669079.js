@@ -41,7 +41,7 @@ function(e, t, n) {
             return G
         },
         processGiftCodeInput: function() {
-            return X
+            return Z
         },
         resolveGiftCode: function() {
             return x
@@ -53,7 +53,7 @@ function(e, t, n) {
             return F
         },
         useGetGiftCode: function() {
-            return Q
+            return X
         }
     }), n("47120"), n("757143"), n("627341");
     var i, r, s = n("278074"),
@@ -79,9 +79,9 @@ function(e, t, n) {
         C = RegExp("(?: |^|https?://)(?:".concat(R, ")/([a-z0-9-]+)"), "gi"),
         g = (e, t) => Array(t).fill(void 0).map(() => "[".concat("abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789", "]{").concat(e, "}")).join("-?"),
         L = g(4, 4),
-        D = g(4, 6),
-        v = g(5, 3),
-        M = [L, D, v, "[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}"].join("|"),
+        v = g(4, 6),
+        D = g(5, 3),
+        M = [L, v, D, "[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}"].join("|"),
         y = new RegExp("^(".concat("WUMP-?", ")?(").concat(M, ")$"));
     (r = i || (i = {}))[r.DEFAULT = 0] = "DEFAULT", r[r.CUSTOM_STYLE = 1] = "CUSTOM_STYLE", r[r.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD = 2] = "CUSTOM_MESSAGE_EMOJI_SOUNDBOARD";
     let P = (e, t) => a.isMobile || a.isTablet ? 0 : null != e || t ? 2 : 1,
@@ -289,13 +289,13 @@ function(e, t, n) {
         return s.length === r.length ? s[0] : null
     }
 
-    function X(e) {
+    function Z(e) {
         let t = e.trim().split("/").pop().match(y);
         if (null == t) return null;
         let [n, i, r] = t;
         return null == r ? null : r.replace(/-/g, "")
     }
-    let Q = (e, t) => (0, o.useStateFromStores)([d.default], () => {
+    let X = (e, t) => (0, o.useStateFromStores)([d.default], () => {
         if (null == e || !t) return null;
         let n = d.default.getGiftCode(e);
         return null == n || "" === n ? null : n

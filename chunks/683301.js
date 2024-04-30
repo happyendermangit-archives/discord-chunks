@@ -47,8 +47,8 @@ function(e, t, n) {
         C = null,
         g = A.DISCOVERY_ALL_CATEGORIES_ID,
         L = A.DISCOVERY_ALL_CATEGORIES_ID,
-        D = null,
-        v = [],
+        v = null,
+        D = [],
         M = (0, T.makeAnalyticsID)(),
         y = !1;
 
@@ -94,7 +94,7 @@ function(e, t, n) {
             return L
         }
         getSearchIndex() {
-            return D
+            return v
         }
         getMostRecentQuery() {
             return p
@@ -104,7 +104,7 @@ function(e, t, n) {
             return null === (t = N[h.GuildDiscoverySections.SEARCH][e]) || void 0 === t ? void 0 : t.resultCounts
         }
         getSeenGuildIds() {
-            return v
+            return D
         }
         getLoadId() {
             return M
@@ -123,7 +123,7 @@ function(e, t, n) {
             let {
                 index: t
             } = e;
-            D = t
+            v = t
         },
         GUILD_DISCOVERY_FETCH_START: function(e) {
             let {
@@ -342,10 +342,10 @@ function(e, t, n) {
             let {
                 guildId: t
             } = e;
-            !v.includes(t) && v.push(t)
+            !D.includes(t) && D.push(t)
         },
         GUILD_DISCOVERY_CLEAR_SEEN_GUILDS: function() {
-            v = []
+            D = []
         },
         GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS: function(e) {
             let {

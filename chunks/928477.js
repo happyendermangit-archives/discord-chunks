@@ -20,7 +20,7 @@ function(e, t, n) {
             return P
         },
         usePrivateThreadMode: function() {
-            return v
+            return D
         }
     }), n("757143"), n("653041"), n("47120");
     var i, r, s = n("470079"),
@@ -46,9 +46,9 @@ function(e, t, n) {
         C = n("456077"),
         g = n("124368"),
         L = n("981631"),
-        D = n("689938");
+        v = n("689938");
 
-    function v(e) {
+    function D(e) {
         let t = (0, R.useCanStartPublicThread)(e);
         return (0, R.useCanStartPrivateThread)(e) ? t ? 2 : 3 : 1
     }
@@ -105,7 +105,7 @@ function(e, t, n) {
                 N = null !== (h = i.name) && void 0 !== h ? h : "";
             if ("" === N && c) {
                 let e = y(t, n);
-                N = "" !== e ? e : D.default.Messages.THREAD
+                N = "" !== e ? e : v.default.Messages.THREAD
             }
             let R = (0, O.getAutoArchiveDuration)(t),
                 C = f.default.getChannel(p.default.castMessageIdAsChannelId(n)),
@@ -181,8 +181,8 @@ function(e, t, n) {
         let i = e.isForumLikeChannel();
         try {
             n = await t(), null == n.body ? l.default.show({
-                title: D.default.Messages.ERROR,
-                body: D.default.Messages.ERROR_OCCURRED_TRY_AGAIN
+                title: v.default.Messages.ERROR,
+                body: v.default.Messages.ERROR_OCCURRED_TRY_AGAIN
             }) : (o.default.dispatch({
                 type: "SLOWMODE_RESET_COOLDOWN",
                 slowmodeType: A.SlowmodeType.CreateThread,
@@ -194,12 +194,12 @@ function(e, t, n) {
         } catch (t) {
             var r, s, a, u, d, _;
             if ((null === (r = t.body) || void 0 === r ? void 0 : r.code) === L.AbortCodes.TOO_MANY_THREADS) l.default.show({
-                title: i ? D.default.Messages.CANNOT_CREATE_FORUM_POST : D.default.Messages.CANNOT_CREATE_THREAD,
-                body: i ? D.default.Messages.TOO_MANY_FORUM_POSTS_MESSAGE : D.default.Messages.TOO_MANY_THREADS_MESSAGE
+                title: i ? v.default.Messages.CANNOT_CREATE_FORUM_POST : v.default.Messages.CANNOT_CREATE_THREAD,
+                body: i ? v.default.Messages.TOO_MANY_FORUM_POSTS_MESSAGE : v.default.Messages.TOO_MANY_THREADS_MESSAGE
             });
             else if ((null === (s = t.body) || void 0 === s ? void 0 : s.code) === L.AbortCodes.TOO_MANY_ANNOUNCEMENT_THREADS) l.default.show({
-                title: D.default.Messages.CANNOT_CREATE_THREAD,
-                body: D.default.Messages.TOO_MANY_ANNOUNCEMENT_THREADS_MESSAGE
+                title: v.default.Messages.CANNOT_CREATE_THREAD,
+                body: v.default.Messages.TOO_MANY_ANNOUNCEMENT_THREADS_MESSAGE
             });
             else if ((null === (a = t.body) || void 0 === a ? void 0 : a.code) === L.AbortCodes.SLOWMODE_RATE_LIMITED) {
                 let n = null !== (_ = t.body.retry_after) && void 0 !== _ ? _ : 0;
@@ -210,8 +210,8 @@ function(e, t, n) {
                     cooldownMs: n * m.default.Millis.SECOND
                 })
             } else if (429 === t.status) l.default.show({
-                title: i ? D.default.Messages.CANNOT_CREATE_FORUM_POST : D.default.Messages.CANNOT_CREATE_THREAD,
-                body: D.default.Messages.RATE_LIMITED
+                title: i ? v.default.Messages.CANNOT_CREATE_FORUM_POST : v.default.Messages.CANNOT_CREATE_THREAD,
+                body: v.default.Messages.RATE_LIMITED
             });
             else if (g.FORUM_POST_CREATION_AUTOMOD_ERRORS.has(null === (u = t.body) || void 0 === u ? void 0 : u.code)) throw t;
             else {
@@ -227,8 +227,8 @@ function(e, t, n) {
                     })
                 });
                 l.default.show({
-                    title: D.default.Messages.ERROR,
-                    body: D.default.Messages.ERROR_OCCURRED_TRY_AGAIN
+                    title: v.default.Messages.ERROR,
+                    body: v.default.Messages.ERROR_OCCURRED_TRY_AGAIN
                 })
             }
         }

@@ -188,11 +188,11 @@ function(e, t, n) {
                                                     voids: !0
                                                 })
                                             });
-                                            let v = null;
-                                            return null != C ? (h.SlateTransforms.selectCommandOption(e, C.optionName), v = C.optionName) : null != g ? (h.SlateTransforms.selectCommandOption(e, g.optionName, !1), v = g.optionName) : h.SlateTransforms.resetSelectionToEnd(e), null == g && D(e, d), v
+                                            let D = null;
+                                            return null != C ? (h.SlateTransforms.selectCommandOption(e, C.optionName), D = C.optionName) : null != g ? (h.SlateTransforms.selectCommandOption(e, g.optionName, !1), D = g.optionName) : h.SlateTransforms.resetSelectionToEnd(e), null == g && v(e, d), D
                                         }(t, s, n),
                                         i = T.getOptionValues(t, f);
-                                    return v({
+                                    return D({
                                         guildId: s.guild_id,
                                         channelId: s.id,
                                         command: f,
@@ -281,14 +281,14 @@ function(e, t, n) {
                                             }
                                         })
                                     }), !0)
-                                }(t, f) && D(t, f);
+                                }(t, f) && v(t, f);
                                 let e = T.getOptionValues(t, f),
                                     n = A.EditorUtils.above(t, {
                                         match: e => A.EditorUtils.isInline(t, e) && "applicationCommandOption" === e.type,
                                         mode: "lowest"
                                     }),
                                     i = null !== (N = null == n ? void 0 : n[0].optionName) && void 0 !== N ? N : null;
-                                return v({
+                                return D({
                                     guildId: s.guild_id,
                                     channelId: s.id,
                                     command: f,
@@ -346,7 +346,7 @@ function(e, t, n) {
         })
     }
 
-    function D(e, t) {
+    function v(e, t) {
         if (null == t.options || 1 !== t.options.length || !0 === t.options[0].required || R.has(t.options[0].type) || T.getOptionNames(e).length > 0 || null == T.getCommandBlock(e)) return !1;
         let n = A.EditorUtils.getFirstText(e);
         if (null == n) return !1;
@@ -373,7 +373,7 @@ function(e, t, n) {
         }), !0)
     }
 
-    function v(e) {
+    function D(e) {
         let {
             guildId: t,
             channelId: n,

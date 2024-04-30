@@ -40,8 +40,8 @@ function(e, t, n) {
         C = n("808268"),
         g = n("602623"),
         L = n("349619"),
-        D = n("981631"),
-        v = n("231338"),
+        v = n("981631"),
+        D = n("231338"),
         M = n("689938"),
         y = n("55820"),
         P = n("541702");
@@ -72,7 +72,7 @@ function(e, t, n) {
             onJumpToChannel: R,
             idle: C,
             selectedParticipant: g
-        } = e, M = (0, u.useAppContext)() === D.AppContext.POPOUT, U = (0, a.useStateFromStores)([p.default], () => p.default.isVideoEnabled()), b = (0, a.useStateFromStores)([p.default], () => Object.values(p.default.getVideoDevices())[0]), G = !1 === (null === (t = null == b ? void 0 : b.disabled) || void 0 === t || t), w = (0, d.default)([s])[0], B = (0, E.default)(r), k = e => {
+        } = e, M = (0, u.useAppContext)() === v.AppContext.POPOUT, U = (0, a.useStateFromStores)([p.default], () => p.default.isVideoEnabled()), b = (0, a.useStateFromStores)([p.default], () => Object.values(p.default.getVideoDevices())[0]), G = !1 === (null === (t = null == b ? void 0 : b.disabled) || void 0 === t || t), w = (0, d.default)([s])[0], B = (0, E.default)(r), k = e => {
             l.default.setVideoEnabled(e)
         };
         return (0, i.jsxs)("div", {
@@ -125,7 +125,7 @@ function(e, t, n) {
                         onOpenPopout: () => {
                             (0, L.default)(() => c.openChannelCallPopout(r))
                         },
-                        onClosePopout: v.NOOP_NULL
+                        onClosePopout: D.NOOP_NULL
                     }), (0, i.jsx)(h.default, {
                         applicationId: s,
                         channelId: r.id,

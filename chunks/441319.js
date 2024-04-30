@@ -8,7 +8,7 @@ function(e, t, n) {
             return L
         },
         ICONS_BY_ID: function() {
-            return D
+            return v
         }
     });
     var i = n("392711"),
@@ -131,5 +131,5 @@ function(e, t, n) {
             isPremium: !0,
             name: C.default.Messages.APP_ICON_CONTROLLER
         }]),
-        D = r().keyBy(L, "id")
+        v = r().keyBy(L, "id")
 }

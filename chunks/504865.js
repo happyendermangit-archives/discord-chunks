@@ -27,7 +27,7 @@ function(e, t, n) {
             isGift: O = !1,
             variant: R,
             priceOptions: C
-        } = e, g = (0, E.usePremiumAnnualDiscountOffer)(), L = (0, I.usePremiumTrialOffer)(), D = (0, a.useStateFromStores)([u.default], () => u.default.isLoadedForPremiumSKUs()), v = (0, a.useStateFromStores)([d.default], () => d.default.getPremiumTypeSubscription()), {
+        } = e, g = (0, E.usePremiumAnnualDiscountOffer)(), L = (0, I.usePremiumTrialOffer)(), v = (0, a.useStateFromStores)([u.default], () => u.default.isLoadedForPremiumSKUs()), D = (0, a.useStateFromStores)([d.default], () => d.default.getPremiumTypeSubscription()), {
             annualInvoicePreview: M
         } = (0, T.useGetAnnualDiscountInvoicePreview)({
             priceOptions: null != C ? C : {
@@ -36,9 +36,9 @@ function(e, t, n) {
             preventFetch: null == g || null == C || null != L || m !== f.PremiumSubscriptionSKUs.TIER_2 || N !== f.SubscriptionIntervalTypes.YEAR,
             selectedSkuId: f.PremiumSubscriptionSKUs.TIER_2,
             planGroup: f.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
-            activeSubscription: v
+            activeSubscription: D
         }), y = null == M ? void 0 : null === (A = M.invoiceItems) || void 0 === A ? void 0 : null === (r = A.find(e => e.subscriptionPlanId === f.SubscriptionPlans.PREMIUM_YEAR_TIER_2)) || void 0 === r ? void 0 : null === (n = r.discounts) || void 0 === n ? void 0 : null === (t = n.find(e => e.type === l.InvoiceDiscountTypes.SUBSCRIPTION_PLAN)) || void 0 === t ? void 0 : t.amount;
-        if (!D) return (0, i.jsx)(o.Spinner, {
+        if (!v) return (0, i.jsx)(o.Spinner, {
             type: o.Spinner.Type.PULSING_ELLIPSIS,
             className: h.priceSpinner
         });

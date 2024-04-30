@@ -31,8 +31,8 @@ function(e, t, n) {
                 getStickerRowProps: C,
                 gutterWidth: g,
                 inspectedStickerPosition: L,
-                isScrolling: D,
-                isUsingKeyboardNavigation: v,
+                isScrolling: v,
+                isUsingKeyboardNavigation: D,
                 onInspect: M,
                 onSelect: y,
                 rowIndex: P,
@@ -66,7 +66,7 @@ function(e, t, n) {
                     let O = e.visibleRowIndex === (null == L ? void 0 : L.rowIndex) && e.columnIndex === (null == L ? void 0 : L.columnIndex),
                         R = e.type === f.StickerGridItemTypes.STICKER && k && O,
                         C = (0, o.throttle)(() => {
-                            (null == D ? void 0 : D.current) !== !0 && (null == v ? void 0 : v.current) !== !0 && !O && (null == M || M(e))
+                            (null == v ? void 0 : v.current) !== !0 && (null == D ? void 0 : D.current) !== !0 && !O && (null == M || M(e))
                         }, 250),
                         {
                             ref: g,
@@ -130,7 +130,7 @@ function(e, t, n) {
                                 onFocus: null != G ? G : C,
                                 onMouseMove: C,
                                 onClick: t => {
-                                    (null == D ? void 0 : D.current) !== !0 && (null == v ? void 0 : v.current) !== !0 && (null == y || y(e, t))
+                                    (null == v ? void 0 : v.current) !== !0 && (null == D ? void 0 : D.current) !== !0 && (null == y || y(e, t))
                                 },
                                 onContextMenu: e => {
                                     (0, d.openContextMenuLazy)(e, async () => {

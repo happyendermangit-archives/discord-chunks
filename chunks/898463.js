@@ -33,9 +33,9 @@ function(e, t, n) {
         C = n("859235"),
         g = n("689938"),
         L = n("670951");
-    let D = ["image/jpeg", "image/png", "image/webp", "image/gif", "video/quicktime", "video/mp4"];
+    let v = ["image/jpeg", "image/png", "image/webp", "image/gif", "video/quicktime", "video/mp4"];
 
-    function v(e) {
+    function D(e) {
         let {
             alt: t,
             spoiler: n,
@@ -82,7 +82,7 @@ function(e, t, n) {
             height: 0
         }), I = o === C.AttachmentListItemSizes.SMALL;
         r.useEffect(() => {
-            if (null == t || !1 === D.includes(t.type)) return;
+            if (null == t || !1 === v.includes(t.type)) return;
             let e = URL.createObjectURL(t);
             _(e);
             let n = new Image;
@@ -132,7 +132,7 @@ function(e, t, n) {
             children: (0, i.jsx)(l.Clickable, {
                 onClick: f,
                 className: L.clickableMedia,
-                children: (0, i.jsx)(v, {
+                children: (0, i.jsx)(D, {
                     size: o,
                     alt: n,
                     spoiler: s,
@@ -160,7 +160,7 @@ function(e, t, n) {
         }, [t]), (0, i.jsx)("div", {
             onMouseEnter: l,
             className: L.mediaContainer,
-            children: (0, i.jsx)(v, {
+            children: (0, i.jsx)(D, {
                 size: o,
                 alt: n,
                 spoiler: s,
@@ -224,9 +224,9 @@ function(e, t, n) {
             label: T,
             size: N = C.AttachmentListItemSizes.MEDIUM,
             canEdit: p = !0,
-            hideFileName: D = !1,
-            clip: v
-        } = e, M = null != v, y = (N = M ? C.AttachmentListItemSizes.CLIP : N) === C.AttachmentListItemSizes.SMALL, U = (0, o.useStateFromStores)([I.default], () => {
+            hideFileName: v = !1,
+            clip: D
+        } = e, M = null != D, y = (N = M ? C.AttachmentListItemSizes.CLIP : N) === C.AttachmentListItemSizes.SMALL, U = (0, o.useStateFromStores)([I.default], () => {
             var e;
             return null === (e = I.default.getChannel(t)) || void 0 === e ? void 0 : e.guild_id
         }), b = e => {
@@ -305,7 +305,7 @@ function(e, t, n) {
             children: [(0, i.jsx)(P, {
                 upload: s,
                 size: N
-            }), !D && !M && (0, i.jsx)("div", {
+            }), !v && !M && (0, i.jsx)("div", {
                 className: L.filenameContainer,
                 children: (0, i.jsx)(l.Text, {
                     className: L.filename,
@@ -315,10 +315,10 @@ function(e, t, n) {
             }), M && (0, i.jsxs)(i.Fragment, {
                 children: [(0, i.jsx)(c.default, {
                     className: L.clipsFooter,
-                    createdAt: O.default.extractTimestamp(v.id),
-                    participantIds: v.users,
-                    applicationId: v.applicationId,
-                    title: v.name,
+                    createdAt: O.default.extractTimestamp(D.id),
+                    participantIds: D.users,
+                    applicationId: D.applicationId,
+                    title: D.name,
                     guildId: U
                 }), (0, i.jsx)(m.TextBadge, {
                     color: E.default.BG_BRAND,

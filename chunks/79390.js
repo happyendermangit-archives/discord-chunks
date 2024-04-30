@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         createPollServerDataFromCreateRequest: function() {
-            return v
+            return D
         },
         filterOutUUID: function() {
             return N
@@ -23,7 +23,7 @@ function(e, t, n) {
             return L
         },
         isIncompleteAnswer: function() {
-            return D
+            return v
         },
         isPollCreationEmpty: function() {
             return g
@@ -126,13 +126,13 @@ function(e, t, n) {
         }
     }
 
-    function D(e, t) {
+    function v(e, t) {
         var n;
         let i = null === (n = e.text) || void 0 === n ? void 0 : n.trim();
         return t === a.PollLayoutTypes.DEFAULT && null != e.image && (null == i || 0 === i.length)
     }
 
-    function v(e) {
+    function D(e) {
         var t, n;
         if (null == e) return;
         let i = null == e ? void 0 : null === (t = e.answers) || void 0 === t ? void 0 : t.map((e, t) => {

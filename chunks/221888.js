@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return D
+            return v
         }
     }), n("411104"), n("47120");
     var i = n("735250"),
@@ -105,7 +105,7 @@ function(e, t, n) {
     }
     let L = [];
 
-    function D(e) {
+    function v(e) {
         let {
             channelId: t,
             guildId: s,
@@ -114,16 +114,16 @@ function(e, t, n) {
             compact: S = !1,
             disableInteraction: A = !1,
             maxVisibleUsers: p = 3
-        } = e, [R, D] = r.useState(!1), v = r.useRef(new d.DelayedCall(150, () => D(!1))), M = (0, u.useStateFromStoresArray)([I.default, T.default], () => {
+        } = e, [R, v] = r.useState(!1), D = r.useRef(new d.DelayedCall(150, () => v(!1))), M = (0, u.useStateFromStoresArray)([I.default, T.default], () => {
             if (o.type === m.ParticipantTypes.STREAM) {
                 let e = I.default.getViewerIds(o.id);
                 return e.length > 0 ? e.map(e => T.default.getUser(e)).filter(h.isNotNullish) : L
             }
             return o.type === m.ParticipantTypes.ACTIVITY ? o.participants.size > 0 ? Array.from(o.participants).map(e => T.default.getUser(e)).filter(h.isNotNullish) : L : L
         }, [o]), y = r.useCallback(() => {
-            v.current.cancel(), D(!0)
+            D.current.cancel(), v(!0)
         }, []), P = r.useCallback(() => {
-            v.current.delay()
+            D.current.delay()
         }, []), U = r.useCallback((e, t) => {
             y(), (0, c.openContextMenuLazy)(e, async () => {
                 let {

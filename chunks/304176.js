@@ -43,7 +43,7 @@ function(e, t, n) {
             }) : p.default.Messages.ROLE_ICON_POPOUT_DESCRIPTION.format({
                 name: R
             }),
-            D = {
+            v = {
                 ...t,
                 src: null == t.src ? t.src : (0, l.replaceRoleIconSourceSize)(t.src, 40),
                 size: 40
@@ -57,7 +57,7 @@ function(e, t, n) {
                         children: [(0, i.jsx)("div", {
                             className: O.roleIconContainer,
                             children: (0, i.jsx)(S.default, {
-                                ...D,
+                                ...v,
                                 enableTooltip: !1,
                                 className: O.__invalid_roleIcon,
                                 enableHeight: !1

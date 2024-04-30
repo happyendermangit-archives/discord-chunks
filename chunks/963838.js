@@ -45,8 +45,8 @@ function(e, t, n) {
         C = n("24688"),
         g = n("200997"),
         L = n("633302"),
-        D = n("134432"),
-        v = n("594174"),
+        v = n("134432"),
+        D = n("594174"),
         M = n("768581"),
         y = n("176354"),
         P = n("353368"),
@@ -66,7 +66,7 @@ function(e, t, n) {
         B = r().memoize(e => new Promise(t => {
             let n = new Image;
             n.src = e, n.crossOrigin = "Anonymous", n.onload = () => {
-                let i = P.EMOJI_SIZE * (0, D.getDevicePixelRatio)();
+                let i = P.EMOJI_SIZE * (0, v.getDevicePixelRatio)();
                 if (n.width === i && n.height === i) t(e);
                 else {
                     var r;
@@ -114,17 +114,17 @@ function(e, t, n) {
             u = l.length < 2 ? null !== (t = null == l ? void 0 : l[0]) && void 0 !== t ? t : "" : l.join(", ");
         if (o.length < 1) return "";
         if (1 === o.length) return U.default.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_SINGLE.format({
-            firstUsername: null === (n = v.default.getUser(o[0])) || void 0 === n ? void 0 : n.username,
+            firstUsername: null === (n = D.default.getUser(o[0])) || void 0 === n ? void 0 : n.username,
             emojiNames: u
         });
         if (2 === o.length) return U.default.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_DOUBLE.format({
-            firstUsername: null === (i = v.default.getUser(o[0])) || void 0 === i ? void 0 : i.username,
-            secondUsername: null === (r = v.default.getUser(o[1])) || void 0 === r ? void 0 : r.username,
+            firstUsername: null === (i = D.default.getUser(o[0])) || void 0 === i ? void 0 : i.username,
+            secondUsername: null === (r = D.default.getUser(o[1])) || void 0 === r ? void 0 : r.username,
             emojiNames: u
         });
         else return U.default.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_MULTIPLE.format({
-            firstUsername: null === (s = v.default.getUser(o[0])) || void 0 === s ? void 0 : s.username,
-            secondUsername: null === (a = v.default.getUser(o[1])) || void 0 === a ? void 0 : a.username,
+            firstUsername: null === (s = D.default.getUser(o[0])) || void 0 === s ? void 0 : s.username,
+            secondUsername: null === (a = D.default.getUser(o[1])) || void 0 === a ? void 0 : a.username,
             count: o.length - 2,
             emojiNames: u
         })

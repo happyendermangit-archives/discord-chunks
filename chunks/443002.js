@@ -27,46 +27,46 @@ function(e, t, n) {
             guild: n,
             onClose: O
         } = e, [R, C] = r.useState(!0), g = r.useRef(!1), L = (0, s.useLazyValue)(() => Date.now()), {
-            analyticsLocations: D
-        } = (0, u.default)(), v = r.useCallback(() => {
+            analyticsLocations: v
+        } = (0, u.default)(), D = r.useCallback(() => {
             O(), d.default.track(m.AnalyticEvents.MODAL_DISMISSED, {
                 type: m.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
-                location_stack: D,
+                location_stack: v,
                 location_section: t.section,
                 location_object: t.object,
                 guild_id: n.id,
                 duration_open_ms: Date.now() - L
             })
-        }, [O, t, D, L, n.id]), M = r.useCallback(e => {
+        }, [O, t, v, L, n.id]), M = r.useCallback(e => {
             e && !g.current && (d.default.track(m.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
                 type: m.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
-                location_stack: D,
+                location_stack: v,
                 location_section: t.section,
                 location_object: t.object,
                 guild_id: n.id
             }), g.current = !0)
-        }, [t, D, n.id]);
+        }, [t, v, n.id]);
         return r.useEffect(() => {
             d.default.track(m.AnalyticEvents.OPEN_MODAL, {
                 type: m.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
-                location_stack: D,
+                location_stack: v,
                 location_section: t.section,
                 location_object: t.object,
                 guild_id: n.id
             })
-        }, [n.id, t, D]), r.useEffect(() => {
+        }, [n.id, t, v]), r.useEffect(() => {
             function e(e) {
-                "Escape" === e.key && v()
+                "Escape" === e.key && D()
             }
             return window.addEventListener("keydown", e), () => {
                 window.removeEventListener("keydown", e)
             }
-        }, [v]), (0, i.jsxs)(i.Fragment, {
+        }, [D]), (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)("div", {
                 className: p.closeIconWrapper,
                 children: (0, i.jsx)(l.default, {
                     className: p.closeIcon,
-                    closeAction: v,
+                    closeAction: D,
                     keybind: "ESC",
                     variant: l.default.Variants.SOLID
                 })
@@ -83,7 +83,7 @@ function(e, t, n) {
                             children: N.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_HEADING
                         }), (0, i.jsx)(c.default, {
                             guild: n,
-                            closeLayer: v,
+                            closeLayer: D,
                             onCtaVisibilityChange: C
                         }), (0, i.jsx)(T.default, {
                             guild: n
@@ -114,7 +114,7 @@ function(e, t, n) {
             }), (0, i.jsx)(I.default, {
                 guild: n,
                 isVisible: !R,
-                closeLayer: v
+                closeLayer: D
             })]
         })
     }

@@ -8,7 +8,7 @@ function(e, t, n) {
             return r
         },
         default: function() {
-            return D
+            return v
         }
     }), n("653041"), n("47120");
     var i, r, s, a, o = n("759174"),
@@ -73,7 +73,7 @@ function(e, t, n) {
         } = e, a = [];
         return g(i) && a.push("ALL_REQUESTED_TO_SPEAK"), i === m.RequestToSpeakStates.REQUESTED_TO_SPEAK && a.push("REQUESTED_TO_SPEAK_ONLY"), t ? a.push("SPEAKER") : (null != n ? a.push(n.id) : a.push("NO_ROLE"), a.push("AUDIENCE")), r && a.push("BLOCKED"), s && a.push("FRIEND"), a
     }(s = i || (i = {})).SPEAKER = "SPEAKER", s.AUDIENCE = "AUDIENCE", s.NO_ROLE = "NO_ROLE", s.ALL_REQUESTED_TO_SPEAK = "ALL_REQUESTED_TO_SPEAK", s.REQUESTED_TO_SPEAK_ONLY = "REQUESTED_TO_SPEAK_ONLY", s.BLOCKED = "BLOCKED", s.FRIEND = "FRIEND", s.SELECTED = "SELECTED", s.MEDIA = "MEDIA", (a = r || (r = {})).VOICE = "VOICE", a.STREAM = "STREAM";
-    class D {
+    class v {
         _getParticipantsForUser(e, t) {
             var n, i;
             let r;

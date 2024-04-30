@@ -29,7 +29,7 @@ function(e, t, n) {
             return I
         },
         getQuestForTargetedContent: function() {
-            return D
+            return v
         },
         getQuestUrl: function() {
             return L
@@ -74,7 +74,7 @@ function(e, t, n) {
             return E
         },
         isTargetedForContent: function() {
-            return v
+            return D
         },
         isTieredRewardCodeQuest: function() {
             return j
@@ -316,13 +316,13 @@ function(e, t, n) {
         g = (e, t) => N(e.config.assets.logotype, "".concat(c).concat(e.id, "/").concat(t, "/").concat(e.config.assets.logotype)),
         L = e => "".concat(location.protocol, "//").concat(location.host, "/quests/").concat(e);
 
-    function D(e, t) {
+    function v(e, t) {
         for (let [n, i] of e)
             if (!T(i) && i.targetedContent.includes(t)) return i;
         return null
     }
 
-    function v(e, t) {
+    function D(e, t) {
         return e.targetedContent.includes(t)
     }
     let M = e => {

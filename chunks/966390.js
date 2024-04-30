@@ -26,12 +26,12 @@ function(e, t, n) {
         C = n("630388"),
         g = n("226351"),
         L = n("981631"),
-        D = n("689938");
-    async function v(e) {
+        v = n("689938");
+    async function D(e) {
         var t, n, i;
         let _, {
                 channelId: c,
-                uploads: v,
+                uploads: D,
                 draftType: M,
                 parsedMessage: y,
                 options: P = {},
@@ -105,7 +105,7 @@ function(e, t, n) {
                         }
                     };
                 (0, l.openUploadError)({
-                    title: D.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
+                    title: v.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
                     help: (0, T.getAutomodErrorMessage)(i, e)
                 });
                 return
@@ -114,11 +114,11 @@ function(e, t, n) {
                 status: t,
                 body: null != n ? n : {}
             }, t)) : (0, l.openUploadError)({
-                title: D.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
-                help: D.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_RETRY_HELP
+                title: v.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
+                help: v.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_RETRY_HELP
             }), "" !== w.content && "" === O.default.getDraft(c, M) && s.default.saveDraft(c, w.content, M), 0 === R.default.getUploadCount(c, M) && o.default.setUploads({
                 channelId: c,
-                uploads: v,
+                uploads: D,
                 draftType: M
             }))
         }), b.on("complete", (e, t) => {
@@ -129,7 +129,7 @@ function(e, t, n) {
                 aborted: b._aborted,
                 messageRecord: t
             })
-        }), await b.uploadFiles(v, w), G.resolve(), G.promise
+        }), await b.uploadFiles(D, w), G.resolve(), G.promise
     }
     t.default = {
         instantBatchUpload: function(e) {
@@ -148,7 +148,7 @@ function(e, t, n) {
                     ...i
                 }, t)
             });
-            v({
+            D({
                 channelId: t,
                 uploads: a,
                 draftType: i
@@ -202,8 +202,8 @@ function(e, t, n) {
                     a.default.sendExplicitMediaClydeError(n, null == c ? void 0 : c.attachments, I.TrackMediaRedactionContext.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
                     return
                 }(0, l.openUploadError)({
-                    title: D.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
-                    help: D.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_HELP.format({
+                    title: v.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
+                    help: v.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_HELP.format({
                         onClick: () => {
                             (0, i.closeModal)(l.UPLOAD_ERROR_MODAL_KEY), e({
                                 channelId: n,
@@ -222,7 +222,7 @@ function(e, t, n) {
                 })
             }), f.upload(o, T)
         },
-        uploadFiles: v,
+        uploadFiles: D,
         cancel(e) {
             r.default.dispatch({
                 type: "UPLOAD_CANCEL_REQUEST",

@@ -30,26 +30,26 @@ function(e, t, n) {
             width: T,
             height: f
         } : (0, d.getIconSize)(I), g = !(0, c.default)("lottie_hover_multiple_loop"), L = r.useContext(u.AccessibilityPreferencesContext).reducedMotion.enabled, {
-            enabled: D
+            enabled: v
         } = _.default.useExperiment({
             location: "LottieIcon web entry point"
-        }), v = L || !D;
+        }), D = L || !v;
         return r.useImperativeHandle(t, () => ({
             play: e => {
                 if (null != R.current) {
-                    if (O.current = e, v) {
+                    if (O.current = e, D) {
                         let t = A[e];
                         R.current.setSegment(t.start, t.start + t.duration), R.current.goToAndStop(t.duration, !0)
                     } else R.current.setLoop(!g && e.includes("hover")), R.current.goToAndPlay(e)
                 }
             },
             stop: () => {
-                null != R.current && !v && R.current.goToAndStop(0, !0)
+                null != R.current && !D && R.current.goToAndStop(0, !0)
             },
             stopIfPlaying: e => {
-                null != R.current && !v && O.current === e && R.current.goToAndStop(0, !0)
+                null != R.current && !D && O.current === e && R.current.goToAndStop(0, !0)
             }
-        }), [v, g, A]), r.useEffect(() => {
+        }), [D, g, A]), r.useEffect(() => {
             null == m && o().then(e => N(e.default))
         }, [m, o]), r.useEffect(() => (n.e("23755").then(n.t.bind(n, "500923", 23)).then(e => {
             var t;

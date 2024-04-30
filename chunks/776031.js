@@ -34,9 +34,9 @@ function(e, t, n) {
             var t;
             return null === (t = T.default.getGuild(null == e ? void 0 : e.guildId)) || void 0 === t ? void 0 : t.premiumTier
         }), {
-            location: D
+            location: v
         } = (0, u.useAnalyticsContext)(), {
-            available: v,
+            available: D,
             activated: M
         } = (0, _.usePerksDemo)(s.EntitlementFeatureNames.STREAM_HIGH_QUALITY), y = r.useCallback((e, r, s, a) => {
             if (e) {
@@ -55,12 +55,12 @@ function(e, t, n) {
                     } : null != C.cameraSource && (e.cameraSettings = {
                         videoDeviceGuid: C.cameraSource.videoDeviceGuid,
                         audioDeviceGuid: C.cameraSource.audioDeviceGuid
-                    }), v && (0, E.hqStreamingSetEnabled)(!(0, c.ineligibleQualitySetting)(r, s)), l.default.setGoLiveSource(e)
+                    }), D && (0, E.hqStreamingSetEnabled)(!(0, c.ineligibleQualitySetting)(r, s)), l.default.setGoLiveSource(e)
                 }
             } else {
                 var u, d;
                 u = t, d = {
-                    ...D,
+                    ...v,
                     object: h.AnalyticsObjects.RADIO_ITEM,
                     objectType: a
                 }, (0, o.openModalLazy)(async () => {
@@ -75,7 +75,7 @@ function(e, t, n) {
                     contextKey: u === h.AppContext.POPOUT ? o.POPOUT_MODAL_CONTEXT : o.DEFAULT_MODAL_CONTEXT
                 })
             }
-        }, [t, D, C, v]);
+        }, [t, v, C, D]);
         if (null == e) return null;
         let P = p === A.ApplicationStreamPresets.PRESET_DOCUMENTS ? A.ApplicationStreamFPS.FPS_30 : R,
             U = A.ApplicationStreamFPSButtonsWithSuffixLabel.map(e => {
@@ -83,7 +83,7 @@ function(e, t, n) {
                     value: t,
                     label: n
                 } = e, r = (0, d.default)(A.ApplicationStreamPresets.PRESET_CUSTOM, O, t, g, L);
-                return v && !M && (r = !1), (0, i.jsx)(o.MenuRadioItem, {
+                return D && !M && (r = !1), (0, i.jsx)(o.MenuRadioItem, {
                     group: "stream-settings-fps",
                     id: "stream-settings-fps-".concat(t),
                     label: n,
@@ -96,7 +96,7 @@ function(e, t, n) {
                     value: t,
                     label: n
                 } = e, r = (0, d.default)(A.ApplicationStreamPresets.PRESET_CUSTOM, t, P, g, L);
-                return v && !M && (r = !1), (0, i.jsx)(o.MenuRadioItem, {
+                return D && !M && (r = !1), (0, i.jsx)(o.MenuRadioItem, {
                     group: "stream-settings-resolution",
                     id: "stream-settings-resolution-".concat(t),
                     label: n,

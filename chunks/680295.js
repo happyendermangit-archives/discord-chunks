@@ -36,8 +36,8 @@ function(e, t, n) {
             } = e, N = r.useRef(null), [p, O] = r.useState([]);
             (0, T.default)(h);
             let [R, C] = r.useState(0), [g, L] = r.useState(0), {
-                accessibilityLabel: D
-            } = h, [v, M] = r.useState(-m), {
+                accessibilityLabel: v
+            } = h, [D, M] = r.useState(-m), {
                 stop: y,
                 reset: P,
                 ticking: U
@@ -78,24 +78,24 @@ function(e, t, n) {
                                         left: null !== (E = null === (l = e.position) || void 0 === l ? void 0 : l.x) && void 0 !== E ? E : 0
                                     },
                                     src: n,
-                                    alt: D
+                                    alt: v
                                 }, e.src + r)
                             }
                             return (0, i.jsx)("img", {
                                 src: d.RESET,
-                                alt: D
+                                alt: v
                             }, e.src + r)
                         }
-                        if (v < e.start || !e.loop && v > e.duration + e.start) return (0, i.jsx)("img", {
+                        if (D < e.start || !e.loop && D > e.duration + e.start) return (0, i.jsx)("img", {
                             src: d.RESET,
-                            alt: D
+                            alt: v
                         }, e.src + r);
-                        if (h.animationType === _.AnimationTypes.PERSISTENT && !b && null != n && v >= g && G(!0), e.loop && void 0 !== e.loopDelay && e.loopDelay > 0) {
+                        if (h.animationType === _.AnimationTypes.PERSISTENT && !b && null != n && D >= g && G(!0), e.loop && void 0 !== e.loopDelay && e.loopDelay > 0) {
                             let t = e.duration + e.loopDelay,
-                                s = Math.floor((v - e.start) / t);
-                            if (v - e.start - s * t > e.duration) return h.animationType === _.AnimationTypes.INTERMITTENT && !b && null != n && s >= n && G(!0), (0, i.jsx)("img", {
+                                s = Math.floor((D - e.start) / t);
+                            if (D - e.start - s * t > e.duration) return h.animationType === _.AnimationTypes.INTERMITTENT && !b && null != n && s >= n && G(!0), (0, i.jsx)("img", {
                                 src: d.RESET,
-                                alt: D
+                                alt: v
                             }, e.src + r)
                         }
                         return (0, i.jsx)("img", {
@@ -105,7 +105,7 @@ function(e, t, n) {
                                 top: (null !== (I = null === (s = e.position) || void 0 === s ? void 0 : s.y) && void 0 !== I ? I : 0) - t,
                                 left: null !== (T = null === (a = e.position) || void 0 === a ? void 0 : a.x) && void 0 !== T ? T : 0
                             },
-                            alt: D
+                            alt: v
                         }, e.src + r)
                     })
                 })

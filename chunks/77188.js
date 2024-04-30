@@ -51,18 +51,18 @@ function(e, t, n) {
                             forTests: C,
                             onChangeStart: g,
                             onChangeEnd: L,
-                            updateState: D
-                        } = e, v = s, {
+                            updateState: v
+                        } = e, D = s, {
                             onChange: M
-                        } = v;
-                        v.chatInputType = a, v.windowContext = d, v.previewMarkdown = R, v.composition = null, v.events = new r.EventEmitter, v.isMac = "MacIntel" === navigator.platform, v.onChange = () => {
-                            v.events.emit("onChange"), M()
-                        }, v = (0, m.withReact)(v, !0 === C), v = (0, A.default)(v), v = (0, h.default)(v), (null === (t = a.commands) || void 0 === t ? void 0 : t.enabled) && (v = (0, _.default)(v, o, !0 === l, !0 === u)), v = (0, S.default)(v, o.guild_id, o.id), !(null === (n = a.markdown) || void 0 === n ? void 0 : n.disableBlockQuotes) && (v = (0, c.default)(v)), !(null === (i = a.markdown) || void 0 === i ? void 0 : i.disableCodeBlocks) && (v = (0, E.default)(v)), C && (v = (0, p.default)(v)), v = (0, f.default)(v), v = (0, I.default)(v), v = (0, N.default)(v), v = (0, O.default)(v, g, L), v = (0, T.default)(v, e => {
+                        } = D;
+                        D.chatInputType = a, D.windowContext = d, D.previewMarkdown = R, D.composition = null, D.events = new r.EventEmitter, D.isMac = "MacIntel" === navigator.platform, D.onChange = () => {
+                            D.events.emit("onChange"), M()
+                        }, D = (0, m.withReact)(D, !0 === C), D = (0, A.default)(D), D = (0, h.default)(D), (null === (t = a.commands) || void 0 === t ? void 0 : t.enabled) && (D = (0, _.default)(D, o, !0 === l, !0 === u)), D = (0, S.default)(D, o.guild_id, o.id), !(null === (n = a.markdown) || void 0 === n ? void 0 : n.disableBlockQuotes) && (D = (0, c.default)(D)), !(null === (i = a.markdown) || void 0 === i ? void 0 : i.disableCodeBlocks) && (D = (0, E.default)(D)), C && (D = (0, p.default)(D)), D = (0, f.default)(D), D = (0, I.default)(D), D = (0, N.default)(D), D = (0, O.default)(D, g, L), D = (0, T.default)(D, e => {
                             let {
                                 newValue: t,
                                 newSelection: n
                             } = e;
-                            return D(v, "undo", {
+                            return v(D, "undo", {
                                 value: t,
                                 selection: n
                             })

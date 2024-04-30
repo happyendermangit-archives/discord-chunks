@@ -27,7 +27,7 @@ function(e, t, n) {
         g = n("176505"),
         L = n("689938");
 
-    function D(e, t, n) {
+    function v(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -35,7 +35,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    let v = new s.Logger("MessageManager");
+    let D = new s.Logger("MessageManager");
 
     function M(e) {
         let {
@@ -49,22 +49,22 @@ function(e, t, n) {
             logFailures: I
         } = e;
         if (null == n) {
-            I && v.log("Skipping fetch because channelId is null");
+            I && D.log("Skipping fetch because channelId is null");
             return
         }
         if ((0, g.isStaticChannelRoute)(n)) {
-            I && v.log("Skipping fetch because channelId is a static route");
+            I && D.log("Skipping fetch because channelId is a static route");
             return
         }
         let T = S.default.getChannel(n);
         if ((null == T ? void 0 : T.type) === C.ChannelTypes.GUILD_STORE || (null == T ? void 0 : T.type) != null && C.ChannelTypesSets.GUILD_THREADS_ONLY.has(T.type)) {
-            I && v.log("Skipping fetch because channel is a forum/store");
+            I && D.log("Skipping fetch because channel is a forum/store");
             return
         }
         let f = c.default.getOrCreate(n);
         O.AttachmentLinkRefreshExperiment.getCurrentConfig({
             location: "fetch_messages"
-        }).enabled && f.some(R.messageHasExpiredAttachmentUrl) && (v.log("Found expired attachment link, clearing messages"), c.default.clear(n), f = c.default.getOrCreate(n)), null != f.jumpTargetId && null == r && (f = f.mutate({
+        }).enabled && f.some(R.messageHasExpiredAttachmentUrl) && (D.log("Found expired attachment link, clearing messages"), c.default.clear(n), f = c.default.getOrCreate(n)), null != f.jumpTargetId && null == r && (f = f.mutate({
             jumpTargetId: null,
             jumped: !1,
             jumpType: d.JumpTypes.ANIMATED
@@ -72,7 +72,7 @@ function(e, t, n) {
             focusTargetId: null
         }), c.default.commit(f));
         let m = s;
-        if (!o || E.default.isConnected() || f.loadingMore ? f.loadingMore || f.ready && !f.cached ? null != r ? m = !0 : I && v.log("Skipping fetch because no other conditions matched") : null == t || null != h.default.getGuild(t) ? m = !0 : I && v.log("Skipping fetch we are connected and have loaded messages") : m = !0, m) {
+        if (!o || E.default.isConnected() || f.loadingMore ? f.loadingMore || f.ready && !f.cached ? null != r ? m = !0 : I && D.log("Skipping fetch because no other conditions matched") : null == t || null != h.default.getGuild(t) ? m = !0 : I && D.log("Skipping fetch we are connected and have loaded messages") : m = !0, m) {
             if (c.default.commit(f.mutate({
                     loadingMore: !0
                 })), null != r) u.default.jumpToMessage({
@@ -94,7 +94,7 @@ function(e, t, n) {
                     let n = Date.now() - y;
                     for (let e in i) i[e] < n && delete i[e];
                     return a.Storage.set(P, i), !0
-                }(n)) v.log("Jumping to start of thread ".concat(T.id)), u.default.fetchMessages({
+                }(n)) D.log("Jumping to start of thread ".concat(T.id)), u.default.fetchMessages({
                 channelId: n,
                 limit: C.MAX_MESSAGES_PER_CHANNEL,
                 jump: {
@@ -106,7 +106,7 @@ function(e, t, n) {
             });
             else if ((null == T ? void 0 : T.isThread()) && A.default.hasTrackedUnread(T.id) && !f.ready) {
                 let e = A.default.getTrackedAckMessageId(T.id);
-                v.log("Jumping to most recent message in thread ".concat(T.id, " - ").concat(e)), u.default.fetchMessages({
+                D.log("Jumping to most recent message in thread ".concat(T.id, " - ").concat(e)), u.default.fetchMessages({
                     channelId: n,
                     limit: C.MAX_MESSAGES_PER_CHANNEL,
                     jump: {
@@ -164,8 +164,8 @@ function(e, t, n) {
                 isPreload: e,
                 skipLocalFetch: t,
                 logFailures: n
-            }) : n && v.log("Skipping fetch because the selected channel is not a text channel"), B(r.getGuildId(), r.id)) : n && v.log("Skipping fetch because channel is null")
-        } else n && v.log("Skipping fetch because there is no selected channel")
+            }) : n && D.log("Skipping fetch because the selected channel is not a text channel"), B(r.getGuildId(), r.id)) : n && D.log("Skipping fetch because channel is null")
+        } else n && D.log("Skipping fetch because there is no selected channel")
     }
 
     function G(e) {
@@ -315,7 +315,7 @@ function(e, t, n) {
             o.default.unsubscribe("CONNECTION_OPEN", U)
         }
         constructor(...e) {
-            super(...e), D(this, "fetchMessages", M), D(this, "loadSelectedChannelIfNecessary", b), D(this, "stores", new Map().set(f.default, k)), D(this, "actions", {
+            super(...e), v(this, "fetchMessages", M), v(this, "loadSelectedChannelIfNecessary", b), v(this, "stores", new Map().set(f.default, k)), v(this, "actions", {
                 APP_STATE_UPDATE: K,
                 OVERLAY_INITIALIZE: U,
                 CHANNEL_SELECT: G,

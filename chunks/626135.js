@@ -26,7 +26,7 @@ function(e, t, n) {
             return C
         },
         trackNetworkAction: function() {
-            return v
+            return D
         }
     }), n("653041"), n("47120");
     var i = n("470079"),
@@ -294,13 +294,13 @@ function(e, t, n) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         u.default.isLoggingAnalyticsEvents && console.info("AnalyticsUtils.track(...):", e, t), n ? o.report("Analytics", e, t) : o.report("Analytics", e)
     }
-    let D = (0, r.trackMaker)({
+    let v = (0, r.trackMaker)({
         analyticEventConfigs: N,
         dispatcher: s.default,
         TRACK_ACTION_NAME: "TRACK"
     });
 
-    function v(e, t) {
+    function D(e, t) {
         let n = g({
             location: (0, a.getLocation)(),
             ...t
@@ -308,7 +308,7 @@ function(e, t, n) {
         (0, a.setDebugTrackedData)(e, {
             type: "action",
             ...t
-        }), L(e, n), D(e, n)
+        }), L(e, n), v(e, n)
     }
     t.default = {
         ...r,

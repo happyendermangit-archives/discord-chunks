@@ -27,7 +27,7 @@ function(e, t, n) {
             T.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
                 hasChanges: () => !1,
                 processProto: () => {
-                    D(!0)
+                    v(!0)
                 }
             }), T.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
                 hasChanges: () => c.default.hasPendingUsage() && f.default.hasLoaded(h.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS),
@@ -78,19 +78,19 @@ function(e, t, n) {
 
     function C() {
         var e;
-        O = null !== (e = a.Storage.get(A)) && void 0 !== e ? e : Date.now(), D(!1)
+        O = null !== (e = a.Storage.get(A)) && void 0 !== e ? e : Date.now(), v(!1)
     }
 
     function g() {
         clearTimeout(p), p = null
     }
     async function L() {
-        O = Date.now(), D(!0), !f.default.hasLoaded(h.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (c.default.hasPendingUsage() || d.default.hasPendingUsage() || l.default.hasPendingUsage() || u.default.hasPendingUsage() || E.default.hasPendingUsage()) && await T.FrecencyUserSettingsActionCreators.loadIfNecessary(), r().forEach(T.UserSettingsActionCreatorsByType, e => {
+        O = Date.now(), v(!0), !f.default.hasLoaded(h.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (c.default.hasPendingUsage() || d.default.hasPendingUsage() || l.default.hasPendingUsage() || u.default.hasPendingUsage() || E.default.hasPendingUsage()) && await T.FrecencyUserSettingsActionCreators.loadIfNecessary(), r().forEach(T.UserSettingsActionCreatorsByType, e => {
             e.markDirtyIfHasPendingChange()
         })
     }
 
-    function D(e) {
+    function v(e) {
         e && (O = Date.now(), a.Storage.set(A, O)), null != p && clearTimeout(p);
         let t = Date.now() - O;
         p = setTimeout(L, Math.max(m, N - t))

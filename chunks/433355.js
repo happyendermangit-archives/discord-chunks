@@ -5,7 +5,7 @@ function(e, t, n) {
             return m
         },
         isViewChannelSidebar: function() {
-            return D
+            return v
         }
     });
     var i, r = n("873546"),
@@ -49,11 +49,11 @@ function(e, t, n) {
         return e
     }
 
-    function D(e) {
+    function v(e) {
         return [o.SidebarType.VIEW_CHANNEL, o.SidebarType.VIEW_THREAD, o.SidebarType.VIEW_MESSAGE_REQUEST].includes(e.type)
     }
 
-    function v(e) {
+    function D(e) {
         let t = !1;
         R && (R = !1, t = !0);
         let n = L(E.default.getChannelId());
@@ -121,13 +121,13 @@ function(e, t, n) {
     }
     A(P, "displayName", "ChannelSectionStore"), A(P, "persistKey", "ChannelSectionStore2"), t.default = new P(a.default, {
         CHANNEL_TOGGLE_MEMBERS_SECTION: function() {
-            p && (p = v(p)), N = v(N)
+            p && (p = D(p)), N = D(N)
         },
         PROFILE_PANEL_TOGGLE_SECTION: function() {
-            !O && l.ComponentDispatch.dispatch(f.ComponentActions.SEARCH_RESULTS_CLOSE), O = v(O)
+            !O && l.ComponentDispatch.dispatch(f.ComponentActions.SEARCH_RESULTS_CLOSE), O = D(O)
         },
         CHANNEL_TOGGLE_SUMMARIES_SECTION: function() {
-            N && (N = v(N)), p = v(p)
+            N && (N = D(N)), p = D(p)
         },
         SIDEBAR_VIEW_CHANNEL: function(e) {
             let {

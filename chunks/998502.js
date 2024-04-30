@@ -26,8 +26,8 @@ function(e, t, n) {
         g = {};
     null != N && (O = N.remoteApp.getVersion().split(".").map(e => parseInt(e)), C = null === (i = (r = N.remoteApp).getModuleVersions) || void 0 === i ? void 0 : i.call(r), R = null === (s = (a = N.remoteApp).getBuildNumber) || void 0 === s ? void 0 : s.call(a));
     let L = new Set(["discord_erlpack", "discord_game_utils", "discord_rpc", "discord_spellcheck", "discord_utils", "discord_voice"]),
-        D = !1;
-    async function v(e) {
+        v = !1;
+    async function D(e) {
         let t = await fetch(new Request(e, {
             method: "GET",
             mode: "cors"
@@ -38,7 +38,7 @@ function(e, t, n) {
     }
 
     function M(e) {
-        return v(e)
+        return D(e)
     }
 
     function y(e) {
@@ -125,10 +125,10 @@ function(e, t, n) {
         },
         getVoiceEngine() {
             if (__OVERLAY__) throw Error("cannot require discord_voice in overlay");
-            return D = !0, this.requireModule("discord_voice")
+            return v = !0, this.requireModule("discord_voice")
         },
         getDiscordUtils() {
-            if (!D) try {
+            if (!v) try {
                 this.getVoiceEngine()
             } catch (e) {}
             return this.requireModule("discord_utils")
@@ -196,7 +196,7 @@ function(e, t, n) {
         },
         async copyImage(e) {
             c()(S.isPlatformEmbedded, "Copy image method called outside native app"), c()("function" == typeof N.clipboard.copyImage, "Copy image not supported");
-            let t = await v(e);
+            let t = await D(e);
             N.clipboard.copyImage(m.from(t), e)
         },
         async saveImage(e) {
@@ -205,7 +205,7 @@ function(e, t, n) {
             let n = h.default.toURLSafe(e);
             if (null == n) return;
             let i = null !== (t = n.pathname.split("/").pop()) && void 0 !== t ? t : "unknown",
-                r = await v(e),
+                r = await D(e),
                 s = m.from(r);
             N.fileManager.saveWithDialog(s, i)
         },
@@ -215,7 +215,7 @@ function(e, t, n) {
             let i = h.default.toURLSafe(e);
             if (null == i) return;
             let r = null !== (n = null != t ? t : i.pathname.split("/").pop()) && void 0 !== n ? n : "unknown",
-                s = await v(e),
+                s = await D(e),
                 a = m.from(s);
             N.fileManager.saveWithDialog(a, r)
         },

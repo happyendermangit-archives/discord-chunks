@@ -90,7 +90,7 @@ function(e, t, n) {
                 [S.selectedPill]: m && A,
                 [S.erroredPill]: (!m || !A) && O
             }),
-            D = r.useCallback(() => {
+            v = r.useCallback(() => {
                 !T.EditorUtils.isVoid(N, s) && I.SlateTransforms.selectCommandOption(N, s.optionName, !0)
             }, [N, s]);
         return t = p === u.ApplicationCommandOptionType.ATTACHMENT ? (null == R ? void 0 : R.filename) != null ? (0, i.jsxs)("span", {
@@ -113,7 +113,7 @@ function(e, t, n) {
             children: [(0, i.jsxs)("span", {
                 className: S.optionPillKey,
                 contentEditable: !1,
-                onClick: D,
+                onClick: v,
                 children: [s.optionDisplayName, "​"]
             }), t, (0, i.jsx)("span", {
                 contentEditable: !1,

@@ -26,13 +26,13 @@ function(e, t, n) {
         C = n("342687"),
         g = n("826298"),
         L = n("689079"),
-        D = n("981631"),
-        v = n("689938"),
+        v = n("981631"),
+        D = n("689938"),
         M = n("530506"),
         y = n("239840");
     let P = [8, 8, 0, 8],
         U = l().debounce(() => {
-            (0, _.trackWithMetadata)(D.AnalyticEvents.APPLICATION_COMMAND_BROWSER_SCROLLED)
+            (0, _.trackWithMetadata)(v.AnalyticEvents.APPLICATION_COMMAND_BROWSER_SCROLLED)
         }, 300);
 
     function b(e) {
@@ -44,7 +44,7 @@ function(e, t, n) {
             canOnlyUseTextCommands: s
         } = e, o = r.useRef(!1), l = r.useRef(0), [G, w] = r.useState(0), B = r.useRef(null), [k, V] = r.useState(!1), x = E.ApplicationCommandDiscoveryPickerStore.useStore(e => e.activeCategoryIndex);
         r.useEffect(() => {
-            (0, _.trackWithMetadata)(D.AnalyticEvents.APPLICATION_COMMAND_BROWSER_OPENED)
+            (0, _.trackWithMetadata)(v.AnalyticEvents.APPLICATION_COMMAND_BROWSER_OPENED)
         }, []);
         let {
             sectionDescriptors: F,
@@ -54,7 +54,7 @@ function(e, t, n) {
             commands: W,
             filteredSectionId: K,
             scrollDown: z,
-            filterSection: X
+            filterSection: Z
         } = m.useDiscovery(n, {
             commandType: d.ApplicationCommandType.CHAT,
             builtIns: s ? N.BuiltInCommandFilter.ONLY_TEXT : N.BuiltInCommandFilter.ALLOW,
@@ -63,7 +63,7 @@ function(e, t, n) {
             placeholderCount: 7,
             limit: L.DISCOVERY_COMMANDS_QUERY_LIMIT,
             includeFrecency: !0
-        }), Q = (0, I.useSynchronizedActiveCategoryIndexForScrollPosition)({
+        }), X = (0, I.useSynchronizedActiveCategoryIndexForScrollPosition)({
             activeCategoryIndex: x,
             isScrolling: o,
             listRef: B,
@@ -76,15 +76,15 @@ function(e, t, n) {
             },
             scrollOffset: 20,
             searchQuery: ""
-        }), q = e => {
+        }), Q = e => {
             let t = H.length,
                 n = Y.reduce((e, t) => e + t.data.length, 0) - (j ? 7 : 0);
-            j && e + 420 > 48 * t + 56 * n - 512 && z(), Q(e), U(), l.current = e
+            j && e + 420 > 48 * t + 56 * n - 512 && z(), X(e), U(), l.current = e
         };
         r.useEffect(() => {
-            q(l.current)
+            Q(l.current)
         }, [W]);
-        let Z = r.useCallback(e => e !== H.length - 1 || j ? 16 : 0, [H.length, j]),
+        let q = r.useCallback(e => e !== H.length - 1 || j ? 16 : 0, [H.length, j]),
             J = Y.map(e => e.data.length);
         r.useEffect(() => {
             null != B.current && k && null != G && B.current.scrollRowIntoView(G)
@@ -97,9 +97,9 @@ function(e, t, n) {
         let $ = r.useCallback(e => {
                 if (e.id === K || e.id === L.BuiltInSectionId.FRECENCY) {
                     var t;
-                    X(null), null === (t = B.current) || void 0 === t || t.scrollToSectionTop(0)
-                } else X(e.id)
-            }, [X, K]),
+                    Z(null), null === (t = B.current) || void 0 === t || t.scrollToSectionTop(0)
+                } else Z(e.id)
+            }, [Z, K]),
             ee = r.useCallback((e, t, i) => {
                 A.setActiveCommand({
                     channelId: n.id,
@@ -161,7 +161,7 @@ function(e, t, n) {
                         [M.categorySectionLast]: n
                     }),
                     children: [t, 0 === s.length && (0, i.jsx)(u.default, {
-                        message: v.default.Messages.APPLICATION_COMMAND_NO_PERMISSIONS.format({
+                        message: D.default.Messages.APPLICATION_COMMAND_NO_PERMISSIONS.format({
                             applicationName: r.name
                         }),
                         noResultsImageURL: y,
@@ -210,7 +210,7 @@ function(e, t, n) {
                 role: "listbox",
                 className: M.list,
                 listPadding: P,
-                onScroll: q,
+                onScroll: Q,
                 renderRow: ei,
                 renderSection: en,
                 renderSectionHeader: et,
@@ -218,7 +218,7 @@ function(e, t, n) {
                 rowCountBySection: J,
                 rowHeight: 56,
                 sectionHeaderHeight: 32,
-                sectionMarginBottom: Z,
+                sectionMarginBottom: q,
                 ref: B,
                 stickyHeaders: !0
             })]

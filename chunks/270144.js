@@ -8,7 +8,7 @@ function(e, t, n) {
             return b
         },
         useActiveSubscriptionListingForApplication: function() {
-            return v
+            return D
         },
         useApplication: function() {
             return U
@@ -115,9 +115,9 @@ function(e, t, n) {
             }, [e, t.includeSoftDeleted])
         },
         L = [],
-        D = [];
+        v = [];
 
-    function v(e, t) {
+    function D(e, t) {
         let n = (0, a.useStateFromStores)([E.default], () => E.default.getSubscriptions()),
             {
                 subscriptionGroupListing: i,
@@ -128,7 +128,7 @@ function(e, t, n) {
                 return {
                     subscriptionGroupListing: null != e ? A.default.getSubscriptionGroupListingForApplication(e) : null,
                     guildEntitlements: null != e && null != t ? A.default.getApplicationEntitlementsForGuild(e, t) : L,
-                    userEntitlements: null != e && null !== (i = null === (n = I.default.getForApplication(e)) || void 0 === n ? void 0 : n.values()) && void 0 !== i ? i : D
+                    userEntitlements: null != e && null !== (i = null === (n = I.default.getForApplication(e)) || void 0 === n ? void 0 : n.values()) && void 0 !== i ? i : v
                 }
             }, [e, t]),
             l = s.useMemo(() => [...r, ...o], [r, o]),
@@ -244,7 +244,7 @@ function(e, t, n) {
             location: "useApplicationSubscriptionListingsShown"
         }), {
             subscriptionGroupListing: _
-        } = v(t, i), c = d ? (null == u ? void 0 : u.isMonetized) === !0 : null != _ && (0, N.hasPayableSubscriptionPlan)(_);
+        } = D(t, i), c = d ? (null == u ? void 0 : u.isMonetized) === !0 : null != _ && (0, N.hasPayableSubscriptionPlan)(_);
         return {
             applicationSubscriptionListingsShown: null != t && null != n && (null == i || a) && (!r || o) && s && c
         }

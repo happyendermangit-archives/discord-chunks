@@ -26,8 +26,8 @@ function(e, t, n) {
         C = n("863908"),
         g = n("803647"),
         L = n("788983"),
-        D = n("703656"),
-        v = n("937995"),
+        v = n("703656"),
+        D = n("937995"),
         M = n("618158"),
         y = n("922745"),
         P = n("197016"),
@@ -46,10 +46,10 @@ function(e, t, n) {
         W = n("626135"),
         K = n("5192"),
         z = n("51144"),
-        X = n("534388"),
-        Q = n("484286"),
-        q = n("822296"),
-        Z = n("916771"),
+        Z = n("534388"),
+        X = n("484286"),
+        Q = n("822296"),
+        q = n("916771"),
         J = n("792517"),
         $ = n("560688"),
         ee = n("127608"),
@@ -139,15 +139,15 @@ function(e, t, n) {
                 {
                     participantOnScreen: t
                 } = this.props;
-            if ((null == e ? void 0 : e.state) === en.ApplicationStreamStates.ENDED) return (0, i.jsx)(q.default, {
+            if ((null == e ? void 0 : e.state) === en.ApplicationStreamStates.ENDED) return (0, i.jsx)(Q.default, {
                 stream: e,
                 width: ei.PIP_WIDTH
             });
-            if ((null == e ? void 0 : e.state) === en.ApplicationStreamStates.FAILED) return (0, i.jsx)(Z.default, {
+            if ((null == e ? void 0 : e.state) === en.ApplicationStreamStates.FAILED) return (0, i.jsx)(q.default, {
                 stream: e,
                 width: ei.PIP_WIDTH
             });
-            if (this.isEmptyBroadcast()) return (0, i.jsx)(X.default, {});
+            if (this.isEmptyBroadcast()) return (0, i.jsx)(Z.default, {});
             else if ((null == t ? void 0 : t.type) === ei.ParticipantTypes.HIDDEN_STREAM) return (0, i.jsx)(J.default, {
                 participant: t,
                 width: ei.PIP_WIDTH
@@ -179,7 +179,7 @@ function(e, t, n) {
                 participantOnScreen: n,
                 isVideoEnabled: r
             } = this.props, s = (0, p.computeChannelName)(e, x.default, V.default), o = this.isEmptyBroadcast(), l = (null == n ? void 0 : n.id) === B.default.getId() && r, u = this.renderStreamState(), d = null;
-            return (null == n ? void 0 : n.type) !== ei.ParticipantTypes.ACTIVITY && (null != u ? d = u : ((null == n ? void 0 : n.type) === ei.ParticipantTypes.USER || (null == n ? void 0 : n.type) === ei.ParticipantTypes.STREAM) && (d = (0, i.jsx)(Q.default, {
+            return (null == n ? void 0 : n.type) !== ei.ParticipantTypes.ACTIVITY && (null != u ? d = u : ((null == n ? void 0 : n.type) === ei.ParticipantTypes.USER || (null == n ? void 0 : n.type) === ei.ParticipantTypes.STREAM) && (d = (0, i.jsx)(X.default, {
                 paused: this.streamerPaused,
                 streamId: t,
                 component: k.default.getVideoComponent(),
@@ -189,7 +189,7 @@ function(e, t, n) {
                     src: null == n ? void 0 : n.user.getAvatarURL(e.guild_id, 80),
                     "aria-label": null == n ? void 0 : n.user.username
                 })
-            }))), (0, i.jsx)(v.default, {
+            }))), (0, i.jsx)(D.default, {
                 timeout: 1800,
                 children: e => {
                     var t;
@@ -228,7 +228,7 @@ function(e, t, n) {
                 } = this.props;
                 (0, T.popAllLayers)();
                 let n = null !== (e = t.getGuildId()) && void 0 !== e ? e : en.ME;
-                I.default.channelListScrollTo(n, t.id), (0, D.transitionToGuild)(n, t.id)
+                I.default.channelListScrollTo(n, t.id), (0, v.transitionToGuild)(n, t.id)
             }), ea(this, "handleStartStream", () => {
                 let {
                     canGoLive: e,

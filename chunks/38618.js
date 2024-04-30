@@ -22,11 +22,11 @@ function(e, t, n) {
         C = n("138859"),
         g = n("955132"),
         L = n("645436"),
-        D = n("344651"),
-        v = n("981631"),
+        v = n("344651"),
+        D = n("981631"),
         M = n("526761");
     let y = window.DiscordNative;
-    g.socket.dispatcher.getDispatchHandler = D.default;
+    g.socket.dispatcher.getDispatchHandler = v.default;
     let P = new c.default("ConnectionStore"),
         U = 0,
         b = null,
@@ -111,14 +111,14 @@ function(e, t, n) {
             P.verbose("connection closed dispatched"), U = Date.now()
         },
         RTC_CONNECTION_STATE: function(e) {
-            if (e.state !== v.RTCConnectionStates.DISCONNECTED) return !1;
+            if (e.state !== D.RTCConnectionStates.DISCONNECTED) return !1;
             e.willReconnect && (null != e.streamKey ? g.socket.streamPing(e.streamKey) : g.socket.voiceServerPing())
         },
         VOICE_CHANNEL_SELECT: function(e) {
             return g.localVoiceState.update({
                 guildId: e.guildId,
                 channelId: e.channelId
-            }), (0, R.isIOS)() && null == e.channelId && w === v.AppStates.BACKGROUND && g.socket.close(!0), !1
+            }), (0, R.isIOS)() && null == e.channelId && w === D.AppStates.BACKGROUND && g.socket.close(!0), !1
         },
         VOICE_STATE_UPDATES: function(e) {
             let {
@@ -165,7 +165,7 @@ function(e, t, n) {
             })
         },
         APP_STATE_UPDATE: function(e) {
-            return (0, R.isIOS)() ? (T.default.isAuthenticated() && (w === v.AppStates.INACTIVE && e.state === v.AppStates.BACKGROUND && null == g.localVoiceState.channelId ? g.socket.close(!0) : w === v.AppStates.BACKGROUND && e.state === v.AppStates.ACTIVE && (L.setIsPaused(!1), g.socket.connect())), w = e.state) : e.state === v.AppStates.ACTIVE && (L.setIsPaused(!1), T.default.isAuthenticated() && g.socket.resetBackoff("App state is active")), !1
+            return (0, R.isIOS)() ? (T.default.isAuthenticated() && (w === D.AppStates.INACTIVE && e.state === D.AppStates.BACKGROUND && null == g.localVoiceState.channelId ? g.socket.close(!0) : w === D.AppStates.BACKGROUND && e.state === D.AppStates.ACTIVE && (L.setIsPaused(!1), g.socket.connect())), w = e.state) : e.state === D.AppStates.ACTIVE && (L.setIsPaused(!1), T.default.isAuthenticated() && g.socket.resetBackoff("App state is active")), !1
         },
         GUILD_MEMBERS_REQUEST: function(e) {
             return g.socket.isSessionEstablished() && ("userIds" in e ? l()(e.userIds).chunk(100).forEach(t => {

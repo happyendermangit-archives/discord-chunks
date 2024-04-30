@@ -30,8 +30,8 @@ function(e, t, n) {
         C = n("514361"),
         g = n("572397"),
         L = n("705262"),
-        D = n("981631"),
-        v = n("921944"),
+        v = n("981631"),
+        D = n("921944"),
         M = n("474936"),
         y = n("689938"),
         P = n("340519");
@@ -57,7 +57,7 @@ function(e, t, n) {
                 children: [(0, i.jsx)(d.Clickable, {
                     className: P.closeCircleButton,
                     onClick: () => {
-                        null != t && t(v.ContentDismissActionType.DISMISS), n(D.AnalyticEvents.CLIENT_THEME_PREVIEW_CLOSED), (0, R.closeEditor)()
+                        null != t && t(D.ContentDismissActionType.DISMISS), n(v.AnalyticEvents.CLIENT_THEME_PREVIEW_CLOSED), (0, R.closeEditor)()
                     },
                     children: (0, i.jsx)(N.default, {
                         className: P.closeCircle
@@ -84,7 +84,7 @@ function(e, t, n) {
                 buttonText: E ? y.default.Messages.BILLING_SWITCH_PLAN_UPGRADE : (null == I ? void 0 : null === (r = I.subscription_trial) || void 0 === r ? void 0 : r.sku_id) === M.PremiumSubscriptionSKUs.TIER_2 ? A : y.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
                 subscriptionTier: M.PremiumSubscriptionSKUs.TIER_2,
                 onSubscribeModalClose: e => {
-                    if (!!e) null == s || s(), null != a && a(v.ContentDismissActionType.PRIMARY), null != c && ((0, L.trackClientThemeUpdated)({
+                    if (!!e) null == s || s(), null != a && a(D.ContentDismissActionType.PRIMARY), null != c && ((0, L.trackClientThemeUpdated)({
                         isPersisted: !0,
                         themeName: u.BackgroundGradientPresetId[c.id],
                         analyticsLocations: o
@@ -125,7 +125,7 @@ function(e, t, n) {
                 }), (0, i.jsx)(d.Button, {
                     className: P.footerButton,
                     onClick: () => {
-                        null != t && t(v.ContentDismissActionType.DISMISS), _(D.AnalyticEvents.CLIENT_THEME_PREVIEW_CLOSED), (0, R.closeEditor)(), !s && c.default.open()
+                        null != t && t(D.ContentDismissActionType.DISMISS), _(v.AnalyticEvents.CLIENT_THEME_PREVIEW_CLOSED), (0, R.closeEditor)(), !s && c.default.open()
                     },
                     color: d.Button.Colors.PRIMARY,
                     size: d.Button.Sizes.MEDIUM,
@@ -150,14 +150,14 @@ function(e, t, n) {
             isEditorOpen: C.default.isEditorOpen,
             shouldEditorAnimate: C.default.isCoachmark && !I.default.useReducedMotion
         })), c = (0, g.useTrackClientThemePreviewEvent)();
-        r.useEffect(() => c(D.AnalyticEvents.CLIENT_THEME_PREVIEW_VIEWED), [c]), r.useEffect(() => {
-            s && p.default.track(D.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+        r.useEffect(() => c(v.AnalyticEvents.CLIENT_THEME_PREVIEW_VIEWED), [c]), r.useEffect(() => {
+            s && p.default.track(v.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                 type: M.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                 location_stack: n
             })
         }, [s, n]);
         let S = (0, g.useResetClientThemePreview)(),
-            h = (0, E.default)(null, s ? S : D.NOOP);
+            h = (0, E.default)(null, s ? S : v.NOOP);
         return r.useEffect(() => {
             if (s && !u) return S
         }, [s, u, S]), (0, i.jsx)(f.AnalyticsLocationProvider, {

@@ -31,8 +31,8 @@ function(e, t, n) {
         C = n("301822"),
         g = n("153124"),
         L = n("626135"),
-        D = n("238302"),
-        v = n("514361"),
+        v = n("238302"),
+        D = n("514361"),
         M = n("583901"),
         y = n("469115"),
         P = n("981631"),
@@ -149,8 +149,8 @@ function(e, t, n) {
             delay: n
         } = a.useContext(x), {
             analyticsLocations: i
-        } = (0, S.default)(f.default.CLIENT_THEMES_THEME_SELECTOR), [r, o, u] = (0, d.useStateFromStoresArray)([O.default, R.default, v.default], () => [O.default.theme, null == v.default.gradientPreset, R.default.useSystemTheme === b.SystemThemeState.ON]), _ = e => {
-            (0, D.resetBackgroundGradientPreset)(), F({
+        } = (0, S.default)(f.default.CLIENT_THEMES_THEME_SELECTOR), [r, o, u] = (0, d.useStateFromStoresArray)([O.default, R.default, D.default], () => [O.default.theme, null == D.default.gradientPreset, R.default.useSystemTheme === b.SystemThemeState.ON]), _ = e => {
+            (0, v.resetBackgroundGradientPreset)(), F({
                 isPersisted: !0,
                 analyticsLocations: i,
                 themeName: "default ".concat(e)
@@ -185,15 +185,15 @@ function(e, t, n) {
             delay: c
         } = a.useContext(x), {
             analyticsLocations: E
-        } = (0, S.default)(f.default.CLIENT_THEMES_THEME_SELECTOR), [N, O, R] = (0, d.useStateFromStoresArray)([v.default], () => {
+        } = (0, S.default)(f.default.CLIENT_THEMES_THEME_SELECTOR), [N, O, R] = (0, d.useStateFromStoresArray)([D.default], () => {
             var e;
-            return [v.default.isPreview, v.default.isCoachmark, null === (e = v.default.gradientPreset) || void 0 === e ? void 0 : e.id]
+            return [D.default.isPreview, D.default.isCoachmark, null === (e = D.default.gradientPreset) || void 0 === e ? void 0 : e.id]
         }), [g, L] = a.useState(!1), [P, G] = a.useState(-1), w = (0, d.useStateFromStores)([T.default], () => T.default.useReducedMotion), V = (null === (i = (0, A.usePremiumTrialOffer)()) || void 0 === i ? void 0 : null === (t = i.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === U.PremiumSubscriptionSKUs.TIER_2;
         a.useEffect(() => {
             (P === y.BACKGROUND_GRADIENT_PRESETS.length - 2 && "EDITOR" === u || R === _.BackgroundGradientPresetId.EASTER_EGG) && L(!0)
         }, [P, u, R]);
         let j = (e, t) => {
-            if ((0, D.updateBackgroundGradientPreset)(e.id), F({
+            if ((0, v.updateBackgroundGradientPreset)(e.id), F({
                     isPersisted: !N,
                     analyticsLocations: E,
                     themeName: _.BackgroundGradientPresetId[e.id]

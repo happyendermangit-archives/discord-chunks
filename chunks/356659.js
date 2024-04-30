@@ -32,10 +32,10 @@ function(e, t, n) {
             return U
         },
         CLIPS_THUMBNAIL_MAX_HEIGHT: function() {
-            return v
+            return D
         },
         CLIPS_THUMBNAIL_MAX_WIDTH: function() {
-            return D
+            return v
         },
         CLIPS_TOAST_DURATION: function() {
             return I
@@ -113,8 +113,8 @@ function(e, t, n) {
         C = 200,
         g = "clips-edit",
         L = "clips-gallery",
-        D = 640,
-        v = 360,
+        v = 640,
+        D = 360,
         M = 100,
         y = e => "Clip - ".concat(new Date(e).toLocaleString()),
         P = 15,

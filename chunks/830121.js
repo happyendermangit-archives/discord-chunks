@@ -41,12 +41,12 @@ function(e, t, n) {
         C = /dev:\/\/[\w-.~:\/?#\[\]@!$&'()*+,;=%]+/i,
         g = G(window.GLOBAL_ENV.INVITE_HOST),
         L = G(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST),
-        D = G(null !== (i = window.GLOBAL_ENV.WEBAPP_ENDPOINT) && void 0 !== i ? i : "//canary.".concat(T.PRIMARY_DOMAIN)),
-        v = G("//canary.".concat(T.PRIMARY_DOMAIN)),
+        v = G(null !== (i = window.GLOBAL_ENV.WEBAPP_ENDPOINT) && void 0 !== i ? i : "//canary.".concat(T.PRIMARY_DOMAIN)),
+        D = G("//canary.".concat(T.PRIMARY_DOMAIN)),
         M = G("//ptb.".concat(T.PRIMARY_DOMAIN)),
         y = G("discordapp.com"),
         P = G("discord.com"),
-        U = [c.default.escape(null !== (r = g.host) && void 0 !== r ? r : ""), c.default.escape(null !== (s = L.host) && void 0 !== s ? s : ""), c.default.escape(null !== (a = D.host) && void 0 !== a ? a : ""), c.default.escape(null !== (o = y.host) && void 0 !== o ? o : ""), c.default.escape(null !== (l = P.host) && void 0 !== l ? l : "")].filter(Boolean),
+        U = [c.default.escape(null !== (r = g.host) && void 0 !== r ? r : ""), c.default.escape(null !== (s = L.host) && void 0 !== s ? s : ""), c.default.escape(null !== (a = v.host) && void 0 !== a ? a : ""), c.default.escape(null !== (o = y.host) && void 0 !== o ? o : ""), c.default.escape(null !== (l = P.host) && void 0 !== l ? l : "")].filter(Boolean),
         b = RegExp("((https?://[^ ]*)|^|[^/][^/.])(".concat(U.join("|"), ")"), "g");
 
     function G(e) {
@@ -79,7 +79,7 @@ function(e, t, n) {
 
     function B(e) {
         var t, n, i, r;
-        return null !== (r = null !== (i = null !== (n = null !== (t = w(D, e)) && void 0 !== t ? t : w(v, e)) && void 0 !== n ? n : w(M, e)) && void 0 !== i ? i : w(y, e)) && void 0 !== r ? r : w(P, e)
+        return null !== (r = null !== (i = null !== (n = null !== (t = w(v, e)) && void 0 !== t ? t : w(D, e)) && void 0 !== n ? n : w(M, e)) && void 0 !== i ? i : w(y, e)) && void 0 !== r ? r : w(P, e)
     }
 
     function k(e) {
@@ -93,7 +93,7 @@ function(e, t, n) {
         };
         let a = w(g, s),
             o = w(L, s),
-            l = null !== (r = null !== (i = null !== (n = null !== (t = w(D, s)) && void 0 !== t ? t : w(v, s)) && void 0 !== n ? n : w(M, s)) && void 0 !== i ? i : w(y, s)) && void 0 !== r ? r : w(P, s);
+            l = null !== (r = null !== (i = null !== (n = null !== (t = w(v, s)) && void 0 !== t ? t : w(D, s)) && void 0 !== n ? n : w(M, s)) && void 0 !== i ? i : w(y, s)) && void 0 !== r ? r : w(P, s);
         return {
             url: s,
             inviteHostRemainingPath: a,

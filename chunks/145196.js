@@ -185,14 +185,14 @@ function(e, t, n) {
             setLanguage: I,
             bytesLeft: T,
             className: f
-        } = e, A = null == o ? void 0 : o.split("\n"), C = null !== (t = null == A ? void 0 : A.length) && void 0 !== t ? t : 0, g = d ? 100 : 6, L = 0 === T, D = "";
-        L && d && C > g ? D = "\n..." : !L && (D = "..."), "" !== D && (L ? D += " " + S.default.Messages.PREVIEW_LINES_LEFT.format({
+        } = e, A = null == o ? void 0 : o.split("\n"), C = null !== (t = null == A ? void 0 : A.length) && void 0 !== t ? t : 0, g = d ? 100 : 6, L = 0 === T, v = "";
+        L && d && C > g ? v = "\n..." : !L && (v = "..."), "" !== v && (L ? v += " " + S.default.Messages.PREVIEW_LINES_LEFT.format({
             lines: C - g
-        }) : D += " " + S.default.Messages.PREVIEW_BYTES_LEFT.format({
+        }) : v += " " + S.default.Messages.PREVIEW_BYTES_LEFT.format({
             formattedBytes: (0, _.formatKbSize)(T)
         }));
-        let v = (null == A ? void 0 : A.slice(0, g).join("\n")) + D,
-            M = (0, u.sanitizeWhitespace)(v),
+        let D = (null == A ? void 0 : A.slice(0, g).join("\n")) + v,
+            M = (0, u.sanitizeWhitespace)(D),
             y = d || g < C;
         return (0, i.jsxs)("div", {
             className: a()(f, h.container),

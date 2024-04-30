@@ -123,8 +123,8 @@ function(e, t, n) {
                 orientation: C,
                 onValueRender: g,
                 renderMarker: L,
-                getAriaValueText: D,
-                barClassName: v,
+                getAriaValueText: v,
+                barClassName: D,
                 grabberClassName: M,
                 grabberStyles: y = {},
                 markerPosition: P = 0,
@@ -159,7 +159,7 @@ function(e, t, n) {
                     }, t)
                 }) : null,
                 x = null != g ? g(t) : "".concat(B.toFixed(0), "%"),
-                F = null !== (e = null == D ? void 0 : D(t)) && void 0 !== e ? e : void 0;
+                F = null !== (e = null == v ? void 0 : v(t)) && void 0 !== e ? e : void 0;
             return (0, a.jsx)(E.FocusRing, {
                 focusTarget: this.containerRef,
                 ringTarget: this.grabberRef,
@@ -189,7 +189,7 @@ function(e, t, n) {
                         className: f.track,
                         children: V
                     }), (0, a.jsx)("div", {
-                        className: u()(f.bar, v),
+                        className: u()(f.bar, D),
                         style: m,
                         children: (0, a.jsx)("div", {
                             className: f.barFill,

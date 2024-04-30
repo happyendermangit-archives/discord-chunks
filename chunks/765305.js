@@ -53,10 +53,10 @@ function(e, t, n) {
             return N
         },
         MAX_RSVP_USER_DISPLAY_COUNT: function() {
-            return D
+            return v
         },
         NEW_EVENT_WINDOW_MILLISECONDS: function() {
-            return v
+            return D
         },
         UpcomingGuildEventNoticeTypes: function() {
             return l
@@ -79,8 +79,8 @@ function(e, t, n) {
         g = new Set([3]),
         L = new Set([1, 2]);
     (I = o || (o = {}))[I.EVENT_INFO = 0] = "EVENT_INFO", I[I.RSVP_LIST = 1] = "RSVP_LIST";
-    let D = 100,
-        v = 2 * S.default.Millis.DAY,
+    let v = 100,
+        D = 2 * S.default.Millis.DAY,
         M = 12 * S.default.Millis.HOUR,
         y = 4;
     (T = l || (l = {})).NEW_EVENT = "Upcoming Event Notice", T.EVENT_STARTING_SOON = "Event Starting Soon Notice", (f = u || (u = {}))[f.UNINTERESTED = 0] = "UNINTERESTED", f[f.INTERESTED = 1] = "INTERESTED"

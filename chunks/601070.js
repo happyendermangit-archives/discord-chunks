@@ -22,11 +22,11 @@ function(e, t, n) {
         C = {},
         g = {},
         L = null,
-        D = {};
+        v = {};
 
-    function v() {
-        for (let e in N = {}, C = {}, p = {}, O = {}, R = {}, L = T.default.getChannelId(), D) clearTimeout(D[e]);
-        D = {}, S.default.forEachGuild(e => {
+    function D() {
+        for (let e in N = {}, C = {}, p = {}, O = {}, R = {}, L = T.default.getChannelId(), v) clearTimeout(v[e]);
+        v = {}, S.default.forEachGuild(e => {
             y(e)
         }), P()
     }
@@ -197,7 +197,7 @@ function(e, t, n) {
 
     function H(e, t) {
         Y(e.id), t && function(e) {
-            D[e.id] = setTimeout(() => {
+            v[e.id] = setTimeout(() => {
                 let t = c.default.getChannel(e.id);
                 null != t && d.default.dispatch({
                     type: "THREAD_UPDATE",
@@ -208,7 +208,7 @@ function(e, t, n) {
     }
 
     function Y(e) {
-        e in D && (clearTimeout(D[e]), delete D[e])
+        e in v && (clearTimeout(v[e]), delete v[e])
     }
 
     function j(e, t, n, i) {
@@ -241,10 +241,10 @@ function(e, t, n) {
     function z(e, t, n, i) {
         return t in e && n in e[t] && i in e[t][n]
     }
-    let X = {},
+    let Z = {},
+        X = {},
         Q = {},
         q = {},
-        Z = {},
         J = {};
     class $ extends(i = u.default.Store) {
         initialize() {
@@ -255,43 +255,43 @@ function(e, t, n) {
         }
         getActiveUnjoinedThreadsForParent(e, t) {
             var n;
-            return e in O && null !== (n = O[e][t]) && void 0 !== n ? n : Z
+            return e in O && null !== (n = O[e][t]) && void 0 !== n ? n : q
         }
         getActiveJoinedThreadsForParent(e, t) {
             var n;
-            return e in N && null !== (n = N[e][t]) && void 0 !== n ? n : q
+            return e in N && null !== (n = N[e][t]) && void 0 !== n ? n : Q
         }
         getActiveJoinedThreadsForGuild(e) {
             var t;
-            return null !== (t = N[e]) && void 0 !== t ? t : X
+            return null !== (t = N[e]) && void 0 !== t ? t : Z
         }
         getActiveJoinedUnreadThreadsForGuild(e) {
             var t;
-            return null !== (t = p[e]) && void 0 !== t ? t : X
+            return null !== (t = p[e]) && void 0 !== t ? t : Z
         }
         getActiveJoinedUnreadThreadsForParent(e, t) {
             var n;
-            return null !== (n = this.getActiveJoinedUnreadThreadsForGuild(e)[t]) && void 0 !== n ? n : q
+            return null !== (n = this.getActiveJoinedUnreadThreadsForGuild(e)[t]) && void 0 !== n ? n : Q
         }
         getActiveJoinedRelevantThreadsForGuild(e) {
             var t;
-            return null !== (t = C[e]) && void 0 !== t ? t : X
+            return null !== (t = C[e]) && void 0 !== t ? t : Z
         }
         getActiveJoinedRelevantThreadsForParent(e, t) {
             var n;
-            return null !== (n = this.getActiveJoinedRelevantThreadsForGuild(e)[t]) && void 0 !== n ? n : q
+            return null !== (n = this.getActiveJoinedRelevantThreadsForGuild(e)[t]) && void 0 !== n ? n : Q
         }
         getActiveUnjoinedThreadsForGuild(e) {
             var t;
-            return null !== (t = O[e]) && void 0 !== t ? t : Q
+            return null !== (t = O[e]) && void 0 !== t ? t : X
         }
         getActiveUnjoinedUnreadThreadsForGuild(e) {
             var t;
-            return null !== (t = R[e]) && void 0 !== t ? t : X
+            return null !== (t = R[e]) && void 0 !== t ? t : Z
         }
         getActiveUnjoinedUnreadThreadsForParent(e, t) {
             var n;
-            return null !== (n = this.getActiveUnjoinedUnreadThreadsForGuild(e)[t]) && void 0 !== n ? n : q
+            return null !== (n = this.getActiveUnjoinedUnreadThreadsForGuild(e)[t]) && void 0 !== n ? n : Q
         }
         getNewThreadCountsForGuild(e) {
             var t;
@@ -321,26 +321,26 @@ function(e, t, n) {
         configurable: !0,
         writable: !0
     }) : r[s] = a, t.default = new $(d.default, {
-        CONNECTION_OPEN: v,
-        OVERLAY_INITIALIZE: v,
+        CONNECTION_OPEN: D,
+        OVERLAY_INITIALIZE: D,
         THREAD_LIST_SYNC: function(e) {
             let {
                 guildId: t
             } = e;
             return M(t)
         },
-        LOAD_THREADS_SUCCESS: v,
-        LOAD_ARCHIVED_THREADS_SUCCESS: v,
-        SEARCH_FINISH: v,
-        MOD_VIEW_SEARCH_FINISH: v,
+        LOAD_THREADS_SUCCESS: D,
+        LOAD_ARCHIVED_THREADS_SUCCESS: D,
+        SEARCH_FINISH: D,
+        MOD_VIEW_SEARCH_FINISH: D,
         GUILD_CREATE: function(e) {
             let {
                 guild: t
             } = e;
             return M(t.id)
         },
-        GUILD_DELETE: v,
-        CURRENT_USER_UPDATE: v,
+        GUILD_DELETE: D,
+        CURRENT_USER_UPDATE: D,
         THREAD_CREATE: w,
         THREAD_UPDATE: w,
         THREAD_DELETE: w,
@@ -365,7 +365,7 @@ function(e, t, n) {
                         }
                         return !1
                     }(e.guild_id, e.parent_id)) {
-                    v();
+                    D();
                     return
                 } return !1
         },

@@ -22,10 +22,10 @@ function(e, t, n) {
         C = null,
         g = !1,
         L = new Map,
-        D = (e, t) => {
+        v = (e, t) => {
             L = new Map(L.set(e, t))
         },
-        v = S.default.Millis.HOUR,
+        D = S.default.Millis.HOUR,
         M = async () => {
             if (0 !== m) return;
             let e = d.default.database();
@@ -101,7 +101,7 @@ function(e, t, n) {
 
     function G(e) {
         let t = f.default.getGuild(e.id);
-        null != t && null != e.stickers && (e.stickers.forEach(e => y(e, !0, t)), D(t.id, e.stickers))
+        null != t && null != e.stickers && (e.stickers.forEach(e => y(e, !0, t)), v(t.id, e.stickers))
     }
     class w extends(i = l.default.Store) {
         initialize() {
@@ -117,7 +117,7 @@ function(e, t, n) {
             return M(), null == O && (O = new Map, b()), O
         }
         get hasLoadedStickerPacks() {
-            return null != C && C + v > Date.now()
+            return null != C && C + D > Date.now()
         }
         get isFetchingStickerPacks() {
             return g
@@ -201,7 +201,7 @@ function(e, t, n) {
                 guildId: t,
                 stickers: n
             } = e;
-            n.forEach(e => y(e)), D(t, n)
+            n.forEach(e => y(e)), v(t, n)
         },
         GUILD_STICKERS_CREATE_SUCCESS: e => {
             var t, n;
@@ -209,7 +209,7 @@ function(e, t, n) {
                 guildId: i,
                 sticker: r
             } = e, s = null !== (t = L.get(i)) && void 0 !== t ? t : [];
-            D(i, [...null !== (n = s.filter(e => e.id !== r.id)) && void 0 !== n ? n : [], r]), y(r)
+            v(i, [...null !== (n = s.filter(e => e.id !== r.id)) && void 0 !== n ? n : [], r]), y(r)
         },
         STICKER_FETCH_SUCCESS: e => {
             let {
@@ -234,7 +234,7 @@ function(e, t, n) {
                 p.delete(e.id), null != O && O.delete(e.id)
             });
             let s = i.map(e => r(e));
-            s.forEach(e => y(e)), D(n, s)
+            s.forEach(e => y(e)), v(n, s)
         },
         CACHED_STICKERS_LOADED: function(e) {
             let {
@@ -244,7 +244,7 @@ function(e, t, n) {
                 if (T.default.isMember(e) && !L.has(e)) {
                     let t = f.default.getGuild(e);
                     for (let e of n) y(e, !0, t);
-                    D(e, n)
+                    v(e, n)
                 }
         }
     })

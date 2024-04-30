@@ -30,12 +30,12 @@ function(e, t, n) {
         C = n("626135"),
         g = n("700785"),
         L = n("74538"),
-        D = n("573261"),
-        v = n("668781"),
+        v = n("573261"),
+        D = n("668781"),
         M = n("981631"),
         y = n("689938");
     let P = e => {
-            v.default.show({
+            D.default.show({
                 title: y.default.Messages.TOO_MANY_USER_GUILDS_ALERT_TITLE,
                 body: y.default.Messages.TOO_MANY_USER_GUILDS_ALERT_DESCRIPTION.format({
                     quantity: e
@@ -51,7 +51,7 @@ function(e, t, n) {
             })
         },
         b = () => {
-            v.default.show({
+            D.default.show({
                 title: y.default.Messages.SERVER_IS_CURRENTLY_FULL,
                 body: y.default.Messages.PLEASE_TRY_AGAIN_LATER
             })
@@ -197,7 +197,7 @@ function(e, t, n) {
                 reason: a,
                 location: o
             } = e;
-            return D.default.patch({
+            return v.default.patch({
                 url: M.Endpoints.GUILD_MEMBER(t, n),
                 reason: a,
                 body: {

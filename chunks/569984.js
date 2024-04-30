@@ -15,11 +15,11 @@ function(e, t, n) {
             location: C.QuestsExperimentLocations.QUESTS_STORE
         });
 
-    function D() {
+    function v() {
         i = !1, r = new Map, s = 0, a = new Set, o = new Set, l = new Set, u = new Set, d = new Set, _ = new Map, c = new Map, E = new Map
     }
 
-    function v(e, t) {
+    function D(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
                 updateProgress: !1
             },
@@ -47,14 +47,14 @@ function(e, t, n) {
         M(e, t);
         let n = r.get(e),
             i = null == n ? void 0 : n.userStatus;
-        null != i && null == i.claimedAt && v(e, {
+        null != i && null == i.claimedAt && D(e, {
             userStatus: {
                 ...i,
                 claimedAt: t.claimedAt
             }
         })
     }
-    D();
+    v();
 
     function P(e) {
         null != E.get(e) && (E = new Map(E)).delete(e)
@@ -114,7 +114,7 @@ function(e, t, n) {
         writable: !0
     }) : T[f] = S, t.default = new G(N.default, {
         LOGOUT: function() {
-            D()
+            v()
         },
         QUESTS_FETCH_CURRENT_QUESTS_BEGIN: function() {
             s = Date.now(), i = !0
@@ -134,7 +134,7 @@ function(e, t, n) {
                 streamKey: n,
                 userStatus: i
             } = e;
-            v(t, {
+            D(t, {
                 userStatus: i
             }, {
                 updateProgress: !0
@@ -161,7 +161,7 @@ function(e, t, n) {
             let {
                 enrolledQuestUserStatus: t
             } = e;
-            v(t.questId, {
+            D(t.questId, {
                 userStatus: t
             }), U(t.questId)
         },
@@ -242,7 +242,7 @@ function(e, t, n) {
                         quest: i,
                         entitlements: t
                     });
-                    null != n && M(e, n), v(e, {
+                    null != n && M(e, n), D(e, {
                         userStatus: {
                             ...s,
                             claimedAt: t.claimedAt,
@@ -268,7 +268,7 @@ function(e, t, n) {
             let {
                 dismissedQuestUserStatus: t
             } = e;
-            v(t.questId, {
+            D(t.questId, {
                 userStatus: t
             }), b(t.questId)
         },
@@ -294,7 +294,7 @@ function(e, t, n) {
             let {
                 previewQuestUserStatus: t
             } = e;
-            v(t.questId, {
+            D(t.questId, {
                 userStatus: t
             }), null == t.claimedAt && (_ = new Map(_)).delete(t.questId)
         },
@@ -302,7 +302,7 @@ function(e, t, n) {
             let {
                 userStatus: t
             } = e;
-            v(t.questId, {
+            D(t.questId, {
                 userStatus: t
             }, {
                 updateProgress: !0

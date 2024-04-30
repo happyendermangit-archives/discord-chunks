@@ -42,8 +42,8 @@ function(e, t, n) {
                 itemGutter: C,
                 removeEdgeItemGutters: g,
                 sectionGutter: L,
-                padding: D,
-                paddingVertical: v,
+                padding: v,
+                paddingVertical: D,
                 paddingHorizontal: M,
                 fade: y = !1,
                 className: P,
@@ -68,7 +68,7 @@ function(e, t, n) {
                 visibleSections: W,
                 totalHeight: K,
                 forceUpdate: z,
-                masonryComputer: X
+                masonryComputer: Z
             } = (0, u.useVirtualizedMasonryState)({
                 sections: f,
                 columns: S,
@@ -79,15 +79,15 @@ function(e, t, n) {
                 itemGutter: C,
                 removeEdgeItemGutters: g,
                 sectionGutter: L,
-                padding: D,
-                paddingVertical: v,
+                padding: v,
+                paddingVertical: D,
                 paddingHorizontal: M,
                 getScrollerState: F,
                 dir: T
-            }), Q = (0, r.useCallback)(function() {
+            }), X = (0, r.useCallback)(function() {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
                 e > x.current.dirty && (x.current.dirty = e, 2 === e ? z() : H(1))
-            }, [H, x, z]), q = (0, u.useScrollSpring)(V), Z = (0, r.useCallback)(() => X.itemGrid, [X]), J = (0, r.useCallback)(() => X.coordsMap, [X]), $ = s().useCallback(() => Q(), [Q]);
+            }, [H, x, z]), Q = (0, u.useScrollSpring)(V), q = (0, r.useCallback)(() => Z.itemGrid, [Z]), J = (0, r.useCallback)(() => Z.coordsMap, [Z]), $ = s().useCallback(() => X(), [X]);
             (0, u.useResizeObserverSubscription)({
                 ref: V,
                 key: "container",
@@ -96,16 +96,16 @@ function(e, t, n) {
                 listenerMap: _
             }), (0, r.useImperativeHandle)(E, () => ({
                 getScrollerNode: () => V.current,
-                getItemGrid: Z,
+                getItemGrid: q,
                 getCoordsMap: J,
                 getScrollerState: F,
-                ...(0, u.getAnimatedScrollHelpers)(V, F, q)
-            }), [V, F, Z, q, J]);
+                ...(0, u.getAnimatedScrollHelpers)(V, F, Q)
+            }), [V, F, q, Q, J]);
             let ee = (0, r.useCallback)(e => {
-                Q(1), null == G.current ? k(!0) : clearTimeout(G.current), G.current = setTimeout(() => {
+                X(1), null == G.current ? k(!0) : clearTimeout(G.current), G.current = setTimeout(() => {
                     G.current = null, k(!1)
                 }, 200), null != I && I(e)
-            }, [I, Q]);
+            }, [I, X]);
             return (0, i.jsx)("div", {
                 ref: V,
                 onScroll: ee,

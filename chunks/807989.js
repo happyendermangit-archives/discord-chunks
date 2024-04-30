@@ -38,9 +38,9 @@ function(e, t, n) {
                 disclosures: g
             } = e,
             L = new Date(f.default.extractTimestamp(r.id)),
-            D = (0, h.getSecurityMessage)(s),
-            v = (0, T.hasFlag)(null !== (t = r.flags) && void 0 !== t ? t : 0, A.ApplicationFlags.EMBEDDED);
-        if (null != o && !v && !C) {
+            v = (0, h.getSecurityMessage)(s),
+            D = (0, T.hasFlag)(null !== (t = r.flags) && void 0 !== t ? t : 0, A.ApplicationFlags.EMBEDDED);
+        if (null != o && !D && !C) {
             let e = new URL(o);
             n = null != e.host && e.host.length > 0 ? e.origin : e.href
         }
@@ -67,7 +67,7 @@ function(e, t, n) {
                 })
             }) : null, (0, i.jsx)(R, {
                 icon: I.default,
-                text: D
+                text: v
             }), null != g && g.includes(l.ApplicationDisclosure.IP_LOCATION) ? (0, i.jsx)(R, {
                 icon: d.default,
                 text: N.default.Messages.OAUTH2_IP_LOCATION_DISCLOSURE

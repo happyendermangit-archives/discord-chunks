@@ -40,12 +40,12 @@ function(e, t, n) {
             shrinkToSize: a,
             isTryItOutFlow: g,
             size: L = 0
-        } = e, D = (0, m.default)(t.id, n), {
-            analyticsLocations: v
+        } = e, v = (0, m.default)(t.id, n), {
+            analyticsLocations: D
         } = (0, c.default)(_.default.BADGE), {
             trackUserProfileAction: M,
             ...y
-        } = (0, S.useUserProfileAnalyticsContext)(), P = (0, A.default)(D).map(e => ({
+        } = (0, S.useUserProfileAnalyticsContext)(), P = (0, A.default)(v).map(e => ({
             ...e,
             src: (0, N.getBadgeAsset)(e.icon)
         })), U = (0, d.useWindowDispatch)();
@@ -64,7 +64,7 @@ function(e, t, n) {
         });
         let b = null != r && null != a && P.length > r ? a : L;
         return (0, s.jsx)(c.AnalyticsLocationProvider, {
-            value: v,
+            value: D,
             children: (0, s.jsx)("div", {
                 className: o()(i, P.length > 0 ? R.containerWithContent : R.container),
                 "aria-label": O.default.Messages.PROFILE_USER_BADGES,
@@ -81,11 +81,11 @@ function(e, t, n) {
                                 action: "PRESS_BADGE"
                             }), (0, h.trackUserProfileBadgePressed)({
                                 badge: e.id,
-                                analyticsLocations: v,
+                                analyticsLocations: D,
                                 ...y
                             }), null === (i = t.onClick) || void 0 === i || i.call(t);
                             let r = null != e.link ? (0, u.default)(e.link, {
-                                analyticsLocations: v
+                                analyticsLocations: D
                             }) : null;
                             if (null != r) return U.dispatch(p.ComponentActions.POPOUT_CLOSE), r(n)
                         },
@@ -95,7 +95,7 @@ function(e, t, n) {
                                 ...(0, I.getContentProperties)(T.QuestContent.QUEST_BADGE)
                             }), (0, h.trackUserProfileBadgeHovered)({
                                 badge: e.id,
-                                analyticsLocations: v,
+                                analyticsLocations: D,
                                 ...y
                             })), null === (n = t.onMouseEnter) || void 0 === n || n.call(t)
                         },

@@ -27,8 +27,8 @@ function(e, t, n) {
         C = n("223135"),
         g = n("769654"),
         L = n("750154"),
-        D = n("768581"),
-        v = n("630388"),
+        v = n("768581"),
+        D = n("630388"),
         M = n("153066"),
         y = n("672938"),
         P = n("285952"),
@@ -144,7 +144,7 @@ function(e, t, n) {
             }
             if (null != i) {
                 var _;
-                t = (0, v.hasFlag)(null !== (_ = null == l ? void 0 : l.flags) && void 0 !== _ ? _ : 0, k.ActivityFlags.EMBEDDED) ? l.type === k.ActivityTypes.WATCHING ? x.default.Messages.EMBEDDED_ACTIVITIES_WATCHING_IN_GUILD.format({
+                t = (0, D.hasFlag)(null !== (_ = null == l ? void 0 : l.flags) && void 0 !== _ ? _ : 0, k.ActivityFlags.EMBEDDED) ? l.type === k.ActivityTypes.WATCHING ? x.default.Messages.EMBEDDED_ACTIVITIES_WATCHING_IN_GUILD.format({
                     guildName: i.name
                 }) : x.default.Messages.EMBEDDED_ACTIVITIES_PLAYING_IN_GUILD.format({
                     guildName: i.name
@@ -217,7 +217,7 @@ function(e, t, n) {
                     width: V.ImageSizes.SMALL,
                     height: V.ImageSizes.SMALL,
                     children: (0, a.jsx)("img", {
-                        src: null !== (i = D.default.getGuildIconURL({
+                        src: null !== (i = v.default.getGuildIconURL({
                             id: t.guildId,
                             icon: d.small_image,
                             size: V.ImageSizes.SMALL

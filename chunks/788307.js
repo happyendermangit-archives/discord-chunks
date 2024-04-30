@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         ActivityEmoji: function() {
-            return D
+            return v
         }
     }), n("47120");
     var i = n("735250"),
@@ -31,7 +31,7 @@ function(e, t, n) {
         g = n("732813");
     let L = "14px";
 
-    function D(e) {
+    function v(e) {
         let {
             emoji: t,
             className: n,
@@ -54,7 +54,7 @@ function(e, t, n) {
             })
         })
     }
-    let v = e => {
+    let D = e => {
         let {
             className: t,
             text: n
@@ -112,7 +112,7 @@ function(e, t, n) {
         V ? k = (0, i.jsx)(S.default, {
             className: u,
             hangStatusActivity: b
-        }) : null != P && null != P.emoji && !h && (k = (0, i.jsx)(D, {
+        }) : null != P && null != P.emoji && !h && (k = (0, i.jsx)(v, {
             emoji: P.emoji,
             animate: d,
             hideTooltip: I,
@@ -124,7 +124,7 @@ function(e, t, n) {
             Y = null != H && H.length > 0;
         return F || null == k && !Y ? null : (0, i.jsxs)("div", {
             className: s,
-            children: [k, (0, i.jsx)(v, {
+            children: [k, (0, i.jsx)(D, {
                 text: H,
                 className: a
             }), y && (0, i.jsx)(o.QuestsIcon, {

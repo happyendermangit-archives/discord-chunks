@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return D
+            return v
         }
     }), n("47120");
     var i = n("735250"),
@@ -43,8 +43,8 @@ function(e, t, n) {
             guild: O
         } = e, {
             pendingAvatarDecoration: L,
-            setPendingAvatarDecoration: D,
-            savedAvatarDecoration: v
+            setPendingAvatarDecoration: v,
+            savedAvatarDecoration: D
         } = (0, f.default)({
             analyticsLocations: a,
             isTryItOut: h,
@@ -53,12 +53,12 @@ function(e, t, n) {
             var e, t;
             if (null != E) return E;
             let i = (0, _.getAvatarDecorations)(s, n);
-            return null != S ? null !== (e = i.find(e => e.id === S)) && void 0 !== e ? e : null : void 0 !== L ? L : null == v ? null : null !== (t = i.find(e => (0, m.isEqualAvatarDecoration)(e, v))) && void 0 !== t ? t : null
+            return null != S ? null !== (e = i.find(e => e.id === S)) && void 0 !== e ? e : null : void 0 !== L ? L : null == D ? null : null !== (t = i.find(e => (0, m.isEqualAvatarDecoration)(e, D))) && void 0 !== t ? t : null
         }), {
             product: P,
             purchase: U
-        } = (0, c.default)(null == M ? void 0 : M.skuId), b = A.default.canUseCollectibles(t), G = r.useRef(null), w = (0, I.default)(a), B = (0, m.isEqualAvatarDecoration)(M, void 0 === L ? v : L), k = () => {
-            D(M), u()
+        } = (0, c.default)(null == M ? void 0 : M.skuId), b = A.default.canUseCollectibles(t), G = r.useRef(null), w = (0, I.default)(a), B = (0, m.isEqualAvatarDecoration)(M, void 0 === L ? D : L), k = () => {
+            v(M), u()
         }, V = r.useCallback(e => {
             u(), (0, d.openCollectiblesShop)({
                 analyticsLocations: a,
@@ -118,7 +118,7 @@ function(e, t, n) {
         })
     }
 
-    function D(e) {
+    function v(e) {
         let {
             transitionState: t,
             analyticsLocations: n,
@@ -134,8 +134,8 @@ function(e, t, n) {
             categories: p,
             purchases: R,
             isFetchingCategories: C,
-            isFetchingPurchases: D
-        } = (0, E.default)(), v = C || D && 0 === R.size;
+            isFetchingPurchases: v
+        } = (0, E.default)(), D = C || v && 0 === R.size;
         return r.useEffect(() => {
             h.default.track(O.AnalyticEvents.OPEN_MODAL, {
                 type: "Edit Avatar Decoration Modal",
@@ -151,8 +151,8 @@ function(e, t, n) {
             children: (0, i.jsx)(o.ModalRoot, {
                 transitionState: t,
                 className: g.modal,
-                size: v ? o.ModalSize.DYNAMIC : o.ModalSize.MEDIUM,
-                children: v ? (0, i.jsx)(o.Spinner, {
+                size: D ? o.ModalSize.DYNAMIC : o.ModalSize.MEDIUM,
+                children: D ? (0, i.jsx)(o.Spinner, {
                     className: g.spinner,
                     type: o.Spinner.Type.SPINNING_CIRCLE
                 }) : (0, i.jsx)(L, {

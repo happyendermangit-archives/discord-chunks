@@ -32,10 +32,10 @@ function(e, t, n) {
             return b
         },
         isStickerAssetUrl: function() {
-            return D
+            return v
         },
         isStickerPackAnimated: function() {
-            return v
+            return D
         },
         shouldAnimateSticker: function() {
             return y
@@ -113,7 +113,7 @@ function(e, t, n) {
         if (null == i) return null;
         let s = o.SUPPORTS_WEBP ? "webp" : "png";
         return n = null != S ? "".concat(location.protocol, "//").concat(S, "/app-assets/").concat(_.STICKER_APPLICATION_ID, "/store/").concat(i, ".").concat(s) : "".concat(location.protocol).concat(E).concat(c.Endpoints.STORE_ASSET(_.STICKER_APPLICATION_ID, i, s)), null != t && (n += "?size=".concat((0, r.getBestMediaProxySize)(t))), n
-    }, D = e => e.match("development" !== T ? m : N), v = e => e.stickers.some(e => {
+    }, v = e => e.match("development" !== T ? m : N), D = e => e.stickers.some(e => {
         let {
             format_type: t
         } = e;

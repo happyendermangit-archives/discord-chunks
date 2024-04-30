@@ -17,10 +17,10 @@ function(e, t, n) {
             return L
         },
         markGuildFeedItemAsUnseen: function() {
-            return D
+            return v
         },
         removeItemFromGuildFeed: function() {
-            return v
+            return D
         },
         sendFeedShownAnalytics: function() {
             return C
@@ -167,10 +167,10 @@ function(e, t, n) {
         (0, E.markAnalyticsFeedItemSeen)((0, S.getGuildFeedSeenManagerId)(e), t, n)
     }
 
-    function D(e, t, n) {
+    function v(e, t, n) {
         (0, E.markAnalyticsFeedItemUnseen)((0, S.getGuildFeedSeenManagerId)(e), t, n)
     }
-    async function v(e) {
+    async function D(e) {
         let t = (0, A.default)(e),
             n = await l.HTTP.post({
                 url: O.Endpoints.GUILD_FEED_MESSAGE_REMOVE(t.channel_id, t.id)

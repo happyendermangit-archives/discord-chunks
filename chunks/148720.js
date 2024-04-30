@@ -48,9 +48,9 @@ function(e, t, n) {
                 PermissionStore: d.default,
                 GuildStore: u.default
             }),
-            D = E.default.getSelfEmbeddedActivityForChannel(n),
-            v = null == D ? void 0 : D.applicationId,
-            M = null != v && null !== (t = s.default.getApplication(v)) && void 0 !== t ? t : void 0;
+            v = E.default.getSelfEmbeddedActivityForChannel(n),
+            D = null == v ? void 0 : v.applicationId,
+            M = null != D && null !== (t = s.default.getApplication(D)) && void 0 !== t ? t : void 0;
         ! function(e) {
             let {
                 embeddedActivityJoinability: t,

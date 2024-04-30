@@ -52,11 +52,11 @@ function(e, t, n) {
         return (null == r ? void 0 : null === (e = r.userStatus) || void 0 === e ? void 0 : e.enrolledAt) == null || (null == r ? void 0 : null === (t = r.userStatus) || void 0 === t ? void 0 : t.completedAt) != null ? null : r
     }
 
-    function D(e) {
+    function v(e) {
         return u.default.countVoiceStatesForChannel(e) >= 2
     }
 
-    function v(e) {
+    function D(e) {
         var t;
         let {
             questId: n,
@@ -64,7 +64,7 @@ function(e, t, n) {
             applicationId: r
         } = e, {
             channelId: o
-        } = (0, s.decodeStreamKey)(i), l = D(o), u = c.default.quests.get(n), d = null != a.default.getRTCStream(i) && (null === (t = L()) || void 0 === t ? void 0 : t.config.applicationId) === r && l && null != u && !(0, E.isQuestExpired)(u), {
+        } = (0, s.decodeStreamKey)(i), l = v(o), u = c.default.quests.get(n), d = null != a.default.getRTCStream(i) && (null === (t = L()) || void 0 === t ? void 0 : t.config.applicationId) === r && l && null != u && !(0, E.isQuestExpired)(u), {
             quest: _,
             activity: I
         } = M(), T = (null == _ ? void 0 : _.id) === n && (null == _ ? void 0 : _.config.applicationId) === r && l && (null == I ? void 0 : I.channelId) === o && !(0, E.isQuestExpired)(_);
@@ -110,7 +110,7 @@ function(e, t, n) {
                 } = e;
                 if (this.streamKeyToHeartbeatState.has(n)) return;
                 let r = () => {
-                    if (v({
+                    if (D({
                             questId: t,
                             streamKey: n,
                             applicationId: i
@@ -171,7 +171,7 @@ function(e, t, n) {
                     let s = r.userStatus,
                         a = r.config.streamDurationRequirementMinutes * d.default.Seconds.MINUTE,
                         o = this.lastOptimisticallyUpdatedProgressMap.get(e);
-                    if (!v({
+                    if (!D({
                             questId: r.id,
                             streamKey: e,
                             applicationId: r.config.applicationId
@@ -268,7 +268,7 @@ function(e, t, n) {
                     streamKey: t,
                     channelId: n,
                     quest: i
-                } = e, r = null == i || !D(n), s = D(n) && !this.streamKeyToHeartbeatState.has(t) && null != i;
+                } = e, r = null == i || !v(n), s = v(n) && !this.streamKeyToHeartbeatState.has(t) && null != i;
                 r ? this.terminateHeartbeat({
                     streamKey: t,
                     sendTerminalHeartbeat: !0
@@ -281,7 +281,7 @@ function(e, t, n) {
                 let {
                     quest: t,
                     activity: n
-                } = M(e), i = g(e), r = (null == n || null == t) && this.streamKeyToHeartbeatState.has(i), s = null != n && null != t && D(e) && !this.streamKeyToHeartbeatState.has(i);
+                } = M(e), i = g(e), r = (null == n || null == t) && this.streamKeyToHeartbeatState.has(i), s = null != n && null != t && v(e) && !this.streamKeyToHeartbeatState.has(i);
                 r ? this.terminateHeartbeat({
                     streamKey: i,
                     sendTerminalHeartbeat: !0
@@ -306,7 +306,7 @@ function(e, t, n) {
                     });
                     return
                 }
-                D(n) && !this.streamKeyToHeartbeatState.has(t) && this.initiateHeartbeat({
+                v(n) && !this.streamKeyToHeartbeatState.has(t) && this.initiateHeartbeat({
                     streamKey: t,
                     applicationId: r.config.applicationId,
                     questId: r.id
@@ -325,7 +325,7 @@ function(e, t, n) {
                 null == r ? this.terminateHeartbeat({
                     streamKey: a,
                     sendTerminalHeartbeat: !0
-                }) : D(i) && !this.streamKeyToHeartbeatState.has(a) && this.initiateHeartbeat({
+                }) : v(i) && !this.streamKeyToHeartbeatState.has(a) && this.initiateHeartbeat({
                     streamKey: a,
                     applicationId: r.config.applicationId,
                     questId: r.id

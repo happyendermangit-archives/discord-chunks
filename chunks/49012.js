@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         handleClick: function() {
-            return D
+            return v
         },
         isLinkTrusted: function() {
             return L
@@ -39,14 +39,14 @@ function(e, t, n) {
         return !!(null == i || i.type !== C.ChannelTypes.DM || p.default.isFriend(null !== (n = i.getRecipientId()) && void 0 !== n ? n : "")) && e === t
     }
 
-    function D(e, t) {
+    function v(e, t) {
         let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
             {
                 trusted: p,
                 onClick: O,
                 onConfirm: L,
-                shouldConfirm: D,
-                messageId: v,
+                shouldConfirm: v,
+                messageId: D,
                 channelId: M
             } = e,
             y = r().sanitizeUrl(e.href);
@@ -62,12 +62,12 @@ function(e, t, n) {
         }
         let P = null,
             U = !1,
-            b = v,
+            b = D,
             G = M,
             w = null;
-        if (null != v && null != M) {
+        if (null != D && null != M) {
             var B, k, V;
-            let e = N.default.getMessage(M, v),
+            let e = N.default.getMessage(M, D),
                 t = S.default.getBasicChannel(M);
             P = null !== (V = null == t ? void 0 : t.guild_id) && void 0 !== V ? V : null;
             let n = h.default.getGuild(P),
@@ -125,7 +125,7 @@ function(e, t, n) {
             H = (0, m.getProtocol)(y),
             Y = !("http:" === H || "https:" === H);
         if (!Y && (F || A.default.isTrustedDomain(y)) || Y && A.default.isTrustedProtocol(y)) {
-            null == t || null != D && D ? x() : U && c.default.trackAnnouncementMessageLinkClicked({
+            null == t || null != v && v ? x() : U && c.default.trackAnnouncementMessageLinkClicked({
                 messageId: b,
                 channelId: M,
                 guildId: P,

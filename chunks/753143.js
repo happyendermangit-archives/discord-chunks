@@ -64,7 +64,7 @@ function(e, t, n) {
                 let e = Math.max(0, N * c);
                 return null != d && e < d
             }, [c, N, d]),
-            D = (0, i.useMemo)(() => m > 0 ? h.current : (A.mergeProps({
+            v = (0, i.useMemo)(() => m > 0 ? h.current : (A.mergeProps({
                 sectionHeight: n,
                 rowHeight: l,
                 footerHeight: u,
@@ -74,8 +74,8 @@ function(e, t, n) {
                 sections: t,
                 getAnchorId: f
             }), A.compute(Math.max(0, N * c), p * c)), [m, N, p, n, l, u, _, I, E, t, A, c, f]);
-        return (0, i.useLayoutEffect)(() => void(h.current = D)), {
-            ...D,
+        return (0, i.useLayoutEffect)(() => void(h.current = v)), {
+            ...v,
             listComputer: A,
             forceUpdateOnChunkChange: O,
             anchor: C,

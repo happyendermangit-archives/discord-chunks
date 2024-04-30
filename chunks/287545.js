@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return Q
+            return X
         },
         getActiveAnalyticsSessionIDs: function() {
-            return X
+            return Z
         }
     }), n("653041"), n("47120");
     var i = n("512722"),
@@ -33,8 +33,8 @@ function(e, t, n) {
         C = n("969345"),
         g = n("148720"),
         L = n("266820"),
-        D = n("782769"),
-        v = n("964517"),
+        v = n("782769"),
+        D = n("964517"),
         M = n("761122"),
         y = n("983695"),
         P = n("917107"),
@@ -189,7 +189,7 @@ function(e, t, n) {
             _ = f.default.getChannel(e);
         if (a && null !== (u = null == _ ? void 0 : _.isPrivate()) && void 0 !== u && u && d.length <= 1 && null == r && l.default.selectParticipant(e, null), null == r) return;
         let c = S.default.getMediaSessionId(),
-            E = (0, v.default)(t),
+            E = (0, D.default)(t),
             I = null == c && (null == _ ? void 0 : _.isVocal()) === !0 && (null == _ ? void 0 : _.isPrivate()) === !1;
         null != E && !I && (null === (o = k[n]) || void 0 === o || o.call(k, {
             activitySessionId: E,
@@ -210,7 +210,7 @@ function(e, t, n) {
             let e = R.default.getSelfEmbeddedActivityForChannel(n),
                 i = null == e ? void 0 : e.applicationId,
                 a = null == e ? void 0 : e.launchId,
-                o = (0, v.default)(e);
+                o = (0, D.default)(e);
             if (null != i && null != t && null != o && null != a) {
                 let e = B[i],
                     n = k[i];
@@ -244,10 +244,10 @@ function(e, t, n) {
         })
     }
 
-    function X(e) {
+    function Z(e) {
         return B[e]
     }
-    class Q extends u.default {
+    class X extends u.default {
         _initialize() {
             h.default.addChangeListener(this.handleSelectedChannelUpdate), o.default.subscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail), o.default.subscribe("EMBEDDED_ACTIVITY_OPEN", x), o.default.subscribe("EMBEDDED_ACTIVITY_CLOSE", F), o.default.subscribe("EMBEDDED_ACTIVITY_UPDATE", H), o.default.subscribe("EMBEDDED_ACTIVITY_UPDATE_V2", Y), o.default.subscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen), o.default.subscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect), o.default.subscribe("MEDIA_SESSION_JOINED", W), o.default.subscribe("CALL_DELETE", K), o.default.subscribe("RTC_CONNECTION_STATE", z)
         }
@@ -330,7 +330,7 @@ function(e, t, n) {
                 let u = R.default.getSelfEmbeddedActivityForChannel(s);
                 if ((null == u ? void 0 : u.applicationId) === a) return;
                 let c = await d.default.fetchApplication(a);
-                if (!(0, D.getIsActivitiesEnabledForCurrentPlatform)(l)) {
+                if (!(0, v.getIsActivitiesEnabledForCurrentPlatform)(l)) {
                     this.showLaunchErrorModal(G.default.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS);
                     return
                 }

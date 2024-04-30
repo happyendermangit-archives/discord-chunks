@@ -39,8 +39,8 @@ function(e, t, n) {
         C = n("320317"),
         g = n("994427"),
         L = n("814076"),
-        D = n("712297"),
-        v = n("585686"),
+        v = n("712297"),
+        D = n("585686"),
         M = n("771206"),
         y = n("362755"),
         P = n("981631"),
@@ -62,15 +62,15 @@ function(e, t, n) {
             applicationId: Y,
             referralCode: j
         } = e, W = (0, M.default)(), K = (0, _.useBlockedPaymentsConfig)(), z = (0, p.default)(), {
-            paymentSources: X,
-            hasPaymentSources: Q,
-            paymentSourceId: q,
-            setPaymentSourceId: Z,
+            paymentSources: Z,
+            hasPaymentSources: X,
+            paymentSourceId: Q,
+            setPaymentSourceId: q,
             hasFetchedPaymentSources: J
         } = (0, O.default)({
             isGift: V,
             activeSubscription: G
-        }), $ = r.useRef(Q), {
+        }), $ = r.useRef(X), {
             hasFetchedSubscriptionPlans: ee,
             priceOptions: et,
             setCurrency: en,
@@ -79,14 +79,14 @@ function(e, t, n) {
         } = (0, N.default)({
             activeSubscription: G,
             skuIDs: k,
-            paymentSourceId: q,
+            paymentSourceId: Q,
             isGift: V
         }), es = (0, L.default)(), [ea, eo] = r.useState(!1), {
             step: el,
             setStep: eu,
             steps: ed,
             breadcrumbsData: e_
-        } = (0, v.default)({
+        } = (0, D.default)({
             stepConfigs: w,
             breadcrumbs: B
         }), [ec, eE] = (0, g.default)(el), {
@@ -109,7 +109,7 @@ function(e, t, n) {
             selectedPlan: eN,
             setSelectedSkuId: ep,
             setSelectedPlanId: eO
-        } = (0, m.default)(), [eR, eC] = (0, l.useStateFromStoresArray)([E.default], () => [E.default.purchaseTokenAuthState, E.default.purchaseTokenHash]), [eg, eL] = (0, l.useStateFromStoresArray)([y.default], () => [y.default.browserCheckoutState, y.default.loadId]), [eD, ev] = r.useState(null), [eM, ey] = r.useState(null), [eP, eU] = r.useState(null), [eb, eG] = r.useState(null), [ew, eB] = r.useState(null), [ek, eV] = r.useState(void 0), [ex, eF] = r.useState([]), eH = r.useMemo(() => null == eN || (0, h.isPremiumSubscriptionPlan)(eN.id), [eN]), eY = r.useRef(null != G ? G.planId : null);
+        } = (0, m.default)(), [eR, eC] = (0, l.useStateFromStoresArray)([E.default], () => [E.default.purchaseTokenAuthState, E.default.purchaseTokenHash]), [eg, eL] = (0, l.useStateFromStoresArray)([y.default], () => [y.default.browserCheckoutState, y.default.loadId]), [ev, eD] = r.useState(null), [eM, ey] = r.useState(null), [eP, eU] = r.useState(null), [eb, eG] = r.useState(null), [ew, eB] = r.useState(null), [ek, eV] = r.useState(void 0), [ex, eF] = r.useState([]), eH = r.useMemo(() => null == eN || (0, h.isPremiumSubscriptionPlan)(eN.id), [eN]), eY = r.useRef(null != G ? G.planId : null);
         r.useEffect(() => {
             null == eY.current && null != G && (eY.current = G.planId)
         }, [G]);
@@ -117,21 +117,21 @@ function(e, t, n) {
             skusById: ej,
             hasFetchedSkus: eW,
             skuPricePreviewsById: eK
-        } = (0, D.default)({
+        } = (0, v.default)({
             applicationId: null != Y ? Y : U.PREMIUM_SUBSCRIPTION_APPLICATION,
             skuIDs: k,
-            currentPaymentSourceId: q,
+            currentPaymentSourceId: Q,
             isGift: V
         }), ez = r.useMemo(() => {
             if (null == em) return null;
             let e = eK[em];
-            return null == e ? null : e[null != q ? q : I.NO_PAYMENT_SOURCE]
-        }, [em, eK, q]), eX = (0, c.useApplication)(Y), eQ = (0, S.hasFlag)(null !== (t = null == eX ? void 0 : eX.flags) && void 0 !== t ? t : 0, P.ApplicationFlags.EMBEDDED) && (0, S.hasFlag)(null !== (n = null == eX ? void 0 : eX.flags) && void 0 !== n ? n : 0, P.ApplicationFlags.EMBEDDED_IAP), eq = (0, l.useStateFromStores)([u.default], () => Array.from(u.default.getSelfEmbeddedActivities().values()).find(e => {
+            return null == e ? null : e[null != Q ? Q : I.NO_PAYMENT_SOURCE]
+        }, [em, eK, Q]), eZ = (0, c.useApplication)(Y), eX = (0, S.hasFlag)(null !== (t = null == eZ ? void 0 : eZ.flags) && void 0 !== t ? t : 0, P.ApplicationFlags.EMBEDDED) && (0, S.hasFlag)(null !== (n = null == eZ ? void 0 : eZ.flags) && void 0 !== n ? n : 0, P.ApplicationFlags.EMBEDDED_IAP), eQ = (0, l.useStateFromStores)([u.default], () => Array.from(u.default.getSelfEmbeddedActivities().values()).find(e => {
             let {
                 applicationId: t
             } = e;
             return t === Y
-        })), eZ = (0, d.default)(eq), eJ = (0, l.useStateFromStores)([T.default], () => null != em ? T.default.getForSKU(em) : null, [em]), e$ = ej[null != em ? em : ""], [e0, e1] = r.useState(null), [e2, e3] = r.useState(null);
+        })), eq = (0, d.default)(eQ), eJ = (0, l.useStateFromStores)([T.default], () => null != em ? T.default.getForSKU(em) : null, [em]), e$ = ej[null != em ? em : ""], [e0, e1] = r.useState(null), [e2, e3] = r.useState(null);
         return (0, i.jsx)(b.Provider, {
             value: {
                 stripe: W,
@@ -145,10 +145,10 @@ function(e, t, n) {
                 subscriptionMetadataRequest: ew,
                 setSubscriptionMetadataRequest: eB,
                 hasFetchedPaymentSources: J,
-                paymentSources: X,
-                hasPaymentSources: Q,
-                paymentSourceId: q,
-                setPaymentSourceId: Z,
+                paymentSources: Z,
+                hasPaymentSources: X,
+                paymentSourceId: Q,
+                setPaymentSourceId: q,
                 priceOptions: et,
                 setCurrency: en,
                 currencyLoading: ei,
@@ -172,8 +172,8 @@ function(e, t, n) {
                 purchaseTokenHash: eC,
                 browserCheckoutState: eg,
                 browserCheckoutStateLoadId: eL,
-                bodyNode: eD,
-                setBodyNode: ev,
+                bodyNode: ev,
+                setBodyNode: eD,
                 footerNode: eM,
                 setFooterNode: ey,
                 modalOverlayNode: eP,
@@ -194,10 +194,10 @@ function(e, t, n) {
                 skusById: ej,
                 skuPricePreviewsById: eK,
                 selectedSkuPricePreview: ez,
-                application: eX,
+                application: eZ,
                 purchaseType: H,
-                isEmbeddedIAP: eQ,
-                activitySessionId: eZ,
+                isEmbeddedIAP: eX,
+                activitySessionId: eq,
                 entitlementsGranted: ex,
                 setEntitlementsGranted: eF,
                 referralCode: j,

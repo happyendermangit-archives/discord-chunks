@@ -26,8 +26,8 @@ function(e, t, n) {
         C = n("75145"),
         g = n("197115"),
         L = n("695346"),
-        D = n("594174"),
-        v = n("695464"),
+        v = n("594174"),
+        D = n("695464"),
         M = n("242411"),
         y = n("626135"),
         P = n("111361"),
@@ -46,10 +46,10 @@ function(e, t, n) {
         W = n("689938"),
         K = n("917350");
     let z = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
-        X = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_RIGHT),
-        Q = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_BOTTOM),
-        q = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
-        Z = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_SEARCH_RESULTS_PADDING_TOP),
+        Z = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_RIGHT),
+        X = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_BOTTOM),
+        Q = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
+        q = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_SEARCH_RESULTS_PADDING_TOP),
         J = (0, U.cssValueToNumber)(E.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_LIST_SECTION_HEADING_HEIGHT),
         $ = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_SECTION_MARGIN_BOTTOM),
         ee = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_PREMIUM_UPSELL_HEIGHT) + (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_PREMIUM_UPSELL_MARGIN_TOP),
@@ -72,8 +72,8 @@ function(e, t, n) {
                 allowAnimatedEmoji: p,
                 channelGuildId: g,
                 messageId: L,
-                isBurstReaction: D,
-                listHeaderClassName: v,
+                isBurstReaction: v,
+                listHeaderClassName: D,
                 activeSectionIndex: M,
                 upsellGlowOpacity: P,
                 enableNitroUpsell: U
@@ -125,10 +125,10 @@ function(e, t, n) {
                     category: r.sectionId,
                     selectedItemClassName: K.__invalid_selectedItem,
                     messageId: L,
-                    isBurstReaction: D,
+                    isBurstReaction: v,
                     inNitroLockedSection: r.isNitroLocked
                 }, e)
-            }), [s, E, o, W, er, u, T, S, h, m, p, es, g, L, D]);
+            }), [s, E, o, W, er, u, T, S, h, m, p, es, g, L, v]);
             r.useEffect(() => () => {
                 var e, t;
                 return null === (t = ea.cache) || void 0 === t ? void 0 : null === (e = t.clear) || void 0 === e ? void 0 : e.call(t)
@@ -159,7 +159,7 @@ function(e, t, n) {
                         I = U && c && !_,
                         T = U && c && _;
                     return (0, i.jsx)(O.default, {
-                        className: a()(K.header, v, {
+                        className: a()(K.header, D, {
                             [K.inactiveNitroHeader]: I,
                             [K.activeNitroHeader]: T
                         }),
@@ -168,7 +168,7 @@ function(e, t, n) {
                         onClick: () => ei(l, r),
                         children: d
                     }, l)
-                }), [E, t, ei, v, M, U]),
+                }), [E, t, ei, D, M, U]),
                 el = r.useCallback((e, n) => {
                     let r = E[e],
                         s = en(e),
@@ -201,7 +201,7 @@ function(e, t, n) {
                     var n;
                     return e === E.length - 1 || t.has(null === (n = E[e]) || void 0 === n ? void 0 : n.sectionId) || en(e) || et(e) ? 0 : $
                 }, [t, E, en, et]),
-                ec = r.useMemo(() => ["" !== d ? Z : z, X, Q, q], [d]);
+                ec = r.useMemo(() => ["" !== d ? q : z, Z, X, Q], [d]);
             return {
                 listPadding: ec,
                 renderRow: ea,
@@ -232,11 +232,11 @@ function(e, t, n) {
                 messageId: w,
                 isBurstReaction: B,
                 listHeaderClassName: k
-            } = e, V = r.useRef(!1), x = A.EmojiPickerStore.useStore(e => e.activeCategoryIndex), F = (0, m.useExpressionPickerStore)(e => e.searchQuery), Y = L.AnimateEmoji.useSetting(), z = (0, _.useStateFromStores)([D.default], () => D.default.getCurrentUser()), X = (0, P.isPremium)(z), {
-                location: Q
+            } = e, V = r.useRef(!1), x = A.EmojiPickerStore.useStore(e => e.activeCategoryIndex), F = (0, m.useExpressionPickerStore)(e => e.searchQuery), Y = L.AnimateEmoji.useSetting(), z = (0, _.useStateFromStores)([v.default], () => v.default.getCurrentUser()), Z = (0, P.isPremium)(z), {
+                location: X
             } = (0, f.useAnalyticsContext)(), {
-                analyticsLocations: q
-            } = (0, h.default)(), [Z, J] = r.useState(0), [$, ee] = r.useState(!1), [et, er] = r.useState(0), es = (0, _.useStateFromStores)([S.default], () => S.default.useReducedMotion), ea = (0, u.useSpring)({
+                analyticsLocations: Q
+            } = (0, h.default)(), [q, J] = r.useState(0), [$, ee] = r.useState(!1), [et, er] = r.useState(0), es = (0, _.useStateFromStores)([S.default], () => S.default.useReducedMotion), ea = (0, u.useSpring)({
                 transform: $ ? "translateY(0%)" : "translateY(120%)",
                 opacity: $ ? 1 : 0,
                 config: {
@@ -277,7 +277,7 @@ function(e, t, n) {
                 messageId: w,
                 isBurstReaction: B,
                 listHeaderClassName: k,
-                activeSectionIndex: Z,
+                activeSectionIndex: q,
                 upsellGlowOpacity: et,
                 enableNitroUpsell: el
             }), eS = (0, p.useShowUpsellForScrollPosition)({
@@ -309,14 +309,14 @@ function(e, t, n) {
             return r.useEffect(() => {
                 $ && y.default.track(H.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                     type: j.PremiumUpsellTypes.EMOJI_PICKER_FLOATING_UPSELL,
-                    location: Q,
-                    location_stack: q
+                    location: X,
+                    location_stack: Q
                 })
-            }, [Q, q, $]), r.useEffect(() => {
+            }, [X, Q, $]), r.useEffect(() => {
                 "" !== F && (er(0), ee(!1))
             }, [F]), (0, i.jsxs)("div", {
                 className: K.listWrapper,
-                children: [em ? (0, i.jsx)(v.default, {
+                children: [em ? (0, i.jsx)(D.default, {
                     role: "none presentation",
                     className: K.list,
                     listPadding: eu,
@@ -336,7 +336,7 @@ function(e, t, n) {
                 }) : (0, i.jsx)(T.default, {
                     message: W.default.Messages.NO_EMOJI_SEARCH_RESULTS,
                     className: K.noSearchResultsContainer
-                }), !el || X || d.isMobile ? null : (0, i.jsxs)(u.animated.div, {
+                }), !el || Z || d.isMobile ? null : (0, i.jsxs)(u.animated.div, {
                     style: {
                         ...ea,
                         opacity: ea.opacity

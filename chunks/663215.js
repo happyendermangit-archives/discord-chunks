@@ -88,8 +88,8 @@ function(e, t, n) {
             } = (0, s.getManageResourcePermissions)(g);
             return e
         }, [g]), {
-            canSeeRecentlyHeard: D,
-            canSeeFrequentlyPlayed: v
+            canSeeRecentlyHeard: v,
+            canSeeFrequentlyPlayed: D
         } = (0, c.useRecentlyHeardExperiment)({
             location: "soundboard-useSoundGrid",
             autoTrackExposure: !0
@@ -110,14 +110,14 @@ function(e, t, n) {
                 potentialSoundIdsForSection: Array.from(N),
                 sectionType: T.SoundboardSoundGridSectionType.FAVORITES,
                 sortById: !0
-            }), D && A({
+            }), v && A({
                 sections: e,
                 guildIds: O,
                 allSounds: S,
                 potentialSoundIdsForSection: y,
                 sectionType: T.SoundboardSoundGridSectionType.RECENTLY_HEARD,
                 sortById: !1
-            }), v && A({
+            }), D && A({
                 sections: e,
                 guildIds: O,
                 allSounds: S,
@@ -161,7 +161,7 @@ function(e, t, n) {
                 categories: e,
                 isFetching: p
             })
-        }, [O, S, N, y, M, v, D, g, L, t, C, R, n, p])
+        }, [O, S, N, y, M, D, v, g, L, t, C, R, n, p])
     }
 
     function p(e, t, n) {

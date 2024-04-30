@@ -5,7 +5,7 @@ function(e, t, n) {
             return S
         },
         canUnarchiveThread: function() {
-            return v
+            return D
         },
         computeCanStartPublicThread: function() {
             return A
@@ -32,7 +32,7 @@ function(e, t, n) {
             return N
         },
         useCanUnarchiveThread: function() {
-            return D
+            return v
         },
         useCanViewThreadForMessage: function() {
             return O
@@ -145,13 +145,13 @@ function(e, t, n) {
         return !!(null != e && e.isThread()) && ((null === (i = e.threadMetadata) || void 0 === i ? void 0 : i.locked) ? n : t)
     }
 
-    function D(e) {
+    function v(e) {
         let t = (0, a.useStateFromStores)([E.default], () => g(e, E.default)),
             n = b(e);
         return L(e, t, n)
     }
 
-    function v(e) {
+    function D(e) {
         let t = g(e, E.default),
             n = function(e) {
                 return U(e, E.default)

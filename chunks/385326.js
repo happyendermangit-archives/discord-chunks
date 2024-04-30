@@ -26,8 +26,8 @@ function(e, t, n) {
         C = n("917107"),
         g = n("208156"),
         L = n("748492"),
-        D = n("350064"),
-        v = n("701488"),
+        v = n("350064"),
+        D = n("701488"),
         M = n("918559"),
         y = n("981631"),
         P = n("354459"),
@@ -39,7 +39,7 @@ function(e, t, n) {
         var t, n;
         let {
             channel: s,
-            isLoading: D
+            isLoading: v
         } = e, [w, B] = r.useState(!1), k = (0, o.useStateFromStores)([O.default], () => O.default.getSelfEmbeddedActivityForChannel(s.id)), V = (0, o.useStateFromStores)([O.default], () => O.default.getActivityPanelMode()), x = (0, E.useGetOrFetchApplication)(null == k ? void 0 : k.applicationId), F = null == k ? void 0 : k.launchId, H = (0, o.useStateFromStores)([m.default], () => m.default.getChannelId() === s.id), {
             dockedRect: Y,
             isHidden: j
@@ -52,12 +52,12 @@ function(e, t, n) {
         }), W = (0, o.useStateFromStores)([T.default], () => T.default.getWindow(y.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), {
             activityParticipant: K,
             selectedParticipant: z,
-            participantsOpen: X
+            participantsOpen: Z
         } = (0, o.useStateFromStoresObject)([I.default], () => ({
             activityParticipant: null != k ? I.default.getParticipant(s.id, k.applicationId) : null,
             selectedParticipant: I.default.getSelectedParticipant(s.id),
             participantsOpen: I.default.getParticipantsOpen(s.id)
-        })), Q = H || null != W, q = (0, C.default)(s.id), Z = q && (null == z ? void 0 : z.type) !== P.ParticipantTypes.ACTIVITY, J = !q && V === M.ActivityPanelModes.PIP, $ = (!Q || Q && (Z || J) && null == Y) && !j, ee = $ && null != A.default.pipVideoWindow && null != A.default.pipActivityWindow;
+        })), X = H || null != W, Q = (0, C.default)(s.id), q = Q && (null == z ? void 0 : z.type) !== P.ParticipantTypes.ACTIVITY, J = !Q && V === M.ActivityPanelModes.PIP, $ = (!X || X && (q || J) && null == Y) && !j, ee = $ && null != A.default.pipVideoWindow && null != A.default.pipActivityWindow;
 
         function et() {
             var e;
@@ -72,7 +72,7 @@ function(e, t, n) {
         }
         r.useEffect(() => {
             if ((null == k ? void 0 : k.applicationId) != null) {
-                let e = $ ? v.ActivityLayoutMode.PIP : v.ActivityLayoutMode.FOCUSED;
+                let e = $ ? D.ActivityLayoutMode.PIP : D.ActivityLayoutMode.FOCUSED;
                 u.default.dispatch({
                     type: "ACTIVITY_LAYOUT_MODE_UPDATE",
                     layoutMode: e,
@@ -147,14 +147,14 @@ function(e, t, n) {
                             applicationId: k.applicationId,
                             selectedParticipant: K
                         })]
-                    }) : null), D ? (0, i.jsx)(l.Spinner, {
+                    }) : null), v ? (0, i.jsx)(l.Spinner, {
                         className: a()(U.iframe, {
                             [U.pipModeShort]: $ && !w,
                             [U.pipModeTall]: $ && w
                         })
                     }) : (0, i.jsx)(g.EmbedIFrameWithLoadingBackground, {
                         allowPopups: (0, R.allowPopups)(x),
-                        referrerPolicy: v.APPLICATIONS_WITH_NO_REFFERER.has(k.applicationId) ? "no-referrer" : "origin",
+                        referrerPolicy: D.APPLICATIONS_WITH_NO_REFFERER.has(k.applicationId) ? "no-referrer" : "origin",
                         url: k.url,
                         queryParams: er,
                         className: a()(U.iframe, {
@@ -164,7 +164,7 @@ function(e, t, n) {
                         }),
                         shouldRefocus: !$ && H
                     }), !$ && (0, i.jsx)(L.TileOverlay, {
-                        participantsOpen: X,
+                        participantsOpen: Z,
                         showToggleParticipants: !1,
                         channelId: s.id
                     })]
@@ -178,7 +178,7 @@ function(e, t, n) {
             ...n
         } = e, {
             isLoading: r
-        } = (0, D.useEmbeddedActivityLifecycle)(t);
+        } = (0, v.useEmbeddedActivityLifecycle)(t);
         return (0, i.jsx)(w, {
             channel: t,
             isLoading: r,

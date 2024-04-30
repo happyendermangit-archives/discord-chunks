@@ -33,9 +33,9 @@ function(e, t, n) {
             disablePremiumUpsell: R,
             inPopout: C,
             applicationId: g
-        } = e, L = C ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT, D = l.default.getCurrentUser();
-        if (null == D) return;
-        if (!D.verified) {
+        } = e, L = C ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT, v = l.default.getCurrentUser();
+        if (null == v) return;
+        if (!v.verified) {
             (0, r.openModalLazy)(async () => {
                 let {
                     default: e
@@ -55,8 +55,8 @@ function(e, t, n) {
             });
             return
         }
-        let v = [];
-        !d.default.isLoadedForPremiumSKUs() && v.push((0, o.fetchPremiumSubscriptionPlans)()), !u.default.hasFetched && (v.push(s.fetchSubscriptions()), v.push((0, a.fetchGuildBoostSlots)())), v.length > 0 && await Promise.allSettled(v);
+        let D = [];
+        !d.default.isLoadedForPremiumSKUs() && D.push((0, o.fetchPremiumSubscriptionPlans)()), !u.default.hasFetched && (D.push(s.fetchSubscriptions()), D.push((0, a.fetchGuildBoostSlots)())), D.length > 0 && await Promise.allSettled(D);
         let M = (0, c.getAvailableGuildBoostSlots)(u.default.boostSlots),
             y = M.length,
             P = e => {

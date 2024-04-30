@@ -22,8 +22,8 @@ function(e, t, n) {
         C = n("417363"),
         g = n("941128"),
         L = n("70956"),
-        D = n("251625"),
-        v = n("823379"),
+        v = n("251625"),
+        D = n("823379"),
         M = n("780570"),
         y = n("358085"),
         P = n("998502"),
@@ -50,16 +50,16 @@ function(e, t, n) {
             [G.GameTableListKeys.LAST_PLAYED]: (e, t) => e.isNew && !t.isNew ? -1 : !e.isNew && t.isNew ? 1 : e.lastPlayed === t.lastPlayed ? 0 : e.lastPlayed > t.lastPlayed ? -1 : 1,
             [G.GameTableListKeys.ACTIONS]: null
         },
-        H = (0, D.cachedFunction)(e => e.filter(e => null != e.libraryApplication && e.shouldShowInLibrary)),
-        Y = (0, D.cachedFunction)(e => e.filter(e => null != e.libraryApplication && C.default.isLaunchable(e.libraryApplication.id, e.libraryApplication.branchId))),
-        j = (0, D.cachedFunction)((e, t) => e.filter(e => l()(t.toLowerCase(), e.application.name.toLowerCase()))),
-        W = (0, D.cachedFunction)((e, t, n, i) => {
+        H = (0, v.cachedFunction)(e => e.filter(e => null != e.libraryApplication && e.shouldShowInLibrary)),
+        Y = (0, v.cachedFunction)(e => e.filter(e => null != e.libraryApplication && C.default.isLaunchable(e.libraryApplication.id, e.libraryApplication.branchId))),
+        j = (0, v.cachedFunction)((e, t) => e.filter(e => l()(t.toLowerCase(), e.application.name.toLowerCase()))),
+        W = (0, v.cachedFunction)((e, t, n, i) => {
             let r = F[t];
             if (null == r) return e;
             let s = [...e].sort(r);
             return n === G.TableSortDirections.DESCENDING ? s.reverse() : s
         }),
-        K = (0, D.cachedFunction)(e => e.filter(e => null != e.libraryApplication && e.libraryApplication.isHidden()));
+        K = (0, v.cachedFunction)(e => e.filter(e => null != e.libraryApplication && e.libraryApplication.isHidden()));
 
     function z(e, t) {
         let n = O.default.getCurrentUserStatisticsForApplication(e.id);
@@ -68,7 +68,7 @@ function(e, t, n) {
         return null != i ? i : 0
     }
 
-    function X() {
+    function Z() {
         let e = new Set(f.default.getRunningVerifiedApplicationIds()),
             t = {},
             n = new Set,
@@ -104,7 +104,7 @@ function(e, t, n) {
                     shouldShowInLibrary: (0, M.shouldShowGameInLibrary)(o, e, p.default),
                     defaultAction: (0, b.getDefaultLibraryApplicationAction)(e, C.default, g.default)
                 }
-            })(i, n, t, e, !0)).filter(v.isNotNullish),
+            })(i, n, t, e, !0)).filter(D.isNotNullish),
             s = [...i.map(i => (function(e, t, n, i) {
                 let r = null != e ? T.default.getApplication(e) : null;
                 if (null == r || null == e || t.has(e)) return null;
@@ -130,12 +130,12 @@ function(e, t, n) {
                     libraryApplication: null,
                     defaultAction: null
                 }
-            })(i, n, t, e)).filter(v.isNotNullish), ...r].sort((e, t) => e.lastPlayed === t.lastPlayed ? 0 : e.lastPlayed > t.lastPlayed ? -1 : 1);
+            })(i, n, t, e)).filter(D.isNotNullish), ...r].sort((e, t) => e.lastPlayed === t.lastPlayed ? 0 : e.lastPlayed > t.lastPlayed ? -1 : 1);
         return V = null != m.default.lastFetched && N.default.fetched, !d().isEqual(s, B) && (B = s, y.isPlatformEmbedded && P.default.setSystemTrayApplications(Y(B).map(e => e.application).slice(0, 5)), !0)
     }
-    class Q extends(i = E.default.Store) {
+    class X extends(i = E.default.Store) {
         initialize() {
-            this.syncWith([T.default, m.default, S.default, f.default, C.default, g.default, N.default, O.default, p.default, A.default], X, 200), this.syncWith([R.default, h.default], () => !0)
+            this.syncWith([T.default, m.default, S.default, f.default, C.default, g.default, N.default, O.default, p.default, A.default], Z, 200), this.syncWith([R.default, h.default], () => !0)
         }
         get applicationFilterQuery() {
             return k
@@ -162,12 +162,12 @@ function(e, t, n) {
             return V
         }
     }
-    a = "ApplicationViewStore", (s = "displayName") in(r = Q) ? Object.defineProperty(r, s, {
+    a = "ApplicationViewStore", (s = "displayName") in(r = X) ? Object.defineProperty(r, s, {
         value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a, t.default = new Q(I.default, {
+    }) : r[s] = a, t.default = new X(I.default, {
         LIBRARY_APPLICATION_FILTER_UPDATE: function(e) {
             let {
                 query: t

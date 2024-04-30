@@ -5,7 +5,7 @@ function(e, t, n) {
             return i
         },
         getFilterAutocompletions: function() {
-            return X
+            return Z
         },
         getRandomDateShortcut: function() {
             return V
@@ -55,11 +55,11 @@ function(e, t, n) {
         return g(d()().startOf(e).add(t, e), e)
     }
 
-    function D(e, t, n) {
+    function v(e, t, n) {
         return g(d()(e, t).local(), n)
     }
 
-    function v() {
+    function D() {
         return {
             [p.default.Messages.SEARCH_SHORTCUT_TODAY]: () => L("day"),
             [p.default.Messages.SEARCH_SHORTCUT_YESTERDAY]: () => L("day", -1),
@@ -89,8 +89,8 @@ function(e, t, n) {
     function G(e, t) {
         let n, i;
         let r = e.getFullMatch().trim().toLowerCase(),
-            s = v()[r];
-        return null != s ? [n, i] = s() : O().has(r) ? [n, i] = D(r, "MMMM", "month") : R().has(r) ? [n, i] = D(r, "dddd", "day") : C().has(r) ? [n, i] = D(r, "YYYY", "year") : [n, i] = D(r, N.SEARCH_DATE_FORMAT, "day"), !!(n.isValid() && i.isValid()) && ("before" === t ? (i = n, n = null) : "after" === t && (n = i, i = null), e.setData("start", n), e.setData("end", i), !0)
+            s = D()[r];
+        return null != s ? [n, i] = s() : O().has(r) ? [n, i] = v(r, "MMMM", "month") : R().has(r) ? [n, i] = v(r, "dddd", "day") : C().has(r) ? [n, i] = v(r, "YYYY", "year") : [n, i] = v(r, N.SEARCH_DATE_FORMAT, "day"), !!(n.isValid() && i.isValid()) && ("before" === t ? (i = n, n = null) : "after" === t && (n = i, i = null), e.setData("start", n), e.setData("end", i), !0)
     }
 
     function w(e) {
@@ -125,7 +125,7 @@ function(e, t, n) {
     }
 
     function k() {
-        return [...Array.from(O()), ...Array.from(R()), ...Array.from(C()), ...Object.keys(v())]
+        return [...Array.from(O()), ...Array.from(R()), ...Array.from(C()), ...Object.keys(D())]
     }
 
     function V() {
@@ -392,7 +392,7 @@ function(e, t, n) {
         }())
     }
 
-    function X(e) {
+    function Z(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.keys(K).length;
         return l()(K).keys().filter(e => N.IS_SEARCH_FILTER_TOKEN.test(e)).filter(e => null != K[e].key).map(e => ({
             token: e,

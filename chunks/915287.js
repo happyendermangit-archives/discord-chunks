@@ -42,8 +42,8 @@ function(e, t, n) {
                 listHeaderHeight: C = 0,
                 renderSection: g,
                 renderRow: L,
-                renderFooter: D,
-                renderSidebar: v,
+                renderFooter: v,
+                renderSidebar: D,
                 renderListHeader: M,
                 wrapSection: y,
                 getAnchorId: P,
@@ -61,13 +61,13 @@ function(e, t, n) {
                 innerClassName: j,
                 innerTag: W = "div",
                 ...K
-            } = s, z = r.useRef(null), X = r.useRef(null), [Q, q] = r.useState(!1), {
-                scrollerRef: Z,
+            } = s, z = r.useRef(null), Z = r.useRef(null), [X, Q] = r.useState(!1), {
+                scrollerRef: q,
                 scrollerState: J,
                 getScrollerState: $
             } = (0, d.useCachedScrollerState)();
             (0, d.usePaddingFixes)({
-                scrollerRef: Z,
+                scrollerRef: q,
                 className: T,
                 specs: o,
                 orientation: "vertical",
@@ -93,7 +93,7 @@ function(e, t, n) {
                 chunkSize: B,
                 getScrollerState: $,
                 getAnchorId: P
-            }), eo = (0, d.useScrollSpring)(Z), el = r.useRef(S), eu = r.useRef(h);
+            }), eo = (0, d.useScrollSpring)(q), el = r.useRef(S), eu = r.useRef(h);
             r.useLayoutEffect(() => {
                 el.current = S, eu.current = h
             });
@@ -107,13 +107,13 @@ function(e, t, n) {
                 }, [es, J]),
                 e_ = r.useCallback(() => ed(), [ed]);
             (0, d.useResizeObserverSubscription)({
-                ref: Z,
+                ref: q,
                 onUpdate: e_,
                 key: "container",
                 resizeObserver: E,
                 listenerMap: c
             }), (0, d.useResizeObserverSubscription)({
-                ref: X,
+                ref: Z,
                 onUpdate: () => {
                     var e;
                     return null === (e = eu.current) || void 0 === e ? void 0 : e.call(eu)
@@ -141,34 +141,34 @@ function(e, t, n) {
                     }, [])
                 }(m);
             r.useImperativeHandle(I, () => ({
-                getScrollerNode: () => Z.current,
+                getScrollerNode: () => q.current,
                 getScrollerState: $,
                 getItems: ec,
                 getSectionRowFromIndex: eE,
-                ...(0, d.getAnimatedListScrollHelpers)(Z, $, er, eo)
-            }), [Z, $, eE, ec, er, eo]);
+                ...(0, d.getAnimatedListScrollHelpers)(q, $, er, eo)
+            }), [q, $, eE, ec, er, eo]);
             let eI = r.useCallback(e => {
-                ed(1), null == z.current ? q(!0) : clearTimeout(z.current), z.current = setTimeout(() => {
-                    z.current = null, q(!1)
+                ed(1), null == z.current ? Q(!0) : clearTimeout(z.current), z.current = setTimeout(() => {
+                    z.current = null, Q(!1)
                 }, 200), null != f && f(e)
             }, [f, ed]);
             return r.useLayoutEffect(() => {
                 2 !== J.current.dirty && (J.current.dirty = 2)
-            }, [en, g, L, D, y, et, ee, J]), (0, d.useVirtualizedAnchor)({
-                scrollerRef: Z,
+            }, [en, g, L, v, y, et, ee, J]), (0, d.useVirtualizedAnchor)({
+                scrollerRef: q,
                 anchor: ea,
                 getScrollerState: $,
                 listComputer: er,
                 getAnchorId: P,
                 totalHeight: et
             }), (0, i.jsxs)("div", {
-                ref: Z,
+                ref: q,
                 onScroll: eI,
                 className: a()(T, {
                     [e]: !0,
                     [t]: G,
                     [n]: w,
-                    [_.scrolling]: Q
+                    [_.scrolling]: X
                 }),
                 style: (0, d.getMergedOrientationStyles)(k),
                 ...K,
@@ -182,9 +182,9 @@ function(e, t, n) {
                         height: et
                     },
                     className: a()(_.content, j),
-                    ref: X,
+                    ref: Z,
                     children: (0, i.jsx)(u.FocusRingScope, {
-                        containerRef: X,
+                        containerRef: Z,
                         children: function(e) {
                             let {
                                 renderSection: t,
@@ -225,12 +225,12 @@ function(e, t, n) {
                             renderListHeader: M,
                             renderSection: g,
                             renderRow: L,
-                            renderFooter: D,
+                            renderFooter: v,
                             wrapSection: y,
                             spacerTop: ee
                         })
                     })
-                }), [V, x, F, H, Y, j, W, et, en, g, L, D, M, y, ee]), r.useMemo(() => (function(e) {
+                }), [V, x, F, H, Y, j, W, et, en, g, L, v, M, y, ee]), r.useMemo(() => (function(e) {
                     let {
                         renderSidebar: t,
                         sidebarHeight: n,
@@ -240,10 +240,10 @@ function(e, t, n) {
                     return null == n || null == t ? null : t(r, i)
                 })({
                     isSidebarVisible: ei,
-                    renderSidebar: v,
+                    renderSidebar: D,
                     sidebarHeight: R,
                     isListVisible: 0 !== en.length
-                }), [ei, v, R, en.length])]
+                }), [ei, D, R, en.length])]
             })
         })
     }

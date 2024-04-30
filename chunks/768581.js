@@ -199,7 +199,7 @@ function(e, t, n) {
         return t = (null != o ? "".concat(location.protocol, "//").concat(o).concat(d) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + d) + "?size=".concat((0, l.getBestMediaProxySize)(a * (0, l.getDevicePixelRatio)()))
     }
 
-    function D(e) {
+    function v(e) {
         let t, {
             id: n,
             splash: i,
@@ -211,7 +211,7 @@ function(e, t, n) {
         return t = (null != s ? "".concat(location.protocol, "//").concat(s, "/splashes/").concat(n, "/").concat(i, ".jpg") : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + c.Endpoints.GUILD_SPLASH(n, i)) + "?size=".concat(r)
     }
 
-    function v(e) {
+    function D(e) {
         let t, {
                 id: n,
                 banner: i
@@ -414,15 +414,15 @@ function(e, t, n) {
         isAnimatedIconHash: k,
         getUserAvatarSource: (e, t, n) => F(p(e, t, n)),
         getGuildIconURL: P,
-        getGuildSplashURL: D,
+        getGuildSplashURL: v,
         getGuildSplashSource: function(e) {
-            return F(D(e))
+            return F(v(e))
         },
         getGuildDiscoverySplashURL: y,
         getGuildDiscoverySplashSource: function(e) {
             return F(y(e))
         },
-        getGuildBannerURL: v,
+        getGuildBannerURL: D,
         getGuildHomeHeaderURL: M,
         getResourceChannelIconURL: function(e) {
             let {
@@ -463,7 +463,7 @@ function(e, t, n) {
         getGuildTemplateIconSource: e => F(U(e)),
         getGuildBannerSource(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            return F(v(e, t))
+            return F(D(e, t))
         },
         getGuildHomeHeaderSource: e => F(M(e)),
         getChannelIconSource: e => F(B(e)),

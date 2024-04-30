@@ -77,7 +77,7 @@ function(e, t, n) {
             clearBuildOverride: R
         } = e, [C, g] = r.useState(!1), L = r.useCallback(() => {
             !C && (g(!0), O().catch(() => g(!1)))
-        }, [O, C]), D = r.useCallback(() => {
+        }, [O, C]), v = r.useCallback(() => {
             !C && (g(!0), R().catch(() => g(!1)))
         }, [R, C]);
         return (0, i.jsxs)("div", {
@@ -154,7 +154,7 @@ function(e, t, n) {
                     currentOverrides: _,
                     linkMeta: E,
                     applyBuildOverride: L,
-                    clearBuildOverride: D,
+                    clearBuildOverride: v,
                     submitting: C
                 })]
             })]

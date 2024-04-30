@@ -26,11 +26,11 @@ function(e, t, n) {
         C = !1,
         g = null,
         L = d.ThreadSortOrder.LATEST_ACTIVITY,
-        D = [],
-        v = 0;
+        v = [],
+        D = 0;
 
     function M() {
-        p = !1, O = !0, R = !1, C = !1, g = null, L = d.ThreadSortOrder.LATEST_ACTIVITY, i = new Set, v = 0, D = []
+        p = !1, O = !0, R = !1, C = !1, g = null, L = d.ThreadSortOrder.LATEST_ACTIVITY, i = new Set, D = 0, v = []
     }
 
     function y(e, t) {
@@ -40,9 +40,9 @@ function(e, t, n) {
     function P() {
         if (null == g) return !1;
         let e = !R,
-            t = f.default.getChannel(D[D.length - 1]),
+            t = f.default.getChannel(v[v.length - 1]),
             n = null == t ? null : y(t, L);
-        D = u()(f.default.getAllThreadsForParent(g)).filter(e => e.isArchivedThread()).filter(t => {
+        v = u()(f.default.getAllThreadsForParent(g)).filter(e => e.isArchivedThread()).filter(t => {
             var r;
             if (0 !== i.size && (null === (r = t.appliedTags) || void 0 === r ? void 0 : r.some(e => i.has(e))) !== !0) return !1;
             if (e || null == n) return !0;
@@ -54,8 +54,8 @@ function(e, t, n) {
     }
 
     function U(e) {
-        if (!(D.indexOf(e) >= 0)) return !1;
-        D = D.filter(t => t !== e)
+        if (!(v.indexOf(e) >= 0)) return !1;
+        v = v.filter(t => t !== e)
     }
     let b = [];
     class G extends(r = _.default.Store) {
@@ -66,7 +66,7 @@ function(e, t, n) {
             return R && !p && !C
         }
         get nextOffset() {
-            return v
+            return D
         }
         get isInitialLoad() {
             return O
@@ -75,7 +75,7 @@ function(e, t, n) {
             return g === e && L === t && (0, h.areSetsEqual)(i, n) ? p : (M(), !1)
         }
         getThreads(e, t, n) {
-            return g === e && L === t && (0, h.areSetsEqual)(i, n) ? D : b
+            return g === e && L === t && (0, h.areSetsEqual)(i, n) ? v : b
         }
     }
     o = "ArchivedThreadsStore", (a = "displayName") in(s = G) ? Object.defineProperty(s, a, {
@@ -107,16 +107,16 @@ function(e, t, n) {
         LOAD_ARCHIVED_THREADS_SUCCESS: function(e) {
             if (e.channelId !== g || e.sortOrder !== L || !(0, h.areSetsEqual)(e.tagFilter, i)) return !1;
             let t = e.threads.filter(e => T.ALL_CHANNEL_TYPES.has(e.type)).map(e => e.id);
-            D = D.concat(t);
+            v = v.concat(t);
             let n = f.default.getChannel(g);
             null != n && n.isForumLikeChannel() && (0, I.trackForumMorePostsLoaded)({
                 guildId: n.guild_id,
                 channelId: n.id,
-                numArchivedThreads: D.length,
+                numArchivedThreads: v.length,
                 hasMoreThreads: e.hasMore,
                 filterTagIds: Array.from(e.tagFilter),
                 sortOrder: e.sortOrder
-            }), P(), R = e.hasMore, v = e.offset + N, p = !1, O = !1
+            }), P(), R = e.hasMore, D = e.offset + N, p = !1, O = !1
         },
         LOAD_ARCHIVED_THREADS_FAIL: function(e) {
             if (e.channelId !== g || e.sortOrder !== L || !(0, h.areSetsEqual)(e.tagFilter, i)) return !1;

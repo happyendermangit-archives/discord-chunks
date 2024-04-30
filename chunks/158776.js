@@ -40,12 +40,12 @@ function(e, t, n) {
         },
         L = e => (0, E.default)(e) ? 1 : 0;
 
-    function D(e, t) {
+    function v(e, t) {
         var n, i, r, s, a;
         return n = e, g(t) - g(n) || (i = e, L(t) - L(i)) || (r = e, (null !== (s = t.created_at) && void 0 !== s ? s : 0) - (null !== (a = r.created_at) && void 0 !== a ? a : 0))
     }
 
-    function v(e) {
+    function D(e) {
         if (delete N[e], delete p[e], delete O[e], null == m[e]) return;
         let [t] = d().sortBy(m[e], e => -e.timestamp);
         t.status !== h.StatusTypes.OFFLINE ? (N[e] = t.status, p[e] = t.activities, null != t.clientStatus && (O[e] = t.clientStatus)) : d().every(m[e], e => e.status === h.StatusTypes.OFFLINE) && delete m[e]
@@ -79,7 +79,7 @@ function(e, t, n) {
             timestamp: Date.now()
         };
         else {
-            let e = s.length > 1 ? [...s].sort(D) : s,
+            let e = s.length > 1 ? [...s].sort(v) : s,
                 n = a[t];
             s = null != n && l()(n.activities, e) ? n.activities : e, a[t] = {
                 status: i,
@@ -88,7 +88,7 @@ function(e, t, n) {
                 timestamp: Date.now()
             }
         }
-        return delete R[n], v(n), !0
+        return delete R[n], D(n), !0
     }
 
     function P(e) {
@@ -113,7 +113,7 @@ function(e, t, n) {
             timestamp: Date.now()
         };
         else {
-            let e = s.length > 1 ? [...s].sort(D) : s;
+            let e = s.length > 1 ? [...s].sort(v) : s;
             o[t] = {
                 status: i,
                 clientStatus: r,
@@ -127,7 +127,7 @@ function(e, t, n) {
         if (t === f.default.getId()) return !1;
         let n = m[t];
         if (null == n || null == n[e]) return !1;
-        delete n[e], 0 === Object.keys(n).length && delete m[t], v(t)
+        delete n[e], 0 === Object.keys(n).length && delete m[t], D(t)
     }
 
     function b(e) {

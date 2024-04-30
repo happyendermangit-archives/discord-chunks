@@ -48,7 +48,7 @@ function(e, t, n) {
             stickerName: t
         })
     }
-    let D = e => {
+    let v = e => {
             let {
                 children: t,
                 hasError: n,
@@ -80,7 +80,7 @@ function(e, t, n) {
                 })]
             })
         },
-        v = e => {
+        D = e => {
             let {
                 shouldAnimate: t,
                 size: s,
@@ -93,8 +93,8 @@ function(e, t, n) {
                 positionRef: E,
                 withLoadingIndicator: T,
                 onError: f
-            } = e, S = r.useRef(null), h = r.useRef(null), [A, O] = r.useState(!0), [R, C] = r.useState(!1), v = r.useRef(!1);
-            v.current = t && d;
+            } = e, S = r.useRef(null), h = r.useRef(null), [A, O] = r.useState(!0), [R, C] = r.useState(!1), D = r.useRef(!1);
+            D.current = t && d;
             let M = null == o ? (0, m.getStickerAssetUrl)(a) : o;
             return (l()(null != M, "Unable to determine sticker asset URL. Sticker ID: ".concat(a.id)), r.useEffect(() => {
                 if (null == S.current || null == M) return;
@@ -116,7 +116,7 @@ function(e, t, n) {
                         onError: () => {
                             !t && (O(!1), C(!0), null == f || f())
                         }
-                    }), v.current && h.current.setState(!0))
+                    }), D.current && h.current.setState(!0))
                 })(), () => {
                     var e;
                     null === (e = h.current) || void 0 === e || e.drop(), h.current = null, t = !0
@@ -130,7 +130,7 @@ function(e, t, n) {
                 className: _,
                 "aria-label": R ? N.default.Messages.ERROR_LOADING_STICKER : L(a),
                 ref: E,
-                children: (0, i.jsx)(D, {
+                children: (0, i.jsx)(v, {
                     hasError: R,
                     isLoading: A,
                     maskAsset: c,
@@ -157,7 +157,7 @@ function(e, t, n) {
             } = e, [I, T] = r.useState(!1), [f, S] = r.useState(!0), [h, A] = r.useState(!1), N = r.useRef(null), R = r.useRef(null), C = null != E ? E : (0, m.getStickerAssetUrl)(n, {
                 isPreview: !t || !I || !s,
                 size: o
-            }), v = r.useCallback(() => {
+            }), D = r.useCallback(() => {
                 S(!1)
             }, []), M = r.useCallback(() => {
                 A(!0)
@@ -179,7 +179,7 @@ function(e, t, n) {
                 children: (0, i.jsx)("div", {
                     className: a()(l, p.__invalid_pngImageWrapper),
                     ref: d,
-                    children: (0, i.jsx)(D, {
+                    children: (0, i.jsx)(v, {
                         hasError: h,
                         isLoading: f,
                         maskAsset: u,
@@ -191,7 +191,7 @@ function(e, t, n) {
                             src: C,
                             draggable: !1,
                             onError: M,
-                            onLoad: v,
+                            onLoad: D,
                             onContextMenu: O,
                             ref: R
                         }), n.id)
@@ -276,7 +276,7 @@ function(e, t, n) {
                 onError: T
             } = e, f = (0, S.useIsWindowFocused)(), m = (0, h.useShouldAnimateSticker)(t) && !n, N = r.useRef(null);
             if (null == d) return null;
-            let p = d.format_type === A.StickerFormat.LOTTIE ? v : M;
+            let p = d.format_type === A.StickerFormat.LOTTIE ? D : M;
             return (0, i.jsxs)(r.Fragment, {
                 children: [(0, i.jsx)(p, {
                     shouldAnimate: m,

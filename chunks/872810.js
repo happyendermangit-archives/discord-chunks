@@ -20,10 +20,10 @@ function(e, t, n) {
             return B
         },
         setStreamPaused: function() {
-            return v
+            return D
         },
         startStream: function() {
-            return D
+            return v
         },
         stopOwnStream: function() {
             return x
@@ -70,7 +70,7 @@ function(e, t, n) {
         g = n("981631"),
         L = n("70722");
 
-    function D(e, t, n) {
+    function v(e, t, n) {
         o.default.dispatch({
             type: "STREAM_START",
             streamType: null != e ? L.StreamTypes.GUILD : L.StreamTypes.CALL,
@@ -81,7 +81,7 @@ function(e, t, n) {
         })
     }
 
-    function v(e, t) {
+    function D(e, t) {
         let n = (0, u.encodeStreamKey)(e);
         o.default.dispatch({
             type: "STREAM_SET_PAUSED",
@@ -235,7 +235,7 @@ function(e, t, n) {
                 sourceId: i,
                 sourceName: r
             }
-        }), null == t ? O.default.createBroadcastPrivateChannel() : D(null, t, {
+        }), null == t ? O.default.createBroadcastPrivateChannel() : v(null, t, {
             pid: n,
             sourceId: i,
             sourceName: r

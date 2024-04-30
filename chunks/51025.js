@@ -5,10 +5,10 @@ function(e, t, n) {
             return g
         },
         completeInstall: function() {
-            return v
+            return D
         },
         completeRepair: function() {
-            return D
+            return v
         },
         destroy: function() {
             return h
@@ -195,12 +195,12 @@ function(e, t, n) {
         })
     }
 
-    function D(e, t) {
+    function v(e, t) {
         let n = s.default.getApplication(e);
         null != n && c.default.createShortcuts(l.InstallShortcutDesktop.getSetting(), l.InstallShortcutStartMenu.getSetting(), n.name, n.id, t.installPath)
     }
 
-    function v(e, t) {
+    function D(e, t) {
         let r = s.default.getApplication(e);
         i.HTTP.post({
             url: T.Endpoints.LIBRARY_APPLICATION_INSTALLED(e, e),

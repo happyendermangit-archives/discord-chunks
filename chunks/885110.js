@@ -21,11 +21,11 @@ function(e, t, n) {
         C = n("283595"),
         g = n("293273"),
         L = n("158776"),
-        D = n("797258"),
-        v = n("981631");
+        v = n("797258"),
+        D = n("981631");
     let M = !1,
-        y = v.StatusTypes.ONLINE,
-        P = v.StatusTypes.UNKNOWN,
+        y = D.StatusTypes.ONLINE,
+        P = D.StatusTypes.UNKNOWN,
         U = 0,
         b = [],
         G = !1,
@@ -39,17 +39,17 @@ function(e, t, n) {
 
     function x(e) {
         switch (e.type) {
-            case v.ActivityTypes.LISTENING:
+            case D.ActivityTypes.LISTENING:
                 if ((0, T.default)(e)) return S.default.shouldShowActivity();
                 if (null != e.application_id) return V(e.application_id);
                 return !1;
-            case v.ActivityTypes.PLAYING:
+            case D.ActivityTypes.PLAYING:
                 return null != e.application_id ? V(e.application_id) : function(e) {
                     let t = O.default.getGameByName(e);
                     return null != t ? V(t.id) : h.ShowCurrentGame.getSetting()
                 }(e.name);
-            case v.ActivityTypes.STREAMING:
-            case v.ActivityTypes.WATCHING:
+            case D.ActivityTypes.STREAMING:
+            case D.ActivityTypes.WATCHING:
             default:
                 return null == e.application_id || V(e.application_id)
         }
@@ -58,19 +58,19 @@ function(e, t, n) {
     function F() {
         var e;
         if (U = null !== (e = R.default.getIdleSince()) && void 0 !== e ? e : 0, G = R.default.isAFK(), w) y = P, H();
-        else if (M) y = v.StatusTypes.INVISIBLE;
+        else if (M) y = D.StatusTypes.INVISIBLE;
         else {
             let e = h.StatusSetting.getSetting();
-            y = e !== v.StatusTypes.UNKNOWN ? e : v.StatusTypes.ONLINE
+            y = e !== D.StatusTypes.UNKNOWN ? e : D.StatusTypes.ONLINE
         }
-        y === v.StatusTypes.ONLINE && U > 0 && (y = v.StatusTypes.IDLE);
+        y === D.StatusTypes.ONLINE && U > 0 && (y = D.StatusTypes.IDLE);
         let t = !1,
-            n = w || y === v.StatusTypes.INVISIBLE ? [] : g.default.getActivities().filter(x);
+            n = w || y === D.StatusTypes.INVISIBLE ? [] : g.default.getActivities().filter(x);
         !d()(b, n) && (b = n, t = !0);
-        let i = D.default.getRemoteActivities();
+        let i = v.default.getRemoteActivities();
         if (B !== i && (B = i, t = !0), t) {
-            let e = b.find(e => e.type === v.ActivityTypes.CUSTOM_STATUS);
-            k = b.filter(e => e.type !== v.ActivityTypes.CUSTOM_STATUS).length > 0 ? b : null != e ? [e, ...c()(B).filter(e => e.type !== v.ActivityTypes.CUSTOM_STATUS).uniqBy(e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name)).value()] : c().uniqBy(B, e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
+            let e = b.find(e => e.type === D.ActivityTypes.CUSTOM_STATUS);
+            k = b.filter(e => e.type !== D.ActivityTypes.CUSTOM_STATUS).length > 0 ? b : null != e ? [e, ...c()(B).filter(e => e.type !== D.ActivityTypes.CUSTOM_STATUS).uniqBy(e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name)).value()] : c().uniqBy(B, e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
         }
     }
 
@@ -79,11 +79,11 @@ function(e, t, n) {
     }
 
     function Y() {
-        w = !1, P = v.StatusTypes.UNKNOWN, F(), L.default.setCurrentUserOnConnectionOpen(y, k)
+        w = !1, P = D.StatusTypes.UNKNOWN, F(), L.default.setCurrentUserOnConnectionOpen(y, k)
     }
     class j extends(s = E.default.Store) {
         initialize() {
-            this.waitFor(R.default, A.default, g.default, D.default, C.default, O.default), this.syncWith([g.default], F)
+            this.waitFor(R.default, A.default, g.default, v.default, C.default, O.default), this.syncWith([g.default], F)
         }
         getLocalPresence() {
             return {

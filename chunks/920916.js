@@ -39,7 +39,7 @@ function(e, t, n) {
         return (0, u.saveAccountChanges)(t).finally(u.resetPendingAccountChanges)
     }
 
-    function D(e) {
+    function v(e) {
         let {
             transitionState: t,
             onClose: n,
@@ -48,7 +48,7 @@ function(e, t, n) {
             reward: _,
             decoration: c,
             onUseNow: E
-        } = e, T = r.useRef(null), [f, S] = r.useState(null), A = r.useRef(new s.Environment), C = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), L = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), D = (0, p.getHeroAssetUrl)(a), [M, y] = r.useState("loading");
+        } = e, T = r.useRef(null), [f, S] = r.useState(null), A = r.useRef(new s.Environment), C = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), L = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), v = (0, p.getHeroAssetUrl)(a), [M, y] = r.useState("loading");
         r.useEffect(() => {
             var e;
             (null === (e = a.userStatus) || void 0 === e ? void 0 : e.claimedAt) == null && (0, m.claimQuestReward)(a.id, N.QuestRewardCodePlatforms.CROSS_PLATFORM, u).then(() => y("claimed")).catch(() => y("error"))
@@ -74,13 +74,13 @@ function(e, t, n) {
                         })
                     }) : "error" === M ? (0, i.jsx)(O.default, {
                         onClose: n
-                    }) : (0, i.jsx)(v, {
+                    }) : (0, i.jsx)(D, {
                         user: L,
                         primaryColor: a.config.colors.primary,
                         secondaryColor: a.config.colors.secondary,
                         decoration: c,
                         decorationName: _.messages.name,
-                        backgroundUrl: D,
+                        backgroundUrl: v,
                         isSaving: "applying" === M,
                         onClose: n,
                         onConfirm: () => {
@@ -97,7 +97,7 @@ function(e, t, n) {
         })
     }
 
-    function v(e) {
+    function D(e) {
         let {
             user: t,
             decoration: n,
@@ -193,7 +193,7 @@ function(e, t, n) {
             onClose: l,
             analyticsLocations: [],
             initialSelectedDecoration: I
-        }) : (0, i.jsx)(D, {
+        }) : (0, i.jsx)(v, {
             onClose: l,
             transitionState: d,
             quest: s,

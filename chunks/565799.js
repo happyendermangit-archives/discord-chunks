@@ -22,16 +22,16 @@ function(e, t, n) {
         C = n("501655"),
         g = n("88751"),
         L = n("427679");
-    let D = "NO_GUILD",
-        v = new c.SecondaryIndexMap(e => [function(e) {
+    let v = "NO_GUILD",
+        D = new c.SecondaryIndexMap(e => [function(e) {
             var t;
-            return null !== (t = e.getGuildId()) && void 0 !== t ? t : D
+            return null !== (t = e.getGuildId()) && void 0 !== t ? t : v
         }(e)], e => e.id),
         M = new Set,
         y = {};
 
     function P(e) {
-        return v.values(null != e ? e : void 0, !0).map(e => {
+        return D.values(null != e ? e : void 0, !0).map(e => {
             let {
                 id: t
             } = e;
@@ -41,7 +41,7 @@ function(e, t, n) {
 
     function U(e) {
         !M.has(e) && (M.add(e), d()(S.default.getMutableGuildChannelsForGuild(e)).values().forEach(e => {
-            w(e) && v.set(e.id, e)
+            w(e) && D.set(e.id, e)
         }))
     }
 
@@ -67,7 +67,7 @@ function(e, t, n) {
             let i = G(n);
             return e(i) ? (! function(e, t) {
                 let n = S.default.getChannel(e);
-                null != n && n.isGuildStageVoice() ? 0 === t.size() ? V(n.id) : null == v.get(n.id) && v.set(n.id, n) : V(e)
+                null != n && n.isGuildStageVoice() ? 0 === t.size() ? V(n.id) : null == D.get(n.id) && D.set(n.id, n) : V(e)
             }(n, i), !0) : t
         }, !1)
     }
@@ -78,11 +78,11 @@ function(e, t, n) {
     }
 
     function V(e) {
-        return null != e && (delete y[e], v.delete(e), !0)
+        return null != e && (delete y[e], D.delete(e), !0)
     }
 
     function x() {
-        M.clear(), v.clear(), y = {}
+        M.clear(), D.clear(), y = {}
     }
 
     function F(e, t, n) {
@@ -110,7 +110,7 @@ function(e, t, n) {
             guild: t
         } = e;
         ! function(e) {
-            for (let t of v.values(e)) v.delete(t.id), delete y[t.id];
+            for (let t of D.values(e)) D.delete(t.id), delete y[t.id];
             M.delete(e)
         }(t.id)
     }
@@ -151,10 +151,10 @@ function(e, t, n) {
             return null !== (i = null === (n = b(e)) || void 0 === n ? void 0 : n.size(t)) && void 0 !== i ? i : 0
         }
         getChannels(e) {
-            return U(null != e ? e : D), v.values(null != e ? e : D)
+            return U(null != e ? e : v), D.values(null != e ? e : v)
         }
         getChannelsVersion() {
-            return v.version
+            return D.version
         }
         getParticipant(e, t) {
             var n, i;
@@ -203,8 +203,8 @@ function(e, t, n) {
                 channels: t
             } = e, n = t.reduce((e, t) => {
                 if (!t.isGuildStageVoice() || !M.has(t.guild_id)) return e;
-                let n = v.get(t.id);
-                return null == n || l()(t.permissionOverwrites, n.permissionOverwrites) ? e : (e.push(t.id), v.set(t.id, t), e)
+                let n = D.get(t.id);
+                return null == n || l()(t.permissionOverwrites, n.permissionOverwrites) ? e : (e.push(t.id), D.set(t.id, t), e)
             }, []);
             return B(e => e.rebuild(), n), n.length > 0
         },

@@ -35,8 +35,8 @@ function(e, t, n) {
             overrideBannerSrc: C,
             profileType: g,
             animateOnHover: L = !1,
-            hasProfileEffect: D = !1
-        } = e, v = S.default.isPremiumAtLeast(null == O ? void 0 : O.premiumType, N.PremiumTypes.TIER_2), [M, y] = r.useState(!1), P = (0, l.useStateFromStores)([I.default], () => I.default.isFocused()), U = E.GifAutoPlay.getSetting(), {
+            hasProfileEffect: v = !1
+        } = e, D = S.default.isPremiumAtLeast(null == O ? void 0 : O.premiumType, N.PremiumTypes.TIER_2), [M, y] = r.useState(!1), P = (0, l.useStateFromStores)([I.default], () => I.default.isFocused()), U = E.GifAutoPlay.getSetting(), {
             bannerSrc: b,
             status: G
         } = (0, h.default)({
@@ -46,18 +46,18 @@ function(e, t, n) {
             canAnimate: L || !U ? M : P
         }), w = (0, d.useToken)(u.default.unsafe_rawColors.PRIMARY_800).hex(), B = (0, d.getAvatarSize)(d.AvatarSizes.SIZE_80), k = (0, o.hex2int)((0, _.default)(s.getAvatarURL(R, B), w, !1)), V = (0, c.default)(null !== (t = null == O ? void 0 : O.primaryColor) && void 0 !== t ? t : k).hsl;
         return (0, i.jsx)(A.default, {
-            isPremium: v,
+            isPremium: D,
             hasThemeColors: null !== (n = null == O ? void 0 : O.canEditThemes) && void 0 !== n && n,
             profileType: g,
             hasBanner: null != b,
-            hasProfileEffect: D,
+            hasProfileEffect: v,
             children: (0, i.jsx)("div", {
                 className: a()(p.banner, p.divider, (0, m.getUserBannerStyles)({
                     profileType: g,
                     user: {
                         hasBanner: null != b,
-                        isPremium: v,
-                        hasProfileEffect: D
+                        isPremium: D,
+                        hasProfileEffect: v
                     }
                 })),
                 onMouseMove: () => y(!0),

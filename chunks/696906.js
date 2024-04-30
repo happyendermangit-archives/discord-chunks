@@ -31,12 +31,12 @@ function(e, t, n) {
                 forcesTransitionToGuild: g
             } = e,
             L = null == s ? void 0 : s.subscription_plans[0],
-            D = null == s ? void 0 : s.application_id,
-            v = null == L ? void 0 : L.id,
+            v = null == s ? void 0 : s.application_id,
+            D = null == L ? void 0 : L.id,
             M = (null == s ? void 0 : s.published) === !0,
             y = null == L ? void 0 : L.sku_id,
-            P = (0, o.useStateFromStores)([I.default], () => null != v ? I.default.get(v) : null),
-            U = (0, T.useApplication)(D),
+            P = (0, o.useStateFromStores)([I.default], () => null != D ? I.default.get(D) : null),
+            U = (0, T.useApplication)(v),
             b = (0, T.useSubscriptionListingsForGroup)(p, {
                 includeSoftDeleted: !0
             }).map(e => e.subscription_plans[0].id),
@@ -46,8 +46,8 @@ function(e, t, n) {
             {
                 activeSubscription: w,
                 activeEntitlement: B
-            } = (0, T.useActiveSubscriptionListingForApplication)(D, N),
-            k = (0, T.useEligibleApplicationSubscriptionGuilds)(D, N),
+            } = (0, T.useActiveSubscriptionListingForApplication)(v, N),
+            k = (0, T.useEligibleApplicationSubscriptionGuilds)(v, N),
             V = (0, _.default)(),
             x = null != s && (0, f.isApplicationUserSubscription)(s.sku_flags),
             F = null != B && B.userId === (null === (t = E.default.getCurrentUser()) || void 0 === t ? void 0 : t.id),

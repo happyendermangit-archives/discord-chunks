@@ -36,7 +36,7 @@ function(e, t, n) {
         g = new Set,
         L = 0;
 
-    function D(e) {
+    function v(e) {
         var t;
         let n = C[null != e ? e : R];
         return {
@@ -50,13 +50,13 @@ function(e, t, n) {
         }
     }
 
-    function v(e) {
+    function D(e) {
         var t;
-        return C[null != e ? e : R] = null !== (t = C[null != e ? e : R]) && void 0 !== t ? t : D(e)
+        return C[null != e ? e : R] = null !== (t = C[null != e ? e : R]) && void 0 !== t ? t : v(e)
     }
 
     function M(e) {
-        let t = v(e);
+        let t = D(e);
         t.sentinel++, L++
     }
 
@@ -88,7 +88,7 @@ function(e, t, n) {
     }
 
     function G(e, t) {
-        let n = D(e);
+        let n = v(e);
         return n.mentionCounts = {
             ...t.mentionCounts
         }, n.unreadByType = {
@@ -109,7 +109,7 @@ function(e, t, n) {
 
     function V(e, t) {
         let n = U(e),
-            i = v(n),
+            i = D(n),
             r = G(n, i),
             s = !1;
         if (t.forEach(e => {
@@ -131,14 +131,14 @@ function(e, t, n) {
 
     function x(e, t) {
         if (null == e) return;
-        let n = v(e),
+        let n = D(e),
             i = G(e, n);
         return i.unreadByType[p.ReadStateTypes.GUILD_EVENT] = b(e, t), k(e, i, n)
     }
 
     function F(e, t) {
         let n = U(e),
-            i = D(n);
+            i = v(n);
         if (null == n) {
             let e = c.default.getMutablePrivateChannels();
             for (let t in e) {
@@ -178,7 +178,7 @@ function(e, t, n) {
                 }!i.unreadByType[p.ReadStateTypes.GUILD_EVENT] && b(n, p.ReadStateTypes.GUILD_EVENT) && (i.unreadByType[p.ReadStateTypes.GUILD_EVENT] = !0)
         }
         w(i);
-        let r = v(n);
+        let r = D(n);
         if (i.unread !== r.unread || i.mentionCount !== r.mentionCount) return C[null != n ? n : R] = i, null != n && (i.unread ? g.add(n) : g.delete(n)), L++, M(null != n ? n : R), !0;
         return !1
     }
@@ -243,12 +243,12 @@ function(e, t, n) {
         return V(n, [t])
     }
 
-    function X() {
+    function Z() {
         let e = c.default.getChannel(f.default.getChannelId());
         return null != e && V(e.getGuildId(), [e.id])
     }
 
-    function Q(e) {
+    function X(e) {
         let {
             user: t,
             guildId: n
@@ -256,20 +256,20 @@ function(e, t, n) {
         return t.id === _.default.getId() && F(n)
     }
 
-    function q(e) {
+    function Q(e) {
         let {
             channelId: t
         } = e, n = c.default.getChannel(t);
         return null != n && V(n.getGuildId(), [n.id])
     }
 
-    function Z(e) {
+    function q(e) {
         let {
             channelId: t
         } = e, n = c.default.getChannel(t);
         if (null == n) return !1;
         if (null != n.guild_id) {
-            let e = v(n.guild_id);
+            let e = D(n.guild_id);
             if (((n.isThread() ? !o.default.hasJoined(n.id) || o.default.isMuted(n.id) : h.default.isGuildOrCategoryOrChannelMuted(n.guild_id, n.id)) || e.unreadByType[p.ReadStateTypes.CHANNEL]) && 0 === T.default.getMentionCount(t)) return !1
         }
         return V(n.getGuildId(), [n.id])
@@ -432,10 +432,10 @@ function(e, t, n) {
             return g.has(e)
         }
         getMentionCount(e) {
-            return v(e).mentionCount
+            return D(e).mentionCount
         }
         getMutableGuildReadState(e) {
-            return v(e)
+            return D(e)
         }
         getGuildHasUnreadIgnoreMuted(e) {
             let t = c.default.getMutableGuildChannelsForGuild(e);
@@ -485,7 +485,7 @@ function(e, t, n) {
             }), n)
         }
         getGuildChangeSentinel(e) {
-            return v(e).sentinel
+            return D(e).sentinel
         }
         constructor() {
             super({
@@ -494,13 +494,13 @@ function(e, t, n) {
                 CACHE_LOADED_LAZY: () => this.loadCache(),
                 GUILD_CREATE: W,
                 GUILD_DELETE: K,
-                MESSAGE_CREATE: Z,
-                MESSAGE_ACK: q,
+                MESSAGE_CREATE: q,
+                MESSAGE_ACK: Q,
                 BULK_ACK: et,
-                UPDATE_CHANNEL_DIMENSIONS: q,
+                UPDATE_CHANNEL_DIMENSIONS: Q,
                 CHANNEL_SELECT: J,
                 CHANNEL_DELETE: z,
-                WINDOW_FOCUS: X,
+                WINDOW_FOCUS: Z,
                 GUILD_ACK: ed,
                 GUILD_ROLE_CREATE: e_,
                 GUILD_ROLE_DELETE: e_,
@@ -514,7 +514,7 @@ function(e, t, n) {
                 THREAD_MEMBER_UPDATE: ea,
                 THREAD_MEMBERS_UPDATE: eo,
                 PASSIVE_UPDATE_V1: eu,
-                GUILD_MEMBER_UPDATE: Q,
+                GUILD_MEMBER_UPDATE: X,
                 USER_GUILD_SETTINGS_FULL_UPDATE: ec,
                 USER_GUILD_SETTINGS_CHANNEL_UPDATE: eI,
                 USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: eI,
@@ -524,17 +524,17 @@ function(e, t, n) {
                 GUILD_SCHEDULED_EVENT_CREATE: ei,
                 GUILD_SCHEDULED_EVENT_UPDATE: ei,
                 GUILD_SCHEDULED_EVENT_DELETE: er,
-                CHANNEL_RTC_UPDATE_CHAT_OPEN: q,
-                LOAD_MESSAGES_SUCCESS: q,
-                CHANNEL_ACK: q,
-                CHANNEL_LOCAL_ACK: q,
+                CHANNEL_RTC_UPDATE_CHAT_OPEN: Q,
+                LOAD_MESSAGES_SUCCESS: Q,
+                CHANNEL_ACK: Q,
+                CHANNEL_LOCAL_ACK: Q,
                 NOTIFICATION_SETTINGS_UPDATE: j,
                 RECOMPUTE_READ_STATES: j,
-                VOICE_CHANNEL_SELECT: q,
-                ENABLE_AUTOMATIC_ACK: q,
-                RESORT_THREADS: q,
+                VOICE_CHANNEL_SELECT: Q,
+                ENABLE_AUTOMATIC_ACK: Q,
+                RESORT_THREADS: Q,
                 NOTIFICATION_CENTER_CLEAR_GUILD_MENTIONS: eE,
-                TRY_ACK: q
+                TRY_ACK: Q
             })
         }
     }

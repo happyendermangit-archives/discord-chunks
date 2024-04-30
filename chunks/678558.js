@@ -32,7 +32,7 @@ function(e, t, n) {
             ...g
         } = e, {
             analyticsLocations: L
-        } = (0, d.default)(), D = (0, u.useAppContext)() === T.AppContext.POPOUT, [v, M] = r.useState(!1), y = null != A ? Math.max((0, E.getNumberOfAppliedBoostsNeededForTier)(s, A), 1) : 1, P = (0, E.generateBlockGuildSubscriptionPurchasesNode)(), U = async () => {
+        } = (0, d.default)(), v = (0, u.useAppContext)() === T.AppContext.POPOUT, [D, M] = r.useState(!1), y = null != A ? Math.max((0, E.getNumberOfAppliedBoostsNeededForTier)(s, A), 1) : 1, P = (0, E.generateBlockGuildSubscriptionPurchasesNode)(), U = async () => {
             M(!0), await (0, I.addAppliedGuildBoosts)({
                 analyticsLocations: L,
                 analyticsLocation: t,
@@ -41,7 +41,7 @@ function(e, t, n) {
                 numberOfBoostsToAdd: y,
                 onClose: m,
                 closeLayer: N,
-                inPopout: D,
+                inPopout: v,
                 applicationId: O,
                 handleSubscribeModalClose: R
             }), M(!1)
@@ -72,7 +72,7 @@ function(e, t, n) {
             className: a()(g.className, {
                 [S.buttonHighlighted]: C
             }),
-            submitting: v,
+            submitting: D,
             onClick: U,
             pauseAnimation: p,
             children: G

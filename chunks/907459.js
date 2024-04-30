@@ -30,8 +30,8 @@ function(e, t, n) {
         C = n("921944"),
         g = n("474936"),
         L = n("689938"),
-        D = n("158080");
-    let v = () => {
+        v = n("158080");
+    let D = () => {
             u.default.dispatch({
                 type: "APP_ICON_EDITOR_CLOSE"
             })
@@ -54,23 +54,23 @@ function(e, t, n) {
             let {
                 markAsDismissed: t
             } = e, n = () => {
-                null == t || t(C.ContentDismissActionType.DISMISS), v()
+                null == t || t(C.ContentDismissActionType.DISMISS), D()
             };
             return (0, i.jsxs)("div", {
-                className: D.editorHeader,
+                className: v.editorHeader,
                 children: [(0, i.jsx)(l.Clickable, {
-                    className: D.closeCircleButton,
+                    className: v.closeCircleButton,
                     onClick: () => n(),
                     children: (0, i.jsx)(A.default, {
-                        className: D.closeCircle
+                        className: v.closeCircle
                     })
                 }), (0, i.jsxs)("div", {
-                    className: D.title,
+                    className: v.title,
                     children: [(0, i.jsx)(l.Heading, {
                         variant: "heading-lg/extrabold",
                         children: L.default.Messages.APP_ICON_PREVIEW_TITLE
                     }), (0, i.jsx)(S.default, {
-                        className: D.premiumIcon
+                        className: v.premiumIcon
                     })]
                 })]
             })
@@ -81,11 +81,11 @@ function(e, t, n) {
                 markAsDismissed: n
             } = e, r = (0, o.useStateFromStores)([p.default], () => p.default.isUpsellPreview);
             return (0, i.jsxs)("div", {
-                className: D.editorFooter,
+                className: v.editorFooter,
                 children: [r && (0, i.jsx)(M, {}), (0, i.jsx)(l.Button, {
-                    className: D.footerButton,
+                    className: v.footerButton,
                     onClick: () => {
-                        null == n || n(C.ContentDismissActionType.DISMISS), v(), !t && d.default.open()
+                        null == n || n(C.ContentDismissActionType.DISMISS), D(), !t && d.default.open()
                     },
                     color: l.Button.Colors.PRIMARY,
                     size: l.Button.Sizes.MEDIUM,
@@ -115,21 +115,21 @@ function(e, t, n) {
                 location_stack: s
             })
         }, [d, s]);
-        let S = (0, _.default)(null, d ? v : R.NOOP);
+        let S = (0, _.default)(null, d ? D : R.NOOP);
         return (r.useEffect(() => {
-            if (d && !T) return v
+            if (d && !T) return D
         }, [d, T]), null == u) ? null : (0, i.jsx)(I.AnalyticsLocationProvider, {
             value: s,
             children: (0, i.jsx)("div", {
                 ref: S,
-                className: a()(D.editor, f ? D.editorAnimate : null),
+                className: a()(v.editor, f ? v.editorAnimate : null),
                 children: (0, i.jsxs)(l.HeadingLevel, {
                     children: [(0, i.jsx)(y, {
                         markAsDismissed: n
                     }), (0, i.jsx)(l.Scroller, {
-                        className: D.editorBody,
+                        className: v.editorBody,
                         children: (0, i.jsx)(O.default, {
-                            className: D.selectionGroup
+                            className: v.selectionGroup
                         })
                     }), (0, i.jsx)(P, {
                         markAsDismissed: n,

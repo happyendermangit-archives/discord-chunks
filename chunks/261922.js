@@ -163,8 +163,8 @@ function(e, t, n) {
                 tabIndex: R,
                 limitResponsiveWidth: C,
                 useFullWidth: L,
-                placeholder: D,
-                placeholderVersion: v
+                placeholder: v,
+                placeholderVersion: D
             } = this.props, {
                 readyState: M,
                 hasMouseOver: y,
@@ -185,8 +185,8 @@ function(e, t, n) {
                 width: G,
                 height: w,
                 src: "",
-                placeholder: D,
-                placeholderVersion: v,
+                placeholder: v,
+                placeholderVersion: D,
                 children: null != _ ? e => {
                     let {
                         src: t,

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         StreamRTCAnalyticsContext: function() {
-            return v
+            return D
         },
         default: function() {
             return M
@@ -34,7 +34,7 @@ function(e, t, n) {
         g = n("981631"),
         L = n("65154");
 
-    function D(e, t, n) {
+    function v(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -42,7 +42,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    class v {
+    class D {
         setActionContext(e) {
             this.actionContext = e
         }
@@ -57,7 +57,7 @@ function(e, t, n) {
             numViewers: r,
             isBroadcast: s = !1
         }) {
-            D(this, "streamRegion", void 0), D(this, "streamApplication", void 0), D(this, "streamSourceType", void 0), D(this, "actionContext", void 0), D(this, "maxViewers", void 0), D(this, "isBroadcast", void 0), this.streamRegion = e, this.streamApplication = t, this.streamSourceType = n, this.actionContext = i, this.maxViewers = r, this.isBroadcast = s
+            v(this, "streamRegion", void 0), v(this, "streamApplication", void 0), v(this, "streamSourceType", void 0), v(this, "actionContext", void 0), v(this, "maxViewers", void 0), v(this, "isBroadcast", void 0), this.streamRegion = e, this.streamApplication = t, this.streamSourceType = n, this.actionContext = i, this.maxViewers = r, this.isBroadcast = s
         }
     }
     class M extends o.default {
@@ -139,13 +139,13 @@ function(e, t, n) {
                                 }
                             }
                             let C = (null != e ? e : 0) + (null != t ? t : 0) + (null != n ? n : 0) + (null != i ? i : 0) + (null != r ? r : 0) + (null != s ? s : 0) + (null != o ? o : 0) + (null != T ? T : 0) + (null != I ? I : 0),
-                                D = (null == h ? void 0 : null === (m = h.desktopSource) || void 0 === m ? void 0 : m.sourcePid) != null ? E.default.getGameForPID(h.desktopSource.sourcePid) : null,
+                                v = (null == h ? void 0 : null === (m = h.desktopSource) || void 0 === m ? void 0 : m.sourcePid) != null ? E.default.getGameForPID(h.desktopSource.sourcePid) : null,
                                 {
-                                    gameName: v,
+                                    gameName: D,
                                     gameId: M,
                                     exe: y,
                                     distributor: P
-                                } = (0, c.getRunningGameAnalytics)(D);
+                                } = (0, c.getRunningGameAnalytics)(v);
                             p.default.track(g.AnalyticEvents.SCREENSHARE_FINISHED, {
                                 screenshare_frames: e,
                                 videohook_frames: t,
@@ -166,7 +166,7 @@ function(e, t, n) {
                                 windows: d,
                                 activity: _,
                                 soundshare_session: null !== (O = null == h ? void 0 : null === (N = h.desktopSource) || void 0 === N ? void 0 : N.soundshareSession) && void 0 !== O ? O : void 0,
-                                share_game_name: v,
+                                share_game_name: D,
                                 share_game_id: M,
                                 share_game_exe: y,
                                 share_game_distributor: P,
@@ -304,7 +304,7 @@ function(e, t, n) {
                 context: L.MediaEngineContextTypes.STREAM,
                 rtcServerId: n,
                 parentMediaSessionId: l
-            }), D(this, "analyticsContext", void 0), D(this, "_videoStreamStats", void 0), D(this, "_streamContext", void 0), D(this, "_streamKey", void 0), D(this, "_isStreamer", void 0), D(this, "_updateVideoStreamId", void 0), this._streamContext = u, this._streamKey = t, this._isStreamer = o, this._videoStreamStats = new O.default(i, this.isOwner), this.analyticsContext = s, this._updateVideoStreamId = r().debounce((e, t) => {
+            }), v(this, "analyticsContext", void 0), v(this, "_videoStreamStats", void 0), v(this, "_streamContext", void 0), v(this, "_streamKey", void 0), v(this, "_isStreamer", void 0), v(this, "_updateVideoStreamId", void 0), this._streamContext = u, this._streamKey = t, this._isStreamer = o, this._videoStreamStats = new O.default(i, this.isOwner), this.analyticsContext = s, this._updateVideoStreamId = r().debounce((e, t) => {
                 let {
                     guildId: n,
                     channelId: i,

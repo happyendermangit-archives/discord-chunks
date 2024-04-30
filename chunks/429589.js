@@ -30,8 +30,8 @@ function(e, t, n) {
         C = n("417363"),
         g = n("358085"),
         L = n("804739"),
-        D = n("317381"),
-        v = n("638880"),
+        v = n("317381"),
+        D = n("638880"),
         M = n("255621"),
         y = n("452634"),
         P = n("620662"),
@@ -54,8 +54,8 @@ function(e, t, n) {
             isEmbedded: j = !1
         } = e, {
             analyticsLocations: W
-        } = (0, _.default)(), [K, z] = r.useState(!1), X = (0, s.useStateFromStores)([p.default], () => p.default.getCurrentUser()), Q = null == t ? void 0 : t.application_id, q = (0, s.useStateFromStores)([D.default], () => j ? D.default.getEmbeddedActivityForUserId(Y.id, Q) : null, [Y.id, j, Q]), Z = (0, y.default)({
-            channelId: null == q ? void 0 : q.channelId,
+        } = (0, _.default)(), [K, z] = r.useState(!1), Z = (0, s.useStateFromStores)([p.default], () => p.default.getCurrentUser()), X = null == t ? void 0 : t.application_id, Q = (0, s.useStateFromStores)([v.default], () => j ? v.default.getEmbeddedActivityForUserId(Y.id, X) : null, [Y.id, j, X]), q = (0, y.default)({
+            channelId: null == Q ? void 0 : Q.channelId,
             userId: Y.id,
             activity: t
         }), J = (0, s.useStateFromStores)([h.default, E.default, C.default, T.default], () => j || (null == t ? void 0 : t.application_id) != null && (0, L.isLaunchable)({
@@ -64,18 +64,18 @@ function(e, t, n) {
             DispatchApplicationStore: C.default,
             ConnectedAppsStore: T.default,
             applicationId: t.application_id
-        })), $ = (0, s.useStateFromStores)([D.default], () => Array.from(D.default.getSelfEmbeddedActivities().values()).some(e => {
+        })), $ = (0, s.useStateFromStores)([v.default], () => Array.from(v.default.getSelfEmbeddedActivities().values()).some(e => {
             let {
                 applicationId: n,
                 channelId: i
             } = e;
-            return n === (null == t ? void 0 : t.application_id) && i === Z
+            return n === (null == t ? void 0 : t.application_id) && i === q
         })), ee = (0, s.useStateFromStores)([R.default], () => null != t && null != t.application_id && R.default.getState(t.application_id, B.ActivityActionTypes.JOIN) === B.ActivityActionStates.LOADING), [et] = (0, c.default)((null == t ? void 0 : t.application_id) != null ? [null == t ? void 0 : t.application_id] : []), en = (0, s.useStateFromStores)([I.default, S.default, f.default, m.default, N.default, O.default, A.default], () => (0, M.default)({
             user: Y,
             activity: t,
             application: et,
-            channelId: Z,
-            currentUser: X,
+            channelId: q,
+            currentUser: Z,
             isEmbedded: j,
             ChannelStore: I.default,
             GuildStore: S.default,
@@ -84,7 +84,7 @@ function(e, t, n) {
             SelectedChannelStore: N.default,
             VoiceStateStore: O.default,
             PermissionStore: A.default
-        })), ei = (0, s.useStateFromStores)([D.default], () => Array.from(D.default.getSelfEmbeddedActivities().values()).some(e => e.applicationId === (null == q ? void 0 : q.applicationId) && e.channelId === (null == q ? void 0 : q.channelId))), er = (0, d.useAnalyticsContext)(), es = !g.isPlatformEmbedded, ea = (0, P.default)(t, B.ActivityFlags.JOIN) || j;
+        })), ei = (0, s.useStateFromStores)([v.default], () => Array.from(v.default.getSelfEmbeddedActivities().values()).some(e => e.applicationId === (null == Q ? void 0 : Q.applicationId) && e.channelId === (null == Q ? void 0 : Q.channelId))), er = (0, d.useAnalyticsContext)(), es = !g.isPlatformEmbedded, ea = (0, P.default)(t, B.ActivityFlags.JOIN) || j;
         if (null == t || !ea || null == t.application_id) return null;
         let eo = !V && (es || J) && !K && !$ && (!j || en),
             el = null;
@@ -112,11 +112,11 @@ function(e, t, n) {
         }, ed = async () => {
             let e = !1;
             if (j) {
-                if (!en || null == Z || null == t.application_id) return;
-                e = await (0, v.default)({
+                if (!en || null == q || null == t.application_id) return;
+                e = await (0, D.default)({
                     applicationId: t.application_id,
                     currentEmbeddedApplication: n,
-                    activityChannelId: Z,
+                    activityChannelId: q,
                     locationObject: er.location,
                     embeddedActivitiesManager: b.default,
                     analyticsLocations: W

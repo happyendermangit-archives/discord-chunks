@@ -36,8 +36,8 @@ function(e, t, n) {
         C = n("496675"),
         g = n("594174"),
         L = n("285952"),
-        D = n("153124"),
-        v = n("465670"),
+        v = n("153124"),
+        D = n("465670"),
         M = n("795295"),
         y = n("729285"),
         P = n("176278"),
@@ -53,7 +53,7 @@ function(e, t, n) {
             userRoles: t,
             position: n,
             ...r
-        } = e, s = (0, D.useUID)();
+        } = e, s = (0, v.useUID)();
         return (0, i.jsxs)(I.Dialog, {
             className: a()(B.overflowRolesPopout, {
                 [B.popoutBottom]: "bottom" === n,
@@ -99,7 +99,7 @@ function(e, t, n) {
         } = e, {
             tabIndex: g,
             ...L
-        } = (0, d.useListItem)(A.id), D = (0, N.useRoleIcon)({
+        } = (0, d.useListItem)(A.id), v = (0, N.useRoleIcon)({
             roleId: A.id,
             size: 16,
             guildId: O
@@ -156,14 +156,14 @@ function(e, t, n) {
                     "aria-label": w.default.Messages.GUILD_SETTINGS_MEMBERS_REMOVE_ROLE.format({
                         roleName: A.name
                     }),
-                    children: [u, f ? (0, i.jsx)(v.default, {
+                    children: [u, f ? (0, i.jsx)(D.default, {
                         color: V,
                         className: B.roleRemoveIcon,
                         "aria-hidden": !0
                     }) : null]
-                }), null != D ? (0, i.jsx)(P.default, {
+                }), null != v ? (0, i.jsx)(P.default, {
                     className: B.roleIcon,
-                    ...D,
+                    ...v,
                     enableTooltip: !1
                 }) : null, (0, i.jsx)("div", {
                     "aria-hidden": !0,
@@ -265,31 +265,31 @@ function(e, t, n) {
             (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null ? f.default.unassignGuildRoleConnection(s.id, e.id) : p.default.updateMemberRoles(s.id, n.id, i, [], [e.id])
         }, [o, s.id, n.id]), N = r.useCallback(e => {
             let t = o; - 1 === t.indexOf(e) && (t = t.concat([e])), p.default.updateMemberRoles(s.id, n.id, t, [e], [])
-        }, [o, s.id, n.id]), [O, L] = r.useState(null), D = (0, c.useStateFromStores)([R.default], () => R.default.getRoles(s.id)), v = r.useMemo(() => {
-            let e = Object.values(D).filter(e => o.includes(e.id)).sort((e, t) => {
+        }, [o, s.id, n.id]), [O, L] = r.useState(null), v = (0, c.useStateFromStores)([R.default], () => R.default.getRoles(s.id)), D = r.useMemo(() => {
+            let e = Object.values(v).filter(e => o.includes(e.id)).sort((e, t) => {
                 var n, i;
                 let r = (null === (n = e.tags) || void 0 === n ? void 0 : n.guild_connections) !== null,
                     s = (null === (i = t.tags) || void 0 === i ? void 0 : i.guild_connections) !== null;
                 return r && !s ? 1 : !r && s ? -1 : 0
             });
             return null != O ? e.slice(0, O) : e
-        }, [D, O, o]), M = o.length - v.length;
+        }, [v, O, o]), M = o.length - D.length;
         r.useLayoutEffect(() => {
             if (_) return;
             if ("number" != typeof E) throw Error("Unexpected null width");
             let e = 0,
                 t = 0,
                 n = E - 30 - 4;
-            for (let i = 0; i < v.length; i++) {
-                let r = v[i],
+            for (let i = 0; i < D.length; i++) {
+                let r = D[i],
                     s = A.current[r.id];
                 if (null != s) {
                     if ((t += s.offsetWidth + 4) > n) break;
                     e++
                 }
             }
-            L(t => e < v.length ? e : t)
-        }, [_, E, v]);
+            L(t => e < D.length ? e : t)
+        }, [_, E, D]);
         let y = g.default.getCurrentUser();
         l()(null != y, "MemberRolesList: currentUser cannot be undefined");
         let P = !T && C.default.can(G.Permissions.MANAGE_ROLES, s),
@@ -302,7 +302,7 @@ function(e, t, n) {
                 scrollToEnd: k,
                 wrap: !0
             }),
-            j = v.map(e => {
+            j = D.map(e => {
                 var t;
                 return (0, i.jsx)(x, {
                     className: S,

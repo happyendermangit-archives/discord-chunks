@@ -32,8 +32,8 @@ function(e, t, n) {
         C = n("51144"),
         g = n("508688"),
         L = n("286908"),
-        D = n("377087"),
-        v = n("981631"),
+        v = n("377087"),
+        D = n("981631"),
         M = n("185923"),
         y = n("689938"),
         P = n("580384");
@@ -274,7 +274,7 @@ function(e, t, n) {
             let {
                 channel: e,
                 category: t
-            } = this.props, n = e.type === v.ChannelTypes.GUILD_CATEGORY ? L.default : (0, S.getChannelIconComponent)(e);
+            } = this.props, n = e.type === D.ChannelTypes.GUILD_CATEGORY ? L.default : (0, S.getChannelIconComponent)(e);
             return (0, r.jsxs)(g.AutocompleteRowContent, {
                 children: [null != n && (0, r.jsx)(g.AutocompleteRowIcon, {
                     children: (0, r.jsx)(n, {
@@ -296,7 +296,7 @@ function(e, t, n) {
             } = this.props;
             return (0, r.jsxs)(g.AutocompleteRowContent, {
                 children: [(0, r.jsx)(g.AutocompleteRowIcon, {
-                    children: (0, r.jsx)(D.default, {
+                    children: (0, r.jsx)(v.default, {
                         className: P.icon,
                         foreground: P.iconForeground
                     })

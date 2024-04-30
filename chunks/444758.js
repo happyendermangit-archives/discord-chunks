@@ -114,7 +114,7 @@ function(e, t, n) {
         }
     }
 
-    function D(e, t, n, i, r) {
+    function v(e, t, n, i, r) {
         let s = d.default.getGuild(e),
             a = (null == s ? void 0 : s.id) === i;
         return {
@@ -132,7 +132,7 @@ function(e, t, n) {
         }
     }
 
-    function v(e, t, n, i) {
+    function D(e, t, n, i) {
         if (!e.canViewChannel) return function(e, t) {
             let n = {
                 type: "channel",
@@ -221,7 +221,7 @@ function(e, t, n) {
                     id: i
                 };
                 let r = C(i, n.mentionChannels);
-                return null == r ? D(null, i, null, N(n.channelId)) : v(r, null, N(n.channelId))
+                return null == r ? v(null, i, null, N(n.channelId)) : D(r, null, N(n.channelId))
             }
         },
         y = {
@@ -238,7 +238,7 @@ function(e, t, n) {
                     a = e[3];
                 if (null == s) return g(i);
                 let o = C(s, null);
-                return null == o ? D(r, s, a, N(n.channelId), i) : v(o, a, N(n.channelId), i)
+                return null == o ? v(r, s, a, N(n.channelId), i) : D(o, a, N(n.channelId), i)
             }
         },
         P = {
@@ -253,9 +253,9 @@ function(e, t, n) {
                     o = e[4];
                 if (null == s || null == a) return g(i);
                 let l = C(a, null);
-                if (null != l) return v(l, o, N(n.channelId), i);
+                if (null != l) return D(l, o, N(n.channelId), i);
                 let u = C(s, null);
-                return null != u ? v(u, o, N(n.channelId), i) : D(r, s, o, N(n.channelId), i)
+                return null != u ? D(u, o, N(n.channelId), i) : v(r, s, o, N(n.channelId), i)
             }
         };
     t.default = {

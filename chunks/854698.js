@@ -23,7 +23,7 @@ function(e, t, n) {
             return y
         },
         getEventTimeData: function() {
-            return D
+            return v
         },
         getInitialEventStartDate: function() {
             return C
@@ -130,7 +130,7 @@ function(e, t, n) {
         g = (e, t) => e.format(e.get("years") === t.get("years") ? "ddd MMM Do \xb7 LT" : "ddd MMM Do, YYYY \xb7 LT"),
         L = (e, t) => e.diff(t, "days") > 1 ? g(e, t) : e.calendar(t);
 
-    function D(e, t, n) {
+    function v(e, t, n) {
         null == n && (n = s()());
         let i = s()(e),
             r = null != t && "" !== t ? s()(t) : void 0,
@@ -145,7 +145,7 @@ function(e, t, n) {
         }
     }
 
-    function v(e) {
+    function D(e) {
         return new a.Weekday(p[e])
     }
 
@@ -247,14 +247,14 @@ function(e, t, n) {
     }
 
     function x(e) {
-        let t = v(e.toDate().getDay()),
-            n = v(e.toDate().getUTCDay());
+        let t = D(e.toDate().getDay()),
+            n = D(e.toDate().getUTCDay());
         return n.weekday - t.weekday > 0 ? h : n.weekday - t.weekday < 0 ? S : f
     }
 
     function F(e) {
-        let t = v(e.toDate().getDay()),
-            n = v(e.toDate().getUTCDay());
+        let t = D(e.toDate().getDay()),
+            n = D(e.toDate().getUTCDay());
         return n.weekday - t.weekday > 0 ? N : n.weekday - t.weekday < 0 ? m : A
     }
 
@@ -262,7 +262,7 @@ function(e, t, n) {
         let n = function(e, t) {
             let n = x(t),
                 i = F(t),
-                r = v(t.toDate().getUTCDay()),
+                r = D(t.toDate().getUTCDay()),
                 s = Math.ceil(t.toDate().getUTCDate() / 7),
                 o = t.toDate();
             switch (o.setMilliseconds(0), e) {

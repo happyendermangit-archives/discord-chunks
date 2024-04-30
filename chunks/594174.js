@@ -83,14 +83,14 @@ function(e, t, n) {
         let t, n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             i = m[e.id],
             s = void 0 !== e.id && e.id === I.default.getId();
-        if (null == i) void 0 !== (t = (i = new _.default(e)).premiumType) && s && (i.premiumType = D((0, d.isStaffEnv)(i), i.premiumType));
+        if (null == i) void 0 !== (t = (i = new _.default(e)).premiumType) && s && (i.premiumType = v((0, d.isStaffEnv)(i), i.premiumType));
         else if (n) {
             var a;
             let n = C(e);
             void 0 !== (t = null !== (a = n.premium_type) && void 0 !== a ? a : n.premiumType) && s && (0, d.isStaffEnvRawData)(n) && (n = function(e) {
                 var t;
                 let n = null !== (t = e.premium_type) && void 0 !== t ? t : e.premiumType,
-                    i = D((0, d.isStaffEnvRawData)(e), n);
+                    i = v((0, d.isStaffEnvRawData)(e), n);
                 return void 0 !== e.premiumType ? e.premiumType = i : void 0 !== e.premium_type && (e.premium_type = i), e
             }(n)), n = function(e, t) {
                 switch (!0) {
@@ -110,14 +110,14 @@ function(e, t, n) {
         return m[e.id] = i, o && N++, o
     }
 
-    function D(e, t) {
+    function v(e, t) {
         if (!e) return t;
         let n = l.default.getPremiumTypeOverride(),
             i = l.default.getPremiumTypeActual();
         return n === h.UNSELECTED_PREMIUM_TYPE_OVERRIDE ? i : n
     }
 
-    function v(e, t) {
+    function D(e, t) {
         var n, i, r, s, a;
         if (null != e.author && "SENDING" !== e.state && g(e.author) && L(e.author, t), null === (n = e.mentions) || void 0 === n || n.forEach(e => {
                 g(e) && L(e, t)
@@ -211,14 +211,14 @@ function(e, t, n) {
         let {
             messages: t
         } = e;
-        return t.forEach(e => v(e, !0)), !1
+        return t.forEach(e => D(e, !0)), !1
     }
 
     function V(e) {
         let {
             mostRecentMessages: t
         } = e;
-        return null == t || t.forEach(e => v(e, !1)), !1
+        return null == t || t.forEach(e => D(e, !1)), !1
     }
 
     function x(e) {
@@ -234,7 +234,7 @@ function(e, t, n) {
         let {
             data: t
         } = e;
-        (0, o.getMessagesFromGuildFeedFetch)(t).forEach(e => v(e, !0))
+        (0, o.getMessagesFromGuildFeedFetch)(t).forEach(e => D(e, !0))
     }
 
     function H(e) {
@@ -242,7 +242,7 @@ function(e, t, n) {
             firstMessages: t,
             owners: n
         } = e;
-        null != t && t.forEach(e => v(e, !0)), null != n && n.forEach(e => L(e.user, !0))
+        null != t && t.forEach(e => D(e, !0)), null != n && n.forEach(e => L(e.user, !0))
     }
 
     function Y(e) {
@@ -255,7 +255,7 @@ function(e, t, n) {
                 most_recent_message: n,
                 owner: i
             } = e;
-            null != t && v(t, !0), null != n && v(n, !0), null != i && null != i.user && L(i.user, !0)
+            null != t && D(t, !0), null != n && D(n, !0), null != i && null != i.user && L(i.user, !0)
         })
     }
 
@@ -267,7 +267,7 @@ function(e, t, n) {
             let {
                 message_preview: t
             } = e;
-            null != t && v(t, !0)
+            null != t && D(t, !0)
         })
     }
 
@@ -305,18 +305,18 @@ function(e, t, n) {
         null != t.other_user && L(t.other_user)
     }
 
-    function X(e) {
+    function Z(e) {
         let {
             message: t
         } = e;
-        if (v(t, !0), null != t.flags && c.hasFlag(t.flags, f.MessageFlags.URGENT)) {
+        if (D(t, !0), null != t.flags && c.hasFlag(t.flags, f.MessageFlags.URGENT)) {
             let e = m[I.default.getId()];
             return null != e && (m[I.default.getId()] = e.set("flags", c.setFlag(e.flags, f.UserFlags.HAS_UNREAD_URGENT_MESSAGES, !0)), !0)
         }
         return !1
     }
 
-    function Q(e) {
+    function X(e) {
         let {
             channel: {
                 rawRecipients: t
@@ -325,7 +325,7 @@ function(e, t, n) {
         return null != t && t.forEach(e => L(e)), !1
     }
 
-    function q(e) {
+    function Q(e) {
         let {
             channels: t
         } = e;
@@ -335,7 +335,7 @@ function(e, t, n) {
             of t) null != e && e.forEach(e => L(e));
         return !1
     }
-    let Z = ["username", "avatar", "global_name", "discriminator", "bot", "clan"];
+    let q = ["username", "avatar", "global_name", "discriminator", "bot", "clan"];
 
     function J(e) {
         let {
@@ -344,7 +344,7 @@ function(e, t, n) {
         return t.map(e => {
             let t = m[e.user.id];
             if (null == t) return !1;
-            let n = Z.reduce((n, i) => {
+            let n = q.reduce((n, i) => {
                 if (e.user.hasOwnProperty(i)) {
                     let r = t.set((0, s.camelCase)(i), e.user[i]);
                     n = n || r !== t, t = r
@@ -607,21 +607,21 @@ function(e, t, n) {
         } = e, n = I.default.getId();
         return t.reduce((e, t) => t.member.user.id === n ? e : L(t.member.user) || e, !1)
     }
-    class eD extends T.default {
+    class ev extends T.default {
         initialize() {
             this.waitFor(I.default)
         }
         takeSnapshot() {
             let e = this.getCurrentUser();
             return {
-                version: eD.LATEST_SNAPSHOT_VERSION,
+                version: ev.LATEST_SNAPSHOT_VERSION,
                 data: {
                     users: [e].filter(E.isNotNullish)
                 }
             }
         }
         handleLoadCache(e) {
-            let t = this.readSnapshot(eD.LATEST_SNAPSHOT_VERSION);
+            let t = this.readSnapshot(ev.LATEST_SNAPSHOT_VERSION);
             if (null != t)
                 for (let e of t.users) m[e.id] = new _.default(e);
             if (null != e.users)
@@ -681,8 +681,8 @@ function(e, t, n) {
                 LOAD_PINNED_MESSAGES_SUCCESS: k,
                 LOAD_RECENT_MENTIONS_SUCCESS: k,
                 THREAD_LIST_SYNC: V,
-                MESSAGE_CREATE: X,
-                MESSAGE_UPDATE: X,
+                MESSAGE_CREATE: Z,
+                MESSAGE_UPDATE: Z,
                 GUILD_SETTINGS_LOADED_BANS: $,
                 GUILD_SETTINGS_LOADED_BANS_BATCH: ee,
                 GUILD_CREATE: ed,
@@ -698,8 +698,8 @@ function(e, t, n) {
                 GUILD_MEMBER_LIST_UPDATE: er,
                 THREAD_MEMBER_LIST_UPDATE: el,
                 THREAD_MEMBERS_UPDATE: eu,
-                CHANNEL_CREATE: Q,
-                CHANNEL_UPDATES: q,
+                CHANNEL_CREATE: X,
+                CHANNEL_UPDATES: Q,
                 RELATIONSHIP_ADD: e_,
                 LOAD_RELATIONSHIPS_SUCCESS: ec,
                 FRIEND_SUGGESTION_CREATE: eE,
@@ -730,5 +730,5 @@ function(e, t, n) {
             })
         }
     }
-    A(eD, "displayName", "UserStore"), A(eD, "LATEST_SNAPSHOT_VERSION", 1), t.default = new eD
+    A(ev, "displayName", "UserStore"), A(ev, "LATEST_SNAPSHOT_VERSION", 1), t.default = new ev
 }

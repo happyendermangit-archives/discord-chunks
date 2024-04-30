@@ -20,8 +20,8 @@ function(e, t, n) {
         C = n("592125"),
         g = n("984933"),
         L = n("430824"),
-        D = n("131951"),
-        v = n("914010"),
+        v = n("131951"),
+        D = n("914010"),
         M = n("981631"),
         y = n("176505");
     let P = "SelectedChannelStore",
@@ -85,12 +85,12 @@ function(e, t, n) {
 
     function Y(e, t) {
         if (w.delete(e), null == t) {
-            let n = v.default.getGuildId();
+            let n = D.default.getGuildId();
             U[B(n)] === e && (t = n)
         }
         let n = null != L.default.getGuild(t) ? t : null,
             i = !1;
-        o === e && (o = null, i = !0), !(0, A.isInMainTabsExperiment)() && (U[B(n)] === e && (U[B(n)] = V(B(n)), v.default.getGuildId() === n && (0, N.replaceWith)(M.Routes.CHANNEL(t, U[B(n)])), i = !0), null != n && G[n] === e && (delete G[n], i = !0)), i && k()
+        o === e && (o = null, i = !0), !(0, A.isInMainTabsExperiment)() && (U[B(n)] === e && (U[B(n)] = V(B(n)), D.default.getGuildId() === n && (0, N.replaceWith)(M.Routes.CHANNEL(t, U[B(n)])), i = !0), null != n && G[n] === e && (delete G[n], i = !0)), i && k()
     }
 
     function j(e) {
@@ -119,16 +119,16 @@ function(e, t, n) {
                     null: null
                 })
             }
-            this.mustEmitChanges(e => "CONNECTION_OPEN" !== e.type && "VOICE_STATE_UPDATES" !== e.type), this.waitFor(L.default, C.default, v.default, g.default, D.default)
+            this.mustEmitChanges(e => "CONNECTION_OPEN" !== e.type && "VOICE_STATE_UPDATES" !== e.type), this.waitFor(L.default, C.default, D.default, g.default, v.default)
         }
         getChannelId(e) {
             var t, n;
             let i = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-                r = B(e === M.ME ? null : null !== (t = null != e ? e : v.default.getGuildId()) && void 0 !== t ? t : null);
+                r = B(e === M.ME ? null : null !== (t = null != e ? e : D.default.getGuildId()) && void 0 !== t ? t : null);
             return i ? null !== (n = U[r]) && void 0 !== n ? n : V(r) : U[r]
         }
         getVoiceChannelId() {
-            return D.default.isSupported() ? o : null
+            return v.default.isSupported() ? o : null
         }
         getMostRecentSelectedTextChannelId(e) {
             var t;
@@ -216,7 +216,7 @@ function(e, t, n) {
             if (null == t) {
                 let e = C.default.getChannel(o),
                     t = null == e ? void 0 : e.guild_id;
-                null != t && t !== v.default.getGuildId() && U[t] === o && (U[t] = V(t))
+                null != t && t !== D.default.getGuildId() && U[t] === o && (U[t] = V(t))
             }
             o = t, k()
         },

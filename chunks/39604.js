@@ -11,13 +11,13 @@ function(e, t, n) {
             return z
         },
         dismissClipsUserEducation: function() {
-            return Q
+            return X
         },
         dismissSaveClipAnimation: function() {
             return H
         },
         exportClip: function() {
-            return X
+            return Z
         },
         loadClipsDirectory: function() {
             return K
@@ -78,8 +78,8 @@ function(e, t, n) {
         C = n("550351"),
         g = n("659487"),
         L = n("711644"),
-        D = n("259612"),
-        v = n("356659"),
+        v = n("259612"),
+        D = n("356659"),
         M = n("981631");
 
     function y(e) {
@@ -272,8 +272,8 @@ function(e, t, n) {
                 clipStats: t
             } = await (null != u ? s.saveClipForUser(u, r, l) : s.saveClip(r, l)), i = V(_, t);
             i.clip_save_time_ms = t.clipSaveTimeMs, i.clip_size_bytes = t.clipSizeBytes, null != t.viewerDecodeFps && (i.decode_fps_during_clip = t.viewerDecodeFps, i.encode_fps_during_clip = t.viewerEncodeFps, i.target_fps = null), m.default.track(M.AnalyticEvents.CLIP_SAVED, i);
-            let a = await (0, D.createThumbnailFromVideo)(o.default.clips.getClipProtocolURLFromPath(r), 0);
-            return n.thumbnail = a, n.length = e, v.ClipsLogger.info("Clip save succeeded with ".concat(e, "ms and thumbnail ").concat(null !== (c = null == a ? void 0 : a.length) && void 0 !== c ? c : 0, " bytes thumbnail.")), await s.updateClipMetadata(r, JSON.stringify(n)), {
+            let a = await (0, v.createThumbnailFromVideo)(o.default.clips.getClipProtocolURLFromPath(r), 0);
+            return n.thumbnail = a, n.length = e, D.ClipsLogger.info("Clip save succeeded with ".concat(e, "ms and thumbnail ").concat(null !== (c = null == a ? void 0 : a.length) && void 0 !== c ? c : 0, " bytes thumbnail.")), await s.updateClipMetadata(r, JSON.stringify(n)), {
                 ...n,
                 filepath: r
             }
@@ -311,7 +311,7 @@ function(e, t, n) {
             m = null != e ? e : h,
             N = (() => {
                 let e = null != m ? (0, d.decodeStreamKey)(m).ownerId : void 0;
-                return e === f.default.getId() ? v.ClipSaveTypes.STREAMER : null != e ? v.ClipSaveTypes.VIEWER : v.ClipSaveTypes.DECOUPLED
+                return e === f.default.getId() ? D.ClipSaveTypes.STREAMER : null != e ? D.ClipSaveTypes.VIEWER : D.ClipSaveTypes.DECOUPLED
             })(),
             R = await (async () => {
                 if (null == m) return;
@@ -322,7 +322,7 @@ function(e, t, n) {
                 if (null != n) try {
                     let e = (0, r.getVoiceEngine)(),
                         t = await e.getNextVideoOutputFrame(n);
-                    return (0, D.createImageFromImageData)(t)
+                    return (0, v.createImageFromImageData)(t)
                 } catch (e) {
                     return
                 }
@@ -342,11 +342,11 @@ function(e, t, n) {
                 clip: e
             })
         } catch (e) {
-            v.ClipsLogger.error("Clip Failed to Save", e), null == C || C.stop(), (0, p.playSound)("clip_error", .5), a.default.dispatch({
+            D.ClipsLogger.error("Clip Failed to Save", e), null == C || C.stop(), (0, p.playSound)("clip_error", .5), a.default.dispatch({
                 type: "CLIPS_SAVE_CLIP_ERROR"
             })
         }
-        v.ClipsLogger.info("".concat(O.default.getSettings().clipsLength / 1e3, "s clip save took ").concat(Math.round(performance.now() - g), "ms"))
+        D.ClipsLogger.info("".concat(O.default.getSettings().clipsLength / 1e3, "s clip save took ").concat(Math.round(performance.now() - g), "ms"))
     }
 
     function H(e, t) {
@@ -406,13 +406,13 @@ function(e, t, n) {
             filepath: e
         }))
     }
-    async function X(e, t) {
+    async function Z(e, t) {
         let n = S.default.getMediaEngine(),
             i = await n.exportClip(e.filepath, t);
         return (0, L.default)(i)
     }
 
-    function Q(e) {
+    function X(e) {
         a.default.dispatch({
             type: "CLIPS_DISMISS_EDUCATION",
             educationType: e

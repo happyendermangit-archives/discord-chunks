@@ -33,18 +33,18 @@ function(e, t, n) {
             location: g
         } = (0, u.useAnalyticsContext)(), {
             analyticsLocations: L
-        } = (0, _.default)(), D = (0, o.useStateFromStores)([f.default], () => f.default.getGuild(n)), {
-            canManageAllExpressions: v
-        } = (0, T.useManageResourcePermissions)(D), M = null != D && 0 === (0, A.getTotalStickerCountForTier)(D.premiumTier) && !D.hasFeature(m.GuildFeatures.MORE_STICKERS);
+        } = (0, _.default)(), v = (0, o.useStateFromStores)([f.default], () => f.default.getGuild(n)), {
+            canManageAllExpressions: D
+        } = (0, T.useManageResourcePermissions)(v), M = null != v && 0 === (0, A.getTotalStickerCountForTier)(v.premiumTier) && !v.hasFeature(m.GuildFeatures.MORE_STICKERS);
         return (r.useEffect(() => {
-            v && M && R && ((0, d.trackWithMetadata)(m.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
+            D && M && R && ((0, d.trackWithMetadata)(m.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
                 location: g,
-                guild_id: null == D ? void 0 : D.id,
+                guild_id: null == v ? void 0 : v.id,
                 channel_id: null == s ? void 0 : s.id,
                 type: "Expression Picker Inline Sticker Upsell",
                 location_stack: L
             }), C(!0))
-        }, [M, D, s, g, R, C, L, v]), null != D && v) ? M ? (0, i.jsxs)("div", {
+        }, [M, v, s, g, R, C, L, D]), null != v && D) ? M ? (0, i.jsxs)("div", {
             className: a()(O.upsell, t),
             children: [(0, i.jsx)(S.default, {
                 className: O.icon,
@@ -64,7 +64,7 @@ function(e, t, n) {
                     (0, E.default)({
                         analyticsLocations: L,
                         analyticsSourceLocation: g,
-                        guild: D,
+                        guild: v,
                         perks: (0, N.guildBoostingPerks)()
                     })
                 },

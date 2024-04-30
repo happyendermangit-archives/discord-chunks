@@ -23,8 +23,8 @@ function(e, t, n) {
             guild: t
         } = e, n = (0, a.useStateFromStores)([o.default], () => o.default.useReducedMotion), [T, f] = r.useState(!1), [S, h] = r.useState(0), A = r.useRef(null), m = Math.min(_.BoostedGuildTiers.TIER_3, t.premiumTier + 1), N = _.AppliedGuildBoostsRequiredForBoostedGuildTier[t.premiumTier], p = _.AppliedGuildBoostsRequiredForBoostedGuildTier[m], O = (t.premiumSubscriberCount - N) / (p - N), R = d.TierMarkerPositions[t.premiumTier], C = d.TierMarkerPositions[m], g = t.premiumTier === _.BoostedGuildTiers.TIER_3, {
             progressBarFillWidthFactor: L,
-            isProgressBarAnimationComplete: D,
-            setShouldFireConfetti: v,
+            isProgressBarAnimationComplete: v,
+            setShouldFireConfetti: D,
             shouldFireConfetti: M,
             tierMarkerAnimationPosition: y
         } = function(e) {
@@ -119,9 +119,9 @@ function(e, t, n) {
             }), I.map(e => (0, i.jsx)(d.default, {
                 confettiTriggerRef: A,
                 guild: t,
-                isProgressBarAnimationComplete: D,
+                isProgressBarAnimationComplete: v,
                 setConfettiCount: h,
-                setShouldFireConfetti: v,
+                setShouldFireConfetti: D,
                 tier: e,
                 tierMarkerAnimationPosition: y,
                 children: (0, l.getTierName)(e)

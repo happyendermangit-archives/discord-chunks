@@ -26,10 +26,10 @@ function(e, t, n) {
         g = null,
         L = new Set;
 
-    function D(e) {
+    function v(e) {
         null != i && null != A ? i(A) : null != r && r(e), i = null, r = null
     }
-    class v extends(s = u.default.Store) {
+    class D extends(s = u.default.Store) {
         getPricesForSku(e) {
             return h[e]
         }
@@ -71,20 +71,20 @@ function(e, t, n) {
             return L.has(e)
         }
     }
-    l = "SKUPaymentModalStore", (o = "displayName") in(a = v) ? Object.defineProperty(a, o, {
+    l = "SKUPaymentModalStore", (o = "displayName") in(a = D) ? Object.defineProperty(a, o, {
         value: l,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : a[o] = l, t.default = new v(d.default, {
+    }) : a[o] = l, t.default = new D(d.default, {
         SKU_PURCHASE_MODAL_OPEN: function(e) {
-            D(), E = e.skuId, T = e.applicationId, O = e.isIAP, f = e.analyticsLocation, g = e.context, C = e.isGift, R = !0, p = !1, i = e.resolve, r = e.reject, N = null, A = null, S = e.promotionId
+            v(), E = e.skuId, T = e.applicationId, O = e.isIAP, f = e.analyticsLocation, g = e.context, C = e.isGift, R = !0, p = !1, i = e.resolve, r = e.reject, N = null, A = null, S = e.promotionId
         },
         SKU_PURCHASE_MODAL_CLOSE: function(e) {
             let {
                 error: t
             } = e;
-            R = !1, g = null, D(t)
+            R = !1, g = null, v(t)
         },
         SKU_PURCHASE_PREVIEW_FETCH: function(e) {
             let {
@@ -142,7 +142,7 @@ function(e, t, n) {
                 locked: t
             } = e;
             if (!t || null == g) return !1;
-            R = !1, g = null, D()
+            R = !1, g = null, v()
         },
         GIFT_CODE_CREATE: function(e) {
             let {

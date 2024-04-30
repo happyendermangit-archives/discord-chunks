@@ -33,7 +33,7 @@ function(e, t, n) {
         let {
             soundboardSound: t,
             closePicker: C
-        } = e, g = (0, _.useExpressionPickerStore)(e => e.searchQuery), L = (0, r.useStateFromStores)([N.default], () => null != t && N.default.isFavoriteSound(t.soundId)), D = (0, r.useStateFromStores)([E.default], () => E.default.getGuild(null == t ? void 0 : t.guildId)), v = (0, r.useStateFromStores)([l.default], () => l.default.useReducedMotion, []), M = (0, r.useStateFromStores)([T.default], () => T.default.isFocused()), y = (0, r.useStateFromStores)([I.default], () => I.default.getKeybindForAction(p.GlobalKeybindActions.SOUNDBOARD_HOLD));
+        } = e, g = (0, _.useExpressionPickerStore)(e => e.searchQuery), L = (0, r.useStateFromStores)([N.default], () => null != t && N.default.isFavoriteSound(t.soundId)), v = (0, r.useStateFromStores)([E.default], () => E.default.getGuild(null == t ? void 0 : t.guildId)), D = (0, r.useStateFromStores)([l.default], () => l.default.useReducedMotion, []), M = (0, r.useStateFromStores)([T.default], () => T.default.isFocused()), y = (0, r.useStateFromStores)([I.default], () => I.default.getKeybindForAction(p.GlobalKeybindActions.SOUNDBOARD_HOLD));
         if (null != t && g.length > 0) return (0, i.jsx)(c.default, {
             graphicPrimary: null != t.emojiId || null != t.emojiName ? (0, i.jsx)(o.default, {
                 emojiId: t.emojiId,
@@ -42,12 +42,12 @@ function(e, t, n) {
             }) : (0, i.jsx)(S.default, {
                 className: R.emoji
             }),
-            graphicSecondary: null != D ? (0, i.jsx)(d.default, {
-                guild: D,
-                shouldAnimate: !v && M
+            graphicSecondary: null != v ? (0, i.jsx)(d.default, {
+                guild: v,
+                shouldAnimate: !D && M
             }) : null,
             titlePrimary: t.name,
-            titleSecondary: null == D ? void 0 : D.name,
+            titleSecondary: null == v ? void 0 : v.name,
             isFavorite: L
         });
         let P = () => {

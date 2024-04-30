@@ -32,7 +32,7 @@ function(e, t, n) {
             maxCharacterCount: O,
             showRemainingCharsAfterCount: R,
             className: C
-        } = e, g = (0, a.useStateFromStores)([c.default], () => I.default.canUseIncreasedMessageLength(c.default.getCurrentUser())), L = (0, d.default)(), D = null != O ? O : L, v = null !== (m = null != R ? R : O) && void 0 !== m ? m : L / 10, M = p.length, y = null != N.upsellLongMessages && (null != M ? M : 0) > f.MAX_MESSAGE_LENGTH && g, P = null != N.upsellLongMessages && !g, U = (null === (n = (0, _.usePremiumTrialOffer)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === S.PremiumSubscriptionSKUs.TIER_2, b = D - M, G = b > v, w = b < 0 && U, B = 0 === b ? h.default.Messages.CHARACTER_COUNT_AT_LIMIT : b > 0 ? h.default.Messages.CHARACTER_COUNT_CLOSE_TO_LIMIT.format({
+        } = e, g = (0, a.useStateFromStores)([c.default], () => I.default.canUseIncreasedMessageLength(c.default.getCurrentUser())), L = (0, d.default)(), v = null != O ? O : L, D = null !== (m = null != R ? R : O) && void 0 !== m ? m : L / 10, M = p.length, y = null != N.upsellLongMessages && (null != M ? M : 0) > f.MAX_MESSAGE_LENGTH && g, P = null != N.upsellLongMessages && !g, U = (null === (n = (0, _.usePremiumTrialOffer)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === S.PremiumSubscriptionSKUs.TIER_2, b = v - M, G = b > D, w = b < 0 && U, B = 0 === b ? h.default.Messages.CHARACTER_COUNT_AT_LIMIT : b > 0 ? h.default.Messages.CHARACTER_COUNT_CLOSE_TO_LIMIT.format({
             count: b
         }) : h.default.Messages.CHARACTER_COUNT_OVER_LIMIT, {
             analyticsLocations: k
@@ -47,7 +47,7 @@ function(e, t, n) {
                     className: A.flairContainer,
                     children: [y && b >= 0 ? (0, i.jsx)(o.Tooltip, {
                         text: h.default.Messages.PREMIUM_MESSAGE_LENGTH_CHATBOX_FLAIR.format({
-                            maxLength: D
+                            maxLength: v
                         }),
                         position: "top",
                         children: e => (0, i.jsx)(E.default, {

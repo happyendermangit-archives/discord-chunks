@@ -50,8 +50,8 @@ function(e, t, n) {
                 minHeight: C,
                 mediaLayoutType: g,
                 limitResponsiveWidth: L = !0,
-                accessory: D,
-                zoomable: v,
+                accessory: v,
+                zoomable: D,
                 original: M,
                 children: y,
                 renderAccessory: P,
@@ -89,12 +89,12 @@ function(e, t, n) {
                 children: e
             });
             let V = null != P ? P() : null;
-            return V = null != V ? V : D, (0, r.jsx)(u.FocusRing, {
+            return V = null != V ? V : v, (0, r.jsx)(u.FocusRing, {
                 ringTarget: this._containerRef,
                 focusTarget: this._clickableRef,
                 children: (0, r.jsxs)("div", {
                     className: o()(h.imageWrapper, {
-                        [h.imageZoom]: v,
+                        [h.imageZoom]: D,
                         [h.imageWrapperBackground]: i !== f.ImageReadyStates.READY,
                         [h.clickable]: null != U
                     }, t),

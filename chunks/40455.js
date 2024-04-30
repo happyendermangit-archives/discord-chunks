@@ -97,13 +97,13 @@ function(e, t, n) {
         }
         constructor() {
             super({
-                CACHE_LOADED_LAZY_NO_CACHE: v,
+                CACHE_LOADED_LAZY_NO_CACHE: D,
                 CACHE_LOADED_LAZY: () => this.loadCache(),
                 CHANNEL_DELETE: R,
                 CHANNEL_UPDATES: O,
                 CONNECTION_OPEN_SUPPLEMENTAL: N,
                 GUILD_DELETE: L,
-                LOGIN_SUCCESS: D,
+                LOGIN_SUCCESS: v,
                 THREAD_DELETE: g,
                 THREAD_UPDATE: C
             })
@@ -146,11 +146,11 @@ function(e, t, n) {
         return !e.guild.unavailable && (A.deleteGuild(e.guild.id), !0)
     }
 
-    function D(e) {
+    function v(e) {
         f.clear(), S.clear(), h = !1
     }
 
-    function v(e) {
+    function D(e) {
         h = !0
     }
     I(A, "displayName", "SaveableChannelsStore"), I(A, "LATEST_SNAPSHOT_VERSION", 1), t.default = new A

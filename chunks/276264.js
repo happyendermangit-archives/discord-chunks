@@ -30,8 +30,8 @@ function(e, t, n) {
         C = n("981631"),
         g = n("674563"),
         L = n("524484"),
-        D = n("689938"),
-        v = n("495929");
+        v = n("689938"),
+        D = n("495929");
     let M = (0, p.cssValueToNumber)(o.default.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
     t.default = function(e) {
         var t;
@@ -58,10 +58,10 @@ function(e, t, n) {
             onMouseDown: W,
             onKeyDown: K,
             onClick: z,
-            onContextMenu: X,
-            onClickPremiumGuildIcon: Q,
-            onFocus: q,
-            "aria-controls": Z,
+            onContextMenu: Z,
+            onClickPremiumGuildIcon: X,
+            onFocus: Q,
+            "aria-controls": q,
             "aria-expanded": J,
             "aria-posinset": $,
             "aria-setsize": ee,
@@ -96,9 +96,9 @@ function(e, t, n) {
                 let e = null != w ? w.find(e => e.type === C.ActivityTypes.CUSTOM_STATUS) : null,
                     t = null != e && null != b && (0, _.default)(e, b, H);
                 return (0, i.jsx)(R.default, {
-                    className: v.activity,
-                    textClassName: v.activityText,
-                    emojiClassName: v.activityEmoji,
+                    className: D.activity,
+                    textClassName: D.activityText,
+                    emojiClassName: D.activityEmoji,
                     activities: w,
                     applicationStream: B,
                     animate: eo,
@@ -109,29 +109,29 @@ function(e, t, n) {
                 })
             },
             ep = () => null != p && p && null == y ? (0, i.jsx)(l.Tooltip, {
-                text: null != M ? M : D.default.Messages.GUILD_OWNER,
+                text: null != M ? M : v.default.Messages.GUILD_OWNER,
                 children: e => (0, i.jsx)(A.default, {
                     ...e,
-                    className: v.ownerIcon
+                    className: D.ownerIcon
                 })
             }) : null,
             eO = () => null == F ? null : (0, i.jsx)(l.Tooltip, {
-                text: D.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_TOOLTIP.format({
+                text: v.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_TOOLTIP.format({
                     date: F
                 }),
                 children: e => (0, i.jsx)(l.Clickable, {
-                    onClick: Q,
+                    onClick: X,
                     tabIndex: -1,
                     children: (0, i.jsx)(m.default, {
                         ...e,
-                        className: v.premiumIcon
+                        className: D.premiumIcon
                     })
                 })
             }),
             eR = () => {
                 let e = (null == b ? void 0 : b.isClyde()) ? g.BotTagTypes.AI : g.BotTagTypes.BOT;
                 return null != b && b.bot ? (0, i.jsx)(S.default, {
-                    className: v.botTag,
+                    className: D.botTag,
                     type: e,
                     verified: b.isVerifiedBot()
                 }) : null
@@ -166,18 +166,18 @@ function(e, t, n) {
                     roleName: o,
                     color: null != s ? s : void 0,
                     name: null != U ? U : er,
-                    className: v.name
+                    className: D.name
                 }), (0, i.jsx)(d.default, {
                     clan: null == b ? void 0 : b.clan,
                     userId: null == b ? void 0 : b.id,
                     disableTooltip: !0,
-                    className: v.clanTag
+                    className: D.clanTag
                 })]
             }),
-            eD = k === C.StatusTypes.OFFLINE;
+            ev = k === C.StatusTypes.OFFLINE;
         return null == b ? (0, i.jsx)(h.default, {
             avatarSize: l.AvatarSizes.SIZE_32,
-            className: v.placeholder
+            className: D.placeholder
         }) : (0, i.jsx)(l.Popout, {
             renderPopout: e => {
                 var t, n;
@@ -198,37 +198,37 @@ function(e, t, n) {
             children: () => (0, i.jsx)(N.default, {
                 ref: ea,
                 selected: n,
-                className: a()(v.member, j, {
-                    [v.offline]: eD && !n
+                className: a()(D.member, j, {
+                    [D.offline]: ev && !n
                 }),
-                innerClassName: v.memberInner,
+                innerClassName: D.memberInner,
                 onClick: z,
                 onKeyDown: K,
                 onMouseDown: W,
-                onContextMenu: X,
+                onContextMenu: Z,
                 onMouseEnter: eh,
                 onMouseLeave: eA,
                 name: null == y ? (0, i.jsx)("span", {
-                    className: v.username,
+                    className: D.username,
                     children: eL()
                 }) : (0, i.jsx)(l.Tooltip, {
                     text: y,
                     children: e => (0, i.jsx)("span", {
                         ...e,
-                        className: a()(v.username, v.lostPermission),
+                        className: a()(D.username, D.lostPermission),
                         children: eL()
                     })
                 }),
-                avatar: eg(b, eD),
+                avatar: eg(b, ev),
                 subText: eN(),
                 decorators: eC(),
-                "aria-controls": Z,
+                "aria-controls": q,
                 "aria-expanded": J,
                 "aria-setsize": ee,
                 "aria-posinset": $,
                 id: et,
                 tabIndex: en,
-                onFocus: q,
+                onFocus: Q,
                 focusProps: {
                     offset: {
                         top: 4,

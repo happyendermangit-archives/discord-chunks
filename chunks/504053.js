@@ -22,15 +22,15 @@ function(e, t, n) {
             for (let s = 0; s < n; s++)
                 for (let a = s ? 0 : 1; a * n < t * (n - s); a++) r.push(((e[m + (N >> 1)] >> ((1 & N++) << 2) & 15) / 7.5 - 1) * i);
             return r
-        }, O = p(f, S, (u >> 18 & 31) / 31 / 2), R = p(3, 3, (d >> 3 & 63) / 63 * n), C = p(3, 3, (d >> 9 & 63) / 63 * n), g = I ? p(5, 5, A) : [], L = (0, i.thumbHashToApproximateAspectRatio)(e), D = l(L > 1 ? 32 : 32 * L), v = l(L > 1 ? 32 / L : 32), M = new Uint8Array(D * v * 4), y = [], P = [];
-        for (let e = 0, n = 0; e < v; e++)
-            for (let i = 0; i < D; i++, n += 4) {
+        }, O = p(f, S, (u >> 18 & 31) / 31 / 2), R = p(3, 3, (d >> 3 & 63) / 63 * n), C = p(3, 3, (d >> 9 & 63) / 63 * n), g = I ? p(5, 5, A) : [], L = (0, i.thumbHashToApproximateAspectRatio)(e), v = l(L > 1 ? 32 : 32 * L), D = l(L > 1 ? 32 / L : 32), M = new Uint8Array(v * D * 4), y = [], P = [];
+        for (let e = 0, n = 0; e < D; e++)
+            for (let i = 0; i < v; i++, n += 4) {
                 let l = _,
                     u = c,
                     d = E,
                     T = h;
-                for (let e = 0, t = a(f, I ? 5 : 3); e < t; e++) y[e] = o(r / D * (i + .5) * e);
-                for (let t = 0, n = a(S, I ? 5 : 3); t < n; t++) P[t] = o(r / v * (e + .5) * t);
+                for (let e = 0, t = a(f, I ? 5 : 3); e < t; e++) y[e] = o(r / v * (i + .5) * e);
+                for (let t = 0, n = a(S, I ? 5 : 3); t < n; t++) P[t] = o(r / D * (e + .5) * t);
                 for (let e = 0, n = 0; e < S; e++)
                     for (let i = e ? 0 : 1, r = 2 * P[e]; i * S < f * (S - e); i++, n++) !(i > t) && !(e > t) && (l += O[n] * y[i] * r);
                 for (let e = 0, t = 0; e < 3; e++)
@@ -47,8 +47,8 @@ function(e, t, n) {
                 M[n] = a(0, 255 * s(1, m)), M[n + 1] = a(0, 255 * s(1, N)), M[n + 2] = a(0, 255 * s(1, A)), M[n + 3] = a(0, 255 * s(1, T))
             }
         return {
-            w: D,
-            h: v,
+            w: v,
+            h: D,
             rgba: M
         }
     }

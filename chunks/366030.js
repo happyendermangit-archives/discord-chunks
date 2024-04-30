@@ -30,8 +30,8 @@ function(e, t, n) {
         C = n("275759"),
         g = n("107484"),
         L = n("977392"),
-        D = n("134433"),
-        v = n("753194"),
+        v = n("134433"),
+        D = n("753194"),
         M = n("458034"),
         y = n("856651"),
         P = n("981631"),
@@ -94,7 +94,7 @@ function(e, t, n) {
                     T = f.default.get(e),
                     S = null == E ? void 0 : E.application,
                     h = (null == S ? void 0 : S.bot) != null ? new m.default(S.bot) : null;
-                return C.officialApplicationIds.includes(null !== (t = null == S ? void 0 : S.id) && void 0 !== t ? t : "") ? l = (0, i.jsx)(v.default, {
+                return C.officialApplicationIds.includes(null !== (t = null == S ? void 0 : S.id) && void 0 !== t ? t : "") ? l = (0, i.jsx)(D.default, {
                     className: G.botTag,
                     color: r,
                     size: 16
@@ -246,7 +246,7 @@ function(e, t, n) {
                     className: G.badge,
                     ...t,
                     ...e,
-                    children: [(0, i.jsx)(D.default, {
+                    children: [(0, i.jsx)(v.default, {
                         className: G.badgeVerifiedIcon,
                         size: 16,
                         color: d.colorString

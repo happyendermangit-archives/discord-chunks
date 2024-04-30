@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         canEditMessageWithStickers: function() {
-            return D
+            return v
         },
         createMessageRecord: function() {
             return N
@@ -43,8 +43,8 @@ function(e, t, n) {
     function N(e) {
         var t, n, i, r, l, T, h, N, p, O;
         let {
-            reactions: D,
-            interactionData: v
+            reactions: v,
+            interactionData: D
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, M = null !== (r = null === (t = e.mentions) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== r ? r : [], y = null !== (l = e.mention_roles) && void 0 !== l ? l : [], P = null !== (T = e.mention_channels) && void 0 !== T ? T : [], U = e.message_reference, b = new Date(e.timestamp), G = e.type === A.MessageTypes.THREAD_CREATED ? [] : (0, s.default)(e.content);
         let w = null == (p = e).author ? m : null != p.webhook_id ? new _.default(p.author) : null !== (O = I.default.getUser(p.author.id)) && void 0 !== O ? O : new _.default(p.author),
             B = null == e ? void 0 : e.gift_info,
@@ -81,9 +81,9 @@ function(e, t, n) {
             content: F,
             referralTrialOfferId: x,
             call: C(e.call, b),
-            reactions: L(null != D ? D : e.reactions, e.poll),
+            reactions: L(null != v ? v : e.reactions, e.poll),
             interaction: k,
-            interactionData: null != v ? v : e.interaction_data,
+            interactionData: null != D ? D : e.interaction_data,
             interactionMetadata: e.interaction_metadata,
             roleSubscriptionData: e.role_subscription_data,
             purchaseNotification: e.purchase_notification,
@@ -173,5 +173,5 @@ function(e, t, n) {
             return t.count < 0 && (t.count = 0), t.burst_count < 0 && (t.burst_count = 0), t
         })
     }
-    let D = e => 0 === (0, l.getMessageStickers)(e).length || "" !== e.content
+    let v = e => 0 === (0, l.getMessageStickers)(e).length || "" !== e.content
 }

@@ -27,8 +27,8 @@ function(e, t, n) {
     let C = new I.default("GuildMemberStore"),
         g = {},
         L = {},
-        D = {},
-        v = !1,
+        v = {},
+        D = !1,
         M = 0,
         y = 0,
         P = {},
@@ -41,15 +41,15 @@ function(e, t, n) {
     function G(e, t) {
         if (null == t.communicationDisabledUntil || !(0, T.isMemberCommunicationDisabled)(t)) return w(e, t.userId);
         let n = V(e, t.userId);
-        D[n] !== t.communicationDisabledUntil && (0, T.isMemberCommunicationDisabled)(t) && (D[n] = t.communicationDisabledUntil, B(n))
+        v[n] !== t.communicationDisabledUntil && (0, T.isMemberCommunicationDisabled)(t) && (v[n] = t.communicationDisabledUntil, B(n))
     }
 
     function w(e, t) {
         if (null != t) {
             let n = V(e, t);
-            null != D[n] && B(n), k(V(e, t))
+            null != v[n] && B(n), k(V(e, t))
         } else
-            for (let t in D) F(t) === e && (B(t), k(t))
+            for (let t in v) F(t) === e && (B(t), k(t))
     }
 
     function B(e) {
@@ -57,7 +57,7 @@ function(e, t, n) {
     }
 
     function k(e) {
-        x(e) === N.default.getId() && (0, f.clearCommunicationDisabledNotice)(F(e)), delete D[e]
+        x(e) === N.default.getId() && (0, f.clearCommunicationDisabledNotice)(F(e)), delete v[e]
     }
 
     function V(e, t) {
@@ -157,7 +157,7 @@ function(e, t, n) {
 
     function j(e) {
         e.guilds.forEach(e => {
-            X(e)
+            Z(e)
         })
     }
 
@@ -234,7 +234,7 @@ function(e, t, n) {
         } : void 0
     }
 
-    function X(e) {
+    function Z(e) {
         let t = e.id;
         !(t in g) && (g[e.id] = {});
         let n = O.default.getGuild(t);
@@ -265,7 +265,7 @@ function(e, t, n) {
         return !0
     }
 
-    function Q(e) {
+    function X(e) {
         let t = g[e.guildId];
         if (null == t) return !1;
         let n = O.default.getGuild(e.guildId);
@@ -289,7 +289,7 @@ function(e, t, n) {
         }
     }
 
-    function q(e) {
+    function Q(e) {
         let {
             guildId: t
         } = e, n = g[t];
@@ -315,13 +315,13 @@ function(e, t, n) {
         })
     }
 
-    function Z(e) {
+    function q(e) {
         var t;
         let {
             message: n,
             guildId: i
         } = e;
-        (null === (t = n.resolved) || void 0 === t ? void 0 : t.members) != null && null != i && X({
+        (null === (t = n.resolved) || void 0 === t ? void 0 : t.members) != null && null != i && Z({
             id: i,
             members: Object.entries(n.resolved.members).map(e => {
                 var t, i;
@@ -342,7 +342,7 @@ function(e, t, n) {
             var t;
             if ((null === (t = e.resolved) || void 0 === t ? void 0 : t.members) == null) return;
             let n = p.default.getChannel(e.channel_id);
-            !(null == n || n.isPrivate()) && X({
+            !(null == n || n.isPrivate()) && Z({
                 id: n.guild_id,
                 members: Object.entries(e.resolved.members).map(t => {
                     var n, i;
@@ -442,7 +442,7 @@ function(e, t, n) {
             return null != n ? n.nick : null
         }
         getCommunicationDisabledUserMap() {
-            return D
+            return v
         }
         getCommunicationDisabledVersion() {
             return M
@@ -468,7 +468,7 @@ function(e, t, n) {
         writable: !0
     }) : a[o] = l, t.default = new ee(E.default, {
         CONNECTION_OPEN: function(e) {
-            v ? v = !1 : g = {}, D = {}, j(e)
+            D ? D = !1 : g = {}, v = {}, j(e)
         },
         CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
             j(e)
@@ -485,7 +485,7 @@ function(e, t, n) {
             let {
                 guildMembers: t
             } = e;
-            v = !0, g = {
+            D = !0, g = {
                 ...t
             }
         },
@@ -493,7 +493,7 @@ function(e, t, n) {
             let {
                 guild: t
             } = e;
-            return X(t)
+            return Z(t)
         },
         GUILD_DELETE: function(e) {
             let {
@@ -575,8 +575,8 @@ function(e, t, n) {
             } = e;
             return K(t, Object.values(n).map(e => e.owner).filter(A.isNotNullish))
         },
-        GUILD_ROLE_UPDATE: Q,
-        GUILD_ROLE_DELETE: Q,
+        GUILD_ROLE_UPDATE: X,
+        GUILD_ROLE_DELETE: X,
         GUILD_ROLE_MEMBER_REMOVE: function(e) {
             let {
                 guildId: t,
@@ -638,8 +638,8 @@ function(e, t, n) {
                 fullProfileLoadedTimestamp: Date.now()
             }), G(n, i[t.user.id])
         },
-        IMPERSONATE_UPDATE: q,
-        IMPERSONATE_STOP: q,
+        IMPERSONATE_UPDATE: Q,
+        IMPERSONATE_STOP: Q,
         PASSIVE_UPDATE_V1: function(e) {
             return null != e.members && K(e.guildId, e.members)
         },
@@ -653,13 +653,13 @@ function(e, t, n) {
         LOCAL_MESSAGES_LOADED: function(e) {
             var t, n;
             if (null == e.guildId || null == O.default.getGuild(e.guildId)) return !1;
-            v = !0, g[e.guildId] = null !== (t = g[e.guildId]) && void 0 !== t ? t : {};
+            D = !0, g[e.guildId] = null !== (t = g[e.guildId]) && void 0 !== t ? t : {};
             let i = !1;
-            for (let t of (v = !0, g[e.guildId] = null !== (n = g[e.guildId]) && void 0 !== n ? n : {}, e.members)) null == g[e.guildId][t.userId] && (i = !0, g[e.guildId][t.userId] = t);
+            for (let t of (D = !0, g[e.guildId] = null !== (n = g[e.guildId]) && void 0 !== n ? n : {}, e.members)) null == g[e.guildId][t.userId] && (i = !0, g[e.guildId][t.userId] = t);
             return i
         },
-        MESSAGE_CREATE: Z,
-        MESSAGE_UPDATE: Z,
+        MESSAGE_CREATE: q,
+        MESSAGE_UPDATE: q,
         LOAD_MESSAGES_SUCCESS: J,
         LOAD_MESSAGES_AROUND_SUCCESS: J,
         LOAD_PINNED_MESSAGES_SUCCESS: J,

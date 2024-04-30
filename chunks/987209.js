@@ -35,7 +35,7 @@ function(e, t, n) {
             location: "PaymentContextProvider"
         }, {
             autoTrackExposure: O && R
-        }), [g, L] = r.useState(O ? C && R ? d.PremiumGiftStyles.SEASONAL_STANDARD_BOX : c : E), [D, v] = r.useState(t && (0, l.getGiftExperience)(S) === l.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD ? _.default.Messages.DEFAULT_CUSTOM_GIFT_MESSAGE : o), [M, y] = r.useState(void 0), [P, U] = r.useState(void 0), b = (0, l.useGetGiftCode)(f, t), [G, w] = r.useState(!1), [B, k] = r.useState(!1), [V, x] = r.useState(), F = r.useCallback(e => {
+        }), [g, L] = r.useState(O ? C && R ? d.PremiumGiftStyles.SEASONAL_STANDARD_BOX : c : E), [v, D] = r.useState(t && (0, l.getGiftExperience)(S) === l.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD ? _.default.Messages.DEFAULT_CUSTOM_GIFT_MESSAGE : o), [M, y] = r.useState(void 0), [P, U] = r.useState(void 0), b = (0, l.useGetGiftCode)(f, t), [G, w] = r.useState(!1), [B, k] = r.useState(!1), [V, x] = r.useState(), F = r.useCallback(e => {
             let {
                 onSubscriptionConfirmation: t
             } = e;
@@ -60,8 +60,8 @@ function(e, t, n) {
                 setSoundEffect: y,
                 emojiConfetti: P,
                 setEmojiConfetti: U,
-                customGiftMessage: D,
-                setCustomGiftMessage: v,
+                customGiftMessage: v,
+                setCustomGiftMessage: D,
                 selectedGiftStyle: g,
                 setSelectedGiftStyle: L,
                 sendGiftMessage: F,

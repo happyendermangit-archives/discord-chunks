@@ -45,15 +45,15 @@ function(e, t, n) {
         C = n("223683"),
         g = n("630114"),
         L = n("506712"),
-        D = n("468788"),
-        v = n("789662"),
+        v = n("468788"),
+        D = n("789662"),
         M = n("981631"),
         y = n("490897"),
         P = n("526761"),
         U = n("689938");
 
     function b(e, t) {
-        let [n, r] = i.useState(v.defaultThresholds), [o, l] = i.useState({});
+        let [n, r] = i.useState(D.defaultThresholds), [o, l] = i.useState({});
         (0, E.useFrecencySettings)();
         let u = (0, a.useStateFromStoresArray)([S.default], () => Object.values(S.default.getGuilds())),
             d = i.useCallback(() => {
@@ -67,7 +67,7 @@ function(e, t, n) {
                         debugReason: l,
                         actions: d,
                         overrideMode: r,
-                        messagePain: u.messages === v.PainLevel.High,
+                        messagePain: u.messages === D.PainLevel.High,
                         visitsALot: o,
                         muted: A.default.isMuted(e.id) && !A.default.isTemporarilyMuted(e.id)
                     }
@@ -99,8 +99,8 @@ function(e, t, n) {
                         return -1 === t ? r.length : t
                     }),
                     o = [
-                        ["Use Grey Dot", new Set([v.Mode.UseGreyDot])],
-                        ["Keep As Is", new Set([v.Mode.KeepAsIs])]
+                        ["Use Grey Dot", new Set([D.Mode.UseGreyDot])],
+                        ["Keep As Is", new Set([D.Mode.KeepAsIs])]
                     ].map(e => {
                         let [t, n] = e, i = a.filter(e => {
                             var t;
@@ -122,8 +122,8 @@ function(e, t, n) {
 
     function G(e, t) {
         return Object.values(S.default.getGuilds()).some(n => {
-            let [i] = I.default.hasConsented(M.Consents.PERSONALIZATION) ? (0, L.guessGuildModeWithRemoteData)(n, v.defaultThresholds, e, t, !1) : (0, L.guessGuildModeWithLocalData)(n, e);
-            return i === v.Mode.UseGreyDot
+            let [i] = I.default.hasConsented(M.Consents.PERSONALIZATION) ? (0, L.guessGuildModeWithRemoteData)(n, D.defaultThresholds, e, t, !1) : (0, L.guessGuildModeWithLocalData)(n, e);
+            return i === D.Mode.UseGreyDot
         })
     }
 
@@ -170,7 +170,7 @@ function(e, t, n) {
         let n = function(e) {
             let t = Object.values(e).filter(e => {
                     var t;
-                    return (null !== (t = e.overrideMode) && void 0 !== t ? t : e.mode) === v.Mode.UseGreyDot
+                    return (null !== (t = e.overrideMode) && void 0 !== t ? t : e.mode) === D.Mode.UseGreyDot
                 }).map(e => {
                     var t;
                     return {
@@ -186,7 +186,7 @@ function(e, t, n) {
                 m.default.track(M.AnalyticEvents.NOTIFICATION_MIGRATION_COMPLETED, {
                     ...n,
                     auto_migrated: !0,
-                    pre_selected_server_ids: Object.values(e).filter(e => e.mode === v.Mode.UseGreyDot).map(e => e.guildId),
+                    pre_selected_server_ids: Object.values(e).filter(e => e.mode === D.Mode.UseGreyDot).map(e => e.guildId),
                     final_selected_server_ids: t.map(e => e.plan.guildId),
                     num_unread_guids_after: R.default.keys(e).filter(e => f.default.hasUnread(e)).length,
                     num_tiny_servers_selected: t.filter(e => e.memberCount <= 20).length,
@@ -228,7 +228,7 @@ function(e, t, n) {
         }
     }
     async function V(e) {
-        await x(() => F()), await x(() => d.default.setAccountFlag(D.AccountNotificationFlags.USE_NEW_NOTIFICATIONS, !0));
+        await x(() => F()), await x(() => d.default.setAccountFlag(v.AccountNotificationFlags.USE_NEW_NOTIFICATIONS, !0));
         let t = await x(() => c.default.saveUserGuildSettingsBulk(e));
         l.default.dispatch({
             type: "USER_GUILD_SETTINGS_FULL_UPDATE",
@@ -275,8 +275,8 @@ function(e, t, n) {
                 onConfirm: t,
                 cancelText: "Cancel",
                 onCancel: () => {}
-            })), await (0, C.restoreSnapshot)(e.id), await d.default.setAccountFlag(D.AccountNotificationFlags.USE_NEW_NOTIFICATIONS, !1)
-        } else await d.default.setAccountFlag(D.AccountNotificationFlags.USE_NEW_NOTIFICATIONS, !1)
+            })), await (0, C.restoreSnapshot)(e.id), await d.default.setAccountFlag(v.AccountNotificationFlags.USE_NEW_NOTIFICATIONS, !1)
+        } else await d.default.setAccountFlag(v.AccountNotificationFlags.USE_NEW_NOTIFICATIONS, !1)
     }
 
     function Y(e) {

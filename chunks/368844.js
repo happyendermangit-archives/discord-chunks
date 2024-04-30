@@ -8,7 +8,7 @@ function(e, t, n) {
             return S
         },
         messageContainsGifOrVideo: function() {
-            return D
+            return v
         },
         shouldShowAddMediaToOriginalPostModal: function() {
             return L
@@ -175,7 +175,7 @@ function(e, t, n) {
         return null != r && e.length > 0 && null != e.find(e => e.isImage || e.isVideo) && i.isForumPost() && i.ownerId === (null === (n = _.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && 0 === o.default.getCount(i.id) && (0 === r.attachments.length || null == r.attachments.find(e => h(e) || A(e)))
     }
 
-    function D(e) {
+    function v(e) {
         return e.reduce((e, t) => ({
             containsVideo: e.containsVideo || t.isVideo,
             containsGif: e.containsGif || (0, a.isAnimatedImageUrl)(t.src)

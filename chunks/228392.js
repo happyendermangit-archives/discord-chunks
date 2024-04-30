@@ -41,7 +41,7 @@ function(e, t, n) {
             return P
         },
         trackForumPostClicked: function() {
-            return D
+            return v
         },
         trackForumPostCreated: function() {
             return C
@@ -65,7 +65,7 @@ function(e, t, n) {
             return h
         },
         trackForumSortOrderUpdated: function() {
-            return v
+            return D
         },
         trackForumTagFilterClicked: function() {
             return m
@@ -288,7 +288,7 @@ function(e, t, n) {
         })
     }
 
-    function D(e) {
+    function v(e) {
         let {
             guildId: t,
             channelId: n,
@@ -306,7 +306,7 @@ function(e, t, n) {
         })
     }
 
-    function v(e) {
+    function D(e) {
         let {
             guildId: t,
             channelId: n,

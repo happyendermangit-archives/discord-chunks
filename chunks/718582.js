@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useGetActivityUsers: function() {
-            return g
+            return L
         },
         useGuildActivity: function() {
-            return R
+            return C
         }
     }), n("390547"), n("47120"), n("627341");
     var i = n("392711"),
@@ -16,19 +16,20 @@ function(e, t, n) {
         l = n("841784"),
         u = n("924301"),
         d = n("344185"),
-        _ = n("984933"),
-        c = n("158776"),
-        E = n("699516"),
-        I = n("800599"),
-        T = n("594174"),
-        f = n("938475"),
-        S = n("823379"),
-        h = n("5192"),
-        A = n("709054"),
-        m = n("456774"),
-        N = n("981631"),
-        p = n("689938");
-    let O = {
+        _ = n("199902"),
+        c = n("984933"),
+        E = n("158776"),
+        I = n("699516"),
+        T = n("800599"),
+        f = n("594174"),
+        S = n("938475"),
+        h = n("823379"),
+        A = n("5192"),
+        m = n("709054"),
+        N = n("456774"),
+        p = n("981631"),
+        O = n("689938");
+    let R = {
         Event: 5,
         Game: 4,
         Voice: 3,
@@ -36,14 +37,14 @@ function(e, t, n) {
         Base: 1
     };
 
-    function R(e) {
+    function C(e) {
         let t = e.id,
-            n = (0, a.useStateFromStoresArray)([_.default, d.default], () => {
-                let e = _.default.getChannels(t)[_.GUILD_VOCAL_CHANNELS_KEY].filter(e => {
+            n = (0, a.useStateFromStoresArray)([c.default, d.default], () => {
+                let e = c.default.getChannels(t)[c.GUILD_VOCAL_CHANNELS_KEY].filter(e => {
                     let {
                         channel: t
                     } = e;
-                    return t.type === N.ChannelTypes.GUILD_VOICE
+                    return t.type === p.ChannelTypes.GUILD_VOICE
                 }).map(e => {
                     let {
                         channel: t
@@ -53,7 +54,7 @@ function(e, t, n) {
                 return [...e, ...Object.values(d.default.getThreadsForGuild(t)).flatMap(e => Object.keys(e))]
             }, [t]),
             r = (0, a.useStateFromStoresArray)([u.default], () => u.default.getGuildScheduledEventsForGuild(t).filter(e => (0, u.isGuildScheduledEventActive)(e)).map(e => ({
-                category: m.ActivityCategory.EVENT,
+                category: N.ActivityCategory.EVENT,
                 event: e
             })), [t]);
         return function(e) {
@@ -61,16 +62,16 @@ function(e, t, n) {
                 let t = e => e > 0 ? Math.log(e + 1) : 0,
                     n = e => e.map(e => {
                         var t, n;
-                        return null !== (n = null === (t = I.default.getUserAffinity(e)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0
+                        return null !== (n = null === (t = T.default.getUserAffinity(e)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0
                     }).map(t),
                     i = (0, s.match)(e).with({
-                        category: m.ActivityCategory.EVENT
+                        category: N.ActivityCategory.EVENT
                     }, () => 5).with({
-                        category: m.ActivityCategory.HANGOUT
+                        category: N.ActivityCategory.HANGOUT
                     }, () => 3).with({
-                        category: m.ActivityCategory.GAMING
+                        category: N.ActivityCategory.GAMING
                     }, () => 4).with({
-                        category: m.ActivityCategory.EMBEDDED_ACTIVITY
+                        category: N.ActivityCategory.EMBEDDED_ACTIVITY
                     }, () => 2).otherwise(() => 1),
                     r = 0;
                 return "userIds" in e && (r += Math.max(...n(e.userIds))), "embeddedActivity" in e && (r += Math.max(...n([...e.embeddedActivity.userIds]))), "voiceStates" in e && (r += Math.max(...n(e.voiceStates.map(e => {
@@ -80,11 +81,11 @@ function(e, t, n) {
                     return t.id
                 })))), r = r > 0 ? r * i : 1e-5 * i
             })(e)], ["desc"])
-        }([...(0, a.useStateFromStores)([E.default, f.default, o.default, c.default], () => {
-            let i = E.default.getRelationships(),
-                r = A.default.keys(i).filter(e => i[e] === N.RelationshipTypes.BLOCKED),
-                s = f.default.getVoiceStates(t);
-            return Object.keys(s).filter(t => null == s[t].filter(S.isNotNullish).find(e => {
+        }([...(0, a.useStateFromStores)([I.default, S.default, o.default, E.default], () => {
+            let i = I.default.getRelationships(),
+                r = m.default.keys(i).filter(e => i[e] === p.RelationshipTypes.BLOCKED),
+                s = S.default.getVoiceStates(t);
+            return Object.keys(s).filter(t => null == s[t].filter(h.isNotNullish).find(e => {
                 let {
                     user: t
                 } = e;
@@ -93,14 +94,14 @@ function(e, t, n) {
                 let t = o.default.getEmbeddedActivitiesForChannel(e);
                 if (t.length > 0)
                     for (let e of t) return {
-                        category: m.ActivityCategory.EMBEDDED_ACTIVITY,
+                        category: N.ActivityCategory.EMBEDDED_ACTIVITY,
                         embeddedActivity: e
                     };
-                let n = s[e].filter(S.isNotNullish);
+                let n = s[e].filter(h.isNotNullish);
                 for (let t of n) {
-                    let i = c.default.findActivity(t.user.id, C(t));
+                    let i = E.default.findActivity(t.user.id, g(t));
                     if (null != i && !(0, l.default)(i)) return {
-                        category: m.ActivityCategory.GAMING,
+                        category: N.ActivityCategory.GAMING,
                         channelId: e,
                         game: i,
                         voiceStates: n
@@ -113,55 +114,60 @@ function(e, t, n) {
                     return t.id
                 });
                 return {
-                    category: m.ActivityCategory.HANGOUT,
+                    category: N.ActivityCategory.HANGOUT,
                     channelId: e,
                     userIds: i
                 }
             })
         }, [n, e.afkChannelId, t]), ...r])
     }
-    let C = e => t => [N.ActivityTypes.PLAYING, N.ActivityTypes.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId);
+    let g = e => t => [p.ActivityTypes.PLAYING, p.ActivityTypes.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId);
 
-    function g(e, t, n) {
-        let i = (0, a.useStateFromStoresArray)([T.default, I.default], () => r()(e).map(e => T.default.getUser(e)).filter(S.isNotNullish).orderBy([e => {
+    function L(e, t, n) {
+        let i = (0, a.useStateFromStoresArray)([_.default], () => _.default.getAllApplicationStreamsForChannel(n).map(e => e.ownerId), [n]),
+            s = (0, a.useStateFromStoresArray)([f.default, T.default], () => r()(e).map(e => f.default.getUser(e)).filter(h.isNotNullish).orderBy([e => {
                 var t, n;
-                return null !== (n = null === (t = I.default.getUserAffinity(e.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0
+                return null !== (n = null === (t = T.default.getUserAffinity(e.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0
             }], ["desc"]).value()),
-            s = i.length > 3 ? i.slice(0, 2) : i.slice(0, 3),
-            o = s.map(e => h.default.getName(t, n, e)),
-            l = Math.max(0, i.length - s.length),
-            u = function(e, t) {
-                if (1 === e.length) return t > 0 ? p.default.Messages.GUILD_POPOUT_ACTIVITY_USERS_1_N.format({
+            o = s.length > 3 ? s.slice(0, 6) : s.slice(0, 7),
+            l = Math.max(0, s.length - o.length),
+            u = i.length > 2 ? i.slice(0, 2) : i.slice(0, 3),
+            d = u.map(e => A.default.getName(t, n, f.default.getUser(e))),
+            c = function(e, t) {
+                if (1 === e.length) return t > 0 ? O.default.Messages.GUILD_POPOUT_ACTIVITY_USERS_1_N.format({
                     a: e[0],
                     n: t.toLocaleString()
-                }) : e[0];
-                if (2 === e.length) return t > 0 ? p.default.Messages.GUILD_POPOUT_ACTIVITY_USERS_2_N.format({
+                }) : O.default.Messages.GUILD_POPOUT_ACTIVITY_USERS_1.format({
+                    username: e[0]
+                });
+                if (2 === e.length) return t > 0 ? O.default.Messages.GUILD_POPOUT_ACTIVITY_USERS_2_N.format({
                     a: e[0],
                     b: e[1],
                     n: t.toLocaleString()
-                }) : p.default.Messages.GUILD_POPOUT_ACTIVITY_USERS_2.format({
+                }) : O.default.Messages.GUILD_POPOUT_ACTIVITY_USERS_2.format({
                     a: e[0],
                     b: e[1]
                 });
-                if (3 !== e.length) return p.default.Messages.GUILD_POPOUT_ACTIVITY_USERS_N.format({
+                if (3 !== e.length) return O.default.Messages.GUILD_POPOUT_ACTIVITY_USERS_N.format({
                     n: t.toLocaleString()
                 });
-                else return t > 0 ? p.default.Messages.GUILD_POPOUT_ACTIVITY_USERS_3_N.format({
+                else return t > 0 ? O.default.Messages.GUILD_POPOUT_ACTIVITY_USERS_3_N.format({
                     a: e[0],
                     b: e[1],
                     c: e[2],
                     n: t.toLocaleString()
-                }) : p.default.Messages.GUILD_POPOUT_ACTIVITY_USERS_3.format({
+                }) : O.default.Messages.GUILD_POPOUT_ACTIVITY_USERS_3.format({
                     a: e[0],
                     b: e[1],
                     c: e[2]
                 })
-            }(o, l);
+            }(d, Math.max(0, i.length - u.length));
         return {
-            totalUsers: i.length,
-            usersToShow: s,
+            totalUsers: s.length,
+            usersToShow: o,
             othersCount: l,
-            usersText: u
+            streamUserIds: i,
+            streamerUsersText: c
         }
     }
 }

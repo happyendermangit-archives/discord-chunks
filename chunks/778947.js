@@ -39,8 +39,8 @@ function(e, t, n) {
         C = n("430824"),
         g = n("496675"),
         L = n("594174"),
-        D = n("789695"),
-        v = n("176278"),
+        v = n("789695"),
+        D = n("176278"),
         M = n("768581"),
         y = n("585483"),
         P = n("630388"),
@@ -145,8 +145,8 @@ function(e, t, n) {
             onClickAvatar: N,
             onPopoutRequestClose: C,
             showAvatarPopout: g
-        } = s, [L, D] = r.useState(!1), {
-            analyticsLocations: v
+        } = s, [L, v] = r.useState(!1), {
+            analyticsLocations: D
         } = (0, _.default)(d.default.AVATAR), P = (0, l.useStateFromStores)([R.default], () => {
             var e;
             return null !== (e = s.displayCompactAvatars) && void 0 !== e ? e : R.default.displayCompactAvatars
@@ -172,9 +172,9 @@ function(e, t, n) {
             })) && void 0 !== t ? t : k : k
         }, [H, null === (t = T.application) || void 0 === t ? void 0 : t.icon, null === (n = T.application) || void 0 === n ? void 0 : n.id, b.avatar, w, k]);
         if (r.useEffect(() => {
-                if (null != h) return y.ComponentDispatch.subscribeKeyed(B.ComponentActionsKeyed.ANIMATE_CHAT_AVATAR, "".concat(h, ":").concat(G), D), () => void y.ComponentDispatch.unsubscribeKeyed(B.ComponentActionsKeyed.ANIMATE_CHAT_AVATAR, "".concat(h, ":").concat(G), D)
+                if (null != h) return y.ComponentDispatch.subscribeKeyed(B.ComponentActionsKeyed.ANIMATE_CHAT_AVATAR, "".concat(h, ":").concat(G), v), () => void y.ComponentDispatch.unsubscribeKeyed(B.ComponentActionsKeyed.ANIMATE_CHAT_AVATAR, "".concat(h, ":").concat(G), v)
             }, [G, h]), !S || P) return null != c && null != g ? (0, i.jsx)(_.AnalyticsLocationProvider, {
-            value: v,
+            value: D,
             children: (0, i.jsx)(u.Popout, {
                 preload: U ? void 0 : function() {
                     return (0, p.maybeFetchUserProfileForPopout)(T.author.id, null != f.guildMemberAvatar && null != a ? M.default.getGuildMemberAvatarURLSimple({
@@ -205,7 +205,7 @@ function(e, t, n) {
                 })
             })
         }) : (0, i.jsx)(_.AnalyticsLocationProvider, {
-            value: v,
+            value: D,
             children: F({
                 ...x,
                 avatarSrc: Y,
@@ -319,7 +319,7 @@ function(e, t, n) {
         }), z = (0, l.useStateFromStores)([R.default], () => {
             var t;
             return null !== (t = e.displayCompactAvatars) && void 0 !== t ? t : R.default.displayCompactAvatars
-        }), X = (!s || z) && null != _ && null != b ? (0, i.jsx)(u.Popout, {
+        }), Z = (!s || z) && null != _ && null != b ? (0, i.jsx)(u.Popout, {
             animation: u.Popout.Animation.TRANSLATE,
             align: "center",
             autoInvert: !0,
@@ -333,29 +333,29 @@ function(e, t, n) {
                 let {
                     onClick: t
                 } = e;
-                return (0, i.jsx)(v.default, {
+                return (0, i.jsx)(D.default, {
                     ..._,
                     className: V.roleIcon,
                     onClick: t
                 })
             }
-        }, "role-icon-children") : (!s || z) && null != _ ? (0, i.jsx)(v.default, {
+        }, "role-icon-children") : (!s || z) && null != _ ? (0, i.jsx)(D.default, {
             ..._,
             className: V.roleIcon
-        }, "role-icon-children") : null, Q = (0, G.renderSystemTag)({
+        }, "role-icon-children") : null, X = (0, G.renderSystemTag)({
             message: t,
             channel: O,
             user: null == t ? void 0 : t.author,
             compact: s,
             isRepliedMessage: !1
-        }), q = [], Z = L.default.getCurrentUser(), J = U.default.isPremium(t.author), $ = U.default.isPremium(Z), ee = null == O ? void 0 : O.isPrivate();
-        (0, T.shouldShowNitroBadge)(null != _, "Message Username") && J && !s && !ee && q.push((0, i.jsx)(K, {
+        }), Q = [], q = L.default.getCurrentUser(), J = U.default.isPremium(t.author), $ = U.default.isPremium(q), ee = null == O ? void 0 : O.isPrivate();
+        (0, T.shouldShowNitroBadge)(null != _, "Message Username") && J && !s && !ee && Q.push((0, i.jsx)(K, {
             currentUserIsPremium: $,
             author: t.author
-        }, "nitro-author")), null != X && q.push(X), null != b && q.push((0, i.jsx)(I.default, {
+        }, "nitro-author")), null != Z && Q.push(Z), null != b && Q.push((0, i.jsx)(I.default, {
             guild: b,
             message: t
-        }, "new-member")), null != O && null != b && q.push((0, i.jsx)(c.default, {
+        }, "new-member")), null != O && null != b && Q.push((0, i.jsx)(c.default, {
             guild: b,
             channel: O,
             userId: t.author.id,
@@ -364,7 +364,7 @@ function(e, t, n) {
         let et = [];
         (0, P.hasFlag)(t.flags, B.MessageFlags.SUPPRESS_NOTIFICATIONS) && et.push((0, i.jsx)(m.default, {}, "suppress-notifications"));
         let en = {};
-        en[w.UsernameDecorationTypes.SYSTEM_TAG] = Q, en[w.UsernameDecorationTypes.BADGES] = q;
+        en[w.UsernameDecorationTypes.SYSTEM_TAG] = X, en[w.UsernameDecorationTypes.BADGES] = Q;
         let ei = H(e, M, en),
             er = (0, f.getMessageUsernameId)(t, h),
             es = (0, f.getMessageTimestampId)(t),
@@ -377,7 +377,7 @@ function(e, t, n) {
                 children: [F && (0, i.jsx)(u.Tooltip, {
                     text: k.default.Messages.GUILD_COMMUNICATION_DISABLED_ICON_TOOLTIP_BODY,
                     children: e => (0, i.jsxs)(i.Fragment, {
-                        children: [(0, i.jsx)(D.default, {
+                        children: [(0, i.jsx)(v.default, {
                             ...e,
                             width: 12,
                             height: 12,
@@ -390,8 +390,8 @@ function(e, t, n) {
             }),
             usernameSpanId: (0, f.getMessageUsernameId)(t, h),
             usernameClassName: a()(V.headerText, {
-                [V.hasRoleIcon]: null != X,
-                [V.hasBadges]: null != Q || et.length > 0
+                [V.hasRoleIcon]: null != Z,
+                [V.hasBadges]: null != X || et.length > 0
             }),
             compact: s,
             showTimestamp: !0 !== N,

@@ -21,8 +21,8 @@ function(e, t, n) {
         C = n("960048"),
         g = n("117240"),
         L = n("412788"),
-        D = n("981631"),
-        v = n("723359");
+        v = n("981631"),
+        D = n("723359");
     let M = n("952265").hasModalOpen,
         y = new m.default("AuthenticationStore"),
         P = "fingerprint",
@@ -35,16 +35,16 @@ function(e, t, n) {
         V = null,
         x = null,
         F = null,
-        H = D.LoginStates.NONE,
-        Y = D.RegistrationStates.NONE,
+        H = v.LoginStates.NONE,
+        Y = v.RegistrationStates.NONE,
         j = !1,
         W = [],
         K = "",
         z = !1,
-        X = null,
+        Z = null,
+        X = !1,
         Q = !1,
-        q = !1,
-        Z = "",
+        q = "",
         J = !1,
         $ = !1,
         ee = {},
@@ -56,7 +56,7 @@ function(e, t, n) {
 
     function ea(e) {
         let t = null != _.getToken(),
-            n = null != T.Storage.get(D.TOKEN_KEY);
+            n = null != T.Storage.get(v.TOKEN_KEY);
         y.verbose(e, {
             tokenManagerHasToken: t,
             storageHasToken: n
@@ -77,7 +77,7 @@ function(e, t, n) {
             withGuildExperiments: t
         } = e, n = {}, i = O.default.getSuperPropertiesBase64();
         null != i && (n["X-Super-Properties"] = i), null != V && (n["X-Fingerprint"] = V), ei = I.HTTP.get({
-            url: D.Endpoints.EXPERIMENTS,
+            url: v.Endpoints.EXPERIMENTS,
             query: {
                 with_guild_experiments: t
             },
@@ -123,7 +123,7 @@ function(e, t, n) {
 
     function ec() {
         j = !0, eE(), f.default.wait(() => {
-            (0, N.transitionTo)(D.Routes.REGISTER)
+            (0, N.transitionTo)(v.Routes.REGISTER)
         })
     }
 
@@ -131,7 +131,7 @@ function(e, t, n) {
         ea("handleLogout called."), e_(), eu(), !(null == e ? void 0 : e.isSwitchingAccount) && eo(), E.default.PersistedStore.clearAll({
             omit: ["InstallationManagerStore", "AgeGateStore", "NativePermissionsStore", "MultiAccountStore", "DraftStore", "OverlayStoreV2", "StreamerModeStore", "LoginRequiredActionStore"],
             type: (null == e ? void 0 : e.isSwitchingAccount) ? "user-data-only" : "all"
-        }), L.default.clearAll(), A.clear(), C.default.clearUser(), T.Storage.remove(b), G = null, H = (null == e ? void 0 : e.isSwitchingAccount) ? D.LoginStates.LOGGING_IN : D.LoginStates.NONE, Y = D.RegistrationStates.NONE, K = "", Z = "", X = null, z = !1, J = !1, $ = !1, ee = {}, et = {}
+        }), L.default.clearAll(), A.clear(), C.default.clearUser(), T.Storage.remove(b), G = null, H = (null == e ? void 0 : e.isSwitchingAccount) ? v.LoginStates.LOGGING_IN : v.LoginStates.NONE, Y = v.RegistrationStates.NONE, K = "", q = "", Z = null, z = !1, J = !1, $ = !1, ee = {}, et = {}
     }
     class eI extends(s = E.default.Store) {
         initialize() {
@@ -189,23 +189,23 @@ function(e, t, n) {
             return z
         }
         getMFATotp() {
-            return Q
+            return X
         }
         getMFABackup() {
-            return q
+            return Q
         }
         getMFAWebAuthn() {
-            return X
+            return Z
         }
         getMFAMethods() {
             let e = [];
-            return null != X && e.push({
+            return null != Z && e.push({
                 type: "webauthn",
-                challenge: X
-            }), Q && e.push({
+                challenge: Z
+            }), X && e.push({
                 type: "totp",
-                backup_codes_allowed: q
-            }), q && e.push({
+                backup_codes_allowed: Q
+            }), Q && e.push({
                 type: "backup"
             }), z && e.push({
                 type: "sms"
@@ -221,7 +221,7 @@ function(e, t, n) {
             return W.includes(S.AuthenticatorType.WEBAUTHN)
         }
         getMaskedPhone() {
-            return Z
+            return q
         }
         getCredentials() {
             if (null == i) throw Error("no credentials");
@@ -237,7 +237,7 @@ function(e, t, n) {
             return !j
         }
         getWebAuthnChallenge() {
-            return X
+            return Z
         }
         getSuspendedUserToken() {
             return es
@@ -275,13 +275,13 @@ function(e, t, n) {
                 code: t
             } = e;
             if (ea("handleConnectionClosed called with code ".concat(t, ".")), 4004 === t) {
-                if (j || M(v.NEW_USER_AGE_GATE_MODAL_KEY) || M(v.EXISTING_USER_AGE_GATE_MODAL_KEY)) {
+                if (j || M(D.NEW_USER_AGE_GATE_MODAL_KEY) || M(D.EXISTING_USER_AGE_GATE_MODAL_KEY)) {
                     ec();
                     return
                 }
-                O.default.track(D.AnalyticEvents.APP_USER_DEAUTHENTICATED, {
+                O.default.track(v.AnalyticEvents.APP_USER_DEAUTHENTICATED, {
                     user_id: T.Storage.get(b)
-                }), eE(), setImmediate(() => (0, N.transitionTo)(D.Routes.DEFAULT_LOGGED_OUT))
+                }), eE(), setImmediate(() => (0, N.transitionTo)(v.Routes.DEFAULT_LOGGED_OUT))
             }
         },
         AUTH_SESSION_CHANGE: function(e) {
@@ -291,25 +291,25 @@ function(e, t, n) {
             null != t && (k = t)
         },
         LOGIN: function(e) {
-            et = {}, H = D.LoginStates.LOGGING_IN, Z = "", r = null, null != e.login && (er = e.login)
+            et = {}, H = v.LoginStates.LOGGING_IN, q = "", r = null, null != e.login && (er = e.login)
         },
         LOGIN_SUCCESS: function(e) {
             let {
                 token: t
             } = e;
-            H = D.LoginStates.NONE, ed(t), eu(), K = "", z = !1, X = null, Z = ""
+            H = v.LoginStates.NONE, ed(t), eu(), K = "", z = !1, Z = null, q = ""
         },
         LOGIN_FAILURE: function(e) {
             let {
                 error: t
             } = e;
-            K = "", z = !1, X = null, H = null != (et = function(e) {
+            K = "", z = !1, Z = null, H = null != (et = function(e) {
                 if (Object.keys(e.fields).length > 0) return e.fields;
                 let t = {
                     message: e.message
                 };
                 return null != e.retryAfter && (t.retry_after = e.retryAfter), t
-            }(t)).date_of_birth ? D.LoginStates.LOGIN_AGE_GATE : D.LoginStates.NONE
+            }(t)).date_of_birth ? v.LoginStates.LOGIN_AGE_GATE : v.LoginStates.NONE
         },
         LOGIN_MFA_STEP: function(e) {
             let {
@@ -319,62 +319,62 @@ function(e, t, n) {
                 backup: r,
                 totp: s
             } = e;
-            null != t && (K = t, z = n, Z = "", X = null != i ? i : null, q = r, Q = s), et = {}, H = D.LoginStates.MFA_STEP
+            null != t && (K = t, z = n, q = "", Z = null != i ? i : null, Q = r, X = s), et = {}, H = v.LoginStates.MFA_STEP
         },
         LOGIN_MFA: function() {
-            H = D.LoginStates.LOGGING_IN_MFA
+            H = v.LoginStates.LOGGING_IN_MFA
         },
         LOGIN_MFA_FAILURE: function(e) {
             let {
                 message: t
             } = e;
-            H = D.LoginStates.MFA_STEP, et = {
+            H = v.LoginStates.MFA_STEP, et = {
                 code: t
             }
         },
         LOGIN_MFA_SMS: function() {
-            H = D.LoginStates.LOGGING_IN_MFA_SMS
+            H = v.LoginStates.LOGGING_IN_MFA_SMS
         },
         LOGIN_MFA_SMS_REQUEST_SUCCESS: function(e) {
             let {
                 phone: t
             } = e;
-            H = D.LoginStates.MFA_SMS_STEP, Z = t
+            H = v.LoginStates.MFA_SMS_STEP, q = t
         },
         LOGIN_MFA_SMS_FAILURE: function(e) {
             let {
                 message: t
             } = e;
-            H = D.LoginStates.MFA_SMS_STEP, et = {
+            H = v.LoginStates.MFA_SMS_STEP, et = {
                 code: t
             }
         },
         LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION: function(e) {
-            H = D.LoginStates.ACCOUNT_SCHEDULED_FOR_DELETION, i = e.credentials
+            H = v.LoginStates.ACCOUNT_SCHEDULED_FOR_DELETION, i = e.credentials
         },
         LOGIN_ACCOUNT_DISABLED: function(e) {
-            H = D.LoginStates.ACCOUNT_DISABLED, i = e.credentials
+            H = v.LoginStates.ACCOUNT_DISABLED, i = e.credentials
         },
         LOGIN_PASSWORD_RECOVERY_PHONE_VERIFICATION: function() {
-            H = D.LoginStates.PASSWORD_RECOVERY_PHONE_VERIFICATION
+            H = v.LoginStates.PASSWORD_RECOVERY_PHONE_VERIFICATION
         },
         LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED: function() {
-            H = D.LoginStates.PHONE_IP_AUTHORIZATION
+            H = v.LoginStates.PHONE_IP_AUTHORIZATION
         },
         LOGIN_RESET: function(e) {
             let {
                 isMultiAccount: t
             } = e;
-            et = {}, H = D.LoginStates.NONE, K = "", z = !1, X = null, r = null, i = null, !t && (e_(), eo(!1))
+            et = {}, H = v.LoginStates.NONE, K = "", z = !1, Z = null, r = null, i = null, !t && (e_(), eo(!1))
         },
         LOGIN_STATUS_RESET: function() {
-            H = D.LoginStates.NONE
+            H = v.LoginStates.NONE
         },
         LOGIN_SUSPENDED_USER: function(e) {
             let {
                 suspendedUserToken: t
             } = e;
-            es = t, setImmediate(() => (0, N.transitionTo)(D.Routes.ACCOUNT_STANDING))
+            es = t, setImmediate(() => (0, N.transitionTo)(v.Routes.ACCOUNT_STANDING))
         },
         SET_LOGIN_CREDENTIALS: function(e) {
             let {
@@ -389,10 +389,10 @@ function(e, t, n) {
         LOGOUT: eE,
         FINGERPRINT: function(e) {
             let t = e.fingerprint;
-            null == V ? null != t ? (O.default.track(D.AnalyticEvents.USER_FINGERPRINT_CHANGED, {
+            null == V ? null != t ? (O.default.track(v.AnalyticEvents.USER_FINGERPRINT_CHANGED, {
                 old_fingerprint: null != x ? (0, c.extractId)(x) : null,
                 new_fingerprint: (0, c.extractId)(t)
-            }), V = t, x = t, T.Storage.set(P, V)) : eo() : null != t && V !== t && O.default.track(D.AnalyticEvents.EXTERNAL_FINGERPRINT_DROPPED, {
+            }), V = t, x = t, T.Storage.set(P, V)) : eo() : null != t && V !== t && O.default.track(v.AnalyticEvents.EXTERNAL_FINGERPRINT_DROPPED, {
                 fingerprint: (0, c.extractId)(V),
                 dropped_fingerprint: (0, c.extractId)(t)
             })
@@ -401,7 +401,7 @@ function(e, t, n) {
             let {
                 form: t
             } = e;
-            r = t, Y = D.RegistrationStates.REGISTER_AGE_GATE
+            r = t, Y = v.RegistrationStates.REGISTER_AGE_GATE
         },
         REGISTER: function(e) {
             let {
@@ -410,13 +410,13 @@ function(e, t, n) {
             et = {}, null != t && (d()(null != r, "Got birthday in multistep registration without existing form"), r = {
                 ...r,
                 birthday: t
-            }), Y = D.RegistrationStates.REGISTERING
+            }), Y = v.RegistrationStates.REGISTERING
         },
         REGISTER_SUCCESS: function(e) {
             let {
                 token: t
             } = e;
-            Y = D.RegistrationStates.NONE, r = null, ed(t), eu()
+            Y = v.RegistrationStates.NONE, r = null, ed(t), eu()
         },
         REGISTER_FAILURE: function(e) {
             let {
@@ -429,7 +429,7 @@ function(e, t, n) {
                     return t
                 }
                 return t.message = e.message, null != e.retryAfter && (t.retry_after = e.retryAfter), t
-            }(t), Y = null != t.getFieldErrors("date_of_birth") ? D.RegistrationStates.REGISTER_AGE_GATE : D.RegistrationStates.REGISTER_WITH_ERROR
+            }(t), Y = null != t.getFieldErrors("date_of_birth") ? v.RegistrationStates.REGISTER_AGE_GATE : v.RegistrationStates.REGISTER_WITH_ERROR
         },
         VERIFY_FAILURE: function(e) {
             let {
@@ -445,10 +445,10 @@ function(e, t, n) {
             et = {}
         },
         FORGOT_PASSWORD_REQUEST: function() {
-            H = D.LoginStates.FORGOT_PASSWORD, et = {}
+            H = v.LoginStates.FORGOT_PASSWORD, et = {}
         },
         FORGOT_PASSWORD_SENT: function() {
-            H = D.LoginStates.NONE, et = {}
+            H = v.LoginStates.NONE, et = {}
         },
         UPDATE_TOKEN: function(e) {
             let {
@@ -469,7 +469,7 @@ function(e, t, n) {
             et = {}
         },
         CLOSE_SUSPENDED_USER: function() {
-            es = null, H = D.LoginStates.NONE, eE(), setImmediate(() => (0, N.transitionTo)(D.Routes.DEFAULT_LOGGED_OUT))
+            es = null, H = v.LoginStates.NONE, eE(), setImmediate(() => (0, N.transitionTo)(v.Routes.DEFAULT_LOGGED_OUT))
         }
     }, f.DispatchBand.Early)
 }

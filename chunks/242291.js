@@ -14,7 +14,7 @@ function(e, t, n) {
             return g
         },
         removeCustomJoinSound: function() {
-            return v
+            return D
         },
         trackCustomCallSoundExternallyDeleted: function() {
             return P
@@ -23,7 +23,7 @@ function(e, t, n) {
             return M
         },
         useSoundBoardDismissContentTypes: function() {
-            return D
+            return v
         }
     }), n("653041");
     var i = n("399606"),
@@ -80,7 +80,7 @@ function(e, t, n) {
         }
     }
 
-    function D(e) {
+    function v(e) {
         var t, n;
         let {
             isSoundboardButtonDisabled: s = !1
@@ -93,7 +93,7 @@ function(e, t, n) {
         return o
     }
 
-    function v(e, t) {
+    function D(e, t) {
         (0, o.updateUserGuildSettings)(e, n => {
             n.joinSound = void 0, y({
                 guildId: e,

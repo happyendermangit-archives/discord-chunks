@@ -87,11 +87,11 @@ function(e, t, n) {
         O = i.getDuration(), i.destroy(), i = null, p = null
     }
 
-    function D() {
+    function v() {
         m = null
     }
 
-    function v(e) {
+    function D(e) {
         let {
             channel: t
         } = e;
@@ -221,8 +221,8 @@ function(e, t, n) {
             if (null == i || null != e.guildId && e.guildId !== i.guildId || null != e.channelId && e.channelId !== i.channelId) return !1;
             i.connect(e.endpoint, e.token)
         },
-        CLEAR_REMOTE_DISCONNECT_VOICE_CHANNEL_ID: D,
-        REMOTE_SESSION_CONNECT: D,
+        CLEAR_REMOTE_DISCONNECT_VOICE_CHANNEL_ID: v,
+        REMOTE_SESSION_CONNECT: v,
         CLEAR_LAST_SESSION_VOICE_CHANNEL_ID: function() {
             N = null
         },
@@ -233,8 +233,8 @@ function(e, t, n) {
             if (null == i || i.guildId !== t.id) return !1;
             L()
         },
-        CHANNEL_DELETE: v,
-        THREAD_DELETE: v,
+        CHANNEL_DELETE: D,
+        THREAD_DELETE: D,
         CALL_DELETE: function(e) {
             let {
                 channelId: t

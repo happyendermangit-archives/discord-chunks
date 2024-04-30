@@ -49,8 +49,8 @@ function(e, t, n) {
                 showPopout: C = !1,
                 className: g,
                 onClick: L,
-                onContextMenu: D,
-                onPopoutRequestClose: v,
+                onContextMenu: v,
+                onPopoutRequestClose: D,
                 renderPopout: M,
                 renderRemixTag: y = !1,
                 decorations: P
@@ -73,7 +73,7 @@ function(e, t, n) {
                     color: w
                 } : void 0,
                 onClick: L,
-                onContextMenu: D,
+                onContextMenu: v,
                 children: (0, s.jsxs)(s.Fragment, {
                     children: [(m ? "@" : "") + G, (0, s.jsx)(T.default, {
                         clan: n.clan,
@@ -99,7 +99,7 @@ function(e, t, n) {
             renderPopout: M,
             shouldShow: C,
             position: u.isMobile ? "window_center" : "right",
-            onRequestClose: v,
+            onRequestClose: D,
             children: e => {
                 let {
                     onClick: t,

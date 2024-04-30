@@ -51,18 +51,18 @@ function(e, t, n) {
         i.useLayoutEffect(() => {
             C.current = u
         }, [u]);
-        let D = i.useCallback((e, t) => {
+        let v = i.useCallback((e, t) => {
                 C.current && (null != T ? T : L)(e, t)
             }, [T]),
-            v = i.useCallback(e => {
+            D = i.useCallback(e => {
                 C.current && (null != f ? f : L)(e)
             }, [f]),
             M = i.useCallback(e => {
                 p.current = e;
                 let n = (0, l.createSelector)(e),
                     i = (0, l.getItemId)(e);
-                D(n, i), (0, s.notifyFocusSubscribers)(t, i, S)
-            }, [t, S, D]),
+                v(n, i), (0, s.notifyFocusSubscribers)(t, i, S)
+            }, [t, S, v]),
             y = i.useMemo(() => (0, r.createFocusManager)({
                 getFocusableElements: () => d(t, R),
                 getActiveElement() {
@@ -93,7 +93,7 @@ function(e, t, n) {
             function i(e) {
                 !e.currentTarget.contains(e.relatedTarget) && (U(!1), requestAnimationFrame(() => {
                     let e = p.current;
-                    null !== e && null == g((0, l.createSelector)(e)) && v((0, l.createSelector)(t, l.LIST_ID_ATTRIBUTE))
+                    null !== e && null == g((0, l.createSelector)(e)) && D((0, l.createSelector)(t, l.LIST_ID_ATTRIBUTE))
                 }))
             }
             async function r() {
@@ -104,8 +104,8 @@ function(e, t, n) {
                     let t = (0, l.createSelector)(n),
                         i = g(t);
                     if (null != i) {
-                        if (!0 !== O.current) return D(t, (0, l.getItemId)(n));
-                        if (await (0, a.isItemVisible)(e, i)) return D(t, (0, l.getItemId)(n))
+                        if (!0 !== O.current) return v(t, (0, l.getItemId)(n));
+                        if (await (0, a.isItemVisible)(e, i)) return v(t, (0, l.getItemId)(n))
                     }
                 }
                 let i = await (0, a.findFirstVisibleItem)(e, d(t, R));
@@ -115,7 +115,7 @@ function(e, t, n) {
             function s() {
                 O.current = !0
             }
-        }, [u, t, S, D, f, v, M]);
+        }, [u, t, S, v, f, D, M]);
         let G = i.useMemo(() => ({
                 wrap: A,
                 get from() {

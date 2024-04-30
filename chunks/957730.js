@@ -26,9 +26,9 @@ function(e, t, n) {
         C = n("51144"),
         g = n("981631"),
         L = n("185923"),
-        D = n("689938");
+        v = n("689938");
 
-    function v(e, t, n) {
+    function D(e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
         if (t[0] !== e) return null;
         let r = t.substr(e.length);
@@ -97,9 +97,9 @@ function(e, t, n) {
                 match(e, t, n) {
                     let i = n.split(" ").pop() + e;
                     if (/^[^ ]+@[^ ]+\.[^ .]+/.test(i)) return null;
-                    let r = v("@", e, t.users, "mention");
-                    if (r || (r = v("@", e, t.mentionableRoles, "roleMention"))) return r;
-                    if (!(r = v("@", e, t.users.map(e => ({
+                    let r = D("@", e, t.users, "mention");
+                    if (r || (r = D("@", e, t.mentionableRoles, "roleMention"))) return r;
+                    if (!(r = D("@", e, t.users.map(e => ({
                             ...e,
                             text: e.text.split("#")[0]
                         })), "mention"))) return null;
@@ -123,7 +123,7 @@ function(e, t, n) {
                 match: (e, t) => (function(e, t, n) {
                     let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
                     if (t[0] !== e) return null;
-                    if ('"' !== t[1]) return v(e, t, n, i);
+                    if ('"' !== t[1]) return D(e, t, n, i);
                     let r = 2;
                     for (; r < t.length; r++) {
                         if ("\\" === t[r]) {
@@ -288,7 +288,7 @@ function(e, t, n) {
             spoiler: {
                 match: a().anyScopeRegex(g.MARKDOWN_SPOILER_REGEXP),
                 parse: () => ({
-                    content: "<".concat(D.default.Messages.SPOILER.toLowerCase(), ">")
+                    content: "<".concat(v.default.Messages.SPOILER.toLowerCase(), ">")
                 })
             },
             staticRouteLink: {

@@ -23,7 +23,7 @@ function(e, t, n) {
     let g = [],
         L = {};
 
-    function D() {
+    function v() {
         let e = [],
             t = m.CustomStatusSetting.getSetting();
         null != t && ("0" === t.expiresAtMs || new Date(Number(t.expiresAtMs)).getTime() - new Date().getTime() > 0) && e.push((0, T.getActivityFromCustomStatus)(t));
@@ -81,9 +81,9 @@ function(e, t, n) {
             })
         }!l()(g, e) && (g = e)
     }
-    class v extends(i = _.default.Store) {
+    class D extends(i = _.default.Store) {
         initialize() {
-            this.waitFor(f.default, E.default, O.default, p.default, A.default, N.default, S.default), this.syncWith([h.default, S.default], () => D())
+            this.waitFor(f.default, E.default, O.default, p.default, A.default, N.default, S.default), this.syncWith([h.default, S.default], () => v())
         }
         getActivities() {
             return g
@@ -104,22 +104,22 @@ function(e, t, n) {
             return L
         }
     }
-    a = "LocalActivityStore", (s = "displayName") in(r = v) ? Object.defineProperty(r, s, {
+    a = "LocalActivityStore", (s = "displayName") in(r = D) ? Object.defineProperty(r, s, {
         value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a, t.default = new v(c.default, {
+    }) : r[s] = a, t.default = new D(c.default, {
         OVERLAY_INITIALIZE: function(e) {
             let {
                 localActivities: t
             } = e;
             L = {
                 ...t
-            }, D()
+            }, v()
         },
         START_SESSION: function() {
-            L = {}, D()
+            L = {}, v()
         },
         LOCAL_ACTIVITY_UPDATE: function(e) {
             let {
@@ -127,25 +127,25 @@ function(e, t, n) {
                 activity: n
             } = e;
             if (l()(L[t], n)) return !1;
-            null != n ? L[t] = n : delete L[t], D()
+            null != n ? L[t] = n : delete L[t], v()
         },
         RPC_APP_DISCONNECTED: function(e) {
             let {
                 socketId: t
             } = e;
-            delete L[t], D()
+            delete L[t], v()
         },
-        RUNNING_GAMES_CHANGE: D,
-        LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: D,
-        SPOTIFY_PLAYER_STATE: D,
-        SPOTIFY_PLAYER_PLAY: D,
-        STREAMING_UPDATE: D,
-        USER_CONNECTIONS_UPDATE: D,
-        STREAM_START: D,
-        STREAM_STOP: D,
-        USER_SETTINGS_PROTO_UPDATE: D,
-        EMBEDDED_ACTIVITY_OPEN: D,
-        EMBEDDED_ACTIVITY_CLOSE: D,
-        UPDATE_HANG_STATUS: D
+        RUNNING_GAMES_CHANGE: v,
+        LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: v,
+        SPOTIFY_PLAYER_STATE: v,
+        SPOTIFY_PLAYER_PLAY: v,
+        STREAMING_UPDATE: v,
+        USER_CONNECTIONS_UPDATE: v,
+        STREAM_START: v,
+        STREAM_STOP: v,
+        USER_SETTINGS_PROTO_UPDATE: v,
+        EMBEDDED_ACTIVITY_OPEN: v,
+        EMBEDDED_ACTIVITY_CLOSE: v,
+        UPDATE_HANG_STATUS: v
     })
 }

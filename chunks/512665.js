@@ -33,8 +33,8 @@ function(e, t, n) {
         C = n("55935"),
         g = n("823379"),
         L = n("113039"),
-        D = n("768760"),
-        v = n("981631"),
+        v = n("768760"),
+        D = n("981631"),
         M = n("689938"),
         y = n("904335");
 
@@ -84,9 +84,9 @@ function(e, t, n) {
         let {
             iconClass: u,
             iconSize: d
-        } = s, _ = null == t || "" === t || Array.isArray(t) && 0 === t.length, c = (0, h.getMessageStickers)(e).length > 0, E = null != e.interaction, I = e.hasFlag(v.MessageFlags.IS_VOICE_MESSAGE), T = e.isPoll();
+        } = s, _ = null == t || "" === t || Array.isArray(t) && 0 === t.length, c = (0, h.getMessageStickers)(e).length > 0, E = null != e.interaction, I = e.hasFlag(D.MessageFlags.IS_VOICE_MESSAGE), T = e.isPoll();
         if (n) a = M.default.Messages.REPLY_QUOTE_MESSAGE_BLOCKED;
-        else if (e.type === v.MessageTypes.CHANNEL_PINNED_MESSAGE) a = M.default.Messages.MESSAGE_PINNED;
+        else if (e.type === D.MessageTypes.CHANNEL_PINNED_MESSAGE) a = M.default.Messages.MESSAGE_PINNED;
         else if (_) {
             if (T) {
                 var f, S;
@@ -151,10 +151,10 @@ function(e, t, n) {
                     className: y.replyIcon
                 })
             });
-            if (r.message.type === v.MessageTypes.USER_JOIN || r.message.type === v.MessageTypes.ROLE_SUBSCRIPTION_PURCHASE || r.message.type === v.MessageTypes.GUILD_DEADCHAT_REVIVE_PROMPT || r.message.type === v.MessageTypes.GUILD_GAMING_STATS_PROMPT) return (0, i.jsx)(U, {
+            if (r.message.type === D.MessageTypes.USER_JOIN || r.message.type === D.MessageTypes.ROLE_SUBSCRIPTION_PURCHASE || r.message.type === D.MessageTypes.GUILD_DEADCHAT_REVIVE_PROMPT || r.message.type === D.MessageTypes.GUILD_GAMING_STATS_PROMPT) return (0, i.jsx)(U, {
                 className: y.userJoinSystemMessageIcon
             });
-            if (r.message.type === v.MessageTypes.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION) return (0, i.jsx)(O.default, {
+            if (r.message.type === D.MessageTypes.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION) return (0, i.jsx)(O.default, {
                 className: y.ticketIcon
             });
             let h = () => {
@@ -197,7 +197,7 @@ function(e, t, n) {
                 onContextMenu: l,
                 onPopoutRequestClose: u
             } = e, d = (null == s ? void 0 : s.state) === f.ReferencedMessageState.LOADED ? s.message : void 0;
-            return null == d || d.type === v.MessageTypes.USER_JOIN || d.type === v.MessageTypes.ROLE_SUBSCRIPTION_PURCHASE || d.type === v.MessageTypes.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION || d.type === v.MessageTypes.GUILD_DEADCHAT_REVIVE_PROMPT || d.type === v.MessageTypes.GUILD_GAMING_STATS_PROMPT ? null : (0, i.jsx)(I.default, {
+            return null == d || d.type === D.MessageTypes.USER_JOIN || d.type === D.MessageTypes.ROLE_SUBSCRIPTION_PURCHASE || d.type === D.MessageTypes.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION || d.type === D.MessageTypes.GUILD_DEADCHAT_REVIVE_PROMPT || d.type === D.MessageTypes.GUILD_GAMING_STATS_PROMPT ? null : (0, i.jsx)(I.default, {
                 message: d,
                 channel: r,
                 compact: !0,
@@ -223,7 +223,7 @@ function(e, t, n) {
                         icon: l
                     } = b(n.message, t, r, y.repliedTextContent, {
                         iconClass: y.repliedTextContentIcon,
-                        iconSize: D.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
+                        iconSize: v.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
                     });
                     return (0, i.jsxs)(i.Fragment, {
                         children: [(0, i.jsx)(u.Clickable, {

@@ -154,13 +154,13 @@ function(e, t, n) {
         m.clear()
     }
 
-    function D(e) {
+    function v(e) {
         let {
             firstMessages: t
         } = e;
         return null != t && p(t, e => N(e))
     }
-    class v extends(r = l.default.Store) {
+    class D extends(r = l.default.Store) {
         initialize() {
             this.waitFor(I.default, E.default)
         }
@@ -177,7 +177,7 @@ function(e, t, n) {
             return null != e && (t = m.getCachedMessageIdsForChannel(e)), null != t ? t : h
         }
     }
-    f(v, "displayName", "ReferencedMessageStore"), t.default = new v(u.default, {
+    f(D, "displayName", "ReferencedMessageStore"), t.default = new D(u.default, {
         CACHE_LOADED: function(e) {
             let {
                 messages: t
@@ -195,8 +195,8 @@ function(e, t, n) {
             } = e;
             return p((0, _.getMessagesFromGuildFeedFetch)(t), e => N(e))
         },
-        LOAD_THREADS_SUCCESS: D,
-        LOAD_ARCHIVED_THREADS_SUCCESS: D,
+        LOAD_THREADS_SUCCESS: v,
+        LOAD_ARCHIVED_THREADS_SUCCESS: v,
         MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function(e) {
             let {
                 messageId: t,

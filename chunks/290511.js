@@ -53,7 +53,7 @@ function(e, t, n) {
             return p
         },
         isEmojiEmpty: function() {
-            return D
+            return v
         },
         serverApiResponseToClientState: function() {
             return L
@@ -172,7 +172,7 @@ function(e, t, n) {
         }
     }
 
-    function D(e) {
+    function v(e) {
         return null == e || null == e.id && null == e.name
     }(i = a || (a = {}))[i.CUSTOMIZE = 0] = "CUSTOMIZE", i[i.BROWSE = 1] = "BROWSE", (r = o || (o = {}))[r.MULTIPLE_CHOICE = 0] = "MULTIPLE_CHOICE", r[r.DROPDOWN = 1] = "DROPDOWN", (s = l || (l = {}))[s.ONBOARDING_DEFAULT = 0] = "ONBOARDING_DEFAULT", s[s.ONBOARDING_ADVANCED = 1] = "ONBOARDING_ADVANCED"
 }

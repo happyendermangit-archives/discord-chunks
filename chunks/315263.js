@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return v
+            return D
         }
     }), n("47120");
     var i = n("729594"),
@@ -55,16 +55,16 @@ function(e, t, n) {
             r = null == n ? void 0 : null === (t = n.guild) || void 0 === t ? void 0 : t.id;
         null != r && i.includes(r) ? a.default.transitionToInviteSync(n) : await g(n, e.code)
     }
-    let D = {
+    let v = {
         skipExtensionCheck: void 0,
         analyticsLocations: []
     };
 
-    function v(e) {
+    function D(e) {
         let {
             skipExtensionCheck: t,
             analyticsLocations: s
-        } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : D, a = (0, _.findCodedLink)(e);
+        } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : v, a = (0, _.findCodedLink)(e);
         if (null != a && (a.type === d.CodedLinkType.INVITE || a.type === d.CodedLinkType.EMBEDDED_ACTIVITY_INVITE)) return e => (null == e || e.preventDefault(), L(a), !0);
         if (null != a && a.type === d.CodedLinkType.APP_DIRECTORY_PROFILE) return e => {
             var t;
@@ -107,7 +107,7 @@ function(e, t, n) {
             path: A,
             hostname: p = "",
             host: g,
-            query: v,
+            query: D,
             hash: M
         } = i.parse(e), y = R.default.isDiscordHostname(p) || R.default.isDiscordLocalhost(g, p);
         if (y && (null == A ? void 0 : A.startsWith("/application-directory"))) {
@@ -143,7 +143,7 @@ function(e, t, n) {
         }
         if (null != A && y && R.default.isAppRoute(A)) {
             let e = {};
-            return null != v && (e.search = v), null != M && (e.hash = M), t => (null == t || t.preventDefault(), (0, f.default)(A, Object.keys(e).length > 0 ? e : null), !0)
+            return null != D && (e.search = D), null != M && (e.hash = M), t => (null == t || t.preventDefault(), (0, f.default)(A, Object.keys(e).length > 0 ? e : null), !0)
         }
         if (null != A && y) {
             let {

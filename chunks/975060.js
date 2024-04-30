@@ -22,10 +22,10 @@ function(e, t, n) {
         C = null,
         g = null,
         L = null,
-        D = null;
+        v = null;
 
-    function v() {
-        E = null, d = "", _ = null, c = "", I = !1, T = null, f = "US", S = "", h = "", A = "", m = "", N = "", p = "", O = "", R = !1, C = null, g = null, L = null, D = null
+    function D() {
+        E = null, d = "", _ = null, c = "", I = !1, T = null, f = "US", S = "", h = "", A = "", m = "", N = "", p = "", O = "", R = !1, C = null, g = null, L = null, v = null
     }
 
     function M(e) {
@@ -65,7 +65,7 @@ function(e, t, n) {
             return T
         }
         get redirectedPaymentSourceId() {
-            return D
+            return v
         }
         getCreditCardInfo() {
             return {
@@ -105,7 +105,7 @@ function(e, t, n) {
                 stripePaymentMethod: t
             } = e;
             if (null == t) {
-                v();
+                D();
                 return
             }
             E = t;
@@ -160,13 +160,13 @@ function(e, t, n) {
         NEW_PAYMENT_SOURCE_CLEAR_ERROR: y,
         BILLING_PAYMENT_SOURCE_CREATE_FAIL: P,
         STRIPE_TOKEN_FAILURE: P,
-        BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: v,
-        LOGOUT: v,
+        BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: D,
+        LOGOUT: D,
         BILLING_POPUP_BRIDGE_CALLBACK: function(e) {
             let {
                 query: t
             } = e;
-            (null == t ? void 0 : t.payment_id) != null ? (L = !0, g = t.payment_id) : (null == t ? void 0 : t.payment_source_id) != null && (L = !0, D = t.payment_source_id)
+            (null == t ? void 0 : t.payment_id) != null ? (L = !0, g = t.payment_id) : (null == t ? void 0 : t.payment_source_id) != null && (L = !0, v = t.payment_source_id)
         },
         RESET_PAYMENT_ID: function() {
             L = !1, g = null

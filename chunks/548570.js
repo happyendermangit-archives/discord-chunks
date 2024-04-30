@@ -30,8 +30,8 @@ function(e, t, n) {
         C = n("138859"),
         g = n("14639"),
         L = n("639655"),
-        D = n("610308"),
-        v = n("91247"),
+        v = n("610308"),
+        D = n("91247"),
         M = n("508569"),
         y = n("183139"),
         P = n("420491"),
@@ -48,7 +48,7 @@ function(e, t, n) {
         }) : e[t] = n, e
     }
     let B = new f.default("GatewaySocket"),
-        k = new D.default;
+        k = new v.default;
 
     function V() {}
     let x = 30 * p.default.Millis.SECOND,
@@ -210,7 +210,7 @@ function(e, t, n) {
         _handleHello(e) {
             let t = this.heartbeatInterval = e.heartbeat_interval,
                 n = Date.now() - this.connectionStartTime;
-            B.verbose("[HELLO] via ".concat((0, v.getConnectionPath)(e), ", ") + "heartbeat interval: ".concat(t, ", ") + "took ".concat(n, " ms")), this._startHeartbeater()
+            B.verbose("[HELLO] via ".concat((0, D.getConnectionPath)(e), ", ") + "heartbeat interval: ".concat(t, ", ") + "took ".concat(n, " ms")), this._startHeartbeater()
         }
         _handleReconnect() {
             B.verbose("[RECONNECT] gateway requested I reconnect."), P.default.disableFailureTracking(), this._cleanup(e => e.close(4e3)), this.connectionState = C.default.WILL_RECONNECT, this._connect()
@@ -223,9 +223,9 @@ function(e, t, n) {
             if ("READY" === t) {
                 let t = e.session_id;
                 this.sessionId = t;
-                let n = (0, v.getConnectionPath)(e);
+                let n = (0, D.getConnectionPath)(e);
                 o.default.setServerTrace(n), B.info("[READY] took ".concat(i, "ms, as ").concat(t)), B.verbose("".concat(n)), this.connectionState = C.default.SESSION_ESTABLISHED, this.gatewayBackoff.succeed(), this.iosGoingAwayEventCount = 0, this.setResumeUrl(e.resume_gateway_url)
-            } else "READY_SUPPLEMENTAL" === t ? (B.info("[READY_SUPPLEMENTAL] took ".concat(i, "ms")), this.connectionState = C.default.SESSION_ESTABLISHED, this.gatewayBackoff.succeed(), this.iosGoingAwayEventCount = 0) : "RESUMED" === t && (B.verbose((0, v.getConnectionPath)(e)), this.connectionState = C.default.SESSION_ESTABLISHED, this.gatewayBackoff.succeed(), this.iosGoingAwayEventCount = 0);
+            } else "READY_SUPPLEMENTAL" === t ? (B.info("[READY_SUPPLEMENTAL] took ".concat(i, "ms")), this.connectionState = C.default.SESSION_ESTABLISHED, this.gatewayBackoff.succeed(), this.iosGoingAwayEventCount = 0) : "RESUMED" === t && (B.verbose((0, D.getConnectionPath)(e)), this.connectionState = C.default.SESSION_ESTABLISHED, this.gatewayBackoff.succeed(), this.iosGoingAwayEventCount = 0);
             this.dispatcher.receiveDispatch(e, t, n)
         }
         handleResumeDispatched() {
@@ -316,7 +316,7 @@ function(e, t, n) {
         }
         _doResume() {
             var e;
-            this.connectionState = C.default.RESUMING, this.dispatcher.resumeAnalytics = (0, v.createResumeAnalytics)(Date.now() - this.connectionStartTime), B.info("[RESUME] resuming session ".concat(null !== (e = this.sessionId) && void 0 !== e ? e : "", ", seq: ").concat(this.seq)), this.send(y.Opcode.RESUME, {
+            this.connectionState = C.default.RESUMING, this.dispatcher.resumeAnalytics = (0, D.createResumeAnalytics)(Date.now() - this.connectionStartTime), B.info("[RESUME] resuming session ".concat(null !== (e = this.sessionId) && void 0 !== e ? e : "", ", seq: ").concat(this.seq)), this.send(y.Opcode.RESUME, {
                 token: this.token,
                 session_id: this.sessionId,
                 seq: this.seq

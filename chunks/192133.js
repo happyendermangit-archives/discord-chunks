@@ -30,8 +30,8 @@ function(e, t, n) {
         C = n("248345"),
         g = n("337125"),
         L = n("19836"),
-        D = n("207570"),
-        v = n("77097"),
+        v = n("207570"),
+        D = n("77097"),
         M = n("538564"),
         y = n("489642"),
         P = n("319300"),
@@ -54,10 +54,10 @@ function(e, t, n) {
             displayProfile: W,
             guild: K,
             guildMember: z,
-            channelId: X,
-            onClose: Q,
-            setNote: q = !1,
-            canDM: Z,
+            channelId: Z,
+            onClose: X,
+            setNote: Q = !1,
+            canDM: q,
             hideNote: J = !1,
             showCopiableUsername: $ = !1,
             analyticsParams: ee
@@ -70,7 +70,7 @@ function(e, t, n) {
             location: "user popout"
         }, {
             autoTrackExposure: ea
-        }), el = (0, o.useStateFromStores)([E.default], () => E.default.getChannel(X)), {
+        }), el = (0, o.useStateFromStores)([E.default], () => E.default.getChannel(Z)), {
             theme: eu
         } = (0, m.useUserProfileThemeContext)(), ed = r.useRef(null), [e_, ec] = r.useState(!0), eE = r.useCallback(() => {
             let {
@@ -109,7 +109,7 @@ function(e, t, n) {
             className: x.usernameSection,
             lastSection: !0
         });
-        let eA = null !== (t = T.default.getNickname(null == K ? void 0 : K.id, X, j)) && void 0 !== t ? t : f.default.getName(j),
+        let eA = null !== (t = T.default.getNickname(null == K ? void 0 : K.id, Z, j)) && void 0 !== t ? t : f.default.getName(j),
             em = {
                 location: {
                     page: V.AnalyticsPages.USER_POPOUT,
@@ -139,7 +139,7 @@ function(e, t, n) {
                     }),
                     onScroll: eE,
                     ref: ed,
-                    children: [(0, i.jsx)(D.default, {
+                    children: [(0, i.jsx)(v.default, {
                         user: j,
                         guildId: null == K ? void 0 : K.id
                     }), (0, i.jsx)(L.default, {
@@ -150,7 +150,7 @@ function(e, t, n) {
                     }), eS && (0, i.jsx)(N.default, {
                         className: x.profileMutuals,
                         user: j,
-                        onClose: Q
+                        onClose: X
                     }), (0, i.jsx)(P.default, {
                         userId: j.id,
                         guildId: null == K ? void 0 : K.id
@@ -162,8 +162,8 @@ function(e, t, n) {
                         activity: H,
                         user: j,
                         guild: K,
-                        channelId: X,
-                        onClose: Q,
+                        channelId: Z,
+                        onClose: X,
                         analyticsParams: (null == ee ? void 0 : ee.location) != null ? ee : em
                     }), eh && (0, i.jsx)(p.UserProfileRecentGamesSection, {
                         userId: j.id
@@ -172,7 +172,7 @@ function(e, t, n) {
                         commandIds: en.popularApplicationCommandIds,
                         channel: el,
                         guildId: null == K ? void 0 : K.id,
-                        onClick: Q
+                        onClick: X
                     }) : null, (0, i.jsx)(g.default, {
                         user: j,
                         guildId: null == K ? void 0 : K.id
@@ -181,25 +181,25 @@ function(e, t, n) {
                         guild: K,
                         guildMember: z,
                         showBorder: null !== (s = null == W ? void 0 : W.canEditThemes) && void 0 !== s && s
-                    }), (0, i.jsx)(v.default, {
+                    }), (0, i.jsx)(D.default, {
                         userId: j.id,
-                        channelId: X,
+                        channelId: Z,
                         guild: K,
-                        onClose: Q,
+                        onClose: X,
                         theme: eu
-                    }), null != en && void 0 !== X && (0, i.jsx)(G.default, {
-                        channelId: X,
+                    }), null != en && void 0 !== Z && (0, i.jsx)(G.default, {
+                        channelId: Z,
                         applicationId: en.id
                     }), !et && !J && (0, i.jsx)(U.default, {
                         user: j,
-                        setNote: q,
-                        autoFocus: !Z,
-                        lastSection: !Z
-                    }), !j.isNonUserBot() && Z && (0, i.jsx)(y.default, {
+                        setNote: Q,
+                        autoFocus: !q,
+                        lastSection: !q
+                    }), !j.isNonUserBot() && q && (0, i.jsx)(y.default, {
                         user: j,
-                        setNote: q,
-                        canDM: Z,
-                        onClose: Q
+                        setNote: Q,
+                        canDM: q,
+                        onClose: X
                     })]
                 })]
             })]

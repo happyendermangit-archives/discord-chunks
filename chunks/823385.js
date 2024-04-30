@@ -25,8 +25,8 @@ function(e, t, n) {
         C = n("914010"),
         g = n("9156"),
         L = n("483360"),
-        D = n("823379"),
-        v = n("981631"),
+        v = n("823379"),
+        D = n("981631"),
         M = n("689938");
 
     function y(e, t, n) {
@@ -126,7 +126,7 @@ function(e, t, n) {
                 s = [];
             for (let e = 1; e < H.length; e += 1) {
                 let t = j(H[e]);
-                if (null != t)(t.type !== d.AutocompleterResultTypes.TEXT_CHANNEL && t.type !== d.AutocompleterResultTypes.VOICE_CHANNEL || p.default.can(v.Permissions.VIEW_CHANNEL, t.record)) && s.push(t)
+                if (null != t)(t.type !== d.AutocompleterResultTypes.TEXT_CHANNEL && t.type !== d.AutocompleterResultTypes.VOICE_CHANNEL || p.default.can(D.Permissions.VIEW_CHANNEL, t.record)) && s.push(t)
             }
             s.length > 0 && r.push((0, d.createHeaderResult)(M.default.Messages.QUICKSWITCHER_LAST_CHANNEL), ...s);
             let o = function(e) {
@@ -141,7 +141,7 @@ function(e, t, n) {
                 }), t
             }(e => e === i || H.includes(e));
             o.length > 0 && r.push((0, d.createHeaderResult)(M.default.Messages.QUICKSWITCHER_DRAFTS), ...o);
-            let l = O.default.getMentionChannelIds().filter(e => e !== i && !H.includes(e)).map(e => j(e)).filter(D.isNotNullish).reverse();
+            let l = O.default.getMentionChannelIds().filter(e => e !== i && !H.includes(e)).map(e => j(e)).filter(v.isNotNullish).reverse();
             if (l.length > 0 && (r.push((0, d.createHeaderResult)(M.default.Messages.QUICKSWITCHER_MENTIONS)), r = r.concat(l)), null != n) {
                 let e = A.default.getSelectableChannelIds(n).filter(e => {
                     let t = S.default.getChannel(e);
@@ -184,14 +184,14 @@ function(e, t, n) {
                 let e = k[b];
                 null != e && e.type === d.AutocompleterResultTypes.HEADER && (b = (0, d.findNextSelectedResult)(d.FindResultDirections.DOWN, b, k))
             }
-            Q.emitChange()
+            X.emitChange()
         }(e, t))
     }
 
     function z() {
         V = null, x = 0, F = [], null != i && (i.destroy(), i = null)
     }
-    class X extends(r = o.default.PersistedStore) {
+    class Z extends(r = o.default.PersistedStore) {
         initialize(e) {
             var t;
             this.waitFor(m.default, N.default, S.default), this.syncWith([T.default], () => !0), G = l.Storage.get(P) || !1, H = null !== (t = null == e ? void 0 : e.channelHistory) && void 0 !== t ? t : []
@@ -208,7 +208,7 @@ function(e, t, n) {
             return null == i ? 0 : null == e ? i.results.reduce((e, t) => t.type !== d.AutocompleterResultTypes.HEADER ? e + 1 : e, 0) : i.results.reduce((t, n) => n.type === e ? t + 1 : t, 0)
         }
         channelNoticePredicate(e, t) {
-            let n = Date.now() - t >= v.CHANNEL_NOTICE_SHOW_DELAY;
+            let n = Date.now() - t >= D.CHANNEL_NOTICE_SHOW_DELAY;
             return w && n
         }
         getFrequentGuilds() {
@@ -232,8 +232,8 @@ function(e, t, n) {
             }
         }
     }
-    y(X, "displayName", "QuickSwitcherStore"), y(X, "persistKey", "QuickSwitcherStore");
-    let Q = new X(u.default, {
+    y(Z, "displayName", "QuickSwitcherStore"), y(Z, "persistKey", "QuickSwitcherStore");
+    let X = new Z(u.default, {
         CONNECTION_OPEN: Y,
         CONNECTION_OPEN_SUPPLEMENTAL: Y,
         QUICKSWITCHER_SHOW: W,
@@ -281,5 +281,5 @@ function(e, t, n) {
             (H = H.filter(e => e !== t)).unshift(t), H.length > 4 && (H.length = 4)
         }
     });
-    t.default = Q
+    t.default = X
 }

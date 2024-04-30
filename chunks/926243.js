@@ -42,9 +42,9 @@ function(e, t, n) {
                     allowAnimatedEmoji: C,
                     selectedItemClassName: g,
                     inNitroLockedSection: L,
-                    ...D
+                    ...v
                 } = e,
-                v = (0, o.useStateFromStores)([S.default], () => r.type === c.EmojiTypes.GUILD ? S.default.getGuild(r.guildId) : void 0, [r]),
+                D = (0, o.useStateFromStores)([S.default], () => r.type === c.EmojiTypes.GUILD ? S.default.getGuild(r.guildId) : void 0, [r]),
                 {
                     enabled: M
                 } = A.default.useExperiment({
@@ -55,7 +55,7 @@ function(e, t, n) {
                 y = E && M && !L;
             return (0, i.jsx)(l.FocusRing, {
                 children: (0, i.jsx)("button", {
-                    ...D,
+                    ...v,
                     className: a()(p.emojiItem, {
                         [p.emojiItemLarge]: u,
                         [p.emojiItemMedium]: d,
@@ -69,9 +69,9 @@ function(e, t, n) {
                     "data-name": r.name,
                     ref: t,
                     children: (0, i.jsx)(m.default, {
-                        "aria-label": (n = r.allNamesString, ((null == v ? void 0 : v.name) != null && (n = N.default.Messages.EMOJI_FROM_GUILD_LABEL.format({
+                        "aria-label": (n = r.allNamesString, ((null == D ? void 0 : D.name) != null && (n = N.default.Messages.EMOJI_FROM_GUILD_LABEL.format({
                             names: n,
-                            guildName: v.name
+                            guildName: D.name
                         })), s) ? N.default.Messages.EMOJI_NAMES_WITH_FAVORITED.format({
                             names: n
                         }) : n),
@@ -101,8 +101,8 @@ function(e, t, n) {
             showEmojiFavoriteTooltip: C,
             surrogateCodePoint: g,
             selectedItemClassName: L,
-            getEmojiItemProps: D,
-            isMediumSize: v,
+            getEmojiItemProps: v,
+            isMediumSize: D,
             isLargeSize: M,
             pulseItemKey: y,
             allowAnimatedEmoji: P,
@@ -123,9 +123,9 @@ function(e, t, n) {
                 isFinalSelection: !e.shiftKey,
                 toggleFavorite: n
             })
-        }, X = () => {
+        }, Z = () => {
             !m.current && !p.current && S(t)
-        }, Q = e => {
+        }, X = e => {
             (0, u.openContextMenuLazy)(e, async () => {
                 let {
                     default: e
@@ -134,7 +134,7 @@ function(e, t, n) {
                     ...t
                 })
             })
-        }, q = function() {
+        }, Q = function() {
             var e;
             let {
                 onMouseEnter: t,
@@ -144,7 +144,7 @@ function(e, t, n) {
                 tabIndex: l,
                 onFocus: u,
                 ...d
-            } = null !== (e = D(K, c)) && void 0 !== e ? e : {};
+            } = null !== (e = v(K, c)) && void 0 !== e ? e : {};
             return (0, r.createElement)("li", {
                 ...d,
                 key: s,
@@ -154,13 +154,13 @@ function(e, t, n) {
                 emoji: Y,
                 isFavorite: F.isFavoriteEmojiWithoutFetchingLatest(Y),
                 isLargeSize: M,
-                isMediumSize: v,
+                isMediumSize: D,
                 isInspected: a,
                 isDisabled: W,
                 showPulse: y === s,
                 allowAnimatedEmoji: P,
-                onFocus: null != u ? u : X,
-                onMouseMove: X,
+                onFocus: null != u ? u : Z,
+                onMouseMove: Z,
                 onMouseEnter: t,
                 onMouseLeave: n,
                 onClick: e => {
@@ -171,7 +171,7 @@ function(e, t, n) {
                     }
                     z(e)
                 },
-                onContextMenu: Q,
+                onContextMenu: X,
                 tabIndex: l,
                 columnIndex: K,
                 rowIndex: c,
@@ -187,7 +187,7 @@ function(e, t, n) {
             }),
             position: "top",
             delay: 200,
-            children: e => q(e)
-        }, s) : q()
+            children: e => Q(e)
+        }, s) : Q()
     }
 }

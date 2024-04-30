@@ -21,8 +21,8 @@ function(e, t, n) {
         C = 0,
         g = 0,
         L = new Set,
-        D = new Map,
-        v = !1;
+        v = new Map,
+        D = !1;
 
     function M(e) {
         let {
@@ -84,7 +84,7 @@ function(e, t, n) {
             return 2 === C
         }
         isUserPlayingSounds(e) {
-            let t = D.get(e);
+            let t = v.get(e);
             return null != t && t > 0
         }
         isPlayingSound(e) {
@@ -100,7 +100,7 @@ function(e, t, n) {
             return R.has(e)
         }
         hasHadOtherUserPlaySoundInSession() {
-            return v
+            return D
         }
         hasFetchedAllSounds() {
             return 2 === g && 2 === C
@@ -113,7 +113,7 @@ function(e, t, n) {
         writable: !0
     }) : a[o] = l, t.default = new U(c.default, {
         LOGOUT: function() {
-            p.clear(), O.clear(), D.clear(), v = !1, g = 0, C = 0
+            p.clear(), O.clear(), v.clear(), D = !1, g = 0, C = 0
         },
         GUILD_SOUNDBOARD_FETCH: function() {
             g = 1
@@ -132,16 +132,16 @@ function(e, t, n) {
             let {
                 soundId: r,
                 userId: s
-            } = e, a = (null !== (n = O.get(r)) && void 0 !== n ? n : 0) + 1, o = (null !== (i = D.get(s)) && void 0 !== i ? i : 0) + 1;
-            O.set(r, a), D.set(s, o), s !== (null === (t = T.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && (v = !0)
+            } = e, a = (null !== (n = O.get(r)) && void 0 !== n ? n : 0) + 1, o = (null !== (i = v.get(s)) && void 0 !== i ? i : 0) + 1;
+            O.set(r, a), v.set(s, o), s !== (null === (t = T.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && (D = !0)
         },
         GUILD_SOUNDBOARD_SOUND_PLAY_END: function(e) {
             var t, n;
             let {
                 soundId: i,
                 userId: r
-            } = e, s = (null !== (t = O.get(i)) && void 0 !== t ? t : 0) - 1, a = (null !== (n = D.get(r)) && void 0 !== n ? n : 0) - 1;
-            s <= 0 ? O.delete(i) : O.set(i, s), a <= 0 ? D.delete(r) : D.set(r, a)
+            } = e, s = (null !== (t = O.get(i)) && void 0 !== t ? t : 0) - 1, a = (null !== (n = v.get(r)) && void 0 !== n ? n : 0) - 1;
+            s <= 0 ? O.delete(i) : O.set(i, s), a <= 0 ? v.delete(r) : v.set(r, a)
         },
         USER_SOUNDBOARD_SET_VOLUME: function(e) {
             let {
@@ -150,7 +150,7 @@ function(e, t, n) {
             y(t)
         },
         VOICE_CHANNEL_SELECT: function() {
-            O.clear(), D.clear()
+            O.clear(), v.clear()
         },
         USER_SETTINGS_PROTO_UPDATE: function(e) {
             let {

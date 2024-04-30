@@ -105,8 +105,8 @@ function(e, t, n) {
                 a = N.default.getEnabled(e) ? N.default.getDefaultChannelIds(e) : [],
                 [u, c] = (0, p.getChannelCoverageForOnboarding)(e, t, a),
                 A = [...s, ...a],
-                D = A.map(e => E.default.getChannel(e)).filter(h.isNotNullish),
-                v = (0, O.getFlattenedChannels)(e, new Set(A), D, !0).length,
+                v = A.map(e => E.default.getChannel(e)).filter(h.isNotNullish),
+                D = (0, O.getFlattenedChannels)(e, new Set(A), v, !0).length,
                 M = null == n ? [] : n.options.map(e => e.id);
             if (f.default.track(R.AnalyticEvents.GUILD_ONBOARDING_STEP_COMPLETED, {
                     ...(0, l.collectGuildAnalyticsMetadata)(e),
@@ -117,7 +117,7 @@ function(e, t, n) {
                     in_onboarding: !0,
                     is_final_step: !0,
                     roles_granted: r.size,
-                    channels_granted: v,
+                    channels_granted: D,
                     guild_onboarding_covered_channel_ids: u.map(e => e.id),
                     guild_onboarding_uncovered_channel_ids: c.map(e => e.id)
                 }), (0, o.ackGuildFeature)(e, g.ReadStateTypes.GUILD_ONBOARDING_QUESTION, m.default.fromTimestamp(Date.now())), L(e, !0), _.default.isFullServerPreview(e)) {

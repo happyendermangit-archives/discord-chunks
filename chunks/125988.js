@@ -28,7 +28,7 @@ function(e, t, n) {
         } = (0, a.default)({
             isTryItOut: f,
             guildId: c
-        }), L = N && (h || !m && !I), D = T && void 0 !== g && void 0 !== O && O === (null == n ? void 0 : n.id), v = null != c && null === g, M = D ? v ? null == n ? void 0 : n.avatarDecoration : null != g ? g : C : null != C ? C : null == n ? void 0 : n.avatarDecoration, y = i.useMemo(() => (0, d.getAvatarDecorationURL)({
+        }), L = N && (h || !m && !I), v = T && void 0 !== g && void 0 !== O && O === (null == n ? void 0 : n.id), D = null != c && null === g, M = v ? D ? null == n ? void 0 : n.avatarDecoration : null != g ? g : C : null != C ? C : null == n ? void 0 : n.avatarDecoration, y = i.useMemo(() => (0, d.getAvatarDecorationURL)({
             avatarDecoration: void 0 !== S ? S : M,
             canAnimate: L,
             size: E

@@ -83,11 +83,11 @@ function(e, t, n) {
             let i = g(e.guild_scheduled_event_exception_id),
                 r = null !== (n = null === (t = O[e.guild_scheduled_event_id]) || void 0 === t ? void 0 : t[i]) && void 0 !== n ? n : 0,
                 s = null != e.guild_scheduled_event_exception_id && e.response === T.GuildScheduledEventUserResponses.UNINTERESTED || null == e.guild_scheduled_event_exception_id && e.response === T.GuildScheduledEventUserResponses.INTERESTED ? 1 : -1;
-            v(e.guild_scheduled_event_id, e.guild_scheduled_event_exception_id, r + s)
+            D(e.guild_scheduled_event_id, e.guild_scheduled_event_exception_id, r + s)
         }(e), n && (A += 1)
     }
 
-    function D(e) {
+    function v(e) {
         var t, n, i, r;
         let s = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             a = g(e.guild_scheduled_event_exception_id),
@@ -98,11 +98,11 @@ function(e, t, n) {
             let i = g(e.guild_scheduled_event_exception_id),
                 r = null !== (n = null === (t = O[e.guild_scheduled_event_id]) || void 0 === t ? void 0 : t[i]) && void 0 !== n ? n : 0,
                 s = null != e.guild_scheduled_event_exception_id && e.response === T.GuildScheduledEventUserResponses.UNINTERESTED || null == e.guild_scheduled_event_exception_id && e.response === T.GuildScheduledEventUserResponses.INTERESTED ? -1 : 1;
-            v(e.guild_scheduled_event_id, e.guild_scheduled_event_exception_id, r + s)
+            D(e.guild_scheduled_event_id, e.guild_scheduled_event_exception_id, r + s)
         }(e), s && (A += 1))
     }
 
-    function v(e, t, n) {
+    function D(e, t, n) {
         let i = g(t);
         null == O[e] && (O[e] = {}), O[e][i] = n
     }
@@ -256,7 +256,7 @@ function(e, t, n) {
                 guildEventExceptionId: a,
                 response: o
             } = e, l = g(a), u = null === (n = p[r]) || void 0 === n ? void 0 : null === (t = n[l]) || void 0 === t ? void 0 : t[i];
-            null != u && D(u, !1);
+            null != u && v(u, !1);
             let d = E.default.getMember(s, i);
             return L({
                 user_id: i,
@@ -275,7 +275,7 @@ function(e, t, n) {
                 guildEventExceptionId: i,
                 response: r
             } = e;
-            D({
+            v({
                 user_id: t,
                 guild_scheduled_event_id: n,
                 guild_scheduled_event_exception_id: i,
@@ -299,8 +299,8 @@ function(e, t, n) {
                 eventId: t,
                 counts: n
             } = e;
-            v(t, null, n.eventCount), I.default.forEachKey(n.recurrenceCounts, e => {
-                v(t, e, n.eventCount - n.recurrenceCounts[e])
+            D(t, null, n.eventCount), I.default.forEachKey(n.recurrenceCounts, e => {
+                D(t, e, n.eventCount - n.recurrenceCounts[e])
             })
         },
         INVITE_RESOLVE_SUCCESS: function(e) {

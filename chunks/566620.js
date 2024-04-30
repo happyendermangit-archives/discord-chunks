@@ -23,7 +23,7 @@ function(e, t, n) {
             return k
         },
         startEmbeddedActivity: function() {
-            return v
+            return D
         },
         stopEmbeddedActivity: function() {
             return y
@@ -66,9 +66,9 @@ function(e, t, n) {
         C = n("917107"),
         g = n("981631"),
         L = n("674563"),
-        D = n("245335");
+        v = n("245335");
 
-    function v(e, t, n) {
+    function D(e, t, n) {
         let i = f.default.getId(),
             r = p.default.getSelfEmbeddedActivityForChannel(e),
             a = p.default.getEmbeddedActivitiesForChannel(e).find(e => e.applicationId === t && e.userIds.has(i));
@@ -306,7 +306,7 @@ function(e, t, n) {
             applicationId: i,
             location: r
         } = e, s = await l.default.createInvite(t, {
-            target_type: D.InviteTargetTypes.EMBEDDED_APPLICATION,
+            target_type: v.InviteTargetTypes.EMBEDDED_APPLICATION,
             target_application_id: i
         }, r);
         null != S.default.getChannel(n) && u.default.sendInvite(n, s.code, r, null)
@@ -318,7 +318,7 @@ function(e, t, n) {
             userId: i,
             location: r
         } = e, s = await l.default.createInvite(t, {
-            target_type: D.InviteTargetTypes.EMBEDDED_APPLICATION,
+            target_type: v.InviteTargetTypes.EMBEDDED_APPLICATION,
             target_application_id: n
         }, r);
         a.default.ensurePrivateChannel(i).then(e => {

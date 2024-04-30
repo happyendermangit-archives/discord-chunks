@@ -82,16 +82,16 @@ function(e, t, n) {
                     })
                 }));
                 i.useEffect(() => () => L.clean(), [L]);
-                let D = i.useCallback((e, t) => {
+                let v = i.useCallback((e, t) => {
                         R.current && E(e, t)
                     }, [E]),
-                    [v, M] = i.useState(!0);
+                    [D, M] = i.useState(!0);
                 i.useEffect(() => {
-                    if (v && !h) {
+                    if (D && !h) {
                         M(!1);
                         return
                     }
-                    D(m(t, _), _)
+                    v(m(t, _), _)
                 }, [_]);
                 let y = i.useCallback(function() {
                         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
@@ -99,8 +99,8 @@ function(e, t, n) {
                         n !== _ && T({
                             type: r.ListActionType.SET_FOCUSED_INDEX,
                             index: n
-                        }), e && D(m(t, n), n)
-                    }, [m, _, I, T, t, D]),
+                        }), e && v(m(t, n), n)
+                    }, [m, _, I, T, t, v]),
                     P = i.useCallback(e => {
                         if (!R.current) return;
                         if (o.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
@@ -148,17 +148,17 @@ function(e, t, n) {
                         C || g(!0)
                     }, [C]),
                     b = i.useCallback(() => {
-                        !C && (f ? D(m(t, _), _) : y(!0))
-                    }, [m, t, D, f, C, _, y]),
+                        !C && (f ? v(m(t, _), _) : y(!0))
+                    }, [m, t, v, f, C, _, y]),
                     G = i.useCallback(e => {
                         !e.currentTarget.contains(e.relatedTarget) && requestAnimationFrame(() => {
                             if (null == u(l(m, t, _))) {
-                                D(t);
+                                v(t);
                                 return
                             }
                             g(!1)
                         })
-                    }, [m, t, _, D]),
+                    }, [m, t, _, v]),
                     w = i.useRef(null);
                 i.useLayoutEffect(() => {
                     let e = w.current;

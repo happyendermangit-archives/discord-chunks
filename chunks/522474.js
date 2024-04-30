@@ -87,15 +87,15 @@ function(e, t, n) {
         }
     }
 
-    function D() {
+    function v() {
         for (let e of Object.keys(A)) {
             let t = A[e];
             null != t && t.close()
         }
     }
-    class v extends(i = u.default.PersistedStore) {
+    class D extends(i = u.default.PersistedStore) {
         initialize(e) {
-            window.addEventListener("message", L), window.addEventListener("beforeunload", D), S = null != e ? e : {}
+            window.addEventListener("message", L), window.addEventListener("beforeunload", v), S = null != e ? e : {}
         }
         getWindow(e) {
             return A[e]
@@ -130,8 +130,8 @@ function(e, t, n) {
             return g(e)
         }
     }
-    f(v, "displayName", "PopoutWindowStore"), f(v, "persistKey", "PopoutWindowStore");
-    let M = new v(d.default, {
+    f(D, "displayName", "PopoutWindowStore"), f(D, "persistKey", "PopoutWindowStore");
+    let M = new D(d.default, {
         POPOUT_WINDOW_OPEN: function(e) {
             let {
                 key: t,
@@ -186,7 +186,7 @@ function(e, t, n) {
             } = e;
             c.isPlatformEmbedded && (E.default.setAlwaysOnTop(t, n), h[t] = n, E.default.isAlwaysOnTop(t).then(e => h[t] = e))
         },
-        LOGOUT: D
+        LOGOUT: v
     });
     t.default = M
 }

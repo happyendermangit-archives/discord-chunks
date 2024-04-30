@@ -39,8 +39,8 @@ function(e, t, n) {
         var t, n, s, _, R, C;
         let g, {
                 src: L,
-                volume: D = 1,
-                onVolumeChange: v,
+                volume: v = 1,
+                onVolumeChange: D,
                 onMute: M,
                 waveform: y,
                 durationSecs: P,
@@ -55,10 +55,10 @@ function(e, t, n) {
             [F, H] = r.useState(P),
             [Y, j] = r.useState(!1),
             [W, K] = r.useState(!1),
-            [z, X] = r.useState(!1),
-            [Q, q] = r.useState(!1),
-            [Z, J] = r.useState("none"),
-            [$, ee] = r.useState(() => "function" == typeof D ? D() : D),
+            [z, Z] = r.useState(!1),
+            [X, Q] = r.useState(!1),
+            [q, J] = r.useState("none"),
+            [$, ee] = r.useState(() => "function" == typeof v ? v() : v),
             et = r.useRef(void 0),
             en = r.useCallback(() => {
                 K(e => !e)
@@ -72,7 +72,7 @@ function(e, t, n) {
             }, []),
             es = r.useCallback(() => {
                 K(!1), null == et.current && (et.current = setTimeout(() => {
-                    q(!1), et.current = void 0
+                    Q(!1), et.current = void 0
                 }, 500))
             }, []),
             ea = r.useCallback(() => {
@@ -86,29 +86,29 @@ function(e, t, n) {
             }, [B]),
             el = r.useCallback(e => {
                 let t = (0, S.perceptualToAmplitude)(e, 1);
-                j(0 === t), ee(t), null == v || v(t)
-            }, [v]),
+                j(0 === t), ee(t), null == D || D(t)
+            }, [D]),
             eu = r.useCallback(() => {
                 j(!Y), null == M || M(!Y)
             }, [Y, M]),
             ed = r.useCallback(() => {
-                X(!0)
+                Z(!0)
             }, []),
             e_ = r.useCallback(() => {
-                X(!1), V === F && es()
+                Z(!1), V === F && es()
             }, [V, F, es]),
             ec = r.useCallback(e => {
                 let t = k.current;
                 if (null == F || null == t) return;
                 let n = e * F;
-                x(n), t.currentTime = n, q(!0), clearTimeout(et.current), et.current = void 0
+                x(n), t.currentTime = n, Q(!0), clearTimeout(et.current), et.current = void 0
             }, [F]);
         r.useEffect(() => {
-            !Q && W && q(!0)
-        }, [W, Q]);
+            !X && W && Q(!0)
+        }, [W, X]);
         let eE = r.useRef(null);
         r.useEffect(() => {
-            if (Q || W) {
+            if (X || W) {
                 if (W) {
                     var e, t;
                     eE.current = performance.now(), null == G || G(!1, V, (null !== (t = null === (e = k.current) || void 0 === e ? void 0 : e.duration) && void 0 !== t ? t : 0) * f.default.Millis.SECOND)
@@ -147,7 +147,7 @@ function(e, t, n) {
                 ref: k,
                 className: N.audioElement,
                 src: L,
-                preload: Z,
+                preload: q,
                 playing: W && !z,
                 onEnded: ea,
                 onLoadedMetadata: er,
@@ -159,7 +159,7 @@ function(e, t, n) {
             ref: k,
             className: N.audioElement,
             controls: !1,
-            preload: Z,
+            preload: q,
             onEnded: ea,
             onLoadedMetadata: er,
             onError: eo,
@@ -203,12 +203,12 @@ function(e, t, n) {
                 currentTime: V,
                 duration: null != F ? F : 1,
                 playing: W,
-                played: Q,
+                played: X,
                 onDrag: ec,
                 onDragStart: ed,
                 onDragEnd: e_
             }), (0, i.jsx)(O, {
-                played: Q,
+                played: X,
                 currentTime: V,
                 duration: F
             }), (0, i.jsx)(c.default, {

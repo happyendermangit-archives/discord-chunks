@@ -68,7 +68,7 @@ function(e, t, n) {
     let C = [],
         g = [],
         L = [];
-    class D extends(i = u.default.Store) {
+    class v extends(i = u.default.Store) {
         initialize() {
             this.waitFor(c.default, f.default, _.default)
         }
@@ -139,12 +139,12 @@ function(e, t, n) {
             return null != e && (null === (t = h[e]) || void 0 === t ? void 0 : t.mode) === S.GuildOnboardingMode.ONBOARDING_ADVANCED
         }
     }
-    a = "GuildOnboardingPromptsStore", (s = "displayName") in(r = D) ? Object.defineProperty(r, s, {
+    a = "GuildOnboardingPromptsStore", (s = "displayName") in(r = v) ? Object.defineProperty(r, s, {
         value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a, t.default = new D(d.default, {
+    }) : r[s] = a, t.default = new v(d.default, {
         CONNECTION_OPEN: function() {
             N = !1, h = {}
         },

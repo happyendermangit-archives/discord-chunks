@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         authenticatedUserFilter: function() {
-            return D
+            return v
         }
     }), n("653041"), n("47120");
     var i, r, s, a, o = n("442837"),
@@ -44,18 +44,18 @@ function(e, t, n) {
         return e.status !== I.SubscriptionStatusTypes.UNPAID
     }
 
-    function D(e) {
+    function v(e) {
         let t = c.default.getId();
         return e.userId === t
     }
 
-    function v(e, t) {
+    function D(e, t) {
         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
             i = n ? f : T;
         if (null == i) return null;
         for (let n in i) {
             let r = i[n];
-            if (!D(r)) {
+            if (!v(r)) {
                 if (!N) {
                     let e = c.default.getId();
                     R.log("user id mismatch between logged in user and SubscriptionStore user"), (0, E.captureBillingMessage)("user id mismatch between logged in user and SubscriptionStore user", {
@@ -84,11 +84,11 @@ function(e, t, n) {
         }
         getPremiumSubscription() {
             let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-            return v(I.SubscriptionTypes.PREMIUM, e => !(0, d.isNoneSubscription)(e.planId), e)
+            return D(I.SubscriptionTypes.PREMIUM, e => !(0, d.isNoneSubscription)(e.planId), e)
         }
         getPremiumTypeSubscription() {
             let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-            return v(I.SubscriptionTypes.PREMIUM, void 0, e)
+            return D(I.SubscriptionTypes.PREMIUM, void 0, e)
         }
         getSubscriptions() {
             let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];

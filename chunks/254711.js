@@ -33,8 +33,8 @@ function(e, t, n) {
         C = n("689079"),
         g = n("981631"),
         L = n("590433"),
-        D = n("689938");
-    let v = n("227419").default,
+        v = n("689938");
+    let D = n("227419").default,
         M = (e, t) => {
             var n;
             return null === (n = e.find(e => e.name === t)) || void 0 === n ? void 0 : n.value
@@ -44,18 +44,18 @@ function(e, t, n) {
                 id: C.BuiltInSectionId.BUILT_IN,
                 type: R.ApplicationCommandSectionType.BUILT_IN,
                 get name() {
-                    return D.default.Messages.COMMAND_SECTION_BUILT_IN_NAME
+                    return v.default.Messages.COMMAND_SECTION_BUILT_IN_NAME
                 }
             },
             [C.BuiltInSectionId.FRECENCY]: {
                 id: C.BuiltInSectionId.FRECENCY,
                 type: R.ApplicationCommandSectionType.BUILT_IN,
                 get name() {
-                    return D.default.Messages.FREQUENTLY_USED
+                    return v.default.Messages.FREQUENTLY_USED
                 }
             }
         },
-        P = [...v, {
+        P = [...D, {
             id: "-1",
             name: "shrug",
             displayName: "shrug",
@@ -63,20 +63,20 @@ function(e, t, n) {
             inputType: R.ApplicationCommandInputType.BUILT_IN_TEXT,
             applicationId: C.BuiltInSectionId.BUILT_IN,
             get description() {
-                return D.default.Messages.COMMAND_SHRUG_DESCRIPTION
+                return v.default.Messages.COMMAND_SHRUG_DESCRIPTION
             },
             get displayDescription() {
-                return D.default.Messages.COMMAND_SHRUG_DESCRIPTION
+                return v.default.Messages.COMMAND_SHRUG_DESCRIPTION
             },
             options: [{
                 name: "message",
                 displayName: "message",
                 type: c.ApplicationCommandOptionType.STRING,
                 get description() {
-                    return D.default.Messages.COMMAND_SHRUG_MESSAGE_DESCRIPTION
+                    return v.default.Messages.COMMAND_SHRUG_MESSAGE_DESCRIPTION
                 },
                 get displayDescription() {
-                    return D.default.Messages.COMMAND_SHRUG_MESSAGE_DESCRIPTION
+                    return v.default.Messages.COMMAND_SHRUG_MESSAGE_DESCRIPTION
                 }
             }],
             execute: e => {
@@ -94,20 +94,20 @@ function(e, t, n) {
             inputType: R.ApplicationCommandInputType.BUILT_IN_TEXT,
             applicationId: C.BuiltInSectionId.BUILT_IN,
             get description() {
-                return D.default.Messages.COMMAND_TABLEFLIP_DESCRIPTION
+                return v.default.Messages.COMMAND_TABLEFLIP_DESCRIPTION
             },
             get displayDescription() {
-                return D.default.Messages.COMMAND_TABLEFLIP_DESCRIPTION
+                return v.default.Messages.COMMAND_TABLEFLIP_DESCRIPTION
             },
             options: [{
                 name: "message",
                 displayName: "message",
                 type: c.ApplicationCommandOptionType.STRING,
                 get description() {
-                    return D.default.Messages.COMMAND_TABLEFLIP_MESSAGE_DESCRIPTION
+                    return v.default.Messages.COMMAND_TABLEFLIP_MESSAGE_DESCRIPTION
                 },
                 get displayDescription() {
-                    return D.default.Messages.COMMAND_TABLEFLIP_MESSAGE_DESCRIPTION
+                    return v.default.Messages.COMMAND_TABLEFLIP_MESSAGE_DESCRIPTION
                 }
             }],
             execute: e => {
@@ -125,20 +125,20 @@ function(e, t, n) {
             inputType: R.ApplicationCommandInputType.BUILT_IN_TEXT,
             applicationId: C.BuiltInSectionId.BUILT_IN,
             get description() {
-                return D.default.Messages.COMMAND_TABLEUNFLIP_DESCRIPTION
+                return v.default.Messages.COMMAND_TABLEUNFLIP_DESCRIPTION
             },
             get displayDescription() {
-                return D.default.Messages.COMMAND_TABLEUNFLIP_DESCRIPTION
+                return v.default.Messages.COMMAND_TABLEUNFLIP_DESCRIPTION
             },
             options: [{
                 name: "message",
                 displayName: "message",
                 type: c.ApplicationCommandOptionType.STRING,
                 get description() {
-                    return D.default.Messages.COMMAND_TABLEUNFLIP_MESSAGE_DESCRIPTION
+                    return v.default.Messages.COMMAND_TABLEUNFLIP_MESSAGE_DESCRIPTION
                 },
                 get displayDescription() {
-                    return D.default.Messages.COMMAND_TABLEUNFLIP_MESSAGE_DESCRIPTION
+                    return v.default.Messages.COMMAND_TABLEUNFLIP_MESSAGE_DESCRIPTION
                 }
             }],
             execute: e => {
@@ -156,20 +156,20 @@ function(e, t, n) {
             inputType: R.ApplicationCommandInputType.BUILT_IN_TEXT,
             applicationId: C.BuiltInSectionId.BUILT_IN,
             get description() {
-                return D.default.Messages.COMMAND_TTS_DESCRIPTION
+                return v.default.Messages.COMMAND_TTS_DESCRIPTION
             },
             get displayDescription() {
-                return D.default.Messages.COMMAND_TTS_DESCRIPTION
+                return v.default.Messages.COMMAND_TTS_DESCRIPTION
             },
             options: [{
                 name: "message",
                 displayName: "message",
                 type: c.ApplicationCommandOptionType.STRING,
                 get description() {
-                    return D.default.Messages.COMMAND_TTS_MESSAGE_DESCRIPTION
+                    return v.default.Messages.COMMAND_TTS_MESSAGE_DESCRIPTION
                 },
                 get displayDescription() {
-                    return D.default.Messages.COMMAND_TTS_MESSAGE_DESCRIPTION
+                    return v.default.Messages.COMMAND_TTS_MESSAGE_DESCRIPTION
                 },
                 required: !0
             }],
@@ -194,20 +194,20 @@ function(e, t, n) {
             inputType: R.ApplicationCommandInputType.BUILT_IN_TEXT,
             applicationId: C.BuiltInSectionId.BUILT_IN,
             get description() {
-                return D.default.Messages.COMMAND_ME_DESCRIPTION
+                return v.default.Messages.COMMAND_ME_DESCRIPTION
             },
             get displayDescription() {
-                return D.default.Messages.COMMAND_ME_DESCRIPTION
+                return v.default.Messages.COMMAND_ME_DESCRIPTION
             },
             options: [{
                 name: "message",
                 displayName: "message",
                 type: c.ApplicationCommandOptionType.STRING,
                 get description() {
-                    return D.default.Messages.COMMAND_ME_MESSAGE_DESCRIPTION
+                    return v.default.Messages.COMMAND_ME_MESSAGE_DESCRIPTION
                 },
                 get displayDescription() {
-                    return D.default.Messages.COMMAND_ME_MESSAGE_DESCRIPTION
+                    return v.default.Messages.COMMAND_ME_MESSAGE_DESCRIPTION
                 },
                 required: !0
             }],
@@ -226,20 +226,20 @@ function(e, t, n) {
             inputType: R.ApplicationCommandInputType.BUILT_IN_TEXT,
             applicationId: C.BuiltInSectionId.BUILT_IN,
             get description() {
-                return D.default.Messages.COMMAND_SPOILER_DESCRIPTION
+                return v.default.Messages.COMMAND_SPOILER_DESCRIPTION
             },
             get displayDescription() {
-                return D.default.Messages.COMMAND_SPOILER_DESCRIPTION
+                return v.default.Messages.COMMAND_SPOILER_DESCRIPTION
             },
             options: [{
                 name: "message",
                 displayName: "message",
                 type: c.ApplicationCommandOptionType.STRING,
                 get description() {
-                    return D.default.Messages.COMMAND_SPOILER_MESSAGE_DESCRIPTION
+                    return v.default.Messages.COMMAND_SPOILER_MESSAGE_DESCRIPTION
                 },
                 get displayDescription() {
-                    return D.default.Messages.COMMAND_SPOILER_MESSAGE_DESCRIPTION
+                    return v.default.Messages.COMMAND_SPOILER_MESSAGE_DESCRIPTION
                 },
                 required: !0
             }],
@@ -258,20 +258,20 @@ function(e, t, n) {
             inputType: R.ApplicationCommandInputType.BUILT_IN,
             applicationId: C.BuiltInSectionId.BUILT_IN,
             get description() {
-                return D.default.Messages.COMMAND_NICK_DESCRIPTION
+                return v.default.Messages.COMMAND_NICK_DESCRIPTION
             },
             get displayDescription() {
-                return D.default.Messages.COMMAND_NICK_DESCRIPTION
+                return v.default.Messages.COMMAND_NICK_DESCRIPTION
             },
             options: [{
                 name: "new_nick",
                 displayName: "new_nick",
                 type: c.ApplicationCommandOptionType.STRING,
                 get description() {
-                    return D.default.Messages.COMMAND_NICK_NEWNICK_DESCRIPTION
+                    return v.default.Messages.COMMAND_NICK_NEWNICK_DESCRIPTION
                 },
                 get displayDescription() {
-                    return D.default.Messages.COMMAND_NICK_NEWNICK_DESCRIPTION
+                    return v.default.Messages.COMMAND_NICK_NEWNICK_DESCRIPTION
                 }
             }],
             predicate: e => {
@@ -298,20 +298,20 @@ function(e, t, n) {
             inputType: R.ApplicationCommandInputType.BUILT_IN,
             applicationId: C.BuiltInSectionId.BUILT_IN,
             get description() {
-                return D.default.Messages.COMMAND_THREAD_DESCRIPTION
+                return v.default.Messages.COMMAND_THREAD_DESCRIPTION
             },
             get displayDescription() {
-                return D.default.Messages.COMMAND_THREAD_DESCRIPTION
+                return v.default.Messages.COMMAND_THREAD_DESCRIPTION
             },
             options: [{
                 name: "name",
                 displayName: "name",
                 type: c.ApplicationCommandOptionType.STRING,
                 get description() {
-                    return D.default.Messages.COMMAND_THREAD_NAME_DESCRIPTION
+                    return v.default.Messages.COMMAND_THREAD_NAME_DESCRIPTION
                 },
                 get displayDescription() {
-                    return D.default.Messages.COMMAND_THREAD_NAME_DESCRIPTION
+                    return v.default.Messages.COMMAND_THREAD_NAME_DESCRIPTION
                 },
                 required: !0
             }, {
@@ -319,10 +319,10 @@ function(e, t, n) {
                 displayName: "message",
                 type: c.ApplicationCommandOptionType.STRING,
                 get description() {
-                    return D.default.Messages.COMMAND_THREAD_MESSAGE_DESCRIPTION
+                    return v.default.Messages.COMMAND_THREAD_MESSAGE_DESCRIPTION
                 },
                 get displayDescription() {
-                    return D.default.Messages.COMMAND_THREAD_MESSAGE_DESCRIPTION
+                    return v.default.Messages.COMMAND_THREAD_MESSAGE_DESCRIPTION
                 },
                 required: !0
             }],
@@ -347,20 +347,20 @@ function(e, t, n) {
             inputType: R.ApplicationCommandInputType.BUILT_IN,
             applicationId: C.BuiltInSectionId.BUILT_IN,
             get description() {
-                return D.default.Messages.COMMAND_KICK_DESCRIPTION
+                return v.default.Messages.COMMAND_KICK_DESCRIPTION
             },
             get displayDescription() {
-                return D.default.Messages.COMMAND_KICK_DESCRIPTION
+                return v.default.Messages.COMMAND_KICK_DESCRIPTION
             },
             options: [{
                 name: "user",
                 displayName: "user",
                 type: c.ApplicationCommandOptionType.USER,
                 get description() {
-                    return D.default.Messages.COMMAND_KICK_USER_DESCRIPTION
+                    return v.default.Messages.COMMAND_KICK_USER_DESCRIPTION
                 },
                 get displayDescription() {
-                    return D.default.Messages.COMMAND_KICK_USER_DESCRIPTION
+                    return v.default.Messages.COMMAND_KICK_USER_DESCRIPTION
                 },
                 required: !0
             }, {
@@ -368,10 +368,10 @@ function(e, t, n) {
                 displayName: "reason",
                 type: c.ApplicationCommandOptionType.STRING,
                 get description() {
-                    return D.default.Messages.COMMAND_KICK_REASON_DESCRIPTION
+                    return v.default.Messages.COMMAND_KICK_REASON_DESCRIPTION
                 },
                 get displayDescription() {
-                    return D.default.Messages.COMMAND_KICK_REASON_DESCRIPTION
+                    return v.default.Messages.COMMAND_KICK_REASON_DESCRIPTION
                 },
                 required: !1
             }],
@@ -390,17 +390,17 @@ function(e, t, n) {
                 if (null == i) return;
                 let s = null !== (n = M(e, "user")) && void 0 !== n ? n : "";
                 if (!m.default.canManageUser(g.Permissions.KICK_MEMBERS, s, i)) {
-                    _.default.sendBotMessage(r.id, D.default.Messages.COMMAND_KICK_UNABLE);
+                    _.default.sendBotMessage(r.id, v.default.Messages.COMMAND_KICK_UNABLE);
                     return
                 }(async () => {
                     var t;
                     let n = N.default.getUser(s);
                     if (null == n) throw Error();
-                    await d.default.kickUser(i.id, s, null !== (t = M(e, "reason")) && void 0 !== t ? t : ""), _.default.sendBotMessage(r.id, D.default.Messages.COMMAND_KICK_CONFIRMATION.format({
+                    await d.default.kickUser(i.id, s, null !== (t = M(e, "reason")) && void 0 !== t ? t : ""), _.default.sendBotMessage(r.id, v.default.Messages.COMMAND_KICK_CONFIRMATION.format({
                         user: O.default.getUserTag(n)
                     }))
                 })().catch(() => {
-                    _.default.sendBotMessage(r.id, D.default.Messages.COMMAND_KICK_ERROR)
+                    _.default.sendBotMessage(r.id, v.default.Messages.COMMAND_KICK_ERROR)
                 })
             }
         }, {
@@ -411,20 +411,20 @@ function(e, t, n) {
             inputType: R.ApplicationCommandInputType.BUILT_IN,
             applicationId: C.BuiltInSectionId.BUILT_IN,
             get description() {
-                return D.default.Messages.COMMAND_BAN_DESCRIPTION
+                return v.default.Messages.COMMAND_BAN_DESCRIPTION
             },
             get displayDescription() {
-                return D.default.Messages.COMMAND_BAN_DESCRIPTION
+                return v.default.Messages.COMMAND_BAN_DESCRIPTION
             },
             options: [{
                 name: "user",
                 displayName: "user",
                 type: c.ApplicationCommandOptionType.USER,
                 get description() {
-                    return D.default.Messages.COMMAND_BAN_USER_DESCRIPTION
+                    return v.default.Messages.COMMAND_BAN_USER_DESCRIPTION
                 },
                 get displayDescription() {
-                    return D.default.Messages.COMMAND_BAN_USER_DESCRIPTION
+                    return v.default.Messages.COMMAND_BAN_USER_DESCRIPTION
                 },
                 required: !0
             }, {
@@ -432,40 +432,40 @@ function(e, t, n) {
                 displayName: "delete_messages",
                 type: c.ApplicationCommandOptionType.INTEGER,
                 get description() {
-                    return D.default.Messages.COMMAND_BAN_DELETE_MESSAGES_DESCRIPTION
+                    return v.default.Messages.COMMAND_BAN_DELETE_MESSAGES_DESCRIPTION
                 },
                 get displayDescription() {
-                    return D.default.Messages.COMMAND_BAN_DELETE_MESSAGES_DESCRIPTION
+                    return v.default.Messages.COMMAND_BAN_DELETE_MESSAGES_DESCRIPTION
                 },
                 required: !0,
                 get choices() {
                     return [{
-                        name: D.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_NONE,
-                        displayName: D.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_NONE,
+                        name: v.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_NONE,
+                        displayName: v.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_NONE,
                         value: 0
                     }, {
-                        name: D.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_1HR,
-                        displayName: D.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_1HR,
+                        name: v.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_1HR,
+                        displayName: v.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_1HR,
                         value: p.default.Seconds.HOUR
                     }, {
-                        name: D.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_6HR,
-                        displayName: D.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_6HR,
+                        name: v.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_6HR,
+                        displayName: v.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_6HR,
                         value: 6 * p.default.Seconds.HOUR
                     }, {
-                        name: D.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_12HR,
-                        displayName: D.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_12HR,
+                        name: v.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_12HR,
+                        displayName: v.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_12HR,
                         value: 12 * p.default.Seconds.HOUR
                     }, {
-                        name: D.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_24HR,
-                        displayName: D.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_24HR,
+                        name: v.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_24HR,
+                        displayName: v.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_24HR,
                         value: p.default.Seconds.DAY
                     }, {
-                        name: D.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_3D,
-                        displayName: D.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_3D,
+                        name: v.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_3D,
+                        displayName: v.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_3D,
                         value: 3 * p.default.Seconds.DAY
                     }, {
-                        name: D.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_7D,
-                        displayName: D.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_7D,
+                        name: v.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_7D,
+                        displayName: v.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_7D,
                         value: 7 * p.default.Seconds.DAY
                     }]
                 }
@@ -474,10 +474,10 @@ function(e, t, n) {
                 displayName: "reason",
                 type: c.ApplicationCommandOptionType.STRING,
                 get description() {
-                    return D.default.Messages.COMMAND_BAN_REASON_DESCRIPTION
+                    return v.default.Messages.COMMAND_BAN_REASON_DESCRIPTION
                 },
                 get displayDescription() {
-                    return D.default.Messages.COMMAND_BAN_REASON_DESCRIPTION
+                    return v.default.Messages.COMMAND_BAN_REASON_DESCRIPTION
                 },
                 required: !1
             }],
@@ -496,7 +496,7 @@ function(e, t, n) {
                 if (null == i) return;
                 let s = null !== (n = M(e, "user")) && void 0 !== n ? n : "";
                 if (!m.default.canManageUser(g.Permissions.BAN_MEMBERS, s, i)) {
-                    _.default.sendBotMessage(r.id, D.default.Messages.COMMAND_BAN_UNABLE);
+                    _.default.sendBotMessage(r.id, v.default.Messages.COMMAND_BAN_UNABLE);
                     return
                 }(async () => {
                     var t, n;
@@ -504,11 +504,11 @@ function(e, t, n) {
                     let a = null !== (t = M(e, "delete_messages")) && void 0 !== t ? t : 0,
                         o = null !== (n = M(e, "reason")) && void 0 !== n ? n : "",
                         l = N.default.getUser(s);
-                    await d.default.banUser(i.id, s, a, o), _.default.sendBotMessage(r.id, D.default.Messages.COMMAND_BAN_CONFIRMATION.format({
+                    await d.default.banUser(i.id, s, a, o), _.default.sendBotMessage(r.id, v.default.Messages.COMMAND_BAN_CONFIRMATION.format({
                         user: null != l ? O.default.getUserTag(l) : s
                     }))
                 })().catch(() => {
-                    _.default.sendBotMessage(r.id, D.default.Messages.COMMAND_BAN_ERROR)
+                    _.default.sendBotMessage(r.id, v.default.Messages.COMMAND_BAN_ERROR)
                 })
             }
         }, {
@@ -519,20 +519,20 @@ function(e, t, n) {
             inputType: R.ApplicationCommandInputType.BUILT_IN,
             applicationId: C.BuiltInSectionId.BUILT_IN,
             get description() {
-                return D.default.Messages.COMMAND_TIMEOUT_DESCRIPTION
+                return v.default.Messages.COMMAND_TIMEOUT_DESCRIPTION
             },
             get displayDescription() {
-                return D.default.Messages.COMMAND_TIMEOUT_DESCRIPTION
+                return v.default.Messages.COMMAND_TIMEOUT_DESCRIPTION
             },
             options: [{
                 name: "user",
                 displayName: "user",
                 type: c.ApplicationCommandOptionType.USER,
                 get description() {
-                    return D.default.Messages.COMMAND_TIMEOUT_USER_DESCRIPTION
+                    return v.default.Messages.COMMAND_TIMEOUT_USER_DESCRIPTION
                 },
                 get displayDescription() {
-                    return D.default.Messages.COMMAND_TIMEOUT_USER_DESCRIPTION
+                    return v.default.Messages.COMMAND_TIMEOUT_USER_DESCRIPTION
                 },
                 required: !0
             }, {
@@ -540,10 +540,10 @@ function(e, t, n) {
                 displayName: "duration",
                 type: c.ApplicationCommandOptionType.STRING,
                 get description() {
-                    return D.default.Messages.COMMAND_TIMEOUT_DURATION_DESCRIPTION
+                    return v.default.Messages.COMMAND_TIMEOUT_DURATION_DESCRIPTION
                 },
                 get displayDescription() {
-                    return D.default.Messages.COMMAND_TIMEOUT_DURATION_DESCRIPTION
+                    return v.default.Messages.COMMAND_TIMEOUT_DURATION_DESCRIPTION
                 },
                 required: !0,
                 get choices() {
@@ -558,10 +558,10 @@ function(e, t, n) {
                 displayName: "reason",
                 type: c.ApplicationCommandOptionType.STRING,
                 get description() {
-                    return D.default.Messages.COMMAND_TIMEOUT_REASON_DESCRIPTION
+                    return v.default.Messages.COMMAND_TIMEOUT_REASON_DESCRIPTION
                 },
                 get displayDescription() {
-                    return D.default.Messages.COMMAND_TIMEOUT_REASON_DESCRIPTION
+                    return v.default.Messages.COMMAND_TIMEOUT_REASON_DESCRIPTION
                 },
                 required: !1
             }],
@@ -579,7 +579,7 @@ function(e, t, n) {
                 if (null == n) return;
                 let r = M(e, "user");
                 if (!(0, E.canToggleCommunicationDisableOnUser)(n.id, r)) {
-                    _.default.sendBotMessage(i.id, D.default.Messages.COMMAND_TIMEOUT_UNABLE);
+                    _.default.sendBotMessage(i.id, v.default.Messages.COMMAND_TIMEOUT_UNABLE);
                     return
                 }(async () => {
                     var t, s;
@@ -593,12 +593,12 @@ function(e, t, n) {
                         communicationDisabledUntilTimestamp: a()().add(o, "s").toISOString(),
                         duration: o,
                         reason: l
-                    }), _.default.sendBotMessage(i.id, D.default.Messages.COMMAND_TIMEOUT_CONFIRMATION.format({
+                    }), _.default.sendBotMessage(i.id, v.default.Messages.COMMAND_TIMEOUT_CONFIRMATION.format({
                         user: O.default.getUserTag(u),
                         duration: o
                     }))
                 })().catch(() => {
-                    _.default.sendBotMessage(i.id, D.default.Messages.COMMAND_TIMEOUT_ERROR)
+                    _.default.sendBotMessage(i.id, v.default.Messages.COMMAND_TIMEOUT_ERROR)
                 })
             }
         }, {
@@ -609,20 +609,20 @@ function(e, t, n) {
             inputType: R.ApplicationCommandInputType.BUILT_IN,
             applicationId: C.BuiltInSectionId.BUILT_IN,
             get description() {
-                return D.default.Messages.COMMAND_MSG_DESCRIPTION
+                return v.default.Messages.COMMAND_MSG_DESCRIPTION
             },
             get displayDescription() {
-                return D.default.Messages.COMMAND_MSG_DESCRIPTION
+                return v.default.Messages.COMMAND_MSG_DESCRIPTION
             },
             options: [{
                 name: "user",
                 displayName: "user",
                 type: c.ApplicationCommandOptionType.USER,
                 get description() {
-                    return D.default.Messages.COMMAND_MSG_USER_DESCRIPTION
+                    return v.default.Messages.COMMAND_MSG_USER_DESCRIPTION
                 },
                 get displayDescription() {
-                    return D.default.Messages.COMMAND_MSG_USER_DESCRIPTION
+                    return v.default.Messages.COMMAND_MSG_USER_DESCRIPTION
                 },
                 required: !0
             }, {
@@ -630,10 +630,10 @@ function(e, t, n) {
                 displayName: "message",
                 type: c.ApplicationCommandOptionType.STRING,
                 get description() {
-                    return D.default.Messages.COMMAND_MSG_MESSAGE_DESCRIPTION
+                    return v.default.Messages.COMMAND_MSG_MESSAGE_DESCRIPTION
                 },
                 get displayDescription() {
-                    return D.default.Messages.COMMAND_MSG_MESSAGE_DESCRIPTION
+                    return v.default.Messages.COMMAND_MSG_MESSAGE_DESCRIPTION
                 },
                 required: !0,
                 get maxLength() {
@@ -652,7 +652,7 @@ function(e, t, n) {
                         r()(null != t, "Newly created PrivateChannel is null"), _.default.sendMessage(t.id, I.default.parse(t, a))
                     })
                 })().catch(() => {
-                    _.default.sendBotMessage(i.id, D.default.Messages.COMMAND_MSG_ERROR)
+                    _.default.sendBotMessage(i.id, v.default.Messages.COMMAND_MSG_ERROR)
                 })
             }
         }],

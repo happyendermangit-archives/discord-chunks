@@ -14,7 +14,7 @@ function(e, t, n) {
             return C
         },
         RoleMention: function() {
-            return v
+            return D
         },
         SoundboardMention: function() {
             return y
@@ -29,7 +29,7 @@ function(e, t, n) {
             return b
         },
         UserMention: function() {
-            return D
+            return v
         }
     });
     var i = n("735250");
@@ -102,7 +102,7 @@ function(e, t, n) {
         })
     }
 
-    function D(e) {
+    function v(e) {
         let {
             id: t,
             guildId: n,
@@ -143,7 +143,7 @@ function(e, t, n) {
         return _
     }
 
-    function v(e) {
+    function D(e) {
         let {
             id: t,
             guildId: n

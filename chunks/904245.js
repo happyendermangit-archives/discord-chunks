@@ -26,8 +26,8 @@ function(e, t, n) {
         C = n("779832"),
         g = n("459618"),
         L = n("541288"),
-        D = n("3148"),
-        v = n("785359"),
+        v = n("3148"),
+        D = n("785359"),
         M = n("646504"),
         y = n("64078"),
         P = n("351780"),
@@ -48,10 +48,10 @@ function(e, t, n) {
         W = n("375954"),
         K = n("496675"),
         z = n("158776"),
-        X = n("306680"),
-        Q = n("944486"),
-        q = n("914010"),
-        Z = n("300429"),
+        Z = n("306680"),
+        X = n("944486"),
+        Q = n("914010"),
+        q = n("300429"),
         J = n("594174"),
         $ = n("626135"),
         ee = n("70956"),
@@ -176,7 +176,7 @@ function(e, t, n) {
                 null != n && d.default.trackWithMetadata(eo.AnalyticEvents.AUTOMATED_MESSAGE_RECEIVED, {
                     message_author: "Clyde",
                     message_name: n
-                }), eS.receiveMessage(e, (0, D.createBotMessage)({
+                }), eS.receiveMessage(e, (0, v.createBotMessage)({
                     messageId: i,
                     channelId: e,
                     content: t,
@@ -219,7 +219,7 @@ function(e, t, n) {
                 })).otherwise(() => ({
                     message: ed.default.Messages.SENDER_BLOCKED_MEDIA_BOT_GUILD_MESSAGE,
                     messageName: "BOT_GUILD_EXPLICIT_CONTENT"
-                })), l = (0, D.createNonce)();
+                })), l = (0, v.createNonce)();
                 eS.sendBotMessage(e, s, a, l), (0, S.trackMediaRedactionAction)({
                     action: S.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_CLYDE_MESSAGE_SENT,
                     messageId: l,
@@ -371,7 +371,7 @@ function(e, t, n) {
                                 return t
                             })].filter((e, t, n) => n.indexOf(e) === t).sort(es.default.compare).indexOf(A);
                         if (n < e && (_ = !1), s.length - n < e && (E = !1), E && s.length > 0) {
-                            let e = X.default.lastMessageId(t);
+                            let e = Z.default.lastMessageId(t);
                             s[0].id === e && (E = !1)
                         }
                     }
@@ -511,7 +511,7 @@ function(e, t, n) {
                     o = R.LocalMessageBackgroundSendingExperiment.getCurrentConfig({
                         location: "8e1e29_1"
                     }).enableBackgroundSending ? C.default.backgroundify(a, void 0) : a,
-                    l = null !== (n = r.nonce) && void 0 !== n ? n : (0, D.createNonce)();
+                    l = null !== (n = r.nonce) && void 0 !== n ? n : (0, v.createNonce)();
                 return (r = {
                     ...r,
                     nonce: l
@@ -631,9 +631,9 @@ function(e, t, n) {
                     [M, w] = (0, k.default)(l);
                 if (M && (l = w, C = (0, et.addFlag)(C, eo.MessageFlags.SUPPRESS_NOTIFICATIONS)), "" === l && null == f && null == A && null == R) return Promise.resolve();
                 let V = null != p ? eo.MessageTypes.REPLY : eo.MessageTypes.DEFAULT,
-                    x = null !== (s = n.nonce) && void 0 !== s ? s : (0, D.createNonce)();
+                    x = null !== (s = n.nonce) && void 0 !== s ? s : (0, v.createNonce)();
                 if (!1 !== n.eagerDispatch) {
-                    let t = (0, D.default)({
+                    let t = (0, v.default)({
                         channelId: e,
                         content: l,
                         tts: E,
@@ -693,7 +693,7 @@ function(e, t, n) {
                             poll: R
                         }), g.default.recordMessageSendApiResponse(x), o.default.dispatch({
                             type: "SLOWMODE_RESET_COOLDOWN",
-                            slowmodeType: Z.SlowmodeType.SendMessage,
+                            slowmodeType: q.SlowmodeType.SendMessage,
                             channelId: e
                         }), o.default.dispatch({
                             type: "EMOJI_TRACK_USAGE",
@@ -745,8 +745,8 @@ function(e, t, n) {
                                 else if (t === I.CodedLinkType.APP_DIRECTORY_PROFILE) $.default.track(eo.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_SENT, {
                                     application_id: l,
                                     device_platform: r.isMobile ? "mobile_web" : "desktop_web",
-                                    guild_id: q.default.getGuildId(),
-                                    channel_id: Q.default.getChannelId()
+                                    guild_id: Q.default.getGuildId(),
+                                    channel_id: X.default.getChannelId()
                                 });
                                 else if (t === I.CodedLinkType.ACTIVITY_BOOKMARK);
                                 else if (t === I.CodedLinkType.EMBEDDED_ACTIVITY_INVITE);
@@ -795,7 +795,7 @@ function(e, t, n) {
                                     null != t && t > 0 && o.default.dispatch({
                                         type: "SLOWMODE_SET_COOLDOWN",
                                         channelId: e,
-                                        slowmodeType: Z.SlowmodeType.SendMessage,
+                                        slowmodeType: q.SlowmodeType.SendMessage,
                                         cooldownMs: t * ee.default.Millis.SECOND
                                     })
                                 } else m.AUTOMOD_ERROR_CODES.has(u.body.code) ? o.default.dispatch({
@@ -813,7 +813,7 @@ function(e, t, n) {
                                 type: "MESSAGE_SEND_FAILED",
                                 messageId: x,
                                 channelId: e
-                            }), (0, v.logMessageSendFailure)({
+                            }), (0, D.logMessageSendFailure)({
                                 failureCode: u.hasErr ? void 0 : u.status,
                                 errorMessage: u.hasErr ? u.err.message : void 0
                             })), i(u)

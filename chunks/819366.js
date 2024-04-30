@@ -64,10 +64,10 @@ function(e, t, n) {
             channelId: s,
             parsedUserId: I,
             content: L,
-            inlinePreview: D = !1
+            inlinePreview: v = !1
         } = e, {
-            analyticsLocations: v
-        } = (0, c.default)(_.default.USER_MENTION), M = (0, l.useStateFromStores)([N.default], () => N.default.getUser(r)), y = (0, l.useStateFromStores)([S.default], () => S.default.getChannel(s)), P = null != y ? y.getGuildId() : null, U = D || null == M || null == P || null == s ? void 0 : e => {
+            analyticsLocations: D
+        } = (0, c.default)(_.default.USER_MENTION), M = (0, l.useStateFromStores)([N.default], () => N.default.getUser(r)), y = (0, l.useStateFromStores)([S.default], () => S.default.getChannel(s)), P = null != y ? y.getGuildId() : null, U = v || null == M || null == P || null == s ? void 0 : e => {
             null != y && (0, d.openContextMenuLazy)(e, async () => {
                 let {
                     default: e
@@ -92,11 +92,11 @@ function(e, t, n) {
             ...e,
             children: "@".concat(null != G ? G : b)
         });
-        return D ? (0, i.jsx)(c.AnalyticsLocationProvider, {
-            value: v,
+        return v ? (0, i.jsx)(c.AnalyticsLocationProvider, {
+            value: D,
             children: k()
         }) : (0, i.jsx)(c.AnalyticsLocationProvider, {
-            value: v,
+            value: D,
             children: (0, i.jsx)(u.Popout, {
                 preload: null == M ? void 0 : () => (0, T.maybeFetchUserProfileForPopout)(M.id, M.getAvatarURL(P, 80), {
                     guildId: null != P ? P : void 0,

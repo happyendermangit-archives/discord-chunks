@@ -115,7 +115,7 @@ function(e, t, n) {
         configurable: !0,
         writable: !0
     }) : r[s] = a;
-    let D = new L(l.default, {
+    let v = new L(l.default, {
         CONNECTION_OPEN: function(e) {
             return A ? A = !1 : ! function() {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -351,5 +351,5 @@ function(e, t, n) {
             return N(t).updateMembersByMemberIds(n)
         }
     });
-    t.default = D
+    t.default = v
 }

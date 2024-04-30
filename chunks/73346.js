@@ -23,10 +23,10 @@ function(e, t, n) {
             return L
         },
         nativePlatformTypeToSKUOperatingSystem: function() {
-            return D
+            return v
         },
         skuOperatingSystemToText: function() {
-            return v
+            return D
         }
     }), n("653041"), n("998459"), n("47120"), n("411104"), n("789020");
     var i = n("392711"),
@@ -139,7 +139,7 @@ function(e, t, n) {
         return d.HTTP.get(e)
     }
 
-    function D(e) {
+    function v(e) {
         switch (e) {
             case A.PlatformTypes.WINDOWS:
                 return N.OperatingSystems.WINDOWS;
@@ -152,7 +152,7 @@ function(e, t, n) {
         }
     }
 
-    function v(e) {
+    function D(e) {
         switch (e) {
             case N.OperatingSystems.WINDOWS:
                 return p.default.Messages.WINDOWS;

@@ -26,8 +26,8 @@ function(e, t, n) {
         C = n("86724"),
         g = n("847302"),
         L = n("657198"),
-        D = n("321127"),
-        v = n("981631"),
+        v = n("321127"),
+        D = n("981631"),
         M = n("230494");
     t.default = r.forwardRef(function(e, t) {
         let {
@@ -50,10 +50,10 @@ function(e, t, n) {
             onKeyUp: W,
             onTab: K,
             onEnter: z,
-            onSubmit: X,
-            maybeShowAutocomplete: Q,
-            hideAutocomplete: q,
-            moveSelection: Z,
+            onSubmit: Z,
+            maybeShowAutocomplete: X,
+            hideAutocomplete: Q,
+            moveSelection: q,
             spellcheckEnabled: J,
             canUseCommands: $,
             canOnlyUseTextCommands: ee,
@@ -140,10 +140,10 @@ function(e, t, n) {
                 if (s.length > 0) {
                     var n, i;
                     let e = s[0];
-                    S.SlateTransforms.selectCommandOption(eN, e.name), c.ComponentDispatch.dispatch(v.ComponentActions.SHAKE_APP, {
+                    S.SlateTransforms.selectCommandOption(eN, e.name), c.ComponentDispatch.dispatch(D.ComponentActions.SHAKE_APP, {
                         duration: 200,
                         intensity: 2
-                    }), (0, l.trackWithMetadata)(v.AnalyticEvents.APPLICATION_COMMAND_VALIDATION_FAILED, {
+                    }), (0, l.trackWithMetadata)(D.AnalyticEvents.APPLICATION_COMMAND_VALIDATION_FAILED, {
                         application_id: null == t ? void 0 : t.applicationId,
                         command_id: null == t ? void 0 : null === (n = t.rootCommand) || void 0 === n ? void 0 : n.id,
                         argument_type: o.ApplicationCommandOptionType[null !== (i = null == e ? void 0 : e.type) && void 0 !== i ? i : 3],
@@ -152,11 +152,11 @@ function(e, t, n) {
                     return
                 }
             }
-            null == X || X((0, f.toTextValue)(h.EditorUtils.richValue(eN), {
+            null == Z || Z((0, f.toTextValue)(h.EditorUtils.richValue(eN), {
                 mode: "raw",
                 ignoreTrailingEmptyNodes: !0
             }), t, e)
-        }, [y.id, eN, X, ep, $]);
+        }, [y.id, eN, Z, ep, $]);
         (0, N.default)(t, eN, y, eO), (0, R.default)(eN, eE, F);
         let {
             handleKeyDown: eR,
@@ -171,18 +171,18 @@ function(e, t, n) {
             onEnter: z,
             allowNewLines: ei,
             submit: eO,
-            hideAutocomplete: q,
-            moveSelection: Z
+            hideAutocomplete: Q,
+            moveSelection: q
         }), {
             handlePaste: eg,
             handleGlobalPaste: eL
-        } = (0, O.default)(eN, eS, x), eD = r.useCallback(e => {
-            null == Q || Q()
-        }, [Q]), ev = r.useCallback(e => {
+        } = (0, O.default)(eN, eS, x), ev = r.useCallback(e => {
+            null == X || X()
+        }, [X]), eD = r.useCallback(e => {
             e !== eI.current ? ef.current && (null == V || V(null, (0, f.toTextValue)(e, {
                 mode: "raw"
-            }), e)) : ef.current && Q()
-        }, [Q, V]);
+            }), e)) : ef.current && X()
+        }, [X, V]);
         r.useLayoutEffect(() => {
             eT.current && (eI.current = n, eh(eN, "parent", {
                 value: n
@@ -197,10 +197,10 @@ function(e, t, n) {
         }, [y, eN, ep]);
         let eM = r.useCallback((e, t) => (0, A.default)(e, t), []),
             ey = r.useCallback(e => (0, L.default)(eN, e, y.id), [y.id, eN]),
-            eP = r.useCallback(e => (0, D.default)(e), []);
+            eP = r.useCallback(e => (0, v.default)(e), []);
         return (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(_.ComponentAction, {
-                event: v.ComponentActions.GLOBAL_CLIPBOARD_PASTE,
+                event: D.ComponentActions.GLOBAL_CLIPBOARD_PASTE,
                 handler: eL
             }), (0, i.jsx)("div", {
                 ref: eE,
@@ -216,10 +216,10 @@ function(e, t, n) {
                     spellCheck: J,
                     autoFocus: !et,
                     canFocus: !b,
-                    onChange: ev,
+                    onChange: eD,
                     onFocus: H,
                     onBlur: Y,
-                    onClick: eD,
+                    onClick: ev,
                     onPaste: eg,
                     onKeyDown: eR,
                     onKeyUp: eC,

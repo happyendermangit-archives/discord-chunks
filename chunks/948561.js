@@ -3,10 +3,10 @@ function(e, t, n) {
     let i;
     n.r(t), n.d(t, {
         MAX_TIMEOUT_FOR_JITTER: function() {
-            return v
+            return D
         },
         MESSAGE_SCAN_TIMEOUT: function() {
-            return D
+            return v
         }
     }), n("47120"), n("724458");
     var r = n("952639"),
@@ -33,8 +33,8 @@ function(e, t, n) {
         C = n("735020"),
         g = n("981631"),
         L = n("526761");
-    let D = 3e3,
-        v = 800,
+    let v = 3e3,
+        D = 800,
         M = {};
 
     function y(e) {
@@ -127,13 +127,13 @@ function(e, t, n) {
                             })
                         }
                     }(e)
-                }, D)
+                }, v)
             })
         });
         let s = n || new Set(r.map(e => e.channel_id)).size > 1;
         i ? setTimeout(() => {
             b(r.filter(e => null != M[y(e)]), s)
-        }, Math.random() * v) : b(r, s)
+        }, Math.random() * D) : b(r, s)
     }
 
     function w(e) {
@@ -321,14 +321,14 @@ function(e, t, n) {
             }), !!(t.length > 0) && (G(t), !0)
         }(t)
     }
-    async function X() {
+    async function Z() {
         if (!(0, O.isEligibleForExplicitMediaRedaction)()) return;
         let {
             body: e
         } = await (0, p.fetchValidContentScanVersion)();
         i = e.version
     }
-    class Q extends d.default {
+    class X extends d.default {
         constructor(...e) {
             var t, n, i;
             super(...e), t = this, n = "actions", i = {
@@ -345,7 +345,7 @@ function(e, t, n) {
                 LOAD_PINNED_MESSAGES_SUCCESS: F,
                 USER_SETTINGS_PROTO_UPDATE: W,
                 CHANNEL_RTC_UPDATE_CHAT_OPEN: K,
-                POST_CONNECTION_OPEN: X
+                POST_CONNECTION_OPEN: Z
             }, n in t ? Object.defineProperty(t, n, {
                 value: i,
                 enumerable: !0,
@@ -354,5 +354,5 @@ function(e, t, n) {
             }) : t[n] = i
         }
     }
-    t.default = new Q
+    t.default = new X
 }

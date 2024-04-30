@@ -22,8 +22,8 @@ function(e, t, n) {
         C = !1,
         g = 0,
         L = !1,
-        D = null,
-        v = () => !0;
+        v = null,
+        D = () => !0;
 
     function M(e) {
         A.add(e)
@@ -46,7 +46,7 @@ function(e, t, n) {
     }
     class U extends(i = l.default.Store) {
         initialize() {
-            this.waitFor(d.default), this.syncWith([d.default], v)
+            this.waitFor(d.default), this.syncWith([d.default], D)
         }
         checkAndFetchReferralsRemaining() {
             null == E && !h && p < 5 && (null == O || O < Date.now()) && (0, _.fetchReferralsRemaining)()
@@ -85,7 +85,7 @@ function(e, t, n) {
             return L
         }
         getRefreshAt() {
-            return D
+            return v
         }
         getRelevantReferralTrialOffers() {
             return N
@@ -112,7 +112,7 @@ function(e, t, n) {
         },
         BILLING_REFERRALS_REMAINING_FETCH_START: function(e) {
             let {} = e;
-            L = !1, D = null, h = !0
+            L = !1, v = null, h = !0
         },
         BILLING_REFERRALS_REMAINING_FETCH_SUCCESS: function(e) {
             let {
@@ -122,11 +122,11 @@ function(e, t, n) {
                 recipient_status: r,
                 has_eligible_friends: s
             } = e;
-            L = null == i && s, h = !1, E = t, T = n, D = i, f = r
+            L = null == i && s, h = !1, E = t, T = n, v = i, f = r
         },
         BILLING_REFERRALS_REMAINING_FETCH_FAIL: function(e) {
             let {} = e;
-            L = !1, D = null, h = !1, p += 1, O = Date.now() + 1e3 * Math.pow(2, p)
+            L = !1, v = null, h = !1, p += 1, O = Date.now() + 1e3 * Math.pow(2, p)
         },
         BILLING_CREATE_REFERRAL_PREVIEW_START: function(e) {
             let {
@@ -193,7 +193,7 @@ function(e, t, n) {
         },
         LOAD_MESSAGES_AROUND_SUCCESS: y,
         LOGOUT: function() {
-            E = null, I = {}, T = [], S = new Set, h = !1, A = new Set, m = new Set, N = {}, p = 0, O = null, R = [], C = !1, g = 0, L = !1, D = null, f = new Map
+            E = null, I = {}, T = [], S = new Set, h = !1, A = new Set, m = new Set, N = {}, p = 0, O = null, R = [], C = !1, g = 0, L = !1, v = null, f = new Map
         }
     })
 }

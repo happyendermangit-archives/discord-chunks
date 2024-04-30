@@ -31,7 +31,7 @@ function(e, t, n) {
         C = n("981631"),
         g = n("689938"),
         L = n("187885");
-    let D = {
+    let v = {
         [d.BadgeCategory.STAFF]: {
             IconComponent: O.default,
             foregroundDarkColor: o.default.unsafe_rawColors.WHITE_400.css,
@@ -81,7 +81,7 @@ function(e, t, n) {
         [d.BadgeCategory.NONE]: {}
     };
 
-    function v(e) {
+    function D(e) {
         let {
             guildTraits: t
         } = e;
@@ -168,7 +168,7 @@ function(e, t, n) {
                     variant: "text-xs/medium",
                     children: a
                 }) : null]
-            }), n.premium ? (0, i.jsx)(v, {
+            }), n.premium ? (0, i.jsx)(D, {
                 guildTraits: n
             }) : null]
         })
@@ -192,7 +192,7 @@ function(e, t, n) {
                 let e = T.default.getCurrentUser();
                 return I.default.isMember(null == r ? void 0 : r.id, null == e ? void 0 : e.id)
             }),
-            v = (0, a.useStateFromStores)([E.default], () => E.default.theme),
+            D = (0, a.useStateFromStores)([E.default], () => E.default.theme),
             y = (0, _.getGuildTraits)(r),
             P = (0, d.getBadgeCategory)(y);
         if (P === d.BadgeCategory.NONE) return null;
@@ -204,11 +204,11 @@ function(e, t, n) {
             foregroundLightColor: B,
             premiumBackgroundColor: k,
             premiumForegroundColor: V
-        } = D[P];
+        } = v[P];
         if (null == U) return null;
         y.premium && (t = V, n = k);
-        let x = (0, l.isThemeDark)(v) ? w : B,
-            F = (0, l.isThemeDark)(v) ? b : G;
+        let x = (0, l.isThemeDark)(D) ? w : B,
+            F = (0, l.isThemeDark)(D) ? b : G;
         t = null != t ? t : x, n = null != n ? n : F;
         let H = e => {
             y.premium && g && !O && (e.stopPropagation(), e.preventDefault(), (0, c.openGuildBoostingMarketingModal)({

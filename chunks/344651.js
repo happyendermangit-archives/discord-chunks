@@ -31,10 +31,10 @@ function(e, t, n) {
         C = n("78839"),
         g = n("936101"),
         L = n("868158"),
-        D = n("483012"),
-        v = n("955132");
+        v = n("483012"),
+        D = n("955132");
     let M = new d.default("ConnectionStore"),
-        y = new D.default(v.socket, (e, t) => {
+        y = new v.default(D.socket, (e, t) => {
             var n;
             e = null != e ? e : {
                 type: "CHANNEL_UPDATES",
@@ -49,7 +49,7 @@ function(e, t, n) {
                 });
             return e.channels.push(null != s ? s : i), e
         }, e => "CHANNEL_UPDATE" !== e),
-        P = new D.default(v.socket, (e, t) => ((e = null == e ? {
+        P = new v.default(D.socket, (e, t) => ((e = null == e ? {
             type: "SOUNDBOARD_SOUNDS_RECEIVED",
             updates: []
         } : e).updates.push({
@@ -65,11 +65,11 @@ function(e, t, n) {
                 guildId: t.guild_id
             }))
         }), e), e => "SOUNDBOARD_SOUNDS" !== e),
-        U = new D.default(v.socket, (e, t) => ((e = null != e ? e : {
+        U = new v.default(D.socket, (e, t) => ((e = null != e ? e : {
             type: "GUILD_MEMBERS_CHUNK_BATCH",
             chunks: []
         }).chunks.push(t), e), e => "GUILD_MEMBERS_CHUNK" !== e),
-        b = new D.default(v.socket, (e, t) => ((e = null == e ? {
+        b = new v.default(D.socket, (e, t) => ((e = null == e ? {
             type: "PRESENCE_UPDATES",
             updates: []
         } : e).updates.push(t), e), e => "PRESENCE_UPDATE" !== e && "GUILD_MEMBERS_CHUNK" !== e),
@@ -94,7 +94,7 @@ function(e, t, n) {
     }
 
     function V(e) {
-        a.default.dispatch(e).catch(t => v.socket.resetSocketOnDispatchError({
+        a.default.dispatch(e).catch(t => D.socket.resetSocketOnDispatchError({
             error: t,
             action: e.type
         }))
@@ -181,7 +181,7 @@ function(e, t, n) {
     B(["INITIAL_GUILD"], e => "full" === e.data_mode ? null : A.ChannelLoader.loadGuildIds([e.id]), e => {
         I.default.initialGuild.measure(() => {
             s.default.Emitter.batched(() => {
-                let t = L.hydrateInitialGuild(e, v.socket.identifyStartTime);
+                let t = L.hydrateInitialGuild(e, D.socket.identifyStartTime);
                 null != p.default.getCurrentUser() && (V({
                     type: "GUILD_CREATE",
                     guild: t
@@ -211,7 +211,7 @@ function(e, t, n) {
         I.default.readySupplemental.measure(() => {
             s.default.Emitter.batched(() => {
                 var t, n;
-                e = I.default.hydrateReadySupplemental.measure(() => L.hydrateReadySupplementalPayload(e, v.socket.identifyStartTime));
+                e = I.default.hydrateReadySupplemental.measure(() => L.hydrateReadySupplementalPayload(e, D.socket.identifyStartTime));
                 let i = e => e.map(e => ({
                         user: e.user,
                         status: e.status,
@@ -258,7 +258,7 @@ function(e, t, n) {
                     type: "VOICE_STATE_UPDATES",
                     voiceStates: l,
                     initial: !0
-                }), v.localVoiceState.update()
+                }), D.localVoiceState.update()
             })
         }), setTimeout(() => V({
             type: "POST_CONNECTION_OPEN"
@@ -283,7 +283,7 @@ function(e, t, n) {
         }
         I.default.ready.measure(() => {
             s.default.Emitter.batched(() => {
-                let t = (e = I.default.hydrateReady.measure(() => L.hydrateReadyPayloadPrioritized(e, v.socket.identifyStartTime, n))).private_channels.map(e => (0, f.createChannelRecordFromServer)(e)),
+                let t = (e = I.default.hydrateReady.measure(() => L.hydrateReadyPayloadPrioritized(e, D.socket.identifyStartTime, n))).private_channels.map(e => (0, f.createChannelRecordFromServer)(e)),
                     i = e.guilds.filter(e => !0 === e.unavailable && !0 !== e.geo_restricted).map(e => e.id),
                     r = e.guilds.filter(e => !0 !== e.unavailable),
                     s = e.guilds.filter(e => !0 === e.geo_restricted);
@@ -330,11 +330,11 @@ function(e, t, n) {
                     type: "UPDATE_TOKEN",
                     token: e.auth_token,
                     userId: e.user.id
-                }), v.localPresenceState.update(), v.localVoiceState.update()
+                }), D.localPresenceState.update(), D.localVoiceState.update()
             })
         })
     }), w(["RESUMED"], () => {
-        v.localPresenceState.forceUpdate(), v.localVoiceState.forceUpdate(), V({
+        D.localPresenceState.forceUpdate(), D.localVoiceState.forceUpdate(), V({
             type: "CONNECTION_RESUMED"
         })
     }), w(["TYPING_START"], e => {
@@ -584,7 +584,7 @@ function(e, t, n) {
                     clientStatus: r,
                     broadcast: a
                 })
-            }), D.default.flush("GUILD_MEMBERS_CHUNK")
+            }), v.default.flush("GUILD_MEMBERS_CHUNK")
         })
     }), w(["THREAD_MEMBER_LIST_UPDATE"], e => {
         s.default.Emitter.batched(() => {
@@ -609,7 +609,7 @@ function(e, t, n) {
                     clientStatus: r,
                     broadcast: a
                 })
-            }), D.default.flush()
+            }), v.default.flush()
         })
     }), w(["GUILD_BAN_ADD", "GUILD_BAN_REMOVE", "GUILD_MEMBER_ADD", "GUILD_MEMBER_UPDATE", "GUILD_MEMBER_REMOVE"], (e, t) => {
         V({
@@ -971,7 +971,7 @@ function(e, t, n) {
                     case "INSERT":
                         t(r)
                 }
-            }), D.default.flush(), V({
+            }), v.default.flush(), V({
                 type: "GUILD_MEMBER_LIST_UPDATE",
                 guildId: e.guild_id,
                 id: e.id,

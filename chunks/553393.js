@@ -26,8 +26,8 @@ function(e, t, n) {
         C = n("113434"),
         g = n("497505"),
         L = n("918701"),
-        D = n("874137"),
-        v = n("644646"),
+        v = n("874137"),
+        D = n("644646"),
         M = n("667105"),
         y = n("981631"),
         P = n("231338"),
@@ -53,9 +53,9 @@ function(e, t, n) {
             quest: N,
             location: g.QuestContent.MEMBERS_LIST
         }), F = (0, C.useIsQuestExpired)(N), H = (null == N ? void 0 : null === (t = N.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, Y = (null == N ? void 0 : null === (S = N.userStatus) || void 0 === S ? void 0 : S.enrolledAt) != null, j = (null == N ? void 0 : null === (h = N.userStatus) || void 0 === h ? void 0 : h.completedAt) != null, W = (0, l.useStateFromStores)([A.default], () => A.default.getState().theme), K = (0, u.isThemeDark)(W) ? P.ThemeTypes.DARK : P.ThemeTypes.LIGHT, z = (0, l.useStateFromStores)([f.default], () => f.default.useReducedMotion), {
-            ref: X,
-            height: Q
-        } = (0, I.default)(), [q, Z] = r.useState(z), J = (0, T.useWindowDispatch)(), $ = (0, a.useListContainerScrollerRef)();
+            ref: Z,
+            height: X
+        } = (0, I.default)(), [Q, q] = r.useState(z), J = (0, T.useWindowDispatch)(), $ = (0, a.useListContainerScrollerRef)();
         r.useEffect(() => {
             let e = $.current;
             return null == e || e.addEventListener("scroll", k), () => {
@@ -66,15 +66,15 @@ function(e, t, n) {
                 from: {
                     height: 0
                 },
-                height: null != Q ? Q : 0,
+                height: null != X ? X : 0,
                 config: {
                     tension: 450,
                     friction: 45
                 },
                 immediate: z,
-                onRest: () => Z(!0)
+                onRest: () => q(!0)
             }),
-            et = (0, s.useTransition)(q, {
+            et = (0, s.useTransition)(Q, {
                 from: {
                     opacity: 0,
                     scale: 0
@@ -147,7 +147,7 @@ function(e, t, n) {
                 handleClickCta: es,
                 tileAssetType: "game"
             };
-        return (0, i.jsx)(D.QuestContentImpressionTracker, {
+        return (0, i.jsx)(v.QuestContentImpressionTracker, {
             questOrQuests: N,
             questContent: g.QuestContent.MEMBERS_LIST,
             trackGuildAndChannelMetadata: !0,
@@ -155,17 +155,17 @@ function(e, t, n) {
                 ref: t => {
                     e.current = t
                 },
-                "aria-expanded": q,
+                "aria-expanded": Q,
                 className: b.wrapper,
                 style: {
                     width: p,
                     height: ee.height,
-                    overflow: q ? "visible" : "hidden",
+                    overflow: Q ? "visible" : "hidden",
                     borderRadius: ei
                 },
                 children: (0, i.jsxs)("div", {
                     ref: e => {
-                        X.current = e
+                        Z.current = e
                     },
                     className: b.container,
                     style: {
@@ -211,7 +211,7 @@ function(e, t, n) {
                                     }),
                                     className: b.assetTile,
                                     src: (0, L.getGameTileAssetUrl)(N, K)
-                                }), "reward" === el.tileAssetType && (0, i.jsx)(v.default, {
+                                }), "reward" === el.tileAssetType && (0, i.jsx)(D.default, {
                                     className: b.assetTile,
                                     quest: N,
                                     questContent: g.QuestContent.MEMBERS_LIST,

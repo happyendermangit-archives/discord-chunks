@@ -42,7 +42,7 @@ function(e, t, n) {
     let g = "everyone",
         L = 0;
 
-    function D(e, t, n, i) {
+    function v(e, t, n, i) {
         switch (t) {
             case O.StatusTypes.ONLINE:
             case O.StatusTypes.OFFLINE:
@@ -68,7 +68,7 @@ function(e, t, n) {
         }
     }
 
-    function v(e, t, n) {
+    function D(e, t, n) {
         let i = n === T.default.getId(),
             r = m.default.isMobileOnline(n),
             s = i ? N.default.getStatus() : m.default.getStatus(n, e),
@@ -113,7 +113,7 @@ function(e, t, n) {
                 var n;
                 let i = t,
                     r = Math.max(0, null !== (n = e.count) && void 0 !== n ? n : 0);
-                return t += r + 1, D(this.guildId, e.id, r, i)
+                return t += r + 1, v(this.guildId, e.id, r, i)
             }), this.rows.length = t
         }
         sync(e, t) {
@@ -134,9 +134,9 @@ function(e, t, n) {
                 group: n,
                 member: i
             } = t;
-            if (null != n) this.rows.splice(e, 0, D(this.guildId, n.id, n.count));
+            if (null != n) this.rows.splice(e, 0, v(this.guildId, n.id, n.count));
             else if (null != i) {
-                let t = v(this.guildId, this.ownerId, i.user.id);
+                let t = D(this.guildId, this.ownerId, i.user.id);
                 if (null == t) return;
                 this.rows.splice(e, 0, t), this.members[i.user.id] = t
             }
@@ -147,9 +147,9 @@ function(e, t, n) {
                 group: n,
                 member: i
             } = t, r = this.rows[e];
-            if (null != r && "MEMBER" === r.type && delete this.members[r.user.id], null != n) this.rows[e] = D(this.guildId, n.id, n.count);
+            if (null != r && "MEMBER" === r.type && delete this.members[r.user.id], null != n) this.rows[e] = v(this.guildId, n.id, n.count);
             else if (null != i) {
-                let t = v(this.guildId, this.ownerId, i.user.id);
+                let t = D(this.guildId, this.ownerId, i.user.id);
                 if (null == t) return;
                 this.rows[e] = t, this.members[i.user.id] = t
             }
@@ -161,7 +161,7 @@ function(e, t, n) {
         }
         rebuildMember(e) {
             let t = this.members[e];
-            null != t && (Object.assign(t, v(this.guildId, this.ownerId, e)), this.version++)
+            null != t && (Object.assign(t, D(this.guildId, this.ownerId, e)), this.version++)
         }
         rebuildMembers() {
             o().forEach(this.members, (e, t) => {

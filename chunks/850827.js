@@ -27,8 +27,8 @@ function(e, t, n) {
         C = n("276149"),
         g = n("636245"),
         L = n("697761"),
-        D = n("611459"),
-        v = n("544671"),
+        v = n("611459"),
+        D = n("544671"),
         M = n("757182"),
         y = n("910424"),
         P = n("981631"),
@@ -57,12 +57,12 @@ function(e, t, n) {
             W = V === h.Types.STREAM_PREVIEW || null != a,
             K = (0, A.default)(n),
             z = (0, E.isStageActivity)(n),
-            X = j ? S.default.Align.END : S.default.Align.STRETCH,
-            Q = K || W ? S.default.Direction.HORIZONTAL : S.default.Direction.VERTICAL,
-            q = (null == n ? void 0 : n.type) === P.ActivityTypes.HANG_STATUS,
-            Z = (0, u.useStateFromStores)([f.default, I.default], () => {
+            Z = j ? S.default.Align.END : S.default.Align.STRETCH,
+            X = K || W ? S.default.Direction.HORIZONTAL : S.default.Direction.VERTICAL,
+            Q = (null == n ? void 0 : n.type) === P.ActivityTypes.HANG_STATUS,
+            q = (0, u.useStateFromStores)([f.default, I.default], () => {
                 var e;
-                return q ? I.default.getChannel(null === (e = f.default.getVoiceStateForUser(r.id)) || void 0 === e ? void 0 : e.channelId) : null
+                return Q ? I.default.getChannel(null === (e = f.default.getVoiceStateForUser(r.id)) || void 0 === e ? void 0 : e.channelId) : null
             });
         if ((0, m.default)(n)) t = [(0, i.jsx)(p.default, {
             look: k,
@@ -75,7 +75,7 @@ function(e, t, n) {
             platform: c.default.get(P.PlatformTypes.PLAYSTATION)
         }, "ConnectPlatformActivityButton")];
         else if (K) {
-            let e = (0, i.jsx)(v.default, {
+            let e = (0, i.jsx)(D.default, {
                 activity: n,
                 user: r,
                 color: B,
@@ -84,7 +84,7 @@ function(e, t, n) {
                 channelId: G,
                 source: w
             }, "spotify-activity-sync-button");
-            t = [(0, i.jsx)(D.default, {
+            t = [(0, i.jsx)(v.default, {
                 activity: n,
                 user: r,
                 color: B,
@@ -108,10 +108,10 @@ function(e, t, n) {
             look: k,
             applicationStream: a
         }, "watch-button")];
-        else if (q && null != Z) t = [(0, i.jsx)(C.default, {
+        else if (Q && null != q) t = [(0, i.jsx)(C.default, {
             color: B,
             look: k,
-            hangStatusChannel: Z
+            hangStatusChannel: q
         }, "hang-status-button")];
         else {
             let e = (0, i.jsx)(M.default, {
@@ -143,11 +143,11 @@ function(e, t, n) {
             if (null == s && null == a && null == e && null == o) return null;
             t = [s, a, e, o]
         }
-        let J = Q === S.default.Direction.VERTICAL;
+        let J = X === S.default.Direction.VERTICAL;
         return (0, i.jsx)(S.default, {
             grow: 0,
-            align: X,
-            direction: Q,
+            align: Z,
+            direction: X,
             wrap: J ? S.default.Wrap.WRAP : S.default.Wrap.NO_WRAP,
             className: s()(_, U.buttonsWrapper, J ? U.vertical : U.horizontal),
             onClick: function(e) {

@@ -5,7 +5,7 @@ function(e, t, n) {
             return a
         },
         default: function() {
-            return D
+            return v
         }
     }), n("518263"), n("970173"), n("520712"), n("268111"), n("941497"), n("32026"), n("480839"), n("744285"), n("492257"), n("873817"), n("47120"), n("789020");
     var i, r, s, a, o, l, u, d, _ = n("512722"),
@@ -85,7 +85,7 @@ function(e, t, n) {
             } : void 0
         }))) && void 0 !== t ? t : []
     }(d = a || (a = {})).Connecting = "connecting", d.Connect = "connect", d.Disconnect = "disconnect", d.Resuming = "resuming", d.Ready = "ready", d.Speaking = "speaking", d.Video = "video", d.Ping = "ping", d.ClientDisconnect = "client-disconnect", d.Codecs = "codecs", d.MediaSessionId = "media-session-id", d.MediaSinkWants = "media-sink-wants", d.VoiceBackendVersion = "voice-backend-version", d.KeyframeInterval = "keyframe-interval", d.ChannelOptionsUpdateSecureFramesProtocol = "update-secure-frames-protocol", d.Flags = "flags", d.Platform = "platform", d.SDP = "sdp", d.Encryption = "encryption", d.SpeedTest = "speed-test", d.BandwidthEstimationExperiment = "bandwidth-estimation-experiment", d.SecureFramesInit = "secure-frames-init", d.SecureFramesPrepareTransition = "secure-frames-prepare-transition", d.SecureFramesExecuteTransition = "secure-frames-execute-transition", d.SecureFramesPrepareEpoch = "secure-frames-prepare-epoch", d.MLSExternalSenderPackage = "mls-external-sender-package", d.MLSProposals = "mls-proposals", d.MLSPrepareCommitTransition = "mls-prepare-commit-transition", d.MLSWelcome = "mls-welcome";
-    class D extends I.default {
+    class v extends I.default {
         createWebSocket() {
             this.logger.info("[CONNECT] ".concat(this.url)), null !== this.webSocket && (this.logger.error("Connect called with already existing websocket"), this.cleanupWebSocket(e => e.close(4e3))), this.connectionStartTime = Date.now(), this.helloTimeout = setTimeout(() => {
                 let e = Date.now() - this.connectionStartTime;

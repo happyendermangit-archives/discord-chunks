@@ -38,10 +38,10 @@ function(e, t, n) {
             channelId: g,
             onClose: L
         } = e, {
-            moreUserDetailsEnabled: D
+            moreUserDetailsEnabled: v
         } = (0, u.useSimplifiedProfileExperiment)({
             location: "BiteSizeProfileBody"
-        }), v = l.default.getName(null == O ? void 0 : O.id, g, t), M = (0, d.default)(t.id, null == O ? void 0 : O.id), y = (0, a.useStateFromStores)([o.default], () => o.default.hidePersonalInformation);
+        }), D = l.default.getName(null == O ? void 0 : O.id, g, t), M = (0, d.default)(t.id, null == O ? void 0 : O.id), y = (0, a.useStateFromStores)([o.default], () => o.default.hidePersonalInformation);
         return (0, i.jsxs)("div", {
             className: p.body,
             children: [(0, i.jsx)(E.default, {
@@ -50,7 +50,7 @@ function(e, t, n) {
                 guildId: null == O ? void 0 : O.id,
                 usernameIcon: t.hasAvatarForGuild(null == O ? void 0 : O.id) && (0, i.jsx)(f.default, {
                     user: t,
-                    nickname: v
+                    nickname: D
                 }),
                 pronouns: null == r ? void 0 : r.pronouns,
                 tags: (0, i.jsx)(I.UserProfileBadgesTag, {
@@ -60,7 +60,7 @@ function(e, t, n) {
                 nicknameIcons: (0, i.jsxs)(i.Fragment, {
                     children: [(0, i.jsx)(_.default, {
                         userId: t.id
-                    }), D && !y && (0, i.jsx)(c.default, {
+                    }), v && !y && (0, i.jsx)(c.default, {
                         className: s()(p.noteIcon, {
                             [p.visible]: R
                         }),
@@ -71,7 +71,7 @@ function(e, t, n) {
             }), (0, i.jsx)(N.default, {
                 user: t,
                 onClose: L
-            }), D && (0, i.jsx)(h.default, {
+            }), v && (0, i.jsx)(h.default, {
                 user: t,
                 bio: null == r ? void 0 : r.bio,
                 hidePersonalInformation: y,

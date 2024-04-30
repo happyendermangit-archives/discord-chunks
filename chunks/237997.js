@@ -45,8 +45,8 @@ function(e, t, n) {
         C = {},
         g = null,
         L = new Set,
-        D = !1,
-        v = null,
+        v = !1,
+        D = null,
         M = !1,
         y = !1,
         P = new Set,
@@ -213,7 +213,7 @@ function(e, t, n) {
             return y
         }
         get incompatibleApp() {
-            return D
+            return v
         }
         getActiveRegions() {
             return P
@@ -376,7 +376,7 @@ function(e, t, n) {
             G.disableExternalLinkAlert = !0
         },
         OVERLAY_INCOMPATIBLE_APP: function() {
-            D = !0
+            v = !0
         },
         OVERLAY_SET_UI_LOCKED: function(e) {
             let {

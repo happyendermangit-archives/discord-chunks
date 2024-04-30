@@ -5,7 +5,7 @@ function(e, t, n) {
             return r
         },
         extractSDP: function() {
-            return D
+            return v
         },
         generateSessionDescription: function() {
             return C
@@ -20,7 +20,7 @@ function(e, t, n) {
             return y
         },
         truncateSDP: function() {
-            return v
+            return D
         },
         validateSdp: function() {
             return M
@@ -357,7 +357,7 @@ function(e, t, n) {
         }
     }
 
-    function D(e) {
+    function v(e) {
         let t = T.parse(e).media.reduce((e, t) => {
             let n, {
                 type: i,
@@ -395,11 +395,11 @@ function(e, t, n) {
         return t.codecs = c()(t.codecs, d()), t
     }
 
-    function v(e) {
+    function D(e) {
         var t;
         let {
             codecs: n
-        } = D(e), i = n.find(e => e.name === S.Codecs.VP8), r = RegExp("^a=ice|a=extmap|a=fingerprint|opus|VP8|".concat(null !== (t = null == i ? void 0 : i.rtxPayloadType) && void 0 !== t ? t : 0, " rtx"), "i");
+        } = v(e), i = n.find(e => e.name === S.Codecs.VP8), r = RegExp("^a=ice|a=extmap|a=fingerprint|opus|VP8|".concat(null !== (t = null == i ? void 0 : i.rtxPayloadType) && void 0 !== t ? t : 0, " rtx"), "i");
         return {
             sdp: [...new Set(e.split(/\r\n/).filter(e => r.test(e)))].join("\n"),
             codecs: n

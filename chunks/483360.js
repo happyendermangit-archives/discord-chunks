@@ -30,8 +30,8 @@ function(e, t, n) {
         C = n("592125"),
         g = n("984933"),
         L = n("271383"),
-        D = n("430824"),
-        v = n("375954"),
+        v = n("430824"),
+        D = n("375954"),
         M = n("496675"),
         y = n("158776"),
         P = n("699516"),
@@ -50,10 +50,10 @@ function(e, t, n) {
         W = n("727785"),
         K = n("176505"),
         z = n("689938");
-    let X = new c.default("AutocompleteUtils"),
-        Q = () => !0,
-        q = /(\t|\s)/,
-        Z = [],
+    let Z = new c.default("AutocompleteUtils"),
+        X = () => !0,
+        Q = /(\t|\s)/,
+        q = [],
         J = (i = n("786074").default).MENTION_EVERYONE,
         $ = i.MENTION_HERE,
         ee = i.LAUNCHABLE_APPLICATIONS;
@@ -86,7 +86,7 @@ function(e, t, n) {
             if (l = r, u = e, l.split(/(?:,| )+/).every(e => RegExp(x.default.escape(e), "i").test(u))) return 3;
             if (o && s()(r, e)) return 1
         } catch (e) {
-            X.error(e)
+            Z.error(e)
         }
         return 0
     }
@@ -154,7 +154,7 @@ function(e, t, n) {
 
     function eo(e, t) {
         let n = C.default.getChannel(e);
-        return null == e || null == n ? [] : o()(v.default.getMessages(e).toArray()).reverse().uniqBy(e => e.author.id).map(e => G.default.getUser(e.author.id)).filter(e => {
+        return null == e || null == n ? [] : o()(D.default.getMessages(e).toArray()).reverse().uniqBy(e => e.author.id).map(e => G.default.getUser(e.author.id)).filter(e => {
             if (null == e || e.isNonUserBot()) return !1;
             let t = n.getGuildId();
             return null == t || er(L.default.getMember(t, e.id))
@@ -254,7 +254,7 @@ function(e, t, n) {
                 filter: a,
                 allowSnowflake: o
             } = e;
-            if (null == D.default.getGuild(t)) return [];
+            if (null == v.default.getGuild(t)) return [];
             if (0 === n.length && s) {
                 let e = eo(U.default.getChannelId(t), i);
                 if (e.length > 0) return e
@@ -285,7 +285,7 @@ function(e, t, n) {
                     guildId: i,
                     limit: r = j.MAX_AUTOCOMPLETE_RESULTS,
                     fuzzy: s = !0,
-                    filter: a = Q,
+                    filter: a = X,
                     type: d = g.GUILD_SELECTABLE_CHANNELS_KEY,
                     allowEmptyQueries: _ = !1,
                     requireVocalConnectAccess: c = !0,
@@ -331,7 +331,7 @@ function(e, t, n) {
                                 let n = t[e.guild_id];
                                 if (null == n) {
                                     var i;
-                                    n = t[e.guild_id] = null === (i = D.default.getGuild(e.guild_id)) || void 0 === i ? void 0 : i.toString().toLocaleLowerCase()
+                                    n = t[e.guild_id] = null === (i = v.default.getGuild(e.guild_id)) || void 0 === i ? void 0 : i.toString().toLocaleLowerCase()
                                 }
                                 return n
                             }(e, f), function(e, t) {
@@ -369,14 +369,14 @@ function(e, t, n) {
                 query: t,
                 limit: n = 10,
                 fuzzy: i = !0,
-                filter: r = Q,
+                filter: r = X,
                 boosters: s = {}
             } = e, a = "" === t ? "" : t.toLocaleLowerCase(), u = {
                 exactQuery: RegExp("^".concat(x.default.escape(a)), "i"),
                 containQuery: RegExp(x.default.escape(a), "i"),
                 queryLower: a
             }, d = [];
-            for (let e of o()(D.default.getGuilds()).values().value()) {
+            for (let e of o()(v.default.getGuilds()).values().value()) {
                 if (!r(e)) continue;
                 let t = e.name.toLocaleLowerCase(),
                     n = ei(t, u, i);
@@ -395,7 +395,7 @@ function(e, t, n) {
                 query: t,
                 limit: n = 10,
                 fuzzy: i = !0,
-                filter: r = Q,
+                filter: r = X,
                 boosters: s = {}
             } = e, a = (0, H.stripDiacritics)((0, H.normalize)(t.toLocaleLowerCase())), d = {
                 exactQuery: RegExp("^".concat(x.default.escape(a)), "i"),
@@ -422,7 +422,7 @@ function(e, t, n) {
                 query: t,
                 limit: n = 10,
                 fuzzy: i = !0,
-                filter: r = Q
+                filter: r = X
             } = e, s = t.toLocaleLowerCase(), a = {
                 exactQuery: RegExp("^".concat(x.default.escape(s)), "i"),
                 containQuery: RegExp(x.default.escape(s), "i"),
@@ -450,7 +450,7 @@ function(e, t, n) {
                 query: t,
                 limit: n = 10,
                 fuzzy: i = !0,
-                filter: r = Q
+                filter: r = X
             } = e, s = t.toLocaleLowerCase(), a = {
                 exactQuery: RegExp("^".concat(x.default.escape(s)), "i"),
                 containQuery: RegExp(x.default.escape(s), "i"),
@@ -513,8 +513,8 @@ function(e, t, n) {
             }) : [], f = T.length, S = t.toLowerCase(), h = [];
             if (f < c && l) {
                 let e = n.getGuildId(),
-                    t = D.default.getGuild(e);
-                null != t && (o()(D.default.getRoles(t.id)).filter(t => {
+                    t = v.default.getGuild(e);
+                null != t && (o()(v.default.getRoles(t.id)).filter(t => {
                     let {
                         mentionable: n,
                         name: r,
@@ -548,8 +548,8 @@ function(e, t, n) {
                 status: y.default.getStatus(e.record.id)
             })) : [], _ = u.length, c = t.toLowerCase(), E = [];
             if (_ < j.MAX_AUTOCOMPLETE_RESULTS && a) {
-                let e = D.default.getGuild(n);
-                null != e && (o()(D.default.getRoles(e.id)).filter(e => {
+                let e = v.default.getGuild(n);
+                null != e && (o()(v.default.getRoles(e.id)).filter(e => {
                     let {
                         mentionable: t,
                         name: r,
@@ -702,7 +702,7 @@ function(e, t, n) {
         },
         queryStickers(e) {
             let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-                [n, i] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [null, Q],
+                [n, i] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [null, X],
                 {
                     stickerMetadata: r
                 } = A.default,
@@ -749,16 +749,16 @@ function(e, t, n) {
                     }))
                 })
             }
-            return 0 === (l = o()(l).sortBy(e => -1 * e.score).value()).length && (l = Z), l
+            return 0 === (l = o()(l).sortBy(e => -1 * e.score).value()).length && (l = q), l
         },
-        matchSentinel: (e, t, n) => !q.test(t) && e === n,
+        matchSentinel: (e, t, n) => !Q.test(t) && e === n,
         hasSameRoleAsUsername(e, t) {
             if (!t.isPomelo()) return !1;
-            let n = D.default.getGuild(e.getGuildId());
+            let n = v.default.getGuild(e.getGuildId());
             for (let {
                     name: e
                 }
-                of Object.values(null != n ? D.default.getRoles(n.id) : {}))
+                of Object.values(null != n ? v.default.getRoles(n.id) : {}))
                 if (t.username.startsWith(e.toLowerCase())) return !0;
             return !1
         }

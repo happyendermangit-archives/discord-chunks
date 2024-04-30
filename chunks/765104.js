@@ -17,8 +17,8 @@ function(e, t, n) {
         C = n("9156"),
         g = n("594174"),
         L = n("70956"),
-        D = n("709054"),
-        v = n("418088"),
+        v = n("709054"),
+        D = n("418088"),
         M = n("814249");
     (u = o || (o = {})).FETCHING = "fetching", u.OK = "ok", u.ERROR = "error";
     let y = {},
@@ -51,7 +51,7 @@ function(e, t, n) {
             return y
         }
         topSummaries() {
-            return Object.values(y).flat().filter(e => e.people.length > 1 && D.default.extractTimestamp(e.endId) > new Date().getTime() - 5 * L.default.Millis.HOUR).sort((e, t) => D.default.extractTimestamp(t.endId) - D.default.extractTimestamp(e.endId))
+            return Object.values(y).flat().filter(e => e.people.length > 1 && v.default.extractTimestamp(e.endId) > new Date().getTime() - 5 * L.default.Millis.HOUR).sort((e, t) => v.default.extractTimestamp(t.endId) - v.default.extractTimestamp(e.endId))
         }
         summaries(e) {
             var t;
@@ -147,7 +147,7 @@ function(e, t, n) {
                 receivedAt: a
             } = e;
             if (null != i && Object.keys(i).length > 0) {
-                let e = (0, v.createSummaryFromServer)(i, r),
+                let e = (0, D.createSummaryFromServer)(i, r),
                     n = [...null !== (t = y[r]) && void 0 !== t ? t : []],
                     s = n.findIndex(t => t.id === (null == e ? void 0 : e.id));
                 s > -1 ? n[s] = e : n.push(e), y[r] = n
@@ -183,13 +183,13 @@ function(e, t, n) {
                 channelId: n,
                 error: i,
                 receivedAt: r
-            } = e, s = t.filter(e => Object.keys(e).length > 0).map(e => (0, v.createSummaryFromServer)(e, n));
+            } = e, s = t.filter(e => Object.keys(e).length > 0).map(e => (0, D.createSummaryFromServer)(e, n));
             if (null != a && a.channelId === n && !s.some(e => e.id === (null == a ? void 0 : a.summaryId))) {
                 var o;
                 let e = (null !== (o = y[n]) && void 0 !== o ? o : []).find(e => e.id === (null == a ? void 0 : a.summaryId));
                 null != e && s.push(e)
             }
-            y[n] = (0, E.sortBy)(s, e => D.default.extractTimestamp(e.startId)).reverse();
+            y[n] = (0, E.sortBy)(s, e => v.default.extractTimestamp(e.startId)).reverse();
             let l = {
                 ...P[n],
                 fetching: !1,
@@ -302,7 +302,7 @@ function(e, t, n) {
                     channelIds: r
                 }
             } = e, s = I().toPairs(t).reduce((e, t) => {
-                let [n, i] = t, r = I().chain(i.map(e => (0, v.createSummaryFromServer)(e, n))).sortBy(e => D.default.extractTimestamp(e.startId)).takeRight(75).reverse().filter(e => Object.keys(e).length > 0).value();
+                let [n, i] = t, r = I().chain(i.map(e => (0, D.createSummaryFromServer)(e, n))).sortBy(e => v.default.extractTimestamp(e.startId)).takeRight(75).reverse().filter(e => Object.keys(e).length > 0).value();
                 return e[n] = r, e
             }, {}), a = r.reduce((e, t) => {
                 var r;
@@ -332,7 +332,7 @@ function(e, t, n) {
                 channel_id: r,
                 summaries: s,
                 guild_id: a
-            } = e, o = Date.now(), l = I().chain(s).sortBy(e => D.default.extractTimestamp(e.start_id)).filter(e => Object.keys(e).length > 0).map(e => (0, v.createSummaryFromServer)(e, r)).reverse().value(), u = null !== (n = y[r]) && void 0 !== n ? n : [], d = I().chain(l).concat(u).sortBy(e => D.default.extractTimestamp(e.startId)).takeRight(75).uniqBy("id").reverse().value();
+            } = e, o = Date.now(), l = I().chain(s).sortBy(e => v.default.extractTimestamp(e.start_id)).filter(e => Object.keys(e).length > 0).map(e => (0, D.createSummaryFromServer)(e, r)).reverse().value(), u = null !== (n = y[r]) && void 0 !== n ? n : [], d = I().chain(l).concat(u).sortBy(e => v.default.extractTimestamp(e.startId)).takeRight(75).uniqBy("id").reverse().value();
             y[r] = d, P[r] = {
                 ...P[r],
                 error: void 0,

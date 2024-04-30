@@ -14,10 +14,10 @@ function(e, t, n) {
             return G
         },
         getExistingRolesRowWithPermissionDisabled: function() {
-            return v
+            return D
         },
         getExistingRolesRows: function() {
-            return D
+            return v
         },
         getMembersRows: function() {
             return b
@@ -150,13 +150,13 @@ function(e, t, n) {
         return Object.values(t).filter(t => !h(t) && p(n, t.id, r) && C(e, t) && s(t.name)).sort(m).map(e => A(e, i.has(e.permissions, r)))
     }
 
-    function D(e, t, n, i, r) {
+    function v(e, t, n, i, r) {
         var s, a, o, l, u;
         let d = [];
         return 0 === (d = (s = e, a = t, o = n, l = i, u = r, Object.values(a).filter(e => h(e) || !p(o, e.id, l, u) && C(s, e))).sort(m).map(e => A(e))).length ? N(S.default.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : d
     }
 
-    function v(e, t, n, r, s) {
+    function D(e, t, n, r, s) {
         var a, o, l, u, d;
         let _ = [];
         return 0 === (_ = (a = e, o = t, l = n, u = r, d = s, Object.values(o).filter(e => {

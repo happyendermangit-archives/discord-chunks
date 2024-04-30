@@ -5,10 +5,10 @@ function(e, t, n) {
             return L
         },
         UserProfileRecentGamesContainer: function() {
-            return D
+            return v
         },
         UserProfileRecentGamesSection: function() {
-            return v
+            return D
         },
         UserProfileRecentGamesThemedSection: function() {
             return M
@@ -154,7 +154,7 @@ function(e, t, n) {
         })
     });
 
-    function D(e) {
+    function v(e) {
         let {
             userId: t,
             maxItems: n = 3,
@@ -202,14 +202,14 @@ function(e, t, n) {
         }) : I
     }
 
-    function v(e) {
+    function D(e) {
         let {
             userId: t,
             containerClassName: n
         } = e, s = r.useCallback(e => (0, i.jsx)(N.default, {
             children: e
         }), []);
-        return (0, i.jsx)(D, {
+        return (0, i.jsx)(v, {
             userId: t,
             containerClassName: n,
             wrapChildren: s
@@ -225,7 +225,7 @@ function(e, t, n) {
                 children: e
             })
         }), []);
-        return (0, i.jsx)(D, {
+        return (0, i.jsx)(v, {
             userId: t,
             containerClassName: n,
             wrapChildren: s

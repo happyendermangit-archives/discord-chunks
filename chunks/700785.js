@@ -129,7 +129,7 @@ function(e, t, n) {
         g = s.combine(A.Permissions.VIEW_CHANNEL, A.Permissions.READ_MESSAGE_HISTORY, A.Permissions.CHANGE_NICKNAME),
         L = s.combine(A.Permissions.MANAGE_GUILD, A.Permissions.MANAGE_ROLES, A.Permissions.ADMINISTRATOR, A.Permissions.BAN_MEMBERS, A.Permissions.MANAGE_NICKNAMES, A.Permissions.CREATE_GUILD_EXPRESSIONS, A.Permissions.MANAGE_GUILD_EXPRESSIONS, A.Permissions.MANAGE_WEBHOOKS, A.Permissions.VIEW_AUDIT_LOG);
 
-    function D(e, t, n) {
+    function v(e, t, n) {
         let i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
         if (i && t.mfaLevel === A.MFALevels.ELEVATED && n === E.default.getId()) {
             var r;
@@ -138,7 +138,7 @@ function(e, t, n) {
         return e
     }
 
-    function v(e, t, n, i) {
+    function D(e, t, n, i) {
         let r = i[e];
         if (null != r && (n = s.remove(n, r.deny), n = s.add(n, r.allow)), null != t) {
             let e = m,
@@ -167,7 +167,7 @@ function(e, t, n) {
             excludeGuildPermissions: l = !1,
             lurkerPermissionsMask: u = O
         } = e;
-        if (l) return v(i.id, n, m, r);
+        if (l) return D(i.id, n, m, r);
         let _ = (a = null != a ? {
                 ...f.default.getRoles(i.id),
                 ...a
@@ -178,7 +178,7 @@ function(e, t, n) {
                 let t = a[n.roles[e]];
                 void 0 !== t && (c = s.add(c, t.permissions))
             }
-        return c = s.has(c, A.Permissions.ADMINISTRATOR) ? N : v(i.id, n, c, r), (d.default.isLurking(i.id) || (null == n ? void 0 : n.isPending)) && (c = s.filter(c, u)), T.default.isCurrentUserGuest(i.id) && (c = s.filter(c, R)), D(c, i, t, o)
+        return c = s.has(c, A.Permissions.ADMINISTRATOR) ? N : D(i.id, n, c, r), (d.default.isLurking(i.id) || (null == n ? void 0 : n.isPending)) && (c = s.filter(c, u)), T.default.isCurrentUserGuest(i.id) && (c = s.filter(c, R)), v(c, i, t, o)
     }
 
     function y(e) {
@@ -218,7 +218,7 @@ function(e, t, n) {
             r = null != e ? f.default.getGuild(e) : null
         } else o = null != o ? o : {}, r = a;
         if (null == r) return m;
-        if (!(h === (null === (t = S.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && u.default.isViewingRoles(r.id)) && r.isOwner(h)) return D(N, r, h, d);
+        if (!(h === (null === (t = S.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && u.default.isViewingRoles(r.id)) && r.isOwner(h)) return v(N, r, h, d);
         let p = T.default.getMember(r.id, h);
         return M({
             userId: h,

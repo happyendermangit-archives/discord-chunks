@@ -71,8 +71,8 @@ function(e, t, n) {
             onDragStart: g,
             onDragEnd: L
         } = e, {
-            ref: D,
-            width: v
+            ref: v,
+            width: D
         } = (0, u.default)(), M = r.useMemo(() => {
             var e;
             let t;
@@ -105,7 +105,7 @@ function(e, t, n) {
                     }
                 }(null != n ? n : [], i)) && void 0 !== e ? e : A
             }, [n, i])
-        }(n, v), U = r.useRef(h), b = r.useRef(R), G = r.useRef(null), w = window.devicePixelRatio, {
+        }(n, D), U = r.useRef(h), b = r.useRef(R), G = r.useRef(null), w = window.devicePixelRatio, {
             lastBackgroundFillColor: B,
             backgroundFillColor: k,
             lastActiveFillColor: V,
@@ -159,7 +159,7 @@ function(e, t, n) {
         }, [P, s, _, h]), r.useEffect(() => {
             let e = null;
             return e = requestAnimationFrame(function t(n) {
-                let i = D.current,
+                let i = v.current,
                     r = null == i ? void 0 : i.getContext("2d"),
                     s = y.current;
                 if (null == i || null == r || null == s) return;
@@ -198,9 +198,9 @@ function(e, t, n) {
             }), () => {
                 null != e && cancelAnimationFrame(e)
             }
-        }, [D, w, P, v, s, _, h, R, B, k, V, x, F, H]);
+        }, [v, w, P, D, s, _, h, R, B, k, V, x, F, H]);
         let [, Y] = (0, d.default)({
-            ref: D,
+            ref: v,
             onDrag: C,
             onDragStart: g,
             onDragEnd: L
@@ -211,9 +211,9 @@ function(e, t, n) {
             style: {
                 width: M
             },
-            ref: D,
+            ref: v,
             height: 32 * window.devicePixelRatio,
-            width: (null != v ? v : 0) * window.devicePixelRatio
+            width: (null != D ? D : 0) * window.devicePixelRatio
         })
     }
 }

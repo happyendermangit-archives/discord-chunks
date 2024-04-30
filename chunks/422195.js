@@ -26,15 +26,15 @@ function(e, t, n) {
         C = n("981631"),
         g = n("957825"),
         L = n("689938"),
-        D = n("681455");
-    let v = (0, A.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
+        v = n("681455");
+    let D = (0, A.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
         M = (0, A.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_SIZE),
         y = (0, A.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_MARGIN),
         P = (0, A.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_CATEGORY_UNICODE_ICON_SIZE),
         U = (0, A.cssValueToNumber)(o.default.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
         b = (0, A.cssValueToNumber)(o.default.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
-        G = [v, v, v, v],
-        w = (M + y) * 2 + v,
+        G = [D, D, D, D],
+        w = (M + y) * 2 + D,
         B = U + 2 * b,
         k = e => {
             let {
@@ -48,7 +48,7 @@ function(e, t, n) {
                 let c;
                 let A = (null === (u = n[0]) || void 0 === u ? void 0 : u.type) === p.StickerCategoryTypes.FAVORITE,
                     m = A ? 1 : 0,
-                    v = (null === (_ = n[m]) || void 0 === _ ? void 0 : _.type) === p.StickerCategoryTypes.RECENT,
+                    D = (null === (_ = n[m]) || void 0 === _ ? void 0 : _.type) === p.StickerCategoryTypes.RECENT,
                     y = n.length > 0,
                     U = n.length;
                 if (0 === s && A) return (0, i.jsx)("div", {
@@ -57,31 +57,31 @@ function(e, t, n) {
                     "aria-posinset": s,
                     children: (0, i.jsx)(l.Clickable, {
                         "aria-label": L.default.Messages.CATEGORY_FAVORITE,
-                        className: a()(D.stickerCategory, D.stickerCategoryGeneric, {
-                            [D.stickerCategoryGenericDisabled]: y && !A,
-                            [D.stickerCategoryGenericSelected]: !S && A && 0 === t
+                        className: a()(v.stickerCategory, v.stickerCategoryGeneric, {
+                            [v.stickerCategoryGenericDisabled]: y && !A,
+                            [v.stickerCategoryGenericSelected]: !S && A && 0 === t
                         }),
                         onClick: o,
                         children: (0, i.jsx)(f.default, {
-                            className: D.stickerCategoryGenericIcon,
+                            className: v.stickerCategoryGenericIcon,
                             height: P,
                             width: P
                         })
                     })
                 }, "favorites");
-                if (s === m && v) return (0, i.jsx)("div", {
+                if (s === m && D) return (0, i.jsx)("div", {
                     role: "listitem",
                     "aria-setsize": U,
                     "aria-posinset": s,
                     children: (0, i.jsx)(l.Clickable, {
                         "aria-label": L.default.Messages.STICKER_PICKER_CATEGORIES_RECENT,
-                        className: a()(D.stickerCategory, D.stickerCategoryGeneric, {
-                            [D.stickerCategoryGenericDisabled]: y && !v,
-                            [D.stickerCategoryGenericSelected]: !S && v && t === m
+                        className: a()(v.stickerCategory, v.stickerCategoryGeneric, {
+                            [v.stickerCategoryGenericDisabled]: y && !D,
+                            [v.stickerCategoryGenericSelected]: !S && D && t === m
                         }),
                         onClick: o,
                         children: (0, i.jsx)(T.default, {
-                            className: D.stickerCategoryGenericIcon,
+                            className: v.stickerCategoryGenericIcon,
                             height: P,
                             width: P
                         })
@@ -112,7 +112,7 @@ function(e, t, n) {
                     children: [(0, i.jsx)(l.Tooltip, {
                         position: "right",
                         text: V,
-                        tooltipContentClassName: D.__invalid_tooltip,
+                        tooltipContentClassName: v.__invalid_tooltip,
                         children: e => (0, i.jsx)("div", {
                             role: "listitem",
                             "aria-setsize": U,
@@ -120,9 +120,9 @@ function(e, t, n) {
                             children: (0, i.jsx)(l.Clickable, {
                                 ...e,
                                 "aria-label": V,
-                                className: a()(D.stickerCategory, {
-                                    [D.firstPartyCategory]: k,
-                                    [D.firstPartyCategorySelected]: !S && b && k
+                                className: a()(v.stickerCategory, {
+                                    [v.firstPartyCategory]: k,
+                                    [v.firstPartyCategorySelected]: !S && b && k
                                 }),
                                 onClick: () => {
                                     G.type === p.StickerCategoryTypes.PACK && h.default.track(C.AnalyticEvents.EXPRESSION_PICKER_CATEGORY_SELECTED, {
@@ -136,10 +136,10 @@ function(e, t, n) {
                             })
                         })
                     }), B ? (0, i.jsx)("hr", {
-                        className: D.guildCategorySeparator
+                        className: v.guildCategorySeparator
                     }, "separator") : null]
                 }, G.id)
-            }, [t, E, S, n]), m = r.useCallback((e, t) => t ? w : 0, []), v = r.useCallback((e, t) => {
+            }, [t, E, S, n]), m = r.useCallback((e, t) => t ? w : 0, []), D = r.useCallback((e, t) => {
                 let i = n[t],
                     r = n[t + 1];
                 return M + (null != r && i.type === p.StickerCategoryTypes.GUILD && r.type !== p.StickerCategoryTypes.GUILD ? B : y)
@@ -147,7 +147,7 @@ function(e, t, n) {
             return {
                 getScrollOffsetForIndex: m,
                 renderCategoryListItem: A,
-                rowHeight: v,
+                rowHeight: D,
                 onScroll: r.useCallback(e => {
                     var t;
                     let n = null === (t = s.current) || void 0 === t ? void 0 : t.getListDimensions();
@@ -197,7 +197,7 @@ function(e, t, n) {
             e(I), null === (t = s.current) || void 0 === t || t.scrollTo(T)
         }, [I, T]);
         return (0, i.jsx)(E.default, {
-            className: D.categoryList,
+            className: v.categoryList,
             categoryListRef: s,
             expressionsListRef: t,
             store: _.StickerPickerStore,
@@ -208,8 +208,8 @@ function(e, t, n) {
             categories: c,
             categoryHeight: N,
             children: e => h && o && (0, i.jsx)(l.Clickable, {
-                className: a()(D.standardStickerShortcut, {
-                    [D.invisibleShortcut]: !o
+                className: a()(v.standardStickerShortcut, {
+                    [v.invisibleShortcut]: !o
                 }),
                 onClick: () => R(e),
                 children: (0, i.jsx)(S.default, {

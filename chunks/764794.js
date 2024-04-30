@@ -30,17 +30,17 @@ function(e, t, n) {
             location: "ec41f5_1"
         }, {
             autoTrackExposure: !0
-        }), O = p ? h.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP.format() : N ? h.default.Messages.SHARE_NITRO_RESEND_TOOLTIP : h.default.Messages.SHARE_NITRO_TOOLTIP, R = p ? h.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : null, [C, g] = r.useState(!1), [L, D] = r.useState(!1), v = (0, o.default)(null, () => D(!1)), {
+        }), O = p ? h.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP.format() : N ? h.default.Messages.SHARE_NITRO_RESEND_TOOLTIP : h.default.Messages.SHARE_NITRO_TOOLTIP, R = p ? h.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : null, [C, g] = r.useState(!1), [L, v] = r.useState(!1), D = (0, o.default)(null, () => v(!1)), {
             analyticsLocations: M
         } = (0, d.default)(u.default.REFERRAL_TRIALS_COMPOSER_BUTTON), y = m.isDM() && void 0 !== m.recipients ? m.recipients[0] : null, P = (0, l.default)();
         return t ? null : (0, i.jsxs)("div", {
-            ref: v,
+            ref: D,
             className: A.buttonContainer,
             children: [(0, i.jsx)(c.default, {
                 shouldShowPopout: L,
                 referralsRemaining: n,
                 channel: m,
-                onClose: () => D(!1),
+                onClose: () => v(!1),
                 isResending: N
             }), (0, i.jsx)(s.Tooltip, {
                 text: O,
@@ -64,7 +64,7 @@ function(e, t, n) {
                         "aria-label": null != R ? R : O,
                         "aria-haspopup": "dialog",
                         onClick: () => {
-                            D(e => !e), T.default.track(f.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
+                            v(e => !e), T.default.track(f.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
                                 location_stack: M,
                                 step: S.ReferralTrialsAnalyticSteps.BADGE_CLICKED,
                                 other_user_id: Number(y)

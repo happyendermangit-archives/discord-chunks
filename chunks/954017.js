@@ -95,7 +95,7 @@ function(e, t, n) {
                 var i;
                 e.setFont({
                     truncate: u.TextTruncationMethod.Truncate
-                }), null != r ? D(e, n, t) : (0, l.default)(n) ? C(e, n, t) : (0, o.default)(n) && n.name === a.default.get(S.PlatformTypes.LEAGUE_OF_LEGENDS).name ? L(e, n, t) : n.type === S.ActivityTypes.HANG_STATUS ? g(e, n, t) : R(e, n, t), (null === (i = e.assetMap) || void 0 === i ? void 0 : i.has("Platform")) && e.drawImage("Platform", {
+                }), null != r ? v(e, n, t) : (0, l.default)(n) ? C(e, n, t) : (0, o.default)(n) && n.name === a.default.get(S.PlatformTypes.LEAGUE_OF_LEGENDS).name ? L(e, n, t) : n.type === S.ActivityTypes.HANG_STATUS ? g(e, n, t) : R(e, n, t), (null === (i = e.assetMap) || void 0 === i ? void 0 : i.has("Platform")) && e.drawImage("Platform", {
                     x: T.canvasWidth - T.padding - T.platformSize,
                     y: T.padding
                 }, {
@@ -299,7 +299,7 @@ function(e, t, n) {
             x: a,
             y: T.fontPadding + 2 * T.lineHeight
         }, !0)
-    }, D = (e, t, n) => {
+    }, v = (e, t, n) => {
         var i, r, s;
         e.setSize({
             w: T.canvasWidth,

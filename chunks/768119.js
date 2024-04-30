@@ -65,7 +65,7 @@ function(e, t, n) {
         })
     }
 
-    function D(e) {
+    function v(e) {
         let {
             searchId: t
         } = e, n = h[t];
@@ -73,7 +73,7 @@ function(e, t, n) {
         null != n.searchFetcher && n.searchFetcher.cancel(), delete h[t]
     }
 
-    function v(e) {
+    function D(e) {
         if (e === g) return !1;
         null != e && null == h[e] && m(e), g = e
     }
@@ -248,7 +248,7 @@ function(e, t, n) {
             } = e, n = m(t);
             n.isSearching = !1, n.isIndexing = !1, n.isHistoricalIndexing = e.doingHistoricalIndex || !1, n.searchFetcher = null, n.totalResults = e.totalResults, n.hasError = e.hasError, n.analyticsId = e.analyticsId, n.documentsIndexed = null != e.documentsIndexed ? e.documentsIndexed : 0, n.showNoResultsAlt = .05 > Math.random(), n.rawResults = e.messages, null == n.query && (n.hasError = !0)
         },
-        SEARCH_EDITOR_STATE_CLEAR: D,
+        SEARCH_EDITOR_STATE_CLEAR: v,
         SEARCH_ENSURE_SEARCH_STATE: function(e) {
             let {
                 searchId: t
@@ -273,17 +273,17 @@ function(e, t, n) {
             let {
                 searchId: t
             } = e;
-            v(t)
+            D(t)
         },
         CHANNEL_SELECT: function(e) {
             let {
                 guildId: t,
                 channelId: n
             } = e;
-            v(null != t ? t : n)
+            D(null != t ? t : n)
         },
         CHANNEL_TOGGLE_MEMBERS_SECTION: function() {
-            return null != g && D({
+            return null != g && v({
                 searchId: g
             })
         },

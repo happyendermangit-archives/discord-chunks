@@ -227,14 +227,14 @@ function(e, t, n) {
                                 C = null !== (s = t.fecPacketsReceived) && void 0 !== s ? s : 0,
                                 g = null !== (a = t.fecPacketsDiscarded) && void 0 !== a ? a : 0,
                                 L = null !== (o = t.jitterBuffer) && void 0 !== o ? o : 0,
-                                D = {
+                                v = {
                                     audioJitterBuffer: t.audioJitterBuffer,
                                     audioJitterTarget: t.audioJitterTarget,
                                     audioJitterDelay: t.audioJitterDelay,
                                     relativeReceptionDelay: t.relativeReceptionDelay,
                                     relativePlayoutDelay: t.relativePlayoutDelay
                                 },
-                                v = {
+                                D = {
                                     silent: t.opSilence,
                                     normal: t.opNormal,
                                     merged: t.opMerge,
@@ -265,14 +265,14 @@ function(e, t, n) {
                                     mosSum: this.inboundStats[n].mosSum + s,
                                     mosCount: this.inboundStats[n].mosCount + (s > 0 ? 1 : 0),
                                     mosBuckets: a,
-                                    bufferStats: D,
-                                    frameOpStats: v,
+                                    bufferStats: v,
+                                    frameOpStats: D,
                                     ...M
                                 }, this.periodicInboundStats[n] = {
                                     previousTimestampMs: this.periodicInboundStats[n].previousTimestampMs,
                                     previous: this.periodicInboundStats[n].previous,
                                     currentTimestampMs: Date.now(),
-                                    current: v,
+                                    current: D,
                                     accelerateRateSum: this.periodicInboundStats[n].accelerateRateSum + (null !== (E = t.accelerateRate) && void 0 !== E ? E : 0),
                                     expandRateSum: this.periodicInboundStats[n].expandRateSum + (null !== (I = t.expandRate) && void 0 !== I ? I : 0),
                                     preemptiveExpandRateSum: this.periodicInboundStats[n].preemptiveExpandRateSum + (null !== (T = t.preemptiveExpandRate) && void 0 !== T ? T : 0),
@@ -289,14 +289,14 @@ function(e, t, n) {
                                 mosSum: 0,
                                 mosCount: 0,
                                 mosBuckets: [0, 0, 0, 0, 0],
-                                bufferStats: D,
-                                frameOpStats: v,
+                                bufferStats: v,
+                                frameOpStats: D,
                                 ...M
                             }, this.periodicInboundStats[n] = {
                                 previousTimestampMs: Date.now(),
-                                previous: v,
+                                previous: D,
                                 currentTimestampMs: Date.now(),
-                                current: v,
+                                current: D,
                                 accelerateRateSum: null !== (S = t.accelerateRate) && void 0 !== S ? S : 0,
                                 expandRateSum: null !== (h = t.expandRate) && void 0 !== h ? h : 0,
                                 preemptiveExpandRateSum: null !== (A = t.preemptiveExpandRate) && void 0 !== A ? A : 0,

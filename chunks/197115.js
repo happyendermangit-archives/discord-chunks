@@ -31,8 +31,8 @@ function(e, t, n) {
             onClick: C,
             size: g,
             className: L,
-            trialId: D,
-            isTrialCTA: v,
+            trialId: v,
+            isTrialCTA: D,
             buttonText: M,
             buttonTextClassName: y,
             iconClassName: P,
@@ -128,7 +128,7 @@ function(e, t, n) {
                 isVerified: Y.verified,
                 isGift: t,
                 subscriptionTier: r,
-                trialId: D,
+                trialId: v,
                 postSuccessGuild: U,
                 onSubscribeModalClose: b,
                 analyticsLocations: K,
@@ -137,7 +137,7 @@ function(e, t, n) {
                 giftMessage: V
             })
         };
-        if (v) return (0, i.jsxs)(o.Button, {
+        if (D) return (0, i.jsxs)(o.Button, {
             size: g,
             className: L,
             innerClassName: R.premiumSubscribeButton,
@@ -165,12 +165,12 @@ function(e, t, n) {
                 children: null != M ? M : O.default.Messages.PREMIUM_GIFTING_BUTTON
             })]
         });
-        let X = O.default.Messages.APPLICATION_STORE_GET_PREMIUM,
-            Q = null != W ? (0, m.getPremiumPlanItem)(W) : null,
-            q = null != Q ? m.default.getPremiumType(Q.planId) : null == Y ? void 0 : Y.premiumType,
-            Z = r === N.PremiumSubscriptionSKUs.TIER_2 && null != q && [N.PremiumTypes.TIER_0, N.PremiumTypes.TIER_1].includes(q);
-        Z && (X = O.default.Messages.BILLING_SWITCH_PLAN_UPGRADE);
-        let J = null != W && W.status !== p.SubscriptionStatusTypes.ACCOUNT_HOLD && !(0, E.isNoneSubscription)(W.planId) && !Z,
+        let Z = O.default.Messages.APPLICATION_STORE_GET_PREMIUM,
+            X = null != W ? (0, m.getPremiumPlanItem)(W) : null,
+            Q = null != X ? m.default.getPremiumType(X.planId) : null == Y ? void 0 : Y.premiumType,
+            q = r === N.PremiumSubscriptionSKUs.TIER_2 && null != Q && [N.PremiumTypes.TIER_0, N.PremiumTypes.TIER_1].includes(Q);
+        q && (Z = O.default.Messages.BILLING_SWITCH_PLAN_UPGRADE);
+        let J = null != W && W.status !== p.SubscriptionStatusTypes.ACCOUNT_HOLD && !(0, E.isNoneSubscription)(W.planId) && !q,
             $ = J ? null != x ? x : function(e) {
                 let {
                     ctaSubscriptionSkuId: t,
@@ -189,7 +189,7 @@ function(e, t, n) {
                 }
             }({
                 ctaSubscriptionSkuId: r,
-                currentPremiumType: q
+                currentPremiumType: Q
             }) : null;
 
         function ee(e) {
@@ -209,7 +209,7 @@ function(e, t, n) {
                     className: s()(R.premiumIcon, P)
                 }), (0, i.jsx)("span", {
                     className: s()(R.buttonText, y),
-                    children: null !== (n = null !== (t = null == $ ? void 0 : $.disabledButtonText) && void 0 !== t ? t : M) && void 0 !== n ? n : X
+                    children: null !== (n = null !== (t = null == $ ? void 0 : $.disabledButtonText) && void 0 !== t ? t : M) && void 0 !== n ? n : Z
                 })]
             })
         }

@@ -14,7 +14,7 @@ function(e, t, n) {
             return K
         },
         getSearchPlaceholder: function() {
-            return X
+            return Z
         },
         getStringForEmojiCategory: function() {
             return k
@@ -41,13 +41,13 @@ function(e, t, n) {
             return G
         },
         trackPremiumSettingsPaneOpened: function() {
-            return v
+            return D
         },
         useCategoryNitroLockedStates: function() {
             return L
         },
         useEmojiCategories: function() {
-            return D
+            return v
         },
         useEmojiInPriorityOrder: function() {
             return j
@@ -113,7 +113,7 @@ function(e, t, n) {
                 return !1
             }), [n, t, s, e, u])
         },
-        D = function(e, t) {
+        v = function(e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null == t ? void 0 : t.getGuildId();
             (0, u.maybeFetchTopEmojisByGuild)(n);
             let r = (0, O.isExternalEmojiAllowedForIntention)(e),
@@ -190,7 +190,7 @@ function(e, t, n) {
                 }, [])
             }, [T, t, n, e, I.length, S, s.length, o.length, r])
         },
-        v = e => {
+        D = e => {
             let t = (null == e ? void 0 : e.getGuildId()) != null;
             I.default.track(p.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
                 location_page: t ? p.AnalyticsPages.GUILD_CHANNEL : p.AnalyticsPages.DM_CHANNEL,
@@ -447,7 +447,7 @@ function(e, t, n) {
         return e.filter(e => null == e.uniqueName || (t.has(e.optionallyDiverseSequence) ? void 0 : (t.add(e.optionallyDiverseSequence), !0)))
     }
 
-    function X(e, t) {
+    function Z(e, t) {
         return e === O.EmojiIntention.REACTION ? t ? g.default.Messages.SEARCH_FOR_SUPER_REACTION : g.default.Messages.SEARCH_FOR_REACTION : g.default.Messages.SEARCH_FOR_EMOJI
     }
 }

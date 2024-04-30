@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useFavoriteStickerIds: function() {
-            return v
+            return D
         },
         useFavoriteStickers: function() {
             return M
@@ -192,15 +192,15 @@ function(e, t, n) {
                 return i
             }, [t, n, a, e])
         },
-        D = [];
+        v = [];
 
-    function v() {
+    function D() {
         var e, t;
-        return null !== (t = null === (e = (0, o.useFrecencySettings)().favoriteStickers) || void 0 === e ? void 0 : e.stickerIds) && void 0 !== t ? t : D
+        return null !== (t = null === (e = (0, o.useFrecencySettings)().favoriteStickers) || void 0 === e ? void 0 : e.stickerIds) && void 0 !== t ? t : v
     }
 
     function M() {
-        let e = v();
+        let e = D();
         return (0, r.useStateFromStoresArray)([S.default], () => e.map(e => S.default.getStickerById(e)).filter(e => void 0 !== e), [e])
     }
 
@@ -208,7 +208,7 @@ function(e, t, n) {
         let e = function() {
             var e, t;
             let n = (0, o.useFrecencySettings)(),
-                i = D;
+                i = v;
             return (null == n ? void 0 : null === (e = n.stickerFrecency) || void 0 === e ? void 0 : e.stickers) != null && (i = Object.keys(null == n ? void 0 : null === (t = n.stickerFrecency) || void 0 === t ? void 0 : t.stickers)), i
         }();
         return (0, r.useStateFromStoresArray)([S.default], () => e.map(e => S.default.getStickerById(e)).filter(e => void 0 !== e), [e])

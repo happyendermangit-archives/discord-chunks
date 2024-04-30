@@ -26,8 +26,8 @@ function(e, t, n) {
         C = n("981631"),
         g = n("689079"),
         L = n("377668"),
-        D = n("689938");
-    let v = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
+        v = n("689938");
+    let D = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
         M = /^$|\n *$/,
         y = /^ *>>> ?/,
         P = /^ *> ?/gm;
@@ -74,9 +74,9 @@ function(e, t, n) {
                         nested: r
                     } = t;
                     if (i || r) return null;
-                    if (null == n) return v.exec(e);
+                    if (null == n) return D.exec(e);
                     let s = n[0];
-                    return M.test(s) ? v.exec(e) : null
+                    return M.test(s) ? D.exec(e) : null
                 },
                 parse(e, t, n) {
                     let i = e[0],
@@ -174,7 +174,7 @@ function(e, t, n) {
                         a = null != s ? _.default.getRole(s.id, r) : null;
                     return null == a ? {
                         type: "text",
-                        content: "@".concat(D.default.Messages.DELETED_ROLE_PLACEHOLDER)
+                        content: "@".concat(v.default.Messages.DELETED_ROLE_PLACEHOLDER)
                     } : {
                         type: "mention",
                         channelId: n.channelId,
@@ -215,7 +215,7 @@ function(e, t, n) {
                     null == s && "@Clyde" === e[0] && (0, o.getClydeEnabled)(G(n), a) && (r = L.CLYDE_AI_USER_ID);
                     let u = e[1],
                         _ = null != u && C.ID_REGEX.test(u.trim()),
-                        T = _ && n.unknownUserMentionPlaceholder ? "@".concat(D.default.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER) : e[0];
+                        T = _ && n.unknownUserMentionPlaceholder ? "@".concat(v.default.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER) : e[0];
                     return {
                         userId: r,
                         channelId: n.channelId,
@@ -332,10 +332,10 @@ function(e, t, n) {
                     content: [{
                         type: "text",
                         content: {
-                            home: D.default.Messages.SERVER_GUIDE,
-                            guide: D.default.Messages.SERVER_GUIDE,
-                            browse: D.default.Messages.CHANNEL_BROWSER_TITLE,
-                            customize: D.default.Messages.CHANNELS_AND_ROLES
+                            home: v.default.Messages.SERVER_GUIDE,
+                            guide: v.default.Messages.SERVER_GUIDE,
+                            browse: v.default.Messages.CHANNEL_BROWSER_TITLE,
+                            customize: v.default.Messages.CHANNELS_AND_ROLES
                         } [e[1]]
                     }],
                     channelId: e[1],
