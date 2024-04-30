@@ -17282,6 +17282,21 @@ function(e) {
         LIGHTNING_CHECKOUT_GENERIC_ERROR_TITLE: "Uh oh, something went wrong",
         LIGHTNING_CHECKOUT_GENERIC_ERROR_DESCRIPTION: "Recheck your payment information, then try again.",
         LIGHTNING_CHECKOUT_GENERIC_ERROR_CTA: "Manage Payment",
-        LIGHTNING_CHECKOUT_REVIEW_PURCHASE: "Review Purchase"
+        LIGHTNING_CHECKOUT_REVIEW_PURCHASE: "Review Purchase",
+        GUILD_POPOUT_ACTIVITY_EVENT_LOCATION: "Event in",
+        GUILD_POPOUT_ACTIVITY_EVENT_LOCATION_A11Y: "Event in {location}",
+        GUILD_POPOUT_ACTIVITY_EVENT_CREATED_BY: "Created by {creatorName}",
+        GUILD_POPOUT_ACTIVITY_USERS_1_N: "!!{a}!! and {n, plural, one {{n} other} other {{n} others}}",
+        GUILD_POPOUT_ACTIVITY_USERS_2: "!!{a}!! and !!{b}!!",
+        GUILD_POPOUT_ACTIVITY_USERS_2_N: "!!{a}!!, !!{b}!!, and {n, plural, one {{n} other} other {{n} others}}",
+        GUILD_POPOUT_ACTIVITY_USERS_3: "!!{a}!!, !!{b}!!, and !!{c}!!",
+        GUILD_POPOUT_ACTIVITY_USERS_3_N: "!!{a}!!, !!{b}!!, !!{c}!!, and {n, plural, one {{n} other} other {{n} others}}",
+        GUILD_POPOUT_ACTIVITY_USERS_N: "{n, plural, one {{n} person} other {{n} people}}",
+        GUILD_POPOUT_ACTIVITY_VOICE: "In voice",
+        GUILD_POPOUT_ACTIVITY_HANGOUT_CARD_ARIA: "{users, plural, one {{users} person is} other {{users} people are}} hanging out in !!{channelName}!!",
+        GUILD_POPOUT_ACTIVITY_EMBEDDED_ACTIVITY_CARD_ARIA: "{users, plural, one {{users} person is} other {{users} people are}} playing !!{gameName}!! in !!{channelName}!!",
+        GUILD_POPOUT_ACTIVITY_EVENT_CARD_ARIA: "!!{eventName}!! is happening now",
+        GUILD_POPOUT_INVITES_PAUSED: "Invites are paused for this server. [View invite settings](onClick)",
+        GUILD_POPOUT_VIEWING_AS_ROLES: "You are viewing as roles. Notifications may be in channels you can’t see. [View role settings](onClick)"
     })
 }

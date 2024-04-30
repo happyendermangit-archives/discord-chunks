@@ -583,13 +583,6 @@ function(e, t, n) {
 
     function eC(e) {
         let {
-            users: t
-        } = e;
-        return t.reduce((e, t) => L(t) || e, !1)
-    }
-
-    function eg(e) {
-        let {
             familyCenterTeenActivity: t
         } = e;
         if (void 0 === t) return;
@@ -599,7 +592,7 @@ function(e, t, n) {
         return n.reduce((e, t) => L(t) || e, !1)
     }
 
-    function eL(e) {
+    function eg(e) {
         let {
             familyCenterTeenActivity: t
         } = e, {
@@ -608,27 +601,27 @@ function(e, t, n) {
         return n.reduce((e, t) => L(t) || e, !1)
     }
 
-    function eD(e) {
+    function eL(e) {
         let {
             members: t
         } = e, n = I.default.getId();
         return t.reduce((e, t) => t.member.user.id === n ? e : L(t.member.user) || e, !1)
     }
-    class ev extends T.default {
+    class eD extends T.default {
         initialize() {
             this.waitFor(I.default)
         }
         takeSnapshot() {
             let e = this.getCurrentUser();
             return {
-                version: ev.LATEST_SNAPSHOT_VERSION,
+                version: eD.LATEST_SNAPSHOT_VERSION,
                 data: {
                     users: [e].filter(E.isNotNullish)
                 }
             }
         }
         handleLoadCache(e) {
-            let t = this.readSnapshot(ev.LATEST_SNAPSHOT_VERSION);
+            let t = this.readSnapshot(eD.LATEST_SNAPSHOT_VERSION);
             if (null != t)
                 for (let e of t.users) m[e.id] = new _.default(e);
             if (null != e.users)
@@ -730,13 +723,12 @@ function(e, t, n) {
                 PRIVATE_CHANNEL_INTEGRATION_UPDATE: eN,
                 FAMILY_CENTER_INITIAL_LOAD: ep,
                 FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: eO,
-                FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: eg,
-                FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: eL,
+                FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: eC,
+                FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: eg,
                 FAMILY_CENTER_REQUEST_LINK_SUCCESS: eR,
-                FRIEND_FINDER_PYMK_LOADED: eC,
-                MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: eD
+                MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: eL
             })
         }
     }
-    A(ev, "displayName", "UserStore"), A(ev, "LATEST_SNAPSHOT_VERSION", 1), t.default = new ev
+    A(eD, "displayName", "UserStore"), A(eD, "LATEST_SNAPSHOT_VERSION", 1), t.default = new eD
 }

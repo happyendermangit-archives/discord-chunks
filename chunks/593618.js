@@ -231,20 +231,21 @@ function(e, t, n) {
             disabled: n = !1,
             "aria-label": s = !1,
             children: a,
-            includeActivity: o,
+            includeActivity: o = !0,
             isHovered: l
         } = e, u = (0, H.useCanShowNewGuildTooltip)(), [_, E] = r.useState(!1), I = r.useRef(new d.DelayedCall(150, () => E(!1))), T = r.useCallback(() => {
             I.current.cancel(), E(!0)
         }, []), f = r.useCallback(() => {
             I.current.delay()
         }, []);
-        return u ? (0, i.jsx)("div", {
+        return u && o ? (0, i.jsx)("div", {
             onMouseEnter: T,
             onMouseLeave: f,
             children: (0, i.jsx)(c.Popout, {
                 position: "right",
                 renderPopout: () => (0, i.jsx)(Y.default, {
-                    guild: t
+                    guild: t,
+                    closePopout: f
                 }),
                 spacing: 20,
                 shouldShow: l || _,

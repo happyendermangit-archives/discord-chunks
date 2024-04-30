@@ -2,24 +2,23 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         QuestBarExperiment: function() {
-            return c
+            return _
         },
         QuestBarExperimentVariants: function() {
             return r
         },
         getIsEligibleForQuests: function() {
-            return l
+            return o
         },
         isQuestPreviewToolEnabled: function() {
-            return _
+            return d
         },
         useIsEligibleForQuests: function() {
-            return u
+            return l
         }
     });
-    var i, r, s = n("211242"),
-        a = n("818083");
-    let o = (0, a.createExperiment)({
+    var i, r, s = n("818083");
+    let a = (0, s.createExperiment)({
             id: "2023-12_quests",
             kind: "user",
             label: "Quests",
@@ -40,35 +39,27 @@ function(e, t, n) {
                 }
             }]
         }),
+        o = e => {
+            let {
+                location: t
+            } = e;
+            return a.getCurrentConfig({
+                location: t
+            }, {
+                autoTrackExposure: !1
+            }).enabled
+        },
         l = e => {
             let {
                 location: t
-            } = e, n = o.getCurrentConfig({
+            } = e;
+            return a.useExperiment({
                 location: t
             }, {
                 autoTrackExposure: !1
-            }), i = s.default.getCurrentConfig({
-                location: t
-            }, {
-                autoTrackExposure: !1
-            });
-            return n.enabled && !i.paymentsBlocked
+            }).enabled
         },
-        u = e => {
-            let {
-                location: t
-            } = e, n = o.useExperiment({
-                location: t
-            }, {
-                autoTrackExposure: !1
-            }), i = s.default.useExperiment({
-                location: t
-            }, {
-                autoTrackExposure: !1
-            });
-            return n.enabled && !i.paymentsBlocked
-        },
-        d = (0, a.createExperiment)({
+        u = (0, s.createExperiment)({
             id: "2024-04_quest_preview_tool",
             kind: "user",
             label: "Quest Preview Tool",
@@ -84,17 +75,17 @@ function(e, t, n) {
             }]
         });
 
-    function _(e) {
+    function d(e) {
         let {
             location: t
         } = e;
-        return d.getCurrentConfig({
+        return u.getCurrentConfig({
             location: t
         }, {
             autoTrackExposure: !1
         }).enabled
     }(i = r || (r = {}))[i.V1 = 0] = "V1", i[i.V2 = 1] = "V2";
-    let c = (0, a.createExperiment)({
+    let _ = (0, s.createExperiment)({
         id: "2024-05_quest_bar",
         kind: "user",
         label: "Quest Bar",

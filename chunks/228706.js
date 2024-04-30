@@ -14,6 +14,7 @@ function(e) {
         cardFooterInfo: "cardFooterInfo__5a461",
         cardFooterMembers: "cardFooterMembers__5eb8a",
         cardFooterMembersIcon: "cardFooterMembersIcon__1c10d",
+        cardFooterOtherCount: "cardFooterOtherCount_a26e63",
         cardNameAndTagWrapper: "cardNameAndTagWrapper_d87ceb",
         clanBadge: "clanBadge__4c045",
         clanIcon: "clanIcon_d70524",
