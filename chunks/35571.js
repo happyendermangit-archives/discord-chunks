@@ -12,6 +12,7 @@ function(e) {
         clickable: "clickable_a2c5ad",
         content: "content__3b07e",
         disabled: "disabled__50fd0",
+        fade: "fade__3c6be",
         flipped: "flipped__45ed5",
         guestSuffix: "guestSuffix_e55f97",
         hangStatusIcon: "hangStatusIcon__367ef",

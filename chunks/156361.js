@@ -338,14 +338,14 @@ function(e, t, n) {
                 emoji: e,
                 sentinel: t,
                 guild: n
-            } = this.props, i = null != e.id ? (0, r.jsx)("img", {
+            } = this.props, i = null != e.id || "" !== e.url ? (0, r.jsx)("img", {
                 alt: "",
                 className: P.emojiImage,
-                src: R.default.getEmojiURL({
+                src: null != e.id ? R.default.getEmojiURL({
                     id: e.id,
                     animated: e.animated,
                     size: M.EMOJI_URL_BASE_SIZE
-                })
+                }) : e.url
             }) : (0, r.jsx)("span", {
                 className: P.emojiRaw,
                 children: e.surrogates

@@ -59,32 +59,35 @@ function(e, t, n) {
             {
                 analyticsLocations: b
             } = (0, I.default)(E.default.USERNAME),
+            G = m ? "@" : "",
             {
-                nick: G,
-                colorString: w,
-                colorRoleName: B
+                nick: w,
+                colorString: B,
+                colorRoleName: k
             } = n,
-            k = null != i.messageReference && null != i.webhookId,
-            V = (0, d.useStateFromStores)([c.default], () => c.default.roleStyle),
-            x = (0, h.useCanSeeRemixBadge)(),
-            F = {
+            V = null != i.messageReference && null != i.webhookId,
+            x = (0, d.useStateFromStores)([c.default], () => c.default.roleStyle),
+            F = (0, h.useCanSeeRemixBadge)(),
+            H = {
                 className: O.username,
-                style: "username" === V && null != w ? {
-                    color: w
+                style: "username" === x && null != B ? {
+                    color: B
                 } : void 0,
                 onClick: L,
                 onContextMenu: v,
-                children: (0, s.jsxs)(s.Fragment, {
-                    children: [(m ? "@" : "") + G, (0, s.jsx)(T.default, {
+                children: o ? (0, s.jsxs)(s.Fragment, {
+                    children: [G + w, (0, s.jsx)(T.default, {
                         clan: n.clan,
                         userId: i.author.id,
                         className: O.clanTagChiplet,
                         source: p.AnalyticsSections.CHANNEL
                     })]
+                }) : (0, s.jsx)(s.Fragment, {
+                    children: G + w
                 })
             };
         t = null != M && null != C ? (0, s.jsx)(_.Popout, {
-            preload: k ? void 0 : function() {
+            preload: V ? void 0 : function() {
                 let e = null != r ? r : i.author;
                 return (0, A.maybeFetchUserProfileForPopout)(e.id, null != n.guildMemberAvatar && null != U ? (0, N.getGuildMemberAvatarURLSimple)({
                     guildId: U,
@@ -108,27 +111,32 @@ function(e, t, n) {
                 return (0, s.jsx)(_.Clickable, {
                     tag: "span",
                     ...n,
-                    ...F,
-                    className: l()(F.className, O.clickable, g)
+                    ...H,
+                    className: l()(H.className, O.clickable, g)
                 })
             }
         }) : (0, s.jsx)(_.Clickable, {
-            ...F,
-            className: l()(F.className, g)
+            ...H,
+            className: l()(H.className, g)
         });
-        let H = null != P ? P[0] : null,
-            Y = null != P ? P[1] : null;
+        let Y = null != P ? P[0] : null,
+            j = null != P ? P[1] : null;
         return (0, s.jsxs)(I.AnalyticsLocationProvider, {
             value: b,
-            children: [null != H && o ? (0, s.jsxs)(s.Fragment, {
-                children: [" ", H, " "]
-            }) : null, "dot" === V ? (0, s.jsx)(_.RoleDot, {
-                color: w,
-                name: B,
+            children: [null != Y && o ? (0, s.jsxs)(s.Fragment, {
+                children: [" ", Y, " "]
+            }) : null, "dot" === x ? (0, s.jsx)(_.RoleDot, {
+                color: B,
+                name: k,
                 className: O.roleDot
-            }) : null, t, null != Y ? (0, s.jsx)(s.Fragment, {
-                children: Y
-            }) : null, null == H || o ? null : H, null != i && (0, S.default)(i) && x && y ? (0, s.jsx)(R, {}) : null]
+            }) : null, t, !o && (0, s.jsx)(T.default, {
+                clan: n.clan,
+                userId: i.author.id,
+                className: O.clanTagChiplet,
+                source: p.AnalyticsSections.CHANNEL
+            }), null != j ? (0, s.jsx)(s.Fragment, {
+                children: j
+            }) : null, null == Y || o ? null : Y, null != i && (0, S.default)(i) && F && y ? (0, s.jsx)(R, {}) : null]
         })
     }(i = r || (r = {}))[i.SYSTEM_TAG = 0] = "SYSTEM_TAG", i[i.BADGES = 1] = "BADGES"
 }
