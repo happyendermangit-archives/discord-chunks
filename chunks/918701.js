@@ -446,12 +446,20 @@ function(e, t, n) {
 
     function K(e) {
         let {
-            quest: t
+            quest: t,
+            useV2Variants: n = !1
         } = e;
         return j({
             quest: t
-        }) ? _.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_TIERED.format({
+        }) ? n ? _.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_TIERED_V2.format({
             gameTitle: t.config.messages.gameTitle,
+            streamingDurationRequirement: t.config.streamDurationRequirementMinutes
+        }) : _.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_TIERED.format({
+            gameTitle: t.config.messages.gameTitle,
+            streamingDurationRequirement: t.config.streamDurationRequirementMinutes
+        }) : n ? _.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_V2.format({
+            gameTitle: t.config.messages.gameTitle,
+            questReward: t.config.messages.rewardNameWithArticle,
             streamingDurationRequirement: t.config.streamDurationRequirementMinutes
         }) : _.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD.format({
             gameTitle: t.config.messages.gameTitle,
