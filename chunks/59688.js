@@ -8,24 +8,24 @@ function(e, t, n) {
     let i = (0, n("818083").createExperiment)({
         kind: "user",
         id: "2024-04_server_peek",
-        label: "Change the guild badge and tooltip",
+        label: "Change the guild tooltip",
         defaultConfig: {
-            showNewGuildActivityBadge: !1,
-            showNewGuildTooltip: !1
+            showNewGuildTooltip: !1,
+            showNewGuildTooltipActivityEmptyState: !1
         },
         treatments: [{
             id: 1,
-            label: "With the current guild badges and new tooltip",
+            label: "With the new tooltip and without the activity empty state",
             config: {
-                showNewGuildActivityBadge: !1,
-                showNewGuildTooltip: !0
+                showNewGuildTooltip: !0,
+                showNewGuildTooltipActivityEmptyState: !1
             }
         }, {
             id: 2,
-            label: "With the new guild badge and new tooltip",
+            label: "With the new tooltip and activity empty state",
             config: {
-                showNewGuildActivityBadge: !0,
-                showNewGuildTooltip: !0
+                showNewGuildTooltip: !0,
+                showNewGuildTooltipActivityEmptyState: !0
             }
         }]
     });
