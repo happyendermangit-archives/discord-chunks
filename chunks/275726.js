@@ -14,6 +14,7 @@ function(_, E, e) {
         GUILD_DISCOVERY_STATUS: new Set([14, 15, 16, 17]),
         USER_MESSAGE: new Set([0, 19, 20, 23, 26, 35, 41, 45]),
         REPLYABLE: new Set([0, 7, 19, 20, 23, 24, 25, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 45, 46]),
+        FORWARDABLE: new Set([0, 19]),
         LAZY_LOADED_MESSAGE_REFERENCES: new Set([19, 21]),
         AVAILABLE_IN_GUILD_FEED: new Set([0, 19]),
         DEADCHAT_PROMPTS: new Set([40, 42]),
