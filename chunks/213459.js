@@ -212,6 +212,17 @@ function(e, t, n) {
                 allowFetch: !0
             })
         }
+        queryInstallOnDemandApp(e, t) {
+            let n = h.default.getChannel(t);
+            null != n && this.query(n, {
+                commandType: E.ApplicationCommandType.CHAT
+            }, {
+                placeholderCount: 5,
+                scoreMethod: g.ScoreMethod.COMMAND_ONLY,
+                applicationId: e,
+                allowFetch: !0
+            })
+        }
         constructor(...e) {
             super(...e), b(this, "indices", {}), b(this, "applicationIndices", new Map), b(this, "oldLocale", f.default.locale), b(this, "collator", new Intl.Collator(f.default.locale, H))
         }

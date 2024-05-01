@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
-        ActivityCategory: function() {
+        CardCategory: function() {
             return r
         },
         default: function() {
@@ -336,7 +336,7 @@ function(e, t, n) {
                 isUserLurking: e,
                 isUnverifiedAccount: !y.default.getCheck(t.id).canChat
             }
-        }), l = (0, W.useGuildActivity)(t), _ = "empty" === l[0].category, c = a.useMemo(() => l.map(e => {
+        }), l = (0, W.useGuildActivity)(t), _ = a.useMemo(() => l.map(e => {
             if ("hangout" === e.category) return (0, s.jsx)(ee, {
                 hangoutActivity: e,
                 guildId: t.id,
@@ -387,7 +387,8 @@ function(e, t, n) {
                 isUnverifiedAccount: o
             }, "".concat(e.category, "-").concat(e.channelId))
         }), [l, t.id, o, r]);
-        if (_) return i ? (0, s.jsxs)(s.Fragment, {
+        if (0 === l.length) return null;
+        if ("empty" === l[0].category) return i ? (0, s.jsxs)(s.Fragment, {
             children: [(0, s.jsxs)("div", {
                 className: X.emptyActivityCardPrompt,
                 children: [(0, s.jsxs)("div", {
@@ -405,10 +406,10 @@ function(e, t, n) {
                     src: n("121727"),
                     alt: ""
                 })]
-            }), c]
+            }), _]
         }) : null;
         return (0, s.jsx)(s.Fragment, {
-            children: c
+            children: _
         })
     }
 
