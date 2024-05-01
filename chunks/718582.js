@@ -62,12 +62,15 @@ function(e, t, n) {
                     r = m.default.keys(i).filter(e => i[e] === p.RelationshipTypes.BLOCKED),
                     s = S.default.getVoiceStates(t),
                     a = Object.keys(s);
-                return 0 === a.length ? [] : a.filter(t => null == s[t].filter(h.isNotNullish).find(e => {
-                    let {
-                        user: t
-                    } = e;
-                    return r.includes(t.id)
-                }) && t !== e.afkChannelId && n.includes(t)).map(e => {
+                return 0 === a.length ? [] : a.filter(t => {
+                    let i = s[t].filter(h.isNotNullish);
+                    return 0 !== i.length && null == i.find(e => {
+                        let {
+                            user: t
+                        } = e;
+                        return r.includes(t.id)
+                    }) && t !== e.afkChannelId && n.includes(t)
+                }).map(e => {
                     let t = o.default.getEmbeddedActivitiesForChannel(e);
                     if (t.length > 0)
                         for (let e of t) return {
