@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("411104");
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("532712"),
         l = n("1561"),
         u = n("84735"),
@@ -20,7 +20,7 @@ function(e, t, n) {
         let {
             href: t,
             onClick: n,
-            className: a,
+            className: s,
             children: E,
             rel: I,
             target: T,
@@ -33,9 +33,9 @@ function(e, t, n) {
         null != t && null == n && (n = d.designConfig.getDefaultLinkInterceptor(t));
         let N = r.useContext(o.BlockInteractionsContext),
             p = {
-                className: s()(c.anchor, {
+                className: a()(c.anchor, {
                     [c.anchorUnderlineOnHover]: f
-                }, a),
+                }, s),
                 href: t,
                 onClick: n,
                 rel: null != I ? I : void 0,

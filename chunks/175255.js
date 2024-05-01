@@ -3,15 +3,15 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("147913"),
         r = n("336197"),
-        a = n("341298"),
-        s = n("558921"),
+        s = n("341298"),
+        a = n("558921"),
         o = n("981631");
     class l extends i.default {
         async handleChannelCreate(e) {
             let {
                 channel: t
             } = e;
-            (0, a.isEligibleForMidjourneyRedirect)(t) && (await (0, a.hasRedirectedToGuild)(s.MIDJOURNEY_GUILD_ID), (0, r.default)(o.Routes.CHANNEL(null, t.id)))
+            (0, s.isEligibleForMidjourneyRedirect)(t) && (await (0, s.hasRedirectedToGuild)(a.MIDJOURNEY_GUILD_ID), (0, r.default)(o.Routes.CHANNEL(null, t.id)))
         }
         constructor(...e) {
             var t, n, i;

@@ -4,9 +4,9 @@ function(e, t, n) {
     var i = n("328865");
     n("2831");
     var r = n("264344"),
-        a = n.n(r);
+        s = n.n(r);
 
-    function s(e, t, n) {
+    function a(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -14,7 +14,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    window.platform = a(), null == window.ResizeObserver && (window.ResizeObserver = i.ResizeObserver), "object" != typeof globalThis && (window.globalThis = window), Map.prototype.toJSON = function() {
+    window.platform = s(), null == window.ResizeObserver && (window.ResizeObserver = i.ResizeObserver), "object" != typeof globalThis && (window.globalThis = window), Map.prototype.toJSON = function() {
         return Array.from(this)
     }, Set.prototype.toJSON = function() {
         return Array.from(this)
@@ -36,7 +36,7 @@ function(e, t, n) {
                 }
             }
             constructor(e = 0, t = 0, n = 0, i = 1) {
-                s(this, "x", void 0), s(this, "y", void 0), s(this, "z", void 0), s(this, "w", void 0), this.x = e, this.y = t, this.z = n, this.w = i
+                a(this, "x", void 0), a(this, "y", void 0), a(this, "z", void 0), a(this, "w", void 0), this.x = e, this.y = t, this.z = n, this.w = i
             }
         }
         null == window.DOMPoint && (window.DOMPoint = e)
@@ -70,7 +70,7 @@ function(e, t, n) {
                 }
             }
             constructor(e = 0, t = 0, n = 0, i = 0) {
-                s(this, "x", void 0), s(this, "y", void 0), s(this, "width", void 0), s(this, "height", void 0), this.x = e, this.y = t, this.width = n, this.height = i
+                a(this, "x", void 0), a(this, "y", void 0), a(this, "width", void 0), a(this, "height", void 0), this.x = e, this.y = t, this.width = n, this.height = i
             }
         }
         null == window.DOMRect && (window.DOMRect = e)

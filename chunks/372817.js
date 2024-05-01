@@ -8,15 +8,15 @@ function(e, t, n) {
             scrollToStart: i,
             scrollToEnd: r
         } = e;
-        async function a(e) {
-            var r, a;
+        async function s(e) {
+            var r, s;
             let o = (null == e ? void 0 : e.from) || n();
             if (null == o) return null;
-            let l = (r = o, null !== (a = t().find(e => !!(r.compareDocumentPosition(e) & (Node.DOCUMENT_POSITION_FOLLOWING | Node.DOCUMENT_POSITION_CONTAINED_BY)))) && void 0 !== a ? a : null);
-            return null == l && (null == e ? void 0 : e.wrap) ? (await (null == i ? void 0 : i()), s()) : l
+            let l = (r = o, null !== (s = t().find(e => !!(r.compareDocumentPosition(e) & (Node.DOCUMENT_POSITION_FOLLOWING | Node.DOCUMENT_POSITION_CONTAINED_BY)))) && void 0 !== s ? s : null);
+            return null == l && (null == e ? void 0 : e.wrap) ? (await (null == i ? void 0 : i()), a()) : l
         }
 
-        function s() {
+        function a() {
             var e;
             return null !== (e = t()[0]) && void 0 !== e ? e : null
         }
@@ -27,11 +27,11 @@ function(e, t, n) {
             return null !== (e = n[n.length - 1]) && void 0 !== e ? e : null
         }
         return {
-            getNextFocusableElement: a,
+            getNextFocusableElement: s,
             getPreviousFocusableElement: async function e(e) {
                 let i = (null == e ? void 0 : e.from) || n();
                 if (null == i) return null;
-                let a = function(e) {
+                let s = function(e) {
                     let n = t();
                     for (let t = n.length - 1; t >= 0; t--) {
                         let i = n[t];
@@ -39,9 +39,9 @@ function(e, t, n) {
                     }
                     return null
                 }(i);
-                return null == a && (null == e ? void 0 : e.wrap) ? (await (null == r ? void 0 : r()), o()) : a
+                return null == s && (null == e ? void 0 : e.wrap) ? (await (null == r ? void 0 : r()), o()) : s
             },
-            getFirstFocusableElement: s,
+            getFirstFocusableElement: a,
             getLastFocusableElement: o
         }
     }

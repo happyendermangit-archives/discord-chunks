@@ -10,16 +10,16 @@ function(e, t, n) {
     });
     var i = n("470079"),
         r = n("442837"),
-        a = n("276438"),
-        s = n("642101");
+        s = n("276438"),
+        a = n("642101");
 
     function o(e, t) {
-        let n = s.default.getLastFetchedMillis(e);
+        let n = a.default.getLastFetchedMillis(e);
         if (!t && null != n && Date.now() - n < 72e5) return !1;
         let {
             loading: i
-        } = s.default.getFetchStatus(e);
-        return i === s.LoadingStatus.NONE && !0
+        } = a.default.getFetchStatus(e);
+        return i === a.LoadingStatus.NONE && !0
     }
 
     function l(e) {
@@ -29,14 +29,14 @@ function(e, t, n) {
         } = e, {
             loading: l,
             error: u
-        } = (0, r.useStateFromStores)([s.default], () => s.default.getFetchStatus(t), [t]), d = i.useCallback(e => {
+        } = (0, r.useStateFromStores)([a.default], () => a.default.getFetchStatus(t), [t]), d = i.useCallback(e => {
             let {
                 force: i,
                 flushSeenItems: r
             } = e;
-            async function s() {
+            async function a() {
                 try {
-                    await (0, a.fetchGuildFeed)({
+                    await (0, s.fetchGuildFeed)({
                         guildId: t,
                         flushSeenItems: r,
                         refresh: !0,
@@ -46,12 +46,12 @@ function(e, t, n) {
                     console.error(e)
                 }
             }
-            o(t, null != i && i) && s()
+            o(t, null != i && i) && a()
         }, [t, n]), _ = i.useCallback(() => {
             o(t, !0) && e();
             async function e() {
                 try {
-                    await (0, a.fetchGuildFeed)({
+                    await (0, s.fetchGuildFeed)({
                         guildId: t,
                         refresh: !1
                     })

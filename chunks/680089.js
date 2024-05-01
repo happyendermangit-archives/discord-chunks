@@ -2,8 +2,8 @@ function(e, t, n) {
     "use strict";
     n.r(t), n("47120");
     var i, r = n("442837"),
-        a = n("570140"),
-        s = n("823379"),
+        s = n("570140"),
+        a = n("823379"),
         o = n("592125"),
         l = n("486472"),
         u = n("984933"),
@@ -45,7 +45,7 @@ function(e, t, n) {
             return E
         }
     }
-    _(f, "displayName", "CategoryCollapseStore"), _(f, "persistKey", "collapsedCategories"), t.default = new f(a.default, {
+    _(f, "displayName", "CategoryCollapseStore"), _(f, "persistKey", "collapsedCategories"), t.default = new f(s.default, {
         CONNECTION_OPEN: function(e) {
             for (let t of (!e.userGuildSettings.partial && (c = {}), e.userGuildSettings.entries))
                 if (null != t.channel_overrides)
@@ -54,7 +54,7 @@ function(e, t, n) {
         USER_GUILD_SETTINGS_FULL_UPDATE: function(e) {
             let {
                 userGuildSettings: t
-            } = e, n = new Set(t.map(e => e.guild_id).filter(s.isNotNullish));
+            } = e, n = new Set(t.map(e => e.guild_id).filter(a.isNotNullish));
             for (let e in c) {
                 let t = o.default.getChannel(e);
                 null != t && null != t.guild_id && n.has(t.guild_id) && delete c[t.id]

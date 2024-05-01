@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("442837"),
-        a = n("481060"),
-        s = n("857192"),
+        s = n("481060"),
+        a = n("857192"),
         o = n("517100"),
         l = n("594174"),
         u = n("153850"),
@@ -18,7 +18,7 @@ function(e, t, n) {
 
     function c() {
         var e;
-        let t = (0, r.useStateFromStores)([s.default], () => s.default.isIdleStatusIndicatorEnabled),
+        let t = (0, r.useStateFromStores)([a.default], () => a.default.isIdleStatusIndicatorEnabled),
             n = (0, r.useStateFromStores)([l.default], () => {
                 var e, t;
                 return null !== (t = null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t
@@ -30,20 +30,20 @@ function(e, t, n) {
                 className: _.container,
                 children: [(0, i.jsxs)("div", {
                     className: _.status,
-                    children: [(0, i.jsx)(a.Status, {
+                    children: [(0, i.jsx)(s.Status, {
                         status: I.includes("ACTIVE") ? d.StatusTypes.ONLINE : d.StatusTypes.IDLE,
                         className: _.statusIndicator
-                    }), (0, i.jsx)(a.Text, {
+                    }), (0, i.jsx)(s.Text, {
                         variant: "text-md/normal",
                         children: "IDLE STATUS:"
                     }), (0, i.jsx)("div", {
                         className: _.statusText,
-                        children: (0, i.jsx)(a.Text, {
+                        children: (0, i.jsx)(s.Text, {
                             variant: "text-md/bold",
                             children: I.join(" + ")
                         })
                     })]
-                }), c && (0, i.jsxs)(a.Text, {
+                }), c && (0, i.jsxs)(s.Text, {
                     variant: "text-md/normal",
                     children: ["Idle since:", " ", new Date(null !== (e = o.default.getIdleSince()) && void 0 !== e ? e : 0).toLocaleDateString(void 0, {
                         year: "numeric",

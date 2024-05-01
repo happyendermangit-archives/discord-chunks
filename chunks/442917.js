@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("512722"),
         l = n.n(o),
         u = n("392711"),
@@ -57,9 +57,9 @@ function(e, t, n) {
         en = n("981631"),
         ei = n("354459"),
         er = n("928878"),
-        ea = n("976587");
+        es = n("976587");
 
-    function es(e, t, n) {
+    function ea(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -178,7 +178,7 @@ function(e, t, n) {
                 streamId: t,
                 participantOnScreen: n,
                 isVideoEnabled: r
-            } = this.props, a = (0, p.computeChannelName)(e, x.default, V.default), o = this.isEmptyBroadcast(), l = (null == n ? void 0 : n.id) === B.default.getId() && r, u = this.renderStreamState(), d = null;
+            } = this.props, s = (0, p.computeChannelName)(e, x.default, V.default), o = this.isEmptyBroadcast(), l = (null == n ? void 0 : n.id) === B.default.getId() && r, u = this.renderStreamState(), d = null;
             return (null == n ? void 0 : n.type) !== ei.ParticipantTypes.ACTIVITY && (null != u ? d = u : ((null == n ? void 0 : n.type) === ei.ParticipantTypes.USER || (null == n ? void 0 : n.type) === ei.ParticipantTypes.STREAM) && (d = (0, i.jsx)(X.default, {
                 paused: this.streamerPaused,
                 streamId: t,
@@ -194,7 +194,7 @@ function(e, t, n) {
                 children: e => {
                     var t;
                     return (0, i.jsx)(y.default, {
-                        title: a,
+                        title: s,
                         backgroundKey: null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : "",
                         screenMessage: null == u ? this.getScreenMessage() : null,
                         onJumpToChannel: this.handleJumpToChannel,
@@ -203,7 +203,7 @@ function(e, t, n) {
                         preventIdleComponent: M.default,
                         width: ei.PIP_WIDTH,
                         hideControls: o,
-                        className: s()(o ? er.emptyBroadcast : void 0, ea.elevationHigh),
+                        className: a()(o ? er.emptyBroadcast : void 0, es.elevationHigh),
                         innerClassName: o ? er.innerEmptyBroadcast : void 0,
                         ...e,
                         children: d
@@ -212,16 +212,16 @@ function(e, t, n) {
             })
         }
         constructor(...e) {
-            super(...e), es(this, "state", {
+            super(...e), ea(this, "state", {
                 screensharePopoutOpen: !1
-            }), es(this, "_ref", r.createRef()), es(this, "handleVideo", e => {
+            }), ea(this, "_ref", r.createRef()), ea(this, "handleVideo", e => {
                 E.default.setVideoEnabled(e)
-            }), es(this, "handleEnableVideoWhenUnavailable", () => {
+            }), ea(this, "handleEnableVideoWhenUnavailable", () => {
                 let {
                     isVideoAvailable: e
                 } = this.props;
                 e ? this.handleVideo(!0) : (0, $.default)()
-            }), es(this, "handleJumpToChannel", () => {
+            }), ea(this, "handleJumpToChannel", () => {
                 var e;
                 let {
                     channel: t
@@ -229,43 +229,43 @@ function(e, t, n) {
                 (0, T.popAllLayers)();
                 let n = null !== (e = t.getGuildId()) && void 0 !== e ? e : en.ME;
                 I.default.channelListScrollTo(n, t.id), (0, v.transitionToGuild)(n, t.id)
-            }), es(this, "handleStartStream", () => {
+            }), ea(this, "handleStartStream", () => {
                 let {
                     canGoLive: e,
                     channel: t
                 } = this.props, n = t.getGuildId();
                 if (l()(null != n, "Cannot go live in non guild channel"), !e) return (0, ee.default)();
                 (0, et.default)(n, t.id, en.AnalyticsPages.GUILD_CHANNEL)
-            }), es(this, "handleStopStream", () => {
+            }), ea(this, "handleStopStream", () => {
                 let {
                     participantOnScreen: e,
                     isSelfBroadcasting: t
                 } = this.props;
                 l()((0, ei.isStreamParticipant)(e), "cannot stop stream for non streamer"), t ? (0, h.openStopBroadcastConfirmModal)(() => (0, g.default)(e.stream)) : (0, g.default)(e.stream)
-            }), es(this, "handleOpenPopout", () => {
+            }), ea(this, "handleOpenPopout", () => {
                 let {
                     channel: e
                 } = this.props;
                 L.openChannelCallPopout(e)
-            }), es(this, "renderBottomLeftControls", () => {
+            }), ea(this, "renderBottomLeftControls", () => {
                 let {
                     canSeeParticipantName: e
                 } = this.viewProperties;
                 return (0, i.jsx)(i.Fragment, {
                     children: e ? this.renderParticipantName() : null
                 })
-            }), es(this, "renderBottomRightControls", () => {
+            }), ea(this, "renderBottomRightControls", () => {
                 let {
                     canSettings: e,
                     canPopout: t,
                     canDisconnect: n,
                     canStopStream: r,
-                    canSeeViewers: a
+                    canSeeViewers: s
                 } = this.viewProperties;
                 return (0, i.jsxs)(i.Fragment, {
-                    children: [a ? this.renderViewersIcon() : null, e ? this.renderSettingsIcon() : null, t ? this.renderPopoutIcon() : null, r ? this.renderStopStreamButton() : null, n ? this.renderDisconnectButton() : null]
+                    children: [s ? this.renderViewersIcon() : null, e ? this.renderSettingsIcon() : null, t ? this.renderPopoutIcon() : null, r ? this.renderStopStreamButton() : null, n ? this.renderDisconnectButton() : null]
                 })
-            }), es(this, "renderDisconnectButton", () => {
+            }), ea(this, "renderDisconnectButton", () => {
                 let {
                     channel: e
                 } = this.props;
@@ -273,7 +273,7 @@ function(e, t, n) {
                     className: er.rightTrayIcon,
                     channel: e
                 })
-            }), es(this, "renderStopStreamButton", () => {
+            }), ea(this, "renderStopStreamButton", () => {
                 let {
                     isSelf: e
                 } = this.viewProperties;
@@ -282,7 +282,7 @@ function(e, t, n) {
                     className: er.rightTrayIcon,
                     onClick: this.handleStopStream
                 })
-            }), es(this, "renderViewersIcon", () => {
+            }), ea(this, "renderViewersIcon", () => {
                 let {
                     participantOnScreen: e,
                     channel: t
@@ -296,12 +296,12 @@ function(e, t, n) {
                         compact: !0
                     })
                 })
-            }), es(this, "renderPopoutIcon", () => (0, i.jsx)(U.default, {
+            }), ea(this, "renderPopoutIcon", () => (0, i.jsx)(U.default, {
                 className: er.rightTrayIcon,
                 popoutOpen: !1,
                 onOpenPopout: this.handleOpenPopout,
                 onClosePopout: en.NOOP_NULL
-            })), es(this, "renderSettingsIcon", () => {
+            })), ea(this, "renderSettingsIcon", () => {
                 let {
                     participantOnScreen: e,
                     activeStreams: t
@@ -319,12 +319,12 @@ function(e, t, n) {
     t.default = _.default.connectStores([k.default, A.default, B.default, F.default, H.default, w.default, Y.default], e => {
         let {
             channel: t
-        } = e, n = F.default.getSpeaker(t.id), i = A.default.getParticipant(t.id, n), r = d()(k.default.getVideoDevices()).values().first(), a = null == r || r.disabled, s = null != i && i.type !== ei.ParticipantTypes.ACTIVITY && i.type !== ei.ParticipantTypes.HIDDEN_STREAM ? H.default.getStreamId(i.user.id, t.getGuildId(), (0, m.default)(i.type)) : null, o = !a && k.default.isVideoEnabled(), l = (0, R.default)(k.default), u = B.default.getId(), _ = w.default.getCurrentUserActiveStream(), c = (0, S.isBroadcastingInChannel)(t.id);
+        } = e, n = F.default.getSpeaker(t.id), i = A.default.getParticipant(t.id, n), r = d()(k.default.getVideoDevices()).values().first(), s = null == r || r.disabled, a = null != i && i.type !== ei.ParticipantTypes.ACTIVITY && i.type !== ei.ParticipantTypes.HIDDEN_STREAM ? H.default.getStreamId(i.user.id, t.getGuildId(), (0, m.default)(i.type)) : null, o = !s && k.default.isVideoEnabled(), l = (0, R.default)(k.default), u = B.default.getId(), _ = w.default.getCurrentUserActiveStream(), c = (0, S.isBroadcastingInChannel)(t.id);
         return {
             channel: t,
-            streamId: s,
+            streamId: a,
             participantOnScreen: i,
-            isVideoAvailable: !1 === a,
+            isVideoAvailable: !1 === s,
             isVideoEnabled: o,
             isSelfBroadcasting: c,
             canGoLive: l,

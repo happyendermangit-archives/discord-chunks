@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        a = n("442837"),
-        s = n("606992"),
+        s = n("442837"),
+        a = n("606992"),
         o = n("314897"),
         l = n("944486"),
         u = n("843693"),
@@ -23,9 +23,9 @@ function(e, t, n) {
         let {
             editorHeight: i,
             textValue: d
-        } = e, c = r.useRef(d), T = (0, s.useChannelAutocompleteLayerPosition)({
+        } = e, c = r.useRef(d), T = (0, a.useChannelAutocompleteLayerPosition)({
             editorHeight: i
-        }), f = (0, _.default)(), S = (0, a.useStateFromStores)([u.default, o.default, l.default], () => {
+        }), f = (0, _.default)(), S = (0, s.useStateFromStores)([u.default, o.default, l.default], () => {
             var e;
             return u.default.isComboing(o.default.getId(), null !== (e = l.default.getChannelId()) && void 0 !== e ? e : E.EMPTY_STRING_SNOWFLAKE_ID)
         }), h = null !== (t = null == T ? void 0 : T.left) && void 0 !== t ? t : 0, A = (null !== (n = null == T ? void 0 : T.top) && void 0 !== n ? n : 0) - 16, m = r.useMemo(() => .05 > Math.random(), [0 === d.length]);

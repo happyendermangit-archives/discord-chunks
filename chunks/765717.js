@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("613828"),
-        a = n("990547"),
-        s = n("213609");
+        s = n("990547"),
+        a = n("213609");
 
     function o(e) {
         var t;
@@ -19,8 +19,8 @@ function(e, t, n) {
             disableTrack: l,
             ...u
         } = e, d = o;
-        return "function" == typeof d && (d = d(u)), (0, s.default)({
-            type: a.ImpressionTypes.PAGE,
+        return "function" == typeof d && (d = d(u)), (0, a.default)({
+            type: s.ImpressionTypes.PAGE,
             name: n,
             properties: d
         }, {

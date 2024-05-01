@@ -9,12 +9,12 @@ function(e, t, n) {
         return null != e
     }
 
-    function a(e, t) {
+    function s(e, t) {
         return e.size === t.size && (0 === e.size && 0 === t.size || Array.from(e).every(e => t.has(e)))
     }
     n.r(t), n.d(t, {
         areSetsEqual: function() {
-            return a
+            return s
         },
         assertNever: function() {
             return i

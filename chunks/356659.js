@@ -95,9 +95,9 @@ function(e, t, n) {
             return A
         }
     });
-    var i, r, a, s, o, l, u, d, _ = n("710845"),
+    var i, r, s, a, o, l, u, d, _ = n("710845"),
         c = n("70956");
-    (i = o || (o = {}))[i.SECONDS_30 = 30 * c.default.Millis.SECOND] = "SECONDS_30", i[i.MINUTES_1 = c.default.Millis.MINUTE] = "MINUTES_1", i[i.MINUTES_2 = 2 * c.default.Millis.MINUTE] = "MINUTES_2", (r = l || (l = {}))[r.ALL = 0] = "ALL", r[r.FRIENDS = 1] = "FRIENDS", (a = u || (u = {})).DECOUPLED = "decoupled", a.VIEWER = "viewer", a.STREAMER = "streamer", (s = d || (d = {}))[s.Error = 0] = "Error", s[s.Disabled = 1] = "Disabled", s[s.Enabled = 2] = "Enabled";
+    (i = o || (o = {}))[i.SECONDS_30 = 30 * c.default.Millis.SECOND] = "SECONDS_30", i[i.MINUTES_1 = c.default.Millis.MINUTE] = "MINUTES_1", i[i.MINUTES_2 = 2 * c.default.Millis.MINUTE] = "MINUTES_2", (r = l || (l = {}))[r.ALL = 0] = "ALL", r[r.FRIENDS = 1] = "FRIENDS", (s = u || (u = {})).DECOUPLED = "decoupled", s.VIEWER = "viewer", s.STREAMER = "streamer", (a = d || (d = {}))[a.Error = 0] = "Error", a[a.Disabled = 1] = "Disabled", a[a.Enabled = 2] = "Enabled";
     let E = "alt+c",
         I = 6 * c.default.Millis.SECOND,
         T = new _.default("Clips"),

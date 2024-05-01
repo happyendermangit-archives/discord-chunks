@@ -10,8 +10,8 @@ function(e, t, n) {
     }), n("390547"), n("47120"), n("627341");
     var i = n("392711"),
         r = n.n(i),
-        a = n("278074"),
-        s = n("442837"),
+        s = n("278074"),
+        a = n("442837"),
         o = n("317381"),
         l = n("841784"),
         u = n("924301"),
@@ -43,7 +43,7 @@ function(e, t, n) {
 
     function L(e) {
         let t = e.id,
-            n = (0, s.useStateFromStoresArray)([E.default, d.default], () => {
+            n = (0, a.useStateFromStoresArray)([E.default, d.default], () => {
                 let e = E.default.getChannels(t)[E.GUILD_VOCAL_CHANNELS_KEY].filter(e => {
                     let {
                         channel: t
@@ -57,17 +57,17 @@ function(e, t, n) {
                 });
                 return [...e, ...Object.values(d.default.getThreadsForGuild(t)).flatMap(e => Object.keys(e))]
             }, [t]),
-            r = (0, s.useStateFromStoresArray)([u.default], () => u.default.getGuildScheduledEventsForGuild(t).filter(e => (0, u.isGuildScheduledEventActive)(e)).map(e => ({
+            r = (0, a.useStateFromStoresArray)([u.default], () => u.default.getGuildScheduledEventsForGuild(t).filter(e => (0, u.isGuildScheduledEventActive)(e)).map(e => ({
                 category: O.CardCategory.EVENT,
                 event: e
             })), [t]),
-            S = (0, s.useStateFromStores)([T.default, A.default, o.default, h.default, I.default, _.default], () => {
+            S = (0, a.useStateFromStores)([T.default, A.default, o.default, h.default, I.default, _.default], () => {
                 let i = T.default.getRelationships(),
                     r = p.default.keys(i).filter(e => i[e] === R.RelationshipTypes.BLOCKED),
-                    a = A.default.getVoiceStates(t),
-                    s = Object.keys(a);
-                return 0 === s.length ? [] : s.filter(t => {
-                    let i = a[t].filter(m.isNotNullish);
+                    s = A.default.getVoiceStates(t),
+                    a = Object.keys(s);
+                return 0 === a.length ? [] : a.filter(t => {
+                    let i = s[t].filter(m.isNotNullish);
                     return 0 !== i.length && null == i.find(e => {
                         let {
                             user: t
@@ -81,7 +81,7 @@ function(e, t, n) {
                             category: O.CardCategory.EMBEDDED_ACTIVITY,
                             embeddedActivity: e
                         };
-                    let n = a[e].filter(m.isNotNullish);
+                    let n = s[e].filter(m.isNotNullish);
                     for (let t of n) {
                         let i = I.default.findActivity(t.user.id, v(t));
                         if (null != i && !(0, l.default)(i)) return {
@@ -98,18 +98,18 @@ function(e, t, n) {
                             return t.id
                         }),
                         r = h.default.hasVideo(e),
-                        s = _.default.getAllApplicationStreamsForChannel(e).map(e => e.ownerId);
+                        a = _.default.getAllApplicationStreamsForChannel(e).map(e => e.ownerId);
                     return {
                         category: O.CardCategory.HANGOUT,
                         channelId: e,
                         userIds: i,
-                        streamUserIds: s,
+                        streamUserIds: a,
                         channelHasVideo: r
                     }
                 })
             }, [n, e.afkChannelId, t]),
-            N = (0, s.useStateFromStores)([c.default], () => c.default.hasConsented(R.Consents.PERSONALIZATION)),
-            C = (0, s.useStateFromStores)([f.default], () => f.default.getUserAffinities());
+            N = (0, a.useStateFromStores)([c.default], () => c.default.hasConsented(R.Consents.PERSONALIZATION)),
+            C = (0, a.useStateFromStores)([f.default], () => f.default.getUserAffinities());
         if (0 === S.length && 0 === r.length) return 0 === n.length ? [] : n.slice(0, 3).map(e => ({
             category: O.CardCategory.EMPTY,
             channelId: e
@@ -122,44 +122,44 @@ function(e, t, n) {
                         var t, n;
                         return null !== (n = null === (t = f.default.getUserAffinity(e)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0
                     }).map(n),
-                    r = (0, a.match)(e).with({
+                    r = (0, s.match)(e).with({
                         category: O.CardCategory.EVENT
                     }, () => 7).with({
                         category: O.CardCategory.GAMING
                     }, () => 6).with({
                         category: O.CardCategory.EMBEDDED_ACTIVITY
                     }, () => 5).with({
-                        streamUserIds: a.P.when(e => e.length > 0)
+                        streamUserIds: s.P.when(e => e.length > 0)
                     }, () => 4).with({
                         channelHasVideo: !0
                     }, () => 3).with({
                         category: O.CardCategory.HANGOUT
                     }, () => 2).otherwise(() => 1),
-                    s = 0;
-                return t ? ("userIds" in e && (s += Math.max(...i(e.userIds))), "embeddedActivity" in e && (s += Math.max(...i([...e.embeddedActivity.userIds]))), "voiceStates" in e && (s += Math.max(...i(e.voiceStates.filter(m.isNotNullish).map(e => {
+                    a = 0;
+                return t ? ("userIds" in e && (a += Math.max(...i(e.userIds))), "embeddedActivity" in e && (a += Math.max(...i([...e.embeddedActivity.userIds]))), "voiceStates" in e && (a += Math.max(...i(e.voiceStates.filter(m.isNotNullish).map(e => {
                     let {
                         user: t
                     } = e;
                     return t.id
-                }))))) : ("userIds" in e && (s += e.userIds.length), "embeddedActivity" in e && (s += [...e.embeddedActivity.userIds].length), "voiceStates" in e && (s += e.voiceStates.filter(m.isNotNullish).map(e => {
+                }))))) : ("userIds" in e && (a += e.userIds.length), "embeddedActivity" in e && (a += [...e.embeddedActivity.userIds].length), "voiceStates" in e && (a += e.voiceStates.filter(m.isNotNullish).map(e => {
                     let {
                         user: t
                     } = e;
                     return t.id
-                }).length)), s = s > 0 ? s * r : 1e-5 * r
+                }).length)), a = a > 0 ? a * r : 1e-5 * r
             })(e, t)], ["desc"])
         })([...S, ...r], g).slice(0, 3)
     }
     let v = e => t => [R.ActivityTypes.PLAYING, R.ActivityTypes.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId);
 
     function D(e, t, n) {
-        let i = (0, s.useStateFromStoresArray)([_.default], () => _.default.getAllApplicationStreamsForChannel(n).map(e => e.ownerId), [n]),
-            a = (0, s.useStateFromStoresArray)([S.default, f.default], () => r()(e).map(e => S.default.getUser(e)).filter(m.isNotNullish).orderBy([e => {
+        let i = (0, a.useStateFromStoresArray)([_.default], () => _.default.getAllApplicationStreamsForChannel(n).map(e => e.ownerId), [n]),
+            s = (0, a.useStateFromStoresArray)([S.default, f.default], () => r()(e).map(e => S.default.getUser(e)).filter(m.isNotNullish).orderBy([e => {
                 var t, n;
                 return null !== (n = null === (t = f.default.getUserAffinity(e.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0
             }], ["desc"]).value()),
-            o = a.length > 3 ? a.slice(0, 6) : a.slice(0, 7),
-            l = Math.max(0, a.length - o.length),
+            o = s.length > 3 ? s.slice(0, 6) : s.slice(0, 7),
+            l = Math.max(0, s.length - o.length),
             u = i.length > 2 ? i.slice(0, 2) : i.slice(0, 3),
             d = u.map(e => N.default.getName(t, n, S.default.getUser(e))),
             c = function(e, t) {
@@ -192,7 +192,7 @@ function(e, t, n) {
                 })
             }(d, Math.max(0, i.length - u.length));
         return {
-            totalUsers: a.length,
+            totalUsers: s.length,
             usersToShow: o,
             othersCount: l,
             streamUserIds: i,

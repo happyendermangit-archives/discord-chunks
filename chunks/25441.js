@@ -5,7 +5,7 @@ function(e, t, n) {
             return r
         },
         notifyFocusSubscribers: function() {
-            return a
+            return s
         }
     }), n("47120");
     let i = new Map;
@@ -15,7 +15,7 @@ function(e, t, n) {
         return null == n && (n = new Set, i.set(e, n)), n.add(t), () => null == n ? void 0 : n.delete(t)
     }
 
-    function a(e, t, n) {
+    function s(e, t, n) {
         let r = i.get(e);
         if (null != r)
             for (let e of r) e(t, n)

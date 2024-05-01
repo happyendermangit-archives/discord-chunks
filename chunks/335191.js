@@ -13,8 +13,8 @@ function(e, t, n) {
     }), n("653041");
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("692547"),
         l = n("780384"),
         u = n("481060"),
@@ -36,7 +36,7 @@ function(e, t, n) {
 
     function C(e) {
         var t, n;
-        let r, a, d, {
+        let r, s, d, {
             connectedAccount: S,
             theme: C,
             locale: g,
@@ -58,7 +58,7 @@ function(e, t, n) {
                 r = (0, T.generateSteamMetadataItems)(y);
                 break;
             case N.PlatformTypes.TWITTER:
-                r = (0, T.generateTwitterMetadataItems)(y), "1" === y[p.MetadataFields.TWITTER_VERIFIED] && (a = U, b = O.default.Messages.CONNECTION_VERIFIED_ON_TWITTER);
+                r = (0, T.generateTwitterMetadataItems)(y), "1" === y[p.MetadataFields.TWITTER_VERIFIED] && (s = U, b = O.default.Messages.CONNECTION_VERIFIED_ON_TWITTER);
                 break;
             case N.PlatformTypes.PAYPAL:
                 r = (0, T.generatePaypalMetadataItems)(y);
@@ -72,7 +72,7 @@ function(e, t, n) {
         let G = _.default.get((0, E.useLegacyPlatformType)(S.type)),
             w = null == G ? void 0 : null === (t = G.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(G, S);
         null != M && M ? d = (0, i.jsx)(A.default, {
-            className: s()(R.__invalid_connectedAccountOpenIconContainer, R.connectedAccountHideIcon),
+            className: a()(R.__invalid_connectedAccountOpenIconContainer, R.connectedAccountHideIcon),
             foregroundColor: "currentColor"
         }) : null != w && (d = (0, i.jsx)(u.Anchor, {
             href: w,
@@ -95,13 +95,13 @@ function(e, t, n) {
             k = (0, u.useToken)(o.default.colors.INTERACTIVE_ACTIVE).hex(),
             V = S.verified ? (0, i.jsx)(f.default, {
                 className: R.connectedAccountVerifiedIcon,
-                color: null != a ? a : B,
+                color: null != s ? s : B,
                 forcedIconColor: k,
                 size: 16,
                 tooltipText: b
             }) : null;
         return (0, i.jsxs)("div", {
-            className: s()(R.connectedAccountContainer, null != r && r.length > 0 || null != P ? R.connectedAccountContainerWithMetadata : null, v),
+            className: a()(R.connectedAccountContainer, null != r && r.length > 0 || null != P ? R.connectedAccountContainerWithMetadata : null, v),
             children: [(0, i.jsxs)("div", {
                 className: R.connectedAccount,
                 children: [(0, i.jsx)(u.Tooltip, {
@@ -152,9 +152,9 @@ function(e, t, n) {
             applicationRoleConnection: t,
             className: n,
             locale: r
-        } = e, a = (0, T.generateRoleConnectionMetadataItems)(t, void 0, r);
+        } = e, s = (0, T.generateRoleConnectionMetadataItems)(t, void 0, r);
         return (0, i.jsxs)("div", {
-            className: s()(R.connectedAccountContainer, null != a && a.length > 0 ? R.connectedAccountContainerWithMetadata : null, n),
+            className: a()(R.connectedAccountContainer, null != s && s.length > 0 ? R.connectedAccountContainerWithMetadata : null, n),
             children: [(0, i.jsx)("div", {
                 className: R.connectedAccount,
                 children: (0, i.jsxs)("div", {
@@ -176,9 +176,9 @@ function(e, t, n) {
                         })
                     }) : null]
                 })
-            }), null != a && a.length > 0 ? (0, i.jsx)("div", {
-                className: s()(R.connectedAccountChildren, R.connectedAccountChildrenNoIcon),
-                children: a
+            }), null != s && s.length > 0 ? (0, i.jsx)("div", {
+                className: a()(R.connectedAccountChildren, R.connectedAccountChildrenNoIcon),
+                children: s
             }) : null, (0, i.jsx)("div", {
                 children: (0, i.jsx)("div", {
                     className: R.connectedAccountPoweredBy,
@@ -207,7 +207,7 @@ function(e, t, n) {
         let {
             connectedAccounts: n,
             theme: r,
-            locale: a,
+            locale: s,
             className: o,
             userId: l
         } = e;
@@ -215,7 +215,7 @@ function(e, t, n) {
         let u = n.filter(e => _.default.isSupported(e.type)).map(e => (0, i.jsx)(C, {
                 connectedAccount: e,
                 theme: r,
-                locale: a,
+                locale: s,
                 userId: l
             }, "".concat(e.type, ":").concat(e.id))),
             d = [],
@@ -226,7 +226,7 @@ function(e, t, n) {
         }
         return (0, i.jsxs)("div", {
             ref: t,
-            className: s()(R.connectedAccounts, o),
+            className: a()(R.connectedAccounts, o),
             children: [(0, i.jsx)("div", {
                 className: R.connectedAccountsColumn,
                 children: d

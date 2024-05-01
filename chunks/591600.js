@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("481060"),
-        a = n("666520"),
-        s = n("785717"),
+        s = n("666520"),
+        a = n("785717"),
         o = n("659101"),
         l = n("689938"),
         u = n("695760"),
@@ -23,14 +23,14 @@ function(e, t, n) {
             lastSection: c
         } = e, {
             trackUserProfileAction: E
-        } = (0, s.useUserProfileAnalyticsContext)();
+        } = (0, a.useUserProfileAnalyticsContext)();
         return (0, i.jsxs)(o.default, {
             lastSection: c,
             children: [(0, i.jsx)(r.Heading, {
                 variant: "eyebrow",
                 className: d.title,
                 children: l.default.Messages.NOTE
-            }), (0, i.jsx)(a.default, {
+            }), (0, i.jsx)(s.default, {
                 userId: t.id,
                 autoFocus: n || _,
                 className: u.note,

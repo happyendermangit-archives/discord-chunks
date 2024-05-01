@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("442837"),
-        s = n("481060"),
+        s = n("442837"),
+        a = n("481060"),
         o = n("239091"),
         l = n("79712"),
         u = n("91159"),
@@ -35,14 +35,14 @@ function(e, t, n) {
             guildId: R,
             unread: C,
             onClick: g
-        } = e, [L, v] = r.useState(!1), D = (0, u.getTimestampString)(f.default.extractTimestamp(t.startId)), M = (0, a.useStateFromStores)([S.default], () => S.default.summaryFeedback(t)), y = (e, n) => {
+        } = e, [L, v] = r.useState(!1), D = (0, u.getTimestampString)(f.default.extractTimestamp(t.startId)), M = (0, s.useStateFromStores)([S.default], () => S.default.summaryFeedback(t)), y = (e, n) => {
             e.stopPropagation(), (0, h.default)({
                 summary: t,
                 channel: _,
                 rating: n
             })
         }, P = d.default.can(N.Permissions.MANAGE_MESSAGES, _);
-        return (0, i.jsxs)(s.Clickable, {
+        return (0, i.jsxs)(a.Clickable, {
             className: O.container,
             onClick: g,
             onContextMenu: e => {
@@ -66,7 +66,7 @@ function(e, t, n) {
                 className: O.rowHeader,
                 children: (0, i.jsxs)("div", {
                     className: O.rowHeaderLeft,
-                    children: [(0, i.jsx)(s.Text, {
+                    children: [(0, i.jsx)(a.Text, {
                         className: O.timestamp,
                         color: "interactive-normal",
                         variant: "text-xs/normal",
@@ -80,7 +80,7 @@ function(e, t, n) {
                         height: 12,
                         width: 12,
                         className: O.icon
-                    }), (0, i.jsx)(s.Text, {
+                    }), (0, i.jsx)(a.Text, {
                         className: O.count,
                         color: "interactive-normal",
                         variant: "text-xs/normal",
@@ -104,14 +104,14 @@ function(e, t, n) {
                 })
             }), L && !M && (0, i.jsxs)("div", {
                 className: O.feedbackContainer,
-                children: [(0, i.jsx)(s.Clickable, {
+                children: [(0, i.jsx)(a.Clickable, {
                     onClick: e => y(e, p.FeedbackRating.GOOD),
                     children: (0, i.jsx)(I.default, {
                         className: O.thumbIcon,
                         width: 12,
                         height: 12
                     })
-                }), (0, i.jsx)(s.Clickable, {
+                }), (0, i.jsx)(a.Clickable, {
                     onClick: e => y(e, p.FeedbackRating.BAD),
                     children: (0, i.jsx)(E.default, {
                         className: O.thumbIcon,
@@ -119,12 +119,12 @@ function(e, t, n) {
                         height: 12
                     })
                 })]
-            }), (0, i.jsx)(s.Text, {
+            }), (0, i.jsx)(a.Text, {
                 color: "header-primary",
                 variant: "text-sm/semibold",
                 className: O.title,
                 children: t.topic
-            }), (0, i.jsx)(s.Text, {
+            }), (0, i.jsx)(a.Text, {
                 color: "header-secondary",
                 variant: "text-sm/normal",
                 className: O.subtitle,
@@ -137,21 +137,21 @@ function(e, t, n) {
         let {
             summaries: t,
             summariesMembers: n,
-            channel: s,
+            channel: a,
             selectTopic: o,
             setOpen: l
-        } = e, u = (0, a.useStateFromStores)([_.default], () => _.default.getOldestUnreadMessageId(s.id)), d = r.useCallback(e => {
+        } = e, u = (0, s.useStateFromStores)([_.default], () => _.default.getOldestUnreadMessageId(a.id)), d = r.useCallback(e => {
             o(e), l(!1)
         }, [o, l]);
         return t.length < 1 ? (0, i.jsx)(m.default, {}) : (0, i.jsx)(i.Fragment, {
             children: t.map((e, t) => {
                 var r;
-                let a = null !== (r = n[t]) && void 0 !== r ? r : [];
+                let s = null !== (r = n[t]) && void 0 !== r ? r : [];
                 return (0, i.jsx)(R, {
                     summary: e,
-                    channel: s,
-                    members: a,
-                    guildId: s.guild_id,
+                    channel: a,
+                    members: s,
+                    guildId: a.guild_id,
                     unread: null != u && f.default.compare(e.endId, u) > 0,
                     onClick: () => d(t)
                 }, t)

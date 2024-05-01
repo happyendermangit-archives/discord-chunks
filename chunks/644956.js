@@ -8,9 +8,9 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        a = n.n(r),
-        s = n("392711"),
-        o = n.n(s),
+        s = n.n(r),
+        a = n("392711"),
+        o = n.n(a),
         l = n("866442"),
         u = n("442837"),
         d = n("481060"),
@@ -53,7 +53,7 @@ function(e, t, n) {
         let {
             roleColor: t,
             roleId: r,
-            channelId: s,
+            channelId: a,
             roleName: f,
             guildId: y,
             children: P,
@@ -61,7 +61,7 @@ function(e, t, n) {
         } = e, {
             analyticsLocations: b
         } = (0, T.default)(I.default.ROLE_MENTION), G = (0, u.useStateFromStores)([E.default], () => E.default.roleStyle), w = null != t && 0 !== t && !U, B = w && "dot" === G, k = e => (0, i.jsxs)(C.default, {
-            className: a()(D.roleMention),
+            className: s()(D.roleMention),
             color: "username" === G && w ? t : null,
             ...e,
             children: [B && (0, i.jsx)(d.RoleDot, {
@@ -77,7 +77,7 @@ function(e, t, n) {
         }, {
             autoTrackExposure: !1
         });
-        return !V || U || null == s || null == y || null == r && "@everyone" !== f ? (0, i.jsx)(T.AnalyticsLocationProvider, {
+        return !V || U || null == a || null == y || null == r && "@everyone" !== f ? (0, i.jsx)(T.AnalyticsLocationProvider, {
             value: b,
             children: k()
         }) : (0, i.jsx)(T.AnalyticsLocationProvider, {
@@ -87,10 +87,10 @@ function(e, t, n) {
                     null != r && await (0, S.requestMembersForRole)(y, r)
                 },
                 renderPopout: e => {
-                    let t = m.default.getChannel(s),
-                        a = p.default.getGuild(y),
-                        l = N.default.getMembers(a.id),
-                        u = p.default.getRole(y, null != r ? r : a.getEveryoneRoleId()),
+                    let t = m.default.getChannel(a),
+                        s = p.default.getGuild(y),
+                        l = N.default.getMembers(s.id),
+                        u = p.default.getRole(y, null != r ? r : s.getEveryoneRoleId()),
                         E = o()(l).filter(e => !!("@everyone" === f || e.roles.includes(r)) && null != O.default.getUser(e.userId)).sortBy(e => {
                             var t;
                             let n = O.default.getUser(e.userId);
@@ -106,12 +106,12 @@ function(e, t, n) {
                                     ...n,
                                     location: "RoleMention",
                                     userId: e.userId,
-                                    guildId: a.id,
+                                    guildId: s.id,
                                     channelId: t.id,
                                     roleId: u.id
                                 }),
                                 spacing: 14,
-                                children: (s, o) => {
+                                children: (a, o) => {
                                     let {
                                         isShown: l
                                     } = o;
@@ -120,11 +120,11 @@ function(e, t, n) {
                                         colorString: e.colorString,
                                         colorRoleName: u.name,
                                         user: r,
-                                        isOwner: e.userId === a.ownerId,
+                                        isOwner: e.userId === s.ownerId,
                                         nick: e.nick,
                                         premiumSince: null == e.premiumSince ? null : new Date(e.premiumSince),
                                         channel: t,
-                                        guildId: a.id,
+                                        guildId: s.id,
                                         onContextMenu: e => {
                                             (0, _.openContextMenuLazy)(e, async () => {
                                                 let {
@@ -133,13 +133,13 @@ function(e, t, n) {
                                                 return n => (0, i.jsx)(e, {
                                                     ...n,
                                                     user: r,
-                                                    guildId: a.id,
+                                                    guildId: s.id,
                                                     channel: t,
                                                     showMediaItems: !0
                                                 })
                                             })
                                         },
-                                        ...s
+                                        ...a
                                     }, e.userId)
                                 }
                             }, r.id)

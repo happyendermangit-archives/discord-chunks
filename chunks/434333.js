@@ -10,8 +10,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("1561"),
         l = n("465670"),
         u = n("759231"),
@@ -25,17 +25,17 @@ function(e, t, n) {
             let {
                 role: n,
                 children: r,
-                className: a,
+                className: s,
                 onDismiss: c,
                 backgroundColor: E = _.RED,
                 icon: I = u.default,
                 iconClassName: T
             } = e;
             return (0, i.jsxs)("div", {
-                className: s()(d.error, a, E),
+                className: a()(d.error, s, E),
                 ref: t,
                 children: [(0, i.jsx)(I, {
-                    className: s()(d.icon, T)
+                    className: a()(d.icon, T)
                 }), (0, i.jsx)("div", {
                     role: n,
                     className: d.text,

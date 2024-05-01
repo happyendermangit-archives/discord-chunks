@@ -10,8 +10,8 @@ function(e, t, n) {
     }), n("47120"), n("411104");
     var i = n("836560"),
         r = n("400053"),
-        a = n.n(r),
-        s = n("142494");
+        s = n.n(r),
+        a = n("142494");
 
     function o(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    n.g.IntlMessageFormat = a(), n("770801"), n("177486"), n("144062"), n("750854"), n("198823"), n("551576"), n("682422"), n("760388"), n("725589"), n("338770"), n("99783"), n("740635"), n("523332"), n("307163"), n("636681"), n("209012"), n("651811"), n("740191"), n("407837"), n("372097"), n("894996"), n("829028"), n("750879"), n("952874"), n("185851"), n("962066"), n("519708"), n("180583"), delete n.g.IntlMessageFormat, "undefined" == typeof Intl && n("211604");
+    n.g.IntlMessageFormat = s(), n("770801"), n("177486"), n("144062"), n("750854"), n("198823"), n("551576"), n("682422"), n("760388"), n("725589"), n("338770"), n("99783"), n("740635"), n("523332"), n("307163"), n("636681"), n("209012"), n("651811"), n("740191"), n("407837"), n("372097"), n("894996"), n("829028"), n("750879"), n("952874"), n("185851"), n("962066"), n("519708"), n("180583"), delete n.g.IntlMessageFormat, "undefined" == typeof Intl && n("211604");
     let l = "en-US";
 
     function u() {
@@ -91,7 +91,7 @@ function(e, t, n) {
             this._chosenLocale = e, this.loadPromise = this._loadMessagesForLocale(e), this.emit("locale", this._chosenLocale, t)
         }
         setUpdateRules(e) {
-            (0, s.setUpdateRules)(e)
+            (0, a.setUpdateRules)(e)
         }
         getLanguages() {
             return this._languages
@@ -143,8 +143,8 @@ function(e, t, n) {
                     return t
                 });
             if (r.includes(i)) return i;
-            let a = i.split("-");
-            return r.includes(a[0]) ? a[0] : "zh" === a[0] && a.length > 1 && "Hant" === a[1] ? null !== (t = r.find(e => "zh-TW" === e)) && void 0 !== t ? t : l : null !== (n = r.find(e => e.split("-")[0] === a[0])) && void 0 !== n ? n : l
+            let s = i.split("-");
+            return r.includes(s[0]) ? s[0] : "zh" === s[0] && s.length > 1 && "Hant" === s[1] ? null !== (t = r.find(e => "zh-TW" === e)) && void 0 !== t ? t : l : null !== (n = r.find(e => e.split("-")[0] === s[0])) && void 0 !== n ? n : l
         }
         _loadMessagesForLocale(e) {
             let t = this._fetchMessages(e);
@@ -183,17 +183,17 @@ function(e, t, n) {
                 let {
                     messages: i,
                     defaultMessages: r,
-                    locale: a
+                    locale: s
                 } = e, o = i[t] || r[t];
                 if ("object" == typeof o) return n({
                     messages: o,
                     defaultMessages: r[t],
-                    locale: a
+                    locale: s
                 });
                 try {
-                    return (0, s.getMessage)(o, a)
+                    return (0, a.getMessage)(o, s)
                 } catch (e) {
-                    if (console.warn("Failed parsing intl key '".concat(String(t), "' in locale '").concat(a, "' defaulting to English"), e), "string" == typeof(o = r[t])) return (0, s.getMessage)(o, a)
+                    if (console.warn("Failed parsing intl key '".concat(String(t), "' in locale '").concat(s, "' defaulting to English"), e), "string" == typeof(o = r[t])) return (0, a.getMessage)(o, s)
                 }
                 return ""
             }), o(this, "_handleNewListener", e => {

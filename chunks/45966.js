@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("653041"), n("536091");
-    var i, r, a, s, o = n("392711"),
+    var i, r, s, a, o = n("392711"),
         l = n.n(o),
         u = n("442837"),
         d = n("570140"),
@@ -22,11 +22,11 @@ function(e, t, n) {
             let i = !1,
                 r = [];
             for (let t = 0; t < e.options.length; t++) {
-                let a = e.options[t],
-                    s = null == n[a.id];
-                s && (i = !0), r.push({
-                    ...a,
-                    isUnseen: s
+                let s = e.options[t],
+                    a = null == n[s.id];
+                a && (i = !0), r.push({
+                    ...s,
+                    isUnseen: a
                 })
             }
             return {
@@ -39,11 +39,11 @@ function(e, t, n) {
     }
 
     function O(e) {
-        var t, n, i, r, a, s, o, l, u;
+        var t, n, i, r, s, a, o, l, u;
         let {
             guildId: d,
             updates: _
-        } = e, c = null !== (a = null !== (r = _.onboardingPromptsSeen) && void 0 !== r ? r : null === (t = h[d]) || void 0 === t ? void 0 : t.onboardingPromptsSeen) && void 0 !== a ? a : {}, E = null !== (o = null !== (s = _.onboardingResponsesSeen) && void 0 !== s ? s : null === (n = h[d]) || void 0 === n ? void 0 : n.onboardingResponsesSeen) && void 0 !== o ? o : {}, I = p(null !== (u = null !== (l = _.prompts) && void 0 !== l ? l : null === (i = h[d]) || void 0 === i ? void 0 : i.prompts) && void 0 !== u ? u : [], c, E);
+        } = e, c = null !== (s = null !== (r = _.onboardingPromptsSeen) && void 0 !== r ? r : null === (t = h[d]) || void 0 === t ? void 0 : t.onboardingPromptsSeen) && void 0 !== s ? s : {}, E = null !== (o = null !== (a = _.onboardingResponsesSeen) && void 0 !== a ? a : null === (n = h[d]) || void 0 === n ? void 0 : n.onboardingResponsesSeen) && void 0 !== o ? o : {}, I = p(null !== (u = null !== (l = _.prompts) && void 0 !== l ? l : null === (i = h[d]) || void 0 === i ? void 0 : i.prompts) && void 0 !== u ? u : [], c, E);
         h[d] = {
             ...h[d],
             ..._,
@@ -139,12 +139,12 @@ function(e, t, n) {
             return null != e && (null === (t = h[e]) || void 0 === t ? void 0 : t.mode) === S.GuildOnboardingMode.ONBOARDING_ADVANCED
         }
     }
-    s = "GuildOnboardingPromptsStore", (a = "displayName") in(r = v) ? Object.defineProperty(r, a, {
-        value: s,
+    a = "GuildOnboardingPromptsStore", (s = "displayName") in(r = v) ? Object.defineProperty(r, s, {
+        value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[a] = s, t.default = new v(d.default, {
+    }) : r[s] = a, t.default = new v(d.default, {
         CONNECTION_OPEN: function() {
             N = !1, h = {}
         },
@@ -157,15 +157,15 @@ function(e, t, n) {
                 prompts: n,
                 defaultChannelIds: i,
                 enabled: r,
-                responses: a,
-                onboardingPromptsSeen: s,
+                responses: s,
+                onboardingPromptsSeen: a,
                 onboardingResponsesSeen: o,
                 mode: l,
                 belowRequirements: u
             } = e;
             N = !1;
             let d = f.default.getOnboardingStatus(t) === f.GuildOnboardingStatus.READY,
-                _ = p(n, s, o);
+                _ = p(n, a, o);
             h[t] = {
                 enabled: r,
                 mode: l,
@@ -173,10 +173,10 @@ function(e, t, n) {
                 prompts: _,
                 onboardingPrompts: _.filter(e => e.inOnboarding),
                 defaultChannelIds: i.filter(e => (0, T.canChannelBeDefault)(t, e)),
-                responses: d ? [] : a,
-                onboardingPromptsSeen: s,
+                responses: d ? [] : s,
+                onboardingPromptsSeen: a,
                 onboardingResponsesSeen: o
-            }, !d && R(t, a), m[t] = Date.now()
+            }, !d && R(t, s), m[t] = Date.now()
         },
         GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE: function() {
             N = !1
@@ -200,13 +200,13 @@ function(e, t, n) {
                 options_seen: r
             } = e;
             R(t, n);
-            let a = h[t];
-            if (null == a) return !1;
-            let s = p(a.prompts, i, r);
+            let s = h[t];
+            if (null == s) return !1;
+            let a = p(s.prompts, i, r);
             h[t] = {
-                ...a,
-                prompts: s,
-                onboardingPrompts: s.filter(e => e.inOnboarding),
+                ...s,
+                prompts: a,
+                onboardingPrompts: a.filter(e => e.inOnboarding),
                 onboardingPromptsSeen: i,
                 onboardingResponsesSeen: r
             }

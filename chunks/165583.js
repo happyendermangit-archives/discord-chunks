@@ -10,8 +10,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("512722"),
         l = n.n(o),
         u = n("913527"),
@@ -62,14 +62,14 @@ function(e, t, n) {
     function G(e) {
         var t, n, r;
         let {
-            className: a,
+            className: s,
             children: o,
             withBottomMargin: l,
             discountOffer: u,
             trialOffer: d
         } = e, _ = null !== (t = null == d ? void 0 : d.expires_at) && void 0 !== t ? t : null == u ? void 0 : u.expires_at, c = null == d ? void 0 : d.subscription_trial, E = null !== (r = null !== (n = e.subscriptionTier) && void 0 !== n ? n : null == c ? void 0 : c.sku_id) && void 0 !== r ? r : D.PremiumSubscriptionSKUs.TIER_2;
         return (0, i.jsxs)("div", {
-            className: s()(a, P.gradientUpsellWrapper, {
+            className: a()(s, P.gradientUpsellWrapper, {
                 [P.gradientUpsellWrapperTier0]: E === D.PremiumSubscriptionSKUs.TIER_0,
                 [P.gradientUpsellWrapperTier2]: E === D.PremiumSubscriptionSKUs.TIER_2,
                 [P.gradientUpsellWrapperWithBottomMargin]: l
@@ -104,8 +104,8 @@ function(e, t, n) {
     function w(e) {
         var t, n;
         let {
-            className: a,
-            onClose: s,
+            className: s,
+            onClose: a,
             subscriptionTier: o,
             analyticsLocationObject: l,
             trialOffer: u,
@@ -117,7 +117,7 @@ function(e, t, n) {
             intervalCount: null == u ? void 0 : null === (n = u.subscription_trial) || void 0 === n ? void 0 : n.interval_count
         });
         return (0, i.jsx)(L.default, {
-            className: a,
+            className: s,
             subscriptionTier: o,
             trialId: null == u ? void 0 : u.trial_id,
             submitting: _,
@@ -128,7 +128,7 @@ function(e, t, n) {
                 c(!0)
             },
             onSubscribeModalClose: e => {
-                c(!1), e && (null == s || s())
+                c(!1), e && (null == a || a())
             },
             buttonText: E
         })
@@ -137,12 +137,12 @@ function(e, t, n) {
     function B(e) {
         var t, n;
         let r = null === (t = (0, g.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial,
-            a = null !== (n = null == r ? void 0 : r.sku_id) && void 0 !== n ? n : D.PremiumSubscriptionSKUs.TIER_2;
+            s = null !== (n = null == r ? void 0 : r.sku_id) && void 0 !== n ? n : D.PremiumSubscriptionSKUs.TIER_2;
         return (0, i.jsx)(I.Text, {
             variant: "text-xs/bold",
-            className: s()(P.trialBadge, e.className, {
-                [P.trialBadgeGradientTier0]: a === D.PremiumSubscriptionSKUs.TIER_0,
-                [P.trialBadgeGradientTier2]: a === D.PremiumSubscriptionSKUs.TIER_2
+            className: a()(P.trialBadge, e.className, {
+                [P.trialBadgeGradientTier0]: s === D.PremiumSubscriptionSKUs.TIER_0,
+                [P.trialBadgeGradientTier2]: s === D.PremiumSubscriptionSKUs.TIER_2
             }),
             color: "none",
             children: (0, O.formatTrialOfferIntervalDuration)({
@@ -157,8 +157,8 @@ function(e, t, n) {
             subscriptionTier: t,
             onClose: n,
             analyticsLocationObject: r,
-            trialOffer: a,
-            discountOffer: s
+            trialOffer: s,
+            discountOffer: a
         } = e;
         return (0, i.jsxs)("div", {
             className: P.footer,
@@ -173,8 +173,8 @@ function(e, t, n) {
                 subscriptionTier: t,
                 analyticsLocationObject: r,
                 onClose: n,
-                discountOffer: s,
-                trialOffer: a
+                discountOffer: a,
+                trialOffer: s
             })]
         })
     }
@@ -215,8 +215,8 @@ function(e, t, n) {
             headingText: t,
             context: n,
             children: r,
-            trialOffer: a,
-            discountOffer: s
+            trialOffer: s,
+            discountOffer: a
         } = e;
         return (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(I.Heading, {
@@ -228,8 +228,8 @@ function(e, t, n) {
                 variant: "text-md/normal",
                 children: n
             }), (0, i.jsx)(G, {
-                trialOffer: a,
-                discountOffer: s,
+                trialOffer: s,
+                discountOffer: a,
                 children: r
             })]
         })
@@ -239,7 +239,7 @@ function(e, t, n) {
         let {
             headingText: t,
             context: r,
-            children: a,
+            children: s,
             onClose: o,
             type: u,
             subscriptionTier: d,
@@ -284,7 +284,7 @@ function(e, t, n) {
                     })]
                 });
             case D.PremiumUpsellTypes.STICKER_PICKER_UPSELL:
-                return l()(null != a, "You must specify children for this upsell type"), (0, i.jsxs)(i.Fragment, {
+                return l()(null != s, "You must specify children for this upsell type"), (0, i.jsxs)(i.Fragment, {
                     children: [(0, i.jsxs)("div", {
                         className: P.contentContainer,
                         children: [(0, i.jsx)("img", {
@@ -315,7 +315,7 @@ function(e, t, n) {
                     })]
                 });
             case D.PremiumUpsellTypes.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI:
-                l()(null != a, "You must specify children for this upsell type");
+                l()(null != s, "You must specify children for this upsell type");
                 let L = (0, E.isThemeLight)(g) ? n("537381") : n("341048");
                 return (0, i.jsxs)(i.Fragment, {
                     children: [(0, i.jsxs)("div", {
@@ -429,7 +429,7 @@ function(e, t, n) {
                     })]
                 });
             case D.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_TRY_IT_OUT:
-                return l()(null != a, "You must specify children for this upsell type"), (0, i.jsx)(G, {
+                return l()(null != s, "You must specify children for this upsell type"), (0, i.jsx)(G, {
                     trialOffer: N,
                     discountOffer: p,
                     children: y.default.Messages.CLIENT_THEMES_EDITOR_UPSELL.format({
@@ -440,7 +440,7 @@ function(e, t, n) {
                 });
             case D.PremiumUpsellTypes.MESSAGE_LENGTH_IN_EDITOR_UPSELL:
                 return (0, i.jsxs)("div", {
-                    className: s()(P.messageLengthUpsellContainer, {
+                    className: a()(P.messageLengthUpsellContainer, {
                         [P.messageLengthUpsellAppearAnimation]: !C
                     }),
                     children: [(0, i.jsx)(I.Text, {
@@ -488,13 +488,13 @@ function(e, t, n) {
                     discountOffer: p,
                     headingText: t,
                     context: r,
-                    children: a
+                    children: s
                 });
             default:
                 return R.default.captureMessage("Possible mishandling of a PremiumUpsellType: ".concat(u)), (0, i.jsx)(x, {
                     headingText: t,
                     context: r,
-                    children: a,
+                    children: s,
                     trialOffer: N,
                     discountOffer: p
                 })

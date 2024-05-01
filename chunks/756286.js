@@ -8,10 +8,10 @@ function(e, t, n) {
             return i
         },
         POINT_TENSION_DEFAULT: function() {
-            return s
+            return a
         },
         TWO_PI: function() {
-            return a
+            return s
         },
         WaveStates: function() {
             return o
@@ -19,8 +19,8 @@ function(e, t, n) {
     });
     let i = 780,
         r = 1e3,
-        a = 2 * Math.PI,
-        s = 150,
+        s = 2 * Math.PI,
+        a = 150,
         o = {
             INITIAL: 0,
             ENTERED: 1,

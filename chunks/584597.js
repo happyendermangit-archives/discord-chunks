@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return a
+            return s
         }
     });
     var i = n("81825");
@@ -15,9 +15,9 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    class a extends i.default {
+    class s extends i.default {
         static createFromServer(e) {
-            return new a(e)
+            return new s(e)
         }
         constructor(e) {
             super(), r(this, "id", void 0), r(this, "name", void 0), this.id = e.id, this.name = e.name

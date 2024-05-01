@@ -5,12 +5,12 @@ function(e, t, n) {
     t.default = new class e {
         addSink(e, t, n) {
             let r = this.streams,
-                a = r[e];
-            if (null == a && (a = r[e] = new Map), 0 === a.size) {
+                s = r[e];
+            if (null == s && (s = r[e] = new Map), 0 === s.size) {
                 let t = (0, i.getVoiceEngine)();
-                t.setVideoOutputSink(e, this.handleImageData.bind(this, t.signalVideoOutputSinkReady.bind(t, e), a), !0)
+                t.setVideoOutputSink(e, this.handleImageData.bind(this, t.signalVideoOutputSinkReady.bind(t, e), s), !0)
             }
-            a.set(t, n)
+            s.set(t, n)
         }
         removeSink(e, t) {
             let n = this.streams,

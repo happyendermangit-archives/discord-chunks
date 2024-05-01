@@ -8,8 +8,8 @@ function(e, t, n) {
             return u
         }
     });
-    var i, r, a = n("47770"),
-        s = n("68721"),
+    var i, r, s = n("47770"),
+        a = n("68721"),
         o = n("591218");
 
     function l(e, t, n) {
@@ -20,7 +20,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }(i = r || (r = {})).Stream = "stream", i.Video = "video", i.Mute = "mute", i.VoiceActivity = "voiceactivity", i.DesktopSourceEnd = "desktopsourceend", i.Speaking = "speaking", i.AudioPermission = "audio-permission", i.VideoPermission = "video-permission", i.AddVideoTrack = "add-video-track";
-    class u extends a.default {
+    class u extends s.default {
         destroy() {
             this.removeAllListeners(), this.destroyStreams()
         }
@@ -98,7 +98,7 @@ function(e, t, n) {
                 this.emit("audio-permission", e)
             }), l(this, "handleVideoPermission", e => {
                 this.emit("video-permission", e)
-            }), this.audio = new s.default(e), this.audio.addListener("voiceactivity", this.handleVoiceActivity), this.audio.addListener("speaking", this.handleSpeaking), this.audio.addListener("stream", this.mergeStreams), this.audio.addListener("permission", this.handleAudioPermission), this.video.addListener("stream", this.mergeStreams), this.video.addListener("permission", this.handleVideoPermission), this.video.addListener("add-video-track", e => this.emit("add-video-track", e))
+            }), this.audio = new a.default(e), this.audio.addListener("voiceactivity", this.handleVoiceActivity), this.audio.addListener("speaking", this.handleSpeaking), this.audio.addListener("stream", this.mergeStreams), this.audio.addListener("permission", this.handleAudioPermission), this.video.addListener("stream", this.mergeStreams), this.video.addListener("permission", this.handleVideoPermission), this.video.addListener("add-video-track", e => this.emit("add-video-track", e))
         }
     }
 }

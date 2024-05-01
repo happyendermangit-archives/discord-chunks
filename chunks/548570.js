@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("315314"), n("610138"), n("216116"), n("78328"), n("815648"), n("47120"), n("177593");
     var i = n("512722"),
         r = n.n(i),
-        a = n("457854"),
-        s = n("261470"),
+        s = n("457854"),
+        a = n("261470"),
         o = n("956067"),
         l = n("286379"),
         u = n("442837"),
@@ -99,8 +99,8 @@ function(e, t, n) {
                         gatewayURL: n,
                         newCallback: i,
                         onOpen: r,
-                        onMessage: a,
-                        onError: s,
+                        onMessage: s,
+                        onError: a,
                         onClose: o
                     } = e,
                     l = window._ws,
@@ -124,7 +124,7 @@ function(e, t, n) {
                         }), u = l.state.open, d = l.state.identify, _ = l.state.messages, c = l.state.clientState
                     }
                 }
-                null == t && ((t = (0, b.default)(n)).binaryType = "arraybuffer"), i(t), u && r(d, c), null != _ && _.forEach(a), t.onopen = () => r(d, c), t.onmessage = a, t.onclose = o, t.onerror = s
+                null == t && ((t = (0, b.default)(n)).binaryType = "arraybuffer"), i(t), u && r(d, c), null != _ && _.forEach(s), t.onopen = () => r(d, c), t.onmessage = s, t.onclose = o, t.onerror = a
             }({
                 gatewayURL: r.toString(),
                 newCallback: e => {
@@ -146,10 +146,10 @@ function(e, t, n) {
                     });
                     let r = !1;
                     return n => {
-                        let a = n.data;
-                        null != n.raw_length ? i += n.raw_length : i += Y(a);
+                        let s = n.data;
+                        null != n.raw_length ? i += n.raw_length : i += Y(s);
                         try {
-                            e.feed(a)
+                            e.feed(s)
                         } catch (e) {
                             throw !r && (r = !0, t(!1, 0, "A decompression error occurred")), e
                         }
@@ -159,29 +159,29 @@ function(e, t, n) {
                         {
                             op: i,
                             s: r,
-                            t: a,
-                            d: s
+                            t: s,
+                            d: a
                         } = k.unpack(e);
                     i !== y.Opcode.DISPATCH && o.default.mark("\uD83C\uDF10", "GatewaySocket.onMessage ".concat(i, " ").concat(y.Opcode[i]));
                     let l = Date.now() - n;
-                    switch ("READY" === a ? h.default.parseReady.set(n, l) : "READY_SUPPLEMENTAL" === a ? h.default.parseReadySupplemental.set(n, l) : l > 10 && o.default.mark("\uD83C\uDF10", "Parse " + a, l), null != r && (this.seq = r), i) {
+                    switch ("READY" === s ? h.default.parseReady.set(n, l) : "READY_SUPPLEMENTAL" === s ? h.default.parseReadySupplemental.set(n, l) : l > 10 && o.default.mark("\uD83C\uDF10", "Parse " + s, l), null != r && (this.seq = r), i) {
                         case y.Opcode.HELLO:
-                            this._clearHelloTimeout(), this._handleHello(s);
+                            this._clearHelloTimeout(), this._handleHello(a);
                             break;
                         case y.Opcode.RECONNECT:
                             this._handleReconnect();
                             break;
                         case y.Opcode.INVALID_SESSION:
-                            this._handleInvalidSession(s);
+                            this._handleInvalidSession(a);
                             break;
                         case y.Opcode.HEARTBEAT:
                             this._sendHeartbeat();
                             break;
                         case y.Opcode.HEARTBEAT_ACK:
-                            this._handleHeartbeatAck(s);
+                            this._handleHeartbeatAck(a);
                             break;
                         case y.Opcode.DISPATCH:
-                            this._handleDispatch(s, a, "READY" === a ? {
+                            this._handleDispatch(a, s, "READY" === s ? {
                                 compressed_byte_size: t,
                                 uncompressed_byte_size: Y(e),
                                 compression_algorithm: this.compressionHandler.getAlgorithm(),
@@ -332,7 +332,7 @@ function(e, t, n) {
             this.connectionState = C.default.IDENTIFYING;
             let t = Date.now();
             this.identifyStartTime = t;
-            let [n, i, r] = await Promise.all([(0, T.isCacheEnabled)() ? c.default.getCommittedVersions() : {}, (0, T.isCacheEnabled)() ? I.default.getCommittedVersions() : {}, !!(0, T.isCacheEnabled)() && E.default.canUseGuildVersions()]), s = r ? {
+            let [n, i, r] = await Promise.all([(0, T.isCacheEnabled)() ? c.default.getCommittedVersions() : {}, (0, T.isCacheEnabled)() ? I.default.getCommittedVersions() : {}, !!(0, T.isCacheEnabled)() && E.default.canUseGuildVersions()]), a = r ? {
                 guild_versions: n,
                 highest_last_message_id: i.highest_last_message_id,
                 read_state_version: i.read_state_version,
@@ -360,10 +360,10 @@ function(e, t, n) {
                     properties: l,
                     presence: u,
                     compress: this.compressionHandler.usesLegacyCompression(),
-                    client_state: s
+                    client_state: a
                 },
                 _ = JSON.stringify(d);
-            this.identifyUncompressedByteSize = _.length, this.identifyCompressedByteSize = a.deflate(_).length, this.identifyCount += 1, this.send(y.Opcode.IDENTIFY, d, !1)
+            this.identifyUncompressedByteSize = _.length, this.identifyCompressedByteSize = s.deflate(_).length, this.identifyCount += 1, this.send(y.Opcode.IDENTIFY, d, !1)
         }
         _doFastConnectIdentify() {
             this.seq = 0, this.sessionId = null;
@@ -472,7 +472,7 @@ function(e, t, n) {
             B.verbose("Connection has reset backoff".concat(null != e && "" !== e ? " for reason: " + e : "")), this.gatewayBackoff.succeed(), this.iosGoingAwayEventCount = 0, this.nextReconnectIsImmediate = !0, this.willReconnect() ? this._connect() : t && this.connectionState !== C.default.SESSION_ESTABLISHED && this._handleClose(!0, 0, e)
         }
         constructor() {
-            super(), w(this, "gatewayBackoff", void 0), w(this, "handleIdentify", void 0), w(this, "dispatchExceptionBackoff", new s.default(1e3, H)), w(this, "dispatchSuccessTimer", 0), w(this, "connectionState_", void 0), w(this, "webSocket", void 0), w(this, "seq", void 0), w(this, "sessionId", void 0), w(this, "token", void 0), w(this, "initialHeartbeatTimeout", void 0), w(this, "expeditedHeartbeatTimeout", void 0), w(this, "heartbeatInterval", void 0), w(this, "helloTimeout", void 0), w(this, "heartbeater", void 0), w(this, "lastHeartbeatTime", void 0), w(this, "lastHeartbeatAckTime", void 0), w(this, "heartbeatAck", void 0), w(this, "connectionStartTime", void 0), w(this, "identifyStartTime", void 0), w(this, "nextReconnectIsImmediate", void 0), w(this, "compressionHandler", void 0), w(this, "hasConnectedOnce", void 0), w(this, "isFastConnect", void 0), w(this, "didForceClearGuildHashes", !1), w(this, "identifyUncompressedByteSize", 0), w(this, "identifyCompressedByteSize", 0), w(this, "analytics", {}), w(this, "identifyCount", 0), w(this, "resumeUrl", null), w(this, "iosGoingAwayEventCount", 0), w(this, "dispatcher", void 0), w(this, "send", (e, t, n) => {
+            super(), w(this, "gatewayBackoff", void 0), w(this, "handleIdentify", void 0), w(this, "dispatchExceptionBackoff", new a.default(1e3, H)), w(this, "dispatchSuccessTimer", 0), w(this, "connectionState_", void 0), w(this, "webSocket", void 0), w(this, "seq", void 0), w(this, "sessionId", void 0), w(this, "token", void 0), w(this, "initialHeartbeatTimeout", void 0), w(this, "expeditedHeartbeatTimeout", void 0), w(this, "heartbeatInterval", void 0), w(this, "helloTimeout", void 0), w(this, "heartbeater", void 0), w(this, "lastHeartbeatTime", void 0), w(this, "lastHeartbeatAckTime", void 0), w(this, "heartbeatAck", void 0), w(this, "connectionStartTime", void 0), w(this, "identifyStartTime", void 0), w(this, "nextReconnectIsImmediate", void 0), w(this, "compressionHandler", void 0), w(this, "hasConnectedOnce", void 0), w(this, "isFastConnect", void 0), w(this, "didForceClearGuildHashes", !1), w(this, "identifyUncompressedByteSize", 0), w(this, "identifyCompressedByteSize", 0), w(this, "analytics", {}), w(this, "identifyCount", 0), w(this, "resumeUrl", null), w(this, "iosGoingAwayEventCount", 0), w(this, "dispatcher", void 0), w(this, "send", (e, t, n) => {
                 A.default.isLoggingGatewayEvents && B.verboseDangerously("~>", e, t);
                 let i = k.pack({
                     op: e,
@@ -481,7 +481,7 @@ function(e, t, n) {
                 if (!n || this.isSessionEstablished()) try {
                     null != this.webSocket ? this.webSocket.send(i) : B.warn("Attempted to send without a websocket that exists. Opcode: ".concat(e))
                 } catch (e) {} else B.warn("Attempted to send while not being in a connected state opcode: ".concat(e))
-            }), this.dispatcher = new M.default(this), this.gatewayBackoff = new s.default(1e3, 6e4), this.connectionState_ = C.default.CLOSED, this.webSocket = null, this.seq = 0, this.sessionId = null, this.token = null, this.initialHeartbeatTimeout = null, this.expeditedHeartbeatTimeout = null, this.lastHeartbeatTime = null, this.lastHeartbeatAckTime = null, this.helloTimeout = null, this.heartbeatInterval = null, this.heartbeater = null, this.heartbeatAck = !0, this.connectionStartTime = 0, this.identifyStartTime = 0, this.nextReconnectIsImmediate = !1, this.compressionHandler = (0, L.getCompressionHandler)(k), this.hasConnectedOnce = !1, this.isFastConnect = !1, this.identifyCount = 0, this.iosGoingAwayEventCount = 0
+            }), this.dispatcher = new M.default(this), this.gatewayBackoff = new a.default(1e3, 6e4), this.connectionState_ = C.default.CLOSED, this.webSocket = null, this.seq = 0, this.sessionId = null, this.token = null, this.initialHeartbeatTimeout = null, this.expeditedHeartbeatTimeout = null, this.lastHeartbeatTime = null, this.lastHeartbeatAckTime = null, this.helloTimeout = null, this.heartbeatInterval = null, this.heartbeater = null, this.heartbeatAck = !0, this.connectionStartTime = 0, this.identifyStartTime = 0, this.nextReconnectIsImmediate = !1, this.compressionHandler = (0, L.getCompressionHandler)(k), this.hasConnectedOnce = !1, this.isFastConnect = !1, this.identifyCount = 0, this.iosGoingAwayEventCount = 0
         }
     }
 }

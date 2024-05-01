@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("392711"),
-        s = n.n(a),
+        s = n("392711"),
+        a = n.n(s),
         o = n("442837"),
         l = n("377108"),
         u = n("692547"),
@@ -48,11 +48,11 @@ function(e, t, n) {
             let {
                 name: t,
                 icon: n,
-                type: a
+                type: s
             } = e;
             return (0, i.jsxs)(r.Fragment, {
                 children: [(0, i.jsx)("div", {
-                    className: a === m.GIFPickerResultTypes.FAVORITES ? p.categoryFadeBlurple : p.categoryFade
+                    className: s === m.GIFPickerResultTypes.FAVORITES ? p.categoryFadeBlurple : p.categoryFade
                 }), (0, i.jsxs)("div", {
                     className: p.categoryText,
                     children: [null != n ? (0, i.jsx)(n, {
@@ -81,7 +81,7 @@ function(e, t, n) {
             super(...e), O(this, "_masonryRef", r.createRef()), O(this, "state", {
                 favoritesTile: function(e) {
                     var t;
-                    let n = s().sample(s().values(e));
+                    let n = a().sample(a().values(e));
                     return {
                         type: m.GIFPickerResultTypes.FAVORITES,
                         name: N.default.Messages.CATEGORY_FAVORITE,
@@ -121,25 +121,25 @@ function(e, t, n) {
                 return n ? [...t] : [e, ...t]
             })), O(this, "renderItem", (e, t, n, r) => {
                 if (e > 0) return null;
-                let a = this.getData()[t];
-                if (null == a) return;
+                let s = this.getData()[t];
+                if (null == s) return;
                 let {
-                    onSelectItem: s,
+                    onSelectItem: a,
                     imagePool: o,
                     videoPool: l
                 } = this.props, {
                     focusedId: d
                 } = this.state;
                 return (0, i.jsx)(A.GIFPickerSearchItem, {
-                    format: a.format,
+                    format: s.format,
                     color: u.default.unsafe_rawColors.PRIMARY_800.css,
-                    src: a.src,
-                    item: a,
+                    src: s.src,
+                    item: s,
                     index: t,
                     coords: n,
-                    onClick: () => s(a.type, a.name),
+                    onClick: () => a(s.type, s.name),
                     renderExtras: this.renderCategoryExtras,
-                    focused: a.name === d,
+                    focused: s.name === d,
                     imagePool: o,
                     videoPool: l
                 }, r)

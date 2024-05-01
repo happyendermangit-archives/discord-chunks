@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        a = n("539907"),
-        s = n("743236"),
+        s = n("539907"),
+        a = n("743236"),
         o = n("695464"),
         l = n("942610");
 
@@ -28,7 +28,7 @@ function(e, t, n) {
         } = u;
         r.useLayoutEffect(() => {
             var e;
-            n && ((0, s.ensureItemVisible)(I), null === (e = f.current) || void 0 === e || e.focus())
+            n && ((0, a.ensureItemVisible)(I), null === (e = f.current) || void 0 === e || e.focus())
         }, [n]), r.useEffect(() => {
             if (n && A >= 0 && h) {
                 var e;
@@ -41,7 +41,7 @@ function(e, t, n) {
             className: l.__invalid_submenuContainer,
             children: [(0, i.jsx)("div", {
                 ref: T
-            }), t, n ? (0, i.jsx)(a.ReferencePositionLayer, {
+            }), t, n ? (0, i.jsx)(s.ReferencePositionLayer, {
                 targetRef: T,
                 autoInvert: !0,
                 nudgeAlignIntoViewport: !0,

@@ -3,9 +3,9 @@ function(e, t, n) {
     n.r(t);
     var i = n("570140"),
         r = n("254238"),
-        a = n("258609");
+        s = n("258609");
     n("473241");
-    var s = n("788983"),
+    var a = n("788983"),
         o = n("703656"),
         l = n("700615"),
         u = n("592125"),
@@ -23,8 +23,8 @@ function(e, t, n) {
                 guildId: t,
                 channelId: n,
                 messageId: r,
-                jumpType: a,
-                preserveDrawerState: s,
+                jumpType: s,
+                preserveDrawerState: a,
                 source: o
             } = e;
             i.default.dispatch({
@@ -32,8 +32,8 @@ function(e, t, n) {
                 guildId: t === S.ME ? null : t,
                 channelId: n,
                 messageId: r,
-                jumpType: a,
-                preserveDrawerState: s,
+                jumpType: s,
+                preserveDrawerState: a,
                 source: o
             })
         },
@@ -45,20 +45,20 @@ function(e, t, n) {
             let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                 i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                 r = u.default.getChannel(e),
-                a = null == r ? void 0 : r.getGuildId();
-            if ((null == r ? void 0 : r.isGuildVocal()) && (null == r ? void 0 : r.isNSFW()) && (!(null === (t = I.default.getCurrentUser()) || void 0 === t ? void 0 : t.nsfwAllowed) || !d.default.didAgree(a))) {
-                (0, o.transitionTo)(S.Routes.CHANNEL(a, e));
+                s = null == r ? void 0 : r.getGuildId();
+            if ((null == r ? void 0 : r.isGuildVocal()) && (null == r ? void 0 : r.isNSFW()) && (!(null === (t = I.default.getCurrentUser()) || void 0 === t ? void 0 : t.nsfwAllowed) || !d.default.didAgree(s))) {
+                (0, o.transitionTo)(S.Routes.CHANNEL(s, e));
                 return
             }
-            _.default.isSupported() && (null != e && _.default.getMediaEngine().interact(), (0, f.selectVoiceChannelAdditional)(e, a, n, i))
+            _.default.isSupported() && (null != e && _.default.getMediaEngine().interact(), (0, f.selectVoiceChannelAdditional)(e, s, n, i))
         },
         disconnect() {
-            let e = a.default.getRemoteSessionId();
+            let e = s.default.getRemoteSessionId();
             if (null != e && r.remoteDisconnect(e), (0, l.isVoicePanelEnabled)()) this.selectVoiceChannel(null);
             else {
                 let e = u.default.getChannel(c.default.getChannelId()),
                     t = c.default.getChannelId() === c.default.getVoiceChannelId() && (null == e ? void 0 : e.isThread()) === !0;
-                if (this.selectVoiceChannel(null), s.close(S.PopoutWindowKeys.CHANNEL_CALL_POPOUT), t) {
+                if (this.selectVoiceChannel(null), a.close(S.PopoutWindowKeys.CHANNEL_CALL_POPOUT), t) {
                     let e = E.default.getGuildId();
                     null != e && (0, o.transitionTo)((0, T.previousTextChannelRouteForGuild)(e))
                 }

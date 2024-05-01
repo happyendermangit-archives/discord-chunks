@@ -19,16 +19,16 @@ function(e, t, n) {
     }), n("470079"), n("442837");
     var i = n("430824"),
         r = n("496675"),
-        a = n("266090"),
-        s = n("981631"),
+        s = n("266090"),
+        a = n("981631"),
         o = n("176505");
 
     function l(e) {
         var t;
         let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "1e9ccc_1",
-            r = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : s.EMPTY_STRING_SNOWFLAKE_ID;
-        return a.default.useExperiment({
+            r = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : a.EMPTY_STRING_SNOWFLAKE_ID;
+        return s.default.useExperiment({
             guildId: r,
             location: i
         }, {
@@ -39,7 +39,7 @@ function(e, t, n) {
     function u(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = arguments.length > 2 ? arguments[2] : void 0;
-        return l(e, t, n) === a.ClydeExperimentState.ClydeProfiles
+        return l(e, t, n) === s.ClydeExperimentState.ClydeProfiles
     }
 
     function d(e, t) {
@@ -52,14 +52,14 @@ function(e, t, n) {
             if (null != n && n.isPrivate()) return !!n.hasFlag(o.ChannelFlags.CLYDE_AI) || i.default.getGuildIds().some(e => E(i.default.getGuild(e)));
             return !1
         }
-        return null != e && e !== a.ClydeExperimentState.None && r.default.can(s.Permissions.USE_CLYDE_AI, n)
+        return null != e && e !== s.ClydeExperimentState.None && r.default.can(a.Permissions.USE_CLYDE_AI, n)
     }
 
     function c(e, t) {
         var n;
         let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            r = null !== (n = null == e ? void 0 : e.id) && void 0 !== n ? n : s.EMPTY_STRING_SNOWFLAKE_ID;
-        return _(a.default.getCurrentConfig({
+            r = null !== (n = null == e ? void 0 : e.id) && void 0 !== n ? n : a.EMPTY_STRING_SNOWFLAKE_ID;
+        return _(s.default.getCurrentConfig({
             guildId: r,
             location: "1e9ccc_2"
         }, {
@@ -69,19 +69,19 @@ function(e, t, n) {
 
     function E(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return T(e, t) !== a.ClydeExperimentState.None
+        return T(e, t) !== s.ClydeExperimentState.None
     }
 
     function I(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return T(e, t) === a.ClydeExperimentState.ClydeProfiles
+        return T(e, t) === s.ClydeExperimentState.ClydeProfiles
     }
 
     function T(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         if (null == e) return !1;
         let n = e.id;
-        return a.default.getCurrentConfig({
+        return s.default.getCurrentConfig({
             guildId: n,
             location: "1e9ccc_4"
         }, {

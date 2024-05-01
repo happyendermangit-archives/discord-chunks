@@ -8,7 +8,7 @@ function(e, t, n) {
             return c
         },
         getComboShakeIntensity: function() {
-            return s
+            return a
         },
         getComboStyles: function() {
             return _
@@ -16,25 +16,25 @@ function(e, t, n) {
     }), n("47120"), n("724458");
     var i = n("524484"),
         r = n("981631");
-    let a = function(e, t) {
+    let s = function(e, t) {
             let {
                 multiplier: n,
                 value: i
-            } = e, [r, a] = t, s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1, o = i * n;
-            return o <= 0 ? 0 : Math.min(s, r.reduce((e, t, n) => {
+            } = e, [r, s] = t, a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1, o = i * n;
+            return o <= 0 ? 0 : Math.min(a, r.reduce((e, t, n) => {
                 if (o > t) {
-                    let e = a[n];
-                    if (n + 1 === r.length) return a[n];
+                    let e = s[n];
+                    if (n + 1 === r.length) return s[n];
                     let i = r[n + 1],
-                        s = a[n + 1];
-                    return (o - t) / (i - t) * (s - e) + e
+                        a = s[n + 1];
+                    return (o - t) / (i - t) * (a - e) + e
                 }
-                return o === t ? a[n] : e
+                return o === t ? s[n] : e
             }, 0))
         },
-        s = function(e) {
+        a = function(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.ShakeLevel.LEVEL_3;
-            return a(e, [i.SHAKE_STEPS[t], i.SHAKE_STEP_DIVIDER[t]], 1e5)
+            return s(e, [i.SHAKE_STEPS[t], i.SHAKE_STEP_DIVIDER[t]], 1e5)
         },
         o = [
             [1, .001],
@@ -53,7 +53,7 @@ function(e, t, n) {
             let [t, n] = e;
             return n
         }),
-        d = e => a(e, [l, u], 1),
+        d = e => s(e, [l, u], 1),
         _ = e => 1 === e ? {
             color: r.Color.BRAND_500
         } : 2 === e || 3 === e ? {

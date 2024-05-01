@@ -14,14 +14,14 @@ function(e, t, n) {
                 files: t,
                 channelId: n,
                 showLargeMessageDialog: r,
-                draftType: a
+                draftType: s
             } = e;
             i.default.dispatch({
                 type: "UPLOAD_ATTACHMENT_ADD_FILES",
                 channelId: n,
                 files: t,
                 showLargeMessageDialog: r,
-                draftType: a
+                draftType: s
             })
         },
         addFile(e) {
@@ -29,14 +29,14 @@ function(e, t, n) {
                 file: t,
                 channelId: n,
                 showLargeMessageDialog: r,
-                draftType: a
+                draftType: s
             } = e;
             i.default.dispatch({
                 type: "UPLOAD_ATTACHMENT_ADD_FILES",
                 channelId: n,
                 files: [t],
                 showLargeMessageDialog: r,
-                draftType: a
+                draftType: s
             })
         },
         remove(e, t, n) {
@@ -64,8 +64,8 @@ function(e, t, n) {
         },
         update(e, t, n, r) {
             let {
-                description: a,
-                filename: s,
+                description: s,
+                filename: a,
                 spoiler: o,
                 thumbnail: l
             } = r;
@@ -73,8 +73,8 @@ function(e, t, n) {
                 type: "UPLOAD_ATTACHMENT_UPDATE_FILE",
                 channelId: e,
                 id: t,
-                filename: s,
-                description: a,
+                filename: a,
+                description: s,
                 thumbnail: l,
                 spoiler: o,
                 draftType: n
@@ -85,12 +85,12 @@ function(e, t, n) {
                 uploads: t,
                 channelId: n,
                 draftType: r,
-                resetState: a
+                resetState: s
             } = e;
             i.default.dispatch({
                 type: "UPLOAD_ATTACHMENT_SET_UPLOADS",
                 channelId: n,
-                uploads: a ? t.map(e => e.resetState()) : t,
+                uploads: s ? t.map(e => e.resetState()) : t,
                 draftType: r
             })
         },
@@ -99,14 +99,14 @@ function(e, t, n) {
                 file: t,
                 channelId: n,
                 id: r,
-                draftType: a
+                draftType: s
             } = e;
             i.default.dispatch({
                 type: "UPLOAD_ATTACHMENT_SET_FILE",
                 channelId: n,
                 id: r,
                 file: t,
-                draftType: a
+                draftType: s
             })
         }
     }

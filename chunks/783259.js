@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t);
     var i = n("735250"),
         r = n("470079"),
-        a = n("692547"),
-        s = n("481060"),
+        s = n("692547"),
+        a = n("481060"),
         o = n("220082"),
         l = n("420596"),
         u = n("880563"),
@@ -22,7 +22,7 @@ function(e, t, n) {
             pulseSpeakingIndicator: S = !1,
             speaking: h = !1,
             ...A
-        } = e, m = null != T ? T : n, N = (0, o.default)(m, a.default.unsafe_rawColors.PRIMARY_800.css), p = (0, l.useCallBannerBackgroundExperiment)(!0, "VideoBackground-web").enabled, O = (0, _.default)(null != f ? f : E.EMPTY_STRING_SNOWFLAKE_ID), R = null == O ? void 0 : O.getBannerURL({
+        } = e, m = null != T ? T : n, N = (0, o.default)(m, s.default.unsafe_rawColors.PRIMARY_800.css), p = (0, l.useCallBannerBackgroundExperiment)(!0, "VideoBackground-web").enabled, O = (0, _.default)(null != f ? f : E.EMPTY_STRING_SNOWFLAKE_ID), R = null == O ? void 0 : O.getBannerURL({
             size: 1024,
             canAnimate: c.GifAutoPlay.getSetting()
         });
@@ -31,7 +31,7 @@ function(e, t, n) {
                     dispatchWait: !0
                 })
             }, [p, f]), null == n) return null;
-        let C = (0, i.jsx)(s.Avatar, {
+        let C = (0, i.jsx)(a.Avatar, {
                 className: I.avatarWrapper,
                 src: n,
                 ...A

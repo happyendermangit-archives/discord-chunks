@@ -11,10 +11,10 @@ function(e, t, n) {
     }
     n.r(t), n("733860"), n("653041");
     let r = null == n.g.__getTotalRequireTime ? () => 0 : () => n.g.__getTotalRequireTime(),
-        a = "undefined" != typeof performance;
+        s = "undefined" != typeof performance;
     t.default = new class e {
         get isTracing() {
-            return !!a && !!this.isTracing_ && (!(Date.now() > this.endTime_) || (this.isTracing_ = !1, !1))
+            return !!s && !!this.isTracing_ && (!(Date.now() > this.endTime_) || (this.isTracing_ = !1, !1))
         }
         get endTime() {
             return this.endTime_
@@ -59,18 +59,18 @@ function(e, t, n) {
         markAt(e, t, n) {
             var i, r;
             if (!this.isTracing) return;
-            let a = 0;
-            for (; a < this.logs.length; a++) {
+            let s = 0;
+            for (; s < this.logs.length; s++) {
                 let {
                     timestamp: e
-                } = this.logs[a];
+                } = this.logs[s];
                 if (null != e && e > n) break
             }
-            this.logs.splice(a, 0, {
+            this.logs.splice(s, 0, {
                 emoji: e,
                 log: t,
                 timestamp: n,
-                prefix: null !== (r = null === (i = this.logs[a]) || void 0 === i ? void 0 : i.prefix) && void 0 !== r ? r : ""
+                prefix: null !== (r = null === (i = this.logs[s]) || void 0 === i ? void 0 : i.prefix) && void 0 !== r ? r : ""
             })
         }
         addDetail(e, t) {
@@ -85,17 +85,17 @@ function(e, t, n) {
             let i = this.prefix;
             this.mark(e, "Start ".concat(t)), this.prefix += "| ";
             let r = Date.now(),
-                a = n(),
-                s = Date.now() - r;
-            return this.prefix = i, this.mark(e, "Finish ".concat(t), s), a
+                s = n(),
+                a = Date.now() - r;
+            return this.prefix = i, this.mark(e, "Finish ".concat(t), a), s
         }
         async timeAsync(e, t, n) {
             if (!this.isTracing) return n();
             this.mark(e, "Start ".concat(t));
             let i = Date.now(),
                 r = await n(),
-                a = Date.now() - i;
-            return this.mark(e, "Finish ".concat(t), a), r
+                s = Date.now() - i;
+            return this.mark(e, "Finish ".concat(t), s), r
         }
         setServerTrace(e) {
             this.logGroups[0].serverTrace = e

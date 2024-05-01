@@ -4,8 +4,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("481060"),
-        a = n("812206"),
-        s = n("569545"),
+        s = n("812206"),
+        a = n("569545"),
         o = n("687516"),
         l = n("981283"),
         u = n("928518"),
@@ -55,13 +55,13 @@ function(e, t, n) {
             }), h(this, "handleStreamClose", e => {
                 var t;
                 let {
-                    streamKey: a,
+                    streamKey: s,
                     canShowFeedback: l
-                } = e, u = (0, s.decodeStreamKey)(a), _ = (0, o.getStreamerApplication)(u, c.default), E = null !== (t = I.default.getVideoStats(a)) && void 0 !== t ? t : {}, T = {
-                    media_session_id: I.default.getMediaSessionId(a),
-                    rtc_connection_id: I.default.getRtcConnectionId(a),
-                    stream_region: I.default.getRegion(a),
-                    max_viewers: I.default.getMaxViewers(a),
+                } = e, u = (0, a.decodeStreamKey)(s), _ = (0, o.getStreamerApplication)(u, c.default), E = null !== (t = I.default.getVideoStats(s)) && void 0 !== t ? t : {}, T = {
+                    media_session_id: I.default.getMediaSessionId(s),
+                    rtc_connection_id: I.default.getRtcConnectionId(s),
+                    stream_region: I.default.getRegion(s),
+                    max_viewers: I.default.getMaxViewers(s),
                     ...E
                 };
                 l && this.possiblyShowFeedbackModal(f.FeedbackType.STREAM, () => {
@@ -96,9 +96,9 @@ function(e, t, n) {
             }), h(this, "handleActivityClose", e => {
                 let {
                     applicationId: t,
-                    channelId: s,
+                    channelId: a,
                     showFeedback: o
-                } = e, l = a.default.getApplication(t), d = _.default.getChannel(s), c = {
+                } = e, l = s.default.getApplication(t), d = _.default.getChannel(a), c = {
                     rtc_connection_id: E.default.getRTCConnectionId(),
                     media_session_id: E.default.getMediaSessionId()
                 }, I = u.default.getWindowOpen(S.PopoutWindowKeys.CHANNEL_CALL_POPOUT) ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT;
@@ -120,7 +120,7 @@ function(e, t, n) {
             }), h(this, "handleInAppReportsFeedback", e => {
                 let {
                     reportId: t,
-                    reportType: a
+                    reportType: s
                 } = e;
                 this.possiblyShowFeedbackModal(f.FeedbackType.IN_APP_REPORTS, () => {
                     (0, r.openModalLazy)(async () => {
@@ -130,7 +130,7 @@ function(e, t, n) {
                         return n => (0, i.jsx)(e, {
                             ...n,
                             reportId: t,
-                            reportType: a
+                            reportType: s
                         })
                     })
                 })

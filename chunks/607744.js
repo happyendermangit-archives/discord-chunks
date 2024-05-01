@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("47120"), n("789020"), n("653041");
-    var i, r, a, s, o = n("442837"),
+    var i, r, s, a, o = n("442837"),
         l = n("570140"),
         u = n("630388"),
         d = n("709054"),
@@ -29,8 +29,8 @@ function(e, t, n) {
         if (null == n || n.verificationLevel === I.VerificationLevels.NONE || null == i || n.isOwner(i) || i.isPhoneVerified()) return;
         let r = _.default.getMember(n.id, i.id);
         if (null != r) {
-            var a;
-            if ((0, u.hasFlag)(null !== (a = r.flags) && void 0 !== a ? a : 0, T.GuildMemberFlags.BYPASSES_VERIFICATION)) return;
+            var s;
+            if ((0, u.hasFlag)(null !== (s = r.flags) && void 0 !== s ? s : 0, T.GuildMemberFlags.BYPASSES_VERIFICATION)) return;
             let e = new Set;
             for (let t of r.roles) {
                 let i = c.default.getRole(n.id, t);
@@ -40,16 +40,16 @@ function(e, t, n) {
                 i = null == r.joinedAt || new Date(r.joinedAt) < t;
             if (!(n.hasFeature(I.GuildFeatures.GUILD_ONBOARDING_EVER_ENABLED) && !i) && e.size > 0) return
         }
-        let s = +i.createdAt + 6e4 * I.VerificationCriteria.ACCOUNT_AGE - Date.now(),
+        let a = +i.createdAt + 6e4 * I.VerificationCriteria.ACCOUNT_AGE - Date.now(),
             o = +n.joinedAt + 6e4 * I.VerificationCriteria.MEMBER_AGE - Date.now(),
             d = n.verificationLevel >= I.VerificationLevels.LOW && !i.isClaimed(),
             f = !1,
             A = !1,
             N = !1,
             p = !1;
-        !i.isPhoneVerified() && !i.isStaff() && (f = n.verificationLevel >= I.VerificationLevels.LOW && !i.verified, A = n.verificationLevel >= I.VerificationLevels.VERY_HIGH, N = n.verificationLevel >= I.VerificationLevels.MEDIUM && s > 0, p = n.verificationLevel >= I.VerificationLevels.HIGH && o > 0);
+        !i.isPhoneVerified() && !i.isStaff() && (f = n.verificationLevel >= I.VerificationLevels.LOW && !i.verified, A = n.verificationLevel >= I.VerificationLevels.VERY_HIGH, N = n.verificationLevel >= I.VerificationLevels.MEDIUM && a > 0, p = n.verificationLevel >= I.VerificationLevels.HIGH && o > 0);
         let O = [];
-        p && O.push(o), N && O.push(s), O.length > 0 && (t = setTimeout(() => l.default.dispatch({
+        p && O.push(o), N && O.push(a), O.length > 0 && (t = setTimeout(() => l.default.dispatch({
             type: "GUILD_VERIFICATION_CHECK",
             guildId: e
         }), Math.max(...O))), h[e] = {
@@ -59,7 +59,7 @@ function(e, t, n) {
             newAccount: N,
             newMember: p,
             canChat: !(d || f || A || N || p),
-            accountDeadline: new Date(Date.now() + s),
+            accountDeadline: new Date(Date.now() + a),
             memberDeadline: new Date(Date.now() + o),
             timeoutRef: t
         }
@@ -85,12 +85,12 @@ function(e, t, n) {
             return this.getCheck(e).canChat
         }
     }
-    s = "GuildVerificationStore", (a = "displayName") in(r = p) ? Object.defineProperty(r, a, {
-        value: s,
+    a = "GuildVerificationStore", (s = "displayName") in(r = p) ? Object.defineProperty(r, s, {
+        value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[a] = s, t.default = new p(l.default, {
+    }) : r[s] = a, t.default = new p(l.default, {
         CONNECTION_OPEN: function() {
             for (let e in S.clear(), h) m(e)
         },

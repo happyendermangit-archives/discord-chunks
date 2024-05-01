@@ -5,26 +5,26 @@ function(e, t, n) {
             return o
         },
         renderHeader: function() {
-            return s
+            return a
         }
     });
     var i = n("735250"),
         r = n("470079");
     n("419922");
-    var a = n("156361");
+    var s = n("156361");
 
-    function s(e) {
+    function a(e) {
         let {
             titleWithQuery: t,
             titleWithoutQuery: n,
             query: r,
-            getQuery: s,
+            getQuery: a,
             headerClassName: o,
             headerTrailingContent: l
         } = e, u = r.length > 0 ? t.format({
-            prefix: s(r)
+            prefix: a(r)
         }) : n;
-        return (0, i.jsx)(a.default.Title, {
+        return (0, i.jsx)(s.default.Title, {
             className: o,
             title: u,
             children: l
@@ -35,7 +35,7 @@ function(e, t, n) {
         let {
             query: t,
             selectedIndex: n,
-            autocompletes: a,
+            autocompletes: s,
             onHover: o,
             onClick: l,
             titleWithQuery: u,
@@ -49,21 +49,21 @@ function(e, t, n) {
             headerTrailingContent: S,
             footer: h
         } = e;
-        if (null == h && (null == a || 0 === a.length)) return null;
-        let A = null == a ? void 0 : a.map((e, t) => {
+        if (null == h && (null == s || 0 === s.length)) return null;
+        let A = null == s ? void 0 : s.map((e, t) => {
             let i = t + T,
-                a = c(e, i);
+                s = c(e, i);
             return (0, r.createElement)(_, {
                 onClick: l,
                 onHover: o,
                 selected: n === i,
                 index: i,
-                ...a,
-                key: a.key
+                ...s,
+                key: s.key
             })
         });
         return (0, i.jsxs)(r.Fragment, {
-            children: [null != u && null != d ? s({
+            children: [null != u && null != d ? a({
                 titleWithQuery: u,
                 titleWithoutQuery: d,
                 query: t,

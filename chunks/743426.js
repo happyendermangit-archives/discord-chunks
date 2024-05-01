@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120"), n("411104");
     var i = n("264344"),
         r = n.n(i),
-        a = n("259443"),
-        s = n("47770"),
+        s = n("259443"),
+        a = n("47770"),
         o = n("46973"),
         l = n("734298"),
         u = n("997545"),
@@ -31,7 +31,7 @@ function(e, t, n) {
     function S(e) {
         return (null != e ? e : T.DEFAULT_VOLUME) / T.DEFAULT_VOLUME
     }
-    class h extends s.default {
+    class h extends a.default {
         destroy() {
             this.eachConnection(e => e.destroy()), this.emit(o.MediaEngineEvent.Destroy), this.removeAllListeners()
         }
@@ -229,8 +229,8 @@ function(e, t, n) {
             } = e.quality, {
                 id: i,
                 soundshareId: r,
-                useLoopback: a,
-                useVideoHook: s,
+                useLoopback: s,
+                useVideoHook: a,
                 useGraphicsCapture: l,
                 useQuartzCapturer: u,
                 allowScreenCaptureKit: d,
@@ -239,12 +239,12 @@ function(e, t, n) {
             (0, c.getVoiceEngine)().setOnClipsRecordingEvent(t => {
                 this.logger.info("Clips recording event: ".concat(T.ClipsRecordingEvent[t], " received for stream ").concat(i, " and sound ").concat(r, ".")), t === T.ClipsRecordingEvent.GoLiveEnded ? this.emit(o.MediaEngineEvent.ClipsRecordingRestartNeeded) : t === T.ClipsRecordingEvent.Error ? this.emit(o.MediaEngineEvent.ClipsInitFailure, "Failed to set clips source in media engine", e.applicationName) : (t === T.ClipsRecordingEvent.Ended || t === T.ClipsRecordingEvent.StoppedByGoLive) && this.emit(o.MediaEngineEvent.ClipsRecordingEnded, i, r)
             }), (0, c.getVoiceEngine)().applyClipsSettings({
-                useVideoHook: s,
+                useVideoHook: a,
                 useGraphicsCapture: l,
                 useQuartzCapturer: u,
                 allowScreenCaptureKit: d,
                 hdrCaptureMode: _,
-                soundshareLoopback: a,
+                soundshareLoopback: s,
                 frameRate: t,
                 width: n <= 480 ? n / 3 * 4 : n / 9 * 16,
                 height: n
@@ -297,11 +297,11 @@ function(e, t, n) {
         }
         saveClipForUser(e, t, n) {
             let i = (0, c.getVoiceEngine)();
-            return null == i.saveClipForUser ? Promise.reject("unsupported") : new Promise((r, a) => {
+            return null == i.saveClipForUser ? Promise.reject("unsupported") : new Promise((r, s) => {
                 i.saveClipForUser(e, t, n, (e, t, n) => r({
                     duration: e,
                     clipStats: JSON.parse(n)
-                }), e => a(JSON.parse(e)))
+                }), e => s(JSON.parse(e)))
             })
         }
         updateClipMetadata(e, t) {
@@ -478,7 +478,7 @@ function(e, t, n) {
         }
         constructor() {
             var e, t;
-            super(), e = this, f(this, "Video", I.default), f(this, "Camera", E.default), f(this, "videoInputDeviceId", T.DISABLED_DEVICE_ID), f(this, "connections", new Set), f(this, "speedTesters", new Set), f(this, "lastVoiceActivity", -1), f(this, "audioSubsystem", "standard"), f(this, "audioLayer", ""), f(this, "deviceChangeGeneration", 0), f(this, "consecutiveWatchdogFailures", 0), f(this, "codecSurvey", null), f(this, "logger", new a.Logger("MediaEngineNative")), f(this, "handleDeviceChange", function() {
+            super(), e = this, f(this, "Video", I.default), f(this, "Camera", E.default), f(this, "videoInputDeviceId", T.DISABLED_DEVICE_ID), f(this, "connections", new Set), f(this, "speedTesters", new Set), f(this, "lastVoiceActivity", -1), f(this, "audioSubsystem", "standard"), f(this, "audioLayer", ""), f(this, "deviceChangeGeneration", 0), f(this, "consecutiveWatchdogFailures", 0), f(this, "codecSurvey", null), f(this, "logger", new s.Logger("MediaEngineNative")), f(this, "handleDeviceChange", function() {
                 let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
                     n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
                     i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];

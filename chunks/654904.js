@@ -23,8 +23,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("866442"),
-        a = n("481060"),
-        s = n("531643"),
+        s = n("481060"),
+        a = n("531643"),
         o = n("768581"),
         l = n("403182"),
         u = n("661543"),
@@ -32,13 +32,13 @@ function(e, t, n) {
         _ = n("486324"),
         c = n("689938");
 
-    function E(e, t, r, s) {
-        (0, a.openModalLazy)(async () => {
+    function E(e, t, r, a) {
+        (0, s.openModalLazy)(async () => {
             let {
-                default: a
+                default: s
             } = await Promise.all([n.e("99387"), n.e("89289")]).then(n.bind(n, "28130"));
-            return n => (0, i.jsx)(a, {
-                filters: s,
+            return n => (0, i.jsx)(s, {
+                filters: a,
                 maxFileSizeBytes: d.MAX_IMAGE_UPLOAD_FILESIZE_BYTES,
                 imageSpecifications: e === _.UploadTypes.BANNER && c.default.Messages.USER_SETTINGS_PROFILE_THEMES_BANNER_MODAL_SPECS,
                 onComplete: (n, i) => (0, u.maybeOpenProfilePreviewModal)({
@@ -56,7 +56,7 @@ function(e, t, n) {
     }
 
     function I() {
-        (0, s.openUploadError)({
+        (0, a.openUploadError)({
             title: c.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
             help: c.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
                 maxSize: (0, l.sizeString)(d.MAX_IMAGE_UPLOAD_FILESIZE_BYTES)
@@ -69,9 +69,9 @@ function(e, t, n) {
         if (null != e) return e;
         let {
             size: r = 80,
-            canAnimate: a = !0
-        } = i, s = null === e;
-        return s && null == t ? o.default.getDefaultAvatarURL(n.id, n.discriminator) : s || (null == t ? void 0 : t.avatar) == null ? n.getAvatarURL(void 0, r, a) : n.getAvatarURL(null == t ? void 0 : t.guildId, r, a)
+            canAnimate: s = !0
+        } = i, a = null === e;
+        return a && null == t ? o.default.getDefaultAvatarURL(n.id, n.discriminator) : a || (null == t ? void 0 : t.avatar) == null ? n.getAvatarURL(void 0, r, s) : n.getAvatarURL(null == t ? void 0 : t.guildId, r, s)
     }
 
     function f(e, t) {

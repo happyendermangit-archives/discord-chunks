@@ -5,7 +5,7 @@ function(e, t, n) {
             return r
         },
         CAN_SET_OUTPUT_DEVICES: function() {
-            return a
+            return s
         },
         getAudioInputDevices: function() {
             return d
@@ -22,9 +22,9 @@ function(e, t, n) {
     }), n("177593"), n("653041");
     var i = n("65154");
     let r = null != navigator.mediaDevices && null != navigator.mediaDevices.enumerateDevices,
-        a = r && "setSinkId" in HTMLAudioElement.prototype;
+        s = r && "setSinkId" in HTMLAudioElement.prototype;
 
-    function s(e) {
+    function a(e) {
         return {
             id: i.DEFAULT_DEVICE_ID,
             type: e,
@@ -34,7 +34,7 @@ function(e, t, n) {
     }
 
     function o() {
-        return [s(i.DeviceTypes.AUDIO_INPUT), s(i.DeviceTypes.AUDIO_OUTPUT), s(i.DeviceTypes.VIDEO_INPUT)]
+        return [a(i.DeviceTypes.AUDIO_INPUT), a(i.DeviceTypes.AUDIO_OUTPUT), a(i.DeviceTypes.VIDEO_INPUT)]
     }
 
     function l(e, t) {
@@ -56,26 +56,26 @@ function(e, t, n) {
                         return !1
                 }
             }).map(e => {
-                let a;
+                let s;
                 switch (e.kind) {
                     case i.DeviceTypes.AUDIO_INPUT:
-                        a = t++;
+                        s = t++;
                         break;
                     case i.DeviceTypes.AUDIO_OUTPUT:
-                        a = n++;
+                        s = n++;
                         break;
                     case i.DeviceTypes.VIDEO_INPUT:
                     default:
-                        a = r++
+                        s = r++
                 }
                 return {
                     id: e.deviceId,
                     type: e.kind,
-                    index: a,
-                    name: null != e.label && "" !== e.label ? e.label : 0 === a ? "Default" : "Device ".concat(a)
+                    index: s,
+                    name: null != e.label && "" !== e.label ? e.label : 0 === s ? "Default" : "Device ".concat(s)
                 }
             })
-        }).then(e => (!a && (e = e.filter(e => e.type !== i.DeviceTypes.AUDIO_OUTPUT)).push(s(i.DeviceTypes.AUDIO_OUTPUT)), e)).catch(o) : new Promise(e => {
+        }).then(e => (!s && (e = e.filter(e => e.type !== i.DeviceTypes.AUDIO_OUTPUT)).push(a(i.DeviceTypes.AUDIO_OUTPUT)), e)).catch(o) : new Promise(e => {
             setImmediate(() => e(o()))
         })
     }

@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("481060"),
-        a = n("355467"),
-        s = n("179360"),
+        s = n("355467"),
+        a = n("179360"),
         o = n("821849"),
         l = n("594174"),
         u = n("314884"),
@@ -56,7 +56,7 @@ function(e, t, n) {
             return
         }
         let D = [];
-        !d.default.isLoadedForPremiumSKUs() && D.push((0, o.fetchPremiumSubscriptionPlans)()), !u.default.hasFetched && (D.push(a.fetchSubscriptions()), D.push((0, s.fetchGuildBoostSlots)())), D.length > 0 && await Promise.allSettled(D);
+        !d.default.isLoadedForPremiumSKUs() && D.push((0, o.fetchPremiumSubscriptionPlans)()), !u.default.hasFetched && (D.push(s.fetchSubscriptions()), D.push((0, a.fetchGuildBoostSlots)())), D.length > 0 && await Promise.allSettled(D);
         let M = (0, c.getAvailableGuildBoostSlots)(u.default.boostSlots),
             y = M.length,
             P = e => {
@@ -71,10 +71,10 @@ function(e, t, n) {
                 return n => {
                     let {
                         onClose: r,
-                        ...a
+                        ...s
                     } = n;
                     return (0, i.jsx)(t, {
-                        ...a,
+                        ...s,
                         onClose: e => {
                             r(), P(e)
                         },

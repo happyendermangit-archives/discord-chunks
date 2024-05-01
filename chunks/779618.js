@@ -2,14 +2,14 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return a
         }
     });
     var i = n("358085"),
         r = n("924557"),
-        a = n("65154");
+        s = n("65154");
 
-    function s(e) {
+    function a(e) {
         let {
             ignorePlatformRestriction: t
         } = r.ClipsExperiment.getCurrentConfig({
@@ -17,6 +17,6 @@ function(e, t, n) {
         }, {
             autoTrackExposure: !1
         });
-        return t || i.isDesktop() && e.getMediaEngine().supports(a.Features.CLIPS)
+        return t || i.isDesktop() && e.getMediaEngine().supports(s.Features.CLIPS)
     }
 }

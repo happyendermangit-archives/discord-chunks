@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("570140"),
         r = n("147913"),
-        a = n("38618"),
-        s = n("517100"),
+        s = n("38618"),
+        a = n("517100"),
         o = n("451478"),
         l = n("162461"),
         u = n("564990"),
@@ -20,8 +20,8 @@ function(e, t, n) {
     }
 
     function S() {
-        if (!(0, l.isEligibleForContentInventoryV1)("ContentInventoryManager") || I || d.default.hidden || !o.default.isFocused() || !a.default.isConnected()) return !1;
-        let e = s.default.getIdleSince();
+        if (!(0, l.isEligibleForContentInventoryV1)("ContentInventoryManager") || I || d.default.hidden || !o.default.isFocused() || !s.default.isConnected()) return !1;
+        let e = a.default.getIdleSince();
         return !(null != e && Date.now() - e > 9e5) && !0
     }
 

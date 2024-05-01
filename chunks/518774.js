@@ -6,9 +6,9 @@ function(e, t, n) {
         }
     }), n("47120");
     var i, r = n("735250"),
-        a = n("470079"),
-        s = n("120356"),
-        o = n.n(s),
+        s = n("470079"),
+        a = n("120356"),
+        o = n.n(a),
         l = n("699581"),
         u = n("358085"),
         d = n("144036"),
@@ -28,7 +28,7 @@ function(e, t, n) {
         bottom: 132,
         left: 80
     };
-    class T extends(i = a.PureComponent) {
+    class T extends(i = s.PureComponent) {
         componentDidMount() {
             this.setPosition(this.props.position)
         }
@@ -49,11 +49,11 @@ function(e, t, n) {
                 edgeOffsetTop: n,
                 edgeOffsetLeft: i,
                 edgeOffsetBottom: r,
-                edgeOffsetRight: a,
-                maxX: s,
+                edgeOffsetRight: s,
+                maxX: a,
                 maxY: o,
                 dockedRect: d
-            } = this.props, c = Math.round(n), E = Math.round(o - r - this._height), I = Math.round(i), T = Math.round(s - a - this._width), f = (0, u.getPlatform)() !== u.PlatformTypes.WEB && this.inPopout ? 22 : 0;
+            } = this.props, c = Math.round(n), E = Math.round(o - r - this._height), I = Math.round(i), T = Math.round(a - s - this._width), f = (0, u.getPlatform)() !== u.PlatformTypes.WEB && this.inPopout ? 22 : 0;
             if (null != d) {
                 var S, h;
                 return {
@@ -139,8 +139,8 @@ function(e, t, n) {
                 maxY: t,
                 dockedRect: n,
                 hidden: i,
-                roundCorners: a,
-                className: s
+                roundCorners: s,
+                className: a
             } = this.props, l = {};
             return null != n && (l = {
                 transform: "translate3d(".concat(n.x, ", ").concat(n.y, ", 0)"),
@@ -149,9 +149,9 @@ function(e, t, n) {
             }), (0, r.jsx)(d.default, {
                 dragAnywhere: !0,
                 ref: this.handleSetDraggableRef,
-                className: o()(c.pictureInPictureWindow, s, {
+                className: o()(c.pictureInPictureWindow, a, {
                     [c.hidden]: i,
-                    [c.borderRadius]: a
+                    [c.borderRadius]: s
                 }),
                 maxX: e,
                 maxY: t,
@@ -189,8 +189,8 @@ function(e, t, n) {
                 let {
                     maxX: i,
                     maxY: r
-                } = this.props, a = this.calculateDecayingPosition(e, t, this._velocityX, this._velocityY), s = !0, o = !0;
-                if (a.x > i / 2 && (o = !1), a.y > r / 2 && (s = !1), n = s && o ? _.PictureInPicturePositions.TOP_LEFT : s && !o ? _.PictureInPicturePositions.TOP_RIGHT : !s && o ? _.PictureInPicturePositions.BOTTOM_LEFT : _.PictureInPicturePositions.BOTTOM_RIGHT, this.animateToPosition(n, this.ensureIsInPosition), n !== this.props.position) {
+                } = this.props, s = this.calculateDecayingPosition(e, t, this._velocityX, this._velocityY), a = !0, o = !0;
+                if (s.x > i / 2 && (o = !1), s.y > r / 2 && (a = !1), n = a && o ? _.PictureInPicturePositions.TOP_LEFT : a && !o ? _.PictureInPicturePositions.TOP_RIGHT : !a && o ? _.PictureInPicturePositions.BOTTOM_LEFT : _.PictureInPicturePositions.BOTTOM_RIGHT, this.animateToPosition(n, this.ensureIsInPosition), n !== this.props.position) {
                     let {
                         id: e,
                         onMove: t
@@ -204,13 +204,13 @@ function(e, t, n) {
         hidden: !1,
         roundCorners: !0
     });
-    t.default = a.memo(e => {
+    t.default = s.memo(e => {
         let {
             selectedPIPWindow: t,
             pipWindows: n,
             maxX: i,
-            maxY: a,
-            onWindowMove: s,
+            maxY: s,
+            onWindowMove: a,
             dockedRect: o,
             pictureInPictureComponents: l,
             appContext: u,
@@ -232,9 +232,9 @@ function(e, t, n) {
                     position: t.position,
                     id: t.id,
                     hidden: t.hidden,
-                    onMove: s,
+                    onMove: a,
                     maxX: i,
-                    maxY: a,
+                    maxY: s,
                     dockedRect: o,
                     edgeOffsetTop: I.top,
                     edgeOffsetBottom: I.bottom,

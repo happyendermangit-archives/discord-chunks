@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        a = n("374470"),
-        s = n("442837"),
+        s = n("374470"),
+        a = n("442837"),
         o = n("481060"),
         l = n("626135"),
         u = n("5967"),
@@ -22,7 +22,7 @@ function(e, t, n) {
         let {
             target: n
         } = e, i = null === (t = (0, u.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
-        (0, a.isElement)(n) && l.default.track(c.AnalyticEvents.KEYBOARD_SHORTCUT_USED, {
+        (0, s.isElement)(n) && l.default.track(c.AnalyticEvents.KEYBOARD_SHORTCUT_USED, {
             shortcut_name: "tab_navigation",
             source_class_list: null != i ? Array.from(i.classList) : [],
             location_object: n.tagName
@@ -32,18 +32,18 @@ function(e, t, n) {
     function I(e) {
         let {
             children: t
-        } = e, n = (0, s.useStateFromStoresObject)([d.default], () => ({
+        } = e, n = (0, a.useStateFromStoresObject)([d.default], () => ({
             enabled: d.default.useReducedMotion,
             rawValue: d.default.rawPrefersReducedMotion
-        })), a = (0, s.useStateFromStoresObject)([d.default], () => ({
+        })), s = (0, a.useStateFromStoresObject)([d.default], () => ({
             enabled: d.default.useForcedColors,
             rawValue: d.default.systemForcedColors
-        })), l = (0, s.useStateFromStores)([d.default], () => d.default.alwaysShowLinkDecorations), u = r.useMemo(() => ({
+        })), l = (0, a.useStateFromStores)([d.default], () => d.default.alwaysShowLinkDecorations), u = r.useMemo(() => ({
             reducedMotion: n,
             prefersCrossfades: !1,
-            forcedColors: a,
+            forcedColors: s,
             alwaysShowLinkDecorations: l
-        }), [n, a, l]);
+        }), [n, s, l]);
         return r.useEffect(() => ((0, _.insertAccessibilityLabelElements)(), window.addEventListener("keydown", E), () => window.removeEventListener("keydown", E)), []), (0, i.jsx)(o.AccessibilityPreferencesContext.Provider, {
             value: u,
             children: t

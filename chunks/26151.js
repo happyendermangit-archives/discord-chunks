@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t);
     var i = n("544891"),
         r = n("570140"),
-        a = n("523746"),
-        s = n("699516"),
+        s = n("523746"),
+        a = n("699516"),
         o = n("594174"),
         l = n("626135"),
         u = n("668781"),
@@ -13,12 +13,12 @@ function(e, t, n) {
         c = n("981631"),
         E = n("689938");
     t.default = {
-        call(e, t, n, r, a) {
+        call(e, t, n, r, s) {
             let I = n => {
-                _.default.selectVoiceChannel(e, t), n && this.ring(e), null == a || a(e)
+                _.default.selectVoiceChannel(e, t), n && this.ring(e), null == s || s(e)
             };
             if (null != r) {
-                if (s.default.isBlocked(r)) return;
+                if (a.default.isBlocked(r)) return;
                 let t = o.default.getUser(r);
                 i.HTTP.get({
                     url: c.Endpoints.CALL(e),
@@ -49,8 +49,8 @@ function(e, t, n) {
             } else I(n)
         },
         ring(e, t) {
-            let n = a.default.getCall(e);
-            if (null != n && null != n.messageId && !a.default.isCallUnavailable(e)) {
+            let n = s.default.getCall(e);
+            if (null != n && null != n.messageId && !s.default.isCallUnavailable(e)) {
                 i.HTTP.post({
                     url: c.Endpoints.CALL_RING(e),
                     body: {

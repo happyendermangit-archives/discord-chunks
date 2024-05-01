@@ -2,8 +2,8 @@ function(e, t, n) {
     "use strict";
     n.r(t), n("789020");
     var i, r = n("442837"),
-        a = n("570140"),
-        s = n("695346"),
+        s = n("570140"),
+        a = n("695346"),
         o = n("630388"),
         l = n("981631");
 
@@ -38,7 +38,7 @@ function(e, t, n) {
             return _
         }
         getIsEnabled() {
-            return s.DeveloperMode.getSetting() && E.length > 0
+            return a.DeveloperMode.getSetting() && E.length > 0
         }
         getLastUsedObject() {
             return _.lastUsedObject
@@ -64,7 +64,7 @@ function(e, t, n) {
     }
     u(I, "displayName", "DeveloperActivityShelfStore"), u(I, "persistKey", "DeveloperActivityShelfStore"), u(I, "migrations", [e => (delete e.isEnabled, {
         ...e
-    })]), t.default = new I(a.default, {
+    })]), t.default = new I(s.default, {
         LOGOUT: function() {
             _ = d(), c = null, E = []
         },

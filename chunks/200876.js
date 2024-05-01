@@ -5,21 +5,21 @@ function(e, t, n) {
             return o
         },
         isCreatorMonetizationEnabledGuild: function() {
-            return s
+            return a
         }
     });
     var i = n("442837"),
         r = n("430824"),
-        a = n("981631");
+        s = n("981631");
 
-    function s(e) {
-        return !e.hasFeature(a.GuildFeatures.CREATOR_MONETIZABLE_DISABLED) && (e.hasFeature(a.GuildFeatures.CREATOR_MONETIZABLE) || e.hasFeature(a.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL))
+    function a(e) {
+        return !e.hasFeature(s.GuildFeatures.CREATOR_MONETIZABLE_DISABLED) && (e.hasFeature(s.GuildFeatures.CREATOR_MONETIZABLE) || e.hasFeature(s.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL))
     }
 
     function o(e) {
         return (0, i.useStateFromStores)([r.default], () => {
             let t = r.default.getGuild(e);
-            return null != t && s(t)
+            return null != t && a(t)
         })
     }
 }

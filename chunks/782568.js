@@ -9,11 +9,11 @@ function(e, t, n) {
     async function r(e, t) {
         let {
             default: r
-        } = await Promise.resolve().then(n.bind(n, "315263")), a = r(e, {
+        } = await Promise.resolve().then(n.bind(n, "315263")), s = r(e, {
             skipExtensionCheck: t,
             analyticsLocations: []
         });
-        if (null != a) a(null);
+        if (null != s) s(null);
         else if (i.isPlatformEmbedded) window.open(e);
         else {
             let t = document.createElement("a");

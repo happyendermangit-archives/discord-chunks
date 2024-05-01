@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("147913"),
         r = n("594174"),
-        a = n("74538"),
-        s = n("748770"),
+        s = n("74538"),
+        a = n("748770"),
         o = n("474936");
     class l extends i.default {
         onPostConnectionOpen() {
@@ -12,7 +12,7 @@ function(e, t, n) {
         }
         maybeFetchActiveOutboundPromotions() {
             let e = r.default.getCurrentUser();
-            null != e && a.default.isPremiumExactly(e, o.PremiumTypes.TIER_2) && (0, s.fetchActiveOutboundPromotions)()
+            null != e && s.default.isPremiumExactly(e, o.PremiumTypes.TIER_2) && (0, a.fetchActiveOutboundPromotions)()
         }
         constructor(...e) {
             var t, n, i;

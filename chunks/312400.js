@@ -2,13 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         NewUserUnreadsEntryPointExperiment: function() {
-            return s
+            return a
         },
         NotificationsExperiment: function() {
             return r
         },
         UnreadsEntryPointExperiment: function() {
-            return a
+            return s
         }
     });
     var i = n("818083");
@@ -27,7 +27,7 @@ function(e, t, n) {
                 }
             }]
         }),
-        a = (0, i.createExperiment)({
+        s = (0, i.createExperiment)({
             kind: "user",
             id: "2024-01_unreads",
             label: "Unreads Experiment (grey-dot mode)",
@@ -62,7 +62,7 @@ function(e, t, n) {
                 }
             }]
         }),
-        s = (0, i.createExperiment)({
+        a = (0, i.createExperiment)({
             kind: "user",
             id: "2024-03_unreads_new_users",
             label: "Unreads Experiment (grey-dot mode) (new users)",

@@ -46,22 +46,22 @@ function(e, t, n) {
     }), n("411104"), n("47120"), n("571269"), n("298267");
     var i = n("97613"),
         r = n.n(i),
-        a = n("652874"),
-        s = n("40851"),
+        s = n("652874"),
+        a = n("40851"),
         o = n("602091"),
         l = n("981631");
     let u = n("338305").default,
         d = [o.DEFAULT_MODAL_CONTEXT, o.POPOUT_MODAL_CONTEXT];
 
     function _() {
-        let e = (0, s.getCurrentlyInteractingAppContext)();
+        let e = (0, a.getCurrentlyInteractingAppContext)();
         return null != e ? c(e) : o.DEFAULT_MODAL_CONTEXT
     }
 
     function c(e) {
         return e === l.AppContext.POPOUT ? o.POPOUT_MODAL_CONTEXT : o.DEFAULT_MODAL_CONTEXT
     }
-    let E = (0, a.default)(e => ({
+    let E = (0, s.default)(e => ({
         [o.DEFAULT_MODAL_CONTEXT]: [],
         [o.POPOUT_MODAL_CONTEXT]: []
     }));
@@ -71,19 +71,19 @@ function(e, t, n) {
                 contextKey: n = _(),
                 ...i
             } = t,
-            a = null != t.modalKey ? t.modalKey : r()(),
-            s = !1,
+            s = null != t.modalKey ? t.modalKey : r()(),
+            a = !1,
             o = setTimeout(() => {
-                s = !0, T(u, {
+                a = !0, T(u, {
                     ...i,
-                    modalKey: a
+                    modalKey: s
                 }, n)
             }, 300),
             l = await e();
-        return clearTimeout(o), s ? R(a, n) && S(a, l, i.onCloseRequest, i.onCloseCallback, n) : T(l, {
+        return clearTimeout(o), a ? R(s, n) && S(s, l, i.onCloseRequest, i.onCloseCallback, n) : T(l, {
             ...i,
-            modalKey: a
-        }, n), a
+            modalKey: s
+        }, n), s
     }
 
     function T(e) {
@@ -91,8 +91,8 @@ function(e, t, n) {
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _(),
             {
                 modalKey: i,
-                instant: a,
-                Layer: s,
+                instant: s,
+                Layer: a,
                 onCloseRequest: o,
                 onCloseCallback: l,
                 backdropStyle: u
@@ -109,11 +109,11 @@ function(e, t, n) {
                 ...t,
                 [n]: [...i, {
                     key: d,
-                    Layer: s,
+                    Layer: a,
                     render: e,
                     onCloseRequest: null != o ? o : () => f(d, n),
                     onCloseCallback: l,
-                    instant: a,
+                    instant: s,
                     backdropStyle: u
                 }]
             }
@@ -142,14 +142,14 @@ function(e, t, n) {
 
     function S(e, t, n, i) {
         let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : _();
-        E.setState(a => void 0 === a[r] ? a : {
-            ...a,
-            [r]: a[r].map(a => a.key === e ? {
-                ...a,
+        E.setState(s => void 0 === s[r] ? s : {
+            ...s,
+            [r]: s[r].map(s => s.key === e ? {
+                ...s,
                 render: t,
                 onCloseRequest: null == n ? () => f(e, r) : n,
                 onCloseCallback: i
-            } : a)
+            } : s)
         })
     }
 

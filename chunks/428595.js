@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("757143"), n("653041"), n("47120");
     var i = n("392711"),
         r = n.n(i),
-        a = n("302454"),
-        s = n.n(a),
+        s = n("302454"),
+        a = n.n(s),
         o = n("797610"),
         l = n("633302"),
         u = n("763296"),
@@ -58,14 +58,14 @@ function(e, t, n) {
         },
         G = e => null != e.guildId ? _.default.getGuild(e.guildId) : null != e.channelId ? _.default.getGuild(b(e.channelId)) : null,
         w = {
-            newline: s().defaultRules.newline,
-            paragraph: s().defaultRules.paragraph,
+            newline: a().defaultRules.newline,
+            paragraph: a().defaultRules.paragraph,
             escape: {
-                ...s().defaultRules.escape,
-                match: (e, t, n) => !1 === t.allowEscape ? null : s().defaultRules.escape.match(e, t, n)
+                ...a().defaultRules.escape,
+                match: (e, t, n) => !1 === t.allowEscape ? null : a().defaultRules.escape.match(e, t, n)
             },
             blockQuote: {
-                ...s().defaultRules.blockQuote,
+                ...a().defaultRules.blockQuote,
                 requiredFirstCharacters: [" ", ">"],
                 match(e, t) {
                     let {
@@ -75,18 +75,18 @@ function(e, t, n) {
                     } = t;
                     if (i || r) return null;
                     if (null == n) return D.exec(e);
-                    let a = n[0];
-                    return M.test(a) ? D.exec(e) : null
+                    let s = n[0];
+                    return M.test(s) ? D.exec(e) : null
                 },
                 parse(e, t, n) {
                     let i = e[0],
                         r = !!y.exec(i),
-                        a = i.replace(r ? y : P, ""),
-                        s = n.inQuote || !1,
+                        s = i.replace(r ? y : P, ""),
+                        a = n.inQuote || !1,
                         o = n.inline || !1;
                     n.inQuote = !0, !r && (n.inline = !0);
-                    let l = t(a, n);
-                    return n.inQuote = s, n.inline = o, 0 === l.length && l.push({
+                    let l = t(s, n);
+                    return n.inQuote = a, n.inline = o, 0 === l.length && l.push({
                         type: "text",
                         content: " "
                     }), {
@@ -97,11 +97,11 @@ function(e, t, n) {
             },
             link: h.default,
             autolink: {
-                ...s().defaultRules.autolink,
+                ...a().defaultRules.autolink,
                 parse: U
             },
             url: {
-                ...s().defaultRules.url,
+                ...a().defaultRules.url,
                 requiredFirstCharacters: ["h", "s"],
                 match(e, t) {
                     if (!t.inline) return null;
@@ -123,15 +123,15 @@ function(e, t, n) {
                 },
                 parse: U
             },
-            strong: s().defaultRules.strong,
-            em: s().defaultRules.em,
-            u: s().defaultRules.u,
-            br: s().defaultRules.br,
+            strong: a().defaultRules.strong,
+            em: a().defaultRules.em,
+            u: a().defaultRules.u,
+            br: a().defaultRules.br,
             text: N.default,
             inlineCode: {
-                ...s().defaultRules.inlineCode,
+                ...a().defaultRules.inlineCode,
                 parse(e, t, n) {
-                    let i = s().defaultRules.inlineCode.parse(e, t, n);
+                    let i = a().defaultRules.inlineCode.parse(e, t, n);
                     return !0 === n.parseInlineCodeChildContent ? {
                         ...i,
                         validationChildContent: t(i.content, n)
@@ -148,7 +148,7 @@ function(e, t, n) {
                 })
             },
             codeBlock: {
-                order: s().defaultRules.codeBlock.order,
+                order: a().defaultRules.codeBlock.order,
                 requiredFirstCharacters: ["`"],
                 match: e => /^```(?:([a-z0-9_+\-.#]+?)\n)?\n*([^\n][^]*?)\n*```/i.exec(e),
                 parse(e, t, n) {
@@ -170,22 +170,22 @@ function(e, t, n) {
                         type: "roleMention",
                         id: r
                     };
-                    let a = G(n),
-                        s = null != a ? _.default.getRole(a.id, r) : null;
-                    return null == s ? {
+                    let s = G(n),
+                        a = null != s ? _.default.getRole(s.id, r) : null;
+                    return null == a ? {
                         type: "text",
                         content: "@".concat(v.default.Messages.DELETED_ROLE_PLACEHOLDER)
                     } : {
                         type: "mention",
                         channelId: n.channelId,
-                        guildId: null != a ? a.id : null,
+                        guildId: null != s ? s.id : null,
                         roleId: r,
-                        roleColor: s.color,
-                        color: s.color,
-                        colorString: s.colorString,
+                        roleColor: a.color,
+                        color: a.color,
+                        colorString: a.colorString,
                         content: [{
                             type: "text",
-                            content: "@".concat(s.name)
+                            content: "@".concat(a.name)
                         }]
                     }
                 }
@@ -206,20 +206,20 @@ function(e, t, n) {
                         type: "mention",
                         id: e[1]
                     };
-                    let a = c.default.getUser(e[1]),
-                        s = d.default.getChannel(n.channelId);
-                    if (null != a && (r = a.id, i = a.toString(), null != s)) {
+                    let s = c.default.getUser(e[1]),
+                        a = d.default.getChannel(n.channelId);
+                    if (null != s && (r = s.id, i = s.toString(), null != a)) {
                         var l;
-                        i = null !== (l = E.default.getNickname(s.getGuildId(), n.channelId, a)) && void 0 !== l ? l : I.default.getName(a)
+                        i = null !== (l = E.default.getNickname(a.getGuildId(), n.channelId, s)) && void 0 !== l ? l : I.default.getName(s)
                     }
-                    null == a && "@Clyde" === e[0] && (0, o.getClydeEnabled)(G(n), s) && (r = L.CLYDE_AI_USER_ID);
+                    null == s && "@Clyde" === e[0] && (0, o.getClydeEnabled)(G(n), a) && (r = L.CLYDE_AI_USER_ID);
                     let u = e[1],
                         _ = null != u && C.ID_REGEX.test(u.trim()),
                         T = _ && n.unknownUserMentionPlaceholder ? "@".concat(v.default.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER) : e[0];
                     return {
                         userId: r,
                         channelId: n.channelId,
-                        guildId: null == s ? void 0 : s.getGuildId(),
+                        guildId: null == a ? void 0 : a.getGuildId(),
                         parsedUserId: _ ? u : null,
                         roleName: e[2],
                         content: [{
@@ -234,7 +234,7 @@ function(e, t, n) {
             mediaPostLink: f.default.mediaPostLink,
             attachmentLink: T.default.attachmentLink,
             commandMention: {
-                order: s().defaultRules.text.order,
+                order: a().defaultRules.text.order,
                 requiredFirstCharacters: ["<"],
                 match: e => /^<\/((?:[-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32})(?: [-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32})?(?: [-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32})?):(\d+)>/u.exec(e),
                 parse(e, t, n) {
@@ -277,14 +277,14 @@ function(e, t, n) {
                 parse(e, t, n) {
                     var i;
                     let r = e[1],
-                        a = u.default.getSoundById(r),
-                        s = null !== (i = null == a ? void 0 : a.name) && void 0 !== i ? i : r;
+                        s = u.default.getSoundById(r),
+                        a = null !== (i = null == s ? void 0 : s.name) && void 0 !== i ? i : r;
                     return {
                         type: "soundboard",
                         id: r,
                         soundId: r,
                         channelId: n.channelId,
-                        content: s
+                        content: a
                     }
                 }
             },
@@ -310,10 +310,10 @@ function(e, t, n) {
                 }
             },
             s: {
-                order: s().defaultRules.u.order,
+                order: a().defaultRules.u.order,
                 requiredFirstCharacters: ["~"],
-                match: s().inlineRegex(/^~~([\s\S]+?)~~(?!_)/),
-                parse: s().defaultRules.u.parse
+                match: a().inlineRegex(/^~~([\s\S]+?)~~(?!_)/),
+                parse: a().defaultRules.u.parse
             },
             spoiler: {
                 order: N.default.order,
@@ -381,19 +381,19 @@ function(e, t, n) {
                     do n = e.indexOf(t.highlightWord, n + 1), i = !K(e, n); while (i && -1 !== n);
                 if (-1 === n) return null;
                 let r = e.substring(0, n),
-                    a = e.substring(n + t.highlightWord.length);
-                return [e, t.highlightWord, r, a]
+                    s = e.substring(n + t.highlightWord.length);
+                return [e, t.highlightWord, r, s]
             },
             parse(e, t, n) {
                 var i;
                 let r = null !== (i = n.parseDepth) && void 0 !== i ? i : 0,
-                    a = {
+                    s = {
                         ...n,
                         parseDepth: r + 1
                     },
-                    s = t(e[2], a),
-                    o = t(e[3], a);
-                return [...s, {
+                    a = t(e[2], s),
+                    o = t(e[3], s);
+                return [...a, {
                     type: "highlight",
                     content: e[1]
                 }, ...o]

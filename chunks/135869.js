@@ -5,6 +5,6 @@ function(e, t, n) {
     let r = {
             currentPreviewRef: i.createRef()
         },
-        a = i.createContext(r);
-    t.default = a
+        s = i.createContext(r);
+    t.default = s
 }

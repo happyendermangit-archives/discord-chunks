@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("302454"),
         l = n("481060"),
         u = n("794295"),
@@ -44,13 +44,13 @@ function(e, t, n) {
     function B(e) {
         let {
             text: t
-        } = e, [n, a] = r.useState(!1);
+        } = e, [n, s] = r.useState(!1);
         return (0, i.jsx)(l.Clickable, {
             onClick: () => {
                 try {
-                    (0, O.copy)(t), a(!0)
+                    (0, O.copy)(t), s(!0)
                 } catch (e) {
-                    a(!1)
+                    s(!1)
                 }
             },
             children: n ? (0, i.jsx)(S.default, {
@@ -97,8 +97,8 @@ function(e, t, n) {
         },
         codeBlock: {
             react(e, t, r) {
-                let a = () => (0, i.jsx)("code", {
-                    className: s()(G.scrollbarGhostHairline, "hljs"),
+                let s = () => (0, i.jsx)("code", {
+                    className: a()(G.scrollbarGhostHairline, "hljs"),
                     children: (0, C.smartOutput)(e, t, r)
                 });
                 return (0, i.jsx)("pre", {
@@ -112,13 +112,13 @@ function(e, t, n) {
                         }) : null, (0, i.jsx)(d.LazyLibrary, {
                             createPromise: () => Promise.resolve().then(n.bind(n, "364964")),
                             webpackId: "364964",
-                            renderFallback: a,
+                            renderFallback: s,
                             render: t => {
-                                if (!(e.lang && t.hasLanguage(e.lang))) return a();
+                                if (!(e.lang && t.hasLanguage(e.lang))) return s();
                                 {
                                     let n = t.highlight(e.lang, e.content, !0);
-                                    return null == n ? a() : (0, i.jsx)("code", {
-                                        className: s()(G.scrollbarGhostHairline, "hljs", n.language),
+                                    return null == n ? s() : (0, i.jsx)("code", {
+                                        className: a()(G.scrollbarGhostHairline, "hljs", n.language),
                                         dangerouslySetInnerHTML: {
                                             __html: n.value
                                         }
@@ -176,30 +176,30 @@ function(e, t, n) {
                     }(e.guildId, e.channelId)
                 };
                 if (!(0, C.isStaticRouteIconType)(e.channelId)) return null;
-                let a = "".concat(e.channelId);
+                let s = "".concat(e.channelId);
                 switch (e.channelId) {
                     case U.StaticChannelId.GUILD_HOME:
                     case U.StaticChannelId.SERVER_GUIDE:
-                        a = b.default.Messages.SERVER_GUIDE;
+                        s = b.default.Messages.SERVER_GUIDE;
                         break;
                     case U.StaticChannelId.CHANNEL_BROWSER:
-                        a = b.default.Messages.GUILD_SIDEBAR_CHANNEL_BROWSER;
+                        s = b.default.Messages.GUILD_SIDEBAR_CHANNEL_BROWSER;
                         break;
                     case U.StaticChannelId.CUSTOMIZE_COMMUNITY:
-                        a = b.default.Messages.CHANNELS_AND_ROLES
+                        s = b.default.Messages.CHANNELS_AND_ROLES
                 }
                 return (0, i.jsx)(l.Tooltip, {
-                    text: a,
+                    text: s,
                     position: "top",
-                    children: a => {
+                    children: s => {
                         let {
-                            onMouseEnter: s,
+                            onMouseEnter: a,
                             onMouseLeave: o
-                        } = a;
+                        } = s;
                         return (0, i.jsx)(T.default, {
                             role: "link",
                             onClick: r,
-                            onMouseEnter: s,
+                            onMouseEnter: a,
                             onMouseLeave: o,
                             className: "channelMention",
                             iconType: e.channelId,
@@ -283,17 +283,17 @@ function(e, t, n) {
                     enableEmojiClick: n = !0
                 } = e;
                 return {
-                    react(e, r, a) {
+                    react(e, r, s) {
                         let {
-                            key: s
-                        } = a;
+                            key: a
+                        } = s;
                         return e.src ? (0, i.jsx)(c.MessageStandardEmoji, {
                             node: e,
                             tooltipPosition: t,
                             enableClick: n
-                        }, s) : (0, i.jsx)("span", {
+                        }, a) : (0, i.jsx)("span", {
                             children: e.surrogate
-                        }, s)
+                        }, a)
                     }
                 }
             }(e),
@@ -303,12 +303,12 @@ function(e, t, n) {
                     enableEmojiClick: n = !0
                 } = e;
                 return {
-                    react(e, r, a) {
+                    react(e, r, s) {
                         let {
-                            key: s,
+                            key: a,
                             guildId: o,
                             isInteracting: l
-                        } = a, u = _.default.getDisambiguatedEmojiContext(o).getById(e.emojiId);
+                        } = s, u = _.default.getDisambiguatedEmojiContext(o).getById(e.emojiId);
                         if (null != u) {
                             let t = u.require_colons;
                             e = {
@@ -321,7 +321,7 @@ function(e, t, n) {
                             node: e,
                             tooltipPosition: t,
                             enableClick: n
-                        }, s)
+                        }, a)
                     }
                 }
             }(e),

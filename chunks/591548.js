@@ -2,16 +2,16 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         coalesceInvoiceItems: function() {
-            return a
+            return s
         },
         createInvoiceItemFromServer: function() {
-            return s
+            return a
         }
     }), n("47120"), n("653041");
     var i = n("392711"),
         r = n.n(i);
 
-    function a(e) {
+    function s(e) {
         let t = (e, t) => e.subscriptionPlanId === t.subscriptionPlanId && e.subscriptionPlanPrice === t.subscriptionPlanPrice && e.amount === t.amount && r().isEqual(e.discounts, t.discounts),
             n = [],
             i = new Set;
@@ -34,7 +34,7 @@ function(e, t, n) {
         })
     }
 
-    function s(e) {
+    function a(e) {
         return {
             id: e.id,
             subscriptionPlanId: e.subscription_plan_id,

@@ -9,8 +9,8 @@ function(e, t, n) {
             return d
         }
     }), n("653041"), n("47120"), n("177593");
-    var a = n("570140"),
-        s = n("229588"),
+    var s = n("570140"),
+        a = n("229588"),
         o = n("689938");
     i = n("330711").default;
     let l = !1;
@@ -22,7 +22,7 @@ function(e, t, n) {
     function d(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         if (l && o.default.loadPromise === r) return;
-        l = !0, t ? (0, s.setLocaleHack)(e) : a.default.dispatch({
+        l = !0, t ? (0, a.setLocaleHack)(e) : s.default.dispatch({
             type: "I18N_LOAD_START",
             locale: e
         });
@@ -31,12 +31,12 @@ function(e, t, n) {
         let u = Promise.all(n);
         setImmediate(() => {
             u.then(() => {
-                a.default.dispatch({
+                s.default.dispatch({
                     type: "I18N_LOAD_SUCCESS",
                     locale: e
                 })
             }).catch(t => {
-                a.default.dispatch({
+                s.default.dispatch({
                     type: "I18N_LOAD_ERROR",
                     error: t,
                     locale: e

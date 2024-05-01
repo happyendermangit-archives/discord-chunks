@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         FAKE_SCOPES: function() {
-            return a
+            return s
         },
         OrderedAccountScopes: function() {
-            return s
+            return a
         },
         RemovedScopes: function() {
             return l
@@ -22,9 +22,9 @@ function(e, t, n) {
     });
     var i = n("981631"),
         r = n("689938");
-    let a = [() => r.default.Messages.OAUTH2_FAKE_SCOPE_1, () => r.default.Messages.OAUTH2_FAKE_SCOPE_2, () => r.default.Messages.OAUTH2_FAKE_SCOPE_3, () => r.default.Messages.OAUTH2_FAKE_SCOPE_4, () => r.default.Messages.OAUTH2_FAKE_SCOPE_5, () => r.default.Messages.OAUTH2_FAKE_SCOPE_6, () => r.default.Messages.OAUTH2_FAKE_SCOPE_7, () => r.default.Messages.OAUTH2_FAKE_SCOPE_8],
-        s = [i.OAuth2Scopes.BOT, i.OAuth2Scopes.OPENID, i.OAuth2Scopes.IDENTIFY, i.OAuth2Scopes.EMAIL, i.OAuth2Scopes.CONNECTIONS, i.OAuth2Scopes.MESSAGES_READ, i.OAuth2Scopes.GUILDS, i.OAuth2Scopes.GUILDS_JOIN, i.OAuth2Scopes.GUILDS_MEMBERS_READ, i.OAuth2Scopes.GDM_JOIN, i.OAuth2Scopes.RPC, i.OAuth2Scopes.RPC_NOTIFICATIONS_READ, i.OAuth2Scopes.RPC_VOICE_READ, i.OAuth2Scopes.RPC_VOICE_WRITE, i.OAuth2Scopes.RPC_VIDEO_READ, i.OAuth2Scopes.RPC_VIDEO_WRITE, i.OAuth2Scopes.RPC_SCREENSHARE_READ, i.OAuth2Scopes.RPC_SCREENSHARE_WRITE, i.OAuth2Scopes.RPC_ACTIVITIES_WRITE, i.OAuth2Scopes.APPLICATIONS_BUILDS_UPLOAD, i.OAuth2Scopes.APPLICATIONS_BUILDS_READ, i.OAuth2Scopes.APPLICATIONS_COMMANDS, i.OAuth2Scopes.APPLICATIONS_COMMANDS_UPDATE, i.OAuth2Scopes.APPLICATIONS_COMMANDS_PERMISSIONS_UPDATE, i.OAuth2Scopes.APPLICATIONS_STORE_UPDATE, i.OAuth2Scopes.APPLICATIONS_ENTITLEMENTS, i.OAuth2Scopes.ACTIVITIES_READ, i.OAuth2Scopes.ACTIVITIES_WRITE, i.OAuth2Scopes.RELATIONSHIPS_READ, i.OAuth2Scopes.RELATIONSHIPS_WRITE, i.OAuth2Scopes.VOICE, i.OAuth2Scopes.DM_CHANNELS_READ, i.OAuth2Scopes.DM_CHANNELS_MESSAGES_READ, i.OAuth2Scopes.DM_CHANNELS_MESSAGES_WRITE, i.OAuth2Scopes.ROLE_CONNECTIONS_WRITE, i.OAuth2Scopes.PRESENCES_READ, i.OAuth2Scopes.PRESENCES_WRITE],
-        o = s.concat([i.OAuth2Scopes.WEBHOOK_INCOMING, i.OAuth2Scopes.BOT]),
+    let s = [() => r.default.Messages.OAUTH2_FAKE_SCOPE_1, () => r.default.Messages.OAUTH2_FAKE_SCOPE_2, () => r.default.Messages.OAUTH2_FAKE_SCOPE_3, () => r.default.Messages.OAUTH2_FAKE_SCOPE_4, () => r.default.Messages.OAUTH2_FAKE_SCOPE_5, () => r.default.Messages.OAUTH2_FAKE_SCOPE_6, () => r.default.Messages.OAUTH2_FAKE_SCOPE_7, () => r.default.Messages.OAUTH2_FAKE_SCOPE_8],
+        a = [i.OAuth2Scopes.BOT, i.OAuth2Scopes.OPENID, i.OAuth2Scopes.IDENTIFY, i.OAuth2Scopes.EMAIL, i.OAuth2Scopes.CONNECTIONS, i.OAuth2Scopes.MESSAGES_READ, i.OAuth2Scopes.GUILDS, i.OAuth2Scopes.GUILDS_JOIN, i.OAuth2Scopes.GUILDS_MEMBERS_READ, i.OAuth2Scopes.GDM_JOIN, i.OAuth2Scopes.RPC, i.OAuth2Scopes.RPC_NOTIFICATIONS_READ, i.OAuth2Scopes.RPC_VOICE_READ, i.OAuth2Scopes.RPC_VOICE_WRITE, i.OAuth2Scopes.RPC_VIDEO_READ, i.OAuth2Scopes.RPC_VIDEO_WRITE, i.OAuth2Scopes.RPC_SCREENSHARE_READ, i.OAuth2Scopes.RPC_SCREENSHARE_WRITE, i.OAuth2Scopes.RPC_ACTIVITIES_WRITE, i.OAuth2Scopes.APPLICATIONS_BUILDS_UPLOAD, i.OAuth2Scopes.APPLICATIONS_BUILDS_READ, i.OAuth2Scopes.APPLICATIONS_COMMANDS, i.OAuth2Scopes.APPLICATIONS_COMMANDS_UPDATE, i.OAuth2Scopes.APPLICATIONS_COMMANDS_PERMISSIONS_UPDATE, i.OAuth2Scopes.APPLICATIONS_STORE_UPDATE, i.OAuth2Scopes.APPLICATIONS_ENTITLEMENTS, i.OAuth2Scopes.ACTIVITIES_READ, i.OAuth2Scopes.ACTIVITIES_WRITE, i.OAuth2Scopes.RELATIONSHIPS_READ, i.OAuth2Scopes.RELATIONSHIPS_WRITE, i.OAuth2Scopes.VOICE, i.OAuth2Scopes.DM_CHANNELS_READ, i.OAuth2Scopes.DM_CHANNELS_MESSAGES_READ, i.OAuth2Scopes.DM_CHANNELS_MESSAGES_WRITE, i.OAuth2Scopes.ROLE_CONNECTIONS_WRITE, i.OAuth2Scopes.PRESENCES_READ, i.OAuth2Scopes.PRESENCES_WRITE],
+        o = a.concat([i.OAuth2Scopes.WEBHOOK_INCOMING, i.OAuth2Scopes.BOT]),
         l = ["rpc.api"];
 
     function u(e, t) {

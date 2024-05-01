@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("442837"),
         l = n("692547"),
         u = n("780384"),
@@ -91,7 +91,7 @@ function(e, t, n) {
         return (0, i.jsxs)("div", {
             className: M.tooltipPremiumFooterContainer,
             children: [(0, i.jsxs)("div", {
-                className: s()(M.tooltipPremiumFooterSegment, M.tooltipPremiumFooterTierSegment),
+                className: a()(M.tooltipPremiumFooterSegment, M.tooltipPremiumFooterTierSegment),
                 children: [(0, i.jsx)(C.default, {
                     width: 18,
                     height: 18,
@@ -102,7 +102,7 @@ function(e, t, n) {
                     children: A.getTierName(t.premiumTier)
                 })]
             }), (0, i.jsx)("div", {
-                className: s()(M.tooltipPremiumFooterSegment),
+                className: a()(M.tooltipPremiumFooterSegment),
                 children: (0, i.jsx)(d.Text, {
                     variant: "text-xs/semibold",
                     color: "always-white",
@@ -120,8 +120,8 @@ function(e, t, n) {
             guildTraits: n
         } = e, {
             tooltipTitle: r,
-            tooltipSubtitle: a,
-            tooltipDescription: s
+            tooltipSubtitle: s,
+            tooltipDescription: a
         } = function(e, t) {
             let n = t === I.GuildVisibility.PUBLIC ? D.default.Messages.SERVER_BADGE_DESCRIPTION_ANYONE_CAN_JOIN : D.default.Messages.SERVER_BADGE_DESCRIPTION_INVITE_ONLY;
             switch (e) {
@@ -166,14 +166,14 @@ function(e, t, n) {
                     color: "interactive-active",
                     variant: "text-xs/bold",
                     children: r
-                }), null != a ? (0, i.jsx)(d.Text, {
-                    color: "text-muted",
-                    variant: "text-xs/medium",
-                    children: a
-                }) : null, null != s ? (0, i.jsx)(d.Text, {
+                }), null != s ? (0, i.jsx)(d.Text, {
                     color: "text-muted",
                     variant: "text-xs/medium",
                     children: s
+                }) : null, null != a ? (0, i.jsx)(d.Text, {
+                    color: "text-muted",
+                    variant: "text-xs/medium",
+                    children: a
                 }) : null]
             }), n.premium ? (0, i.jsx)(P, {
                 guildTraits: n
@@ -183,7 +183,7 @@ function(e, t, n) {
 
     function b(e) {
         let t, n, {
-                guild: a,
+                guild: s,
                 tooltipColor: l = d.Tooltip.Colors.BRAND,
                 tooltipPosition: A,
                 className: N,
@@ -197,24 +197,24 @@ function(e, t, n) {
             } = e,
             P = (0, o.useStateFromStores)([h.default, S.default], () => {
                 let e = h.default.getCurrentUser();
-                return S.default.isMember(null == a ? void 0 : a.id, null == e ? void 0 : e.id)
+                return S.default.isMember(null == s ? void 0 : s.id, null == e ? void 0 : e.id)
             }),
             b = (0, o.useStateFromStores)([f.default], () => f.default.theme),
-            G = (0, I.getGuildTraits)(a),
+            G = (0, I.getGuildTraits)(s),
             w = (0, E.getBadgeCategory)(G),
             B = r.useCallback(e => {
                 G.premium && P && !L && (e.stopPropagation(), e.preventDefault(), (0, T.openGuildBoostingMarketingModal)({
-                    guildId: a.id,
+                    guildId: s.id,
                     location: {
                         section: v.AnalyticsSections.GUILD_HEADER,
                         object: v.AnalyticsObjects.BOOST_GEM_ICON
                     }
                 }))
-            }, [G.premium, P, L, a.id]);
+            }, [G.premium, P, L, s.id]);
         if (w === E.BadgeCategory.NONE) return null;
         if (w === E.BadgeCategory.CLAN) {
             var k;
-            let e = (0, _.getClanBadgeUrl)(a.id, null === (k = a.clan) || void 0 === k ? void 0 : k.badge, g);
+            let e = (0, _.getClanBadgeUrl)(s.id, null === (k = s.clan) || void 0 === k ? void 0 : k.badge, g);
             return (0, i.jsx)(d.Tooltip, {
                 color: l,
                 position: A,
@@ -227,7 +227,7 @@ function(e, t, n) {
                 children: t => (0, i.jsx)(d.Clickable, {
                     ...t,
                     onClick: B,
-                    className: s()(M.clanBadgeContainer, N),
+                    className: a()(M.clanBadgeContainer, N),
                     children: (0, i.jsx)(c.ClanTagBadge, {
                         src: e,
                         size: g

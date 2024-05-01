@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t);
-    var i, r, a, s, o = n("442837"),
+    var i, r, s, a, o = n("442837"),
         l = n("570140"),
         u = n("622999");
     let d = "",
@@ -42,7 +42,7 @@ function(e, t, n) {
         } = e;
         C = t
     }
-    class U extends(s = o.default.Store) {
+    class U extends(a = o.default.Store) {
         get stripePaymentMethod() {
             return E
         }
@@ -94,12 +94,12 @@ function(e, t, n) {
             return C
         }
     }
-    a = "NewPaymentSourceStore", (r = "displayName") in(i = U) ? Object.defineProperty(i, r, {
-        value: a,
+    s = "NewPaymentSourceStore", (r = "displayName") in(i = U) ? Object.defineProperty(i, r, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : i[r] = a, t.default = new U(l.default, {
+    }) : i[r] = s, t.default = new U(l.default, {
         NEW_PAYMENT_SOURCE_STRIPE_PAYMENT_REQUEST_UPDATE: function(e) {
             let {
                 stripePaymentMethod: t

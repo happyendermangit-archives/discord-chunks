@@ -3,9 +3,9 @@ function(e, t, n) {
     let i;
     n.r(t), n("411104"), n("47120");
     var r = n("348327"),
-        a = n.n(r),
-        s = n("512722"),
-        o = n.n(s),
+        s = n.n(r),
+        a = n("512722"),
+        o = n.n(a),
         l = n("727258"),
         u = n("41776"),
         d = n("581883"),
@@ -59,7 +59,7 @@ function(e, t, n) {
         for (let e of Object.values(m.nodes)) e.type === l.GuildsNodeType.FOLDER && 0 === e.children.length && m.removeNode(e);
         return ! function(e, t) {
             for (let n in T.default.getGuilds()) e(n) && !u.default.isLurking(n) && !I.default.isCurrentUserGuest(n) && t(n)
-        }(e => null == m.nodes[e], e => m.addNode((0, l.createGuildNode)(e), m.root, !1)), !a()(n, m)
+        }(e => null == m.nodes[e], e => m.addNode((0, l.createGuildNode)(e), m.root, !1)), !s()(n, m)
     }
 
     function O() {
@@ -70,7 +70,7 @@ function(e, t, n) {
     function R() {
         var e, t;
         let n = d.default.getGuildFolders();
-        return !(null != i && a()(i, n)) && p(null != (i = n) ? i : [], null !== (t = null === (e = d.default.settings.guildFolders) || void 0 === e ? void 0 : e.guildPositions) && void 0 !== t ? t : [])
+        return !(null != i && s()(i, n)) && p(null != (i = n) ? i : [], null !== (t = null === (e = d.default.settings.guildFolders) || void 0 === e ? void 0 : e.guildPositions) && void 0 !== t ? t : [])
     }
 
     function C(e) {
@@ -79,12 +79,12 @@ function(e, t, n) {
             targetId: n,
             moveToBelow: i,
             combine: r
-        } = e, a = m.getNode(t), s = m.getNode(n);
-        if (null == a || null == s) return !1;
-        if (o()(!(r && a.type === l.GuildsNodeType.FOLDER), "[SORTED GUILDS] Can't combine a folder ".concat(a.id, " with another guilds list item")), o()(!(r && null != s.parentId), "[SORTED GUILDS] Can't combine with a guild ".concat(s.id, " that's already inside of a folder")), o()(!(a.type === l.GuildsNodeType.FOLDER && null != s.parentId), "[SORTED GUILDS] Can't move a folder ".concat(a.id, " to inside of another folder ").concat(s.parentId)), r) {
-            let e = s.type !== l.GuildsNodeType.FOLDER ? m.convertToFolder(s) : s;
-            m.moveInto(a, e, i)
-        } else m.moveNextTo(a, s, i)
+        } = e, s = m.getNode(t), a = m.getNode(n);
+        if (null == s || null == a) return !1;
+        if (o()(!(r && s.type === l.GuildsNodeType.FOLDER), "[SORTED GUILDS] Can't combine a folder ".concat(s.id, " with another guilds list item")), o()(!(r && null != a.parentId), "[SORTED GUILDS] Can't combine with a guild ".concat(a.id, " that's already inside of a folder")), o()(!(s.type === l.GuildsNodeType.FOLDER && null != a.parentId), "[SORTED GUILDS] Can't move a folder ".concat(s.id, " to inside of another folder ").concat(a.parentId)), r) {
+            let e = a.type !== l.GuildsNodeType.FOLDER ? m.convertToFolder(a) : a;
+            m.moveInto(s, e, i)
+        } else m.moveNextTo(s, a, i)
     }
 
     function g(e) {
@@ -95,10 +95,10 @@ function(e, t, n) {
         if (null == i) return !1;
         let r = m.getNode(i);
         if (null == r) return !1;
-        let a = m.convertToFolder(r);
-        a.name = n, t.forEach(e => {
+        let s = m.convertToFolder(r);
+        s.name = n, t.forEach(e => {
             let t = m.getNode(e);
-            null != t && m.moveInto(t, a, !0)
+            null != t && m.moveInto(t, s, !0)
         })
     }
 
@@ -109,23 +109,23 @@ function(e, t, n) {
             ...i
         } = e, r = m.getNode(t);
         if (null == r || r.type !== l.GuildsNodeType.FOLDER) return !1;
-        let a = "" === i.name ? void 0 : i.name;
-        if (a !== r.name) {
+        let s = "" === i.name ? void 0 : i.name;
+        if (s !== r.name) {
             let e = m.cloneNode(r);
-            o()(e.id === r.id, "[SORTED GUILDS] Replacement folder node must have same id."), e.name = a, m.replaceNode(r, e)
+            o()(e.id === r.id, "[SORTED GUILDS] Replacement folder node must have same id."), e.name = s, m.replaceNode(r, e)
         }
-        let s = m.getNode(t);
-        if (null == s) return !1;
-        let u = s.children.map(e => e.id).filter(c.isNotNullish),
+        let a = m.getNode(t);
+        if (null == a) return !1;
+        let u = a.children.map(e => e.id).filter(c.isNotNullish),
             d = new Set(u),
             _ = new Set(n),
             E = new Set([...u].filter(e => !_.has(e)));
         n.filter(e => !d.has(e)).forEach(e => {
             let t = m.getNode(e);
-            null != t && m.moveInto(t, s, !0)
+            null != t && m.moveInto(t, a, !0)
         }), E.forEach(e => {
             let t = m.getNode(e);
-            null != t && m.moveNextTo(t, s, !0)
+            null != t && m.moveNextTo(t, a, !0)
         })
     }
 
@@ -145,10 +145,10 @@ function(e, t, n) {
             guildId: t,
             joinedAt: n,
             user: i
-        } = e, r = h.default.getCurrentUser(), a = T.default.getGuild(t);
-        if ((null == r ? void 0 : r.id) !== i.id || null == a) return !1;
-        let s = "string" == typeof n ? new Date(n) : n;
-        return s !== a.joinedAt && null != s && O()
+        } = e, r = h.default.getCurrentUser(), s = T.default.getGuild(t);
+        if ((null == r ? void 0 : r.id) !== i.id || null == s) return !1;
+        let a = "string" == typeof n ? new Date(n) : n;
+        return a !== s.joinedAt && null != a && O()
     }
     let M = (0, _.cachedFunction)((e, t) => e.sortedGuildNodes().map(e => e.id)),
         y = (0, _.cachedFunction)((e, t) => e.getRoots().map(N));

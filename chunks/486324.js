@@ -41,7 +41,7 @@ function(e, t, n) {
             return g
         },
         MessageTypes: function() {
-            return s
+            return a
         },
         SCHEDULED_EVENT_IMAGE_ASPECT_RATIO: function() {
             return A
@@ -59,14 +59,14 @@ function(e, t, n) {
             return u
         },
         UploadTypes: function() {
-            return a
+            return s
         },
         VIDEO_BACKGROUND_ASPECT_RATIO: function() {
             return C
         }
     });
-    var i, r, a, s, o = n("678916");
-    (i = a || (a = {}))[i.AVATAR = 0] = "AVATAR", i[i.BANNER = 1] = "BANNER", i[i.GUILD_BANNER = 2] = "GUILD_BANNER", i[i.VIDEO_BACKGROUND = 3] = "VIDEO_BACKGROUND", i[i.SCHEDULED_EVENT_IMAGE = 4] = "SCHEDULED_EVENT_IMAGE", i[i.HOME_HEADER = 5] = "HOME_HEADER", i[i.AVATAR_DECORATION = 6] = "AVATAR_DECORATION";
+    var i, r, s, a, o = n("678916");
+    (i = s || (s = {}))[i.AVATAR = 0] = "AVATAR", i[i.BANNER = 1] = "BANNER", i[i.GUILD_BANNER = 2] = "GUILD_BANNER", i[i.VIDEO_BACKGROUND = 3] = "VIDEO_BACKGROUND", i[i.SCHEDULED_EVENT_IMAGE = 4] = "SCHEDULED_EVENT_IMAGE", i[i.HOME_HEADER = 5] = "HOME_HEADER", i[i.AVATAR_DECORATION = 6] = "AVATAR_DECORATION";
     let l = 568,
         u = 2400,
         d = 848,
@@ -86,5 +86,5 @@ function(e, t, n) {
         R = 142,
         C = o.BACKGROUND_REPLACEMENT_SIZE.width / o.BACKGROUND_REPLACEMENT_SIZE.height,
         g = l / C;
-    (r = s || (s = {}))[r.CROP_GIF_START = 0] = "CROP_GIF_START", r[r.CROP_GIF_COMPLETE = 1] = "CROP_GIF_COMPLETE", r[r.CROP_GIF_ERROR = 2] = "CROP_GIF_ERROR"
+    (r = a || (a = {}))[r.CROP_GIF_START = 0] = "CROP_GIF_START", r[r.CROP_GIF_COMPLETE = 1] = "CROP_GIF_COMPLETE", r[r.CROP_GIF_ERROR = 2] = "CROP_GIF_ERROR"
 }

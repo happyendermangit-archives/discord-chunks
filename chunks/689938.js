@@ -3,9 +3,9 @@ function(e, t, n) {
     n.r(t), n("47120"), n("653041");
     var i = n("913527"),
         r = n.n(i),
-        a = n("627420"),
-        s = n("375964"),
-        o = n.n(s),
+        s = n("627420"),
+        a = n("375964"),
+        o = n.n(a),
         l = n("924658"),
         u = n.n(l),
         d = n("539590"),
@@ -15,7 +15,7 @@ function(e, t, n) {
             ..._(),
             ...e
         }),
-        E = new a.default({
+        E = new s.default({
             getMessages: e => "en-US" === e ? c(o()) : n("290034")("./messages/".concat(e, ".jsona").replace("./messages/", "./")).then(e => {
                 let {
                     default: t

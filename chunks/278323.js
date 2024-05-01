@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t);
     var i = n("544891"),
         r = n("570140"),
-        a = n("367907"),
-        s = n("957730"),
+        s = n("367907"),
+        a = n("957730"),
         o = n("592125"),
         l = n("493683"),
         u = n("904245"),
@@ -14,8 +14,8 @@ function(e, t, n) {
             let {
                 applicationId: t,
                 distributor: n,
-                shareActivity: a,
-                token: s = null,
+                shareActivity: s,
+                token: a = null,
                 duration: o = 0,
                 closed: l = !1,
                 exePath: u = null,
@@ -32,9 +32,9 @@ function(e, t, n) {
                 url: d.Endpoints.ACTIVITIES,
                 body: {
                     application_id: t,
-                    token: s,
+                    token: a,
                     duration: o,
-                    share_activity: a,
+                    share_activity: s,
                     distributor: n,
                     closed: l,
                     exePath: u,
@@ -73,13 +73,13 @@ function(e, t, n) {
                 location: l
             } = e, _ = o.default.getChannel(t);
             if (null == _) return Promise.resolve(null);
-            let c = s.default.parse(_, null != r ? r : "");
+            let c = a.default.parse(_, null != r ? r : "");
             return u.default.sendMessage(_.id, c, !1, {
                 activityAction: {
                     type: n,
                     activity: i
                 }
-            }).then(e => (a.default.trackWithMetadata(d.AnalyticEvents.INVITE_SENT, {
+            }).then(e => (s.default.trackWithMetadata(d.AnalyticEvents.INVITE_SENT, {
                 location: l,
                 invite_type: i.type === d.ActivityTypes.LISTENING ? d.LoggingInviteTypes.SPOTIFY : d.LoggingInviteTypes.APPLICATION,
                 application_id: i.application_id,
@@ -94,22 +94,22 @@ function(e, t, n) {
                 type: n,
                 activity: i,
                 content: r,
-                location: a
+                location: s
             } = e;
             return l.default.ensurePrivateChannel(t).then(e => this.sendActivityInvite({
                 channelId: e,
                 type: n,
                 activity: i,
                 content: r,
-                location: a
+                location: s
             }))
         },
-        async getJoinSecret(e, t, n, r, a) {
-            let s = {};
-            return null != r && (s.channel_id = r), null != a && (s.message_id = a), (await i.HTTP.get({
+        async getJoinSecret(e, t, n, r, s) {
+            let a = {};
+            return null != r && (a.channel_id = r), null != s && (a.message_id = s), (await i.HTTP.get({
                 url: d.Endpoints.USER_ACTIVITY_JOIN(e, t, n),
                 retries: 3,
-                query: s
+                query: a
             })).body.secret
         }
     }

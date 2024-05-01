@@ -10,13 +10,13 @@ function(e, t, n) {
     }), n("47120");
     var i = n("442837"),
         r = n("314897"),
-        a = n("271383"),
-        s = n("430824"),
+        s = n("271383"),
+        a = n("430824"),
         o = n("981631");
 
     function l(e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null == e ? null : a.default.getMember(e, r.default.getId()),
-            [i] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [s.default],
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null == e ? null : s.default.getMember(e, r.default.getId()),
+            [i] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [a.default],
             l = i.getGuild(e);
         if (null == l || null == n || !l.hasFeature(o.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED)) return !1;
         for (let e of n.roles) {
@@ -28,7 +28,7 @@ function(e, t, n) {
     }
 
     function u(e) {
-        let t = (0, i.useStateFromStores)([r.default, a.default], () => null == e ? null : a.default.getMember(e, r.default.getId()));
-        return (0, i.useStateFromStores)([s.default], () => l(e, null != e ? s.default.getRoles(e) : void 0, t, [s.default]), [e, t])
+        let t = (0, i.useStateFromStores)([r.default, s.default], () => null == e ? null : s.default.getMember(e, r.default.getId()));
+        return (0, i.useStateFromStores)([a.default], () => l(e, null != e ? a.default.getRoles(e) : void 0, t, [a.default]), [e, t])
     }
 }

@@ -7,33 +7,33 @@ function(e, t, n) {
     }), n("653041"), n("47120");
     var i = n("392711"),
         r = n.n(i);
-    let a = new(n("710845")).default("DragAndDropUtils");
+    let s = new(n("710845")).default("DragAndDropUtils");
 
-    function s(e) {
+    function a(e) {
         let {
             oldOrdering: t,
             newOrdering: n,
             idGetter: i,
             existingPositionGetter: r,
-            ascending: s = !0
+            ascending: a = !0
         } = e, o = n.length;
-        if (t.length !== o) return a.warn("Arrays are not of the same length!", t, n), [];
+        if (t.length !== o) return s.warn("Arrays are not of the same length!", t, n), [];
         let l = t.map(i).sort().join(":"),
             u = n.map(i).sort().join(":");
-        if (l !== u) return a.warn("Object IDs in the old ordering and the new ordering are not the same.", l, u), [];
+        if (l !== u) return s.warn("Object IDs in the old ordering and the new ordering are not the same.", l, u), [];
         let d = {};
         for (let e = 0; e < o; e++) d[i(t[e])] = r(t[e]);
         let _ = [];
         for (let e = 0; e < o; e++) {
             let t = i(n[e]),
-                a = d[t],
-                l = s ? e : o - 1 - e;
-            (a !== l || r(n[e]) !== l) && _.push({
+                s = d[t],
+                l = a ? e : o - 1 - e;
+            (s !== l || r(n[e]) !== l) && _.push({
                 id: t,
                 position: l
             })
         }
-        return !s && _.reverse(), _
+        return !a && _.reverse(), _
     }
 
     function o(e, t, n) {
@@ -43,22 +43,22 @@ function(e, t, n) {
     }
     t.default = {
         moveItemFromTo: o,
-        calculatePositionDeltas: s,
+        calculatePositionDeltas: a,
         getPositionUpdates: function(e) {
             let {
                 objectArray: t,
                 fromPosition: n,
                 toPosition: i,
-                idGetter: a,
+                idGetter: s,
                 existingPositionGetter: l,
                 ascending: u = !0
             } = e;
             !Array.isArray(t) && (t = r().values(t));
             let d = o(t, n, i);
-            return s({
+            return a({
                 oldOrdering: t,
                 newOrdering: d,
-                idGetter: a,
+                idGetter: s,
                 existingPositionGetter: l,
                 ascending: u
             })

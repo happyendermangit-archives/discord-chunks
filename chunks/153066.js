@@ -8,9 +8,9 @@ function(e, t, n) {
     var i = n("624138");
 
     function r(e, t) {
-        for (var n = arguments.length, r = Array(n > 2 ? n - 2 : 0), a = 2; a < n; a++) r[a - 2] = arguments[a];
-        let s = r.reduce((e, t) => e + (0, i.upperCaseFirstChar)(t), ""),
-            o = e["".concat(t).concat(s)];
+        for (var n = arguments.length, r = Array(n > 2 ? n - 2 : 0), s = 2; s < n; s++) r[s - 2] = arguments[s];
+        let a = r.reduce((e, t) => e + (0, i.upperCaseFirstChar)(t), ""),
+            o = e["".concat(t).concat(a)];
         if (null != o) return o
     }
 }

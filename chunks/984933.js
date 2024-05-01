@@ -8,7 +8,7 @@ function(e, t, n) {
             return v
         }
     }), n("653041"), n("47120"), n("724458");
-    var i, r, a, s, o = n("392711"),
+    var i, r, s, a, o = n("392711"),
         l = n.n(o),
         u = n("149765"),
         d = n("442837"),
@@ -85,10 +85,10 @@ function(e, t, n) {
                             let i = A.default.getChannel(n);
                             if (null == i) continue;
                             let r = t[n],
-                                a = (0, T.createFavoritesChannelRecord)(t, r, i);
+                                s = (0, T.createFavoritesChannelRecord)(t, r, i);
                             e[n] = {
-                                channel: a,
-                                comparator: a.position
+                                channel: s,
+                                comparator: s.position
                             }
                         }
                         return e
@@ -105,8 +105,8 @@ function(e, t, n) {
                     var i;
                     let r = n.channel;
                     if (e.count += 1, f.GUILD_NON_CATEGORY_CHANNEL_TYPES.has(r.type) && !p.default.can(C.Permissions.VIEW_CHANNEL, r) && !c.default.isChannelGated(r.guild_id, r.id) && r.id !== U) return;
-                    let a = (i = r.type, (0, f.isGuildSelectableChannelType)(i) ? L : (0, f.isGuildVocalChannelType)(i) ? v : i);
-                    r.type === C.ChannelTypes.GUILD_DIRECTORY && (null == b[t] && (b[t] = []), b[t].push(n)), null != e[a] && e[a].push(n)
+                    let s = (i = r.type, (0, f.isGuildSelectableChannelType)(i) ? L : (0, f.isGuildVocalChannelType)(i) ? v : i);
+                    r.type === C.ChannelTypes.GUILD_DIRECTORY && (null == b[t] && (b[t] = []), b[t].push(n)), null != e[s] && e[s].push(n)
                 })
             }(n), (t = n)[L].sort(x), t[v].sort(x), t[C.ChannelTypes.GUILD_CATEGORY].sort(x),
             function(e) {
@@ -115,8 +115,8 @@ function(e, t, n) {
                 e[L].forEach(e => {
                     let {
                         channel: i
-                    } = e, r = (0, E.computeChannelName)(i, R.default, O.default), a = Object.prototype.hasOwnProperty.call(n, r) ? n[r] : null;
-                    null == a ? n[r] = 1 : (n[r] = a + 1, r += "~".concat(a)), t[i.id] = {
+                    } = e, r = (0, E.computeChannelName)(i, R.default, O.default), s = Object.prototype.hasOwnProperty.call(n, r) ? n[r] : null;
+                    null == s ? n[r] = 1 : (n[r] = s + 1, r += "~".concat(s)), t[i.id] = {
                         id: i.id,
                         name: r
                     }
@@ -129,7 +129,7 @@ function(e, t, n) {
                     let i = M[t];
                     null == i && (i = H(t));
                     let {
-                        [L]: r, [v]: a
+                        [L]: r, [v]: s
                     } = i;
                     for (let {
                             channel: t
@@ -139,7 +139,7 @@ function(e, t, n) {
                     for (let {
                             channel: t
                         }
-                        of a)
+                        of s)
                         if (K(e, t)) return !0;
                     return !1
                 })(R.default.getCurrentUser(), e) ? P[e] = !0: delete P[e]
@@ -268,12 +268,12 @@ function(e, t, n) {
             return null != e && null !== (t = y[e]) && void 0 !== t ? t : k
         }
     }
-    s = "GuildChannelStore", (a = "displayName") in(r = X) ? Object.defineProperty(r, a, {
-        value: s,
+    a = "GuildChannelStore", (s = "displayName") in(r = X) ? Object.defineProperty(r, s, {
+        value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[a] = s, t.default = new X(_.default, {
+    }) : r[s] = a, t.default = new X(_.default, {
         BACKGROUND_SYNC: F,
         CHANNEL_SELECT: function(e) {
             let {

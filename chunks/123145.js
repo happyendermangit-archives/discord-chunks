@@ -8,12 +8,12 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("307187"),
-        a = n("750858"),
-        s = n("739566");
+        s = n("750858"),
+        a = n("739566");
 
     function o(e) {
         var t, n;
-        let o = (0, s.default)(e.message),
+        let o = (0, a.default)(e.message),
             l = (0, r.renderSystemTag)({
                 message: e.message,
                 channel: e.channel,
@@ -22,7 +22,7 @@ function(e, t, n) {
                 isRepliedMessage: !!e.isRepliedMessage
             }),
             u = {};
-        return null != l && (u[a.UsernameDecorationTypes.SYSTEM_TAG] = l), (0, i.jsx)(a.default, {
+        return null != l && (u[s.UsernameDecorationTypes.SYSTEM_TAG] = l), (0, i.jsx)(s.default, {
             ...e,
             author: o,
             decorations: u

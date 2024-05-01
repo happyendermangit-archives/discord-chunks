@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         isInGuildMemberModViewExperiment: function() {
-            return a
+            return s
         },
         useGuildMemberModViewExperiment: function() {
-            return s
+            return a
         }
     });
     var i = n("100527");
@@ -24,36 +24,36 @@ function(e, t, n) {
                 }
             }]
         }),
-        a = function(e) {
-            let {
-                autoTrackExposure: t = !1,
-                disable: n = !1,
-                location: a = i.default.GUILD_MEMBER_MOD_VIEW
-            } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, {
-                enabled: s
-            } = r.getCurrentConfig({
-                guildId: e,
-                location: a
-            }, {
-                autoTrackExposure: t,
-                disable: n
-            });
-            return s
-        },
         s = function(e) {
             let {
                 autoTrackExposure: t = !1,
                 disable: n = !1,
-                location: a = i.default.GUILD_MEMBER_MOD_VIEW
+                location: s = i.default.GUILD_MEMBER_MOD_VIEW
             } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, {
-                enabled: s
-            } = r.useExperiment({
-                guildId: null != e ? e : void 0,
-                location: a
+                enabled: a
+            } = r.getCurrentConfig({
+                guildId: e,
+                location: s
             }, {
                 autoTrackExposure: t,
                 disable: n
             });
-            return s
+            return a
+        },
+        a = function(e) {
+            let {
+                autoTrackExposure: t = !1,
+                disable: n = !1,
+                location: s = i.default.GUILD_MEMBER_MOD_VIEW
+            } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, {
+                enabled: a
+            } = r.useExperiment({
+                guildId: null != e ? e : void 0,
+                location: s
+            }, {
+                autoTrackExposure: t,
+                disable: n
+            });
+            return a
         }
 }

@@ -5,7 +5,7 @@ function(e, t, n) {
             return o
         },
         generateInviteKeyFromUrlParams: function() {
-            return s
+            return a
         },
         parseExtraDataFromInviteKey: function() {
             return l
@@ -16,16 +16,16 @@ function(e, t, n) {
     }), n("47120");
     var i = n("664751"),
         r = n("898450");
-    let a = "event";
+    let s = "event";
 
-    function s(e, t) {
+    function a(e, t) {
         return null == t ? e : o({
             baseCode: e,
             guildScheduledEventId: function(e) {
                 let t = "?" === e.charAt(0) ? e.substring(1) : e;
                 try {
                     let e = i.parse(t);
-                    return (0, r.getFirstQueryStringValue)(e[a])
+                    return (0, r.getFirstQueryStringValue)(e[s])
                 } catch (e) {
                     return
                 }
@@ -38,7 +38,7 @@ function(e, t, n) {
             baseCode: t,
             guildScheduledEventId: n
         } = e;
-        return null == n ? t : "".concat(t, "?").concat(a, "=").concat(n)
+        return null == n ? t : "".concat(t, "?").concat(s, "=").concat(n)
     }
 
     function l(e) {
@@ -46,10 +46,10 @@ function(e, t, n) {
         if (null == n) return {
             baseCode: t
         };
-        let s = i.parse(n);
+        let a = i.parse(n);
         return {
             baseCode: t,
-            guildScheduledEventId: (0, r.getFirstQueryStringValue)(s[a])
+            guildScheduledEventId: (0, r.getFirstQueryStringValue)(a[s])
         }
     }
 

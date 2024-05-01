@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t);
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("613828"),
         l = n("481060"),
         u = n("507861");
@@ -12,7 +12,7 @@ function(e, t, n) {
         var n;
         let {
             avatar: r,
-            name: a,
+            name: s,
             children: d,
             subText: _,
             decorators: c,
@@ -28,29 +28,29 @@ function(e, t, n) {
             focusProps: p,
             ...O
         } = e;
-        O.className = s()(O.className, u.container, {
+        O.className = a()(O.className, u.container, {
             [u.selected]: I,
             [u.highlighted]: N,
             [null != h ? h : ""]: I,
             [u.clickable]: !I && (null != f || null != E)
         }), O["aria-selected"] = null !== (n = O["aria-selected"]) && void 0 !== n ? n : I;
         let R = (0, i.jsxs)("div", {
-            className: s()(A, u.layout, {
+            className: a()(A, u.layout, {
                 [u.muted]: !I && T,
                 [u.wrappedLayout]: m
             }),
             children: [(0, i.jsx)("div", {
-                className: s()(u.avatar, S),
+                className: a()(u.avatar, S),
                 children: r
             }), (0, i.jsxs)("div", {
                 className: u.content,
                 children: [(0, i.jsxs)("div", {
                     className: u.nameAndDecorators,
                     children: [(0, i.jsx)("div", {
-                        className: s()(u.name, {
+                        className: a()(u.name, {
                             [u.wrappedName]: m
                         }),
-                        children: a
+                        children: s
                     }), c]
                 }), null != _ ? (0, i.jsx)("div", {
                     className: u.subText,

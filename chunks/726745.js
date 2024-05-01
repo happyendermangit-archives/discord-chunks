@@ -3,10 +3,10 @@ function(e, t, n) {
     let i, r;
     n.r(t), n.d(t, {
         MultiAccountTokenStatus: function() {
-            return a
+            return s
         }
     }), n("653041");
-    var a, s, o, l = n("213919"),
+    var s, a, o, l = n("213919"),
         u = n("442837"),
         d = n("570140"),
         _ = n("990492"),
@@ -20,7 +20,7 @@ function(e, t, n) {
             configurable: !0,
             writable: !0
         }) : e[t] = n, e
-    }(o = a || (a = {}))[o.INVALID = 0] = "INVALID", o[o.VALIDATING = 1] = "VALIDATING", o[o.VALID = 2] = "VALID";
+    }(o = s || (s = {}))[o.INVALID = 0] = "INVALID", o[o.VALIDATING = 1] = "VALIDATING", o[o.VALID = 2] = "VALID";
     let T = [],
         f = !1;
 
@@ -43,7 +43,7 @@ function(e, t, n) {
             });
         null != i && (i.tokenStatus = t, T = n)
     }
-    class A extends(s = u.default.PersistedStore) {
+    class A extends(a = u.default.PersistedStore) {
         initialize(e) {
             if (null != e) {
                 var t;

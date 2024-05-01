@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("411104"), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("442837"),
-        s = n("493683"),
+        s = n("442837"),
+        a = n("493683"),
         o = n("904245"),
         l = n("906732"),
         u = n("541716"),
@@ -28,14 +28,14 @@ function(e, t, n) {
             location: i
         } = e, {
             valid: r,
-            failureReason: a
+            failureReason: s
         } = await (0, T.applyChatRestrictions)({
             type: u.ChatInputTypes.NORMAL,
             content: n,
             channel: null
         });
-        if (!r) throw Error(a);
-        let l = await s.default.openPrivateChannel(t, !1, !1, i),
+        if (!r) throw Error(s);
+        let l = await a.default.openPrivateChannel(t, !1, !1, i),
             d = E.default.getChannel(l);
         if (null == d) throw Error("Failed to open private channel");
         let _ = c.default.parse(d, n);
@@ -46,12 +46,12 @@ function(e, t, n) {
         let {
             user: t,
             channelId: n,
-            onClose: s
+            onClose: a
         } = e, {
             newestAnalyticsLocation: o
         } = (0, l.default)(), {
             trackUserProfileAction: c
-        } = (0, f.useUserProfileAnalyticsContext)(), T = (0, a.useStateFromStores)([E.default], () => E.default.getChannel(n)), [m, N] = r.useState(""), [p, O] = r.useState((0, d.toRichValue)(m)), R = r.useRef(!1);
+        } = (0, f.useUserProfileAnalyticsContext)(), T = (0, s.useStateFromStores)([E.default], () => E.default.getChannel(n)), [m, N] = r.useState(""), [p, O] = r.useState((0, d.toRichValue)(m)), R = r.useRef(!1);
         return null == T ? null : (0, i.jsx)(_.default, {
             innerClassName: h.inner,
             editorClassName: h.editor,
@@ -83,7 +83,7 @@ function(e, t, n) {
                         userId: t.id,
                         content: n.trim(),
                         location: o
-                    }), null == s || s(), {
+                    }), null == a || a(), {
                         shouldClear: !0,
                         shouldRefocus: !1
                     }

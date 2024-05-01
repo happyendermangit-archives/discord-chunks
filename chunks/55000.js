@@ -12,10 +12,10 @@ function(e, t, n) {
             return c
         },
         canvasHeight: function() {
-            return s
+            return a
         },
         canvasWidth: function() {
-            return a
+            return s
         },
         fontPadding: function() {
             return u
@@ -39,8 +39,8 @@ function(e, t, n) {
             return I
         }
     });
-    let a = 348,
-        s = 88;
+    let s = 348,
+        a = 88;
     (r = i || (i = {})).AssetImage = "AssetImage", r.ApplicationImage = "ApplicationImage", r.Platform = "Platform", r.StreamPreview = "StreamPreview", r.HangStatus = "HangStatus";
     let o = 12,
         l = 12,

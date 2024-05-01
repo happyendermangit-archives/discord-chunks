@@ -7,10 +7,10 @@ function(e, t, n) {
     }), n("442837");
     var i = n("430198"),
         r = n("592125"),
-        a = n("700785"),
-        s = n("981631");
+        s = n("700785"),
+        a = n("981631");
 
     function o(e, t) {
-        return i.default.isChannelGated(e, t) || a.canEveryoneRole(s.Permissions.VIEW_CHANNEL, r.default.getChannel(t))
+        return i.default.isChannelGated(e, t) || s.canEveryoneRole(a.Permissions.VIEW_CHANNEL, r.default.getChannel(t))
     }
 }

@@ -6,8 +6,8 @@ function(e, t, n) {
             return S
         }
     }), n("47120");
-    var a = n("735250"),
-        s = n("470079"),
+    var s = n("735250"),
+        a = n("470079"),
         o = n("120356"),
         l = n.n(o),
         u = n("846519"),
@@ -29,10 +29,10 @@ function(e, t, n) {
             children: A,
             disableCopy: m,
             showCopyIcon: N
-        } = e, [p, O] = s.useState(0), [R, C] = s.useState(!1), [g, L] = s.useState(!1);
-        if (s.useEffect(() => (i = new u.Timeout, r = new u.Timeout, function() {
+        } = e, [p, O] = a.useState(0), [R, C] = a.useState(!1), [g, L] = a.useState(!1);
+        if (a.useEffect(() => (i = new u.Timeout, r = new u.Timeout, function() {
                 i.stop(), r.stop()
-            }), []), !c.SUPPORTS_COPY || m) return (0, a.jsx)(a.Fragment, {
+            }), []), !c.SUPPORTS_COPY || m) return (0, s.jsx)(s.Fragment, {
             children: A
         });
         let v = [T.default.Messages.COPY_SUCCESS_1, T.default.Messages.COPY_SUCCESS_2, T.default.Messages.COPY_SUCCESS_3, T.default.Messages.COPY_SUCCESS_4, T.default.Messages.COPY_SUCCESS_5, T.default.Messages.COPY_SUCCESS_6, T.default.Messages.COPY_SUCCESS_7, T.default.Messages.COPY_SUCCESS_8, T.default.Messages.COPY_SUCCESS_9, T.default.Messages.COPY_SUCCESS_10, T.default.Messages.COPY_SUCCESS_11],
@@ -49,11 +49,11 @@ function(e, t, n) {
                     type: S
                 }), "function" == typeof e && e(), !g && O(p + 1), L(!0), C(!0), i.start(1e3, () => L(!1)), r.start(2e3, () => O(0))
             };
-        return (0, a.jsx)(d.Tooltip, {
+        return (0, s.jsx)(d.Tooltip, {
             delay: 500,
             color: U,
             forceOpen: g,
-            text: R ? (0, a.jsx)(d.Shaker, {
+            text: R ? (0, s.jsx)(d.Shaker, {
                 isShaking: y,
                 children: M
             }) : h,
@@ -67,7 +67,7 @@ function(e, t, n) {
                     onMouseEnter: i,
                     ...r
                 } = e;
-                return (0, a.jsx)(d.Clickable, {
+                return (0, s.jsx)(d.Clickable, {
                     ...r,
                     className: f.clickTarget,
                     onMouseEnter: () => {
@@ -76,14 +76,14 @@ function(e, t, n) {
                     onClick: () => {
                         G(t)
                     },
-                    children: (0, a.jsxs)("div", {
+                    children: (0, s.jsxs)("div", {
                         className: l()(n, f.copiableWrapper),
-                        children: [(0, a.jsx)("div", {
+                        children: [(0, s.jsx)("div", {
                             className: f.childWrapper,
                             children: A
-                        }), N ? (0, a.jsx)("div", {
+                        }), N ? (0, s.jsx)("div", {
                             className: f.__invalid_copyIconWrapper,
-                            children: (0, a.jsx)(E.default, {
+                            children: (0, s.jsx)(E.default, {
                                 width: 18,
                                 height: 18,
                                 className: f.copyIcon

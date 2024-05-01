@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        a = n("913527"),
-        s = n.n(a),
+        s = n("913527"),
+        a = n.n(s),
         o = n("217379"),
         l = n.n(o),
         u = n("442837"),
@@ -18,16 +18,16 @@ function(e, t, n) {
 
     function c(e) {
         let {
-            value: t = s()().local(),
+            value: t = a()().local(),
             minDate: n,
-            maxDate: a,
+            maxDate: s,
             onSelect: o,
             calendarClassName: c,
             autoFocus: E,
             onClickOutside: I
         } = e, T = r.useCallback((e, t) => {
-            null == o || o(s()(e), t)
-        }, [o]), f = r.useMemo(() => t.toDate(), [t]), S = r.useMemo(() => null == a ? void 0 : a.toDate(), [a]), h = r.useMemo(() => null == n ? void 0 : n.toDate(), [n]), A = (0, u.useStateFromStores)([d.default], () => d.default.locale), m = r.useRef(null), N = r.useCallback(e => {
+            null == o || o(a()(e), t)
+        }, [o]), f = r.useMemo(() => t.toDate(), [t]), S = r.useMemo(() => null == s ? void 0 : s.toDate(), [s]), h = r.useMemo(() => null == n ? void 0 : n.toDate(), [n]), A = (0, u.useStateFromStores)([d.default], () => d.default.locale), m = r.useRef(null), N = r.useCallback(e => {
             let t = e.currentTarget;
             t.classList.contains("react-datepicker__day") && setTimeout(() => {
                 var e, n;

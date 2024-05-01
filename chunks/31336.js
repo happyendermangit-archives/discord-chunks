@@ -5,24 +5,24 @@ function(e, t, n) {
             return o
         },
         toggleDisplayDevTools: function() {
-            return s
+            return a
         },
         updateDevToolsSettings: function() {
-            return a
+            return s
         }
     });
     var i = n("570140"),
         r = n("19759");
 
-    function a(e) {
+    function s(e) {
         i.default.dispatch({
             type: "DEV_TOOLS_SETTINGS_UPDATE",
             settings: e
         })
     }
 
-    function s() {
-        a({
+    function a() {
+        s({
             displayTools: !r.default.displayTools
         })
     }

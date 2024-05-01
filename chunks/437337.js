@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("718017"),
         l = n("692547"),
         u = n("186325"),
@@ -37,7 +37,7 @@ function(e, t, n) {
             let {
                 id: t,
                 onChange: n,
-                checked: a,
+                checked: s,
                 disabled: T,
                 className: f,
                 focusProps: S,
@@ -50,15 +50,15 @@ function(e, t, n) {
             } = (0, o.useSpring)({
                 config: E,
                 opacity: T ? .3 : 1,
-                state: N ? a ? .7 : .3 : a ? 1 : 0
+                state: N ? s ? .7 : .3 : s ? 1 : 0
             });
             return (0, i.jsx)(d.FocusRing, {
                 ...S,
                 within: !0,
                 offset: -2,
                 children: (0, i.jsxs)(o.animated.div, {
-                    className: s()(c.container, f, {
-                        [c.checked]: a,
+                    className: a()(c.container, f, {
+                        [c.checked]: s,
                         [c.disabled]: T
                     }),
                     onMouseDown: () => !T && p(!0),
@@ -101,22 +101,22 @@ function(e, t, n) {
                             }),
                             rx: "10"
                         }), function(e, t, n, r) {
-                            let a = e.to({
+                            let s = e.to({
                                     output: [t, n]
                                 }),
-                                s = r ? [I.X.TOP, I.X.TOP, I.CHECK.TOP, I.CHECK.TOP] : [I.X.TOP, I.BAR.TOP, I.BAR.TOP, I.CHECK.TOP],
+                                a = r ? [I.X.TOP, I.X.TOP, I.CHECK.TOP, I.CHECK.TOP] : [I.X.TOP, I.BAR.TOP, I.BAR.TOP, I.CHECK.TOP],
                                 l = r ? [I.X.BOTTOM, I.X.BOTTOM, I.CHECK.BOTTOM, I.CHECK.BOTTOM] : [I.X.BOTTOM, I.BAR.BOTTOM, I.BAR.BOTTOM, I.CHECK.BOTTOM];
                             return (0, i.jsxs)("svg", {
                                 viewBox: "0 0 20 20",
                                 fill: "none",
                                 children: [(0, i.jsx)(o.animated.path, {
-                                    fill: a,
+                                    fill: s,
                                     d: e.to({
                                         range: [0, .3, .7, 1],
-                                        output: s
+                                        output: a
                                     })
                                 }), (0, i.jsx)(o.animated.path, {
-                                    fill: a,
+                                    fill: s,
                                     d: e.to({
                                         range: [0, .3, .7, 1],
                                         output: l
@@ -142,7 +142,7 @@ function(e, t, n) {
                         onChange: function(e) {
                             p(!1), null == n || n(e.currentTarget.checked, e)
                         },
-                        checked: a,
+                        checked: s,
                         disabled: T
                     })]
                 })

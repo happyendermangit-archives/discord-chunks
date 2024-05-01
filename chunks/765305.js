@@ -35,10 +35,10 @@ function(e, t, n) {
             return r
         },
         GuildScheduledEventNotificationTypes: function() {
-            return a
+            return s
         },
         GuildScheduledEventPrivacyLevel: function() {
-            return s
+            return a
         },
         GuildScheduledEventStatus: function() {
             return i
@@ -62,7 +62,7 @@ function(e, t, n) {
             return l
         }
     }), n("47120");
-    var i, r, a, s, o, l, u, d, _, c, E, I, T, f, S = n("70956"),
+    var i, r, s, a, o, l, u, d, _, c, E, I, T, f, S = n("70956"),
         h = n("981631");
     let A = 100,
         m = 1e3,
@@ -71,7 +71,7 @@ function(e, t, n) {
         O = "-1";
     (d = i || (i = {}))[d.SCHEDULED = 1] = "SCHEDULED", d[d.ACTIVE = 2] = "ACTIVE", d[d.COMPLETED = 3] = "COMPLETED", d[d.CANCELED = 4] = "CANCELED";
     let R = new Set([3, 4]);
-    (_ = r || (r = {}))[_.NONE = 0] = "NONE", _[_.STAGE_INSTANCE = 1] = "STAGE_INSTANCE", _[_.VOICE = 2] = "VOICE", _[_.EXTERNAL = 3] = "EXTERNAL", _[_.PRIME_TIME = 4] = "PRIME_TIME", (c = a || (a = {}))[c.EVENT_START = 1] = "EVENT_START", (E = s || (s = {}))[E.PUBLIC = 1] = "PUBLIC", E[E.GUILD_ONLY = 2] = "GUILD_ONLY";
+    (_ = r || (r = {}))[_.NONE = 0] = "NONE", _[_.STAGE_INSTANCE = 1] = "STAGE_INSTANCE", _[_.VOICE = 2] = "VOICE", _[_.EXTERNAL = 3] = "EXTERNAL", _[_.PRIME_TIME = 4] = "PRIME_TIME", (c = s || (s = {}))[c.EVENT_START = 1] = "EVENT_START", (E = a || (a = {}))[E.PUBLIC = 1] = "PUBLIC", E[E.GUILD_ONLY = 2] = "GUILD_ONLY";
     let C = {
             1: h.ChannelTypes.GUILD_STAGE_VOICE,
             2: h.ChannelTypes.GUILD_VOICE

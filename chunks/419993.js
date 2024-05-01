@@ -6,9 +6,9 @@ function(e, t, n) {
         }
     }), n("653041");
     var i, r = n("735250"),
-        a = n("470079"),
-        s = n("120356"),
-        o = n.n(s),
+        s = n("470079"),
+        a = n("120356"),
+        o = n.n(a),
         l = n("153832"),
         u = n("84735"),
         d = n("15127"),
@@ -31,7 +31,7 @@ function(e, t, n) {
     let A = (0, l.v4)(),
         m = (0, l.v4)(),
         N = (0, l.v4)();
-    class p extends(i = a.Component) {
+    class p extends(i = s.Component) {
         getPaddingRight() {
             let {
                 maxLength: e,
@@ -117,8 +117,8 @@ function(e, t, n) {
             let {
                 disabled: n,
                 value: i,
-                placeholder: a,
-                autoFocus: s,
+                placeholder: s,
+                autoFocus: a,
                 minLength: l,
                 maxLength: d,
                 allowOverflow: c,
@@ -157,9 +157,9 @@ function(e, t, n) {
                             },
                             id: O,
                             disabled: n,
-                            placeholder: a,
+                            placeholder: s,
                             value: i,
-                            autoFocus: s,
+                            autoFocus: a,
                             minLength: l,
                             maxLength: c ? void 0 : d,
                             spellCheck: h,
@@ -194,8 +194,8 @@ function(e, t, n) {
                     maxLength: t,
                     minLength: n,
                     error: i
-                } = this.props, r = [], a = null === (e = this.context) || void 0 === e ? void 0 : e.errorId;
-                return null != a && r.push(a), null != i ? r.push(A) : (null != t && r.push(N), null != n && r.push(m)), r.length > 0 ? r.join(" ") : void 0
+                } = this.props, r = [], s = null === (e = this.context) || void 0 === e ? void 0 : e.errorId;
+                return null != s && r.push(s), null != i ? r.push(A) : (null != t && r.push(N), null != n && r.push(m)), r.length > 0 ? r.join(" ") : void 0
             }), h(this, "onChange", e => {
                 let {
                     onChange: t,

@@ -3,11 +3,11 @@ function(e, t, n) {
     n.r(t);
     var i = n("302454"),
         r = n.n(i);
-    let a = /\n$/,
-        s = {
+    let s = /\n$/,
+        a = {
             ...r().defaultRules.heading,
             requiredFirstCharacters: [" ", "#"],
-            match: (e, t, n) => t.allowHeading ? null == n || "" === n || null != n.match(a) ? (0, i.anyScopeRegex)(/^ *(#{1,3})(?:\s+)((?![#]+)[^\n]+?)#*\s*(?:\n|$)/)(e, t, n) : null : null
+            match: (e, t, n) => t.allowHeading ? null == n || "" === n || null != n.match(s) ? (0, i.anyScopeRegex)(/^ *(#{1,3})(?:\s+)((?![#]+)[^\n]+?)#*\s*(?:\n|$)/)(e, t, n) : null : null
         };
-    t.default = s
+    t.default = a
 }

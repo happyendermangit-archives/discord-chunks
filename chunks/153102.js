@@ -4,7 +4,7 @@ function(e, t, n) {
     var i = n("259443"),
         r = n("625306");
 
-    function a(e, t, n) {
+    function s(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -12,7 +12,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    let s = new i.Logger("Flux"),
+    let a = new i.Logger("Flux"),
         o = e => e();
     t.default = new class e {
         destroy() {
@@ -47,11 +47,11 @@ function(e, t, n) {
                         t = new Set,
                         n = new Set;
                     for (; this.changedStores.size > 0;) {
-                        if (++e > 100) throw s.error("LastFewActions", r.serialize()), Error("change emit loop detected, aborting");
+                        if (++e > 100) throw a.error("LastFewActions", r.serialize()), Error("change emit loop detected, aborting");
                         this.emitNonReactOnce(t, n)
                     }
                     for (; this.reactChangedStores.size > 0;) {
-                        if (++e > 100) throw s.error("LastFewActions", r.serialize()), Error("react change emit loop detected, aborting");
+                        if (++e > 100) throw a.error("LastFewActions", r.serialize()), Error("react change emit loop detected, aborting");
                         this.emitReactOnce()
                     }
                 } finally {
@@ -82,8 +82,8 @@ function(e, t, n) {
                     if (!e.has(i)) e.add(i), !1 !== i() && !t.has(r) && (t.add(r), this.markChanged(r))
                 })
             });
-            let a = Date.now();
-            a - n > 100 && s.verbose("Slow batch emitChanges took ".concat(a - n, "ms recentActions:"), r.serialize())
+            let s = Date.now();
+            s - n > 100 && a.verbose("Slow batch emitChanges took ".concat(s - n, "ms recentActions:"), r.serialize())
         }
         emitReactOnce() {
             let e = Date.now(),
@@ -92,10 +92,10 @@ function(e, t, n) {
                 e._reactChangeCallbacks.invokeAll(), this.reactChangedStores.delete(e)
             });
             let n = Date.now();
-            n - e > 100 && s.verbose("Slow batch emitReactChanges took ".concat(n - e, "ms recentActions:"), r.serialize())
+            n - e > 100 && a.verbose("Slow batch emitReactChanges took ".concat(n - e, "ms recentActions:"), r.serialize())
         }
         constructor() {
-            a(this, "changedStores", new Set), a(this, "reactChangedStores", new Set), a(this, "changeSentinel", 0), a(this, "isBatchEmitting", !1), a(this, "isDispatching", !1), a(this, "isPaused", !1), a(this, "pauseTimer", null)
+            s(this, "changedStores", new Set), s(this, "reactChangedStores", new Set), s(this, "changeSentinel", 0), s(this, "isBatchEmitting", !1), s(this, "isDispatching", !1), s(this, "isPaused", !1), s(this, "pauseTimer", null)
         }
     }
 }

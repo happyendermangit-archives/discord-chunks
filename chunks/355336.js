@@ -7,15 +7,15 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("803997"),
-        s = n.n(a),
+        s = n("803997"),
+        a = n.n(s),
         o = n("84735"),
         l = n("780900"),
         u = n("107042");
 
     function d(e, t) {
         let n = new Map,
-            a = new t(e => {
+            s = new t(e => {
                 e.forEach(e => {
                     var t;
                     let {
@@ -55,17 +55,17 @@ function(e, t, n) {
                 ref: C,
                 key: "container",
                 onUpdate: E,
-                resizeObserver: a,
+                resizeObserver: s,
                 listenerMap: n
             }), (0, l.useResizeObserverSubscription)({
                 ref: p,
                 key: "content",
                 onUpdate: E,
-                resizeObserver: a,
+                resizeObserver: s,
                 listenerMap: n
             }), (0, i.jsx)("div", {
                 ref: C,
-                className: s()(c, {
+                className: a()(c, {
                     [u.fade]: S,
                     [u.customTheme]: h,
                     [e]: !0,
@@ -80,7 +80,7 @@ function(e, t, n) {
                     containerRef: p,
                     children: (0, i.jsxs)("div", {
                         ref: p,
-                        className: s()(I, u.content),
+                        className: a()(I, u.content),
                         children: [_, O && (0, i.jsx)("div", {
                             className: u.pointerCover
                         })]

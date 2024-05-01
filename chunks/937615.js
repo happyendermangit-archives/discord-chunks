@@ -13,23 +13,23 @@ function(e, t, n) {
     }), n("411104");
     var i = n("221513"),
         r = n("706454"),
-        a = n("474936"),
-        s = n("689938");
+        s = n("474936"),
+        a = n("689938");
 
     function o(e, t, n) {
-        var a;
-        let s = null !== (a = null == n ? void 0 : n.localeOverride) && void 0 !== a ? a : r.default.locale;
-        return (0, i.formatPrice)(e, t, s, n)
+        var s;
+        let a = null !== (s = null == n ? void 0 : n.localeOverride) && void 0 !== s ? s : r.default.locale;
+        return (0, i.formatPrice)(e, t, a, n)
     }
 
     function l(e, t, n) {
-        if (t === a.SubscriptionIntervalTypes.YEAR) return s.default.Messages.BILLING_PRICE_PER_YEAR.format({
+        if (t === s.SubscriptionIntervalTypes.YEAR) return a.default.Messages.BILLING_PRICE_PER_YEAR.format({
             price: e
         });
-        if (t === a.SubscriptionIntervalTypes.MONTH && 1 === n) return s.default.Messages.BILLING_PRICE_PER_MONTH.format({
+        if (t === s.SubscriptionIntervalTypes.MONTH && 1 === n) return a.default.Messages.BILLING_PRICE_PER_MONTH.format({
             price: e
         });
-        if (t === a.SubscriptionIntervalTypes.MONTH && n > 1) return s.default.Messages.BILLING_PRICE_PER_MULTI_MONTHS.format({
+        if (t === s.SubscriptionIntervalTypes.MONTH && n > 1) return a.default.Messages.BILLING_PRICE_PER_MULTI_MONTHS.format({
             price: e,
             intervalCount: n
         });

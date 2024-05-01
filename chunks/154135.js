@@ -5,16 +5,16 @@ function(e, t, n) {
             return r
         },
         getEmbedPreviewImageUrl: function() {
-            return a
+            return s
         },
         getThumbnailImage: function() {
-            return s
+            return a
         }
     });
     var i = n("118139");
     let r = 4;
 
-    function a(e) {
+    function s(e) {
         var t, n;
         if (null == e) return;
         let {
@@ -24,7 +24,7 @@ function(e, t, n) {
         return null != i ? null !== (t = i.proxy_url) && void 0 !== t ? t : i.url : null != r ? null !== (n = r.proxy_url) && void 0 !== n ? n : r.url : void 0
     }
 
-    function s(e) {
+    function a(e) {
         if (null == e) return;
         let {
             url: t,

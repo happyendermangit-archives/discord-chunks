@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("668781"),
         r = n("728345"),
-        a = n("812206"),
-        s = n("835873"),
+        s = n("812206"),
+        a = n("835873"),
         o = n("973616"),
         l = n("592125"),
         u = n("430824"),
@@ -50,7 +50,7 @@ function(e, t, n) {
             }),
             v = E.default.getSelfEmbeddedActivityForChannel(n),
             D = null == v ? void 0 : v.applicationId,
-            M = null != D && null !== (t = a.default.getApplication(D)) && void 0 !== t ? t : void 0;
+            M = null != D && null !== (t = s.default.getApplication(D)) && void 0 !== t ? t : void 0;
         ! function(e) {
             let {
                 embeddedActivityJoinability: t,
@@ -61,7 +61,7 @@ function(e, t, n) {
                     null == n || n();
                     break;
                 case f.EmbeddedActivityJoinability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
-                    (0, s.showActivitiesInvalidPermissionsAlert)();
+                    (0, a.showActivitiesInvalidPermissionsAlert)();
                     break;
                 case f.EmbeddedActivityJoinability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
                     i.default.show({

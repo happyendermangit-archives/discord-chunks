@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("47120"), n("411104"), n("653041"), n("733860");
-    var i, r, a, s, o, l, u, d, _ = n("392711"),
+    var i, r, s, a, o, l, u, d, _ = n("392711"),
         c = n.n(_),
         E = n("442837"),
         I = n("433517"),
@@ -16,7 +16,7 @@ function(e, t, n) {
         O = n("417363"),
         R = n("981631"),
         C = n("186901");
-    (s = i || (i = {})).INSTALL = "Install", s.REPAIR = "Repair", (o = r || (r = {})).PATCH = "Patch", o.REPAIR = "Repair";
+    (a = i || (i = {})).INSTALL = "Install", a.REPAIR = "Repair", (o = r || (r = {})).PATCH = "Patch", o.REPAIR = "Repair";
     let g = [C.DispatchErrorCodes.AUTHENTICATION_FAILED, C.DispatchErrorCodes.NOT_ENTITLED],
         L = "DispatchManagerStore",
         v = [],
@@ -46,14 +46,14 @@ function(e, t, n) {
                 comboId: i,
                 action: r
             } = e, {
-                applicationId: a,
-                branchId: s
+                applicationId: s,
+                branchId: a
             } = (0, m.convertComboId)(i);
-            if (t = a, n = s, (null == y || y.applicationId !== t || y.branchId !== n) && (null == P || P.applicationId !== t || P.branchId !== n)) {
+            if (t = s, n = a, (null == y || y.applicationId !== t || y.branchId !== n) && (null == P || P.applicationId !== t || P.branchId !== n)) {
                 let e = h.default.getToken(),
                     t = h.default.getId();
                 if (null == e) throw Error("missing user token");
-                G = !N.default.setCurrentTask(a, s, r, t, e)
+                G = !N.default.setCurrentTask(s, a, r, t, e)
             }
         }
     }
@@ -65,13 +65,13 @@ function(e, t, n) {
 
     function x(e, t, n, i) {
         let r = (0, m.getComboId)(e, t),
-            a = {
+            s = {
                 comboId: r,
                 action: i
             },
-            s = D.indexOf(r); - 1 !== s && D.splice(s, 1);
+            a = D.indexOf(r); - 1 !== a && D.splice(a, 1);
         let o = V(e, t);
-        0 !== o && (n ? -1 === o && (v.push(a), k()) : (o > 0 && v.splice(o, 1), v.unshift(a), k())), !n && M && N.default.resume(), B()
+        0 !== o && (n ? -1 === o && (v.push(s), k()) : (o > 0 && v.splice(o, 1), v.unshift(s), k())), !n && M && N.default.resume(), B()
     }
 
     function F(e, t) {
@@ -106,7 +106,7 @@ function(e, t, n) {
         let e = S.default.getVisibleGame();
         return !M && null != e && e.pid !== w && f.pause(), w = null == e ? null : e.pid, !1
     }
-    class K extends(a = E.default.Store) {
+    class K extends(s = E.default.Store) {
         initialize() {
             var e;
             let t = null !== (e = I.Storage.get(L)) && void 0 !== e ? e : {
@@ -196,15 +196,15 @@ function(e, t, n) {
                 } = e, {
                     applicationId: n,
                     branchId: r
-                } = (0, m.convertComboId)(t), a = O.default.getState(n, r), s = A.default.getTargetBuildId(n, r), o = A.default.getTargetManifests(n, r);
-                if (null != a && a.type === R.LocalDispatchApplicationStates.UP_TO_DATE && a.buildId === a.targetBuildId && a.buildId === s && c().isEqual(a.manifestIds, a.targetManifestIds) && c().isEqual(a.manifestIds, o)) {
+                } = (0, m.convertComboId)(t), s = O.default.getState(n, r), a = A.default.getTargetBuildId(n, r), o = A.default.getTargetManifests(n, r);
+                if (null != s && s.type === R.LocalDispatchApplicationStates.UP_TO_DATE && s.buildId === s.targetBuildId && s.buildId === a && c().isEqual(s.manifestIds, s.targetManifestIds) && c().isEqual(s.manifestIds, o)) {
                     if (D.push(t), b.has(t)) {
                         switch (b.get(t)) {
                             case "Install":
-                                f.completeInstall(n, a);
+                                f.completeInstall(n, s);
                                 break;
                             case "Repair":
-                                f.completeRepair(n, a)
+                                f.completeRepair(n, s)
                         }
                         b.delete(t)
                     }

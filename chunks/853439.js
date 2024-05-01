@@ -1,13 +1,13 @@
 function(e, t, n) {
     "use strict";
     n.r(t);
-    var i, r, a, s, o = n("442837"),
+    var i, r, s, a, o = n("442837"),
         l = n("570140"),
         u = n("131704"),
         d = n("592125");
     let _ = {},
         c = {};
-    class E extends(s = o.default.Store) {
+    class E extends(a = o.default.Store) {
         getTemplates(e) {
             return _[e]
         }
@@ -19,12 +19,12 @@ function(e, t, n) {
             return c[e]
         }
     }
-    a = "GuildRoleSubscriptionTierTemplatesStore", (r = "displayName") in(i = E) ? Object.defineProperty(i, r, {
-        value: a,
+    s = "GuildRoleSubscriptionTierTemplatesStore", (r = "displayName") in(i = E) ? Object.defineProperty(i, r, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : i[r] = a, t.default = new E(l.default, {
+    }) : i[r] = s, t.default = new E(l.default, {
         GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS: function(e) {
             let {
                 selectedTemplate: t,

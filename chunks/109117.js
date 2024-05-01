@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("268146"),
         r = n("433517"),
-        a = n("131951"),
-        s = n("594174"),
+        s = n("131951"),
+        a = n("594174"),
         o = n("626135"),
         l = n("729345"),
         u = n("981631");
@@ -24,8 +24,8 @@ function(e, t, n) {
         }
         let n = await t(),
             {
-                didCrashReporterSeeCrash: a,
-                didCrashOrUncleanExit: s
+                didCrashReporterSeeCrash: s,
+                didCrashOrUncleanExit: a
             } = function(e, t) {
                 var n;
                 let i = (null == e ? void 0 : e.lastId) !== (null == t ? void 0 : t.id) && (null == t ? void 0 : t.id) != null,
@@ -36,7 +36,7 @@ function(e, t, n) {
                 }
             }(r.Storage.get(_, {}), n),
             l = function(e, t, n) {
-                var r, a, s, o, l, u, d, _, c, E, I, T, f, S, h, A, m, N, p;
+                var r, s, a, o, l, u, d, _, c, E, I, T, f, S, h, A, m, N, p;
 
                 function O(e) {
                     return (null == n ? void 0 : n.storedInformation) != null && 1 === n.storedInformation[e]
@@ -57,8 +57,8 @@ function(e, t, n) {
                     video_media_session_id: R(i.StoredCrashInformation.VideoMediaSessionId),
                     stream_media_session_id: R(i.StoredCrashInformation.StreamMediaSessionId),
                     last_memory_usage_kb: null !== (c = null == n ? void 0 : null === (r = n.lastMemoryInformation) || void 0 === r ? void 0 : r.memoryUsageKB) && void 0 !== c ? c : null,
-                    last_used_js_heap_size_kb: null !== (E = null == n ? void 0 : null === (a = n.lastMemoryInformation) || void 0 === a ? void 0 : a.usedJSHeapSizeKB) && void 0 !== E ? E : null,
-                    last_memory_usage_uptime: null !== (I = null == n ? void 0 : null === (s = n.lastMemoryInformation) || void 0 === s ? void 0 : s.uptimeSeconds) && void 0 !== I ? I : null,
+                    last_used_js_heap_size_kb: null !== (E = null == n ? void 0 : null === (s = n.lastMemoryInformation) || void 0 === s ? void 0 : s.usedJSHeapSizeKB) && void 0 !== E ? E : null,
+                    last_memory_usage_uptime: null !== (I = null == n ? void 0 : null === (a = n.lastMemoryInformation) || void 0 === a ? void 0 : a.uptimeSeconds) && void 0 !== I ? I : null,
                     highest_memory_usage_kb: null !== (T = null == n ? void 0 : null === (o = n.highestMemoryInformation) || void 0 === o ? void 0 : o.memoryUsageKB) && void 0 !== T ? T : null,
                     highest_used_js_heap_size_kb: null !== (f = null == n ? void 0 : null === (l = n.highestMemoryInformation) || void 0 === l ? void 0 : l.usedJSHeapSizeKB) && void 0 !== f ? f : null,
                     highest_memory_usage_uptime: null !== (S = null == n ? void 0 : null === (u = n.highestMemoryInformation) || void 0 === u ? void 0 : u.uptimeSeconds) && void 0 !== S ? S : null
@@ -83,15 +83,15 @@ function(e, t, n) {
                     minidump_exception_module_code_id: null !== (p = null == g ? void 0 : g.exceptionModuleCodeId) && void 0 !== p ? p : null,
                     ...C
                 }
-            }(a, s, n);
+            }(s, a, n);
         o.default.track(u.AnalyticEvents.APP_NATIVE_CRASH, l), r.Storage.set(_, {
             lastId: null == n ? void 0 : n.id
-        }), s && setTimeout(async () => await E(), 1e4)
+        }), a && setTimeout(async () => await E(), 1e4)
     }
     async function E() {
         var e, t;
-        if (null !== (t = null === (e = s.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t) try {
-            await a.default.getMediaEngine().writeAudioDebugState(), await (0, l.uploadDebugLogFiles)(u.DebugLogCategory.RTC), console.log("Successfully uploaded debug files")
+        if (null !== (t = null === (e = a.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t) try {
+            await s.default.getMediaEngine().writeAudioDebugState(), await (0, l.uploadDebugLogFiles)(u.DebugLogCategory.RTC), console.log("Successfully uploaded debug files")
         } catch (e) {
             console.log("Failed to upload debug files")
         }

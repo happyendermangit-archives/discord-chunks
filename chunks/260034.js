@@ -2,30 +2,31 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         Heading: function() {
-            return u
+            return d
         }
     });
-    var i = n("735250");
-    n("470079");
-    var r = n("120356"),
-        a = n.n(r),
-        s = n("993365"),
-        o = n("337033"),
-        l = n("787151");
-    let u = e => {
+    var i = n("735250"),
+        r = n("470079"),
+        s = n("120356"),
+        a = n.n(s),
+        o = n("993365"),
+        l = n("337033"),
+        u = n("787151");
+    let d = r.forwardRef(function(e, t) {
         let {
-            variant: t,
-            className: n,
-            ...r
-        } = e, u = (0, o.usePrivateHeadingLevel)(), d = "h".concat(Math.min(u, 6));
-        return (0, i.jsx)(s.Text, {
-            variant: t,
-            tag: d,
-            className: a()(l.defaultColor, n),
-            ...u > 6 ? {
-                "data-excessive-heading-level": u
+            variant: n,
+            className: r,
+            ...s
+        } = e, d = (0, l.usePrivateHeadingLevel)(), _ = "h".concat(Math.min(d, 6));
+        return (0, i.jsx)(o.Text, {
+            ref: t,
+            variant: n,
+            tag: _,
+            className: a()(u.defaultColor, r),
+            ...d > 6 ? {
+                "data-excessive-heading-level": d
             } : {},
-            ...r
+            ...s
         })
-    }
+    })
 }

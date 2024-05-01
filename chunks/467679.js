@@ -4,8 +4,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        a = n.n(r),
-        s = n("981729"),
+        s = n.n(r),
+        a = n("981729"),
         o = n("507957"),
         l = n("674563"),
         u = n("689938"),
@@ -49,7 +49,7 @@ function(e, t, n) {
         let h = r === l.BotTagTypes.ORIGINAL_POSTER,
             A = r === l.BotTagTypes.REMIX,
             m = null;
-        c && (m = (0, i.jsx)(s.Tooltip, {
+        c && (m = (0, i.jsx)(a.Tooltip, {
             text: S,
             align: "center",
             position: "top",
@@ -60,7 +60,7 @@ function(e, t, n) {
         })), t = r === l.BotTagTypes.AI ? d.botTagAI : n ? d.botTagInvert : d.botTagRegular;
         let N = e => (0, i.jsxs)("span", {
             ...e,
-            className: a()(_, t, I ? d.rem : d.px, {
+            className: s()(_, t, I ? d.rem : d.px, {
                 [d.botTagOP]: h,
                 [d.botTagRemix]: A
             }),
@@ -71,13 +71,13 @@ function(e, t, n) {
         });
         switch (r) {
             case l.BotTagTypes.REMIX:
-                return (0, i.jsx)(s.Tooltip, {
+                return (0, i.jsx)(a.Tooltip, {
                     text: u.default.Messages.REMIXING_DOWNLOAD_APP,
                     position: "top",
                     children: e => N(e)
                 });
             case l.BotTagTypes.ORIGINAL_POSTER:
-                return (0, i.jsx)(s.Tooltip, {
+                return (0, i.jsx)(a.Tooltip, {
                     text: u.default.Messages.BOT_TAG_FORUM_ORIGINAL_POSTER_TOOLTIP,
                     position: "top",
                     children: e => N(e)

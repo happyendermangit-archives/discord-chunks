@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return a
+            return s
         }
     });
     var i = n("871465");
@@ -71,7 +71,7 @@ function(e, t, n) {
         }
     };
 
-    function a(e) {
+    function s(e) {
         return r[e]
     }
 }

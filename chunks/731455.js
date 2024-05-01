@@ -47,7 +47,7 @@ function(e, t, n) {
             return N
         }
     });
-    var i, r, a, s, o, l, u, d, _ = n("689938");
+    var i, r, s, a, o, l, u, d, _ = n("689938");
     let c = 0,
         E = 13,
         I = !0,
@@ -107,7 +107,7 @@ function(e, t, n) {
         } : e),
         O = 40,
         R = 20;
-    (a = u || (u = {})).GAME_RECOMMENDATIONS = "Game Recommendations", a.SERVER_RECOMMENDATIONS = "Server Recommendations", (s = d || (d = {}))[s.Activity = 0] = "Activity", s[s.Discover = 1] = "Discover", s[s.Education = 2] = "Education", s[s.Music = 3] = "Music", s[s.Science = 4] = "Science", s[s.Stage = 5] = "Stage", s[s.Television = 6] = "Television", s[s.Server = 7] = "Server";
+    (s = u || (u = {})).GAME_RECOMMENDATIONS = "Game Recommendations", s.SERVER_RECOMMENDATIONS = "Server Recommendations", (a = d || (d = {}))[a.Activity = 0] = "Activity", a[a.Discover = 1] = "Discover", a[a.Education = 2] = "Education", a[a.Music = 3] = "Music", a[a.Science = 4] = "Science", a[a.Stage = 5] = "Stage", a[a.Television = 6] = "Television", a[a.Server = 7] = "Server";
     let C = {
         facebook: {
             presentation: "Facebook",

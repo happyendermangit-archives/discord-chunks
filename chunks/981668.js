@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("147913"),
         r = n("367907"),
-        a = n("728345"),
-        s = n("812206"),
+        s = n("728345"),
+        a = n("812206"),
         o = n("574176"),
         l = n("314897"),
         u = n("592125"),
@@ -13,7 +13,7 @@ function(e, t, n) {
         c = n("649739"),
         E = n("981631");
     async function I(e) {
-        await a.default.fetchApplications(e, !1)
+        await s.default.fetchApplications(e, !1)
     }
     async function T(e) {
         if (null == e) return;
@@ -28,9 +28,9 @@ function(e, t, n) {
         if (null == t || !((0, c.isVoiceUserGameActivityEnabled)("running_games_change", !1) || n)) return;
         let i = _.default.getActivities();
         if (0 === i.length) return;
-        let a = [...i].filter(e => e.type === E.ActivityTypes.PLAYING && e.application_id).map(e => e.application_id);
-        await I([...a]);
-        let d = s.default.getApplication(a[0]);
+        let s = [...i].filter(e => e.type === E.ActivityTypes.PLAYING && e.application_id).map(e => e.application_id);
+        await I([...s]);
+        let d = a.default.getApplication(s[0]);
         null != d && r.default.trackWithMetadata(E.AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_SET, {
             channel_id: e,
             guild_id: t.guild_id,

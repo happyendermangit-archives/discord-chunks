@@ -43,8 +43,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("990547"),
         r = n("544891"),
-        a = n("570140"),
-        s = n("493683"),
+        s = n("570140"),
+        a = n("493683"),
         o = n("475179"),
         l = n("447543"),
         u = n("904245"),
@@ -71,12 +71,12 @@ function(e, t, n) {
     function D(e, t, n) {
         let i = f.default.getId(),
             r = p.default.getSelfEmbeddedActivityForChannel(e),
-            s = p.default.getEmbeddedActivitiesForChannel(e).find(e => e.applicationId === t && e.userIds.has(i));
+            a = p.default.getEmbeddedActivitiesForChannel(e).find(e => e.applicationId === t && e.userIds.has(i));
         null != r ? y({
             channelId: e,
             applicationId: r.applicationId,
             showFeedback: !1
-        }) : null != s && P(e, t, !0), a.default.dispatch({
+        }) : null != a && P(e, t, !0), s.default.dispatch({
             type: "EMBEDDED_ACTIVITY_OPEN",
             channelId: e,
             applicationId: t,
@@ -86,13 +86,13 @@ function(e, t, n) {
     async function M(e) {
         var t, n;
         let r = S.default.getChannel(e),
-            s = null !== (t = null == r ? void 0 : r.getGuildId()) && void 0 !== t ? t : void 0;
-        if (null == s && !(null !== (n = null == r ? void 0 : r.isPrivate()) && void 0 !== n && n)) return;
+            a = null !== (t = null == r ? void 0 : r.getGuildId()) && void 0 !== t ? t : void 0;
+        if (null == a && !(null !== (n = null == r ? void 0 : r.isPrivate()) && void 0 !== n && n)) return;
         let o = p.default.getSelfEmbeddedActivityForChannel(e);
         if (null === o) return;
         let l = f.default.getSessionId();
         try {
-            a.default.dispatch({
+            s.default.dispatch({
                 type: "EMBEDDED_ACTIVITY_LAUNCH_START",
                 embeddedActivity: o
             });
@@ -108,19 +108,19 @@ function(e, t, n) {
                 await (0, I.executePrimaryEntryPointInteraction)({
                     applicationId: o.applicationId,
                     channelId: e,
-                    guildId: s,
+                    guildId: a,
                     command: t
                 })
             } else await N.default.post({
                 url: g.Endpoints.ACTIVITY_CHANNEL_LAUNCH(e, o.applicationId),
                 body: {
                     session_id: l,
-                    guild_id: null != s ? s : void 0
+                    guild_id: null != a ? a : void 0
                 },
                 trackedActionData: {
                     event: i.NetworkActionNames.EMBEDDED_ACTIVITIES_LAUNCH,
                     properties: {
-                        guild_id: s,
+                        guild_id: a,
                         channel_id: e,
                         application_id: o.applicationId,
                         session_id: l
@@ -129,14 +129,14 @@ function(e, t, n) {
                 retries: 3,
                 oldFormErrors: !0
             });
-            a.default.dispatch({
+            s.default.dispatch({
                 type: "EMBEDDED_ACTIVITY_LAUNCH_SUCCESS",
                 applicationId: o.applicationId
             })
         } catch (t) {
-            a.default.dispatch({
+            s.default.dispatch({
                 type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL",
-                guildId: s,
+                guildId: a,
                 applicationId: o.applicationId,
                 error: new d.default(t)
             }), y({
@@ -152,15 +152,15 @@ function(e, t, n) {
         let {
             channelId: i,
             applicationId: r,
-            showFeedback: s = !0
+            showFeedback: a = !0
         } = e, l = p.default.getSelfEmbeddedActivityForChannel(i);
-        a.default.dispatch({
+        s.default.dispatch({
             type: "EMBEDDED_ACTIVITY_CLOSE",
             channelId: i,
             applicationId: r,
             locationId: null == l ? void 0 : null === (t = l.location) || void 0 === t ? void 0 : t.id,
             instanceId: null == l ? void 0 : l.launchId,
-            showFeedback: s
+            showFeedback: a
         });
         let u = E.default.getSelectedParticipantId(i),
             d = null === (n = A.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
@@ -169,7 +169,7 @@ function(e, t, n) {
 
     function P(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        a.default.dispatch({
+        s.default.dispatch({
             type: "EMBEDDED_ACTIVITY_DISCONNECT",
             channelId: e,
             applicationId: t,
@@ -178,7 +178,7 @@ function(e, t, n) {
     }
     async function U() {
         try {
-            a.default.dispatch({
+            s.default.dispatch({
                 type: "DEVELOPER_ACTIVITY_SHELF_FETCH_START"
             });
             let e = await r.HTTP.get({
@@ -189,20 +189,20 @@ function(e, t, n) {
                     oldFormErrors: !0
                 }),
                 t = e.body.applications.map(e => T.default.createFromServer(e));
-            a.default.dispatch({
+            s.default.dispatch({
                 type: "DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS",
                 applications: t,
                 assets: e.body.assets
             })
         } catch (e) {
-            a.default.dispatch({
+            s.default.dispatch({
                 type: "DEVELOPER_ACTIVITY_SHELF_FETCH_FAIL"
             })
         }
     }
     async function b(e, t, n) {
         try {
-            a.default.dispatch({
+            s.default.dispatch({
                 type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_START"
             });
             let i = await r.HTTP.post({
@@ -215,12 +215,12 @@ function(e, t, n) {
                     file: n
                 }]
             });
-            return a.default.dispatch({
+            return s.default.dispatch({
                 type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_SUCCESS",
                 attachment: i.body.attachment
             }), i.body.attachment
         } catch (e) {
-            return a.default.dispatch({
+            return s.default.dispatch({
                 type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_FAIL"
             }), new d.default(e)
         }
@@ -232,7 +232,7 @@ function(e, t, n) {
         (i === e || null == i && null == e) && t()
     };
     async function w(e) {
-        var t, n, r, s;
+        var t, n, r, a;
         let {
             guildId: o,
             force: l = !1
@@ -241,12 +241,12 @@ function(e, t, n) {
             if (null === (t = p.default.getShelfFetchStatus(o)) || void 0 === t ? void 0 : t.isFetching) {
                 let e, t;
                 let n = new Promise(t => {
-                        e = G.bind(null, o, t), a.default.subscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS", e)
+                        e = G.bind(null, o, t), s.default.subscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS", e)
                     }),
                     i = new Promise(e => {
-                        t = G.bind(null, o, e), a.default.subscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL", t)
+                        t = G.bind(null, o, e), s.default.subscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL", t)
                     });
-                await Promise.race([n, i]), null != e && (a.default.unsubscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS", e), e = null), null != t && (a.default.unsubscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL", t), t = null)
+                await Promise.race([n, i]), null != e && (s.default.unsubscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS", e), e = null), null != t && (s.default.unsubscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL", t), t = null)
             }
             return {
                 activityConfigs: u,
@@ -254,7 +254,7 @@ function(e, t, n) {
             }
         }
         try {
-            a.default.dispatch({
+            s.default.dispatch({
                 type: "EMBEDDED_ACTIVITY_FETCH_SHELF",
                 guildId: o
             });
@@ -275,14 +275,14 @@ function(e, t, n) {
                 }),
                 l = null !== (n = t.body.activities) && void 0 !== n ? n : [],
                 u = null !== (r = t.body.applications) && void 0 !== r ? r : [],
-                d = null !== (s = t.body.assets) && void 0 !== s ? s : {};
-            return a.default.dispatch({
+                d = null !== (a = t.body.assets) && void 0 !== a ? a : {};
+            return s.default.dispatch({
                 type: "EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS",
                 guildId: o,
                 activities: l,
                 applications: u,
                 assets: d
-            }), u.length > 0 && a.default.dispatch({
+            }), u.length > 0 && s.default.dispatch({
                 type: "APPLICATIONS_FETCH_SUCCESS",
                 applications: u
             }), {
@@ -290,7 +290,7 @@ function(e, t, n) {
                 applications: u.map(e => T.default.createFromServer(e))
             }
         } catch (e) {
-            return a.default.dispatch({
+            return s.default.dispatch({
                 type: "EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL",
                 guildId: o
             }), {
@@ -305,11 +305,11 @@ function(e, t, n) {
             invitedChannelId: n,
             applicationId: i,
             location: r
-        } = e, a = await l.default.createInvite(t, {
+        } = e, s = await l.default.createInvite(t, {
             target_type: v.InviteTargetTypes.EMBEDDED_APPLICATION,
             target_application_id: i
         }, r);
-        null != S.default.getChannel(n) && u.default.sendInvite(n, a.code, r, null)
+        null != S.default.getChannel(n) && u.default.sendInvite(n, s.code, r, null)
     }
     async function k(e) {
         let {
@@ -317,17 +317,17 @@ function(e, t, n) {
             applicationId: n,
             userId: i,
             location: r
-        } = e, a = await l.default.createInvite(t, {
+        } = e, s = await l.default.createInvite(t, {
             target_type: v.InviteTargetTypes.EMBEDDED_APPLICATION,
             target_application_id: n
         }, r);
-        s.default.ensurePrivateChannel(i).then(e => {
-            null != S.default.getChannel(e) && u.default.sendInvite(e, a.code, r, null)
+        a.default.ensurePrivateChannel(i).then(e => {
+            null != S.default.getChannel(e) && u.default.sendInvite(e, s.code, r, null)
         })
     }
 
     function V() {
-        a.default.dispatch({
+        s.default.dispatch({
             type: "EMBEDDED_ACTIVITY_DISMISS_NEW_INDICATOR"
         })
     }
@@ -344,14 +344,14 @@ function(e, t, n) {
     }
 
     function F(e) {
-        a.default.dispatch({
+        s.default.dispatch({
             type: "EMBEDDED_ACTIVITY_SET_PANEL_MODE",
             activityPanelMode: e
         })
     }
 
     function H(e) {
-        a.default.dispatch({
+        s.default.dispatch({
             type: "EMBEDDED_ACTIVITY_SET_FOCUSED_LAYOUT",
             focusedActivityLayout: e
         })

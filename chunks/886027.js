@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("53529"),
         r = n("436660"),
-        a = n("887490"),
-        s = n("515270");
+        s = n("887490"),
+        a = n("515270");
     let o = new Set(["line", "blockQuote"]);
 
     function l(e) {
@@ -19,10 +19,10 @@ function(e, t, n) {
             onChange: u
         } = e;
         e.deleteBackward = n => {
-            let i = a.EditorUtils.getCurrentBlock(e);
+            let i = s.EditorUtils.getCurrentBlock(e);
             if ((null == i ? void 0 : i[0].type) === "blockQuote") {
-                let t = a.RangeUtils.toPoint(e.selection);
-                if (null != t && a.PathUtils.isFirstChild(i[1], t.path) && 0 === t.offset) {
+                let t = s.RangeUtils.toPoint(e.selection);
+                if (null != t && s.PathUtils.isFirstChild(i[1], t.path) && 0 === t.offset) {
                     r.SlateTransforms.setNodes(e, {
                         type: "line"
                     }, {
@@ -34,13 +34,13 @@ function(e, t, n) {
             t(n)
         }, e.deleteFragment = t => {
             if (null != e.selection) {
-                let [s, o] = a.RangeUtils.edges(e.selection), l = [s.path[0]], u = a.EditorUtils.node(e, l), d = [o.path[0]], _ = a.PathUtils.equals(l, d) ? null : a.EditorUtils.node(e, d);
+                let [a, o] = s.RangeUtils.edges(e.selection), l = [a.path[0]], u = s.EditorUtils.node(e, l), d = [o.path[0]], _ = s.PathUtils.equals(l, d) ? null : s.EditorUtils.node(e, d);
                 i.HistoryUtils.withSingleEntry(e, () => {
-                    (null == u ? void 0 : u[0].type) === "blockQuote" && a.PointUtils.isAtStart(s, u) && r.SlateTransforms.setNodes(e, {
+                    (null == u ? void 0 : u[0].type) === "blockQuote" && s.PointUtils.isAtStart(a, u) && r.SlateTransforms.setNodes(e, {
                         type: "line"
                     }, {
                         at: l
-                    }), (null == _ ? void 0 : _[0].type) === "blockQuote" && a.PointUtils.isAtEnd(o, _) && r.SlateTransforms.setNodes(e, {
+                    }), (null == _ ? void 0 : _[0].type) === "blockQuote" && s.PointUtils.isAtEnd(o, _) && r.SlateTransforms.setNodes(e, {
                         type: "line"
                     }, {
                         at: d
@@ -50,16 +50,16 @@ function(e, t, n) {
             }
             n(t)
         }, e.insertBreak = () => {
-            let t = a.EditorUtils.getCurrentBlock(e);
+            let t = s.EditorUtils.getCurrentBlock(e);
             if ((null == t ? void 0 : t[0].type) === "blockQuote") {
-                let n = a.RangeUtils.toPoint(e.selection);
+                let n = s.RangeUtils.toPoint(e.selection);
                 if (null == n) return;
                 ! function(e, t, n) {
-                    if (!a.EditorUtils.isEmpty(e, t[0])) return !1;
-                    let i = a.EditorUtils.previous(e, {
+                    if (!s.EditorUtils.isEmpty(e, t[0])) return !1;
+                    let i = s.EditorUtils.previous(e, {
                         at: t[1]
                     });
-                    return !!(null != i && a.NodeUtils.isType(i[0], "blockQuote") && a.EditorUtils.isEmpty(e, i[0]) && a.PointUtils.isAtStart(n, t)) && (r.SlateTransforms.setNodes(e, {
+                    return !!(null != i && s.NodeUtils.isType(i[0], "blockQuote") && s.EditorUtils.isEmpty(e, i[0]) && s.PointUtils.isAtStart(n, t)) && (r.SlateTransforms.setNodes(e, {
                         type: "line"
                     }, {
                         at: t[1]
@@ -77,18 +77,18 @@ function(e, t, n) {
         let d = null,
             _ = !0;
         return e.onChange = () => {
-            let t = a.EditorUtils.richValue(e);
+            let t = s.EditorUtils.richValue(e);
             (t !== d || e.previewMarkdown !== _) && (i.HistoryUtils.withMergedEntry(e, () => {
-                a.EditorUtils.withoutNormalizing(e, () => (function(e) {
+                s.EditorUtils.withoutNormalizing(e, () => (function(e) {
                     let t = !1;
-                    for (let l of a.EditorUtils.blocks(e)) {
+                    for (let l of s.EditorUtils.blocks(e)) {
                         let [u, d] = l;
                         if (!o.has(u.type)) continue;
                         let _ = {
-                            path: a.PathUtils.child(d, 0),
+                            path: s.PathUtils.child(d, 0),
                             offset: 0
                         };
-                        if ((0, s.isPointInCodeBlock)(e, _)) {
+                        if ((0, a.isPointInCodeBlock)(e, _)) {
                             "blockQuote" === u.type && (r.SlateTransforms.setNodes(e, {
                                 type: "line"
                             }, {
@@ -98,9 +98,9 @@ function(e, t, n) {
                             }));
                             continue
                         }
-                        if ("blockQuote" === u.type || a.EditorUtils.areStylesDisabled(e)) continue;
+                        if ("blockQuote" === u.type || s.EditorUtils.areStylesDisabled(e)) continue;
                         let c = u.children[0];
-                        if (!a.TextUtils.isText(c)) continue;
+                        if (!s.TextUtils.isText(c)) continue;
                         let E = c.text.match(/^\s*>>> /),
                             I = c.text.match(/^\s*> /);
                         if ((null != I || null != E || t) && (r.SlateTransforms.setNodes(e, {
@@ -109,8 +109,8 @@ function(e, t, n) {
                                 at: d
                             }), !t)) {
                             var n, i;
-                            let s = null !== (i = null !== (n = null == I ? void 0 : I[0].length) && void 0 !== n ? n : null == E ? void 0 : E[0].length) && void 0 !== i ? i : 0,
-                                o = a.PathUtils.child(d, 0);
+                            let a = null !== (i = null !== (n = null == I ? void 0 : I[0].length) && void 0 !== n ? n : null == E ? void 0 : E[0].length) && void 0 !== i ? i : 0,
+                                o = s.PathUtils.child(d, 0);
                             r.SlateTransforms.delete(e, {
                                 at: {
                                     anchor: {
@@ -119,7 +119,7 @@ function(e, t, n) {
                                     },
                                     focus: {
                                         path: o,
-                                        offset: s
+                                        offset: a
                                     }
                                 }
                             }), t = null != E

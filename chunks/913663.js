@@ -1,22 +1,22 @@
 function(e, t, n) {
     "use strict";
     n.r(t);
-    var i, r, a, s = n("445346"),
+    var i, r, s, a = n("445346"),
         o = n("570140"),
         l = n("703558");
     let u = {},
         d = {};
-    class _ extends s.Store {
+    class _ extends a.Store {
         getStickerPreview(e, t) {
             return (t === l.DraftType.FirstThreadMessage ? d : u)[e]
         }
     }
-    a = "StickerMessagePreviewStore", (r = "displayName") in(i = _) ? Object.defineProperty(i, r, {
-        value: a,
+    s = "StickerMessagePreviewStore", (r = "displayName") in(i = _) ? Object.defineProperty(i, r, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : i[r] = a;
+    }) : i[r] = s;
     let c = new _(o.default, {
         ADD_STICKER_PREVIEW: function(e) {
             let {

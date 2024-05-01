@@ -2,17 +2,17 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return a
         }
     }), n("47120");
     var i = n("470079"),
         r = n("207561"),
-        a = n("846519");
+        s = n("846519");
 
-    function s(e, t) {
-        let [n, s] = (0, i.useState)(e), o = (0, r.useLazyValue)(() => new a.Timeout);
+    function a(e, t) {
+        let [n, a] = (0, i.useState)(e), o = (0, r.useLazyValue)(() => new s.Timeout);
         return (0, i.useEffect)(() => () => o.stop(), [o]), [n, (0, i.useCallback)(n => {
-            s(n), n !== e && o.start(t, () => s(e))
+            a(n), n !== e && o.start(t, () => a(e))
         }, [t, e, o])]
     }
 }

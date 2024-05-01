@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("411104"), n("47120"), n("757143"), n("653041");
     var i = n("392711"),
         r = n.n(i),
-        a = n("946188"),
-        s = n("176354"),
+        s = n("946188"),
+        a = n("176354"),
         o = n("906411");
 
     function l(e, t, n) {
@@ -75,7 +75,7 @@ function(e, t, n) {
         get defaultDiversityChild() {
             if (this.hasDiversity && null != u) {
                 let e = function(e) {
-                    let t = a.default.convert.toCodePoint(e);
+                    let t = s.default.convert.toCodePoint(e);
                     return null != t ? t : ""
                 }(u);
                 return this.diversityChildren[e]
@@ -84,7 +84,7 @@ function(e, t, n) {
         }
         get url() {
             let e = this.defaultDiversityChild;
-            return null != e ? s.default.getURL(e.surrogates) : s.default.getURL(this.surrogates)
+            return null != e ? a.default.getURL(e.surrogates) : a.default.getURL(this.surrogates)
         }
         get name() {
             return this.hasDiversity && null != u ? "".concat(this.uniqueName, "::").concat(E[u]) : this.uniqueName
@@ -139,7 +139,7 @@ function(e, t, n) {
             }
             return I.push(t), t
         });
-        d[e] = s.default.filterUnsupportedEmojis(t)
+        d[e] = a.default.filterUnsupportedEmojis(t)
     }
 
     function C(e) {
@@ -165,9 +165,9 @@ function(e, t, n) {
         }];
         let i = "",
             r = [],
-            a = null !== (n = e.match(p)) && void 0 !== n ? n : [];
-        for (let e = 0; e < a.length; e++) {
-            let t = a[e];
+            s = null !== (n = e.match(p)) && void 0 !== n ? n : [];
+        for (let e = 0; e < s.length; e++) {
+            let t = s[e];
             if (null != i && "" !== i) {
                 if (t === g) t = i + t, i = "";
                 else if (v.test(t)) {

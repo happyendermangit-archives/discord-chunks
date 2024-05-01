@@ -10,8 +10,8 @@ function(e, t, n) {
     });
     var i = n("442837"),
         r = n("592125"),
-        a = n("944486"),
-        s = n("867176"),
+        s = n("944486"),
+        a = n("867176"),
         o = n("317381"),
         l = n("981631");
 
@@ -20,15 +20,15 @@ function(e, t, n) {
             channelId: t,
             SelectedChannelStore: n,
             ChannelStore: i
-        } = e, r = i.getChannel(t), a = (0, s.isActivitiesInTextEnabled)(r, "isActivityInTextChannel");
-        return !!((null == r ? void 0 : r.type) === l.ChannelTypes.GUILD_TEXT && a || null != r && r.isPrivate() && a && null == n.getVoiceChannelId()) || !1
+        } = e, r = i.getChannel(t), s = (0, a.isActivitiesInTextEnabled)(r, "isActivityInTextChannel");
+        return !!((null == r ? void 0 : r.type) === l.ChannelTypes.GUILD_TEXT && s || null != r && r.isPrivate() && s && null == n.getVoiceChannelId()) || !1
     }
 
     function d(e) {
-        return (0, i.useStateFromStores)([r.default, a.default], () => u({
+        return (0, i.useStateFromStores)([r.default, s.default], () => u({
             channelId: null == e ? void 0 : e.id,
             ChannelStore: r.default,
-            SelectedChannelStore: a.default
+            SelectedChannelStore: s.default
         }))
     }
 

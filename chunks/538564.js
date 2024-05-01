@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("427217"),
-        a = n("659101"),
-        s = n("387045");
+        s = n("659101"),
+        a = n("387045");
 
     function o(e) {
         let {
@@ -17,15 +17,15 @@ function(e, t, n) {
             className: n,
             animate: o
         } = e;
-        return null == t ? null : (0, i.jsx)(a.default, {
+        return null == t ? null : (0, i.jsx)(s.default, {
             className: n,
             children: (0, i.jsx)(r.default, {
                 activity: t,
-                className: s.customStatus,
+                className: a.customStatus,
                 animate: o,
-                emojiClassName: s.customStatusEmoji,
-                soloEmojiClassName: s.customStatusSoloEmoji,
-                textClassName: s.customStatusText
+                emojiClassName: a.customStatusEmoji,
+                soloEmojiClassName: a.customStatusSoloEmoji,
+                textClassName: a.customStatusText
             })
         })
     }

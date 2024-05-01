@@ -2,8 +2,8 @@ function(e, t, n) {
     "use strict";
     n.r(t), n("47120");
     var i, r = n("442837"),
-        a = n("433517"),
-        s = n("570140"),
+        s = n("433517"),
+        a = n("570140"),
         o = n("581883");
 
     function l(e, t, n) {
@@ -18,12 +18,12 @@ function(e, t, n) {
         d = {};
 
     function _() {
-        var e, t, n, i, r, a;
-        let s = o.default.settings;
+        var e, t, n, i, r, s;
+        let a = o.default.settings;
         return {
-            gifAutoPlay: null === (t = s.textAndImages) || void 0 === t ? void 0 : null === (e = t.gifAutoPlay) || void 0 === e ? void 0 : e.value,
-            animateEmoji: null === (i = s.textAndImages) || void 0 === i ? void 0 : null === (n = i.animateEmoji) || void 0 === n ? void 0 : n.value,
-            animateStickers: null === (a = s.textAndImages) || void 0 === a ? void 0 : null === (r = a.animateStickers) || void 0 === r ? void 0 : r.value
+            gifAutoPlay: null === (t = a.textAndImages) || void 0 === t ? void 0 : null === (e = t.gifAutoPlay) || void 0 === e ? void 0 : e.value,
+            animateEmoji: null === (i = a.textAndImages) || void 0 === i ? void 0 : null === (n = i.animateEmoji) || void 0 === n ? void 0 : n.value,
+            animateStickers: null === (s = a.textAndImages) || void 0 === s ? void 0 : null === (r = s.animateStickers) || void 0 === r ? void 0 : r.value
         }
     }
 
@@ -47,9 +47,9 @@ function(e, t, n) {
     }
     l(E, "displayName", "UserSettingsOverridesStore"), l(E, "persistKey", "UserSettingsOverridesStore"), l(E, "migrations", [() => {
         var e;
-        let t = null !== (e = a.Storage.get("UserSettingsStoreOverrides")) && void 0 !== e ? e : {};
-        return a.Storage.remove("UserSettingsStoreOverrides"), t
-    }]), t.default = new E(s.default, {
+        let t = null !== (e = s.Storage.get("UserSettingsStoreOverrides")) && void 0 !== e ? e : {};
+        return s.Storage.remove("UserSettingsStoreOverrides"), t
+    }]), t.default = new E(a.default, {
         USER_SETTINGS_PROTO_UPDATE: function() {
             let e = _(),
                 t = !1;

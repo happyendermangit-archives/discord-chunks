@@ -3,13 +3,13 @@ function(e, t, n) {
     n.r(t), n("47120"), n("757143"), n("653041"), n("627494");
     var i = n("710845"),
         r = n("287328");
-    let a = new i.default("GuildStickers");
+    let s = new i.default("GuildStickers");
     t.default = new class e {
         async getAsync(e) {
             let t = performance.now(),
                 n = await r.default.stickers(e).getMapEntries(),
                 i = performance.now();
-            return a.log("asynchronously loaded in ".concat(i - t, "ms (guilds: ").concat(n.length, ")")), n
+            return s.log("asynchronously loaded in ".concat(i - t, "ms (guilds: ").concat(n.length, ")")), n
         }
         handleConnectionOpen(e, t) {
             for (let n of e.guilds) this.handleOneGuildCreate(n, t)
@@ -29,7 +29,7 @@ function(e, t, n) {
         handleBackgroundSync(e, t) {
             e.promisesForBackgroundSyncToWaitOn.push(Promise.all(e.stickers.map(e => {
                 if ("unavailable" === e.dataMode) return Promise.resolve();
-                "full" === e.dataMode ? (a.verbose("Replacing ".concat(e.entities.length, " stickers for ").concat(e.guildId)), this.replace(e.guildId, e.entities, t)) : (e.updatedEntities.length > 0 || e.deletedEntityIds.length > 0) && (a.verbose("Updating ".concat(e.updatedEntities.length, " and deleting ").concat(e.deletedEntityIds.length, " stickers for ").concat(e.guildId)), this.update(e.guildId, e.updatedEntities, e.deletedEntityIds, t))
+                "full" === e.dataMode ? (s.verbose("Replacing ".concat(e.entities.length, " stickers for ").concat(e.guildId)), this.replace(e.guildId, e.entities, t)) : (e.updatedEntities.length > 0 || e.deletedEntityIds.length > 0) && (s.verbose("Updating ".concat(e.updatedEntities.length, " and deleting ").concat(e.deletedEntityIds.length, " stickers for ").concat(e.guildId)), this.update(e.guildId, e.updatedEntities, e.deletedEntityIds, t))
             })))
         }
         handleOneGuildCreate(e, t) {
@@ -43,8 +43,8 @@ function(e, t, n) {
             r.default.stickersTransaction(t).delete(e)
         }
         update(e, t, n, i) {
-            let a = r.default.stickersTransaction(i);
-            for (let i of (a.putAll(e, t), n)) a.delete(e, i)
+            let s = r.default.stickersTransaction(i);
+            for (let i of (s.putAll(e, t), n)) s.delete(e, i)
         }
         constructor() {
             var e, t, n;

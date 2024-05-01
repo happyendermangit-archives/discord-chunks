@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("470079"),
         r = n("442837"),
-        a = n("607070"),
-        s = n("166625"),
+        s = n("607070"),
+        a = n("166625"),
         o = n("271383"),
         l = n("594174"),
         u = n("451478"),
@@ -20,12 +20,12 @@ function(e, t, n) {
             showPending: T = !1,
             showTryItOut: f = !1,
             avatarDecorationOverride: S
-        } = e, [h, A] = i.useState(!1), m = (0, r.useStateFromStores)([a.default], () => a.default.useReducedMotion), N = (0, r.useStateFromStores)([u.default], () => u.default.isFocused()), p = (0, r.useStateFromStores)([o.default], () => null != c && null != n ? o.default.getMember(c, n.id) : null), [O, R] = (0, r.useStateFromStoresArray)([l.default], () => {
+        } = e, [h, A] = i.useState(!1), m = (0, r.useStateFromStores)([s.default], () => s.default.useReducedMotion), N = (0, r.useStateFromStores)([u.default], () => u.default.isFocused()), p = (0, r.useStateFromStores)([o.default], () => null != c && null != n ? o.default.getMember(c, n.id) : null), [O, R] = (0, r.useStateFromStoresArray)([l.default], () => {
             var e;
             return [null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.id, l.default.getUser(null == n ? void 0 : n.id)]
         }), C = null == p ? null == R ? void 0 : R.avatarDecoration : null === p.avatarDecoration ? null : null !== (t = p.avatarDecoration) && void 0 !== t ? t : null == R ? void 0 : R.avatarDecoration, {
             pendingAvatarDecoration: g
-        } = (0, s.default)({
+        } = (0, a.default)({
             isTryItOut: f,
             guildId: c
         }), L = N && (h || !m && !I), v = T && void 0 !== g && void 0 !== O && O === (null == n ? void 0 : n.id), D = null != c && null === g, M = v ? D ? null == n ? void 0 : n.avatarDecoration : null != g ? g : C : null != C ? C : null == n ? void 0 : n.avatarDecoration, y = i.useMemo(() => (0, d.getAvatarDecorationURL)({

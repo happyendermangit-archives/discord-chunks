@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         UploadPlatform: function() {
-            return a
+            return s
         },
         default: function() {
             return T
@@ -11,7 +11,7 @@ function(e, t, n) {
             return I
         }
     });
-    var i, r, a, s, o = n("836560"),
+    var i, r, s, a, o = n("836560"),
         l = n("392711"),
         u = n.n(l),
         d = n("153832"),
@@ -29,7 +29,7 @@ function(e, t, n) {
 
     function I(e) {
         return void 0 !== e.isVideo && void 0 !== e.isImage
-    }(i = a || (a = {}))[i.REACT_NATIVE = 0] = "REACT_NATIVE", i[i.WEB = 1] = "WEB", (r = s || (s = {}))[r.FILE_ATTACHMENT = 0] = "FILE_ATTACHMENT", r[r.IMAGE_PICKER = 1] = "IMAGE_PICKER";
+    }(i = s || (s = {}))[i.REACT_NATIVE = 0] = "REACT_NATIVE", i[i.WEB = 1] = "WEB", (r = a || (a = {}))[r.FILE_ATTACHMENT = 0] = "FILE_ATTACHMENT", r[r.IMAGE_PICKER = 1] = "IMAGE_PICKER";
     class T extends o.EventEmitter {
         cancel() {}
         resetState() {

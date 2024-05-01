@@ -2,20 +2,20 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return a
         }
     });
     var i = n("131704"),
         r = n("592125"),
-        a = n("979651");
+        s = n("979651");
 
-    function s(e) {
+    function a(e) {
         var t;
         let {
             channelId: n,
-            userId: s,
+            userId: a,
             activity: o
-        } = e, l = r.default.getChannel(n), u = (null == o ? void 0 : o.session_id) == null || null != l && (0, i.isTextChannel)(l.type) ? n : null === (t = a.default.getVoiceStateForSession(s, null == o ? void 0 : o.session_id)) || void 0 === t ? void 0 : t.channelId;
+        } = e, l = r.default.getChannel(n), u = (null == o ? void 0 : o.session_id) == null || null != l && (0, i.isTextChannel)(l.type) ? n : null === (t = s.default.getVoiceStateForSession(a, null == o ? void 0 : o.session_id)) || void 0 === t ? void 0 : t.channelId;
         return null != u ? u : void 0
     }
 }

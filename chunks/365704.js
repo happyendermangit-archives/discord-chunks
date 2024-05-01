@@ -10,8 +10,8 @@ function(e, t, n) {
     });
     var i = n("590921"),
         r = n("521090"),
-        a = n("126226"),
-        s = n("116364"),
+        s = n("126226"),
+        a = n("116364"),
         o = n("290401"),
         l = n("341561"),
         u = n("277981"),
@@ -21,9 +21,9 @@ function(e, t, n) {
     let E = [i.AutocompleteOptionTypes.CHOICES, i.AutocompleteOptionTypes.GIFS, i.AutocompleteOptionTypes.COMMAND_OPTIONS, i.AutocompleteOptionTypes.EMOJIS_AND_STICKERS, i.AutocompleteOptionTypes.REACTIONS, i.AutocompleteOptionTypes.CHANNELS, i.AutocompleteOptionTypes.MENTIONS, i.AutocompleteOptionTypes.COMMANDS, i.AutocompleteOptionTypes.LEGACY_COMMANDS],
         I = {
             [i.AutocompleteOptionTypes.CHANNELS]: r.default,
-            [i.AutocompleteOptionTypes.COMMANDS]: a.default,
+            [i.AutocompleteOptionTypes.COMMANDS]: s.default,
             [i.AutocompleteOptionTypes.COMMAND_OPTIONS]: o.default,
-            [i.AutocompleteOptionTypes.CHOICES]: s.default,
+            [i.AutocompleteOptionTypes.CHOICES]: a.default,
             [i.AutocompleteOptionTypes.EMOJIS_AND_STICKERS]: l.default,
             [i.AutocompleteOptionTypes.GIFS]: u.default,
             [i.AutocompleteOptionTypes.LEGACY_COMMANDS]: d.default,

@@ -9,8 +9,8 @@ function(e, t, n) {
         }
     });
     var i, r = n("873546"),
-        a = n("442837"),
-        s = n("570140"),
+        s = n("442837"),
+        a = n("570140"),
         o = n("897473"),
         l = n("585483"),
         u = n("709054"),
@@ -76,11 +76,11 @@ function(e, t, n) {
         if (R === c.default.isActive()) return !1;
         R = c.default.isActive()
     }
-    class P extends(i = a.default.PersistedStore) {
+    class P extends(i = s.default.PersistedStore) {
         initialize(e) {
             if (null != e) {
-                var t, n, i, r, a;
-                N = null !== (t = e.isMembersOpen) && void 0 !== t && t, p = null !== (n = e.isSummariesOpen) && void 0 !== n && n, O = null === (i = e.isProfileOpen) || void 0 === i || i, C = null !== (r = e.sidebars) && void 0 !== r ? r : {}, g = null !== (a = e.guildSidebars) && void 0 !== a ? a : {}
+                var t, n, i, r, s;
+                N = null !== (t = e.isMembersOpen) && void 0 !== t && t, p = null !== (n = e.isSummariesOpen) && void 0 !== n && n, O = null === (i = e.isProfileOpen) || void 0 === i || i, C = null !== (r = e.sidebars) && void 0 !== r ? r : {}, g = null !== (s = e.guildSidebars) && void 0 !== s ? s : {}
             }
             this.syncWith([c.default], y), this.syncWith([_.default], M)
         }
@@ -119,7 +119,7 @@ function(e, t, n) {
             return null == i ? null : i.type === o.SidebarType.VIEW_THREAD || i.type === o.SidebarType.VIEW_CHANNEL ? null === (t = i.details) || void 0 === t ? void 0 : t.initialMessageId : null
         }
     }
-    A(P, "displayName", "ChannelSectionStore"), A(P, "persistKey", "ChannelSectionStore2"), t.default = new P(s.default, {
+    A(P, "displayName", "ChannelSectionStore"), A(P, "persistKey", "ChannelSectionStore2"), t.default = new P(a.default, {
         CHANNEL_TOGGLE_MEMBERS_SECTION: function() {
             p && (p = D(p)), N = D(N)
         },
@@ -137,8 +137,8 @@ function(e, t, n) {
                 details: r
             } = e;
             R = !1;
-            let a = L(n);
-            return null != a && (C[a] = {
+            let s = L(n);
+            return null != s && (C[s] = {
                 type: t,
                 channelId: i,
                 details: r
@@ -152,10 +152,10 @@ function(e, t, n) {
                 details: r
             } = e;
             R = !1;
-            let a = L(i);
-            return null != a && (g[n] = {
+            let s = L(i);
+            return null != s && (g[n] = {
                 type: t,
-                baseChannelId: a,
+                baseChannelId: s,
                 guildId: n,
                 details: r
             }, !0)

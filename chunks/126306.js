@@ -5,8 +5,8 @@ function(e, t, n) {
             return I
         }
     }), n("47120");
-    var i, r, a = n("735250"),
-        s = n("470079"),
+    var i, r, s = n("735250"),
+        a = n("470079"),
         o = n("120356"),
         l = n.n(o),
         u = n("846519"),
@@ -34,10 +34,10 @@ function(e, t, n) {
             children: i
         } = e, {
             reducedMotion: r
-        } = s.useContext(d.AccessibilityPreferencesContext), o = r.enabled ? 3 : n, [I, T] = s.useState(null != t), [f] = s.useState(() => new u.Timeout);
-        return s.useEffect(() => () => f.stop(), [f]), s.useEffect(() => {
+        } = a.useContext(d.AccessibilityPreferencesContext), o = r.enabled ? 3 : n, [I, T] = a.useState(null != t), [f] = a.useState(() => new u.Timeout);
+        return a.useEffect(() => () => f.stop(), [f]), a.useEffect(() => {
             null != t && f.start(10, () => T(!0))
-        }, [t, f]), (0, a.jsx)("div", {
+        }, [t, f]), (0, s.jsx)("div", {
             className: l()(null != t ? E[t] : null, {
                 [c[o]]: null != t,
                 [_.didRender]: I

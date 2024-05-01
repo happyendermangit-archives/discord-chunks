@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("442837"),
-        s = n("481060"),
+        s = n("442837"),
+        a = n("481060"),
         o = n("727637"),
         l = n("100527"),
         u = n("906732"),
@@ -53,7 +53,7 @@ function(e, t, n) {
             channelId: L,
             messageId: v,
             roleId: D
-        }), w = (0, a.useStateFromStores)([E.default], () => E.default.getCurrentUser()), B = (0, a.useStateFromStores)([c.default], () => null != n ? c.default.getGuild(n) : null), k = (0, a.useStateFromStores)([_.default], () => null != n ? _.default.getMember(n, t.id) : null), V = r.useRef(null), x = (0, T.default)(t.id, n), F = (0, o.default)(V);
+        }), w = (0, s.useStateFromStores)([E.default], () => E.default.getCurrentUser()), B = (0, s.useStateFromStores)([c.default], () => null != n ? c.default.getGuild(n) : null), k = (0, s.useStateFromStores)([_.default], () => null != n ? _.default.getMember(n, t.id) : null), V = r.useRef(null), x = (0, T.default)(t.id, n), F = (0, o.default)(V);
         r.useEffect(() => {
             null == y || y(null == V ? void 0 : V.current)
         }, [V, y]);
@@ -78,7 +78,7 @@ function(e, t, n) {
                 messageId: v,
                 roleId: D,
                 shouldTrackViewOnMount: null == k || null != k.fullProfileLoadedTimestamp,
-                children: (0, i.jsx)(s.Dialog, {
+                children: (0, i.jsx)(a.Dialog, {
                     ref: V,
                     "aria-label": t.username,
                     onClick: g,
@@ -100,7 +100,7 @@ function(e, t, n) {
                             }), (0, i.jsx)(A.default, {
                                 user: t,
                                 guildId: n,
-                                viewProfileItem: (0, i.jsx)(s.MenuItem, {
+                                viewProfileItem: (0, i.jsx)(a.MenuItem, {
                                     id: "view-profile",
                                     label: C.default.Messages.VIEW_FULL_PROFILE,
                                     action: () => {

@@ -2,65 +2,66 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         Text: function() {
-            return c
+            return E
         }
     });
-    var i = n("735250");
-    n("470079");
-    var r = n("803997"),
-        a = n.n(r),
-        s = n("696689"),
-        o = n.n(s),
-        l = n("692547"),
-        u = n("481517"),
-        d = n("430600");
-    let _ = Object.fromEntries(Object.keys(l.default.colors).map(e => [o()(e), e])),
-        c = e => {
-            let t, {
-                    variant: n,
-                    tag: r = "div",
-                    selectable: s = !1,
-                    className: o,
-                    lineClamp: c,
-                    color: E,
-                    tabularNumbers: I = !1,
-                    scaleFontToUserSetting: T = !1,
-                    ...f
+    var i = n("735250"),
+        r = n("470079"),
+        s = n("803997"),
+        a = n.n(s),
+        o = n("696689"),
+        l = n.n(o),
+        u = n("692547"),
+        d = n("481517"),
+        _ = n("430600");
+    let c = Object.fromEntries(Object.keys(u.default.colors).map(e => [l()(e), e])),
+        E = r.forwardRef(function(e, t) {
+            let n, {
+                    variant: r,
+                    tag: s = "div",
+                    selectable: o = !1,
+                    className: l,
+                    lineClamp: E,
+                    color: I,
+                    tabularNumbers: T = !1,
+                    scaleFontToUserSetting: f = !1,
+                    ...S
                 } = e,
-                S = "",
-                h = {};
-            if (null != c && (1 === c ? S = u.lineClamp1 : (S = u.lineClamp2Plus, h = {
-                    lineClamp: c,
-                    WebkitLineClamp: c
-                })), void 0 !== E) switch (E) {
+                h = "",
+                A = {};
+            if (null != E && (1 === E ? h = d.lineClamp1 : (h = d.lineClamp2Plus, A = {
+                    lineClamp: E,
+                    WebkitLineClamp: E
+                })), void 0 !== I) switch (I) {
                 case "currentColor":
-                    t = "currentColor";
+                    n = "currentColor";
                     break;
                 case "none":
-                    t = void 0;
+                    n = void 0;
                     break;
                 case "always-white":
-                    t = "white";
+                    n = "white";
                     break;
                 default:
-                    var A;
-                    t = null === (A = l.default.colors[_[E]]) || void 0 === A ? void 0 : A.css
+                    var m;
+                    n = null === (m = u.default.colors[c[I]]) || void 0 === m ? void 0 : m.css
             }
-            let m = {
-                color: t,
-                ...h,
-                ...f.style
+            let N = {
+                color: n,
+                ...A,
+                ...S.style
             };
-            return (0, i.jsx)(r, {
+            return (0, i.jsx)(s, {
+                ref: t,
                 className: a()({
-                    [u.defaultColor]: void 0 === E,
-                    [u.selectable]: s,
-                    [u.tabularNumbers]: I,
-                    [d.fontScaling]: T
-                }, S, d[n], o),
-                ...f,
-                style: Object.values(m).filter(Boolean).length > 0 ? m : void 0,
-                "data-text-variant": n
+                    [d.defaultColor]: void 0 === I,
+                    [d.selectable]: o,
+                    [d.tabularNumbers]: T,
+                    [_.fontScaling]: f
+                }, h, _[r], l),
+                ...S,
+                style: Object.values(N).filter(Boolean).length > 0 ? N : void 0,
+                "data-text-variant": r
             })
-        }
+        })
 }

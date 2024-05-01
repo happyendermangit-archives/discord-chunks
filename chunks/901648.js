@@ -2,16 +2,16 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         isForumActivityExperimentEnabled: function() {
-            return s
+            return a
         }
     });
     var i = n("31377"),
         r = n("837934"),
-        a = n("981631");
+        s = n("981631");
 
-    function s(e) {
+    function a(e) {
         let t = r.default.getCurrentConfig({
-                guildId: null != e ? e : a.EMPTY_STRING_SNOWFLAKE_ID,
+                guildId: null != e ? e : s.EMPTY_STRING_SNOWFLAKE_ID,
                 location: "3fde52_1"
             }),
             n = i.default.getCurrentConfig({

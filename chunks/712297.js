@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("470079"),
         r = n("399606"),
-        a = n("16084"),
-        s = n("855775"),
+        s = n("16084"),
+        a = n("855775"),
         o = n("55563"),
         l = n("474936");
 
@@ -27,18 +27,18 @@ function(e, t, n) {
             return e
         }, [_]);
         i.useEffect(() => {
-            for (let e of _) !o.default.isFetching(e) && null == o.default.get(e) && (0, a.fetchSKU)(t, e)
+            for (let e of _) !o.default.isFetching(e) && null == o.default.get(e) && (0, s.fetchSKU)(t, e)
         }, [t, _]);
-        let I = (0, r.useStateFromStoresObject)([s.default], () => {
+        let I = (0, r.useStateFromStoresObject)([a.default], () => {
             let e = {};
             for (let n of _) {
                 var t;
-                e[n] = null !== (t = s.default.getPricesForSku(n)) && void 0 !== t ? t : void 0
+                e[n] = null !== (t = a.default.getPricesForSku(n)) && void 0 !== t ? t : void 0
             }
             return e
         }, [_]);
         return i.useEffect(() => {
-            for (let e of _) !s.default.isFetchingSKU(e) && (0, a.fetchPurchasePreview)(t, e, u, {
+            for (let e of _) !a.default.isFetchingSKU(e) && (0, s.fetchPurchasePreview)(t, e, u, {
                 isGift: d
             })
         }, [t, _, u, d]), {

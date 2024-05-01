@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        a = n.n(r),
-        s = n("389507"),
+        s = n.n(r),
+        a = n("389507"),
         o = n("993365"),
         l = n("979200"),
         u = n("497309"),
@@ -31,14 +31,14 @@ function(e, t, n) {
         var t;
         let n, {
                 application: r,
-                scopes: a,
+                scopes: s,
                 redirectUri: o,
                 approximateGuildCount: O,
                 isEmbeddedFlow: C,
                 disclosures: g
             } = e,
             L = new Date(f.default.extractTimestamp(r.id)),
-            v = (0, h.getSecurityMessage)(a),
+            v = (0, h.getSecurityMessage)(s),
             D = (0, T.hasFlag)(null !== (t = r.flags) && void 0 !== t ? t : 0, A.ApplicationFlags.EMBEDDED);
         if (null != o && !D && !C) {
             let e = new URL(o);
@@ -60,7 +60,7 @@ function(e, t, n) {
                 text: N.default.Messages.OAUTH2_DETAILS_CREATION_DATE.format({
                     date: L
                 })
-            }), a.includes(m.OAuth2Scopes.BOT) && null != O ? (0, i.jsx)(R, {
+            }), s.includes(m.OAuth2Scopes.BOT) && null != O ? (0, i.jsx)(R, {
                 icon: E.default,
                 text: N.default.Messages.OAUTH2_DETAILS_GUILDS.format({
                     guildCount: O
@@ -72,7 +72,7 @@ function(e, t, n) {
                 icon: d.default,
                 text: N.default.Messages.OAUTH2_IP_LOCATION_DISCLOSURE
             }) : null, null != g && g.includes(l.ApplicationDisclosure.DISPLAYS_ADVERTISEMENTS) ? (0, i.jsx)(R, {
-                icon: s.EmbedIcon,
+                icon: a.EmbedIcon,
                 text: N.default.Messages.OAUTH2_ADVERTISEMENTS_DISCLOSURE
             }) : null]
         })
@@ -85,7 +85,7 @@ function(e, t, n) {
             className: r
         } = e;
         return (0, i.jsxs)("div", {
-            className: a()(p.entry, r),
+            className: s()(p.entry, r),
             children: [(0, i.jsx)(t, {
                 className: p.entryIcon
             }), (0, i.jsx)(o.Text, {

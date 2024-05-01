@@ -13,8 +13,8 @@ function(e, t, n) {
     }), n("47120"), n("757143"), n("724458"), n("653041");
     var i = n("738774"),
         r = n("906411"),
-        a = n("889564"),
-        s = n("131704"),
+        s = n("889564"),
+        a = n("131704"),
         o = n("496675"),
         l = n("594174"),
         u = n("768581"),
@@ -47,8 +47,8 @@ function(e, t, n) {
         if (u === I.EmojiIntention.COMMUNITY_CONTENT_ONLY && null == n.guildId) return I.EmojiDisabledReasons.ONLY_GUILD_EMOJIS_ALLOWED;
         if (!h(n)) return null;
         let _ = null !== (t = e.guildId) && void 0 !== t ? t : null == r ? void 0 : r.getGuildId(),
-            T = null != r && (0, s.isGuildTextChannelType)(r.type),
-            f = null != r && (0, s.isGuildVocalChannelType)(r.type),
+            T = null != r && (0, a.isGuildTextChannelType)(r.type),
+            f = null != r && (0, a.isGuildVocalChannelType)(r.type),
             S = A(n, _),
             m = o.default.can(E.Permissions.USE_EXTERNAL_EMOJIS, r);
         if (u === I.EmojiIntention.COMMUNITY_CONTENT || u === I.EmojiIntention.COMMUNITY_CONTENT_ONLY) return S && n.available ? null : I.EmojiDisabledReasons.DISALLOW_EXTERNAL;
@@ -59,24 +59,24 @@ function(e, t, n) {
             if (u === I.EmojiIntention.STATUS) return I.EmojiDisabledReasons.PREMIUM_LOCKED;
             if (!n.managed) return I.EmojiDisabledReasons.PREMIUM_LOCKED
         }
-        if ((0, a.isUnusableRoleSubscriptionEmoji)(n, null != _ ? _ : void 0)) return (0, i.shouldHideGuildPurchaseEntryPoints)(n.guildId) ? I.EmojiDisabledReasons.ROLE_SUBSCRIPTION_UNAVAILABLE : I.EmojiDisabledReasons.ROLE_SUBSCRIPTION_LOCKED;
-        return !n.animated || c.default.canUseAnimatedEmojis(N) || (0, a.isPurchasableRoleSubscriptionEmoji)(n) ? null : I.EmojiDisabledReasons.PREMIUM_LOCKED
+        if ((0, s.isUnusableRoleSubscriptionEmoji)(n, null != _ ? _ : void 0)) return (0, i.shouldHideGuildPurchaseEntryPoints)(n.guildId) ? I.EmojiDisabledReasons.ROLE_SUBSCRIPTION_UNAVAILABLE : I.EmojiDisabledReasons.ROLE_SUBSCRIPTION_LOCKED;
+        return !n.animated || c.default.canUseAnimatedEmojis(N) || (0, s.isPurchasableRoleSubscriptionEmoji)(n) ? null : I.EmojiDisabledReasons.PREMIUM_LOCKED
     }
 
     function N(e, t) {
         let n = 0,
             i = 0,
-            a = 0,
             s = 0,
+            a = 0,
             o = 0,
             l = 0;
         return e.forEach(e => {
-            null != e.id ? (e.type === r.EmojiTypes.GUILD && (e.guildId === t ? e.managed ? s++ : i++ : e.managed ? o++ : a++), e.animated && l++) : n++
+            null != e.id ? (e.type === r.EmojiTypes.GUILD && (e.guildId === t ? e.managed ? a++ : i++ : e.managed ? o++ : s++), e.animated && l++) : n++
         }), {
             unicode: n,
             custom: i,
-            customExternal: a,
-            managed: s,
+            customExternal: s,
+            managed: a,
             managedExternal: o,
             animated: l
         }
@@ -114,13 +114,13 @@ function(e, t, n) {
                 channel: n,
                 intention: i,
                 guildId: r
-            } = e, a = m({
+            } = e, s = m({
                 emoji: t,
                 channel: n,
                 intention: i,
                 guildId: r
             });
-            return S.has(a)
+            return S.has(s)
         },
         isEmojiPremiumLocked(e) {
             let {
@@ -128,13 +128,13 @@ function(e, t, n) {
                 channel: n,
                 intention: i,
                 guildId: r
-            } = e, a = m({
+            } = e, s = m({
                 emoji: t,
                 channel: n,
                 guildId: r,
                 intention: i
             });
-            return T.has(a)
+            return T.has(s)
         },
         isEmojiCategoryNitroLocked(e) {
             let {

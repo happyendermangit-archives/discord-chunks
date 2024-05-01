@@ -8,16 +8,16 @@ function(e, t, n) {
             return r.AccessibilityPreferencesContext
         },
         LOW_SATURATION_THRESHOLD: function() {
-            return a.LOW_SATURATION_THRESHOLD
+            return s.LOW_SATURATION_THRESHOLD
         },
         RootThemeContextProvider: function() {
-            return s.RootThemeContextProvider
+            return a.RootThemeContextProvider
         },
         ThemeContextFlags: function() {
-            return s.ThemeContextFlags
+            return a.ThemeContextFlags
         },
         ThemeContextProvider: function() {
-            return s.ThemeContextProvider
+            return a.ThemeContextProvider
         },
         WCAGContrastRatios: function() {
             return l.WCAGContrastRatios
@@ -32,17 +32,17 @@ function(e, t, n) {
             return o.isThemeLight
         },
         setThemeFlag: function() {
-            return s.setThemeFlag
+            return a.setThemeFlag
         },
         useThemeContext: function() {
-            return s.useThemeContext
+            return a.useThemeContext
         }
     });
     var i = n("680732"),
         r = n("186325"),
-        a = n("885518");
+        s = n("885518");
     n("532712");
-    var s = n("801787"),
+    var a = n("801787"),
         o = n("663002"),
         l = n("950104")
 }

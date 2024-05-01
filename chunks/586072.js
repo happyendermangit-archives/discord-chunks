@@ -11,10 +11,10 @@ function(e, t, n) {
             return o
         },
         CreatorMonetizationRavenOnboardingGuildExperiment: function() {
-            return a
+            return s
         },
         CreatorMonetizationRavenOnboardingUserExperiment: function() {
-            return s
+            return a
         }
     });
     var i = n("818083");
@@ -33,7 +33,7 @@ function(e, t, n) {
                 }
             }]
         }),
-        a = (0, i.createExperiment)({
+        s = (0, i.createExperiment)({
             kind: "guild",
             id: "2022-09_creator_monetization_raven",
             label: "Creator Monetization Onboarding v2",
@@ -48,7 +48,7 @@ function(e, t, n) {
                 }
             }]
         }),
-        s = (0, i.createExperiment)({
+        a = (0, i.createExperiment)({
             kind: "user",
             id: "2022-09_creator_monetization_raven_users",
             label: "Creator Monetization Onboarding v2 Users",

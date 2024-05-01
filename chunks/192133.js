@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("442837"),
         l = n("481060"),
         u = n("100527"),
@@ -42,7 +42,7 @@ function(e, t, n) {
         B = n("833832");
 
     function k(e) {
-        var t, n, a;
+        var t, n, s;
         let {
             activity: k,
             customStatusActivity: V,
@@ -77,9 +77,9 @@ function(e, t, n) {
                 top: 0
             }))
         }, []);
-        let ea = (0, o.useStateFromStores)([_.default], () => _.default.getId()),
-            es = x.id === ea,
-            eo = x.bot || es,
+        let es = (0, o.useStateFromStores)([_.default], () => _.default.getId()),
+            ea = x.id === es,
+            eo = x.bot || ea,
             {
                 enabled: el
             } = (0, f.useProfileMutualsExperiment)({
@@ -124,7 +124,7 @@ function(e, t, n) {
                 }), (0, i.jsx)(N.default, {
                     className: B.divider
                 }), (0, i.jsxs)(l.AdvancedScroller, {
-                    className: s()(B.scroller, {
+                    className: a()(B.scroller, {
                         [B.scrollerSeparator]: !en
                     }),
                     onScroll: er,
@@ -166,7 +166,7 @@ function(e, t, n) {
                         user: x,
                         guild: H,
                         guildMember: Y,
-                        showBorder: null !== (a = null == F ? void 0 : F.canEditThemes) && void 0 !== a && a
+                        showBorder: null !== (s = null == F ? void 0 : F.canEditThemes) && void 0 !== s && s
                     }), (0, i.jsx)(L.default, {
                         userId: x.id,
                         channelId: j,

@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t);
     var i = n("990547"),
         r = n("570140"),
-        a = n("844889"),
-        s = n("314897"),
+        s = n("844889"),
+        a = n("314897"),
         o = n("981631");
     (0, i.analyticsTrackingStoreMaker)({
         dispatcher: r.default,
@@ -17,9 +17,9 @@ function(e, t, n) {
             TRACK: e => i.AnalyticsActionHandlers.handleTrack(e)
         },
         TRACKING_URL: o.Endpoints.TRACK,
-        waitFor: [s.default],
-        getFingerprint: s.default.getFingerprint,
-        getSessionId: () => (0, a.getSession)().then(e => ({
+        waitFor: [a.default],
+        getFingerprint: a.default.getFingerprint,
+        getSessionId: () => (0, s.getSession)().then(e => ({
             sessionId: null == e ? void 0 : e.uuid
         }))
     })

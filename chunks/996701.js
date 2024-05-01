@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("481060"),
-        a = n("782568"),
-        s = n("441957"),
+        s = n("782568"),
+        a = n("441957"),
         o = n("689938"),
         l = n("594870");
     let u = e => {
@@ -25,7 +25,7 @@ function(e, t, n) {
             role: "link",
             className: l.linkButton,
             onClick: () => {
-                (0, a.default)(t)
+                (0, s.default)(t)
             },
             children: [(0, i.jsxs)("div", {
                 className: l.linkTextContainer,
@@ -38,7 +38,7 @@ function(e, t, n) {
                     color: "text-muted",
                     children: o
                 })]
-            }), (0, i.jsx)(s.default, {
+            }), (0, i.jsx)(a.default, {
                 className: l.linkIcon
             })]
         }) : null
@@ -62,7 +62,7 @@ function(e, t, n) {
                     data: n
                 }, "external-link+".concat(t))
             }),
-            a = t.some(e => {
+            s = t.some(e => {
                 let {
                     data: t
                 } = e;
@@ -70,7 +70,7 @@ function(e, t, n) {
             });
         return (0, i.jsxs)("div", {
             className: l.linksContainer,
-            children: [!a && (0, i.jsx)(r.Heading, {
+            children: [!s && (0, i.jsx)(r.Heading, {
                 variant: "heading-sm/semibold",
                 color: "header-secondary",
                 className: l.header,

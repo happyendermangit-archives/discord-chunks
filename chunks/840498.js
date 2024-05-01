@@ -11,13 +11,13 @@ function(e, t, n) {
                 };
                 if (Array.isArray(t)) {
                     let r = t.length;
-                    for (let a = 0; a < r; a++) {
-                        let r = e(t[a], n);
+                    for (let s = 0; s < r; s++) {
+                        let r = e(t[s], n);
                         if (r === i) {
-                            t.length = a;
+                            t.length = s;
                             break
                         }
-                        t[a] = r
+                        t[s] = r
                     }
                 } else if ("text" !== t.type) {
                     if (n.limit -= 1, n.limit <= 0) return i;
@@ -32,7 +32,7 @@ function(e, t, n) {
                 if (Array.isArray(t)) {
                     let i = t.length,
                         r = [];
-                    for (let a = 0; a < i; a++) ! function(e, t) {
+                    for (let s = 0; s < i; s++) ! function(e, t) {
                         if (Array.isArray(t)) {
                             let {
                                 length: n
@@ -41,7 +41,7 @@ function(e, t, n) {
                             return
                         }
                         e.push(t)
-                    }(r, e(t[a], n));
+                    }(r, e(t[s], n));
                     return r
                 }
                 return (null != t.content && (t.content = e(t.content, t)), null != n && t.type === n.type) ? t.content : t

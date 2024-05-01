@@ -7,9 +7,9 @@ function(e, t, n) {
     });
     var i = n("924826"),
         r = n("442837"),
-        a = n("607070");
+        s = n("607070");
 
-    function s() {
+    function a() {
         return Promise.resolve()
     }
 
@@ -19,14 +19,14 @@ function(e, t, n) {
     }
 
     function l(e, t) {
-        let n = (0, r.useStateFromStores)([a.default], () => a.default.keyboardModeEnabled);
+        let n = (0, r.useStateFromStores)([s.default], () => s.default.keyboardModeEnabled);
         return (0, i.default)({
             id: e,
             isEnabled: n,
             orientation: t,
             setFocus: o,
-            scrollToStart: s,
-            scrollToEnd: s
+            scrollToStart: a,
+            scrollToEnd: a
         })
     }
 }

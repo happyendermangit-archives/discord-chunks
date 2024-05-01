@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("207470"),
         l = n("481060"),
         u = n("40851"),
@@ -32,7 +32,7 @@ function(e, t, n) {
         let {
             editorRef: n,
             options: r,
-            iconClassName: a,
+            iconClassName: s,
             dividerClassName: o
         } = e, l = null === (t = n.current) || void 0 === t ? void 0 : t.getSlateEditor();
         return null == l ? null : (0, i.jsxs)("div", {
@@ -41,39 +41,39 @@ function(e, t, n) {
                 slateEditor: l,
                 markdownSyntax: "bold",
                 children: (0, i.jsx)(_.default, {
-                    className: s()(O.icon, a)
+                    className: a()(O.icon, s)
                 })
             }), (0, i.jsx)(C, {
                 slateEditor: l,
                 markdownSyntax: "italics",
                 children: (0, i.jsx)(E.default, {
-                    className: s()(O.icon, a)
+                    className: a()(O.icon, s)
                 })
             }), (0, i.jsx)(C, {
                 slateEditor: l,
                 markdownSyntax: "strikethrough",
                 children: (0, i.jsx)(T.default, {
-                    className: s()(O.icon, a)
+                    className: a()(O.icon, s)
                 })
             }), (0, i.jsx)("div", {
-                className: s()(O.divider, o)
+                className: a()(O.divider, o)
             }), !(null == r ? void 0 : r.disableBlockQuotes) && (0, i.jsx)(g, {
                 slateEditor: l,
                 blockType: "blockQuote",
                 children: (0, i.jsx)(d.default, {
-                    className: s()(O.icon, a)
+                    className: a()(O.icon, s)
                 })
             }), (0, i.jsx)(C, {
                 slateEditor: l,
                 markdownSyntax: "inlineCode",
                 children: (0, i.jsx)(c.default, {
-                    className: s()(O.icon, a)
+                    className: a()(O.icon, s)
                 })
             }), (0, i.jsx)(C, {
                 slateEditor: l,
                 markdownSyntax: "spoiler",
                 children: (0, i.jsx)(I.default, {
-                    className: s()(O.icon, a)
+                    className: a()(O.icon, s)
                 })
             })]
         })
@@ -84,15 +84,15 @@ function(e, t, n) {
             slateEditor: t,
             markdownSyntax: n,
             children: r
-        } = e, a = !1;
+        } = e, s = !1;
         if ((null == t ? void 0 : t.selection) != null) {
             let [e, i] = N.RangeUtils.edges(t.selection);
-            a = null != (0, A.parseSelectedSyntax)(t, e, i).before[n]
+            s = null != (0, A.parseSelectedSyntax)(t, e, i).before[n]
         }
         return (0, i.jsx)(l.Button, {
             className: O.button,
             innerClassName: O.buttonInner,
-            color: a ? O.active : O.inactive,
+            color: s ? O.active : O.inactive,
             hover: O.hover,
             look: l.Button.Looks.FILLED,
             size: l.Button.Sizes.NONE,
@@ -108,11 +108,11 @@ function(e, t, n) {
             blockType: t,
             slateEditor: n,
             children: r
-        } = e, a = null != n ? N.EditorUtils.getCurrentBlock(n) : null, s = null != a && N.NodeUtils.isType(a[0], t);
+        } = e, s = null != n ? N.EditorUtils.getCurrentBlock(n) : null, a = null != s && N.NodeUtils.isType(s[0], t);
         return (0, i.jsx)(l.Button, {
             className: O.button,
             innerClassName: O.buttonInner,
-            color: s ? O.active : O.inactive,
+            color: a ? O.active : O.inactive,
             hover: O.hover,
             look: l.Button.Looks.FILLED,
             size: l.Button.Sizes.NONE,
@@ -127,22 +127,22 @@ function(e, t, n) {
         var t;
         let {
             slateEditor: n
-        } = e, [i, a] = null !== (t = N.EditorUtils.getSelectedVoid(n)) && void 0 !== t ? t : [null, null], s = r.useCallback(e => {
-            if ((null == n ? void 0 : n.selection) == null || null == a) return;
+        } = e, [i, s] = null !== (t = N.EditorUtils.getSelectedVoid(n)) && void 0 !== t ? t : [null, null], a = r.useCallback(e => {
+            if ((null == n ? void 0 : n.selection) == null || null == s) return;
             let t = n.selection;
             h.HistoryUtils.withSingleEntry(n, () => {
-                m.SlateTransforms.voidToText(n, e, a), m.SlateTransforms.select(n, t)
+                m.SlateTransforms.voidToText(n, e, s), m.SlateTransforms.select(n, t)
             })
-        }, [n, a]);
+        }, [n, s]);
         return null == i ? null : (0, p.default)(i, {
-            replace: s
+            replace: a
         })
     }
     t.default = r.forwardRef(function(e, t) {
         var n;
         let {
-            editorRef: a,
-            containerRef: s,
+            editorRef: s,
+            containerRef: a,
             options: l
         } = e, d = r.useRef(null), [_, c] = r.useState(!1), E = r.useRef(), I = r.useContext(u.default), T = r.useCallback(() => {
             c(!1), clearTimeout(E.current)
@@ -160,12 +160,12 @@ function(e, t, n) {
                     clearTimeout(E.current), E.current = setTimeout(() => {
                         var t;
                         let n = null === (t = (0, S.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement,
-                            r = s.current;
+                            r = a.current;
                         c(i || null != n && null != r && r.contains(n))
                     }, 100)
                 }
             } else T()
-        }, [I, s, T]);
+        }, [I, a, T]);
         r.useImperativeHandle(t, () => ({
             hide: T
         }), [T]), r.useEffect(() => {
@@ -179,7 +179,7 @@ function(e, t, n) {
             y: p
         } = r.useMemo(() => {
             var e, t, n, i;
-            let r = null === (e = a.current) || void 0 === e ? void 0 : e.getSlateEditor();
+            let r = null === (e = s.current) || void 0 === e ? void 0 : e.getSlateEditor();
             if ((null == r ? void 0 : r.selection) == null || N.RangeUtils.isCollapsed(r.selection) || !_) return {
                 x: null,
                 y: null
@@ -202,18 +202,18 @@ function(e, t, n) {
                 S = c.x === I.x,
                 h = S ? f.x : Math.min(c.x, I.x),
                 A = S ? f.x + f.width : Math.max(c.x, I.x),
-                m = null !== (i = null === (n = s.current) || void 0 === n ? void 0 : null === (t = n.getBoundingClientRect()) || void 0 === t ? void 0 : t.y) && void 0 !== i ? i : 0;
+                m = null !== (i = null === (n = a.current) || void 0 === n ? void 0 : null === (t = n.getBoundingClientRect()) || void 0 === t ? void 0 : t.y) && void 0 !== i ? i : 0;
             return {
                 x: h + (A - h) / 2,
                 y: Math.max(m, Math.min(I.y, c.y))
             }
-        }, [s, _, a]), [C, g] = r.useState(0), [v, D] = r.useState(0);
+        }, [a, _, s]), [C, g] = r.useState(0), [v, D] = r.useState(0);
         if (r.useLayoutEffect(() => {
                 if (null == m || null == p || null == d.current) return;
                 let e = d.current.getBoundingClientRect();
                 D(e.width / 2), g(e.height + 12)
             }, [m, p]), null == m || null == p) return null;
-        let M = null === (n = a.current) || void 0 === n ? void 0 : n.getSlateEditor();
+        let M = null === (n = s.current) || void 0 === n ? void 0 : n.getSlateEditor();
         return null == M ? null : (0, i.jsx)(f.default, {
             children: (0, i.jsxs)("div", {
                 id: "slate-toolbar",
@@ -232,7 +232,7 @@ function(e, t, n) {
                 children: [(0, i.jsx)(L, {
                     slateEditor: M
                 }), (0, i.jsx)(R, {
-                    editorRef: a,
+                    editorRef: s,
                     options: l
                 })]
             })

@@ -13,8 +13,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        a = n("906732"),
-        s = n("221292");
+        s = n("906732"),
+        a = n("221292");
     let o = r.createContext({}),
         l = e => {
             let {
@@ -28,7 +28,7 @@ function(e, t, n) {
                 shouldTrackViewOnMount: E = !0
             } = e, {
                 analyticsLocations: I
-            } = (0, a.default)(), T = r.useMemo(() => ({
+            } = (0, s.default)(), T = r.useMemo(() => ({
                 layout: n,
                 userId: l,
                 guildId: u,
@@ -37,7 +37,7 @@ function(e, t, n) {
                 roleId: c
             }), [n, l, u, d, _, c]);
             return r.useEffect(() => {
-                E && null != n && null != l && (0, s.trackUserProfileAction)({
+                E && null != n && null != l && (0, a.trackUserProfileAction)({
                     action: "VIEW",
                     layout: n,
                     userId: l,
@@ -55,13 +55,13 @@ function(e, t, n) {
         u = e => {
             let {
                 analyticsLocations: t
-            } = (0, a.default)();
+            } = (0, s.default)();
             return r.useCallback(n => {
                 let {
                     layout: i,
                     userId: r
                 } = e;
-                null != i && null != r && (0, s.trackUserProfileAction)({
+                null != i && null != r && (0, a.trackUserProfileAction)({
                     analyticsLocations: t,
                     layout: i,
                     userId: r,

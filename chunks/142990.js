@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("789020");
     var i = n("735250"),
         r = n("470079"),
-        a = n("865427"),
-        s = n("853425"),
+        s = n("865427"),
+        a = n("853425"),
         o = n("830121");
     let l = RegExp("^" + o.DEVLINK_REGEX.source, o.DEVLINK_REGEX.flags);
 
@@ -21,11 +21,11 @@ function(e, t, n) {
             }),
             react: (e, t, n) => {
                 let o = e.target[0];
-                return (0, a.isManualBuildOverrideLink)(o) ? (0, i.jsxs)(i.Fragment, {
+                return (0, s.isManualBuildOverrideLink)(o) ? (0, i.jsxs)(i.Fragment, {
                     children: [(0, i.jsx)("span", {
                         children: o
                     }), (0, i.jsx)(r.Fragment, {
-                        children: (0, i.jsx)(s.default, {
+                        children: (0, i.jsx)(a.default, {
                             url: o
                         }, o)
                     }, n.key)]

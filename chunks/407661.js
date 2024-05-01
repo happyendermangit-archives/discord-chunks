@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("442837"),
         l = n("481060"),
         u = n("367907"),
@@ -28,12 +28,12 @@ function(e, t, n) {
         let {
             channel: t,
             message: n,
-            replyChainLength: a
+            replyChainLength: s
         } = e;
         return r.useEffect(() => {
             (0, u.trackWithMetadata)(h.AnalyticEvents.THREAD_NUDGE_SHOWN, {
                 type: "Reply Chain (".concat(3, ")"),
-                reply_chain_length: a + 1,
+                reply_chain_length: s + 1,
                 channel_id: t.id,
                 guild_id: t.guild_id
             })
@@ -53,7 +53,7 @@ function(e, t, n) {
                 className: m.text,
                 variant: "text-sm/normal",
                 children: A.default.Messages.THREAD_REPLY_SUGGESTION.format({
-                    count: Math.min(10, a + 1)
+                    count: Math.min(10, s + 1)
                 })
             }), (0, i.jsx)(l.Text, {
                 color: "text-link",
@@ -70,14 +70,14 @@ function(e, t, n) {
             chatInputType: n
         } = e, {
             channel: r,
-            message: a,
+            message: s,
             shouldMention: u,
             showMentionToggle: I
         } = t, {
             nick: p,
             colorString: O,
             colorRoleName: R
-        } = (0, d.default)(a), C = function(e, t) {
+        } = (0, d.default)(s), C = function(e, t) {
             let n = e.id,
                 i = t.id;
             return (0, o.useStateFromStores)([T.default], () => {
@@ -89,7 +89,7 @@ function(e, t, n) {
                 }
                 return 10
             }, [n, i])
-        }(r, a), g = (0, E.useCanStartPublicThread)(r, a), L = n.showThreadPromptOnReply && C >= 2 && g;
+        }(r, s), g = (0, E.useCanStartPublicThread)(r, s), L = n.showThreadPromptOnReply && C >= 2 && g;
 
         function v(e) {
             e.stopPropagation(), (0, _.setPendingReplyShouldMention)(r.id, !u)
@@ -101,7 +101,7 @@ function(e, t, n) {
                 children: [(0, i.jsxs)("div", {
                     className: m.replyBar,
                     children: [(0, i.jsx)(l.Clickable, {
-                        onClick: () => (0, c.transitionTo)(h.Routes.CHANNEL(r.getGuildId(), r.id, a.id)),
+                        onClick: () => (0, c.transitionTo)(h.Routes.CHANNEL(r.getGuildId(), r.id, s.id)),
                         focusProps: {
                             offset: {
                                 top: -8,
@@ -112,7 +112,7 @@ function(e, t, n) {
                         },
                         children: (0, i.jsx)(l.Text, {
                             color: "header-secondary",
-                            className: s()(m.text, m.replyLabel),
+                            className: a()(m.text, m.replyLabel),
                             variant: "text-sm/normal",
                             children: A.default.Messages.REPLYING_TO.format({
                                 userHook: (e, t) => (0, i.jsx)(l.NameWithRole, {
@@ -133,7 +133,7 @@ function(e, t, n) {
                                         onMouseEnter: t,
                                         onMouseLeave: n,
                                         onFocus: r,
-                                        onBlur: a
+                                        onBlur: s
                                     } = e;
                                     return (0, i.jsx)(l.Clickable, {
                                         role: "switch",
@@ -142,7 +142,7 @@ function(e, t, n) {
                                         onMouseEnter: t,
                                         onMouseLeave: n,
                                         onFocus: r,
-                                        onBlur: a,
+                                        onBlur: s,
                                         children: (0, i.jsxs)(l.Text, {
                                             variant: "text-sm/bold",
                                             color: u ? "text-link" : "text-muted",
@@ -170,7 +170,7 @@ function(e, t, n) {
                     })]
                 }), L && (0, i.jsx)(N, {
                     channel: r,
-                    message: a,
+                    message: s,
                     replyChainLength: C
                 })]
             })

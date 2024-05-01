@@ -2,14 +2,14 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return a
+            return s
         }
     });
     var i = n("735250");
     n("470079");
     var r = n("676161");
 
-    function a(e) {
+    function s(e) {
         let {
             channel: t,
             commands: n

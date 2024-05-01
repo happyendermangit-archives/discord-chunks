@@ -8,17 +8,17 @@ function(e, t, n) {
             return r.default
         },
         useListNavigator: function() {
-            return a.default
+            return s.default
         },
         useMenuNavigator: function() {
-            return s.default
+            return a.default
         }
     });
     var i = n("536895"),
         r = n("566064");
     n.es(r, t);
-    var a = n("837969");
-    n.es(a, t);
-    var s = n("498405");
-    n.es(s, t)
+    var s = n("837969");
+    n.es(s, t);
+    var a = n("498405");
+    n.es(a, t)
 }

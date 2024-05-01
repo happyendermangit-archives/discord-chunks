@@ -8,8 +8,8 @@ function(e, t, n) {
             return h
         }
     }), n("47120"), n("411104"), n("177593");
-    var i, r, a = n("874141"),
-        s = n.n(a),
+    var i, r, s = n("874141"),
+        a = n.n(s),
         o = n("565925"),
         l = n.n(o),
         u = n("839548"),
@@ -74,8 +74,8 @@ function(e, t, n) {
             if (null != t.capture && null != t.capture.width && null != t.capture.height && null != e.remoteSinkWantsPixelCount && 0 !== e.remoteSinkWantsPixelCount && 0 !== t.capture.height) {
                 let i = t.capture.width / t.capture.height,
                     r = Math.sqrt(e.remoteSinkWantsPixelCount * i),
-                    a = t.capture.width / r;
-                n = a < 1 ? void 0 : a
+                    s = t.capture.width / r;
+                n = s < 1 ? void 0 : s
             }
             this.logger.info("BaseWebRTCConnection.updateVideoQuality: resolutionScaleFactor: ".concat(n, ", ") + "encodingVideoWidth: ".concat(e.encodingVideoWidth, ", remoteSinkWantsMaxFramerate: ").concat(e.remoteSinkWantsMaxFramerate, ", ") + "encodingVideoMaxBitRate: ".concat(e.encodingVideoMaxBitRate, ", localWant: ").concat(this.getLocalWant())), this.setVideoEncoderParameters([{
                 parameter: 1,
@@ -88,16 +88,16 @@ function(e, t, n) {
                 value: e.remoteSinkWantsMaxFramerate
             }]);
             let r = e.encodingVideoWidth,
-                a = e.encodingVideoHeight;
+                s = e.encodingVideoHeight;
             for (let e of i.getTracks()) {
-                var s, o;
+                var a, o;
                 let t = e.getConstraints(),
-                    n = null === (s = t.width) || void 0 === s ? void 0 : s.max,
+                    n = null === (a = t.width) || void 0 === a ? void 0 : a.max,
                     i = null === (o = t.height) || void 0 === o ? void 0 : o.max;
-                (n !== r || i !== a) && (this.logger.info("BaseWebRTCConnection.updateVideoQuality: old: ".concat(n, " x ").concat(i, ", new: ").concat(r, " x ").concat(a)), t.width = {
+                (n !== r || i !== s) && (this.logger.info("BaseWebRTCConnection.updateVideoQuality: old: ".concat(n, " x ").concat(i, ", new: ").concat(r, " x ").concat(s)), t.width = {
                     max: r
                 }, t.height = {
-                    max: a
+                    max: s
                 }, e.applyConstraints(t))
             }
         }
@@ -137,7 +137,7 @@ function(e, t, n) {
             })
         }
         recalculatePrioritySpeakers() {
-            this.prioritySpeakers = new Set(Array.from(this.wantsPriority).filter(e => this.canHavePriority.has(e))), s()(this.outputs, (e, t) => {
+            this.prioritySpeakers = new Set(Array.from(this.wantsPriority).filter(e => this.canHavePriority.has(e))), a()(this.outputs, (e, t) => {
                 e.volume = this.computeLocalVolume(t)
             })
         }

@@ -5,7 +5,7 @@ function(e, t, n) {
             return r
         },
         clearReactionPickerAnimation: function() {
-            return a
+            return s
         }
     });
     var i = n("570140");
@@ -20,7 +20,7 @@ function(e, t, n) {
         })
     }
 
-    function a(e, t, n) {
+    function s(e, t, n) {
         i.default.dispatch({
             type: "BURST_REACTION_PICKER_ANIMATION_CLEAR",
             messageId: e,

@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("411104"), n("47120");
     var i = n("274616"),
         r = n("710845"),
-        a = n("893988"),
-        s = n("812967"),
+        s = n("893988"),
+        a = n("812967"),
         o = n("314897"),
         l = n("757266"),
         u = n("906467"),
@@ -81,13 +81,13 @@ function(e, t, n) {
         })
     }
     t.default = {
-        waitSubscribed: (e, t) => new Promise((n, i) => R(() => s.default.isSubscribed(e, t), n, i)),
+        waitSubscribed: (e, t) => new Promise((n, i) => R(() => a.default.isSubscribed(e, t), n, i)),
         waitConnected(e) {
             return new Promise(R.bind(this, () => l.default.isConnected(e)))
         },
         isLaunchable: e => O(N(e)).then(e => null != e).catch(() => !1),
         launch: e => O(N(e)).then(C),
-        launchDispatchApplication(e, t, n, r, s) {
+        launchDispatchApplication(e, t, n, r, a) {
             let {
                 launchOptions: l,
                 defaultLaunchOptionId: u,
@@ -98,8 +98,8 @@ function(e, t, n) {
                 shouldPatch: S
             } = e;
             if (null == l || null == u || null == c) throw Error("Couldn't construct launchable for ".concat(e.applicationId));
-            null == s && (s = u);
-            let h = l[s];
+            null == a && (a = u);
+            let h = l[a];
             if (null == h) throw Error("Couldn't construct launchable for ".concat(e.applicationId, ". No launch option."));
             return (0, i.fetchBranches)([I]).then(e => {
                 let t = e[0];
@@ -109,7 +109,7 @@ function(e, t, n) {
                 } = t;
                 if (S && n !== f) return Promise.reject(Error("live build id changed"))
             }).then(() => _.default.runLaunchSetup(E, I)).then(() => {
-                let e = (0, a.default)(c),
+                let e = (0, s.default)(c),
                     i = {
                         DISCORD_INSTANCE_ID: d.default.getId().toString(),
                         DISCORD_ACCESS_TOKEN: null != t ? t : "",
@@ -126,11 +126,11 @@ function(e, t, n) {
         }) : Promise.resolve(!1),
         createShortcuts(e, t, n, i, r) {
             if (null == r || !(0, c.isWindows)()) return Promise.resolve(!1);
-            let a = "discord:///library/".concat(i, "/launch"),
-                s = "".concat(r, "\\icon.ico");
+            let s = "discord:///library/".concat(i, "/launch"),
+                a = "".concat(r, "\\icon.ico");
             return m().then(i => {
                 var r, o;
-                return null !== (o = null === (r = i.createShortcuts) || void 0 === r ? void 0 : r.call(i, e, t, n, a, s)) && void 0 !== o && o
+                return null !== (o = null === (r = i.createShortcuts) || void 0 === r ? void 0 : r.call(i, e, t, n, s, a)) && void 0 !== o && o
             })
         },
         isGameLaunchable: e => O({

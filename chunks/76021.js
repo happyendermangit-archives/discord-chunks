@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("481060"),
-        a = n("872810"),
-        s = n("451467"),
+        s = n("872810"),
+        a = n("451467"),
         o = n("174609"),
         l = n("928518"),
         u = n("120522"),
@@ -36,7 +36,7 @@ function(e, t, n) {
         }), (0, d.shouldFetchPerksDemos)() && ((0, u.fetchPerksDemos)(), (0, _.preloadPremiumStreamingEffectImage)());
         else {
             var m;
-            let n = (0, s.default)(S.ApplicationStreamPresets.PRESET_CUSTOM, S.ApplicationStreamResolutions.RESOLUTION_1080, S.ApplicationStreamFPS.FPS_30, I.default.getCurrentUser(), null === (m = c.default.getGuild(e)) || void 0 === m ? void 0 : m.premiumTier) ? {
+            let n = (0, a.default)(S.ApplicationStreamPresets.PRESET_CUSTOM, S.ApplicationStreamResolutions.RESOLUTION_1080, S.ApplicationStreamFPS.FPS_30, I.default.getCurrentUser(), null === (m = c.default.getGuild(e)) || void 0 === m ? void 0 : m.premiumTier) ? {
                 width: 1920,
                 height: 1080
             } : {
@@ -44,7 +44,7 @@ function(e, t, n) {
                 height: 720
             };
             E.default.getMediaEngine().getDesktopSource(n, !0).then(n => {
-                (0, a.startStream)(e, t, {
+                (0, s.startStream)(e, t, {
                     pid: null,
                     sourceId: n,
                     sourceName: null

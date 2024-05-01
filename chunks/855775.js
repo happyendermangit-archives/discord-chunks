@@ -6,7 +6,7 @@ function(e, t, n) {
             return c
         }
     }), n("47120");
-    var a, s, o, l, u = n("442837"),
+    var s, a, o, l, u = n("442837"),
         d = n("570140"),
         _ = n("981631");
     let c = "no_payment_source",
@@ -29,7 +29,7 @@ function(e, t, n) {
     function v(e) {
         null != i && null != A ? i(A) : null != r && r(e), i = null, r = null
     }
-    class D extends(a = u.default.Store) {
+    class D extends(s = u.default.Store) {
         getPricesForSku(e) {
             return h[e]
         }
@@ -71,12 +71,12 @@ function(e, t, n) {
             return L.has(e)
         }
     }
-    l = "SKUPaymentModalStore", (o = "displayName") in(s = D) ? Object.defineProperty(s, o, {
+    l = "SKUPaymentModalStore", (o = "displayName") in(a = D) ? Object.defineProperty(a, o, {
         value: l,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : s[o] = l, t.default = new D(d.default, {
+    }) : a[o] = l, t.default = new D(d.default, {
         SKU_PURCHASE_MODAL_OPEN: function(e) {
             v(), E = e.skuId, T = e.applicationId, O = e.isIAP, f = e.analyticsLocation, g = e.context, C = e.isGift, R = !0, p = !1, i = e.resolve, r = e.reject, N = null, A = null, S = e.promotionId
         },

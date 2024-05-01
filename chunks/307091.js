@@ -7,16 +7,16 @@ function(e, t, n) {
     });
     var i = n("307643"),
         r = n("973616"),
-        a = n("592125"),
-        s = n("566620"),
+        s = n("592125"),
+        a = n("566620"),
         o = n("969345");
     async function l(e, t) {
         var n;
-        let l = null === (n = a.default.getChannel(t)) || void 0 === n ? void 0 : n.guild_id,
+        let l = null === (n = s.default.getChannel(t)) || void 0 === n ? void 0 : n.guild_id,
             {
                 activityConfigs: u,
                 applications: d
-            } = await (0, s.fetchShelf)({
+            } = await (0, a.fetchShelf)({
                 guildId: l
             }),
             _ = (0, o.default)({

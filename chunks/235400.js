@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("979554"),
-        s = n("442837"),
+        s = n("979554"),
+        a = n("442837"),
         o = n("481060"),
         l = n("100527"),
         u = n("906732"),
@@ -34,8 +34,8 @@ function(e, t, n) {
         let {
             user: t,
             categories: n,
-            purchases: a,
-            analyticsLocations: s,
+            purchases: s,
+            analyticsLocations: a,
             onClose: u,
             initialSelectedDecoration: E,
             initialSelectedDecorationId: S,
@@ -46,26 +46,26 @@ function(e, t, n) {
             setPendingAvatarDecoration: v,
             savedAvatarDecoration: D
         } = (0, f.default)({
-            analyticsLocations: s,
+            analyticsLocations: a,
             isTryItOut: h,
             guildId: null == O ? void 0 : O.id
         }), [M, y] = r.useState(() => {
             var e, t;
             if (null != E) return E;
-            let i = (0, _.getAvatarDecorations)(a, n);
+            let i = (0, _.getAvatarDecorations)(s, n);
             return null != S ? null !== (e = i.find(e => e.id === S)) && void 0 !== e ? e : null : void 0 !== L ? L : null == D ? null : null !== (t = i.find(e => (0, m.isEqualAvatarDecoration)(e, D))) && void 0 !== t ? t : null
         }), {
             product: P,
             purchase: U
-        } = (0, c.default)(null == M ? void 0 : M.skuId), b = A.default.canUseCollectibles(t), G = r.useRef(null), w = (0, I.default)(s), B = (0, m.isEqualAvatarDecoration)(M, void 0 === L ? D : L), k = () => {
+        } = (0, c.default)(null == M ? void 0 : M.skuId), b = A.default.canUseCollectibles(t), G = r.useRef(null), w = (0, I.default)(a), B = (0, m.isEqualAvatarDecoration)(M, void 0 === L ? D : L), k = () => {
             v(M), u()
         }, V = r.useCallback(e => {
             u(), (0, d.openCollectiblesShop)({
-                analyticsLocations: s,
+                analyticsLocations: a,
                 analyticsSource: l.default.EDIT_AVATAR_DECORATION_MODAL,
                 initialProductSkuId: e
             })
-        }, [s, u]);
+        }, [a, u]);
         return (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsxs)(o.ModalHeader, {
                 separator: !1,
@@ -128,7 +128,7 @@ function(e, t, n) {
             initialSelectedDecorationId: T,
             isTryItOutFlow: f,
             guild: A
-        } = e, m = (0, s.useStateFromStores)([S.default], () => S.default.getCurrentUser()), {
+        } = e, m = (0, a.useStateFromStores)([S.default], () => S.default.getCurrentUser()), {
             analyticsLocations: N
         } = (0, u.default)(n, l.default.EDIT_AVATAR_DECORATION_MODAL), {
             categories: p,
@@ -144,7 +144,7 @@ function(e, t, n) {
         }, [N]), r.useEffect(() => () => {
             (0, d.setCollectiblesCategoryItemsViewed)({
                 categories: [...p.values()],
-                itemTypes: [a.CollectiblesItemType.AVATAR_DECORATION]
+                itemTypes: [s.CollectiblesItemType.AVATAR_DECORATION]
             })
         }, [p]), null == m ? null : (0, i.jsx)(u.AnalyticsLocationProvider, {
             value: N,

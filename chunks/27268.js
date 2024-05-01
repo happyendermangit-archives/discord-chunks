@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("481060"),
         l = n("278297"),
         u = n("897353"),
@@ -19,20 +19,20 @@ function(e, t, n) {
         let {
             onPlay: t,
             className: n,
-            inactive: a
+            inactive: s
         } = e, c = r.useRef(null), E = (0, i.jsx)("div", {
             className: _.iconWrapper,
             ref: c,
             children: (0, i.jsx)(u.default, {
-                className: s()(_.icon)
+                className: a()(_.icon)
             })
         });
         return (0, i.jsx)(l.MessagesInteractionContext.Consumer, {
-            children: e => a || null == t ? (0, i.jsx)("div", {
+            children: e => s || null == t ? (0, i.jsx)("div", {
                 className: _.cover,
                 children: E
             }) : (0, i.jsx)(o.Clickable, {
-                className: s()(n, _.cover, {
+                className: a()(n, _.cover, {
                     [_.active]: !e.disableInteractions
                 }),
                 onClick: t,

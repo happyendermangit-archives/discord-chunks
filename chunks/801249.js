@@ -2,8 +2,8 @@ function(e, t, n) {
     "use strict";
     let i;
     n.r(t);
-    var r, a = n("442837"),
-        s = n("570140");
+    var r, s = n("442837"),
+        a = n("570140");
 
     function o(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
@@ -16,7 +16,7 @@ function(e, t, n) {
     let l = {
         lastGuildDismissedTime: {}
     };
-    class u extends(r = a.default.DeviceSettingsStore) {
+    class u extends(r = s.default.DeviceSettingsStore) {
         initialize() {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l;
             i = e
@@ -28,7 +28,7 @@ function(e, t, n) {
             return i.lastGuildDismissedTime[e]
         }
     }
-    o(u, "displayName", "ApplicationSubscriptionChannelNoticeStore"), o(u, "persistKey", "ApplicationSubscriptionChannelNoticeStore"), t.default = new u(s.default, {
+    o(u, "displayName", "ApplicationSubscriptionChannelNoticeStore"), o(u, "persistKey", "ApplicationSubscriptionChannelNoticeStore"), t.default = new u(a.default, {
         APPLICATION_SUBSCRIPTIONS_CHANNEL_NOTICE_DISMISSED: function(e) {
             let {
                 guildId: t

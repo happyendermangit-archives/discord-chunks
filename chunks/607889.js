@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return a
+            return s
         }
     });
     var i = n("217942");
@@ -15,7 +15,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    class a {
+    class s {
         getCurrentValue() {
             if (null == this.animationDetails) return this.value;
             let e = performance.now() - this.animationDetails.animationStart,

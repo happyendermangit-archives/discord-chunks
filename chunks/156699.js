@@ -10,8 +10,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("149765"),
         r = n("668781"),
-        a = n("434404"),
-        s = n("430824"),
+        s = n("434404"),
+        a = n("430824"),
         o = n("745752"),
         l = n("45966"),
         u = n("637853"),
@@ -26,11 +26,11 @@ function(e, t, n) {
     }
     async function I(e, t, n) {
         var i;
-        let r = s.default.getGuild(e);
+        let r = a.default.getGuild(e);
         if (null == r) return !0;
-        let a = null != r && (null === (i = r.features) || void 0 === i ? void 0 : i.has(_.GuildFeatures.GUILD_ONBOARDING));
-        if (!a) return !0;
-        a && l.default.shouldFetchPrompts(e) && await (0, o.fetchOnboardingPrompts)(e);
+        let s = null != r && (null === (i = r.features) || void 0 === i ? void 0 : i.has(_.GuildFeatures.GUILD_ONBOARDING));
+        if (!s) return !0;
+        s && l.default.shouldFetchPrompts(e) && await (0, o.fetchOnboardingPrompts)(e);
         let c = l.default.getDefaultChannelIds(e),
             [E, I] = (0, u.getChattableDefaultChannels)(e, c);
         if (!c.includes(t)) return !0;
@@ -39,20 +39,20 @@ function(e, t, n) {
         return !T && !f
     }
     async function T(e, t, n) {
-        let s = e.getGuildId();
-        if (null == s) return !0;
+        let a = e.getGuildId();
+        if (null == a) return !0;
         null != n && (t = i.filter(t, i.invert(n)));
-        let o = e.permissionOverwrites[s],
+        let o = e.permissionOverwrites[a],
             l = null != o ? i.filter(o.deny, i.invert(o.allow)) : i.deserialize(0),
             u = {
                 removingView: i.has(t, _.Permissions.VIEW_CHANNEL) && !i.has(l, _.Permissions.VIEW_CHANNEL),
                 removingChat: !1
             };
-        return e.isForumLikeChannel() ? u.removingChat = i.has(t, _.Permissions.SEND_MESSAGES_IN_THREADS) && !i.has(l, _.Permissions.SEND_MESSAGES_IN_THREADS) : u.removingChat = i.has(t, _.Permissions.SEND_MESSAGES) && !i.has(l, _.Permissions.SEND_MESSAGES), !u.removingChat && !u.removingView || !!await I(s, e.id, u) || (r.default.show({
+        return e.isForumLikeChannel() ? u.removingChat = i.has(t, _.Permissions.SEND_MESSAGES_IN_THREADS) && !i.has(l, _.Permissions.SEND_MESSAGES_IN_THREADS) : u.removingChat = i.has(t, _.Permissions.SEND_MESSAGES) && !i.has(l, _.Permissions.SEND_MESSAGES), !u.removingChat && !u.removingView || !!await I(a, e.id, u) || (r.default.show({
             title: c.default.Messages.CANNOT_CHANGE_CHANNEL_PERMS,
             body: c.default.Messages.ONBOARDING_CHANNEL_THRESHOLD_WARNING.format({
                 onClick: () => {
-                    r.default.close(), a.default.open(s, _.GuildSettingsSections.ONBOARDING)
+                    r.default.close(), s.default.open(a, _.GuildSettingsSections.ONBOARDING)
                 }
             })
         }), !1)

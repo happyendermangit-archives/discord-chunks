@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("47120"), n("789020"), n("653041"), n("177593");
-    var i, r, a, s, o = n("392711"),
+    var i, r, s, a, o = n("392711"),
         l = n.n(o),
         u = n("442837"),
         d = n("570140"),
@@ -64,12 +64,12 @@ function(e, t, n) {
             channelId: n,
             messageId: i,
             userId: r,
-            emoji: a,
-            reactionType: s
+            emoji: s,
+            reactionType: a
         } = e, o = _.default.get(n);
         if (null == o || !(0, A.shouldApplyReaction)(e)) return !1;
         let l = O.default.getId() === r;
-        o = o.update(i, n => "MESSAGE_REACTION_ADD" === t ? n.addReaction(a, l, e.colors, s) : n.removeReaction(a, l, s)), _.default.commit(o)
+        o = o.update(i, n => "MESSAGE_REACTION_ADD" === t ? n.addReaction(s, l, e.colors, a) : n.removeReaction(s, l, a)), _.default.commit(o)
     }
 
     function H(e) {
@@ -78,12 +78,12 @@ function(e, t, n) {
             messageData: n
         } = e, {
             message: i
-        } = n, r = (0, c.getFailedMessageId)(n), a = i.channelId, s = _.default.getOrCreate(a);
-        if (!s.has(r)) return !1;
-        s = s.update(r, e => {
+        } = n, r = (0, c.getFailedMessageId)(n), s = i.channelId, a = _.default.getOrCreate(s);
+        if (!a.has(r)) return !1;
+        a = a.update(r, e => {
             var n;
             return (null === (n = e.embeds) || void 0 === n ? void 0 : n.filter(T.isNotAutomodEmbed).length) > 0 && (e = e.set("embeds", [])), "MESSAGE_SEND_FAILED_AUTOMOD" === t && (e = e.set("flags", (0, N.addFlag)(e.flags, b.MessageFlags.EPHEMERAL))), e
-        }), _.default.commit(s)
+        }), _.default.commit(a)
     }
     class Y extends(i = u.default.Store) {
         initialize() {
@@ -146,12 +146,12 @@ function(e, t, n) {
             return B
         }
     }
-    s = "MessageStore", (a = "displayName") in(r = Y) ? Object.defineProperty(r, a, {
-        value: s,
+    a = "MessageStore", (s = "displayName") in(r = Y) ? Object.defineProperty(r, s, {
+        value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[a] = s, t.default = new Y(d.default, {
+    }) : r[s] = a, t.default = new Y(d.default, {
         BACKGROUND_SYNC_CHANNEL_MESSAGES: function(e) {
             let {
                 changesByChannelId: t
@@ -181,8 +181,8 @@ function(e, t, n) {
                 isBefore: n,
                 isAfter: i,
                 jump: r,
-                hasMoreBefore: a,
-                hasMoreAfter: s,
+                hasMoreBefore: s,
+                hasMoreAfter: a,
                 messages: o,
                 isStale: l,
                 truncate: u
@@ -192,8 +192,8 @@ function(e, t, n) {
                 isBefore: n,
                 isAfter: i,
                 jump: r,
-                hasMoreBefore: a,
-                hasMoreAfter: s,
+                hasMoreBefore: s,
+                hasMoreAfter: a,
                 cached: l,
                 hasFetched: !0
             }), null != u && (n || i) && (!n || !i) && (d = d.truncate(n, i)), _.default.commit(d)
@@ -213,11 +213,11 @@ function(e, t, n) {
                 jump: n,
                 focus: i,
                 before: r,
-                after: a,
-                limit: s,
+                after: s,
+                limit: a,
                 truncate: o
             } = e, l = _.default.getOrCreate(t);
-            (null == n ? void 0 : n.present) ? l = l.jumpToPresent(s): (null == i ? void 0 : i.messageId) != null ? l = l.focusOnMessage(i.messageId) : (null == n ? void 0 : n.messageId) != null ? l = l.jumpToMessage(n.messageId, n.flash, n.offset, n.returnMessageId, n.jumpType) : (null != r || null != a) && (l = l.loadFromCache(null != r, s)), null != o && (null != r || null != a) && (null == r || null == a) && (l = l.truncate(null != r, null != a)), _.default.commit(l)
+            (null == n ? void 0 : n.present) ? l = l.jumpToPresent(a): (null == i ? void 0 : i.messageId) != null ? l = l.focusOnMessage(i.messageId) : (null == n ? void 0 : n.messageId) != null ? l = l.jumpToMessage(n.messageId, n.flash, n.offset, n.returnMessageId, n.jumpType) : (null != r || null != s) && (l = l.loadFromCache(null != r, a)), null != o && (null != r || null != s) && (null == r || null == s) && (l = l.truncate(null != r, null != s)), _.default.commit(l)
         },
         LOCAL_MESSAGES_LOADED: function(e) {
             let t = _.default.getOrCreate(e.channelId);
@@ -266,8 +266,8 @@ function(e, t, n) {
                 reason: i
             } = e, r = _.default.getOrCreate(t);
             if (null == r || !r.has(n)) return !1;
-            let a = r.get(n, !0);
-            r = (null == a ? void 0 : a.isPoll()) === !0 ? r.remove(n) : r.update(n, e => ((e = e.set("state", b.MessageStates.SEND_FAILED)).isCommandType() ? e = (e = e.set("interactionError", null != i ? i : "")).set("flags", (0, N.addFlag)(e.flags, b.MessageFlags.EPHEMERAL)) : null != i && (e = e.set("interactionError", null != i ? i : "")), e)), _.default.commit(r)
+            let s = r.get(n, !0);
+            r = (null == s ? void 0 : s.isPoll()) === !0 ? r.remove(n) : r.update(n, e => ((e = e.set("state", b.MessageStates.SEND_FAILED)).isCommandType() ? e = (e = e.set("interactionError", null != i ? i : "")).set("flags", (0, N.addFlag)(e.flags, b.MessageFlags.EPHEMERAL)) : null != i && (e = e.set("interactionError", null != i ? i : "")), e)), _.default.commit(r)
         },
         MESSAGE_SEND_FAILED_AUTOMOD: H,
         MESSAGE_EDIT_FAILED_AUTOMOD: H,

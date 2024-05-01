@@ -1,10 +1,10 @@
 function(e, t, n) {
     "use strict";
     n.r(t);
-    var i, r, a = n("735250");
+    var i, r, s = n("735250");
     n("470079");
-    var s = n("120356"),
-        o = n.n(s),
+    var a = n("120356"),
+        o = n.n(a),
         l = n("873546"),
         u = n("481060"),
         d = n("465670"),
@@ -19,25 +19,25 @@ function(e, t, n) {
             keybind: i,
             className: r
         } = e;
-        return (0, a.jsxs)("div", {
+        return (0, s.jsxs)("div", {
             className: o()(E.container, r),
-            children: [(0, a.jsx)(u.Clickable, {
+            children: [(0, s.jsx)(u.Clickable, {
                 className: o()(E.closeButton, {
                     [E.closeButtonBold]: "Bold" === n,
                     [E.closeButtonSolid]: "Solid" === n
                 }),
                 onClick: t,
                 "aria-label": c.default.Messages.CLOSE,
-                children: "Solid" === n ? (0, a.jsx)(_.default, {
+                children: "Solid" === n ? (0, s.jsx)(_.default, {
                     width: 24,
                     height: 24,
                     "aria-hidden": !0
-                }) : (0, a.jsx)(d.default, {
+                }) : (0, s.jsx)(d.default, {
                     width: 18,
                     height: 18,
                     "aria-hidden": !0
                 })
-            }), l.isMobile ? null : (0, a.jsx)("div", {
+            }), l.isMobile ? null : (0, s.jsx)("div", {
                 className: o()(E.keybind),
                 "aria-hidden": !0,
                 children: i

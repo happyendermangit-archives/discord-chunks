@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("399606"),
-        a = n("524437"),
-        s = n("481060"),
+        s = n("524437"),
+        a = n("481060"),
         o = n("596454"),
         l = n("607070"),
         u = n("605236"),
@@ -51,7 +51,7 @@ function(e, t, n) {
             isFavorite: L
         });
         let P = () => {
-                C(), (0, s.openModalLazy)(async () => {
+                C(), (0, a.openModalLazy)(async () => {
                     let {
                         default: e
                     } = await Promise.all([n.e("49237"), n.e("99387"), n.e("54626")]).then(n.bind(n, "355453"));
@@ -60,10 +60,10 @@ function(e, t, n) {
                     })
                 })
             },
-            U = (0, u.isDismissibleContentDismissed)(a.DismissibleContent.SOUNDBOARD_KEYBIND_TIP),
+            U = (0, u.isDismissibleContentDismissed)(s.DismissibleContent.SOUNDBOARD_KEYBIND_TIP),
             b = null != y && (0, A.isWindows)() && !U ? O.default.Messages.SOUNDBOARD_KEYBIND_HINT_NO_POPOUT_WHEEL_SUPPORT.format({
                 keybind: (0, m.toString)(y.shortcut, !0),
-                openSettingsHook: (e, t) => (0, i.jsx)(s.Anchor, {
+                openSettingsHook: (e, t) => (0, i.jsx)(a.Anchor, {
                     onClick: P,
                     children: e
                 }, t)
@@ -72,14 +72,14 @@ function(e, t, n) {
             className: R.keybindHint,
             children: [(0, i.jsx)(h.default, {
                 className: R.warningIcon
-            }), (0, i.jsx)(s.Text, {
+            }), (0, i.jsx)(a.Text, {
                 variant: "text-sm/medium",
                 color: "text-normal",
                 className: R.keybindHintText,
                 children: b
-            }), (0, i.jsx)(s.Clickable, {
+            }), (0, i.jsx)(a.Clickable, {
                 className: R.closeButton,
-                onClick: () => (0, u.markDismissibleContentAsDismissed)(a.DismissibleContent.SOUNDBOARD_KEYBIND_TIP),
+                onClick: () => (0, u.markDismissibleContentAsDismissed)(s.DismissibleContent.SOUNDBOARD_KEYBIND_TIP),
                 children: (0, i.jsx)(f.default, {
                     width: 16,
                     height: 16

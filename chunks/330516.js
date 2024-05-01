@@ -7,9 +7,9 @@ function(e, t, n) {
     });
     var i = n("424218"),
         r = n("186901"),
-        a = n("689938");
+        s = n("689938");
 
-    function s(e, t, n) {
+    function a(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -19,7 +19,7 @@ function(e, t, n) {
     }
     class o {
         get displayMessage() {
-            if (null == this.code) return a.default.Messages.NOTICE_DISPATCH_ERROR;
+            if (null == this.code) return s.default.Messages.NOTICE_DISPATCH_ERROR;
             let {
                 path: e
             } = this.context;
@@ -27,56 +27,56 @@ function(e, t, n) {
                 case r.DispatchErrorCodes.DISK_LOW:
                     let {
                         available: t, required: n
-                    } = this.context, s = (0, i.formatSize)(t, {
+                    } = this.context, a = (0, i.formatSize)(t, {
                         useKibibytes: !0
                     }), o = (0, i.formatSize)(n, {
                         useKibibytes: !0
                     });
-                    return a.default.Messages.NOTICE_DISPATCH_ERROR_DISK_LOW.format({
+                    return s.default.Messages.NOTICE_DISPATCH_ERROR_DISK_LOW.format({
                         required: o,
-                        available: s
+                        available: a
                     });
                 case r.DispatchErrorCodes.POST_INSTALL_FAILED:
                     let {
                         name: l
                     } = this.context;
-                    return a.default.Messages.NOTICE_DISPATCH_ERROR_POST_INSTALL_FAILED.format({
+                    return s.default.Messages.NOTICE_DISPATCH_ERROR_POST_INSTALL_FAILED.format({
                         name: l
                     });
                 case r.DispatchErrorCodes.FILE_NAME_TOO_LONG:
-                    return a.default.Messages.NOTICE_DISPATCH_ERROR_FILE_NAME_TOO_LONG;
+                    return s.default.Messages.NOTICE_DISPATCH_ERROR_FILE_NAME_TOO_LONG;
                 case r.DispatchErrorCodes.POST_INSTALL_CANCELLED:
-                    return a.default.Messages.NOTICE_DISPATCH_ERROR_POST_INSTALL_CANCELLED;
+                    return s.default.Messages.NOTICE_DISPATCH_ERROR_POST_INSTALL_CANCELLED;
                 case r.DispatchErrorCodes.IO_PERMISSION_DENIED:
-                    return a.default.Messages.NOTICE_DISPATCH_ERROR_IO_PERMISSION_DENIED;
+                    return s.default.Messages.NOTICE_DISPATCH_ERROR_IO_PERMISSION_DENIED;
                 case r.DispatchErrorCodes.NO_MANIFESTS:
-                    return a.default.Messages.NOTICE_DISPATCH_ERROR_NO_MANIFESTS;
+                    return s.default.Messages.NOTICE_DISPATCH_ERROR_NO_MANIFESTS;
                 case r.DispatchErrorCodes.NOT_ENTITLED:
-                    return a.default.Messages.NOTICE_DISPATCH_ERROR_NOT_ENTITLED;
+                    return s.default.Messages.NOTICE_DISPATCH_ERROR_NOT_ENTITLED;
                 case r.DispatchErrorCodes.NOT_DIRECTORY:
                 case r.DispatchErrorCodes.DISK_PERMISSION_DENIED:
-                    return a.default.Messages.NOTICE_DISPATCH_ERROR_UNWRITABLE.format({
+                    return s.default.Messages.NOTICE_DISPATCH_ERROR_UNWRITABLE.format({
                         path: e
                     });
                 case r.DispatchErrorCodes.INVALID_DRIVE:
-                    return a.default.Messages.NOTICE_DISPATCH_ERROR_INVALID_DRIVE.format({
+                    return s.default.Messages.NOTICE_DISPATCH_ERROR_INVALID_DRIVE.format({
                         path: e
                     });
                 case r.DispatchErrorCodes.APPLICATION_LOCK_FAILED:
-                    return a.default.Messages.NOTICE_DISPATCH_APPLICATION_LOCK_FAILED;
+                    return s.default.Messages.NOTICE_DISPATCH_APPLICATION_LOCK_FAILED;
                 case r.DispatchErrorCodes.DISK_FULL:
-                    return a.default.Messages.NOTICE_DISPATCH_ERROR_DISK_FULL;
+                    return s.default.Messages.NOTICE_DISPATCH_ERROR_DISK_FULL;
                 case r.DispatchErrorCodes.API_ERROR:
                 case r.DispatchErrorCodes.MAX_REQUEST_RETRIES_EXCEEDED:
-                    return a.default.Messages.NOTICE_DISPATCH_API_ERROR;
+                    return s.default.Messages.NOTICE_DISPATCH_API_ERROR;
                 default:
-                    return a.default.Messages.NOTICE_DISPATCH_ERROR_WITH_CODE.format({
+                    return s.default.Messages.NOTICE_DISPATCH_ERROR_WITH_CODE.format({
                         code: "".concat(this.code)
                     })
             }
         }
         constructor(e) {
-            s(this, "raw", void 0), s(this, "context", void 0), s(this, "code", void 0), s(this, "uuid", void 0), s(this, "applicationId", void 0), s(this, "branchId", void 0), this.raw = e, null != e.code && (this.code = e.code), null != e.uuid && (this.uuid = e.uuid), null != e.application_id && (this.applicationId = e.application_id), null != e.branch_id && (this.branchId = e.branch_id), null != e.context ? this.context = e.context : this.context = {}
+            a(this, "raw", void 0), a(this, "context", void 0), a(this, "code", void 0), a(this, "uuid", void 0), a(this, "applicationId", void 0), a(this, "branchId", void 0), this.raw = e, null != e.code && (this.code = e.code), null != e.uuid && (this.uuid = e.uuid), null != e.application_id && (this.applicationId = e.application_id), null != e.branch_id && (this.branchId = e.branch_id), null != e.context ? this.context = e.context : this.context = {}
         }
     }
 }

@@ -5,7 +5,7 @@ function(e, t, n) {
             return i
         },
         getPomeloEligibility: function() {
-            return a
+            return s
         },
         usePomeloEligibility: function() {
             return r
@@ -36,7 +36,7 @@ function(e, t, n) {
             });
             return e
         },
-        a = () => {
+        s = () => {
             let {
                 enabled: e
             } = i.getCurrentConfig({

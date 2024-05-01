@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("481060"),
         l = n("596454"),
         u = n("788307"),
@@ -20,7 +20,7 @@ function(e, t, n) {
         let {
             statusActivity: t,
             profileType: n,
-            animate: a = !0,
+            animate: s = !0,
             hideTooltip: E = !1
         } = e, [I, T] = r.useState(1), f = r.useCallback(e => {
             var t;
@@ -40,7 +40,7 @@ function(e, t, n) {
             }) : (0, i.jsx)(u.ActivityEmoji, {
                 className: c.statusEmojiOnly,
                 emoji: h,
-                animate: a,
+                animate: s,
                 hideTooltip: E
             }) : null,
             O = () => N ? (0, i.jsx)(o.Text, {
@@ -48,17 +48,17 @@ function(e, t, n) {
                 className: c.statusText,
                 children: m
             }) : null,
-            R = s()(c.positionStyle, {
+            R = a()(c.positionStyle, {
                 [c.biteSize]: n === _.UserProfileTypes.BITE_SIZE,
                 [c.fullSize]: n === _.UserProfileTypes.FULL_SIZE
             }),
-            C = s()(c.statusBubbleOuter, {
+            C = a()(c.statusBubbleOuter, {
                 [c.statusBubbleSingleLineEmojiOnlyShape]: 1 === I && !N,
                 [c.statusBubbleSingleLineWithTextShape]: 1 === I && N,
                 [c.statusBubbleMultiLineShape]: I > 1,
                 [c.statusBubbleOuterMaxLine]: I >= 3
             }),
-            g = s()(c.statusBubble, {
+            g = a()(c.statusBubble, {
                 [c.statusBubbleSingleLineEmojiOnlyShape]: 1 === I && !N,
                 [c.statusBubbleSingleLineWithTextShape]: 1 === I && N,
                 [c.statusBubbleMultiLineShape]: I > 1,
@@ -80,7 +80,7 @@ function(e, t, n) {
                 })
             })
         });
-        let L = s()({
+        let L = a()({
             [c.statusBubbleSingleLineEmojiOnlyBottomMargin]: 1 === I && !N,
             [c.statusBubbleSingleLineWithTextBottomMargin]: 1 === I && N,
             [c.statusBubbleMultiLineMaxLineBottomMargin]: I > 1

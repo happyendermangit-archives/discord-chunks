@@ -4,8 +4,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        a = n.n(r),
-        s = n("442837"),
+        s = n.n(r),
+        a = n("442837"),
         o = n("481060"),
         l = n("911969"),
         u = n("509545"),
@@ -27,7 +27,7 @@ function(e, t, n) {
             isGift: O = !1,
             variant: R,
             priceOptions: C
-        } = e, g = (0, E.usePremiumAnnualDiscountOffer)(), L = (0, I.usePremiumTrialOffer)(), v = (0, s.useStateFromStores)([u.default], () => u.default.isLoadedForPremiumSKUs()), D = (0, s.useStateFromStores)([d.default], () => d.default.getPremiumTypeSubscription()), {
+        } = e, g = (0, E.usePremiumAnnualDiscountOffer)(), L = (0, I.usePremiumTrialOffer)(), v = (0, a.useStateFromStores)([u.default], () => u.default.isLoadedForPremiumSKUs()), D = (0, a.useStateFromStores)([d.default], () => d.default.getPremiumTypeSubscription()), {
             annualInvoicePreview: M
         } = (0, T.useGetAnnualDiscountInvoicePreview)({
             priceOptions: null != C ? C : {
@@ -48,7 +48,7 @@ function(e, t, n) {
         return (0, i.jsx)(o.Heading, {
             color: "always-white",
             variant: null != R ? R : "heading-md/medium",
-            className: a()(h.pricePerInterval, p),
+            className: s()(h.pricePerInterval, p),
             children: null != U && null != y ? (0, i.jsxs)("div", {
                 className: h.annualDiscountString,
                 children: [S.default.Messages.BILLING_ANNUAL_DISCOUNT_TIER_CARD_YEARLY_PRICE.format({

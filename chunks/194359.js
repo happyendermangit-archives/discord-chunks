@@ -1,8 +1,8 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("47120");
-    var i, r, a = n("544891"),
-        s = n("780384"),
+    var i, r, s = n("544891"),
+        a = n("780384"),
         o = n("570140"),
         l = n("391650"),
         u = n("877215"),
@@ -24,7 +24,7 @@ function(e, t, n) {
         let {
             status: i,
             body: r
-        } = e, a = r && r.code;
+        } = e, s = r && r.code;
         switch (i) {
             case 429:
                 0 === t && A({
@@ -34,7 +34,7 @@ function(e, t, n) {
                 });
                 break;
             case 403:
-                if (a === S.AbortCodes.EMAIL_VERIFICATION_REQUIRED) {
+                if (s === S.AbortCodes.EMAIL_VERIFICATION_REQUIRED) {
                     A({
                         title: h.default.Messages.FRIEND_REQUEST_REQUIRES_EMAIL_VALIDATION_HEADER,
                         body: h.default.Messages.FRIEND_REQUEST_REQUIRES_EMAIL_VALIDATION_BODY,
@@ -46,10 +46,10 @@ function(e, t, n) {
                     break
                 }
             default:
-                if (a === S.AbortCodes.USER_QUARANTINED)(0, f.closeContextMenu)(), (0, d.default)();
-                else if ((0, _.isLimitedAccessErrorCode)(i, a)) break;
+                if (s === S.AbortCodes.USER_QUARANTINED)(0, f.closeContextMenu)(), (0, d.default)();
+                else if ((0, _.isLimitedAccessErrorCode)(i, s)) break;
                 else if (0 === t) {
-                    let e = null != n ? (0, E.humanizeAbortCode)(a || 0, n) : h.default.Messages.POMELO_ADD_FRIEND_ERROR;
+                    let e = null != n ? (0, E.humanizeAbortCode)(s || 0, n) : h.default.Messages.POMELO_ADD_FRIEND_ERROR;
                     A({
                         title: h.default.Messages.FRIEND_REQUEST_FAILED_HEADER,
                         body: e,
@@ -66,11 +66,11 @@ function(e, t, n) {
                 context: n,
                 captchaPayload: i,
                 errorUxConfig: r = 0
-            } = e, [s, o] = t.split("#");
-            return a.HTTP.post({
+            } = e, [a, o] = t.split("#");
+            return s.HTTP.post({
                 url: S.Endpoints.USER_RELATIONSHIPS(),
                 body: {
-                    username: s,
+                    username: a,
                     discriminator: parseInt(o),
                     ...i
                 },
@@ -85,15 +85,15 @@ function(e, t, n) {
                 userId: n,
                 context: i,
                 type: r,
-                friendToken: s,
+                friendToken: a,
                 fromFriendSuggestion: o,
                 captchaPayload: l
             } = e, u = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, d = c.default.getUser(n);
-            return a.HTTP.put({
+            return s.HTTP.put({
                 url: S.Endpoints.USER_RELATIONSHIP(n),
                 body: {
                     type: r,
-                    friend_token: s,
+                    friend_token: a,
                     from_friend_suggestion: o,
                     ...l
                 },
@@ -106,38 +106,38 @@ function(e, t, n) {
             })
         },
         acceptFriendRequest: e => N.addRelationship(e, function() {
-            s.AccessibilityAnnouncer.announce(h.default.Messages.A11Y_ANNOUNCEMENT_FRIEND_ACCEPT_REQUEST)
+            a.AccessibilityAnnouncer.announce(h.default.Messages.A11Y_ANNOUNCEMENT_FRIEND_ACCEPT_REQUEST)
         }),
         cancelFriendRequest: (e, t) => N.removeRelationship(e, t, function() {
-            s.AccessibilityAnnouncer.announce(h.default.Messages.A11Y_ANNOUNCEMENT_FRIEND_CANCEL_REQUEST)
+            a.AccessibilityAnnouncer.announce(h.default.Messages.A11Y_ANNOUNCEMENT_FRIEND_CANCEL_REQUEST)
         }),
         removeFriend(e, t) {
             N.removeRelationship(e, t, function() {
-                s.AccessibilityAnnouncer.announce(h.default.Messages.A11Y_ANNOUNCEMENT_FRIEND_REMOVED)
+                a.AccessibilityAnnouncer.announce(h.default.Messages.A11Y_ANNOUNCEMENT_FRIEND_REMOVED)
             })
         },
         unblockUser(e, t) {
             N.removeRelationship(e, t, function() {
-                s.AccessibilityAnnouncer.announce(h.default.Messages.A11Y_ANNOUNCEMENT_USER_UNBLOCKED)
+                a.AccessibilityAnnouncer.announce(h.default.Messages.A11Y_ANNOUNCEMENT_USER_UNBLOCKED)
             })
         },
-        removeRelationship: (e, t, n) => a.HTTP.del({
+        removeRelationship: (e, t, n) => s.HTTP.del({
             url: S.Endpoints.USER_RELATIONSHIP(e),
             context: t,
             oldFormErrors: !0
         }).then(() => {
             null == n || n()
         }).catch(() => {
-            s.AccessibilityAnnouncer.announce(h.default.Messages.A11Y_ANNOUNCEMENT_GENERIC_FAIL)
+            a.AccessibilityAnnouncer.announce(h.default.Messages.A11Y_ANNOUNCEMENT_GENERIC_FAIL)
         }),
-        updateRelationship: (e, t) => a.HTTP.patch({
+        updateRelationship: (e, t) => s.HTTP.patch({
             url: S.Endpoints.USER_RELATIONSHIP(e),
             body: {
                 nickname: t
             }
         }),
         fetchRelationships() {
-            a.HTTP.get({
+            s.HTTP.get({
                 url: S.Endpoints.USER_RELATIONSHIPS(),
                 oldFormErrors: !0
             }).then(e => o.default.dispatch({
@@ -150,7 +150,7 @@ function(e, t, n) {
         confirmClearPendingRelationships(e) {
             (0, u.default)(e)
         },
-        clearPendingRelationships: () => a.HTTP.del({
+        clearPendingRelationships: () => s.HTTP.del({
             url: S.Endpoints.USER_RELATIONSHIPS(),
             query: {
                 relationship_type: S.RelationshipTypes.PENDING_INCOMING
@@ -160,7 +160,7 @@ function(e, t, n) {
                 type: "RELATIONSHIP_PENDING_INCOMING_REMOVED"
             })
         }).catch(() => {
-            s.AccessibilityAnnouncer.announce(h.default.Messages.A11Y_ANNOUNCEMENT_GENERIC_FAIL)
+            a.AccessibilityAnnouncer.announce(h.default.Messages.A11Y_ANNOUNCEMENT_GENERIC_FAIL)
         })
     };
     t.default = N

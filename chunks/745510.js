@@ -10,8 +10,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        a = n("236471"),
-        s = n("399606"),
+        s = n("236471"),
+        a = n("399606"),
         o = n("607070"),
         l = n("981631");
     let u = {
@@ -34,7 +34,7 @@ function(e, t, n) {
             baseConfig: _,
             addClickListener: c,
             removeClickListener: E
-        } = e, I = (0, a.useConfettiCannon)(n, l), T = (0, s.useStateFromStores)([o.default], () => o.default.useReducedMotion), f = r.useMemo(() => T ? u : {
+        } = e, I = (0, s.useConfettiCannon)(n, l), T = (0, a.useStateFromStores)([o.default], () => o.default.useReducedMotion), f = r.useMemo(() => T ? u : {
             confettiCanvas: n,
             cannon: I,
             createConfetti: (e, t) => I.createConfetti({

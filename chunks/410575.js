@@ -6,8 +6,8 @@ function(e, t, n) {
         }
     });
     var i, r = n("735250"),
-        a = n("470079"),
-        s = n("153832"),
+        s = n("470079"),
+        a = n("153832"),
         o = n("626135"),
         l = n("251625"),
         u = n("981631");
@@ -20,16 +20,16 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    class _ extends(i = a.Component) {
+    class _ extends(i = s.Component) {
         renderProvider(e) {
             var t, n;
             let {
                 section: i,
-                page: a,
-                object: s,
+                page: s,
+                object: a,
                 objectType: l,
                 children: u
-            } = this.props, d = this.mergeLocation(e.location, this.getLocation(a, i, s, l)), _ = this.getContext(d, null !== (t = this._loadDate) && void 0 !== t ? t : e.loadDate, null !== (n = this._loadId) && void 0 !== n ? n : e.loadId);
+            } = this.props, d = this.mergeLocation(e.location, this.getLocation(s, i, a, l)), _ = this.getContext(d, null !== (t = this._loadDate) && void 0 !== t ? t : e.loadDate, null !== (n = this._loadId) && void 0 !== n ? n : e.loadId);
             return (0, r.jsx)(o.AnalyticsContext.Provider, {
                 value: _,
                 children: u
@@ -54,7 +54,7 @@ function(e, t, n) {
                 location: e,
                 loadDate: t,
                 loadId: n
-            }))), null != e.loadId ? this._loadId = e.loadId : e.root && (this._loadId = (0, s.v4)())
+            }))), null != e.loadId ? this._loadId = e.loadId : e.root && (this._loadId = (0, a.v4)())
         }
     }
     d(_, "Pages", u.AnalyticsPages), d(_, "Sections", u.AnalyticsSections), d(_, "Objects", u.AnalyticsObjects), d(_, "ObjectTypes", u.AnalyticsObjectTypes), d(_, "defaultProps", {

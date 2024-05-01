@@ -7,19 +7,19 @@ function(e, t, n) {
     });
     var i = n("392711"),
         r = n("442837"),
-        a = n("800599"),
-        s = n("621853");
+        s = n("800599"),
+        a = n("621853");
     let o = [];
 
     function l(e) {
-        return (0, r.useStateFromStoresArray)([s.default, a.default], () => {
-            let t = s.default.getMutualFriends(e.id);
+        return (0, r.useStateFromStoresArray)([a.default, s.default], () => {
+            let t = a.default.getMutualFriends(e.id);
             return null == t || 0 === t.length ? o : (0, i.sortBy)(t, e => {
                 var t, n;
                 let {
                     user: i
                 } = e;
-                return -(null !== (n = null === (t = a.default.getUserAffinity(i.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0)
+                return -(null !== (n = null === (t = s.default.getUserAffinity(i.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0)
             })
         }, [e.id])
     }

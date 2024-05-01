@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120"), n("653041");
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("924826"),
         l = n("536895"),
         u = n("442837"),
@@ -29,7 +29,7 @@ function(e, t, n) {
         let {
             channelId: t,
             type: n
-        } = e, a = (0, u.useStateFromStores)([E.default], () => E.default.keyboardModeEnabled), g = (0, I.default)("attachments", l.Orientations.HORIZONTAL), L = (0, u.useStateFromStores)([S.default], () => S.default.getUploads(t, n.drafts.type)), {
+        } = e, s = (0, u.useStateFromStores)([E.default], () => E.default.keyboardModeEnabled), g = (0, I.default)("attachments", l.Orientations.HORIZONTAL), L = (0, u.useStateFromStores)([S.default], () => S.default.getUploads(t, n.drafts.type)), {
             isApplicationCommand: v,
             commandOptions: D,
             commandOptionStates: M
@@ -86,16 +86,16 @@ function(e, t, n) {
                         return (0, i.jsx)("ul", {
                             ref: r,
                             ...o,
-                            className: s()(O.channelAttachmentArea, R.scrollbarGhost),
+                            className: a()(O.channelAttachmentArea, R.scrollbarGhost),
                             children: v ? y.map(e => (0, i.jsx)(m.default, {
                                 channelId: t,
-                                keyboardModeEnabled: a,
+                                keyboardModeEnabled: s,
                                 option: e
                             }, e.name)) : L.map(e => (0, i.jsx)(N.default, {
                                 channelId: t,
                                 draftType: n.drafts.type,
                                 upload: e,
-                                keyboardModeEnabled: a,
+                                keyboardModeEnabled: s,
                                 clip: e.clip
                             }, e.id))
                         })

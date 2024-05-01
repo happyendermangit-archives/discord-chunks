@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("873546"),
         l = n("481060"),
         u = n("648996"),
@@ -28,13 +28,13 @@ function(e, t, n) {
     function p(e) {
         let {
             userId: t
-        } = e, [n, a] = r.useState(!1);
+        } = e, [n, s] = r.useState(!1);
         return r.useLayoutEffect(() => {
-            !n && a(!0)
+            !n && s(!0)
         }, [n]), (0, i.jsx)("div", {
             className: I.wumpusWrapper,
             children: (0, i.jsxs)("div", {
-                className: s()(I.wumpus, {
+                className: a()(I.wumpus, {
                     [I.wumpusShown]: n
                 }),
                 children: [(0, i.jsx)("img", {
@@ -56,9 +56,9 @@ function(e, t, n) {
             user: t,
             setNote: n,
             canDM: r,
-            onClose: a
+            onClose: s
         } = e, {
-            trackUserProfileAction: s
+            trackUserProfileAction: a
         } = (0, _.useUserProfileAnalyticsContext)(), l = r && (0, d.isNewUser)(t) && !t.bot;
         return (0, i.jsxs)(c.default, {
             className: I.section,
@@ -71,9 +71,9 @@ function(e, t, n) {
                 user: t,
                 autoFocus: !o.isMobile && !n,
                 onSend: () => {
-                    s({
+                    a({
                         action: "SEND_DIRECT_MESSAGE"
-                    }), null == a || a()
+                    }), null == s || s()
                 }
             }) : null]
         })

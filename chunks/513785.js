@@ -5,7 +5,7 @@ function(e, t, n) {
             return r
         }
     });
-    var i, r, a, s = n("442837"),
+    var i, r, s, a = n("442837"),
         o = n("570140");
 
     function l(e, t, n) {
@@ -22,7 +22,7 @@ function(e, t, n) {
             fetchState: 0
         },
         d = u;
-    class _ extends(a = s.default.PersistedStore) {
+    class _ extends(s = a.default.PersistedStore) {
         initialize(e) {
             d = {
                 ...d,

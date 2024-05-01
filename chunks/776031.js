@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        a = n("848246"),
-        s = n("442837"),
+        s = n("848246"),
+        a = n("442837"),
         o = n("481060"),
         l = n("846027"),
         u = n("2052"),
@@ -30,7 +30,7 @@ function(e, t, n) {
             preset: p,
             resolution: O,
             fps: R
-        } = (0, s.useStateFromStoresObject)([I.default], () => I.default.getState()), C = (0, s.useStateFromStores)([f.default], () => f.default.getGoLiveSource()), g = (0, s.useStateFromStores)([S.default], () => S.default.getCurrentUser()), L = (0, s.useStateFromStores)([T.default], () => {
+        } = (0, a.useStateFromStoresObject)([I.default], () => I.default.getState()), C = (0, a.useStateFromStores)([f.default], () => f.default.getGoLiveSource()), g = (0, a.useStateFromStores)([S.default], () => S.default.getCurrentUser()), L = (0, a.useStateFromStores)([T.default], () => {
             var t;
             return null === (t = T.default.getGuild(null == e ? void 0 : e.guildId)) || void 0 === t ? void 0 : t.premiumTier
         }), {
@@ -38,14 +38,14 @@ function(e, t, n) {
         } = (0, u.useAnalyticsContext)(), {
             available: D,
             activated: M
-        } = (0, _.usePerksDemo)(a.EntitlementFeatureNames.STREAM_HIGH_QUALITY), y = r.useCallback((e, r, a, s) => {
+        } = (0, _.usePerksDemo)(s.EntitlementFeatureNames.STREAM_HIGH_QUALITY), y = r.useCallback((e, r, s, a) => {
             if (e) {
                 if (null != C) {
                     let e = {
                         qualityOptions: {
                             preset: A.ApplicationStreamPresets.PRESET_CUSTOM,
                             resolution: r,
-                            frameRate: a
+                            frameRate: s
                         },
                         context: m.MediaEngineContextTypes.STREAM
                     };
@@ -55,14 +55,14 @@ function(e, t, n) {
                     } : null != C.cameraSource && (e.cameraSettings = {
                         videoDeviceGuid: C.cameraSource.videoDeviceGuid,
                         audioDeviceGuid: C.cameraSource.audioDeviceGuid
-                    }), D && (0, E.hqStreamingSetEnabled)(!(0, c.ineligibleQualitySetting)(r, a)), l.default.setGoLiveSource(e)
+                    }), D && (0, E.hqStreamingSetEnabled)(!(0, c.ineligibleQualitySetting)(r, s)), l.default.setGoLiveSource(e)
                 }
             } else {
                 var u, d;
                 u = t, d = {
                     ...v,
                     object: h.AnalyticsObjects.RADIO_ITEM,
-                    objectType: s
+                    objectType: a
                 }, (0, o.openModalLazy)(async () => {
                     let {
                         default: e

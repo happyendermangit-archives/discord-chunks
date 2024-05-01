@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         LocalizedPricingPromoRecord: function() {
-            return a
+            return s
         }
     });
     var i = n("81825");
@@ -15,10 +15,10 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    class a extends i.default {
+    class s extends i.default {
         static createFromServer(e) {
             var t, n;
-            return new a({
+            return new s({
                 planId: e.plan_id,
                 countryCode: e.country_code,
                 amount: null === (t = e.price) || void 0 === t ? void 0 : t.amount,

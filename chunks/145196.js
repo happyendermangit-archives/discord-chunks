@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("608787"),
         l = n("481060"),
         u = n("571989"),
@@ -23,9 +23,9 @@ function(e, t, n) {
         let {
             text: t,
             language: r
-        } = e, a = () => (0, i.jsx)("pre", {
+        } = e, s = () => (0, i.jsx)("pre", {
             children: (0, i.jsx)("code", {
-                className: s()(A.scrollbarGhostHairline, h.codeView, "hljs"),
+                className: a()(A.scrollbarGhostHairline, h.codeView, "hljs"),
                 children: t
             })
         });
@@ -33,18 +33,18 @@ function(e, t, n) {
             createPromise: () => Promise.resolve().then(n.bind(n, "364964")),
             webpackId: "364964",
             render: e => {
-                if (!e.hasLanguage(r)) return a();
+                if (!e.hasLanguage(r)) return s();
                 let n = e.highlight(r, t, !0);
-                return null == n ? a() : (0, i.jsx)("pre", {
+                return null == n ? s() : (0, i.jsx)("pre", {
                     children: (0, i.jsx)("code", {
-                        className: s()(A.scrollbarGhostHairline, h.codeView, "hljs", n.language),
+                        className: a()(A.scrollbarGhostHairline, h.codeView, "hljs", n.language),
                         dangerouslySetInnerHTML: {
                             __html: n.value
                         }
                     })
                 })
             },
-            renderFallback: () => a()
+            renderFallback: () => s()
         })
     }
 
@@ -53,12 +53,12 @@ function(e, t, n) {
             expanded: t,
             setExpanded: n,
             isWholeFile: r,
-            numLines: a
-        } = e, s = (r ? S.default.Messages.PREVIEW_NUM_LINES : S.default.Messages.PREVIEW_NUM_LINES_AT_LEAST).format({
-            lines: a
+            numLines: s
+        } = e, a = (r ? S.default.Messages.PREVIEW_NUM_LINES : S.default.Messages.PREVIEW_NUM_LINES_AT_LEAST).format({
+            lines: s
         });
         return (0, i.jsx)(l.Tooltip, {
-            text: "".concat(t ? S.default.Messages.COLLAPSE : S.default.Messages.EXPAND, " (").concat(s, ")"),
+            text: "".concat(t ? S.default.Messages.COLLAPSE : S.default.Messages.EXPAND, " (").concat(a, ")"),
             children: e => (0, i.jsxs)(l.Clickable, {
                 ...e,
                 className: h.toggleExpandSection,
@@ -77,24 +77,24 @@ function(e, t, n) {
             url: t,
             fileName: n,
             fileSize: r
-        } = e, a = "".concat(n, " (").concat((0, _.formatKbSize)(r), ")");
+        } = e, s = "".concat(n, " (").concat((0, _.formatKbSize)(r), ")");
         return (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(l.Tooltip, {
-                text: a,
+                text: s,
                 children: e => (0, i.jsx)("span", {
                     ...e,
-                    className: s()(h.downloadSection, h.attachmentName),
+                    className: a()(h.downloadSection, h.attachmentName),
                     children: n
                 })
             }), (0, i.jsx)(l.Tooltip, {
-                text: a,
+                text: s,
                 children: e => (0, i.jsx)("span", {
                     ...e,
-                    className: s()(h.downloadSection, h.formattedSize),
+                    className: a()(h.downloadSection, h.formattedSize),
                     children: (0, _.formatKbSize)(r)
                 })
             }), (0, i.jsx)(l.Tooltip, {
-                text: "".concat(S.default.Messages.DOWNLOAD, " ").concat(a),
+                text: "".concat(S.default.Messages.DOWNLOAD, " ").concat(s),
                 children: e => (0, i.jsx)(l.Anchor, {
                     ...e,
                     className: h.downloadSection,
@@ -177,7 +177,7 @@ function(e, t, n) {
         let {
             url: n,
             fileName: r,
-            fileSize: a,
+            fileSize: s,
             fileContents: o,
             expanded: d,
             setExpanded: c,
@@ -195,9 +195,9 @@ function(e, t, n) {
             M = (0, u.sanitizeWhitespace)(D),
             y = d || g < C;
         return (0, i.jsxs)("div", {
-            className: s()(f, h.container),
+            className: a()(f, h.container),
             children: [(0, i.jsx)("div", {
-                className: s()(h.textContainer, {
+                className: a()(h.textContainer, {
                     [h.expanded]: d
                 }),
                 children: null == o ? (0, i.jsx)(l.Spinner, {
@@ -219,7 +219,7 @@ function(e, t, n) {
                     }), (0, i.jsx)(R, {
                         url: n,
                         fileName: r,
-                        fileSize: a,
+                        fileSize: s,
                         language: E,
                         fileContents: o,
                         bytesLeft: T
@@ -229,7 +229,7 @@ function(e, t, n) {
                 }), (0, i.jsx)(p, {
                     url: n,
                     fileName: r,
-                    fileSize: a
+                    fileSize: s
                 }), (0, i.jsx)(O, {
                     language: E,
                     setLanguage: I
@@ -242,8 +242,8 @@ function(e, t, n) {
         let {
             url: t,
             fileName: n,
-            fileSize: a,
-            transitionState: s,
+            fileSize: s,
+            transitionState: a,
             language: o,
             fileContents: u,
             bytesLeft: d
@@ -251,7 +251,7 @@ function(e, t, n) {
         return 0 !== d && (I += "... ".concat(S.default.Messages.PREVIEW_BYTES_LEFT.format({
             formattedBytes: (0, _.formatKbSize)(d)
         }))), (0, i.jsx)(l.ModalRoot, {
-            transitionState: s,
+            transitionState: a,
             "aria-label": S.default.Messages.PREVIEW_MODAL_LABEL,
             size: l.ModalSize.LARGE,
             className: h.modalRoot,
@@ -274,7 +274,7 @@ function(e, t, n) {
                     }), (0, i.jsx)(p, {
                         url: t,
                         fileName: n,
-                        fileSize: a
+                        fileSize: s
                     }), (0, i.jsx)(O, {
                         language: c,
                         setLanguage: E
@@ -287,7 +287,7 @@ function(e, t, n) {
         let {
             url: t,
             fileName: n,
-            fileSize: a,
+            fileSize: s,
             contentType: o,
             className: l,
             onClick: u,
@@ -297,12 +297,12 @@ function(e, t, n) {
             bytesLeft: S,
             hadError: A
         } = function(e, t) {
-            let [n, i] = r.useState(!1), [a, s] = r.useState(null), [o, l] = r.useState(1);
+            let [n, i] = r.useState(!1), [s, a] = r.useState(null), [o, l] = r.useState(1);
             return r.useEffect(() => {
                 (async function n() {
                     try {
                         var n, r;
-                        let a = await fetch(e, {
+                        let s = await fetch(e, {
                                 headers: {
                                     Range: "bytes=0-".concat(5e4),
                                     Accept: "text/plain"
@@ -318,17 +318,17 @@ function(e, t, n) {
                                     if ((null == e ? void 0 : e.startsWith("text")) || i.toLowerCase().includes("utf")) return new TextDecoder(n);
                                     throw t
                                 }
-                            })(t).decode(await a.arrayBuffer()),
-                            u = null !== (n = a.headers.get("content-range")) && void 0 !== n ? n : "0",
-                            d = null !== (r = a.headers.get("content-length")) && void 0 !== r ? r : "1",
+                            })(t).decode(await s.arrayBuffer()),
+                            u = null !== (n = s.headers.get("content-range")) && void 0 !== n ? n : "0",
+                            d = null !== (r = s.headers.get("content-length")) && void 0 !== r ? r : "1",
                             _ = parseInt(u.split("/")[1]) - parseInt(d);
-                        s(0 === _ ? o : o.slice(0, -1)), l(_), i(!1)
+                        a(0 === _ ? o : o.slice(0, -1)), l(_), i(!1)
                     } catch (e) {
                         l(0), i(!0)
                     }
                 })()
             }, [e, t]), {
-                fileContents: a,
+                fileContents: s,
                 bytesLeft: o,
                 hadError: n
             }
@@ -336,21 +336,21 @@ function(e, t, n) {
         return A ? (0, i.jsx)(c.default, {
             url: t,
             fileName: n,
-            fileSize: a,
+            fileSize: s,
             onClick: u,
             onContextMenu: d,
             className: l
         }) : (0, i.jsx)(C, {
             url: t,
             fileName: n,
-            fileSize: a,
+            fileSize: s,
             fileContents: f,
             bytesLeft: S,
             expanded: _,
             setExpanded: E,
             language: I,
             setLanguage: T,
-            className: s()(h.newMosaicStyle, l)
+            className: a()(h.newMosaicStyle, l)
         })
     }, (e, t) => e.url === t.url && e.className === t.className)
 }

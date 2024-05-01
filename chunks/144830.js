@@ -11,7 +11,7 @@ function(e, t, n) {
             return N
         }
     }), n("411104"), n("852437"), n("47120");
-    var i, r, a, s, o, l, u = n("735250"),
+    var i, r, s, a, o, l, u = n("735250"),
         d = n("470079"),
         _ = n("392711"),
         c = n.n(_),
@@ -25,7 +25,7 @@ function(e, t, n) {
             configurable: !0,
             writable: !0
         }) : e[t] = n, e
-    }(s = i || (i = {})).ACTIVITY_FEED = "ACTIVITY_FEED", s.ACTIVITY_FEED_NEW = "ACTIVITY_FEED_NEW", s.USER_ACTIVITY = "USER_ACTIVITY", s.GAME_LIBRARY_TIME_PLAYED = "GAME_LIBRARY_TIME_PLAYED", s.GAME_LIBRARY_LAST_PLAYED = "GAME_LIBRARY_LAST_PLAYED", (o = r || (r = {})).NONE = "NONE", o.SECONDS = "SECONDS", o.MINUTES = "MINUTES", o.HOURS = "HOURS", o.DAYS = "DAYS", o.WEEKS = "WEEKS", o.MONTHS = "MONTHS", o.YEARS = "YEARS", (l = a || (a = {})).START = "START", l.END = "END", l.TIME = "TIME";
+    }(a = i || (i = {})).ACTIVITY_FEED = "ACTIVITY_FEED", a.ACTIVITY_FEED_NEW = "ACTIVITY_FEED_NEW", a.USER_ACTIVITY = "USER_ACTIVITY", a.GAME_LIBRARY_TIME_PLAYED = "GAME_LIBRARY_TIME_PLAYED", a.GAME_LIBRARY_LAST_PLAYED = "GAME_LIBRARY_LAST_PLAYED", (o = r || (r = {})).NONE = "NONE", o.SECONDS = "SECONDS", o.MINUTES = "MINUTES", o.HOURS = "HOURS", o.DAYS = "DAYS", o.WEEKS = "WEEKS", o.MONTHS = "MONTHS", o.YEARS = "YEARS", (l = s || (s = {})).START = "START", l.END = "END", l.TIME = "TIME";
     let f = {
             NONE: e => 0,
             SECONDS: e => 60 * e,
@@ -286,14 +286,14 @@ function(e, t, n) {
                     isApplicationStreaming: i,
                     ...r
                 } = this.props, {
-                    time: a
-                } = this.state, s = this.getType();
-                if (null == s) return null;
-                let o = this.getTimeUnit(a, t, s),
-                    l = A[t][s];
+                    time: s
+                } = this.state, a = this.getType();
+                if (null == a) return null;
+                let o = this.getTimeUnit(s, t, a),
+                    l = A[t][a];
                 if (null == l) return null;
                 let d = l[o],
-                    _ = Math.floor(this.transformTime(o, a));
+                    _ = Math.floor(this.transformTime(o, s));
                 return (0, u.jsx)(e, {
                     ...r,
                     children: null == d ? void 0 : d(_, n, i)
@@ -308,6 +308,6 @@ function(e, t, n) {
                     })
                 })
             }
-        }, T(n, "Locations", i), T(n, "Types", a), n
+        }, T(n, "Locations", i), T(n, "Types", s), n
     }
 }

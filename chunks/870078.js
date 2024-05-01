@@ -8,10 +8,10 @@ function(e, t, n) {
             return o
         },
         VERSION_TO_FORCE_RESYNCING_ALL_DATA_KEY: function() {
-            return a
+            return s
         },
         VERSION_TO_SKIP_READING_THE_DATABASE: function() {
-            return s
+            return a
         },
         VERSION_TO_SKIP_READING_THE_DATABASE_KEY: function() {
             return r
@@ -19,7 +19,7 @@ function(e, t, n) {
     });
     let i = "hello",
         r = "version",
-        a = "force-resync-version",
-        s = 3,
+        s = "force-resync-version",
+        a = 3,
         o = "stable-52"
 }

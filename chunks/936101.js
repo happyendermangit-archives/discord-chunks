@@ -10,15 +10,15 @@ function(e, t, n) {
     }), n("518263"), n("970173"), n("520712"), n("268111"), n("941497"), n("32026"), n("480839"), n("744285"), n("492257"), n("873817"), n("642549"), n("47120");
     var i = n("153832"),
         r = n("433517"),
-        a = n("70956");
-    let s = "purchase_token",
-        o = 60 * a.default.Millis.DAY;
+        s = n("70956");
+    let a = "purchase_token",
+        o = 60 * s.default.Millis.DAY;
 
     function l() {
-        let e = r.Storage.get(s);
+        let e = r.Storage.get(a);
         if (null != e && e.expires >= Date.now()) return e.purchaseToken;
         let t = (0, i.v4)();
-        return r.Storage.set(s, {
+        return r.Storage.set(a, {
             purchaseToken: t,
             expires: Date.now() + o
         }), t

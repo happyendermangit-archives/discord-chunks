@@ -37,8 +37,8 @@ function(e, t, n) {
     }), n("653041");
     var i = n("913527"),
         r = n.n(i),
-        a = n("666657"),
-        s = n("676770"),
+        s = n("666657"),
+        a = n("676770"),
         o = n("689938");
     let l = {
         month: "numeric",
@@ -48,29 +48,29 @@ function(e, t, n) {
     };
 
     function u(e) {
-        return null != e.dmSpamDetectedAt && r()(e.dmSpamDetectedAt).add(s.NAGBAR_DISPLAY_MAX_HOURS, "hours") > r()() || null != e.raidDetectedAt && r()(e.raidDetectedAt).add(s.NAGBAR_DISPLAY_MAX_HOURS, "hours") > r()()
+        return null != e.dmSpamDetectedAt && r()(e.dmSpamDetectedAt).add(a.NAGBAR_DISPLAY_MAX_HOURS, "hours") > r()() || null != e.raidDetectedAt && r()(e.raidDetectedAt).add(a.NAGBAR_DISPLAY_MAX_HOURS, "hours") > r()()
     }
 
     function d(e) {
-        return null != e.raidDetectedAt && r()(e.raidDetectedAt).add(s.NAGBAR_DISPLAY_MAX_HOURS, "hours") > r()()
+        return null != e.raidDetectedAt && r()(e.raidDetectedAt).add(a.NAGBAR_DISPLAY_MAX_HOURS, "hours") > r()()
     }
 
     function _(e) {
-        return null != e.dmSpamDetectedAt && r()(e.dmSpamDetectedAt).add(s.NAGBAR_DISPLAY_MAX_HOURS, "hours") > r()()
+        return null != e.dmSpamDetectedAt && r()(e.dmSpamDetectedAt).add(a.NAGBAR_DISPLAY_MAX_HOURS, "hours") > r()()
     }
 
     function c(e) {
-        return null == e ? void 0 : d(e) ? a.GuildIncidentAlertTypes.JOIN_RAID : a.GuildIncidentAlertTypes.DM_RAID
+        return null == e ? void 0 : d(e) ? s.GuildIncidentAlertTypes.JOIN_RAID : s.GuildIncidentAlertTypes.DM_RAID
     }
 
     function E(e, t) {
         let n = [];
-        return e && n.push(a.GuildIncidentActionTypes.INVITES_DISABLED), t && n.push(a.GuildIncidentActionTypes.DMS_DISABLED), n
+        return e && n.push(s.GuildIncidentActionTypes.INVITES_DISABLED), t && n.push(s.GuildIncidentActionTypes.DMS_DISABLED), n
     }
 
     function I(e, t) {
         let n = [];
-        return !e && n.push(a.GuildIncidentActionTypes.INVITES_DISABLED), !t && n.push(a.GuildIncidentActionTypes.DMS_DISABLED), n
+        return !e && n.push(s.GuildIncidentActionTypes.INVITES_DISABLED), !t && n.push(s.GuildIncidentActionTypes.DMS_DISABLED), n
     }
 
     function T(e) {
@@ -90,9 +90,9 @@ function(e, t, n) {
         let i = null !== (n = e.dmsDisabledUntil) && void 0 !== n ? n : e.invitesDisabledUntil;
         if (null == i) return "";
         let r = null != e.dmsDisabledUntil,
-            a = null != e.invitesDisabledUntil;
+            s = null != e.invitesDisabledUntil;
         switch (!0) {
-            case r && a:
+            case r && s:
                 return o.default.Messages.GUILD_ANTIRAID_PAUSE_DMS_AND_JOINS_NAGBAR_MESSAGE_NEW.format({
                     guildName: t,
                     time: new Date(i).toLocaleString(o.default.getLocale(), l)
@@ -102,7 +102,7 @@ function(e, t, n) {
                     guildName: t,
                     time: new Date(i).toLocaleString(o.default.getLocale(), l)
                 });
-            case a:
+            case s:
                 return o.default.Messages.GUILD_ANTIRAID_PAUSE_JOINS_NAGBAR_MESSAGE_NEW.format({
                     guildName: t,
                     time: new Date(i).toLocaleString(o.default.getLocale(), l)

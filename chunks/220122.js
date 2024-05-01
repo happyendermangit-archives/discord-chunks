@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t);
     var i = n("481060"),
         r = n("570140"),
-        a = n("594190"),
-        s = n("199902"),
+        s = n("594190"),
+        a = n("199902"),
         o = n("131951"),
         l = n("924557"),
         u = n("474639"),
@@ -39,19 +39,19 @@ function(e, t, n) {
             }
         }
         handleClipsInitOnToggleDetection(e) {
-            let t = a.default.getVisibleGame();
+            let t = s.default.getVisibleGame();
             null != t && t.id === e.game.id && this.fireClipsInitEvent()
         }
         handleClipsInitOnGamesChange(e) {
-            let t = a.default.getVisibleGame();
+            let t = s.default.getVisibleGame();
             if (null != t) e.added.find(e => e.pid === t.pid) ? setTimeout(() => this.fireClipsInitEvent(), E.CLIPS_RUNNING_GAME_CHANGE_CLIPS_INIT_DELAY) : this.fireClipsInitEvent()
         }
         fireClipsInitEvent() {
             if (!(0, _.default)(o.default)) return;
             let e = (0, l.areClipsEnabled)(),
                 t = d.default.getSettings();
-            if (!(t.clipsEnabled && e) || null != s.default.getCurrentUserActiveStream()) return;
-            let n = a.default.getVisibleGame();
+            if (!(t.clipsEnabled && e) || null != a.default.getCurrentUserActiveStream()) return;
+            let n = s.default.getVisibleGame();
             (null == n ? void 0 : n.pid) != null && (null == n ? void 0 : n.windowHandle) != null && null != n.name && "" !== n.name && r.default.dispatch({
                 type: "CLIPS_INIT",
                 sourceId: "window:".concat(null == n ? void 0 : n.windowHandle),

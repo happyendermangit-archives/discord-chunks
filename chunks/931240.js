@@ -28,8 +28,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("544891"),
         r = n("570140"),
-        a = n("479531"),
-        s = n("981631"),
+        s = n("479531"),
+        a = n("981631"),
         o = n("976757");
     async function l(e, t) {
         r.default.dispatch({
@@ -39,7 +39,7 @@ function(e, t, n) {
         try {
             var n, o, l, u;
             await i.HTTP.post({
-                url: s.Endpoints.GUILD_CONVERT_TO_CLAN(e),
+                url: a.Endpoints.GUILD_CONVERT_TO_CLAN(e),
                 body: {
                     tag: t.tag,
                     description: t.description,
@@ -66,20 +66,20 @@ function(e, t, n) {
             throw r.default.dispatch({
                 type: "CLAN_SETUP_ERROR",
                 guildId: e,
-                error: new a.default(t)
+                error: new s.default(t)
             }), t
         }
     }
     async function u(e) {
         let t = await i.HTTP.get({
-            url: s.Endpoints.GUILD_CLAN_DISCOVERY_INFO(e)
+            url: a.Endpoints.GUILD_CLAN_DISCOVERY_INFO(e)
         });
         return (0, o.buildClanFromServer)(t.body)
     }
     async function d(e, t) {
         try {
             let n = await i.HTTP.put({
-                url: s.Endpoints.USER_SET_CLAN_IDENTITY,
+                url: a.Endpoints.USER_SET_CLAN_IDENTITY,
                 body: {
                     identity_guild_id: e,
                     identity_enabled: t
@@ -110,7 +110,7 @@ function(e, t, n) {
         })
     }
     let E = e => {
-        var t, n, i, r, a, s;
+        var t, n, i, r, s, a;
         return {
             tag: e.tag,
             gameApplicationIds: new Set(null !== (i = e.game_application_ids) && void 0 !== i ? i : []),
@@ -119,8 +119,8 @@ function(e, t, n) {
             description: e.description,
             wildcardDescriptors: e.wildcard_descriptors,
             verificationForm: {
-                description: null !== (a = null === (t = e.verification_form) || void 0 === t ? void 0 : t.description) && void 0 !== a ? a : "",
-                formFields: null !== (s = null === (n = e.verification_form) || void 0 === n ? void 0 : n.form_fields) && void 0 !== s ? s : [],
+                description: null !== (s = null === (t = e.verification_form) || void 0 === t ? void 0 : t.description) && void 0 !== s ? s : "",
+                formFields: null !== (a = null === (n = e.verification_form) || void 0 === n ? void 0 : n.form_fields) && void 0 !== a ? a : [],
                 version: ""
             },
             badgeKind: e.badge,
@@ -136,7 +136,7 @@ function(e, t, n) {
             type: "CLAN_SETTINGS_FETCH_START"
         });
         let t = await i.HTTP.get({
-            url: s.Endpoints.CLAN_SETTINGS(e)
+            url: a.Endpoints.CLAN_SETTINGS(e)
         });
         r.default.dispatch({
             type: "CLAN_SETTINGS_FETCH_SUCCESS",
@@ -145,15 +145,15 @@ function(e, t, n) {
         })
     }
     async function T(e, t) {
-        var n, r, a, o;
+        var n, r, s, o;
         return await i.HTTP.patch({
-            url: s.Endpoints.CLAN_SETTINGS(e),
+            url: a.Endpoints.CLAN_SETTINGS(e),
             body: {
                 tag: t.tag,
                 description: t.description,
                 play_style: t.playstyle,
                 search_terms: Array.from(null !== (r = t.interests) && void 0 !== r ? r : new Set),
-                game_application_ids: Array.from(null !== (a = t.gameApplicationIds) && void 0 !== a ? a : new Set),
+                game_application_ids: Array.from(null !== (s = t.gameApplicationIds) && void 0 !== s ? s : new Set),
                 verification_form: {
                     form_fields: null !== (o = null === (n = t.verificationForm) || void 0 === n ? void 0 : n.formFields) && void 0 !== o ? o : []
                 },
@@ -171,7 +171,7 @@ function(e, t, n) {
     async function f(e) {
         try {
             await i.HTTP.post({
-                url: s.Endpoints.DISABLE_CLAN(e)
+                url: a.Endpoints.DISABLE_CLAN(e)
             })
         } catch (e) {
             throw e

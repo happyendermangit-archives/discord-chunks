@@ -8,9 +8,9 @@ function(e, t, n) {
     var i = n("392711");
 
     function r(e, t, n, r) {
-        var a, s;
+        var s, a;
         let o = e.getCurrentConfig(n, r),
             l = t.getCurrentConfig(n, r);
-        return a = o, s = l, (0, i.mergeWith)({}, a, s, (e, t) => e || t)
+        return s = o, a = l, (0, i.mergeWith)({}, s, a, (e, t) => e || t)
     }
 }

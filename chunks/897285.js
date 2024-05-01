@@ -3,13 +3,13 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("147913"),
         r = n("57132"),
-        a = n("914010"),
-        s = n("924301"),
+        s = n("914010"),
+        a = n("924301"),
         o = n("482241");
     let l = {},
         u = new Set,
         d = async e => {
-            if (0 !== s.default.getGuildScheduledEventsForGuild(e).length) {
+            if (0 !== a.default.getGuildScheduledEventsForGuild(e).length) {
                 if (!u.has(e)) try {
                     await o.default.getGuildEventsForCurrentUser(e), u.add(e)
                 } catch (e) {}
@@ -34,8 +34,8 @@ function(e, t, n) {
         handleConnectionOpen() {
             u.clear(), l = {};
             let e = (0, r.isInMainTabsExperiment)(),
-                t = a.default.getLastSelectedGuildId();
-            e && null != t && s.default.getGuildScheduledEventsForGuild(t).forEach(e => this.getGuildEventUserCounts(t, e.id, []))
+                t = s.default.getLastSelectedGuildId();
+            e && null != t && a.default.getGuildScheduledEventsForGuild(t).forEach(e => this.getGuildEventUserCounts(t, e.id, []))
         }
         handleGuildUnavailable(e) {
             let {
@@ -60,7 +60,7 @@ function(e, t, n) {
             let {
                 guildId: t
             } = e;
-            if (null != t) s.default.getGuildScheduledEventsForGuild(t).forEach(e => this.getGuildEventUserCounts(t, e.id, []))
+            if (null != t) a.default.getGuildScheduledEventsForGuild(t).forEach(e => this.getGuildEventUserCounts(t, e.id, []))
         }
         constructor(...e) {
             var t, n, i;

@@ -5,10 +5,10 @@ function(e, t, n) {
             return r
         },
         deserializeChannel: function() {
-            return s
+            return a
         },
         deserializeChannelEntries: function() {
-            return a
+            return s
         }
     }), n("47120");
     var i = n("149765");
@@ -25,11 +25,11 @@ function(e, t, n) {
                 }
     }
 
-    function a(e) {
+    function s(e) {
         for (let [t, n] of e) r(n)
     }
 
-    function s(e) {
+    function a(e) {
         let {
             permissionOverwrites_: t
         } = e;

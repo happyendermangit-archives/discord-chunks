@@ -13,8 +13,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("470079"),
         r = n("652874"),
-        a = n("143927"),
-        s = n("881052"),
+        s = n("143927"),
+        a = n("881052"),
         o = n("931240");
     let l = {},
         u = (0, r.default)((e, t) => ({
@@ -41,7 +41,7 @@ function(e, t, n) {
                         })
                     } catch (t) {
                         e({
-                            error: new s.APIError(t)
+                            error: new a.APIError(t)
                         })
                     }
                 }
@@ -61,13 +61,13 @@ function(e, t, n) {
     }
 
     function c(e) {
-        let [t, n] = i.useState(!1), [r, s] = u(e => [e.fetchClanInfo, e.fetching], a.default);
+        let [t, n] = i.useState(!1), [r, a] = u(e => [e.fetchClanInfo, e.fetching], s.default);
         return [t, i.useCallback(async () => {
-            if (!s && null != e) try {
+            if (!a && null != e) try {
                 n(!0), await r(e)
             } finally {
                 n(!1)
             }
-        }, [e, s, r])]
+        }, [e, a, r])]
     }
 }

@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("399606"),
         l = n("481060"),
         u = n("596454"),
@@ -22,17 +22,17 @@ function(e, t, n) {
             soundId: t,
             jumbo: n = !1
         } = e, {
-            currentPreviewRef: a
+            currentPreviewRef: s
         } = r.useContext(c.default), A = (0, o.useStateFromStores)([E.default], () => E.default.getSoundById(t)), m = (null == A ? void 0 : A.emojiId) != null || (null == A ? void 0 : A.emojiName) != null, [N, p] = r.useState(!1), O = (0, d.useSoundmojiExperiment)("soundmoji_chat_mention"), R = r.useCallback(() => {
             var e;
             null == A && (0, _.maybeFetchSoundboardSounds)();
             let n = new Audio((0, I.default)(t));
-            null != a.current && a.current.pause(), a.current = n, n.currentTime = 0, n.volume = (0, T.default)(null !== (e = null == A ? void 0 : A.volume) && void 0 !== e ? e : .5), p(!0), n.play(), n.addEventListener("ended", () => {
+            null != s.current && s.current.pause(), s.current = n, n.currentTime = 0, n.volume = (0, T.default)(null !== (e = null == A ? void 0 : A.volume) && void 0 !== e ? e : .5), p(!0), n.play(), n.addEventListener("ended", () => {
                 p(!1)
             }, {
                 once: !0
             })
-        }, [t, A, a, p]);
+        }, [t, A, s, p]);
         return O ? null == A ? (0, i.jsxs)(l.Clickable, {
             title: "Risky Click",
             tag: "span",
@@ -51,7 +51,7 @@ function(e, t, n) {
             onClick: R,
             className: h.jumboContainer,
             children: [(0, i.jsx)("div", {
-                className: s()(h.jumboOverlay, {
+                className: a()(h.jumboOverlay, {
                     [h.playing]: N
                 }),
                 children: (0, i.jsx)(f.default, {

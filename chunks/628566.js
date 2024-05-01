@@ -5,11 +5,11 @@ function(e, t, n) {
             return i
         }
     }), n("47120"), n("653041");
-    var i, r, a, s, o, l, u = n("442837"),
+    var i, r, s, a, o, l, u = n("442837"),
         d = n("570140"),
         _ = n("973616"),
         c = n("911955");
-    (a = i || (i = {}))[a.NOT_FETCHED = 0] = "NOT_FETCHED", a[a.FETCHING = 1] = "FETCHING", a[a.FETCHED = 2] = "FETCHED", a[a.FETCH_FAILED = 3] = "FETCH_FAILED";
+    (s = i || (i = {}))[s.NOT_FETCHED = 0] = "NOT_FETCHED", s[s.FETCHING = 1] = "FETCHING", s[s.FETCHED = 2] = "FETCHED", s[s.FETCH_FAILED = 3] = "FETCH_FAILED";
     let E = new Map,
         I = new Map,
         T = [],
@@ -42,12 +42,12 @@ function(e, t, n) {
     function A(e) {
         return e.sort((e, t) => e.application.name.localeCompare(t.application.name))
     }
-    l = "PrivateChannelIntegrationStore", (o = "displayName") in(s = h) ? Object.defineProperty(s, o, {
+    l = "PrivateChannelIntegrationStore", (o = "displayName") in(a = h) ? Object.defineProperty(a, o, {
         value: l,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : s[o] = l;
+    }) : a[o] = l;
     let m = new h(d.default, {
         LOGOUT() {
             E.clear()
@@ -107,7 +107,7 @@ function(e, t, n) {
             if (null == n) return !1;
             let i = (0, c.createPrivateChannelIntegration)(t),
                 r = n.findIndex(e => e.application.id === i.application.id),
-                a = [...n]; - 1 === r ? a.push(i) : a[r] = i, E.set(i.channel_id, A(a))
+                s = [...n]; - 1 === r ? s.push(i) : s[r] = i, E.set(i.channel_id, A(s))
         },
         PRIVATE_CHANNEL_INTEGRATION_DELETE(e) {
             let {

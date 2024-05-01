@@ -4,7 +4,7 @@ function(e, t, n) {
     var i = n("848918"),
         r = n("618980");
 
-    function a(e, t, n) {
+    function s(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -31,7 +31,7 @@ function(e, t, n) {
             this.isFilled = !0
         }
         constructor() {
-            a(this, "particles", []), a(this, "wind", new r.default), a(this, "alpha", 0), a(this, "isFilled", !1), a(this, "loadInTimer", null)
+            s(this, "particles", []), s(this, "wind", new r.default), s(this, "alpha", 0), s(this, "isFilled", !1), s(this, "loadInTimer", null)
         }
     }
 }

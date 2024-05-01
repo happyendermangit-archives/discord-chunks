@@ -2,17 +2,17 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         FAVORITES_GUILD_RECORD: function() {
-            return s
+            return a
         },
         FAVORITES_RAW_GUILD_ID: function() {
-            return a
+            return s
         }
     });
     var i = n("601964"),
         r = n("981631");
-    let a = "373",
-        s = new i.default({
-            id: a,
+    let s = "373",
+        a = new i.default({
+            id: s,
             name: "Favorites",
             description: "The place for all your favorite channels!",
             ownerId: "234",

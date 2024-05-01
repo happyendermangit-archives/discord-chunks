@@ -5,7 +5,7 @@ function(e, t, n) {
             return c
         }
     });
-    var i, r, a, s, o = n("392711"),
+    var i, r, s, a, o = n("392711"),
         l = n.n(o),
         u = n("442837"),
         d = n("570140"),
@@ -16,7 +16,7 @@ function(e, t, n) {
             formFields: []
         },
         E = {};
-    class I extends(s = u.default.Store) {
+    class I extends(a = u.default.Store) {
         get(e) {
             if (null != e) return E[e]
         }
@@ -25,12 +25,12 @@ function(e, t, n) {
             return l().find(null === (t = E[e]) || void 0 === t ? void 0 : t.formFields, _.isTermsFormField)
         }
     }
-    a = "MemberVerificationFormStore", (r = "displayName") in(i = I) ? Object.defineProperty(i, r, {
-        value: a,
+    s = "MemberVerificationFormStore", (r = "displayName") in(i = I) ? Object.defineProperty(i, r, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : i[r] = a, t.default = new I(d.default, {
+    }) : i[r] = s, t.default = new I(d.default, {
         INVITE_ACCEPT_SUCCESS: function(e) {
             let {
                 invite: t

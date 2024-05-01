@@ -10,8 +10,8 @@ function(e, t, n) {
     }), n("390547"), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("392711"),
         l = n.n(o),
         u = n("442837"),
@@ -86,7 +86,7 @@ function(e, t, n) {
     }
 
     function J(e) {
-        var t, n, a;
+        var t, n, s;
         let {
             guild: o
         } = e, d = o.id, _ = (0, u.useStateFromStoresArray)([g.default, O.default], () => {
@@ -120,7 +120,7 @@ function(e, t, n) {
             for (let t of T) e += m.default.getParticipantCount(t, N.StageChannelParticipantNamedIndex.AUDIENCE);
             return e
         }), y = (0, u.useStateFromStoresArray)([R.default], () => R.default.getAllApplicationStreams().filter(e => e.guildId === d).map(e => e.ownerId), [d]), P = (0, F.useIsGamingVoiceActivityEnabled)("Guild Tooltip", !1), x = (0, u.useStateFromStoresArray)([L.default, C.default], () => S.filter(e => L.default.getActivities(e.id, d).some(e => (null == e ? void 0 : e.application_id) != null && null != C.default.getDetectableGame(null == e ? void 0 : e.application_id)))), H = Q(U.default, x, d), Y = P ? x.map(e => e.id) : [], W = (0, u.useStateFromStoresArray)([E.default], () => E.default.getEmbeddedActivitiesForGuild(d).flatMap(e => Array.from(e.userIds)), [d]), z = (0, u.useStateFromStoresArray)([D.default], () => W.map(e => D.default.getUser(e)), [W]), Z = (0, u.useStateFromStoresArray)([D.default], () => y.map(e => D.default.getUser(e)), [y]), X = Q(w.default, S.filter(e => !y.includes(e.id) && !W.includes(e.id) && !Y.includes(e.id)), d);
-        let J = (t = d, n = h, a = A, 0 === n.length ? null : (0, i.jsxs)("div", {
+        let J = (t = d, n = h, s = A, 0 === n.length ? null : (0, i.jsxs)("div", {
                 className: K.row,
                 children: [(0, i.jsx)(B.default, {
                     className: K.activityIcon
@@ -137,7 +137,7 @@ function(e, t, n) {
                         className: K.stageListenerCount,
                         color: "text-normal",
                         variant: "text-xs/normal",
-                        children: a
+                        children: s
                     })]
                 })]
             })),
@@ -155,7 +155,7 @@ function(e, t, n) {
         }), (0, i.jsxs)(i.Fragment, {
             children: [J, X, $, P && H, ee, et ? (0, i.jsx)(q, {
                 muteConfig: en,
-                className: s()(K.muteText, {
+                className: a()(K.muteText, {
                     [K.muteTextWithActivity]: null != X || null != $
                 })
             }) : null]
@@ -189,14 +189,14 @@ function(e, t, n) {
         let {
             guild: t,
             includeActivity: n = !0
-        } = e, r = (0, I.default)(t), a = (0, f.useCurrentUserGuildBadgeStatus)(t.id), o = null != a ? (0, i.jsx)($, {
-            guildJoinRequestStatus: a
+        } = e, r = (0, I.default)(t), s = (0, f.useCurrentUserGuildBadgeStatus)(t.id), o = null != s ? (0, i.jsx)($, {
+            guildJoinRequestStatus: s
         }) : null, l = n ? (0, i.jsx)(J, {
             guild: t
         }) : null, d = (0, u.useStateFromStores)([h.default], () => h.default.isViewingRoles(t.id)), _ = (0, S.useShouldShowInvitesDisabledNotif)(t);
         return (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsxs)("div", {
-                className: s()(K.row, K.rowGuildName),
+                className: a()(K.row, K.rowGuildName),
                 children: [r ? (0, i.jsx)(P.default, {
                     guild: t,
                     size: X,
@@ -206,7 +206,7 @@ function(e, t, n) {
                     size: Z,
                     className: K.rowIcon
                 }), (0, i.jsx)("span", {
-                    className: s()(K.guildNameText, {
+                    className: a()(K.guildNameText, {
                         [K.guildNameTextLimitedSize]: null != l
                     }),
                     children: t.toString()
@@ -229,8 +229,8 @@ function(e, t, n) {
         let {
             guild: t,
             disabled: n = !1,
-            "aria-label": a = !1,
-            children: s,
+            "aria-label": s = !1,
+            children: a,
             includeActivity: o = !0,
             isHovered: l
         } = e, u = (0, H.useCanShowNewGuildTooltip)(), [_, E] = r.useState(!1), I = r.useRef(new d.DelayedCall(150, () => E(!1))), T = r.useCallback(() => {
@@ -251,7 +251,7 @@ function(e, t, n) {
                 shouldShow: l || _,
                 children: e => (0, i.jsx)("div", {
                     ...e,
-                    children: s
+                    children: a
                 })
             })
         }) : (0, i.jsx)(c.Tooltip, {
@@ -262,19 +262,19 @@ function(e, t, n) {
                 guild: t,
                 includeActivity: o
             }),
-            "aria-label": a,
+            "aria-label": s,
             tooltipClassName: z.listItemTooltip,
             children: e => {
                 let {
                     onFocus: t,
                     onBlur: n,
-                    ...a
+                    ...s
                 } = e;
                 return (0, i.jsx)("div", {
                     onFocus: t,
                     onBlur: n,
-                    children: r.cloneElement(r.Children.only(s), {
-                        ...a
+                    children: r.cloneElement(r.Children.only(a), {
+                        ...s
                     })
                 })
             }

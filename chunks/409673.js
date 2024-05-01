@@ -10,8 +10,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("924826"),
         l = n("442837"),
         u = n("846519"),
@@ -41,7 +41,7 @@ function(e, t, n) {
             disabled: t = !1,
             onClick: n,
             text: r,
-            children: a,
+            children: s,
             tooltipPosition: o = "top"
         } = e;
         return (0, i.jsx)(_.Tooltip, {
@@ -50,11 +50,11 @@ function(e, t, n) {
             children: e => (0, i.jsx)(_.Clickable, {
                 ...e,
                 "aria-label": r,
-                className: s()(D.secondaryButton, {
+                className: a()(D.secondaryButton, {
                     [D.buttonDisabled]: t
                 }),
                 onClick: n,
-                children: a
+                children: s
             })
         })
     }
@@ -64,10 +64,10 @@ function(e, t, n) {
             sound: t,
             previewSound: n,
             disabled: r = !1,
-            tooltipPosition: a = "top"
+            tooltipPosition: s = "top"
         } = e;
         return (0, i.jsx)(M, {
-            tooltipPosition: a,
+            tooltipPosition: s,
             disabled: r,
             onClick: function(e) {
                 e.stopPropagation(), e.currentTarget.blur(), n()
@@ -82,7 +82,7 @@ function(e, t, n) {
         })
     }
     t.default = r.forwardRef(function(e, t) {
-        var n, a, m;
+        var n, s, m;
         let {
             sound: P,
             channel: U,
@@ -109,8 +109,8 @@ function(e, t, n) {
         } = (0, C.default)(P, null !== (n = null == U ? void 0 : U.id) && void 0 !== n ? n : null), {
             createMultipleConfettiAt: ee
         } = r.useContext(I.ConfettiCannonContext), et = r.useRef(null);
-        let en = (a = P.soundId, m = et.current, r.useMemo(() => {
-                if (null == m || "1" !== a) return {
+        let en = (s = P.soundId, m = et.current, r.useMemo(() => {
+                if (null == m || "1" !== s) return {
                     x: 0,
                     y: 0
                 };
@@ -119,11 +119,11 @@ function(e, t, n) {
                     x: e.left + e.width / 2,
                     y: e.top + e.height / 2
                 }
-            }, [m, a])),
+            }, [m, s])),
             ei = (0, l.useStateFromStores)([E.default], () => E.default.useReducedMotion),
             er = r.useRef(.01),
-            ea = r.useRef(new u.Interval),
-            es = "1" === P.soundId,
+            es = r.useRef(new u.Interval),
+            ea = "1" === P.soundId,
             eo = (0, l.useStateFromStores)([p.default], () => p.default.isFavoriteSound(W), [W]),
             el = "sound-".concat(P.soundId),
             eu = (0, o.useListItem)(el),
@@ -144,7 +144,7 @@ function(e, t, n) {
                     soundName: P.name
                 }),
                 children: eo ? (0, i.jsx)(S.default, {
-                    className: s()(D.secondaryIcon, D.favoriteIconFavorite),
+                    className: a()(D.secondaryIcon, D.favoriteIconFavorite),
                     color: d.default.unsafe_rawColors.GOLD.css
                 }) : (0, i.jsx)(f.default, {
                     className: D.secondaryIcon
@@ -159,7 +159,7 @@ function(e, t, n) {
             ef = () => (0, i.jsxs)("div", {
                 className: D.buttonOverlay,
                 children: [(0, i.jsx)("div", {
-                    className: s()({
+                    className: a()({
                         [D.buttonOverlayBackground]: !V
                     })
                 }), (0, i.jsxs)("div", {
@@ -170,11 +170,11 @@ function(e, t, n) {
                 })]
             });
         return r.useEffect(() => {
-            let e = ea.current;
-            return es && e.start(1e3, () => {
+            let e = es.current;
+            return ea && e.start(1e3, () => {
                 er.current = Math.max(er.current - .01, .01)
             }), () => e.stop()
-        }, [es]), (0, i.jsxs)("li", {
+        }, [ea]), (0, i.jsxs)("li", {
             ref: t,
             className: D.soundButtonWrapper,
             onMouseEnter: x,
@@ -189,7 +189,7 @@ function(e, t, n) {
                     emojiName: P.emojiName,
                     soundName: P.name
                 }),
-                className: s()(b, D.soundButton, {
+                className: a()(b, D.soundButton, {
                     [D.playing]: $,
                     [D.hoverActiveBackground]: V,
                     [D.soundButtonInteractive]: B,
@@ -199,7 +199,7 @@ function(e, t, n) {
                     [D.focused]: B && G
                 }),
                 onClick: function() {
-                    if (es && !ei && (er.current = Math.min(er.current + .01, .1), Math.random() < er.current && ee(en.x, en.y, void 0, void 0, {
+                    if (ea && !ei && (er.current = Math.min(er.current + .01, .1), Math.random() < er.current && ee(en.x, en.y, void 0, void 0, {
                             sprite: L.DUCK_CONFETTI_SPRITE
                         })), null != F) {
                         F();
@@ -219,7 +219,7 @@ function(e, t, n) {
                     }), (0, i.jsx)(_.Text, {
                         variant: "text-xs/medium",
                         color: B ? "header-primary" : "text-muted",
-                        className: s()(D.soundName, {
+                        className: a()(D.soundName, {
                             [D.hasEmoji]: ed
                         }),
                         children: K

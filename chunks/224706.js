@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120"), n("411104");
     var i = n("664751"),
         r = n("544891"),
-        a = n("570140"),
-        s = n("566620"),
+        s = n("570140"),
+        a = n("566620"),
         o = n("812206"),
         l = n("439849"),
         u = n("669764"),
@@ -29,18 +29,18 @@ function(e, t, n) {
             secret: n,
             channelId: i,
             intent: r = p.ActivityIntent.PLAY,
-            embedded: s = !1,
+            embedded: a = !1,
             analyticsLocations: o = []
         } = e;
-        C(t, null, i, s, o).then(() => f.default.waitConnected(t)).then(() => Promise.race([f.default.waitSubscribed(t, N.RPCEvents.ACTIVITY_JOIN)])).then(() => {
-            a.default.dispatch({
+        C(t, null, i, a, o).then(() => f.default.waitConnected(t)).then(() => Promise.race([f.default.waitSubscribed(t, N.RPCEvents.ACTIVITY_JOIN)])).then(() => {
+            s.default.dispatch({
                 type: "ACTIVITY_JOIN",
                 applicationId: t,
                 secret: n,
                 intent: r,
-                embedded: s
+                embedded: a
             })
-        }).catch(() => a.default.dispatch({
+        }).catch(() => s.default.dispatch({
             type: "ACTIVITY_JOIN_FAILED",
             applicationId: t
         }))
@@ -49,7 +49,7 @@ function(e, t, n) {
     function C(e, t, n) {
         let l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
             u = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [];
-        if (l) return null == n ? Promise.reject(Error("Invalid channel ID")) : ((0, s.startEmbeddedActivity)(n, e, u), Promise.resolve());
+        if (l) return null == n ? Promise.reject(Error("Invalid channel ID")) : ((0, a.startEmbeddedActivity)(n, e, u), Promise.resolve());
         if (_.default.isConnected(e)) return Promise.resolve();
         let c = null;
         if (null == t) {
@@ -59,10 +59,10 @@ function(e, t, n) {
         if (I.default.isLaunchable(e, t)) {
             var T;
             let n = I.default.getState(e, t),
-                a = E.default.getActiveLaunchOptionId(e, t);
+                s = E.default.getActiveLaunchOptionId(e, t);
             if (null == n) throw Error("Missing dispatch game when launching");
-            let s = E.default.getLibraryApplication(e, t);
-            if (null == s) throw Error("Missing library application when launching");
+            let a = E.default.getLibraryApplication(e, t);
+            if (null == a) throw Error("Missing library application when launching");
             c = (T = e, r.HTTP.post({
                 url: N.Endpoints.OAUTH2_AUTHORIZE,
                 query: {
@@ -87,32 +87,32 @@ function(e, t, n) {
             }, e => {
                 if (404 === e.status) return null;
                 throw e
-            })).then(e => f.default.launchDispatchApplication(n, e, d.default.locale, s.getBranchName(), a))
+            })).then(e => f.default.launchDispatchApplication(n, e, d.default.locale, a.getBranchName(), s))
         } else {
             let t = o.default.getApplication(e);
             c = null != t ? f.default.launch(t) : f.default.launchGame(e)
         }
         let S = Error("game not found");
-        return null != c ? (a.default.dispatch({
+        return null != c ? (s.default.dispatch({
             type: "LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE",
             applicationId: e,
             branchId: t
-        }), a.default.dispatch({
+        }), s.default.dispatch({
             type: "GAME_LAUNCH_START",
             applicationId: e
         }), c.then(t => {
-            a.default.dispatch({
+            s.default.dispatch({
                 type: "GAME_LAUNCH_SUCCESS",
                 applicationId: e,
                 pids: t
             })
         }).catch(t => {
-            m.default.show(N.NoticeTypes.LAUNCH_GAME_FAILURE, O.default.Messages.GAME_LAUNCH_FAILED_LAUNCH_TARGET_NOT_FOUND), a.default.dispatch({
+            m.default.show(N.NoticeTypes.LAUNCH_GAME_FAILURE, O.default.Messages.GAME_LAUNCH_FAILED_LAUNCH_TARGET_NOT_FOUND), s.default.dispatch({
                 type: "GAME_LAUNCH_FAIL",
                 applicationId: e,
                 error: S
             })
-        })) : (a.default.dispatch({
+        })) : (s.default.dispatch({
             type: "GAME_LAUNCH_FAIL",
             applicationId: e,
             error: S
@@ -120,7 +120,7 @@ function(e, t, n) {
     }
     t.default = {
         addGame(e) {
-            a.default.dispatch({
+            s.default.dispatch({
                 type: "RUNNING_GAME_ADD_OVERRIDE",
                 pid: e
             })
@@ -135,20 +135,20 @@ function(e, t, n) {
                     return
                 }
             }
-            a.default.dispatch({
+            s.default.dispatch({
                 type: "RUNNING_GAME_TOGGLE_OVERLAY",
                 game: e,
                 newEnabledValue: t
             })
         },
         toggleDetection(e) {
-            a.default.dispatch({
+            s.default.dispatch({
                 type: "RUNNING_GAME_TOGGLE_DETECTION",
                 game: e
             })
         },
         editName(e, t) {
-            a.default.dispatch({
+            s.default.dispatch({
                 type: "RUNNING_GAME_EDIT_NAME",
                 game: e,
                 newName: t
@@ -168,7 +168,7 @@ function(e, t, n) {
                     i(Error("Did not find data on ".concat(e)));
                     return
                 }
-                a.default.dispatch({
+                s.default.dispatch({
                     type: "GAME_ICON_UPDATE",
                     gameName: r.name,
                     icon: "data:image/png;base64,".concat(r.icon)
@@ -178,7 +178,7 @@ function(e, t, n) {
         async getDetectableGamesSupplemental(e) {
             let t = e.filter(u.default.canFetch);
             if (0 !== t.length) {
-                a.default.dispatch({
+                s.default.dispatch({
                     type: "DETECTABLE_GAME_SUPPLEMENTAL_FETCH",
                     applicationIds: t
                 });
@@ -189,13 +189,13 @@ function(e, t, n) {
                             application_ids: t
                         }
                     });
-                    a.default.dispatch({
+                    s.default.dispatch({
                         type: "DETECTABLE_GAME_SUPPLEMENTAL_FETCH_SUCCESS",
                         applicationIds: t,
                         supplementalGameData: e.body.supplemental_game_data
                     })
                 } catch {
-                    a.default.dispatch({
+                    s.default.dispatch({
                         type: "DETECTABLE_GAME_SUPPLEMENTAL_FETCH_FAILURE",
                         applicationIds: t
                     })
@@ -203,8 +203,8 @@ function(e, t, n) {
             }
         },
         getDetectableGames() {
-            !c.default.fetching && null == c.default.lastFetched && a.default.wait(() => {
-                a.default.dispatch({
+            !c.default.fetching && null == c.default.lastFetched && s.default.wait(() => {
+                s.default.dispatch({
                     type: "GAMES_DATABASE_FETCH"
                 }), r.HTTP.get({
                     url: N.Endpoints.APPLICATIONS_DETECTABLE,
@@ -220,7 +220,7 @@ function(e, t, n) {
                             etag: n
                         }
                     } = e;
-                    a.default.dispatch({
+                    s.default.dispatch({
                         type: "GAMES_DATABASE_UPDATE",
                         games: t,
                         etag: n
@@ -229,11 +229,11 @@ function(e, t, n) {
                     let {
                         status: t
                     } = e;
-                    304 === t ? a.default.dispatch({
+                    304 === t ? s.default.dispatch({
                         type: "GAMES_DATABASE_UPDATE",
                         games: [],
                         etag: c.default.detectableGamesEtag
-                    }) : a.default.dispatch({
+                    }) : s.default.dispatch({
                         type: "GAMES_DATABASE_FETCH_FAIL"
                     })
                 })
@@ -244,7 +244,7 @@ function(e, t, n) {
                 name: t,
                 iconHash: n,
                 publisher: i,
-                distributor: s,
+                distributor: a,
                 sku: o,
                 executableName: u
             } = e, d = (0, l.cleanExecutablePath)(u);
@@ -256,7 +256,7 @@ function(e, t, n) {
                         name: t,
                         os: (0, S.getPlatformName)(),
                         icon: n,
-                        distributor_application: (_ = s, c = o, null == _ || "" === _ ? null : {
+                        distributor_application: (_ = a, c = o, null == _ || "" === _ ? null : {
                             distributor: _,
                             sku: c
                         }),
@@ -274,7 +274,7 @@ function(e, t, n) {
                             missing_data: i
                         }
                     } = e;
-                    a.default.dispatch({
+                    s.default.dispatch({
                         type: "UNVERIFIED_GAME_UPDATE",
                         name: t,
                         hash: n,
@@ -296,7 +296,7 @@ function(e, t, n) {
             })
         },
         deleteEntry(e) {
-            a.default.dispatch({
+            s.default.dispatch({
                 type: "RUNNING_GAME_DELETE_ENTRY",
                 game: e
             })
@@ -308,24 +308,24 @@ function(e, t, n) {
                 sessionId: n,
                 applicationId: i,
                 channelId: r,
-                messageId: s,
+                messageId: a,
                 intent: o = p.ActivityIntent.PLAY,
                 embedded: l = !1
             } = e;
-            if (__OVERLAY__) return a.default.dispatch({
+            if (__OVERLAY__) return s.default.dispatch({
                 type: "OVERLAY_JOIN_GAME",
                 userId: t,
                 sessionId: n,
                 applicationId: i,
                 channelId: r,
-                messageId: s
+                messageId: a
             }), Promise.resolve(!0);
-            a.default.dispatch({
+            s.default.dispatch({
                 type: "ACTIVITY_JOIN_LOADING",
                 applicationId: i
             });
             try {
-                let e = await h.default.getJoinSecret(t, n, i, r, s);
+                let e = await h.default.getJoinSecret(t, n, i, r, a);
                 return R({
                     applicationId: i,
                     secret: e,
@@ -334,7 +334,7 @@ function(e, t, n) {
                     embedded: l
                 }), !0
             } catch (e) {
-                return a.default.dispatch({
+                return s.default.dispatch({
                     type: "ACTIVITY_JOIN_FAILED",
                     applicationId: i
                 }), !1

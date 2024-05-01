@@ -3,9 +3,9 @@ function(e, t, n) {
     n.r(t);
     var i = n("302454"),
         r = n.n(i),
-        a = n("818083");
-    let s = /^https:\/\/(?:(?:media|images)\.discordapp\.net|(?:cdn\.discordapp\.com))\/(?:attachments|ephemeral-attachments)\/\d+\/\d+\/([A-Za-z0-9._-]*[A-Za-z0-9_-])(?:[?][a-zA-Z0-9?&=_-]*)?/,
-        o = (0, a.createExperiment)({
+        s = n("818083");
+    let a = /^https:\/\/(?:(?:media|images)\.discordapp\.net|(?:cdn\.discordapp\.com))\/(?:attachments|ephemeral-attachments)\/\d+\/\d+\/([A-Za-z0-9._-]*[A-Za-z0-9_-])(?:[?][a-zA-Z0-9?&=_-]*)?/,
+        o = (0, s.createExperiment)({
             kind: "user",
             id: "2023-11_attachment_link_markup",
             label: "Attachment Link Config User Experiment",
@@ -30,7 +30,7 @@ function(e, t, n) {
             order: r().defaultRules.url.order - .5,
             requiredFirstCharacters: ["h"],
             match(e) {
-                let t = s.exec(e);
+                let t = a.exec(e);
                 if (null !== t) {
                     let {
                         enabled: e

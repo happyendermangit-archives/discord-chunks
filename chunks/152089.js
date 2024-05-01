@@ -13,8 +13,8 @@ function(e, t, n) {
     }), n("47120"), n("411104");
     var i = n("911969"),
         r = n("581364"),
-        a = n("752305"),
-        s = n("130402"),
+        s = n("752305"),
+        a = n("130402"),
         o = n("365704"),
         l = n("590921"),
         u = n("185923");
@@ -23,7 +23,7 @@ function(e, t, n) {
         var t;
         let {
             activeCommandOption: n,
-            canMentionUsers: s = !0,
+            canMentionUsers: a = !0,
             canMentionRoles: o = !0,
             canMentionChannels: u = !0,
             canMentionEveryone: d,
@@ -61,7 +61,7 @@ function(e, t, n) {
                 null === (n = A.current) || void 0 === n || n.insertAutocomplete(e, null != t ? t : e)
             },
             replaceText: (e, t) => {
-                p(e, null != t ? t : (0, a.toRichValue)(e))
+                p(e, null != t ? t : (0, s.toRichValue)(e))
             },
             getCommandOptionValues: () => {
                 var e;
@@ -71,7 +71,7 @@ function(e, t, n) {
         if (null != n) {
             let e = (0, r.getApplicationCommandOptionQueryOptions)(n);
             e.canMentionChannels && (O.mentions.channel = l.ChannelMentionMode.ALLOW_SELECTABLE), e.canMentionEveryone && (O.mentions.global = e.canMentionHere ? l.GlobalMentionMode.ALLOW_EVERYONE_OR_HERE : l.GlobalMentionMode.ALLOW_EVERYONE), e.canMentionRoles && (O.mentions.role = e.canMentionNonMentionableRoles ? l.RoleMentionMode.ALLOW_ALL : l.RoleMentionMode.ALLOW_MENTIONABLE), e.canMentionUsers && (O.mentions.user = e.canMentionAnyGuildUser ? l.UserMentionMode.ALLOW_GUILD : l.UserMentionMode.ALLOW_CHANNEL), O.hideMentionDescription = !0
-        } else u && (O.mentions.channel = l.ChannelMentionMode.ALLOW_SELECTABLE), o && (O.mentions.role = l.RoleMentionMode.ALLOW_MENTIONABLE), s && (O.mentions.user = l.UserMentionMode.ALLOW_CHANNEL), d && (O.mentions.global = l.GlobalMentionMode.ALLOW_EVERYONE_OR_HERE), _ && (O.mentions.clyde = l.ClydeMentionMode.ALLOW);
+        } else u && (O.mentions.channel = l.ChannelMentionMode.ALLOW_SELECTABLE), o && (O.mentions.role = l.RoleMentionMode.ALLOW_MENTIONABLE), a && (O.mentions.user = l.UserMentionMode.ALLOW_CHANNEL), d && (O.mentions.global = l.GlobalMentionMode.ALLOW_EVERYONE_OR_HERE), _ && (O.mentions.clyde = l.ClydeMentionMode.ALLOW);
         return (null === (t = S.commands) || void 0 === t ? void 0 : t.enabled) && (c ? O.commands = E ? l.CommandMode.NEW_TEXT_ONLY : l.CommandMode.NEW : O.commands = l.CommandMode.OLD_BUILT_INS), null != n && null != n.channelTypes && (O.allowedChannelTypes = n.channelTypes), O
     }
 
@@ -81,14 +81,14 @@ function(e, t, n) {
             channel: n,
             guild: i,
             query: r,
-            isAtStart: a,
-            options: s
+            isAtStart: s,
+            options: a
         } = e, l = o.AUTOCOMPLETE_OPTIONS[t];
         if (null != l.sentinel) {
             if (!r.startsWith(l.sentinel)) return !1;
             r = r.substring(l.sentinel.length)
         }
-        return !!(null == l.matches || l.matches(n, i, r, a, s)) || !1
+        return !!(null == l.matches || l.matches(n, i, r, s, a)) || !1
     }
 
     function c(e) {
@@ -97,7 +97,7 @@ function(e, t, n) {
             guild: n,
             options: i,
             currentWord: r,
-            currentWordIsAtStart: a,
+            currentWordIsAtStart: s,
             textValue: d,
             optionText: c
         } = e, E = null;
@@ -155,7 +155,7 @@ function(e, t, n) {
                         channel: t,
                         guild: n,
                         query: d,
-                        isAtStart: a,
+                        isAtStart: s,
                         options: i
                     })) {
                     E = {
@@ -166,12 +166,12 @@ function(e, t, n) {
                     break
                 }
             } else if (e === l.AutocompleteOptionTypes.EMOJIS_AND_STICKERS) {
-                if (null != r && r.length > 0 && (0, s.initiateEmojiInteraction)(u.EmojiInteractionPoint.AutocompleteTyped), null != r && _({
+                if (null != r && r.length > 0 && (0, a.initiateEmojiInteraction)(u.EmojiInteractionPoint.AutocompleteTyped), null != r && _({
                         type: e,
                         channel: t,
                         guild: n,
                         query: r,
-                        isAtStart: a,
+                        isAtStart: s,
                         options: i
                     })) {
                     E = {
@@ -186,7 +186,7 @@ function(e, t, n) {
                     channel: t,
                     guild: n,
                     query: r,
-                    isAtStart: a,
+                    isAtStart: s,
                     options: i
                 })) {
                 E = {

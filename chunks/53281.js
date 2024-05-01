@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("653041");
     var i = n("735250"),
         r = n("470079"),
-        a = n("834427"),
-        s = n("579806"),
+        s = n("834427"),
+        a = n("579806"),
         o = n("403182"),
         l = n("358085"),
         u = n("861990");
@@ -13,7 +13,7 @@ function(e, t, n) {
         let t = ["openFile"];
         e.multiple && t.push("multiSelections");
         let n = e.filters;
-        s.default.fileManager.openFiles({
+        a.default.fileManager.openFiles({
             properties: t,
             filters: n
         }, u.MAX_TOTAL_ATTACHMENT_SIZE).then(t => {
@@ -44,7 +44,7 @@ function(e, t, n) {
             this._ref = e
         }
         render() {
-            return (0, i.jsx)(a.FileInput, {
+            return (0, i.jsx)(s.FileInput, {
                 ref: this.setRef,
                 handleNativeClick: d,
                 embedded: (0, l.isDesktop)(),

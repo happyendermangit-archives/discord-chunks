@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120"), n("653041");
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("954955"),
         l = n.n(o),
         u = n("739940"),
@@ -63,15 +63,15 @@ function(e, t, n) {
                 analyticsLocation: t,
                 pickerIntention: n,
                 columnCounts: i,
-                onSelectEmoji: a,
-                emojiGrid: s,
+                onSelectEmoji: s,
+                emojiGrid: a,
                 emojiList: o,
                 channelGuildId: l,
                 isBurstReaction: _
             } = e, c = (0, d.useStateFromStores)([m.default], () => m.default.getDisambiguatedEmojiContext(l), [l]), E = r.useCallback((e, i) => {
                 switch (e.type) {
                     case j.EmojiGridItemTypes.CREATE_EMOJI:
-                        a(void 0, !0), v.default.open(e.guildId, Q.GuildSettingsSections.EMOJI);
+                        s(void 0, !0), v.default.open(e.guildId, Q.GuildSettingsSections.EMOJI);
                         return;
                     case j.EmojiGridItemTypes.EMOJI: {
                         if (null != e.emoji && i.altKey) {
@@ -100,10 +100,10 @@ function(e, t, n) {
                             category: e.category,
                             subCategory: e.subCategory,
                             newlyAddedHighlight: e.subCategory === X.EmojiSubCategory.NEWLY_ADDED_EMOJI && N.default.isNewerThanLastSeen(l, e.emoji.id)
-                        }), a(e.emoji, !i.shiftKey, _)
+                        }), s(e.emoji, !i.shiftKey, _)
                     }
                 }
-            }, [a, l, n, c, t, _]), {
+            }, [s, l, n, c, t, _]), {
                 gridDispatch: T,
                 getItemProps: f,
                 getRowProps: S,
@@ -113,7 +113,7 @@ function(e, t, n) {
             } = (0, g.useExpressionPickerGridKeyboardNavigation)({
                 columnCounts: i,
                 gridNavigatorId: X.GRID_NAVIGATOR_ID,
-                itemGrid: s,
+                itemGrid: a,
                 itemList: o,
                 onGridNavigatorItemSelect: E,
                 onGridNavigatorPositionChange: ei
@@ -138,7 +138,7 @@ function(e, t, n) {
                 isUsingKeyboardNavigation: p
             }
         },
-        ea = (e, t) => {
+        es = (e, t) => {
             let [n, i] = r.useState(null);
             r.useEffect(() => {
                 if (null != n) {
@@ -149,7 +149,7 @@ function(e, t, n) {
                 i(O.EmojiPickerStore.getState().activeCategoryIndex)
             }, [e])
         },
-        es = (e, t, n, i) => {
+        ea = (e, t, n, i) => {
             r.useLayoutEffect(() => {
                 if (i) {
                     var e;
@@ -164,7 +164,7 @@ function(e, t, n) {
             openPopoutType: void 0
         };
     t.default = r.memo(r.forwardRef(function(e, t) {
-        var n, a;
+        var n, s;
         let o, {
                 pickerIntention: l,
                 channel: u,
@@ -201,7 +201,7 @@ function(e, t, n) {
             eP = r.useRef(null),
             eU = r.useRef(null);
         null == u && null != eg && (u = eg);
-        let eb = null !== (a = null !== (n = null == u ? void 0 : u.getGuildId()) && void 0 !== n ? n : c) && void 0 !== a ? a : null,
+        let eb = null !== (s = null !== (n = null == u ? void 0 : u.getGuildId()) && void 0 !== n ? n : c) && void 0 !== s ? s : null,
             [eG, ew] = r.useState(!1),
             eB = b.default.getCurrentUser(),
             ek = (0, w.isPremium)(eB);
@@ -320,7 +320,7 @@ function(e, t, n) {
                 channelGuildId: eb,
                 isBurstReaction: eG
             });
-        ea(ed, eP), es(ed, eK, eU, eR), r.useEffect(() => {
+        es(ed, eP), ea(ed, eK, eU, eR), r.useEffect(() => {
             !ec && (0, R.setSearchQuery)("")
         }, [ec]), r.useEffect(() => (G.default.track(Q.AnalyticEvents.OPEN_POPOUT, {
             type: null != eY ? eY : "Emoji Picker",
@@ -356,7 +356,7 @@ function(e, t, n) {
         }) : eG && !ek && (o = (0, i.jsx)(x.default, {
             onDismiss: () => ew(!1)
         }));
-        let ta = (0, i.jsx)(Y.default, {
+        let ts = (0, i.jsx)(Y.default, {
                 pickerIntention: l,
                 emojiListRef: eP,
                 onKeyDown: e => {
@@ -373,29 +373,29 @@ function(e, t, n) {
                 onBurstReactionToggle: () => ew(!eG),
                 renderHeader: em
             }),
-            ts = [];
-        l === J.EmojiIntention.REACTION && ts.push(_.DismissibleContent.SUPER_REACTIONS_NITRO_MARKETING), !m.default.hasFavoriteEmojis(eb) && ts.push(_.DismissibleContent.EMOJI_PICKER_FAVORITE_EMOJIS_TIP);
+            ta = [];
+        l === J.EmojiIntention.REACTION && ta.push(_.DismissibleContent.SUPER_REACTIONS_NITRO_MARKETING), !m.default.hasFavoriteEmojis(eb) && ta.push(_.DismissibleContent.EMOJI_PICKER_FAVORITE_EMOJIS_TIP);
         let to = (0, i.jsx)(T.default, {
             ...ej,
             children: (0, i.jsxs)(ti, {
                 id: X.EMOJI_PICKER_TAB_PANEL_ID,
                 "aria-labelledby": v ? X.EMOJI_PICKER_TAB_ID : void 0,
                 role: v ? "tabpanel" : void 0,
-                className: s()($.wrapper, {
+                className: a()($.wrapper, {
                     [$.emojiPickerHasTabWrapper]: v,
                     [$.isBurstReactionPicker]: eG && ek
                 }),
-                children: [v ? null : ta, (0, i.jsxs)("div", {
-                    className: s()($.emojiPicker, eE),
+                children: [v ? null : ts, (0, i.jsxs)("div", {
+                    className: a()($.emojiPicker, eE),
                     onScroll: en,
-                    children: [v ? ta : null, (0, i.jsxs)("div", {
+                    children: [v ? ts : null, (0, i.jsxs)("div", {
                         className: $.bodyWrapper,
                         ref: ey,
                         children: [(0, i.jsx)(z.default, {
                             channel: u,
                             closePopout: I
                         }), (0, i.jsx)(A.default, {
-                            contentTypes: ts,
+                            contentTypes: ta,
                             children: e => {
                                 let {
                                     visibleContent: t,

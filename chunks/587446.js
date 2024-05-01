@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        a = n.n(r),
-        s = n("481060"),
+        s = n.n(r),
+        a = n("481060"),
         o = n("466111"),
         l = n("689938"),
         u = n("246632");
@@ -19,12 +19,12 @@ function(e, t, n) {
             text: t = l.default.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
             className: n
         } = e;
-        return (0, i.jsx)(s.Tooltip, {
+        return (0, i.jsx)(a.Tooltip, {
             text: t,
-            children: e => (0, i.jsx)(s.Clickable, {
+            children: e => (0, i.jsx)(a.Clickable, {
                 ...e,
                 children: (0, i.jsx)(o.default, {
-                    className: a()(u.nitroWheel, n)
+                    className: s()(u.nitroWheel, n)
                 })
             })
         })

@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t);
-    var i, r, a, s, o = n("442837"),
+    var i, r, s, a, o = n("442837"),
         l = n("570140"),
         u = n("981631");
     let d = {},
@@ -9,7 +9,7 @@ function(e, t, n) {
             integration: "",
             query: ""
         };
-    class c extends(s = o.default.Store) {
+    class c extends(a = o.default.Store) {
         getResults(e, t) {
             if (null == e || null == t) return null;
             let n = d[e];
@@ -19,12 +19,12 @@ function(e, t, n) {
             return _
         }
     }
-    a = "IntegrationQueryStore", (r = "displayName") in(i = c) ? Object.defineProperty(i, r, {
-        value: a,
+    s = "IntegrationQueryStore", (r = "displayName") in(i = c) ? Object.defineProperty(i, r, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : i[r] = a, t.default = new c(l.default, {
+    }) : i[r] = s, t.default = new c(l.default, {
         INTEGRATION_QUERY: function(e) {
             var t;
             let {

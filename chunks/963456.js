@@ -10,8 +10,8 @@ function(e, t, n) {
     });
     var i = n("544891"),
         r = n("570140"),
-        a = n("626135"),
-        s = n("70956"),
+        s = n("626135"),
+        a = n("70956"),
         o = n("981631");
     async function l(e, t, n) {
         let l, u = 0;
@@ -45,13 +45,13 @@ function(e, t, n) {
                 c(!0);
                 return
             }
-            return 429 === t.status ? d(t.body.retry_after * s.default.Millis.SECOND) : (c(!0), r.default.dispatch({
+            return 429 === t.status ? d(t.body.retry_after * a.default.Millis.SECOND) : (c(!0), r.default.dispatch({
                 type: "APPLICATION_COMMAND_INDEX_FETCH_FAILURE",
                 target: e
             }))
         }), c = e => {
             let i = performance.now() - t;
-            a.default.track(o.AnalyticEvents.APPLICATION_COMMAND_PERFORMANCE, {
+            s.default.track(o.AnalyticEvents.APPLICATION_COMMAND_PERFORMANCE, {
                 duration_ms: i,
                 error: e,
                 aborted: n.signal.aborted,

@@ -2,15 +2,15 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return a
         }
     });
     var i = n("735250");
     n("470079");
     var r = n("481060"),
-        a = n("689938");
+        s = n("689938");
 
-    function s() {
+    function a() {
         function e() {
             (0, r.openModalLazy)(async () => {
                 let {
@@ -27,9 +27,9 @@ function(e, t, n) {
             } = await Promise.all([n.e("99387"), n.e("67753")]).then(n.bind(n, "873809"));
             return n => (0, i.jsx)(t, {
                 ...n,
-                header: a.default.Messages.SCREENSHARE_UNAVAILABLE,
-                body: a.default.Messages.SCREENSHARE_UNAVAILABLE_DOWNLOAD_APP,
-                confirmText: a.default.Messages.DOWNLOAD_APP,
+                header: s.default.Messages.SCREENSHARE_UNAVAILABLE,
+                body: s.default.Messages.SCREENSHARE_UNAVAILABLE_DOWNLOAD_APP,
+                confirmText: s.default.Messages.DOWNLOAD_APP,
                 onConfirm: e
             })
         })

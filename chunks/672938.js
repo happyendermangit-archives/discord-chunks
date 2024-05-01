@@ -2,9 +2,9 @@ function(e, t, n) {
     "use strict";
     n.r(t), n("47120");
     var i, r = n("735250"),
-        a = n("470079"),
-        s = n("120356"),
-        o = n.n(s),
+        s = n("470079"),
+        a = n("120356"),
+        o = n.n(a),
         l = n("846519"),
         u = n("285952"),
         d = n("518383");
@@ -45,10 +45,10 @@ function(e, t, n) {
         let {
             time: t,
             padLargestUnit: n
-        } = e, i = Math.floor(t) % 60, r = Math.floor(t / 60) % 60, a = Math.floor(t / 3600);
-        return 0 === a ? n ? "".concat(E(r), ":").concat(E(i)) : "".concat(r, ":").concat(E(i)) : n ? "".concat(E(a), ":").concat(E(r), ":").concat(E(i)) : "".concat(a, ":").concat(E(r), ":").concat(E(i))
+        } = e, i = Math.floor(t) % 60, r = Math.floor(t / 60) % 60, s = Math.floor(t / 3600);
+        return 0 === s ? n ? "".concat(E(r), ":").concat(E(i)) : "".concat(r, ":").concat(E(i)) : n ? "".concat(E(s), ":").concat(E(r), ":").concat(E(i)) : "".concat(s, ":").concat(E(r), ":").concat(E(i))
     }
-    class T extends(i = a.PureComponent) {
+    class T extends(i = s.PureComponent) {
         componentDidMount() {
             this.timer.start(500, () => {
                 this.setState({
@@ -65,11 +65,11 @@ function(e, t, n) {
                 end: t,
                 className: n,
                 themed: i,
-                singleLine: a = !1
+                singleLine: s = !1
             } = this.props, {
-                now: s
-            } = this.state, l = (t - e) / 1e3, _ = Math.max(Math.min((s - e) / 1e3, l), 0);
-            return a ? (0, r.jsxs)("div", {
+                now: a
+            } = this.state, l = (t - e) / 1e3, _ = Math.max(Math.min((a - e) / 1e3, l), 0);
+            return s ? (0, r.jsxs)("div", {
                 className: o()(n, {
                     [d.themed]: i
                 }, d.singleLineContainer),

@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t);
     var i = n("470079"),
         r = n("442837"),
-        a = n("230711"),
-        s = n("607070"),
+        s = n("230711"),
+        a = n("607070"),
         o = n("663389"),
         l = n("526761"),
         u = n("981631");
@@ -21,7 +21,7 @@ function(e, t, n) {
     });
     t.default = function(e, t, n) {
         let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-            u = (0, r.useStateFromStores)([s.default], () => s.default.useReducedMotion),
+            u = (0, r.useStateFromStores)([a.default], () => a.default.useReducedMotion),
             _ = (0, r.useStateFromStores)([o.default], () => o.default.getScrollPosition());
         (0, i.useEffect)(() => {
             let i = e.current;
@@ -30,7 +30,7 @@ function(e, t, n) {
                     i.scrollIntoView({
                         behavior: u ? "auto" : "smooth",
                         ...n
-                    }), a.default.clearScrollPosition(d[t])
+                    }), s.default.clearScrollPosition(d[t])
                 });
                 return () => cancelAnimationFrame(e)
             }, l)

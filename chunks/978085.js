@@ -13,12 +13,12 @@ function(e, t, n) {
     });
     var i = n("544891"),
         r = n("570140"),
-        a = n("85521"),
-        s = n("73346"),
+        s = n("85521"),
+        a = n("73346"),
         o = n("981631");
     async function l() {
         try {
-            let e = await (0, s.httpGetWithCountryCodeQuery)({
+            let e = await (0, a.httpGetWithCountryCodeQuery)({
                 url: o.Endpoints.LIBRARY,
                 oldFormErrors: !0
             }, !1);
@@ -39,7 +39,7 @@ function(e, t, n) {
         let n = (await i.HTTP.get({
             url: o.Endpoints.APPLICATION_BRANCH_LIST(e.id),
             oldFormErrors: !0
-        }).then(e => e.body)).map(n => a.default.createForTestMode({
+        }).then(e => e.body)).map(n => s.default.createForTestMode({
             id: e.id,
             skuId: t,
             branch: n

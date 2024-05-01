@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("710845"),
-        a = n("620662"),
-        s = n("915863"),
+        s = n("620662"),
+        a = n("915863"),
         o = n("981631"),
         l = n("689938");
 
@@ -20,7 +20,7 @@ function(e, t, n) {
             look: u,
             color: d
         } = e;
-        return (0, a.default)(t, o.ActivityFlags.INSTANCE) ? (0, i.jsx)(s.default, {
+        return (0, s.default)(t, o.ActivityFlags.INSTANCE) ? (0, i.jsx)(a.default, {
             look: u,
             color: d,
             onClick: function() {

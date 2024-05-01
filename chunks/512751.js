@@ -2,18 +2,18 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useShowApplicationInGDM: function() {
-            return s
+            return a
         }
     });
     var i = n("399606"),
         r = n("592125"),
-        a = n("587100");
+        s = n("587100");
 
-    function s(e) {
+    function a(e) {
         let t = (0, i.useStateFromStores)([r.default], () => r.default.getChannel(e)),
             {
                 enabled: n
-            } = a.default.useExperiment({
+            } = s.default.useExperiment({
                 location: "baec9c_1"
             });
         return n && function(e) {

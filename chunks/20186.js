@@ -5,7 +5,7 @@ function(e, t, n) {
             return r
         },
         getGlobalTagsArray: function() {
-            return a
+            return s
         }
     });
     let i = {};
@@ -14,7 +14,7 @@ function(e, t, n) {
         i[e] = t
     }
 
-    function a() {
+    function s() {
         return Object.keys(i).map(e => "".concat(e, ":").concat(i[e]))
     }
 }

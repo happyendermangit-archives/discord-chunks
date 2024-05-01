@@ -6,8 +6,8 @@ function(e, t, n) {
             return I
         }
     });
-    var r, a = n("735250"),
-        s = n("470079"),
+    var r, s = n("735250"),
+        a = n("470079"),
         o = n("120356"),
         l = n.n(o),
         u = n("58654"),
@@ -23,7 +23,7 @@ function(e, t, n) {
         }) : e[t] = n, e
     }
     let E = ["letter-spacing", "line-height", "padding-top", "padding-bottom", "font-family", "font-weight", "font-size", "text-transform", "width", "padding-left", "padding-right", "border-width", "box-sizing"];
-    class I extends(r = s.PureComponent) {
+    class I extends(r = a.PureComponent) {
         componentDidMount() {
             Promise.resolve().then(() => this.calculateSize())
         }
@@ -43,8 +43,8 @@ function(e, t, n) {
             let {
                 fontWidthEstimate: n,
                 rows: r
-            } = this.props, a = null !== (e = this.props.value) && void 0 !== e ? e : t.value;
-            if (null != n && -1 === a.indexOf("\n") && a.length * n < .8 * t.offsetWidth) {
+            } = this.props, s = null !== (e = this.props.value) && void 0 !== e ? e : t.value;
+            if (null != n && -1 === s.indexOf("\n") && s.length * n < .8 * t.offsetWidth) {
                 this.setState({
                     height: void 0
                 });
@@ -52,14 +52,14 @@ function(e, t, n) {
             }
             null == i && null != document.body && (i = document.createElement("textarea"), document.body.appendChild(i));
             let {
-                paddingSize: s,
+                paddingSize: a,
                 borderSize: o,
                 boxSizing: l,
                 sizingStyle: u
             } = this.calculateNodeStyling(t);
-            i.setAttribute("style", u + ";\n  visibility:hidden;\n  overflow:hidden;\n  position:absolute;\n  z-index:-1000;\n  top:0;\n  right:0;\n"), i.value = a, null != r ? i.setAttribute("rows", "".concat(r)) : i.removeAttribute("rows");
+            i.setAttribute("style", u + ";\n  visibility:hidden;\n  overflow:hidden;\n  position:absolute;\n  z-index:-1000;\n  top:0;\n  right:0;\n"), i.value = s, null != r ? i.setAttribute("rows", "".concat(r)) : i.removeAttribute("rows");
             let d = i.scrollHeight;
-            "border-box" === l ? d += o : "content-box" === l && (d -= s), this.setState({
+            "border-box" === l ? d += o : "content-box" === l && (d -= a), this.setState({
                 height: d
             })
         }
@@ -116,8 +116,8 @@ function(e, t, n) {
                 ...this.state,
                 ...e
             };
-            return (0, a.jsx)(d.FocusRing, {
-                children: (0, a.jsx)("textarea", {
+            return (0, s.jsx)(d.FocusRing, {
+                children: (0, s.jsx)("textarea", {
                     ...n,
                     className: l()(t, _.scrollbarGhostHairline),
                     ref: this.handleSetRef,

@@ -2,26 +2,26 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         RESTRICTIONS: function() {
-            return s
+            return a
         }
     });
     var i = n("381129"),
         r = n("981631"),
-        a = n("689938");
-    let s = [{
+        s = n("689938");
+    let a = [{
         check(e, t, n) {
             if (!n || null == t.getGuildId()) return !1;
             let r = i.default.extractEveryoneRole(e, t);
             if (null == r || !i.default.shouldShowEveryoneGuard(r, t)) return !1;
-            let s = i.default.everyoneMemberCount(r, t),
-                o = Math.pow(10, Math.floor(Math.log10(s))),
-                l = a.default.Messages.EVERYONE_POPOUT_BODY;
-            return t.isForumPost() ? l = a.default.Messages.EVERYONE_POPOUT_BODY_FORUM_POST : t.isThread() && (l = a.default.Messages.EVERYONE_POPOUT_BODY_THREAD), {
+            let a = i.default.everyoneMemberCount(r, t),
+                o = Math.pow(10, Math.floor(Math.log10(a))),
+                l = s.default.Messages.EVERYONE_POPOUT_BODY;
+            return t.isForumPost() ? l = s.default.Messages.EVERYONE_POPOUT_BODY_FORUM_POST : t.isThread() && (l = s.default.Messages.EVERYONE_POPOUT_BODY_THREAD), {
                 body: l.format({
                     role: r,
-                    count: (Math.trunc(s / o) * o).toLocaleString()
+                    count: (Math.trunc(a / o) * o).toLocaleString()
                 }),
-                footer: a.default.Messages.EVERYONE_POPOUT_FOOTER
+                footer: s.default.Messages.EVERYONE_POPOUT_FOOTER
             }
         },
         analyticsType: "@Everyone Warning",
@@ -31,7 +31,7 @@ function(e, t, n) {
         }
     }, {
         check: e => !!r.TOKEN_REGEX.test(e) && {
-            body: a.default.Messages.TOKEN_POPOUT_BODY
+            body: s.default.Messages.TOKEN_POPOUT_BODY
         },
         analyticsType: "API Token Warning"
     }]

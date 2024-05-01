@@ -16,8 +16,8 @@ function(e, t, n) {
     }), n("789020");
     var i = n("544891"),
         r = n("570140"),
-        a = n("367907"),
-        s = n("314897"),
+        s = n("367907"),
+        a = n("314897"),
         o = n("271383"),
         l = n("430824"),
         u = n("626135"),
@@ -29,7 +29,7 @@ function(e, t, n) {
 
     function T(e) {
         u.default.track(E.AnalyticEvents.GUILD_ONBOARDING_LOADED, {
-            ...(0, a.collectGuildAnalyticsMetadata)(e),
+            ...(0, s.collectGuildAnalyticsMetadata)(e),
             has_new_prompts: !1,
             number_of_prompts: 0
         })
@@ -57,10 +57,10 @@ function(e, t, n) {
     }
     async function S(e) {
         var t, n;
-        let i = s.default.getId(),
+        let i = a.default.getId(),
             r = (0, d.hasFlag)(null !== (n = null === (t = o.default.getMember(e, i)) || void 0 === t ? void 0 : t.flags) && void 0 !== n ? n : 0, I.GuildMemberFlags.COMPLETED_ONBOARDING),
-            a = l.default.getGuild(e);
-        if (null == a || !a.hasFeature(E.GuildFeatures.GUILD_ONBOARDING)) return Promise.resolve();
+            s = l.default.getGuild(e);
+        if (null == s || !s.hasFeature(E.GuildFeatures.GUILD_ONBOARDING)) return Promise.resolve();
         let u = _.default.shouldFetchPrompts(e),
             c = _.default.getOnboardingPrompts(e);
         if (!u && c.length > 0) return c.every(e => !e.inOnboarding) ? (A(e), Promise.resolve()) : (!r && h(e), Promise.resolve());
@@ -77,11 +77,11 @@ function(e, t, n) {
 
     function A(e) {
         u.default.track(E.AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, {
-            ...(0, a.collectGuildAnalyticsMetadata)(e),
+            ...(0, s.collectGuildAnalyticsMetadata)(e),
             step: -2,
             required: !0
         }), u.default.track(E.AnalyticEvents.GUILD_ONBOARDING_STEP_COMPLETED, {
-            ...(0, a.collectGuildAnalyticsMetadata)(e),
+            ...(0, s.collectGuildAnalyticsMetadata)(e),
             step: -2,
             skipped: !1,
             is_final_step: !0,

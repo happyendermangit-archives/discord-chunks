@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("653041"), n("47120"), n("789020"), n("724458");
     var i = n("392711"),
         r = n.n(i),
-        a = n("131704"),
-        s = n("680089"),
+        s = n("131704"),
+        a = n("680089"),
         o = n("592125"),
         l = n("480294"),
         u = n("580005"),
@@ -79,7 +79,7 @@ function(e, t, n) {
         }(h)), S.push(... function(e) {
             let t = [],
                 n = [];
-            for (let t of e) _.default.isChannelMuted(t.guild_id, t.id) && t.isCategory() && !s.default.isCollapsed(t.id) && n.push(t);
+            for (let t of e) _.default.isChannelMuted(t.guild_id, t.id) && t.isCategory() && !a.default.isCollapsed(t.id) && n.push(t);
             return n.length > 0 && t.push({
                 label: "Unmuting ".concat(n.length, " categories and setting to grey-dot"),
                 debug: n.map(e => "\n    - #".concat(e.name)).join(""),
@@ -110,25 +110,25 @@ function(e, t, n) {
                     for (let n of i) N(e, t, n.id, !1)
                 }
             }), t
-        }(h)), l.default.hasConsented(f.Consents.PERSONALIZATION) ? S.push(... function(e, t, n, i, a) {
+        }(h)), l.default.hasConsented(f.Consents.PERSONALIZATION) ? S.push(... function(e, t, n, i, s) {
             if (_.default.isMuted(e.id) && !_.default.isTemporarilyMuted(e.id)) return [];
-            let s = new Set(t.map(e => e.id)),
-                o = i.filter(e => s.has(e.channel_id)),
+            let a = new Set(t.map(e => e.id)),
+                o = i.filter(e => a.has(e.channel_id)),
                 l = r().keyBy(o, "channel_id"),
-                u = Math.max(n.messages === T.PainLevel.High ? a.frecency.yearMinOpensLargeServer : a.frecency.yearMinOpensSmallServer, o.reduce((e, t) => {
+                u = Math.max(n.messages === T.PainLevel.High ? s.frecency.yearMinOpensLargeServer : s.frecency.yearMinOpensSmallServer, o.reduce((e, t) => {
                     var n;
                     return e + Number(null !== (n = t.num_year_opens) && void 0 !== n ? n : 0)
-                }, 0) * a.frecency.totalOpensPercent),
-                d = Math.max(a.frecency.monthMinOpens, o.reduce((e, t) => {
+                }, 0) * s.frecency.totalOpensPercent),
+                d = Math.max(s.frecency.monthMinOpens, o.reduce((e, t) => {
                     var n;
                     return e + Number(null !== (n = t.num_three_month_opens) && void 0 !== n ? n : 0)
-                }, 0) * a.frecency.totalOpensPercent),
+                }, 0) * s.frecency.totalOpensPercent),
                 c = [],
                 E = [];
             t.forEach(e => {
                 var t, n, i, r;
-                let a = null !== (t = l[e.id]) && void 0 !== t ? t : {};
-                Number(null !== (n = a.num_year_opens) && void 0 !== n ? n : 0) > u || Number(null !== (i = a.num_month_opens) && void 0 !== i ? i : 0) > d ? c.push(e) : Number(null !== (r = a.num_three_month_opens) && void 0 !== r ? r : 0) > 2 && E.push(e)
+                let s = null !== (t = l[e.id]) && void 0 !== t ? t : {};
+                Number(null !== (n = s.num_year_opens) && void 0 !== n ? n : 0) > u || Number(null !== (i = s.num_month_opens) && void 0 !== i ? i : 0) > d ? c.push(e) : Number(null !== (r = s.num_three_month_opens) && void 0 !== r ? r : 0) > 2 && E.push(e)
             });
             let I = [];
             return c.length > 0 && I.push({
@@ -146,16 +146,16 @@ function(e, t, n) {
             let n = [],
                 i = new Set(t.map(e => e.id)),
                 r = Date.now() - c.default.Millis.DAYS_30,
-                s = u.default.getFrequentlyWithoutFetchingLatest().filter(e => e instanceof a.ChannelRecordBase && i.has(e.id)).filter(e => {
+                a = u.default.getFrequentlyWithoutFetchingLatest().filter(e => e instanceof s.ChannelRecordBase && i.has(e.id)).filter(e => {
                     var t, n;
                     let i = null !== (n = null === (t = u.default.frecencyWithoutFetchingLatest.usageHistory[e.id]) || void 0 === t ? void 0 : t.recentUses) && void 0 !== n ? n : [];
                     return 0 !== i.length && i[i.length - 1] >= r
                 });
-            return s.length > 0 && n.push({
-                label: "Setting ".concat(s.length, " channels to white-dot since they are recent and frequently viewed"),
-                debug: s.map(e => "\n    - #".concat(e.name)).join(""),
+            return a.length > 0 && n.push({
+                label: "Setting ".concat(a.length, " channels to white-dot since they are recent and frequently viewed"),
+                debug: a.map(e => "\n    - #".concat(e.name)).join(""),
                 apply: (e, t) => {
-                    for (let n of s) N(e, t, n.id, !0)
+                    for (let n of a) N(e, t, n.id, !0)
                 }
             }), n
         }(e, h)), S.filter(I.isNotNullish)
@@ -167,9 +167,9 @@ function(e, t, n) {
     }
 
     function m(e, t, n, i) {
-        var a, s, o, l;
-        let u = null !== (o = null === (a = e.channel_overrides) || void 0 === a ? void 0 : a[n]) && void 0 !== o ? o : {};
-        i(u, null !== (l = null === (s = t.channel_overrides) || void 0 === s ? void 0 : s[n]) && void 0 !== l ? l : {}), !r().isEmpty(u) && (null == e.channel_overrides && (e.channel_overrides = {}), e.channel_overrides[n] = u)
+        var s, a, o, l;
+        let u = null !== (o = null === (s = e.channel_overrides) || void 0 === s ? void 0 : s[n]) && void 0 !== o ? o : {};
+        i(u, null !== (l = null === (a = t.channel_overrides) || void 0 === a ? void 0 : a[n]) && void 0 !== l ? l : {}), !r().isEmpty(u) && (null == e.channel_overrides && (e.channel_overrides = {}), e.channel_overrides[n] = u)
     }
 
     function N(e, t, n, i) {

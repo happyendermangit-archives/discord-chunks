@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120"), n("757143");
     var i = n("946188"),
         r = n("768581"),
-        a = n("302221"),
-        s = n("956664"),
+        s = n("302221"),
+        a = n("956664"),
         o = n("753090");
     let l = new Set(["™", "™️", "\xa9", "\xa9️", "\xae", "\xae️"]);
 
@@ -28,10 +28,10 @@ function(e, t, n) {
             size: 32,
             animated: !1
         }) : u(i);
-        let o = await (0, s.getPaletteForAvatar)(t);
+        let o = await (0, a.getPaletteForAvatar)(t);
         return null == o ? void 0 : o.map(e => {
             let [t, n, i] = e;
-            return (0, a.rgbToHex)(t, n, i)
+            return (0, s.rgbToHex)(t, n, i)
         })
     }
     t.default = {

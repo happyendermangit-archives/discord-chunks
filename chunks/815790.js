@@ -17,8 +17,8 @@ function(e, t, n) {
             return c
         }
     });
-    var i, r, a = n("814391"),
-        s = n("689938");
+    var i, r, s = n("814391"),
+        a = n("689938");
     let o = {
             month: "short",
             day: "numeric",
@@ -35,23 +35,23 @@ function(e, t, n) {
         };
     (i = r || (r = {}))[i.JOINED_AT = 0] = "JOINED_AT", i[i.ACCOUNT_AGE = 1] = "ACCOUNT_AGE";
     let u = () => ({
-            seconds: s.default.Messages.MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS,
-            minutes: s.default.Messages.MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES,
-            hours: s.default.Messages.MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS,
-            days: s.default.Messages.MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS,
-            months: s.default.Messages.MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH,
-            years: s.default.Messages.MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_YEAR
+            seconds: a.default.Messages.MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS,
+            minutes: a.default.Messages.MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES,
+            hours: a.default.Messages.MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS,
+            days: a.default.Messages.MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS,
+            months: a.default.Messages.MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH,
+            years: a.default.Messages.MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_YEAR
         }),
         d = () => ({
-            hours: s.default.Messages.MEMBERS_TABLE_ACCOUNT_AGE_TIMESTAMP_HOURS,
-            days: s.default.Messages.MEMBERS_TABLE_ACCOUNT_AGE_TIMESTAMP_DAYS,
-            months: s.default.Messages.MEMBERS_TABLE_ACCOUNT_AGE_TIMESTAMP_MORE_THAN_MONTH,
-            years: s.default.Messages.MEMBERS_TABLE_ACCOUNT_AGE_TIMESTAMP_MORE_THAN_YEAR
+            hours: a.default.Messages.MEMBERS_TABLE_ACCOUNT_AGE_TIMESTAMP_HOURS,
+            days: a.default.Messages.MEMBERS_TABLE_ACCOUNT_AGE_TIMESTAMP_DAYS,
+            months: a.default.Messages.MEMBERS_TABLE_ACCOUNT_AGE_TIMESTAMP_MORE_THAN_MONTH,
+            years: a.default.Messages.MEMBERS_TABLE_ACCOUNT_AGE_TIMESTAMP_MORE_THAN_YEAR
         }),
         _ = (e, t) => {
             var n;
             let i = 0 === (n = t) ? u : 1 === n ? d : void 0;
-            return (0, a.default)(e, i, !1)
+            return (0, s.default)(e, i, !1)
         },
         c = e => (null != e ? new Date(e) : new Date).getTime()
 }

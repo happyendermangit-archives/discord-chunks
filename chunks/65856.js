@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("733860"), n("653041"), n("411104"), n("47120");
     var i = n("512722"),
         r = n.n(i),
-        a = n("392711"),
-        s = n.n(a),
+        s = n("392711"),
+        a = n.n(s),
         o = n("626135"),
         l = n("70956"),
         u = n("189800"),
@@ -78,8 +78,8 @@ function(e, t, n) {
                 }), n(r)
             }).then(e => new Promise(async (n, i) => {
                 if (null != e.validation) {
-                    let a = await this.getJoi();
-                    r()(null != e.validation, "command.validation must not be null"), a.validate(t.args, e.validation(a), {
+                    let s = await this.getJoi();
+                    r()(null != e.validation, "command.validation must not be null"), s.validate(t.args, e.validation(s), {
                         convert: !1
                     }, t => {
                         if (null != t) {
@@ -146,7 +146,7 @@ function(e, t, n) {
             return void 0 !== this.subscriptions.find(n => n.socket.application.id === e && n.evt === t)
         }
         getSubscription(e, t, n) {
-            return this.subscriptions.find(i => i.socket === e && i.evt === t && s().isEqual(i.args, n))
+            return this.subscriptions.find(i => i.socket === e && i.evt === t && a().isEqual(i.args, n))
         }
         addSubscription(e, t, n) {
             let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
@@ -164,17 +164,17 @@ function(e, t, n) {
             })
         }
         removeSubscription(e, t, n) {
-            s().remove(this.subscriptions, i => i.socket === e && i.evt === t && s().isEqual(i.args, n))
+            a().remove(this.subscriptions, i => i.socket === e && i.evt === t && a().isEqual(i.args, n))
         }
         removeSubscriptions(e) {
-            s().remove(this.subscriptions, t => t.socket === e)
+            a().remove(this.subscriptions, t => t.socket === e)
         }
         dispatchToSubscriptions(e, t, n, i) {
             var r;
             if (!(null != i && "" !== i && (r = i, S.includes(r) || (S.unshift(r), S.splice(50), 0)))) this.subscriptions.forEach(i => {
-                var r, a, o;
+                var r, s, o;
                 if (i.evt === e) {
-                    if (("function" != typeof t || t(i)) && ("object" != typeof t || (a = t, o = null !== (r = i.args) && void 0 !== r ? r : {}, s().isEqual(a, s().pick(o, Object.keys(a)))))) this.dispatch(i.socket, null, I.RPCCommands.DISPATCH, i.evt, n)
+                    if (("function" != typeof t || t(i)) && ("object" != typeof t || (s = t, o = null !== (r = i.args) && void 0 !== r ? r : {}, a().isEqual(s, a().pick(o, Object.keys(s)))))) this.dispatch(i.socket, null, I.RPCCommands.DISPATCH, i.evt, n)
                 }
             })
         }
@@ -186,13 +186,13 @@ function(e, t, n) {
         storeWait(e, t, n) {
             let i = t();
             if (i || 0 === n) return Promise.resolve(i);
-            let r = s().uniqueId(),
-                a = () => this.removeSubscription(e, f, {
+            let r = a().uniqueId(),
+                s = () => this.removeSubscription(e, f, {
                     uniqueId: r
                 });
-            return new Promise((i, s) => {
+            return new Promise((i, a) => {
                 let o = setTimeout(() => {
-                    a(), s(Error("timeout"))
+                    s(), a(Error("timeout"))
                 }, n * l.default.Millis.SECOND);
                 this.addSubscription(e, f, {
                     uniqueId: r
@@ -200,7 +200,7 @@ function(e, t, n) {
                     let e = t();
                     e && (clearTimeout(o), i(e))
                 })
-            }).then(e => (a(), e))
+            }).then(e => (s(), e))
         }
         constructor(e) {
             T(this, "getCurrentUser", () => null), T(this, "onConnect", () => {}), T(this, "onDisconnect", () => {}), T(this, "getJoi", void 0), T(this, "events", {}), T(this, "commands", {}), T(this, "sockets", new Set), T(this, "subscriptions", []), this.getJoi = e

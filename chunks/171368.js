@@ -10,8 +10,8 @@ function(e, t, n) {
     });
     var i = n("570140"),
         r = n("232567"),
-        a = n("594174"),
-        s = n("342656"),
+        s = n("594174"),
+        a = n("342656"),
         o = n("447452"),
         l = n("484459"),
         u = n("981631");
@@ -28,7 +28,7 @@ function(e, t, n) {
             autoFocusNote: T,
             analyticsLocation: f,
             sourceAnalyticsLocations: S
-        } = e, h = a.default.getUser(t), A = null != d && d !== u.ME ? d : void 0, m = (0, s.isInProfileMutualsExperiment)().enabled || (0, o.getSimplifiedProfileExperimentConfig)({
+        } = e, h = s.default.getUser(t), A = null != d && d !== u.ME ? d : void 0, m = (0, a.isInProfileMutualsExperiment)().enabled || (0, o.getSimplifiedProfileExperimentConfig)({
             location: "openUserProfileModal",
             autoTrackExposure: !1
         }).basicsEnabled;

@@ -28,8 +28,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("512722"),
         r = n.n(i),
-        a = n("283693"),
-        s = n("601964"),
+        s = n("283693"),
+        a = n("601964"),
         o = n("625137"),
         l = n("981631");
 
@@ -83,18 +83,18 @@ function(e, t, n) {
             latestOnboardingQuestionId: e.properties.latest_onboarding_question_id,
             clan: e.properties.clan
         };
-        return null == t ? (0, a.dangerouslyCast)(N, s.default) : t.merge(N)
+        return null == t ? (0, s.dangerouslyCast)(N, a.default) : t.merge(N)
     }
 
     function d(e, t) {
-        return new s.GuildRecordWithRoles({
+        return new a.GuildRecordWithRoles({
             ...e,
             roles: t
         })
     }
 
     function _(e, t) {
-        var n, i, r, a, s, o, u, d, _, c, E, T, f;
+        var n, i, r, s, a, o, u, d, _, c, E, T, f;
         let S = null !== (n = e.properties) && void 0 !== n ? n : I(t),
             h = {
                 id: e.id,
@@ -105,13 +105,13 @@ function(e, t, n) {
                 banner: S.banner,
                 homeHeader: S.home_header,
                 features: new Set(null !== (r = S.features) && void 0 !== r ? r : []),
-                preferredLocale: null !== (a = S.preferred_locale) && void 0 !== a ? a : "en-us",
+                preferredLocale: null !== (s = S.preferred_locale) && void 0 !== s ? s : "en-us",
                 ownerId: S.owner_id,
                 application_id: S.application_id,
                 afkChannelId: S.afk_channel_id,
                 afkTimeout: S.afk_timeout,
                 systemChannelId: S.system_channel_id,
-                verificationLevel: null !== (s = S.verification_level) && void 0 !== s ? s : l.VerificationLevels.NONE,
+                verificationLevel: null !== (a = S.verification_level) && void 0 !== a ? a : l.VerificationLevels.NONE,
                 explicitContentFilter: null !== (o = S.explicit_content_filter) && void 0 !== o ? o : l.GuildExplicitContentFilterTypes.DISABLED,
                 defaultMessageNotifications: null !== (u = S.default_message_notifications) && void 0 !== u ? u : l.UserNotificationSettings.ALL_MESSAGES,
                 mfaLevel: null !== (d = S.mfa_level) && void 0 !== d ? d : l.MFALevels.NONE,
@@ -173,7 +173,7 @@ function(e, t, n) {
             latestOnboardingQuestionId: e.latest_onboarding_question_id,
             clan: e.clan
         };
-        return null == t ? new s.default(n) : t.merge(n)
+        return null == t ? new a.default(n) : t.merge(n)
     }
 
     function E(e) {
@@ -191,7 +191,7 @@ function(e, t, n) {
             nsfwLevel: e.nsfw_level,
             memberCount: e.approximate_member_count
         };
-        return new s.default(t)
+        return new a.default(t)
     }
 
     function I(e) {
@@ -236,7 +236,7 @@ function(e, t, n) {
     function T(e) {
         var t;
         for (let n in null != e.joinedAt && (e.joinedAt = new Date(e.joinedAt)), e.features = new Set(null !== (t = e.features) && void 0 !== t ? t : []), e.roles)(0, o.fromSerializedGuildRole)(e.roles[n]);
-        return (0, a.dangerouslyCast)(e, s.default)
+        return (0, s.dangerouslyCast)(e, a.default)
     }
 
     function f(e, t, n, i) {

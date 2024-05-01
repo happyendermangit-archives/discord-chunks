@@ -4,13 +4,13 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("630641"),
-        a = n("737126");
+        s = n("737126");
     t.default = e => {
         let {
             size: t
         } = e;
         return (0, i.jsx)("div", {
-            className: a.unownedStickerLockContainer,
+            className: s.unownedStickerLockContainer,
             style: {
                 width: t,
                 height: t
@@ -18,7 +18,7 @@ function(e, t, n) {
             children: (0, i.jsx)(r.default, {
                 width: 12,
                 height: 12,
-                className: a.unownedStickerLockIcon
+                className: s.unownedStickerLockIcon
             })
         })
     }

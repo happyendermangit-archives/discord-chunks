@@ -22,8 +22,8 @@ function(e, t, n) {
     }), n("47120"), n("789020"), n("724458"), n("411104");
     var i = n("470079"),
         r = n("392711"),
-        a = n.n(r),
-        s = n("442837"),
+        s = n.n(r),
+        a = n("442837"),
         o = n("433517"),
         l = n("570140"),
         u = n("668781"),
@@ -55,15 +55,15 @@ function(e, t, n) {
     function b(e, t) {
         let [n, r] = i.useState(D.defaultThresholds), [o, l] = i.useState({});
         (0, E.useFrecencySettings)();
-        let u = (0, s.useStateFromStoresArray)([S.default], () => Object.values(S.default.getGuilds())),
+        let u = (0, a.useStateFromStoresArray)([S.default], () => Object.values(S.default.getGuilds())),
             d = i.useCallback(() => {
                 let i = {};
                 for (let r of u) i[r.id] = function(e, t, n, i, r) {
-                    var a;
-                    let [s, o, l] = I.default.hasConsented(M.Consents.PERSONALIZATION) ? (0, L.guessGuildModeWithRemoteData)(e, t, n, i, !0) : (0, L.guessGuildModeWithLocalData)(e, n), u = null !== (a = n.filter(t => t.guild_id === e.id)[0]) && void 0 !== a ? a : {}, d = (0, g.default)(e, null != r ? r : s, u, i, t);
+                    var s;
+                    let [a, o, l] = I.default.hasConsented(M.Consents.PERSONALIZATION) ? (0, L.guessGuildModeWithRemoteData)(e, t, n, i, !0) : (0, L.guessGuildModeWithLocalData)(e, n), u = null !== (s = n.filter(t => t.guild_id === e.id)[0]) && void 0 !== s ? s : {}, d = (0, g.default)(e, null != r ? r : a, u, i, t);
                     return {
                         guildId: e.id,
-                        mode: s,
+                        mode: a,
                         debugReason: l,
                         actions: d,
                         overrideMode: r,
@@ -94,7 +94,7 @@ function(e, t, n) {
                         return e + Number(null !== (n = t.num_month_opens) && void 0 !== n ? n : 0)
                     }, 0),
                     r = h.default.getFlattenedGuildIds(),
-                    s = a().sortBy(Object.values(e), e => {
+                    a = s().sortBy(Object.values(e), e => {
                         let t = r.indexOf(e.guildId);
                         return -1 === t ? r.length : t
                     }),
@@ -102,7 +102,7 @@ function(e, t, n) {
                         ["Use Grey Dot", new Set([D.Mode.UseGreyDot])],
                         ["Keep As Is", new Set([D.Mode.KeepAsIs])]
                     ].map(e => {
-                        let [t, n] = e, i = s.filter(e => {
+                        let [t, n] = e, i = a.filter(e => {
                             var t;
                             return n.has(null !== (t = e.overrideMode) && void 0 !== t ? t : e.mode)
                         }).map(e => {
@@ -144,11 +144,11 @@ function(e, t, n) {
     }
 
     function B(e) {
-        let [t, n] = i.useState(!1), [r, a] = i.useState(!1), s = i.useCallback(async t => {
+        let [t, n] = i.useState(!1), [r, s] = i.useState(!1), a = i.useCallback(async t => {
             if (r) throw Error("Already submitted notifications migration");
             n(!0);
             try {
-                await k(t, e), a(!0)
+                await k(t, e), s(!0)
             } finally {
                 n(!1)
             }
@@ -156,7 +156,7 @@ function(e, t, n) {
         return {
             submitting: t,
             submitted: r,
-            saveSettings: s
+            saveSettings: a
         }
     }
     async function k(e, t) {
@@ -205,15 +205,15 @@ function(e, t, n) {
             for (let n of Object.values(e)) {
                 var i, r;
                 let e = null !== (i = A.default.getAllSettings().userGuildSettings[n.guildId]) && void 0 !== i ? i : {},
-                    a = {};
-                for (let t of n.actions) null === (r = t.apply) || void 0 === r || r.call(t, a, e);
-                t[n.guildId] = a
+                    s = {};
+                for (let t of n.actions) null === (r = t.apply) || void 0 === r || r.call(t, s, e);
+                t[n.guildId] = s
             }
             await V(t);
-            let a = Object.values(e).filter(e => e.actions.some(e => e.needsMarkedAsRead)).map(e => e.guildId);
-            if (a.length > 0) {
+            let s = Object.values(e).filter(e => e.actions.some(e => e.needsMarkedAsRead)).map(e => e.guildId);
+            if (s.length > 0) {
                 let e = setTimeout(n, 5e3);
-                (0, _.default)(a, void 0, () => {
+                (0, _.default)(s, void 0, () => {
                     l.default.dispatch({
                         type: "RECOMPUTE_READ_STATES"
                     }), clearTimeout(e), n()
@@ -266,7 +266,7 @@ function(e, t, n) {
             num_guilds_with_new_setting: Object.values(S.default.getGuilds()).filter(e => A.default.resolveGuildUnreadSetting(e) === y.UnreadSetting.ONLY_MENTIONS).length
         });
         let e = await (0, C.listSnapshots)(),
-            t = a().sortBy(e, e => new Date(e.recorded_at).getTime());
+            t = s().sortBy(e, e => new Date(e.recorded_at).getTime());
         if (t.length > 0) {
             let e = t[t.length - 1];
             await new Promise(t => u.default.show({
@@ -282,16 +282,16 @@ function(e, t, n) {
     function Y(e) {
         var t, n, i;
         if (null == e) return [];
-        let r = a().keyBy(null !== (t = e.voice_joins) && void 0 !== t ? t : [], "channel_id"),
-            s = a().keyBy(null !== (n = e.message_sends) && void 0 !== n ? n : [], "channel_id");
+        let r = s().keyBy(null !== (t = e.voice_joins) && void 0 !== t ? t : [], "channel_id"),
+            a = s().keyBy(null !== (n = e.message_sends) && void 0 !== n ? n : [], "channel_id");
         return (null !== (i = e.channel_opens) && void 0 !== i ? i : []).map(e => {
-            var t, n, i, a, o, l, u, d, _, c, E;
+            var t, n, i, s, o, l, u, d, _, c, E;
             let I = null !== (t = r[e.channel_id]) && void 0 !== t ? t : {},
-                T = null !== (n = s[e.channel_id]) && void 0 !== n ? n : {};
+                T = null !== (n = a[e.channel_id]) && void 0 !== n ? n : {};
             return {
                 channel_id: e.channel_id,
                 num_year_opens: Number(null !== (i = e.year_opens) && void 0 !== i ? i : 0),
-                num_month_opens: Number(null !== (a = e.one_month_opens) && void 0 !== a ? a : 0),
+                num_month_opens: Number(null !== (s = e.one_month_opens) && void 0 !== s ? s : 0),
                 num_three_month_opens: Number(null !== (o = e.three_month_opens) && void 0 !== o ? o : 0),
                 num_six_month_opens: Number(null !== (l = e.six_month_opens) && void 0 !== l ? l : 0),
                 num_messages: Number(null !== (u = null == T ? void 0 : T.num_messages) && void 0 !== u ? u : 0),

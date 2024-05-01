@@ -7,9 +7,9 @@ function(e, t, n) {
     }), n("789020");
     var i = n("913527"),
         r = n.n(i),
-        a = n("81825");
+        s = n("81825");
 
-    function s(e, t, n) {
+    function a(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -17,7 +17,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    class o extends a.default {
+    class o extends s.default {
         static createFromServer(e) {
             var t;
             return new o({
@@ -41,7 +41,7 @@ function(e, t, n) {
             return this.code
         }
         constructor(e) {
-            super(), s(this, "code", void 0), s(this, "temporary", void 0), s(this, "revoked", void 0), s(this, "uses", void 0), s(this, "maxUses", void 0), s(this, "maxAge", void 0), s(this, "createdAt", void 0), s(this, "channel", void 0), s(this, "guild", void 0), s(this, "inviter", void 0), s(this, "targetType", void 0), s(this, "targetUser", void 0), s(this, "targetApplication", void 0), s(this, "type", void 0), s(this, "flags", void 0), this.code = e.code || "", this.temporary = e.temporary || !1, this.revoked = e.revoked || !1, this.uses = e.uses || 0, this.maxUses = e.maxUses || 0, this.maxAge = e.maxAge || 0, this.createdAt = e.createdAt || new Date, this.channel = e.channel, this.guild = e.guild, this.inviter = e.inviter || null, this.targetType = e.targetType || null, this.targetUser = e.targetUser || null, this.targetApplication = e.targetApplication || null, this.type = e.type || null, this.flags = e.flags || 0
+            super(), a(this, "code", void 0), a(this, "temporary", void 0), a(this, "revoked", void 0), a(this, "uses", void 0), a(this, "maxUses", void 0), a(this, "maxAge", void 0), a(this, "createdAt", void 0), a(this, "channel", void 0), a(this, "guild", void 0), a(this, "inviter", void 0), a(this, "targetType", void 0), a(this, "targetUser", void 0), a(this, "targetApplication", void 0), a(this, "type", void 0), a(this, "flags", void 0), this.code = e.code || "", this.temporary = e.temporary || !1, this.revoked = e.revoked || !1, this.uses = e.uses || 0, this.maxUses = e.maxUses || 0, this.maxAge = e.maxAge || 0, this.createdAt = e.createdAt || new Date, this.channel = e.channel, this.guild = e.guild, this.inviter = e.inviter || null, this.targetType = e.targetType || null, this.targetUser = e.targetUser || null, this.targetApplication = e.targetApplication || null, this.type = e.type || null, this.flags = e.flags || 0
         }
     }
 }

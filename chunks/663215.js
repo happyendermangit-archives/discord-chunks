@@ -10,8 +10,8 @@ function(e, t, n) {
     }), n("47120"), n("653041");
     var i = n("470079"),
         r = n("442837"),
-        a = n("889161"),
-        s = n("675478"),
+        s = n("889161"),
+        a = n("675478"),
         o = n("430824"),
         l = n("496675"),
         u = n("594174"),
@@ -39,8 +39,8 @@ function(e, t, n) {
             guildIds: n,
             allSounds: i,
             potentialSoundIdsForSection: r,
-            sectionType: a,
-            sortById: s
+            sectionType: s,
+            sortById: a
         } = e, o = {};
         for (let e of [...n, S.DEFAULT_SOUND_GUILD_ID]) {
             var l;
@@ -51,11 +51,11 @@ function(e, t, n) {
             let t = o[e];
             null != t && u.push(t)
         }
-        let d = h(u, s);
+        let d = h(u, a);
         d.length > 0 && t.push({
-            key: a,
+            key: s,
             categoryInfo: {
-                type: a
+                type: s
             },
             items: d
         })
@@ -85,7 +85,7 @@ function(e, t, n) {
         }), C = d.default.canUseSoundboardEverywhere(_), g = (0, r.useStateFromStores)([o.default], () => o.default.getGuild(null == e ? void 0 : e.guild_id)), L = (0, r.useStateFromStores)([l.default], () => {
             let {
                 canCreateExpressions: e
-            } = (0, a.getManageResourcePermissions)(g);
+            } = (0, s.getManageResourcePermissions)(g);
             return e
         }, [g]), {
             canSeeRecentlyHeard: v,
@@ -95,7 +95,7 @@ function(e, t, n) {
             autoTrackExposure: !0
         }), M = function() {
             return i.useEffect(() => {
-                s.FrecencyUserSettingsActionCreators.loadIfNecessary()
+                a.FrecencyUserSettingsActionCreators.loadIfNecessary()
             }, []), (0, r.useStateFromStores)([E.default], () => E.default.frecentlyPlayedSounds)
         }(), y = (0, r.useStateFromStoresArray)([E.default], () => E.default.recentlyHeardSoundIds);
         return i.useMemo(() => {
@@ -125,11 +125,11 @@ function(e, t, n) {
                 sectionType: T.SoundboardSoundGridSectionType.FREQUENTLY_USED,
                 sortById: !1
             }), ! function(e, t, n, i, r) {
-                var a;
+                var s;
                 if (null == t) return;
-                let s = null !== (a = i.get(t.id)) && void 0 !== a ? a : [],
-                    o = h(s),
-                    l = s.length < t.getMaxSoundboardSlots() && n,
+                let a = null !== (s = i.get(t.id)) && void 0 !== s ? s : [],
+                    o = h(a),
+                    l = a.length < t.getMaxSoundboardSlots() && n,
                     u = 0 === o.length;
                 (l || u) && !r && o.push({
                     type: T.SoundboardSoundItemType.ADD_SOUND,
@@ -144,16 +144,16 @@ function(e, t, n) {
                     items: o
                 })
             }(e, g, L, S, t), !C && m(e, S), ! function(e, t, n, i) {
-                for (let a of t) {
+                for (let s of t) {
                     var r;
-                    if (a.id === n) continue;
-                    let t = h(null !== (r = i.get(a.id)) && void 0 !== r ? r : []);
+                    if (s.id === n) continue;
+                    let t = h(null !== (r = i.get(s.id)) && void 0 !== r ? r : []);
                     t.length > 0 && e.push({
                         categoryInfo: {
                             type: T.SoundboardSoundGridSectionType.GUILD,
-                            guild: a
+                            guild: s
                         },
-                        key: a.id,
+                        key: s.id,
                         items: t
                     })
                 }

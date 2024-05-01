@@ -2,20 +2,20 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         MenuInteractiveCompositeControl: function() {
-            return a
+            return s
         }
     });
     var i = n("735250"),
         r = n("470079");
-    let a = r.forwardRef(function(e, t) {
+    let s = r.forwardRef(function(e, t) {
         let {
             className: n,
-            children: a
-        } = e, s = r.useRef(null), o = r.useRef(null);
+            children: s
+        } = e, a = r.useRef(null), o = r.useRef(null);
         return r.useImperativeHandle(t, () => ({
             focus: () => {
                 var e;
-                let t = s.current;
+                let t = a.current;
                 null != t && (null == o.current && (o.current = t.querySelector('[tabindex="0"]')), null === (e = o.current) || void 0 === e || e.focus())
             },
             blur: () => {
@@ -24,7 +24,7 @@ function(e, t, n) {
             },
             activate: () => !1
         }), []), r.useLayoutEffect(() => {
-            let e = s.current;
+            let e = a.current;
             if (null != e) return e.addEventListener("focusin", t), () => {
                 e.removeEventListener("focusin", t)
             };
@@ -33,12 +33,12 @@ function(e, t, n) {
                 o.current = e.target
             }
         }, []), (0, i.jsx)("div", {
-            ref: s,
+            ref: a,
             className: n,
             style: {
                 position: "relative"
             },
-            children: a
+            children: s
         })
     })
 }

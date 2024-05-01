@@ -16,8 +16,8 @@ function(e, t, n) {
         }
     });
     var r = n("544891"),
-        a = n("314897"),
-        s = n("12647"),
+        s = n("314897"),
+        a = n("12647"),
         o = n("865427");
     let l = "/__development/build_overrides";
     async function u(e) {
@@ -30,7 +30,7 @@ function(e, t, n) {
                     version: o.APP_VERSION
                 },
                 headers: {
-                    Authorization: null !== (t = a.default.getToken()) && void 0 !== t ? t : ""
+                    Authorization: null !== (t = s.default.getToken()) && void 0 !== t ? t : ""
                 },
                 oldFormErrors: !0
             });
@@ -45,7 +45,7 @@ function(e, t, n) {
                 url: (0, o.getAPIEndpoint)("/__development/link"),
                 body: {
                     payload: e,
-                    token: a.default.getToken(),
+                    token: s.default.getToken(),
                     version: o.APP_VERSION
                 },
                 oldFormErrors: !0
@@ -69,7 +69,7 @@ function(e, t, n) {
             url: (0, o.getAPIEndpoint)("/__development/create_build_override_link"),
             body: e,
             headers: {
-                Authorization: null !== (t = a.default.getToken()) && void 0 !== t ? t : ""
+                Authorization: null !== (t = s.default.getToken()) && void 0 !== t ? t : ""
             },
             oldFormErrors: !0
         }).then(e => ({
@@ -85,7 +85,7 @@ function(e, t, n) {
     }
     i = async e => {
         try {
-            await s.default.flushCookies()
+            await a.default.flushCookies()
         } catch (e) {}
     }
 }

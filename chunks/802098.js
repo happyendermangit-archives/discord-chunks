@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("47120");
-    var i, r, a, s, o = n("442837"),
+    var i, r, s, a, o = n("442837"),
         l = n("433517"),
         u = n("570140"),
         d = n("706454"),
@@ -69,12 +69,12 @@ function(e, t, n) {
             return p.size > 0
         }
     }
-    s = "ChangelogStore", (a = "displayName") in(r = R) ? Object.defineProperty(r, a, {
-        value: s,
+    a = "ChangelogStore", (s = "displayName") in(r = R) ? Object.defineProperty(r, s, {
+        value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[a] = s, t.default = new R(u.default, {
+    }) : r[s] = a, t.default = new R(u.default, {
         CHANGE_LOG_LOCK: function(e) {
             let {
                 key: t

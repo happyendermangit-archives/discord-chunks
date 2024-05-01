@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120"), n("724458"), n("653041");
     var i = n("392711"),
         r = n("271383"),
-        a = n("594174"),
-        s = n("70956"),
+        s = n("594174"),
+        a = n("70956"),
         o = n("815790"),
         l = n("740900"),
         u = n("823596"),
@@ -23,7 +23,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    let E = 3 * s.default.Millis.SECOND;
+    let E = 3 * a.default.Millis.SECOND;
     class I {
         getSearchIndex() {
             return null == this._search || this._search.hasDefaultQuery ? l.MemberSafetySecondaryIndex.CURRENT_GUILD_MEMBER : l.MemberSafetySecondaryIndex.INCLUDED_IN_SEARCH_RESULTS
@@ -87,16 +87,16 @@ function(e, t, n) {
                 i = this._members.getMemberByUserId(e);
             if (null == i) {
                 n = !0;
-                let a = r.default.getTrueMember(this.guildId, e);
-                if (null == a) return [!1, !1];
-                i = this._members.enhanceNewMember(a, this.getSearchState(), t)
+                let s = r.default.getTrueMember(this.guildId, e);
+                if (null == s) return [!1, !1];
+                i = this._members.enhanceNewMember(s, this.getSearchState(), t)
             }
             if (null == t.isIncludedInSearchResults) {
                 let [e, r] = this._getIsIncludedInSearch(i, t);
                 r && (n = !0, t.isIncludedInSearchResults = e)
             } else t.isIncludedInSearchResults !== i.isIncludedInSearchResults && (n = !0);
-            let a = this._members.updateMember(i, t);
-            return !n && (n = this._checkUpdatesForPaginationUpdate(i, t)), [n, a]
+            let s = this._members.updateMember(i, t);
+            return !n && (n = this._checkUpdatesForPaginationUpdate(i, t)), [n, s]
         }
         isMemberInIndex(e) {
             return null != this._members && !!this._initialized && this._members._membersMap.has(e)
@@ -123,22 +123,22 @@ function(e, t, n) {
             if (null == this._members || !this._initialized) return !1;
             let i = !1,
                 r = !1;
-            for (let a of e) {
-                if (null == a.joinedAt) continue;
-                let e = a;
+            for (let s of e) {
+                if (null == s.joinedAt) continue;
+                let e = s;
                 if (t && (e = {
                         ...e,
                         isIncludedInSearchResults: !0
                     }), n) {
-                    let t = (0, o.getJoinedAtTimestamp)(a.joinedAt);
+                    let t = (0, o.getJoinedAtTimestamp)(s.joinedAt);
                     e = {
                         ...e,
                         isCurrentGuildMemberByTimestamp: t <= this._members.newMemberTimestamp,
                         refreshTimestamp: this.lastRefreshTimestamp
                     }
                 }
-                let [s, l] = this._rawUpdateMember(a.userId, e);
-                i = s || i, r = l || r
+                let [a, l] = this._rawUpdateMember(s.userId, e);
+                i = a || i, r = l || r
             }
             return i ? this.updatePaginationChunks() : r
         }
@@ -149,8 +149,8 @@ function(e, t, n) {
             for (let i of e) {
                 let e = r.default.getTrueMember(this.guildId, i.user.id);
                 if (null == e) continue;
-                let [a, s] = this._rawUpdateMember(i.user.id, e);
-                t = a || t, n = s || n
+                let [s, a] = this._rawUpdateMember(i.user.id, e);
+                t = s || t, n = a || n
             }
             return t ? this.updatePaginationChunks() : n
         }
@@ -167,11 +167,11 @@ function(e, t, n) {
                 let n = (0, i.cloneDeep)(this.getMembersByIndex(l.MemberSafetySecondaryIndex.CURRENT_GUILD_MEMBER)[0]);
                 [...n, ...(0, i.cloneDeep)(this.getMembersByIndex(l.MemberSafetySecondaryIndex.NEW_GUILD_MEMBER)[0])].forEach(t => {
                     var n, i, r;
-                    let a = (0, _.getSortValueForMember)(t, e),
-                        s = null !== (r = null === (n = this._search) || void 0 === n ? void 0 : n.isMemberIncludedInSearchResults(t)) && void 0 !== r && r;
+                    let s = (0, _.getSortValueForMember)(t, e),
+                        a = null !== (r = null === (n = this._search) || void 0 === n ? void 0 : n.isMemberIncludedInSearchResults(t)) && void 0 !== r && r;
                     null === (i = this._members) || void 0 === i || i.updateMember(t, {
-                        sort: a,
-                        isIncludedInSearchResults: s
+                        sort: s,
+                        isIncludedInSearchResults: a
                     })
                 }), t()
             })
@@ -210,13 +210,13 @@ function(e, t, n) {
             for (let i of t) n = this._members.updateMember(i, {
                 isCurrentGuildMemberByTimestamp: !0,
                 refreshTimestamp: e,
-                user: a.default.getUser(i.userId)
+                user: s.default.getUser(i.userId)
             }) || n;
             this._members.resetNewMemberTimestamp(), this.resetSearchState() && (n = !1);
-            let [r, s] = this.updatePaginationState({
+            let [r, a] = this.updatePaginationState({
                 currentPage: 1
             }, !1);
-            return s && (n = !1), n && this.updatePaginationChunks(), !0
+            return a && (n = !1), n && this.updatePaginationChunks(), !0
         }
         getNewMemberTimestamp() {
             return null != this._members && this._initialized ? this._members.newMemberTimestamp : 0
@@ -228,15 +228,15 @@ function(e, t, n) {
             let n = this._search.updateSearchState(e);
             if (this._search.hasDefaultQuery && t) return this.updatePaginationChunks();
             let r = (0, i.cloneDeep)(this._members.values(l.MemberSafetySecondaryIndex.CURRENT_GUILD_MEMBER)),
-                a = t !== this._search.hasDefaultQuery;
+                s = t !== this._search.hasDefaultQuery;
             for (let e of r) {
                 if (!e.isCurrentGuildMemberByTimestamp) continue;
                 let t = this._search.isMemberIncludedInSearchResults(e);
-                t !== e.isIncludedInSearchResults && (a = !0, n = !0, this._members.updateMember(e, {
+                t !== e.isIncludedInSearchResults && (s = !0, n = !0, this._members.updateMember(e, {
                     isIncludedInSearchResults: t
                 }))
             }
-            return a ? (this.updatePaginationChunks(), this.updatePaginationState({
+            return s ? (this.updatePaginationChunks(), this.updatePaginationState({
                 currentPage: 1
             }), !0) : n
         }

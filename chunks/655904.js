@@ -5,8 +5,8 @@ function(e, t, n) {
             return c
         }
     });
-    var i, r, a = n("735250"),
-        s = n("470079"),
+    var i, r, s = n("735250"),
+        a = n("470079"),
         o = n("120356"),
         l = n.n(o),
         u = n("692547"),
@@ -29,12 +29,12 @@ function(e, t, n) {
             background: "linear-gradient(to right, ".concat(E[0], ", ").concat(E[1], ")")
         } : {
             backgroundColor: o
-        }, (0, a.jsx)("div", {
+        }, (0, s.jsx)("div", {
             className: l()(n, d.progress, d[r]),
             style: {
                 backgroundColor: c
             },
-            children: T !== _ && "number" == typeof T ? (0, a.jsx)("div", {
+            children: T !== _ && "number" == typeof T ? (0, s.jsx)("div", {
                 className: l()(d.progressBar, d[r], {
                     [d.animating]: I
                 }),
@@ -42,13 +42,13 @@ function(e, t, n) {
                     transform: "translate3d(".concat(Math.min(Math.max(0, T), 100) - 100, "%, 0, 0)"),
                     ...t
                 }
-            }) : (0, a.jsxs)(s.Fragment, {
-                children: [(0, a.jsx)("div", {
+            }) : (0, s.jsxs)(a.Fragment, {
+                children: [(0, s.jsx)("div", {
                     className: l()(d.indeterminateBar1, d[r], {
                         [d.animating]: I
                     }),
                     style: t
-                }), (0, a.jsx)("div", {
+                }), (0, s.jsx)("div", {
                     className: l()(d.indeterminateBar2, d[r], {
                         [d.animating]: I
                     }),

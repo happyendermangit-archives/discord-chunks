@@ -8,7 +8,7 @@ function(e, t, n) {
     var i = n("740436"),
         r = n.n(i);
 
-    function a(e, t, n) {
+    function s(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -17,7 +17,7 @@ function(e, t, n) {
         }) : e[t] = n, e
     }
 
-    function s(e, t, n, i) {
+    function a(e, t, n, i) {
         null != t && e.splice(r()(e, t, i), 1), null != n && e.splice(r()(e, n, i), 0, n)
     }
     let o = [];
@@ -57,7 +57,7 @@ function(e, t, n) {
         }
         set(e, t) {
             let n = this.get(e);
-            return !(null == n && null == t || null != n && null != t && this.isEqual(n, t)) && (null != t ? this.valueMap.set(e, t) : this.valueMap.delete(e), s(this.valueArray, n, t, this.sortBy), null != n && this.indexBy(n).forEach(e => s(this.getIndex(e), n, null, this.sortBy)), null != t && this.indexBy(t).forEach(e => s(this.getIndex(e), null, t, this.sortBy)), this.dirty = !0, this._version++, !0)
+            return !(null == n && null == t || null != n && null != t && this.isEqual(n, t)) && (null != t ? this.valueMap.set(e, t) : this.valueMap.delete(e), a(this.valueArray, n, t, this.sortBy), null != n && this.indexBy(n).forEach(e => a(this.getIndex(e), n, null, this.sortBy)), null != t && this.indexBy(t).forEach(e => a(this.getIndex(e), null, t, this.sortBy)), this.dirty = !0, this._version++, !0)
         }
         delete(e) {
             return this.set(e, null)
@@ -67,7 +67,7 @@ function(e, t, n) {
             return null == t && (t = [], this.valueIndexes[e] = t), t
         }
         constructor(e, t, n = (e, t) => e === t) {
-            a(this, "indexBy", void 0), a(this, "sortBy", void 0), a(this, "isEqual", void 0), a(this, "valueMap", new Map), a(this, "valueArray", []), a(this, "valueIndexes", {}), a(this, "dirty", !1), a(this, "_version", 0), this.indexBy = e, this.sortBy = t, this.isEqual = n
+            s(this, "indexBy", void 0), s(this, "sortBy", void 0), s(this, "isEqual", void 0), s(this, "valueMap", new Map), s(this, "valueArray", []), s(this, "valueIndexes", {}), s(this, "dirty", !1), s(this, "_version", 0), this.indexBy = e, this.sortBy = t, this.isEqual = n
         }
     }
 }

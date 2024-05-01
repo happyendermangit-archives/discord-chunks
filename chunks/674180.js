@@ -13,16 +13,16 @@ function(e, t, n) {
     });
     var i = n("470079"),
         r = n("442837"),
-        a = n("81897"),
-        s = n("423117"),
+        s = n("81897"),
+        a = n("423117"),
         o = n("289393"),
         l = n("430824"),
         u = n("738774"),
         d = n("981631");
     let _ = e => {
-            let t = (0, a.default)();
+            let t = (0, s.default)();
             i.useEffect(() => {
-                if (null != e && !!e.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)) o.default.getMonetizationRestrictionsFetchState(e.id) === o.FetchState.NOT_FETCHED && s.fetchMonetizationRestrictions(e.id, {
+                if (null != e && !!e.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)) o.default.getMonetizationRestrictionsFetchState(e.id) === o.FetchState.NOT_FETCHED && a.fetchMonetizationRestrictions(e.id, {
                     signal: t
                 })
             }, [e, t]);
@@ -41,11 +41,11 @@ function(e, t, n) {
             let n = (0, r.useStateFromStores)([l.default], () => l.default.getGuild(e), [e]),
                 {
                     restrictions: i,
-                    restrictionsLoading: a
+                    restrictionsLoading: s
                 } = _(n);
             return {
-                shouldHideGuildPurchaseEntryPoints: !((null == n ? void 0 : n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE)) || (null == n ? void 0 : n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL))) || (a ? null === (t = null == n ? void 0 : n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)) || void 0 === t || t : (0, u.isRestrictedFromShowingGuildPurchaseEntryPoints)(i)),
-                restrictionsLoading: a
+                shouldHideGuildPurchaseEntryPoints: !((null == n ? void 0 : n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE)) || (null == n ? void 0 : n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL))) || (s ? null === (t = null == n ? void 0 : n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)) || void 0 === t || t : (0, u.isRestrictedFromShowingGuildPurchaseEntryPoints)(i)),
+                restrictionsLoading: s
             }
         },
         E = e => {
@@ -53,14 +53,14 @@ function(e, t, n) {
             let n = (0, r.useStateFromStores)([l.default], () => l.default.getGuild(e), [e]),
                 {
                     restrictions: i,
-                    restrictionsLoading: a
+                    restrictionsLoading: s
                 } = _(n),
-                s = a ? null === (t = null == n ? void 0 : n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)) || void 0 === t || t : (0, u.isRestrictedFromUpdatingCreatorMonetizationSettings)(i),
+                a = s ? null === (t = null == n ? void 0 : n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)) || void 0 === t || t : (0, u.isRestrictedFromUpdatingCreatorMonetizationSettings)(i),
                 o = !!(null == n ? void 0 : n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING));
             return {
-                shouldRestrictUpdatingCreatorMonetizationSettings: s || o,
-                allowSelfRemoveMonetization: !s,
-                restrictionsLoading: a
+                shouldRestrictUpdatingCreatorMonetizationSettings: a || o,
+                allowSelfRemoveMonetization: !a,
+                restrictionsLoading: s
             }
         },
         I = e => {

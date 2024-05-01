@@ -5,7 +5,7 @@ function(e, t, n) {
             return o
         },
         report: function() {
-            return s
+            return a
         },
         stringify: function() {
             return l
@@ -13,9 +13,9 @@ function(e, t, n) {
     }), n("653041"), n("411104"), n("47120");
     var i = n("427786"),
         r = n.n(i);
-    let a = new(r())(5e3);
+    let s = new(r())(5e3);
 
-    function s(e) {
+    function a(e) {
         for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];
         let r = function(e) {
             let t = "";
@@ -25,24 +25,24 @@ function(e, t, n) {
             }
             return t
         }(n);
-        for ("string" == typeof e ? a.push({
+        for ("string" == typeof e ? s.push({
                 time: Date.now(),
                 category: e,
                 message: r
-            }) : a.push({
+            }) : s.push({
                 time: Date.now(),
                 category: e.name,
                 timing: e.timing,
                 message: r
-            }); a.length > 5e3;) a.shift()
+            }); s.length > 5e3;) s.shift()
     }
 
     function o() {
-        a.clear()
+        s.clear()
     }
 
     function l(e) {
-        return a.toArray().filter(t => null == e || e.includes(t.category)).map(e => {
+        return s.toArray().filter(t => null == e || e.includes(t.category)).map(e => {
             let t = [];
             return t.push(new Date(e.time).toISOString()), null != e.timing && t.push(e.timing), t.push(e.category, e.message), t.join(" -> ")
         }).join("\n")

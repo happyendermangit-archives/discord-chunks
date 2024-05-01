@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("47120"), n("653041");
-    var i, r, a, s, o = n("392711"),
+    var i, r, s, a, o = n("392711"),
         l = n.n(o),
         u = n("442837"),
         d = n("570140"),
@@ -51,9 +51,9 @@ function(e, t, n) {
                         {
                             isUnread: i,
                             isRelevant: r,
-                            isTimedRelevant: a
+                            isTimedRelevant: s
                         } = F(e);
-                    j(N, e, n, !1), j(C, e, r ? n : null, !1), j(p, e, i ? n : null, !1), a && H(e, !0)
+                    j(N, e, n, !1), j(C, e, r ? n : null, !1), j(p, e, i ? n : null, !1), s && H(e, !0)
                 } else {
                     j(O, e, e, !1);
                     let t = I.default.isForumPostUnread(e.id);
@@ -99,9 +99,9 @@ function(e, t, n) {
                     {
                         isUnread: t,
                         isRelevant: n,
-                        isTimedRelevant: a
+                        isTimedRelevant: s
                     } = F(i);
-                j(N, i, e, !0), j(C, i, n ? e : null, !0), j(p, i, t ? e : null, !0), j(O, i, null, !0), j(R, i, null, !0), H(i, a)
+                j(N, i, e, !0), j(C, i, n ? e : null, !0), j(p, i, t ? e : null, !0), j(O, i, null, !0), j(R, i, null, !0), H(i, s)
             } else {
                 let e = I.default.isForumPostUnread(i.id);
                 j(N, i, null, !0), j(p, i, null, !0), j(C, i, null, !0), j(O, i, i, !0), j(R, i, e ? i : null, !0), Y(i.id)
@@ -136,12 +136,12 @@ function(e, t, n) {
                 let {
                     isUnread: n,
                     isRelevant: r,
-                    isTimedRelevant: a
+                    isTimedRelevant: s
                 } = F(t);
-                H(t, a);
-                let s = K(p, t),
+                H(t, s);
+                let a = K(p, t),
                     o = K(C, t);
-                if (n === s && r === o) return !1;
+                if (n === a && r === o) return !1;
                 let l = N[e][i][t.id],
                     u = n ? l : null,
                     d = r ? l : null;
@@ -162,10 +162,10 @@ function(e, t, n) {
                     let i = N[e][t][n],
                         {
                             isUnread: r,
-                            isRelevant: a,
-                            isTimedRelevant: s
+                            isRelevant: s,
+                            isTimedRelevant: a
                         } = F(i.channel);
-                    r && j(p, i.channel, i, !1), a && j(C, i.channel, i, !1), H(i.channel, s)
+                    r && j(p, i.channel, i, !1), s && j(C, i.channel, i, !1), H(i.channel, a)
                 }
         for (let e in R = {}, O)
             for (let t in O[e])
@@ -187,11 +187,11 @@ function(e, t, n) {
             n = I.default.hasUnread(e.id) && (!h.default.isMuted(e.id) || t),
             i = e.hasFlag(m.ChannelFlags.PINNED),
             r = e.isActiveThread(),
-            a = r && (0, A.default)(e) > Date.now();
+            s = r && (0, A.default)(e) > Date.now();
         return {
             isUnread: (r || i) && n,
-            isRelevant: a || i || n,
-            isTimedRelevant: a
+            isRelevant: s || i || n,
+            isTimedRelevant: s
         }
     }
 
@@ -214,15 +214,15 @@ function(e, t, n) {
     function j(e, t, n, i) {
         let {
             guild_id: r,
-            parent_id: a,
-            id: s
+            parent_id: s,
+            id: a
         } = t;
-        null != r && null != a && null != s && (!(r in e) && (e[r] = {}), !(a in e[r]) && (e[r][a] = {}), i && (e[r] = {
+        null != r && null != s && null != a && (!(r in e) && (e[r] = {}), !(s in e[r]) && (e[r][s] = {}), i && (e[r] = {
             ...e[r],
-            [a]: {
-                ...e[r][a]
+            [s]: {
+                ...e[r][s]
             }
-        }), null === n ? (delete e[r][a][s], l().isEmpty(e[r][a]) && delete e[r][a]) : e[r][a][s] = n)
+        }), null === n ? (delete e[r][s][a], l().isEmpty(e[r][s]) && delete e[r][s]) : e[r][s][a] = n)
     }
 
     function W(e, t, n, i) {
@@ -310,17 +310,17 @@ function(e, t, n) {
             return null !== (i = null === (n = g[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== i ? i : 0
         }
         getActiveThreadCount(e, t) {
-            var n, i, r, a;
-            let s = l().size(null !== (r = null === (n = N[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== r ? r : {});
-            return s + l().size(null !== (a = null === (i = O[e]) || void 0 === i ? void 0 : i[t]) && void 0 !== a ? a : {})
+            var n, i, r, s;
+            let a = l().size(null !== (r = null === (n = N[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== r ? r : {});
+            return a + l().size(null !== (s = null === (i = O[e]) || void 0 === i ? void 0 : i[t]) && void 0 !== s ? s : {})
         }
     }
-    s = "ActiveJoinedThreadsStore", (a = "displayName") in(r = $) ? Object.defineProperty(r, a, {
-        value: s,
+    a = "ActiveJoinedThreadsStore", (s = "displayName") in(r = $) ? Object.defineProperty(r, s, {
+        value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[a] = s, t.default = new $(d.default, {
+    }) : r[s] = a, t.default = new $(d.default, {
         CONNECTION_OPEN: D,
         OVERLAY_INITIALIZE: D,
         THREAD_LIST_SYNC: function(e) {
@@ -358,10 +358,10 @@ function(e, t, n) {
                                 if (i[e].channel.isNSFW()) return !0
                         }
                         let r = O[e],
-                            a = null == r ? null : r[t];
-                        if (null != a) {
-                            for (let e in a)
-                                if (a[e].isNSFW()) return !0
+                            s = null == r ? null : r[t];
+                        if (null != s) {
+                            for (let e in s)
+                                if (s[e].isNSFW()) return !0
                         }
                         return !1
                     }(e.guild_id, e.parent_id)) {

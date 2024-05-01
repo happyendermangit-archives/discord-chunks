@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("833858"),
         r = n("657305"),
-        a = n("841784"),
-        s = n("420660"),
+        s = n("841784"),
+        a = n("420660"),
         o = n("981631"),
         l = n("689938");
 
@@ -30,13 +30,13 @@ function(e, t, n) {
         });
         if (d && null != e && e.type === o.ActivityTypes.HANG_STATUS) return (0, i.getHangStatusText)(e);
         if (null == e || null == e.name) return null;
-        if ((0, s.default)(e)) {
+        if ((0, a.default)(e)) {
             let t = null != e.details && "" !== e.details ? e.details : e.name;
             return u(n)[o.ActivityTypes.STREAMING].format({
                 name: t
             })
         }
-        return (0, a.default)(e) ? (0, r.default)(e.name) : function(e, t, n) {
+        return (0, s.default)(e) ? (0, r.default)(e.name) : function(e, t, n) {
             let i = u(n);
             switch (e) {
                 case o.ActivityTypes.LISTENING:
@@ -65,17 +65,17 @@ function(e, t, n) {
         if (Array.isArray(e)) {
             let r = e;
             null != t && (r = [...r, null]);
-            let a = null;
+            let s = null;
             for (let e of r) {
                 let r = d(e, t, n, i);
                 if (null != r) return {
                     activity: e,
                     activityText: r
                 };
-                (null == e ? void 0 : e.type) === o.ActivityTypes.CUSTOM_STATUS && null != e.emoji && (a = e)
+                (null == e ? void 0 : e.type) === o.ActivityTypes.CUSTOM_STATUS && null != e.emoji && (s = e)
             }
-            return (null == a ? void 0 : a.emoji) != null ? {
-                activity: a,
+            return (null == s ? void 0 : s.emoji) != null ? {
+                activity: s,
                 activityText: null
             } : null
         }

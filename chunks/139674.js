@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     let i;
     n.r(t), n("47120");
-    var r, a, s, o, l = n("442837"),
+    var r, s, a, o, l = n("442837"),
         u = n("433517"),
         d = n("570140"),
         _ = n("902676"),
@@ -31,22 +31,22 @@ function(e, t, n) {
             if (null == S) return this.getBlockedDomainList(), null;
             let i = (0, _.getHostname)(e),
                 r = new t.hash.sha256,
-                a = t.codec.hex.fromBits(r.update(i).finalize()),
-                s = "";
-            S.has(a) && (s = i);
+                s = t.codec.hex.fromBits(r.update(i).finalize()),
+                a = "";
+            S.has(s) && (a = i);
             let o = i.indexOf(".");
-            for (; - 1 !== o && "" === s;) i = i.substring(o + 1), r.reset(), a = t.codec.hex.fromBits(r.update(i).finalize()), S.has(a) && (s = i), o = i.indexOf(".");
-            return "" !== s ? (c.default.track(I.AnalyticEvents.LINK_SECURITY_CHECK_BLOCKED, {
-                blocked_domain: s
-            }), s) : null
+            for (; - 1 !== o && "" === a;) i = i.substring(o + 1), r.reset(), s = t.codec.hex.fromBits(r.update(i).finalize()), S.has(s) && (a = i), o = i.indexOf(".");
+            return "" !== a ? (c.default.track(I.AnalyticEvents.LINK_SECURITY_CHECK_BLOCKED, {
+                blocked_domain: a
+            }), a) : null
         }
     }
-    o = "BlockedDomainStore", (s = "displayName") in(a = h) ? Object.defineProperty(a, s, {
+    o = "BlockedDomainStore", (a = "displayName") in(s = h) ? Object.defineProperty(s, a, {
         value: o,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : a[s] = o, t.default = new h(d.default, {
+    }) : s[a] = o, t.default = new h(d.default, {
         BLOCKED_DOMAIN_LIST_FETCHED: function(e) {
             let {
                 list: t,

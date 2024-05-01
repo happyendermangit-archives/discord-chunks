@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("724458"), n("627341"), n("653041");
     var i = n("278074"),
         r = n("979554"),
-        a = n("301766"),
-        s = n("922347"),
+        s = n("301766"),
+        a = n("922347"),
         o = n("803358"),
         l = n("212161"),
         u = n("981631");
@@ -42,14 +42,14 @@ function(e, t, n) {
                     return e[n] = {
                         countryPrices: {
                             countryCode: i.country_prices.country_code,
-                            prices: i.country_prices.prices.map(e => (0, a.getPriceFromServer)(e, !0))
+                            prices: i.country_prices.prices.map(e => (0, s.getPriceFromServer)(e, !0))
                         },
                         paymentSourcePrices: {}
                     }, e
                 }, {}),
                 items: E.items.reduce((e, t) => (0, i.match)(t).with({
                     type: r.CollectiblesItemType.AVATAR_DECORATION
-                }, t => (e.push(s.default.fromServer(t)), e)).with({
+                }, t => (e.push(a.default.fromServer(t)), e)).with({
                     type: r.CollectiblesItemType.PROFILE_EFFECT
                 }, t => (e.push(l.default.fromServer(t)), e)).otherwise(() => e), [])
             })

@@ -5,10 +5,10 @@ function(e, t, n) {
             return o
         },
         open: function() {
-            return a
+            return s
         },
         openChannelCallPopout: function() {
-            return s
+            return a
         },
         setAlwaysOnTop: function() {
             return l
@@ -22,7 +22,7 @@ function(e, t, n) {
         directories: !1
     };
 
-    function a(e, t, n) {
+    function s(e, t, n) {
         return i.default.dispatch({
             type: "POPOUT_WINDOW_OPEN",
             key: e,
@@ -34,7 +34,7 @@ function(e, t, n) {
         })
     }
 
-    function s(e) {
+    function a(e) {
         return i.default.dispatch({
             type: "CHANNEL_CALL_POPOUT_WINDOW_OPEN",
             channel: e

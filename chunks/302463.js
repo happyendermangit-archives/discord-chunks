@@ -5,13 +5,13 @@ function(e, t, n) {
             return i
         },
         MAX_ATTACHMENT_UPLOAD_COUNT: function() {
-            return s
+            return a
         },
         MAX_ATTACHMENT_UPLOAD_FILESIZE_BYTES: function() {
             return r
         },
         MAX_ATTACHMENT_UPLOAD_TOTAL_FILESIZE_BYTES: function() {
-            return a
+            return s
         },
         MAX_PUBLISHED_GUILD_PRODUCT_LISTINGS: function() {
             return o
@@ -19,7 +19,7 @@ function(e, t, n) {
     });
     let i = "guild-product-edit-modal",
         r = 1073741824,
-        a = 1073741824,
-        s = 10,
+        s = 1073741824,
+        a = 10,
         o = 30
 }

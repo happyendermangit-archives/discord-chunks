@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("119516"),
         l = n.n(o),
         u = n("481060"),
@@ -19,10 +19,10 @@ function(e, t, n) {
     let I = e => {
             let {
                 filename: t
-            } = e, r = (0, d.classifyFileName)(t), a = n("435362")("../images/file_icons/icon-file-".concat(r, ".svg").replace("../images/file_icons/", "./"));
+            } = e, r = (0, d.classifyFileName)(t), s = n("435362")("../images/file_icons/icon-file-".concat(r, ".svg").replace("../images/file_icons/", "./"));
             return (0, i.jsx)("img", {
                 className: E.icon,
-                src: a,
+                src: s,
                 alt: c.default.Messages.IMG_ALT_ATTACHMENT_FILE_TYPE.format({
                     fileType: r
                 }),
@@ -34,13 +34,13 @@ function(e, t, n) {
                 className: t,
                 filename: n,
                 size: r,
-                progress: a,
+                progress: s,
                 onCancelUpload: o,
                 onClick: d,
                 onContextMenu: T
-            } = e, f = 100 === a, S = !f && r > 0;
+            } = e, f = 100 === s, S = !f && r > 0;
             return (0, i.jsxs)("div", {
-                className: s()(E.attachment, t),
+                className: a()(E.attachment, t),
                 children: [(0, i.jsx)(I, {
                     filename: n
                 }), (0, i.jsxs)("div", {
@@ -60,7 +60,7 @@ function(e, t, n) {
                         className: E.progressContainer,
                         children: f ? c.default.Messages.ATTACHMENT_PROCESSING : (0, i.jsx)(u.Progress, {
                             className: E.progress,
-                            percent: a
+                            percent: s
                         })
                     })]
                 }), f ? null : (0, i.jsx)(u.Clickable, {
@@ -77,7 +77,7 @@ function(e, t, n) {
         let {
             className: t,
             url: n,
-            fileName: a,
+            fileName: s,
             fileSize: o,
             onClick: d,
             onContextMenu: _,
@@ -85,9 +85,9 @@ function(e, t, n) {
         } = e;
         return (0, i.jsxs)(r.Fragment, {
             children: [(0, i.jsxs)("div", {
-                className: s()(E.attachment, E.newMosaicStyle, t),
+                className: a()(E.attachment, E.newMosaicStyle, t),
                 children: [(0, i.jsx)(I, {
-                    filename: a
+                    filename: s
                 }), (0, i.jsxs)("div", {
                     className: E.attachmentInner,
                     children: [(0, i.jsx)("div", {
@@ -97,7 +97,7 @@ function(e, t, n) {
                             href: n,
                             onClick: d,
                             onContextMenu: _,
-                            children: a
+                            children: s
                         })
                     }), (0, i.jsx)("div", {
                         className: E.metadata,

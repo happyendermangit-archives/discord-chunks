@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120"), n("757143");
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("481060"),
         l = n("239091"),
         u = n("555573"),
@@ -84,8 +84,8 @@ function(e, t, n) {
                 let t = this._ref;
                 if (null == t) return;
                 let r = t.value.slice(0, t.selectionStart - i.length),
-                    a = t.value.slice(t.selectionEnd);
-                this._insertText(e, r, a, n)
+                    s = t.value.slice(t.selectionEnd);
+                this._insertText(e, r, s, n)
             }
         }
         insertText(e, t) {
@@ -93,20 +93,20 @@ function(e, t, n) {
                 i = this._ref;
             if (null == i) return;
             let r = i.value.slice(0, i.selectionStart),
-                a = i.value.slice(i.selectionEnd);
-            this._insertText(e, r, a, n)
+                s = i.value.slice(i.selectionEnd);
+            this._insertText(e, r, s, n)
         }
         _insertText(e, t, n, i) {
             if (null == this._ref) return;
             i && (e += " ");
             let r = t + e + n,
                 {
-                    onChange: a
+                    onChange: s
                 } = this.props;
-            null == a || a(null, r, (0, I.toRichValue)(r));
-            let s = t.length + e.length;
+            null == s || s(null, r, (0, I.toRichValue)(r));
+            let a = t.length + e.length;
             this.setState({
-                nextSelection: s
+                nextSelection: a
             }, () => {
                 this.props.maybeShowAutocomplete()
             })
@@ -123,7 +123,7 @@ function(e, t, n) {
                 disabled: t,
                 placeholder: n,
                 required: r,
-                onResize: a,
+                onResize: s,
                 className: l,
                 id: u,
                 submitting: d,
@@ -139,7 +139,7 @@ function(e, t, n) {
                     handler: this.handleGlobalPaste
                 }), (0, i.jsx)(o.TextAreaAutosize, {
                     ref: this.handleSetRef,
-                    className: s()(l, c),
+                    className: a()(l, c),
                     id: u,
                     rows: 1,
                     fontWidthEstimate: 6,
@@ -147,7 +147,7 @@ function(e, t, n) {
                     disabled: t || d,
                     required: r,
                     onChange: this.handleOnChange,
-                    onResize: a,
+                    onResize: s,
                     onKeyPress: this.handleKeyPress,
                     onKeyDown: this.handleKeyDown,
                     onKeyUp: this.handleKeyUp,

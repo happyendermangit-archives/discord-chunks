@@ -2,30 +2,30 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getApplicationInstallURL: function() {
-            return a
+            return s
         }
     }), n("47120");
     var i = n("581364"),
         r = n("981631");
 
-    function a(e) {
+    function s(e) {
         let {
             id: t,
             customInstallUrl: n,
-            installParams: a,
-            integrationTypesConfig: s
+            installParams: s,
+            integrationTypesConfig: a
         } = e;
         if (null != n) return n;
         let o = {};
         o.client_id = t;
         let l = (0, i.isUserInUserAppExperiment)({
             location: "getApplicationInstallURL"
-        }) && null != s && Object.values(s).some(e => (null == e ? void 0 : e.oauth2_install_params) != null);
-        if (null != a && !l) {
+        }) && null != a && Object.values(a).some(e => (null == e ? void 0 : e.oauth2_install_params) != null);
+        if (null != s && !l) {
             let {
                 permissions: e,
                 scopes: t
-            } = a;
+            } = s;
             null != e && (o.permissions = e), null != t && (o.scope = t.join(" "))
         }
         let u = Object.entries(o).map(e => {

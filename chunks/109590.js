@@ -13,8 +13,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("392711"),
         r = n.n(i),
-        a = n("442837"),
-        s = n("544891"),
+        s = n("442837"),
+        a = n("544891"),
         o = n("570140"),
         l = n("592125"),
         u = n("709054"),
@@ -101,8 +101,8 @@ function(e, t, n) {
         let {
             loaded: i,
             firstMessage: r
-        } = (0, a.useStateFromStoresObject)([c.default], () => c.default.getMessage(e.id)), s = (0, a.useStateFromStores)([l.default], () => l.default.getChannel(e.parent_id));
-        if (null != s && (t = i, n = r, !t && null == n)) C(s, e.id);
+        } = (0, s.useStateFromStoresObject)([c.default], () => c.default.getMessage(e.id)), a = (0, s.useStateFromStores)([l.default], () => l.default.getChannel(e.parent_id));
+        if (null != a && (t = i, n = r, !t && null == n)) C(a, e.id);
         return {
             loaded: i,
             firstMessage: r
@@ -113,7 +113,7 @@ function(e, t, n) {
         let {
             loaded: n,
             message: i
-        } = (0, a.useStateFromStoresObject)([E.default], () => E.default.getMessageState(t.id));
+        } = (0, s.useStateFromStoresObject)([E.default], () => E.default.getMessageState(t.id));
         return null != e && A(t.guild_id, t.id) && C(e, t.id), {
             loaded: n,
             mostRecentMessage: i
@@ -125,10 +125,10 @@ function(e, t, n) {
         t.forEach(t => {
             var i, r;
             let {
-                loaded: a,
-                firstMessage: s
+                loaded: s,
+                firstMessage: a
             } = c.default.getMessage(t);
-            if (i = a, r = s, !i && null == r || A(e.guild_id, t)) S.request(e.id, t), n = !0
+            if (i = s, r = a, !i && null == r || A(e.guild_id, t)) S.request(e.id, t), n = !0
         }), n && null == h && (h = setTimeout(g, 0))
     }
 
@@ -161,7 +161,7 @@ function(e, t, n) {
                 body: {
                     threads: r
                 }
-            } = await s.HTTP.post({
+            } = await a.HTTP.post({
                 url: I.Endpoints.FORUM_POSTS(e),
                 body: {
                     thread_ids: t

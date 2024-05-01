@@ -25,8 +25,8 @@ function(e, t, n) {
     });
     var i = n("544891"),
         r = n("570140"),
-        a = n("675478"),
-        s = n("131951"),
+        s = n("675478"),
+        a = n("131951"),
         o = n("594174"),
         l = n("932724"),
         u = n("647177"),
@@ -41,7 +41,7 @@ function(e, t, n) {
     }
     async function E(e, t, n) {
         try {
-            let a = await i.HTTP.post({
+            let s = await i.HTTP.post({
                 url: _.Endpoints.VIDEO_FILTER_ASSETS,
                 body: {
                     type: t,
@@ -51,8 +51,8 @@ function(e, t, n) {
             });
             return r.default.dispatch({
                 type: "VIDEO_FILTER_ASSET_UPLOAD_SUCCESS",
-                videoFilterAsset: a.body
-            }), a.body
+                videoFilterAsset: s.body
+            }), s.body
         } catch (e) {
             throw new d.default(e)
         }
@@ -66,9 +66,9 @@ function(e, t, n) {
         })
     }
     async function T(e) {
-        if (await a.PreloadedUserSettingsActionCreators.updateAsync("voiceAndVideo", t => {
+        if (await s.PreloadedUserSettingsActionCreators.updateAsync("voiceAndVideo", t => {
                 t.videoBackgroundFilterDesktop = (0, u.getVideoBackgroundProtoFromOption)(e)
-            }, a.UserSettingsDelay.FREQUENT_USER_ACTION), (0, u.isCustomBackgroundOption)(e)) {
+            }, s.UserSettingsDelay.FREQUENT_USER_ACTION), (0, u.isCustomBackgroundOption)(e)) {
             let t = await i.HTTP.post(_.Endpoints.VIDEO_FILTER_ASSET_LAST_USED(e.id));
             r.default.dispatch({
                 type: "VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION",
@@ -81,14 +81,14 @@ function(e, t, n) {
     }
 
     function f(e) {
-        s.default.isSupported() && r.default.dispatch({
+        a.default.isSupported() && r.default.dispatch({
             type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS",
             settings: e
         })
     }
 
     function S() {
-        s.default.isSupported() && r.default.dispatch({
+        a.default.isSupported() && r.default.dispatch({
             type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_START"
         })
     }

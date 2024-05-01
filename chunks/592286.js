@@ -2,13 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         AUTOMATIC_APPROVAL_FORM_FIELDS: function() {
-            return a
+            return s
         },
         IN_APP_MEMBER_VERIFICATION_MODAL_KEY: function() {
             return S
         },
         MANUAL_APPROVAL_FORM_FIELDS: function() {
-            return s
+            return a
         },
         MAX_CHOICE_LENGTH: function() {
             return c
@@ -43,8 +43,8 @@ function(e, t, n) {
     }), n("47120");
     var i, r = n("246364");
     r.VerificationFormFieldTypes.VERIFICATION;
-    let a = new Set([r.VerificationFormFieldTypes.TERMS]),
-        s = new Set([r.VerificationFormFieldTypes.MULTIPLE_CHOICE, r.VerificationFormFieldTypes.TEXT_INPUT, r.VerificationFormFieldTypes.PARAGRAPH]),
+    let s = new Set([r.VerificationFormFieldTypes.TERMS]),
+        a = new Set([r.VerificationFormFieldTypes.MULTIPLE_CHOICE, r.VerificationFormFieldTypes.TEXT_INPUT, r.VerificationFormFieldTypes.PARAGRAPH]),
         o = 5,
         l = 16,
         u = 300,

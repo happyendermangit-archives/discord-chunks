@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("46973"),
         r = n("570140"),
-        a = n("147913"),
-        s = n("579806"),
+        s = n("147913"),
+        a = n("579806"),
         o = n("569545"),
         l = n("441167"),
         u = n("314897"),
@@ -24,7 +24,7 @@ function(e, t, n) {
         A = n("356659"),
         m = n("981631"),
         N = n("70722");
-    class p extends a.default {
+    class p extends s.default {
         handleRTCConnectionState(e) {
             let {
                 context: t,
@@ -32,16 +32,16 @@ function(e, t, n) {
                 streamKey: r
             } = e;
             if (!(0, T.areClipsEnabled)() || n !== m.RTCConnectionStates.RTC_CONNECTED) return;
-            let a = u.default.getId();
-            if (t === i.MediaEngineContextTypes.DEFAULT) return this.applyUserVoiceRecording(a);
+            let s = u.default.getId();
+            if (t === i.MediaEngineContextTypes.DEFAULT) return this.applyUserVoiceRecording(s);
             if (t === i.MediaEngineContextTypes.STREAM && null != r) {
                 let {
                     ownerId: e
                 } = (0, o.decodeStreamKey)(r);
-                if (e !== a) return;
+                if (e !== s) return;
                 let t = c.default.getRTCConnection(r);
                 if (null == t) return;
-                this.applyStreamRecording(a, t)
+                this.applyStreamRecording(s, t)
             }
         }
         handleRTCUserCreate(e) {
@@ -101,20 +101,20 @@ function(e, t, n) {
                 userId: t,
                 context: n,
                 channelId: r,
-                guildId: a
+                guildId: s
             } = e;
             if (n !== i.MediaEngineContextTypes.STREAM || !(0, h.default)(d.default)) return;
-            let s = c.default.getRTCConnection(o.encodeStreamKey({
-                streamType: null != a ? N.StreamTypes.GUILD : N.StreamTypes.CALL,
+            let a = c.default.getRTCConnection(o.encodeStreamKey({
+                streamType: null != s ? N.StreamTypes.GUILD : N.StreamTypes.CALL,
                 ownerId: t,
                 channelId: r,
-                guildId: a
+                guildId: s
             }));
-            null != s && this.applyStreamRecording(t, s)
+            null != a && this.applyStreamRecording(t, a)
         }
         async classifyHardwareAndTrack() {
             try {
-                let e = await s.default.processUtils.getSystemInfo(),
+                let e = await a.default.processUtils.getSystemInfo(),
                     t = this.classifyHardware(e);
                 return E.default.track(m.AnalyticEvents.CLIPS_HARDWARE_CLASSIFICATION, {
                     classification: t,

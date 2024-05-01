@@ -5,10 +5,10 @@ function(e, t, n) {
             return o
         },
         dismissAppLauncherPopup: function() {
-            return a
+            return s
         },
         showAppDetail: function() {
-            return s
+            return a
         },
         showAppLauncherPopup: function() {
             return r
@@ -22,13 +22,13 @@ function(e, t, n) {
         })
     }
 
-    function a() {
+    function s() {
         i.default.dispatch({
             type: "APP_LAUNCHER_DISMISS_POPUP"
         })
     }
 
-    function s(e) {
+    function a(e) {
         i.default.dispatch({
             type: "APP_LAUNCHER_SHOW_APP_DETAIL",
             appDetail: e

@@ -16,12 +16,12 @@ function(e, t, n) {
     }), n("757143");
     var i = n("633302"),
         r = n("134432"),
-        a = n("768581"),
-        s = n("358085"),
+        s = n("768581"),
+        a = n("358085"),
         o = n("981631");
     let l = "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.CDN_HOST, "/role-icons"),
         u = "".concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT),
-        d = (0, s.isAndroid)(),
+        d = (0, a.isAndroid)(),
         _ = (e, t) => {
             if (null == e) return null;
             let n = null != e.unicodeEmoji ? i.default.getByName(i.default.convertSurrogateToName(e.unicodeEmoji, !1)) : void 0;
@@ -38,10 +38,10 @@ function(e, t, n) {
             } = e;
             if (null == i) return;
             if (i.startsWith("data:")) return i;
-            let s = a.SUPPORTS_WEBP ? "webp" : "png",
+            let a = s.SUPPORTS_WEBP ? "webp" : "png",
                 _ = "",
                 c = "quality=lossless";
-            return (null != t && (_ = "size=" + (0, r.getBestMediaProxySize)(t * (0, r.getDevicePixelRatio)()), c = d ? "" : "&" + c), null != window.GLOBAL_ENV.CDN_HOST) ? "".concat(l, "/").concat(n, "/").concat(i, ".").concat(s, "?").concat(_).concat(c) : "".concat(u).concat(o.Endpoints.ROLE_ICON(n, i), "?").concat(_)
+            return (null != t && (_ = "size=" + (0, r.getBestMediaProxySize)(t * (0, r.getDevicePixelRatio)()), c = d ? "" : "&" + c), null != window.GLOBAL_ENV.CDN_HOST) ? "".concat(l, "/").concat(n, "/").concat(i, ".").concat(a, "?").concat(_).concat(c) : "".concat(u).concat(o.Endpoints.ROLE_ICON(n, i), "?").concat(_)
         },
         I = e => e.startsWith(l) || e.startsWith("".concat(u, "/roles")) && e.includes("/icons/"),
         T = (e, t) => {

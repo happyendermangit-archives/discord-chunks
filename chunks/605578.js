@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        a = n("1561"),
-        s = n("727583");
+        s = n("1561"),
+        a = n("727583");
 
     function o(e) {
         let {
@@ -36,13 +36,13 @@ function(e, t, n) {
             onMouseLeave: S,
             onDoubleClick: d,
             onContextMenu: _,
-            children: [(0, i.jsx)(a.Clickable, {
+            children: [(0, i.jsx)(s.Clickable, {
                 ...h,
                 focusProps: {
                     ringTarget: m,
                     ...l
                 },
-                className: s.focusTarget,
+                className: a.focusTarget,
                 "aria-label": A,
                 onClick: e => {
                     e.stopPropagation(), null == u || u(e)

@@ -5,7 +5,7 @@ function(e, t, n) {
             return r
         },
         serialize: function() {
-            return a
+            return s
         }
     }), n("653041");
     let i = [];
@@ -14,7 +14,7 @@ function(e, t, n) {
         for (i.push(e); i.length > 10;) i.shift()
     }
 
-    function a() {
+    function s() {
         return i.join(" -> ")
     }
 }

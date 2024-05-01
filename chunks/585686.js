@@ -12,11 +12,11 @@ function(e, t, n) {
         let {
             stepConfigs: n,
             breadcrumbs: r
-        } = e, [a, s] = i.useState(null === (t = n[0]) || void 0 === t ? void 0 : t.key), o = n.map(e => e.key).filter(e => null != e);
+        } = e, [s, a] = i.useState(null === (t = n[0]) || void 0 === t ? void 0 : t.key), o = n.map(e => e.key).filter(e => null != e);
         return {
             steps: o,
-            step: a,
-            setStep: s,
+            step: s,
+            setStep: a,
             breadcrumbsData: n.filter(e => {
                 var t;
                 return null != e.key && (null == e ? void 0 : null === (t = e.options) || void 0 === t ? void 0 : t.useBreadcrumbLabel) != null

@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         ApplicationDirectoryEntrypointNames: function() {
-            return s
+            return a
         },
         ApplicationDirectoryViews: function() {
-            return a
+            return s
         },
         getCurrentView: function() {
             return T
@@ -29,12 +29,12 @@ function(e, t, n) {
             return E
         }
     });
-    var i, r, a, s, o = n("266067"),
+    var i, r, s, a, o = n("266067"),
         l = n("652874"),
         u = n("703656"),
         d = n("264043"),
         _ = n("981631");
-    (i = a || (a = {})).HOME = "home", i.SEARCH = "search", i.APPLICATION = "application", (r = s || (s = {})).EXTERNAL = "External", r.KEYBOARD_SHORTCUT = "Keyboard Shortcut", r.APPLICATION_DIRECTORY_URL = "Application Directory URL", r.APPLICATION_DIRECTORY_PROFILE_EMBED = "Application Directory Profile Embed", r.APPLICATION_DIRECTORY_UPSELL_MODAL = "Application Directory Upsell Modal", r.GUILD_HEADER_POPOUT = "Guild Header Popout", r.GUILD_SETTINGS = "Guild Settings", r.GUILD_INTEGRATION_SETTINGS = "Guild Integration Settings", r.GUILD_CONTEXT_MENU = "Guild Context Menu";
+    (i = s || (s = {})).HOME = "home", i.SEARCH = "search", i.APPLICATION = "application", (r = a || (a = {})).EXTERNAL = "External", r.KEYBOARD_SHORTCUT = "Keyboard Shortcut", r.APPLICATION_DIRECTORY_URL = "Application Directory URL", r.APPLICATION_DIRECTORY_PROFILE_EMBED = "Application Directory Profile Embed", r.APPLICATION_DIRECTORY_UPSELL_MODAL = "Application Directory Upsell Modal", r.GUILD_HEADER_POPOUT = "Guild Header Popout", r.GUILD_SETTINGS = "Guild Settings", r.GUILD_INTEGRATION_SETTINGS = "Guild Integration Settings", r.GUILD_CONTEXT_MENU = "Guild Context Menu";
     let c = (0, l.default)(() => ({
             guildId: null,
             entrypoint: null,
@@ -63,24 +63,24 @@ function(e, t, n) {
         }), r = (0, o.matchPath)(n, {
             path: _.Routes.APPLICATION_DIRECTORY_SEARCH,
             exact: !0
-        }), a = (0, o.matchPath)(n, {
+        }), s = (0, o.matchPath)(n, {
             path: [_.Routes.APPLICATION_DIRECTORY_PROFILE(":applicationId"), _.Routes.APPLICATION_DIRECTORY_PROFILE(":applicationId", ":section")],
             exact: !0
         }), {
-            applicationId: s,
+            applicationId: a,
             section: l
-        } = null !== (e = null == a ? void 0 : a.params) && void 0 !== e ? e : {};
+        } = null !== (e = null == s ? void 0 : s.params) && void 0 !== e ? e : {};
         if (null != i) return {
             type: "home"
         };
         if (null != r) return {
             type: "search"
         };
-        if (null != a && null != s) {
-            let e = null === (t = d.default.getApplication(s)) || void 0 === t ? void 0 : t.name;
+        if (null != s && null != a) {
+            let e = null === (t = d.default.getApplication(a)) || void 0 === t ? void 0 : t.name;
             return {
                 type: "application",
-                applicationId: s,
+                applicationId: a,
                 applicationName: e,
                 section: l
             }

@@ -4,21 +4,21 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        a = n.n(r),
-        s = n("960259"),
+        s = n.n(r),
+        a = n("960259"),
         o = n("531057"),
         l = n("423034");
-    t.default = (0, s.replaceIcon)(function(e) {
+    t.default = (0, a.replaceIcon)(function(e) {
         let {
             width: t = 24,
             height: n = 24,
             color: r = "currentColor",
-            className: s,
+            className: a,
             foreground: o,
             open: u = !1
         } = e;
         return (0, i.jsx)("svg", {
-            className: a()(l.arrow, s, {
+            className: s()(l.arrow, a, {
                 [l.open]: u
             }),
             width: t,

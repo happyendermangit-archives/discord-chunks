@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         questRewardsConfigFromServer: function() {
-            return a
+            return s
         }
     });
     var i = n("887003");
@@ -35,7 +35,7 @@ function(e, t, n) {
         }
     }
 
-    function a(e) {
+    function s(e) {
         return {
             assignmentMethod: e.assignment_method,
             rewards: e.rewards.map(r)

@@ -28,14 +28,14 @@ function(e, t, n) {
     });
     var i = n("579806"),
         r = n("405826"),
-        a = n("358085");
+        s = n("358085");
 
-    function s() {
+    function a() {
         return (null === i.default || void 0 === i.default ? void 0 : i.default.spellCheck) != null
     }
 
     function o() {
-        return (0, a.isDesktop)() && s()
+        return (0, s.isDesktop)() && a()
     }
     let l = o() ? (0, r.install)() : null;
     async function u(e) {
@@ -67,7 +67,7 @@ function(e, t, n) {
     }
 
     function T(e) {
-        if (!s()) return () => {};
+        if (!a()) return () => {};
         let t = i.default.spellCheck.on("spellcheck-result", e);
         return null != t ? t : () => {}
     }

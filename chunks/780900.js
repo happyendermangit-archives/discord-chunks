@@ -29,10 +29,10 @@ function(e, t, n) {
             return _.isListItemRow
         },
         useCachedScrollerState: function() {
-            return a.default
+            return s.default
         },
         usePaddingFixes: function() {
-            return s.default
+            return a.default
         },
         useResizeObserverSubscription: function() {
             return o.default
@@ -55,9 +55,9 @@ function(e, t, n) {
     });
     var i = n("191532"),
         r = n("624075"),
-        a = n("452828");
+        s = n("452828");
     n("924428");
-    var s = n("987357"),
+    var a = n("987357"),
         o = n("382731");
     n("151973");
     var l = n("502295"),

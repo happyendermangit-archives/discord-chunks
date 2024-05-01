@@ -2,8 +2,8 @@ function(e, t, n) {
     "use strict";
     n.r(t);
     var i, r = n("913527"),
-        a = n.n(r),
-        s = n("442837"),
+        s = n.n(r),
+        a = n("442837"),
         o = n("570140"),
         l = n("709054");
 
@@ -24,7 +24,7 @@ function(e, t, n) {
     function E() {
         for (let e in c) _.lastSeenNewlyAddedEmojiIds[e] = c[e]
     }
-    class I extends(i = s.default.PersistedStore) {
+    class I extends(i = a.default.PersistedStore) {
         initialize(e) {
             _ = null != e ? e : d
         }
@@ -40,8 +40,8 @@ function(e, t, n) {
             if (null == n) return !0;
             if (l.default.compare(t, n.id) > 0) return !0;
             {
-                let e = a()(n.lastSeen);
-                return a()().isBefore(e.add(2, "weeks")) && !n.acknowledged
+                let e = s()(n.lastSeen);
+                return s()().isBefore(e.add(2, "weeks")) && !n.acknowledged
             }
         }
     }

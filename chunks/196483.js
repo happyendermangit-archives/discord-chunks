@@ -2,16 +2,16 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return a
+            return s
         }
     });
     var i = n("53529"),
         r = n("887490");
 
-    function a(e, t) {
+    function s(e, t) {
         let {
             apply: n,
-            deleteBackward: a,
+            deleteBackward: s,
             deleteForward: o,
             deleteFragment: l,
             insertData: u,
@@ -23,10 +23,10 @@ function(e, t, n) {
             let r = i.HistoryUtils.currentEntry(e);
             if (null != r && (r.mergeable = !1), n >= e.history.stack.length) return;
             e.history.index = n;
-            let a = i.HistoryUtils.currentEntry(e);
+            let s = i.HistoryUtils.currentEntry(e);
             t({
-                newValue: a.value,
-                newSelection: a.selection
+                newValue: s.value,
+                newSelection: s.selection
             })
         }
         e.history = {
@@ -36,7 +36,7 @@ function(e, t, n) {
             let {
                 history: t
             } = e;
-            0 === t.stack.length && (t.stack = [s(e)], t.index = 0), null != e.selection && (i.HistoryUtils.currentEntry(e).selection = e.selection), I = null, _()
+            0 === t.stack.length && (t.stack = [a(e)], t.index = 0), null != e.selection && (i.HistoryUtils.currentEntry(e).selection = e.selection), I = null, _()
         }, e.undo = () => {
             e.history.index > 0 && c(e.history.index - 1)
         }, e.redo = () => {
@@ -47,25 +47,25 @@ function(e, t, n) {
             T = null;
         return e.apply = t => {
             let {
-                history: a
+                history: s
             } = e;
             n(t);
             let o = r.EditorUtils.richValue(e);
-            o !== T && (0 === a.stack.length && (a.stack = [s(e)], a.index = 0), i.HistoryUtils.isSaving(e) && (function(e, t, n) {
+            o !== T && (0 === s.stack.length && (s.stack = [a(e)], s.index = 0), i.HistoryUtils.isSaving(e) && (function(e, t, n) {
                 let r;
                 let {
-                    selection: a
-                } = e, s = i.HistoryUtils.currentEntry(e), o = !0, l = !0;
-                if ("insert_text" === t.type && 1 === t.text.length ? (r = "insert", l = !(("" === t.text || t.text.endsWith(" ")) && (null == n ? void 0 : n.type) === "insert_text" && !("" === n.text && n.text.endsWith(" ")))) : "split_node" === t.type ? r = "insert" : "remove_text" === t.type && 1 === t.text.length ? r = "delete" : (r = "other", o = !1, l = !1), "set_selection" === t.type && null != s) {
-                    s.selection = a;
+                    selection: s
+                } = e, a = i.HistoryUtils.currentEntry(e), o = !0, l = !0;
+                if ("insert_text" === t.type && 1 === t.text.length ? (r = "insert", l = !(("" === t.text || t.text.endsWith(" ")) && (null == n ? void 0 : n.type) === "insert_text" && !("" === n.text && n.text.endsWith(" ")))) : "split_node" === t.type ? r = "insert" : "remove_text" === t.type && 1 === t.text.length ? r = "delete" : (r = "other", o = !1, l = !1), "set_selection" === t.type && null != a) {
+                    a.selection = s;
                     return
                 }
                 o && function(e, t) {
                     return !((null == e ? void 0 : e.type) !== t || Date.now() - e.createdAt >= 4e3) && !0
-                }(s, r) ? i.HistoryUtils.insertOrMergeEntry(e, r, l) : i.HistoryUtils.insertEntry(e, r, l)
+                }(a, r) ? i.HistoryUtils.insertOrMergeEntry(e, r, l) : i.HistoryUtils.insertEntry(e, r, l)
             }(e, t, E), E = t), I = t, T = o)
         }, e.deleteBackward = t => {
-            i.HistoryUtils.withSingleEntry(e, () => a(t))
+            i.HistoryUtils.withSingleEntry(e, () => s(t))
         }, e.deleteForward = t => {
             i.HistoryUtils.withSingleEntry(e, () => o(t))
         }, e.deleteFragment = t => {
@@ -77,7 +77,7 @@ function(e, t, n) {
         }, e
     }
 
-    function s(e) {
+    function a(e) {
         return {
             type: "other",
             mergeable: !1,

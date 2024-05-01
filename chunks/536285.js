@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("411104");
     var i = n("836560"),
         r = n("525654"),
-        a = n.n(r),
-        s = n("664751"),
+        s = n.n(r),
+        a = n("664751"),
         o = n("153832"),
         l = n("544891"),
         u = n("996106"),
@@ -15,7 +15,7 @@ function(e, t, n) {
         if (null == e || null == t) throw Error("cmd and name required");
         return "".concat(e, ":").concat(t)
     }
-    let E = s.parse(location.search.slice(1)),
+    let E = a.parse(location.search.slice(1)),
         I = parseInt(null != E.rpc && "" !== E.rpc ? E.rpc : d.RPC_STARTING_PORT, 10),
         T = null;
     class f extends i.EventEmitter {
@@ -52,7 +52,7 @@ function(e, t, n) {
                         cmd: n,
                         evt: i,
                         nonce: r,
-                        data: a
+                        data: s
                     } = t;
                     if (n === d.RPCCommands.DISPATCH) {
                         if (i === d.RPCEvents.READY) {
@@ -61,17 +61,17 @@ function(e, t, n) {
                         }
                         if (i === d.RPCEvents.ERROR) {
                             this.emit("error", new u.default({
-                                errorCode: a.code
-                            }, a.message)), this.disconnect();
+                                errorCode: s.code
+                            }, s.message)), this.disconnect();
                             return
                         }
-                        this.emit(c(n, i), a);
+                        this.emit(c(n, i), s);
                         return
                     }
-                    let s = null;
-                    i === d.RPCEvents.ERROR && (s = new u.default({
-                        errorCode: a.code
-                    }, a.message), a = null), this.emit(c(n, r), s, a)
+                    let a = null;
+                    i === d.RPCEvents.ERROR && (a = new u.default({
+                        errorCode: s.code
+                    }, s.message), s = null), this.emit(c(n, r), a, s)
                 }, T.onclose = T.onerror = e => this.disconnect(e))
             }
         }
@@ -98,14 +98,14 @@ function(e, t, n) {
                     }), this.connect();
                     return
                 }
-                let a = (0, o.v4)(),
-                    s = JSON.stringify({
+                let s = (0, o.v4)(),
+                    a = JSON.stringify({
                         cmd: e,
                         args: t,
                         evt: n,
-                        nonce: a
+                        nonce: s
                     });
-                this.once(c(e, a), (e, t) => null != e ? r(e) : i(t)), null == T || T.send(s)
+                this.once(c(e, s), (e, t) => null != e ? r(e) : i(t)), null == T || T.send(a)
             })
         }
         requestOnce(e, t, n) {
@@ -131,7 +131,7 @@ function(e, t, n) {
             })
         }
         requestRedirect(e, t, n) {
-            if ("Chrome" === a().name && parseInt(a().version, 10) >= 58) return this.requestOnce(e, t, n);
+            if ("Chrome" === s().name && parseInt(s().version, 10) >= 58) return this.requestOnce(e, t, n);
             let i = encodeURIComponent(JSON.stringify({
                     cmd: e,
                     args: t,

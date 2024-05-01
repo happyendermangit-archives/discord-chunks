@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("47120");
-    var i, r, a, s = n("735250"),
+    var i, r, s, a = n("735250"),
         o = n("470079"),
         l = n("120356"),
         u = n.n(l),
@@ -16,7 +16,7 @@ function(e, t, n) {
             configurable: !0,
             writable: !0
         }) : e[t] = n, e
-    }(a = i || (i = {})).SINGLE_AVATAR = "1", a.MULTIPLE_AVATAR = "2";
+    }(s = i || (i = {})).SINGLE_AVATAR = "1", s.MULTIPLE_AVATAR = "2";
     let I = {
         [d.AvatarSizes.SIZE_32]: c.avatarSmall,
         [d.AvatarSizes.SIZE_40]: c.avatarLarge
@@ -28,28 +28,28 @@ function(e, t, n) {
                 avatarSize: t,
                 className: n
             } = this.props;
-            return "2" === e ? (0, s.jsxs)("div", {
+            return "2" === e ? (0, a.jsxs)("div", {
                 className: u()(c.multiplePlaceholder, n),
-                children: [(0, s.jsxs)(_.default, {
-                    children: [(0, s.jsx)("div", {
+                children: [(0, a.jsxs)(_.default, {
+                    children: [(0, a.jsx)("div", {
                         className: u()(c.placeholderAvatar, I[t], c.avatarMasked)
-                    }), (0, s.jsx)("div", {
+                    }), (0, a.jsx)("div", {
                         className: u()(c.placeholderAvatar, I[t], c.avatarMasked)
-                    }), (0, s.jsx)("div", {
+                    }), (0, a.jsx)("div", {
                         className: u()(c.placeholderAvatar, I[t])
                     })]
-                }), (0, s.jsx)(_.default, {
+                }), (0, a.jsx)(_.default, {
                     grow: 1,
                     className: c.mulitplePlaceholderUsername,
                     style: {
                         maxWidth: this.placeholderMaxWidth
                     }
                 })]
-            }) : (0, s.jsxs)(_.default, {
+            }) : (0, a.jsxs)(_.default, {
                 className: u()(c.placeholder, n),
-                children: [(0, s.jsx)("div", {
+                children: [(0, a.jsx)("div", {
                     className: u()(c.placeholderAvatar, I[t])
-                }), (0, s.jsx)(_.default, {
+                }), (0, a.jsx)(_.default, {
                     grow: 1,
                     className: c.placeholderUsername,
                     style: {

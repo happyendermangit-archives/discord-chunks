@@ -12,11 +12,11 @@ function(e, t, n) {
         let {
             applicationId: n,
             activityConfigs: r,
-            applications: a
-        } = e, s = null !== (t = null == a ? void 0 : a.find(e => e.id === n)) && void 0 !== t ? t : i.default.getApplication(n), o = r.find(e => e.application_id === n);
-        return null == o || null == s ? null : {
+            applications: s
+        } = e, a = null !== (t = null == s ? void 0 : s.find(e => e.id === n)) && void 0 !== t ? t : i.default.getApplication(n), o = r.find(e => e.application_id === n);
+        return null == o || null == a ? null : {
             activity: o,
-            application: s
+            application: a
         }
     }
 }

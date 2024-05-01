@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t);
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("442837"),
         l = n("481060"),
         u = n("230711"),
@@ -21,7 +21,7 @@ function(e, t, n) {
         let {
             className: t,
             quest: n,
-            autoplay: a = !0,
+            autoplay: s = !0,
             learnMoreStyle: A = null
         } = e, m = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), N = r.useMemo(() => (0, I.isAssetAnimated)(n.config.assets.rewardTile), [n]), p = r.useCallback(t => {
             var i;
@@ -30,11 +30,11 @@ function(e, t, n) {
                 questContent: e.questContent,
                 questContentCTA: E.QuestContentCTA.REWARD_LEARN_MORE
             }), u.default.open(f.UserSettingsSections.INVENTORY), null === (i = e.onClick) || void 0 === i || i.call(e, t)
-        }, [n.id, e]), O = r.useRef(null), R = r.useRef(a);
+        }, [n.id, e]), O = r.useRef(null), R = r.useRef(s);
         r.useEffect(() => {
             var e, t;
-            N && !m && null != O.current && (a && !R.current ? null === (e = O.current) || void 0 === e || e.play() : !a && R.current && (null === (t = O.current) || void 0 === t || t.pause()), R.current = a)
-        }, [a, N, m]);
+            N && !m && null != O.current && (s && !R.current ? null === (e = O.current) || void 0 === e || e.play() : !s && R.current && (null === (t = O.current) || void 0 === t || t.pause()), R.current = s)
+        }, [s, N, m]);
         let C = (0, I.getRewardAssetUrl)(n),
             g = N ? (0, i.jsx)(T.QuestsAsset, {
                 id: "QuestRewardTile_rewardTileAnimated",
@@ -42,7 +42,7 @@ function(e, t, n) {
                     ref: t => {
                         e.current = t, O.current = t
                     },
-                    autoPlay: !m && a,
+                    autoPlay: !m && s,
                     loop: !0,
                     muted: !0,
                     playsInline: !0,
@@ -58,15 +58,15 @@ function(e, t, n) {
                 children: e => (0, i.jsx)("img", {
                     ref: e,
                     alt: n.config.messages.rewardName,
-                    className: s()(h.questRewardTileAsset, h.questRewardTileAssetStatic),
+                    className: a()(h.questRewardTileAsset, h.questRewardTileAssetStatic),
                     src: C
                 })
             });
         return null == A ? (0, i.jsx)("div", {
-            className: s()(t, h.questRewardTile),
+            className: a()(t, h.questRewardTile),
             children: g
         }) : (0, i.jsxs)(l.Clickable, {
-            className: s()(h.questRewardTile, h.questRewardTileInteractive, t),
+            className: a()(h.questRewardTile, h.questRewardTileInteractive, t),
             onClick: p,
             children: ["text" === A && (0, i.jsx)(l.Text, {
                 color: "always-white",

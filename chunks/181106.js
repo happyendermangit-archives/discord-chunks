@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t);
-    var i, r, a, s, o = n("442837"),
+    var i, r, s, a, o = n("442837"),
         l = n("846519"),
         u = n("570140"),
         d = n("981631");
@@ -12,8 +12,8 @@ function(e, t, n) {
         var i;
         let {
             applicationId: r
-        } = n, a = null !== (i = _[r]) && void 0 !== i ? i : {};
-        if (a[t] = e, _[r] = a, !__OVERLAY__ && e === d.ActivityActionStates.FAILED) {
+        } = n, s = null !== (i = _[r]) && void 0 !== i ? i : {};
+        if (s[t] = e, _[r] = s, !__OVERLAY__ && e === d.ActivityActionStates.FAILED) {
             null != c[r] && c[r].stop();
             let e = new l.Timeout;
             e.start(12e4, () => u.default.dispatch({
@@ -27,7 +27,7 @@ function(e, t, n) {
     function I(e) {
         return E(d.ActivityActionStates.COMPLETE, d.ActivityActionTypes.JOIN, e)
     }
-    class T extends(s = o.default.Store) {
+    class T extends(a = o.default.Store) {
         getState(e, t) {
             let n = _[e];
             return null == n ? void 0 : n[t]
@@ -36,12 +36,12 @@ function(e, t, n) {
             return _
         }
     }
-    a = "ActivityLauncherStore", (r = "displayName") in(i = T) ? Object.defineProperty(i, r, {
-        value: a,
+    s = "ActivityLauncherStore", (r = "displayName") in(i = T) ? Object.defineProperty(i, r, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : i[r] = a, t.default = new T(u.default, {
+    }) : i[r] = s, t.default = new T(u.default, {
         OVERLAY_INITIALIZE: function(e) {
             let {
                 activityLauncherStates: t

@@ -10,11 +10,11 @@ function(e, t, n) {
         return !1
     }
 
-    function a(e) {
+    function s(e) {
         return !1
     }
 
-    function s() {
+    function a() {
         return !1
     }
 
@@ -61,7 +61,7 @@ function(e, t, n) {
             return r
         },
         navigateToRootTab: function() {
-            return a
+            return s
         },
         popAllModals: function() {
             return d
@@ -73,7 +73,7 @@ function(e, t, n) {
             return l
         },
         resetToAuthRoute: function() {
-            return s
+            return a
         },
         resetToPanelsUI: function() {
             return o

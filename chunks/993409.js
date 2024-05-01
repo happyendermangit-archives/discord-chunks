@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        a = n.n(r),
-        s = n("693789"),
+        s = n.n(r),
+        a = n("693789"),
         o = n("481060"),
         l = n("255877");
 
@@ -28,22 +28,22 @@ function(e, t, n) {
         });
         return r ? (0, i.jsx)(o.Tooltip, {
             text: n,
-            children: e => (0, i.jsx)(s.Button, {
-                className: a()(l.compactButton, u),
-                innerClassName: a()(l.compactButtonInner, d),
-                color: a()(s.ButtonColors.PRIMARY, l.color),
-                look: s.Button.Looks.FILLED,
-                size: s.Button.Sizes.NONE,
+            children: e => (0, i.jsx)(a.Button, {
+                className: s()(l.compactButton, u),
+                innerClassName: s()(l.compactButtonInner, d),
+                color: s()(a.ButtonColors.PRIMARY, l.color),
+                look: a.Button.Looks.FILLED,
+                size: a.Button.Sizes.NONE,
                 grow: !1,
                 ...e,
                 ..._,
                 children: c
             })
-        }) : (0, i.jsxs)(s.Button, {
-            innerClassName: a()(l.button, u),
-            color: a()(s.ButtonColors.PRIMARY, l.color),
-            look: s.Button.Looks.FILLED,
-            size: s.Button.Sizes.MEDIUM,
+        }) : (0, i.jsxs)(a.Button, {
+            innerClassName: s()(l.button, u),
+            color: s()(a.ButtonColors.PRIMARY, l.color),
+            look: a.Button.Looks.FILLED,
+            size: a.Button.Sizes.MEDIUM,
             ..._,
             children: [c, n]
         })

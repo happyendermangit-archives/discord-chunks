@@ -14,7 +14,7 @@ function(e, t, n) {
             return I
         },
         ApplicationStreamPresets: function() {
-            return a
+            return s
         },
         ApplicationStreamResolutionButtons: function() {
             return S
@@ -38,7 +38,7 @@ function(e, t, n) {
             return c
         }
     }), n("411104");
-    var i, r, a, s, o, l, u = n("981631"),
+    var i, r, s, a, o, l, u = n("981631"),
         d = n("474936"),
         _ = n("689938");
 
@@ -70,7 +70,7 @@ function(e, t, n) {
             default:
                 throw Error("Unknown frame rate: ".concat(e))
         }
-    }(s = i || (i = {}))[s.RESOLUTION_480 = 480] = "RESOLUTION_480", s[s.RESOLUTION_720 = 720] = "RESOLUTION_720", s[s.RESOLUTION_1080 = 1080] = "RESOLUTION_1080", s[s.RESOLUTION_1440 = 1440] = "RESOLUTION_1440", s[s.RESOLUTION_SOURCE = 0] = "RESOLUTION_SOURCE", (o = r || (r = {}))[o.FPS_5 = 5] = "FPS_5", o[o.FPS_15 = 15] = "FPS_15", o[o.FPS_30 = 30] = "FPS_30", o[o.FPS_60 = 60] = "FPS_60", (l = a || (a = {}))[l.PRESET_VIDEO = 1] = "PRESET_VIDEO", l[l.PRESET_DOCUMENTS = 2] = "PRESET_DOCUMENTS", l[l.PRESET_CUSTOM = 3] = "PRESET_CUSTOM";
+    }(a = i || (i = {}))[a.RESOLUTION_480 = 480] = "RESOLUTION_480", a[a.RESOLUTION_720 = 720] = "RESOLUTION_720", a[a.RESOLUTION_1080 = 1080] = "RESOLUTION_1080", a[a.RESOLUTION_1440 = 1440] = "RESOLUTION_1440", a[a.RESOLUTION_SOURCE = 0] = "RESOLUTION_SOURCE", (o = r || (r = {}))[o.FPS_5 = 5] = "FPS_5", o[o.FPS_15 = 15] = "FPS_15", o[o.FPS_30 = 30] = "FPS_30", o[o.FPS_60 = 60] = "FPS_60", (l = s || (s = {}))[l.PRESET_VIDEO = 1] = "PRESET_VIDEO", l[l.PRESET_DOCUMENTS = 2] = "PRESET_DOCUMENTS", l[l.PRESET_CUSTOM = 3] = "PRESET_CUSTOM";
     let I = {
             2: [{
                 resolution: 0,

@@ -16,7 +16,7 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079");
-    let a = function() {
+    let s = function() {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "transparent";
             return () => (0, i.jsx)("div", {
                 style: {
@@ -27,23 +27,23 @@ function(e, t, n) {
                 }
             })
         },
-        s = () => Promise.resolve();
+        a = () => Promise.resolve();
 
     function o(e) {
-        s = e
+        a = e
     }
     let l = e => new Promise(t => setTimeout(t, e));
     async function u(e) {
         let {
             createPromise: t,
             webpackId: i
-        } = e, r = 500, a = 0;
+        } = e, r = 500, s = 0;
         for (;;) try {
             return await t()
         } catch (e) {
             if (console.log(e), i in n.c) throw console.log("Module was found in webpack cache so it has loaded from the network and webpack will not retry"), e;
-            if (a >= 50) throw e;
-            await l(r), await s(), r = Math.min(5e3, 2 * r), a++
+            if (s >= 50) throw e;
+            await l(r), await a(), r = Math.min(5e3, 2 * r), s++
         }
     }
 
@@ -51,14 +51,14 @@ function(e, t, n) {
         let {
             createPromise: t,
             webpackId: n,
-            renderLoader: s,
+            renderLoader: a,
             name: o,
             memo: l = !1
         } = e, d = r.lazy(() => u({
             createPromise: t,
             webpackId: n
         })), _ = e => (0, i.jsx)(r.Suspense, {
-            fallback: null != s ? s() : a()(),
+            fallback: null != a ? a() : s()(),
             children: (0, i.jsx)(d, {
                 ...e
             })
@@ -70,8 +70,8 @@ function(e, t, n) {
         let {
             createPromise: t,
             webpackId: n,
-            render: a,
-            renderFallback: s
+            render: s,
+            renderFallback: a
         } = e, [o, l] = r.useState(null);
         return r.useEffect(() => {
             u({
@@ -84,7 +84,7 @@ function(e, t, n) {
                 return l(t)
             })
         }, []), (0, i.jsx)(i.Fragment, {
-            children: null == o ? s() : a(o)
+            children: null == o ? a() : s(o)
         })
     }
 }

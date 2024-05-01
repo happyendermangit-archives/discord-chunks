@@ -1,13 +1,13 @@
 function(e, t, n) {
     "use strict";
     n.r(t);
-    var i, r, a, s, o = n("442837"),
+    var i, r, s, a, o = n("442837"),
         l = n("570140");
     let u = !1,
         d = !1,
         _ = {},
         c = null;
-    class E extends(s = o.default.Store) {
+    class E extends(a = o.default.Store) {
         hasConsented(e) {
             return null != _[e] && _[e].consented
         }
@@ -21,12 +21,12 @@ function(e, t, n) {
             return c
         }
     }
-    a = "ConsentStore", (r = "displayName") in(i = E) ? Object.defineProperty(i, r, {
-        value: a,
+    s = "ConsentStore", (r = "displayName") in(i = E) ? Object.defineProperty(i, r, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : i[r] = a, t.default = new E(l.default, {
+    }) : i[r] = s, t.default = new E(l.default, {
         CONNECTION_OPEN: function(e) {
             let {
                 consents: t

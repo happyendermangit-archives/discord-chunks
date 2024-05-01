@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("866442"),
         l = n("442837"),
         u = n("692547"),
@@ -29,7 +29,7 @@ function(e, t, n) {
     function O(e) {
         var t, n;
         let {
-            user: a,
+            user: s,
             displayProfile: O,
             guildId: R,
             overrideBannerSrc: C,
@@ -44,7 +44,7 @@ function(e, t, n) {
             overrideBannerSrc: C,
             size: (0, m.getUserBannerSize)(g),
             canAnimate: L || !U ? M : P
-        }), w = (0, d.useToken)(u.default.unsafe_rawColors.PRIMARY_800).hex(), B = (0, d.getAvatarSize)(d.AvatarSizes.SIZE_80), k = (0, o.hex2int)((0, _.default)(a.getAvatarURL(R, B), w, !1)), V = (0, c.default)(null !== (t = null == O ? void 0 : O.primaryColor) && void 0 !== t ? t : k).hsl;
+        }), w = (0, d.useToken)(u.default.unsafe_rawColors.PRIMARY_800).hex(), B = (0, d.getAvatarSize)(d.AvatarSizes.SIZE_80), k = (0, o.hex2int)((0, _.default)(s.getAvatarURL(R, B), w, !1)), V = (0, c.default)(null !== (t = null == O ? void 0 : O.primaryColor) && void 0 !== t ? t : k).hsl;
         return (0, i.jsx)(A.default, {
             isPremium: D,
             hasThemeColors: null !== (n = null == O ? void 0 : O.canEditThemes) && void 0 !== n && n,
@@ -52,7 +52,7 @@ function(e, t, n) {
             hasBanner: null != b,
             hasProfileEffect: v,
             children: (0, i.jsx)("div", {
-                className: s()(p.banner, p.divider, (0, m.getUserBannerStyles)({
+                className: a()(p.banner, p.divider, (0, m.getUserBannerStyles)({
                     profileType: g,
                     user: {
                         hasBanner: null != b,

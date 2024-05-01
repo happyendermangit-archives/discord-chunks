@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("153832"),
-        a = n("481060"),
-        s = n("976255"),
+        s = n("481060"),
+        a = n("976255"),
         o = n("667"),
         l = n("138464"),
         u = n("594174"),
@@ -43,17 +43,17 @@ function(e, t, n) {
             subscription: U,
             skipConfirm: b
         } = null != e ? e : {}, G = !1, w = (0, r.v4)(), B = u.default.getCurrentUser(), k = (0, c.isPremiumExactly)(B, I.PremiumTypes.TIER_2);
-        (0, a.openModalLazy)(async () => {
+        (0, s.openModalLazy)(async () => {
             let {
                 default: e
             } = await Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("40326"), n.e("23357"), n.e("15972"), n.e("440"), n.e("6416"), n.e("63438"), n.e("62511"), n.e("58600"), n.e("8016"), n.e("32776"), n.e("57878"), n.e("95900"), n.e("17938"), n.e("84992"), n.e("19959"), n.e("40146")]).then(n.bind(n, "7305"));
             return n => {
                 let {
                     onClose: r,
-                    ...a
+                    ...s
                 } = n;
                 return (0, i.jsx)(e, {
-                    ...a,
+                    ...s,
                     loadId: w,
                     subscriptionTier: C,
                     skuId: (0, c.castPremiumSubscriptionAsSkuId)(C),
@@ -97,7 +97,7 @@ function(e, t, n) {
                     eligible_for_trial: null != g,
                     application_id: D,
                     location_stack: A
-                }), (0, s.clearError)(), (0, o.clearPurchaseTokenAuthState)(), null == f || f(G), G && (null == h || h())
+                }), (0, a.clearError)(), (0, o.clearPurchaseTokenAuthState)(), null == f || f(G), G && (null == h || h())
             }
         })
     }

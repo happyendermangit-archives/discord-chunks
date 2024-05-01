@@ -13,11 +13,11 @@ function(e, t, n) {
     });
     var i = n("442837"),
         r = n("271383"),
-        a = n("594174"),
-        s = n("69882");
+        s = n("594174"),
+        a = n("69882");
 
     function o(e) {
-        let t = (0, i.useStateFromStores)([a.default], () => a.default.getCurrentUser());
+        let t = (0, i.useStateFromStores)([s.default], () => s.default.getCurrentUser());
         return d(null == t ? void 0 : t.id, e)
     }
 
@@ -27,7 +27,7 @@ function(e, t, n) {
 
     function u(e) {
         var t;
-        return [null !== (t = null == e ? void 0 : e.communicationDisabledUntil) && void 0 !== t ? t : null, (0, s.isMemberCommunicationDisabled)(e)]
+        return [null !== (t = null == e ? void 0 : e.communicationDisabledUntil) && void 0 !== t ? t : null, (0, a.isMemberCommunicationDisabled)(e)]
     }
 
     function d(e, t) {

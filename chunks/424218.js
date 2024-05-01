@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         formatKbSize: function() {
-            return s
+            return a
         },
         formatSize: function() {
-            return a
+            return s
         }
     });
     var i = n("689938");
@@ -15,17 +15,17 @@ function(e, t, n) {
         useSpace: !0
     };
 
-    function a(e) {
+    function s(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r,
             n = t.useKibibytes ? 1024 : 1e3,
-            a = t.useKibibytes ? 1024 : 1e3,
-            s = Math.ceil(e / n);
-        if (s < a) return t.useSpace ? i.default.Messages.FILE_SIZE_MB.format({
-            size: s
+            s = t.useKibibytes ? 1024 : 1e3,
+            a = Math.ceil(e / n);
+        if (a < s) return t.useSpace ? i.default.Messages.FILE_SIZE_MB.format({
+            size: a
         }) : i.default.Messages.FILE_SIZE_MB_NO_SPACE.format({
-            size: s
+            size: a
         });
-        let o = s / a;
+        let o = a / s;
         return o = t.showDecimalForGB ? Math.round(10 * o) / 10 : Math.round(o), t.useSpace ? i.default.Messages.FILE_SIZE_GB.format({
             size: o
         }) : i.default.Messages.FILE_SIZE_GB_NO_SPACE.format({
@@ -33,12 +33,12 @@ function(e, t, n) {
         })
     }
 
-    function s(e) {
+    function a(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r,
             n = t.useKibibytes ? 1024 : 1e3,
-            s = t.useKibibytes ? 1024 : 1e3,
+            a = t.useKibibytes ? 1024 : 1e3,
             o = e / n;
-        return o / s >= 1 ? a(o, t) : t.useSpace ? i.default.Messages.FILE_SIZE_KB.format({
+        return o / a >= 1 ? s(o, t) : t.useSpace ? i.default.Messages.FILE_SIZE_KB.format({
             size: Math.ceil(o)
         }) : i.default.Messages.FILE_SIZE_KB_NO_SPACE.format({
             size: Math.ceil(o)

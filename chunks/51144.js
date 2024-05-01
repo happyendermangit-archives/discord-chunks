@@ -25,8 +25,8 @@ function(e, t, n) {
     }), n("411104");
     var i = n("442837"),
         r = n("246946"),
-        a = n("594174"),
-        s = n("981631"),
+        s = n("594174"),
+        a = n("981631"),
         o = n("689938");
     let l = e => "".concat(e[0], "..."),
         u = e => "@".concat(e),
@@ -60,8 +60,8 @@ function(e, t, n) {
         var t;
         let n = (0, i.useStateFromStores)([r.default], () => r.default.hidePersonalInformation);
         if (null == e) return;
-        let a = c(e);
-        return n && a.toLocaleLowerCase() === (null === (t = e.username) || void 0 === t ? void 0 : t.toLocaleLowerCase()) && "0" === e.discriminator && (a = l(a)), a
+        let s = c(e);
+        return n && s.toLocaleLowerCase() === (null === (t = e.username) || void 0 === t ? void 0 : t.toLocaleLowerCase()) && "0" === e.discriminator && (s = l(s)), s
     }
 
     function T(e) {
@@ -75,19 +75,19 @@ function(e, t, n) {
     function f(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         switch (e) {
-            case s.StatusTypes.ONLINE:
+            case a.StatusTypes.ONLINE:
                 return t ? o.default.Messages.STATUS_ONLINE_MOBILE : o.default.Messages.STATUS_ONLINE;
-            case s.StatusTypes.OFFLINE:
+            case a.StatusTypes.OFFLINE:
                 return o.default.Messages.STATUS_OFFLINE;
-            case s.StatusTypes.IDLE:
+            case a.StatusTypes.IDLE:
                 return o.default.Messages.STATUS_IDLE;
-            case s.StatusTypes.DND:
+            case a.StatusTypes.DND:
                 return o.default.Messages.STATUS_DND;
-            case s.StatusTypes.INVISIBLE:
+            case a.StatusTypes.INVISIBLE:
                 return o.default.Messages.STATUS_INVISIBLE;
-            case s.StatusTypes.STREAMING:
+            case a.StatusTypes.STREAMING:
                 return o.default.Messages.STATUS_STREAMING;
-            case s.StatusTypes.UNKNOWN:
+            case a.StatusTypes.UNKNOWN:
             default:
                 return null
         }
@@ -121,7 +121,7 @@ function(e, t, n) {
         if (null == e) return o.default.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER;
         if (!_(e.username)) return "???";
         let i = n;
-        if ("always" === t.identifiable ? i = !1 : "never" === t.identifiable && (i = !0), "0" !== e.discriminator && e.discriminator !== s.NON_USER_BOT_DISCRIMINATOR && !t.forcePomelo) return "username" === t.mode ? e.username : i ? e.username : "".concat(e.username, "#").concat(e.discriminator);
+        if ("always" === t.identifiable ? i = !1 : "never" === t.identifiable && (i = !0), "0" !== e.discriminator && e.discriminator !== a.NON_USER_BOT_DISCRIMINATOR && !t.forcePomelo) return "username" === t.mode ? e.username : i ? e.username : "".concat(e.username, "#").concat(e.discriminator);
         let r = i ? l(e.username) : e.username;
         return "never" !== t.decoration ? u(r) : r
     }
@@ -136,8 +136,8 @@ function(e, t, n) {
     }
 
     function p(e) {
-        return (0, i.useStateFromStores)([a.default], () => {
-            if (null != e) return e.isPrivate() && e.isDM() ? a.default.getUser(e.getRecipientId()) : null
+        return (0, i.useStateFromStores)([s.default], () => {
+            if (null != e) return e.isPrivate() && e.isDM() ? s.default.getUser(e.getRecipientId()) : null
         })
     }
     t.default = {

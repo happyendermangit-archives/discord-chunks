@@ -1,8 +1,8 @@
 function(e, t, n) {
     "use strict";
-    let i, r, a;
+    let i, r, s;
     n.r(t), n("47120");
-    var s, o = n("392711"),
+    var a, o = n("392711"),
         l = n.n(o),
         u = n("442837"),
         d = n("570140"),
@@ -24,7 +24,7 @@ function(e, t, n) {
             currentDefaultStatus: null
         }
     }
-    class T extends(s = u.default.PersistedStore) {
+    class T extends(a = u.default.PersistedStore) {
         initialize(e) {
             E = {
                 ...I(),
@@ -47,7 +47,7 @@ function(e, t, n) {
             return E.currentDefaultStatus
         }
         getHangStatusActivity() {
-            return null == i ? null : a
+            return null == i ? null : s
         }
     }
     c(T, "displayName", "HangStatusStore"), c(T, "persistKey", "HangStatusStore"), t.default = new T(d.default, {
@@ -63,7 +63,7 @@ function(e, t, n) {
                 status: t,
                 customHangStatus: r,
                 expiresAt: Date.now() + 288e5
-            }), a = {
+            }), s = {
                 type: _.ActivityTypes.HANG_STATUS,
                 name: "Hang Status",
                 state: i
@@ -73,18 +73,18 @@ function(e, t, n) {
             let {
                 status: t,
                 emoji: n,
-                saveAsDefault: s
+                saveAsDefault: a
             } = e;
             i = _.HangStatusTypes.CUSTOM, r = {
                 status: t,
                 emoji: n
             };
             let o = [...E.recentCustomStatuses],
-                u = o.findIndex(e => e.status === t && l().isEqual(e.emoji, n)); - 1 !== u ? o.splice(u, 1) : 7 === o.length && o.splice(6, 1), E.recentCustomStatuses = [r, ...o], s && (E.currentDefaultStatus = {
+                u = o.findIndex(e => e.status === t && l().isEqual(e.emoji, n)); - 1 !== u ? o.splice(u, 1) : 7 === o.length && o.splice(6, 1), E.recentCustomStatuses = [r, ...o], a && (E.currentDefaultStatus = {
                 status: i,
                 customHangStatus: r,
                 expiresAt: Date.now() + 288e5
-            }), a = {
+            }), s = {
                 type: _.ActivityTypes.HANG_STATUS,
                 name: "Hang Status",
                 state: i,
@@ -100,7 +100,7 @@ function(e, t, n) {
                 status: null,
                 customHangStatus: null,
                 expiresAt: Date.now() + 288e5
-            }), a = null
+            }), s = null
         }
     })
 }

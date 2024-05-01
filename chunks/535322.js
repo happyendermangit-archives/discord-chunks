@@ -11,8 +11,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        a = n.n(r),
-        s = n("325767"),
+        s = n.n(r),
+        a = n("325767"),
         o = n("26290"),
         l = n("645652"),
         u = n("689938"),
@@ -20,7 +20,7 @@ function(e, t, n) {
 
     function _(e) {
         return (0, i.jsx)("svg", {
-            ...(0, s.default)({
+            ...(0, a.default)({
                 ...e
             }),
             width: "25",
@@ -40,16 +40,16 @@ function(e, t, n) {
             className: t,
             forceUseColorForSparkles: n = !1,
             shouldInheritTextColor: r = !1,
-            shouldInheritBackgroundColor: s = !1
+            shouldInheritBackgroundColor: a = !1
         } = e;
         return (0, i.jsx)(l.default, {
             className: t,
             forceUseColor: n,
             children: (0, i.jsx)(o.TextBadge, {
                 disableColor: !0,
-                className: a()(d.tag, {
+                className: s()(d.tag, {
                     [d.inheritTextColor]: r,
-                    [d.inheritBackgroundColor]: s
+                    [d.inheritBackgroundColor]: a
                 }),
                 text: u.default.Messages.NEW
             })
