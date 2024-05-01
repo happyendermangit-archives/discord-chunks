@@ -78,12 +78,12 @@ function(e, t, n) {
                 messageId: v,
                 roleId: D,
                 shouldTrackViewOnMount: null == k || null != k.fullProfileLoadedTimestamp,
-                children: (0, i.jsxs)(a.Dialog, {
+                children: (0, i.jsx)(a.Dialog, {
                     ref: V,
                     "aria-label": t.username,
                     onClick: g,
                     onContextMenu: g,
-                    children: [(0, i.jsxs)(f.default, {
+                    children: (0, i.jsxs)(f.default, {
                         user: t,
                         displayProfile: x,
                         profileType: R.UserProfileTypes.BITE_SIZE,
@@ -127,12 +127,11 @@ function(e, t, n) {
                             onOpenProfile: H,
                             channelId: L,
                             onClose: M
+                        }), (null == x ? void 0 : x.profileEffectId) != null && (0, i.jsx)(d.default, {
+                            profileEffectId: null == x ? void 0 : x.profileEffectId,
+                            isHovering: F
                         })]
-                    }), (null == x ? void 0 : x.profileEffectId) != null && (0, i.jsx)(d.default, {
-                        profileEffectId: null == x ? void 0 : x.profileEffectId,
-                        bannerAdjustment: 0,
-                        isHovering: F
-                    })]
+                    })
                 })
             })
         })
