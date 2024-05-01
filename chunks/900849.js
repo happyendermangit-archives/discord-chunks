@@ -41,8 +41,8 @@ function(e, t, n) {
             return S
         }
     }), n("47120");
-    var i, r, s = n("664751"),
-        a = n("544891"),
+    var i, r, a = n("664751"),
+        s = n("544891"),
         o = n("749210"),
         l = n("41776"),
         u = n("703656"),
@@ -58,8 +58,8 @@ function(e, t, n) {
             {
                 channelId: i,
                 onSuccess: r,
-                joinSource: s,
-                loadId: a,
+                joinSource: a,
+                loadId: s,
                 setsHistorySnapshot: _ = !0
             } = n,
             E = (0, u.getHistory)();
@@ -74,8 +74,8 @@ function(e, t, n) {
             };
         null != I && null != I.joinedAt ? (0, d.transitionToGuild)(e, T) : (await o.default.joinGuild(e, {
             lurker: !0,
-            source: s,
-            loadId: a,
+            source: a,
+            loadId: s,
             lurkLocation: null == t ? void 0 : t.page
         }), await o.default.transitionToGuildSync(e, {
             ...T,
@@ -87,11 +87,11 @@ function(e, t, n) {
         let t, {
             loadId: n,
             guildId: r,
-            index: s,
-            analyticsContext: a,
+            index: a,
+            analyticsContext: s,
             categoryId: o
         } = e;
-        "string" == typeof a && a in i && (t = a);
+        "string" == typeof s && s in i && (t = s);
         let l = {
             page: I.AnalyticsPages.GUILD_DISCOVERY,
             object: I.AnalyticsObjects.CARD,
@@ -106,24 +106,24 @@ function(e, t, n) {
                     guildId: n,
                     index: i,
                     analyticsContext: r,
-                    categoryId: s
-                } = e, a = {
+                    categoryId: a
+                } = e, s = {
                     page: I.AnalyticsPages.GUILD_DISCOVERY,
                     section: r
                 };
-                "string" != typeof r && null != r.location && (a = r.location), E.default.track(I.AnalyticEvents.GUILD_DISCOVERY_GUILD_SELECTED, {
-                    location: a,
+                "string" != typeof r && null != r.location && (s = r.location), E.default.track(I.AnalyticEvents.GUILD_DISCOVERY_GUILD_SELECTED, {
+                    location: s,
                     guild_id: n,
                     load_id: t,
                     card_index: i,
                     location_object: I.AnalyticsObjects.CARD,
-                    category_id: s
+                    category_id: a
                 })
             }({
                 loadId: n,
                 guildId: r,
-                index: s,
-                analyticsContext: a,
+                index: a,
+                analyticsContext: s,
                 categoryId: o
             })
     }
@@ -156,16 +156,16 @@ function(e, t, n) {
             gamesYouPlayGuilds: n,
             allGuilds: i,
             categoryId: r,
-            recommendationsSource: s = null
-        } = e, a = n.length, o = i.length;
+            recommendationsSource: a = null
+        } = e, s = n.length, o = i.length;
         E.default.track(I.AnalyticEvents.GUILD_DISCOVERY_VIEWED, {
             load_id: t,
-            num_guilds: a + o,
-            num_guilds_recommended: a,
+            num_guilds: s + o,
+            num_guilds_recommended: s,
             num_guilds_popular: o,
             recommended_guild_ids: n.map(e => e.id),
             category_id: r,
-            recommendations_source: s
+            recommendations_source: a
         })
     }
 
@@ -213,8 +213,8 @@ function(e, t, n) {
             searchId: n,
             query: i,
             guildResults: r,
-            analyticsContext: s,
-            categoryId: a,
+            analyticsContext: a,
+            categoryId: s,
             isTagSearch: o
         } = e;
         E.default.track(I.AnalyticEvents.SEARCH_RESULT_VIEWED, {
@@ -224,8 +224,8 @@ function(e, t, n) {
             total_results: void 0 !== r ? r.length : null,
             guild_ids: void 0 !== r ? r.map(e => e.id) : null,
             query: i,
-            location: s.location,
-            category_id: a
+            location: a.location,
+            category_id: s
         })
     }
 
@@ -240,9 +240,9 @@ function(e, t, n) {
     async function g(e) {
         try {
             var t, n;
-            let i = await a.HTTP.get({
+            let i = await s.HTTP.get({
                     url: I.Endpoints.GUILD_DISCOVERY,
-                    query: s.stringify({
+                    query: a.stringify({
                         guild_ids: e
                     }),
                     oldFormErrors: !0

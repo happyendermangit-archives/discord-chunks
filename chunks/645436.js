@@ -5,7 +5,7 @@ function(e, t, n) {
             return r
         },
         setIsPaused: function() {
-            return s
+            return a
         }
     });
     let i = !1;
@@ -14,7 +14,7 @@ function(e, t, n) {
         return i
     }
 
-    function s(e) {
+    function a(e) {
         i = e
     }
 }

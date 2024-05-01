@@ -16,7 +16,7 @@ function(e, t, n) {
     function r(e) {
         return {
             textValue: e,
-            richValue: a(e)
+            richValue: s(e)
         }
     }
     n.r(t), n.d(t, {
@@ -27,26 +27,26 @@ function(e, t, n) {
             return r
         },
         toRichValue: function() {
-            return a
+            return s
         },
         voidToOptionValue: function() {
             return o
         }
     }), n("411104");
-    let s = Object.freeze([Object.freeze({
+    let a = Object.freeze([Object.freeze({
         type: "line",
         children: Object.freeze([Object.freeze({
             text: ""
         })])
     })]);
 
-    function a(e) {
+    function s(e) {
         return "" !== e ? e.split("\n").map(e => ({
             type: "line",
             children: [{
                 text: e
             }]
-        })) : s
+        })) : a
     }
 
     function o(e) {

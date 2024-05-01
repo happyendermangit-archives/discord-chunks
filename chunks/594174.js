@@ -16,8 +16,8 @@ function(e, t, n) {
     }), n("47120"), n("789020"), n("724458"), n("51350"), n("653041");
     var i = n("348327"),
         r = n.n(i),
-        s = n("392711"),
-        a = n("864106"),
+        a = n("392711"),
+        s = n("864106"),
         o = n("900489"),
         l = n("502087"),
         u = n("911955"),
@@ -63,12 +63,12 @@ function(e, t, n) {
         null != i && (e.nsfwAllowed = i, delete e.nsfw_allowed);
         let r = e.public_flags;
         null != r && (e.publicFlags = r, delete e.public_flags);
-        let s = e.purchased_flags;
-        void 0 !== s && (e.purchasedFlags = s, delete e.purchased_flags);
+        let a = e.purchased_flags;
+        void 0 !== a && (e.purchasedFlags = a, delete e.purchased_flags);
         let o = e.premium_usage_flags;
         void 0 !== o && (e.premiumUsageFlags = o, delete e.premium_usage_flags), null === e.banner_color && delete e.banner_color;
         let l = e.avatar_decoration_data;
-        void 0 !== l && (e.avatarDecorationData = (0, a.parseAvatarDecorationData)(l), delete e.avatar_decoration_data);
+        void 0 !== l && (e.avatarDecorationData = (0, s.parseAvatarDecorationData)(l), delete e.avatar_decoration_data);
         let u = e.global_name;
         void 0 !== u && (e.globalName = u, delete e.global_name);
         let _ = e.clan;
@@ -82,12 +82,12 @@ function(e, t, n) {
     function L(e) {
         let t, n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             i = m[e.id],
-            s = void 0 !== e.id && e.id === I.default.getId();
-        if (null == i) void 0 !== (t = (i = new _.default(e)).premiumType) && s && (i.premiumType = v((0, d.isStaffEnv)(i), i.premiumType));
+            a = void 0 !== e.id && e.id === I.default.getId();
+        if (null == i) void 0 !== (t = (i = new _.default(e)).premiumType) && a && (i.premiumType = v((0, d.isStaffEnv)(i), i.premiumType));
         else if (n) {
-            var a;
+            var s;
             let n = C(e);
-            void 0 !== (t = null !== (a = n.premium_type) && void 0 !== a ? a : n.premiumType) && s && (0, d.isStaffEnvRawData)(n) && (n = function(e) {
+            void 0 !== (t = null !== (s = n.premium_type) && void 0 !== s ? s : n.premiumType) && a && (0, d.isStaffEnvRawData)(n) && (n = function(e) {
                 var t;
                 let n = null !== (t = e.premium_type) && void 0 !== t ? t : e.premiumType,
                     i = v((0, d.isStaffEnvRawData)(e), n);
@@ -118,15 +118,15 @@ function(e, t, n) {
     }
 
     function D(e, t) {
-        var n, i, r, s, a;
+        var n, i, r, a, s;
         if (null != e.author && "SENDING" !== e.state && g(e.author) && L(e.author, t), null === (n = e.mentions) || void 0 === n || n.forEach(e => {
                 g(e) && L(e, t)
-            }), (null === (i = e.interaction) || void 0 === i ? void 0 : i.user) != null && g(null === (r = e.interaction) || void 0 === r ? void 0 : r.user) && L(e.interaction.user, t), null === (s = e.attachments) || void 0 === s || s.forEach(e => {
+            }), (null === (i = e.interaction) || void 0 === i ? void 0 : i.user) != null && g(null === (r = e.interaction) || void 0 === r ? void 0 : r.user) && L(e.interaction.user, t), null === (a = e.attachments) || void 0 === a || a.forEach(e => {
                 var n;
                 null === (n = e.clip_participants) || void 0 === n || n.forEach(e => {
                     g(e) && L(e, t)
                 })
-            }), (null === (a = e.resolved) || void 0 === a ? void 0 : a.users) != null)
+            }), (null === (s = e.resolved) || void 0 === s ? void 0 : s.users) != null)
             for (let n in e.resolved.users) {
                 let i = e.resolved.users[n];
                 g(i) && L(i, t)
@@ -284,8 +284,8 @@ function(e, t, n) {
             if (null == t) return;
             L(t);
             let r = m[t.id],
-                s = null == i ? void 0 : i.avatar;
-            null != r && null != s && O(r, n, s)
+                a = null == i ? void 0 : i.avatar;
+            null != r && null != a && O(r, n, a)
         })
     }
 
@@ -346,7 +346,7 @@ function(e, t, n) {
             if (null == t) return !1;
             let n = q.reduce((n, i) => {
                 if (e.user.hasOwnProperty(i)) {
-                    let r = t.set((0, s.camelCase)(i), e.user[i]);
+                    let r = t.set((0, a.camelCase)(i), e.user[i]);
                     n = n || r !== t, t = r
                 }
                 return n
@@ -401,7 +401,7 @@ function(e, t, n) {
             } return !1
     }
 
-    function es(e) {
+    function ea(e) {
         let {
             chunks: t
         } = e, n = !1;
@@ -410,14 +410,14 @@ function(e, t, n) {
                 r = m[n.user.id];
             if (null == r) return i || t;
             let {
-                avatar: s
+                avatar: a
             } = n;
-            return O(r, e.guildId, s) || i || t
+            return O(r, e.guildId, a) || i || t
         }, !1) || n;
         return n
     }
 
-    function ea(e) {
+    function es(e) {
         var t;
         let n = !1;
         for (let i of null !== (t = e.members) && void 0 !== t ? t : []) L(i.user) && (n = !0), null != m[i.user.id] && O(m[i.user.id], e.guildId, i.avatar) && (n = !0);
@@ -459,8 +459,8 @@ function(e, t, n) {
                     id: n,
                     username: i,
                     avatar: r,
-                    discriminator: s,
-                    bot: a
+                    discriminator: a,
+                    bot: s
                 },
                 avatar: o
             } = e;
@@ -468,8 +468,8 @@ function(e, t, n) {
                 id: n,
                 username: i,
                 avatar: r,
-                discriminator: s,
-                bot: a
+                discriminator: a,
+                bot: s
             });
             let l = m[n];
             null != l && O(l, t.id, o)
@@ -694,7 +694,7 @@ function(e, t, n) {
                 GUILD_JOIN_REQUEST_UPDATE: eh,
                 GUILD_MEMBER_ADD: ei,
                 GUILD_MEMBER_UPDATE: ei,
-                GUILD_MEMBERS_CHUNK_BATCH: es,
+                GUILD_MEMBERS_CHUNK_BATCH: ea,
                 GUILD_MEMBER_LIST_UPDATE: er,
                 THREAD_MEMBER_LIST_UPDATE: el,
                 THREAD_MEMBERS_UPDATE: eu,
@@ -716,7 +716,7 @@ function(e, t, n) {
                 LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: K,
                 NOTIFICATION_CENTER_ITEM_CREATE: z,
                 LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: j,
-                PASSIVE_UPDATE_V1: ea,
+                PASSIVE_UPDATE_V1: es,
                 LOCAL_MESSAGES_LOADED: eo,
                 FETCH_PRIVATE_CHANNEL_INTEGRATIONS_SUCCESS: eA,
                 PRIVATE_CHANNEL_INTEGRATION_CREATE: em,

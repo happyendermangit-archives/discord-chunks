@@ -13,8 +13,8 @@ function(e, t, n) {
     });
     var i = n("981631"),
         r = n("689938"),
-        s = n("337258"),
-        a = n("705196"),
+        a = n("337258"),
+        s = n("705196"),
         o = n("190878"),
         l = n("991254"),
         u = n("485686"),
@@ -23,7 +23,7 @@ function(e, t, n) {
     let c = () => ({
             [i.HangStatusTypes.CHILLING]: {
                 title: r.default.Messages.STATUS_CHILLING,
-                icon: a,
+                icon: s,
                 color: "#567C7E"
             },
             [i.HangStatusTypes.GAMING]: {
@@ -38,7 +38,7 @@ function(e, t, n) {
             },
             [i.HangStatusTypes.BRB]: {
                 title: r.default.Messages.STATUS_BRB,
-                icon: s,
+                icon: a,
                 color: "#76567E"
             },
             [i.HangStatusTypes.EATING]: {

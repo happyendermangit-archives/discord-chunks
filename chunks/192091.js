@@ -4,7 +4,7 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("960259"),
-        s = n("321096");
+        a = n("321096");
     t.default = (0, r.replaceIcon)(function(e) {
         return (0, i.jsx)("svg", {
             ...e,
@@ -22,5 +22,5 @@ function(e, t, n) {
                 })]
             })
         })
-    }, s.StaffBadgeIcon)
+    }, a.StaffBadgeIcon)
 }

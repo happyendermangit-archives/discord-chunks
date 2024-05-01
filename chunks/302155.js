@@ -6,8 +6,8 @@ function(e, t, n) {
             return E
         }
     });
-    var s = n("213919"),
-        a = n("570140"),
+    var a = n("213919"),
+        s = n("570140"),
         o = n("147913"),
         l = n("594174"),
         u = n("626135"),
@@ -24,23 +24,23 @@ function(e, t, n) {
     }
     class E extends o.default {
         _initialize() {
-            a.default.subscribe("CONNECTION_OPEN", () => this.handleConnectionOpen()), this.handleConnectionOpen()
+            s.default.subscribe("CONNECTION_OPEN", () => this.handleConnectionOpen()), this.handleConnectionOpen()
         }
         _terminate() {
-            a.default.unsubscribe("CONNECTION_OPEN", () => this.handleConnectionOpen())
+            s.default.unsubscribe("CONNECTION_OPEN", () => this.handleConnectionOpen())
         }
         constructor({
             onSwitchStart: e,
             onSwitchSuccess: t,
             onSwitchError: n,
-            onTokenSet: a
+            onTokenSet: s
         }) {
             super(), c(this, "onSwitchStart", void 0), c(this, "onSwitchSuccess", void 0), c(this, "onSwitchError", void 0), c(this, "onTokenSet", void 0), c(this, "actions", {
                 LOGOUT: e => this.handleLogout(e)
             }), c(this, "handleConnectionOpen", () => {
                 var e, t, n;
-                let a = l.default.getCurrentUser();
-                if (null == a) return;
+                let s = l.default.getCurrentUser();
+                if (null == s) return;
                 if (null != r) {
                     if (r !== i) {
                         let e = d.default.getUsers().map(e => {
@@ -52,20 +52,20 @@ function(e, t, n) {
                         u.default.track(_.AnalyticEvents.MULTI_ACCOUNT_SWITCH_SUCCESS, {
                             from_user_id: r,
                             linked_user_ids: e
-                        }), null === (t = this.onSwitchSuccess) || void 0 === t || t.call(this, a)
-                    } else u.default.track(_.AnalyticEvents.MULTI_ACCOUNT_SWITCH_FAILURE), null === (n = this.onSwitchError) || void 0 === n || n.call(this, a);
+                        }), null === (t = this.onSwitchSuccess) || void 0 === t || t.call(this, s)
+                    } else u.default.track(_.AnalyticEvents.MULTI_ACCOUNT_SWITCH_FAILURE), null === (n = this.onSwitchError) || void 0 === n || n.call(this, s);
                     r = null
                 }
-                i = a.id;
-                let o = s.getToken();
-                null != o && "" !== o && s.setToken(o, a.id), null === (e = this.onTokenSet) || void 0 === e || e.call(this, a)
+                i = s.id;
+                let o = a.getToken();
+                null != o && "" !== o && a.setToken(o, s.id), null === (e = this.onTokenSet) || void 0 === e || e.call(this, s)
             }), c(this, "handleLogout", e => {
                 if (e.isSwitchingAccount) {
                     var t;
                     r = i, null === (t = this.onSwitchStart) || void 0 === t || t.call(this)
-                } else s.removeToken(i);
+                } else a.removeToken(i);
                 i = null
-            }), this.onSwitchStart = e, this.onSwitchSuccess = t, this.onSwitchError = n, this.onTokenSet = a
+            }), this.onSwitchStart = e, this.onSwitchSuccess = t, this.onSwitchError = n, this.onTokenSet = s
         }
     }
 }

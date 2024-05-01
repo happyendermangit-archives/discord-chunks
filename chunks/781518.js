@@ -27,20 +27,20 @@ function(e, t, n) {
         },
         subscribePlayerStateNotifications: function() {
             return function e(t, n, i) {
-                let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 2;
+                let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 2;
                 return E.put(t, n, {
                     url: d.SpotifyEndpoints.NOTIFICATIONS_PLAYER,
                     query: {
                         connection_id: i
                     }
-                }).catch(a => s <= 0 ? Promise.reject(a) : (0, r.timeoutPromise)(5e3).then(() => e(t, n, i, s - 1)))
+                }).catch(s => a <= 0 ? Promise.reject(s) : (0, r.timeoutPromise)(5e3).then(() => e(t, n, i, a - 1)))
             }
         }
     }), n("177593");
     var i = n("544891"),
         r = n("846519"),
-        s = n("570140"),
-        a = n("70956"),
+        a = n("570140"),
+        s = n("70956"),
         o = n("877481"),
         l = n("358085"),
         u = n("18323"),
@@ -48,21 +48,21 @@ function(e, t, n) {
         _ = n("981631");
 
     function c(e, t, n, i) {
-        let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1;
+        let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1;
         return e(i = {
             ...i,
             headers: {
                 authorization: "Bearer ".concat(n)
             }
         }).then(e => 202 === e.status ? Promise.reject(e) : e).catch(n => {
-            let a = !0 !== i.onlyRetryOnAuthorizationErrors && 202 === n.status;
-            return (401 === n.status || a) && s > 0 ? (202 === n.status ? (0, r.timeoutPromise)(5e3) : Promise.resolve()).then(() => I(t)).then(n => {
+            let s = !0 !== i.onlyRetryOnAuthorizationErrors && 202 === n.status;
+            return (401 === n.status || s) && a > 0 ? (202 === n.status ? (0, r.timeoutPromise)(5e3) : Promise.resolve()).then(() => I(t)).then(n => {
                 let {
                     body: {
                         access_token: r
                     }
                 } = n;
-                return c(e, t, r, i, s - 1)
+                return c(e, t, r, i, a - 1)
             }).then(e => new Promise(t => setImmediate(() => t(e)))) : Promise.reject(n)
         })
     }
@@ -77,12 +77,12 @@ function(e, t, n) {
             oldFormErrors: !0
         }).catch(t => {
             var n;
-            if ((null === (n = t.body) || void 0 === n ? void 0 : n.code) === _.AbortCodes.CONNECTION_REVOKED) s.default.dispatch({
+            if ((null === (n = t.body) || void 0 === n ? void 0 : n.code) === _.AbortCodes.CONNECTION_REVOKED) a.default.dispatch({
                 type: "SPOTIFY_ACCOUNT_ACCESS_TOKEN_REVOKE",
                 accountId: e
             });
             else if (429 === t.status) {
-                let n = t.headers["retry-after"] * a.default.Millis.SECOND,
+                let n = t.headers["retry-after"] * s.default.Millis.SECOND,
                     i = isNaN(n) || 0 === n ? 5e3 : n;
                 return (0, r.timeoutPromise)(i).then(() => I(e))
             }
@@ -91,7 +91,7 @@ function(e, t, n) {
             let {
                 access_token: n
             } = t.body;
-            return s.default.dispatch({
+            return a.default.dispatch({
                 type: "SPOTIFY_ACCOUNT_ACCESS_TOKEN",
                 accountId: e,
                 accessToken: n
@@ -102,7 +102,7 @@ function(e, t, n) {
     function T(e, t) {
         return E.get(e, t, {
             url: d.SpotifyEndpoints.PROFILE
-        }).then(t => (s.default.dispatch({
+        }).then(t => (a.default.dispatch({
             type: "SPOTIFY_PROFILE_UPDATE",
             accountId: e,
             isPremium: "premium" === t.body.product
@@ -112,7 +112,7 @@ function(e, t, n) {
     function f(e, t) {
         return E.get(e, t, {
             url: d.SpotifyEndpoints.PLAYER_DEVICES
-        }).then(t => (t.body && s.default.dispatch({
+        }).then(t => (t.body && a.default.dispatch({
             type: "SPOTIFY_SET_DEVICES",
             accountId: e,
             devices: t.body.devices
@@ -121,7 +121,7 @@ function(e, t, n) {
 
     function S(e, t, n, i) {
         let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
-            a = d.SpotifyEndpoints.PLAYER_OPEN(i, n, !1),
+            s = d.SpotifyEndpoints.PLAYER_OPEN(i, n, !1),
             {
                 deviceId: o,
                 position: l,
@@ -135,9 +135,9 @@ function(e, t, n) {
             },
             body: {
                 context_uri: null != u ? u : void 0,
-                uris: null == u ? [a] : void 0,
+                uris: null == u ? [s] : void 0,
                 offset: null != u ? {
-                    uri: a
+                    uri: s
                 } : void 0,
                 position_ms: null != l ? l : 0
             }
@@ -147,7 +147,7 @@ function(e, t, n) {
                 device_id: o,
                 state: _ ? "context" : "off"
             }
-        })).then(e => (s.default.dispatch({
+        })).then(e => (a.default.dispatch({
             type: "SPOTIFY_PLAYER_PLAY",
             id: n,
             position: null != l ? l : 0
@@ -157,14 +157,14 @@ function(e, t, n) {
     function h(e, t) {
         return E.put(e, t, {
             url: d.SpotifyEndpoints.PLAYER_PAUSE
-        }).then(e => (s.default.dispatch({
+        }).then(e => (a.default.dispatch({
             type: "SPOTIFY_PLAYER_PAUSE"
         }), e))
     }
 
     function A() {
         !u.default.isProtocolRegistered() && (0, l.isDesktop)() && o.default.isProtocolRegistered(d.SPOTIFY_APP_PROTOCOL).then(e => {
-            s.default.dispatch({
+            a.default.dispatch({
                 type: "SPOTIFY_SET_PROTOCOL_REGISTERED",
                 isRegistered: e
             })
@@ -172,7 +172,7 @@ function(e, t, n) {
     }
 
     function m(e, t) {
-        s.default.dispatch({
+        a.default.dispatch({
             type: "SPOTIFY_SET_ACTIVE_DEVICE",
             accountId: e,
             deviceId: t

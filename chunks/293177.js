@@ -2,14 +2,14 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         showModal: function() {
-            return s
+            return a
         }
     });
     var i = n("735250");
     n("470079");
     var r = n("481060");
 
-    function s(e, t) {
+    function a(e, t) {
         (0, r.openModalLazy)(async () => {
             let {
                 default: r

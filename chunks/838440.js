@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("481060"),
-        s = n("570140"),
-        a = n("468026"),
+        a = n("570140"),
+        s = n("468026"),
         o = n("673750"),
         l = n("300429"),
         u = n("594174"),
@@ -55,7 +55,7 @@ function(e, t, n) {
             if (f.length > R) {
                 if (p || null == A) {
                     ;
-                    n = f.length, u = R, (0, r.openModal)(e => (0, i.jsx)(a.default, {
+                    n = f.length, u = R, (0, r.openModal)(e => (0, i.jsx)(s.default, {
                         title: I.default.Messages.MESSAGE_TOO_LONG_HEADER,
                         body: I.default.Messages.MESSAGE_TOO_LONG_BODY_TEXT.format({
                             currentLength: n,
@@ -67,7 +67,7 @@ function(e, t, n) {
                         type: "Message Too Long Alert",
                         message_content_length: n
                     })
-                } else s.default.dispatch({
+                } else a.default.dispatch({
                     type: "MESSAGE_LENGTH_UPSELL",
                     channel: A,
                     content: f
@@ -113,7 +113,7 @@ function(e, t, n) {
                     }
             }
             if (o.default.isFull()) {
-                (0, r.openModal)(e => (0, i.jsx)(a.default, {
+                (0, r.openModal)(e => (0, i.jsx)(s.default, {
                     title: I.default.Messages.MESSAGE_RATE_LIMITED_HEADER,
                     body: I.default.Messages.MESSAGE_RATE_LIMITED_BODY,
                     confirmText: I.default.Messages.MESSAGE_RATE_LIMITED_BUTTON,

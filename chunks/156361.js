@@ -9,9 +9,9 @@ function(e, t, n) {
         }
     }), n("411104"), n("47120");
     var i, r = n("735250"),
-        s = n("470079"),
-        a = n("120356"),
-        o = n.n(a),
+        a = n("470079"),
+        s = n("120356"),
+        o = n.n(s),
         l = n("392711"),
         u = n.n(l),
         d = n("924826"),
@@ -54,8 +54,8 @@ function(e, t, n) {
     function G(e) {
         return "autocomplete-".concat(e, "-title")
     }
-    let w = s.createContext(null);
-    class B extends s.PureComponent {
+    let w = a.createContext(null);
+    class B extends a.PureComponent {
         isSelectable() {
             return this.selectable
         }
@@ -68,14 +68,14 @@ function(e, t, n) {
                 layoutClass: n,
                 props: {
                     className: i,
-                    index: s,
-                    selected: a
+                    index: a,
+                    selected: s
                 }
             } = this, l = this.isSelectable();
             return (0, r.jsx)(_.Clickable, {
                 ...e,
                 className: o()(P.clickable, i, n),
-                id: null !== (t = b(s)) && void 0 !== t ? t : void 0,
+                id: null !== (t = b(a)) && void 0 !== t ? t : void 0,
                 onClick: l ? this.handleClick : void 0,
                 onMouseMove: l ? () => {
                     this.setState({
@@ -87,7 +87,7 @@ function(e, t, n) {
                 }) : void 0,
                 role: "option",
                 "aria-disabled": !l,
-                "aria-selected": l && a,
+                "aria-selected": l && s,
                 children: (0, r.jsx)("div", {
                     className: P.base,
                     children: this.renderContent()
@@ -122,16 +122,16 @@ function(e, t, n) {
             }
         }
     }
-    class k extends(i = s.PureComponent) {
+    class k extends(i = a.PureComponent) {
         render() {
             let {
                 children: e,
                 className: t,
                 innerClassName: n,
                 id: i,
-                ...a
+                ...s
             } = this.props;
-            return s.Children.count(e) > 0 ? (0, r.jsx)(w.Provider, {
+            return a.Children.count(e) > 0 ? (0, r.jsx)(w.Provider, {
                 value: {
                     id: null != i ? i : ""
                 },
@@ -139,7 +139,7 @@ function(e, t, n) {
                     className: o()(P.autocomplete, t),
                     children: (0, r.jsx)("div", {
                         className: o()(P.autocompleteInner, n),
-                        ...a,
+                        ...s,
                         children: e
                     })
                 })
@@ -163,7 +163,7 @@ function(e, t, n) {
             })
         }
     }), U(k, "Loading", function(e) {
-        let t = s.useMemo(() => u().random(60, 120), []);
+        let t = a.useMemo(() => u().random(60, 120), []);
         return (0, r.jsx)("div", {
             className: P.base,
             "aria-busy": !0,
@@ -185,11 +185,11 @@ function(e, t, n) {
             title: t,
             className: n,
             children: i
-        } = e, a = s.useContext(w);
+        } = e, s = a.useContext(w);
         return (0, r.jsx)("div", {
             className: P.base,
             children: (0, r.jsxs)(_.Heading, {
-                id: G(a.id),
+                id: G(s.id),
                 className: o()(P.contentTitle, n),
                 variant: "heading-deprecated-12/semibold",
                 children: [t, i]
@@ -214,13 +214,13 @@ function(e, t, n) {
                 nick: t,
                 status: n,
                 hidePersonalInformation: i,
-                guildId: s
+                guildId: a
             } = this.props;
             return (0, r.jsxs)(g.AutocompleteRowContent, {
                 children: [(0, r.jsx)(g.AutocompleteRowIcon, {
                     children: (0, r.jsx)(_.Avatar, {
                         size: _.AvatarSizes.SIZE_24,
-                        src: e.getAvatarURL(s, 24),
+                        src: e.getAvatarURL(a, 24),
                         "aria-hidden": !0,
                         status: n
                     })
@@ -249,7 +249,7 @@ function(e, t, n) {
                 hideDescription: t
             } = this.props, {
                 colorString: n
-            } = e, i = "dot" === c.default.roleStyle, s = "username" === c.default.roleStyle && null != n ? {
+            } = e, i = "dot" === c.default.roleStyle, a = "username" === c.default.roleStyle && null != n ? {
                 color: n
             } : void 0;
             return (0, r.jsxs)(g.AutocompleteRowContent, {
@@ -260,7 +260,7 @@ function(e, t, n) {
                             color: n,
                             tooltip: !1
                         }), (0, r.jsxs)("span", {
-                            style: s,
+                            style: a,
                             children: ["@", e.name]
                         })]
                     })
@@ -319,15 +319,15 @@ function(e, t, n) {
                 channel: t,
                 showImage: n,
                 section: i,
-                selected: s
+                selected: a
             } = this.props, {
-                hovered: a
+                hovered: s
             } = this.state, o = this.isSelectable();
             return e.inputType === E.ApplicationCommandInputType.PLACEHOLDER ? (0, r.jsx)(T.default, {}) : (0, r.jsx)(I.default, {
                 command: e,
                 channel: t,
                 showImage: n,
-                showOptions: a || o && s,
+                showOptions: s || o && a,
                 section: i,
                 isSelectable: o
             })
@@ -349,7 +349,7 @@ function(e, t, n) {
             }) : (0, r.jsx)("span", {
                 className: P.emojiRaw,
                 children: e.surrogates
-            }), s = null != n ? (0, r.jsx)(g.AutocompleteRowContentSecondary, {
+            }), a = null != n ? (0, r.jsx)(g.AutocompleteRowContentSecondary, {
                 children: n.name
             }) : null;
             return (0, r.jsxs)(g.AutocompleteRowContent, {
@@ -359,7 +359,7 @@ function(e, t, n) {
                     children: (0, r.jsxs)(g.AutocompleteRowHeading, {
                         children: [t, e.name, t]
                     })
-                }), s]
+                }), a]
             })
         }
         constructor(...e) {
@@ -388,15 +388,15 @@ function(e, t, n) {
             let n;
             let {
                 queryMatch: i,
-                renderSticker: s,
-                selected: a,
+                renderSticker: a,
+                selected: s,
                 sticker: o
             } = this.props, {
                 hovered: l
             } = this.state;
             return (0, m.isStandardSticker)(o) ? n = null === (e = A.default.getStickerPack(o.pack_id)) || void 0 === e ? void 0 : e.name : (0, m.isGuildSticker)(o) && (n = null === (t = N.default.getGuild(o.guild_id)) || void 0 === t ? void 0 : t.name), (0, r.jsxs)(g.AutocompleteRowContent, {
                 children: [(0, r.jsx)(g.AutocompleteRowIcon, {
-                    children: s(o, l || !0 === a)
+                    children: a(o, l || !0 === s)
                 }), (0, r.jsxs)(g.AutocompleteRowContentPrimary, {
                     children: [(0, r.jsx)(g.AutocompleteRowHeading, {
                         className: P.__invalid_stickerName,

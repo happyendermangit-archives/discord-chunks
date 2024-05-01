@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("481060"),
-        s = n("300284"),
-        a = n("785717"),
+        a = n("300284"),
+        s = n("785717"),
         o = n("981631"),
         l = n("689938"),
         u = n("357282");
@@ -28,14 +28,14 @@ function(e, t, n) {
             onSelect: t,
             onClose: n,
             guild: o
-        } = e, c = (0, s.default)({
+        } = e, c = (0, a.default)({
             guild: o,
             analyticsLocation: d
-        }), E = (0, s.default)({
+        }), E = (0, a.default)({
             analyticsLocation: _
         }), {
             trackUserProfileAction: I
-        } = (0, a.useUserProfileAnalyticsContext)();
+        } = (0, s.useUserProfileAnalyticsContext)();
         return (0, i.jsxs)(r.Menu, {
             className: u.popoutMenu,
             onSelect: t,

@@ -1,8 +1,8 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("47120"), n("411104");
-    var i, r, s = n("259443"),
-        a = n("379649"),
+    var i, r, a = n("259443"),
+        s = n("379649"),
         o = n("570140"),
         l = n("593472"),
         u = n("147913"),
@@ -28,7 +28,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    let R = new s.Logger("OverlayUsageStatsManager");
+    let R = new a.Logger("OverlayUsageStatsManager");
     R.verbose = () => {};
     class C {
         increment(e) {
@@ -135,7 +135,7 @@ function(e, t, n) {
             return {
                 initialized: !1,
                 pinnedToggledCount: 0,
-                visibleDuration: new a.StopWatch,
+                visibleDuration: new s.StopWatch,
                 pinned: !1
             }
         }
@@ -195,14 +195,14 @@ function(e, t, n) {
                     [l.RunningProcessFullscreenType.MINIMIZED]: n(l.RunningProcessFullscreenType.MINIMIZED)
                 },
                 r = Object.entries(i).sort((e, t) => {
-                    let [n, i] = e, [r, s] = t;
-                    return s - i
+                    let [n, i] = e, [r, a] = t;
+                    return a - i
                 })[0],
-                s = parseInt(r[0], 10),
-                a = isNaN(s) ? l.RunningProcessFullscreenType.UNKNOWN : s;
-            isNaN(s) && R.error("ScreenTypeAnalytics: Unknown most used screen type: ".concat(r), i);
+                a = parseInt(r[0], 10),
+                s = isNaN(a) ? l.RunningProcessFullscreenType.UNKNOWN : a;
+            isNaN(a) && R.error("ScreenTypeAnalytics: Unknown most used screen type: ".concat(r), i);
             let o = m.GameDisplayModeStorage.getGameDisplayMode(null !== (e = this.game.name) && void 0 !== e ? e : this.game.id);
-            m.GameDisplayModeStorage.setGameDisplayMode(null !== (t = this.game.name) && void 0 !== t ? t : this.game.id, a);
+            m.GameDisplayModeStorage.setGameDisplayMode(null !== (t = this.game.name) && void 0 !== t ? t : this.game.id, s);
             let u = {
                 screentype_unknown_duration: i[l.RunningProcessFullscreenType.UNKNOWN],
                 screentype_windowed_duration: i[l.RunningProcessFullscreenType.WINDOWED],
@@ -216,7 +216,7 @@ function(e, t, n) {
                 screentype_global_supported_duration: u.screentype_windowed_duration + u.screentype_maximized_duration + u.screentype_borderless_fullscreen_duration,
                 screentype_global_unsupported_duration: u.screentype_fullscreen_duration,
                 screentype_initial: l.RunningProcessFullscreenType[this.game.fullscreenType],
-                screentype_most_used: l.RunningProcessFullscreenType[a],
+                screentype_most_used: l.RunningProcessFullscreenType[s],
                 screentype_most_used_previous: null == o ? null : l.RunningProcessFullscreenType[o],
                 game_display_mode_is_adjustment_supported: S.default.GameDisplayModeIsGameSupported(this.game.name)
             }
@@ -226,12 +226,12 @@ function(e, t, n) {
         }
         constructor(e) {
             O(this, "game", void 0), O(this, "counters", void 0), O(this, "lastscreenType", void 0), O(this, "updateScreenInterval", void 0), this.game = e, this.counters = {
-                [l.RunningProcessFullscreenType.UNKNOWN]: new a.StopWatch,
-                [l.RunningProcessFullscreenType.WINDOWED]: new a.StopWatch,
-                [l.RunningProcessFullscreenType.MAXIMIZED]: new a.StopWatch,
-                [l.RunningProcessFullscreenType.BORDERLESS_FULLSCREEN]: new a.StopWatch,
-                [l.RunningProcessFullscreenType.FULLSCREEN]: new a.StopWatch,
-                [l.RunningProcessFullscreenType.MINIMIZED]: new a.StopWatch
+                [l.RunningProcessFullscreenType.UNKNOWN]: new s.StopWatch,
+                [l.RunningProcessFullscreenType.WINDOWED]: new s.StopWatch,
+                [l.RunningProcessFullscreenType.MAXIMIZED]: new s.StopWatch,
+                [l.RunningProcessFullscreenType.BORDERLESS_FULLSCREEN]: new s.StopWatch,
+                [l.RunningProcessFullscreenType.FULLSCREEN]: new s.StopWatch,
+                [l.RunningProcessFullscreenType.MINIMIZED]: new s.StopWatch
             }, this.lastscreenType = void 0, this.update(), this.updateScreenInterval = setInterval(() => this.update(), 1e4)
         }
     }
@@ -280,7 +280,7 @@ function(e, t, n) {
             delete D.gamesByName[t]
         }
         async getAnalytics() {
-            var e, t, n, i, r, s, a;
+            var e, t, n, i, r, a, s;
             let o = {
                     setting_is_enabled: I.default.enabled,
                     setting_method: null == this.overlayStatus ? null : p.OverlayMethod[this.overlayStatus.overlayMethod],
@@ -306,7 +306,7 @@ function(e, t, n) {
                     game_id: null !== (i = u.gameId) && void 0 !== i ? i : null,
                     game_exe: null !== (r = u.exe) && void 0 !== r ? r : null,
                     game_elevated: this.game.elevated,
-                    game_is_launcher: null !== (s = this.game.isLauncher) && void 0 !== s && s,
+                    game_is_launcher: null !== (a = this.game.isLauncher) && void 0 !== a && a,
                     game_duration: this.gameTimer.elapsed().asMilliseconds(),
                     game_focused_duration: this.gameFocusedTimer.elapsed().asMilliseconds(),
                     game_focused_change_count: this.gameFocusChangedCount,
@@ -317,7 +317,7 @@ function(e, t, n) {
                     soundboard_shown_duration: this.soundboardShownTimer.elapsed().asMilliseconds(),
                     soundboard_shown_count: this.soundboardShownCount,
                     soundboard_keep_open_count: this.soundboardKeepOpenCount,
-                    hardware_display_count: null !== (a = await (null === d.default || void 0 === d.default ? void 0 : null === (t = d.default.hardware) || void 0 === t ? void 0 : null === (e = t.getDisplayCount) || void 0 === e ? void 0 : e.call(t))) && void 0 !== a ? a : null,
+                    hardware_display_count: null !== (s = await (null === d.default || void 0 === d.default ? void 0 : null === (t = d.default.hardware) || void 0 === t ? void 0 : null === (e = t.getDisplayCount) || void 0 === e ? void 0 : e.call(t))) && void 0 !== s ? s : null,
                     message_ack_count: this.overlayMessageAckCount,
                     message_created_count: this.overlayMessageCreateCount,
                     desktop_message_ack_count: this.desktopMessageAckCount,
@@ -368,7 +368,7 @@ function(e, t, n) {
             for (let t of Object.values(D.gamesByPid)) t.rtcConnectionTimer.toggle(e)
         }
         constructor(e) {
-            O(this, "game", void 0), O(this, "uuid", void 0), O(this, "overlayStatus", void 0), O(this, "notificationAnalytics", void 0), O(this, "widgetAnalytics", void 0), O(this, "screenAnalytics", void 0), O(this, "uiUnlockedCount", void 0), O(this, "uiLockedCount", void 0), O(this, "gameFocusChangedCount", void 0), O(this, "gameConcurrentGameCount", void 0), O(this, "overlayMessageAckCount", void 0), O(this, "overlayMessageCreateCount", void 0), O(this, "gameTimer", void 0), O(this, "gameFocusedTimer", void 0), O(this, "unlockedTimer", void 0), O(this, "rtcConnectionTimer", void 0), O(this, "desktopFocusedTimer", void 0), O(this, "desktopFocusChangedCount", void 0), O(this, "desktopMessageAckCount", void 0), O(this, "desktopMessageCreateCount", void 0), O(this, "soundboardShownTimer", void 0), O(this, "soundboardShownCount", void 0), O(this, "soundboardKeepOpenCount", void 0), O(this, "muteToggledCount", void 0), O(this, "_successfullyShown", void 0), this.game = e, this.uuid = crypto.randomUUID(), this.notificationAnalytics = new g, this.widgetAnalytics = new L, this.uiUnlockedCount = 0, this.uiLockedCount = 0, this.gameFocusChangedCount = 0, this.gameConcurrentGameCount = 0, this.overlayMessageAckCount = 0, this.overlayMessageCreateCount = 0, this.gameTimer = a.StopWatch.startNew(), this.gameFocusedTimer = new a.StopWatch, this.unlockedTimer = new a.StopWatch, this.rtcConnectionTimer = new a.StopWatch, this.desktopFocusedTimer = new a.StopWatch, this.desktopFocusChangedCount = 0, this.desktopMessageAckCount = 0, this.desktopMessageCreateCount = 0, this.soundboardShownTimer = new a.StopWatch, this.soundboardShownCount = 0, this.soundboardKeepOpenCount = 0, this.muteToggledCount = 0, this._successfullyShown = !1, this.screenAnalytics = new v(e), this.overlayStatus = c.default.getGameOverlayStatus(e), D.desktopMainWindowHasFocus && this.desktopFocusedTimer.start(), H.hasConnection() && this.rtcConnectionTimer.start()
+            O(this, "game", void 0), O(this, "uuid", void 0), O(this, "overlayStatus", void 0), O(this, "notificationAnalytics", void 0), O(this, "widgetAnalytics", void 0), O(this, "screenAnalytics", void 0), O(this, "uiUnlockedCount", void 0), O(this, "uiLockedCount", void 0), O(this, "gameFocusChangedCount", void 0), O(this, "gameConcurrentGameCount", void 0), O(this, "overlayMessageAckCount", void 0), O(this, "overlayMessageCreateCount", void 0), O(this, "gameTimer", void 0), O(this, "gameFocusedTimer", void 0), O(this, "unlockedTimer", void 0), O(this, "rtcConnectionTimer", void 0), O(this, "desktopFocusedTimer", void 0), O(this, "desktopFocusChangedCount", void 0), O(this, "desktopMessageAckCount", void 0), O(this, "desktopMessageCreateCount", void 0), O(this, "soundboardShownTimer", void 0), O(this, "soundboardShownCount", void 0), O(this, "soundboardKeepOpenCount", void 0), O(this, "muteToggledCount", void 0), O(this, "_successfullyShown", void 0), this.game = e, this.uuid = crypto.randomUUID(), this.notificationAnalytics = new g, this.widgetAnalytics = new L, this.uiUnlockedCount = 0, this.uiLockedCount = 0, this.gameFocusChangedCount = 0, this.gameConcurrentGameCount = 0, this.overlayMessageAckCount = 0, this.overlayMessageCreateCount = 0, this.gameTimer = s.StopWatch.startNew(), this.gameFocusedTimer = new s.StopWatch, this.unlockedTimer = new s.StopWatch, this.rtcConnectionTimer = new s.StopWatch, this.desktopFocusedTimer = new s.StopWatch, this.desktopFocusChangedCount = 0, this.desktopMessageAckCount = 0, this.desktopMessageCreateCount = 0, this.soundboardShownTimer = new s.StopWatch, this.soundboardShownCount = 0, this.soundboardKeepOpenCount = 0, this.muteToggledCount = 0, this._successfullyShown = !1, this.screenAnalytics = new v(e), this.overlayStatus = c.default.getGameOverlayStatus(e), D.desktopMainWindowHasFocus && this.desktopFocusedTimer.start(), H.hasConnection() && this.rtcConnectionTimer.start()
         }
     }
 

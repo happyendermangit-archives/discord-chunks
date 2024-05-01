@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("481060"),
-        a = n("907040"),
+        a = n("481060"),
+        s = n("907040"),
         o = n("28546"),
         l = n("401227"),
         u = n("872635"),
@@ -36,12 +36,12 @@ function(e, t, n) {
                     iconClassName: _.staticIcon,
                     dividerClassName: _.staticDivider
                 })
-            }), (0, i.jsx)(s.Popout, {
+            }), (0, i.jsx)(a.Popout, {
                 renderPopout: e => {
                     let {
                         closePopout: t
                     } = e;
-                    return (0, i.jsx)(a.default, {
+                    return (0, i.jsx)(s.default, {
                         persistSearch: !0,
                         channel: E,
                         closePopout: t,
@@ -52,7 +52,7 @@ function(e, t, n) {
                     })
                 },
                 position: "bottom",
-                animation: s.Popout.Animation.NONE,
+                animation: a.Popout.Animation.NONE,
                 align: "left",
                 children: (e, t) => {
                     let {

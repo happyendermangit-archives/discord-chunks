@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("512722"),
-        a = n.n(s),
+        a = n("512722"),
+        s = n.n(a),
         o = n("392711"),
         l = n.n(o);
 
@@ -74,7 +74,7 @@ function(e, t, n) {
                     let t = e.lastDirection * e.intensity,
                         n = l().random(-e.intensity, e.intensity, !0),
                         i = Math.max(0, Math.cbrt(e.duration - e.progress / 1e3));
-                    e.intensity *= Math.min(1, i), e.lastDirection *= -1, a()(null != this.ref.current, "Shakeable style set when not mounted"), this.ref.current.style.transform = "translate3d(".concat(t, "px,").concat(n, "px,0px)")
+                    e.intensity *= Math.min(1, i), e.lastDirection *= -1, s()(null != this.ref.current, "Shakeable style set when not mounted"), this.ref.current.style.transform = "translate3d(".concat(t, "px,").concat(n, "px,0px)")
                 }
                 e.frameCount += 1, this._animationFrame = requestAnimationFrame(this._animate)
             }), u(this, "_animationCleanup", () => {

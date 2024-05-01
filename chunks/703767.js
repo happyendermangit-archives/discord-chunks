@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("653041"), n("47120");
     var i = n("147913"),
         r = n("579806"),
-        s = n("818083"),
-        a = n("998502");
+        a = n("818083"),
+        s = n("998502");
     let o = [0, 0];
 
     function l(e) {
@@ -18,7 +18,7 @@ function(e, t, n) {
     }
     let d = [function(e, t, n, i) {
         let r = [],
-            a = n.map(e => e.map(l).join(":")).join(", ");
+            s = n.map(e => e.map(l).join(":")).join(", ");
         for (let e = 0; e < i.length; e++) {
             let t = {};
             t[i[e]] = "1", r.push({
@@ -29,10 +29,10 @@ function(e, t, n) {
         }
         return {
             gpus: n,
-            experiment: (0, s.createExperiment)({
+            experiment: (0, a.createExperiment)({
                 kind: "user",
                 id: e,
-                label: "GPU Workarounds: ".concat(t, " (").concat(a, ")"),
+                label: "GPU Workarounds: ".concat(t, " (").concat(s, ")"),
                 defaultConfig: {},
                 treatments: r
             })
@@ -57,7 +57,7 @@ function(e, t, n) {
                     ...e,
                     ...n
                 }
-            } a.default.setChromiumSwitches(e)
+            } s.default.setChromiumSwitches(e)
     }
     class I extends i.default {
         constructor(...e) {
@@ -67,8 +67,8 @@ function(e, t, n) {
                     try {
                         var e, t, n, i;
                         if (c || (null === (t = window.DiscordNative) || void 0 === t ? void 0 : null === (e = t.gpuSettings) || void 0 === e ? void 0 : e.setChromiumSwitches) == null) return;
-                        let s = await r.default.processUtils.getSystemInfo();
-                        for (let e of null !== (i = null === (n = s.electronGPUInfo) || void 0 === n ? void 0 : n.gpuDevice) && void 0 !== i ? i : []) !0 === e.active && (o = [e.vendorId, e.deviceId]);
+                        let a = await r.default.processUtils.getSystemInfo();
+                        for (let e of null !== (i = null === (n = a.electronGPUInfo) || void 0 === n ? void 0 : n.gpuDevice) && void 0 !== i ? i : []) !0 === e.active && (o = [e.vendorId, e.deviceId]);
                         for (let e of (c = !0, d)) _(e.gpus) && e.experiment.subscribe({
                             location: "GPU experiment subscription"
                         }, E);

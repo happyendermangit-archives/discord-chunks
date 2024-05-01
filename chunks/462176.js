@@ -19,7 +19,7 @@ function(e, t, n) {
             36: "cyan",
             37: "white"
         },
-        s = {
+        a = {
             40: "black",
             41: "red",
             42: "green",
@@ -29,13 +29,13 @@ function(e, t, n) {
             46: "cyan",
             47: "white"
         },
-        a = /\x1B\[(\d+(?:[:;]\d+)*)m/,
-        o = new RegExp("(?=".concat(a.source, ")"));
+        s = /\x1B\[(\d+(?:[:;]\d+)*)m/,
+        o = new RegExp("(?=".concat(s.source, ")"));
 
     function l() {
-        let e = [...u("foreground", r, ["38", "39"], !0), ...u("background", s, ["48", "49"], !0), ...u("style", i, [], !1), {
+        let e = [...u("foreground", r, ["38", "39"], !0), ...u("background", a, ["48", "49"], !0), ...u("style", i, [], !1), {
             className: "ansi-control-sequence",
-            begin: a,
+            begin: s,
             starts: {
                 end: o,
                 endsParent: !0
@@ -54,15 +54,15 @@ function(e, t, n) {
     function u(e, t, n, i) {
         let r = ["0", ...n];
         return i && r.push(...Object.keys(t)), Object.entries(t).map(t => {
-            var n, i, s, a;
+            var n, i, a, s;
             let [l, u] = t;
-            return n = e, i = u, s = l, a = r, {
+            return n = e, i = u, a = l, s = r, {
                 className: "ansi-".concat(n, "-").concat(i),
                 endsParent: !0,
                 begin: o,
                 "on:begin": (e, t) => {
                     let n = e[1].split(";");
-                    for (let e of (void 0 === t.data.isOn && (t.data.isOn = !1), n)) e === s ? t.data.isOn = !0 : a.includes(e) && (t.data.isOn = !1);
+                    for (let e of (void 0 === t.data.isOn && (t.data.isOn = !1), n)) e === a ? t.data.isOn = !0 : s.includes(e) && (t.data.isOn = !1);
                     !t.data.isOn && t.ignoreMatch()
                 }
             }

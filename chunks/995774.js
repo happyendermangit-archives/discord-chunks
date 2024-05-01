@@ -22,19 +22,19 @@ function(e, t, n) {
     }), n("757143");
     var i = n("633302"),
         r = n("314897"),
-        s = n("981631"),
-        a = n("689938");
+        a = n("981631"),
+        s = n("689938");
 
     function o(e) {
         return null == e.id ? i.default.convertSurrogateToName(e.name) : ":".concat(e.name, ":")
     }
 
     function l(e, t, n, i) {
-        var r, s, l;
+        var r, a, l;
         let u;
-        return (u = i ? e ? a.default.Messages.SUPER_REACT_REMOVE_WITH_COUNT_A11Y_LABEL : a.default.Messages.SUPER_REACT_WITH_COUNT_A11Y_LABEL : e ? a.default.Messages.REACT_REMOVE_WITH_COUNT_A11Y_LABEL : a.default.Messages.REACT_WITH_COUNT_A11Y_LABEL).format({
+        return (u = i ? e ? s.default.Messages.SUPER_REACT_REMOVE_WITH_COUNT_A11Y_LABEL : s.default.Messages.SUPER_REACT_WITH_COUNT_A11Y_LABEL : e ? s.default.Messages.REACT_REMOVE_WITH_COUNT_A11Y_LABEL : s.default.Messages.REACT_WITH_COUNT_A11Y_LABEL).format({
             reactions: t,
-            emojiName: null !== (l = null === (s = o(n)) || void 0 === s ? void 0 : null === (r = s.replace(/[:_]/g, " ")) || void 0 === r ? void 0 : r.trim()) && void 0 !== l ? l : ""
+            emojiName: null !== (l = null === (a = o(n)) || void 0 === a ? void 0 : null === (r = a.replace(/[:_]/g, " ")) || void 0 === r ? void 0 : r.trim()) && void 0 !== l ? l : ""
         })
     }
 
@@ -56,10 +56,10 @@ function(e, t, n) {
     }
 
     function _(e) {
-        if (e.isThread()) return s.AnalyticsSections.THREAD_TEXT_AREA;
-        if (e.isForumPost()) return s.AnalyticsSections.FORUM_CHANNEL_TEXT_AREA;
-        if (e.isGuildVocal()) return s.AnalyticsSections.TEXT_IN_VOICE;
-        return s.AnalyticsSections.CHANNEL_TEXT_AREA
+        if (e.isThread()) return a.AnalyticsSections.THREAD_TEXT_AREA;
+        if (e.isForumPost()) return a.AnalyticsSections.FORUM_CHANNEL_TEXT_AREA;
+        if (e.isGuildVocal()) return a.AnalyticsSections.TEXT_IN_VOICE;
+        return a.AnalyticsSections.CHANNEL_TEXT_AREA
     }
 
     function c(e) {

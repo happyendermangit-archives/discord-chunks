@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("846519"),
         r = n("904245"),
-        s = n("287734"),
-        a = n("147913"),
+        a = n("287734"),
+        s = n("147913"),
         o = n("317381"),
         l = n("592125"),
         u = n("885110"),
@@ -34,9 +34,9 @@ function(e, t, n) {
         let e = d.default.getCurrentClientVoiceChannelId(null);
         null != e && (r.default.sendBotMessage(e, c.default.Messages.BOT_CALL_IDLE_DISCONNECT_2.format({
             number: 3
-        })), s.default.selectVoiceChannel(null))
+        })), a.default.selectVoiceChannel(null))
     }
-    class S extends a.default {
+    class S extends s.default {
         constructor(...e) {
             super(...e), E(this, "idleTimeout", new i.Timeout), E(this, "handleConnectionClosed", () => {
                 this.idleTimeout.stop()

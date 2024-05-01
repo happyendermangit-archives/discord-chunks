@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("653041"), n("47120");
     var i = n("392711"),
         r = n.n(i),
-        s = n("377108"),
-        a = n("433517"),
+        a = n("377108"),
+        s = n("433517"),
         o = n("147913"),
         l = n("654455"),
         u = n("822245"),
@@ -32,32 +32,32 @@ function(e, t, n) {
             }), T.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
                 hasChanges: () => c.default.hasPendingUsage() && f.default.hasLoaded(h.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS),
                 processProto: e => {
-                    if (!!c.default.hasPendingUsage()) f.default.hasLoaded(h.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (e.stickerFrecency = s.StickerFrecency.create(), e.stickerFrecency.stickers = (0, S.serializeUsageHistory)(c.default.stickerFrecencyWithoutFetchingLatest.usageHistory, 100))
+                    if (!!c.default.hasPendingUsage()) f.default.hasLoaded(h.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (e.stickerFrecency = a.StickerFrecency.create(), e.stickerFrecency.stickers = (0, S.serializeUsageHistory)(c.default.stickerFrecencyWithoutFetchingLatest.usageHistory, 100))
                 }
             }), T.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
                 hasChanges: () => d.default.hasPendingUsage() && f.default.hasLoaded(h.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS),
                 processProto: e => {
-                    if (!!d.default.hasPendingUsage()) f.default.hasLoaded(h.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (e.emojiFrecency = s.EmojiFrecency.create(), e.emojiFrecency.emojis = (0, S.serializeUsageHistory)(d.default.emojiFrecencyWithoutFetchingLatest.usageHistory, 100))
+                    if (!!d.default.hasPendingUsage()) f.default.hasLoaded(h.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (e.emojiFrecency = a.EmojiFrecency.create(), e.emojiFrecency.emojis = (0, S.serializeUsageHistory)(d.default.emojiFrecencyWithoutFetchingLatest.usageHistory, 100))
                 }
             }), T.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
                 hasChanges: () => _.default.hasPendingUsage() && f.default.hasLoaded(h.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS),
                 processProto: e => {
-                    if (!!_.default.hasPendingUsage()) f.default.hasLoaded(h.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && !r().isEmpty(_.default.playedSoundHistory) && (e.playedSoundFrecency = s.PlayedSoundFrecency.create(), e.playedSoundFrecency.playedSounds = (0, S.serializeUsageHistory)(_.default.playedSoundHistory, 100))
+                    if (!!_.default.hasPendingUsage()) f.default.hasLoaded(h.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && !r().isEmpty(_.default.playedSoundHistory) && (e.playedSoundFrecency = a.PlayedSoundFrecency.create(), e.playedSoundFrecency.playedSounds = (0, S.serializeUsageHistory)(_.default.playedSoundHistory, 100))
                 }
             }), T.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
                 hasChanges: () => l.default.hasPendingUsage() && f.default.hasLoaded(h.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS),
                 processProto: e => {
-                    if (!!l.default.hasPendingUsage()) f.default.hasLoaded(h.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (e.applicationCommandFrecency = s.ApplicationCommandFrecency.create(), e.applicationCommandFrecency.applicationCommands = (0, S.serializeUsageHistory)(l.default.getCommandFrecencyWithoutLoadingLatest().usageHistory, 500))
+                    if (!!l.default.hasPendingUsage()) f.default.hasLoaded(h.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (e.applicationCommandFrecency = a.ApplicationCommandFrecency.create(), e.applicationCommandFrecency.applicationCommands = (0, S.serializeUsageHistory)(l.default.getCommandFrecencyWithoutLoadingLatest().usageHistory, 500))
                 }
             }), T.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
                 hasChanges: () => u.default.hasPendingUsage() && f.default.hasLoaded(h.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS),
                 processProto: e => {
-                    if (!!u.default.hasPendingUsage()) f.default.hasLoaded(h.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (e.applicationFrecency = s.ApplicationFrecency.create(), e.applicationFrecency.applications = (0, S.serializeUsageHistory)(u.default.getApplicationFrecencyWithoutLoadingLatest().usageHistory, u.FREQUENCY_ITEM_LIMIT))
+                    if (!!u.default.hasPendingUsage()) f.default.hasLoaded(h.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (e.applicationFrecency = a.ApplicationFrecency.create(), e.applicationFrecency.applications = (0, S.serializeUsageHistory)(u.default.getApplicationFrecencyWithoutLoadingLatest().usageHistory, u.FREQUENCY_ITEM_LIMIT))
                 }
             }), T.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
                 hasChanges: () => E.default.hasPendingUsage() && f.default.hasLoaded(h.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS),
                 processProto: e => {
-                    if (!!E.default.hasPendingUsage()) f.default.hasLoaded(h.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (e.guildAndChannelFrecency = s.GuildAndChannelFrecency.create(), e.guildAndChannelFrecency.guildAndChannels = (0, S.serializeUsageHistory)(E.default.frecencyWithoutFetchingLatest.usageHistory, E.MAX_NUM_SELECTED_ITEMS))
+                    if (!!E.default.hasPendingUsage()) f.default.hasLoaded(h.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (e.guildAndChannelFrecency = a.GuildAndChannelFrecency.create(), e.guildAndChannelFrecency.guildAndChannels = (0, S.serializeUsageHistory)(E.default.frecencyWithoutFetchingLatest.usageHistory, E.MAX_NUM_SELECTED_ITEMS))
                 }
             })
         }
@@ -78,7 +78,7 @@ function(e, t, n) {
 
     function C() {
         var e;
-        O = null !== (e = a.Storage.get(A)) && void 0 !== e ? e : Date.now(), v(!1)
+        O = null !== (e = s.Storage.get(A)) && void 0 !== e ? e : Date.now(), v(!1)
     }
 
     function g() {
@@ -91,7 +91,7 @@ function(e, t, n) {
     }
 
     function v(e) {
-        e && (O = Date.now(), a.Storage.set(A, O)), null != p && clearTimeout(p);
+        e && (O = Date.now(), s.Storage.set(A, O)), null != p && clearTimeout(p);
         let t = Date.now() - O;
         p = setTimeout(L, Math.max(m, N - t))
     }

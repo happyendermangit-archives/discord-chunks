@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("264344"),
         r = n.n(i),
-        s = n("259443"),
-        a = n("46973"),
+        a = n("259443"),
+        s = n("46973"),
         o = n("912095"),
         l = n("912978"),
         u = n("886848"),
@@ -35,9 +35,9 @@ function(e, t, n) {
             super.destroy(), this.pc.close()
         }
         setCodecs(e, t, n) {
-            var i, r, s;
-            let a;
-            (this.fpc.audioCodec !== e || this.fpc.videoCodec !== t) && (a = this.codecs.find(t => t.name === e), this.fpc.audioCodec = e, this.fpc.audioPayloadType = null !== (i = null == a ? void 0 : a.payloadType) && void 0 !== i ? i : 0, a = this.codecs.find(e => e.name === t), this.fpc.videoCodec = t, this.fpc.videoPayloadType = null !== (r = null == a ? void 0 : a.payloadType) && void 0 !== r ? r : 0, this.fpc.rtxPayloadType = null !== (s = null == a ? void 0 : a.rtxPayloadType) && void 0 !== s ? s : 0, this.pc.negotiationNeeded())
+            var i, r, a;
+            let s;
+            (this.fpc.audioCodec !== e || this.fpc.videoCodec !== t) && (s = this.codecs.find(t => t.name === e), this.fpc.audioCodec = e, this.fpc.audioPayloadType = null !== (i = null == s ? void 0 : s.payloadType) && void 0 !== i ? i : 0, s = this.codecs.find(e => e.name === t), this.fpc.videoCodec = t, this.fpc.videoPayloadType = null !== (r = null == s ? void 0 : s.payloadType) && void 0 !== r ? r : 0, this.fpc.rtxPayloadType = null !== (a = null == s ? void 0 : s.rtxPayloadType) && void 0 !== a ? a : 0, this.pc.negotiationNeeded())
         }
         setStream(e) {
             this.fpc.direction = null != e ? _.Directions.SENDRECV : _.Directions.SENDONLY, this.pc.setStream(null != e ? e : null)
@@ -67,39 +67,39 @@ function(e, t, n) {
         }
         setVideoEncoderParameters(e) {}
         constructor(e, t, n, i) {
-            super(e, t, n, i), T(this, "pc", void 0), T(this, "fpc", void 0), T(this, "codecs", []), T(this, "logger", void 0), this.logger = new s.Logger("Connection(".concat(e, ")"));
+            super(e, t, n, i), T(this, "pc", void 0), T(this, "fpc", void 0), T(this, "codecs", []), T(this, "logger", void 0), this.logger = new a.Logger("Connection(".concat(e, ")"));
             let r = new l.default;
             r.on("answer", e => this.pc.setRemoteDescription(e).catch(e => this.logger.error("Failed to set remote description (answer): ".concat(e)))), r.on("offer", e => {
                 this.pc.setRemoteDescription(e).then(() => this.pc.createAnswer()).then(e => this.fpc.setRemoteDescription(e)).catch(e => this.logger.error("Failed to set remote description (offer): ".concat(e)))
             }), r.direction = null != this.input.stream ? _.Directions.SENDRECV : _.Directions.SENDONLY, this.fpc = r;
             let o = new d.default(this.voiceBitrate);
             o.on("addtrack", (e, t) => this.createOutput(f(e), t)), o.on("removetrack", (e, t) => this.destroyOutput(f(e), t)), o.once("connected", () => {
-                this.input.reset(), this.setConnectionState(E.ConnectionStates.CONNECTED), this.on(a.BaseConnectionEvent.Stats, this.handleStats), this.input.on(u.InputEvent.VoiceActivity, this.handleVoiceActivity)
+                this.input.reset(), this.setConnectionState(E.ConnectionStates.CONNECTED), this.on(s.BaseConnectionEvent.Stats, this.handleStats), this.input.on(u.InputEvent.VoiceActivity, this.handleVoiceActivity)
             }), o.on("connecting", () => this.setConnectionState(E.ConnectionStates.DTLS_CONNECTING)), o.on("checking", () => this.setConnectionState(E.ConnectionStates.ICE_CHECKING)), o.on("failed", () => this.setConnectionState(E.ConnectionStates.NO_ROUTE)), o.on("disconnected", () => this.setConnectionState(E.ConnectionStates.DISCONNECTED)), o.on("closed", () => this.setConnectionState(E.ConnectionStates.DISCONNECTED)), o.on("offer", e => {
                 let {
                     sdp: t
                 } = e, {
                     outboundStreams: n,
                     codecs: i,
-                    audioSSRC: s,
+                    audioSSRC: a,
                     videoSSRC: o,
                     rtxSSRC: l
                 } = (0, _.extractSDP)(t);
                 this.codecs = i;
                 let u = (0, _.getExtensions)(t);
-                r.outboundStreams = n, this.audioSSRC = s, r.extensions = u, (this.videoStreamParameters[0].ssrc !== o || this.videoStreamParameters[0].rtxSsrc !== l || !this.videoReady) && (this.videoStreamParameters[0].ssrc = o, this.videoStreamParameters[0].rtxSsrc = l, this.emit(a.BaseConnectionEvent.Video, this.userId, this.input.getVideoStreamId(), this.audioSSRC, this.videoStreamParameters[0].ssrc, this.videoStreamParameters[0].rtxSsrc, this.videoStreamParameters), this.videoReady = !0)
+                r.outboundStreams = n, this.audioSSRC = a, r.extensions = u, (this.videoStreamParameters[0].ssrc !== o || this.videoStreamParameters[0].rtxSsrc !== l || !this.videoReady) && (this.videoStreamParameters[0].ssrc = o, this.videoStreamParameters[0].rtxSsrc = l, this.emit(s.BaseConnectionEvent.Video, this.userId, this.input.getVideoStreamId(), this.audioSSRC, this.videoStreamParameters[0].ssrc, this.videoStreamParameters[0].rtxSsrc, this.videoStreamParameters), this.videoReady = !0)
             }), o.once("offer", e => {
                 let {
                     sdp: t
                 } = e;
-                this.emit(a.BaseConnectionEvent.Connected, "webrtc", (0, _.truncateSDP)(t))
+                this.emit(s.BaseConnectionEvent.Connected, "webrtc", (0, _.truncateSDP)(t))
             }), null != this.input.stream ? o.setStream(this.input.stream) : o.negotiationNeeded(), this.pc = o
         }
     }
 
     function h(e, t, n, i) {
-        let a = "".concat(null != r().name && "" !== r().name ? r().name : "unknown", " ").concat(null != r().version && "" !== r().version ? r().version : "unknown"),
-            o = new s.Logger("Connection(".concat(e, ")"));
-        return I.BROWSER_SUPPORTS_UNIFIED_PLAN ? (o.info("Using Unified Plan (".concat(a, ")")), new c.default(e, t, n, i)) : (o.info("Using Plan B (".concat(a, ")")), new S(e, t, n, i))
+        let s = "".concat(null != r().name && "" !== r().name ? r().name : "unknown", " ").concat(null != r().version && "" !== r().version ? r().version : "unknown"),
+            o = new a.Logger("Connection(".concat(e, ")"));
+        return I.BROWSER_SUPPORTS_UNIFIED_PLAN ? (o.info("Using Unified Plan (".concat(s, ")")), new c.default(e, t, n, i)) : (o.info("Using Plan B (".concat(s, ")")), new S(e, t, n, i))
     }
 }

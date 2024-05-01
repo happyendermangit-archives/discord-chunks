@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("47120");
-    var i, r, s, a, o = n("149765"),
+    var i, r, a, s, o = n("149765"),
         l = n("442837"),
         u = n("570140"),
         d = n("223892"),
@@ -44,13 +44,13 @@ function(e, t, n) {
                     role: r,
                     isPreviewingRoles: n
                 })) continue;
-            let s = e.permissionOverwrites[i];
-            if ((0, T.isChannelAccessGrantedBy)(e, s)) return !0
+            let a = e.permissionOverwrites[i];
+            if ((0, T.isChannelAccessGrantedBy)(e, a)) return !0
         }
         let i = A.default.getRole(t.id, t.getEveryoneRoleId()),
             r = null != i && !o.has(i.permissions, N.Permissions.VIEW_CHANNEL),
-            s = (0, T.isChannelAccessDeniedBy)(e, e.permissionOverwrites[t.id]);
-        if (r && !s) {
+            a = (0, T.isChannelAccessDeniedBy)(e, e.permissionOverwrites[t.id]);
+        if (r && !a) {
             for (let e of Object.values(A.default.getRoles(t.id)))
                 if (R({
                         guildId: t.id,
@@ -68,9 +68,9 @@ function(e, t, n) {
         if (null == i) return !1;
         let r = A.default.getGuild(i.getGuildId());
         if (null == r) return !1;
-        let s = n.has(t),
-            a = C(i, r);
-        return s !== a && (a ? n.add(t) : n.delete(t), !0)
+        let a = n.has(t),
+            s = C(i, r);
+        return a !== s && (s ? n.add(t) : n.delete(t), !0)
     }
 
     function L() {
@@ -122,12 +122,12 @@ function(e, t, n) {
             return null != e && this.isChannelGated(e, t) && !O.has(e)
         }
     }
-    a = "GatedChannelStore", (s = "displayName") in(r = y) ? Object.defineProperty(r, s, {
-        value: a,
+    s = "GatedChannelStore", (a = "displayName") in(r = y) ? Object.defineProperty(r, a, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a, t.default = new y(u.default, {
+    }) : r[a] = s, t.default = new y(u.default, {
         CONNECTION_OPEN: L,
         OVERLAY_INITIALIZE: L,
         CACHE_LOADED_LAZY: L,

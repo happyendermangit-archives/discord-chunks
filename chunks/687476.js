@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("47120");
-    var i, r, s, a, o = n("149765"),
+    var i, r, a, s, o = n("149765"),
         l = n("442837"),
         u = n("570140"),
         d = n("271383"),
@@ -22,19 +22,19 @@ function(e, t, n) {
         if (null == n || null == t) return !1;
         let i = new Set,
             r = new Set,
-            s = new Set;
+            a = new Set;
         if (A.set(e, n.isOwner(t)), n.hasFeature(I.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED)) {
-            var a, l;
+            var s, l;
             let u = d.default.getMember(e, t.id),
-                c = new Set(null !== (a = null == u ? void 0 : u.roles) && void 0 !== a ? a : []),
+                c = new Set(null !== (s = null == u ? void 0 : u.roles) && void 0 !== s ? s : []),
                 T = _.default.getRoles(n.id);
             for (let t in T) {
                 ;
                 let n = T[t];
-                if ((0, E.isSubscriptionRole)(n) && (i.add(t), (0, E.isSubscriptionRoleAvailableForPurchase)(n) && (r.add(t), c.has(t) && s.add(t))), c.has(t) && (l = n, o.has(l.permissions, I.Permissions.ADMINISTRATOR))) A.set(e, !0)
+                if ((0, E.isSubscriptionRole)(n) && (i.add(t), (0, E.isSubscriptionRoleAvailableForPurchase)(n) && (r.add(t), c.has(t) && a.add(t))), c.has(t) && (l = n, o.has(l.permissions, I.Permissions.ADMINISTRATOR))) A.set(e, !0)
             }
         }
-        return f.set(e, i), h.set(e, s), S.set(e, r), !0
+        return f.set(e, i), h.set(e, a), S.set(e, r), !0
     }
 
     function p() {
@@ -100,12 +100,12 @@ function(e, t, n) {
             return this.buildRoles(e), null !== (t = A.get(e)) && void 0 !== t && t
         }
     }
-    a = "SubscriptionRoleStore", (s = "displayName") in(r = C) ? Object.defineProperty(r, s, {
-        value: a,
+    s = "SubscriptionRoleStore", (a = "displayName") in(r = C) ? Object.defineProperty(r, a, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a, t.default = new C(u.default, {
+    }) : r[a] = s, t.default = new C(u.default, {
         CONNECTION_OPEN: p,
         LOGOUT: p,
         GUILD_CREATE: O,

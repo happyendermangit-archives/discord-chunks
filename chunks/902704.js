@@ -5,17 +5,17 @@ function(e, t, n) {
         if (e === t) return !0;
         if (void 0 === e || void 0 === t) return e === t;
         let r = Object.keys(e),
-            s = Object.keys(t);
-        if (r.length !== s.length) return null != i && i("shallowEqual: unequal key lengths ".concat(r.length, " !=== ").concat(s.length)), !1;
-        let a = [];
-        for (let s = 0; s < r.length; s++) {
-            let o = r[s];
+            a = Object.keys(t);
+        if (r.length !== a.length) return null != i && i("shallowEqual: unequal key lengths ".concat(r.length, " !=== ").concat(a.length)), !1;
+        let s = [];
+        for (let a = 0; a < r.length; a++) {
+            let o = r[a];
             if (e[o] !== t[o] && (null == n || !n.includes(o))) {
                 if (null == i) return !1;
-                a.push(o)
+                s.push(o)
             }
         }
-        return null != i && a.length > 0 && i("shallowEqual: unequal keys: ".concat(a.join(", "))), 0 === a.length
+        return null != i && s.length > 0 && i("shallowEqual: unequal keys: ".concat(s.join(", "))), 0 === s.length
     }
 
     function r(e, t) {

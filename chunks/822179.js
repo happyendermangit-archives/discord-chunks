@@ -2,8 +2,8 @@ function(e, t, n) {
     "use strict";
     n.r(t), n("653041");
     var i, r = n("392711"),
-        s = n.n(r),
-        a = n("442837"),
+        a = n.n(r),
+        s = n("442837"),
         o = n("570140"),
         l = n("704907"),
         u = n("581883"),
@@ -44,12 +44,12 @@ function(e, t, n) {
         var e;
         let t = null === (e = u.default.frecencyWithoutFetchingLatest.stickerFrecency) || void 0 === e ? void 0 : e.stickers;
         if (null == t) return !1;
-        T.overwriteHistory(s().mapValues(t, e => ({
+        T.overwriteHistory(a().mapValues(t, e => ({
             ...e,
             recentUses: e.recentUses.map(Number).filter(e => e > 0)
         })), I.pendingUsages)
     }
-    class A extends(i = a.default.PersistedStore) {
+    class A extends(i = s.default.PersistedStore) {
         initialize(e) {
             this.waitFor(_.default), null != e && (I = e), this.syncWith([_.default], S), this.syncWith([u.default], h)
         }

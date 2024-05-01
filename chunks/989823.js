@@ -4,7 +4,7 @@ function(e, t, n) {
     var i = n("888618"),
         r = n("482682");
 
-    function s(e, t, n) {
+    function a(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -40,10 +40,10 @@ function(e, t, n) {
             this.isFilled = !0
         }
         constructor() {
-            s(this, "img", null), s(this, "loaded", !1), s(this, "isFilled", !1), s(this, "alpha", 0), s(this, "mx", 0), s(this, "my", 0), s(this, "x", 0), s(this, "y", 0), s(this, "velX", 0), s(this, "velY", 0), s(this, "targetX", 40), s(this, "targetY", 40), s(this, "spring", {
+            a(this, "img", null), a(this, "loaded", !1), a(this, "isFilled", !1), a(this, "alpha", 0), a(this, "mx", 0), a(this, "my", 0), a(this, "x", 0), a(this, "y", 0), a(this, "velX", 0), a(this, "velY", 0), a(this, "targetX", 40), a(this, "targetY", 40), a(this, "spring", {
                 friction: 60,
                 tension: 100
-            }), s(this, "handleMouseMove", e => {
+            }), a(this, "handleMouseMove", e => {
                 let {
                     clientX: t,
                     clientY: n

@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("150039"),
         r = n("768581"),
-        s = n("74538"),
-        a = n("474936");
+        a = n("74538"),
+        s = n("474936");
 
     function o(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
@@ -37,7 +37,7 @@ function(e, t, n) {
             return null !== (t = null === (e = this.themeColors) || void 0 === e ? void 0 : e[0]) && void 0 !== t ? t : this.accentColor
         }
         get canUsePremiumProfileCustomization() {
-            return s.default.isPremiumAtLeast(this.premiumType, a.PremiumTypes.TIER_2)
+            return a.default.isPremiumAtLeast(this.premiumType, s.PremiumTypes.TIER_2)
         }
         get canEditThemes() {
             return this.canUsePremiumProfileCustomization
@@ -112,8 +112,8 @@ function(e, t, n) {
             return this._userProfile.legacyUsername
         }
         constructor(e, t) {
-            var n, i, r, s;
-            o(this, "userId", void 0), o(this, "guildId", void 0), o(this, "banner", void 0), o(this, "bio", void 0), o(this, "pronouns", void 0), o(this, "accentColor", void 0), o(this, "themeColors", void 0), o(this, "popoutAnimationParticleType", void 0), o(this, "profileEffectId", void 0), o(this, "_userProfile", void 0), o(this, "_guildMemberProfile", void 0), this.userId = e.userId, this.guildId = null == t ? void 0 : t.guildId, this.banner = null !== (n = null == t ? void 0 : t.banner) && void 0 !== n ? n : e.banner, this.bio = l(e.bio, null == t ? void 0 : t.bio), this.pronouns = l(e.pronouns, null == t ? void 0 : t.pronouns), this.accentColor = e.accentColor, this.themeColors = null !== (i = null == t ? void 0 : t.themeColors) && void 0 !== i ? i : e.themeColors, this.popoutAnimationParticleType = null !== (r = null == t ? void 0 : t.popoutAnimationParticleType) && void 0 !== r ? r : e.popoutAnimationParticleType, this.profileEffectId = null !== (s = null == t ? void 0 : t.profileEffectId) && void 0 !== s ? s : e.profileEffectId, this._userProfile = e, this._guildMemberProfile = t
+            var n, i, r, a;
+            o(this, "userId", void 0), o(this, "guildId", void 0), o(this, "banner", void 0), o(this, "bio", void 0), o(this, "pronouns", void 0), o(this, "accentColor", void 0), o(this, "themeColors", void 0), o(this, "popoutAnimationParticleType", void 0), o(this, "profileEffectId", void 0), o(this, "_userProfile", void 0), o(this, "_guildMemberProfile", void 0), this.userId = e.userId, this.guildId = null == t ? void 0 : t.guildId, this.banner = null !== (n = null == t ? void 0 : t.banner) && void 0 !== n ? n : e.banner, this.bio = l(e.bio, null == t ? void 0 : t.bio), this.pronouns = l(e.pronouns, null == t ? void 0 : t.pronouns), this.accentColor = e.accentColor, this.themeColors = null !== (i = null == t ? void 0 : t.themeColors) && void 0 !== i ? i : e.themeColors, this.popoutAnimationParticleType = null !== (r = null == t ? void 0 : t.popoutAnimationParticleType) && void 0 !== r ? r : e.popoutAnimationParticleType, this.profileEffectId = null !== (a = null == t ? void 0 : t.profileEffectId) && void 0 !== a ? a : e.profileEffectId, this._userProfile = e, this._guildMemberProfile = t
         }
     }
 }

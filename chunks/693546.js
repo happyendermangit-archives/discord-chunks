@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t);
     var i = n("544891"),
         r = n("570140"),
-        s = n("287734"),
-        a = n("131704"),
+        a = n("287734"),
+        s = n("131704"),
         o = n("246364"),
         l = n("937111"),
         u = n("981631");
@@ -21,8 +21,8 @@ function(e, t, n) {
         let {
             guildId: t,
             status: n = o.GuildJoinRequestApplicationStatuses.SUBMITTED,
-            before: s,
-            after: a,
+            before: a,
+            after: s,
             limit: d = o.MAX_RESULTS_PER_PAGE
         } = e;
         r.default.dispatch({
@@ -35,8 +35,8 @@ function(e, t, n) {
                     query: {
                         status: n,
                         limit: d,
-                        before: s,
-                        after: a
+                        before: a,
+                        after: s
                     }
                 }),
                 o = e.body.total,
@@ -81,19 +81,19 @@ function(e, t, n) {
         }
     }, I = async function(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.GuildJoinRequestApplicationStatuses.APPROVED,
-            s = arguments.length > 3 ? arguments[3] : void 0,
-            a = await i.HTTP.patch({
+            a = arguments.length > 3 ? arguments[3] : void 0,
+            s = await i.HTTP.patch({
                 url: u.Endpoints.GUILD_JOIN_REQUEST(e, t),
                 body: {
                     action: n,
-                    rejection_reason: s
+                    rejection_reason: a
                 }
             });
         r.default.dispatch({
             type: "GUILD_JOIN_REQUEST_UPDATE",
             guildId: e,
-            status: a.body.application_status,
-            request: a.body
+            status: s.body.application_status,
+            request: s.body
         })
     }, T = async (e, t) => {
         let n = await i.HTTP.patch({
@@ -135,11 +135,11 @@ function(e, t, n) {
             n = await i.HTTP.post({
                 url: u.Endpoints.GUILD_JOIN_REQUEST_INTERVIEW(e)
             }),
-            o = (0, a.createChannelRecordFromServer)(n.body);
+            o = (0, s.createChannelRecordFromServer)(n.body);
         return r.default.dispatch({
             type: "CHANNEL_CREATE",
             channel: o
-        }), t && s.default.selectPrivateChannel(o.id), o.id
+        }), t && a.default.selectPrivateChannel(o.id), o.id
     };
     t.default = {
         fetchGuildJoinRequest: d,

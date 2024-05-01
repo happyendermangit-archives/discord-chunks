@@ -2,19 +2,19 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return a
         }
     });
     var i = n("735250");
     n("470079");
     var r = n("325767");
 
-    function s(e) {
+    function a(e) {
         let {
             width: t = 24,
             height: n = 24,
-            color: s = "currentColor",
-            foreground: a,
+            color: a = "currentColor",
+            foreground: s,
             className: o,
             ...l
         } = e;
@@ -25,8 +25,8 @@ function(e, t, n) {
             height: n,
             viewBox: "0 0 24 24",
             children: (0, i.jsx)("path", {
-                fill: s,
-                className: a,
+                fill: a,
+                className: s,
                 d: "M18.4 4L12 10.4L5.6 4L4 5.6L10.4 12L4 18.4L5.6 20L12 13.6L18.4 20L20 18.4L13.6 12L20 5.6L18.4 4Z"
             })
         })

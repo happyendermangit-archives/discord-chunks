@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("470079"),
         r = n("392711"),
-        s = n.n(r),
-        a = n("941028"),
+        a = n.n(r),
+        s = n("941028"),
         o = n("509848"),
         l = n("849522"),
         u = n("439170");
@@ -21,9 +21,9 @@ function(e, t, n) {
     function c(e, t, n) {
         let r = (0, l.default)(),
             [c, E] = i.useState(!1),
-            I = i.useMemo(() => s().debounce(e => {
-                var i, s, l, c;
-                if (i = e, s = r, l = t, c = n, _(u.default.getProps(l, c).groups) || !(i.length < d.length) && !(i.length > s) && -1 !== i.indexOf(d) && ((0, a.subscribeChannel)(l, c, o.DEFAULT_RANGES), 1)) E(!0)
+            I = i.useMemo(() => a().debounce(e => {
+                var i, a, l, c;
+                if (i = e, a = r, l = t, c = n, _(u.default.getProps(l, c).groups) || !(i.length < d.length) && !(i.length > a) && -1 !== i.indexOf(d) && ((0, s.subscribeChannel)(l, c, o.DEFAULT_RANGES), 1)) E(!0)
             }, 200, {
                 maxWait: 500
             }), [r, t, n]);

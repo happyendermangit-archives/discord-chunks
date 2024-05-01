@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("470079"),
         r = n("512722"),
-        s = n.n(r),
-        a = n("399606"),
+        a = n.n(r),
+        s = n("399606"),
         o = n("524437"),
         l = n("232567"),
         u = n("634894"),
@@ -35,8 +35,8 @@ function(e, t, n) {
             {
                 upsellSource: h
             } = (0, T.useUserPopoutCollectiblesUpsellStore)(),
-            A = (0, a.useStateFromStores)([E.default], () => E.default.getCurrentUser());
-        s()(null != A, "currentUser should not be null");
+            A = (0, s.useStateFromStores)([E.default], () => E.default.getCurrentUser());
+        a()(null != A, "currentUser should not be null");
         let m = (0, d.useBlockedPaymentsConfig)(),
             N = (0, I.default)(A.id, r),
             p = (0, I.default)(t.id, r);

@@ -26,8 +26,8 @@ function(e, t, n) {
             return l
         }
     });
-    var i, r, s = n("63063"),
-        a = n("981631"),
+    var i, r, a = n("63063"),
+        s = n("981631"),
         o = n("689938");
 
     function l(e) {
@@ -67,7 +67,7 @@ function(e, t, n) {
                 value: r[e]
             }
         }),
-        d = s.default.getArticleURL(a.HelpdeskArticles.DISABLE_GUILD_COMMUNICATION),
+        d = a.default.getArticleURL(s.HelpdeskArticles.DISABLE_GUILD_COMMUNICATION),
         _ = "GuildCommunicationDisabledDismissedGuilds",
         c = "Set Communication Disabled Modal",
         E = "Clear Communication Disabled Modal",

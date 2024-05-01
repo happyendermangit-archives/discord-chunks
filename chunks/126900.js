@@ -4,17 +4,17 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("960259"),
-        s = n("393586"),
-        a = n("325767");
+        a = n("393586"),
+        s = n("325767");
     t.default = (0, r.replaceIcon)(function(e) {
         let {
             width: t = 23,
             height: n = 18,
             color: r = "currentColor",
-            ...s
+            ...a
         } = e;
         return (0, i.jsx)("svg", {
-            ...(0, a.default)(s),
+            ...(0, s.default)(a),
             width: t,
             height: n,
             viewBox: "0 0 23 18",
@@ -26,7 +26,7 @@ function(e, t, n) {
                 fill: r
             })
         })
-    }, s.ShopIcon, void 0, {
+    }, a.ShopIcon, void 0, {
         size: 23
     })
 }

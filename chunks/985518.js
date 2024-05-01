@@ -16,8 +16,8 @@ function(e, t, n) {
     }), n("653041"), n("47120");
     var i = n("929991"),
         r = n("480739"),
-        s = n("228392"),
-        a = n("6496");
+        a = n("228392"),
+        s = n("6496");
 
     function o(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
@@ -67,13 +67,13 @@ function(e, t, n) {
                         channelId: n,
                         sessionId: i,
                         trackedFeedItems: r,
-                        isForcedFlush: a
+                        isForcedFlush: s
                     } = e, o = [], l = [];
                     for (let e of Object.keys(r)) {
-                        let t = r[e].computeSeenTimeDestructive(a);
+                        let t = r[e].computeSeenTimeDestructive(s);
                         t > 0 && (o.push(e), l.push(t))
                     }
-                    0 !== o.length && (0, s.trackForumChannelSeenBatch)({
+                    0 !== o.length && (0, a.trackForumChannelSeenBatch)({
                         guildId: t,
                         channelId: n,
                         sessionId: i,
@@ -81,7 +81,7 @@ function(e, t, n) {
                         additionalTimes: l
                     })
                 })(r)
-            }), this.guildId = e, this.channelId = t, this.sessionId = (0, a.getForumChannelSessionId)(t)
+            }), this.guildId = e, this.channelId = t, this.sessionId = (0, s.getForumChannelSessionId)(t)
         }
     }
 }

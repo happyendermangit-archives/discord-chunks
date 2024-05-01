@@ -16,8 +16,8 @@ function(e, t, n) {
     }), n("789020"), n("653041");
     var i = n("512722"),
         r = n.n(i),
-        s = n("869765"),
-        a = n("598077"),
+        a = n("869765"),
+        s = n("598077"),
         o = n("594174"),
         l = n("709054"),
         u = n("981631");
@@ -32,16 +32,16 @@ function(e, t, n) {
             username: n,
             avatar: i,
             discriminator: r,
-            bot: s,
-            globalName: a
+            bot: a,
+            globalName: s
         } = e;
         return {
             id: t,
             username: n,
             avatar: i,
             discriminator: r,
-            bot: s,
-            global_name: a
+            bot: a,
+            global_name: s
         }
     }
 
@@ -59,10 +59,10 @@ function(e, t, n) {
             poll: S
         } = e, h = [];
         if (l === u.MessageTypes.REPLY && (r()(null != c, "Replies must have a message reference"), null == E || E.replied_user)) {
-            let e = s.default.getMessageByReference(c);
-            (null == e ? void 0 : e.state) === s.ReferencedMessageState.LOADED && h.push(_(e.message.author))
+            let e = a.default.getMessageByReference(c);
+            (null == e ? void 0 : e.state) === a.ReferencedMessageState.LOADED && h.push(_(e.message.author))
         }
-        return null == I && (I = o.default.getCurrentUser()), I instanceof a.default && (I = _(I)), r()(null != I, "createMessage: author cannot be undefined"), {
+        return null == I && (I = o.default.getCurrentUser()), I instanceof s.default && (I = _(I)), r()(null != I, "createMessage: author cannot be undefined"), {
             id: null != f ? f : d(),
             type: l,
             content: n,
@@ -91,7 +91,7 @@ function(e, t, n) {
             channelId: n,
             content: i,
             embeds: r,
-            loggingName: s
+            loggingName: a
         } = e;
         return {
             id: null != t ? t : d(),
@@ -116,7 +116,7 @@ function(e, t, n) {
             timestamp: new Date().toISOString(),
             state: u.MessageStates.SENT,
             tts: !1,
-            loggingName: s
+            loggingName: a
         }
     }
 }

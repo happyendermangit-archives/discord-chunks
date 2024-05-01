@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("789020"), n("411104"), n("47120"), n("757143");
     var i = n("512722"),
         r = n.n(i),
-        s = n("392711"),
-        a = n.n(s),
+        a = n("392711"),
+        s = n.n(a),
         o = n("108131"),
         l = n.n(o),
         u = n("433517"),
@@ -72,9 +72,9 @@ function(e, t, n) {
 
     function F(e, t, n, i) {
         let r = "".concat(t.type, "|").concat(e),
-            s = t.triggerDebuggingEnabled && void 0 !== n && n.length > 0;
-        if (t.type === f.ExperimentTypes.USER) return s && (r += "|".concat(n), i && (r += "|triggerDebugging")), r;
-        if (t.type === f.ExperimentTypes.GUILD) return r += "|".concat(t.guildId), s && (r += "|".concat(n), i && (r += "|triggerDebugging")), r;
+            a = t.triggerDebuggingEnabled && void 0 !== n && n.length > 0;
+        if (t.type === f.ExperimentTypes.USER) return a && (r += "|".concat(n), i && (r += "|triggerDebugging")), r;
+        if (t.type === f.ExperimentTypes.GUILD) return r += "|".concat(t.guildId), a && (r += "|".concat(n), i && (r += "|triggerDebugging")), r;
         throw Error()
     }
 
@@ -96,8 +96,8 @@ function(e, t, n) {
             descriptor: n,
             location: i,
             location_stack: r,
-            context: s,
-            fingerprint: a,
+            context: a,
+            fingerprint: s,
             excluded: o,
             exposureType: l
         } = e;
@@ -116,11 +116,11 @@ function(e, t, n) {
                 excluded: o,
                 exposure_type: l
             };
-            null != s && (e.context_guild_id = s.guildId);
+            null != a && (e.context_guild_id = a.guildId);
             let d = u ? S.AnalyticEvents.EXPERIMENT_USER_TRIGGERED_FALLBACK : S.AnalyticEvents.EXPERIMENT_USER_TRIGGERED;
             I.default.track(d, e, {
                 flush: !0,
-                fingerprint: a
+                fingerprint: s
             })
         } else if (n.type === f.ExperimentTypes.GUILD) {
             let e = u ? S.AnalyticEvents.EXPERIMENT_GUILD_TRIGGERED_FALLBACK : S.AnalyticEvents.EXPERIMENT_GUILD_TRIGGERED;
@@ -136,7 +136,7 @@ function(e, t, n) {
                 exposure_type: l
             }, {
                 flush: !0,
-                fingerprint: a
+                fingerprint: s
             })
         }
         C[F(t, n, i, u)] = {
@@ -186,19 +186,19 @@ function(e, t, n) {
 
     function X(e, t) {
         L = e, v = null != t ? t : [], e.forEach(e => {
-            let [t, n, i, r, s, a, o, l] = e;
+            let [t, n, i, r, a, s, o, l] = e;
             D[t] = {
                 type: "user",
                 revision: n,
-                population: s,
+                population: a,
                 bucket: i,
                 override: 0 === r,
-                hashResult: null != a ? a : -1,
+                hashResult: null != s ? s : -1,
                 aaMode: 1 === o,
                 triggerDebuggingEnabled: V(1 === l, t)
             }
         }), null != t && t.forEach(e => {
-            let [t, n, i, r, s, a, o, l, u, d] = e;
+            let [t, n, i, r, a, s, o, l, u, d] = e;
             M[t] = {
                 hashKey: n,
                 revision: i,
@@ -213,8 +213,8 @@ function(e, t, n) {
                         of e)
                         for (let e of i) t[e] = n;
                     return t
-                }(s),
-                overridesFormatted: (null != a ? a : []).map(e => e.map(z)),
+                }(a),
+                overridesFormatted: (null != s ? s : []).map(e => e.map(z)),
                 holdoutName: null != o ? o : null,
                 holdoutBucket: null != l ? l : null,
                 aaMode: 1 === u,
@@ -226,20 +226,20 @@ function(e, t, n) {
     function Q(e, t, n) {
         let i = null;
         for (let {
-                buckets: s,
-                filters: a
+                buckets: a,
+                filters: s
             }
             of t) {
             var r = !0;
-            if (null != a) {
-                for (let t of a)
+            if (null != s) {
+                for (let t of s)
                     if (null != t && !t(e)) {
                         r = !1;
                         break
                     }
             }
             if (!r) continue;
-            let t = s.find(e => {
+            let t = a.find(e => {
                 let {
                     positions: t
                 } = e;
@@ -333,7 +333,7 @@ function(e, t, n) {
             experimentType: n,
             title: i,
             description: r,
-            buckets: s
+            buckets: a
         } = e;
         g = {
             ...g,
@@ -341,23 +341,23 @@ function(e, t, n) {
                 type: n,
                 title: i,
                 description: r,
-                buckets: s
+                buckets: a
             }
         }
     }
 
-    function es(e) {
+    function ea(e) {
         let t, n, {
                 store: i,
-                renderFunctions: s
+                renderFunctions: a
             } = e,
-            a = "function" == typeof i.getExperimentId ? i.getExperimentId() : null;
-        if (!a) throw Error("Experiment Store must have a static getExperimentId method defined");
+            s = "function" == typeof i.getExperimentId ? i.getExperimentId() : null;
+        if (!s) throw Error("Experiment Store must have a static getExperimentId method defined");
         let o = "function" == typeof i.getMetaData ? i.getMetaData() : k;
-        Object.keys(s).forEach(e => {
-            if (e !== f.ExperimentTypes.NONE_LEGACY) r()(null != s[e], "Unexpected missing renderFunctions"), t = e, n = Object.keys(s[e]).map(e => parseInt(e))
+        Object.keys(a).forEach(e => {
+            if (e !== f.ExperimentTypes.NONE_LEGACY) r()(null != a[e], "Unexpected missing renderFunctions"), t = e, n = Object.keys(a[e]).map(e => parseInt(e))
         }), er({
-            experimentId: a,
+            experimentId: s,
             experimentType: null != t ? t : f.ExperimentTypes.USER,
             title: o.title,
             description: o.description,
@@ -365,7 +365,7 @@ function(e, t, n) {
         })
     }
 
-    function ea(e) {
+    function es(e) {
         let {
             experimentId: t,
             experimentBucket: n
@@ -420,26 +420,26 @@ function(e, t, n) {
                 var e, t, n;
                 let i = [null !== (e = u.Storage.get(m)) && void 0 !== e ? e : {}, null !== (t = u.Storage.get(N)) && void 0 !== t ? t : {}, null !== (n = u.Storage.get(p)) && void 0 !== n ? n : {}];
                 P = {}, U = {};
-                let r = !a().isEmpty(i[0]);
+                let r = !s().isEmpty(i[0]);
                 for (let e of i)
                     for (let t in e) {
                         let n = e[t];
                         null == n || n.type !== f.ExperimentTypes.USER && n.type !== f.ExperimentTypes.GUILD || null == n.bucket || !0 !== n.override || n.fromCookie ? (delete e[t], r = !0) : n.type === f.ExperimentTypes.USER ? P[t] = n : U[t] = n
                     }
-                let s = (0, d.getBuildOverrideExperiments)();
-                for (let e in s) P[e] = {
+                let a = (0, d.getBuildOverrideExperiments)();
+                for (let e in a) P[e] = {
                     type: f.ExperimentTypes.USER,
                     revision: 1,
                     population: 0,
                     override: !0,
                     fromCookie: !0,
-                    bucket: s[e]
+                    bucket: a[e]
                 }, U[e] = {
                     type: f.ExperimentTypes.GUILD,
                     revision: 1,
                     override: !0,
                     fromCookie: !0,
-                    bucket: s[e]
+                    bucket: a[e]
                 }, r = !0;
                 r && en()
             }()
@@ -477,15 +477,15 @@ function(e, t, n) {
             if (b && null != i) return i;
             let r = "".concat(n, ":").concat(e);
             if (r in y) return y[r];
-            let s = function e(t, n) {
+            let a = function e(t, n) {
                 var i, r;
-                let s = w(n),
-                    a = M["".concat(s)];
-                if (null == a) return null;
+                let a = w(n),
+                    s = M["".concat(a)];
+                if (null == s) return null;
                 let {
                     revision: o,
                     aaMode: l
-                } = a, u = a.overrides[t], d = a.triggerDebuggingEnabled;
+                } = s, u = s.overrides[t], d = s.triggerDebuggingEnabled;
                 if (null != u) return u === f.ExperimentBuckets.NOT_ELIGIBLE ? null : {
                     type: f.ExperimentTypes.GUILD,
                     guildId: t,
@@ -495,37 +495,37 @@ function(e, t, n) {
                     hashResult: -1,
                     triggerDebuggingEnabled: d
                 };
-                let _ = w("".concat(null !== (i = a.hashKey) && void 0 !== i ? i : n, ":").concat(t)) % 1e4,
+                let _ = w("".concat(null !== (i = s.hashKey) && void 0 !== i ? i : n, ":").concat(t)) % 1e4,
                     c = null;
-                for (let e of null !== (r = a.overridesFormatted) && void 0 !== r ? r : [])
+                for (let e of null !== (r = s.overridesFormatted) && void 0 !== r ? r : [])
                     if (null !== (c = Q(t, e, _))) return {
                         type: f.ExperimentTypes.GUILD,
                         guildId: t,
-                        revision: a.revision,
+                        revision: s.revision,
                         bucket: c,
                         override: !0,
                         hashResult: _,
                         triggerDebuggingEnabled: d
                     };
-                if (null == (c = Q(t, a.populations, _))) return null;
-                if (null != a.holdoutName && null != a.holdoutBucket && a.holdoutName !== n) {
-                    let n = e(t, a.holdoutName);
+                if (null == (c = Q(t, s.populations, _))) return null;
+                if (null != s.holdoutName && null != s.holdoutBucket && s.holdoutName !== n) {
+                    let n = e(t, s.holdoutName);
                     if ((null == n ? void 0 : n.bucket) != null && (!0 !== n.override && W({
-                            experimentId: a.holdoutName,
+                            experimentId: s.holdoutName,
                             descriptor: n
-                        }), (null == n ? void 0 : n.bucket) === a.holdoutBucket)) return null
+                        }), (null == n ? void 0 : n.bucket) === s.holdoutBucket)) return null
                 }
                 return {
                     type: f.ExperimentTypes.GUILD,
                     guildId: t,
-                    revision: a.revision,
+                    revision: s.revision,
                     bucket: c,
                     hashResult: _,
                     aaMode: l,
                     triggerDebuggingEnabled: d
                 }
             }(n, e);
-            return y[r] = s, s
+            return y[r] = a, a
         }
         getUserExperimentBucket(e) {
             let t = this.getUserExperimentDescriptor(e);
@@ -612,8 +612,8 @@ function(e, t, n) {
                 OVERLAY_INITIALIZE: J,
                 CACHE_LOADED: () => this.loadCache(),
                 EXPERIMENTS_FETCH_FAILURE: $,
-                EXPERIMENT_REGISTER_LEGACY: es,
-                EXPERIMENT_OVERRIDE_BUCKET: ea,
+                EXPERIMENT_REGISTER_LEGACY: ea,
+                EXPERIMENT_OVERRIDE_BUCKET: es,
                 GUILD_CREATE: eo,
                 GUILD_UPDATE: eo
             }), h(this, "trackExposure", W)

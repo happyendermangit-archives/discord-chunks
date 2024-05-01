@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("1561"),
         l = n("743236"),
         u = n("939350"),
@@ -18,7 +18,7 @@ function(e, t, n) {
         let {
             children: t,
             color: n = "default",
-            isFocused: s = !1,
+            isFocused: a = !1,
             disabled: _ = !1,
             keepItemStyles: c = !1,
             menuItemProps: E,
@@ -28,14 +28,14 @@ function(e, t, n) {
             onClose: S
         } = e, h = r.useRef(null);
         r.useEffect(() => {
-            s && (0, l.ensureItemVisible)(h)
-        }, [s]);
+            a && (0, l.ensureItemVisible)(h)
+        }, [a]);
         let A = r.useCallback(e => {
                 if (null == I) return !1;
                 !(e.shiftKey && T) && !f && S(), e.persist(), requestAnimationFrame(() => I(e))
             }, [I, S, T, f]),
-            m = c ? a()(d.item, u.MENU_ITEM_COLORS[n], {
-                [d.focused]: s
+            m = c ? s()(d.item, u.MENU_ITEM_COLORS[n], {
+                [d.focused]: a
             }) : d.customItem;
         return (0, i.jsx)(o.Clickable, {
             innerRef: h,
@@ -46,7 +46,7 @@ function(e, t, n) {
             children: t({
                 color: n,
                 disabled: _,
-                isFocused: s
+                isFocused: a
             })
         })
     }

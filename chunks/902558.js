@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("268146"),
         r = n("46973"),
-        s = n("147913"),
-        a = n("314897"),
+        a = n("147913"),
+        s = n("314897"),
         o = n("998502"),
         l = n("981631");
     let u = new Set;
@@ -38,19 +38,19 @@ function(e, t, n) {
     }
 
     function E(e) {
-        let t = e.userId === a.default.getId(),
+        let t = e.userId === s.default.getId(),
             n = null != e.streamId,
-            s = null;
+            a = null;
         switch (e.context) {
             case r.MediaEngineContextTypes.DEFAULT:
-                s = t ? i.StoredCrashInformation.IsSendingVideo : i.StoredCrashInformation.IsReceivingVideo;
+                a = t ? i.StoredCrashInformation.IsSendingVideo : i.StoredCrashInformation.IsReceivingVideo;
                 break;
             case r.MediaEngineContextTypes.STREAM:
-                s = t ? i.StoredCrashInformation.IsSendingStream : i.StoredCrashInformation.IsReceivingStream
+                a = t ? i.StoredCrashInformation.IsSendingStream : i.StoredCrashInformation.IsReceivingStream
         }
-        o.default.setCrashInformation(s, n ? 1 : 0)
+        o.default.setCrashInformation(a, n ? 1 : 0)
     }
-    class I extends s.default {
+    class I extends a.default {
         constructor(...e) {
             var t, n, i;
             super(...e), t = this, n = "actions", i = {

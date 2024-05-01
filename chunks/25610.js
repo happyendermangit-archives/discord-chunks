@@ -10,8 +10,8 @@ function(e, t, n) {
     });
     var i = n("399606"),
         r = n("592125"),
-        s = n("699516"),
-        a = n("594174"),
+        a = n("699516"),
+        s = n("594174"),
         o = n("651530"),
         l = n("163268"),
         u = n("294602");
@@ -22,8 +22,8 @@ function(e, t, n) {
                     explicitContentFriendDm: _,
                     explicitContentNonFriendDm: c
                 } = (0, u.useExplicitContentSettingOrDefault)(),
-                E = (0, i.useStateFromStores)([s.default], () => s.default.getFriendIDs().includes(t)),
-                I = (0, i.useStateFromStores)([a.default], () => a.default.getCurrentUser()),
+                E = (0, i.useStateFromStores)([a.default], () => a.default.getFriendIDs().includes(t)),
+                I = (0, i.useStateFromStores)([s.default], () => s.default.getCurrentUser()),
                 T = (0, i.useStateFromStores)([r.default], () => {
                     let t = r.default.getChannel(e);
                     return null != t && t.isPrivate()
@@ -35,7 +35,7 @@ function(e, t, n) {
                 {
                     explicitContentGuilds: t
                 } = (0, u.useExplicitContentSettingOrDefault)(),
-                n = (0, i.useStateFromStores)([a.default], () => a.default.getCurrentUser());
+                n = (0, i.useStateFromStores)([s.default], () => s.default.getCurrentUser());
             return !!e && null != n && (0, l.getShouldObscureForSetting)(t)
         }
 }

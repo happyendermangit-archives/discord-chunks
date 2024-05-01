@@ -13,8 +13,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("679136"),
-        a = n("580747");
+        a = n("679136"),
+        s = n("580747");
     let o = r.createContext({
         enabled: !1,
         highlight: !1
@@ -26,9 +26,9 @@ function(e, t, n) {
             overwriteValue: n
         } = e, {
             enabled: l
-        } = s.default.useExperiment({
+        } = a.default.useExperiment({
             location: "web redesign icon context"
-        }), u = (0, a.default)("highlight_redesigned_icons"), d = r.useMemo(() => ({
+        }), u = (0, s.default)("highlight_redesigned_icons"), d = r.useMemo(() => ({
             enabled: l,
             highlight: u
         }), [l, u]);
@@ -47,25 +47,25 @@ function(e, t, n) {
             r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
                 size: 24
             };
-        return function(s) {
+        return function(a) {
             let {
-                enabled: a,
+                enabled: s,
                 highlight: o
             } = u();
-            if (!a) return (0, i.jsx)(e, {
-                ...s
+            if (!s) return (0, i.jsx)(e, {
+                ...a
             });
             {
                 var l, d;
                 let e = {
-                    ...s
+                    ...a
                 };
                 for (let [t, i] of Object.entries(n = {
                         foreground: "colorClass",
                         color: "color",
                         ...null != n ? n : {}
                     })) {
-                    let n = s[t];
+                    let n = a[t];
                     if (null == n && "color" === t && (n = o ? "yellow" : "currentColor"), "remove" === i) {
                         delete e[t];
                         continue

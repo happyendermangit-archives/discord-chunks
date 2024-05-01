@@ -22,39 +22,39 @@ function(e, t, n) {
     }), n("47120");
     var i = n("652874"),
         r = n("990547");
-    let s = Object.freeze({
+    let a = Object.freeze({
             debugTrackedData: null,
             impressions: []
         }),
-        a = (0, i.default)(e => s),
+        s = (0, i.default)(e => a),
         o = e => {
-            a.setState(t => ({
+            s.setState(t => ({
                 impressions: [...t.impressions, e]
             }))
         },
         l = e => {
-            a.setState(t => ({
+            s.setState(t => ({
                 impressions: t.impressions.filter(t => t.sequenceId !== e.sequenceId)
             }))
         },
         u = (e, t) => {
-            a.setState(() => ({
+            s.setState(() => ({
                 debugTrackedData: {
                     name: e,
                     ...t
                 }
             }))
         },
-        d = a;
+        d = s;
 
     function _() {
         let e = {};
-        return a.getState().impressions.forEach(t => {
+        return s.getState().impressions.forEach(t => {
             t.type === r.ImpressionTypes.PAGE ? e.page = t.name : e.section = t.name
         }), e
     }
 
     function c() {
-        return a.getState().impressions
+        return s.getState().impressions
     }
 }

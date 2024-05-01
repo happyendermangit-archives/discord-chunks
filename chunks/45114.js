@@ -28,8 +28,8 @@ function(e, t, n) {
     }), n("47120"), n("653041");
     var i = n("570140"),
         r = n("601070"),
-        s = n("131704"),
-        a = n("592125"),
+        a = n("131704"),
+        s = n("592125"),
         o = n("324067"),
         l = n("594174"),
         u = n("709054"),
@@ -39,7 +39,7 @@ function(e, t, n) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             r = arguments.length > 3 ? arguments[3] : void 0,
-            s = arguments.length > 4 ? arguments[4] : void 0;
+            a = arguments.length > 4 ? arguments[4] : void 0;
         i.default.dispatch({
             type: "CHANNEL_ACK",
             channelId: e,
@@ -47,7 +47,7 @@ function(e, t, n) {
             immediate: t,
             force: n,
             context: d.CURRENT_APP_CONTEXT,
-            location: s
+            location: a
         })
     }
 
@@ -55,7 +55,7 @@ function(e, t, n) {
         e.isCategory() ? ! function(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                 n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                i = a.default.getChannel(e);
+                i = s.default.getChannel(e);
             if (null == i || null == i.guild_id) return;
             let l = o.default.getCategories(i.guild_id);
             if (null == l[e]) return;
@@ -63,7 +63,7 @@ function(e, t, n) {
                     let {
                         channel: t
                     } = e;
-                    return (0, s.isGuildReadableType)(t.type)
+                    return (0, a.isGuildReadableType)(t.type)
                 }).map(e => {
                     let {
                         channel: t

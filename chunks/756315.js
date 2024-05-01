@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("379649"),
         r = n("846519"),
-        s = n("361291"),
-        a = n("981631");
+        a = n("361291"),
+        s = n("981631");
 
     function o(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
@@ -28,7 +28,7 @@ function(e, t, n) {
             let {
                 resolution: e,
                 fps: t
-            } = s.default.getState();
+            } = a.default.getState();
             this._targetResolution = e, this._targetFPS = t, this._statInterval.start(1e3, this._sampleStats), this._lastLayoutChanged = (0, i.now)()
         }
         stop() {
@@ -45,13 +45,13 @@ function(e, t, n) {
         getStats() {
             let e = {
                 num_layout_changes: this._layoutChanges,
-                duration_layout_fullscreen: l(this._layoutBuckets[a.StreamLayouts.FULL_SCREEN]),
-                duration_layout_theatre: l(this._layoutBuckets[a.StreamLayouts.THEATRE]),
-                duration_layout_pip: l(this._layoutBuckets[a.StreamLayouts.PIP]),
-                duration_layout_popout: l(this._layoutBuckets[a.StreamLayouts.POPOUT]),
-                duration_layout_portrait: l(this._layoutBuckets[a.StreamLayouts.PORTRAIT]),
-                duration_layout_landscape: l(this._layoutBuckets[a.StreamLayouts.LANDSCAPE]),
-                duration_layout_minimized: l(this._layoutBuckets[a.StreamLayouts.MINIMIZED])
+                duration_layout_fullscreen: l(this._layoutBuckets[s.StreamLayouts.FULL_SCREEN]),
+                duration_layout_theatre: l(this._layoutBuckets[s.StreamLayouts.THEATRE]),
+                duration_layout_pip: l(this._layoutBuckets[s.StreamLayouts.PIP]),
+                duration_layout_popout: l(this._layoutBuckets[s.StreamLayouts.POPOUT]),
+                duration_layout_portrait: l(this._layoutBuckets[s.StreamLayouts.PORTRAIT]),
+                duration_layout_landscape: l(this._layoutBuckets[s.StreamLayouts.LANDSCAPE]),
+                duration_layout_minimized: l(this._layoutBuckets[s.StreamLayouts.MINIMIZED])
             };
             return this._isSender ? {
                 ...e,
@@ -67,7 +67,7 @@ function(e, t, n) {
                 let {
                     resolution: e,
                     fps: t
-                } = s.default.getState();
+                } = a.default.getState();
                 this._streamSettingsChanged = e !== this._targetResolution || t !== this._targetFPS
             }), this._isSender = t, this._statInterval = new r.Interval, this._lastLayout = e, this._layoutBuckets = {}
         }

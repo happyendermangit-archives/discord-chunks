@@ -2,15 +2,15 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useColorIsLowContrastAgainstClientBackground: function() {
-            return a
+            return s
         }
     });
     var i = n("780384"),
         r = n("866442"),
-        s = n("410030");
+        a = n("410030");
 
-    function a(e) {
-        let t = (0, s.default)();
+    function s(e) {
+        let t = (0, a.default)();
         if (null == e || !(0, r.isValidHex)(e)) return !0;
         let {
             l: n

@@ -3,16 +3,16 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("147913"),
         r = n("914010"),
-        s = n("558217"),
-        a = n("185923");
+        a = n("558217"),
+        s = n("185923");
     class o extends i.default {
         handleInteraction(e) {
             let {
                 interaction: t
             } = e;
-            if ([a.EmojiInteractionPoint.EmojiButtonMouseEntered].includes(t)) {
+            if ([s.EmojiInteractionPoint.EmojiButtonMouseEntered].includes(t)) {
                 let e = r.default.getGuildId();
-                (0, s.maybeFetchTopEmojisByGuild)(e)
+                (0, a.maybeFetchTopEmojisByGuild)(e)
             }
         }
         constructor(...e) {

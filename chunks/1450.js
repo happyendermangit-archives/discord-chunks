@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t);
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("442837"),
         l = n("481060"),
         u = n("2052"),
@@ -26,7 +26,7 @@ function(e, t, n) {
         let {
             className: t,
             guildId: n,
-            channel: s,
+            channel: a,
             shouldTrackUpsellViewed: R,
             setTrackedUpsellViewed: C
         } = e, {
@@ -40,12 +40,12 @@ function(e, t, n) {
             D && M && R && ((0, d.trackWithMetadata)(m.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
                 location: g,
                 guild_id: null == v ? void 0 : v.id,
-                channel_id: null == s ? void 0 : s.id,
+                channel_id: null == a ? void 0 : a.id,
                 type: "Expression Picker Inline Sticker Upsell",
                 location_stack: L
             }), C(!0))
-        }, [M, v, s, g, R, C, L, D]), null != v && D) ? M ? (0, i.jsxs)("div", {
-            className: a()(O.upsell, t),
+        }, [M, v, a, g, R, C, L, D]), null != v && D) ? M ? (0, i.jsxs)("div", {
+            className: s()(O.upsell, t),
             children: [(0, i.jsx)(S.default, {
                 className: O.icon,
                 width: 24,
@@ -71,7 +71,7 @@ function(e, t, n) {
                 children: p.default.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_PREMIUM_SUBSCRIPTIONS_CTA
             })]
         }) : (0, i.jsxs)("div", {
-            className: a()(O.upsell, t),
+            className: s()(O.upsell, t),
             children: [(0, i.jsx)(h.default, {
                 className: O.icon,
                 width: 20,

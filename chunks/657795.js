@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("442837"),
         l = n("481060"),
         u = n("100527"),
@@ -28,7 +28,7 @@ function(e, t, n) {
         O = n("243935");
 
     function R(e) {
-        var t, n, s;
+        var t, n, a;
         let {
             className: R,
             onClose: C
@@ -51,7 +51,7 @@ function(e, t, n) {
             M = null != v || null != D,
             y = (null == v ? void 0 : null === (t = v.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === N.PremiumSubscriptionSKUs.TIER_0;
         return (0, i.jsxs)("div", {
-            className: a()(O.emptyState, R, {
+            className: s()(O.emptyState, R, {
                 [O.unifyTrialUpsell]: M
             }),
             children: [M ? (0, i.jsx)(E.default, {
@@ -59,7 +59,7 @@ function(e, t, n) {
                 trialOffer: v,
                 onClose: C,
                 type: N.PremiumUpsellTypes.EMPTY_STICKER_PICKER_UPSELL,
-                subscriptionTier: null !== (s = null == v ? void 0 : null === (n = v.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== s ? s : N.PremiumSubscriptionSKUs.TIER_2,
+                subscriptionTier: null !== (a = null == v ? void 0 : null === (n = v.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : N.PremiumSubscriptionSKUs.TIER_2,
                 children: p.default.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_SUBTITLE
             }) : (0, i.jsxs)(i.Fragment, {
                 children: [(0, i.jsx)(l.Heading, {

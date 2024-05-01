@@ -7,16 +7,16 @@ function(e, t, n) {
     });
     var i = n("381499"),
         r = n("601992"),
-        s = n("675478"),
-        a = n("885110"),
+        a = n("675478"),
+        s = n("885110"),
         o = n("626135"),
         l = n("981631");
     async function u(e, t, n, u) {
-        null == t && (t = a.default.getStatus()), await s.PreloadedUserSettingsActionCreators.updateAsync("status", t => {
+        null == t && (t = s.default.getStatus()), await a.PreloadedUserSettingsActionCreators.updateAsync("status", t => {
             t.status = i.StringValue.create({
                 value: e
             }), t.statusExpiresAtMs = null != u ? "".concat(Date.now() + u) : "0"
-        }, s.UserSettingsDelay.INFREQUENT_USER_ACTION);
+        }, a.UserSettingsDelay.INFREQUENT_USER_ACTION);
         let d = {
             next_status: e,
             prev_status: t,

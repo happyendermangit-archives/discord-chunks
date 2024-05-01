@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t);
     var i = n("735250"),
         r = n("470079"),
-        s = n("374470"),
-        a = n("442837"),
+        a = n("374470"),
+        s = n("442837"),
         o = n("607070"),
         l = n("768760");
     let u = e => {
@@ -15,7 +15,7 @@ function(e, t, n) {
             responsive: d,
             mediaLayoutType: _,
             ...c
-        } = e, E = (0, a.useStateFromStores)([o.default], () => o.default.useReducedMotion), I = r.useRef(null);
+        } = e, E = (0, s.useStateFromStores)([o.default], () => o.default.useReducedMotion), I = r.useRef(null);
 
         function T() {
             var e;
@@ -32,7 +32,7 @@ function(e, t, n) {
             } = I;
             null != e && function(e) {
                 e.removeAttribute("src"), Array.from(e.children).forEach(e => {
-                    (0, s.isElement)(e, HTMLSourceElement) && (e.removeAttribute("src"), e.removeAttribute("type")), (0, s.isElement)(e, HTMLImageElement) && e.removeAttribute("src")
+                    (0, a.isElement)(e, HTMLSourceElement) && (e.removeAttribute("src"), e.removeAttribute("type")), (0, a.isElement)(e, HTMLImageElement) && e.removeAttribute("src")
                 });
                 try {
                     e.load()

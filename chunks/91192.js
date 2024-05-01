@@ -31,13 +31,13 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("25441"),
-        a = n("536895"),
+        a = n("25441"),
+        s = n("536895"),
         o = n("260866");
     let l = {
             id: "NO_LIST",
             onKeyDown() {},
-            orientation: a.Orientations.VERTICAL,
+            orientation: s.Orientations.VERTICAL,
             ref: r.createRef(),
             tabIndex: -1
         },
@@ -50,9 +50,9 @@ function(e, t, n) {
     function _(e) {
         let [t, n] = r.useState(-1), {
             id: i,
-            setFocus: a
-        } = r.useContext(u), l = r.useCallback(() => a(e), [e, a]);
-        return r.useLayoutEffect(() => (0, s.addFocusSubscriber)(i, (t, i) => {
+            setFocus: s
+        } = r.useContext(u), l = r.useCallback(() => s(e), [e, s]);
+        return r.useLayoutEffect(() => (0, a.addFocusSubscriber)(i, (t, i) => {
             n(i && t === e ? 0 : -1)
         }), [e, i]), {
             role: "listitem",
@@ -105,7 +105,7 @@ function(e, t, n) {
                 ref: i,
                 tabIndex: r
             },
-            orientation: s
+            orientation: a
         } = e;
         return {
             role: "list",
@@ -128,8 +128,8 @@ function(e, t, n) {
             children: t,
             navigator: n
         } = e, {
-            id: s,
-            setFocus: a,
+            id: a,
+            setFocus: s,
             containerProps: {
                 onKeyDown: o,
                 ref: l,
@@ -137,15 +137,15 @@ function(e, t, n) {
             },
             orientation: c
         } = n, E = r.useMemo(() => ({
-            id: s,
-            setFocus: a
-        }), [s, a]), I = r.useMemo(() => ({
+            id: a,
+            setFocus: s
+        }), [a, s]), I = r.useMemo(() => ({
             onKeyDown: o,
             orientation: c,
             ref: l,
-            id: s,
+            id: a,
             tabIndex: _
-        }), [o, c, l, s, _]);
+        }), [o, c, l, a, _]);
         return (0, i.jsxs)(d.Provider, {
             value: I,
             children: [(0, i.jsx)(u.Provider, {

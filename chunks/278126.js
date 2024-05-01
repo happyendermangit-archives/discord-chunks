@@ -6,9 +6,9 @@ function(e, t, n) {
         }
     });
     var i, r = n("735250"),
-        s = n("470079"),
-        a = n("120356"),
-        o = n.n(a),
+        a = n("470079"),
+        s = n("120356"),
+        o = n.n(s),
         l = n("592450");
 
     function u(e, t, n) {
@@ -24,14 +24,14 @@ function(e, t, n) {
         MEDIUM: 2,
         LARGE: 4
     });
-    class _ extends(i = s.Component) {
+    class _ extends(i = a.Component) {
         renderCircle() {
             let {
                 strokeSize: e,
                 percent: t,
                 colorOverride: n,
                 background: i
-            } = this.props, s = (20 - e) / 2, a = s * Math.PI * 2;
+            } = this.props, a = (20 - e) / 2, s = a * Math.PI * 2;
             return (0, r.jsxs)("svg", {
                 viewBox: "0 0 ".concat(20, " ").concat(20),
                 className: l.circle,
@@ -49,14 +49,14 @@ function(e, t, n) {
                     className: l.circleProgress,
                     cx: 10,
                     cy: 10,
-                    r: s,
+                    r: a,
                     strokeWidth: "".concat(e, "px"),
                     strokeLinecap: "round",
                     transform: "rotate(-90 ".concat(10, " ").concat(10, ")"),
                     stroke: null != n ? n : "currentColor",
                     style: {
-                        strokeDasharray: a,
-                        strokeDashoffset: (1 - Math.min(Math.max(t, 0), 100) / 100) * a
+                        strokeDasharray: s,
+                        strokeDashoffset: (1 - Math.min(Math.max(t, 0), 100) / 100) * s
                     }
                 })]
             })

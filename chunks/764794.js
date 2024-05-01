@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("981729"),
-        a = n("780384"),
+        a = n("981729"),
+        s = n("780384"),
         o = n("351773"),
         l = n("410030"),
         u = n("100527"),
@@ -42,7 +42,7 @@ function(e, t, n) {
                 channel: m,
                 onClose: () => v(!1),
                 isResending: N
-            }), (0, i.jsx)(s.Tooltip, {
+            }), (0, i.jsx)(a.Tooltip, {
                 text: O,
                 shouldShow: !L,
                 "aria-label": null != R ? R : O,
@@ -75,7 +75,7 @@ function(e, t, n) {
                             hovered: C,
                             isResending: N,
                             shouldShowBirthdayUX: p,
-                            isLightTheme: (0, a.isThemeLight)(P)
+                            isLightTheme: (0, s.isThemeLight)(P)
                         })
                     })
                 })

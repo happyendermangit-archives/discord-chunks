@@ -4,8 +4,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        s = n.n(r),
-        a = n("481060"),
+        a = n.n(r),
+        s = n("481060"),
         o = n("904335");
     t.default = function(e) {
         let {
@@ -32,10 +32,10 @@ function(e, t, n) {
             isSystemMessage: m,
             hasReply: N,
             ...p
-        } = e, O = (0, i.jsx)(a.FocusRing, {
+        } = e, O = (0, i.jsx)(s.FocusRing, {
             ...h,
             children: (0, i.jsxs)("div", {
-                className: s()(t, {
+                className: a()(t, {
                     [o.wrapper]: !0,
                     [o.contentOnly]: r,
                     [o.compact]: n,
@@ -57,7 +57,7 @@ function(e, t, n) {
                 }) : null]
             })
         });
-        return u ? (0, i.jsx)(a.FocusBlock, {
+        return u ? (0, i.jsx)(s.FocusBlock, {
             children: O
         }) : O
     }

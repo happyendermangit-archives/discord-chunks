@@ -2,13 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return a
+            return s
         }
     });
     var i = n("512722"),
         r = n.n(i);
 
-    function s(e, t, n) {
+    function a(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -16,7 +16,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    class a {
+    class s {
         setExporter(e) {
             this.exporter = e
         }
@@ -26,7 +26,7 @@ function(e, t, n) {
             return r()(null != t, "DiscordCanvas: Couldn't get a canvas for export."), this.exporter.exportCanvas(t, e)
         }
         constructor(e, t) {
-            s(this, "canvas", void 0), s(this, "exporter", void 0), this.canvas = e, this.exporter = t
+            a(this, "canvas", void 0), a(this, "exporter", void 0), this.canvas = e, this.exporter = t
         }
     }
 }

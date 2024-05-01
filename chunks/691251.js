@@ -1,6 +1,6 @@
 function(e, t, n) {
     "use strict";
-    var i, r, s, a;
+    var i, r, a, s;
     n.r(t), n.d(t, {
         InspectedExpressionChangeSource: function() {
             return i
@@ -8,5 +8,5 @@ function(e, t, n) {
         PickerContextMenuDataTypes: function() {
             return r
         }
-    }), (s = i || (i = {}))[s.GRID_NAVIGATOR_EVENT = 0] = "GRID_NAVIGATOR_EVENT", s[s.MOUSE_EVENT = 1] = "MOUSE_EVENT", (a = r || (r = {})).EMOJI = "emoji", a.STICKER = "sticker", a.PACK_ICON = "pack-icon"
+    }), (a = i || (i = {}))[a.GRID_NAVIGATOR_EVENT = 0] = "GRID_NAVIGATOR_EVENT", a[a.MOUSE_EVENT = 1] = "MOUSE_EVENT", (s = r || (r = {})).EMOJI = "emoji", s.STICKER = "sticker", s.PACK_ICON = "pack-icon"
 }

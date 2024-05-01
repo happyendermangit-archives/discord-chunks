@@ -5,8 +5,8 @@ function(e, t, n) {
             return E
         }
     }), n("47120");
-    var i, r, s = n("735250"),
-        a = n("470079"),
+    var i, r, a = n("735250"),
+        s = n("470079"),
         o = n("718017"),
         l = n("442837"),
         u = n("481060"),
@@ -21,7 +21,7 @@ function(e, t, n) {
             setConfettiCount: i,
             setShouldFireConfetti: r,
             tooltipProps: _
-        } = e, [E, I] = a.useState(0), T = a.useRef(-1), f = a.useRef(!0), S = (0, l.useStateFromStores)([d.default], () => d.default.useReducedMotion), {
+        } = e, [E, I] = s.useState(0), T = s.useRef(-1), f = s.useRef(!0), S = (0, l.useStateFromStores)([d.default], () => d.default.useReducedMotion), {
             scaleFactor: h
         } = (0, o.useSpring)({
             from: {
@@ -35,16 +35,16 @@ function(e, t, n) {
                 friction: 7
             }
         });
-        return (a.useEffect(() => () => {
+        return (s.useEffect(() => () => {
             f.current = !1
-        }, []), S) ? (0, s.jsx)(s.Fragment, {
+        }, []), S) ? (0, a.jsx)(a.Fragment, {
             children: t
-        }) : (0, s.jsx)(o.animated.div, {
+        }) : (0, a.jsx)(o.animated.div, {
             className: c.confettiTriggerWrapper,
             style: {
                 transform: h.to(e => "scale(".concat(e, ")"))
             },
-            children: (0, s.jsx)(u.Clickable, {
+            children: (0, a.jsx)(u.Clickable, {
                 className: c.confettiTrigger,
                 onMouseDown: () => {
                     I(1), r(!0), i(e => Math.min(e + 2, 200)), window.clearTimeout(T.current), T.current = window.setTimeout(() => {
@@ -74,15 +74,15 @@ function(e, t, n) {
             isFiring: i
         } = e, {
             cannon: r,
-            createMultipleConfettiAt: s
-        } = a.useContext(_.ConfettiCannonContext), o = (0, l.useStateFromStores)([d.default], () => d.default.useReducedMotion);
-        return a.useEffect(() => () => {
+            createMultipleConfettiAt: a
+        } = s.useContext(_.ConfettiCannonContext), o = (0, l.useStateFromStores)([d.default], () => d.default.useReducedMotion);
+        return s.useEffect(() => () => {
             null == r || r.clearConfetti()
-        }, [r]), a.useEffect(() => {
+        }, [r]), s.useEffect(() => {
             if (!i || o || null == n.current) return;
             let e = n.current.getBoundingClientRect(),
                 r = e.left + e.width / 2;
-            s(r, e.top + e.height / 2, {
+            a(r, e.top + e.height / 2, {
                 velocity: {
                     type: "static-random",
                     minValue: {
@@ -95,6 +95,6 @@ function(e, t, n) {
                     }
                 }
             }, Math.max(t, 20))
-        }, [t, n, s, i, o]), null
+        }, [t, n, a, i, o]), null
     }
 }

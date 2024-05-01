@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getMyContentInventory: function() {
-            return a
+            return s
         },
         postTrackToContentInventory: function() {
             return o
@@ -10,11 +10,11 @@ function(e, t, n) {
     });
     var i = n("544891"),
         r = n("881052"),
-        s = n("981631");
-    let a = async () => {
+        a = n("981631");
+    let s = async () => {
         try {
             let e = (await i.HTTP.get({
-                    url: s.Endpoints.MY_CONTENT_INVENTORY
+                    url: a.Endpoints.MY_CONTENT_INVENTORY
                 })).body,
                 t = e.wait_ms_until_next_fetch;
             if (null != t) {
@@ -29,7 +29,7 @@ function(e, t, n) {
     async function o(e, t) {
         try {
             await i.HTTP.post({
-                url: s.Endpoints.MY_SPOTIFY_CONTENT_INVENTORY,
+                url: a.Endpoints.MY_SPOTIFY_CONTENT_INVENTORY,
                 body: {
                     connection_id: e,
                     tracks: [t]

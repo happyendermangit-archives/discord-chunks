@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("470079"),
         r = n("913527"),
-        s = n.n(r),
-        a = n("207561"),
+        a = n.n(r),
+        s = n("207561"),
         o = n("70956"),
         l = n("660199");
     let u = [
@@ -20,11 +20,11 @@ function(e, t, n) {
         d = 2 * o.default.Seconds.HOUR;
 
     function _(e) {
-        let t = (0, a.useForceUpdate)();
+        let t = (0, s.useForceUpdate)();
         return (i.useEffect(() => {
             if ("R" !== e.format) return;
             let n = 1e3 * d,
-                i = Math.abs(e.parsed.diff(s()()));
+                i = Math.abs(e.parsed.diff(a()()));
             for (let [e, t] of u)
                 if (i < 1e3 * e) {
                     n = 1e3 * t;

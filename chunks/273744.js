@@ -8,12 +8,12 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("302454"),
-        s = n.n(r),
-        a = n("481060");
+        a = n.n(r),
+        s = n("481060");
     let o = {
-        ...s().defaultRules.link,
+        ...a().defaultRules.link,
         react: function(e, t, n) {
-            return (0, i.jsx)(a.Anchor, {
+            return (0, i.jsx)(s.Anchor, {
                 href: e.target,
                 target: "_blank",
                 children: t(e.content, n)

@@ -10,8 +10,8 @@ function(e, t, n) {
     }), n("789020"), n("47120");
     var i = n("480189"),
         r = n("81825"),
-        s = n("768581"),
-        a = n("584597"),
+        a = n("768581"),
+        s = n("584597"),
         o = n("598077"),
         l = n("701488");
 
@@ -49,8 +49,8 @@ function(e, t, n) {
                 storeListingSkuId: e.store_listing_sku_id,
                 guildId: e.guild_id,
                 guild: e.guild,
-                publishers: null != e.publishers ? e.publishers.map(a.default.createFromServer) : [],
-                developers: null != e.developers ? e.developers.map(a.default.createFromServer) : [],
+                publishers: null != e.publishers ? e.publishers.map(s.default.createFromServer) : [],
+                developers: null != e.developers ? e.developers.map(s.default.createFromServer) : [],
                 eulaId: e.eula_id,
                 slug: e.slug,
                 coverImage: e.cover_image,
@@ -71,7 +71,7 @@ function(e, t, n) {
             })
         }
         getIconURL(e, t) {
-            return null != this.icon ? s.default.getGameAssetURL({
+            return null != this.icon ? a.default.getGameAssetURL({
                 id: this.id,
                 hash: this.icon,
                 size: e,
@@ -79,7 +79,7 @@ function(e, t, n) {
             }) : null
         }
         getIconSource(e, t) {
-            return null != this.icon ? s.default.getGameAssetSource({
+            return null != this.icon ? a.default.getGameAssetSource({
                 id: this.id,
                 hash: this.icon,
                 size: e,
@@ -87,7 +87,7 @@ function(e, t, n) {
             }) : null
         }
         getSplashURL(e, t) {
-            return null != this.splash ? s.default.getGameAssetURL({
+            return null != this.splash ? a.default.getGameAssetURL({
                 id: this.id,
                 hash: this.splash,
                 size: e,
@@ -96,7 +96,7 @@ function(e, t, n) {
             }) : null
         }
         getCoverImageURL(e) {
-            return null != this.coverImage ? s.default.getApplicationIconURL({
+            return null != this.coverImage ? a.default.getApplicationIconURL({
                 id: this.id,
                 icon: this.coverImage,
                 size: e
@@ -122,8 +122,8 @@ function(e, t, n) {
             return null != e && (e & t) === t
         }
         constructor(e) {
-            var t, n, r, s;
-            super(), u(this, "id", void 0), u(this, "name", void 0), u(this, "icon", void 0), u(this, "splash", void 0), u(this, "overlay", void 0), u(this, "overlayWarn", void 0), u(this, "overlayCompatibilityHook", void 0), u(this, "overlayMethods", void 0), u(this, "hook", void 0), u(this, "aliases", void 0), u(this, "publishers", void 0), u(this, "developers", void 0), u(this, "primarySkuId", void 0), u(this, "storeListingSkuId", void 0), u(this, "thirdPartySkus", void 0), u(this, "guildId", void 0), u(this, "guild", void 0), u(this, "executables", void 0), u(this, "hashes", void 0), u(this, "description", void 0), u(this, "eulaId", void 0), u(this, "slug", void 0), u(this, "coverImage", void 0), u(this, "bot", void 0), u(this, "flags", void 0), u(this, "maxParticipants", void 0), u(this, "tags", void 0), u(this, "embeddedActivityConfig", void 0), u(this, "type", void 0), u(this, "team", void 0), u(this, "roleConnectionsVerificationUrl", void 0), u(this, "integrationTypesConfig", void 0), u(this, "isMonetized", void 0), u(this, "storefront_available", void 0), u(this, "termsOfServiceUrl", void 0), u(this, "privacyPolicyUrl", void 0), this.id = e.id, this.name = e.name, this.icon = e.icon || null, this.splash = e.splash || null, this.overlay = e.overlay || !1, this.overlayWarn = e.overlayWarn || !1, this.overlayCompatibilityHook = e.overlayCompatibilityHook || !1, this.overlayMethods = null !== (t = e.overlayMethods) && void 0 !== t ? t : i.ApplicationOverlayMethodFlags.DEFAULT, this.hook = null === (n = e.hook) || void 0 === n || n, this.aliases = e.aliases || [], this.publishers = e.publishers || [], this.developers = e.developers || [], this.primarySkuId = e.primarySkuId, this.storeListingSkuId = e.storeListingSkuId, this.guildId = e.guildId || null, this.guild = e.guild || null, this.thirdPartySkus = e.thirdPartySkus || [], this.executables = (e.executables || []).map(_), this.hashes = e.hashes || [], this.description = e.description || null, this.eulaId = e.eulaId || null, this.slug = e.slug || null, this.bot = e.bot || null, this.coverImage = e.coverImage || null, this.flags = null !== (r = e.flags) && void 0 !== r ? r : 0, this.tags = null !== (s = e.tags) && void 0 !== s ? s : [], this.maxParticipants = e.maxParticipants, this.embeddedActivityConfig = e.embedded_activity_config, this.type = e.type, this.team = e.team, this.roleConnectionsVerificationUrl = e.roleConnectionsVerificationUrl, this.integrationTypesConfig = e.integrationTypesConfig, this.isMonetized = e.is_monetized, this.storefront_available = e.storefront_available, this.termsOfServiceUrl = e.termsOfServiceUrl, this.privacyPolicyUrl = e.privacyPolicyUrl
+            var t, n, r, a;
+            super(), u(this, "id", void 0), u(this, "name", void 0), u(this, "icon", void 0), u(this, "splash", void 0), u(this, "overlay", void 0), u(this, "overlayWarn", void 0), u(this, "overlayCompatibilityHook", void 0), u(this, "overlayMethods", void 0), u(this, "hook", void 0), u(this, "aliases", void 0), u(this, "publishers", void 0), u(this, "developers", void 0), u(this, "primarySkuId", void 0), u(this, "storeListingSkuId", void 0), u(this, "thirdPartySkus", void 0), u(this, "guildId", void 0), u(this, "guild", void 0), u(this, "executables", void 0), u(this, "hashes", void 0), u(this, "description", void 0), u(this, "eulaId", void 0), u(this, "slug", void 0), u(this, "coverImage", void 0), u(this, "bot", void 0), u(this, "flags", void 0), u(this, "maxParticipants", void 0), u(this, "tags", void 0), u(this, "embeddedActivityConfig", void 0), u(this, "type", void 0), u(this, "team", void 0), u(this, "roleConnectionsVerificationUrl", void 0), u(this, "integrationTypesConfig", void 0), u(this, "isMonetized", void 0), u(this, "storefront_available", void 0), u(this, "termsOfServiceUrl", void 0), u(this, "privacyPolicyUrl", void 0), this.id = e.id, this.name = e.name, this.icon = e.icon || null, this.splash = e.splash || null, this.overlay = e.overlay || !1, this.overlayWarn = e.overlayWarn || !1, this.overlayCompatibilityHook = e.overlayCompatibilityHook || !1, this.overlayMethods = null !== (t = e.overlayMethods) && void 0 !== t ? t : i.ApplicationOverlayMethodFlags.DEFAULT, this.hook = null === (n = e.hook) || void 0 === n || n, this.aliases = e.aliases || [], this.publishers = e.publishers || [], this.developers = e.developers || [], this.primarySkuId = e.primarySkuId, this.storeListingSkuId = e.storeListingSkuId, this.guildId = e.guildId || null, this.guild = e.guild || null, this.thirdPartySkus = e.thirdPartySkus || [], this.executables = (e.executables || []).map(_), this.hashes = e.hashes || [], this.description = e.description || null, this.eulaId = e.eulaId || null, this.slug = e.slug || null, this.bot = e.bot || null, this.coverImage = e.coverImage || null, this.flags = null !== (r = e.flags) && void 0 !== r ? r : 0, this.tags = null !== (a = e.tags) && void 0 !== a ? a : [], this.maxParticipants = e.maxParticipants, this.embeddedActivityConfig = e.embedded_activity_config, this.type = e.type, this.team = e.team, this.roleConnectionsVerificationUrl = e.roleConnectionsVerificationUrl, this.integrationTypesConfig = e.integrationTypesConfig, this.isMonetized = e.is_monetized, this.storefront_available = e.storefront_available, this.termsOfServiceUrl = e.termsOfServiceUrl, this.privacyPolicyUrl = e.privacyPolicyUrl
         }
     }
 }

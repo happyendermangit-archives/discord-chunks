@@ -5,8 +5,8 @@ function(e, t, n) {
             return i
         }
     }), n("47120");
-    var i, r, s, a = n("392711"),
-        o = n.n(a),
+    var i, r, a, s = n("392711"),
+        o = n.n(s),
         l = n("442837"),
         u = n("570140"),
         d = n("823379"),
@@ -24,7 +24,7 @@ function(e, t, n) {
         }) : e[t] = n, e
     }
     let f = n("981631").MAX_MESSAGE_LENGTH_PREMIUM + 500;
-    (s = i || (i = {}))[s.ChannelMessage = 0] = "ChannelMessage", s[s.ThreadSettings = 1] = "ThreadSettings", s[s.FirstThreadMessage = 2] = "FirstThreadMessage", s[s.ApplicationLauncherCommand = 3] = "ApplicationLauncherCommand", s[s.Poll = 4] = "Poll", s[s.SlashCommand = 5] = "SlashCommand";
+    (a = i || (i = {}))[a.ChannelMessage = 0] = "ChannelMessage", a[a.ThreadSettings = 1] = "ThreadSettings", a[a.FirstThreadMessage = 2] = "FirstThreadMessage", a[a.ApplicationLauncherCommand = 3] = "ApplicationLauncherCommand", a[a.Poll = 4] = "Poll", a[a.SlashCommand = 5] = "SlashCommand";
     let S = {};
 
     function h(e) {
@@ -38,12 +38,12 @@ function(e, t, n) {
             channelId: n,
             draft: i,
             draftType: r
-        } = e, s = E.default.getChannel(n);
-        i === (null == s ? void 0 : s.template) && (i = "");
-        let a = c.default.getId();
-        if (null != a && null != i && "" !== i) {
+        } = e, a = E.default.getChannel(n);
+        i === (null == a ? void 0 : a.template) && (i = "");
+        let s = c.default.getId();
+        if (null != s && null != i && "" !== i) {
             var o, l;
-            let e = h(a),
+            let e = h(s),
                 t = e[n];
             if (null == t && (t = e[n] = {}), (l = i).length > f && (l = l.substr(0, f)), (i = l) === (null === (o = t[r]) || void 0 === o ? void 0 : o.draft)) return !1;
             t[r] = {
@@ -178,14 +178,14 @@ function(e, t, n) {
             let i = h(n),
                 r = i[t.parent_id];
             if (null == r) return !1;
-            let s = r[1];
-            if (null == s) return !1;
-            if (s.parentMessageId !== _.default.castChannelIdAsMessageId(t.id)) return !1;
+            let a = r[1];
+            if (null == a) return !1;
+            if (a.parentMessageId !== _.default.castChannelIdAsMessageId(t.id)) return !1;
             {
-                var a, o;
+                var s, o;
                 let e = i[t.parent_id];
                 if (null == e) return !1;
-                let n = null !== (o = null === (a = e[2]) || void 0 === a ? void 0 : a.draft) && void 0 !== o ? o : "";
+                let n = null !== (o = null === (s = e[2]) || void 0 === s ? void 0 : s.draft) && void 0 !== o ? o : "";
                 "" !== n && (i[t.id] = {
                     0: {
                         timestamp: Date.now(),
@@ -210,10 +210,10 @@ function(e, t, n) {
             } = e, i = c.default.getId();
             if (null == i) return;
             let r = h(i),
-                s = r[t];
-            null == s && (s = r[t] = {}), s[1] = {
+                a = r[t];
+            null == a && (a = r[t] = {}), a[1] = {
                 timestamp: Date.now(),
-                ...s[1],
+                ...a[1],
                 ...n,
                 parentChannelId: t
             }

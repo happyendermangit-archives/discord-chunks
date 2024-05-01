@@ -23,8 +23,8 @@ function(e, t, n) {
             return O
         }
     }), n("789020"), n("627341");
-    var i, r, s = n("278074"),
-        a = n("399606"),
+    var i, r, a = n("278074"),
+        s = n("399606"),
         o = n("432877"),
         l = n("163268"),
         u = n("25610"),
@@ -52,13 +52,13 @@ function(e, t, n) {
         },
         m = (e, t, n, i, r) => {
             let {
-                flags: s = 0,
-                contentScanVersion: a
+                flags: a = 0,
+                contentScanVersion: s
             } = e, u = E.default.getMessage(t, n);
             if (null == u) return null;
             if (r) {
-                if (!u.author.bot && (0, l.isPendingScanVersion)(a)) return "potential_explicit_content";
-                if ((0, T.hasFlag)(s, S.MessageEmbedFlags.CONTAINS_EXPLICIT_MEDIA) || o.default.get("obscure_blur_effect_enabled")) return "explicit_content"
+                if (!u.author.bot && (0, l.isPendingScanVersion)(s)) return "potential_explicit_content";
+                if ((0, T.hasFlag)(a, S.MessageEmbedFlags.CONTAINS_EXPLICIT_MEDIA) || o.default.get("obscure_blur_effect_enabled")) return "explicit_content"
             }
             return i ? "spoiler" : null
         },
@@ -100,8 +100,8 @@ function(e, t, n) {
         let {
             channel: t,
             media: n
-        } = e, i = (0, a.useStateFromStores)([I.default], () => null != t && I.default.can(S.Permissions.MANAGE_MESSAGES, t)), r = c.RenderSpoilers.useSetting(), s = (0, u.useShouldRedactExplicitContentForForum)();
-        return p(n, !(0, f.default)(r, i), s)
+        } = e, i = (0, s.useStateFromStores)([I.default], () => null != t && I.default.can(S.Permissions.MANAGE_MESSAGES, t)), r = c.RenderSpoilers.useSetting(), a = (0, u.useShouldRedactExplicitContentForForum)();
+        return p(n, !(0, f.default)(r, i), a)
     }
-    let R = e => (0, s.match)(e).with("explicit_content", () => h.default.Messages.EXPLICIT_CONTENT_ALT).with("spoiler", () => h.default.Messages.SPOILER_HIDDEN_A11Y_LABEL).otherwise(() => void 0)
+    let R = e => (0, a.match)(e).with("explicit_content", () => h.default.Messages.EXPLICIT_CONTENT_ALT).with("spoiler", () => h.default.Messages.SPOILER_HIDDEN_A11Y_LABEL).otherwise(() => void 0)
 }

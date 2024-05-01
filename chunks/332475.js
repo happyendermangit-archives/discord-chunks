@@ -6,9 +6,9 @@ function(e, t, n) {
         }
     }), n("47120");
     var i, r = n("735250"),
-        s = n("470079"),
-        a = n("120356"),
-        o = n.n(a),
+        a = n("470079"),
+        s = n("120356"),
+        o = n.n(s),
         l = n("780384"),
         u = n("481060"),
         d = n("410030"),
@@ -31,15 +31,15 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    class p extends(i = s.PureComponent) {
+    class p extends(i = a.PureComponent) {
         render() {
             let e;
             let {
                 className: t,
                 imageClassName: n,
                 readyState: i,
-                src: s,
-                placeholder: a,
+                src: a,
+                placeholder: s,
                 placeholderVersion: l,
                 alt: d,
                 width: E,
@@ -70,8 +70,8 @@ function(e, t, n) {
                     minHeight: C
                 }),
                 k = 0 !== B.width ? B.width / B.height : 1;
-            "" !== s && i !== f.ImageReadyStates.ERROR ? e = y({
-                src: s,
+            "" !== a && i !== f.ImageReadyStates.ERROR ? e = y({
+                src: a,
                 size: B,
                 alt: d,
                 className: n,
@@ -83,7 +83,7 @@ function(e, t, n) {
             })), e = (0, r.jsx)(I.ImageLoadingOverlay, {
                 readyState: i,
                 aspectRatio: k,
-                placeholder: a,
+                placeholder: s,
                 placeholderVersion: l,
                 placeholderStyle: R(B, g),
                 children: e
@@ -120,7 +120,7 @@ function(e, t, n) {
                         href: M,
                         ref: this._containerRef,
                         "data-role": "img",
-                        "data-safe-src": s
+                        "data-safe-src": a
                     }), null != U ? (0, r.jsx)(u.Clickable, {
                         className: h.clickableWrapper,
                         tabIndex: null != b ? b : 0,
@@ -140,7 +140,7 @@ function(e, t, n) {
             })
         }
         constructor(...e) {
-            super(...e), N(this, "_containerRef", s.createRef()), N(this, "_clickableRef", s.createRef())
+            super(...e), N(this, "_containerRef", a.createRef()), N(this, "_clickableRef", a.createRef())
         }
     }
 
@@ -149,7 +149,7 @@ function(e, t, n) {
             size: t,
             mediaLayoutType: n,
             alt: i
-        } = e, s = (0, d.default)();
+        } = e, a = (0, d.default)();
         return (0, r.jsx)("div", {
             className: h.imageErrorWrapper,
             style: function(e, t) {
@@ -167,7 +167,7 @@ function(e, t, n) {
                 }
             }(t, n),
             children: (0, r.jsx)("img", {
-                src: (0, l.isThemeLight)(s) ? m : A,
+                src: (0, l.isThemeLight)(a) ? m : A,
                 className: h.imageError,
                 alt: null != i ? i : S.default.Messages.IMAGE
             })
@@ -181,14 +181,14 @@ function(e, t, n) {
                 src: t,
                 size: n,
                 alt: i,
-                className: s,
-                mediaLayoutType: a
+                className: a,
+                mediaLayoutType: s
             } = e;
             return (0, r.jsx)("img", {
-                className: null != s ? s : void 0,
+                className: null != a ? a : void 0,
                 alt: null != i ? i : S.default.Messages.IMAGE,
                 src: t,
-                style: R(n, a)
+                style: R(n, s)
             })
         },
         minWidth: 0,

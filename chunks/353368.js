@@ -3,11 +3,11 @@ function(e, t, n) {
     var i, r;
     n.r(t), n.d(t, {
         EMOJI_SIZE: function() {
-            return s
+            return a
         },
         VoiceChannelEffectAnimationType: function() {
             return i
         }
     }), (r = i || (i = {}))[r.PREMIUM = 0] = "PREMIUM", r[r.BASIC = 1] = "BASIC";
-    let s = 32
+    let a = 32
 }

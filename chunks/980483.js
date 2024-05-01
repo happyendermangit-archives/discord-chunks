@@ -6,9 +6,9 @@ function(e, t, n) {
         }
     }), n("47120");
     var i, r = n("735250"),
-        s = n("470079"),
-        a = n("120356"),
-        o = n.n(a),
+        a = n("470079"),
+        s = n("120356"),
+        o = n.n(s),
         l = n("748780"),
         u = n("481060"),
         d = n("981631"),
@@ -22,7 +22,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    class E extends(i = s.Component) {
+    class E extends(i = a.Component) {
         componentDidMount() {
             this.props.show && this.animate(1)
         }

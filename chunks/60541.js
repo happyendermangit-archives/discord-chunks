@@ -10,9 +10,9 @@ function(e, t, n) {
     });
     var i = n("47770"),
         r = n("11934"),
-        s = n("65154");
+        a = n("65154");
 
-    function a(e, t, n) {
+    function s(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -23,13 +23,13 @@ function(e, t, n) {
     let o = 0;
     class l extends i.default {
         destroy() {
-            this.destroyed = !0, this.setConnectionState(s.ConnectionStates.DISCONNECTED), this.emit(r.BaseSpeedTesterEvent.Destroy, this), this.removeAllListeners()
+            this.destroyed = !0, this.setConnectionState(a.ConnectionStates.DISCONNECTED), this.emit(r.BaseSpeedTesterEvent.Destroy, this), this.removeAllListeners()
         }
         setConnectionState(e) {
             this.connectionState = e, this.emit(r.BaseSpeedTesterEvent.ConnectionStateChange, this.connectionState)
         }
         initializeStreamParameters(e) {
-            this.videoStreamParameters = e.filter(e => e.type === s.MediaTypes.TEST).map(e => {
+            this.videoStreamParameters = e.filter(e => e.type === a.MediaTypes.TEST).map(e => {
                 var t;
                 return {
                     type: e.type,
@@ -40,7 +40,7 @@ function(e, t, n) {
             })
         }
         constructor(e) {
-            super(), a(this, "mediaEngineConnectionId", "WebRTC-".concat(o++)), a(this, "userId", void 0), a(this, "streamUserId", void 0), a(this, "destroyed", !1), a(this, "audioSSRC", 0), a(this, "videoStreamParameters", []), a(this, "connectionState", s.ConnectionStates.CONNECTING), this.userId = e
+            super(), s(this, "mediaEngineConnectionId", "WebRTC-".concat(o++)), s(this, "userId", void 0), s(this, "streamUserId", void 0), s(this, "destroyed", !1), s(this, "audioSSRC", 0), s(this, "videoStreamParameters", []), s(this, "connectionState", a.ConnectionStates.CONNECTING), this.userId = e
         }
     }
 }

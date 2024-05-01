@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("47120");
-    var i, r, s, a, o = n("512722"),
+    var i, r, a, s, o = n("512722"),
         l = n.n(o),
         u = n("442837"),
         d = n("570140"),
@@ -48,12 +48,12 @@ function(e, t, n) {
             return I(e).windowSize
         }
     }
-    a = "WindowStore", (s = "displayName") in(r = T) ? Object.defineProperty(r, s, {
-        value: a,
+    s = "WindowStore", (a = "displayName") in(r = T) ? Object.defineProperty(r, a, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a;
+    }) : r[a] = s;
     let f = new T(d.default, {
         WINDOW_INIT: function(e) {
             l()(!E.has(e.windowId), "Window initialized multiple times");
@@ -62,7 +62,7 @@ function(e, t, n) {
                 height: n,
                 isElementFullscreen: i,
                 focused: r,
-                visible: s
+                visible: a
             } = e;
             return E.set(e.windowId, {
                 windowSize: {
@@ -71,7 +71,7 @@ function(e, t, n) {
                 },
                 isElementFullscreen: i,
                 focused: r,
-                visible: s
+                visible: a
             }), r && (c = e.windowId), !0
         },
         WINDOW_FULLSCREEN_CHANGE: function(e) {

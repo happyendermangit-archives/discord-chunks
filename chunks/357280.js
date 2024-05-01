@@ -13,8 +13,8 @@ function(e, t, n) {
             let r = e[n];
             if (null == r) continue;
             if (n === i && (t._misc = e[n].map(e => e.message)), Array.isArray(r)) continue;
-            let s = r[i];
-            null != s ? t[n] = s.map(e => e.message) : t[n] = [Object.keys(r)[0]]
+            let a = r[i];
+            null != a ? t[n] = a.map(e => e.message) : t[n] = [Object.keys(r)[0]]
         }
         return t
     }

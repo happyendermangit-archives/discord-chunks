@@ -2,9 +2,9 @@ function(e, t, n) {
     "use strict";
     n.r(t), n("47120");
     var i, r = n("735250"),
-        s = n("470079"),
-        a = n("120356"),
-        o = n.n(a),
+        a = n("470079"),
+        s = n("120356"),
+        o = n.n(s),
         l = n("895721");
 
     function u(e, t, n) {
@@ -15,7 +15,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    class d extends(i = s.PureComponent) {
+    class d extends(i = a.PureComponent) {
         static getDerivedStateFromProps(e, t) {
             let {
                 streamId: n
@@ -45,13 +45,13 @@ function(e, t, n) {
             let {
                 children: n,
                 mirror: i,
-                paused: a,
+                paused: s,
                 component: o
             } = this.props;
             if (null == e) {
                 if (null == n) return null;
-                let e = s.Children.only(n);
-                return s.cloneElement(e, {
+                let e = a.Children.only(n);
+                return a.cloneElement(e, {
                     style: {
                         display: t && !i ? void 0 : "none"
                     },
@@ -59,7 +59,7 @@ function(e, t, n) {
                 })
             }
             return (0, r.jsx)(o, {
-                paused: a,
+                paused: s,
                 className: l.media,
                 streamId: e,
                 onReady: t ? null : this.handleReady

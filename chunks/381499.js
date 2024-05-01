@@ -38,19 +38,19 @@ function(e, t, n) {
             }), void 0 !== e && (0, i.reflectionMergePartial)(this, t, e), t
         }
         internalBinaryRead(e, t, n, r) {
-            let s = null != r ? r : this.create(),
-                a = e.pos + t;
-            for (; e.pos < a;) {
+            let a = null != r ? r : this.create(),
+                s = e.pos + t;
+            for (; e.pos < s;) {
                 let [t, r] = e.tag();
-                if (1 === t) s.value = e.double();
+                if (1 === t) a.value = e.double();
                 else {
-                    let a = n.readUnknownField;
-                    if ("throw" === a) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(r, ") for ").concat(this.typeName));
+                    let s = n.readUnknownField;
+                    if ("throw" === s) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(r, ") for ").concat(this.typeName));
                     let o = e.skip(r);
-                    !1 !== a && (!0 === a ? i.UnknownFieldHandler.onRead : a)(this.typeName, s, t, r, o)
+                    !1 !== s && (!0 === s ? i.UnknownFieldHandler.onRead : s)(this.typeName, a, t, r, o)
                 }
             }
-            return s
+            return a
         }
         internalBinaryWrite(e, t, n) {
             0 !== e.value && t.tag(1, i.WireType.Bit64).double(e.value);
@@ -67,7 +67,7 @@ function(e, t, n) {
         }
     }
     new r;
-    class s extends i.MessageType {
+    class a extends i.MessageType {
         internalJsonWrite(e, t) {
             return this.refJsonWriter.scalar(1, e.value, "value", !1, !0)
         }
@@ -84,19 +84,19 @@ function(e, t, n) {
             }), void 0 !== e && (0, i.reflectionMergePartial)(this, t, e), t
         }
         internalBinaryRead(e, t, n, r) {
-            let s = null != r ? r : this.create(),
-                a = e.pos + t;
-            for (; e.pos < a;) {
+            let a = null != r ? r : this.create(),
+                s = e.pos + t;
+            for (; e.pos < s;) {
                 let [t, r] = e.tag();
-                if (1 === t) s.value = e.float();
+                if (1 === t) a.value = e.float();
                 else {
-                    let a = n.readUnknownField;
-                    if ("throw" === a) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(r, ") for ").concat(this.typeName));
+                    let s = n.readUnknownField;
+                    if ("throw" === s) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(r, ") for ").concat(this.typeName));
                     let o = e.skip(r);
-                    !1 !== a && (!0 === a ? i.UnknownFieldHandler.onRead : a)(this.typeName, s, t, r, o)
+                    !1 !== s && (!0 === s ? i.UnknownFieldHandler.onRead : s)(this.typeName, a, t, r, o)
                 }
             }
-            return s
+            return a
         }
         internalBinaryWrite(e, t, n) {
             0 !== e.value && t.tag(1, i.WireType.Bit32).float(e.value);
@@ -112,8 +112,8 @@ function(e, t, n) {
             }])
         }
     }
-    new s;
-    class a extends i.MessageType {
+    new a;
+    class s extends i.MessageType {
         internalJsonWrite(e, t) {
             return this.refJsonWriter.scalar(i.ScalarType.INT64, e.value, "value", !1, !0)
         }
@@ -130,19 +130,19 @@ function(e, t, n) {
             }), void 0 !== e && (0, i.reflectionMergePartial)(this, t, e), t
         }
         internalBinaryRead(e, t, n, r) {
-            let s = null != r ? r : this.create(),
-                a = e.pos + t;
-            for (; e.pos < a;) {
+            let a = null != r ? r : this.create(),
+                s = e.pos + t;
+            for (; e.pos < s;) {
                 let [t, r] = e.tag();
-                if (1 === t) s.value = e.int64().toString();
+                if (1 === t) a.value = e.int64().toString();
                 else {
-                    let a = n.readUnknownField;
-                    if ("throw" === a) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(r, ") for ").concat(this.typeName));
+                    let s = n.readUnknownField;
+                    if ("throw" === s) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(r, ") for ").concat(this.typeName));
                     let o = e.skip(r);
-                    !1 !== a && (!0 === a ? i.UnknownFieldHandler.onRead : a)(this.typeName, s, t, r, o)
+                    !1 !== s && (!0 === s ? i.UnknownFieldHandler.onRead : s)(this.typeName, a, t, r, o)
                 }
             }
-            return s
+            return a
         }
         internalBinaryWrite(e, t, n) {
             "0" !== e.value && t.tag(1, i.WireType.Varint).int64(e.value);
@@ -158,7 +158,7 @@ function(e, t, n) {
             }])
         }
     }
-    let o = new a;
+    let o = new s;
     class l extends i.MessageType {
         internalJsonWrite(e, t) {
             return this.refJsonWriter.scalar(i.ScalarType.UINT64, e.value, "value", !1, !0)
@@ -176,19 +176,19 @@ function(e, t, n) {
             }), void 0 !== e && (0, i.reflectionMergePartial)(this, t, e), t
         }
         internalBinaryRead(e, t, n, r) {
-            let s = null != r ? r : this.create(),
-                a = e.pos + t;
-            for (; e.pos < a;) {
+            let a = null != r ? r : this.create(),
+                s = e.pos + t;
+            for (; e.pos < s;) {
                 let [t, r] = e.tag();
-                if (1 === t) s.value = e.uint64().toString();
+                if (1 === t) a.value = e.uint64().toString();
                 else {
-                    let a = n.readUnknownField;
-                    if ("throw" === a) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(r, ") for ").concat(this.typeName));
+                    let s = n.readUnknownField;
+                    if ("throw" === s) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(r, ") for ").concat(this.typeName));
                     let o = e.skip(r);
-                    !1 !== a && (!0 === a ? i.UnknownFieldHandler.onRead : a)(this.typeName, s, t, r, o)
+                    !1 !== s && (!0 === s ? i.UnknownFieldHandler.onRead : s)(this.typeName, a, t, r, o)
                 }
             }
-            return s
+            return a
         }
         internalBinaryWrite(e, t, n) {
             "0" !== e.value && t.tag(1, i.WireType.Varint).uint64(e.value);
@@ -222,19 +222,19 @@ function(e, t, n) {
             }), void 0 !== e && (0, i.reflectionMergePartial)(this, t, e), t
         }
         internalBinaryRead(e, t, n, r) {
-            let s = null != r ? r : this.create(),
-                a = e.pos + t;
-            for (; e.pos < a;) {
+            let a = null != r ? r : this.create(),
+                s = e.pos + t;
+            for (; e.pos < s;) {
                 let [t, r] = e.tag();
-                if (1 === t) s.value = e.int32();
+                if (1 === t) a.value = e.int32();
                 else {
-                    let a = n.readUnknownField;
-                    if ("throw" === a) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(r, ") for ").concat(this.typeName));
+                    let s = n.readUnknownField;
+                    if ("throw" === s) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(r, ") for ").concat(this.typeName));
                     let o = e.skip(r);
-                    !1 !== a && (!0 === a ? i.UnknownFieldHandler.onRead : a)(this.typeName, s, t, r, o)
+                    !1 !== s && (!0 === s ? i.UnknownFieldHandler.onRead : s)(this.typeName, a, t, r, o)
                 }
             }
-            return s
+            return a
         }
         internalBinaryWrite(e, t, n) {
             0 !== e.value && t.tag(1, i.WireType.Varint).int32(e.value);
@@ -268,19 +268,19 @@ function(e, t, n) {
             }), void 0 !== e && (0, i.reflectionMergePartial)(this, t, e), t
         }
         internalBinaryRead(e, t, n, r) {
-            let s = null != r ? r : this.create(),
-                a = e.pos + t;
-            for (; e.pos < a;) {
+            let a = null != r ? r : this.create(),
+                s = e.pos + t;
+            for (; e.pos < s;) {
                 let [t, r] = e.tag();
-                if (1 === t) s.value = e.uint32();
+                if (1 === t) a.value = e.uint32();
                 else {
-                    let a = n.readUnknownField;
-                    if ("throw" === a) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(r, ") for ").concat(this.typeName));
+                    let s = n.readUnknownField;
+                    if ("throw" === s) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(r, ") for ").concat(this.typeName));
                     let o = e.skip(r);
-                    !1 !== a && (!0 === a ? i.UnknownFieldHandler.onRead : a)(this.typeName, s, t, r, o)
+                    !1 !== s && (!0 === s ? i.UnknownFieldHandler.onRead : s)(this.typeName, a, t, r, o)
                 }
             }
-            return s
+            return a
         }
         internalBinaryWrite(e, t, n) {
             0 !== e.value && t.tag(1, i.WireType.Varint).uint32(e.value);
@@ -314,19 +314,19 @@ function(e, t, n) {
             }), void 0 !== e && (0, i.reflectionMergePartial)(this, t, e), t
         }
         internalBinaryRead(e, t, n, r) {
-            let s = null != r ? r : this.create(),
-                a = e.pos + t;
-            for (; e.pos < a;) {
+            let a = null != r ? r : this.create(),
+                s = e.pos + t;
+            for (; e.pos < s;) {
                 let [t, r] = e.tag();
-                if (1 === t) s.value = e.bool();
+                if (1 === t) a.value = e.bool();
                 else {
-                    let a = n.readUnknownField;
-                    if ("throw" === a) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(r, ") for ").concat(this.typeName));
+                    let s = n.readUnknownField;
+                    if ("throw" === s) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(r, ") for ").concat(this.typeName));
                     let o = e.skip(r);
-                    !1 !== a && (!0 === a ? i.UnknownFieldHandler.onRead : a)(this.typeName, s, t, r, o)
+                    !1 !== s && (!0 === s ? i.UnknownFieldHandler.onRead : s)(this.typeName, a, t, r, o)
                 }
             }
-            return s
+            return a
         }
         internalBinaryWrite(e, t, n) {
             !1 !== e.value && t.tag(1, i.WireType.Varint).bool(e.value);
@@ -360,19 +360,19 @@ function(e, t, n) {
             }), void 0 !== e && (0, i.reflectionMergePartial)(this, t, e), t
         }
         internalBinaryRead(e, t, n, r) {
-            let s = null != r ? r : this.create(),
-                a = e.pos + t;
-            for (; e.pos < a;) {
+            let a = null != r ? r : this.create(),
+                s = e.pos + t;
+            for (; e.pos < s;) {
                 let [t, r] = e.tag();
-                if (1 === t) s.value = e.string();
+                if (1 === t) a.value = e.string();
                 else {
-                    let a = n.readUnknownField;
-                    if ("throw" === a) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(r, ") for ").concat(this.typeName));
+                    let s = n.readUnknownField;
+                    if ("throw" === s) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(r, ") for ").concat(this.typeName));
                     let o = e.skip(r);
-                    !1 !== a && (!0 === a ? i.UnknownFieldHandler.onRead : a)(this.typeName, s, t, r, o)
+                    !1 !== s && (!0 === s ? i.UnknownFieldHandler.onRead : s)(this.typeName, a, t, r, o)
                 }
             }
-            return s
+            return a
         }
         internalBinaryWrite(e, t, n) {
             "" !== e.value && t.tag(1, i.WireType.LengthDelimited).string(e.value);
@@ -406,19 +406,19 @@ function(e, t, n) {
             }), void 0 !== e && (0, i.reflectionMergePartial)(this, t, e), t
         }
         internalBinaryRead(e, t, n, r) {
-            let s = null != r ? r : this.create(),
-                a = e.pos + t;
-            for (; e.pos < a;) {
+            let a = null != r ? r : this.create(),
+                s = e.pos + t;
+            for (; e.pos < s;) {
                 let [t, r] = e.tag();
-                if (1 === t) s.value = e.bytes();
+                if (1 === t) a.value = e.bytes();
                 else {
-                    let a = n.readUnknownField;
-                    if ("throw" === a) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(r, ") for ").concat(this.typeName));
+                    let s = n.readUnknownField;
+                    if ("throw" === s) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(r, ") for ").concat(this.typeName));
                     let o = e.skip(r);
-                    !1 !== a && (!0 === a ? i.UnknownFieldHandler.onRead : a)(this.typeName, s, t, r, o)
+                    !1 !== s && (!0 === s ? i.UnknownFieldHandler.onRead : s)(this.typeName, a, t, r, o)
                 }
             }
-            return s
+            return a
         }
         internalBinaryWrite(e, t, n) {
             e.value.length && t.tag(1, i.WireType.LengthDelimited).bytes(e.value);

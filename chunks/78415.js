@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         VerificationLayerContainer: function() {
-            return a
+            return s
         },
         VerificationLayerProvider: function() {
             return o
@@ -11,7 +11,7 @@ function(e, t, n) {
     let {
         Layer: i,
         LayerContainer: r,
-        LayerProvider: s
-    } = (0, n("302901").createLayer)("Verification"), a = r, o = s;
+        LayerProvider: a
+    } = (0, n("302901").createLayer)("Verification"), s = r, o = a;
     t.default = i
 }

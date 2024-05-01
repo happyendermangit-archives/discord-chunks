@@ -3,9 +3,9 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("710845"),
         r = n("430824"),
-        s = n("287328");
+        a = n("287328");
 
-    function a(e, t, n) {
+    function s(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -17,7 +17,7 @@ function(e, t, n) {
     t.default = new class e {
         async getCommittedVersions() {
             try {
-                let e = s.default.guildVersions();
+                let e = a.default.guildVersions();
                 if (null == e) return {};
                 let t = (await e.getMany()).map(e => [e.id, e.version]);
                 return Object.fromEntries(null != t ? t : [])
@@ -87,8 +87,8 @@ function(e, t, n) {
             if (null != t) {
                 var n, i;
                 let r = Math.max(null !== (n = this.committed.get(e)) && void 0 !== n ? n : 0, null !== (i = this.pending.get(e)) && void 0 !== i ? i : 0),
-                    s = this.computeLatestVersion(r, t);
-                s > r && this.pending.set(e, s)
+                    a = this.computeLatestVersion(r, t);
+                a > r && this.pending.set(e, a)
             }
         }
         computeLatestVersion(e, t) {
@@ -101,7 +101,7 @@ function(e, t, n) {
         }
         commit(e) {
             if (this.pending.size > 0) {
-                let t = s.default.guildVersionsTransaction(e);
+                let t = a.default.guildVersionsTransaction(e);
                 for (let [e, n] of this.pending) null != n ? (t.put({
                     id: e,
                     version: n
@@ -110,7 +110,7 @@ function(e, t, n) {
             }
         }
         constructor() {
-            a(this, "pending", new Map), a(this, "committed", new Map), a(this, "actions", {
+            s(this, "pending", new Map), s(this, "committed", new Map), s(this, "actions", {
                 BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
                 CHANNEL_CREATE: (e, t) => this.handleChannelCreate(e, t),
                 CHANNEL_DELETE: (e, t) => this.handleChannelDelete(e, t),

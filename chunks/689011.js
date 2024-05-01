@@ -14,8 +14,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("481060"),
-        s = n("131388"),
-        a = n("409813"),
+        a = n("131388"),
+        s = n("409813"),
         o = n("586585"),
         l = n("614277"),
         u = n("465670"),
@@ -29,8 +29,8 @@ function(e, t, n) {
             let {
                 step: t,
                 onClose: n
-            } = e, o = (0, s.default)(_.RESPONSIVE_MOBILE_HEIGHT_SMALL_QUERY);
-            return t === a.Step.CONFIRM || t === a.Step.BENEFITS ? (0, i.jsx)("div", {}) : (0, i.jsxs)("div", {
+            } = e, o = (0, a.default)(_.RESPONSIVE_MOBILE_HEIGHT_SMALL_QUERY);
+            return t === s.Step.CONFIRM || t === s.Step.BENEFITS ? (0, i.jsx)("div", {}) : (0, i.jsxs)("div", {
                 className: E.headerContainer,
                 children: [!o && (0, i.jsx)("div", {
                     className: E.headerImageContainer,
@@ -55,24 +55,24 @@ function(e, t, n) {
                 icon: t,
                 storeListingBenefits: n,
                 skuBenefits: r,
-                application: s,
-                title: a,
+                application: a,
+                title: s,
                 subtitle: o,
                 description: l
             } = e;
-            return null == s ? null : (0, i.jsx)("div", {
+            return null == a ? null : (0, i.jsx)("div", {
                 className: E.confirmationContainer,
                 children: (0, i.jsxs)(d.ApplicationBenefitsModalContent, {
                     children: [(0, i.jsx)(d.ApplicationBenefitsModalIcon, {
-                        application: s,
+                        application: a,
                         asset: t
                     }), (0, i.jsx)(d.ApplicationBenefitsModalHeading, {
-                        children: a
+                        children: s
                     }), (0, i.jsx)(d.ApplicationBenefitsModalDivider, {}), (0, i.jsx)(d.ApplicationBenefitsModalDescription, {
                         title: o,
                         description: l
                     }), (0, i.jsx)(d.ApplicationBenefitsModalBenefits, {
-                        applicationId: s.id,
+                        applicationId: a.id,
                         storeListingBenefits: n,
                         skuBenefits: r
                     })]
@@ -84,7 +84,7 @@ function(e, t, n) {
         let {
             tierName: t,
             onConfirm: n,
-            subscription: s
+            subscription: a
         } = e;
         return (0, i.jsxs)("div", {
             className: E.purchaseConfirmation,
@@ -105,7 +105,7 @@ function(e, t, n) {
                 variant: "text-md/medium",
                 color: "header-secondary",
                 children: c.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_CONFIRMATION_SUBTITLE.format({
-                    timestamp: null == s ? void 0 : s.currentPeriodEnd
+                    timestamp: null == a ? void 0 : a.currentPeriodEnd
                 })
             }), (0, i.jsx)(l.PaymentPortalFooter, {
                 children: (0, i.jsx)(o.default, {

@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("653041");
     var i = n("392711"),
         r = n.n(i),
-        s = n("379649"),
-        a = n("126168"),
+        a = n("379649"),
+        s = n("126168"),
         o = n("981631");
 
     function l(e, t, n) {
@@ -26,11 +26,11 @@ function(e, t, n) {
         update(e) {
             this.current !== e && (this.current = e, this.history.push({
                 state: e,
-                startTime: (0, s.now)()
+                startTime: (0, a.now)()
             }))
         }
         getVoiceConnectionSuccessStats() {
-            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, s.now)(),
+            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, a.now)(),
                 t = this.getStateDurations(e),
                 n = e => r().sumBy(t, t => t.state === e ? t.durationMs : 0);
             return {
@@ -46,7 +46,7 @@ function(e, t, n) {
         }
         getStateDurations(e) {
             if (0 === this.history.length) return [];
-            let t = (0, a.default)(this.history, (e, t) => ({
+            let t = (0, s.default)(this.history, (e, t) => ({
                 state: e.state,
                 durationMs: t.startTime - e.startTime
             }));

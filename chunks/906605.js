@@ -13,8 +13,8 @@ function(e, t, n) {
     });
     var i = n("570140"),
         r = n("592125"),
-        s = n("19780"),
-        a = n("944486"),
+        a = n("19780"),
+        s = n("944486"),
         o = n("626135"),
         l = n("981631");
 
@@ -30,9 +30,9 @@ function(e, t, n) {
             saveAsDefault: t
         }), o.default.track(l.AnalyticEvents.SET_HANG_STATUS, {
             status_type: e,
-            channel_id: a.default.getVoiceChannelId(),
-            guild_id: null === (n = r.default.getChannel(a.default.getVoiceChannelId())) || void 0 === n ? void 0 : n.guild_id,
-            media_session_id: s.default.getMediaSessionId()
+            channel_id: s.default.getVoiceChannelId(),
+            guild_id: null === (n = r.default.getChannel(s.default.getVoiceChannelId())) || void 0 === n ? void 0 : n.guild_id,
+            media_session_id: a.default.getMediaSessionId()
         })
     }
 
@@ -49,9 +49,9 @@ function(e, t, n) {
             saveAsDefault: n
         }), o.default.track(l.AnalyticEvents.SET_HANG_STATUS, {
             status_type: e,
-            channel_id: a.default.getVoiceChannelId(),
-            guild_id: null === (u = r.default.getChannel(a.default.getVoiceChannelId())) || void 0 === u ? void 0 : u.guild_id,
-            media_session_id: s.default.getMediaSessionId()
+            channel_id: s.default.getVoiceChannelId(),
+            guild_id: null === (u = r.default.getChannel(s.default.getVoiceChannelId())) || void 0 === u ? void 0 : u.guild_id,
+            media_session_id: a.default.getMediaSessionId()
         })
     }
 
@@ -61,9 +61,9 @@ function(e, t, n) {
             type: "CLEAR_HANG_STATUS",
             saveAsDefault: e
         }), o.default.track(l.AnalyticEvents.CLEAR_HANG_STATUS, {
-            channel_id: a.default.getVoiceChannelId(),
-            guild_id: null === (t = r.default.getChannel(a.default.getVoiceChannelId())) || void 0 === t ? void 0 : t.guild_id,
-            media_session_id: s.default.getMediaSessionId()
+            channel_id: s.default.getVoiceChannelId(),
+            guild_id: null === (t = r.default.getChannel(s.default.getVoiceChannelId())) || void 0 === t ? void 0 : t.guild_id,
+            media_session_id: a.default.getMediaSessionId()
         })
     }
 }

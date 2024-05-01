@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        s = n.n(r),
-        a = n("939350"),
+        a = n.n(r),
+        s = n("939350"),
         o = n("942610");
 
     function l(e) {
@@ -24,7 +24,7 @@ function(e, t, n) {
             role: "group",
             className: r,
             children: [null != n ? (0, i.jsx)("div", {
-                className: s()(o.groupLabel, a.MENU_ITEM_COLORS[l]),
+                className: a()(o.groupLabel, s.MENU_ITEM_COLORS[l]),
                 children: n
             }) : null, t]
         })

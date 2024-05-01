@@ -10,8 +10,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("873546"),
-        a = n("481060"),
+        a = n("873546"),
+        s = n("481060"),
         o = n("326413"),
         l = n("626135"),
         u = n("981631"),
@@ -20,7 +20,7 @@ function(e, t, n) {
         c = n("659877");
 
     function E(e) {
-        return e || !(s.isMobile || s.isTablet) ? _.default.Messages.SEASONAL_GIFTING_DM_POPUP_BODY : _.default.Messages.SEASONAL_GIFTING_MAKE_SOMEONES_DAY_TOOLTIP
+        return e || !(a.isMobile || a.isTablet) ? _.default.Messages.SEASONAL_GIFTING_DM_POPUP_BODY : _.default.Messages.SEASONAL_GIFTING_MAKE_SOMEONES_DAY_TOOLTIP
     }
 
     function I(e) {
@@ -35,7 +35,7 @@ function(e, t, n) {
             })
         }, []);
         let T = r.useMemo(() => [() => n.e("36278").then(n.t.bind(n, "268147", 19)), () => n.e("66902").then(n.t.bind(n, "7171", 19)), () => n.e("99694").then(n.t.bind(n, "55562", 19))], []),
-            f = I || !(s.isMobile || s.isTablet),
+            f = I || !(a.isMobile || a.isTablet),
             S = f ? _.default.Messages.SEASONAL_GIFTING_DM_POPUP_HEADER : _.default.Messages.SEASONAL_GIFTING_POPUP_HEADER,
             h = f ? _.default.Messages.SEASONAL_GIFTING_DM_POPUP_CTA : _.default.Messages.SEASONAL_GIFTING_SEND_GIFT_CTA;
         return (0, i.jsxs)("div", {
@@ -45,27 +45,27 @@ function(e, t, n) {
                 animationData: T
             }), (0, i.jsxs)("div", {
                 className: c.body,
-                children: [(0, i.jsx)(a.Heading, {
+                children: [(0, i.jsx)(s.Heading, {
                     className: c.text,
                     variant: "heading-sm/semibold",
                     children: S
-                }), (0, i.jsx)(a.Text, {
+                }), (0, i.jsx)(s.Text, {
                     className: c.text,
                     variant: "text-sm/normal",
                     children: E(I)
                 })]
             }), (0, i.jsxs)("div", {
                 className: c.dmButtonContainer,
-                children: [(0, i.jsx)(a.Button, {
+                children: [(0, i.jsx)(s.Button, {
                     className: c.dmButton,
-                    look: a.Button.Looks.FILLED,
-                    color: a.Button.Colors.BRAND,
+                    look: s.Button.Looks.FILLED,
+                    color: s.Button.Colors.BRAND,
                     onClick: () => t(),
                     children: _.default.Messages.GOT_IT
-                }), (0, i.jsx)(a.Button, {
+                }), (0, i.jsx)(s.Button, {
                     className: c.dmButton,
-                    look: a.Button.Looks.INVERTED,
-                    color: a.Button.Colors.BRAND,
+                    look: s.Button.Looks.INVERTED,
+                    color: s.Button.Colors.BRAND,
                     onClick: () => d(),
                     children: h
                 })]
@@ -80,9 +80,9 @@ function(e, t, n) {
             onComplete: t,
             onDMCheckItOutClick: n,
             markAsDismissed: r,
-            isDM: s
+            isDM: a
         } = e;
-        return (0, i.jsx)(a.Popout, {
+        return (0, i.jsx)(s.Popout, {
             spacing: 0,
             shouldShow: !0,
             position: "top",
@@ -95,7 +95,7 @@ function(e, t, n) {
                 onDMCheckItOutClick: () => {
                     n(), t(), r(d.ContentDismissActionType.TAKE_ACTION)
                 },
-                isDM: s
+                isDM: a
             }),
             onRequestClose: () => void 0,
             closeOnScroll: !1,

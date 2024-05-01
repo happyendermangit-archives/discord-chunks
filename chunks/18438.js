@@ -55,12 +55,12 @@ function(e, t, n) {
     }), n("411104");
     var i = n("544891"),
         r = n("570140"),
-        s = n("37234"),
-        a = n("981631");
+        a = n("37234"),
+        s = n("981631");
     async function o(e, t) {
         let {
             nick: n,
-            avatar: s,
+            avatar: a,
             avatarDecoration: o
         } = t;
         if (null == e) throw Error("Need guildId");
@@ -69,13 +69,13 @@ function(e, t, n) {
         });
         let l = {
             nick: n,
-            avatar: s,
+            avatar: a,
             avatar_decoration_id: null === o ? null : null == o ? void 0 : o.id,
             avatar_decoration_sku_id: null === o ? null : null == o ? void 0 : o.skuId
         };
         try {
             let t = await i.HTTP.patch({
-                url: a.Endpoints.SET_GUILD_MEMBER(e),
+                url: s.Endpoints.SET_GUILD_MEMBER(e),
                 body: l,
                 oldFormErrors: !0
             });
@@ -113,7 +113,7 @@ function(e, t, n) {
     function d() {
         r.default.dispatch({
             type: "GUILD_IDENTITY_SETTINGS_CLOSE"
-        }), (0, s.popLayer)()
+        }), (0, a.popLayer)()
     }
 
     function _() {

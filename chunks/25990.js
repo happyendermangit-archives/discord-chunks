@@ -1,6 +1,6 @@
 function(e, t, n) {
     "use strict";
-    let i, r, s, a, o, l, u, d, _, c, E, I, T, f;
+    let i, r, a, s, o, l, u, d, _, c, E, I, T, f;
     n.r(t);
     var S, h, A, m, N = n("979554"),
         p = n("442837"),
@@ -22,11 +22,11 @@ function(e, t, n) {
     }
 
     function M() {
-        i = void 0, r = void 0, s = void 0, a = void 0
+        i = void 0, r = void 0, a = void 0, s = void 0
     }
 
     function y() {
-        o = void 0, l = void 0, u = void 0, d = void 0, _ = void 0, a = void 0
+        o = void 0, l = void 0, u = void 0, d = void 0, _ = void 0, s = void 0
     }
 
     function P() {
@@ -40,7 +40,7 @@ function(e, t, n) {
             return g
         }
         showNotice() {
-            return void 0 !== i || void 0 !== o || void 0 !== l || void 0 !== u || void 0 !== d || void 0 !== _ || void 0 !== s || void 0 !== a || void 0 !== r
+            return void 0 !== i || void 0 !== o || void 0 !== l || void 0 !== u || void 0 !== d || void 0 !== _ || void 0 !== a || void 0 !== s || void 0 !== r
         }
         getIsSubmitDisabled() {
             return void 0 !== l && l.length > R.BIO_MAX_LENGTH
@@ -67,10 +67,10 @@ function(e, t, n) {
             return _
         }
         getPendingAvatarDecoration() {
-            return s
+            return a
         }
         getPendingProfileEffectId() {
-            return a
+            return s
         }
         getAllPending() {
             return {
@@ -80,8 +80,8 @@ function(e, t, n) {
                 pendingPronouns: u,
                 pendingAccentColor: d,
                 pendingThemeColors: _,
-                pendingAvatarDecoration: s,
-                pendingProfileEffectId: a,
+                pendingAvatarDecoration: a,
+                pendingProfileEffectId: s,
                 pendingGlobalName: r
             }
         }
@@ -153,7 +153,7 @@ function(e, t, n) {
             let {
                 avatarDecoration: t
             } = e;
-            s = t
+            a = t
         },
         USER_SETTINGS_ACCOUNT_SET_SINGLE_TRY_IT_OUT_COLLECTIBLES_ITEM: function(e) {
             let {
@@ -165,7 +165,7 @@ function(e, t, n) {
             let {
                 profileEffectId: t
             } = e;
-            a = t
+            s = t
         },
         USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER: function(e) {
             let {
@@ -235,7 +235,7 @@ function(e, t, n) {
         USER_SETTINGS_RESET_ALL_PENDING: D,
         USER_SETTINGS_RESET_ALL_TRY_IT_OUT: P,
         USER_SETTINGS_RESET_PENDING_AVATAR_DECORATION: function() {
-            s = void 0
+            a = void 0
         },
         LOGOUT: function() {
             i = void 0

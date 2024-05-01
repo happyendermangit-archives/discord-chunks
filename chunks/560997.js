@@ -13,42 +13,42 @@ function(e, t, n) {
     });
     var i = n("442837"),
         r = n("570140"),
-        s = n("238514"),
-        a = n("675478"),
+        a = n("238514"),
+        s = n("675478"),
         o = n("581883"),
         l = n("526761");
 
     function u(e, t, n, r) {
-        let s = () => {
+        let a = () => {
             var i;
             return n(null === (i = o.default.settings[e]) || void 0 === i ? void 0 : i[t])
         };
         return {
-            getSetting: s,
-            updateSetting: c(s, n => a.PreloadedUserSettingsActionCreators.updateAsync(e, e => {
+            getSetting: a,
+            updateSetting: c(a, n => s.PreloadedUserSettingsActionCreators.updateAsync(e, e => {
                 e[t] = r(n, e[t])
             }, l.UserSettingsDelay.INFREQUENT_USER_ACTION)),
-            useSetting: () => (0, i.useStateFromStores)([o.default], s)
+            useSetting: () => (0, i.useStateFromStores)([o.default], a)
         }
     }
 
     function d(e, t, n) {
-        let a = () => {
+        let s = () => {
             var i;
-            let r = s.default.getState()[t];
+            let r = a.default.getState()[t];
             return null !== (i = null == r ? void 0 : r.settings[n]) && void 0 !== i ? i : e.getSetting()
         };
         return {
-            getSetting: a,
+            getSetting: s,
             useSetting: () => {
                 let r = e.useSetting(),
-                    a = (0, i.useStateFromStores)([s.default], () => {
-                        let e = s.default.getState()[t];
+                    s = (0, i.useStateFromStores)([a.default], () => {
+                        let e = a.default.getState()[t];
                         return null == e ? void 0 : e.settings[n]
                     });
-                return null != a ? a : r
+                return null != s ? s : r
             },
-            updateSetting: c(a, i => s.default.shouldSync(t) ? e.updateSetting(i) : (r.default.dispatch({
+            updateSetting: c(s, i => a.default.shouldSync(t) ? e.updateSetting(i) : (r.default.dispatch({
                 type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE",
                 changes: {
                     [t]: {
@@ -62,18 +62,18 @@ function(e, t, n) {
     }
 
     function _(e, t, n, i) {
-        let s = () => {
+        let a = () => {
             var t;
             return null !== (t = n()) && void 0 !== t ? t : e.getSetting()
         };
         return {
-            getSetting: s,
+            getSetting: a,
             useSetting: () => {
                 let t = e.useSetting(),
                     n = i();
                 return null != n ? n : t
             },
-            updateSetting: c(s, n => (r.default.dispatch({
+            updateSetting: c(a, n => (r.default.dispatch({
                 type: "USER_SETTINGS_OVERRIDE_CLEAR",
                 settings: [t]
             }), e.updateSetting(n)))

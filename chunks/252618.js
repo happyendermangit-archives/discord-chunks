@@ -19,17 +19,17 @@ function(e, t, n) {
     }), n("47120");
     var i = n("470079"),
         r = n("652874");
-    let s = {
+    let a = {
             base: n("358085").isPlatformEmbedded ? void 0 : "Discord"
         },
-        a = 0,
+        s = 0,
         o = {
             count: 3,
             onlyWhenBlurred: !1,
             interval: 1e3
         },
         l = (0, r.default)(() => ({
-            titles: [s],
+            titles: [a],
             notificationCount: void 0,
             flashQueue: []
         }));
@@ -44,7 +44,7 @@ function(e, t, n) {
         let t = {
             ...o,
             ...e,
-            id: a++
+            id: s++
         };
         return t.count = Math.max(t.count, t.messages.length), l.setState(e => ({
             flashQueue: [...e.flashQueue, t]
@@ -108,10 +108,10 @@ function(e, t, n) {
                     return null == t || 0 === t ? "" : t < 0 ? "• " : "(".concat(t, ") ")
                 }(e);
                 return ["".concat(i).concat(n), t[0]]
-            }), [n, r] = i.useState(!1), s = i.useRef(0), a = null == t ? void 0 : t.messages[s.current % t.messages.length];
+            }), [n, r] = i.useState(!1), a = i.useRef(0), s = null == t ? void 0 : t.messages[a.current % t.messages.length];
             return i.useEffect(() => {
                 if (null == t) {
-                    s.current = 0, r(!1);
+                    a.current = 0, r(!1);
                     return
                 }
                 if (document.hasFocus() && t.onlyWhenBlurred) {
@@ -119,17 +119,17 @@ function(e, t, n) {
                     return
                 }
                 let e = setInterval(() => {
-                    if (s.current >= t.count) {
+                    if (a.current >= t.count) {
                         _(t.id), r(!1);
                         return
                     }
-                    r(e => !e || (s.current += 1, !1))
+                    r(e => !e || (a.current += 1, !1))
                 }, t.interval);
                 return () => clearInterval(e)
-            }, [t]), n ? a : e
+            }, [t]), n ? s : e
         }();
         i.useEffect(() => {
-            let n = t === s.base;
+            let n = t === a.base;
             (!e || !n) && (document.title = t)
         }, [e, t])
     }

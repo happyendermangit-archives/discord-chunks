@@ -1,6 +1,6 @@
 function(e, t, n) {
     "use strict";
-    var i, r, s, a, o, l;
+    var i, r, a, s, o, l;
 
     function u(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
@@ -12,7 +12,7 @@ function(e, t, n) {
     }
     n.r(t), n.d(t, {
         AutocompleterQuerySymbols: function() {
-            return s
+            return a
         },
         AutocompleterResultTypes: function() {
             return r
@@ -28,5 +28,5 @@ function(e, t, n) {
         constructor(e) {
             u(this, "id", void 0), u(this, "text", void 0), this.id = e, this.text = e
         }
-    }(a = i || (i = {})).UP = "UP", a.DOWN = "DOWN", (o = r || (r = {})).GUILD = "GUILD", o.TEXT_CHANNEL = "TEXT_CHANNEL", o.GROUP_DM = "GROUP_DM", o.VOICE_CHANNEL = "VOICE_CHANNEL", o.USER = "USER", o.HEADER = "HEADER", o.APPLICATION = "APPLICATION", o.SKU = "SKU", o.LINK = "LINK", (l = s || (s = {})).USER = "@", l.TEXT_CHANNEL = "#", l.VOICE_CHANNEL = "!", l.GUILD = "*", l.APPLICATION = "$"
+    }(s = i || (i = {})).UP = "UP", s.DOWN = "DOWN", (o = r || (r = {})).GUILD = "GUILD", o.TEXT_CHANNEL = "TEXT_CHANNEL", o.GROUP_DM = "GROUP_DM", o.VOICE_CHANNEL = "VOICE_CHANNEL", o.USER = "USER", o.HEADER = "HEADER", o.APPLICATION = "APPLICATION", o.SKU = "SKU", o.LINK = "LINK", (l = a || (a = {})).USER = "@", l.TEXT_CHANNEL = "#", l.VOICE_CHANNEL = "!", l.GUILD = "*", l.APPLICATION = "$"
 }

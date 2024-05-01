@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return a
         }
     });
     var i = n("778787");
@@ -15,14 +15,14 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    class s extends i.default {
+    class a extends i.default {
         static fromServer(e) {
             let {
                 purchased_at: t,
                 purchase_type: n,
                 ...i
             } = e;
-            return new s({
+            return new a({
                 ...super.fromServer(i),
                 purchaseType: n,
                 purchasedAt: null != t ? new Date(t) : t

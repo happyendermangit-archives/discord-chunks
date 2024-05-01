@@ -10,8 +10,8 @@ function(e, t, n) {
     });
     var i = n("302454"),
         r = n.n(i),
-        s = n("668781"),
-        a = n("45986"),
+        a = n("668781"),
+        s = n("45986"),
         o = n("782568"),
         l = n("704133"),
         u = n("139674"),
@@ -51,7 +51,7 @@ function(e, t, n) {
             } = e,
             y = r().sanitizeUrl(e.href);
         if (null == y) {
-            null != t && t.preventDefault(), s.default.show({
+            null != t && t.preventDefault(), a.default.show({
                 title: g.default.Messages.HOLD_UP,
                 body: g.default.Messages.MALFORMED_LINK_BODY.format({
                     url: e.href
@@ -74,8 +74,8 @@ function(e, t, n) {
                 i = (null == e ? void 0 : null === (B = e.messageReference) || void 0 === B ? void 0 : B.guild_id) != null && (null == e ? void 0 : e.webhookId) != null && (null == e ? void 0 : e.hasFlag(C.MessageFlags.IS_CROSSPOST)) && null != P;
             i && (null == e ? void 0 : null === (k = e.messageReference) || void 0 === k ? void 0 : k.guild_id) != null ? (b = e.messageReference.message_id, G = e.messageReference.channel_id, w = e.messageReference.guild_id) : w = P;
             let r = (null == t ? void 0 : t.type) === C.ChannelTypes.GUILD_ANNOUNCEMENT && (null == n ? void 0 : n.hasFeature(C.GuildFeatures.COMMUNITY)) === !0,
-                s = (null == e ? void 0 : e.hasFlag(C.MessageFlags.EPHEMERAL)) === !0;
-            U = null != e && !s && (i || r)
+                a = (null == e ? void 0 : e.hasFlag(C.MessageFlags.EPHEMERAL)) === !0;
+            U = null != e && !a && (i || r)
         }
         if (null != M) {
             let e = S.default.getChannel(M),
@@ -136,7 +136,7 @@ function(e, t, n) {
         }
         if (null != t && t.preventDefault(), Y) I.default.show({
             url: y,
-            trustUrl: a.trustProtocol,
+            trustUrl: s.trustProtocol,
             onConfirm: x,
             isProtocol: !0
         });
@@ -145,7 +145,7 @@ function(e, t, n) {
                 t = null != e ? e.displayTarget : y;
             I.default.show({
                 url: t,
-                trustUrl: a.trustDomain,
+                trustUrl: s.trustDomain,
                 onConfirm: x,
                 isProtocol: !1
             })

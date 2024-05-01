@@ -2,9 +2,9 @@ function(e, t, n) {
     "use strict";
     n.r(t);
     var i, r = n("735250"),
-        s = n("470079"),
-        a = n("120356"),
-        o = n.n(a),
+        a = n("470079"),
+        s = n("120356"),
+        o = n.n(s),
         l = n("692547"),
         u = n("477690"),
         d = n("481060"),
@@ -27,7 +27,7 @@ function(e, t, n) {
     }
     let m = (0, c.cssValueToNumber)(u.default.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
         N = 1 / 120;
-    class p extends(i = s.Component) {
+    class p extends(i = a.Component) {
         componentDidMount() {
             this.initialize()
         }
@@ -81,9 +81,9 @@ function(e, t, n) {
             return (0, r.jsx)(d.AccessibilityPreferencesContext.Consumer, {
                 children: i => {
                     let {
-                        reducedMotion: s
+                        reducedMotion: a
                     } = i;
-                    return s.enabled ? (0, r.jsx)("div", {
+                    return a.enabled ? (0, r.jsx)("div", {
                         className: o()(h.fallbackImage, {
                             [h.embedded]: n,
                             [h.visible]: !t && e >= f.WaveStates.ENTERED

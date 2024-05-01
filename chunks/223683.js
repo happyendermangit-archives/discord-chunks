@@ -16,24 +16,24 @@ function(e, t, n) {
     });
     var i = n("392711"),
         r = n.n(i),
-        s = n("544891"),
-        a = n("981631");
+        a = n("544891"),
+        s = n("981631");
     async function o() {
-        return (await s.HTTP.get(a.Endpoints.NOTIFICATION_SNAPSHOTS)).body
+        return (await a.HTTP.get(s.Endpoints.NOTIFICATION_SNAPSHOTS)).body
     }
     async function l(e) {
-        return (await s.HTTP.post({
-            url: a.Endpoints.NOTIFICATION_SNAPSHOTS,
+        return (await a.HTTP.post({
+            url: s.Endpoints.NOTIFICATION_SNAPSHOTS,
             body: {
                 label: e
             }
         })).body
     }
     async function u(e) {
-        return (await s.HTTP.post(a.Endpoints.RESTORE_NOTIFICATION_SNAPSHOT(e))).body
+        return (await a.HTTP.post(s.Endpoints.RESTORE_NOTIFICATION_SNAPSHOT(e))).body
     }
     async function d(e) {
-        return (await s.HTTP.del(a.Endpoints.NOTIFICATION_SNAPSHOT(e))).body
+        return (await a.HTTP.del(s.Endpoints.NOTIFICATION_SNAPSHOT(e))).body
     }
     async function _(e) {
         if (e.length > 0) {

@@ -2,9 +2,9 @@ function(e, t, n) {
     "use strict";
     n.r(t);
     var i, r = n("442837"),
-        s = n("570140");
+        a = n("570140");
 
-    function a(e, t, n) {
+    function s(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -28,7 +28,7 @@ function(e, t, n) {
             return o
         }
     }
-    a(u, "displayName", "StageMusicStore"), a(u, "persistKey", "StageMusicStore"), t.default = new u(s.default, {
+    s(u, "displayName", "StageMusicStore"), s(u, "persistKey", "StageMusicStore"), t.default = new u(a.default, {
         STAGE_MUSIC_MUTE: function(e) {
             let {
                 muted: t

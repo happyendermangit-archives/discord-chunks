@@ -3,22 +3,22 @@ function(e, t, n) {
     n.r(t);
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("159778");
     t.default = r.forwardRef(function(e, t) {
         let {
             children: n,
             className: r,
-            style: s,
+            style: a,
             noBorder: l = !1,
             participantUserId: u
         } = e;
         return (0, i.jsx)("div", {
-            className: a()(r, o.tile, {
+            className: s()(r, o.tile, {
                 [o.noBorder]: l
             }),
-            style: s,
+            style: a,
             ref: t,
             "data-selenium-video-tile": u,
             children: n

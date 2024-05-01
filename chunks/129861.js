@@ -4,8 +4,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        s = n.n(r),
-        a = n("442837"),
+        a = n.n(r),
+        s = n("442837"),
         o = n("481060"),
         l = n("246946"),
         u = n("467679"),
@@ -25,7 +25,7 @@ function(e, t, n) {
             primary: t,
             secondary: n,
             botType: r,
-            botVerified: a,
+            botVerified: s,
             discriminatorClass: l,
             className: d,
             usernameClass: _,
@@ -34,26 +34,26 @@ function(e, t, n) {
             showStreamerModeTooltip: f
         } = e;
         return (0, i.jsxs)("div", {
-            className: s()(E.info, d),
+            className: a()(E.info, d),
             children: [(0, i.jsx)(o.Tooltip, {
                 text: c.default.Messages.STREAMER_MODE_ENABLED,
                 shouldShow: f,
                 "aria-label": !!f && void 0,
                 children: e => (0, i.jsx)("span", {
                     ...e,
-                    className: s()(E.__invalid_username, _),
+                    className: a()(E.__invalid_username, _),
                     style: null != I ? {
                         color: I
                     } : void 0,
                     children: t
                 })
             }), null != n ? (0, i.jsx)("span", {
-                className: s()(E.infoSpacing, l),
+                className: a()(E.infoSpacing, l),
                 children: n
             }) : void 0, null != r && (0, i.jsx)(u.default, {
                 type: r,
-                className: s()(E.infoSpacing, T),
-                verified: a
+                className: a()(E.infoSpacing, T),
+                verified: s
             })]
         })
     };
@@ -62,14 +62,14 @@ function(e, t, n) {
             hideDiscriminator: t = !1,
             user: n,
             nick: r,
-            forceUsername: s,
+            forceUsername: a,
             showAccountIdentifier: o,
             overrideDiscriminator: u,
             forcePomelo: c,
             ...E
-        } = e, f = (0, a.useStateFromStores)([l.default], () => l.default.hidePersonalInformation), S = f || t || n.isNonUserBot(), h = n.toString(), A = _.default.getName(n), m = s ? h : null != r ? r : A, N = n.isPomelo() || c;
+        } = e, f = (0, s.useStateFromStores)([l.default], () => l.default.hidePersonalInformation), S = f || t || n.isNonUserBot(), h = n.toString(), A = _.default.getName(n), m = a ? h : null != r ? r : A, N = n.isPomelo() || c;
         if (N || m !== h) {
-            let e = m === h && N && s ? _.default.getUserTag(n, {
+            let e = m === h && N && a ? _.default.getUserTag(n, {
                     forcePomelo: c
                 }) : m,
                 t = o && e !== "@".concat(h) ? _.default.getUserTag(n) : void 0;

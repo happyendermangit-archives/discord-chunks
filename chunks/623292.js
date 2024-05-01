@@ -5,10 +5,10 @@ function(e, t, n) {
             return r
         },
         deletePendingReply: function() {
-            return a
+            return s
         },
         setPendingReplyShouldMention: function() {
-            return s
+            return a
         }
     });
     var i = n("570140");
@@ -18,20 +18,20 @@ function(e, t, n) {
             message: t,
             channel: n,
             shouldMention: r,
-            showMentionToggle: s,
-            source: a
+            showMentionToggle: a,
+            source: s
         } = e;
         i.default.dispatch({
             type: "CREATE_PENDING_REPLY",
             message: t,
             channel: n,
             shouldMention: r,
-            showMentionToggle: s,
-            source: a
+            showMentionToggle: a,
+            source: s
         })
     }
 
-    function s(e, t) {
+    function a(e, t) {
         i.default.dispatch({
             type: "SET_PENDING_REPLY_SHOULD_MENTION",
             channelId: e,
@@ -39,7 +39,7 @@ function(e, t, n) {
         })
     }
 
-    function a(e) {
+    function s(e) {
         i.default.dispatch({
             type: "DELETE_PENDING_REPLY",
             channelId: e

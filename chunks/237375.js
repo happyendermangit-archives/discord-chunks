@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("481060"),
         l = n("508688"),
         u = n("154921"),
@@ -31,21 +31,21 @@ function(e, t, n) {
         let {
             command: t,
             optionStates: n,
-            onOptionClick: s
+            onOptionClick: a
         } = e, {
-            requiredOptions: a,
+            requiredOptions: s,
             setOptionalOptions: l,
             unsetOptionalOptions: d
         } = r.useMemo(() => {
-            var e, i, r, s;
-            let a = null !== (r = null === (e = t.options) || void 0 === e ? void 0 : e.filter(e => e.required)) && void 0 !== r ? r : [],
-                o = null !== (s = null === (i = t.options) || void 0 === i ? void 0 : i.filter(e => !e.required)) && void 0 !== s ? s : [],
+            var e, i, r, a;
+            let s = null !== (r = null === (e = t.options) || void 0 === e ? void 0 : e.filter(e => e.required)) && void 0 !== r ? r : [],
+                o = null !== (a = null === (i = t.options) || void 0 === i ? void 0 : i.filter(e => !e.required)) && void 0 !== a ? a : [],
                 l = o.filter(e => {
                     var t;
                     return null == n ? void 0 : null === (t = n[e.name]) || void 0 === t ? void 0 : t.hasValue
                 });
             return {
-                requiredOptions: a,
+                requiredOptions: s,
                 setOptionalOptions: l,
                 unsetOptionalOptions: o.filter(e => {
                     var t;
@@ -58,12 +58,12 @@ function(e, t, n) {
                 variant: "text-sm/normal",
                 children: e.displayName
             }, e.name))
-        }), c = a.map(e => T(e, null == n ? void 0 : n[e.name], s)), f = l.length > 0 ? (0, i.jsxs)(i.Fragment, {
+        }), c = s.map(e => T(e, null == n ? void 0 : n[e.name], a)), f = l.length > 0 ? (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(o.Heading, {
                 className: I.optionalHeader,
                 variant: "heading-deprecated-12/semibold",
                 children: E.default.Messages.COMMANDS_OPTIONAL_HEADER
-            }), l.map(e => T(e, null == n ? void 0 : n[e.name], s))]
+            }), l.map(e => T(e, null == n ? void 0 : n[e.name], a))]
         }) : null, S = d.length > 0 ? (0, i.jsx)(o.Tooltip, {
             text: _,
             "aria-label": !1,
@@ -88,7 +88,7 @@ function(e, t, n) {
     }
 
     function S(e) {
-        var t, n, s;
+        var t, n, a;
         let o, {
                 command: u,
                 activeOptionName: d,
@@ -108,7 +108,7 @@ function(e, t, n) {
         o = null != O && (null === (t = O.lastValidationResult) || void 0 === t ? void 0 : t.success) === !1 ? null !== (n = O.lastValidationResult.error) && void 0 !== n ? n : "" : null;
         let R = S && null != m ? (0, _.getIconComponent)(m) : null;
         return (0, i.jsxs)("div", {
-            className: a()(I.wrapper, N ? null : I.disabled),
+            className: s()(I.wrapper, N ? null : I.disabled),
             children: [null != R ? (0, i.jsx)(R, {
                 className: I.image,
                 channel: E,
@@ -128,8 +128,8 @@ function(e, t, n) {
                         onOptionClick: A
                     }) : null]
                 }), (0, i.jsx)(l.AutocompleteRowSubheading, {
-                    className: a()(I.description, null != o ? I.error : null),
-                    children: null !== (s = null != o ? o : null == p ? void 0 : p.displayDescription) && void 0 !== s ? s : u.displayDescription
+                    className: s()(I.description, null != o ? I.error : null),
+                    children: null !== (a = null != o ? o : null == p ? void 0 : p.displayDescription) && void 0 !== a ? a : u.displayDescription
                 })]
             }), (0, i.jsx)(l.AutocompleteRowContentSecondary, {
                 className: I.source,

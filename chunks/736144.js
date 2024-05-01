@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("442837"),
-        a = n("451478"),
+        a = n("442837"),
+        s = n("451478"),
         o = n("576125"),
         l = n("465858"),
         u = n("112843");
@@ -17,7 +17,7 @@ function(e, t, n) {
         let {
             confettiSpawnRef: t,
             shouldFire: n
-        } = e, i = (0, s.useStateFromStores)([a.default], () => a.default.isFocused()), o = (0, u.default)(), d = (0, l.default)(t);
+        } = e, i = (0, a.useStateFromStores)([s.default], () => s.default.isFocused()), o = (0, u.default)(), d = (0, l.default)(t);
         return r.useEffect(() => {
             i && n && null != d && o.fire(d.x, d.y)
         }, [o, i, d, n]), null

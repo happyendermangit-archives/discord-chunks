@@ -5,7 +5,7 @@ function(e, t, n) {
             return r
         },
         useUserIsRecentGamesExperimentEnabled: function() {
-            return s
+            return a
         }
     });
     let i = (0, n("818083").createExperiment)({
@@ -48,7 +48,7 @@ function(e, t, n) {
         }).enabled
     }
 
-    function s(e) {
+    function a(e) {
         let {
             location: t,
             autoTrackExposure: n = !1

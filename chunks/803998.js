@@ -2,13 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return a
         }
     }), n("47120");
     var i = n("470079"),
         r = n("920103");
 
-    function s(e) {
+    function a(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "vertical",
             [n] = (0, i.useState)(() => new r.default({
                 tension: 200,

@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("442837"),
-        a = n("481060"),
+        a = n("442837"),
+        s = n("481060"),
         o = n("158631"),
         l = n("709369"),
         u = n("544384"),
@@ -55,12 +55,12 @@ function(e, t, n) {
             hideBadges: t = !1,
             stream: n,
             ...E
-        } = e, I = (0, s.useStateFromStores)([c.default], () => f.default.isPremium(c.default.getCurrentUser(), m.PremiumTypes.TIER_1)), T = (0, s.useStateFromStores)([_.default], () => _.default.getChannel(null == n ? void 0 : n.channelId)), p = r.useMemo(() => null != n ? [n] : [], [n]), C = (0, o.useIsBroadcastingInChannel)(null == T ? void 0 : T.id), g = r.useCallback(() => {
+        } = e, I = (0, a.useStateFromStores)([c.default], () => f.default.isPremium(c.default.getCurrentUser(), m.PremiumTypes.TIER_1)), T = (0, a.useStateFromStores)([_.default], () => _.default.getChannel(null == n ? void 0 : n.channelId)), p = r.useMemo(() => null != n ? [n] : [], [n]), C = (0, o.useIsBroadcastingInChannel)(null == T ? void 0 : T.id), g = r.useCallback(() => {
             null != T && (0, d.default)(T.getGuildId(), T.id, A.AnalyticsSections.STREAM_SETTINGS)
         }, [T]);
         if (null == n || null == T) return null;
         let L = O;
-        return !t && !I && (L = R), (0, i.jsx)(a.Popout, {
+        return !t && !I && (L = R), (0, i.jsx)(s.Popout, {
             position: "top",
             renderPopout: e => {
                 let {
@@ -79,7 +79,7 @@ function(e, t, n) {
                     })
                 })
             },
-            animation: a.Popout.Animation.FADE,
+            animation: s.Popout.Animation.FADE,
             children: e => (0, i.jsx)(h.default, {
                 ...e,
                 label: N.default.Messages.STREAMER_SETTINGS_TITLE,

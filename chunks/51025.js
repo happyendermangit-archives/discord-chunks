@@ -43,8 +43,8 @@ function(e, t, n) {
     }), n("411104");
     var i = n("544891"),
         r = n("570140"),
-        s = n("812206"),
-        a = n("594190"),
+        a = n("812206"),
+        s = n("594190"),
         o = n("703656"),
         l = n("695346"),
         u = n("391690"),
@@ -86,8 +86,8 @@ function(e, t, n) {
             application: t,
             branchId: n,
             buildId: i,
-            manifestIds: s,
-            installationPath: a,
+            manifestIds: a,
+            installationPath: s,
             analyticsLocation: o
         } = e;
         E.default.setTargetManifest({
@@ -96,13 +96,13 @@ function(e, t, n) {
             applicationIcon: t.icon,
             branchId: n,
             buildId: i,
-            manifestIds: s,
-            installationPath: a
+            manifestIds: a,
+            installationPath: s
         }), r.default.dispatch({
             type: "DISPATCH_APPLICATION_INSTALL",
             applicationId: t.id,
             branchId: n,
-            installationPath: a
+            installationPath: s
         }), d.default.track(T.AnalyticEvents.LIBRARY_INSTALL_INITIATED, {
             application_id: t.id,
             application_name: t.name,
@@ -127,9 +127,9 @@ function(e, t, n) {
     }
 
     function N(e, t, n, i) {
-        let s = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        let a = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
         ! function(e, t, n, i) {
-            if (a.default.getRunningDiscordApplicationIds().includes(e.id)) return;
+            if (s.default.getRunningDiscordApplicationIds().includes(e.id)) return;
             let r = u.default.getInstallationPath(e.id, t);
             if (null == r) throw Error("Missing installation path for application: ".concat(e.id, " ").concat(t));
             E.default.setTargetManifest({
@@ -145,12 +145,12 @@ function(e, t, n) {
             type: "DISPATCH_APPLICATION_UPDATE",
             applicationId: e.id,
             branchId: t,
-            automatic: s
+            automatic: a
         })
     }
 
     function p(e, t, n) {
-        let i = s.default.getApplication(e);
+        let i = a.default.getApplication(e);
         null != i && (c.default.removeShortcuts(i.name), d.default.track(T.AnalyticEvents.LIBRARY_UNINSTALL_INITIATED, {
             application_id: i.id,
             application_name: i.name,
@@ -196,12 +196,12 @@ function(e, t, n) {
     }
 
     function v(e, t) {
-        let n = s.default.getApplication(e);
+        let n = a.default.getApplication(e);
         null != n && c.default.createShortcuts(l.InstallShortcutDesktop.getSetting(), l.InstallShortcutStartMenu.getSetting(), n.name, n.id, t.installPath)
     }
 
     function D(e, t) {
-        let r = s.default.getApplication(e);
+        let r = a.default.getApplication(e);
         i.HTTP.post({
             url: T.Endpoints.LIBRARY_APPLICATION_INSTALLED(e, e),
             oldFormErrors: !0

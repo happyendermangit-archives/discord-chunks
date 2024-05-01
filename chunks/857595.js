@@ -58,8 +58,8 @@ function(e, t, n) {
     });
     var i = n("570140"),
         r = n("153867"),
-        s = n("626135"),
-        a = n("607070"),
+        a = n("626135"),
+        s = n("607070"),
         o = n("981631"),
         l = n("969943"),
         u = n("611480");
@@ -89,7 +89,7 @@ function(e, t, n) {
     function E() {
         i.default.dispatch({
             type: "ACCESSIBILITY_KEYBOARD_MODE_ENABLE"
-        }), s.default.track(o.AnalyticEvents.KEYBOARD_MODE_TOGGLED, {
+        }), a.default.track(o.AnalyticEvents.KEYBOARD_MODE_TOGGLED, {
             enabled: !0
         })
     }
@@ -97,7 +97,7 @@ function(e, t, n) {
     function I() {
         i.default.dispatch({
             type: "ACCESSIBILITY_KEYBOARD_MODE_DISABLE"
-        }), s.default.track(o.AnalyticEvents.KEYBOARD_MODE_TOGGLED, {
+        }), a.default.track(o.AnalyticEvents.KEYBOARD_MODE_TOGGLED, {
             enabled: !1
         })
     }
@@ -135,12 +135,12 @@ function(e, t, n) {
     }
 
     function m(e) {
-        let t = a.default.useReducedMotion;
+        let t = s.default.useReducedMotion;
         i.default.dispatch({
             type: "ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION",
             prefersReducedMotion: e
         });
-        let n = a.default.useReducedMotion;
+        let n = s.default.useReducedMotion;
         !t && n ? r.default.applySettingsOverride({
             gifAutoPlay: {
                 value: !1,
@@ -190,7 +190,7 @@ function(e, t, n) {
         i.default.dispatch({
             type: "ACCESSIBILITY_SET_ROLE_STYLE",
             roleStyle: e
-        }), s.default.track(o.AnalyticEvents.ROLE_STYLE_SETTING_UPDATED, {
+        }), a.default.track(o.AnalyticEvents.ROLE_STYLE_SETTING_UPDATED, {
             role_style: e
         })
     }

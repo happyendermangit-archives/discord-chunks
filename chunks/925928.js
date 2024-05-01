@@ -13,24 +13,24 @@ function(e, t, n) {
     });
     var i = n("913527"),
         r = n.n(i),
-        s = n("689938");
-    let a = 3600,
+        a = n("689938");
+    let s = 3600,
         o = 86400,
         l = 2592e3,
         u = 31104e3,
         d = () => ({
-            minutes: s.default.Messages.DURATION_MINUTES_SHORT,
-            hours: s.default.Messages.DURATION_HOURS_SHORT,
-            days: s.default.Messages.DURATION_DAYS_SHORT,
-            months: s.default.Messages.DURATION_MONTHS_SHORT,
-            years: s.default.Messages.DURATION_YEARS_SHORT
+            minutes: a.default.Messages.DURATION_MINUTES_SHORT,
+            hours: a.default.Messages.DURATION_HOURS_SHORT,
+            days: a.default.Messages.DURATION_DAYS_SHORT,
+            months: a.default.Messages.DURATION_MONTHS_SHORT,
+            years: a.default.Messages.DURATION_YEARS_SHORT
         }),
         _ = () => ({
-            minutes: s.default.Messages.DURATION_MINUTES_AGO,
-            hours: s.default.Messages.DURATION_HOURS_AGO,
-            days: s.default.Messages.DURATION_DAYS_AGO,
-            months: s.default.Messages.DURATION_MONTHS_AGO,
-            years: s.default.Messages.DURATION_YEARS_AGO
+            minutes: a.default.Messages.DURATION_MINUTES_AGO,
+            hours: a.default.Messages.DURATION_HOURS_AGO,
+            days: a.default.Messages.DURATION_DAYS_AGO,
+            months: a.default.Messages.DURATION_MONTHS_AGO,
+            years: a.default.Messages.DURATION_YEARS_AGO
         });
 
     function c(e) {
@@ -45,10 +45,10 @@ function(e, t, n) {
             } = e, i = n(), r = "";
             return r = t < 60 ? i.minutes.format({
                 minutes: 1
-            }) : t < a ? i.minutes.format({
+            }) : t < s ? i.minutes.format({
                 minutes: Math.floor(t / 60)
             }) : t < o ? i.hours.format({
-                hours: Math.floor(t / a)
+                hours: Math.floor(t / s)
             }) : t < l ? i.days.format({
                 days: Math.floor(t / o)
             }) : t < u ? i.months.format({

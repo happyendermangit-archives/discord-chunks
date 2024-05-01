@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        s = n.n(r),
-        a = n("481060"),
+        a = n.n(r),
+        s = n("481060"),
         o = n("129861"),
         l = n("5192"),
         u = n("689938"),
@@ -28,16 +28,16 @@ function(e, t, n) {
             onOpenProfile: f,
             nicknameVariant: S = "heading-lg/bold",
             pronounsVariant: h = "text-sm/medium"
-        } = e, A = e => null == f ? e : (0, i.jsx)(a.Clickable, {
+        } = e, A = e => null == f ? e : (0, i.jsx)(s.Clickable, {
             onClick: f,
             className: d.clickableUsername,
             children: e
         });
         return (0, i.jsxs)("div", {
-            className: s()(d.container, T),
+            className: a()(d.container, T),
             children: [(0, i.jsxs)("div", {
                 className: d.usernameRow,
-                children: [A((0, i.jsx)(a.Heading, {
+                children: [A((0, i.jsx)(s.Heading, {
                     className: d.nickname,
                     variant: S,
                     children: l.default.getName(n, r, t)
@@ -55,9 +55,9 @@ function(e, t, n) {
                     children: [(0, i.jsx)("div", {
                         "aria-hidden": "true",
                         className: d.dotSpacer
-                    }), (0, i.jsx)(a.TooltipContainer, {
+                    }), (0, i.jsx)(s.TooltipContainer, {
                         text: u.default.Messages.USER_PROFILE_PRONOUNS,
-                        children: (0, i.jsx)(a.Text, {
+                        children: (0, i.jsx)(s.Text, {
                             variant: h,
                             className: d.pronouns,
                             children: I

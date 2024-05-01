@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("1561"),
         l = n("761224"),
         u = n("743236"),
@@ -21,7 +21,7 @@ function(e, t, n) {
         let {
             color: t = "default",
             label: n,
-            checked: s,
+            checked: a,
             subtext: I,
             disabled: T,
             isFocused: f,
@@ -32,13 +32,13 @@ function(e, t, n) {
             f && (0, u.ensureItemVisible)(A)
         }, [f]), (0, i.jsxs)(o.Clickable, {
             innerRef: A,
-            className: a()(E.item, E.labelContainer, c.MENU_ITEM_COLORS[t], {
+            className: s()(E.item, E.labelContainer, c.MENU_ITEM_COLORS[t], {
                 [E.disabled]: T,
                 [E.focused]: f
             }),
             onClick: T ? void 0 : h,
             ...S,
-            "aria-checked": s,
+            "aria-checked": a,
             "aria-disabled": T,
             children: [(0, i.jsxs)("div", {
                 className: E.label,
@@ -48,7 +48,7 @@ function(e, t, n) {
                 })]
             }), (0, i.jsx)("div", {
                 className: E.iconContainer,
-                children: s ? (0, i.jsx)(_.default, {
+                children: a ? (0, i.jsx)(_.default, {
                     className: E.icon,
                     background: E.__invalid_radio,
                     foreground: E.radioSelection

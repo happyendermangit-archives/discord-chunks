@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         BaseConnectionEvent: function() {
-            return a.BaseConnectionEvent
+            return s.BaseConnectionEvent
         },
         default: function() {
             return _
@@ -10,8 +10,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("117806"),
         r = n.n(i),
-        s = n("47770"),
-        a = n("445686"),
+        a = n("47770"),
+        s = n("445686"),
         o = n("701597"),
         l = n("65154");
 
@@ -24,9 +24,9 @@ function(e, t, n) {
         }) : e[t] = n, e
     }
     let d = 0;
-    class _ extends s.default {
+    class _ extends a.default {
         destroy() {
-            this.destroyed = !0, this.framerateReducer.destroy(), this.setConnectionState(l.ConnectionStates.DISCONNECTED), this.emit(a.BaseConnectionEvent.Destroy, this), this.removeAllListeners()
+            this.destroyed = !0, this.framerateReducer.destroy(), this.setConnectionState(l.ConnectionStates.DISCONNECTED), this.emit(s.BaseConnectionEvent.Destroy, this), this.removeAllListeners()
         }
         getLocalMute(e) {
             return this.localMutes[e] || !1
@@ -36,14 +36,14 @@ function(e, t, n) {
             return null !== (t = this.disabledLocalVideos[e]) && void 0 !== t && t
         }
         setLocalVideoDisabled(e, t) {
-            this.disabledLocalVideos[e] = t, this.emit(a.BaseConnectionEvent.LocalVideoDisabled, e, t)
+            this.disabledLocalVideos[e] = t, this.emit(s.BaseConnectionEvent.LocalVideoDisabled, e, t)
         }
         getHasActiveVideoOutputSink(e) {
             var t;
             return null !== (t = this.activeOutputSinks[e]) && void 0 !== t && t
         }
         setHasActiveVideoOutputSink(e, t) {
-            this.isActiveOutputSinksEnabled = !0, this.activeOutputSinks[e] = t, this.emit(a.BaseConnectionEvent.ActiveSinksChange, e, t)
+            this.isActiveOutputSinksEnabled = !0, this.activeOutputSinks[e] = t, this.emit(s.BaseConnectionEvent.ActiveSinksChange, e, t)
         }
         getActiveOutputSinkTrackingEnabled() {
             return this.isActiveOutputSinksEnabled
@@ -64,7 +64,7 @@ function(e, t, n) {
             t ? this.experimentFlags.add(e) : this.experimentFlags.delete(e)
         }
         setConnectionState(e) {
-            this.logger.info("Connection state change: ".concat(this.connectionState, " => ").concat(e)), this.connectionState = e, this.emit(a.BaseConnectionEvent.ConnectionStateChange, this.connectionState)
+            this.logger.info("Connection state change: ".concat(this.connectionState, " => ").concat(e)), this.connectionState = e, this.emit(s.BaseConnectionEvent.ConnectionStateChange, this.connectionState)
         }
         updateVideoQuality(e) {
             let {
@@ -83,8 +83,8 @@ function(e, t, n) {
                 var t;
                 return null !== (t = e.maxPixelCount) && void 0 !== t ? t : 0
             }));
-            let s = this.pickProperties(n, e);
-            this.logger.info("updateVideoQuality: ".concat(JSON.stringify(s, void 0, 4))), this.updateVideoQualityCore(s, t)
+            let a = this.pickProperties(n, e);
+            this.logger.info("updateVideoQuality: ".concat(JSON.stringify(a, void 0, 4))), this.updateVideoQualityCore(a, t)
         }
         applyVideoQualityMode(e) {
             if (this.context !== l.MediaEngineContextTypes.DEFAULT) return;
@@ -108,7 +108,7 @@ function(e, t, n) {
         initializeStreamParameters(e) {
             let t = this.videoQualityManager.getQuality();
             this.videoStreamParameters = e.filter(e => (e.type === l.MediaTypes.VIDEO || e.type === l.MediaTypes.SCREEN) && "string" == typeof e.rid).map(e => {
-                var n, i, r, s;
+                var n, i, r, a;
                 return {
                     type: e.type,
                     active: e.active,
@@ -116,7 +116,7 @@ function(e, t, n) {
                     ssrc: e.ssrc,
                     rtxSsrc: e.rtxSsrc,
                     quality: e.quality,
-                    maxBitrate: (null !== (s = e.quality) && void 0 !== s ? s : 100) < 100 ? t.bitrateMax / 4 : t.bitrateMax,
+                    maxBitrate: (null !== (a = e.quality) && void 0 !== a ? a : 100) < 100 ? t.bitrateMax / 4 : t.bitrateMax,
                     maxFrameRate: null === (n = t.capture) || void 0 === n ? void 0 : n.framerate,
                     maxResolution: {
                         type: l.ResolutionTypes.FIXED,
@@ -136,7 +136,7 @@ function(e, t, n) {
         }
         async emitStats() {
             let e = await this.getStats();
-            return null != e && this.emit(a.BaseConnectionEvent.Stats, e), e
+            return null != e && this.emit(s.BaseConnectionEvent.Stats, e), e
         }
         constructor(e, t) {
             super(), u(this, "mediaEngineConnectionId", "WebRTC-".concat(d++)), u(this, "context", void 0), u(this, "userId", void 0), u(this, "streamUserId", void 0), u(this, "destroyed", !1), u(this, "audioSSRC", 0), u(this, "selfDeaf", !1), u(this, "localMutes", {}), u(this, "disabledLocalVideos", {}), u(this, "localVolumes", {}), u(this, "isActiveOutputSinksEnabled", !1), u(this, "activeOutputSinks", {}), u(this, "videoSupported", !1), u(this, "useElectronVideo", !1), u(this, "voiceBitrate", l.DEFAULT_VOICE_BITRATE), u(this, "remoteSinkWantsMaxFramerate", l.VIDEO_QUALITY_FRAMERATE), u(this, "videoQualityManager", void 0), u(this, "wantsPriority", new Set), u(this, "localSpeakingFlags", {}), u(this, "videoReady", !1), u(this, "videoStreamParameters", []), u(this, "remoteVideoSinkWants", {

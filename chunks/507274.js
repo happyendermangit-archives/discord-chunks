@@ -10,8 +10,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("597442"),
-        a = n("84735"),
+        a = n("597442"),
+        s = n("84735"),
         o = n("337033"),
         l = n("812663");
     let u = r.createContext(void 0),
@@ -24,7 +24,7 @@ function(e, t, n) {
                 returnRef: E,
                 ...I
             } = e, T = r.useRef(null);
-            return (0, s.useFocusLock)(T, {
+            return (0, a.useFocusLock)(T, {
                 returnRef: E
             }), r.useContext(l.default)({
                 type: d,
@@ -42,7 +42,7 @@ function(e, t, n) {
                     "aria-modal": !0,
                     children: (0, i.jsx)(o.HeadingLevel, {
                         forceLevel: 1,
-                        children: (0, i.jsx)(a.FocusRingScope, {
+                        children: (0, i.jsx)(s.FocusRingScope, {
                             containerRef: T,
                             children: n
                         })

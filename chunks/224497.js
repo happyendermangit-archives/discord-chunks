@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("512722"),
         r = n.n(i),
-        s = n("392711"),
-        a = n.n(s),
+        a = n("392711"),
+        s = n.n(a),
         o = n("830496");
 
     function l(e) {
@@ -17,7 +17,7 @@ function(e, t, n) {
         return r()(null != i, "file data must not be empty"), {
             filename: i.name,
             file_size: i.size,
-            id: a().uniqueId(),
+            id: s().uniqueId(),
             is_clip: null != e.clip,
             title: null === (t = e.clip) || void 0 === t ? void 0 : t.name,
             application_id: null === (n = e.clip) || void 0 === n ? void 0 : n.applicationId,

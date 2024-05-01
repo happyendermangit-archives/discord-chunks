@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("392711"),
-        a = n.n(s),
+        a = n("392711"),
+        s = n.n(a),
         o = n("818405"),
         l = n("587158"),
         u = n("286379"),
@@ -54,7 +54,7 @@ function(e, t, n) {
             children: O.default.Messages.CLEAR_BUILD_OVERRIDE
         })
     }
-    let L = a().throttle(e => {
+    let L = s().throttle(e => {
         f.default.increment({
             name: u.MetricEvents.APP_CRASHED,
             tags: ["reason:".concat(o.AppCrashedReasons.UNHANDLED_JS_ERROR), "level:".concat(l.ErrorLevels.FATAL), "modded_client:".concat(e)]

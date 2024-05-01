@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t);
     var i = n("735250"),
         r = n("470079"),
-        s = n("442837"),
-        a = n("481060"),
+        a = n("442837"),
+        s = n("481060"),
         o = n("367907"),
         l = n("829883"),
         u = n("623624"),
@@ -36,7 +36,7 @@ function(e, t, n) {
                 ...(0, o.collectChannelAnalyticsMetadata)(c.default.getChannel(I.default.getChannelId(n.id)))
             })
         }, []);
-        let C = (0, s.useStateFromStores)([E.default], () => null != t.roleId ? E.default.getRole(n.id, t.roleId) : void 0),
+        let C = (0, a.useStateFromStores)([E.default], () => null != t.roleId ? E.default.getRole(n.id, t.roleId) : void 0),
             g = (0, d.isSubscriptionRole)(C),
             L = g ? p.default.Messages.ROLE_ICON_POPOUT_DESCRIPTION_ROLE_SUBSCRIPTIONS.format({
                 name: R
@@ -48,7 +48,7 @@ function(e, t, n) {
                 src: null == t.src ? t.src : (0, l.replaceRoleIconSourceSize)(t.src, 40),
                 size: 40
             };
-        return (0, i.jsx)(a.Dialog, {
+        return (0, i.jsx)(s.Dialog, {
             children: (0, i.jsx)(A.MessagePopoutContent, {
                 children: (0, i.jsxs)("div", {
                     className: O.popoutContainer,
@@ -64,20 +64,20 @@ function(e, t, n) {
                             })
                         }), (0, i.jsxs)("div", {
                             className: O.truncatingText,
-                            children: [(0, i.jsx)(a.Heading, {
+                            children: [(0, i.jsx)(s.Heading, {
                                 variant: "heading-md/semibold",
                                 className: O.roleName,
                                 children: (0, i.jsx)(T.default, {
                                     children: R
                                 })
-                            }), (0, i.jsx)(a.Text, {
+                            }), (0, i.jsx)(s.Text, {
                                 variant: "text-sm/normal",
                                 children: L
                             })]
                         })]
-                    }), (0, i.jsxs)(a.Button, {
-                        size: a.Button.Sizes.SMALL,
-                        color: a.Button.Colors.PRIMARY,
+                    }), (0, i.jsxs)(s.Button, {
+                        size: s.Button.Sizes.SMALL,
+                        color: s.Button.Colors.PRIMARY,
                         className: O.ctaButton,
                         innerClassName: O.ctaButtonContent,
                         fullWidth: !0,

@@ -8,20 +8,20 @@ function(e, t, n) {
             return o
         },
         getCurrentlyInteractingWindowId: function() {
-            return s
+            return a
         },
         setCurrentlyInteractingWindowId: function() {
-            return a
+            return s
         }
     });
     let i = ["click", "mousedown", "mouseup", "keydown", "keyup", "keypress", "contextmenu"],
         r = null;
 
-    function s() {
+    function a() {
         return r
     }
 
-    function a(e) {
+    function s(e) {
         r = e
     }
 

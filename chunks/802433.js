@@ -1,6 +1,6 @@
 function(e, t, n) {
     "use strict";
-    var i, r, s, a;
+    var i, r, a, s;
     n.r(t), n.d(t, {
         AnimationTypes: function() {
             return r
@@ -8,5 +8,5 @@ function(e, t, n) {
         RestartMethod: function() {
             return i
         }
-    }), (s = i || (i = {})).FromLoop = "fromLoop", s.FromStart = "fromStart", (a = r || (r = {}))[a.UNSPECIFIED = 0] = "UNSPECIFIED", a[a.PERSISTENT = 1] = "PERSISTENT", a[a.INTERMITTENT = 2] = "INTERMITTENT"
+    }), (a = i || (i = {})).FromLoop = "fromLoop", a.FromStart = "fromStart", (s = r || (r = {}))[s.UNSPECIFIED = 0] = "UNSPECIFIED", s[s.PERSISTENT = 1] = "PERSISTENT", s[s.INTERMITTENT = 2] = "INTERMITTENT"
 }

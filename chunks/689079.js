@@ -41,8 +41,8 @@ function(e, t, n) {
             return h
         }
     });
-    var i, r, s = n("911969"),
-        a = n("689938");
+    var i, r, a = n("911969"),
+        s = n("689938");
     let o = "True",
         l = "False",
         u = [{
@@ -66,24 +66,24 @@ function(e, t, n) {
     let S = 25;
 
     function h(e) {
-        if (null != e.choices) return a.default.Messages.COMMAND_VALIDATION_CHOICE_ERROR;
+        if (null != e.choices) return s.default.Messages.COMMAND_VALIDATION_CHOICE_ERROR;
         switch (e.type) {
-            case s.ApplicationCommandOptionType.BOOLEAN:
-                return a.default.Messages.COMMAND_VALIDATION_BOOLEAN_ERROR;
-            case s.ApplicationCommandOptionType.CHANNEL:
-                return a.default.Messages.COMMAND_VALIDATION_CHANNEL_ERROR;
-            case s.ApplicationCommandOptionType.INTEGER:
-                return a.default.Messages.COMMAND_VALIDATION_INTEGER_ERROR;
-            case s.ApplicationCommandOptionType.NUMBER:
-                return a.default.Messages.COMMAND_VALIDATION_NUMBER_ERROR;
-            case s.ApplicationCommandOptionType.ROLE:
-                return a.default.Messages.COMMAND_VALIDATION_ROLE_ERROR;
-            case s.ApplicationCommandOptionType.USER:
-                return a.default.Messages.COMMAND_VALIDATION_USER_ERROR;
-            case s.ApplicationCommandOptionType.MENTIONABLE:
-                return a.default.Messages.COMMAND_VALIDATION_MENTIONABLE_ERROR;
+            case a.ApplicationCommandOptionType.BOOLEAN:
+                return s.default.Messages.COMMAND_VALIDATION_BOOLEAN_ERROR;
+            case a.ApplicationCommandOptionType.CHANNEL:
+                return s.default.Messages.COMMAND_VALIDATION_CHANNEL_ERROR;
+            case a.ApplicationCommandOptionType.INTEGER:
+                return s.default.Messages.COMMAND_VALIDATION_INTEGER_ERROR;
+            case a.ApplicationCommandOptionType.NUMBER:
+                return s.default.Messages.COMMAND_VALIDATION_NUMBER_ERROR;
+            case a.ApplicationCommandOptionType.ROLE:
+                return s.default.Messages.COMMAND_VALIDATION_ROLE_ERROR;
+            case a.ApplicationCommandOptionType.USER:
+                return s.default.Messages.COMMAND_VALIDATION_USER_ERROR;
+            case a.ApplicationCommandOptionType.MENTIONABLE:
+                return s.default.Messages.COMMAND_VALIDATION_MENTIONABLE_ERROR;
             default:
-                return a.default.Messages.COMMAND_VALIDATION_GENERAL_ERROR
+                return s.default.Messages.COMMAND_VALIDATION_GENERAL_ERROR
         }
     }
 }

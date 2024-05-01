@@ -3,30 +3,30 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("392711"),
         r = n.n(i),
-        s = n("626135"),
-        a = n("524484"),
+        a = n("626135"),
+        s = n("524484"),
         o = n("981631");
 
     function l(e) {
         switch (e) {
-            case a.ShakeLocation.CHAT_INPUT:
+            case s.ShakeLocation.CHAT_INPUT:
                 return "chat_input";
-            case a.ShakeLocation.MENTION:
+            case s.ShakeLocation.MENTION:
                 return "mention";
-            case a.ShakeLocation.VOICE_USER:
+            case s.ShakeLocation.VOICE_USER:
                 return "voice_user"
         }
     }
 
     function u(e) {
         switch (e) {
-            case a.ConfettiLocation.CHAT_INPUT:
+            case s.ConfettiLocation.CHAT_INPUT:
                 return "chat_input";
-            case a.ConfettiLocation.MEMBER_USER:
+            case s.ConfettiLocation.MEMBER_USER:
                 return "member_user";
-            case a.ConfettiLocation.REACTION:
+            case s.ConfettiLocation.REACTION:
                 return "reaction";
-            case a.ConfettiLocation.CALL_TILE:
+            case s.ConfettiLocation.CALL_TILE:
                 return "call_tile"
         }
     }
@@ -46,19 +46,19 @@ function(e, t, n) {
             combosEnabled: n,
             combosRequiredCount: i,
             screenshakeEnabled: r,
-            shakeIntensity: a,
+            shakeIntensity: s,
             screenshakeEnabledLocations: _,
             confettiEnabled: c,
             confettiSize: E,
             confettiCount: I,
             confettiEnabledLocations: T
         } = e;
-        s.default.track(o.AnalyticEvents.POGGERMODE_SETTINGS_UPDATED, {
+        a.default.track(o.AnalyticEvents.POGGERMODE_SETTINGS_UPDATED, {
             enabled: t,
             combos_enabled: n,
             combos_required_count: i,
             screenshake_enabled: r,
-            shake_intensity: a,
+            shake_intensity: s,
             screenshake_enabled_locations: d(_, l),
             confetti_enabled: c,
             confetti_size: E,

@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("143927"),
         l = n("28546"),
         u = n("401227"),
@@ -13,17 +13,17 @@ function(e, t, n) {
     t.default = r.memo(r.forwardRef(function(e, t) {
         let {
             disabled: n,
-            type: s
+            type: a
         } = e, [c, E, I] = (0, l.useExpressionPickerStore)(e => [e.activeView, e.activeViewType, e.pickerId], o.default), T = r.useCallback(() => {
-            (0, l.toggleExpressionPicker)(d.ExpressionPickerViewType.EMOJI, s)
-        }, [s]);
+            (0, l.toggleExpressionPicker)(d.ExpressionPickerViewType.EMOJI, a)
+        }, [a]);
         return n ? null : (0, i.jsx)("div", {
-            className: a()(d.CHAT_INPUT_BUTTON_CLASSNAME, _.buttonContainer),
+            className: s()(d.CHAT_INPUT_BUTTON_CLASSNAME, _.buttonContainer),
             ref: t,
             children: (0, i.jsx)(u.default, {
                 className: _.emojiButton,
                 onClick: T,
-                active: c === d.ExpressionPickerViewType.EMOJI && E === s,
+                active: c === d.ExpressionPickerViewType.EMOJI && E === a,
                 "aria-controls": I,
                 tabIndex: 0,
                 focusProps: {

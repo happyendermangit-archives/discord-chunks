@@ -13,20 +13,20 @@ function(e, t, n) {
     });
     var i = n("570140"),
         r = n("579806"),
-        s = n("710845"),
-        a = n("314897"),
+        a = n("710845"),
+        s = n("314897"),
         o = n("626135"),
         l = n("931619"),
         u = n("358085"),
         d = n("548570"),
         _ = n("616810"),
         c = n("755278");
-    let E = new s.default("ConnectionStore"),
+    let E = new a.default("ConnectionStore"),
         I = new d.default,
         T = new _.default(I),
         f = new c.default(I);
     I.handleIdentify = () => {
-        let e = a.default.getToken();
+        let e = s.default.getToken();
         return (E.verbose("handleIdentify called", {
             hasToken: null != e
         }), null == e) ? null : {

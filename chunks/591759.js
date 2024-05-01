@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120"), n("315314"), n("610138"), n("216116"), n("78328"), n("815648");
     var i = n("628735"),
         r = n.n(i),
-        s = n("392711"),
-        a = n.n(s),
+        a = n("392711"),
+        s = n.n(a),
         o = n("729594"),
         l = n("981631");
     let u = /(?:^|\.)(?:discordapp|discord)\.com$/i,
@@ -51,10 +51,10 @@ function(e, t, n) {
         format: e => o.format(e),
         formatPathWithQuery: (e, t) => o.format({
             pathname: e,
-            query: a().pickBy(t)
+            query: s().pickBy(t)
         }),
         formatSearch: e => o.format({
-            query: a().pickBy(e)
+            query: s().pickBy(e)
         }),
         safeParseWithQuery(e) {
             try {

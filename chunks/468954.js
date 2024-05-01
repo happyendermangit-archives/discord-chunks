@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("28546"),
-        a = n("98528"),
+        a = n("28546"),
+        s = n("98528"),
         o = n("429155"),
         l = n("810462"),
         u = n("182898");
@@ -43,7 +43,7 @@ function(e, t, n) {
             gridNavigatorId: U,
             gridNotice: b,
             renderHeader: G
-        } = e, w = r.useRef(null), B = r.useRef(null), k = r.useRef(null), V = 0 === t.length, x = (0, s.useExpressionPickerStore)(e => e.searchQuery), F = _.useStore(e => e.inspectedExpressionPosition), H = (0, a.useExpressionPickerGridWidth)({
+        } = e, w = r.useRef(null), B = r.useRef(null), k = r.useRef(null), V = 0 === t.length, x = (0, a.useExpressionPickerStore)(e => e.searchQuery), F = _.useStore(e => e.inspectedExpressionPosition), H = (0, s.useExpressionPickerGridWidth)({
             gridWrapperRef: w,
             containerWidth: d,
             showingEmptyState: V
@@ -53,7 +53,7 @@ function(e, t, n) {
             rowCountBySection: W,
             columnCounts: K,
             gutterWidth: z
-        } = (0, a.useExpressionGrid)({
+        } = (0, s.useExpressionGrid)({
             categories: t,
             collapsedCategories: n,
             gridWidth: H,
@@ -66,7 +66,7 @@ function(e, t, n) {
             gridContainerProps: Q,
             handleGridContainerKeyDown: q,
             isUsingKeyboardNavigation: J
-        } = (0, a.useKeyboardNavigation)({
+        } = (0, s.useKeyboardNavigation)({
             columnCounts: K,
             expressionsListRef: B,
             expressionsGrid: Y,

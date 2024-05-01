@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         popAllLayers: function() {
-            return a
+            return s
         },
         popLayer: function() {
-            return s
+            return a
         },
         pushLayer: function() {
             return r
@@ -20,13 +20,13 @@ function(e, t, n) {
         })
     }
 
-    function s() {
+    function a() {
         i.default.dispatch({
             type: "LAYER_POP"
         })
     }
 
-    function a() {
+    function s() {
         i.default.dispatch({
             type: "LAYER_POP_ALL"
         })

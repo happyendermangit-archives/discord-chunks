@@ -7,14 +7,14 @@ function(e, t, n) {
     });
     var i = n("470079"),
         r = n("442837"),
-        s = n("675478"),
-        a = n("654455");
+        a = n("675478"),
+        s = n("654455");
 
     function o(e) {
         i.useEffect(() => {
-            s.FrecencyUserSettingsActionCreators.loadIfNecessary()
+            a.FrecencyUserSettingsActionCreators.loadIfNecessary()
         }, []);
-        let t = (0, r.useStateFromStores)([a.default], () => a.default.getTopCommandsWithoutLoadingLatest());
-        return i.useMemo(() => (0, a.getFilteredTopCommands)(t, e), [t, e])
+        let t = (0, r.useStateFromStores)([s.default], () => s.default.getTopCommandsWithoutLoadingLatest());
+        return i.useMemo(() => (0, s.getFilteredTopCommands)(t, e), [t, e])
     }
 }

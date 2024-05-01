@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         isInProfileMutualsExperiment: function() {
-            return s
+            return a
         },
         useProfileMutualsExperiment: function() {
-            return a
+            return s
         }
     });
     var i = n("818083");
@@ -24,7 +24,7 @@ function(e, t, n) {
                 }
             }]
         }),
-        s = function() {
+        a = function() {
             let {
                 autoTrackExposure: e = !1,
                 disable: t = !1,
@@ -37,7 +37,7 @@ function(e, t, n) {
                 disable: t
             })
         },
-        a = function() {
+        s = function() {
             let {
                 autoTrackExposure: e = !1,
                 disable: t = !1,

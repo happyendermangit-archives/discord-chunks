@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("653041"), n("724458"), n("47120");
-    var i, r, s, a, o = n("512722"),
+    var i, r, a, s, o = n("512722"),
         l = n.n(o),
         u = n("392711"),
         d = n.n(u),
@@ -64,16 +64,16 @@ function(e, t, n) {
                 let [e] = n.toArray(g.ChannelRTCParticipantsIndexes.VIDEO);
                 i = e.id
             } else {
-                var s;
+                var a;
                 let e = n.toArray().find(e => e.type === L.ParticipantTypes.USER && e.id !== t && !e.ringing);
-                i = null !== (s = null == e ? void 0 : e.id) && void 0 !== s ? s : t
+                i = null !== (a = null == e ? void 0 : e.id) && void 0 !== a ? a : t
             }
-            let [a] = W(e);
-            if (a !== L.ParticipantSelectionTypes.AUTO && a !== L.ParticipantSelectionTypes.NONE) {
-                let e = n.getParticipant(a);
-                (null == e || e.type === L.ParticipantTypes.STREAM && null == S.default.getActiveStreamForStreamKey(e.id)) && (a = L.ParticipantSelectionTypes.NONE)
+            let [s] = W(e);
+            if (s !== L.ParticipantSelectionTypes.AUTO && s !== L.ParticipantSelectionTypes.NONE) {
+                let e = n.getParticipant(s);
+                (null == e || e.type === L.ParticipantTypes.STREAM && null == S.default.getActiveStreamForStreamKey(e.id)) && (s = L.ParticipantSelectionTypes.NONE)
             }
-            Z(e, [a, i])
+            Z(e, [s, i])
         }(n), !0) : t, !1)
     }
 
@@ -136,8 +136,8 @@ function(e, t, n) {
             let i = T.default.getRemoteSessionId(),
                 r = C.default.getVoiceStateForSession(h.default.getId(), i);
             (null == r ? void 0 : r.channelId) != null && e.push(null == r ? void 0 : r.channelId), d().difference(y, e).forEach(Q);
-            let s = d().difference(e, y);
-            return y = e, s
+            let a = d().difference(e, y);
+            return y = e, a
         }())
     }
 
@@ -189,7 +189,7 @@ function(e, t, n) {
         var t;
         return !!(null === (t = m.default.getChannel(e)) || void 0 === t ? void 0 : t.isGuildVocal())
     }
-    class es extends(i = _.default.Store) {
+    class ea extends(i = _.default.Store) {
         initialize() {
             this.waitFor(S.default, h.default, A.default, m.default, E.default, N.default, p.default, O.default, R.default, C.default), this.syncWith([E.default], J), this.syncWith([T.default], q)
         }
@@ -259,8 +259,8 @@ function(e, t, n) {
             let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : v.AppContext.APP;
             if (__OVERLAY__) return v.ChannelLayouts.NORMAL;
             let r = m.default.getChannel(e),
-                s = er(e) || (null == r ? void 0 : r.isBroadcastChannel());
-            return null !== (n = null === (t = w[e]) || void 0 === t ? void 0 : t[i]) && void 0 !== n ? n : s ? v.ChannelLayouts.NO_CHAT : v.ChannelLayouts.NORMAL
+                a = er(e) || (null == r ? void 0 : r.isBroadcastChannel());
+            return null !== (n = null === (t = w[e]) || void 0 === t ? void 0 : t[i]) && void 0 !== n ? n : a ? v.ChannelLayouts.NO_CHAT : v.ChannelLayouts.NORMAL
         }
         getChatOpen(e) {
             var t;
@@ -277,12 +277,12 @@ function(e, t, n) {
             return F[e]
         }
     }
-    a = "ChannelRTCStore", (s = "displayName") in(r = es) ? Object.defineProperty(r, s, {
-        value: a,
+    s = "ChannelRTCStore", (a = "displayName") in(r = ea) ? Object.defineProperty(r, a, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a, t.default = new es(c.default, {
+    }) : r[a] = s, t.default = new ea(c.default, {
         CONNECTION_OPEN: q,
         CONNECTION_OPEN_SUPPLEMENTAL: q,
         THREAD_LIST_SYNC: q,

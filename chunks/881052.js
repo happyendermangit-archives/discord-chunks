@@ -5,10 +5,10 @@ function(e, t, n) {
             return r.default
         },
         AppliedGuildBoostError: function() {
-            return a.default
+            return s.default
         },
         BillingError: function() {
-            return s.default
+            return a.default
         },
         UploadErrorCodes: function() {
             return o.UploadErrorCodes
@@ -22,8 +22,8 @@ function(e, t, n) {
     });
     var i = n("34756"),
         r = n("479531"),
-        s = n("128069");
+        a = n("128069");
     n("594124"), n("330516");
-    var a = n("710721"),
+    var s = n("710721"),
         o = n("998701")
 }

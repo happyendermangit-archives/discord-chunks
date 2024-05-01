@@ -10,14 +10,14 @@ function(e, t, n) {
     });
     var i = n("493683"),
         r = n("758059"),
-        s = n("292556"),
-        a = n("703656"),
+        a = n("292556"),
+        s = n("703656"),
         o = n("768581"),
         l = n("981631"),
         u = n("689938");
 
     function d(e, t, n) {
-        s.default.showNotification(o.default.getUserAvatarURL(e), e.username, t, {}, {
+        a.default.showNotification(o.default.getUserAvatarURL(e), e.username, t, {}, {
             omitViewTracking: !0,
             omitClickTracking: !0,
             tag: e.id,
@@ -34,7 +34,7 @@ function(e, t, n) {
                 t({
                     userId: e.id
                 })
-            }(0, a.transitionTo)(l.Routes.FRIENDS), r.default.setSection(l.FriendsSections.PENDING)
+            }(0, s.transitionTo)(l.Routes.FRIENDS), r.default.setSection(l.FriendsSections.PENDING)
         })
     }
 

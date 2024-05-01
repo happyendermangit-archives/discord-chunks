@@ -10,8 +10,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("207561"),
         l = n("442837"),
         u = n("481060"),
@@ -41,7 +41,7 @@ function(e, t, n) {
             icon: (0, i.jsx)(E.default, {
                 width: 16,
                 height: 16,
-                className: a()(f.icon, f.errorIcon)
+                className: s()(f.icon, f.errorIcon)
             })
         }
     }
@@ -51,13 +51,13 @@ function(e, t, n) {
             className: t,
             icon: n,
             text: r,
-            color: s
+            color: a
         } = e;
         return (0, i.jsxs)("div", {
-            className: a()(f.wrapper, t),
+            className: s()(f.wrapper, t),
             children: [n, (0, i.jsx)(u.Text, {
                 variant: "text-md/normal",
-                color: s,
+                color: a,
                 scaleFontToUserSetting: !0,
                 children: r
             })]
@@ -67,20 +67,20 @@ function(e, t, n) {
         let {
             message: t,
             className: n,
-            component: s
-        } = e, a = (0, o.useForceUpdate)(), u = (0, l.useStateFromStores)([_.default], () => _.default.getInteraction(t), [t]);
+            component: a
+        } = e, s = (0, o.useForceUpdate)(), u = (0, l.useStateFromStores)([_.default], () => _.default.getInteraction(t), [t]);
         r.useEffect(() => {
             let e = null;
             if (t.hasFlag(I.MessageFlags.LOADING) && null != u) {
                 let n = (0, c.getInteractionTimeoutTimestamp)(t.id) - Date.now();
-                n > 0 && (e = setTimeout(() => a(), 1e3 + n))
+                n > 0 && (e = setTimeout(() => s(), 1e3 + n))
             }
             return () => {
                 clearTimeout(e)
             }
-        }, [a, u, t]);
+        }, [s, u, t]);
         let E = null;
-        if (null == s) E = function(e, t) {
+        if (null == a) E = function(e, t) {
             switch ((0, c.getInteractionStatusViewState)(t, e)) {
                 case c.InteractionStatusViewState.SENDING:
                     return S(T.default.Messages.APPLICATION_COMMAND_SENDING);
@@ -95,7 +95,7 @@ function(e, t, n) {
             }
         }(u, t);
         else {
-            let e = (0, d.getLayoutComponentErrorText)(u, t, s);
+            let e = (0, d.getLayoutComponentErrorText)(u, t, a);
             null != e && (E = h(e))
         }
         if (null == E) return null;

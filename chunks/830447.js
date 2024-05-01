@@ -10,8 +10,8 @@ function(e, t, n) {
     }), n("390547"), n("724458"), n("653041"), n("47120"), n("411104");
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("348327"),
         l = n.n(o),
         u = n("739940"),
@@ -29,7 +29,7 @@ function(e, t, n) {
         var t;
         let {
             navId: n,
-            variant: s = "flexible",
+            variant: a = "flexible",
             hideScroller: o = !1,
             className: c,
             children: A,
@@ -128,7 +128,7 @@ function(e, t, n) {
         return (0, i.jsx)(f.OnMenuSelectContext.Provider, {
             value: p,
             children: (0, i.jsx)("div", {
-                className: a()(h.menu, h[s], c),
+                className: s()(h.menu, h[a], c),
                 ...L.getContainerProps(),
                 ref: v,
                 "aria-label": e["aria-label"],
@@ -143,17 +143,17 @@ function(e, t, n) {
                         isFocused: !1,
                         onFocus: () => {},
                         onClose: m
-                    }), O.length > 0 && function e(t, n, r, s) {
-                        let a = 0,
+                    }), O.length > 0 && function e(t, n, r, a) {
+                        let s = 0,
                             o = [];
                         return t.reduce((t, l, u) => {
                             let d = o.length > 0 ? o[o.length - 1] : t;
                             switch (l.type) {
                                 case "separator":
-                                    d.push((0, i.jsx)(S.Separator, {}, "separator-".concat(u))), a = 0;
+                                    d.push((0, i.jsx)(S.Separator, {}, "separator-".concat(u))), s = 0;
                                     break;
                                 case "groupstart":
-                                    a > 0 && l.length > 0 && (d.push((0, i.jsx)(S.Separator, {}, "separator-".concat(u))), a = 0), o.push([]);
+                                    s > 0 && l.length > 0 && (d.push((0, i.jsx)(S.Separator, {}, "separator-".concat(u))), s = 0), o.push([]);
                                     break;
                                 case "groupend":
                                     o.length > 0 && t.push((0, i.jsx)(S.Group, {
@@ -182,7 +182,7 @@ function(e, t, n) {
                                                 "aria-haspopup": !0
                                             } : {}
                                         },
-                                        onClose: s
+                                        onClose: a
                                     }, l.key);
                                     E ? null != o ? d.push((0, i.jsx)(S.SubmenuListItem, {
                                         ...l.props,
@@ -191,7 +191,7 @@ function(e, t, n) {
                                         menuSubmenuProps: n.getSubmenuProps({
                                             path: I
                                         }),
-                                        rows: e(t, n, I, s),
+                                        rows: e(t, n, I, a),
                                         rowHeight: o,
                                         onScroll: u,
                                         listClassName: _
@@ -203,8 +203,8 @@ function(e, t, n) {
                                         menuSubmenuProps: n.getSubmenuProps({
                                             path: I
                                         }),
-                                        renderSubmenu: () => e(t, n, I, s)
-                                    }, "".concat(l.key, "-submenu"))) : d.push(f), a++;
+                                        renderSubmenu: () => e(t, n, I, a)
+                                    }, "".concat(l.key, "-submenu"))) : d.push(f), s++;
                                     break
                                 }
                                 case "customitem": {
@@ -215,9 +215,9 @@ function(e, t, n) {
                                         menuItemProps: n.getItemProps({
                                             path: e
                                         }),
-                                        onClose: s,
+                                        onClose: a,
                                         children: l.render
-                                    }, l.key)), a++;
+                                    }, l.key)), s++;
                                     break
                                 }
                                 case "checkbox": {
@@ -229,7 +229,7 @@ function(e, t, n) {
                                             path: e,
                                             role: "menuitemcheckbox"
                                         })
-                                    }, l.key)), a++;
+                                    }, l.key)), s++;
                                     break
                                 }
                                 case "radio": {
@@ -241,7 +241,7 @@ function(e, t, n) {
                                             path: e,
                                             role: "menuitemradio"
                                         })
-                                    }, l.key)), a++;
+                                    }, l.key)), s++;
                                     break
                                 }
                                 case "control": {
@@ -252,8 +252,8 @@ function(e, t, n) {
                                         menuItemProps: n.getItemProps({
                                             path: e
                                         }),
-                                        onClose: s
-                                    }, l.key)), a++;
+                                        onClose: a
+                                    }, l.key)), s++;
                                     break
                                 }
                                 case "compositecontrol": {
@@ -264,9 +264,9 @@ function(e, t, n) {
                                         menuItemProps: n.getItemProps({
                                             path: e
                                         }),
-                                        onClose: s,
+                                        onClose: a,
                                         children: l.children
-                                    }, l.key)), a++
+                                    }, l.key)), s++
                                 }
                             }
                             return t
@@ -279,7 +279,7 @@ function(e, t, n) {
 
     function m() {
         return (0, i.jsx)("div", {
-            className: a()(h.menu, h.loader, h.flexible),
+            className: s()(h.menu, h.loader, h.flexible),
             children: (0, i.jsx)(c.Spinner, {})
         })
     }

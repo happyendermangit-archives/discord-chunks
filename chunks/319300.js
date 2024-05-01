@@ -8,20 +8,20 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("81334"),
-        s = n("659101"),
-        a = n("795197");
+        a = n("659101"),
+        s = n("795197");
 
     function o(e) {
         let {
             userId: t,
             guildId: n
         } = e;
-        return (0, i.jsx)(s.default, {
+        return (0, i.jsx)(a.default, {
             children: (0, i.jsx)(r.default, {
                 userId: t,
                 guildId: n,
-                headingClassName: a.title,
-                textClassName: a.body
+                headingClassName: s.title,
+                textClassName: s.body
             })
         })
     }

@@ -25,8 +25,8 @@ function(e, t, n) {
     }), n("411104"), n("47120"), n("724458");
     var i = n("683860"),
         r = n("344185"),
-        s = n("569471"),
-        a = n("260483"),
+        a = n("569471"),
+        s = n("260483"),
         o = n("144140"),
         l = n("592125"),
         u = n("703558"),
@@ -65,11 +65,11 @@ function(e, t, n) {
         let i = l.default.getChannel(e);
         if (null == i) return [];
         let r = l.default.getChannel(i.parent_id),
-            s = null == r ? void 0 : r.availableTags;
-        if (null == r || null == s) return [];
-        let a = null !== (n = null === (t = u.default.getThreadSettings(e)) || void 0 === t ? void 0 : t.appliedTags) && void 0 !== n ? n : new Set,
-            o = new Set(s.map(e => e.id));
-        return Array.from(a).filter(e => o.has(e))
+            a = null == r ? void 0 : r.availableTags;
+        if (null == r || null == a) return [];
+        let s = null !== (n = null === (t = u.default.getThreadSettings(e)) || void 0 === t ? void 0 : t.appliedTags) && void 0 !== n ? n : new Set,
+            o = new Set(a.map(e => e.id));
+        return Array.from(s).filter(e => o.has(e))
     }
 
     function R(e, t) {
@@ -87,9 +87,9 @@ function(e, t, n) {
     function g(e) {
         var t, n, i, r;
         let {
-            channelId: s,
-            sessionId: a
-        } = e, o = l.default.getChannel(s);
+            channelId: a,
+            sessionId: s
+        } = e, o = l.default.getChannel(a);
         return null != o && o.isForumLikeChannel() ? {
             forum_channel_has_guidelines: null != o.topic && o.topic.trim().length > 0,
             forum_channel_default_emoji_reaction_id: null === (t = o.defaultReactionEmoji) || void 0 === t ? void 0 : t.emojiId,
@@ -99,7 +99,7 @@ function(e, t, n) {
             forum_channel_can_create_post: d.default.can(S.Permissions.SEND_MESSAGES, o),
             forum_channel_filter_tag_ids: I.default.getFilterTagIdsAnalytics(),
             forum_channel_sort_order: I.default.getSortOrderAnalytics(o.id),
-            forum_channel_session_id: null != a ? a : m(o.id),
+            forum_channel_session_id: null != s ? s : m(o.id),
             forum_channel_layout: I.default.getLayoutAnalytics(o.id),
             forum_channel_default_sort_order: o.defaultSortOrder,
             forum_channel_default_layout: o.defaultForumLayout
@@ -119,7 +119,7 @@ function(e, t, n) {
                 channelId: S.id,
                 sessionId: I
             }),
-            thread_approximate_member_count: a.default.getMemberCount(E),
+            thread_approximate_member_count: s.default.getMemberCount(E),
             thread_approximate_message_count: o.default.getCount(E),
             thread_archived: (null === (t = f.threadMetadata) || void 0 === t ? void 0 : t.archived) === !0,
             thread_locked: null !== (d = null === (n = f.threadMetadata) || void 0 === n ? void 0 : n.locked) && void 0 !== d && d,
@@ -140,15 +140,15 @@ function(e, t, n) {
                 let i = l.default.getChannel(e);
                 if (null == i) return [];
                 let r = l.default.getChannel(i.parent_id),
-                    s = null == r ? void 0 : r.availableTags;
-                if (null == r || null == s) return [];
-                let a = new Set(s.map(e => e.id));
-                return null !== (n = null === (t = i.appliedTags) || void 0 === t ? void 0 : t.filter(e => a.has(e))) && void 0 !== n ? n : []
+                    a = null == r ? void 0 : r.availableTags;
+                if (null == r || null == a) return [];
+                let s = new Set(a.map(e => e.id));
+                return null !== (n = null === (t = i.appliedTags) || void 0 === t ? void 0 : t.filter(e => s.has(e))) && void 0 !== n ? n : []
             }(f.id),
             forum_post_is_pinned: f.hasFlag(h.ChannelFlags.PINNED),
             forum_post_is_new: null === (r = T.default.getReadStateSnapshotAnalytics(f.id)) || void 0 === r ? void 0 : r.isNew,
             forum_post_is_unread: null === (u = T.default.getReadStateSnapshotAnalytics(f.id)) || void 0 === u ? void 0 : u.hasUnreads,
-            forum_post_is_following: s.default.hasJoined(f.id),
+            forum_post_is_following: a.default.hasJoined(f.id),
             forum_post_attachment_mimetypes: function(e) {
                 let t = C(e);
                 return null == t ? [] : t.attachments.map(e => {

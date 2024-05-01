@@ -14,22 +14,22 @@ function(e, t, n) {
     var i = n("920478");
     n("364964");
     let r = i.default.listLanguages(),
-        s = {};
+        a = {};
     for (let e of r) {
         e = e.toLowerCase();
         let t = i.default.getLanguage(e);
         if (null == t) continue;
         let n = t.aliases;
-        if (s[e] = e, null != n)
-            for (let t of n) s[t.toLowerCase()] = e
+        if (a[e] = e, null != n)
+            for (let t of n) a[t.toLowerCase()] = e
     }
-    let a = /^[a-z0-9_+\-.#]+$/,
+    let s = /^[a-z0-9_+\-.#]+$/,
         o = /^[a-z0-9_+\-.#]+$/i;
-    for (let e in s)
-        if (null == e.match(a)) throw Error("Language name does not match regex: ".concat(e));
+    for (let e in a)
+        if (null == e.match(s)) throw Error("Language name does not match regex: ".concat(e));
 
     function l(e) {
-        return e.toLowerCase() in s
+        return e.toLowerCase() in a
     }
 
     function u(e) {

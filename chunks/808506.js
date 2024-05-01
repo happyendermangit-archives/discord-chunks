@@ -6,7 +6,7 @@ function(e, t, n) {
             return el
         }
     }), n("47120"), n("411104"), n("518263"), n("970173"), n("520712"), n("268111"), n("941497"), n("32026"), n("480839"), n("744285"), n("492257"), n("873817"), n("642549"), n("610138"), n("216116"), n("78328"), n("815648"), n("177593");
-    var s, a, o, l, u, d, _ = n("807864"),
+    var a, s, o, l, u, d, _ = n("807864"),
         c = n("442837"),
         E = n("570140"),
         I = n("26151"),
@@ -33,7 +33,7 @@ function(e, t, n) {
         G = n("145597"),
         w = n("981631"),
         B = n("987650");
-    (o = s || (s = {})).ATTACHING = "ATTACHING", o.CONNECTING = "CONNECTING", o.CONNECTED = "CONNECTED", o.READY = "READY", o.CRASHED = "CRASHED", o.CONNECT_FAILED = "CONNECT_FAILED", o.HOOK_FAILED = "HOOK_FAILED";
+    (o = a || (a = {})).ATTACHING = "ATTACHING", o.CONNECTING = "CONNECTING", o.CONNECTED = "CONNECTED", o.READY = "READY", o.CRASHED = "CRASHED", o.CONNECT_FAILED = "CONNECT_FAILED", o.HOOK_FAILED = "HOOK_FAILED";
     let k = {},
         V = new Map,
         x = !1,
@@ -81,7 +81,7 @@ function(e, t, n) {
                 null != e && e().then(e => {
                     if (Array.isArray(e) && 0 !== e.length)
                         for (let l of (J.log("transitionOverlayPIDStatus: Uploaded minidumps", e), e)) {
-                            var t, n, i, r, s, a, o;
+                            var t, n, i, r, a, s, o;
                             if (null == l) continue;
                             let e = null != l.processName ? v.default.getGameByExecutable(l.processName) : null;
                             y.default.track(w.AnalyticEvents.OVERLAY_HOOK_CRASHED, {
@@ -90,8 +90,8 @@ function(e, t, n) {
                                 game_id: null !== (n = null == e ? void 0 : e.id) && void 0 !== n ? n : null,
                                 minidump_exception_type: null !== (i = l.exceptionString) && void 0 !== i ? i : null,
                                 minidump_exception_module_name: null !== (r = l.exceptionModuleName) && void 0 !== r ? r : null,
-                                minidump_relative_crash_address: null !== (s = l.relativeCrashAddress) && void 0 !== s ? s : null,
-                                minidump_exception_module_version: null !== (a = l.exceptionModuleVersion) && void 0 !== a ? a : null,
+                                minidump_relative_crash_address: null !== (a = l.relativeCrashAddress) && void 0 !== a ? a : null,
+                                minidump_exception_module_version: null !== (s = l.exceptionModuleVersion) && void 0 !== s ? s : null,
                                 minidump_exception_module_code_id: null !== (o = l.exceptionModuleCodeId) && void 0 !== o ? o : null
                             })
                         }
@@ -125,7 +125,7 @@ function(e, t, n) {
         let i = await m.attachToProcess(e);
         null == i ? ($ = "attach.transitionOverlayPIDStatus (CONNECTING)", en(e, "CONNECTING", "ATTACHING"), $ = "attach.reconcileHostProcess", await ei(n), n.connectProcess(e)) : ($ = "attach.transitionOverlayPIDStatus (HOOK_FAILED)", en(e, "HOOK_FAILED", "ATTACHING"), J.warn("Could not hook to pid=".concat(e, ", error=").concat(i)))
     }
-    async function es(e) {
+    async function ea(e) {
         if (!ee.isMutexHeld() && J.error("_detachPIDMustBeLocked: overlayMutex is not held.", e), !V.has(e)) {
             J.warn("Trying to detach from pid ".concat(e, ", which is in an unknown state"));
             return
@@ -134,7 +134,7 @@ function(e, t, n) {
         let t = await eu();
         $ = "detach.transitionOverlayPIDStatus", en(e, null), e !== G.DEV_PID && ($ = "detach.cancelAttachToProcess", m.cancelAttachToProcess(e), $ = "detach.disconnectProcess", t.disconnectProcess(e)), $ = "detach.reconcileHostProcess", await ei(t)
     }
-    async function ea(e) {
+    async function es(e) {
         var t;
         if (J.verbose("updateIntendedOverlayPIDs", {
                 isConnectionOpened: j,
@@ -177,7 +177,7 @@ function(e, t, n) {
                     !V.has(n.pid) && await er(n.pid), k[n.pid] = {
                         method: t.overlayMethod,
                         deconstructor: async () => {
-                            await es(n.pid)
+                            await ea(n.pid)
                         }
                     };
                     break;
@@ -190,7 +190,7 @@ function(e, t, n) {
         }
         for (let t of e.removed) J.verbose("updateIntendedOverlayPIDs: removedGame", t), await n(t.pid)
     }
-    let eo = et("updateIntendedOverlayPIDs", e => ea(e));
+    let eo = et("updateIntendedOverlayPIDs", e => es(e));
 
     function el() {
         return new Promise(e => {
@@ -216,12 +216,12 @@ function(e, t, n) {
         return () => (null == e && (e = t()), e)
     })();
     async function ed(e) {
-        var t, n, i, r, s, a, o;
+        var t, n, i, r, a, s, o;
         try {
             let t = await el() + "&oop=true&pid=".concat(e);
             await (null === A.default || void 0 === A.default ? void 0 : null === (r = A.default.globalOverlay) || void 0 === r ? void 0 : null === (i = r.openWindow) || void 0 === i ? void 0 : i.call(r, t))
         } catch (e) {
-            J.log("globalOverlay: Failed to open overlay: ".concat(e), e), null === A.default || void 0 === A.default || null === (a = A.default.window) || void 0 === a || a.close(null === A.default || void 0 === A.default ? void 0 : null === (s = A.default.globalOverlay) || void 0 === s ? void 0 : s.WINDOW_KEY)
+            J.log("globalOverlay: Failed to open overlay: ".concat(e), e), null === A.default || void 0 === A.default || null === (s = A.default.window) || void 0 === s || s.close(null === A.default || void 0 === A.default ? void 0 : null === (a = A.default.globalOverlay) || void 0 === a ? void 0 : a.WINDOW_KEY)
         }
         return K = e, null !== (o = await (null === A.default || void 0 === A.default ? void 0 : null === (n = A.default.window) || void 0 === n ? void 0 : n.getNativeHandle(null === A.default || void 0 === A.default ? void 0 : null === (t = A.default.globalOverlay) || void 0 === t ? void 0 : t.WINDOW_KEY))) && void 0 !== o ? o : ""
     }
@@ -268,7 +268,7 @@ function(e, t, n) {
             {
                 OutOfProcess: i
             } = n;
-        (0, G.setOutOfProcessSupport)(null != i), await ea(void 0), await ei(n), H && eI()
+        (0, G.setOutOfProcessSupport)(null != i), await es(void 0), await ei(n), H && eI()
     });
 
     function ef(e) {
@@ -286,17 +286,17 @@ function(e, t, n) {
     function eh(e, t, n) {
         var i;
         let r = null === (i = O.default.getGameForPID(e)) || void 0 === i ? void 0 : i.name,
-            s = v.default.getGameByName(r),
-            a = {
+            a = v.default.getGameByName(r),
+            s = {
                 game_name: r,
-                game_id: null == s ? null : s.id,
+                game_id: null == a ? null : a.id,
                 success: t,
                 ...n
             };
         (0, f.createLayout)(G.OVERLAY_LAYOUT_ID, D.default.getDefaultLayout(G.OVERLAY_LAYOUT_ID), {
             width: n.graphics_width,
             height: n.graphics_height
-        }), y.default.track(w.AnalyticEvents.OVERLAY_HOOK_RESULT, a), J.info("Overlay connection to ".concat(e, " ").concat(t ? "succeeded" : "failed"), a), t ? en(e, "CONNECTED", "CONNECTING") : en(e, "CONNECT_FAILED", "CONNECTING")
+        }), y.default.track(w.AnalyticEvents.OVERLAY_HOOK_RESULT, s), J.info("Overlay connection to ".concat(e, " ").concat(t ? "succeeded" : "failed"), s), t ? en(e, "CONNECTED", "CONNECTING") : en(e, "CONNECT_FAILED", "CONNECTING")
     }
 
     function eA() {
@@ -378,17 +378,17 @@ function(e, t, n) {
                 (0, f.createLayout)(G.OVERLAY_LAYOUT_ID, D.default.getDefaultLayout(G.OVERLAY_LAYOUT_ID)), Promise.all([(0, C.default)(t, e.pid), c.default.PersistedStore.getAllStates()]).then(t => {
                     let [n, i] = t, {
                         pid: r,
-                        token: s
+                        token: a
                     } = e;
                     N.send({
                         type: w.OverlayEventTypes.STORAGE_SYNC,
                         pid: r,
-                        token: s,
+                        token: a,
                         states: i
                     }), N.send({
                         type: w.OverlayEventTypes.DISPATCH,
                         pid: r,
-                        token: s,
+                        token: a,
                         payloads: [n]
                     }), en(r, "READY"), S.default.overlayReady(r)
                 });
@@ -403,7 +403,7 @@ function(e, t, n) {
                 J.info("[overlay data received]", e.payload)
         }
     }
-    class eD extends(a = c.default.Store) {
+    class eD extends(s = c.default.Store) {
         initialize() {
             !(!B.OVERLAY_SUPPORTED || __OVERLAY__) && (this.waitFor(O.default, L.default), N.setReceiveCommandHandler(ev, eL), L.default.addChangeListener(eA), eT(R.OverlayStoredSettings.enabled, R.OverlayStoredSettings.legacyEnabled), E.default.addInterceptor(eC))
         }
@@ -515,7 +515,7 @@ function(e, t, n) {
             } = e;
             z = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
             let n = new URLSearchParams;
-            n.append("build_id", "9cf4221e0c52015c1dde75eddff05c6682eb0158"), n.append("rpc", String(t)), n.append("rpc_auth_token", z), i = "".concat(location.protocol, "//").concat(location.host, "/overlay?").concat(n.toString())
+            n.append("build_id", "ea4bc68c90fcd8ae48a878971a69c6efc74166f6"), n.append("rpc", String(t)), n.append("rpc_auth_token", z), i = "".concat(location.protocol, "//").concat(location.host, "/overlay?").concat(n.toString())
         },
         OVERLAY_CALL_PRIVATE_CHANNEL: function(e) {
             let {
@@ -532,7 +532,7 @@ function(e, t, n) {
                 sessionId: n,
                 applicationId: i,
                 channelId: r,
-                messageId: s
+                messageId: a
             } = e;
             setImmediate(() => {
                 T.default.join({
@@ -540,7 +540,7 @@ function(e, t, n) {
                     sessionId: n,
                     applicationId: i,
                     channelId: r,
-                    messageId: s
+                    messageId: a
                 }), null != W && S.default.setLocked(!0, W)
             })
         },

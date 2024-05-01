@@ -10,8 +10,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("693789"),
         l = n("260034"),
         u = n("709692"),
@@ -19,7 +19,7 @@ function(e, t, n) {
 
     function _(e) {
         let t, n, {
-                header: s,
+                header: a,
                 children: _,
                 confirmText: c,
                 cancelText: E,
@@ -67,14 +67,14 @@ function(e, t, n) {
         })), (0, i.jsxs)(u.ModalRoot, {
             className: I,
             transitionState: m,
-            children: [null != s ? (0, i.jsx)(u.ModalHeader, {
+            children: [null != a ? (0, i.jsx)(u.ModalHeader, {
                 separator: !1,
                 children: (0, i.jsx)(l.Heading, {
                     variant: "heading-lg/semibold",
-                    children: s
+                    children: a
                 })
             }) : null, (0, i.jsx)(u.ModalContent, {
-                className: a()(d.content, A),
+                className: s()(d.content, A),
                 children: _
             }), (0, i.jsxs)(u.ModalFooter, {
                 children: [n, t]

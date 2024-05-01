@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120"), n("653041");
     var i = n("735250"),
         r = n("470079"),
-        s = n("873546"),
-        a = n("442837"),
+        a = n("873546"),
+        s = n("442837"),
         o = n("911969"),
         l = n("607070"),
         u = n("998698"),
@@ -31,17 +31,17 @@ function(e, t, n) {
             disabled: t,
             channel: n
         } = e, {
-            enabled: s
+            enabled: a
         } = c.default.useExperiment({
             location: "dc120b_1"
         }, {
             autoTrackExposure: !1
-        }), a = (0, c.useIsSeasonalGiftingActive)();
+        }), s = (0, c.useIsSeasonalGiftingActive)();
         return r.useEffect(() => {
-            a && c.default.trackExposure({
+            s && c.default.trackExposure({
                 location: "dc120b_2"
             })
-        }, [a]), s && a ? (0, i.jsx)(p.default, {
+        }, [s]), a && s ? (0, i.jsx)(p.default, {
             disabled: t,
             channel: n
         }) : (0, i.jsx)(m.default, {
@@ -57,10 +57,10 @@ function(e, t, n) {
             channel: P,
             handleSubmit: U,
             isEmpty: b
-        } = e, G = (0, a.useStateFromStores)([l.default], () => l.default.isSubmitButtonEnabled), w = (0, a.useStateFromStores)([I.default], () => I.default.getStickerPreview(P.id, M.drafts.type)), B = null != w && w.length > 0, k = (0, a.useStateFromStores)([T.default], () => T.default.getUploads(P.id, M.drafts.type)), {
+        } = e, G = (0, s.useStateFromStores)([l.default], () => l.default.isSubmitButtonEnabled), w = (0, s.useStateFromStores)([I.default], () => I.default.getStickerPreview(P.id, M.drafts.type)), B = null != w && w.length > 0, k = (0, s.useStateFromStores)([T.default], () => T.default.getUploads(P.id, M.drafts.type)), {
             activeCommand: V,
             activeCommandOption: x
-        } = (0, a.useStateFromStoresObject)([u.default], () => ({
+        } = (0, s.useStateFromStoresObject)([u.default], () => ({
             activeCommand: u.default.getActiveCommand(P.id),
             activeCommandOption: u.default.getActiveOption(P.id)
         })), {
@@ -75,11 +75,11 @@ function(e, t, n) {
             location: "dc120b_4"
         }, {
             autoTrackExposure: !1
-        }), j = f.default.getCurrentUser(), W = null !== (c = (0, a.useStateFromStores)([_.default], () => Y && S.default.isPremiumExactly(j, C.PremiumTypes.TIER_2) ? _.default.getReferralsRemaining() : 0)) && void 0 !== c ? c : 0, K = (0, a.useStateFromStores)([_.default], () => {
+        }), j = f.default.getCurrentUser(), W = null !== (c = (0, s.useStateFromStores)([_.default], () => Y && S.default.isPremiumExactly(j, C.PremiumTypes.TIER_2) ? _.default.getReferralsRemaining() : 0)) && void 0 !== c ? c : 0, K = (0, s.useStateFromStores)([_.default], () => {
             if (!P.isDM() || void 0 === P.recipients || P.recipients.length > 1 || !Y) return !1;
             let e = P.recipients[0];
             return _.default.getSentUserIds().includes(e)
-        }), [z, Z] = (0, a.useStateFromStoresArray)([_.default, f.default], () => {
+        }), [z, Z] = (0, s.useStateFromStoresArray)([_.default, f.default], () => {
             let e = [!1, !1];
             if (!P.isDM() || void 0 === P.recipients || P.recipients.length > 1) return e;
             let t = P.recipients[0],
@@ -89,7 +89,7 @@ function(e, t, n) {
                 r = _.default.getRecipientEligibility(t);
             return [Y && i && r, r]
         });
-        return (!s.isMobile && (P.isDM() && (null === (m = M.gifts) || void 0 === m ? void 0 : m.button) != null && null == V && (S.default.isPremiumExactly(j, C.PremiumTypes.TIER_2) && Z && E.default.trackExposure({
+        return (!a.isMobile && (P.isDM() && (null === (m = M.gifts) || void 0 === m ? void 0 : m.button) != null && null == V && (S.default.isPremiumExactly(j, C.PremiumTypes.TIER_2) && Z && E.default.trackExposure({
             location: "dc120b_5"
         }), z && H.push((0, i.jsx)(N.default, {
             disabled: y,

@@ -10,8 +10,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("470079"),
         r = n("442837"),
-        s = n("524437"),
-        a = n("781391"),
+        a = n("524437"),
+        s = n("781391"),
         o = n("740492"),
         l = n("581883"),
         u = n("626135"),
@@ -23,11 +23,11 @@ function(e, t, n) {
     let T = () => {
             let e = (0, r.useStateFromStores)([_.default], () => _.default.gradientPreset),
                 t = (0, r.useStateFromStores)([o.default], () => o.default.useSystemTheme === I.SystemThemeState.ON),
-                [n, s] = (0, i.useState)(t);
+                [n, a] = (0, i.useState)(t);
             return (0, i.useEffect)(() => {
-                null == e && s(t)
+                null == e && a(t)
             }, [e, t]), (0, i.useCallback)(() => {
-                if (null != e)(0, d.resetPreviewClientTheme)(), n && (0, a.setUseSystemTheme)(I.SystemThemeState.ON)
+                if (null != e)(0, d.resetPreviewClientTheme)(), n && (0, s.setUseSystemTheme)(I.SystemThemeState.ON)
             }, [e, n])
         },
         f = () => {
@@ -38,7 +38,7 @@ function(e, t, n) {
             })), t = (0, r.useStateFromStores)([l.default], () => {
                 var e;
                 let t = null === (e = l.default.settings.appearance) || void 0 === e ? void 0 : e.theme;
-                return "default ".concat(t === s.Theme.LIGHT ? c.ThemeTypes.LIGHT : c.ThemeTypes.DARK)
+                return "default ".concat(t === a.Theme.LIGHT ? c.ThemeTypes.LIGHT : c.ThemeTypes.DARK)
             });
             return (0, i.useCallback)(n => {
                 u.default.track(n, {

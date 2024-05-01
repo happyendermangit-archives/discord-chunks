@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("709014");
-    let a = {
+        a = n("709014");
+    let s = {
             click: {
                 name: "click",
                 start: 0,
@@ -37,11 +37,11 @@ function(e, t, n) {
                     onMouseLeave: l
                 },
                 play: t,
-                Component: r.useCallback(t => (0, i.jsx)(s.LottieIcon, {
+                Component: r.useCallback(t => (0, i.jsx)(a.LottieIcon, {
                     ...t,
                     src: () => n.e("36995").then(n.t.bind(n, "737962", 19)),
                     ref: e,
-                    markers: a
+                    markers: s
                 }), [])
             }
         }

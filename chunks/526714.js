@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("743236"),
         l = n("939350"),
         u = n("942610");
@@ -17,7 +17,7 @@ function(e, t, n) {
         let {
             color: t = "default",
             label: n,
-            control: s,
+            control: a,
             disabled: d,
             isFocused: _,
             showDefaultFocus: c = !1,
@@ -32,14 +32,14 @@ function(e, t, n) {
                 var e, t;
                 (null === (t = f.current) || void 0 === t ? void 0 : null === (e = t.activate) || void 0 === e ? void 0 : e.call(t)) && I()
             }, [I]),
-            h = s({
+            h = a({
                 onClose: I,
                 disabled: d,
                 isFocused: _
             }, f);
         return (0, i.jsxs)("div", {
             onClick: S,
-            className: a()(u.item, l.MENU_ITEM_COLORS[t], {
+            className: s()(u.item, l.MENU_ITEM_COLORS[t], {
                 [u.disabled]: d,
                 [u.focused]: c && _,
                 [u.hideInteraction]: !c

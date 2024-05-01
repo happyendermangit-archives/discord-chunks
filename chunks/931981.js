@@ -10,8 +10,8 @@ function(e, t, n) {
     }), n("47120");
     var i, r = n("735250");
     n("470079");
-    var s = n("442837"),
-        a = n("481060"),
+    var a = n("442837"),
+        s = n("481060"),
         o = n("570140"),
         l = n("592125"),
         u = n("271383"),
@@ -30,7 +30,7 @@ function(e, t, n) {
         }) : e[t] = n, e
     }
     let f = new Set;
-    class S extends(i = s.default.PersistedStore) {
+    class S extends(i = a.default.PersistedStore) {
         initialize(e) {
             null != e && (f = new Set(e))
         }
@@ -43,7 +43,7 @@ function(e, t, n) {
     }
     T(S, "displayName", "PTOStore"), T(S, "persistKey", "PTOStore");
     let h = new S(o.default, {}),
-        A = e => (0, s.useStateFromStores)([u.default, _.default, h], () => {
+        A = e => (0, a.useStateFromStores)([u.default, _.default, h], () => {
             let t = _.default.getCurrentUser();
             if (null == t || !t.isStaff() || !e.isDM()) return !1;
             let n = _.default.getUser(e.getRecipientId());
@@ -53,7 +53,7 @@ function(e, t, n) {
         }),
         m = () => (0, r.jsxs)("div", {
             className: I.bar,
-            children: [E.default.Messages.STAFF_PTO_NOTICE, (0, r.jsx)(a.Clickable, {
+            children: [E.default.Messages.STAFF_PTO_NOTICE, (0, r.jsx)(s.Clickable, {
                 className: I.closeButton,
                 onClick: () => {
                     let e = d.default.getChannelId();

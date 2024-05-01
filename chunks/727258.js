@@ -14,8 +14,8 @@ function(e, t, n) {
             return _
         }
     }), n("47120"), n("536091");
-    var i, r, s = n("512722"),
-        a = n.n(s),
+    var i, r, a = n("512722"),
+        s = n.n(a),
         o = n("392711");
 
     function l(e, t, n) {
@@ -45,7 +45,7 @@ function(e, t, n) {
             this._pluckNode(e);
             let i = null != t.parentId ? this.nodes[t.parentId] : this.root,
                 r = i.children.indexOf(t);
-            return a()(!("folder" === e.type && "folder" === i.type), "[GUILDS TREE] Tried moving a folder (".concat(e.id, ") inside of another folder (").concat(i.id, ")")), a()(r >= 0, "[GUILDS TREE] target node (".concat(t.id, ") did not exist within its specified parent (").concat(t.parentId, ")")), i.children = [...i.children], i.children.splice(r + (n ? 1 : 0), 0, e), e.parentId = i.id, this.version++, this
+            return s()(!("folder" === e.type && "folder" === i.type), "[GUILDS TREE] Tried moving a folder (".concat(e.id, ") inside of another folder (").concat(i.id, ")")), s()(r >= 0, "[GUILDS TREE] target node (".concat(t.id, ") did not exist within its specified parent (").concat(t.parentId, ")")), i.children = [...i.children], i.children.splice(r + (n ? 1 : 0), 0, e), e.parentId = i.id, this.version++, this
         }
         moveInto(e, t) {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
@@ -56,16 +56,16 @@ function(e, t, n) {
         addNode(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.root,
                 n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-            return a()("root" !== e.type, "[GUILDS TREE] Tried adding another root node into the tree"), a()(null != e.id, "[GUILDS TREE] Tried adding a node without an id"), a()(null == this.nodes[e.id], "[GUILDS TREE] Tried adding a node that already exists (".concat(e.id, ")")), this.nodes[e.id] = e, this.version++, this.moveInto(e, t, n)
+            return s()("root" !== e.type, "[GUILDS TREE] Tried adding another root node into the tree"), s()(null != e.id, "[GUILDS TREE] Tried adding a node without an id"), s()(null == this.nodes[e.id], "[GUILDS TREE] Tried adding a node that already exists (".concat(e.id, ")")), this.nodes[e.id] = e, this.version++, this.moveInto(e, t, n)
         }
         removeNode(e) {
-            return a()(e !== this.root, "[GUILDS TREE] Tried removing the root node from the tree"), a()(null != e.id, "[GUILDS TREE] Tried removing a node without an id"), this._pluckNode(e), e.parentId = void 0, delete this.nodes[e.id], this.version++, this
+            return s()(e !== this.root, "[GUILDS TREE] Tried removing the root node from the tree"), s()(null != e.id, "[GUILDS TREE] Tried removing a node without an id"), this._pluckNode(e), e.parentId = void 0, delete this.nodes[e.id], this.version++, this
         }
         replaceNode(e, t) {
-            a()(e !== this.root, "[GUILDS TREE] Tried replacing the root node of the tree"), a()(null != e.id, "[GUILDS TREE] Tried replacing a node without an id"), a()(null != t.id, "[GUILDS TREE] Tried replacing a node with one that does not have an id"), a()("root" !== t.type, "[GUILDS TREE] Tried adding another root node into the tree");
+            s()(e !== this.root, "[GUILDS TREE] Tried replacing the root node of the tree"), s()(null != e.id, "[GUILDS TREE] Tried replacing a node without an id"), s()(null != t.id, "[GUILDS TREE] Tried replacing a node with one that does not have an id"), s()("root" !== t.type, "[GUILDS TREE] Tried adding another root node into the tree");
             let n = null != e.parentId ? this.nodes[e.parentId] : this.root,
                 i = n.children.indexOf(e);
-            return a()(i >= 0, "[GUILDS TREE] existing node (".concat(e.id, ") did not exist within its specified parent (").concat(e.parentId, ")")), n.children = [...n.children], n.children.splice(i, 1, t), t.parentId = n.id, e.parentId = void 0, delete this.nodes[e.id], this.nodes[t.id] = t, this.version++, this
+            return s()(i >= 0, "[GUILDS TREE] existing node (".concat(e.id, ") did not exist within its specified parent (").concat(e.parentId, ")")), n.children = [...n.children], n.children.splice(i, 1, t), t.parentId = n.id, e.parentId = void 0, delete this.nodes[e.id], this.nodes[t.id] = t, this.version++, this
         }
         cloneNode(e) {
             return (0, o.clone)(e)
@@ -100,9 +100,9 @@ function(e, t, n) {
         }
         _pluckNode(e) {
             let t = null != e.parentId ? this.nodes[e.parentId] : this.root;
-            a()(null != t, "[GUILDS TREE] source node (".concat(e.id, ") had a parent id (").concat(e.parentId, ") which doesn't exist in the tree"));
+            s()(null != t, "[GUILDS TREE] source node (".concat(e.id, ") had a parent id (").concat(e.parentId, ") which doesn't exist in the tree"));
             let n = t.children;
-            a()(null != n, "[GUILDS TREE] source node (".concat(e.id, ") had a parent id (").concat(e.parentId, ") which contains no children")), t.children = n.filter(t => t !== e), e.parentId = void 0, this.version++
+            s()(null != n, "[GUILDS TREE] source node (".concat(e.id, ") had a parent id (").concat(e.parentId, ") which contains no children")), t.children = n.filter(t => t !== e), e.parentId = void 0, this.version++
         }
         constructor() {
             l(this, "root", void 0), l(this, "nodes", void 0), l(this, "version", void 0), this.root = {

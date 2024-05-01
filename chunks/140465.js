@@ -19,8 +19,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("470079"),
         r = n("913527"),
-        s = n.n(r),
-        a = n("442837"),
+        a = n.n(r),
+        s = n("442837"),
         o = n("544891"),
         l = n("78839"),
         u = n("775412"),
@@ -39,13 +39,13 @@ function(e, t, n) {
     }
     let f = () => {
             var e;
-            let t = (0, a.useStateFromStores)([l.default], () => l.default.getPremiumTypeSubscription()),
+            let t = (0, s.useStateFromStores)([l.default], () => l.default.getPremiumTypeSubscription()),
                 n = null == t ? void 0 : null === (e = t.metadata) || void 0 === e ? void 0 : e.active_discount_expires_at;
-            return null != n && s()(Date.now()) <= s()(n)
+            return null != n && a()(Date.now()) <= a()(n)
         },
         S = () => {
             var e;
-            let t = (0, a.useStateFromStores)([l.default], () => l.default.getPremiumTypeSubscription());
+            let t = (0, s.useStateFromStores)([l.default], () => l.default.getPremiumTypeSubscription());
             switch (null == t ? void 0 : null === (e = t.metadata) || void 0 === e ? void 0 : e.active_discount_id) {
                 case E.PREMIUM_TIER_2_CHURN_1_MONTH_DISCOUNT_ID:
                 case E.PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_30_PERCENT_DISCOUNT_ID:
@@ -77,20 +77,20 @@ function(e, t, n) {
             } catch (e) {}
             return e
         }, A = e => {
-            let [t, n] = i.useState(!1), [r, s] = i.useState(!1), [a, o] = i.useState(null);
+            let [t, n] = i.useState(!1), [r, a] = i.useState(!1), [s, o] = i.useState(null);
             if (e) return {
-                churnUserDiscountOffer: a,
+                churnUserDiscountOffer: s,
                 isFetchingChurnDiscountOffer: r
             };
             let l = () => {
-                n(!0), s(!1)
+                n(!0), a(!1)
             };
-            return !r && !t && (s(!0), h().then(e => {
+            return !r && !t && (a(!0), h().then(e => {
                 o(e), l()
             }).catch(e => {
                 l()
             })), {
-                churnUserDiscountOffer: a,
+                churnUserDiscountOffer: s,
                 isFetchingChurnDiscountOffer: r
             }
         }, m = () => {
@@ -100,7 +100,7 @@ function(e, t, n) {
                 location: "useShouldFetchChurnOffer"
             }, {
                 autoTrackExposure: !1
-            }), t = (0, a.useStateFromStores)([l.default], () => l.default.getPremiumTypeSubscription()), n = f(), i = null !== t && t.hasPremiumNitroMonthly, r = null != t && null != t.trialId;
+            }), t = (0, s.useStateFromStores)([l.default], () => l.default.getPremiumTypeSubscription()), n = f(), i = null !== t && t.hasPremiumNitroMonthly, r = null != t && null != t.trialId;
             return e && i && !r && !n
         }
 }

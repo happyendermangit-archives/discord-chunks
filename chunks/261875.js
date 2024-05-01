@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("442837"),
         r = n("348326"),
-        s = n("570140"),
-        a = n("710845"),
+        a = n("570140"),
+        s = n("710845"),
         o = n("314897"),
         l = n("115522");
 
@@ -16,7 +16,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    let d = new a.default("DatabaseManager");
+    let d = new s.default("DatabaseManager");
     class _ extends i.Store {
         initialize() {
             this.waitFor(o.default), this.carefullySpeculativelyOpen(l.getUserId()), this.handleAuthenticationStoreChanged(), o.default.addChangeListener(() => this.handleAuthenticationStoreChanged())
@@ -80,12 +80,12 @@ function(e, t, n) {
             }
         }
         constructor() {
-            super(s.default, {
+            super(a.default, {
                 CLEAR_CACHES: e => this.handleClearCaches(e),
                 CONNECTION_CLOSED: () => this.handleAuthenticationStoreChanged(),
                 CONNECTION_OPEN: () => this.handleConnectionOpen(),
                 LOGOUT: () => this.handleAuthenticationStoreChanged()
-            }, s.DispatchBand.Early), u(this, "databases", new Map), u(this, "activeUserId", null), u(this, "preventWritingCachesAgainThisSession", !1)
+            }, a.DispatchBand.Early), u(this, "databases", new Map), u(this, "activeUserId", null), u(this, "preventWritingCachesAgainThisSession", !1)
         }
     }
 

@@ -2,16 +2,16 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         generateImageFromCanvas: function() {
-            return s
+            return a
         }
     }), n("411104");
     var i = n("4646"),
         r = n("665672");
-    async function s(e) {
+    async function a(e) {
         let {
             assetsToLoad: t,
-            drawImage: s,
-            exportConfigs: a
+            drawImage: a,
+            exportConfigs: s
         } = e, o = await (0, i.loadAssetMap)(t);
         await o.loadFonts();
         {
@@ -21,8 +21,8 @@ function(e, t, n) {
                 l = new e(i, o),
                 u = new t,
                 d = new r.default(l, u);
-            s(d.canvas);
-            let _ = await d.export(a);
+            a(d.canvas);
+            let _ = await d.export(s);
             return i.remove(), _
         }
     }

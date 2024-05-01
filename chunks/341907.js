@@ -11,14 +11,14 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("481060"),
-        s = n("782568"),
-        a = n("49012"),
+        a = n("782568"),
+        s = n("49012"),
         o = n("617136");
 
     function l(e) {
         let {
             questId: t,
-            location: s
+            location: a
         } = e;
         (0, r.openModalLazy)(async () => {
             let {
@@ -27,20 +27,20 @@ function(e, t, n) {
             return n => (0, i.jsx)(e, {
                 ...n,
                 questId: t,
-                location: s
+                location: a
             })
         })
     }
 
     function u(e, t) {
-        (0, a.handleClick)({
+        (0, s.handleClick)({
             href: e.config.getGameLink,
             onConfirm: () => {
                 (0, o.trackQuestContentClicked)({
                     questId: e.id,
                     questContent: t.content,
                     questContentCTA: t.ctaContent
-                }), (0, s.default)(e.config.getGameLink)
+                }), (0, a.default)(e.config.getGameLink)
             }
         })
     }

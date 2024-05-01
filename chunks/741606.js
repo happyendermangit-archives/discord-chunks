@@ -7,14 +7,14 @@ function(e, t, n) {
     });
     var i = n("470079"),
         r = n("442837"),
-        s = n("693546"),
-        a = n("937111");
+        a = n("693546"),
+        s = n("937111");
 
     function o(e) {
-        let t = (0, r.useStateFromStores)([a.default], () => null == e ? null : a.default.getRequest(e)),
-            n = (0, r.useStateFromStores)([a.default], () => a.default.hasFetchedRequestToJoinGuilds);
+        let t = (0, r.useStateFromStores)([s.default], () => null == e ? null : s.default.getRequest(e)),
+            n = (0, r.useStateFromStores)([s.default], () => s.default.hasFetchedRequestToJoinGuilds);
         return i.useEffect(() => {
-            !n && s.default.fetchRequestToJoinGuilds()
+            !n && a.default.fetchRequestToJoinGuilds()
         }, [n]), t
     }
 }

@@ -2,8 +2,8 @@ function(e, t, n) {
     "use strict";
     n.r(t), n("47120"), n("653041");
     var i, r = n("442837"),
-        s = n("570140"),
-        a = n("924301");
+        a = n("570140"),
+        s = n("924301");
     n("57132");
     var o = n("786761"),
         l = n("23750"),
@@ -84,7 +84,7 @@ function(e, t, n) {
     }
 
     function p(e) {
-        (0, a.isGuildEventEnded)(e) && (T.notifCenterItems = T.notifCenterItems.map(t => t.type === _.NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED && t.guild_scheduled_event_id === e.id ? {
+        (0, s.isGuildEventEnded)(e) && (T.notifCenterItems = T.notifCenterItems.map(t => t.type === _.NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED && t.guild_scheduled_event_id === e.id ? {
             ...t,
             disable_action: !0
         } : t))
@@ -145,7 +145,7 @@ function(e, t, n) {
         }
     }
     I(O, "displayName", "NotificationCenterItemsStore"), I(O, "persistKey", "NotificationCenterItemsStore_v2");
-    let R = new O(s.default, {
+    let R = new O(a.default, {
         CONNECTION_OPEN: function(e) {
             S();
             let t = [];
@@ -156,9 +156,9 @@ function(e, t, n) {
                     since: r
                 } = e;
                 if (n !== E.RelationshipTypes.PENDING_INCOMING || null == i || null == r) return null;
-                let s = u.default.getUser(i.id);
-                if (null == s) return null;
-                t.push((0, c.incomingFriendRequestLocalItem)(s, r))
+                let a = u.default.getUser(i.id);
+                if (null == a) return null;
+                t.push((0, c.incomingFriendRequestLocalItem)(a, r))
             }), e.guilds.forEach(e => {
                 e.guild_scheduled_events.forEach(e => {
                     p(e)

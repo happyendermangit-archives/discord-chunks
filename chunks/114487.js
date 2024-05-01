@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("806519"),
         l = n("768581"),
         u = n("624138"),
@@ -19,7 +19,7 @@ function(e, t, n) {
             guildName: t,
             guildIconURL: n,
             iconSize: r,
-            className: s
+            className: a
         } = e;
         if (null == n) {
             let e = (0, u.getAcronym)(t);
@@ -27,9 +27,9 @@ function(e, t, n) {
                 mask: o.default.Masks.SQUIRCLE,
                 width: r,
                 height: r,
-                className: s,
+                className: a,
                 children: (0, i.jsx)("div", {
-                    className: a()(d.guildIconImage, d.acronym),
+                    className: s()(d.guildIconImage, d.acronym),
                     children: e
                 })
             })
@@ -38,7 +38,7 @@ function(e, t, n) {
             mask: o.default.Masks.SQUIRCLE,
             width: r,
             height: r,
-            className: s,
+            className: a,
             children: (0, i.jsx)("img", {
                 src: n,
                 alt: t,
@@ -51,8 +51,8 @@ function(e, t, n) {
         let {
             guild: n,
             iconSize: r,
-            className: s
-        } = e, a = null !== (t = l.default.getGuildIconURL({
+            className: a
+        } = e, s = null !== (t = l.default.getGuildIconURL({
             id: n.id,
             icon: n.icon,
             size: r,
@@ -60,9 +60,9 @@ function(e, t, n) {
         })) && void 0 !== t ? t : void 0;
         return (0, i.jsx)(_, {
             guildName: n.name,
-            guildIconURL: a,
+            guildIconURL: s,
             iconSize: r,
-            className: s
+            className: a
         })
     })
 }

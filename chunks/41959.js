@@ -5,10 +5,10 @@ function(e, t, n) {
             return r
         }
     });
-    var i, r, s = n("735250");
+    var i, r, a = n("735250");
     n("470079");
-    var a = n("120356"),
-        o = n.n(a),
+    var s = n("120356"),
+        o = n.n(s),
         l = n("768581"),
         u = n("73346"),
         d = n("454382");
@@ -22,16 +22,16 @@ function(e, t, n) {
             application: n,
             size: i,
             asset: r,
-            className: a
+            className: s
         } = e;
         return t = null != r ? (0, u.getAssetURL)(n.id, r, i) : l.default.getApplicationIconURL({
             id: n.id,
             icon: n.icon,
             size: i
-        }), (0, s.jsx)("img", {
+        }), (0, a.jsx)("img", {
             alt: "",
             src: t,
-            className: o()(d.icon, _[i], a)
+            className: o()(d.icon, _[i], s)
         })
     }
 }

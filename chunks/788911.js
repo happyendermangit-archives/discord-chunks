@@ -4,8 +4,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        s = n.n(r),
-        a = n("754156");
+        a = n.n(r),
+        s = n("754156");
     t.default = e => {
         let {
             message: t,
@@ -15,13 +15,13 @@ function(e, t, n) {
             suggestions: l
         } = e;
         return (0, i.jsx)("div", {
-            className: s()({
-                [a.forceLightTheme]: o
+            className: a()({
+                [s.forceLightTheme]: o
             }, n),
             children: (0, i.jsxs)("div", {
-                className: a.wrapper,
+                className: s.wrapper,
                 children: [(0, i.jsx)("div", {
-                    className: a.sadImage,
+                    className: s.sadImage,
                     style: null != r ? {
                         backgroundImage: "url(".concat(r, ")")
                     } : {}

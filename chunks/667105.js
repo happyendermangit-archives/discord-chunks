@@ -10,8 +10,8 @@ function(e, t, n) {
     });
     var i = n("470079"),
         r = n("442837"),
-        s = n("594190"),
-        a = n("594174"),
+        a = n("594190"),
+        s = n("594174"),
         o = n("617136"),
         l = n("918701"),
         u = n("920916"),
@@ -22,25 +22,25 @@ function(e, t, n) {
         let {
             quest: t,
             location: n
-        } = e, s = (0, r.useStateFromStores)([a.default], () => {
+        } = e, a = (0, r.useStateFromStores)([s.default], () => {
             var e;
-            return null === (e = a.default.getCurrentUser()) || void 0 === e ? void 0 : e.verified
+            return null === (e = s.default.getCurrentUser()) || void 0 === e ? void 0 : e.verified
         });
         return i.useCallback(() => {
             null != t && ((0, o.trackQuestContentClicked)({
                 questId: t.id,
                 questContent: n,
                 questContentCTA: o.QuestContentCTA.CLAIM_REWARD
-            }), s ? (0, l.hasQuestCollectibleRewards)(t.config) ? (0, u.openCollectibleRewardModal)(t, n) : (0, _.openQuestsRewardCodeModal)({
+            }), a ? (0, l.hasQuestCollectibleRewards)(t.config) ? (0, u.openCollectibleRewardModal)(t, n) : (0, _.openQuestsRewardCodeModal)({
                 questId: t.id,
                 location: n
             }) : (0, d.openRewardModalUnverified)())
-        }, [t, n, s])
+        }, [t, n, a])
     }
 
     function E(e) {
         var t;
-        let n = (0, r.useStateFromStoresArray)([s.default], () => s.default.getGamesSeen(!1)).find(t => (null == t ? void 0 : t.id) === e);
+        let n = (0, r.useStateFromStoresArray)([a.default], () => a.default.getGamesSeen(!1)).find(t => (null == t ? void 0 : t.id) === e);
         if (null == n) return !1;
         let i = Date.now() - 2592e7;
         return i <= (null !== (t = n.lastLaunched) && void 0 !== t ? t : 0)

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     let i, r;
     n.r(t), n("47120"), n("724458");
-    var s, a, o, l, u = n("392711"),
+    var a, s, o, l, u = n("392711"),
         d = n.n(u),
         _ = n("442837"),
         c = n("570140"),
@@ -44,7 +44,7 @@ function(e, t, n) {
     }
 
     function M(e, t, n) {
-        var i, r, s, a;
+        var i, r, a, s;
         let o = L(A, null != e ? e : T.ME),
             l = o[t],
             u = n(l);
@@ -60,7 +60,7 @@ function(e, t, n) {
                 ;
                 let n;
                 L(O, u.channelId)[t] = u;
-                s = null != e ? e : T.ME, a = t, (n = D(s)).has(a) || ((n = new Set(n)).add(a), N.set(s, n))
+                a = null != e ? e : T.ME, s = t, (n = D(a)).has(s) || ((n = new Set(n)).add(s), N.set(a, n))
             }
             null != u.sessionId && (L(R, t)[u.sessionId] = u)
         }
@@ -97,7 +97,7 @@ function(e, t, n) {
             M(t.id, e.userId, () => null)
         }), delete A[t.id]
     }
-    class U extends(s = _.default.Store) {
+    class U extends(a = _.default.Store) {
         getAllVoiceStates() {
             return A
         }
@@ -154,26 +154,26 @@ function(e, t, n) {
             return Object.values(L(O, e)).length > 0
         }
         getVoicePlatformForChannel(e, t) {
-            var n, s;
-            let a = null != r && (null === (s = R[i]) || void 0 === s ? void 0 : null === (n = s[r]) || void 0 === n ? void 0 : n.channelId);
-            return t === i && e === a ? f.VoicePlatforms.DESKTOP : C[g(t, e)]
+            var n, a;
+            let s = null != r && (null === (a = R[i]) || void 0 === a ? void 0 : null === (n = a[r]) || void 0 === n ? void 0 : n.channelId);
+            return t === i && e === s ? f.VoicePlatforms.DESKTOP : C[g(t, e)]
         }
         get userHasBeenMovedVersion() {
             return S
         }
     }
-    l = "VoiceStateStore", (o = "displayName") in(a = U) ? Object.defineProperty(a, o, {
+    l = "VoiceStateStore", (o = "displayName") in(s = U) ? Object.defineProperty(s, o, {
         value: l,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : a[o] = l, t.default = new U(c.default, {
+    }) : s[o] = l, t.default = new U(c.default, {
         CONNECTION_OPEN: function(e) {
             let {
                 user: t,
                 sessionId: n
-            } = e, s = null != i && i !== t.id;
-            return s && (A = {}, p = {}, R = {}, O = {}, N.clear()), i = t.id, r = n, s
+            } = e, a = null != i && i !== t.id;
+            return a && (A = {}, p = {}, R = {}, O = {}, N.clear()), i = t.id, r = n, a
         },
         CONNECTION_OPEN_SUPPLEMENTAL: function() {
             A = {}, p = {}, R = {}, O = {}, N.clear()
@@ -182,11 +182,11 @@ function(e, t, n) {
             let {
                 voiceStates: t,
                 user: n,
-                sessionId: s
+                sessionId: a
             } = e;
             for (let [e, n] of(A = {}, p = {}, R = {}, O = {}, Object.entries(t)))
                 for (let [t, i] of Object.entries(n)) M(e, t, () => new E.default(i));
-            i = n.id, r = s
+            i = n.id, r = a
         },
         VOICE_CHANNEL_SELECT: function(e) {
             let {
@@ -200,8 +200,8 @@ function(e, t, n) {
                 voiceStates: t
             } = e;
             return t.reduce((e, t) => {
-                let [n, i, s] = y(t.guildId, t);
-                return n ? (t.sessionId === r && null != i && null != s && s.channelId !== i.channelId && (S += 1), h++, !0) : e
+                let [n, i, a] = y(t.guildId, t);
+                return n ? (t.sessionId === r && null != i && null != a && a.channelId !== i.channelId && (S += 1), h++, !0) : e
             }, !1)
         },
         GUILD_DELETE: P,
@@ -222,12 +222,12 @@ function(e, t, n) {
             var t, n;
             let i = !1,
                 r = I.default.keys(null !== (t = A[e.guildId]) && void 0 !== t ? t : {}),
-                s = new Set(r);
+                a = new Set(r);
             for (let t of null !== (n = e.voiceStates) && void 0 !== n ? n : []) {
                 let [n] = y(e.guildId, t);
-                i = i || n, s.delete(t.userId)
+                i = i || n, a.delete(t.userId)
             }
-            for (let t of s) M(e.guildId, t, () => null), i = !0;
+            for (let t of a) M(e.guildId, t, () => null), i = !0;
             return i && h++, i
         },
         RTC_CONNECTION_PLATFORM: function(e) {

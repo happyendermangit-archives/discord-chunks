@@ -19,7 +19,7 @@ function(e, t, n) {
     });
     var i = n("652874");
     let r = -1,
-        s = Object.freeze({
+        a = Object.freeze({
             inspectedExpressionPosition: {
                 rowIndex: 0,
                 columnIndex: 0
@@ -28,8 +28,8 @@ function(e, t, n) {
             searchPlaceholder: null
         });
 
-    function a() {
-        let e = (0, i.default)(e => s);
+    function s() {
+        let e = (0, i.default)(e => a);
         return {
             useStore: e,
             getState: () => e.getState(),
@@ -53,12 +53,12 @@ function(e, t, n) {
                 })
             },
             resetStoreState: () => {
-                e.setState(s)
+                e.setState(a)
             }
         }
     }
-    let o = a(),
-        l = a(),
-        u = a(),
-        d = a()
+    let o = s(),
+        l = s(),
+        u = s(),
+        d = s()
 }

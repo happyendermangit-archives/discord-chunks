@@ -9,12 +9,12 @@ function(e, t, n) {
         return e.hasOwnProperty(t)
     }
 
-    function s(e, t) {
+    function a(e, t) {
         return Object.setPrototypeOf(e, t.prototype)
     }
     n.r(t), n.d(t, {
         dangerouslyCast: function() {
-            return s
+            return a
         },
         exact: function() {
             return i

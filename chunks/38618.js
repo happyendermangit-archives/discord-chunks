@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("724458");
-    var i, r, s, a, o = n("392711"),
+    var i, r, a, s, o = n("392711"),
         l = n.n(o),
         u = n("442837"),
         d = n("570140"),
@@ -37,8 +37,8 @@ function(e, t, n) {
         let t = {},
             n = N.default.getVoiceChannelId();
         if (null != n) {
-            var i, r, s, a, o, l, u, d;
-            if ((null === (o = window) || void 0 === o ? void 0 : null === (a = o.performance) || void 0 === a ? void 0 : null === (s = a.getEntriesByType) || void 0 === s ? void 0 : null === (r = s.call(a, "navigation")) || void 0 === r ? void 0 : null === (i = r[0]) || void 0 === i ? void 0 : i.type) === "reload" || (null === (l = await (null == y ? void 0 : null === (d = y.processUtils) || void 0 === d ? void 0 : null === (u = d.getLastCrash) || void 0 === u ? void 0 : u.call(d))) || void 0 === l ? void 0 : l.rendererCrashReason) != null || !G) {
+            var i, r, a, s, o, l, u, d;
+            if ((null === (o = window) || void 0 === o ? void 0 : null === (s = o.performance) || void 0 === s ? void 0 : null === (a = s.getEntriesByType) || void 0 === a ? void 0 : null === (r = a.call(s, "navigation")) || void 0 === r ? void 0 : null === (i = r[0]) || void 0 === i ? void 0 : i.type) === "reload" || (null === (l = await (null == y ? void 0 : null === (d = y.processUtils) || void 0 === d ? void 0 : null === (u = d.getLastCrash) || void 0 === u ? void 0 : u.call(d))) || void 0 === l ? void 0 : l.rendererCrashReason) != null || !G) {
                 let e = S.default.getChannel(n);
                 null != e && (t = {
                     guildId: e.getGuildId(),
@@ -84,12 +84,12 @@ function(e, t, n) {
             return U
         }
     }
-    a = "GatewayConnectionStore", (s = "displayName") in(r = H) ? Object.defineProperty(r, s, {
-        value: a,
+    s = "GatewayConnectionStore", (a = "displayName") in(r = H) ? Object.defineProperty(r, a, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a, t.default = new H(d.default, {
+    }) : r[a] = s, t.default = new H(d.default, {
         START_SESSION: function() {
             return g.socket.isClosed() ? (P.verbose("Socket is reconnecting because of starting new session"), g.socket.connect()) : (P.verbose("Socket is not reconnecting during a new session because it is not closed"), !1)
         },
@@ -218,8 +218,8 @@ function(e, t, n) {
                 channelId: i
             } = e;
             if (g.socket.isSessionEstablished()) {
-                var r, s;
-                let e = null != n ? null === (r = S.default.getChannel(i)) || void 0 === r ? void 0 : r.rtcRegion : null === (s = f.default.getCall(i)) || void 0 === s ? void 0 : s.region;
+                var r, a;
+                let e = null != n ? null === (r = S.default.getChannel(i)) || void 0 === r ? void 0 : r.rtcRegion : null === (a = f.default.getCall(i)) || void 0 === a ? void 0 : a.region;
                 g.socket.streamCreate(t, n, i, null != e ? e : m.default.getPreferredRegion())
             }
             return !1
@@ -257,8 +257,8 @@ function(e, t, n) {
             let {
                 channelId: i,
                 applicationId: r
-            } = e, s = null !== (n = null === (t = S.default.getChannel(i)) || void 0 === t ? void 0 : t.getGuildId()) && void 0 !== n ? n : null;
-            g.socket.embeddedActivityClose(s, i, r)
+            } = e, a = null !== (n = null === (t = S.default.getChannel(i)) || void 0 === t ? void 0 : t.getGuildId()) && void 0 !== n ? n : null;
+            g.socket.embeddedActivityClose(a, i, r)
         },
         REQUEST_FORUM_UNREADS: function(e) {
             let {

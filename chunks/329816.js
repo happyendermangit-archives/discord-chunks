@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120"), n("653041");
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("802498"),
         l = n("266067"),
         u = n("613828"),
@@ -81,21 +81,21 @@ function(e, t, n) {
             children: t,
             skipsSettingDefaultPageTitle: n
         } = e, {
-            pathname: s
-        } = (0, u.useLocation)(), E = (0, K.getPlatform)(), A = d.isMobile || d.isTablet, V = (0, _.useStateFromStores)([w.default], () => w.default.darkSidebar ? $.ThemeTypes.DARK : void 0), Z = (0, _.useStateFromStores)([N.default], () => N.default.useForcedColors ? "yes" : "no"), [J, er] = (0, _.useStateFromStoresArray)([v.default], () => [v.default.isEditorOpen, v.default.isCoachmark]), es = (0, _.useStateFromStores)([C.default], () => C.default.isEditorOpen), {
-            enabled: ea
+            pathname: a
+        } = (0, u.useLocation)(), E = (0, K.getPlatform)(), A = d.isMobile || d.isTablet, V = (0, _.useStateFromStores)([w.default], () => w.default.darkSidebar ? $.ThemeTypes.DARK : void 0), Z = (0, _.useStateFromStores)([N.default], () => N.default.useForcedColors ? "yes" : "no"), [J, er] = (0, _.useStateFromStoresArray)([v.default], () => [v.default.isEditorOpen, v.default.isCoachmark]), ea = (0, _.useStateFromStores)([C.default], () => C.default.isEditorOpen), {
+            enabled: es
         } = b.default.useExperiment({
             location: "client_themes_coachmark_reintro"
         }, {
             autoTrackExposure: !0
         }), eo = (0, _.useStateFromStores)([B.default], () => B.default.getLayers().includes($.Layers.USER_SETTINGS)), el = (0, _.useStateFromStores)([k.default], () => z.default.canUseClientThemes(k.default.getCurrentUser())), eu = J && !eo, ed = [];
-        eu && er && ea && !el && ed.push(c.DismissibleContent.CLIENT_THEMES_COACHMARK);
+        eu && er && es && !el && ed.push(c.DismissibleContent.CLIENT_THEMES_COACHMARK);
         let [e_, ec] = (0, P.useSelectedDismissibleContent)(ed, ee.DismissibleContentGroupName.SIDEBAR, !0);
         ed.push(c.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
         let eE = e_ === c.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_COACHMARK,
             eI = e_ === c.DismissibleContent.CLIENT_THEMES_COACHMARK;
         r.useEffect(() => {
-            null == (0, l.matchPath)(s, {
+            null == (0, l.matchPath)(a, {
                 path: "invite",
                 exact: !1,
                 strict: !1
@@ -105,7 +105,7 @@ function(e, t, n) {
                 type: "APP_ICON_TRACK_IMPRESSION",
                 markAsDismissed: ec
             }))
-        }, [eE, eI, ec, s]);
+        }, [eE, eI, ec, a]);
         let eT = r.useRef(document.body);
         return (0, i.jsx)(G.default, {
             children: (0, i.jsx)(p.default, {
@@ -124,9 +124,9 @@ function(e, t, n) {
                                     renderWindow: window,
                                     children: (0, i.jsxs)(H.AppLayerProvider, {
                                         children: [(0, i.jsxs)("div", {
-                                            className: a()(et.appAsidePanelWrapper, A && et.mobileAppAsidePanelWrapper, {
+                                            className: s()(et.appAsidePanelWrapper, A && et.mobileAppAsidePanelWrapper, {
                                                 [et.allowsScrolling]: (() => {
-                                                    let e = (0, l.matchPath)(s, {
+                                                    let e = (0, l.matchPath)(a, {
                                                         path: $.Routes.APPLICATION_DIRECTORY,
                                                         exact: !1,
                                                         strict: !1
@@ -142,7 +142,7 @@ function(e, t, n) {
                                                         children: (0, i.jsxs)(F.default.Provider, {
                                                             value: O.default,
                                                             children: [(0, i.jsx)("div", {
-                                                                className: a()(A ? et.mobileApp : et.app),
+                                                                className: s()(A ? et.mobileApp : et.app),
                                                                 children: t
                                                             }), (0, i.jsx)(L.default, {}), (0, i.jsx)(S.default, {}), (0, i.jsx)(I.Modals, {}), (0, i.jsx)(h.default, {}), (0, i.jsx)(Y.FullScreenLayers, {}), (0, i.jsx)(H.AppLayerContainer, {}), (0, i.jsx)(j.VerificationLayerContainer, {}), (0, i.jsx)(I.ToastContainer, {}), (0, i.jsx)(R.default, {}), (0, i.jsx)(U.default, {}), (0, i.jsx)(en, {})]
                                                         })
@@ -150,7 +150,7 @@ function(e, t, n) {
                                                 })
                                             }), (0, i.jsx)(f.default, {}), eu && !er || eI ? (0, i.jsx)(D.default, {
                                                 markAsDismissed: ec
-                                            }) : null, !es || eo || eI ? null : (0, i.jsx)(g.default, {
+                                            }) : null, !ea || eo || eI ? null : (0, i.jsx)(g.default, {
                                                 isCoachmark: eE,
                                                 markAsDismissed: ec
                                             }), (0, i.jsx)(y.default, {

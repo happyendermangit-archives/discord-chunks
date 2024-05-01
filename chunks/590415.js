@@ -11,8 +11,8 @@ function(e, t, n) {
             return o
         }
     });
-    var i, r, s = n("442837"),
-        a = n("979651");
+    var i, r, a = n("442837"),
+        s = n("979651");
 
     function o(e) {
         if (null == e) return 0;
@@ -23,6 +23,6 @@ function(e, t, n) {
     }
 
     function l(e, t) {
-        return (0, s.useStateFromStores)([a.default], () => null == e || null == t ? 0 : o(a.default.getVoiceStateForChannel(t, e)), [e, t])
+        return (0, a.useStateFromStores)([s.default], () => null == e || null == t ? 0 : o(s.default.getVoiceStateForChannel(t, e)), [e, t])
     }(i = r || (r = {}))[i.NONE = 0] = "NONE", i[i.REQUESTED_TO_SPEAK = 1] = "REQUESTED_TO_SPEAK", i[i.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK = 2] = "REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK", i[i.ON_STAGE = 3] = "ON_STAGE"
 }

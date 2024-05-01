@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         VIDEO_QUALITY_MODES_TO_OVERWRITES: function() {
-            return a
+            return s
         },
         VideoQuality: function() {
             return l
@@ -14,7 +14,7 @@ function(e, t, n) {
     var i = n("966146"),
         r = n("65154");
 
-    function s(e, t, n) {
+    function a(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -22,7 +22,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    let a = Object.freeze({
+    let s = Object.freeze({
         [r.VideoQualityMode.AUTO]: {},
         [r.VideoQualityMode.FULL]: {
             encode: {
@@ -33,7 +33,7 @@ function(e, t, n) {
     });
     class o {
         constructor(e) {
-            if (s(this, "capture", void 0), s(this, "encode", void 0), s(this, "bitrateMin", void 0), s(this, "bitrateMax", void 0), s(this, "bitrateTarget", void 0), s(this, "localWant", void 0), null == e.capture && null == e.encode) throw Error("Invalid arguments.");
+            if (a(this, "capture", void 0), a(this, "encode", void 0), a(this, "bitrateMin", void 0), a(this, "bitrateMax", void 0), a(this, "bitrateTarget", void 0), a(this, "localWant", void 0), null == e.capture && null == e.encode) throw Error("Invalid arguments.");
             this.capture = null == e.capture ? void 0 : new l(e.capture), this.encode = null == e.encode ? void 0 : new l(e.encode), this.bitrateMin = e.bitrateMin, this.bitrateMax = e.bitrateMax, this.bitrateTarget = e.bitrateTarget, this.localWant = e.localWant
         }
     }
@@ -50,7 +50,7 @@ function(e, t, n) {
             }
         }
         constructor(e) {
-            s(this, "width", void 0), s(this, "height", void 0), s(this, "framerate", void 0), s(this, "pixelCount", void 0), this.width = e.width, this.height = e.height, this.framerate = e.framerate, this.pixelCount = e.width * e.height
+            a(this, "width", void 0), a(this, "height", void 0), a(this, "framerate", void 0), a(this, "pixelCount", void 0), this.width = e.width, this.height = e.height, this.framerate = e.framerate, this.pixelCount = e.width * e.height
         }
     }
     class u {
@@ -109,7 +109,7 @@ function(e, t, n) {
             })
         }
         constructor(e, t, n = r.defaultVideoQualityOptions) {
-            s(this, "contextType", void 0), s(this, "connection", void 0), s(this, "options", void 0), s(this, "isMuted", void 0), s(this, "qualityOverwrite", void 0), s(this, "isStreamContext", void 0), s(this, "ladder", void 0), this.contextType = e, this.connection = t, this.options = n, this.isMuted = !1, this.qualityOverwrite = {}, this.isStreamContext = this.contextType === r.MediaEngineContextTypes.STREAM, this.ladder = new i.MediaSinkWantsLadder(n)
+            a(this, "contextType", void 0), a(this, "connection", void 0), a(this, "options", void 0), a(this, "isMuted", void 0), a(this, "qualityOverwrite", void 0), a(this, "isStreamContext", void 0), a(this, "ladder", void 0), this.contextType = e, this.connection = t, this.options = n, this.isMuted = !1, this.qualityOverwrite = {}, this.isStreamContext = this.contextType === r.MediaEngineContextTypes.STREAM, this.ladder = new i.MediaSinkWantsLadder(n)
         }
     }
 }

@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("470079"),
         r = n("998698"),
-        s = n("436660"),
-        a = n("515270"),
+        a = n("436660"),
+        s = n("515270"),
         o = n("417662"),
         l = n("981631");
 
@@ -65,7 +65,7 @@ function(e, t, n) {
                         return
                     }
                     if (null != r.default.getActiveCommand(n.id)) {
-                        e.preventDefault(), e.stopPropagation(), e.shiftKey ? s.SlateTransforms.selectPreviousCommandOption(t) : s.SlateTransforms.selectNextCommandOption(t);
+                        e.preventDefault(), e.stopPropagation(), e.shiftKey ? a.SlateTransforms.selectPreviousCommandOption(t) : a.SlateTransforms.selectNextCommandOption(t);
                         return
                     }
                     break;
@@ -79,7 +79,7 @@ function(e, t, n) {
                 e.preventDefault(), e.stopPropagation();
                 return
             }
-            e.which === l.KeyboardKeys.ENTER && (!e.altKey && !e.shiftKey && (!u || e.ctrlKey) && !(0, a.hasOpenPlainTextCodeBlock)(t) || !I) && (e.preventDefault(), e.stopPropagation(), T()), null == d || d(e)
+            e.which === l.KeyboardKeys.ENTER && (!e.altKey && !e.shiftKey && (!u || e.ctrlKey) && !(0, s.hasOpenPlainTextCodeBlock)(t) || !I) && (e.preventDefault(), e.stopPropagation(), T()), null == d || d(e)
         }, [I, n.id, u, t, f, S, E, d, c, T]);
         return {
             handleKeyDown: h,

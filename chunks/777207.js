@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("803997"),
-        a = n.n(s),
+        a = n("803997"),
+        s = n.n(a),
         o = n("696689"),
         l = n.n(o),
         u = n("692547"),
@@ -18,7 +18,7 @@ function(e, t, n) {
         E = r.forwardRef(function(e, t) {
             let n, {
                     variant: r,
-                    tag: s = "div",
+                    tag: a = "div",
                     selectable: o = !1,
                     className: l,
                     lineClamp: E,
@@ -51,9 +51,9 @@ function(e, t, n) {
                 ...A,
                 ...S.style
             };
-            return (0, i.jsx)(s, {
+            return (0, i.jsx)(a, {
                 ref: t,
-                className: a()({
+                className: s()({
                     [d.defaultColor]: void 0 === I,
                     [d.selectable]: o,
                     [d.tabularNumbers]: T,

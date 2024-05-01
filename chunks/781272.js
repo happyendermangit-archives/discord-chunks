@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("302454"),
-        s = n.n(r),
-        a = n("481060");
+        a = n.n(r),
+        s = n("481060");
 
     function o(e) {
         return e.paragraph = {
@@ -27,7 +27,7 @@ function(e, t, n) {
                     let t = e.context[e.target];
                     t && t.onClick ? (r.onClick = t.onClick, r.onContextMenu = t.onContextMenu) : r.onClick = t
                 }
-                return null == r.onClick && (r.href = s().sanitizeUrl(e.target)), (0, i.jsx)(a.Anchor, {
+                return null == r.onClick && (r.href = a().sanitizeUrl(e.target)), (0, i.jsx)(s.Anchor, {
                     title: e.title,
                     ...r,
                     children: t(e.content, n)

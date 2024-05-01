@@ -2,13 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return a
+            return s
         }
     }), n("47120");
     var i = n("445686"),
         r = n("379649");
 
-    function s(e, t, n) {
+    function a(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -16,7 +16,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    class a {
+    class s {
         start() {
             this.listeningUsers.clear(), this.listening.reset(), this.speaking.reset(), this.participation.reset(), this.connected.reset(), this.connected.start(), this.connection.on(i.BaseConnectionEvent.Speaking, (e, t, n) => {
                 this.userId === e ? this.onSpeaking(0 !== t) : this.onListening(0 !== t, e)
@@ -40,7 +40,7 @@ function(e, t, n) {
             }
         }
         constructor(e, t, n = r.TimeStampProducer) {
-            s(this, "userId", void 0), s(this, "connection", void 0), s(this, "timestampProducer", void 0), s(this, "listeningUsers", void 0), s(this, "listening", void 0), s(this, "speaking", void 0), s(this, "participation", void 0), s(this, "connected", void 0), this.userId = e, this.connection = t, this.timestampProducer = n, this.listeningUsers = new Set, this.listening = new r.StopWatch(this.timestampProducer), this.speaking = new r.StopWatch(this.timestampProducer), this.participation = new r.StopWatch(this.timestampProducer), this.connected = new r.StopWatch(this.timestampProducer)
+            a(this, "userId", void 0), a(this, "connection", void 0), a(this, "timestampProducer", void 0), a(this, "listeningUsers", void 0), a(this, "listening", void 0), a(this, "speaking", void 0), a(this, "participation", void 0), a(this, "connected", void 0), this.userId = e, this.connection = t, this.timestampProducer = n, this.listeningUsers = new Set, this.listening = new r.StopWatch(this.timestampProducer), this.speaking = new r.StopWatch(this.timestampProducer), this.participation = new r.StopWatch(this.timestampProducer), this.connected = new r.StopWatch(this.timestampProducer)
         }
     }
 }

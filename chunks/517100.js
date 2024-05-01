@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t);
-    var i, r, s, a, o = n("442837"),
+    var i, r, a, s, o = n("442837"),
         l = n("570140"),
         u = n("287734"),
         d = n("579806"),
@@ -66,7 +66,7 @@ function(e, t, n) {
             timestamp: S
         }) : R(), !1)
     }
-    class g extends(a = o.default.Store) {
+    class g extends(s = o.default.Store) {
         isIdle() {
             return h
         }
@@ -77,12 +77,12 @@ function(e, t, n) {
             return h ? S : null
         }
     }
-    s = "IdleStore", (r = "displayName") in(i = g) ? Object.defineProperty(i, r, {
-        value: s,
+    a = "IdleStore", (r = "displayName") in(i = g) ? Object.defineProperty(i, r, {
+        value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : i[r] = s, t.default = new g(l.default, {
+    }) : i[r] = a, t.default = new g(l.default, {
         IDLE: function(e) {
             h = e.idle
         },

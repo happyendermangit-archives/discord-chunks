@@ -5,7 +5,7 @@ function(e, t, n) {
             return p
         }
     }), n("47120");
-    var i, r, s, a, o = n("442837"),
+    var i, r, a, s, o = n("442837"),
         l = n("759174"),
         u = n("846519"),
         d = n("570140"),
@@ -96,12 +96,12 @@ function(e, t, n) {
             return null != r ? (0, T.getComboShakeIntensity)(r, i) * n : 0
         }
     }
-    a = "PoggermodeStore", (s = "displayName") in(r = O) ? Object.defineProperty(r, s, {
-        value: a,
+    s = "PoggermodeStore", (a = "displayName") in(r = O) ? Object.defineProperty(r, a, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a;
+    }) : r[a] = s;
     let R = new O(d.default, {
         POGGERMODE_UPDATE_COMBO: function(e) {
             let {
@@ -110,15 +110,15 @@ function(e, t, n) {
             } = e;
             if (!I.default.isEnabled()) return !1;
             ! function e(t) {
-                var n, i, r, s, a, o;
+                var n, i, r, a, s, o;
                 let l = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
                     d = A.get(N(t)),
                     _ = {
                         ...d,
                         ...t,
                         value: null !== (i = null !== (n = t.value) && void 0 !== n ? n : null == d ? void 0 : d.value) && void 0 !== i ? i : 0,
-                        multiplier: Math.min(null !== (s = null !== (r = t.multiplier) && void 0 !== r ? r : null == d ? void 0 : d.multiplier) && void 0 !== s ? s : 1, 7),
-                        decayInterval: null !== (a = null == d ? void 0 : d.decayInterval) && void 0 !== a ? a : new u.Interval
+                        multiplier: Math.min(null !== (a = null !== (r = t.multiplier) && void 0 !== r ? r : null == d ? void 0 : d.multiplier) && void 0 !== a ? a : 1, 7),
+                        decayInterval: null !== (s = null == d ? void 0 : d.decayInterval) && void 0 !== s ? s : new u.Interval
                     };
                 A.set(N(t), _), l && (null === (o = _.decayInterval) || void 0 === o || o.start(1e3, () => {
                     let t = A.get(N(_));
@@ -153,15 +153,15 @@ function(e, t, n) {
                 channelId: i,
                 message: {
                     mentions: r,
-                    author: s,
-                    nonce: a
+                    author: a,
+                    nonce: s
                 }
             } = e;
             if (!I.default.isEnabled()) return !1;
             let o = _.default.getId();
-            if (!p(null == s ? void 0 : s.id, o, a, h)) return !1;
+            if (!p(null == a ? void 0 : a.id, o, s, h)) return !1;
             let l = A.get(N({
-                userId: null !== (t = null == s ? void 0 : s.id) && void 0 !== t ? t : "???",
+                userId: null !== (t = null == a ? void 0 : a.id) && void 0 !== t ? t : "???",
                 channelId: i
             }));
             if (I.default.screenshakeEnabled && I.default.screenshakeEnabledLocations[f.ShakeLocation.MENTION] && null != r && null != r.find(e => e.id === o)) {

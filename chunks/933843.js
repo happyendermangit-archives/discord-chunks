@@ -13,8 +13,8 @@ function(e, t, n) {
     });
     var i = n("594174"),
         r = n("74538"),
-        s = n("736871"),
-        a = n("351742"),
+        a = n("736871"),
+        s = n("351742"),
         o = n("114064"),
         l = n("474936"),
         u = n("37113");
@@ -26,13 +26,13 @@ function(e, t, n) {
     let _ = () => {
             let {
                 inPerksDemosExperiment: e
-            } = s.default.getCurrentConfig({
+            } = a.default.getCurrentConfig({
                 location: "shouldFetchPerksDemos"
             }, {
                 autoTrackExposure: !1
             }), {
                 enabled: t
-            } = a.default.getCurrentConfig({
+            } = s.default.getCurrentConfig({
                 location: "shouldFetchPerksDemos"
             }, {
                 autoTrackExposure: !1

@@ -1,12 +1,12 @@
 function(e, t, n) {
     "use strict";
     n.r(t);
-    var i, r, s, a, o = n("442837"),
+    var i, r, a, s, o = n("442837"),
         l = n("570140"),
         u = n("981631");
     let d = {},
         _ = null;
-    class c extends(a = o.default.Store) {
+    class c extends(s = o.default.Store) {
         get applicationStatistics() {
             return d
         }
@@ -39,12 +39,12 @@ function(e, t, n) {
             return n
         }
     }
-    s = "LibraryApplicationStatisticsStore", (r = "displayName") in(i = c) ? Object.defineProperty(i, r, {
-        value: s,
+    a = "LibraryApplicationStatisticsStore", (r = "displayName") in(i = c) ? Object.defineProperty(i, r, {
+        value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : i[r] = s, t.default = new c(l.default, {
+    }) : i[r] = a, t.default = new c(l.default, {
         USER_ACTIVITY_STATISTICS_FETCH_SUCCESS: function(e) {
             let {
                 statistics: t
@@ -58,15 +58,15 @@ function(e, t, n) {
                 duration: t,
                 applicationId: n,
                 distributor: i
-            } = e, r = d[n], s = new Date().toISOString(), a = 0, o = 0;
+            } = e, r = d[n], a = new Date().toISOString(), s = 0, o = 0;
             if (null != r) {
                 var l;
-                a = r.total_duration, o = null !== (l = r.total_discord_sku_duration) && void 0 !== l ? l : 0
+                s = r.total_duration, o = null !== (l = r.total_discord_sku_duration) && void 0 !== l ? l : 0
             }
-            a += t, i === u.Distributors.DISCORD && (o += t), d[n] = {
+            s += t, i === u.Distributors.DISCORD && (o += t), d[n] = {
                 application_id: n,
-                total_duration: a,
-                last_played_at: s,
+                total_duration: s,
+                last_played_at: a,
                 total_discord_sku_duration: o
             }
         },

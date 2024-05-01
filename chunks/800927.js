@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("757143");
     var i = n("512722"),
         r = n.n(i),
-        s = n("302454"),
-        a = n.n(s);
+        a = n("302454"),
+        s = n.n(a);
     let o = /\n{2,}$/,
         l = /(?:^|\n)( *)$/,
         u = "(?:[*-]|\\d+\\.)",
@@ -16,7 +16,7 @@ function(e, t, n) {
         T = /^[ \t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]+$/,
         f = e => e.map(e => ("text" === e.type && null != e.content && (e.content = e.content.replace(/\n+\s*$/, "")), e)),
         S = {
-            ...a().defaultRules.list,
+            ...s().defaultRules.list,
             requiredFirstCharacters: " *-0123456789".split(""),
             match: (e, t) => {
                 if (!t.allowList || t._listLevel >= 11) return null;
@@ -26,19 +26,19 @@ function(e, t, n) {
             },
             parse: (e, t, n) => {
                 let i = e[2],
-                    s = i.length > 1,
-                    a = e[0].replace(o, "\n").match(c);
-                r()(null != a, "markup list items can not be parsed.");
+                    a = i.length > 1,
+                    s = e[0].replace(o, "\n").match(c);
+                r()(null != s, "markup list items can not be parsed.");
                 let l = !1;
                 return {
-                    ordered: s,
-                    start: s ? Math.min(1e9, Math.max(1, +i)) : void 0,
-                    items: a.map((e, i) => {
+                    ordered: a,
+                    start: a ? Math.min(1e9, Math.max(1, +i)) : void 0,
+                    items: s.map((e, i) => {
                         let r;
-                        let s = _.exec(e),
-                            o = RegExp("^ {1," + (null != s ? s[0].length : 0) + "}", "gm"),
+                        let a = _.exec(e),
+                            o = RegExp("^ {1," + (null != a ? a[0].length : 0) + "}", "gm"),
                             u = e.replace(o, "").replace(_, ""),
-                            d = i === a.length - 1,
+                            d = i === s.length - 1,
                             c = -1 !== u.indexOf("\n\n") || d && l;
                         l = c;
                         let I = n.inline,

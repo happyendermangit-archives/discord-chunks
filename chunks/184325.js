@@ -8,10 +8,10 @@ function(e, t, n) {
             return C
         }
     }), n("653041");
-    var i, r, s = n("735250");
+    var i, r, a = n("735250");
     n("470079");
-    var a = n("120356"),
-        o = n.n(a),
+    var s = n("120356"),
+        o = n.n(s),
         l = n("481060"),
         u = n("315263"),
         d = n("100527"),
@@ -36,7 +36,7 @@ function(e, t, n) {
             guildId: n,
             className: i,
             shrinkAtCount: r,
-            shrinkToSize: a,
+            shrinkToSize: s,
             isTryItOutFlow: C,
             onBadgeClick: g,
             size: L = 0
@@ -49,11 +49,11 @@ function(e, t, n) {
             ...e,
             src: (0, m.getBadgeAsset)(e.icon)
         }));
-        if (t.isClyde()) return (0, s.jsx)("div", {
+        if (t.isClyde()) return (0, a.jsx)("div", {
             className: o()(i, O.container, O.clydeBadgeList),
             "aria-label": p.default.Messages.PROFILE_USER_BADGES,
             role: "group",
-            children: (0, s.jsx)(c.default, {})
+            children: (0, a.jsx)(c.default, {})
         });
         C && null == P.find(e => "premium" === e.id) && P.push({
             id: "premium",
@@ -62,18 +62,18 @@ function(e, t, n) {
                 date: new Date
             })
         });
-        let U = null != r && null != a && P.length > r ? a : L;
-        return (0, s.jsx)(_.AnalyticsLocationProvider, {
+        let U = null != r && null != s && P.length > r ? s : L;
+        return (0, a.jsx)(_.AnalyticsLocationProvider, {
             value: D,
-            children: (0, s.jsx)("div", {
+            children: (0, a.jsx)("div", {
                 className: o()(i, P.length > 0 ? O.containerWithContent : O.container),
                 "aria-label": p.default.Messages.PROFILE_USER_BADGES,
                 role: "group",
-                children: P.map(e => (0, s.jsx)(l.Tooltip, {
+                children: P.map(e => (0, a.jsx)(l.Tooltip, {
                     position: "top",
                     text: e.description,
                     spacing: 12,
-                    children: t => (0, s.jsx)(l.Anchor, {
+                    children: t => (0, a.jsx)(l.Anchor, {
                         ...t,
                         onClick: n => {
                             var i;
@@ -100,7 +100,7 @@ function(e, t, n) {
                             })), null === (n = t.onMouseEnter) || void 0 === n || n.call(t)
                         },
                         href: e.link,
-                        children: (0, s.jsx)("img", {
+                        children: (0, a.jsx)("img", {
                             alt: " ",
                             "aria-hidden": !0,
                             src: e.src,

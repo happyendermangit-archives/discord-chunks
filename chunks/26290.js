@@ -29,9 +29,9 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        s = n.n(r);
+        a = n.n(r);
     n("481060");
-    var a = n("377171");
+    var s = n("377171");
     n("689938");
     var o = n("648875");
     let l = {
@@ -51,7 +51,7 @@ function(e, t, n) {
     let _ = e => {
             let {
                 count: t,
-                color: n = a.default.STATUS_DANGER,
+                color: n = s.default.STATUS_DANGER,
                 disableColor: r = !1,
                 shape: _ = l.ROUND,
                 className: c,
@@ -59,7 +59,7 @@ function(e, t, n) {
                 ...I
             } = e;
             return (0, i.jsx)("div", {
-                className: s()(c, o.numberBadge, _),
+                className: a()(c, o.numberBadge, _),
                 style: {
                     backgroundColor: r ? void 0 : n,
                     width: u(t),
@@ -83,14 +83,14 @@ function(e, t, n) {
             let {
                 text: t,
                 className: n,
-                color: r = a.default.STATUS_DANGER,
+                color: r = s.default.STATUS_DANGER,
                 shape: u = l.ROUND,
                 disableColor: d = !1,
                 style: _,
                 ...c
             } = e;
             return (0, i.jsx)("div", {
-                className: s()(n, o.textBadge, u),
+                className: a()(n, o.textBadge, u),
                 style: {
                     backgroundColor: d ? void 0 : r,
                     ..._
@@ -106,7 +106,7 @@ function(e, t, n) {
                 ...r
             } = e;
             return (0, i.jsx)(c, {
-                className: s()(o.premiumBadge, n),
+                className: a()(o.premiumBadge, n),
                 text: t,
                 ...r
             })
@@ -115,13 +115,13 @@ function(e, t, n) {
             let {
                 icon: t,
                 className: n,
-                color: r = a.default.STATUS_DANGER,
+                color: r = s.default.STATUS_DANGER,
                 shape: u = l.ROUND,
                 disableColor: d = !1,
                 style: _
             } = e;
             return (0, i.jsx)("div", {
-                className: s()(n, o.iconBadge, u),
+                className: a()(n, o.iconBadge, u),
                 style: {
                     backgroundColor: d ? void 0 : r,
                     ..._
@@ -134,14 +134,14 @@ function(e, t, n) {
         T = e => {
             let {
                 className: t,
-                color: n = a.default.INTERACTIVE_ACTIVE,
+                color: n = s.default.INTERACTIVE_ACTIVE,
                 shape: r = l.ROUND,
                 disableColor: u = !1,
                 style: d,
                 ..._
             } = e;
             return (0, i.jsx)("div", {
-                className: s()(t, o.circleBadge, r),
+                className: a()(t, o.circleBadge, r),
                 style: {
                     backgroundColor: u ? void 0 : n,
                     ...d

@@ -15,10 +15,10 @@ function(e, t, n) {
             return d
         }
     }), n("47120");
-    var r, s, a = n("713845"),
+    var r, a, s = n("713845"),
         o = n("544891"),
         l = n("981631");
-    (s = r || (r = {})).REQUIRES_PAYMENT_METHOD = "requires_payment_method", s.REQUIRES_CONFIRMATION = "requires_confirmation", s.REQUIRES_ACTION = "requires_action", s.PROCESSING = "processing", s.CANCELED = "canceled", s.SUCCEEDED = "succeeded";
+    (a = r || (r = {})).REQUIRES_PAYMENT_METHOD = "requires_payment_method", a.REQUIRES_CONFIRMATION = "requires_confirmation", a.REQUIRES_ACTION = "requires_action", a.PROCESSING = "processing", a.CANCELED = "canceled", a.SUCCEEDED = "succeeded";
     let u = e => {
             let t = t => "You passed an invalid expiration date ".concat(e) + "".concat(null != t ? t : "") + "Please pass a string containing a numeric month and year such as `01-17` or `2015 / 05`",
                 n = e.split(/[.\-/\s]+/g);
@@ -27,8 +27,8 @@ function(e, t, n) {
                     let i = parseInt(e);
                     return isNaN(i) && t("".concat(n, " is not a number.")), i < 1 && t("".concat(i, " is less than one.")), i
                 }),
-                [r, s] = i[0] > 12 ? [i[1], i[0]] : [i[0], i[1]];
-            return r > 12 && t("Month must be a number 1-12, not ".concat(r, ".")), s < 100 && (s += 2e3), [r, s]
+                [r, a] = i[0] > 12 ? [i[1], i[0]] : [i[0], i[1]];
+            return r > 12 && t("Month must be a number 1-12, not ".concat(r, ".")), a < 100 && (a += 2e3), [r, a]
         },
         d = e => {
             let t, n;
@@ -43,19 +43,19 @@ function(e, t, n) {
         };
 
     function _() {
-        return null != i ? Promise.resolve(i) : (0, a.loadStripe)(l.PaymentSettings.STRIPE.KEY).then(e => (i = e, e))
+        return null != i ? Promise.resolve(i) : (0, s.loadStripe)(l.PaymentSettings.STRIPE.KEY).then(e => (i = e, e))
     }
 
     function c(e) {
-        var t, n, i, r, s, a, o, l;
+        var t, n, i, r, a, s, o, l;
         let {
             billing_details: u
         } = e, d = null !== (t = u.address) && void 0 !== t ? t : {}, _ = {
             name: null !== (n = u.name) && void 0 !== n ? n : "",
             line1: null !== (i = d.line1) && void 0 !== i ? i : "",
             line2: null !== (r = d.line2) && void 0 !== r ? r : "",
-            city: null !== (s = d.city) && void 0 !== s ? s : "",
-            state: null !== (a = d.state) && void 0 !== a ? a : "",
+            city: null !== (a = d.city) && void 0 !== a ? a : "",
+            state: null !== (s = d.state) && void 0 !== s ? s : "",
             country: null !== (o = d.country) && void 0 !== o ? o : "",
             postalCode: null !== (l = d.postal_code) && void 0 !== l ? l : ""
         };
@@ -85,16 +85,16 @@ function(e, t, n) {
             if (null == r) return {
                 error: "payment intent does not exist"
             };
-            let s = {};
-            switch ("requires_payment_method" === r.status && null != r.last_payment_error && null != r.last_payment_error.payment_method && (s.payment_method = r.last_payment_error.payment_method.id), r.status) {
+            let a = {};
+            switch ("requires_payment_method" === r.status && null != r.last_payment_error && null != r.last_payment_error.payment_method && (a.payment_method = r.last_payment_error.payment_method.id), r.status) {
                 case "requires_payment_method":
                 case "requires_confirmation":
                 case "requires_action":
                     let {
-                        error: a
-                    } = await n.confirmCardPayment(t, s);
-                    if (null != a) return {
-                        error: a.message
+                        error: s
+                    } = await n.confirmCardPayment(t, a);
+                    if (null != s) return {
+                        error: s.message
                     };
                     return {};
                 case "succeeded":

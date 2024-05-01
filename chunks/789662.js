@@ -1,6 +1,6 @@
 function(e, t, n) {
     "use strict";
-    var i, r, s, a;
+    var i, r, a, s;
     n.r(t), n.d(t, {
         Mode: function() {
             return i
@@ -11,7 +11,7 @@ function(e, t, n) {
         defaultThresholds: function() {
             return o
         }
-    }), (s = i || (i = {}))[s.KeepAsIs = 0] = "KeepAsIs", s[s.UseGreyDot = 1] = "UseGreyDot", (a = r || (r = {}))[a.Low = 0] = "Low", a[a.Medium = 1] = "Medium", a[a.High = 2] = "High";
+    }), (a = i || (i = {}))[a.KeepAsIs = 0] = "KeepAsIs", a[a.UseGreyDot = 1] = "UseGreyDot", (s = r || (r = {}))[s.Low = 0] = "Low", s[s.Medium = 1] = "Medium", s[s.High = 2] = "High";
     let o = {
         careALot: {
             monthOpenPerc: .01,

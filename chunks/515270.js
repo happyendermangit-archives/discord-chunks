@@ -13,8 +13,8 @@ function(e, t, n) {
     }), n("47120"), n("411104"), n("653041"), n("757143");
     var i = n("920478"),
         r = n("31775"),
-        s = n.n(r),
-        a = n("70956"),
+        a = n.n(r),
+        s = n("70956"),
         o = n("364964"),
         l = n("53529"),
         u = n("925994"),
@@ -49,21 +49,21 @@ function(e, t, n) {
                             n = null;
                         for (let i of _.EditorUtils.blocks(e)) {
                             let r = null != n && (n.isInCodeBlock || n.opensCodeBlock),
-                                s = null != n && (n.isStyledCodeBlockLine || n.opensCodeBlockOnOwnLine);
+                                a = null != n && (n.isStyledCodeBlockLine || n.opensCodeBlockOnOwnLine);
                             n = function(e, t, n, i, r) {
-                                var s;
-                                let a = function(e) {
+                                var a;
+                                let s = function(e) {
                                         let t;
                                         let [n, i] = e;
                                         if (!E.has(n.type)) return [];
                                         let r = [],
-                                            s = /\\|```/g;
+                                            a = /\\|```/g;
                                         for (let e = 0; e < n.children.length; e++) {
-                                            let a = n.children[e];
-                                            if (_.TextUtils.isText(a))
-                                                for (s.lastIndex = 0; null != (t = s.exec(a.text));) {
+                                            let s = n.children[e];
+                                            if (_.TextUtils.isText(s))
+                                                for (a.lastIndex = 0; null != (t = a.exec(s.text));) {
                                                     if ("\\" === t[0]) {
-                                                        s.lastIndex += 1;
+                                                        a.lastIndex += 1;
                                                         continue
                                                     }
                                                     r.push({
@@ -74,19 +74,19 @@ function(e, t, n) {
                                         }
                                         return r
                                     }(t),
-                                    o = a[0],
-                                    l = a[a.length - 1],
+                                    o = s[0],
+                                    l = s[s.length - 1],
                                     u = null;
                                 if (null != l) {
                                     let [t] = _.EditorUtils.node(e, l.path);
                                     u = t.text.substring(l.offset + 3)
                                 }
                                 let d = n && null != o,
-                                    c = n && 0 === a.length,
-                                    I = i && 0 === a.length,
-                                    f = (d ? a.slice(1) : a).length % 2 == 1,
+                                    c = n && 0 === s.length,
+                                    I = i && 0 === s.length,
+                                    f = (d ? s.slice(1) : s).length % 2 == 1,
                                     h = f && (null == u || "" === u || null != u.match(S)),
-                                    A = h && null != u && null !== (s = T[u.toLowerCase()]) && void 0 !== s ? s : null;
+                                    A = h && null != u && null !== (a = T[u.toLowerCase()]) && void 0 !== a ? a : null;
                                 return {
                                     blockEntry: t,
                                     wasInCodeBlock: n,
@@ -98,14 +98,14 @@ function(e, t, n) {
                                     opensCodeBlock: f,
                                     opensCodeBlockOnOwnLine: h
                                 }
-                            }(e, i, r, s, null != n && (n.opensCodeBlock || !n.closesCodeBlock) ? n.lang : null), t.push(n)
+                            }(e, i, r, a, null != n && (n.opensCodeBlock || !n.closesCodeBlock) ? n.lang : null), t.push(n)
                         }
                         return function(e) {
                             let t = [],
                                 n = !1;
                             for (let r of e) {
-                                let s = r === e[e.length - 1];
-                                if ((r.closesCodeBlock || s) && (n && s && !r.closesCodeBlock && t.push(r), n = !1, t.length > 0)) {
+                                let a = r === e[e.length - 1];
+                                if ((r.closesCodeBlock || a) && (n && a && !r.closesCodeBlock && t.push(r), n = !1, t.length > 0)) {
                                     let e = t.map(e => (0, u.serializeDescendant)(e.blockEntry[0])).join("\n"),
                                         n = t[0].lang;
                                     if (null != n && null != i.default.getLanguage(n)) {
@@ -115,35 +115,35 @@ function(e, t, n) {
                                             if (null != i) return i;
                                             let r = o.default.highlight(t, e, !1);
                                             if (null == r || r.illegal) return null;
-                                            let s = r.value.split("\n");
-                                            return N.set(n, s), s
+                                            let a = r.value.split("\n");
+                                            return N.set(n, a), a
                                         }(e, n);
                                         if (null != i && i.length === t.length) {
                                             let e = [];
                                             for (let n = 0; n < t.length; n++) {
                                                 let r;
-                                                let s = i[n].replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#x27;/g, "'"),
-                                                    a = [],
+                                                let a = i[n].replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#x27;/g, "'"),
+                                                    s = [],
                                                     o = 0,
                                                     l = 0;
-                                                for (; null != (r = A.exec(s));) {
+                                                for (; null != (r = A.exec(a));) {
                                                     let t = r.index + r[0].length,
                                                         n = r.index - l;
-                                                    r.index > l && (e.length > 0 && a.push({
+                                                    r.index > l && (e.length > 0 && s.push({
                                                         types: [...e],
                                                         start: o,
                                                         end: o + n
                                                     }), o += n), "</span>" === r[0] ? e.pop() : e.push(r[1]), l = t
                                                 }
                                                 if (e.length > 0) {
-                                                    let t = s.length - l;
-                                                    a.push({
+                                                    let t = a.length - l;
+                                                    s.push({
                                                         types: [...e],
                                                         start: o,
                                                         end: o + t
                                                     })
                                                 }
-                                                t[n].hljsTypes = a
+                                                t[n].hljsTypes = s
                                             }
                                         } else
                                             for (let e = 0; e < t.length; e++) t[e].hljsTypes = null
@@ -179,10 +179,10 @@ function(e, t, n) {
     let A = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
         m = {
             max: 1 / 0,
-            maxAge: 1 * a.default.Millis.MINUTE,
+            maxAge: 1 * s.default.Millis.MINUTE,
             updateAgeOnGet: !0
         },
-        N = new(s())(m);
+        N = new(a())(m);
 
     function p(e, t) {
         let n = 0;
@@ -200,8 +200,8 @@ function(e, t, n) {
             var i;
             let e = r[0].text;
             _.PathUtils.equals(r[1], t.path) && (e = e.substring(0, t.offset));
-            let s = e.match(/```/g);
-            n += null !== (i = null == s ? void 0 : s.length) && void 0 !== i ? i : 0
+            let a = e.match(/```/g);
+            n += null !== (i = null == a ? void 0 : a.length) && void 0 !== i ? i : 0
         }
         return n % 2 != 0
     }

@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("594174"),
         r = n("339085"),
-        s = n("396352"),
-        a = n("664437");
+        a = n("396352"),
+        s = n("664437");
 
     function o(e) {
         if (null == e || null == i.default.getCurrentUser()) return;
@@ -18,6 +18,6 @@ function(e, t, n) {
                 topEmojisTTL: e
             } = t;
             if (null == e || Date.now() < e) return
-        }!s.default.getIsFetching(e) && (0, a.fetchTopEmojis)(e)
+        }!a.default.getIsFetching(e) && (0, s.fetchTopEmojis)(e)
     }
 }

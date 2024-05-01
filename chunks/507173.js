@@ -5,10 +5,10 @@ function(e, t, n) {
             return c
         }
     }), n("47120");
-    var i, r, s = n("735250");
+    var i, r, a = n("735250");
     n("470079");
-    var a = n("120356"),
-        o = n.n(a),
+    var s = n("120356"),
+        o = n.n(s),
         l = n("392711"),
         u = n.n(l),
         d = n("692547"),
@@ -20,15 +20,15 @@ function(e, t, n) {
             percents: n,
             size: i = "small",
             foregroundColors: r = [d.default.unsafe_rawColors.BRAND_500.css],
-            backgroundColor: a = "var(--background-modifier-active)",
+            backgroundColor: s = "var(--background-modifier-active)",
             animate: l = !0
         } = e, c = u().zip(n, r).map((e, t) => {
-            let n, [r, a] = e;
-            return n = Array.isArray(a) ? {
-                background: "linear-gradient(to right, ".concat(a[0], ", ").concat(a[1], ")")
+            let n, [r, s] = e;
+            return n = Array.isArray(s) ? {
+                background: "linear-gradient(to right, ".concat(s[0], ", ").concat(s[1], ")")
             } : {
-                backgroundColor: a
-            }, (0, s.jsx)("div", {
+                backgroundColor: s
+            }, (0, a.jsx)("div", {
                 className: o()(_.progressBar, _[i], {
                     [_.animating]: l
                 }),
@@ -38,10 +38,10 @@ function(e, t, n) {
                 }
             }, t)
         }).reverse();
-        return (0, s.jsx)("div", {
+        return (0, a.jsx)("div", {
             className: o()(t, _.progress, _[i]),
             style: {
-                backgroundColor: a
+                backgroundColor: s
             },
             children: c
         })

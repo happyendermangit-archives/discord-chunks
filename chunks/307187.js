@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("368859"),
-        s = n("245315"),
-        a = n("467679"),
+        a = n("245315"),
+        s = n("467679"),
         o = n("904335");
 
     function l(e) {
@@ -22,7 +22,7 @@ function(e, t, n) {
             hideIcon: c = !1,
             children: E
         } = e;
-        return ((null == n ? void 0 : n.isSystemDM()) ? t = a.default.Types.SYSTEM_DM : null != n && (0, r.default)(n) ? t = (0, s.isPublicSystemMessage)(n) ? a.default.Types.OFFICIAL : a.default.Types.SERVER : (null == u ? void 0 : u.bot) ? t = a.default.Types.BOT : null != l && l.isForumPost() && l.ownerId === (null == u ? void 0 : u.id) && !_ && (t = a.default.Types.ORIGINAL_POSTER), null == t) ? null : (0, i.jsx)(a.default, {
+        return ((null == n ? void 0 : n.isSystemDM()) ? t = s.default.Types.SYSTEM_DM : null != n && (0, r.default)(n) ? t = (0, a.isPublicSystemMessage)(n) ? s.default.Types.OFFICIAL : s.default.Types.SERVER : (null == u ? void 0 : u.bot) ? t = s.default.Types.BOT : null != l && l.isForumPost() && l.ownerId === (null == u ? void 0 : u.id) && !_ && (t = s.default.Types.ORIGINAL_POSTER), null == t) ? null : (0, i.jsx)(s.default, {
             className: d ? o.botTagCompact : o.botTagCozy,
             type: t,
             verified: null == u ? void 0 : u.isVerifiedBot(),

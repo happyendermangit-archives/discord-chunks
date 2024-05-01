@@ -10,8 +10,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("933557"),
         r = n("797610"),
-        s = n("339085"),
-        a = n("633302"),
+        a = n("339085"),
+        s = n("633302"),
         o = n("601070"),
         l = n("592125"),
         u = n("984933"),
@@ -30,11 +30,11 @@ function(e, t, n) {
         } = null != c ? c : {};
         switch (e[0]) {
             case "@":
-                return function(e, t, n, i, s) {
-                    let [a, o] = e.slice(1).split("#", 2), u = null != t ? _.default.getGuild(t) : null, c = (0, r.getClydeExperimentEnabled)(u);
-                    if (s && null == o && null != u) {
+                return function(e, t, n, i, a) {
+                    let [s, o] = e.slice(1).split("#", 2), u = null != t ? _.default.getGuild(t) : null, c = (0, r.getClydeExperimentEnabled)(u);
+                    if (a && null == o && null != u) {
                         for (let e of Object.values(_.default.getRoles(u.id)))
-                            if (a === e.name) return {
+                            if (s === e.name) return {
                                 type: "roleMention",
                                 roleId: e.id,
                                 children: [{
@@ -47,7 +47,7 @@ function(e, t, n) {
                         if (null != e) {
                             if (e.isPrivate()) {
                                 for (let t of e.recipients)
-                                    if (A(a, o, t)) return {
+                                    if (A(s, o, t)) return {
                                         type: "userMention",
                                         userId: t,
                                         children: [{
@@ -59,14 +59,14 @@ function(e, t, n) {
                                         userId: e
                                     }
                                     of d.default.getMembers(t))
-                                    if (A(a, o, e)) return {
+                                    if (A(s, o, e)) return {
                                         type: "userMention",
                                         userId: e,
                                         children: [{
                                             text: ""
                                         }]
                                     };
-                                if (c && A(a, o, f.CLYDE_AI_USER_ID)) return {
+                                if (c && A(s, o, f.CLYDE_AI_USER_ID)) return {
                                     type: "userMention",
                                     userId: f.CLYDE_AI_USER_ID,
                                     children: [{
@@ -80,10 +80,10 @@ function(e, t, n) {
                 }(e, t, n, T, S);
             case ":":
                 return function(e, t) {
-                    let n = a.default.EMOJI_NAME_RE.exec(e);
+                    let n = s.default.EMOJI_NAME_RE.exec(e);
                     if (null == n) return null;
                     let i = n[1],
-                        r = s.default.getDisambiguatedEmojiContext(t).getCustomEmoji();
+                        r = a.default.getDisambiguatedEmojiContext(t).getCustomEmoji();
                     if (null != r && i in r) {
                         let e = r[i];
                         return {
@@ -130,12 +130,12 @@ function(e, t, n) {
                                 }
                         }
                     }
-                    let s = o.default.getActiveJoinedThreadsForGuild(t);
-                    for (let e of I.default.keys(s))
-                        for (let t of I.default.keys(s[e])) {
+                    let a = o.default.getActiveJoinedThreadsForGuild(t);
+                    for (let e of I.default.keys(a))
+                        for (let t of I.default.keys(a[e])) {
                             let {
                                 channel: i
-                            } = s[e][t];
+                            } = a[e][t];
                             if (i.name === n) return {
                                 type: "channelMention",
                                 channelId: i.id,

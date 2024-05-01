@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("47120");
-    var i, r, s, a, o = n("442837"),
+    var i, r, a, s, o = n("442837"),
         l = n("570140"),
         u = n("70956");
     let d = [],
@@ -35,12 +35,12 @@ function(e, t, n) {
             }
         }
     }
-    a = "MessageRemindersStore", (s = "displayName") in(r = E) ? Object.defineProperty(r, s, {
-        value: a,
+    s = "MessageRemindersStore", (a = "displayName") in(r = E) ? Object.defineProperty(r, a, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a, t.default = new E(l.default, {
+    }) : r[a] = s, t.default = new E(l.default, {
         SAVED_MESSAGES_UPDATE: function(e) {
             let {
                 messages: t

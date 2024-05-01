@@ -7,14 +7,14 @@ function(e, t, n) {
     }), n("47120");
     var i = n("470079"),
         r = n("674588"),
-        s = n("70956"),
-        a = n("314734");
+        a = n("70956"),
+        s = n("314734");
 
     function o(e) {
         let {
             sectionId: t,
             commandsByActiveSection: n
-        } = e, [o, l] = i.useState(a.CommandListSortOrder.ALPHABETICAL), u = i.useMemo(() => {
+        } = e, [o, l] = i.useState(s.CommandListSortOrder.ALPHABETICAL), u = i.useMemo(() => {
             var e, i;
             return null !== (i = null === (e = n.find(e => e.section.id === t)) || void 0 === e ? void 0 : e.data) && void 0 !== i ? i : []
         }, [n, t]), {
@@ -60,17 +60,17 @@ function(e, t, n) {
         });
         i.useEffect(() => {
             r.getApplication(t, {
-                dontRefetchMs: s.default.Millis.DAY
+                dontRefetchMs: a.default.Millis.DAY
             })
         }, [t]), i.useEffect(() => {
-            _ && l(a.CommandListSortOrder.POPULAR)
+            _ && l(s.CommandListSortOrder.POPULAR)
         }, [_]);
         let c = u;
         switch (o) {
-            case a.CommandListSortOrder.POPULAR:
+            case s.CommandListSortOrder.POPULAR:
                 c = d;
                 break;
-            case a.CommandListSortOrder.ALPHABETICAL:
+            case s.CommandListSortOrder.ALPHABETICAL:
                 c = u
         }
         return {

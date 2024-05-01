@@ -4,8 +4,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        s = n.n(r),
-        a = n("242411"),
+        a = n.n(r),
+        s = n("242411"),
         o = n("952794");
     t.default = function(e) {
         let {
@@ -13,7 +13,7 @@ function(e, t, n) {
             className: n
         } = e;
         return (0, i.jsxs)("div", {
-            className: s()(o.nitroTopDividerContainer, n),
+            className: a()(o.nitroTopDividerContainer, n),
             children: [(0, i.jsx)("div", {
                 className: o.nitroTopDividerUpper
             }), (0, i.jsx)("div", {
@@ -22,12 +22,12 @@ function(e, t, n) {
                 },
                 className: o.nitroTopDividerShadow
             }), (0, i.jsxs)("div", {
-                className: s()(o.nitroTopDividerLockContainer),
+                className: a()(o.nitroTopDividerLockContainer),
                 children: [(0, i.jsx)("div", {
                     className: o.nitroTopDividerLockBorder
                 }), (0, i.jsx)("div", {
                     className: o.nitroTopDividerLockCircle,
-                    children: (0, i.jsx)(a.default, {
+                    children: (0, i.jsx)(s.default, {
                         width: 16,
                         height: 16,
                         color: "white"

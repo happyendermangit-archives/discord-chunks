@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("481060"),
-        s = n("468436"),
-        a = n("378298"),
+        a = n("468436"),
+        s = n("378298"),
         o = n("473092"),
         l = n("237292");
 
@@ -34,9 +34,9 @@ function(e, t, n) {
                 modalProps: n
             })
         }, {
-            backdropStyle: s.BackdropStyles.BLUR,
+            backdropStyle: a.BackdropStyles.BLUR,
             onCloseCallback: () => {
-                (0, a.dismissChannelSafetyWarnings)(t, [u]), (0, o.trackCtaEvent)({
+                (0, s.dismissChannelSafetyWarnings)(t, [u]), (0, o.trackCtaEvent)({
                     channelId: t,
                     senderId: d,
                     warningId: u,

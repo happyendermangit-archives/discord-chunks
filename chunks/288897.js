@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120"), n("757143");
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("207470"),
         l = n("239091"),
         u = n("358085"),
@@ -60,18 +60,18 @@ function(e, t, n) {
             let {
                 guildId: n,
                 channelId: r,
-                renderExtraElement: s
+                renderExtraElement: a
             } = this.props, {
-                attributes: a,
+                attributes: s,
                 children: o
             } = e;
-            "rtl" === a.dir && (a.style = {
-                ...a.style,
+            "rtl" === s.dir && (s.style = {
+                ...s.style,
                 textAlign: "right"
             });
-            let l = null !== (t = null == s ? void 0 : s(e)) && void 0 !== t ? t : (0, h.default)(e, n, r);
+            let l = null !== (t = null == a ? void 0 : a(e)) && void 0 !== t ? t : (0, h.default)(e, n, r);
             return null != l ? l : (0, i.jsx)("div", {
-                ...a,
+                ...s,
                 children: o
             })
         }
@@ -81,12 +81,12 @@ function(e, t, n) {
                 editor: n,
                 renderExtraLeaf: r
             } = this.props, {
-                attributes: s,
-                children: a
+                attributes: a,
+                children: s
             } = e, o = null !== (t = null == r ? void 0 : r(e)) && void 0 !== t ? t : (0, A.default)(n, e);
             return null != o ? o : (0, i.jsx)("span", {
-                ...s,
-                children: a
+                ...a,
+                children: s
             })
         }
         handleOnChange() {
@@ -121,10 +121,10 @@ function(e, t, n) {
             var t;
             let {
                 editor: n
-            } = this.props, i = o.ReactEditor.findDocumentOrShadowRoot(n).getSelection(), r = null != i && i.rangeCount > 0 ? i.getRangeAt(0) : null, s = null !== (t = e.getTargetRanges()[0]) && void 0 !== t ? t : null;
+            } = this.props, i = o.ReactEditor.findDocumentOrShadowRoot(n).getSelection(), r = null != i && i.rangeCount > 0 ? i.getRangeAt(0) : null, a = null !== (t = e.getTargetRanges()[0]) && void 0 !== t ? t : null;
             if (null == n.composition) {
-                if (("insertText" === e.inputType || "insertReplacementText" === e.inputType) && (null == s && (s = r), null != s)) {
-                    let t = T.EditorUtils.toSlateRange(n, s, {
+                if (("insertText" === e.inputType || "insertReplacementText" === e.inputType) && (null == a && (a = r), null != a)) {
+                    let t = T.EditorUtils.toSlateRange(n, a, {
                         exactMatch: !1,
                         suppressThrow: !0
                     });
@@ -169,13 +169,13 @@ function(e, t, n) {
                 }), i.insertedPrefix = !0, n.composition = i;
                 return
             }
-            let s = o.ReactEditor.findDocumentOrShadowRoot(this.props.editor).getSelection(),
-                a = (null !== (e = null == s ? void 0 : s.rangeCount) && void 0 !== e ? e : 0) > 0 ? null == s ? void 0 : s.getRangeAt(0) : null;
-            if (null == (null != a ? T.EditorUtils.toSlateRange(n, a, {
+            let a = o.ReactEditor.findDocumentOrShadowRoot(this.props.editor).getSelection(),
+                s = (null !== (e = null == a ? void 0 : a.rangeCount) && void 0 !== e ? e : 0) > 0 ? null == a ? void 0 : a.getRangeAt(0) : null;
+            if (null == (null != s ? T.EditorUtils.toSlateRange(n, s, {
                     exactMatch: !0,
                     suppressThrow: !0
-                }) : null) && null != a) {
-                let e = T.EditorUtils.toSlateRange(n, a, {
+                }) : null) && null != s) {
+                let e = T.EditorUtils.toSlateRange(n, s, {
                     exactMatch: !1,
                     suppressThrow: !0
                 });
@@ -215,8 +215,8 @@ function(e, t, n) {
             let {
                 editor: t,
                 onBlur: n
-            } = this.props, i = e.relatedTarget, r = o.ReactEditor.findDocumentOrShadowRoot(this.props.editor), s = r.getElementById("textarea-context"), a = r.getElementById("slate-toolbar");
-            if (null != i && !(0, E.hasDomParent)(i, s) && !(0, E.hasDomParent)(i, a)) {
+            } = this.props, i = e.relatedTarget, r = o.ReactEditor.findDocumentOrShadowRoot(this.props.editor), a = r.getElementById("textarea-context"), s = r.getElementById("slate-toolbar");
+            if (null != i && !(0, E.hasDomParent)(i, a) && !(0, E.hasDomParent)(i, s)) {
                 let e = o.ReactEditor.findDocumentOrShadowRoot(t).getSelection();
                 null != e && this.isSelectionEscaping(e) && e.removeAllRanges()
             }
@@ -237,16 +237,16 @@ function(e, t, n) {
                 i = !1;
             if (null != e && null != t)
                 for (let r = e.rangeCount - 1; r >= 0; r--) {
-                    let s = e.getRangeAt(r);
-                    if ((0, E.hasDomParent)(s.startContainer, t)) {
+                    let a = e.getRangeAt(r);
+                    if ((0, E.hasDomParent)(a.startContainer, t)) {
                         if (i) return !0;
                         n = !0
                     } else {
                         if (n) return !0;
                         i = !0
                     }
-                    if (!s.collapsed) {
-                        if ((0, E.hasDomParent)(s.startContainer, t)) {
+                    if (!a.collapsed) {
+                        if ((0, E.hasDomParent)(a.startContainer, t)) {
                             if (i) return !0;
                             n = !0
                         } else {
@@ -260,7 +260,7 @@ function(e, t, n) {
         handleContextMenu(e) {
             let {
                 editor: t
-            } = this.props, r = e.pageY, s = window.innerHeight;
+            } = this.props, r = e.pageY, a = window.innerHeight;
             u.isPlatformEmbedded ? (0, l.openContextMenuLazy)(e, async () => {
                 let {
                     default: e
@@ -271,7 +271,7 @@ function(e, t, n) {
                     text: T.EditorUtils.getSelectedText(t, !0)
                 })
             }, {
-                align: null != r && null != s && r < s / 2 ? "top" : "bottom",
+                align: null != r && null != a && r < a / 2 ? "top" : "bottom",
                 enableSpellCheck: !0
             }) : blur()
         }
@@ -289,7 +289,7 @@ function(e, t, n) {
                 className: t,
                 containerClassName: n,
                 canFocus: r,
-                autoFocus: s,
+                autoFocus: a,
                 placeholder: l,
                 channelId: u,
                 guildId: d,
@@ -307,7 +307,7 @@ function(e, t, n) {
                 ref: this.containerRef,
                 className: n,
                 children: [this.state.showPlaceholder ? (0, i.jsx)("div", {
-                    className: a()(m.placeholder, t),
+                    className: s()(m.placeholder, t),
                     "aria-hidden": !0,
                     children: l
                 }) : null, (0, i.jsx)(o.Slate, {
@@ -315,7 +315,7 @@ function(e, t, n) {
                     value: [...this.state.initialValue],
                     children: (0, i.jsx)(o.Editable, {
                         ...A,
-                        className: a()(N.markup, m.editor, t),
+                        className: s()(N.markup, m.editor, t),
                         decorate: this.decorate,
                         renderElement: this.renderElement,
                         renderLeaf: this.renderLeaf,
@@ -328,7 +328,7 @@ function(e, t, n) {
                         onCompositionStart: this.handleCompositionStart,
                         onCompositionEnd: this.handleCompositionEnd,
                         onPasteCapture: this.handlePasteCapture,
-                        autoFocus: s && !1 !== r,
+                        autoFocus: a && !1 !== r,
                         autoCorrect: "off",
                         "data-can-focus": !1 !== r,
                         "aria-label": l,

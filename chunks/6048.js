@@ -2,9 +2,9 @@ function(e, t, n) {
     "use strict";
     n.r(t), n("47120");
     var i, r = n("735250"),
-        s = n("470079"),
-        a = n("120356"),
-        o = n.n(a),
+        a = n("470079"),
+        s = n("120356"),
+        o = n.n(s),
         l = n("1561"),
         u = n("84735"),
         d = n("922770"),
@@ -31,7 +31,7 @@ function(e, t, n) {
                 hasContent: t,
                 onClear: n,
                 className: i,
-                isLoading: a,
+                isLoading: s,
                 size: u = f.SMALL
             } = e;
             return (0, r.jsx)(l.Clickable, {
@@ -48,10 +48,10 @@ function(e, t, n) {
                 },
                 children: (0, r.jsx)("div", {
                     className: I.iconContainer,
-                    children: a ? (0, r.jsx)(d.Spinner, {
+                    children: s ? (0, r.jsx)(d.Spinner, {
                         type: d.Spinner.Type.SPINNING_CIRCLE,
                         className: o()(I.icon, I.visible)
-                    }) : (0, r.jsxs)(s.Fragment, {
+                    }) : (0, r.jsxs)(a.Fragment, {
                         children: [(0, r.jsx)(c.default, {
                             className: o()(I.icon, {
                                 [I.visible]: !t
@@ -68,7 +68,7 @@ function(e, t, n) {
             })
         };
     S.Sizes = f;
-    class h extends(i = s.PureComponent) {
+    class h extends(i = a.PureComponent) {
         focus() {
             let {
                 current: e
@@ -87,8 +87,8 @@ function(e, t, n) {
                 autoFocus: t,
                 onClear: n,
                 className: i,
-                placeholder: s = E.default.Messages.SEARCH,
-                iconClassName: a,
+                placeholder: a = E.default.Messages.SEARCH,
+                iconClassName: s,
                 onKeyDown: l,
                 onKeyUp: d,
                 onKeyPress: _,
@@ -125,7 +125,7 @@ function(e, t, n) {
                             onKeyDown: l,
                             onKeyUp: d,
                             onKeyPress: _,
-                            placeholder: s,
+                            placeholder: a,
                             disabled: f,
                             autoFocus: t,
                             autoComplete: N,
@@ -135,7 +135,7 @@ function(e, t, n) {
                             size: T,
                             hasContent: e.length > 0,
                             onClear: n,
-                            className: a,
+                            className: s,
                             isLoading: c
                         })]
                     })
@@ -143,7 +143,7 @@ function(e, t, n) {
             })
         }
         constructor(...e) {
-            super(...e), T(this, "inputRef", s.createRef()), T(this, "containerRef", s.createRef()), T(this, "handleOnChange", e => {
+            super(...e), T(this, "inputRef", a.createRef()), T(this, "containerRef", a.createRef()), T(this, "handleOnChange", e => {
                 let {
                     onChange: t
                 } = this.props;

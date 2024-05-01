@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("570140"),
         r = n("367907"),
-        s = n("932724"),
-        a = n("634041"),
+        a = n("932724"),
+        s = n("634041"),
         o = n("647177"),
         l = n("592125"),
         u = n("131951"),
@@ -26,7 +26,7 @@ function(e, t, n) {
         }),
         I = () => {
             var e;
-            let t = (0, s.getLastUsedVideoBackgroundOption)(c.default.getCurrentUser());
+            let t = (0, a.getLastUsedVideoBackgroundOption)(c.default.getCurrentUser());
             return {
                 video_device_name: null === (e = u.default.getVideoDevices()[u.default.getVideoDeviceId()]) || void 0 === e ? void 0 : e.name,
                 video_hardware_scaling_enabled: u.default.getHardwareH264(),
@@ -36,11 +36,11 @@ function(e, t, n) {
         };
 
     function T(e, t, n, r) {
-        let s = _.default.getVoiceChannelId(),
-            o = l.default.getChannel(s);
-        if (null == t && null != s && null != o) {
+        let a = _.default.getVoiceChannelId(),
+            o = l.default.getChannel(a);
+        if (null == t && null != a && null != o) {
             let t = E(o, r);
-            if (e(), a.default.hasUsedBackgroundInCall) {
+            if (e(), s.default.hasUsedBackgroundInCall) {
                 let e = {
                     ...t,
                     ...I()

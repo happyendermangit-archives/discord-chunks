@@ -1,14 +1,14 @@
 function(e, t, n) {
     "use strict";
     n.r(t);
-    var i, r, s, a, o = n("442837"),
+    var i, r, a, s, o = n("442837"),
         l = n("570140"),
         u = n("353926");
 
     function d() {
         return !0
     }
-    class _ extends(a = o.default.Store) {
+    class _ extends(s = o.default.Store) {
         initialize() {
             this.waitFor(u.default)
         }
@@ -16,12 +16,12 @@ function(e, t, n) {
             return u.default.getGuildExperimentDescriptor(t, e)
         }
     }
-    s = "GuildExperimentStore", (r = "displayName") in(i = _) ? Object.defineProperty(i, r, {
-        value: s,
+    a = "GuildExperimentStore", (r = "displayName") in(i = _) ? Object.defineProperty(i, r, {
+        value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : i[r] = s, t.default = new _(l.default, {
+    }) : i[r] = a, t.default = new _(l.default, {
         LOGOUT: d,
         LOGIN_SUCCESS: d,
         CONNECTION_OPEN: d,

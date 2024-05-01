@@ -10,8 +10,8 @@ function(e, t, n) {
     }), n("411104"), n("47120");
     var i = n("470079"),
         r = n("134158"),
-        s = n("924428"),
-        a = n("151973");
+        a = n("924428"),
+        s = n("151973");
     let o = Object.freeze({
         spacerTop: 0,
         totalHeight: 0,
@@ -32,12 +32,12 @@ function(e, t, n) {
             paddingBottom: I = 0,
             getScrollerState: T,
             getAnchorId: f
-        } = e, S = (0, s.default)(), h = (0, i.useRef)(o), [A] = (0, i.useState)(() => new r.default), {
+        } = e, S = (0, a.default)(), h = (0, i.useRef)(o), [A] = (0, i.useState)(() => new r.default), {
             dirty: m,
             chunkStart: N,
             chunkEnd: p,
             forceUpdateOnChunkChange: O
-        } = (0, a.default)({
+        } = (0, s.default)({
             chunkSize: c,
             getScrollerState: T,
             forceUpdate: S
@@ -88,8 +88,8 @@ function(e, t, n) {
             scrollerRef: t,
             anchor: n,
             getScrollerState: r,
-            listComputer: s,
-            getAnchorId: a,
+            listComputer: a,
+            getAnchorId: s,
             totalHeight: o
         } = e;
         (0, i.useLayoutEffect)(() => {
@@ -98,10 +98,10 @@ function(e, t, n) {
             } = t, {
                 scrollTop: i
             } = r();
-            if (null == n || null == n.row || null == e || null == a || 0 === i) return;
+            if (null == n || null == n.row || null == e || null == s || 0 === i) return;
             let o = t => {
-                if (t < 0 || t >= s.sections[n.section] || a(n.section, n.row) !== n.id) return !1;
-                let [r] = s.computeScrollPosition(n.section, t), o = r - n.scrollOffset;
+                if (t < 0 || t >= a.sections[n.section] || s(n.section, n.row) !== n.id) return !1;
+                let [r] = a.computeScrollPosition(n.section, t), o = r - n.scrollOffset;
                 return i !== o && (e.scrollTop = o), !0
             };
             if (!o(n.row)) !o(n.row - 1) && o(n.row + 1)

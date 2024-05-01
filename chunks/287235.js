@@ -13,8 +13,8 @@ function(e, t, n) {
     }), n("735250");
     var i = n("470079"),
         r = n("372817"),
-        s = n("5967"),
-        a = n("420212");
+        a = n("5967"),
+        s = n("420212");
     let o = "data-jump-section",
         l = "global",
         u = i.createContext(l);
@@ -32,8 +32,8 @@ function(e, t, n) {
     }
     async function c(e) {
         var t, n, i, u;
-        if (e.key !== a.FOCUS_SECTION_JUMP_KEY) return;
-        let d = (0, s.eventOwnerDocument)(e);
+        if (e.key !== s.FOCUS_SECTION_JUMP_KEY) return;
+        let d = (0, a.eventOwnerDocument)(e);
         if (null == d) return;
         let _ = null,
             c = null,
@@ -49,7 +49,7 @@ function(e, t, n) {
             getFocusableElements: () => Array.from(d.querySelectorAll("[".concat(o, '="').concat(null != _ ? _ : l, '"]'))),
             getActiveElement: () => d.activeElement
         });
-        if ((null === (t = (0, s.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement) == null || null == c) {
+        if ((null === (t = (0, a.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement) == null || null == c) {
             null === (n = I.getFirstFocusableElement()) || void 0 === n || n.focus();
             return
         }

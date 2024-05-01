@@ -14,7 +14,7 @@ function(e, t, n) {
             return l
         },
         FilterTargetType: function() {
-            return a
+            return s
         },
         MediaEngineContextTypes: function() {
             return c.MediaEngineContextTypes
@@ -29,7 +29,7 @@ function(e, t, n) {
             return T
         }
     });
-    var i, r, s, a, o, l, u = n("839548"),
+    var i, r, a, s, o, l, u = n("839548"),
         d = n("60541"),
         _ = n("946695"),
         c = n("65154");
@@ -53,5 +53,5 @@ function(e, t, n) {
 
     function T(e) {
         return new(E(e))
-    }(i = a || (a = {})).INPUT_DEVICE = "input_device", i.STREAM = "stream", (r = o || (o = {})).NONE = "", r.BACKGROUND_BLUR = "background_blur", r.BACKGROUND_REPLACEMENT = "background_replacement", (s = l || (l = {})).CAMERA_BACKGROUND_PREVIEW = "cameraBackgroundPreview", s.CAMERA_BACKGROUND_LIVE = "cameraBackgroundLive"
+    }(i = s || (s = {})).INPUT_DEVICE = "input_device", i.STREAM = "stream", (r = o || (o = {})).NONE = "", r.BACKGROUND_BLUR = "background_blur", r.BACKGROUND_REPLACEMENT = "background_replacement", (a = l || (l = {})).CAMERA_BACKGROUND_PREVIEW = "cameraBackgroundPreview", a.CAMERA_BACKGROUND_LIVE = "cameraBackgroundLive"
 }

@@ -8,7 +8,7 @@ function(e, t, n) {
             return o
         },
         channelEligibleForSummaries: function() {
-            return a
+            return s
         },
         useChannelSummariesExperiment: function() {
             return u
@@ -16,9 +16,9 @@ function(e, t, n) {
     }), n("399606");
     var i = n("430824"),
         r = n("981631"),
-        s = n("176505");
+        a = n("176505");
 
-    function a(e) {
+    function s(e) {
         return o(e, !0, !1)
     }
 
@@ -29,9 +29,9 @@ function(e, t, n) {
             var t;
             if (null == e) return !1;
             let n = i.default.getGuild(null !== (t = null == e ? void 0 : e.guild_id) && void 0 !== t ? t : ""),
-                s = null != n && n.rulesChannelId === e.id;
-            return r.ChannelTypesSets.SUMMARIZEABLE.has(e.type) && !e.isNSFW() && !s
-        }(e) || !1 === t && e.hasFlag(s.ChannelFlags.SUMMARIES_DISABLED)) && l(i.default.getGuild(e.guild_id), n)
+                a = null != n && n.rulesChannelId === e.id;
+            return r.ChannelTypesSets.SUMMARIZEABLE.has(e.type) && !e.isNSFW() && !a
+        }(e) || !1 === t && e.hasFlag(a.ChannelFlags.SUMMARIES_DISABLED)) && l(i.default.getGuild(e.guild_id), n)
     }
 
     function l(e) {

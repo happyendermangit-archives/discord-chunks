@@ -4,8 +4,8 @@ function(e, t, n) {
     var i = n("147913");
     n("674588");
     var r = n("900489"),
-        s = n("751189"),
-        a = n("409059");
+        a = n("751189"),
+        s = n("409059");
     n("652898"), n("701190");
     var o = n("960904"),
         l = n("830121");
@@ -21,7 +21,7 @@ function(e, t, n) {
                 code: n
             } = e;
             if (t === o.CodedLinkType.INVITE);
-            else if (t === o.CodedLinkType.TEMPLATE) null == a.default.getGuildTemplate(n) && s.default.resolveGuildTemplate(n);
+            else if (t === o.CodedLinkType.TEMPLATE) null == s.default.getGuildTemplate(n) && a.default.resolveGuildTemplate(n);
             else if (t === o.CodedLinkType.BUILD_OVERRIDE || t === o.CodedLinkType.MANUAL_BUILD_OVERRIDE);
             else if (t === o.CodedLinkType.EVENT);
             else if (t === o.CodedLinkType.CHANNEL_LINK);

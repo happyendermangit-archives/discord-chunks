@@ -11,8 +11,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("442837"),
-        s = n("481060"),
-        a = n("144144"),
+        a = n("481060"),
+        s = n("144144"),
         o = n("592125"),
         l = n("496675"),
         u = n("944486"),
@@ -30,20 +30,20 @@ function(e, t, n) {
         d.ComponentDispatch.dispatchToLastSubscribed(c.ComponentActions.INSERT_TEXT, {
             plainText: i,
             rawText: "<@".concat(n, ">")
-        }), null != t && a.default.startTyping(t)
+        }), null != t && s.default.startTyping(t)
     }
 
     function T(e, t, n) {
-        let [a, d] = (0, r.useStateFromStoresArray)([u.default, o.default, l.default], () => {
+        let [s, d] = (0, r.useStateFromStoresArray)([u.default, o.default, l.default], () => {
             let e = u.default.getChannelId(t),
                 n = o.default.getChannel(e);
             return [e, null != n && (n.isMultiUserDM() || l.default.can(c.Permissions.SEND_MESSAGES, n))]
         }, [t]), _ = n === c.AppContext.POPOUT;
-        return !d || _ ? null : (0, i.jsx)(s.MenuItem, {
+        return !d || _ ? null : (0, i.jsx)(a.MenuItem, {
             id: "mention",
             label: E.default.Messages.MENTION,
             action: function() {
-                I(e, a)
+                I(e, s)
             }
         })
     }

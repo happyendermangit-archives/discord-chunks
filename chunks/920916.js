@@ -10,8 +10,8 @@ function(e, t, n) {
     }), n("773603"), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("236471"),
-        a = n("979554"),
+        a = n("236471"),
+        s = n("979554"),
         o = n("442837"),
         l = n("481060"),
         u = n("809206"),
@@ -43,19 +43,19 @@ function(e, t, n) {
         let {
             transitionState: t,
             onClose: n,
-            quest: a,
+            quest: s,
             location: u,
             reward: _,
             decoration: c,
             onUseNow: E
-        } = e, T = r.useRef(null), [f, S] = r.useState(null), A = r.useRef(new s.Environment), C = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), L = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), v = (0, p.getHeroAssetUrl)(a), [M, y] = r.useState("loading");
+        } = e, T = r.useRef(null), [f, S] = r.useState(null), A = r.useRef(new a.Environment), C = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), L = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), v = (0, p.getHeroAssetUrl)(s), [M, y] = r.useState("loading");
         r.useEffect(() => {
             var e;
-            (null === (e = a.userStatus) || void 0 === e ? void 0 : e.claimedAt) == null && (0, m.claimQuestReward)(a.id, N.QuestRewardCodePlatforms.CROSS_PLATFORM, u).then(() => y("claimed")).catch(() => y("error"))
-        }, [a, u]);
+            (null === (e = s.userStatus) || void 0 === e ? void 0 : e.claimedAt) == null && (0, m.claimQuestReward)(s.id, N.QuestRewardCodePlatforms.CROSS_PLATFORM, u).then(() => y("claimed")).catch(() => y("error"))
+        }, [s, u]);
         let P = null == L || null == c || "loading" === M;
         return (0, i.jsxs)(i.Fragment, {
-            children: [(0, i.jsx)(s.ConfettiCanvas, {
+            children: [(0, i.jsx)(a.ConfettiCanvas, {
                 ref: S,
                 className: g.confettiCanvas,
                 environment: A.current
@@ -76,8 +76,8 @@ function(e, t, n) {
                         onClose: n
                     }) : (0, i.jsx)(D, {
                         user: L,
-                        primaryColor: a.config.colors.primary,
-                        secondaryColor: a.config.colors.secondary,
+                        primaryColor: s.config.colors.primary,
+                        secondaryColor: s.config.colors.secondary,
                         decoration: c,
                         decorationName: _.messages.name,
                         backgroundUrl: v,
@@ -102,8 +102,8 @@ function(e, t, n) {
             user: t,
             decoration: n,
             decorationName: r,
-            primaryColor: s,
-            secondaryColor: a,
+            primaryColor: a,
+            secondaryColor: s,
             backgroundUrl: o,
             isSaving: u,
             onClose: d,
@@ -142,7 +142,7 @@ function(e, t, n) {
                 children: (0, i.jsxs)("div", {
                     className: g.gradient,
                     style: {
-                        backgroundImage: "linear-gradient(180deg, ".concat(s, ", ").concat(a, ")")
+                        backgroundImage: "linear-gradient(180deg, ".concat(a, ", ").concat(s, ")")
                     },
                     children: [(0, i.jsx)(l.Heading, {
                         variant: "heading-lg/bold",
@@ -169,25 +169,25 @@ function(e, t, n) {
     function M(e) {
         var t, n;
         let {
-            quest: s,
+            quest: a,
             location: o,
             onClose: l,
             transitionState: d
         } = e, c = r.useMemo(() => {
             var e;
-            return null !== (e = null == s ? void 0 : s.config.rewardsConfig.rewards.find(p.isCollectibleReward)) && void 0 !== e ? e : null
-        }, [s]), [I, T] = function(e) {
+            return null !== (e = null == a ? void 0 : a.config.rewardsConfig.rewards.find(p.isCollectibleReward)) && void 0 !== e ? e : null
+        }, [a]), [I, T] = function(e) {
             let {
                 product: t,
                 isFetching: n
             } = (0, E.useFetchCollectiblesProduct)(e), {} = (0, f.default)({}), i = r.useMemo(() => {
                 if (null == t || n) return null;
-                let e = t.items.find(e => e.type === a.CollectiblesItemType.AVATAR_DECORATION);
+                let e = t.items.find(e => e.type === s.CollectiblesItemType.AVATAR_DECORATION);
                 return null == e ? null : e
             }, [t, n]);
             return [i, () => null == i ? Promise.reject() : ((0, u.setPendingAvatarDecoration)(i), L())]
         }(null !== (n = null == c ? void 0 : c.skuId) && void 0 !== n ? n : null);
-        return null == c ? null : (null === (t = s.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null ? (0, i.jsx)(_.default, {
+        return null == c ? null : (null === (t = a.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null ? (0, i.jsx)(_.default, {
             transitionState: d,
             onCloseModal: L,
             onClose: l,
@@ -196,7 +196,7 @@ function(e, t, n) {
         }) : (0, i.jsx)(v, {
             onClose: l,
             transitionState: d,
-            quest: s,
+            quest: a,
             location: o,
             reward: c,
             decoration: I,

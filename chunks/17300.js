@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("147913"),
         r = n("751571"),
-        s = n("88751"),
-        a = n("590415"),
+        a = n("88751"),
+        s = n("590415"),
         o = n("189786"),
         l = n("314897"),
         u = n("592125"),
@@ -27,7 +27,7 @@ function(e, t, n) {
 
     function S(e, t) {
         var n;
-        return (null === (n = u.default.getChannel(t)) || void 0 === n ? !void 0 : !n.isListenModeCapable()) || s.default.isSpeaker(e, t)
+        return (null === (n = u.default.getChannel(t)) || void 0 === n ? !void 0 : !n.isListenModeCapable()) || a.default.isSpeaker(e, t)
     }
     class h extends i.default {
         handleVoiceChannelSelect(e) {
@@ -51,7 +51,7 @@ function(e, t, n) {
                         T = i, f();
                         return
                     }
-                    t = new o.default(e), (0, a.getAudienceRequestToSpeakState)(t) === a.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK && (T = i, f())
+                    t = new o.default(e), (0, s.getAudienceRequestToSpeakState)(t) === s.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK && (T = i, f())
                 }
             })
         }

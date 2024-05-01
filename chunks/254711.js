@@ -10,8 +10,8 @@ function(e, t, n) {
     }), n("47120"), n("411104");
     var i = n("512722"),
         r = n.n(i),
-        s = n("913527"),
-        a = n.n(s),
+        a = n("913527"),
+        s = n.n(a),
         o = n("106351"),
         l = n("969812"),
         u = n("493683"),
@@ -287,8 +287,8 @@ function(e, t, n) {
                     channel: r
                 } = t;
                 if (null == i) return;
-                let s = null !== (n = M(e, "new_nick")) && void 0 !== n ? n : "";
-                l.default.changeNickname(i.id, r.id, g.ME, s || "")
+                let a = null !== (n = M(e, "new_nick")) && void 0 !== n ? n : "";
+                l.default.changeNickname(i.id, r.id, g.ME, a || "")
             }
         }, {
             id: "-10",
@@ -336,8 +336,8 @@ function(e, t, n) {
                 var n, i;
                 let {
                     channel: r
-                } = t, s = null !== (n = M(e, "name")) && void 0 !== n ? n : "", a = null !== (i = M(e, "message")) && void 0 !== i ? i : "", l = await (0, f.createThread)(r, s, o.ChannelTypes.PUBLIC_THREAD, (0, T.getAutoArchiveDuration)(r, null), "Slash Command");
-                _.default.sendMessage(l.id, I.default.parse(l, a))
+                } = t, a = null !== (n = M(e, "name")) && void 0 !== n ? n : "", s = null !== (i = M(e, "message")) && void 0 !== i ? i : "", l = await (0, f.createThread)(r, a, o.ChannelTypes.PUBLIC_THREAD, (0, T.getAutoArchiveDuration)(r, null), "Slash Command");
+                _.default.sendMessage(l.id, I.default.parse(l, s))
             }
         }, {
             id: "-11",
@@ -388,15 +388,15 @@ function(e, t, n) {
                     channel: r
                 } = t;
                 if (null == i) return;
-                let s = null !== (n = M(e, "user")) && void 0 !== n ? n : "";
-                if (!m.default.canManageUser(g.Permissions.KICK_MEMBERS, s, i)) {
+                let a = null !== (n = M(e, "user")) && void 0 !== n ? n : "";
+                if (!m.default.canManageUser(g.Permissions.KICK_MEMBERS, a, i)) {
                     _.default.sendBotMessage(r.id, v.default.Messages.COMMAND_KICK_UNABLE);
                     return
                 }(async () => {
                     var t;
-                    let n = N.default.getUser(s);
+                    let n = N.default.getUser(a);
                     if (null == n) throw Error();
-                    await d.default.kickUser(i.id, s, null !== (t = M(e, "reason")) && void 0 !== t ? t : ""), _.default.sendBotMessage(r.id, v.default.Messages.COMMAND_KICK_CONFIRMATION.format({
+                    await d.default.kickUser(i.id, a, null !== (t = M(e, "reason")) && void 0 !== t ? t : ""), _.default.sendBotMessage(r.id, v.default.Messages.COMMAND_KICK_CONFIRMATION.format({
                         user: O.default.getUserTag(n)
                     }))
                 })().catch(() => {
@@ -494,18 +494,18 @@ function(e, t, n) {
                     channel: r
                 } = t;
                 if (null == i) return;
-                let s = null !== (n = M(e, "user")) && void 0 !== n ? n : "";
-                if (!m.default.canManageUser(g.Permissions.BAN_MEMBERS, s, i)) {
+                let a = null !== (n = M(e, "user")) && void 0 !== n ? n : "";
+                if (!m.default.canManageUser(g.Permissions.BAN_MEMBERS, a, i)) {
                     _.default.sendBotMessage(r.id, v.default.Messages.COMMAND_BAN_UNABLE);
                     return
                 }(async () => {
                     var t, n;
-                    if ("" === s) throw Error();
-                    let a = null !== (t = M(e, "delete_messages")) && void 0 !== t ? t : 0,
+                    if ("" === a) throw Error();
+                    let s = null !== (t = M(e, "delete_messages")) && void 0 !== t ? t : 0,
                         o = null !== (n = M(e, "reason")) && void 0 !== n ? n : "",
-                        l = N.default.getUser(s);
-                    await d.default.banUser(i.id, s, a, o), _.default.sendBotMessage(r.id, v.default.Messages.COMMAND_BAN_CONFIRMATION.format({
-                        user: null != l ? O.default.getUserTag(l) : s
+                        l = N.default.getUser(a);
+                    await d.default.banUser(i.id, a, s, o), _.default.sendBotMessage(r.id, v.default.Messages.COMMAND_BAN_CONFIRMATION.format({
+                        user: null != l ? O.default.getUserTag(l) : a
                     }))
                 })().catch(() => {
                     _.default.sendBotMessage(r.id, v.default.Messages.COMMAND_BAN_ERROR)
@@ -582,15 +582,15 @@ function(e, t, n) {
                     _.default.sendBotMessage(i.id, v.default.Messages.COMMAND_TIMEOUT_UNABLE);
                     return
                 }(async () => {
-                    var t, s;
+                    var t, a;
                     let o = null !== (t = M(e, "duration")) && void 0 !== t ? t : "",
-                        l = null !== (s = M(e, "reason")) && void 0 !== s ? s : "",
+                        l = null !== (a = M(e, "reason")) && void 0 !== a ? a : "",
                         u = N.default.getUser(r);
                     if (null == u) throw Error();
                     await d.default.setCommunicationDisabledUntil({
                         guildId: n.id,
                         userId: r,
-                        communicationDisabledUntilTimestamp: a()().add(o, "s").toISOString(),
+                        communicationDisabledUntilTimestamp: s()().add(o, "s").toISOString(),
                         duration: o,
                         reason: l
                     }), _.default.sendBotMessage(i.id, v.default.Messages.COMMAND_TIMEOUT_CONFIRMATION.format({
@@ -645,11 +645,11 @@ function(e, t, n) {
                 var n;
                 let {
                     channel: i
-                } = t, s = M(e, "user"), a = null !== (n = M(e, "message")) && void 0 !== n ? n : "";
+                } = t, a = M(e, "user"), s = null !== (n = M(e, "message")) && void 0 !== n ? n : "";
                 (async () => {
-                    await u.default.openPrivateChannel(s).then(e => {
+                    await u.default.openPrivateChannel(a).then(e => {
                         let t = A.default.getChannel(e);
-                        r()(null != t, "Newly created PrivateChannel is null"), _.default.sendMessage(t.id, I.default.parse(t, a))
+                        r()(null != t, "Newly created PrivateChannel is null"), _.default.sendMessage(t.id, I.default.parse(t, s))
                     })
                 })().catch(() => {
                     _.default.sendBotMessage(i.id, v.default.Messages.COMMAND_MSG_ERROR)

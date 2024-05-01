@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t);
     var i = n("512722"),
         r = n.n(i),
-        s = n("921608"),
-        a = n("693824");
+        a = n("921608"),
+        s = n("693824");
 
     function o(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
@@ -22,8 +22,8 @@ function(e, t, n) {
             this.color = e
         }
         setFont(e) {
-            var t, n, i, r, s;
-            this.font.style = null !== (t = e.style) && void 0 !== t ? t : this.font.style, this.font.size = null !== (n = e.size) && void 0 !== n ? n : this.font.size, this.font.weight = null !== (i = e.weight) && void 0 !== i ? i : this.font.weight, this.font.family = null !== (r = e.family) && void 0 !== r ? r : this.font.family, this.font.truncate = null !== (s = e.truncate) && void 0 !== s ? s : this.font.truncate
+            var t, n, i, r, a;
+            this.font.style = null !== (t = e.style) && void 0 !== t ? t : this.font.style, this.font.size = null !== (n = e.size) && void 0 !== n ? n : this.font.size, this.font.weight = null !== (i = e.weight) && void 0 !== i ? i : this.font.weight, this.font.family = null !== (r = e.family) && void 0 !== r ? r : this.font.family, this.font.truncate = null !== (a = e.truncate) && void 0 !== a ? a : this.font.truncate
         }
         getLoadedImage(e) {
             r()(null != this.assetMap, "DiscordCanvas: An AssetStore has not been initialized.");
@@ -38,9 +38,9 @@ function(e, t, n) {
             o(this, "color", "black"), o(this, "font", {
                 style: "normal",
                 weight: 300,
-                size: s.DEFAULT_FONT_SIZE,
+                size: a.DEFAULT_FONT_SIZE,
                 family: ["serif"],
-                truncate: a.TextTruncationMethod.None
+                truncate: s.TextTruncationMethod.None
             }), o(this, "assetMap", void 0), o(this, "canvas", void 0), this.canvas = e, this.assetMap = t
         }
     }

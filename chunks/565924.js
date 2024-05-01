@@ -2,13 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return a
+            return s
         }
     });
     var i = n("592125"),
         r = n("981631");
 
-    function s(e) {
+    function a(e) {
         if (null == e.parent_id) return e.type === r.ChannelTypes.GUILD_CATEGORY ? (e.position + 1) * 1e3 : e.position;
         {
             var t, n;
@@ -17,13 +17,13 @@ function(e, t, n) {
         }
     }
 
-    function a(e, t) {
-        var n, i, r, a, o, l;
+    function s(e, t) {
+        var n, i, r, s, o, l;
         if (e.score !== t.score) return t.score - e.score;
-        let u = s(e.record),
-            d = s(t.record);
+        let u = a(e.record),
+            d = a(t.record);
         if (u !== d) return u - d;
-        let _ = null !== (a = null !== (r = e.sortable) && void 0 !== r ? r : null === (n = e.comparator) || void 0 === n ? void 0 : n.toLocaleLowerCase()) && void 0 !== a ? a : "",
+        let _ = null !== (s = null !== (r = e.sortable) && void 0 !== r ? r : null === (n = e.comparator) || void 0 === n ? void 0 : n.toLocaleLowerCase()) && void 0 !== s ? s : "",
             c = null !== (l = null !== (o = e.sortable) && void 0 !== o ? o : null === (i = t.comparator) || void 0 === i ? void 0 : i.toLocaleLowerCase()) && void 0 !== l ? l : "";
         return _ < c ? -1 : _ > c ? 1 : 0
     }

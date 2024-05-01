@@ -22,8 +22,8 @@ function(e, t, n) {
     }), n("47120"), n("724458");
     var i = n("544891"),
         r = n("570140"),
-        s = n("904245"),
-        a = n("593472"),
+        a = n("904245"),
+        s = n("593472"),
         o = n("160404"),
         l = n("359110"),
         u = n("592125"),
@@ -94,11 +94,11 @@ function(e, t, n) {
             channel_id: i.id,
             server_guide_channel_type: "resource",
             channel_action_type: -1
-        }), n && (0, l.transitionToChannel)(t), s.default.jumpToMessage({
+        }), n && (0, l.transitionToChannel)(t), a.default.jumpToMessage({
             channelId: t,
             messageId: _.default.castChannelIdAsMessageId(t),
             flash: !1,
-            jumpType: a.JumpTypes.INSTANT
+            jumpType: s.JumpTypes.INSTANT
         })
     }, m = (e, t) => {
         r.default.dispatch({
@@ -121,15 +121,15 @@ function(e, t, n) {
                 channelId: t
             }), o.default.isFullServerPreview(e)) return;
         let n = u.default.getChannel(t),
-            s = c.default.getActionForChannel(e, t);
-        if (null != n && null != s) {
-            var a, l;
-            let t = _.default.keys(null !== (a = I.default.getCompletedActions(e)) && void 0 !== a ? a : {}),
+            a = c.default.getActionForChannel(e, t);
+        if (null != n && null != a) {
+            var s, l;
+            let t = _.default.keys(null !== (s = I.default.getCompletedActions(e)) && void 0 !== s ? s : {}),
                 i = null !== (l = c.default.getNewMemberActions(e)) && void 0 !== l ? l : [];
             d.default.track(f.AnalyticEvents.SERVER_GUIDE_ACTION_COMPLETED, {
                 guild_id: n.guild_id,
                 channel_id: n.id,
-                channel_action_type: s.actionType,
+                channel_action_type: a.actionType,
                 has_completed_all: i.reduce((e, n) => e && t.includes(n.channelId), !0)
             })
         }

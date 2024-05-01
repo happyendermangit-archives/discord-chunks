@@ -19,14 +19,14 @@ function(e, t, n) {
     }), n("47120");
     var i = n("683860"),
         r = n("592125"),
-        s = n("430824"),
-        a = n("306680"),
+        a = n("430824"),
+        s = n("306680"),
         o = n("710352"),
         l = n("176505"),
         u = n("689938");
 
     function d(e, t) {
-        let [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [a.default];
+        let [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [s.default];
         return {
             isNew: !e.isArchivedThread() && n.isNewForumThread(e.id, e.parent_id, t),
             hasUnreads: !e.isArchivedThread() && n.isForumPostUnread(e.id)
@@ -34,7 +34,7 @@ function(e, t, n) {
     }
 
     function _(e) {
-        let [t, n, i] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [r.default, s.default, a.default], o = t.getChannel(e);
+        let [t, n, i] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [r.default, a.default, s.default], o = t.getChannel(e);
         if (null == o) return null;
         let l = n.getGuild(o.guild_id);
         return null == l ? null : d(o, l, [i])
@@ -51,8 +51,8 @@ function(e, t, n) {
     }
 
     function I(e, t) {
-        let [n] = t, i = n.hasTrackedUnread(e), r = n.hasOpenedThread(e), s = null != n.getTrackedAckMessageId(e);
-        return i && r && s
+        let [n] = t, i = n.hasTrackedUnread(e), r = n.hasOpenedThread(e), a = null != n.getTrackedAckMessageId(e);
+        return i && r && a
     }
 
     function T(e) {

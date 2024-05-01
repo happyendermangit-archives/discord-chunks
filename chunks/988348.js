@@ -11,15 +11,15 @@ function(e, t, n) {
             return l
         },
         supportsZstd: function() {
-            return a
+            return s
         }
     }), n("518263"), n("970173"), n("520712"), n("268111"), n("941497"), n("32026"), n("480839"), n("744285"), n("492257"), n("873817");
     var i = n("433517"),
         r = n("998502");
-    let s = null;
+    let a = null;
 
-    function a() {
-        return null == s && (s = function() {
+    function s() {
+        return null == a && (a = function() {
             if (null == window.DiscordNative || void 0 === window.Uint8Array || void 0 === window.TextDecoder) return !1;
             try {
                 return r.default.requireModule("discord_zstd"), !0
@@ -27,7 +27,7 @@ function(e, t, n) {
                 if (e.message.includes("Cannot find")) return r.default.ensureModule("discord_zstd").catch(e => {}), !1;
                 throw e
             }
-        }()), s
+        }()), a
     }
 
     function o() {

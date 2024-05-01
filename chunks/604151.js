@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("952265"),
         r = n("570140"),
-        s = n("281956"),
-        a = n("200498"),
+        a = n("281956"),
+        s = n("200498"),
         o = n("71275"),
         l = n("672339"),
         u = n("653175"),
@@ -24,8 +24,8 @@ function(e, t, n) {
             h = d.default.getChannel(e),
             A = I.default.getCurrentClientVoiceChannelId(null != t ? t : null) === e,
             m = null != h ? c.default.getCheck(h.guild_id) : null;
-        if (!(null != t && (0, s.shouldShowMembershipVerificationGate)(t))) {
-            if (null == m || m.canChat || (0, a.canLurkerListen)(h)) {
+        if (!(null != t && (0, a.shouldShowMembershipVerificationGate)(t))) {
+            if (null == m || m.canChat || (0, s.canLurkerListen)(h)) {
                 if (null != h && !A) {
                     let e = (0, T.isChannelFull)(h, I.default, _.default);
                     if (e && h.isGuildStageVoice() && (0, o.getStageHasMedia)(h.id)) {

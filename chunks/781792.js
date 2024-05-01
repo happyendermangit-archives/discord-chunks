@@ -7,14 +7,14 @@ function(e, t, n) {
     }), n("789020");
     var i = n("544891"),
         r = n("570140"),
-        s = n("962086"),
-        a = n("160404"),
+        a = n("962086"),
+        s = n("160404"),
         o = n("981631");
 
     function l(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (a.default.isFullServerPreview(e)) {
-            (0, s.updateImpersonatedData)(e, {
+        if (s.default.isFullServerPreview(e)) {
+            (0, a.updateImpersonatedData)(e, {
                 memberOptions: t
             });
             return

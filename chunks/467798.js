@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         SILENT_RE: function() {
-            return s
+            return a
         },
         canSuppressNotifications: function() {
-            return a
+            return s
         },
         default: function() {
             return o
@@ -13,9 +13,9 @@ function(e, t, n) {
     });
     var i = n("528151");
     let r = "@silent",
-        s = new RegExp("^".concat(r, "(\\s|$)"));
+        a = new RegExp("^".concat(r, "(\\s|$)"));
 
-    function a() {
+    function s() {
         return i.SilentMessagesExperiment.getCurrentConfig({
             location: "456bd9_1"
         }, {
@@ -24,6 +24,6 @@ function(e, t, n) {
     }
 
     function o(e) {
-        return null == e ? [!1, ""] : a() && null != e.match(s) ? [!0, e.substring(r.length).trim()] : [!1, e]
+        return null == e ? [!1, ""] : s() && null != e.match(a) ? [!0, e.substring(r.length).trim()] : [!1, e]
     }
 }

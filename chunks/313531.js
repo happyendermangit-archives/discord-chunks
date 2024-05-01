@@ -16,14 +16,14 @@ function(e, t, n) {
     });
     var i = n("536402"),
         r = n("823379"),
-        s = n("709054");
-    let a = e => "".concat(i.GuildFeedItemTypes.FORUM_POST, "/").concat(e),
+        a = n("709054");
+    let s = e => "".concat(i.GuildFeedItemTypes.FORUM_POST, "/").concat(e),
         o = e => "".concat(i.GuildFeedItemTypes.MESSAGE, "/").concat(e);
 
     function l(e) {
         switch (e.type) {
             case i.GuildFeedItemTypes.FORUM_POST:
-                return a(s.default.castMessageIdAsChannelId(e.message.id));
+                return s(a.default.castMessageIdAsChannelId(e.message.id));
             case i.GuildFeedItemTypes.MESSAGE:
                 return o(e.message.id);
             case i.GuildFeedItemTypes.MESSAGE_BUNDLE:
@@ -37,7 +37,7 @@ function(e, t, n) {
     function u(e) {
         switch (e.entityType) {
             case i.GuildFeedItemTypes.FORUM_POST:
-                return a(e.entity.id);
+                return s(e.entity.id);
             case i.GuildFeedItemTypes.MESSAGE:
                 return o(e.entity.id);
             default:

@@ -11,8 +11,8 @@ function(e, t, n) {
             return o
         }
     }), n("789020");
-    var i, r, s = n("630388"),
-        a = n("981631");
+    var i, r, a = n("630388"),
+        s = n("981631");
     (r = i || (i = {}))[r.EXPLICIT = 1] = "EXPLICIT";
 
     function o(e) {
@@ -35,7 +35,7 @@ function(e, t, n) {
     function l(e) {
         var t, n, i, r;
         let o = 0;
-        return (0, s.hasFlag)(null !== (t = e.flags) && void 0 !== t ? t : 0, a.MessageAttachmentFlags.CONTAINS_EXPLICIT_MEDIA) && (o += 1), {
+        return (0, a.hasFlag)(null !== (t = e.flags) && void 0 !== t ? t : 0, s.MessageAttachmentFlags.CONTAINS_EXPLICIT_MEDIA) && (o += 1), {
             url: e.url,
             proxyUrl: e.proxy_url,
             height: null !== (n = e.height) && void 0 !== n ? n : 0,

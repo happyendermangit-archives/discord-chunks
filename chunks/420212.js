@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         FOCUS_SECTION_JUMP_KEY: function() {
-            return a
+            return s
         },
         KeyboardEventKey: function() {
-            return s.Key
+            return a.Key
         },
         KeyboardKeysUpdated: function() {
             return i
@@ -17,17 +17,17 @@ function(e, t, n) {
             return l
         }
     }), n("47120");
-    var i, r, s = n("15858");
-    let a = s.Key.F6,
+    var i, r, a = n("15858");
+    let s = a.Key.F6,
         o = new Map([
-            [s.Key.F6, "f6"],
-            [s.Key.Tab, "tab"],
-            [s.Key.ArrowDown, "down"],
-            [s.Key.ArrowUp, "up"],
-            [s.Key.ArrowLeft, "left"],
-            [s.Key.ArrowRight, "right"],
-            [s.Key.Home, "home"],
-            [s.Key.End, "end"]
+            [a.Key.F6, "f6"],
+            [a.Key.Tab, "tab"],
+            [a.Key.ArrowDown, "down"],
+            [a.Key.ArrowUp, "up"],
+            [a.Key.ArrowLeft, "left"],
+            [a.Key.ArrowRight, "right"],
+            [a.Key.Home, "home"],
+            [a.Key.End, "end"]
         ]),
         l = new Set(["tab", "shift+tab", "down", "up", "left", "right", "home", "end"]);
     (r = i || (i = {})).ENTER = "Enter", r.TAB = "Tab", r.SPACE = " ", r.ESCAPE = "Escape", r.SHIFT = "Shift"

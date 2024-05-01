@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("993365"),
         l = n("337033"),
         u = n("787151");
@@ -16,17 +16,17 @@ function(e, t, n) {
         let {
             variant: n,
             className: r,
-            ...s
+            ...a
         } = e, d = (0, l.usePrivateHeadingLevel)(), _ = "h".concat(Math.min(d, 6));
         return (0, i.jsx)(o.Text, {
             ref: t,
             variant: n,
             tag: _,
-            className: a()(u.defaultColor, r),
+            className: s()(u.defaultColor, r),
             ...d > 6 ? {
                 "data-excessive-heading-level": d
             } : {},
-            ...s
+            ...a
         })
     })
 }

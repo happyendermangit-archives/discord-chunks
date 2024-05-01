@@ -13,8 +13,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("470079"),
         r = n("392711"),
-        s = n.n(r),
-        a = n("442837"),
+        a = n.n(r),
+        s = n("442837"),
         o = n("726542"),
         l = n("487576"),
         u = n("553795"),
@@ -34,7 +34,7 @@ function(e, t, n) {
     function h(e) {
         let {
             forUserProfile: t
-        } = e, n = (0, a.useStateFromStores)([d.default], () => d.default.getCurrentUser()), i = l.PlayStationVoiceExperiment.useExperiment({
+        } = e, n = (0, s.useStateFromStores)([d.default], () => d.default.getCurrentUser()), i = l.PlayStationVoiceExperiment.useExperiment({
             location: "f2f7ef_1"
         }, {
             autoTrackExposure: !1
@@ -44,13 +44,13 @@ function(e, t, n) {
             location: "ConnectionsHooks"
         });
         return e => {
-            var s;
-            return e.type === E.PlatformTypes.PLAYSTATION_STAGING ? i : e.type === E.PlatformTypes.AMAZON_MUSIC ? r : !!(void 0 !== n && (null === (s = T[e.type]) || void 0 === s ? void 0 : s.includes(n.id))) || !!t || e.enabled
+            var a;
+            return e.type === E.PlatformTypes.PLAYSTATION_STAGING ? i : e.type === E.PlatformTypes.AMAZON_MUSIC ? r : !!(void 0 !== n && (null === (a = T[e.type]) || void 0 === a ? void 0 : a.includes(n.id))) || !!t || e.enabled
         }
     }
 
     function A() {
-        let e = (0, a.useStateFromStores)([u.default], () => u.default.getAccounts()),
+        let e = (0, s.useStateFromStores)([u.default], () => u.default.getAccounts()),
             t = h({
                 forUserProfile: !1
             }),
@@ -58,7 +58,7 @@ function(e, t, n) {
                 let t = new Set;
                 return e.forEach(e => t.add(e.type)), t
             }, [e]);
-        return s().sortBy(o.default.filter(t), [e => {
+        return a().sortBy(o.default.filter(t), [e => {
             var t;
             return !(f.has(e.type) && Date.now() < (null !== (t = f.get(e.type)) && void 0 !== t ? t : 0) + S)
         }, e => n.has(e.type), e => e.hasMetadata, e => !E.ACTIVITY_PLATFORM_TYPES.has(e.type), e => e.name])
@@ -74,14 +74,14 @@ function(e, t, n) {
             t === I.KeyboardKeysUpdated.SHIFT && n(!0)
         }
 
-        function s(e) {
+        function a(e) {
             let {
                 key: t
             } = e;
             t === I.KeyboardKeysUpdated.SHIFT && n(!1)
         }
-        return (i.useEffect(() => (window.addEventListener("keydown", r), window.addEventListener("keyup", s), () => {
-            window.removeEventListener("keydown", r), window.removeEventListener("keyup", s)
+        return (i.useEffect(() => (window.addEventListener("keydown", r), window.addEventListener("keyup", a), () => {
+            window.removeEventListener("keydown", r), window.removeEventListener("keyup", a)
         }), []), t && e === E.PlatformTypes.TWITTER) ? E.PlatformTypes.TWITTER_LEGACY : e
     }
 }
