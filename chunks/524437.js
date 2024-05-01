@@ -683,7 +683,8 @@ function(e, t, n) {
     class Y extends C.MessageType {
         create(e) {
             let t = {
-                dismissedContents: new Uint8Array(0)
+                dismissedContents: new Uint8Array(0),
+                lastReceivedChangelogId: "0"
             };
             return globalThis.Object.defineProperty(t, C.MESSAGE_TYPE, {
                 enumerable: !1,
@@ -711,6 +712,9 @@ function(e, t, n) {
                     case 5:
                         r.safetyUserSentimentNoticeDismissedAt = L.Timestamp.internalBinaryRead(e, e.uint32(), n, r.safetyUserSentimentNoticeDismissedAt);
                         break;
+                    case 6:
+                        r.lastReceivedChangelogId = e.fixed64().toString();
+                        break;
                     default:
                         let s = n.readUnknownField;
                         if ("throw" === s) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName));
@@ -721,7 +725,7 @@ function(e, t, n) {
             return r
         }
         internalBinaryWrite(e, t, n) {
-            e.dismissedContents.length && t.tag(1, C.WireType.LengthDelimited).bytes(e.dismissedContents), e.lastDismissedOutboundPromotionStartDate && g.StringValue.internalBinaryWrite(e.lastDismissedOutboundPromotionStartDate, t.tag(2, C.WireType.LengthDelimited).fork(), n).join(), e.premiumTier0ModalDismissedAt && L.Timestamp.internalBinaryWrite(e.premiumTier0ModalDismissedAt, t.tag(3, C.WireType.LengthDelimited).fork(), n).join(), e.guildOnboardingUpsellDismissedAt && L.Timestamp.internalBinaryWrite(e.guildOnboardingUpsellDismissedAt, t.tag(4, C.WireType.LengthDelimited).fork(), n).join(), e.safetyUserSentimentNoticeDismissedAt && L.Timestamp.internalBinaryWrite(e.safetyUserSentimentNoticeDismissedAt, t.tag(5, C.WireType.LengthDelimited).fork(), n).join();
+            e.dismissedContents.length && t.tag(1, C.WireType.LengthDelimited).bytes(e.dismissedContents), e.lastDismissedOutboundPromotionStartDate && g.StringValue.internalBinaryWrite(e.lastDismissedOutboundPromotionStartDate, t.tag(2, C.WireType.LengthDelimited).fork(), n).join(), e.premiumTier0ModalDismissedAt && L.Timestamp.internalBinaryWrite(e.premiumTier0ModalDismissedAt, t.tag(3, C.WireType.LengthDelimited).fork(), n).join(), e.guildOnboardingUpsellDismissedAt && L.Timestamp.internalBinaryWrite(e.guildOnboardingUpsellDismissedAt, t.tag(4, C.WireType.LengthDelimited).fork(), n).join(), e.safetyUserSentimentNoticeDismissedAt && L.Timestamp.internalBinaryWrite(e.safetyUserSentimentNoticeDismissedAt, t.tag(5, C.WireType.LengthDelimited).fork(), n).join(), "0" !== e.lastReceivedChangelogId && t.tag(6, C.WireType.Bit64).fixed64(e.lastReceivedChangelogId);
             let i = n.writeUnknownFields;
             return !1 !== i && (!0 == i ? C.UnknownFieldHandler.onWrite : i)(this.typeName, e, t), t
         }
@@ -751,6 +755,11 @@ function(e, t, n) {
                 name: "safety_user_sentiment_notice_dismissed_at",
                 kind: "message",
                 T: () => L.Timestamp
+            }, {
+                no: 6,
+                name: "last_received_changelog_id",
+                kind: "scalar",
+                T: 6
             }])
         }
     }

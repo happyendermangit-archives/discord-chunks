@@ -115,6 +115,9 @@ function(e, t, n) {
         InstallShortcutStartMenu: function() {
             return y
         },
+        LastReceivedChangelogId: function() {
+            return eU
+        },
         LegacyUsernameDisabled: function() {
             return ey
         },
@@ -604,5 +607,6 @@ function(e, t, n) {
         return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t
     }, e => s.BoolValue.create({
         value: e
-    }))
+    }));
+    let eU = (0, o.defineProtoSetting)("userContent", "lastReceivedChangelogId", e => null != e ? e : "0", e => e)
 }

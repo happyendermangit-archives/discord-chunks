@@ -5,127 +5,130 @@ function(e, t, n) {
         l = n("433517"),
         u = n("570140"),
         d = n("706454"),
-        _ = n("596401");
-    let c = {},
-        E = {},
-        I = null,
-        T = null,
+        _ = n("695346"),
+        c = n("581883"),
+        E = n("596401");
+    let I = {},
+        T = {},
         f = null,
-        S = "lastChangeLogId",
-        h = "lastChangeLogDate",
-        A = null,
+        S = null,
+        h = null,
+        A = "lastChangeLogDate",
         m = null,
-        N = new Set;
-    class p extends(i = o.default.Store) {
+        N = null,
+        p = new Set;
+
+    function O() {
+        m = _.LastReceivedChangelogId.getSetting()
+    }
+    class R extends(i = o.default.Store) {
         initialize() {
-            var e;
-            this.waitFor(d.default), this.syncWith([d.default], () => !0), A = null !== (e = l.Storage.get(S)) && void 0 !== e ? e : null;
-            let t = l.Storage.get(h);
-            if (null != t) try {
-                m = new Date(t)
+            this.waitFor(d.default, c.default), this.syncWith([d.default], () => !0), this.syncWith([c.default], O);
+            let e = l.Storage.get(A);
+            if (null != e) try {
+                N = new Date(e)
             } catch {
-                l.Storage.remove(h)
+                l.Storage.remove(A)
             }
         }
         getChangelog(e, t) {
             var n, i;
-            return null !== (i = null === (n = c[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== i ? i : null
+            return null !== (i = null === (n = I[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== i ? i : null
         }
         latestChangelogId() {
-            return I
+            return f
         }
         getChangelogLoadStatus(e, t) {
             var n, i;
-            return null !== (i = null === (n = E[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== i ? i : _.ChangelogLoadState.NOT_LOADED
+            return null !== (i = null === (n = T[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== i ? i : E.ChangelogLoadState.NOT_LOADED
         }
         hasLoadedConfig() {
-            return null != f
+            return null != h
         }
         getConfig() {
-            return f
+            return h
         }
         overrideId() {
-            return T
+            return S
         }
         lastSeenChangelogId() {
-            return A
+            return m
         }
         lastSeenChangelogDate() {
-            return m
+            return N
         }
         getStateForDebugging() {
             return {
-                changelogConfig: f,
-                loadedChangelogs: E,
-                lastSeenChangelogId: A,
-                lastSeenChangelogDate: m
+                changelogConfig: h,
+                loadedChangelogs: T,
+                lastSeenChangelogId: m,
+                lastSeenChangelogDate: N
             }
         }
         isLocked() {
-            return N.size > 0
+            return p.size > 0
         }
     }
-    a = "ChangelogStore", (s = "displayName") in(r = p) ? Object.defineProperty(r, s, {
+    a = "ChangelogStore", (s = "displayName") in(r = R) ? Object.defineProperty(r, s, {
         value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a, t.default = new p(u.default, {
+    }) : r[s] = a, t.default = new R(u.default, {
         CHANGE_LOG_LOCK: function(e) {
             let {
                 key: t
             } = e;
-            if (N.has(t)) return !1;
-            (N = new Set(N)).add(t)
+            if (p.has(t)) return !1;
+            (p = new Set(p)).add(t)
         },
         CHANGE_LOG_UNLOCK: function(e) {
             let {
                 key: t
             } = e;
-            if (!N.has(t)) return !1;
-            (N = new Set(N)).delete(t)
+            if (!p.has(t)) return !1;
+            (p = new Set(p)).delete(t)
         },
         CHANGE_LOG_SET_CONFIG: function(e) {
             let {
                 config: t,
                 latestChangelogId: n
             } = e;
-            I = n, f = t
+            f = n, h = t
         },
         CHANGE_LOG_FETCH_SUCCESS: function(e) {
             let {
                 id: t,
                 changelog: n
             } = e;
-            null == c[t] && (c[t] = {}), c[t][n.locale] = {
+            null == I[t] && (I[t] = {}), I[t][n.locale] = {
                 id: t,
                 date: n.date,
                 body: n.content,
                 revision: 1,
                 locale: n.locale,
-                [n.asset_type === _.AssetType.YOUTUBE_VIDEO_ID ? "youtube_video_id" : "image"]: n.asset
-            }, null == E[t] && (E[t] = {}), E[t][n.locale] = _.ChangelogLoadState.LOADED_SUCCESS
+                [n.asset_type === E.AssetType.YOUTUBE_VIDEO_ID ? "youtube_video_id" : "image"]: n.asset
+            }, null == T[t] && (T[t] = {}), T[t][n.locale] = E.ChangelogLoadState.LOADED_SUCCESS
         },
         CHANGE_LOG_FETCH_FAILED: function(e) {
             let {
                 id: t,
                 locale: n
             } = e;
-            if (null != c[t] && null != c[t][n]) return !1;
-            null == E[t] && (E[t] = {}), E[t][n] = _.ChangelogLoadState.LOADED_FAILURE
+            if (null != I[t] && null != I[t][n]) return !1;
+            null == T[t] && (T[t] = {}), T[t][n] = E.ChangelogLoadState.LOADED_FAILURE
         },
         CHANGE_LOG_SET_OVERRIDE: function(e) {
             let {
                 id: t
             } = e;
-            T = t
+            S = t
         },
         CHANGE_LOG_MARK_SEEN: function(e) {
             let {
-                changelogId: t,
-                changelogDate: n
+                changelogDate: t
             } = e;
-            A = null != t ? t : null, m = new Date(n), l.Storage.set(S, t), l.Storage.set(h, n)
+            N = new Date(t), l.Storage.set(A, t)
         }
     })
 }
