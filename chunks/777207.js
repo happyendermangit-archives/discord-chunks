@@ -33,6 +33,9 @@ function(e, t, n) {
                     lineClamp: c,
                     WebkitLineClamp: c
                 })), void 0 !== E) switch (E) {
+                case "currentColor":
+                    t = "currentColor";
+                    break;
                 case "none":
                     t = void 0;
                     break;

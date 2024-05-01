@@ -173,7 +173,7 @@ function(e, t, n) {
                 subtitle: S.default.Messages.CLAN_SETUP_PLAYSTYLE_VERY_HARDCORE_SUBTITLE
             }
         }
-    }(d = r || (r = {}))[d.INTRO_ANIMATION = 0] = "INTRO_ANIMATION", d[d.SETUP = 1] = "SETUP", d[d.SIGN = 2] = "SIGN", (_ = s || (s = {}))[_.FOUNDATIONAL_INTRO = 0] = "FOUNDATIONAL_INTRO", _[_.GAMES = 1] = "GAMES", _[_.PLAYSTYLE = 2] = "PLAYSTYLE", _[_.PERSONALITY_INTRO = 3] = "PERSONALITY_INTRO", _[_.UTILITY_TRAITS = 4] = "UTILITY_TRAITS", _[_.INTERESTS = 5] = "INTERESTS", _[_.DESCRIPTION = 6] = "DESCRIPTION", _[_.IDENTITY_INTRO = 7] = "IDENTITY_INTRO", _[_.CUSTOMIZE_TAG_BADGE = 8] = "CUSTOMIZE_TAG_BADGE", _[_.CUSTOMIZE_BANNER = 9] = "CUSTOMIZE_BANNER", _[_.APPLICATION_INTRO = 10] = "APPLICATION_INTRO", _[_.MEMBER_APPLICATION = 11] = "MEMBER_APPLICATION";
+    }(d = r || (r = {}))[d.INTRO_ANIMATION = 0] = "INTRO_ANIMATION", d[d.SETUP = 1] = "SETUP", d[d.SIGN = 2] = "SIGN", (_ = s || (s = {}))[_.GAMES = 0] = "GAMES", _[_.PLAYSTYLE = 1] = "PLAYSTYLE", _[_.UTILITY_TRAITS = 2] = "UTILITY_TRAITS", _[_.INTERESTS = 3] = "INTERESTS", _[_.DESCRIPTION = 4] = "DESCRIPTION", _[_.CUSTOMIZE_TAG_BADGE = 5] = "CUSTOMIZE_TAG_BADGE", _[_.CUSTOMIZE_BANNER = 6] = "CUSTOMIZE_BANNER", _[_.MEMBER_APPLICATION = 7] = "MEMBER_APPLICATION";
     let M = "700136079562375258",
         y = "762434991303950386",
         P = ["Server: NA", "Server: EU", "Server: LATAM", "Server: KR", "Server: AP", "Voice ON", "Voice OFF", "Unrated", "All Ranks", "Bronze+", "Silver+", "Gold+", "Platinum+", "Diamond+"],
