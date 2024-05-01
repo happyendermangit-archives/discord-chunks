@@ -8,8 +8,8 @@ function(e, t, n) {
             return C
         }
     });
-    var i, r, s = n("735250"),
-        a = n("470079"),
+    var i, r, a = n("735250"),
+        s = n("470079"),
         o = n("120356"),
         l = n.n(o),
         u = n("873546"),
@@ -32,7 +32,7 @@ function(e, t, n) {
         let {
             compact: t
         } = e;
-        return (0, s.jsx)(m.default, {
+        return (0, a.jsx)(m.default, {
             className: t ? O.botTagCompact : O.botTagCozy,
             type: m.default.Types.REMIX,
             useRemSizes: !0
@@ -55,7 +55,7 @@ function(e, t, n) {
                 renderRemixTag: y = !1,
                 decorations: P
             } = e,
-            U = a.useContext(f.default),
+            U = s.useContext(f.default),
             {
                 analyticsLocations: b
             } = (0, I.default)(E.default.USERNAME),
@@ -75,18 +75,18 @@ function(e, t, n) {
                 } : void 0,
                 onClick: L,
                 onContextMenu: v,
-                children: o ? (0, s.jsxs)(s.Fragment, {
-                    children: [G + w, (0, s.jsx)(T.default, {
+                children: o ? (0, a.jsxs)(a.Fragment, {
+                    children: [G + w, (0, a.jsx)(T.default, {
                         clan: n.clan,
                         userId: i.author.id,
                         className: O.clanTagChiplet,
                         source: p.AnalyticsSections.CHANNEL
                     })]
-                }) : (0, s.jsx)(s.Fragment, {
+                }) : (0, a.jsx)(a.Fragment, {
                     children: G + w
                 })
             };
-        t = null != M && null != C ? (0, s.jsx)(_.Popout, {
+        t = null != M && null != C ? (0, a.jsx)(_.Popout, {
             preload: V ? void 0 : function() {
                 let e = null != r ? r : i.author;
                 return (0, A.maybeFetchUserProfileForPopout)(e.id, null != n.guildMemberAvatar && null != U ? (0, N.getGuildMemberAvatarURLSimple)({
@@ -108,35 +108,35 @@ function(e, t, n) {
                     onClick: t,
                     ...n
                 } = e;
-                return (0, s.jsx)(_.Clickable, {
+                return (0, a.jsx)(_.Clickable, {
                     tag: "span",
                     ...n,
                     ...H,
                     className: l()(H.className, O.clickable, g)
                 })
             }
-        }) : (0, s.jsx)(_.Clickable, {
+        }) : (0, a.jsx)(_.Clickable, {
             ...H,
             className: l()(H.className, g)
         });
         let Y = null != P ? P[0] : null,
             j = null != P ? P[1] : null;
-        return (0, s.jsxs)(I.AnalyticsLocationProvider, {
+        return (0, a.jsxs)(I.AnalyticsLocationProvider, {
             value: b,
-            children: [null != Y && o ? (0, s.jsxs)(s.Fragment, {
+            children: [null != Y && o ? (0, a.jsxs)(a.Fragment, {
                 children: [" ", Y, " "]
-            }) : null, "dot" === x ? (0, s.jsx)(_.RoleDot, {
+            }) : null, "dot" === x ? (0, a.jsx)(_.RoleDot, {
                 color: B,
                 name: k,
                 className: O.roleDot
-            }) : null, t, !o && (0, s.jsx)(T.default, {
+            }) : null, t, !o && (0, a.jsx)(T.default, {
                 clan: n.clan,
                 userId: i.author.id,
                 className: O.clanTagChiplet,
                 source: p.AnalyticsSections.CHANNEL
-            }), null != j ? (0, s.jsx)(s.Fragment, {
+            }), null != j ? (0, a.jsx)(a.Fragment, {
                 children: j
-            }) : null, null == Y || o ? null : Y, null != i && (0, S.default)(i) && F && y ? (0, s.jsx)(R, {}) : null]
+            }) : null, null == Y || o ? null : Y, null != i && (0, S.default)(i) && F && y ? (0, a.jsx)(R, {}) : null]
         })
     }(i = r || (r = {}))[i.SYSTEM_TAG = 0] = "SYSTEM_TAG", i[i.BADGES = 1] = "BADGES"
 }

@@ -4,18 +4,18 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("952265"),
-        s = n("626135"),
-        a = n("863249"),
+        a = n("626135"),
+        s = n("863249"),
         o = n("266395"),
         l = n("592286"),
         u = n("981631");
     let d = () => {
-            s.default.track(u.AnalyticEvents.MODAL_DISMISSED, {
+            a.default.track(u.AnalyticEvents.MODAL_DISMISSED, {
                 type: l.MEMBER_VERIFICATION_TYPE
             })
         },
         _ = e => {
-            s.default.track(u.AnalyticEvents.OPEN_MODAL, {
+            a.default.track(u.AnalyticEvents.OPEN_MODAL, {
                 type: l.MEMBER_VERIFICATION_TYPE,
                 guild_id: e
             })
@@ -23,8 +23,8 @@ function(e, t, n) {
     t.default = {
         openMemberVerificationModal(e, t) {
             _(e);
-            let s = async t => {
-                await a.default.submitVerificationForm(e, t)
+            let a = async t => {
+                await s.default.submitVerificationForm(e, t)
             };
             (0, r.openModalLazy)(async () => {
                 let {
@@ -33,7 +33,7 @@ function(e, t, n) {
                 return n => (0, i.jsx)(t, {
                     ...n,
                     guildId: e,
-                    onComplete: s,
+                    onComplete: a,
                     onClose: function() {
                         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                         if (!e) {

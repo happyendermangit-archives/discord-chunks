@@ -7,18 +7,18 @@ function(e, t, n) {
     }), n("177593"), n("653041");
     var i = n("570140"),
         r = n("38618");
-    let s = [];
+    let a = [];
 
-    function a(e) {
+    function s(e) {
         setImmediate(() => e())
     }
 
     function o(e) {
-        r.default.isConnectedOrOverlay() ? a(e) : s.push(e)
+        r.default.isConnectedOrOverlay() ? s(e) : a.push(e)
     }
     i.default.subscribe("CONNECTION_OPEN", () => {
-        s.forEach(e => a(e)), s = []
+        a.forEach(e => s(e)), a = []
     }), i.default.subscribe("CONNECTION_RESUMED", () => {
-        s.forEach(e => a(e)), s = []
+        a.forEach(e => s(e)), a = []
     })
 }

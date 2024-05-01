@@ -5,7 +5,7 @@ function(e, t, n) {
             return v
         }
     }), n("653041"), n("47120");
-    var i, r, s, a, o = n("442837"),
+    var i, r, a, s, o = n("442837"),
         l = n("570140"),
         u = n("710845"),
         d = n("301766"),
@@ -118,21 +118,21 @@ function(e, t, n) {
             return p
         }
     }
-    a = "SubscriptionStore", (s = "displayName") in(r = M) ? Object.defineProperty(r, s, {
-        value: a,
+    s = "SubscriptionStore", (a = "displayName") in(r = M) ? Object.defineProperty(r, a, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a, t.default = new M(l.default, {
+    }) : r[a] = s, t.default = new M(l.default, {
         BILLING_SUBSCRIPTION_FETCH_SUCCESS: function(e) {
             let {
                 subscriptions: t
-            } = e, n = {}, i = {}, r = [], s = [], a = c.default.getId();
+            } = e, n = {}, i = {}, r = [], a = [], s = c.default.getId();
             t.forEach(e => {
-                if (e.user_id !== a && !N) {
+                if (e.user_id !== s && !N) {
                     R.log("[handleSubscriptionsFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch"), (0, E.captureBillingMessage)("[handleSubscriptionsFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch", {
                         extra: {
-                            authUserId: a,
+                            authUserId: s,
                             subscriptionId: e.id,
                             subscriptionUserId: e.user_id
                         }
@@ -140,8 +140,8 @@ function(e, t, n) {
                     return
                 }
                 let t = _.SubscriptionRecord.createFromServer(e);
-                n[t.id] = t, L(t) && (i[t.id] = t, t.type === I.SubscriptionTypes.GUILD && t.status !== I.SubscriptionStatusTypes.ENDED && r.push(t), t.type === I.SubscriptionTypes.APPLICATION && t.status !== I.SubscriptionStatusTypes.ENDED && s.push(t))
-            }), T = n, f = i, h = r, A = s
+                n[t.id] = t, L(t) && (i[t.id] = t, t.type === I.SubscriptionTypes.GUILD && t.status !== I.SubscriptionStatusTypes.ENDED && r.push(t), t.type === I.SubscriptionTypes.APPLICATION && t.status !== I.SubscriptionStatusTypes.ENDED && a.push(t))
+            }), T = n, f = i, h = r, A = a
         },
         BILLING_SUBSCRIPTION_UPDATE_SUCCESS: function(e) {
             let {

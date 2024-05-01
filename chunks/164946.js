@@ -11,7 +11,7 @@ function(e, t, n) {
         return void 0 !== e.pendingGlobalName && (t.globalName = e.pendingGlobalName), void 0 !== e.pendingAvatar && (t.avatar = e.pendingAvatar), void 0 !== e.pendingAvatarDecoration && (t.avatarDecoration = e.pendingAvatarDecoration), t
     }
 
-    function s(e) {
+    function a(e) {
         let t = {};
         if (void 0 !== e.pendingAvatar && (t.avatar = e.pendingAvatar), void 0 !== e.pendingNickname) {
             var n;
@@ -24,7 +24,7 @@ function(e, t, n) {
             return r
         },
         getGuildMemberChangesForUpdateRequest: function() {
-            return s
+            return a
         },
         getProfileChangesForUpdateRequest: function() {
             return i

@@ -11,8 +11,8 @@ function(e, t, n) {
             let i = 0,
                 r = e.length;
             for (; i < r;) {
-                let s = i + r >>> 1;
-                0 > n(e[s], t) ? i = s + 1 : r = s
+                let a = i + r >>> 1;
+                0 > n(e[a], t) ? i = a + 1 : r = a
             }
             return i
         }(e, t, n);

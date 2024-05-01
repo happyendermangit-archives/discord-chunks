@@ -14,15 +14,15 @@ function(e, t, n) {
             return l
         },
         TRANSITION_DURATION: function() {
-            return a
+            return s
         }
     });
-    var i, r, s = n("470079");
+    var i, r, a = n("470079");
     (i = r || (r = {}))[i.ENTERING = 0] = "ENTERING", i[i.ENTERED = 1] = "ENTERED", i[i.EXITING = 2] = "EXITING", i[i.EXITED = 3] = "EXITED", i[i.HIDDEN = 4] = "HIDDEN";
-    let a = 300,
+    let s = 300,
         o = "default",
         l = "popout",
-        u = s.createContext({
+        u = a.createContext({
             headerId: void 0,
             headerIdIsManaged: !1
         })

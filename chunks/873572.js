@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("442837"),
         r = n("270144"),
-        s = n("11176"),
-        a = n("171246"),
+        a = n("11176"),
+        s = n("171246"),
         o = n("621853"),
         l = n("981631");
 
@@ -32,9 +32,9 @@ function(e, t, n) {
             subscriptionGroupListing: I
         } = (0, r.useActiveSubscriptionListingForApplication)(null == d ? void 0 : d.id, u), {
             enabled: T
-        } = s.otpSkusExperiment.useExperiment({
+        } = a.otpSkusExperiment.useExperiment({
             location: "useBotApplicationSubscription"
-        }), f = null !== (t = null == I ? void 0 : I.sku_flags) && void 0 !== t ? t : 0, S = (0, a.isApplicationUserSubscription)(f) || null != u && u !== l.ME && (0, a.isApplicationGuildSubscription)(f) || T, h = null != E;
+        }), f = null !== (t = null == I ? void 0 : I.sku_flags) && void 0 !== t ? t : 0, S = (0, s.isApplicationUserSubscription)(f) || null != u && u !== l.ME && (0, s.isApplicationGuildSubscription)(f) || T, h = null != E;
         return _ ? {
             botUpgraded: h,
             botUpgradeable: !h && _ && S,

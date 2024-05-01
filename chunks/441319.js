@@ -13,8 +13,8 @@ function(e, t, n) {
     });
     var i = n("392711"),
         r = n.n(i),
-        s = n("105797"),
-        a = n("63725"),
+        a = n("105797"),
+        s = n("63725"),
         o = n("924997"),
         l = n("749834"),
         u = n("760260"),
@@ -37,7 +37,7 @@ function(e, t, n) {
     let g = 60,
         L = [{
             id: R.FreemiumAppIconIds.DEFAULT,
-            iconSource: a,
+            iconSource: s,
             name: C.default.Messages.APP_ICON_DEFAULT,
             isPremium: !1
         }].concat([{
@@ -122,7 +122,7 @@ function(e, t, n) {
             name: C.default.Messages.APP_ICON_BLUSH
         }, {
             id: R.PremiumAppIconIds.ANGRY,
-            iconSource: s,
+            iconSource: a,
             isPremium: !0,
             name: C.default.Messages.APP_ICON_ANGRY
         }, {

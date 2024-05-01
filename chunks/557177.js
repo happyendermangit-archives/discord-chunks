@@ -13,8 +13,8 @@ function(e, t, n) {
         }
     });
     var r = n("292619"),
-        s = n("474873"),
-        a = n("135906"),
+        a = n("474873"),
+        s = n("135906"),
         o = n("246946");
     {
         let e = (0, r.isEligibleForWebAudioAPI)({
@@ -27,7 +27,7 @@ function(e, t, n) {
     function l(e, t) {
         var n;
         let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-        return u(null !== (n = (0, a.default)(t)[e]) && void 0 !== n ? n : e, e, i)
+        return u(null !== (n = (0, s.default)(t)[e]) && void 0 !== n ? n : e, e, i)
     }
 
     function u(e, t) {
@@ -41,7 +41,7 @@ function(e, t, n) {
             i = arguments.length > 2 ? arguments[2] : void 0,
             r = arguments.length > 3 ? arguments[3] : void 0;
         if (o.default.disableSounds) return;
-        let l = u(null !== (t = (0, a.default)(null != r ? r : s.default.getSoundpack())[e]) && void 0 !== t ? t : e, e, n);
+        let l = u(null !== (t = (0, s.default)(null != r ? r : a.default.getSoundpack())[e]) && void 0 !== t ? t : e, e, n);
         return null != i ? l.playWithListener().then(e => {
             e && i()
         }) : l.play(), l

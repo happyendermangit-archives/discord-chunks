@@ -4,15 +4,15 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("481060"),
-        s = n("204197"),
-        a = n("998502"),
+        a = n("204197"),
+        s = n("998502"),
         o = n("689938");
-    let l = a.default.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
+    let l = s.default.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
     t.default = e => {
         let {
             user: t,
             guildId: n,
-            avatarDecorationOverride: a,
+            avatarDecorationOverride: s,
             status: u,
             avatarSize: d = r.AvatarSizes.SIZE_120,
             "aria-hidden": _ = !1,
@@ -22,12 +22,12 @@ function(e, t, n) {
             avatarDecorationSrc: I,
             avatarSrc: T,
             eventHandlers: f
-        } = (0, s.default)({
+        } = (0, a.default)({
             user: t,
             guildId: n,
             size: d,
             showPending: !0,
-            avatarDecorationOverride: a,
+            avatarDecorationOverride: s,
             animateOnHover: E
         });
         return (0, i.jsx)(l, {

@@ -2,12 +2,12 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return a
         }
     });
     var i = n("75060"),
         r = n("991240");
-    async function s() {
+    async function a() {
         let e = null;
         try {
             e = await i.default.getThermalState()

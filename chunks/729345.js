@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("544891"),
         r = n("552871"),
-        s = n("283080"),
-        a = n("592125"),
+        a = n("283080"),
+        s = n("592125"),
         o = n("569611"),
         l = n("710845"),
         u = n("705646"),
@@ -30,7 +30,7 @@ function(e, t, n) {
                 t = t.slice(t.length - Math.floor(t.length * e)), n = n.slice(n.length - Math.floor(n.length * e)), r = r.slice(r.length - Math.floor(r.length * e))
             }
             let E = null,
-                I = "\n    ".concat((0, _.default)(E), "\n\n    ").concat((0, s.serializeComponentRenderAverages)(), "\n\n    Metadata:\n    ").concat(JSON.stringify((0, d.default)(), void 0, 2), "\n\n    ChannelStore:\n    ").concat(JSON.stringify(a.default.getDebugInfo(), void 0, 2), "\n\n    Logs:\n    ").concat(t, "\n\n    System logs:\n    ").concat(n, "\n\n    Push Notifications:\n    ").concat(r, "\n    ");
+                I = "\n    ".concat((0, _.default)(E), "\n\n    ").concat((0, a.serializeComponentRenderAverages)(), "\n\n    Metadata:\n    ").concat(JSON.stringify((0, d.default)(), void 0, 2), "\n\n    ChannelStore:\n    ").concat(JSON.stringify(s.default.getDebugInfo(), void 0, 2), "\n\n    Logs:\n    ").concat(t, "\n\n    System logs:\n    ").concat(n, "\n\n    Push Notifications:\n    ").concat(r, "\n    ");
             o.clear();
             let T = c.Endpoints.DEBUG_LOG(e, "discord_app_logs");
             await i.HTTP.post({

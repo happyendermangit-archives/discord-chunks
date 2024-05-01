@@ -16,9 +16,9 @@ function(e, t, n) {
     }), n("47120"), n("757143"), n("865427");
     var i = n("830121"),
         r = n("454585"),
-        s = n("408433"),
-        a = n("981631");
-    let o = new Set([a.MessageEmbedTypes.IMAGE, a.MessageEmbedTypes.GIFV]),
+        a = n("408433"),
+        s = n("981631");
+    let o = new Set([s.MessageEmbedTypes.IMAGE, s.MessageEmbedTypes.GIFV]),
         l = new Set(["strong", "em", "u", "text", "inlineCode", "s", "spoiler"]);
 
     function u(e, t) {
@@ -67,14 +67,14 @@ function(e, t, n) {
         return function(e, t, n) {
             let {
                 toAST: r = !1,
-                hideSimpleEmbedContent: a = !0,
+                hideSimpleEmbedContent: s = !0,
                 formatInline: d = !1,
                 postProcessor: _
-            } = n, c = !1, T = e(t.content, !0, u(t, n), (e, n) => (!Array.isArray(e) && (e = [e]), a && (e = function(e, t) {
+            } = n, c = !1, T = e(t.content, !0, u(t, n), (e, n) => (!Array.isArray(e) && (e = [e]), s && (e = function(e, t) {
                 if (1 !== e.length || 1 !== t.length) return e;
                 let n = e[0],
                     i = t[0];
-                return ("link" === n.type || "attachmentLink" === n.type) && o.has(i.type) && (0, s.isEmbedInline)(i) ? [] : e
+                return ("link" === n.type || "attachmentLink" === n.type) && o.has(i.type) && (0, a.isEmbedInline)(i) ? [] : e
             }(e, t.embeds)), !d && (e = function(e, t) {
                 return t ? E(e) : ("paragraph" === e[0].type && e[0].content instanceof Array && (e[0].content = E(e[0].content)), e)
             }(e, n)), c = function(e, t) {

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     let i;
     n.r(t);
-    var r, s, a, o, l = n("392711"),
+    var r, a, s, o, l = n("392711"),
         u = n.n(l),
         d = n("442837"),
         _ = n("433517"),
@@ -34,12 +34,12 @@ function(e, t, n) {
             return S
         }
     }
-    a = "GameLibraryViewStore", (s = "displayName") in(r = A) ? Object.defineProperty(r, s, {
-        value: a,
+    s = "GameLibraryViewStore", (a = "displayName") in(r = A) ? Object.defineProperty(r, a, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a;
+    }) : r[a] = s;
     let m = new A(c.default, {
         LIBRARY_TABLE_SORT_UPDATE: function(e) {
             let {

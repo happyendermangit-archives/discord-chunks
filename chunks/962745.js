@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("442837"),
-        a = n("209185"),
+        a = n("442837"),
+        s = n("209185"),
         o = n("706454"),
         l = n("229588"),
         u = n("586576"),
@@ -15,13 +15,13 @@ function(e, t, n) {
         let {
             locale: t,
             children: n
-        } = e, [r, a] = (0, s.useStateFromStoresArray)([l.default], () => [l.default.isLoading(), l.default.getError()]);
-        return null != a ? (0, i.jsx)(u.default, {
+        } = e, [r, s] = (0, a.useStateFromStoresArray)([l.default], () => [l.default.isLoading(), l.default.getError()]);
+        return null != s ? (0, i.jsx)(u.default, {
             title: d.default.Messages.I18N_LOCALE_LOADING_ERROR.format({
                 locale: t
             }),
             note: (0, i.jsx)("span", {
-                children: a.message
+                children: s.message
             })
         }) : r ? __OVERLAY__ ? null : (0, i.jsx)("div", {
             className: _.loading
@@ -39,10 +39,10 @@ function(e, t, n) {
             })
         }
         constructor(e) {
-            super(e), a.updateLocaleLoadingStatus(e.locale, !0)
+            super(e), s.updateLocaleLoadingStatus(e.locale, !0)
         }
     }
-    t.default = s.default.connectStores([o.default], () => ({
+    t.default = a.default.connectStores([o.default], () => ({
         locale: o.default.locale
     }))(E)
 }

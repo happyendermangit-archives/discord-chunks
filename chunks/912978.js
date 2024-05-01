@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("653041"), n("411104"), n("47120");
     var i = n("836560"),
         r = n("264344"),
-        s = n.n(r),
-        a = n("649318");
+        a = n.n(r),
+        s = n("649318");
 
     function o(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
@@ -52,7 +52,7 @@ function(e, t, n) {
             return this._sdp
         }
         set sdp(e) {
-            if (!(0, a.validateSdp)(e)) throw Error("Incorrect SDP received from rtc-worker: ".concat(e));
+            if (!(0, s.validateSdp)(e)) throw Error("Incorrect SDP received from rtc-worker: ".concat(e));
             this._sdp = e, this.createAnswer(), this.connected = !0, this._negotiationNeeded && this.negotiationNeeded()
         }
         negotiationNeeded() {
@@ -74,17 +74,17 @@ function(e, t, n) {
                     cname: n,
                     ssrc: i,
                     type: r
-                } = e, s = this.activeAudioSSRCs[n], o = this.activeVideoSSRCs[n], l = "".concat(r, "_inbound_").concat(t);
-                return [i, n, r, s === i || o === i ? this.direction : a.Directions.INACTIVE, l]
+                } = e, a = this.activeAudioSSRCs[n], o = this.activeVideoSSRCs[n], l = "".concat(r, "_inbound_").concat(t);
+                return [i, n, r, a === i || o === i ? this.direction : s.Directions.INACTIVE, l]
             });
-            if ("Firefox" !== s().name) return this.connected ? t : [];
-            let n = this.outboundStreams.map((e, t) => [0, "outbound", e.type, (0, a.getDirection)(e.direction), "".concat(e.type, "_outbound_").concat(t)]);
+            if ("Firefox" !== a().name) return this.connected ? t : [];
+            let n = this.outboundStreams.map((e, t) => [0, "outbound", e.type, (0, s.getDirection)(e.direction), "".concat(e.type, "_outbound_").concat(t)]);
             if ("answer" !== e) return n.concat(t);
             {
                 let e = n.length - t.length;
                 return n.slice(0, e).concat(t).slice(0, n.length).map((e, t) => {
-                    let [n, i, r, s, o] = e;
-                    return [n, i, r, (0, a.getDirection)(this.outboundStreams[t].direction), this.outboundStreams[t].mid]
+                    let [n, i, r, a, o] = e;
+                    return [n, i, r, (0, s.getDirection)(this.outboundStreams[t].direction), this.outboundStreams[t].mid]
                 })
             }
         }
@@ -93,10 +93,10 @@ function(e, t, n) {
                 n = this.audioPayloadType,
                 i = this.videoCodec,
                 r = this.videoPayloadType,
-                s = this.rtxPayloadType,
+                a = this.rtxPayloadType,
                 o = this.sdp;
-            if (null == t || null == n || null == i || null == r || null == s || null == o || null == this.direction) throw Error("Invalid payload: audioCodec: ".concat(t, ", audioPayloadType: ").concat(null == n ? "null" : n, ", videoCodec: ").concat(i, ", videoCodecPayloadType: ").concat(null == r ? "null" : r, ", rtxPayloadType: ").concat(null == s ? "null" : s, ", sdp: ").concat(o));
-            let l = (0, a.generateSessionDescription)({
+            if (null == t || null == n || null == i || null == r || null == a || null == o || null == this.direction) throw Error("Invalid payload: audioCodec: ".concat(t, ", audioPayloadType: ").concat(null == n ? "null" : n, ", videoCodec: ").concat(i, ", videoCodecPayloadType: ").concat(null == r ? "null" : r, ", rtxPayloadType: ").concat(null == a ? "null" : a, ", sdp: ").concat(o));
+            let l = (0, s.generateSessionDescription)({
                 type: e,
                 baseSDP: o,
                 direction: this.direction,
@@ -106,7 +106,7 @@ function(e, t, n) {
                 videoCodec: i,
                 videoPayloadType: r,
                 videoBitRate: 2500,
-                rtxPayloadType: s,
+                rtxPayloadType: a,
                 ssrcs: this.getSSRCs(e),
                 extensions: this.extensions
             });

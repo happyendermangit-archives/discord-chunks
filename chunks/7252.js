@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t);
-    var i, r, s, a, o = n("442837"),
+    var i, r, a, s, o = n("442837"),
         l = n("570140");
     let u = {
             premiumLikelihood: void 0,
@@ -9,7 +9,7 @@ function(e, t, n) {
             fetched: !1
         },
         d = u;
-    class _ extends(a = o.default.Store) {
+    class _ extends(s = o.default.Store) {
         initialize() {
             d = u
         }
@@ -20,12 +20,12 @@ function(e, t, n) {
             return !d.isFetching && !d.fetched
         }
     }
-    s = "UserPremiumLikelihoodStore", (r = "displayName") in(i = _) ? Object.defineProperty(i, r, {
-        value: s,
+    a = "UserPremiumLikelihoodStore", (r = "displayName") in(i = _) ? Object.defineProperty(i, r, {
+        value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : i[r] = s, t.default = new _(l.default, {
+    }) : i[r] = a, t.default = new _(l.default, {
         BILLING_USER_PREMIUM_LIKELIHOOD_FETCH: function() {
             d.isFetching = !0
         },

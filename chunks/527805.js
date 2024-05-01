@@ -11,8 +11,8 @@ function(e, t, n) {
             return f
         }
     });
-    var i, r, s = n("442837"),
-        a = n("592125"),
+    var i, r, a = n("442837"),
+        s = n("592125"),
         o = n("430824"),
         l = n("496675"),
         u = n("594174"),
@@ -26,8 +26,8 @@ function(e, t, n) {
         var t, n, i;
         let {
             userId: r,
-            activity: s,
-            application: a,
+            activity: a,
+            application: s,
             channelId: o,
             currentUser: l,
             isActivitiesEnabledForCurrentPlatform: u,
@@ -37,10 +37,10 @@ function(e, t, n) {
             GuildStore: f
         } = e;
         if (null == r) return 8;
-        if ((null == l ? void 0 : l.nsfwAllowed) === !1 && (null == a ? void 0 : null === (t = a.embeddedActivityConfig) || void 0 === t ? void 0 : t.requires_age_gate) === !0) return 7;
+        if ((null == l ? void 0 : l.nsfwAllowed) === !1 && (null == s ? void 0 : null === (t = s.embeddedActivityConfig) || void 0 === t ? void 0 : t.requires_age_gate) === !0) return 7;
         if (!u) return 5;
-        if (!(0, E.default)(null == a ? void 0 : null === (n = a.embeddedActivityConfig) || void 0 === n ? void 0 : n.supported_platforms)) return 6;
-        let S = null != o ? o : null === (i = c.getVoiceStateForSession(r, null == s ? void 0 : s.session_id)) || void 0 === i ? void 0 : i.channelId;
+        if (!(0, E.default)(null == s ? void 0 : null === (n = s.embeddedActivityConfig) || void 0 === n ? void 0 : n.supported_platforms)) return 6;
+        let S = null != o ? o : null === (i = c.getVoiceStateForSession(r, null == a ? void 0 : a.session_id)) || void 0 === i ? void 0 : i.channelId;
         if (null == S) return 4;
         let h = d.getChannel(o);
         if (null == h) return 4;
@@ -67,15 +67,15 @@ function(e, t, n) {
             activity: n,
             channelId: i,
             application: r
-        } = e, _ = (0, c.useIsActivitiesEnabledForCurrentPlatform)(null != i ? i : void 0), E = (0, s.useStateFromStores)([u.default], () => u.default.getCurrentUser());
-        return (0, s.useStateFromStores)([a.default, d.default, l.default, o.default], () => T({
+        } = e, _ = (0, c.useIsActivitiesEnabledForCurrentPlatform)(null != i ? i : void 0), E = (0, a.useStateFromStores)([u.default], () => u.default.getCurrentUser());
+        return (0, a.useStateFromStores)([s.default, d.default, l.default, o.default], () => T({
             userId: t,
             activity: n,
             application: r,
             channelId: i,
             currentUser: E,
             isActivitiesEnabledForCurrentPlatform: _,
-            ChannelStore: a.default,
+            ChannelStore: s.default,
             VoiceStateStore: d.default,
             PermissionStore: l.default,
             GuildStore: o.default

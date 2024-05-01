@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("570140"),
         r = n("147913"),
-        s = n("650774"),
-        a = n("709054"),
+        a = n("650774"),
+        s = n("709054"),
         o = n("893966");
     let l = {},
         u = {},
@@ -30,7 +30,7 @@ function(e, t, n) {
         if (null == t) return !1;
         let n = t.size >= function(e) {
                 var t;
-                let n = null !== (t = s.default.getMemberCount(e)) && void 0 !== t ? t : 0;
+                let n = null !== (t = a.default.getMemberCount(e)) && void 0 !== t ? t : 0;
                 return n >= 75e3 ? 10 : 2
             }(e),
             i = u[e];
@@ -39,7 +39,7 @@ function(e, t, n) {
         let r = Date.now() - i;
         return null != i && r >= function(e) {
             var t;
-            let n = null !== (t = s.default.getMemberCount(e)) && void 0 !== t ? t : 0;
+            let n = null !== (t = a.default.getMemberCount(e)) && void 0 !== t ? t : 0;
             return n >= 75e3 ? 5e3 : 2e3
         }(e)
     }
@@ -50,7 +50,7 @@ function(e, t, n) {
     class T extends r.default {
         handleInitialize() {
             null == d && null == d && (d = setInterval(() => {
-                a.default.forEachKey(l, e => {
+                s.default.forEachKey(l, e => {
                     E(e) && c(e)
                 })
             }, 1e4))

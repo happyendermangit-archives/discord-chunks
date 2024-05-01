@@ -5,8 +5,8 @@ function(e, t, n) {
             return l
         }
     }), n("47120");
-    var i, r, s = n("470079"),
-        a = n("981631");
+    var i, r, a = n("470079"),
+        s = n("981631");
 
     function o(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
@@ -16,7 +16,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }(r = i || (i = {})).ARROW_UP = "ARROW_UP", r.ARROW_DOWN = "ARROW_DOWN", r.ARROW_LEFT = "ARROW_LEFT", r.ARROW_RIGHT = "ARROW_RIGHT";
-    class l extends s.Component {
+    class l extends a.Component {
         componentDidMount() {
             document.addEventListener("keydown", this.handleKeyDown, !0)
         }
@@ -32,45 +32,45 @@ function(e, t, n) {
                 focusedRow: r
             } = this.state;
             if (null == e) return;
-            let s = t();
-            if (null == s) return;
-            let a = this.getNext(s, i, r, e);
+            let a = t();
+            if (null == a) return;
+            let s = this.getNext(a, i, r, e);
             this.setState({
-                focusedColumn: a.column,
-                focusedRow: a.row
+                focusedColumn: s.column,
+                focusedRow: s.row
             }, () => {
                 let e = this.calculateFocusedItem();
                 null != e && null != n && n(e)
             })
         }
         getNext(e, t, n, i) {
-            let r, s, a, o;
-            if (null == t || null == n) s = 0, a = 0, r = {
+            let r, a, s, o;
+            if (null == t || null == n) a = 0, s = 0, r = {
                 column: 0,
                 row: 0
             };
-            else switch (s = t, a = n, i) {
+            else switch (a = t, s = n, i) {
                 case "ARROW_UP":
                     r = {
-                        column: s,
-                        row: Math.max(a - 1, 0)
+                        column: a,
+                        row: Math.max(s - 1, 0)
                     };
                     break;
                 case "ARROW_DOWN":
                     r = {
-                        column: s,
-                        row: Math.min(a + 1, e[s].length - 1)
+                        column: a,
+                        row: Math.min(s + 1, e[a].length - 1)
                     };
                     break;
                 case "ARROW_LEFT":
-                    r = this.wrapPosition(e, s, a, -1);
+                    r = this.wrapPosition(e, a, s, -1);
                     break;
                 case "ARROW_RIGHT":
-                    r = this.wrapPosition(e, s, a, 1)
+                    r = this.wrapPosition(e, a, s, 1)
             }
             return null != r && (o = e[r.column][r.row]), (null == o || null == r) && (o = e[(r = {
-                column: s,
-                row: a
+                column: a,
+                row: s
             }).column][r.row]), {
                 column: r.column,
                 row: r.row,
@@ -83,10 +83,10 @@ function(e, t, n) {
             if (null == i) return;
             let r = Number.MAX_SAFE_INTEGER;
             for (let e = 0; e < t.length; e++) {
-                let s = this.props.getCoordsMap()[t[e]];
-                if (null == s) continue;
-                let a = Math.abs(s.top - i.top);
-                if (a < r) r = a, n = e;
+                let a = this.props.getCoordsMap()[t[e]];
+                if (null == a) continue;
+                let s = Math.abs(a.top - i.top);
+                if (s < r) r = s, n = e;
                 else break
             }
             return n
@@ -112,37 +112,37 @@ function(e, t, n) {
                     onSelect: t
                 } = this.props;
                 switch (e.keyCode) {
-                    case a.KeyboardKeys.ARROW_DOWN:
-                    case a.KeyboardKeys.ARROW_UP:
-                    case a.KeyboardKeys.ARROW_LEFT:
-                    case a.KeyboardKeys.ARROW_RIGHT:
+                    case s.KeyboardKeys.ARROW_DOWN:
+                    case s.KeyboardKeys.ARROW_UP:
+                    case s.KeyboardKeys.ARROW_LEFT:
+                    case s.KeyboardKeys.ARROW_RIGHT:
                         this.focusNext(function(e) {
                             switch (e) {
-                                case a.KeyboardKeys.ARROW_DOWN:
+                                case s.KeyboardKeys.ARROW_DOWN:
                                     return "ARROW_DOWN";
-                                case a.KeyboardKeys.ARROW_UP:
+                                case s.KeyboardKeys.ARROW_UP:
                                     return "ARROW_UP";
-                                case a.KeyboardKeys.ARROW_LEFT:
+                                case s.KeyboardKeys.ARROW_LEFT:
                                     return "ARROW_LEFT";
-                                case a.KeyboardKeys.ARROW_RIGHT:
+                                case s.KeyboardKeys.ARROW_RIGHT:
                                     return "ARROW_RIGHT";
                                 default:
                                     return null
                             }
                         }(e.keyCode));
                         break;
-                    case a.KeyboardKeys.ENTER:
+                    case s.KeyboardKeys.ENTER:
                         let n = this.calculateFocusedItem();
                         null != n && null != t && (e.preventDefault(), e.stopPropagation(), t(n))
                 }
             }), o(this, "wrapPosition", (e, t, n, i) => {
                 var r;
-                let s = e.length,
-                    a = Math.max(n * s + t + i, 0) % s,
-                    o = null !== (r = this.calculateClosest(e[t][n], e[a])) && void 0 !== r ? r : n,
+                let a = e.length,
+                    s = Math.max(n * a + t + i, 0) % a,
+                    o = null !== (r = this.calculateClosest(e[t][n], e[s])) && void 0 !== r ? r : n,
                     l = 0;
-                return i < 0 && a > t && (l = -1), i > 0 && a < t && (l = 1), {
-                    column: a,
+                return i < 0 && s > t && (l = -1), i > 0 && s < t && (l = 1), {
+                    column: s,
                     row: o + l
                 }
             })

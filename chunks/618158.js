@@ -5,23 +5,23 @@ function(e, t, n) {
             return o
         },
         usePreventIdle: function() {
-            return a
+            return s
         }
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("937995");
+        a = n("937995");
 
-    function a(e) {
+    function s(e) {
         let {
             onPreventIdle: t,
             onAllowIdle: n,
             onActive: i
-        } = r.useContext(s.IdleHandlerContext), a = r.useCallback(() => {
+        } = r.useContext(a.IdleHandlerContext), s = r.useCallback(() => {
             t(e)
         }, [e, t]);
         return {
-            preventIdle: a,
+            preventIdle: s,
             allowIdle: r.useCallback(() => {
                 n(e)
             }, [e, n]),
@@ -36,10 +36,10 @@ function(e, t, n) {
         } = e, {
             onForceIdle: o,
             onActive: l
-        } = r.useContext(s.IdleHandlerContext), {
+        } = r.useContext(a.IdleHandlerContext), {
             preventIdle: u,
             allowIdle: d
-        } = a("interact");
+        } = s("interact");
         r.useEffect(() => () => d(), [d]);
         let _ = r.useCallback(e => {
             var t;

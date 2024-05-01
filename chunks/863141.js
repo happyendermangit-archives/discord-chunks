@@ -7,8 +7,8 @@ function(e, t, n) {
             username: n,
             discriminator: i,
             globalName: r,
-            avatar: s,
-            avatarDecoration: a,
+            avatar: a,
+            avatarDecoration: s,
             bot: o,
             flags: l,
             premiumType: u
@@ -18,10 +18,10 @@ function(e, t, n) {
             username: n,
             discriminator: i,
             global_name: r,
-            avatar: s,
-            avatar_decoration_data: null != a ? {
-                asset: a.asset,
-                sku_id: a.skuId
+            avatar: a,
+            avatar_decoration_data: null != s ? {
+                asset: s.asset,
+                sku_id: s.skuId
             } : null,
             bot: o,
             flags: l,

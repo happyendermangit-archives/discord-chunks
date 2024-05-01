@@ -10,18 +10,18 @@ function(e, t, n) {
     }), n("724458");
     var i = n("392711"),
         r = n.n(i),
-        s = n("131704"),
-        a = n("592125"),
+        a = n("131704"),
+        s = n("592125"),
         o = n("580005"),
         l = n("650774"),
         u = n("70956"),
         d = n("789662");
 
     function _(e, t, n, i, r) {
-        var s, o, u, _;
-        let E = a.default.getMutableGuildChannelsForGuild(e.id),
+        var a, o, u, _;
+        let E = s.default.getMutableGuildChannelsForGuild(e.id),
             I = i.filter(e => e.channel_id in E),
-            T = null !== (s = n.filter(t => t.guild_id === e.id)[0]) && void 0 !== s ? s : {},
+            T = null !== (a = n.filter(t => t.guild_id === e.id)[0]) && void 0 !== a ? a : {},
             f = l.default.getMemberCount(e.id),
             S = c("year", i, I, e => {
                 var t;
@@ -56,15 +56,15 @@ function(e, t, n) {
     }
 
     function c(e, t, n, i) {
-        let s = t.reduce((e, t) => e + i(t), 0),
-            a = n.reduce((e, t) => e + i(t), 0),
+        let a = t.reduce((e, t) => e + i(t), 0),
+            s = n.reduce((e, t) => e + i(t), 0),
             o = r().sortBy(n, i).reverse()[0],
             l = null == o ? 0 : i(o),
-            u = (l / a * 100).toFixed(1);
+            u = (l / s * 100).toFixed(1);
         return {
             label: e,
-            totalOpensAcrossAllServers: s,
-            guildOpens: a,
+            totalOpensAcrossAllServers: a,
+            guildOpens: s,
             biggestChannel: l,
             biggestChannelFormatted: u
         }
@@ -73,9 +73,9 @@ function(e, t, n) {
     function E(e, t) {
         var n, i;
         let r = null !== (n = t.filter(t => t.guild_id === e.id)[0]) && void 0 !== n ? n : {},
-            a = null !== (i = l.default.getMemberCount(e.id)) && void 0 !== i ? i : 0,
+            s = null !== (i = l.default.getMemberCount(e.id)) && void 0 !== i ? i : 0,
             _ = Date.now() - u.default.Millis.DAYS_30,
-            c = o.default.getFrequentlyWithoutFetchingLatest().filter(t => t instanceof s.ChannelRecordBase && t.guild_id === e.id),
+            c = o.default.getFrequentlyWithoutFetchingLatest().filter(t => t instanceof a.ChannelRecordBase && t.guild_id === e.id),
             E = c.filter(e => {
                 var t, n;
                 let i = null !== (n = null === (t = o.default.frecencyWithoutFetchingLatest.usageHistory[e.id]) || void 0 === t ? void 0 : t.recentUses) && void 0 !== n ? n : [];
@@ -87,6 +87,6 @@ function(e, t, n) {
                 return e + (null !== (i = null === (n = o.default.frecencyWithoutFetchingLatest.usageHistory[t.id]) || void 0 === n ? void 0 : n.totalUses) && void 0 !== i ? i : 0)
             }, 0),
             f = "\n- **Local**:\n    - Guild Visits: ".concat(T, "\n    - Channels: ").concat(c.length, "\n    - Recent Channels: ").concat(E.length, "\n");
-        return r.messages === d.PainLevel.High || a > 1e3 ? [d.Mode.UseGreyDot, I, "SuggestGreyDot" + f] : [d.Mode.KeepAsIs, I, "KeepAsIs" + f]
+        return r.messages === d.PainLevel.High || s > 1e3 ? [d.Mode.UseGreyDot, I, "SuggestGreyDot" + f] : [d.Mode.KeepAsIs, I, "KeepAsIs" + f]
     }
 }

@@ -94,9 +94,9 @@ function(e, t, n) {
     }), n("627341"), n("47120"), n("411104");
     var i = n("278074"),
         r = n("551910"),
-        s = n("887003");
+        a = n("887003");
     n("597688");
-    var a = n("630388"),
+    var s = n("630388"),
         o = n("960048"),
         l = n("687744"),
         u = n("497505"),
@@ -266,7 +266,7 @@ function(e, t, n) {
                 if ((null == e ? void 0 : e.quest_rewards) == null) return null;
                 let t = e.quest_rewards;
                 switch (t.reward.tag) {
-                    case s.QuestRewardTypes.IN_GAME:
+                    case a.QuestRewardTypes.IN_GAME:
                         return {
                             questRewards: {
                                 reward: {
@@ -274,7 +274,7 @@ function(e, t, n) {
                                 }
                             }
                         };
-                    case s.QuestRewardTypes.REWARD_CODE:
+                    case a.QuestRewardTypes.REWARD_CODE:
                         return {
                             questRewards: {
                                 reward: {
@@ -372,11 +372,11 @@ function(e, t, n) {
     function b(e, t) {
         if (!U(t)) return !1;
         let n = u.QuestContent[t];
-        return (0, a.hasFlag)(e.dismissedQuestContent, d.DismissibleQuestContentFlags[n])
+        return (0, s.hasFlag)(e.dismissedQuestContent, d.DismissibleQuestContentFlags[n])
     }
 
     function G(e) {
-        return e.tag === s.QuestRewardTypes.COLLECTIBLE
+        return e.tag === a.QuestRewardTypes.COLLECTIBLE
     }
 
     function w(e) {
@@ -414,8 +414,8 @@ function(e, t, n) {
         H = /^data:video\/([a-zA-Z0-9]+)\;/;
 
     function Y(e) {
-        var t, n, i, r, s;
-        switch (null !== (s = null === (n = F.exec(e)) || void 0 === n ? void 0 : null === (t = n[1]) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== s ? s : null === (r = H.exec(e)) || void 0 === r ? void 0 : null === (i = r[1]) || void 0 === i ? void 0 : i.toLowerCase()) {
+        var t, n, i, r, a;
+        switch (null !== (a = null === (n = F.exec(e)) || void 0 === n ? void 0 : null === (t = n[1]) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== a ? a : null === (r = H.exec(e)) || void 0 === r ? void 0 : null === (i = r[1]) || void 0 === i ? void 0 : i.toLowerCase()) {
             case "webm":
                 return "video/webm";
             case "mp4":
@@ -429,7 +429,7 @@ function(e, t, n) {
         let {
             quest: t
         } = e, n = t.config.rewardsConfig;
-        return n.assignmentMethod === r.QuestRewardAssignmentMethods.TIERED && n.rewards.length > 0 && n.rewards.every(e => e.tag === s.QuestRewardTypes.REWARD_CODE)
+        return n.assignmentMethod === r.QuestRewardAssignmentMethods.TIERED && n.rewards.length > 0 && n.rewards.every(e => e.tag === a.QuestRewardTypes.REWARD_CODE)
     }
 
     function W(e) {
@@ -440,7 +440,7 @@ function(e, t, n) {
         if (null == n) return null;
         let i = t.config.rewardsConfig.rewards[n];
         if (null == i);
-        else if (i.tag === s.QuestRewardTypes.REWARD_CODE) return i;
+        else if (i.tag === a.QuestRewardTypes.REWARD_CODE) return i;
         return null
     }
 

@@ -2,8 +2,8 @@ function(e, t, n) {
     "use strict";
     n.r(t), n("724458");
     var i, r = n("180650"),
-        s = n("979554"),
-        a = n("442837"),
+        a = n("979554"),
+        s = n("442837"),
         o = n("570140"),
         l = n("597688");
 
@@ -20,24 +20,24 @@ function(e, t, n) {
         c = () => ({
             categoryItemViews: {
                 [r.CollectiblesCategorySkuId.FANTASY]: {
-                    [s.CollectiblesItemType.AVATAR_DECORATION]: d,
-                    [s.CollectiblesItemType.PROFILE_EFFECT]: _
+                    [a.CollectiblesItemType.AVATAR_DECORATION]: d,
+                    [a.CollectiblesItemType.PROFILE_EFFECT]: _
                 },
                 [r.CollectiblesCategorySkuId.ANIME]: {
-                    [s.CollectiblesItemType.AVATAR_DECORATION]: d,
-                    [s.CollectiblesItemType.PROFILE_EFFECT]: _
+                    [a.CollectiblesItemType.AVATAR_DECORATION]: d,
+                    [a.CollectiblesItemType.PROFILE_EFFECT]: _
                 },
                 [r.CollectiblesCategorySkuId.BREAKFAST]: {
-                    [s.CollectiblesItemType.AVATAR_DECORATION]: d,
-                    [s.CollectiblesItemType.PROFILE_EFFECT]: _
+                    [a.CollectiblesItemType.AVATAR_DECORATION]: d,
+                    [a.CollectiblesItemType.PROFILE_EFFECT]: _
                 },
                 [r.CollectiblesCategorySkuId.DISXCORE]: {
-                    [s.CollectiblesItemType.AVATAR_DECORATION]: d
+                    [a.CollectiblesItemType.AVATAR_DECORATION]: d
                 }
             }
         }),
         E = c();
-    class I extends(i = a.default.PersistedStore) {
+    class I extends(i = s.default.PersistedStore) {
         initialize(e) {
             null != e && (E = e)
         }
@@ -62,11 +62,11 @@ function(e, t, n) {
             return t.reduce((e, t) => {
                 let {
                     skuId: r
-                } = t, s = n.reduce((e, t) => {
+                } = t, a = n.reduce((e, t) => {
                     var n;
                     return (null === (n = E.categoryItemViews[r]) || void 0 === n ? void 0 : n[t]) != null ? e : (null == E.categoryItemViews[r] && (E.categoryItemViews[r] = {}), E.categoryItemViews[r][t] = i, !0)
                 }, !1);
-                return e || s
+                return e || a
             }, !1)
         }
     })

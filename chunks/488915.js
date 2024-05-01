@@ -5,7 +5,7 @@ function(e, t, n) {
             return i
         }
     }), n("47120");
-    var i, r, s, a, o, l, u = n("512722"),
+    var i, r, a, s, o, l, u = n("512722"),
         d = n.n(u),
         _ = n("442837"),
         c = n("759174"),
@@ -31,7 +31,7 @@ function(e, t, n) {
 
     function m(e, t) {
         return "entitlement:".concat(t, ":").concat(e)
-    }(s = i || (i = {}))[s.NOT_FETCHED = 0] = "NOT_FETCHED", s[s.FETCHING = 1] = "FETCHING", s[s.FETCHED = 2] = "FETCHED";
+    }(a = i || (i = {}))[a.NOT_FETCHED = 0] = "NOT_FETCHED", a[a.FETCHING = 1] = "FETCHING", a[a.FETCHED = 2] = "FETCHED";
     let N = new c.SecondaryIndexMap(e => [S(e.application_id), ...e.subscription_listings_ids.map(f)], e => e.id),
         p = new c.SecondaryIndexMap(e => [S(e.application_id), h(e.subscription_plans[0].id)], e => e.id),
         O = new c.SecondaryIndexMap(e => [A(e.applicationId, e.isValid(null, T.default), e.guildId), m(e.isValid(null, T.default), e.guildId)], e => e.id),
@@ -87,12 +87,12 @@ function(e, t, n) {
             return O.values(m(t, e))
         }
     }
-    l = "ApplicationSubscriptionStore", (o = "displayName") in(a = v) ? Object.defineProperty(a, o, {
+    l = "ApplicationSubscriptionStore", (o = "displayName") in(s = v) ? Object.defineProperty(s, o, {
         value: l,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : a[o] = l, t.default = new v(E.default, {
+    }) : s[o] = l, t.default = new v(E.default, {
         LOGOUT: function() {
             N.clear(), p.clear(), O.clear(), R = {}, C = {}
         },

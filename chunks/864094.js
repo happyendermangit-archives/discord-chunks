@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("709014");
-    let a = {
+        a = n("709014");
+    let s = {
             enable: {
                 name: "enable",
                 start: 0,
@@ -53,12 +53,12 @@ function(e, t, n) {
                     onMouseLeave: d
                 },
                 play: l,
-                Component: r.useCallback(e => (0, i.jsx)(s.LottieIcon, {
+                Component: r.useCallback(e => (0, i.jsx)(a.LottieIcon, {
                     ...e,
                     src: () => n.e("59682").then(n.t.bind(n, "126683", 19)),
                     ref: t,
                     initialAnimation: o.current,
-                    markers: a
+                    markers: s
                 }), [])
             }
         }

@@ -10,8 +10,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("836560"),
         r = n("555573"),
-        s = n("376918"),
-        a = n("695346"),
+        a = n("376918"),
+        s = n("695346"),
         o = n("590921"),
         l = n("152089");
 
@@ -123,7 +123,7 @@ function(e, t, n) {
                 type: _,
                 typeInfo: c,
                 query: E
-            } = u, I = i || n && ((null === (e = this.state.query) || void 0 === e ? void 0 : e.queryText) !== E || (null === (t = this.state.query) || void 0 === t ? void 0 : t.typeInfo) !== c), T = a.IncludeStickersInAutocomplete.getSetting();
+            } = u, I = i || n && ((null === (e = this.state.query) || void 0 === e ? void 0 : e.queryText) !== E || (null === (t = this.state.query) || void 0 === t ? void 0 : t.typeInfo) !== c), T = s.IncludeStickersInAutocomplete.getSetting();
             r.allowStickers = r.allowStickers ? T : r.allowStickers;
             let {
                 results: f,
@@ -133,7 +133,7 @@ function(e, t, n) {
             let A = !0 === f.isLoading,
                 m = this.shouldShow(h, A, c),
                 N = this.state.selectedIndex;
-            !m || A ? N = null : null != N && N >= h && (N = h - 1), m && !this.state.isVisible && (0, s.trackAutocompleteOpen)(_, this.props.channel, S), this.setState({
+            !m || A ? N = null : null != N && N >= h && (N = h - 1), m && !this.state.isVisible && (0, a.trackAutocompleteOpen)(_, this.props.channel, S), this.setState({
                 query: {
                     type: _,
                     typeInfo: c,
@@ -151,7 +151,7 @@ function(e, t, n) {
             return this.props.focused && null == this.props.expressionPickerView && (e > 0 || t || n.showEmpty)
         }
         selectResult(e, t, n) {
-            var i, r, a;
+            var i, r, s;
             if (!this.state.isVisible) return !1;
             let {
                 type: l,
@@ -170,7 +170,7 @@ function(e, t, n) {
                 tabOrEnter: n,
                 queryText: null === (i = this.state.query) || void 0 === i ? void 0 : i.queryText
             });
-            return null != E && (0, s.trackAutocompleteSelect)(l, null !== (a = E.type) && void 0 !== a ? a : null, this.props.channel, E.metadata), !0
+            return null != E && (0, a.trackAutocompleteSelect)(l, null !== (s = E.type) && void 0 !== s ? s : null, this.props.channel, E.metadata), !0
         }
         setState(e) {
             for (let t in e)

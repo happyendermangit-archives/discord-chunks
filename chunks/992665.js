@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("403182"),
-        a = n("715246");
+        a = n("403182"),
+        s = n("715246");
     class o extends r.PureComponent {
         render() {
             let {
@@ -27,12 +27,12 @@ function(e, t, n) {
                 mimeType: T,
                 onPlay: f
             } = this.props;
-            return (0, i.jsx)(a.default, {
+            return (0, i.jsx)(s.default, {
                 src: e,
                 fileName: n,
-                fileSize: (0, s.sizeString)(t),
+                fileSize: (0, a.sizeString)(t),
                 fileSizeBytes: t,
-                type: a.default.Types.AUDIO,
+                type: s.default.Types.AUDIO,
                 className: r,
                 playable: o,
                 volume: l,

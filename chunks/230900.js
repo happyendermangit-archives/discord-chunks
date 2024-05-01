@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getChannelFromEvent: function() {
-            return s
+            return a
         },
         getChannelTypeFromEntity: function() {
             return u
@@ -17,20 +17,20 @@ function(e, t, n) {
     var i = n("592125"),
         r = n("765305");
 
-    function s(e) {
+    function a(e) {
         let t;
         let {
             entity_type: n,
-            channel_id: s
+            channel_id: a
         } = e;
-        if (n in r.EntityChannelTypes && null != s) {
-            var a;
-            t = null !== (a = i.default.getChannel(e.channel_id)) && void 0 !== a ? a : void 0
+        if (n in r.EntityChannelTypes && null != a) {
+            var s;
+            t = null !== (s = i.default.getChannel(e.channel_id)) && void 0 !== s ? s : void 0
         }
         return t
     }
 
-    function a(e, t) {
+    function s(e, t) {
         let n = null;
         return e === r.GuildScheduledEventEntityTypes.EXTERNAL && null != t && "location" in t && (n = t.location), n
     }
@@ -40,7 +40,7 @@ function(e, t, n) {
             entity_type: t,
             entity_metadata: n
         } = e;
-        return a(t, n)
+        return s(t, n)
     }
 
     function l(e) {
@@ -48,7 +48,7 @@ function(e, t, n) {
             entityType: t,
             entityMetadata: n
         } = e;
-        return a(t, n)
+        return s(t, n)
     }
 
     function u(e) {

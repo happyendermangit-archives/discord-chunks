@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("232567"),
         r = n("147913"),
-        s = n("592125"),
-        a = n("944486"),
+        a = n("592125"),
+        s = n("944486"),
         o = n("594174"),
         l = n("894257"),
         u = n("981631");
@@ -26,8 +26,8 @@ function(e, t, n) {
     function c(e) {
         let t = o.default.getCurrentUser();
         if (null == t) return;
-        let n = a.default.getChannelId(),
-            i = s.default.getDMFromUserId(l.SYSTEM_USER);
+        let n = s.default.getChannelId(),
+            i = a.default.getDMFromUserId(l.SYSTEM_USER);
         if (!t.hasUrgentMessages() || i === n) return E({
             channelId: n
         });
@@ -37,7 +37,7 @@ function(e, t, n) {
     function E(e) {
         let {
             channelId: t
-        } = e, n = o.default.getCurrentUser(), r = t === s.default.getDMFromUserId(l.SYSTEM_USER);
+        } = e, n = o.default.getCurrentUser(), r = t === a.default.getDMFromUserId(l.SYSTEM_USER);
         null != n && n.hasUrgentMessages() && r && (_ = !1, i.setFlag(u.UserFlags.HAS_UNREAD_URGENT_MESSAGES, !1))
     }
     class I extends r.default {

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         SecureFramesGuildExperiment: function() {
-            return s
+            return a
         },
         SecureFramesUserExperiment: function() {
             return r
@@ -52,7 +52,7 @@ function(e, t, n) {
                 }
             }]
         }),
-        s = (0, i.createExperiment)({
+        a = (0, i.createExperiment)({
             kind: "guild",
             id: "2023-11_secure_frames_encryption_guilds",
             label: "Allowing testing secure frames for voice/video (Guilds)",

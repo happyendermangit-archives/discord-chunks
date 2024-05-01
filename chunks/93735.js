@@ -14,10 +14,10 @@ function(e, t, n) {
             return _
         },
         shouldScanAttachment: function() {
-            return s
+            return a
         },
         shouldScanEmbed: function() {
-            return a
+            return s
         }
     });
 
@@ -29,14 +29,14 @@ function(e, t, n) {
         return null != e.content_scan_version ? e.content_scan_version : null != e.contentScanVersion ? e.contentScanVersion : null
     }
 
-    function s(e, t) {
+    function a(e, t) {
         return null == e.content_scan_version || e.content_scan_version < (null != t ? t : 1)
     }
 
-    function a(e, t) {
-        var n, i, s, a, o, l, u;
+    function s(e, t) {
+        var n, i, a, s, o, l, u;
         let d = r(e);
-        return !((null === (n = e.video) || void 0 === n ? void 0 : n.width) === 0 && (null === (i = e.video) || void 0 === i ? void 0 : i.height) === 0 || (null === (s = e.thumbnail) || void 0 === s ? void 0 : s.width) === 0 && (null === (a = e.thumbnail) || void 0 === a ? void 0 : a.height) === 0 || (null === (o = e.image) || void 0 === o ? void 0 : o.width) === 0 && (null === (l = e.image) || void 0 === l ? void 0 : l.height) === 0 || "images" in e && (null === (u = e.images) || void 0 === u ? void 0 : u.some(e => 0 === e.width && 0 === e.height))) && (null == d || d < (null != t ? t : 1))
+        return !((null === (n = e.video) || void 0 === n ? void 0 : n.width) === 0 && (null === (i = e.video) || void 0 === i ? void 0 : i.height) === 0 || (null === (a = e.thumbnail) || void 0 === a ? void 0 : a.width) === 0 && (null === (s = e.thumbnail) || void 0 === s ? void 0 : s.height) === 0 || (null === (o = e.image) || void 0 === o ? void 0 : o.width) === 0 && (null === (l = e.image) || void 0 === l ? void 0 : l.height) === 0 || "images" in e && (null === (u = e.images) || void 0 === u ? void 0 : u.some(e => 0 === e.width && 0 === e.height))) && (null == d || d < (null != t ? t : 1))
     }
 
     function o(e) {
@@ -51,8 +51,8 @@ function(e, t, n) {
                 attachmentIds: [],
                 embedIds: []
             };
-            let E = null !== (u = null == e ? void 0 : null === (i = e.attachments) || void 0 === i ? void 0 : i.filter(s)) && void 0 !== u ? u : [],
-                I = null !== (d = null == e ? void 0 : null === (r = e.embeds) || void 0 === r ? void 0 : r.filter(a)) && void 0 !== d ? d : [];
+            let E = null !== (u = null == e ? void 0 : null === (i = e.attachments) || void 0 === i ? void 0 : i.filter(a)) && void 0 !== u ? u : [],
+                I = null !== (d = null == e ? void 0 : null === (r = e.embeds) || void 0 === r ? void 0 : r.filter(s)) && void 0 !== d ? d : [];
             return {
                 attachmentIds: E.map(e => e.id).filter(Boolean),
                 embedIds: I.map((e, t) => "embed_".concat(t)).filter(Boolean)
@@ -66,15 +66,15 @@ function(e, t, n) {
     }
 
     function u(e) {
-        var t, n, i, s, a, o, l;
+        var t, n, i, a, s, o, l;
         let u = r(e);
-        return !((null === (t = e.video) || void 0 === t ? void 0 : t.width) === 0 && (null === (n = e.video) || void 0 === n ? void 0 : n.height) === 0 || (null === (i = e.thumbnail) || void 0 === i ? void 0 : i.width) === 0 && (null === (s = e.thumbnail) || void 0 === s ? void 0 : s.height) === 0 || (null === (a = e.image) || void 0 === a ? void 0 : a.width) === 0 && (null === (o = e.image) || void 0 === o ? void 0 : o.height) === 0 || "images" in e && (null === (l = e.images) || void 0 === l ? void 0 : l.some(e => 0 === e.width && 0 === e.height))) && null == u
+        return !((null === (t = e.video) || void 0 === t ? void 0 : t.width) === 0 && (null === (n = e.video) || void 0 === n ? void 0 : n.height) === 0 || (null === (i = e.thumbnail) || void 0 === i ? void 0 : i.width) === 0 && (null === (a = e.thumbnail) || void 0 === a ? void 0 : a.height) === 0 || (null === (s = e.image) || void 0 === s ? void 0 : s.width) === 0 && (null === (o = e.image) || void 0 === o ? void 0 : o.height) === 0 || "images" in e && (null === (l = e.images) || void 0 === l ? void 0 : l.some(e => 0 === e.width && 0 === e.height))) && null == u
     }
 
     function d(e) {
-        var t, n, i, r, s, a, o, d;
-        let _ = null !== (s = null == e ? void 0 : null === (t = e.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== s ? s : 0,
-            c = null !== (a = null == e ? void 0 : null === (n = e.embeds) || void 0 === n ? void 0 : n.length) && void 0 !== a ? a : 0;
+        var t, n, i, r, a, s, o, d;
+        let _ = null !== (a = null == e ? void 0 : null === (t = e.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== a ? a : 0,
+            c = null !== (s = null == e ? void 0 : null === (n = e.embeds) || void 0 === n ? void 0 : n.length) && void 0 !== s ? s : 0;
         if (0 === _ && 0 === c) return {
             attachmentIds: [],
             embedIds: []

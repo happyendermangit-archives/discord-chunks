@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         hqStreamingFrameAnimationPlayed: function() {
-            return s
+            return a
         },
         hqStreamingPopoutDismissed: function() {
             return o
@@ -11,7 +11,7 @@ function(e, t, n) {
             return r
         },
         hqStreamingUnlockAnimationPlayed: function() {
-            return a
+            return s
         },
         usePerksDemosUIStore: function() {
             return i
@@ -35,13 +35,13 @@ function(e, t, n) {
         })
     }
 
-    function s(e) {
+    function a(e) {
         i.setState({
             hqStreamingFrameAnimationPlayed: e
         })
     }
 
-    function a(e) {
+    function s(e) {
         i.setState({
             hqStreamingUnlockAnimationPlayed: e
         })

@@ -40,8 +40,8 @@ function(e, t, n) {
     });
     var i = n("392711"),
         r = n.n(i),
-        s = n("536402"),
-        a = n("974900"),
+        a = n("536402"),
+        s = n("974900"),
         o = n("106831"),
         l = n("544891"),
         u = n("570140"),
@@ -79,7 +79,7 @@ function(e, t, n) {
             guildId: t,
             refresh: n,
             flushSeenItems: i,
-            highlightedItemData: a,
+            highlightedItemData: s,
             limit: o
         } = e, c = Date.now(), E = n ? 0 : h.default.getPaginationStatus(t).offset, I = null == E || 0 === E;
         u.default.dispatch({
@@ -93,9 +93,9 @@ function(e, t, n) {
                     limit: null != o ? o : h.GUILD_FEED_FETCH_LIMIT,
                     offset: I ? 0 : E,
                     load_id: I ? null : h.default.getLoadId(t),
-                    ...null != a && I && {
-                        highlight_channel_id: a.channelId,
-                        highlight_message_id: a.messageId
+                    ...null != s && I && {
+                        highlight_channel_id: s.channelId,
+                        highlight_message_id: s.messageId
                     }
                 },
                 n = (await l.HTTP.get({
@@ -122,15 +122,15 @@ function(e, t, n) {
                     loadTime: n,
                     startHomeSessionId: i,
                     page: r,
-                    newUnreadFeedItemIds: s,
-                    newReadFeedItemIds: a,
+                    newUnreadFeedItemIds: a,
+                    newReadFeedItemIds: s,
                     newFeaturedItemIds: o
                 } = e;
                 T.default.track(O.AnalyticEvents.FEED_LOADED, {
                     guild_id: t,
                     load_id: h.default.getLoadId(t),
-                    unread_feed_item_ids: R(t, s),
-                    read_feed_item_ids: R(t, a),
+                    unread_feed_item_ids: R(t, a),
+                    read_feed_item_ids: R(t, s),
                     load_time_millis: n,
                     home_session_id: _.default.getHomeSessionId(t),
                     start_home_session_id: i,
@@ -146,7 +146,7 @@ function(e, t, n) {
                 newUnreadFeedItemIds: r().difference(N, S),
                 newFeaturedItemIds: r().difference(C, A)
             }), ! function(e, t) {
-                let n = t.results.items.filter(e => e.type === s.GuildFeedItemTypes.FORUM_POST);
+                let n = t.results.items.filter(e => e.type === a.GuildFeedItemTypes.FORUM_POST);
                 n.length > 0 && u.default.dispatch({
                     type: "LOAD_THREADS_SUCCESS",
                     threads: n.map(e => e.thread),
@@ -189,7 +189,7 @@ function(e, t, n) {
                     message_id: n.id,
                     load_id: h.default.getLoadId(t),
                     preference: o.GuildFeedPreferenceOptions.HIDDEN,
-                    entity_type: a.GuildFeedPreferenceEntityTypes.MESSAGE
+                    entity_type: s.GuildFeedPreferenceEntityTypes.MESSAGE
                 }
             });
         return u.default.dispatch({
@@ -219,15 +219,15 @@ function(e, t, n) {
         let {
             entityId: i,
             details: r,
-            guildId: s,
-            entityType: a
+            guildId: a,
+            entityType: s
         } = (0, m.default)(e);
         try {
             let o = await l.HTTP.put({
-                url: O.Endpoints.GUILD_FEED_FEATURE_ITEM(s),
+                url: O.Endpoints.GUILD_FEED_FEATURE_ITEM(a),
                 body: {
                     entity_id: i,
-                    entity_type: a,
+                    entity_type: s,
                     expires_at: t,
                     details: r
                 }
@@ -271,7 +271,7 @@ function(e, t, n) {
                     channel_id: n.channel_id,
                     message_id: n.id,
                     load_id: h.default.getLoadId(t),
-                    entity_type: a.GuildFeedPreferenceEntityTypes.MESSAGE
+                    entity_type: s.GuildFeedPreferenceEntityTypes.MESSAGE
                 }
             });
         return u.default.dispatch({

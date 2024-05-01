@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("147913"),
         r = n("314897"),
-        s = n("592125"),
-        a = n("242291"),
+        a = n("592125"),
+        s = n("242291"),
         o = n("981631");
 
     function l(e, t, n) {
@@ -21,8 +21,8 @@ function(e, t, n) {
                 let {
                     state: t,
                     channelId: n
-                } = e, i = t === o.RTCConnectionStates.RTC_CONNECTED, r = i && !this.prevConnected, l = s.default.getChannel(n), u = null == l ? void 0 : l.getGuildId(), d = this.tempMutedChannel === n;
-                r && null != u && (d ? this.tempMutedChannel = null : (0, a.maybePlayCustomJoinSound)(u)), this.prevConnected = i
+                } = e, i = t === o.RTCConnectionStates.RTC_CONNECTED, r = i && !this.prevConnected, l = a.default.getChannel(n), u = null == l ? void 0 : l.getGuildId(), d = this.tempMutedChannel === n;
+                r && null != u && (d ? this.tempMutedChannel = null : (0, s.maybePlayCustomJoinSound)(u)), this.prevConnected = i
             }), l(this, "handleMute", e => {
                 let {
                     channelId: t
@@ -36,9 +36,9 @@ function(e, t, n) {
                     let {
                         userId: t,
                         channelId: r,
-                        sessionId: s
+                        sessionId: a
                     } = e;
-                    t === n && s !== i && null != r && (this.tempMutedChannel = r)
+                    t === n && a !== i && null != r && (this.tempMutedChannel = r)
                 })
             }), l(this, "actions", {
                 RTC_CONNECTION_STATE: this.handleRTCConnectionState,

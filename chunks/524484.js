@@ -1,6 +1,6 @@
 function(e, t, n) {
     "use strict";
-    var i, r, s, a, o, l;
+    var i, r, a, s, o, l;
     n.r(t), n.d(t, {
         ConfettiLocation: function() {
             return i
@@ -12,12 +12,12 @@ function(e, t, n) {
             return _
         },
         ShakeLevel: function() {
-            return s
+            return a
         },
         ShakeLocation: function() {
             return r
         }
-    }), n("724458"), n("47120"), (a = i || (i = {}))[a.CHAT_INPUT = 0] = "CHAT_INPUT", a[a.REACTION = 1] = "REACTION", a[a.MEMBER_USER = 2] = "MEMBER_USER", a[a.CALL_TILE = 3] = "CALL_TILE", (o = r || (r = {}))[o.CHAT_INPUT = 0] = "CHAT_INPUT", o[o.VOICE_USER = 1] = "VOICE_USER", o[o.MENTION = 2] = "MENTION", (l = s || (s = {}))[l.LEVEL_1 = 0] = "LEVEL_1", l[l.LEVEL_2 = 1] = "LEVEL_2", l[l.LEVEL_3 = 2] = "LEVEL_3", l[l.LEVEL_4 = 3] = "LEVEL_4", l[l.LEVEL_5 = 4] = "LEVEL_5";
+    }), n("724458"), n("47120"), (s = i || (i = {}))[s.CHAT_INPUT = 0] = "CHAT_INPUT", s[s.REACTION = 1] = "REACTION", s[s.MEMBER_USER = 2] = "MEMBER_USER", s[s.CALL_TILE = 3] = "CALL_TILE", (o = r || (r = {}))[o.CHAT_INPUT = 0] = "CHAT_INPUT", o[o.VOICE_USER = 1] = "VOICE_USER", o[o.MENTION = 2] = "MENTION", (l = a || (a = {}))[l.LEVEL_1 = 0] = "LEVEL_1", l[l.LEVEL_2 = 1] = "LEVEL_2", l[l.LEVEL_3 = 2] = "LEVEL_3", l[l.LEVEL_4 = 3] = "LEVEL_4", l[l.LEVEL_5 = 4] = "LEVEL_5";
     let u = {
             0: [
                 [1, 1e-4],

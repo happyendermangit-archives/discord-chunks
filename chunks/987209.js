@@ -10,8 +10,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("479446"),
-        a = n("646476"),
+        a = n("479446"),
+        s = n("646476"),
         o = n("975104"),
         l = n("669079"),
         u = n("563132"),
@@ -29,9 +29,9 @@ function(e, t, n) {
             children: T
         } = e, {
             selectedSkuId: f
-        } = (0, u.usePaymentContext)(), [S, h] = r.useState(n), [A, m] = r.useState(), [N, p] = r.useState(!1), O = (0, l.shouldShowCustomGiftExperience)(S), R = (0, a.useIsSeasonalGiftingActive)(), {
+        } = (0, u.usePaymentContext)(), [S, h] = r.useState(n), [A, m] = r.useState(), [N, p] = r.useState(!1), O = (0, l.shouldShowCustomGiftExperience)(S), R = (0, s.useIsSeasonalGiftingActive)(), {
             enabled: C
-        } = a.default.useExperiment({
+        } = s.default.useExperiment({
             location: "PaymentContextProvider"
         }, {
             autoTrackExposure: O && R
@@ -39,7 +39,7 @@ function(e, t, n) {
             let {
                 onSubscriptionConfirmation: t
             } = e;
-            return k(!0), (0, s.sendGiftMessage)(S, b).then(() => {
+            return k(!0), (0, a.sendGiftMessage)(S, b).then(() => {
                 k(!1), null == t || t(), w(!0)
             }).catch(e => {
                 k(!1), x(e), w(!0)

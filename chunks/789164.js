@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("337033"),
-        a = n("15127"),
+        a = n("337033"),
+        s = n("15127"),
         o = n("512983"),
         l = n("444364");
     let u = r.forwardRef(function(e, t) {
@@ -27,7 +27,7 @@ function(e, t, n) {
         return (0, i.jsx)("div", {
             ref: t,
             className: d,
-            children: null != c ? (0, i.jsx)(s.HeadingLevel, {
+            children: null != c ? (0, i.jsx)(a.HeadingLevel, {
                 component: (0, i.jsxs)("div", {
                     className: l.sectionTitle,
                     children: [E, null != c ? (0, i.jsx)(o.FormTitle, {
@@ -41,7 +41,7 @@ function(e, t, n) {
                 }),
                 children: (0, i.jsx)("div", {
                     className: l.children,
-                    children: (0, i.jsx)(a.FormContextProvider, {
+                    children: (0, i.jsx)(s.FormContextProvider, {
                         titleId: A,
                         children: u
                     })

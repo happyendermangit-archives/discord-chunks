@@ -1,19 +1,14 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
-        getIsEligibleForQuestsLogging: function() {
-            return u
-        },
-        useQuestBarLogger: function() {
-            return c
+        getQuestLogger: function() {
+            return l
         }
     });
-    var i = n("470079"),
-        r = n("259443"),
-        s = n("818083"),
-        a = n("46140"),
-        o = n("231338");
-    let l = (0, s.createExperiment)({
+    var i = n("259443"),
+        r = n("818083"),
+        a = n("231338");
+    let s = (0, r.createExperiment)({
             id: "2024-04_quests_logging",
             kind: "user",
             label: "Quests Logging",
@@ -34,45 +29,32 @@ function(e, t, n) {
                 }
             }]
         }),
-        u = e => {
+        o = e => {
             let {
                 location: t,
                 autoTrackExposure: n = !1
             } = e;
-            return l.getCurrentConfig({
+            return s.getCurrentConfig({
                 location: t
             }, {
                 autoTrackExposure: n
             }).enabled
-        },
-        d = e => {
-            let {
-                location: t,
-                autoTrackExposure: n = !1
-            } = e, {
-                enabled: i
-            } = l.useExperiment({
-                location: t
-            }, {
-                autoTrackExposure: n
-            });
-            return i
-        },
-        _ = new r.Logger("QuestBar");
+        };
 
-    function c(e) {
-        let t = d({
-            location: a.QuestsExperimentLocations.QUESTS_BAR
-        });
-        return i.useEffect(() => {
-            t && (_.name = "QuestBar (".concat(e.config.messages.questName, ")"))
-        }, [t, e.config.messages.questName]), {
-            log: t ? _.log : o.NOOP,
-            warn: t ? _.warn : o.NOOP,
-            error: t ? _.error : o.NOOP,
-            info: t ? _.info : o.NOOP,
-            verbose: t ? _.verbose : o.NOOP,
-            trace: t ? _.trace : o.NOOP
+    function l(e) {
+        let {
+            quest: t,
+            location: n
+        } = e, r = o({
+            location: n
+        }), s = null == t ? void 0 : t.config.messages.questName, l = "QuestLogger ".concat(n).concat(null != s ? " (".concat(s, ")") : "", ")"), u = new i.Logger(l);
+        return {
+            log: r ? u.log : a.NOOP,
+            warn: r ? u.warn : a.NOOP,
+            error: r ? u.error : a.NOOP,
+            info: r ? u.info : a.NOOP,
+            verbose: r ? u.verbose : a.NOOP,
+            trace: r ? u.trace : a.NOOP
         }
     }
 }

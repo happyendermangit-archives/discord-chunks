@@ -37,8 +37,8 @@ function(e, t, n) {
     }), n("653041");
     var i = n("392711"),
         r = n.n(i),
-        s = n("544891"),
-        a = n("570140"),
+        a = n("544891"),
+        s = n("570140"),
         o = n("668781"),
         l = n("38618"),
         u = n("706454"),
@@ -55,7 +55,7 @@ function(e, t, n) {
         let {
             body: n
         } = await (0, I.httpGetWithCountryCodeQuery)(f.Endpoints.STICKER_PACK(e));
-        return a.default.dispatch({
+        return s.default.dispatch({
             type: "STICKER_PACK_FETCH_SUCCESS",
             packId: e,
             pack: n,
@@ -66,8 +66,8 @@ function(e, t, n) {
             locale: e = u.default.locale
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
         if (T.default.isFetchingStickerPacks || T.default.hasLoadedStickerPacks) return;
-        a.default.wait(() => {
-            a.default.dispatch({
+        s.default.wait(() => {
+            s.default.dispatch({
                 type: "STICKER_PACKS_FETCH_START"
             })
         });
@@ -75,33 +75,33 @@ function(e, t, n) {
             body: {
                 sticker_packs: t
             }
-        } = await s.HTTP.get({
+        } = await a.HTTP.get({
             url: f.Endpoints.STICKER_PACKS,
             query: {
                 locale: e
             }
         });
-        a.default.dispatch({
+        s.default.dispatch({
             type: "STICKER_PACKS_FETCH_SUCCESS",
             packs: t
         })
     }, N = async e => {
         let {
             body: t
-        } = await s.HTTP.get({
+        } = await a.HTTP.get({
             url: f.Endpoints.STICKER(e)
         });
-        a.default.dispatch({
+        s.default.dispatch({
             type: "STICKER_FETCH_SUCCESS",
             sticker: t
         })
     }, p = async e => {
         let {
             body: t
-        } = await s.HTTP.get({
+        } = await a.HTTP.get({
             url: f.Endpoints.GUILD_STICKER_PACKS(e)
         });
-        a.default.dispatch({
+        s.default.dispatch({
             type: "GUILD_STICKERS_FETCH_SUCCESS",
             guildId: e,
             stickers: t.map(e => null != e.user ? {
@@ -110,15 +110,15 @@ function(e, t, n) {
             } : e)
         })
     }, O = async e => {
-        await s.HTTP.del({
+        await a.HTTP.del({
             url: f.Endpoints.GUILD_STICKER(e.guild_id, e.id)
         })
     }, R = async (e, t) => {
-        let n = await s.HTTP.post({
+        let n = await a.HTTP.post({
             url: f.Endpoints.GUILD_STICKER_PACKS(e),
             body: t
         });
-        return a.default.dispatch({
+        return s.default.dispatch({
             type: "GUILD_STICKERS_CREATE_SUCCESS",
             guildId: e,
             sticker: {
@@ -126,13 +126,13 @@ function(e, t, n) {
                 user: E.default.getCurrentUser()
             }
         }), n.body
-    }, C = async (e, t, n) => (await s.HTTP.patch({
+    }, C = async (e, t, n) => (await a.HTTP.patch({
         url: f.Endpoints.GUILD_STICKER(e, t),
         body: n
     })).body;
 
     function g(e, t, n) {
-        a.default.dispatch({
+        s.default.dispatch({
             type: "ADD_STICKER_PREVIEW",
             channelId: e,
             sticker: t,
@@ -141,7 +141,7 @@ function(e, t, n) {
     }
 
     function L(e, t) {
-        a.default.dispatch({
+        s.default.dispatch({
             type: "CLEAR_STICKER_PREVIEW",
             channelId: e,
             draftType: t

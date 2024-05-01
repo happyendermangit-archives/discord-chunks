@@ -10,8 +10,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("442837"),
         l = n("481060"),
         u = n("204197"),
@@ -24,7 +24,7 @@ function(e, t, n) {
         let {
             smallerText: t,
             className: n,
-            textColor: s
+            textColor: a
         } = e, u = (0, o.useStateFromStores)([d.default], () => d.default.affinities.slice(0, 3).reverse()), I = u.map((e, t) => (0, i.jsx)(T, {
             affinity: e,
             applyMask: t !== u.length - 1,
@@ -38,7 +38,7 @@ function(e, t, n) {
             username: f(u[0])
         }) : "", [u]);
         return 0 === u.length ? null : (0, i.jsxs)("div", {
-            className: a()(E.container, n),
+            className: s()(E.container, n),
             children: [(0, i.jsx)("div", {
                 className: E.iconContainer,
                 children: I
@@ -47,11 +47,11 @@ function(e, t, n) {
                 children: (0, i.jsx)(function() {
                     return t ? (0, i.jsx)(l.Text, {
                         variant: "text-lg/medium",
-                        color: s,
+                        color: a,
                         children: S
                     }) : (0, i.jsx)(l.Heading, {
                         variant: "heading-xl/medium",
-                        color: s,
+                        color: a,
                         children: S
                     })
                 }, {})
@@ -65,7 +65,7 @@ function(e, t, n) {
             applyMask: n,
             size: r
         } = e, {
-            avatarSrc: s,
+            avatarSrc: a,
             eventHandlers: o
         } = (0, u.default)({
             user: t,
@@ -73,10 +73,10 @@ function(e, t, n) {
             animateOnHover: !0
         });
         return (0, i.jsx)(l.Avatar, {
-            className: a()(E.icon, {
+            className: s()(E.icon, {
                 [E.mask]: n
             }),
-            src: s,
+            src: a,
             "aria-label": t.username,
             size: r,
             ...o

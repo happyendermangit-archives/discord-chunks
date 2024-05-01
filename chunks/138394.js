@@ -8,15 +8,15 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        s = n.n(r),
-        a = n("103362");
+        a = n.n(r),
+        s = n("103362");
 
     function o(e) {
         let {
             className: t
         } = e;
         return (0, i.jsx)("div", {
-            className: s()(a.divider, t)
+            className: a()(s.divider, t)
         })
     }
 }

@@ -4,8 +4,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        s = n.n(r),
-        a = n("481060"),
+        a = n.n(r),
+        s = n("481060"),
         o = n("973675"),
         l = n("666272"),
         u = n("348258"),
@@ -20,10 +20,10 @@ function(e, t, n) {
             children: r
         } = e;
         return (0, i.jsxs)("li", {
-            className: s()(_.card, t),
+            className: a()(_.card, t),
             children: [(0, i.jsx)(n, {
                 className: _.icon
-            }), (0, i.jsx)(a.Text, {
+            }), (0, i.jsx)(s.Text, {
                 className: _.__invalid_description,
                 variant: "text-sm/medium",
                 children: r
@@ -38,7 +38,7 @@ function(e, t, n) {
             className: _.wrapper,
             children: [(0, i.jsxs)("div", {
                 className: _.content,
-                children: [(0, i.jsx)(a.Heading, {
+                children: [(0, i.jsx)(s.Heading, {
                     className: _.heading,
                     color: "always-white",
                     variant: "heading-xxl/bold",
@@ -52,7 +52,7 @@ function(e, t, n) {
                     }), (0, i.jsx)(E, {
                         className: t,
                         icon: e => (0, i.jsx)("img", {
-                            className: s()(e.className, _.iconImage),
+                            className: a()(e.className, _.iconImage),
                             src: c,
                             alt: ""
                         }),

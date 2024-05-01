@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("47120");
-    var i, r, s, a, o = n("442837"),
+    var i, r, a, s, o = n("442837"),
         l = n("570140"),
         u = n("786761"),
         d = n("797316"),
@@ -36,17 +36,17 @@ function(e, t, n) {
             channelId: n,
             messageId: i,
             userId: r,
-            emoji: s,
-            optimistic: a,
+            emoji: a,
+            optimistic: s,
             reactionType: o
         } = e, l = E[n];
         if (null == l || null == l.firstMessage || i !== l.firstMessage.id) return !1;
         let u = _.default.getCurrentUser(),
             d = null != u && u.id === r;
-        if (a && !d) return !1;
+        if (s && !d) return !1;
         E[n] = {
             ...l
-        }, "MESSAGE_REACTION_ADD" === t ? E[n].firstMessage = l.firstMessage.addReaction(s, d, e.colors, o) : E[n].firstMessage = l.firstMessage.removeReaction(s, d, o)
+        }, "MESSAGE_REACTION_ADD" === t ? E[n].firstMessage = l.firstMessage.addReaction(a, d, e.colors, o) : E[n].firstMessage = l.firstMessage.removeReaction(a, d, o)
     }
     class S extends(i = o.default.Store) {
         initialize() {
@@ -63,12 +63,12 @@ function(e, t, n) {
             }), E[e]
         }
     }
-    a = "ForumPostMessagesStore", (s = "displayName") in(r = S) ? Object.defineProperty(r, s, {
-        value: a,
+    s = "ForumPostMessagesStore", (a = "displayName") in(r = S) ? Object.defineProperty(r, a, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a, t.default = new S(l.default, {
+    }) : r[a] = s, t.default = new S(l.default, {
         CONNECTION_OPEN: function() {
             E = {}
         },
@@ -131,11 +131,11 @@ function(e, t, n) {
                 reactions: i
             } = e, r = E[t];
             if (null == r || null == r.firstMessage || n !== r.firstMessage.id) return !1;
-            let s = _.default.getCurrentUser(),
-                a = r.firstMessage.addReactionBatch(i, null == s ? void 0 : s.id);
+            let a = _.default.getCurrentUser(),
+                s = r.firstMessage.addReactionBatch(i, null == a ? void 0 : a.id);
             E[t] = {
                 ...r,
-                firstMessage: a
+                firstMessage: s
             }
         },
         LOAD_FORUM_POSTS: function(e) {

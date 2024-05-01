@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("526167"),
         r = n("621554"),
-        s = n("328756"),
-        a = n("639525"),
+        a = n("328756"),
+        s = n("639525"),
         o = n("131812"),
         l = n("265174"),
         u = n("926425"),
@@ -30,7 +30,7 @@ function(e, t, n) {
         return e ? N : r
     }
     t.default = {
-        DEFAULT_AVATARS: [s, a, o, l, u, d],
+        DEFAULT_AVATARS: [a, s, o, l, u, d],
         DEFAULT_GROUP_DM_AVATARS: [_, c, E, I, T, f, S, h],
         BOT_AVATARS: {
             clyde: m

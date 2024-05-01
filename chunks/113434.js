@@ -28,8 +28,8 @@ function(e, t, n) {
     }), n("47120"), n("653041");
     var i = n("470079"),
         r = n("846519"),
-        s = n("442837"),
-        a = n("583434"),
+        a = n("442837"),
+        s = n("583434"),
         o = n("706454"),
         l = n("272008"),
         u = n("569984"),
@@ -44,11 +44,11 @@ function(e, t, n) {
                 fetchPolicy: "cache-only"
             },
             [t, n] = i.useState(!1),
-            r = (0, s.useStateFromStoresArray)([u.default], () => [...u.default.quests.values()]),
+            r = (0, a.useStateFromStoresArray)([u.default], () => [...u.default.quests.values()]),
             {
-                isFetchingCurrentQuests: a,
+                isFetchingCurrentQuests: s,
                 lastFetchedCurrentQuests: o
-            } = (0, s.useStateFromStoresObject)([u.default], () => ({
+            } = (0, a.useStateFromStoresObject)([u.default], () => ({
                 isFetchingCurrentQuests: u.default.isFetchingCurrentQuests,
                 lastFetchedCurrentQuests: u.default.lastFetchedCurrentQuests
             })),
@@ -56,10 +56,10 @@ function(e, t, n) {
                 location: I.QuestsExperimentLocations.USE_QUESTS
             });
         return i.useEffect(() => {
-            if ("cache-only" !== e.fetchPolicy)("cache-and-network" === e.fetchPolicy || "cache-or-network" === e.fetchPolicy && 0 === o) && d && !t && !a && (n(!0), (0, l.fetchCurrentQuests)())
-        }, [e.fetchPolicy, d, t, a, o]), {
+            if ("cache-only" !== e.fetchPolicy)("cache-and-network" === e.fetchPolicy || "cache-or-network" === e.fetchPolicy && 0 === o) && d && !t && !s && (n(!0), (0, l.fetchCurrentQuests)())
+        }, [e.fetchPolicy, d, t, s, o]), {
             quests: r,
-            isFetchingCurrentQuests: a
+            isFetchingCurrentQuests: s
         }
     }
 
@@ -69,18 +69,18 @@ function(e, t, n) {
             isFetchingCurrentQuests: t
         } = T({
             fetchPolicy: "cache-only"
-        }), [n, s] = i.useState(() => new Map(e.map(e => [e.id, (0, _.isQuestExpired)(e)])));
+        }), [n, a] = i.useState(() => new Map(e.map(e => [e.id, (0, _.isQuestExpired)(e)])));
         return i.useEffect(() => {
             if (t) return;
             let n = [];
             for (let t of e)
-                if (null == t || (0, _.isQuestExpired)(t)) null != t && (0, _.isQuestExpired)(t) && s(e => e.has(t.id) ? e : new Map(e).set(t.id, !0));
+                if (null == t || (0, _.isQuestExpired)(t)) null != t && (0, _.isQuestExpired)(t) && a(e => e.has(t.id) ? e : new Map(e).set(t.id, !0));
                 else {
                     let e = new r.Timeout,
                         i = () => {
                             let r = Date.parse(t.config.expiresAt) - Date.now();
                             e.start(r, () => {
-                                (0, _.isQuestExpired)(t) ? s(e => new Map(e).set(t.id, !0)): i()
+                                (0, _.isQuestExpired)(t) ? a(e => new Map(e).set(t.id, !0)): i()
                             }), n.push(e)
                         };
                     i()
@@ -102,7 +102,7 @@ function(e, t, n) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
                 dateStyle: "short"
             },
-            n = (0, s.useStateFromStores)([o.default], () => o.default.locale);
+            n = (0, a.useStateFromStores)([o.default], () => o.default.locale);
         return i.useMemo(() => null == e ? "" : new Date(e).toLocaleDateString(n, t), [e, t, n])
     }
 
@@ -124,8 +124,8 @@ function(e, t, n) {
                     continue
                 }
                 let e = null != t.userStatus.claimedAt,
-                    s = (0, _.isDismissed)(t.userStatus, d.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE);
-                if (!e && !s) {
+                    a = (0, _.isDismissed)(t.userStatus, d.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE);
+                if (!e && !a) {
                     i.push(t);
                     continue
                 }
@@ -145,7 +145,7 @@ function(e, t, n) {
         let t = (0, E.useIsEligibleForMembersListQuestEntrypoint)({
                 location: I.QuestsExperimentLocations.MEMBERS_LIST
             }),
-            n = (0, s.useStateFromStores)([u.default], () => t ? u.default.quests : null),
+            n = (0, a.useStateFromStores)([u.default], () => t ? u.default.quests : null),
             r = i.useMemo(() => (0, _.getQuestsFromActivities)(n, e), [e, n]);
         return S(r) ? null : r
     }
@@ -156,7 +156,7 @@ function(e, t, n) {
             {
                 product: i,
                 isFetching: r
-            } = (0, a.useFetchCollectiblesProduct)(e.rewardsConfig.rewards[0].skuId);
+            } = (0, s.useFetchCollectiblesProduct)(e.rewardsConfig.rewards[0].skuId);
         return {
             hasQuestCollectibles: n,
             avatarDecoration: null == i ? void 0 : null === (t = i.items) || void 0 === t ? void 0 : t[0],

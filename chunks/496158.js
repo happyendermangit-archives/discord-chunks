@@ -2,13 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useCommandContext: function() {
-            return s
+            return a
         }
     });
     var i = n("470079"),
         r = n("430824");
 
-    function s(e) {
+    function a(e) {
         return i.useMemo(() => {
             var t;
             return {

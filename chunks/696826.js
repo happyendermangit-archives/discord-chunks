@@ -34,8 +34,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("718017"),
         l = n("780384"),
         u = n("44315"),
@@ -92,9 +92,9 @@ function(e, t, n) {
             status: n,
             isMobile: i,
             isTyping: r,
-            topOffset: s = 0,
-            leftOffset: a = 0
-        } = e, o = s / 8 * t, l = a / 8 * t;
+            topOffset: a = 0,
+            leftOffset: s = 0
+        } = e, o = a / 8 * t, l = s / 8 * t;
         if (r) return {
             bgRadius: .5 * t,
             bgY: .25 * t + o,
@@ -159,8 +159,8 @@ function(e, t, n) {
     function N(e, t, n) {
         var r;
         let {
-            bgRadius: s,
-            bgY: a,
+            bgRadius: a,
+            bgY: s,
             bgX: l,
             bgHeight: u,
             bgWidth: d,
@@ -179,11 +179,11 @@ function(e, t, n) {
             id: n,
             children: [(0, i.jsx)(o.animated.rect, {
                 x: l,
-                y: a,
+                y: s,
                 width: d,
                 height: u,
-                rx: s,
-                ry: s,
+                rx: a,
+                ry: a,
                 fill: "white"
             }), (0, i.jsx)(o.animated.rect, {
                 x: _,
@@ -213,15 +213,15 @@ function(e, t, n) {
         let {
             status: t,
             isMobile: n = !1,
-            size: s = 8,
+            size: a = 8,
             color: l,
             className: u,
             style: d
         } = e, f = r.useId(), S = t === _.StatusTypes.ONLINE && n, h = r.useMemo(() => m({
-            size: s,
+            size: a,
             status: t,
             isMobile: S
-        }), [s, t, S]), A = (0, o.useSpring)({
+        }), [a, t, S]), A = (0, o.useSpring)({
             config: I,
             to: h
         }), p = T(t, l), [{
@@ -229,17 +229,17 @@ function(e, t, n) {
         }] = (0, o.useSpring)({
             config: I,
             fill: p
-        }, [p]), R = Math.ceil(s * c.MOBILE_HEIGHT_RATIO);
+        }, [p]), R = Math.ceil(a * c.MOBILE_HEIGHT_RATIO);
         return (0, i.jsxs)("svg", {
-            width: s,
+            width: a,
             height: R,
-            viewBox: "0 0 ".concat(s, " ").concat(R),
-            className: a()(E.mask, u),
+            viewBox: "0 0 ".concat(a, " ").concat(R),
+            className: s()(E.mask, u),
             style: d,
-            children: [N(A, s, f), (0, i.jsx)(o.animated.rect, {
+            children: [N(A, a, f), (0, i.jsx)(o.animated.rect, {
                 x: 0,
                 y: 0,
-                width: s,
+                width: a,
                 height: R,
                 fill: O,
                 mask: "url(#".concat(f, ")")
@@ -284,13 +284,13 @@ function(e, t, n) {
             status: t,
             isMobile: n = !1,
             size: r = 8,
-            className: s,
+            className: a,
             style: o,
             color: l
         } = e, u = t === _.StatusTypes.ONLINE && n, c = T(t, l);
         return (0, i.jsx)(d.default, {
             mask: O(t, u),
-            className: a()(E.mask, s),
+            className: s()(E.mask, a),
             style: o,
             ...R(r, t, u),
             children: (0, i.jsx)("div", {

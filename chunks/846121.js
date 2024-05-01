@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("47120");
-    var i, r, s, a, o = n("442837"),
+    var i, r, a, s, o = n("442837"),
         l = n("570140");
     let u = {},
         d = {},
@@ -21,12 +21,12 @@ function(e, t, n) {
             }
         }
     }
-    a = "GuildOnboardingMemberActionStore", (s = "displayName") in(r = c) ? Object.defineProperty(r, s, {
-        value: a,
+    s = "GuildOnboardingMemberActionStore", (a = "displayName") in(r = c) ? Object.defineProperty(r, a, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a, t.default = new c(l.default, {
+    }) : r[a] = s, t.default = new c(l.default, {
         GUILD_NEW_MEMBER_ACTIONS_FETCH_START: function(e) {
             let {
                 guildId: t

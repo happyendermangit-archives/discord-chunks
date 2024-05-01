@@ -40,8 +40,8 @@ function(e, t, n) {
     }), n("757143"), n("47120"), n("724458");
     var i = n("392711"),
         r = n.n(i),
-        s = n("153832"),
-        a = n("263568"),
+        a = n("153832"),
+        s = n("263568"),
         o = n("442837"),
         l = n("566006"),
         u = n("592125"),
@@ -61,7 +61,7 @@ function(e, t, n) {
             text: void 0,
             image: void 0,
             localCreationAnswerId: function() {
-                return (0, s.v4)()
+                return (0, a.v4)()
             }()
         }
     }
@@ -118,7 +118,7 @@ function(e, t, n) {
     }
 
     function L(e, t) {
-        if (t === a.PollLayoutTypes.IMAGE_ONLY_ANSWERS) return null != e.image;
+        if (t === s.PollLayoutTypes.IMAGE_ONLY_ANSWERS) return null != e.image;
         {
             var n;
             let t = null === (n = e.text) || void 0 === n ? void 0 : n.trim();
@@ -129,7 +129,7 @@ function(e, t, n) {
     function v(e, t) {
         var n;
         let i = null === (n = e.text) || void 0 === n ? void 0 : n.trim();
-        return t === a.PollLayoutTypes.DEFAULT && null != e.image && (null == i || 0 === i.length)
+        return t === s.PollLayoutTypes.DEFAULT && null != e.image && (null == i || 0 === i.length)
     }
 
     function D(e) {
@@ -138,7 +138,7 @@ function(e, t, n) {
         let i = null == e ? void 0 : null === (t = e.answers) || void 0 === t ? void 0 : t.map((e, t) => {
             var n, i;
             let r = null === (n = e.poll_media) || void 0 === n ? void 0 : n.emoji,
-                s = {
+                a = {
                     ...e.poll_media,
                     emoji: null != r ? {
                         id: r.id,
@@ -148,7 +148,7 @@ function(e, t, n) {
             return {
                 ...e,
                 answer_id: t + 1,
-                poll_media: s
+                poll_media: a
             }
         });
         let r = (null == e ? void 0 : e.duration) != null ? (n = e.duration, new Date(Date.now() + n * I.default.Millis.HOUR).toISOString()) : "0";
@@ -167,15 +167,15 @@ function(e, t, n) {
     }
 
     function y(e, t, n) {
-        var i, s;
-        let a = _.default.getMessage(t, e);
-        if (null == a) return "";
-        let o = a.getReaction({
+        var i, a;
+        let s = _.default.getMessage(t, e);
+        if (null == s) return "";
+        let o = s.getReaction({
                 id: n,
                 name: "",
                 animated: !1
             }),
-            c = null !== (s = null == o ? void 0 : null === (i = o.count_details) || void 0 === i ? void 0 : i.vote) && void 0 !== s ? s : 0,
+            c = null !== (a = null == o ? void 0 : null === (i = o.count_details) || void 0 === i ? void 0 : i.vote) && void 0 !== a ? a : 0,
             I = function(e, t) {
                 let n = e.getChannelId(),
                     i = d.default.getReactions(n, e.id, {
@@ -183,10 +183,10 @@ function(e, t, n) {
                         name: "",
                         animated: !1
                     }, S.VOTES_TOOLTIP_MAX_USERS, l.ReactionTypes.VOTE),
-                    s = u.default.getChannel(n),
-                    a = null == s || s.isPrivate() ? null : s.getGuildId();
-                return r()(i).reject(e => E.default.isBlocked(e.id)).take(S.VOTES_TOOLTIP_MAX_USERS).map(e => T.default.getName(a, null == s ? void 0 : s.id, e)).value()
-            }(a, n);
+                    a = u.default.getChannel(n),
+                    s = null == a || a.isPrivate() ? null : a.getGuildId();
+                return r()(i).reject(e => E.default.isBlocked(e.id)).take(S.VOTES_TOOLTIP_MAX_USERS).map(e => T.default.getName(s, null == a ? void 0 : a.id, e)).value()
+            }(s, n);
         return 0 === I.length ? "" : function(e, t) {
             let n = Math.max(0, t - e.length);
             if (1 === e.length) return n > 0 ? A.default.Messages.POLL_VOTES_TOOLTIP_1_N.format({

@@ -1,6 +1,6 @@
 function(e, t, n) {
     "use strict";
-    var i, r, s, a;
+    var i, r, a, s;
     n.r(t), n.d(t, {
         ReportNames: function() {
             return i
@@ -8,5 +8,5 @@ function(e, t, n) {
         UnauthenticatedReportNames: function() {
             return r
         }
-    }), (s = i || (i = {})).GUILD = "guild", s.GUILD_DISCOVERY = "guild_discovery", s.GUILD_DIRECTORY_ENTRY = "guild_directory_entry", s.MESSAGE = "message", s.STAGE_CHANNEL = "stage_channel", s.GUILD_SCHEDULED_EVENT = "guild_scheduled_event", s.FIRST_DM = "first_dm", s.USER = "user", (a = r || (r = {})).MESSAGE = "message_urf", a.USER = "user_urf"
+    }), (a = i || (i = {})).GUILD = "guild", a.GUILD_DISCOVERY = "guild_discovery", a.GUILD_DIRECTORY_ENTRY = "guild_directory_entry", a.MESSAGE = "message", a.STAGE_CHANNEL = "stage_channel", a.GUILD_SCHEDULED_EVENT = "guild_scheduled_event", a.FIRST_DM = "first_dm", a.USER = "user", (s = r || (r = {})).MESSAGE = "message_urf", s.USER = "user_urf"
 }

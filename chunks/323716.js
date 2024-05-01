@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("610138"), n("216116"), n("78328"), n("815648"), n("47120"), n("724458"), n("653041"), n("315314"), n("978713");
     var i = n("544891"),
         r = n("569611"),
-        s = n("547010"),
-        a = n("580189"),
+        a = n("547010"),
+        s = n("580189"),
         o = n("397550"),
         l = n("931619");
     n("358085");
@@ -20,9 +20,9 @@ function(e, t, n) {
             let {
                 default: t
             } = n("314897"), {
-                default: s
-            } = n("857192"), {
                 default: a
+            } = n("857192"), {
+                default: s
             } = n("706454"), {
                 default: o
             } = n("594174"), {
@@ -42,15 +42,15 @@ function(e, t, n) {
                     let i = (t = 10, n.reduce((e, n) => (10 === t ? e.push(n) : e.push("".concat(n, ";q=0.").concat(t)), t = Math.max(t - 1, 1), e), []).join(","));
                     e.set("Accept-Language", i)
                 }
-                e.set("X-Discord-Locale", a.locale);
+                e.set("X-Discord-Locale", s.locale);
                 let u = function() {
                     if (null == Intl.DateTimeFormat) return null;
                     let e = Intl.DateTimeFormat();
                     return null == e.resolvedOptions ? null : e.resolvedOptions().timeZone
                 }();
                 null != u && e.set("X-Discord-Timezone", u);
-                let E = s.getDebugOptionsHeaderValue();
-                if (null != E && "" !== E && e.set("X-Debug-Options", E), s.isTracingRequests) {
+                let E = a.getDebugOptionsHeaderValue();
+                if (null != E && "" !== E && e.set("X-Debug-Options", E), a.isTracingRequests) {
                     let t = o.getCurrentUser(),
                         n = I.generate(null !== (f = null == t ? void 0 : t.id) && void 0 !== f ? f : "0");
                     e.set("x-client-trace-id", n);
@@ -77,8 +77,8 @@ function(e, t, n) {
                 if (r.report("Network", "Failed ".concat(e.method, " to ").concat(e.url, " with status ").concat(null == t ? void 0 : t.status, " and body: ").concat(null == n ? void 0 : n.text)), null != t && "parse" in t && t.parse) {
                     let n = "[FILTERED]";
                     if (E.includes(e.url)) {
-                        var i, s;
-                        n = null === (s = e.xhr) || void 0 === s ? void 0 : null === (i = s.responseText) || void 0 === i ? void 0 : i.slice(0, 1e3)
+                        var i, a;
+                        n = null === (a = e.xhr) || void 0 === a ? void 0 : null === (i = a.responseText) || void 0 === i ? void 0 : i.slice(0, 1e3)
                     }
                     u.default.addBreadcrumb({
                         category: "superagent",
@@ -120,13 +120,13 @@ function(e, t, n) {
                     default: t
                 } = e;
                 t()
-            }), !1) : (0, s.isLimitedAccessErrorCode)(e.statusCode, null === (_ = e.body) || void 0 === _ ? void 0 : _.code) ? (n.e("76731").then(n.bind(n, "626892")).then(t => {
+            }), !1) : (0, a.isLimitedAccessErrorCode)(e.statusCode, null === (_ = e.body) || void 0 === _ ? void 0 : _.code) ? (n.e("76731").then(n.bind(n, "626892")).then(t => {
                 var n;
                 let {
                     default: i
                 } = t;
                 i(null === (n = e.body) || void 0 === n ? void 0 : n.guild_id)
-            }), !1) : ((0, a.isBlockedByProxyErrorCode)(e) && n.e("89715").then(n.bind(n, "707708")).then(e => {
+            }), !1) : ((0, s.isBlockedByProxyErrorCode)(e) && n.e("89715").then(n.bind(n, "707708")).then(e => {
                 let {
                     handleBlockedByProxy: t
                 } = e;

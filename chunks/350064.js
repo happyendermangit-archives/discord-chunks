@@ -7,15 +7,15 @@ function(e, t, n) {
     });
     var i = n("470079"),
         r = n("566620"),
-        s = n("246106"),
-        a = n("797398"),
+        a = n("246106"),
+        s = n("797398"),
         o = n("513202");
     let l = e => {
         let {
             userActivity: t,
             inActivity: n
-        } = (0, s.default)(e.id), l = o.default;
-        return (0, a.default)({
+        } = (0, a.default)(e.id), l = o.default;
+        return (0, s.default)({
             channel: e,
             userActivity: t,
             inActivity: n,

@@ -22,19 +22,19 @@ function(e, t, n) {
     }), n("47120"), n("757143"), n("411104"), n("724458"), n("653041");
     var i = n("921738"),
         r = n.n(i),
-        s = n("392711"),
-        a = n.n(s),
+        a = n("392711"),
+        s = n.n(a),
         o = n("714338"),
         l = n("823379"),
         u = n("358085"),
         d = n("981631");
     let _ = (0, u.isLinux)() ? d.LinuxKeyToCode : (0, u.isMac)() ? d.MacosKeyToCode : (0, u.isWindows)() ? d.WindowsKeyToCode : void 0,
-        c = a().invert(d.LinuxKeyToCode);
+        c = s().invert(d.LinuxKeyToCode);
     c["223"] = "`", Object.freeze(c);
-    let E = Object.freeze(a().invert(d.MacosKeyToCode)),
-        I = a().invert(d.WindowsKeyToCode);
+    let E = Object.freeze(s().invert(d.MacosKeyToCode)),
+        I = s().invert(d.WindowsKeyToCode);
     I["223"] = "`", Object.freeze(I);
-    let T = a().invert(null != _ ? _ : {});
+    let T = s().invert(null != _ ? _ : {});
 
     function f() {
         if ((0, u.isLinux)()) return d.KeyboardEnvs.LINUX;

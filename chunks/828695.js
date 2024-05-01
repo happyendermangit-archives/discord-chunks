@@ -1,10 +1,10 @@
 function(e, t, n) {
     "use strict";
     n.r(t);
-    var i, r, s, a, o = n("442837"),
+    var i, r, a, s, o = n("442837"),
         l = n("570140"),
         u = n("353926");
-    class d extends(a = o.default.Store) {
+    class d extends(s = o.default.Store) {
         initialize() {
             this.waitFor(u.default)
         }
@@ -34,12 +34,12 @@ function(e, t, n) {
     function _() {
         return !0
     }
-    s = "LegacyExperimentStore", (r = "displayName") in(i = d) ? Object.defineProperty(i, r, {
-        value: s,
+    a = "LegacyExperimentStore", (r = "displayName") in(i = d) ? Object.defineProperty(i, r, {
+        value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : i[r] = s, t.default = new d(l.default, {
+    }) : i[r] = a, t.default = new d(l.default, {
         LOGOUT: _,
         LOGIN_SUCCESS: _,
         CONNECTION_OPEN: _,

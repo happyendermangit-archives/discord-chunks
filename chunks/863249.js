@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t);
     var i = n("544891"),
         r = n("570140"),
-        s = n("962086"),
-        a = n("160404"),
+        a = n("962086"),
+        s = n("160404"),
         o = n("264229"),
         l = n("271383"),
         u = n("701190"),
@@ -12,31 +12,31 @@ function(e, t, n) {
         _ = n("981631");
     let c = async (e, t) => {
         let n = null != t ? t : u.default.getInviteKeyForGuildId(e),
-            s = d.default.getCurrentUser(),
-            a = !l.default.isMember(e, null == s ? void 0 : s.id);
+            a = d.default.getCurrentUser(),
+            s = !l.default.isMember(e, null == a ? void 0 : a.id);
         try {
             let t = await i.HTTP.get({
                 url: _.Endpoints.GUILD_MEMBER_VERIFICATION(e),
                 query: {
-                    with_guild: a,
+                    with_guild: s,
                     invite_code: null != n ? (0, o.parseInviteCodeFromInviteKey)(n) : void 0
                 },
                 oldFormErrors: !0
             });
             if (null == t.body) throw t;
             let {
-                body: s
+                body: a
             } = t;
             return r.default.dispatch({
                 type: "MEMBER_VERIFICATION_FORM_UPDATE",
                 guildId: e,
                 form: {
-                    version: s.version,
-                    description: s.description,
-                    formFields: s.form_fields,
-                    guild: s.guild
+                    version: a.version,
+                    description: a.description,
+                    formFields: a.form_fields,
+                    guild: a.guild
                 }
-            }), s
+            }), a
         } catch (t) {
             r.default.dispatch({
                 type: "MEMBER_VERIFICATION_FORM_FETCH_FAIL",
@@ -90,8 +90,8 @@ function(e, t, n) {
             oldFormErrors: !0
         })
     }, f = async (e, t) => {
-        if (a.default.isFullServerPreview(e)) {
-            (0, s.updateImpersonatedData)(e, {
+        if (s.default.isFullServerPreview(e)) {
+            (0, a.updateImpersonatedData)(e, {
                 memberOptions: {
                     isPending: !1
                 }

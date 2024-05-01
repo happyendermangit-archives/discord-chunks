@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     let i, r;
     n.r(t), n("653041");
-    var s, a, o, l, u = n("512722"),
+    var a, s, o, l, u = n("512722"),
         d = n.n(u),
         _ = n("392711"),
         c = n.n(_),
@@ -57,7 +57,7 @@ function(e, t, n) {
     function V() {
         return !0
     }
-    class x extends(s = E.default.Store) {
+    class x extends(a = E.default.Store) {
         getActiveStreamKey() {
             return (0, m.default)(C.default) ? r : null
         }
@@ -74,18 +74,18 @@ function(e, t, n) {
                 if (null == n || 0 === p.default.getViewerIds(n).length) return null
             }
             return w.map(e => n ? function(e) {
-                var t, n, i, r, s;
-                let a = e.find(e => "video" === e.type);
-                return null != a && "video" === a.type ? {
+                var t, n, i, r, a;
+                let s = e.find(e => "video" === e.type);
+                return null != s && "video" === s.type ? {
                     type: "streamer",
-                    packetsSentOrReceived: null !== (n = a.packetsSent) && void 0 !== n ? n : 0,
-                    packetsLost: null !== (i = a.packetsLost) && void 0 !== i ? i : 0,
-                    frameRate: null !== (r = a.frameRateEncode) && void 0 !== r ? r : 0,
-                    resolution: null !== (s = null === (t = a.resolution) || void 0 === t ? void 0 : t.height) && void 0 !== s ? s : 0,
+                    packetsSentOrReceived: null !== (n = s.packetsSent) && void 0 !== n ? n : 0,
+                    packetsLost: null !== (i = s.packetsLost) && void 0 !== i ? i : 0,
+                    frameRate: null !== (r = s.frameRateEncode) && void 0 !== r ? r : 0,
+                    resolution: null !== (a = null === (t = s.resolution) || void 0 === t ? void 0 : t.height) && void 0 !== a ? a : 0,
                     bitrate: 0
                 } : null
             }(e.rtp.outbound) : function(e) {
-                var t, n, i, r, s, a;
+                var t, n, i, r, a, s;
                 if (null == e) return null;
                 let o = e.find(e => "video" === e.type);
                 return null != o && "video" === o.type ? {
@@ -93,8 +93,8 @@ function(e, t, n) {
                     packetsSentOrReceived: null !== (n = o.packetsReceived) && void 0 !== n ? n : 0,
                     packetsLost: null !== (i = o.packetsLost) && void 0 !== i ? i : 0,
                     frameRate: null !== (r = o.frameRateDecode) && void 0 !== r ? r : 0,
-                    bitrate: null !== (s = o.bitrate) && void 0 !== s ? s : 0,
-                    resolution: null !== (a = null === (t = o.resolution) || void 0 === t ? void 0 : t.height) && void 0 !== a ? a : 0
+                    bitrate: null !== (a = o.bitrate) && void 0 !== a ? a : 0,
+                    resolution: null !== (s = null === (t = o.resolution) || void 0 === t ? void 0 : t.height) && void 0 !== s ? s : 0
                 } : null
             }(e.rtp.inbound[t]))
         }
@@ -143,12 +143,12 @@ function(e, t, n) {
             })
         }
     }
-    l = "StreamRTCConnectionStore", (o = "displayName") in(a = x) ? Object.defineProperty(a, o, {
+    l = "StreamRTCConnectionStore", (o = "displayName") in(s = x) ? Object.defineProperty(s, o, {
         value: l,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : a[o] = l, t.default = new x(T.default, !C.default.isSupported() || __OVERLAY__ ? {} : {
+    }) : s[o] = l, t.default = new x(T.default, !C.default.isSupported() || __OVERLAY__ ? {} : {
         CONNECTION_OPEN: function(e) {
             i = e.sessionId, r = null, B()
         },
@@ -167,8 +167,8 @@ function(e, t, n) {
                 guildId: n,
                 channelId: i,
                 appContext: r,
-                pid: s,
-                sourceId: a
+                pid: a,
+                sourceId: s
             } = e, o = (0, h.encodeStreamKey)({
                 streamType: t,
                 guildId: n,
@@ -180,8 +180,8 @@ function(e, t, n) {
                         analyticsContext: t
                     } = e;
                     t.setActionContext(r)
-                }), U[o] = a, P[o] = s, null != s) {
-                let e = f.default.getGameForPID(s);
+                }), U[o] = s, P[o] = a, null != a) {
+                let e = f.default.getGameForPID(a);
                 null != e && (y[o] = {
                     name: e.name,
                     id: e.id,
@@ -206,8 +206,8 @@ function(e, t, n) {
             let {
                 streamKey: t,
                 rtcServerId: n,
-                region: s,
-                viewerIds: a
+                region: a,
+                viewerIds: s
             } = e;
             r = t;
             let o = G[t];
@@ -219,7 +219,7 @@ function(e, t, n) {
                 let r = R.default.getChannel(e.channelId),
                     c = null != r && r.isBroadcastChannel(),
                     E = new S.StreamRTCAnalyticsContext({
-                        streamRegion: s,
+                        streamRegion: a,
                         streamApplication: y[t],
                         streamSourceType: function(e) {
                             var t, n, i;
@@ -233,7 +233,7 @@ function(e, t, n) {
                             return "unknown"
                         }(U[t]),
                         actionContext: M[t],
-                        numViewers: null != a ? a.length : 0,
+                        numViewers: null != s ? s.length : 0,
                         isBroadcast: c
                     });
                 l = t, u = n, _ = E, d()(null != i, "Creating RTCConnection without session."), o = new S.default({

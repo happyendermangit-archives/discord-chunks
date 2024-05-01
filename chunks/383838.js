@@ -14,13 +14,13 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        s = n.n(r),
-        a = n("49800"),
+        a = n.n(r),
+        s = n("49800"),
         o = n("285952"),
         l = n("534542"),
         u = n("512983"),
         d = n("763873");
-    let _ = a.Card.Types,
+    let _ = s.Card.Types,
         c = {
             LEFT: "left",
             RIGHT: "right"
@@ -28,7 +28,7 @@ function(e, t, n) {
 
     function E(e) {
         let t, n, {
-                type: r = a.Card.Types.DANGER,
+                type: r = s.Card.Types.DANGER,
                 imageData: _,
                 button: E,
                 className: I,
@@ -49,14 +49,14 @@ function(e, t, n) {
                 shrink: 0,
                 children: (0, i.jsx)("img", {
                     alt: "",
-                    className: s()(d.icon, T),
+                    className: a()(d.icon, T),
                     ...n
                 })
             }), e === c.RIGHT && (m = o.default.Direction.HORIZONTAL_REVERSE)
         } else null != E && (n = E);
         let N = !0;
-        return r === a.Card.Types.PRIMARY && (N = !1), (0, i.jsx)(a.Card, {
-            className: s()(d.formNotice, I),
+        return r === s.Card.Types.PRIMARY && (N = !1), (0, i.jsx)(s.Card, {
+            className: a()(d.formNotice, I),
             type: r,
             style: h,
             children: (0, i.jsxs)(o.default, {
@@ -65,13 +65,13 @@ function(e, t, n) {
                 children: [t, (0, i.jsxs)(o.default.Child, {
                     children: [null != f && "" !== f ? (0, i.jsx)(u.FormTitle, {
                         tag: u.FormTitleTags.H5,
-                        className: s()(d.formNoticeTitle, {
+                        className: a()(d.formNoticeTitle, {
                             [d.whiteText]: N
                         }),
                         faded: !0,
                         children: f
                     }) : null, (0, i.jsx)(l.FormText, {
-                        className: s()(d.formNoticeBody, {
+                        className: a()(d.formNoticeBody, {
                             [d.whiteText]: N
                         }),
                         children: S
@@ -80,5 +80,5 @@ function(e, t, n) {
             })
         })
     }
-    E.Types = a.Card.Types
+    E.Types = s.Card.Types
 }

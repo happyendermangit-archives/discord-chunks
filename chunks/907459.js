@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("442837"),
         l = n("481060"),
         u = n("570140"),
@@ -39,13 +39,13 @@ function(e, t, n) {
         M = () => {
             var e, t, n;
             let r = (0, o.useStateFromStores)([h.default], () => N.default.isPremium(h.default.getCurrentUser())),
-                s = (0, T.usePremiumTrialOffer)(),
-                a = (null == s ? void 0 : null === (e = s.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === g.PremiumSubscriptionSKUs.TIER_2;
+                a = (0, T.usePremiumTrialOffer)(),
+                s = (null == a ? void 0 : null === (e = a.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === g.PremiumSubscriptionSKUs.TIER_2;
             return (0, i.jsx)(f.default, {
                 size: l.Button.Sizes.MEDIUM,
-                buttonText: r ? L.default.Messages.BILLING_SWITCH_PLAN_UPGRADE : a ? (0, N.formatTrialCtaIntervalDuration)({
-                    intervalType: null == s ? void 0 : null === (t = s.subscription_trial) || void 0 === t ? void 0 : t.interval,
-                    intervalCount: null == s ? void 0 : null === (n = s.subscription_trial) || void 0 === n ? void 0 : n.interval_count
+                buttonText: r ? L.default.Messages.BILLING_SWITCH_PLAN_UPGRADE : s ? (0, N.formatTrialCtaIntervalDuration)({
+                    intervalType: null == a ? void 0 : null === (t = a.subscription_trial) || void 0 === t ? void 0 : t.interval,
+                    intervalCount: null == a ? void 0 : null === (n = a.subscription_trial) || void 0 === n ? void 0 : n.interval_count
                 }) : L.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
                 subscriptionTier: g.PremiumSubscriptionSKUs.TIER_2
             })
@@ -99,7 +99,7 @@ function(e, t, n) {
             isCoachmark: t,
             markAsDismissed: n
         } = e, {
-            analyticsLocations: s
+            analyticsLocations: a
         } = (0, I.default)(E.default.APP_ICON_EDITOR), u = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), {
             isUpsellPreview: d,
             isEditorOpen: T,
@@ -112,17 +112,17 @@ function(e, t, n) {
         r.useEffect(() => {
             d && m.default.track(R.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                 type: g.PremiumUpsellTypes.APP_ICON_UPSELL,
-                location_stack: s
+                location_stack: a
             })
-        }, [d, s]);
+        }, [d, a]);
         let S = (0, _.default)(null, d ? D : R.NOOP);
         return (r.useEffect(() => {
             if (d && !T) return D
         }, [d, T]), null == u) ? null : (0, i.jsx)(I.AnalyticsLocationProvider, {
-            value: s,
+            value: a,
             children: (0, i.jsx)("div", {
                 ref: S,
-                className: a()(v.editor, f ? v.editorAnimate : null),
+                className: s()(v.editor, f ? v.editorAnimate : null),
                 children: (0, i.jsxs)(l.HeadingLevel, {
                     children: [(0, i.jsx)(y, {
                         markAsDismissed: n

@@ -10,8 +10,8 @@ function(e, t, n) {
     }), n("653041"), n("47120"), n("390547"), n("627494"), n("757143");
     var i = n("512722"),
         r = n.n(i),
-        s = n("570140"),
-        a = n("904245"),
+        a = n("570140"),
+        s = n("904245"),
         o = n("166459"),
         l = n("232567"),
         u = n("911969"),
@@ -47,11 +47,11 @@ function(e, t, n) {
         },
         B = function(e, t, n) {
             var i, r;
-            let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : e => e;
+            let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : e => e;
             if (e.name === (null === (i = n.autocomplete) || void 0 === i ? void 0 : i.name)) return n.autocomplete.query;
             if ("" === t) return null;
-            let a = L.default.getAutocompleteLastChoices(n.channel.id, e.name);
-            return null != a ? null !== (r = w(a, t)) && void 0 !== r ? r : s(t) : s(t)
+            let s = L.default.getAutocompleteLastChoices(n.channel.id, e.name);
+            return null != s ? null !== (r = w(s, t)) && void 0 !== r ? r : a(t) : a(t)
         },
         k = e => {
             let t = e.toLowerCase() === P.TRUE_OPTION_NAME.toLowerCase(),
@@ -59,7 +59,7 @@ function(e, t, n) {
             return t || n ? t : null
         };
     async function V(e) {
-        var t, n, i, a, l, d, _, I, T, f, S, m, p, O, R;
+        var t, n, i, s, l, d, _, I, T, f, S, m, p, O, R;
         let {
             command: C,
             optionValues: L,
@@ -68,7 +68,7 @@ function(e, t, n) {
             maxSizeCallback: b,
             commandOrigin: G = M.CommandOrigin.CHAT
         } = e;
-        null == D.autocomplete && s.default.dispatch({
+        null == D.autocomplete && a.default.dispatch({
             type: "APPLICATION_COMMAND_USED",
             context: D,
             command: C,
@@ -83,7 +83,7 @@ function(e, t, n) {
                 let t = (null === (i = D.autocomplete) || void 0 === i ? void 0 : i.name) === e.name || void 0,
                     n = null;
                 if (e.type === u.ApplicationCommandOptionType.STRING) {
-                    let i = null !== (l = null === (a = v.getOptionalString(L, e.name)) || void 0 === a ? void 0 : a.trim()) && void 0 !== l ? l : "";
+                    let i = null !== (l = null === (s = v.getOptionalString(L, e.name)) || void 0 === s ? void 0 : s.trim()) && void 0 !== l ? l : "";
                     n = null != e.choices ? w(e.choices, i) : e.autocomplete ? B(e, i, D) : i, r()(null != D.autocomplete || null != n, 'Option "'.concat(e.name, '" expects a value')), null != n && V.push({
                         type: e.type,
                         name: e.name,
@@ -105,9 +105,9 @@ function(e, t, n) {
                     });
                     continue
                 }
-                let s = v.filterEmpty(L[e.name]);
-                if (r()(null != D.autocomplete || 1 === s.length, 'Option "'.concat(e.name, '" expects a single option type')), null == s[0] && !t) continue;
-                let o = null !== (d = s[0]) && void 0 !== d ? d : {
+                let a = v.filterEmpty(L[e.name]);
+                if (r()(null != D.autocomplete || 1 === a.length, 'Option "'.concat(e.name, '" expects a single option type')), null == a[0] && !t) continue;
+                let o = null !== (d = a[0]) && void 0 !== d ? d : {
                     type: "text",
                     text: ""
                 };
@@ -229,7 +229,7 @@ function(e, t, n) {
             let t = Object.values(e).flatMap(e => e.map(e => "emoji" === e.type ? {
                 name: e.name.replaceAll(":", "")
             } : "customEmoji" === e.type ? I.default.getCustomEmojiById(e.emojiId) : null).filter(R.isNotNullish));
-            t.length > 0 && s.default.dispatch({
+            t.length > 0 && a.default.dispatch({
                 type: "EMOJI_TRACK_USAGE",
                 emojiUsed: t
             })
@@ -290,11 +290,11 @@ function(e, t, n) {
                 },
                 interaction_data: i
             };
-            a.default.receiveMessage(h, O, !0, {
+            s.default.receiveMessage(h, O, !0, {
                 applicationId: n
             });
             let R = (e, t) => {
-                    null == t && null != e && a.default.sendClydeError(h, e), s.default.dispatch({
+                    null == t && null != e && s.default.sendClydeError(h, e), a.default.dispatch({
                         type: "MESSAGE_SEND_FAILED",
                         messageId: O.id,
                         channelId: h,
@@ -338,9 +338,9 @@ function(e, t, n) {
     async function j(e, t) {
         let n = 0,
             i = 0;
-        for (let s of e) {
+        for (let a of e) {
             var r;
-            let e = t ? null !== (r = s.currentSize) && void 0 !== r ? r : 0 : await s.getSize();
+            let e = t ? null !== (r = a.currentSize) && void 0 !== r ? r : 0 : await a.getSize();
             e > i && (i = e), n += e
         }
         return {
@@ -350,16 +350,16 @@ function(e, t, n) {
     }
     async function W(e, t, n, i) {
         let r = (0, O.maxFileSize)(n),
-            s = e => {
+            a = e => {
                 null == i || i(r, e), T.setFailed(t, U.AbortCodes.ENTITY_TOO_LARGE, G.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
                     maxSize: (0, O.sizeString)(r)
                 }))
             },
             {
-                totalSize: a,
+                totalSize: s,
                 largestUploadedFileSize: o
             } = await j(e, !1);
-        if (o > Math.max(r, b.DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE) || a > C.MAX_TOTAL_ATTACHMENT_SIZE) return s(o), !1;
+        if (o > Math.max(r, b.DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE) || s > C.MAX_TOTAL_ATTACHMENT_SIZE) return a(o), !1;
         try {
             await (0, _.stageAttachmentFiles)(e)
         } catch {
@@ -368,8 +368,8 @@ function(e, t, n) {
             }))
         }
         return {
-            totalSize: a,
+            totalSize: s,
             largestUploadedFileSize: o
-        } = await j(e, !0), !e.some(e => e.error === U.AbortCodes.ENTITY_TOO_LARGE) && !(a > C.MAX_TOTAL_ATTACHMENT_SIZE) || (s(o), !1)
+        } = await j(e, !0), !e.some(e => e.error === U.AbortCodes.ENTITY_TOO_LARGE) && !(s > C.MAX_TOTAL_ATTACHMENT_SIZE) || (a(o), !1)
     }
 }

@@ -1,6 +1,6 @@
 function(e, t, n) {
     "use strict";
-    var i, r, s, a;
+    var i, r, a, s;
     n.r(t), n.d(t, {
         AGE_GATE_REGISTER_TIMEOUT_MS: function() {
             return o
@@ -21,5 +21,5 @@ function(e, t, n) {
     let o = 2 * n("70956").default.Millis.HOUR,
         l = "new-user-age-gate-modal",
         u = "existing-user-age-gate-modal";
-    (s = i || (i = {})).AUTH = "Register Age Gate", s.NEW_USER_FLOW = "NUF", s.CLAIM_ACCOUNT = "Claim Age Gate", s.NSFW_CHANNEL = "NSFW Channel", s.NSFW_SERVER = "NSFW Server", s.NSFW_SERVER_INVITE = "NSFW Server Invite", s.NSFW_VOICE_CHANNEL = "NSFW Voice Channel", s.FAMILY_CENTER = "Family Center", s.REGISTER = "Register", s.DEEP_LINK_PROMPT = "Deep Link Prompt", s.UNSPECIFIED = "Unspecified", (a = r || (r = {})).AGE_GATE_OPEN = "AGE_GATE_OPEN", a.AGE_GATE_CLOSE = "AGE_GATE_CLOSE", a.AGE_GATE_SUBMITTED = "AGE_GATE_SUBMITTED", a.AGE_GATE_SUCCESS = "AGE_GATE_SUCCESS", a.AGE_GATE_FAILURE = "AGE_GATE_FAILURE", a.AGE_GATE_UNDERAGE = "AGE_GATE_UNDERAGE", a.AGE_GATE_PREVENT_UNDERAGE_REGISTRATION = "AGE_GATE_PREVENT_UNDERAGE_REGISTRATION", a.AGE_GATE_LOGOUT_UNDERAGE_NEW_USER = "AGE_GATE_LOGOUT_UNDERAGE_NEW_USER"
+    (a = i || (i = {})).AUTH = "Register Age Gate", a.NEW_USER_FLOW = "NUF", a.CLAIM_ACCOUNT = "Claim Age Gate", a.NSFW_CHANNEL = "NSFW Channel", a.NSFW_SERVER = "NSFW Server", a.NSFW_SERVER_INVITE = "NSFW Server Invite", a.NSFW_VOICE_CHANNEL = "NSFW Voice Channel", a.FAMILY_CENTER = "Family Center", a.REGISTER = "Register", a.DEEP_LINK_PROMPT = "Deep Link Prompt", a.UNSPECIFIED = "Unspecified", (s = r || (r = {})).AGE_GATE_OPEN = "AGE_GATE_OPEN", s.AGE_GATE_CLOSE = "AGE_GATE_CLOSE", s.AGE_GATE_SUBMITTED = "AGE_GATE_SUBMITTED", s.AGE_GATE_SUCCESS = "AGE_GATE_SUCCESS", s.AGE_GATE_FAILURE = "AGE_GATE_FAILURE", s.AGE_GATE_UNDERAGE = "AGE_GATE_UNDERAGE", s.AGE_GATE_PREVENT_UNDERAGE_REGISTRATION = "AGE_GATE_PREVENT_UNDERAGE_REGISTRATION", s.AGE_GATE_LOGOUT_UNDERAGE_NEW_USER = "AGE_GATE_LOGOUT_UNDERAGE_NEW_USER"
 }

@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("411104"), n("653041"), n("47120");
     var i = n("956067"),
         r = n("930145"),
-        s = n("350167"),
-        a = n("503461");
+        a = n("350167"),
+        s = n("503461");
 
     function o(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
@@ -30,10 +30,10 @@ function(e, t, n) {
         }
         close() {
             var e;
-            this.lastState = a.DatabaseState.Closed, null === (e = this.raw) || void 0 === e || e.close(), this.raw = null, s.Runtime.removeCompletionCallback(this.databaseStateCallback)
+            this.lastState = s.DatabaseState.Closed, null === (e = this.raw) || void 0 === e || e.close(), this.raw = null, a.Runtime.removeCompletionCallback(this.databaseStateCallback)
         }
         disable(e) {
-            return null == this.raw ? Promise.resolve() : (this.lastState = a.DatabaseState.Disabled, this.execute({
+            return null == this.raw ? Promise.resolve() : (this.lastState = s.DatabaseState.Disabled, this.execute({
                 type: "db.disable",
                 handle: 0,
                 reason: e
@@ -42,7 +42,7 @@ function(e, t, n) {
         execute(e, t) {
             if (null == this.raw) throw Error("database is no longer open (database: ".concat(this));
             let n = "key" in e ? e.key[0] : e.table,
-                r = () => s.Runtime.executeAsync(null != t ? t : e.type, t => {
+                r = () => a.Runtime.executeAsync(null != t ? t : e.type, t => {
                     this.raw.execute(t, {
                         ...e,
                         handle: 0
@@ -81,12 +81,12 @@ function(e, t, n) {
             })
         }
         instantaneousState() {
-            return null == this.raw ? a.DatabaseState.Closed : this.lastState = this.executeSync({
+            return null == this.raw ? s.DatabaseState.Closed : this.lastState = this.executeSync({
                 type: "db.state"
             })
         }
         async instantaneousStateAsync() {
-            return null == this.raw ? a.DatabaseState.Closed : this.lastState = await this.execute({
+            return null == this.raw ? s.DatabaseState.Closed : this.lastState = await this.execute({
                 type: "db.state"
             })
         }
@@ -101,7 +101,7 @@ function(e, t, n) {
             }, t) : Promise.resolve())
         }
         constructor(e) {
-            o(this, "name", void 0), o(this, "handle", void 0), o(this, "raw", void 0), o(this, "lastState", void 0), o(this, "databaseStateCallback", void 0), this.raw = e, this.name = e.name, this.lastState = a.DatabaseState.Open, this.handle = e.handle, this.databaseStateCallback = s.Runtime.addDatabaseStateCallback((e, t) => {
+            o(this, "name", void 0), o(this, "handle", void 0), o(this, "raw", void 0), o(this, "lastState", void 0), o(this, "databaseStateCallback", void 0), this.raw = e, this.name = e.name, this.lastState = s.DatabaseState.Open, this.handle = e.handle, this.databaseStateCallback = a.Runtime.addDatabaseStateCallback((e, t) => {
                 this.handle === e && (this.lastState = t)
             })
         }

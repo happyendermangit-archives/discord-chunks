@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("25209"),
-        a = n("794295"),
+        a = n("25209"),
+        s = n("794295"),
         o = n("865427"),
         l = n("853425"),
         u = n("49012"),
@@ -23,7 +23,7 @@ function(e, t, n) {
                     }, t.target)
                 }, _.key);
                 let c = n(t.content, _),
-                    E = "string" == typeof t.title && 0 !== t.title.length ? t.title : (0, s.astToString)(t.content),
+                    E = "string" == typeof t.title && 0 !== t.title.length ? t.title : (0, a.astToString)(t.content),
                     I = (null == e ? void 0 : e.mustConfirmExternalLink) ? e => (null == e || e.stopPropagation(), null == e || e.preventDefault(), (0, u.handleClick)({
                         href: t.target,
                         shouldConfirm: !0,
@@ -37,7 +37,7 @@ function(e, t, n) {
                 return _.noStyleAndInteraction ? (0, i.jsx)("span", {
                     title: E,
                     children: c
-                }, _.key) : (0, i.jsx)(a.default, {
+                }, _.key) : (0, i.jsx)(s.default, {
                     title: E,
                     href: t.target,
                     trusted: () => (0, d.isLinkTrusted)(t),

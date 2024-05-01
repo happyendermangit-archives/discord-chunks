@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("47120");
-    var i, r, s, a, o = n("442837"),
+    var i, r, a, s, o = n("442837"),
         l = n("570140"),
         u = n("78839");
     let d = !1,
@@ -36,12 +36,12 @@ function(e, t, n) {
             return _[e]
         }
     }
-    a = "GuildBoostSlotStore", (s = "displayName") in(r = I) ? Object.defineProperty(r, s, {
-        value: a,
+    s = "GuildBoostSlotStore", (a = "displayName") in(r = I) ? Object.defineProperty(r, a, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a, t.default = new I(l.default, {
+    }) : r[a] = s, t.default = new I(l.default, {
         GUILD_BOOST_SLOTS_FETCH_SUCCESS: function(e) {
             let {
                 guildBoostSlots: t

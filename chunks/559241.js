@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t);
     var i = n("313361"),
         r = n("592125"),
-        s = n("901648"),
-        a = n("281301");
+        a = n("901648"),
+        s = n("281301");
 
     function o(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
@@ -29,7 +29,7 @@ function(e, t, n) {
                 var t;
                 let n = r.default.getChannel(e),
                     o = null !== (t = this.layout) && void 0 !== t ? t : null == n ? void 0 : n.getDefaultLayout();
-                return (0, s.isForumActivityExperimentEnabled)(null == n ? void 0 : n.guild_id) && o === i.ForumLayout.LIST ? a.INCREASED_ACTIVITY_LIST_FORUM_LAYOUT : o
+                return (0, a.isForumActivityExperimentEnabled)(null == n ? void 0 : n.guild_id) && o === i.ForumLayout.LIST ? s.INCREASED_ACTIVITY_LIST_FORUM_LAYOUT : o
             })
         }
     }

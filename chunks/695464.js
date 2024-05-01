@@ -3,14 +3,14 @@ function(e, t, n) {
     n.r(t), n("47120"), n("653041");
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("147479"),
         l = n("900299");
     let u = r.memo(r.forwardRef((e, t) => {
         let {
             onScroll: n,
-            onResize: s,
+            onResize: a,
             listPadding: u = [0, 0, 0, 0],
             renderRow: d,
             renderSection: _,
@@ -68,35 +68,35 @@ function(e, t, n) {
                     n = t ? f.length : 1,
                     i = u[0],
                     r = [],
-                    s = [];
+                    a = [];
                 i += G();
-                for (let a = 0; a < n; a++) {
-                    let n = t ? f[a] : T,
-                        o = (null == f ? void 0 : f[a]) !== 0;
-                    s[a] = {
+                for (let s = 0; s < n; s++) {
+                    let n = t ? f[s] : T,
+                        o = (null == f ? void 0 : f[s]) !== 0;
+                    a[s] = {
                         firstRowIndex: e,
                         offset: {
                             top: i,
                             bottom: -1
                         }
-                    }, i += B(a);
+                    }, i += B(s);
                     for (let t = 0; t < n; t++) {
-                        let n = i + (o ? w(a, t, e) : 0),
-                            s = {
+                        let n = i + (o ? w(s, t, e) : 0),
+                            a = {
                                 top: i,
                                 bottom: n
                             };
                         r[e] = {
-                            sectionIndex: a,
-                            offset: s
+                            sectionIndex: s,
+                            offset: a
                         }, i = n, e++
                     }
-                    i += k(a) + V(a), s[a].offset.bottom = i
+                    i += k(s) + V(s), a[s].offset.bottom = i
                 }
                 return {
                     totalHeight: i += u[2],
                     rowDescriptors: r,
-                    sectionDescriptors: s
+                    sectionDescriptors: a
                 }
             }, [w, k, B, V, u, T, f, G]);
         x.current = j, F.current = Y;
@@ -109,11 +109,11 @@ function(e, t, n) {
                 offsetHeight: i,
                 scrollTop: r
             } = t;
-            y(i), D(r), null == s || s({
+            y(i), D(r), null == a || a({
                 width: n,
                 height: i
             })
-        }, [s]);
+        }, [a]);
         r.useLayoutEffect(() => {
             -1 === M && W()
         }, [M, W]), r.useEffect(() => {
@@ -154,24 +154,24 @@ function(e, t, n) {
                     } = t,
                     r = F.current[e];
                 null != r && window.requestAnimationFrame(() => {
-                    var t, s;
+                    var t, a;
                     let {
-                        sectionIndex: a,
+                        sectionIndex: s,
                         offset: {
                             top: o,
                             bottom: l
                         }
-                    } = r, u = B(a), d = o - (p ? u : 0) - i <= U.current, _ = l + i >= U.current + M;
+                    } = r, u = B(s), d = o - (p ? u : 0) - i <= U.current, _ = l + i >= U.current + M;
                     if (d) {
                         let r = U.current + u - o,
-                            s = p ? U.current - r : o;
+                            a = p ? U.current - r : o;
                         null === (t = P.current) || void 0 === t || t.scrollTo({
-                            to: 0 === e ? 0 : s - i,
+                            to: 0 === e ? 0 : a - i,
                             animate: n
                         })
                     } else if (_) {
                         let e = l - (U.current + M);
-                        null === (s = P.current) || void 0 === s || s.scrollTo({
+                        null === (a = P.current) || void 0 === a || a.scrollTo({
                             to: U.current + e + i,
                             animate: n
                         })
@@ -226,36 +226,36 @@ function(e, t, n) {
             null != I && v < r ? i.push(I()) : n += r;
             for (let r = 0; r < j.length; r++) {
                 let {
-                    firstRowIndex: s,
+                    firstRowIndex: a,
                     offset: {
-                        top: a,
+                        top: s,
                         bottom: o
                     }
-                } = j[r], l = o - a;
+                } = j[r], l = o - s;
                 if (0 === l) continue;
                 let u = B(r),
                     I = k(r),
                     T = V(r);
                 if (o <= v) n = o;
-                else if (o > v && a < e) {
-                    t = s;
+                else if (o > v && s < e) {
+                    t = a;
                     let o = [],
                         f = 0,
                         S = 0,
-                        h = a + u >= v && a <= e;
+                        h = s + u >= v && s <= e;
                     for (null != c && (p || h) && o.push(c(r)), !h && !p && (n += u); f + u + I < l - T;) {
                         let i = w(r, S, t),
-                            s = a + f + u,
-                            l = s + i;
+                            a = s + f + u,
+                            l = a + i;
                         if (l <= v) n = l - (p ? u : 0);
-                        else if (l > v && s < e) o.push(d(t, {
+                        else if (l > v && a < e) o.push(d(t, {
                             sectionIndex: r,
                             sectionRowIndex: S
                         }));
                         else break;
                         f += i, S++, t++
                     }
-                    let A = a + u + f,
+                    let A = s + u + f,
                         m = A + I >= v && A <= e;
                     null != E && m && o.push(E(r)), null != _ ? i.push(_(r, o)) : i = [...i, ...o]
                 } else break
@@ -277,7 +277,7 @@ function(e, t, n) {
         }), [H]), q = R ? o.AdvancedScrollerNone : o.AdvancedScrollerThin;
         return (0, i.jsxs)(q, {
             fade: C,
-            className: a()(l.scroller, O),
+            className: s()(l.scroller, O),
             ref: P,
             onScroll: K,
             children: [(0, i.jsx)("div", {

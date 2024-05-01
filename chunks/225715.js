@@ -23,8 +23,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        s = n.n(r),
-        a = n("481060"),
+        a = n.n(r),
+        s = n("481060"),
         o = n("41959"),
         l = n("245561"),
         u = n("7027");
@@ -33,14 +33,14 @@ function(e, t, n) {
                 application: t,
                 asset: n,
                 className: r,
-                ...s
+                ...a
             } = e;
             return (0, i.jsx)(o.default, {
                 application: t,
                 size: o.ApplicationIconSize.MEDIUM,
                 asset: n,
                 className: r,
-                ...s
+                ...a
             })
         },
         _ = e => {
@@ -50,8 +50,8 @@ function(e, t, n) {
                 id: r,
                 ...o
             } = e;
-            return (0, i.jsx)(a.Heading, {
-                className: s()(u.header, n),
+            return (0, i.jsx)(s.Heading, {
+                className: a()(u.header, n),
                 variant: "heading-xl/extrabold",
                 id: r,
                 ...o,
@@ -69,16 +69,16 @@ function(e, t, n) {
                 className: t,
                 title: n,
                 description: r,
-                ...s
+                ...a
             } = e;
             return (0, i.jsxs)("div", {
                 className: t,
-                ...s,
-                children: [(0, i.jsx)(a.Heading, {
+                ...a,
+                children: [(0, i.jsx)(s.Heading, {
                     variant: "heading-md/bold",
                     color: "header-primary",
                     children: n
-                }), (0, i.jsx)(a.Heading, {
+                }), (0, i.jsx)(s.Heading, {
                     variant: "heading-sm/normal",
                     color: "header-secondary",
                     children: r
@@ -90,11 +90,11 @@ function(e, t, n) {
                 applicationId: t,
                 storeListingBenefits: n,
                 skuBenefits: r,
-                className: a,
+                className: s,
                 ...o
             } = e;
             return (0, i.jsx)("div", {
-                className: s()(u.benefitsContainer, a),
+                className: a()(u.benefitsContainer, s),
                 ...o,
                 children: (0, i.jsx)(l.SubscriptionListingBenefits, {
                     applicationId: t,
@@ -111,7 +111,7 @@ function(e, t, n) {
                 ...r
             } = e;
             return (0, i.jsx)("div", {
-                className: s()(u.container, n),
+                className: a()(u.container, n),
                 ...r,
                 children: t
             })

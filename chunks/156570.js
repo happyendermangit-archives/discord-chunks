@@ -7,9 +7,9 @@ function(e, t, n) {
     });
     var i = n("81825"),
         r = n("218946"),
-        s = n("598077");
+        a = n("598077");
 
-    function a(e, t, n) {
+    function s(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -36,7 +36,7 @@ function(e, t, n) {
                 assets: null != e.assets ? e.assets.map(r.transformStoreAssetFromServer) : null,
                 staffNotes: null != t ? {
                     content: t.content,
-                    user: null != t.user ? new s.default(t.user) : null
+                    user: null != t.user ? new a.default(t.user) : null
                 } : null,
                 guild: null != e.guild ? {
                     id: e.guild.id,
@@ -61,7 +61,7 @@ function(e, t, n) {
             return null == this.description
         }
         constructor(e) {
-            super(), a(this, "id", void 0), a(this, "skuId", void 0), a(this, "summary", void 0), a(this, "tagline", void 0), a(this, "flavorText", void 0), a(this, "description", void 0), a(this, "carouselItems", void 0), a(this, "childSkuIds", void 0), a(this, "alternativeSkuIds", void 0), a(this, "assets", void 0), a(this, "staffNotes", void 0), a(this, "guild", void 0), a(this, "thumbnail", void 0), a(this, "boxArt", void 0), a(this, "previewVideo", void 0), a(this, "headerBackground", void 0), a(this, "headerLogoDarkTheme", void 0), a(this, "headerLogoLightTheme", void 0), a(this, "heroBackground", void 0), a(this, "heroVideo", void 0), a(this, "entitlementBranchId", void 0), a(this, "benefits", void 0), this.id = e.id, this.skuId = e.skuId, this.summary = e.summary, this.tagline = e.tagline, this.flavorText = e.flavorText, this.description = e.description, this.carouselItems = e.carouselItems || [], this.childSkuIds = e.childSkuIds || [], this.alternativeSkuIds = e.alternativeSkuIds || [], this.assets = e.assets || [], this.staffNotes = e.staffNotes, this.guild = e.guild, this.thumbnail = e.thumbnail || null, this.boxArt = e.boxArt || null, this.previewVideo = e.previewVideo || null, this.headerBackground = e.headerBackground || null, this.headerLogoDarkTheme = e.headerLogoDarkTheme || null, this.headerLogoLightTheme = e.headerLogoLightTheme || null, this.heroBackground = e.heroBackground || null, this.heroVideo = e.heroVideo || null, this.entitlementBranchId = e.entitlementBranchId || null, this.benefits = e.benefits || []
+            super(), s(this, "id", void 0), s(this, "skuId", void 0), s(this, "summary", void 0), s(this, "tagline", void 0), s(this, "flavorText", void 0), s(this, "description", void 0), s(this, "carouselItems", void 0), s(this, "childSkuIds", void 0), s(this, "alternativeSkuIds", void 0), s(this, "assets", void 0), s(this, "staffNotes", void 0), s(this, "guild", void 0), s(this, "thumbnail", void 0), s(this, "boxArt", void 0), s(this, "previewVideo", void 0), s(this, "headerBackground", void 0), s(this, "headerLogoDarkTheme", void 0), s(this, "headerLogoLightTheme", void 0), s(this, "heroBackground", void 0), s(this, "heroVideo", void 0), s(this, "entitlementBranchId", void 0), s(this, "benefits", void 0), this.id = e.id, this.skuId = e.skuId, this.summary = e.summary, this.tagline = e.tagline, this.flavorText = e.flavorText, this.description = e.description, this.carouselItems = e.carouselItems || [], this.childSkuIds = e.childSkuIds || [], this.alternativeSkuIds = e.alternativeSkuIds || [], this.assets = e.assets || [], this.staffNotes = e.staffNotes, this.guild = e.guild, this.thumbnail = e.thumbnail || null, this.boxArt = e.boxArt || null, this.previewVideo = e.previewVideo || null, this.headerBackground = e.headerBackground || null, this.headerLogoDarkTheme = e.headerLogoDarkTheme || null, this.headerLogoLightTheme = e.headerLogoLightTheme || null, this.heroBackground = e.heroBackground || null, this.heroVideo = e.heroVideo || null, this.entitlementBranchId = e.entitlementBranchId || null, this.benefits = e.benefits || []
         }
     }
 }

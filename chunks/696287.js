@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("846519"),
         r = n("147913"),
-        s = n("77498"),
-        a = n("19780"),
+        a = n("77498"),
+        s = n("19780"),
         o = n("626135"),
         l = n("70956"),
         u = n("581567"),
@@ -51,15 +51,15 @@ function(e, t, n) {
             }), c(this, "logRunningGameHeartbeats", () => {
                 let e = d.default.getRunningGames(),
                     t = {
-                        rtc_connection_id: a.default.getRTCConnectionId(),
-                        media_session_id: a.default.getMediaSessionId()
+                        rtc_connection_id: s.default.getRTCConnectionId(),
+                        media_session_id: s.default.getMediaSessionId()
                     },
                     n = new Set;
                 e.forEach(e => {
                     var i, r;
-                    let a = (0, d.gameKey)(e),
-                        l = !this.runningGameKeys.has(a),
-                        c = null !== (r = e.id) && void 0 !== r ? r : null === (i = s.default.getGameByName(e.name)) || void 0 === i ? void 0 : i.id;
+                    let s = (0, d.gameKey)(e),
+                        l = !this.runningGameKeys.has(s),
+                        c = null !== (r = e.id) && void 0 !== r ? r : null === (i = a.default.getGameByName(e.name)) || void 0 === i ? void 0 : i.id;
                     o.default.track(_.AnalyticEvents.RUNNING_GAME_HEARTBEAT, {
                         game_id: c,
                         game_name: e.name,

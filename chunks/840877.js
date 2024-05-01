@@ -10,8 +10,8 @@ function(e, t, n) {
     }), n("411104");
     var i = n("664751"),
         r = n("544891"),
-        s = n("710845"),
-        a = n("70956"),
+        a = n("710845"),
+        s = n("70956"),
         o = n("981631");
 
     function l(e, t, n) {
@@ -31,11 +31,11 @@ function(e, t, n) {
                 else if (202 === r.status) {
                     var i;
                     if (this.query.attempts = (null !== (i = this.query.attempts) && void 0 !== i ? i : 0) + 1, this.query.attempts > 5) return;
-                    let s = r.body.retry_after * a.default.Millis.SECOND;
-                    this.retryDelay = isNaN(s) || 0 === s ? 5e3 : s, this.retryLater(e, t, n), t(r)
+                    let a = r.body.retry_after * s.default.Millis.SECOND;
+                    this.retryDelay = isNaN(a) || 0 === a ? 5e3 : a, this.retryLater(e, t, n), t(r)
                 }
             } catch (e) {
-                new s.default("SearchFetcher").error(e), n(e)
+                new a.default("SearchFetcher").error(e), n(e)
             }
         }
         cancel() {

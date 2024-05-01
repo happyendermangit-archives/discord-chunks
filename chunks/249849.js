@@ -2,31 +2,31 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getTransformedBadgeColors: function() {
-            return a
+            return s
         }
     });
     var i = n("688619"),
         r = n.n(i);
 
-    function s(e, t, n) {
+    function a(e, t, n) {
         if (!r().valid(t)) return e.map(() => "#000000");
         let i = r()(t),
-            s = i.luminance();
-        return e.map((e, t) => i.luminance((e * n[t].base + s * n[t].tint) / (n[t].base + n[t].tint)).hex())
+            a = i.luminance();
+        return e.map((e, t) => i.luminance((e * n[t].base + a * n[t].tint) / (n[t].base + n[t].tint)).hex())
     }
 
-    function a(e) {
+    function s(e) {
         let {
             primaryBaseColors: t,
             primaryTintColor: n,
             primaryTintLuminances: i,
             primaryLuminanceWeights: r,
-            secondaryBaseColors: a,
+            secondaryBaseColors: s,
             secondaryTintColor: o,
             secondaryTintLuminances: l,
             secondaryLuminanceWeights: u
-        } = e, d = null != n ? s(i, n, r) : t, _ = [];
-        return null != a && null != l && null != u && (_ = null != o ? s(l, o, u) : a), {
+        } = e, d = null != n ? a(i, n, r) : t, _ = [];
+        return null != s && null != l && null != u && (_ = null != o ? a(l, o, u) : s), {
             primaryColorsTransformed: d,
             secondaryColorsTransformed: _
         }

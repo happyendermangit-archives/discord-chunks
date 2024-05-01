@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t);
-    var i, r, s, a, o = n("392711"),
+    var i, r, a, s, o = n("392711"),
         l = n.n(o),
         u = n("442837"),
         d = n("570140"),
@@ -25,7 +25,7 @@ function(e, t, n) {
         v = null;
 
     function D(e) {
-        var t, n, i, r, s, a;
+        var t, n, i, r, a, s;
         let o = _.default.getCurrentUser();
         if (null == o) return M();
         T = null !== (t = e.section) && void 0 !== t ? t : T, L = null !== (n = e.section) && void 0 !== n ? n : T, null != e.subsection && null != T && (f[T] = e.subsection), null != e.scrollPosition && null != T && (S[T] = e.scrollPosition), p = !!e.openWithoutBackstack, E = c.FormStates.OPEN, h = {}, m = {
@@ -41,7 +41,7 @@ function(e, t, n) {
                     claimed: o.isClaimed()
                 }
             }
-        }, R = null !== (i = e.onClose) && void 0 !== i ? i : null, C = null !== (r = e.analyticsLocation) && void 0 !== r ? r : null, g = null !== (s = e.analyticsLocations) && void 0 !== s ? s : [], v = null !== (a = e.impressionSource) && void 0 !== a ? a : null
+        }, R = null !== (i = e.onClose) && void 0 !== i ? i : null, C = null !== (r = e.analyticsLocation) && void 0 !== r ? r : null, g = null !== (a = e.analyticsLocations) && void 0 !== a ? a : [], v = null !== (s = e.impressionSource) && void 0 !== s ? s : null
     }
 
     function M() {
@@ -51,7 +51,7 @@ function(e, t, n) {
     function y() {
         E = c.FormStates.OPEN, h = {}
     }
-    class P extends(a = u.default.Store) {
+    class P extends(s = u.default.Store) {
         initialize() {
             this.waitFor(_.default)
         }
@@ -96,12 +96,12 @@ function(e, t, n) {
             return R
         }
     }
-    s = "UserSettingsModalStore", (r = "displayName") in(i = P) ? Object.defineProperty(i, r, {
-        value: s,
+    a = "UserSettingsModalStore", (r = "displayName") in(i = P) ? Object.defineProperty(i, r, {
+        value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : i[r] = s, t.default = new P(d.default, {
+    }) : i[r] = a, t.default = new P(d.default, {
         USER_SETTINGS_MODAL_OPEN: function(e) {
             N = !0, D(e)
         },

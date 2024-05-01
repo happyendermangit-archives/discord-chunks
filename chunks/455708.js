@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("442837"),
         l = n("481060"),
         u = n("570140"),
@@ -100,8 +100,8 @@ function(e, t, n) {
                 resultQuery: t,
                 query: n,
                 favorites: r,
-                searchOffset: s,
-                searchLimit: a,
+                searchOffset: a,
+                searchLimit: s,
                 searchTotalResults: o,
                 suggestions: l,
                 hideFavorites: u
@@ -117,8 +117,8 @@ function(e, t, n) {
                 resultType: d,
                 resultQuery: t,
                 query: n,
-                searchOffset: s,
-                searchLimit: a,
+                searchOffset: a,
+                searchLimit: s,
                 searchTotalResults: o,
                 suggestions: l,
                 onSelectSuggestion: this.handleSelectSuggestion
@@ -133,7 +133,7 @@ function(e, t, n) {
                 id: m.GIF_PICKER_TAB_PANEL_ID,
                 role: "tabpanel",
                 "aria-labelledby": m.GIF_PICKER_TAB_ID,
-                className: a()(p.container, e),
+                className: s()(p.container, e),
                 onClick: R,
                 ref: t,
                 children: [(0, i.jsx)("div", {
@@ -191,8 +191,8 @@ function(e, t, n) {
         let {
             query: n,
             resultQuery: r,
-            resultItems: s,
-            suggestions: a
+            resultItems: a,
+            suggestions: s
         } = (0, o.useStateFromStoresObject)([c.default], () => ({
             query: c.default.getQuery(),
             resultQuery: c.default.getResultQuery(),
@@ -204,8 +204,8 @@ function(e, t, n) {
             forwardedRef: t,
             query: null != l && "" !== l ? l : n,
             resultQuery: r,
-            resultItems: s,
-            suggestions: a,
+            resultItems: a,
+            suggestions: s,
             favorites: u,
             searchOffset: 0,
             searchTotalResults: c.default.getResultItems().length,

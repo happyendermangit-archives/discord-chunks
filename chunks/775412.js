@@ -5,20 +5,20 @@ function(e, t, n) {
             return o
         },
         useHasActiveTrial: function() {
-            return a
+            return s
         }
     });
     var i = n("442837"),
         r = n("594174"),
-        s = n("78839");
+        a = n("78839");
     n("474936");
-    let a = () => {
-        let e = (0, i.useStateFromStores)([s.default], () => s.default.getPremiumTypeSubscription());
+    let s = () => {
+        let e = (0, i.useStateFromStores)([a.default], () => a.default.getPremiumTypeSubscription());
         return (null == e ? void 0 : e.trialId) != null
     };
 
     function o() {
-        let e = (0, i.useStateFromStores)([s.default], () => s.default.getPremiumTypeSubscription()),
+        let e = (0, i.useStateFromStores)([a.default], () => a.default.getPremiumTypeSubscription()),
             t = (0, i.useStateFromStores)([r.default], () => r.default.getCurrentUser());
         return (null == e ? void 0 : e.trialId) != null ? null == t ? void 0 : t.premiumType : null
     }

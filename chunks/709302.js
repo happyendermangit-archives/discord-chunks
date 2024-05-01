@@ -11,9 +11,9 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    class s extends i.default {
+    class a extends i.default {
         static fromPath(e) {
-            return new s({
+            return new a({
                 id: e,
                 path: e
             })
@@ -22,5 +22,5 @@ function(e, t, n) {
             super(), r(this, "id", void 0), r(this, "path", void 0), this.id = e.id, this.path = e.path
         }
     }
-    t.default = s
+    t.default = a
 }

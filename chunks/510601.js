@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         isGamingVoiceActivityEnabled: function() {
-            return s
+            return a
         },
         useIsGamingVoiceActivityEnabled: function() {
             return r
@@ -44,7 +44,7 @@ function(e, t, n) {
         return n
     }
 
-    function s(e, t) {
+    function a(e, t) {
         let {
             showGamingVoiceActivity: n
         } = i.getCurrentConfig({

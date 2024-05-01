@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         isEligibleForExplicitMediaRedaction: function() {
-            return a
+            return s
         },
         useIsEligibleForExplicitMediaRedaction: function() {
             return o
@@ -24,7 +24,7 @@ function(e, t, n) {
                 }
             }]
         }),
-        s = (0, i.createExperiment)({
+        a = (0, i.createExperiment)({
             kind: "user",
             id: "2023-08_explicit_media_redaction_teen",
             label: "Explicit Media Redaction for Teens",
@@ -40,7 +40,7 @@ function(e, t, n) {
             }]
         });
 
-    function a() {
+    function s() {
         let {
             enabled: e
         } = r.getCurrentConfig({
@@ -49,7 +49,7 @@ function(e, t, n) {
             autoTrackExposure: !0
         }), {
             enabled: t
-        } = s.getCurrentConfig({
+        } = a.getCurrentConfig({
             location: "686da2_1"
         }, {
             autoTrackExposure: !0
@@ -66,7 +66,7 @@ function(e, t, n) {
             autoTrackExposure: !0
         }), {
             enabled: t
-        } = s.useExperiment({
+        } = a.useExperiment({
             location: "686da2_2"
         }, {
             autoTrackExposure: !0

@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("470079"),
         r = n("442837"),
-        s = n("314897"),
-        a = n("454175"),
+        a = n("314897"),
+        s = n("454175"),
         o = n("385845"),
         l = n("761174");
 
@@ -18,7 +18,7 @@ function(e, t, n) {
                 location: "28tk0bf_4"
             }),
             n = i.useRef(new AbortController),
-            u = (0, r.useStateFromStores)([s.default], () => s.default.getId()),
+            u = (0, r.useStateFromStores)([a.default], () => a.default.getId()),
             {
                 recentGames: d,
                 currentUserRecentGames: _,
@@ -42,7 +42,7 @@ function(e, t, n) {
             }, [_]),
             T = i.useCallback(async () => {
                 if (t && !c && !E) try {
-                    await a.default.fetchUserRecentGames(e, n.current.signal, !0)
+                    await s.default.fetchUserRecentGames(e, n.current.signal, !0)
                 } catch (e) {}
             }, [E, t, c, e]);
         return i.useEffect(() => {

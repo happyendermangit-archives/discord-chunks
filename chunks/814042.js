@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("481060"),
         l = n("100527"),
         u = n("906732"),
@@ -27,7 +27,7 @@ function(e, t, n) {
         p = n("867250");
     let O = () => (0, f.setShowPremiumUpsell)(!1),
         R = e => {
-            var t, n, s;
+            var t, n, a;
             let {
                 onLearnMore: f
             } = e, {
@@ -45,7 +45,7 @@ function(e, t, n) {
                 L = (null == C ? void 0 : null === (t = C.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === A.PremiumSubscriptionSKUs.TIER_0,
                 v = null != C || null != g;
             return (0, i.jsxs)("div", {
-                className: a()(N.upsellWrapper, {
+                className: s()(N.upsellWrapper, {
                     [N.unifyTrialUpsell]: v
                 }),
                 children: [v ? (0, i.jsx)(c.default, {
@@ -53,7 +53,7 @@ function(e, t, n) {
                     discountOffer: g,
                     onClose: O,
                     type: A.PremiumUpsellTypes.STICKER_PICKER_UPSELL,
-                    subscriptionTier: null !== (s = null == C ? void 0 : null === (n = C.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== s ? s : A.PremiumSubscriptionSKUs.TIER_2,
+                    subscriptionTier: null !== (a = null == C ? void 0 : null === (n = C.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : A.PremiumSubscriptionSKUs.TIER_2,
                     children: L ? m.default.Messages.STICKER_PICKER_PREMIUM_TIER_UPSELL_DESCRIPTION.format({
                         planName: (0, T.getTierDisplayName)(A.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
                         onClick: f

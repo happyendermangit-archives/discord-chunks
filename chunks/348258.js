@@ -4,20 +4,20 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("960259"),
-        s = n("458890"),
-        a = n("325767");
+        a = n("458890"),
+        s = n("325767");
     t.default = (0, r.replaceIcon)(function(e) {
         let {
             width: t = 24,
             height: n = 24,
             color: r = "currentColor",
-            className: s,
+            className: a,
             foreground: o,
             ...l
         } = e;
         return (0, i.jsx)("svg", {
-            ...(0, a.default)(l),
-            className: s,
+            ...(0, s.default)(l),
+            className: a,
             width: t,
             height: n,
             viewBox: "0 0 24 24",
@@ -27,7 +27,7 @@ function(e, t, n) {
                 className: o
             })
         })
-    }, s.ShieldUserIcon, void 0, {
+    }, a.ShieldUserIcon, void 0, {
         size: 24
     })
 }

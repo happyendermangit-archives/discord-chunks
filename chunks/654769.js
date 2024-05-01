@@ -2,9 +2,9 @@ function(e, t, n) {
     "use strict";
     n.r(t), n("47120"), n("177593");
     var i, r = n("392711"),
-        s = n.n(r),
-        a = n("525654"),
-        o = n.n(a),
+        a = n.n(r),
+        s = n("525654"),
+        o = n.n(s),
         l = n("579806"),
         u = n("292959"),
         d = n("246946"),
@@ -30,7 +30,7 @@ function(e, t, n) {
         A = parseInt(e) > 10 || parseInt(t) >= 15063
     }
     let m = S && A || "Chrome" === o().name && 47 > parseFloat(o().version) || "Firefox" === o().name && 52 > parseFloat(o().version),
-        N = s().throttle(E.playSound, 1e3, {
+        N = a().throttle(E.playSound, 1e3, {
             leading: !0
         });
 
@@ -86,7 +86,7 @@ function(e, t, n) {
             })
         },
         showNotification: function(e, t, n, i, r) {
-            var a, o, l, d;
+            var s, o, l, d;
             let E;
             if (g(r)) {
                 null != r.sound && !1 !== r.playSoundIfDisabled && C(r.sound, null !== (o = r.volume) && void 0 !== o ? o : 1, r.soundpack);
@@ -94,7 +94,7 @@ function(e, t, n) {
             }
             null != r.sound && C(r.sound, null !== (l = r.volume) && void 0 !== l ? l : 1, r.soundpack);
             let f = null !== (d = null == r ? void 0 : r.tag) && void 0 !== d ? d : null;
-            (0, c.isLinux)() && (n = s().escape(n));
+            (0, c.isLinux)() && (n = a().escape(n));
             let h = {
                 icon: e,
                 body: n,
@@ -107,7 +107,7 @@ function(e, t, n) {
             } catch (e) {
                 return null
             }
-            return (null === (a = r.onShown) || void 0 === a || a.call(r), !r.omitViewTracking && _.default.track(T.AnalyticEvents.NOTIFICATION_VIEWED, i), E.onclick = () => {
+            return (null === (s = r.onShown) || void 0 === s || s.call(r), !r.omitViewTracking && _.default.track(T.AnalyticEvents.NOTIFICATION_VIEWED, i), E.onclick = () => {
                 var e;
                 c.isPlatformEmbedded ? I.default.focus() : (window.focus(), E.close()), !r.omitClickTracking && _.default.track(T.AnalyticEvents.NOTIFICATION_CLICKED, i), null === (e = r.onClick) || void 0 === e || e.call(r)
             }, m && setTimeout(() => E.close(), 5e3), A) ? E : {

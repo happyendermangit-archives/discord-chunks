@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("693789"),
         l = n("1561"),
         u = n("260034"),
@@ -23,10 +23,10 @@ function(e, t, n) {
         let {
             page: t,
             totalPageCount: n,
-            disabled: s,
+            disabled: a,
             onPageChange: o
         } = e, [_, c] = r.useState(!1), [E, I] = r.useState(null), f = null != E && E >= 1 && E <= n;
-        return s ? (0, i.jsx)(u.Heading, {
+        return a ? (0, i.jsx)(u.Heading, {
             className: T.gap,
             "aria-hidden": !0,
             variant: "heading-sm/semibold",
@@ -50,11 +50,11 @@ function(e, t, n) {
             onKeyPress: e => {
                 "Enter" === e.key && null != E && f && (o(E), c(!1), I(null))
             },
-            disabled: s
+            disabled: a
         }, t.key) : (0, i.jsx)(l.Clickable, {
             onClick: () => c(!0),
             children: (0, i.jsx)(u.Heading, {
-                className: a()(T.roundButton, T.gap),
+                className: s()(T.roundButton, T.gap),
                 "aria-hidden": !0,
                 variant: "heading-sm/semibold",
                 children: "…"
@@ -67,7 +67,7 @@ function(e, t, n) {
             currentPage: t,
             totalCount: n,
             pageSize: r,
-            maxVisiblePages: s,
+            maxVisiblePages: a,
             disablePaginationGap: u,
             onPageChange: d,
             hideMaxPage: S = !1,
@@ -76,7 +76,7 @@ function(e, t, n) {
         return (0, i.jsx)(E.PaginationController, {
             totalPageCount: A,
             selectedPage: t,
-            maxVisiblePages: s,
+            maxVisiblePages: a,
             hideMaxPage: S,
             onPageChange: function(e) {
                 null != d && d(e)
@@ -87,7 +87,7 @@ function(e, t, n) {
                     hasMultiplePages: n
                 } = e;
                 return n ? (0, i.jsx)("div", {
-                    className: a()(T.pageControlContainer, h),
+                    className: s()(T.pageControlContainer, h),
                     children: (0, i.jsx)("nav", {
                         className: T.pageControl,
                         children: t.map(e => {
@@ -119,7 +119,7 @@ function(e, t, n) {
                                 case E.PaginationTypes.PAGE:
                                     ;
                                     return t = e, (0, i.jsx)(l.Clickable, {
-                                        className: a()(T.roundButton, {
+                                        className: s()(T.roundButton, {
                                             [T.activeButton]: t.selected
                                         }),
                                         onClick: t.selected ? void 0 : t.navigateToPage,

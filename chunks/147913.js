@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return a
         }
     }), n("411104"), n("47120"), n("17089");
     var i = n("570140");
@@ -15,7 +15,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    class s {
+    class a {
         initialize() {
             this.initializedCount++, !(this.initializedCount > 1) && (this._initialize(), Object.entries(this.actions).forEach(e => {
                 let [t, n] = e;

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     let i;
     n.r(t), n("47120");
-    var r, s, a, o, l = n("392711"),
+    var r, a, s, o, l = n("392711"),
         u = n.n(l),
         d = n("442837"),
         _ = n("570140"),
@@ -31,8 +31,8 @@ function(e, t, n) {
     function L(e, t) {
         let n = {};
         g.forEach(r => {
-            var s;
-            r !== R.default.getGuildId() && r !== N.default.getGuildId() && r !== (null === (s = S.default.getChannel(O.default.getChannelId())) || void 0 === s ? void 0 : s.getGuildId()) && (null == i || i.guildId !== r) && (g.clearWithoutFlushing(r, e), t && (n[r] = g.get(r)))
+            var a;
+            r !== R.default.getGuildId() && r !== N.default.getGuildId() && r !== (null === (a = S.default.getChannel(O.default.getChannelId())) || void 0 === a ? void 0 : a.getGuildId()) && (null == i || i.guildId !== r) && (g.clearWithoutFlushing(r, e), t && (n[r] = g.get(r)))
         }), !u().isEmpty(n) && _.default.dispatch({
             type: "GUILD_SUBSCRIPTIONS_FLUSH",
             subscriptions: n
@@ -118,12 +118,12 @@ function(e, t, n) {
             return null != t && Object.keys(t).length > 0
         }
     }
-    o = "GuildSubscriptionsStore", (a = "displayName") in(s = b) ? Object.defineProperty(s, a, {
+    o = "GuildSubscriptionsStore", (s = "displayName") in(a = b) ? Object.defineProperty(a, s, {
         value: o,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : s[a] = o, t.default = new b(_.default, {
+    }) : a[s] = o, t.default = new b(_.default, {
         CONNECTION_OPEN: M,
         CONNECTION_RESUMED: M,
         CONNECTION_CLOSED: function() {

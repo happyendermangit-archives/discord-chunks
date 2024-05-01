@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("47120");
-    var i, r, s, a, o = n("442837"),
+    var i, r, a, s, o = n("442837"),
         l = n("570140");
     let u = new Map,
         d = !1;
@@ -17,12 +17,12 @@ function(e, t, n) {
             return d
         }
     }
-    a = "ContentInventoryStore", (s = "displayName") in(r = _) ? Object.defineProperty(r, s, {
-        value: a,
+    s = "ContentInventoryStore", (a = "displayName") in(r = _) ? Object.defineProperty(r, a, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a, t.default = new _(l.default, {
+    }) : r[a] = s, t.default = new _(l.default, {
         CONNECTION_OPEN: function() {
             u.clear(), d = !1
         },

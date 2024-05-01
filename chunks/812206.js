@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("47120"), n("653041");
-    var i, r, s, a, o = n("442837"),
+    var i, r, a, s, o = n("442837"),
         l = n("570140"),
         u = n("973616");
     let d = [],
@@ -57,12 +57,12 @@ function(e, t, n) {
             return Object.keys(I)
         }
     }
-    a = "ApplicationStore", (s = "displayName") in(r = S) ? Object.defineProperty(r, s, {
-        value: a,
+    s = "ApplicationStore", (a = "displayName") in(r = S) ? Object.defineProperty(r, a, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a, t.default = new S(l.default, {
+    }) : r[a] = s, t.default = new S(l.default, {
         LOGOUT: function() {
             _ = {}, c = {}, E = {}, I = {}
         },

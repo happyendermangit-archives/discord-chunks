@@ -15,10 +15,10 @@ function(e, t, n) {
             return d
         },
         MAX_LENGTH_SOUND_NAME: function() {
-            return s
+            return a
         },
         MAX_SOUND_LENGTH_SECONDS: function() {
-            return a
+            return s
         },
         NUM_FREQUENTLY_USED_SOUNDS: function() {
             return E
@@ -30,8 +30,8 @@ function(e, t, n) {
             return l
         }
     }), n("47120");
-    let s = 32,
-        a = 5,
+    let a = 32,
+        s = 5,
         o = "DEFAULT";
     (r = i || (i = {}))[r.SUCCESS = 0] = "SUCCESS", r[r.INTERRUPTED = 1] = "INTERRUPTED";
     let l = {

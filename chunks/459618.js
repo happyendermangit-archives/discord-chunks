@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("259443"),
         r = n("442837"),
-        s = n("570140"),
-        a = n("443296"),
+        a = n("570140"),
+        s = n("443296"),
         o = n("873741"),
         l = n("592125"),
         u = n("650774"),
@@ -28,7 +28,7 @@ function(e, t, n) {
             i = null == e.gatewaySeenTimestamp ? null : e.gatewaySeenTimestamp - e.initialSendTimestamp,
             r = (0, o.getSignalStrength)();
         _.default.track(c.AnalyticEvents.SEND_MESSAGE_ROUNDTRIP, {
-            ...(0, a.default)(),
+            ...(0, s.default)(),
             api_latency_ms: n,
             gateway_latency_ms: i,
             channel_id: t.id,
@@ -84,7 +84,7 @@ function(e, t, n) {
             }) : t[n] = i
         }
     }
-    let S = new f(s.default, {
+    let S = new f(a.default, {
         MESSAGE_CREATE: function(e) {
             let {
                 optimistic: t,

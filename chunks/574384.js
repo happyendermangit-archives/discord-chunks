@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("260034"),
-        a = n("993365"),
+        a = n("260034"),
+        s = n("993365"),
         o = n("481060"),
         l = n("489863"),
         u = n("689938"),
@@ -40,11 +40,11 @@ function(e, t, n) {
         }));
         return (0, i.jsxs)("div", {
             className: d.selectorGroup,
-            children: [(0, i.jsx)(s.Heading, {
+            children: [(0, i.jsx)(a.Heading, {
                 variant: "heading-deprecated-12/semibold",
                 className: d.sectionLabel,
                 children: u.default.Messages.OAUTH2_ADD_WEBHOOK_INCOMING
-            }), null != E && "" !== E ? (0, i.jsx)(a.Text, {
+            }), null != E && "" !== E ? (0, i.jsx)(s.Text, {
                 variant: "text-xs/normal",
                 color: "text-danger",
                 children: E
@@ -56,15 +56,15 @@ function(e, t, n) {
                 options: S,
                 isSelected: e => e === _,
                 serialize: e => e,
-                renderOptionLabel: e => (0, i.jsx)(a.Text, {
+                renderOptionLabel: e => (0, i.jsx)(s.Text, {
                     variant: "text-md/normal",
                     children: e.label
                 }),
-                renderOptionValue: e => (0, i.jsx)(a.Text, {
+                renderOptionValue: e => (0, i.jsx)(s.Text, {
                     variant: "text-md/normal",
                     children: e[0].label
                 })
-            }), (0, i.jsx)(a.Text, {
+            }), (0, i.jsx)(s.Text, {
                 variant: "text-xs/normal",
                 color: "header-secondary",
                 className: d.label,

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         BlockInteractions: function() {
-            return s
+            return a
         },
         BlockInteractionsContext: function() {
             return r
@@ -11,7 +11,7 @@ function(e, t, n) {
     var i = n("735250");
     let r = n("470079").createContext(!1);
 
-    function s(e) {
+    function a(e) {
         let {
             children: t
         } = e;

@@ -6,16 +6,16 @@ function(e, t, n) {
             return o
         },
         CLAN_BADGE_PALETTE_PRESETS: function() {
-            return s
+            return a
         },
         ClanBadgeKind: function() {
             return i
         },
         getRandomClanBadgePreset: function() {
-            return a
+            return s
         }
     }), (r = i || (i = {}))[r.SWORD = 0] = "SWORD", r[r.WATER_DROP = 1] = "WATER_DROP", r[r.SKULL = 2] = "SKULL", r[r.TOADSTOOL = 3] = "TOADSTOOL", r[r.MOON = 4] = "MOON", r[r.LIGHTNING = 5] = "LIGHTNING", r[r.LEAF = 6] = "LEAF", r[r.HEART = 7] = "HEART", r[r.FIRE = 8] = "FIRE", r[r.COMPASS = 9] = "COMPASS", r[r.CROSSHAIRS = 10] = "CROSSHAIRS", r[r.FLOWER = 11] = "FLOWER", r[r.FORCE = 12] = "FORCE", r[r.GEM = 13] = "GEM", r[r.LAVA = 14] = "LAVA", r[r.PSYCHIC = 15] = "PSYCHIC", r[r.SMOKE = 16] = "SMOKE", r[r.SNOW = 17] = "SNOW", r[r.SOUND = 18] = "SOUND", r[r.SUN = 19] = "SUN", r[r.WIND = 20] = "WIND";
-    let s = [{
+    let a = [{
         primary: "#ff1c90",
         secondary: "#ff7fc0"
     }, {
@@ -56,8 +56,8 @@ function(e, t, n) {
         secondary: "#555555"
     }];
 
-    function a() {
-        return s[Math.floor(Math.random() * s.length)]
+    function s() {
+        return a[Math.floor(Math.random() * a.length)]
     }
     let o = {
         0: 2,

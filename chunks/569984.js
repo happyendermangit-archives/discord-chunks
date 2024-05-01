@@ -1,75 +1,70 @@
 function(e, t, n) {
     "use strict";
-    let i, r, s, a, o, l, u, d, _, c, E;
+    let i, r, a, s, o, l, u, d, _, c, E;
     n.r(t), n("47120");
-    var I, T, f, S, h = n("259443"),
-        A = n("887003"),
-        m = n("442837"),
-        N = n("570140"),
-        p = n("497505"),
-        O = n("918701"),
-        R = n("5881"),
-        C = n("46140");
-    let g = new h.Logger("QuestsStore"),
-        L = () => (0, R.getIsEligibleForQuestsLogging)({
-            location: C.QuestsExperimentLocations.QUESTS_STORE
-        });
+    var I, T, f, S, h = n("887003"),
+        A = n("442837"),
+        m = n("570140"),
+        N = n("497505"),
+        p = n("918701"),
+        O = n("5881"),
+        R = n("46140");
 
-    function v() {
-        i = !1, r = new Map, s = 0, a = new Set, o = new Set, l = new Set, u = new Set, d = new Set, _ = new Map, c = new Map, E = new Map
+    function C() {
+        i = !1, r = new Map, a = 0, s = new Set, o = new Set, l = new Set, u = new Set, d = new Set, _ = new Map, c = new Map, E = new Map
     }
 
-    function D(e, t) {
+    function g(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
                 updateProgress: !1
             },
             i = (r = new Map(r)).get(e);
         if (null != i) {
-            var s;
-            let a = null === (s = i.userStatus) || void 0 === s ? void 0 : s.streamProgressSeconds,
+            var a;
+            let s = null === (a = i.userStatus) || void 0 === a ? void 0 : a.streamProgressSeconds,
                 o = {
                     ...i,
                     ...t
                 };
-            !(n.updateProgress || null == o.userStatus || null == a || null != o.userStatus.completedAt || null == o.userStatus.enrolledAt) && null != o.userStatus && (o.userStatus = {
+            !(n.updateProgress || null == o.userStatus || null == s || null != o.userStatus.completedAt || null == o.userStatus.enrolledAt) && null != o.userStatus && (o.userStatus = {
                 ...o.userStatus,
-                streamProgressSeconds: a
+                streamProgressSeconds: s
             }), r.set(e, o)
         }
     }
 
-    function M(e, t) {
+    function L(e, t) {
         let n = new Map(_);
         n.set(e, t), _ = n
     }
 
-    function y(e, t) {
-        M(e, t);
+    function v(e, t) {
+        L(e, t);
         let n = r.get(e),
             i = null == n ? void 0 : n.userStatus;
-        null != i && null == i.claimedAt && D(e, {
+        null != i && null == i.claimedAt && g(e, {
             userStatus: {
                 ...i,
                 claimedAt: t.claimedAt
             }
         })
     }
-    v();
+    C();
 
-    function P(e) {
+    function D(e) {
         null != E.get(e) && (E = new Map(E)).delete(e)
     }
 
-    function U(e) {
-        let t = new Set(a);
-        t.delete(e), a = t
+    function M(e) {
+        let t = new Set(s);
+        t.delete(e), s = t
     }
 
-    function b(e) {
+    function y(e) {
         let t = new Set(d);
         t.delete(e), d = t
     }
-    class G extends(I = m.default.Store) {
+    class P extends(I = A.default.Store) {
         get quests() {
             return r
         }
@@ -77,10 +72,10 @@ function(e, t, n) {
             return i
         }
         get lastFetchedCurrentQuests() {
-            return s
+            return a
         }
         isEnrolling(e) {
-            return a.has(e)
+            return s.has(e)
         }
         isClaimingRewardCode(e) {
             return o.has(e)
@@ -107,26 +102,28 @@ function(e, t, n) {
             return r.get(e)
         }
     }
-    S = "QuestsStore", (f = "displayName") in(T = G) ? Object.defineProperty(T, f, {
+    S = "QuestsStore", (f = "displayName") in(T = P) ? Object.defineProperty(T, f, {
         value: S,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : T[f] = S, t.default = new G(N.default, {
+    }) : T[f] = S, t.default = new P(m.default, {
         LOGOUT: function() {
-            v()
+            C()
         },
         QUESTS_FETCH_CURRENT_QUESTS_BEGIN: function() {
-            s = Date.now(), i = !0
+            a = Date.now(), i = !0
         },
         QUESTS_FETCH_CURRENT_QUESTS_SUCCESS: function(e) {
             let {
                 quests: t
             } = e;
-            for (let e of (i = !1, r = new Map, t)) r.set(e.id, e), L() && e.targetedContent.includes(p.QuestContent.QUEST_BAR) && g.log("Delivered ".concat(e.config.messages.questName, " (").concat(e.id, ")"))
+            for (let e of (i = !1, r = new Map, t)) r.set(e.id, e), e.targetedContent.includes(N.QuestContent.QUEST_BAR) && (0, O.getQuestLogger)({
+                location: R.QuestsExperimentLocations.QUESTS_STORE
+            }).log("Delivered ".concat(e.config.messages.questName, " (").concat(e.id, ")"))
         },
         QUESTS_FETCH_CURRENT_QUESTS_FAILURE: function() {
-            s = 0, i = !1
+            a = 0, i = !1
         },
         QUESTS_SEND_HEARTBEAT_SUCCESS: function(e) {
             let {
@@ -134,11 +131,11 @@ function(e, t, n) {
                 streamKey: n,
                 userStatus: i
             } = e;
-            D(t, {
+            g(t, {
                 userStatus: i
             }, {
                 updateProgress: !0
-            }), P(n)
+            }), D(n)
         },
         QUESTS_SEND_HEARTBEAT_FAILURE: function(e) {
             let {
@@ -154,22 +151,22 @@ function(e, t, n) {
         QUESTS_ENROLL_BEGIN: function(e) {
             let {
                 questId: t
-            } = e, n = new Set(a);
-            n.add(t), a = n
+            } = e, n = new Set(s);
+            n.add(t), s = n
         },
         QUESTS_ENROLL_SUCCESS: function(e) {
             let {
                 enrolledQuestUserStatus: t
             } = e;
-            D(t.questId, {
+            g(t.questId, {
                 userStatus: t
-            }), U(t.questId)
+            }), M(t.questId)
         },
         QUESTS_ENROLL_FAILURE: function(e) {
             let {
                 questId: t
             } = e;
-            U(t)
+            M(t)
         },
         QUESTS_FETCH_REWARD_CODE_BEGIN: function(e) {
             let {
@@ -182,7 +179,7 @@ function(e, t, n) {
                 questId: t,
                 rewardCode: n
             } = e, i = new Set(u);
-            i.delete(t), u = i, y(t, n)
+            i.delete(t), u = i, v(t, n)
         },
         QUESTS_FETCH_REWARD_CODE_FAILURE: function(e) {
             let {
@@ -201,7 +198,7 @@ function(e, t, n) {
                 questId: t,
                 rewardCode: n
             } = e, i = new Set(o);
-            i.delete(t), o = i, y(t, n)
+            i.delete(t), o = i, v(t, n)
         },
         QUESTS_CLAIM_REWARD_CODE_FAILURE: function(e) {
             let {
@@ -224,29 +221,29 @@ function(e, t, n) {
                 let n = new Map(c);
                 n.set(e, t.items), c = n;
                 let i = r.get(e),
-                    s = null == i ? void 0 : i.userStatus;
-                if (null != i && null != s && null == s.claimedAt) {
-                    var a;
+                    a = null == i ? void 0 : i.userStatus;
+                if (null != i && null != a && null == a.claimedAt) {
+                    var s;
                     let n = function(e) {
                         var t;
                         let {
                             quest: n,
                             entitlements: i
                         } = e;
-                        if (!(0, O.isTieredRewardCodeQuest)({
+                        if (!(0, p.isTieredRewardCodeQuest)({
                                 quest: n
                             })) return null;
                         let r = null === (t = i.items[0].tenantMetadata) || void 0 === t ? void 0 : t.questRewards.reward;
-                        return (null == r ? void 0 : r.tag) !== A.QuestRewardTypes.REWARD_CODE ? null : r.rewardCode
+                        return (null == r ? void 0 : r.tag) !== h.QuestRewardTypes.REWARD_CODE ? null : r.rewardCode
                     }({
                         quest: i,
                         entitlements: t
                     });
-                    null != n && M(e, n), D(e, {
+                    null != n && L(e, n), g(e, {
                         userStatus: {
-                            ...s,
+                            ...a,
                             claimedAt: t.claimedAt,
-                            claimedTier: null !== (a = null == n ? void 0 : n.tier) && void 0 !== a ? a : null
+                            claimedTier: null !== (s = null == n ? void 0 : n.tier) && void 0 !== s ? s : null
                         }
                     })
                 }
@@ -268,33 +265,33 @@ function(e, t, n) {
             let {
                 dismissedQuestUserStatus: t
             } = e;
-            D(t.questId, {
+            g(t.questId, {
                 userStatus: t
-            }), b(t.questId)
+            }), y(t.questId)
         },
         QUESTS_DISMISS_CONTENT_FAILURE: function(e) {
             let {
                 questId: t
             } = e;
-            b(t)
+            y(t)
         },
         STREAM_CLOSE: function(e) {
             let {
                 streamKey: t
             } = e;
-            P(t)
+            D(t)
         },
         QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE: function(e) {
             let {
                 streamKey: t
             } = e;
-            P(t)
+            D(t)
         },
         QUESTS_PREVIEW_UPDATE_SUCCESS: function(e) {
             let {
                 previewQuestUserStatus: t
             } = e;
-            D(t.questId, {
+            g(t.questId, {
                 userStatus: t
             }), null == t.claimedAt && (_ = new Map(_)).delete(t.questId)
         },
@@ -302,7 +299,7 @@ function(e, t, n) {
             let {
                 userStatus: t
             } = e;
-            D(t.questId, {
+            g(t.questId, {
                 userStatus: t
             }, {
                 updateProgress: !0

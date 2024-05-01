@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("724458"), n("47120"), n("757143"), n("773603"), n("315314"), n("610138"), n("216116"), n("78328"), n("815648"), n("653041");
     var i = n("392711"),
         r = n.n(i),
-        s = n("302454"),
-        a = n.n(s),
+        a = n("302454"),
+        s = n.n(a),
         o = n("675478"),
         l = n("131704"),
         u = n("601964"),
@@ -40,41 +40,41 @@ function(e, t, n) {
         var n, i;
         if (!t.frecencyBoosters) return {};
         let r = c.default.getFrequentlyWithoutFetchingLatest(),
-            s = r.reduce((e, t) => {
+            a = r.reduce((e, t) => {
                 let {
                     id: n
                 } = t, i = c.default.getScoreWithoutFetchingLatest(n);
                 return i > e ? i : e
             }, 0),
-            a = [];
+            s = [];
         switch (e) {
             case N.AutocompleterResultTypes.GUILD:
-                a = r.filter(e => e instanceof u.default);
+                s = r.filter(e => e instanceof u.default);
                 break;
             case N.AutocompleterResultTypes.USER:
-                a = r.filter(e => e instanceof l.ChannelRecordBase && e.type === p.ChannelTypes.DM);
+                s = r.filter(e => e instanceof l.ChannelRecordBase && e.type === p.ChannelTypes.DM);
                 break;
             case N.AutocompleterResultTypes.GROUP_DM:
-                a = r.filter(e => e instanceof l.ChannelRecordBase && e.isMultiUserDM());
+                s = r.filter(e => e instanceof l.ChannelRecordBase && e.isMultiUserDM());
                 break;
             case N.AutocompleterResultTypes.TEXT_CHANNEL:
-                a = r.filter(e => e instanceof l.ChannelRecordBase && (0, l.isGuildSelectableChannelType)(e.type));
+                s = r.filter(e => e instanceof l.ChannelRecordBase && (0, l.isGuildSelectableChannelType)(e.type));
                 break;
             case N.AutocompleterResultTypes.VOICE_CHANNEL:
-                a = r.filter(e => e instanceof l.ChannelRecordBase && e.isGuildVocal())
+                s = r.filter(e => e instanceof l.ChannelRecordBase && e.isGuildVocal())
         }
         let o = {};
-        for (let t of a) {
+        for (let t of s) {
             let {
                 id: n
             } = t, i = c.default.getScoreWithoutFetchingLatest(n);
             if (e === N.AutocompleterResultTypes.USER && t instanceof l.PrivateChannelRecord) {
-                if (t.type === p.ChannelTypes.DM) o[n = t.getRecipientId()] = 1 + i / s;
+                if (t.type === p.ChannelTypes.DM) o[n = t.getRecipientId()] = 1 + i / a;
                 else if (t.type === p.ChannelTypes.GROUP_DM) {
                     let e = t.recipients.length;
-                    for (let n of t.recipients) o[n] = 1 + i / s * (1 / e)
+                    for (let n of t.recipients) o[n] = 1 + i / a * (1 / e)
                 }
-            } else o[n] = 1 + i / s
+            } else o[n] = 1 + i / a
         }
         for (let e of I.default.getFriendIDs()) o[e] = (null !== (n = o[e]) && void 0 !== n ? n : 1) + .2;
         for (let e of _.default.getDMUserIds()) o[e] = (null !== (i = o[e]) && void 0 !== i ? i : 1) + .1;
@@ -213,7 +213,7 @@ function(e, t, n) {
         queryLink(e, t) {
             let n;
             if (!this._include(N.AutocompleterResultTypes.LINK)) return [];
-            let i = a().sanitizeUrl(e);
+            let i = s().sanitizeUrl(e);
             try {
                 n = new URL(i)
             } catch (e) {
@@ -221,9 +221,9 @@ function(e, t, n) {
             }
             let {
                 pathname: r,
-                hostname: s = "",
+                hostname: a = "",
                 host: o
-            } = n, l = h.default.isDiscordHostname(s) || window.location.host === o;
+            } = n, l = h.default.isDiscordHostname(a) || window.location.host === o;
             return null !== r && l && h.default.isAppRoute(r) ? [{
                 type: N.AutocompleterResultTypes.LINK,
                 record: d.default.fromPath(r),

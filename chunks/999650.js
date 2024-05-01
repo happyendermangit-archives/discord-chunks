@@ -14,8 +14,8 @@ function(e, t, n) {
             return z
         }
     }), n("47120"), n("733860");
-    var i, r, s = n("658722"),
-        a = n.n(s),
+    var i, r, a = n("658722"),
+        s = n.n(a),
         o = n("392711"),
         l = n.n(o),
         u = n("913527"),
@@ -89,8 +89,8 @@ function(e, t, n) {
     function G(e, t) {
         let n, i;
         let r = e.getFullMatch().trim().toLowerCase(),
-            s = D()[r];
-        return null != s ? [n, i] = s() : O().has(r) ? [n, i] = v(r, "MMMM", "month") : R().has(r) ? [n, i] = v(r, "dddd", "day") : C().has(r) ? [n, i] = v(r, "YYYY", "year") : [n, i] = v(r, N.SEARCH_DATE_FORMAT, "day"), !!(n.isValid() && i.isValid()) && ("before" === t ? (i = n, n = null) : "after" === t && (n = i, i = null), e.setData("start", n), e.setData("end", i), !0)
+            a = D()[r];
+        return null != a ? [n, i] = a() : O().has(r) ? [n, i] = v(r, "MMMM", "month") : R().has(r) ? [n, i] = v(r, "dddd", "day") : C().has(r) ? [n, i] = v(r, "YYYY", "year") : [n, i] = v(r, N.SEARCH_DATE_FORMAT, "day"), !!(n.isValid() && i.isValid()) && ("before" === t ? (i = n, n = null) : "after" === t && (n = i, i = null), e.setData("start", n), e.setData("end", i), !0)
     }
 
     function w(e) {
@@ -98,7 +98,7 @@ function(e, t, n) {
             n = T.default.getGuildId(),
             i = _.default.getChannels(n)[_.GUILD_SELECTABLE_CHANNELS_KEY].concat(_.default.getChannels(n)[_.GUILD_VOCAL_CHANNELS_KEY]),
             r = _.default.getTextChannelNameDisambiguations(n),
-            s = l().chain(i).map(e => {
+            a = l().chain(i).map(e => {
                 let {
                     channel: t
                 } = e;
@@ -107,7 +107,7 @@ function(e, t, n) {
                 var n, i;
                 return t === (null !== (i = null === (n = r[e.id]) || void 0 === n ? void 0 : n.name) && void 0 !== i ? i : e.name)
             }).value();
-        return null != s && (e.setData("channel", s), !0)
+        return null != a && (e.setData("channel", a), !0)
     }
 
     function B(e) {
@@ -142,7 +142,7 @@ function(e, t, n) {
 
     function F(e, t, n) {
         let i = e.toLocaleLowerCase();
-        return l()(n).filter(e => a()(i, e.toLocaleLowerCase())).take(t).map(e => ({
+        return l()(n).filter(e => s()(i, e.toLocaleLowerCase())).take(t).map(e => ({
             text: e
         })).value()
     }
@@ -150,22 +150,22 @@ function(e, t, n) {
     function H(e, t) {
         let n, i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 10,
             r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-            s = E.default.getSearchType(t),
-            a = {
+            a = E.default.getSearchType(t),
+            s = {
                 query: e = e.split("#")[0],
                 limit: i,
                 request: r
             };
-        switch (s) {
+        switch (a) {
             case N.SearchTypes.GUILD:
                 n = h.default.queryGuildUsers({
-                    ...a,
+                    ...s,
                     guildId: t
                 });
                 break;
             case N.SearchTypes.CHANNEL:
                 n = h.default.queryChannelUsers({
-                    ...a,
+                    ...s,
                     channelId: t
                 });
                 break;
@@ -401,7 +401,7 @@ function(e, t, n) {
             let {
                 text: n
             } = t;
-            return a()(e.toLowerCase(), n)
+            return s()(e.toLowerCase(), n)
         }).take(t).value()
     }
     t.default = K

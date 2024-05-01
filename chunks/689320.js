@@ -11,11 +11,11 @@ function(e, t, n) {
     }
     n.r(t), n.d(t, {
         chain: function() {
-            return a
+            return s
         }
     }), n("47120");
     let r = Symbol.iterator;
-    class s {
+    class a {
         [r]() {
             return this
         }
@@ -35,8 +35,8 @@ function(e, t, n) {
         }
     }
 
-    function a() {
+    function s() {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-        return new s(t)
+        return new a(t)
     }
 }

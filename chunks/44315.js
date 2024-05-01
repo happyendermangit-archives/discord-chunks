@@ -16,8 +16,8 @@ function(e, t, n) {
     }), n("757143");
     var i = n("470079"),
         r = n("688619"),
-        s = n.n(r),
-        a = n("691324"),
+        a = n.n(r),
+        s = n("691324"),
         o = n("399606"),
         l = n("692547"),
         u = n("410030"),
@@ -32,7 +32,7 @@ function(e, t, n) {
     }
 
     function E(e) {
-        return null != e ? a.ColorDetails[e] : null
+        return null != e ? s.ColorDetails[e] : null
     }
 
     function I(e) {
@@ -40,7 +40,7 @@ function(e, t, n) {
         return i.useMemo(() => {
             if (null == e) return null;
             if ("currentColor" === e || e.startsWith("var(")) return e;
-            let n = s()(e);
+            let n = a()(e);
             return n.set("hsl.s", n.get("hsl.s") * t).hex()
         }, [e, t])
     }

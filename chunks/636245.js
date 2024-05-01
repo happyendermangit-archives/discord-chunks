@@ -4,8 +4,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        s = n.n(r),
-        a = n("442837"),
+        a = n.n(r),
+        s = n("442837"),
         o = n("922482"),
         l = n("979651"),
         u = n("915863"),
@@ -18,9 +18,9 @@ function(e, t, n) {
             color: r,
             look: c,
             isProfile: E
-        } = e, I = (0, a.useStateFromStores)([l.default], () => l.default.isInChannel(n), [n]);
+        } = e, I = (0, s.useStateFromStores)([l.default], () => l.default.isInChannel(n), [n]);
         return (0, i.jsx)(u.default, {
-            className: s()(_.button, {
+            className: a()(_.button, {
                 [_.popout]: !E
             }),
             color: r,

@@ -39,7 +39,7 @@ function(e, t, n) {
             return u
         },
         isPlatformEmbedded: function() {
-            return a
+            return s
         },
         isWeb: function() {
             return c
@@ -48,9 +48,9 @@ function(e, t, n) {
             return l
         }
     }), (r = i || (i = {})).WINDOWS = "WINDOWS", r.OSX = "OSX", r.LINUX = "LINUX", r.WEB = "WEB";
-    let s = window.DiscordNative,
-        a = null != s,
-        o = null != s ? s.process.platform : "";
+    let a = window.DiscordNative,
+        s = null != a,
+        o = null != a ? a.process.platform : "";
 
     function l() {
         return /^win/.test(o)

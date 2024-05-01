@@ -1,6 +1,6 @@
 function(e, t, n) {
     "use strict";
-    let i, r, s, a, o, l, u, d, _, c, E;
+    let i, r, a, s, o, l, u, d, _, c, E;
     n.r(t);
     var I, T, f, S, h = n("442837"),
         A = n("570140"),
@@ -21,7 +21,7 @@ function(e, t, n) {
     }
 
     function g() {
-        a = void 0, o = void 0, l = void 0, d = void 0, s = void 0
+        s = void 0, o = void 0, l = void 0, d = void 0, a = void 0
     }
     class L extends(S = h.default.Store) {
         getFormState() {
@@ -31,7 +31,7 @@ function(e, t, n) {
             return p
         }
         showNotice() {
-            return void 0 !== i || void 0 !== r || void 0 !== s || void 0 !== a || void 0 !== o || void 0 !== l || void 0 !== u || void 0 !== d
+            return void 0 !== i || void 0 !== r || void 0 !== a || void 0 !== s || void 0 !== o || void 0 !== l || void 0 !== u || void 0 !== d
         }
         getIsSubmitDisabled() {
             return void 0 !== o && o.length > m.BIO_MAX_LENGTH
@@ -43,10 +43,10 @@ function(e, t, n) {
             return r
         }
         getPendingProfileEffectId() {
-            return s
+            return a
         }
         getPendingBanner() {
-            return a
+            return s
         }
         getPendingBio() {
             return o
@@ -67,8 +67,8 @@ function(e, t, n) {
             return {
                 pendingAvatar: i,
                 pendingAvatarDecoration: r,
-                pendingProfileEffectId: s,
-                pendingBanner: a,
+                pendingProfileEffectId: a,
+                pendingBanner: s,
                 pendingBio: o,
                 pendingPronouns: l,
                 pendingNickname: u,
@@ -128,13 +128,13 @@ function(e, t, n) {
             let {
                 profileEffectId: t
             } = e;
-            s = t
+            a = t
         },
         GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER: function(e) {
             let {
                 banner: t
             } = e;
-            a = t
+            s = t
         },
         GUILD_IDENTITY_SETTINGS_SET_PENDING_BIO: function(e) {
             let {

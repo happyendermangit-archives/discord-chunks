@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("149765"),
         r = n("131704"),
-        s = n("700785"),
-        a = n("231338");
+        a = n("700785"),
+        s = n("231338");
 
     function o(e) {
         if (null == e) return !1;
@@ -16,8 +16,8 @@ function(e, t, n) {
             type: t
         } = e;
         if (null == e.guild_id || !r.GUILD_NON_CATEGORY_CHANNEL_TYPES.has(t)) return !1;
-        if (e.isGuildVocal() && !s.canEveryoneRole(a.Permissions.CONNECT, e)) return !0;
+        if (e.isGuildVocal() && !a.canEveryoneRole(s.Permissions.CONNECT, e)) return !0;
         let n = e.permissionOverwrites[e.guild_id];
-        return null != n && i.has(n.deny, a.Permissions.VIEW_CHANNEL)
+        return null != n && i.has(n.deny, s.Permissions.VIEW_CHANNEL)
     }
 }

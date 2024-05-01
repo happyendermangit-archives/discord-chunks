@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("846519"),
-        a = n("689938");
+        a = n("846519"),
+        s = n("689938");
 
     function o(e) {
         return "".concat(e).length < 13 ? 1e3 * e : e
@@ -53,19 +53,19 @@ function(e, t, n) {
                     ...n
                 } = this.props, {
                     hours: r,
-                    minutes: s,
+                    minutes: a,
                     seconds: o
                 } = this.state, l = {
                     hours: this.renderTime(r, !0),
-                    minutes: this.renderTime(s),
+                    minutes: this.renderTime(a),
                     seconds: this.renderTime(o)
                 };
                 return null != t.end ? (0, i.jsx)(e, {
                     ...n,
-                    message: a.default.Messages.USER_ACTIVITY_TIMESTAMP_END.format(l)
+                    message: s.default.Messages.USER_ACTIVITY_TIMESTAMP_END.format(l)
                 }) : null != t.start ? (0, i.jsx)(e, {
                     ...n,
-                    message: a.default.Messages.USER_ACTIVITY_TIMESTAMP_START.format(l)
+                    message: s.default.Messages.USER_ACTIVITY_TIMESTAMP_START.format(l)
                 }) : null
             }
             constructor(e) {
@@ -75,7 +75,7 @@ function(e, t, n) {
                     enumerable: !0,
                     configurable: !0,
                     writable: !0
-                }) : t[n] = i, this._interval = new s.Interval, this.state = {
+                }) : t[n] = i, this._interval = new a.Interval, this.state = {
                     ...this.getUpdatedTime()
                 }
             }

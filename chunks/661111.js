@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t);
     var i = n("544891"),
         r = n("570140"),
-        s = n("802098"),
-        a = n("695346"),
+        a = n("802098"),
+        s = n("695346"),
         o = n("596401");
 
     function l() {
@@ -29,7 +29,7 @@ function(e, t, n) {
                 type: "CHANGE_LOG_MARK_SEEN",
                 changelogId: e,
                 changelogDate: t
-            }), a.LastReceivedChangelogId.updateSetting(e)
+            }), s.LastReceivedChangelogId.updateSetting(e)
         },
         setChangelogOverride(e) {
             r.default.dispatch({
@@ -44,17 +44,17 @@ function(e, t, n) {
             })
         },
         async fetchChangelog(e, t) {
-            if (null != s.default.getChangelog(e, t)) return null;
+            if (null != a.default.getChangelog(e, t)) return null;
             let n = o.ChangelogPlatforms.DESKTOP;
             try {
-                let s = await i.HTTP.get({
+                let a = await i.HTTP.get({
                     url: "https://cdn.discordapp.com/changelogs/".concat(n, "/").concat(e, "/").concat(t, ".json?").concat(l())
                 });
                 return r.default.dispatch({
                     type: "CHANGE_LOG_FETCH_SUCCESS",
                     id: e,
-                    changelog: s.body
-                }), s.body
+                    changelog: a.body
+                }), a.body
             } catch {
                 if (r.default.dispatch({
                         type: "CHANGE_LOG_FETCH_FAILED",

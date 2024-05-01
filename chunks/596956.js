@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         calculateProgress: function() {
-            return s
+            return a
         },
         doesImageMatchUpload: function() {
             return r
@@ -27,7 +27,7 @@ function(e, t, n) {
         return !1
     }
 
-    function s(e, t) {
+    function a(e, t) {
         return 0 === t ? 0 : Math.min(Math.floor(e / t * 100), 100)
     }
 }

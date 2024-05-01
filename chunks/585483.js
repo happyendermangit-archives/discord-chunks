@@ -5,14 +5,14 @@ function(e, t, n) {
             return o
         },
         ComponentDispatcher: function() {
-            return a
+            return s
         }
     }), n("47120"), n("653041");
     var i = n("836560");
     n("17089");
     var r = n("710845");
 
-    function s(e, t, n) {
+    function a(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -21,7 +21,7 @@ function(e, t, n) {
         }) : e[t] = n, e
     }
     n("981631");
-    class a {
+    class s {
         safeDispatch(e) {
             for (var t, n = arguments.length, i = Array(n > 1 ? n - 1 : 0), r = 1; r < n; r++) i[r - 1] = arguments[r];
             if (!this.hasSubscribers(e)) {
@@ -76,8 +76,8 @@ function(e, t, n) {
             return this.unsubscribe("".concat(e, "_").concat(t), n)
         }
         constructor() {
-            s(this, "emitter", new i.EventEmitter), s(this, "_savedDispatches", {}), this.emitter.setMaxListeners(100)
+            a(this, "emitter", new i.EventEmitter), a(this, "_savedDispatches", {}), this.emitter.setMaxListeners(100)
         }
     }
-    let o = new a
+    let o = new s
 }

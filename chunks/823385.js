@@ -2,8 +2,8 @@ function(e, t, n) {
     "use strict";
     let i;
     n.r(t), n("653041"), n("47120"), n("733860"), n("724458");
-    var r, s = n("392711"),
-        a = n.n(s),
+    var r, a = n("392711"),
+        s = n.n(a),
         o = n("442837"),
         l = n("433517"),
         u = n("570140"),
@@ -50,7 +50,7 @@ function(e, t, n) {
         H = [];
 
     function Y() {
-        w = N.default.getGuildCount() >= 3 || a().size(S.default.getMutablePrivateChannels()) >= 20, F = []
+        w = N.default.getGuildCount() >= 3 || s().size(S.default.getMutablePrivateChannels()) >= 20, F = []
     }
 
     function j(e) {
@@ -63,10 +63,10 @@ function(e, t, n) {
         let {
             query: n,
             queryMode: r
-        } = e, s = (0, c.isSplitMessagesTabAndOnMessagesTab)() ? void 0 : null !== (t = C.default.getGuildId()) && void 0 !== t ? t : void 0, a = new Set(["user:".concat(f.default.getId())]);
-        null != s && a.add("guild:".concat(s)), i = null != i ? i : new d.default(K, U, null != r ? 100 : 5, {
+        } = e, a = (0, c.isSplitMessagesTabAndOnMessagesTab)() ? void 0 : null !== (t = C.default.getGuildId()) && void 0 !== t ? t : void 0, s = new Set(["user:".concat(f.default.getId())]);
+        null != a && s.add("guild:".concat(a)), i = null != i ? i : new d.default(K, U, null != r ? 100 : 5, {
             frecencyBoosters: !0,
-            blacklist: a
+            blacklist: s
         }), V = null, x = n.length, B = r, i.search(n)
     }
 
@@ -123,12 +123,12 @@ function(e, t, n) {
                     })
             }
             let r = [],
-                s = [];
+                a = [];
             for (let e = 1; e < H.length; e += 1) {
                 let t = j(H[e]);
-                if (null != t)(t.type !== d.AutocompleterResultTypes.TEXT_CHANNEL && t.type !== d.AutocompleterResultTypes.VOICE_CHANNEL || p.default.can(D.Permissions.VIEW_CHANNEL, t.record)) && s.push(t)
+                if (null != t)(t.type !== d.AutocompleterResultTypes.TEXT_CHANNEL && t.type !== d.AutocompleterResultTypes.VOICE_CHANNEL || p.default.can(D.Permissions.VIEW_CHANNEL, t.record)) && a.push(t)
             }
-            s.length > 0 && r.push((0, d.createHeaderResult)(M.default.Messages.QUICKSWITCHER_LAST_CHANNEL), ...s);
+            a.length > 0 && r.push((0, d.createHeaderResult)(M.default.Messages.QUICKSWITCHER_LAST_CHANNEL), ...a);
             let o = function(e) {
                 let t = [];
                 return h.default.getRecentlyEditedDrafts(h.DraftType.ChannelMessage).forEach(n => {
@@ -154,7 +154,7 @@ function(e, t, n) {
                     }
                 }), e.length > 0 && (r.push((0, d.createHeaderResult)(M.default.Messages.QUICKSWITCHER_UNREAD_CHANNELS)), r = r.concat(e))
             }
-            return a()(r).uniqBy(e => e.record.id).value()
+            return s()(r).uniqBy(e => e.record.id).value()
         }() : e, F) && (F = e, ! function(e, t) {
             switch (B) {
                 case d.AutocompleterResultTypes.USER: {
@@ -245,26 +245,26 @@ function(e, t, n) {
             var t, n;
             let {
                 query: r,
-                queryMode: s
+                queryMode: a
             } = e;
             if (null == i) return !1;
-            let a = null !== (t = C.default.getGuildId()) && void 0 !== t ? t : null;
-            if (B !== s) {
-                i.setResultTypes(null != s ? [s] : U), i.setLimit(null != s ? 100 : 5);
+            let s = null !== (t = C.default.getGuildId()) && void 0 !== t ? t : null;
+            if (B !== a) {
+                i.setResultTypes(null != a ? [a] : U), i.setLimit(null != a ? 100 : 5);
                 let e = null !== (n = C.default.getGuildId()) && void 0 !== n ? n : void 0;
-                s === d.AutocompleterResultTypes.USER && null != e ? i.setOptions({
+                a === d.AutocompleterResultTypes.USER && null != e ? i.setOptions({
                     userFilters: {
                         guild: e,
                         friends: !0
                     }
-                }, !0) : s === d.AutocompleterResultTypes.VOICE_CHANNEL ? i.setOptions({
+                }, !0) : a === d.AutocompleterResultTypes.VOICE_CHANNEL ? i.setOptions({
                     voiceChannelGuildFilter: null
                 }, !0) : i.setOptions({
                     userFilters: null,
                     voiceChannelGuildFilter: void 0
                 }, !0)
             }
-            B = s, i.search(r, B === d.AutocompleterResultTypes.USER ? a : void 0)
+            B = a, i.search(r, B === d.AutocompleterResultTypes.USER ? s : void 0)
         },
         QUICKSWITCHER_SELECT: function(e) {
             b = e.selectedIndex

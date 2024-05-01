@@ -13,8 +13,8 @@ function(e, t, n) {
     }), n("773603");
     var i = n("570140"),
         r = n("40851"),
-        s = n("358085"),
-        a = n("601993"),
+        a = n("358085"),
+        s = n("601993"),
         o = n("981631");
 
     function l(e) {
@@ -50,9 +50,9 @@ function(e, t, n) {
                     left: n = 0,
                     top: i = 0,
                     width: r = 0,
-                    height: s = 0
+                    height: a = 0
                 } = null != t ? t : {};
-            c = n + r / 2, E = i + s / 2
+            c = n + r / 2, E = i + a / 2
         }
         let I = {
             render: t,
@@ -64,8 +64,8 @@ function(e, t, n) {
                 ...n
             }
         };
-        if ((null == n ? void 0 : n.enableSpellCheck) && (0, s.isDesktop)()) {
-            let e = (0, a.addResultListener)(() => {
+        if ((null == n ? void 0 : n.enableSpellCheck) && (0, a.isDesktop)()) {
+            let e = (0, s.addResultListener)(() => {
                 e(), l(I)
             })
         } else e.preventDefault(), l(I)

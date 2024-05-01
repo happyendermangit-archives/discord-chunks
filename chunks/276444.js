@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("47120");
-    var i, r, s, a, o = n("275726"),
+    var i, r, a, s, o = n("275726"),
         l = n("442837"),
         u = n("570140"),
         d = n("594174"),
@@ -94,12 +94,12 @@ function(e, t, n) {
             return f
         }
     }
-    a = "ReferralTrialStore", (s = "displayName") in(r = U) ? Object.defineProperty(r, s, {
-        value: a,
+    s = "ReferralTrialStore", (a = "displayName") in(r = U) ? Object.defineProperty(r, a, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a, t.default = new U(u.default, {
+    }) : r[a] = s, t.default = new U(u.default, {
         BILLING_REFERRAL_TRIAL_OFFER_UPDATE: function(e) {
             let {
                 userTrialOfferId: t,
@@ -120,9 +120,9 @@ function(e, t, n) {
                 sent_user_ids: n,
                 refresh_at: i,
                 recipient_status: r,
-                has_eligible_friends: s
+                has_eligible_friends: a
             } = e;
-            L = null == i && s, h = !1, E = t, T = n, v = i, f = r
+            L = null == i && a, h = !1, E = t, T = n, v = i, f = r
         },
         BILLING_REFERRALS_REMAINING_FETCH_FAIL: function(e) {
             let {} = e;

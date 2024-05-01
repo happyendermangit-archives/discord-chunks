@@ -2,19 +2,19 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useToken: function() {
-            return a
+            return s
         }
     });
     var i = n("399606"),
         r = n("410030"),
-        s = n("607070");
+        a = n("607070");
 
-    function a(e, t) {
+    function s(e, t) {
         let n = (0, r.default)(),
-            a = (0, i.useStateFromStores)([s.default], () => s.default.saturation);
+            s = (0, i.useStateFromStores)([a.default], () => a.default.saturation);
         return e.resolve({
             theme: null != t ? t : n,
-            saturation: a
+            saturation: s
         })
     }
 }

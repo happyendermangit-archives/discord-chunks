@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("724458");
-    var i, r, s, a, o = n("442837"),
+    var i, r, a, s, o = n("442837"),
         l = n("570140"),
         u = n("786761"),
         d = n("651530"),
@@ -29,12 +29,12 @@ function(e, t, n) {
             })]
         }
     }
-    a = "SearchMessageStore", (s = "displayName") in(r = f) ? Object.defineProperty(r, s, {
-        value: a,
+    s = "SearchMessageStore", (a = "displayName") in(r = f) ? Object.defineProperty(r, a, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a, t.default = new f(l.default, {
+    }) : r[a] = s, t.default = new f(l.default, {
         SEARCH_FINISH: I,
         MOD_VIEW_SEARCH_FINISH: I,
         MESSAGE_UPDATE: function(e) {

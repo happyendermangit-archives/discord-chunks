@@ -31,8 +31,8 @@ function(e, t, n) {
     });
     var i = n("367907"),
         r = n("592125"),
-        s = n("19780"),
-        a = n("626135"),
+        a = n("19780"),
+        s = n("626135"),
         o = n("768581"),
         l = n("678916"),
         u = n("981631");
@@ -80,11 +80,11 @@ function(e, t, n) {
     }
 
     function T(e, t, n) {
-        let o = s.default.getGuildId(),
-            l = s.default.getChannelId(),
+        let o = a.default.getGuildId(),
+            l = a.default.getChannelId(),
             d = r.default.getChannel(l),
             _ = (0, i.getVoiceStateMetadata)(o, l, !0);
-        a.default.track(u.AnalyticEvents.VIDEO_EFFECT_UPDATED, {
+        s.default.track(u.AnalyticEvents.VIDEO_EFFECT_UPDATED, {
             location: t,
             effect_type: E(e),
             effect_detail: I(e),
@@ -94,14 +94,14 @@ function(e, t, n) {
             guild_id: o,
             voice_state_count: _.voice_state_count,
             video_stream_count: _.video_stream_count,
-            media_session_id: s.default.getMediaSessionId(),
-            rtc_connection_id: s.default.getRTCConnectionId(),
+            media_session_id: a.default.getMediaSessionId(),
+            rtc_connection_id: a.default.getRTCConnectionId(),
             is_animated: c(e)
         })
     }
 
     function f(e, t, n) {
-        a.default.track(u.AnalyticEvents.VIDEO_BACKGROUND_ADDED, {
+        s.default.track(u.AnalyticEvents.VIDEO_BACKGROUND_ADDED, {
             is_animated: c(e),
             is_video: t,
             is_from_tenor: n
@@ -109,7 +109,7 @@ function(e, t, n) {
     }
 
     function S(e) {
-        a.default.track(u.AnalyticEvents.VIDEO_BACKGROUND_DELETED, {
+        s.default.track(u.AnalyticEvents.VIDEO_BACKGROUND_DELETED, {
             is_animated: c(e)
         })
     }

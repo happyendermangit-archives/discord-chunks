@@ -29,7 +29,7 @@ function(e, t, n) {
             return S
         }
     });
-    var i, r, s, a, o, l, u, d, _, c, E, I, T = n("358085");
+    var i, r, a, s, o, l, u, d, _, c, E, I, T = n("358085");
     let f = T.isPlatformEmbedded && ((0, T.isWindows)() || !1);
 
     function S(e) {
@@ -53,7 +53,7 @@ function(e, t, n) {
             default:
                 return 5
         }
-    }(i = u || (u = {}))[i.WELCOME = 0] = "WELCOME", i[i.NEWS = 1] = "NEWS", i[i.GO_LIVE_VOICE = 2] = "GO_LIVE_VOICE", i[i.GO_LIVE_NON_VOICE = 3] = "GO_LIVE_NON_VOICE", i[i.BROADCAST = 4] = "BROADCAST", i[i.KEYBIND_INDICATORS = 5] = "KEYBIND_INDICATORS", (r = d || (d = {})).PRIMARY = "PRIMARY", r.BRAND = "BRAND", r.DANGER = "DANGER", (s = _ || (_ = {}))[s.Nudge = 0] = "Nudge", s[s.TextChat = 1] = "TextChat", s[s.VoiceCall = 2] = "VoiceCall", s[s.Activity = 3] = "Activity", s[s.Clips = 4] = "Clips", s[s.Other = 5] = "Other", (a = c || (c = {})).NewsNudge = "News Nudge", a.WelcomeNudge = "Welcome Nudge", a.TextChat = "Text Chat", a.ActivityUserJoin = "Activity User Join", a.ActivityInvite = "Activity Invite", a.IncomingCall = "Incoming Call", a.GoLiveNudge = "Go Live Nudge", a.GoLiveNonVoiceNudge = "Go Live Non Voice Nudge", a.OverlayCrashed = "Overlay Crashed", a.StartBroadcastNotification = "Start Broadcast Notification", a.ClipsReminderNotification = "Clips Reminder Notification", a.ClipsNotification = "Clips Notification", a.KeybindIndicatorsNotification = "Keybind Indicators Notification", (o = E || (E = {}))[o.Viewed = 0] = "Viewed", o[o.Clicked = 1] = "Clicked";
+    }(i = u || (u = {}))[i.WELCOME = 0] = "WELCOME", i[i.NEWS = 1] = "NEWS", i[i.GO_LIVE_VOICE = 2] = "GO_LIVE_VOICE", i[i.GO_LIVE_NON_VOICE = 3] = "GO_LIVE_NON_VOICE", i[i.BROADCAST = 4] = "BROADCAST", i[i.KEYBIND_INDICATORS = 5] = "KEYBIND_INDICATORS", (r = d || (d = {})).PRIMARY = "PRIMARY", r.BRAND = "BRAND", r.DANGER = "DANGER", (a = _ || (_ = {}))[a.Nudge = 0] = "Nudge", a[a.TextChat = 1] = "TextChat", a[a.VoiceCall = 2] = "VoiceCall", a[a.Activity = 3] = "Activity", a[a.Clips = 4] = "Clips", a[a.Other = 5] = "Other", (s = c || (c = {})).NewsNudge = "News Nudge", s.WelcomeNudge = "Welcome Nudge", s.TextChat = "Text Chat", s.ActivityUserJoin = "Activity User Join", s.ActivityInvite = "Activity Invite", s.IncomingCall = "Incoming Call", s.GoLiveNudge = "Go Live Nudge", s.GoLiveNonVoiceNudge = "Go Live Non Voice Nudge", s.OverlayCrashed = "Overlay Crashed", s.StartBroadcastNotification = "Start Broadcast Notification", s.ClipsReminderNotification = "Clips Reminder Notification", s.ClipsNotification = "Clips Notification", s.KeybindIndicatorsNotification = "Keybind Indicators Notification", (o = E || (E = {}))[o.Viewed = 0] = "Viewed", o[o.Clicked = 1] = "Clicked";
     let h = Object.freeze({
         LOW: "background-opacity-low",
         MEDIUM: "background-opacity-medium",

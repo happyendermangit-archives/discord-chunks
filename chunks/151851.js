@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        s = n.n(r),
-        a = n("442837"),
+        a = n.n(r),
+        s = n("442837"),
         o = n("481060"),
         l = n("350810"),
         u = n("579806"),
@@ -39,7 +39,7 @@ function(e, t, n) {
                 hasOpenLayer: r
             } = e;
             return (0, i.jsxs)("div", {
-                className: s()(O.typeWindows, (0, m.getThemeClass)(n), {
+                className: a()(O.typeWindows, (0, m.getThemeClass)(n), {
                     [O.withBackgroundOverride]: !r
                 }),
                 children: [(0, i.jsx)("div", {
@@ -71,11 +71,11 @@ function(e, t, n) {
                 focused: t,
                 windowKey: n,
                 frame: r,
-                themeOverride: a,
+                themeOverride: s,
                 hasOpenLayer: l
             } = e;
             return (0, i.jsxs)(o.Clickable, {
-                className: s()(r ? O.typeMacOSWithFrame : O.typeMacOS, t ? O.focused : O.unfocused, (0, m.getThemeClass)(a), {
+                className: a()(r ? O.typeMacOSWithFrame : O.typeMacOS, t ? O.focused : O.unfocused, (0, m.getThemeClass)(s), {
                     [O.withBackgroundOverride]: !l
                 }),
                 onDoubleClick: () => N.default.maximize(n),
@@ -123,9 +123,9 @@ function(e, t, n) {
             focused: t,
             type: n,
             windowKey: r,
-            macOSFrame: s = !1,
+            macOSFrame: a = !1,
             themeOverride: o
-        } = e, u = (0, d.useAppContext)(), c = (0, a.useStateFromStores)([_.default], () => _.default.isFullscreenInContext(u)), E = (0, l.default)();
+        } = e, u = (0, d.useAppContext)(), c = (0, s.useStateFromStores)([_.default], () => _.default.isFullscreenInContext(u)), E = (0, l.default)();
         if (c) return null;
         switch (n) {
             case A.PlatformTypes.WINDOWS:
@@ -138,7 +138,7 @@ function(e, t, n) {
                 return (0, i.jsx)(v, {
                     focused: t,
                     windowKey: r,
-                    frame: s,
+                    frame: a,
                     themeOverride: o,
                     hasOpenLayer: E
                 });

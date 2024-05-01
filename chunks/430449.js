@@ -1,11 +1,11 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("47120");
-    var i, r, s, a, o, l, u = n("392711"),
+    var i, r, a, s, o, l, u = n("392711"),
         d = n.n(u),
         _ = n("442837"),
         c = n("570140");
-    (s = i || (i = {}))[s.NOT_FETCHED = 0] = "NOT_FETCHED", s[s.FETCHING = 1] = "FETCHING", s[s.FETCH_SUCCESS = 2] = "FETCH_SUCCESS";
+    (a = i || (i = {}))[a.NOT_FETCHED = 0] = "NOT_FETCHED", a[a.FETCHING = 1] = "FETCHING", a[a.FETCH_SUCCESS = 2] = "FETCH_SUCCESS";
     let E = {},
         I = {};
 
@@ -43,12 +43,12 @@ function(e, t, n) {
             return I[e]
         }
     }
-    l = "ApplicationAssetsStore", (o = "displayName") in(a = f) ? Object.defineProperty(a, o, {
+    l = "ApplicationAssetsStore", (o = "displayName") in(s = f) ? Object.defineProperty(s, o, {
         value: l,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : a[o] = l, t.default = new f(c.default, {
+    }) : s[o] = l, t.default = new f(c.default, {
         APPLICATION_ASSETS_FETCH: function(e) {
             let {
                 applicationId: t

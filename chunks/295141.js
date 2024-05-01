@@ -52,12 +52,12 @@ function(e, t, n) {
     });
     var i = n("544891"),
         r = n("881052"),
-        s = n("981631"),
-        a = n("231338");
+        a = n("981631"),
+        s = n("231338");
     let o = async (e, t) => {
         try {
             return (await i.HTTP.post({
-                url: s.Endpoints.GUILD_ROLE_SUBSCRIPTION_GROUP_LISTINGS(e),
+                url: a.Endpoints.GUILD_ROLE_SUBSCRIPTION_GROUP_LISTINGS(e),
                 body: t
             })).body
         } catch (e) {
@@ -65,28 +65,28 @@ function(e, t, n) {
         }
     }, l = async (e, t, n) => {
         let {
-            priceTier: a,
+            priceTier: s,
             ...o
         } = n;
         try {
             return (await i.HTTP.post({
-                url: s.Endpoints.GUILD_ROLE_SUBSCRIPTION_LISTINGS(e, t),
+                url: a.Endpoints.GUILD_ROLE_SUBSCRIPTION_LISTINGS(e, t),
                 body: {
                     ...o,
-                    price_tier: a
+                    price_tier: s
                 }
             })).body
         } catch (e) {
             throw new r.APIError(e)
         }
-    }, u = async (e, t, n, a) => {
+    }, u = async (e, t, n, s) => {
         let {
             priceTier: o,
             ...l
-        } = a;
+        } = s;
         try {
             return (await i.HTTP.patch({
-                url: s.Endpoints.GUILD_ROLE_SUBSCRIPTION_LISTINGS(e, t, n),
+                url: a.Endpoints.GUILD_ROLE_SUBSCRIPTION_LISTINGS(e, t, n),
                 body: {
                     ...l,
                     price_tier: o
@@ -105,18 +105,18 @@ function(e, t, n) {
             };
         try {
             return (await i.HTTP.get({
-                url: s.Endpoints.GUILD_ROLE_SUBSCRIPTION_GROUP_LISTINGS(e),
+                url: a.Endpoints.GUILD_ROLE_SUBSCRIPTION_GROUP_LISTINGS(e),
                 query: n
             })).body
         } catch (e) {
             throw new r.APIError(e)
         }
     }, _ = async e => (await i.HTTP.get({
-        url: s.Endpoints.GUILD_ROLE_SUBSCRIPTIONS_SETTINGS(e)
+        url: a.Endpoints.GUILD_ROLE_SUBSCRIPTIONS_SETTINGS(e)
     })).body, c = async (e, t) => {
         try {
             return (await i.HTTP.patch({
-                url: s.Endpoints.GUILD_ROLE_SUBSCRIPTIONS_SETTINGS(e),
+                url: a.Endpoints.GUILD_ROLE_SUBSCRIPTIONS_SETTINGS(e),
                 body: t
             })).body
         } catch (e) {
@@ -125,9 +125,9 @@ function(e, t, n) {
     }, E = async e => {
         try {
             return (await i.HTTP.get({
-                url: s.Endpoints.PRICE_TIERS,
+                url: a.Endpoints.PRICE_TIERS,
                 query: {
-                    price_tier_type: a.PriceTierTypes.GUILD_ROLE_SUBSCRIPTIONS,
+                    price_tier_type: s.PriceTierTypes.GUILD_ROLE_SUBSCRIPTIONS,
                     guild_id: e
                 }
             })).body
@@ -138,7 +138,7 @@ function(e, t, n) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         try {
             return (await i.HTTP.get({
-                url: s.Endpoints.GUILD_ROLE_SUBSCRIPTION_GROUP_LISTINGS(e, t),
+                url: a.Endpoints.GUILD_ROLE_SUBSCRIPTION_GROUP_LISTINGS(e, t),
                 query: {
                     include_draft_listings: n.includeDraftListings,
                     include_archived_listings: n.includeArchivedListings
@@ -150,7 +150,7 @@ function(e, t, n) {
     }, T = async e => {
         try {
             return (await i.HTTP.get({
-                url: s.Endpoints.SUBSCRIPTION_PLAN_GUILD_ROLE_GROUP_LISTING(e)
+                url: a.Endpoints.SUBSCRIPTION_PLAN_GUILD_ROLE_GROUP_LISTING(e)
             })).body
         } catch (e) {
             throw new r.APIError(e)
@@ -158,7 +158,7 @@ function(e, t, n) {
     }, f = async (e, t, n) => {
         try {
             await i.HTTP.del({
-                url: s.Endpoints.GUILD_ROLE_SUBSCRIPTION_LISTINGS(e, t, n)
+                url: a.Endpoints.GUILD_ROLE_SUBSCRIPTION_LISTINGS(e, t, n)
             })
         } catch (e) {
             throw new r.APIError(e)
@@ -166,7 +166,7 @@ function(e, t, n) {
     }, S = async (e, t, n) => {
         try {
             return (await i.HTTP.post({
-                url: s.Endpoints.GUILD_ROLE_SUBSCRIPTION_GROUP_LISTING_ARCHIVE(e, t, n)
+                url: a.Endpoints.GUILD_ROLE_SUBSCRIPTION_GROUP_LISTING_ARCHIVE(e, t, n)
             })).body
         } catch (e) {
             throw new r.APIError(e)
@@ -174,7 +174,7 @@ function(e, t, n) {
     }, h = async e => {
         try {
             return (await i.HTTP.get({
-                url: s.Endpoints.GUILD_ROLE_SUBSCRIPTION_TRIALS(e)
+                url: a.Endpoints.GUILD_ROLE_SUBSCRIPTION_TRIALS(e)
             })).body
         } catch (e) {
             throw new r.APIError(e)
@@ -182,7 +182,7 @@ function(e, t, n) {
     }, A = async (e, t, n) => {
         try {
             return (await i.HTTP.patch({
-                url: s.Endpoints.GUILD_ROLE_SUBSCRIPTION_LISTING_TRIAL(e, t),
+                url: a.Endpoints.GUILD_ROLE_SUBSCRIPTION_LISTING_TRIAL(e, t),
                 body: n
             })).body
         } catch (e) {
@@ -191,7 +191,7 @@ function(e, t, n) {
     }, m = async (e, t, n) => {
         try {
             return (await i.HTTP.get({
-                url: s.Endpoints.GUILD_ROLE_SUBSCRIPTION_TRIAL_ELIGIBILITY(e, t, n)
+                url: a.Endpoints.GUILD_ROLE_SUBSCRIPTION_TRIAL_ELIGIBILITY(e, t, n)
             })).body
         } catch (e) {
             throw new r.APIError(e)
@@ -202,7 +202,7 @@ function(e, t, n) {
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         try {
             return (await i.HTTP.get({
-                url: s.Endpoints.CREATOR_MONETIZATION_RESTRICTIONS(e),
+                url: a.Endpoints.CREATOR_MONETIZATION_RESTRICTIONS(e),
                 signal: t
             })).body
         } catch (e) {
@@ -212,7 +212,7 @@ function(e, t, n) {
         try {
             var t;
             let n = await i.HTTP.get({
-                url: s.Endpoints.GUILD_DISCOVERY_SLUG(e)
+                url: a.Endpoints.GUILD_DISCOVERY_SLUG(e)
             });
             return null !== (t = n.body) && void 0 !== t ? t : JSON.parse(n.text)
         } catch (e) {

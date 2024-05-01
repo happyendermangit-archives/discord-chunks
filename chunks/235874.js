@@ -8,7 +8,7 @@ function(e, t, n) {
             return I
         }
     }), n("411104"), n("47120");
-    var i, r, s, a = n("735250"),
+    var i, r, a, s = n("735250"),
         o = n("470079"),
         l = n("922770"),
         u = n("930295"),
@@ -22,7 +22,7 @@ function(e, t, n) {
             configurable: !0,
             writable: !0
         }) : e[t] = n, e
-    }(s = i || (i = {})).NONE = "1", s.TRANSLATE = "2", s.SCALE = "3", s.FADE = "4";
+    }(a = i || (i = {})).NONE = "1", a.TRANSLATE = "2", a.SCALE = "3", a.FADE = "4";
     let E = Object.freeze({
         2: d.PopoutCSSAnimator.Types.TRANSLATE,
         3: d.PopoutCSSAnimator.Types.SCALE,
@@ -36,7 +36,7 @@ function(e, t, n) {
                 position: n,
                 onRequestOpen: i,
                 onRequestClose: r,
-                align: s,
+                align: a,
                 autoInvert: o,
                 fixed: l,
                 nudgeAlignIntoViewport: d,
@@ -52,11 +52,11 @@ function(e, t, n) {
                 renderPopout: m,
                 layerContext: N
             } = this.props;
-            return (0, a.jsx)(u.BasePopout, {
+            return (0, s.jsx)(u.BasePopout, {
                 ref: this.ref,
                 preload: T,
                 position: n,
-                align: null != s ? s : function(e) {
+                align: null != a ? a : function(e) {
                     switch (e) {
                         case "top":
                         case "bottom":
@@ -100,7 +100,7 @@ function(e, t, n) {
                     case "2":
                     case "3":
                     case "4":
-                        return (0, a.jsx)(d.PopoutCSSAnimator, {
+                        return (0, s.jsx)(d.PopoutCSSAnimator, {
                             position: e.position,
                             type: E[n],
                             children: t(e)
@@ -117,15 +117,15 @@ function(e, t, n) {
         let {
             renderPopout: t,
             ...n
-        } = e, i = o.useRef(null), [r, s] = o.useState(0);
+        } = e, i = o.useRef(null), [r, a] = o.useState(0);
 
         function u() {
-            return c(), (0, a.jsx)(a.Fragment, {})
+            return c(), (0, s.jsx)(s.Fragment, {})
         }
         o.useLayoutEffect(() => {
             if (r > 0) {
-                var e, t, n, s, a;
-                null === (a = i.current) || void 0 === a || null === (s = a.ref) || void 0 === s || null === (n = s.current) || void 0 === n || null === (t = n.layerRef) || void 0 === t || null === (e = t.current) || void 0 === e || e.updatePosition()
+                var e, t, n, a, s;
+                null === (s = i.current) || void 0 === s || null === (a = s.ref) || void 0 === a || null === (n = a.current) || void 0 === n || null === (t = n.layerRef) || void 0 === t || null === (e = t.current) || void 0 === e || e.updatePosition()
             }
         }, [r]), o.useEffect(() => {
             let e = setTimeout(t, 20 + 20 * Math.random());
@@ -136,31 +136,31 @@ function(e, t, n) {
             if (!d.current) {
                 d.current = !0;
                 let e = setTimeout(() => {
-                        f(() => E), s(e => e + 1)
+                        f(() => E), a(e => e + 1)
                     }, 300),
                     n = await t();
-                f(() => n), s(e => e + 1), clearTimeout(e)
+                f(() => n), a(e => e + 1), clearTimeout(e)
             }
         }
 
         function E() {
             var e, t, n, r;
-            let s = null === (r = i.current) || void 0 === r ? void 0 : null === (n = r.ref) || void 0 === n ? void 0 : null === (t = n.current) || void 0 === t ? void 0 : null === (e = t.domElementRef) || void 0 === e ? void 0 : e.current,
-                o = Math.max(100, null == s ? 100 : s.offsetWidth - 20);
-            return (0, a.jsx)("div", {
+            let a = null === (r = i.current) || void 0 === r ? void 0 : null === (n = r.ref) || void 0 === n ? void 0 : null === (t = n.current) || void 0 === t ? void 0 : null === (e = t.domElementRef) || void 0 === e ? void 0 : e.current,
+                o = Math.max(100, null == a ? 100 : a.offsetWidth - 20);
+            return (0, s.jsx)("div", {
                 className: _.loader,
                 style: {
                     width: o
                 },
-                children: (0, a.jsx)(l.Spinner, {})
+                children: (0, s.jsx)(l.Spinner, {})
             })
         }
         let [T, f] = o.useState(() => u);
         return o.useEffect(() => {
             d.current ? t().then(e => {
-                f(() => e), s(e => e + 1)
+                f(() => e), a(e => e + 1)
             }) : f(u)
-        }, [t]), (0, a.jsx)(I, {
+        }, [t]), (0, s.jsx)(I, {
             ref: i,
             ...n,
             renderPopout: T

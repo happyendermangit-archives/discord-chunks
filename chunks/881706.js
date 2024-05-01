@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("729594"),
         r = n("821445");
-    let s = new Set(r),
-        a = {
+    let a = new Set(r),
+        s = {
             "github.com": RegExp("\\/releases\\S*\\/download"),
             "bitbucket.org": RegExp("\\/downloads\\S*\\/[^\\/]*"),
             "gitlab.com": RegExp("\\/downloads\\S*\\/[^\\/]*")
@@ -21,7 +21,7 @@ function(e, t, n) {
             hostname: r
         } = i.parse(e);
         if (null == r) return null;
-        let o = a[r];
+        let o = s[r];
         if (null != o && null != n && !o.test(n) || null == n) return null;
         let l = n;
         try {
@@ -46,6 +46,6 @@ function(e, t, n) {
         let c = d.split(".");
         if (c.length < 2) return null;
         let E = null === (t = c.pop()) || void 0 === t ? void 0 : t.toLowerCase();
-        return null != E && s.has(E) ? E : null
+        return null != E && a.has(E) ? E : null
     }
 }

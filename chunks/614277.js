@@ -13,8 +13,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("512722"),
         l = n.n(o),
         u = n("699581"),
@@ -24,7 +24,7 @@ function(e, t, n) {
         E = n("56210");
 
     function I(e) {
-        var t, n, s, o, u, d;
+        var t, n, a, o, u, d;
         let {
             header: I,
             isLargeModal: T,
@@ -53,11 +53,11 @@ function(e, t, n) {
         }, [S, N]), l()(null != O, "Unknown step for current payment flow.");
         let R = null !== (u = null == O ? void 0 : null === (t = O.options) || void 0 === t ? void 0 : t.hideSlider) && void 0 !== u && u,
             C = null == O ? void 0 : null === (n = O.options) || void 0 === n ? void 0 : n.bodyClassName,
-            g = void 0 !== T && T ? E.sliderBodyLarge : null == O ? void 0 : null === (s = O.options) || void 0 === s ? void 0 : s.sliderBodyClassName;
+            g = void 0 !== T && T ? E.sliderBodyLarge : null == O ? void 0 : null === (a = O.options) || void 0 === a ? void 0 : a.sliderBodyClassName;
         return (0, i.jsxs)(i.Fragment, {
             children: [null === (d = null == O ? void 0 : null === (o = O.options) || void 0 === o ? void 0 : o.renderHeader) || void 0 === d || d ? I : null, O.renderStep(f), null == S || R ? null : (0, i.jsxs)(i.Fragment, {
                 children: [(0, i.jsx)(_.ModalContent, {
-                    className: a()(E.body, C),
+                    className: s()(E.body, C),
                     children: (0, i.jsx)(_.Slides, {
                         activeSlide: S,
                         centered: !1,
@@ -65,7 +65,7 @@ function(e, t, n) {
                         children: h.filter(e => null != e.key).map(e => (0, i.jsx)(_.Slide, {
                             id: e.key,
                             children: (0, i.jsx)("form", {
-                                className: a()(E.sliderBody, g),
+                                className: s()(E.sliderBody, g),
                                 ref: e => A(e),
                                 onSubmit: e => e.preventDefault()
                             })

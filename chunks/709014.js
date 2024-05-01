@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("906280"),
         l = n.n(o),
         u = n("186325"),
@@ -18,7 +18,7 @@ function(e, t, n) {
         E = n("5088");
     let I = r.forwardRef(function(e, t) {
         let {
-            color: s,
+            color: a,
             src: o,
             size: I = "md",
             width: T,
@@ -74,11 +74,11 @@ function(e, t, n) {
             null === (e = R.current) || void 0 === e || e.destroy()
         }), [m, h, A]), (0, i.jsx)("div", {
             style: {
-                "--__lottieIconColor": null != s && "string" == typeof s ? s : null == s ? void 0 : s.css,
+                "--__lottieIconColor": null != a && "string" == typeof a ? a : null == a ? void 0 : a.css,
                 display: "flex",
                 ...C
             },
-            className: a()(E.lottieIcon, S),
+            className: s()(E.lottieIcon, S),
             ref: p
         })
     })

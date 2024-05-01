@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("442837"),
         l = n("481060"),
         u = n("310752"),
@@ -27,10 +27,10 @@ function(e, t, n) {
     function N(e) {
         let t, {
                 onClose: n,
-                fileSize: s,
+                fileSize: a,
                 ...N
             } = e,
-            p = null != s && f.MAX_PREMIUM_TIER_0_ATTACHMENT_SIZE < s,
+            p = null != a && f.MAX_PREMIUM_TIER_0_ATTACHMENT_SIZE < a,
             {
                 isLoading: O,
                 suggestedPremiumType: R
@@ -80,7 +80,7 @@ function(e, t, n) {
             });
         return (0, i.jsx)(T.default, {
             artElement: L,
-            artContainerClassName: a()(m.artContainer),
+            artContainerClassName: s()(m.artContainer),
             enableArtBoxShadow: !1,
             type: f.PremiumUpsellTypes.UPLOAD_ERROR_UPSELL,
             title: A.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,

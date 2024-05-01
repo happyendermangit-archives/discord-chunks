@@ -1,24 +1,24 @@
 function(e, t, n) {
     "use strict";
     n.r(t);
-    var i, r, s, a, o = n("442837"),
+    var i, r, a, s, o = n("442837"),
         l = n("570140");
     let u = {};
 
     function d() {
         u = {}
     }
-    class _ extends(a = o.default.Store) {
+    class _ extends(s = o.default.Store) {
         getNote(e) {
             return u[e]
         }
     }
-    s = "NoteStore", (r = "displayName") in(i = _) ? Object.defineProperty(i, r, {
-        value: s,
+    a = "NoteStore", (r = "displayName") in(i = _) ? Object.defineProperty(i, r, {
+        value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : i[r] = s, t.default = new _(l.default, {
+    }) : i[r] = a, t.default = new _(l.default, {
         CONNECTION_OPEN: d,
         OVERLAY_INITIALIZE: d,
         USER_NOTE_UPDATE: function(e) {

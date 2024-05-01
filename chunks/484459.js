@@ -10,8 +10,8 @@ function(e, t, n) {
     }), n("411104");
     var i = n("570140"),
         r = n("232567"),
-        s = n("220082"),
-        a = n("275759"),
+        a = n("220082"),
+        s = n("275759"),
         o = n("365943"),
         l = n("598077"),
         u = n("592125"),
@@ -23,10 +23,10 @@ function(e, t, n) {
 
     function T() {
         let e, t, n;
-        for (var i, r, s = arguments.length, a = Array(s), o = 0; o < s; o++) a[o] = arguments[o];
-        let u = a[0],
-            d = a[1];
-        if ("string" == typeof u && ("string" == typeof d || null == d)) e = u, t = d, n = a[2];
+        for (var i, r, a = arguments.length, s = Array(a), o = 0; o < a; o++) s[o] = arguments[o];
+        let u = s[0],
+            d = s[1];
+        if ("string" == typeof u && ("string" == typeof d || null == d)) e = u, t = d, n = s[2];
         else if (u instanceof l.default && ("object" == typeof d || null == d)) e = u.id, t = u.getAvatarURL(void 0, 80), n = d;
         else throw Error("Invalid arguments");
         if (null == e) return Promise.resolve();
@@ -53,7 +53,7 @@ function(e, t, n) {
             channelId: p
         } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         if ("" === e) return;
-        (0, o.fetchUserProfileEffects)(), null != t && (0, s.maybeFetchColors)(t), null != N && !T && (T = !0), null != N && (c = null !== (l = null === (n = (0, a.getVisibleConnectionsRole)({
+        (0, o.fetchUserProfileEffects)(), null != t && (0, a.maybeFetchColors)(t), null != N && !T && (T = !0), null != N && (c = null !== (l = null === (n = (0, s.getVisibleConnectionsRole)({
             guildMember: d.default.getMember(N, e),
             channel: u.default.getChannel(p)
         })) || void 0 === n ? void 0 : n.id) && void 0 !== l ? l : void 0);

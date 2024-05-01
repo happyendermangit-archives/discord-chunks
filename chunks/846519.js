@@ -11,10 +11,10 @@ function(e, t, n) {
     }
     n.r(t), n.d(t, {
         DelayedCall: function() {
-            return s
+            return a
         },
         Interval: function() {
-            return a
+            return s
         },
         Timeout: function() {
             return r
@@ -40,7 +40,7 @@ function(e, t, n) {
             i(this, "_ref", void 0)
         }
     }
-    class s {
+    class a {
         set(e) {
             return this._delay = e, this
         }
@@ -58,7 +58,7 @@ function(e, t, n) {
             i(this, "_timeout", void 0), i(this, "_delay", void 0), i(this, "_handler", void 0), this._delay = e, this._handler = t, this._timeout = new r
         }
     }
-    class a {
+    class s {
         start(e, t) {
             this.stop(), this._ref = window.setInterval(t, e)
         }

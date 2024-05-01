@@ -20,7 +20,7 @@ function(e, t, n) {
             return R
         }
     }), n("653041");
-    var i, r, s, a, o, l, u = n("544891"),
+    var i, r, a, s, o, l, u = n("544891"),
         d = n("780384"),
         _ = n("410030"),
         c = n("726542"),
@@ -39,7 +39,7 @@ function(e, t, n) {
 
     function A(e) {
         return e.split("-")[1]
-    }(a = i || (i = {}))[a.FAILED = 0] = "FAILED", a[a.UNFETCHED = 1] = "UNFETCHED", a[a.PENDING = 2] = "PENDING", a[a.SUCCEEDED = 3] = "SUCCEEDED", a[a.FAILED_NO_RETRY = 4] = "FAILED_NO_RETRY";
+    }(s = i || (i = {}))[s.FAILED = 0] = "FAILED", s[s.UNFETCHED = 1] = "UNFETCHED", s[s.PENDING = 2] = "PENDING", s[s.SUCCEEDED = 3] = "SUCCEEDED", s[s.FAILED_NO_RETRY = 4] = "FAILED_NO_RETRY";
 
     function m(e, t) {
         e.forEach(e => {
@@ -75,7 +75,7 @@ function(e, t, n) {
                 return T.default.Messages.MEMBER_SAFETY_JOIN_TYPE_UNKNOWN
         }
     };
-    (l = s || (s = {})).DISCORD = "discord", l.TWITCH = "twitch", l.YOUTUBE = "youtube", l.GUILD_SUBSCRIPTION = "guild_subscription";
+    (l = a || (a = {})).DISCORD = "discord", l.TWITCH = "twitch", l.YOUTUBE = "youtube", l.GUILD_SUBSCRIPTION = "guild_subscription";
     let O = e => {
             switch (e) {
                 case "twitch":
@@ -115,17 +115,17 @@ function(e, t, n) {
             });
             if (!Array.isArray(t.body)) return m(n, 0), [];
             let r = t.body.map(C),
-                s = [];
+                a = [];
             r.forEach(e => {
                 let {
                     userId: t
                 } = e;
-                return s.push(t)
+                return a.push(t)
             });
-            let a = h(e, s),
-                o = i.filter(e => !s.includes(e)),
+            let s = h(e, a),
+                o = i.filter(e => !a.includes(e)),
                 l = h(e, o);
-            return m(a, 3), m(l, 0), r
+            return m(s, 3), m(l, 0), r
         } catch (e) {
             m(n, 0)
         }

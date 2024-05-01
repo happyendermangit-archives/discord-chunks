@@ -20,8 +20,8 @@ function(e, t, n) {
             return f
         }
     });
-    var i, r, s = n("367907"),
-        a = n("857192"),
+    var i, r, a = n("367907"),
+        s = n("857192"),
         o = n("626135"),
         l = n("569984"),
         u = n("497505"),
@@ -62,13 +62,13 @@ function(e, t, n) {
         } = e, u = l.default.quests.get(t);
         if (null != u) {
             if (u.preview) {
-                a.default.isLoggingAnalyticsEvents && console.info("[Quest] AnalyticsUtils.track", n, {
+                s.default.isLoggingAnalyticsEvents && console.info("[Quest] AnalyticsUtils.track", n, {
                     ...I(u),
                     ...i
                 });
                 return
             }
-            if (r) return s.default.trackWithMetadata(n, {
+            if (r) return a.default.trackWithMetadata(n, {
                 ...I(u),
                 ...i
             });

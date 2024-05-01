@@ -4,9 +4,9 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        s = n.n(r),
-        a = n("913527"),
-        o = n.n(a),
+        a = n.n(r),
+        s = n("913527"),
+        o = n.n(s),
         l = n("442837"),
         u = n("481060"),
         d = n("835473"),
@@ -21,7 +21,7 @@ function(e, t, n) {
             createdAt: t,
             participantIds: n,
             applicationId: r,
-            title: a,
+            title: s,
             guildId: S,
             className: h
         } = e, A = (0, d.useGetOrFetchApplication)(r), m = (0, l.useStateFromStoresArray)([c.default], () => {
@@ -29,15 +29,15 @@ function(e, t, n) {
             return null !== (e = n.map(e => c.default.getUser(e)).filter(I.isNotNullish)) && void 0 !== e ? e : []
         }), N = null == A ? void 0 : A.name, p = o()(t).fromNow();
         return null == t ? null : (0, i.jsxs)("div", {
-            className: s()(h, f.container),
+            className: a()(h, f.container),
             children: [(0, i.jsx)(E.default, {
                 game: A
             }), (0, i.jsxs)("div", {
                 className: f.textSection,
-                children: [null != a && "" !== a ? (0, i.jsx)(u.Text, {
+                children: [null != s && "" !== s ? (0, i.jsx)(u.Text, {
                     variant: "text-md/semibold",
                     color: "interactive-active",
-                    children: a
+                    children: s
                 }) : (0, i.jsx)(u.Text, {
                     variant: "text-md/semibold",
                     color: "text-muted",

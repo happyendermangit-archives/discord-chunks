@@ -19,14 +19,14 @@ function(e, t, n) {
     }), n("411104"), n("177593"), n("47120");
     var i = n("763472"),
         r = n("726542"),
-        s = n("594190"),
-        a = n("70956"),
+        a = n("594190"),
+        s = n("70956"),
         o = n("781518"),
         l = n("18323"),
         u = n("768419"),
         d = n("616922"),
         _ = n("981631");
-    let c = 30 * a.default.Millis.SECOND;
+    let c = 30 * s.default.Millis.SECOND;
 
     function E(e) {
         return null != e.getActiveSocketAndDevice() || l.default.isProtocolRegistered()
@@ -37,7 +37,7 @@ function(e, t, n) {
         if (null != e) return Promise.resolve(e);
         if (!l.default.isProtocolRegistered()) return Promise.reject(Error("protocol is not registered"));
         let t = u.default.getPlayableComputerDevices();
-        if (s.default.isObservedAppRunning(r.default.get(_.PlatformTypes.SPOTIFY).name) && t.length > 0) {
+        if (a.default.isObservedAppRunning(r.default.get(_.PlatformTypes.SPOTIFY).name) && t.length > 0) {
             let {
                 socket: e,
                 device: n
@@ -54,12 +54,12 @@ function(e, t, n) {
                 r = () => {
                     for (let {
                             socket: n,
-                            device: s
+                            device: a
                         }
-                        of u.default.getPlayableComputerDevices()) null == t.find(e => e.device.id === s.id) && (clearTimeout(i), u.default.removeChangeListener(r), setImmediate(() => {
-                        (0, o.setActiveDevice)(n.accountId, s.id), e({
+                        of u.default.getPlayableComputerDevices()) null == t.find(e => e.device.id === a.id) && (clearTimeout(i), u.default.removeChangeListener(r), setImmediate(() => {
+                        (0, o.setActiveDevice)(n.accountId, a.id), e({
                             socket: n,
-                            device: s
+                            device: a
                         })
                     }))
                 };
@@ -94,13 +94,13 @@ function(e, t, n) {
     async function h(e, t) {
         var n;
         let r = await (0, i.getMetadata)(e, t),
-            s = (0, d.getSpotifyResourceType)(S(null !== (n = r.type) && void 0 !== n ? n : d.SpotifyResourceTypes.TRACK));
-        if (null === s) throw Error("invalid type ".concat(r.type));
+            a = (0, d.getSpotifyResourceType)(S(null !== (n = r.type) && void 0 !== n ? n : d.SpotifyResourceTypes.TRACK));
+        if (null === a) throw Error("invalid type ".concat(r.type));
         return {
             context_uri: "string" == typeof r.context_uri ? r.context_uri : void 0,
             album_id: S(r.album_id),
             artist_ids: Array.isArray(r.artist_ids) ? r.artist_ids.map(S) : [],
-            type: s,
+            type: a,
             button_urls: Array.isArray(r.button_urls) ? r.button_urls.map(S) : []
         }
     }

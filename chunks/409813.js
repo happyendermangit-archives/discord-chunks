@@ -17,8 +17,8 @@ function(e, t, n) {
             return T
         }
     }), n("47120"), n("411104");
-    var i, r, s = n("470079"),
-        a = n("881052"),
+    var i, r, a = n("470079"),
+        s = n("881052"),
         o = n("710845"),
         l = n("122289"),
         u = n("45572"),
@@ -63,7 +63,7 @@ function(e, t, n) {
 
     function I(e) {
         if (null != e) {
-            if (!(e instanceof a.BillingError)) throw _.error(e), (0, l.captureBillingException)(e), Error("Unexpected error type");
+            if (!(e instanceof s.BillingError)) throw _.error(e), (0, l.captureBillingException)(e), Error("Unexpected error type");
             if (e.hasCardError()) return "credit_card_information";
             if (e.hasAddressError()) return "address"
         }
@@ -71,7 +71,7 @@ function(e, t, n) {
     }
 
     function T(e, t, n) {
-        s.useEffect(() => {
+        a.useEffect(() => {
             null != e && "review" !== e && t !== u.PurchaseState.WAITING && t !== u.PurchaseState.COMPLETED && n(u.PurchaseState.WAITING)
         }, [e, t, n])
     }

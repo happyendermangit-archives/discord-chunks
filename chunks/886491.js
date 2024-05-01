@@ -8,15 +8,15 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("555730"),
-        s = n("481060"),
-        a = n("682864"),
+        a = n("481060"),
+        s = n("682864"),
         o = n("359610"),
         l = n("689938"),
         u = n("123752");
 
     function d(e) {
         return (0, i.jsx)(o.default, {
-            size: s.ButtonSizes.MEDIUM,
+            size: a.ButtonSizes.MEDIUM,
             ...e,
             children: (0, i.jsxs)("div", {
                 className: u.storeBtn,
@@ -24,7 +24,7 @@ function(e, t, n) {
                     width: 16,
                     height: 16,
                     color: "#fff"
-                }), (0, i.jsx)(a.default, {
+                }), (0, i.jsx)(s.default, {
                     size: 4,
                     horizontal: !0
                 }), l.default.Messages.STOREFRONT]

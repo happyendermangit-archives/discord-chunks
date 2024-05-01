@@ -8,9 +8,9 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("803997"),
-        s = n.n(r),
-        a = n("696689"),
-        o = n.n(a),
+        a = n.n(r),
+        s = n("696689"),
+        o = n.n(s),
         l = n("692547"),
         u = n("481517"),
         d = n("430600");
@@ -19,7 +19,7 @@ function(e, t, n) {
             let t, {
                     variant: n,
                     tag: r = "div",
-                    selectable: a = !1,
+                    selectable: s = !1,
                     className: o,
                     lineClamp: c,
                     color: E,
@@ -52,9 +52,9 @@ function(e, t, n) {
                 ...f.style
             };
             return (0, i.jsx)(r, {
-                className: s()({
+                className: a()({
                     [u.defaultColor]: void 0 === E,
-                    [u.selectable]: a,
+                    [u.selectable]: s,
                     [u.tabularNumbers]: I,
                     [d.fontScaling]: T
                 }, S, d[n], o),

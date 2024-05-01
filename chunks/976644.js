@@ -8,7 +8,7 @@ function(e, t, n) {
             return o
         }
     });
-    var i, r, s, a, o, l, u = n("735250"),
+    var i, r, a, s, o, l, u = n("735250"),
         d = n("470079"),
         _ = n("120356"),
         c = n.n(_),
@@ -50,27 +50,27 @@ function(e, t, n) {
             })
         }
     }
-    a = {
+    s = {
         shineSize: "default"
-    }, (s = "defaultProps") in(r = m) ? Object.defineProperty(r, s, {
-        value: a,
+    }, (a = "defaultProps") in(r = m) ? Object.defineProperty(r, a, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a;
+    }) : r[a] = s;
     let N = e => {
         let {
             children: t,
             className: n,
             disabled: i,
             submitting: r,
-            pauseAnimation: s,
-            shineSize: a = "default",
+            pauseAnimation: a,
+            shineSize: s = "default",
             shinePaused: o,
             buttonShineClassName: l,
             onlyShineOnHover: _,
             ...E
-        } = e, f = d.createRef(), h = (0, T.default)(f), A = !i && !r && !0 !== s && (!_ || h);
+        } = e, f = d.createRef(), h = (0, T.default)(f), A = !i && !r && !0 !== a && (!_ || h);
         return (0, u.jsxs)(I.Button, {
             buttonRef: f,
             ...E,
@@ -80,7 +80,7 @@ function(e, t, n) {
             children: [t, A ? (0, u.jsx)(m, {
                 shinePaused: o,
                 className: c()(S.buttonShine, _ ? S.onlyShineOnHover : void 0, l),
-                shineSize: a
+                shineSize: s
             }) : null]
         })
     };

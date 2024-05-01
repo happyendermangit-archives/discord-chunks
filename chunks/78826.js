@@ -13,8 +13,8 @@ function(e, t, n) {
     }), n("411104"), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("374470"),
-        a = n("960048");
+        a = n("374470"),
+        s = n("960048");
     let o = r.createContext({
         registerAsset: () => {},
         unregisterAsset: () => {},
@@ -23,7 +23,7 @@ function(e, t, n) {
     });
 
     function l(e) {
-        return (0, s.isElement)(e, HTMLImageElement) ? e.complete : !(0, s.isElement)(e, HTMLVideoElement) || e.readyState >= 2
+        return (0, a.isElement)(e, HTMLImageElement) ? e.complete : !(0, a.isElement)(e, HTMLVideoElement) || e.readyState >= 2
     }
 
     function u(e) {
@@ -46,7 +46,7 @@ function(e, t, n) {
                 } = e;
                 if (!n && null != u) {
                     var l, d, c;
-                    a.default.captureException(Error("".concat(r, ": ").concat(null != o ? "".concat(o, ", ") : "").concat((l = t, (0, s.isElement)(l, HTMLImageElement) ? l.getAttribute("src") : (0, s.isElement)(l, HTMLVideoElement) ? null !== (c = null === (d = l.querySelectorAll("source")[0]) || void 0 === d ? void 0 : d.getAttribute("src")) && void 0 !== c ? c : "video" : l.tagName), ", ").concat(i)), {
+                    s.default.captureException(Error("".concat(r, ": ").concat(null != o ? "".concat(o, ", ") : "").concat((l = t, (0, a.isElement)(l, HTMLImageElement) ? l.getAttribute("src") : (0, a.isElement)(l, HTMLVideoElement) ? null !== (c = null === (d = l.querySelectorAll("source")[0]) || void 0 === d ? void 0 : d.getAttribute("src")) && void 0 !== c ? c : "video" : l.tagName), ", ").concat(i)), {
                         tags: {
                             source: u
                         }
@@ -66,7 +66,7 @@ function(e, t, n) {
                     let n = new Set(t);
                     return n.add(e), n
                 });
-                let i = (n = e, (0, s.isElement)(n, HTMLImageElement) ? "load" : (0, s.isElement)(n, HTMLVideoElement) ? "canplaythrough" : "load");
+                let i = (n = e, (0, a.isElement)(n, HTMLImageElement) ? "load" : (0, a.isElement)(n, HTMLVideoElement) ? "canplaythrough" : "load");
                 e.addEventListener(i, function t() {
                     h(e), e.removeEventListener(i, t)
                 });
@@ -101,14 +101,14 @@ function(e, t, n) {
             children: n
         } = e, {
             registerAsset: i,
-            unregisterAsset: s
-        } = r.useContext(o), a = r.useRef(null);
+            unregisterAsset: a
+        } = r.useContext(o), s = r.useRef(null);
         return r.useEffect(() => {
-            let e = a.current;
+            let e = s.current;
             return null != e && i(e, t), () => {
-                null != e && s(e)
+                null != e && a(e)
             }
-        }, [i, s, t]), n(a)
+        }, [i, a, t]), n(s)
     }
 
     function _() {

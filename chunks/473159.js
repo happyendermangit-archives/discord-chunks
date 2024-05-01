@@ -7,20 +7,20 @@ function(e, t, n) {
     }), n("47120");
     var i = n("284737"),
         r = n("228488"),
-        s = n("830917"),
-        a = n("919570");
+        a = n("830917"),
+        s = n("919570");
 
     function o(e) {
         let t = e.document,
-            n = (0, s.setupWindowId)(e);
+            n = (0, a.setupWindowId)(e);
 
         function o() {
-            (0, a.setCurrentlyInteractingWindowId)(n)
+            (0, s.setCurrentlyInteractingWindowId)(n)
         }
 
         function l() {
             setTimeout(() => {
-                (0, a.clearCurrentlyInteractingWindowId)(n)
+                (0, s.clearCurrentlyInteractingWindowId)(n)
             }, 0)
         }
         for (let n of (e.addEventListener("resize", function() {
@@ -33,7 +33,7 @@ function(e, t, n) {
                 (0, i.unload)(e)
             }), e.addEventListener("visibilitychange", function() {
                 (0, i.visibilityChange)(e)
-            }), a.INTERACTION_EVENTS)) t.addEventListener(n, o, !0), t.addEventListener(n, l, !1);
+            }), s.INTERACTION_EVENTS)) t.addEventListener(n, o, !0), t.addEventListener(n, l, !1);
         (0, r.subscribeDocumentToFullScreenChange)(t, function() {
             (0, i.fullscreenChange)(e)
         }), (0, i.init)(e)

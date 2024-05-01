@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("481060"),
-        a = n("454585"),
+        a = n("481060"),
+        s = n("454585"),
         o = n("273744"),
         l = n("689938"),
         u = n("321779"),
@@ -22,8 +22,8 @@ function(e, t, n) {
             onChange: T,
             initialText: f,
             isRequired: S
-        } = e, h = r.useRef(a.default.reactParserFor({
-            ...a.default.defaultRules,
+        } = e, h = r.useRef(s.default.reactParserFor({
+            ...s.default.defaultRules,
             link: o.LinkMarkupRule
         })), [A, m] = r.useState(""), [N, p] = r.useState("");
         r.useEffect(() => {
@@ -44,14 +44,14 @@ function(e, t, n) {
             className: d.marginBottom8,
             children: [null != t && (0, i.jsx)("div", {
                 className: d.marginBottom8,
-                children: (0, i.jsxs)(s.Text, {
+                children: (0, i.jsxs)(a.Text, {
                     variant: "text-sm/bold",
                     children: [t, S && (0, i.jsx)("span", {
                         className: u.required,
                         children: "*"
                     })]
                 })
-            }), (0, i.jsx)(s.TextArea, {
+            }), (0, i.jsx)(a.TextArea, {
                 maxLength: E,
                 onChange: O,
                 value: A,
@@ -60,7 +60,7 @@ function(e, t, n) {
                 placeholder: _,
                 autoFocus: !0
             }), null != n && (0, i.jsx)("div", {
-                children: (0, i.jsx)(s.Text, {
+                children: (0, i.jsx)(a.Text, {
                     variant: "text-sm/normal",
                     children: h.current(n)
                 })
@@ -72,18 +72,18 @@ function(e, t, n) {
             elements: t,
             onChange: n,
             state: r
-        } = e, s = t.map(e => {
+        } = e, a = t.map(e => {
             var t;
-            let s = e.name;
+            let a = e.name;
             return (0, i.jsx)(_, {
                 data: e.data,
-                onChange: e => n(s, e.value, e.isValid),
-                initialText: null !== (t = null == r ? void 0 : r[s]) && void 0 !== t ? t : void 0,
+                onChange: e => n(a, e.value, e.isValid),
+                initialText: null !== (t = null == r ? void 0 : r[a]) && void 0 !== t ? t : void 0,
                 isRequired: e.should_submit_data
-            }, s)
+            }, a)
         });
         return (0, i.jsx)("div", {
-            children: s
+            children: a
         })
     }
 }

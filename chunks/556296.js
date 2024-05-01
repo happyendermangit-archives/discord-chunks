@@ -6,8 +6,8 @@ function(e, t, n) {
             return M
         }
     }), n("724458"), n("653041"), n("47120"), n("757143");
-    var r, s = n("879443"),
-        a = n.n(s),
+    var r, a = n("879443"),
+        s = n.n(a),
         o = n("414861"),
         l = n.n(o),
         u = n("348327"),
@@ -98,12 +98,12 @@ function(e, t, n) {
             return
         }
         let r = e.id,
-            s = G[n].keyEvents;
+            a = G[n].keyEvents;
         e.action === R.GlobalKeybindActions.TOGGLE_MUTE && V(), ! function(e, t, n, i) {
             if (m.isPlatformEmbedded) N.default.inputEventRegister(parseInt(e), t, n, i);
             else {
                 F(e);
-                let r = l()(new(a())(document));
+                let r = l()(new(s())(document));
                 i.keyup && r.bindGlobal((0, p.toString)(t), () => n(!1), "keyup"), i.keydown && r.bindGlobal((0, p.toString)(t), () => n(!0), "keydown"), y[e] = r
             }
         }(r, t, e => (function(e, t) {
@@ -114,7 +114,7 @@ function(e, t, n) {
             blurred: !0,
             keydown: !1,
             keyup: !1,
-            ...s
+            ...a
         }), T.default.validateKeybind((0, p.toString)(e.shortcut))
     }
 

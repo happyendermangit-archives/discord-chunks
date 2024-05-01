@@ -7,13 +7,13 @@ function(e, t, n) {
     }), n("47120"), n("653041");
     var i = n("341702"),
         r = n("887490");
-    let s = new Set(["line", "blockQuote"]),
-        a = [];
+    let a = new Set(["line", "blockQuote"]),
+        s = [];
 
     function o(e, t, n) {
         if (r.EditorUtils.areStylesDisabled(e)) return [];
         let [o, l] = t;
-        if (1 !== l.length || !r.NodeUtils.isInTypes(o, s)) return a;
+        if (1 !== l.length || !r.NodeUtils.isInTypes(o, a)) return s;
         let {
             entries: u,
             serializedChildren: d
@@ -21,8 +21,8 @@ function(e, t, n) {
         for (let t = 0; t < u.length; t++) {
             let n = u[t];
             if (n.attributes.length > 0 && n.text.length > 0) {
-                let s = u[t - 1],
-                    a = u[t + 1],
+                let a = u[t - 1],
+                    s = u[t + 1],
                     o = (0, i.getPointFromPosition)(e, l, d, n.start),
                     c = {
                         anchor: o,
@@ -35,10 +35,10 @@ function(e, t, n) {
                     }),
                     I = {};
                 for (let e of n.attributes)
-                    if (I[e] = !0, "syntaxBefore" === e && null != a)
-                        for (let e of a.attributes) I["before_".concat(e)] = !0;
-                    else if ("syntaxAfter" === e && null != s)
-                    for (let e of s.attributes) I["after_".concat(e)] = !0;
+                    if (I[e] = !0, "syntaxBefore" === e && null != s)
+                        for (let e of s.attributes) I["before_".concat(e)] = !0;
+                    else if ("syntaxAfter" === e && null != a)
+                    for (let e of a.attributes) I["after_".concat(e)] = !0;
                 for (let [t, n] of E) {
                     let t = {
                         anchor: r.EditorUtils.start(e, n),

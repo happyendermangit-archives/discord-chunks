@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("470079"),
         r = n("442837"),
-        s = n("607070"),
-        a = n("654904"),
+        a = n("607070"),
+        s = n("654904"),
         o = n("271383"),
         l = n("451478"),
         u = n("166625");
@@ -21,9 +21,9 @@ function(e, t, n) {
             showPending: _ = !1,
             animateOnHover: c = !1,
             avatarOverride: E
-        } = e, [I, T] = i.useState(!1), f = (0, r.useStateFromStores)([s.default], () => s.default.useReducedMotion), S = (0, r.useStateFromStores)([l.default], () => l.default.isFocused()) && (I || !f && !c), {
+        } = e, [I, T] = i.useState(!1), f = (0, r.useStateFromStores)([a.default], () => a.default.useReducedMotion), S = (0, r.useStateFromStores)([l.default], () => l.default.isFocused()) && (I || !f && !c), {
             pendingAvatar: h
-        } = (0, u.default)({}), A = (0, r.useStateFromStores)([o.default], () => null != n && null != t ? o.default.getMember(n, t.id) : null), m = i.useMemo(() => null != t ? (0, a.getPreviewAvatar)(_ ? null != E ? E : h : void 0, A, t, {
+        } = (0, u.default)({}), A = (0, r.useStateFromStores)([o.default], () => null != n && null != t ? o.default.getMember(n, t.id) : null), m = i.useMemo(() => null != t ? (0, s.getPreviewAvatar)(_ ? null != E ? E : h : void 0, A, t, {
             canAnimate: S,
             size: d
         }) : void 0, [_, h, A, t, S, d, E]), N = i.useCallback(() => T(!0), []);

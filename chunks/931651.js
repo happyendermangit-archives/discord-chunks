@@ -2,19 +2,19 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         ReactionPicker: function() {
-            return a
+            return s
         }
     });
     var i = n("735250");
     n("470079");
     var r = n("907040"),
-        s = n("185923");
+        a = n("185923");
 
-    function a(e) {
+    function s(e) {
         let {
             channel: t,
             closePopout: n,
-            analyticsOverride: a,
+            analyticsOverride: s,
             onSelectEmoji: o,
             messageId: l
         } = e;
@@ -22,8 +22,8 @@ function(e, t, n) {
             closePopout: n,
             channel: t,
             onSelectEmoji: o,
-            pickerIntention: s.EmojiIntention.REACTION,
-            analyticsOverride: a,
+            pickerIntention: a.EmojiIntention.REACTION,
+            analyticsOverride: s,
             messageId: l
         })
     }

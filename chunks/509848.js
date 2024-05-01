@@ -13,8 +13,8 @@ function(e, t, n) {
     });
     var i = n("392711"),
         r = n.n(i),
-        s = n("31775"),
-        a = n.n(s);
+        a = n("31775"),
+        s = n.n(a);
 
     function o(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
@@ -44,7 +44,7 @@ function(e, t, n) {
         }
         _get(e) {
             var t;
-            return null !== (t = this._subscriptions[e]) && void 0 !== t ? t : new(a())({
+            return null !== (t = this._subscriptions[e]) && void 0 !== t ? t : new(s())({
                 max: 5
             })
         }

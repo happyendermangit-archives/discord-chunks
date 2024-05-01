@@ -16,8 +16,8 @@ function(e, t, n) {
     });
     var i = n("470079"),
         r = n("149765"),
-        s = n("442837"),
-        a = n("911969"),
+        a = n("442837"),
+        s = n("911969"),
         o = n("160404"),
         l = n("695346"),
         u = n("131704"),
@@ -29,13 +29,13 @@ function(e, t, n) {
         T = n("981631");
 
     function f(e, t) {
-        var n, i, r, s, a;
+        var n, i, r, a, s;
         let E;
         let T = N(E = e instanceof u.ChannelRecordBase && e.isThread() ? null !== (r = _.default.getChannel(e.parent_id)) && void 0 !== r ? r : e : e),
             f = l.ViewNsfwCommands.getSetting(),
             S = d.default.getId(),
-            m = null !== (s = null === (n = I.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) && void 0 !== s && s,
-            p = null != T && null !== (a = null === (i = c.default.getMember(T, S)) || void 0 === i ? void 0 : i.roles) && void 0 !== a ? a : [],
+            m = null !== (a = null === (n = I.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) && void 0 !== a && a,
+            p = null != T && null !== (s = null === (i = c.default.getMember(T, S)) || void 0 === i ? void 0 : i.roles) && void 0 !== s ? s : [],
             O = o.default.isViewingRoles(T),
             {
                 computedPermissions: R,
@@ -62,17 +62,17 @@ function(e, t, n) {
                 return e
             }, [e]),
             r = N(n),
-            a = l.ViewNsfwCommands.useSetting(),
-            E = (0, s.useStateFromStores)([d.default], () => d.default.getId()),
-            T = (0, s.useStateFromStores)([I.default], () => {
+            s = l.ViewNsfwCommands.useSetting(),
+            E = (0, a.useStateFromStores)([d.default], () => d.default.getId()),
+            T = (0, a.useStateFromStores)([I.default], () => {
                 var e, t;
                 return null !== (t = null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed) && void 0 !== t && t
             }),
-            f = (0, s.useStateFromStoresArray)([c.default], () => {
+            f = (0, a.useStateFromStoresArray)([c.default], () => {
                 var e, t;
                 return null != r && null !== (t = null === (e = c.default.getMember(r, E)) || void 0 === e ? void 0 : e.roles) && void 0 !== t ? t : []
             }),
-            S = (0, s.useStateFromStores)([o.default], () => o.default.isViewingRoles(r));
+            S = (0, a.useStateFromStores)([o.default], () => o.default.isViewingRoles(r));
         return i.useMemo(() => {
             let {
                 computedPermissions: e,
@@ -86,9 +86,9 @@ function(e, t, n) {
                 isImpersonating: S,
                 computedPermissions: e,
                 hasBaseAccessPermissions: i,
-                allowNsfw: h(n, T, a)
+                allowNsfw: h(n, T, s)
             }
-        }, [t, n, S, f, E, T, a])
+        }, [t, n, S, f, E, T, s])
     }
 
     function h(e, t, n) {
@@ -109,7 +109,7 @@ function(e, t, n) {
     }
 
     function m(e, t) {
-        return e instanceof u.ChannelRecordBase && null == e.guild_id ? e.type === T.ChannelTypes.DM && e.getRecipientId() === t ? a.InteractionContextType.BOT_DM : a.InteractionContextType.PRIVATE_CHANNEL : a.InteractionContextType.GUILD
+        return e instanceof u.ChannelRecordBase && null == e.guild_id ? e.type === T.ChannelTypes.DM && e.getRecipientId() === t ? s.InteractionContextType.BOT_DM : s.InteractionContextType.PRIVATE_CHANNEL : s.InteractionContextType.GUILD
     }
 
     function N(e) {

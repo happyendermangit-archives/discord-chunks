@@ -2,13 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         isPremium: function() {
-            return s
+            return a
         },
         isPremiumAtLeast: function() {
             return r
         },
         isPremiumExactly: function() {
-            return a
+            return s
         }
     });
     var i = n("474936");
@@ -17,11 +17,11 @@ function(e, t, n) {
         return null == t || null != e && i.PremiumTypeOrder[e] >= i.PremiumTypeOrder[t]
     }
 
-    function s(e, t) {
+    function a(e, t) {
         return null != e && null != e.premiumType && r(e.premiumType, t)
     }
 
-    function a(e, t) {
+    function s(e, t) {
         return null != e && e.premiumType === t
     }
 }

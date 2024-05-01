@@ -2,8 +2,8 @@ function(e, t, n) {
     "use strict";
     n.r(t), n("47120"), n("789020");
     var i, r = n("442837"),
-        s = n("570140"),
-        a = n("579806"),
+        a = n("570140"),
+        s = n("579806"),
         o = n("594190"),
         l = n("569545"),
         u = n("314897"),
@@ -60,8 +60,8 @@ function(e, t, n) {
             }
         };
     async function D() {
-        if (v.clipsSettings.storageLocation !== f || null == a.default || null == a.default.remoteApp) return;
-        let e = await a.default.remoteApp.getPath("documents");
+        if (v.clipsSettings.storageLocation !== f || null == s.default || null == s.default.remoteApp) return;
+        let e = await s.default.remoteApp.getPath("documents");
         v.clipsSettings.storageLocation = e, y.emitChange()
     }
     class M extends(i = r.default.DeviceSettingsStore) {
@@ -218,7 +218,7 @@ function(e, t, n) {
             numberOfTimesDismissed: 0
         }
     })]);
-    let y = new M(s.default, {
+    let y = new M(a.default, {
         CLIPS_SETTINGS_UPDATE: function(e) {
             let {
                 settings: t

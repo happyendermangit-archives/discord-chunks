@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        s = n.n(r),
-        a = n("993365"),
+        a = n.n(r),
+        s = n("993365"),
         o = n("337033"),
         l = n("787151");
     let u = e => {
@@ -18,10 +18,10 @@ function(e, t, n) {
             className: n,
             ...r
         } = e, u = (0, o.usePrivateHeadingLevel)(), d = "h".concat(Math.min(u, 6));
-        return (0, i.jsx)(a.Text, {
+        return (0, i.jsx)(s.Text, {
             variant: t,
             tag: d,
-            className: s()(l.defaultColor, n),
+            className: a()(l.defaultColor, n),
             ...u > 6 ? {
                 "data-excessive-heading-level": u
             } : {},

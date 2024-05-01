@@ -2,14 +2,14 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return a
         }
     });
     var i = n("735250");
     n("470079");
     var r = n("302454");
 
-    function s(e) {
+    function a(e) {
         return e.heading = r.defaultRules.heading, e.lheading = r.defaultRules.lheading, e.list = r.defaultRules.list, e.paragraph = {
             ...e.paragraph,
             react: function(e, t, n) {
@@ -20,18 +20,18 @@ function(e, t, n) {
         }, e.link = {
             ...e.link,
             react: function(e, t, n) {
-                let s = {};
+                let a = {};
                 if (null != e.context) {
                     let t = e.context[e.target];
-                    t && t.onClick ? (s.onClick = t.onClick, s.onContextMenu = t.onContextMenu) : s.onClick = t
+                    t && t.onClick ? (a.onClick = t.onClick, a.onContextMenu = t.onContextMenu) : a.onClick = t
                 }
-                if (null == s.onClick) {
-                    var a;
-                    s.href = null !== (a = (0, r.sanitizeUrl)(e.target)) && void 0 !== a ? a : void 0, s.target = "_blank"
+                if (null == a.onClick) {
+                    var s;
+                    a.href = null !== (s = (0, r.sanitizeUrl)(e.target)) && void 0 !== s ? s : void 0, a.target = "_blank"
                 }
                 return (0, i.jsx)("a", {
                     title: e.title,
-                    ...s,
+                    ...a,
                     rel: "noreferrer",
                     children: t(e.content, n)
                 }, n.key)

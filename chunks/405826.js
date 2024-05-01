@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("757143"), n("47120");
     var i = n("623279"),
         r = n("392711"),
-        s = n.n(r),
-        a = n("374470"),
+        a = n.n(r),
+        s = n("374470"),
         o = n("579806"),
         l = n("710845"),
         u = n("706454"),
@@ -37,9 +37,9 @@ function(e, t, n) {
         }
         let {
             language: r,
-            region: s
+            region: a
         } = n.langtag;
-        return "".concat(r.language.toLowerCase(), "-").concat(s.toUpperCase())
+        return "".concat(r.language.toLowerCase(), "-").concat(a.toUpperCase())
     }
     class S {
         get enabled() {
@@ -89,8 +89,8 @@ function(e, t, n) {
                 let r = "".concat(n, "-").concat(this.regionPreference);
                 if (-1 !== e.indexOf(r)) this.setLocale(r);
                 else {
-                    var s;
-                    let e = null !== (s = i[n]) && void 0 !== s ? s : c.default[t];
+                    var a;
+                    let e = null !== (a = i[n]) && void 0 !== a ? a : c.default[t];
                     null != e && this.setLocale(e)
                 }
             }), T.on("spellcheck-result", (e, t) => {
@@ -98,9 +98,9 @@ function(e, t, n) {
             })
         }
     }
-    let h = s().debounce((e, t) => {
+    let h = a().debounce((e, t) => {
         let n = function(e) {
-            return null == e ? null : (0, a.isElement)(e, HTMLInputElement) || (0, a.isElement)(e, HTMLTextAreaElement) ? e.value : (0, a.isElement)(e) && e.hasAttribute("contenteditable") ? e.textContent : void 0
+            return null == e ? null : (0, s.isElement)(e, HTMLInputElement) || (0, s.isElement)(e, HTMLTextAreaElement) ? e.value : (0, s.isElement)(e) && e.hasAttribute("contenteditable") ? e.textContent : void 0
         }(t);
         null != n && e.detectLanguage(n)
     }, 250);

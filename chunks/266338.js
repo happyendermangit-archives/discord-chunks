@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getIntersectionObserver: function() {
-            return a
+            return s
         },
         unwatch: function() {
             return l
@@ -14,7 +14,7 @@ function(e, t, n) {
     let i = new WeakMap,
         r = new WeakMap;
 
-    function s(e, t) {
+    function a(e, t) {
         e.forEach(e => {
             var n;
             let i = null === (n = r.get(t)) || void 0 === n ? void 0 : n.get(e.target);
@@ -22,15 +22,15 @@ function(e, t, n) {
         })
     }
 
-    function a(e) {
+    function s(e) {
         let t = i.get(e);
-        return null == t && (t = new IntersectionObserver(s, e), i.set(e, t), r.set(t, new WeakMap)), t
+        return null == t && (t = new IntersectionObserver(a, e), i.set(e, t), r.set(t, new WeakMap)), t
     }
 
     function o(e, t, n) {
         var i;
-        let s = null !== (i = r.get(e)) && void 0 !== i ? i : new WeakMap;
-        !s.has(t) && e.observe(t), s.set(t, n), r.set(e, s)
+        let a = null !== (i = r.get(e)) && void 0 !== i ? i : new WeakMap;
+        !a.has(t) && e.observe(t), a.set(t, n), r.set(e, a)
     }
 
     function l(e, t) {

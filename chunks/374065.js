@@ -14,8 +14,8 @@ function(e, t, n) {
             return I
         }
     });
-    var i, r, s = n("442837"),
-        a = n("592125"),
+    var i, r, a = n("442837"),
+        s = n("592125"),
         o = n("430824"),
         l = n("496675"),
         u = n("782769"),
@@ -29,24 +29,24 @@ function(e, t, n) {
             ChannelStore: n,
             GuildStore: i,
             PermissionStore: r
-        } = e, s = n.getChannel(t);
-        if (null == s) return 3;
-        if (!(0, u.getIsActivitiesEnabledForCurrentPlatform)(s)) return 6;
-        if (!(0, d.isPrivateChannelWithEnabledActivities)(s.id)) {
-            let e = s.getGuildId();
+        } = e, a = n.getChannel(t);
+        if (null == a) return 3;
+        if (!(0, u.getIsActivitiesEnabledForCurrentPlatform)(a)) return 6;
+        if (!(0, d.isPrivateChannelWithEnabledActivities)(a.id)) {
+            let e = a.getGuildId();
             if (null == e) return 4;
             let t = i.getGuild(e);
-            if ((null == t ? void 0 : t.afkChannelId) === s.id) return 5;
-            if (!r.can(_.Permissions.CONNECT, s)) return 2;
-            if (!r.can(_.Permissions.USE_EMBEDDED_ACTIVITIES, s)) return 1
+            if ((null == t ? void 0 : t.afkChannelId) === a.id) return 5;
+            if (!r.can(_.Permissions.CONNECT, a)) return 2;
+            if (!r.can(_.Permissions.USE_EMBEDDED_ACTIVITIES, a)) return 1
         }
         return 0
     }
 
     function I(e) {
-        return (0, s.useStateFromStores)([a.default, o.default, l.default], () => E({
+        return (0, a.useStateFromStores)([s.default, o.default, l.default], () => E({
             channelId: e,
-            ChannelStore: a.default,
+            ChannelStore: s.default,
             GuildStore: o.default,
             PermissionStore: l.default
         }), [e])

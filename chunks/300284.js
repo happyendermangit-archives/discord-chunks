@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("470079"),
         r = n("230711"),
-        s = n("906732"),
-        a = n("18438");
+        a = n("906732"),
+        s = n("18438");
     n("778825");
     var o = n("981631"),
         l = n("526761");
@@ -22,9 +22,9 @@ function(e, t, n) {
             openWithoutBackstack: d
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, {
             analyticsLocations: _
-        } = (0, s.default)();
+        } = (0, a.default)();
         return (0, i.useCallback)(() => {
-            null != e && (0, a.initGuildIdentitySettings)(e, null != u ? u : _), r.default.open(o.UserSettingsSections.PROFILE_CUSTOMIZATION, null != e ? l.ProfileCustomizationSubsection.GUILD : l.ProfileCustomizationSubsection.USER_PROFILE, {
+            null != e && (0, s.initGuildIdentitySettings)(e, null != u ? u : _), r.default.open(o.UserSettingsSections.PROFILE_CUSTOMIZATION, null != e ? l.ProfileCustomizationSubsection.GUILD : l.ProfileCustomizationSubsection.USER_PROFILE, {
                 scrollPosition: t,
                 analyticsLocation: n,
                 analyticsLocations: u,

@@ -2,20 +2,20 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         UserSettingsManager: function() {
-            return a
+            return s
         }
     }), n("177593"), n("47120");
     var i = n("147913"),
         r = n("695346");
-    let s = !1;
-    class a extends i.default {
+    let a = !1;
+    class s extends i.default {
         maybeShowChangeLanguageToast() {}
         setVerifyTimezone() {
-            s = !0
+            a = !0
         }
         ensureTimezoneUpdated() {
-            if (!s) return;
-            s = !1;
+            if (!a) return;
+            a = !1;
             let e = new Date().getTimezoneOffset();
             r.TimezoneOffset.getSetting() !== e && setImmediate(() => r.TimezoneOffset.updateSetting(e))
         }
@@ -35,5 +35,5 @@ function(e, t, n) {
             }) : t[n] = i
         }
     }
-    t.default = new a
+    t.default = new s
 }

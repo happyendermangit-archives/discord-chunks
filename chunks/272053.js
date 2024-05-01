@@ -2,8 +2,8 @@ function(e, t, n) {
     "use strict";
     n.r(t), n("47120"), n("411104"), n("653041"), n("998459");
     var i, r = n("348327"),
-        s = n.n(r),
-        a = n("442837"),
+        a = n.n(r),
+        s = n("442837"),
         o = n("544891"),
         l = n("570140"),
         u = n("457330"),
@@ -68,7 +68,7 @@ function(e, t, n) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
             if (e.revoked || null == (t = null != t ? t : e.accessToken)) return null;
             try {
-                var n, i, r, s, a;
+                var n, i, r, a, s;
                 let {
                     body: {
                         data: o
@@ -85,7 +85,7 @@ function(e, t, n) {
                 } = l, I = {
                     large_image: null != u && null !== (i = (0, _.getAssetFromImageURL)(T.PlatformTypes.TWITCH, u)) && void 0 !== i ? i : void 0
                 }, f = await L(c, t), S = d.default.get(T.PlatformTypes.TWITCH);
-                let h = null !== (s = u, r = null === (a = m.exec(s)) || void 0 === a ? void 0 : a[1]) && void 0 !== r ? r : e.name;
+                let h = null !== (a = u, r = null === (s = m.exec(a)) || void 0 === s ? void 0 : s[1]) && void 0 !== r ? r : e.name;
                 return {
                     url: null === (n = S.getPlatformUserUrl) || void 0 === n ? void 0 : n.call(S, {
                         id: e.id,
@@ -126,16 +126,16 @@ function(e, t, n) {
                 let {
                     id: r,
                     snippet: {
-                        title: s,
-                        thumbnails: a
+                        title: a,
+                        thumbnails: s
                     }
                 } = i[0], l = {
-                    large_image: null !== (n = (0, _.getAssetFromImageURL)(T.PlatformTypes.YOUTUBE, a.high.url)) && void 0 !== n ? n : void 0
+                    large_image: null !== (n = (0, _.getAssetFromImageURL)(T.PlatformTypes.YOUTUBE, s.high.url)) && void 0 !== n ? n : void 0
                 };
                 return O = {
                     url: h(r),
                     name: d.default.get(T.PlatformTypes.YOUTUBE).name,
-                    details: s,
+                    details: a,
                     assets: l
                 }
             } catch (n) {
@@ -173,7 +173,7 @@ function(e, t, n) {
     function D() {
         I.default.enabled ? v.start() : v.stop()
     }
-    class M extends(i = a.default.Store) {
+    class M extends(i = s.default.Store) {
         initialize() {
             D(), this.waitFor(E.default), this.syncWith([I.default], D)
         }
@@ -184,7 +184,7 @@ function(e, t, n) {
     f(M, "displayName", "ExternalStreamingStore"), t.default = new M(l.default, {
         STREAMING_UPDATE: function(e) {
             var t;
-            if (s()(e.stream, N)) return !1;
+            if (a()(e.stream, N)) return !1;
             N = null !== (t = e.stream) && void 0 !== t ? t : null
         },
         USER_CONNECTIONS_UPDATE: () => v._check()

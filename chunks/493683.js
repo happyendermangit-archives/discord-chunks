@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("544891"),
         r = n("780384"),
-        s = n("570140"),
-        a = n("408987"),
+        a = n("570140"),
+        s = n("408987"),
         o = n("57132"),
         l = n("895886"),
         u = n("703656"),
@@ -21,27 +21,27 @@ function(e, t, n) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                 n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                 r = arguments.length > 3 ? arguments[3] : void 0,
-                s = arguments.length > 4 ? arguments[4] : void 0,
-                a = this._getRecipients(e),
+                a = arguments.length > 4 ? arguments[4] : void 0,
+                s = this._getRecipients(e),
                 o = e => {
                     t && E.default.call(e.id, n, !0, e.isDM() ? e.getRecipientId() : null)
                 };
-            if (1 === a.length) {
-                let [e] = a, t = this._openCachedDMChannel(e, s);
+            if (1 === s.length) {
+                let [e] = s, t = this._openCachedDMChannel(e, a);
                 if (null != t) return o(t), Promise.resolve(t.id)
             }
             try {
                 let e = await i.HTTP.post({
                     url: T.Endpoints.USER_CHANNELS,
                     body: {
-                        recipients: a
+                        recipients: s
                     },
                     context: {
                         location: r
                     },
                     oldFormErrors: !0
                 });
-                null == s || s();
+                null == a || a();
                 let t = this._openPrivateChannel(e.body);
                 return o(t), e.body.id
             } catch (e) {
@@ -78,7 +78,7 @@ function(e, t, n) {
                     oldFormErrors: !0
                 }),
                 r = (0, d.createChannelRecordFromServer)(n.body);
-            return s.default.dispatch({
+            return a.default.dispatch({
                 type: "CHANNEL_CREATE",
                 channel: r
             }), r.id
@@ -90,7 +90,7 @@ function(e, t, n) {
         async getDMChannel(e) {
             let t = await i.HTTP.get(T.Endpoints.DM_CHANNEL(e)),
                 n = (0, d.createChannelRecordFromServer)(t.body);
-            return s.default.dispatch({
+            return a.default.dispatch({
                 type: "CHANNEL_CREATE",
                 channel: n
             }), n.id
@@ -98,7 +98,7 @@ function(e, t, n) {
         _getRecipients: e => null != e ? Array.isArray(e) ? e : [e] : [],
         _openPrivateChannel(e) {
             let t = (0, d.createChannelRecordFromServer)(e);
-            return s.default.dispatch({
+            return a.default.dispatch({
                 type: "CHANNEL_CREATE",
                 channel: t
             }), null != (0, o.getRootNavigationRefIfInExperiment)() ? (0, u.transitionTo)(T.Routes.CHANNEL(T.ME, t.id), {
@@ -108,7 +108,7 @@ function(e, t, n) {
         closePrivateChannel(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                 n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-            return s.default.dispatch({
+            return a.default.dispatch({
                 type: "CHANNEL_DELETE",
                 channel: {
                     id: e,
@@ -137,14 +137,14 @@ function(e, t, n) {
             url: T.Endpoints.CHANNEL_PERMISSIONS_OVERWRITE(e, t),
             oldFormErrors: !0
         }),
-        addRecipient(e, t, n, s) {
+        addRecipient(e, t, n, a) {
             return i.HTTP.put({
                 url: T.Endpoints.CHANNEL_RECIPIENT(e, t),
                 context: {
                     location: n
                 },
                 oldFormErrors: !0
-            }).then(t => (r.AccessibilityAnnouncer.announce(S.default.Messages.A11Y_ANNOUNCEMENT_USER_ADDED_TO_GROUP_DM), null == s || s(), 201 === t.status) ? this._openPrivateChannel(t.body).id : e).catch(() => (r.AccessibilityAnnouncer.announce(S.default.Messages.A11Y_ANNOUNCEMENT_USER_ADDED_TO_GROUP_DM_FAILED), e))
+            }).then(t => (r.AccessibilityAnnouncer.announce(S.default.Messages.A11Y_ANNOUNCEMENT_USER_ADDED_TO_GROUP_DM), null == a || a(), 201 === t.status) ? this._openPrivateChannel(t.body).id : e).catch(() => (r.AccessibilityAnnouncer.announce(S.default.Messages.A11Y_ANNOUNCEMENT_USER_ADDED_TO_GROUP_DM_FAILED), e))
         },
         addRecipients(e, t, n, i) {
             return this.addRecipient(e, t[0], n, i).then(e => Promise.all(t.slice(1).map(t => this.addRecipient(e, t, n))).then(() => e))
@@ -169,8 +169,8 @@ function(e, t, n) {
                     },
                     oldFormErrors: !0
                 }),
-                s = null == n ? void 0 : n.getGuildId();
-            return null != s && !(null == n ? void 0 : n.isThread()) && a.default.checkGuildTemplateDirty(s), r
+                a = null == n ? void 0 : n.getGuildId();
+            return null != a && !(null == n ? void 0 : n.isThread()) && s.default.checkGuildTemplateDirty(a), r
         },
         setIcon(e, t) {
             let n = _.default.getChannel(e);
@@ -182,7 +182,7 @@ function(e, t, n) {
                 oldFormErrors: !0
             }).then(() => {
                 let e = null == n ? void 0 : n.getGuildId();
-                null != e && !(null == n ? void 0 : n.isThread()) && a.default.checkGuildTemplateDirty(e)
+                null != e && !(null == n ? void 0 : n.isThread()) && s.default.checkGuildTemplateDirty(e)
             })
         },
         setVoiceBackgroundDisplay(e, t) {
@@ -203,7 +203,7 @@ function(e, t, n) {
             oldFormErrors: !0
         }),
         preload(e, t) {
-            s.default.dispatch({
+            a.default.dispatch({
                 type: "CHANNEL_PRELOAD",
                 guildId: e === T.ME ? null : e,
                 channelId: t,
@@ -213,7 +213,7 @@ function(e, t, n) {
         fetchChannelStoreListing(e, t) {
             let n = null != t ? T.Endpoints.CHANNEL_STORE_LISTING_SKU(e, t) : T.Endpoints.CHANNEL_STORE_LISTING(e);
             return (0, c.httpGetWithCountryCodeQuery)(n).then(t => {
-                s.default.dispatch({
+                a.default.dispatch({
                     type: "STORE_LISTING_FETCH_SUCCESS",
                     channelId: e,
                     storeListing: t.body
@@ -221,18 +221,18 @@ function(e, t, n) {
             })
         },
         async createTextChannel(e, t, n, r) {
-            let s = {
+            let a = {
                 type: T.ChannelTypes.GUILD_TEXT,
                 name: t,
                 permission_overwrites: []
             };
-            null != n && (s.parent_id = n), null != r && (s.topic = r);
+            null != n && (a.parent_id = n), null != r && (a.topic = r);
             let o = await i.HTTP.post({
                 url: T.Endpoints.GUILD_CHANNELS(e),
-                body: s,
+                body: a,
                 oldFormErrors: !0
             });
-            return a.default.checkGuildTemplateDirty(e), o
+            return s.default.checkGuildTemplateDirty(e), o
         }
     }
 }

@@ -11,7 +11,7 @@ function(e, t, n) {
     var i = n("503461"),
         r = n("218521");
 
-    function s(e, t, n) {
+    function a(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -20,7 +20,7 @@ function(e, t, n) {
         }) : e[t] = n, e
     }
 
-    function a(e, t) {
+    function s(e, t) {
         return 0 === t.length ? e : {
             key: (0, r.combineKey)(t, e.key),
             data: e.data,
@@ -29,7 +29,7 @@ function(e, t, n) {
     }
 
     function o(e, t) {
-        return 0 === t.length ? e : e.map(e => a(e, t))
+        return 0 === t.length ? e : e.map(e => s(e, t))
     }
     class l {
         close() {
@@ -54,11 +54,11 @@ function(e, t, n) {
         }
         getRange(e, t, n) {
             let i = (0, r.combineKey)(this.prefix, e),
-                s = (0, r.combineKey)(this.prefix, t);
+                a = (0, r.combineKey)(this.prefix, t);
             return this.database.execute({
                 type: "kv.get_range",
                 table: this.tableId,
-                range: [i, s],
+                range: [i, a],
                 ordering: null == n ? void 0 : n.ordering,
                 limit: null == n ? void 0 : n.limit
             }, this.defaultDebugTag)
@@ -100,7 +100,7 @@ function(e, t, n) {
             return this.database.execute({
                 type: "kv.put_one",
                 table: this.tableId,
-                cell: a(e, this.prefix),
+                cell: s(e, this.prefix),
                 overwrite: t === i.ConflictOptions.Replace
             }, this.defaultDebugTag)
         }
@@ -173,7 +173,7 @@ function(e, t, n) {
             })
         }
         constructor(e, t, n, i) {
-            s(this, "prefix", void 0), s(this, "tableId", void 0), s(this, "database", void 0), s(this, "defaultDebugTag", void 0), s(this, "messages", {
+            a(this, "prefix", void 0), a(this, "tableId", void 0), a(this, "database", void 0), a(this, "defaultDebugTag", void 0), a(this, "messages", {
                 getLatest: e => this.database.execute({
                     type: "messages.get_latest",
                     table: this.tableId,
@@ -191,7 +191,7 @@ function(e, t, n) {
             this.transaction.add({
                 type: "kv.put_one",
                 table: this.tableId,
-                cell: a(e, this.prefix),
+                cell: s(e, this.prefix),
                 overwrite: t === i.ConflictOptions.Replace
             })
         }
@@ -237,7 +237,7 @@ function(e, t, n) {
             })
         }
         constructor(e, t, n) {
-            s(this, "prefix", void 0), s(this, "tableId", void 0), s(this, "transaction", void 0), s(this, "messages", {
+            a(this, "prefix", void 0), a(this, "tableId", void 0), a(this, "transaction", void 0), a(this, "messages", {
                 trimOrphans: e => {
                     if (1 !== this.prefix.length || 1 !== e.length) throw Error("trimOrphans: only one prefix component is supported at this time");
                     this.transaction.add({

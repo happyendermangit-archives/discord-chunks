@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("724458");
-    var i, r, s, a, o = n("442837"),
+    var i, r, a, s, o = n("442837"),
         l = n("46973"),
         u = n("570140"),
         d = n("581883"),
@@ -39,12 +39,12 @@ function(e, t, n) {
             return S
         }
     }
-    a = "VideoBackgroundStore", (s = "displayName") in(r = N) ? Object.defineProperty(r, s, {
-        value: a,
+    s = "VideoBackgroundStore", (a = "displayName") in(r = N) ? Object.defineProperty(r, a, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a, t.default = new N(u.default, {
+    }) : r[a] = s, t.default = new N(u.default, {
         VIDEO_FILTER_ASSETS_FETCH_SUCCESS: function(e) {
             let {
                 assets: t

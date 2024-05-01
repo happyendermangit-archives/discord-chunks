@@ -3,9 +3,9 @@ function(e, t, n) {
     let i;
     n.r(t), n("653041");
     var r = n("392711"),
-        s = n.n(r),
-        a = n("31775"),
-        o = n.n(a),
+        a = n.n(r),
+        s = n("31775"),
+        o = n.n(s),
         l = n("749210"),
         u = n("430824"),
         d = n("594174"),
@@ -22,7 +22,7 @@ function(e, t, n) {
                 r = e => {
                     i.push(e.id)
                 };
-            if (null == e) s().forEach(u.default.getGuilds(), r);
+            if (null == e) a().forEach(u.default.getGuilds(), r);
             else if (Array.isArray(e)) e.forEach(e => {
                 let t = u.default.getGuild(e);
                 null != t && r(t)
@@ -53,10 +53,10 @@ function(e, t, n) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 10,
                 i = Array.isArray(e),
                 r = [],
-                s = !1;
+                a = !1;
             i ? e.forEach(e => {
                 null == f(e, t) && r.push(e)
-            }) : null == f(e, t) && (s = !0), r.length > 0 && i ? T(r, t, n) : s && T(e, t, n)
+            }) : null == f(e, t) && (a = !0), r.length > 0 && i ? T(r, t, n) : a && T(e, t, n)
         }
     }
 }

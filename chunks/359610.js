@@ -8,21 +8,21 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        s = n.n(r),
-        a = n("481060"),
+        a = n.n(r),
+        s = n("481060"),
         o = n("995865");
 
     function l(e) {
         let {
             children: t,
             className: n,
-            size: r = a.Button.Sizes.SMALL,
+            size: r = s.Button.Sizes.SMALL,
             ...l
         } = e;
-        return (0, i.jsx)(a.Button, {
+        return (0, i.jsx)(s.Button, {
             ...l,
             size: r,
-            className: s()(o.button, n),
+            className: a()(o.button, n),
             children: t
         })
     }

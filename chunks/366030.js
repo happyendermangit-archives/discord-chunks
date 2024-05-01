@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("536091"), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("512722"),
-        a = n.n(s),
+        a = n("512722"),
+        s = n.n(a),
         o = n("392711"),
         l = n.n(o),
         u = n("442837"),
@@ -43,21 +43,21 @@ function(e, t, n) {
         let t, {
             connectionType: n,
             connectionMetadataField: r,
-            operator: s,
-            value: a,
+            operator: a,
+            value: s,
             description: o
         } = e;
-        if (null != o) switch (s) {
+        if (null != o) switch (a) {
             case y.OperatorTypes.LESS_THAN:
                 t = b.default.Messages.CONNECTIONS_ROLE_RULE_GENERIC.format({
                     description: o,
-                    count: Math.max(0, Number(a) - 1)
+                    count: Math.max(0, Number(s) - 1)
                 });
                 break;
             case y.OperatorTypes.GREATER_THAN:
                 t = b.default.Messages.CONNECTIONS_ROLE_RULE_GENERIC.format({
                     description: o,
-                    count: Math.max(0, Number(a) + 1)
+                    count: Math.max(0, Number(s) + 1)
                 });
                 break;
             default:
@@ -65,8 +65,8 @@ function(e, t, n) {
         } else t = (0, C.getConnectionsCheckText)({
             connectionType: n,
             connectionMetadataField: r,
-            operator: s,
-            value: a
+            operator: a,
+            value: s
         });
         return null == t ? null : (0, i.jsxs)("div", {
             className: G.popoutCheck,
@@ -83,12 +83,12 @@ function(e, t, n) {
     function B(e) {
         let {
             eligibilityStates: t
-        } = e, n = (0, T.default)(), r = (0, c.useToken)(d.default.unsafe_rawColors.GREEN_330).hex(), s = l().groupBy(t, e => "".concat(e.connection_type).concat(null != e.application_id ? ":".concat(e.application_id) : ""));
+        } = e, n = (0, T.default)(), r = (0, c.useToken)(d.default.unsafe_rawColors.GREEN_330).hex(), a = l().groupBy(t, e => "".concat(e.connection_type).concat(null != e.application_id ? ":".concat(e.application_id) : ""));
         return (0, i.jsx)(i.Fragment, {
-            children: Object.keys(s).map(e => {
+            children: Object.keys(a).map(e => {
                 var t, o;
                 let l;
-                let u = s[e],
+                let u = a[e],
                     d = u.filter(e => null != e.operator),
                     E = u.find(e => null != e.application),
                     T = f.default.get(e),
@@ -123,16 +123,16 @@ function(e, t, n) {
                             connection_type: t,
                             connection_metadata_field: n,
                             operator: r,
-                            value: s,
+                            value: a,
                             description: o
                         } = e;
-                        return a()(null != n, "connectionMetadataField is null"), a()(null != r, "operator is null"), a()(null != s, "value is null"), (0, i.jsx)(w, {
+                        return s()(null != n, "connectionMetadataField is null"), s()(null != r, "operator is null"), s()(null != a, "value is null"), (0, i.jsx)(w, {
                             connectionType: t,
                             connectionMetadataField: n,
                             operator: r,
-                            value: s,
+                            value: a,
                             description: o
-                        }, "".concat(t, ":").concat(n, ":").concat(r, ":").concat(s))
+                        }, "".concat(t, ":").concat(n, ":").concat(r, ":").concat(a))
                     })]
                 }, e)
             })
@@ -142,8 +142,8 @@ function(e, t, n) {
     function k(e) {
         let t, {
             onGetRolesClicked: n,
-            onOpenProfile: s,
-            eligibilityStates: a,
+            onOpenProfile: a,
+            eligibilityStates: s,
             userId: o,
             roleId: l,
             channelId: d,
@@ -161,7 +161,7 @@ function(e, t, n) {
             var e, t;
             return null !== (t = null === (e = N.default.getSelfMember(_)) || void 0 === e ? void 0 : e.roles.includes(l)) && void 0 !== t && t
         }, [_, l]);
-        return t = 1 === a.length && 1 === a[0].length ? b.default.Messages.CONNECTIONS_ROLE_POPOUT_HEADER_ONE : 1 === a.length ? b.default.Messages.CONNECTIONS_ROLE_POPOUT_HEADER_ALL.format() : b.default.Messages.CONNECTIONS_ROLE_POPOUT_HEADER_OR.format(), (0, i.jsxs)("div", {
+        return t = 1 === s.length && 1 === s[0].length ? b.default.Messages.CONNECTIONS_ROLE_POPOUT_HEADER_ONE : 1 === s.length ? b.default.Messages.CONNECTIONS_ROLE_POPOUT_HEADER_ALL.format() : b.default.Messages.CONNECTIONS_ROLE_POPOUT_HEADER_OR.format(), (0, i.jsxs)("div", {
             className: G.popout,
             children: [(0, i.jsx)("div", {
                 className: G.popoutHeaderContainer,
@@ -174,7 +174,7 @@ function(e, t, n) {
             }), (0, i.jsx)("div", {
                 className: G.popoutChecks,
                 children: (0, i.jsx)(B, {
-                    eligibilityStates: a.flat()
+                    eligibilityStates: s.flat()
                 })
             }), (0, i.jsxs)("div", {
                 className: G.buttonContainer,
@@ -185,7 +185,7 @@ function(e, t, n) {
                 }), (0, i.jsx)(c.Button, {
                     className: G.viewConnectionsButton,
                     color: c.Button.Colors.PRIMARY,
-                    onClick: s,
+                    onClick: a,
                     children: b.default.Messages.CONNECTIONS_ROLE_POPOUT_VIEW_CONNECTIONS
                 })]
             })]
@@ -196,14 +196,14 @@ function(e, t, n) {
         let {
             userId: t,
             messageId: n,
-            guild: s,
+            guild: a,
             channel: o
         } = e, {
             analyticsLocations: l
-        } = (0, h.default)(), d = (0, L.default)(s, t, o.id, !0), _ = (0, u.useStateFromStores)([g.default], () => g.default.getGuildRoleConnectionEligibility(null == d ? void 0 : d.id)), [I, T] = r.useState(null == _);
+        } = (0, h.default)(), d = (0, L.default)(a, t, o.id, !0), _ = (0, u.useStateFromStores)([g.default], () => g.default.getGuildRoleConnectionEligibility(null == d ? void 0 : d.id)), [I, T] = r.useState(null == _);
         if (null == d) return null;
         async function f() {
-            a()(null != d, "visibleConnectionsRole is null"), I && null == _ && (await E.default.fetchGuildRoleConnectionsEligibility(s.id, d.id), T(!1))
+            s()(null != d, "visibleConnectionsRole is null"), I && null == _ && (await E.default.fetchGuildRoleConnectionsEligibility(a.id, d.id), T(!1))
         }
         return (0, i.jsx)(c.LazyPopout, {
             onRequestOpen: f,
@@ -212,20 +212,20 @@ function(e, t, n) {
                     let {
                         closePopout: r
                     } = e;
-                    return null == _ ? (0, i.jsx)(i.Fragment, {}) : (a()(null != d, "visibleConnectionsRole is null"), (0, i.jsx)(k, {
+                    return null == _ ? (0, i.jsx)(i.Fragment, {}) : (s()(null != d, "visibleConnectionsRole is null"), (0, i.jsx)(k, {
                         eligibilityStates: _,
                         userId: t,
                         roleId: d.id,
                         channelId: o.id,
-                        guildId: s.id,
+                        guildId: a.id,
                         onGetRolesClicked: () => {
-                            (0, M.openGuildRoleConnectionsModal)(s.id)
+                            (0, M.openGuildRoleConnectionsModal)(a.id)
                         },
                         onOpenProfile: () => {
                             (0, A.openUserProfileModal)({
                                 userId: t,
                                 messageId: n,
-                                guildId: s.id,
+                                guildId: a.id,
                                 channelId: o.id,
                                 roleId: d.id,
                                 section: U.UserProfileSections.USER_INFO_CONNECTIONS,

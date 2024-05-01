@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("442837"),
         l = n("481060"),
         u = n("906467"),
@@ -28,13 +28,13 @@ function(e, t, n) {
         } = (0, f.useImpressionStore)(e => ({
             debugTrackedData: e.debugTrackedData,
             impressions: e.impressions
-        })), n = (0, o.useStateFromStores)([d.default], () => d.default.isAnalyticsDebuggerEnabled), s = (0, o.useStateFromStores)([u.default], () => u.default.isDeveloper), [h, A] = r.useState(!1), {
+        })), n = (0, o.useStateFromStores)([d.default], () => d.default.isAnalyticsDebuggerEnabled), a = (0, o.useStateFromStores)([u.default], () => u.default.isDeveloper), [h, A] = r.useState(!1), {
             name: m,
             ...N
         } = null != e ? e : {}, p = null != m;
-        return s && n ? (0, i.jsx)(T.default, {
+        return a && n ? (0, i.jsx)(T.default, {
             children: (0, i.jsxs)("div", {
-                className: a()(S.container, {
+                className: s()(S.container, {
                     [S.containerMinimized]: h,
                     [S.notTracked]: !p
                 }),
@@ -45,11 +45,11 @@ function(e, t, n) {
                     },
                     children: h ? (0, i.jsx)(E.default, {}) : (0, i.jsx)(I.default, {})
                 }), (0, i.jsxs)("div", {
-                    className: a()(S.content, {
+                    className: s()(S.content, {
                         [S.contentMinimized]: h
                     }),
                     children: [(0, i.jsxs)(l.Text, {
-                        className: a()(S.label, {
+                        className: s()(S.label, {
                             [S.notTracked]: !p
                         }),
                         variant: "text-xxs/normal",
@@ -62,7 +62,7 @@ function(e, t, n) {
                         className: S.current,
                         children: JSON.stringify(N, void 0, 2)
                     }), (0, i.jsx)(l.Text, {
-                        className: a()(S.label, {
+                        className: s()(S.label, {
                             [S.notTracked]: !p
                         }),
                         variant: "text-xxs/normal",

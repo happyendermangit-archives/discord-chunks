@@ -2,19 +2,19 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return a
         }
     });
     var i = n("735250");
     n("470079");
     var r = n("325767");
 
-    function s(e) {
+    function a(e) {
         let {
             width: t = 12,
             height: n = 12,
-            color: s = "currentColor",
-            foreground: a,
+            color: a = "currentColor",
+            foreground: s,
             ...o
         } = e;
         return (0, i.jsx)("svg", {
@@ -23,8 +23,8 @@ function(e, t, n) {
             height: n,
             viewBox: "0 0 12 12",
             children: (0, i.jsxs)("g", {
-                fill: s,
-                className: a,
+                fill: a,
+                className: s,
                 fillRule: "evenodd",
                 children: [(0, i.jsx)("path", {
                     d: "M5,3 C5,3 5,6.1325704 5,6.48601043 C5,6.83945045 5.18485201,7 5.49021559,7 L9,7 L9,6 L8,6 L8,5 L7,5 L7,4 L6,4 L6,3 L5,3 Z",

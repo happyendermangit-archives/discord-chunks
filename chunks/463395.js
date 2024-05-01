@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t);
-    var i, r, s, a, o = n("392711"),
+    var i, r, a, s, o = n("392711"),
         l = n.n(o),
         u = n("442837"),
         d = n("433517"),
@@ -21,7 +21,7 @@ function(e, t, n) {
         let n = I[e];
         null != n && n.forEach(e => delete T[e.id]), I[e] = t, t.forEach(e => T[e.id] = e)
     }
-    class A extends(a = u.default.Store) {
+    class A extends(s = u.default.Store) {
         initialize() {
             let e = d.Storage.get(E);
             null != e && l().forEach(e, (e, t) => {
@@ -65,12 +65,12 @@ function(e, t, n) {
             return f
         }
     }
-    s = "CertifiedDeviceStore", (r = "displayName") in(i = A) ? Object.defineProperty(i, r, {
-        value: s,
+    a = "CertifiedDeviceStore", (r = "displayName") in(i = A) ? Object.defineProperty(i, r, {
+        value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : i[r] = s, t.default = new A(_.default, {
+    }) : i[r] = a, t.default = new A(_.default, {
         CERTIFIED_DEVICES_SET: function(e) {
             let {
                 applicationId: t,

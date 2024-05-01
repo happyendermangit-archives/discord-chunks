@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     let i, r;
     n.r(t), n("47120");
-    var s, a, o, l, u = n("392711"),
+    var a, s, o, l, u = n("392711"),
         d = n("442837"),
         _ = n("570140"),
         c = n("706454"),
@@ -16,7 +16,7 @@ function(e, t, n) {
     let m = () => {
         f = I, S = T, r = void 0, h = !1, A = new Set, i = void 0
     };
-    class N extends(s = d.default.Store) {
+    class N extends(a = d.default.Store) {
         initialize() {
             this.syncWith([c.default], m)
         }
@@ -49,12 +49,12 @@ function(e, t, n) {
             return this.getCategory(null == t ? void 0 : t.categorySkuId)
         }
     }
-    l = "CollectiblesCategoryStore", (o = "displayName") in(a = N) ? Object.defineProperty(a, o, {
+    l = "CollectiblesCategoryStore", (o = "displayName") in(s = N) ? Object.defineProperty(s, o, {
         value: l,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : a[o] = l, t.default = new N(_.default, {
+    }) : s[o] = l, t.default = new N(_.default, {
         COLLECTIBLES_CATEGORIES_FETCH: e => {
             h = !0, i = void 0
         },

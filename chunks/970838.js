@@ -2,25 +2,25 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         registerActiveSink: function() {
-            return s
+            return a
         },
         setActiveSinksChangeCallback: function() {
             return o
         },
         unregisterActiveSink: function() {
-            return a
+            return s
         }
     });
     let i = {},
         r = null;
 
-    function s(e) {
+    function a(e) {
         var t;
         let n = null !== (t = i[e]) && void 0 !== t ? t : 0;
         0 === n && (null == r || r(e, !0)), i[e] = n + 1
     }
 
-    function a(e) {
+    function s(e) {
         i[e]--, 0 === i[e] && (null == r || r(e, !1))
     }
 

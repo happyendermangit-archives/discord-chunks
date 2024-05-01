@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("411104");
     var i = n("430198"),
         r = n("557135"),
-        s = n("66999"),
-        a = n("592125"),
+        a = n("66999"),
+        s = n("592125"),
         o = n("496675"),
         l = n("944486"),
         u = n("979651");
@@ -18,13 +18,13 @@ function(e, t, n) {
             channelId: t,
             timeoutMs: n = 1e4,
             bypassChangeModal: _ = !1
-        } = e, c = a.default.getChannel(t);
+        } = e, c = s.default.getChannel(t);
         if (null == c || !await r.default.handleVoiceConnect({
                 bypassGuildIdCheck: !0,
                 bypassChangeModal: _,
                 channel: c,
                 connected: u.default.isInChannel(t),
-                needSubscriptionToAccess: (0, s.getChannelRoleSubscriptionStatus)(t, a.default, i.default, o.default).needSubscriptionToAccess
+                needSubscriptionToAccess: (0, a.getChannelRoleSubscriptionStatus)(t, s.default, i.default, o.default).needSubscriptionToAccess
             })) return !1;
         let E = new Promise((e, i) => {
             let r = setTimeout(() => {

@@ -7,13 +7,13 @@ function(e, t, n) {
     }), n("735250");
     var i = n("470079"),
         r = n("392711"),
-        s = n.n(r);
+        a = n.n(r);
     n("902704");
-    var a = n("941028");
+    var s = n("941028");
 
     function o(e) {
-        i.useEffect(() => (s().forEach(e, (e, t) => (0, a.subscribeMembers)(t, e)), () => {
-            s().forEach(e, (e, t) => (0, a.unsubscribeMembers)(t, e))
+        i.useEffect(() => (a().forEach(e, (e, t) => (0, s.subscribeMembers)(t, e)), () => {
+            a().forEach(e, (e, t) => (0, s.unsubscribeMembers)(t, e))
         }), [e])
     }
 }

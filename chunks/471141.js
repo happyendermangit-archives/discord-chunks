@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("84735"),
         l = n("437337"),
         u = n("981729"),
@@ -20,7 +20,7 @@ function(e, t, n) {
         let {
             value: t,
             disabled: n = !1,
-            hideBorder: s = !1,
+            hideBorder: a = !1,
             tooltipNote: E,
             onChange: I,
             className: T,
@@ -39,7 +39,7 @@ function(e, t, n) {
         });
         return (0, i.jsxs)("div", {
             style: f,
-            className: a()(c.container, T, {
+            className: s()(c.container, T, {
                 [c.disabled]: n
             }),
             children: [(0, i.jsx)(o.FocusRing, {
@@ -69,7 +69,7 @@ function(e, t, n) {
                     type: _.FormTextTypes.DESCRIPTION,
                     children: S
                 })
-            }), !s && (0, i.jsx)(d.FormDivider, {
+            }), !a && (0, i.jsx)(d.FormDivider, {
                 className: c.dividerDefault
             })]
         })

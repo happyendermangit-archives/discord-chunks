@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("147913"),
         r = n("465029"),
-        s = n("276438"),
-        a = n("190159"),
+        a = n("276438"),
+        s = n("190159"),
         o = n("580079"),
         l = n("859802"),
         u = n("176505");
@@ -15,7 +15,7 @@ function(e, t, n) {
                 channelId: n
             } = e;
             if (null == t || n !== u.StaticChannelRoute.GUILD_HOME || !(0, l.canSeeGuildHome)(t)) return !1;
-            (0, a.shouldFetchGuildFeed)(t, !1) && (0, s.fetchGuildFeed)({
+            (0, s.shouldFetchGuildFeed)(t, !1) && (0, a.fetchGuildFeed)({
                 guildId: t,
                 refresh: !0
             }), o.default.shouldFetch(t) && (0, r.fetchActiveChannels)(t)

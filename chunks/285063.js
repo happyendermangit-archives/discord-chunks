@@ -8,19 +8,19 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("481060"),
-        s = n("916752"),
-        a = n("990291");
+        a = n("916752"),
+        s = n("990291");
 
     function o(e) {
         let {
             node: t
-        } = e, n = (0, s.default)(t);
+        } = e, n = (0, a.default)(t);
         return (0, i.jsx)(r.Tooltip, {
             text: t.full,
-            tooltipClassName: a.timestampTooltip,
+            tooltipClassName: s.timestampTooltip,
             children: e => (0, i.jsx)("span", {
                 ...e,
-                className: a.timestamp,
+                className: s.timestamp,
                 children: n
             })
         })

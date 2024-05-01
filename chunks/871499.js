@@ -11,8 +11,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        s = n.n(r),
-        a = n("481060"),
+        a = n.n(r),
+        s = n("481060"),
         o = n("131388"),
         l = n("259580"),
         u = n("806519"),
@@ -44,7 +44,7 @@ function(e, t, n) {
             "aria-label": R
         } = e;
         return (0, i.jsx)(d.default, {
-            children: (0, i.jsx)(a.Tooltip, {
+            children: (0, i.jsx)(s.Tooltip, {
                 position: A,
                 text: t,
                 "aria-label": R,
@@ -58,9 +58,9 @@ function(e, t, n) {
                         onMouseLeave: m,
                         ...N
                     } = e;
-                    return (0, i.jsx)(a.Button, {
-                        look: a.Button.Looks.BLANK,
-                        size: a.Button.Sizes.NONE,
+                    return (0, i.jsx)(s.Button, {
+                        look: s.Button.Looks.BLANK,
+                        size: s.Button.Sizes.NONE,
                         onKeyDown: e => {
                             null == r || r(e)
                         },
@@ -84,7 +84,7 @@ function(e, t, n) {
                         },
                         disabled: S,
                         innerClassName: E.lineHeightReset,
-                        className: s()({
+                        className: a()({
                             [E.active]: h
                         }, _),
                         wrapperClassName: c,
@@ -93,7 +93,7 @@ function(e, t, n) {
                         "aria-label": R,
                         ...N,
                         children: (0, i.jsx)(T, {
-                            className: s()(E.controlIcon, I, {
+                            className: a()(E.controlIcon, I, {
                                 [E.themeable]: f,
                                 [E.active]: h
                             }),
@@ -128,13 +128,13 @@ function(e, t, n) {
             ...m,
             grow: !1,
             onContextMenu: S,
-            iconClassName: s()(f, E.centerIcon),
-            className: s()(p ? r : null, E.staticButton, E.centerButton, T[N])
+            iconClassName: a()(f, E.centerIcon),
+            className: a()(p ? r : null, E.staticButton, E.centerButton, T[N])
         });
         return p ? O : (0, i.jsxs)("div", {
-            className: s()(r, E.contextMenuContainer),
+            className: a()(r, E.contextMenuContainer),
             children: [(0, i.jsx)(u.default, {
-                className: s()(E.buttonMask, {
+                className: a()(E.buttonMask, {
                     [E.buttonPremiumGlow]: A
                 }),
                 mask: null == S ? null : u.MaskIDs.CHANNEL_CALL_CONTROL_BUTTON,
@@ -142,15 +142,15 @@ function(e, t, n) {
                 height: 56,
                 children: O
             }), null != S ? (0, i.jsx)(d.default, {
-                children: (0, i.jsx)(a.Clickable, {
+                children: (0, i.jsx)(s.Clickable, {
                     "aria-label": c.default.Messages.MORE_OPTIONS,
                     onClick: S,
                     onContextMenu: S,
-                    className: s()(E.contextMenuNub, T[N], {
+                    className: a()(E.contextMenuNub, T[N], {
                         [E.active]: h
                     }),
                     children: (0, i.jsx)(l.default, {
-                        className: s()(E.contextMenuCaret, {
+                        className: a()(E.contextMenuCaret, {
                             [E.open]: h
                         })
                     })

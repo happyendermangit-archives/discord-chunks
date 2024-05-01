@@ -4,8 +4,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("481060"),
-        s = n("287734"),
-        a = n("258609"),
+        a = n("287734"),
+        s = n("258609"),
         o = n("703656"),
         l = n("569471"),
         u = n("346479"),
@@ -26,7 +26,7 @@ function(e, t, n) {
                 bypassGuildIdCheck: m = !1
             } = e;
             t.isThread() && (await u.default.unarchiveThreadIfNecessary(t.id), !l.default.hasJoined(t.id) && await u.default.joinThread(t, "Join Voice"));
-            let N = a.default.getRemoteSessionId(),
+            let N = s.default.getRemoteSessionId(),
                 p = c.default.getVoiceStateForSession(d.default.getId(), N),
                 O = (null == p ? void 0 : p.channelId) === t.id || _.default.getChannelId() === c.default.getCurrentClientVoiceChannelId(t.guild_id);
             return !A && !S && (0, E.shouldShowVoiceChannelChangeConfirmation)(t) ? new Promise(e => {
@@ -47,7 +47,7 @@ function(e, t, n) {
                         ...n
                     })
                 })
-            }) : (!S && !T && s.default.selectVoiceChannel(t.id), !__OVERLAY__ && (T || O || f || h) && ! function(e) {
+            }) : (!S && !T && a.default.selectVoiceChannel(t.id), !__OVERLAY__ && (T || O || f || h) && ! function(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                     n = e.getGuildId();
                 if (null == n && !t) throw Error("VoiceChannel, transitionTo: Channel does not have a guildId");

@@ -8,7 +8,7 @@ function(e, t, n) {
             return u
         },
         useOnboardingHomeAdminExperiment: function() {
-            return a
+            return s
         },
         useOptionalOnboardingHomeAdminExperiment: function() {
             return l
@@ -30,7 +30,7 @@ function(e, t, n) {
                 }
             }]
         }),
-        s = (0, i.createExperiment)({
+        a = (0, i.createExperiment)({
             kind: "guild",
             id: "2023-05_optional_onboarding_home_admin",
             label: "[ADMIN] Make server guide optional",
@@ -46,7 +46,7 @@ function(e, t, n) {
             }]
         });
 
-    function a(e) {
+    function s(e) {
         return r.useExperiment({
             guildId: e,
             location: "259c05_1"
@@ -63,7 +63,7 @@ function(e, t, n) {
     }
 
     function l(e) {
-        return s.useExperiment({
+        return a.useExperiment({
             guildId: e,
             location: "259c05_3"
         }, {
@@ -72,7 +72,7 @@ function(e, t, n) {
     }
 
     function u(e) {
-        return s.getCurrentConfig({
+        return a.getCurrentConfig({
             guildId: e,
             location: "259c05_4"
         })

@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("512722"),
         l = n.n(o),
         u = n("442837"),
@@ -30,7 +30,7 @@ function(e, t, n) {
         let {
             user: t,
             autoFocus: n = !1,
-            className: s,
+            className: a,
             inputClassName: o,
             onSend: O
         } = e, R = r.useRef(null), C = (0, u.useStateFromStores)([S.default], () => S.default.isBlocked(t.id)), g = r.useCallback(e => {
@@ -56,8 +56,8 @@ function(e, t, n) {
             name: h.default.getName(t)
         });
         return (0, i.jsx)(d.TextInput, {
-            className: s,
-            inputClassName: a()(o, p.input),
+            className: a,
+            inputClassName: s()(o, p.input),
             inputRef: R,
             autoFocus: n,
             placeholder: L,

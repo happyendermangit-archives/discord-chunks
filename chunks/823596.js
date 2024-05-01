@@ -17,8 +17,8 @@ function(e, t, n) {
             return _
         }
     }), n("724458"), n("653041"), n("47120");
-    var i, r, s = n("271383"),
-        a = n("588215");
+    var i, r, a = n("271383"),
+        s = n("588215");
 
     function o(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function(e, t, n) {
             pageSize: l[0],
             currentPage: 1,
             continuationToken: null,
-            sort: a.OrderBy.ORDER_BY_UNSPECIFIED,
+            sort: s.OrderBy.ORDER_BY_UNSPECIFIED,
             elasticSearchCursor: null
         }
     }
@@ -105,10 +105,10 @@ function(e, t, n) {
                 n = e;
             n < this._sortedMemberIds.length && (n = this._sortedMemberIds.length - 1), n < 0 && (n = 0);
             let i = this._sortedMemberIds[e],
-                r = s.default.getMember(this.guildId, i);
+                r = a.default.getMember(this.guildId, i);
             for (; null == r && !((e += t) < 0) && !(e >= this._sortedMemberIds.length);) {
                 ;
-                i = this._sortedMemberIds[e], (null == (r = s.default.getMember(this.guildId, i)) ? void 0 : r.joinedAt) == null && (r = null)
+                i = this._sortedMemberIds[e], (null == (r = a.default.getMember(this.guildId, i)) ? void 0 : r.joinedAt) == null && (r = null)
             }
             return r
         }

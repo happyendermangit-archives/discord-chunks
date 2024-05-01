@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("433517"),
         r = n("147913"),
-        s = n("594174"),
-        a = n("918505"),
+        a = n("594174"),
+        s = n("918505"),
         o = n("548161"),
         l = n("347649"),
         u = n("776319"),
@@ -25,12 +25,12 @@ function(e, t, n) {
                 POST_CONNECTION_OPEN: () => this.onPostConnectionOpen()
             }), _(this, "onPostConnectionOpen", () => {
                 if (function() {
-                        if (!a.experiment.getCurrentConfig({
+                        if (!s.experiment.getCurrentConfig({
                                 location: "b9eb97_1"
                             }, {
                                 autoTrackExposure: !1
                             }).enabled) return !1;
-                        let e = s.default.getCurrentUser();
+                        let e = a.default.getCurrentUser();
                         if (null == e || e.isPomelo() || !e.hasVerifiedEmailOrPhone()) return !1;
                         let t = (0, l.getForceMigration)(),
                             n = i.Storage.get(t ? "lastSawPomeloMigration" : c);

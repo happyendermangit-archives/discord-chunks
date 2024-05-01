@@ -8,19 +8,19 @@ function(e, t, n) {
             return o
         }
     });
-    var i, r, s = n("652874");
+    var i, r, a = n("652874");
     (i = r || (r = {})).PROFILE_PANEL = "profile panel", i.USER_POPOUT = "user popout";
-    let a = {
+    let s = {
             upsellSource: null
         },
-        o = (0, s.default)(e => ({
-            ...a,
+        o = (0, a.default)(e => ({
+            ...s,
             setUpsellSource: t => e({
                 upsellSource: t
             }),
             reset: () => {
                 e({
-                    ...a
+                    ...s
                 })
             }
         }))

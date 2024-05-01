@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t);
-    var i, r, s, a, o = n("442837"),
+    var i, r, a, s, o = n("442837"),
         l = n("570140"),
         u = n("592125");
     let d = {};
@@ -20,7 +20,7 @@ function(e, t, n) {
         };
         return d[e] = n, n
     }
-    class E extends(a = o.default.Store) {
+    class E extends(s = o.default.Store) {
         getSearchQuery(e) {
             let t = d[e];
             return null == t ? void 0 : t.query
@@ -39,12 +39,12 @@ function(e, t, n) {
             return (null == t ? void 0 : t.results) != null && t.results.length > 0
         }
     }
-    s = "ForumSearchStore", (r = "displayName") in(i = E) ? Object.defineProperty(i, r, {
-        value: s,
+    a = "ForumSearchStore", (r = "displayName") in(i = E) ? Object.defineProperty(i, r, {
+        value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : i[r] = s, t.default = new E(l.default, {
+    }) : i[r] = a, t.default = new E(l.default, {
         CONNECTION_OPEN: function() {
             d = {}
         },

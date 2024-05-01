@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("442837"),
         l = n("481060"),
         u = n("204197"),
@@ -21,7 +21,7 @@ function(e, t, n) {
             t = e[0],
             {
                 avatarSrc: n,
-                eventHandlers: s
+                eventHandlers: a
             } = (0, u.default)({
                 user: t,
                 size: l.AvatarSizes.SIZE_24,
@@ -40,9 +40,9 @@ function(e, t, n) {
                 src: n,
                 "aria-label": t.username,
                 size: l.AvatarSizes.SIZE_24,
-                ...s
+                ...a
             }), (0, i.jsx)(l.Text, {
-                className: a()(c.text),
+                className: s()(c.text),
                 variant: "text-sm/normal",
                 color: "always-white",
                 children: I

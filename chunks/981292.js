@@ -8,8 +8,8 @@ function(e, t, n) {
             return i
         }
     }), n("47120"), n("653041");
-    var i, r, s = n("735250"),
-        a = n("470079");
+    var i, r, a = n("735250"),
+        s = n("470079");
     (r = i || (i = {}))[r.MOUNTED = 0] = "MOUNTED", r[r.ENTERED = 1] = "ENTERED", r[r.YEETED = 2] = "YEETED";
     let o = {};
 
@@ -24,71 +24,71 @@ function(e, t, n) {
             getItemKey: i,
             wrapChildren: r = l,
             lazyCleanUpDelay: u
-        } = e, d = a.useRef(-1);
-        a.useLayoutEffect(() => () => clearTimeout(d.current));
-        let [, _] = a.useState(o), c = a.useRef(null), E = a.useMemo(() => {
+        } = e, d = s.useRef(-1);
+        s.useLayoutEffect(() => () => clearTimeout(d.current));
+        let [, _] = s.useState(o), c = s.useRef(null), E = s.useMemo(() => {
             var e;
             let r = new Set(null === (e = c.current) || void 0 === e ? void 0 : e.keys()),
-                s = new Map(c.current);
+                a = new Map(c.current);
             for (let e of t) {
                 let t = i(e),
-                    a = s.get(t);
-                if (null == a) {
+                    s = a.get(t);
+                if (null == s) {
                     let i = null != c.current ? 1 : 0,
                         r = () => {
                             var e, n;
                             let i = null === (e = c.current) || void 0 === e ? void 0 : e.get(t);
                             null == i || (2 === i.state ? (null === (n = c.current) || void 0 === n || n.delete(t), null != u ? (clearTimeout(d.current), d.current = setTimeout(() => _({}), u)) : _({})) : __DEV__ && console.warn("SimpleTransitionGroup.cleanUp: Attempted to remove an item that isn't yeetable: ".concat(t)))
                         },
-                        s = n(t, e, i, r);
-                    a = {
+                        a = n(t, e, i, r);
+                    s = {
                         item: e,
-                        children: s,
+                        children: a,
                         state: i,
                         cleanUp: r,
                         renderItem: n
                     }
-                } else if (a.item !== e || a.renderItem !== n || 2 === a.state) {
+                } else if (s.item !== e || s.renderItem !== n || 2 === s.state) {
                     let {
                         cleanUp: i
-                    } = a, r = 2 === a.state ? 1 : a.state, s = n(t, e, r, a.cleanUp);
-                    a = {
+                    } = s, r = 2 === s.state ? 1 : s.state, a = n(t, e, r, s.cleanUp);
+                    s = {
                         item: e,
-                        children: s,
+                        children: a,
                         state: r,
                         cleanUp: i,
                         renderItem: n
                     }
                 }
-                s.set(t, a), r.delete(t)
+                a.set(t, s), r.delete(t)
             }
             for (let e of r) {
-                let t = s.get(e);
+                let t = a.get(e);
                 if (null != t) {
                     if (2 !== t.state || t.renderItem !== n) {
                         let {
                             item: i,
                             cleanUp: r
-                        } = t, a = n(e, t.item, 2, t.cleanUp);
+                        } = t, s = n(e, t.item, 2, t.cleanUp);
                         null != (t = {
                             item: i,
-                            children: a,
+                            children: s,
                             state: 2,
                             cleanUp: r,
                             renderItem: n
-                        }).children ? s.set(e, t) : s.delete(e)
-                    } else s.set(e, t)
+                        }).children ? a.set(e, t) : a.delete(e)
+                    } else a.set(e, t)
                 }
             }
-            return s
+            return a
         }, [t, i, n, u]);
-        a.useInsertionEffect(() => (c.current = E, () => {
+        s.useInsertionEffect(() => (c.current = E, () => {
             var e;
             return null === (e = c.current) || void 0 === e ? void 0 : e.clear()
         }), [E]);
         let I = [];
         for (let [, e] of E) I.push(e.children);
-        return (0, s.jsx)(s.Fragment, {
+        return (0, a.jsx)(a.Fragment, {
             children: I.length > 0 ? r(I) : null
         })
     }

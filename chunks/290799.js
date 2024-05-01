@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("481060"),
         l = n("729285"),
         u = n("150954"),
@@ -30,9 +30,9 @@ function(e, t, n) {
     t.default = function(e) {
         let {
             className: t
-        } = e, [n, s] = r.useState(null);
+        } = e, [n, a] = r.useState(null);
         return (0, i.jsxs)("div", {
-            className: a()(E.wrapper, t),
+            className: s()(E.wrapper, t),
             children: [(0, i.jsx)(o.Heading, {
                 className: E.heading,
                 variant: "heading-xxl/bold",
@@ -44,10 +44,10 @@ function(e, t, n) {
                     return (0, i.jsxs)("div", {
                         className: E.listItem,
                         children: [(0, i.jsxs)(o.Clickable, {
-                            className: a()(E.questionWrapper, {
+                            className: s()(E.questionWrapper, {
                                 [E.questionWrapperExpanded]: r
                             }),
-                            onClick: () => s(e => e === t ? null : t),
+                            onClick: () => a(e => e === t ? null : t),
                             tag: "li",
                             children: [(0, i.jsx)(o.Text, {
                                 className: E.question,

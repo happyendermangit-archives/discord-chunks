@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("442837"),
-        s = n("481060"),
-        a = n("194359"),
+        a = n("481060"),
+        s = n("194359"),
         o = n("699516"),
         l = n("689938");
 
@@ -20,24 +20,24 @@ function(e, t, n) {
             location: u,
             onAction: d
         } = e;
-        return !(0, r.useStateFromStores)([o.default], () => o.default.isFriend(t.id)) || t.isNonUserBot() ? null : (0, i.jsx)(s.MenuItem, {
+        return !(0, r.useStateFromStores)([o.default], () => o.default.isFriend(t.id)) || t.isNonUserBot() ? null : (0, i.jsx)(a.MenuItem, {
             id: "remove-friend",
             color: n,
             label: l.default.Messages.REMOVE_FRIEND,
             action: () => {
-                (0, s.openModal)(e => (0, i.jsx)(s.ConfirmModal, {
+                (0, a.openModal)(e => (0, i.jsx)(a.ConfirmModal, {
                     header: l.default.Messages.REMOVE_FRIEND_TITLE.format({
                         name: t.username
                     }),
                     confirmText: l.default.Messages.REMOVE_FRIEND,
                     cancelText: l.default.Messages.CANCEL,
                     onConfirm: () => {
-                        null == d || d(), a.default.removeFriend(t.id, null != u ? {
+                        null == d || d(), s.default.removeFriend(t.id, null != u ? {
                             location: u
                         } : void 0)
                     },
                     ...e,
-                    children: (0, i.jsx)(s.Text, {
+                    children: (0, i.jsx)(a.Text, {
                         variant: "text-md/normal",
                         children: l.default.Messages.REMOVE_FRIEND_BODY.format({
                             name: t.username

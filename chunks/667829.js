@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120"), n("653041");
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("392711"),
         l = n.n(o),
         u = n("218887"),
@@ -167,7 +167,7 @@ function(e, t, n) {
             return e && !n ? D.default.Messages.NO_SEND_MESSAGES_PERMISSION_PLACEHOLDER : t
         }
         render() {
-            var e, t, n, r, s, o;
+            var e, t, n, r, a, o;
             let {
                 textValue: l,
                 richValue: u,
@@ -196,7 +196,7 @@ function(e, t, n) {
                 popup: x
             } = this.state, F = {
                 channel: f,
-                className: a()(D, M.textArea, {
+                className: s()(D, M.textArea, {
                     [M.textAreaSlate]: A,
                     [M.textAreaDisabled]: d || V
                 }),
@@ -220,7 +220,7 @@ function(e, t, n) {
                 onResize: I,
                 onKeyDown: E,
                 onSubmit: T,
-                textAreaPaddingClassName: a()(U[h], {
+                textAreaPaddingClassName: s()(U[h], {
                     [M.textAreaWithoutAttachmentButton]: S !== p.ChatInputTypes.NORMAL && S !== p.ChatInputTypes.OVERLAY && S !== p.ChatInputTypes.THREAD_CREATION && S !== p.ChatInputTypes.SIDEBAR,
                     [M.textAreaForPostCreation]: S === p.ChatInputTypes.CREATE_FORUM_POST,
                     [M.textAreaCustomGift]: S === p.ChatInputTypes.CUSTOM_GIFT
@@ -229,7 +229,7 @@ function(e, t, n) {
                 useNewSlashCommands: R,
                 disableAutoFocus: c.isMobile || null !== (n = S.disableAutoFocus) && void 0 !== n && n,
                 disableEnterToSubmit: null !== (r = null === (e = S.submit) || void 0 === e ? void 0 : e.disableEnterToSubmit) && void 0 !== r && r,
-                "aria-controls": null !== (s = x.id) && void 0 !== s ? s : void 0,
+                "aria-controls": null !== (a = x.id) && void 0 !== a ? a : void 0,
                 "aria-haspopup": "listbox",
                 "aria-expanded": null !== x.id || void 0,
                 "aria-activedescendant": null !== (o = x.activeDescendant) && void 0 !== o ? o : void 0,
@@ -334,8 +334,8 @@ function(e, t, n) {
                     canPasteFiles: n,
                     uploadPromptCharacterCount: i,
                     promptToUpload: r,
-                    maxCharacterCount: s,
-                    type: a
+                    maxCharacterCount: a,
+                    type: s
                 } = this.props;
                 if (null == r || !t.isPrivate() && !n || t.isPrivate() && t.isManaged()) return !1;
                 let {
@@ -344,21 +344,21 @@ function(e, t, n) {
                     let n = [],
                         i = [],
                         r = null,
-                        s = null;
+                        a = null;
                     for (let t of e.items)
                         if ("file" === t.kind) {
                             let e = t.getAsFile();
                             if (null == e) continue;
                             null != e.path && e.path.length > 0 ? n.push(e) : i.push(e)
-                        } else "string" === t.kind && ("text/plain" === t.type && null == r ? r = t : "text/html" === t.type && null == s && (s = t));
+                        } else "string" === t.kind && ("text/plain" === t.type && null == r ? r = t : "text/html" === t.type && null == a && (a = t));
                     if (n.length > 0) return {
                         files: n
                     };
                     if (i.length > 0) {
-                        if (1 === i.length && "image/png" === i[0].type && null != s) {
-                            var a;
+                        if (1 === i.length && "image/png" === i[0].type && null != a) {
+                            var s;
                             let t = i[0],
-                                n = null !== (a = function(e) {
+                                n = null !== (s = function(e) {
                                     let t = new DOMParser().parseFromString(e, "text/html").querySelector("img");
                                     if (null != t) {
                                         let e;
@@ -370,7 +370,7 @@ function(e, t, n) {
                                         } catch (e) {}
                                         if (null != e && e.length > 0) return "".concat(e, ".png")
                                     }
-                                }(e.getData(s.type))) && void 0 !== a ? a : t.name;
+                                }(e.getData(a.type))) && void 0 !== s ? s : t.name;
                             return {
                                 files: [(0, N.makeFile)(t, n, t.type)]
                             }
@@ -394,7 +394,7 @@ function(e, t, n) {
                     return {
                         files: []
                     }
-                }(e.clipboardData, a.uploadLongMessages ? null != i ? i : s : null);
+                }(e.clipboardData, s.uploadLongMessages ? null != i ? i : a : null);
                 return P("onPaste", [...e.clipboardData.items].map(e => {
                     if ("file" !== e.kind) return {
                         kind: e.kind,
@@ -410,16 +410,16 @@ function(e, t, n) {
                         }
                     }
                 })), 0 !== o.length && (e.preventDefault(), e.stopPropagation(), this.saveCurrentText(), ((e, n) => {
-                    var i, s;
+                    var i, a;
                     let o = S.default.getActiveCommand(t.id);
-                    if (null == o) return r(e, t, a.drafts.type, {
+                    if (null == o) return r(e, t, s.drafts.type, {
                         requireConfirm: !0,
                         showLargeMessageDialog: void 0
                     });
-                    let l = null !== (i = a.drafts.commandType) && void 0 !== i ? i : a.drafts.type,
+                    let l = null !== (i = s.drafts.commandType) && void 0 !== i ? i : s.drafts.type,
                         u = null,
                         d = S.default.getActiveOption(t.id);
-                    null != (u = (null == d ? void 0 : d.type) === T.ApplicationCommandOptionType.ATTACHMENT ? d : null === (s = o.options) || void 0 === s ? void 0 : s.find(e => {
+                    null != (u = (null == d ? void 0 : d.type) === T.ApplicationCommandOptionType.ATTACHMENT ? d : null === (a = o.options) || void 0 === a ? void 0 : a.find(e => {
                         if (e.type === T.ApplicationCommandOptionType.ATTACHMENT) return null == A.default.getUpload(t.id, e.name, l)
                     })) && I.default.setFile({
                         channelId: t.id,

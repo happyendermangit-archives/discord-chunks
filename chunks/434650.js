@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("470079"),
         r = n("863840"),
-        s = n("266338");
-    let a = {},
+        a = n("266338");
+    let s = {},
         o = new Map([
             [1, {
                 threshold: 1
@@ -31,20 +31,20 @@ function(e, t, n) {
         return function(e, t) {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
                 o = (0, i.useRef)(null),
-                l = (0, r.default)(null != t ? t : a),
+                l = (0, r.default)(null != t ? t : s),
                 u = (0, i.useRef)(null);
             return (0, i.useLayoutEffect)(() => {
                 if (!n) return;
-                null == u.current && (u.current = (0, s.getIntersectionObserver)(l.current));
+                null == u.current && (u.current = (0, a.getIntersectionObserver)(l.current));
                 let t = o.current,
                     i = u.current;
-                null != t && null != i && (0, s.watch)(i, t, e)
+                null != t && null != i && (0, a.watch)(i, t, e)
             }, [n, e]), (0, i.useEffect)(() => {
                 if (!n) return;
                 let e = o.current,
                     t = u.current;
                 if (null != e && null != t) return () => {
-                    (0, s.unwatch)(t, e)
+                    (0, a.unwatch)(t, e)
                 }
             }, [n, t]), o
         }(l.current, u, n)
