@@ -37,27 +37,32 @@ function(e, t, n) {
         } = e, {
             wildcardDescriptors: n,
             branding: {
-                primaryColor: r
+                primaryColor: s
             }
-        } = t, s = n.filter(e => e !== p.EMPTY_WILDCARD).join(", "), l = (0, _.useColorIsLowContrastAgainstClientBackground)(r);
-        return 0 === s.length ? null : (0, i.jsxs)(i.Fragment, {
+        } = t, a = n.filter(e => e !== p.EMPTY_WILDCARD).join(", "), l = (0, _.useColorIsLowContrastAgainstClientBackground)(s), u = r.useRef(null), [d, c] = r.useState(!1);
+        if (r.useEffect(() => {
+                let e = u.current;
+                null != e && null != e.offsetWidth && null != e.scrollWidth && c(e.offsetWidth < e.scrollWidth)
+            }, []), 0 === a.length) return null;
+        let E = {
+            color: l ? "var(--text-normal)" : s
+        };
+        return (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(o.Text, {
                 variant: "text-xs/normal",
                 color: "text-secondary",
                 className: R.clanInfoItem,
                 children: "\xb7"
-            }), (0, i.jsx)("div", {
-                className: R.wildcards,
-                children: (0, i.jsx)(o.Text, {
-                    variant: "text-xs/semibold",
-                    style: l ? {} : {
-                        color: r
-                    },
-                    lineClamp: 1,
-                    className: a()({
-                        [R.wildcardsOverride]: l
-                    }),
-                    children: s
+            }), (0, i.jsx)(o.Tooltip, {
+                text: a,
+                color: o.Tooltip.Colors.PRIMARY,
+                shouldShow: d,
+                children: e => (0, i.jsx)("span", {
+                    ...e,
+                    style: E,
+                    className: R.wildCardText,
+                    ref: u,
+                    children: a
                 })
             })]
         })
@@ -150,7 +155,7 @@ function(e, t, n) {
                             className: R.cardFooterOtherCount,
                             children: (0, i.jsx)(o.Text, {
                                 variant: "text-xs/medium",
-                                color: "interactive-normal",
+                                color: "always-white",
                                 children: "+".concat(r.length)
                             })
                         })]

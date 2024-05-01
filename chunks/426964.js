@@ -125,8 +125,7 @@ function(e, t, n) {
             children: [(0, i.jsx)(o.ClanDiscoveryCardView, {
                 clan: g,
                 className: m.cardContainer,
-                isMember: U,
-                expanded: !0
+                isMember: U
             }), null != F && (0, i.jsx)("div", {
                 className: m.buttonContainer,
                 children: F
