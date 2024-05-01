@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("481060"),
-        a = n("442837"),
+        a = n("481060"),
+        s = n("442837"),
         o = n("231467"),
         l = n("741606"),
         u = n("703656"),
@@ -35,7 +35,7 @@ function(e, t, n) {
             isLoading: O,
             onClose: R,
             source: C
-        } = e, g = (0, T.useClanInfo)(null !== (t = null == p ? void 0 : p.identityGuildId) && void 0 !== t ? t : null), L = null == p ? void 0 : p.tag, v = (0, I.useIsInUserClanExperiment)(), D = null == p ? void 0 : p.identityGuildId, M = (0, a.useStateFromStores)([d.default], () => d.default.getId()), y = (0, a.useStateFromStores)([_.default], () => null != D ? _.default.getMember(D, M) : null, [D, M]), P = (0, a.useStateFromStores)([c.default], () => c.default.getUser(M), [M]), U = (null == y ? void 0 : y.joinedAt) != null, b = (0, S.isGuildAdoptedUserClanIdentity)(D, null == P ? void 0 : P.clan), G = null != (0, l.default)(D);
+        } = e, g = (0, T.useClanInfo)(null !== (t = null == p ? void 0 : p.identityGuildId) && void 0 !== t ? t : null), L = null == p ? void 0 : p.tag, v = (0, I.useIsInUserClanExperiment)(), D = null == p ? void 0 : p.identityGuildId, M = (0, s.useStateFromStores)([d.default], () => d.default.getId()), y = (0, s.useStateFromStores)([_.default], () => null != D ? _.default.getMember(D, M) : null, [D, M]), P = (0, s.useStateFromStores)([c.default], () => c.default.getUser(M), [M]), U = (null == y ? void 0 : y.joinedAt) != null, b = (0, S.isGuildAdoptedUserClanIdentity)(D, null == P ? void 0 : P.clan), G = null != (0, l.default)(D);
         r.useEffect(() => {
             E.default.track(h.AnalyticEvents.CLAN_PROFILE_VIEWED, {
                 guild_id: D,
@@ -48,7 +48,7 @@ function(e, t, n) {
                 null != D && (e.stopPropagation(), e.preventDefault(), null == R || R(), (0, f.openAdoptClanIdentityModal)(D))
             }, [D, R]),
             B = r.useCallback(e => {
-                if (null != g) e.stopPropagation(), e.preventDefault(), null == R || R(), !G && (0, s.openModalLazy)(async () => {
+                if (null != g) e.stopPropagation(), e.preventDefault(), null == R || R(), !G && (0, a.openModalLazy)(async () => {
                     let {
                         default: e
                     } = await Promise.all([n.e("99387"), n.e("80026"), n.e("18482")]).then(n.bind(n, "767593"));
@@ -68,8 +68,8 @@ function(e, t, n) {
                 var e, t;
                 let n = null !== (t = null == g ? void 0 : null === (e = g.branding) || void 0 === e ? void 0 : e.primaryColor) && void 0 !== t ? t : null,
                     i = {
-                        color: null != n ? s.Button.Colors.CUSTOM : s.Button.Colors.BRAND,
-                        size: s.Button.Sizes.SMALL,
+                        color: null != n ? a.Button.Colors.CUSTOM : a.Button.Colors.BRAND,
+                        size: a.Button.Sizes.SMALL,
                         fullWidth: !0,
                         className: m.button
                     };
@@ -86,25 +86,25 @@ function(e, t, n) {
                     case !v:
                         return null;
                     case !U && G:
-                        return (0, i.jsx)(s.Button, {
+                        return (0, i.jsx)(a.Button, {
                             onClick: k,
                             ...x,
                             children: A.default.Messages.CLAN_USER_APPLICATION_EXISTS_TAG_GUILD_PROFILE_CTA
                         });
                     case !U:
-                        return (0, i.jsx)(s.Button, {
+                        return (0, i.jsx)(a.Button, {
                             onClick: B,
                             ...x,
                             children: A.default.Messages.CLAN_USER_APPLY_TAG_GUILD_PROFILE_CTA
                         });
                     case U && !b:
-                        return (0, i.jsx)(s.Button, {
+                        return (0, i.jsx)(a.Button, {
                             onClick: w,
                             ...x,
                             children: A.default.Messages.CLAN_USER_ADOPT_TAG_GUILD_PROFILE_CTA
                         });
                     case U && b:
-                        return (0, i.jsx)(s.Button, {
+                        return (0, i.jsx)(a.Button, {
                             onClick: V,
                             ...x,
                             children: A.default.Messages.CLAN_USER_GO_TO_CLAN_CTA
@@ -119,7 +119,7 @@ function(e, t, n) {
             }), []);
         return null == L || null == g || null == D || O ? (0, i.jsx)("div", {
             ...H,
-            children: (0, i.jsx)(s.Spinner, {})
+            children: (0, i.jsx)(a.Spinner, {})
         }) : (0, i.jsxs)("div", {
             ...H,
             children: [(0, i.jsx)(o.ClanDiscoveryCardView, {

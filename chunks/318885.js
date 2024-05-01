@@ -10,32 +10,32 @@ function(e, t, n) {
     });
     var i = n("594190"),
         r = n("131951"),
-        s = n("449224"),
-        a = n("626135"),
+        a = n("449224"),
+        s = n("626135"),
         o = n("367907"),
         l = n("981631");
 
     function u() {
-        let e, t, n, s, a;
+        let e, t, n, a, s;
         let o = r.default.getGoLiveSource();
         if (null != o && (e = o.quality.resolution, t = o.quality.frameRate, null != o.desktopSource)) {
             var l, u;
             n = o.desktopSource.soundshareSession;
             let e = null != o.desktopSource.sourcePid ? i.default.getGameForPID(o.desktopSource.sourcePid) : null;
-            s = null !== (l = null == e ? void 0 : e.name) && void 0 !== l ? l : null, a = null !== (u = null == e ? void 0 : e.id) && void 0 !== u ? u : null
+            a = null !== (l = null == e ? void 0 : e.name) && void 0 !== l ? l : null, s = null !== (u = null == e ? void 0 : e.id) && void 0 !== u ? u : null
         }
         return {
             video_input_resolution: e,
             video_input_frame_rate: t,
             soundshare_session: n,
-            share_game_name: s,
-            share_game_id: a
+            share_game_name: a,
+            share_game_id: s
         }
     }
 
     function d(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            i = s.default.getGame();
+            i = a.default.getGame();
         switch (t = {
                 ...t,
                 overlay_game_name: null != i ? i.name : "Unknown Game",
@@ -47,7 +47,7 @@ function(e, t, n) {
             case l.AnalyticEvents.CHANNEL_OPENED:
                 return (0, o.trackWithMetadata)(e, t, n);
             default:
-                return a.default.track(e, t, {
+                return s.default.track(e, t, {
                     flush: n
                 })
         }

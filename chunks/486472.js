@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("47120");
-    var i, r, s, a, o = n("392711"),
+    var i, r, a, s, o = n("392711"),
         l = n.n(o),
         u = n("442837"),
         d = n("570140"),
@@ -35,12 +35,12 @@ function(e, t, n) {
             return Array.from(I)
         }
     }
-    a = "GuildAvailabilityStore", (s = "displayName") in(r = S) ? Object.defineProperty(r, s, {
-        value: a,
+    s = "GuildAvailabilityStore", (a = "displayName") in(r = S) ? Object.defineProperty(r, a, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a, t.default = new S(d.default, {
+    }) : r[a] = s, t.default = new S(d.default, {
         CONNECTION_OPEN: T,
         OVERLAY_INITIALIZE: T,
         GUILD_UNAVAILABLE: function(e) {

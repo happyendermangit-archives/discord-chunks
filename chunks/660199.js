@@ -19,15 +19,15 @@ function(e, t, n) {
     });
     var i = n("913527"),
         r = n.n(i),
-        s = n("55935"),
-        a = n("70956");
+        a = n("55935"),
+        s = n("70956");
     let o = {
-            t: e => (0, s.dateFormat)(e, "LT"),
-            T: e => (0, s.dateFormat)(e, "LTS"),
-            d: e => (0, s.dateFormat)(e, "L"),
-            D: e => (0, s.dateFormat)(e, "LL"),
-            f: e => (0, s.dateFormat)(e, "LLL"),
-            F: e => (0, s.dateFormat)(e, "LLLL"),
+            t: e => (0, a.dateFormat)(e, "LT"),
+            T: e => (0, a.dateFormat)(e, "LTS"),
+            d: e => (0, a.dateFormat)(e, "L"),
+            D: e => (0, a.dateFormat)(e, "LL"),
+            f: e => (0, a.dateFormat)(e, "LLL"),
+            F: e => (0, a.dateFormat)(e, "LLLL"),
             R: e => {
                 let t = r().relativeTimeThreshold("s");
                 r().relativeTimeThreshold("s", 60);
@@ -35,11 +35,11 @@ function(e, t, n) {
                 r().relativeTimeThreshold("ss", -1);
                 let i = r().relativeTimeThreshold("m");
                 r().relativeTimeThreshold("m", 60);
-                let s = null;
+                let a = null;
                 try {
-                    s = r()(e.toDate()).fromNow()
+                    a = r()(e.toDate()).fromNow()
                 } catch (e) {}
-                return r().relativeTimeThreshold("s", t), r().relativeTimeThreshold("ss", n), r().relativeTimeThreshold("m", i), null != s ? s : r()(e.toDate()).fromNow()
+                return r().relativeTimeThreshold("s", t), r().relativeTimeThreshold("ss", n), r().relativeTimeThreshold("m", i), null != a ? a : r()(e.toDate()).fromNow()
             }
         },
         l = "f";
@@ -48,7 +48,7 @@ function(e, t, n) {
         d = new RegExp("^<t:(-?\\d{1,17})(?::(".concat(u, "))?>"));
 
     function _(e, t) {
-        let n = r()(Number(e) * a.default.Millis.SECOND);
+        let n = r()(Number(e) * s.default.Millis.SECOND);
         if (!n.isValid()) return null;
         let i = null != t ? o[t] : void 0;
         return null == i && (i = o[l]), {

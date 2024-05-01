@@ -11,15 +11,15 @@ function(e, t, n) {
             return o
         },
         trackExposureToExperiment: function() {
-            return a
+            return s
         }
     });
     var i = n("570140"),
         r = n("353926"),
-        s = n("987338");
+        a = n("987338");
 
-    function a(e, t, n) {
-        var i, s;
+    function s(e, t, n) {
+        var i, a;
         r.default.trackExposure({
             experimentId: e,
             descriptor: t,
@@ -36,14 +36,14 @@ function(e, t, n) {
             id: t,
             title: n,
             description: i,
-            buckets: a
+            buckets: s
         } = e;
         return (0, r.registerExperiment)({
             experimentId: t,
-            experimentType: s.ExperimentTypes.USER,
+            experimentType: a.ExperimentTypes.USER,
             title: n,
             description: i,
-            buckets: a
+            buckets: s
         }), {
             id: t
         }
@@ -54,14 +54,14 @@ function(e, t, n) {
             id: t,
             title: n,
             description: i,
-            buckets: a
+            buckets: s
         } = e;
         return (0, r.registerExperiment)({
             experimentId: t,
-            experimentType: s.ExperimentTypes.GUILD,
+            experimentType: a.ExperimentTypes.GUILD,
             title: n,
             description: i,
-            buckets: a
+            buckets: s
         }), {
             id: t
         }

@@ -5,7 +5,7 @@ function(e, t, n) {
             return o
         }
     });
-    var i, r, s, a, o, l, u = n("392711"),
+    var i, r, a, s, o, l, u = n("392711"),
         d = n.n(u),
         _ = n("442837"),
         c = n("570140");
@@ -46,12 +46,12 @@ function(e, t, n) {
             })]
         }
     }
-    a = void 0, (s = "displayName") in(r = S) ? Object.defineProperty(r, s, {
-        value: a,
+    s = void 0, (a = "displayName") in(r = S) ? Object.defineProperty(r, a, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a, t.default = new S(c.default, {
+    }) : r[a] = s, t.default = new S(c.default, {
         APPLICATION_DIRECTORY_FETCH_COLLECTIONS: function(e) {
             let {
                 includesInactive: t
@@ -71,21 +71,21 @@ function(e, t, n) {
             } = e, r = f({
                 includesInactive: i
             });
-            let s = (t = n.map(e => {
+            let a = (t = n.map(e => {
                 var t;
                 return e.application_directory_collection_items = (t = e.application_directory_collection_items, d().sortBy(t, ["position", "id"])), e
             }), d().sortBy(t, ["position", "id"]));
             E = {
                 ...E,
-                [r]: s
+                [r]: a
             }, I = {
                 ...I,
                 [r]: 1
             };
-            let a = Date.now();
+            let s = Date.now();
             T = {
                 ...T,
-                [r]: a
+                [r]: s
             }
         },
         APPLICATION_DIRECTORY_FETCH_COLLECTIONS_FAILURE: function(e) {

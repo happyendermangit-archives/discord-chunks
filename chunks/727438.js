@@ -13,8 +13,8 @@ function(e, t, n) {
     }), n("47120"), n("411104");
     var i = n("123763"),
         r = n.n(i),
-        s = n("956067"),
-        a = n("433517"),
+        a = n("956067"),
+        s = n("433517"),
         o = n("445346");
 
     function l(e, t, n) {
@@ -38,7 +38,7 @@ function(e, t, n) {
             return d = e, null == _._clearAllPromise && (_._clearAllPromise = new Promise(t => {
                 requestIdleCallback(() => {
                     _.clearPersistQueue(e), _.allPersistKeys.forEach(t => {
-                        _.shouldClear(e, t) && a.Storage.remove(t)
+                        _.shouldClear(e, t) && s.Storage.remove(t)
                     }), o.Store.getAll().forEach(t => {
                         t instanceof _ && _.shouldClear(e, t.getClass().persistKey) && (t._isInitialized = !1, t.initializeIfNeeded())
                     }), _._clearAllPromise = null, t()
@@ -62,7 +62,7 @@ function(e, t, n) {
                 let e = {};
                 return _.allPersistKeys.forEach(t => {
                     var n;
-                    e[t] = (null !== (n = a.Storage.get(t)) && void 0 !== n ? n : u)._state
+                    e[t] = (null !== (n = s.Storage.get(t)) && void 0 !== n ? n : u)._state
                 }), e
             })
         }
@@ -92,32 +92,32 @@ function(e, t, n) {
                 } = _.migrateAndReadStoreState(this.getClass().persistKey, this.getClass().migrations);
                 this.initialize(t) && this.asyncPersist(), n && this.asyncPersist(), this._isInitialized = !0;
                 let i = Date.now() - e;
-                i > 5 && s.default.mark("\uD83E\uDDA5", this.getName() + ".initialize()", i)
+                i > 5 && a.default.mark("\uD83E\uDDA5", this.getName() + ".initialize()", i)
             }
         }
         static migrateAndReadStoreState(e, t) {
-            if (null != d && _.shouldClear(d, e)) return a.Storage.remove(e), {
+            if (null != d && _.shouldClear(d, e)) return s.Storage.remove(e), {
                 state: void 0,
                 requiresPersist: !1
             };
-            let n = null != _._clearAllPromise ? null : a.Storage.get(e),
+            let n = null != _._clearAllPromise ? null : s.Storage.get(e),
                 {
                     _state: i,
                     _version: r,
-                    ...s
+                    ...a
                 } = null != n ? n : u,
                 o = null == t ? 0 : t.length;
             if (0 !== o && r !== o && null != t) {
                 let e = null != r ? r : 0,
                     n = i;
-                for (null == r && (n = s); e < o;) n = (0, t[e])(n), e++;
+                for (null == r && (n = a); e < o;) n = (0, t[e])(n), e++;
                 return {
                     state: n,
                     requiresPersist: !0
                 }
             }
-            if (Object.values(s).length > 0) return {
-                state: s,
+            if (Object.values(a).length > 0) return {
+                state: a,
                 requiresPersist: !0
             };
             return {
@@ -144,7 +144,7 @@ function(e, t, n) {
             let {
                 persistKey: e
             } = this.getClass(), t = this.getState(), n = this._version;
-            a.Storage.set(e, {
+            s.Storage.set(e, {
                 _state: t,
                 _version: n
             })
@@ -153,7 +153,7 @@ function(e, t, n) {
             let {
                 persistKey: e
             } = this.getClass();
-            a.Storage.remove(e)
+            s.Storage.remove(e)
         }
         constructor(e, t) {
             if (super(e, t), l(this, "_version", null == this.getClass().migrations ? 0 : this.getClass().migrations.length), l(this, "callback", e => {

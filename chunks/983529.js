@@ -4,8 +4,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("524437"),
-        s = n("481060"),
-        a = n("147913"),
+        a = n("481060"),
+        s = n("147913"),
         o = n("605236"),
         l = n("944486"),
         u = n("914010"),
@@ -17,7 +17,7 @@ function(e, t, n) {
         T = (e, t) => {
             if (__OVERLAY__ || null == e || null == t || !(0, _.shouldShowGuildOnboardingUpsell)(e, r.DismissibleContent.GUILD_ONBOARDING_UPSELL_MODAL_V2)) return;
             (0, o.requestMarkDismissibleContentAsShown)(r.DismissibleContent.GUILD_ONBOARDING_UPSELL_MODAL_V2);
-            let a = function() {
+            let s = function() {
                 let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : E.ContentDismissActionType.DISMISS;
                 d.default.track(c.AnalyticEvents.UPSELL_CLICKED, {
                     type: r.DismissibleContent[r.DismissibleContent.GUILD_ONBOARDING_UPSELL_MODAL_V2],
@@ -26,7 +26,7 @@ function(e, t, n) {
                     dismissAction: t
                 })
             };
-            (0, s.openModalLazy)(async () => {
+            (0, a.openModalLazy)(async () => {
                 let {
                     default: t
                 } = await Promise.all([n.e("99387"), n.e("93776")]).then(n.bind(n, "563288"));
@@ -34,17 +34,17 @@ function(e, t, n) {
                     ...n,
                     guildId: e,
                     onClose: e => {
-                        a(e), n.onClose()
+                        s(e), n.onClose()
                     }
                 })
             }, {
                 modalKey: I,
                 onCloseRequest: () => {
-                    a(), (0, s.closeModal)(I)
+                    s(), (0, a.closeModal)(I)
                 }
             })
         };
-    class f extends a.default {
+    class f extends s.default {
         handleChannelSelect(e) {
             let {
                 guildId: t,

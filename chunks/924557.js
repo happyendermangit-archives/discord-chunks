@@ -22,8 +22,8 @@ function(e, t, n) {
     });
     var i = n("818083"),
         r = n("836157"),
-        s = n("441167"),
-        a = n("131951"),
+        a = n("441167"),
+        s = n("131951"),
         o = n("74538"),
         l = n("779618"),
         u = n("474936");
@@ -91,7 +91,7 @@ function(e, t, n) {
         });
 
     function c() {
-        if (!(0, l.default)(a.default)) return !1;
+        if (!(0, l.default)(s.default)) return !1;
         let {
             enableClips: e
         } = _.getCurrentConfig({
@@ -112,7 +112,7 @@ function(e, t, n) {
             autoTrackExposure: !1
         }), {
             enableViewerClipping: i
-        } = s.default.getCurrentConfig({
+        } = a.default.getCurrentConfig({
             location: "areClipsEnabled"
         }, {
             autoTrackExposure: !1
@@ -121,7 +121,7 @@ function(e, t, n) {
     }
 
     function E() {
-        let e = (0, l.default)(a.default),
+        let e = (0, l.default)(s.default),
             {
                 enableClips: t
             } = _.useExperiment({
@@ -145,7 +145,7 @@ function(e, t, n) {
             }),
             {
                 enableViewerClipping: o
-            } = s.default.useExperiment({
+            } = a.default.useExperiment({
                 location: "useEnableClips"
             }, {
                 autoTrackExposure: !1
@@ -155,7 +155,7 @@ function(e, t, n) {
     let I = e => {
             let {
                 autoTrackExposure: t
-            } = e, n = (0, l.default)(a.default), {
+            } = e, n = (0, l.default)(s.default), {
                 enablePremiumEarlyAccessGoLiveRoadblock: i
             } = _.useExperiment({
                 location: "useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock"
@@ -167,7 +167,7 @@ function(e, t, n) {
         T = e => {
             let {
                 autoTrackExposure: t
-            } = e, n = (0, l.default)(a.default), {
+            } = e, n = (0, l.default)(s.default), {
                 enablePremiumEarlyAccessAnnouncementCoachmark: i
             } = _.useExperiment({
                 location: "useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock"

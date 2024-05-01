@@ -10,8 +10,8 @@ function(e, t, n) {
     });
     var i = n("392711"),
         r = n.n(i),
-        s = n("31775"),
-        a = n.n(s);
+        a = n("31775"),
+        s = n.n(a);
     n("302454");
     var o = n("25209"),
         l = n("691424"),
@@ -21,7 +21,7 @@ function(e, t, n) {
     let _ = (0, d.default)([u.default.PROFILE_BIO_RULES, (0, l.default)({
         enableBuildOverrides: !1
     })]);
-    new(a())({
+    new(s())({
         max: 2e3
     });
     let c = o.reactParserFor(_),

@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("718017"),
         l = n("442837"),
         u = n("393238"),
@@ -19,7 +19,7 @@ function(e, t, n) {
         let {
             children: t,
             className: n,
-            collapsibleContent: s,
+            collapsibleContent: a,
             isExpanded: c
         } = e, [E, I] = r.useState(!1), T = (0, l.useStateFromStores)([d.default], () => d.default.useReducedMotion), [f, S] = r.useState(!0), [h, A] = r.useState(!1), m = null != c ? c : E, {
             ref: N,
@@ -41,17 +41,17 @@ function(e, t, n) {
             }, 100);
             return () => clearTimeout(e)
         }, []), (0, i.jsx)("div", {
-            className: a()(_.collapseable, {
+            className: s()(_.collapseable, {
                 [_.toggled]: m
             }, n),
             children: (0, i.jsxs)(o.animated.div, {
-                className: a()(_.contentExpandContainer, {
+                className: s()(_.contentExpandContainer, {
                     [_.showOverflow]: m && h
                 }),
                 style: C,
                 children: [(0, i.jsx)("div", {
                     ref: O,
-                    className: a()(_.header, {
+                    className: s()(_.header, {
                         [_.toggled]: m
                     }),
                     children: t({
@@ -59,7 +59,7 @@ function(e, t, n) {
                     })
                 }), (0, i.jsx)("div", {
                     ref: N,
-                    children: s
+                    children: a
                 })]
             })
         })

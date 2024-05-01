@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("653041"), n("724458"), n("789020");
     var i = n("373793"),
         r = n("81825"),
-        s = n("712057"),
-        a = n("566006"),
+        a = n("712057"),
+        s = n("566006"),
         o = n("995774"),
         l = n("630388"),
         u = n("358085"),
@@ -36,11 +36,11 @@ function(e, t, n) {
         addReaction(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                 n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
-                i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : a.ReactionTypes.NORMAL,
+                i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : s.ReactionTypes.NORMAL,
                 r = -1,
                 l = this.reactions.map((l, d) => {
                     if ((0, o.emojiEquals)(l.emoji, e)) {
-                        if (r = d, i === a.ReactionTypes.BURST) {
+                        if (r = d, i === s.ReactionTypes.BURST) {
                             if (t && l.me) return l;
                             let e = t && l.me_burst ? l.burst_count : l.burst_count + 1,
                                 i = null != l.burst_colors && l.burst_colors.length > 0 ? l.burst_colors : n;
@@ -53,12 +53,12 @@ function(e, t, n) {
                                     burst: e
                                 },
                                 burst_colors: i,
-                                themedBurstColors: (0, s.buildPlatformedThemedEmojiColorPalette)({
+                                themedBurstColors: (0, a.buildPlatformedThemedEmojiColorPalette)({
                                     colors: i,
                                     shouldProcessMobileColors: (0, u.isIOS)()
                                 })
                             }
-                        } else if (i === a.ReactionTypes.VOTE) {
+                        } else if (i === s.ReactionTypes.VOTE) {
                             var _, c;
                             let e = null !== (c = null === (_ = l.count_details) || void 0 === _ ? void 0 : _.vote) && void 0 !== c ? c : 0,
                                 n = t && l.me_vote ? e : e + 1;
@@ -86,7 +86,7 @@ function(e, t, n) {
                     }
                     return l
                 });
-            return -1 === r && (i === a.ReactionTypes.BURST ? l.push({
+            return -1 === r && (i === s.ReactionTypes.BURST ? l.push({
                 emoji: e,
                 me: !1,
                 me_burst: t,
@@ -97,11 +97,11 @@ function(e, t, n) {
                 },
                 burst_count: 1,
                 burst_colors: n,
-                themedBurstColors: (0, s.buildPlatformedThemedEmojiColorPalette)({
+                themedBurstColors: (0, a.buildPlatformedThemedEmojiColorPalette)({
                     colors: null != n ? n : [],
                     shouldProcessMobileColors: (0, u.isIOS)()
                 })
-            }) : i === a.ReactionTypes.VOTE ? l.push({
+            }) : i === s.ReactionTypes.VOTE ? l.push({
                 emoji: e,
                 me: !1,
                 me_burst: !1,
@@ -138,40 +138,40 @@ function(e, t, n) {
         }
         removeReaction(e) {
             var t, n, i, r;
-            let s = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a.ReactionTypes.NORMAL,
+            let a = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+                l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.ReactionTypes.NORMAL,
                 u = -1,
                 d = this.reactions.map((t, n) => {
                     if ((0, o.emojiEquals)(t.emoji, e)) {
-                        if (l === a.ReactionTypes.BURST) {
-                            let e = s && !t.me_burst ? t.burst_count : t.burst_count - 1;
+                        if (l === s.ReactionTypes.BURST) {
+                            let e = a && !t.me_burst ? t.burst_count : t.burst_count - 1;
                             t = {
                                 ...t,
                                 burst_count: e,
-                                me_burst: !s && t.me_burst,
+                                me_burst: !a && t.me_burst,
                                 count_details: {
                                     ...t.count_details,
                                     burst: e
                                 }
                             }
-                        } else if (l === a.ReactionTypes.VOTE) {
+                        } else if (l === s.ReactionTypes.VOTE) {
                             var i, r;
                             let e = null !== (r = null === (i = t.count_details) || void 0 === i ? void 0 : i.vote) && void 0 !== r ? r : 0,
-                                n = s && !t.me_vote ? e : e - 1;
+                                n = a && !t.me_vote ? e : e - 1;
                             t = {
                                 ...t,
                                 count_details: {
                                     ...t.count_details,
                                     vote: n
                                 },
-                                me_vote: !s && t.me_vote
+                                me_vote: !a && t.me_vote
                             }
                         } else {
-                            let e = s && !t.me ? t.count : t.count - 1;
+                            let e = a && !t.me ? t.count : t.count - 1;
                             t = {
                                 ...t,
                                 count: e,
-                                me: !s && t.me,
+                                me: !a && t.me,
                                 count_details: {
                                     ...t.count_details,
                                     normal: e
@@ -216,8 +216,8 @@ function(e, t, n) {
         canDeleteOwnMessage(e) {
             var t, n, r;
             if (this.author.id === e) return !0;
-            let s = null !== (r = null === (t = this.interactionMetadata) || void 0 === t ? void 0 : t.authorizing_integration_owners) && void 0 !== r ? r : {};
-            return (null === (n = this.interactionMetadata) || void 0 === n ? void 0 : n.user.id) === e && 1 === Object.keys(s).length && i.ApplicationIntegrationType.USER_INSTALL in s
+            let a = null !== (r = null === (t = this.interactionMetadata) || void 0 === t ? void 0 : t.authorizing_integration_owners) && void 0 !== r ? r : {};
+            return (null === (n = this.interactionMetadata) || void 0 === n ? void 0 : n.user.id) === e && 1 === Object.keys(a).length && i.ApplicationIntegrationType.USER_INSTALL in a
         }
         toJS() {
             return {

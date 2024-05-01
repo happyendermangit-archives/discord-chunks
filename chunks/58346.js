@@ -1,6 +1,6 @@
 function(e, t, n) {
     "use strict";
-    var i, r, s, a;
+    var i, r, a, s;
     n.r(t), n.d(t, {
         GuildTemplateStates: function() {
             return i
@@ -8,5 +8,5 @@ function(e, t, n) {
         InternalTemplateCodes: function() {
             return r
         }
-    }), (s = i || (i = {})).RESOLVING = "RESOLVING", s.RESOLVED = "RESOLVED", s.EXPIRED = "EXPIRED", s.ACCEPTED = "ACCEPTED", s.ACCEPTING = "ACCEPTING", (a = r || (r = {})).CLASSROOM = "fVfBazbqjhXg", a.LOCAL_COMMUNITIES = "64UDvRNCC52Y", a.CREATORS_HOBBIES = "6exdzMgjZgah", a.GLOBAL_COMMUNITIES = "4sgbPdCjzAYU", a.FRIENDS_FAMILY = "hgM48av5Q69A", a.STUDY_GROUPS = "FbwUwRp4j8Es", a.CREATE_FROM_SCRATCH = "WYAQmEzjw3Pj", a.CAMPUS_CLUBS = "Ctg7PUHcQmZu", a.LEAGUE_CLUBS = "PJ6VvgEJYg45", a.GITHUB_HACKATHON = "UqzZCTj2zfwy"
+    }), (a = i || (i = {})).RESOLVING = "RESOLVING", a.RESOLVED = "RESOLVED", a.EXPIRED = "EXPIRED", a.ACCEPTED = "ACCEPTED", a.ACCEPTING = "ACCEPTING", (s = r || (r = {})).CLASSROOM = "fVfBazbqjhXg", s.LOCAL_COMMUNITIES = "64UDvRNCC52Y", s.CREATORS_HOBBIES = "6exdzMgjZgah", s.GLOBAL_COMMUNITIES = "4sgbPdCjzAYU", s.FRIENDS_FAMILY = "hgM48av5Q69A", s.STUDY_GROUPS = "FbwUwRp4j8Es", s.CREATE_FROM_SCRATCH = "WYAQmEzjw3Pj", s.CAMPUS_CLUBS = "Ctg7PUHcQmZu", s.LEAGUE_CLUBS = "PJ6VvgEJYg45", s.GITHUB_HACKATHON = "UqzZCTj2zfwy"
 }

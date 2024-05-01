@@ -2,29 +2,29 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return a
+            return s
         },
         getEmojiHotrail: function() {
-            return s
+            return a
         }
     });
     var i = n("470079"),
         r = n("149203");
 
-    function s(e) {
+    function a(e) {
         let {
             topEmojis: t,
             newlyAddedEmojis: n,
             rowSize: i = r.EMOJI_ROW_SIZE
-        } = e, s = t.slice(0, i - n.length);
+        } = e, a = t.slice(0, i - n.length);
         return {
-            visibleTopEmojis: s,
+            visibleTopEmojis: a,
             visibleNewlyAddedEmojis: n,
-            allEmojis: s.concat(n)
+            allEmojis: a.concat(n)
         }
     }
 
-    function a(e) {
-        return i.useMemo(() => s(e), [e])
+    function s(e) {
+        return i.useMemo(() => a(e), [e])
     }
 }

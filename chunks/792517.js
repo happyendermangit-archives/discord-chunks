@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        s = n.n(r),
-        a = n("442837"),
+        a = n.n(r),
+        s = n("442837"),
         o = n("481060"),
         l = n("872810"),
         u = n("199902"),
@@ -27,14 +27,14 @@ function(e, t, n) {
             width: n,
             noArt: r = !1,
             selected: S = !1
-        } = e, h = n < 195, A = (0, a.useStateFromStores)([u.default, d.default], () => u.default.getAllActiveStreams().some(e => {
+        } = e, h = n < 195, A = (0, s.useStateFromStores)([u.default, d.default], () => u.default.getAllActiveStreams().some(e => {
             let {
                 ownerId: t
             } = e;
             return t !== d.default.getId()
         }));
         return (0, i.jsx)("div", {
-            className: s()(T.content, T.streamHidden, {
+            className: a()(T.content, T.streamHidden, {
                 [T.__invalid_small]: h
             }),
             children: (0, i.jsx)(E.default, {
@@ -45,7 +45,7 @@ function(e, t, n) {
                 size: (0, E.getSizeForWidth)(n),
                 header: h ? null : I.default.Messages.STREAM_HIDDEN,
                 description: S ? null : (0, i.jsxs)("div", {
-                    className: s()(T.streamHiddenCTA, {
+                    className: a()(T.streamHiddenCTA, {
                         [T.largePaddingTop]: !h
                     }),
                     children: [(0, i.jsx)(c.CallTileCTA, {

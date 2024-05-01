@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("990547"),
         l = n("442837"),
         u = n("481060"),
@@ -27,7 +27,7 @@ function(e, t, n) {
         let {
             guildId: t,
             channel: n,
-            containerWidth: s,
+            containerWidth: a,
             onClose: m,
             onSelect: N,
             analyticsSource: p,
@@ -55,7 +55,7 @@ function(e, t, n) {
         }, []), (0, i.jsx)(_.AnalyticsLocationProvider, {
             value: U,
             children: (0, i.jsx)(u.Dialog, {
-                className: a()(A.picker, {
+                className: s()(A.picker, {
                     [A.fetching]: y,
                     [A.autoWidth]: g
                 }),
@@ -64,7 +64,7 @@ function(e, t, n) {
                     channel: n,
                     onClose: m,
                     onSelect: N,
-                    containerWidth: s,
+                    containerWidth: a,
                     suppressPlaySound: O,
                     shouldShowUpsell: R,
                     gridNotice: C,

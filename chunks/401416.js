@@ -7,19 +7,19 @@ function(e, t, n) {
     }), n("47120");
     var i = n("544891"),
         r = n("147913"),
-        s = n("25733"),
-        a = n("704587"),
+        a = n("25733"),
+        s = n("704587"),
         o = n("981631");
     class l extends r.default {
         intialize() {
-            a.DmSettingsUpsellExperiment.getCurrentConfig({
+            s.DmSettingsUpsellExperiment.getCurrentConfig({
                 location: "initializer"
             }, {
                 autoTrackExposure: !1
             })
         }
         handleDmSettingsUpsellShow(e) {
-            s.default.openDmSettingsUpsellModal(e.guildId)
+            a.default.openDmSettingsUpsellModal(e.guildId)
         }
         constructor(...e) {
             var t, n, i;

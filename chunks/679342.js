@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("392711"),
         l = n.n(o),
         u = n("866442"),
@@ -39,7 +39,7 @@ function(e, t, n) {
                 selected: t,
                 color: n,
                 className: r,
-                children: s
+                children: a
             } = this.props, o = h(n);
             return t ? e = {
                 color: o,
@@ -51,7 +51,7 @@ function(e, t, n) {
                     left: 4
                 },
                 children: (0, i.jsxs)(c.default, {
-                    className: a()(T.selectableItem, r, {
+                    className: s()(T.selectableItem, r, {
                         [T.selected]: t
                     }),
                     onClick: this.handleClick,
@@ -67,7 +67,7 @@ function(e, t, n) {
                         align: c.default.Align.CENTER,
                         className: T.selectableItemLabel,
                         shrink: 1,
-                        children: s
+                        children: a
                     }), t && (0, i.jsx)(c.default, {
                         wrap: c.default.Wrap.WRAP,
                         className: f.marginReset,

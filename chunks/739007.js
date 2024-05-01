@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("561779"),
-        a = n("397905");
+        a = n("561779"),
+        s = n("397905");
     let o = e => "".concat(e.toFixed(0), "%"),
         l = r.forwardRef(function(e, t) {
             let {
@@ -30,12 +30,12 @@ function(e, t, n) {
                 },
                 activate: () => !1
             }), []), (0, i.jsx)("div", {
-                className: a.sliderContainer,
-                children: (0, i.jsx)(s.Slider, {
+                className: s.sliderContainer,
+                children: (0, i.jsx)(a.Slider, {
                     ref: E,
                     mini: !0,
                     handleSize: 16,
-                    className: a.slider,
+                    className: s.slider,
                     initialValue: n,
                     minValue: l,
                     maxValue: u,

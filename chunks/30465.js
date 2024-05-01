@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         channelEditorPopupStore: function() {
-            return a
+            return s
         },
         dismissChannelEditorPopup: function() {
             return l
@@ -13,18 +13,18 @@ function(e, t, n) {
     });
     var i = n("470079"),
         r = n("652874");
-    let s = Object.freeze({
+    let a = Object.freeze({
             id: null,
             activeDescendant: null
         }),
-        a = (0, r.default)(() => s);
+        s = (0, r.default)(() => a);
 
     function o(e, t, n) {
         (0, i.useEffect)(() => {
-            t ? a.setState({
+            t ? s.setState({
                 id: e,
                 activeDescendant: n
-            }) : a.setState({
+            }) : s.setState({
                 id: null,
                 activeDescendant: null
             })
@@ -32,6 +32,6 @@ function(e, t, n) {
     }
 
     function l() {
-        a.setState(() => s)
+        s.setState(() => a)
     }
 }

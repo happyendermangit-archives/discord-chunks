@@ -16,8 +16,8 @@ function(e, t, n) {
     });
     var i = n("512722"),
         r = n.n(i),
-        s = n("481060"),
-        a = n("749210"),
+        a = n("481060"),
+        s = n("749210"),
         o = n("703656"),
         l = n("549817"),
         u = n("745752"),
@@ -36,8 +36,8 @@ function(e, t, n) {
             returnChannelId: n,
             isPreview: i = !1
         } = e;
-        (0, s.closeAllModals)(), r()(null == I[t], "should not double-join guilds");
-        let l = await (0, a.waitForGuild)(t);
+        (0, a.closeAllModals)(), r()(null == I[t], "should not double-join guilds");
+        let l = await (0, s.waitForGuild)(t);
         if (l.hasFeature(c.GuildFeatures.COMMUNITY)) {
             if (i)(0, u.startOnboarding)(t);
             else {

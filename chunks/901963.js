@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("913527"),
-        a = n.n(s),
+        a = n("913527"),
+        s = n.n(a),
         o = n("442837"),
         l = n("433517"),
         u = n("481060"),
@@ -26,7 +26,7 @@ function(e, t, n) {
         let {
             closePopout: t,
             channel: n
-        } = e, [s, R] = r.useState(!1), {
+        } = e, [a, R] = r.useState(!1), {
             subscription: C,
             hasFetchedSubscriptions: g
         } = (0, o.useStateFromStoresObject)([c.default], () => ({
@@ -35,8 +35,8 @@ function(e, t, n) {
         }));
         if (r.useEffect(() => {
                 !g && (0, d.fetchSubscriptions)()
-            }, [g]), null == C || !(0, f.isSubscriptionStatusFailedPayment)(C.status) || s) return null;
-        let L = C.status === h.SubscriptionStatusTypes.PAST_DUE ? (0, f.getBillingGracePeriodDaysAndExpiresDate)(C).expiresDate : a()(C.currentPeriodStart).add(A.MAX_ACCOUNT_HOLD_DAYS),
+            }, [g]), null == C || !(0, f.isSubscriptionStatusFailedPayment)(C.status) || a) return null;
+        let L = C.status === h.SubscriptionStatusTypes.PAST_DUE ? (0, f.getBillingGracePeriodDaysAndExpiresDate)(C).expiresDate : s()(C.currentPeriodStart).add(A.MAX_ACCOUNT_HOLD_DAYS),
             v = "".concat(C.id, ":").concat(L.toISOString());
         if (O === v) return null;
         let D = f.default.getPremiumType(C.planId) === A.PremiumTypes.TIER_0 ? E.GradientCssUrls.PREMIUM_TIER_0 : f.default.getPremiumType(C.planId) === A.PremiumTypes.TIER_1 ? E.GradientCssUrls.PREMIUM_TIER_1 : E.GradientCssUrls.PREMIUM_TIER_2;

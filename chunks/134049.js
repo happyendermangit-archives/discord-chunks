@@ -10,24 +10,24 @@ function(e, t, n) {
     }), n("47120");
     var i = n("652874"),
         r = n("143927"),
-        s = n("12336"),
-        a = n("433517"),
+        a = n("12336"),
+        s = n("433517"),
         o = n("590433");
-    let l = (0, s.default)((e, t) => ({
+    let l = (0, a.default)((e, t) => ({
             notificationDismissedInGuilds: function() {
                 var e;
-                let t = null !== (e = a.Storage.get(o.DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY)) && void 0 !== e ? e : [];
+                let t = null !== (e = s.Storage.get(o.DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY)) && void 0 !== e ? e : [];
                 return new Set(t)
             }(),
             dismissNotification: n => {
                 let i = t().notificationDismissedInGuilds;
-                i.add(n), a.Storage.set(o.DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY, i), e({
+                i.add(n), s.Storage.set(o.DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY, i), e({
                     notificationDismissedInGuilds: i
                 })
             },
             resetNotification: n => {
                 let i = t().notificationDismissedInGuilds;
-                i.has(n) && (i.delete(n), a.Storage.set(o.DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY, i), e({
+                i.has(n) && (i.delete(n), s.Storage.set(o.DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY, i), e({
                     notificationDismissedInGuilds: i
                 }))
             }

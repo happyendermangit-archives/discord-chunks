@@ -23,8 +23,8 @@ function(e, t, n) {
             return D
         }
     }), n("757143"), n("653041"), n("47120");
-    var i, r, s = n("470079"),
-        a = n("544891"),
+    var i, r, a = n("470079"),
+        s = n("544891"),
         o = n("570140"),
         l = n("668781"),
         u = n("430742"),
@@ -60,12 +60,12 @@ function(e, t, n) {
     }
 
     function y(e, t) {
-        var n, i, r, s;
-        let a = null == t ? null : h.default.getMessage(e.id, t),
-            o = null !== (r = null == a ? void 0 : null === (i = a.embeds) || void 0 === i ? void 0 : null === (n = i[0]) || void 0 === n ? void 0 : n.rawTitle) && void 0 !== r ? r : "";
+        var n, i, r, a;
+        let s = null == t ? null : h.default.getMessage(e.id, t),
+            o = null !== (r = null == s ? void 0 : null === (i = s.embeds) || void 0 === i ? void 0 : null === (n = i[0]) || void 0 === n ? void 0 : n.rawTitle) && void 0 !== r ? r : "";
         if ("" !== o) return o.length > 40 ? o.substring(0, 40) + "..." : o;
         {
-            let t = I.default.unparse(null !== (s = null == a ? void 0 : a.content) && void 0 !== s ? s : "", e.id, !0),
+            let t = I.default.unparse(null !== (a = null == s ? void 0 : s.content) && void 0 !== a ? a : "", e.id, !0),
                 n = (0, C.default)(t.split("\n")[0], !0);
             n = n.replace(/^[ #-]+/, "");
             let i = [];
@@ -98,7 +98,7 @@ function(e, t, n) {
             useDefaultThreadName: c,
             uploadHandler: E
         } = e;
-        return s.useCallback(async (e, s, T) => {
+        return a.useCallback(async (e, a, T) => {
             var h;
             let A = null == n,
                 m = M(i, r),
@@ -111,7 +111,7 @@ function(e, t, n) {
                 C = f.default.getChannel(p.default.castMessageIdAsChannelId(n)),
                 g = await G(t, () => {
                     let e = null != n ? L.Endpoints.CHANNEL_MESSAGE_THREADS(t.id, n) : L.Endpoints.CHANNEL_THREADS(t.id);
-                    return a.HTTP.post({
+                    return s.HTTP.post({
                         url: e,
                         body: {
                             name: N,
@@ -121,16 +121,16 @@ function(e, t, n) {
                         }
                     })
                 });
-            g !== C && (u.default.clearDraft(t.id, S.DraftType.ThreadSettings), u.default.clearDraft(t.id, S.DraftType.FirstThreadMessage), null == l || l(g), (A || e.length > 0 || null != s && s.length > 0 || null != T && T.length > 0) && function(e, t, n, i, r) {
+            g !== C && (u.default.clearDraft(t.id, S.DraftType.ThreadSettings), u.default.clearDraft(t.id, S.DraftType.FirstThreadMessage), null == l || l(g), (A || e.length > 0 || null != a && a.length > 0 || null != T && T.length > 0) && function(e, t, n, i, r) {
                 if (null != r && null != i && i.length > 0) r(e, i, t, n);
                 else if (null != n && n.length > 0) d.default.sendStickers(e.id, n, t);
                 else d.default.sendMessage(e.id, I.default.parse(e, t))
-            }(g, e, s, T, E)), _.default.clearAll(t.id, S.DraftType.FirstThreadMessage)
+            }(g, e, a, T, E)), _.default.clearAll(t.id, S.DraftType.FirstThreadMessage)
         }, [t, n, i, l, r, o, c, E])
     }
 
     function U(e, t, n, i, r) {
-        return G(e, () => a.HTTP.post({
+        return G(e, () => s.HTTP.post({
             url: L.Endpoints.CHANNEL_THREADS(e.id),
             body: {
                 name: t,
@@ -149,7 +149,7 @@ function(e, t, n) {
             onThreadCreated: r,
             upload: o
         } = e;
-        return s.useCallback(async (e, s, l) => {
+        return a.useCallback(async (e, a, l) => {
             let d = 0,
                 [c, I] = (0, T.default)(e);
             c && (e = I, d = (0, N.addFlag)(d, L.MessageFlags.SUPPRESS_NOTIFICATIONS));
@@ -161,11 +161,11 @@ function(e, t, n) {
                     applied_tags: i,
                     message: {
                         content: e,
-                        sticker_ids: s,
+                        sticker_ids: a,
                         flags: 0 !== d ? d : void 0
                     }
                 },
-                m = await G(t, () => null != l && l.length > 0 ? o(h, A, l) : a.HTTP.post({
+                m = await G(t, () => null != l && l.length > 0 ? o(h, A, l) : s.HTTP.post({
                     url: h,
                     body: A
                 }));
@@ -192,16 +192,16 @@ function(e, t, n) {
                 channelId: n.body.id
             }))
         } catch (t) {
-            var r, s, a, u, d, _;
+            var r, a, s, u, d, _;
             if ((null === (r = t.body) || void 0 === r ? void 0 : r.code) === L.AbortCodes.TOO_MANY_THREADS) l.default.show({
                 title: i ? v.default.Messages.CANNOT_CREATE_FORUM_POST : v.default.Messages.CANNOT_CREATE_THREAD,
                 body: i ? v.default.Messages.TOO_MANY_FORUM_POSTS_MESSAGE : v.default.Messages.TOO_MANY_THREADS_MESSAGE
             });
-            else if ((null === (s = t.body) || void 0 === s ? void 0 : s.code) === L.AbortCodes.TOO_MANY_ANNOUNCEMENT_THREADS) l.default.show({
+            else if ((null === (a = t.body) || void 0 === a ? void 0 : a.code) === L.AbortCodes.TOO_MANY_ANNOUNCEMENT_THREADS) l.default.show({
                 title: v.default.Messages.CANNOT_CREATE_THREAD,
                 body: v.default.Messages.TOO_MANY_ANNOUNCEMENT_THREADS_MESSAGE
             });
-            else if ((null === (a = t.body) || void 0 === a ? void 0 : a.code) === L.AbortCodes.SLOWMODE_RATE_LIMITED) {
+            else if ((null === (s = t.body) || void 0 === s ? void 0 : s.code) === L.AbortCodes.SLOWMODE_RATE_LIMITED) {
                 let n = null !== (_ = t.body.retry_after) && void 0 !== _ ? _ : 0;
                 n > 0 && o.default.dispatch({
                     type: "SLOWMODE_SET_COOLDOWN",

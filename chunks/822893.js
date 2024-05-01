@@ -22,8 +22,8 @@ function(e, t, n) {
     });
     var i = n("544891"),
         r = n("570140"),
-        s = n("933557"),
-        a = n("592125"),
+        a = n("933557"),
+        s = n("592125"),
         o = n("430824"),
         l = n("699516"),
         u = n("594174"),
@@ -43,16 +43,16 @@ function(e, t, n) {
             savedAt: new Date,
             dueAt: t,
             ... function(e) {
-                let t = a.default.getChannel(e.channel_id);
+                let t = s.default.getChannel(e.channel_id);
                 if (null == t) return null;
                 let n = o.default.getGuild(t.guild_id),
                     i = "",
-                    r = (0, s.computeChannelName)(t, u.default, l.default, !0);
+                    r = (0, a.computeChannelName)(t, u.default, l.default, !0);
                 if (t.isPrivate()) i = r;
                 else if (t.isThread()) {
-                    let e = a.default.getChannel(t.parent_id);
+                    let e = s.default.getChannel(t.parent_id);
                     if (null == e) return null;
-                    let n = (0, s.computeChannelName)(e, u.default, l.default, !0);
+                    let n = (0, a.computeChannelName)(e, u.default, l.default, !0);
                     i = "".concat(n, " > ").concat(r)
                 } else i = r;
                 let d = "".concat(e.content.length > 0 ? e.content : "".concat(e.attachments.length, " attachments"));

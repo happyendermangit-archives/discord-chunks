@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("430198"),
         r = n("897345"),
-        s = n("859802"),
-        a = n("697379"),
+        a = n("859802"),
+        s = n("697379"),
         o = n("241559"),
         l = n("819553"),
         u = n("931261"),
@@ -33,9 +33,9 @@ function(e, t, n) {
             case S.StaticChannelRoute.GUILD_SHOP:
                 return (0, r.isGuildShopVisibleInGuild)(h, A);
             case S.StaticChannelRoute.MEMBER_APPLICATIONS:
-                return (0, a.canReviewGuildMemberApplications)(t);
+                return (0, s.canReviewGuildMemberApplications)(t);
             case S.StaticChannelRoute.GUILD_HOME:
-                return (0, s.canSeeGuildHome)(t) || (0, u.canSeeOnboardingHome)(t);
+                return (0, a.canSeeGuildHome)(t) || (0, u.canSeeOnboardingHome)(t);
             case S.StaticChannelRoute.CHANNEL_BROWSER:
                 return null != h && h.hasFeature(f.GuildFeatures.COMMUNITY);
             case S.StaticChannelRoute.GUILD_ONBOARDING:

@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("47120"), n("653041"), n("536091");
-    var i, r, s, a, o, l, u = n("392711"),
+    var i, r, a, s, o, l, u = n("392711"),
         d = n.n(u),
         _ = n("442837"),
         c = n("570140"),
@@ -14,7 +14,7 @@ function(e, t, n) {
         A = n("710111"),
         m = n("981631"),
         N = n("526761");
-    (s = i || (i = {}))[s.NOT_FETCHED = 0] = "NOT_FETCHED", s[s.FETCHING = 1] = "FETCHING", s[s.FETCHED = 2] = "FETCHED";
+    (a = i || (i = {}))[a.NOT_FETCHED = 0] = "NOT_FETCHED", a[a.FETCHING = 1] = "FETCHING", a[a.FETCHED = 2] = "FETCHED";
     let p = new Map,
         O = new Map,
         R = new Set,
@@ -106,12 +106,12 @@ function(e, t, n) {
             return 2 === g && 2 === C
         }
     }
-    l = "SoundboardStore", (o = "displayName") in(a = U) ? Object.defineProperty(a, o, {
+    l = "SoundboardStore", (o = "displayName") in(s = U) ? Object.defineProperty(s, o, {
         value: l,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : a[o] = l, t.default = new U(c.default, {
+    }) : s[o] = l, t.default = new U(c.default, {
         LOGOUT: function() {
             p.clear(), O.clear(), v.clear(), D = !1, g = 0, C = 0
         },
@@ -131,17 +131,17 @@ function(e, t, n) {
             var t, n, i;
             let {
                 soundId: r,
-                userId: s
-            } = e, a = (null !== (n = O.get(r)) && void 0 !== n ? n : 0) + 1, o = (null !== (i = v.get(s)) && void 0 !== i ? i : 0) + 1;
-            O.set(r, a), v.set(s, o), s !== (null === (t = T.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && (D = !0)
+                userId: a
+            } = e, s = (null !== (n = O.get(r)) && void 0 !== n ? n : 0) + 1, o = (null !== (i = v.get(a)) && void 0 !== i ? i : 0) + 1;
+            O.set(r, s), v.set(a, o), a !== (null === (t = T.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && (D = !0)
         },
         GUILD_SOUNDBOARD_SOUND_PLAY_END: function(e) {
             var t, n;
             let {
                 soundId: i,
                 userId: r
-            } = e, s = (null !== (t = O.get(i)) && void 0 !== t ? t : 0) - 1, a = (null !== (n = v.get(r)) && void 0 !== n ? n : 0) - 1;
-            s <= 0 ? O.delete(i) : O.set(i, s), a <= 0 ? v.delete(r) : v.set(r, a)
+            } = e, a = (null !== (t = O.get(i)) && void 0 !== t ? t : 0) - 1, s = (null !== (n = v.get(r)) && void 0 !== n ? n : 0) - 1;
+            a <= 0 ? O.delete(i) : O.set(i, a), s <= 0 ? v.delete(r) : v.set(r, s)
         },
         USER_SOUNDBOARD_SET_VOLUME: function(e) {
             let {
@@ -160,8 +160,8 @@ function(e, t, n) {
                 proto: i
             } = t;
             if (n === N.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) {
-                var r, s;
-                L = new Set(null !== (s = null == i ? void 0 : null === (r = i.favoriteSoundboardSounds) || void 0 === r ? void 0 : r.soundIds) && void 0 !== s ? s : [])
+                var r, a;
+                L = new Set(null !== (a = null == i ? void 0 : null === (r = i.favoriteSoundboardSounds) || void 0 === r ? void 0 : r.soundIds) && void 0 !== a ? a : [])
             } else n === N.UserSettingsTypes.PRELOADED_USER_SETTINGS && P(i)
         },
         SOUNDBOARD_FETCH_DEFAULT_SOUNDS: function() {

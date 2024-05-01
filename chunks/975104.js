@@ -2,13 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return a
         }
     }), n("411104");
     var i = n("735250"),
         r = n("470079");
 
-    function s() {
+    function a() {
         let e = r.createContext(void 0);
 
         function t() {

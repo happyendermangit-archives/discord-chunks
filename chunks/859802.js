@@ -22,8 +22,8 @@ function(e, t, n) {
     });
     var i = n("442837"),
         r = n("430198"),
-        s = n("818083"),
-        a = n("57132"),
+        a = n("818083"),
+        s = n("57132"),
         o = n("781157"),
         l = n("984933"),
         u = n("430824"),
@@ -46,11 +46,11 @@ function(e, t, n) {
     }
 
     function E(e) {
-        if (__OVERLAY__ || e === d.ME || e === d.FAVORITES || (0, a.isInMainTabsExperiment)() && !(0, o.isOnNewPanels)()) return !1;
+        if (__OVERLAY__ || e === d.ME || e === d.FAVORITES || (0, s.isInMainTabsExperiment)() && !(0, o.isOnNewPanels)()) return !1;
         let t = u.default.getGuild(e);
         return !!(null != t && _(e, l.default, r.default)) && t.hasFeature(d.GuildFeatures.GUILD_HOME_DEPRECATION_OVERRIDE)
     }
-    let I = (0, s.createExperiment)({
+    let I = (0, a.createExperiment)({
             kind: "user",
             id: "2022-01_home_feed_toggle",
             label: "Show Guild Feed Sorting Selector",
@@ -65,7 +65,7 @@ function(e, t, n) {
                 }
             }]
         }),
-        T = (0, s.createExperiment)({
+        T = (0, a.createExperiment)({
             kind: "user",
             id: "2022-08_home_badge",
             label: "Show badge on home channel",
@@ -80,7 +80,7 @@ function(e, t, n) {
                 }
             }]
         });
-    (0, s.createExperiment)({
+    (0, a.createExperiment)({
         kind: "user",
         id: "2022-08_home_drawer_autoclose",
         label: "Auto close home drawer",
@@ -130,7 +130,7 @@ function(e, t, n) {
                 delay: 500
             }
         }]
-    }), (0, s.createExperiment)({
+    }), (0, a.createExperiment)({
         kind: "user",
         id: "2022-09_welcome_header",
         label: "Show welcome header for home",
@@ -145,7 +145,7 @@ function(e, t, n) {
             }
         }]
     });
-    let f = (0, s.createExperiment)({
+    let f = (0, a.createExperiment)({
             kind: "user",
             id: "2022-12_home_feedback_ux",
             label: "Show post feedback for home",
@@ -160,7 +160,7 @@ function(e, t, n) {
                 }
             }]
         }),
-        S = (0, s.createExperiment)({
+        S = (0, a.createExperiment)({
             kind: "guild",
             id: "2023-03_home_deprecation",
             label: "Home Deprecation",

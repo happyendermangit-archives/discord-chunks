@@ -22,8 +22,8 @@ function(e, t, n) {
     });
     var i = n("481060"),
         r = n("308083"),
-        s = n("981631"),
-        a = n("689938");
+        a = n("981631"),
+        s = n("689938");
 
     function o(e) {
         return null != e && e.identityEnabled ? {
@@ -34,7 +34,7 @@ function(e, t, n) {
     }
 
     function l(e) {
-        return null != e && e.hasFeature(s.GuildFeatures.CLAN)
+        return null != e && e.hasFeature(a.GuildFeatures.CLAN)
     }
 
     function u(e, t) {
@@ -43,23 +43,23 @@ function(e, t, n) {
     let d = (e, t) => {
         if (0 === e.length) return null;
         if (1 === e.length) return e[1];
-        if (2 === e.length) return a.default.Messages.CLAN_OVERVIEW_LIST_TWO_ITEMS.format({
+        if (2 === e.length) return s.default.Messages.CLAN_OVERVIEW_LIST_TWO_ITEMS.format({
             item1: e[0],
             item2: e[1]
         });
         if (null != t && e.length > t) {
             let n = e.slice(0, t).join(", "),
-                i = a.default.Messages.CLAN_OVERVIEW_LIST_OTHERS_COUNT.format({
+                i = s.default.Messages.CLAN_OVERVIEW_LIST_OTHERS_COUNT.format({
                     n: e.length - t
                 });
-            return a.default.Messages.CLAN_OVERVIEW_LIST_MULTIPLE_ITEMS.format({
+            return s.default.Messages.CLAN_OVERVIEW_LIST_MULTIPLE_ITEMS.format({
                 items: n,
                 last: i
             })
         } {
             let t = e.slice(0, -1).join(", "),
                 n = e[e.length - 1];
-            return a.default.Messages.CLAN_OVERVIEW_LIST_MULTIPLE_ITEMS.format({
+            return s.default.Messages.CLAN_OVERVIEW_LIST_MULTIPLE_ITEMS.format({
                 items: t,
                 last: n
             })

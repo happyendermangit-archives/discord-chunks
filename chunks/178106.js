@@ -2,9 +2,9 @@ function(e, t, n) {
     "use strict";
     n.r(t), n("653041"), n("47120");
     var i, r = n("392711"),
-        s = n.n(r),
-        a = n("31775"),
-        o = n.n(a),
+        a = n.n(r),
+        s = n("31775"),
+        o = n.n(s),
         l = n("442837"),
         u = n("570140"),
         d = n("704907"),
@@ -43,7 +43,7 @@ function(e, t, n) {
         var e, t;
         if (!O()) return;
         let n = null === (e = _.default.frecencyWithoutFetchingLatest.playedSoundFrecency) || void 0 === e ? void 0 : e.playedSounds;
-        N.overwriteHistory((t = null != n ? n : {}, s().mapValues(t, e => ({
+        N.overwriteHistory((t = null != n ? n : {}, a().mapValues(t, e => ({
             ...e,
             recentUses: e.recentUses.map(Number).filter(e => e > 0)
         }))), A)

@@ -6,9 +6,9 @@ function(e, t, n) {
         }
     }), n("47120");
     var i, r = n("735250"),
-        s = n("470079"),
-        a = n("120356"),
-        o = n.n(a),
+        a = n("470079"),
+        s = n("120356"),
+        o = n.n(s),
         l = n("532712"),
         u = n("84735"),
         d = n("981631");
@@ -21,7 +21,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    class c extends(i = s.Component) {
+    class c extends(i = a.Component) {
         renderNonInteractive() {
             let {
                 tag: e,
@@ -29,10 +29,10 @@ function(e, t, n) {
                 innerRef: n,
                 onClick: i,
                 role: r,
-                tabIndex: a,
+                tabIndex: s,
                 ...o
             } = this.props;
-            return s.createElement(e, {
+            return a.createElement(e, {
                 ref: this.setRef,
                 ...o
             })
@@ -44,14 +44,14 @@ function(e, t, n) {
                 className: n,
                 children: i,
                 focusProps: r,
-                innerRef: a,
+                innerRef: s,
                 ...l
             } = this.props;
-            return null == t ? s.createElement(e, {
+            return null == t ? a.createElement(e, {
                 ref: this.setRef,
                 className: o()(n),
                 ...l
-            }, i) : s.createElement(e, {
+            }, i) : a.createElement(e, {
                 onClick: t,
                 ref: this.setRef,
                 onKeyPress: this.handleKeyPress,

@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("470079"),
         r = n("399606"),
-        s = n("430824"),
-        a = n("339085"),
+        a = n("430824"),
+        s = n("339085"),
         o = n("906411"),
         l = n("400106"),
         u = n("981631");
@@ -30,7 +30,7 @@ function(e, t, n) {
             } = e, {
                 joinedEmojiSourceGuildRecord: o,
                 emoji: _
-            } = (0, r.useStateFromStoresObject)([a.default, s.default], () => d(a.default, s.default, t)), c = null != o, E = null != o && o.hasFeature(u.GuildFeatures.DISCOVERABLE), I = (!c || E) && null != t, [T, f] = i.useState(I), S = null != o ? l.default.createFromGuildRecord(o) : null, [h, A] = i.useState(S);
+            } = (0, r.useStateFromStoresObject)([s.default, a.default], () => d(s.default, a.default, t)), c = null != o, E = null != o && o.hasFeature(u.GuildFeatures.DISCOVERABLE), I = (!c || E) && null != t, [T, f] = i.useState(I), S = null != o ? l.default.createFromGuildRecord(o) : null, [h, A] = i.useState(S);
             return i.useEffect(() => {
                 null == n || n();
                 let e = async () => {

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     let i;
     n.r(t), n("47120");
-    var r, s, a, o, l = n("442837"),
+    var r, a, s, o, l = n("442837"),
         u = n("902704"),
         d = n("570140"),
         _ = n("601964"),
@@ -25,8 +25,8 @@ function(e, t, n) {
         let {
             guildId: t,
             role: n
-        } = e, i = h[t], r = E.fromServerRole(n), s = null == i ? void 0 : i[r.id];
-        if (null != s && (0, u.default)(r, s)) return !1;
+        } = e, i = h[t], r = E.fromServerRole(n), a = null == i ? void 0 : i[r.id];
+        if (null != a && (0, u.default)(r, a)) return !1;
         i = {
             ...i,
             [n.id]: E.fromServerRole(n)
@@ -64,12 +64,12 @@ function(e, t, n) {
             return null === (n = h[e]) || void 0 === n ? void 0 : n[t]
         }
     }
-    o = "GuildStore", (a = "displayName") in(s = C) ? Object.defineProperty(s, a, {
+    o = "GuildStore", (s = "displayName") in(a = C) ? Object.defineProperty(a, s, {
         value: o,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : s[a] = o, t.default = new C(d.default, {
+    }) : a[s] = o, t.default = new C(d.default, {
         BACKGROUND_SYNC: function(e) {
             for (let n of e.guilds) {
                 var t;
@@ -151,13 +151,13 @@ function(e, t, n) {
                 guildId: t,
                 joinedAt: n,
                 user: i
-            } = e, r = T.default.getId(), s = A[t];
-            if (r !== i.id || null == s) return !1;
-            let a = "string" == typeof n ? new Date(n) : n;
-            if (a === s.joinedAt || null == a) return !1;
+            } = e, r = T.default.getId(), a = A[t];
+            if (r !== i.id || null == a) return !1;
+            let s = "string" == typeof n ? new Date(n) : n;
+            if (s === a.joinedAt || null == s) return !1;
             A = {
                 ...A,
-                [t]: s.updateJoinedAt(a)
+                [t]: a.updateJoinedAt(s)
             }
         },
         GUILD_SETTINGS_SUBMIT_SUCCESS: function() {

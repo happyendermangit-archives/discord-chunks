@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         Histogram: function() {
-            return s
+            return a
         }
     }), n("653041"), n("47120");
     var i = n("508385");
@@ -15,7 +15,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    class s {
+    class a {
         addSample(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
             this.total += e * t, this.totalWeight += t, this.samples++, i.TDigest.prototype.push.call(this.digest, e, t), this.digest.check_continuous()
@@ -23,13 +23,13 @@ function(e, t, n) {
         getReport() {
             var e, t, n, i;
             let r = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [25, 50, 75, 90, 95],
-                s = {};
-            for (let t of r) s[t] = null !== (e = this.digest.percentile(t / 100)) && void 0 !== e ? e : 0;
+                a = {};
+            for (let t of r) a[t] = null !== (e = this.digest.percentile(t / 100)) && void 0 !== e ? e : 0;
             return {
                 min: null !== (t = this.digest.percentile(0)) && void 0 !== t ? t : 0,
                 max: null !== (n = this.digest.percentile(1)) && void 0 !== n ? n : 0,
                 count: null !== (i = this.digest.size()) && void 0 !== i ? i : 0,
-                percentiles: s,
+                percentiles: a,
                 mean: this.totalWeight > 0 ? this.total / this.totalWeight : 0,
                 samples: this.samples
             }

@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("411104"), n("47120");
     var i = n("836560"),
         r = n("740197"),
-        s = n("106617"),
-        a = n("376398"),
+        a = n("106617"),
+        s = n("376398"),
         o = n("65154"),
         l = n("231338");
 
@@ -20,10 +20,10 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    let d = new s.default;
+    let d = new a.default;
     class _ extends i.EventEmitter {
         destroy() {
-            null != this.stream && (d.release(this.stream), this.stream = null), null != this.streamId && (0, a.unregisterVideoStream)(this.streamId), this.destroyed = !0
+            null != this.stream && (d.release(this.stream), this.stream = null), null != this.streamId && (0, s.unregisterVideoStream)(this.streamId), this.destroyed = !0
         }
         getStreamId() {
             return this.streamId
@@ -61,7 +61,7 @@ function(e, t, n) {
             }
         }
         setStream(e) {
-            return null != this.streamId && ((0, a.unregisterVideoStream)(this.streamId), this.streamId = null), this.stream = e, e.onaddtrack = e => this.emit("add-video-track", e), e.getVideoTracks().length > 0 && (this.streamId = (0, a.registerVideoStream)(e)), this.emit("stream", e), this.emit("video", this.getStreamId()), e
+            return null != this.streamId && ((0, s.unregisterVideoStream)(this.streamId), this.streamId = null), this.stream = e, e.onaddtrack = e => this.emit("add-video-track", e), e.getVideoTracks().length > 0 && (this.streamId = (0, s.registerVideoStream)(e)), this.emit("stream", e), this.emit("video", this.getStreamId()), e
         }
         constructor(...e) {
             super(...e), u(this, "stream", new MediaStream), u(this, "sourceId", o.DISABLED_DEVICE_ID), u(this, "streamId", null), u(this, "destroyed", !1)

@@ -8,11 +8,11 @@ function(e, t, n) {
             return l
         }
     });
-    var i, r, s = n("367907"),
-        a = n("981631");
+    var i, r, a = n("367907"),
+        s = n("981631");
 
     function o() {
-        s.default.trackWithMetadata(a.AnalyticEvents.NOTIFICATION_CTA_CLICKED, {
+        a.default.trackWithMetadata(s.AnalyticEvents.NOTIFICATION_CTA_CLICKED, {
             notification_type: "Reminder Notification",
             action: "Guild Invite",
             dismissed: !1
@@ -20,7 +20,7 @@ function(e, t, n) {
     }
 
     function l() {
-        s.default.trackWithMetadata(a.AnalyticEvents.NOTIFICATION_CTA_CLICKED, {
+        a.default.trackWithMetadata(s.AnalyticEvents.NOTIFICATION_CTA_CLICKED, {
             notification_type: "Reminder Notification",
             action: "Guild Invite",
             dismissed: !0

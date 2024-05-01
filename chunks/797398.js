@@ -2,21 +2,21 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return a
         }
     });
     var i = n("470079"),
         r = n("566620");
 
-    function s(e) {
+    function a(e) {
         let {
             channel: t,
             userActivity: n,
-            inActivity: s,
-            embeddedActivitiesManager: a
+            inActivity: a,
+            embeddedActivitiesManager: s
         } = e;
         i.useEffect(() => {
-            !s && (0, r.launchEmbeddedActivity)(t.id)
-        }, [null == n ? void 0 : n.applicationId, t.id, s, a])
+            !a && (0, r.launchEmbeddedActivity)(t.id)
+        }, [null == n ? void 0 : n.applicationId, t.id, a, s])
     }
 }

@@ -5,17 +5,17 @@ function(e, t, n) {
             return l
         },
         HeaderWave: function() {
-            return a
+            return s
         }
     });
     var i = n("735250");
     n("470079");
     var r = n("153832"),
-        s = n("921132");
+        a = n("921132");
 
-    function a() {
+    function s() {
         return (0, i.jsx)("svg", {
-            className: s.headerWave,
+            className: a.headerWave,
             version: "1.1",
             preserveAspectRatio: "none",
             xmlns: "http://www.w3.org/2000/svg",
@@ -36,7 +36,7 @@ function(e, t, n) {
 
     function l() {
         return (0, i.jsxs)("svg", {
-            className: s.bodyWave,
+            className: a.bodyWave,
             version: "1.1",
             preserveAspectRatio: "none",
             xmlns: "http://www.w3.org/2000/svg",
@@ -54,13 +54,13 @@ function(e, t, n) {
                 y2: "1689.3361",
                 children: [(0, i.jsx)("stop", {
                     offset: "0",
-                    className: s.bodyWaveGradientStop1
+                    className: a.bodyWaveGradientStop1
                 }), (0, i.jsx)("stop", {
                     offset: "0.5",
-                    className: s.bodyWaveGradientStop2
+                    className: a.bodyWaveGradientStop2
                 }), (0, i.jsx)("stop", {
                     offset: "1",
-                    className: s.bodyWaveGradientStop3
+                    className: a.bodyWaveGradientStop3
                 })]
             }), (0, i.jsx)("path", {
                 style: {

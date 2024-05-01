@@ -4,7 +4,7 @@ function(e, t, n) {
     var i = n("956067"),
         r = n("586444");
 
-    function s(e, t, n) {
+    function a(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -12,7 +12,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    let a = () => {};
+    let s = () => {};
     n.g.__timingFunction = () => performance.now();
     let o = null == n.g.__getTotalRequireTime ? () => 0 : () => n.g.__getTotalRequireTime();
 
@@ -35,19 +35,19 @@ function(e, t, n) {
             return this.end_ > 0
         }
         recordStart() {
-            0 === this.start_ && this.recordStart_(), i.default.mark(this.emoji, "Start ".concat(this.name)), a()
+            0 === this.start_ && this.recordStart_(), i.default.mark(this.emoji, "Start ".concat(this.name)), s()
         }
         recordStart_() {
             this.start_ = Date.now(), this.startNumImports = r.size(), this.startImportTime = o()
         }
         recordEnd() {
-            0 === this.end_ && 0 !== this.start_ ? (this.recordEnd_(), i.default.mark(this.emoji, "Finish ".concat(this.name), this.end_ - this.start_)) : i.default.mark(this.emoji, "Finish ".concat(this.name)), a()
+            0 === this.end_ && 0 !== this.start_ ? (this.recordEnd_(), i.default.mark(this.emoji, "Finish ".concat(this.name), this.end_ - this.start_)) : i.default.mark(this.emoji, "Finish ".concat(this.name)), s()
         }
         recordEnd_() {
             this.end_ = Date.now(), this.endNumImports = r.size(), this.endImportTime = o()
         }
         set(e, t) {
-            0 === this.start_ && (this.start_ = e, this.end_ = e + t, this.endNumImports = r.size(), this.endImportTime = o()), i.default.mark(this.emoji, this.name, t), a()
+            0 === this.start_ && (this.start_ = e, this.end_ = e + t, this.endNumImports = r.size(), this.endImportTime = o()), i.default.mark(this.emoji, this.name, t), s()
         }
         serializeStart(e) {
             return l(e, this.start_)
@@ -59,13 +59,13 @@ function(e, t, n) {
             if (this.start_ > 0) return i.default.time(this.emoji, this.name, e);
             this.recordStart_();
             let t = i.default.time(this.emoji, this.name, e);
-            return this.recordEnd_(), a(), t
+            return this.recordEnd_(), s(), t
         }
         async measureAsync(e) {
             if (this.start_ > 0) return i.default.timeAsync(this.emoji, this.name, e);
             this.recordStart_();
             let t = await i.default.timeAsync(this.emoji, this.name, e);
-            return this.recordEnd_(), a(), t
+            return this.recordEnd_(), s(), t
         }
         async measureAsyncWithoutNesting(e) {
             if (this.start_ > 0) return i.default.timeAsync(this.emoji, this.name, e);
@@ -73,10 +73,10 @@ function(e, t, n) {
             let t = Date.now();
             i.default.mark(this.emoji, "Start ".concat(this.name));
             let n = await e();
-            return i.default.mark(this.emoji, "Finish ".concat(this.name), Date.now() - t), this.recordEnd_(), a(), n
+            return i.default.mark(this.emoji, "Finish ".concat(this.name), Date.now() - t), this.recordEnd_(), s(), n
         }
         constructor(e, t) {
-            s(this, "emoji", void 0), s(this, "name", void 0), s(this, "start_", void 0), s(this, "startNumImports", void 0), s(this, "startImportTime", void 0), s(this, "end_", void 0), s(this, "endNumImports", void 0), s(this, "endImportTime", void 0), this.emoji = e, this.name = t, this.start_ = 0, this.startNumImports = 0, this.startImportTime = 0, this.end_ = 0, this.endNumImports = 0, this.endImportTime = 0
+            a(this, "emoji", void 0), a(this, "name", void 0), a(this, "start_", void 0), a(this, "startNumImports", void 0), a(this, "startImportTime", void 0), a(this, "end_", void 0), a(this, "endNumImports", void 0), a(this, "endImportTime", void 0), this.emoji = e, this.name = t, this.start_ = 0, this.startNumImports = 0, this.startImportTime = 0, this.end_ = 0, this.endNumImports = 0, this.endImportTime = 0
         }
     }
     class d {
@@ -84,7 +84,7 @@ function(e, t, n) {
             return this.time_
         }
         record() {
-            0 === this.time_ ? (this.time_ = Date.now(), this.numImports = r.size(), this.importTime = o(), i.default.mark(this.emoji, this.name)) : !this.onlyOnce && i.default.mark(this.emoji, this.name), a()
+            0 === this.time_ ? (this.time_ = Date.now(), this.numImports = r.size(), this.importTime = o(), i.default.mark(this.emoji, this.name)) : !this.onlyOnce && i.default.mark(this.emoji, this.name), s()
         }
         hasData() {
             return this.time_ > 0
@@ -93,7 +93,7 @@ function(e, t, n) {
             return l(e, this.time_)
         }
         constructor(e, t, n = !1) {
-            s(this, "emoji", void 0), s(this, "name", void 0), s(this, "onlyOnce", void 0), s(this, "time_", void 0), s(this, "numImports", void 0), s(this, "importTime", void 0), this.emoji = e, this.name = t, this.onlyOnce = n, this.time_ = 0, this.numImports = null, this.importTime = 0
+            a(this, "emoji", void 0), a(this, "name", void 0), a(this, "onlyOnce", void 0), a(this, "time_", void 0), a(this, "numImports", void 0), a(this, "importTime", void 0), this.emoji = e, this.name = t, this.onlyOnce = n, this.time_ = 0, this.numImports = null, this.importTime = 0
         }
     }
     class _ {
@@ -104,12 +104,12 @@ function(e, t, n) {
             0 === this.time_ && (this.time_ = o())
         }
         constructor() {
-            s(this, "time_", 0)
+            a(this, "time_", 0)
         }
     }
     class c {
         constructor() {
-            s(this, "loadIndex", new u("❗", "Load index.tsx")), s(this, "loadFastConnectNativeModule", new u("\uD83D\uDCBE", "Load fast_connect native module")), s(this, "beginFastConnect", new u("\uD83C\uDF10", "Fast Connect IDENTIFY")), s(this, "loadImports", new u("\uD83C\uDFC3", "Load Imports")), s(this, "init", new u("\uD83C\uDFC3", "Initial Initialization")), s(this, "loadStorage", new u("\uD83D\uDCBE", "Load Storage")), s(this, "parseStorage", new u("\uD83D\uDCBE", "Parse Storage")), s(this, "loadMiniCache", new u("\uD83D\uDCBE", "Load Mini Cache")), s(this, "fetchGuildCache", new u("\uD83D\uDCBE", "Fetch Guild Cache")), s(this, "fetchGuildChannelsCache", new u("\uD83D\uDCBE", "Fetch Initial Guild Channels Cache")), s(this, "loadCachedMessages", new u("\uD83D\uDCBE", "Load Cached Messages")), s(this, "renderApp", new d("\uD83C\uDFA8", "First React Render")), s(this, "renderAppEffect", new d("\uD83C\uDFA8", "First React Render useEffect")), s(this, "renderMessages", new d("\uD83C\uDFA8", "React Render Messages", !0)), s(this, "renderMessagesWithCache", new d("\uD83C\uDFA8", "React Render Cached Messages", !0)), s(this, "firstRowGenerator", new u("\uD83C\uDFA8", "RowGenerator.generate()")), s(this, "renderLatestMessages", new d("\uD83C\uDFA8", "React Render Latest Messages")), s(this, "initialGuild", new u("\uD83C\uDF10", "Initial Guild")), s(this, "loadLazyCache", new u("\uD83D\uDCBE", "Load Lazy Cache")), s(this, "fetchLazyCache", new u("\uD83D\uDCBE", "Fetch Lazy Cache")), s(this, "parseLazyCache", new u("\uD83D\uDCBE", "Parse Lazy Cache")), s(this, "fetchStaleChannels", new u("\uD83D\uDCBE", "Fetch Stale Channels")), s(this, "deserializeCache", new u("\uD83D\uDCBE", "Deserialize Cache")), s(this, "dispatchLazyCache", new u("\uD83D\uDCBE", "Dispatch Lazy Cache")), s(this, "parseReady", new u("\uD83C\uDF10", "Parse READY")), s(this, "ready", new u("\uD83C\uDF10", "READY")), s(this, "hydrateReady", new u("\uD83C\uDF10", "Hydrate READY")), s(this, "dispatchReady", new u("\uD83C\uDF10", "Dispatch READY")), s(this, "parseReadySupplemental", new u("\uD83C\uDF10", "Parse READY Supplemental")), s(this, "readySupplemental", new u("\uD83C\uDF10", "READY Supplemental")), s(this, "hydrateReadySupplemental", new u("\uD83C\uDF10", "Hydrate READY Supplemental")), s(this, "dispatchReadySupplemental", new u("\uD83C\uDF10", "Dispatch READY Supplemental")), s(this, "fetchMessages", new u("\uD83C\uDF10", "Fetch messages")), s(this, "dispatchMessages", new u("\uD83C\uDF10", "Dispatch messages")), s(this, "imports", {
+            a(this, "loadIndex", new u("❗", "Load index.tsx")), a(this, "loadFastConnectNativeModule", new u("\uD83D\uDCBE", "Load fast_connect native module")), a(this, "beginFastConnect", new u("\uD83C\uDF10", "Fast Connect IDENTIFY")), a(this, "loadImports", new u("\uD83C\uDFC3", "Load Imports")), a(this, "init", new u("\uD83C\uDFC3", "Initial Initialization")), a(this, "loadStorage", new u("\uD83D\uDCBE", "Load Storage")), a(this, "parseStorage", new u("\uD83D\uDCBE", "Parse Storage")), a(this, "loadMiniCache", new u("\uD83D\uDCBE", "Load Mini Cache")), a(this, "fetchGuildCache", new u("\uD83D\uDCBE", "Fetch Guild Cache")), a(this, "fetchGuildChannelsCache", new u("\uD83D\uDCBE", "Fetch Initial Guild Channels Cache")), a(this, "loadCachedMessages", new u("\uD83D\uDCBE", "Load Cached Messages")), a(this, "renderApp", new d("\uD83C\uDFA8", "First React Render")), a(this, "renderAppEffect", new d("\uD83C\uDFA8", "First React Render useEffect")), a(this, "renderMessages", new d("\uD83C\uDFA8", "React Render Messages", !0)), a(this, "renderMessagesWithCache", new d("\uD83C\uDFA8", "React Render Cached Messages", !0)), a(this, "firstRowGenerator", new u("\uD83C\uDFA8", "RowGenerator.generate()")), a(this, "renderLatestMessages", new d("\uD83C\uDFA8", "React Render Latest Messages")), a(this, "initialGuild", new u("\uD83C\uDF10", "Initial Guild")), a(this, "loadLazyCache", new u("\uD83D\uDCBE", "Load Lazy Cache")), a(this, "fetchLazyCache", new u("\uD83D\uDCBE", "Fetch Lazy Cache")), a(this, "parseLazyCache", new u("\uD83D\uDCBE", "Parse Lazy Cache")), a(this, "fetchStaleChannels", new u("\uD83D\uDCBE", "Fetch Stale Channels")), a(this, "deserializeCache", new u("\uD83D\uDCBE", "Deserialize Cache")), a(this, "dispatchLazyCache", new u("\uD83D\uDCBE", "Dispatch Lazy Cache")), a(this, "parseReady", new u("\uD83C\uDF10", "Parse READY")), a(this, "ready", new u("\uD83C\uDF10", "READY")), a(this, "hydrateReady", new u("\uD83C\uDF10", "Hydrate READY")), a(this, "dispatchReady", new u("\uD83C\uDF10", "Dispatch READY")), a(this, "parseReadySupplemental", new u("\uD83C\uDF10", "Parse READY Supplemental")), a(this, "readySupplemental", new u("\uD83C\uDF10", "READY Supplemental")), a(this, "hydrateReadySupplemental", new u("\uD83C\uDF10", "Hydrate READY Supplemental")), a(this, "dispatchReadySupplemental", new u("\uD83C\uDF10", "Dispatch READY Supplemental")), a(this, "fetchMessages", new u("\uD83C\uDF10", "Fetch messages")), a(this, "dispatchMessages", new u("\uD83C\uDF10", "Dispatch messages")), a(this, "imports", {
                 polyfillsEnd: new _,
                 sentryEnd: new _,
                 appStateChangeStart: new _,
@@ -122,15 +122,15 @@ function(e, t, n) {
     }
     t.default = new class e extends c {
         setTTICallback(e) {
-            a = () => {
-                !0 === e() && (a = () => !1)
+            s = () => {
+                !0 === e() && (s = () => !1)
             }
         }
         setCacheInfo(e) {
             this.cacheInfo = e
         }
         setInterstitial(e) {
-            this.interstitial = e, a()
+            this.interstitial = e, s()
         }
         addLocalMessages(e, t) {
             for (this.cachedChannelCounts.set(e, t); this.cachedChannelCounts.size > 100;) {
@@ -149,7 +149,7 @@ function(e, t, n) {
         }
         recordMessageRender(e, t, i, r) {
             let {
-                default: s
+                default: a
             } = n("709054");
             if (!this.renderLatestMessages.hasData()) {
                 if (this.renderMessages.record(), t.length > 0 && this.renderMessagesWithCache.record(), i) {
@@ -170,15 +170,15 @@ function(e, t, n) {
                         return
                     }
                     if (e === this.cachedChannelId) {
-                        var a;
-                        let n = this.cachedMessageIds.sort(s.compare).reverse()[0],
-                            i = t.sort(s.compare).reverse()[0];
-                        this.messageCacheAgeSeconds = Math.floor((s.extractTimestamp(i) - s.extractTimestamp(n)) / 1e3);
+                        var s;
+                        let n = this.cachedMessageIds.sort(a.compare).reverse()[0],
+                            i = t.sort(a.compare).reverse()[0];
+                        this.messageCacheAgeSeconds = Math.floor((a.extractTimestamp(i) - a.extractTimestamp(n)) / 1e3);
                         let o = t.filter(e => {
                             var t;
                             return null === (t = this.cachedMessageIds) || void 0 === t ? void 0 : t.includes(e)
                         }).length;
-                        this.messageCacheCount = null !== (a = this.cachedChannelCounts.get(e)) && void 0 !== a ? a : null, this.messageCacheHavingCount = o, this.messageCacheMissingCount = t.length - o, this.messageRenderFullCount = t.length, this.messageRenderCachedCount = this.cachedMessageIds.length, this.messageRenderHasMoreAfter = r
+                        this.messageCacheCount = null !== (s = this.cachedChannelCounts.get(e)) && void 0 !== s ? s : null, this.messageCacheHavingCount = o, this.messageCacheMissingCount = t.length - o, this.messageRenderFullCount = t.length, this.messageRenderCachedCount = this.cachedMessageIds.length, this.messageRenderHasMoreAfter = r
                     }
                 } else(null == this.cachedChannelId || e === this.cachedChannelId) && (this.cachedChannelId = e, this.cachedMessageIds = t, t.length > 0 && (this.messageCacheMissingReason = null))
             }
@@ -238,7 +238,7 @@ function(e, t, n) {
             }
         }
         serializeTTITracker(e) {
-            var t, r, s, a, o, l;
+            var t, r, a, s, o, l;
             let u = this.getStartTime(e),
                 d = n("392711")(i.default.logGroups["0"].logs).filter(e => e.log.startsWith("Require ")).map(e => {
                     var t;
@@ -358,8 +358,8 @@ function(e, t, n) {
                 duration_major_js_imports: this.loadImports.end - this.loadIndex.start + d,
                 cache_num_guilds: null === (t = this.cacheInfo) || void 0 === t ? void 0 : t.guilds,
                 cache_num_private_channels: null === (r = this.cacheInfo) || void 0 === r ? void 0 : r.privateChannels,
-                cache_num_basic_channels: null === (s = this.cacheInfo) || void 0 === s ? void 0 : s.basicChannels,
-                cache_num_basic_channels_stale: null === (a = this.cacheInfo) || void 0 === a ? void 0 : a.basicChannelsStale,
+                cache_num_basic_channels: null === (a = this.cacheInfo) || void 0 === a ? void 0 : a.basicChannels,
+                cache_num_basic_channels_stale: null === (s = this.cacheInfo) || void 0 === s ? void 0 : s.basicChannelsStale,
                 cache_num_full_channels: null === (o = this.cacheInfo) || void 0 === o ? void 0 : o.fullChannels,
                 cache_num_full_channel_guilds: null === (l = this.cacheInfo) || void 0 === l ? void 0 : l.fullChannelGuilds,
                 num_imports_at_load_index_end: this.loadIndex.endNumImports,
@@ -403,7 +403,7 @@ function(e, t, n) {
             }
         }
         constructor(...e) {
-            super(...e), s(this, "readyProperties", {}), s(this, "didBackgroundApp", !1), s(this, "wasEverActive", !1), s(this, "wasAuthenticated", !1), s(this, "interstitial", null), s(this, "cachedChannelCounts", new Map), s(this, "cachedChannelId", null), s(this, "cachedMessageIds", null), s(this, "messageCacheMissingReason", "never-loaded"), s(this, "messageCacheAgeSeconds", null), s(this, "messageCacheCount", null), s(this, "messageCacheHavingCount", null), s(this, "messageCacheMissingCount", null), s(this, "messageRenderFullCount", null), s(this, "messageRenderCachedCount", null), s(this, "messageRenderHasMoreAfter", null), s(this, "firstAppActiveTime", null), s(this, "cacheInfo", null), s(this, "extraProperties", {})
+            super(...e), a(this, "readyProperties", {}), a(this, "didBackgroundApp", !1), a(this, "wasEverActive", !1), a(this, "wasAuthenticated", !1), a(this, "interstitial", null), a(this, "cachedChannelCounts", new Map), a(this, "cachedChannelId", null), a(this, "cachedMessageIds", null), a(this, "messageCacheMissingReason", "never-loaded"), a(this, "messageCacheAgeSeconds", null), a(this, "messageCacheCount", null), a(this, "messageCacheHavingCount", null), a(this, "messageCacheMissingCount", null), a(this, "messageRenderFullCount", null), a(this, "messageRenderCachedCount", null), a(this, "messageRenderHasMoreAfter", null), a(this, "firstAppActiveTime", null), a(this, "cacheInfo", null), a(this, "extraProperties", {})
         }
     }
 }

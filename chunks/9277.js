@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("143927"),
         l = n("442837"),
         u = n("114101"),
@@ -20,7 +20,7 @@ function(e, t, n) {
     t.default = r.memo(r.forwardRef(function(e, t) {
         let {
             disabled: n,
-            type: s
+            type: a
         } = e, [A, m] = r.useState(!1), N = (0, l.useStateFromStores)([c.default], () => {
             var e, t;
             return A && Object.values(null !== (t = null === (e = c.default.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2
@@ -34,21 +34,21 @@ function(e, t, n) {
             handler: g
         });
         let L = r.useCallback(() => {
-                (0, _.toggleExpressionPicker)(f.ExpressionPickerViewType.GIF, s)
-            }, [s]),
+                (0, _.toggleExpressionPicker)(f.ExpressionPickerViewType.GIF, a)
+            }, [a]),
             {
                 Component: v,
                 events: D,
                 play: M
             } = (0, u.useGifLottie)();
         if (n) return null;
-        let y = p === f.ExpressionPickerViewType.GIF && O === s;
+        let y = p === f.ExpressionPickerViewType.GIF && O === a;
         return (0, i.jsx)(d.Tooltip, {
             text: N ? S.default.Messages.GIF_TOOLTIP_FAVORITED_PICKER_BUTTON : null,
             forceOpen: !0,
             children: e => (0, i.jsx)("div", {
                 ref: t,
-                className: a()(f.CHAT_INPUT_BUTTON_CLASSNAME, h.buttonContainer),
+                className: s()(f.CHAT_INPUT_BUTTON_CLASSNAME, h.buttonContainer),
                 ...e,
                 children: (0, i.jsx)(E.default, {
                     innerClassName: h.button,

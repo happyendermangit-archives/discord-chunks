@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("442837"),
         l = n("481060"),
         u = n("570140"),
@@ -38,9 +38,9 @@ function(e, t, n) {
     function w(e) {
         var t, n;
         let {
-            channel: s,
+            channel: a,
             isLoading: v
-        } = e, [w, B] = r.useState(!1), k = (0, o.useStateFromStores)([O.default], () => O.default.getSelfEmbeddedActivityForChannel(s.id)), V = (0, o.useStateFromStores)([O.default], () => O.default.getActivityPanelMode()), x = (0, E.useGetOrFetchApplication)(null == k ? void 0 : k.applicationId), F = null == k ? void 0 : k.launchId, H = (0, o.useStateFromStores)([m.default], () => m.default.getChannelId() === s.id), {
+        } = e, [w, B] = r.useState(!1), k = (0, o.useStateFromStores)([O.default], () => O.default.getSelfEmbeddedActivityForChannel(a.id)), V = (0, o.useStateFromStores)([O.default], () => O.default.getActivityPanelMode()), x = (0, E.useGetOrFetchApplication)(null == k ? void 0 : k.applicationId), F = null == k ? void 0 : k.launchId, H = (0, o.useStateFromStores)([m.default], () => m.default.getChannelId() === a.id), {
             dockedRect: Y,
             isHidden: j
         } = (0, o.useStateFromStoresObject)([A.default], () => {
@@ -54,17 +54,17 @@ function(e, t, n) {
             selectedParticipant: z,
             participantsOpen: Z
         } = (0, o.useStateFromStoresObject)([I.default], () => ({
-            activityParticipant: null != k ? I.default.getParticipant(s.id, k.applicationId) : null,
-            selectedParticipant: I.default.getSelectedParticipant(s.id),
-            participantsOpen: I.default.getParticipantsOpen(s.id)
-        })), X = H || null != W, Q = (0, C.default)(s.id), q = Q && (null == z ? void 0 : z.type) !== P.ParticipantTypes.ACTIVITY, J = !Q && V === M.ActivityPanelModes.PIP, $ = (!X || X && (q || J) && null == Y) && !j, ee = $ && null != A.default.pipVideoWindow && null != A.default.pipActivityWindow;
+            activityParticipant: null != k ? I.default.getParticipant(a.id, k.applicationId) : null,
+            selectedParticipant: I.default.getSelectedParticipant(a.id),
+            participantsOpen: I.default.getParticipantsOpen(a.id)
+        })), X = H || null != W, Q = (0, C.default)(a.id), q = Q && (null == z ? void 0 : z.type) !== P.ParticipantTypes.ACTIVITY, J = !Q && V === M.ActivityPanelModes.PIP, $ = (!X || X && (q || J) && null == Y) && !j, ee = $ && null != A.default.pipVideoWindow && null != A.default.pipActivityWindow;
 
         function et() {
             var e;
-            if (null != k && d.default.selectParticipant(s.id, k.applicationId), null != W) return;
+            if (null != k && d.default.selectParticipant(a.id, k.applicationId), null != W) return;
             (0, c.popAllLayers)();
-            let t = null !== (e = s.getGuildId()) && void 0 !== e ? e : y.ME;
-            _.default.channelListScrollTo(t, s.id), (0, f.transitionToGuild)(t, s.id)
+            let t = null !== (e = a.getGuildId()) && void 0 !== e ? e : y.ME;
+            _.default.channelListScrollTo(t, a.id), (0, f.transitionToGuild)(t, a.id)
         }
 
         function en() {
@@ -80,13 +80,13 @@ function(e, t, n) {
                 })
             }
         }, [null == k ? void 0 : k.applicationId, $]);
-        if (null == k || null == F || null == K && (0, C.default)(s.id) || null == x) return null;
+        if (null == k || null == F || null == K && (0, C.default)(a.id) || null == x) return null;
         let ei = Array.from(k.userIds).map(e => N.default.getUser(e)).filter(e => null != e),
             er = {
                 instance_id: null !== (n = null !== (t = k.compositeInstanceId) && void 0 !== t ? t : k.launchId) && void 0 !== n ? n : "",
-                channel_id: s.id
+                channel_id: a.id
             };
-        return null != s.guild_id && "" !== s.guild_id && (er.guild_id = s.guild_id), (0, i.jsx)(h.default, {
+        return null != a.guild_id && "" !== a.guild_id && (er.guild_id = a.guild_id), (0, i.jsx)(h.default, {
             timeout: 2e3,
             children: e => {
                 var t, n, r, o, u, d, _, c;
@@ -96,7 +96,7 @@ function(e, t, n) {
                     onForceIdle: T
                 } = e;
                 return (0, i.jsxs)(S.default, {
-                    className: a()(U.root, {
+                    className: s()(U.root, {
                         [U.pipMode]: $,
                         [G.elevationHigh]: $,
                         [b.idle]: E && !(null === (t = k.config) || void 0 === t ? void 0 : t.useInteractivePIP),
@@ -109,7 +109,7 @@ function(e, t, n) {
                     children: [(r = I, o = T, u = E, d = J, _ = ei, $ && null != k && ((null == K ? void 0 : K.type) === P.ParticipantTypes.ACTIVITY || d) ? (null === (c = k.config) || void 0 === c ? void 0 : c.useInteractivePIP) ? (0, i.jsx)(L.InteractivePIPHeader, {
                         onJumpToChannel: et,
                         applicationId: k.applicationId,
-                        channel: s,
+                        channel: a,
                         showControls: !u,
                         onMouseDown: r,
                         onMouseMove: r,
@@ -126,7 +126,7 @@ function(e, t, n) {
                             onJumpToChannel: () => {
                                 et(), (0, p.updateActivityPanelMode)(M.ActivityPanelModes.PANEL)
                             },
-                            channel: s,
+                            channel: a,
                             applicationId: k.applicationId,
                             users: _
                         })
@@ -143,12 +143,12 @@ function(e, t, n) {
                             onMouseDown: r,
                             onMouseLeave: o,
                             onJumpToChannel: et,
-                            channel: s,
+                            channel: a,
                             applicationId: k.applicationId,
                             selectedParticipant: K
                         })]
                     }) : null), v ? (0, i.jsx)(l.Spinner, {
-                        className: a()(U.iframe, {
+                        className: s()(U.iframe, {
                             [U.pipModeShort]: $ && !w,
                             [U.pipModeTall]: $ && w
                         })
@@ -157,7 +157,7 @@ function(e, t, n) {
                         referrerPolicy: D.APPLICATIONS_WITH_NO_REFFERER.has(k.applicationId) ? "no-referrer" : "origin",
                         url: k.url,
                         queryParams: er,
-                        className: a()(U.iframe, {
+                        className: s()(U.iframe, {
                             [U.pipModeShort]: $ && !w,
                             [U.pipModeTall]: $ && w,
                             [U.pipNonInteractive]: $ && !(null === (n = k.config) || void 0 === n ? void 0 : n.useInteractivePIP)
@@ -166,7 +166,7 @@ function(e, t, n) {
                     }), !$ && (0, i.jsx)(L.TileOverlay, {
                         participantsOpen: Z,
                         showToggleParticipants: !1,
-                        channelId: s.id
+                        channelId: a.id
                     })]
                 })
             }

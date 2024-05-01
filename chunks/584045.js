@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        s = n.n(r),
-        a = n("481060"),
+        a = n.n(r),
+        s = n("481060"),
         o = n("129861"),
         l = n("963202"),
         u = n("979264"),
@@ -33,7 +33,7 @@ function(e, t, n) {
             lastSection: N
         } = e, p = (0, l.useIsInUserClanExperiment)();
         return (0, i.jsxs)(c.default, {
-            className: s()(T.container, A),
+            className: a()(T.container, A),
             lastSection: N,
             children: [(0, i.jsxs)("div", {
                 className: n ? T.copiableNameTag : void 0,
@@ -49,7 +49,7 @@ function(e, t, n) {
                     disableCopy: !n,
                     children: (0, i.jsxs)("div", {
                         className: T.userText,
-                        children: [null != r ? (0, i.jsx)(a.Heading, {
+                        children: [null != r ? (0, i.jsx)(s.Heading, {
                             variant: "heading-lg/semibold",
                             className: T.nickname,
                             children: r
@@ -64,9 +64,9 @@ function(e, t, n) {
                             botClass: null == r ? T.headerBotTag : T.headerBotTagWithNickname
                         }), h]
                     })
-                }), null != f && "" !== f && (0, i.jsx)(a.Tooltip, {
+                }), null != f && "" !== f && (0, i.jsx)(s.Tooltip, {
                     text: I.default.Messages.USER_PROFILE_PRONOUNS,
-                    children: e => (0, i.jsx)(a.Text, {
+                    children: e => (0, i.jsx)(s.Text, {
                         ...e,
                         variant: "text-sm/normal",
                         className: T.pronouns,

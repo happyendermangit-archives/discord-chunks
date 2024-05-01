@@ -4,14 +4,14 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("442837"),
-        s = n("928518"),
-        a = n("451478"),
+        a = n("928518"),
+        s = n("451478"),
         o = n("710290"),
         l = n("371282"),
         u = n("228488"),
         d = n("871499"),
         _ = n("689938");
-    t.default = r.default.connectStores([a.default, s.default], e => {
+    t.default = r.default.connectStores([s.default, a.default], e => {
         let {
             node: t,
             guestWindow: n
@@ -23,10 +23,10 @@ function(e, t, n) {
         let {
             enabled: t,
             ...n
-        } = e, r = t ? _.default.Messages.EXIT_FULL_SCREEN : _.default.Messages.FULL_SCREEN, s = t ? l.default : o.default;
+        } = e, r = t ? _.default.Messages.EXIT_FULL_SCREEN : _.default.Messages.FULL_SCREEN, a = t ? l.default : o.default;
         return (0, i.jsx)(d.default, {
             label: r,
-            iconComponent: s,
+            iconComponent: a,
             ...n
         })
     })

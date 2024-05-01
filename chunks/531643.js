@@ -14,8 +14,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        s = n.n(r),
-        a = n("952265"),
+        a = n.n(r),
+        s = n("952265"),
         o = n("466377"),
         l = n("355314"),
         u = n("153124"),
@@ -28,21 +28,21 @@ function(e, t, n) {
             title: t,
             help: n,
             showPremiumUpsell: r,
-            transitionState: a,
+            transitionState: s,
             icons: E,
             fileSize: I,
             onClose: T
         } = e, f = (0, u.useUID)(), S = null != E ? E : _.DEFAULT_FILE_UPLOAD_ICONS;
         return r ? (0, i.jsx)(l.default, {
-            transitionState: a,
+            transitionState: s,
             onClose: T,
             fileSize: I
         }) : (0, i.jsx)(o.ModalRoot, {
             size: o.ModalSize.DYNAMIC,
             "aria-labelledby": f,
-            transitionState: a,
+            transitionState: s,
             children: (0, i.jsx)("div", {
-                className: s()(c.uploadDropModal, c.error),
+                className: a()(c.uploadDropModal, c.error),
                 children: (0, i.jsxs)("div", {
                     className: c.inner,
                     children: [(0, i.jsx)(d.default, {
@@ -62,7 +62,7 @@ function(e, t, n) {
     let I = "UPLOAD_ERROR_MODAL_KEY";
 
     function T(e) {
-        (0, a.openModal)(t => (0, i.jsx)(E, {
+        (0, s.openModal)(t => (0, i.jsx)(E, {
             ...t,
             ...e
         }), {

@@ -4,8 +4,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("392711"),
-        s = n.n(r),
-        a = n("481060"),
+        a = n.n(r),
+        s = n("481060"),
         o = n("493683"),
         l = n("904245"),
         u = n("911969"),
@@ -26,7 +26,7 @@ function(e, t, n) {
                 return ""
         }
     }
-    let h = [...s()(T.ChannelTextAreaIntegrations).values().map(e => ({
+    let h = [...a()(T.ChannelTextAreaIntegrations).values().map(e => ({
         id: e.commandId,
         name: e.command,
         displayName: e.command,
@@ -87,30 +87,30 @@ function(e, t, n) {
         execute: (e, t) => {
             var n, r;
             let {
-                channel: s
-            } = t, u = (0, d.computeChannelName)(s, c.default, _.default), E = f.default.Messages.LEAVE_GROUP_DM_TITLE.format({
+                channel: a
+            } = t, u = (0, d.computeChannelName)(a, c.default, _.default), E = f.default.Messages.LEAVE_GROUP_DM_TITLE.format({
                 name: u
             }), I = f.default.Messages.LEAVE_GROUP_DM_BODY.format({
                 name: u
             }), T = null !== (r = null === (n = e.find(e => "silent" === e.name)) || void 0 === n ? void 0 : n.value) && void 0 !== r && r;
             async function S() {
                 try {
-                    await o.default.closePrivateChannel(s.id, void 0, T)
+                    await o.default.closePrivateChannel(a.id, void 0, T)
                 } catch (e) {
-                    l.default.sendBotMessage(s.id, f.default.Messages.LEAVE_GROUP_DM_ERROR)
+                    l.default.sendBotMessage(a.id, f.default.Messages.LEAVE_GROUP_DM_ERROR)
                 }
             }
-            s.isManaged() && (E = f.default.Messages.LEAVE_GROUP_DM_MANAGED_TITLE.format({
+            a.isManaged() && (E = f.default.Messages.LEAVE_GROUP_DM_MANAGED_TITLE.format({
                 name: u
             }), I = f.default.Messages.LEAVE_GROUP_DM_MANAGED_BODY.format({
                 name: u
-            })), (0, a.openModal)(e => (0, i.jsx)(a.ConfirmModal, {
+            })), (0, s.openModal)(e => (0, i.jsx)(s.ConfirmModal, {
                 header: E,
                 confirmText: f.default.Messages.LEAVE_GROUP_DM,
                 cancelText: f.default.Messages.CANCEL,
                 onConfirm: S,
                 ...e,
-                children: (0, i.jsx)(a.Text, {
+                children: (0, i.jsx)(s.Text, {
                     variant: "text-md/normal",
                     children: I
                 })

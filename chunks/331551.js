@@ -2,13 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getSortValueForMember: function() {
-            return s
+            return a
         }
     });
     var i = n("815790"),
         r = n("588215");
 
-    function s(e, t) {
+    function a(e, t) {
         let n = (0, i.getJoinedAtTimestamp)(e.joinedAt);
         switch (t) {
             case r.OrderBy.ORDER_BY_GUILD_JOINED_AT_ASC:

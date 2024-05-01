@@ -6,9 +6,9 @@ function(e, t, n) {
         }
     }), n("47120");
     var i, r = n("735250"),
-        s = n("470079"),
-        a = n("699581"),
-        o = n.n(a),
+        a = n("470079"),
+        s = n("699581"),
+        o = n.n(s),
         l = n("442837"),
         u = n("481060"),
         d = n("34854"),
@@ -26,7 +26,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    class S extends(i = s.PureComponent) {
+    class S extends(i = a.PureComponent) {
         componentDidMount() {
             if (this.props.autoFocus && !this.props.hideNote) {
                 let e = o().findDOMNode(this.noteRef.current);
@@ -56,7 +56,7 @@ function(e, t, n) {
             })
         }
         constructor(...e) {
-            super(...e), f(this, "noteRef", s.createRef()), f(this, "handleBlur", e => {
+            super(...e), f(this, "noteRef", a.createRef()), f(this, "handleBlur", e => {
                 let t = e.currentTarget.value,
                     {
                         note: n,

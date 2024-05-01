@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t);
-    var i, r, s, a, o = n("442837"),
+    var i, r, a, s, o = n("442837"),
         l = n("570140");
     let u = {
         showPopup: !1,
@@ -11,7 +11,7 @@ function(e, t, n) {
     function d() {
         return u.showPopup = !1, u.appDetail = null, !0
     }
-    class _ extends(a = o.default.Store) {
+    class _ extends(s = o.default.Store) {
         initialize() {}
         shouldShowPopup() {
             return u.showPopup
@@ -20,12 +20,12 @@ function(e, t, n) {
             return u.appDetail
         }
     }
-    s = "AppLauncherStore", (r = "displayName") in(i = _) ? Object.defineProperty(i, r, {
-        value: s,
+    a = "AppLauncherStore", (r = "displayName") in(i = _) ? Object.defineProperty(i, r, {
+        value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : i[r] = s, t.default = new _(l.default, {
+    }) : i[r] = a, t.default = new _(l.default, {
         APP_LAUNCHER_SHOW_POPUP: function() {
             return u.showPopup = !0, !0
         },

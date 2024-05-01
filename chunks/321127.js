@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        s = n.n(r),
-        a = n("3500");
+        a = n.n(r),
+        s = n("3500");
 
     function o(e) {
         let {
@@ -19,8 +19,8 @@ function(e, t, n) {
             text: o
         } = e;
         if (r.commandName) {
-            let e = s()(a.commandName, {
-                [a.emptyText]: "" === o.text
+            let e = a()(s.commandName, {
+                [s.emptyText]: "" === o.text
             });
             return (0, i.jsx)("span", {
                 ...t,

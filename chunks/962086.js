@@ -22,8 +22,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("570140"),
         r = n("367907"),
-        s = n("703656"),
-        a = n("592125"),
+        a = n("703656"),
+        s = n("592125"),
         o = n("984933"),
         l = n("271383"),
         u = n("430824"),
@@ -73,10 +73,10 @@ function(e, t, n) {
 
     function N(e) {
         let t = _.default.getChannelId(e),
-            n = a.default.getChannel(t);
+            n = s.default.getChannel(t);
         if (!(null != t && (0, S.isStaticChannelRoute)(t)) && !d.default.can(f.Permissions.VIEW_CHANNEL, n)) {
             let t = o.default.getDefaultChannel(e);
-            null != t && (0, s.transitionTo)(f.Routes.CHANNEL(e, t.id))
+            null != t && (0, a.transitionTo)(f.Routes.CHANNEL(e, t.id))
         }
     }
 

@@ -28,12 +28,12 @@ function(e, t, n) {
     });
     var i = n("860911"),
         r = n("544891"),
-        s = n("893776"),
-        a = n("981631");
+        a = n("893776"),
+        s = n("981631");
 
     function o(e) {
         return r.HTTP.post({
-            url: a.Endpoints.OAUTH2_WHITELIST_ACCEPT,
+            url: s.Endpoints.OAUTH2_WHITELIST_ACCEPT,
             query: {
                 token: e
             },
@@ -45,7 +45,7 @@ function(e, t, n) {
             authorize: t,
             clientId: n,
             scopes: i,
-            responseType: s,
+            responseType: a,
             redirectUri: o,
             codeChallenge: l,
             codeChallengeMethod: u,
@@ -57,10 +57,10 @@ function(e, t, n) {
             nonce: T
         } = e;
         return (await r.HTTP.post({
-            url: a.Endpoints.OAUTH2_AUTHORIZE,
+            url: s.Endpoints.OAUTH2_AUTHORIZE,
             query: {
                 client_id: n,
-                response_type: s,
+                response_type: a,
                 redirect_uri: o,
                 code_challenge: l,
                 code_challenge_method: u,
@@ -84,7 +84,7 @@ function(e, t, n) {
             clientId: t,
             scopes: n,
             responseType: i,
-            redirectUri: s,
+            redirectUri: a,
             codeChallenge: o,
             codeChallengeMethod: l,
             state: u,
@@ -92,11 +92,11 @@ function(e, t, n) {
             nonce: _
         } = e;
         return (await r.HTTP.get({
-            url: a.Endpoints.OAUTH2_AUTHORIZE,
+            url: s.Endpoints.OAUTH2_AUTHORIZE,
             query: {
                 client_id: t,
                 response_type: i,
-                redirect_uri: s,
+                redirect_uri: a,
                 code_challenge: o,
                 code_challenge_method: l,
                 scope: n.join(" "),
@@ -112,7 +112,7 @@ function(e, t, n) {
         let {
             body: t
         } = await r.HTTP.get({
-            url: a.Endpoints.OAUTH2_AUTHORIZE_WEBHOOK_CHANNELS,
+            url: s.Endpoints.OAUTH2_AUTHORIZE_WEBHOOK_CHANNELS,
             query: {
                 guild_id: e
             },
@@ -122,11 +122,11 @@ function(e, t, n) {
     }
 
     function _(e) {
-        s.default.logout((0, i.getLoginPath)(e.pathname + e.search, !1))
+        a.default.logout((0, i.getLoginPath)(e.pathname + e.search, !1))
     }
     async function c(e) {
         return await r.HTTP.post({
-            url: a.Endpoints.OAUTH2_DEVICE_VERIFY,
+            url: s.Endpoints.OAUTH2_DEVICE_VERIFY,
             body: {
                 user_code: e
             }
@@ -134,7 +134,7 @@ function(e, t, n) {
     }
     async function E(e, t) {
         return await r.HTTP.post({
-            url: a.Endpoints.OAUTH2_DEVICE_FINISH,
+            url: s.Endpoints.OAUTH2_DEVICE_FINISH,
             body: {
                 user_code: e,
                 result: t
@@ -143,7 +143,7 @@ function(e, t, n) {
     }
     async function I(e, t, n) {
         return await r.HTTP.post({
-            url: a.Endpoints.OAUTH2_DEVICE_FINISH,
+            url: s.Endpoints.OAUTH2_DEVICE_FINISH,
             body: {
                 user_code: e,
                 result: "two_way_link_error",

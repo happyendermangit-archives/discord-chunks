@@ -11,10 +11,10 @@ function(e, t, n) {
             return o
         },
         isUint8Array: function() {
-            return a
+            return s
         },
         removeBit: function() {
-            return s
+            return a
         }
     }), n("518263"), n("970173"), n("520712"), n("268111"), n("941497"), n("32026"), n("480839"), n("744285"), n("492257"), n("873817");
 
@@ -33,7 +33,7 @@ function(e, t, n) {
         return e[n] |= 1 << t % 8, e
     }
 
-    function s(e, t) {
+    function a(e, t) {
         if (i(e, t)) {
             let n = Math.floor(t / 8),
                 i = t % 8;
@@ -42,7 +42,7 @@ function(e, t, n) {
         return e
     }
 
-    function a(e) {
+    function s(e) {
         return e instanceof Uint8Array
     }
 

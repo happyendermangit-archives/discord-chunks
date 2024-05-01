@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("242411"),
         l = n("806519"),
         u = n("536182");
@@ -12,24 +12,24 @@ function(e, t, n) {
         let {
             className: t,
             guild: n,
-            isSelected: s = !0,
+            isSelected: a = !0,
             width: d = 32,
             height: _ = 32,
             shouldAnimate: c = !0,
             isLocked: E = !1
-        } = e, [I, T] = r.useState(!1), f = n.getIconURL(32, c && s), S = () => T(!0), h = () => T(!1);
+        } = e, [I, T] = r.useState(!1), f = n.getIconURL(32, c && a), S = () => T(!0), h = () => T(!1);
         return (0, i.jsxs)("div", {
             onFocus: S,
             onBlur: h,
             onMouseOver: S,
             onMouseLeave: h,
             children: [(0, i.jsx)(l.default, {
-                className: a()(u.mask, t),
-                mask: s || I ? l.MaskIDs.SQUIRCLE : l.MaskIDs.AVATAR_DEFAULT,
+                className: s()(u.mask, t),
+                mask: a || I ? l.MaskIDs.SQUIRCLE : l.MaskIDs.AVATAR_DEFAULT,
                 width: d,
                 height: _,
                 children: null == f ? (0, i.jsx)("div", {
-                    className: a()(u.guildIcon, u.guildIconWithoutImage),
+                    className: s()(u.guildIcon, u.guildIconWithoutImage),
                     children: (0, i.jsx)("div", {
                         className: u.guildAcronym,
                         children: n.acronym

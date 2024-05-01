@@ -7,8 +7,8 @@ function(e, t, n) {
         }
     }), n("177593"), n("47120"), n("653041");
     var r = n("512722"),
-        s = n.n(r),
-        a = n("956067");
+        a = n.n(r),
+        s = n("956067");
     n("17089");
     var o = n("673011"),
         l = n("153102");
@@ -52,25 +52,25 @@ function(e, t, n) {
                 let e = Date.now();
                 this.initialize(), this._isInitialized = !0;
                 let t = Date.now() - e;
-                t > 5 && a.default.mark("\uD83E\uDDA5", this.getName() + ".initialize()", t)
+                t > 5 && s.default.mark("\uD83E\uDDA5", this.getName() + ".initialize()", t)
             }
         }
         initialize() {}
         syncWith(e, t, n) {
             if (this.waitFor(...e), null != n) {
                 var i, r;
-                let s, a = 0,
+                let a, s = 0,
                     o = () => {
-                        a !== l.default.getChangeSentinel() && (a = l.default.getChangeSentinel(), !1 !== t() && this.emitChange())
+                        s !== l.default.getChangeSentinel() && (s = l.default.getChangeSentinel(), !1 !== t() && this.emitChange())
                     };
-                i = null != n ? n : 0, r = o, s = null, o = 0 === i ? function() {
-                    clearImmediate(s), s = setImmediate(r)
+                i = null != n ? n : 0, r = o, a = null, o = 0 === i ? function() {
+                    clearImmediate(a), a = setImmediate(r)
                 } : function() {
-                    null == s && (s = setTimeout(() => {
+                    null == a && (a = setTimeout(() => {
                         try {
                             r()
                         } finally {
-                            s = null
+                            a = null
                         }
                     }, i))
                 }, e.forEach(e => e.addChangeListener(o))
@@ -83,7 +83,7 @@ function(e, t, n) {
         }
         waitFor() {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            let i = t.map((e, t) => (s()(null != e, "Store.waitFor(...) called with null Store at index ".concat(t, " for store ").concat(this.getName())), null != e._dispatcher) ? (s()(e._dispatcher === this._dispatcher, "Stores belong to two separate dispatchers."), e.getDispatchToken()) : null);
+            let i = t.map((e, t) => (a()(null != e, "Store.waitFor(...) called with null Store at index ".concat(t, " for store ").concat(this.getName())), null != e._dispatcher) ? (a()(e._dispatcher === this._dispatcher, "Stores belong to two separate dispatchers."), e.getDispatchToken()) : null);
             this._dispatcher.addDependencies(this.getDispatchToken(), i.filter(e => null != e))
         }
         emitChange() {

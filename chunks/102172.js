@@ -17,8 +17,8 @@ function(e, t, n) {
             return A
         }
     }), n("653041"), n("47120");
-    var i, r, s = n("442837"),
-        a = n("258609"),
+    var i, r, a = n("442837"),
+        s = n("258609"),
         o = n("131704"),
         l = n("984933"),
         u = n("430824"),
@@ -33,9 +33,9 @@ function(e, t, n) {
         var i;
         let r = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
         if (e.isPrivate()) return !0;
-        let s = t.getGuild(e.getGuildId()),
-            a = null !== (i = null == s ? void 0 : s.maxStageVideoChannelUsers) && void 0 !== i ? i : 0;
-        return (!e.isGuildStageVoice() || !(a <= 0)) && (!r || !!T(e, n)) && !!n.can(E.Permissions.STREAM, e) && null != s && s.afkChannelId !== e.id && !0
+        let a = t.getGuild(e.getGuildId()),
+            s = null !== (i = null == a ? void 0 : a.maxStageVideoChannelUsers) && void 0 !== i ? i : 0;
+        return (!e.isGuildStageVoice() || !(s <= 0)) && (!r || !!T(e, n)) && !!n.can(E.Permissions.STREAM, e) && null != a && a.afkChannelId !== e.id && !0
     }
 
     function S(e) {
@@ -52,17 +52,17 @@ function(e, t, n) {
     }
 
     function h(e, t, n, i, r) {
-        let s;
+        let a;
         if (null == e) return [!1, 2];
-        let a = t.isInChannel(e.id),
+        let s = t.isInChannel(e.id),
             l = e instanceof o.ChannelRecordBase && (0, c.isChannelFull)(e, t, n),
             u = T(e, i),
             d = null != r.getAwaitingRemoteSessionInfo() || null != r.getRemoteSessionId();
-        return d ? s = 0 : u || a ? l && !a && (s = 1) : s = 2, [!__OVERLAY__ && !d && (a || u && !l), s]
+        return d ? a = 0 : u || s ? l && !s && (a = 1) : a = 2, [!__OVERLAY__ && !d && (s || u && !l), a]
     }
 
     function A(e) {
-        return (0, s.useStateFromStoresArray)([_.default, u.default, d.default, a.default], () => h(e, _.default, u.default, d.default, a.default))
+        return (0, a.useStateFromStoresArray)([_.default, u.default, d.default, s.default], () => h(e, _.default, u.default, d.default, s.default))
     }
 
     function m(e, t, n) {

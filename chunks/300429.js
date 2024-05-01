@@ -5,14 +5,14 @@ function(e, t, n) {
             return i
         }
     }), n("47120");
-    var i, r, s, a, o, l, u = n("442837"),
+    var i, r, a, s, o, l, u = n("442837"),
         d = n("846519"),
         _ = n("570140"),
         c = n("70956"),
         E = n("592125"),
         I = n("496675"),
         T = n("981631");
-    (s = i || (i = {}))[s.SendMessage = 0] = "SendMessage", s[s.CreateThread = 1] = "CreateThread";
+    (a = i || (i = {}))[a.SendMessage = 0] = "SendMessage", a[a.CreateThread = 1] = "CreateThread";
     let f = {
         0: {},
         1: {}
@@ -61,12 +61,12 @@ function(e, t, n) {
             return null != n ? n.cooldownMs : 0
         }
     }
-    l = "SlowmodeStore", (o = "displayName") in(a = m) ? Object.defineProperty(a, o, {
+    l = "SlowmodeStore", (o = "displayName") in(s = m) ? Object.defineProperty(s, o, {
         value: l,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : a[o] = l, t.default = new m(_.default, {
+    }) : s[o] = l, t.default = new m(_.default, {
         SLOWMODE_RESET_COOLDOWN: function(e) {
             let {
                 channelId: t,

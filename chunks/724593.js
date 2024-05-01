@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        s = n.n(r),
-        a = n("692547"),
+        a = n.n(r),
+        s = n("692547"),
         o = n("10683"),
         l = n("793080"),
         u = n("481060"),
@@ -44,11 +44,11 @@ function(e, t, n) {
                         action: "PRESS_ADD_NOTE"
                     }), n()
                 },
-                className: s()(E.noteClickable, r),
+                className: a()(E.noteClickable, r),
                 children: (0, i.jsx)(m, {
                     height: 16,
                     width: 16,
-                    color: a.default.colors.INTERACTIVE_NORMAL
+                    color: s.default.colors.INTERACTIVE_NORMAL
                 })
             })
         })

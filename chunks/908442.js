@@ -2,13 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         BUILD_OVERRIDE_COOKIE_NAME: function() {
-            return a
+            return s
         },
         BUILD_OVERRIDE_EXPIRATION_OPTIONS: function() {
             return r
         },
         BUILD_OVERRIDE_RELEASE_CHANNEL_OPTIONS: function() {
-            return s
+            return a
         },
         BUILD_OVERRIDE_TARGET_NAMES: function() {
             return i
@@ -43,7 +43,7 @@ function(e, t, n) {
             value: 2628e3,
             label: "1 Month"
         }],
-        s = [{
+        a = [{
             value: "all",
             label: "All"
         }, {
@@ -59,5 +59,5 @@ function(e, t, n) {
             value: "staging",
             label: "Staging"
         }],
-        a = "buildOverride"
+        s = "buildOverride"
 }

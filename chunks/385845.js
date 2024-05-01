@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("47120"), n("653041");
-    var i, r, s, a, o = n("512722"),
+    var i, r, a, s, o = n("512722"),
         l = n.n(o),
         u = n("127437"),
         d = n("442837"),
@@ -28,12 +28,12 @@ function(e, t, n) {
             return S.has(e)
         }
     }
-    a = "UserRecentGamesStore", (s = "displayName") in(r = h) ? Object.defineProperty(r, s, {
-        value: a,
+    s = "UserRecentGamesStore", (a = "displayName") in(r = h) ? Object.defineProperty(r, a, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a, t.default = new h(_.default, {
+    }) : r[a] = s, t.default = new h(_.default, {
         CONNECTION_OPEN: function() {
             T = new Map, f = new Set, S = new Set
         },
@@ -74,12 +74,12 @@ function(e, t, n) {
                 var n, i;
                 let r = T.get(e);
                 if (null == r) return;
-                let s = [],
-                    a = null;
+                let a = [],
+                    s = null;
                 if (r.recentGames.forEach(e => {
-                        e.applicationId === t.applicationId ? a = e : s.push(e)
-                    }), null == a) return;
-                let o = (n = a, i = t, l()(n.applicationId === i.applicationId, "[UserRecentGamesStore] Games must have same application for merge."), {
+                        e.applicationId === t.applicationId ? s = e : a.push(e)
+                    }), null == s) return;
+                let o = (n = s, i = t, l()(n.applicationId === i.applicationId, "[UserRecentGamesStore] Games must have same application for merge."), {
                     applicationId: n.applicationId,
                     duration: n.duration + i.duration,
                     lastSessionId: I.default.compare(n.lastSessionId, i.lastSessionId) > 0 ? n.lastSessionId : i.lastSessionId,
@@ -87,7 +87,7 @@ function(e, t, n) {
                 });
                 T.set(e, {
                     lastFetchTimestampMs: Date.now(),
-                    recentGames: [o, ...s]
+                    recentGames: [o, ...a]
                 })
             }(c.default.getId(), {
                 applicationId: t,

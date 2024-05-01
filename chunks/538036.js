@@ -3,9 +3,9 @@ function(e, t, n) {
     n.r(t), n("653041");
     var i = n("981631");
     let r = [],
-        s = !1;
+        a = !1;
 
-    function a() {
+    function s() {
         let e = window.navigator.connection;
         return null == e ? {
             type: i.NetworkConnectionTypes.UNKNOWN,
@@ -17,7 +17,7 @@ function(e, t, n) {
     }
 
     function o() {
-        let e = a();
+        let e = s();
         r.forEach(t => t(e))
     }
     t.default = {
@@ -37,21 +37,21 @@ function(e, t, n) {
             var t;
             t = e, r.push(t),
                 function() {
-                    if (!0 === s) return;
+                    if (!0 === a) return;
                     let e = window.navigator.connection;
-                    null != e && (s = !0, e.addEventListener("change", o))
+                    null != e && (a = !0, e.addEventListener("change", o))
                 }()
         },
         removeChangeCallback(e) {
             ! function(e) {
                 let t = r.indexOf(e); - 1 !== t && (r.splice(t, 1), ! function() {
-                    if (!1 === s) return;
+                    if (!1 === a) return;
                     let e = window.navigator.connection;
-                    null != e && 0 === r.length && null != e && (e.removeEventListener("change", o), s = !1)
+                    null != e && 0 === r.length && null != e && (e.removeEventListener("change", o), a = !1)
                 }())
             }(e)
         },
-        getNetworkInformation: () => Promise.resolve(a()),
+        getNetworkInformation: () => Promise.resolve(s()),
         isOnline() {
             let e = navigator.onLine;
             return void 0 === e || e

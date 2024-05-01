@@ -1,8 +1,8 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("47120");
-    var i, r, s = n("735250"),
-        a = n("470079"),
+    var i, r, a = n("735250"),
+        s = n("470079"),
         o = n("120356"),
         l = n.n(o),
         u = n("481060"),
@@ -16,12 +16,12 @@ function(e, t, n) {
         S = n("689938"),
         h = n("35962");
     (r = i || (i = {}))[r.PARTNERED = 0] = "PARTNERED", r[r.STAFF = 1] = "STAFF", r[r.VERIFIED = 2] = "VERIFIED", r[r.VERIFIED_AND_PARTNERED = 3] = "VERIFIED_AND_PARTNERED", r[r.VERIFIED_AND_HUB = 4] = "VERIFIED_AND_HUB", r[r.HUB = 5] = "HUB", r[r.NONE = 6] = "NONE";
-    class A extends a.PureComponent {
+    class A extends s.PureComponent {
         renderBadge(e, t, n) {
             let {
                 className: i,
                 badgeStrokeColor: r,
-                tooltipColor: a = u.Tooltip.Colors.BRAND,
+                tooltipColor: s = u.Tooltip.Colors.BRAND,
                 tooltipPosition: o,
                 size: c = 16,
                 badgeColor: E,
@@ -47,28 +47,28 @@ function(e, t, n) {
                         (0, d.assertNever)(e)
                 }
             }(e);
-            return (0, s.jsx)(u.Tooltip, {
-                color: a,
+            return (0, a.jsx)(u.Tooltip, {
+                color: s,
                 position: o,
                 text: f,
-                children: a => 5 === e || 4 === e ? (0, s.jsx)("div", {
-                    ...a,
+                children: s => 5 === e || 4 === e ? (0, a.jsx)("div", {
+                    ...s,
                     className: l()(n, i),
                     style: {
                         width: c,
                         height: c
                     },
-                    children: (0, s.jsx)(t, {
+                    children: (0, a.jsx)(t, {
                         className: l()(h.icon, I)
                     })
-                }) : (0, s.jsx)(_.default, {
-                    ...a,
+                }) : (0, a.jsx)(_.default, {
+                    ...s,
                     className: l()(n, i),
                     flowerStarClassName: T,
                     color: E,
                     stroke: r,
                     size: c,
-                    children: (0, s.jsx)(t, {
+                    children: (0, a.jsx)(t, {
                         className: l()(h.icon, I)
                     })
                 })

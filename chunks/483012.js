@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return a
         }
     }), n("47120"), n("653041");
     var i = n("570140");
@@ -15,9 +15,9 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    class s {
+    class a {
         static flush(e, t) {
-            for (let n of s.batchers) null != n.action && (null == e || n.shouldFlush(e, t)) && n.flush()
+            for (let n of a.batchers) null != n.action && (null == e || n.shouldFlush(e, t)) && n.flush()
         }
         flush() {
             let {
@@ -31,8 +31,8 @@ function(e, t, n) {
         constructor(e, t, n) {
             r(this, "socket", void 0), r(this, "action", void 0), r(this, "add", void 0), r(this, "shouldFlush", void 0), this.socket = e, this.action = null, this.shouldFlush = n, this.add = e => {
                 this.action = t(this.action, e)
-            }, s.batchers.push(this)
+            }, a.batchers.push(this)
         }
     }
-    r(s, "batchers", [])
+    r(a, "batchers", [])
 }

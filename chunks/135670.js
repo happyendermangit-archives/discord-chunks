@@ -7,9 +7,9 @@ function(e, t, n) {
     }), n("411104"), n("47120");
     var i = n("47770"),
         r = n("46973"),
-        s = n("65154");
+        a = n("65154");
 
-    function a(e, t, n) {
+    function s(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -34,7 +34,7 @@ function(e, t, n) {
             return __OVERLAY__
         }
         supports(e) {
-            if (e === s.Features.AUTO_ENABLE) return __OVERLAY__;
+            if (e === a.Features.AUTO_ENABLE) return __OVERLAY__;
             return !1
         }
         connect(e, t, n) {
@@ -68,7 +68,7 @@ function(e, t, n) {
             return Promise.reject(Error("getCodecSurvey is not implemented for MediaEngineDummy"))
         }
         getAudioSubsystem() {
-            return s.AudioSubsystems.STANDARD
+            return a.AudioSubsystems.STANDARD
         }
         getAudioLayer() {
             return ""
@@ -79,7 +79,7 @@ function(e, t, n) {
             return !1
         }
         setDesktopSource(e) {
-            arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.MediaEngineContextTypes.DEFAULT
+            arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.MediaEngineContextTypes.DEFAULT
         }
         setSoundshareSource(e, t, n) {}
         getDesktopSource() {
@@ -153,7 +153,7 @@ function(e, t, n) {
             e([])
         }
         constructor(...e) {
-            super(...e), a(this, "Video", o), a(this, "Camera", l)
+            super(...e), s(this, "Video", o), s(this, "Camera", l)
         }
     }
 }

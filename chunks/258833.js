@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("147913"),
         r = n("474873"),
-        s = n("523746"),
-        a = n("292959"),
+        a = n("523746"),
+        s = n("292959"),
         o = n("246946"),
         l = n("979651"),
         u = n("938475"),
@@ -15,13 +15,13 @@ function(e, t, n) {
             _.stop(), _ = (0, d.createSoundForPack)("call_calling", r.default.getSoundpack())
         }
         handleRingUpdate() {
-            let e = s.default.getCalls().filter(e => e.ringing.length > 0 && l.default.getCurrentClientVoiceChannelId(null) === e.channelId),
+            let e = a.default.getCalls().filter(e => e.ringing.length > 0 && l.default.getCurrentClientVoiceChannelId(null) === e.channelId),
                 t = l.default.getCurrentClientVoiceChannelId(null);
-            null != t && u.default.countVoiceStatesForChannel(t) >= 2 || !(e.length > 0) || a.default.isSoundDisabled("call_calling") || o.default.disableSounds ? _.stop() : _.loop()
+            null != t && u.default.countVoiceStatesForChannel(t) >= 2 || !(e.length > 0) || s.default.isSoundDisabled("call_calling") || o.default.disableSounds ? _.stop() : _.loop()
         }
         constructor(...e) {
             var t, n, i;
-            super(...e), t = this, n = "stores", i = new Map().set(s.default, this.handleRingUpdate).set(a.default, this.handleRingUpdate).set(o.default, this.handleRingUpdate).set(l.default, this.handleRingUpdate).set(r.default, this.handleSoundpackUpdate), n in t ? Object.defineProperty(t, n, {
+            super(...e), t = this, n = "stores", i = new Map().set(a.default, this.handleRingUpdate).set(s.default, this.handleRingUpdate).set(o.default, this.handleRingUpdate).set(l.default, this.handleRingUpdate).set(r.default, this.handleSoundpackUpdate), n in t ? Object.defineProperty(t, n, {
                 value: i,
                 enumerable: !0,
                 configurable: !0,

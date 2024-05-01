@@ -5,7 +5,7 @@ function(e, t, n) {
             return O
         }
     }), n("47120");
-    var i, r, s, a, o, l = n("735250"),
+    var i, r, a, s, o, l = n("735250"),
         u = n("470079"),
         d = n("120356"),
         _ = n.n(d),
@@ -25,7 +25,7 @@ function(e, t, n) {
             configurable: !0,
             writable: !0
         }) : e[t] = n, e
-    }(a = i || (i = {})).DEFAULT = "default", a.INVERTED = "inverted", a.GHOST = "ghost", a.ROW = "row", (o = r || (r = {})).TOP = "top", o.CENTER = "center";
+    }(s = i || (i = {})).DEFAULT = "default", s.INVERTED = "inverted", s.GHOST = "ghost", s.ROW = "row", (o = r || (r = {})).TOP = "top", o.CENTER = "center";
     let N = {
             BOX: A.box,
             ROUND: A.round,
@@ -35,7 +35,7 @@ function(e, t, n) {
             top: A.alignTop,
             center: A.alignCenter
         };
-    class O extends(s = u.PureComponent) {
+    class O extends(a = u.PureComponent) {
         getInputMode() {
             return this.props.disabled ? "disabled" : this.props.readOnly ? "readonly" : "default"
         }
@@ -90,8 +90,8 @@ function(e, t, n) {
                 value: n,
                 shape: i,
                 align: r = "center",
-                className: s,
-                innerClassName: a,
+                className: a,
+                innerClassName: s,
                 children: o,
                 size: u,
                 reverse: d,
@@ -107,13 +107,13 @@ function(e, t, n) {
                 children: o
             }) : null, N = this.props.disabled ? A.inputDisabled : this.props.readOnly ? A.inputReadonly : A.inputDefault;
             return (0, l.jsxs)(E ? "span" : "label", {
-                className: _()(e ? A.checkboxWrapperDisabled : A.checkboxWrapper, p[r], s, {
+                className: _()(e ? A.checkboxWrapperDisabled : A.checkboxWrapper, p[r], a, {
                     [A.row]: "row" === I,
                     [A.checked]: n
                 }),
                 children: [d ? m : null, !E && (0, l.jsx)(f.FocusRing, {
                     children: (0, l.jsx)("input", {
-                        className: _()(a, N),
+                        className: _()(s, N),
                         type: "checkbox",
                         onClick: T,
                         onChange: e || t ? h.NOOP : this.handleChange,

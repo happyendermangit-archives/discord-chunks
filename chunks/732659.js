@@ -2,24 +2,24 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return a
+            return s
         }
     });
     var i = n("470079"),
         r = n("207470"),
-        s = n("887490");
+        a = n("887490");
 
-    function a(e, t, n) {
+    function s(e, t, n) {
         i.useEffect(() => {
             let i = r.ReactEditor.findDocumentOrShadowRoot(e).defaultView;
             if ((null == i ? void 0 : i.ResizeObserver) == null) return;
-            let a = s.EditorUtils.toDOMNode(e, e),
-                o = a.offsetHeight,
+            let s = a.EditorUtils.toDOMNode(e, e),
+                o = s.offsetHeight,
                 l = new i.ResizeObserver(() => {
-                    let i = s.EditorUtils.toDOMNode(e, e).offsetHeight;
+                    let i = a.EditorUtils.toDOMNode(e, e).offsetHeight;
                     o !== i && (null != t.current && (t.current.style.height = "".concat(i, "px")), o = i, null == n || n(i))
                 });
-            return l.observe(a), () => l.disconnect()
+            return l.observe(s), () => l.disconnect()
         }, [t, e, n])
     }
 }

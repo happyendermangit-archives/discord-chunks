@@ -13,12 +13,12 @@ function(e, t, n) {
     });
     var i = n("652874"),
         r = n("585483"),
-        s = n("981631");
-    let a = Object.freeze({
+        a = n("981631");
+    let s = Object.freeze({
             hasUnsubmittedChanges: !1,
             shouldShowWarning: !1
         }),
-        o = (0, i.default)(e => a),
+        o = (0, i.default)(e => s),
         l = e => {
             o.setState({
                 hasUnsubmittedChanges: e
@@ -27,6 +27,6 @@ function(e, t, n) {
         u = e => {
             o.setState({
                 shouldShowWarning: e
-            }), e && r.ComponentDispatch.dispatch(s.ComponentActions.EMPHASIZE_NOTICE)
+            }), e && r.ComponentDispatch.dispatch(a.ComponentActions.EMPHASIZE_NOTICE)
         }
 }

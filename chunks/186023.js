@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120"), n("653041");
     var i = n("735250"),
         r = n("470079"),
-        s = n("481060"),
-        a = n("367907"),
+        a = n("481060"),
+        s = n("367907"),
         o = n("153124"),
         l = n("82554"),
         u = n("185625"),
@@ -29,44 +29,44 @@ function(e, t, n) {
             var n;
             let {
                 destination: i
-            } = e, [, r] = i, s = A[r];
-            if (s.elements.some(e => "skip" === e.type) && (null === (n = s.button) || void 0 === n ? void 0 : n.type) === "next") return U({
+            } = e, [, r] = i, a = A[r];
+            if (a.elements.some(e => "skip" === e.type) && (null === (n = a.button) || void 0 === n ? void 0 : n.type) === "next") return U({
                 ...e,
-                destination: ["", s.button.target]
+                destination: ["", a.button.target]
             });
-            if (M([...D, e]), null != s.key && (null == T || T(s.key)), g(void 0), v(void 0), t.name === l.ReportNames.MESSAGE || t.name === l.ReportNames.FIRST_DM) {
+            if (M([...D, e]), null != a.key && (null == T || T(a.key)), g(void 0), v(void 0), t.name === l.ReportNames.MESSAGE || t.name === l.ReportNames.FIRST_DM) {
                 let e = t.record.id;
-                a.default.trackWithMetadata(_.AnalyticEvents.IAR_NAVIGATE, {
+                s.default.trackWithMetadata(_.AnalyticEvents.IAR_NAVIGATE, {
                     message_id: e,
                     content_type: t.name,
-                    report_sub_type: s.report_type,
+                    report_sub_type: a.report_type,
                     current_node: A[O].id,
-                    next_node: s.id
+                    next_node: a.id
                 })
             }
             R(r)
         }, b = async e => {
             var i;
             let r = S ? await (0, u.submitReport)(n, t, [...D, e]) : await (0, u.submitUnauthenticatedReport)(n, t, [...D, e], f),
-                s = null == r ? void 0 : null === (i = r.body) || void 0 === i ? void 0 : i.report_id;
-            null != s && P(s), null == I || I(s)
+                a = null == r ? void 0 : null === (i = r.body) || void 0 === i ? void 0 : i.report_id;
+            null != a && P(a), null == I || I(a)
         }, G = () => {
             var e, n;
             if (D.length < 1) return;
             let i = [...D],
                 r = i.pop(),
-                s = null !== (n = null == r ? void 0 : r.nodeRef) && void 0 !== n ? n : m;
+                a = null !== (n = null == r ? void 0 : r.nodeRef) && void 0 !== n ? n : m;
             if (t.name === l.ReportNames.MESSAGE || t.name === l.ReportNames.FIRST_DM) {
                 let e = t.record.id;
-                a.default.trackWithMetadata(_.AnalyticEvents.IAR_NAVIGATE, {
+                s.default.trackWithMetadata(_.AnalyticEvents.IAR_NAVIGATE, {
                     message_id: e,
                     content_type: t.name,
-                    report_sub_type: A[s].report_type,
+                    report_sub_type: A[a].report_type,
                     current_node: A[O].id,
-                    next_node: A[s].id
+                    next_node: A[a].id
                 })
             }
-            g(null == r ? void 0 : null === (e = r.multiSelect) || void 0 === e ? void 0 : e.state), v(null == r ? void 0 : r.textInput), R(s), M(i), null == T || T("..")
+            g(null == r ? void 0 : null === (e = r.multiSelect) || void 0 === e ? void 0 : e.state), v(null == r ? void 0 : r.textInput), R(a), M(i), null == T || T("..")
         }, w = [], B = [];
         for (let e in A) {
             var k, V;
@@ -83,14 +83,14 @@ function(e, t, n) {
             }
         }
         let x = [A[m], ...w, ...B, A[N], A[p]];
-        return (0, i.jsx)(s.ModalRoot, {
+        return (0, i.jsx)(a.ModalRoot, {
             transitionState: E.transitionState,
             "aria-labelledby": h,
-            children: (0, i.jsx)(s.Slides, {
+            children: (0, i.jsx)(a.Slides, {
                 width: 440,
                 activeSlide: O,
                 centered: !1,
-                children: x.map(e => (0, i.jsx)(s.Slide, {
+                children: x.map(e => (0, i.jsx)(a.Slide, {
                     id: e.id,
                     children: (0, i.jsx)("div", {
                         className: c.slideContainer,

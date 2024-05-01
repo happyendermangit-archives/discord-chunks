@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("481060"),
         l = n("911969"),
         u = n("10718"),
@@ -22,13 +22,13 @@ function(e, t, n) {
     function f(e) {
         var t, n;
         let {
-            channel: s,
+            channel: a,
             isAppDetailPresent: f
         } = e, [S, h] = r.useState(""), A = r.useCallback(() => h(""), [h]), {
             commandsByActiveSection: m,
             sectionDescriptors: N,
             filterSection: p
-        } = u.useDiscovery(s, {
+        } = u.useDiscovery(a, {
             commandType: l.ApplicationCommandType.CHAT
         }, {
             placeholderCount: 0,
@@ -42,7 +42,7 @@ function(e, t, n) {
             R = N.filter(e => e.id !== I.BuiltInSectionId.FRECENCY && e.id !== I.BuiltInSectionId.BUILT_IN),
             C = (0, d.useSortApplicationsViaFrecency)(R);
         return (0, i.jsxs)("div", {
-            className: a()(T.container, {
+            className: s()(T.container, {
                 [T.appDetailVisible]: f
             }),
             children: [(0, i.jsx)("div", {
@@ -58,11 +58,11 @@ function(e, t, n) {
                 className: T.scrollableContent,
                 fade: !0,
                 children: [(0, i.jsx)(c.default, {
-                    channel: s,
+                    channel: a,
                     commands: O,
                     sectionDescriptors: N
                 }), (0, i.jsx)(E.default, {
-                    channel: s,
+                    channel: a,
                     applications: C
                 })]
             })]

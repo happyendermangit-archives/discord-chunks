@@ -28,8 +28,8 @@ function(e, t, n) {
     }), n("653041"), n("47120");
     var i = n("911969"),
         r = n("555573"),
-        s = n("998698"),
-        a = n("509716"),
+        a = n("998698"),
+        s = n("509716"),
         o = n("703558"),
         l = n("944486"),
         u = n("117530"),
@@ -71,9 +71,9 @@ function(e, t, n) {
         if (null == t.options) return {};
         let i = T(e),
             r = Object.fromEntries(t.options.map(e => [e.name, e])),
-            s = null == i ? void 0 : i[0].children;
-        if (null != s) {
-            for (let t of s)
+            a = null == i ? void 0 : i[0].children;
+        if (null != a) {
+            for (let t of a)
                 if (c.NodeUtils.isType(t, "applicationCommandOption")) {
                     let i = r[t.optionName];
                     null != i && (n[t.optionName] = A(e, i, t))
@@ -84,14 +84,14 @@ function(e, t, n) {
 
     function A(e, t, n) {
         let r = l.default.getCurrentlySelectedChannelId(),
-            s = n.children.map(n => {
+            a = n.children.map(n => {
                 if (t.type === i.ApplicationCommandOptionType.ATTACHMENT) {
                     let e = u.default.getUpload(r, t.name, o.DraftType.SlashCommand);
                     if (null != e) {
-                        var s;
+                        var a;
                         return {
                             type: "text",
-                            text: null !== (s = e.filename) && void 0 !== s ? s : ""
+                            text: null !== (a = e.filename) && void 0 !== a ? a : ""
                         }
                     }
                 }
@@ -111,22 +111,22 @@ function(e, t, n) {
                 }
             });
         if (t.type !== i.ApplicationCommandOptionType.STRING) {
-            for (; s.length > 0 && "text" === s[0].type && "" === s[0].text.trim();) s.shift();
-            for (; s.length > 0 && "text" === s[s.length - 1].type && "" === s[s.length - 1].text.trim();) s.pop()
+            for (; a.length > 0 && "text" === a[0].type && "" === a[0].text.trim();) a.shift();
+            for (; a.length > 0 && "text" === a[a.length - 1].type && "" === a[a.length - 1].text.trim();) a.pop()
         }
-        return s
+        return a
     }
 
-    function m(e, t, n, i, s) {
+    function m(e, t, n, i, a) {
         if (null == e.options) return {};
         let o = Object.fromEntries(e.options.map(e => {
             var r;
-            return [e.name, a.validateOptionContent({
+            return [e.name, s.validateOptionContent({
                 option: e,
                 content: null !== (r = i[e.name]) && void 0 !== r ? r : null,
                 guildId: t,
                 channelId: n,
-                allowEmptyValues: s
+                allowEmptyValues: a
             })]
         }));
         return r.updateOptionValidationStates(n, o), o
@@ -134,10 +134,10 @@ function(e, t, n) {
 
     function N(e, t, n, i, o) {
         var l;
-        let [u] = i, d = s.default.getActiveCommand(n), _ = null == d ? void 0 : null === (l = d.options) || void 0 === l ? void 0 : l.find(e => e.name === u.optionName);
+        let [u] = i, d = a.default.getActiveCommand(n), _ = null == d ? void 0 : null === (l = d.options) || void 0 === l ? void 0 : l.find(e => e.name === u.optionName);
         if (null == _) return;
         let c = A(e, _, u),
-            E = a.validateOptionContent({
+            E = s.validateOptionContent({
                 option: _,
                 content: c,
                 guildId: t,
@@ -156,9 +156,9 @@ function(e, t, n) {
         let n = c.EditorUtils.richValue(e),
             i = [],
             r = new Set(S(e)),
-            s = {},
-            a = new Set;
-        for (let e of t.options) s[e.displayName] = e, !r.has(e.name) && a.add(e.displayName);
+            a = {},
+            s = new Set;
+        for (let e of t.options) a[e.displayName] = e, !r.has(e.name) && s.add(e.displayName);
         let o = null;
         for (let t = 0; t < n.length; t++) {
             let r = n[t];
@@ -181,9 +181,9 @@ function(e, t, n) {
                         for (I.lastIndex = 0; null != (d = I.exec(E.text));) {
                             if (0 !== d.index && null == E.text.charAt(d.index - 1).match(/(\t|\s)/)) continue;
                             let e = d[1];
-                            if (!a.has(e)) continue;
-                            a.delete(e);
-                            let t = s[e];
+                            if (!s.has(e)) continue;
+                            s.delete(e);
+                            let t = a[e];
                             if (null == t) continue;
                             let r = {
                                     path: T,

@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("793030"),
         l = n("442837"),
         u = n("355467"),
@@ -25,13 +25,13 @@ function(e, t, n) {
         let {
             premiumUpsellType: t,
             className: n,
-            forceShow: s = !1
+            forceShow: a = !1
         } = e, h = (0, l.useStateFromStores)([d.default], () => d.default.affinities), A = h.length > 0 && S.includes(t), m = _.default.useExperiment({
             location: "HD Streaming Upsell"
         }, {
             autoTrackExposure: A,
-            disable: !A || s
-        }).enabled || s && A, N = (0, l.useStateFromStores)([d.default], () => d.default.hasFetched);
+            disable: !A || a
+        }).enabled || a && A, N = (0, l.useStateFromStores)([d.default], () => d.default.hasFetched);
         r.useEffect(() => {
             !N && u.getNitroAffinity()
         }, [N]);
@@ -41,7 +41,7 @@ function(e, t, n) {
             size: I.AvatarSizes.SIZE_20
         }, e.id));
         return m ? (0, i.jsxs)("div", {
-            className: a()(f.container, n),
+            className: s()(f.container, n),
             children: [(0, i.jsx)("div", {
                 className: f.iconContainer,
                 children: p

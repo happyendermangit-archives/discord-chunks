@@ -6,9 +6,9 @@ function(e, t, n) {
             return i
         },
         INDEXING_RESPONSE_CODE: function() {
-            return s
+            return a
         }
     });
-    let s = 202;
+    let a = 202;
     (r = i || (i = {}))[r.SUCCESSFUL_QUERY = 1] = "SUCCESSFUL_QUERY", r[r.ERROR = 2] = "ERROR"
 }

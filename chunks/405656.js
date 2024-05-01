@@ -43,8 +43,8 @@ function(e, t, n) {
     }), n("47120"), n("724458");
     var i = n("392711"),
         r = n.n(i),
-        s = n("349033"),
-        a = n("999650"),
+        a = n("349033"),
+        s = n("999650"),
         o = n("731290"),
         l = n("594174"),
         u = n("709054"),
@@ -102,13 +102,13 @@ function(e, t, n) {
                         i && (t.min_id = u.default.fromTimestamp(i)), r && (t.max_id = u.default.fromTimestamp(r));
                         return
                 }
-                let s = function(e) {
-                    let t = a.default[e],
+                let a = function(e) {
+                    let t = s.default[e],
                         n = null != t ? t.queryKey : null;
                     return null == n && (n = "content"), n
                 }(n);
-                null == t[s] && (t[s] = new Set);
-                let o = t[s];
+                null == t[a] && (t[a] = new Set);
+                let o = t[a];
                 switch (n) {
                     case d.SearchTokenTypes.ANSWER_USERNAME_FROM:
                     case d.SearchTokenTypes.ANSWER_USERNAME_MENTIONS:
@@ -136,10 +136,10 @@ function(e, t, n) {
 
     function f(e, t, n) {
         let i, r;
-        let s = e.find((s, a) => t >= s.start && t <= s.end && n >= s.start && n <= s.end ? (null != e[a + 1] && (r = e[a + 1]), !0) : (i = s, !1));
-        return null == s ? null : {
+        let a = e.find((a, s) => t >= a.start && t <= a.end && n >= a.start && n <= a.end ? (null != e[s + 1] && (r = e[s + 1]), !0) : (i = a, !1));
+        return null == a ? null : {
             previousToken: i,
-            currentToken: s,
+            currentToken: a,
             nextToken: r,
             focusOffset: t,
             anchorOffset: n
@@ -151,7 +151,7 @@ function(e, t, n) {
         let {
             currentToken: i,
             nextToken: r,
-            previousToken: a
+            previousToken: s
         } = e = null != e ? e : {};
         if (0 === t.length) return {
             type: d.SearchPopoutModes.EMPTY,
@@ -164,7 +164,7 @@ function(e, t, n) {
             token: null
         };
         if (d.IS_SEARCH_FILTER_TOKEN.test(i.type)) {
-            if (null == r || r.type === s.default.NON_TOKEN_TYPE) return {
+            if (null == r || r.type === a.default.NON_TOKEN_TYPE) return {
                 type: d.SearchPopoutModes.FILTER,
                 filter: i.type,
                 token: r
@@ -175,11 +175,11 @@ function(e, t, n) {
                 token: null
             }
         }
-        return i.type === s.default.NON_TOKEN_TYPE && null != a && d.IS_SEARCH_FILTER_TOKEN.test(a.type) ? {
+        return i.type === a.default.NON_TOKEN_TYPE && null != s && d.IS_SEARCH_FILTER_TOKEN.test(s.type) ? {
             type: d.SearchPopoutModes.FILTER,
-            filter: a.type,
+            filter: s.type,
             token: i
-        } : (i.type === s.default.NON_TOKEN_TYPE && (n = i), {
+        } : (i.type === a.default.NON_TOKEN_TYPE && (n = i), {
             type: d.SearchPopoutModes.FILTER_ALL,
             filter: null,
             token: n
@@ -196,7 +196,7 @@ function(e, t, n) {
                 if (t === d.SearchPopoutModes.FILTER_ALL) {
                     var r;
                     i = null !== (r = e.group) && void 0 !== r ? r : i;
-                    let t = a.default[i];
+                    let t = s.default[i];
                     (null == t ? void 0 : t.key) != null && (null == t ? void 0 : t.key) !== "" && (n = "".concat(t.key, " ").concat(n))
                 }
                 return n
@@ -211,7 +211,7 @@ function(e, t, n) {
     function m(e) {
         return null == e ? "" : e.map(e => e.getFullMatch()).join("")
     }
-    let N = new s.default;
+    let N = new a.default;
 
     function p(e) {
         return N.tokenize(e)
@@ -231,7 +231,7 @@ function(e, t, n) {
     }
 
     function g() {
-        (0, a.refreshSearchTokens)(), N.reset(), r()(a.default).forOwn((e, t) => N.addRule({
+        (0, s.refreshSearchTokens)(), N.reset(), r()(s.default).forOwn((e, t) => N.addRule({
             type: t,
             ...e
         }))

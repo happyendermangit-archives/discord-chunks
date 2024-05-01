@@ -5,12 +5,12 @@ function(e, t, n) {
             return r
         },
         useEditStateStore: function() {
-            return a
+            return s
         }
     });
-    var i, r, s = n("652874");
+    var i, r, a = n("652874");
     (i = r || (r = {}))[i.ALL_CHANNELS_ACCESS = 0] = "ALL_CHANNELS_ACCESS", i[i.SOME_CHANNELS_ACCESS = 1] = "SOME_CHANNELS_ACCESS";
-    let a = (0, s.default)(e => ({
+    let s = (0, a.default)(e => ({
         listings: {},
         setListing: (t, n) => e(e => ({
             listings: {

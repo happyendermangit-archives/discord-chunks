@@ -13,21 +13,21 @@ function(e, t, n) {
     });
     var i = n("442837"),
         r = n("430824"),
-        s = n("979651"),
-        a = n("565799"),
+        a = n("979651"),
+        s = n("565799"),
         o = n("501655");
 
     function l(e) {
         let t = function(e) {
-            return (0, i.useStateFromStores)([a.default], () => null != a.default.getMutableParticipants(e, o.StageChannelParticipantNamedIndex.SPEAKER).find(e => e.type === o.StageChannelParticipantTypes.STREAM), [e])
+            return (0, i.useStateFromStores)([s.default], () => null != s.default.getMutableParticipants(e, o.StageChannelParticipantNamedIndex.SPEAKER).find(e => e.type === o.StageChannelParticipantTypes.STREAM), [e])
         }(e);
-        return (0, i.useStateFromStores)([s.default], () => s.default.hasVideo(e), [e]) || t
+        return (0, i.useStateFromStores)([a.default], () => a.default.hasVideo(e), [e]) || t
     }
 
     function u(e) {
         return function(e) {
-            return null != a.default.getMutableParticipants(e, o.StageChannelParticipantNamedIndex.SPEAKER).find(e => e.type === o.StageChannelParticipantTypes.STREAM)
-        }(e) || s.default.hasVideo(e)
+            return null != s.default.getMutableParticipants(e, o.StageChannelParticipantNamedIndex.SPEAKER).find(e => e.type === o.StageChannelParticipantTypes.STREAM)
+        }(e) || a.default.hasVideo(e)
     }
 
     function d(e) {

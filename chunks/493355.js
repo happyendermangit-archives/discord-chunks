@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        s = n.n(r),
-        a = n("465670"),
+        a = n.n(r),
+        s = n("465670"),
         o = n("436088"),
         l = n("806519"),
         u = n("988406");
@@ -21,7 +21,7 @@ function(e, t, n) {
             className: r
         } = e;
         return (0, i.jsxs)("div", {
-            className: s()(u.icon, r),
+            className: a()(u.icon, r),
             children: [(0, i.jsx)(l.default, {
                 mask: l.default.Masks.STATUS_SCREENSHARE,
                 width: t,
@@ -30,7 +30,7 @@ function(e, t, n) {
                     width: t,
                     height: n
                 })
-            }), (0, i.jsx)(a.default, {
+            }), (0, i.jsx)(s.default, {
                 className: u.badge
             })]
         })

@@ -16,8 +16,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("470079"),
         r = n("442837"),
-        s = n("846519"),
-        a = n("594174"),
+        a = n("846519"),
+        s = n("594174"),
         o = n("295226"),
         l = n("74538"),
         u = n("474936");
@@ -34,10 +34,10 @@ function(e, t, n) {
     function c(e, t) {
         let n = (0, r.useStateFromStores)([o.default], () => o.default.getUserDiscountOffer(e)),
             [u, _] = i.useState(d(n)),
-            c = (0, r.useStateFromStores)([a.default], () => (0, l.isPremium)(a.default.getCurrentUser()));
+            c = (0, r.useStateFromStores)([s.default], () => (0, l.isPremium)(s.default.getCurrentUser()));
         return i.useEffect(() => {
             if (null == n || null == n.expires_at) return;
-            let e = new s.Timeout,
+            let e = new a.Timeout,
                 t = () => {
                     let i = null != n.expires_at ? Date.parse(n.expires_at) - Date.now() : 0;
                     null == e || e.start(i, () => {
@@ -53,8 +53,8 @@ function(e, t, n) {
         let n = c(u.PREMIUM_TIER_2_LIKELIHOOD_DISCOUNT_ID),
             i = c(u.PREMIUM_TIER_2_REACTIVATION_DISCOUNT_ID),
             r = c(u.PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_30_PERCENT_DISCOUNT_ID),
-            s = c(u.PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_40_PERCENT_DISCOUNT_ID);
-        return null !== (t = null !== (e = null != n ? n : i) && void 0 !== e ? e : r) && void 0 !== t ? t : s
+            a = c(u.PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_40_PERCENT_DISCOUNT_ID);
+        return null !== (t = null !== (e = null != n ? n : i) && void 0 !== e ? e : r) && void 0 !== t ? t : a
     }
 
     function I() {

@@ -3,27 +3,27 @@ function(e, t, n) {
     n.r(t);
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("142243");
     t.default = e => {
         let {
             src: t,
             alt: n,
-            size: s,
+            size: a,
             "aria-label": l,
             className: u
         } = e, d = r.useRef(null), _ = r.useRef(!1), c = _.current ? o.image : o.imageLoading;
         return (0, i.jsx)("img", {
-            className: a()(c, u),
+            className: s()(c, u),
             alt: n,
             src: t,
             ref: d,
             "aria-label": l,
             style: {
-                backgroundSize: s,
-                height: s,
-                width: s
+                backgroundSize: a,
+                height: a,
+                width: a
             },
             onLoad: _.current ? void 0 : () => {
                 window.requestAnimationFrame(() => {

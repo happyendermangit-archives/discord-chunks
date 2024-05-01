@@ -16,8 +16,8 @@ function(e, t, n) {
     });
     var i = n("544891"),
         r = n("430742"),
-        s = n("904245"),
-        a = n("623292"),
+        a = n("904245"),
+        s = n("623292"),
         o = n("592125"),
         l = n("703558"),
         u = n("375954"),
@@ -60,7 +60,7 @@ function(e, t, n) {
         });
         if (null != t.text && "" !== t.text) {
             let n = o.default.getChannel(e.channel_id);
-            null != n && ((0, a.createPendingReply)({
+            null != n && ((0, s.createPendingReply)({
                 channel: n,
                 message: e,
                 shouldMention: !1,
@@ -70,6 +70,6 @@ function(e, t, n) {
     }
 
     function f(e) {
-        u.default.getMessages(e).hasMoreAfter ? s.default.jumpToPresent(e, _.MAX_MESSAGES_PER_CHANNEL) : d.ComponentDispatch.dispatch(_.ComponentActions.SCROLLTO_PRESENT)
+        u.default.getMessages(e).hasMoreAfter ? a.default.jumpToPresent(e, _.MAX_MESSAGES_PER_CHANNEL) : d.ComponentDispatch.dispatch(_.ComponentActions.SCROLLTO_PRESENT)
     }
 }

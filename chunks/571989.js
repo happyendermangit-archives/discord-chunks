@@ -16,33 +16,33 @@ function(e, t, n) {
     function r(e) {
         return e.replace(i, "")
     }
-    let s = [{
+    let a = [{
         character: "h",
-        matcher: a(["H", "һ", "հ", "Ꮒ", "ℎ", "\uD835\uDC21", "\uD835\uDC89", "\uD835\uDCBD", "\uD835\uDCF1", "\uD835\uDD25", "\uD835\uDD59", "\uD835\uDD8D", "\uD835\uDDC1", "\uD835\uDDF5", "\uD835\uDE29", "\uD835\uDE5D", "\uD835\uDE91", "ｈ"])
+        matcher: s(["H", "һ", "հ", "Ꮒ", "ℎ", "\uD835\uDC21", "\uD835\uDC89", "\uD835\uDCBD", "\uD835\uDCF1", "\uD835\uDD25", "\uD835\uDD59", "\uD835\uDD8D", "\uD835\uDDC1", "\uD835\uDDF5", "\uD835\uDE29", "\uD835\uDE5D", "\uD835\uDE91", "ｈ"])
     }, {
         character: "t",
-        matcher: a(["T", "\uD835\uDC2D", "\uD835\uDC61", "\uD835\uDC95", "\uD835\uDCC9", "\uD835\uDCFD", "\uD835\uDD31", "\uD835\uDD65", "\uD835\uDD99", "\uD835\uDDCD", "\uD835\uDE01", "\uD835\uDE35", "\uD835\uDE69", "\uD835\uDE9D"])
+        matcher: s(["T", "\uD835\uDC2D", "\uD835\uDC61", "\uD835\uDC95", "\uD835\uDCC9", "\uD835\uDCFD", "\uD835\uDD31", "\uD835\uDD65", "\uD835\uDD99", "\uD835\uDDCD", "\uD835\uDE01", "\uD835\uDE35", "\uD835\uDE69", "\uD835\uDE9D"])
     }, {
         character: "p",
-        matcher: a(["P", "ρ", "ϱ", "р", "⍴", "ⲣ", "\uD835\uDC29", "\uD835\uDC5D", "\uD835\uDC91", "\uD835\uDCC5", "\uD835\uDCF9", "\uD835\uDD2D", "\uD835\uDD61", "\uD835\uDD95", "\uD835\uDDC9", "\uD835\uDDFD", "\uD835\uDE31", "\uD835\uDE65", "\uD835\uDE99", "\uD835\uDED2", "\uD835\uDEE0", "\uD835\uDF0C", "\uD835\uDF1A", "\uD835\uDF46", "\uD835\uDF54", "\uD835\uDF80", "\uD835\uDF8E", "\uD835\uDFBA", "\uD835\uDFC8", "ｐ", "ҏ"])
+        matcher: s(["P", "ρ", "ϱ", "р", "⍴", "ⲣ", "\uD835\uDC29", "\uD835\uDC5D", "\uD835\uDC91", "\uD835\uDCC5", "\uD835\uDCF9", "\uD835\uDD2D", "\uD835\uDD61", "\uD835\uDD95", "\uD835\uDDC9", "\uD835\uDDFD", "\uD835\uDE31", "\uD835\uDE65", "\uD835\uDE99", "\uD835\uDED2", "\uD835\uDEE0", "\uD835\uDF0C", "\uD835\uDF1A", "\uD835\uDF46", "\uD835\uDF54", "\uD835\uDF80", "\uD835\uDF8E", "\uD835\uDFBA", "\uD835\uDFC8", "ｐ", "ҏ"])
     }, {
         character: "s",
-        matcher: a(["S", "ƽ", "ѕ", "ꜱ", "ꮪ", "\uD801\uDC48", "\uD806\uDCC1", "\uD835\uDC2C", "\uD835\uDC60", "\uD835\uDC94", "\uD835\uDCC8", "\uD835\uDCFC", "\uD835\uDD30", "\uD835\uDD64", "\uD835\uDD98", "\uD835\uDDCC", "\uD835\uDE00", "\uD835\uDE34", "\uD835\uDE68", "\uD835\uDE9C", "ｓ"])
+        matcher: s(["S", "ƽ", "ѕ", "ꜱ", "ꮪ", "\uD801\uDC48", "\uD806\uDCC1", "\uD835\uDC2C", "\uD835\uDC60", "\uD835\uDC94", "\uD835\uDCC8", "\uD835\uDCFC", "\uD835\uDD30", "\uD835\uDD64", "\uD835\uDD98", "\uD835\uDDCC", "\uD835\uDE00", "\uD835\uDE34", "\uD835\uDE68", "\uD835\uDE9C", "ｓ"])
     }, {
         character: ":",
-        matcher: a(["ː", "˸", "։", "׃", "܃", "܄", "ः", "ઃ", "᛬", "᠃", "᠉", "⁚", "∶", "ꓽ", "꞉", "︰", "：", ";", ";"])
+        matcher: s(["ː", "˸", "։", "׃", "܃", "܄", "ः", "ઃ", "᛬", "᠃", "᠉", "⁚", "∶", "ꓽ", "꞉", "︰", "：", ";", ";"])
     }, {
         character: "/",
-        matcher: a(["᜵", "⁁", "⁄", "∕", "╱", "⟋", "⧸", "Ⳇ", "⼃", "〳", "ノ", "㇓", "丿", "\uD834\uDE3A"])
+        matcher: s(["᜵", "⁁", "⁄", "∕", "╱", "⟋", "⧸", "Ⳇ", "⼃", "〳", "ノ", "㇓", "丿", "\uD834\uDE3A"])
     }];
 
-    function a(e) {
+    function s(e) {
         return RegExp(e.join("|"), "gu")
     }
 
     function o(e) {
         let t = e;
-        return s.forEach(e => {
+        return a.forEach(e => {
             t = t.replace(e.matcher, e.character)
         }), t
     }
@@ -68,7 +68,7 @@ function(e, t, n) {
             i = e,
             r = t;
         for (; i.length > 0;) {
-            var s;
+            var a;
             let e = i.codePointAt(0),
                 t = r.codePointAt(0);
             if (e === t) {
@@ -76,10 +76,10 @@ function(e, t, n) {
                 n += t, i = i.substring(t.length), r = r.substring(t.length);
                 continue
             }
-            let a = String.fromCodePoint(t),
-                o = encodeURIComponent(a),
-                u = o === a ? 3 : o.length;
-            n += ((s = t) >= 0 && s < 128 ? 1 !== l[s] : 8206 === s || 8207 === s || 8234 === s || 8235 === s || 8236 === s || 8237 === s || 8238 === s || 1564 === s || 8294 === s || 8295 === s || 8296 === s || 8297 === s || 128271 === s || 128272 === s || 128274 === s || 128275 === s || 133 === s || 160 === s || 5760 === s || 8192 === s || 8193 === s || 8194 === s || 8195 === s || 8196 === s || 8197 === s || 8198 === s || 8199 === s || 8200 === s || 8201 === s || 8202 === s || 8232 === s || 8233 === s || 8239 === s || 8287 === s || 12288 === s || 10240 === s || 173 === s || 847 === s || s >= 1536 && s <= 1541 || 1757 === s || 1807 === s || 2274 === s || 4447 === s || 4448 === s || 6068 === s || 6069 === s || 6155 === s || 6156 === s || 6157 === s || 6158 === s || 8203 === s || 8204 === s || 8205 === s || 8288 === s || 8289 === s || 8290 === s || 8291 === s || 8292 === s || 8293 === s || s >= 8298 && s <= 8303 || 12644 === s || s >= 65520 && s <= 65528 || s >= 65024 && s <= 65039 || 65279 === s || 65440 === s || 65529 === s || 65530 === s || 65531 === s || 69821 === s || 69837 === s || s >= 78896 && s <= 78904 || s >= 113824 && s <= 113827 || s >= 119155 && s <= 119162 || s >= 917504 && s <= 921599) ? o : a, i = i.substring(u), r = r.substring(a.length)
+            let s = String.fromCodePoint(t),
+                o = encodeURIComponent(s),
+                u = o === s ? 3 : o.length;
+            n += ((a = t) >= 0 && a < 128 ? 1 !== l[a] : 8206 === a || 8207 === a || 8234 === a || 8235 === a || 8236 === a || 8237 === a || 8238 === a || 1564 === a || 8294 === a || 8295 === a || 8296 === a || 8297 === a || 128271 === a || 128272 === a || 128274 === a || 128275 === a || 133 === a || 160 === a || 5760 === a || 8192 === a || 8193 === a || 8194 === a || 8195 === a || 8196 === a || 8197 === a || 8198 === a || 8199 === a || 8200 === a || 8201 === a || 8202 === a || 8232 === a || 8233 === a || 8239 === a || 8287 === a || 12288 === a || 10240 === a || 173 === a || 847 === a || a >= 1536 && a <= 1541 || 1757 === a || 1807 === a || 2274 === a || 4447 === a || 4448 === a || 6068 === a || 6069 === a || 6155 === a || 6156 === a || 6157 === a || 6158 === a || 8203 === a || 8204 === a || 8205 === a || 8288 === a || 8289 === a || 8290 === a || 8291 === a || 8292 === a || 8293 === a || a >= 8298 && a <= 8303 || 12644 === a || a >= 65520 && a <= 65528 || a >= 65024 && a <= 65039 || 65279 === a || 65440 === a || 65529 === a || 65530 === a || 65531 === a || 69821 === a || 69837 === a || a >= 78896 && a <= 78904 || a >= 113824 && a <= 113827 || a >= 119155 && a <= 119162 || a >= 917504 && a <= 921599) ? o : s, i = i.substring(u), r = r.substring(s.length)
         }
         return n
     }

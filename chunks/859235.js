@@ -5,8 +5,8 @@ function(e, t, n) {
             return r
         }
     });
-    var i, r, s = n("735250"),
-        a = n("470079"),
+    var i, r, a = n("735250"),
+        s = n("470079"),
         o = n("120356"),
         l = n.n(o),
         u = n("924826"),
@@ -22,12 +22,12 @@ function(e, t, n) {
     function h(e) {
         e.stopPropagation()
     }(i = r || (r = {}))[i.SMALL = 0] = "SMALL", i[i.MEDIUM = 1] = "MEDIUM", i[i.CLIP = 2] = "CLIP";
-    t.default = a.forwardRef(function(e, t) {
+    t.default = s.forwardRef(function(e, t) {
         let {
             id: n,
             channelId: i,
             className: r,
-            children: a,
+            children: s,
             actions: o,
             handleEditModal: A,
             keyboardModeEnabled: m,
@@ -41,8 +41,8 @@ function(e, t, n) {
             handleFocus: g,
             handleBlur: L
         } = (0, I.useFocusInside)(R), v = 0 === O, D = null != o;
-        return (0, s.jsx)(d.FocusRing, {
-            children: (0, s.jsx)("li", {
+        return (0, a.jsx)(d.FocusRing, {
+            children: (0, a.jsx)("li", {
                 ...C,
                 onFocus: g,
                 onBlur: L,
@@ -71,17 +71,17 @@ function(e, t, n) {
                     [S.sizeClip]: 2 === O
                 }),
                 ref: t,
-                children: (0, s.jsxs)("div", {
+                children: (0, a.jsxs)("div", {
                     className: S.uploadContainer,
-                    children: [a, D ? (0, s.jsx)("div", {
+                    children: [s, D ? (0, a.jsx)("div", {
                         className: S.actionBarContainer,
-                        children: (0, s.jsx)("div", {
+                        children: (0, a.jsx)("div", {
                             className: l()(S.actionBar, {
                                 [S.smallActionBar]: v
                             }),
                             onContextMenu: h,
                             "aria-label": f.default.Messages.ATTACHMENT_UTILITIES,
-                            children: (0, s.jsx)(c.default, {
+                            children: (0, a.jsx)(c.default, {
                                 className: l()({
                                     [S.miniPopover]: v
                                 }),

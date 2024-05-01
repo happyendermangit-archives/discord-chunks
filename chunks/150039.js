@@ -37,8 +37,8 @@ function(e, t, n) {
     }), n("653041");
     var i = n("470079"),
         r = n("442837"),
-        s = n("809206"),
-        a = n("18438"),
+        a = n("809206"),
+        s = n("18438"),
         o = n("778825"),
         l = n("350327"),
         u = n("621853"),
@@ -51,8 +51,8 @@ function(e, t, n) {
                 n = {};
             for (let r in t) {
                 var i;
-                let s = null === (i = t[r][e]) || void 0 === i ? void 0 : i.avatar;
-                null != s && (null == n[s] && (n[s] = []), n[s].push(r))
+                let a = null === (i = t[r][e]) || void 0 === i ? void 0 : i.avatar;
+                null != a && (null == n[a] && (n[a] = []), n[a].push(r))
             }
             return null != n ? Object.entries(n).map(e => e[1][0]) : []
         }, [e])
@@ -62,13 +62,13 @@ function(e, t, n) {
         let n = (0, r.useStateFromStores)([d.default], () => void 0 === t ? null : d.default.getMember(t.id, e.id)),
             {
                 pendingUserAvatarDecoration: i,
-                userErrors: s
+                userErrors: a
             } = (0, r.useStateFromStoresObject)([_.default], () => ({
                 pendingUserAvatarDecoration: _.default.getPendingAvatarDecoration(),
                 userErrors: _.default.getErrors().avatarDecoration
             })),
             {
-                pendingGuildAvatarDecoration: a,
+                pendingGuildAvatarDecoration: s,
                 guildErrors: l
             } = (0, r.useStateFromStoresObject)([o.default], () => ({
                 pendingGuildAvatarDecoration: o.default.getPendingAvatarDecoration(),
@@ -77,8 +77,8 @@ function(e, t, n) {
         return {
             userAvatarDecoration: e.avatarDecoration,
             guildAvatarDecoration: null == n ? void 0 : n.avatarDecoration,
-            pendingAvatarDecoration: null != t ? a : i,
-            pendingErrors: null != t ? l : s
+            pendingAvatarDecoration: null != t ? s : i,
+            pendingErrors: null != t ? l : a
         }
     }
 
@@ -104,19 +104,19 @@ function(e, t, n) {
     }
 
     function S(e, t) {
-        (0, s.setPendingAvatar)(e === t ? void 0 : e)
+        (0, a.setPendingAvatar)(e === t ? void 0 : e)
     }
 
     function h(e, t) {
-        (null != e ? a.setPendingAvatarDecoration : s.setPendingAvatarDecoration)(t)
+        (null != e ? s.setPendingAvatarDecoration : a.setPendingAvatarDecoration)(t)
     }
 
     function A(e, t, n) {
         if (e === t) {
-            null == n ? (0, s.setPendingProfileEffectId)(void 0) : (0, a.setPendingProfileEffectId)(void 0);
+            null == n ? (0, a.setPendingProfileEffectId)(void 0) : (0, s.setPendingProfileEffectId)(void 0);
             return
         }
-        null == n ? (0, s.setPendingProfileEffectId)(e) : (0, a.setPendingProfileEffectId)(e)
+        null == n ? (0, a.setPendingProfileEffectId)(e) : (0, s.setPendingProfileEffectId)(e)
     }
 
     function m(e, t, n) {

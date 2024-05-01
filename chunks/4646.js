@@ -10,7 +10,7 @@ function(e, t, n) {
         }) : e[t] = n, e
     }
     async function r(e) {
-        let t = new s,
+        let t = new a,
             n = [];
         for (let i of Object.keys(e)) n.push(t.loadRemoteImage(i, e[i]));
         return await Promise.all(n), t
@@ -20,7 +20,7 @@ function(e, t, n) {
             return r
         }
     }), n("653041"), n("47120");
-    class s {
+    class a {
         loadFonts() {
             return Promise.resolve()
         }

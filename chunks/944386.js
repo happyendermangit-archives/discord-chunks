@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("470079"),
         r = n("367907"),
-        s = n("592125"),
-        a = n("944486"),
+        a = n("592125"),
+        s = n("944486"),
         o = n("626135"),
         l = n("130402"),
         u = n("185923"),
@@ -25,7 +25,7 @@ function(e, t, n) {
         } = i.useRef({
             guild_id: n,
             emoji_id: t,
-            ...(0, r.collectChannelAnalyticsMetadata)(s.default.getChannel(a.default.getChannelId(n)))
+            ...(0, r.collectChannelAnalyticsMetadata)(a.default.getChannel(s.default.getChannelId(n)))
         });
         return i.useEffect(() => {
             var e;

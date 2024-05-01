@@ -16,8 +16,8 @@ function(e, t, n) {
     });
     var i = n("57132"),
         r = n("215355"),
-        s = n("289551"),
-        a = n("981631");
+        a = n("289551"),
+        s = n("981631");
 
     function o() {
         return (0, i.isInMainTabsExperiment)()
@@ -31,11 +31,11 @@ function(e, t, n) {
 
     function u() {
         if (!l()) return !1;
-        let e = (0, s.default)();
+        let e = (0, a.default)();
         return (null == e ? void 0 : e.name) === "messages"
     }
 
     function d(e) {
-        return !!o() && (!l() || null != e && e !== a.ME)
+        return !!o() && (!l() || null != e && e !== s.ME)
     }
 }

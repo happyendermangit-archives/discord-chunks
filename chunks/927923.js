@@ -38,7 +38,7 @@ function(e, t, n) {
             return l
         }
     }), n("610138"), n("216116"), n("78328"), n("815648"), n("47120");
-    var i, r, s, a, o = n("981631");
+    var i, r, a, s, o = n("981631");
     let l = "xbox://communitylinking/donut/audio",
         u = "https://www.xbox.com/en-US/apps/xbox-app-for-mobile",
         d = "https://login.live.com",
@@ -51,22 +51,22 @@ function(e, t, n) {
                 channelName: n,
                 guildName: i,
                 channelId: r,
-                muted: s,
-                deafened: a,
+                muted: a,
+                deafened: s,
                 nonce: o
             } = e, l = {
                 channelid: r,
                 guildid: t,
                 channelname: n,
                 guildname: i,
-                muted: String(s),
-                deafened: String(a)
+                muted: String(a),
+                deafened: String(s)
             };
             return null != o && (l.nonce = o), new URLSearchParams(l)
         };
-    (s = i || (i = {})).PLAYSTATION = "playstation", s.XBOX = "xbox";
+    (a = i || (i = {})).PLAYSTATION = "playstation", a.XBOX = "xbox";
     let T = new Set(["xbox", "playstation"]);
-    o.ActivityGamePlatforms.XBOX, o.ActivityGamePlatforms.PS5, (a = r || (r = {}))[a.CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED = 27e4] = "CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED", a[a.CONSOLE_DEVICE_UNAVAILABLE = 270001] = "CONSOLE_DEVICE_UNAVAILABLE", a[a.CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS = 270002] = "CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS", a[a.CONSOLE_DEVICE_COMMUNICATION_RESTRICTED = 270003] = "CONSOLE_DEVICE_COMMUNICATION_RESTRICTED", a[a.CONSOLE_DEVICE_INVALID_POWER_MODE = 270004] = "CONSOLE_DEVICE_INVALID_POWER_MODE", a[a.CONSOLE_DEVICE_ACCOUNT_LINK_ERROR = 270005] = "CONSOLE_DEVICE_ACCOUNT_LINK_ERROR", a[a.CONSOLE_DEVICE_MAX_MEMBERS_REACHED = 270006] = "CONSOLE_DEVICE_MAX_MEMBERS_REACHED", a[a.CONSOLE_DEVICE_BAD_COMMAND = 270007] = "CONSOLE_DEVICE_BAD_COMMAND";
+    o.ActivityGamePlatforms.XBOX, o.ActivityGamePlatforms.PS5, (s = r || (r = {}))[s.CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED = 27e4] = "CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED", s[s.CONSOLE_DEVICE_UNAVAILABLE = 270001] = "CONSOLE_DEVICE_UNAVAILABLE", s[s.CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS = 270002] = "CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS", s[s.CONSOLE_DEVICE_COMMUNICATION_RESTRICTED = 270003] = "CONSOLE_DEVICE_COMMUNICATION_RESTRICTED", s[s.CONSOLE_DEVICE_INVALID_POWER_MODE = 270004] = "CONSOLE_DEVICE_INVALID_POWER_MODE", s[s.CONSOLE_DEVICE_ACCOUNT_LINK_ERROR = 270005] = "CONSOLE_DEVICE_ACCOUNT_LINK_ERROR", s[s.CONSOLE_DEVICE_MAX_MEMBERS_REACHED = 270006] = "CONSOLE_DEVICE_MAX_MEMBERS_REACHED", s[s.CONSOLE_DEVICE_BAD_COMMAND = 270007] = "CONSOLE_DEVICE_BAD_COMMAND";
     let f = new Set([27e4]),
         S = "console error alert"
 }

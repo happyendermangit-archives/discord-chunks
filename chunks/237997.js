@@ -2,8 +2,8 @@ function(e, t, n) {
     "use strict";
     n.r(t), n("47120"), n("411104");
     var i, r = n("442837"),
-        s = n("433517"),
-        a = n("570140"),
+        a = n("433517"),
+        s = n("570140"),
         o = n("284737"),
         l = n("490029"),
         u = n("48481"),
@@ -84,8 +84,8 @@ function(e, t, n) {
                 break;
             case m.OverlayEventTypes.DISPATCH:
                 null != e.payloads && (M = !0, e.payloads.forEach(e => (function(e) {
-                    var t, n, i, r, s, o;
-                    if ("OVERLAY_INITIALIZE" === e.type && (null == (o = e).version && 1 === h.OVERLAY_VERSION || o.version === h.OVERLAY_VERSION || (a.default.dispatch({
+                    var t, n, i, r, a, o;
+                    if ("OVERLAY_INITIALIZE" === e.type && (null == (o = e).version && 1 === h.OVERLAY_VERSION || o.version === h.OVERLAY_VERSION || (s.default.dispatch({
                             type: "OVERLAY_INCOMPATIBLE_APP"
                         }), (0, l.disconnect)(), 0))) y = !0;
                     if (y) switch (e.type) {
@@ -96,22 +96,22 @@ function(e, t, n) {
                         case "THREAD_DELETE":
                             let _ = (0, d.createChannelRecord)(e.channel);
                             if (!d.ALL_CHANNEL_TYPES.has(_.type)) break;
-                            a.default.dispatch({
+                            s.default.dispatch({
                                 type: e.type,
                                 channel: _
                             });
                             break;
                         case "CHANNEL_UPDATES":
-                            a.default.dispatch({
+                            s.default.dispatch({
                                 type: e.type,
                                 channels: e.channels.map(e => (0, d.createChannelRecord)(e))
                             });
                             break;
                         case "CONNECTION_OPEN_SUPPLEMENTAL":
-                            e.lazyPrivateChannels = (null !== (t = e.lazyPrivateChannels) && void 0 !== t ? t : []).map(e => (0, d.createChannelRecord)(e)), a.default.dispatch(e);
+                            e.lazyPrivateChannels = (null !== (t = e.lazyPrivateChannels) && void 0 !== t ? t : []).map(e => (0, d.createChannelRecord)(e)), s.default.dispatch(e);
                             break;
                         case "THREAD_LIST_SYNC":
-                            a.default.dispatch({
+                            s.default.dispatch({
                                 ...e,
                                 threads: e.threads.map(e => (0, d.createChannelRecord)(e))
                             });
@@ -119,13 +119,13 @@ function(e, t, n) {
                         case "GUILD_CREATE":
                             let c = e => (0, d.createChannelRecord)(e),
                                 E = e.guild;
-                            E.channels = null !== (r = null === (n = E.channels) || void 0 === n ? void 0 : n.map(c)) && void 0 !== r ? r : null, E.threads = null === (i = E.threads) || void 0 === i ? void 0 : i.map(c), null != E.channelUpdates && (E.channelUpdates.writes = null === (s = E.channelUpdates.writes) || void 0 === s ? void 0 : s.map(c)), a.default.dispatch({
+                            E.channels = null !== (r = null === (n = E.channels) || void 0 === n ? void 0 : n.map(c)) && void 0 !== r ? r : null, E.threads = null === (i = E.threads) || void 0 === i ? void 0 : i.map(c), null != E.channelUpdates && (E.channelUpdates.writes = null === (a = E.channelUpdates.writes) || void 0 === a ? void 0 : a.map(c)), s.default.dispatch({
                                 type: "GUILD_CREATE",
                                 guild: E
                             });
                             break;
                         case "USER_SETTINGS_PROTO_UPDATE":
-                            a.default.dispatch({
+                            s.default.dispatch({
                                 ...e,
                                 settings: {
                                     proto: (0, u.b64ToProtoWithType)(e.settings.type, e.settings.proto),
@@ -134,7 +134,7 @@ function(e, t, n) {
                             });
                             break;
                         default:
-                            a.default.dispatch(e)
+                            s.default.dispatch(e)
                     }
                 })(e)), M = !1)
         }
@@ -233,7 +233,7 @@ function(e, t, n) {
             v: i,
             ...r
         } = {
-            ...s.Storage.get("OverlayStore")
+            ...a.Storage.get("OverlayStore")
         };
         return {
             ...O,
@@ -246,7 +246,7 @@ function(e, t, n) {
                 ...e
             }
         }
-    }]), t.default = new F(a.default, {
+    }]), t.default = new F(s.default, {
         LOGOUT: function(e) {
             !e.isSwitchingAccount && (C = {})
         },
@@ -257,7 +257,7 @@ function(e, t, n) {
             L.clear()
         },
         OVERLAY_START_SESSION: function() {
-            a.default.addInterceptor(e => {
+            s.default.addInterceptor(e => {
                 if (M || !B.has(e.type)) return !1;
                 if ("CHANNEL_SELECT" === e.type) {
                     let {

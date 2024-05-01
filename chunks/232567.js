@@ -22,15 +22,15 @@ function(e, t, n) {
     }), n("789020");
     var i = n("512722"),
         r = n.n(i),
-        s = n("525769"),
-        a = n("259443"),
+        a = n("525769"),
+        s = n("259443"),
         o = n("544891"),
         l = n("570140"),
         u = n("598077"),
         d = n("594174"),
         _ = n("573261"),
         c = n("981631");
-    let E = new a.Logger("UserProfileModalActionCreators");
+    let E = new s.Logger("UserProfileModalActionCreators");
 
     function I() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
@@ -56,7 +56,7 @@ function(e, t, n) {
         return _.default.patch({
             url: c.Endpoints.USER_AGREEMENTS,
             trackedActionData: {
-                event: s.NetworkActionNames.USER_ACCEPT_AGREEMENTS
+                event: a.NetworkActionNames.USER_ACCEPT_AGREEMENTS
             },
             body: {
                 terms: e,
@@ -95,8 +95,8 @@ function(e, t, n) {
             withMutualGuilds: n,
             withMutualFriendsCount: i,
             withMutualFriends: r,
-            guildId: s,
-            connectionsRoleId: a
+            guildId: a,
+            connectionsRoleId: s
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, u = arguments.length > 2 ? arguments[2] : void 0;
         l.default.dispatch({
             type: "USER_PROFILE_FETCH_START",
@@ -110,20 +110,20 @@ function(e, t, n) {
                     with_mutual_guilds: n,
                     with_mutual_friends: r,
                     with_mutual_friends_count: i && (null == r || !r),
-                    guild_id: s,
-                    connections_role_id: a
+                    guild_id: a,
+                    connections_role_id: s
                 },
                 oldFormErrors: !0
             });
-            return null == u || u(d.body, s), l.default.dispatch({
+            return null == u || u(d.body, a), l.default.dispatch({
                 type: "USER_UPDATE",
                 user: d.body.user
             }), l.default.dispatch({
                 type: "USER_PROFILE_FETCH_SUCCESS",
                 ...d.body
-            }), null != s && null != d.body.guild_member && l.default.dispatch({
+            }), null != a && null != d.body.guild_member && l.default.dispatch({
                 type: "GUILD_MEMBER_PROFILE_UPDATE",
-                guildId: s,
+                guildId: a,
                 guildMember: d.body.guild_member
             }), d.body
         } catch (t) {

@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("773603"), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("913527"),
         l = n.n(o),
         u = n("235874"),
@@ -39,14 +39,14 @@ function(e, t, n) {
         let {
             onClose: t,
             referralsRemaining: n,
-            recipient: s,
+            recipient: a,
             analyticsLocations: o,
             shouldShowBirthdayUX: l
         } = e, [u, _] = r.useState(!1), c = n - 1;
         return (0, i.jsxs)("div", {
             className: p.confirmationContainer,
             children: [(0, i.jsxs)("div", {
-                className: a()({
+                className: s()({
                     [p.confirmationBody]: !l,
                     [p.confirmationBirthdayBody]: l
                 }),
@@ -78,10 +78,10 @@ function(e, t, n) {
                     className: p.confirmationShareButton,
                     submitting: u,
                     onClick: () => {
-                        L(s, t, _), I.default.track(m.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
+                        L(a, t, _), I.default.track(m.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
                             location_stack: o,
                             step: A.ReferralTrialsAnalyticSteps.FLOW_COMPLETED,
-                            other_user_id: Number(s)
+                            other_user_id: Number(a)
                         })
                     },
                     children: N.default.Messages.SHAER_NITRO_CONFIRMATION_BUTTON_TEXT
@@ -104,7 +104,7 @@ function(e, t, n) {
         let {
             referralsRemaining: t,
             channel: n,
-            onClose: s,
+            onClose: a,
             isResending: o
         } = e, [u, _] = r.useState(!1), [S, C] = r.useState(!1), D = n.isDM() && void 0 !== n.recipients ? n.recipients[0] : null, {
             analyticsLocations: M
@@ -116,7 +116,7 @@ function(e, t, n) {
             autoTrackExposure: !0
         }), P = new Date("2023-06-15T08:00:00-08:00");
         return null == D ? null : u ? (0, i.jsx)(v, {
-            onClose: s,
+            onClose: a,
             referralsRemaining: t,
             recipient: D,
             analyticsLocations: M,
@@ -132,7 +132,7 @@ function(e, t, n) {
                 }), (0, i.jsxs)("div", {
                     className: p.innerContent,
                     children: [(0, i.jsx)(d.ModalCloseButton, {
-                        onClick: s,
+                        onClick: a,
                         className: p.closeButton
                     }), (0, i.jsx)(d.Heading, {
                         className: p.generalHeading,
@@ -142,7 +142,7 @@ function(e, t, n) {
                         className: p.generalBodyCopy,
                         variant: "text-md/normal",
                         children: [(0, i.jsx)(d.Anchor, {
-                            className: a()(p.learnMore, {
+                            className: s()(p.learnMore, {
                                 [p.learnMoreResendUnderlinedText]: o
                             }),
                             href: f.default.getArticleURL(m.HelpdeskArticles.SHARE_NITRO_FAQ),
@@ -169,7 +169,7 @@ function(e, t, n) {
                     className: p.generalShareButton,
                     submitting: S,
                     onClick: () => {
-                        o ? L(D, s, C) : (_(!0), I.default.track(m.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
+                        o ? L(D, a, C) : (_(!0), I.default.track(m.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
                             location_stack: M,
                             step: A.ReferralTrialsAnalyticSteps.FLOW_STARTED,
                             other_user_id: Number(D)
@@ -186,8 +186,8 @@ function(e, t, n) {
             shouldShowPopout: t,
             referralsRemaining: n,
             channel: r,
-            onClose: s,
-            isResending: a
+            onClose: a,
+            isResending: s
         } = e;
         return t ? (0, i.jsx)("div", {
             onMouseDown: e => e.stopPropagation(),
@@ -199,8 +199,8 @@ function(e, t, n) {
                     ...e,
                     referralsRemaining: n,
                     channel: r,
-                    onClose: s,
-                    isResending: a
+                    onClose: a,
+                    isResending: s
                 }),
                 onRequestClose: () => void 0,
                 closeOnScroll: !1,

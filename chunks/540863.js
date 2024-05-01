@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("15127"),
-        a = n("512983");
+        a = n("15127"),
+        s = n("512983");
     let o = r.forwardRef(function(e, t) {
         var n, o;
         let {
@@ -27,7 +27,7 @@ function(e, t, n) {
             ref: t,
             className: null != d ? d : void 0,
             style: null != I ? I : void 0,
-            children: [null != T || null != f ? (0, i.jsx)(a.FormTitle, {
+            children: [null != T || null != f ? (0, i.jsx)(s.FormTitle, {
                 tag: c,
                 disabled: u,
                 required: E,
@@ -37,7 +37,7 @@ function(e, t, n) {
                 errorId: N,
                 ...S,
                 children: T
-            }) : null, (0, i.jsx)(s.FormContextProvider, {
+            }) : null, (0, i.jsx)(a.FormContextProvider, {
                 titleId: m,
                 errorId: N,
                 error: null != f ? f : void 0,

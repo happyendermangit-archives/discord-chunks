@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("979590"),
         r = n.n(i),
-        s = n("866442"),
-        a = n("81825");
+        a = n("866442"),
+        s = n("81825");
 
     function o(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
@@ -19,24 +19,24 @@ function(e, t, n) {
         }) : e[t] = n, e
     }
     let l = e => null == e ? e : {
-        backgroundColors: e.background_colors.map(e => r()((0, s.int2hex)(e))),
-        buttonColors: e.button_colors.map(e => r()((0, s.int2hex)(e))),
-        confettiColors: e.confetti_colors.map(e => r()((0, s.int2hex)(e)))
+        backgroundColors: e.background_colors.map(e => r()((0, a.int2hex)(e))),
+        buttonColors: e.button_colors.map(e => r()((0, a.int2hex)(e))),
+        confettiColors: e.confetti_colors.map(e => r()((0, a.int2hex)(e)))
     };
-    class u extends a.default {
+    class u extends s.default {
         static fromServer(e) {
             let {
                 store_listing_id: t,
                 sku_id: n,
                 unpublished_at: i,
                 styles: r,
-                ...s
-            } = e, a = null != i ? new Date(i) : null;
+                ...a
+            } = e, s = null != i ? new Date(i) : null;
             return new u({
-                ...s,
+                ...a,
                 storeListingId: t,
                 skuId: n,
-                unpublishedAt: a,
+                unpublishedAt: s,
                 styles: l(r)
             })
         }

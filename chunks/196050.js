@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t);
     var i = n("735250"),
         r = n("470079"),
-        s = n("335854"),
-        a = n("481060"),
+        a = n("335854"),
+        s = n("481060"),
         o = n("626135"),
         l = n("943461"),
         u = n("981631"),
@@ -21,13 +21,13 @@ function(e, t, n) {
             focusProps: f,
             onClick: S,
             ...h
-        } = e, A = r.useMemo(() => s.designConfig.getDefaultLinkInterceptor(t), [t]), m = r.useCallback(e => {
+        } = e, A = r.useMemo(() => a.designConfig.getDefaultLinkInterceptor(t), [t]), m = r.useCallback(e => {
             o.default.track(u.AnalyticEvents.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
                 attachment_type: null == I ? void 0 : I[0],
                 attachment_subtype: null == I ? void 0 : I[1]
             }), null == S || S(), null == A || A(e)
         }, [A, I, S]);
-        return null != T ? (0, i.jsx)(a.Anchor, {
+        return null != T ? (0, i.jsx)(s.Anchor, {
             href: t,
             onClick: m,
             target: E,
@@ -37,7 +37,7 @@ function(e, t, n) {
             focusProps: f,
             ...h,
             children: T
-        }) : (0, i.jsx)(a.Anchor, {
+        }) : (0, i.jsx)(s.Anchor, {
             href: t,
             onClick: m,
             target: E,

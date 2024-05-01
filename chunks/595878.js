@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         isUserEligibleForNitroTenureRewardCard: function() {
-            return s
+            return a
         },
         useUserEligibleForNitroTenureRewardCard: function() {
             return r
@@ -23,7 +23,7 @@ function(e, t, n) {
         return n
     }
 
-    function s(e) {
+    function a(e) {
         let {
             location: t
         } = e, {

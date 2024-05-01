@@ -10,8 +10,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("75735"),
         l = n("40851"),
         u = n("67844"),
@@ -22,8 +22,8 @@ function(e, t, n) {
         let t = (0, u.getVideoButtonLabel)(e),
             {
                 enabled: n,
-                cameraUnavailable: s,
-                onChange: a,
+                cameraUnavailable: a,
+                onChange: s,
                 onCameraUnavailable: d,
                 hasPermission: _,
                 children: c,
@@ -31,7 +31,7 @@ function(e, t, n) {
                 join: I
             } = e,
             T = (0, l.useAppContext)(),
-            f = s ? () => d() : () => a(!e.enabled, T),
+            f = a ? () => d() : () => s(!e.enabled, T),
             {
                 Component: S,
                 play: h,
@@ -44,7 +44,7 @@ function(e, t, n) {
                 disabled: !n && (!_ || E),
                 iconComponent: S,
                 label: t,
-                unavailable: s,
+                unavailable: a,
                 onMouseEnter: I ? void 0 : A.onMouseEnter,
                 onMouseLeave: I ? void 0 : A.onMouseLeave
             })
@@ -56,7 +56,7 @@ function(e, t, n) {
             enabled: t,
             join: n,
             channel: r,
-            onChange: s,
+            onChange: a,
             onCameraUnavailable: o,
             cameraUnavailable: l,
             hasPermission: u,
@@ -71,7 +71,7 @@ function(e, t, n) {
             enabled: t,
             join: n,
             channel: r,
-            onChange: s,
+            onChange: a,
             onCameraUnavailable: o,
             cameraUnavailable: l,
             hasPermission: u,
@@ -81,7 +81,7 @@ function(e, t, n) {
                 let {
                     unavailable: n,
                     onMouseEnter: r,
-                    onMouseLeave: s,
+                    onMouseLeave: a,
                     ...o
                 } = e;
                 return (0, i.jsx)(A, {
@@ -93,10 +93,10 @@ function(e, t, n) {
                     },
                     onMouseLeave: e => {
                         var t;
-                        null === (t = h.onMouseLeave) || void 0 === t || t.call(h, e), null == s || s()
+                        null === (t = h.onMouseLeave) || void 0 === t || t.call(h, e), null == a || a()
                     },
                     isActive: t,
-                    className: a()(E, {
+                    className: s()(E, {
                         [_.fauxDisabled]: n
                     }),
                     onPopoutClick: S

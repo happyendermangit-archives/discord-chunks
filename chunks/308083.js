@@ -20,7 +20,7 @@ function(e, t, n) {
             return A
         },
         ClanBannerKind: function() {
-            return a
+            return s
         },
         ClanBrandPresets: function() {
             return o
@@ -32,7 +32,7 @@ function(e, t, n) {
             return r
         },
         ClanSetupSteps: function() {
-            return s
+            return a
         },
         ClanTagBadgeSize: function() {
             return l
@@ -111,7 +111,7 @@ function(e, t, n) {
             return Y
         }
     }), n("47120"), n("653041");
-    var i, r, s, a, o, l, u, d, _, c, E, I, T = n("913527"),
+    var i, r, a, s, o, l, u, d, _, c, E, I, T = n("913527"),
         f = n.n(T),
         S = n("689938");
     let h = 4,
@@ -177,7 +177,7 @@ function(e, t, n) {
                 subtitle: S.default.Messages.CLAN_SETUP_PLAYSTYLE_VERY_HARDCORE_SUBTITLE
             }
         }
-    }(d = r || (r = {}))[d.INTRO_ANIMATION = 0] = "INTRO_ANIMATION", d[d.SETUP = 1] = "SETUP", d[d.SIGN = 2] = "SIGN", (_ = s || (s = {}))[_.GAMES = 0] = "GAMES", _[_.PLAYSTYLE = 1] = "PLAYSTYLE", _[_.UTILITY_TRAITS = 2] = "UTILITY_TRAITS", _[_.INTERESTS = 3] = "INTERESTS", _[_.DESCRIPTION = 4] = "DESCRIPTION", _[_.CUSTOMIZE_TAG_BADGE = 5] = "CUSTOMIZE_TAG_BADGE", _[_.CUSTOMIZE_BANNER = 6] = "CUSTOMIZE_BANNER", _[_.MEMBER_APPLICATION = 7] = "MEMBER_APPLICATION";
+    }(d = r || (r = {}))[d.INTRO_ANIMATION = 0] = "INTRO_ANIMATION", d[d.SETUP = 1] = "SETUP", d[d.SIGN = 2] = "SIGN", (_ = a || (a = {}))[_.GAMES = 0] = "GAMES", _[_.PLAYSTYLE = 1] = "PLAYSTYLE", _[_.UTILITY_TRAITS = 2] = "UTILITY_TRAITS", _[_.INTERESTS = 3] = "INTERESTS", _[_.DESCRIPTION = 4] = "DESCRIPTION", _[_.CUSTOMIZE_TAG_BADGE = 5] = "CUSTOMIZE_TAG_BADGE", _[_.CUSTOMIZE_BANNER = 6] = "CUSTOMIZE_BANNER", _[_.MEMBER_APPLICATION = 7] = "MEMBER_APPLICATION";
     let y = "700136079562375258",
         P = "762434991303950386",
         U = ["Server: NA", "Server: EU", "Server: LATAM", "Server: KR", "Server: AP", "Voice ON", "Voice OFF", "Unrated", "All Ranks", "Bronze+", "Silver+", "Gold+", "Platinum+", "Diamond+"],
@@ -186,7 +186,7 @@ function(e, t, n) {
         w = new Set([...U, ...b, ...G]),
         B = new Set(S.default.getAvailableLocales().map(e => e.value)),
         k = new Set(["anime", "fanart", "venting", "movie nights", "gacha games", "skincare", "microwaved food", "board games", "sci-fi books", "sleeping", "brunch pics", "pet pictures", "recipes", "speedrunning", "eating on mic", "k-pop", "deafened", "programming", "study buddies", "DnD", "lore dumping", "sleepy cats", "podcasts", "houseplants", "knitting", "tech", "keyboards", "desk setups", "bad movies", "hiking", "lo-fi chilling", "watch together", "listen alongs", "late night tacos", "drip", "trading", "travel", "cups", "coffee", "F1"]);
-    (c = a || (a = {}))[c.NIGHT_SKY = 0] = "NIGHT_SKY", c[c.CASTLE = 1] = "CASTLE", c[c.WORLD_MAP = 2] = "WORLD_MAP", c[c.SEA_FOAM = 3] = "SEA_FOAM", c[c.WARP_TUNNEL = 4] = "WARP_TUNNEL", c[c.HOUSE = 5] = "HOUSE", c[c.HEIGHTMAP = 6] = "HEIGHTMAP", c[c.MESH = 7] = "MESH", c[c.SPATTER = 8] = "SPATTER", (E = o || (o = {})).BOULDER = "boulder", E.CASCADE = "cascade", E.THUNDER = "thunder", E.SOUL = "soul", E.MARSH = "marsh", E.VOLCANO = "volcano", E.EARTH = "earth", E.ZEPHYR = "zephyr";
+    (c = s || (s = {}))[c.NIGHT_SKY = 0] = "NIGHT_SKY", c[c.CASTLE = 1] = "CASTLE", c[c.WORLD_MAP = 2] = "WORLD_MAP", c[c.SEA_FOAM = 3] = "SEA_FOAM", c[c.WARP_TUNNEL = 4] = "WARP_TUNNEL", c[c.HOUSE = 5] = "HOUSE", c[c.HEIGHTMAP = 6] = "HEIGHTMAP", c[c.MESH = 7] = "MESH", c[c.SPATTER = 8] = "SPATTER", (E = o || (o = {})).BOULDER = "boulder", E.CASCADE = "cascade", E.THUNDER = "thunder", E.SOUL = "soul", E.MARSH = "marsh", E.VOLCANO = "volcano", E.EARTH = "earth", E.ZEPHYR = "zephyr";
     let V = [{
             name: "boulder",
             primary: "#8c8d8d",

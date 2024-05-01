@@ -1,8 +1,8 @@
 function(e, t, n) {
     "use strict";
-    let i, r, s;
+    let i, r, a;
     n.r(t), n("47120");
-    var a = n("493683"),
+    var s = n("493683"),
         o = n("45114"),
         l = n("872810"),
         u = n("147913"),
@@ -30,13 +30,13 @@ function(e, t, n) {
                 location: "handle_running_games_change"
             }, {
                 autoTrackExposure: !1
-            }), n = S.default.getBroadcast(), i = (0, h.getGameName)(e), r = null != T.default.getGameByName(i), s = (0, N.getIsBroadcastingToAnyone)();
-            if (!t || null != n || !c.BroadcastAutoBroadcast.getSetting() || !r || !s || null != O.find(t => t.pid === e.pid)) return;
+            }), n = S.default.getBroadcast(), i = (0, h.getGameName)(e), r = null != T.default.getGameByName(i), a = (0, N.getIsBroadcastingToAnyone)();
+            if (!t || null != n || !c.BroadcastAutoBroadcast.getSetting() || !r || !a || null != O.find(t => t.pid === e.pid)) return;
             if (O = d.default.getRunningGames(), !(0, m.getCanStartBroadcast)()) return;
-            let a = f.default.getVoiceChannelId();
+            let s = f.default.getVoiceChannelId();
             (0, l.createBroadcastChannelOrStartStream)({
                 pid: e.pid,
-                channelId: a
+                channelId: s
             })
         }
         handleStreamCreate(e) {
@@ -52,30 +52,30 @@ function(e, t, n) {
             if (null == i) return;
             let {
                 ownerId: n,
-                channelId: a
+                channelId: s
             } = (0, _.decodeStreamKey)(t);
-            if (null == n || null == a || n !== E.default.getId()) return;
-            let o = I.default.getChannel(a),
+            if (null == n || null == s || n !== E.default.getId()) return;
+            let o = I.default.getChannel(s),
                 l = null != o && o.isBroadcastChannel();
-            null != o && n === o.ownerId && l && (i = null, r = null, s = null, (0, h.stopBroadcast)())
+            null != o && n === o.ownerId && l && (i = null, r = null, a = null, (0, h.stopBroadcast)())
         }
         handleStartBroadcastStream(e) {
             let {
                 options: t
             } = e;
-            i = t.pid, r = t.sourceId, s = t.sourceName
+            i = t.pid, r = t.sourceId, a = t.sourceName
         }
         handleCallCreate(e) {
             let {
                 channelId: t
             } = e;
-            if (null == t || null == i && null == r && null == s) return;
+            if (null == t || null == i && null == r && null == a) return;
             let n = E.default.getId(),
-                a = I.default.getChannel(t);
-            null != a && n === a.ownerId && a.isBroadcastChannel() && (0, l.startStream)(null, t, {
+                s = I.default.getChannel(t);
+            null != s && n === s.ownerId && s.isBroadcastChannel() && (0, l.startStream)(null, t, {
                 pid: i,
                 sourceId: r,
-                sourceName: s
+                sourceName: a
             })
         }
         handleRTCConnectionState(e) {
@@ -87,9 +87,9 @@ function(e, t, n) {
             let i = f.default.getChannelId(),
                 r = I.default.getChannel(t);
             if (null == r || !r.isBroadcastChannel()) return;
-            a.default.closePrivateChannel(t, i === t, !0);
-            let s = S.default.getBroadcast();
-            null != s && r.id === s.channelId && (0, h.stopBroadcast)()
+            s.default.closePrivateChannel(t, i === t, !0);
+            let a = S.default.getBroadcast();
+            null != a && r.id === a.channelId && (0, h.stopBroadcast)()
         }
         handleChannelDelete(e) {
             let {

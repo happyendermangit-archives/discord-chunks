@@ -2,8 +2,8 @@ function(e, t, n) {
     "use strict";
     n.r(t), n("47120");
     var i, r = n("442837"),
-        s = n("570140"),
-        a = n("581883");
+        a = n("570140"),
+        s = n("581883");
 
     function o(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
@@ -38,11 +38,11 @@ function(e, t, n) {
 
     function S() {
         var e, t, n;
-        T = null !== (n = null === (t = a.default.settings.userContent) || void 0 === t ? void 0 : null === (e = t.lastDismissedOutboundPromotionStartDate) || void 0 === e ? void 0 : e.value) && void 0 !== n ? n : null
+        T = null !== (n = null === (t = s.default.settings.userContent) || void 0 === t ? void 0 : null === (e = t.lastDismissedOutboundPromotionStartDate) || void 0 === e ? void 0 : e.value) && void 0 !== n ? n : null
     }
     class h extends(i = r.default.PersistedStore) {
         initialize(e) {
-            null != e && (u = e), this.waitFor(a.default), this.syncWith([a.default], S)
+            null != e && (u = e), this.waitFor(s.default), this.syncWith([s.default], S)
         }
         get outboundPromotions() {
             return I
@@ -78,7 +78,7 @@ function(e, t, n) {
             return u
         }
     }
-    o(h, "displayName", "PromotionsStore"), o(h, "persistKey", "PromotionsPersistedStore"), t.default = new h(s.default, {
+    o(h, "displayName", "PromotionsStore"), o(h, "persistKey", "PromotionsPersistedStore"), t.default = new h(a.default, {
         ACTIVE_OUTBOUND_PROMOTIONS_FETCH_SUCCESS: function(e) {
             let {
                 activeOutboundPromotions: t,

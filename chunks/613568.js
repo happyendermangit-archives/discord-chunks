@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120"), n("653041"), n("411104");
     var i = n("121014"),
         r = n("512722"),
-        s = n.n(r),
-        a = n("956067");
+        a = n.n(r),
+        s = n("956067");
     n("17089");
     var o = n("259443"),
         l = n("986529"),
@@ -67,7 +67,7 @@ function(e, t, n) {
             this._dispatchWithLogging(e)
         }
         _dispatchWithLogging(e) {
-            s()(null == this._currentDispatchActionType, "Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch. Action: ".concat(e.type, " Already dispatching: ").concat(this._currentDispatchActionType)), s()(e.type, "Dispatch.dispatch(...) called without an action type"), E.has(e.type) && I.log("Dispatching ".concat(e.type)), (0, l.mark)(e.type), d.add(e.type);
+            a()(null == this._currentDispatchActionType, "Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch. Action: ".concat(e.type, " Already dispatching: ").concat(this._currentDispatchActionType)), a()(e.type, "Dispatch.dispatch(...) called without an action type"), E.has(e.type) && I.log("Dispatching ".concat(e.type)), (0, l.mark)(e.type), d.add(e.type);
             let t = this.actionLogger.log(e, t => {
                 try {
                     this._currentDispatchActionType = e.type, this._dispatch(e, t)
@@ -87,10 +87,10 @@ function(e, t, n) {
             for (let i = 0, r = n.length; i < r; i++) {
                 let {
                     name: r,
-                    actionHandler: s,
-                    storeDidChange: a
+                    actionHandler: a,
+                    storeDidChange: s
                 } = n[i];
-                !1 !== t(r, () => s(e)) && a(e)
+                !1 !== t(r, () => a(e)) && s(e)
             }
             let i = this._subscriptions[e.type];
             null != i && t("__subscriptions", () => {
@@ -122,7 +122,7 @@ function(e, t, n) {
         }
         constructor(e = 0, t, n) {
             c(this, "_defaultBand", void 0), c(this, "_interceptors", []), c(this, "_subscriptions", {}), c(this, "_waitQueue", []), c(this, "_processingWaitQueue", !1), c(this, "_currentDispatchActionType", null), c(this, "_actionHandlers", new f), c(this, "_sentryUtils", void 0), c(this, "actionLogger", void 0), c(this, "functionCache", {}), this._defaultBand = e, this._sentryUtils = n, null != t ? this.actionLogger = t : this.actionLogger = new _.ActionLogger, this.actionLogger.on("trace", (e, t, n) => {
-                a.default.isTracing && n >= 10 && a.default.mark("\uD83E\uDDA5", t, n)
+                s.default.isTracing && n >= 10 && s.default.mark("\uD83E\uDDA5", t, n)
             })
         }
     }
@@ -133,17 +133,17 @@ function(e, t, n) {
         }
         register(e, t, n, i) {
             let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : this.createToken();
-            s()(i >= 0 && Number.isInteger(i), "band must be a non-negative integer.");
-            let a = {};
+            a()(i >= 0 && Number.isInteger(i), "band must be a non-negative integer.");
+            let s = {};
             for (let n in t) {
                 let i = t[n],
                     r = e => i(e);
-                S(r, "".concat(e, "_").concat(n)), a[n] = r
+                S(r, "".concat(e, "_").concat(n)), s[n] = r
             }
             return this._dependencyGraph.addNode(r, {
                 name: e,
                 band: i,
-                actionHandler: a,
+                actionHandler: s,
                 storeDidChange: n
             }), this._addToBand(r, i), this._invalidateCaches(), r
         }
@@ -177,13 +177,13 @@ function(e, t, n) {
             for (let t = 0, r = n.length; t < r; t++) {
                 let {
                     name: r,
-                    actionHandler: s,
-                    storeDidChange: a
-                } = this._dependencyGraph.getNodeData(n[t]), o = s[e];
+                    actionHandler: a,
+                    storeDidChange: s
+                } = this._dependencyGraph.getNodeData(n[t]), o = a[e];
                 null != o && i.push({
                     name: r,
                     actionHandler: o,
-                    storeDidChange: a
+                    storeDidChange: s
                 })
             }
             return this._orderedActionHandlers[e] = i, i

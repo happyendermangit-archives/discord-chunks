@@ -6,7 +6,7 @@ function(e, t, n) {
             return V
         }
     }), n("47120");
-    var r, s, a, o, l = n("392711"),
+    var r, a, s, o, l = n("392711"),
         u = n.n(l),
         d = n("683860"),
         _ = n("442837"),
@@ -82,7 +82,7 @@ function(e, t, n) {
             return t
         }), L = 0, D = !0), 0 !== U.size && (M = M.filter(e => !U.has(e)), U.clear()), 0 !== b.size && (M = Array.from(new Set([...M, ...b])), b.clear()), ((null == e ? void 0 : e.refreshThreadIds) || (null == e ? void 0 : e.sortThreadIds)) && (P = u().chain(M).sort(w(d.ThreadSortOrder.LATEST_ACTIVITY)), y = u().chain(M).sort(w(d.ThreadSortOrder.CREATION_DATE)));
         let r = (g === d.ThreadSortOrder.LATEST_ACTIVITY ? P : y).value();
-        let s = (v = 0 === C.size ? r : r.filter((t = C, function(e) {
+        let a = (v = 0 === C.size ? r : r.filter((t = C, function(e) {
             var n;
             let i = null === (n = f.default.getChannel(e)) || void 0 === n ? void 0 : n.appliedTags;
             return null != i && 0 !== i.length && i.some(e => t.has(e))
@@ -90,7 +90,7 @@ function(e, t, n) {
             let t = I.default.getCount(e);
             return null === t || 0 === t
         })(e));
-        i = null == s ? null : s
+        i = null == a ? null : a
     }
     class F extends(r = _.default.Store) {
         initialize() {
@@ -105,10 +105,10 @@ function(e, t, n) {
         getThreadIds(e, t, n) {
             let i = e !== R,
                 r = !(0, A.areSetsEqual)(n, C),
-                s = t !== g;
+                a = t !== g;
             return R = e, C = n, g = t, i ? x({
                 refreshThreadIds: !0
-            }) : s ? x({
+            }) : a ? x({
                 sortThreadIds: !0
             }) : r && x(), v
         }
@@ -123,12 +123,12 @@ function(e, t, n) {
             return i
         }
     }
-    o = "ForumActivePostStore", (a = "displayName") in(s = F) ? Object.defineProperty(s, a, {
+    o = "ForumActivePostStore", (s = "displayName") in(a = F) ? Object.defineProperty(a, s, {
         value: o,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : s[a] = o, t.default = new F(c.default, {
+    }) : a[s] = o, t.default = new F(c.default, {
         CONNECTION_OPEN: k,
         OVERLAY_INITIALIZE: k,
         GUILD_CREATE: k,

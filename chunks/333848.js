@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("411104");
     var i = n("990547"),
         r = n("283693"),
-        s = n("570140"),
-        a = n("408987"),
+        a = n("570140"),
+        s = n("408987"),
         o = n("9156"),
         l = n("621600"),
         u = n("573261"),
@@ -24,7 +24,7 @@ function(e, t, n) {
                 skuId: h,
                 branchId: A
             } = e;
-            s.default.dispatch({
+            a.default.dispatch({
                 type: "CREATE_CHANNEL_MODAL_SUBMIT"
             });
             let m = {
@@ -53,19 +53,19 @@ function(e, t, n) {
                 }
             }).then(e => (o.default.isOptInEnabled(t) && d.default.updateChannelOverrideSettings(t, e.body.id, {
                 flags: c.ChannelNotificationSettingsFlags.OPT_IN_ENABLED
-            }, l.NotificationLabels.OptedIn), a.default.checkGuildTemplateDirty(t), e), e => {
-                throw s.default.dispatch({
+            }, l.NotificationLabels.OptedIn), s.default.checkGuildTemplateDirty(t), e), e => {
+                throw a.default.dispatch({
                     type: "CREATE_CHANNEL_MODAL_SUBMIT_FAILURE",
                     errors: e.body
                 }), e
             })
         },
-        createRoleSubscriptionTemplateChannel: (e, t, n, s) => u.default.post({
+        createRoleSubscriptionTemplateChannel: (e, t, n, a) => u.default.post({
             url: _.Endpoints.GUILD_CHANNELS(e),
             body: {
                 name: t,
                 type: n,
-                topic: s
+                topic: a
             },
             oldFormErrors: !0,
             trackedActionData: {

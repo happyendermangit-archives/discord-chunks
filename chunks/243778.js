@@ -10,15 +10,15 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("399606"),
-        a = n("237997"),
+        a = n("399606"),
+        s = n("237997"),
         o = n("261376"),
         l = n("706140"),
         u = n("921944");
 
     function d(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            i = (0, s.useStateFromStores)([a.default], () => !!__OVERLAY__ && a.default.isInstanceUILocked()),
+            i = (0, a.useStateFromStores)([s.default], () => !!__OVERLAY__ && s.default.isInstanceUILocked()),
             [d, _] = (0, l.useGetDismissibleContent)(e, t, i),
             c = !n && null != d && !o.CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(d);
         return r.useEffect(() => () => {
@@ -31,11 +31,11 @@ function(e, t, n) {
             contentTypes: t,
             children: n,
             groupName: r,
-            bypassAutoDismiss: s
-        } = e, [a, o] = d(t, r, s);
+            bypassAutoDismiss: a
+        } = e, [s, o] = d(t, r, a);
         return (0, i.jsx)(i.Fragment, {
             children: n({
-                visibleContent: a,
+                visibleContent: s,
                 markAsDismissed: o
             })
         })

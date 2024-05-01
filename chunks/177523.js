@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         DEFAULT_RANGES: function() {
-            return a.DEFAULT_RANGES
+            return s.DEFAULT_RANGES
         },
         default: function() {
             return c
@@ -10,8 +10,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("392711"),
         r = n.n(i),
-        s = n("846519"),
-        a = n("509848"),
+        a = n("846519"),
+        s = n("509848"),
         o = n("483019"),
         l = n("945689"),
         u = n("981631");
@@ -116,11 +116,11 @@ function(e, t, n) {
         constructor(e) {
             d(this, "_members", new o.default((e, t) => this._enqueue(e, {
                 members: t
-            }))), d(this, "_channels", new a.default((e, t) => this._enqueue(e, {
+            }))), d(this, "_channels", new s.default((e, t) => this._enqueue(e, {
                 channels: t
             }))), d(this, "_threadMemberLists", new l.default((e, t) => this._enqueue(e, {
                 thread_member_lists: t
-            }))), d(this, "_typing", new Set), d(this, "_threads", new Set), d(this, "_activities", new Set), d(this, "_memberUpdates", new Set), d(this, "_subscribed", new Set), d(this, "_pending", {}), d(this, "_flush", new s.DelayedCall(0, () => this.flush())), d(this, "_onChange", void 0), this._onChange = e
+            }))), d(this, "_typing", new Set), d(this, "_threads", new Set), d(this, "_activities", new Set), d(this, "_memberUpdates", new Set), d(this, "_subscribed", new Set), d(this, "_pending", {}), d(this, "_flush", new a.DelayedCall(0, () => this.flush())), d(this, "_onChange", void 0), this._onChange = e
         }
     }
 }

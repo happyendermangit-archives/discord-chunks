@@ -11,8 +11,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        s = n.n(r),
-        a = n("442837"),
+        a = n.n(r),
+        s = n("442837"),
         o = n("692547"),
         l = n("215569"),
         u = n("481060"),
@@ -31,12 +31,12 @@ function(e, t, n) {
             title: t,
             onJumpToChannel: n,
             idle: r,
-            preventIdleComponent: s
-        } = e, l = (0, a.useStateFromStores)([d.default], () => d.default.getChannelId()), _ = null != l ? (0, i.jsx)(T.default, {
+            preventIdleComponent: a
+        } = e, l = (0, s.useStateFromStores)([d.default], () => d.default.getChannelId()), _ = null != l ? (0, i.jsx)(T.default, {
             voiceChannelId: l,
             idle: r
         }) : null;
-        return (0, i.jsxs)(s, {
+        return (0, i.jsxs)(a, {
             className: h.headerIdleContainer,
             children: [(0, i.jsxs)(u.Clickable, {
                 className: h.headerTitle,
@@ -61,7 +61,7 @@ function(e, t, n) {
             children: t,
             idle: n,
             onJumpToChannel: r,
-            backgroundKey: a,
+            backgroundKey: s,
             onActive: o,
             onForceIdle: u,
             renderBottomLeftControls: d,
@@ -76,7 +76,7 @@ function(e, t, n) {
             onMouseMove: o,
             onMouseDown: o,
             onMouseLeave: u,
-            className: s()(h.pictureInPictureVideo, {
+            className: a()(h.pictureInPictureVideo, {
                 [h.idle]: n
             }, S),
             onDoubleClick: r,
@@ -84,7 +84,7 @@ function(e, t, n) {
                 children: (0, i.jsx)(c.BackgroundTransition, {
                     className: m,
                     children: t
-                }, a)
+                }, s)
             }), null != I ? (0, i.jsx)(f.default, {
                 size: "small",
                 ...I

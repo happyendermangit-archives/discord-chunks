@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("724458");
     var i = n("367907"),
         r = n("339085"),
-        s = n("592125"),
-        a = n("944486"),
+        a = n("592125"),
+        s = n("944486"),
         o = n("176354"),
         l = n("304852"),
         u = n("199257"),
@@ -24,7 +24,7 @@ function(e, t, n) {
             rowSize: I,
             isBurstReaction: T,
             analyticsObject: f
-        } = e, S = s.default.getChannel(a.default.getChannelId()), h = null == S ? void 0 : S.getGuildId(), A = r.default.emojiFrecencyWithoutFetchingLatest.frequently.slice(), m = null != S ? r.default.getDisambiguatedEmojiContext(S.getGuildId()).favoriteEmojisWithoutFetchingLatest : [], N = A.slice(0, r.default.emojiFrecencyWithoutFetchingLatest.numFrequentlyItems), p = null != h ? r.default.getGuildEmoji(h) : [], O = Object.values(null !== (t = r.default.getDisambiguatedEmojiContext(null == S ? void 0 : S.getGuildId()).groupedCustomEmojis) && void 0 !== t ? t : {}).reduce((e, t) => e += t.length, 0), {
+        } = e, S = a.default.getChannel(s.default.getChannelId()), h = null == S ? void 0 : S.getGuildId(), A = r.default.emojiFrecencyWithoutFetchingLatest.frequently.slice(), m = null != S ? r.default.getDisambiguatedEmojiContext(S.getGuildId()).favoriteEmojisWithoutFetchingLatest : [], N = A.slice(0, r.default.emojiFrecencyWithoutFetchingLatest.numFrequentlyItems), p = null != h ? r.default.getGuildEmoji(h) : [], O = Object.values(null !== (t = r.default.getDisambiguatedEmojiContext(null == S ? void 0 : S.getGuildId()).groupedCustomEmojis) && void 0 !== t ? t : {}).reduce((e, t) => e += t.length, 0), {
             topEmojis: R,
             newlyAddedEmojis: C
         } = (0, u.getTopAndNewlyAddedEmojis)({

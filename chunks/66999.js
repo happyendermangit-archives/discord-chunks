@@ -10,8 +10,8 @@ function(e, t, n) {
     });
     var i = n("442837"),
         r = n("430198"),
-        s = n("592125"),
-        a = n("496675"),
+        a = n("592125"),
+        s = n("496675"),
         o = n("981631");
     let l = {
         needSubscriptionToAccess: !1,
@@ -19,13 +19,13 @@ function(e, t, n) {
     };
 
     function u(e) {
-        return (0, i.useStateFromStoresObject)([s.default, r.default, a.default], () => d(e, s.default, r.default, a.default), [e])
+        return (0, i.useStateFromStoresObject)([a.default, r.default, s.default], () => d(e, a.default, r.default, s.default), [e])
     }
 
     function d(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.default,
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.default,
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : r.default,
-            i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : a.default,
+            i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : s.default,
             u = t.getChannel(e);
         return (null == u ? void 0 : u.isRoleSubscriptionTemplatePreviewChannel()) ? {
             isSubscriptionGated: !0,

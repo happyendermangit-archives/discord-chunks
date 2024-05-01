@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("147913"),
         r = n("592125"),
-        s = n("944486"),
-        a = n("116347"),
+        a = n("944486"),
+        s = n("116347"),
         o = n("237292"),
         l = n("118910");
 
@@ -14,10 +14,10 @@ function(e, t, n) {
         } = e;
         if (null == t || !(0, o.isEligibleForInappropriateConversationWarning)({
                 location: "channel_select"
-            }) || !(0, a.getSafetyAlertsSettingOrDefault)()) return !1;
+            }) || !(0, s.getSafetyAlertsSettingOrDefault)()) return !1;
         let n = r.default.getChannel(t);
         if (null == n || !n.isDM()) return !1;
-        let i = (0, a.getInappropriateConversationTakeoverForChannel)(t);
+        let i = (0, s.getInappropriateConversationTakeoverForChannel)(t);
         return null != i && ((0, l.showTakeoverModal)({
             warningId: i.id,
             warningType: i.type,
@@ -32,12 +32,12 @@ function(e, t, n) {
         } = e;
         if (!(0, o.isEligibleForInappropriateConversationWarning)({
                 location: "channel_updates"
-            }) || !(0, a.getSafetyAlertsSettingOrDefault)()) return !1;
-        let n = s.default.getCurrentlySelectedChannelId();
+            }) || !(0, s.getSafetyAlertsSettingOrDefault)()) return !1;
+        let n = a.default.getCurrentlySelectedChannelId();
         if (null == n) return !1;
         let i = t.find(e => e.id === n);
         if (null == i) return !1;
-        let r = (0, a.getInappropriateConversationTakeoverForChannel)(i.id);
+        let r = (0, s.getInappropriateConversationTakeoverForChannel)(i.id);
         return !!(null != r && i.isDM()) && ((0, l.showTakeoverModal)({
             warningId: r.id,
             warningType: r.type,

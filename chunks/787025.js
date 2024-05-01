@@ -10,8 +10,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("466377"),
         l = n("481060"),
         u = n("252618"),
@@ -27,7 +27,7 @@ function(e, t, n) {
         let {
             children: t,
             wrapperClassName: n,
-            embedded: s
+            embedded: a
         } = e, [o, S] = r.useState(I.WaveStates.INITIAL), h = r.useCallback(e => {
             S(t => Math.max(t, e))
         }, []);
@@ -36,14 +36,14 @@ function(e, t, n) {
         }), (0, i.jsx)(l.ThemeContextProvider, {
             theme: E.ThemeTypes.DARK,
             children: (0, i.jsx)(d.default, {
-                embedded: s,
-                className: a()((0, c.getThemeClass)(E.ThemeTypes.DARK), f.wave),
+                embedded: a,
+                className: s()((0, c.getThemeClass)(E.ThemeTypes.DARK), f.wave),
                 splash: (0, _.getArtForPath)(),
                 waveState: o,
                 showLogo: !0,
                 updateWaveState: h,
                 children: (0, i.jsx)("div", {
-                    className: a()(f.oauth2Wrapper, n),
+                    className: s()(f.oauth2Wrapper, n),
                     children: t
                 })
             })

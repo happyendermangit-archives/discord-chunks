@@ -7,17 +7,17 @@ function(e, t, n) {
     });
     var i = n("442837"),
         r = n("570140"),
-        s = n("271383"),
-        a = n("9156"),
+        a = n("271383"),
+        s = n("9156"),
         o = n("594174");
 
     function l(e, t) {
         var n;
         let i = null === (n = o.default.getCurrentUser()) || void 0 === n ? void 0 : n.id,
-            l = a.default.isSuppressEveryoneEnabled(t),
-            u = a.default.isSuppressRolesEnabled(t),
+            l = s.default.isSuppressEveryoneEnabled(t),
+            u = s.default.isSuppressRolesEnabled(t),
             d = null != e.mentions && e.mentions.some(e => e.id === i),
-            _ = null == t || null == i ? null : s.default.getMember(t, i),
+            _ = null == t || null == i ? null : a.default.getMember(t, i),
             c = null != e.mention_roles && null != _ && null != _.roles && e.mention_roles.some(e => _.roles.includes(e));
         r.default.dispatch({
             type: "MESSAGE_NOTIFICATION_SHOWN",
@@ -73,8 +73,8 @@ function(e, t, n) {
                 mentioned: n,
                 roleMentioned: i,
                 everyoneMentioned: r
-            } = e, s = Date.now();
-            u = s, null != t && (E[t] = s), n && (d = s, null != t && (I[t] = s)), i && (_ = s, null != t && (f[t] = s)), r && (c = s, null != t && (T[t] = s))
+            } = e, a = Date.now();
+            u = a, null != t && (E[t] = a), n && (d = a, null != t && (I[t] = a)), i && (_ = a, null != t && (f[t] = a)), r && (c = a, null != t && (T[t] = a))
         }
     })
 }

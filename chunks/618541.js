@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     let i, r;
     n.r(t), n("411104");
-    var s, a, o, l, u = n("442837"),
+    var a, s, o, l, u = n("442837"),
         d = n("544891"),
         _ = n("570140"),
         c = n("358085"),
@@ -19,7 +19,7 @@ function(e, t, n) {
             r = e, window.open(e), h.emitChange()
         }
     });
-    class S extends(s = u.default.Store) {
+    class S extends(a = u.default.Store) {
         getClient() {
             return I
         }
@@ -33,12 +33,12 @@ function(e, t, n) {
             return r
         }
     }
-    l = "BraintreeStore", (o = "displayName") in(a = S) ? Object.defineProperty(a, o, {
+    l = "BraintreeStore", (o = "displayName") in(s = S) ? Object.defineProperty(s, o, {
         value: l,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : a[o] = l;
+    }) : s[o] = l;
     let h = new S(_.default, {
         BRAINTREE_CREATE_CLIENT_SUCCESS: function(e) {
             let {
@@ -57,13 +57,13 @@ function(e, t, n) {
                 paymentSourceType: t,
                 state: n,
                 path: r,
-                query: s
+                query: a
             } = e;
             if (t !== E.PaymentSourceTypes.PAYPAL || n !== i) return;
-            let a = window.popupBridge.onComplete;
-            "function" == typeof a && a(null, {
+            let s = window.popupBridge.onComplete;
+            "function" == typeof s && s(null, {
                 path: r,
-                queryItems: s
+                queryItems: a
             })
         },
         BILLING_POPUP_BRIDGE_STATE_UPDATE: function(e) {

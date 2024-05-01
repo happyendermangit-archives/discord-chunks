@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("442837"),
         l = n("481060"),
         u = n("749210"),
@@ -30,7 +30,7 @@ function(e, t, n) {
 
     function C(e) {
         var t, n;
-        let s, C, {
+        let a, C, {
                 userId: g,
                 channelId: L,
                 guild: v,
@@ -72,13 +72,13 @@ function(e, t, n) {
                 userId: g
             }, "".concat(t.type, ":").concat(t.id))
         }).filter(e => null != e);
-        return (Y.length > 0 && (s = (0, i.jsxs)(i.Fragment, {
+        return (Y.length > 0 && (a = (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(l.Heading, {
                 variant: "eyebrow",
                 className: R.title,
                 children: p.default.Messages.CONNECTIONS
             }), (0, i.jsxs)("div", {
-                className: a()(O.connectionsContainer, y),
+                className: s()(O.connectionsContainer, y),
                 children: [Y, (0, i.jsxs)(l.Clickable, {
                     onClick: function() {
                         (0, h.openUserProfileModal)({
@@ -112,14 +112,14 @@ function(e, t, n) {
                 className: R.title,
                 children: p.default.Messages.APPS
             }), (0, i.jsx)("div", {
-                className: a()(O.connectionsContainer, y),
+                className: s()(O.connectionsContainer, y),
                 children: x.map(e => (0, i.jsx)(S.ConnectedApplicationUserRoleAccount, {
                     applicationRoleConnection: e,
                     locale: H
                 }, e.application.id))
             })]
-        })), null == s && null == C) ? null : (0, i.jsxs)(A.default, {
-            children: [C, s]
+        })), null == a && null == C) ? null : (0, i.jsxs)(A.default, {
+            children: [C, a]
         })
     }
 }

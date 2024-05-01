@@ -13,8 +13,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("348327"),
-        a = n.n(s),
+        a = n("348327"),
+        s = n.n(a),
         o = n("392711"),
         l = n.n(o);
     let u = r.createContext([]);
@@ -36,9 +36,9 @@ function(e, t, n) {
 
     function c() {
         for (var e, t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
-        let [s, o] = r.useState(n), l = r.useContext(u), d = r.useMemo(() => _(l, s), [s, l]), c = r.useMemo(() => _(l, s.slice(0, s.length - 1)), [s, l]);
+        let [a, o] = r.useState(n), l = r.useContext(u), d = r.useMemo(() => _(l, a), [a, l]), c = r.useMemo(() => _(l, a.slice(0, a.length - 1)), [a, l]);
         return r.useEffect(() => {
-            !a()(n, s) && o(n)
+            !s()(n, a) && o(n)
         }, [n]), {
             analyticsLocations: d,
             sourceAnalyticsLocations: c,

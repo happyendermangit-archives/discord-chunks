@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t);
     var i = n("735250"),
         r = n("470079"),
-        s = n("481060"),
-        a = n("367907"),
+        a = n("481060"),
+        s = n("367907"),
         o = n("524444"),
         l = n("297047"),
         u = n("592125"),
@@ -38,23 +38,23 @@ function(e, t, n) {
                             height: 40
                         })
                     }), (0, i.jsxs)("div", {
-                        children: [(0, i.jsx)(s.Heading, {
+                        children: [(0, i.jsx)(a.Heading, {
                             variant: "heading-md/semibold",
                             className: T.header,
                             children: I.default.Messages.NEW_MEMBER_BADGE_TOOLTIP_TEXT
-                        }), (0, i.jsx)(s.Text, {
+                        }), (0, i.jsx)(a.Text, {
                             variant: "text-sm/normal",
                             children: I.default.Messages.NEW_MEMBER_BADGE_POPOUT_TEXT
                         })]
                     })]
-                }), (0, i.jsx)(s.Button, {
-                    size: s.Button.Sizes.SMALL,
-                    color: s.Button.Colors.BRAND,
+                }), (0, i.jsx)(a.Button, {
+                    size: a.Button.Sizes.SMALL,
+                    color: a.Button.Colors.BRAND,
                     className: T.ctaButton,
                     innerClassName: T.ctaButtonContent,
                     fullWidth: !0,
                     onClick: () => {
-                        a.default.trackWithMetadata(E.AnalyticEvents.NEW_MEMBER_MENTION_CTA_CLICKED, {
+                        s.default.trackWithMetadata(E.AnalyticEvents.NEW_MEMBER_MENTION_CTA_CLICKED, {
                             target_user_id: n.author.id
                         }), f(), (0, l.mentionUser)(n.author, S.id)
                     },

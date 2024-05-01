@@ -2,9 +2,9 @@ function(e, t, n) {
     "use strict";
     n.r(t);
     var i, r = n("442837"),
-        s = n("570140");
+        a = n("570140");
 
-    function a(e, t, n) {
+    function s(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -31,7 +31,7 @@ function(e, t, n) {
             return l
         }
     }
-    a(u, "displayName", "ActivityShelfStore"), a(u, "persistKey", "ActivityShelfStore"), t.default = new u(s.default, {
+    s(u, "displayName", "ActivityShelfStore"), s(u, "persistKey", "ActivityShelfStore"), t.default = new u(a.default, {
         LOGOUT: function() {
             l = o()
         }

@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("147913"),
         r = n("314897"),
-        s = n("592125"),
-        a = n("496675"),
+        a = n("592125"),
+        s = n("496675"),
         o = n("979651"),
         l = n("906605"),
         u = n("574176"),
@@ -44,8 +44,8 @@ function(e, t, n) {
                 }
                 if (!i || t === this.previousVoiceChannelId) return;
                 if (this.previousVoiceChannelId = t, null == n || null == t) return;
-                let o = s.default.getChannel(t);
-                if (null == o || o.type !== _.ChannelTypes.GUILD_VOICE || !a.default.can(_.Permissions.SET_VOICE_CHANNEL_STATUS, o) || null != d.default.getCurrentHangStatus()) return;
+                let o = a.default.getChannel(t);
+                if (null == o || o.type !== _.ChannelTypes.GUILD_VOICE || !s.default.can(_.Permissions.SET_VOICE_CHANNEL_STATUS, o) || null != d.default.getCurrentHangStatus()) return;
                 let c = d.default.getCurrentDefaultStatus();
                 if ((null == c ? void 0 : c.expiresAt) != null && (null == c ? void 0 : c.expiresAt) >= Date.now()) {
                     if (c.status === _.HangStatusTypes.CUSTOM && null != c.customHangStatus) {
@@ -71,8 +71,8 @@ function(e, t, n) {
                 if (t.id !== r.default.getId()) return;
                 let i = o.default.getCurrentClientVoiceChannelId(n);
                 if (null == i || null == d.default.getCurrentHangStatus()) return;
-                let u = s.default.getChannel(i);
-                !a.default.can(_.Permissions.SET_VOICE_CHANNEL_STATUS, u) && (0, l.clearHangStatus)()
+                let u = a.default.getChannel(i);
+                !s.default.can(_.Permissions.SET_VOICE_CHANNEL_STATUS, u) && (0, l.clearHangStatus)()
             }), c(this, "handleDisconnectFromVoiceChannel", () => {
                 (0, l.clearHangStatus)()
             }), c(this, "handleLogout", () => {

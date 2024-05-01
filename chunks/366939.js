@@ -22,8 +22,8 @@ function(e, t, n) {
     });
     var i = n("512722"),
         r = n.n(i),
-        s = n("570140"),
-        a = n("74538"),
+        a = n("570140"),
+        s = n("74538"),
         o = n("355467"),
         l = n("981631");
     async function u(e) {
@@ -32,12 +32,12 @@ function(e, t, n) {
             currency: n,
             paymentSource: i,
             trialId: r,
-            code: a,
+            code: s,
             metadata: l,
             referralCode: u,
             loadId: d
         } = e;
-        s.default.dispatch({
+        a.default.dispatch({
             type: "PREMIUM_PAYMENT_SUBSCRIBE_START"
         });
         try {
@@ -48,18 +48,18 @@ function(e, t, n) {
                 }],
                 paymentSource: i,
                 trialId: r,
-                code: a,
+                code: s,
                 currency: n,
                 metadata: l,
                 referralCode: u,
                 loadId: d
             });
-            return null != e.subscription && s.default.dispatch({
+            return null != e.subscription && a.default.dispatch({
                 type: "PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS",
                 subscription: e.subscription
             }), e
         } catch (e) {
-            throw s.default.dispatch({
+            throw a.default.dispatch({
                 type: "PREMIUM_PAYMENT_SUBSCRIBE_FAIL",
                 error: e
             }), e
@@ -67,19 +67,19 @@ function(e, t, n) {
     }
     async function d(e, t, n, i, u, d) {
         try {
-            let _ = (0, a.getPremiumPlanItem)(e);
+            let _ = (0, s.getPremiumPlanItem)(e);
             r()(_, "Expected existing premium plan");
-            let c = (0, a.getItemsWithUpsertedPremiumPlanId)(e, _.planId);
+            let c = (0, s.getItemsWithUpsertedPremiumPlanId)(e, _.planId);
             await o.updateSubscription(e, {
                 status: l.SubscriptionStatusTypes.ACTIVE,
                 paymentSource: i,
                 items: c,
                 currency: n
-            }, t, u, d), s.default.dispatch({
+            }, t, u, d), a.default.dispatch({
                 type: "PREMIUM_PAYMENT_UPDATE_SUCCESS"
             })
         } catch (e) {
-            throw s.default.dispatch({
+            throw a.default.dispatch({
                 type: "PREMIUM_PAYMENT_UPDATE_FAIL",
                 error: e
             }), e
@@ -96,11 +96,11 @@ function(e, t, n) {
     }
     async function c(e, t, n, i) {
         try {
-            await o.changeSubscriptionCurrency(e, t, n, i), s.default.dispatch({
+            await o.changeSubscriptionCurrency(e, t, n, i), a.default.dispatch({
                 type: "PREMIUM_PAYMENT_UPDATE_SUCCESS"
             })
         } catch (e) {
-            throw s.default.dispatch({
+            throw a.default.dispatch({
                 type: "PREMIUM_PAYMENT_UPDATE_FAIL",
                 error: e
             }), e
@@ -108,11 +108,11 @@ function(e, t, n) {
     }
     async function E(e, t, n, i, r) {
         try {
-            await o.changePaymentSource(e, t, n, i, r), s.default.dispatch({
+            await o.changePaymentSource(e, t, n, i, r), a.default.dispatch({
                 type: "PREMIUM_PAYMENT_UPDATE_SUCCESS"
             })
         } catch (e) {
-            throw s.default.dispatch({
+            throw a.default.dispatch({
                 type: "PREMIUM_PAYMENT_UPDATE_FAIL",
                 error: e
             }), e
@@ -120,7 +120,7 @@ function(e, t, n) {
     }
 
     function I() {
-        s.default.dispatch({
+        a.default.dispatch({
             type: "PREMIUM_PAYMENT_ERROR_CLEAR"
         })
     }

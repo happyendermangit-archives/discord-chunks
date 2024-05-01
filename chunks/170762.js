@@ -4,8 +4,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("481060"),
-        s = n("465670"),
-        a = n("666272"),
+        a = n("465670"),
+        s = n("666272"),
         o = n("921944"),
         l = n("689938"),
         u = n("902216");
@@ -15,7 +15,7 @@ function(e, t, n) {
         } = e;
         return (0, i.jsxs)("div", {
             className: u.wrapper,
-            children: [(0, i.jsx)(a.default, {
+            children: [(0, i.jsx)(s.default, {
                 className: u.icon
             }), (0, i.jsx)("div", {
                 className: u.content,
@@ -25,7 +25,7 @@ function(e, t, n) {
                 })
             }), (0, i.jsx)(r.Clickable, {
                 onClick: () => t(o.ContentDismissActionType.UNKNOWN),
-                children: (0, i.jsx)(s.default, {
+                children: (0, i.jsx)(a.default, {
                     className: u.close
                 })
             })]

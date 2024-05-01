@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("108131"),
         r = n.n(i),
-        s = n("442837"),
-        a = n("570140"),
+        a = n("442837"),
+        s = n("570140"),
         o = n("147913"),
         l = n("662896"),
         u = n("710845"),
@@ -17,10 +17,10 @@ function(e, t, n) {
     let f = new u.default("EntityVersionsManager");
     class S extends o.default {
         _initialize() {
-            a.default.subscribe("CONNECTION_OPEN", A)
+            s.default.subscribe("CONNECTION_OPEN", A)
         }
         _terminate() {
-            a.default.unsubscribe("CONNECTION_OPEN", A)
+            s.default.unsubscribe("CONNECTION_OPEN", A)
         }
         constructor(...e) {
             var t, n, i;
@@ -39,14 +39,14 @@ function(e, t, n) {
     function h(e) {
         var t;
         let n = null === (t = E.default.getGuild(e.guild_id)) || void 0 === t ? void 0 : t.name;
-        f.fileOnly("received deleted guild entities (id: ".concat(e.guild_id, ", name: ").concat(n, ")")), s.default.Emitter.batched(() => {
+        f.fileOnly("received deleted guild entities (id: ".concat(e.guild_id, ", name: ").concat(n, ")")), a.default.Emitter.batched(() => {
             null != e.channels && function(e, t) {
                 let n = I.default.keys(c.default.getMutableBasicGuildChannelsForGuild(e));
                 f.fileOnly("syncChannels", {
                     channelIdsInMemory: n,
                     channelIdsFromServer: t
                 }), n.forEach(n => {
-                    !t.has(n) && a.default.dispatch({
+                    !t.has(n) && s.default.dispatch({
                         type: "CHANNEL_DELETE",
                         channel: {
                             guild_id: e,
@@ -57,7 +57,7 @@ function(e, t, n) {
                 })
             }(e.guild_id, new Set(e.channels)), null != e.roles && function(e, t) {
                 I.default.keys(E.default.getRoles(e)).forEach(n => {
-                    !t.has(n) && a.default.dispatch({
+                    !t.has(n) && s.default.dispatch({
                         type: "GUILD_ROLE_DELETE",
                         guildId: e,
                         roleId: n
@@ -66,7 +66,7 @@ function(e, t, n) {
             }(e.guild_id, new Set(e.roles)), null != e.emojis && function(e, t) {
                 let n = d.default.getGuildEmoji(e),
                     i = n.filter(e => t.has(e.id));
-                n.length !== i.length && a.default.dispatch({
+                n.length !== i.length && s.default.dispatch({
                     type: "GUILD_EMOJIS_UPDATE",
                     guildId: e,
                     emojis: i
@@ -75,7 +75,7 @@ function(e, t, n) {
                 var n;
                 let i = null !== (n = _.default.getStickersByGuildId(e)) && void 0 !== n ? n : [],
                     r = i.filter(e => t.has(e.id));
-                i.length !== r.length && a.default.dispatch({
+                i.length !== r.length && s.default.dispatch({
                     type: "GUILD_STICKERS_UPDATE",
                     guildId: e,
                     stickers: r
@@ -102,11 +102,11 @@ function(e, t, n) {
             var t, n, i;
             let r = null === (t = E.default.getGuild(e)) || void 0 === t ? void 0 : t.name;
             f.fileOnly("requesting deleted guild entities (id: ".concat(e, ", name: ").concat(r, ")"));
-            let s = p(Object.keys(c.default.getMutableBasicGuildChannelsForGuild(e))),
-                a = p(Object.keys(E.default.getRoles(e))),
+            let a = p(Object.keys(c.default.getMutableBasicGuildChannelsForGuild(e))),
+                s = p(Object.keys(E.default.getRoles(e))),
                 o = p(d.default.getGuildEmoji(e).map(e => e.id)),
                 l = p(null !== (i = null === (n = _.default.getStickersByGuildId(e)) || void 0 === n ? void 0 : n.map(e => e.id)) && void 0 !== i ? i : []);
-            T.default.getSocket().getDeletedEntityIdsNotMatchingHash(e, s, a, o, l)
+            T.default.getSocket().getDeletedEntityIdsNotMatchingHash(e, a, s, o, l)
         })(e), Math.ceil(2e3 * Math.random()))
     }
 

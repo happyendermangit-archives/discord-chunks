@@ -1,6 +1,6 @@
 function(e, t, n) {
     "use strict";
-    var i, r, s, a;
+    var i, r, a, s;
     n.r(t), n.d(t, {
         DEFAULT_OVERLAY_OPTIONS: function() {
             return o
@@ -11,7 +11,7 @@ function(e, t, n) {
         RunningProcessFullscreenType: function() {
             return r
         }
-    }), (s = i || (i = {})).ANIMATED = "ANIMATED", s.INSTANT = "INSTANT", (a = r || (r = {}))[a.UNKNOWN = 0] = "UNKNOWN", a[a.WINDOWED = 1] = "WINDOWED", a[a.MAXIMIZED = 2] = "MAXIMIZED", a[a.BORDERLESS_FULLSCREEN = 3] = "BORDERLESS_FULLSCREEN", a[a.FULLSCREEN = 4] = "FULLSCREEN", a[a.MINIMIZED = 5] = "MINIMIZED";
+    }), (a = i || (i = {})).ANIMATED = "ANIMATED", a.INSTANT = "INSTANT", (s = r || (r = {}))[s.UNKNOWN = 0] = "UNKNOWN", s[s.WINDOWED = 1] = "WINDOWED", s[s.MAXIMIZED = 2] = "MAXIMIZED", s[s.BORDERLESS_FULLSCREEN = 3] = "BORDERLESS_FULLSCREEN", s[s.FULLSCREEN = 4] = "FULLSCREEN", s[s.MINIMIZED = 5] = "MINIMIZED";
     let o = {
         compatibilityHook: !1,
         warn: !1,

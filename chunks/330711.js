@@ -4,12 +4,12 @@ function(e, t, n) {
     var i = n("973361"),
         r = n("627420");
     n("211604");
-    let s = new r.default({
+    let a = new r.default({
         initialLocale: i.parse(document.cookie).locale,
         getMessages: e => n("677762")("./messages/".concat(e).replace("./messages/", "./")),
         getLanguages: () => n("34859")
     });
-    s.addListener("locale", e => {
+    a.addListener("locale", e => {
         document.cookie = "locale=".concat(e, ";path=/")
-    }), t.default = s
+    }), t.default = a
 }

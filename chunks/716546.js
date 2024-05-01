@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("668781"),
         r = n("998502"),
-        s = n("58406"),
-        a = n("761274");
+        a = n("58406"),
+        s = n("761274");
 
     function o(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
@@ -14,7 +14,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    class l extends s.NativePermissionBaseUtils {
+    class l extends a.NativePermissionBaseUtils {
         requestPermissionCore(e, t) {
             var n;
             return this.asyncify(null === (n = this.nativeUtils) || void 0 === n ? void 0 : n.nativePermssionRequestAuthorization, e, t)
@@ -25,7 +25,7 @@ function(e, t, n) {
         }
         asyncify(e, t, n) {
             let i = l.requestTypeLookup[t];
-            return void 0 === i ? Promise.resolve(!0) : this.requestAuthorization(t, () => null == e ? Promise.resolve(a.NativePermissionStatus.AUTHORIZED) : new Promise((t, n) => e(t, i)), n)
+            return void 0 === i ? Promise.resolve(!0) : this.requestAuthorization(t, () => null == e ? Promise.resolve(s.NativePermissionStatus.AUTHORIZED) : new Promise((t, n) => e(t, i)), n)
         }
         openSettings(e) {
             var t;
@@ -41,15 +41,15 @@ function(e, t, n) {
                 title: t,
                 body: n,
                 onConfirm: r,
-                cancelText: s,
-                confirmText: a
+                cancelText: a,
+                confirmText: s
             } = e;
             i.default.show({
                 title: t,
                 body: n,
                 onConfirm: r,
-                cancelText: s,
-                confirmText: a
+                cancelText: a,
+                confirmText: s
             })
         }
         constructor(...e) {
@@ -57,10 +57,10 @@ function(e, t, n) {
         }
     }
     o(l, "requestTypeLookup", {
-        [a.NativePermissionTypes.CAMERA]: r.NativePermissionRequestType.Camera,
-        [a.NativePermissionTypes.AUDIO]: r.NativePermissionRequestType.Microphone,
-        [a.NativePermissionTypes.PHOTOS]: r.NativePermissionRequestType.Photo,
-        [a.NativePermissionTypes.INPUT_MONITORING]: r.NativePermissionRequestType.InputMonitoring,
-        [a.NativePermissionTypes.SCREEN_RECORDING]: r.NativePermissionRequestType.ScreenRecording
+        [s.NativePermissionTypes.CAMERA]: r.NativePermissionRequestType.Camera,
+        [s.NativePermissionTypes.AUDIO]: r.NativePermissionRequestType.Microphone,
+        [s.NativePermissionTypes.PHOTOS]: r.NativePermissionRequestType.Photo,
+        [s.NativePermissionTypes.INPUT_MONITORING]: r.NativePermissionRequestType.InputMonitoring,
+        [s.NativePermissionTypes.SCREEN_RECORDING]: r.NativePermissionRequestType.ScreenRecording
     }), t.default = new l
 }

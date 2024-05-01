@@ -11,9 +11,9 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    class s extends i.default {
+    class a extends i.default {
         static createFromServer(e) {
-            return new s({
+            return new a({
                 id: e.id,
                 guildId: e.guild_id,
                 userId: null != e.user ? e.user.id : e.user_id,
@@ -26,5 +26,5 @@ function(e, t, n) {
             super(), r(this, "id", void 0), r(this, "guildId", void 0), r(this, "userId", void 0), r(this, "user", void 0), r(this, "ended", void 0), r(this, "endsAt", void 0), this.id = e.id, this.guildId = e.guildId, this.userId = e.userId, this.user = e.user, this.ended = e.ended, this.endsAt = null != e.endsAt ? e.endsAt : null
         }
     }
-    t.default = s
+    t.default = a
 }

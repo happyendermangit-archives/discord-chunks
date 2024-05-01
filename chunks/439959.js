@@ -11,8 +11,8 @@ function(e, t, n) {
             return i
         }
     }), n("47120"), n("724458"), n("653041");
-    var i, r, s = n("470079"),
-        a = n("399606"),
+    var i, r, a = n("470079"),
+        s = n("399606"),
         o = n("597688"),
         l = n("1870"),
         u = n("884697"),
@@ -27,15 +27,15 @@ function(e, t, n) {
             id: "Shop"
         };
     t.default = () => {
-        let e = (0, a.useStateFromStores)([d.default], () => d.default.getCurrentUser()),
+        let e = (0, s.useStateFromStores)([d.default], () => d.default.getCurrentUser()),
             t = _.default.canUseCollectibles(e),
-            n = (0, a.useStateFromStores)([l.default], () => l.default.purchases),
-            [i, r] = (0, a.useStateFromStoresArray)([o.default], () => [o.default.categories, o.default.products]);
-        return (0, s.useMemo)(() => {
+            n = (0, s.useStateFromStores)([l.default], () => l.default.purchases),
+            [i, r] = (0, s.useStateFromStoresArray)([o.default], () => [o.default.categories, o.default.products]);
+        return (0, a.useMemo)(() => {
             let e = (0, u.getAvatarDecorations)(n, i).reduce((e, i) => {
-                let s = n.get(i.skuId),
-                    a = (0, u.isPremiumCollectiblesPurchase)(s);
-                return (a && 0 === e.premium_purchase.length && (e.premium_purchase = e.premium_preview, e.premium_preview = []), a) ? (e.premium_purchase.push(i), e) : null != s ? (e.purchase.push(i), e) : !t && (0, u.isPremiumCollectiblesProduct)(r.get(i.skuId)) ? ((e.premium_purchase.length > 0 ? e.premium_purchase : e.premium_preview).push(i), e) : (e.preview.push(i), e)
+                let a = n.get(i.skuId),
+                    s = (0, u.isPremiumCollectiblesPurchase)(a);
+                return (s && 0 === e.premium_purchase.length && (e.premium_purchase = e.premium_preview, e.premium_preview = []), s) ? (e.premium_purchase.push(i), e) : null != a ? (e.purchase.push(i), e) : !t && (0, u.isPremiumCollectiblesProduct)(r.get(i.skuId)) ? ((e.premium_purchase.length > 0 ? e.premium_purchase : e.premium_preview).push(i), e) : (e.preview.push(i), e)
             }, {
                 purchase: [],
                 premium_purchase: [],

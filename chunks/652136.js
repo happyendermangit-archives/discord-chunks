@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("481060"),
-        s = n("626135"),
-        a = n("981631");
+        a = n("626135"),
+        s = n("981631");
 
     function o(e) {
         let {
@@ -18,13 +18,13 @@ function(e, t, n) {
             analyticsLocations: l,
             analyticsLocation: u
         } = e;
-        return s.default.track(a.AnalyticEvents.STICKER_PACK_VIEW_ALL, {
+        return a.default.track(s.AnalyticEvents.STICKER_PACK_VIEW_ALL, {
             sticker_id: null == o ? void 0 : o.id,
             sticker_pack_id: t.id,
             location: u,
             location_stack: l
-        }), s.default.track(a.AnalyticEvents.OPEN_MODAL, {
-            type: a.AnalyticsSections.STICKER_PACK_VIEW_ALL,
+        }), a.default.track(s.AnalyticEvents.OPEN_MODAL, {
+            type: s.AnalyticsSections.STICKER_PACK_VIEW_ALL,
             location: u
         }), (0, r.openModalLazy)(async () => {
             let {

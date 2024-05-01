@@ -10,8 +10,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("873546"),
         l = n("481060"),
         u = n("425493"),
@@ -48,12 +48,12 @@ function(e, t, n) {
         let {
             children: t,
             hasMediaControls: n,
-            isObscured: s,
+            isObscured: a,
             src: o
         } = e, [l, u] = r.useState(!1), _ = r.useRef(o);
         return (r.useEffect(() => {
-            o !== _.current && u(!s)
-        }, [o, s]), s) ? (0, i.jsx)(f.ObscuredDisplayContext.Provider, {
+            o !== _.current && u(!a)
+        }, [o, a]), a) ? (0, i.jsx)(f.ObscuredDisplayContext.Provider, {
             value: l,
             children: (0, i.jsx)(f.default, {
                 type: f.default.Types.ATTACHMENT,
@@ -61,7 +61,7 @@ function(e, t, n) {
                 className: A.obscureContainer,
                 obscured: !0,
                 isSingleMosaicItem: !0,
-                obscurityControlClassName: a()({
+                obscurityControlClassName: s()({
                     [A.controlsOffset]: n && l
                 }),
                 onToggleObscurity: e => {
@@ -69,7 +69,7 @@ function(e, t, n) {
                 },
                 children: e => (0, i.jsx)(i.Fragment, {
                     children: (0, i.jsx)("div", {
-                        className: a()(A.obscureWrapper, {
+                        className: s()(A.obscureWrapper, {
                             [A.obscure]: e
                         }),
                         children: t(e)
@@ -85,8 +85,8 @@ function(e, t, n) {
         let {
             src: t,
             original: n,
-            placeholder: s,
-            width: a,
+            placeholder: a,
+            width: s,
             height: l,
             animated: u,
             children: d,
@@ -102,7 +102,7 @@ function(e, t, n) {
         } = e, {
             width: v,
             height: D
-        } = (0, c.zoomFit)(a, l), M = o.isMobile && null != R;
+        } = (0, c.zoomFit)(s, l), M = o.isMobile && null != R;
         r.useEffect(() => {
             if (null != R) return _.ComponentDispatch.subscribe(S.ComponentActions.MEDIA_MODAL_CLOSE, R), () => {
                 _.ComponentDispatch.unsubscribe(S.ComponentActions.MEDIA_MODAL_CLOSE, R)
@@ -120,9 +120,9 @@ function(e, t, n) {
                 src: t,
                 children: e => (0, i.jsx)(I.default, {
                     src: t,
-                    placeholder: s,
+                    placeholder: a,
                     shouldLink: !1,
-                    width: a,
+                    width: s,
                     height: l,
                     maxWidth: v,
                     maxHeight: D,
@@ -148,7 +148,7 @@ function(e, t, n) {
             src: t,
             width: n,
             height: r,
-            onClose: s,
+            onClose: a,
             renderLinkComponent: l,
             shouldHideMediaOptions: u = !1,
             obscure: d = !1,
@@ -156,13 +156,13 @@ function(e, t, n) {
         } = e, {
             width: I,
             height: f
-        } = (0, c.zoomFit)(n, r), S = o.isMobile && null != s, p = u ? e => {
+        } = (0, c.zoomFit)(n, r), S = o.isMobile && null != a, p = u ? e => {
             e.stopPropagation(), e.preventDefault()
         } : _.onContextMenu;
         return (0, i.jsxs)("div", {
-            className: a()(A.wrapper, A.videoWrapper),
+            className: s()(A.wrapper, A.videoWrapper),
             children: [S ? (0, i.jsx)(m, {
-                onClose: s
+                onClose: a
             }) : null, (0, i.jsx)(N, {
                 hasMediaControls: !0,
                 isObscured: d,

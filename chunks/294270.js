@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("392711"),
         r = n.n(i),
-        s = n("846519"),
-        a = n("147913"),
+        a = n("846519"),
+        s = n("147913"),
         o = n("314897"),
         l = n("70956"),
         u = n("557177"),
@@ -19,7 +19,7 @@ function(e, t, n) {
             let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
             return "".concat(e, ":").concat(t, ":").concat(n)
         },
-        h = new s.Timeout,
+        h = new a.Timeout,
         A = [],
         m = {},
         N = (0, u.createSound)("highfive_whistle", "highfive_whistle", .6),
@@ -30,26 +30,26 @@ function(e, t, n) {
             emoji: t,
             channelId: n,
             userId: i
-        } = e, a = o.default.getId(), l = _.default.getEnabled();
+        } = e, s = o.default.getId(), l = _.default.getEnabled();
         if (null != t) {
             if (l && (0, c.default)(t.name)) return function(e, t, n) {
                 var i;
                 let r = S(t, n);
                 if (null != _.default.getWaitingHighFive(n, t)) return;
-                let [a, o] = null !== (i = Object.entries(m).find(e => {
+                let [s, o] = null !== (i = Object.entries(m).find(e => {
                     let [t] = e;
                     return t !== r
                 })) && void 0 !== i ? i : [];
-                if (null != a && null != o) o.cancel(), p.play(), delete m[a], (0, d.completeHighFive)(a.split(":")[0], t, n, e);
+                if (null != s && null != o) o.cancel(), p.play(), delete m[s], (0, d.completeHighFive)(s.split(":")[0], t, n, e);
                 else {
                     (0, d.queueHighFive)(e, t, n), N.play();
-                    let i = new s.DelayedCall(I, () => {
+                    let i = new a.DelayedCall(I, () => {
                         delete m[t], (0, d.removeHighFive)(t, n)
                     });
                     m[t] = i, i.delay()
                 }
             }(t.name, i, n);
-            i === a && (A = [...A, t.name].slice(-1 * f), r().isEqual(A, T) ? (N.play(), h.stop(), A = [], (0, d.setHighFiveEnabled)(!l)) : h.start(E, () => A = []))
+            i === s && (A = [...A, t.name].slice(-1 * f), r().isEqual(A, T) ? (N.play(), h.stop(), A = [], (0, d.setHighFiveEnabled)(!l)) : h.start(E, () => A = []))
         }
     }
 
@@ -59,11 +59,11 @@ function(e, t, n) {
             waitingUserId: n,
             channelId: i
         } = e, r = S("".concat(t).concat(n), i, !0);
-        m[r] = new s.DelayedCall(550, () => {
+        m[r] = new a.DelayedCall(550, () => {
             delete m[r], (0, d.clearCompletedHighFive)(t, n, i)
         }), m[r].delay()
     }
-    class C extends a.default {
+    class C extends s.default {
         _terminate() {
             Object.values(m).forEach(e => e.cancel()), m = {}
         }

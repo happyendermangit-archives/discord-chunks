@@ -5,7 +5,7 @@ function(e, t, n) {
             return m
         }
     }), n("47120"), n("653041");
-    var i, r, s, a, o, l, u = n("512722"),
+    var i, r, a, s, o, l, u = n("512722"),
         d = n.n(u),
         _ = n("392711"),
         c = n.n(_),
@@ -17,7 +17,7 @@ function(e, t, n) {
         S = n("230307"),
         h = n("981631"),
         A = n("731455");
-    (s = i || (i = {})).UNSET = "unset", s.FETCHING = "fetching", s.FAILED = "failed", s.SUCCEEDED = "succeeded";
+    (a = i || (i = {})).UNSET = "unset", a.FETCHING = "fetching", a.FAILED = "failed", a.SUCCEEDED = "succeeded";
     let m = {
             guilds: [],
             total: 0,
@@ -113,12 +113,12 @@ function(e, t, n) {
             return y
         }
     }
-    l = "GuildDiscoveryStore", (o = "displayName") in(a = U) ? Object.defineProperty(a, o, {
+    l = "GuildDiscoveryStore", (o = "displayName") in(s = U) ? Object.defineProperty(s, o, {
         value: l,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : a[o] = l, t.default = new U(I.default, {
+    }) : s[o] = l, t.default = new U(I.default, {
         GUILD_DISCOVERY_SEARCH_INIT: function(e) {
             let {
                 index: t
@@ -143,16 +143,16 @@ function(e, t, n) {
                 section: n,
                 total: i,
                 offset: r,
-                limit: s
+                limit: a
             } = e;
             O = !1, C = Date.now(), M = (0, T.makeAnalyticsID)();
-            let a = c().map(t, P);
+            let s = c().map(t, P);
             N = {
                 ...N,
                 [n]: {
-                    guilds: a,
+                    guilds: s,
                     offset: r,
-                    limit: s,
+                    limit: a,
                     total: i,
                     loading: !1,
                     isFirstLoad: !1
@@ -240,8 +240,8 @@ function(e, t, n) {
                 section: n,
                 guilds: i,
                 total: r,
-                offset: s,
-                limit: a,
+                offset: a,
+                limit: s,
                 query: o,
                 categoryId: l
             } = e;
@@ -257,8 +257,8 @@ function(e, t, n) {
                             ...null === (t = N[n][o]) || void 0 === t ? void 0 : t[l],
                             guilds: u,
                             total: r,
-                            offset: s,
-                            limit: a,
+                            offset: a,
+                            limit: s,
                             loading: !1
                         }
                     }
@@ -303,8 +303,8 @@ function(e, t, n) {
                 query: i
             } = e, r = [];
             if (null != n) {
-                var s;
-                let e = null !== (s = n["categories.id"]) && void 0 !== s ? s : {};
+                var a;
+                let e = null !== (a = n["categories.id"]) && void 0 !== a ? a : {};
                 delete e[A.DEFAULT_DISCOVERY_CATEGORY_ID], r = Object.entries(e).map(e => {
                     let [t, n] = e;
                     return [parseInt(t, 10), n]

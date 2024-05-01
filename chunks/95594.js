@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("470079"),
         r = n("663507"),
-        s = n("924428"),
-        a = n("151973");
+        a = n("924428"),
+        s = n("151973");
     let o = Object.freeze({
         coordsMap: {},
         visibleSections: {},
@@ -35,14 +35,14 @@ function(e, t, n) {
             paddingVertical: S,
             paddingHorizontal: h,
             dir: A
-        } = e, m = (0, s.default)(), N = (0, i.useRef)(o), [p] = (0, i.useState)(() => new r.default), {
+        } = e, m = (0, a.default)(), N = (0, i.useRef)(o), [p] = (0, i.useState)(() => new r.default), {
             offsetWidth: O
         } = c(), {
             dirty: R,
             chunkStart: C,
             chunkEnd: g,
             forceUpdateOnChunkChange: L
-        } = (0, a.default)({
+        } = (0, s.default)({
             chunkSize: _,
             getScrollerState: c,
             forceUpdate: m

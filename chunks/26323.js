@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("481060"),
-        s = n("928518"),
-        a = n("776862"),
+        a = n("928518"),
+        s = n("776862"),
         o = n("626135"),
         l = n("981631");
 
@@ -23,8 +23,8 @@ function(e, t, n) {
         let {
             openInPopoutEnabled: d,
             ..._
-        } = e, c = s.default.getWindowOpen(l.PopoutWindowKeys.CHANNEL_CALL_POPOUT) && null != d && d;
-        c && (0, a.default)(l.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
+        } = e, c = a.default.getWindowOpen(l.PopoutWindowKeys.CHANNEL_CALL_POPOUT) && null != d && d;
+        c && (0, s.default)(l.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
         let E = c ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT;
         (0, r.openModalLazy)(async () => {
             let {

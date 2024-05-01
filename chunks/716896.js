@@ -3,16 +3,16 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("147913"),
         r = n("592125"),
-        s = n("109590"),
-        a = n("176505");
+        a = n("109590"),
+        s = n("176505");
     class o extends i.default {
         handleChannelPreload(e) {
             let {
                 channelId: t
             } = e;
-            if ((0, a.isStaticChannelRoute)(t)) return;
+            if ((0, s.isStaticChannelRoute)(t)) return;
             let n = r.default.getChannel(t);
-            null != n && n.isForumLikeChannel() && (0, s.preloadForumThreads)(n)
+            null != n && n.isForumLikeChannel() && (0, a.preloadForumThreads)(n)
         }
         constructor(...e) {
             var t, n, i;

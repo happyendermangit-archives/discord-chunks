@@ -5,7 +5,7 @@ function(e, t, n) {
             return i
         },
         performance: function() {
-            return s
+            return a
         },
         timeOrigin: function() {
             return r
@@ -36,5 +36,5 @@ function(e, t, n) {
     if (null == n.g.performance.timeOrigin) try {
         n.g.performance.timeOrigin = r
     } catch (e) {}
-    let s = n.g.performance
+    let a = n.g.performance
 }

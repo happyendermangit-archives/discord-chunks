@@ -6,17 +6,17 @@ function(e, t, n) {
             return u
         }
     });
-    var s = n("804098"),
-        a = n("20186"),
+    var a = n("804098"),
+        s = n("20186"),
         o = n("626135"),
         l = n("960048");
 
     function u(e) {
         i !== e && (i = e, r = e, ! function() {
-            let e = i ? r ? s.DesignIds.DESIGN_TABS_IA : s.DesignIds.DESIGN_IA : s.DesignIds.CLASSIC_IA;
+            let e = i ? r ? a.DesignIds.DESIGN_TABS_IA : a.DesignIds.DESIGN_IA : a.DesignIds.CLASSIC_IA;
             o.default.extendSuperProperties({
                 design_id: e
-            }), a.addGlobalTag("design_id", e), l.default.setTags({
+            }), s.addGlobalTag("design_id", e), l.default.setTags({
                 design_id: "".concat(e)
             })
         }())

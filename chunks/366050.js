@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     let i, r;
     n.r(t), n("47120");
-    var s, a, o, l, u = n("442837"),
+    var a, s, o, l, u = n("442837"),
         d = n("433517"),
         _ = n("570140"),
         c = n("981631");
@@ -10,7 +10,7 @@ function(e, t, n) {
         I = new Map,
         T = c.PictureInPicturePositions.BOTTOM_RIGHT,
         f = {};
-    class S extends(s = u.default.Store) {
+    class S extends(a = u.default.Store) {
         initialize() {
             T = d.Storage.get(E, c.PictureInPicturePositions.BOTTOM_RIGHT)
         }
@@ -37,28 +37,28 @@ function(e, t, n) {
             return null != e && I.has(e)
         }
     }
-    l = "PictureInPictureStore", (o = "displayName") in(a = S) ? Object.defineProperty(a, o, {
+    l = "PictureInPictureStore", (o = "displayName") in(s = S) ? Object.defineProperty(s, o, {
         value: l,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : a[o] = l, t.default = new S(_.default, {
+    }) : s[o] = l, t.default = new S(_.default, {
         PICTURE_IN_PICTURE_OPEN: function(e) {
             var t, n;
             let {
-                id: s,
-                component: a,
+                id: a,
+                component: s,
                 props: o
             } = e;
-            if (null != I.get(s)) return;
+            if (null != I.get(a)) return;
             let l = {
-                id: s,
-                component: a,
+                id: a,
+                component: s,
                 position: null !== (t = o.position) && void 0 !== t ? t : T,
                 props: o,
                 docked: null !== (n = o.docked) && void 0 !== n && n
             };
-            I.set(s, l), a === c.PictureInPictureComponents.VIDEO ? null == i && (i = s) : a === c.PictureInPictureComponents.EMBED_IFRAME && null == r && (r = s)
+            I.set(a, l), s === c.PictureInPictureComponents.VIDEO ? null == i && (i = a) : s === c.PictureInPictureComponents.EMBED_IFRAME && null == r && (r = a)
         },
         PICTURE_IN_PICTURE_CLOSE: function(e) {
             let {

@@ -11,9 +11,9 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("952265"),
-        s = n("712364");
-    let a = (e, t, n) => function(r) {
-        return (0, i.jsx)(s.default, {
+        a = n("712364");
+    let s = (e, t, n) => function(r) {
+        return (0, i.jsx)(a.default, {
             handleSubmit: e,
             handleEarlyClose: t,
             ...n,
@@ -22,12 +22,12 @@ function(e, t, n) {
     };
 
     function o(e, t, n) {
-        return (0, r.openModal)(a(e, t, n), {
+        return (0, r.openModal)(s(e, t, n), {
             onCloseCallback: t
         })
     }
 
     function l(e, t, n, i) {
-        return (0, r.updateModal)(e, a(t, n, i))
+        return (0, r.updateModal)(e, s(t, n, i))
     }
 }

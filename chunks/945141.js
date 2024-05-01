@@ -3,17 +3,17 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("433517"),
         r = n("147913");
-    let s = "formGuidelinesStorageKey";
-    class a extends r.default {
+    let a = "formGuidelinesStorageKey";
+    class s extends r.default {
         _initialize() {
-            let e = i.Storage.get(s);
+            let e = i.Storage.get(a);
             null != e && (this.seenForumGuidelines = new Set(e))
         }
         _terminate() {
-            i.Storage.set(s, this.seenForumGuidelines)
+            i.Storage.set(a, this.seenForumGuidelines)
         }
         markAsSeen(e) {
-            this.seenForumGuidelines.add(e), i.Storage.set(s, this.seenForumGuidelines)
+            this.seenForumGuidelines.add(e), i.Storage.set(a, this.seenForumGuidelines)
         }
         hasSeen(e) {
             return this.seenForumGuidelines.has(e)
@@ -28,5 +28,5 @@ function(e, t, n) {
             }) : t[n] = i
         }
     }
-    t.default = new a
+    t.default = new s
 }

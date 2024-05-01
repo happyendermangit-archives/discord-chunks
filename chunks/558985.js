@@ -6,8 +6,8 @@ function(e, t, n) {
         }
     }), n("47120"), n("411104");
     var i, r = n("470079"),
-        s = n("153832"),
-        a = n("324404");
+        a = n("153832"),
+        s = n("324404");
 
     function o(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
@@ -17,7 +17,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    let l = (0, s.v4)(),
+    let l = (0, a.v4)(),
         u = new Map,
         d = new Map;
     class _ extends(i = r.Component) {
@@ -58,9 +58,9 @@ function(e, t, n) {
                 rootMargin: n,
                 threshold: i
             } = e;
-            t ? u.has(t) ? this.elementId = u.get(t) || "" : u.set(t, (0, s.v4)()) : this.elementId = l;
+            t ? u.has(t) ? this.elementId = u.get(t) || "" : u.set(t, (0, a.v4)()) : this.elementId = l;
             let r = this.getVisibilityObserverId();
-            !d.has(r) && d.set(r, new a.VisibilityObserver({
+            !d.has(r) && d.set(r, new s.VisibilityObserver({
                 root: t,
                 rootMargin: n,
                 threshold: i

@@ -5,9 +5,9 @@ function(e, t, n) {
             return r
         }
     });
-    var i, r, s = n("818083");
+    var i, r, a = n("818083");
     (i = r || (r = {}))[i.DEFAULT = 0] = "DEFAULT", i[i.WINTER_2023_DROP = 1] = "WINTER_2023_DROP", i[i.MONSTER_DROP = 2] = "MONSTER_DROP", i[i.SPRINGTOONS = 4] = "SPRINGTOONS", i[i.SHY = 5] = "SHY";
-    let a = (0, s.createExperiment)({
+    let s = (0, a.createExperiment)({
         kind: "user",
         id: "2023-12_collectibles_shop_marketing",
         label: "Collectibles Shop Marketing Variations",
@@ -40,7 +40,7 @@ function(e, t, n) {
             }
         }]
     });
-    t.default = e => a.useExperiment({
+    t.default = e => s.useExperiment({
         location: e
     }).variant
 }

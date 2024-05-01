@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("411104");
     var i = n("141795"),
         r = n("476326"),
-        s = n("956664"),
-        a = n("693824");
+        a = n("956664"),
+        s = n("693824");
     t.default = class e {
         toDataUrl(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "png",
@@ -18,19 +18,19 @@ function(e, t, n) {
                 quality: l = 1,
                 fileName: u
             } = t;
-            if (n === a.DiscordCanvasExporterOutputFormats.Base64) return this.toDataUrl(e, o, l);
-            if (n === a.DiscordCanvasExporterOutputFormats.Blob) {
+            if (n === s.DiscordCanvasExporterOutputFormats.Base64) return this.toDataUrl(e, o, l);
+            if (n === s.DiscordCanvasExporterOutputFormats.Blob) {
                 let t = this.toDataUrl(e, o, l);
-                return (0, s.dataUrlToBlob)(t)
+                return (0, a.dataUrlToBlob)(t)
             }
-            if (n === a.DiscordCanvasExporterOutputFormats.File) {
+            if (n === s.DiscordCanvasExporterOutputFormats.File) {
                 let t = this.toDataUrl(e, o, l);
-                return await (0, s.dataUrlToFile)(t, u, "image/png")
+                return await (0, a.dataUrlToFile)(t, u, "image/png")
             }
-            if (n === a.DiscordCanvasExporterOutputFormats.CloudUpload) {
+            if (n === s.DiscordCanvasExporterOutputFormats.CloudUpload) {
                 let {
                     channelId: n
-                } = t, a = this.toDataUrl(e, o, l), d = await (0, s.dataUrlToFile)(a, u, "image/png");
+                } = t, s = this.toDataUrl(e, o, l), d = await (0, a.dataUrlToFile)(s, u, "image/png");
                 return new i.CloudUpload({
                     file: d,
                     platform: r.UploadPlatform.WEB,

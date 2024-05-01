@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120"), n("627341");
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("278074"),
         l = n("399606"),
         u = n("481060"),
@@ -80,7 +80,7 @@ function(e, t, n) {
         var t;
         let {
             user: n,
-            displayProfile: s,
+            displayProfile: a,
             onClose: I,
             onDismiss: T,
             isInSidebar: N = !1,
@@ -101,7 +101,7 @@ function(e, t, n) {
         r.useEffect(() => (F(U), () => {
             H()
         }), [F, U, H]);
-        let Y = (0, A.useProfileEffectPreset)(null == s ? void 0 : s.profileEffectId),
+        let Y = (0, A.useProfileEffectPreset)(null == a ? void 0 : a.profileEffectId),
             [j, W] = (0, l.useStateFromStoresArray)([S.default], () => {
                 var e;
                 return [(0, h.isPremiumCollectiblesProduct)(S.default.getProduct(null === (e = n.avatarDecoration) || void 0 === e ? void 0 : e.skuId)), (0, h.isPremiumCollectiblesProduct)(S.default.getProduct(null == Y ? void 0 : Y.skuId))]
@@ -137,7 +137,7 @@ function(e, t, n) {
         }))).otherwise(() => null);
         return (0, i.jsx)("div", {
             style: k,
-            className: a()(g.containerWrapper, {
+            className: s()(g.containerWrapper, {
                 [g.animation]: !G,
                 [g.inSidebar]: N
             }),

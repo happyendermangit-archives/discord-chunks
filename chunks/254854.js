@@ -3,11 +3,11 @@ function(e, t, n) {
     n.r(t);
     var i = n("570140");
     t.default = {
-        show(e, t, n, r, s) {
+        show(e, t, n, r, a) {
             i.default.dispatch({
                 type: "NOTICE_SHOW",
                 notice: {
-                    id: s,
+                    id: a,
                     type: e,
                     message: t,
                     buttonText: n,

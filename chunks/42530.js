@@ -8,21 +8,21 @@ function(e, t, n) {
             return r
         },
         FIRST_TEXT_POINT: function() {
-            return s
+            return a
         },
         SELECTABLE_VOIDS: function() {
             return o
         },
         WHITESPACE_RE: function() {
-            return a
+            return s
         }
     });
     let i = [0],
         r = [0, 0],
-        s = {
+        a = {
             path: [0, 0],
             offset: 0
         },
-        a = /(\t|\s)/,
+        s = /(\t|\s)/,
         o = ["applicationCommandOption"]
 }

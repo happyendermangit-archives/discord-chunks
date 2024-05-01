@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("780384"),
         l = n("481060"),
         u = n("410030"),
@@ -29,7 +29,7 @@ function(e, t, n) {
         v = n("689938"),
         D = n("792028");
     t.default = e => {
-        var t, s, M;
+        var t, a, M;
         let {
             onLearnMore: y,
             onClose: P,
@@ -68,7 +68,7 @@ function(e, t, n) {
                 })
             }
         }, [W, K, b, U, w, Z, G, z]), (0, i.jsxs)("div", {
-            className: a()(D.premiumPromo, {
+            className: s()(D.premiumPromo, {
                 [D.unifyTrialUpsell]: j
             }),
             children: [(0, i.jsx)(l.Clickable, {
@@ -78,7 +78,7 @@ function(e, t, n) {
             }), W ? (0, i.jsx)(l.Spinner, {}) : (0, i.jsxs)(i.Fragment, {
                 children: [j ? (0, i.jsx)(h.default, {
                     type: L.PremiumUpsellTypes.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI,
-                    subscriptionTier: null !== (M = null == H ? void 0 : null === (s = H.subscription_trial) || void 0 === s ? void 0 : s.sku_id) && void 0 !== M ? M : L.PremiumSubscriptionSKUs.TIER_2,
+                    subscriptionTier: null !== (M = null == H ? void 0 : null === (a = H.subscription_trial) || void 0 === a ? void 0 : a.sku_id) && void 0 !== M ? M : L.PremiumSubscriptionSKUs.TIER_2,
                     onClose: P,
                     trialOffer: H,
                     discountOffer: Y,

@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120"), n("411104");
     var i = n("836560"),
         r = n("392711"),
-        s = n.n(r),
-        a = n("710845"),
+        a = n.n(r),
+        s = n("710845"),
         o = n("596956"),
         l = n("959517");
 
@@ -20,14 +20,14 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    let d = new a.default("UploaderBase.tsx");
+    let d = new s.default("UploaderBase.tsx");
     class _ extends i.EventEmitter {
         _addAttachmentsToPayload(e, t, n) {
             let i = {
                     ...e
                 },
-                r = [...s().get(i, t, []), ...n];
-            return s().set(i, t, r)
+                r = [...a().get(i, t, []), ...n];
+            return a().set(i, t, r)
         }
         clearProcessingMessageInterval() {
             null != this.processingMessageChangeInterval && (clearInterval(this.processingMessageChangeInterval), this.processingMessageChangeInterval = void 0)
@@ -63,10 +63,10 @@ function(e, t, n) {
             }), u(this, "_handleProgress", (e, t, n) => {
                 let i = Date.now(),
                     r = (0, o.calculateProgress)(e, t),
-                    s = Math.floor((e - this._loaded) / ((i - this._lastUpdate) / 1e3));
+                    a = Math.floor((e - this._loaded) / ((i - this._lastUpdate) / 1e3));
                 if (null != n) {
-                    var a;
-                    null === (a = this._file.items) || void 0 === a || a.forEach(e => {
+                    var s;
+                    null === (s = this._file.items) || void 0 === s || s.forEach(e => {
                         e.item.progress = n[e.id]
                     })
                 }
@@ -74,7 +74,7 @@ function(e, t, n) {
                     ...this._file,
                     currentSize: t,
                     progress: r,
-                    rate: s
+                    rate: a
                 }, this.emit("progress", this._file)
             }), u(this, "_handleException", e => {
                 this._handleError({
@@ -94,7 +94,7 @@ function(e, t, n) {
                 this.clearProcessingMessageInterval(), !this._aborted && (this._errored = !0, d.log("_handleError: ".concat(t, " (").concat(JSON.stringify(n), ") for ").concat(this.id)), this.emit("error", this._file, t, i, n), this.removeAllListeners())
             }), u(this, "_handleComplete", e => {
                 this.clearProcessingMessageInterval(), d.log("_handleComplete for ".concat(this.id)), this.emit("complete", this._file, e), this.removeAllListeners()
-            }), this.id = s().uniqueId("Uploader"), this._url = e, this._method = t, this._raiseEndpointErrors = null !== (i = null == n ? void 0 : n.raiseEndpointErrors) && void 0 !== i && i
+            }), this.id = a().uniqueId("Uploader"), this._url = e, this._method = t, this._raiseEndpointErrors = null !== (i = null == n ? void 0 : n.raiseEndpointErrors) && void 0 !== i && i
         }
     }
 }

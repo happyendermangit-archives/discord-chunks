@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return a
         }
     });
     var i = n("81825");
@@ -15,7 +15,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    class s extends i.default {
+    class a extends i.default {
         toString() {
             return this.name
         }

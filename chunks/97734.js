@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("302454"),
         r = n.n(i),
-        s = n("339085"),
-        a = n("633302"),
+        a = n("339085"),
+        s = n("633302"),
         o = n("176354"),
         l = n("594199");
     let u = {
@@ -20,11 +20,11 @@ function(e, t, n) {
             order: l.default.order,
             requiredFirstCharacters: [":"],
             match(e) {
-                let t = a.default.EMOJI_NAME_AND_DIVERSITY_RE.exec(e);
-                return null != t && "" !== a.default.convertNameToSurrogate(t[1]) ? t : null
+                let t = s.default.EMOJI_NAME_AND_DIVERSITY_RE.exec(e);
+                return null != t && "" !== s.default.convertNameToSurrogate(t[1]) ? t : null
             },
             parse(e) {
-                let [t, n] = e, i = a.default.convertNameToSurrogate(n);
+                let [t, n] = e, i = s.default.convertNameToSurrogate(n);
                 return null == i || "" === i ? {
                     type: "text",
                     content: t
@@ -40,19 +40,19 @@ function(e, t, n) {
             requiredFirstCharacters: ["<"],
             match: e => /^<(a)?:(\w+):(\d+)>/.exec(e),
             parse(e, t, n) {
-                let [i, r, a, o] = e, {
+                let [i, r, s, o] = e, {
                     guildId: l
-                } = n, u = s.default.getDisambiguatedEmojiContext(l).getById(o), d = null == u || u.require_colons;
-                return null != u && (a = u.name), {
+                } = n, u = a.default.getDisambiguatedEmojiContext(l).getById(o), d = null == u || u.require_colons;
+                return null != u && (s = u.name), {
                     emojiId: o,
-                    name: d ? ":".concat(a, ":") : a,
+                    name: d ? ":".concat(s, ":") : s,
                     animated: "a" === r
                 }
             }
         },
         text: {
             parse(e) {
-                let t = a.default.findInlineEmojisFromSurrogates(e[0]),
+                let t = s.default.findInlineEmojisFromSurrogates(e[0]),
                     n = 0;
                 return t.map(e => {
                     if ("text" === e.type) {

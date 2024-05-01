@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        s = n.n(r),
-        a = n("718017"),
+        a = n.n(r),
+        s = n("718017"),
         o = n("399606"),
         l = n("481060"),
         u = n("607070"),
@@ -42,7 +42,7 @@ function(e, t, n) {
             analyticsLocations: g
         } = (0, d.default)(), L = f.AppliedGuildBoostsRequiredForBoostedGuildTier[O] - r.premiumSubscriberCount, v = O <= R || m, D = v && O <= r.premiumTier, M = v && O < r.premiumTier, y = v && O === r.premiumTier, {
             scaleFactor: P
-        } = (0, a.useSpring)({
+        } = (0, s.useSpring)({
             from: {
                 scaleFactor: 0
             },
@@ -55,7 +55,7 @@ function(e, t, n) {
             },
             immediate: C
         }), U = (0, i.jsxs)(i.Fragment, {
-            children: [(0, i.jsx)(a.animated.div, {
+            children: [(0, i.jsx)(s.animated.div, {
                 className: h.progressBarMarkerIndicator,
                 style: {
                     transform: P.to(e => "translate(-50%, -50%) scale(".concat(e, ")"))
@@ -103,7 +103,7 @@ function(e, t, n) {
             }),
             shouldShow: O !== f.BoostedGuildTiers.NONE,
             children: e => (0, i.jsxs)(b, {
-                className: s()(h.progressBarMarker, {
+                className: a()(h.progressBarMarker, {
                     [h.progressBarMarkerUnlocked]: D,
                     [h.progressBarMarkerLocked]: !D,
                     [h.progressBarMarkerLower]: M,

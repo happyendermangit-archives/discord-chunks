@@ -10,14 +10,14 @@ function(e, t, n) {
     });
     var i = n("442837"),
         r = n("102172"),
-        s = n("430824"),
-        a = n("496675");
+        a = n("430824"),
+        s = n("496675");
 
     function o(e) {
-        return (0, i.useStateFromStores)([s.default, a.default], () => e.isPrivate() || (0, r.canStreamInChannel)(e, s.default, a.default, !1), [e])
+        return (0, i.useStateFromStores)([a.default, s.default], () => e.isPrivate() || (0, r.canStreamInChannel)(e, a.default, s.default, !1), [e])
     }
 
     function l(e) {
-        return e.isPrivate() || (0, r.canStreamInChannel)(e, s.default, a.default, !1)
+        return e.isPrivate() || (0, r.canStreamInChannel)(e, a.default, s.default, !1)
     }
 }

@@ -34,8 +34,8 @@ function(e, t, n) {
     }), n("411104"), n("47120"), n("518263"), n("970173"), n("520712"), n("268111"), n("941497"), n("32026"), n("480839"), n("744285"), n("492257"), n("873817");
     var i = n("512722"),
         r = n.n(i),
-        s = n("259443"),
-        a = n("544891"),
+        a = n("259443"),
+        s = n("544891"),
         o = n("377108"),
         l = n("524437"),
         u = n("433517"),
@@ -75,11 +75,11 @@ function(e, t, n) {
             let i = this.ProtoClass.fields.find(t => t.localName === e);
             if (null == i) throw Error("Unknown proto field name ".concat(String(e)));
             let r = i.T(),
-                s = this.getCurrentValue()[e],
-                a = null != s ? r.fromBinary(r.toBinary(s), T.BINARY_READ_OPTIONS) : r.create();
-            if (!1 === t(a)) return;
+                a = this.getCurrentValue()[e],
+                s = null != a ? r.fromBinary(r.toBinary(a), T.BINARY_READ_OPTIONS) : r.create();
+            if (!1 === t(s)) return;
             let o = this.ProtoClass.create();
-            o[e] = a, __OVERLAY__ ? d.default.dispatch({
+            o[e] = s, __OVERLAY__ ? d.default.dispatch({
                 type: "USER_SETTINGS_PROTO_ENQUEUE_UPDATE",
                 settings: {
                     type: this.type,
@@ -100,7 +100,7 @@ function(e, t, n) {
             r()(!__OVERLAY__, "this cannot run in the overlay");
             let {
                 editInfo: i
-            } = this.getEditInfo(), s = {
+            } = this.getEditInfo(), a = {
                 timeout: i.timeout
             };
             if (!i.loaded) throw Error("Cannot edit user settings proto because we have not yet loaded the stored version from the DB");
@@ -113,12 +113,12 @@ function(e, t, n) {
                 partial: !0,
                 local: !0
             });
-            let a = null !== (n = t.delaySeconds) && void 0 !== n ? n : 0;
-            if (null != s.timeout && a < i.timeoutDelay && !i.rateLimited && (clearTimeout(s.timeout), s.timeout = void 0), null == s.timeout) {
-                let e = a * _.default.Millis.SECOND;
-                t.jitter && (e += Math.floor(Math.random() * Math.min(e, 30 * _.default.Millis.SECOND))), this.logger.log("Scheduling save from markDirty"), s.timeout = setTimeout(this.persistChanges, e), s.timeoutDelay = a
+            let s = null !== (n = t.delaySeconds) && void 0 !== n ? n : 0;
+            if (null != a.timeout && s < i.timeoutDelay && !i.rateLimited && (clearTimeout(a.timeout), a.timeout = void 0), null == a.timeout) {
+                let e = s * _.default.Millis.SECOND;
+                t.jitter && (e += Math.floor(Math.random() * Math.min(e, 30 * _.default.Millis.SECOND))), this.logger.log("Scheduling save from markDirty"), a.timeout = setTimeout(this.persistChanges, e), a.timeoutDelay = s
             }
-            null != t.cleanup && (s.cleanupFuncs = [...i.cleanupFuncs, ...t.cleanup]), null == i.protoToSave ? s.protoToSave = e : s.protoToSave = (0, T.mergeTopLevelFields)(this.ProtoClass, i.protoToSave, e), this.dispatchChanges(s)
+            null != t.cleanup && (a.cleanupFuncs = [...i.cleanupFuncs, ...t.cleanup]), null == i.protoToSave ? a.protoToSave = e : a.protoToSave = (0, T.mergeTopLevelFields)(this.ProtoClass, i.protoToSave, e), this.dispatchChanges(a)
         }
         dispatchChanges(e) {
             d.default.dispatch({
@@ -154,7 +154,7 @@ function(e, t, n) {
                         body: {
                             settings: t
                         }
-                    } = await a.HTTP.get({
+                    } = await s.HTTP.get({
                         url: S.Endpoints.USER_SETTINGS_PROTO(this.type)
                     }), n = (0, T.b64ToProto)(this.ProtoClass, t);
                     if (null == n) {
@@ -167,7 +167,7 @@ function(e, t, n) {
                     let i = E.default[this.type],
                         {
                             proto: r,
-                            isDirty: s,
+                            isDirty: a,
                             cleanupFuncs: o
                         } = (0, T.runMigrations)(n, i);
                     return await d.default.dispatch({
@@ -176,9 +176,9 @@ function(e, t, n) {
                             type: this.type,
                             proto: n
                         },
-                        resetEditInfo: s || e,
+                        resetEditInfo: a || e,
                         local: !1
-                    }), s && this.markDirtyFromMigration(r, o), n
+                    }), a && this.markDirtyFromMigration(r, o), n
                 } catch (e) {
                     throw this.dispatchChanges({
                         loading: !1
@@ -244,7 +244,7 @@ function(e, t, n) {
                     this.saveLastSendTime();
                     let {
                         body: n
-                    } = await a.HTTP.patch({
+                    } = await s.HTTP.patch({
                         url: S.Endpoints.USER_SETTINGS_PROTO(this.type),
                         body: {
                             settings: t,
@@ -276,7 +276,7 @@ function(e, t, n) {
                     } else if (400 === e.status && (null === (n = e.body) || void 0 === n ? void 0 : n.code) === S.AbortCodes.INVALID_USER_SETTINGS_DATA) throw this.logger.log("Reloading do to invalid data"), this.loadIfNecessary(!0), e;
                     else throw this.logger.log("Unknown user settings error"), e
                 }
-            }, this.logger = new s.Logger(this.ProtoClass.typeName)
+            }, this.logger = new a.Logger(this.ProtoClass.typeName)
         }
     }
     let p = new N(l.PreloadedUserSettings, f.UserSettingsTypes.PRELOADED_USER_SETTINGS),

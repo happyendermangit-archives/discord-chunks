@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return a
         }
     }), n("411104");
     var i = n("998502");
@@ -15,7 +15,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    class s {
+    class a {
         get language() {
             return this._language
         }

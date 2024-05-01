@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t);
     var i = n("735250"),
         r = n("470079"),
-        s = n("481060"),
-        a = n("285952"),
+        a = n("481060"),
+        s = n("285952"),
         o = n("689938"),
         l = n("524942");
     t.default = e => {
@@ -27,14 +27,14 @@ function(e, t, n) {
                 }
             }, [null == n ? void 0 : n.type]), !S) return null;
         let h = o.default.Messages.DONE;
-        return (null == n ? void 0 : n.type) === "submit" ? (h = o.default.Messages.MOBILE_REPORTS_SUBMIT_REPORT, t = s.Button.Colors.RED) : (null == n ? void 0 : n.type) === "next" ? h = o.default.Messages.NEXT : (null == n ? void 0 : n.type) === "cancel" && (h = o.default.Messages.CANCEL, t = s.Button.Colors.TRANSPARENT), (0, i.jsxs)(s.ModalFooter, {
-            direction: a.default.Direction.HORIZONTAL,
-            children: [f && (0, i.jsx)(s.Button, {
+        return (null == n ? void 0 : n.type) === "submit" ? (h = o.default.Messages.MOBILE_REPORTS_SUBMIT_REPORT, t = a.Button.Colors.RED) : (null == n ? void 0 : n.type) === "next" ? h = o.default.Messages.NEXT : (null == n ? void 0 : n.type) === "cancel" && (h = o.default.Messages.CANCEL, t = a.Button.Colors.TRANSPARENT), (0, i.jsxs)(a.ModalFooter, {
+            direction: s.default.Direction.HORIZONTAL,
+            children: [f && (0, i.jsx)(a.Button, {
                 onClick: E,
-                color: s.Button.Colors.TRANSPARENT,
+                color: a.Button.Colors.TRANSPARENT,
                 disabled: u,
                 children: o.default.Messages.BACK
-            }), T && (0, i.jsx)(s.Button, {
+            }), T && (0, i.jsx)(a.Button, {
                 onClick: () => {
                     null != n && _(n)
                 },

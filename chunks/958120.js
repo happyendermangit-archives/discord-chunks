@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        s = n.n(r),
-        a = n("442837"),
+        a = n.n(r),
+        s = n("442837"),
         o = n("246946"),
         l = n("5192"),
         u = n("447452"),
@@ -41,7 +41,7 @@ function(e, t, n) {
             moreUserDetailsEnabled: v
         } = (0, u.useSimplifiedProfileExperiment)({
             location: "BiteSizeProfileBody"
-        }), D = l.default.getName(null == O ? void 0 : O.id, g, t), M = (0, d.default)(t.id, null == O ? void 0 : O.id), y = (0, a.useStateFromStores)([o.default], () => o.default.hidePersonalInformation);
+        }), D = l.default.getName(null == O ? void 0 : O.id, g, t), M = (0, d.default)(t.id, null == O ? void 0 : O.id), y = (0, s.useStateFromStores)([o.default], () => o.default.hidePersonalInformation);
         return (0, i.jsxs)("div", {
             className: p.body,
             children: [(0, i.jsx)(E.default, {
@@ -61,7 +61,7 @@ function(e, t, n) {
                     children: [(0, i.jsx)(_.default, {
                         userId: t.id
                     }), v && !y && (0, i.jsx)(c.default, {
-                        className: s()(p.noteIcon, {
+                        className: a()(p.noteIcon, {
                             [p.visible]: R
                         }),
                         user: t,

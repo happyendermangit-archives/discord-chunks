@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("147913"),
         r = n("358221"),
-        s = n("729052"),
-        a = n("592125"),
+        a = n("729052"),
+        s = n("592125"),
         o = n("979651"),
         l = n("556076");
     class u extends i.default {
@@ -14,8 +14,8 @@ function(e, t, n) {
                 guildId: n
             } = e;
             if (null == t || null == n) return;
-            let i = a.default.getChannel(t);
-            if (null != i && (0, s.hasVoiceChannelActivityNotifsEnabled)(i) && i.isGuildVoice()) {
+            let i = s.default.getChannel(t);
+            if (null != i && (0, a.hasVoiceChannelActivityNotifsEnabled)(i) && i.isGuildVoice()) {
                 let e = r.default.getParticipants(t).length,
                     n = o.default.isInChannel(t),
                     i = e === (n ? 1 : 0);

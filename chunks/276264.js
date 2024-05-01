@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("477690"),
         l = n("481060"),
         u = n("420660"),
@@ -37,7 +37,7 @@ function(e, t, n) {
         var t;
         let {
             selected: n = !1,
-            colorString: s,
+            colorString: a,
             colorRoleName: o,
             isOwner: p,
             ownerTooltipText: M,
@@ -68,7 +68,7 @@ function(e, t, n) {
             id: et,
             tabIndex: en,
             itemProps: ei
-        } = e, er = O.default.useName(b), es = (null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === (null == b ? void 0 : b.id), ea = r.useRef(null), [eo, el] = r.useState(!1), [eu, ed] = r.useState(null), {
+        } = e, er = O.default.useName(b), ea = (null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === (null == b ? void 0 : b.id), es = r.useRef(null), [eo, el] = r.useState(!1), [eu, ed] = r.useState(null), {
             avatarDecorationSrc: e_,
             avatarSrc: ec,
             eventHandlers: eE
@@ -82,7 +82,7 @@ function(e, t, n) {
             n && eT(!1)
         }, [n]);
         let ef = (0, E.useQuestFromActivities)(w),
-            eS = null != ef && !es && n && !eI,
+            eS = null != ef && !ea && n && !eI,
             eh = () => {
                 el(!0)
             },
@@ -164,7 +164,7 @@ function(e, t, n) {
             eL = () => (0, i.jsxs)(i.Fragment, {
                 children: [(0, i.jsx)(l.NameWithRole, {
                     roleName: o,
-                    color: null != s ? s : void 0,
+                    color: null != a ? a : void 0,
                     name: null != U ? U : er,
                     className: D.name
                 }), (0, i.jsx)(d.default, {
@@ -184,7 +184,7 @@ function(e, t, n) {
                 return (0, i.jsx)(I.default, {
                     quest: ef,
                     applicationStream: B,
-                    width: null !== (n = null === (t = ea.current) || void 0 === t ? void 0 : t.clientWidth) && void 0 !== n ? n : 222,
+                    width: null !== (n = null === (t = es.current) || void 0 === t ? void 0 : t.clientWidth) && void 0 !== n ? n : 222,
                     ...e,
                     closePopout: () => eT(!0)
                 })
@@ -196,9 +196,9 @@ function(e, t, n) {
             animation: l.Popout.Animation.NONE,
             spacing: -3,
             children: () => (0, i.jsx)(N.default, {
-                ref: ea,
+                ref: es,
                 selected: n,
-                className: a()(D.member, j, {
+                className: s()(D.member, j, {
                     [D.offline]: ev && !n
                 }),
                 innerClassName: D.memberInner,
@@ -215,7 +215,7 @@ function(e, t, n) {
                     text: y,
                     children: e => (0, i.jsx)("span", {
                         ...e,
-                        className: a()(D.username, D.lostPermission),
+                        className: s()(D.username, D.lostPermission),
                         children: eL()
                     })
                 }),

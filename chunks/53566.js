@@ -5,9 +5,9 @@ function(e, t, n) {
             return o
         }
     }), n("47120"), n("724458"), n("653041");
-    var i, r, s = n("372817");
+    var i, r, a = n("372817");
 
-    function a(e, t, n) {
+    function s(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -77,7 +77,7 @@ function(e, t, n) {
             }, [])
         }
         constructor(e, t, n, i, r) {
-            a(this, "targetNodes", void 0), a(this, "manager", void 0), a(this, "previewer", void 0), a(this, "announcer", void 0), a(this, "currentHoveredNode", void 0), a(this, "focusManager", void 0), a(this, "actions", void 0), a(this, "monitor", void 0), a(this, "handleDraggedElementKeyDown", void 0), this.targetNodes = t, this.manager = n, this.previewer = i, this.announcer = r, this.handleDraggedElementKeyDown = async e => {
+            s(this, "targetNodes", void 0), s(this, "manager", void 0), s(this, "previewer", void 0), s(this, "announcer", void 0), s(this, "currentHoveredNode", void 0), s(this, "focusManager", void 0), s(this, "actions", void 0), s(this, "monitor", void 0), s(this, "handleDraggedElementKeyDown", void 0), this.targetNodes = t, this.manager = n, this.previewer = i, this.announcer = r, this.handleDraggedElementKeyDown = async e => {
                 switch (e.key) {
                     case "ArrowUp":
                         e.preventDefault(), e.stopPropagation(), this.hoverNode(await this.getPreviousDropTarget());
@@ -85,7 +85,7 @@ function(e, t, n) {
                     case "ArrowDown":
                         e.preventDefault(), e.stopPropagation(), this.hoverNode(await this.getNextDropTarget())
                 }
-            }, this.currentHoveredNode = e, this.focusManager = (0, s.createFocusManager)({
+            }, this.currentHoveredNode = e, this.focusManager = (0, a.createFocusManager)({
                 getFocusableElements: () => this.getViableTargets(t),
                 getActiveElement: () => e.ownerDocument.activeElement
             }), this.actions = n.getActions(), this.monitor = n.getMonitor(), window.addEventListener("keydown", this.handleDraggedElementKeyDown, {

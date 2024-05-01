@@ -4,23 +4,23 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("960259"),
-        s = n("824385"),
-        a = n("325767");
+        a = n("824385"),
+        s = n("325767");
     t.default = (0, r.replaceIcon)(function(e) {
         let {
             width: t = 24,
             height: n = 24,
             color: r = "currentColor",
-            className: s,
+            className: a,
             foreground: o,
             ...l
         } = e;
         return (0, i.jsx)("svg", {
             width: t,
             height: n,
-            className: s,
+            className: a,
             viewBox: "0 0 24 24",
-            ...(0, a.default)(l),
+            ...(0, s.default)(l),
             children: (0, i.jsx)("path", {
                 className: o,
                 fill: r,
@@ -28,7 +28,7 @@ function(e, t, n) {
                 "aria-hidden": !0
             })
         })
-    }, s.LockIcon, void 0, {
+    }, a.LockIcon, void 0, {
         size: 24
     })
 }

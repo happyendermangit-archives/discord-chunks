@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("47120"), n("653041");
-    var i, r, s, a, o = n("392711"),
+    var i, r, a, s, o = n("392711"),
         l = n.n(o),
         u = n("442837"),
         d = n("846519"),
@@ -78,12 +78,12 @@ function(e, t, n) {
             return C[e]
         }
     }
-    a = "ApplicationBuildStore", (s = "displayName") in(r = w) ? Object.defineProperty(r, s, {
-        value: a,
+    s = "ApplicationBuildStore", (a = "displayName") in(r = w) ? Object.defineProperty(r, a, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a, t.default = new w(_.default, {
+    }) : r[a] = s, t.default = new w(_.default, {
         CONNECTION_OPEN: function() {
             return P(D), U()
         },
@@ -111,19 +111,19 @@ function(e, t, n) {
                 build: r
             } = e;
             p.delete(n);
-            let s = r.manifests.map(e => {
+            let a = r.manifests.map(e => {
                     let {
                         id: t
                     } = e;
                     return t
                 }),
-                a = r.id;
+                s = r.id;
             R.delete(n), O[n] = {
-                id: a,
+                id: s,
                 applicationId: t,
                 branchId: n,
                 locale: i,
-                manifestIds: s
+                manifestIds: a
             }, b(t, n)
         },
         APPLICATION_BUILD_NOT_FOUND: function(e) {

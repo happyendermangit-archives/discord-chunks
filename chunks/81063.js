@@ -19,8 +19,8 @@ function(e, t, n) {
     }), n("315314"), n("610138"), n("216116"), n("78328"), n("815648"), n("47120");
     var i = n("512722"),
         r = n.n(i),
-        s = n("544891"),
-        a = n("570140"),
+        a = n("544891"),
+        s = n("570140"),
         o = n("430449"),
         l = n("710845"),
         u = n("134432"),
@@ -58,11 +58,11 @@ function(e, t, n) {
     async function h(e) {
         let {
             body: t
-        } = await s.HTTP.get({
+        } = await a.HTTP.get({
             url: d.Endpoints.APPLICATION_ASSETS(e),
             oldFormErrors: !0
         });
-        return a.default.dispatch({
+        return s.default.dispatch({
             type: "APPLICATION_ASSETS_UPDATE",
             applicationId: e,
             assets: t
@@ -88,7 +88,7 @@ function(e, t, n) {
         }
         if (null == e || null == t) return;
         let i = "number" == typeof n ? "?size=".concat((0, u.getBestMediaProxySize)(n)) : "";
-        return null != window.GLOBAL_ENV.CDN_HOST ? "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.CDN_HOST, "/app-assets/").concat(e, "/").concat(t, ".png").concat(i) : "".concat((0, s.getAPIBaseURL)(), "/applications/").concat(e, "/app-assets/").concat(t, ".png").concat(i)
+        return null != window.GLOBAL_ENV.CDN_HOST ? "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.CDN_HOST, "/app-assets/").concat(e, "/").concat(t, ".png").concat(i) : "".concat((0, a.getAPIBaseURL)(), "/applications/").concat(e, "/app-assets/").concat(t, ".png").concat(i)
     }
     async function N(e) {
         let t = await
@@ -104,7 +104,7 @@ function(e, t, n) {
         if (0 === n.length) return;
         let {
             body: i
-        } = await s.HTTP.post({
+        } = await a.HTTP.post({
             url: d.Endpoints.APPLICATION_EXTERNAL_ASSETS(e),
             body: {
                 urls: n
@@ -124,41 +124,41 @@ function(e, t, n) {
             for (let i = 0; i < e.length; i++) {
                 let r = e[i];
                 if (null == r) continue;
-                let s = Object.prototype.hasOwnProperty.call(S, r) ? S[r] : void 0;
-                null != s && (t[i] = A("mp", s), n++)
+                let a = Object.prototype.hasOwnProperty.call(S, r) ? S[r] : void 0;
+                null != a && (t[i] = A("mp", a), n++)
             }
         return n === e.length
     }
 
     function R(e, t, n, i) {
         let r = !1;
-        for (let s = 0; s < e.length; s++) {
-            let a = e[s];
-            if (null == a || null != t[s]) continue;
-            let o = Object.prototype.hasOwnProperty.call(n, a) && n[a];
+        for (let a = 0; a < e.length; a++) {
+            let s = e[a];
+            if (null == s || null != t[a]) continue;
+            let o = Object.prototype.hasOwnProperty.call(n, s) && n[s];
             if (!o) {
                 if (null == i || i <= 0) {
-                    t[s] = null;
+                    t[a] = null;
                     continue
                 }
                 r = !0
             }
-            t[s] = o.id
+            t[a] = o.id
         }
         return r
     }
     async function C(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-        a.default.dispatch({
+        s.default.dispatch({
             type: "APPLICATION_ASSETS_FETCH",
             applicationId: e
         });
         let i = [],
             r = t.filter(e => (null == e ? void 0 : e.startsWith("http:")) || (null == e ? void 0 : e.startsWith("https:")));
-        return (r.length > 0 && await p(e, r), O(t, i)) ? (a.default.dispatch({
+        return (r.length > 0 && await p(e, r), O(t, i)) ? (s.default.dispatch({
             type: "APPLICATION_ASSETS_FETCH_SUCCESS",
             applicationId: e
-        }), i) : R(t, i, await N(e), n) ? h(e).then(() => C(e, t, n - 1)) : (a.default.dispatch({
+        }), i) : R(t, i, await N(e), n) ? h(e).then(() => C(e, t, n - 1)) : (s.default.dispatch({
             type: "APPLICATION_ASSETS_FETCH_SUCCESS",
             applicationId: e
         }), i)

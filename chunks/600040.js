@@ -2,9 +2,9 @@ function(e, t, n) {
     "use strict";
     n.r(t);
     var i, r = n("264344"),
-        s = n.n(r),
-        a = n("345546");
-    window.AudioContext = null !== (i = window.AudioContext) && void 0 !== i ? i : window.webkitAudioContext, null != window.RTCPeerConnection && "Chrome" === s().name && 52 > (0, a.platformVersion)() && ["createOffer", "createAnswer"].forEach(e => {
+        a = n.n(r),
+        s = n("345546");
+    window.AudioContext = null !== (i = window.AudioContext) && void 0 !== i ? i : window.webkitAudioContext, null != window.RTCPeerConnection && "Chrome" === a().name && 52 > (0, s.platformVersion)() && ["createOffer", "createAnswer"].forEach(e => {
         let t = RTCPeerConnection.prototype[e];
         RTCPeerConnection.prototype[e] = function() {
             for (var e = arguments.length, n = Array(e), i = 0; i < e; i++) n[i] = arguments[i];

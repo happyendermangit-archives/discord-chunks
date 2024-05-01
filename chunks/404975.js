@@ -11,8 +11,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        s = n.n(r),
-        a = n("481060"),
+        a = n.n(r),
+        s = n("481060"),
         o = n("343786");
 
     function l(e) {
@@ -20,7 +20,7 @@ function(e, t, n) {
             className: t
         } = e;
         return (0, i.jsx)("div", {
-            className: s()(t, o.separator)
+            className: a()(t, o.separator)
         })
     }
 
@@ -35,10 +35,10 @@ function(e, t, n) {
             dangerous: _,
             ...c
         } = e;
-        return (0, i.jsx)(a.Clickable, {
+        return (0, i.jsx)(s.Clickable, {
             onClick: d ? void 0 : t,
             onContextMenu: d ? void 0 : n,
-            className: s()(r, {
+            className: a()(r, {
                 [o.button]: !0,
                 [o.selected]: l,
                 [o.disabled]: d,
@@ -54,7 +54,7 @@ function(e, t, n) {
             children: n
         } = e;
         return (0, i.jsx)("div", {
-            className: s()(t, o.wrapper),
+            className: a()(t, o.wrapper),
             children: n
         })
     }

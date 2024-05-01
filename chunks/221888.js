@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("411104"), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("392711"),
         l = n.n(o),
         u = n("442837"),
@@ -47,10 +47,10 @@ function(e, t, n) {
             users: t,
             disableInteraction: n,
             guildId: r,
-            participantType: s,
+            participantType: a,
             channelId: o,
             handleUserContextMenu: l
-        } = e, u = R(s, t.length);
+        } = e, u = R(a, t.length);
         return (0, i.jsx)(_.Dialog, {
             "aria-label": u,
             className: O.popoutWrapper,
@@ -63,7 +63,7 @@ function(e, t, n) {
                 }), (0, i.jsx)("div", {
                     children: t.map(e => (0, i.jsx)(f.default, {
                         guildId: null != r ? r : void 0,
-                        className: a()(O.memberListItem, {
+                        className: s()(O.memberListItem, {
                             [O.popoutDisabled]: n
                         }),
                         textClassName: O.memberListItemText,
@@ -82,10 +82,10 @@ function(e, t, n) {
             users: t,
             guildId: n,
             channelId: r,
-            maxVisibleUsers: s = 3,
+            maxVisibleUsers: a = 3,
             className: o,
             participantType: l
-        } = e, u = R(l, t.length), d = t.length < s ? t.map(e => (0, i.jsx)("div", {
+        } = e, u = R(l, t.length), d = t.length < a ? t.map(e => (0, i.jsx)("div", {
             className: O.viewersTooltipItem,
             children: A.default.getName(n, r, e)
         }, e.id)) : u;
@@ -93,7 +93,7 @@ function(e, t, n) {
             text: d,
             "aria-label": u,
             children: (0, i.jsxs)("div", {
-                className: a()(O.viewers, o),
+                className: s()(O.viewers, o),
                 children: [(0, i.jsx)(S.default, {
                     className: O.viewersIcon
                 }), (0, i.jsx)("span", {
@@ -108,7 +108,7 @@ function(e, t, n) {
     function v(e) {
         let {
             channelId: t,
-            guildId: s,
+            guildId: a,
             participant: o,
             className: f,
             compact: S = !1,
@@ -141,13 +141,13 @@ function(e, t, n) {
         if (S) return (0, i.jsx)(g, {
             maxVisibleUsers: p,
             users: M,
-            guildId: s,
+            guildId: a,
             channelId: t,
             className: f,
             participantType: o.type
         });
         let b = l()(M).take(p).map(e => (0, i.jsx)(_.Avatar, {
-            src: e.getAvatarURL(s, 24),
+            src: e.getAvatarURL(a, 24),
             "aria-label": e.username,
             size: _.AvatarSizes.SIZE_24,
             className: O.viewer
@@ -164,7 +164,7 @@ function(e, t, n) {
                     renderPopout: () => (0, i.jsx)(C, {
                         participantType: o.type,
                         handleUserContextMenu: U,
-                        guildId: s,
+                        guildId: a,
                         channelId: t,
                         users: M,
                         disableInteraction: A
@@ -172,7 +172,7 @@ function(e, t, n) {
                     shouldShow: R,
                     position: "top",
                     children: () => (0, i.jsx)("div", {
-                        className: a()(O.viewers, f),
+                        className: s()(O.viewers, f),
                         children: b
                     })
                 })

@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("481060"),
-        a = n("555573"),
+        a = n("481060"),
+        s = n("555573"),
         o = n("895924"),
         l = n("826298"),
         u = n("855693"),
@@ -23,7 +23,7 @@ function(e, t, n) {
             command: n,
             applicationSection: u
         } = e, I = (0, l.getIconComponent)(u), T = r.useCallback(() => {
-            _.dismissAppLauncherPopup(), a.setActiveCommand({
+            _.dismissAppLauncherPopup(), s.setActiveCommand({
                 channelId: t.id,
                 command: n,
                 section: u,
@@ -42,10 +42,10 @@ function(e, t, n) {
                 width: 36,
                 height: 36
             }), (0, i.jsxs)("div", {
-                children: [(0, i.jsx)(s.Text, {
+                children: [(0, i.jsx)(a.Text, {
                     variant: "text-md/semibold",
                     children: n.name
-                }), (0, i.jsx)(s.Text, {
+                }), (0, i.jsx)(a.Text, {
                     variant: "text-sm/normal",
                     color: "text-muted",
                     children: u.name
@@ -58,17 +58,17 @@ function(e, t, n) {
         let {
             channel: t,
             commands: n,
-            sectionDescriptors: a
+            sectionDescriptors: s
         } = e, o = r.useMemo(() => n.map(e => {
-            let n = a.find(t => t.id === e.applicationId);
+            let n = s.find(t => t.id === e.applicationId);
             return null == n ? null : (0, i.jsx)(I, {
                 channel: t,
                 command: e,
                 applicationSection: n
             }, e.id)
-        }), [t, n, a]);
+        }), [t, n, s]);
         return 0 === n.length ? null : (0, i.jsxs)("div", {
-            children: [(0, i.jsxs)(s.Text, {
+            children: [(0, i.jsxs)(a.Text, {
                 className: E.commandListHeading,
                 variant: "text-sm/bold",
                 color: "text-muted",

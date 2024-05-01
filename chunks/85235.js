@@ -3,16 +3,16 @@ function(e, t, n) {
     n.r(t);
     var i = n("544891"),
         r = n("570140"),
-        s = n("718745"),
-        a = n("981631");
+        a = n("718745"),
+        s = n("981631");
     t.default = {
         search(e, t) {
-            null == s.default.getResults(e, t) && (r.default.dispatch({
+            null == a.default.getResults(e, t) && (r.default.dispatch({
                 type: "INTEGRATION_QUERY",
                 integration: e,
                 query: t
             }), i.HTTP.get({
-                url: a.Endpoints.INTEGRATION_SEARCH("tenor"),
+                url: s.Endpoints.INTEGRATION_SEARCH("tenor"),
                 query: {
                     q: t
                 },

@@ -8,22 +8,22 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("278074"),
-        s = n("481060"),
-        a = n("1585"),
+        a = n("481060"),
+        s = n("1585"),
         o = n("153124"),
         l = n("793397"),
         u = n("228168"),
         d = n("419061"),
         _ = n("587886");
     let c = {
-        [u.UserProfileTypes.POPOUT]: s.AvatarSizes.SIZE_80,
-        [u.UserProfileTypes.MODAL]: s.AvatarSizes.SIZE_120,
-        [u.UserProfileTypes.SETTINGS]: s.AvatarSizes.SIZE_80,
-        [u.UserProfileTypes.PANEL]: s.AvatarSizes.SIZE_80,
-        [u.UserProfileTypes.POMELO_POPOUT]: s.AvatarSizes.SIZE_80,
-        [u.UserProfileTypes.CANCEL_MODAL]: s.AvatarSizes.SIZE_56,
-        [u.UserProfileTypes.BITE_SIZE]: s.AvatarSizes.SIZE_80,
-        [u.UserProfileTypes.FULL_SIZE]: s.AvatarSizes.SIZE_120
+        [u.UserProfileTypes.POPOUT]: a.AvatarSizes.SIZE_80,
+        [u.UserProfileTypes.MODAL]: a.AvatarSizes.SIZE_120,
+        [u.UserProfileTypes.SETTINGS]: a.AvatarSizes.SIZE_80,
+        [u.UserProfileTypes.PANEL]: a.AvatarSizes.SIZE_80,
+        [u.UserProfileTypes.POMELO_POPOUT]: a.AvatarSizes.SIZE_80,
+        [u.UserProfileTypes.CANCEL_MODAL]: a.AvatarSizes.SIZE_56,
+        [u.UserProfileTypes.BITE_SIZE]: a.AvatarSizes.SIZE_80,
+        [u.UserProfileTypes.FULL_SIZE]: a.AvatarSizes.SIZE_120
     };
 
     function E(e) {
@@ -46,11 +46,11 @@ function(e, t, n) {
                 overrideBannerWidth: E
             } = e, I = d.AvatarDecorationBorderSizes[n];
             if (null == I) throw Error("Unsupported avatar size for banner mask");
-            let T = (0, a.getDecorationSizeForAvatarSize)(n),
+            let T = (0, s.getDecorationSizeForAvatarSize)(n),
                 {
                     size: f,
                     stroke: S
-                } = (0, s.getAvatarSpecs)(n),
+                } = (0, a.getAvatarSpecs)(n),
                 h = {
                     avatarSize: f,
                     avatarBorderSize: S,

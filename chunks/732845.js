@@ -2,13 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         GuildShopPreviewExperiment: function() {
-            return a
+            return s
         },
         GuildShopStorefrontExperiment: function() {
             return r
         },
         ShowGuildRoleSubInGuildShopExperiment: function() {
-            return s
+            return a
         }
     });
     var i = n("818083");
@@ -27,7 +27,7 @@ function(e, t, n) {
                 }
             }]
         }),
-        s = (0, i.createExperiment)({
+        a = (0, i.createExperiment)({
             kind: "user",
             id: "2023-09_show_server_sub_in_server_shop",
             label: "Show server sub in server shop",
@@ -42,7 +42,7 @@ function(e, t, n) {
                 }
             }]
         }),
-        a = (0, i.createExperiment)({
+        s = (0, i.createExperiment)({
             kind: "user",
             id: "2023-09_server_shop_phantom_preview",
             label: "Server Shop Phantom Preview",

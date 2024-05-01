@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getAnnualDiscountsExperimentConfig: function() {
-            return s
+            return a
         },
         useAnnualDiscountExperiment: function() {
             return r
@@ -52,7 +52,7 @@ function(e, t, n) {
         return n
     }
 
-    function s(e) {
+    function a(e) {
         let {
             enabled: t,
             discount_percentage: n

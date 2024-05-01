@@ -8,17 +8,17 @@ function(e, t, n) {
             return o
         },
         useIsBroadcastingGDM: function() {
-            return a
+            return s
         }
     });
     var i = n("442837"),
         r = n("592125"),
-        s = n("770471");
+        a = n("770471");
 
-    function a(e) {
+    function s(e) {
         let {
             canViewBroadcasts: t
-        } = s.default.useExperiment({
+        } = a.default.useExperiment({
             location: "use_is_broadcasting_gdm"
         }, {
             autoTrackExposure: !1
@@ -29,7 +29,7 @@ function(e, t, n) {
     function o(e) {
         let {
             canViewBroadcasts: t
-        } = s.default.getCurrentConfig({
+        } = a.default.getCurrentConfig({
             location: "get_is_broadcasting_gdm"
         }, {
             autoTrackExposure: !1

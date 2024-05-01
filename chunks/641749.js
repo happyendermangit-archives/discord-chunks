@@ -4,19 +4,19 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("960259"),
-        s = n("164776"),
-        a = n("325767");
+        a = n("164776"),
+        s = n("325767");
     t.default = (0, r.replaceIcon)(function(e) {
         let {
             width: t = 20,
             height: n = 20,
             color: r = "currentColor",
-            ...s
+            ...a
         } = e;
         return (0, i.jsx)("svg", {
             width: t,
             height: n,
-            ...(0, a.default)(s),
+            ...(0, s.default)(a),
             viewBox: "0 0 20 20",
             children: (0, i.jsx)("path", {
                 fillRule: "evenodd",
@@ -25,7 +25,7 @@ function(e, t, n) {
                 fill: r
             })
         })
-    }, s.StickerSadIcon, void 0, {
+    }, a.StickerSadIcon, void 0, {
         size: 20
     })
 }

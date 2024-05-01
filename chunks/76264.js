@@ -4,23 +4,23 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("481060"),
-        s = n("259580"),
-        a = n("558530");
+        a = n("259580"),
+        s = n("558530");
     let o = e => {
         let {
             child: t,
             onClick: n
         } = e, [o] = t;
         return (0, i.jsxs)(r.Clickable, {
-            className: a.childButton,
+            className: s.childButton,
             onClick: () => n(t),
             children: [(0, i.jsx)(r.Text, {
-                className: a.childText,
+                className: s.childText,
                 variant: "text-md/semibold",
                 children: o
-            }), (0, i.jsx)(s.default, {
-                className: a.childIcon,
-                direction: s.default.Directions.RIGHT
+            }), (0, i.jsx)(a.default, {
+                className: s.childIcon,
+                direction: a.default.Directions.RIGHT
             })]
         })
     };
@@ -40,7 +40,7 @@ function(e, t, n) {
             }, "".concat(t, "+").concat(r))
         });
         return (0, i.jsx)("div", {
-            className: a.__invalid_childrenContainer,
+            className: s.__invalid_childrenContainer,
             children: r
         })
     }

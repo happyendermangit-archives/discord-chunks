@@ -1,6 +1,6 @@
 function(e, t, n) {
     "use strict";
-    var i, r, s, a;
+    var i, r, a, s;
     n.r(t), n.d(t, {
         ActivityPanelModes: function() {
             return i
@@ -11,6 +11,6 @@ function(e, t, n) {
         LANDSCAPE_ACTIVITY_ASPECT_RATIO: function() {
             return o
         }
-    }), (s = i || (i = {})).DISCONNECTED = "disconnected", s.LAUNCHING_WITH_ORIENTATION_CHANGE = "launching_with_orientation_change", s.PANEL = "panel", s.PIP = "pip", (a = r || (r = {}))[a.NO_CHAT = 0] = "NO_CHAT", a[a.RESIZABLE = 1] = "RESIZABLE";
+    }), (a = i || (i = {})).DISCONNECTED = "disconnected", a.LAUNCHING_WITH_ORIENTATION_CHANGE = "launching_with_orientation_change", a.PANEL = "panel", a.PIP = "pip", (s = r || (r = {}))[s.NO_CHAT = 0] = "NO_CHAT", s[s.RESIZABLE = 1] = "RESIZABLE";
     let o = 16 / 9
 }

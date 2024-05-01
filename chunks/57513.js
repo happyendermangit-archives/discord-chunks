@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("544891"),
         r = n("379649"),
-        s = n("846519"),
-        a = n("570140"),
+        a = n("846519"),
+        s = n("570140"),
         o = n("706454"),
         l = n("283595"),
         u = n("129542"),
@@ -21,7 +21,7 @@ function(e, t, n) {
     async function f(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             d = o.default.locale;
-        return a.default.dispatch({
+        return s.default.dispatch({
             type: "APPLICATION_BUILD_FETCH_START",
             applicationId: e,
             branchId: t,
@@ -36,14 +36,14 @@ function(e, t, n) {
         }).then(n => {
             let i = n.body;
             if (0 === i.manifests.length) {
-                a.default.dispatch({
+                s.default.dispatch({
                     type: "APPLICATION_BUILD_NOT_FOUND",
                     applicationId: e,
                     branchId: t
                 });
                 return
             }
-            a.default.dispatch({
+            s.default.dispatch({
                 type: "APPLICATION_BUILD_FETCH_SUCCESS",
                 applicationId: e,
                 branchId: t,
@@ -54,14 +54,14 @@ function(e, t, n) {
             let {
                 status: i
             } = n;
-            if (404 === i) a.default.dispatch({
+            if (404 === i) s.default.dispatch({
                 type: "APPLICATION_BUILD_NOT_FOUND",
                 applicationId: e,
                 branchId: t
             });
             else {
                 var r, o;
-                r = e, null == T[o = t] && (T[o] = new s.Timeout), T[o].start(c + Math.random() * E, () => {
+                r = e, null == T[o = t] && (T[o] = new a.Timeout), T[o].start(c + Math.random() * E, () => {
                     null != l.default.getLibraryApplication(r, o) && f(r, o)
                 })
             }

@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t);
-    var i, r, s, a, o = n("442837"),
+    var i, r, a, s, o = n("442837"),
         l = n("524437"),
         u = n("570140"),
         d = n("581883"),
@@ -26,7 +26,7 @@ function(e, t, n) {
             }
         }
     }
-    class f extends(a = o.default.Store) {
+    class f extends(s = o.default.Store) {
         initialize() {
             this.waitFor(d.default), T(), this.syncWith([d.default], T)
         }
@@ -61,10 +61,10 @@ function(e, t, n) {
             return null !== (t = null == n ? void 0 : n.nickname) && void 0 !== t ? t : void 0
         }
     }
-    s = "FavoriteStore", (r = "displayName") in(i = f) ? Object.defineProperty(i, r, {
-        value: s,
+    a = "FavoriteStore", (r = "displayName") in(i = f) ? Object.defineProperty(i, r, {
+        value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : i[r] = s, t.default = new f(u.default, {})
+    }) : i[r] = a, t.default = new f(u.default, {})
 }

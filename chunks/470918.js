@@ -2,19 +2,19 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         syncUserTenureRewardStatus: function() {
-            return a
+            return s
         }
     });
     var i = n("544891"),
         r = n("570140"),
-        s = n("981631");
-    async function a() {
+        a = n("981631");
+    async function s() {
         r.default.dispatch({
             type: "USER_TENURE_REWARD_SYNC_START"
         });
         try {
             let e = await i.HTTP.post({
-                url: s.Endpoints.TENURE_REWARD_SYNC
+                url: a.Endpoints.TENURE_REWARD_SYNC
             });
             r.default.dispatch({
                 type: "USER_TENURE_REWARD_SYNC_SUCCESS",

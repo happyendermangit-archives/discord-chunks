@@ -46,8 +46,8 @@ function(e, t, n) {
     });
     var i = n("512722"),
         r = n.n(i),
-        s = n("990547"),
-        a = n("544891"),
+        a = n("990547"),
+        s = n("544891"),
         o = n("570140"),
         l = n("258609"),
         u = n("569545"),
@@ -103,7 +103,7 @@ function(e, t, n) {
         } = e;
         if (null != n && M(n, i)) return;
         let r = (0, u.encodeStreamKey)(e),
-            s = (null == t ? void 0 : t.forceMultiple) || c.default.getAllActiveStreamsForChannel(i).filter(e => {
+            a = (null == t ? void 0 : t.forceMultiple) || c.default.getAllActiveStreamsForChannel(i).filter(e => {
                 let {
                     ownerId: t
                 } = e;
@@ -112,8 +112,8 @@ function(e, t, n) {
         o.default.dispatch({
             type: "STREAM_WATCH",
             streamKey: r,
-            allowMultiple: s
-        }), !s && (null == t || !t.noFocus) && R.default.selectParticipant(e.channelId, r)
+            allowMultiple: a
+        }), !a && (null == t || !t.noFocus) && R.default.selectParticipant(e.channelId, r)
     }
 
     function P(e, t) {
@@ -132,8 +132,8 @@ function(e, t, n) {
         if (null != n && M(n, i)) return;
         y(e, t);
         let r = _.default.getWindowOpen(g.PopoutWindowKeys.CHANNEL_CALL_POPOUT),
-            s = f.default.getVoiceChannelId();
-        (!r || s !== i) && (0, d.default)(e)
+            a = f.default.getVoiceChannelId();
+        (!r || a !== i) && (0, d.default)(e)
     }
 
     function b(e) {
@@ -165,7 +165,7 @@ function(e, t, n) {
             streamKey: i
         });
         try {
-            let e = await a.HTTP.get({
+            let e = await s.HTTP.get({
                 url: g.Endpoints.STREAM_PREVIEW(i),
                 query: {
                     version: Date.now()
@@ -192,7 +192,7 @@ function(e, t, n) {
                 url: g.Endpoints.STREAM_NOTIFY(e),
                 oldFormErrors: !0,
                 trackedActionData: {
-                    event: s.NetworkActionNames.STREAM_NOTIFY
+                    event: a.NetworkActionNames.STREAM_NOTIFY
                 }
             })
         } catch (e) {}
@@ -206,7 +206,7 @@ function(e, t, n) {
     }
 
     function V(e, t) {
-        a.HTTP.patch({
+        s.HTTP.patch({
             url: g.Endpoints.STREAM(e),
             body: {
                 region: t

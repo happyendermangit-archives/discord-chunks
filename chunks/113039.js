@@ -10,8 +10,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("653603"),
         l = n.n(o),
         u = n("902704"),
@@ -31,34 +31,34 @@ function(e, t, n) {
         let {
             message: r
         } = t, {
-            message: s
+            message: a
         } = e;
-        return (0, u.default)(e, t, ["message"]) && r.content === s.content && r.state === s.state && (null === (n = r.editedTimestamp) || void 0 === n ? void 0 : n.toString()) === (null === (i = s.editedTimestamp) || void 0 === i ? void 0 : i.toString())
+        return (0, u.default)(e, t, ["message"]) && r.content === a.content && r.state === a.state && (null === (n = r.editedTimestamp) || void 0 === n ? void 0 : n.toString()) === (null === (i = a.editedTimestamp) || void 0 === i ? void 0 : i.toString())
     }
     t.default = r.memo(function(e) {
         var t;
         let {
             className: n,
-            message: s,
+            message: a,
             children: o,
             content: u,
             onUpdate: S,
             contentRef: h
-        } = e, A = s.isEdited(), m = s.state === c.MessageStates.SEND_FAILED, N = s.state === c.MessageStates.SENDING, p = s.isCommandType(), O = null === (t = s.editedTimestamp) || void 0 === t ? void 0 : t.toString(), R = r.useRef(!1);
+        } = e, A = a.isEdited(), m = a.state === c.MessageStates.SEND_FAILED, N = a.state === c.MessageStates.SENDING, p = a.isCommandType(), O = null === (t = a.editedTimestamp) || void 0 === t ? void 0 : t.toString(), R = r.useRef(!1);
         return r.useLayoutEffect(() => {
             R.current ? null != S && S() : R.current = !0
-        }, [S, s.content, u, O, o]), (0, i.jsxs)("div", {
-            id: (0, d.getMessageContentId)(s),
+        }, [S, a.content, u, O, o]), (0, i.jsxs)("div", {
+            id: (0, d.getMessageContentId)(a),
             ref: h,
-            className: a()(n, I.markup, {
+            className: s()(n, I.markup, {
                 [T.messageContent]: !0,
                 [T.isSending]: N && !p,
-                [T.markupRtl]: "rtl" === l()(s.content),
+                [T.markupRtl]: "rtl" === l()(a.content),
                 [T.isFailed]: m
             }),
-            children: [null != o ? o : f(s, u), A && null != s.editedTimestamp && (0, i.jsxs)(i.Fragment, {
+            children: [null != o ? o : f(a, u), A && null != a.editedTimestamp && (0, i.jsxs)(i.Fragment, {
                 children: [" ", (0, i.jsx)(_.default, {
-                    timestamp: s.editedTimestamp,
+                    timestamp: a.editedTimestamp,
                     isEdited: !0,
                     isInline: !1,
                     children: (0, i.jsxs)("span", {

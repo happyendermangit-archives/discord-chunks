@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("481060"),
         l = n("454585"),
         u = n("572004"),
@@ -21,7 +21,7 @@ function(e, t, n) {
                 data: {
                     title: t,
                     body: n,
-                    sms: s,
+                    sms: a,
                     is_localized: c
                 }
             }
@@ -40,19 +40,19 @@ function(e, t, n) {
             }), (0, i.jsx)("div", {
                 className: _.__invalid_smsInfoContainer,
                 children: (0, i.jsxs)("div", {
-                    className: a()(_.smsNumberContainer, {
+                    className: s()(_.smsNumberContainer, {
                         [_.copied]: E
                     }),
                     children: [(0, i.jsx)(o.Text, {
                         variant: "text-md/normal",
                         selectable: !0,
                         className: _.smsNumberText,
-                        children: s
+                        children: a
                     }), (0, i.jsx)(o.Button, {
                         size: o.Button.Sizes.SMALL,
                         className: _.__invalid_trailingButton,
                         onClick: () => {
-                            (0, u.copy)(s) && I(!0)
+                            (0, u.copy)(a) && I(!0)
                         },
                         color: o.Button.Colors.PRIMARY,
                         children: E ? d.default.Messages.COPIED : d.default.Messages.COPY

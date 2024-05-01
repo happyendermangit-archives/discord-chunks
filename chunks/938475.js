@@ -6,8 +6,8 @@ function(e, t, n) {
         }
     }), n("47120"), n("724458");
     var i, r = n("392711"),
-        s = n.n(r),
-        a = n("442837"),
+        a = n.n(r),
+        s = n("442837"),
         o = n("759174"),
         l = n("570140"),
         u = n("598077"),
@@ -56,23 +56,23 @@ function(e, t, n) {
     function C(e, t, n) {
         var i;
         let r = E.default.getUser(n),
-            s = null == r;
+            a = null == r;
         null == r && (r = new u.default({
             id: n,
             username: "...",
             discriminator: n.slice(-5, -1)
         }));
         let {
-            member: a,
+            member: s,
             comparator: o
         } = O(e, p(t, i = r), i), l = {
             voiceState: e,
             user: r,
-            member: a,
+            member: s,
             comparator: o,
-            nick: null == a ? void 0 : a.nick
+            nick: null == s ? void 0 : s.nick
         };
-        return s && (l._isPlaceholder = !0), l
+        return a && (l._isPlaceholder = !0), l
     }
     class g {
         updateVoiceState(e) {
@@ -84,13 +84,13 @@ function(e, t, n) {
                 if (null == n) return this._voiceStates.set(e, C(t, this.guildId, e)), !0;
                 if (n.voiceState !== t) {
                     var r;
-                    let s = p(this.guildId, i),
-                        a = null !== (r = null == s ? void 0 : s.nick) && void 0 !== r ? r : f.default.getName(i);
+                    let a = p(this.guildId, i),
+                        s = null !== (r = null == a ? void 0 : a.nick) && void 0 !== r ? r : f.default.getName(i);
                     return this._voiceStates.set(e, {
                         ...n,
-                        member: s,
-                        comparator: R(t, a),
-                        nick: a,
+                        member: a,
+                        comparator: R(t, s),
+                        nick: s,
                         voiceState: t
                     }), !0
                 }
@@ -103,16 +103,16 @@ function(e, t, n) {
                 n = E.default.getUser(e);
             if (null != t && null != n) {
                 var i, r;
-                let s = p(this.guildId, n);
-                if ((null == s ? void 0 : s.nick) !== (null === (i = t.member) || void 0 === i ? void 0 : i.nick) || (null == s ? void 0 : s.avatar) !== (null === (r = t.member) || void 0 === r ? void 0 : r.avatar)) {
+                let a = p(this.guildId, n);
+                if ((null == a ? void 0 : a.nick) !== (null === (i = t.member) || void 0 === i ? void 0 : i.nick) || (null == a ? void 0 : a.avatar) !== (null === (r = t.member) || void 0 === r ? void 0 : r.avatar)) {
                     let {
                         comparator: i
-                    } = O(t.voiceState, s, n);
+                    } = O(t.voiceState, a, n);
                     return this._voiceStates.set(e, {
                         ...t,
-                        member: s,
+                        member: a,
                         comparator: i,
-                        nick: null == s ? void 0 : s.nick
+                        nick: null == a ? void 0 : a.nick
                     }), !0
                 }
             }
@@ -165,7 +165,7 @@ function(e, t, n) {
     }
 
     function L() {
-        return s().reduce(m, (e, t) => t.updateUsers() || e, !1)
+        return a().reduce(m, (e, t) => t.updateUsers() || e, !1)
     }
 
     function v() {
@@ -177,7 +177,7 @@ function(e, t, n) {
             })
         })
     }
-    class D extends(i = a.default.Store) {
+    class D extends(i = s.default.Store) {
         initialize() {
             v(), this.waitFor(d.default, E.default, c.default, I.default), this.syncWith([E.default], L)
         }
@@ -253,9 +253,9 @@ function(e, t, n) {
             var t, n;
             let i = !1,
                 r = new Set(null === (t = m[e.guildId]) || void 0 === t ? void 0 : t.getUserIds()),
-                s = new Set(null === (n = e.voiceStates) || void 0 === n ? void 0 : n.map(e => e.userId));
-            for (let t of new Set([...r, ...s])) i = N(e.guildId).updateVoiceState(t) || i;
-            for (let t of s) r.has(t) && (i = N(e.guildId).updateMember(t) || i);
+                a = new Set(null === (n = e.voiceStates) || void 0 === n ? void 0 : n.map(e => e.userId));
+            for (let t of new Set([...r, ...a])) i = N(e.guildId).updateVoiceState(t) || i;
+            for (let t of a) r.has(t) && (i = N(e.guildId).updateMember(t) || i);
             return i
         }
     })

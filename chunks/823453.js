@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("445131"),
         l = n("613828"),
         u = n("873546"),
@@ -28,10 +28,10 @@ function(e, t, n) {
     t.default = r.memo(function(e) {
         let {
             children: t,
-            skipsSettingDefaultPageTitle: s
+            skipsSettingDefaultPageTitle: a
         } = e;
         (0, N.usePageTitleManager)({
-            skipsSettingDefaultPageTitle: s
+            skipsSettingDefaultPageTitle: a
         });
         let {
             clientThemesClassName: R,
@@ -47,7 +47,7 @@ function(e, t, n) {
                 } = (0, d.useStateFromStoresObject)([S.default, f.default], () => ({
                     locale: f.default.locale,
                     theme: S.default.theme
-                })), s = (0, d.useStateFromStores)([h.default], () => h.default.isFocused(), []), {
+                })), a = (0, d.useStateFromStores)([h.default], () => h.default.isFocused(), []), {
                     reducedMotion: o,
                     alwaysShowLinkDecorations: _
                 } = r.useContext(c.AccessibilityPreferencesContext), {
@@ -65,8 +65,8 @@ function(e, t, n) {
                         keyboardModeEnabled: n,
                         saturation: i,
                         desaturateUserColors: r,
-                        useForcedColors: s,
-                        systemForcedColors: a
+                        useForcedColors: a,
+                        systemForcedColors: s
                     } = E.default;
                     return {
                         fontScale: e,
@@ -74,31 +74,34 @@ function(e, t, n) {
                         keyboardModeEnabled: n,
                         saturation: i,
                         desaturateUserColors: r,
-                        useForcedColors: s,
-                        systemForcedColors: a
+                        useForcedColors: a,
+                        systemForcedColors: s
                     }
                 }), M = (0, l.useLocation)(), y = r.useMemo(() => C.has(M.pathname), [M.pathname]);
                 (0, p.default)(window, y);
-                let P = (0, O.default)(window, __OVERLAY__ || s),
+                let P = (0, O.default)(window, __OVERLAY__ || a),
                     U = (0, d.useStateFromStores)([T.default], () => T.default.sidebarWidth),
-                    b = (0, c.useRedesignIconContext)().enabled;
+                    b = (0, c.useRedesignIconContext)().enabled,
+                    G = window.CSS.supports("selector(::-webkit-scrollbar)");
                 return (0, i.jsx)("html", {
                     lang: t,
                     style: "font-size: ".concat(I, "%; --saturation-factor: ").concat(g, "; --devtools-sidebar-width: ").concat(U, "px;"),
-                    className: a()(e, {
+                    className: s()(e, {
                         overlay: __OVERLAY__,
                         "mouse-mode": P,
                         "keyboard-mode": R,
                         "reduce-motion": o.enabled,
                         "full-motion": !o.enabled,
                         "is-mobile": u.isMobile,
-                        "app-focused": s,
+                        "app-focused": a,
                         "low-saturation": g <= c.LOW_SATURATION_THRESHOLD,
                         "decorate-links": _,
                         "desaturate-user-colors": L,
                         "disable-forced-colors": !v && "active" === D,
                         "enable-forced-colors": v,
-                        "show-redesigned-icons": b
+                        "show-redesigned-icons": b,
+                        "no-webkit-scrollbar": !G,
+                        "has-webkit-scrollbar": G
                     }, (0, A.getThemeClass)(n), (0, m.default)(), N)
                 })
             }(R), function() {

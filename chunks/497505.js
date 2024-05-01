@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         QUEST_REWARD_CODE_PLATFORMS_SET: function() {
-            return s
+            return a
         },
         QuestContent: function() {
             return r.QuestContent
@@ -13,5 +13,5 @@ function(e, t, n) {
     }), n("47120");
     var i = n("687522"),
         r = n("636977");
-    let s = new Set(Object.values(i.QuestRewardCodePlatforms).filter(e => "number" == typeof e))
+    let a = new Set(Object.values(i.QuestRewardCodePlatforms).filter(e => "number" == typeof e))
 }

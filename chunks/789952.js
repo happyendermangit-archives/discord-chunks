@@ -2,32 +2,32 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         hasDomParent: function() {
-            return s
+            return a
         },
         normalizeDOMPoint: function() {
-            return a
+            return s
         }
     }), n("411104"), n("47120");
     var i = n("207470");
     let r = !1;
     {
         i.ReactEditor.toSlateRange = (e, t, n) => {
-            let r, s, a, o, l, {
+            let r, a, s, o, l, {
                 exactMatch: u,
                 suppressThrow: _
             } = n;
             if (function(e) {
                     let t = e && e.anchorNode && d(e.anchorNode);
                     return null != t && e instanceof t.Selection
-                }(t) ? (r = t.anchorNode, s = t.anchorOffset, a = t.focusNode, o = t.focusOffset, l = t.isCollapsed) : (r = t.startContainer, s = t.startOffset, a = t.endContainer, o = t.endOffset, l = t.collapsed), null == r || null == a || null == s || null == o) {
+                }(t) ? (r = t.anchorNode, a = t.anchorOffset, s = t.focusNode, o = t.focusOffset, l = t.isCollapsed) : (r = t.startContainer, a = t.startOffset, s = t.endContainer, o = t.endOffset, l = t.collapsed), null == r || null == s || null == a || null == o) {
                 if (_) return null;
                 throw Error("Cannot resolve a Slate range from DOM range")
             }
-            let c = i.ReactEditor.toSlatePoint(e, [r, s], {
+            let c = i.ReactEditor.toSlatePoint(e, [r, a], {
                     exactMatch: u,
                     suppressThrow: _
                 }),
-                E = l ? c : i.ReactEditor.toSlatePoint(e, [a, o], {
+                E = l ? c : i.ReactEditor.toSlatePoint(e, [s, o], {
                     exactMatch: u,
                     suppressThrow: _
                 });
@@ -40,23 +40,23 @@ function(e, t, n) {
         i.ReactEditor.toSlatePoint = (t, n, i) => {
             let {
                 exactMatch: r,
-                suppressThrow: s,
+                suppressThrow: a,
                 direction: o = "forward"
             } = i;
-            !r && (n = a(n, o));
+            !r && (n = s(n, o));
             try {
                 return e(t, n, {
                     exactMatch: !0,
-                    suppressThrow: s
+                    suppressThrow: a
                 })
             } catch (e) {
-                if (s) return null;
+                if (a) return null;
                 throw e
             }
         }, r = !0
     }
 
-    function s(e, t) {
+    function a(e, t) {
         if (null == t) return !1;
         for (; null != e;) {
             if (e === t) return !0;
@@ -65,35 +65,35 @@ function(e, t, n) {
         return !1
     }
 
-    function a(e, t) {
+    function s(e, t) {
         let n, [i, r] = e;
         if (!l(i) || 0 === i.childNodes.length) return e;
         for ("forward" === t && r === i.childNodes.length && (t = "backward"), "backward" === t && r--, [i, n] = o(i, r, t), "forward" === t && n < r ? t = "backward" : "backward" === t && n > r && (t = "forward"), r = n; l(i) && i.childNodes.length > 0;) {
             let e = "backward" === t ? i.childNodes.length - 1 : 0;
             i = o(i, e, t)[0]
         }
-        let s = "backward" === t && null != i.textContent ? i.textContent.length : 0;
-        return [i, s]
+        let a = "backward" === t && null != i.textContent ? i.textContent.length : 0;
+        return [i, a]
     }
 
     function o(e, t, n) {
         let {
             childNodes: i
-        } = e, r = i[t], s = t, a = !1, o = !1;
+        } = e, r = i[t], a = t, s = !1, o = !1;
         for (;
             (function(e) {
                 return u(e) && 8 === e.nodeType
-            }(r) || l(r) && 0 === r.childNodes.length || l(r) && "false" === r.getAttribute("contenteditable")) && (!a || !o);) {
+            }(r) || l(r) && 0 === r.childNodes.length || l(r) && "false" === r.getAttribute("contenteditable")) && (!s || !o);) {
             ;
-            if (s >= i.length) {
-                a = !0, s = t - 1, n = "backward";
+            if (a >= i.length) {
+                s = !0, a = t - 1, n = "backward";
                 continue
             }
-            if (s < 0) {
-                o = !0, s = t + 1, n = "forward";
+            if (a < 0) {
+                o = !0, a = t + 1, n = "forward";
                 continue
             }
-            r = i[s], t = s, s += "forward" === n ? 1 : -1
+            r = i[a], t = a, a += "forward" === n ? 1 : -1
         }
         return [r, t]
     }

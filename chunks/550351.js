@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("594190"),
         r = n("569545"),
-        s = n("199902"),
-        a = n("314897"),
+        a = n("199902"),
+        s = n("314897"),
         o = n("158776"),
         l = n("19780"),
         u = n("979651"),
@@ -27,7 +27,7 @@ function(e, t, n) {
                 let {
                     ownerId: t
                 } = r.decodeStreamKey(e);
-                if (t !== a.default.getId()) {
+                if (t !== s.default.getId()) {
                     let e = o.default.getActivities(t).find(e => e.type === c.ActivityTypes.PLAYING);
                     return {
                         sourceName: null == e ? void 0 : e.name,
@@ -35,14 +35,14 @@ function(e, t, n) {
                     }
                 }
             }
-            let l = s.default.getStreamerActiveStreamMetadata(),
+            let l = a.default.getStreamerActiveStreamMetadata(),
                 u = null == l ? void 0 : l.pid,
                 d = null != l ? null != u ? i.default.getGameForPID(u) : null : i.default.getVisibleGame();
             return {
                 sourceName: null !== (t = null == l ? void 0 : l.sourceName) && void 0 !== t ? t : null == d ? void 0 : d.name,
                 sourceApplicationId: null !== (n = null == l ? void 0 : l.id) && void 0 !== n ? n : null == d ? void 0 : d.id
             }
-        }(e), I = l.default.getChannelId(), T = [a.default.getId()];
+        }(e), I = l.default.getChannelId(), T = [s.default.getId()];
         return null != I && (T = Object.keys(u.default.getVoiceStatesForChannel(I))), {
             id: d.default.fromTimestamp(Date.now()),
             version: _.CURRENT_CLIP_METADATA_VERSION,

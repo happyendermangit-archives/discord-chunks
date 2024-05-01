@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("47120"), n("789020");
-    var i, r, s, a, o = n("392711"),
+    var i, r, a, s, o = n("392711"),
         l = n.n(o),
         u = n("442837"),
         d = n("570140"),
@@ -81,12 +81,12 @@ function(e, t, n) {
             return f.has(e)
         }
     }
-    a = "JoinedThreadsStore", (s = "displayName") in(r = p) ? Object.defineProperty(r, s, {
-        value: a,
+    s = "JoinedThreadsStore", (a = "displayName") in(r = p) ? Object.defineProperty(r, a, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[s] = a;
+    }) : r[a] = s;
     let O = new p(d.default, {
         CONNECTION_OPEN: function(e) {
             T.reset(), f = new Set, I = {}, e.guilds.forEach(e => {

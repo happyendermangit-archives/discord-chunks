@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("392711"),
         l = n.n(o),
         u = n("924826"),
@@ -47,7 +47,7 @@ function(e, t, n) {
         let {
             activeIndex: t,
             categoryIndex: n,
-            analyticsContext: s,
+            analyticsContext: a,
             categories: o,
             category: l,
             handleCategorySelect: d,
@@ -63,7 +63,7 @@ function(e, t, n) {
         }), g = (0, i.jsxs)(c.Clickable, {
             ...T,
             "aria-label": (0, O.getAriaIdForEmojiCategory)(l, A),
-            className: a()({
+            className: s()({
                 [y.categoryItemGuildCategory]: null != A,
                 [y.categoryItemDefaultCategory]: null == A,
                 [y.categoryItemDefaultCategorySelected]: null == A && h,
@@ -71,7 +71,7 @@ function(e, t, n) {
             }),
             onClick: () => {
                 null != A && m.default.track(v.AnalyticEvents.EXPRESSION_PICKER_CATEGORY_SELECTED, {
-                    location: null == s ? void 0 : s.location,
+                    location: null == a ? void 0 : a.location,
                     tab: D.ExpressionPickerViewType.EMOJI,
                     guild_id: A.id
                 }), d(n)
@@ -104,11 +104,11 @@ function(e, t, n) {
         let {
             className: t,
             emojiListRef: n,
-            sectionDescriptors: s,
+            sectionDescriptors: a,
             intention: o,
             channel: u
         } = e, _ = T.EmojiPickerStore.useStore(e => e.activeCategoryIndex), S = (0, g.useCategorySelectHandler)({
-            sectionDescriptors: s,
+            sectionDescriptors: a,
             emojiListRef: n
         }), m = (0, E.useAnalyticsContext)(), N = (0, O.useEmojiCategories)(o, u), p = r.useRef(null), R = (0, d.useStateFromStores)([h.default], () => h.default.isFocused()), C = (0, d.useStateFromStores)([I.default], () => I.default.useReducedMotion, []), v = (0, O.useCategoryNitroLockedStates)(o, u, N), D = r.useMemo(() => l().memoize((e, t) => {
             let n = N[t];
@@ -200,7 +200,7 @@ function(e, t, n) {
             children: e => W >= 7 && (0, i.jsx)(c.Clickable, {
                 "aria-hidden": !X,
                 "aria-label": M.default.Messages.EMOJI_PICKER_SCROLL_TO_UNICODE_A11Y_LABEL,
-                className: a()(y.unicodeShortcut, {
+                className: s()(y.unicodeShortcut, {
                     [y.unicodeShortcutInvisible]: !X
                 }),
                 tabIndex: X ? 0 : -1,

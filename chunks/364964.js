@@ -3,9 +3,9 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("920478"),
         r = n("392711"),
-        s = n.n(r),
-        a = n("462176");
-    i.default.registerLanguage("ansi", a.default), t.default = {
+        a = n.n(r),
+        s = n("462176");
+    i.default.registerLanguage("ansi", s.default), t.default = {
         highlight(e, t, n) {
             if (! function(e) {
                     if (e.indexOf(o) >= 0) return !1;
@@ -24,5 +24,5 @@ function(e, t, n) {
         },
         hasLanguage: e => null != i.default.getLanguage(e)
     };
-    let o = s().repeat("/", 15)
+    let o = a().repeat("/", 15)
 }

@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        s = n("120356"),
-        a = n.n(s),
+        a = n("120356"),
+        s = n.n(a),
         o = n("392711"),
         l = n.n(o),
         u = n("873546"),
@@ -42,13 +42,13 @@ function(e, t, n) {
                 isActive: t,
                 className: n,
                 viewType: r,
-                autoFocus: s = !1,
+                autoFocus: a = !1,
                 "aria-controls": o,
                 ...l
             } = e;
             return (0, i.jsx)(E.Button, {
                 role: "tab",
-                autoFocus: s,
+                autoFocus: a,
                 "aria-controls": t ? o : void 0,
                 ...l,
                 onClick: () => {
@@ -58,7 +58,7 @@ function(e, t, n) {
                     }), (0, M.setExpressionPickerView)(r)
                 },
                 "aria-current": t ? "page" : void 0,
-                className: a()(n, B.navButton, B.navItem, {
+                className: s()(n, B.navButton, B.navItem, {
                     [B.navButtonActive]: t
                 }),
                 look: E.Button.Looks.BLANK,
@@ -70,7 +70,7 @@ function(e, t, n) {
                 positionContainerRef: t,
                 drawerRef: n,
                 orientation: i
-            } = e, s = (0, _.useStateFromStores)([g.default], () => g.default.expressionPickerWidth), [a, o] = r.useState(window.innerWidth), [u, d] = r.useState(null != s ? s : y.ExpressionPickerWidths.MIN), c = r.useMemo(() => {
+            } = e, a = (0, _.useStateFromStores)([g.default], () => g.default.expressionPickerWidth), [s, o] = r.useState(window.innerWidth), [u, d] = r.useState(null != a ? a : y.ExpressionPickerWidths.MIN), c = r.useMemo(() => {
                 switch (u) {
                     case y.ExpressionPickerWidths.MIN:
                         return y.MIN_EXPRESSION_PICKER_WIDTH;
@@ -80,13 +80,13 @@ function(e, t, n) {
                         return u
                 }
             }, [u]), E = r.useCallback(e => {
-                let t = e >= a ? y.ExpressionPickerWidths.MAX : e <= y.MIN_EXPRESSION_PICKER_WIDTH ? y.ExpressionPickerWidths.MIN : e;
+                let t = e >= s ? y.ExpressionPickerWidths.MAX : e <= y.MIN_EXPRESSION_PICKER_WIDTH ? y.ExpressionPickerWidths.MIN : e;
                 null == t && null != n.current && (n.current.style.width = ""), I.default.updatedUnsyncedSettings({
                     expressionPickerWidth: t
                 }), d(t)
-            }, [n, a]), T = (0, f.default)({
+            }, [n, s]), T = (0, f.default)({
                 initialElementDimension: c,
-                maxDimension: a,
+                maxDimension: s,
                 minDimension: y.MIN_EXPRESSION_PICKER_WIDTH,
                 resizableDomNodeRef: n,
                 onElementResize: E,
@@ -109,7 +109,7 @@ function(e, t, n) {
             }
         };
     t.default = r.memo(function(e) {
-        var t, n, s;
+        var t, n, a;
         let {
             positionTargetRef: o,
             hideGifFavorites: l,
@@ -133,8 +133,8 @@ function(e, t, n) {
             drawerRef: ee,
             orientation: "left" === z ? f.ResizeOrientation.HORIZONTAL_RIGHT : f.ResizeOrientation.HORIZONTAL_LEFT
         }), ei = (0, M.useExpressionPickerStore)(e => e.activeView), er = (0, O.useHasSendableSticker)(j), {
-            renderWindow: es,
-            windowDispatch: ea
+            renderWindow: ea,
+            windowDispatch: es
         } = r.useContext(S.default), eo = (0, _.useStateFromStores)([R.default], () => !R.default.hasLoadedStickerPacks), el = (0, N.useSoundmojiExperiment)("expression_picker"), eu = null != Q, ed = (0, c.useIsModalAtTop)(null != Q ? Q : ""), e_ = r.useCallback(e => {
             var t;
             if (!eu && (0, c.hasAnyModalOpen)() || eu && !(ed && X)) return;
@@ -156,10 +156,10 @@ function(e, t, n) {
             let e = () => {
                 ei === y.ExpressionPickerViewType.GIF && (0, M.closeExpressionPicker)()
             };
-            return es.addEventListener("mousedown", e_), es.addEventListener("contextmenu", e_), ea.subscribe(P.ComponentActions.POPOUT_CLOSE, ec), v.ComponentDispatch.subscribe(P.ComponentActions.CLOSE_GIF_PICKER, e), () => {
-                es.removeEventListener("mousedown", e_), es.removeEventListener("contextmenu", e_), ea.unsubscribe(P.ComponentActions.POPOUT_CLOSE, ec), v.ComponentDispatch.unsubscribe(P.ComponentActions.CLOSE_GIF_PICKER, e)
+            return ea.addEventListener("mousedown", e_), ea.addEventListener("contextmenu", e_), es.subscribe(P.ComponentActions.POPOUT_CLOSE, ec), v.ComponentDispatch.subscribe(P.ComponentActions.CLOSE_GIF_PICKER, e), () => {
+                ea.removeEventListener("mousedown", e_), ea.removeEventListener("contextmenu", e_), es.unsubscribe(P.ComponentActions.POPOUT_CLOSE, ec), v.ComponentDispatch.unsubscribe(P.ComponentActions.CLOSE_GIF_PICKER, e)
             }
-        }, [ei, ec, e_, es, ea]), (0, E.useFocusLock)(q), r.useEffect(() => {
+        }, [ei, ec, e_, ea, es]), (0, E.useFocusLock)(q), r.useEffect(() => {
             (0, M.setSearchQuery)("")
         }, []), r.useEffect(() => {
             (!eu && (0, c.hasAnyModalOpen)() || eu && !ed) && (0, M.closeExpressionPicker)()
@@ -175,13 +175,13 @@ function(e, t, n) {
         });
         let eE = (null === (t = W.gifs) || void 0 === t ? void 0 : t.allowSending) && !u.isMobile && null != g,
             eI = (null === (n = W.stickers) || void 0 === n ? void 0 : n.allowSending) && null != H,
-            eT = !(null === (s = W.expressionPicker) || void 0 === s ? void 0 : s.onlyEmojis) && (eE || eI),
+            eT = !(null === (a = W.expressionPicker) || void 0 === a ? void 0 : a.onlyEmojis) && (eE || eI),
             ef = "left" === z ? "right" : "left",
             eS = null != Z ? Z : "left" === z ? B.positionLayerDefaultAlignLeft : B.positionLayerDefaultAlignRight;
         return (0, i.jsx)(T.default, {
             section: P.AnalyticsSections.EXPRESSION_PICKER,
             children: (0, i.jsx)(L.AppReferencePositionLayer, {
-                className: a()(B.positionLayer, eS),
+                className: s()(B.positionLayer, eS),
                 targetRef: o,
                 position: K,
                 align: z,
@@ -192,7 +192,7 @@ function(e, t, n) {
                         isPositioned: t
                     } = e;
                     return (0, i.jsx)("section", {
-                        className: a()(B.positionContainer, {
+                        className: s()(B.positionContainer, {
                             [B.positionContainerOnlyEmoji]: !eT
                         }),
                         ref: q,

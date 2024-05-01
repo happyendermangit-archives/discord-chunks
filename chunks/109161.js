@@ -11,8 +11,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        s = n.n(r),
-        a = n("981729"),
+        a = n.n(r),
+        s = n("981729"),
         o = n("838999");
 
     function l(e) {
@@ -22,7 +22,7 @@ function(e, t, n) {
             background: r = !0
         } = e;
         return null == t ? null : (0, i.jsxs)("svg", {
-            className: s()(o.svg, n),
+            className: a()(o.svg, n),
             viewBox: "0 0 20 20",
             fill: "none",
             children: [r && (0, i.jsx)("path", {
@@ -55,7 +55,7 @@ function(e, t, n) {
             name: n,
             tooltip: r = !0
         } = e;
-        return null == t ? null : r ? (0, i.jsx)(a.Tooltip, {
+        return null == t ? null : r ? (0, i.jsx)(s.Tooltip, {
             text: n,
             children: t => (0, i.jsx)("span", {
                 ...t,
@@ -75,7 +75,7 @@ function(e, t, n) {
             className: n
         } = e;
         return null == t ? null : (0, i.jsx)("span", {
-            className: s()(o.roleCircle, n),
+            className: a()(o.roleCircle, n),
             style: {
                 backgroundColor: t
             }

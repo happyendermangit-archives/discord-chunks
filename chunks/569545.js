@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         decodeStreamKey: function() {
-            return s
+            return a
         },
         encodeStreamKey: function() {
-            return a
+            return s
         },
         isStreamKey: function() {
             return r
@@ -17,7 +17,7 @@ function(e, t, n) {
         return null != e && (e.startsWith(i.StreamTypes.GUILD) || e.startsWith(i.StreamTypes.CALL))
     }
 
-    function s(e) {
+    function a(e) {
         let t = e.split(":"),
             n = t[0];
         switch (n) {
@@ -43,18 +43,18 @@ function(e, t, n) {
         }
     }
 
-    function a(e) {
+    function s(e) {
         let {
             streamType: t,
             guildId: n,
             channelId: r,
-            ownerId: s
+            ownerId: a
         } = e;
         switch (t) {
             case i.StreamTypes.GUILD:
-                return [t, n, r, s].join(":");
+                return [t, n, r, a].join(":");
             case i.StreamTypes.CALL:
-                return [t, r, s].join(":");
+                return [t, r, a].join(":");
             default:
                 throw Error("Unknown stream type ".concat(t))
         }

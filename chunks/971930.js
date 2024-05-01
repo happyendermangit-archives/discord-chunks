@@ -31,8 +31,8 @@ function(e, t, n) {
     });
     var i = n("392711"),
         r = n.n(i),
-        s = n("536402"),
-        a = n("275726"),
+        a = n("536402"),
+        s = n("275726"),
         o = n("786761"),
         l = n("131704"),
         u = n("823379"),
@@ -67,17 +67,17 @@ function(e, t, n) {
     }
 
     function h(e, t) {
-        var n, i, a, u, d, c, E;
+        var n, i, s, u, d, c, E;
         switch (e.type) {
-            case s.GuildFeedItemTypes.FORUM_POST: {
+            case a.GuildFeedItemTypes.FORUM_POST: {
                 let r = (0, o.createMessageRecord)(e.message),
-                    a = (0, l.createChannelRecordFromServer)(e.thread),
+                    s = (0, l.createChannelRecordFromServer)(e.thread),
                     u = {
-                        type: s.GuildFeedItemTypes.FORUM_POST,
+                        type: a.GuildFeedItemTypes.FORUM_POST,
                         id: (0, _.default)(e),
                         sortIndex: t,
                         message: r,
-                        thread: a,
+                        thread: s,
                         featured: null !== (n = e.featured) && void 0 !== n && n,
                         highlighted: null !== (i = e.highlighted) && void 0 !== i && i,
                         seen: e.seen,
@@ -88,16 +88,16 @@ function(e, t, n) {
                     featuredItem: T(e.featured_item)
                 }), u
             }
-            case s.GuildFeedItemTypes.MESSAGE:
+            case a.GuildFeedItemTypes.MESSAGE:
                 let I = (0, o.createMessageRecord)(e.message),
                     S = r().map(e.reference_messages, e => (0, o.createMessageRecord)(e)),
                     h = {
-                        type: s.GuildFeedItemTypes.MESSAGE,
+                        type: a.GuildFeedItemTypes.MESSAGE,
                         id: (0, _.default)(e),
                         sortIndex: t,
                         message: I,
                         referenceMessages: S,
-                        featured: null !== (a = e.featured) && void 0 !== a && a,
+                        featured: null !== (s = e.featured) && void 0 !== s && s,
                         highlighted: null !== (u = e.highlighted) && void 0 !== u && u,
                         unreadMention: null !== (d = e.unread_mention) && void 0 !== d && d,
                         seen: e.seen
@@ -106,15 +106,15 @@ function(e, t, n) {
                     ...h,
                     featuredItem: T(e.featured_item)
                 }), h;
-            case s.GuildFeedItemTypes.MESSAGE_BUNDLE:
+            case a.GuildFeedItemTypes.MESSAGE_BUNDLE:
                 let A = e.messages.map(e => ({
                     message: (0, o.createMessageRecord)(e.message),
                     referenceMessages: e.reference_messages.map(e => (0, o.createMessageRecord)(e))
                 }));
                 return {
-                    type: s.GuildFeedItemTypes.MESSAGE_BUNDLE, id: e.id, sortIndex: t, messages: A, featured: !1, highlighted: !1, unreadMention: null !== (c = e.unread_mention) && void 0 !== c && c, seen: e.seen
+                    type: a.GuildFeedItemTypes.MESSAGE_BUNDLE, id: e.id, sortIndex: t, messages: A, featured: !1, highlighted: !1, unreadMention: null !== (c = e.unread_mention) && void 0 !== c && c, seen: e.seen
                 };
-            case s.GuildFeedItemTypes.CONVERSATION:
+            case a.GuildFeedItemTypes.CONVERSATION:
                 let m = function e(t) {
                     let n = t.messages.map(e => (0, o.createMessageRecord)(e.message));
                     return {
@@ -125,7 +125,7 @@ function(e, t, n) {
                     }
                 }(e.root);
                 return {
-                    type: s.GuildFeedItemTypes.CONVERSATION, id: e.id, sortIndex: t, root: m, featured: !1, highlighted: !1, unreadMention: null !== (E = e.unread_mention) && void 0 !== E && E, seen: e.seen
+                    type: a.GuildFeedItemTypes.CONVERSATION, id: e.id, sortIndex: t, root: m, featured: !1, highlighted: !1, unreadMention: null !== (E = e.unread_mention) && void 0 !== E && E, seen: e.seen
                 };
             default:
                 return null
@@ -137,7 +137,7 @@ function(e, t, n) {
     }
 
     function m(e) {
-        return !!a.MessageTypesSets.AVAILABLE_IN_GUILD_FEED.has(e.type) || !1
+        return !!s.MessageTypesSets.AVAILABLE_IN_GUILD_FEED.has(e.type) || !1
     }
     let N = e => E.default.Messages.GUILD_FEED_FEATURE_ITEM_MENU_ITEM_TEXT.format({
             timePeriod: e
@@ -156,12 +156,12 @@ function(e, t, n) {
 
     function R(e) {
         switch (e.type) {
-            case s.GuildFeedItemTypes.MESSAGE:
-            case s.GuildFeedItemTypes.FORUM_POST:
+            case a.GuildFeedItemTypes.MESSAGE:
+            case a.GuildFeedItemTypes.FORUM_POST:
                 return e.message.channel_id;
-            case s.GuildFeedItemTypes.MESSAGE_BUNDLE:
+            case a.GuildFeedItemTypes.MESSAGE_BUNDLE:
                 return e.messages[0].message.channel_id;
-            case s.GuildFeedItemTypes.CONVERSATION:
+            case a.GuildFeedItemTypes.CONVERSATION:
                 return e.root.messages[0].channel_id;
             default:
                 (0, u.assertNever)(e)

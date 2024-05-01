@@ -7,13 +7,13 @@ function(e, t, n) {
             i = !1,
             {
                 onContention: r,
-                onContentionResolved: s,
-                onTimeout: a,
+                onContentionResolved: a,
+                onTimeout: s,
                 timeoutMs: o
             } = e,
             l = function(e, l) {
-                n.length > 0 ? (r(l, n), i = !0) : i && (s(), i = !1), n.push(l);
-                let u = null == o || null == a ? null : setTimeout(() => a(l, n), o);
+                n.length > 0 ? (r(l, n), i = !0) : i && (a(), i = !1), n.push(l);
+                let u = null == o || null == s ? null : setTimeout(() => s(l, n), o);
                 return new Promise((i, r) => {
                     t = t.then(e).then(i, r).then(() => n.splice(0, 1)), null != u && (t = t.then(() => clearTimeout(u)))
                 })

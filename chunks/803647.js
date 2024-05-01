@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("846027"),
         r = n("872810"),
-        s = n("314897"),
-        a = n("569545");
+        a = n("314897"),
+        s = n("569545");
 
     function o(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
@@ -18,12 +18,12 @@ function(e, t, n) {
             guildId: o,
             channelId: l,
             ownerId: u
-        } = e, d = (0, a.encodeStreamKey)({
+        } = e, d = (0, s.encodeStreamKey)({
             streamType: n,
             guildId: o,
             channelId: l,
             ownerId: u
         });
-        u === s.default.getId() && i.default.setGoLiveSource(null), r.stopStream(d, t)
+        u === a.default.getId() && i.default.setGoLiveSource(null), r.stopStream(d, t)
     }
 }

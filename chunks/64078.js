@@ -16,8 +16,8 @@ function(e, t, n) {
     });
     var i = n("570140"),
         r = n("314897"),
-        s = n("351780"),
-        a = n("843693"),
+        a = n("351780"),
+        s = n("843693"),
         o = n("112606");
 
     function l(e) {
@@ -26,7 +26,7 @@ function(e, t, n) {
             settings: e
         });
         let t = {
-            ...s.default.getState(),
+            ...a.default.getState(),
             ...e
         };
         (0, o.default)(t)
@@ -51,8 +51,8 @@ function(e, t, n) {
 
     function _(e, t) {
         var n;
-        let s = r.default.getId(),
-            o = a.default.getUserCombo(s, e);
+        let a = r.default.getId(),
+            o = s.default.getUserCombo(a, e);
         null != o && i.default.dispatch({
             type: "POGGERMODE_UPDATE_MESSAGE_COMBO",
             comboMessage: {
@@ -66,7 +66,7 @@ function(e, t, n) {
         i.default.dispatch({
             type: "POGGERMODE_UPDATE_COMBO",
             channelId: e,
-            userId: s,
+            userId: a,
             multiplier: l,
             value: 0
         })

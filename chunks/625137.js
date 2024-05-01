@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         fromSerializedGuildRole: function() {
-            return a
+            return s
         },
         fromServerRole: function() {
             return o
@@ -16,9 +16,9 @@ function(e, t, n) {
     }), n("789020");
     var i = n("149765"),
         r = n("866442"),
-        s = n("709054");
+        a = n("709054");
 
-    function a(e) {
+    function s(e) {
         e.permissions = i.deserialize(e.permissions)
     }
 
@@ -48,9 +48,9 @@ function(e, t, n) {
             i = {};
         return t.sort((t, n) => {
             var i, r;
-            let a = e === t.id ? 1 / 0 : -(null !== (i = t.originalPosition) && void 0 !== i ? i : t.position),
+            let s = e === t.id ? 1 / 0 : -(null !== (i = t.originalPosition) && void 0 !== i ? i : t.position),
                 o = e === n.id ? 1 / 0 : -(null !== (r = n.originalPosition) && void 0 !== r ? r : n.position);
-            return a === o ? s.default.compare(t.id, n.id) : a < o ? -1 : a === o ? 0 : 1
+            return s === o ? a.default.compare(t.id, n.id) : s < o ? -1 : s === o ? 0 : 1
         }).forEach((e, t) => {
             e.position = n - t, i[e.id] = e
         }), i

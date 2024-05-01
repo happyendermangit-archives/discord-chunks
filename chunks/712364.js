@@ -2,9 +2,9 @@ function(e, t, n) {
     "use strict";
     n.r(t), n("47120");
     var i, r = n("735250"),
-        s = n("470079"),
-        a = n("120356"),
-        o = n.n(a),
+        a = n("470079"),
+        s = n("120356"),
+        o = n.n(s),
         l = n("481060"),
         u = n("689938"),
         d = n("587372");
@@ -17,14 +17,14 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    class c extends(i = s.PureComponent) {
+    class c extends(i = a.PureComponent) {
         render() {
             var e;
             let {
                 title: t,
                 actionText: n,
                 children: i,
-                error: a,
+                error: s,
                 isLoading: _,
                 maxLength: c,
                 transitionState: E,
@@ -35,7 +35,7 @@ function(e, t, n) {
                 code: S,
                 errorMessage: h,
                 retrySuccess: A
-            } = this.state, m = s.Children.count(i) > 0 ? (0, r.jsx)(l.Card, {
+            } = this.state, m = a.Children.count(i) > 0 ? (0, r.jsx)(l.Card, {
                 type: l.Card.Types.WARNING,
                 className: d.card,
                 children: (0, r.jsx)(l.Text, {
@@ -91,7 +91,7 @@ function(e, t, n) {
                                 color: "text-danger",
                                 variant: "text-xs/normal",
                                 className: d.error,
-                                children: null != a ? a : h
+                                children: null != s ? s : h
                             }) : null, N]
                         })]
                     }), (0, r.jsxs)(l.ModalFooter, {
