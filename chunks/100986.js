@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("594190"),
         r = n("592125"),
-        a = n("19780"),
-        s = n("944486"),
+        s = n("19780"),
+        a = n("944486"),
         o = n("626135"),
         l = n("710111"),
         u = n("981631"),
@@ -16,10 +16,10 @@ function(e, t, n) {
 
     function _(e, t, n, _) {
         var c, E, I;
-        let T = r.default.getChannel(s.default.getVoiceChannelId()),
+        let T = r.default.getChannel(a.default.getVoiceChannelId()),
             f = null == T ? void 0 : T.getGuildId(),
-            S = a.default.getMediaSessionId(),
-            h = a.default.getRTCConnectionId(),
+            S = s.default.getMediaSessionId(),
+            h = s.default.getRTCConnectionId(),
             A = null === (c = i.default.getCurrentGameForAnalytics()) || void 0 === c ? void 0 : c.name,
             m = f !== n.guildId && n.guildId !== l.DEFAULT_SOUND_GUILD_ID;
         let N = (E = n, I = m, E.guildId === l.DEFAULT_SOUND_GUILD_ID ? "default" : I ? "custom-external" : "custom");

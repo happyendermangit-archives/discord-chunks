@@ -10,8 +10,8 @@ function(e, t, n) {
     });
     var i = n("442837"),
         r = n("695346"),
-        a = n("314897"),
-        s = n("594174"),
+        s = n("314897"),
+        a = n("594174"),
         o = n("602992"),
         l = n("619914");
 
@@ -21,18 +21,18 @@ function(e, t, n) {
         } = e, n = (0, l.useUserIsRecentGamesExperimentEnabled)({
             location: t,
             autoTrackExposure: !0
-        }), i = r.RecentGamesEnabled.useSetting(), a = r.ShowCurrentGame.useSetting();
-        return n && a && i
+        }), i = r.RecentGamesEnabled.useSetting(), s = r.ShowCurrentGame.useSetting();
+        return n && s && i
     }
 
     function d(e) {
         let {
             userId: t,
             location: n
-        } = e, r = (0, i.useStateFromStores)([s.default], () => {
-            let e = s.default.getUser(t);
+        } = e, r = (0, i.useStateFromStores)([a.default], () => {
+            let e = a.default.getUser(t);
             return null != e && !e.bot
-        }), l = a.default.getId() === t, d = u({
+        }), l = s.default.getId() === t, d = u({
             location: n
         });
         return (0, o.useUserIsRecentGamesExperimentApiEnabled)({

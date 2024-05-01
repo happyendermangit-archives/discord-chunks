@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t);
-    var i, r, a, s, o = n("442837"),
+    var i, r, s, a, o = n("442837"),
         l = n("570140"),
         u = n("881052");
     let d = null,
@@ -18,7 +18,7 @@ function(e, t, n) {
     function I() {
         d = null
     }
-    class T extends(s = o.default.Store) {
+    class T extends(a = o.default.Store) {
         get paymentError() {
             return d
         }
@@ -26,12 +26,12 @@ function(e, t, n) {
             return e === c ? _ : null
         }
     }
-    a = "PremiumPaymentModalStore", (r = "displayName") in(i = T) ? Object.defineProperty(i, r, {
-        value: a,
+    s = "PremiumPaymentModalStore", (r = "displayName") in(i = T) ? Object.defineProperty(i, r, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : i[r] = a, t.default = new T(l.default, {
+    }) : i[r] = s, t.default = new T(l.default, {
         PREMIUM_PAYMENT_SUBSCRIBE_FAIL: E,
         PREMIUM_PAYMENT_UPDATE_FAIL: E,
         PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: function() {

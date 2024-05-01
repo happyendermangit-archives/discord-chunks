@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("143927"),
         l = n("260866"),
         u = n("461745"),
@@ -17,7 +17,7 @@ function(e, t, n) {
     let f = r.forwardRef(function(e, t) {
         let {
             emojiListRef: n,
-            gridNavigatorId: a,
+            gridNavigatorId: s,
             isFullRow: f,
             onKeyDown: S,
             onFocus: h,
@@ -54,7 +54,7 @@ function(e, t, n) {
             },
             onFocus: h,
             onQueryChange: g,
-            className: s()(m, {
+            className: a()(m, {
                 [T.searchBarFullRow]: f
             }),
             preventEscapePropagation: !1,
@@ -62,9 +62,9 @@ function(e, t, n) {
             inputProps: {
                 "aria-label": I.default.Messages.SEARCH_EMOJIS,
                 "aria-haspopup": "grid",
-                "aria-controls": a,
+                "aria-controls": s,
                 "aria-expanded": !0,
-                "aria-activedescendant": (0, l.makeGridId)(a, R.columnIndex, R.rowIndex)
+                "aria-activedescendant": (0, l.makeGridId)(s, R.columnIndex, R.rowIndex)
             }
         })
     });

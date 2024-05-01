@@ -5,7 +5,7 @@ function(e, t, n) {
             return l
         },
         uid: function() {
-            return s
+            return a
         },
         useUID: function() {
             return o
@@ -13,12 +13,12 @@ function(e, t, n) {
     });
     var i = n("97613"),
         r = n.n(i),
-        a = n("207561");
-    let s = function() {
+        s = n("207561");
+    let a = function() {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "uid_";
             return r()(e)
         },
-        o = () => (0, a.useLazyValue)(() => s()),
+        o = () => (0, s.useLazyValue)(() => a()),
         l = e => {
             let {
                 children: t

@@ -2,18 +2,18 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return a
         },
         isProfileEffectRecord: function() {
-            return a
+            return s
         }
     });
     var i = n("979554"),
         r = n("656698");
-    let a = e => e instanceof s;
-    class s extends r.default {
+    let s = e => e instanceof a;
+    class a extends r.default {
         static fromServer(e) {
-            return new s({
+            return new a({
                 ...super.fromServer(e),
                 ...e
             })

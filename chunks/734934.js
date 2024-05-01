@@ -10,8 +10,8 @@ function(e, t, n) {
     });
     var i = n("381499"),
         r = n("668781"),
-        a = n("246133"),
-        s = n("695346"),
+        s = n("246133"),
+        a = n("695346"),
         o = n("675478"),
         l = n("885110"),
         u = n("626135"),
@@ -20,13 +20,13 @@ function(e, t, n) {
         c = n("689938");
 
     function E() {
-        let e = s.FocusMode.useSetting(),
-            t = s.FocusModeExpiresAtSetting.useSetting();
+        let e = a.FocusMode.useSetting(),
+            t = a.FocusModeExpiresAtSetting.useSetting();
         return e && ("0" === t || new Date(Number(t)).getTime() - new Date().getTime() > 0)
     }
 
     function I(e, t) {
-        let n = s.FocusMode.getSetting();
+        let n = a.FocusMode.getSetting();
         o.PreloadedUserSettingsActionCreators.updateAsync("notifications", n => {
             n.quietMode = i.BoolValue.create({
                 value: e
@@ -41,7 +41,7 @@ function(e, t, n) {
             cancelText: c.default.Messages.NO_THANKS,
             confirmText: c.default.Messages.OKAY,
             onConfirm: () => {
-                (0, a.default)(_.StatusTypes.ONLINE)
+                (0, s.default)(_.StatusTypes.ONLINE)
             }
         })
     }

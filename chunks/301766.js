@@ -10,9 +10,9 @@ function(e, t, n) {
     }), n("724458"), n("47120"), n("411104");
     var i = n("81825"),
         r = n("981631"),
-        a = n("474936");
+        s = n("474936");
 
-    function s(e, t, n) {
+    function a(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -57,13 +57,13 @@ function(e, t, n) {
         }
         get premiumSubscriptionType() {
             switch (this.skuId) {
-                case a.PremiumSubscriptionSKUs.LEGACY:
-                case a.PremiumSubscriptionSKUs.TIER_2:
-                    return a.PremiumTypes.TIER_2;
-                case a.PremiumSubscriptionSKUs.TIER_1:
-                    return a.PremiumTypes.TIER_1;
-                case a.PremiumSubscriptionSKUs.TIER_0:
-                    return a.PremiumTypes.TIER_0;
+                case s.PremiumSubscriptionSKUs.LEGACY:
+                case s.PremiumSubscriptionSKUs.TIER_2:
+                    return s.PremiumTypes.TIER_2;
+                case s.PremiumSubscriptionSKUs.TIER_1:
+                    return s.PremiumTypes.TIER_1;
+                case s.PremiumSubscriptionSKUs.TIER_0:
+                    return s.PremiumTypes.TIER_0;
                 default:
                     return null
             }
@@ -97,7 +97,7 @@ function(e, t, n) {
             return e ? this.giftPremiumUserPrice : this.premiumUserPrice
         }
         constructor(e) {
-            super(), s(this, "id", void 0), s(this, "name", void 0), s(this, "interval", void 0), s(this, "intervalCount", void 0), s(this, "taxInclusive", void 0), s(this, "skuId", void 0), s(this, "currency", void 0), s(this, "price", void 0), s(this, "prices", void 0), s(this, "premiumUserPrice", void 0), s(this, "fallbackPrice", void 0), s(this, "fallbackCurrency", void 0), s(this, "fallbackPremiumUserPrice", void 0), this.id = e.id, this.name = e.name, this.interval = e.interval, this.intervalCount = e.intervalCount, this.taxInclusive = e.taxInclusive, this.skuId = e.skuId, this.currency = e.currency, this.price = e.price, this.premiumUserPrice = e.premiumUserPrice, this.prices = e.prices, e.fallbackPrice && (this.fallbackPrice = e.fallbackPrice, this.fallbackCurrency = e.fallbackCurrency, this.fallbackPremiumUserPrice = e.fallbackPremiumUserPrice)
+            super(), a(this, "id", void 0), a(this, "name", void 0), a(this, "interval", void 0), a(this, "intervalCount", void 0), a(this, "taxInclusive", void 0), a(this, "skuId", void 0), a(this, "currency", void 0), a(this, "price", void 0), a(this, "prices", void 0), a(this, "premiumUserPrice", void 0), a(this, "fallbackPrice", void 0), a(this, "fallbackCurrency", void 0), a(this, "fallbackPremiumUserPrice", void 0), this.id = e.id, this.name = e.name, this.interval = e.interval, this.intervalCount = e.intervalCount, this.taxInclusive = e.taxInclusive, this.skuId = e.skuId, this.currency = e.currency, this.price = e.price, this.premiumUserPrice = e.premiumUserPrice, this.prices = e.prices, e.fallbackPrice && (this.fallbackPrice = e.fallbackPrice, this.fallbackCurrency = e.fallbackCurrency, this.fallbackPremiumUserPrice = e.fallbackPremiumUserPrice)
         }
     }
 
@@ -111,7 +111,7 @@ function(e, t, n) {
     }
 
     function u(e) {
-        return [a.SubscriptionPlans.NONE_MONTH, a.SubscriptionPlans.NONE_3_MONTH, a.SubscriptionPlans.NONE_6_MONTH, a.SubscriptionPlans.NONE_YEAR].includes(e)
+        return [s.SubscriptionPlans.NONE_MONTH, s.SubscriptionPlans.NONE_3_MONTH, s.SubscriptionPlans.NONE_6_MONTH, s.SubscriptionPlans.NONE_YEAR].includes(e)
     }
     t.default = o
 }

@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t);
     var i = n("302454"),
         r = n.n(i),
-        a = n("430198"),
-        s = n("933557"),
+        s = n("430198"),
+        a = n("933557"),
         o = n("66999"),
         l = n("754688"),
         u = n("592125"),
@@ -62,7 +62,7 @@ function(e, t, n) {
     function C(e, t) {
         var n;
         let i = u.default.getChannel(e),
-            r = (0, o.getChannelRoleSubscriptionStatus)(e, u.default, a.default, _.default).isSubscriptionGated,
+            r = (0, o.getChannelRoleSubscriptionStatus)(e, u.default, s.default, _.default).isSubscriptionGated,
             d = null !== (n = (0, T.getMentionIconType)(i)) && void 0 !== n ? n : "text";
         if (null != t) {
             let n = t.find(t => t.id === e);
@@ -84,7 +84,7 @@ function(e, t, n) {
             type: i.type,
             id: i.id,
             guildId: i.guild_id,
-            name: (0, s.computeChannelName)(i, E.default, c.default),
+            name: (0, a.computeChannelName)(i, E.default, c.default),
             isDm: i.isPrivate(),
             isForumPost: i.isForumPost(),
             isMentionable: (0, S.isChannelTypeMentionable)(i.type),
@@ -115,15 +115,15 @@ function(e, t, n) {
     }
 
     function v(e, t, n, i, r) {
-        let a = d.default.getGuild(e),
-            s = (null == a ? void 0 : a.id) === i;
+        let s = d.default.getGuild(e),
+            a = (null == s ? void 0 : s.id) === i;
         return {
             type: "channelMention",
             guildId: e,
             channelId: t,
             messageId: n,
             originalLink: r,
-            inContent: null == a || s ? null : [p(a)],
+            inContent: null == s || a ? null : [p(s)],
             content: [O({
                 name: m.default.Messages.UNKNOWN_CHANNEL.toLowerCase(),
                 type: A.ChannelTypes.UNKNOWN,
@@ -157,24 +157,24 @@ function(e, t, n) {
                 messageId: t,
                 originalLink: i
             },
-            a = d.default.getGuild(e.guildId);
-        if (null == a) {
-            var s;
+            s = d.default.getGuild(e.guildId);
+        if (null == s) {
+            var a;
             if (e.isDm) return {
                 ...r,
                 guildId: A.ME,
                 inContent: [O(e)],
                 content: [R(!1)]
             };
-            return null != (s = i) ? g(s) : L("#".concat(m.default.Messages.UNKNOWN_CHANNEL_PLACEHOLDER))
+            return null != (a = i) ? g(a) : L("#".concat(m.default.Messages.UNKNOWN_CHANNEL_PLACEHOLDER))
         }
         let o = e.guildId === n;
         return {
             ...r,
             ... function(e, t, n, i) {
                 let r = p(e),
-                    a = O(t),
-                    s = R(t.isForumPost);
+                    s = O(t),
+                    a = R(t.isForumPost);
                 if (n && i) {
                     if (t.isForumPost) {
                         let e = u.default.getChannel(t.parentId);
@@ -186,28 +186,28 @@ function(e, t, n) {
                                     type: e.type,
                                     iconType: null !== (o = (0, T.getMentionIconType)(e)) && void 0 !== o ? o : "forum"
                                 })],
-                                content: [a]
+                                content: [s]
                             }
                         }
                     }
                     return {
-                        inContent: [a],
-                        content: [s]
+                        inContent: [s],
+                        content: [a]
                     }
                 }
                 if (n && !i) return {
                     inContent: null,
-                    content: [a]
+                    content: [s]
                 };
                 if (!n && i) return {
                     inContent: [r],
-                    content: [t.isForumPost ? a : s]
+                    content: [t.isForumPost ? s : a]
                 };
                 else if (!n && !i) return {
                     inContent: [r],
-                    content: [a]
+                    content: [s]
                 }
-            }(a, e, o, null != t)
+            }(s, e, o, null != t)
         }
     }
     let M = {
@@ -234,11 +234,11 @@ function(e, t, n) {
             parse(e, t, n) {
                 let i = e[0],
                     r = e[1],
-                    a = e[2],
-                    s = e[3];
-                if (null == a) return g(i);
-                let o = C(a, null);
-                return null == o ? v(r, a, s, N(n.channelId), i) : D(o, s, N(n.channelId), i)
+                    s = e[2],
+                    a = e[3];
+                if (null == s) return g(i);
+                let o = C(s, null);
+                return null == o ? v(r, s, a, N(n.channelId), i) : D(o, a, N(n.channelId), i)
             }
         },
         P = {
@@ -248,14 +248,14 @@ function(e, t, n) {
             parse(e, t, n) {
                 let i = e[0],
                     r = e[1],
-                    a = e[2],
-                    s = e[3],
+                    s = e[2],
+                    a = e[3],
                     o = e[4];
-                if (null == a || null == s) return g(i);
-                let l = C(s, null);
+                if (null == s || null == a) return g(i);
+                let l = C(a, null);
                 if (null != l) return D(l, o, N(n.channelId), i);
-                let u = C(a, null);
-                return null != u ? D(u, o, N(n.channelId), i) : v(r, a, o, N(n.channelId), i)
+                let u = C(s, null);
+                return null != u ? D(u, o, N(n.channelId), i) : v(r, s, o, N(n.channelId), i)
             }
         };
     t.default = {

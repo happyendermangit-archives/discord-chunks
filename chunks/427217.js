@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        a = n.n(r),
-        s = n("788307"),
+        s = n.n(r),
+        a = n("788307"),
         o = n("490260");
 
     function l(e) {
@@ -30,10 +30,10 @@ function(e, t, n) {
             emoji: T
         } = t, f = null != t.state && "" !== t.state ? t.state : u;
         return (0, i.jsxs)("div", {
-            className: a()(o.__invalid_container, n),
-            children: [E || null == T ? null : (0, i.jsx)(s.ActivityEmoji, {
+            className: s()(o.__invalid_container, n),
+            children: [E || null == T ? null : (0, i.jsx)(a.ActivityEmoji, {
                 emoji: T,
-                className: a()(o.emoji, r, null != d ? {
+                className: s()(o.emoji, r, null != d ? {
                     [d]: null == f || "" === f
                 } : null),
                 animate: _,

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getForceMigration: function() {
-            return a
+            return s
         },
         useForceMigration: function() {
             return r
@@ -33,7 +33,7 @@ function(e, t, n) {
             });
             return e
         },
-        a = () => {
+        s = () => {
             let {
                 enabled: e
             } = i.getCurrentConfig({

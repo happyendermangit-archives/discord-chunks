@@ -2,20 +2,20 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getClipCreatedAt: function() {
-            return a
+            return s
         },
         getClipParticipantIds: function() {
-            return s
+            return a
         }
     });
     var i = n("709054"),
         r = n("356659");
 
-    function a(e) {
+    function s(e) {
         return new Date(i.default.extractTimestamp(e)).toISOString()
     }
 
-    function s(e) {
+    function a(e) {
         return e.slice(0, r.CLIPS_MAX_PARTICIPANTS)
     }
 }

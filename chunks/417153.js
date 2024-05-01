@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         popToast: function() {
-            return a
+            return s
         },
         showToast: function() {
             return r
@@ -26,7 +26,7 @@ function(e, t, n) {
         })
     }
 
-    function a() {
+    function s() {
         i.setState(e => {
             let t = e.queuedToasts;
             return t.length > 0 ? {

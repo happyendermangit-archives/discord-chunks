@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t);
-    var i, r, a, s, o, l = n("392711"),
+    var i, r, s, a, o, l = n("392711"),
         u = n.n(l),
         d = n("442837"),
         _ = n("433517"),
@@ -18,7 +18,7 @@ function(e, t, n) {
             configurable: !0,
             writable: !0
         }) : e[t] = n, e
-    }(i = a || (a = {})).DATA_SAVER = "data_saver", i.STANDARD = "standard", i.BEST = "best", (r = s || (s = {})).VERY_LOW = "very_low", r.LOW = "low", r.MEDIUM = "medium", r.HIGH = "high", r.VERY_HIGH = "very_high";
+    }(i = s || (s = {})).DATA_SAVER = "data_saver", i.STANDARD = "standard", i.BEST = "best", (r = a || (a = {})).VERY_LOW = "very_low", r.LOW = "low", r.MEDIUM = "medium", r.HIGH = "high", r.VERY_HIGH = "very_high";
     let S = (window.innerWidth - I.CHANNEL_SIDEBAR_WIDTH) / 2,
         h = null,
         A = {};

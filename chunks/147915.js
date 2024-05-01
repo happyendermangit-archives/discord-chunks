@@ -5,8 +5,8 @@ function(e, t, n) {
             return r
         }
     });
-    var i, r, a = n("735250"),
-        s = n("470079"),
+    var i, r, s = n("735250"),
+        a = n("470079"),
         o = n("120356"),
         l = n.n(o),
         u = n("718017"),
@@ -39,13 +39,13 @@ function(e, t, n) {
             opacity: 0
         }
     };
-    t.default = s.memo(function(e) {
+    t.default = a.memo(function(e) {
         let {
             className: t,
             disabled: n = !1,
             innerClassName: i,
             childClassName: r,
-            iconClassName: s,
+            iconClassName: a,
             icon: o,
             children: f,
             onClick: S,
@@ -68,20 +68,20 @@ function(e, t, n) {
             let {
                 component: t
             } = e;
-            return null != C ? (0, a.jsxs)("div", {
+            return null != C ? (0, s.jsxs)("div", {
                 className: I.buttonContent,
-                children: [(0, a.jsx)(E.default, {
+                children: [(0, s.jsx)(E.default, {
                     className: I.iconMask,
                     mask: E.MaskIDs.CHAT_INPUT_BUTTON_NOTIFICATION,
                     width: 24,
                     height: 24,
                     children: t
-                }), (0, a.jsx)("span", {
+                }), (0, s.jsx)("span", {
                     className: I.notificationDot
                 })]
             }) : t
         };
-        return (0, a.jsxs)(d.Button, {
+        return (0, s.jsxs)(d.Button, {
             look: d.Button.Looks.BLANK,
             size: d.Button.Sizes.NONE,
             "aria-label": g,
@@ -110,28 +110,28 @@ function(e, t, n) {
                 let {
                     key: i
                 } = n;
-                return t ? (0, a.jsx)(u.animated.div, {
+                return t ? (0, s.jsx)(u.animated.div, {
                     style: e,
                     className: l()(I.buttonWrapper, r),
                     children: y({
                         component: f
                     })
-                }, i) : null != o ? (0, a.jsx)(u.animated.div, {
+                }, i) : null != o ? (0, s.jsx)(u.animated.div, {
                     style: e,
                     className: l()(I.buttonWrapper, r),
                     children: y({
-                        component: (0, a.jsx)(o, {
-                            className: l()(I.icon, s, {
+                        component: (0, s.jsx)(o, {
+                            className: l()(I.icon, a, {
                                 [I.pulseIcon]: O
                             })
                         })
                     })
                 }, i) : void 0
-            }), R && (0, a.jsxs)("div", {
+            }), R && (0, s.jsxs)("div", {
                 className: I.sparkleContainer,
-                children: [(0, a.jsx)(c.default, {
+                children: [(0, s.jsx)(c.default, {
                     className: I.sparkleStar
-                }), (0, a.jsx)(_.default, {
+                }), (0, s.jsx)(_.default, {
                     className: I.sparklePlus
                 })]
             })]

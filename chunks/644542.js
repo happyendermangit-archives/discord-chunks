@@ -5,10 +5,10 @@ function(e, t, n) {
             return o
         },
         GuildRoleSubscriptionUsersExperiment: function() {
-            return s
+            return a
         },
         GuildRoleSubscriptionsExperiment: function() {
-            return a
+            return s
         },
         GuildRoleSubscriptionsTierTemplatesExperiment: function() {
             return l
@@ -19,7 +19,7 @@ function(e, t, n) {
     });
     var i = n("818083"),
         r = n("293810");
-    let a = (0, i.createExperiment)({
+    let s = (0, i.createExperiment)({
             kind: "guild",
             id: "2021-06_guild_role_subscriptions",
             label: "Guild Role Subscriptions",
@@ -34,7 +34,7 @@ function(e, t, n) {
                 }
             }]
         }),
-        s = (0, i.createExperiment)({
+        a = (0, i.createExperiment)({
             kind: "user",
             id: "2021-08_guild_role_subscription_users",
             label: "Guild Role Subscription Users",

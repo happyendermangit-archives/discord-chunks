@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("470079"),
         r = n("442837"),
-        a = n("512751"),
-        s = n("57132"),
+        s = n("512751"),
+        a = n("57132"),
         o = n("943209"),
         l = n("628566");
 
@@ -16,8 +16,8 @@ function(e, t, n) {
         let {
             channelId: t
         } = e;
-        (0, s.useInMainTabsExperiment)();
-        let n = (0, a.useShowApplicationInGDM)(t),
+        (0, a.useInMainTabsExperiment)();
+        let n = (0, s.useShowApplicationInGDM)(t),
             {
                 installedIntegrations: u,
                 applicationsShelf: d,

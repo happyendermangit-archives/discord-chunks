@@ -5,7 +5,7 @@ function(e, t, n) {
             return r
         },
         useSimplifiedProfileExperiment: function() {
-            return a
+            return s
         }
     });
     let i = (0, n("818083").createExperiment)({
@@ -45,7 +45,7 @@ function(e, t, n) {
                 trackExposureOptions: r
             })
         },
-        a = e => {
+        s = e => {
             let {
                 location: t,
                 autoTrackExposure: n = !0,

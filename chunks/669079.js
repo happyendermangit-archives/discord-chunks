@@ -56,8 +56,8 @@ function(e, t, n) {
             return X
         }
     }), n("47120"), n("757143"), n("627341");
-    var i, r, a = n("278074"),
-        s = n("873546"),
+    var i, r, s = n("278074"),
+        a = n("873546"),
         o = n("442837"),
         l = n("34756"),
         u = n("100159"),
@@ -84,7 +84,7 @@ function(e, t, n) {
         M = [L, v, D, "[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}"].join("|"),
         y = new RegExp("^(".concat("WUMP-?", ")?(").concat(M, ")$"));
     (r = i || (i = {}))[r.DEFAULT = 0] = "DEFAULT", r[r.CUSTOM_STYLE = 1] = "CUSTOM_STYLE", r[r.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD = 2] = "CUSTOM_MESSAGE_EMOJI_SOUNDBOARD";
-    let P = (e, t) => s.isMobile || s.isTablet ? 0 : null != e || t ? 2 : 1,
+    let P = (e, t) => a.isMobile || a.isTablet ? 0 : null != e || t ? 2 : 1,
         U = e => 0 !== P(e);
 
     function b(e) {
@@ -158,8 +158,8 @@ function(e, t, n) {
         })
     }
 
-    function H(e, t, n, i, r, a, s) {
-        return null == n && (i || r || null == e) ? !s || a || i || r ? i && (t.isSubscription || null != e) ? h.GiftCodeModalStates.SUCCESS : h.GiftCodeModalStates.CONFIRM : h.GiftCodeModalStates.OPEN : h.GiftCodeModalStates.ERROR
+    function H(e, t, n, i, r, s, a) {
+        return null == n && (i || r || null == e) ? !a || s || i || r ? i && (t.isSubscription || null != e) ? h.GiftCodeModalStates.SUCCESS : h.GiftCodeModalStates.CONFIRM : h.GiftCodeModalStates.OPEN : h.GiftCodeModalStates.ERROR
     }
 
     function Y(e, t, n) {
@@ -202,18 +202,18 @@ function(e, t, n) {
             sku: n,
             libraryApplication: i,
             error: r,
-            accepted: s,
+            accepted: a,
             accepting: o,
             onGoToLibrary: l,
             subscriptionPlan: u = null
         } = e;
         switch (t) {
             case h.GiftCodeModalStates.ERROR:
-                return K(i, r, s, o, l);
+                return K(i, r, a, o, l);
             case h.GiftCodeModalStates.SUCCESS:
                 if (null != u) {
                     var d;
-                    return d = u, (0, a.match)(d).with({
+                    return d = u, (0, s.match)(d).with({
                         interval: A.SubscriptionIntervalTypes.MONTH,
                         premiumSubscriptionType: A.PremiumTypes.TIER_2
                     }, () => m.default.Messages.PREMIUM_FEATURES_TIER_2.format({
@@ -251,10 +251,10 @@ function(e, t, n) {
     }
 
     function K(e, t, n, i, r) {
-        let a = m.default.Messages.GIFT_CONFIRMATION_BODY_OWNED.format({
+        let s = m.default.Messages.GIFT_CONFIRMATION_BODY_OWNED.format({
             onGoToLibrary: r
         });
-        return null != (n || i ? void 0 : e) ? a : null == t ? null : function(e, t) {
+        return null != (n || i ? void 0 : e) ? s : null == t ? null : function(e, t) {
             switch (e.code) {
                 case h.AbortCodes.INVALID_GIFT_SELF_REDEMPTION:
                     return m.default.Messages.GIFT_CONFIRMATION_BODY_SELF_GIFT_NO_PAYMENT;
@@ -285,8 +285,8 @@ function(e, t, n) {
     function z(e, t, n) {
         let i = t.applicationId,
             r = e.length > 0 ? e : [i],
-            a = r.map(e => n.getLibraryApplication(i, e, !0)).filter(E.isNotNullish);
-        return a.length === r.length ? a[0] : null
+            s = r.map(e => n.getLibraryApplication(i, e, !0)).filter(E.isNotNullish);
+        return s.length === r.length ? s[0] : null
     }
 
     function Z(e) {

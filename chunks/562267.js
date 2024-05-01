@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("442837"),
-        s = n("481060"),
+        s = n("442837"),
+        a = n("481060"),
         o = n("913663"),
         l = n("268350"),
         u = n("419922"),
@@ -17,13 +17,13 @@ function(e, t, n) {
         let {
             channelId: n,
             chatInputType: I
-        } = e, [T, f] = r.useState(null), S = (0, a.useStateFromStores)([o.default], () => o.default.getStickerPreview(n, I.drafts.type));
+        } = e, [T, f] = r.useState(null), S = (0, s.useStateFromStores)([o.default], () => o.default.getStickerPreview(n, I.drafts.type));
         return (null === (t = I.stickers) || void 0 === t ? void 0 : t.allowSending) && null != S && 0 !== S.length ? (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)("div", {
                 className: E.stickerPreviews,
                 children: S.map(e => (0, i.jsxs)("div", {
                     className: E.stickerPreviewContainer,
-                    children: [(0, i.jsx)(s.Clickable, {
+                    children: [(0, i.jsx)(a.Clickable, {
                         onFocus: () => f(e.id),
                         onBlur: () => f(null),
                         className: E.closeButton,

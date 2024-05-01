@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("442837"),
         l = n("481060"),
         u = n("239091"),
@@ -29,7 +29,7 @@ function(e, t, n) {
         R = r.forwardRef(function(e, t) {
             let n, {
                     emoji: r,
-                    isFavorite: a,
+                    isFavorite: s,
                     isLargeSize: u,
                     isMediumSize: d,
                     isInspected: _,
@@ -56,7 +56,7 @@ function(e, t, n) {
             return (0, i.jsx)(l.FocusRing, {
                 children: (0, i.jsx)("button", {
                     ...v,
-                    className: s()(p.emojiItem, {
+                    className: a()(p.emojiItem, {
                         [p.emojiItemLarge]: u,
                         [p.emojiItemMedium]: d,
                         [p.emojiItemSelected]: _,
@@ -72,7 +72,7 @@ function(e, t, n) {
                         "aria-label": (n = r.allNamesString, ((null == D ? void 0 : D.name) != null && (n = N.default.Messages.EMOJI_FROM_GUILD_LABEL.format({
                             names: n,
                             guildName: D.name
-                        })), a) ? N.default.Messages.EMOJI_NAMES_WITH_FAVORITED.format({
+                        })), s) ? N.default.Messages.EMOJI_NAMES_WITH_FAVORITED.format({
                             names: n
                         }) : n),
                         columnIndex: f,
@@ -90,8 +90,8 @@ function(e, t, n) {
     function C(e) {
         let {
             descriptor: t,
-            emojiItemKey: a,
-            isInspected: s,
+            emojiItemKey: s,
+            isInspected: a,
             rowIndex: c,
             channelGuildId: I,
             onInspect: S,
@@ -119,7 +119,7 @@ function(e, t, n) {
         } = t, z = e => {
             if (e.stopPropagation(), m.current || p.current) return;
             let n = e.altKey;
-            n && !_.default.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(Y) && U(a), (0, T.hideHotspot)(T.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), A(t, {
+            n && !_.default.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(Y) && U(s), (0, T.hideHotspot)(T.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), A(t, {
                 isFinalSelection: !e.shiftKey,
                 toggleFavorite: n
             })
@@ -147,7 +147,7 @@ function(e, t, n) {
             } = null !== (e = v(K, c)) && void 0 !== e ? e : {};
             return (0, r.createElement)("li", {
                 ...d,
-                key: a,
+                key: s,
                 ref: H
             }, k !== O(K, c) && (0, i.jsx)(R, {
                 ref: o,
@@ -155,9 +155,9 @@ function(e, t, n) {
                 isFavorite: F.isFavoriteEmojiWithoutFetchingLatest(Y),
                 isLargeSize: M,
                 isMediumSize: D,
-                isInspected: s,
+                isInspected: a,
                 isDisabled: W,
-                showPulse: y === a,
+                showPulse: y === s,
                 allowAnimatedEmoji: P,
                 onFocus: null != u ? u : Z,
                 onMouseMove: Z,
@@ -188,6 +188,6 @@ function(e, t, n) {
             position: "top",
             delay: 200,
             children: e => Q(e)
-        }, a) : Q()
+        }, s) : Q()
     }
 }

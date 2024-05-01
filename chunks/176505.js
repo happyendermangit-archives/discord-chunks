@@ -1,6 +1,6 @@
 function(e, t, n) {
     "use strict";
-    var i, r, a, s;
+    var i, r, s, a;
     n.r(t), n.d(t, {
         ChannelFlags: function() {
             return _
@@ -35,7 +35,7 @@ function(e, t, n) {
         isStaticChannelRoute: function() {
             return l
         }
-    }), n("47120"), (a = i || (i = {})).ROLE_SUBSCRIPTIONS = "role-subscriptions", a.GUILD_SHOP = "shop", a.MEMBER_APPLICATIONS = "member-applications", a.GUILD_HOME = "@home", a.CHANNEL_BROWSER = "channel-browser", a.GUILD_ONBOARDING = "onboarding", a.CUSTOMIZE_COMMUNITY = "customize-community", a.MEMBER_SAFETY = "member-safety";
+    }), n("47120"), (s = i || (i = {})).ROLE_SUBSCRIPTIONS = "role-subscriptions", s.GUILD_SHOP = "shop", s.MEMBER_APPLICATIONS = "member-applications", s.GUILD_HOME = "@home", s.CHANNEL_BROWSER = "channel-browser", s.GUILD_ONBOARDING = "onboarding", s.CUSTOMIZE_COMMUNITY = "customize-community", s.MEMBER_SAFETY = "member-safety";
     let o = new Set(Object.values(i));
 
     function l(e) {
@@ -67,7 +67,7 @@ function(e, t, n) {
         }),
         c = 1024,
         E = 4096;
-    (s = r || (r = {})).GUILD_HOME = "home", s.SERVER_GUIDE = "guide", s.CHANNEL_BROWSER = "browse", s.CUSTOMIZE_COMMUNITY = "customize";
+    (a = r || (r = {})).GUILD_HOME = "home", a.SERVER_GUIDE = "guide", a.CHANNEL_BROWSER = "browse", a.CUSTOMIZE_COMMUNITY = "customize";
     let I = new Set(Object.values(r)),
         T = "131"
 }

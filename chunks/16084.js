@@ -31,8 +31,8 @@ function(e, t, n) {
     }), n("411104");
     var i = n("544891"),
         r = n("570140"),
-        a = n("881052"),
-        s = n("128069"),
+        s = n("881052"),
+        a = n("128069"),
         o = n("34756"),
         l = n("115130"),
         u = n("55563"),
@@ -77,25 +77,25 @@ function(e, t, n) {
         }), n
     }
     async function A(e, t, n, i) {
-        let a;
-        let s = {
+        let s;
+        let a = {
             payment_source_id: n,
             gift: null == i ? void 0 : i.isGift
         };
-        (d.default.inTestModeForApplication(e) || l.default.inDevModeForApplication(e)) && (s.test_mode = !0), r.default.dispatch({
+        (d.default.inTestModeForApplication(e) || l.default.inDevModeForApplication(e)) && (a.test_mode = !0), r.default.dispatch({
             type: "SKU_PURCHASE_PREVIEW_FETCH",
             skuId: t
         });
         try {
-            a = await (0, I.httpGetWithCountryCodeQuery)({
+            s = await (0, I.httpGetWithCountryCodeQuery)({
                 url: f.Endpoints.STORE_SKU_PURCHASE(t),
-                query: s,
+                query: a,
                 oldFormErrors: !0
             }), r.default.dispatch({
                 type: "SKU_PURCHASE_PREVIEW_FETCH_SUCCESS",
                 skuId: t,
                 paymentSourceId: n,
-                price: a.body
+                price: s.body
             })
         } catch (e) {
             r.default.dispatch({
@@ -103,7 +103,7 @@ function(e, t, n) {
                 skuId: t
             })
         }
-        return a
+        return s
     }
     async function m(e, t, n) {
         r.default.dispatch({
@@ -123,7 +123,7 @@ function(e, t, n) {
                 libraryApplications: []
             }), e.body
         } catch (i) {
-            let t = new a.BillingError(i);
+            let t = new s.BillingError(i);
             throw r.default.dispatch({
                 type: "SKU_PURCHASE_FAIL",
                 applicationId: e,
@@ -192,12 +192,12 @@ function(e, t, n) {
                 redirectConfirmation: !1
             }
         } catch (i) {
-            let n = i instanceof a.BillingError ? i : new a.BillingError(i);
-            if ((n.code === s.ErrorCodes.CONFIRMATION_REQUIRED || n.code === s.ErrorCodes.AUTHENTICATION_REQUIRED) && r.default.dispatch({
+            let n = i instanceof s.BillingError ? i : new s.BillingError(i);
+            if ((n.code === a.ErrorCodes.CONFIRMATION_REQUIRED || n.code === a.ErrorCodes.AUTHENTICATION_REQUIRED) && r.default.dispatch({
                     type: "SKU_PURCHASE_AWAIT_CONFIRMATION",
                     skuId: t,
                     isGift: h
-                }), n.code !== s.ErrorCodes.CONFIRMATION_REQUIRED) throw r.default.dispatch({
+                }), n.code !== a.ErrorCodes.CONFIRMATION_REQUIRED) throw r.default.dispatch({
                 type: "SKU_PURCHASE_FAIL",
                 applicationId: e,
                 skuId: t,
@@ -220,7 +220,7 @@ function(e, t, n) {
                 })).body
             }
         } catch (e) {
-            throw e instanceof a.BillingError ? e : new a.BillingError(e)
+            throw e instanceof s.BillingError ? e : new s.BillingError(e)
         }
     }
 

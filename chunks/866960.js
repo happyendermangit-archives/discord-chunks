@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t);
-    var i, r, a, s, o = n("442837"),
+    var i, r, s, a, o = n("442837"),
         l = n("570140"),
         u = n("931619"),
         d = n("981631");
@@ -13,7 +13,7 @@ function(e, t, n) {
         var t;
         _ = null != e.type ? e.type : d.NetworkConnectionTypes.UNKNOWN, c = null !== (t = e.effectiveSpeed) && void 0 !== t ? t : d.NetworkConnectionSpeeds.UNKNOWN, E = e.serviceProvider, f.emitChange()
     }
-    class T extends(s = o.default.Store) {
+    class T extends(a = o.default.Store) {
         initialize() {
             u.default.getNetworkInformation().then(I), u.default.addChangeCallback(I)
         }
@@ -27,12 +27,12 @@ function(e, t, n) {
             return E
         }
     }
-    a = "NetworkStore", (r = "displayName") in(i = T) ? Object.defineProperty(i, r, {
-        value: a,
+    s = "NetworkStore", (r = "displayName") in(i = T) ? Object.defineProperty(i, r, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : i[r] = a;
+    }) : i[r] = s;
     let f = new T(l.default, {});
     t.default = f
 }

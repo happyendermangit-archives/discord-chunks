@@ -25,8 +25,8 @@ function(e, t, n) {
     });
     var i = n("544891"),
         r = n("570140"),
-        a = n("881052"),
-        s = n("932015"),
+        s = n("881052"),
+        a = n("932015"),
         o = n("209747"),
         l = n("78839"),
         u = n("981631");
@@ -34,7 +34,7 @@ function(e, t, n) {
         let t = (await i.HTTP.get({
             url: u.Endpoints.APPLIED_GUILD_BOOSTS_FOR_GUILD(e),
             oldFormErrors: !0
-        })).body.map(e => s.default.createFromServer(e));
+        })).body.map(e => a.default.createFromServer(e));
         return r.default.dispatch({
             type: "GUILD_APPLIED_BOOSTS_FETCH_SUCCESS",
             guildId: e,
@@ -49,7 +49,7 @@ function(e, t, n) {
                 query: {
                     paused: e
                 }
-            })).body.map(e => s.default.createFromServer(e));
+            })).body.map(e => a.default.createFromServer(e));
         return r.default.dispatch({
             type: "USER_APPLIED_BOOSTS_FETCH_SUCCESS",
             appliedGuildBoosts: t
@@ -77,13 +77,13 @@ function(e, t, n) {
                     },
                     oldFormErrors: !0
                 }),
-                a = Array.isArray(n.body) ? n.body.map(s.default.createFromServer) : [s.default.createFromServer(n.body)];
+                s = Array.isArray(n.body) ? n.body.map(a.default.createFromServer) : [a.default.createFromServer(n.body)];
             return r.default.dispatch({
                 type: "GUILD_APPLY_BOOST_SUCCESS",
-                appliedGuildBoost: a
-            }), c(), a
+                appliedGuildBoost: s
+            }), c(), s
         } catch (t) {
-            let e = new a.AppliedGuildBoostError(t);
+            let e = new s.AppliedGuildBoostError(t);
             throw r.default.dispatch({
                 type: "GUILD_APPLY_BOOST_FAIL",
                 error: e
@@ -100,7 +100,7 @@ function(e, t, n) {
                 oldFormErrors: !0
             }), c()
         } catch (t) {
-            let e = new a.AppliedGuildBoostError(t);
+            let e = new s.AppliedGuildBoostError(t);
             throw r.default.dispatch({
                 type: "GUILD_UNAPPLY_BOOST_FAIL",
                 error: e

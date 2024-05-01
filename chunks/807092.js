@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t);
-    var i, r, a, s, o = n("442837"),
+    var i, r, s, a, o = n("442837"),
         l = n("570140"),
         u = n("375954");
     let d = {},
@@ -25,7 +25,7 @@ function(e, t, n) {
     function I() {
         d = {}, _ = {}, c = {}
     }
-    class T extends(s = o.default.Store) {
+    class T extends(a = o.default.Store) {
         initialize() {
             this.waitFor(u.default)
         }
@@ -36,26 +36,26 @@ function(e, t, n) {
             return c[e]
         }
     }
-    a = "PendingReplyStore", (r = "displayName") in(i = T) ? Object.defineProperty(i, r, {
-        value: a,
+    s = "PendingReplyStore", (r = "displayName") in(i = T) ? Object.defineProperty(i, r, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : i[r] = a, t.default = new T(l.default, {
+    }) : i[r] = s, t.default = new T(l.default, {
         CREATE_PENDING_REPLY: function(e) {
             let {
                 channel: t,
                 message: n,
                 shouldMention: i = !0,
                 showMentionToggle: r = !0,
-                source: a
+                source: s
             } = e;
             d[t.id] = {
                 channel: t,
                 message: n,
                 shouldMention: i,
                 showMentionToggle: r
-            }, c[t.id] = a
+            }, c[t.id] = s
         },
         CREATE_SHALLOW_PENDING_REPLY: function(e) {
             let {
@@ -96,12 +96,12 @@ function(e, t, n) {
             var t, n, i;
             let {
                 id: r,
-                channelId: a
+                channelId: s
             } = e;
-            if ((null === (n = d[a]) || void 0 === n ? void 0 : null === (t = n.message) || void 0 === t ? void 0 : t.id) === r) delete d[a], delete c[a];
+            if ((null === (n = d[s]) || void 0 === n ? void 0 : null === (t = n.message) || void 0 === t ? void 0 : t.id) === r) delete d[s], delete c[s];
             else {
-                if ((null === (i = _[a]) || void 0 === i ? void 0 : i.messageId) !== r) return !1;
-                delete _[a], delete c[a]
+                if ((null === (i = _[s]) || void 0 === i ? void 0 : i.messageId) !== r) return !1;
+                delete _[s], delete c[s]
             }
         },
         CHANNEL_SELECT: function(e) {

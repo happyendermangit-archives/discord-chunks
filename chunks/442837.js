@@ -25,17 +25,17 @@ function(e, t, n) {
     });
     var i = n("250919"),
         r = n("613568"),
-        a = n("153102"),
-        s = n("727438"),
+        s = n("153102"),
+        a = n("727438"),
         o = n("445346"),
         l = n("441244"),
         u = n("399606");
     t.default = {
-        Emitter: a.default,
+        Emitter: s.default,
         Store: o.Store,
-        PersistedStore: s.PersistedStore,
-        DeviceSettingsStore: s.DeviceSettingsStore,
-        OfflineCacheStore: s.OfflineCacheStore,
+        PersistedStore: a.PersistedStore,
+        DeviceSettingsStore: a.DeviceSettingsStore,
+        OfflineCacheStore: a.OfflineCacheStore,
         connectStores: l.default,
         initialize: function() {
             o.Store.initialize()

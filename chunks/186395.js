@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        a = n.n(r),
-        s = n("481060"),
+        s = n.n(r),
+        a = n("481060"),
         o = n("412899"),
         l = n("659101"),
         u = n("689938"),
@@ -24,14 +24,14 @@ function(e, t, n) {
             showBorder: c
         } = e;
         return null == n || null == r ? null : (0, i.jsxs)(l.default, {
-            children: [(0, i.jsx)(s.Heading, {
+            children: [(0, i.jsx)(a.Heading, {
                 variant: "eyebrow",
                 className: _.title,
                 children: u.default.Messages.ROLES_LIST.format({
                     numRoles: r.roles.length
                 })
             }), (0, i.jsx)(o.default, {
-                roleClassName: a()(d.rolePill, {
+                roleClassName: s()(d.rolePill, {
                     [d.rolePillBorder]: c
                 }),
                 className: d.roles,

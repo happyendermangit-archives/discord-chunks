@@ -13,8 +13,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("442837"),
         l = n("481060"),
         u = n("594174"),
@@ -34,7 +34,7 @@ function(e, t, n) {
             return null == t ? null : (0, i.jsx)("img", {
                 src: t,
                 alt: T.default.Messages.CLAN_BADGE,
-                className: s()(f.badge, n),
+                className: a()(f.badge, n),
                 width: r,
                 height: r
             })
@@ -44,7 +44,7 @@ function(e, t, n) {
                 clanTag: t,
                 clanBadge: n,
                 className: r,
-                textClassName: a,
+                textClassName: s,
                 onClick: o,
                 onMouseEnter: u,
                 textVariant: _ = "text-xs/medium",
@@ -56,12 +56,12 @@ function(e, t, n) {
                 tag: "span",
                 onClick: o,
                 onMouseEnter: u,
-                className: s()(f.chipletContainerInner, T && f.chipletContainerInline, null != o && f.clickable, r),
+                className: a()(f.chipletContainerInner, T && f.chipletContainerInline, null != o && f.clickable, r),
                 children: (0, i.jsxs)(l.Text, {
                     variant: _,
                     color: c,
                     tag: "span",
-                    className: s()(f.text, a),
+                    className: a()(f.text, s),
                     children: [null != n && "string" == typeof n ? (0, i.jsx)(S, {
                         src: n,
                         size: E
@@ -73,11 +73,11 @@ function(e, t, n) {
     function A(e) {
         var t, n;
         let {
-            clan: a,
-            userId: s,
+            clan: s,
+            userId: a,
             children: d,
             source: c
-        } = e, I = (0, o.useStateFromStores)([u.default], () => u.default.getUser(s), [s]), T = null !== (t = null == I ? void 0 : I.clan) && void 0 !== t ? t : a, [S, h] = (0, _.useFetchClanInfo)(null !== (n = null == T ? void 0 : T.identityGuildId) && void 0 !== n ? n : null), A = r.useCallback(() => {
+        } = e, I = (0, o.useStateFromStores)([u.default], () => u.default.getUser(a), [a]), T = null !== (t = null == I ? void 0 : I.clan) && void 0 !== t ? t : s, [S, h] = (0, _.useFetchClanInfo)(null !== (n = null == T ? void 0 : T.identityGuildId) && void 0 !== n ? n : null), A = r.useCallback(() => {
             h()
         }, [h]);
         return (0, i.jsx)(l.Popout, {
@@ -125,7 +125,7 @@ function(e, t, n) {
         let {
             clan: n,
             userId: r,
-            className: a,
+            className: s,
             textVariant: l,
             textColor: d,
             badgeSize: _,
@@ -142,7 +142,7 @@ function(e, t, n) {
         return E ? (0, i.jsx)(h, {
             clanTag: p,
             clanBadge: C,
-            className: s()(f.noTooltip, a),
+            className: a()(f.noTooltip, s),
             textVariant: l,
             textColor: d,
             badgeSize: _,
@@ -154,7 +154,7 @@ function(e, t, n) {
             children: (0, i.jsx)(h, {
                 clanTag: p,
                 clanBadge: C,
-                className: a,
+                className: s,
                 textVariant: l,
                 textColor: d,
                 badgeSize: _,

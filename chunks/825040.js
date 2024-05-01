@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        a = n("665443"),
-        s = n.n(a),
+        s = n("665443"),
+        a = n.n(s),
         o = n("970838"),
         l = n("376398");
 
@@ -16,7 +16,7 @@ function(e, t, n) {
         let {
             streamId: t,
             paused: n,
-            onReady: a,
+            onReady: s,
             onResize: u,
             className: d,
             ..._
@@ -39,11 +39,11 @@ function(e, t, n) {
             var e, t, n, i;
             let {
                 width: r,
-                height: a
-            } = E.current, s = null !== (n = null === (e = c.current) || void 0 === e ? void 0 : e.videoWidth) && void 0 !== n ? n : 0, o = null !== (i = null === (t = c.current) || void 0 === t ? void 0 : t.videoHeight) && void 0 !== i ? i : 0;
-            if (r !== s || a !== o) {
+                height: s
+            } = E.current, a = null !== (n = null === (e = c.current) || void 0 === e ? void 0 : e.videoWidth) && void 0 !== n ? n : 0, o = null !== (i = null === (t = c.current) || void 0 === t ? void 0 : t.videoHeight) && void 0 !== i ? i : 0;
+            if (r !== a || s !== o) {
                 let e = {
-                    width: s,
+                    width: a,
                     height: o
                 };
                 null == u || u(e), E.current = e
@@ -54,13 +54,13 @@ function(e, t, n) {
             if (null != e) return e.addEventListener("resize", I), () => e.removeEventListener("resize", I)
         }, [I]);
         let T = r.useCallback(() => {
-                null == a || a()
-            }, [a]),
+                null == s || s()
+            }, [s]),
             f = r.useCallback(e => {
                 !n && e.currentTarget.play()
             }, [n]);
         return (0, i.jsx)("video", {
-            className: s()("media-engine-video", d),
+            className: a()("media-engine-video", d),
             ref: c,
             autoPlay: !0,
             onPause: f,

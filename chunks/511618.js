@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t);
     var i = n("735250"),
         r = n("470079"),
-        a = n("906732"),
-        s = n("508688"),
+        s = n("906732"),
+        a = n("508688"),
         o = n("806519"),
         l = n("626135"),
         u = n("768581"),
@@ -18,7 +18,7 @@ function(e, t, n) {
             emojis: t
         } = e, {
             analyticsLocations: n
-        } = (0, a.default)();
+        } = (0, s.default)();
         r.useEffect(() => {
             l.default.track(d.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                 type: c.PremiumUpsellTypes.EMOJI_AUTOCOMPLETE_INLINE,
@@ -48,15 +48,15 @@ function(e, t, n) {
                 }, e.id)
             })
         });
-        return (0, i.jsxs)(s.AutocompleteRowContent, {
+        return (0, i.jsxs)(a.AutocompleteRowContent, {
             className: I.upsell,
-            children: [(0, i.jsx)(s.AutocompleteRowContentPrimary, {
-                children: (0, i.jsx)(s.AutocompleteRowHeading, {
+            children: [(0, i.jsx)(a.AutocompleteRowContentPrimary, {
+                children: (0, i.jsx)(a.AutocompleteRowHeading, {
                     children: E.default.Messages.AUTOCOMPLETE_EMOJI_UPSELL.format({
                         count: t.length
                     })
                 })
-            }), (0, i.jsx)(s.AutocompleteRowContentSecondary, {
+            }), (0, i.jsx)(a.AutocompleteRowContentSecondary, {
                 children: T
             })]
         })

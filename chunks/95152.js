@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120"), n("315314"), n("610138"), n("216116"), n("78328"), n("815648");
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("481060"),
         l = n("166459"),
         u = n("476326"),
@@ -33,7 +33,7 @@ function(e, t, n) {
     }
 
     function N(e) {
-        var t, n, a, o;
+        var t, n, s, o;
         let {
             file: l
         } = e, [u, d] = r.useState(), [_, c] = r.useState(!1), [E, I] = r.useState({}), T = r.useRef(null);
@@ -63,13 +63,13 @@ function(e, t, n) {
         return (0, i.jsx)("img", {
             ref: T,
             src: u,
-            className: s()(h.icon, {
+            className: a()(h.icon, {
                 [h.image]: !_
             }),
             "aria-hidden": !0,
             alt: "",
             style: {
-                width: null !== (a = E.width) && void 0 !== a ? a : "initial",
+                width: null !== (s = E.width) && void 0 !== s ? s : "initial",
                 height: null !== (o = E.height) && void 0 !== o ? o : 104,
                 marginLeft: f,
                 marginRight: f,
@@ -85,7 +85,7 @@ function(e, t, n) {
                 file: this.props.upload.item.file
             });
             return (0, i.jsx)("div", {
-                className: s()(h.icon, {
+                className: a()(h.icon, {
                     [h[null !== (e = this.props.upload.classification) && void 0 !== e ? e : ""]]: !0
                 })
             })
@@ -113,7 +113,7 @@ function(e, t, n) {
                 upload: e,
                 transitionState: t,
                 messageMaxLength: n,
-                disableSpoiler: a
+                disableSpoiler: s
             } = this.props, {
                 hasSpoiler: l
             } = this.state;
@@ -121,11 +121,11 @@ function(e, t, n) {
                 "aria-label": S.default.Messages.ATTACH_FILES,
                 size: o.ModalSize.DYNAMIC,
                 transitionState: t,
-                className: s()(h.uploadModal),
+                className: a()(h.uploadModal),
                 children: [(0, i.jsxs)("div", {
                     className: h.inner,
                     children: [(0, i.jsxs)("div", {
-                        className: s()(h.file, {
+                        className: a()(h.file, {
                             [h.expandable]: e.isImage
                         }),
                         children: [(0, i.jsx)(p, {
@@ -151,7 +151,7 @@ function(e, t, n) {
                                     children: S.default.Messages.UPLOAD_AREA_FILENAME
                                 })
                             }), (0, i.jsx)(o.TextInput, {
-                                className: s()(h.channelTextAreaUpload, A.marginTop8),
+                                className: a()(h.channelTextAreaUpload, A.marginTop8),
                                 value: this.state.filename,
                                 onChange: e => this.setState({
                                     filename: e
@@ -166,7 +166,7 @@ function(e, t, n) {
                                         children: S.default.Messages.ATTACHMENT_MODAL_IMAGE_DESCRIPTION_LABEL
                                     })
                                 }), (0, i.jsx)(o.TextInput, {
-                                    className: s()(h.channelTextAreaUpload, A.marginTop8),
+                                    className: a()(h.channelTextAreaUpload, A.marginTop8),
                                     placeholder: S.default.Messages.ATTACHMENT_MODAL_IMAGE_DESCRIPTION_PLACEHOLDER,
                                     value: this.state.description,
                                     onChange: e => this.setState({
@@ -176,7 +176,7 @@ function(e, t, n) {
                                         if (e.which === f.KeyboardKeys.ENTER) return this.handleSubmit()
                                     }
                                 })]
-                            }) : null, !0 !== a && (0, i.jsx)(o.Checkbox, {
+                            }) : null, !0 !== s && (0, i.jsx)(o.Checkbox, {
                                 className: A.marginBottom20,
                                 value: l,
                                 onChange: (e, t) => this.setState({
@@ -192,7 +192,7 @@ function(e, t, n) {
                 }), (0, i.jsx)("div", {
                     className: h.footer,
                     children: (0, i.jsxs)("div", {
-                        className: s()(h.hasSpoilers, h.footerRightAlign),
+                        className: a()(h.hasSpoilers, h.footerRightAlign),
                         children: [(0, i.jsx)(o.Button, {
                             type: "button",
                             look: o.Button.Looks.LINK,
@@ -213,7 +213,7 @@ function(e, t, n) {
             })
         }
         constructor(e) {
-            var t, n, i, r, a, s;
+            var t, n, i, r, s, a;
             super(e), m(this, "cancelAll", () => {
                 l.default.clearAll(this.props.channelId, this.props.draftType), this.props.onClose()
             }), m(this, "cancel", () => {
@@ -231,13 +231,13 @@ function(e, t, n) {
                 } = this.props, {
                     filename: i,
                     description: r,
-                    hasSpoiler: a
+                    hasSpoiler: s
                 } = this.state;
                 n({
                     upload: e,
                     name: i,
                     description: r,
-                    spoiler: a
+                    spoiler: s
                 }), t()
             });
             let o = e.ignoreDraft ? "" : c.default.getDraft(this.props.channelId, e.draftType);
@@ -245,9 +245,9 @@ function(e, t, n) {
                 ...(0, d.createState)(o),
                 textFocused: !0,
                 hasSpoiler: null !== (r = null === (t = e.upload) || void 0 === t ? void 0 : t.spoiler) && void 0 !== r && r,
-                filename: null !== (a = null === (n = e.upload) || void 0 === n ? void 0 : n.filename) && void 0 !== a ? a : "",
+                filename: null !== (s = null === (n = e.upload) || void 0 === n ? void 0 : n.filename) && void 0 !== s ? s : "",
                 contentWarningProps: null,
-                description: null !== (s = null === (i = e.upload) || void 0 === i ? void 0 : i.description) && void 0 !== s ? s : ""
+                description: null !== (a = null === (i = e.upload) || void 0 === i ? void 0 : i.description) && void 0 !== a ? a : ""
             }
         }
     }

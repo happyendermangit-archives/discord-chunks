@@ -26,9 +26,9 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        a = n.n(r),
-        s = n("392711"),
-        o = n.n(s),
+        s = n.n(r),
+        a = n("392711"),
+        o = n.n(a),
         l = n("481060"),
         u = n("930153"),
         d = n("275759"),
@@ -40,14 +40,14 @@ function(e, t, n) {
         var t;
         let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
             r = [],
-            a = Number(null !== (t = e[_.MetadataFields.REDDIT_TOTAL_KARMA]) && void 0 !== t ? t : -1),
-            s = "1" === e[_.MetadataFields.REDDIT_GOLD],
+            s = Number(null !== (t = e[_.MetadataFields.REDDIT_TOTAL_KARMA]) && void 0 !== t ? t : -1),
+            a = "1" === e[_.MetadataFields.REDDIT_GOLD],
             o = "1" === e[_.MetadataFields.REDDIT_MOD];
-        return a > -1 && r.push((0, i.jsx)(N, {
+        return s > -1 && r.push((0, i.jsx)(N, {
             className: n,
-            count: a,
+            count: s,
             label: c.default.Messages.CONNECTIONS_PROFILE_REDDIT_KARMA
-        }, _.MetadataFields.REDDIT_TOTAL_KARMA)), s && r.push((0, i.jsx)(R, {
+        }, _.MetadataFields.REDDIT_TOTAL_KARMA)), a && r.push((0, i.jsx)(R, {
             className: n,
             label: c.default.Messages.CONNECTIONS_REDDIT_GOLD
         }, _.MetadataFields.REDDIT_GOLD)), o && r.push((0, i.jsx)(R, {
@@ -59,40 +59,40 @@ function(e, t, n) {
     function T(e) {
         var t, n;
         let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
-            a = [],
-            s = Number(null !== (t = e[_.MetadataFields.TWITTER_STATUSES_COUNT]) && void 0 !== t ? t : -1),
+            s = [],
+            a = Number(null !== (t = e[_.MetadataFields.TWITTER_STATUSES_COUNT]) && void 0 !== t ? t : -1),
             o = Number(null !== (n = e[_.MetadataFields.TWITTER_FOLLOWERS_COUNT]) && void 0 !== n ? n : -1);
-        return s > -1 && a.push((0, i.jsx)(N, {
+        return a > -1 && s.push((0, i.jsx)(N, {
             className: r,
-            count: s,
+            count: a,
             label: c.default.Messages.CONNECTIONS_PROFILE_TWITTER_STATUSES
-        }, _.MetadataFields.TWITTER_STATUSES_COUNT)), o > -1 && a.push((0, i.jsx)(N, {
+        }, _.MetadataFields.TWITTER_STATUSES_COUNT)), o > -1 && s.push((0, i.jsx)(N, {
             className: r,
             count: o,
             label: c.default.Messages.CONNECTIONS_PROFILE_TWITTER_FOLLOWERS
-        }, _.MetadataFields.TWITTER_FOLLOWERS_COUNT)), a
+        }, _.MetadataFields.TWITTER_FOLLOWERS_COUNT)), s
     }
 
     function f(e) {
-        var t, r, a;
-        let s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
+        var t, r, s;
+        let a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
             o = [],
             l = Number(null !== (t = e[_.MetadataFields.STEAM_GAME_COUNT]) && void 0 !== t ? t : -1),
             u = Number(null !== (r = e[_.MetadataFields.STEAM_ITEM_COUNT_DOTA2]) && void 0 !== r ? r : -1),
-            d = Number(null !== (a = e[_.MetadataFields.STEAM_ITEM_COUNT_TF2]) && void 0 !== a ? a : -1);
+            d = Number(null !== (s = e[_.MetadataFields.STEAM_ITEM_COUNT_TF2]) && void 0 !== s ? s : -1);
         return l > -1 && o.push((0, i.jsx)(N, {
-            className: s,
+            className: a,
             count: l,
             label: c.default.Messages.CONNECTIONS_PROFILE_STEAM_GAMES
         }, _.MetadataFields.STEAM_GAME_COUNT)), u > -1 && o.push((0, i.jsx)(O, {
-            className: s,
+            className: a,
             label: c.default.Messages.CONNECTIONS_STEAM_ITEMS.format({
                 count: u
             }),
             imageSrc: n("448238"),
             imageAlt: c.default.Messages.CONNECTIONS_STEAM_DOTA2
         }, _.MetadataFields.STEAM_ITEM_COUNT_DOTA2)), d > -1 && o.push((0, i.jsx)(O, {
-            className: s,
+            className: a,
             label: c.default.Messages.CONNECTIONS_STEAM_ITEMS.format({
                 count: d
             }),
@@ -105,7 +105,7 @@ function(e, t, n) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
             n = [];
         return "1" === e[_.MetadataFields.PAYPAL_VERIFIED] && n.push((0, i.jsx)(R, {
-            className: a()(t, E.paypalVerifiedTag),
+            className: s()(t, E.paypalVerifiedTag),
             label: c.default.Messages.CONNECTIONS_PAYPAL_VERIFIED
         }, _.MetadataFields.PAYPAL_VERIFIED)), n
     }
@@ -114,14 +114,14 @@ function(e, t, n) {
         var t;
         let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
             r = [],
-            a = Number(null !== (t = e[_.MetadataFields.EBAY_POSITIVE_FEEDBACK_PERCENTAGE]) && void 0 !== t ? t : -1),
-            s = "1" === e[_.MetadataFields.EBAY_TOP_RATED_SELLER];
-        return a > 0 && r.push((0, i.jsx)(N, {
+            s = Number(null !== (t = e[_.MetadataFields.EBAY_POSITIVE_FEEDBACK_PERCENTAGE]) && void 0 !== t ? t : -1),
+            a = "1" === e[_.MetadataFields.EBAY_TOP_RATED_SELLER];
+        return s > 0 && r.push((0, i.jsx)(N, {
             className: n,
-            count: a,
+            count: s,
             label: c.default.Messages.CONNECTIONS_PROFILE_EBAY_POSITIVE_FEEDBACK_PERCENTAGE,
             percent: !0
-        }, _.MetadataFields.EBAY_POSITIVE_FEEDBACK_PERCENTAGE)), s && r.push((0, i.jsx)(R, {
+        }, _.MetadataFields.EBAY_POSITIVE_FEEDBACK_PERCENTAGE)), a && r.push((0, i.jsx)(R, {
             className: n,
             label: c.default.Messages.CONNECTIONS_EBAY_TOP_RATED_SELLER
         }, _.MetadataFields.EBAY_TOP_RATED_SELLER)), r
@@ -129,51 +129,51 @@ function(e, t, n) {
 
     function A(e) {
         var t, n, r;
-        let a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
-            s = [],
+        let s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
+            a = [],
             o = "1" === e[_.MetadataFields.TIKTOK_VERIFIED],
             l = Number(null !== (t = e[_.MetadataFields.TIKTOK_FOLLOWER_COUNT]) && void 0 !== t ? t : -1),
             u = Number(null !== (n = e[_.MetadataFields.TIKTOK_FOLLOWING_COUNT]) && void 0 !== n ? n : -1),
             d = Number(null !== (r = e[_.MetadataFields.TIKTOK_LIKES_COUNT]) && void 0 !== r ? r : -1);
-        return l > -1 && s.push((0, i.jsx)(N, {
-            className: a,
+        return l > -1 && a.push((0, i.jsx)(N, {
+            className: s,
             count: l,
             label: c.default.Messages.CONNECTIONS_PROFILE_TIKTOK_FOLLOWERS
-        }, _.MetadataFields.TIKTOK_FOLLOWER_COUNT)), u > -1 && s.push((0, i.jsx)(N, {
-            className: a,
+        }, _.MetadataFields.TIKTOK_FOLLOWER_COUNT)), u > -1 && a.push((0, i.jsx)(N, {
+            className: s,
             count: u,
             label: c.default.Messages.CONNECTIONS_PROFILE_TIKTOK_FOLLOWING
-        }, _.MetadataFields.TIKTOK_FOLLOWING_COUNT)), d > -1 && s.push((0, i.jsx)(N, {
-            className: a,
+        }, _.MetadataFields.TIKTOK_FOLLOWING_COUNT)), d > -1 && a.push((0, i.jsx)(N, {
+            className: s,
             count: d,
             label: c.default.Messages.CONNECTIONS_PROFILE_TIKTOK_LIKES
-        }, _.MetadataFields.TIKTOK_LIKES_COUNT)), o && s.push((0, i.jsx)(R, {
-            className: a,
+        }, _.MetadataFields.TIKTOK_LIKES_COUNT)), o && a.push((0, i.jsx)(R, {
+            className: s,
             label: c.default.Messages.CONNECTIONS_TIKTOK_VERIFIED
-        }, _.MetadataFields.TIKTOK_VERIFIED)), s
+        }, _.MetadataFields.TIKTOK_VERIFIED)), a
     }
 
     function m(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : void 0,
             r = [],
-            a = Object.keys(e.metadata);
-        if (null == e.application_metadata || 0 === Object.keys(e.application_metadata).length || 0 === a.length) return r;
-        for (let s of o().sortBy(a, t => {
+            s = Object.keys(e.metadata);
+        if (null == e.application_metadata || 0 === Object.keys(e.application_metadata).length || 0 === s.length) return r;
+        for (let a of o().sortBy(s, t => {
                 var n, i;
                 return null === (i = e.application_metadata) || void 0 === i ? void 0 : null === (n = i[t]) || void 0 === n ? void 0 : n.name
             })) {
-            let a = e.application_metadata[s];
-            if (null == a) continue;
-            let o = e.metadata[s];
+            let s = e.application_metadata[a];
+            if (null == s) continue;
+            let o = e.metadata[a];
             try {
-                switch (a.type) {
+                switch (s.type) {
                     case _.MetadataItemTypes.BOOLEAN_EQUAL:
                     case _.MetadataItemTypes.BOOLEAN_NOT_EQUAL:
-                        (a.type === _.MetadataItemTypes.BOOLEAN_EQUAL && "1" === o || a.type === _.MetadataItemTypes.BOOLEAN_NOT_EQUAL && "1" !== o) && r.push((0, i.jsx)(R, {
+                        (s.type === _.MetadataItemTypes.BOOLEAN_EQUAL && "1" === o || s.type === _.MetadataItemTypes.BOOLEAN_NOT_EQUAL && "1" !== o) && r.push((0, i.jsx)(R, {
                             className: t,
-                            label: a.name
-                        }, a.key));
+                            label: s.name
+                        }, s.key));
                         break;
                     case _.MetadataItemTypes.DATETIME_GREATER_THAN_EQUAL:
                     case _.MetadataItemTypes.DATETIME_LESS_THAN_EQUAL:
@@ -181,8 +181,8 @@ function(e, t, n) {
                             className: t,
                             date: o,
                             locale: n,
-                            label: a.name
-                        }, a.key));
+                            label: s.name
+                        }, s.key));
                         break;
                     case _.MetadataItemTypes.INTEGER_EQUAL:
                     case _.MetadataItemTypes.INTEGER_NOT_EQUAL:
@@ -191,8 +191,8 @@ function(e, t, n) {
                         r.push((0, i.jsx)(N, {
                             className: t,
                             count: Number(o),
-                            label: a.name
-                        }, a.key))
+                            label: s.name
+                        }, s.key))
                 }
             } catch (e) {}
         }
@@ -203,7 +203,7 @@ function(e, t, n) {
         let t, {
                 count: n,
                 label: r,
-                className: s,
+                className: a,
                 percent: o
             } = e,
             d = (0, u.shortenAndLocalizeNumber)(n) + (o ? "%" : "");
@@ -213,7 +213,7 @@ function(e, t, n) {
         }) : r.format({
             value: d
         }), (0, i.jsx)(l.Text, {
-            className: a()(E.connectedAccountVanityMetadata, s),
+            className: s()(E.connectedAccountVanityMetadata, a),
             variant: "text-xs/normal",
             color: "interactive-active",
             children: t
@@ -225,10 +225,10 @@ function(e, t, n) {
             date: t,
             locale: n,
             label: r,
-            className: s
+            className: a
         } = e;
         return (0, i.jsx)(l.Text, {
-            className: a()(E.connectedAccountVanityMetadata, s),
+            className: s()(E.connectedAccountVanityMetadata, a),
             variant: "text-xs/normal",
             color: "interactive-active",
             children: c.default.Messages.CONNECTIONS_PROFILE_GENERIC_VANITY_METRIC.format({
@@ -243,10 +243,10 @@ function(e, t, n) {
             label: t,
             imageSrc: n,
             imageAlt: r,
-            className: s
+            className: a
         } = e;
         return (0, i.jsxs)("div", {
-            className: a()(E.connectedAccountVanityMetadata, E.connectedAccountVanityMetadataItem, s),
+            className: s()(E.connectedAccountVanityMetadata, E.connectedAccountVanityMetadataItem, a),
             children: [(0, i.jsx)(l.Tooltip, {
                 text: r,
                 children: e => (0, i.jsx)("img", {
@@ -271,7 +271,7 @@ function(e, t, n) {
         return (0, i.jsx)(l.Text, {
             variant: "text-xs/semibold",
             color: "interactive-active",
-            className: a()(E.connectedAccountVanityMetadata, E.connectedAccountVanityMetadataTag, n),
+            className: s()(E.connectedAccountVanityMetadata, E.connectedAccountVanityMetadataTag, n),
             children: t
         })
     }

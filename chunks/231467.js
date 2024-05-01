@@ -10,8 +10,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("481060"),
         l = n("442837"),
         u = n("835473"),
@@ -37,15 +37,15 @@ function(e, t, n) {
         } = e, {
             wildcardDescriptors: n,
             branding: {
-                primaryColor: a
+                primaryColor: s
             }
-        } = t, s = n.filter(e => e !== p.EMPTY_WILDCARD).join(", "), l = (0, _.useColorIsLowContrastAgainstClientBackground)(a), u = r.useRef(null), [d, c] = r.useState(!1);
+        } = t, a = n.filter(e => e !== p.EMPTY_WILDCARD).join(", "), l = (0, _.useColorIsLowContrastAgainstClientBackground)(s), u = r.useRef(null), [d, c] = r.useState(!1);
         if (r.useEffect(() => {
                 let e = u.current;
                 null != e && null != e.offsetWidth && null != e.scrollWidth && c(e.offsetWidth < e.scrollWidth)
-            }, []), 0 === s.length) return null;
+            }, []), 0 === a.length) return null;
         let E = {
-            color: l ? "var(--text-normal)" : a
+            color: l ? "var(--text-normal)" : s
         };
         return (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(o.Text, {
@@ -54,7 +54,7 @@ function(e, t, n) {
                 className: R.clanInfoItem,
                 children: "\xb7"
             }), (0, i.jsx)(o.Tooltip, {
-                text: s,
+                text: a,
                 color: o.Tooltip.Colors.PRIMARY,
                 shouldShow: d,
                 children: e => (0, i.jsx)("span", {
@@ -62,7 +62,7 @@ function(e, t, n) {
                     style: E,
                     className: R.wildCardText,
                     ref: u,
-                    children: s
+                    children: a
                 })
             })]
         })
@@ -74,7 +74,7 @@ function(e, t, n) {
             isHighlighted: n
         } = e;
         return (0, i.jsx)("div", {
-            className: s()(R.trait, {
+            className: a()(R.trait, {
                 [R.highlightedTrait]: n
             }),
             children: (0, i.jsx)(o.Text, {
@@ -90,19 +90,19 @@ function(e, t, n) {
         let {
             traits: t,
             traitsToHighlight: n,
-            expanded: a
-        } = e, s = r.useMemo(() => new Set(n), [n]);
-        return a ? (0, i.jsx)("div", {
+            expanded: s
+        } = e, a = r.useMemo(() => new Set(n), [n]);
+        return s ? (0, i.jsx)("div", {
             className: R.expandedTraitsContainer,
             children: t.map(e => (0, i.jsx)(g, {
                 trait: e,
-                isHighlighted: s.has(e)
+                isHighlighted: a.has(e)
             }, e))
         }) : (0, i.jsx)(m.default, {
             items: t,
             renderItem: e => (0, i.jsx)(g, {
                 trait: e,
-                isHighlighted: s.has(e)
+                isHighlighted: a.has(e)
             }, e),
             renderOverflow: e => (0, i.jsx)(o.Tooltip, {
                 text: (0, i.jsx)("div", {
@@ -133,16 +133,16 @@ function(e, t, n) {
     function v(e) {
         let {
             games: t
-        } = e, n = t.filter(e => null != e && null != e.icon), a = n.slice(0, 3), s = r.useMemo(() => {
+        } = e, n = t.filter(e => null != e && null != e.icon), s = n.slice(0, 3), a = r.useMemo(() => {
             let e = n[3];
             if (null == e) return null;
             let t = e.getIconURL(24);
             if (null == t) return null;
             if (n.length > 4) {
                 let r = n.slice(3).map(e => e.name),
-                    a = (0, d.formatSelectionList)(r);
+                    s = (0, d.formatSelectionList)(r);
                 return (0, i.jsx)(o.Tooltip, {
-                    text: a,
+                    text: s,
                     position: "bottom",
                     children: n => (0, i.jsxs)("div", {
                         ...n,
@@ -177,7 +177,7 @@ function(e, t, n) {
             })
         }, [n]);
         return (0, i.jsxs)(i.Fragment, {
-            children: [a.map(e => {
+            children: [s.map(e => {
                 let t = e.getIconURL(24);
                 return null == t ? null : (0, i.jsx)(o.Tooltip, {
                     text: e.name,
@@ -192,7 +192,7 @@ function(e, t, n) {
                         })
                     })
                 }, e.id)
-            }), s]
+            }), a]
         })
     }
 
@@ -200,7 +200,7 @@ function(e, t, n) {
         var t, n;
         let {
             clan: r,
-            banner: a,
+            banner: s,
             expanded: l,
             affinity: d,
             isMember: _,
@@ -222,13 +222,13 @@ function(e, t, n) {
             canAnimate: !0
         })) && void 0 !== t ? t : void 0;
         return (0, i.jsxs)("div", {
-            className: s()(R.card, T),
+            className: a()(R.card, T),
             children: [(0, i.jsxs)("div", {
                 className: R.cardBrandingHeader,
                 style: {
                     background: "linear-gradient(90deg, ".concat(h, ", ").concat(m, ")")
                 },
-                children: [a, (0, i.jsx)(E.ClanBadge, {
+                children: [s, (0, i.jsx)(E.ClanBadge, {
                     width: 32,
                     height: 32,
                     className: R.clanBadge,
@@ -342,16 +342,16 @@ function(e, t, n) {
     t.default = function(e) {
         let {
             clan: t,
-            affinity: a,
-            index: s
+            affinity: s,
+            index: a
         } = e, u = (0, l.useStateFromStores)([S.default], () => S.default.getCurrentUser()), d = (0, l.useStateFromStores)([f.default], () => f.default.isMember(t.id, null == u ? void 0 : u.id), [t, u]), _ = r.useCallback(() => {
             let e = null != I.default.getRequest(t.id);
             if (h.default.track(N.AnalyticEvents.CLAN_DISCOVERY_CARD_CLICKED, {
                     guild_id: t.id,
                     is_member: d,
                     has_join_request: e,
-                    affinity: a,
-                    index: s
+                    affinity: s,
+                    index: a
                 }), d) {
                 (0, T.transitionToGuild)(t.id);
                 return
@@ -368,7 +368,7 @@ function(e, t, n) {
                     clan: t
                 })
             })
-        }, [t, d, a, s]);
+        }, [t, d, s, a]);
         return (0, i.jsx)(o.Clickable, {
             onClick: _,
             className: R.clickableCard,

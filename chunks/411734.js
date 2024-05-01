@@ -5,15 +5,15 @@ function(e, t, n) {
             return o
         },
         useFocusBlock: function() {
-            return s
+            return a
         }
     }), n("47120");
     var i = n("735250"),
         r = n("470079");
-    let a = 0;
+    let s = 0;
 
-    function s(e, t) {
-        let [n] = r.useState(() => a++), i = "".concat("data-focus-blocked", "-").concat(n);
+    function a(e, t) {
+        let [n] = r.useState(() => s++), i = "".concat("data-focus-blocked", "-").concat(n);
         r.useLayoutEffect(() => {
             if (t) {
                 let t = e.current;
@@ -46,9 +46,9 @@ function(e, t, n) {
         let {
             children: t,
             className: n,
-            enabled: a = !0
+            enabled: s = !0
         } = e, o = r.useRef(null);
-        return s(o, a), (0, i.jsx)("div", {
+        return a(o, s), (0, i.jsx)("div", {
             ref: o,
             className: n,
             children: t

@@ -2,13 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return a
         }
     });
     var i = n("848479"),
         r = n("909766");
 
-    function a(e, t, n) {
+    function s(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -16,7 +16,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    class s {
+    class a {
         getStats() {
             let e = this.cpuHistogram.getReport(),
                 t = this.memoryHistogram.getReport(),
@@ -59,7 +59,7 @@ function(e, t, n) {
             null != t && this.memoryHistogram.addSample(t)
         }
         constructor() {
-            a(this, "cpuHistogram", new r.Histogram), a(this, "memoryHistogram", new r.Histogram), a(this, "startCPU", i.default.getCumulativeCPUUsage()), a(this, "lastCPU", this.startCPU)
+            s(this, "cpuHistogram", new r.Histogram), s(this, "memoryHistogram", new r.Histogram), s(this, "startCPU", i.default.getCumulativeCPUUsage()), s(this, "lastCPU", this.startCPU)
         }
     }
 }

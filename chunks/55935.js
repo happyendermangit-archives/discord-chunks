@@ -25,8 +25,8 @@ function(e, t, n) {
     });
     var i = n("913527"),
         r = n.n(i),
-        a = n("232551"),
-        s = n("706454");
+        s = n("232551"),
+        a = n("706454");
     let o = 864e5,
         l = Object.create(null);
 
@@ -52,15 +52,15 @@ function(e, t, n) {
         let n = T(e).locale(),
             i = "".concat(n, ":").concat(t),
             r = l[i];
-        return null == r && (r = l[i] = (0, a.default)(t)), r(f(e))
+        return null == r && (r = l[i] = (0, s.default)(t)), r(f(e))
     }
 
     function I(e) {
         let t;
         let n = r().localeData(),
             i = r()(),
-            a = d(f(e), i.toDate());
-        return a < -1 ? E(e, "L LT") : (t = a < 0 ? "lastDay" : a < 1 ? "sameDay" : a < 2 ? "nextDay" : "sameElse", E(e, n.calendar(t, T(e), i)))
+            s = d(f(e), i.toDate());
+        return s < -1 ? E(e, "L LT") : (t = s < 0 ? "lastDay" : s < 1 ? "sameDay" : s < 2 ? "nextDay" : "sameElse", E(e, n.calendar(t, T(e), i)))
     }
 
     function T(e) {
@@ -75,10 +75,10 @@ function(e, t, n) {
         let t;
         let n = r().localeData(),
             i = new Date,
-            a = d(e, i);
-        return "sameElse" == (t = a < -1 ? "sameElse" : a < 0 ? "lastDay" : a < 1 ? "sameDay" : a < 2 ? "nextDay" : "sameElse") ? E(e, "LLL") : E(e, n.calendar(t, r()(e), r()(i)))
+            s = d(e, i);
+        return "sameElse" == (t = s < -1 ? "sameElse" : s < 0 ? "lastDay" : s < 1 ? "sameDay" : s < 2 ? "nextDay" : "sameElse") ? E(e, "LLL") : E(e, n.calendar(t, r()(e), r()(i)))
     }
-    s.default.addChangeListener(() => {
+    a.default.addChangeListener(() => {
         l = Object.create(null)
     });
     let h = [{

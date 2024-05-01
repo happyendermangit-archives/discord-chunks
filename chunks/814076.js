@@ -7,11 +7,11 @@ function(e, t, n) {
     }), n("47120");
     var i = n("470079"),
         r = n("742280"),
-        a = n("442837"),
-        s = n("351402");
+        s = n("442837"),
+        a = n("351402");
 
     function o() {
-        let [e, t] = i.useState(!1), [n, o] = i.useState(!1), l = (0, a.useStateFromStores)([s.default], () => r.CountryCodesSets.EEA_COUNTRIES.has(s.default.ipCountryCodeWithFallback));
+        let [e, t] = i.useState(!1), [n, o] = i.useState(!1), l = (0, s.useStateFromStores)([a.default], () => r.CountryCodesSets.EEA_COUNTRIES.has(a.default.ipCountryCodeWithFallback));
         return {
             hasViewedPurchaseTerms: e,
             setHasViewedPurchaseTerms: t,

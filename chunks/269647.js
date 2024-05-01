@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t);
-    var i, r, a, s, o = n("442837"),
+    var i, r, s, a, o = n("442837"),
         l = n("570140"),
         u = n("314897"),
         d = n("592125"),
@@ -29,7 +29,7 @@ function(e, t, n) {
             hasPermission: f
         })
     }
-    class A extends(s = o.default.Store) {
+    class A extends(a = o.default.Store) {
         initialize() {
             this.waitFor(c.default, _.default, E.default, I.default)
         }
@@ -40,12 +40,12 @@ function(e, t, n) {
             return f
         }
     }
-    a = "PermissionVADStore", (r = "displayName") in(i = A) ? Object.defineProperty(i, r, {
-        value: a,
+    s = "PermissionVADStore", (r = "displayName") in(i = A) ? Object.defineProperty(i, r, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : i[r] = a, t.default = new A(l.default, {
+    }) : i[r] = s, t.default = new A(l.default, {
         RTC_CONNECTION_STATE: h,
         MEDIA_ENGINE_SET_AUDIO_ENABLED: h,
         AUDIO_SET_MODE: h,

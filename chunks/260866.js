@@ -14,13 +14,13 @@ function(e, t, n) {
             return c
         },
         LIST_ID_ATTRIBUTE: function() {
-            return a
+            return s
         },
         LIST_ITEM_ID_ATTRIBUTE: function() {
             return r
         },
         createListItemId: function() {
-            return s
+            return a
         },
         createSelector: function() {
             return l
@@ -39,9 +39,9 @@ function(e, t, n) {
         }
     }), n("47120");
     let r = "data-list-item-id",
-        a = "data-list-id";
+        s = "data-list-id";
 
-    function s(e, t) {
+    function a(e, t) {
         return "".concat(e).concat("___").concat(t)
     }
 
@@ -65,7 +65,7 @@ function(e, t, n) {
     function _(e, t) {
         let n = !1;
         return function() {
-            for (var i = arguments.length, r = Array(i), a = 0; a < i; a++) r[a] = arguments[a];
+            for (var i = arguments.length, r = Array(i), s = 0; s < i; s++) r[s] = arguments[s];
             !n && (e(...r), n = !0, setTimeout(() => n = !1, t))
         }
     }

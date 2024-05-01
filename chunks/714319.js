@@ -5,34 +5,34 @@ function(e, t, n) {
             return r
         },
         default: function() {
-            return s
+            return a
         }
     });
-    var i, r, a = n("536895");
+    var i, r, s = n("536895");
     (i = r || (r = {})).UPDATE_ITEM_COUNT = "UPDATE_ITEM_COUNT", i.SET_FOCUSED_INDEX = "SET_FOCUSED_INDEX";
 
-    function s(e, t) {
-        var n, i, r, s, o, l, u;
+    function a(e, t) {
+        var n, i, r, a, o, l, u;
         switch (t.type) {
-            case a.ActionType.NAVIGATE_UP:
+            case s.ActionType.NAVIGATE_UP:
                 ;
                 return i = 0, {
                     ...n = e,
                     focusedIndex: Math.max(0, n.focusedIndex - 1)
                 };
-            case a.ActionType.NAVIGATE_DOWN:
+            case s.ActionType.NAVIGATE_DOWN:
                 ;
-                return s = 0, {
+                return a = 0, {
                     ...r = e,
                     focusedIndex: Math.min(r.focusedIndex + 1, r.itemCount - 1)
                 };
-            case a.ActionType.NAVIGATE_START:
+            case s.ActionType.NAVIGATE_START:
                 ;
                 return o = 0, {
                     ...e,
                     focusedIndex: 0
                 };
-            case a.ActionType.NAVIGATE_END:
+            case s.ActionType.NAVIGATE_END:
                 ;
                 return u = 0, {
                     ...l = e,
@@ -59,7 +59,7 @@ function(e, t, n) {
                         focusedIndex: Math.max(0, Math.min(n, e.itemCount - 1))
                     }
                 }(e, t);
-            case a.ActionType.SELECT_FOCUSED_ITEM:
+            case s.ActionType.SELECT_FOCUSED_ITEM:
                 break;
             default:
                 console.warn("Listbox navigator was given an unhandled action ".concat(t.type))

@@ -3,11 +3,11 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("442837"),
         r = n("570140"),
-        a = n("147913"),
-        s = n("883429"),
+        s = n("147913"),
+        a = n("883429"),
         o = n("314897"),
         l = n("592125");
-    class u extends a.default {
+    class u extends s.default {
         handleChannelDelete(e) {
             let {
                 channel: t
@@ -26,11 +26,11 @@ function(e, t, n) {
             var t, n, i;
             let {
                 channelId: r,
-                message: a
+                message: s
             } = e, u = l.default.getChannel(r);
-            if ((null === (t = a.author) || void 0 === t ? void 0 : t.id) !== o.default.getId() || !(null == u ? void 0 : u.isActiveThread())) return;
+            if ((null === (t = s.author) || void 0 === t ? void 0 : t.id) !== o.default.getId() || !(null == u ? void 0 : u.isActiveThread())) return;
             let d = new Date(null !== (i = null === (n = u.threadMetadata) || void 0 === n ? void 0 : n.archiveTimestamp) && void 0 !== i ? i : 0).getTime();
-            Date.now() - d < 5e3 && s.default.resort(u.parent_id)
+            Date.now() - d < 5e3 && a.default.resort(u.parent_id)
         }
         constructor(...e) {
             var t, n, i;

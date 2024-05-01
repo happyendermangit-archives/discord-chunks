@@ -5,7 +5,7 @@ function(e, t, n) {
             return u
         }
     }), n("47120");
-    var i, r, a, s, o = n("442837"),
+    var i, r, s, a, o = n("442837"),
         l = n("570140");
     let u = {
             enabled: !1
@@ -73,12 +73,12 @@ function(e, t, n) {
             return null == e || null == t ? null : null !== (r = null === (i = _[e]) || void 0 === i ? void 0 : null === (n = i.newMemberActions) || void 0 === n ? void 0 : n.find(e => e.channelId === t)) && void 0 !== r ? r : null
         }
     }
-    s = "GuildOnboardingHomeSettingsStore", (a = "displayName") in(r = f) ? Object.defineProperty(r, a, {
-        value: s,
+    a = "GuildOnboardingHomeSettingsStore", (s = "displayName") in(r = f) ? Object.defineProperty(r, s, {
+        value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[a] = s, t.default = new f(l.default, {
+    }) : r[s] = a, t.default = new f(l.default, {
         GUILD_HOME_SETTINGS_FETCH_START: function(e) {
             let {
                 guildId: t
@@ -109,8 +109,8 @@ function(e, t, n) {
             } = e, r = _[n];
             if (null == r) return !1;
             r.resourceChannels = null !== (t = r.resourceChannels) && void 0 !== t ? t : [];
-            let a = r.resourceChannels.findIndex(e => e.channelId === i.channelId);
-            return -1 !== a && (r.resourceChannels[a] = {
+            let s = r.resourceChannels.findIndex(e => e.channelId === i.channelId);
+            return -1 !== s && (r.resourceChannels[s] = {
                 ...i
             }, !0)
         },
@@ -122,8 +122,8 @@ function(e, t, n) {
             } = e, r = _[n];
             if (null == r) return !1;
             r.newMemberActions = null !== (t = r.newMemberActions) && void 0 !== t ? t : [];
-            let a = r.newMemberActions.findIndex(e => e.channelId === i.channelId);
-            return -1 !== a && (r.newMemberActions[a] = {
+            let s = r.newMemberActions.findIndex(e => e.channelId === i.channelId);
+            return -1 !== s && (r.newMemberActions[s] = {
                 ...i
             }, !0)
         },

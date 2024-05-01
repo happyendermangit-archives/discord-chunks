@@ -8,9 +8,9 @@ function(e, t, n) {
             return _
         }
     }), n("653041"), n("47120"), n("411104");
-    var i, r, a = n("536895");
+    var i, r, s = n("536895");
 
-    function s(e, t) {
+    function a(e, t) {
         return e.findIndex(e => t === e.key)
     }
 
@@ -22,7 +22,7 @@ function(e, t, n) {
         let t = e.items;
         for (let n = 0; n < e.focusPath.length - 1; n++) {
             if (null == t) return;
-            let i = s(t, e.focusPath[n]);
+            let i = a(t, e.focusPath[n]);
             t = t[i].children
         }
         return t
@@ -33,13 +33,13 @@ function(e, t, n) {
             i = [];
         for (let e = 0; e < t.length && null != n; e++) {
             let r = t[e],
-                a = s(n, r);
-            if (a < 0 || a >= n.length) {
+                s = a(n, r);
+            if (s < 0 || s >= n.length) {
                 let e = n[0];
                 null != e && i.push(e.key);
                 break
             }
-            i.push(r), n = n[a].children
+            i.push(r), n = n[s].children
         }
         return i
     }(r = i || (i = {})).UPDATE_ITEMS = "UPDATE_ITEMS", r.SET_FOCUS_PATH = "SET_FOCUS_PATH";
@@ -47,51 +47,51 @@ function(e, t, n) {
     function d(e) {
         let t = o(e),
             n = l(e);
-        return null == n ? -1 : s(n, t)
+        return null == n ? -1 : a(n, t)
     }
 
     function _(e, t) {
         switch (t.type) {
-            case a.ActionType.NAVIGATE_UP:
+            case s.ActionType.NAVIGATE_UP:
                 return function(e, t) {
                     let n = o(e),
                         i = l(e);
                     if (null == i) return e;
-                    let r = (s(i, n) - 1) % i.length;
+                    let r = (a(i, n) - 1) % i.length;
                     if (r < 0 && (r = i.length - 1), null == i[r]) return e;
-                    let a = {
+                    let s = {
                         ...e,
                         focusPath: [...e.focusPath.slice(0, -1), i[r].key]
                     };
                     return {
-                        ...a,
-                        focusIndex: d(a)
+                        ...s,
+                        focusIndex: d(s)
                     }
                 }(e, 0);
-            case a.ActionType.NAVIGATE_DOWN:
+            case s.ActionType.NAVIGATE_DOWN:
                 return function(e, t) {
                     let n = o(e),
                         i = l(e);
                     if (null == i) return e;
-                    let r = (s(i, n) + 1) % i.length;
+                    let r = (a(i, n) + 1) % i.length;
                     if (null == i[r]) return e;
-                    let a = {
+                    let s = {
                         ...e,
                         focusPath: [...e.focusPath.slice(0, -1), i[r].key]
                     };
                     return {
-                        ...a,
-                        focusIndex: d(a)
+                        ...s,
+                        focusIndex: d(s)
                     }
                 }(e, 0);
-            case a.ActionType.NAVIGATE_IN:
+            case s.ActionType.NAVIGATE_IN:
                 return function(e, t) {
                     var n;
                     let i = o(e),
                         r = l(e);
                     if (null == r) return e;
-                    let a = r[s(r, i)],
-                        u = null == a ? void 0 : null === (n = a.children) || void 0 === n ? void 0 : n[0];
+                    let s = r[a(r, i)],
+                        u = null == s ? void 0 : null === (n = s.children) || void 0 === n ? void 0 : n[0];
                     if (null == u) return e;
                     let _ = {
                         ...e,
@@ -102,7 +102,7 @@ function(e, t, n) {
                         focusIndex: d(_)
                     }
                 }(e, 0);
-            case a.ActionType.NAVIGATE_OUT:
+            case s.ActionType.NAVIGATE_OUT:
                 return function(e, t) {
                     if (e.focusPath.length <= 1) return e;
                     let n = {
@@ -141,7 +141,7 @@ function(e, t, n) {
                         focusIndex: d(i)
                     }
                 }(e, t);
-            case a.ActionType.SELECT_FOCUSED_ITEM:
+            case s.ActionType.SELECT_FOCUSED_ITEM:
                 break;
             default:
                 throw Error("Menu navigator was given an unhandled action ".concat(t.type))

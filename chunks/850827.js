@@ -4,9 +4,9 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        a = n.n(r),
-        s = n("512722"),
-        o = n.n(s),
+        s = n.n(r),
+        a = n("512722"),
+        o = n.n(a),
         l = n("374470"),
         u = n("442837"),
         d = n("481060"),
@@ -37,7 +37,7 @@ function(e, t, n) {
         let t, {
                 activity: n,
                 user: r,
-                applicationStream: s,
+                applicationStream: a,
                 className: _,
                 guildId: b,
                 channelId: G,
@@ -54,7 +54,7 @@ function(e, t, n) {
                 return o()(null != e, "UserActivityActions: currentUser cannot be undefined"), e
             }),
             j = V === h.Types.PROFILE || V === h.Types.PROFILE_V2 || V === h.Types.SIMPLIFIED_PROFILE,
-            W = V === h.Types.STREAM_PREVIEW || null != s,
+            W = V === h.Types.STREAM_PREVIEW || null != a,
             K = V === h.Types.SIMPLIFIED_PROFILE || V === h.Types.BITE_SIZE_POPOUT,
             z = (0, A.default)(n),
             Z = (0, E.isStageActivity)(n),
@@ -85,7 +85,7 @@ function(e, t, n) {
                     channelId: G,
                     source: w
                 }, "spotify-activity-sync-button"),
-                a = (0, i.jsx)(v.default, {
+                s = (0, i.jsx)(v.default, {
                     activity: n,
                     user: r,
                     color: B,
@@ -94,7 +94,7 @@ function(e, t, n) {
                     channelId: G,
                     source: w
                 }, "spotify-activity-play-button");
-            t = K ? [e, a] : [a, e]
+            t = K ? [e, s] : [s, e]
         } else if (Z) {
             let e = (0, E.unpackStageChannelParty)(n);
             null != e && (t = [(0, i.jsx)(g.default, {
@@ -108,7 +108,7 @@ function(e, t, n) {
             isCurrentUser: Y.id === r.id,
             color: B,
             look: k,
-            applicationStream: s
+            applicationStream: a
         }, "watch-button")];
         else if (q && null != J) t = [(0, i.jsx)(C.default, {
             color: B,
@@ -121,7 +121,7 @@ function(e, t, n) {
                     color: B,
                     look: k
                 }, "watch-button"),
-                a = (0, i.jsx)(R.default, {
+                s = (0, i.jsx)(R.default, {
                     activity: n,
                     currentEmbeddedApplication: H,
                     user: r,
@@ -130,7 +130,7 @@ function(e, t, n) {
                     look: k,
                     isEmbedded: F
                 }, "join-activity-button"),
-                s = (0, i.jsx)(L.default, {
+                a = (0, i.jsx)(L.default, {
                     activity: n,
                     user: r,
                     color: B,
@@ -142,8 +142,8 @@ function(e, t, n) {
                     look: k,
                     activity: n
                 }, "custom-activity-button");
-            if (null == a && null == s && null == e && null == o) return null;
-            t = [a, s, e, o]
+            if (null == s && null == a && null == e && null == o) return null;
+            t = [s, a, e, o]
         }
         let $ = Q === S.default.Direction.VERTICAL;
         return (0, i.jsx)(S.default, {
@@ -151,7 +151,7 @@ function(e, t, n) {
             align: X,
             direction: Q,
             wrap: $ ? S.default.Wrap.WRAP : S.default.Wrap.NO_WRAP,
-            className: a()(_, U.buttonsWrapper, $ ? U.vertical : U.horizontal),
+            className: s()(_, U.buttonsWrapper, $ ? U.vertical : U.horizontal),
             onClick: function(e) {
                 (0, l.isElement)(e.target) && "BUTTON" === e.target.nodeName && (null == x || x())
             },

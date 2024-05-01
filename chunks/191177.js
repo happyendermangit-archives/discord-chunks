@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         setShowPremiumUpsell: function() {
-            return s
+            return a
         },
         useStickerPickerUpsellStore: function() {
             return o
@@ -12,11 +12,11 @@ function(e, t, n) {
     let r = Object.freeze({
             showPremiumUpsell: !1
         }),
-        a = (0, i.default)(e => r),
-        s = e => {
-            a.setState({
+        s = (0, i.default)(e => r),
+        a = e => {
+            s.setState({
                 showPremiumUpsell: e
             })
         },
-        o = a
+        o = s
 }

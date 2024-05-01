@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("331595"),
-        a = n("249849");
-    let s = ["#ff1b90", "#ff7fc0", "#f0f0f0"],
+        s = n("249849");
+    let a = ["#ff1b90", "#ff7fc0", "#f0f0f0"],
         o = [.2, .52, 1],
         l = [{
             base: 3,
@@ -29,8 +29,8 @@ function(e, t, n) {
                 ...d
             } = e, {
                 primaryColorsTransformed: _
-            } = (0, a.getTransformedBadgeColors)({
-                primaryBaseColors: s,
+            } = (0, s.getTransformedBadgeColors)({
+                primaryBaseColors: a,
                 primaryTintColor: u,
                 primaryTintLuminances: o,
                 primaryLuminanceWeights: l

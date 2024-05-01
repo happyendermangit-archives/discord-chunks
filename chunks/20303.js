@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("47120"), n("757143");
-    var i, r, a, s, o, l = n("442837"),
+    var i, r, s, a, o, l = n("442837"),
         u = n("433517"),
         d = n("570140"),
         _ = n("591759"),
@@ -51,12 +51,12 @@ function(e, t, n) {
             return A(e)
         }
     }
-    o = "MaskedLinkStore", (s = "displayName") in(a = m) ? Object.defineProperty(a, s, {
+    o = "MaskedLinkStore", (a = "displayName") in(s = m) ? Object.defineProperty(s, a, {
         value: o,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : a[s] = o, t.default = new m(d.default, {
+    }) : s[a] = o, t.default = new m(d.default, {
         MASKED_LINK_ADD_TRUSTED_DOMAIN: function(e) {
             let {
                 url: t

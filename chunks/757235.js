@@ -10,8 +10,8 @@ function(e, t, n) {
     }), n("47120"), n("653041");
     var i = n("544891"),
         r = n("570140"),
-        a = n("346479"),
-        s = n("306680"),
+        s = n("346479"),
+        a = n("306680"),
         o = n("480739"),
         l = n("626135"),
         u = n("823379"),
@@ -59,28 +59,28 @@ function(e, t, n) {
                 let t = this.guildId,
                     n = this.loadId,
                     r = this.trackedFeedItems,
-                    a = this.homeSessionId,
-                    s = this.feedItemSnapshots;
-                if (null == n || null == a) return;
+                    s = this.homeSessionId,
+                    a = this.feedItemSnapshots;
+                if (null == n || null == s) return;
                 let o = {
                     guildId: t,
                     loadId: n,
                     trackedFeedItems: r,
-                    feedItemSnapshots: s,
+                    feedItemSnapshots: a,
                     isForcedFlush: null != e,
-                    homeSessionId: a
+                    homeSessionId: s
                 };
                 return () => (function(e) {
                     let {
                         guildId: t,
                         loadId: n,
                         homeSessionId: r,
-                        trackedFeedItems: a,
-                        feedItemSnapshots: s,
+                        trackedFeedItems: s,
+                        feedItemSnapshots: a,
                         isForcedFlush: o
                     } = e, d = {};
-                    for (let e of Object.keys(a)) {
-                        let t = a[e].computeSeenTimeDestructive(o);
+                    for (let e of Object.keys(s)) {
+                        let t = s[e].computeSeenTimeDestructive(o);
                         t > 0 && (d[e] = {
                             additionalSeenTimeMillis: t
                         })
@@ -97,7 +97,7 @@ function(e, t, n) {
                         additional_seen_time_millis: c,
                         home_session_id: r
                     });
-                    let f = T.map(e => s[e]).filter(u.isNotNullish).map(E.default).map(e => e.id);
+                    let f = T.map(e => a[e]).filter(u.isNotNullish).map(E.default).map(e => e.id);
                     return 0 === f.length ? Promise.resolve() : i.HTTP.post({
                         url: I.Endpoints.GUILD_FEED_MARK_SEEN(t),
                         body: {
@@ -120,9 +120,9 @@ function(e, t, n) {
                 let r = c.default.getItem(t, n);
                 if (null == r || !r.unreadMention || r.seen) return;
                 let o = (0, E.default)(r).channel_id;
-                await a.default.unarchiveThreadIfNecessary(o);
-                let l = s.default.getMentionCount(o),
-                    u = s.default.ackMessageId(o);
+                await s.default.unarchiveThreadIfNecessary(o);
+                let l = a.default.getMentionCount(o),
+                    u = a.default.ackMessageId(o);
                 if (null == u) return;
                 let _ = 0;
                 for (let e of (0, E.getAllMessagesFromFeedItem)(r)) e.mentioned && d.default.compare(e.id, u) > 0 && (_ += 1);

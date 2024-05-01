@@ -4,8 +4,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        a = n.n(r),
-        s = n("481060"),
+        s = n.n(r),
+        a = n("481060"),
         o = n("734023"),
         l = n("436898");
     let u = Object.freeze({
@@ -32,12 +32,12 @@ function(e, t, n) {
                 title: f,
                 uppercase: S
             } = e;
-            return (0, i.jsx)(s.H, {
+            return (0, i.jsx)(a.H, {
                 role: null != E ? "button" : void 0,
                 onClick: E,
                 onContextMenu: I,
                 id: t,
-                className: a()(r, {
+                className: s()(r, {
                     [o.base]: !0,
                     [l]: !0,
                     [o.selectable]: d,

@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("339085"),
         r = n("131704"),
-        a = n("176354"),
-        s = n("700785"),
+        s = n("176354"),
+        a = n("700785"),
         o = n("981631");
 
     function l(e, t, n) {
@@ -16,8 +16,8 @@ function(e, t, n) {
         let l = e.emoji;
         if (null == l.id || null == n || !(0, r.isGuildTextChannelType)(n.type)) return !0;
         let u = i.default.getUsableCustomEmojiById(l.id),
-            d = a.default.isInternalEmojiForGuildId(u, n.getGuildId()),
-            _ = s.can({
+            d = s.default.isInternalEmojiForGuildId(u, n.getGuildId()),
+            _ = a.can({
                 permission: o.Permissions.USE_EXTERNAL_EMOJIS,
                 user: t,
                 context: n

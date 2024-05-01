@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("757143");
     var i = n("911969"),
         r = n("10718"),
-        a = n("367790"),
-        s = n("895924"),
+        s = n("367790"),
+        a = n("895924"),
         o = n("826298"),
         l = n("695346"),
         u = n("594174"),
@@ -35,10 +35,10 @@ function(e, t, n) {
         focusMode: I.FocusMode.MANUAL,
         matches(e, t, n, i, r) {
             if (r.commands === I.CommandMode.DISABLED || r.commands === I.CommandMode.OLD_BUILT_INS || n.length < 2 || !l.ShowCommandSuggestions.getSetting()) return !1;
-            let a = S(n);
-            return null != a && a.cleanedQuery.length > 0
+            let s = S(n);
+            return null != s && s.cleanedQuery.length > 0
         },
-        queryResults(e, t, n, s, u) {
+        queryResults(e, t, n, a, u) {
             if (!l.ShowCommandSuggestions.getSetting()) return T.EMPTY_RESULTS;
             let d = S(n);
             if (null == d) return T.EMPTY_RESULTS;
@@ -52,7 +52,7 @@ function(e, t, n) {
                 }, {
                     limit: I.MAX_COMMAND_AUTOCOMPLETE_RESULTS,
                     placeholderCount: I.MAX_COMMAND_AUTOCOMPLETE_PLACEHOLDERS,
-                    scoreMethod: a.ScoreMethod.COMMAND_OR_APPLICATION,
+                    scoreMethod: s.ScoreMethod.COMMAND_OR_APPLICATION,
                     allowFetch: u
                 });
             if (null == c) return T.EMPTY_RESULTS;
@@ -79,20 +79,20 @@ function(e, t, n) {
                 selectedIndex: n,
                 guild: i,
                 channel: r,
-                query: a,
-                options: s,
+                query: s,
+                options: a,
                 onHover: o,
                 onClick: l
             } = e;
             return (0, E.renderAutocompleteGroup)({
-                query: a,
+                query: s,
                 selectedIndex: n,
                 autocompletes: t,
                 onHover: o,
                 onClick: l,
                 titleWithQuery: f.default.Messages.COMMANDS_MATCHING,
                 titleWithoutQuery: f.default.Messages.COMMANDS,
-                Component: s.commands === I.CommandMode.OLD_BUILT_INS ? d.default.Command : d.default.NewCommand,
+                Component: a.commands === I.CommandMode.OLD_BUILT_INS ? d.default.Command : d.default.NewCommand,
                 getProps: e => {
                     let {
                         command: t,
@@ -122,14 +122,14 @@ function(e, t, n) {
                 index: n,
                 type: i,
                 options: r,
-                channel: a
+                channel: s
             } = e, o = T.default.onSelect({
                 results: t,
                 index: n,
                 type: i,
                 options: r,
-                channel: a,
-                location: s.ApplicationCommandTriggerLocations.SUGGESTION
+                channel: s,
+                location: a.ApplicationCommandTriggerLocations.SUGGESTION
             });
             return null == o ? null : {
                 ...o,

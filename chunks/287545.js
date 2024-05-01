@@ -10,8 +10,8 @@ function(e, t, n) {
     }), n("653041"), n("47120");
     var i = n("512722"),
         r = n.n(i),
-        a = n("153832"),
-        s = n("544891"),
+        s = n("153832"),
+        a = n("544891"),
         o = n("570140"),
         l = n("475179"),
         u = n("317770"),
@@ -64,9 +64,9 @@ function(e, t, n) {
             channelId: t,
             applicationId: n,
             analyticsLocations: i
-        } = e, r = f.default.getChannel(t), a = null == r ? void 0 : r.getGuildId(), s = A.default.getCurrentUser();
-        if (null == r || null == s) return;
-        let o = R.default.getShelfActivities(a),
+        } = e, r = f.default.getChannel(t), s = null == r ? void 0 : r.getGuildId(), a = A.default.getCurrentUser();
+        if (null == r || null == a) return;
+        let o = R.default.getShelfActivities(s),
             l = p.default.getState().shelfOrder,
             u = 0 === R.default.getEmbeddedActivitiesForChannel(t).filter(e => e.applicationId === n).length,
             d = (0, C.default)({
@@ -79,7 +79,7 @@ function(e, t, n) {
             } = V(d),
             T = await (0, E.default)();
         k[n] = e => {
-            var t, a, o;
+            var t, s, o;
             B[n] = e, m.default.track(b.AnalyticEvents.ACTIVITY_SESSION_JOINED, {
                 channel_id: r.id,
                 guild_id: r.getGuildId(),
@@ -87,13 +87,13 @@ function(e, t, n) {
                 activity_session_id: e.activitySessionId,
                 application_id: n,
                 location_stack: i,
-                user_premium_tier: s.premiumType,
+                user_premium_tier: a.premiumType,
                 raw_thermal_state: T,
                 n_participants: c.default.getUserParticipantCount(r.id),
                 is_activity_start: u,
                 release_phase: I,
                 activity_premium_tier_requirement: null == d ? void 0 : null === (t = d.activity) || void 0 === t ? void 0 : t.premium_tier_requirement,
-                shelf_rank: null == d ? void 0 : null === (a = d.activity) || void 0 === a ? void 0 : a.shelf_rank,
+                shelf_rank: null == d ? void 0 : null === (s = d.activity) || void 0 === s ? void 0 : s.shelf_rank,
                 shelf_sorted_rank: _ > 0 ? _ : null,
                 activity_user_session_id: e.activityUserSessionId,
                 channel_type: r.type
@@ -118,11 +118,11 @@ function(e, t, n) {
         let {
             channelId: i,
             applicationId: r,
-            locationId: a,
+            locationId: s,
             instanceId: o
         } = e, l = B[r], u = f.default.getChannel(i), d = R.default.getEmbeddedActivityDurationMs(i, r), _ = A.default.getCurrentUser(), c = null == u ? void 0 : u.getGuildId(), I = T.default.getSessionId();
-        if (null != a && null != o && null != I && await s.HTTP.post({
-                url: b.Endpoints.ACTIVITY_LEAVE(r, a, o),
+        if (null != s && null != o && null != I && await a.HTTP.post({
+                url: b.Endpoints.ACTIVITY_LEAVE(r, s, o),
                 body: {
                     session_id: I
                 }
@@ -169,8 +169,8 @@ function(e, t, n) {
             embeddedActivity: n,
             connections: i,
             updateCode: r
-        } = e, a = T.default.getId(), s = i.find(e => e.user_id === a);
-        j(t, n, n.application_id, n.activity_id, null == s ? void 0 : s.user_id, r === U.EmbeddedActivityUpdateCodes.ACTIVITY_STARTED)
+        } = e, s = T.default.getId(), a = i.find(e => e.user_id === s);
+        j(t, n, n.application_id, n.activity_id, null == a ? void 0 : a.user_id, r === U.EmbeddedActivityUpdateCodes.ACTIVITY_STARTED)
     }
 
     function Y(e) {
@@ -179,21 +179,21 @@ function(e, t, n) {
             applicationId: n,
             launchId: i,
             participants: r
-        } = e, a = T.default.getId(), s = R.default.getEmbeddedActivitiesForChannel(t.channel_id).find(e => e.launchId === i), o = r.find(e => e.user_id === a);
-        null != s && j(t.channel_id, s, n, i, null == o ? void 0 : o.user_id, !1)
+        } = e, s = T.default.getId(), a = R.default.getEmbeddedActivitiesForChannel(t.channel_id).find(e => e.launchId === i), o = r.find(e => e.user_id === s);
+        null != a && j(t.channel_id, a, n, i, null == o ? void 0 : o.user_id, !1)
     }
 
-    function j(e, t, n, i, r, s) {
+    function j(e, t, n, i, r, a) {
         var o, u;
         let d = R.default.getEmbeddedActivitiesForChannel(e),
             _ = f.default.getChannel(e);
-        if (s && null !== (u = null == _ ? void 0 : _.isPrivate()) && void 0 !== u && u && d.length <= 1 && null == r && l.default.selectParticipant(e, null), null == r) return;
+        if (a && null !== (u = null == _ ? void 0 : _.isPrivate()) && void 0 !== u && u && d.length <= 1 && null == r && l.default.selectParticipant(e, null), null == r) return;
         let c = S.default.getMediaSessionId(),
             E = (0, D.default)(t),
             I = null == c && (null == _ ? void 0 : _.isVocal()) === !0 && (null == _ ? void 0 : _.isPrivate()) === !1;
         null != E && !I && (null === (o = k[n]) || void 0 === o || o.call(k, {
             activitySessionId: E,
-            activityUserSessionId: (0, a.v4)(),
+            activityUserSessionId: (0, s.v4)(),
             launchId: i,
             mediaSessionIds: null != c ? [c] : []
         }), delete k[n])
@@ -209,15 +209,15 @@ function(e, t, n) {
         if (null != n) {
             let e = R.default.getSelfEmbeddedActivityForChannel(n),
                 i = null == e ? void 0 : e.applicationId,
-                s = null == e ? void 0 : e.launchId,
+                a = null == e ? void 0 : e.launchId,
                 o = (0, D.default)(e);
-            if (null != i && null != t && null != o && null != s) {
+            if (null != i && null != t && null != o && null != a) {
                 let e = B[i],
                     n = k[i];
                 r()(null == e || null == n, "an active session and awaiting session both exist"), null == n || n({
                     activitySessionId: o,
-                    activityUserSessionId: (0, a.v4)(),
-                    launchId: s,
+                    activityUserSessionId: (0, s.v4)(),
+                    launchId: a,
                     mediaSessionIds: [t]
                 }), delete k[i]
             }
@@ -322,14 +322,14 @@ function(e, t, n) {
                 var t, n, i;
                 let r;
                 let {
-                    channelId: a,
-                    applicationId: s,
+                    channelId: s,
+                    applicationId: a,
                     analyticsLocations: o
-                } = e, l = f.default.getChannel(a);
-                if (void 0 === l || I.GUILD_VOCAL_CHANNEL_TYPES.has(null == l ? void 0 : l.type) && h.default.getVoiceChannelId() !== a) return;
-                let u = R.default.getSelfEmbeddedActivityForChannel(a);
-                if ((null == u ? void 0 : u.applicationId) === s) return;
-                let c = await d.default.fetchApplication(s);
+                } = e, l = f.default.getChannel(s);
+                if (void 0 === l || I.GUILD_VOCAL_CHANNEL_TYPES.has(null == l ? void 0 : l.type) && h.default.getVoiceChannelId() !== s) return;
+                let u = R.default.getSelfEmbeddedActivityForChannel(s);
+                if ((null == u ? void 0 : u.applicationId) === a) return;
+                let c = await d.default.fetchApplication(a);
                 if (!(0, v.getIsActivitiesEnabledForCurrentPlatform)(l)) {
                     this.showLaunchErrorModal(G.default.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS);
                     return
@@ -348,7 +348,7 @@ function(e, t, n) {
                         guildId: T
                     }),
                     m = (0, C.default)({
-                        applicationId: s,
+                        applicationId: a,
                         activityConfigs: S,
                         applications: A
                     });
@@ -358,24 +358,24 @@ function(e, t, n) {
                         force: !0
                     });
                     m = (0, C.default)({
-                        applicationId: s,
+                        applicationId: a,
                         activityConfigs: e.activityConfigs,
                         applications: e.applications
                     })
                 }
-                let N = R.default.getEmbeddedActivitiesForChannel(a).find(e => e.applicationId === s),
+                let N = R.default.getEmbeddedActivitiesForChannel(s).find(e => e.applicationId === a),
                     p = null !== (i = null == N ? void 0 : N.userIds.size) && void 0 !== i ? i : 0;
                 p > 0 ? (0, g.maybeJoinEmbeddedActivity)({
-                    channelId: a,
-                    applicationId: s,
+                    channelId: s,
+                    applicationId: a,
                     launchId: null == N ? void 0 : N.launchId,
                     inputApplication: null,
                     analyticsLocations: o,
                     embeddedActivitiesManager: this
                 }) : await (0, L.default)({
-                    targetApplicationId: s,
+                    targetApplicationId: a,
                     currentEmbeddedApplication: r,
-                    channelId: a,
+                    channelId: s,
                     guildId: T,
                     embeddedActivitiesManager: this,
                     analyticsLocations: o

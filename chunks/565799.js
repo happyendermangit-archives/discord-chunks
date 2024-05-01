@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("47120"), n("724458"), n("653041");
-    var i, r, a, s, o = n("348327"),
+    var i, r, s, a, o = n("348327"),
         l = n.n(o),
         u = n("392711"),
         d = n.n(u),
@@ -161,12 +161,12 @@ function(e, t, n) {
             return null !== (i = null === (n = b(e)) || void 0 === n ? void 0 : n.getParticipant(t)) && void 0 !== i ? i : null
         }
     }
-    s = "StageChannelParticipantStore", (a = "displayName") in(r = z) ? Object.defineProperty(r, a, {
-        value: s,
+    a = "StageChannelParticipantStore", (s = "displayName") in(r = z) ? Object.defineProperty(r, s, {
+        value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[a] = s, t.default = new z(E.default, {
+    }) : r[s] = a, t.default = new z(E.default, {
         CONNECTION_OPEN: x,
         OVERLAY_INITIALIZE: x,
         VOICE_STATE_UPDATES: function(e) {

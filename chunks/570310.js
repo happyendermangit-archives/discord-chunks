@@ -3,14 +3,14 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("147913"),
         r = n("430871"),
-        a = n("185923");
-    let s = new Set([a.EmojiInteractionPoint.EmojiButtonMouseEntered, a.EmojiInteractionPoint.ChatInputExpressionPressed, a.EmojiInteractionPoint.ChatInputSuggestionsShown, a.EmojiInteractionPoint.SearchEmojiKeybindPressed, a.EmojiInteractionPoint.AutocompleteTyped, a.EmojiInteractionPoint.GuildLeaveModalShown, a.EmojiInteractionPoint.AddReactionPopoutMouseEntered, a.EmojiInteractionPoint.AddReactionPopoutFocused, a.EmojiInteractionPoint.MessageContextMenuMouseEntered, a.EmojiInteractionPoint.AutocompleteWrapperShown]);
+        s = n("185923");
+    let a = new Set([s.EmojiInteractionPoint.EmojiButtonMouseEntered, s.EmojiInteractionPoint.ChatInputExpressionPressed, s.EmojiInteractionPoint.ChatInputSuggestionsShown, s.EmojiInteractionPoint.SearchEmojiKeybindPressed, s.EmojiInteractionPoint.AutocompleteTyped, s.EmojiInteractionPoint.GuildLeaveModalShown, s.EmojiInteractionPoint.AddReactionPopoutMouseEntered, s.EmojiInteractionPoint.AddReactionPopoutFocused, s.EmojiInteractionPoint.MessageContextMenuMouseEntered, s.EmojiInteractionPoint.AutocompleteWrapperShown]);
     class o extends i.default {
         handleInteraction(e) {
             let {
                 interaction: t
             } = e;
-            s.has(t) && (0, r.maybeGetEmojiCaptionsForUser)(t)
+            a.has(t) && (0, r.maybeGetEmojiCaptionsForUser)(t)
         }
         constructor(...e) {
             var t, n, i;

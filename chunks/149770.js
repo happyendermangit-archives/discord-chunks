@@ -3,14 +3,14 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("570140"),
         r = n("287734"),
-        a = n("147913"),
-        s = n("703656"),
+        s = n("147913"),
+        a = n("703656"),
         o = n("769654"),
         l = n("131951"),
         u = n("944486"),
         d = n("914010"),
         _ = n("981631");
-    class c extends a.default {
+    class c extends s.default {
         handleGuildCreate(e) {
             let {
                 guild: t
@@ -24,7 +24,7 @@ function(e, t, n) {
             if (t.type !== _.ChannelTypes.GROUP_DM) return;
             let n = t.originChannelId,
                 i = u.default.getChannelId(_.NULL_STRING_GUILD_ID);
-            null == d.default.getGuildId() && null != n && n === i && (0, s.transitionTo)(_.Routes.CHANNEL(_.ME, t.id)), null != n && n === u.default.getVoiceChannelId() && r.default.selectVoiceChannel(t.id, l.default.isVideoEnabled())
+            null == d.default.getGuildId() && null != n && n === i && (0, a.transitionTo)(_.Routes.CHANNEL(_.ME, t.id)), null != n && n === u.default.getVoiceChannelId() && r.default.selectVoiceChannel(t.id, l.default.isVideoEnabled())
         }
         handleLogout() {
             i.default.dispatch({

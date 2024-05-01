@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("481060"),
-        a = n("668781"),
-        s = n("355467"),
+        s = n("668781"),
+        a = n("355467"),
         o = n("821849"),
         l = n("78839"),
         u = n("626135"),
@@ -32,7 +32,7 @@ function(e, t, n) {
             applicationId: O
         } = e, R = p ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT, C = l.default.getPremiumTypeSubscription();
         if (null != C && C.isPurchasedExternally && null != C.paymentGateway) {
-            null != S && S(), a.default.show({
+            null != S && S(), s.default.show({
                 title: c.default.Messages.BILLING_MANAGED_BY_PAYMENT_GATEWAY.format({
                     paymentGatewayName: _.PaymentGatewayToFriendlyName[C.paymentGateway]
                 }),
@@ -43,7 +43,7 @@ function(e, t, n) {
             });
             return
         }
-        Promise.all([(0, s.fetchPaymentSources)(), (0, o.fetchPremiumSubscriptionPlans)()]);
+        Promise.all([(0, a.fetchPaymentSources)(), (0, o.fetchPremiumSubscriptionPlans)()]);
         await (0, r.openModalLazy)(async () => {
             let {
                 default: e
@@ -51,12 +51,12 @@ function(e, t, n) {
             return n => {
                 let {
                     transitionState: r,
-                    onClose: a
+                    onClose: s
                 } = n;
                 return (0, i.jsx)(e, {
                     transitionState: r,
                     onClose: e => {
-                        a(), null == h || h(e)
+                        s(), null == h || h(e)
                     },
                     analyticsLocations: t,
                     analyticsLocation: I,

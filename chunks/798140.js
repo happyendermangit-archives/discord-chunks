@@ -5,7 +5,7 @@ function(e, t, n) {
             return i
         },
         default: function() {
-            return a
+            return s
         },
         isTemporarilyMuted: function() {
             return r
@@ -28,7 +28,7 @@ function(e, t, n) {
         } = e;
         return !!t && null != n && null != n.end_time && new Date(n.end_time) >= new Date
     }
-    class a {
+    class s {
         reset() {
             Object.values(this.timers).forEach(e => clearTimeout(e)), this.timers = {}
         }

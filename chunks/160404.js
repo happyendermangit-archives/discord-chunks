@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("47120"), n("789020"), n("724458");
-    var i, r, a, s, o = n("442837"),
+    var i, r, s, a, o = n("442837"),
         l = n("570140"),
         u = n("430824"),
         d = n("630388"),
@@ -80,12 +80,12 @@ function(e, t, n) {
             }
         }
     }
-    s = "ImpersonateStore", (a = "displayName") in(r = f) ? Object.defineProperty(r, a, {
-        value: s,
+    a = "ImpersonateStore", (s = "displayName") in(r = f) ? Object.defineProperty(r, s, {
+        value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[a] = s, t.default = new f(l.default, {
+    }) : r[s] = a, t.default = new f(l.default, {
         IMPERSONATE_UPDATE: function(e) {
             let {
                 guildId: t,
@@ -120,12 +120,12 @@ function(e, t, n) {
             if (null == n || null == T[n]) return !1;
             let r = T[n];
             if (null == r || r.type !== c.ImpersonateType.NEW_MEMBER) return !1;
-            let a = null !== (t = r.optInChannels) && void 0 !== t ? t : new Set;
+            let s = null !== (t = r.optInChannels) && void 0 !== t ? t : new Set;
             return _.default.keys(i).forEach(e => {
                 var t;
                 let n = i[e];
-                d.hasFlag(null !== (t = n.flags) && void 0 !== t ? t : 0, I.ChannelNotificationSettingsFlags.OPT_IN_ENABLED) ? a.add(e) : a.delete(e)
-            }), r.optInChannels = a, !0
+                d.hasFlag(null !== (t = n.flags) && void 0 !== t ? t : 0, I.ChannelNotificationSettingsFlags.OPT_IN_ENABLED) ? s.add(e) : s.delete(e)
+            }), r.optInChannels = s, !0
         },
         GUILD_ONBOARDING_SELECT_OPTION: function(e) {
             var t;
@@ -133,13 +133,13 @@ function(e, t, n) {
                 guildId: n,
                 optionId: i,
                 selected: r,
-                removedOptionIds: a
+                removedOptionIds: s
             } = e;
             if (null == n || null == T[n]) return !1;
-            let s = T[n];
-            if (null == s || s.type !== c.ImpersonateType.NEW_MEMBER) return !1;
-            let o = null !== (t = s.onboardingResponses) && void 0 !== t ? t : new Set;
-            return null != a && a.length > 0 && a.forEach(e => o.delete(e)), r ? o.add(i) : o.delete(i), s.onboardingResponses = o, !0
+            let a = T[n];
+            if (null == a || a.type !== c.ImpersonateType.NEW_MEMBER) return !1;
+            let o = null !== (t = a.onboardingResponses) && void 0 !== t ? t : new Set;
+            return null != s && s.length > 0 && s.forEach(e => o.delete(e)), r ? o.add(i) : o.delete(i), a.onboardingResponses = o, !0
         },
         GUILD_MEMBER_UPDATE_LOCAL: function(e) {
             let {

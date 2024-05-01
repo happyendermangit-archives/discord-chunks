@@ -11,8 +11,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        a = n.n(r),
-        s = n("481060"),
+        s = n.n(r),
+        a = n("481060"),
         o = n("285952"),
         l = n("407620");
 
@@ -41,25 +41,25 @@ function(e, t, n) {
                 padding: 4
             },
             children: [!E && null != c && (0, i.jsx)("div", {
-                className: a()(l.art, l[d]),
+                className: s()(l.art, l[d]),
                 style: {
                     backgroundImage: "url(".concat(c, ")")
                 }
-            }), null != r ? (0, i.jsx)(s.Text, {
+            }), null != r ? (0, i.jsx)(a.Text, {
                 color: "none",
                 variant: "text-md/semibold",
                 className: l.header,
                 children: r
-            }) : null, null != u ? (0, i.jsx)(s.Text, {
+            }) : null, null != u ? (0, i.jsx)(a.Text, {
                 color: "none",
                 className: l.description,
                 variant: "text-sm/medium",
                 children: u
-            }) : null, I || null == n ? null : (0, i.jsx)(s.Button, {
+            }) : null, I || null == n ? null : (0, i.jsx)(a.Button, {
                 className: l.outerButton,
-                size: s.Button.Sizes.NONE,
-                color: s.Button.Colors.WHITE,
-                look: s.Button.Looks.BLANK,
+                size: a.Button.Sizes.NONE,
+                color: a.Button.Colors.WHITE,
+                look: a.Button.Looks.BLANK,
                 innerClassName: l.button,
                 onClick: e => {
                     e.stopPropagation(), null == t || t(e)

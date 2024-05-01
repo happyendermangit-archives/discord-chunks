@@ -40,8 +40,8 @@ function(e, t, n) {
     });
     var i = n("544891"),
         r = n("570140"),
-        a = n("881052"),
-        s = n("957730"),
+        s = n("881052"),
+        a = n("957730"),
         o = n("695346"),
         l = n("594174"),
         u = n("626135"),
@@ -59,7 +59,7 @@ function(e, t, n) {
         let _ = null === (n = l.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
         if (null == _) return;
         let c = o.UseLegacyChatInput.getSetting();
-        null != e.bio && c && (e.bio = s.default.parse(void 0, e.bio).content);
+        null != e.bio && c && (e.bio = a.default.parse(void 0, e.bio).content);
         try {
             r.default.dispatch({
                 type: "USER_PROFILE_UPDATE_START",
@@ -78,7 +78,7 @@ function(e, t, n) {
                     ...n.body
                 })
             } else {
-                let e = new a.APIError(n);
+                let e = new s.APIError(n);
                 r.default.dispatch({
                     type: "USER_PROFILE_UPDATE_FAILURE",
                     errors: n.body,
@@ -87,7 +87,7 @@ function(e, t, n) {
             }
             return n
         } catch (t) {
-            let e = new a.APIError(t);
+            let e = new s.APIError(t);
             r.default.dispatch({
                 type: "USER_PROFILE_UPDATE_FAILURE",
                 errors: {},

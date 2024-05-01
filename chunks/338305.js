@@ -8,15 +8,15 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("922770"),
-        a = n("466377"),
-        s = n("689938"),
+        s = n("466377"),
+        a = n("689938"),
         o = n("821458");
 
     function l(e) {
-        return (0, i.jsx)(a.ModalRoot, {
+        return (0, i.jsx)(s.ModalRoot, {
             ...e,
-            "aria-label": s.default.Messages.LOADING,
-            size: a.ModalSize.SMALL,
+            "aria-label": a.default.Messages.LOADING,
+            size: s.ModalSize.SMALL,
             children: (0, i.jsx)("div", {
                 className: o.spinnerContainer,
                 children: (0, i.jsx)(r.Spinner, {})

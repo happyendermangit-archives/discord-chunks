@@ -5,10 +5,10 @@ function(e, t, n) {
             return u
         },
         reportFailedSendFalsePositive: function() {
-            return s
+            return a
         },
         reportFalsePositive: function() {
-            return a
+            return s
         },
         sendMessagesForScanning: function() {
             return o
@@ -20,26 +20,26 @@ function(e, t, n) {
     var i = n("544891"),
         r = n("981631");
 
-    function a(e, t, n, a) {
+    function s(e, t, n, s) {
         return i.HTTP.post({
             url: r.Endpoints.EXPLICIT_MEDIA_REPORT_FALSE_POSITIVE,
             body: {
                 channel_id: e,
                 message_id: t,
                 attachment_ids: n,
-                embed_ids: a
+                embed_ids: s
             }
         })
     }
 
-    function s(e, t, n, a) {
+    function a(e, t, n, s) {
         return i.HTTP.post({
             url: r.Endpoints.EXPLICIT_MEDIA_SENDER_REPORT_FALSE_POSITIVE,
             body: {
                 channel_id: e,
                 message_id: t,
                 attachment_ids: n,
-                filenames: a
+                filenames: s
             }
         })
     }

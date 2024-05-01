@@ -5,9 +5,9 @@ function(e, t, n) {
             return r
         }
     });
-    var i, r, a = n("818083");
+    var i, r, s = n("818083");
     (i = r || (r = {}))[i.None = 0] = "None", i[i.DefaultOn = 1] = "DefaultOn", i[i.DefaultOff = 2] = "DefaultOff", i[i.ComingSoon = 3] = "ComingSoon", i[i.ClydeProfiles = 4] = "ClydeProfiles";
-    let s = (0, a.createExperiment)({
+    let a = (0, s.createExperiment)({
         kind: "guild",
         id: "2023-03_clyde_ai",
         label: "ClydeAI",
@@ -40,5 +40,5 @@ function(e, t, n) {
             }
         }]
     });
-    t.default = s
+    t.default = a
 }

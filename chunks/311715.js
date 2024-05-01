@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        a = n.n(r),
-        s = n("251921");
+        s = n.n(r),
+        a = n("251921");
 
     function o(e) {
         let {
@@ -17,7 +17,7 @@ function(e, t, n) {
             ...n
         } = e;
         return (0, i.jsx)("div", {
-            className: a()(s.gifTag, t),
+            className: s()(a.gifTag, t),
             ...n
         })
     }

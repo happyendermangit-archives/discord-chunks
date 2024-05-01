@@ -5,8 +5,8 @@ function(e, t, n) {
             return l
         }
     });
-    var i, r, a = n("433517"),
-        s = n("987650");
+    var i, r, s = n("433517"),
+        a = n("987650");
 
     function o(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
@@ -32,28 +32,28 @@ function(e, t, n) {
                 enabled: this.enabled,
                 legacyEnabled: this.legacyEnabled
             };
-            a.Storage.set("OverlayStore3", e)
+            s.Storage.set("OverlayStore3", e)
         }
         static load() {
             return null == l._loaded && (l._loaded = l.loadInternal()), l._loaded
         }
         static loadInternal() {
-            let e = a.Storage.get("OverlayStore");
+            let e = s.Storage.get("OverlayStore");
             if (null != e) {
-                let t = new l("boolean" == typeof e.enabled ? e.enabled : s.OVERLAY_SUPPORTED, !1);
-                return t.save(), a.Storage.remove("OverlayStore"), t
+                let t = new l("boolean" == typeof e.enabled ? e.enabled : a.OVERLAY_SUPPORTED, !1);
+                return t.save(), s.Storage.remove("OverlayStore"), t
             }
-            let t = a.Storage.get("overlayEnabled");
+            let t = s.Storage.get("overlayEnabled");
             if (null != t) {
-                let e = new l("boolean" == typeof t ? t : s.OVERLAY_SUPPORTED, !1);
-                return e.save(), a.Storage.remove("overlayEnabled"), e
+                let e = new l("boolean" == typeof t ? t : a.OVERLAY_SUPPORTED, !1);
+                return e.save(), s.Storage.remove("overlayEnabled"), e
             }
-            let n = a.Storage.get("OverlayStore3");
+            let n = s.Storage.get("OverlayStore3");
             if (null != n) {
                 var i, r;
-                return new l(null !== (i = n.enabled) && void 0 !== i ? i : s.OVERLAY_SUPPORTED, null !== (r = n.legacyEnabled) && void 0 !== r && r)
+                return new l(null !== (i = n.enabled) && void 0 !== i ? i : a.OVERLAY_SUPPORTED, null !== (r = n.legacyEnabled) && void 0 !== r && r)
             }
-            let o = new l(s.OVERLAY_SUPPORTED, !1);
+            let o = new l(a.OVERLAY_SUPPORTED, !1);
             return o.save(), o
         }
         constructor(e, t) {

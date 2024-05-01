@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("470079"),
         r = n("739940"),
-        a = n("2052"),
-        s = n("691251"),
+        s = n("2052"),
+        a = n("691251"),
         o = n("98528");
     let l = e => {
         let {
@@ -19,10 +19,10 @@ function(e, t, n) {
             gridNavigatorId: d,
             setInspectedStickerPosition: _,
             onGridItemSelect: c
-        } = e, E = (0, a.useAnalyticsContext)(), I = i.useCallback(e => {
+        } = e, E = (0, s.useAnalyticsContext)(), I = i.useCallback(e => {
             c(e, E)
         }, [c, E]), T = i.useCallback((e, t) => {
-            _(e, t, s.InspectedExpressionChangeSource.GRID_NAVIGATOR_EVENT)
+            _(e, t, a.InspectedExpressionChangeSource.GRID_NAVIGATOR_EVENT)
         }, [_]), {
             gridDispatch: f,
             getItemProps: S,
@@ -45,7 +45,7 @@ function(e, t, n) {
                 rowIndex: n,
                 source: i
             } = e;
-            i !== s.InspectedExpressionChangeSource.GRID_NAVIGATOR_EVENT && f({
+            i !== a.InspectedExpressionChangeSource.GRID_NAVIGATOR_EVENT && f({
                 type: r.GridActionType.SET_FOCUSED_POSITION,
                 x: t,
                 y: n

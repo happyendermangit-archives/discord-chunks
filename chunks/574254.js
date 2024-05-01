@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t);
-    var i, r, a, s, o = n("442837"),
+    var i, r, s, a, o = n("442837"),
         l = n("570140"),
         u = n("585483"),
         d = n("981631");
@@ -11,7 +11,7 @@ function(e, t, n) {
     function E() {
         _ = null
     }
-    class I extends(s = o.default.Store) {
+    class I extends(a = o.default.Store) {
         isOpen() {
             return null != _
         }
@@ -25,12 +25,12 @@ function(e, t, n) {
             return !!this.isOpen() && (u.ComponentDispatch.dispatch(d.ComponentActions.CONTEXT_MENU_CLOSE), !0)
         }
     }
-    a = "ContextMenuStore", (r = "displayName") in(i = I) ? Object.defineProperty(i, r, {
-        value: a,
+    s = "ContextMenuStore", (r = "displayName") in(i = I) ? Object.defineProperty(i, r, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : i[r] = a, t.default = new I(l.default, {
+    }) : i[r] = s, t.default = new I(l.default, {
         CONTEXT_MENU_OPEN: function(e) {
             let {
                 contextMenu: t

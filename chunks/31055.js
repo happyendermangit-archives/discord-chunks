@@ -2,12 +2,12 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useIsEligibleForMembersListQuestEntrypoint: function() {
-            return s
+            return a
         }
     });
     var i = n("818083"),
         r = n("977156");
-    let a = (0, i.createExperiment)({
+    let s = (0, i.createExperiment)({
             id: "2024-03_quests_members_list_entrypoint",
             kind: "user",
             label: "Quests Members List Entrypoint",
@@ -28,19 +28,19 @@ function(e, t, n) {
                 }
             }]
         }),
-        s = e => {
+        a = e => {
             let {
                 location: t,
                 autoTrackExposure: n = !1
             } = e, i = (0, r.useIsEligibleForQuests)({
                 location: t
             }), {
-                enabled: s
-            } = a.useExperiment({
+                enabled: a
+            } = s.useExperiment({
                 location: t
             }, {
                 autoTrackExposure: n
             });
-            return i && s
+            return i && a
         }
 }

@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("70780"),
         r = n("147913"),
-        a = n("710845"),
-        s = n("131951"),
+        s = n("710845"),
+        a = n("131951"),
         o = n("936349"),
         l = n("70956"),
         u = n("358085");
@@ -19,7 +19,7 @@ function(e, t, n) {
     }
     let _ = 1 * l.default.Millis.SECOND,
         c = 30 * l.default.Millis.SECOND,
-        E = new a.default("RTCLatencyTestManager");
+        E = new s.default("RTCLatencyTestManager");
     class I extends r.default {
         _terminate() {
             null != this.refetchTimeout && clearTimeout(this.refetchTimeout)
@@ -29,7 +29,7 @@ function(e, t, n) {
                 POST_CONNECTION_OPEN: () => this._handleConnectionOpen()
             }), d(this, "_handleTestRegionsResponse", e => {
                 let t = e.map(e => e.region);
-                o.default.shouldPerformLatencyTest(t) ? s.default.getMediaEngine().rankRtcRegions(e).then(e => {
+                o.default.shouldPerformLatencyTest(t) ? a.default.getMediaEngine().rankRtcRegions(e).then(e => {
                     E.verbose("RTC region latency test completed, ranked regions are: ", e), (0, i.completeRTCLatencyTest)(e, t)
                 }).catch(e => E.warn(e)) : E.verbose("RTC cached ranked preferred regions are ".concat(o.default.getPreferredRegions()))
             }), d(this, "_fetchAndScheduleRefetch", () => {

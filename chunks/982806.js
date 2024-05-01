@@ -8,8 +8,8 @@ function(e, t, n) {
         show(e) {
             let {
                 url: t,
-                trustUrl: a,
-                onConfirm: s,
+                trustUrl: s,
+                onConfirm: a,
                 isProtocol: o
             } = e;
             (0, r.openModalLazy)(async () => {
@@ -20,8 +20,8 @@ function(e, t, n) {
                     ...n,
                     url: t,
                     isProtocol: o,
-                    trustUrl: a,
-                    onConfirm: s
+                    trustUrl: s,
+                    onConfirm: a
                 })
             })
         }

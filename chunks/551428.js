@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     let i;
     n.r(t), n("47120"), n("411104");
-    var r, a, s, o, l = n("442837"),
+    var r, s, a, o, l = n("442837"),
         u = n("570140"),
         d = n("706454"),
         _ = n("156570"),
@@ -70,12 +70,12 @@ function(e, t, n) {
             return null
         }
     }
-    o = "StoreListingStore", (s = "displayName") in(a = N) ? Object.defineProperty(a, s, {
+    o = "StoreListingStore", (a = "displayName") in(s = N) ? Object.defineProperty(s, a, {
         value: o,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : a[s] = o, t.default = new N(u.default, {
+    }) : s[a] = o, t.default = new N(u.default, {
         STORE_LISTINGS_FETCH_SUCCESS: function(e) {
             let {
                 storeListings: t

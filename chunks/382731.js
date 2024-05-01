@@ -2,20 +2,20 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return a
         }
     });
     var i = n("470079"),
         r = n("699581");
-    let a = Object.freeze({
+    let s = Object.freeze({
         box: "border-box"
     });
 
-    function s(e) {
+    function a(e) {
         let {
             ref: t,
             onUpdate: n,
-            resizeObserver: s,
+            resizeObserver: a,
             listenerMap: o,
             key: l
         } = e;
@@ -27,9 +27,9 @@ function(e, t, n) {
                 (0, r.flushSync)(() => {
                     n(e, l)
                 })
-            }), s.observe(e, a)), () => {
-                null != e && (s.unobserve(e), o.delete(e))
+            }), a.observe(e, s)), () => {
+                null != e && (a.unobserve(e), o.delete(e))
             }
-        }, [n, s, t, o, l])
+        }, [n, a, t, o, l])
     }
 }

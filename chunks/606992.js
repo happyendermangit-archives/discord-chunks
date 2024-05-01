@@ -2,28 +2,28 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         useChannelAutocompleteLayerPosition: function() {
-            return s
+            return a
         }
     }), n("47120");
     var i = n("470079"),
         r = n("40851"),
-        a = n("590921");
+        s = n("590921");
 
-    function s(e) {
+    function a(e) {
         let {
             editorHeight: t,
             type: n,
-            state: s,
+            state: a,
             isInPopoutExperiment: o = !1
-        } = e, [l, u] = i.useState(void 0), d = null == s ? void 0 : s.query, _ = null == s ? void 0 : s.isVisible, {
+        } = e, [l, u] = i.useState(void 0), d = null == a ? void 0 : a.query, _ = null == a ? void 0 : a.isVisible, {
             renderWindow: c
         } = i.useContext(r.default), E = i.useCallback(() => {
             var e, t, i, r;
-            if (null != s && (null == d || !_)) {
+            if (null != a && (null == d || !_)) {
                 u(void 0);
                 return
             }
-            if ((null == d ? void 0 : d.type) === a.AutocompleteOptionTypes.GIFS || null != n && !o && !(null === (e = n.autocomplete) || void 0 === e ? void 0 : e.alwaysUseLayer)) {
+            if ((null == d ? void 0 : d.type) === s.AutocompleteOptionTypes.GIFS || null != n && !o && !(null === (e = n.autocomplete) || void 0 === e ? void 0 : e.alwaysUseLayer)) {
                 u(null);
                 return
             }
@@ -49,7 +49,7 @@ function(e, t, n) {
             f.setStart(I, T), f.setEnd(I, T);
             let S = f.getBoundingClientRect();
             (null == S ? void 0 : S.height) !== 0 && u(null != S ? S : null)
-        }, [o, c.document, s, _, d, n]);
+        }, [o, c.document, a, _, d, n]);
         return i.useEffect(() => (c.document.addEventListener("selectionchange", E), () => c.document.removeEventListener("selectionchange", E)), [c.document, E]), i.useEffect(() => {
             E()
         }, [E, t]), l

@@ -2,12 +2,12 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         Host: function() {
-            return a
+            return s
         }
     });
     var i = n("198584"),
         r = n("350167");
-    class a {
+    class s {
         static open(e, t) {
             return r.Runtime.executeAsync("database_open", n => {
                 var r;

@@ -3,28 +3,28 @@ function(e, t, n) {
     n.r(t);
     var i = n("442837"),
         r = n("570140");
-    let a = {
+    let s = {
         fetched: !1,
         affinities: []
     };
-    class s extends i.default.Store {
+    class a extends i.default.Store {
         get hasFetched() {
-            return a.fetched
+            return s.fetched
         }
         get affinities() {
-            return a.affinities
+            return s.affinities
         }
     }
-    t.default = new s(r.default, {
+    t.default = new a(r.default, {
         BILLING_NITRO_AFFINITY_FETCHED: function(e) {
             let {} = e;
-            a.fetched = !0
+            s.fetched = !0
         },
         BILLING_NITRO_AFFINITY_FETCH_SUCCEEDED: function(e) {
             let {
                 res: t
             } = e;
-            a.affinities = t
+            s.affinities = t
         }
     })
 }

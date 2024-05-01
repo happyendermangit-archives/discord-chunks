@@ -2,8 +2,8 @@ function(e, t, n) {
     "use strict";
     n.r(t), n("47120");
     var i, r = n("442837"),
-        a = n("570140"),
-        s = n("168232"),
+        s = n("570140"),
+        a = n("168232"),
         o = n("430824"),
         l = n("594174"),
         u = n("987338"),
@@ -20,7 +20,7 @@ function(e, t, n) {
     let c = "production" === d.Environments.DEVELOPMENT || window.GLOBAL_ENV.RELEASE_CHANNEL === d.Environments.STAGING;
 
     function E() {
-        c = (0, s.isStaffEnv)(l.default.getCurrentUser())
+        c = (0, a.isStaffEnv)(l.default.getCurrentUser())
     }
     class I extends(i = r.default.Store) {
         initialize() {
@@ -45,7 +45,7 @@ function(e, t, n) {
             super(...e), _(this, "isDeveloper", !1)
         }
     }
-    _(I, "displayName", "DeveloperExperimentStore"), t.default = new I(a.default, {
+    _(I, "displayName", "DeveloperExperimentStore"), t.default = new I(s.default, {
         CONNECTION_OPEN: E,
         OVERLAY_INITIALIZE: E,
         CURRENT_USER_UPDATE: E

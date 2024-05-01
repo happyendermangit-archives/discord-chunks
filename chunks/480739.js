@@ -11,7 +11,7 @@ function(e, t, n) {
             return r
         }
     }), n("653041"), n("47120");
-    var i, r, a, s, o = n("512722"),
+    var i, r, s, a, o = n("512722"),
         l = n.n(o),
         u = n("570140");
 
@@ -22,7 +22,7 @@ function(e, t, n) {
             configurable: !0,
             writable: !0
         }) : e[t] = n, e
-    }(a = i || (i = {})).GUILD_HOME = "guild_home", a.FORUM_CHANNEL = "forum_channel", (s = r || (r = {}))[s.IMMEDIATE = 0] = "IMMEDIATE", s[s.IMMEDIATE_WITH_COOLDOWN = 1] = "IMMEDIATE_WITH_COOLDOWN", s[s.IMMEDIATE_WITH_DELAY = 2] = "IMMEDIATE_WITH_DELAY";
+    }(s = i || (i = {})).GUILD_HOME = "guild_home", s.FORUM_CHANNEL = "forum_channel", (a = r || (r = {}))[a.IMMEDIATE = 0] = "IMMEDIATE", a[a.IMMEDIATE_WITH_COOLDOWN = 1] = "IMMEDIATE_WITH_COOLDOWN", a[a.IMMEDIATE_WITH_DELAY = 2] = "IMMEDIATE_WITH_DELAY";
     class _ {
         maybeMarkSeen(e) {
             let t = this.seenIntervals[this.seenIntervals.length - 1];
@@ -100,8 +100,8 @@ function(e, t, n) {
                     this._pausedFeedItemIds.add(r);
                     return
                 }
-                let a = this.getTrackedFeedItem(r).maybeMarkSeen(i);
-                null === (t = this.onFeedItemSeen) || void 0 === t || t.call(this, r, a)
+                let s = this.getTrackedFeedItem(r).maybeMarkSeen(i);
+                null === (t = this.onFeedItemSeen) || void 0 === t || t.call(this, r, s)
             }), d(this, "handleFeedItemUnseen", e => {
                 var t;
                 let n = e.id,
@@ -109,8 +109,8 @@ function(e, t, n) {
                     r = e.feedItemId;
                 if (n !== this._id) return;
                 this._paused && this._pausedFeedItemIds.delete(r);
-                let a = this.getTrackedFeedItem(r).maybeMarkUnseen(i);
-                null === (t = this.onFeedItemUnseen) || void 0 === t || t.call(this, r, a), this.maybeFlushSeenItems()
+                let s = this.getTrackedFeedItem(r).maybeMarkUnseen(i);
+                null === (t = this.onFeedItemUnseen) || void 0 === t || t.call(this, r, s), this.maybeFlushSeenItems()
             }), d(this, "getTrackedFeedItem", e => (null == this.trackedFeedItems[e] && (this.trackedFeedItems[e] = new _), this.trackedFeedItems[e])), d(this, "getVisibleFeedItemIds", () => {
                 let e = Object.keys(this.trackedFeedItems);
                 return new Set(e.filter(e => {

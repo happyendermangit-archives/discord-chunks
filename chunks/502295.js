@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return a
+            return s
         }
     });
     var i = n("470079");
@@ -16,7 +16,7 @@ function(e, t, n) {
         dirty: 0
     });
 
-    function a() {
+    function s() {
         let e = (0, i.useRef)(null),
             t = (0, i.useCallback)(() => {
                 let {
@@ -28,16 +28,16 @@ function(e, t, n) {
                         scrollLeft: n,
                         scrollHeight: i,
                         scrollWidth: r,
-                        offsetHeight: a,
-                        offsetWidth: s
+                        offsetHeight: s,
+                        offsetWidth: a
                     } = t;
                     return {
                         scrollTop: e,
                         scrollLeft: n,
                         scrollHeight: i,
                         scrollWidth: r,
-                        offsetHeight: a,
-                        offsetWidth: s,
+                        offsetHeight: s,
+                        offsetWidth: a,
                         dirty: 0
                     }
                 }

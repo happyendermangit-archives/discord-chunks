@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t);
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("147915"),
         l = n("620448"),
         u = n("689938"),
@@ -21,7 +21,7 @@ function(e, t, n) {
                 children: (0, i.jsx)(o.default, {
                     className: d.button,
                     innerClassName: d.innerButton,
-                    childClassName: s()(d.buttonChild, {
+                    childClassName: a()(d.buttonChild, {
                         [d.disabled]: n,
                         [d.activeButtonChild]: !n
                     }),

@@ -16,8 +16,8 @@ function(e, t, n) {
     }), n("47120"), n("757143");
     var i = n("442837"),
         r = n("762914"),
-        a = n("828695"),
-        s = n("699516"),
+        s = n("828695"),
+        a = n("699516"),
         o = n("594174"),
         l = n("823379"),
         u = n("51144"),
@@ -25,8 +25,8 @@ function(e, t, n) {
         _ = n("689938");
 
     function c(e, t, n) {
-        var i, a;
-        let s = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        var i, s;
+        let a = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
             o = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
         switch (e.type) {
             case d.ChannelTypes.DM:
@@ -34,13 +34,13 @@ function(e, t, n) {
                 if (null == c) return "???";
                 let I = n.getNickname(c.id),
                     T = null !== (i = null != I ? I : u.default.getName(c)) && void 0 !== i ? i : "???";
-                return s ? "@".concat(T) : T;
+                return a ? "@".concat(T) : T;
             case d.ChannelTypes.GROUP_DM:
                 let f = (0, r.getIsBroadcastingGDM)(e.id);
                 if ("" !== e.name) return e.name;
                 if (f && null != e.ownerId && "" !== e.ownerId) {
                     let i = t.getUser(e.ownerId),
-                        r = null !== (a = n.getNickname(e.ownerId)) && void 0 !== a ? a : u.default.getName(i);
+                        r = null !== (s = n.getNickname(e.ownerId)) && void 0 !== s ? s : u.default.getName(i);
                     return _.default.Messages.BROADCASTING_CHANNEL_NAME.format({
                         name: r
                     })
@@ -57,7 +57,7 @@ function(e, t, n) {
             case d.ChannelTypes.GUILD_TEXT:
             case d.ChannelTypes.GUILD_FORUM:
             case d.ChannelTypes.GUILD_MEDIA:
-                if (s) return "#".concat(e.name);
+                if (a) return "#".concat(e.name);
                 return e.name;
             case d.ChannelTypes.PUBLIC_THREAD:
             case d.ChannelTypes.PRIVATE_THREAD:
@@ -66,7 +66,7 @@ function(e, t, n) {
             case d.ChannelTypes.GUILD_STAGE_VOICE:
             case d.ChannelTypes.GUILD_CATEGORY:
                 if (o) return '#"'.concat(E(e.name), '"');
-                if (s && e.isThread()) return '"'.concat(e.name, '"');
+                if (a && e.isThread()) return '"'.concat(e.name, '"');
                 return e.name;
             default:
                 return e.name
@@ -83,6 +83,6 @@ function(e, t, n) {
 
     function T(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return (0, i.useStateFromStores)([o.default, a.default, s.default], () => null == e ? null : c(e, o.default, s.default, t))
+        return (0, i.useStateFromStores)([o.default, s.default, a.default], () => null == e ? null : c(e, o.default, a.default, t))
     }
 }

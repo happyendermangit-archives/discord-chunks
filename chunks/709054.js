@@ -2,31 +2,31 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         DISCORD_EPOCH: function() {
-            return a.DISCORD_EPOCH
+            return s.DISCORD_EPOCH
         }
     });
     var i = n("392711"),
         r = n.n(i),
-        a = n("67423");
+        s = n("67423");
 
-    function s(e) {
+    function a(e) {
         return e
     }
     t.default = {
         age: function(e) {
-            return a.age(e)
+            return s.age(e)
         },
         extractTimestamp: function(e) {
-            return a.extractTimestamp(e)
+            return s.extractTimestamp(e)
         },
         compare: function(e, t) {
-            return a.compare(e, t)
+            return s.compare(e, t)
         },
         atPreviousMillisecond: function(e) {
-            return a.atPreviousMillisecond(e)
+            return s.atPreviousMillisecond(e)
         },
         fromTimestamp: function(e) {
-            return a.fromTimestamp(e)
+            return s.fromTimestamp(e)
         },
         keys: function(e) {
             return Object.keys(e)
@@ -49,6 +49,6 @@ function(e, t, n) {
         castGuildIdAsEveryoneGuildRoleId: function(e) {
             return e
         },
-        cast: s
+        cast: a
     }
 }

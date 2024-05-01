@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("470079"),
         r = n("120356"),
-        a = n.n(r),
-        s = n("866442"),
+        s = n.n(r),
+        a = n("866442"),
         o = n("442837"),
         l = n("607070"),
         u = n("168551"),
@@ -39,7 +39,7 @@ function(e, t, n) {
         return {
             profileThemeStyle: (0, i.useMemo)(() => {
                 if (null == n || null == r || null == T || null == f || null == S || null == h || null == A) return c;
-                let e = (e, t) => (0, s.int2hsl)(e, E, null, t);
+                let e = (e, t) => (0, a.int2hsl)(e, E, null, t);
                 return {
                     "--profile-gradient-primary-color": e(n),
                     "--profile-gradient-secondary-color": e(r),
@@ -56,7 +56,7 @@ function(e, t, n) {
                     "--profile-role-pill-border-color": T.rolePillBorderColor
                 }
             }, [n, r, f, E, S, h, A, T]),
-            profileThemeClassName: a()((0, d.getThemeClass)(t), {
+            profileThemeClassName: s()((0, d.getThemeClass)(t), {
                 [u.CUSTOM_THEME_BACKGROUND_CLASS_NAME]: null != n,
                 "custom-profile-theme": null != n
             })

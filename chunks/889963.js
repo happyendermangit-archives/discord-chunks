@@ -8,7 +8,7 @@ function(e, t, n) {
             return i
         }
     }), n("47120"), n("653041");
-    var i, r, a, s = n("470079"),
+    var i, r, s, a = n("470079"),
         o = n("392711"),
         l = n.n(o);
 
@@ -19,28 +19,28 @@ function(e, t, n) {
             configurable: !0,
             writable: !0
         }) : e[t] = n, e
-    }(a = i || (i = {})).PAGE = "PAGE", a.GAP = "GAP", a.BACK = "BACK", a.NEXT = "NEXT";
-    class d extends(r = s.PureComponent) {
+    }(s = i || (i = {})).PAGE = "PAGE", s.GAP = "GAP", s.BACK = "BACK", s.NEXT = "NEXT";
+    class d extends(r = a.PureComponent) {
         getNeighborBounds() {
             let {
                 totalPageCount: e,
                 maxVisiblePages: t,
                 selectedPage: n
-            } = this.props, i = Math.ceil(t / 2), r = Math.floor(t / 2), a = [1, e], [s, o] = a = n <= i ? [1, t] : n > e - r ? [e - t + 1, e] : [n - i + 1, n + r];
-            return [Math.max(s, 1), Math.min(o, e)]
+            } = this.props, i = Math.ceil(t / 2), r = Math.floor(t / 2), s = [1, e], [a, o] = s = n <= i ? [1, t] : n > e - r ? [e - t + 1, e] : [n - i + 1, n + r];
+            return [Math.max(a, 1), Math.min(o, e)]
         }
         getPageList() {
             let {
                 totalPageCount: e,
                 selectedPage: t,
                 hideMaxPage: n
-            } = this.props, [i, r] = this.getNeighborBounds(), a = {
+            } = this.props, [i, r] = this.getNeighborBounds(), s = {
                 type: "BACK",
                 key: "back",
                 disabled: 1 === t,
                 selected: !1,
                 navigateToPage: this.handleBackward
-            }, s = {
+            }, a = {
                 type: "NEXT",
                 key: "next",
                 disabled: t === e,
@@ -63,14 +63,14 @@ function(e, t, n) {
                 key: "page-".concat(e),
                 targetPage: e,
                 navigateToPage: () => this.handleJump(e)
-            }), r -= 2), [a, ...o, ...l().range(i, r + 1).map(e => ({
+            }), r -= 2), [s, ...o, ...l().range(i, r + 1).map(e => ({
                 type: "PAGE",
                 key: "page-".concat(e),
                 targetPage: e,
                 selected: e === t,
                 disabled: !1,
                 navigateToPage: () => this.handleJump(e)
-            })), ...u, s]
+            })), ...u, a]
         }
         render() {
             let {

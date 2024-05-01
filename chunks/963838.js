@@ -22,8 +22,8 @@ function(e, t, n) {
     });
     var i = n("392711"),
         r = n.n(i),
-        a = n("490757"),
-        s = n("429827"),
+        s = n("490757"),
+        a = n("429827"),
         o = n("353928"),
         l = n("336892"),
         u = n("624833"),
@@ -56,8 +56,8 @@ function(e, t, n) {
             end: 15
         },
         G = {
-            BASIC: [a],
-            PREMIUM: [s, o, l, u, d, _, c, E, I, T, f, S, h, A, m, N, p, O, R, C, g]
+            BASIC: [s],
+            PREMIUM: [a, o, l, u, d, _, c, E, I, T, f, S, h, A, m, N, p, O, R, C, g]
         },
         w = {
             [P.VoiceChannelEffectAnimationType.BASIC]: G.BASIC,
@@ -107,7 +107,7 @@ function(e, t, n) {
     }
 
     function F(e) {
-        var t, n, i, r, a, s;
+        var t, n, i, r, s, a;
         if (e.length < 1) return "";
         let o = x(e, "userId"),
             l = x(e, "emojiName"),
@@ -123,8 +123,8 @@ function(e, t, n) {
             emojiNames: u
         });
         else return U.default.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_MULTIPLE.format({
-            firstUsername: null === (a = D.default.getUser(o[0])) || void 0 === a ? void 0 : a.username,
-            secondUsername: null === (s = D.default.getUser(o[1])) || void 0 === s ? void 0 : s.username,
+            firstUsername: null === (s = D.default.getUser(o[0])) || void 0 === s ? void 0 : s.username,
+            secondUsername: null === (a = D.default.getUser(o[1])) || void 0 === a ? void 0 : a.username,
             count: o.length - 2,
             emojiNames: u
         })

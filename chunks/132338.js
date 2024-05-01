@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t);
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("38068"),
         l = n("689938"),
         u = n("216928");
@@ -12,16 +12,16 @@ function(e, t, n) {
         let {
             className: n,
             contentClassName: r,
-            isUnread: a,
+            isUnread: s,
             children: d,
             id: _,
             role: c,
             "aria-label": E
         } = e;
         return (0, i.jsxs)("div", {
-            className: s()(n, {
+            className: a()(n, {
                 [u.divider]: !0,
-                [u.isUnread]: a,
+                [u.isUnread]: s,
                 [u.hasContent]: null != d
             }),
             ref: t,
@@ -29,9 +29,9 @@ function(e, t, n) {
             role: c,
             "aria-label": E,
             children: [null != d ? (0, i.jsx)("span", {
-                className: s()(u.content, r),
+                className: a()(u.content, r),
                 children: d
-            }) : null, a ? (0, i.jsxs)("span", {
+            }) : null, s ? (0, i.jsxs)("span", {
                 className: u.unreadPill,
                 children: [(0, i.jsx)(o.default, {
                     foreground: u.unreadPillCapStroke,

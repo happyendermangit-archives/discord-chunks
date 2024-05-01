@@ -13,26 +13,26 @@ function(e, t, n) {
     }), n("411104"), n("729594");
     var i = n("261470"),
         r = n("544891"),
-        a = n("570140");
+        s = n("570140");
     n("591759");
-    var s = n("628566"),
+    var a = n("628566"),
         o = n("981631");
     n("231338"), n("689938");
 
     function l() {
-        s.default.getApplicationsShelfFetchState() === s.FetchState.NOT_FETCHED && (a.default.dispatch({
+        a.default.getApplicationsShelfFetchState() === a.FetchState.NOT_FETCHED && (s.default.dispatch({
             type: "APPLICATIONS_SHELF_FETCH_START"
-        }), r.HTTP.get(o.Endpoints.APPLICATIONS_SHELF).then(e => a.default.dispatch({
+        }), r.HTTP.get(o.Endpoints.APPLICATIONS_SHELF).then(e => s.default.dispatch({
             type: "APPLICATIONS_SHELF_FETCH_SUCCESS",
             applications: e.body.applications
-        })).catch(e => a.default.dispatch({
+        })).catch(e => s.default.dispatch({
             type: "APPLICATIONS_SHELF_FETCH_FAIL"
         })))
     }
 
     function u(e) {
         let t = new i.default(1e3, 5e3);
-        a.default.dispatch({
+        s.default.dispatch({
             type: "FETCH_PRIVATE_CHANNEL_INTEGRATIONS_START",
             channelId: e
         }), r.HTTP.get({
@@ -40,13 +40,13 @@ function(e, t, n) {
             backoff: t,
             retries: 10
         }).then(t => {
-            a.default.dispatch({
+            s.default.dispatch({
                 type: "FETCH_PRIVATE_CHANNEL_INTEGRATIONS_SUCCESS",
                 channelId: e,
                 integrations: t.body
             })
         }).catch(() => {
-            a.default.dispatch({
+            s.default.dispatch({
                 type: "FETCH_PRIVATE_CHANNEL_INTEGRATIONS_FAIL",
                 channelId: e
             })

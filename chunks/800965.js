@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        a = n.n(r),
-        s = n("441957"),
+        s = n.n(r),
+        a = n("441957"),
         o = n("871499"),
         l = n("689938"),
         u = n("529939");
@@ -24,8 +24,8 @@ function(e, t, n) {
         return (0, i.jsx)(o.default, {
             label: _,
             onClick: t ? n : r,
-            iconComponent: s.default,
-            iconClassName: a()({
+            iconComponent: a.default,
+            iconClassName: s()({
                 [u.popIn]: t
             }),
             ...d

@@ -4,17 +4,17 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("481060"),
-        a = n("592125"),
-        s = n("430824"),
+        s = n("592125"),
+        a = n("430824"),
         o = n("346656"),
         l = n("689938"),
         u = n("939414");
     t.default = e => {
         let {
             entry: t
-        } = e, n = a.default.getChannel(t.channelId);
+        } = e, n = s.default.getChannel(t.channelId);
         if (null == n) return null;
-        let d = s.default.getGuild(n.guild_id);
+        let d = a.default.getGuild(n.guild_id);
         return null == d ? null : (0, i.jsxs)("div", {
             className: u.container,
             children: [(0, i.jsx)(r.Heading, {

@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120"), n("757143");
     var i = n("470079"),
         r = n("207470"),
-        a = n("911969"),
-        s = n("998698"),
+        s = n("911969"),
+        a = n("998698"),
         o = n("91313"),
         l = n("53529"),
         u = n("436660"),
@@ -33,10 +33,10 @@ function(e, t, n) {
                 word: null,
                 isAtStart: !1
             };
-            let [n, i] = d.EditorUtils.node(e, d.PathUtils.parent(t.anchor.path)), [r, a] = d.EditorUtils.node(e, t.anchor.path), s = t.anchor.offset;
-            if (!d.PathUtils.hasPrevious(a) && d.TextUtils.isText(r)) {
-                let e = r.text.substring(0, s);
-                if (d.NodeUtils.isType(n, "applicationCommand") && s < n.command.displayName.length + 2) return {
+            let [n, i] = d.EditorUtils.node(e, d.PathUtils.parent(t.anchor.path)), [r, s] = d.EditorUtils.node(e, t.anchor.path), a = t.anchor.offset;
+            if (!d.PathUtils.hasPrevious(s) && d.TextUtils.isText(r)) {
+                let e = r.text.substring(0, a);
+                if (d.NodeUtils.isType(n, "applicationCommand") && a < n.command.displayName.length + 2) return {
                     word: e,
                     isAtStart: !0
                 }
@@ -44,14 +44,14 @@ function(e, t, n) {
             let o = "",
                 l = !1;
             for (;;) {
-                if (--s < 0) {
-                    if (!d.PathUtils.hasPrevious(a)) {
+                if (--a < 0) {
+                    if (!d.PathUtils.hasPrevious(s)) {
                         l = !0;
                         break
-                    } [r, a] = d.EditorUtils.node(e, d.PathUtils.previous(a))
+                    } [r, s] = d.EditorUtils.node(e, d.PathUtils.previous(s))
                 }
                 if (!d.TextUtils.isText(r)) break;
-                let t = r.text[s];
+                let t = r.text[a];
                 if (E.WHITESPACE_RE.test(t)) break;
                 o = t + o
             }
@@ -72,27 +72,27 @@ function(e, t, n) {
             var n;
             let i = o.getCurrentCommandOption(e);
             if (null == i) return [];
-            let r = s.default.getActiveCommand(t.id),
-                a = null == r ? void 0 : null === (n = r.options) || void 0 === n ? void 0 : n.find(e => e.name === i[0].optionName);
-            return null == a ? [] : o.optionToValues(e, a, i[0])
+            let r = a.default.getActiveCommand(t.id),
+                s = null == r ? void 0 : null === (n = r.options) || void 0 === n ? void 0 : n.find(e => e.name === i[0].optionName);
+            return null == s ? [] : o.optionToValues(e, s, i[0])
         },
         getCommandOptionValues() {
-            let n = s.default.getActiveCommand(t.id);
+            let n = a.default.getActiveCommand(t.id);
             return null == n ? {} : o.getOptionValues(e, n)
         },
         insertText(n) {
             let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
                 r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
             l.HistoryUtils.withSingleEntry(e, () => {
-                let a = o.getCurrentCommandOption(e),
-                    s = null != a && T(t, a[0]);
-                if (null != i && s && (u.SlateTransforms.removeInlineChildren(e, a), r = !1), f(e, n, i, r), null != i && s) {
+                let s = o.getCurrentCommandOption(e),
+                    a = null != s && T(t, s[0]);
+                if (null != i && a && (u.SlateTransforms.removeInlineChildren(e, s), r = !1), f(e, n, i, r), null != i && a) {
                     let n = o.getCommandBlock(e);
-                    if (a = d.ElementUtils.updateElement(e, a), null != n) {
+                    if (s = d.ElementUtils.updateElement(e, s), null != n) {
                         let i = d.ElementUtils.markdown(n[0], t.guild_id);
-                        (0, c.convertRawToInlineVoids)(e, a, t.id, i) && (a = d.ElementUtils.updateElement(e, a))
+                        (0, c.convertRawToInlineVoids)(e, s, t.id, i) && (s = d.ElementUtils.updateElement(e, s))
                     }
-                    o.validateOption(e, t.guild_id, t.id, d.ElementUtils.updateElement(e, a), !1), u.SlateTransforms.selectNextCommandOption(e)
+                    o.validateOption(e, t.guild_id, t.id, d.ElementUtils.updateElement(e, s), !1), u.SlateTransforms.selectNextCommandOption(e)
                 }
             })
         },
@@ -100,9 +100,9 @@ function(e, t, n) {
             let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
                 r = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
             l.HistoryUtils.withSingleEntry(e, () => {
-                let a = o.getCurrentCommandOption(e),
-                    s = null != a && T(t, a[0]);
-                if (s) u.SlateTransforms.removeInlineChildren(e, a), r = !1;
+                let s = o.getCurrentCommandOption(e),
+                    a = null != s && T(t, s[0]);
+                if (a) u.SlateTransforms.removeInlineChildren(e, s), r = !1;
                 else {
                     let {
                         word: t
@@ -113,26 +113,26 @@ function(e, t, n) {
                         reverse: !0
                     })
                 }
-                f(e, n, i, r), s && u.SlateTransforms.selectNextCommandOption(e)
+                f(e, n, i, r), a && u.SlateTransforms.selectNextCommandOption(e)
             })
         },
         insertEmoji(t) {
             let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
             l.HistoryUtils.withSingleEntry(e, () => {
                 var i, r;
-                let a = t.animated ? "a" : "",
-                    s = null !== (r = null !== (i = t.originalName) && void 0 !== i ? i : t.name) && void 0 !== r ? r : "",
+                let s = t.animated ? "a" : "",
+                    a = null !== (r = null !== (i = t.originalName) && void 0 !== i ? i : t.name) && void 0 !== r ? r : "",
                     o = ":".concat(t.name, ":");
-                f(e, o, null != t.id ? "<".concat(a, ":").concat(s.replace(/:/g, ""), ":").concat(t.id, ">") : null, n)
+                f(e, o, null != t.id ? "<".concat(s, ":").concat(a.replace(/:/g, ""), ":").concat(t.id, ">") : null, n)
             })
         }
     });
 
     function T(e, t) {
         var n;
-        let i = s.default.getActiveCommand(e.id),
+        let i = a.default.getActiveCommand(e.id),
             r = null == i ? void 0 : null === (n = i.options) || void 0 === n ? void 0 : n.find(e => e.name === t.optionName);
-        return null != r && (r.type !== a.ApplicationCommandOptionType.STRING || (null == r ? void 0 : r.choices) != null || (null == r ? void 0 : r.autocomplete))
+        return null != r && (r.type !== s.ApplicationCommandOptionType.STRING || (null == r ? void 0 : r.choices) != null || (null == r ? void 0 : r.autocomplete))
     }
 
     function f(e, t, n, i) {

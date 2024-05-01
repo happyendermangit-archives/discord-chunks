@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("47120");
-    var i, r, a, s, o, l, u = n("392711"),
+    var i, r, s, a, o, l, u = n("392711"),
         d = n("442837"),
         _ = n("759174"),
         c = n("570140"),
@@ -10,7 +10,7 @@ function(e, t, n) {
         T = n("709054"),
         f = n("770471"),
         S = n("860852");
-    (a = i || (i = {}))[a.INVALID = 0] = "INVALID", a[a.VALID_USER_ONLY = 1] = "VALID_USER_ONLY", a[a.VALID = 2] = "VALID";
+    (s = i || (i = {}))[s.INVALID = 0] = "INVALID", s[s.VALID_USER_ONLY = 1] = "VALID_USER_ONLY", s[s.VALID = 2] = "VALID";
     let h = new Set,
         A = new Set,
         m = new Set,
@@ -60,12 +60,12 @@ function(e, t, n) {
             return N
         }
     }
-    l = "BroadcastingStore", (o = "displayName") in(s = g) ? Object.defineProperty(s, o, {
+    l = "BroadcastingStore", (o = "displayName") in(a = g) ? Object.defineProperty(a, o, {
         value: l,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : s[o] = l, t.default = new g(c.default, {
+    }) : a[o] = l, t.default = new g(c.default, {
         PRESENCE_UPDATES: function(e) {
             let {
                 updates: t

@@ -9,8 +9,8 @@ function(e, t, n) {
             profileEffectConfig: t,
             onReady: n
         } = e, {
-            pendingRef: a,
-            setPending: s
+            pendingRef: s,
+            setPending: a
         } = (0, r.default)(t.effects, n);
         return (0, i.jsx)("div", {
             children: t.effects.map(e => (0, i.jsx)("img", {
@@ -22,7 +22,7 @@ function(e, t, n) {
                     position: "absolute"
                 },
                 onLoad: () => {
-                    s(a.current - 1), a.current = a.current - 1
+                    a(s.current - 1), s.current = s.current - 1
                 }
             }, e.src))
         })

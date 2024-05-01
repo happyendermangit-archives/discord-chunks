@@ -14,15 +14,15 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("442837"),
-        a = n("481060"),
-        s = n("430824"),
+        s = n("481060"),
+        a = n("430824"),
         o = n("757698"),
         l = n("275759"),
         u = n("689938");
     let d = "guild-connection-roles";
 
     function _(e) {
-        (0, a.openModalLazy)(async () => {
+        (0, s.openModalLazy)(async () => {
             let {
                 default: t
             } = await Promise.all([n.e("99387"), n.e("40897")]).then(n.bind(n, "507294"));
@@ -32,15 +32,15 @@ function(e, t, n) {
             })
         }, {
             modalKey: d,
-            contextKey: a.DEFAULT_MODAL_CONTEXT,
+            contextKey: s.DEFAULT_MODAL_CONTEXT,
             onCloseRequest: () => {
-                (0, a.closeModal)(d, a.DEFAULT_MODAL_CONTEXT)
+                (0, s.closeModal)(d, s.DEFAULT_MODAL_CONTEXT)
             }
         })
     }
 
     function c(e) {
-        return (0, r.useStateFromStores)([s.default], () => (0, l.isVerifiedRolesChannelVisible)(e, s.default.getRoles(e.id)), [e]) ? (0, i.jsx)(a.MenuItem, {
+        return (0, r.useStateFromStores)([a.default], () => (0, l.isVerifiedRolesChannelVisible)(e, a.default.getRoles(e.id)), [e]) ? (0, i.jsx)(s.MenuItem, {
             id: "guild-connection-roles",
             label: u.default.Messages.CONNECTIONS_ROLES_CHANNEL_NAME,
             icon: o.default,

@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t);
-    var i, r, a, s, o = n("442837"),
+    var i, r, s, a, o = n("442837"),
         l = n("902704"),
         u = n("570140");
     let d = {},
@@ -29,7 +29,7 @@ function(e, t, n) {
         }
         return !0
     }
-    class T extends(s = o.default.Store) {
+    class T extends(a = o.default.Store) {
         percentageScrolled(e) {
             if (null != d[e]) {
                 let {
@@ -54,21 +54,21 @@ function(e, t, n) {
             return I(e)
         }
     }
-    a = "DimensionStore", (r = "displayName") in(i = T) ? Object.defineProperty(i, r, {
-        value: a,
+    s = "DimensionStore", (r = "displayName") in(i = T) ? Object.defineProperty(i, r, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : i[r] = a, t.default = new T(u.default, {
+    }) : i[r] = s, t.default = new T(u.default, {
         UPDATE_CHANNEL_DIMENSIONS: function(e) {
             let {
                 channelId: t,
                 scrollTop: n,
                 scrollHeight: i,
                 offsetHeight: r
-            } = e, a = d[t];
+            } = e, s = d[t];
             if (null == n || null == i || null == r) {
-                if (null == a) return !1;
+                if (null == s) return !1;
                 delete d[t]
             } else {
                 let e = {
@@ -77,7 +77,7 @@ function(e, t, n) {
                     scrollHeight: i,
                     offsetHeight: r
                 };
-                if (null != a && (0, l.default)(a, e)) return !1;
+                if (null != s && (0, l.default)(s, e)) return !1;
                 d[t] = e
             }
         },

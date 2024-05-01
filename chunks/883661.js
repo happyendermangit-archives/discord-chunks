@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t);
     var i = n("735250"),
         r = n("470079"),
-        a = n("932125"),
-        s = n("489785"),
+        s = n("932125"),
+        a = n("489785"),
         o = n("902781"),
         l = n("497309"),
         u = n("478803"),
@@ -31,7 +31,7 @@ function(e, t, n) {
                 case S.EmojiCategories.FOOD:
                     return o.default;
                 case S.EmojiCategories.ACTIVITY:
-                    return a.default;
+                    return s.default;
                 case S.EmojiCategories.TRAVEL:
                     return E.default;
                 case S.EmojiCategories.OBJECTS:
@@ -39,7 +39,7 @@ function(e, t, n) {
                 case S.EmojiCategories.SYMBOLS:
                     return c.default;
                 case S.EmojiCategories.FLAGS:
-                    return s.default;
+                    return a.default;
                 case S.EmojiCategories.PREMIUM_UPSELL:
                     return I.default;
                 default:

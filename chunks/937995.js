@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         IdleHandlerContext: function() {
-            return s
+            return a
         },
         IdleStateContext: function() {
             return o
@@ -13,8 +13,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("846519");
-    let s = r.createContext({
+        s = n("846519");
+    let a = r.createContext({
             onPreventIdle: () => null,
             onAllowIdle: () => null,
             onForceIdle: () => null,
@@ -27,7 +27,7 @@ function(e, t, n) {
             children: t,
             timeout: n
         } = e, [l, u] = r.useState(!1), d = r.useRef(new Set), _ = r.useRef(null);
-        r.useEffect(() => (_.current = new a.DelayedCall(n, () => u(!0)), _.current.delay(), () => {
+        r.useEffect(() => (_.current = new s.DelayedCall(n, () => u(!0)), _.current.delay(), () => {
             var e;
             null === (e = _.current) || void 0 === e || e.cancel(), _.current = null
         }), [n]);
@@ -59,7 +59,7 @@ function(e, t, n) {
             }), [E, c, I, T]);
         return (0, i.jsx)(o.Provider, {
             value: l,
-            children: (0, i.jsx)(s.Provider, {
+            children: (0, i.jsx)(a.Provider, {
                 value: f,
                 children: t({
                     idle: l,

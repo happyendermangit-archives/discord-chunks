@@ -5,13 +5,13 @@ function(e, t, n) {
             return i.MenuCheckboxItem
         },
         CompositeControlItem: function() {
-            return a.MenuCompositeControlItem
+            return s.MenuCompositeControlItem
         },
         ControlItem: function() {
             return r.MenuControlItem
         },
         CustomItem: function() {
-            return s.MenuCustomItem
+            return a.MenuCustomItem
         },
         Group: function() {
             return o.MenuGroup
@@ -34,8 +34,8 @@ function(e, t, n) {
     });
     var i = n("592282"),
         r = n("526714"),
-        a = n("402084"),
-        s = n("756710"),
+        s = n("402084"),
+        a = n("756710"),
         o = n("911810"),
         l = n("504135"),
         u = n("867333"),

@@ -2,9 +2,9 @@ function(e, t, n) {
     "use strict";
     n.r(t), n("47120");
     var i, r = n("735250"),
-        a = n("470079"),
-        s = n("120356"),
-        o = n.n(s),
+        s = n("470079"),
+        a = n("120356"),
+        o = n.n(a),
         l = n("748780"),
         u = n("766113");
 
@@ -30,7 +30,7 @@ function(e, t, n) {
             n = t % 60;
         return "".concat((t - n) / 60, ":").concat(String(n).padStart(2, "0"))
     }
-    class I extends(i = a.Component) {
+    class I extends(i = s.Component) {
         componentDidMount() {
             let {
                 previewWidth: e,
@@ -73,11 +73,11 @@ function(e, t, n) {
             if (null == n) return 0;
             let {
                 left: r,
-                width: a,
-                bottom: s,
+                width: s,
+                bottom: a,
                 height: o
             } = n.getBoundingClientRect();
-            return Math.min(1, Math.max(0, i === c.VOLUME ? (s - t) / o : (e - r) / a))
+            return Math.min(1, Math.max(0, i === c.VOLUME ? (a - t) / o : (e - r) / s))
         }
         render() {
             let {
@@ -86,14 +86,14 @@ function(e, t, n) {
                 className: n,
                 sliderClassName: i
             } = this.props, {
-                dragging: a,
-                previewWidth: s,
+                dragging: s,
+                previewWidth: a,
                 animatedProgress: d
             } = this.state;
             return (0, r.jsx)("div", {
                 className: o()(n, t === c.VOLUME ? u.vertical : u.horizontal),
                 children: (0, r.jsx)("div", {
-                    className: o()(i, a ? u.mediaBarInteractionDragging : u.mediaBarInteraction, t === c.VOLUME ? u.mediaBarInteractionVolume : null),
+                    className: o()(i, s ? u.mediaBarInteractionDragging : u.mediaBarInteraction, t === c.VOLUME ? u.mediaBarInteractionVolume : null),
                     onMouseDown: this.handleDragStart,
                     onMouseMove: this.handleMouseMove,
                     ref: e => this.wrapper = e,
@@ -111,7 +111,7 @@ function(e, t, n) {
                         }) : null, t === c.DURATION ? (0, r.jsx)(l.default.div, {
                             className: u.mediaBarPreview,
                             style: {
-                                width: s.interpolate({
+                                width: a.interpolate({
                                     inputRange: [0, 1],
                                     outputRange: ["0%", "100%"]
                                 })
@@ -131,7 +131,7 @@ function(e, t, n) {
                             ref: this.setBubbleRef,
                             className: u.bubble,
                             style: {
-                                left: (a ? d : s).interpolate({
+                                left: (s ? d : a).interpolate({
                                     inputRange: [0, 1],
                                     outputRange: ["0%", "100%"]
                                 })
@@ -199,8 +199,8 @@ function(e, t, n) {
                     type: i,
                     currentWindow: r
                 } = this.props, {
-                    clientX: a,
-                    clientY: s
+                    clientX: s,
+                    clientY: a
                 } = e;
                 if (e.preventDefault(), null == this.wrapper) return;
                 let {
@@ -212,7 +212,7 @@ function(e, t, n) {
                     offsetLeft: o,
                     offsetWidth: l
                 }, () => {
-                    t(i), n(this.calculatePercentage(a, s), i), r.removeEventListener("mouseup", this.handleDragEnd, !1), r.removeEventListener("mousemove", this.handleDragMove, !1), r.addEventListener("mouseup", this.handleDragEnd, !1), r.addEventListener("mousemove", this.handleDragMove, !1)
+                    t(i), n(this.calculatePercentage(s, a), i), r.removeEventListener("mouseup", this.handleDragEnd, !1), r.removeEventListener("mousemove", this.handleDragMove, !1), r.addEventListener("mouseup", this.handleDragEnd, !1), r.addEventListener("mousemove", this.handleDragMove, !1)
                 })
             }), d(this, "handleDragEnd", () => {
                 let {

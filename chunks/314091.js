@@ -16,8 +16,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("866442"),
         r = n("726542"),
-        a = n("503438"),
-        s = n("802856"),
+        s = n("503438"),
+        a = n("802856"),
         o = n("420660"),
         l = n("168631"),
         u = n("621853"),
@@ -44,19 +44,19 @@ function(e, t, n) {
             let t = E(e);
             return t.hours > 0 ? "".concat(t.hours, " hours") : t.minutes > 0 ? "".concat(t.minutes, " minutes") : "".concat(t.seconds, " seconds")
         },
-        f = e => (0, a.default)(e) ? r.default.get(d.PlatformTypes.SPOTIFY) : (0, s.default)(e) ? r.default.get(d.PlatformTypes.XBOX) : null != e.platform && [d.ActivityGamePlatforms.PS4, d.ActivityGamePlatforms.PS5].includes(e.platform) ? r.default.get(d.PlatformTypes.PLAYSTATION) : e.name === r.default.get(d.PlatformTypes.LEAGUE_OF_LEGENDS).name ? r.default.get(d.PlatformTypes.LEAGUE_OF_LEGENDS) : void(e.type, d.ActivityTypes.PLAYING),
+        f = e => (0, s.default)(e) ? r.default.get(d.PlatformTypes.SPOTIFY) : (0, a.default)(e) ? r.default.get(d.PlatformTypes.XBOX) : null != e.platform && [d.ActivityGamePlatforms.PS4, d.ActivityGamePlatforms.PS5].includes(e.platform) ? r.default.get(d.PlatformTypes.PLAYSTATION) : e.name === r.default.get(d.PlatformTypes.LEAGUE_OF_LEGENDS).name ? r.default.get(d.PlatformTypes.LEAGUE_OF_LEGENDS) : void(e.type, d.ActivityTypes.PLAYING),
         S = (e, t) => {
             var n;
             let r = u.default.getUserProfile(e.id),
-                [a, s] = null !== (n = null == r ? void 0 : r.themeColors) && void 0 !== n ? n : [],
-                o = (0, l.getProfileTheme)(a),
-                d = null != s ? (0, i.int2hex)(s) : t;
+                [s, a] = null !== (n = null == r ? void 0 : r.themeColors) && void 0 !== n ? n : [],
+                o = (0, l.getProfileTheme)(s),
+                d = null != a ? (0, i.int2hex)(a) : t;
             return {
                 color: d,
                 theme: d === t ? "dark" : o
             }
         },
-        h = (e, t) => (0, a.default)(t) ? _.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_SPOTIFY.format({
+        h = (e, t) => (0, s.default)(t) ? _.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_SPOTIFY.format({
             username: e.username,
             song: t.details,
             artist: t.state

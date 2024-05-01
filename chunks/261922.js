@@ -8,7 +8,7 @@ function(e, t, n) {
             return g
         }
     }), n("47120");
-    var i, r, a, s = n("735250"),
+    var i, r, s, a = n("735250"),
         o = n("470079"),
         l = n("392711"),
         u = n("286379"),
@@ -36,7 +36,7 @@ function(e, t, n) {
     }
     let R = /\.gif($|\?|#)/i,
         C = /\.png($|\?|#)/i;
-    (a = i || (i = {})).LOAD = "LOAD", a.PRELOAD = "PRELOAD", a.CLICK = "CLICK";
+    (s = i || (i = {})).LOAD = "LOAD", s.PRELOAD = "PRELOAD", s.CLICK = "CLICK";
     class g extends(r = o.Component) {
         static isAnimated(e) {
             let {
@@ -71,8 +71,8 @@ function(e, t, n) {
                     src: n,
                     width: i,
                     height: r,
-                    maxWidth: a,
-                    maxHeight: s,
+                    maxWidth: s,
+                    maxHeight: a,
                     mediaLayoutType: o
                 } = this.props,
                 {
@@ -84,8 +84,8 @@ function(e, t, n) {
                 width: i,
                 height: r,
                 ratio: e,
-                maxWidth: o === N.MediaLayoutType.MOSAIC ? a : void 0,
-                maxHeight: o === N.MediaLayoutType.MOSAIC ? s : void 0,
+                maxWidth: o === N.MediaLayoutType.MOSAIC ? s : void 0,
+                maxHeight: o === N.MediaLayoutType.MOSAIC ? a : void 0,
                 format: l,
                 quality: u
             })
@@ -106,9 +106,9 @@ function(e, t, n) {
                 maxWidth: n = 400,
                 maxHeight: i = 300,
                 mediaLayoutType: r,
-                useFullWidth: a
+                useFullWidth: s
             } = this.props;
-            return r === N.MediaLayoutType.MOSAIC && a ? (0, h.getCoverRatio)({
+            return r === N.MediaLayoutType.MOSAIC && s ? (0, h.getCoverRatio)({
                 width: e,
                 height: t,
                 maxWidth: n,
@@ -145,7 +145,7 @@ function(e, t, n) {
                 onZoom: n,
                 shouldLink: i,
                 onContextMenu: r,
-                autoPlay: a,
+                autoPlay: s,
                 original: o,
                 className: u,
                 imageClassName: d,
@@ -213,25 +213,25 @@ function(e, t, n) {
                 case p.ImageReadyStates.READY:
                     if (g.isAnimated(this.props)) {
                         B.onMouseLeave = this.onMouseLeave;
-                        let e = (a || y || P) && (null == E || E) && g.visibilityObserver.isVisible(this);
-                        e ? (B.src = this.getSrc(b), B.renderAccessory = O) : (B.src = this.getSrc(b, !c || !a), B.renderAccessory = this.renderAccessory), null != _ && (B.children = t => {
+                        let e = (s || y || P) && (null == E || E) && g.visibilityObserver.isVisible(this);
+                        e ? (B.src = this.getSrc(b), B.renderAccessory = O) : (B.src = this.getSrc(b, !c || !s), B.renderAccessory = this.renderAccessory), null != _ && (B.children = t => {
                             let {
                                 src: n,
                                 size: i,
                                 alt: r,
-                                mediaLayoutType: a
+                                mediaLayoutType: s
                             } = t;
                             return _({
                                 src: n,
                                 size: i,
                                 animating: e,
                                 alt: r,
-                                mediaLayoutType: a
+                                mediaLayoutType: s
                             })
                         })
                     } else B.src = this.getSrc(b)
             }
-            return (0, s.jsx)(m.default, {
+            return (0, a.jsx)(m.default, {
                 ...B
             })
         }
@@ -241,8 +241,8 @@ function(e, t, n) {
                     name: u.MetricEvents.IMAGE_LOAD_ERROR
                 }), !this.imageLoadAnalyticsEnabled) return;
             let r = await fetch(t.url).catch(() => void 0),
-                a = null == r ? void 0 : null === (i = r.headers) || void 0 === i ? void 0 : i.get("content-length"),
-                s = null != a ? Number(a) : null,
+                s = null == r ? void 0 : null === (i = r.headers) || void 0 === i ? void 0 : i.get("content-length"),
+                a = null != s ? Number(s) : null,
                 o = Date.now() - this.startLoadingTime,
                 {
                     format: l,
@@ -263,7 +263,7 @@ function(e, t, n) {
                 data_saving_mode: I.default.dataSavingMode,
                 low_quality_image_mode: I.default.lowQualityImageMode,
                 trigger: n,
-                size: s,
+                size: a,
                 connection_type: T.default.getType(),
                 effective_connection_speed: T.default.getEffectiveConnectionSpeed(),
                 service_provider: T.default.getServiceProvider()
@@ -291,11 +291,11 @@ function(e, t, n) {
                     height: i
                 } = e, {
                     width: r,
-                    height: a
+                    height: s
                 } = this.props;
-                (1 !== r || 1 !== a) && this.loadImage(this.getSrc((0, h.getRatio)({
+                (1 !== r || 1 !== s) && this.loadImage(this.getSrc((0, h.getRatio)({
                     width: r,
-                    height: a,
+                    height: s,
                     maxWidth: n,
                     maxHeight: i
                 })), (e, n) => {
@@ -339,7 +339,7 @@ function(e, t, n) {
                     hasMouseOver: e,
                     hasFocus: t
                 } = this.state, n = null != this.props.renderAccessory ? this.props.renderAccessory() : null;
-                return this.props.shouldRenderAccessory ? e || t ? n : (0, s.jsx)(A.default, {}) : null
+                return this.props.shouldRenderAccessory ? e || t ? n : (0, a.jsx)(A.default, {}) : null
             }), (0, c.isImageLoaded)(this.getSrc(this.getRatio(), g.isAnimated(this.props))) && (this.state.readyState = p.ImageReadyStates.READY), this.imageLoadAnalyticsEnabled = L.getCurrentConfig({
                 location: "lazy_image"
             }).enabled

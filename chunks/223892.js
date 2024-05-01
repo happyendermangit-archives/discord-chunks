@@ -11,7 +11,7 @@ function(e, t, n) {
             return d
         },
         isUserInCreatorMonetizationEligibleCountry: function() {
-            return s
+            return a
         },
         useIsExpeditedOnboardingGuild: function() {
             return o
@@ -20,13 +20,13 @@ function(e, t, n) {
             return u
         },
         useIsUserInCreatorMonetizationEligibleCountry: function() {
-            return a
+            return s
         }
     });
     var i = n("586072"),
         r = n("981631");
 
-    function a() {
+    function s() {
         let {
             isUserEligibleForCreatorMonetization: e
         } = i.CreatorMonetizationCountryAllowlistExperiment.useExperiment({
@@ -37,7 +37,7 @@ function(e, t, n) {
         return e
     }
 
-    function s() {
+    function a() {
         let {
             isUserEligibleForCreatorMonetization: e
         } = i.CreatorMonetizationCountryAllowlistExperiment.getCurrentConfig({

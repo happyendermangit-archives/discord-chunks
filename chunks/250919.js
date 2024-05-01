@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         BatchedStoreListener: function() {
-            return a
+            return s
         }
     }), n("411104");
     var i = n("153102");
@@ -15,7 +15,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    class a {
+    class s {
         attach(e) {
             let {
                 stores: t

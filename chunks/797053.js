@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("866442"),
         l = n("481060"),
         u = n("332870"),
@@ -13,7 +13,7 @@ function(e, t, n) {
         let {
             children: t,
             className: n,
-            color: a,
+            color: s,
             iconType: _,
             onMouseEnter: c,
             onMouseLeave: E,
@@ -23,13 +23,13 @@ function(e, t, n) {
         }, [f, c]), h = r.useCallback(e => {
             f(!1), null == E || E(e)
         }, [f, E]), A = {};
-        return null != a && (A = {
-            color: (0, o.int2hex)(a),
-            backgroundColor: T ? (0, o.int2rgba)(a, .3) : (0, o.int2rgba)(a, .1)
+        return null != s && (A = {
+            color: (0, o.int2hex)(s),
+            backgroundColor: T ? (0, o.int2rgba)(s, .3) : (0, o.int2rgba)(s, .1)
         }), (0, i.jsx)(l.Clickable, {
             ...I,
             tag: "span",
-            className: s()(n, {
+            className: a()(n, {
                 [d.wrapper]: !0,
                 interactive: I.onClick
             }),

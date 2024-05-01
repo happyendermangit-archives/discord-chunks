@@ -6,15 +6,15 @@ function(e, t, n) {
             return i
         },
         UNUSUAL_DM_COMPARISON_DELTA: function() {
-            return a
+            return s
         },
         createMemberSearchCursor: function() {
-            return s
+            return a
         }
     });
-    let a = 2 * n("70956").default.Millis.DAY;
+    let s = 2 * n("70956").default.Millis.DAY;
 
-    function s(e) {
+    function a(e) {
         let {
             joinedAt: t,
             userId: n

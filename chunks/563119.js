@@ -4,8 +4,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("524437"),
-        a = n("952265"),
-        s = n("468026"),
+        s = n("952265"),
+        a = n("468026"),
         o = n("231757"),
         l = n("605236"),
         u = n("131951"),
@@ -29,14 +29,14 @@ function(e, t, n) {
                 let n = () => {
                         (0, l.markDismissibleContentAsDismissed)(r.DismissibleContent.CONSOLE_PTT_DISABLE_ALERT), e()
                     },
-                    o = e => (0, i.jsx)(s.default, {
+                    o = e => (0, i.jsx)(a.default, {
                         ...e,
                         title: t,
                         body: I.default.Messages.PTT_NOT_SUPPORTED_ALERT_BODY,
                         onConfirm: n,
                         titleClassName: T.title
                     });
-                (0, a.hasModalOpen)(S) ? (0, a.updateModal)(S, o) : (0, a.openModal)(o, {
+                (0, s.hasModalOpen)(S) ? (0, s.updateModal)(S, o) : (0, s.openModal)(o, {
                     modalKey: S
                 })
             })
@@ -50,7 +50,7 @@ function(e, t, n) {
             } = e, u = (0, i.jsx)(_.SelfDismissibleAlertBody, {
                 body: n,
                 errorCodeMessage: r,
-                dismissCallback: () => (0, a.closeModal)(f)
+                dismissCallback: () => (0, s.closeModal)(f)
             });
 
             function I() {
@@ -62,13 +62,13 @@ function(e, t, n) {
                     platform_type: l
                 }))
             }
-            let T = e => (0, i.jsx)(s.default, {
+            let T = e => (0, i.jsx)(a.default, {
                 ...e,
                 title: t,
                 body: u,
                 onConfirm: I
             });
-            (0, a.hasModalOpen)(f) ? (0, a.updateModal)(f, T) : (0, a.openModal)(T, {
+            (0, s.hasModalOpen)(f) ? (0, s.updateModal)(f, T) : (0, s.openModal)(T, {
                 modalKey: f
             })
         }

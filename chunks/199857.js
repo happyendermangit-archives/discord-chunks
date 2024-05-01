@@ -6,8 +6,8 @@ function(e, t, n) {
         }
     }), n("653041"), n("411104"), n("47120");
     var i, r = n("264344"),
-        a = n.n(r),
-        s = n("259443"),
+        s = n.n(r),
+        a = n("259443"),
         o = n("46973"),
         l = n("912095"),
         u = n("886848"),
@@ -23,7 +23,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    let I = null === (i = a().name) || void 0 === i ? void 0 : i.toLowerCase().includes("firefox");
+    let I = null === (i = s().name) || void 0 === i ? void 0 : i.toLowerCase().includes("firefox");
 
     function T(e, t) {
         e.sender.replaceTrack(t), e.direction = null != t ? "sendrecv" : "recvonly"
@@ -33,9 +33,9 @@ function(e, t, n) {
             super.destroy(), "closed" !== this.signalingState && this.pc.close()
         }
         setCodecs(e, t, n) {
-            var i, r, a;
-            let s;
-            (this.audioCodec !== e || this.videoCodec !== t) && (s = this.codecs.find(t => t.name === e), this.audioCodec = e, this.audioPayloadType = null !== (i = null == s ? void 0 : s.payloadType) && void 0 !== i ? i : 0, s = this.codecs.find(e => e.name === t), this.videoCodec = t, this.videoPayloadType = null !== (r = null == s ? void 0 : s.payloadType) && void 0 !== r ? r : 0, this.rtxPayloadType = null !== (a = null == s ? void 0 : s.rtxPayloadType) && void 0 !== a ? a : 0, this.logger.info("Renegotiating: Codecs changed"), this.handleNegotiationNeeded())
+            var i, r, s;
+            let a;
+            (this.audioCodec !== e || this.videoCodec !== t) && (a = this.codecs.find(t => t.name === e), this.audioCodec = e, this.audioPayloadType = null !== (i = null == a ? void 0 : a.payloadType) && void 0 !== i ? i : 0, a = this.codecs.find(e => e.name === t), this.videoCodec = t, this.videoPayloadType = null !== (r = null == a ? void 0 : a.payloadType) && void 0 !== r ? r : 0, this.rtxPayloadType = null !== (s = null == a ? void 0 : a.rtxPayloadType) && void 0 !== s ? s : 0, this.logger.info("Renegotiating: Codecs changed"), this.handleNegotiationNeeded())
         }
         setStream(e) {
             let t = "closed" === this.iceConnectionState;
@@ -49,9 +49,9 @@ function(e, t, n) {
             }
             this.logger.info("Creating user: ".concat(e, " with audio SSRC: ").concat(t, " and video SSRCs: ").concat(null !== (i = null == n ? void 0 : n.join(",")) && void 0 !== i ? i : 0));
             let r = !1,
-                a = this.users.get(e);
-            if (null == a && (a = {}), a.audioSSRC !== t) {
-                a.audioSSRC = t, r = !0, this.unassignedStreams.audio.push({
+                s = this.users.get(e);
+            if (null == s && (s = {}), s.audioSSRC !== t) {
+                s.audioSSRC = t, r = !0, this.unassignedStreams.audio.push({
                     cname: e,
                     ssrc: t
                 });
@@ -59,11 +59,11 @@ function(e, t, n) {
                     i = this.unassignedStreams.audio.length;
                 this.addTransceivers("audio", "recvonly", 10 + i - n)
             }
-            if (this.videoSupported && void 0 !== n && (!I || void 0 === a.videoSSRC)) {
+            if (this.videoSupported && void 0 !== n && (!I || void 0 === s.videoSSRC)) {
                 let t = null != n && n.length > 0 ? n[0] : 0;
                 if (t > 0) {
-                    if (a.videoSSRC !== t) {
-                        a.videoSSRC = t, r = !0, this.unassignedStreams.video.push({
+                    if (s.videoSSRC !== t) {
+                        s.videoSSRC = t, r = !0, this.unassignedStreams.video.push({
                             cname: e,
                             ssrc: t
                         });
@@ -71,10 +71,10 @@ function(e, t, n) {
                             i = this.unassignedStreams.video.length;
                         this.addTransceivers("video", "recvonly", 10 + i - n)
                     }
-                } else null != a.videoSSRC && (a.videoSSRC = void 0, r = !0)
+                } else null != s.videoSSRC && (s.videoSSRC = void 0, r = !0)
             }
             if (r) {
-                this.users.set(e, a), t > 0 && this.userIdsBySsrc.set(t, e);
+                this.users.set(e, s), t > 0 && this.userIdsBySsrc.set(t, e);
                 let i = null != n && n.length > 0 ? n[0] : 0;
                 i > 0 && this.userIdsBySsrc.set(i, e), this.logger.info("Renegotiating: User joined"), this.handleNegotiationNeeded()
             }
@@ -127,10 +127,10 @@ function(e, t, n) {
                     }
                     of t) e[n] !== i && (this.logger.info("UnifiedConnection.setTransceiverEncodingParameters: ".concat(n, ": from '").concat(e[n], "' to '").concat(i, "'")), r = !0, e[n] = i);
             if (!r) return;
-            let a = e => {
+            let s = e => {
                 this.logger.error('UnifiedConnection.setTransceiverEncodingProperty: setParameters failed: "'.concat(e, '" (').concat(JSON.stringify(t), ')"'))
             };
-            n.setParameters(i).then(() => {}, e => a(e)).catch(e => a(e))
+            n.setParameters(i).then(() => {}, e => s(e)).catch(e => s(e))
         }
         setAudioEncoderParameters(e) {
             let t = {
@@ -194,20 +194,20 @@ function(e, t, n) {
                     outboundStreams: n,
                     codecs: i,
                     audioSSRC: r,
-                    videoSSRC: a,
-                    rtxSSRC: s
+                    videoSSRC: s,
+                    rtxSSRC: a
                 } = (0, d.extractSDP)(t);
-            return this.outboundStreams = n, this.codecs = i, this.extensions = (0, d.getExtensions)(t), this.audioSSRC = r, this.videoReady = a > 0 && s > 0, (this.videoStreamParameters[0].ssrc !== a || this.videoStreamParameters[0].rtxSsrc !== s || this.videoReady) && (this.videoStreamParameters[0].ssrc = 0 === a ? this.videoStreamParameters[0].ssrc : a, this.videoStreamParameters[0].rtxSsrc = 0 === s ? this.videoStreamParameters[0].rtxSsrc : s, this.videoStreamParameters[0].active = this.videoReady, this.emit(o.BaseConnectionEvent.Video, this.userId, this.input.getVideoStreamId(), this.audioSSRC, a, s, this.videoStreamParameters)), t
+            return this.outboundStreams = n, this.codecs = i, this.extensions = (0, d.getExtensions)(t), this.audioSSRC = r, this.videoReady = s > 0 && a > 0, (this.videoStreamParameters[0].ssrc !== s || this.videoStreamParameters[0].rtxSsrc !== a || this.videoReady) && (this.videoStreamParameters[0].ssrc = 0 === s ? this.videoStreamParameters[0].ssrc : s, this.videoStreamParameters[0].rtxSsrc = 0 === a ? this.videoStreamParameters[0].rtxSsrc : a, this.videoStreamParameters[0].active = this.videoReady, this.emit(o.BaseConnectionEvent.Video, this.userId, this.input.getVideoStreamId(), this.audioSSRC, s, a, this.videoStreamParameters)), t
         }
         addTransceivers(e, t, n, i) {
             let r = this.pc,
-                a = r.getTransceivers().length;
-            for (let s = a; s < a + n; s++) "video" === e && null != i ? r.addTransceiver(e, {
+                s = r.getTransceivers().length;
+            for (let a = s; a < s + n; a++) "video" === e && null != i ? r.addTransceiver(e, {
                 direction: t,
                 streams: [i]
             }) : r.addTransceiver(e, {
                 direction: t
-            }), this.inactiveTransceivers[e].push(s.toString())
+            }), this.inactiveTransceivers[e].push(a.toString())
         }
         buildSSRCsFromOutboundStreams() {
             return this.outboundStreams.map(e => {
@@ -223,10 +223,10 @@ function(e, t, n) {
                         i = "audio" === n ? null == e ? void 0 : e.audioSSRC : null == e ? void 0 : e.videoSSRC;
                     r.ssrc !== i && (r = void 0, this.assignedStreams.delete(t))
                 }
-                let a = this.unassignedStreams[n],
-                    s = this.inactiveTransceivers[n],
-                    o = s.indexOf(t);
-                return null == r && a.length > 0 && -1 !== o && (r = a.pop(), s.splice(o, 1), this.assignedStreams.set(t, r)), null == r && (r = {
+                let s = this.unassignedStreams[n],
+                    a = this.inactiveTransceivers[n],
+                    o = a.indexOf(t);
+                return null == r && s.length > 0 && -1 !== o && (r = s.pop(), a.splice(o, 1), this.assignedStreams.set(t, r)), null == r && (r = {
                     ssrc: -1,
                     cname: ""
                 }), {
@@ -243,11 +243,11 @@ function(e, t, n) {
             let n = this.audioCodec,
                 i = this.audioPayloadType,
                 r = this.videoCodec,
-                a = this.videoPayloadType,
-                s = this.videoSupported && (null === (t = this.videoTransceiver) || void 0 === t ? void 0 : null === (e = t.sender) || void 0 === e ? void 0 : e.track) != null,
+                s = this.videoPayloadType,
+                a = this.videoSupported && (null === (t = this.videoTransceiver) || void 0 === t ? void 0 : null === (e = t.sender) || void 0 === e ? void 0 : e.track) != null,
                 o = this.rtxPayloadType,
                 l = this.sdp;
-            if (null == n || null == i || null == r || null == a || null == o || null == l) throw Error("Invalid payload: audioCodec: ".concat(n, ", audioPayloadType: ").concat(null == i ? "null" : i, ", videoCodec: ").concat(r, ", videoCodecPayloadType: ").concat(null == a ? "null" : a, ", rtxPayloadType: ").concat(null == o ? "null" : o, ", sdp: ").concat(null == l ? "null" : l));
+            if (null == n || null == i || null == r || null == s || null == o || null == l) throw Error("Invalid payload: audioCodec: ".concat(n, ", audioPayloadType: ").concat(null == i ? "null" : i, ", videoCodec: ").concat(r, ", videoCodecPayloadType: ").concat(null == s ? "null" : s, ", rtxPayloadType: ").concat(null == o ? "null" : o, ", sdp: ").concat(null == l ? "null" : l));
             let u = this.buildSSRCsFromOutboundStreams();
             return (0, d.generateUnifiedSessionDescription)({
                 type: "answer",
@@ -256,9 +256,9 @@ function(e, t, n) {
                 audioPayloadType: i,
                 audioBitRate: this.voiceBitrate,
                 videoCodec: r,
-                videoPayloadType: a,
+                videoPayloadType: s,
                 videoBitRate: 2500,
-                sendingVideo: s,
+                sendingVideo: a,
                 rtxPayloadType: o,
                 ssrcs: u,
                 extensions: this.extensions
@@ -333,11 +333,11 @@ function(e, t, n) {
                 let t = e.streams[0].id,
                     n = e.track;
                 if (!/^default/.test(n.id)) {
-                    var i, r, a, s;
+                    var i, r, s, a;
                     let [e, o] = t.split("-");
                     this.trackUserIds[n.id] = e;
                     let l = this.users.get(e);
-                    if ((null == l ? void 0 : null === (r = l.videoSSRC) || void 0 === r ? void 0 : null === (i = r.toString) || void 0 === i ? void 0 : i.call(r)) !== o && (null == l ? void 0 : null === (s = l.audioSSRC) || void 0 === s ? void 0 : null === (a = s.toString) || void 0 === a ? void 0 : a.call(s)) !== o) {
+                    if ((null == l ? void 0 : null === (r = l.videoSSRC) || void 0 === r ? void 0 : null === (i = r.toString) || void 0 === i ? void 0 : i.call(r)) !== o && (null == l ? void 0 : null === (a = l.audioSSRC) || void 0 === a ? void 0 : null === (s = a.toString) || void 0 === s ? void 0 : s.call(a)) !== o) {
                         this.logger.info("Got stale ssrc ".concat(o, " for ").concat(n.kind, " track, user ID ").concat(e));
                         return
                     }
@@ -346,7 +346,7 @@ function(e, t, n) {
                         (null === (t = this.users.get(e)) || void 0 === t ? void 0 : t.videoSSRC) == null && this.destroyOutput(e, n)
                     }
                 }
-            }), this.logger = new s.Logger("UnifiedConnection(".concat(e, ")")), this.videoSupported = c.BROWSER_SUPPORTS_VIDEO;
+            }), this.logger = new a.Logger("UnifiedConnection(".concat(e, ")")), this.videoSupported = c.BROWSER_SUPPORTS_VIDEO;
             let r = this.pc = new RTCPeerConnection({
                 bundlePolicy: "max-bundle",
                 sdpSemantics: "unified-plan"

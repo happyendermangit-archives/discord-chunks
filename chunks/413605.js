@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         InviteTypes: function() {
-            return a.InviteTypes
+            return s.InviteTypes
         },
         getInviteType: function() {
             return _
@@ -11,7 +11,7 @@ function(e, t, n) {
             return d
         },
         isGuildScheduledEventInviteEmbed: function() {
-            return s
+            return a
         },
         isRoleSubscriptionInvite: function() {
             return o
@@ -25,15 +25,15 @@ function(e, t, n) {
     });
     var i = n("924301"),
         r = n("131704"),
-        a = n("245335");
+        s = n("245335");
 
-    function s(e) {
+    function a(e) {
         let t = e.guild_scheduled_event;
         return null != t && (0, i.isEventUpcoming)(t)
     }
 
     function o(e) {
-        return e.target_type === a.InviteTargetTypes.ROLE_SUBSCRIPTIONS_PURCHASE
+        return e.target_type === s.InviteTargetTypes.ROLE_SUBSCRIPTIONS_PURCHASE
     }
 
     function l(e) {
@@ -41,17 +41,17 @@ function(e, t, n) {
     }
 
     function u(e) {
-        return e.target_type === a.InviteTargetTypes.STREAM && null != e.target_user
+        return e.target_type === s.InviteTargetTypes.STREAM && null != e.target_user
     }
 
     function d(e) {
-        return e.target_type === a.InviteTargetTypes.EMBEDDED_APPLICATION
+        return e.target_type === s.InviteTargetTypes.EMBEDDED_APPLICATION
     }
 
     function _(e) {
         var t, n;
         if ("number" == typeof e.type) return e.type;
-        if ((t = e).type === a.InviteTypes.GROUP_DM || null != t.channel && (0, r.isMultiUserDM)(t.channel.type)) return a.InviteTypes.GROUP_DM;
-        return (n = e).type === a.InviteTypes.FRIEND || null == n.guild && null != n.inviter ? a.InviteTypes.FRIEND : a.InviteTypes.GUILD
+        if ((t = e).type === s.InviteTypes.GROUP_DM || null != t.channel && (0, r.isMultiUserDM)(t.channel.type)) return s.InviteTypes.GROUP_DM;
+        return (n = e).type === s.InviteTypes.FRIEND || null == n.guild && null != n.inviter ? s.InviteTypes.FRIEND : s.InviteTypes.GUILD
     }
 }

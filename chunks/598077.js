@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("411104"), n("789020");
     var i = n("149765"),
         r = n("81825"),
-        a = n("864106"),
-        s = n("768581"),
+        s = n("864106"),
+        a = n("768581"),
         o = n("709054"),
         l = n("981631"),
         u = n("308083"),
@@ -33,12 +33,12 @@ function(e, t, n) {
         getAvatarURL(e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                 i = null != e ? this.guildMemberAvatars[e] : void 0;
-            return null != i && null != e ? s.default.getGuildMemberAvatarURLSimple({
+            return null != i && null != e ? a.default.getGuildMemberAvatarURLSimple({
                 guildId: e,
                 avatar: i,
                 userId: this.id,
                 canAnimate: n
-            }) : s.default.getUserAvatarURL(this, n, t)
+            }) : a.default.getUserAvatarURL(this, n, t)
         }
         addGuildAvatarHash(e, t) {
             if (this.guildMemberAvatars[e] === t) return this;
@@ -65,7 +65,7 @@ function(e, t, n) {
                 n = arguments.length > 2 ? arguments[2] : void 0;
             if (null != e) {
                 let i = this.guildMemberAvatars[e];
-                if (null != i) return s.default.getAnimatableSourceWithFallback(t, t => s.default.makeSource(s.default.getGuildMemberAvatarURLSimple({
+                if (null != i) return a.default.getAnimatableSourceWithFallback(t, t => a.default.makeSource(a.default.getGuildMemberAvatarURLSimple({
                     guildId: e,
                     avatar: i,
                     userId: this.id,
@@ -73,7 +73,7 @@ function(e, t, n) {
                     size: n
                 })))
             }
-            return s.default.getAnimatableSourceWithFallback(t, e => s.default.getUserAvatarSource({
+            return a.default.getAnimatableSourceWithFallback(t, e => a.default.getUserAvatarSource({
                 id: this.id,
                 avatar: this.avatar,
                 discriminator: this.discriminator,
@@ -143,13 +143,13 @@ function(e, t, n) {
             return this.avatarDecorationData
         }
         set avatarDecoration(e) {
-            this.avatarDecorationData = (0, a.parseAvatarDecorationData)(e)
+            this.avatarDecorationData = (0, s.parseAvatarDecorationData)(e)
         }
         constructor(e) {
-            var t, n, r, a, s, o, d, _, E, I, T, f, S, h, A, m, N, p, O, R, C, g, L, v, D, M, y, P, U, b;
+            var t, n, r, s, a, o, d, _, E, I, T, f, S, h, A, m, N, p, O, R, C, g, L, v, D, M, y, P, U, b;
             super(), c(this, "id", void 0), c(this, "username", void 0), c(this, "discriminator", void 0), c(this, "avatar", void 0), c(this, "avatarDecorationData", void 0), c(this, "banner", void 0), c(this, "email", void 0), c(this, "verified", void 0), c(this, "bot", void 0), c(this, "system", void 0), c(this, "mfaEnabled", void 0), c(this, "mobile", void 0), c(this, "desktop", void 0), c(this, "premiumType", void 0), c(this, "flags", void 0), c(this, "publicFlags", void 0), c(this, "purchasedFlags", void 0), c(this, "premiumUsageFlags", void 0), c(this, "phone", void 0), c(this, "nsfwAllowed", void 0), c(this, "guildMemberAvatars", void 0), c(this, "hasBouncedEmail", void 0), c(this, "personalConnectionId", void 0), c(this, "globalName", void 0), c(this, "clan", void 0), c(this, "hasFlag", e => !1), c(this, "isStaff", () => !1), c(this, "isStaffPersonal", () => !1), c(this, "hasAnyStaffLevel", () => !1);
             let G = null !== (n = e.premium_type) && void 0 !== n ? n : e.premiumType;
-            this.id = e.id, this.username = null !== (r = e.username) && void 0 !== r ? r : "", this.discriminator = null !== (a = e.discriminator) && void 0 !== a ? a : l.NON_USER_BOT_DISCRIMINATOR, this.avatar = null !== (s = e.avatar) && void 0 !== s ? s : null, this.avatarDecoration = null !== (o = e.avatar_decoration_data) && void 0 !== o ? o : e.avatarDecorationData, this.email = null !== (d = e.email) && void 0 !== d ? d : null, this.verified = null !== (_ = e.verified) && void 0 !== _ && _, this.bot = null !== (E = e.bot) && void 0 !== E && E, this.system = null !== (I = e.system) && void 0 !== I && I, this.mfaEnabled = null !== (f = null !== (T = e.mfa_enabled) && void 0 !== T ? T : e.mfaEnabled) && void 0 !== f && f, this.mobile = null !== (S = e.mobile) && void 0 !== S && S, this.desktop = null !== (h = e.desktop) && void 0 !== h && h, this.premiumType = G === l.PREMIUM_TYPE_NONE ? null : G, this.flags = null !== (A = e.flags) && void 0 !== A ? A : 0, this.publicFlags = null !== (N = null !== (m = e.public_flags) && void 0 !== m ? m : e.publicFlags) && void 0 !== N ? N : 0, this.purchasedFlags = null !== (O = null !== (p = e.purchased_flags) && void 0 !== p ? p : e.purchasedFlags) && void 0 !== O ? O : 0, this.premiumUsageFlags = null !== (C = null !== (R = e.premium_usage_flags) && void 0 !== R ? R : e.premiumUsageFlags) && void 0 !== C ? C : 0, this.phone = null !== (g = e.phone) && void 0 !== g ? g : null, this.nsfwAllowed = null !== (L = e.nsfw_allowed) && void 0 !== L ? L : e.nsfwAllowed, this.guildMemberAvatars = null !== (v = e.guildMemberAvatars) && void 0 !== v ? v : {}, this.hasBouncedEmail = null !== (M = null !== (D = e.has_bounced_email) && void 0 !== D ? D : e.hasBouncedEmail) && void 0 !== M && M, this.personalConnectionId = null !== (P = null !== (y = e.personal_connection_id) && void 0 !== y ? y : e.personalConnectionId) && void 0 !== P ? P : null, this.globalName = null !== (U = e.global_name) && void 0 !== U ? U : e.globalName, this.banner = e.banner, this.clan = (0, u.ensureUserClanData)(null !== (b = e.clan) && void 0 !== b ? b : null), Object.defineProperties(this, {
+            this.id = e.id, this.username = null !== (r = e.username) && void 0 !== r ? r : "", this.discriminator = null !== (s = e.discriminator) && void 0 !== s ? s : l.NON_USER_BOT_DISCRIMINATOR, this.avatar = null !== (a = e.avatar) && void 0 !== a ? a : null, this.avatarDecoration = null !== (o = e.avatar_decoration_data) && void 0 !== o ? o : e.avatarDecorationData, this.email = null !== (d = e.email) && void 0 !== d ? d : null, this.verified = null !== (_ = e.verified) && void 0 !== _ && _, this.bot = null !== (E = e.bot) && void 0 !== E && E, this.system = null !== (I = e.system) && void 0 !== I && I, this.mfaEnabled = null !== (f = null !== (T = e.mfa_enabled) && void 0 !== T ? T : e.mfaEnabled) && void 0 !== f && f, this.mobile = null !== (S = e.mobile) && void 0 !== S && S, this.desktop = null !== (h = e.desktop) && void 0 !== h && h, this.premiumType = G === l.PREMIUM_TYPE_NONE ? null : G, this.flags = null !== (A = e.flags) && void 0 !== A ? A : 0, this.publicFlags = null !== (N = null !== (m = e.public_flags) && void 0 !== m ? m : e.publicFlags) && void 0 !== N ? N : 0, this.purchasedFlags = null !== (O = null !== (p = e.purchased_flags) && void 0 !== p ? p : e.purchasedFlags) && void 0 !== O ? O : 0, this.premiumUsageFlags = null !== (C = null !== (R = e.premium_usage_flags) && void 0 !== R ? R : e.premiumUsageFlags) && void 0 !== C ? C : 0, this.phone = null !== (g = e.phone) && void 0 !== g ? g : null, this.nsfwAllowed = null !== (L = e.nsfw_allowed) && void 0 !== L ? L : e.nsfwAllowed, this.guildMemberAvatars = null !== (v = e.guildMemberAvatars) && void 0 !== v ? v : {}, this.hasBouncedEmail = null !== (M = null !== (D = e.has_bounced_email) && void 0 !== D ? D : e.hasBouncedEmail) && void 0 !== M && M, this.personalConnectionId = null !== (P = null !== (y = e.personal_connection_id) && void 0 !== y ? y : e.personalConnectionId) && void 0 !== P ? P : null, this.globalName = null !== (U = e.global_name) && void 0 !== U ? U : e.globalName, this.banner = e.banner, this.clan = (0, u.ensureUserClanData)(null !== (b = e.clan) && void 0 !== b ? b : null), Object.defineProperties(this, {
                 hasFlag: {
                     writable: !1,
                     configurable: !1,

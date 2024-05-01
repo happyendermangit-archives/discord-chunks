@@ -10,9 +10,9 @@ function(e, t, n) {
         }
     }), n("47120"), n("724458");
     var r = n("952639"),
-        a = n.n(r),
-        s = n("605906"),
-        o = n.n(s),
+        s = n.n(r),
+        a = n("605906"),
+        o = n.n(a),
         l = n("286379"),
         u = n("570140"),
         d = n("147913"),
@@ -66,11 +66,11 @@ function(e, t, n) {
                         var i, r;
                         let t = null !== (i = e.attachments) && void 0 !== i ? i : [],
                             n = null !== (r = e.embeds) && void 0 !== r ? r : [],
-                            a = t.filter(e => (0, R.isMediaObscured)({
+                            s = t.filter(e => (0, R.isMediaObscured)({
                                 type: R.ObscuredMediaTypes.Attachment,
                                 media: e
                             }, !0)),
-                            s = n.filter(e => (0, R.isMediaObscured)({
+                            a = n.filter(e => (0, R.isMediaObscured)({
                                 type: R.ObscuredMediaTypes.Embed,
                                 media: e
                             }, !0));
@@ -79,8 +79,8 @@ function(e, t, n) {
                             channelId: e.channel_id,
                             numOfAttachments: t.length,
                             numOfEmbeds: n.length,
-                            numOfExplicitAttachments: a.length,
-                            numOfExplicitEmbeds: s.length
+                            numOfExplicitAttachments: s.length,
+                            numOfExplicitEmbeds: a.length
                         })
                     }(0, R.trackScanTiming)(n, t)
                 }(e, t), delete M[n], !0
@@ -130,15 +130,15 @@ function(e, t, n) {
                 }, v)
             })
         });
-        let a = n || new Set(r.map(e => e.channel_id)).size > 1;
+        let s = n || new Set(r.map(e => e.channel_id)).size > 1;
         i ? setTimeout(() => {
-            b(r.filter(e => null != M[y(e)]), a)
-        }, Math.random() * D) : b(r, a)
+            b(r.filter(e => null != M[y(e)]), s)
+        }, Math.random() * D) : b(r, s)
     }
 
     function w(e) {
         return e.reduce((e, t) => {
-            var n, r, a, s, o, l, u, d;
+            var n, r, s, a, o, l, u, d;
             null == e[t.channel_id] && (e[t.channel_id] = {
                 numOfAttachments: 0,
                 numOfAttachmentsPendingScan: 0,
@@ -146,7 +146,7 @@ function(e, t, n) {
                 numOfEmbedsPendingScan: 0
             });
             let _ = e[t.channel_id];
-            return _.numOfAttachments += null !== (o = null === (n = t.attachments) || void 0 === n ? void 0 : n.length) && void 0 !== o ? o : 0, _.numOfEmbeds += null !== (l = null === (r = t.embeds) || void 0 === r ? void 0 : r.length) && void 0 !== l ? l : 0, _.numOfAttachmentsPendingScan += null !== (u = null === (a = t.attachments) || void 0 === a ? void 0 : a.filter(e => (0, N.shouldScanAttachment)(e, i)).length) && void 0 !== u ? u : 0, _.numOfEmbedsPendingScan += null !== (d = null == t ? void 0 : null === (s = t.embeds) || void 0 === s ? void 0 : s.filter(e => (0, N.shouldScanEmbed)(e, i)).length) && void 0 !== d ? d : 0, {
+            return _.numOfAttachments += null !== (o = null === (n = t.attachments) || void 0 === n ? void 0 : n.length) && void 0 !== o ? o : 0, _.numOfEmbeds += null !== (l = null === (r = t.embeds) || void 0 === r ? void 0 : r.length) && void 0 !== l ? l : 0, _.numOfAttachmentsPendingScan += null !== (u = null === (s = t.attachments) || void 0 === s ? void 0 : s.filter(e => (0, N.shouldScanAttachment)(e, i)).length) && void 0 !== u ? u : 0, _.numOfEmbedsPendingScan += null !== (d = null == t ? void 0 : null === (a = t.embeds) || void 0 === a ? void 0 : a.filter(e => (0, N.shouldScanEmbed)(e, i)).length) && void 0 !== d ? d : 0, {
                 ...e,
                 [t.channel_id]: _
             }
@@ -184,13 +184,13 @@ function(e, t, n) {
     }
 
     function k(e) {
-        var t, n, i, r, a, s;
+        var t, n, i, r, s, a;
         let {
             message: o
         } = e;
         if (!(0, O.isEligibleForExplicitMediaRedaction)() || null == o.channel_id || null == o.id || (null === (t = o.author) || void 0 === t ? void 0 : t.id) === I.default.getId() || null == o.embeds && null == o.attachments || (null === (n = o.embeds) || void 0 === n ? void 0 : n.length) === 0 && (null === (i = o.attachments) || void 0 === i ? void 0 : i.length) === 0) return !1;
         if (!(0, N.hasUnscannedAttachmentsOrEmbedsForTimeout)(o)) {
-            let e = null !== (s = null !== (a = S.default.getMessage(o.channel_id, o.id)) && void 0 !== a ? a : C.default.getMessage(o.id, o.channel_id)) && void 0 !== s ? s : null === (r = E.default.getMessage(o.channel_id, o.id)) || void 0 === r ? void 0 : r.message;
+            let e = null !== (a = null !== (s = S.default.getMessage(o.channel_id, o.id)) && void 0 !== s ? s : C.default.getMessage(o.id, o.channel_id)) && void 0 !== a ? a : null === (r = E.default.getMessage(o.channel_id, o.id)) || void 0 === r ? void 0 : r.message;
             null != e && !(0, N.hasUnscannedAttachmentsOrEmbedsForTimeout)((0, _.updateMessageRecord)(e, o)) && U(e, R.TimeoutCancelSource.UPDATE)
         }
         let l = h.default.getChannelId(),
@@ -207,10 +207,10 @@ function(e, t, n) {
         let {
             channelId: i,
             message: r,
-            optimistic: a,
-            isPushNotification: s
+            optimistic: s,
+            isPushNotification: a
         } = e;
-        if (!(0, O.isEligibleForExplicitMediaRedaction)() || a || s || null == i || (null === (t = r.author) || void 0 === t ? void 0 : t.id) === I.default.getId()) return !1;
+        if (!(0, O.isEligibleForExplicitMediaRedaction)() || s || a || null == i || (null === (t = r.author) || void 0 === t ? void 0 : t.id) === I.default.getId()) return !1;
         let o = h.default.getChannelId(),
             l = T.default.getCurrentSidebarChannelId(o),
             u = i === o || i === l,
@@ -239,7 +239,7 @@ function(e, t, n) {
             messages: t
         } = e;
         if (!(0, O.isEligibleForExplicitMediaRedaction)() || null == t) return !1;
-        let n = a()(t);
+        let n = s()(t);
         return B(o()(n, (e, t) => e.id === t.id && e.channel_id === t.channel_id))
     }
 

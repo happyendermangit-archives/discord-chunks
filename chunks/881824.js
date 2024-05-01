@@ -29,8 +29,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("952265"),
-        a = n("359110"),
-        s = n("314897"),
+        s = n("359110"),
+        a = n("314897"),
         o = n("88751"),
         l = n("427679"),
         u = n("513449"),
@@ -96,7 +96,7 @@ function(e, t, n) {
     }
 
     function h(e) {
-        let t = s.default.getId(),
+        let t = a.default.getId(),
             n = (0, d.getStageBlockedUsersCount)(e);
         return !o.default.isModerator(t, e) && n > 0
     }
@@ -104,11 +104,11 @@ function(e, t, n) {
     function A(e, t) {
         var d;
         let _ = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-        t !== e.id && (0, u.setIsOnStartStageScreen)(!0), d = e, (0, a.transitionToChannel)(d.id), t !== e.id && _ && ! function(e) {
-            let t = s.default.getId(),
-                a = o.default.isModerator(t, e.id),
+        t !== e.id && (0, u.setIsOnStartStageScreen)(!0), d = e, (0, s.transitionToChannel)(d.id), t !== e.id && _ && ! function(e) {
+            let t = a.default.getId(),
+                s = o.default.isModerator(t, e.id),
                 u = l.default.isLive(e.id);
-            a && !u ? E(e) : a && u && function(e) {
+            s && !u ? E(e) : s && u && function(e) {
                 (0, r.openModalLazy)(async () => {
                     let {
                         default: t

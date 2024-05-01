@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("442837"),
-        s = n("481060"),
+        s = n("442837"),
+        a = n("481060"),
         o = n("923928"),
         l = n("468026"),
         u = n("503856"),
@@ -20,12 +20,12 @@ function(e, t, n) {
         let e = r.useRef(null);
 
         function t() {
-            null !== e.current && ((0, s.closeModal)(e.current), e.current = null)
+            null !== e.current && ((0, a.closeModal)(e.current), e.current = null)
         }
-        let [o, I] = (0, a.useStateFromStoresArray)([d.default], () => [d.default.shouldShowWarning(), d.default.isAFKChannel()], []), T = r.useCallback(() => {
+        let [o, I] = (0, s.useStateFromStoresArray)([d.default], () => [d.default.shouldShowWarning(), d.default.isAFKChannel()], []), T = r.useCallback(() => {
             let t = "",
                 n = "";
-            I ? (t = _.default.Messages.SUPPRESSED_AFK_TITLE, n = _.default.Messages.SUPPRESSED_AFK_BODY) : (t = _.default.Messages.SUPPRESSED, n = _.default.Messages.SUPPRESSED_PERMISSION_BODY), e.current = (0, s.openModal)(e => (0, i.jsx)(l.default, {
+            I ? (t = _.default.Messages.SUPPRESSED_AFK_TITLE, n = _.default.Messages.SUPPRESSED_AFK_BODY) : (t = _.default.Messages.SUPPRESSED, n = _.default.Messages.SUPPRESSED_PERMISSION_BODY), e.current = (0, a.openModal)(e => (0, i.jsx)(l.default, {
                 title: t,
                 body: n,
                 onConfirm: c,
@@ -35,7 +35,7 @@ function(e, t, n) {
                 ...e
             }))
         }, [I]), f = r.useCallback(() => {
-            (0, s.openModalLazy)(async () => {
+            (0, a.openModalLazy)(async () => {
                 let {
                     default: e
                 } = await Promise.all([n.e("99387"), n.e("41281")]).then(n.bind(n, "669732"));

@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("866442"),
         r = n("442837"),
-        a = n("410030"),
-        s = n("607070"),
+        s = n("410030"),
+        a = n("607070"),
         o = n("220082"),
         l = n("44315"),
         u = n("168631"),
@@ -22,7 +22,7 @@ function(e, t, n) {
             pendingThemeColors: I,
             pendingAvatar: T,
             isPreview: f
-        } = e, S = (0, a.default)(), h = (0, r.useStateFromStores)([s.default], () => s.default.syncProfileThemeWithUserTheme), A = null != T ? T : null == c ? void 0 : c.getAvatarURL(null == E ? void 0 : E.guildId, 80), m = (0, l.useColorValue)(d.Color.PRIMARY_530).hex, [N, p] = (0, o.useAvatarColors)(A, m, !1);
+        } = e, S = (0, s.default)(), h = (0, r.useStateFromStores)([a.default], () => a.default.syncProfileThemeWithUserTheme), A = null != T ? T : null == c ? void 0 : c.getAvatarURL(null == E ? void 0 : E.guildId, 80), m = (0, l.useColorValue)(d.Color.PRIMARY_530).hex, [N, p] = (0, o.useAvatarColors)(A, m, !1);
         if (!(null == E ? void 0 : E.canEditThemes) && !f) return {
             theme: S,
             primaryColor: null,

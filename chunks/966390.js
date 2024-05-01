@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120"), n("789020");
     var i = n("481060"),
         r = n("570140"),
-        a = n("430742"),
-        s = n("904245"),
+        s = n("430742"),
+        a = n("904245"),
         o = n("166459"),
         l = n("531643"),
         u = n("881052"),
@@ -89,7 +89,7 @@ function(e, t, n) {
                     failureCode: t,
                     errorMessage: null == i ? void 0 : i.msg
                 }), t === L.AbortCodes.EXPLICIT_CONTENT) {
-                s.default.sendExplicitMediaClydeError(c, null == n ? void 0 : n.attachments, I.TrackMediaRedactionContext.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
+                a.default.sendExplicitMediaClydeError(c, null == n ? void 0 : n.attachments, I.TrackMediaRedactionContext.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
                 return
             }
             if (t === L.AbortCodes.AUTOMOD_MESSAGE_BLOCKED) {
@@ -116,7 +116,7 @@ function(e, t, n) {
             }, t)) : (0, l.openUploadError)({
                 title: v.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
                 help: v.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_RETRY_HELP
-            }), "" !== w.content && "" === O.default.getDraft(c, M) && a.default.saveDraft(c, w.content, M), 0 === R.default.getUploadCount(c, M) && o.default.setUploads({
+            }), "" !== w.content && "" === O.default.getDraft(c, M) && s.default.saveDraft(c, w.content, M), 0 === R.default.getUploadCount(c, M) && o.default.setUploads({
                 channelId: c,
                 uploads: D,
                 draftType: M
@@ -138,9 +138,9 @@ function(e, t, n) {
                 files: n,
                 draftType: i,
                 isThumbnail: r = !1,
-                filesMetadata: a = []
-            } = e, s = Array.from(n).map((e, n) => {
-                let i = null != a ? a[n] : {};
+                filesMetadata: s = []
+            } = e, a = Array.from(n).map((e, n) => {
+                let i = null != s ? s[n] : {};
                 return new _.CloudUpload({
                     file: e,
                     platform: c.UploadPlatform.WEB,
@@ -150,7 +150,7 @@ function(e, t, n) {
             });
             D({
                 channelId: t,
-                uploads: s,
+                uploads: a,
                 draftType: i
             })
         },
@@ -172,7 +172,7 @@ function(e, t, n) {
                 T.content = d.content, T.tts = d.tts, T.channel_id = d.channel_id;
                 let e = N.default.getPendingReply(n);
                 if (null != e) {
-                    let t = s.default.getSendMessageOptionsForReply(e);
+                    let t = a.default.getSendMessageOptionsForReply(e);
                     T.type = L.MessageTypes.REPLY, T.message_reference = t.messageReference, T.allowed_mentions = t.allowedMentions, (0, m.deletePendingReply)(n)
                 }
             }
@@ -199,7 +199,7 @@ function(e, t, n) {
                         fileItems: t.items,
                         failureCode: _
                     }), _ === L.AbortCodes.EXPLICIT_CONTENT) {
-                    s.default.sendExplicitMediaClydeError(n, null == c ? void 0 : c.attachments, I.TrackMediaRedactionContext.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
+                    a.default.sendExplicitMediaClydeError(n, null == c ? void 0 : c.attachments, I.TrackMediaRedactionContext.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
                     return
                 }(0, l.openUploadError)({
                     title: v.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
@@ -213,7 +213,7 @@ function(e, t, n) {
                             })
                         }
                     })
-                }), "" !== T.content && "" === O.default.getDraft(n, u) && a.default.saveDraft(n, T.content, u)
+                }), "" !== T.content && "" === O.default.getDraft(n, u) && s.default.saveDraft(n, T.content, u)
             }), f.on("complete", e => {
                 r.default.dispatch({
                     type: "UPLOAD_COMPLETE",

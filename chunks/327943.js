@@ -2,8 +2,8 @@ function(e, t, n) {
     "use strict";
     n.r(t);
     var i, r = n("442837"),
-        a = n("570140"),
-        s = n("594174"),
+        s = n("570140"),
+        a = n("594174"),
         o = n("626135"),
         l = n("74538"),
         u = n("997945"),
@@ -28,14 +28,14 @@ function(e, t, n) {
         T = !1,
         f = !0,
         S = () => {
-            f = !l.default.canUsePremiumAppIcons(s.default.getCurrentUser())
+            f = !l.default.canUsePremiumAppIcons(a.default.getCurrentUser())
         },
         h = e => {
             if (I.client.desktop = e, !f) {
                 var t;
                 o.default.track(d.AnalyticEvents.APP_ICON_UPDATED, {
                     icon_id: e,
-                    user_premium_tier: null === (t = s.default.getCurrentUser()) || void 0 === t ? void 0 : t.premiumType,
+                    user_premium_tier: null === (t = a.default.getCurrentUser()) || void 0 === t ? void 0 : t.premiumType,
                     icon_premium_tier: e !== u.FreemiumAppIconIds.DEFAULT ? c.PremiumTypes.TIER_2 : null
                 })
             }
@@ -49,7 +49,7 @@ function(e, t, n) {
     }
     class m extends(i = r.default.PersistedStore) {
         initialize(e) {
-            null != e && (I = e), this.waitFor(s.default), this.syncWith([s.default], S)
+            null != e && (I = e), this.waitFor(a.default), this.syncWith([a.default], S)
         }
         get isEditorOpen() {
             return T
@@ -65,7 +65,7 @@ function(e, t, n) {
             return null == I ? void 0 : null === (e = I.client) || void 0 === e ? void 0 : e.desktop
         }
     }
-    E(m, "displayName", "AppIconPersistedStoreState"), E(m, "persistKey", "AppIconPersistedStoreState"), t.default = new m(a.default, {
+    E(m, "displayName", "AppIconPersistedStoreState"), E(m, "persistKey", "AppIconPersistedStoreState"), t.default = new m(s.default, {
         APP_ICON_UPDATED: function(e) {
             let {
                 id: t

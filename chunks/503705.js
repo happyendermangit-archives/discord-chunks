@@ -4,17 +4,17 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("960259"),
-        a = n("467949"),
-        s = n("325767");
+        s = n("467949"),
+        a = n("325767");
     t.default = (0, r.replaceIcon)(function(e) {
         let {
             width: t = 24,
             height: n = 24,
             color: r = "currentColor",
-            ...a
+            ...s
         } = e;
         return (0, i.jsxs)("svg", {
-            ...(0, s.default)(a),
+            ...(0, a.default)(s),
             fill: "none",
             xmlns: "http://www.w3.org/2000/svg",
             width: t,
@@ -40,7 +40,7 @@ function(e, t, n) {
                 })
             })]
         })
-    }, a.SoundboardIcon, void 0, {
+    }, s.SoundboardIcon, void 0, {
         size: 24
     })
 }

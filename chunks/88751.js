@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("47120"), n("724458");
-    var i, r, a, s, o, l, u = n("392711"),
+    var i, r, s, a, o, l, u = n("392711"),
         d = n.n(u),
         _ = n("442837"),
         c = n("570140"),
@@ -14,7 +14,7 @@ function(e, t, n) {
         A = n("700785"),
         m = n("146085"),
         N = n("590415");
-    (a = i || (i = {})).SPEAKER = "speaker", a.MODERATOR = "moderator";
+    (s = i || (i = {})).SPEAKER = "speaker", s.MODERATOR = "moderator";
     let p = {},
         O = {
             speaker: !1,
@@ -26,17 +26,17 @@ function(e, t, n) {
         null == p[t] && (p[t] = {});
         let i = function(e, t) {
             var n, i, r;
-            let a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                s = E.default.getChannel(t),
-                o = null == s ? void 0 : s.getGuildId(),
+            let s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+                a = E.default.getChannel(t),
+                o = null == a ? void 0 : a.getGuildId(),
                 l = f.default.getGuild(o);
-            if (null == l || null == s || !s.isGuildStageVoice()) return O;
+            if (null == l || null == a || !a.isGuildStageVoice()) return O;
             return {
                 speaker: function(e, t) {
                     let n = h.default.getVoiceStateForChannel(t, e);
                     return (0, N.getAudienceRequestToSpeakState)(n) === N.RequestToSpeakStates.ON_STAGE
                 }(e, t),
-                moderator: a ? (n = e, i = l, r = s, A.can({
+                moderator: s ? (n = e, i = l, r = a, A.can({
                     permission: m.MODERATE_STAGE_CHANNEL_PERMISSIONS,
                     user: n,
                     context: i,
@@ -116,12 +116,12 @@ function(e, t, n) {
             return R(e, t, i)
         }
     }
-    l = "StageChannelRoleStore", (o = "displayName") in(s = D) ? Object.defineProperty(s, o, {
+    l = "StageChannelRoleStore", (o = "displayName") in(a = D) ? Object.defineProperty(a, o, {
         value: l,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : s[o] = l, t.default = new D(c.default, {
+    }) : a[o] = l, t.default = new D(c.default, {
         CHANNEL_UPDATES: function(e) {
             let {
                 channels: t

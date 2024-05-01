@@ -2,8 +2,8 @@ function(e, t, n) {
     "use strict";
     n.r(t);
     var i, r = n("442837"),
-        a = n("570140"),
-        s = n("626135"),
+        s = n("570140"),
+        a = n("626135"),
         o = n("358085"),
         l = n("981631");
 
@@ -27,7 +27,7 @@ function(e, t, n) {
         _ = d;
 
     function c(e, t) {
-        !__OVERLAY__ && s.default.track(e, t)
+        !__OVERLAY__ && a.default.track(e, t)
     }
 
     function E(e) {
@@ -78,7 +78,7 @@ function(e, t, n) {
             ...e
         };
         return t.disabledSounds = t.disabledSounds || [], t.disableUnreadBadge = t.disableUnreadBadge || !1, t.taskbarFlash = null == t.taskbarFlash || t.taskbarFlash, t.ttsType = t.ttsType || l.TTSNotificationTypes.NEVER, null == t.desktopType && (t.desktopType = o.isPlatformEmbedded ? l.DesktopNotificationTypes.ALL : l.DesktopNotificationTypes.NEVER), t
-    }]), t.default = new I(a.default, {
+    }]), t.default = new I(s.default, {
         NOTIFICATIONS_SET_DESKTOP_TYPE: E,
         NOTIFICATIONS_SET_TTS_TYPE: function(e) {
             let {

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         isEligibleForInappropriateConversationWarning: function() {
-            return s
+            return a
         },
         useIsEligibleForInappropriateConversationWarning: function() {
             return o
@@ -24,7 +24,7 @@ function(e, t, n) {
                 }
             }]
         }),
-        a = (0, i.createExperiment)({
+        s = (0, i.createExperiment)({
             kind: "user",
             id: "2024-01_inappropriate_conversation_warning_staff_bypass",
             label: "Inappropriate Conversation Warning Staff Bypass",
@@ -40,7 +40,7 @@ function(e, t, n) {
             }]
         });
 
-    function s(e) {
+    function a(e) {
         let {
             location: t,
             autoTrackExposure: n = !1
@@ -51,13 +51,13 @@ function(e, t, n) {
         }, {
             autoTrackExposure: n
         }), {
-            enabled: s
-        } = a.getCurrentConfig({
+            enabled: a
+        } = s.getCurrentConfig({
             location: t
         }, {
             autoTrackExposure: n
         });
-        return i || s
+        return i || a
     }
 
     function o(e) {
@@ -71,12 +71,12 @@ function(e, t, n) {
         }, {
             autoTrackExposure: n
         }), {
-            enabled: s
-        } = a.useExperiment({
+            enabled: a
+        } = s.useExperiment({
             location: t
         }, {
             autoTrackExposure: n
         });
-        return i || s
+        return i || a
     }
 }

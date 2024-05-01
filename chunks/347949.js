@@ -16,8 +16,8 @@ function(e, t, n) {
     }), n("47120"), n("653041");
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("442837"),
         l = n("692547"),
         u = n("622535"),
@@ -42,14 +42,14 @@ function(e, t, n) {
         let {
             game: t,
             isSharedGame: n
-        } = e, a = (0, o.useStateFromStores)([E.default], () => E.default.getApplication(t.applicationId)), s = r.useMemo(() => null == t.duration || 0 === t.duration ? (0, I.getLastPlayedTimestamp)(t, !1) : "".concat((0, I.getLastPlayedTimestamp)(t, !0), " — ").concat((0, I.getTimePlayedLastWeek)(t)), [t]), u = r.useRef(null), [T, f] = r.useState(!1);
+        } = e, s = (0, o.useStateFromStores)([E.default], () => E.default.getApplication(t.applicationId)), a = r.useMemo(() => null == t.duration || 0 === t.duration ? (0, I.getLastPlayedTimestamp)(t, !1) : "".concat((0, I.getLastPlayedTimestamp)(t, !0), " — ").concat((0, I.getTimePlayedLastWeek)(t)), [t]), u = r.useRef(null), [T, f] = r.useState(!1);
         if (r.useEffect(() => {
                 let e = u.current;
                 null != e && null != e.offsetWidth && null != e.scrollWidth && f(e.offsetWidth < e.scrollWidth)
-            }, []), null == a) return null;
+            }, []), null == s) return null;
         let h = S.default.getApplicationIconURL({
-            id: a.id,
-            icon: a.icon,
+            id: s.id,
+            icon: s.icon,
             size: 40
         });
         return (0, i.jsxs)("div", {
@@ -68,14 +68,14 @@ function(e, t, n) {
                 children: [(0, i.jsxs)("div", {
                     className: C.recentGameTitleContainer,
                     children: [(0, i.jsx)(c.Tooltip, {
-                        text: a.name,
+                        text: s.name,
                         color: c.Tooltip.Colors.PRIMARY,
                         shouldShow: T,
                         children: e => (0, i.jsx)("span", {
                             ref: u,
                             ...e,
                             className: C.recentGameTitle,
-                            children: a.name
+                            children: s.name
                         })
                     }), n && (0, i.jsx)(c.Tooltip, {
                         text: R.default.Messages.USER_RECENT_GAMES_YOU_BOTH_PLAY,
@@ -93,7 +93,7 @@ function(e, t, n) {
                 }), (0, i.jsx)(c.Text, {
                     variant: "text-sm/normal",
                     color: "header-secondary",
-                    children: s
+                    children: a
                 }), t.isNew && (0, i.jsxs)("div", {
                     className: C.newIcon,
                     children: [(0, i.jsx)(_.NewUserLargeIcon, {
@@ -113,14 +113,14 @@ function(e, t, n) {
         let {
             userId: t,
             recentGames: n,
-            currentUserApplicationIds: a,
+            currentUserApplicationIds: s,
             containerClassName: o
         } = e, {
             trackUserProfileAction: l,
             ...d
         } = (0, h.useUserProfileAnalyticsContext)(), [_, c] = r.useState(!1), [E, I] = r.useState(!1);
         return r.useEffect(() => {
-            if (null == a || _ || !E) return;
+            if (null == s || _ || !E) return;
             c(!0);
             let e = [],
                 t = [],
@@ -128,26 +128,26 @@ function(e, t, n) {
             n.forEach(n => {
                 let {
                     applicationId: r,
-                    isNew: s
+                    isNew: a
                 } = n;
-                e.push(r), s && t.push(r), a.has(r) && i.push(r)
+                e.push(r), a && t.push(r), s.has(r) && i.push(r)
             }), (0, A.trackUserProfileRecentGamesViewed)({
                 ...d,
                 applicationIds: e,
                 newApplicationIds: t,
                 sharedApplicationIds: i
             })
-        }, [a, n, c, _, d, E]), (0, i.jsx)(u.VisibilitySensor, {
+        }, [s, n, c, _, d, E]), (0, i.jsx)(u.VisibilitySensor, {
             onChange: I,
             threshold: .25,
             active: !_,
             children: (0, i.jsx)("div", {
-                className: s()(C.recentGames, o),
+                className: a()(C.recentGames, o),
                 children: null == n ? void 0 : n.map(e => {
-                    var n, r, s;
+                    var n, r, a;
                     return (0, i.jsx)(g, {
                         game: e,
-                        isSharedGame: (n = t, r = a, s = e.applicationId, n !== f.default.getId() && null != r && r.has(s))
+                        isSharedGame: (n = t, r = s, a = e.applicationId, n !== f.default.getId() && null != r && r.has(a))
                     }, e.lastSessionId)
                 })
             })
@@ -158,8 +158,8 @@ function(e, t, n) {
         let {
             userId: t,
             maxItems: n = 3,
-            wrapChildren: a,
-            containerClassName: s
+            wrapChildren: s,
+            containerClassName: a
         } = e, {
             recentGames: o,
             currentUserApplicationIds: l,
@@ -191,14 +191,14 @@ function(e, t, n) {
                     })
                 })]
             }), (0, i.jsx)(L, {
-                containerClassName: s,
+                containerClassName: a,
                 userId: t,
                 recentGames: d,
                 currentUserApplicationIds: l
             })]
         });
-        return null != a ? (0, i.jsx)(i.Fragment, {
-            children: a(I)
+        return null != s ? (0, i.jsx)(i.Fragment, {
+            children: s(I)
         }) : I
     }
 
@@ -206,13 +206,13 @@ function(e, t, n) {
         let {
             userId: t,
             containerClassName: n
-        } = e, a = r.useCallback(e => (0, i.jsx)(N.default, {
+        } = e, s = r.useCallback(e => (0, i.jsx)(N.default, {
             children: e
         }), []);
         return (0, i.jsx)(v, {
             userId: t,
             containerClassName: n,
-            wrapChildren: a
+            wrapChildren: s
         })
     }
 
@@ -220,7 +220,7 @@ function(e, t, n) {
         let {
             userId: t,
             containerClassName: n
-        } = e, a = r.useCallback(e => (0, i.jsx)(m.default.Overlay, {
+        } = e, s = r.useCallback(e => (0, i.jsx)(m.default.Overlay, {
             children: (0, i.jsx)(N.default, {
                 children: e
             })
@@ -228,7 +228,7 @@ function(e, t, n) {
         return (0, i.jsx)(v, {
             userId: t,
             containerClassName: n,
-            wrapChildren: a
+            wrapChildren: s
         })
     }
 }

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         buildClanFromServer: function() {
-            return s
+            return a
         },
         getClanDiscoveryAffinity: function() {
             return l
@@ -14,11 +14,11 @@ function(e, t, n) {
     var i = n("116175"),
         r = n("308083");
 
-    function a(e, t) {
+    function s(e, t) {
         return void 0 === e || "" === e ? t : e
     }
 
-    function s(e) {
+    function a(e) {
         let t = (0, i.getRandomClanBadgePreset)(),
             n = (0, r.getRandomClanBrandPreset)();
         return {
@@ -34,13 +34,13 @@ function(e, t, n) {
             banner: e.banner,
             badge: {
                 badgeKind: e.badge,
-                primaryColor: a(e.badge_color_primary, t.primary),
-                secondaryColor: a(e.badge_color_secondary, t.secondary),
+                primaryColor: s(e.badge_color_primary, t.primary),
+                secondaryColor: s(e.badge_color_secondary, t.secondary),
                 imageHash: e.badge_hash
             },
             branding: {
-                primaryColor: a(e.brand_color_primary, n.primary),
-                secondaryColor: a(e.brand_color_secondary, n.secondary)
+                primaryColor: s(e.brand_color_primary, n.primary),
+                secondaryColor: s(e.brand_color_secondary, n.secondary)
             },
             wildcardDescriptors: e.wildcard_descriptors
         }

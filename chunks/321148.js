@@ -2,9 +2,9 @@ function(e, t, n) {
     "use strict";
     n.r(t), n("47120");
     var i, r = n("735250"),
-        a = n("470079"),
-        s = n("120356"),
-        o = n.n(s),
+        s = n("470079"),
+        a = n("120356"),
+        o = n.n(a),
         l = n("481060"),
         u = n("129861"),
         d = n("730749"),
@@ -22,7 +22,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    class S extends(i = a.Component) {
+    class S extends(i = s.Component) {
         render() {
             let {
                 popoutOpen: e
@@ -30,23 +30,23 @@ function(e, t, n) {
                 user: t,
                 analyticsContext: n,
                 disablePopout: i,
-                guildId: a
-            } = this.props, s = {
+                guildId: s
+            } = this.props, a = {
                 location: {
                     ...n.location,
                     object: I.AnalyticsObjects.LIST_ITEM
                 }
             };
             return (0, r.jsx)(l.Popout, {
-                preload: () => (0, _.maybeFetchUserProfileForPopout)(t.id, t.getAvatarURL(a, 80), {
-                    guildId: a
+                preload: () => (0, _.maybeFetchUserProfileForPopout)(t.id, t.getAvatarURL(s, 80), {
+                    guildId: s
                 }),
                 renderPopout: e => (0, r.jsx)(c.default, {
                     ...e,
                     location: "UserListItem",
-                    guildId: a,
+                    guildId: s,
                     userId: t.id,
-                    analyticsParams: s
+                    analyticsParams: a
                 }),
                 position: "left",
                 onRequestClose: this.handleUserPopoutClose,
@@ -76,8 +76,8 @@ function(e, t, n) {
                     className: t,
                     disablePopout: n,
                     onContextMenu: i,
-                    user: a,
-                    status: s,
+                    user: s,
+                    status: a,
                     textClassName: d,
                     nick: _,
                     guildId: c
@@ -92,16 +92,16 @@ function(e, t, n) {
                     onKeyDown: e.onKeyDown,
                     onClick: this.handleClickUser,
                     children: [(0, r.jsx)(l.Avatar, {
-                        src: a.getAvatarURL(c, 24),
+                        src: s.getAvatarURL(c, 24),
                         className: T.avatar,
-                        "aria-label": a.username,
+                        "aria-label": s.username,
                         size: l.AvatarSizes.SIZE_24,
-                        status: s
+                        status: a
                     }), (0, r.jsx)(l.Text, {
                         className: o()(T.memberListItemTag, d),
                         variant: "text-sm/normal",
                         children: (0, r.jsx)(u.default, {
-                            user: a,
+                            user: s,
                             nick: _,
                             usernameClass: T.username,
                             hideDiscriminator: !0

@@ -11,8 +11,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("442837"),
-        a = n("481060"),
-        s = n("410575"),
+        s = n("481060"),
+        a = n("410575"),
         o = n("358221"),
         l = n("418469"),
         u = n("776031"),
@@ -31,14 +31,14 @@ function(e, t, n) {
 
     function p(e, t, n) {
         let i = (0, r.useStateFromStores)([o.default], () => o.default.getSelectedParticipantId(e.id)),
-            a = (0, r.useStateFromStores)([_.default], () => null != i ? _.default.getActiveStreamForStreamKey(i) : null, [i]);
+            s = (0, r.useStateFromStores)([_.default], () => null != i ? _.default.getActiveStreamForStreamKey(i) : null, [i]);
         return (0, r.useStateFromStoresArray)([E.default], () => {
             let i = n.filter(e => e.ownerId !== (null == t ? void 0 : t.id)).map(t => ({
                 stream: t,
                 username: S.default.getName(e.getGuildId(), e.id, E.default.getUser(t.ownerId))
             }));
-            return 1 === i.length && i[0].stream.ownerId === (null == a ? void 0 : a.ownerId) ? [] : i
-        }, [e, a, n, t])
+            return 1 === i.length && i[0].stream.ownerId === (null == s ? void 0 : s.ownerId) ? [] : i
+        }, [e, s, n, t])
     }
 
     function O(e) {
@@ -53,42 +53,42 @@ function(e, t, n) {
             onClose: O,
             onSelect: R,
             appContext: C = A.AppContext.APP
-        } = e, g = c.default.supports(m.Features.DESKTOP_CAPTURE_APPLICATIONS), L = null !== (t = o.find(e => e.ownerId === (null == r ? void 0 : r.id))) && void 0 !== t ? t : null, v = p(n, r, o), D = (0, u.default)(L, C), M = (0, l.default)(L, C, A.NOOP_NULL), y = null == L ? (0, i.jsx)(a.MenuItem, {
+        } = e, g = c.default.supports(m.Features.DESKTOP_CAPTURE_APPLICATIONS), L = null !== (t = o.find(e => e.ownerId === (null == r ? void 0 : r.id))) && void 0 !== t ? t : null, v = p(n, r, o), D = (0, u.default)(L, C), M = (0, l.default)(L, C, A.NOOP_NULL), y = null == L ? (0, i.jsx)(s.MenuItem, {
             id: "share-your-screen",
             label: N.default.Messages.SHARE_YOUR_SCREEN,
             icon: I.default,
             action: S
         }) : (0, i.jsxs)(i.Fragment, {
-            children: [h.isPlatformEmbedded ? (0, i.jsx)(a.MenuItem, {
+            children: [h.isPlatformEmbedded ? (0, i.jsx)(s.MenuItem, {
                 id: "stream-settings",
                 label: N.default.Messages.SCREENSHARE_STREAM_QUALITY,
                 children: D
-            }) : null, E ? M : null, g ? (0, i.jsx)(a.MenuItem, {
+            }) : null, E ? M : null, g ? (0, i.jsx)(s.MenuItem, {
                 id: "change-windows",
                 label: N.default.Messages.SCREENSHARE_CHANGE_WINDOWS,
                 icon: I.default,
                 action: S
-            }) : null, (0, i.jsx)(a.MenuItem, {
+            }) : null, (0, i.jsx)(s.MenuItem, {
                 id: "stop-streaming",
                 label: N.default.Messages.STOP_STREAMING,
                 icon: T.default,
                 action: () => (0, d.default)(L)
             })]
         });
-        return (0, i.jsx)(s.default, {
+        return (0, i.jsx)(a.default, {
             section: A.AnalyticsSections.CONTEXT_MENU,
-            children: (0, i.jsxs)(a.Menu, {
+            children: (0, i.jsxs)(s.Menu, {
                 onSelect: R,
                 navId: "manage-streams",
                 onClose: O,
                 "aria-label": null != L ? N.default.Messages.STOP_STREAMING : N.default.Messages.SHARE_YOUR_SCREEN,
-                children: [(0, i.jsx)(a.MenuGroup, {
+                children: [(0, i.jsx)(s.MenuGroup, {
                     children: v.map(e => {
                         let {
                             stream: t,
                             username: n
                         } = e;
-                        return (0, i.jsx)(a.MenuItem, {
+                        return (0, i.jsx)(s.MenuItem, {
                             id: t.ownerId,
                             label: N.default.Messages.STOP_WATCHING_USER.format({
                                 username: n

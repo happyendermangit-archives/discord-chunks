@@ -11,9 +11,9 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    class a extends i.default {
+    class s extends i.default {
         static createFromServer(e, t) {
-            return new a({
+            return new s({
                 id: e.id,
                 subscriptionId: e.subscription_id,
                 premiumGuildSubscription: null != e.premium_guild_subscription ? {
@@ -35,5 +35,5 @@ function(e, t, n) {
             super(), r(this, "id", void 0), r(this, "subscriptionId", void 0), r(this, "premiumGuildSubscription", void 0), r(this, "canceled", void 0), r(this, "cooldownEndsAt", void 0), r(this, "subscription", void 0), this.id = e.id, this.subscriptionId = e.subscriptionId, this.premiumGuildSubscription = e.premiumGuildSubscription, this.canceled = e.canceled, this.cooldownEndsAt = e.cooldownEndsAt, this.subscription = e.subscription
         }
     }
-    t.default = a
+    t.default = s
 }

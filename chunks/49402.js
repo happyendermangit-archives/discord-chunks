@@ -7,13 +7,13 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        a = n("803997"),
-        s = n.n(a),
+        s = n("803997"),
+        a = n.n(s),
         o = n("789978"),
         l = n("780900");
 
     function u(e, t, n) {
-        let a = (0, l.getScrollbarSpecs)(e);
+        let s = (0, l.getScrollbarSpecs)(e);
         return r.forwardRef(function(u, d) {
             let {
                 children: _,
@@ -40,11 +40,11 @@ function(e, t, n) {
                 dir: E,
                 className: c,
                 scrollerRef: m,
-                specs: a
+                specs: s
             });
             return (0, i.jsx)("div", {
                 ref: m,
-                className: s()(c, {
+                className: a()(c, {
                     [e]: !0,
                     [t]: T,
                     [n]: f

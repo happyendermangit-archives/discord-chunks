@@ -16,9 +16,9 @@ function(e, t, n) {
     }), n("789020"), n("47120");
     var i = n("913527"),
         r = n.n(i),
-        a = n("830121");
+        s = n("830121");
     n("712057");
-    var s = n("292419"),
+    var a = n("292419"),
         o = n("330044"),
         l = n("378233"),
         u = n("360742"),
@@ -45,7 +45,7 @@ function(e, t, n) {
         let {
             reactions: v,
             interactionData: D
-        } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, M = null !== (r = null === (t = e.mentions) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== r ? r : [], y = null !== (l = e.mention_roles) && void 0 !== l ? l : [], P = null !== (T = e.mention_channels) && void 0 !== T ? T : [], U = e.message_reference, b = new Date(e.timestamp), G = e.type === A.MessageTypes.THREAD_CREATED ? [] : (0, a.default)(e.content);
+        } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, M = null !== (r = null === (t = e.mentions) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== r ? r : [], y = null !== (l = e.mention_roles) && void 0 !== l ? l : [], P = null !== (T = e.mention_channels) && void 0 !== T ? T : [], U = e.message_reference, b = new Date(e.timestamp), G = e.type === A.MessageTypes.THREAD_CREATED ? [] : (0, s.default)(e.content);
         let w = null == (p = e).author ? m : null != p.webhook_id ? new _.default(p.author) : null !== (O = I.default.getUser(p.author.id)) && void 0 !== O ? O : new _.default(p.author),
             B = null == e ? void 0 : e.gift_info,
             k = null != e.interaction ? u.default.createFromServer(e.interaction) : null,
@@ -73,7 +73,7 @@ function(e, t, n) {
             }),
             attachments: R(e),
             embeds: g(e),
-            components: (0, s.transformComponents)(null !== (N = e.components) && void 0 !== N ? N : [], {
+            components: (0, a.transformComponents)(null !== (N = e.components) && void 0 !== N ? N : [], {
                 includeEmojiSrc: !1
             }),
             codedLinks: G,
@@ -109,7 +109,7 @@ function(e, t, n) {
             interactionData: e.interactionData
         });
         let n = e;
-        if (null != t.call && (n = n.set("call", C(t.call, e.timestamp))), null != t.attachments && (n = n.set("attachments", R(t))), null != t.content && "" !== t.content && (n = n.set("content", t.content)), null != t.embeds && (n = n.set("embeds", g(t))), t.pinned !== n.pinned && (n = n.set("pinned", t.pinned)), null != n.webhookId && null != t.author && (n = n.set("author", new _.default(t.author))), null != t.flags && t.flags !== n.flags && (n = n.set("flags", t.flags)), null != t.components && (n = n.set("components", (0, s.transformComponents)(t.components, {
+        if (null != t.call && (n = n.set("call", C(t.call, e.timestamp))), null != t.attachments && (n = n.set("attachments", R(t))), null != t.content && "" !== t.content && (n = n.set("content", t.content)), null != t.embeds && (n = n.set("embeds", g(t))), t.pinned !== n.pinned && (n = n.set("pinned", t.pinned)), null != n.webhookId && null != t.author && (n = n.set("author", new _.default(t.author))), null != t.flags && t.flags !== n.flags && (n = n.set("flags", t.flags)), null != t.components && (n = n.set("components", (0, a.transformComponents)(t.components, {
                 includeEmojiSrc: !1
             }))), null != t.role_subscription_data && (n = n.set("roleSubscriptionData", t.role_subscription_data)), null != t.reactions) {
             var i;

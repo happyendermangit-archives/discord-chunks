@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120"), n("653041");
     var i = n("954955"),
         r = n.n(i),
-        a = n("477690"),
-        s = n("624138"),
+        s = n("477690"),
+        a = n("624138"),
         o = n("774643"),
         l = n("888618"),
         u = n("756286");
@@ -18,7 +18,7 @@ function(e, t, n) {
         }) : e[t] = n, e
     }
     let _ = 7.5,
-        c = (0, s.cssValueToNumber)(a.default.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
+        c = (0, a.cssValueToNumber)(s.default.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
         E = 1 / 60;
 
     function I(e, t, n, i) {
@@ -48,8 +48,8 @@ function(e, t, n) {
                 if (null == n[i + 1]) e.quadraticCurveTo(t.x, t.y, t.x, t.y);
                 else {
                     let r = (t.x + n[i + 1].x) / 2,
-                        a = (t.y + n[i + 1].y) / 2;
-                    e.quadraticCurveTo(t.x, t.y, r, a)
+                        s = (t.y + n[i + 1].y) / 2;
+                    e.quadraticCurveTo(t.x, t.y, r, s)
                 }
             }), e.lineTo(0, 0), e.closePath(), e.fillStyle = "#000", e.globalCompositeOperation = "destination-in", e.fill(), e.restore()
         }

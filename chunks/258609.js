@@ -2,8 +2,8 @@ function(e, t, n) {
     "use strict";
     n.r(t), n("47120");
     var i, r = n("442837"),
-        a = n("570140"),
-        s = n("797258"),
+        s = n("570140"),
+        a = n("797258"),
         o = n("979651");
 
     function l(e, t, n) {
@@ -23,7 +23,7 @@ function(e, t, n) {
         T = Object.freeze({});
     class f extends(i = r.default.DeviceSettingsStore) {
         initialize(e) {
-            null != e && (E = e.lastSelectedDeviceByPlatform), this.waitFor(s.default, o.default)
+            null != e && (E = e.lastSelectedDeviceByPlatform), this.waitFor(a.default, o.default)
         }
         getUserAgnosticState() {
             return {
@@ -54,7 +54,7 @@ function(e, t, n) {
             return d
         }
     }
-    l(f, "displayName", "GameConsoleStore"), l(f, "persistKey", "GameConsoleStore"), t.default = new f(a.default, {
+    l(f, "displayName", "GameConsoleStore"), l(f, "persistKey", "GameConsoleStore"), t.default = new f(s.default, {
         REMOTE_SESSION_CONNECT: function(e) {
             let {
                 sessionId: t
@@ -70,7 +70,7 @@ function(e, t, n) {
                 nonce: n,
                 channelId: i,
                 deviceId: r,
-                commandId: a
+                commandId: s
             } = e;
             d = {
                 type: t,
@@ -78,7 +78,7 @@ function(e, t, n) {
                 channelId: i,
                 startedAt: Date.now(),
                 deviceId: r,
-                commandId: a
+                commandId: s
             }
         },
         GAME_CONSOLE_FETCH_DEVICES_START: function(e) {

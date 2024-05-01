@@ -8,7 +8,7 @@ function(e, t, n) {
             return l
         },
         EMOJI_SENTINEL: function() {
-            return a
+            return s
         },
         MENTION_SENTINEL: function() {
             return i
@@ -17,13 +17,13 @@ function(e, t, n) {
             return o
         },
         REACTION_START_SENTINEL: function() {
-            return s
+            return a
         }
     });
     let i = "@",
         r = "#",
-        a = ":",
-        s = "+:",
+        s = ":",
+        a = "+:",
         o = ":",
         l = "/"
 }

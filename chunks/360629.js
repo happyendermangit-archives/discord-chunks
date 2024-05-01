@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         inDesktopNotificationCenterExperiment: function() {
-            return s
+            return a
         },
         useInDesktopNotificationCenterExperiment: function() {
-            return a
+            return s
         }
     });
     var i = n("470079");
@@ -24,7 +24,7 @@ function(e, t, n) {
                 }
             }]
         }),
-        a = () => {
+        s = () => {
             let {
                 enabled: e
             } = r.useExperiment({
@@ -38,7 +38,7 @@ function(e, t, n) {
                 })
             }, []), e
         },
-        s = () => {
+        a = () => {
             let {
                 enabled: e
             } = r.getCurrentConfig({

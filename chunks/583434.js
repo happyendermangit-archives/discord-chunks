@@ -7,17 +7,17 @@ function(e, t, n) {
     }), n("47120");
     var i = n("470079"),
         r = n("399606"),
-        a = n("55563"),
-        s = n("335131"),
+        s = n("55563"),
+        a = n("335131"),
         o = n("597688"),
         l = n("981631");
 
     function u(e) {
-        let t = (0, r.useStateFromStores)([a.default], () => null != e ? a.default.get(e) : null),
+        let t = (0, r.useStateFromStores)([s.default], () => null != e ? s.default.get(e) : null),
             n = null != t && t.productLine !== l.SKUProductLines.COLLECTIBLES,
             [u, d] = (0, r.useStateFromStoresArray)([o.default], () => [o.default.isFetchingProduct(e), o.default.getProduct(e)]);
         return (0, i.useEffect)(() => {
-            null != e && null == d && !n && !u && (0, s.fetchCollectiblesProduct)(e)
+            null != e && null == d && !n && !u && (0, a.fetchCollectiblesProduct)(e)
         }, [e, d, n, u]), {
             product: d,
             isFetching: u

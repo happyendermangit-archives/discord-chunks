@@ -7,14 +7,14 @@ function(e, t, n) {
     }), n("47120"), n("411104");
     var i = n("464847"),
         r = n("289182"),
-        a = n("358085"),
-        s = n("998502");
+        s = n("358085"),
+        a = n("998502");
     let o = "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984";
 
     function l() {
         var e, t, n, i, r, o;
         let l = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        a.isPlatformEmbedded && s.default.updateCrashReporter({
+        s.isPlatformEmbedded && a.default.updateCrashReporter({
             user_id: null !== (e = l.id) && void 0 !== e ? e : "",
             username: null !== (t = l.username) && void 0 !== t ? t : "",
             email: null !== (n = l.email) && void 0 !== n ? n : "",

@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("668781"),
         r = n("812206"),
-        a = n("835873"),
-        s = n("592125"),
+        s = n("835873"),
+        a = n("592125"),
         o = n("430824"),
         l = n("496675"),
         u = n("594174"),
@@ -44,15 +44,15 @@ function(e, t, n) {
         if (null == L) return d.ComponentDispatch.dispatch(O.ComponentActions.SHOW_ACTIVITIES_CHANNEL_SELECTOR, {
             applicationId: n
         }), !1;
-        let b = s.default.getChannel(L);
+        let b = a.default.getChannel(L);
         if (null == b) return !1;
         let G = null != L ? (0, f.getEmbeddedActivityLaunchability)({
             channelId: L,
-            ChannelStore: s.default,
+            ChannelStore: a.default,
             GuildStore: o.default,
             PermissionStore: l.default
         }) : f.EmbeddedActivityLaunchability.NO_CHANNEL;
-        if (G !== f.EmbeddedActivityLaunchability.CAN_LAUNCH) return G === f.EmbeddedActivityLaunchability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION ? (0, a.showActivitiesInvalidPermissionsAlert)() : G === f.EmbeddedActivityLaunchability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS && i.default.show({
+        if (G !== f.EmbeddedActivityLaunchability.CAN_LAUNCH) return G === f.EmbeddedActivityLaunchability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION ? (0, s.showActivitiesInvalidPermissionsAlert)() : G === f.EmbeddedActivityLaunchability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS && i.default.show({
             title: R.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC,
             body: R.default.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS,
             hideActionSheet: !1

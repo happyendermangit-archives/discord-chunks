@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("954955"),
-        s = n.n(a),
+        s = n("954955"),
+        a = n.n(s),
         o = n("143927"),
         l = n("442837"),
         u = n("477690"),
@@ -49,12 +49,12 @@ function(e, t, n) {
         Z = (0, R.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING),
         X = K + 2 * Z,
         Q = z + 2 * Z,
-        q = s()(L.trackStickerSearchEmpty, 200),
-        J = s()(L.trackStickerSearchResultsViewed, 200),
+        q = a()(L.trackStickerSearchEmpty, 200),
+        J = a()(L.trackStickerSearchResultsViewed, 200),
         $ = r.forwardRef(function(e, t) {
-            var a;
+            var s;
             let {
-                containerWidth: s,
+                containerWidth: a,
                 channel: u,
                 onSelectSticker: R,
                 closePopout: K
@@ -64,13 +64,13 @@ function(e, t, n) {
                 analyticsLocations: Z
             } = (0, E.default)(c.default.STICKER_PICKER);
             (0, h.useMaybeFetchPremiumLikelihood)(A.default);
-            let $ = (null === (a = (0, m.usePremiumTrialOffer)()) || void 0 === a ? void 0 : a.subscription_trial) != null,
+            let $ = (null === (s = (0, m.usePremiumTrialOffer)()) || void 0 === s ? void 0 : s.subscription_trial) != null,
                 ee = r.useRef(null),
                 et = r.useRef(null),
                 en = r.useRef(null),
                 ei = (0, C.useStickerPickerUpsellStore)(e => e.showPremiumUpsell),
-                [er, ea] = (0, T.useExpressionPickerStore)(e => [e.searchQuery, e.isSearchSuggestion], o.default),
-                es = r.useRef("");
+                [er, es] = (0, T.useExpressionPickerStore)(e => [e.searchQuery, e.isSearchSuggestion], o.default),
+                ea = r.useRef("");
             r.useImperativeHandle(t, () => ({
                 onPickerOpen: eU
             }));
@@ -78,7 +78,7 @@ function(e, t, n) {
                 el = 0 === eo.filter(e => e.type !== M.StickerCategoryTypes.EMPTY_GUILD_UPSELL).length,
                 eu = (0, f.useExpressionPickerGridWidth)({
                     gridWrapperRef: ee,
-                    containerWidth: s,
+                    containerWidth: a,
                     showingEmptyState: el,
                     listPaddingLeft: H,
                     listScrollbarWidth: 8
@@ -164,7 +164,7 @@ function(e, t, n) {
                 null != ef && [...ef.values()].forEach(e => {
                     i += e.length
                 }), (0, L.trackStickerPickerOpen)({
-                    containerWidth: s,
+                    containerWidth: a,
                     favoriteStickers: eI,
                     frequentlyUsedStickers: eT,
                     guildStickers: t,
@@ -172,10 +172,10 @@ function(e, t, n) {
                 })
             };
             r.useEffect(() => {
-                "" === es.current && "" !== er && (0, L.trackStickerSearchStart)(), es.current = er
+                "" === ea.current && "" !== er && (0, L.trackStickerSearchStart)(), ea.current = er
             }, [er]), r.useEffect(() => {
-                0 === eA ? q(er) : J(er, eA, ea)
-            }, [er, eA, ea]), r.useLayoutEffect(() => {
+                0 === eA ? q(er) : J(er, eA, es)
+            }, [er, eA, es]), r.useLayoutEffect(() => {
                 var e;
                 null === (e = en.current) || void 0 === e || e.focus()
             }, []);

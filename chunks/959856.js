@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("773603"), n("411104"), n("47120"), n("600040");
     var i = n("264344"),
         r = n.n(i),
-        a = n("259443"),
-        s = n("47770"),
+        s = n("259443"),
+        a = n("47770"),
         o = n("174498"),
         l = n.n(o),
         u = n("839548"),
@@ -34,8 +34,8 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    let R = new a.Logger("MediaEngineWebRTC");
-    class C extends s.default {
+    let R = new s.Logger("MediaEngineWebRTC");
+    class C extends a.default {
         destroy() {
             null != this.voiceActivityInput && (this.voiceActivityInput.destroy(), this.voiceActivityInput = null), this.eachConnection(e => e.destroy()), this.emit(d.MediaEngineEvent.Destroy), this.removeAllListeners()
         }
@@ -98,8 +98,8 @@ function(e, t, n) {
             let {
                 ssrc: i,
                 address: r,
-                port: a,
-                modes: s,
+                port: s,
+                modes: a,
                 streamUserId: o,
                 streamParameters: l
             } = n, _ = (0, I.makeConnection)(e, t, this.getAudioContext(), l);

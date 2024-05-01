@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("653041"), n("47120"), n("724458");
-    var i, r, a, s, o = n("442837"),
+    var i, r, s, a, o = n("442837"),
         l = n("570140"),
         u = n("740504"),
         d = n("853856"),
@@ -100,12 +100,12 @@ function(e, t, n) {
             }(e) : m
         }
     }
-    s = "GuildCategoryStore", (a = "displayName") in(r = D) ? Object.defineProperty(r, a, {
-        value: s,
+    a = "GuildCategoryStore", (s = "displayName") in(r = D) ? Object.defineProperty(r, s, {
+        value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[a] = s, t.default = new D(l.default, {
+    }) : r[s] = a, t.default = new D(l.default, {
         CHANNEL_SELECT: function(e) {
             let {
                 guildId: t

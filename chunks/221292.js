@@ -19,8 +19,8 @@ function(e, t, n) {
     }), n("653041");
     var i = n("367907"),
         r = n("271383"),
-        a = n("158776"),
-        s = n("699516"),
+        s = n("158776"),
+        a = n("699516"),
         o = n("800599"),
         l = n("594174"),
         u = n("626135"),
@@ -36,20 +36,20 @@ function(e, t, n) {
                 userProfile: n,
                 guildMember: i,
                 guildMemberProfile: r
-            } = e, a = null != n ? n : r, s = [];
-            if ((null == i ? void 0 : i.nick) && s.push(E.TrackUserProfileProperties.NICKNAME), (null == a ? void 0 : a.pronouns) && s.push(E.TrackUserProfileProperties.PRONOUNS), null == t ? void 0 : t.avatar) {
+            } = e, s = null != n ? n : r, a = [];
+            if ((null == i ? void 0 : i.nick) && a.push(E.TrackUserProfileProperties.NICKNAME), (null == s ? void 0 : s.pronouns) && a.push(E.TrackUserProfileProperties.PRONOUNS), null == t ? void 0 : t.avatar) {
                 let e = (0, d.isAnimatedIconHash)(null == t ? void 0 : t.avatar);
-                s.push(e ? E.TrackUserProfileProperties.ANIMATED_AVATAR : E.TrackUserProfileProperties.AVATAR)
+                a.push(e ? E.TrackUserProfileProperties.ANIMATED_AVATAR : E.TrackUserProfileProperties.AVATAR)
             }
-            if (null == a ? void 0 : a.banner) {
-                let e = (0, d.isAnimatedIconHash)(null == a ? void 0 : a.banner);
-                s.push(e ? E.TrackUserProfileProperties.ANIMATED_BANNER : E.TrackUserProfileProperties.BANNER)
+            if (null == s ? void 0 : s.banner) {
+                let e = (0, d.isAnimatedIconHash)(null == s ? void 0 : s.banner);
+                a.push(e ? E.TrackUserProfileProperties.ANIMATED_BANNER : E.TrackUserProfileProperties.BANNER)
             }
-            return (null == a ? void 0 : a.bio) && s.push(E.TrackUserProfileProperties.BIO), (null == a ? void 0 : a.themeColors) != null && void 0 !== a.themeColors.find(e => null !== e) && s.push(E.TrackUserProfileProperties.THEME), (null == t ? void 0 : t.avatarDecoration) != null && s.push(E.TrackUserProfileProperties.AVATAR_DECORATION), (null == a ? void 0 : a.profileEffectId) != null && s.push(E.TrackUserProfileProperties.PROFILE_EFFECT), s
+            return (null == s ? void 0 : s.bio) && a.push(E.TrackUserProfileProperties.BIO), (null == s ? void 0 : s.themeColors) != null && void 0 !== s.themeColors.find(e => null !== e) && a.push(E.TrackUserProfileProperties.THEME), (null == t ? void 0 : t.avatarDecoration) != null && a.push(E.TrackUserProfileProperties.AVATAR_DECORATION), (null == s ? void 0 : s.profileEffectId) != null && a.push(E.TrackUserProfileProperties.PROFILE_EFFECT), a
         },
         S = e => {
-            let t = a.default.getStatus(e),
-                n = a.default.isMobileOnline(e);
+            let t = s.default.getStatus(e),
+                n = s.default.isMobileOnline(e);
             return t === T.StatusTypes.ONLINE && n ? "".concat(t, "-mobile") : t === T.StatusTypes.ONLINE ? "".concat(t, "-desktop") : t
         },
         h = e => null == e ? e : Object.keys(I.ActivityTypes)[Object.values(I.ActivityTypes).indexOf(e)],
@@ -57,9 +57,9 @@ function(e, t, n) {
             var t, n;
             let {
                 layout: i,
-                userId: s,
+                userId: a,
                 guildId: o
-            } = e, u = l.default.getUser(s);
+            } = e, u = l.default.getUser(a);
             if (null == u) return {};
             let d = (0, c.getDisplayProfile)(null == u ? void 0 : u.id, o),
                 _ = null != o ? r.default.getMember(o, null == u ? void 0 : u.id) : null;
@@ -73,7 +73,7 @@ function(e, t, n) {
                     guildMember: _,
                     guildMemberProfile: null == d ? void 0 : d._guildMemberProfile
                 }),
-                profile_activity_types: a.default.getActivities(u.id).map(e => {
+                profile_activity_types: s.default.getActivities(u.id).map(e => {
                     let {
                         type: t
                     } = e;
@@ -94,8 +94,8 @@ function(e, t, n) {
             var t, n;
             return null == e ? {} : {
                 related_user_id: e,
-                relationship_type: s.default.getRelationshipType(e),
-                related_since: s.default.getSince(e),
+                relationship_type: a.default.getRelationshipType(e),
+                related_since: a.default.getSince(e),
                 num_mutual_friends: _.default.getMutualFriendsCount(e),
                 num_mutual_guilds: null === (t = _.default.getMutualGuilds(e)) || void 0 === t ? void 0 : t.length,
                 affinity: null === (n = o.default.getUserAffinity(e)) || void 0 === n ? void 0 : n.affinity
@@ -106,8 +106,8 @@ function(e, t, n) {
                 userId: t,
                 guildId: n,
                 channelId: r,
-                messageId: a,
-                roleId: s,
+                messageId: s,
+                roleId: a,
                 analyticsLocations: o,
                 layout: l,
                 action: d,
@@ -125,8 +125,8 @@ function(e, t, n) {
                 location_stack: o,
                 profile_action: d,
                 profile_section: _,
-                source_message_id: a,
-                source_role_id: s
+                source_message_id: s,
+                source_role_id: a
             })
         },
         p = e => {
@@ -134,8 +134,8 @@ function(e, t, n) {
                 userId: t,
                 guildId: n,
                 channelId: r,
-                analyticsLocations: a,
-                layout: s,
+                analyticsLocations: s,
+                layout: a,
                 activity: o,
                 voiceChannelId: l
             } = e;
@@ -143,12 +143,12 @@ function(e, t, n) {
                 ...(0, i.collectGuildAnalyticsMetadata)(n),
                 ...(0, i.collectChannelAnalyticsMetadataFromId)(r),
                 ...A({
-                    layout: s,
+                    layout: a,
                     userId: t,
                     guildId: n
                 }),
                 ...m(t),
-                location_stack: a,
+                location_stack: s,
                 activity_type: null != l ? "VOICE" : h(null == o ? void 0 : o.type),
                 activity_name: null == o ? void 0 : o.name,
                 activity_platform: null == o ? void 0 : o.platform,
@@ -162,20 +162,20 @@ function(e, t, n) {
                 userId: t,
                 guildId: n,
                 channelId: r,
-                analyticsLocations: a,
-                layout: s,
+                analyticsLocations: s,
+                layout: a,
                 badge: o
             } = e;
             u.default.track(I.AnalyticEvents.USER_PROFILE_BADGE_PRESSED, {
                 ...(0, i.collectGuildAnalyticsMetadata)(n),
                 ...(0, i.collectChannelAnalyticsMetadataFromId)(r),
                 ...A({
-                    layout: s,
+                    layout: a,
                     userId: t,
                     guildId: n
                 }),
                 ...m(t),
-                location_stack: a,
+                location_stack: s,
                 badge: o
             })
         },
@@ -184,8 +184,8 @@ function(e, t, n) {
                 userId: t,
                 guildId: n,
                 channelId: r,
-                analyticsLocations: a,
-                layout: s,
+                analyticsLocations: s,
+                layout: a,
                 applicationIds: o,
                 newApplicationIds: l,
                 sharedApplicationIds: d
@@ -194,12 +194,12 @@ function(e, t, n) {
                 ...(0, i.collectGuildAnalyticsMetadata)(n),
                 ...(0, i.collectChannelAnalyticsMetadataFromId)(r),
                 ...A({
-                    layout: s,
+                    layout: a,
                     userId: t,
                     guildId: n
                 }),
                 ...m(t),
-                location_stack: a,
+                location_stack: s,
                 profile_application_ids: o,
                 profile_new_applications_ids: l,
                 profile_shared_applications_ids: d
@@ -210,20 +210,20 @@ function(e, t, n) {
                 userId: t,
                 guildId: n,
                 channelId: r,
-                analyticsLocations: a,
-                layout: s,
+                analyticsLocations: s,
+                layout: a,
                 badge: o
             } = e;
             u.default.track(I.AnalyticEvents.USER_PROFILE_BADGE_HOVERED, {
                 ...(0, i.collectGuildAnalyticsMetadata)(n),
                 ...(0, i.collectChannelAnalyticsMetadataFromId)(r),
                 ...A({
-                    layout: s,
+                    layout: a,
                     userId: t,
                     guildId: n
                 }),
                 ...m(t),
-                location_stack: a,
+                location_stack: s,
                 badge: o
             })
         }

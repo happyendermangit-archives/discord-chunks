@@ -2,13 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return a
         }
     }), n("411104");
     var i = n("836560"),
         r = n("376398");
 
-    function a(e, t, n) {
+    function s(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -16,14 +16,14 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    class s extends i.EventEmitter {
+    class a extends i.EventEmitter {
         static async get(e, t) {
             var n;
             let i = {
                 ...e,
                 frameRate: 30
             };
-            if ((null === (n = navigator.mediaDevices) || void 0 === n ? void 0 : n.getDisplayMedia) != null) return new s(await navigator.mediaDevices.getDisplayMedia({
+            if ((null === (n = navigator.mediaDevices) || void 0 === n ? void 0 : n.getDisplayMedia) != null) return new a(await navigator.mediaDevices.getDisplayMedia({
                 audio: t,
                 video: i
             }));
@@ -42,7 +42,7 @@ function(e, t, n) {
             this.emit("speaking", this.stream.getAudioTracks().some(e => e.enabled))
         }
         constructor(e) {
-            super(), a(this, "id", void 0), a(this, "stream", void 0), a(this, "streamId", void 0), e.getVideoTracks().forEach(e => {
+            super(), s(this, "id", void 0), s(this, "stream", void 0), s(this, "streamId", void 0), e.getVideoTracks().forEach(e => {
                 e.onended = () => {
                     this.emit("desktopsourceend")
                 }

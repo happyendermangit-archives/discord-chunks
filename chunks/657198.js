@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("207470"),
         l = n("442837"),
         u = n("911969"),
@@ -24,15 +24,15 @@ function(e, t, n) {
     function h(e, t, n) {
         let {
             attributes: r,
-            children: a,
-            element: s
+            children: s,
+            element: a
         } = t;
-        switch (s.type) {
+        switch (a.type) {
             case "applicationCommand":
                 let o = d.default.getActiveCommand(n),
                     l = 0,
                     u = 0;
-                if (null != o && o.id === s.command.id) {
+                if (null != o && o.id === a.command.id) {
                     var _;
                     let t = E.getOptionNames(e);
                     for (let e of null !== (_ = o.options) && void 0 !== _ ? _ : []) t.includes(e.name) ? u++ : l++
@@ -50,14 +50,14 @@ function(e, t, n) {
                     className: S.applicationCommand,
                     ...r,
                     ...c,
-                    children: a
+                    children: s
                 });
             case "applicationCommandOption":
                 return (0, i.jsx)(A, {
                     attributes: r,
                     channelId: n,
-                    element: s,
-                    children: a
+                    element: a,
+                    children: s
                 });
             default:
                 return null
@@ -66,7 +66,7 @@ function(e, t, n) {
     let A = e => {
         let t, {
                 channelId: n,
-                element: a,
+                element: s,
                 attributes: E,
                 children: h
             } = e,
@@ -79,26 +79,26 @@ function(e, t, n) {
             } = (0, l.useStateFromStoresObject)([d.default], () => {
                 var e, t, i;
                 return {
-                    optionType: null === (e = d.default.getOption(n, a.optionName)) || void 0 === e ? void 0 : e.type,
-                    errored: (null === (i = d.default.getOptionState(n, a.optionName)) || void 0 === i ? void 0 : null === (t = i.lastValidationResult) || void 0 === t ? void 0 : t.success) !== !0
+                    optionType: null === (e = d.default.getOption(n, s.optionName)) || void 0 === e ? void 0 : e.type,
+                    errored: (null === (i = d.default.getOptionState(n, s.optionName)) || void 0 === i ? void 0 : null === (t = i.lastValidationResult) || void 0 === t ? void 0 : t.success) !== !0
                 }
-            }, [n, a.optionName]),
-            R = (0, l.useStateFromStores)([c.default], () => c.default.getUpload(n, a.optionName, _.DraftType.SlashCommand), [n, a.optionName]),
-            C = a.children[a.children.length - 1],
+            }, [n, s.optionName]),
+            R = (0, l.useStateFromStores)([c.default], () => c.default.getUpload(n, s.optionName, _.DraftType.SlashCommand), [n, s.optionName]),
+            C = s.children[s.children.length - 1],
             g = null != C && T.TextUtils.isText(C) && C.text.endsWith("\n"),
-            L = s()(S.inlineElement, S.optionPill, {
+            L = a()(S.inlineElement, S.optionPill, {
                 [S.selectedPill]: m && A,
                 [S.erroredPill]: (!m || !A) && O
             }),
             v = r.useCallback(() => {
-                !T.EditorUtils.isVoid(N, a) && I.SlateTransforms.selectCommandOption(N, a.optionName, !0)
-            }, [N, a]);
+                !T.EditorUtils.isVoid(N, s) && I.SlateTransforms.selectCommandOption(N, s.optionName, !0)
+            }, [N, s]);
         return t = p === u.ApplicationCommandOptionType.ATTACHMENT ? (null == R ? void 0 : R.filename) != null ? (0, i.jsxs)("span", {
-            className: s()(S.optionPillValue, S.attachmentFilename),
+            className: a()(S.optionPillValue, S.attachmentFilename),
             contentEditable: !1,
             children: [R.filename, h]
         }) : (0, i.jsxs)("span", {
-            className: s()(S.optionPillValue, S.readonlyPillValue),
+            className: a()(S.optionPillValue, S.readonlyPillValue),
             contentEditable: !1,
             children: [f.default.Messages.APPLICATION_COMMAND_FILE_ATTACHMENT, h]
         }) : (0, i.jsxs)("span", {
@@ -114,7 +114,7 @@ function(e, t, n) {
                 className: S.optionPillKey,
                 contentEditable: !1,
                 onClick: v,
-                children: [a.optionDisplayName, "​"]
+                children: [s.optionDisplayName, "​"]
             }), t, (0, i.jsx)("span", {
                 contentEditable: !1,
                 children: "​"

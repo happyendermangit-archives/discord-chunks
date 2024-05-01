@@ -2,8 +2,8 @@ function(e, t, n) {
     "use strict";
     n.r(t);
     var i, r = n("442837"),
-        a = n("570140"),
-        s = n("626135"),
+        s = n("570140"),
+        a = n("626135"),
         o = n("314897"),
         l = n("981631");
 
@@ -17,7 +17,7 @@ function(e, t, n) {
     }
 
     function d(e, t) {
-        s.default.track(l.AnalyticEvents.STREAMER_MODE_TOGGLE, {
+        a.default.track(l.AnalyticEvents.STREAMER_MODE_TOGGLE, {
             enabled: e,
             automatic: t
         })
@@ -82,7 +82,7 @@ function(e, t, n) {
                 ...e
             }
         }
-    }]), t.default = new I(a.default, {
+    }]), t.default = new I(s.default, {
         LOGOUT: function(e) {
             !e.isSwitchingAccount && (c = {})
         },
@@ -93,7 +93,7 @@ function(e, t, n) {
             let t = {
                 ...E
             };
-            return E[e.key] = e.value, "enabled" === e.key ? d(e.value, !1) : s.default.track(l.AnalyticEvents.UPDATE_STREAMER_MODE_SETTINGS, {
+            return E[e.key] = e.value, "enabled" === e.key ? d(e.value, !1) : a.default.track(l.AnalyticEvents.UPDATE_STREAMER_MODE_SETTINGS, {
                 enabled: E.enabled,
                 automatic: E.autoToggle,
                 disable_notifications: E.disableNotifications,

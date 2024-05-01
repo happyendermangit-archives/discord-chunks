@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     let i;
     n.r(t), n("733860");
-    var r, a, s, o, l = n("392711"),
+    var r, s, a, o, l = n("392711"),
         u = n.n(l),
         d = n("442837"),
         _ = n("433517"),
@@ -60,7 +60,7 @@ function(e, t, n) {
         } = e;
         if ("string" != typeof i || "" === (i = i.trim())) return;
         let r = C[n] = null !== (t = C[n]) && void 0 !== t ? t : [],
-            a = r.indexOf(i); - 1 !== a ? (r.splice(a, 1), r.unshift(i)) : null != r[0] && "" !== r[0] && i.startsWith(r[0]) ? r[0] = i : a < 0 && r.unshift(i), r.length > 5 && r.splice(5, r.length), _.Storage.set(O, {
+            s = r.indexOf(i); - 1 !== s ? (r.splice(s, 1), r.unshift(i)) : null != r[0] && "" !== r[0] && i.startsWith(r[0]) ? r[0] = i : s < 0 && r.unshift(i), r.length > 5 && r.splice(5, r.length), _.Storage.set(O, {
             history: C
         })
     }
@@ -178,23 +178,23 @@ function(e, t, n) {
             }
         }
     }
-    o = "SearchStore", (s = "displayName") in(a = M) ? Object.defineProperty(a, s, {
+    o = "SearchStore", (a = "displayName") in(s = M) ? Object.defineProperty(s, a, {
         value: o,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : a[s] = o, t.default = new M(c.default, {
+    }) : s[a] = o, t.default = new M(c.default, {
         SEARCH_START: function(e) {
             var t, n;
             let {
                 queryString: i,
                 searchId: r,
-                query: a
-            } = e, s = m(r);
-            null != s.searchFetcher && (s.searchFetcher.cancel(), s.searchFetcher = null);
-            let o = s.searchType,
-                l = new E.default(r, o, a);
-            s.searchFetcher = l, s.isSearching = !0, s.rawResults = null, s.analyticsId = null, s.query = u().omit(a, "type"), s.offset = null !== (n = a.offset) && void 0 !== n ? n : 0, s.showBlockedResults = !1, L({
+                query: s
+            } = e, a = m(r);
+            null != a.searchFetcher && (a.searchFetcher.cancel(), a.searchFetcher = null);
+            let o = a.searchType,
+                l = new E.default(r, o, s);
+            a.searchFetcher = l, a.isSearching = !0, a.rawResults = null, a.analyticsId = null, a.query = u().omit(s, "type"), a.offset = null !== (n = s.offset) && void 0 !== n ? n : 0, a.showBlockedResults = !1, L({
                 type: "SEARCH_ADD_HISTORY",
                 searchId: r,
                 query: i

@@ -16,12 +16,12 @@ function(e, t, n) {
     }), n("47120"), n("724458"), n("653041"), n("789020");
     var i = n("442837"),
         r = n("271383"),
-        a = n("630388"),
-        s = n("372897");
-    let o = [s.GuildMemberFlags.AUTOMOD_QUARANTINED_BIO, s.GuildMemberFlags.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME, s.GuildMemberFlags.AUTOMOD_QUARANTINED_CLAN_TAG];
+        s = n("630388"),
+        a = n("372897");
+    let o = [a.GuildMemberFlags.AUTOMOD_QUARANTINED_BIO, a.GuildMemberFlags.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME, a.GuildMemberFlags.AUTOMOD_QUARANTINED_CLAN_TAG];
 
     function l(e) {
-        return null == e ? new Set : new Set(o.reduce((t, n) => ((0, a.hasFlag)(null != e ? e : 0, n) && t.push(n), t), []))
+        return null == e ? new Set : new Set(o.reduce((t, n) => ((0, s.hasFlag)(null != e ? e : 0, n) && t.push(n), t), []))
     }
 
     function u(e) {
@@ -31,7 +31,7 @@ function(e, t, n) {
     function d(e) {
         return null != e && null != e.flags && o.some(t => {
             var n;
-            return (0, a.hasFlag)(null !== (n = e.flags) && void 0 !== n ? n : 0, t)
+            return (0, s.hasFlag)(null !== (n = e.flags) && void 0 !== n ? n : 0, t)
         })
     }
 

@@ -16,9 +16,9 @@ function(e, t, n) {
     }), n("411104"), n("47120");
     var i = n("470079"),
         r = n("902704"),
-        a = n("250919");
+        s = n("250919");
 
-    function s(e, t) {
+    function a(e, t) {
         return e === t
     }
 
@@ -27,7 +27,7 @@ function(e, t, n) {
     }
 
     function l(e, t, n) {
-        let o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : s,
+        let o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : a,
             {
                 current: l
             } = (0, i.useRef)({
@@ -51,7 +51,7 @@ function(e, t, n) {
                 !o(l.state, e) && (l.state = e, d({}))
             };
             t();
-            let n = new a.BatchedStoreListener(e, t);
+            let n = new s.BatchedStoreListener(e, t);
             return n.attach("useStateFromStores"), () => n.detach()
         }, []), u
     }

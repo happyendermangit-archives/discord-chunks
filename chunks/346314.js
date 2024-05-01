@@ -11,8 +11,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        a = n.n(r),
-        s = n("442837"),
+        s = n.n(r),
+        a = n("442837"),
         o = n("756715"),
         l = n("607070"),
         u = n("109161"),
@@ -23,19 +23,19 @@ function(e, t, n) {
             roleStyle: t,
             name: n,
             color: r,
-            roleName: s,
+            roleName: a,
             dotAlignment: o = "left",
             className: l
         } = e, _ = "username" === t, c = "dot" === t ? (0, i.jsx)(u.RoleDot, {
             color: r,
-            name: s,
+            name: a,
             className: "left" === o ? d.roleDotLeft : d.roleDotRight
         }) : null;
         return (0, i.jsxs)("span", {
             style: {
                 color: _ && null != r ? r : void 0
             },
-            className: a()(l, {
+            className: s()(l, {
                 [d.username]: _
             }),
             children: ["left" === o && c, n, "right" === o && c]
@@ -47,15 +47,15 @@ function(e, t, n) {
             name: t,
             color: n,
             roleName: r,
-            dotAlignment: a,
+            dotAlignment: s,
             className: u,
             ...d
-        } = e, c = (0, s.useStateFromStores)([l.default], () => l.default.roleStyle), E = "username" === c, I = (0, i.jsx)(_, {
+        } = e, c = (0, a.useStateFromStores)([l.default], () => l.default.roleStyle), E = "username" === c, I = (0, i.jsx)(_, {
             roleStyle: c,
             name: t,
             color: n,
             roleName: r,
-            dotAlignment: a,
+            dotAlignment: s,
             className: u
         }), T = E ? {
             color: n
@@ -68,7 +68,7 @@ function(e, t, n) {
     }
 
     function E(e) {
-        let t = (0, s.useStateFromStores)([l.default], () => l.default.roleStyle);
+        let t = (0, a.useStateFromStores)([l.default], () => l.default.roleStyle);
         return (0, i.jsx)(_, {
             ...e,
             roleStyle: t

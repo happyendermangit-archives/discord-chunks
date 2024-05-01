@@ -25,13 +25,13 @@ function(e, t, n) {
     });
     var i = n("392711"),
         r = n("570140"),
-        a = n("228488"),
-        s = n("830917");
+        s = n("228488"),
+        a = n("830917");
 
     function o(e, t) {
         r.default.dispatch({
             type: "WINDOW_FOCUS",
-            windowId: (0, s.getWindowId)(e),
+            windowId: (0, a.getWindowId)(e),
             focused: t
         })
     }
@@ -39,7 +39,7 @@ function(e, t, n) {
     function l(e) {
         r.default.dispatch({
             type: "WINDOW_HIDDEN",
-            windowId: (0, s.getWindowId)(e)
+            windowId: (0, a.getWindowId)(e)
         })
     }
     let u = (0, i.memoize)(e => (0, i.debounce)((t, n) => {
@@ -52,20 +52,20 @@ function(e, t, n) {
     }, 100));
 
     function d(e) {
-        u((0, s.getWindowId)(e))(e.innerWidth, e.innerHeight)
+        u((0, a.getWindowId)(e))(e.innerWidth, e.innerHeight)
     }
 
     function _(e) {
-        let t = (0, s.getWindowId)(e);
+        let t = (0, a.getWindowId)(e);
         r.default.dispatch({
             type: "WINDOW_FULLSCREEN_CHANGE",
             windowId: t,
-            isElementFullscreen: (0, a.isFullScreen)(null, e.document)
+            isElementFullscreen: (0, s.isFullScreen)(null, e.document)
         })
     }
 
     function c(e) {
-        let t = (0, s.getWindowId)(e);
+        let t = (0, a.getWindowId)(e);
         r.default.dispatch({
             type: "WINDOW_VISIBILITY_CHANGE",
             windowId: t,
@@ -74,12 +74,12 @@ function(e, t, n) {
     }
 
     function E(e) {
-        let t = (0, s.getWindowId)(e),
+        let t = (0, a.getWindowId)(e),
             n = e.document;
         r.default.dispatch({
             type: "WINDOW_INIT",
             windowId: t,
-            isElementFullscreen: (0, a.isFullScreen)(null, n),
+            isElementFullscreen: (0, s.isFullScreen)(null, n),
             focused: n.hasFocus(),
             width: e.innerWidth,
             height: e.innerHeight,
@@ -90,7 +90,7 @@ function(e, t, n) {
     function I(e) {
         r.default.dispatch({
             type: "WINDOW_UNLOAD",
-            windowId: (0, s.getWindowId)(e)
+            windowId: (0, a.getWindowId)(e)
         })
     }
 }

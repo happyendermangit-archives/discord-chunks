@@ -10,8 +10,8 @@ function(e, t, n) {
     });
     var i = n("399606"),
         r = n("339085"),
-        a = n("185923");
-    let s = [];
+        s = n("185923");
+    let a = [];
 
     function o(e) {
         let {
@@ -20,8 +20,8 @@ function(e, t, n) {
             pickerIntention: i
         } = e;
         return {
-            topEmojis: i !== a.EmojiIntention.REACTION ? t.getTopEmoji(n) : s,
-            newlyAddedEmojis: i !== a.EmojiIntention.REACTION ? t.getNewlyAddedEmoji(n) : s
+            topEmojis: i !== s.EmojiIntention.REACTION ? t.getTopEmoji(n) : a,
+            newlyAddedEmojis: i !== s.EmojiIntention.REACTION ? t.getNewlyAddedEmoji(n) : a
         }
     }
 

@@ -22,8 +22,8 @@ function(e, t, n) {
     }), n("789020");
     var i = n("913527"),
         r = n.n(i),
-        a = n("442837"),
-        s = n("367907"),
+        s = n("442837"),
+        a = n("367907"),
         o = n("731429"),
         l = n("306680"),
         u = n("9156"),
@@ -37,12 +37,12 @@ function(e, t, n) {
         S = n("981631");
 
     function h() {
-        (0, s.trackWithMetadata)(S.AnalyticEvents.THREAD_BROWSER_TAB_CHANGED)
+        (0, a.trackWithMetadata)(S.AnalyticEvents.THREAD_BROWSER_TAB_CHANGED)
     }
 
     function A() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "Modal";
-        (0, s.trackWithMetadata)(S.AnalyticEvents.OPEN_MODAL, {
+        (0, a.trackWithMetadata)(S.AnalyticEvents.OPEN_MODAL, {
             type: "Thread Browser",
             location_section: e
         })
@@ -58,9 +58,9 @@ function(e, t, n) {
         var n, i;
         let r = (0, o.collectThreadMetadata)(e);
         if (null == r) return;
-        let a = e.getGuildId(),
-            s = e.parent_id,
-            l = (0, c.getCurrentChannelSettings)(a, s),
+        let s = e.getGuildId(),
+            a = e.parent_id,
+            l = (0, c.getCurrentChannelSettings)(s, a),
             E = e => {
                 if ((0, _.hasFlag)(e, f.ThreadMemberFlags.ALL_MESSAGES)) return c.MessageNotificationSettings[S.UserNotificationSettings.ALL_MESSAGES];
                 if ((0, _.hasFlag)(e, f.ThreadMemberFlags.ONLY_MENTIONS)) return c.MessageNotificationSettings[S.UserNotificationSettings.ONLY_MENTIONS];
@@ -78,11 +78,11 @@ function(e, t, n) {
             O = {
                 ...p,
                 channel_id: e.id,
-                guild_id: a,
-                parent_id: s,
+                guild_id: s,
+                parent_id: a,
                 channel_type: e.type,
                 has_interacted_with_thread: (T & f.ThreadMemberFlags.HAS_INTERACTED) != 0,
-                parent_is_muted: u.default.isGuildOrCategoryOrChannelMuted(a, s),
+                parent_is_muted: u.default.isGuildOrCategoryOrChannelMuted(s, a),
                 old_thread_notification_setting: h,
                 new_thread_notification_setting: null != t.flags ? E(t.flags) : h,
                 parent_notification_setting: l.channel_message_notification_settings,
@@ -96,10 +96,10 @@ function(e, t, n) {
     n("689938");
     let p = e => {
         var t, n;
-        let i = (0, a.useStateFromStores)([l.default], () => l.default.lastMessageId(e.id)),
-            s = null != i ? E.default.extractTimestamp(i) : null,
+        let i = (0, s.useStateFromStores)([l.default], () => l.default.lastMessageId(e.id)),
+            a = null != i ? E.default.extractTimestamp(i) : null,
             o = null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.createTimestamp,
             u = null != o ? r()(o).valueOf() : null;
-        return null !== (n = null != s ? s : u) && void 0 !== n ? n : E.default.extractTimestamp(e.id)
+        return null !== (n = null != a ? a : u) && void 0 !== n ? n : E.default.extractTimestamp(e.id)
     }
 }

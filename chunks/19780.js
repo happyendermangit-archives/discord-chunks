@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     let i, r;
     n.r(t), n("411104"), n("724458");
-    var a, s, o, l, u = n("442837"),
+    var s, a, o, l, u = n("442837"),
         d = n("570140"),
         _ = n("437263"),
         c = n("764976"),
@@ -23,20 +23,20 @@ function(e, t, n) {
     function g(e, t) {
         if (null == r) throw Error("Creating RTCConnection without session.");
         let i = f.default.getId(),
-            a = new(n("861687")).default({
+            s = new(n("861687")).default({
                 userId: i,
                 sessionId: r,
                 guildId: e,
                 channelId: t
             });
-        return a.on(_.RTCConnectionEvent.State, (e, t, n) => {
+        return s.on(_.RTCConnectionEvent.State, (e, t, n) => {
             d.default.wait(() => d.default.dispatch({
                 type: "RTC_CONNECTION_STATE",
                 state: e,
                 ...t,
                 ...n
             }))
-        }), a.on(_.RTCConnectionEvent.Video, (e, t, n, i, r) => {
+        }), s.on(_.RTCConnectionEvent.Video, (e, t, n, i, r) => {
             d.default.wait(() => d.default.dispatch({
                 type: "RTC_CONNECTION_VIDEO",
                 guildId: e,
@@ -46,31 +46,31 @@ function(e, t, n) {
                 rtcServerId: r,
                 context: A.MediaEngineContextTypes.DEFAULT
             }))
-        }), a.on(_.RTCConnectionEvent.Ping, (e, t) => {
+        }), s.on(_.RTCConnectionEvent.Ping, (e, t) => {
             d.default.wait(() => d.default.dispatch({
                 type: "RTC_CONNECTION_PING",
                 pings: e,
                 quality: t
             }))
-        }), a.on(_.RTCConnectionEvent.OutboundLossRate, e => {
+        }), s.on(_.RTCConnectionEvent.OutboundLossRate, e => {
             d.default.wait(() => d.default.dispatch({
                 type: "RTC_CONNECTION_LOSS_RATE",
                 lossRate: e
             }))
-        }), a.on(_.RTCConnectionEvent.Speaking, (e, t) => {
+        }), s.on(_.RTCConnectionEvent.Speaking, (e, t) => {
             null == p || p.setSpeaking(e, t)
-        }), a.on(_.RTCConnectionEvent.Flags, (e, t) => {
+        }), s.on(_.RTCConnectionEvent.Flags, (e, t) => {
             d.default.wait(() => {
                 d.default.dispatch({
                     type: "RTC_CONNECTION_FLAGS",
                     flags: t,
                     userId: e,
-                    guildId: a.guildId,
-                    channelId: a.channelId,
-                    context: a.context
+                    guildId: s.guildId,
+                    channelId: s.channelId,
+                    context: s.context
                 })
             })
-        }), a.on(_.RTCConnectionEvent.Platform, (e, t, n) => {
+        }), s.on(_.RTCConnectionEvent.Platform, (e, t, n) => {
             d.default.wait(() => {
                 d.default.dispatch({
                     type: "RTC_CONNECTION_PLATFORM",
@@ -79,7 +79,7 @@ function(e, t, n) {
                     channelId: n
                 })
             })
-        }), p = new c.default(f.default.getId(), t), O = null, R = !1, C = !1, a
+        }), p = new c.default(f.default.getId(), t), O = null, R = !1, C = !1, s
     }
 
     function L() {
@@ -102,7 +102,7 @@ function(e, t, n) {
     function M() {
         return !0
     }
-    class y extends(a = u.default.Store) {
+    class y extends(s = u.default.Store) {
         initialize() {
             this.waitFor(S.default), (0, T.setVideoToggleAnalyticsParams)(this.getRTCConnectionId, this.getMediaSessionId)
         }
@@ -174,12 +174,12 @@ function(e, t, n) {
             return C
         }
     }
-    l = "RTCConnectionStore", (o = "displayName") in(s = y) ? Object.defineProperty(s, o, {
+    l = "RTCConnectionStore", (o = "displayName") in(a = y) ? Object.defineProperty(a, o, {
         value: l,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : s[o] = l;
+    }) : a[o] = l;
     let P = new y(d.default, __OVERLAY__ ? {} : {
         CONNECTION_OPEN: function(e) {
             return r = e.sessionId, m = null, N = null, L(), !1
@@ -200,12 +200,12 @@ function(e, t, n) {
                 voiceStates: t
             } = e;
             return t.reduce((e, t) => {
-                var n, a, s;
+                var n, s, a;
                 if (null == p || p.updateVoiceStates(t.userId, t.channelId), R = R || (null !== (n = null == p ? void 0 : p.getStats().max_voice_state_count) && void 0 !== n ? n : 0) > 1, f.default.getId() !== t.userId) return !1;
-                if (null != i) t.sessionId === r ? null != t.guildId && t.guildId === i.guildId || null == t.guildId && t.channelId === i.channelId ? null == t.channelId ? L() : i.channelId = t.channelId : (t.guildId !== i.guildId && null == t.channelId || L(), null != t.channelId && (m = null, N = null, i = g(t.guildId, t.channelId), R = (null !== (a = null == p ? void 0 : p.getStats().max_voice_state_count) && void 0 !== a ? a : 0) > 1)) : t.guildId === i.guildId && (!(null != I.default.getAwaitingRemoteSessionInfo() && null != I.default.getRemoteSessionId()) && (m = i.channelId), L());
+                if (null != i) t.sessionId === r ? null != t.guildId && t.guildId === i.guildId || null == t.guildId && t.channelId === i.channelId ? null == t.channelId ? L() : i.channelId = t.channelId : (t.guildId !== i.guildId && null == t.channelId || L(), null != t.channelId && (m = null, N = null, i = g(t.guildId, t.channelId), R = (null !== (s = null == p ? void 0 : p.getStats().max_voice_state_count) && void 0 !== s ? s : 0) > 1)) : t.guildId === i.guildId && (!(null != I.default.getAwaitingRemoteSessionInfo() && null != I.default.getRemoteSessionId()) && (m = i.channelId), L());
                 else {
                     if (t.sessionId !== r || null == t.channelId) return e;
-                    m = null, N = null, i = g(t.guildId, t.channelId), R = (null !== (s = null == p ? void 0 : p.getStats().max_voice_state_count) && void 0 !== s ? s : 0) > 1
+                    m = null, N = null, i = g(t.guildId, t.channelId), R = (null !== (a = null == p ? void 0 : p.getStats().max_voice_state_count) && void 0 !== a ? a : 0) > 1
                 }
                 return !0
             }, !1)

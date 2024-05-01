@@ -6,9 +6,9 @@ function(e, t, n) {
             return i
         },
         MAX_CHAR_COUNT: function() {
-            return a
+            return s
         }
     });
-    let a = 200;
+    let s = 200;
     (r = i || (i = {})).ReactBegin = "React Begin", r.ReplyBegin = "Reply Begin", r.ReactSubmit = "React Submit", r.ReplySubmit = "Reply Submit", r.ReactSend = "React Send", r.ReplySend = "Reply Send"
 }

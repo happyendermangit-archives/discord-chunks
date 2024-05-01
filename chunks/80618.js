@@ -2,9 +2,9 @@ function(e, t, n) {
     "use strict";
     n.r(t), n("47120");
     var i, r = n("735250"),
-        a = n("470079"),
-        s = n("120356"),
-        o = n.n(s),
+        s = n("470079"),
+        a = n("120356"),
+        o = n.n(a),
         l = n("481060"),
         u = n("189595"),
         d = n("632184"),
@@ -21,7 +21,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    class f extends(i = a.PureComponent) {
+    class f extends(i = s.PureComponent) {
         componentDidMount() {
             this.updateMediaBar()
         }
@@ -42,8 +42,8 @@ function(e, t, n) {
                 className: t,
                 sliderWrapperClassName: n,
                 sliderClassName: i,
-                currentWindow: a,
-                muted: s,
+                currentWindow: s,
+                muted: a,
                 minValue: T,
                 maxValue: f,
                 value: S,
@@ -54,7 +54,7 @@ function(e, t, n) {
                 focused: N,
                 dragging: p
             } = this.state, O = d.default;
-            return s || S === T ? O = _.default : S < f / 2 && (O = c.default), (0, r.jsxs)("div", {
+            return a || S === T ? O = _.default : S < f / 2 && (O = c.default), (0, r.jsxs)("div", {
                 className: o()(t, I.container),
                 onMouseEnter: () => {
                     clearTimeout(this._hoverTimeout), this.setState({
@@ -96,7 +96,7 @@ function(e, t, n) {
                         onDrag: this.handleValueChange,
                         onDragStart: this.handleDragStart,
                         onDragEnd: this.handleDragEnd,
-                        currentWindow: a,
+                        currentWindow: s,
                         ref: this._mediaBar
                     })
                 }), (0, r.jsx)(l.Button, {
@@ -112,7 +112,7 @@ function(e, t, n) {
             })
         }
         constructor(...e) {
-            super(...e), T(this, "_mediaBar", a.createRef()), T(this, "_hoverTimeout", void 0), T(this, "state", {
+            super(...e), T(this, "_mediaBar", s.createRef()), T(this, "_hoverTimeout", void 0), T(this, "state", {
                 hovered: !1,
                 focused: !1,
                 dragging: !1
@@ -133,13 +133,13 @@ function(e, t, n) {
                     value: n,
                     maxValue: i,
                     onValueChange: r
-                } = this.props, a = .05 * (i - t);
+                } = this.props, s = .05 * (i - t);
                 switch (e.key) {
                     case "ArrowUp":
-                        e.stopPropagation(), e.preventDefault(), null == r || r(Math.min(i, n + a));
+                        e.stopPropagation(), e.preventDefault(), null == r || r(Math.min(i, n + s));
                         break;
                     case "ArrowDown":
-                        e.stopPropagation(), e.preventDefault(), null == r || r(Math.max(t, n - a))
+                        e.stopPropagation(), e.preventDefault(), null == r || r(Math.max(t, n - s))
                 }
             }), T(this, "handleDragStart", () => {
                 this.setState({

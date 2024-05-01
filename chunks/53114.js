@@ -9,8 +9,8 @@ function(e, t, n) {
         }
     }), n("47120"), n("653041");
     var i, r = n("392711"),
-        a = n.n(r),
-        s = n("47770"),
+        s = n.n(r),
+        a = n("47770"),
         o = n("46973"),
         l = n("379649"),
         u = n("358085"),
@@ -45,7 +45,7 @@ function(e, t, n) {
             E(this, "timestampProducer", void 0), E(this, "begin", void 0), E(this, "total", void 0), E(this, "state", void 0), this.timestampProducer = t, this.total = 0, this.state = e, this.begin = e ? t.now() : null
         }
     }(i || (i = {})).FpsUpdate = "fps-update";
-    class f extends s.default {
+    class f extends a.default {
         addUserToStatsCollectionPausedSet(e) {
             this.statCollectionPausedUsers.add(e)
         }
@@ -69,9 +69,9 @@ function(e, t, n) {
             n.setVideoStopped(t, c.VideoStoppedReasons.ClientSideDisableVideo), !t && n.statsWindow.length > 0 && 0 === n.statsWindow[0].packets && (n.startTime = this.timestampProducer.now())
         }
         pause() {
-            !this.paused.value && this.pausedCount++, a().forEach(this.outboundStats, e => {
+            !this.paused.value && this.pausedCount++, s().forEach(this.outboundStats, e => {
                 e.statsWindow = []
-            }), a().forEach(this.inboundStats, e => {
+            }), s().forEach(this.inboundStats, e => {
                 e.statsWindow = []
             }), this.updateSendState({
                 paused: !0
@@ -111,7 +111,7 @@ function(e, t, n) {
             return e
         }
         getCodecUsageStats(e, t) {
-            var n, i, r, a, s, o, l, u, d, _;
+            var n, i, r, s, a, o, l, u, d, _;
             let E = this.asymmetricCodecUpdates > this.symmetricCodecUpdates,
                 I = new Map;
             if ("sender" === e || "streamer" === e) {
@@ -125,8 +125,8 @@ function(e, t, n) {
                     codec_h264_encode_duration_sec: null !== (n = I.get(c.CodecTypes.H264)) && void 0 !== n ? n : 0,
                     codec_h265_encode_duration_sec: null !== (i = I.get(c.CodecTypes.H265)) && void 0 !== i ? i : 0,
                     codec_vp8_encode_duration_sec: null !== (r = I.get(c.CodecTypes.VP8)) && void 0 !== r ? r : 0,
-                    codec_vp9_encode_duration_sec: null !== (a = I.get(c.CodecTypes.VP9)) && void 0 !== a ? a : 0,
-                    codec_av1_encode_duration_sec: null !== (s = I.get(c.CodecTypes.AV1)) && void 0 !== s ? s : 0
+                    codec_vp9_encode_duration_sec: null !== (s = I.get(c.CodecTypes.VP9)) && void 0 !== s ? s : 0,
+                    codec_av1_encode_duration_sec: null !== (a = I.get(c.CodecTypes.AV1)) && void 0 !== a ? a : 0
                 }
             } {
                 let e = this.getDecoderUsageStats();
@@ -142,8 +142,8 @@ function(e, t, n) {
         }
         getOutboundStats() {
             let e = [];
-            return a().forEach(this.outboundStats, (t, n) => {
-                var i, r, a, s;
+            return s().forEach(this.outboundStats, (t, n) => {
+                var i, r, s, a;
                 let o;
                 let l = null === (i = this.connection) || void 0 === i ? void 0 : i.getStreamParameters();
                 l.length > 1 && l.forEach(e => {
@@ -160,7 +160,7 @@ function(e, t, n) {
                 e.push({
                     ...this.getStats(t),
                     target_fps: T > 0 ? Math.round((null !== (r = t.targetFrames) && void 0 !== r ? r : 0) / T) : 0,
-                    target_bitrate_network: T > 0 ? Math.round((null !== (a = t.targetBytesNetwork) && void 0 !== a ? a : 0) * 8 / T) : 0,
+                    target_bitrate_network: T > 0 ? Math.round((null !== (s = t.targetBytesNetwork) && void 0 !== s ? s : 0) * 8 / T) : 0,
                     target_bitrate_network_percentile1: E.count > 0 ? E.percentiles[1] : null,
                     target_bitrate_network_percentile5: E.count > 0 ? E.percentiles[5] : null,
                     target_bitrate_network_percentile10: E.count > 0 ? E.percentiles[10] : null,
@@ -168,7 +168,7 @@ function(e, t, n) {
                     target_bitrate_network_percentile50: E.count > 0 ? E.percentiles[50] : null,
                     target_bitrate_network_percentile75: E.count > 0 ? E.percentiles[75] : null,
                     target_bitrate_network_percentile99: E.count > 0 ? E.percentiles[99] : null,
-                    target_bitrate_max: T > 0 ? Math.round((null !== (s = t.targetBytesMax) && void 0 !== s ? s : 0) * 8 / T) : 0,
+                    target_bitrate_max: T > 0 ? Math.round((null !== (a = t.targetBytesMax) && void 0 !== a ? a : 0) * 8 / T) : 0,
                     duration_encoder_nvidia_cuda: I(t.encoderBuckets[c.Encoders.NVIDIA_CUDA]),
                     duration_encoder_nvidia_direct3d: I(t.encoderBuckets[c.Encoders.NVIDIA_DIRECT_3D]),
                     duration_encoder_openh264: I(t.encoderBuckets[c.Encoders.OPENH264]),
@@ -215,7 +215,7 @@ function(e, t, n) {
             null != e.paused && (this.paused.value = e.paused), null != e.receivers && (this.zeroReceivers.value = 0 === e.receivers);
             let t = this.paused.value || this.zeroReceivers.value,
                 n = this.videoStopped.value;
-            this.videoStopped.value = t, t !== n && a().forEach(this.outboundStats, e => e.statsWindow = [])
+            this.videoStopped.value = t, t !== n && s().forEach(this.outboundStats, e => e.statsWindow = [])
         }
         getStats(e) {
             if (null == e) return;
@@ -223,8 +223,8 @@ function(e, t, n) {
                 n = null != this.streamEnd ? this.streamEnd - t : this.timestampProducer.now() - t,
                 i = Math.max(e.aggregationDuration, 0) / 1e3,
                 r = [1, 5, 10, 25, 50, 75],
-                a = e.fpsHistogram.getReport(r),
-                s = e.bitrateHistogram.getReport([1, 5, 10, 25, 50, 75, 99]),
+                s = e.fpsHistogram.getReport(r),
+                a = e.bitrateHistogram.getReport([1, 5, 10, 25, 50, 75, 99]),
                 o = e.resolutionHistogram.getReport(r),
                 l = e.inboundBitrateEstimateHistogram.getReport([1, 5, 10, 25, 50, 75, 99]),
                 u = e.systemResources.getStats(),
@@ -266,19 +266,19 @@ function(e, t, n) {
                     duration_paused: I(this.paused.totalDuration() / 1e3),
                     duration_zero_receivers: I(this.zeroReceivers.totalDuration() / 1e3),
                     duration_video_stopped: I(this.videoStopped.totalDuration() / 1e3),
-                    fps_percentile1: a.percentiles[1],
-                    fps_percentile5: a.percentiles[5],
-                    fps_percentile10: a.percentiles[10],
-                    fps_percentile25: a.percentiles[25],
-                    fps_percentile50: a.percentiles[50],
-                    fps_percentile75: a.percentiles[75],
-                    bitrate_percentile1: s.percentiles[1],
-                    bitrate_percentile5: s.percentiles[5],
-                    bitrate_percentile10: s.percentiles[10],
-                    bitrate_percentile25: s.percentiles[25],
-                    bitrate_percentile50: s.percentiles[50],
-                    bitrate_percentile75: s.percentiles[75],
-                    bitrate_percentile99: s.percentiles[99],
+                    fps_percentile1: s.percentiles[1],
+                    fps_percentile5: s.percentiles[5],
+                    fps_percentile10: s.percentiles[10],
+                    fps_percentile25: s.percentiles[25],
+                    fps_percentile50: s.percentiles[50],
+                    fps_percentile75: s.percentiles[75],
+                    bitrate_percentile1: a.percentiles[1],
+                    bitrate_percentile5: a.percentiles[5],
+                    bitrate_percentile10: a.percentiles[10],
+                    bitrate_percentile25: a.percentiles[25],
+                    bitrate_percentile50: a.percentiles[50],
+                    bitrate_percentile75: a.percentiles[75],
+                    bitrate_percentile99: a.percentiles[99],
                     resolution_percentile1: o.percentiles[1],
                     resolution_percentile5: o.percentiles[5],
                     resolution_percentile10: o.percentiles[10],
@@ -357,7 +357,7 @@ function(e, t, n) {
             }
         }
         receivedStats(e, t, n) {
-            var i, r, s, o;
+            var i, r, a, o;
             let l = t.transport,
                 d = (0, u.isWeb)() ? 1 : null !== (r = null === (i = l.receiverReports) || void 0 === i ? void 0 : i.length) && void 0 !== r ? r : 0,
                 _ = new Set,
@@ -366,16 +366,16 @@ function(e, t, n) {
                     receivers: d
                 }), t.rtp.outbound.filter(e => "video" === e.type).forEach(t => {
                     if (null != t) {
-                        var i, r, a, s, o, u, d, E, I;
+                        var i, r, s, a, o, u, d, E, I;
                         let T = t.ssrc,
                             f = this.outboundStats[T];
                         if (null == f && (console.warn("Unknown outbound video stream with SSRC: ".concat(T)), f = new c.OutboundStats(this.timestampProducer), this.outboundStats[T] = f), null == f.timeToFirstFrame && (t.framesEncoded > 0 || (null !== (i = t.frameRateInput) && void 0 !== i ? i : 0) > 0) && (f.timeToFirstFrame = Math.max(0, e - f.startTime)), !this.videoStopped.value) {
                             f.appendAndIncrementStats(c.RawVideoStats.parseOutboundStats(t, e)), f.encoderCodec !== c.CodecTypes.UNKNOWN && _.add(f.encoderCodec);
                             let i = null === (r = n.find(e => e.ssrc === T)) || void 0 === r ? void 0 : r.maxBitrate;
-                            f.appendTargetRates(null === (a = n.find(e => e.ssrc === T)) || void 0 === a ? void 0 : a.maxFrameRate, null !== (o = t.bitrateTarget) && void 0 !== o ? o : Math.min(null !== (s = l.availableOutgoingBitrate) && void 0 !== s ? s : 0, null != i ? i : 0), i), f.averageEncodeTime = null !== (u = t.averageEncodeTime) && void 0 !== u ? u : 0, f.framesDroppedRateLimiter = null !== (d = t.framesDroppedRateLimiter) && void 0 !== d ? d : null, f.framesDroppedEncoderQueue = null !== (E = t.framesDroppedEncoderQueue) && void 0 !== E ? E : null, f.framesDroppedCongestionWindow = null !== (I = t.framesDroppedCongestionWindow) && void 0 !== I ? I : null
+                            f.appendTargetRates(null === (s = n.find(e => e.ssrc === T)) || void 0 === s ? void 0 : s.maxFrameRate, null !== (o = t.bitrateTarget) && void 0 !== o ? o : Math.min(null !== (a = l.availableOutgoingBitrate) && void 0 !== a ? a : 0, null != i ? i : 0), i), f.averageEncodeTime = null !== (u = t.averageEncodeTime) && void 0 !== u ? u : 0, f.framesDroppedRateLimiter = null !== (d = t.framesDroppedRateLimiter) && void 0 !== d ? d : null, f.framesDroppedEncoderQueue = null !== (E = t.framesDroppedEncoderQueue) && void 0 !== E ? E : null, f.framesDroppedCongestionWindow = null !== (I = t.framesDroppedCongestionWindow) && void 0 !== I ? I : null
                         }
                     }
-                }), !this.paused.value && a().forEach(t.rtp.inbound, (t, n) => {
+                }), !this.paused.value && s().forEach(t.rtp.inbound, (t, n) => {
                     let i = t.find(e => "video" === e.type);
                     if (null != i) {
                         let t = this.inboundStats[n];
@@ -385,7 +385,7 @@ function(e, t, n) {
                     }
                 }), 0 !== _.size && 0 !== E.size) {
                 ;
-                if (s = _, o = E, s.size === o.size && Array.from(s).every(e => o.has(e))) this.symmetricCodecUpdates++;
+                if (a = _, o = E, a.size === o.size && Array.from(a).every(e => o.has(e))) this.symmetricCodecUpdates++;
                 else this.asymmetricCodecUpdates++
             }
         }

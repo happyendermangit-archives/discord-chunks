@@ -25,16 +25,16 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("585483"),
-        s = n("830917"),
+        s = n("585483"),
+        a = n("830917"),
         o = n("919570"),
         l = n("981631");
-    let u = new a.ComponentDispatcher,
+    let u = new s.ComponentDispatcher,
         d = r.createContext({
             appContext: l.AppContext.APP,
             renderWindow: window,
             windowDispatch: u,
-            windowId: (0, s.getMainWindowId)()
+            windowId: (0, a.getMainWindowId)()
         }),
         _ = new Map;
 
@@ -42,7 +42,7 @@ function(e, t, n) {
         var t;
         let n = e.ownerDocument.defaultView;
         if (null == n) return;
-        let i = (0, s.getWindowId)(n);
+        let i = (0, a.getWindowId)(n);
         return null === (t = _.get(i)) || void 0 === t ? void 0 : t.windowDispatch
     }
 
@@ -65,12 +65,12 @@ function(e, t, n) {
             renderWindow: n,
             children: r
         } = e, o = function(e, t) {
-            let n = (0, s.getWindowId)(t),
+            let n = (0, a.getWindowId)(t),
                 i = _.get(n);
             return null == i && (i = {
                 appContext: e,
                 renderWindow: t,
-                windowDispatch: new a.ComponentDispatcher,
+                windowDispatch: new s.ComponentDispatcher,
                 windowId: n
             }, _.set(n, i), t.addEventListener("unload", () => {
                 _.delete(n)

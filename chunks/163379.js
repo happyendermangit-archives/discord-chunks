@@ -2,15 +2,15 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         openChangelog: function() {
-            return s
+            return a
         }
     });
     var i = n("735250");
     n("470079");
     var r = n("481060"),
-        a = n("596401");
+        s = n("596401");
 
-    function s() {
+    function a() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         !(!e && (0, r.hasAnyModalOpen)()) && (0, r.openModalLazy)(async () => {
             let {
@@ -20,7 +20,7 @@ function(e, t, n) {
                 ...t
             })
         }, {
-            modalKey: a.CHANGELOG_MODAL_KEY
+            modalKey: s.CHANGELOG_MODAL_KEY
         })
     }
 }

@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("47120"), n("653041");
-    var i, r, a, s, o = n("956067"),
+    var i, r, s, a, o = n("956067"),
         l = n("442837"),
         u = n("570140"),
         d = n("287328"),
@@ -61,28 +61,28 @@ function(e, t, n) {
                 }), O.set(e.id, r)
             } else if ((0, A.isGuildSticker)(e) && null != n) {
                 let r = E.default.getByName(n),
-                    a = [i, {
+                    s = [i, {
                         type: h.StickerMetadataTypes.TAG,
                         value: n.trim().toLocaleLowerCase()
                     }];
                 if (null != t) {
                     let e = t.name.trim().toLocaleLowerCase();
-                    null != e && "" !== e && a.push({
+                    null != e && "" !== e && s.push({
                         type: h.StickerMetadataTypes.GUILD_NAME,
                         value: e
                     })
                 }
                 if (null == r) {
-                    O.set(e.id, a);
+                    O.set(e.id, s);
                     return
                 }
-                a.push({
+                s.push({
                     type: h.StickerMetadataTypes.CORRELATED_EMOJI,
                     value: r.surrogates
-                }), r.forEachDiversity(e => a.push({
+                }), r.forEachDiversity(e => s.push({
                     type: h.StickerMetadataTypes.CORRELATED_EMOJI,
                     value: e.surrogates
-                })), O.set(e.id, a)
+                })), O.set(e.id, s)
             }
         }, U = (e, t, n) => {
             N.set(e.id, e);
@@ -147,12 +147,12 @@ function(e, t, n) {
             return M(), L.get(e)
         }
     }
-    s = "StickersStore", (a = "displayName") in(r = w) ? Object.defineProperty(r, a, {
-        value: s,
+    a = "StickersStore", (s = "displayName") in(r = w) ? Object.defineProperty(r, s, {
+        value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[a] = s, t.default = new w(u.default, {
+    }) : r[s] = a, t.default = new w(u.default, {
         BACKGROUND_SYNC: () => {
             O = null, p = new Map, L = new Map, m = 0
         },
@@ -208,8 +208,8 @@ function(e, t, n) {
             let {
                 guildId: i,
                 sticker: r
-            } = e, a = null !== (t = L.get(i)) && void 0 !== t ? t : [];
-            v(i, [...null !== (n = a.filter(e => e.id !== r.id)) && void 0 !== n ? n : [], r]), y(r)
+            } = e, s = null !== (t = L.get(i)) && void 0 !== t ? t : [];
+            v(i, [...null !== (n = s.filter(e => e.id !== r.id)) && void 0 !== n ? n : [], r]), y(r)
         },
         STICKER_FETCH_SUCCESS: e => {
             let {
@@ -233,8 +233,8 @@ function(e, t, n) {
             (null !== (t = L.get(n)) && void 0 !== t ? t : []).filter(e => null == i.find(t => t.id === e.id)).forEach(e => {
                 p.delete(e.id), null != O && O.delete(e.id)
             });
-            let a = i.map(e => r(e));
-            a.forEach(e => y(e)), v(n, a)
+            let s = i.map(e => r(e));
+            s.forEach(e => y(e)), v(n, s)
         },
         CACHED_STICKERS_LOADED: function(e) {
             let {

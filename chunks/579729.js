@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        a = n("481060"),
-        s = n("367907"),
+        s = n("481060"),
+        a = n("367907"),
         o = n("10718"),
         l = n("69626"),
         u = n("556084"),
@@ -37,11 +37,11 @@ function(e, t, n) {
                 application_id: t,
                 command_id: e,
                 guild_id: S,
-                ...(0, s.collectChannelAnalyticsMetadataFromId)(f.id)
+                ...(0, a.collectChannelAnalyticsMetadataFromId)(f.id)
             })
         }, [t, f.id, S, h]);
         return null == m || 0 === m.length ? null : (0, i.jsxs)(_.default, {
-            children: [(0, i.jsx)(a.Heading, {
+            children: [(0, i.jsx)(s.Heading, {
                 variant: "eyebrow",
                 className: T.title,
                 children: E.default.Messages.BOT_PROFILE_SLASH_COMMANDS

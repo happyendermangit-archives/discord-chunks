@@ -19,8 +19,8 @@ function(e, t, n) {
     }), n("653041"), n("47120"), n("411104");
     var i = n("512722"),
         r = n.n(i),
-        a = n("392711"),
-        s = n.n(a),
+        s = n("392711"),
+        a = n.n(s),
         o = n("287328"),
         l = n("406966"),
         u = n("795513"),
@@ -44,10 +44,10 @@ function(e, t, n) {
         let {
             guilds: i,
             merged_members: r,
-            merged_presences: a,
-            ...s
-        } = e, o = D(O, null == a ? void 0 : a.friends), l = null !== (n = null == i ? void 0 : i.map((e, t) => {
-            let n = D(O, null == a ? void 0 : a.guilds[t]),
+            merged_presences: s,
+            ...a
+        } = e, o = D(O, null == s ? void 0 : s.friends), l = null !== (n = null == i ? void 0 : i.map((e, t) => {
+            let n = D(O, null == s ? void 0 : s.guilds[t]),
                 i = D(O, null == r ? void 0 : r[t]);
             return {
                 ...e,
@@ -64,7 +64,7 @@ function(e, t, n) {
             unavailable: !1
         }));
         return null != u && l.push(u), O = {}, {
-            ...s,
+            ...a,
             presences: o,
             guilds: l
         }
@@ -87,7 +87,7 @@ function(e, t, n) {
     function g(e, t, n) {
         var i;
         let {
-            users: a,
+            users: s,
             relationships: l,
             private_channels: u,
             merged_members: d,
@@ -101,17 +101,17 @@ function(e, t, n) {
                 i = T.default.getRawStickersByGuild(),
                 r = h.default.getReadStatesByChannel();
             for (let o of t) {
-                var a, s, l;
+                var s, a, l;
                 o.id in e.guildVersions && e.guildChannels.has(o.id) && (N[o.id] = {
                     properties: A.toServer(o),
                     roles: S.default.getRoles(o.id),
-                    emojis: null !== (s = null === (a = n[o.id]) || void 0 === a ? void 0 : a.rawEmojis) && void 0 !== s ? s : null,
+                    emojis: null !== (a = null === (s = n[o.id]) || void 0 === s ? void 0 : s.rawEmojis) && void 0 !== a ? a : null,
                     stickers: null !== (l = i.get(o.id)) && void 0 !== l ? l : null,
                     readStates: r
                 })
             }
         })(n);
-        let f = D(O = s().keyBy(a, e => e.id), l);
+        let f = D(O = a().keyBy(s, e => e.id), l);
         null == u || u.forEach(e => {
             let t = e.recipient_ids;
             null != t && (e.recipients = t.map(e => (r()(null != O[e], "Missing user in compressed ready payload"), O[e]))), delete e.recipient_ids
@@ -120,7 +120,7 @@ function(e, t, n) {
             p = L(t, c, e => y(e));
         return null != p && m.push(p), {
             ...E,
-            users: a,
+            users: s,
             presences: [],
             relationships: f,
             guilds: m,
@@ -134,18 +134,18 @@ function(e, t, n) {
 
     function v(e, t) {
         var n, i, r;
-        let a = S.default.getGuild(e.id),
-            s = P(e, null == a ? void 0 : {
-                properties: A.toServer(a),
-                roles: S.default.getRoles(a.id),
-                emojis: null !== (i = null === (n = I.default.getGuilds()[a.id]) || void 0 === n ? void 0 : n.rawEmojis) && void 0 !== i ? i : null,
-                stickers: null !== (r = T.default.getRawStickersByGuild().get(a.id)) && void 0 !== r ? r : null,
+        let s = S.default.getGuild(e.id),
+            a = P(e, null == s ? void 0 : {
+                properties: A.toServer(s),
+                roles: S.default.getRoles(s.id),
+                emojis: null !== (i = null === (n = I.default.getGuilds()[s.id]) || void 0 === n ? void 0 : n.rawEmojis) && void 0 !== i ? i : null,
+                stickers: null !== (r = T.default.getRawStickersByGuild().get(s.id)) && void 0 !== r ? r : null,
                 readStates: {}
             });
         return p = {
             guild: e,
             identifyTime: t
-        }, s
+        }, a
     }
 
     function D(e, t) {
@@ -163,7 +163,7 @@ function(e, t, n) {
     }
 
     function y(e) {
-        var t, n, i, r, a, s, o, l, u, d, _, c;
+        var t, n, i, r, s, a, o, l, u, d, _, c;
         let E = M(e.id);
         if ("partial" !== e.data_mode) return {
             id: e.id,
@@ -191,8 +191,8 @@ function(e, t, n) {
             dataMode: e.data_mode,
             channels: null,
             channelUpdates: {
-                writes: null !== (a = null === (t = e.partial_updates.channels) || void 0 === t ? void 0 : t.map(t => (0, f.createChannelRecordFromServer)(t, e.id))) && void 0 !== a ? a : [],
-                deletes: null !== (s = e.partial_updates.deleted_channel_ids) && void 0 !== s ? s : []
+                writes: null !== (s = null === (t = e.partial_updates.channels) || void 0 === t ? void 0 : t.map(t => (0, f.createChannelRecordFromServer)(t, e.id))) && void 0 !== s ? s : [],
+                deletes: null !== (a = e.partial_updates.deleted_channel_ids) && void 0 !== a ? a : []
             },
             channelTimestampUpdates: e.channel_updates,
             emojis: null == E.emojis ? null : b(E.emojis, e.partial_updates.emojis, e.partial_updates.deleted_emoji_ids),
@@ -223,7 +223,7 @@ function(e, t, n) {
     }
 
     function P(e, t) {
-        var n, i, r, a, s, o, l, u, d, _, c, E;
+        var n, i, r, s, a, o, l, u, d, _, c, E;
         if (null == t && (t = M(e.id)), "partial" !== e.data_mode) return {
             id: e.id,
             emojis: e.emojis,
@@ -237,7 +237,7 @@ function(e, t, n) {
             roles: e.roles,
             stage_instances: e.stage_instances,
             stickers: e.stickers,
-            threads: null !== (a = null === (r = e.threads) || void 0 === r ? void 0 : r.map(t => (0, f.createChannelRecordFromServer)(t, e.id))) && void 0 !== a ? a : [],
+            threads: null !== (s = null === (r = e.threads) || void 0 === r ? void 0 : r.map(t => (0, f.createChannelRecordFromServer)(t, e.id))) && void 0 !== s ? s : [],
             threadMessages: U(e.threads),
             channels: e.channels.map(t => (t.guild_id = e.id, (0, f.createChannelRecordFromServer)(t, e.id))),
             presences: e.presences,
@@ -251,7 +251,7 @@ function(e, t, n) {
             id: e.id,
             channels: null,
             channelUpdates: {
-                writes: null !== (s = null === (n = e.partial_updates.channels) || void 0 === n ? void 0 : n.map(t => (0, f.createChannelRecordFromServer)(t, e.id))) && void 0 !== s ? s : [],
+                writes: null !== (a = null === (n = e.partial_updates.channels) || void 0 === n ? void 0 : n.map(t => (0, f.createChannelRecordFromServer)(t, e.id))) && void 0 !== a ? a : [],
                 deletes: null !== (o = e.partial_updates.deleted_channel_ids) && void 0 !== o ? o : []
             },
             channelTimestampUpdates: e.channel_updates,

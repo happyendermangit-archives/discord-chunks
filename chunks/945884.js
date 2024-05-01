@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t);
     var i = n("302454"),
         r = n.n(i),
-        a = n("777547");
-    let s = /\n$/,
+        s = n("777547");
+    let a = /\n$/,
         o = /^ *-# +((?!(-#)+)[^\n]+?) *(?:\n|$)/,
         l = {
             order: r().defaultRules.heading.order,
@@ -12,10 +12,10 @@ function(e, t, n) {
             match: (e, t, n) => {
                 let {
                     showSubtextMarkdown: r
-                } = a.SubtextMarkdownUserExperiment.getCurrentConfig({
+                } = s.SubtextMarkdownUserExperiment.getCurrentConfig({
                     location: "MarkupSubtextRule"
                 });
-                return r ? null == n || "" === n || null != n.match(s) ? (0, i.anyScopeRegex)(o)(e, t, n) : null : null
+                return r ? null == n || "" === n || null != n.match(a) ? (0, i.anyScopeRegex)(o)(e, t, n) : null : null
             },
             parse: function(e, t, n) {
                 return {

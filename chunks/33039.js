@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("47120"), n("724458");
-    var i, r, a, s, o = n("442837"),
+    var i, r, s, a, o = n("442837"),
         l = n("570140"),
         u = n("981631"),
         d = n("65154");
@@ -22,8 +22,8 @@ function(e, t, n) {
     class T extends(i = o.default.Store) {
         getStreamId(e, t) {
             var n, i, r;
-            let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.MediaEngineContextTypes.DEFAULT;
-            return null === (r = E[e]) || void 0 === r ? void 0 : null === (i = r[null != t ? t : u.NULL_STRING_GUILD_ID]) || void 0 === i ? void 0 : null === (n = i[a]) || void 0 === n ? void 0 : n.streamId
+            let s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.MediaEngineContextTypes.DEFAULT;
+            return null === (r = E[e]) || void 0 === r ? void 0 : null === (i = r[null != t ? t : u.NULL_STRING_GUILD_ID]) || void 0 === i ? void 0 : null === (n = i[s]) || void 0 === n ? void 0 : n.streamId
         }
         getUserStreamData(e, t) {
             var n, i;
@@ -31,12 +31,12 @@ function(e, t, n) {
             return null === (i = E[e]) || void 0 === i ? void 0 : null === (n = i[null != t ? t : u.NULL_STRING_GUILD_ID]) || void 0 === n ? void 0 : n[r]
         }
     }
-    s = "VideoStreamStore", (a = "displayName") in(r = T) ? Object.defineProperty(r, a, {
-        value: s,
+    a = "VideoStreamStore", (s = "displayName") in(r = T) ? Object.defineProperty(r, s, {
+        value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[a] = s, t.default = new T(l.default, {
+    }) : r[s] = a, t.default = new T(l.default, {
         CONNECTION_OPEN: function(e) {
             let {
                 user: t,
@@ -61,9 +61,9 @@ function(e, t, n) {
             null != i ? ! function(e, t, n, i) {
                 var r;
                 !(e in E) && (E[e] = {});
-                let a = null !== (r = E[e][null != t ? t : u.NULL_STRING_GUILD_ID]) && void 0 !== r ? r : {};
+                let s = null !== (r = E[e][null != t ? t : u.NULL_STRING_GUILD_ID]) && void 0 !== r ? r : {};
                 E[e][null != t ? t : u.NULL_STRING_GUILD_ID] = {
-                    ...a,
+                    ...s,
                     [i]: {
                         streamId: n
                     }
@@ -79,15 +79,15 @@ function(e, t, n) {
                 let {
                     userId: i,
                     sessionId: r,
-                    channelId: a,
-                    guildId: s
+                    channelId: s,
+                    guildId: a
                 } = t;
-                if (null == a && i === _) {
+                if (null == s && i === _) {
                     if (r !== c) return e;
                     E = {}
                 } else {
-                    if (null != a || (null === (n = E[i]) || void 0 === n ? void 0 : n[null != s ? s : u.NULL_STRING_GUILD_ID]) == null) return e;
-                    I(i, s)
+                    if (null != s || (null === (n = E[i]) || void 0 === n ? void 0 : n[null != a ? a : u.NULL_STRING_GUILD_ID]) == null) return e;
+                    I(i, a)
                 }
                 return !0
             }, !1)

@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("47120");
-    var i, r, a, s = n("735250"),
+    var i, r, s, a = n("735250"),
         o = n("470079"),
         l = n("846519");
 
@@ -12,7 +12,7 @@ function(e, t, n) {
             configurable: !0,
             writable: !0
         }) : e[t] = n, e
-    }(a = i || (i = {})).SVG = "svg", a.CANVAS = "canvas";
+    }(s = i || (i = {})).SVG = "svg", s.CANVAS = "canvas";
     class d extends(r = o.Component) {
         componentDidMount() {
             (null == this.props.versionKey || !(this.props.versionKey < 0)) && this.loadAnimation()
@@ -27,7 +27,7 @@ function(e, t, n) {
             null != this.animation && (this.props.shouldAnimate && (null == e || !e.shouldAnimate) ? this.props.resetOnPlay ? this.animation.goToAndPlay(0) : this.animation.play() : !this.props.shouldAnimate && (null == e || e.shouldAnimate) && (this.animation.pause(), null != this.props.pauseAtFrame && this.animation.goToAndStop(this.props.pauseAtFrame, !0)))
         }
         render() {
-            return (0, s.jsx)("div", {
+            return (0, a.jsx)("div", {
                 className: this.props.className,
                 ref: this.animationRef
             })
@@ -39,8 +39,8 @@ function(e, t, n) {
                     loop: t,
                     autoplay: i,
                     delay: r,
-                    renderer: a,
-                    rendererSettings: s,
+                    renderer: s,
+                    rendererSettings: a,
                     shouldAnimate: o
                 } = this.props;
                 null != this.animation && this.animation.destroy();
@@ -49,11 +49,11 @@ function(e, t, n) {
                 }] = await Promise.all([e(), n.e("23755").then(n.t.bind(n, "500923", 23))]);
                 null != this.animationRef.current && (this.animation = u.loadAnimation({
                     container: this.animationRef.current,
-                    renderer: a,
+                    renderer: s,
                     loop: t,
                     autoplay: i && null == r && o,
                     animationData: l,
-                    rendererSettings: s
+                    rendererSettings: a
                 }), null != r ? this.delayTimeout.start(r, () => {
                     var e;
                     null === (e = this.animation) || void 0 === e || e.play()

@@ -3,11 +3,11 @@ function(e, t, n) {
     n.r(t);
     var i = n("544891"),
         r = n("570140"),
-        a = n("314897"),
-        s = n("70956"),
+        s = n("314897"),
+        a = n("70956"),
         o = n("385845"),
         l = n("981631");
-    let u = 5 * s.default.Millis.MINUTE;
+    let u = 5 * a.default.Millis.MINUTE;
     async function d(e, t) {
         r.default.dispatch({
             type: "USER_RECENT_GAMES_FETCH_START",
@@ -34,7 +34,7 @@ function(e, t, n) {
         let i = o.default.getLastFetchTimestamp(e);
         if (!(null != i && Date.now() - i < u)) {
             if (n) {
-                let n = a.default.getId(),
+                let n = s.default.getId(),
                     i = o.default.getLastFetchTimestamp(n);
                 n !== e && null == i && await d(n, t)
             }

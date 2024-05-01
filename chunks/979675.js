@@ -6,15 +6,15 @@ function(e, t, n) {
         }
     });
     let i = (e, t) => function(n, i, r) {
-        return new Promise(a => {
-            var s;
+        return new Promise(s => {
+            var a;
             e.dispatch({
                 type: t,
                 event: n,
                 properties: i,
-                flush: null !== (s = null == r ? void 0 : r.flush) && void 0 !== s && s,
+                flush: null !== (a = null == r ? void 0 : r.flush) && void 0 !== a && a,
                 fingerprint: null == r ? void 0 : r.fingerprint,
-                resolve: a
+                resolve: s
             })
         })
     }

@@ -13,8 +13,8 @@ function(e, t, n) {
     }), n("627341");
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("278074"),
         l = n("442837"),
         u = n("692547"),
@@ -51,8 +51,8 @@ function(e, t, n) {
             user: t,
             guildId: n,
             isTryItOutFlow: r,
-            forProfileEffectModal: a,
-            onClick: s
+            forProfileEffectModal: s,
+            onClick: a
         } = e, o = (0, l.useStateFromStores)([O.default], () => O.default.getUserProfile(t.id), [t]), _ = (0, l.useStateFromStores)([f.default], () => f.default.getGuild(n), [n]), c = (0, E.useClydeProfilesEnabled)(_);
         return (0, i.jsxs)(i.Fragment, {
             children: [(null == o ? void 0 : o.profileFetchFailed) && (!t.isClyde() || c) && (0, i.jsx)(d.Tooltip, {
@@ -64,12 +64,12 @@ function(e, t, n) {
                     color: u.default.unsafe_rawColors.YELLOW_300.css
                 })
             }), (0, i.jsx)(L.default, {
-                className: a ? b.profileBadgesCompactNoTouch : b.profileBadges,
+                className: s ? b.profileBadgesCompactNoTouch : b.profileBadges,
                 user: t,
                 guildId: n,
                 isTryItOutFlow: r,
                 size: L.BadgeSizes.SIZE_22,
-                onBadgeClick: s
+                onBadgeClick: a
             })]
         })
     }
@@ -79,7 +79,7 @@ function(e, t, n) {
         let {
             user: t,
             displayProfile: n,
-            avatarSrc: a,
+            avatarSrc: s,
             hasBanner: l,
             status: u,
             isMobile: c,
@@ -111,7 +111,7 @@ function(e, t, n) {
             className: b.avatarHoverTarget,
             ...X,
             children: (0, i.jsx)(k, {
-                src: null != a ? a : Z,
+                src: null != s ? s : Z,
                 avatarDecoration: z,
                 size: G,
                 "aria-label": t.username,
@@ -131,7 +131,7 @@ function(e, t, n) {
         })).with(M.UserProfileTypes.POMELO_POPOUT, () => b.avatarPositionPomelo).with(M.UserProfileTypes.PANEL, () => b.avatarPositionPanel).with(M.UserProfileTypes.BITE_SIZE, () => b.avatarPositionBiteSize).exhaustive();
         return (0, i.jsx)(i.Fragment, {
             children: (0, i.jsxs)(d.Clickable, {
-                className: s()({
+                className: a()({
                     [b.clickable]: !K,
                     [b.avatarWrapperNonUserBot]: V,
                     [b.avatarWrapperNormal]: !V
@@ -175,8 +175,8 @@ function(e, t, n) {
             user: t,
             displayProfile: n,
             guildId: r,
-            channelId: a,
-            onClose: s,
+            channelId: s,
+            onClose: a,
             isMobile: o,
             isStreaming: l,
             status: u,
@@ -189,7 +189,7 @@ function(e, t, n) {
             children: [E, (0, i.jsx)(C.default, {
                 user: t,
                 displayProfile: n,
-                onClose: s,
+                onClose: a,
                 guildId: r,
                 profileType: M.UserProfileTypes.POPOUT,
                 showPremiumBadgeUpsell: c,
@@ -205,8 +205,8 @@ function(e, t, n) {
                 status: l ? y.StatusTypes.STREAMING : u,
                 isMobile: o,
                 guildId: r,
-                channelId: a,
-                onClose: s,
+                channelId: s,
+                onClose: a,
                 disableUserProfileLink: d,
                 hasBanner: (null == n ? void 0 : n.banner) != null,
                 hasProfileEffect: (null == n ? void 0 : n.profileEffectId) != null,
@@ -214,7 +214,7 @@ function(e, t, n) {
             }), (0, i.jsx)(B, {
                 user: t,
                 guildId: r,
-                onClick: s
+                onClick: a
             })]
         })
     }

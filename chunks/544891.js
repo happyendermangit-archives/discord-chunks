@@ -28,18 +28,18 @@ function(e, t, n) {
     }), n("47120"), n("653041");
     var i = n("978713"),
         r = n.n(i),
-        a = n("261470");
+        s = n("261470");
     n("17089");
-    var s = n("259443"),
+    var a = n("259443"),
         o = n("343817"),
         l = n("357280");
     n("380094");
     var u = n("817109"),
         d = n("413135").Buffer;
-    let _ = new s.Logger("HTTPUtils"),
+    let _ = new a.Logger("HTTPUtils"),
         c = new Set([502, 504, 507, 598, 599, 522, 523, 524]);
 
-    function E(e, t, n, i, s) {
+    function E(e, t, n, i, a) {
         var u, _, I, T, S;
         let h = r()[e](t.url);
         if (null != t.onRequestCreated && t.onRequestCreated(h), null != t.query) {
@@ -73,10 +73,10 @@ function(e, t, n) {
             null === (n = t.onRequestProgress) || void 0 === n || n.call(t, e)
         });
         let A = () => {
-            t.backoff = null != t.backoff ? t.backoff : new a.default, t.retried = (null != t.retried ? t.retried : 0) + 1, t.backoff.fail(() => L(t.url).then(() => E(e, t, n, i, s)))
+            t.backoff = null != t.backoff ? t.backoff : new s.default, t.retried = (null != t.retried ? t.retried : 0) + 1, t.backoff.fail(() => L(t.url).then(() => E(e, t, n, i, a)))
         };
         null == C || null === (I = C.prepareRequest) || void 0 === I || I.call(C, h), h.ok(e => null != e.status), h.then(r => {
-            var a, u, d;
+            var s, u, d;
             if (null != t.retries && t.retries-- > 0 && c.has(r.status)) return A();
             let _ = {
                 ok: r.ok,
@@ -87,25 +87,25 @@ function(e, t, n) {
             };
             f(t, _);
             let I = !1,
-                T = (r, a) => {
+                T = (r, s) => {
                     let o = {
                         ...t,
                         headers: {
                             ...t.headers,
                             ...r
                         },
-                        interceptResponse: a
+                        interceptResponse: s
                     };
-                    I = !0, E(e, o, n, i, s)
+                    I = !0, E(e, o, n, i, a)
                 },
                 S = e => {
-                    !I && (i(e), null == s || s({
+                    !I && (i(e), null == a || a({
                         ok: !1,
                         hasErr: !0,
                         err: e
                     }))
                 };
-            if ((null == t ? void 0 : null === (a = t.interceptResponse) || void 0 === a ? void 0 : a.call(t, r, T, S)) !== !0) {
+            if ((null == t ? void 0 : null === (s = t.interceptResponse) || void 0 === s ? void 0 : s.call(t, r, T, S)) !== !0) {
                 if ((null == C ? void 0 : null === (u = C.interceptResponse) || void 0 === u ? void 0 : u.call(C, r, T, S)) !== !0) {
                     if (r.ok) n(_);
                     else {
@@ -117,14 +117,14 @@ function(e, t, n) {
                         }
                         i(_)
                     }
-                    null != s && s({
+                    null != a && a({
                         hasErr: !1,
                         ..._
                     })
                 }
             }
         }, e => {
-            null != t.retries && t.retries-- > 0 && "ABORTED" !== e.code ? A() : (f(t), i(e), null != s && s({
+            null != t.retries && t.retries-- > 0 && "ABORTED" !== e.code ? A() : (f(t), i(e), null != a && a({
                 ok: !1,
                 hasErr: !0,
                 err: e
@@ -153,20 +153,20 @@ function(e, t, n) {
         let n = I.get(e.url);
         if (null != t && 429 === t.status) {
             var i, r;
-            let a = (null === (i = t.body) || void 0 === i ? void 0 : i.retry_after) || 5,
-                s = Date.now() + 1e3 * a;
+            let s = (null === (i = t.body) || void 0 === i ? void 0 : i.retry_after) || 5,
+                a = Date.now() + 1e3 * s;
             if (null != n) {
-                if (n.retryAfterTimestamp < s) _.verbose("cleanupRequestEntry: extending rate limit for ", e.url), clearTimeout(n.timeoutId);
+                if (n.retryAfterTimestamp < a) _.verbose("cleanupRequestEntry: extending rate limit for ", e.url), clearTimeout(n.timeoutId);
                 else {
                     _.verbose("cleanupRequestEntry: already has rate limit for ", e.url);
                     return
                 }
             }
-            _.verbose("cleanupRequestEntry: rate limit for ".concat(e.url, " retry after ").concat(a, " seconds"));
-            let o = setTimeout(() => T(e.url), 1e3 * a);
+            _.verbose("cleanupRequestEntry: rate limit for ".concat(e.url, " retry after ").concat(s, " seconds"));
+            let o = setTimeout(() => T(e.url), 1e3 * s);
             I.set(e.url, {
                 queue: null !== (r = null == n ? void 0 : n.queue) && void 0 !== r ? r : [],
-                retryAfterTimestamp: s,
+                retryAfterTimestamp: a,
                 timeoutId: o
             })
         } else null != n && n.retryAfterTimestamp < Date.now() && (_.verbose("cleanupRequestEntry: rate limit for ", e.url, "expired"), T(e.url))
@@ -177,8 +177,8 @@ function(e, t, n) {
             "string" == typeof t && (t = {
                 url: t
             });
-            let a = I.get(t.url);
-            null != a ? (_.verbose("makeRequest: queueing request for ", t.url), a.queue.push(E.bind(null, e, t, i, r, n))) : E(e, t, i, r, n)
+            let s = I.get(t.url);
+            null != s ? (_.verbose("makeRequest: queueing request for ", t.url), s.queue.push(E.bind(null, e, t, i, r, n))) : E(e, t, i, r, n)
         })
     }
     let h = S.bind(null, "get"),

@@ -2,26 +2,26 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return a
+            return s
         }
     });
     var i = n("735250");
     n("470079");
     var r = n("325767");
 
-    function a(e) {
+    function s(e) {
         let {
             width: t = 10,
             height: n = 10,
-            color: a = "currentColor",
-            ...s
+            color: s = "currentColor",
+            ...a
         } = e;
         return (0, i.jsxs)("svg", {
-            ...(0, r.default)(s),
+            ...(0, r.default)(a),
             width: t,
             height: n,
             viewBox: "0 0 17 22",
-            fill: a,
+            fill: s,
             xmlns: "http://www.w3.org/2000/svg",
             children: [(0, i.jsxs)("g", {
                 filter: "url(#filter0_d_1296_1706)",

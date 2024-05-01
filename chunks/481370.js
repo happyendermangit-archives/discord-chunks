@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("481060"),
         l = n("911969"),
         u = n("555573"),
@@ -34,20 +34,20 @@ function(e, t, n) {
         let {
             channel: t,
             command: n,
-            section: a
-        } = e, s = r.useCallback(() => {
+            section: s
+        } = e, a = r.useCallback(() => {
             A.dismissAppLauncherPopup(), u.setActiveCommand({
                 channelId: t.id,
                 command: n,
-                section: a,
+                section: s,
                 location: _.ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW
             }), h.ComponentDispatch.dispatch(p.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
                 channelId: t.id
             })
-        }, [t, n, a]);
+        }, [t, n, s]);
         return (0, i.jsxs)("li", {
             className: C.command,
-            onClick: s,
+            onClick: a,
             children: [(0, i.jsx)(o.Text, {
                 variant: "text-sm/semibold",
                 children: n.displayName
@@ -62,12 +62,12 @@ function(e, t, n) {
     function v(e) {
         var t, n;
         let {
-            channel: a,
+            channel: s,
             appDetail: u
         } = e, {
             filterSection: _,
             commandsByActiveSection: h
-        } = d.useDiscovery(a, {
+        } = d.useDiscovery(s, {
             commandType: l.ApplicationCommandType.CHAT
         }, {
             placeholderCount: 0,
@@ -117,7 +117,7 @@ function(e, t, n) {
                 children: [(0, i.jsxs)("div", {
                     className: C.appIcon,
                     children: [(0, i.jsx)(P, {
-                        channel: a,
+                        channel: s,
                         section: u,
                         width: 72,
                         height: 72
@@ -130,14 +130,14 @@ function(e, t, n) {
                         variant: "heading-lg/bold",
                         children: u.name
                     }), (0, i.jsx)(o.Text, {
-                        className: s()(C.__invalid_appDescription, g.markup),
+                        className: a()(C.__invalid_appDescription, g.markup),
                         variant: "text-sm/medium",
                         lineClamp: 3,
                         children: U
                     })]
                 }), (0, i.jsx)(N.default, {
                     commands: p,
-                    channel: a
+                    channel: s
                 }), (0, i.jsxs)("div", {
                     className: C.commandListHeader,
                     children: [(0, i.jsx)(o.Heading, {
@@ -150,7 +150,7 @@ function(e, t, n) {
                     })]
                 }), (0, i.jsx)("ul", {
                     children: p.map(e => (0, i.jsx)(L, {
-                        channel: a,
+                        channel: s,
                         command: e,
                         section: u
                     }, e.id))

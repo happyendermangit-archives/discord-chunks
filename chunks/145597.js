@@ -15,7 +15,7 @@ function(e, t, n) {
             return l
         },
         OVERLAY_VERSION: function() {
-            return s
+            return a
         },
         getPID: function() {
             return c
@@ -39,9 +39,9 @@ function(e, t, n) {
             return T
         }
     }), n("610138"), n("216116"), n("78328"), n("815648"), n("47120"), n("490029");
-    var a = n("358085");
+    var s = n("358085");
     n("981631");
-    let s = 2,
+    let a = 2,
         o = {
             width: 3840,
             height: 2160
@@ -70,7 +70,7 @@ function(e, t, n) {
     }
 
     function T(e) {
-        return !a.isPlatformEmbedded || e.width >= l.width && e.height >= l.height
+        return !s.isPlatformEmbedded || e.width >= l.width && e.height >= l.height
     }
 
     function f(e) {

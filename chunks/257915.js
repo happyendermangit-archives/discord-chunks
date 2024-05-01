@@ -2,9 +2,9 @@ function(e, t, n) {
     "use strict";
     n.r(t), n("411104");
     var i, r = n("735250"),
-        a = n("470079"),
-        s = n("120356"),
-        o = n.n(s),
+        s = n("470079"),
+        a = n("120356"),
+        o = n.n(a),
         l = n("290330");
 
     function u(e, t, n) {
@@ -20,7 +20,7 @@ function(e, t, n) {
         let i = new Image;
         i.src = e, i.onload = () => t(i), i.onerror = e => n(e)
     });
-    class _ extends(i = a.PureComponent) {
+    class _ extends(i = s.PureComponent) {
         componentDidUpdate(e) {
             e.src !== this.props.src && this.setState({
                 loaded: !1
@@ -42,8 +42,8 @@ function(e, t, n) {
                 src: t,
                 alt: n,
                 width: i,
-                height: a,
-                onLoad: s,
+                height: s,
+                onLoad: a,
                 style: u,
                 imageClassName: d
             } = this.props, {
@@ -54,17 +54,17 @@ function(e, t, n) {
                 style: {
                     ...u,
                     width: i,
-                    height: a
+                    height: s
                 },
                 children: (0, r.jsx)("img", {
                     className: o()(l.image, d, {
                         [l.loaded]: _
                     }),
                     width: i,
-                    height: a,
+                    height: s,
                     src: t,
                     alt: n,
-                    onLoad: s
+                    onLoad: a
                 })
             })
         }

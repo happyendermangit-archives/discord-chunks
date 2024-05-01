@@ -2,21 +2,21 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getErlpackEncoding: function() {
-            return s
+            return a
         }
     }), n("518263"), n("970173"), n("520712"), n("268111"), n("941497"), n("32026"), n("480839"), n("744285"), n("492257"), n("873817");
     var i = n("710845"),
         r = n("358085"),
-        a = n("998502");
+        s = n("998502");
 
-    function s() {
+    function a() {
         if (r.isPlatformEmbedded) {
             let e;
             try {
-                e = a.default.requireModule("discord_erlpack")
+                e = s.default.requireModule("discord_erlpack")
             } catch (t) {
                 try {
-                    e = a.default.requireModule("erlpack")
+                    e = s.default.requireModule("erlpack")
                 } catch (e) {}
             }
             if (null != e) return class {

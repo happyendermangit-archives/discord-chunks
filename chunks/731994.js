@@ -8,15 +8,15 @@ function(e, t, n) {
             return l
         },
         FileUploadIconClassNames: function() {
-            return s
+            return a
         }
     });
-    var i, r, a = n("297888");
+    var i, r, s = n("297888");
     (i = r || (r = {}))[i.IMAGE = 0] = "IMAGE", i[i.DOCUMENT = 1] = "DOCUMENT", i[i.CODE = 2] = "CODE";
-    let s = {
-            0: a.image,
-            1: a.document,
-            2: a.code
+    let a = {
+            0: s.image,
+            1: s.document,
+            2: s.code
         },
         o = [1, 0, 2],
         l = [0, 0, 0]

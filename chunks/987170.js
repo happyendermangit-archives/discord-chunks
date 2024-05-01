@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("470079"),
         r = n("180205"),
-        a = n("314897"),
-        s = n("492435"),
+        s = n("314897"),
+        a = n("492435"),
         o = n("353926"),
         l = n("987338");
 
@@ -17,8 +17,8 @@ function(e, t, n) {
     }
 
     function d(e, t, n, i) {
-        var r, a;
-        return (null == i ? void 0 : i.aaMode) ? e.defaultConfig : null !== (a = null === (r = n.get(t)) || void 0 === r ? void 0 : r.config) && void 0 !== a ? a : e.defaultConfig
+        var r, s;
+        return (null == i ? void 0 : i.aaMode) ? e.defaultConfig : null !== (s = null === (r = n.get(t)) || void 0 === r ? void 0 : r.config) && void 0 !== s ? s : e.defaultConfig
     }
 
     function _(e) {
@@ -41,7 +41,7 @@ function(e, t, n) {
             title: e.label,
             description: [..._.values()].map(e => e.description),
             buckets: [..._.keys()]
-        }, "guild" === t ? (0, s.registerGuildExperiment)(n) : (0, s.registerUserExperiment)(n));
+        }, "guild" === t ? (0, a.registerGuildExperiment)(n) : (0, a.registerUserExperiment)(n));
 
         function E(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -67,10 +67,10 @@ function(e, t, n) {
             if (null != n) {
                 var i, r, o, u, d;
                 let _ = l.ExposureTypes.MANUAL;
-                (0, s.trackExposureToExperiment)(c.id, n, {
+                (0, a.trackExposureToExperiment)(c.id, n, {
                     location: null !== (i = null == e ? void 0 : e.location) && void 0 !== i ? i : "unknown",
                     analyticsLocations: null !== (r = null == t ? void 0 : t.analyticsLocations) && void 0 !== r ? r : [],
-                    fingerprint: null !== (u = null !== (o = null == t ? void 0 : t.fingerprint) && void 0 !== o ? o : a.default.getFingerprint()) && void 0 !== u ? u : void 0,
+                    fingerprint: null !== (u = null !== (o = null == t ? void 0 : t.fingerprint) && void 0 !== o ? o : s.default.getFingerprint()) && void 0 !== u ? u : void 0,
                     excluded: (null == t ? void 0 : t.excluded) || !1,
                     exposureType: null !== (d = null == t ? void 0 : t.exposureType) && void 0 !== d ? d : _
                 })
@@ -80,31 +80,31 @@ function(e, t, n) {
         function f(t, n) {
             let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
                 r = null != i.disable && i.disable,
-                a = u(e.kind, e.id, t),
-                s = null == a || r ? l.ExperimentBuckets.NOT_ELIGIBLE : a.bucket,
-                c = null == a ? -1 : a.revision;
+                s = u(e.kind, e.id, t),
+                a = null == s || r ? l.ExperimentBuckets.NOT_ELIGIBLE : s.bucket,
+                c = null == s ? -1 : s.revision;
 
             function E() {
                 let i = u(e.kind, e.id, t),
-                    a = null == i || r ? l.ExperimentBuckets.NOT_ELIGIBLE : i.bucket,
+                    s = null == i || r ? l.ExperimentBuckets.NOT_ELIGIBLE : i.bucket,
                     o = null == i ? -1 : i.revision;
-                (a !== s || c !== o) && (n(d(e, a, _, i), a, o), s = a, c = o)
+                (s !== a || c !== o) && (n(d(e, s, _, i), s, o), a = s, c = o)
             }
-            return n(d(e, s, _, a), s, c), o.default.addReactChangeListener(E), () => {
+            return n(d(e, a, _, s), a, c), o.default.addReactChangeListener(E), () => {
                 o.default.removeReactChangeListener(E)
             }
         }
         return {
             useExperiment: function(t) {
-                var n, a, s;
+                var n, s, a;
                 let o = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
                         autoTrackExposure: !0
                     },
                     c = null !== (n = o.disable) && void 0 !== n && n,
                     I = !1 !== o.autoTrackExposure,
                     T = u(e.kind, e.id, t),
-                    S = null == o.trackExposureOptions ? void 0 : (0, r.default)(null !== (a = o.trackExposureOptions) && void 0 !== a ? a : {}),
-                    h = null !== (s = null == T ? void 0 : T.triggerDebuggingEnabled) && void 0 !== s && s,
+                    S = null == o.trackExposureOptions ? void 0 : (0, r.default)(null !== (s = o.trackExposureOptions) && void 0 !== s ? s : {}),
+                    h = null !== (a = null == T ? void 0 : T.triggerDebuggingEnabled) && void 0 !== a && a,
                     [
                         [A, m, N], p
                     ] = (0, i.useState)(() => {

@@ -7,11 +7,11 @@ function(e, t, n) {
     }), n("653041");
     var i = n("544891"),
         r = n("881052"),
-        a = n("687294"),
-        s = n("476326"),
+        s = n("687294"),
+        a = n("476326"),
         o = n("861990"),
         l = n("689938");
-    class u extends a.default {
+    class u extends s.default {
         async uploadFiles(e, t) {
             let {
                 addFilesTo: n
@@ -23,7 +23,7 @@ function(e, t, n) {
             try {
                 if (this.files = e, this._aborted) return;
                 if (this._handleStart(() => i.abort()), !await this.compressAndCheckFileSize()) return;
-                this.setUploadingTextForUI(), await (0, a.stageAttachmentFiles)(this.files, !0, this._recomputeProgress.bind(this))
+                this.setUploadingTextForUI(), await (0, s.stageAttachmentFiles)(this.files, !0, this._recomputeProgress.bind(this))
             } catch (e) {
                 this._handleException(e)
             }
@@ -35,20 +35,20 @@ function(e, t, n) {
             }
         }
         async _createMessage(e, t, n) {
-            let a;
+            let s;
             let l = [];
             this.files.forEach((e, t) => {
                 let n = (0, o.getAttachmentPayload)(e, t);
-                e.item.platform === s.UploadPlatform.WEB && l.push({
+                e.item.platform === a.UploadPlatform.WEB && l.push({
                     ...n
                 })
-            }), a = null != n && null != t ? this._addAttachmentsToPayload(t, n, l) : {
+            }), s = null != n && null != t ? this._addAttachmentsToPayload(t, n, l) : {
                 ...t,
                 attachments: l
             };
             let u = {
                     url: this._url,
-                    body: a,
+                    body: s,
                     signal: e
                 },
                 d = "POST" === this._method ? i.HTTP.post : i.HTTP.patch;

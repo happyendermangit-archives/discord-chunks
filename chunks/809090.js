@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("806519"),
         l = n("768581"),
         u = n("895924"),
@@ -19,7 +19,7 @@ function(e, t, n) {
         let {
             section: t,
             isSelected: n,
-            width: a,
+            width: s,
             height: c,
             className: E,
             selectable: I = !1,
@@ -44,14 +44,14 @@ function(e, t, n) {
                     icon: t.icon,
                     bot: null === (e = t.application) || void 0 === e ? void 0 : e.bot,
                     botIconFirst: !0,
-                    size: a
+                    size: s
                 })
             }
             return _
-        }, [t, a]);
+        }, [t, s]);
         return (0, i.jsx)("div", {
             ...A,
-            className: s()(d.wrapper, E, {
+            className: a()(d.wrapper, E, {
                 [d.selectable]: I,
                 [d.selected]: I && n
             }),
@@ -62,13 +62,13 @@ function(e, t, n) {
             children: (0, i.jsx)(o.default, {
                 className: d.mask,
                 mask: I && (n || m) ? o.MaskIDs.SQUIRCLE : o.MaskIDs.AVATAR_DEFAULT,
-                width: a,
+                width: s,
                 height: c,
                 children: (0, i.jsx)("img", {
                     alt: "",
                     className: d.icon,
                     style: {
-                        width: a,
+                        width: s,
                         height: c
                     },
                     src: g

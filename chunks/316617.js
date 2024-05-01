@@ -4,8 +4,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("442837"),
-        a = n("481060"),
-        s = n("739566"),
+        s = n("481060"),
+        a = n("739566"),
         o = n("25015"),
         l = n("592125"),
         u = n("998951"),
@@ -18,18 +18,18 @@ function(e, t, n) {
     t.default = e => {
         let {
             message: t
-        } = e, n = (0, s.default)(t), f = (0, r.useStateFromStores)([l.default], () => l.default.getChannel(t.channel_id)), {
+        } = e, n = (0, a.default)(t), f = (0, r.useStateFromStores)([l.default], () => l.default.getChannel(t.channel_id)), {
             content: S
         } = (0, o.default)(t, {
             hideSimpleEmbedContent: !1
         });
         return null == f ? null : (0, i.jsxs)("div", {
             className: T.container,
-            children: [(0, i.jsx)(a.Heading, {
+            children: [(0, i.jsx)(s.Heading, {
                 className: T.header,
                 variant: "heading-sm/semibold",
                 children: I.default.Messages.MOBILE_REPORTS_MESSAGE_PREVIEW_TITLE
-            }), (0, i.jsx)(a.Scroller, {
+            }), (0, i.jsx)(s.Scroller, {
                 className: T.messagePreviewContainer,
                 children: (0, i.jsx)(u.default, {
                     childrenMessageContent: (() => {

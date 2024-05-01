@@ -2,10 +2,10 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         getIsActivitiesEnabledForCurrentPlatform: function() {
-            return s
+            return a
         },
         useIsActivitiesEnabledForCurrentPlatform: function() {
-            return a
+            return s
         }
     });
     var i = n("873546");
@@ -14,11 +14,11 @@ function(e, t, n) {
         return !i.isMobile && !i.isTablet && !0
     }
 
-    function a(e) {
+    function s(e) {
         return r()
     }
 
-    function s(e) {
+    function a(e) {
         return r()
     }
 }

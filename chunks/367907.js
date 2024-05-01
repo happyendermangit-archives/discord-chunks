@@ -28,8 +28,8 @@ function(e, t, n) {
     });
     var i = n("392711"),
         r = n.n(i),
-        a = n("149765"),
-        s = n("50244"),
+        s = n("149765"),
+        a = n("50244"),
         o = n("686660"),
         l = n("131704"),
         u = n("314897"),
@@ -67,10 +67,10 @@ function(e, t, n) {
         if (null == n) return null;
         let i = I.default.getRoles(n.id),
             r = u.default.getId(),
-            a = E.default.getMember(e, r),
-            s = _.default.getChannels(e),
-            o = s[_.GUILD_SELECTABLE_CHANNELS_KEY].length,
-            l = s[_.GUILD_VOCAL_CHANNELS_KEY].length,
+            s = E.default.getMember(e, r),
+            a = _.default.getChannels(e),
+            o = a[_.GUILD_SELECTABLE_CHANNELS_KEY].length,
+            l = a[_.GUILD_VOCAL_CHANNELS_KEY].length,
             d = O.default.getVoiceStates(e);
         return {
             guild_id: n.id,
@@ -79,10 +79,10 @@ function(e, t, n) {
             guild_num_text_channels: o,
             guild_num_voice_channels: l,
             guild_num_roles: M(i),
-            guild_member_num_roles: null != a ? a.roles.length : 0,
+            guild_member_num_roles: null != s ? s.roles.length : 0,
             guild_member_perms: String(null !== (t = f.default.getGuildPermissions(n)) && void 0 !== t ? t : g.NONE),
             guild_is_vip: n.hasFeature(v.GuildFeatures.VIP_REGIONS),
-            is_member: null != a,
+            is_member: null != s,
             num_voice_channels_active: M(d)
         }
     }
@@ -102,7 +102,7 @@ function(e, t, n) {
             let t = e => {
                 if (null == e) return !1;
                 let t = e.permissionOverwrites[i];
-                return null != t && a.has(t.deny, v.Permissions.VIEW_CHANNEL)
+                return null != t && s.has(t.deny, v.Permissions.VIEW_CHANNEL)
             };
             n = l.THREAD_CHANNEL_TYPES.has(e.type) && null != e.parent_id ? t(d.default.getChannel(e.parent_id)) : t(e)
         }
@@ -132,19 +132,19 @@ function(e, t, n) {
     }
 
     function G(e) {
-        var t, n, i, r, a;
-        let s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        var t, n, i, r, s;
+        let a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
             o = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         if (R.default.isThrottled(e)) return;
-        let l = !("location" in s) || s.location !== v.AnalyticsLocations.GUILD_CREATE_INVITE_SUGGESTION,
-            u = "guild_id" in s ? s.guild_id : l ? N.default.getGuildId() : null,
-            _ = "channel_id" in s ? s.channel_id : l ? m.default.getChannelId(u) : null,
+        let l = !("location" in a) || a.location !== v.AnalyticsLocations.GUILD_CREATE_INVITE_SUGGESTION,
+            u = "guild_id" in a ? a.guild_id : l ? N.default.getGuildId() : null,
+            _ = "channel_id" in a ? a.channel_id : l ? m.default.getChannelId(u) : null,
             c = d.default.getChannel(_);
         let E = (t = c, n = u, null == t ? null != n ? n : null : t.isPrivate() ? null : null !== (r = null !== (i = t.getGuildId()) && void 0 !== i ? i : n) && void 0 !== r ? r : null);
         let I = {
-            ...s,
+            ...a,
             ...y(E),
-            ...null != u && null != _ && (0, D.isStaticChannelRoute)(_) ? (a = 0, {
+            ...null != u && null != _ && (0, D.isStaticChannelRoute)(_) ? (s = 0, {
                 channel_static_route: _,
                 channel_hidden: !1
             }) : U(c)
@@ -180,7 +180,7 @@ function(e, t, n) {
             guild_preset: (0, o.presetFromSettings)(p.default.resolveGuildUnreadSetting(n), p.default.getMessageNotifications(t.guild_id)),
             parent_id: t.parent_id,
             parent_channel_type: t.parentChannelThreadType,
-            has_pending_member_action: (0, s.hasPendingMemberAction)(t.guild_id, e),
+            has_pending_member_action: (0, a.hasPendingMemberAction)(t.guild_id, e),
             can_send_message: f.default.can(v.Permissions.SEND_MESSAGES, t)
         }
     }

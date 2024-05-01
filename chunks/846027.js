@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t);
     var i = n("570140"),
         r = n("340332"),
-        a = n("672339"),
-        s = n("463395"),
+        s = n("672339"),
+        a = n("463395"),
         o = n("131951"),
         l = n("626135"),
         u = n("557177"),
@@ -18,13 +18,13 @@ function(e, t, n) {
 
     function I(e, t, n, i, r) {
         if (t === n) return;
-        let a = e[t],
+        let s = e[t],
             o = e[n];
         l.default.track(_.AnalyticEvents.MEDIA_DEVICE_CHANGED, {
-            device_from_name: s.default.getCertifiedDeviceName(t, null != a ? a.name : ""),
-            device_to_name: s.default.getCertifiedDeviceName(n, null != o ? o.name : ""),
+            device_from_name: a.default.getCertifiedDeviceName(t, null != s ? s.name : ""),
+            device_to_name: a.default.getCertifiedDeviceName(n, null != o ? o.name : ""),
             device_type: i,
-            device_is_certified: s.default.isCertified(n),
+            device_is_certified: a.default.isCertified(n),
             location: r
         })
     }
@@ -99,14 +99,14 @@ function(e, t, n) {
         setDisableLocalVideo(e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.MediaEngineContextTypes.DEFAULT,
                 r = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
-                a = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+                s = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
             !S() && i.default.dispatch({
                 type: "AUDIO_SET_LOCAL_VIDEO_DISABLED",
                 context: n,
                 userId: e,
                 videoToggleState: t,
                 persist: r,
-                isAutomatic: a
+                isAutomatic: s
             })
         },
         setLocalVolume(e, t) {
@@ -289,7 +289,7 @@ function(e, t, n) {
             })
         },
         setVideoEnabled(e) {
-            (0, a.applyInitialVideoBackgroundOption)(), i.default.dispatch({
+            (0, s.applyInitialVideoBackgroundOption)(), i.default.dispatch({
                 type: "MEDIA_ENGINE_SET_VIDEO_ENABLED",
                 enabled: e
             })

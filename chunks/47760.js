@@ -2,17 +2,17 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         areThemesEqualForGradientThemes: function() {
-            return s
+            return a
         },
         getLinearGradientForBackgroundGradient: function() {
-            return a
+            return s
         }
     }), n("47120");
     var i = n("44315");
     n("469115");
     var r = n("231338");
 
-    function a(e) {
+    function s(e) {
         let {
             angle: t,
             colors: n
@@ -26,7 +26,7 @@ function(e, t, n) {
         }).join(", "), ")")
     }
 
-    function s(e, t) {
+    function a(e, t) {
         return e === t || e === r.ThemeTypes.DARK && t === r.ThemeTypes.DARKER || e === r.ThemeTypes.DARKER && t === r.ThemeTypes.DARK || !1
     }
 }

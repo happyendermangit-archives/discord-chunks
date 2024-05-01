@@ -14,8 +14,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("481060"),
-        a = n("570140"),
-        s = n("710845"),
+        s = n("570140"),
+        a = n("710845"),
         o = n("131951"),
         l = n("556296"),
         u = n("451478"),
@@ -24,7 +24,7 @@ function(e, t, n) {
         c = n("981631"),
         E = n("761274"),
         I = n("689938");
-    let T = new s.default("AudioActionCreators");
+    let T = new a.default("AudioActionCreators");
 
     function f() {
         (0, r.openModalLazy)(async () => {
@@ -65,7 +65,7 @@ function(e, t, n) {
         return S() ? Promise.resolve(!1) : (d.default.track(c.AnalyticEvents.PERMISSIONS_REQUESTED, {
             type: "audio"
         }), o.default.getMediaEngine().enable().then(() => {
-            a.default.dispatch({
+            s.default.dispatch({
                 type: "MEDIA_ENGINE_SET_AUDIO_ENABLED",
                 enabled: !0,
                 unmute: e

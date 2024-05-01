@@ -1,6 +1,6 @@
 function(e, t, n) {
     "use strict";
-    var i, r, a, s, o, l;
+    var i, r, s, a, o, l;
     n.r(t), n.d(t, {
         AvatarSizeSpecs: function() {
             return E
@@ -21,7 +21,7 @@ function(e, t, n) {
             return r
         },
         StatusBackdropOpacity: function() {
-            return a
+            return s
         },
         TYPING_WIDTH_RATIO: function() {
             return d
@@ -37,7 +37,7 @@ function(e, t, n) {
         d = 2.5,
         _ = .125,
         c = .2;
-    (s = i || (i = {})).SIZE_16 = "SIZE_16", s.SIZE_20 = "SIZE_20", s.SIZE_24 = "SIZE_24", s.SIZE_32 = "SIZE_32", s.SIZE_40 = "SIZE_40", s.SIZE_48 = "SIZE_48", s.SIZE_56 = "SIZE_56", s.SIZE_80 = "SIZE_80", s.SIZE_120 = "SIZE_120", s.SIZE_152 = "SIZE_152", s.DEPRECATED_SIZE_30 = "DEPRECATED_SIZE_30", s.DEPRECATED_SIZE_60 = "DEPRECATED_SIZE_60", s.DEPRECATED_SIZE_100 = "DEPRECATED_SIZE_100", (o = r || (r = {})).BLACK = "black", o.WHITE = "white", (l = a || (a = {}))[l.HIGH = .7] = "HIGH", l[l.LOW = .45] = "LOW";
+    (a = i || (i = {})).SIZE_16 = "SIZE_16", a.SIZE_20 = "SIZE_20", a.SIZE_24 = "SIZE_24", a.SIZE_32 = "SIZE_32", a.SIZE_40 = "SIZE_40", a.SIZE_48 = "SIZE_48", a.SIZE_56 = "SIZE_56", a.SIZE_80 = "SIZE_80", a.SIZE_120 = "SIZE_120", a.SIZE_152 = "SIZE_152", a.DEPRECATED_SIZE_30 = "DEPRECATED_SIZE_30", a.DEPRECATED_SIZE_60 = "DEPRECATED_SIZE_60", a.DEPRECATED_SIZE_100 = "DEPRECATED_SIZE_100", (o = r || (r = {})).BLACK = "black", o.WHITE = "white", (l = s || (s = {}))[l.HIGH = .7] = "HIGH", l[l.LOW = .45] = "LOW";
     let E = Object.freeze({
         SIZE_16: Object.freeze({
             size: 16,

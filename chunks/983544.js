@@ -8,8 +8,8 @@ function(e, t, n) {
             return _
         }
     });
-    var i, r, a = n("277985"),
-        s = n("592125"),
+    var i, r, s = n("277985"),
+        a = n("592125"),
         o = n("403182"),
         l = n("861990"),
         u = n("981631");
@@ -21,7 +21,7 @@ function(e, t, n) {
             return u.Endpoints.MESSAGE_DELETE_UPLOAD(e)
         }
         getMaxFileSize(e) {
-            let t = s.default.getBasicChannel(e);
+            let t = a.default.getBasicChannel(e);
             return o.maxFileSize(null == t ? void 0 : t.guild_id)
         }
         getMaxAttachmentsCount() {
@@ -36,7 +36,7 @@ function(e, t, n) {
     }
 
     function _(e) {
-        if (1 === e) return new a.default;
+        if (1 === e) return new s.default;
         return new d
     }(i = r || (r = {}))[i.MESSAGE_ATTACHMENT = 0] = "MESSAGE_ATTACHMENT", i[i.GUILD_PRODUCT_ATTACHMENT = 1] = "GUILD_PRODUCT_ATTACHMENT"
 }

@@ -5,7 +5,7 @@ function(e, t, n) {
             return o
         },
         getSafetyAlertsSettingOrDefault: function() {
-            return s
+            return a
         },
         shouldShowTakeoverForWarnings: function() {
             return l
@@ -13,12 +13,12 @@ function(e, t, n) {
     });
     var i = n("581883"),
         r = n("359119"),
-        a = n("473092");
+        s = n("473092");
 
-    function s() {
+    function a() {
         var e, t, n;
         let r = null === (n = null === (t = i.default.settings.privacy) || void 0 === t ? void 0 : null === (e = t.inappropriateConversationWarnings) || void 0 === e ? void 0 : e.value) || void 0 === n || n;
-        return (0, a.getUserIsTeen)("safety_warnings_setting") && r
+        return (0, s.getUserIsTeen)("safety_warnings_setting") && r
     }
 
     function o(e) {

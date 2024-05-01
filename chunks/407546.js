@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("149765"),
-        a = n("260034"),
-        s = n("993365"),
+        s = n("260034"),
+        a = n("993365"),
         o = n("481060"),
         l = n("981631"),
         u = n("689938"),
@@ -28,11 +28,11 @@ function(e, t, n) {
         }));
         return (0, i.jsxs)("div", {
             className: d.selectorGroup,
-            children: [(0, i.jsx)(a.Heading, {
+            children: [(0, i.jsx)(s.Heading, {
                 variant: "heading-deprecated-12/semibold",
                 className: d.sectionLabel,
                 children: u.default.Messages.OAUTH2_ADD_TO_GUILD
-            }), null != t && "" !== t ? (0, i.jsx)(s.Text, {
+            }), null != t && "" !== t ? (0, i.jsx)(a.Text, {
                 variant: "text-xs/normal",
                 color: "text-danger",
                 children: t
@@ -45,7 +45,7 @@ function(e, t, n) {
                 isDisabled: E,
                 isSelected: e => e === n,
                 serialize: e => e
-            }), (0, i.jsx)(s.Text, {
+            }), (0, i.jsx)(a.Text, {
                 variant: "text-xs/medium",
                 color: "header-secondary",
                 className: d.label,

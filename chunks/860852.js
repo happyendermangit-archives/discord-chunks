@@ -2,36 +2,36 @@ function(e, t, n) {
     "use strict";
     var i, r;
 
-    function a(e) {
+    function s(e) {
         let {
             sessionId: t,
             userId: n,
             applicationId: i,
             channelId: r,
-            streamKey: a
+            streamKey: s
         } = e;
         return {
             session_id: t,
             user_id: n,
             application_id: i,
             channel_id: r,
-            stream_key: a
+            stream_key: s
         }
     }
 
-    function s(e, t, n) {
+    function a(e, t, n) {
         let {
             session_id: i,
             application_id: r,
-            channel_id: a,
-            stream_key: s
+            channel_id: s,
+            stream_key: a
         } = e;
         return {
             sessionId: i,
             userId: t,
             applicationId: r,
-            channelId: a,
-            streamKey: s,
+            channelId: s,
+            streamKey: a,
             source: n
         }
     }
@@ -40,10 +40,10 @@ function(e, t, n) {
             return i
         },
         broadcastFromServer: function() {
-            return s
+            return a
         },
         broadcastToServer: function() {
-            return a
+            return s
         }
     }), (r = i || (i = {}))[r.GLOBAL = 0] = "GLOBAL", r[r.GUILD = 1] = "GUILD"
 }

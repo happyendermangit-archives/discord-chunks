@@ -31,8 +31,8 @@ function(e, t, n) {
     }), n("653041"), n("998459"), n("47120"), n("411104"), n("789020");
     var i = n("392711"),
         r = n.n(i),
-        a = n("913527"),
-        s = n.n(a),
+        s = n("913527"),
+        a = n.n(s),
         o = n("991637"),
         l = n.n(o),
         u = n("873546"),
@@ -57,12 +57,12 @@ function(e, t, n) {
             analyticsSource: n,
             analyticsProperties: i,
             storeListingId: r,
-            slug: a,
-            channelId: s,
+            slug: s,
+            channelId: a,
             guildId: o
         } = t;
         return {
-            pathname: null != s && null != o ? N.Routes.CHANNEL(o, s, e) : N.Routes.APPLICATION_STORE_LISTING_SKU(e, a),
+            pathname: null != a && null != o ? N.Routes.CHANNEL(o, a, e) : N.Routes.APPLICATION_STORE_LISTING_SKU(e, s),
             state: {
                 analyticsSource: n,
                 analyticsProperties: i
@@ -88,8 +88,8 @@ function(e, t, n) {
 
     function g(e, t, n, i) {
         var r;
-        let a;
-        let s = window.GLOBAL_ENV.CDN_HOST;
+        let s;
+        let a = window.GLOBAL_ENV.CDN_HOST;
         if (null == i) switch (t.mimeType || t.mime_type) {
             case "video/quicktime":
             case "video/mp4":
@@ -104,12 +104,12 @@ function(e, t, n) {
         "webp" === i && !O && (i = "png");
         let o = "string" == typeof t ? t : t.id,
             l = (r = "https:", "https:");
-        return a = null != s ? "".concat(l, "//").concat(s, "/app-assets/").concat(e, "/store/").concat(o, ".").concat(i) : "".concat(l).concat(window.GLOBAL_ENV.API_ENDPOINT).concat(N.Endpoints.STORE_ASSET(e, o, i)), null != n && (a += "?size=".concat((0, c.getBestMediaProxySize)(n * (0, c.getDevicePixelRatio)()))), a
+        return s = null != a ? "".concat(l, "//").concat(a, "/app-assets/").concat(e, "/store/").concat(o, ".").concat(i) : "".concat(l).concat(window.GLOBAL_ENV.API_ENDPOINT).concat(N.Endpoints.STORE_ASSET(e, o, i)), null != n && (s += "?size=".concat((0, c.getBestMediaProxySize)(n * (0, c.getDevicePixelRatio)()))), s
     }
     async function L(e) {
         var t, n, i, r;
-        let a = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-        if (a) {
+        let s = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+        if (s) {
             let e = [];
             !I.default.hasFetchedPaymentSources && e.push(null !== (n = E.default.paymentSourcesFetchRequest) && void 0 !== n ? n : (0, _.fetchPaymentSources)()), !E.default.ipCountryCodeLoaded && e.push((0, _.fetchIpCountryCode)()), e.push(new Promise(async e => {
                 if (T.default.hasFetchedSubscriptions()) e();
@@ -121,12 +121,12 @@ function(e, t, n) {
                 } else await (0, _.fetchSubscriptions)(), e()
             })), await Promise.allSettled(e)
         }
-        let s = I.default.getDefaultBillingCountryCode(),
+        let a = I.default.getDefaultBillingCountryCode(),
             o = null !== (i = null === (t = I.default.defaultPaymentSource) || void 0 === t ? void 0 : t.id) && void 0 !== i ? i : null,
             l = T.default.getPremiumTypeSubscription();
-        null != l && null != l.paymentSourceId && (o = l.paymentSourceId), null === s && (s = null !== (r = E.default.ipCountryCode) && void 0 !== r ? r : null);
+        null != l && null != l.paymentSourceId && (o = l.paymentSourceId), null === a && (a = null !== (r = E.default.ipCountryCode) && void 0 !== r ? r : null);
         let u = {};
-        if (null != s && (u.country_code = s), null != o && (u.payment_source_id = o), null != s || null != o) {
+        if (null != a && (u.country_code = a), null != o && (u.payment_source_id = o), null != a || null != o) {
             if ("string" == typeof e && (e = {
                     url: e,
                     oldFormErrors: !0
@@ -170,25 +170,25 @@ function(e, t, n) {
     }
     let y = [];
 
-    function P(e, t, n, i, a) {
-        let s = t.get(e);
-        if (null == s) return y;
-        let o = s.applicationId,
+    function P(e, t, n, i, s) {
+        let a = t.get(e);
+        if (null == a) return y;
+        let o = a.applicationId,
             l = [],
             u = [],
             d = function(e, t, n) {
                 var i;
                 let r = null !== (i = n.getNowPlaying(e)) && void 0 !== i ? i : {},
-                    a = m.default.keys(r).map(e => {
+                    s = m.default.keys(r).map(e => {
                         let n = t.getUser(e);
                         return null == n ? null : {
                             user: n,
                             startTime: r[n.id].startedPlaying
                         }
                     }).filter(h.isNotNullish).sort((e, t) => t.startTime - e.startTime);
-                return 0 === a.length ? null : {
+                return 0 === s.length ? null : {
                     type: N.StoreRecommendationTypes.NOW_PLAYING,
-                    userInfo: a
+                    userInfo: s
                 }
             }(o, n, i);
         null != d && (l.push(d), u = d.userInfo.map(e => {
@@ -197,7 +197,7 @@ function(e, t, n) {
             } = e;
             return t.id
         }));
-        let _ = a.getStatisticsForApplication(o);
+        let _ = s.getStatisticsForApplication(o);
         if (null != _) {
             let e = _.map(e => e.user_id);
             if (r().difference(e, u).length > 0) {
@@ -215,7 +215,7 @@ function(e, t, n) {
                         type: N.StoreRecommendationTypes.EVER_PLAYED,
                         userInfo: r
                     }
-                }(o, n, a);
+                }(o, n, s);
                 null != e && l.push(e)
             }
         }
@@ -227,20 +227,20 @@ function(e, t, n) {
         let i = t.get(e),
             r = n.getForSKU(e);
         if (null == i || null == r) return U;
-        let a = [];
-        (0, S.hasFlag)(i.flags, N.SKUFlags.HAS_FREE_PREMIUM_CONTENT) && a.push({
+        let s = [];
+        (0, S.hasFlag)(i.flags, N.SKUFlags.HAS_FREE_PREMIUM_CONTENT) && s.push({
             type: N.StoreRecommendationTypes.HAS_FREE_PREMIUM_CONTENT
         });
         let o = i.releaseDate;
-        return null != o && 3 > s()().diff(o, "months") && (i.accessType === N.SKUAccessTypes.EARLY_ACCESS ? a.push({
+        return null != o && 3 > a()().diff(o, "months") && (i.accessType === N.SKUAccessTypes.EARLY_ACCESS ? s.push({
             type: N.StoreRecommendationTypes.EARLY_ACCESS,
             releaseDate: o
-        }) : a.push({
+        }) : s.push({
             type: N.StoreRecommendationTypes.RECENT_RELEASE_DATE,
             releaseDate: o
-        })), null != r.flavorText && a.push({
+        })), null != r.flavorText && s.push({
             type: N.StoreRecommendationTypes.FLAVOR_TEXT,
             flavorText: r.flavorText
-        }), a
+        }), s
     }
 }

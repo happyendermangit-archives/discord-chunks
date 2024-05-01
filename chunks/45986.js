@@ -5,7 +5,7 @@ function(e, t, n) {
             return r
         },
         trustProtocol: function() {
-            return a
+            return s
         }
     });
     var i = n("570140");
@@ -17,7 +17,7 @@ function(e, t, n) {
         })
     }
 
-    function a(e) {
+    function s(e) {
         i.default.dispatch({
             type: "MASKED_LINK_ADD_TRUSTED_PROTOCOL",
             url: e

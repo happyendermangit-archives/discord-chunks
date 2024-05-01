@@ -13,8 +13,8 @@ function(e, t, n) {
     });
     var i = n("544891"),
         r = n("570140"),
-        a = n("73346"),
-        s = n("981631");
+        s = n("73346"),
+        a = n("981631");
 
     function o(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
@@ -24,7 +24,7 @@ function(e, t, n) {
                 applicationId: e
             })
         }), i.HTTP.get({
-            url: s.Endpoints.ENTITLEMENTS_FOR_APPLICATION(e),
+            url: a.Endpoints.ENTITLEMENTS_FOR_APPLICATION(e),
             oldFormErrors: !0,
             query: {
                 exclude_consumed: t
@@ -44,18 +44,18 @@ function(e, t, n) {
         let {
             withSku: t = !1,
             withApplication: n = !1,
-            entitlementType: a
+            entitlementType: s
         } = e;
         r.default.dispatch({
             type: "ENTITLEMENTS_FETCH_FOR_USER_START"
         });
         try {
             let e = await i.HTTP.get({
-                url: s.Endpoints.ENTITLEMENTS_FOR_USER,
+                url: a.Endpoints.ENTITLEMENTS_FOR_USER,
                 query: {
                     with_sku: t,
                     with_application: n,
-                    entitlement_type: a
+                    entitlement_type: s
                 }
             });
             r.default.dispatch({
@@ -73,8 +73,8 @@ function(e, t, n) {
             type: "ENTITLEMENTS_GIFTABLE_FETCH"
         });
         try {
-            let e = await (0, a.httpGetWithCountryCodeQuery)({
-                url: s.Endpoints.ENTITLEMENTS_GIFTABLE
+            let e = await (0, s.httpGetWithCountryCodeQuery)({
+                url: a.Endpoints.ENTITLEMENTS_GIFTABLE
             });
             r.default.dispatch({
                 type: "ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS",

@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("312677"), n("411104"), n("47120");
     var i = n("259443"),
         r = n("60541"),
-        a = n("46973"),
-        s = n("992774"),
+        s = n("46973"),
+        a = n("992774"),
         o = n("149396");
 
     function l(e, t, n) {
@@ -29,20 +29,20 @@ function(e, t, n) {
         initialize(e) {
             let t;
             this.audioSSRC = e.ssrc, this.streamUserId = e.streamUserId, this.pingInterval = o.PING_INTERVAL, this.initializeStreamParameters(e.streamParameters), e.streamParameters = this.videoStreamParameters;
-            let n = (0, s.getVoiceEngine)();
+            let n = (0, a.getVoiceEngine)();
             t = this.conn = n.createSpeedTestConnectionWithOptions(this.userId, e, (n, i) => {
                 if (this.destroyed) return;
                 if (null != n && "" !== n) {
-                    this.setConnectionState(o.ConnectionStates.NO_ROUTE), this.emit(a.BaseSpeedTesterEvent.Error, n);
+                    this.setConnectionState(o.ConnectionStates.NO_ROUTE), this.emit(s.BaseSpeedTesterEvent.Error, n);
                     return
                 }
                 if (null == i) throw Error("Invalid transport info");
                 let {
                     protocol: r,
-                    address: s,
+                    address: a,
                     port: l
                 } = i;
-                u.info("Connected with local address ".concat(s, ":").concat(l, " and protocol: ").concat(r)), this.codecs = [{
+                u.info("Connected with local address ".concat(a, ":").concat(l, " and protocol: ").concat(r)), this.codecs = [{
                     type: "audio",
                     name: o.Codecs.OPUS,
                     priority: 1,
@@ -54,8 +54,8 @@ function(e, t, n) {
                     payloadType: 127
                 }], t.getEncryptionModes(n => {
                     var i, d;
-                    u.info("Encryption modes: ".concat(n)), t.setTransportOptions(this.getConnectionTransportOptions()), null === (i = t.setPingInterval) || void 0 === i || i.call(t, this.pingInterval), t.setPingCallback(this.handlePing), null === (d = t.setPingTimeoutCallback) || void 0 === d || d.call(t, this.handlePingTimeout), this.setConnectionState(o.ConnectionStates.CONNECTED), this.emit(a.BaseSpeedTesterEvent.Connected, r, {
-                        address: s,
+                    u.info("Encryption modes: ".concat(n)), t.setTransportOptions(this.getConnectionTransportOptions()), null === (i = t.setPingInterval) || void 0 === i || i.call(t, this.pingInterval), t.setPingCallback(this.handlePing), null === (d = t.setPingTimeoutCallback) || void 0 === d || d.call(t, this.handlePingTimeout), this.setConnectionState(o.ConnectionStates.CONNECTED), this.emit(s.BaseSpeedTesterEvent.Connected, r, {
+                        address: a,
                         port: l,
                         mode: this.chooseEncryptionMode(e.modes, n),
                         codecs: this.codecs
@@ -126,10 +126,10 @@ function(e, t, n) {
             }
         }
         getCodecOptions(e, t) {
-            var n, i, r, a;
-            let s;
+            var n, i, r, s;
+            let a;
             let o = {
-                    type: null !== (n = null == (s = this.codecs.find(t => t.name === e)) ? void 0 : s.payloadType) && void 0 !== n ? n : 0,
+                    type: null !== (n = null == (a = this.codecs.find(t => t.name === e)) ? void 0 : a.payloadType) && void 0 !== n ? n : 0,
                     name: e,
                     freq: 48e3,
                     pacsize: 960,
@@ -137,7 +137,7 @@ function(e, t, n) {
                     rate: 64e3
                 },
                 l = [{
-                    type: null !== (i = null == s ? void 0 : s.payloadType) && void 0 !== i ? i : 0,
+                    type: null !== (i = null == a ? void 0 : a.payloadType) && void 0 !== i ? i : 0,
                     name: e,
                     freq: 48e3,
                     channels: 2,
@@ -146,25 +146,25 @@ function(e, t, n) {
                     }
                 }],
                 u = {
-                    type: null !== (r = null == (s = this.codecs.find(e => e.name === t)) ? void 0 : s.payloadType) && void 0 !== r ? r : 0
+                    type: null !== (r = null == (a = this.codecs.find(e => e.name === t)) ? void 0 : a.payloadType) && void 0 !== r ? r : 0
                 };
             return {
                 audioEncoder: o,
                 audioDecoders: l,
                 testEncoder: u,
                 testDecoder: {
-                    type: null !== (a = null == s ? void 0 : s.payloadType) && void 0 !== a ? a : 0
+                    type: null !== (s = null == a ? void 0 : a.payloadType) && void 0 !== s ? s : 0
                 }
             }
         }
         getUserIdBySsrc(e) {}
         constructor(...e) {
             super(...e), l(this, "mediaEngineConnectionId", "Native-".concat(d++)), l(this, "codecs", []), l(this, "qos", !0), l(this, "conn", void 0), l(this, "reconnectInterval", 6e4), l(this, "pingInterval", o.PING_INTERVAL), l(this, "handlePing", (e, t, n) => {
-                this.emit(a.BaseSpeedTesterEvent.Ping, e)
+                this.emit(s.BaseSpeedTesterEvent.Ping, e)
             }), l(this, "handlePingTimeout", (e, t, n, i) => {
-                this.emit(a.BaseSpeedTesterEvent.PingTimeout, n, i > 0 ? i : 4e3)
+                this.emit(s.BaseSpeedTesterEvent.PingTimeout, n, i > 0 ? i : 4e3)
             }), l(this, "handleNewListenerNative", e => {
-                if (e === a.BaseSpeedTesterEvent.ConnectionStateChange) this.emit(e, this.connectionState)
+                if (e === s.BaseSpeedTesterEvent.ConnectionStateChange) this.emit(e, this.connectionState)
             })
         }
     }

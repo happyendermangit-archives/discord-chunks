@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("717881"),
-        a = n("906732"),
-        s = n("785717"),
+        s = n("906732"),
+        a = n("785717"),
         o = n("221292"),
         l = n("659101"),
         u = n("981631"),
@@ -25,10 +25,10 @@ function(e, t, n) {
             analyticsParams: I
         } = e, {
             analyticsLocations: T
-        } = (0, a.default)(), {
+        } = (0, s.default)(), {
             trackUserProfileAction: f,
             ...S
-        } = (0, s.useUserProfileAnalyticsContext)();
+        } = (0, a.useUserProfileAnalyticsContext)();
         return (0, i.jsx)(l.default, {
             children: (0, i.jsx)(r.default, {
                 type: r.UserActivityTypes.USER_POPOUT_V2,

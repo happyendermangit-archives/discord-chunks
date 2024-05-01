@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("592125"),
         r = n("650774"),
-        a = n("944486"),
-        s = n("412788"),
+        s = n("944486"),
+        a = n("412788"),
         o = n("368321"),
         l = n("553245"),
         u = n("143806"),
@@ -25,9 +25,9 @@ function(e, t, n) {
         f = new l.ExtendedMemoryLru(750, 500),
         S = new u.Lru(15),
         h = !1;
-    class A extends s.default {
+    class A extends a.default {
         initialize() {
-            this.waitFor(i.default), this.waitFor(a.default), this.waitFor(r.default), this.syncWith([o.default], () => !0), this.syncWith([a.default], m)
+            this.waitFor(i.default), this.waitFor(s.default), this.waitFor(r.default), this.syncWith([o.default], () => !0), this.syncWith([s.default], m)
         }
         loadCache() {
             let e = this.readSnapshot(A.LATEST_SNAPSHOT_VERSION);
@@ -111,7 +111,7 @@ function(e, t, n) {
     }
 
     function m() {
-        let e = a.default.getChannelId();
+        let e = s.default.getChannelId();
         null != e && A.recordChannel(e)
     }
 
@@ -122,7 +122,7 @@ function(e, t, n) {
     function p(e) {
         let t = e.id,
             n = (0, c.isReadableChannel)(e),
-            i = a.default.getChannelId();
+            i = s.default.getChannelId();
         n && t === i && A.recordChannel(t), !n && A.deleteChannel(t)
     }
 

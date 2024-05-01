@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     let i, r;
     n.r(t), n("653041"), n("47120"), n("411104"), n("724458");
-    var a, s, o, l = n("392711"),
+    var s, a, o, l = n("392711"),
         u = n.n(l),
         d = n("153832"),
         _ = n("442837"),
@@ -20,7 +20,7 @@ function(e, t, n) {
             configurable: !0,
             writable: !0
         }) : e[t] = n, e
-    }(o = a || (a = {})).REQUIRED = "REQUIRED", o.OPTIONAL = "OPTIONAL", o.OPTIONAL_DEFAULT = "OPTIONAL_DEFAULT";
+    }(o = s || (s = {})).REQUIRED = "REQUIRED", o.OPTIONAL = "OPTIONAL", o.OPTIONAL_DEFAULT = "OPTIONAL_DEFAULT";
     let A = "migrated",
         m = {
             [S.OverlayWidgets.GUILDS]: {
@@ -120,15 +120,15 @@ function(e, t, n) {
     function N(e, t) {
         let n = r[e];
         if (null == n) return !1;
-        let a = i[n.layoutId];
-        return null != a && t(n, a)
+        let s = i[n.layoutId];
+        return null != s && t(n, s)
     }
 
     function p(e) {
         var t;
         return null === (t = m[e]) || void 0 === t ? void 0 : t.defaultSettings
     }
-    class O extends(s = _.default.PersistedStore) {
+    class O extends(a = _.default.PersistedStore) {
         initialize(e) {
             null != e && null != e.layouts && null != e.widgets ? (i = function(e) {
                 let t = {};
@@ -145,11 +145,11 @@ function(e, t, n) {
                 n = [];
             u().forEach(m, (e, t) => {
                 "REQUIRED" === e.layoutPolicy && n.push(t)
-            }), u().forEach(i, (e, a) => {
-                let s = this.getWidgetsForLayout(a),
+            }), u().forEach(i, (e, s) => {
+                let a = this.getWidgetsForLayout(s),
                     o = !1;
                 for (let e of n) {
-                    let n = s.find(t => t.type === e);
+                    let n = a.find(t => t.type === e);
                     if (null != n) continue;
                     o = t = !0;
                     let i = (0, d.v4)();
@@ -157,25 +157,25 @@ function(e, t, n) {
                         ...this.getWidgetDefaultSettings(e),
                         type: e,
                         id: i,
-                        layoutId: a,
-                        zIndex: s.length
-                    }), s.push(n), r = {
+                        layoutId: s,
+                        zIndex: a.length
+                    }), a.push(n), r = {
                         ...r,
                         [i]: n
                     }
                 }
-                o && (e = e.set("widgets", s.map(e => {
+                o && (e = e.set("widgets", a.map(e => {
                     let {
                         id: t
                     } = e;
                     return t
                 })), i = {
                     ...i,
-                    [a]: e
+                    [s]: e
                 })
             }), u().forEach(r, (e, n) => {
-                let a = i[e.layoutId];
-                (null == a || 0 > a.widgets.indexOf(n)) && (r = {
+                let s = i[e.layoutId];
+                (null == s || 0 > s.widgets.indexOf(n)) && (r = {
                     ...r
                 }, delete r[n], t = !0)
             }), t && (this.persist(), this.emitChange())
@@ -247,8 +247,8 @@ function(e, t, n) {
             let i = [],
                 r = e.map(e => {
                     let r = null != t ? t[e] : null,
-                        a = null != n ? n[e] : null,
-                        s = {
+                        s = null != n ? n[e] : null,
+                        a = {
                             id: e,
                             layoutId: A,
                             type: e,
@@ -258,14 +258,14 @@ function(e, t, n) {
                                 bottom: null,
                                 right: null
                             },
-                            size: a || {
+                            size: s || {
                                 width: -1,
                                 height: -1
                             },
                             pinned: !0,
                             zIndex: 0
                         };
-                    return i.push([s.id, s]), s.id
+                    return i.push([a.id, a]), a.id
                 });
             return {
                 layouts: [
@@ -288,30 +288,30 @@ function(e, t, n) {
         } = e, i = new Set(Object.keys(S.OverlayWidgets)), r = Array.from(n).filter(e => {
             let [t] = e;
             return !i.has(t)
-        }), a = Array.from(t).filter(e => {
+        }), s = Array.from(t).filter(e => {
             let [t] = e;
             return t !== A
         });
-        return a.forEach(e => {
-            let [t, n] = e, i = null, a = null;
+        return s.forEach(e => {
+            let [t, n] = e, i = null, s = null;
             if (n.widgets.find(e => {
                     let n = r.find(n => {
                         let [i, r] = n;
                         return i === e && r.layoutId === t
                     });
-                    return null != n && (null == a && n[1].type === S.OverlayWidgets.VOICE && (a = n[0]), null == i && n[1].type === S.OverlayWidgets.TEXT && (i = n[1].pinned), null != i && null != a || void 0)
-                }), i || null == a) return;
-            let s = (0, d.v4)();
-            n.widgets = [a, s], r.push([s, {
+                    return null != n && (null == s && n[1].type === S.OverlayWidgets.VOICE && (s = n[0]), null == i && n[1].type === S.OverlayWidgets.TEXT && (i = n[1].pinned), null != i && null != s || void 0)
+                }), i || null == s) return;
+            let a = (0, d.v4)();
+            n.widgets = [s, a], r.push([a, {
                 ...p(S.OverlayWidgets.GUILDS_TEXT),
                 type: S.OverlayWidgets.GUILDS_TEXT,
-                id: s,
+                id: a,
                 layoutId: t,
                 zIndex: 2
             }])
         }), {
             widgets: r,
-            layouts: a
+            layouts: s
         }
     }, e => {
         let {
@@ -333,10 +333,10 @@ function(e, t, n) {
             let {
                 layoutId: t,
                 widgets: n,
-                defaultResolution: a
+                defaultResolution: s
             } = e;
             if (null != i[t]) return !1;
-            let s = [];
+            let a = [];
             n.forEach((e, t) => {
                 let n = function(e) {
                         let t = i[A];
@@ -351,15 +351,15 @@ function(e, t, n) {
                         ...e,
                         zIndex: t
                     };
-                "" === o.id && (o.id = (0, d.v4)()), null != n && (o.pinned = n.pinned, -1 !== n.anchor.left && (o.anchor = (0, f.getAnchorPercentageFromLayoutSize)(n.anchor, a)), -1 !== n.size.width && (o.size = (0, f.getSizePercentageFromSize)(n.size, a))), r = {
+                "" === o.id && (o.id = (0, d.v4)()), null != n && (o.pinned = n.pinned, -1 !== n.anchor.left && (o.anchor = (0, f.getAnchorPercentageFromLayoutSize)(n.anchor, s)), -1 !== n.size.width && (o.size = (0, f.getSizePercentageFromSize)(n.size, s))), r = {
                     ...r,
                     [o.id]: new T.default(o)
-                }, s.push(o.id)
+                }, a.push(o.id)
             }), i = {
                 ...i,
                 [t]: new I.default({
                     id: t,
-                    widgets: s
+                    widgets: a
                 })
             }
         },
@@ -461,10 +461,10 @@ function(e, t, n) {
                     ...r,
                     [t.id]: t
                 };
-                let a = [...n.widgets, t.id];
+                let s = [...n.widgets, t.id];
                 i = {
                     ...i,
-                    [n.id]: n.set("widgets", a)
+                    [n.id]: n.set("widgets", s)
                 }
             })
         }

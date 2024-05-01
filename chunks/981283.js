@@ -4,8 +4,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("392711"),
-        a = n("481060"),
-        s = n("570140"),
+        s = n("481060"),
+        a = n("570140"),
         o = n("846027"),
         l = n("872810"),
         u = n("695346"),
@@ -22,7 +22,7 @@ function(e, t, n) {
     let m = (0, r.debounce)(l.notifyStreamStart, 1e3);
     t.default = {
         init() {
-            T.default.init(), s.default.subscribe("MEDIA_ENGINE_VIDEO_STATE_CHANGED", e => {
+            T.default.init(), a.default.subscribe("MEDIA_ENGINE_VIDEO_STATE_CHANGED", e => {
                 let {
                     videoState: t
                 } = e, n = d.default.getCurrentUserActiveStream();
@@ -30,8 +30,8 @@ function(e, t, n) {
                     let e = t === A.MediaEngineVideoStates.PAUSED;
                     (0, l.setStreamPaused)(n, e)
                 }
-            }), s.default.subscribe("STREAM_DELETE", e => {
-                e.reason === A.ApplicationStreamDeleteReasons.STREAM_FULL && ((0, l.closeStream)(e.streamKey, !1), (0, a.openModalLazy)(async () => {
+            }), a.default.subscribe("STREAM_DELETE", e => {
+                e.reason === A.ApplicationStreamDeleteReasons.STREAM_FULL && ((0, l.closeStream)(e.streamKey, !1), (0, s.openModalLazy)(async () => {
                     let {
                         default: e
                     } = await Promise.all([n.e("99387"), n.e("12222")]).then(n.bind(n, "309690"));
@@ -39,7 +39,7 @@ function(e, t, n) {
                         ...t
                     })
                 }))
-            }), s.default.subscribe("STREAM_WATCH", e => {
+            }), a.default.subscribe("STREAM_WATCH", e => {
                 let {
                     streamKey: t,
                     allowMultiple: n
@@ -49,7 +49,7 @@ function(e, t, n) {
                 d.default.getAllActiveStreams().forEach(e => {
                     if (e.ownerId !== i.ownerId) e.ownerId !== _.default.getId() && (e.ownerId === _.default.getId() && o.default.setGoLiveSource(null), (0, l.closeStream)((0, f.encodeStreamKey)(e), !1))
                 })
-            }), s.default.subscribe("VOICE_STATE_UPDATES", e => {
+            }), a.default.subscribe("VOICE_STATE_UPDATES", e => {
                 let {
                     voiceStates: t
                 } = e;
@@ -64,7 +64,7 @@ function(e, t, n) {
                         e.channelId !== i && (0, S.default)(e, !1)
                     })
                 })
-            }), s.default.subscribe("STREAM_CREATE", e => {
+            }), a.default.subscribe("STREAM_CREATE", e => {
                 var t;
                 let {
                     streamKey: n
@@ -73,8 +73,8 @@ function(e, t, n) {
                     guildId: r
                 } = (0, f.decodeStreamKey)(n);
                 if (null == r || null == i || i !== (null === (t = I.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return;
-                let a = c.default.getMemberCount(r);
-                null != a && !(a < 2) && !(a > h.STREAM_NOTIFY_GUILD_MAX_SIZE) && u.NotifyFriendsOnGoLive.getSetting() && m(n)
+                let s = c.default.getMemberCount(r);
+                null != s && !(s < 2) && !(s > h.STREAM_NOTIFY_GUILD_MAX_SIZE) && u.NotifyFriendsOnGoLive.getSetting() && m(n)
             })
         }
     }

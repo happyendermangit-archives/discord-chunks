@@ -1,6 +1,6 @@
 function(e, t, n) {
     "use strict";
-    var i, r, a, s;
+    var i, r, s, a;
     n.r(t), n.d(t, {
         MAX_STAGE_TOPIC_LENGTH: function() {
             return o
@@ -25,5 +25,5 @@ function(e, t, n) {
         l = "834488117758001152",
         u = "stage-invite",
         d = "stage-channel-audience-notice-shown";
-    (a = i || (i = {}))[a.EVERYONE = 1] = "EVERYONE", a[a.NO_ONE = 2] = "NO_ONE", a[a.ROLES = 3] = "ROLES", (s = r || (r = {}))[s.GUILD_SELECTION = 0] = "GUILD_SELECTION", s[s.STAGE_CHANNEL_SETTINGS = 1] = "STAGE_CHANNEL_SETTINGS", s[s.PUBLIC_STAGE_PREVIEW = 2] = "PUBLIC_STAGE_PREVIEW"
+    (s = i || (i = {}))[s.EVERYONE = 1] = "EVERYONE", s[s.NO_ONE = 2] = "NO_ONE", s[s.ROLES = 3] = "ROLES", (a = r || (r = {}))[a.GUILD_SELECTION = 0] = "GUILD_SELECTION", a[a.STAGE_CHANNEL_SETTINGS = 1] = "STAGE_CHANNEL_SETTINGS", a[a.PUBLIC_STAGE_PREVIEW = 2] = "PUBLIC_STAGE_PREVIEW"
 }

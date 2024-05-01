@@ -128,18 +128,18 @@ function(e, t, n) {
             "./zh-TW.jsona": "592369"
         };
 
-    function a(e) {
+    function s(e) {
         if (!n.o(r, e)) return Promise.resolve().then(function() {
             var t = Error("Cannot find module '" + e + "'");
             throw t.code = "MODULE_NOT_FOUND", t
         });
         var t = i[e],
-            a = r[e];
+            s = r[e];
         return t().then(function() {
-            return n.t(a, 19)
+            return n.t(s, 19)
         })
     }
-    a.keys = function() {
+    s.keys = function() {
         return Object.keys(r)
-    }, a.id = "290034", e.exports = a
+    }, s.id = "290034", e.exports = s
 }

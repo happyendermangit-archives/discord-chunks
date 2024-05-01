@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return a
+            return s
         }
     }), n("47120");
     var i = n("470079");
@@ -12,12 +12,12 @@ function(e, t, n) {
         return Math.min(1, Math.max(0, (t.clientX - n.left) / n.width))
     }
 
-    function a(e) {
+    function s(e) {
         let {
             ref: t,
             onDrag: n,
-            onDragStart: a,
-            onDragEnd: s
+            onDragStart: s,
+            onDragEnd: a
         } = e, [o, l] = i.useState(!1);
         return i.useEffect(() => {
             if (o) return window.addEventListener("mouseup", e), window.addEventListener("mousemove", i), () => {
@@ -25,17 +25,17 @@ function(e, t, n) {
             };
 
             function e() {
-                null == s || s(), l(!1)
+                null == a || a(), l(!1)
             }
 
             function i(e) {
                 let i = t.current;
                 null != i && (null == n || n(r(i, e)))
             }
-        }, [t, o, s, n]), [o, i.useCallback(e => {
+        }, [t, o, a, n]), [o, i.useCallback(e => {
             e.preventDefault();
             let i = t.current;
-            null != i && (l(!0), null == a || a(), null == n || n(r(i, e)))
-        }, [t, a, n])]
+            null != i && (l(!0), null == s || s(), null == n || n(r(i, e)))
+        }, [t, s, n])]
     }
 }

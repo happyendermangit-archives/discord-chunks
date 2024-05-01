@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("392711"),
         l = n.n(o),
         u = n("481060"),
@@ -20,7 +20,7 @@ function(e, t, n) {
     function I(e) {
         let {
             className: t,
-            maxUsers: a,
+            maxUsers: s,
             users: o,
             guildId: I,
             onFocus: T,
@@ -54,9 +54,9 @@ function(e, t, n) {
             })
         }
         return o.length <= 0 ? null : (0, i.jsx)("div", {
-            className: s()(t, E.avatars),
+            className: a()(t, E.avatars),
             children: function() {
-                let e = l()(o).take(a).map(e => {
+                let e = l()(o).take(s).map(e => {
                         let t = c.default.getName(e);
                         return h ? (0, i.jsx)("div", {
                             className: E.avatar,
@@ -75,14 +75,14 @@ function(e, t, n) {
                             })
                         }, e.id)
                     }).value(),
-                    t = o.length - a;
+                    t = o.length - s;
                 return t > 0 && !S && (e[e.length - 1] = (0, i.jsx)(u.Popout, {
                     renderPopout: N,
                     shouldShow: A,
                     position: "bottom",
                     onRequestClose: () => m(!1),
                     children: () => (0, i.jsxs)(u.Button, {
-                        className: s()(E.avatar, E.overflow),
+                        className: a()(E.avatar, E.overflow),
                         onFocus: T,
                         onClick: () => m(!0),
                         look: u.Button.Looks.BLANK,

@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         WCAGContrastRatios: function() {
-            return a
+            return s
         },
         darkenColor: function() {
             return l
@@ -13,13 +13,13 @@ function(e, t, n) {
     }), n("47120"), n("411104");
     var i = n("688619"),
         r = n.n(i);
-    let a = {
+    let s = {
         NonText: 3,
         Text: 4.5,
         HighContrastText: 7
     };
 
-    function s(e) {
+    function a(e) {
         let [t, n, i, r] = e.rgba();
         return "rgba(".concat(t, ", ").concat(n, ", ").concat(i, ", ").concat(r, ")")
     }
@@ -27,7 +27,7 @@ function(e, t, n) {
     function o(e) {
         var t, n, i;
         let o = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            l = null !== (t = o.contrastRatio) && void 0 !== t ? t : a.NonText,
+            l = null !== (t = o.contrastRatio) && void 0 !== t ? t : s.NonText,
             u = null !== (n = o.tolerance) && void 0 !== n ? n : 3,
             d = r()(null !== (i = o.base) && void 0 !== i ? i : e),
             _ = r()(e),
@@ -43,10 +43,10 @@ function(e, t, n) {
             let n = E.luminance() > c;
             E = t && n || e && !n ? E.darken() : E.brighten(), T = r().contrast(d, E)
         }
-        return s(E)
+        return a(E)
     }
 
     function l(e, t) {
-        return s(r()(e).darken(t))
+        return a(r()(e).darken(t))
     }
 }

@@ -7,14 +7,14 @@ function(e, t, n) {
     }), n("411104");
     var i = n("735250"),
         r = n("470079"),
-        a = n("803997"),
-        s = n.n(a),
+        s = n("803997"),
+        a = n.n(s),
         o = n("789978"),
         l = n("780900");
 
     function u(e, t) {
         let n = (0, l.getScrollbarSpecs)(e);
-        return r.forwardRef(function(a, u) {
+        return r.forwardRef(function(s, u) {
             let {
                 children: d,
                 className: _,
@@ -25,7 +25,7 @@ function(e, t, n) {
                 onScroll: f,
                 style: S,
                 ...h
-            } = a, A = r.useRef(null), m = (0, l.usePaddingFixes)({
+            } = s, A = r.useRef(null), m = (0, l.usePaddingFixes)({
                 paddingFix: I,
                 orientation: E,
                 dir: c,
@@ -37,7 +37,7 @@ function(e, t, n) {
                 ref: e => {
                     "function" == typeof u ? u(e) : null != u && (u.current = e), A.current = e
                 },
-                className: s()(_, {
+                className: a()(_, {
                     [e]: !0,
                     [t]: T
                 }),

@@ -13,8 +13,8 @@ function(e, t, n) {
     });
     var i = n("470079"),
         r = n("399606"),
-        a = n("544891"),
-        s = n("570140"),
+        s = n("544891"),
+        a = n("570140"),
         o = n("821849"),
         l = n("594174"),
         u = n("509545"),
@@ -26,15 +26,15 @@ function(e, t, n) {
     let T = "nonSubscriber";
     async function f() {
         try {
-            s.default.dispatch({
+            a.default.dispatch({
                 type: "BILLING_USER_PREMIUM_LIKELIHOOD_FETCH"
             });
             let {
                 body: e
-            } = await a.HTTP.get({
+            } = await s.HTTP.get({
                 url: I.Endpoints.USER_PREMIUM_LIKELIHOOD
             });
-            s.default.dispatch({
+            a.default.dispatch({
                 type: "BILLING_USER_PREMIUM_LIKELIHOOD_FETCH_SUCCESS",
                 premiumLikelihood: function(e) {
                     return {
@@ -45,9 +45,9 @@ function(e, t, n) {
                 }(e)
             })
         } catch (e) {
-            404 === e.status ? s.default.dispatch({
+            404 === e.status ? a.default.dispatch({
                 type: "BILLING_USER_PREMIUM_LIKELIHOOD_FETCH_SUCCESS"
-            }) : s.default.dispatch({
+            }) : a.default.dispatch({
                 type: "BILLING_USER_PREMIUM_LIKELIHOOD_FETCH_ERROR"
             })
         }
@@ -73,10 +73,10 @@ function(e, t, n) {
             location: "443cca_2"
         }, {
             autoTrackExposure: !1
-        }), a = (0, r.useStateFromStores)([c.default], () => c.default.shouldFetchPremiumLikelihood()), s = (0, r.useStateFromStores)([l.default], () => l.default.getCurrentUser());
+        }), s = (0, r.useStateFromStores)([c.default], () => c.default.shouldFetchPremiumLikelihood()), a = (0, r.useStateFromStores)([l.default], () => l.default.getCurrentUser());
         i.useEffect(() => {
-            A(s, a, t, n)
-        }, [s, a, t, n])
+            A(a, s, t, n)
+        }, [a, s, t, n])
     }
 
     function A(e, t, n, i) {

@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t);
     var i = n("570140"),
         r = n("904245"),
-        a = n("593472"),
-        s = n("526120"),
+        s = n("593472"),
+        a = n("526120"),
         o = n("348245"),
         l = n("897473"),
         u = n("176505");
@@ -13,17 +13,17 @@ function(e, t, n) {
             let {
                 channelId: t,
                 messageId: n,
-                baseChannelId: a,
-                hasSingleMessageRequest: s
+                baseChannelId: s,
+                hasSingleMessageRequest: a
             } = e;
             i.default.dispatch({
                 type: "SIDEBAR_VIEW_CHANNEL",
                 sidebarType: l.SidebarType.VIEW_MESSAGE_REQUEST,
-                baseChannelId: a,
+                baseChannelId: s,
                 channelId: t,
                 details: {
                     type: l.SidebarOpenDetailsType.MESSAGE_REQUEST,
-                    hasSingleMessageRequest: s
+                    hasSingleMessageRequest: a
                 }
             }), null != n ? r.default.jumpToMessage({
                 channelId: t,
@@ -37,7 +37,7 @@ function(e, t, n) {
             let {
                 guildId: t,
                 channelId: n,
-                baseChannelId: s,
+                baseChannelId: a,
                 flash: u = !0,
                 details: d
             } = e;
@@ -45,7 +45,7 @@ function(e, t, n) {
                 type: "SIDEBAR_VIEW_CHANNEL",
                 sidebarType: l.SidebarType.VIEW_CHANNEL,
                 guildId: t,
-                baseChannelId: s,
+                baseChannelId: a,
                 channelId: n,
                 details: d
             });
@@ -54,7 +54,7 @@ function(e, t, n) {
                 channelId: n,
                 messageId: _,
                 flash: u,
-                jumpType: a.JumpTypes.INSTANT
+                jumpType: s.JumpTypes.INSTANT
             }) : o.default.fetchMessages({
                 guildId: t,
                 channelId: n
@@ -65,7 +65,7 @@ function(e, t, n) {
                 guildId: t,
                 channelId: n
             } = e;
-            null != t && ((0, s.selectHomeResourceChannel)(t, n, !1), i.default.dispatch({
+            null != t && ((0, a.selectHomeResourceChannel)(t, n, !1), i.default.dispatch({
                 type: "SIDEBAR_VIEW_CHANNEL",
                 sidebarType: l.SidebarType.VIEW_CHANNEL,
                 guildId: t,
@@ -77,7 +77,7 @@ function(e, t, n) {
             let {
                 guildId: t,
                 baseChannelId: n,
-                channelId: s,
+                channelId: a,
                 flash: u = !0,
                 details: d
             } = e;
@@ -85,16 +85,16 @@ function(e, t, n) {
                 type: "SIDEBAR_VIEW_CHANNEL",
                 sidebarType: l.SidebarType.VIEW_THREAD,
                 baseChannelId: n,
-                channelId: s,
+                channelId: a,
                 details: d
             }), (null == d ? void 0 : d.initialMessageId) != null ? r.default.jumpToMessage({
-                channelId: s,
+                channelId: a,
                 messageId: d.initialMessageId,
                 flash: u,
-                jumpType: a.JumpTypes.INSTANT
+                jumpType: s.JumpTypes.INSTANT
             }) : o.default.fetchMessages({
                 guildId: t,
-                channelId: s
+                channelId: a
             })
         },
         closeChannelSidebar(e) {
@@ -108,14 +108,14 @@ function(e, t, n) {
                 guildId: t,
                 baseChannelId: n,
                 sidebarType: r,
-                details: a
+                details: s
             } = e;
             return i.default.dispatch({
                 type: "SIDEBAR_VIEW_GUILD",
                 sidebarType: r,
                 baseChannelId: n,
                 guildId: t,
-                details: a
+                details: s
             })
         },
         closeGuildSidebar(e) {

@@ -13,8 +13,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("512722"),
         r = n.n(i),
-        a = n("53529"),
-        s = n("436660"),
+        s = n("53529"),
+        a = n("436660"),
         o = n("887490");
     let l = new Set(["*", "_", "~", "`", "|"]),
         u = {
@@ -47,32 +47,32 @@ function(e, t, n) {
         let i = n.text,
             r = t.offset;
         for (let e = r - 1; e >= 0 && l.has(i.charAt(e)); e--) r--;
-        let a = t.offset;
-        for (let e = a; e < i.length && l.has(i.charAt(e)); e++) a++;
-        let s = i.substring(r, a),
+        let s = t.offset;
+        for (let e = s; e < i.length && l.has(i.charAt(e)); e++) s++;
+        let a = i.substring(r, s),
             u = {};
         return E({
             result: u,
-            text: s,
+            text: a,
             startIndex: r,
             syntax: "***",
             type1: "italics",
             type2: "bold"
         }), E({
             result: u,
-            text: s,
+            text: a,
             startIndex: r,
             syntax: "___",
             type1: "italics",
             type2: "underline"
-        }), c(u, s, r, "**", "bold"), c(u, s, r, "*", "italics"), c(u, s, r, "_", "italics"), c(u, s, r, "__", "underline"), c(u, s, r, "`", "inlineCode"), c(u, s, r, "~~", "strikethrough"), c(u, s, r, "||", "spoiler"), u
+        }), c(u, a, r, "**", "bold"), c(u, a, r, "*", "italics"), c(u, a, r, "_", "italics"), c(u, a, r, "__", "underline"), c(u, a, r, "`", "inlineCode"), c(u, a, r, "~~", "strikethrough"), c(u, a, r, "||", "spoiler"), u
     }
 
     function c(e, t, n, i, r) {
-        let a = I(t, i);
-        a >= 0 && (e[r] = {
+        let s = I(t, i);
+        s >= 0 && (e[r] = {
             chars: i,
-            location: n + a
+            location: n + s
         })
     }
 
@@ -82,13 +82,13 @@ function(e, t, n) {
             text: n,
             startIndex: i,
             syntax: r,
-            type1: a,
-            type2: s
+            type1: s,
+            type2: a
         } = e, o = I(n, r);
-        o >= 0 && (t[a] = {
+        o >= 0 && (t[s] = {
             chars: r.substring(0, 1),
             location: o + i
-        }, t[s] = {
+        }, t[a] = {
             chars: r.substring(1),
             location: o + i + 1
         })
@@ -104,10 +104,10 @@ function(e, t, n) {
     }
 
     function T(e, t) {
-        a.HistoryUtils.withSingleEntry(e, () => {
+        s.HistoryUtils.withSingleEntry(e, () => {
             o.EditorUtils.withoutNormalizing(e, () => {
                 r()(null != e.selection, "Editor has no selection");
-                let [n, i] = o.RangeUtils.edges(e.selection), a = d(e, n, i), l = a.before[t], _ = a.after[t], c = o.EditorUtils.node(e, n.path), E = o.EditorUtils.node(e, i.path);
+                let [n, i] = o.RangeUtils.edges(e.selection), s = d(e, n, i), l = s.before[t], _ = s.after[t], c = o.EditorUtils.node(e, n.path), E = o.EditorUtils.node(e, i.path);
                 if (null == c || null == E || !o.TextUtils.isText(c[0]) || !o.TextUtils.isText(E[0])) return;
                 let I = o.PathUtils.equals(c[1], E[1]);
                 if (null != l && null != _) {
@@ -119,19 +119,19 @@ function(e, t, n) {
                             path: i.path,
                             offset: _.location
                         };
-                    s.SlateTransforms.delete(e, {
+                    a.SlateTransforms.delete(e, {
                         at: r,
                         distance: _.chars.length
-                    }), s.SlateTransforms.delete(e, {
+                    }), a.SlateTransforms.delete(e, {
                         at: t,
                         distance: l.chars.length
                     });
-                    let a = n.offset,
+                    let s = n.offset,
                         u = i.offset;
-                    !o.PointUtils.isBefore(n, t) && (a -= l.chars.length), I && !o.PointUtils.isBefore(i, t) && (u -= l.chars.length), o.PointUtils.isAfter(i, r) && (u -= _.chars.length), s.SlateTransforms.select(e, {
+                    !o.PointUtils.isBefore(n, t) && (s -= l.chars.length), I && !o.PointUtils.isBefore(i, t) && (u -= l.chars.length), o.PointUtils.isAfter(i, r) && (u -= _.chars.length), a.SlateTransforms.select(e, {
                         anchor: {
                             path: n.path,
-                            offset: Math.max(0, a)
+                            offset: Math.max(0, s)
                         },
                         focus: {
                             path: i.path,
@@ -140,17 +140,17 @@ function(e, t, n) {
                     })
                 } else {
                     let r = u[t];
-                    s.SlateTransforms.insertText(e, r, {
+                    a.SlateTransforms.insertText(e, r, {
                         at: i
-                    }), s.SlateTransforms.insertText(e, r, {
+                    }), a.SlateTransforms.insertText(e, r, {
                         at: n
                     });
-                    let a = c[0].text.length + r.length,
+                    let s = c[0].text.length + r.length,
                         o = E[0].text.length + (I ? 2 * r.length : r.length);
-                    s.SlateTransforms.select(e, {
+                    a.SlateTransforms.select(e, {
                         anchor: {
                             path: n.path,
-                            offset: Math.min(a, n.offset + r.length)
+                            offset: Math.min(s, n.offset + r.length)
                         },
                         focus: {
                             path: i.path,
@@ -166,16 +166,16 @@ function(e, t, n) {
         let n = e.selection;
         if (null == n) return;
         let i = !0;
-        for (let [r, a] of o.EditorUtils.blocks(e))("line" === r.type || r.type === t) && o.RangeUtils.includes(n, a) && (i = i && r.type === t);
+        for (let [r, s] of o.EditorUtils.blocks(e))("line" === r.type || r.type === t) && o.RangeUtils.includes(n, s) && (i = i && r.type === t);
         o.EditorUtils.withoutNormalizing(e, () => {
-            for (let [r, a] of o.EditorUtils.blocks(e)) o.RangeUtils.includes(n, a) && (i || "line" !== r.type ? i && r.type === t && s.SlateTransforms.setNodes(e, {
+            for (let [r, s] of o.EditorUtils.blocks(e)) o.RangeUtils.includes(n, s) && (i || "line" !== r.type ? i && r.type === t && a.SlateTransforms.setNodes(e, {
                 type: "line"
             }, {
-                at: a
-            }) : s.SlateTransforms.setNodes(e, {
+                at: s
+            }) : a.SlateTransforms.setNodes(e, {
                 type: t
             }, {
-                at: a
+                at: s
             }))
         }), o.EditorUtils.focus(e)
     }

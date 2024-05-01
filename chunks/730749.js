@@ -2,16 +2,16 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return a
         }
     });
     var i = n("735250"),
         r = n("470079"),
-        a = n("626135");
+        s = n("626135");
 
-    function s(e) {
+    function a(e) {
         var t;
-        let n = r.forwardRef((t, n) => (0, i.jsx)(a.AnalyticsContext.Consumer, {
+        let n = r.forwardRef((t, n) => (0, i.jsx)(s.AnalyticsContext.Consumer, {
             children: r => (0, i.jsx)(e, {
                 ...t,
                 ref: n,

@@ -40,30 +40,30 @@ function(e, t, n) {
     }), n("411104"), n("724458"), n("47120");
     var i = n("544891"),
         r = n("570140"),
-        a = n("367907"),
-        s = n("82554"),
+        s = n("367907"),
+        a = n("82554"),
         o = n("981631");
     async function l(e, t) {
         var n;
         let r = h(e),
-            a = await i.HTTP.get({
+            s = await i.HTTP.get({
                 url: o.Endpoints.GET_REPORT_MENU(r),
                 query: (null == t ? void 0 : t.variant) != null ? {
                     variant: t.variant
                 } : void 0
             });
-        return null !== (n = a.body) && void 0 !== n ? n : JSON.parse(a.text)
+        return null !== (n = s.body) && void 0 !== n ? n : JSON.parse(s.text)
     }
     async function u(e, t) {
         var n;
         let r = S(e),
-            a = await i.HTTP.get({
+            s = await i.HTTP.get({
                 url: o.Endpoints.GET_UNAUTHENTICATED_REPORT_MENU(r),
                 query: (null == t ? void 0 : t.variant) != null ? {
                     variant: t.variant
                 } : void 0
             });
-        return null !== (n = a.body) && void 0 !== n ? n : JSON.parse(a.text)
+        return null !== (n = s.body) && void 0 !== n ? n : JSON.parse(s.text)
     }
     async function d(e, t) {
         let n = h(e),
@@ -85,9 +85,9 @@ function(e, t, n) {
     }
 
     function c(e, t, n, r) {
-        let a = S(t);
+        let s = S(t);
         return i.HTTP.post({
-            url: o.Endpoints.SUBMIT_UNAUTHENTICATED_REPORT_MENU(a),
+            url: o.Endpoints.SUBMIT_UNAUTHENTICATED_REPORT_MENU(s),
             body: A(e, t, n, r)
         })
     }
@@ -127,19 +127,19 @@ function(e, t, n) {
 
     function S(e) {
         let t = e.name;
-        if (!Object.values(s.UnauthenticatedReportNames).includes(t)) throw Error("Invalid report type ".concat(e.name));
+        if (!Object.values(a.UnauthenticatedReportNames).includes(t)) throw Error("Invalid report type ".concat(e.name));
         return t
     }
 
     function h(e) {
         let t = e.name;
-        if (!Object.values(s.ReportNames).includes(t)) throw Error("Invalid report type ".concat(e.name));
+        if (!Object.values(a.ReportNames).includes(t)) throw Error("Invalid report type ".concat(e.name));
         return t
     }
     let A = (e, t, n, i) => {
         let {
             version: r,
-            variant: a,
+            variant: s,
             language: o
         } = e, l = {
             channel_id: void 0,
@@ -151,7 +151,7 @@ function(e, t, n) {
             email_token: void 0
         }, u = {
             version: r,
-            variant: a,
+            variant: s,
             language: null != o ? o : "en",
             breadcrumbs: n.map(e => e.nodeRef),
             elements: n.reduce((e, t) => {
@@ -173,7 +173,7 @@ function(e, t, n) {
                 }
             }, {})
         };
-        if (t.name === s.ReportNames.MESSAGE || t.name === s.ReportNames.FIRST_DM) {
+        if (t.name === a.ReportNames.MESSAGE || t.name === a.ReportNames.FIRST_DM) {
             let {
                 channel_id: e,
                 id: n
@@ -186,7 +186,7 @@ function(e, t, n) {
                 message_id: n
             }
         }
-        if (t.name === s.ReportNames.GUILD || t.name === s.ReportNames.GUILD_DISCOVERY) {
+        if (t.name === a.ReportNames.GUILD || t.name === a.ReportNames.GUILD_DISCOVERY) {
             let {
                 id: e
             } = t.record;
@@ -197,7 +197,7 @@ function(e, t, n) {
                 guild_id: e
             }
         }
-        if (t.name === s.ReportNames.GUILD_DIRECTORY_ENTRY) {
+        if (t.name === a.ReportNames.GUILD_DIRECTORY_ENTRY) {
             let {
                 guildId: e,
                 channelId: n
@@ -209,7 +209,7 @@ function(e, t, n) {
                 channel_id: n,
                 guild_id: e
             }
-        } else if (t.name === s.ReportNames.STAGE_CHANNEL) {
+        } else if (t.name === a.ReportNames.STAGE_CHANNEL) {
             let {
                 id: e,
                 guild_id: n,
@@ -223,7 +223,7 @@ function(e, t, n) {
                 guild_id: n,
                 stage_instance_id: e
             }
-        } else if (t.name === s.ReportNames.GUILD_SCHEDULED_EVENT) {
+        } else if (t.name === a.ReportNames.GUILD_SCHEDULED_EVENT) {
             let {
                 id: e,
                 guild_id: n
@@ -235,14 +235,14 @@ function(e, t, n) {
                 guild_id: n,
                 guild_scheduled_event_id: e
             }
-        } else if (t.name === s.ReportNames.USER) return {
+        } else if (t.name === a.ReportNames.USER) return {
             ...u,
             ...l,
             name: t.name,
             user_id: t.record.id,
             guild_id: t.contextualGuildId
         };
-        else if (t.name === s.UnauthenticatedReportNames.USER) return {
+        else if (t.name === a.UnauthenticatedReportNames.USER) return {
             ...u,
             ...l,
             name: t.name,
@@ -250,7 +250,7 @@ function(e, t, n) {
             guild_id: t.contextualGuildId,
             email_token: i
         };
-        else if (t.name === s.UnauthenticatedReportNames.MESSAGE) return {
+        else if (t.name === a.UnauthenticatedReportNames.MESSAGE) return {
             ...u,
             ...l,
             name: t.name,
@@ -261,15 +261,15 @@ function(e, t, n) {
     };
 
     function m(e, t, n) {
-        a.default.trackWithMetadata(o.AnalyticEvents.IAR_MODAL_CLOSE, {
+        s.default.trackWithMetadata(o.AnalyticEvents.IAR_MODAL_CLOSE, {
             report_type: e.name,
             report_id: n,
             navigation_history: t,
-            message_id: e.name === s.ReportNames.MESSAGE || e.name === s.ReportNames.FIRST_DM ? e.record.id : void 0,
-            stage_instance_id: e.name === s.ReportNames.STAGE_CHANNEL ? e.record.id : void 0,
-            guild_scheduled_event_id: e.name === s.ReportNames.GUILD_SCHEDULED_EVENT ? e.record.id : void 0,
-            guild_id: e.name === s.ReportNames.GUILD || e.name === s.ReportNames.GUILD_DISCOVERY ? e.record.id : e.name === s.ReportNames.GUILD_DIRECTORY_ENTRY ? e.record.guildId : e.name === s.ReportNames.GUILD_SCHEDULED_EVENT ? e.record.guild_id : void 0,
-            channel_id: e.name === s.ReportNames.GUILD_SCHEDULED_EVENT ? e.record.channel_id : e.name === s.ReportNames.GUILD_DIRECTORY_ENTRY ? e.record.channelId : void 0
+            message_id: e.name === a.ReportNames.MESSAGE || e.name === a.ReportNames.FIRST_DM ? e.record.id : void 0,
+            stage_instance_id: e.name === a.ReportNames.STAGE_CHANNEL ? e.record.id : void 0,
+            guild_scheduled_event_id: e.name === a.ReportNames.GUILD_SCHEDULED_EVENT ? e.record.id : void 0,
+            guild_id: e.name === a.ReportNames.GUILD || e.name === a.ReportNames.GUILD_DISCOVERY ? e.record.id : e.name === a.ReportNames.GUILD_DIRECTORY_ENTRY ? e.record.guildId : e.name === a.ReportNames.GUILD_SCHEDULED_EVENT ? e.record.guild_id : void 0,
+            channel_id: e.name === a.ReportNames.GUILD_SCHEDULED_EVENT ? e.record.channel_id : e.name === a.ReportNames.GUILD_DIRECTORY_ENTRY ? e.record.channelId : void 0
         })
     }
 

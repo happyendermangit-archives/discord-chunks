@@ -16,15 +16,15 @@ function(e, t, n) {
     }), n("47120");
     var i = n("570140"),
         r = n("821849"),
-        a = n("307643"),
-        s = n("981631");
+        s = n("307643"),
+        a = n("981631");
 
     function o(e) {
         return {
             id: e.id,
-            type: s.SKUTypes.SUBSCRIPTION,
+            type: a.SKUTypes.SUBSCRIPTION,
             application_id: e.application_id,
-            product_line: s.SKUProductLines.APPLICATION,
+            product_line: a.SKUProductLines.APPLICATION,
             name: e.name,
             summary: "",
             description: e.description,
@@ -71,7 +71,7 @@ function(e, t, n) {
         });
         try {
             var n;
-            let r = await a.getApplicationSubscriptionGroupListingsForApplication(e, t);
+            let r = await s.getApplicationSubscriptionGroupListingsForApplication(e, t);
             return i.default.dispatch({
                 type: "APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS",
                 applicationId: e,
@@ -90,7 +90,7 @@ function(e, t, n) {
             guildId: e
         });
         try {
-            let t = await a.getEntitlementsForGuild(e);
+            let t = await s.getEntitlementsForGuild(e);
             i.default.dispatch({
                 type: "APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS",
                 guildId: e,
@@ -117,14 +117,14 @@ function(e, t, n) {
         });
         try {
             var t;
-            let n = await a.getSubscriptionGroupForSubscriptionPlan(e);
+            let n = await s.getSubscriptionGroupForSubscriptionPlan(e);
             i.default.dispatch({
                 type: "APPLICATION_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN_SUCCESS",
                 groupListing: n
             });
-            let s = null !== (t = n.subscription_listings) && void 0 !== t ? t : [];
-            for (let t of s) t.subscription_plans[0].id === e && await r.fetchSubscriptionPlansForSKU(t.id, void 0, void 0, !0);
-            u(s)
+            let a = null !== (t = n.subscription_listings) && void 0 !== t ? t : [];
+            for (let t of a) t.subscription_plans[0].id === e && await r.fetchSubscriptionPlansForSKU(t.id, void 0, void 0, !0);
+            u(a)
         } catch (e) {}
     }
 }

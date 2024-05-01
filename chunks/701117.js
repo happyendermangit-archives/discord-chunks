@@ -3,10 +3,10 @@ function(e, t, n) {
     let i;
     n.r(t), n.d(t, {
         impl: function() {
-            return s
+            return a
         },
         sessionStorageTest: function() {
-            return a
+            return s
         }
     });
     var r = n("37082");
@@ -17,7 +17,7 @@ function(e, t, n) {
         delete window.sessionStorage
     } catch (e) {}
 
-    function a() {
+    function s() {
         let e = "test";
         try {
             return i.setItem(e, e), i.removeItem(e), !0
@@ -25,7 +25,7 @@ function(e, t, n) {
             return !1
         }
     }
-    let s = a() ? new class e {
+    let a = s() ? new class e {
         get(e, t) {
             let n = i.getItem(e);
             if (null != n) try {

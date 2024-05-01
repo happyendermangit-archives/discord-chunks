@@ -5,7 +5,7 @@ function(e, t, n) {
             return T
         }
     });
-    var i, r, a, s, o = n("442837"),
+    var i, r, s, a, o = n("442837"),
         l = n("570140"),
         u = n("601964"),
         d = n("594174"),
@@ -42,7 +42,7 @@ function(e, t, n) {
         if (null != r && i.userId !== r.id) return !1;
         (0, _.isApprovedAndAcked)(i) ? delete c[t]: c[t] = i
     }
-    class S extends(s = o.default.Store) {
+    class S extends(a = o.default.Store) {
         getRequest(e) {
             return c[e]
         }
@@ -56,12 +56,12 @@ function(e, t, n) {
             return E
         }
     }
-    a = "UserGuildJoinRequestStore", (r = "displayName") in(i = S) ? Object.defineProperty(i, r, {
-        value: a,
+    s = "UserGuildJoinRequestStore", (r = "displayName") in(i = S) ? Object.defineProperty(i, r, {
+        value: s,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : i[r] = a, t.default = new S(l.default, {
+    }) : i[r] = s, t.default = new S(l.default, {
         CONNECTION_OPEN: function(e) {
             let {
                 guildJoinRequests: t
@@ -122,13 +122,13 @@ function(e, t, n) {
                     id: e,
                     name: i,
                     icon: r,
-                    features: a
+                    features: s
                 } = t.guild;
                 I[n] = {
                     id: e,
                     name: i,
                     icon: r,
-                    features: null != a ? a : []
+                    features: null != s ? s : []
                 }
             }
         },
@@ -147,14 +147,14 @@ function(e, t, n) {
                 let {
                     id: t,
                     name: r,
-                    icon: a,
-                    features: s
+                    icon: s,
+                    features: a
                 } = n;
                 I[t] = {
                     id: t,
                     name: r,
-                    icon: a,
-                    features: null != s ? s : []
+                    icon: s,
+                    features: null != a ? a : []
                 }
             }
         },

@@ -5,8 +5,8 @@ function(e, t, n) {
             return r
         }
     });
-    var i, r, a = n("735250"),
-        s = n("470079"),
+    var i, r, s = n("735250"),
+        a = n("470079"),
         o = n("120356"),
         l = n.n(o),
         u = n("718017"),
@@ -14,12 +14,12 @@ function(e, t, n) {
         _ = n("110924"),
         c = n("897837");
     (i = r || (r = {})).SUBTLE = "SUBTLE", i.DARK = "DARK", i.BLUR = "BLUR";
-    let E = s.forwardRef(function(e, t) {
+    let E = a.forwardRef(function(e, t) {
         let {
             backdropStyle: n = "SUBTLE",
             backdropInstant: i = !1,
             zIndexBoost: r = 0,
-            LayerComponent: s,
+            LayerComponent: a,
             isVisible: o,
             onClose: E
         } = e, I = function() {
@@ -49,11 +49,11 @@ function(e, t, n) {
             },
             leave: f
         });
-        if (null == s) {
+        if (null == a) {
             let e = {
                 zIndex: 1e3 + r
             };
-            return h((t, n) => n ? (0, a.jsx)(u.animated.div, {
+            return h((t, n) => n ? (0, s.jsx)(u.animated.div, {
                 className: c.backdrop,
                 style: {
                     ...t,
@@ -62,8 +62,8 @@ function(e, t, n) {
                 onClick: E
             }) : null)
         }
-        return (0, a.jsx)(s, {
-            children: h((e, t) => t ? (0, a.jsx)(u.animated.div, {
+        return (0, s.jsx)(a, {
+            children: h((e, t) => t ? (0, s.jsx)(u.animated.div, {
                 className: l()(c.backdrop, c.withLayer),
                 style: e,
                 onClick: E

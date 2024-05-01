@@ -40,8 +40,8 @@ function(e, t, n) {
     }), n("653041"), n("642549"), n("518263"), n("970173"), n("520712"), n("268111"), n("941497"), n("32026"), n("480839"), n("744285"), n("492257"), n("873817"), n("411104");
     var i = n("512722"),
         r = n.n(i),
-        a = n("392711"),
-        s = n.n(a),
+        s = n("392711"),
+        a = n.n(s),
         o = n("950200"),
         l = n.n(o);
 
@@ -51,14 +51,14 @@ function(e, t, n) {
             height: n,
             maxWidth: i,
             maxHeight: r,
-            minWidth: a = 0,
-            minHeight: s = 0
+            minWidth: s = 0,
+            minHeight: a = 0
         } = e;
         if (t !== i || n !== r) {
             let e = t > i ? i / t : 1;
-            t = Math.max(Math.round(t * e), a);
-            let o = (n = Math.max(Math.round(n * e), s)) > r ? r / n : 1;
-            t = Math.max(Math.round(t * o), a), n = Math.max(Math.round(n * o), s)
+            t = Math.max(Math.round(t * e), s);
+            let o = (n = Math.max(Math.round(n * e), a)) > r ? r / n : 1;
+            t = Math.max(Math.round(t * o), s), n = Math.max(Math.round(n * o), a)
         }
         return {
             width: t,
@@ -82,10 +82,10 @@ function(e, t, n) {
             height: n,
             maxWidth: i,
             maxHeight: r
-        } = e, a = 1;
-        t > i && (a = i / t), t = Math.round(t * a);
-        let s = 1;
-        return (n = Math.round(n * a)) > r && (s = r / n), Math.min(a * s, 1)
+        } = e, s = 1;
+        t > i && (s = i / t), t = Math.round(t * s);
+        let a = 1;
+        return (n = Math.round(n * s)) > r && (a = r / n), Math.min(s * a, 1)
     }
 
     function c(e) {
@@ -109,19 +109,19 @@ function(e, t, n) {
         let i = document.createElement("canvas"),
             r = i.getContext("2d");
         if (null == r) return I;
-        let a = i.width = 0 === e.width ? 128 : e.width,
-            s = i.height = 0 === e.height ? 128 : e.height;
-        r.drawImage(e, 0, 0, a, s);
+        let s = i.width = 0 === e.width ? 128 : e.width,
+            a = i.height = 0 === e.height ? 128 : e.height;
+        r.drawImage(e, 0, 0, s, a);
         let o = function(e, t, n) {
                 let i = [];
-                for (let r = 0, a, s, o, l, u; r < t; r += n) s = e[(a = 4 * r) + 0], o = e[a + 1], l = e[a + 2], (void 0 === (u = e[a + 3]) || u >= 125) && !(s > 250 && o > 250 && l > 250) && i.push([s, o, l]);
+                for (let r = 0, s, a, o, l, u; r < t; r += n) a = e[(s = 4 * r) + 0], o = e[s + 1], l = e[s + 2], (void 0 === (u = e[s + 3]) || u >= 125) && !(a > 250 && o > 250 && l > 250) && i.push([a, o, l]);
                 return i
-            }(r.getImageData(0, 0, a, s).data, a * s, n),
+            }(r.getImageData(0, 0, s, a).data, s * a, n),
             u = l()(o, t);
         return "boolean" == typeof u ? I : u.palette()
     }
     let f = e => "number" == typeof e ? null : S(e),
-        S = s().memoize(e => new Promise((t, n) => {
+        S = a().memoize(e => new Promise((t, n) => {
             let i = new Image;
             i.crossOrigin = "Anonymous", i.onerror = e => {
                 n(e), i.onerror = i.onload = null, i = null

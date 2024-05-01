@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("481060"),
-        a = n("239091"),
-        s = n("287734"),
+        s = n("239091"),
+        a = n("287734"),
         o = n("364640"),
         l = n("754688"),
         u = n("336197"),
@@ -38,20 +38,20 @@ function(e, t, n) {
         }
         let i = _.default.getChannel(t);
         if (null != i && null == n && (0, d.isGuildVocalChannelType)(i.type) && (0, l.canViewChannel)(i)) {
-            s.default.selectVoiceChannel(i.id);
+            a.default.selectVoiceChannel(i.id);
             return
         }(0, u.default)(S.Routes.CHANNEL(e, t, n))
     }
 
     function A(e) {
         return {
-            react(t, s, o) {
+            react(t, a, o) {
                 let l = _.default.getChannel(t.channelId),
                     u = o.noStyleAndInteraction ? void 0 : n => {
                         e.shouldStopPropagation && (null == n || n.stopPropagation()), h(t.guildId, t.channelId, t.messageId), e.shouldCloseDefaultModals && (0, r.closeAllModals)()
                     },
                     d = o.noStyleAndInteraction || null == t.channelId || null == l && null == t.originalLink ? S.NOOP : e => {
-                        (0, a.openContextMenuLazy)(e, async () => {
+                        (0, s.openContextMenuLazy)(e, async () => {
                             let {
                                 default: e
                             } = await n.e("9573").then(n.bind(n, "546649"));
@@ -72,7 +72,7 @@ function(e, t, n) {
                     onClick: u,
                     onContextMenu: d,
                     className: "channelMention",
-                    children: [null != t.inContent ? s(t.inContent, o) : null, null != t.inContent ? (0, i.jsx)(I.default, {}) : null, (0, f.smartOutput)(t, s, o)]
+                    children: [null != t.inContent ? a(t.inContent, o) : null, null != t.inContent ? (0, i.jsx)(I.default, {}) : null, (0, f.smartOutput)(t, a, o)]
                 }, o.key)
             }
         }

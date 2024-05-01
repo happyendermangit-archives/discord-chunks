@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("442837"),
-        a = n("231757"),
-        s = n("553795"),
+        s = n("231757"),
+        a = n("553795"),
         o = n("915863"),
         l = n("689938"),
         u = n("346452");
@@ -20,8 +20,8 @@ function(e, t, n) {
             look: n,
             platform: d
         } = e;
-        return (0, r.useStateFromStores)([s.default], () => s.default.getAccounts().some(e => e.type === d.type)) ? null : (0, i.jsx)(o.default, {
-            onClick: () => (0, a.default)({
+        return (0, r.useStateFromStores)([a.default], () => a.default.getAccounts().some(e => e.type === d.type)) ? null : (0, i.jsx)(o.default, {
+            onClick: () => (0, s.default)({
                 platformType: d.type,
                 location: "Activity Action"
             }),

@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("872810"),
-        a = n("569545"),
-        s = n("63063"),
+        s = n("569545"),
+        a = n("63063"),
         o = n("112560"),
         l = n("981631"),
         u = n("689938");
@@ -29,9 +29,9 @@ function(e, t, n) {
             noArt: c,
             selected: _,
             description: u.default.Messages.STREAM_FAILED_DESCRIPTION.format({
-                helpUrl: s.default.getArticleURL(l.HelpdeskArticles.STREAM_FAILED)
+                helpUrl: a.default.getArticleURL(l.HelpdeskArticles.STREAM_FAILED)
             }),
-            onCTAClick: () => (0, r.closeStream)((0, a.encodeStreamKey)(t)),
+            onCTAClick: () => (0, r.closeStream)((0, s.encodeStreamKey)(t)),
             callToAction: u.default.Messages.CLOSE_STREAM
         })
     }

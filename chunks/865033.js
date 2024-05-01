@@ -3,13 +3,13 @@ function(e, t, n) {
     n.r(t);
     var i = n("570140"),
         r = n("317770"),
-        a = n("358085"),
-        s = n("374023"),
+        s = n("358085"),
+        a = n("374023"),
         o = n("761274"),
         l = n("981631");
     class u extends r.default {
         isEnabled() {
-            return (0, a.isDesktop)() && (0, a.isMac)() && !s.ProcessArgs.isDiscordTestSet()
+            return (0, s.isDesktop)() && (0, s.isMac)() && !a.ProcessArgs.isDiscordTestSet()
         }
         _initialize() {
             this.isEnabled() && i.default.subscribe("AUDIO_SET_MODE", this.handleAudioSetMode)

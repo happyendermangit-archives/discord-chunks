@@ -3,11 +3,11 @@ function(e, t, n) {
     n.r(t);
     var i = n("445346"),
         r = n("570140"),
-        a = n("710845"),
-        s = n("70956"),
+        s = n("710845"),
+        a = n("70956"),
         o = n("287328");
-    let l = new a.default("FileSystemStore"),
-        u = 10 * s.default.Millis.MINUTE;
+    let l = new s.default("FileSystemStore"),
+        u = 10 * a.default.Millis.MINUTE;
     class d extends i.Store {
         handlePostConnectionOpen() {
             return this.refresh(), !1

@@ -10,8 +10,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("498607"),
         r = n.n(i),
-        a = n("715903"),
-        s = n("69882"),
+        s = n("715903"),
+        a = n("69882"),
         o = n("709054"),
         l = n("733026");
 
@@ -94,10 +94,10 @@ function(e, t, n) {
                     if (null == e.user) return !1;
                     let {
                         globalName: r,
-                        username: a
+                        username: s
                     } = e.user;
                     for (let e of n)
-                        if (c(a, e)) return !0;
+                        if (c(s, e)) return !0;
                     for (let e of n)
                         if (c(r, e)) return !0;
                     return !1
@@ -107,7 +107,7 @@ function(e, t, n) {
                 if (f = e, !(0 !== (S = d).size && Array.from(S).every(e => f.roles.includes(e)))) return !1
             }
             if (null != _.afterDate && e.joinedAtTimestamp < _.afterDate || null != _.beforeDate && e.joinedAtTimestamp > _.beforeDate || null != E.afterDate && o.default.extractTimestamp(e.userId) < E.afterDate || null != E.beforeDate && o.default.extractTimestamp(e.userId) > E.beforeDate || null != I && e.sourceInviteCode !== I || null != T && e.joinSourceType !== T) return !1;
-            if (n || i || r || u) return !!(n && e.hasUnusualDmActivity || i && (0, s.isMemberCommunicationDisabled)(e) || r && e.hasUnusualAccountActivity || u && (0, a.hasAutomodQuarantinedProfile)(e)) || !1;
+            if (n || i || r || u) return !!(n && e.hasUnusualDmActivity || i && (0, a.isMemberCommunicationDisabled)(e) || r && e.hasUnusualAccountActivity || u && (0, s.hasAutomodQuarantinedProfile)(e)) || !1;
             return !0
         }
         constructor(e) {

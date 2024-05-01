@@ -1,6 +1,6 @@
 function(e, t, n) {
     "use strict";
-    var i, r, a, s;
+    var i, r, s, a;
     n.r(t), n.d(t, {
         TOAST_DEFAULT_OPTIONS: function() {
             return o
@@ -12,7 +12,7 @@ function(e, t, n) {
             return i
         }
     });
-    (a = i || (i = {}))[a.MESSAGE = 0] = "MESSAGE", a[a.SUCCESS = 1] = "SUCCESS", a[a.FAILURE = 2] = "FAILURE", a[a.CUSTOM = 3] = "CUSTOM", a[a.CLIP = 4] = "CLIP", (s = r || (r = {}))[s.TOP = 0] = "TOP", s[s.BOTTOM = 1] = "BOTTOM";
+    (s = i || (i = {}))[s.MESSAGE = 0] = "MESSAGE", s[s.SUCCESS = 1] = "SUCCESS", s[s.FAILURE = 2] = "FAILURE", s[s.CUSTOM = 3] = "CUSTOM", s[s.CLIP = 4] = "CLIP", (a = r || (r = {}))[a.TOP = 0] = "TOP", a[a.BOTTOM = 1] = "BOTTOM";
     let o = {
         position: 0,
         component: null,

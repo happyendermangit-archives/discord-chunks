@@ -11,15 +11,15 @@ function(e, t, n) {
             return I
         }
     }), n("411104"), n("470079");
-    var i, r, a = n("652874"),
-        s = n("433517");
+    var i, r, s = n("652874"),
+        a = n("433517");
     n("353926"), n("311089");
     var o = n("777639"),
         l = n("721877"),
         u = n("488832");
     (r = i || (i = {}))[r.EXISTING_USERS = 0] = "EXISTING_USERS", r[r.NEW_USERS = 1] = "NEW_USERS";
     let d = "tabs-v2-experiment-key",
-        _ = (0, a.default)((e, t) => ({
+        _ = (0, s.default)((e, t) => ({
             _experimentCacheInitialized: !1,
             _experimentEnabled: !1,
             getExperimentEnabled() {
@@ -34,12 +34,12 @@ function(e, t, n) {
             setExperimentEnabled: t => {
                 e({
                     _experimentEnabled: t
-                }), s.Storage.set(d, t)
+                }), a.Storage.set(d, t)
             },
             setInitialized: () => {
                 e(e => e._experimentCacheInitialized ? e : {
                     _experimentCacheInitialized: !0,
-                    _experimentEnabled: !0 === s.Storage.get(d)
+                    _experimentEnabled: !0 === a.Storage.get(d)
                 })
             }
         }));

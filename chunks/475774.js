@@ -2,14 +2,14 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return a
         }
     });
     var i = n("735250");
     n("470079");
     var r = n("481060"),
-        a = n("570140");
-    async function s(e) {
+        s = n("570140");
+    async function a(e) {
         let t = await (0, r.openModalLazy)(async () => {
             let {
                 default: t
@@ -20,13 +20,13 @@ function(e, t, n) {
             })
         }, {
             onCloseCallback: () => {
-                a.default.dispatch({
+                s.default.dispatch({
                     type: "INTERACTION_IFRAME_MODAL_CLOSE",
                     applicationId: e.application.id
                 })
             }
         });
-        a.default.dispatch({
+        s.default.dispatch({
             type: "INTERACTION_IFRAME_MODAL_KEY_CREATE",
             modalKey: t
         })

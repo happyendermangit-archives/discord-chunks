@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("47120"), n("789020"), n("177593");
-    var i, r, a, s, o = n("392711"),
+    var i, r, s, a, o = n("392711"),
         l = n.n(o),
         u = n("442837"),
         d = n("433517"),
@@ -101,8 +101,8 @@ function(e, t, n) {
             if (null != n) {
                 var i;
                 let r = (0, I.getComboId)(e, n),
-                    a = null !== (i = m[r]) && void 0 !== i ? i : N[r];
-                if (null != a && (0, I.isUserEntitledToLibraryApplication)(a) && (t || !a.isHidden())) return a
+                    s = null !== (i = m[r]) && void 0 !== i ? i : N[r];
+                if (null != s && (0, I.isUserEntitledToLibraryApplication)(s) && (t || !s.isHidden())) return s
             }
             let r = y();
             for (let n in r)
@@ -132,12 +132,12 @@ function(e, t, n) {
             })
         }
     }
-    s = "LibraryApplicationStore", (a = "displayName") in(r = P) ? Object.defineProperty(r, a, {
-        value: s,
+    a = "LibraryApplicationStore", (s = "displayName") in(r = P) ? Object.defineProperty(r, s, {
+        value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[a] = s, t.default = new P(_.default, {
+    }) : r[s] = a, t.default = new P(_.default, {
         LOGOUT: function() {
             A = !1
         },
@@ -158,8 +158,8 @@ function(e, t, n) {
                 applicationId: t,
                 branchId: n,
                 flags: i
-            } = e, r = (0, I.getComboId)(t, n), a = M(t, n);
-            null != a && !a.isHidden() && E.hasFlag(i, f.LibraryApplicationFlags.HIDDEN) && (C = !0), p.add(r)
+            } = e, r = (0, I.getComboId)(t, n), s = M(t, n);
+            null != s && !s.isHidden() && E.hasFlag(i, f.LibraryApplicationFlags.HIDDEN) && (C = !0), p.add(r)
         },
         LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: D,
         LIBRARY_APPLICATION_UPDATE: D,

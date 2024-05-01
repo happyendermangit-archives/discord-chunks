@@ -6,9 +6,9 @@ function(e, t, n) {
         }
     }), n("653041"), n("47120");
     var i, r = n("470079"),
-        a = n("830483");
+        s = n("830483");
 
-    function s(e, t, n) {
+    function a(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -21,9 +21,9 @@ function(e, t, n) {
             let {
                 children: n,
                 firstRender: i
-            } = t, r = (0, a.getChildMapping)(e.children);
+            } = t, r = (0, s.getChildMapping)(e.children);
             return {
-                children: i ? r : (0, a.mergeChildMappings)(n, r),
+                children: i ? r : (0, s.mergeChildMappings)(n, r),
                 firstRender: !1
             }
         }
@@ -40,13 +40,13 @@ function(e, t, n) {
         }
         componentDidUpdate(e, t) {
             if (e !== this.props) {
-                let e = (0, a.getChildMapping)(this.props.children),
+                let e = (0, s.getChildMapping)(this.props.children),
                     n = t.children;
                 if (this.props.transitionEnter ? this._enqueueTransitions(e, n, this._keysToEnter) : this._keysToEnter.length && (this._keysToEnter = []), this.props.transitionLeave) this._enqueueTransitions(n, e, this._keysToLeave);
                 else {
                     let t = [];
                     this._enqueueTransitions(n, e, t);
-                    let i = (0, a.mergeChildMappings)(n, e);
+                    let i = (0, s.mergeChildMappings)(n, e);
                     for (let e = 0, n = t.length; e < n; e++) delete i[t[e]];
                     this._isMounted && this.setState({
                         children: i
@@ -72,14 +72,14 @@ function(e, t, n) {
             let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
             this._currentlyTransitioningKeys.add(e);
             let r = () => this._handleDonePerform(e, n, i),
-                a = this._keyChildMapping[e];
-            null != a && null != a[t] ? a[t](r) : r()
+                s = this._keyChildMapping[e];
+            null != s && null != s[t] ? s[t](r) : r()
         }
         _handleDonePerform(e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                 i = this._keyChildMapping[e];
             null != i && null != i[t] && i[t](), this._currentlyTransitioningKeys.delete(e);
-            let r = (0, a.getChildMapping)(this.props.children);
+            let r = (0, s.getChildMapping)(this.props.children);
             n ? null != r && r.hasOwnProperty(e) ? this.performEnter(e) : this.setState(t => {
                 let {
                     children: n
@@ -109,27 +109,27 @@ function(e, t, n) {
                 children: n
             } = this.state, i = [];
             for (let t in n) {
-                let a = n[t];
-                null != a && r.isValidElement(a) && i.push(r.cloneElement(null == e ? a : e(a), {
+                let s = n[t];
+                null != s && r.isValidElement(s) && i.push(r.cloneElement(null == e ? s : e(s), {
                     ref: e => this.addChildRef(t, e),
                     key: t
                 }))
             }
-            let a = {
+            let s = {
                 ...this.props
             };
-            return Object.keys(o.defaultProps).forEach(e => delete a[e]), r.createElement(t, a, i)
+            return Object.keys(o.defaultProps).forEach(e => delete s[e]), r.createElement(t, s, i)
         }
         constructor(e) {
-            super(e), s(this, "_currentlyTransitioningKeys", void 0), s(this, "_keysToEnter", void 0), s(this, "_keysToLeave", void 0), s(this, "_isMounted", void 0), s(this, "_keyChildMapping", {}), s(this, "addChildRef", (e, t) => {
+            super(e), a(this, "_currentlyTransitioningKeys", void 0), a(this, "_keysToEnter", void 0), a(this, "_keysToLeave", void 0), a(this, "_isMounted", void 0), a(this, "_keyChildMapping", {}), a(this, "addChildRef", (e, t) => {
                 this._keyChildMapping[e] = t
             }), this.state = {
-                children: (0, a.getChildMapping)(e.children),
+                children: (0, s.getChildMapping)(e.children),
                 firstRender: !0
             }, this._currentlyTransitioningKeys = new Set, this._keysToEnter = [], this._keysToLeave = [], this._isMounted = !1
         }
     }
-    s(o, "defaultProps", {
+    a(o, "defaultProps", {
         component: "span",
         transitionAppear: !0,
         transitionLeave: !0,

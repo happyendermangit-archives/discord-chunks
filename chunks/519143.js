@@ -3,15 +3,15 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("355467"),
         r = n("147913"),
-        a = n("400407");
-    class s extends r.default {
+        s = n("400407");
+    class a extends r.default {
         constructor(...e) {
             var t, n, r;
             super(...e), t = this, n = "actions", r = {
                 POST_CONNECTION_OPEN: () => {
                     let {
                         enabled: e
-                    } = a.LocalizedPricingPromoManagerExperiment.getCurrentConfig({
+                    } = s.LocalizedPricingPromoManagerExperiment.getCurrentConfig({
                         location: "cd74f0_1"
                     }, {
                         autoTrackExposure: !1
@@ -26,5 +26,5 @@ function(e, t, n) {
             }) : t[n] = r
         }
     }
-    t.default = new s
+    t.default = new a
 }

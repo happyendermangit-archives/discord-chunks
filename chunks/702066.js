@@ -4,26 +4,26 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("960259"),
-        a = n("914924");
+        s = n("914924");
     t.default = (0, r.replaceIcon)(function(e) {
         let {
             width: t = 16,
             height: n = 16,
             color: r = "currentColor",
-            className: a,
-            foreground: s,
+            className: s,
+            foreground: a,
             background: o
         } = e;
         return (0, i.jsxs)("svg", {
             width: t,
             height: n,
             viewBox: "0 0 24 24",
-            className: a,
+            className: s,
             children: [(0, i.jsx)("path", {
                 fillRule: "evenodd",
                 clipRule: "evenodd",
                 fill: r,
-                className: s,
+                className: a,
                 d: "M20.4683 4.76211L22.8094 9.51661C23.1366 10.1813 22.6554 10.9601 21.9174 10.9601L17.2104 10.9601C16.4706 10.9601 15.9894 10.1778 16.3203 9.51286L18.6861 4.75836C19.0537 4.01957 20.1037 4.02179 20.4683 4.76211ZM19.0833 5.96007H20.0786V8.46007H19.0834L19.0833 5.96007ZM19.0833 9.45894C19.0833 9.73596 19.3063 9.96007 19.5809 9.96007C19.8556 9.96007 20.0786 9.73596 20.0786 9.45894C20.0786 9.18231 19.8556 8.9578 19.5809 8.9578C19.3063 8.9578 19.0833 9.18231 19.0833 9.45894Z"
             }), (0, i.jsx)("path", {
                 className: o,
@@ -36,7 +36,7 @@ function(e, t, n) {
                 fill: r
             })]
         })
-    }, a.AnnouncementsWarningIcon, void 0, {
+    }, s.AnnouncementsWarningIcon, void 0, {
         size: 16
     })
 }

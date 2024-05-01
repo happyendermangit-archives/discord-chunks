@@ -6,7 +6,7 @@ function(e, t, n) {
             return r
         },
         impl: function() {
-            return a
+            return s
         }
     });
     try {
@@ -50,7 +50,7 @@ function(e, t, n) {
             }) : e[t] = n, this.storage = {}
         }
     }
-    let a = ! function() {
+    let s = ! function() {
         let e = "test";
         try {
             return i.setItem(e, e), i.removeItem(e), !0

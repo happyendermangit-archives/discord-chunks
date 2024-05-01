@@ -12,8 +12,8 @@ function(e, t, n) {
         }
     }), n("47120"), n("653041");
     var i, r = n("442837"),
-        a = n("46973"),
-        s = n("570140"),
+        s = n("46973"),
+        a = n("570140"),
         o = n("304680"),
         l = n("131951"),
         u = n("594174"),
@@ -124,7 +124,7 @@ function(e, t, n) {
             return m
         }
     }
-    c(g, "displayName", "RTCDebugStore"), t.default = new g(s.default, {
+    c(g, "displayName", "RTCDebugStore"), t.default = new g(a.default, {
         RTC_DEBUG_MODAL_OPEN: function(e) {
             var t;
             I = null !== (t = e.section) && void 0 !== t ? t : E
@@ -142,41 +142,41 @@ function(e, t, n) {
                 index: i
             } = e, r = T[t];
             if (null != n) {
-                let [e, a, s] = I.split(":");
-                if (e === t && parseInt(s) === i && null != u.default.getUser(a)) {
+                let [e, s, a] = I.split(":");
+                if (e === t && parseInt(a) === i && null != u.default.getUser(s)) {
                     let {
                         rtp: {
                             inbound: e
                         }
                     } = n;
-                    !Object.keys(e).includes(a) && (I = E)
+                    !Object.keys(e).includes(s) && (I = E)
                 }
                 r[i] = function e(t) {
                     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                         i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now(),
                         r = {};
-                    for (let [a, s] of Object.entries(t)) {
-                        let t = n[a];
-                        if (Array.isArray(s)) {
-                            if ("object" == typeof s[0]) {
+                    for (let [s, a] of Object.entries(t)) {
+                        let t = n[s];
+                        if (Array.isArray(a)) {
+                            if ("object" == typeof a[0]) {
                                 let n = Array.isArray(t) ? t : [],
-                                    o = r[a] = [];
-                                for (let t = 0; t < s.length; t++) {
+                                    o = r[s] = [];
+                                for (let t = 0; t < a.length; t++) {
                                     let r = n[t],
-                                        a = "object" == typeof r ? r : {};
-                                    o.push(e(s[t], a, i))
+                                        s = "object" == typeof r ? r : {};
+                                    o.push(e(a[t], s, i))
                                 }
-                            } else r[a] = s
-                        } else if ("object" == typeof s && null !== s) {
+                            } else r[s] = a
+                        } else if ("object" == typeof a && null !== a) {
                             let n = "object" == typeof t && null !== t ? t : {};
-                            r[a] = e(s, n, i)
-                        } else if (a in f && "number" == typeof s) {
-                            let e = r[a] = Array.isArray(t) ? t : [];
+                            r[s] = e(a, n, i)
+                        } else if (s in f && "number" == typeof a) {
+                            let e = r[s] = Array.isArray(t) ? t : [];
                             e.push({
-                                value: s,
+                                value: a,
                                 time: i
                             }), e.length > 600 && e.shift()
-                        } else r[a] = s
+                        } else r[s] = a
                     }
                     return r
                 }(n, r[i])
@@ -191,15 +191,15 @@ function(e, t, n) {
             } = e, n = l.default.getMediaEngine();
             if (C(), !n.supports(_.Features.CONNECTION_REPLAY) || 0 === t.length) return;
             let i = n.createReplayConnection(_.MediaEngineContextTypes.DEFAULT, t);
-            null != i && (N = i, i.on(a.BaseConnectionEvent.Video, (e, t, n, r, a) => {
-                s.default.dispatch({
+            null != i && (N = i, i.on(s.BaseConnectionEvent.Video, (e, t, n, r, s) => {
+                a.default.dispatch({
                     type: "RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT",
                     mediaEngineConnectionId: i.mediaEngineConnectionId,
                     userId: e,
                     videoSsrc: null != r ? r : 0,
                     streamId: null != t ? t : ""
                 })
-            }), s.default.wait(() => o.open()))
+            }), a.default.wait(() => o.open()))
         },
         RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT: function(e) {
             A = A.put(e.mediaEngineConnectionId, e.userId, e.videoSsrc, e.streamId)
@@ -213,7 +213,7 @@ function(e, t, n) {
         VOICE_CHANNEL_SELECT: function(e) {
             null != e.channelId && R()
         }
-    }), l.default.getMediaEngine().on(a.MediaEngineEvent.ConnectionStats, function(e) {
+    }), l.default.getMediaEngine().on(s.MediaEngineEvent.ConnectionStats, function(e) {
         Object.values(_.MediaEngineContextTypes).forEach(t => {
             e.filter(e => {
                 let {
@@ -221,7 +221,7 @@ function(e, t, n) {
                 } = e;
                 return n.context === t
             }).forEach((e, n) => {
-                s.default.dispatch({
+                a.default.dispatch({
                     type: "RTC_DEBUG_MODAL_UPDATE",
                     stats: e.stats,
                     context: t,

@@ -2,14 +2,14 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         sendStageRequestToSpeakEphemeralMessage: function() {
-            return s
+            return a
         }
     });
     var i = n("570140"),
         r = n("709054"),
-        a = n("981631");
+        s = n("981631");
 
-    function s(e, t, n) {
+    function a(e, t, n) {
         i.default.dispatch({
             type: "MESSAGE_CREATE",
             channelId: e,
@@ -21,8 +21,8 @@ function(e, t, n) {
                 } = e;
                 return {
                     id: r.default.fromTimestamp(Date.parse(i)),
-                    type: a.MessageTypes.STAGE_RAISE_HAND,
-                    flags: a.MessageFlags.EPHEMERAL,
+                    type: s.MessageTypes.STAGE_RAISE_HAND,
+                    flags: s.MessageFlags.EPHEMERAL,
                     content: "",
                     channel_id: t,
                     author: n,
@@ -34,7 +34,7 @@ function(e, t, n) {
                     mention_roles: [],
                     mention_everyone: !1,
                     timestamp: i,
-                    state: a.MessageStates.SENT,
+                    state: s.MessageStates.SENT,
                     tts: !1
                 }
             }({

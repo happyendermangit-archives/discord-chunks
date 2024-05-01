@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("392711"),
         r = n.n(i),
-        a = n("846519"),
-        s = n("710845"),
+        s = n("846519"),
+        a = n("710845"),
         o = n("70956"),
         l = n("709054");
 
@@ -51,10 +51,10 @@ function(e, t, n) {
             r[t] = (null !== (i = r[t]) && void 0 !== i ? i : 0) + 1, this._unsubscriptions[e] = r, 1 === r[t] && this._unsubscribe.delay(!1)
         }
         checkForLeaks(e, t) {
-            var n, i, r, a;
+            var n, i, r, s;
             let o = null !== (r = null === (n = this._subscriptions[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== r ? r : 0,
-                l = o - (null !== (a = null === (i = this._unsubscriptions[e]) || void 0 === i ? void 0 : i[t]) && void 0 !== a ? a : 0);
-            l > 5 && new s.default("GuildMemberSubscriptions").warn("GuildMemberSubscriptions.subscribe(...): Potential reference leak! (".concat(l, " subscriptions)"))
+                l = o - (null !== (s = null === (i = this._unsubscriptions[e]) || void 0 === i ? void 0 : i[t]) && void 0 !== s ? s : 0);
+            l > 5 && new a.default("GuildMemberSubscriptions").warn("GuildMemberSubscriptions.subscribe(...): Potential reference leak! (".concat(l, " subscriptions)"))
         }
         flushUnsubscriptions() {
             !r().isEmpty(this._unsubscriptions) && (r().forEach(this._unsubscriptions, (e, t) => {
@@ -66,7 +66,7 @@ function(e, t, n) {
             }), this._unsubscriptions = {})
         }
         constructor(e) {
-            u(this, "_subscriptions", {}), u(this, "_unsubscriptions", {}), u(this, "_onChange", void 0), u(this, "_unsubscribe", new a.DelayedCall(d, () => this.flushUnsubscriptions())), this._onChange = e
+            u(this, "_subscriptions", {}), u(this, "_unsubscriptions", {}), u(this, "_onChange", void 0), u(this, "_unsubscribe", new s.DelayedCall(d, () => this.flushUnsubscriptions())), this._onChange = e
         }
     }
 }

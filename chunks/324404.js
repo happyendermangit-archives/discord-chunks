@@ -8,7 +8,7 @@ function(e, t, n) {
     var i = n("699581"),
         r = n("374470");
 
-    function a(e, t, n) {
+    function s(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -16,7 +16,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    let s = {
+    let a = {
         root: null,
         rootMargin: "0px",
         threshold: .5
@@ -38,8 +38,8 @@ function(e, t, n) {
             let n = this._components.get(e);
             null != n && (this._nodes.delete(n), this._components.delete(e), this._visibleComponents.delete(e), t.unobserve(n))
         }
-        constructor(e = s) {
-            a(this, "_observer", void 0), a(this, "_options", void 0), a(this, "_nodes", new WeakMap), a(this, "_components", new WeakMap), a(this, "_visibleComponents", new WeakSet), a(this, "_handleEntries", e => {
+        constructor(e = a) {
+            s(this, "_observer", void 0), s(this, "_options", void 0), s(this, "_nodes", new WeakMap), s(this, "_components", new WeakMap), s(this, "_visibleComponents", new WeakSet), s(this, "_handleEntries", e => {
                 e.forEach(e => {
                     let t;
                     if (null != e.isIntersecting) t = e.isIntersecting;

@@ -2,8 +2,8 @@ function(e, t, n) {
     "use strict";
     n.r(t), n("47120");
     var i, r = n("442837"),
-        a = n("570140"),
-        s = n("70956");
+        s = n("570140"),
+        a = n("70956");
 
     function o(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
@@ -48,7 +48,7 @@ function(e, t, n) {
             u = l, d = !1, _ = null
         }
     }
-    o(c, "displayName", "EmojiCaptionsStore"), o(c, "persistKey", "EmojiCaptionsStore"), t.default = new c(a.default, {
+    o(c, "displayName", "EmojiCaptionsStore"), o(c, "persistKey", "EmojiCaptionsStore"), t.default = new c(s.default, {
         LOGOUT: function() {
             u = l, d = !1, _ = null
         },
@@ -60,14 +60,14 @@ function(e, t, n) {
             let {
                 emojiCaptions: t
             } = e;
-            u.captionsById = new Map(Object.entries(t)), d = !1, _ = Date.now() + 360 * s.default.Millis.MINUTE
+            u.captionsById = new Map(Object.entries(t)), d = !1, _ = Date.now() + 360 * a.default.Millis.MINUTE
         },
         EMOJI_CAPTIONS_FETCH_ERROR: function(e) {
             let {
                 is4XXError: t
             } = e;
             d = !1;
-            _ = Date.now() + (t ? 10 : 1) * s.default.Millis.MINUTE
+            _ = Date.now() + (t ? 10 : 1) * a.default.Millis.MINUTE
         },
         POST_CONNECTION_OPEN: function(e) {
             let {} = e;

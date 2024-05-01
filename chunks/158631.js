@@ -20,14 +20,14 @@ function(e, t, n) {
     var i = n("442837"),
         r = n("695346");
     n("199902");
-    var a = n("314897"),
-        s = n("592125");
+    var s = n("314897"),
+        a = n("592125");
     n("944486");
     var o = n("885110"),
         l = n("770471");
 
     function u() {
-        let e = (0, i.useStateFromStores)([a.default], () => a.default.getId()),
+        let e = (0, i.useStateFromStores)([s.default], () => s.default.getId()),
             {
                 canBroadcast: t
             } = l.default.useExperiment({
@@ -45,12 +45,12 @@ function(e, t, n) {
 
     function _(e) {
         let t = u(),
-            n = (0, i.useStateFromStores)([s.default], () => s.default.getChannel(e));
+            n = (0, i.useStateFromStores)([a.default], () => a.default.getChannel(e));
         return null != t && null != n && n.ownerId === t.userId && n.isBroadcastChannel()
     }
 
     function c(e) {
-        let t = a.default.getId(),
+        let t = s.default.getId(),
             {
                 canBroadcast: n
             } = l.default.getCurrentConfig({
@@ -60,7 +60,7 @@ function(e, t, n) {
             }),
             i = o.default.getBroadcast();
         if (!n || null == i || i.userId !== t) return !1;
-        let r = s.default.getChannel(e);
+        let r = a.default.getChannel(e);
         return null != r && r.ownerId === i.userId && r.isBroadcastChannel()
     }
 

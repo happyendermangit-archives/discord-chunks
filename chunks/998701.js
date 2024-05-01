@@ -5,21 +5,21 @@ function(e, t, n) {
             return r
         }
     });
-    var i, r, a = n("689938");
+    var i, r, s = n("689938");
     (i = r || (r = {}))[i.GENERAL = 0] = "GENERAL", i[i.NO_FILE = 1] = "NO_FILE", i[i.PROGRESS = 2] = "PROGRESS", i[i.UPLOAD = 3] = "UPLOAD", i[i.READ = 4] = "READ";
     t.default = class e {
         get displayMessage() {
             switch (this.code) {
                 case 1:
-                    return a.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_NO_FILE;
+                    return s.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_NO_FILE;
                 case 2:
-                    return a.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_PROGRESS;
+                    return s.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_PROGRESS;
                 case 3:
-                    return a.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_UPLOAD;
+                    return s.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_UPLOAD;
                 case 4:
-                    return a.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_READ;
+                    return s.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_READ;
                 default:
-                    return a.default.Messages.UPLOAD_DEBUG_LOG_FAILURE
+                    return s.default.Messages.UPLOAD_DEBUG_LOG_FAILURE
             }
         }
         constructor(e) {

@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("665443"),
-        s = n.n(a),
+        s = n("665443"),
+        a = n.n(s),
         o = n("259443"),
         l = n("992774");
 
@@ -43,7 +43,7 @@ function(e, t, n) {
         let {
             streamId: t,
             paused: n,
-            onReady: a,
+            onReady: s,
             onResize: o,
             className: u,
             ...I
@@ -53,7 +53,7 @@ function(e, t, n) {
         }), h = r.useRef({
             streamId: t,
             paused: n,
-            onReady: a,
+            onReady: s,
             onResize: o
         });
         return r.useLayoutEffect(() => {
@@ -68,17 +68,17 @@ function(e, t, n) {
                         null === (e = f.current) || void 0 === e || e.play()
                     }
                 }), t.addEventListener("resize", function() {
-                    var e, t, n, i, r, a;
+                    var e, t, n, i, r, s;
                     let {
-                        width: s,
+                        width: a,
                         height: o
                     } = S.current, l = null !== (n = null === (e = f.current) || void 0 === e ? void 0 : e.videoWidth) && void 0 !== n ? n : 0, u = null !== (i = null === (t = f.current) || void 0 === t ? void 0 : t.videoHeight) && void 0 !== i ? i : 0;
-                    if (s !== l || o !== u) {
+                    if (a !== l || o !== u) {
                         let e = {
                             width: l,
                             height: u
                         };
-                        null === (r = (a = h.current).onResize) || void 0 === r || r.call(a, e), S.current = e
+                        null === (r = (s = h.current).onResize) || void 0 === r || r.call(s, e), S.current = e
                     }
                 }), t.addEventListener("canplaythrough", function() {
                     var e, t;
@@ -86,7 +86,7 @@ function(e, t, n) {
                 }), d.info("create video element for ".concat(h.current.streamId, ", readyState=").concat(t.readyState)), t.readyState > 3 && d.error("video element for ".concat(h.current.streamId, " was ready before attached")), e.appendChild(t), f.current = t
             }
         }, []), r.useEffect(() => {
-            h.current.streamId = t, h.current.paused = n, h.current.onReady = a, h.current.onResize = o
+            h.current.streamId = t, h.current.paused = n, h.current.onReady = s, h.current.onResize = o
         }), r.useEffect(() => {
             let e = f.current;
             if (null != e) {
@@ -101,7 +101,7 @@ function(e, t, n) {
                 }
             }
         }, [n, t]), (0, i.jsx)("div", {
-            className: s()("media-engine-video", u),
+            className: a()("media-engine-video", u),
             ref: T,
             ...I
         })

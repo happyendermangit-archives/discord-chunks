@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("376398"),
-        s = n("825040");
+        s = n("376398"),
+        a = n("825040");
     async function o(e) {
         let {
             deviceId: t,
@@ -46,7 +46,7 @@ function(e, t, n) {
                 height: l,
                 disabled: u
             }).then(e => {
-                let t = null != e ? (0, a.registerVideoStream)(e) : null;
+                let t = null != e ? (0, s.registerVideoStream)(e) : null;
                 return _(t), {
                     stream: e,
                     streamId: t
@@ -59,7 +59,7 @@ function(e, t, n) {
                         stream: n,
                         streamId: i
                     } = e;
-                    null != (t = n) && t.getTracks().forEach(e => e.stop()), null != i && (0, a.unregisterVideoStream)(i)
+                    null != (t = n) && t.getTracks().forEach(e => e.stop()), null != i && (0, s.unregisterVideoStream)(i)
                 })
             }
         }, [t, n, l, u]), null == d ? (0, i.jsx)("div", {
@@ -68,7 +68,7 @@ function(e, t, n) {
                 width: n,
                 height: l
             }
-        }) : (0, i.jsx)(s.default, {
+        }) : (0, i.jsx)(a.default, {
             streamId: d,
             style: {
                 width: n,

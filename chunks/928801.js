@@ -2,13 +2,13 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return s
+            return a
         }
     }), n("47120");
     var i = n("348327"),
         r = n.n(i);
 
-    function a(e, t, n) {
+    function s(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -16,7 +16,7 @@ function(e, t, n) {
             writable: !0
         }) : e[t] = n, e
     }
-    class s {
+    class a {
         shouldCommit() {
             return !0
         }
@@ -49,7 +49,7 @@ function(e, t, n) {
             this.dirty = !1, this.didCommit(this.state)
         }
         constructor(e = !0) {
-            a(this, "alwaysUpdateState", void 0), a(this, "dirty", void 0), a(this, "state", void 0), this.alwaysUpdateState = e, this.dirty = !1, this.state = this.getInitialState()
+            s(this, "alwaysUpdateState", void 0), s(this, "dirty", void 0), s(this, "state", void 0), this.alwaysUpdateState = e, this.dirty = !1, this.state = this.getInitialState()
         }
     }
 }

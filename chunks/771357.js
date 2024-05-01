@@ -4,17 +4,17 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("960259"),
-        a = n("643568"),
-        s = n("325767");
+        s = n("643568"),
+        a = n("325767");
     t.default = (0, r.replaceIcon)(function(e) {
         let {
             width: t = 25,
             height: n = 25,
             color: r = "currentColor",
-            ...a
+            ...s
         } = e;
         return (0, i.jsxs)("svg", {
-            ...(0, s.default)(a),
+            ...(0, a.default)(s),
             width: t,
             height: n,
             viewBox: "0 0 24 24",
@@ -39,7 +39,7 @@ function(e, t, n) {
                 })
             })]
         })
-    }, a.UserSquareIcon, void 0, {
+    }, s.UserSquareIcon, void 0, {
         size: 25
     })
 }

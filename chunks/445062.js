@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("864094"),
-        a = n("871499"),
-        s = n("689938");
+        s = n("871499"),
+        a = n("689938");
 
     function o(e) {
         let {
@@ -18,12 +18,12 @@ function(e, t, n) {
             onMouseEnter: o,
             onMouseLeave: l,
             ...u
-        } = e, d = n ? a.CenterControlButton : a.default, {
+        } = e, d = n ? s.CenterControlButton : s.default, {
             Component: _,
             events: c
         } = (0, r.useScreenshareLottie)("disable");
         return (0, i.jsx)(d, {
-            label: t ? s.default.Messages.STOP_STREAMING : s.default.Messages.STOP_WATCHING,
+            label: t ? a.default.Messages.STOP_STREAMING : a.default.Messages.STOP_WATCHING,
             iconComponent: _,
             isActive: !0,
             onMouseEnter: e => {

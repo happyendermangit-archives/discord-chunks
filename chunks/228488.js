@@ -5,7 +5,7 @@ function(e, t, n) {
             return l
         },
         exitFullScreen: function() {
-            return s
+            return a
         },
         getFullScreenNode: function() {
             return r
@@ -14,7 +14,7 @@ function(e, t, n) {
             return o
         },
         requestFullScreen: function() {
-            return a
+            return s
         },
         subscribeDocumentToFullScreenChange: function() {
             return u
@@ -29,11 +29,11 @@ function(e, t, n) {
         }(e))
     }
 
-    function a(e) {
+    function s(e) {
         "function" == typeof e.requestFullscreen ? e.requestFullscreen() : "function" == typeof e.webkitRequestFullscreen ? e.webkitRequestFullscreen() : "function" == typeof e.webkitEnterFullscreen ? e.webkitEnterFullscreen() : "function" == typeof e.mozRequestFullScreen ? e.mozRequestFullScreen() : "function" == typeof e.msRequestFullscreen ? e.msRequestFullscreen() : new i.default("FullScreenUtils").warn("Fullscreen API is not supported.")
     }
 
-    function s(e, t) {
+    function a(e, t) {
         let n = null != t ? t : document;
         o(null, n) && ("function" == typeof n.exitFullscreen ? n.exitFullscreen() : "function" == typeof n.webkitExitFullscreen ? n.webkitExitFullscreen() : "function" == typeof e.webkitExitFullscreen ? e.webkitExitFullscreen() : "function" == typeof n.mozCancelFullScreen ? n.mozCancelFullScreen() : "function" == typeof n.msExitFullscreen ? n.msExitFullscreen() : new i.default("FullScreenUtils").warn("Fullscreen API is not supported."))
     }

@@ -10,8 +10,8 @@ function(e, t, n) {
     });
     var i = n("524437"),
         r = n("381499"),
-        a = n("780384"),
-        s = n("570140"),
+        s = n("780384"),
+        a = n("570140"),
         o = n("514361"),
         l = n("238514"),
         u = n("210887"),
@@ -37,7 +37,7 @@ function(e, t, n) {
     }
 
     function I(e) {
-        return (0, a.isThemeLight)(e) ? i.Theme.LIGHT : i.Theme.DARK
+        return (0, s.isThemeLight)(e) ? i.Theme.LIGHT : i.Theme.DARK
     }
 
     function T(e) {
@@ -45,12 +45,12 @@ function(e, t, n) {
             backgroundGradientPresetId: t,
             theme: n
         } = e, i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.UserSettingsDelay.INFREQUENT_USER_ACTION;
-        if (s.default.dispatch({
+        if (a.default.dispatch({
                 type: "UNSYNCED_USER_SETTINGS_UPDATE",
                 settings: {
                     useSystemTheme: "system" === n ? c.SystemThemeState.ON : c.SystemThemeState.OFF
                 }
-            }), s.default.dispatch({
+            }), a.default.dispatch({
                 type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE",
                 changes: {
                     appearance: {
@@ -75,19 +75,19 @@ function(e, t, n) {
     }
     t.default = {
         overrideLocale(e) {
-            s.default.dispatch({
+            a.default.dispatch({
                 type: "USER_SETTINGS_LOCALE_OVERRIDE",
                 locale: e
             })
         },
         updatedUnsyncedSettings(e) {
-            s.default.dispatch({
+            a.default.dispatch({
                 type: "UNSYNCED_USER_SETTINGS_UPDATE",
                 settings: e
             })
         },
         setShouldSyncTextSettings(e) {
-            s.default.dispatch({
+            a.default.dispatch({
                 type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE",
                 changes: {
                     text: {
@@ -107,7 +107,7 @@ function(e, t, n) {
         },
         setShouldSyncAppearanceSettings(e) {
             var t;
-            s.default.dispatch({
+            a.default.dispatch({
                 type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE",
                 changes: {
                     appearance: {
@@ -124,14 +124,14 @@ function(e, t, n) {
             })
         },
         applySettingsOverride(e) {
-            s.default.dispatch({
+            a.default.dispatch({
                 type: "USER_SETTINGS_OVERRIDE_APPLY",
                 settings: e
             })
         },
         clearSettingsOverride() {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            s.default.dispatch({
+            a.default.dispatch({
                 type: "USER_SETTINGS_OVERRIDE_CLEAR",
                 settings: t
             })
@@ -142,7 +142,7 @@ function(e, t, n) {
             })
         }, _.UserSettingsDelay.INFREQUENT_USER_ACTION),
         updateTheme(e) {
-            s.default.dispatch({
+            a.default.dispatch({
                 type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE",
                 changes: {
                     appearance: {

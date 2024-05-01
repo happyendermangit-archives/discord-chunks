@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("846519"),
         r = n("147913"),
-        a = n("603113"),
-        s = n("594190"),
+        s = n("603113"),
+        a = n("594190"),
         o = n("592125"),
         l = n("131951"),
         u = n("19780"),
@@ -78,9 +78,9 @@ function(e, t, n) {
         }
         getGameMetadata() {
             let e = d.default.findActivity(e => e.type === T.ActivityTypes.PLAYING),
-                t = s.default.getCurrentGameForAnalytics();
+                t = a.default.getCurrentGameForAnalytics();
             return {
-                game_platform: (0, a.default)(e),
+                game_platform: (0, s.default)(e),
                 game_name: null != e ? e.name : null,
                 game_exe_name: null != t ? t.exeName : null,
                 game_id: null != e ? e.application_id : null

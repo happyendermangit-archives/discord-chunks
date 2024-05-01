@@ -25,8 +25,8 @@ function(e, t, n) {
     });
     var i = n("692547"),
         r = n("15385"),
-        a = n("193277"),
-        s = n("709586"),
+        s = n("193277"),
+        a = n("709586"),
         o = n("115102"),
         l = n("241820"),
         u = n("536952"),
@@ -106,7 +106,7 @@ function(e, t, n) {
             description: T.default.Messages.PREMIUM_GUILD_USER_FEATURE_PROFILE_BADGE
         }),
         C = () => ({
-            icon: s.default,
+            icon: a.default,
             color: i.default.unsafe_rawColors.PREMIUM_PERK_PINK.css,
             description: T.default.Messages.PREMIUM_GUILD_USER_FEATURE_BOOST_CRYSTAL
         }),
@@ -117,14 +117,14 @@ function(e, t, n) {
         }),
         L = () => ({
             color: i.default.unsafe_rawColors.PREMIUM_PERK_BLUE.css,
-            icon: a.default,
+            icon: s.default,
             description: T.default.Messages.PREMIUM_GUILD_USER_FEATURE_OTHERS
         }),
         v = function() {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : T.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_OTHER;
             return {
                 color: i.default.unsafe_rawColors.PREMIUM_PERK_BLUE.css,
-                icon: a.default,
+                icon: s.default,
                 description: e
             }
         },

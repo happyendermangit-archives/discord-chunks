@@ -1,6 +1,6 @@
 function(e, t, n) {
     "use strict";
-    var i, r, a, s;
+    var i, r, s, a;
     n.r(t), n.d(t, {
         FEEDBACK_FREEFORM_LENGTH: function() {
             return o
@@ -14,9 +14,9 @@ function(e, t, n) {
         FeedbackTypePrecedence: function() {
             return l
         }
-    }), n("724458"), (a = i || (i = {})).BAD = "bad", a.NEUTRAL = "neutral", a.GOOD = "good";
+    }), n("724458"), (s = i || (i = {})).BAD = "bad", s.NEUTRAL = "neutral", s.GOOD = "good";
     let o = 1024;
-    (s = r || (r = {}))[s.VOICE = 0] = "VOICE", s[s.STREAM = 1] = "STREAM", s[s.VIDEO_BACKGROUND = 2] = "VIDEO_BACKGROUND", s[s.ACTIVITY = 3] = "ACTIVITY", s[s.IN_APP_REPORTS = 4] = "IN_APP_REPORTS";
+    (a = r || (r = {}))[a.VOICE = 0] = "VOICE", a[a.STREAM = 1] = "STREAM", a[a.VIDEO_BACKGROUND = 2] = "VIDEO_BACKGROUND", a[a.ACTIVITY = 3] = "ACTIVITY", a[a.IN_APP_REPORTS = 4] = "IN_APP_REPORTS";
     let l = [2, 1, 3, 0, 4].reduce((e, t, n) => ({
         ...e,
         [t]: n

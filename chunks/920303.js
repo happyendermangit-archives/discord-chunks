@@ -6,7 +6,7 @@ function(e, t, n) {
             return N
         }
     }), n("47120");
-    var r, a, s, o, l = n("392711"),
+    var r, s, a, o, l = n("392711"),
         u = n.n(l),
         d = n("683860"),
         _ = n("442837"),
@@ -78,12 +78,12 @@ function(e, t, n) {
             return g === e && L === t && (0, h.areSetsEqual)(i, n) ? v : b
         }
     }
-    o = "ArchivedThreadsStore", (s = "displayName") in(a = G) ? Object.defineProperty(a, s, {
+    o = "ArchivedThreadsStore", (a = "displayName") in(s = G) ? Object.defineProperty(s, a, {
         value: o,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : a[s] = o, t.default = new G(c.default, {
+    }) : s[a] = o, t.default = new G(c.default, {
         CONNECTION_OPEN: M,
         THREAD_DELETE: function(e) {
             let {

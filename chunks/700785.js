@@ -33,8 +33,8 @@ function(e, t, n) {
                 let n, {
                         forceRoles: i,
                         context: r,
-                        overwrites: a,
-                        roles: s,
+                        overwrites: s,
+                        roles: a,
                         checkElevated: o = !0,
                         excludeGuildPermissions: l
                     } = t,
@@ -47,20 +47,20 @@ function(e, t, n) {
                         return null == t ? m : P(r, e({
                             forceRoles: i,
                             context: t,
-                            overwrites: a,
-                            roles: s,
+                            overwrites: s,
+                            roles: a,
                             checkElevated: o,
                             excludeGuildPermissions: l
                         }), !1)
                     }
                     u = null !== (d = r.computeLurkerPermissionsAllowList()) && void 0 !== d ? d : u;
-                    a = null != a ? {
+                    s = null != s ? {
                         ...r.permissionOverwrites,
-                        ...a
+                        ...s
                     } : r.permissionOverwrites;
                     let t = r.getGuildId();
                     n = null != t ? f.default.getGuild(t) : null
-                } else a = null != a ? a : {}, n = r;
+                } else s = null != s ? s : {}, n = r;
                 if (null == n) return m;
                 let _ = {
                     userId: A.EMPTY_STRING_SNOWFLAKE_ID,
@@ -79,8 +79,8 @@ function(e, t, n) {
                     userId: A.EMPTY_STRING_SNOWFLAKE_ID,
                     member: _,
                     guild: n,
-                    overwrites: a,
-                    roles: s,
+                    overwrites: s,
+                    roles: a,
                     checkElevated: o,
                     excludeGuildPermissions: l,
                     lurkerPermissionsMask: u
@@ -105,8 +105,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("392711"),
         r = n.n(i),
-        a = n("149765"),
-        s = n("911969"),
+        s = n("149765"),
+        a = n("911969"),
         o = n("715903"),
         l = n("69882"),
         u = n("160404"),
@@ -120,38 +120,38 @@ function(e, t, n) {
         S = n("594174"),
         h = n("709054"),
         A = n("981631");
-    let m = a.deserialize(0),
-        N = a.combine(...r().values(A.Permissions)),
-        p = a.combine(A.Permissions.CREATE_INSTANT_INVITE, A.Permissions.CHANGE_NICKNAME, A.Permissions.VIEW_CHANNEL, A.Permissions.SEND_MESSAGES, A.Permissions.EMBED_LINKS, A.Permissions.ATTACH_FILES, A.Permissions.READ_MESSAGE_HISTORY, A.Permissions.MENTION_EVERYONE, A.Permissions.USE_EXTERNAL_EMOJIS, A.Permissions.USE_EXTERNAL_STICKERS, A.Permissions.ADD_REACTIONS, A.Permissions.CREATE_PUBLIC_THREADS, A.Permissions.CREATE_PRIVATE_THREADS, A.Permissions.SEND_MESSAGES_IN_THREADS, A.Permissions.SEND_POLLS, A.Permissions.CONNECT, A.Permissions.SPEAK, A.Permissions.USE_VAD, A.Permissions.STREAM, A.Permissions.USE_EMBEDDED_ACTIVITIES, A.Permissions.USE_SOUNDBOARD, A.Permissions.REQUEST_TO_SPEAK, A.Permissions.USE_APPLICATION_COMMANDS, A.Permissions.CREATE_GUILD_EXPRESSIONS, A.Permissions.CREATE_EVENTS),
-        O = a.combine(A.Permissions.VIEW_CHANNEL, A.Permissions.READ_MESSAGE_HISTORY),
-        R = a.combine(A.Permissions.VIEW_CHANNEL, A.Permissions.SEND_MESSAGES, A.Permissions.CONNECT, A.Permissions.SPEAK, A.Permissions.STREAM, A.Permissions.USE_EMBEDDED_ACTIVITIES, A.Permissions.USE_EXTERNAL_EMOJIS, A.Permissions.USE_EXTERNAL_SOUNDS, A.Permissions.USE_EXTERNAL_STICKERS, A.Permissions.USE_SOUNDBOARD, A.Permissions.USE_VAD),
-        C = a.combine(A.Permissions.VIEW_CHANNEL, A.Permissions.READ_MESSAGE_HISTORY),
-        g = a.combine(A.Permissions.VIEW_CHANNEL, A.Permissions.READ_MESSAGE_HISTORY, A.Permissions.CHANGE_NICKNAME),
-        L = a.combine(A.Permissions.MANAGE_GUILD, A.Permissions.MANAGE_ROLES, A.Permissions.ADMINISTRATOR, A.Permissions.BAN_MEMBERS, A.Permissions.MANAGE_NICKNAMES, A.Permissions.CREATE_GUILD_EXPRESSIONS, A.Permissions.MANAGE_GUILD_EXPRESSIONS, A.Permissions.MANAGE_WEBHOOKS, A.Permissions.VIEW_AUDIT_LOG);
+    let m = s.deserialize(0),
+        N = s.combine(...r().values(A.Permissions)),
+        p = s.combine(A.Permissions.CREATE_INSTANT_INVITE, A.Permissions.CHANGE_NICKNAME, A.Permissions.VIEW_CHANNEL, A.Permissions.SEND_MESSAGES, A.Permissions.EMBED_LINKS, A.Permissions.ATTACH_FILES, A.Permissions.READ_MESSAGE_HISTORY, A.Permissions.MENTION_EVERYONE, A.Permissions.USE_EXTERNAL_EMOJIS, A.Permissions.USE_EXTERNAL_STICKERS, A.Permissions.ADD_REACTIONS, A.Permissions.CREATE_PUBLIC_THREADS, A.Permissions.CREATE_PRIVATE_THREADS, A.Permissions.SEND_MESSAGES_IN_THREADS, A.Permissions.SEND_POLLS, A.Permissions.CONNECT, A.Permissions.SPEAK, A.Permissions.USE_VAD, A.Permissions.STREAM, A.Permissions.USE_EMBEDDED_ACTIVITIES, A.Permissions.USE_SOUNDBOARD, A.Permissions.REQUEST_TO_SPEAK, A.Permissions.USE_APPLICATION_COMMANDS, A.Permissions.CREATE_GUILD_EXPRESSIONS, A.Permissions.CREATE_EVENTS),
+        O = s.combine(A.Permissions.VIEW_CHANNEL, A.Permissions.READ_MESSAGE_HISTORY),
+        R = s.combine(A.Permissions.VIEW_CHANNEL, A.Permissions.SEND_MESSAGES, A.Permissions.CONNECT, A.Permissions.SPEAK, A.Permissions.STREAM, A.Permissions.USE_EMBEDDED_ACTIVITIES, A.Permissions.USE_EXTERNAL_EMOJIS, A.Permissions.USE_EXTERNAL_SOUNDS, A.Permissions.USE_EXTERNAL_STICKERS, A.Permissions.USE_SOUNDBOARD, A.Permissions.USE_VAD),
+        C = s.combine(A.Permissions.VIEW_CHANNEL, A.Permissions.READ_MESSAGE_HISTORY),
+        g = s.combine(A.Permissions.VIEW_CHANNEL, A.Permissions.READ_MESSAGE_HISTORY, A.Permissions.CHANGE_NICKNAME),
+        L = s.combine(A.Permissions.MANAGE_GUILD, A.Permissions.MANAGE_ROLES, A.Permissions.ADMINISTRATOR, A.Permissions.BAN_MEMBERS, A.Permissions.MANAGE_NICKNAMES, A.Permissions.CREATE_GUILD_EXPRESSIONS, A.Permissions.MANAGE_GUILD_EXPRESSIONS, A.Permissions.MANAGE_WEBHOOKS, A.Permissions.VIEW_AUDIT_LOG);
 
     function v(e, t, n) {
         let i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
         if (i && t.mfaLevel === A.MFALevels.ELEVATED && n === E.default.getId()) {
             var r;
-            !(null === (r = S.default.getCurrentUser()) || void 0 === r ? void 0 : r.mfaEnabled) && (e = a.remove(e, A.ElevatedPermissions))
+            !(null === (r = S.default.getCurrentUser()) || void 0 === r ? void 0 : r.mfaEnabled) && (e = s.remove(e, A.ElevatedPermissions))
         }
         return e
     }
 
     function D(e, t, n, i) {
         let r = i[e];
-        if (null != r && (n = a.remove(n, r.deny), n = a.add(n, r.allow)), null != t) {
+        if (null != r && (n = s.remove(n, r.deny), n = s.add(n, r.allow)), null != t) {
             let e = m,
                 r = m;
             for (let n = 0; n < t.roles.length; n++) {
-                let s = i[t.roles[n]];
-                null != s && (e = a.add(e, s.allow), r = a.add(r, s.deny))
+                let a = i[t.roles[n]];
+                null != a && (e = s.add(e, a.allow), r = s.add(r, a.deny))
             }
-            n = a.remove(n, r), n = a.add(n, e);
-            let s = i[t.userId];
-            null != s && (n = a.remove(n, s.deny), n = a.add(n, s.allow));
-            let u = a.has(n, A.Permissions.ADMINISTRATOR);
-            (0, o.hasAutomodQuarantinedProfile)(t) && !u && (n = a.filter(n, g)), (0, l.isMemberCommunicationDisabled)(t) && !u && (n = a.filter(n, C))
+            n = s.remove(n, r), n = s.add(n, e);
+            let a = i[t.userId];
+            null != a && (n = s.remove(n, a.deny), n = s.add(n, a.allow));
+            let u = s.has(n, A.Permissions.ADMINISTRATOR);
+            (0, o.hasAutomodQuarantinedProfile)(t) && !u && (n = s.filter(n, g)), (0, l.isMemberCommunicationDisabled)(t) && !u && (n = s.filter(n, C))
         }
         return n
     }
@@ -162,46 +162,46 @@ function(e, t, n) {
             member: n,
             guild: i,
             overwrites: r,
-            roles: s,
+            roles: a,
             checkElevated: o = !0,
             excludeGuildPermissions: l = !1,
             lurkerPermissionsMask: u = O
         } = e;
         if (l) return D(i.id, n, m, r);
-        let _ = (s = null != s ? {
+        let _ = (a = null != a ? {
                 ...f.default.getRoles(i.id),
-                ...s
+                ...a
             } : f.default.getRoles(i.id))[i.getEveryoneRoleId()],
             c = null != _ ? _.permissions : p;
         if (null != n)
             for (let e = 0; e < n.roles.length; e++) {
-                let t = s[n.roles[e]];
-                void 0 !== t && (c = a.add(c, t.permissions))
+                let t = a[n.roles[e]];
+                void 0 !== t && (c = s.add(c, t.permissions))
             }
-        return c = a.has(c, A.Permissions.ADMINISTRATOR) ? N : D(i.id, n, c, r), (d.default.isLurking(i.id) || (null == n ? void 0 : n.isPending)) && (c = a.filter(c, u)), T.default.isCurrentUserGuest(i.id) && (c = a.filter(c, R)), v(c, i, t, o)
+        return c = s.has(c, A.Permissions.ADMINISTRATOR) ? N : D(i.id, n, c, r), (d.default.isLurking(i.id) || (null == n ? void 0 : n.isPending)) && (c = s.filter(c, u)), T.default.isCurrentUserGuest(i.id) && (c = s.filter(c, R)), v(c, i, t, o)
     }
 
     function y(e) {
         var t, n, i;
         let r, {
-            user: a,
-            context: s,
+            user: s,
+            context: a,
             overwrites: o,
             roles: l,
             checkElevated: d = !0,
             excludeGuildPermissions: E = !1
         } = e;
-        if (null == a) return m;
-        let h = "string" == typeof a ? a : a.id,
+        if (null == s) return m;
+        let h = "string" == typeof s ? s : s.id,
             A = O;
-        if (s instanceof c.ChannelRecordBase) {
-            if (s.isScheduledForDeletion()) return m;
-            if (c.THREAD_CHANNEL_TYPES.has(s.type)) {
-                let e = I.default.getChannel(s.parent_id);
+        if (a instanceof c.ChannelRecordBase) {
+            if (a.isScheduledForDeletion()) return m;
+            if (c.THREAD_CHANNEL_TYPES.has(a.type)) {
+                let e = I.default.getChannel(a.parent_id);
                 if (null == e || e.isScheduledForDeletion()) return m;
-                let t = h === (null === (n = S.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && _.default.hasJoined(s.id);
-                return P(s, y({
-                    user: a,
+                let t = h === (null === (n = S.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && _.default.hasJoined(a.id);
+                return P(a, y({
+                    user: s,
                     context: e,
                     overwrites: o,
                     roles: l,
@@ -209,14 +209,14 @@ function(e, t, n) {
                     excludeGuildPermissions: E
                 }), t)
             }
-            A = null !== (i = s.computeLurkerPermissionsAllowList()) && void 0 !== i ? i : A;
+            A = null !== (i = a.computeLurkerPermissionsAllowList()) && void 0 !== i ? i : A;
             o = null != o ? {
-                ...s.permissionOverwrites,
+                ...a.permissionOverwrites,
                 ...o
-            } : s.permissionOverwrites;
-            let e = s.getGuildId();
+            } : a.permissionOverwrites;
+            let e = a.getGuildId();
             r = null != e ? f.default.getGuild(e) : null
-        } else o = null != o ? o : {}, r = s;
+        } else o = null != o ? o : {}, r = a;
         if (null == r) return m;
         if (!(h === (null === (t = S.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && u.default.isViewingRoles(r.id)) && r.isOwner(h)) return v(N, r, h, d);
         let p = T.default.getMember(r.id, h);
@@ -233,7 +233,7 @@ function(e, t, n) {
     }
 
     function P(e, t, n) {
-        return e.type !== A.ChannelTypes.PRIVATE_THREAD || n || a.has(t, A.Permissions.MANAGE_THREADS) ? a.has(t, A.Permissions.SEND_MESSAGES_IN_THREADS) ? e.isLockedThread() && !a.has(t, A.Permissions.MANAGE_THREADS) ? a.remove(t, A.Permissions.SEND_MESSAGES) : a.combine(t, A.Permissions.SEND_MESSAGES) : a.remove(t, A.Permissions.SEND_MESSAGES) : m
+        return e.type !== A.ChannelTypes.PRIVATE_THREAD || n || s.has(t, A.Permissions.MANAGE_THREADS) ? s.has(t, A.Permissions.SEND_MESSAGES_IN_THREADS) ? e.isLockedThread() && !s.has(t, A.Permissions.MANAGE_THREADS) ? s.remove(t, A.Permissions.SEND_MESSAGES) : s.combine(t, A.Permissions.SEND_MESSAGES) : s.remove(t, A.Permissions.SEND_MESSAGES) : m
     }
 
     function U(e, t) {
@@ -251,20 +251,20 @@ function(e, t, n) {
         return null == i[n] && (i[n] = k(n)), null == r[n] && (r[n] = k(n)), Object.keys(i).length === Object.keys(r).length && !Object.keys(i).some(e => {
             let t = i[e],
                 n = r[e];
-            return !(null != n && a.equals(n.deny, t.deny) && a.equals(n.allow, t.allow)) && !0
+            return !(null != n && s.equals(n.deny, t.deny) && s.equals(n.allow, t.allow)) && !0
         })
     }
 
     function b(e) {
         var t;
-        return r().some(f.default.getRoles(e.id), e => e.hoist && a.has(e.permissions, A.Permissions.ADMINISTRATOR)) ? void 0 : null !== (t = e.ownerId) && void 0 !== t ? t : void 0
+        return r().some(f.default.getRoles(e.id), e => e.hoist && s.has(e.permissions, A.Permissions.ADMINISTRATOR)) ? void 0 : null !== (t = e.ownerId) && void 0 !== t ? t : void 0
     }
 
     function G(e, t, n, i) {
         if (null != t && e.isOwner(t)) return !0;
         if (null == n) return !1;
-        let a = r()(f.default.getRoles(e.id)).sortBy(e => e.position).map(e => e.id).value();
-        return a.indexOf(n.id) > (null != i ? a.indexOf(i.id) : -1)
+        let s = r()(f.default.getRoles(e.id)).sortBy(e => e.position).map(e => e.id).value();
+        return s.indexOf(n.id) > (null != i ? s.indexOf(i.id) : -1)
     }
 
     function w(e, t) {
@@ -279,7 +279,7 @@ function(e, t, n) {
     function k(e) {
         return {
             id: e,
-            type: s.PermissionOverwriteType.ROLE,
+            type: a.PermissionOverwriteType.ROLE,
             allow: m,
             deny: m
         }
@@ -291,14 +291,14 @@ function(e, t, n) {
             user: n,
             context: i,
             overwrites: r,
-            roles: s,
+            roles: a,
             excludeGuildPermissions: o
         } = e;
-        return a.has(y({
+        return s.has(y({
             user: n,
             context: i,
             overwrites: r,
-            roles: s,
+            roles: a,
             checkElevated: !0,
             excludeGuildPermissions: o
         }), t)
@@ -316,9 +316,9 @@ function(e, t, n) {
         if (null == n) return !1;
         let r = f.default.getRole(n.id, n.getEveryoneRoleId());
         if (null == r) return !1;
-        let s = r.permissions,
+        let a = r.permissions,
             o = i[n.id];
-        return null != o && (s = a.remove(s, o.deny), s = a.add(s, o.allow)), a.has(s, e)
+        return null != o && (a = s.remove(a, o.deny), a = s.add(a, o.allow)), s.has(a, e)
     }
 
     function F(e, t) {
@@ -331,7 +331,7 @@ function(e, t, n) {
             n = null != e ? f.default.getGuild(e) : null
         } else n = t;
         if (null == n) return !1;
-        let s = f.default.getRole(n.id, n.getEveryoneRoleId());
-        return !(null == s || !a.has(s.permissions, e) || r().some(i, t => a.has(t.deny, e))) && !0
+        let a = f.default.getRole(n.id, n.getEveryoneRoleId());
+        return !(null == a || !s.has(a.permissions, e) || r().some(i, t => s.has(t.deny, e))) && !0
     }
 }

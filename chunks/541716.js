@@ -8,8 +8,8 @@ function(e, t, n) {
             return r
         }
     });
-    var i, r, a = n("873546"),
-        s = n("703558");
+    var i, r, s = n("873546"),
+        a = n("703558");
     (i = r || (r = {}))[i.TOOLTIP = 0] = "TOOLTIP", i[i.STATIC = 1] = "STATIC";
     let o = {
             analyticsName: "normal",
@@ -23,8 +23,8 @@ function(e, t, n) {
                 enabled: !0
             },
             drafts: {
-                type: s.DraftType.ChannelMessage,
-                commandType: s.DraftType.SlashCommand,
+                type: a.DraftType.ChannelMessage,
+                commandType: a.DraftType.SlashCommand,
                 autoSave: !0
             },
             emojis: {
@@ -51,8 +51,8 @@ function(e, t, n) {
             },
             submit: {
                 button: !0,
-                ignorePreference: a.isMobile,
-                disableEnterToSubmit: a.isMobile,
+                ignorePreference: s.isMobile,
+                disableEnterToSubmit: s.isMobile,
                 clearOnSubmit: !0,
                 useDisabledStylesOnSubmit: !0
             },
@@ -70,7 +70,7 @@ function(e, t, n) {
                 forceChatLayer: !0
             },
             drafts: {
-                type: s.DraftType.ChannelMessage,
+                type: a.DraftType.ChannelMessage,
                 autoSave: !0
             },
             emojis: {
@@ -95,8 +95,8 @@ function(e, t, n) {
             },
             submit: {
                 button: !0,
-                ignorePreference: a.isMobile,
-                disableEnterToSubmit: a.isMobile,
+                ignorePreference: s.isMobile,
+                disableEnterToSubmit: s.isMobile,
                 clearOnSubmit: !0,
                 useDisabledStylesOnSubmit: !0
             },
@@ -116,8 +116,8 @@ function(e, t, n) {
             },
             disableAutoFocus: !0,
             drafts: {
-                type: s.DraftType.ChannelMessage,
-                commandType: s.DraftType.SlashCommand
+                type: a.DraftType.ChannelMessage,
+                commandType: a.DraftType.SlashCommand
             },
             emojis: {
                 button: !0
@@ -137,8 +137,8 @@ function(e, t, n) {
             },
             submit: {
                 button: !0,
-                ignorePreference: a.isMobile,
-                disableEnterToSubmit: a.isMobile,
+                ignorePreference: s.isMobile,
+                disableEnterToSubmit: s.isMobile,
                 clearOnSubmit: !0,
                 useDisabledStylesOnSubmit: !0
             },
@@ -151,7 +151,7 @@ function(e, t, n) {
         d = {
             analyticsName: "edit",
             drafts: {
-                type: s.DraftType.ChannelMessage
+                type: a.DraftType.ChannelMessage
             },
             emojis: {
                 button: !0
@@ -173,7 +173,7 @@ function(e, t, n) {
         _ = {
             analyticsName: "forum",
             drafts: {
-                type: s.DraftType.ChannelMessage
+                type: a.DraftType.ChannelMessage
             },
             emojis: {
                 button: !0
@@ -197,7 +197,7 @@ function(e, t, n) {
         c = {
             analyticsName: "voice_channel_status",
             drafts: {
-                type: s.DraftType.ChannelMessage
+                type: a.DraftType.ChannelMessage
             },
             emojis: {
                 button: !0
@@ -226,7 +226,7 @@ function(e, t, n) {
             analyticsName: "thread_creation",
             attachments: !0,
             drafts: {
-                type: s.DraftType.FirstThreadMessage
+                type: a.DraftType.FirstThreadMessage
             },
             emojis: {
                 button: !0
@@ -258,7 +258,7 @@ function(e, t, n) {
             analyticsName: "create_forum_post",
             attachments: !0,
             drafts: {
-                type: s.DraftType.FirstThreadMessage
+                type: a.DraftType.FirstThreadMessage
             },
             gifs: {
                 allowSending: !0
@@ -284,7 +284,7 @@ function(e, t, n) {
             analyticsName: "create_poll",
             attachments: !0,
             drafts: {
-                type: s.DraftType.ChannelMessage
+                type: a.DraftType.ChannelMessage
             },
             emojis: {
                 button: !0
@@ -303,7 +303,7 @@ function(e, t, n) {
         f = {
             analyticsName: "user_profile",
             drafts: {
-                type: s.DraftType.ChannelMessage
+                type: a.DraftType.ChannelMessage
             },
             emojis: {
                 button: !0
@@ -326,7 +326,7 @@ function(e, t, n) {
         S = {
             analyticsName: "profile_bio_input",
             drafts: {
-                type: s.DraftType.ChannelMessage
+                type: a.DraftType.ChannelMessage
             },
             emojis: {
                 button: !0
@@ -344,7 +344,7 @@ function(e, t, n) {
         h = {
             analyticsName: "custom_gift_type",
             drafts: {
-                type: s.DraftType.ChannelMessage
+                type: a.DraftType.ChannelMessage
             },
             emojis: {},
             permissions: {
@@ -360,7 +360,7 @@ function(e, t, n) {
         A = {
             analyticsName: "rules_input",
             drafts: {
-                type: s.DraftType.ChannelMessage
+                type: a.DraftType.ChannelMessage
             },
             permissions: {
                 requireSendMessages: !0
@@ -374,7 +374,7 @@ function(e, t, n) {
         m = {
             analyticsName: "forum_channel_guidelines",
             drafts: {
-                type: s.DraftType.ChannelMessage
+                type: a.DraftType.ChannelMessage
             },
             permissions: {
                 requireSendMessages: !1
@@ -408,7 +408,7 @@ function(e, t, n) {
             ATOMIC_REACTOR_REPLY_INPUT: {
                 analyticsName: "atomic_reator_reply_input",
                 drafts: {
-                    type: s.DraftType.ChannelMessage
+                    type: a.DraftType.ChannelMessage
                 },
                 permissions: {
                     requireSendMessages: !0

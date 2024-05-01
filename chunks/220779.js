@@ -10,8 +10,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("685501"),
         l = n("481060"),
         u = n("410030"),
@@ -33,7 +33,7 @@ function(e, t, n) {
             let {
                 placeholder: n,
                 headerText: r,
-                onEnter: a,
+                onEnter: s,
                 showPopout: o,
                 children: d,
                 hide: _
@@ -44,7 +44,7 @@ function(e, t, n) {
                 shouldShow: o,
                 disablePointerEvents: !1,
                 renderPopout: () => (0, i.jsx)("div", {
-                    className: s()([A.reply, "theme-".concat(c)]),
+                    className: a()([A.reply, "theme-".concat(c)]),
                     ref: t,
                     children: (0, i.jsx)(l.FocusLock, {
                         containerRef: t,
@@ -55,7 +55,7 @@ function(e, t, n) {
                                 children: null != r ? r : h.default.Messages.CHAT
                             }), (0, i.jsx)(p, {
                                 onEnter: e => {
-                                    a(e), _()
+                                    s(e), _()
                                 },
                                 placeholder: null != n ? n : h.default.Messages.CHAT
                             })]
@@ -70,7 +70,7 @@ function(e, t, n) {
         let {
             placeholder: t,
             onEnter: n,
-            setEditorRef: a,
+            setEditorRef: s,
             showEmojiButton: o = !1,
             renderAttachButton: l,
             onFocus: u,
@@ -84,7 +84,7 @@ function(e, t, n) {
         }), (0, i.jsx)(c.default, {
             ref: R,
             placeholder: t,
-            className: s()(A.replyInput, I),
+            className: a()(A.replyInput, I),
             showRemainingCharsAfterCount: -1,
             allowNewLines: !1,
             maxCharacterCount: f.MAX_CHAR_COUNT,
@@ -107,7 +107,7 @@ function(e, t, n) {
                     shouldRefocus: !1
                 }))
             },
-            setEditorRef: a,
+            setEditorRef: s,
             focused: !0,
             onFocus: u,
             disableThemedBackground: !0,
@@ -140,14 +140,14 @@ function(e, t, n) {
             let {
                 onSelectEmoji: t,
                 onClick: n
-            } = e, a = (0, u.default)(), [s, o] = r.useState(!1), d = r.useRef(null);
+            } = e, s = (0, u.default)(), [a, o] = r.useState(!1), d = r.useRef(null);
             return O(() => o(!1), d), (0, i.jsx)(l.Popout, {
                 align: "right",
                 position: "top",
-                shouldShow: s,
+                shouldShow: a,
                 disablePointerEvents: !1,
                 renderPopout: () => (0, i.jsx)("div", {
-                    className: "theme-".concat(a),
+                    className: "theme-".concat(s),
                     ref: d,
                     children: (0, i.jsx)(E.ReactionPicker, {
                         messageId: S.EMPTY_STRING_SNOWFLAKE_ID,
@@ -180,7 +180,7 @@ function(e, t, n) {
         let {
             onInteraction: t,
             replyHeaderText: n,
-            replyPlaceholder: a,
+            replyPlaceholder: s,
             showReact: u = !0,
             showReply: d = !0
         } = e, [_, c] = r.useState(!1), E = r.useRef(null);
@@ -206,7 +206,7 @@ function(e, t, n) {
                     hide: () => c(!1),
                     ref: E,
                     headerText: n,
-                    placeholder: a,
+                    placeholder: s,
                     showPopout: _,
                     onEnter: e => {
                         t({
@@ -219,7 +219,7 @@ function(e, t, n) {
                         text: h.default.Messages.MESSAGE_ACTION_REPLY,
                         children: e => (0, i.jsx)("button", {
                             ...e,
-                            className: s()(A.reaction, A.emojiButton),
+                            className: a()(A.reaction, A.emojiButton),
                             onClick: () => {
                                 t({
                                     interactionType: f.AtomicReactorInteractionTypes.ReplyBegin,

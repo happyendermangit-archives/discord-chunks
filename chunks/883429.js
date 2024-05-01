@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t);
     var i = n("544891"),
         r = n("570140"),
-        a = n("668781"),
-        s = n("346479"),
+        s = n("668781"),
+        a = n("346479"),
         o = n("929991"),
         l = n("480739"),
         u = n("985518"),
@@ -16,7 +16,7 @@ function(e, t, n) {
             return await e()
         } catch (e) {
             var i;
-            (null === (i = e.body) || void 0 === i ? void 0 : i.code) === _.AbortCodes.NON_MODERATED_TAG_REQUIRED && a.default.show({
+            (null === (i = e.body) || void 0 === i ? void 0 : i.code) === _.AbortCodes.NON_MODERATED_TAG_REQUIRED && s.default.show({
                 title: t,
                 body: n
             })
@@ -56,7 +56,7 @@ function(e, t, n) {
             });
             E(() => n, c.default.Messages.FORUM_TAG_REMOVE_ERROR, c.default.Messages.FORUM_POST_NON_MODERATED_TAG_REQUIRED)
         },
-        updateForumPostTags: async (e, t) => (await s.default.unarchiveThreadIfNecessary(e), i.HTTP.patch({
+        updateForumPostTags: async (e, t) => (await a.default.unarchiveThreadIfNecessary(e), i.HTTP.patch({
             url: _.Endpoints.CHANNEL(e),
             body: {
                 applied_tags: t
@@ -85,15 +85,15 @@ function(e, t, n) {
                 channelId: t
             });
             try {
-                let a = await s.default.searchThreads(e, t, n, i);
+                let s = await a.default.searchThreads(e, t, n, i);
                 (0, d.trackForumSearched)({
                     guildId: e,
                     channelId: t,
-                    numSearchResults: a.length
+                    numSearchResults: s.length
                 }), r.default.dispatch({
                     type: "FORUM_SEARCH_SUCCESS",
                     channelId: t,
-                    threadIds: a
+                    threadIds: s
                 })
             } catch {
                 r.default.dispatch({

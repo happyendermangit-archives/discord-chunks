@@ -11,8 +11,8 @@ function(e, t, n) {
             return A
         }
     }), n("47120"), n("653041");
-    var i, r, a = n("47770"),
-        s = n("46973"),
+    var i, r, s = n("47770"),
+        a = n("46973"),
         o = n("966146"),
         l = n("902704"),
         u = n("846519"),
@@ -36,7 +36,7 @@ function(e, t, n) {
         S = 120 * _.default.Millis.SECOND,
         h = -1 !== (0, d.getFirefoxVersion)();
     (r = i || (i = {})).UserSSRCUpdate = "user-ssrc-update", r.Update = "update";
-    class A extends a.default {
+    class A extends s.default {
         getWantsLevel() {
             let e = this.getVideoParticipantCount();
             return this.ladder.getMaxSinkValue(e)
@@ -52,9 +52,9 @@ function(e, t, n) {
             return this.audioSsrcs
         }
         setConnection(e) {
-            var t, n, i, r, a, o;
+            var t, n, i, r, s, o;
             let l = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-            null === (t = this.connection) || void 0 === t || t.removeListener(s.BaseConnectionEvent.LocalVideoDisabled, this.handleLocalVideoDisabled), null === (n = this.connection) || void 0 === n || n.removeListener(s.BaseConnectionEvent.LocalMute, this.handleLocalMute), null === (i = this.connection) || void 0 === i || i.removeListener(s.BaseConnectionEvent.ActiveSinksChange, this.delayedUpdate), this.connection = e, null === (r = this.connection) || void 0 === r || r.addListener(s.BaseConnectionEvent.LocalVideoDisabled, this.handleLocalVideoDisabled), null === (a = this.connection) || void 0 === a || a.addListener(s.BaseConnectionEvent.LocalMute, this.handleLocalMute), null === (o = this.connection) || void 0 === o || o.addListener(s.BaseConnectionEvent.ActiveSinksChange, this.delayedUpdate), l && this.update()
+            null === (t = this.connection) || void 0 === t || t.removeListener(a.BaseConnectionEvent.LocalVideoDisabled, this.handleLocalVideoDisabled), null === (n = this.connection) || void 0 === n || n.removeListener(a.BaseConnectionEvent.LocalMute, this.handleLocalMute), null === (i = this.connection) || void 0 === i || i.removeListener(a.BaseConnectionEvent.ActiveSinksChange, this.delayedUpdate), this.connection = e, null === (r = this.connection) || void 0 === r || r.addListener(a.BaseConnectionEvent.LocalVideoDisabled, this.handleLocalVideoDisabled), null === (s = this.connection) || void 0 === s || s.addListener(a.BaseConnectionEvent.LocalMute, this.handleLocalMute), null === (o = this.connection) || void 0 === o || o.addListener(a.BaseConnectionEvent.ActiveSinksChange, this.delayedUpdate), l && this.update()
         }
         setAudioSSRC(e, t) {
             return t > 0 ? this.audioSsrcs[e] = t : delete this.audioSsrcs[e], this.update()
@@ -143,9 +143,9 @@ function(e, t, n) {
                 let i = -1,
                     r = -1;
                 for (let e = 0; e < n.length; e++) {
-                    let a = n[e],
-                        s = t - this.offscreenUsers[a];
-                    s > i && (i = s, r = e)
+                    let s = n[e],
+                        a = t - this.offscreenUsers[s];
+                    a > i && (i = a, r = e)
                 }
                 this.offscreenDisabledUsers[n[r]] = !0, n.splice(r, 1)
             }, this.updateOffscreenUsers = () => {
@@ -169,21 +169,21 @@ function(e, t, n) {
                     n = {
                         any: t
                     };
-                for (let [i, a] of(r.updateOffscreenUsers(), c.default.entries(r.videoSsrcs))) {
-                    let s = [],
+                for (let [i, s] of(r.updateOffscreenUsers(), c.default.entries(r.videoSsrcs))) {
+                    let a = [],
                         o = !1,
-                        u = a[0].ssrc;
+                        u = s[0].ssrc;
                     if (r.shouldReceiveFromUser(i)) {
                         let e = i === r.selectedParticipantId && 100 !== t && !r.pipOpen;
-                        if (a.length > 1) {
-                            for (let t of a) 100 === t.quality ? e ? (n[t.ssrc] = 100, u = t.ssrc) : n[t.ssrc] = 0 : e ? n[t.ssrc] = 0 : u = t.ssrc;
+                        if (s.length > 1) {
+                            for (let t of s) 100 === t.quality ? e ? (n[t.ssrc] = 100, u = t.ssrc) : n[t.ssrc] = 0 : e ? n[t.ssrc] = 0 : u = t.ssrc;
                             if (r.supportsSeamless && !r.framesReceived[u])
-                                for (let e of (o = !0, s = [u], a)) e.ssrc !== u && r.framesReceived[e.ssrc] && (100 === e.quality ? n[e.ssrc] = 100 : n[e.ssrc] = t, s.push(e.ssrc))
+                                for (let e of (o = !0, a = [u], s)) e.ssrc !== u && r.framesReceived[e.ssrc] && (100 === e.quality ? n[e.ssrc] = 100 : n[e.ssrc] = t, a.push(e.ssrc))
                         } else e && (n[u] = 100)
                     } else
-                        for (let e of a) n[e.ssrc] = 0;
-                    for (let e of ((!r.supportsSeamless || !o) && (s = [u]), a)) !s.includes(e.ssrc) && delete r.framesReceived[e.ssrc];
-                    (e.includes(i) || void 0 !== r.remoteVideoSsrcs[i] && !(0, l.default)(r.remoteVideoSsrcs[i], s)) && (r.remoteVideoSsrcs[i] = [...s], r.emit("user-ssrc-update", i, r.audioSsrcs[i], s))
+                        for (let e of s) n[e.ssrc] = 0;
+                    for (let e of ((!r.supportsSeamless || !o) && (a = [u]), s)) !a.includes(e.ssrc) && delete r.framesReceived[e.ssrc];
+                    (e.includes(i) || void 0 !== r.remoteVideoSsrcs[i] && !(0, l.default)(r.remoteVideoSsrcs[i], a)) && (r.remoteVideoSsrcs[i] = [...a], r.emit("user-ssrc-update", i, r.audioSsrcs[i], a))
                 }
                 for (let [e, t] of Object.entries(r.audioSsrcs)) {
                     var i;

@@ -3,9 +3,9 @@ function(e, t, n) {
     n.r(t), n("47120");
     var i = n("729357"),
         r = n.n(i),
-        a = n("147913"),
-        s = n("557177");
-    let o = (0, s.createSound)("vibing_wumpus", "vibing_wumpus", 0),
+        s = n("147913"),
+        a = n("557177");
+    let o = (0, a.createSound)("vibing_wumpus", "vibing_wumpus", 0),
         l = 0,
         u = 0,
         d = null;
@@ -13,8 +13,8 @@ function(e, t, n) {
     function _(e, t) {
         let n = Math.round(100 * e),
             i = Math.round(100 * u),
-            a = Math.round(100 * l);
-        n > 0 && a >= i || n < 0 && a <= i ? (clearInterval(d), 0 === i && null != t && t()) : (a += n, l = a / 100, o.volume = r()(l, 0, .5))
+            s = Math.round(100 * l);
+        n > 0 && s >= i || n < 0 && s <= i ? (clearInterval(d), 0 === i && null != t && t()) : (s += n, l = s / 100, o.volume = r()(l, 0, .5))
     }
 
     function c(e) {
@@ -42,7 +42,7 @@ function(e, t, n) {
     function f() {
         return .2 * (u - l)
     }
-    class S extends a.default {
+    class S extends s.default {
         constructor(...e) {
             var t, n, i;
             super(...e), t = this, n = "actions", i = {

@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("685072"),
-        a = n("287734"),
-        s = n("67212"),
+        s = n("287734"),
+        a = n("67212"),
         o = n("158631"),
         l = n("871499"),
         u = n("689938");
@@ -29,7 +29,7 @@ function(e, t, n) {
         return (0, i.jsx)(I, {
             ...E,
             onClick: () => {
-                f && (0, s.stopBroadcast)(), a.default.disconnect(), null == d || d()
+                f && (0, a.stopBroadcast)(), s.default.disconnect(), null == d || d()
             },
             iconComponent: S,
             onMouseEnter: e => {

@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("120356"),
-        a = n.n(r),
-        s = n("481060"),
+        s = n.n(r),
+        a = n("481060"),
         o = n("239091"),
         l = n("311819"),
         u = n("69580"),
@@ -43,19 +43,19 @@ function(e, t, n) {
                 integrationTypesConfig: n.integrationTypesConfig
             })) return null;
         let C = O && null != R.find(e => e.id === (null == n ? void 0 : n.id));
-        return (0, i.jsx)(s.Button, {
-            color: s.Button.Colors.PRIMARY,
-            look: s.Button.Looks.FILLED,
-            size: s.Button.Sizes.SMALL,
+        return (0, i.jsx)(a.Button, {
+            color: a.Button.Colors.PRIMARY,
+            look: a.Button.Looks.FILLED,
+            size: a.Button.Sizes.SMALL,
             onContextMenu: f.SUPPORTS_COPY ? e => {
-                (0, o.openContextMenu)(e, e => (0, i.jsx)(s.Menu, {
+                (0, o.openContextMenu)(e, e => (0, i.jsx)(a.Menu, {
                     navId: "component-button",
                     onClose: o.closeContextMenu,
                     "aria-label": m.default.Messages.APPLICATION_ADD_BUTTON_ACTIONS,
                     onSelect: void 0,
                     ...e,
-                    children: (0, i.jsx)(s.MenuGroup, {
-                        children: (0, i.jsx)(s.MenuItem, {
+                    children: (0, i.jsx)(a.MenuGroup, {
+                        children: (0, i.jsx)(a.MenuItem, {
                             id: "copy",
                             label: m.default.Messages.APPLICATION_ADD_BUTTON_ACTIONS_COPY,
                             action: () => (0, f.copy)((0, l.getApplicationInstallURL)(n))
@@ -76,7 +76,7 @@ function(e, t, n) {
                     integrationTypesConfig: n.integrationTypesConfig
                 })
             },
-            className: a()(N.__invalid_applicationInstallButton, r),
+            className: s()(N.__invalid_applicationInstallButton, r),
             children: (0, i.jsxs)("div", {
                 className: N.applicationInstallButtonContent,
                 children: [(0, i.jsx)(T.default, {

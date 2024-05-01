@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("763472"),
-        a = n("49012"),
-        s = n("591759"),
+        s = n("49012"),
+        a = n("591759"),
         o = n("915863");
 
     function l(e) {
@@ -26,10 +26,10 @@ function(e, t, n) {
                 if (i.button_urls.length <= n) return;
                 let o = i.button_urls[n];
                 if ("string" != typeof o) return;
-                let l = s.default.safeParseWithQuery(o);
+                let l = a.default.safeParseWithQuery(o);
                 if (null == l || null == l.protocol || null == l.hostname) return;
-                (0, a.handleClick)({
-                    href: s.default.format(l),
+                (0, s.handleClick)({
+                    href: a.default.format(l),
                     trusted: !1
                 })
             } catch (e) {}

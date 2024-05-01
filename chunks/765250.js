@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         createLayout: function() {
-            return a
+            return s
         },
         createWidget: function() {
             return _
@@ -20,7 +20,7 @@ function(e, t, n) {
             return o
         },
         setWidgetLayout: function() {
-            return s
+            return a
         },
         togglePinned: function() {
             return l
@@ -29,7 +29,7 @@ function(e, t, n) {
     var i = n("570140"),
         r = n("145597");
 
-    function a(e, t) {
+    function s(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : r.OVERLAY_DEFAULT_RESOLUTION;
         i.default.dispatch({
             type: "LAYOUT_CREATE",
@@ -39,7 +39,7 @@ function(e, t, n) {
         })
     }
 
-    function s(e, t, n) {
+    function a(e, t, n) {
         i.default.dispatch({
             type: "LAYOUT_UPDATE_WIDGET",
             widgetId: e,

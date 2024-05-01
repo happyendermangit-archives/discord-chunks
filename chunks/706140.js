@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("470079"),
         r = n("442837"),
-        a = n("581883"),
-        s = n("914010"),
+        s = n("581883"),
+        a = n("914010"),
         o = n("915486"),
         l = n("68985"),
         u = n("211644"),
@@ -17,14 +17,14 @@ function(e, t, n) {
         c = n("526761");
 
     function E(e, t, n) {
-        let E = (0, r.useStateFromStores)([a.default], () => {
+        let E = (0, r.useStateFromStores)([s.default], () => {
                 var e;
-                return null === (e = a.default.settings.userContent) || void 0 === e ? void 0 : e.dismissedContents
+                return null === (e = s.default.settings.userContent) || void 0 === e ? void 0 : e.dismissedContents
             }),
-            I = (0, r.useStateFromStores)([s.default], () => s.default.getGuildId()),
+            I = (0, r.useStateFromStores)([a.default], () => a.default.getGuildId()),
             T = (0, _.useNewUserDismissibleContent)(e),
             f = null;
-        a.default.hasLoaded(c.UserSettingsTypes.PRELOADED_USER_SETTINGS) ? f = T.find(e => null == E || !(0, o.hasBit)(E, e)) : null != E && (f = T.find(e => !(0, o.hasBit)(E, e)));
+        s.default.hasLoaded(c.UserSettingsTypes.PRELOADED_USER_SETTINGS) ? f = T.find(e => null == E || !(0, o.hasBit)(E, e)) : null != E && (f = T.find(e => !(0, o.hasBit)(E, e)));
         let S = (0, u.default)(e => null != f && e.currentlyShown.has(f)),
             h = (0, r.useStateFromStores)([l.default], () => null != f && l.default.hasUserHitDCCap(f));
         i.useEffect(() => {

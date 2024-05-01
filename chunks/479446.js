@@ -8,8 +8,8 @@ function(e, t, n) {
             return c
         }
     }), n("411104");
-    var i, r, a = n("512722"),
-        s = n.n(a),
+    var i, r, s = n("512722"),
+        a = n.n(s),
         o = n("493683"),
         l = n("904245"),
         u = n("957730"),
@@ -21,7 +21,7 @@ function(e, t, n) {
         if (null == e) throw Error("Recipient must be defined");
         let n = await o.default.openPrivateChannel(e.id).then(e => {
                 let t = d.default.getChannel(e);
-                if (s()(null != t, "PrivateChannel is null"), null == t) throw Error("Channel must be defined");
+                if (a()(null != t, "PrivateChannel is null"), null == t) throw Error("Channel must be defined");
                 return t
             }),
             i = (0, _.getGiftCodeURL)(t);

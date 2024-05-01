@@ -5,8 +5,8 @@ function(e, t, n) {
             return R
         }
     }), n("47120");
-    var i, r, a = n("735250"),
-        s = n("470079"),
+    var i, r, s = n("735250"),
+        a = n("470079"),
         o = n("120356"),
         l = n.n(o),
         u = n("442837"),
@@ -26,7 +26,7 @@ function(e, t, n) {
         p = n("689938"),
         O = n("946150");
     (r = i || (i = {}))[r.NOT_CHECKED = 0] = "NOT_CHECKED", r[r.NOT_OVERFLOWING = 1] = "NOT_OVERFLOWING", r[r.OVERFLOWING_LARGE_ONLY = 2] = "OVERFLOWING_LARGE_ONLY", r[r.OVERFLOWING_ALL = 3] = "OVERFLOWING_ALL";
-    let R = s.memo(function(e) {
+    let R = a.memo(function(e) {
         let {
             user: t,
             mutualFriends: n,
@@ -42,7 +42,7 @@ function(e, t, n) {
             channelId: A,
             messageId: R,
             roleId: C
-        } = (0, S.useUserProfileAnalyticsContext)(), g = s.useMemo(() => {
+        } = (0, S.useUserProfileAnalyticsContext)(), g = a.useMemo(() => {
             var e;
             return null !== (e = null == n ? void 0 : n.map(e => {
                 let {
@@ -50,7 +50,7 @@ function(e, t, n) {
                 } = e;
                 return t
             })) && void 0 !== e ? e : []
-        }, [n]), L = s.useMemo(() => {
+        }, [n]), L = a.useMemo(() => {
             var e;
             return null !== (e = null == i ? void 0 : i.map(e => {
                 let {
@@ -58,16 +58,16 @@ function(e, t, n) {
                 } = e;
                 return t
             })) && void 0 !== e ? e : []
-        }, [i]), v = s.useMemo(() => p.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_SHORT.format({
+        }, [i]), v = a.useMemo(() => p.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_SHORT.format({
             count: g.length
-        }), [g]), D = s.useMemo(() => p.default.Messages.USER_PROFILE_MUTUAL_GUILDS_SHORT.format({
+        }), [g]), D = a.useMemo(() => p.default.Messages.USER_PROFILE_MUTUAL_GUILDS_SHORT.format({
             count: L.length
-        }), [L]), M = s.useRef(null), [y, P] = s.useState(!1), [U, b] = s.useState(!1), G = s.useCallback(() => {
+        }), [L]), M = a.useRef(null), [y, P] = a.useState(!1), [U, b] = a.useState(!1), G = a.useCallback(() => {
             if (null != M.current) {
                 var e;
                 b((null === (e = M.current) || void 0 === e ? void 0 : e.clientHeight) > 19), P(!0)
             }
-        }, []), w = s.useCallback(e => () => {
+        }, []), w = a.useCallback(e => () => {
             (0, m.openUserProfileModal)({
                 userId: t.id,
                 sourceAnalyticsLocations: f,
@@ -79,76 +79,76 @@ function(e, t, n) {
                 analyticsLocation: o
             }), null == r || r()
         }, [o, f, r, t.id, h, A, R, C]);
-        s.useEffect(() => {
+        a.useEffect(() => {
             G()
         }, [G, v]);
         let B = g.length > 0,
             k = L.length > 0;
-        return (0, a.jsxs)("div", {
+        return (0, s.jsxs)("div", {
             className: l()(O.compactItemContainer, !y && O.hideElement),
             ref: M,
-            children: [B && (0, a.jsx)(d.Tooltip, {
+            children: [B && (0, s.jsx)(d.Tooltip, {
                 text: p.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP,
-                children: e => (0, a.jsxs)(d.Clickable, {
+                children: e => (0, s.jsxs)(d.Clickable, {
                     ...e,
                     onClick: w(N.UserProfileSections.MUTUAL_FRIENDS),
                     className: l()(O.avatarAndTextContainer, O.__invalid_friendsContainer),
-                    children: [(0, a.jsx)("div", {
+                    children: [(0, s.jsx)("div", {
                         className: O.__invalid_avatars,
-                        children: (0, a.jsx)(c.default, {
+                        children: (0, s.jsx)(c.default, {
                             maxUsers: u,
                             users: g,
                             size: d.AvatarSizes.SIZE_16,
                             hideOverflowCount: !0,
                             disableUsernameTooltip: !0
                         })
-                    }), (0, a.jsx)(d.Text, {
+                    }), (0, s.jsx)(d.Text, {
                         className: O.itemizedListText,
                         variant: "text-sm/normal",
                         color: "interactive-normal",
                         children: v
                     })]
                 })
-            }), I && !B && (0, a.jsx)(d.Text, {
+            }), I && !B && (0, s.jsx)(d.Text, {
                 variant: "text-xs/normal",
                 children: p.default.Messages.USER_PROFILE_NO_MUTUAL_FRIENDS
-            }), (B && k || I) && (0, a.jsx)("div", {
+            }), (B && k || I) && (0, s.jsx)("div", {
                 "aria-hidden": "true",
                 className: O.dotSpacer
-            }), k && (0, a.jsx)(d.Tooltip, {
+            }), k && (0, s.jsx)(d.Tooltip, {
                 text: p.default.Messages.USER_PROFILE_MUTUAL_GUILDS_TOOLTIP,
-                children: e => (0, a.jsxs)(d.Clickable, {
+                children: e => (0, s.jsxs)(d.Clickable, {
                     ...e,
                     onClick: w(N.UserProfileSections.MUTUAL_GUILDS),
                     className: l()(O.avatarAndTextContainer, O.serverContainer),
-                    children: [!U && (0, a.jsx)("div", {
+                    children: [!U && (0, s.jsx)("div", {
                         className: O.__invalid_avatars,
-                        children: (0, a.jsx)(E.default, {
+                        children: (0, s.jsx)(E.default, {
                             maxGuilds: u,
                             guilds: L,
                             size: T.default.Sizes.SMOL,
                             hideOverflowCount: !0,
                             disableGuildNameTooltip: !0
                         })
-                    }), (0, a.jsx)(d.Text, {
+                    }), (0, s.jsx)(d.Text, {
                         className: O.itemizedListText,
                         variant: "text-sm/normal",
                         color: "interactive-normal",
                         children: D
                     })]
                 })
-            }), I && !k && (0, a.jsx)(d.Text, {
+            }), I && !k && (0, s.jsx)(d.Text, {
                 variant: "text-xs/normal",
                 children: p.default.Messages.USER_PROFILE_NO_MUTUAL_FRIENDS
             })]
         })
     });
-    t.default = s.memo(function(e) {
+    t.default = a.memo(function(e) {
         var t, n;
         let {
             user: i,
             onClose: r,
-            className: s,
+            className: a,
             sourceAnaylticsLocations: o
         } = e, {
             analyticsLocations: c
@@ -159,13 +159,13 @@ function(e, t, n) {
             location: E,
             disable: m
         }), C = (0, A.useMutualGuilds)(i), g = (0, h.useMutualFriends)(i);
-        return !N || m || (null == g || 0 === g.length) && 0 === C.length ? null : (0, a.jsxs)("div", {
-            className: l()(O.mainContainer, s),
-            children: [(0, a.jsx)(d.Heading, {
+        return !N || m || (null == g || 0 === g.length) && 0 === C.length ? null : (0, s.jsxs)("div", {
+            className: l()(O.mainContainer, a),
+            children: [(0, s.jsx)(d.Heading, {
                 variant: "eyebrow",
                 className: O.__invalid_title,
                 children: p.default.Messages.USER_PROFILE_MUTUALS_TITLE
-            }), (0, a.jsx)(R, {
+            }), (0, s.jsx)(R, {
                 user: i,
                 mutualFriends: g,
                 mutualGuilds: C,

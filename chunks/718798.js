@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        a = n("665443"),
-        s = n.n(a),
+        s = n("665443"),
+        a = n.n(s),
         o = n("39383"),
         l = n.n(o),
         u = n("992774"),
@@ -20,7 +20,7 @@ function(e, t, n) {
         let {
             streamId: t,
             paused: n,
-            onReady: a,
+            onReady: s,
             onResize: o,
             className: E,
             ...I
@@ -32,7 +32,7 @@ function(e, t, n) {
             if (!n && null != e) {
                 let n = !1,
                     i = (t, i) => {
-                        !n && (null == a || a(), n = !0), (e.width !== t || e.height !== i) && (e.width = t, e.height = i, null == o || o({
+                        !n && (null == s || s(), n = !0), (e.width !== t || e.height !== i) && (e.width = t, e.height = i, null == o || o({
                             width: t,
                             height: i
                         }))
@@ -44,8 +44,8 @@ function(e, t, n) {
                 {
                     let n = function(e) {
                         var t, n, i, r;
-                        let a = null === (r = window) || void 0 === r ? void 0 : null === (i = r.DiscordNative) || void 0 === i ? void 0 : null === (n = i.app) || void 0 === n ? void 0 : null === (t = n.getReleaseChannel) || void 0 === t ? void 0 : t.call(n);
-                        return "canary" === a || "development" === a ? (0, _.initRenderingContextWebGL)(e) : (0, d.initRenderingContext2D)(e)
+                        let s = null === (r = window) || void 0 === r ? void 0 : null === (i = r.DiscordNative) || void 0 === i ? void 0 : null === (n = i.app) || void 0 === n ? void 0 : null === (t = n.getReleaseChannel) || void 0 === t ? void 0 : t.call(n);
+                        return "canary" === s || "development" === s ? (0, _.initRenderingContextWebGL)(e) : (0, d.initRenderingContext2D)(e)
                     }(e);
                     if (null == n) return;
                     return c.default.addSink(t, T, e => {
@@ -55,9 +55,9 @@ function(e, t, n) {
                     }
                 }
             }
-        }, [t, n, o, a, f]), (0, i.jsx)("canvas", {
+        }, [t, n, o, s, f]), (0, i.jsx)("canvas", {
             id: f,
-            className: s()("media-engine-video", E),
+            className: a()("media-engine-video", E),
             ref: T,
             ...I
         })

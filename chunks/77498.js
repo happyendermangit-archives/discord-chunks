@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     let i;
     n.r(t), n("47120");
-    var r, a, s = n("442837"),
+    var r, s, a = n("442837"),
         o = n("433517"),
         l = n("570140"),
         u = n("695346"),
@@ -45,7 +45,7 @@ function(e, t, n) {
         if ((0, _.isDesktop)())
             for (let n of e.executables) f[n.name] = t
     }
-    class p extends(a = s.default.PersistedStore) {
+    class p extends(s = a.default.PersistedStore) {
         initialize(e) {
             var t;
             null != e && (null != e.detectableGamesEtag && (h = e.detectableGamesEtag), null === (t = e.detectableGames) || void 0 === t || t.forEach(e => N(e)))
@@ -90,14 +90,14 @@ function(e, t, n) {
             let i;
             if (null == e.exePath) return null;
             let r = e.exePath.split("/").pop(),
-                a = e.exePath.split("/").slice(-2).join("/");
+                s = e.exePath.split("/").slice(-2).join("/");
             if (null != e.name) {
                 if (null != (i = this.getGameByName(e.name)) && null != i.executables) {
                     let e = i.executables.map(e => e.name);
-                    if (e.includes(r) || e.includes(a)) return i
+                    if (e.includes(r) || e.includes(s)) return i
                 } else if (null != i) return null
             }
-            return null !== (n = null !== (t = this.getGameByExecutable(r)) && void 0 !== t ? t : this.getGameByExecutable(a)) && void 0 !== n ? n : i
+            return null !== (n = null !== (t = this.getGameByExecutable(r)) && void 0 !== t ? t : this.getGameByExecutable(s)) && void 0 !== n ? n : i
         }
         getGameById(e) {
             return I[e]
@@ -143,7 +143,7 @@ function(e, t, n) {
                 etag: n
             } = e;
             for (let e of (null != n && h !== n && (h = n), t)) N(function(e) {
-                var t, n, i, r, a, s;
+                var t, n, i, r, s, a;
                 return {
                     id: e.id,
                     name: e.name,
@@ -151,8 +151,8 @@ function(e, t, n) {
                     overlay: null !== (n = e.overlay) && void 0 !== n && n,
                     overlayWarn: null !== (i = e.overlay_warn) && void 0 !== i && i,
                     overlayCompatibilityHook: null !== (r = e.overlay_compatibility_hook) && void 0 !== r && r,
-                    hook: null === (a = e.hook) || void 0 === a || a,
-                    aliases: null !== (s = e.aliases) && void 0 !== s ? s : [],
+                    hook: null === (s = e.hook) || void 0 === s || s,
+                    aliases: null !== (a = e.aliases) && void 0 !== a ? a : [],
                     supportsOutOfProcessOverlay: d.default.supportsOutOfProcessOverlay(e.overlay_methods)
                 }
             }(e));

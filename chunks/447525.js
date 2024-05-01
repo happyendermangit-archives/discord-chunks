@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("481060"),
-        a = n("660199"),
-        s = n("322591");
+        s = n("660199"),
+        a = n("322591");
 
     function o(e, t) {
         if (!("type" in e)) return null;
@@ -29,11 +29,11 @@ function(e, t, n) {
             let {
                 timestamp: t,
                 format: i
-            } = e, r = null != t ? Math.floor(t.getTime() / 1e3) : n.timestamp, s = null != i ? i : n.format;
-            o((0, a.unparseTimestamp)(r, s))
+            } = e, r = null != t ? Math.floor(t.getTime() / 1e3) : n.timestamp, a = null != i ? i : n.format;
+            o((0, s.unparseTimestamp)(r, a))
         };
         return (0, i.jsxs)("div", {
-            className: s.container,
+            className: a.container,
             children: [(0, i.jsx)(r.DateInput, {
                 value: n.parsed,
                 onSelect: e => {
@@ -49,14 +49,14 @@ function(e, t, n) {
                     })
                 }
             }), (0, i.jsx)(r.RadioGroup, {
-                options: Object.entries(a.TIMESTAMP_FORMATS).map(e => {
+                options: Object.entries(s.TIMESTAMP_FORMATS).map(e => {
                     let [t, i] = e;
                     return {
                         name: i(n.parsed),
                         value: t
                     }
                 }),
-                value: null !== (t = n.format) && void 0 !== t ? t : a.DEFAULT_TIMESTAMP_FORMAT,
+                value: null !== (t = n.format) && void 0 !== t ? t : s.DEFAULT_TIMESTAMP_FORMAT,
                 size: r.RadioGroup.Sizes.SMALL,
                 onChange: e => {
                     let {

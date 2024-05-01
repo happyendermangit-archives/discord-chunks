@@ -4,8 +4,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("718017"),
-        a = n("399606"),
-        s = n("481060"),
+        s = n("399606"),
+        a = n("481060"),
         o = n("607070"),
         l = n("346656"),
         u = n("678558"),
@@ -16,7 +16,7 @@ function(e, t, n) {
             closeLayer: t,
             guild: n,
             isVisible: c
-        } = e, E = (0, a.useStateFromStores)([o.default], () => o.default.useReducedMotion), I = (0, r.useSpring)({
+        } = e, E = (0, s.useStateFromStores)([o.default], () => o.default.useReducedMotion), I = (0, r.useSpring)({
             transform: c ? "translateY(-100%)" : "translateY(0%)",
             opacity: c ? 1 : 0,
             config: {
@@ -36,7 +36,7 @@ function(e, t, n) {
                         className: _.guildIcon,
                         guild: n,
                         size: l.default.Sizes.LARGER
-                    }), (0, i.jsx)(s.Heading, {
+                    }), (0, i.jsx)(a.Heading, {
                         className: _.guildName,
                         variant: "text-lg/bold",
                         children: n.name
@@ -52,7 +52,7 @@ function(e, t, n) {
                     },
                     closeLayer: t,
                     pauseAnimation: !c,
-                    size: s.Button.Sizes.LARGE
+                    size: a.Button.Sizes.LARGE
                 })]
             })
         })

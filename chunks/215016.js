@@ -10,8 +10,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("392711"),
         l = n.n(o),
         u = n("944611"),
@@ -86,11 +86,11 @@ function(e, t, n) {
                     },
                     videoPool: r
                 },
-                ref: a
+                ref: s
             } = this;
-            if (e !== d.GIFType.VIDEO || null == a) return;
-            let s = r.getElement();
-            s.oncanplay = this.handleCanPlay, s.src = t, s.width = n, s.height = i, a.appendChild(s), this._video = s
+            if (e !== d.GIFType.VIDEO || null == s) return;
+            let a = r.getElement();
+            a.oncanplay = this.handleCanPlay, a.src = t, a.width = n, a.height = i, s.appendChild(a), this._video = a
         }
         componentDidUpdate(e) {
             let {
@@ -134,7 +134,7 @@ function(e, t, n) {
                 renderExtras: t,
                 format: n,
                 coords: r,
-                focused: a
+                focused: s
             } = this.props, {
                 color: o,
                 loaded: l
@@ -144,8 +144,8 @@ function(e, t, n) {
                 innerRef: e => {
                     this.ref = e
                 },
-                className: s()(p.result, {
-                    [p.focused]: a
+                className: a()(p.result, {
+                    [p.focused]: s
                 }),
                 onClick: this.handleClick,
                 style: {
@@ -196,7 +196,7 @@ function(e, t, n) {
                 onSelectGIF: n,
                 resultType: i,
                 data: r,
-                resultQuery: a
+                resultQuery: s
             } = this.props;
             null != n && n(e), (0, E.trackSelectGIF)({
                 type: i,
@@ -205,7 +205,7 @@ function(e, t, n) {
                 limit: this.props.searchLimit,
                 results: r,
                 totalResults: this.props.searchTotalResults,
-                query: a,
+                query: s,
                 gifId: e.id
             })
         }
@@ -306,20 +306,20 @@ function(e, t, n) {
             }), O(this, "renderItem", (e, t, n, r) => {
                 if (e > 0) return null;
                 let {
-                    focusedId: a
-                } = this.state, s = this.props.data[t];
-                return null == s ? null : (0, i.jsx)(P, {
-                    item: s,
+                    focusedId: s
+                } = this.state, a = this.props.data[t];
+                return null == a ? null : (0, i.jsx)(P, {
+                    item: a,
                     index: t,
-                    format: s.format,
-                    src: s.src,
+                    format: a.format,
+                    src: a.src,
                     coords: n,
                     onClick: this.handleClickItem,
                     renderExtras: () => (0, i.jsx)(S.default, {
                         className: p.favButton,
-                        ...s
+                        ...a
                     }),
-                    focused: L(s) === a,
+                    focused: L(a) === s,
                     imagePool: this.props.imagePool,
                     videoPool: this.props.videoPool
                 }, r)
@@ -334,25 +334,25 @@ function(e, t, n) {
                 return null != i ? null !== (n = i.id) && void 0 !== n ? n : i.src : null
             }), O(this, "renderSection", (e, t, n) => {
                 let {
-                    onSelectSuggestion: a,
-                    suggestions: s
+                    onSelectSuggestion: s,
+                    suggestions: a
                 } = this.props;
                 return 1 === e ? (0, i.jsx)("div", {
                     className: p.endContainer,
                     style: t,
-                    children: s.length > 0 ? (0, i.jsxs)(r.Fragment, {
+                    children: a.length > 0 ? (0, i.jsxs)(r.Fragment, {
                         children: [(0, i.jsx)("div", {
                             className: p.endText,
                             children: N.default.Messages.GIF_PICKER_RELATED_SEARCH
                         }), (0, i.jsx)("div", {
                             className: p.searchSuggestions,
-                            children: s.map(e => (0, i.jsx)(c.Button, {
+                            children: a.map(e => (0, i.jsx)(c.Button, {
                                 look: c.Button.Looks.OUTLINED,
                                 color: c.Button.Colors.PRIMARY,
                                 size: c.Button.Sizes.SMALL,
                                 className: p.searchSuggestion,
                                 onClick: () => {
-                                    a(e)
+                                    s(e)
                                 },
                                 children: e
                             }, e))
@@ -362,11 +362,11 @@ function(e, t, n) {
             }), O(this, "renderContent", (e, t, n) => {
                 let {
                     data: r,
-                    resultQuery: a,
-                    query: s,
+                    resultQuery: s,
+                    query: a,
                     resultType: o
                 } = this.props;
-                return 0 === r.length && (a !== s || o === m.GIFPickerResultTypes.TRENDING_GIFS) ? (0, i.jsx)(c.MasonryList, {
+                return 0 === r.length && (s !== a || o === m.GIFPickerResultTypes.TRENDING_GIFS) ? (0, i.jsx)(c.MasonryList, {
                     fade: !0,
                     className: p.results,
                     sections: [g.length],
@@ -376,7 +376,7 @@ function(e, t, n) {
                     getItemHeight: v,
                     renderItem: D,
                     chunkSize: 128
-                }, a) : (0, i.jsx)(c.MasonryList, {
+                }, s) : (0, i.jsx)(c.MasonryList, {
                     ref: this._masonryRef,
                     fade: !0,
                     itemGutter: 12,
@@ -390,7 +390,7 @@ function(e, t, n) {
                     renderSection: this.renderSection,
                     onScroll: this.handleScroll,
                     chunkSize: 128
-                }, "".concat(a, "-").concat(null != o ? o : ""))
+                }, "".concat(s, "-").concat(null != o ? o : ""))
             }), O(this, "getItemGrid", () => {
                 let {
                     current: e

@@ -10,8 +10,8 @@ function(e, t, n) {
     });
     var i = n("470079"),
         r = n("442837"),
-        a = n("430824"),
-        s = n("496675"),
+        s = n("430824"),
+        a = n("496675"),
         o = n("863249"),
         l = n("944163"),
         u = n("467138"),
@@ -19,14 +19,14 @@ function(e, t, n) {
         _ = n("981631");
 
     function c(e) {
-        let t = a.default.getGuild(e);
-        return null != t && (0, u.isMemberVerificationManualApproval)(e) && s.default.can(_.Permissions.KICK_MEMBERS, t)
+        let t = s.default.getGuild(e);
+        return null != t && (0, u.isMemberVerificationManualApproval)(e) && a.default.can(_.Permissions.KICK_MEMBERS, t)
     }
 
     function E(e) {
         let t = (0, u.useIsMemberVerificationManualApproval)(e),
-            n = (0, r.useStateFromStores)([a.default], () => a.default.getGuild(e)),
-            c = null != n && t && s.default.can(_.Permissions.KICK_MEMBERS, n) && n.hasVerificationGate(),
+            n = (0, r.useStateFromStores)([s.default], () => s.default.getGuild(e)),
+            c = null != n && t && a.default.can(_.Permissions.KICK_MEMBERS, n) && n.hasVerificationGate(),
             E = (0, r.useStateFromStores)([l.default], () => l.default.get(e), [e]);
         i.useEffect(() => {
             c && o.default.fetchVerificationForm(e)

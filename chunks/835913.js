@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         Timestamp: function() {
-            return a
+            return s
         }
     }), n("411104"), n("757143"), n("47120");
     var i = n("578012");
@@ -35,10 +35,10 @@ function(e, t, n) {
             if ("string" != typeof e) throw Error("Unable to parse Timestamp from JSON " + (0, i.typeofJsonValue)(e) + ".");
             let r = e.match(/^([0-9]{4})-([0-9]{2})-([0-9]{2})T([0-9]{2}):([0-9]{2}):([0-9]{2})(?:Z|\.([0-9]{3,9})Z|([+-][0-9][0-9]:[0-9][0-9]))$/);
             if (!r) throw Error("Unable to parse Timestamp from JSON. Invalid format.");
-            let a = Date.parse(r[1] + "-" + r[2] + "-" + r[3] + "T" + r[4] + ":" + r[5] + ":" + r[6] + (r[8] ? r[8] : "Z"));
-            if (Number.isNaN(a)) throw Error("Unable to parse Timestamp from JSON. Invalid value.");
-            if (a < Date.parse("0001-01-01T00:00:00Z") || a > Date.parse("9999-12-31T23:59:59Z")) throw new globalThis.Error("Unable to parse Timestamp from JSON. Must be from 0001-01-01T00:00:00Z to 9999-12-31T23:59:59Z inclusive.");
-            return !n && (n = this.create()), n.seconds = i.PbLong.from(a / 1e3).toString(), n.nanos = 0, r[7] && (n.nanos = parseInt("1" + r[7] + "0".repeat(9 - r[7].length)) - 1e9), n
+            let s = Date.parse(r[1] + "-" + r[2] + "-" + r[3] + "T" + r[4] + ":" + r[5] + ":" + r[6] + (r[8] ? r[8] : "Z"));
+            if (Number.isNaN(s)) throw Error("Unable to parse Timestamp from JSON. Invalid value.");
+            if (s < Date.parse("0001-01-01T00:00:00Z") || s > Date.parse("9999-12-31T23:59:59Z")) throw new globalThis.Error("Unable to parse Timestamp from JSON. Must be from 0001-01-01T00:00:00Z to 9999-12-31T23:59:59Z inclusive.");
+            return !n && (n = this.create()), n.seconds = i.PbLong.from(s / 1e3).toString(), n.nanos = 0, r[7] && (n.nanos = parseInt("1" + r[7] + "0".repeat(9 - r[7].length)) - 1e9), n
         }
         create(e) {
             let t = {
@@ -51,25 +51,25 @@ function(e, t, n) {
             }), void 0 !== e && (0, i.reflectionMergePartial)(this, t, e), t
         }
         internalBinaryRead(e, t, n, r) {
-            let a = null != r ? r : this.create(),
-                s = e.pos + t;
-            for (; e.pos < s;) {
+            let s = null != r ? r : this.create(),
+                a = e.pos + t;
+            for (; e.pos < a;) {
                 let [t, r] = e.tag();
                 switch (t) {
                     case 1:
-                        a.seconds = e.int64().toString();
+                        s.seconds = e.int64().toString();
                         break;
                     case 2:
-                        a.nanos = e.int32();
+                        s.nanos = e.int32();
                         break;
                     default:
-                        let s = n.readUnknownField;
-                        if ("throw" === s) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(r, ") for ").concat(this.typeName));
+                        let a = n.readUnknownField;
+                        if ("throw" === a) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(r, ") for ").concat(this.typeName));
                         let o = e.skip(r);
-                        !1 !== s && (!0 === s ? i.UnknownFieldHandler.onRead : s)(this.typeName, a, t, r, o)
+                        !1 !== a && (!0 === a ? i.UnknownFieldHandler.onRead : a)(this.typeName, s, t, r, o)
                 }
             }
-            return a
+            return s
         }
         internalBinaryWrite(e, t, n) {
             "0" !== e.seconds && t.tag(1, i.WireType.Varint).int64(e.seconds), 0 !== e.nanos && t.tag(2, i.WireType.Varint).int32(e.nanos);
@@ -90,5 +90,5 @@ function(e, t, n) {
             }])
         }
     }
-    let a = new r
+    let s = new r
 }

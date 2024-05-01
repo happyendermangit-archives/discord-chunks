@@ -10,8 +10,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("718017"),
         l = n("570162");
 
@@ -56,8 +56,8 @@ function(e, t, n) {
             let {
                 dotRadius: t,
                 dotPosition: n,
-                fill: a = "currentColor",
-                spacing: s = 2.5
+                fill: s = "currentColor",
+                spacing: a = 2.5
             } = e, l = r.useRef(u()), d = r.useRef(!0);
             r.useEffect(() => () => void(d.current = !1), []);
             let [E] = (0, o.useSpring)(() => ({
@@ -79,12 +79,12 @@ function(e, t, n) {
             return (0, i.jsx)(i.Fragment, {
                 children: [0, 1, 2].map(e => {
                     let r = .25 * e,
-                        u = t + t * s * e;
+                        u = t + t * a * e;
                     return (0, i.jsx)(o.animated.circle, {
                         cx: n ? n.to([0, 1], [I, u]) : u,
                         cy: t,
                         r: E.dotCycle.to(e => c(e - r)).to([0, .4, .8, 1], [.8 * t, .8 * t, t, t]).to(e => l.current ? e : t),
-                        fill: a,
+                        fill: s,
                         style: {
                             opacity: E.dotCycle.to(e => c(e - r)).to([0, .4, .8, 1], [.3, .3, 1, 1]).to(e => l.current ? e : 1)
                         }
@@ -96,7 +96,7 @@ function(e, t, n) {
             let {
                 dotRadius: n,
                 x: r,
-                y: a,
+                y: s,
                 hide: _ = !1,
                 themed: c = !1,
                 className: I
@@ -114,10 +114,10 @@ function(e, t, n) {
                 return u ? null : (0, i.jsx)("svg", {
                     ref: t,
                     x: r,
-                    y: a,
+                    y: s,
                     width: 6 * n + n / 2 * 2,
                     height: 2 * n,
-                    className: s()(I, l.dots, c ? l.themed : null),
+                    className: a()(I, l.dots, c ? l.themed : null),
                     children: (0, i.jsx)(o.animated.g, {
                         style: {
                             opacity: _.to(e => Math.min(1, Math.max(e, 0)))

@@ -46,8 +46,8 @@ function(e, t, n) {
     }), n("411104");
     var i = n("606301"),
         r = n("134432"),
-        a = n("430824"),
-        s = n("117530"),
+        s = n("430824"),
+        a = n("117530"),
         o = n("768581"),
         l = n("358085"),
         u = n("913663"),
@@ -102,17 +102,17 @@ function(e, t, n) {
         let i = c.Endpoints.STICKER_ASSET(e.id, O(e.format_type));
         if ("development" !== T) {
             if (e.format_type === d.StickerFormat.LOTTIE) return "".concat(location.protocol).concat(f).concat(i);
-            let a = e.format_type === d.StickerFormat.APNG && t && !(0, l.isAndroid)() ? "&passthrough=false" : "",
-                s = Math.min(2, (0, r.getDevicePixelRatio)());
-            return "".concat(location.protocol).concat(I).concat(i, "?size=").concat((0, r.getBestMediaProxySize)(n * s)).concat(a)
+            let s = e.format_type === d.StickerFormat.APNG && t && !(0, l.isAndroid)() ? "&passthrough=false" : "",
+                a = Math.min(2, (0, r.getDevicePixelRatio)());
+            return "".concat(location.protocol).concat(I).concat(i, "?size=").concat((0, r.getBestMediaProxySize)(n * a)).concat(s)
         }
         return "".concat(location.protocol).concat(E).concat(i)
     }, L = (e, t) => {
         let n;
         let i = e.banner_asset_id;
         if (null == i) return null;
-        let a = o.SUPPORTS_WEBP ? "webp" : "png";
-        return n = null != S ? "".concat(location.protocol, "//").concat(S, "/app-assets/").concat(_.STICKER_APPLICATION_ID, "/store/").concat(i, ".").concat(a) : "".concat(location.protocol).concat(E).concat(c.Endpoints.STORE_ASSET(_.STICKER_APPLICATION_ID, i, a)), null != t && (n += "?size=".concat((0, r.getBestMediaProxySize)(t))), n
+        let s = o.SUPPORTS_WEBP ? "webp" : "png";
+        return n = null != S ? "".concat(location.protocol, "//").concat(S, "/app-assets/").concat(_.STICKER_APPLICATION_ID, "/store/").concat(i, ".").concat(s) : "".concat(location.protocol).concat(E).concat(c.Endpoints.STORE_ASSET(_.STICKER_APPLICATION_ID, i, s)), null != t && (n += "?size=".concat((0, r.getBestMediaProxySize)(t))), n
     }, v = e => e.match("development" !== T ? m : N), D = e => e.stickers.some(e => {
         let {
             format_type: t
@@ -125,9 +125,9 @@ function(e, t, n) {
         stickers: e.stickers,
         previewSticker: p(e)
     }), y = (e, t) => e === _.StickerAnimationSettings.ANIMATE_ON_INTERACTION ? t : e !== _.StickerAnimationSettings.NEVER_ANIMATE, P = (e, t, n, r) => {
-        if (s.default.getUploadCount(n, r) > 0) return !0;
-        let a = u.default.getStickerPreview(n, r);
-        if (null != a && a.length > 0) return !0;
+        if (a.default.getUploadCount(n, r) > 0) return !0;
+        let s = u.default.getStickerPreview(n, r);
+        if (null != s && s.length > 0) return !0;
         switch (e) {
             case d.StickerSelectLocation.STICKER_PICKER:
                 return "" !== t.trim();
@@ -140,6 +140,6 @@ function(e, t, n) {
     }, U = e => e.type === d.MetaStickerType.GUILD, b = e => e.type === d.MetaStickerType.STANDARD, G = e => e.stickerItems.length > 0 ? e.stickerItems : e.stickers.length > 0 ? e.stickers : [], w = e => {
         if (null === e) return !1;
         let t = e.guild_id;
-        return void 0 !== a.default.getGuild(t)
+        return void 0 !== s.default.getGuild(t)
     }
 }

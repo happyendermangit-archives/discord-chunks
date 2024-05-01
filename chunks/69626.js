@@ -10,8 +10,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        a = n("442837"),
-        s = n("481060"),
+        s = n("442837"),
+        a = n("481060"),
         o = n("555573"),
         l = n("10718"),
         u = n("895924"),
@@ -31,24 +31,24 @@ function(e, t, n) {
 
     function O(e, t, n, r) {
         if (null == e) return;
-        let a = () => {
+        let s = () => {
             let i = c.default.getChannel(e);
             if (null == i) return;
             let {
-                command: a,
-                application: s
+                command: s,
+                application: a
             } = l.getCachedCommand(i, n);
-            if (null != a && a.name === t) {
+            if (null != s && s.name === t) {
                 var d, _;
                 S.ComponentDispatch.dispatch(h.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
                     channelId: e
                 });
-                let t = null != s ? {
+                let t = null != a ? {
                     type: u.ApplicationCommandSectionType.APPLICATION,
-                    id: s.id,
-                    icon: null !== (_ = null == s ? void 0 : null === (d = s.bot) || void 0 === d ? void 0 : d.username) && void 0 !== _ ? _ : s.icon,
-                    name: s.name,
-                    application: s
+                    id: a.id,
+                    icon: null !== (_ = null == a ? void 0 : null === (d = a.bot) || void 0 === d ? void 0 : d.username) && void 0 !== _ ? _ : a.icon,
+                    name: a.name,
+                    application: a
                 } : null;
                 o.setActiveCommand({
                     channelId: e,
@@ -56,29 +56,29 @@ function(e, t, n) {
                     section: null
                 }), o.setActiveCommand({
                     channelId: e,
-                    command: a,
+                    command: s,
                     section: t,
                     location: r
                 })
             }
         };
-        "" !== E.default.getDraft(e, E.DraftType.ChannelMessage) ? (0, s.openModal)(t => (0, i.jsx)(s.ConfirmModal, {
+        "" !== E.default.getDraft(e, E.DraftType.ChannelMessage) ? (0, a.openModal)(t => (0, i.jsx)(a.ConfirmModal, {
             header: N.default.Messages.APPLICATION_COMMAND_MENTION_CONFIRM_HEADER,
             confirmText: N.default.Messages.CLEAR,
             cancelText: N.default.Messages.CANCEL,
-            onConfirm: () => a(),
-            confirmButtonColor: s.Button.Colors.BRAND,
+            onConfirm: () => s(),
+            confirmButtonColor: a.Button.Colors.BRAND,
             onCloseCallback: () => {
                 S.ComponentDispatch.dispatch(h.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
                     channelId: e
                 })
             },
             ...t,
-            children: (0, i.jsx)(s.Text, {
+            children: (0, i.jsx)(a.Text, {
                 variant: "text-md/normal",
                 children: N.default.Messages.APPLICATION_COMMAND_MENTION_CONFIRM_BODY
             })
-        })) : a()
+        })) : s()
     }
 
     function R(e) {
@@ -87,13 +87,13 @@ function(e, t, n) {
             node: n,
             output: o,
             state: E
-        } = e, S = (0, a.useStateFromStores)([c.default, T.default], () => {
+        } = e, S = (0, s.useStateFromStores)([c.default, T.default], () => {
             var e;
             return c.default.getChannel(null !== (e = n.channelId) && void 0 !== e ? e : T.default.getChannelId())
         }, [n.channelId]), {
             hasSendMessagePerm: N,
             hasUseAppCommandsPerm: p
-        } = (0, a.useStateFromStoresObject)([I.default], () => {
+        } = (0, s.useStateFromStoresObject)([I.default], () => {
             let e = I.default.can(h.Permissions.SEND_MESSAGES, S);
             return {
                 hasSendMessagePerm: e,
@@ -110,7 +110,7 @@ function(e, t, n) {
         }, [S, R, N, p, n.commandName, C]), L = r.useCallback(e => {
             null == e || e.stopPropagation(), null != S && null != n.commandName && null != n.commandKey && O(S.id, n.commandName, n.commandKey, u.ApplicationCommandTriggerLocations.MENTION)
         }, [S, n.commandKey, n.commandName]);
-        return g ? (0, i.jsx)(s.Tooltip, {
+        return g ? (0, i.jsx)(a.Tooltip, {
             text: n.output,
             position: "top",
             children: e => {
@@ -137,10 +137,10 @@ function(e, t, n) {
             commandName: n,
             commandDescription: r,
             onClick: o
-        } = e, l = (0, a.useStateFromStores)([T.default], () => T.default.getChannelId()), d = e => {
+        } = e, l = (0, s.useStateFromStores)([T.default], () => T.default.getChannelId()), d = e => {
             null == e || e.stopPropagation(), O(l, n, t, u.ApplicationCommandTriggerLocations.POPULAR_COMMANDS), null == o || o(t)
         };
-        return (0, i.jsx)(s.Tooltip, {
+        return (0, i.jsx)(a.Tooltip, {
             text: r,
             position: "top",
             tooltipContentClassName: p.tooltip,
@@ -149,9 +149,9 @@ function(e, t, n) {
                     onMouseEnter: t,
                     onMouseLeave: r
                 } = e;
-                return (0, i.jsxs)(s.Button, {
-                    color: s.ButtonColors.PRIMARY,
-                    size: s.ButtonSizes.ICON,
+                return (0, i.jsxs)(a.Button, {
+                    color: a.ButtonColors.PRIMARY,
+                    size: a.ButtonSizes.ICON,
                     onClick: d,
                     onMouseEnter: t,
                     onMouseLeave: r,

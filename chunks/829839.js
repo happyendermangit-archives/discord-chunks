@@ -8,7 +8,7 @@ function(e, t, n) {
             return o
         },
         getExperimentCodecs: function() {
-            return s
+            return a
         }
     }), n("653041"), n("733860");
     var i = n("65154");
@@ -26,7 +26,7 @@ function(e, t, n) {
         decode: !0
     }];
 
-    function a(e, t) {
+    function s(e, t) {
         let n = t.concat(r),
             i = [];
         return n.forEach(t => {
@@ -39,7 +39,7 @@ function(e, t, n) {
         }), i
     }
 
-    function s(e) {
+    function a(e) {
         let t = [];
         return e.has(i.ExperimentFlags.SIGNAL_H265_SUPPORT) ? t.unshift({
             name: "H265",
@@ -57,11 +57,11 @@ function(e, t, n) {
     }
 
     function o(e, t) {
-        return "string" == typeof e ? a(JSON.parse(e).map(e => ({
+        return "string" == typeof e ? s(JSON.parse(e).map(e => ({
             codec: l(e.codec),
             encode: e.encode,
             decode: e.decode
-        })), t) : a(e.map(e => ({
+        })), t) : s(e.map(e => ({
             codec: l(e),
             encode: !0,
             decode: !0

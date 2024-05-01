@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t), n("653041");
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("442837"),
         l = n("998698"),
         u = n("824203"),
@@ -18,7 +18,7 @@ function(e, t, n) {
             channel: t,
             type: n,
             activeCommand: r,
-            pendingReply: a
+            pendingReply: s
         } = e, {
             activeCommandOption: T,
             activeCommandOptionStates: f
@@ -34,13 +34,13 @@ function(e, t, n) {
             activeCommand: r,
             activeOption: null != T ? T : null,
             optionStates: f
-        }))), null != a && A.push((0, i.jsx)(E.default, {
-            reply: a,
+        }))), null != s && A.push((0, i.jsx)(E.default, {
+            reply: s,
             chatInputType: n
         })), S && A.push((0, i.jsx)(c.StaffPTOBar, {})), 0 === (A = A.map((e, t) => {
             let n = t === A.length - 1;
             return (0, i.jsx)("div", {
-                className: s()({
+                className: a()({
                     [I.stackedAttachedBar]: !n
                 }),
                 children: e

@@ -7,8 +7,8 @@ function(e, t, n) {
     });
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("373793"),
         l = n("974674"),
         u = n("40146"),
@@ -28,7 +28,7 @@ function(e, t, n) {
         let {
             inApp: t,
             application: n,
-            onSelect: a
+            onSelect: s
         } = e, N = r.useMemo(() => I.default.getApplicationIconURL({
             id: n.id,
             icon: n.icon
@@ -65,10 +65,10 @@ function(e, t, n) {
                 className: m.rows,
                 children: p.map(e => (0, i.jsxs)(_.Clickable, {
                     tag: "li",
-                    className: s()(m.row, {
+                    className: a()(m.row, {
                         [m.inApp]: t
                     }),
-                    onClick: () => a(e.type),
+                    onClick: () => s(e.type),
                     children: [(0, i.jsx)(e.icon, {
                         width: 24,
                         height: 24,

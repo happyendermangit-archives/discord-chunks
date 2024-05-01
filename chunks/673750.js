@@ -11,7 +11,7 @@ function(e, t, n) {
             return L
         }
     }), n("47120");
-    var i, r, a, s, o = n("512722"),
+    var i, r, s, a, o = n("512722"),
         l = n.n(o),
         u = n("261470"),
         d = n("544891"),
@@ -38,7 +38,7 @@ function(e, t, n) {
         }) : e[t] = n, e
     }
     let C = null;
-    __OVERLAY__ && (C = n("237997").default), (a = i || (i = {})).OVERLAY_UNLOCKED = "overlay_unlocked", a.OVERLAY_UNLOCKED_PINNED = "overlay_unlocked_pinned", a.OVERLAY_LOCKED_ACTIVATED = "overlay_locked_activated", (s = r || (r = {}))[s.SEND = 0] = "SEND", s[s.EDIT = 1] = "EDIT", s[s.COMMAND = 2] = "COMMAND";
+    __OVERLAY__ && (C = n("237997").default), (s = i || (i = {})).OVERLAY_UNLOCKED = "overlay_unlocked", s.OVERLAY_UNLOCKED_PINNED = "overlay_unlocked_pinned", s.OVERLAY_LOCKED_ACTIVATED = "overlay_locked_activated", (a = r || (r = {}))[a.SEND = 0] = "SEND", a[a.EDIT = 1] = "EDIT", a[a.COMMAND = 2] = "COMMAND";
     let g = e => 0 === e.type,
         L = e => 1 === e.type,
         v = e => g(e) ? e.message.nonce : L(e) ? e.message.messageId : e.message.data.id,
@@ -88,11 +88,11 @@ function(e, t, n) {
             let {
                 channelId: i,
                 file: r,
-                filename: a,
-                ...s
+                filename: s,
+                ...a
             } = e, o = (0, T.getSignalStrength)(), l = {
                 mobile_network_type: S.default.getType(),
-                ...s,
+                ...a,
                 ...null != o && {
                     signal_strength: o
                 }
@@ -117,7 +117,7 @@ function(e, t, n) {
             }));
             let _ = this.createResponseHandler(e.nonce, t),
                 c = new AbortController;
-            if (this.startQueueMetricTimers(e.nonce), null != r && null != a && "" !== a) d.HTTP.post({
+            if (this.startQueueMetricTimers(e.nonce), null != r && null != s && "" !== s) d.HTTP.post({
                 url: O.Endpoints.MESSAGES(i),
                 fields: Object.entries(l).map(e => {
                     let [t, n] = e;
@@ -129,7 +129,7 @@ function(e, t, n) {
                 attachments: [{
                     name: "file",
                     file: r,
-                    filename: a
+                    filename: s
                 }],
                 context: n,
                 oldFormErrors: !0,
@@ -162,15 +162,15 @@ function(e, t, n) {
                 channelId: n,
                 messageId: i,
                 ...r
-            } = e, a = new AbortController;
+            } = e, s = new AbortController;
             d.HTTP.patch({
                 url: O.Endpoints.MESSAGE(n, i),
                 body: r,
                 retries: 1,
                 oldFormErrors: !0,
-                signal: a.signal,
+                signal: s.signal,
                 onRequestCreated: () => {
-                    this.requests.set(i, a)
+                    this.requests.set(i, s)
                 }
             }, this.createResponseHandler(i, t))
         }
@@ -178,8 +178,8 @@ function(e, t, n) {
             let n, {
                     applicationId: i,
                     guildId: r,
-                    channelId: a,
-                    data: s,
+                    channelId: s,
+                    data: a,
                     nonce: o,
                     attachments: u,
                     maxSizeCallback: c,
@@ -189,9 +189,9 @@ function(e, t, n) {
                     type: _.InteractionTypes.APPLICATION_COMMAND,
                     application_id: i,
                     guild_id: r,
-                    channel_id: a,
+                    channel_id: s,
                     session_id: f.default.getSessionId(),
-                    data: s,
+                    data: a,
                     nonce: o,
                     analytics_location: E
                 };

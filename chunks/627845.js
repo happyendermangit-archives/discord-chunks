@@ -8,8 +8,8 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("481060"),
-        a = n("570140"),
-        s = n("594174"),
+        s = n("570140"),
+        a = n("594174"),
         o = n("626135"),
         l = n("358085"),
         u = n("857595"),
@@ -31,11 +31,11 @@ function(e, t, n) {
             c.addListener(this.handleSystemPrefersReducedMotionChanged), this.handleSystemPrefersReducedMotionChanged(c), T.addListener(this.handleSystemColorPreferencesChanged), f.addListener(this.handleSystemColorPreferencesChanged), S.addListener(this.handleSystemColorPreferencesChanged), this.handleSystemColorPreferencesChanged(), E.addListener(this.handleSystemPrefersContrastChanged), I.addListener(this.handleSystemPrefersContrastChanged), this.handleSystemPrefersContrastChanged()
         },
         init() {
-            this.initBasic(), a.default.subscribe("ACCESSIBILITY_COLORBLIND_TOGGLE", () => {
+            this.initBasic(), s.default.subscribe("ACCESSIBILITY_COLORBLIND_TOGGLE", () => {
                 o.default.track(_.AnalyticEvents.LOCAL_SETTINGS_UPDATED, {
                     colorblind_enabled: d.default.colorblindMode
                 })
-            }), a.default.subscribe("ACCESSIBILITY_SET_SATURATION", e => {
+            }), s.default.subscribe("ACCESSIBILITY_SET_SATURATION", e => {
                 o.default.track(_.AnalyticEvents.LOCAL_SETTINGS_UPDATED, {
                     saturation_level: e.saturation
                 })
@@ -43,7 +43,7 @@ function(e, t, n) {
         },
         maybeShowKeyboardNavigationExplainerModal() {
             h = Math.max(h - 1, 0), ! function() {
-                let e = s.default.getCurrentUser();
+                let e = a.default.getCurrentUser();
                 return null == e || Date.now() - +e.createdAt < 864e5
             }() && !d.default.keyboardNavigationExplainerModalSeen && 0 === h && (0, r.openModalLazy)(async () => {
                 let {
@@ -55,7 +55,7 @@ function(e, t, n) {
             })
         },
         handleSystemPrefersReducedMotionChanged(e) {
-            a.default.wait(() => {
+            s.default.wait(() => {
                 u.systemPrefersReducedMotionChanged(e.matches ? "reduce" : "no-preference")
             })
         },
@@ -63,13 +63,13 @@ function(e, t, n) {
             let e;
             T.matches ? e = _.ThemeTypes.DARK : f.matches && (e = _.ThemeTypes.LIGHT);
             let t = (!l.isPlatformEmbedded || A()) && S.matches ? "active" : "none";
-            a.default.wait(() => {
+            s.default.wait(() => {
                 u.systemColorPreferencesChanged(e, t)
             })
         },
         handleSystemPrefersContrastChanged() {
             let e = "no-preference";
-            E.matches ? e = "more" : I.matches && (e = "less"), a.default.wait(() => {
+            E.matches ? e = "more" : I.matches && (e = "less"), s.default.wait(() => {
                 u.systemPrefersContrastChanged(e)
             })
         }

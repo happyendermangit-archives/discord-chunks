@@ -5,7 +5,7 @@ function(e, t, n) {
             return R
         }
     }), n("757143"), n("411104"), n("47120");
-    var i, r, a, s, o = n("735250"),
+    var i, r, s, a, o = n("735250"),
         l = n("470079"),
         u = n("120356"),
         d = n.n(u),
@@ -54,7 +54,7 @@ function(e, t, n) {
         if (null == e) return;
         let n = {};
         return "Selected" === t ? (n.backgroundColor = e, n.color = E.default.unsafe_rawColors.WHITE_500.css, n) : ("Hover" === t && (n.backgroundColor = (0, c.hex2rgb)(e, .1)), n.color = e, n)
-    }(s = i || (i = {})).DEFAULT = "Default", s.HOVER = "Hover", s.SELECTED = "Selected";
+    }(a = i || (i = {})).DEFAULT = "Default", a.HOVER = "Hover", a.SELECTED = "Selected";
     class O extends(r = l.Component) {
         getStyle() {
             let {
@@ -64,10 +64,10 @@ function(e, t, n) {
                 itemType: i
             } = this.props, {
                 hover: r,
-                active: a
+                active: s
             } = this.state;
             if (null != e) {
-                if ("side" === i) return null != t && n === t || a ? p(e, "Selected") : r ? p(e, "Hover") : p(e);
+                if ("side" === i) return null != t && n === t || s ? p(e, "Selected") : r ? p(e, "Hover") : p(e);
                 if ("top" === i) return n === t ? {
                     borderColor: e,
                     color: e
@@ -94,8 +94,8 @@ function(e, t, n) {
                 id: n,
                 selectedItem: i,
                 color: r,
-                disabled: a,
-                onContextMenu: s,
+                disabled: s,
+                onContextMenu: a,
                 clickableRef: l,
                 look: u,
                 disableItemStyles: _
@@ -106,20 +106,20 @@ function(e, t, n) {
                     [S.brand]: "brand" === u,
                     [S.selected]: null == r && E,
                     [S.themed]: "grey" === u,
-                    [S.disabled]: null == r && a
+                    [S.disabled]: null == r && s
                 }),
                 style: this.getStyle(),
                 role: "tab",
                 "aria-selected": E,
                 "aria-controls": E ? N("".concat(n)) : void 0,
-                "aria-disabled": a,
+                "aria-disabled": s,
                 tabIndex: E ? 0 : -1,
                 onMouseEnter: null != r ? this.handleMouseOver : void 0,
                 onClick: this.handleClick,
                 onMouseLeave: null != r ? this.handleMouseOut : void 0,
                 onMouseUp: null != r ? this.handleMouseUp : void 0,
                 onMouseDown: this.handleMouseDown,
-                onContextMenu: s,
+                onContextMenu: a,
                 "aria-label": c,
                 ref: l,
                 children: e
@@ -165,7 +165,7 @@ function(e, t, n) {
         look: "grey",
         disableItemStyles: !1
     });
-    class R extends(a = l.Component) {
+    class R extends(s = l.Component) {
         render() {
             let {
                 className: e,
@@ -173,14 +173,14 @@ function(e, t, n) {
                 type: n = "side",
                 style: i,
                 "aria-label": r,
-                orientation: a = "horizontal"
+                orientation: s = "horizontal"
             } = this.props;
             return (0, o.jsx)("div", {
                 ref: this.tabBarRef,
                 className: d()(e, A[n]),
                 style: i,
                 role: "tablist",
-                "aria-orientation": a,
+                "aria-orientation": s,
                 onKeyDown: this.handleKeyDown,
                 "aria-label": r,
                 children: l.Children.map(t, this.renderChildren)
@@ -236,14 +236,14 @@ function(e, t, n) {
             onClick: n,
             children: i,
             "aria-expanded": r,
-            "aria-controls": a
+            "aria-controls": s
         } = e;
         return (0, o.jsx)(I.Clickable, {
             tabIndex: null == n ? -1 : 0,
             className: d()(S.header, t),
             onClick: n,
             "aria-expanded": r,
-            "aria-controls": a,
+            "aria-controls": s,
             focusProps: {
                 offset: {
                     top: -6

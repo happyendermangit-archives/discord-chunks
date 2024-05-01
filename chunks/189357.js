@@ -10,13 +10,13 @@ function(e, t, n) {
     }), n("47120");
     var i = n("149765"),
         r = n("442837"),
-        a = n("430824"),
-        s = n("594174"),
+        s = n("430824"),
+        a = n("594174"),
         o = n("700785"),
         l = n("686692"),
         u = n("478743");
     let d = function(e) {
-            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [a.default, s.default];
+            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [s.default, a.default];
             if (null == e) return !1;
             let [n, r] = t, l = n.getGuild(e);
             if (null == l) return !1;
@@ -43,7 +43,7 @@ function(e, t, n) {
     function c(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = arguments.length > 2 ? arguments[2] : void 0,
-            i = (0, r.useStateFromStores)([a.default, s.default], () => d(e, [a.default, s.default]), [e]),
+            i = (0, r.useStateFromStores)([s.default, a.default], () => d(e, [s.default, a.default]), [e]),
             o = (0, l.useGuildMemberModViewExperiment)(e, {
                 autoTrackExposure: t,
                 disable: !i,

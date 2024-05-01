@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("47120");
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("442837"),
         l = n("552075"),
         u = n("481060"),
@@ -54,13 +54,13 @@ function(e, t, n) {
             categoryInfo: t,
             collapsed: n,
             toggleCollapsed: r,
-            index: a
+            index: s
         } = e;
         return (0, i.jsx)("div", {
             className: x.sectionContainer,
             children: (0, i.jsx)(u.Clickable, {
-                className: s()(x.sectionHeader, {
-                    [x.notFirstSectionHeader]: 0 !== a
+                className: a()(x.sectionHeader, {
+                    [x.notFirstSectionHeader]: 0 !== s
                 }),
                 onClick: r,
                 "aria-expanded": !n,
@@ -134,8 +134,8 @@ function(e, t, n) {
         let {
             descriptors: t,
             soundButtonProps: n,
-            rowIndex: a,
-            isUsingKeyboardNavigation: s,
+            rowIndex: s,
+            isUsingKeyboardNavigation: a,
             suppressPlaySound: o,
             gridRowProps: l,
             getItemProps: u,
@@ -148,7 +148,7 @@ function(e, t, n) {
             className: x.soundRow,
             children: t.map((e, t) => {
                 let i = "item-".concat(t),
-                    l = s && E.rowIndex === a && E.columnIndex === t;
+                    l = a && E.rowIndex === s && E.columnIndex === t;
                 switch (e.item.type) {
                     case v.SoundboardSoundItemType.SOUND:
                         return (0, r.createElement)(P.default, {
@@ -178,8 +178,8 @@ function(e, t, n) {
     function K(e) {
         let {
             guildId: t,
-            channel: a,
-            containerWidth: s,
+            channel: s,
+            containerWidth: a,
             onClose: l,
             onSelect: _,
             suppressPlaySound: E = !1,
@@ -196,40 +196,40 @@ function(e, t, n) {
             return A.default.getVoiceState(t, null !== (e = null == Z ? void 0 : Z.id) && void 0 !== e ? e : k.EMPTY_STRING_SNOWFLAKE_ID)
         }), Q = (null == X ? void 0 : X.selfDeaf) || (null == X ? void 0 : X.mute) || (null == X ? void 0 : X.suppress), q = (0, T.useExpressionPickerStore)(e => e.searchQuery), J = (0, m.useUID)(), {
             categories: $
-        } = (0, y.default)(a, void 0, P), [ee, et] = r.useState([]), en = (0, y.useSearchCategories)($, ee, q), ei = S.SoundboardPickerCollapsedSections.useSetting(), er = r.useMemo(() => new Set(ei), [ei]), ea = null == a, es = L.default.canUseCustomCallSounds(Z), eo = r.useCallback(e => {
+        } = (0, y.default)(s, void 0, P), [ee, et] = r.useState([]), en = (0, y.useSearchCategories)($, ee, q), ei = S.SoundboardPickerCollapsedSections.useSetting(), er = r.useMemo(() => new Set(ei), [ei]), es = null == s, ea = L.default.canUseCustomCallSounds(Z), eo = r.useCallback(e => {
             er.has(e) ? er.delete(e) : er.add(e), S.SoundboardPickerCollapsedSections.updateSetting(Array.from(er))
         }, [er]), el = r.useCallback((e, t) => {
-            if (!E && (0, D.canUseSoundboardSound)(Z, e, a, !1)) {
+            if (!E && (0, D.canUseSoundboardSound)(Z, e, s, !1)) {
                 var n;
-                (0, D.playSound)(e, null !== (n = null == a ? void 0 : a.id) && void 0 !== n ? n : k.EMPTY_STRING_SNOWFLAKE_ID, t)
+                (0, D.playSound)(e, null !== (n = null == s ? void 0 : s.id) && void 0 !== n ? n : k.EMPTY_STRING_SNOWFLAKE_ID, t)
             } else {
-                if ((0, D.canUseSoundboardSound)(Z, e, a)) return;
+                if ((0, D.canUseSoundboardSound)(Z, e, s)) return;
                 N && z(e)
             }
-        }, [E, Z, a, N]), eu = r.useCallback(e => {
+        }, [E, Z, s, N]), eu = r.useCallback(e => {
             switch (e.item.type) {
                 case v.SoundboardSoundItemType.SOUND:
                     return null == _ || _(e.item.sound), el(e.item.sound, U);
                 case v.SoundboardSoundItemType.ADD_SOUND:
                     return (0, B.default)(e.item.guild.id)
             }
-        }, [U, el, _]), ed = r.useCallback((e, t, n, r, s) => (0, i.jsx)(W, {
+        }, [U, el, _]), ed = r.useCallback((e, t, n, r, a) => (0, i.jsx)(W, {
             descriptors: e,
             rowIndex: n.rowIndex,
             isUsingKeyboardNavigation: n.isUsingKeyboardNavigation,
             gridRowProps: t,
             getItemProps: r,
-            onItemMouseEnter: s,
+            onItemMouseEnter: a,
             suppressPlaySound: E,
             onSelectItem: eu,
             soundButtonProps: {
-                channel: a,
-                interactive: ea ? es : !Q,
-                forceSecondaryActions: ea,
+                channel: s,
+                interactive: es ? ea : !Q,
+                forceSecondaryActions: es,
                 analyticsLocations: U
             },
             buttonOverlay: O
-        }, "row-".concat(t["aria-rowindex"])), [eu, a, Q, E, U, ea, es, O]), e_ = r.useCallback((e, t) => {
+        }, "row-".concat(t["aria-rowindex"])), [eu, s, Q, E, U, es, ea, O]), e_ = r.useCallback((e, t) => {
             let n = "".concat(e.key);
             return (0, i.jsx)(Y, {
                 categoryInfo: e.categoryInfo,
@@ -237,7 +237,7 @@ function(e, t, n) {
                 collapsed: er.has(n),
                 index: t
             }, "header-".concat(n))
-        }, [er, eo]), ec = r.useCallback(e => et((0, M.default)(e, $, Z, a)), [a, Z, $]), eE = r.useCallback(e => {
+        }, [er, eo]), ec = r.useCallback(e => et((0, M.default)(e, $, Z, s)), [s, Z, $]), eE = r.useCallback(e => {
             (0, d.openContextMenuLazy)(e, async () => {
                 let {
                     default: e
@@ -273,11 +273,11 @@ function(e, t, n) {
                 onClose: () => z(null),
                 closePopout: l,
                 sound: K,
-                channel: a
+                channel: s
             }), (0, i.jsx)(f.default, {
                 categories: en,
                 collapsedCategories: er,
-                containerWidth: s,
+                containerWidth: a,
                 store: I.SoundboardPickerStore,
                 onSelectItem: eu,
                 onSearchExpressions: ec,

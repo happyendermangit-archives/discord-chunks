@@ -3,8 +3,8 @@ function(e, t, n) {
     n.r(t);
     var i = n("735250"),
         r = n("470079"),
-        a = n("120356"),
-        s = n.n(a),
+        s = n("120356"),
+        a = n.n(s),
         o = n("481060"),
         l = n("285952"),
         u = n("145798");
@@ -17,7 +17,7 @@ function(e, t, n) {
                 className: r
             } = this.props;
             return (0, i.jsx)("div", {
-                className: s()(u.wrapper, r),
+                className: a()(u.wrapper, r),
                 children: (0, i.jsxs)(l.default, {
                     className: u.flexWrapper,
                     direction: l.default.Direction.VERTICAL,

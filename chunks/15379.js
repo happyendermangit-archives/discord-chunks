@@ -7,25 +7,25 @@ function(e, t, n) {
     }), n("411104");
     var i = n("592125"),
         r = n("19780"),
-        a = n("981631"),
-        s = n("176505");
+        s = n("981631"),
+        a = n("176505");
 
     function o(e, t) {
-        if (e === a.AnalyticEvents.CHANNEL_OPENED_CLICKSTREAM) {
+        if (e === s.AnalyticEvents.CHANNEL_OPENED_CLICKSTREAM) {
             var n, o;
             let e = t.channelId;
             switch (e) {
-                case s.StaticChannelRoute.CHANNEL_BROWSER:
-                case s.StaticChannelRoute.GUILD_HOME:
-                case s.StaticChannelRoute.GUILD_SHOP:
-                case s.StaticChannelRoute.MEMBER_APPLICATIONS:
-                case s.StaticChannelRoute.ROLE_SUBSCRIPTIONS:
-                case s.StaticChannelRoute.CUSTOMIZE_COMMUNITY:
-                case s.StaticChannelRoute.MEMBER_SAFETY:
-                case s.StaticChannelRoute.GUILD_ONBOARDING:
+                case a.StaticChannelRoute.CHANNEL_BROWSER:
+                case a.StaticChannelRoute.GUILD_HOME:
+                case a.StaticChannelRoute.GUILD_SHOP:
+                case a.StaticChannelRoute.MEMBER_APPLICATIONS:
+                case a.StaticChannelRoute.ROLE_SUBSCRIPTIONS:
+                case a.StaticChannelRoute.CUSTOMIZE_COMMUNITY:
+                case a.StaticChannelRoute.MEMBER_SAFETY:
+                case a.StaticChannelRoute.GUILD_ONBOARDING:
                     return
             }
-            let l = null !== (o = null === (n = i.default.getChannel(e)) || void 0 === n ? void 0 : n.type) && void 0 !== o ? o : a.ChannelTypes.UNKNOWN;
+            let l = null !== (o = null === (n = i.default.getChannel(e)) || void 0 === n ? void 0 : n.type) && void 0 !== o ? o : s.ChannelTypes.UNKNOWN;
             return {
                 channelId: e,
                 channelType: l,

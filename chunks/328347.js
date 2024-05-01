@@ -2,7 +2,7 @@ function(e, t, n) {
     "use strict";
     let i;
     n.r(t);
-    var r, a, s, o, l = n("442837"),
+    var r, s, a, o, l = n("442837"),
         u = n("570140");
     let d = [],
         _ = d,
@@ -27,12 +27,12 @@ function(e, t, n) {
             }
         }
     }
-    s = "CollectiblesShopStore", (a = "displayName") in(r = I) ? Object.defineProperty(r, a, {
-        value: s,
+    a = "CollectiblesShopStore", (s = "displayName") in(r = I) ? Object.defineProperty(r, s, {
+        value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[a] = s, t.default = new I(u.default, {
+    }) : r[s] = a, t.default = new I(u.default, {
         COLLECTIBLES_SHOP_OPEN: e => {
             var t, n;
             _ = null !== (t = e.analyticsLocations) && void 0 !== t ? t : d, c = null !== (n = e.analyticsSource) && void 0 !== n ? n : null, i = e.initialProductSkuId

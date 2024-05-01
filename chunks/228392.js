@@ -79,8 +79,8 @@ function(e, t, n) {
     });
     var i = n("313361"),
         r = n("367907"),
-        a = n("731429"),
-        s = n("188471"),
+        s = n("731429"),
+        a = n("188471"),
         o = n("592125"),
         l = n("703558"),
         u = n("626135"),
@@ -97,8 +97,8 @@ function(e, t, n) {
             guildId: t,
             channelId: n,
             sessionId: i,
-            postIds: a,
-            additionalTimes: s
+            postIds: s,
+            additionalTimes: a
         } = e;
         r.default.trackWithMetadata(f.AnalyticEvents.FORUM_CHANNEL_SEEN_BATCH, {
             ...(0, T.collectForumAnalyticsMetadata)({
@@ -107,8 +107,8 @@ function(e, t, n) {
             }),
             guild_id: t,
             channel_id: n,
-            post_ids: a,
-            additional_seen_time_millis: s
+            post_ids: s,
+            additional_seen_time_millis: a
         })
     }
 
@@ -147,8 +147,8 @@ function(e, t, n) {
             guildId: t,
             channelId: n,
             tagId: i,
-            filterTagIds: a,
-            added: s,
+            filterTagIds: s,
+            added: a,
             location: o
         } = e;
         r.default.trackWithMetadata(f.AnalyticEvents.FORUM_CHANNEL_TAG_FILTER_CLICKED, {
@@ -158,8 +158,8 @@ function(e, t, n) {
             guild_id: t,
             channel_id: n,
             tag_id: i,
-            filter_tag_ids: a,
-            added: s,
+            filter_tag_ids: s,
+            added: a,
             location: o
         })
     }
@@ -193,9 +193,9 @@ function(e, t, n) {
     }
 
     function O(e) {
-        var t, n, i, a;
+        var t, n, i, s;
         let {
-            guildId: s,
+            guildId: a,
             channelId: u
         } = e, d = o.default.getChannel(u);
         if (null == d) return;
@@ -204,12 +204,12 @@ function(e, t, n) {
             E = l.default.getDraft(u, l.DraftType.FirstThreadMessage),
             I = null == E || 0 === E.length || (null == E ? void 0 : E.trim()) === c,
             S = (null == _ ? void 0 : _.appliedTags) == null || (null == _ ? void 0 : null === (n = _.appliedTags) || void 0 === n ? void 0 : n.size) === 0,
-            h = (null == _ ? void 0 : _.name) == null || (null == _ ? void 0 : null === (a = _.name) || void 0 === a ? void 0 : null === (i = a.trim()) || void 0 === i ? void 0 : i.length) === 0;
+            h = (null == _ ? void 0 : _.name) == null || (null == _ ? void 0 : null === (s = _.name) || void 0 === s ? void 0 : null === (i = s.trim()) || void 0 === i ? void 0 : i.length) === 0;
         (!I || !S || !h) && r.default.trackWithMetadata(f.AnalyticEvents.FORUM_CHANNEL_NEW_POST_DRAFT_CREATED, {
             ...(0, T.collectForumAnalyticsMetadata)({
                 channelId: u
             }),
-            guild_id: s,
+            guild_id: a,
             channel_id: u,
             applied_tag_ids: (0, T.getForumPostDraftAppliedTagIds)(u),
             num_attachments: (0, T.getForumPostDraftNumAttachments)(u)
@@ -237,7 +237,7 @@ function(e, t, n) {
             postId: i
         } = e;
 
-        function a() {
+        function s() {
             r.default.trackWithMetadata(f.AnalyticEvents.FORUM_CHANNEL_POST_CREATED, {
                 ...(0, T.collectForumPostAnalyticsMetadata)({
                     channelId: i
@@ -246,7 +246,7 @@ function(e, t, n) {
                 channel_id: n
             })
         }
-        c.default.isLoading(i) ? c.default.addConditionalChangeListener(() => !!c.default.isLoading(i) || (a(), !1)) : a()
+        c.default.isLoading(i) ? c.default.addConditionalChangeListener(() => !!c.default.isLoading(i) || (s(), !1)) : s()
     }
 
     function g(e) {
@@ -268,8 +268,8 @@ function(e, t, n) {
             guildId: t,
             channelId: n,
             numArchivedThreads: i,
-            hasMoreThreads: a,
-            filterTagIds: s,
+            hasMoreThreads: s,
+            filterTagIds: a,
             sortOrder: l
         } = e;
         u.default.track(f.AnalyticEvents.FORUM_CHANNEL_MORE_POSTS_LOADED, {
@@ -282,8 +282,8 @@ function(e, t, n) {
             channel_id: n,
             num_archived_threads: i,
             num_active_threads: (0, T.getNumActiveThreads)(t, n),
-            has_more_threads: a,
-            filter_tag_ids: s,
+            has_more_threads: s,
+            filter_tag_ids: a,
             sort_order: l
         })
     }
@@ -293,7 +293,7 @@ function(e, t, n) {
             guildId: t,
             channelId: n,
             postId: i,
-            location: a
+            location: s
         } = e;
         r.default.trackWithMetadata(f.AnalyticEvents.FORUM_CHANNEL_POST_CLICKED, {
             ...(0, T.collectForumPostAnalyticsMetadata)({
@@ -302,7 +302,7 @@ function(e, t, n) {
             guild_id: t,
             channel_id: n,
             is_search_result: null != E.default.getSearchResults(n),
-            location: a
+            location: s
         })
     }
 
@@ -328,15 +328,15 @@ function(e, t, n) {
         let {
             guildId: t,
             channelId: n,
-            forumLayout: a
-        } = e, s = (0, _.isForumActivityExperimentEnabled)(t) && a === i.ForumLayout.LIST ? I.INCREASED_ACTIVITY_LIST_FORUM_LAYOUT : a;
+            forumLayout: s
+        } = e, a = (0, _.isForumActivityExperimentEnabled)(t) && s === i.ForumLayout.LIST ? I.INCREASED_ACTIVITY_LIST_FORUM_LAYOUT : s;
         r.default.trackWithMetadata(f.AnalyticEvents.FORUM_CHANNEL_LAYOUT_UPDATED, {
             ...(0, T.collectForumAnalyticsMetadata)({
                 channelId: n
             }),
             guild_id: t,
             channel_id: n,
-            forum_channel_layout: s
+            forum_channel_layout: a
         })
     }
 
@@ -408,11 +408,11 @@ function(e, t, n) {
         r.default.trackWithMetadata(f.AnalyticEvents.CHANNEL_OPENED, {
             ...(0, r.collectGuildAnalyticsMetadata)(e.guild_id),
             ...(0, r.collectChannelAnalyticsMetadata)(e),
-            ...(0, a.collectThreadMetadata)(e, !0),
+            ...(0, s.collectThreadMetadata)(e, !0),
             ...(0, r.getChannelOpenedMetadata)(e.id),
             channel_view: "Split View",
             platform: (0, d.getPlatform)()
-        }), (0, s.trackClickstream)(f.AnalyticEvents.CHANNEL_OPENED_CLICKSTREAM, {
+        }), (0, a.trackClickstream)(f.AnalyticEvents.CHANNEL_OPENED_CLICKSTREAM, {
             channelId: e.id
         })
     }
@@ -432,7 +432,7 @@ function(e, t, n) {
             channelId: n
         } = e;
         r.default.trackWithMetadata(f.AnalyticEvents.THREAD_CREATION_STARTED, {
-            ...(0, a.collectThreadMetadata)(o.default.getChannel(n)),
+            ...(0, s.collectThreadMetadata)(o.default.getChannel(n)),
             channel_id: n,
             guild_id: t
         })

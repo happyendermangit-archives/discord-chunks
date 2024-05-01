@@ -1,7 +1,7 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n("653041"), n("47120");
-    var i, r, a, s, o = n("348327"),
+    var i, r, s, a, o = n("348327"),
         l = n.n(o),
         u = n("392711"),
         d = n.n(u),
@@ -35,15 +35,15 @@ function(e, t, n) {
             ...i
         });
         let r = new Set,
-            a = new Set;
+            s = new Set;
         d().forEach(L, t => {
-            null != t.application_id && (r.add(t.name), a.add(t.application_id), e.push(t))
+            null != t.application_id && (r.add(t.name), s.add(t.application_id), e.push(t))
         }), E.default.getSelfEmbeddedActivities().forEach(t => {
             var n;
             let {
                 applicationId: i
             } = t;
-            if (a.has(i)) return;
+            if (s.has(i)) return;
             let r = null === (n = I.default.getApplication(i)) || void 0 === n ? void 0 : n.name;
             e.push({
                 type: R.ActivityTypes.PLAYING,
@@ -52,16 +52,16 @@ function(e, t, n) {
                 flags: R.ActivityFlags.EMBEDDED
             })
         });
-        let s = f.default.getVisibleGame(),
-            o = null != s && null != s.name && r.has(s.name),
-            u = null != s && s.isLauncher,
+        let a = f.default.getVisibleGame(),
+            o = null != a && null != a.name && r.has(a.name),
+            u = null != a && a.isLauncher,
             _ = p.default.getCurrentUserActiveStream();
-        null != s && null != s.name && !(o || u && !(null != _)) && e.push({
+        null != a && null != a.name && !(o || u && !(null != _)) && e.push({
             type: R.ActivityTypes.PLAYING,
-            name: s.name,
-            application_id: s.id,
+            name: a.name,
+            application_id: a.id,
             timestamps: {
-                start: s.start
+                start: a.start
             }
         });
         let c = A.default.getActivity();
@@ -104,12 +104,12 @@ function(e, t, n) {
             return L
         }
     }
-    s = "LocalActivityStore", (a = "displayName") in(r = D) ? Object.defineProperty(r, a, {
-        value: s,
+    a = "LocalActivityStore", (s = "displayName") in(r = D) ? Object.defineProperty(r, s, {
+        value: a,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : r[a] = s, t.default = new D(c.default, {
+    }) : r[s] = a, t.default = new D(c.default, {
         OVERLAY_INITIALIZE: function(e) {
             let {
                 localActivities: t

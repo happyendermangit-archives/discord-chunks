@@ -2,9 +2,9 @@ function(e, t, n) {
     "use strict";
     n.r(t), n("724458");
     var i, r = n("442837"),
-        a = n("570140");
+        s = n("570140");
 
-    function s(e, t, n) {
+    function a(e, t, n) {
         return t in e ? Object.defineProperty(e, t, {
             value: n,
             enumerable: !0,
@@ -45,7 +45,7 @@ function(e, t, n) {
             return o
         }
     }
-    s(c, "displayName", "LoginRequiredActionStore"), s(c, "persistKey", "LoginRequiredActionStore"), t.default = new c(a.default, {
+    a(c, "displayName", "LoginRequiredActionStore"), a(c, "persistKey", "LoginRequiredActionStore"), t.default = new c(s.default, {
         LOGIN_ATTEMPTED: function(e) {
             let {
                 required_actions: t,

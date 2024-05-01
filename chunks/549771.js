@@ -7,8 +7,8 @@ function(e, t, n) {
     }), n("733860");
     var i = n("470079"),
         r = n("399606"),
-        a = n("496675"),
-        s = n("771845"),
+        s = n("496675"),
+        a = n("771845"),
         o = n("594174"),
         l = n("74538"),
         u = n("981631"),
@@ -18,8 +18,8 @@ function(e, t, n) {
         var n;
         let _ = (0, r.useStateFromStores)([o.default], () => o.default.getCurrentUser()),
             c = null !== (n = null == e ? void 0 : e.guild_id) && void 0 !== n ? n : u.EMPTY_STRING_SNOWFLAKE_ID,
-            E = (0, r.useStateFromStores)([s.default], () => s.default.getFlattenedGuildIds()),
-            I = (0, r.useStateFromStores)([a.default], () => null == e || null == e.guild_id || a.default.can(d.Permissions.USE_EXTERNAL_SOUNDS, e));
+            E = (0, r.useStateFromStores)([a.default], () => a.default.getFlattenedGuildIds()),
+            I = (0, r.useStateFromStores)([s.default], () => null == e || null == e.guild_id || s.default.can(d.Permissions.USE_EXTERNAL_SOUNDS, e));
         return i.useMemo(() => {
             if ((l.default.canUseSoundboardEverywhere(_) || !t) && I) {
                 let e = "" !== c,

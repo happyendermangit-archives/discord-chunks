@@ -1,14 +1,14 @@
 function(e, t, n) {
     "use strict";
-    let i, r, a;
+    let i, r, s;
     n.r(t), n("47120");
-    var s, o, l, u, d = n("392711"),
+    var a, o, l, u, d = n("392711"),
         _ = n("442837"),
         c = n("570140");
     let E = new Map,
         I = E,
         T = !1;
-    class f extends(s = _.default.Store) {
+    class f extends(a = _.default.Store) {
         get isFetching() {
             return T
         }
@@ -22,7 +22,7 @@ function(e, t, n) {
             return r
         }
         get claimError() {
-            return a
+            return s
         }
         getPurchase(e) {
             return null != e ? I.get(e) : void 0
@@ -47,20 +47,20 @@ function(e, t, n) {
             I = E, T = !1, r = t
         },
         COLLECTIBLES_CLAIM: e => {
-            i = e.skuId, a = void 0
+            i = e.skuId, s = void 0
         },
         COLLECTIBLES_CLAIM_SUCCESS: e => {
-            null == e.purchases || 0 === e.purchases.length ? I = E : !(0, d.isEqual)([...I.values()], e.purchases) && (I = new Map(e.purchases.map(e => [e.skuId, e]))), i = void 0, a = void 0
+            null == e.purchases || 0 === e.purchases.length ? I = E : !(0, d.isEqual)([...I.values()], e.purchases) && (I = new Map(e.purchases.map(e => [e.skuId, e]))), i = void 0, s = void 0
         },
         COLLECTIBLES_CLAIM_FAILURE: e => {
             let {
                 error: t,
                 skuId: n
             } = e;
-            i = n, a = t
+            i = n, s = t
         },
         LOGOUT: e => {
-            I = E, T = !1, i = void 0, r = void 0, a = void 0
+            I = E, T = !1, i = void 0, r = void 0, s = void 0
         }
     })
 }

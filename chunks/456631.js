@@ -6,7 +6,7 @@ function(e, t, n) {
             return h
         }
     }), n("47120"), n("733860");
-    var r, a, s, o, l = n("392711"),
+    var r, s, a, o, l = n("392711"),
         u = n("442837"),
         d = n("780384"),
         _ = n("570140"),
@@ -42,12 +42,12 @@ function(e, t, n) {
             return f[e]
         }
     }
-    o = "VoiceChannelEffectsStore", (s = "displayName") in(a = p) ? Object.defineProperty(a, s, {
+    o = "VoiceChannelEffectsStore", (a = "displayName") in(s = p) ? Object.defineProperty(s, a, {
         value: o,
         enumerable: !0,
         configurable: !0,
         writable: !0
-    }) : a[s] = o, t.default = new p(_.default, {
+    }) : s[a] = o, t.default = new p(_.default, {
         VOICE_CHANNEL_EFFECT_CLEAR: e => {
             let {
                 userId: t

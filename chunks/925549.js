@@ -3,7 +3,7 @@ function(e, t, n) {
     n.r(t);
     var i = n("570140");
     t.default = {
-        updateChannelDimensions(e, t, n, r, a) {
+        updateChannelDimensions(e, t, n, r, s) {
             i.default.wait(() => {
                 i.default.dispatch({
                     type: "UPDATE_CHANNEL_DIMENSIONS",
@@ -11,7 +11,7 @@ function(e, t, n) {
                     scrollTop: t,
                     scrollHeight: n,
                     offsetHeight: r
-                }), null != a && a()
+                }), null != s && s()
             })
         },
         updateChannelListScroll(e, t) {

@@ -8,12 +8,12 @@ function(e, t, n) {
     var i = n("735250");
     n("470079");
     var r = n("481060"),
-        a = n("626135"),
-        s = n("981631");
+        s = n("626135"),
+        a = n("981631");
 
     function o(e) {
-        a.default.track(s.AnalyticEvents.OPEN_MODAL, {
-            type: s.AnalyticsSections.STICKER_PREMIUM_TIER_2_UPSELL_MODAL,
+        s.default.track(a.AnalyticEvents.OPEN_MODAL, {
+            type: a.AnalyticsSections.STICKER_PREMIUM_TIER_2_UPSELL_MODAL,
             location: e
         }), (0, r.openModalLazy)(async () => {
             let {
