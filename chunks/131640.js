@@ -51,10 +51,11 @@ function(e, t, n) {
             user: t,
             guildId: n,
             isTryItOutFlow: r,
-            forProfileEffectModal: s
-        } = e, a = (0, l.useStateFromStores)([O.default], () => O.default.getUserProfile(t.id), [t]), o = (0, l.useStateFromStores)([f.default], () => f.default.getGuild(n), [n]), _ = (0, E.useClydeProfilesEnabled)(o);
+            forProfileEffectModal: s,
+            onClick: a
+        } = e, o = (0, l.useStateFromStores)([O.default], () => O.default.getUserProfile(t.id), [t]), _ = (0, l.useStateFromStores)([f.default], () => f.default.getGuild(n), [n]), c = (0, E.useClydeProfilesEnabled)(_);
         return (0, i.jsxs)(i.Fragment, {
-            children: [(null == a ? void 0 : a.profileFetchFailed) && (!t.isClyde() || _) && (0, i.jsx)(d.Tooltip, {
+            children: [(null == o ? void 0 : o.profileFetchFailed) && (!t.isClyde() || c) && (0, i.jsx)(d.Tooltip, {
                 text: U.default.Messages.USER_PROFILE_LOAD_ERROR,
                 spacing: 16,
                 children: e => (0, i.jsx)(S.default, {
@@ -67,7 +68,8 @@ function(e, t, n) {
                 user: t,
                 guildId: n,
                 isTryItOutFlow: r,
-                size: L.BadgeSizes.SIZE_22
+                size: L.BadgeSizes.SIZE_22,
+                onBadgeClick: a
             })]
         })
     }
@@ -211,7 +213,8 @@ function(e, t, n) {
                 profileType: M.UserProfileTypes.POPOUT
             }), (0, i.jsx)(B, {
                 user: t,
-                guildId: r
+                guildId: r,
+                onClick: a
             })]
         })
     }
