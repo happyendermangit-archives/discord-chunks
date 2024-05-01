@@ -17252,6 +17252,7 @@ function(e) {
         MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED: "$[{username}](nameHook) played",
         MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING: "$[{username}](nameHook) is watching",
         MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED: "$[{username}](nameHook) watched",
+        MEMBER_LIST_CONTENT_POPOUT_USER_STREAMING: "$[{username}](nameHook) is streaming",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Activity",
         CONTENT_INVENTORY_MEMBERLIST_SETTINGS_HIDE: "Hide Activity Cards",
         CONTENT_INVENTORY_MEMBERLIST_SETTINGS_ABOUT: "About Recent Activity",

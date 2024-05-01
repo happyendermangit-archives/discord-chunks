@@ -10,6 +10,7 @@ function(e) {
         emojiSuggestionButton: "emojiSuggestionButton__6cb58",
         hero: "hero_dc420c",
         heroDetails: "heroDetails_f9bc0e",
+        iconButton: "iconButton__4bb00",
         inputContainerShareToChannel: "inputContainerShareToChannel__8eca3",
         interactionsContainer: "interactionsContainer__97fe3",
         interactionsContainerHeader: "interactionsContainerHeader_a937d2",
@@ -17,12 +18,22 @@ function(e) {
         popout: "popout_cfa8bc",
         popoutContentBody: "popoutContentBody_f9fe14",
         popoutContentHeader: "popoutContentHeader_daecb8",
+        popoutStreamImg: "popoutStreamImg_a5f0ae",
         popoutThumbnailContainer: "popoutThumbnailContainer_b66fac",
         popoutUserContainer: "popoutUserContainer__5ed24",
         popoutUsername: "popoutUsername__8e4a7",
+        secondaryButton: "secondaryButton_fc9605",
+        secondaryText: "secondaryText__7a32f",
         shareToChannelButton: "shareToChannelButton_ee0e50",
         shareToChannelInput: "shareToChannelInput_a160d6",
         shareToChannelInputHasAttachments: "shareToChannelInputHasAttachments__4d1e1",
-        toastContainer: "toastContainer__40273"
+        toastContainer: "toastContainer__40273",
+        voiceChannelAdditionalParticipants: "voiceChannelAdditionalParticipants__03b6f",
+        voiceChannelGuildIcon: "voiceChannelGuildIcon__1cbcc",
+        voiceChannelPopoutReactorChannel: "voiceChannelPopoutReactorChannel__15248",
+        voiceChannelPopoutReactorHeader: "voiceChannelPopoutReactorHeader_f7332b",
+        voicePopoutActionButtons: "voicePopoutActionButtons_dc92e3",
+        voicePopoutDivider: "voicePopoutDivider_a3a4c4",
+        voicePopoutMessageCloseIcon: "voicePopoutMessageCloseIcon__9e357"
     }
 }

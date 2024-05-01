@@ -64,60 +64,65 @@ function(e, t, n) {
                 }),
                 children: () => d
             })
-        }),
-        p = r.forwardRef(function(e, t) {
-            let {
-                placeholder: n,
-                onEnter: s,
-                setEditorRef: o,
-                showEmojiButton: l = !1,
-                autoCompletePosition: u,
-                renderAttachButton: E,
-                onFocus: I,
-                channel: T,
-                className: S
-            } = e, [h, N] = r.useState(""), [p, O] = r.useState((0, _.toRichValue)("")), R = () => {
-                N(""), O((0, _.toRichValue)(""))
-            }, C = d.ChatInputTypes.ATOMIC_REACTOR_REPLY_INPUT;
-            return l && (C.emojis = {
-                button: !0
-            }), (0, i.jsx)(c.default, {
-                ref: t,
-                placeholder: n,
-                className: a()(A.replyInput, S),
-                showRemainingCharsAfterCount: -1,
-                allowNewLines: !1,
-                maxCharacterCount: f.MAX_CHAR_COUNT,
-                channel: null != T ? T : m,
-                onChange: (e, t, n) => {
-                    N(t), O(n)
-                },
-                type: C,
-                textValue: h,
-                richValue: p,
-                onSubmit: e => {
-                    let {
-                        value: t
-                    } = e;
-                    return t.length > f.MAX_CHAR_COUNT ? Promise.resolve({
-                        shouldClear: !1,
-                        shouldRefocus: !0
-                    }) : (s(t), R(), Promise.resolve({
-                        shouldClear: !0,
-                        shouldRefocus: !1
-                    }))
-                },
-                setEditorRef: o,
-                focused: !0,
-                onFocus: I,
-                disableThemedBackground: !0,
-                emojiPickerCloseOnModalOuterClick: !0,
-                disabled: !1,
-                autoCompletePosition: u,
-                renderAttachButton: E
-            })
-        }),
-        O = (e, t) => {
+        });
+
+    function p(e) {
+        let {
+            placeholder: t,
+            onEnter: n,
+            setEditorRef: s,
+            showEmojiButton: o = !1,
+            renderAttachButton: l,
+            onFocus: u,
+            channel: E,
+            className: I
+        } = e, [T, S] = r.useState(""), [h, N] = r.useState((0, _.toRichValue)("")), p = () => {
+            S(""), N((0, _.toRichValue)(""))
+        }, O = d.ChatInputTypes.ATOMIC_REACTOR_REPLY_INPUT, R = r.useRef(null);
+        return o && (O.emojis = {
+            button: !0
+        }), (0, i.jsx)(c.default, {
+            ref: R,
+            placeholder: t,
+            className: a()(A.replyInput, I),
+            showRemainingCharsAfterCount: -1,
+            allowNewLines: !1,
+            maxCharacterCount: f.MAX_CHAR_COUNT,
+            channel: null != E ? E : m,
+            onChange: (e, t, n) => {
+                S(t), N(n)
+            },
+            type: O,
+            textValue: T,
+            richValue: h,
+            onSubmit: e => {
+                let {
+                    value: t
+                } = e;
+                return t.length > f.MAX_CHAR_COUNT ? Promise.resolve({
+                    shouldClear: !1,
+                    shouldRefocus: !0
+                }) : (n(t), p(), Promise.resolve({
+                    shouldClear: !0,
+                    shouldRefocus: !1
+                }))
+            },
+            setEditorRef: s,
+            focused: !0,
+            onFocus: u,
+            disableThemedBackground: !0,
+            emojiPickerCloseOnModalOuterClick: !0,
+            disabled: !1,
+            autoCompletePosition: (() => {
+                if (null == R.current) return "top";
+                let e = R.current.getBoundingClientRect(),
+                    t = window.innerHeight;
+                return e.top < t / 2 ? "bottom" : "top"
+            })(),
+            renderAttachButton: l
+        })
+    }
+    let O = (e, t) => {
             r.useEffect(() => {
                 let n = t => {
                         "Escape" === t.key && e()
