@@ -1480,6 +1480,7 @@ function(_, E, e) {
             APPLICATION_DIRECTORY_SEARCH: "/application-directory-static/search",
             APPLICATION_DIRECTORY_COLLECTIONS: "/application-directory-static/collections",
             APPLICATION_DIRECTORY_COLLECTION_ITEM_IMAGE: (_, E, e) => "/application-directory/collection-items/".concat(_, "/").concat(E, ".").concat(e),
+            APP_RECOMMENDATIONS: "/app-recommendations",
             GUILD_FEED: _ => "/guilds/".concat(_, "/guild-feed"),
             USER_EMAIL: "/users/@me/email",
             USER_EMAIL_VERIFY_CODE: "/users/@me/email/verify-code",
