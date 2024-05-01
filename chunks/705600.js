@@ -2,108 +2,111 @@ function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
         default: function() {
-            return y
+            return b
         }
     });
-    var i = n("735250");
-    n("470079");
-    var r = n("120356"),
-        s = n.n(r),
-        a = n("442837"),
-        o = n("692547"),
-        l = n("780384"),
-        u = n("481060"),
-        d = n("284363"),
-        _ = n("854218"),
-        c = n("623624"),
-        E = n("210887"),
-        I = n("271383"),
-        T = n("594174"),
-        f = n("267642"),
-        S = n("797717"),
-        h = n("672752"),
-        A = n("665786"),
-        m = n("639740"),
-        N = n("433564"),
-        p = n("697725"),
-        O = n("192091"),
-        R = n("507957"),
-        C = n("981631"),
-        g = n("689938"),
-        L = n("187885");
-    let v = {
-        [d.BadgeCategory.STAFF]: {
+    var i = n("735250"),
+        r = n("470079"),
+        s = n("120356"),
+        a = n.n(s),
+        o = n("442837"),
+        l = n("692547"),
+        u = n("780384"),
+        d = n("481060"),
+        _ = n("353093"),
+        c = n("979264"),
+        E = n("284363"),
+        I = n("854218"),
+        T = n("623624"),
+        f = n("210887"),
+        S = n("271383"),
+        h = n("594174"),
+        A = n("267642"),
+        m = n("797717"),
+        N = n("672752"),
+        p = n("665786"),
+        O = n("639740"),
+        R = n("433564"),
+        C = n("697725"),
+        g = n("192091"),
+        L = n("507957"),
+        v = n("981631"),
+        D = n("689938"),
+        M = n("187885");
+    let y = {
+        [E.BadgeCategory.STAFF]: {
+            IconComponent: g.default,
+            foregroundDarkColor: l.default.unsafe_rawColors.WHITE_400.css,
+            foregroundLightColor: l.default.unsafe_rawColors.WHITE_400.css,
+            backgroundDarkColor: l.default.unsafe_rawColors.GREEN_360.css,
+            backgroundLightColor: l.default.unsafe_rawColors.GREEN_360.css
+        },
+        [E.BadgeCategory.VERIFIED_AND_PARTNERED]: {
+            IconComponent: L.default,
+            foregroundDarkColor: l.default.unsafe_rawColors.WHITE_400.css,
+            foregroundLightColor: l.default.unsafe_rawColors.WHITE_400.css,
+            backgroundDarkColor: l.default.unsafe_rawColors.GREEN_360.css,
+            backgroundLightColor: l.default.unsafe_rawColors.GREEN_360.css
+        },
+        [E.BadgeCategory.VERIFIED]: {
+            IconComponent: L.default,
+            foregroundDarkColor: l.default.unsafe_rawColors.WHITE_400.css,
+            foregroundLightColor: l.default.unsafe_rawColors.WHITE_400.css,
+            backgroundDarkColor: l.default.unsafe_rawColors.GREEN_360.css,
+            backgroundLightColor: l.default.unsafe_rawColors.GREEN_360.css
+        },
+        [E.BadgeCategory.PARTNERED]: {
+            IconComponent: p.default,
+            foregroundDarkColor: l.default.unsafe_rawColors.WHITE_400.css,
+            foregroundLightColor: l.default.unsafe_rawColors.WHITE_400.css,
+            backgroundDarkColor: l.default.unsafe_rawColors.BRAND_500.css,
+            backgroundLightColor: l.default.unsafe_rawColors.BRAND_500.css
+        },
+        [E.BadgeCategory.COMMUNITY]: {
             IconComponent: O.default,
-            foregroundDarkColor: o.default.unsafe_rawColors.WHITE_400.css,
-            foregroundLightColor: o.default.unsafe_rawColors.WHITE_400.css,
-            backgroundDarkColor: o.default.unsafe_rawColors.GREEN_360.css,
-            backgroundLightColor: o.default.unsafe_rawColors.GREEN_360.css
+            foregroundDarkColor: l.default.unsafe_rawColors.PRIMARY_500.css,
+            foregroundLightColor: l.default.unsafe_rawColors.WHITE_400.css,
+            backgroundDarkColor: l.default.unsafe_rawColors.WHITE_400.css,
+            backgroundLightColor: l.default.unsafe_rawColors.PRIMARY_500.css,
+            premiumBackgroundColor: N.GradientCssUrls.PREMIUM_GUILD_BADGE_V2_BACKGROUND,
+            premiumForegroundColor: l.default.unsafe_rawColors.WHITE_400.css
         },
-        [d.BadgeCategory.VERIFIED_AND_PARTNERED]: {
+        [E.BadgeCategory.DISCOVERABLE]: {
             IconComponent: R.default,
-            foregroundDarkColor: o.default.unsafe_rawColors.WHITE_400.css,
-            foregroundLightColor: o.default.unsafe_rawColors.WHITE_400.css,
-            backgroundDarkColor: o.default.unsafe_rawColors.GREEN_360.css,
-            backgroundLightColor: o.default.unsafe_rawColors.GREEN_360.css
+            foregroundDarkColor: l.default.unsafe_rawColors.PRIMARY_500.css,
+            foregroundLightColor: l.default.unsafe_rawColors.WHITE_400.css,
+            backgroundDarkColor: l.default.unsafe_rawColors.WHITE_400.css,
+            backgroundLightColor: l.default.unsafe_rawColors.PRIMARY_500.css,
+            premiumBackgroundColor: N.GradientCssUrls.PREMIUM_GUILD_BADGE_V2_BACKGROUND,
+            premiumForegroundColor: l.default.unsafe_rawColors.WHITE_400.css
         },
-        [d.BadgeCategory.VERIFIED]: {
-            IconComponent: R.default,
-            foregroundDarkColor: o.default.unsafe_rawColors.WHITE_400.css,
-            foregroundLightColor: o.default.unsafe_rawColors.WHITE_400.css,
-            backgroundDarkColor: o.default.unsafe_rawColors.GREEN_360.css,
-            backgroundLightColor: o.default.unsafe_rawColors.GREEN_360.css
-        },
-        [d.BadgeCategory.PARTNERED]: {
-            IconComponent: A.default,
-            foregroundDarkColor: o.default.unsafe_rawColors.WHITE_400.css,
-            foregroundLightColor: o.default.unsafe_rawColors.WHITE_400.css,
-            backgroundDarkColor: o.default.unsafe_rawColors.BRAND_500.css,
-            backgroundLightColor: o.default.unsafe_rawColors.BRAND_500.css
-        },
-        [d.BadgeCategory.COMMUNITY]: {
-            IconComponent: m.default,
-            foregroundDarkColor: o.default.unsafe_rawColors.PRIMARY_500.css,
-            foregroundLightColor: o.default.unsafe_rawColors.WHITE_400.css,
-            backgroundDarkColor: o.default.unsafe_rawColors.WHITE_400.css,
-            backgroundLightColor: o.default.unsafe_rawColors.PRIMARY_500.css,
-            premiumBackgroundColor: h.GradientCssUrls.PREMIUM_GUILD_BADGE_V2_BACKGROUND,
-            premiumForegroundColor: o.default.unsafe_rawColors.WHITE_400.css
-        },
-        [d.BadgeCategory.DISCOVERABLE]: {
-            IconComponent: N.default,
-            foregroundDarkColor: o.default.unsafe_rawColors.PRIMARY_500.css,
-            foregroundLightColor: o.default.unsafe_rawColors.WHITE_400.css,
-            backgroundDarkColor: o.default.unsafe_rawColors.WHITE_400.css,
-            backgroundLightColor: o.default.unsafe_rawColors.PRIMARY_500.css,
-            premiumBackgroundColor: h.GradientCssUrls.PREMIUM_GUILD_BADGE_V2_BACKGROUND,
-            premiumForegroundColor: o.default.unsafe_rawColors.WHITE_400.css
-        },
-        [d.BadgeCategory.NONE]: {}
+        [E.BadgeCategory.CLAN]: {},
+        [E.BadgeCategory.NONE]: {}
     };
 
-    function D(e) {
+    function P(e) {
         let {
             guildTraits: t
         } = e;
         return (0, i.jsxs)("div", {
-            className: L.tooltipPremiumFooterContainer,
+            className: M.tooltipPremiumFooterContainer,
             children: [(0, i.jsxs)("div", {
-                className: s()(L.tooltipPremiumFooterSegment, L.tooltipPremiumFooterTierSegment),
-                children: [(0, i.jsx)(p.default, {
+                className: a()(M.tooltipPremiumFooterSegment, M.tooltipPremiumFooterTierSegment),
+                children: [(0, i.jsx)(C.default, {
                     width: 18,
                     height: 18,
-                    className: L.gemIcon
-                }), (0, i.jsx)(u.Text, {
+                    className: M.gemIcon
+                }), (0, i.jsx)(d.Text, {
                     variant: "text-xs/semibold",
                     color: "always-white",
-                    children: f.getTierName(t.premiumTier)
+                    children: A.getTierName(t.premiumTier)
                 })]
             }), (0, i.jsx)("div", {
-                className: s()(L.tooltipPremiumFooterSegment),
-                children: (0, i.jsx)(u.Text, {
+                className: a()(M.tooltipPremiumFooterSegment),
+                children: (0, i.jsx)(d.Text, {
                     variant: "text-xs/semibold",
                     color: "always-white",
-                    children: g.default.Messages.SERVER_BADGE_PREMIUM_FOOTER_BOOST_COUNT.format({
+                    children: D.default.Messages.SERVER_BADGE_PREMIUM_FOOTER_BOOST_COUNT.format({
                         count: t.premiumSubscriberCount
                     })
                 })
@@ -111,7 +114,7 @@ function(e, t, n) {
         })
     }
 
-    function M(e) {
+    function U(e) {
         let {
             badgeType: t,
             guildTraits: n
@@ -120,125 +123,151 @@ function(e, t, n) {
             tooltipSubtitle: s,
             tooltipDescription: a
         } = function(e, t) {
-            let n = t === _.GuildVisibility.PUBLIC ? g.default.Messages.SERVER_BADGE_DESCRIPTION_ANYONE_CAN_JOIN : g.default.Messages.SERVER_BADGE_DESCRIPTION_INVITE_ONLY;
+            let n = t === I.GuildVisibility.PUBLIC ? D.default.Messages.SERVER_BADGE_DESCRIPTION_ANYONE_CAN_JOIN : D.default.Messages.SERVER_BADGE_DESCRIPTION_INVITE_ONLY;
             switch (e) {
-                case d.BadgeCategory.STAFF:
+                case E.BadgeCategory.STAFF:
                     return {
-                        tooltipTitle: g.default.Messages.INTERNAL_EMPLOYEE_ONLY, tooltipSubtitle: g.default.Messages.INTERNAL_EMPLOYEE_ONLY, tooltipDescription: g.default.Messages.INTERNAL_EMPLOYEE_ONLY
+                        tooltipTitle: D.default.Messages.INTERNAL_EMPLOYEE_ONLY, tooltipSubtitle: D.default.Messages.INTERNAL_EMPLOYEE_ONLY, tooltipDescription: D.default.Messages.INTERNAL_EMPLOYEE_ONLY
                     };
-                case d.BadgeCategory.VERIFIED:
+                case E.BadgeCategory.VERIFIED:
                     return {
-                        tooltipTitle: g.default.Messages.SERVER_BADGE_TITLE_COMMUNITY, tooltipSubtitle: g.default.Messages.GUILD_VERIFIED, tooltipDescription: n
+                        tooltipTitle: D.default.Messages.SERVER_BADGE_TITLE_COMMUNITY, tooltipSubtitle: D.default.Messages.GUILD_VERIFIED, tooltipDescription: n
                     };
-                case d.BadgeCategory.PARTNERED:
+                case E.BadgeCategory.PARTNERED:
                     return {
-                        tooltipTitle: g.default.Messages.SERVER_BADGE_TITLE_COMMUNITY, tooltipSubtitle: g.default.Messages.GUILD_PARTNERED, tooltipDescription: n
+                        tooltipTitle: D.default.Messages.SERVER_BADGE_TITLE_COMMUNITY, tooltipSubtitle: D.default.Messages.GUILD_PARTNERED, tooltipDescription: n
                     };
-                case d.BadgeCategory.VERIFIED_AND_PARTNERED:
+                case E.BadgeCategory.VERIFIED_AND_PARTNERED:
                     return {
-                        tooltipTitle: g.default.Messages.SERVER_BADGE_TITLE_COMMUNITY, tooltipSubtitle: g.default.Messages.GUILD_VERIFIED_AND_PARTNERED, tooltipDescription: n
+                        tooltipTitle: D.default.Messages.SERVER_BADGE_TITLE_COMMUNITY, tooltipSubtitle: D.default.Messages.GUILD_VERIFIED_AND_PARTNERED, tooltipDescription: n
                     };
-                case d.BadgeCategory.COMMUNITY:
+                case E.BadgeCategory.COMMUNITY:
                     return {
-                        tooltipTitle: g.default.Messages.SERVER_BADGE_TITLE_COMMUNITY, tooltipDescription: g.default.Messages.SERVER_BADGE_DESCRIPTION_INVITE_ONLY
+                        tooltipTitle: D.default.Messages.SERVER_BADGE_TITLE_COMMUNITY, tooltipDescription: D.default.Messages.SERVER_BADGE_DESCRIPTION_INVITE_ONLY
                     };
-                case d.BadgeCategory.DISCOVERABLE:
+                case E.BadgeCategory.DISCOVERABLE:
                     return {
-                        tooltipTitle: g.default.Messages.SERVER_BADGE_TITLE_COMMUNITY, tooltipDescription: g.default.Messages.SERVER_BADGE_DESCRIPTION_ANYONE_CAN_JOIN
+                        tooltipTitle: D.default.Messages.SERVER_BADGE_TITLE_COMMUNITY, tooltipDescription: D.default.Messages.SERVER_BADGE_DESCRIPTION_ANYONE_CAN_JOIN
+                    };
+                case E.BadgeCategory.CLAN:
+                    return {
+                        tooltipTitle: D.default.Messages.SERVER_BADGE_TITLE_CLAN, tooltipDescription: D.default.Messages.SERVER_BADGE_DESCRIPTION_APPLICATION_REQUIRED
                     };
                 default:
                     return {
-                        tooltipTitle: g.default.Messages.SERVER_BADGE_TITLE_UNKNOWN
+                        tooltipTitle: D.default.Messages.SERVER_BADGE_TITLE_UNKNOWN
                     }
             }
         }(t, n.visibility);
         return (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsxs)("div", {
-                className: L.tooltipBodyContainer,
-                children: [(0, i.jsx)(u.Text, {
+                className: M.tooltipBodyContainer,
+                children: [(0, i.jsx)(d.Text, {
                     color: "interactive-active",
                     variant: "text-xs/bold",
                     children: r
-                }), null != s ? (0, i.jsx)(u.Text, {
+                }), null != s ? (0, i.jsx)(d.Text, {
                     color: "text-muted",
                     variant: "text-xs/medium",
                     children: s
-                }) : null, null != a ? (0, i.jsx)(u.Text, {
+                }) : null, null != a ? (0, i.jsx)(d.Text, {
                     color: "text-muted",
                     variant: "text-xs/medium",
                     children: a
                 }) : null]
-            }), n.premium ? (0, i.jsx)(D, {
+            }), n.premium ? (0, i.jsx)(P, {
                 guildTraits: n
             }) : null]
         })
     }
 
-    function y(e) {
+    function b(e) {
         let t, n, {
-                guild: r,
-                tooltipColor: s = u.Tooltip.Colors.BRAND,
-                tooltipPosition: o,
-                className: f,
-                flowerStarClassName: h,
-                iconClassName: A,
-                badgeStrokeColor: m,
-                badgeColor: N,
-                size: p = 16,
-                disableBoostClick: O,
-                "aria-label": R = !1
+                guild: s,
+                tooltipColor: l = d.Tooltip.Colors.BRAND,
+                tooltipPosition: A,
+                className: N,
+                flowerStarClassName: p,
+                iconClassName: O,
+                badgeStrokeColor: R,
+                badgeColor: C,
+                size: g = 16,
+                disableBoostClick: L,
+                "aria-label": D = !1
             } = e,
-            g = (0, a.useStateFromStores)([T.default, I.default], () => {
-                let e = T.default.getCurrentUser();
-                return I.default.isMember(null == r ? void 0 : r.id, null == e ? void 0 : e.id)
+            P = (0, o.useStateFromStores)([h.default, S.default], () => {
+                let e = h.default.getCurrentUser();
+                return S.default.isMember(null == s ? void 0 : s.id, null == e ? void 0 : e.id)
             }),
-            D = (0, a.useStateFromStores)([E.default], () => E.default.theme),
-            y = (0, _.getGuildTraits)(r),
-            P = (0, d.getBadgeCategory)(y);
-        if (P === d.BadgeCategory.NONE) return null;
+            b = (0, o.useStateFromStores)([f.default], () => f.default.theme),
+            G = (0, I.getGuildTraits)(s),
+            w = (0, E.getBadgeCategory)(G),
+            B = r.useCallback(e => {
+                G.premium && P && !L && (e.stopPropagation(), e.preventDefault(), (0, T.openGuildBoostingMarketingModal)({
+                    guildId: s.id,
+                    location: {
+                        section: v.AnalyticsSections.GUILD_HEADER,
+                        object: v.AnalyticsObjects.BOOST_GEM_ICON
+                    }
+                }))
+            }, [G.premium, P, L, s.id]);
+        if (w === E.BadgeCategory.NONE) return null;
+        if (w === E.BadgeCategory.CLAN) {
+            var k;
+            let e = (0, _.getClanBadgeUrl)(s.id, null === (k = s.clan) || void 0 === k ? void 0 : k.badge, g);
+            return (0, i.jsx)(d.Tooltip, {
+                color: l,
+                position: A,
+                "aria-label": D,
+                text: (0, i.jsx)(U, {
+                    badgeType: w,
+                    guildTraits: G
+                }),
+                tooltipContentClassName: M.tooltipRemovePadding,
+                children: t => (0, i.jsx)(d.Clickable, {
+                    ...t,
+                    onClick: B,
+                    className: a()(M.clanBadgeContainer, N),
+                    children: (0, i.jsx)(c.ClanTagBadge, {
+                        src: e,
+                        size: g
+                    })
+                })
+            })
+        }
         let {
-            IconComponent: U,
-            backgroundDarkColor: b,
-            backgroundLightColor: G,
-            foregroundDarkColor: w,
-            foregroundLightColor: B,
-            premiumBackgroundColor: k,
-            premiumForegroundColor: V
-        } = v[P];
-        if (null == U) return null;
-        y.premium && (t = V, n = k);
-        let x = (0, l.isThemeDark)(D) ? w : B,
-            F = (0, l.isThemeDark)(D) ? b : G;
-        t = null != t ? t : x, n = null != n ? n : F;
-        let H = e => {
-            y.premium && g && !O && (e.stopPropagation(), e.preventDefault(), (0, c.openGuildBoostingMarketingModal)({
-                guildId: r.id,
-                location: {
-                    section: C.AnalyticsSections.GUILD_HEADER,
-                    object: C.AnalyticsObjects.BOOST_GEM_ICON
-                }
-            }))
-        };
-        return (0, i.jsx)(u.Tooltip, {
-            color: s,
-            position: o,
-            "aria-label": R,
-            text: (0, i.jsx)(M, {
-                badgeType: P,
-                guildTraits: y
+            IconComponent: V,
+            backgroundDarkColor: x,
+            backgroundLightColor: F,
+            foregroundDarkColor: H,
+            foregroundLightColor: Y,
+            premiumBackgroundColor: j,
+            premiumForegroundColor: W
+        } = y[w];
+        if (null == V) return null;
+        G.premium && (t = W, n = j);
+        let K = (0, u.isThemeDark)(b) ? H : Y,
+            z = (0, u.isThemeDark)(b) ? x : F;
+        return t = null != t ? t : K, n = null != n ? n : z, (0, i.jsx)(d.Tooltip, {
+            color: l,
+            position: A,
+            "aria-label": D,
+            text: (0, i.jsx)(U, {
+                badgeType: w,
+                guildTraits: G
             }),
-            tooltipContentClassName: L.tooltipRemovePadding,
-            children: e => (0, i.jsx)(u.Clickable, {
-                onClick: H,
-                children: (0, i.jsx)(S.default, {
+            tooltipContentClassName: M.tooltipRemovePadding,
+            children: e => (0, i.jsx)(d.Clickable, {
+                onClick: B,
+                children: (0, i.jsx)(m.default, {
                     ...e,
-                    className: f,
-                    flowerStarClassName: h,
-                    color: null != n ? n : N,
-                    stroke: m,
-                    size: p,
-                    children: (0, i.jsx)(U, {
-                        className: A,
+                    className: N,
+                    flowerStarClassName: p,
+                    color: null != n ? n : C,
+                    stroke: R,
+                    size: g,
+                    children: (0, i.jsx)(V, {
+                        className: O,
                         color: t
                     })
                 })

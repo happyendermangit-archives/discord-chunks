@@ -28,6 +28,7 @@ function(e, t, n) {
             partnered: t.has(a.GuildFeatures.PARTNERED),
             community: t.has(a.GuildFeatures.COMMUNITY),
             staff: t.has(a.GuildFeatures.INTERNAL_EMPLOYEE_ONLY),
+            clan: t.has(a.GuildFeatures.CLAN),
             visibility: n,
             premium: i,
             premiumSubscriberCount: r,

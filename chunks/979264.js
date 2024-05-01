@@ -4,6 +4,9 @@ function(e, t, n) {
         BaseClanTagChiplet: function() {
             return h
         },
+        ClanTagBadge: function() {
+            return S
+        },
         useShouldDisplayClanTag: function() {
             return m
         }

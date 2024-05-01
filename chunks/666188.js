@@ -7,7 +7,7 @@ function(e, t, n) {
     }), n("47120");
     var i = n("284363"),
         r = n("854218");
-    let s = new Set([i.BadgeCategory.PARTNERED, i.BadgeCategory.VERIFIED, i.BadgeCategory.VERIFIED_AND_PARTNERED, i.BadgeCategory.COMMUNITY, i.BadgeCategory.DISCOVERABLE]);
+    let s = new Set([i.BadgeCategory.PARTNERED, i.BadgeCategory.VERIFIED, i.BadgeCategory.VERIFIED_AND_PARTNERED, i.BadgeCategory.COMMUNITY, i.BadgeCategory.DISCOVERABLE, i.BadgeCategory.CLAN]);
 
     function a(e) {
         if (null == e) return !1;
