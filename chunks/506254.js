@@ -2,6 +2,8 @@ function(e) {
     "use strict";
     e.exports = {
         actions: "actions_a287f1",
+        addClan: "addClan__3be76",
+        buttonPill: "buttonPill__8d5fb",
         chevron: "chevron_d7e08c",
         filterPill: "filterPill__53234",
         filterPillActive: "filterPillActive__0fdb1",

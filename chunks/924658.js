@@ -471,6 +471,8 @@ function(e) {
         CLAN_DISCOVERY_TRAIT_OVERFLOW: "+ {count, number} more",
         CLAN_DISCOVERY_UNKNOWN_PLAYSTYLE: "Unknown",
         CLAN_DISCOVERY_PLAYSTYLE_ARIA_LABEL: "Playstyle",
+        CLAN_DISCOVERY_ADD_CLAN: "Add a Guild",
+        CLAN_DISCOVERY_UPSELL_BROWSE: "Browse Guilds",
         CLANS: "Guilds",
         CLAN_USER_PROFILE_PRIMARY_CLAN: "Primary Guild",
         CLAN_USER_PROFILE_PRIMARY_CLAN_SUBTITLE: "Choose your primary Guild and wear the Guild Tag next to your name",
