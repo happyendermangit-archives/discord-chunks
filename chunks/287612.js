@@ -21,7 +21,9 @@ function(e, t, n) {
                 mutualFriends: E,
                 mutualGuilds: c,
                 onClose: n,
-                showNoMutuals: !0
+                showNoMutuals: !0,
+                underlineTextOnHover: !0,
+                showTooltips: !1
             })
         })
     })

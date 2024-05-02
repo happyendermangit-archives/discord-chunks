@@ -11,7 +11,7 @@ function(e, t, n) {
         a = n.n(r),
         s = n("481060"),
         o = n("129861"),
-        l = n("963202"),
+        l = n("954138"),
         u = n("979264"),
         d = n("969832"),
         _ = n("51144"),
@@ -31,7 +31,7 @@ function(e, t, n) {
             className: A,
             isTryItOut: m = !1,
             lastSection: N
-        } = e, p = (0, l.useIsInUserClanExperiment)();
+        } = e, p = (0, l.default)("username");
         return (0, i.jsxs)(c.default, {
             className: a()(T.container, A),
             lastSection: N,

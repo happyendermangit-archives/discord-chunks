@@ -1,23 +1,23 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
-        isClanGuildExperimentEnabled: function() {
-            return _
-        },
-        useAnyClanGuildExperimentEnabled: function() {
-            return c
-        },
-        useClanGuildExperiment: function() {
+        isClanPrepilotExperimentEnabled: function() {
             return d
         },
-        useClanGuildExperimentDefaultGameId: function() {
-            return E
+        useAnyClanPrepilotExperimentEnabled: function() {
+            return _
         },
-        useClanPrepilotExperimentEnabled: function() {
-            return I
+        useClanGeneralExperiment: function() {
+            return S
         },
-        useIsInUserClanExperiment: function() {
+        useClanPilotExperiment: function() {
+            return T
+        },
+        useClanPrepilotExperiment: function() {
             return u
+        },
+        useClanPrepilotExperimentDefaultGameId: function() {
+            return c
         }
     });
     var i = n("818083"),
@@ -89,31 +89,7 @@ function(e, t, n) {
             }]
         });
 
-    function u() {
-        let {
-            autoTrackExposure: e = !1,
-            disable: t = !1,
-            location: n
-        } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, i = o.useExperiment({
-            location: n
-        }, {
-            autoTrackExposure: e,
-            disable: t
-        }).enableClanCreation, r = l.useExperiment({
-            location: n
-        }, {
-            autoTrackExposure: e,
-            disable: t
-        }).enableClanCreation, a = s.useExperiment({
-            location: n
-        }, {
-            autoTrackExposure: e,
-            disable: t
-        }).enableClanCreation;
-        return i || r || a
-    }
-
-    function d(e, t) {
+    function u(e, t) {
         var n, i, r, u, d, _;
         let c = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
             E = o.useExperiment({
@@ -138,7 +114,7 @@ function(e, t, n) {
         }
     }
 
-    function _(e, t) {
+    function d(e, t) {
         var n, i, r;
         let u = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
             d = o.getCurrentConfig({
@@ -160,7 +136,7 @@ function(e, t, n) {
         return null !== (i = null == e ? void 0 : e.hasFeature(a.GuildFeatures.CLAN_PILOT_VALORANT)) && void 0 !== i && i && d.enableClanCreation || E || null !== (r = c.enableClanCreation) && void 0 !== r && r
     }
 
-    function c(e, t) {
+    function _(e, t) {
         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
             i = o.useExperiment({
                 location: t
@@ -181,7 +157,7 @@ function(e, t, n) {
         return e.some(e => e.hasFeature(a.GuildFeatures.CLAN_PILOT_VALORANT)) && i.enableClanCreation || d || u.enableClanCreation
     }
 
-    function E(e) {
+    function c(e) {
         var t, n, i;
         let r = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             a = o.useExperiment({
@@ -201,19 +177,81 @@ function(e, t, n) {
             });
         return null !== (i = null !== (n = null !== (t = a.defaultGameId) && void 0 !== t ? t : u.defaultGameId) && void 0 !== n ? n : d.defaultGameId) && void 0 !== i ? i : null
     }
+    let E = (0, i.createExperiment)({
+            kind: "user",
+            id: "2024-05_clans_valorant_pilot",
+            label: "Clans Valorant Pilot",
+            defaultConfig: {
+                clanDiscoveryEnabled: !1,
+                defaultGameId: null
+            },
+            treatments: [{
+                id: 1,
+                label: "Show clan discovery (Valorant)",
+                config: {
+                    clanDiscoveryEnabled: !0,
+                    defaultGameId: r.VALORANT_ID
+                }
+            }]
+        }),
+        I = (0, i.createExperiment)({
+            kind: "user",
+            id: "2024-05_clans_genshin_pilot",
+            label: "Clans Genshin Pilot",
+            defaultConfig: {
+                clanDiscoveryEnabled: !1,
+                defaultGameId: null
+            },
+            treatments: [{
+                id: 1,
+                label: "Show clan discovery (Genshin Impact)",
+                config: {
+                    clanDiscoveryEnabled: !0,
+                    defaultGameId: r.GENSHIN_ID
+                }
+            }]
+        });
 
-    function I(e) {
-        let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-            n = o.getCurrentConfig({
+    function T(e) {
+        var t, n;
+        let i = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+            r = E.useExperiment({
                 location: e
             }, {
-                autoTrackExposure: t
-            }).enableClanCreation,
-            i = l.getCurrentConfig({
+                autoTrackExposure: i
+            }),
+            a = I.useExperiment({
                 location: e
             }, {
-                autoTrackExposure: t
-            }).enableClanCreation;
-        return n || i
+                autoTrackExposure: i
+            });
+        return {
+            clanDiscoveryEnabled: r.clanDiscoveryEnabled || a.clanDiscoveryEnabled,
+            defaultGameId: null !== (n = null !== (t = r.defaultGameId) && void 0 !== t ? t : a.defaultGameId) && void 0 !== n ? n : null
+        }
+    }
+    let f = (0, i.createExperiment)({
+        kind: "user",
+        id: "2024-05_clans_general",
+        label: "Clans General",
+        defaultConfig: {
+            clanTagsVisible: !1
+        },
+        treatments: [{
+            id: 1,
+            label: "Show clan tags",
+            config: {
+                clanTagsVisible: !0
+            }
+        }]
+    });
+
+    function S(e) {
+        let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+        return f.useExperiment({
+            location: e
+        }, {
+            autoTrackExposure: t
+        })
     }
 }

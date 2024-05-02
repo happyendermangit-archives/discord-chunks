@@ -16,10 +16,10 @@ function(e, t, n) {
         _ = n("271383"),
         c = n("594174"),
         E = n("626135"),
-        I = n("963202"),
-        T = n("645896"),
-        f = n("905362"),
-        S = n("353093"),
+        I = n("645896"),
+        T = n("905362"),
+        f = n("353093"),
+        S = n("169559"),
         h = n("981631"),
         A = n("689938"),
         m = n("917013");
@@ -35,7 +35,7 @@ function(e, t, n) {
             isLoading: O,
             onClose: R,
             source: C
-        } = e, g = (0, T.useClanInfo)(null !== (t = null == p ? void 0 : p.identityGuildId) && void 0 !== t ? t : null), L = null == p ? void 0 : p.tag, v = (0, I.useIsInUserClanExperiment)(), D = null == p ? void 0 : p.identityGuildId, M = (0, s.useStateFromStores)([d.default], () => d.default.getId()), y = (0, s.useStateFromStores)([_.default], () => null != D ? _.default.getMember(D, M) : null, [D, M]), P = (0, s.useStateFromStores)([c.default], () => c.default.getUser(M), [M]), U = (null == y ? void 0 : y.joinedAt) != null, b = (0, S.isGuildAdoptedUserClanIdentity)(D, null == P ? void 0 : P.clan), G = null != (0, l.default)(D);
+        } = e, g = (0, I.useClanInfo)(null !== (t = null == p ? void 0 : p.identityGuildId) && void 0 !== t ? t : null), L = null == p ? void 0 : p.tag, v = (0, S.default)("clan_guild_profile"), D = null == p ? void 0 : p.identityGuildId, M = (0, s.useStateFromStores)([d.default], () => d.default.getId()), y = (0, s.useStateFromStores)([_.default], () => null != D ? _.default.getMember(D, M) : null, [D, M]), P = (0, s.useStateFromStores)([c.default], () => c.default.getUser(M), [M]), U = (null == y ? void 0 : y.joinedAt) != null, b = (0, f.isGuildAdoptedUserClanIdentity)(D, null == P ? void 0 : P.clan), G = null != (0, l.default)(D);
         r.useEffect(() => {
             E.default.track(h.AnalyticEvents.CLAN_PROFILE_VIEWED, {
                 guild_id: D,
@@ -45,7 +45,7 @@ function(e, t, n) {
             })
         }, [D, U, G, C]);
         let w = r.useCallback(e => {
-                null != D && (e.stopPropagation(), e.preventDefault(), null == R || R(), (0, f.openAdoptClanIdentityModal)(D))
+                null != D && (e.stopPropagation(), e.preventDefault(), null == R || R(), (0, T.openAdoptClanIdentityModal)(D))
             }, [D, R]),
             B = r.useCallback(e => {
                 if (null != g) e.stopPropagation(), e.preventDefault(), null == R || R(), !G && (0, a.openModalLazy)(async () => {
@@ -77,7 +77,7 @@ function(e, t, n) {
                     ...i,
                     style: {
                         backgroundColor: n,
-                        color: (0, S.getAccessibleTextColor)(n).hex()
+                        color: (0, f.getAccessibleTextColor)(n).hex()
                     }
                 }), i
             }, [g]),

@@ -88,12 +88,22 @@ function(e, t, n) {
                 return r.default.Messages.SCOPE_ACTIVITIES_WRITE;
             case i.OAuth2Scopes.RELATIONSHIPS_READ:
                 return r.default.Messages.SCOPE_RELATIONSHIPS_READ;
+            case i.OAuth2Scopes.RELATIONSHIPS_WRITE:
+                return r.default.Messages.SCOPE_RELATIONSHIPS_WRITE;
             case i.OAuth2Scopes.VOICE:
                 return r.default.Messages.SCOPE_VOICE;
             case i.OAuth2Scopes.DM_CHANNELS_READ:
                 return r.default.Messages.SCOPE_DM_CHANNELS_READ;
             case i.OAuth2Scopes.ROLE_CONNECTIONS_WRITE:
                 return r.default.Messages.SCOPE_ROLE_CONNECTIONS_WRITE;
+            case i.OAuth2Scopes.PRESENCES_READ:
+                return r.default.Messages.SCOPE_PRESENCES_READ;
+            case i.OAuth2Scopes.PRESENCES_WRITE:
+                return r.default.Messages.SCOPE_PRESENCES_WRITE;
+            case i.OAuth2Scopes.DM_CHANNELS_MESSAGES_READ:
+                return r.default.Messages.SCOPE_DM_CHANNELS_MESSAGES_READ;
+            case i.OAuth2Scopes.DM_CHANNELS_MESSAGES_WRITE:
+                return r.default.Messages.SCOPE_DM_CHANNELS_MESSAGES_WRITE;
             default:
                 return e
         }

@@ -34,15 +34,17 @@ function(e, t, n) {
             onClose: r,
             analyticsLocation: o,
             maxIcons: u = 3,
-            showNoMutuals: I = !1
+            showNoMutuals: I = !1,
+            underlineTextOnHover: f = !1,
+            showTooltips: h = !0
         } = e, {
-            analyticsLocations: f
+            analyticsLocations: A
         } = (0, _.default)(), {
-            guildId: h,
-            channelId: A,
-            messageId: R,
-            roleId: C
-        } = (0, S.useUserProfileAnalyticsContext)(), g = s.useMemo(() => {
+            guildId: R,
+            channelId: C,
+            messageId: g,
+            roleId: L
+        } = (0, S.useUserProfileAnalyticsContext)(), v = s.useMemo(() => {
             var e;
             return null !== (e = null == n ? void 0 : n.map(e => {
                 let {
@@ -50,7 +52,7 @@ function(e, t, n) {
                 } = e;
                 return t
             })) && void 0 !== e ? e : []
-        }, [n]), L = s.useMemo(() => {
+        }, [n]), D = s.useMemo(() => {
             var e;
             return null !== (e = null == i ? void 0 : i.map(e => {
                 let {
@@ -58,88 +60,92 @@ function(e, t, n) {
                 } = e;
                 return t
             })) && void 0 !== e ? e : []
-        }, [i]), v = s.useMemo(() => p.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_SHORT.format({
-            count: g.length
-        }), [g]), D = s.useMemo(() => p.default.Messages.USER_PROFILE_MUTUAL_GUILDS_SHORT.format({
-            count: L.length
-        }), [L]), M = s.useRef(null), [y, P] = s.useState(!1), [U, b] = s.useState(!1), G = s.useCallback(() => {
-            if (null != M.current) {
+        }, [i]), M = s.useMemo(() => p.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_SHORT.format({
+            count: v.length
+        }), [v]), y = s.useMemo(() => p.default.Messages.USER_PROFILE_MUTUAL_GUILDS_SHORT.format({
+            count: D.length
+        }), [D]), P = s.useRef(null), [U, b] = s.useState(!1), [G, w] = s.useState(!1), B = s.useCallback(() => {
+            if (null != P.current) {
                 var e;
-                b((null === (e = M.current) || void 0 === e ? void 0 : e.clientHeight) > 19), P(!0)
+                w((null === (e = P.current) || void 0 === e ? void 0 : e.clientHeight) > 19), b(!0)
             }
-        }, []), w = s.useCallback(e => () => {
+        }, []), k = s.useCallback(e => () => {
             (0, m.openUserProfileModal)({
                 userId: t.id,
-                sourceAnalyticsLocations: f,
-                guildId: h,
-                channelId: A,
-                messageId: R,
-                roleId: C,
+                sourceAnalyticsLocations: A,
+                guildId: R,
+                channelId: C,
+                messageId: g,
+                roleId: L,
                 section: e,
                 analyticsLocation: o
             }), null == r || r()
-        }, [o, f, r, t.id, h, A, R, C]);
+        }, [o, A, r, t.id, R, C, g, L]);
         s.useEffect(() => {
-            G()
-        }, [G, v]);
-        let B = g.length > 0,
-            k = L.length > 0;
+            B()
+        }, [B, M]);
+        let V = v.length > 0,
+            x = D.length > 0;
         return (0, a.jsxs)("div", {
-            className: l()(O.compactItemContainer, !y && O.hideElement),
-            ref: M,
-            children: [B && (0, a.jsx)(d.Tooltip, {
-                text: p.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP,
-                children: e => (0, a.jsxs)(d.Clickable, {
-                    ...e,
-                    onClick: w(N.UserProfileSections.MUTUAL_FRIENDS),
+            className: l()(O.compactItemContainer, !U && O.hideElement),
+            ref: P,
+            children: [V && (() => {
+                let e = (0, a.jsxs)(d.Clickable, {
+                    onClick: k(N.UserProfileSections.MUTUAL_FRIENDS),
                     className: l()(O.avatarAndTextContainer, O.__invalid_friendsContainer),
                     children: [(0, a.jsx)("div", {
                         className: O.__invalid_avatars,
                         children: (0, a.jsx)(c.default, {
                             maxUsers: u,
-                            users: g,
+                            users: v,
                             size: d.AvatarSizes.SIZE_16,
                             hideOverflowCount: !0,
                             disableUsernameTooltip: !0
                         })
                     }), (0, a.jsx)(d.Text, {
-                        className: O.itemizedListText,
+                        className: l()(O.itemizedListText, f && O.underlineOnHover),
                         variant: "text-sm/normal",
                         color: "interactive-normal",
-                        children: v
+                        children: M
                     })]
-                })
-            }), I && !B && (0, a.jsx)(d.Text, {
+                });
+                return h ? (0, a.jsx)(d.TooltipContainer, {
+                    text: p.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP,
+                    children: e
+                }) : e
+            })(), I && !V && (0, a.jsx)(d.Text, {
                 variant: "text-xs/normal",
                 children: p.default.Messages.USER_PROFILE_NO_MUTUAL_FRIENDS
-            }), (B && k || I) && (0, a.jsx)("div", {
+            }), (V && x || I) && (0, a.jsx)("div", {
                 "aria-hidden": "true",
                 className: O.dotSpacer
-            }), k && (0, a.jsx)(d.Tooltip, {
-                text: p.default.Messages.USER_PROFILE_MUTUAL_GUILDS_TOOLTIP,
-                children: e => (0, a.jsxs)(d.Clickable, {
-                    ...e,
-                    onClick: w(N.UserProfileSections.MUTUAL_GUILDS),
+            }), x && (() => {
+                let e = (0, a.jsxs)(d.Clickable, {
+                    onClick: k(N.UserProfileSections.MUTUAL_GUILDS),
                     className: l()(O.avatarAndTextContainer, O.serverContainer),
-                    children: [!U && (0, a.jsx)("div", {
+                    children: [!G && (0, a.jsx)("div", {
                         className: O.__invalid_avatars,
                         children: (0, a.jsx)(E.default, {
                             maxGuilds: u,
-                            guilds: L,
+                            guilds: D,
                             size: T.default.Sizes.SMOL,
                             hideOverflowCount: !0,
                             disableGuildNameTooltip: !0
                         })
                     }), (0, a.jsx)(d.Text, {
-                        className: O.itemizedListText,
+                        className: l()(O.itemizedListText, f && O.underlineOnHover),
                         variant: "text-sm/normal",
                         color: "interactive-normal",
-                        children: D
+                        children: y
                     })]
-                })
-            }), I && !k && (0, a.jsx)(d.Text, {
+                });
+                return h ? (0, a.jsx)(d.TooltipContainer, {
+                    text: p.default.Messages.USER_PROFILE_MUTUAL_GUILDS_TOOLTIP,
+                    children: e
+                }) : e
+            })(), I && !x && (0, a.jsx)(d.Text, {
                 variant: "text-xs/normal",
-                children: p.default.Messages.USER_PROFILE_NO_MUTUAL_FRIENDS
+                children: p.default.Messages.USER_PROFILE_NO_MUTUAL_SERVERS
             })]
         })
     });

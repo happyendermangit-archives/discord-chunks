@@ -11,6 +11,7 @@ function(e) {
         mainContainer: "mainContainer_c5e1e2",
         placeholderPulse: "placeholderPulse__1352d",
         serverContainer: "serverContainer__93bca",
-        skeleton: "skeleton__3b703"
+        skeleton: "skeleton__3b703",
+        underlineOnHover: "underlineOnHover__6bbb7"
     }
 }
