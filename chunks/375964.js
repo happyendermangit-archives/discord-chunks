@@ -9586,6 +9586,7 @@ function(e) {
         ELEVATED_PERMISSIONS_SOUND_NO_SOUND_BUTTON: "Stream Without Sound",
         ELEVATED_PERMISSIONS_SOUND_REQUEST_ACCESS_BUTTON: "Grant Access",
         CUSTOM_STATUS: "Custom Status",
+        CUSTOM_STATUS_ADD_STATUS: "Add Status",
         CUSTOM_STATUS_SET_CUSTOM_STATUS: "Set a custom status",
         CUSTOM_STATUS_SET_CUSTOM_STATUS_CTA: "Set Custom Status",
         CUSTOM_STATUS_CHANGE_CUSTOM_STATUS_A11Y_LABEL: "Change custom status",
