@@ -1,7 +1,0 @@
-function(e, t, n) {
-    "use strict";
-    e.exports = function(e) {
-        var t = this.constructor;
-        return this.callbacks = {}, this.directMap = {}, this.sequenceLevels = {}, this.resetTimer, this.ignoreNextKeyup = !1, this.ignoreNextKeypress = !1, this.nextExpectedAction = !1, this.element = e, this.addEvents(), t.instances.push(this), this
-    }, e.exports.prototype.bind = n("698577"), e.exports.prototype.bindMultiple = n("41463"), e.exports.prototype.unbind = n("201755"), e.exports.prototype.trigger = n("191746"), e.exports.prototype.reset = n("160801"), e.exports.prototype.stopCallback = n("785757"), e.exports.prototype.handleKey = n("760283"), e.exports.prototype.addEvents = n("120448"), e.exports.prototype.bindSingle = n("126838"), e.exports.prototype.getKeyInfo = n("465232"), e.exports.prototype.pickBestAction = n("676497"), e.exports.prototype.getReverseMap = n("337829"), e.exports.prototype.getMatches = n("109328"), e.exports.prototype.resetSequences = n("795312"), e.exports.prototype.fireCallback = n("808962"), e.exports.prototype.bindSequence = n("527800"), e.exports.prototype.resetSequenceTimer = n("970889"), e.exports.prototype.detach = n("415364"), e.exports.instances = [], e.exports.reset = n("211180"), e.exports.REVERSE_MAP = null
-}
