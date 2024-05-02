@@ -196,7 +196,8 @@ function(e, t, n) {
                 allowEmptySections: n.allowEmptySections,
                 contextState: i,
                 userState: r,
-                applicationStates: s
+                applicationStates: s,
+                singleApplicationId: n.applicationId
             });
             return d.loading = d.loading || u, d
         }
@@ -543,32 +544,39 @@ function(e, t, n) {
             text: a,
             builtIns: s = g.BuiltInCommandFilter.ALLOW,
             allowApplicationCommands: o = !0,
-            allowEmptySections: u = !1,
-            scoreMethod: d = g.ScoreMethod.NONE,
-            sortOptions: _ = ee
+            singleApplicationId: u,
+            allowEmptySections: d = !1,
+            scoreMethod: _ = g.ScoreMethod.NONE,
+            sortOptions: c = ee
         } = e, {
-            commandType: c
-        } = t, E = null == a ? void 0 : a.toLowerCase(), T = null == E ? void 0 : E.split(" "), f = s === g.BuiltInCommandFilter.ONLY_TEXT, h = s !== g.BuiltInCommandFilter.DENY ? (0, p.getBuiltInCommands)(c, !0, f) : [], m = [], N = {
+            commandType: E
+        } = t, T = null == a ? void 0 : a.toLowerCase(), f = null == T ? void 0 : T.split(" "), h = s === g.BuiltInCommandFilter.ONLY_TEXT, m = s !== g.BuiltInCommandFilter.DENY ? (0, p.getBuiltInCommands)(E, !0, h) : [], N = [], O = {
             permissionContext: t,
-            query: E,
-            splitQuery: T,
-            allowEmptySections: u,
-            scoreMethod: d
+            query: T,
+            splitQuery: f,
+            allowEmptySections: d,
+            scoreMethod: _
         };
         if (o) {
-            var O, C, L, v, D;
-            let e = null !== (L = null === (O = n.result) || void 0 === O ? void 0 : O.sections) && void 0 !== L ? L : {},
-                t = null !== (v = null === (C = i.result) || void 0 === C ? void 0 : C.sections) && void 0 !== v ? v : {},
+            var C, L, v, D, M;
+            let e = null !== (v = null === (C = n.result) || void 0 === C ? void 0 : C.sections) && void 0 !== v ? v : {},
+                t = null !== (D = null === (L = i.result) || void 0 === L ? void 0 : L.sections) && void 0 !== D ? D : {},
                 a = new Set;
-            for (let t in e) a.add(t);
-            for (let e in t) a.add(e);
-            let s = new Map;
-            for (let [e, t] of r) {
-                let e = null === (D = t.result) || void 0 === D ? void 0 : D.sections;
-                if (null != e)
-                    for (let t of Object.keys(e)) a.add(t), s.set(t, e[t])
+            for (let t in e) {
+                let n = e[t];
+                (null == u || n.descriptor.id === u) && a.add(t)
             }
-            for (let n of Array.from(a)) {
+            for (let e in t) {
+                let n = t[e];
+                (null == u || n.descriptor.id === u) && a.add(e)
+            }
+            let s = new Map;
+            for (let [e, t] of r)
+                if (null == u || e === u) {
+                    let e = null === (M = t.result) || void 0 === M ? void 0 : M.sections;
+                    if (null != e)
+                        for (let t of Object.keys(e)) a.add(t), s.set(t, e[t])
+                } for (let n of Array.from(a)) {
                 let i, r;
                 let a = e[n],
                     o = t[n],
@@ -585,17 +593,17 @@ function(e, t, n) {
                         }
                 } else null != a ? (i = a.descriptor, r = Object.values(a.commands)) : null != o ? (i = o.descriptor, r = Object.values(o.commands)) : null != u && (i = u.descriptor, r = Object.values(u.commands));
                 l()(null != i, "Failed to select application descriptor"), l()(null != r, "Failed to select list of application commands");
-                let d = en(i, r, N);
-                null != d && m.push(d)
+                let d = en(i, r, O);
+                null != d && N.push(d)
             }
-            _.applications.useFrecency && S.FrecencyUserSettingsActionCreators.loadIfNecessary(), m.sort((e, t) => {
-                if (_.applications.useScore && d === g.ScoreMethod.APPLICATION_ONLY) {
+            c.applications.useFrecency && S.FrecencyUserSettingsActionCreators.loadIfNecessary(), N.sort((e, t) => {
+                if (c.applications.useScore && _ === g.ScoreMethod.APPLICATION_ONLY) {
                     var n, i, r, a;
                     let s = null !== (r = null === (n = e.data[0]) || void 0 === n ? void 0 : n.score) && void 0 !== r ? r : Number.MAX_VALUE,
                         o = null !== (a = null === (i = t.data[0]) || void 0 === i ? void 0 : i.score) && void 0 !== a ? a : Number.MAX_VALUE;
                     if (s !== o) return s - o
                 }
-                if (_.applications.useFrecency) {
+                if (c.applications.useFrecency) {
                     let n = I.default.getScoreWithoutLoadingLatest(e.section.id),
                         i = I.default.getScoreWithoutLoadingLatest(t.section.id);
                     if (n !== i) return i - n
@@ -603,25 +611,25 @@ function(e, t, n) {
                 return el(e.section.name, t.section.name)
             })
         }
-        if (h.length > 0 || !0 === u) {
-            let e = en(p.BUILT_IN_SECTIONS[y.BuiltInSectionId.BUILT_IN], h, N);
-            null != e && m.push(e)
+        if (m.length > 0 || !0 === d) {
+            let e = en(p.BUILT_IN_SECTIONS[y.BuiltInSectionId.BUILT_IN], m, O);
+            null != e && N.push(e)
         }
-        let M = m.flatMap(e => e.data.map(t => ({
+        let P = N.flatMap(e => e.data.map(t => ({
             ...t,
             section: e.section
         })));
-        if (d === g.ScoreMethod.COMMAND_ONLY || d === g.ScoreMethod.COMMAND_OR_APPLICATION) {
+        if (_ === g.ScoreMethod.COMMAND_ONLY || _ === g.ScoreMethod.COMMAND_OR_APPLICATION) {
             let e = t.context,
                 n = A.default.getGuild(t.context.guild_id);
-            _.commands.useFrecency && S.FrecencyUserSettingsActionCreators.loadIfNecessary(), M.sort((t, i) => {
-                if (_.commands.useScore) {
+            c.commands.useFrecency && S.FrecencyUserSettingsActionCreators.loadIfNecessary(), P.sort((t, i) => {
+                if (c.commands.useScore) {
                     var r, a;
                     let e = null !== (r = t.score) && void 0 !== r ? r : 0,
                         n = null !== (a = i.score) && void 0 !== a ? a : 0;
                     if (e !== n) return e - n
                 }
-                if (_.commands.useFrecency) {
+                if (c.commands.useFrecency) {
                     let r = R.default.getScoreWithoutLoadingLatest({
                             channel: e,
                             guild: n
@@ -636,9 +644,9 @@ function(e, t, n) {
             })
         }
         return {
-            commands: M,
-            descriptors: m.map(e => e.section),
-            sectionedCommands: m,
+            commands: P,
+            descriptors: N.map(e => e.section),
+            sectionedCommands: N,
             loading: (null == n ? void 0 : n.fetchState.fetching) === !0 || (null == i ? void 0 : i.fetchState.fetching) === !0
         }
     }

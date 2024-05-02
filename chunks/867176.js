@@ -64,11 +64,12 @@ function(e, t, n) {
         let i = d(e),
             r = o.default.can(l.Permissions.USE_EMBEDDED_ACTIVITIES, e),
             a = r && o.default.can(l.Permissions.SEND_MESSAGES | l.Permissions.USE_APPLICATION_COMMANDS, e);
-        return (null == e ? void 0 : e.guild_id) == null ? u.getCurrentConfig({
+        if ((null == e ? void 0 : e.guild_id) != null) return t ? a && i : r && i;
+        return t ? u.getCurrentConfig({
             location: n
         }, {
             autoTrackExposure: !0
-        }).activitiesInTextEnabled && i : t ? a && i : r && i
+        }).activitiesInTextEnabled && i : i
     }
 
     function c(e, t, n) {
@@ -91,7 +92,7 @@ function(e, t, n) {
             autoTrackExposure: !c,
             disable: c
         });
-        return c ? _ && i : E.activitiesInTextEnabled && i
+        return c ? _ && i : t ? E.activitiesInTextEnabled && i : i
     }
 
     function E(e, t) {
