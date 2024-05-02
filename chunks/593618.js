@@ -232,8 +232,8 @@ function(e, t, n) {
             "aria-label": a = !1,
             children: s,
             includeActivity: o = !0,
-            isHovered: l
-        } = e, u = (0, H.useCanShowNewGuildTooltip)(), [_, E] = r.useState(!1), I = r.useRef(new d.DelayedCall(150, () => E(!1))), T = r.useCallback(() => {
+            isDragging: l
+        } = e, u = (0, H.useCanShowNewGuildTooltip)(), [_, E] = r.useState(!1), I = r.useRef(new d.DelayedCall(50, () => E(!1))), T = r.useCallback(() => {
             I.current.cancel(), E(!0)
         }, []), f = r.useCallback(() => {
             I.current.delay()
@@ -247,8 +247,8 @@ function(e, t, n) {
                     guild: t,
                     closePopout: f
                 }),
-                spacing: 20,
-                shouldShow: l || _,
+                spacing: 15,
+                shouldShow: !l && _,
                 children: e => (0, i.jsx)("div", {
                     ...e,
                     children: s

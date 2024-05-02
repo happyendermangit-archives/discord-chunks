@@ -44,7 +44,7 @@ function(e, t, n) {
                     channelId: m.id,
                     bypassChangeModal: null != n
                 })) return !1
-        } else if (!(0, o.isActivitiesInTextEnabled)(m, "joinEmbeddedActivity") || !C) return !1;
+        } else if (!(0, o.isActivitiesInTextEnabled)(m, !1, "joinEmbeddedActivity") || !C) return !1;
         return (0, E.default)(N, f), (0, l.startEmbeddedActivity)(f, t, A), (0, c.default)({
             type: T.AnalyticsGameOpenTypes.JOIN,
             userId: O.id,

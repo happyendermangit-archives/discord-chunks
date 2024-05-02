@@ -457,15 +457,18 @@ function(e, t, n) {
                 m = ![e, I, T, f, S, A, h].some(e => null != e);
             return (0, s.jsxs)("div", {
                 className: u()(this.getTypeClass("activity"), i),
-                children: [this.renderHeader(m), (0, s.jsxs)("div", {
+                children: [this.renderHeader(m), (0, s.jsx)("div", {
                     className: u()(E ? F.bodyAlignCenter : F.bodyNormal, a && !l && !c && F.wrap),
-                    children: [(0, s.jsxs)("div", {
+                    children: (0, s.jsxs)("div", {
                         className: F.activityDetails,
                         children: [e, this.isStreamerOnTypeActivityFeed() ? null : (0, s.jsxs)(P.default.Child, {
                             className: u()((0, M.getClass)(F, "content", E ? "GameImage" : null != e ? "Images" : "NoImages", t)),
                             children: [I, T, f, S, l || c ? null : A, _ ? h : null]
-                        })]
-                    }), d ? h : null]
+                        }), d ? (0, s.jsx)("div", {
+                            className: F.actions,
+                            children: h
+                        }) : null]
+                    })
                 }), l ? A : null, l || c ? h : null, (0, s.jsx)(K, {
                     activity: o
                 })]

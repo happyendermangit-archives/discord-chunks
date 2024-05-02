@@ -1,10 +1,10 @@
 function(e, t, n) {
     "use strict";
     n.r(t), n.d(t, {
-        useGetActivityUsers: function() {
+        useGetCardUsers: function() {
             return D
         },
-        useGuildActivity: function() {
+        useGuildPopoutCards: function() {
             return L
         }
     }), n("390547"), n("47120"), n("627341");
@@ -110,7 +110,7 @@ function(e, t, n) {
             }, [n, e.afkChannelId, t]),
             N = (0, s.useStateFromStores)([c.default], () => c.default.hasConsented(R.Consents.PERSONALIZATION)),
             C = (0, s.useStateFromStores)([f.default], () => f.default.getUserAffinities());
-        if (0 === S.length && 0 === r.length) return 0 === n.length ? [] : n.slice(0, 3).map(e => ({
+        if (0 === S.length && 0 === r.length) return 0 === n.length ? [] : n.slice(0, 1).map(e => ({
             category: O.CardCategory.EMPTY,
             channelId: e
         }));
@@ -153,50 +153,31 @@ function(e, t, n) {
     let v = e => t => [R.ActivityTypes.PLAYING, R.ActivityTypes.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId);
 
     function D(e, t, n) {
-        let i = (0, s.useStateFromStoresArray)([_.default], () => _.default.getAllApplicationStreamsForChannel(n).map(e => e.ownerId), [n]),
-            a = (0, s.useStateFromStoresArray)([S.default, f.default], () => r()(e).map(e => S.default.getUser(e)).filter(m.isNotNullish).orderBy([e => {
-                var t, n;
-                return null !== (n = null === (t = f.default.getUserAffinity(e.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0
-            }], ["desc"]).value()),
-            o = a.length > 3 ? a.slice(0, 6) : a.slice(0, 7),
-            l = Math.max(0, a.length - o.length),
-            u = i.length > 2 ? i.slice(0, 2) : i.slice(0, 3),
-            d = u.map(e => N.default.getName(t, n, S.default.getUser(e))),
-            c = function(e, t) {
-                if (1 === e.length) return t > 0 ? C.default.Messages.GUILD_POPOUT_ACTIVITY_USERS_1_N.format({
-                    a: e[0],
-                    n: t.toLocaleString()
-                }) : C.default.Messages.GUILD_POPOUT_ACTIVITY_USERS_1.format({
-                    username: e[0]
-                });
-                if (2 === e.length) return t > 0 ? C.default.Messages.GUILD_POPOUT_ACTIVITY_USERS_2_N.format({
-                    a: e[0],
-                    b: e[1],
-                    n: t.toLocaleString()
-                }) : C.default.Messages.GUILD_POPOUT_ACTIVITY_USERS_2.format({
-                    a: e[0],
-                    b: e[1]
-                });
-                if (3 !== e.length) return C.default.Messages.GUILD_POPOUT_ACTIVITY_USERS_N.format({
-                    n: t.toLocaleString()
-                });
-                else return t > 0 ? C.default.Messages.GUILD_POPOUT_ACTIVITY_USERS_3_N.format({
-                    a: e[0],
-                    b: e[1],
-                    c: e[2],
-                    n: t.toLocaleString()
-                }) : C.default.Messages.GUILD_POPOUT_ACTIVITY_USERS_3.format({
-                    a: e[0],
-                    b: e[1],
-                    c: e[2]
-                })
-            }(d, Math.max(0, i.length - u.length));
+        let a = (0, s.useStateFromStoresArray)([_.default], () => _.default.getAllApplicationStreamsForChannel(n).map(e => e.ownerId), [n]),
+            o = (0, s.useStateFromStoresArray)([c.default, f.default, S.default], () => {
+                let t = c.default.hasConsented(R.Consents.PERSONALIZATION),
+                    n = f.default.getUserAffinities(),
+                    a = r()(e).map(e => S.default.getUser(e)).filter(m.isNotNullish).value();
+                return t && n.length > 0 ? (0, i.orderBy)(a, [e => {
+                    var t, n;
+                    return null !== (n = null === (t = f.default.getUserAffinity(e.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0
+                }], ["desc"]) : a
+            }),
+            l = o.length > 3 ? o.slice(0, 6) : o.slice(0, 7),
+            u = Math.max(0, o.length - l.length),
+            d = 1 === a.length ? a[0] : null,
+            E = N.default.getName(t, n, S.default.getUser(d)),
+            I = null != d ? C.default.Messages.GUILD_POPOUT_ACTIVITY_STREAMER.format({
+                username: E
+            }) : C.default.Messages.GUILD_POPOUT_ACTIVITY_STREAMERS.format({
+                streamerCount: a.length
+            });
         return {
-            totalUsers: a.length,
-            usersToShow: o,
-            othersCount: l,
-            streamUserIds: i,
-            streamerUsersText: c
+            totalUsers: o.length,
+            usersToShow: l,
+            othersCount: u,
+            streamUserIds: a,
+            streamerUsersText: I
         }
     }
 }

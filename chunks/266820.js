@@ -72,7 +72,7 @@ function(e, t, n) {
                     channelId: L,
                     bypassChangeModal: null != C
                 })) return !1
-        } else if (!(0, _.isActivitiesInTextEnabled)(b, "handleStartEmbeddedActivity") || !B) return !1;
+        } else if (!(0, _.isActivitiesInTextEnabled)(b, !0, "handleStartEmbeddedActivity") || !B) return !1;
         return E.startEmbeddedActivity(L, U.id, M), (0, m.default)(v, L), (0, A.default)({
             type: O.AnalyticsGameOpenTypes.LAUNCH,
             userId: P.id,
