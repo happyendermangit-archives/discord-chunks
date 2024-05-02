@@ -124,8 +124,8 @@ function(e, t, n) {
         A = "ClanSetupModal",
         m = "ClanSettingsModal",
         N = 20,
-        p = 50,
-        O = 50,
+        p = 30,
+        O = 24,
         R = 12,
         C = 3,
         g = 5;

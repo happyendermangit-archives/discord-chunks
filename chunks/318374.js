@@ -20,22 +20,23 @@ function(e, t, n) {
     function I(e) {
         let {
             className: t,
-            maxUsers: a,
-            users: o,
-            guildId: I,
-            onFocus: T,
-            size: f = u.AvatarSizes.SIZE_24,
-            hideOverflowCount: S = !1,
-            disableUsernameTooltip: h = !1
-        } = e, [A, m] = r.useState(!1);
+            avatarClassName: a,
+            maxUsers: o,
+            users: I,
+            guildId: T,
+            onFocus: f,
+            size: S = u.AvatarSizes.SIZE_24,
+            hideOverflowCount: h = !1,
+            disableUsernameTooltip: A = !1
+        } = e, [m, N] = r.useState(!1);
 
-        function N() {
+        function p() {
             return (0, i.jsx)(u.Dialog, {
                 className: E.popoutWrapper,
                 children: (0, i.jsx)(u.Scroller, {
                     className: E.scroller,
-                    children: o.map(e => (0, i.jsx)(_.default, {
-                        guildId: I,
+                    children: I.map(e => (0, i.jsx)(_.default, {
+                        guildId: T,
                         user: e,
                         nick: c.default.getName(e),
                         onContextMenu: t => (0, d.openContextMenuLazy)(t, async () => {
@@ -47,44 +48,44 @@ function(e, t, n) {
                                 user: e
                             })
                         }, {
-                            onClose: () => m(!1)
+                            onClose: () => N(!1)
                         })
                     }, e.id))
                 })
             })
         }
-        return o.length <= 0 ? null : (0, i.jsx)("div", {
+        return I.length <= 0 ? null : (0, i.jsx)("div", {
             className: s()(t, E.avatars),
             children: function() {
-                let e = l()(o).take(a).map(e => {
+                let e = l()(I).take(o).map(e => {
                         let t = c.default.getName(e);
-                        return h ? (0, i.jsx)("div", {
-                            className: E.avatar,
+                        return A ? (0, i.jsx)("div", {
+                            className: s()(E.avatar, a),
                             children: (0, i.jsx)(u.Avatar, {
-                                src: e.getAvatarURL(I, 24),
+                                src: e.getAvatarURL(T, 24),
                                 "aria-label": t,
-                                size: f
+                                size: S
                             })
                         }) : (0, i.jsx)(u.TooltipContainer, {
                             text: t,
-                            className: E.avatar,
+                            className: s()(E.avatar, a),
                             children: (0, i.jsx)(u.Avatar, {
-                                src: e.getAvatarURL(I, 24),
+                                src: e.getAvatarURL(T, 24),
                                 "aria-label": t,
-                                size: f
+                                size: S
                             })
                         }, e.id)
                     }).value(),
-                    t = o.length - a;
-                return t > 0 && !S && (e[e.length - 1] = (0, i.jsx)(u.Popout, {
-                    renderPopout: N,
-                    shouldShow: A,
+                    t = I.length - o;
+                return t > 0 && !h && (e[e.length - 1] = (0, i.jsx)(u.Popout, {
+                    renderPopout: p,
+                    shouldShow: m,
                     position: "bottom",
-                    onRequestClose: () => m(!1),
+                    onRequestClose: () => N(!1),
                     children: () => (0, i.jsxs)(u.Button, {
                         className: s()(E.avatar, E.overflow),
-                        onFocus: T,
-                        onClick: () => m(!0),
+                        onFocus: f,
+                        onClick: () => N(!0),
                         look: u.Button.Looks.BLANK,
                         size: u.Button.Sizes.NONE,
                         children: ["+", t + 1]
